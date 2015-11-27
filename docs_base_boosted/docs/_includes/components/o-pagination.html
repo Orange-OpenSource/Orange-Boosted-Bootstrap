@@ -1,0 +1,45 @@
+  <h2 id="orange-pagination">Orange pagination</h2>
+      <p class="lead">Provide pagination links Orange branded. <a href="http://interaction.brand.orange.com/styleguides/web-guideline/navigating/pagination">Orange Brand pagination</a>.</p>
+    <p>Just replace the <code>.pagination</code> by <code>.o-pagination</code> to switch the display mode. The Orange pagination tool is usually displayed at the bottom of the listed data, but can also be duplicated at the top. Users can navigate page by page by using the ‘previous’ and ‘next’ links, or go to specific pages using the numbered links. The current page status must be highlighted within the pagination tool, so that the user can easily identify their location within the sequence.</p>
+  <div class="bs-example" data-example-id="orange-pagination">
+    <nav>
+      <ul class="o-pagination">
+        <li class='disabled'>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&lt; <span class='hidden-xs'>previous</span></span>
+          </a>
+        </li>
+        <li class='active'><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+              <span aria-hidden="true"><span class='hidden-xs'>next</span> &gt;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+{% highlight html %}
+<nav>
+  <ul class="o-pagination">
+    <li class='disabled'>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&lt; <span class='hidden-xs'>previous</span></span>
+      </a>
+    </li>
+    <li class='active'><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+          <span aria-hidden="true"><span class='hidden-xs'>next</span> &gt;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endhighlight %}

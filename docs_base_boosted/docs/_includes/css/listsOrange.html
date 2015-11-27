@@ -1,0 +1,58 @@
+<h3 id='type_bullet'>Orange bullet points</h3>
+    <p>Just add the <code>o-square-list</code>class on the root element (<code>ul</code>) of a list. You can get a designed list whose depth is 3 (max).</p>
+  <div class="bs-example" data-example-id="unstyled-list">
+    <ul class="o-square-list" >
+        <li>
+            <span>first</span>
+            <ul>
+                <li>
+                    <span>1.1</span>
+                    <ul>
+                        <li><span>1.1.1</span></li>
+                        <li><span>1.1.2</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>1.2</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>second</span>
+        </li>
+        <li>
+            <span>third</span>
+        </li>
+        <li>
+            <span>fourth</span>
+        </li>
+    </ul>
+  </div>
+{% highlight html %}
+<ul class="o-square-list" >
+    <li>
+        <span>first</span>
+        <ul>
+            <li>
+                <span>1.1</span>
+                <ul>
+                    <li><span>1.1.1</span></li>
+                    <li><span>1.1.2</span></li>
+                </ul>
+            </li>
+            <li>
+                <span>1.2</span>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span>second</span>
+    </li>
+    <li>
+        <span>third</span>
+    </li>
+    <li>
+        <span>fourth</span>
+    </li>
+</ul>
+{% endhighlight %}

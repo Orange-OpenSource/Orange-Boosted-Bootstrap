@@ -1,0 +1,94 @@
+/********************************************************/
+/******************** classic tab *********************/
+/********************************************************/
+.nav > li > a {
+	cursor: pointer;
+}
+
+/*.nav > li > a padding 1rem 2rem*/
+
+// Give the tabs something to sit on
+.nav-tabs {
+  > li {
+      + li {          
+        margin-left: (@grid-gutter-width / 2);
+      }
+    // Actual tabs (as links)
+    > a {
+        padding: 1rem 2rem;
+        font-weight: bold;
+        font-size: 1.6rem;
+      &:hover ,
+      &:focus {
+        color: @nav-tabs-link-hover-color;
+        //outline:none;
+        background-color: @nav-tabs-link-hover-bg;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover {
+          outline:none;
+          border-width: 2px;
+      }
+    }
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &:focus {
+          //outline:none;
+          //background-color: @brand-orange;
+          //color: @brand-orange-white;
+          border-width: 2px;
+          outline-style: dotted;
+          outline-offset: -6px;
+          outline-width: 1px;
+      }
+    }
+    margin-bottom: -2px;
+  }
+    border-bottom-width: 2px;
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    + li {
+      margin-left: (@grid-gutter-width / 4);
+    }
+
+    // Active state
+    &,
+    &.active {
+        > a {        
+          font-weight: bold;
+
+          &:hover {          
+              color: @nav-pills-active-link-hover-color;
+              background-color: @nav-pills-active-link-hover-bg;
+          }
+          &:focus {
+              outline:none;
+              background-color: @brand-orange;
+              color: @brand-orange-white;        
+          }
+        }
+    }
+  }
+}
+
+.tab-content{
+  border-style: solid;
+  border-width: 2px;
+  border-color: @brand-orange-black;
+  border-color: rgba(0, 0, 0, 0) @brand-orange-black @brand-orange-black @brand-orange-black;
+  //margin-top: -1px;
+  padding: 1em;
+}
+
+.tab-content-clear{
+  border: none;
+  padding: 1em;
+}

@@ -1,0 +1,473 @@
+// html font-size forcée Ã  10px par BT
+html{ 
+    font-size: @html-font-size-base; 
+    /*Orange brand All is bold only plain texts are not bold*/
+    font-weight:@brand-font-weight-normal;
+}
+.navbar *{
+    /*Orange brand All is bold*/
+    font-weight:@brand-font-weight-bold;   
+}
+
+//
+// Caret
+// --------------------------------------------------
+// Fix the border-top style to display caret onto IE8
+.caret {
+    border-top-style: solid;
+}
+
+//
+// Alerts
+// --------------------------------------------------
+.alert {
+    border-width: 2px;
+}
+
+//
+// Labels
+// --------------------------------------------------
+
+.label {    
+  border-radius: @border-radius-base;
+}
+.table label.o-checkbox,
+.table label.o-radio{
+    margin-bottom: 0;
+}
+
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: @navbar-padding-horizontal;
+  padding: @nav-link-padding;
+  .navbar-toggle-vertical-align(@navbar-toggle-vertical-margin);
+  background-color: transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  border-radius: @border-radius-base;
+
+  // We remove the `outline` here, but later compensate by attaching `:hover`
+  // styles to `:focus`.
+  &:focus {
+    outline: 0;
+  }
+
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    display: none;
+  }
+}
+.navbar-brand {
+    height: @navbar-height;
+    margin: 0;
+}
+.navbar-header {
+  padding-right: @navbar-padding-horizontal;
+  padding-left:  @navbar-padding-horizontal;
+}
+
+.navbar-toggle-complement{
+    position: relative;
+    float: right;   
+}
+.navbar-toggle-complement .navbar-nav {
+    margin: @padding-base-vertical 0 0 0;
+}
+.navbar-toggle-complement li{
+    float: left;   
+}
+
+@media (min-width: @screen-sm) {
+    .navbar-toggle-complement {
+        display: none;
+    }
+}
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+.navbar-nav {  
+  // Uncollapse the nav
+  @media (min-width: @grid-float-breakpoint) {    
+    > li {
+      > a {        
+        .navbar-vertical-align(((@navbar-padding-vertical)+@line-height-computed));
+      }
+    }
+  }
+    
+  > li {
+    > a {        
+        font-size: @navbar-font-size;
+    }
+  }
+}
+
+.nav {
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      color: @brand-orange-white;
+    }
+  }
+}
+
+// back from accessibility plugin css
+div.active:focus {
+  outline: dotted 1px black;
+}
+a:focus {
+  outline: dotted 1px black;
+}
+.close:hover,
+.close:focus {
+  outline: dotted 1px black;
+}
+
+//
+// Carousel
+// --------------------------------------------------
+// .carousel-inner > .item {
+//   position: absolute;
+//   top: -999999em; 
+//   display: block;
+//   -webkit-transition: 0.6s ease-in-out left;
+//           transition: 0.6s ease-in-out left;
+// }
+// .carousel-inner > .active {
+//   top: 0;
+// }
+// .carousel-inner > .active,
+// .carousel-inner > .next,
+// .carousel-inner > .prev {
+//   position: relative;
+// }
+// .carousel-inner > .next,
+// .carousel-inner > .prev {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+// }
+// .carousel-control .glyphicon{
+//     color: #000000;
+//     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 2px 0 #fff;
+//     filter:progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=0,strength=0)
+//         progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=90,strength=0)
+//         progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=180,strength=0)
+//         progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=270,strength=0);
+// }
+
+.carousel{
+  margin-bottom: 3rem;
+  
+  .carousel-control{
+    top: auto;
+    bottom: calc(50% - 3rem);
+    background-color: @brand-orange-white;
+    height: 6rem;
+    width: 6rem;
+    padding-top: 1.5rem;
+    opacity: .8;
+    text-shadow: none;
+    transition: width 0.5s ease;
+    
+    &.left,
+    &.right{
+      background-image: none;
+      background-repeat: no-repeat;
+      &:hover,
+      &:focus{
+        width: 12rem;
+      }
+    }
+    
+    .glyphicon{
+      color: @brand-orange;
+      position: relative;
+      top: auto;
+      margin: auto;
+      text-shadow: none;
+    }
+    .glyphicon-chevron-left{
+        left: auto;
+    }
+    .glyphicon-chevron-right{
+        right: auto;
+    }
+    
+  }
+  
+  & .carousel-control,
+  & .carousel-control{
+    display: block;
+  }
+}
+
+.carousel-indicators{
+    bottom: -3rem;
+    
+    &:hover{
+      cursor: default;
+    }
+    
+    li{
+      border-radius: 0;
+      background-color: @gray-light-plus;
+      border: none;
+      width: 1.6rem;
+      height: .4rem;
+      margin: 0 .4rem 0 .4rem; 
+      &:hover{
+          background-color: @brand-orange;
+          cursor: pointer;
+      }
+      &.active{
+          background-color: @brand-orange;
+          width: 1.6rem;
+          height: .4rem;
+          margin: 0 .4rem 0 .4rem; 
+      }
+   }
+}
+
+//
+// Forms control into input groups
+//
+.input-group > .form-control{
+    border-color: @brand-orange-black;
+    &:focus{
+        border-color: @brand-orange;
+    }
+}
+.has-success {
+    & .input-group > .form-control{
+        // Feedback states
+        border-color: @state-success-text;
+    }
+}
+.has-error {
+    & .input-group > .form-control{
+        // Feedback states
+        border-color: @state-danger-text;
+    }
+}
+.has-warning {
+    & .input-group > .form-control{
+        // Feedback states
+        border-color: @state-warning-text;
+    }
+}
+
+// Force the color for Heading into thumbnails
+.thumbnail {  
+  // Image captions
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: @thumbnail-caption-color;
+  }
+}
+
+// Panel, put a display block on header links for accordions full width click area
+.panel-title {
+  > a,
+  > small > a,
+  > .small > a {
+      display: block;
+  }
+}
+
+.o-footer, .o-footer-inverse {
+    padding: @navbar-padding-vertical;
+}
+
+.hero-container .frame {
+    left: 0;           
+    margin: (@grid-gutter-width+1rem);
+    max-width: 15%;
+    position: absolute;
+    top: 0;
+}
+
+.hero-container .caption {
+    margin: 5rem (@grid-gutter-width+1rem); 
+}
+
+.hero-container .category {
+    color: @brand-orange;
+    font-size: 2rem
+}                  
+
+/* Orange - July 2015 */
+
+/* Recommended @font-face snippet for web fonts */
+
+@font-face{
+	font-family:"HelvNeue75"; 
+  font-style: normal;
+  font-weight: 700;
+	src:url("@{icon-font-path}HelvNeue75_W1G.eot?#iefix");
+	src:url("@{icon-font-path}HelvNeue75_W1G.eot?#iefix") format("eot"),
+	url("@{icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
+	url("@{icon-font-path}HelvNeue75_W1G.woff") format("woff"),
+	url("@{icon-font-path}HelvNeue75_W1G.ttf") format("truetype"),
+	url("@{icon-font-path}HelvNeue75_W1G.svg") format("svg");
+}
+@font-face{
+	font-family:"HelvNeue55";  
+  font-style: normal;
+  font-weight: 400;
+	src:url("@{icon-font-path}HelvNeue55_W1G.eot?#iefix");
+	src:url("@{icon-font-path}HelvNeue55_W1G.eot?#iefix") format("eot"),
+	url("@{icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
+	url("@{icon-font-path}HelvNeue55_W1G.woff") format("woff"),
+	url("@{icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
+	url("@{icon-font-path}HelvNeue55_W1G.svg") format("svg");
+}
+
+// == TABLES
+.table {  
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        // Remove border top and put border-botom
+        border-top: 0;
+        border-bottom: 1px solid @table-border-color;
+      }      
+      > th {
+          font-size: @font-size-h5;
+      }
+    }
+  }
+    
+  > thead th {
+      border-bottom: 2px;
+  }
+    
+}
+.table-row-variant-border(success; @state-success-border);
+.table-row-variant-border(info; @state-info-border);
+.table-row-variant-border(warning; @state-warning-border);
+.table-row-variant-border(danger; @state-danger-border);
+
+
+// force caption for tables
+caption{
+	background-color: @brand-orange-white;
+	color: @brand-orange-black;
+	padding: @padding-large-vertical 0;
+    font-size: @font-size-h1;
+	font-weight: bold;
+}
+
+// Force bold onto panel heading and footer and wells
+.panel-heading, .panel-footer, .well{
+    font-weight: bold;
+}
+
+//
+// buttons orange specific variants
+//
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .button-variant-orange(@btn-default-color; @btn-default-bg; @btn-default-border;@btn-default-color;@btn-primary-bg;@btn-default-bg;@btn-default-bg;);
+}
+.btn-primary {
+  .button-variant-orange(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Success appears as green
+.btn-success {
+  .button-variant-orange(@btn-success-color; @btn-success-bg; @btn-success-border;darken(@btn-success-bg, 10%);darken(@btn-success-bg, 20%);@btn-success-color; @btn-default-color);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant-orange(@btn-info-color; @btn-info-bg; @btn-info-border;@btn-info-hover-bg;@btn-info-active-bg);
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant-orange(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant-orange(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+
+.button-variant-orange(@color; @background; @border;@hover-bg-color:darken(@background, 10%);@active-bg-color:darken(@background, 20%);@hover-color:@color;@active-color:@color) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:hover,
+  &.hover,
+  .open > .dropdown-toggle& {
+    color: @hover-color;
+    background-color: @hover-bg-color;
+        border-color: @hover-bg-color;
+  }
+  &:focus,
+  &.focus,
+  &:active,
+  &.active{
+    color: @active-color;
+    background-color: @active-bg-color;   
+    border-color: @active-bg-color;   
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+.btn { 
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {    
+    .opacity(.2);
+  }
+  
+  border-width: 2px;
+}

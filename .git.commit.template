@@ -1,0 +1,39 @@
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+# where type can be :
+#     feat = feature
+#     fix = bug fix
+#     docs = documentation
+#     style = style refactoring
+#     refactor = refactoring
+#     test = adding missing test
+#     chore = maintain
+# where scope can be :
+#     component of the application
+# where subject can be :
+#     what is the change, from a functional point of view
+# where body can be :
+#     what has been changed
+#     can be quite long
+# where footer can be :
+#     bug fix id
+#     user story
+#     ...
+# 
+# such commit message can be used to generate automagic changelog
+#     by scope (see above)
+#     by release (using git tags)
+#
+# examples :
+#     https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit?pli=1#heading=h.4e0o8t4fffjf
+#
+# automagic changelog generation by a grunt task :
+#     grunt-conventional-changelog is using markdown syntax
+#     https://github.com/btford/grunt-conventional-changelog
+#
+# to enable this template, enter the following git commande line :
+#     git config commit.template .git.commit.template
+#

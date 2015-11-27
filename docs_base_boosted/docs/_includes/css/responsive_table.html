@@ -1,0 +1,108 @@
+
+  <p>Fully based onto css class, for complex table with col and row headers. Add the <code>.o-responsive-table</code> class to the table tag, the <code>scope='col'</code> to the <code>th</code> into the <code>thead</code>, <code>scope='row'</code> onto row header, and repeat the col header's into the attribute <code>data-title</code> of each <code>td</code>. Display one card by line onto small screen, 2 card by line between small and medium, classic tab for upper sizes</p>
+  <div class="bs-example" >     
+      <div class="container-fluid">
+        <div class="row">
+          		<table class="table o-responsive-table" summary="Monthly calls received">
+					<caption>Calls received</caption>
+					<thead class="cf">
+						<tr>
+							<th scope="col" class="header">date</th>
+							<th scope="col" class="header">number</th>
+							<th scope="col" class="header">place called</th>
+							<th scope="col" class="header">call class</th>
+							<th scope="col" class="header">duration</th>
+							<th scope="col" class="header">cost</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope='row'>8 octobre 2012</th>
+							<td data-title="number">447765896321</td>
+							<td data-title="place called">BT Freefone</td>
+							<td data-title="call class">talk</td>
+							<td data-title="duration">0:05:40</td>
+							<td data-title="cost">0.214</td>
+						</tr>
+						<tr>
+							<th scope='row'>9 octobre 2012</th>
+							<td data-title="number">447765896321</td>
+							<td data-title="place called">BT Freefone</td>
+							<td data-title="call class">talk</td>
+							<td data-title="duration">0:19:09</td>
+							<td data-title="cost">0.158</td>
+						</tr>
+						<tr>
+							<th scope='row'>10 octobre 2012</th>
+							<td data-title="number">447765896322</td>
+							<td data-title="place called">Free</td>
+							<td data-title="call class">talk</td>
+							<td data-title="duration">0:10:06</td>
+							<td data-title="cost">0.089</td>
+						</tr>
+						<tr>
+							<th scope='row'>11 octobre 2012</th>
+							<td data-title="number">447765896324</td>
+							<td data-title="place called">Orange</td>
+							<td data-title="call class">SMS</td>
+							<td data-title="duration">-</td>
+							<td data-title="cost">0.10</td>
+						</tr>
+					</tbody>
+				</table>
+            <!-- /step bar -->
+        </div>
+      </div><!-- /.container-fluid -->
+      
+      
+  </div>
+{% highlight html %}
+ <table class="table o-responsive-table" summary="Monthly calls received">
+    <caption>Calls received</caption>
+    <thead class="cf">
+        <tr>
+            <th scope="col" class="header">date</th>
+            <th scope="col" class="header">number</th>
+            <th scope="col" class="header">place called</th>
+            <th scope="col" class="header">call class</th>
+            <th scope="col" class="header">duration</th>
+            <th scope="col" class="header">cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope='row'>8 octobre 2012</th>
+            <td data-title="number">447765896321</td>
+            <td data-title="place called">BT Freefone</td>
+            <td data-title="call class">talk</td>
+            <td data-title="duration">0:05:40</td>
+            <td data-title="cost">0.214</td>
+        </tr>
+        <tr>
+            <th scope='row'>9 octobre 2012</th>
+            <td data-title="number">447765896321</td>
+            <td data-title="place called">BT Freefone</td>
+            <td data-title="call class">talk</td>
+            <td data-title="duration">0:19:09</td>
+            <td data-title="cost">0.158</td>
+        </tr>
+        <tr>
+            <th scope='row'>10 octobre 2012</th>
+            <td data-title="number">447765896322</td>
+            <td data-title="place called">Free</td>
+            <td data-title="call class">talk</td>
+            <td data-title="duration">0:10:06</td>
+            <td data-title="cost">0.089</td>
+        </tr>
+        <tr>
+            <th scope='row'>11 octobre 2012</th>
+            <td data-title="number">447765896324</td>
+            <td data-title="place called">Orange</td>
+            <td data-title="call class">SMS</td>
+            <td data-title="duration">-</td>
+            <td data-title="cost">0.10</td>
+        </tr>
+    </tbody>
+</table>
+{% endhighlight %}
+

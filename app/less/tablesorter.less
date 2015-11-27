@@ -1,0 +1,40 @@
+/********************************************************/
+/************************ Table *************************/
+/********************************************************/
+table.tablesorter > thead > tr > th{
+	font-weight:bold;
+	padding-right:30px;
+	cursor: pointer;
+}
+table.tablesorter th, table.tablesorter td{
+	text-align:left;
+}
+table.tablesorter th a{
+    color:@brand-orange-black;
+	text-decoration:none;
+}
+table.tablesorter th a:hover, table.tablesorter th a:focus{
+	text-decoration:underline;
+	color:@brand-orange;
+}
+table.tablesorter th.header { 
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+} 
+table.tablesorter th.header:hover,
+table.tablesorter th.header:focus{ 
+  background-image: url(../images/triangle_sort.png); 
+}
+table.tablesorter th.headerSortDown { 
+  background-image: url(../images/triangle_down.png); 
+} 
+table.tablesorter th.headerSortUp { 
+  background-image: url(../images/triangle_up.png); 
+}
+table.tablesorter caption{
+	background-color: @brand-orange-white;
+	color: @brand-orange-black;
+	padding: @padding-large-vertical 0;
+    font-size: @font-size-h1;
+	font-weight: bold;
+}

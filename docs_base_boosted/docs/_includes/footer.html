@@ -1,0 +1,75 @@
+<!-- Footer
+================================================== -->
+<footer class="navbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="o-footer">                
+                <div class="container-fluid o-footer-top bs-docs-footer">
+                    <h1 class="sr-only">footer - site map & informations</h1>
+        <p>This documentation is an adaptation made by Orange</p>
+    <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+
+    <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v{{ site.current_version }}/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+                </div>
+                <div class="o-footer-bottom">
+                    <ul class="">
+                      <li>Currently v{{ site.boosted_version }}</li>
+                      <li>&middot;</li>
+                      <li><a href="{{ site.repo }}">GitHub</a></li>
+                      <li>&middot;</li>
+                      <li><a href="../getting-started/#examples">Examples</a></li>
+                      <li>&middot;</li>
+                      <li><a href="https://github.com/twbs/bootstrap/tree/v{{ site.current_version }}">Original Bootstrap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="../dist/js/boosted.min.js"></script>       
+
+<script src="../assets/js/docs.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<!---initialization of table sorting -->
+{% if page.slug == "boostwatch" %}
+			<script>
+				$(document).ready(function() { 
+					$("#myTable").tablesorter({ 
+						sortList: [[4,1]] 
+					}); 
+                    $('[data-toggle="tooltip"]').tooltip();
+                    $('[data-toggle="popover"]').popover();
+                    $('[data-toggle="dropdown"]').dropdown();
+                    
+				});
+                
+			</script>
+{% endif %}
+{% if page.slug == "js" %}
+			<script>
+				$(document).ready(function() { 
+					$("#myTable").tablesorter({ 
+						sortList: [[0,1]] 
+					});                     
+				});
+                
+			</script>
+{% endif %}
+<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+<script>
+// Surcharge des valeurs du script de la toolbar
+			accessibilitytoolbar_custom={
+				idLinkModeContainer:"id_li_for_cdu"
+				//idSkipLinkIdLinkMode:"cdu_skiplink",
+				//cssSkipLinkClassName: "skiplinks_trigger",
+				//cssLinkModeClassName:"nav-item-cdu",
+				//callback:skiplinksAfterLoad
+			};
+</script>

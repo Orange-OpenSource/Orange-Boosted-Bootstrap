@@ -1,0 +1,47 @@
+{
+  "name": "boosted",
+  "version": "3.2.0",
+  "author": "Orange SA",
+  "dependencies": {},
+  "repository": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap",
+  "description": "Orange Boosted with Boostrap",
+  "devDependencies": {
+    "eslint-friendly-formatter": "^1.2.2",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~3.0.0",
+    "grunt-autoshot": "^0.2.1",
+    "grunt-banner": "~0.6.0",
+    "grunt-concurrent": "~2.0.4",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-compress": "~0.14.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-csslint": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "~0.6.0",
+    "grunt-contrib-imagemin": "0.8.1",
+    "grunt-contrib-less": "~1.0.1",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-uglify": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-conventional-changelog": "^1.0.0",
+    "grunt-csscomb": "^3.1.0",
+    "grunt-jekyll": "^0.4.2",
+    "grunt-newer": "^1.1.1",
+    "grunt-svgmin": "^2.0.0",
+    "grunt-text-replace": "^0.4.0",
+    "gruntify-eslint": "^1.1.0",
+    "load-grunt-tasks": "~3.3.0",
+    "serve-static": "^1.10.0",
+    "qunit": "^0.7.7",
+    "time-grunt": "^1.2.0"
+  },
+  "private": false,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}

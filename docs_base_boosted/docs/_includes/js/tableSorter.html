@@ -1,0 +1,170 @@
+<div class="bs-docs-section clearfix">
+    		<style>
+
+			@media only screen and (max-width : 650px) {Z
+
+				#myTable .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+				#myTable * html .cf { zoom: 1; }
+				#myTable *:first-child+html .cf { zoom: 1; }
+				#myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+				#myTable th,
+				#myTable td { margin: 0; vertical-align: top; }
+				#myTable th { text-align: left; }
+				#myTable table { display: block; position: relative; width: 100%; }
+				#myTable thead { display: block; float: left; }
+				#myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+				#myTable thead tr { display: block; }
+				#myTable th { display: block; text-align: right; }
+				#myTable tbody tr { display: inline-block; vertical-align: top; }
+				#myTable td { display: block; min-height: 1.25em; text-align: left; }
+
+				/* sort out borders */
+				#myTable th { border-bottom: 0; border-left: 0; border-top: 1px solid #A6A6A6; }
+				#myTable td { border-right: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-bottom: 0; }
+				#myTable th:last-child,
+				#myTable td:last-child { border-bottom: 1px solid #babcbf; }
+
+			}
+
+			/* accessibility */
+			table.tablesorter > thead > tr > th[aria-sort="descending"]:after { 
+				content:"trié par ordre décroissant"; 
+				border: 0 none;
+				clip: rect(0px, 0px, 0px, 0px);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+			/* accessibility */
+			table.tablesorter > thead > tr > th[aria-sort="ascending"]:after { 
+				content:"trié par ordre croissant"; 
+				border: 0 none;
+				clip: rect(0px, 0px, 0px, 0px);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+		</style>
+  <h1 id="complextable" class="page-header">Table sorter</h1>
+  <p class="lead">Table with sortable columns.</p>  
+  <p>Add the <code>.tablesorter</code> class to the <code>table</code> tag will make the table headers sortable. For ergonomic reaseons, you need to initiate the table with a default sorted row by including the folowing script, you can also put a text just before the table to inform the user that headers are sortable. <a href='http://tablesorter.com/docs/' target='_blank'>More informations about tablesorter options (External link)</a></p>    
+  {% highlight js %}
+    $(document).ready(function() { 
+        $("#myTable").tablesorter({ 
+            sortList: [[0,1]] 
+        }); 
+    });                
+  {% endhighlight %}
+  <div class="bs-example" data-example-id="">
+      <div class="container-fluid">
+        <div class="row">
+          		<table id="myTable" class="table tablesorter" summary="Monthly calls received">
+					<caption>Calls received</caption>
+					<thead class="cf">
+						<tr>
+							<th scope="col" class="header"><a href="#">date<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">number<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">place called<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">call class<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">duration<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">cost<span class="sr-only"> triable</span></a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="quantity_data">08/10/12</td>
+							<td class="quantity_data">447765896321</td>
+							<td class="quantity_data">BT Freefone</td>
+							<td class="quantity_data">talk</td>
+							<td class="quantity_data">0:05:40</td>
+							<td class="quantity_data">0.214</td>
+						</tr>
+						<tr>
+							<td class="quantity_data">09/10/12</td>
+							<td class="quantity_data">447765896321</td>
+							<td class="quantity_data">BT Freefone</td>
+							<td class="quantity_data">talk</td>
+							<td class="quantity_data">0:19:09</td>
+							<td class="quantity_data">0.158</td>
+						</tr>
+						<tr>
+							<td class="quantity_data">10/10/12</td>
+							<td class="quantity_data">447765896322</td>
+							<td class="quantity_data">Free</td>
+							<td class="quantity_data">talk</td>
+							<td class="quantity_data">0:10:06</td>
+							<td class="quantity_data">0.089</td>
+						</tr>
+						<tr>
+							<td class="quantity_data">11/10/12</td>
+							<td class="quantity_data">447765896324</td>
+							<td class="quantity_data">Orange</td>
+							<td class="quantity_data">SMS</td>
+							<td class="quantity_data">-</td>
+							<td class="quantity_data">0.10</td>
+						</tr>
+					</tbody>
+				</table>
+            <!-- /step bar -->
+        </div>
+      </div><!-- /.container-fluid -->
+  </div>
+    
+{% highlight html %}
+<table id="myTable" class="table tablesorter" summary="Monthly calls received">
+    <caption>Calls received</caption>
+    <thead class="cf">
+        <tr>
+            <th scope="col" class="header"><a href="#">date<span class="sr-only"> triable</span></a></th>
+            <th scope="col" class="header"><a href="#">number<span class="sr-only"> triable</span></a></th>
+            <th scope="col" class="header"><a href="#">place called<span class="sr-only"> triable</span></a></th>
+            <th scope="col" class="header"><a href="#">call class<span class="sr-only"> triable</span></a></th>
+            <th scope="col" class="header"><a href="#">duration<span class="sr-only"> triable</span></a></th>
+            <th scope="col" class="header"><a href="#">cost<span class="sr-only"> triable</span></a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="quantity_data">08/10/12</td>
+            <td class="quantity_data">447765896321</td>
+            <td class="quantity_data">BT Freefone</td>
+            <td class="quantity_data">talk</td>
+            <td class="quantity_data">0:05:40</td>
+            <td class="quantity_data">0.214</td>
+        </tr>
+        <tr>
+            <td class="quantity_data">09/10/12</td>
+            <td class="quantity_data">447765896321</td>
+            <td class="quantity_data">BT Freefone</td>
+            <td class="quantity_data">talk</td>
+            <td class="quantity_data">0:19:09</td>
+            <td class="quantity_data">0.158</td>
+        </tr>
+        <tr>
+            <td class="quantity_data">10/10/12</td>
+            <td class="quantity_data">447765896322</td>
+            <td class="quantity_data">Free</td>
+            <td class="quantity_data">talk</td>
+            <td class="quantity_data">0:10:06</td>
+            <td class="quantity_data">0.089</td>
+        </tr>
+        <tr>
+            <td class="quantity_data">11/10/12</td>
+            <td class="quantity_data">447765896324</td>
+            <td class="quantity_data">Orange</td>
+            <td class="quantity_data">SMS</td>
+            <td class="quantity_data">-</td>
+            <td class="quantity_data">0.10</td>
+        </tr>
+    </tbody>
+</table>    
+    
+{% endhighlight %}
+</div>

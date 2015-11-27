@@ -1,0 +1,80 @@
+//
+// Variables for IE lower than 9, give fixed size
+// --------------------------------------------------
+
+@font-size-base: 14px;
+//** For FIXED size
+@font-size-large: (ceil(@font-size-base * 1.25));
+@font-size-small: (ceil(@font-size-base * 0.85));
+@font-size-h1: (floor(@font-size-base * 2.6));
+@font-size-h2: (floor(@font-size-base * 2.15));
+@font-size-h3: (ceil(@font-size-base * 1.7));
+@font-size-h4: (ceil(@font-size-base * 1.25));
+@font-size-h5: 16px;
+@font-size-h6: @font-size-base;
+//** For FIXED size
+@line-height-computed: (floor(@font-size-base * @line-height-base));
+//** For FIXED size
+@jumbotron-font-size:            (ceil(@font-size-base * 1.5));
+@jumbotron-heading-font-size:    (ceil(@font-size-base * 4.5));
+//** for FIXED size
+@icon-font-weight:        30px;
+//** for fixed size
+@padding-base-vertical: 9px;
+@padding-base-horizontal: 20px;
+@padding-large-vertical: 12px;
+@padding-large-horizontal: 20px;
+@padding-small-vertical: 5px;
+@padding-small-horizontal: 10px;
+@padding-xs-vertical: 1px;
+// Fix by the brand, minimum space = 10px
+@padding-xs-horizontal: 10px;
+//** for fixed size
+@navbar-height:                    68px;
+@navbar-font-size:                 18px;
+@navbar-padding-vertical:          10px;
+@navbar-toggle-vertical-margin:    46px;
+
+//** For REM size
+@grid-gutter-width: 20px;
+
+// for FIXED size
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+
+//** for FIXED size
+//** Width of the `border` for generating carets that indicator dropdowns.
+@caret-width-base:          4px;
+//** Carets increase slightly in size for larger components.
+@caret-width-large:         5px;
+//** for FIXED size
+@table-cell-padding: 9px;
+@table-condensed-cell-padding: 5px;
+//** Padding for cells in `.table-condensed`.
+@table-condensed-cell-padding:  5px;
+
+//** Padding around the thumbnail caption
+//** for fixed size
+@thumbnail-caption-padding:   20px;
+
+//** for fixed size
+@nav-link-padding: 10px 10px;
+
+@carousel-control-width: 30px;
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+
+.navbar-vertical-align(@element-height) {
+    margin-top: ((@navbar-height - (@navbar-padding-vertical + @element-height)));
+}
+.navbar-toggle-vertical-align(@element-height) when not(ispixel(@element-height)) {
+    margin-top: ((@navbar-height - (((unit(@element-height))*10))));
+    margin-bottom: 10px;
+}

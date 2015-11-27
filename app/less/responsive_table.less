@@ -1,0 +1,48 @@
+// small device display as card
+@media all and (max-width: @screen-sm-max) {
+    .o-responsive-table {  
+        thead {
+            display: none;
+        }
+        tbody,
+        tr,
+        th,
+        td {
+            display: block;
+            padding: 0;
+        }
+        // for tablet, display 2 cards by rows
+        @media (min-width: @screen-sm-min) {
+            tr {
+                width: 45%;
+                float: left;
+            }
+            tr:nth-child(odd){
+                margin-right: 10%;   
+            }
+        }
+        th,
+        td {
+            vertical-align: middle;
+        }
+        td[data-title]:before {
+            content: attr(data-title);
+            font-weight: bold;
+            float: left;            
+            width: 50%;
+        }
+        tr{
+            //border: 1px solid @gray-light;   
+            border-right: 0;
+            border-left: 0;
+            margin-bottom: 2em;
+        }
+        tbody {
+            th[scope="row"] {
+                font-weight: bold;
+                border-bottom: 2px solid @gray-light;
+                border-top: 0;
+            }
+        }
+    }
+}

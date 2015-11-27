@@ -1,0 +1,323 @@
+<!-- Tables
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="tables">Tables</h1>
+            </div>
+              <h2 id="default-tables">Default tables</h2>
+
+            <div class="bs-component">
+              <table class="table table-striped table-hover ">
+                <caption>Optional table caption.</caption>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Status</th>
+                      <th>Column heading</th>
+                      <th>Column heading</th>
+                      <th>Column heading</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="active">
+                      <th scope="row">1</th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>
+                          <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+                          <span class="sr-only">success</span>
+                      </td> 
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>
+                          <span class="glyphicon glyphicon-info-sign text-info" aria-hidden="true"></span>
+                          <span class="sr-only">information</span>
+                      </td>            
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>
+                          <span class="glyphicon glyphicon-warning-sign text-warning" aria-hidden="true"></span>
+                          <span class="sr-only">warning</span>
+                      </td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td>
+                          <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
+                          <span class="sr-only">danger</span>
+                      </td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                    </tr>
+                  </tbody>
+              </table> 
+            </div><!-- /example -->
+              
+              
+    		<style>
+
+			@media only screen and (max-width : 650px) {
+
+				#myTable .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+				#myTable * html .cf { zoom: 1; }
+				#myTable *:first-child+html .cf { zoom: 1; }
+				#myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+				#myTable th,
+				#myTable td { margin: 0; vertical-align: top; }
+				#myTable th { text-align: left; }
+				#myTable table { display: block; position: relative; width: 100%; }
+				#myTable thead { display: block; float: left; }
+				#myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+				#myTable thead tr { display: block; }
+				#myTable th { display: block; text-align: right; }
+				#myTable tbody tr { display: inline-block; vertical-align: top; }
+				#myTable td { display: block; min-height: 1.25em; text-align: left; }
+
+				/* sort out borders */
+				#myTable th { border-bottom: 0; border-left: 0; border-top: 1px solid #A6A6A6; }
+				#myTable td { border-right: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-bottom: 0; }
+				#myTable th:last-child,
+				#myTable td:last-child { border-bottom: 1px solid #babcbf; }
+
+			}
+
+			/* accessibility */
+			table.tablesorter > thead > tr > th[aria-sort="descending"]:after { 
+				content:"trié par ordre décroissant"; 
+				border: 0 none;
+				clip: rect(0px, 0px, 0px, 0px);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+			/* accessibility */
+			table.tablesorter > thead > tr > th[aria-sort="ascending"]:after { 
+				content:"trié par ordre croissant"; 
+				border: 0 none;
+				clip: rect(0px, 0px, 0px, 0px);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+		</style>
+  <h2 id="complextable" class="page-header">Complex table</h2>
+  <p class="lead">Table with sortable columns.</p>  
+  <div class="" data-example-id="">
+      <div class="container-fluid">
+        <div class="row">
+          		<table id="myTable" class="table tablesorter" summary="Monthly calls received">
+					<caption>Calls received</caption>
+					<thead class="cf">
+						<tr>
+							<th scope="col" class="header"><a href="#">Date<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">Number<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">Place called<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">Call class<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">Duration<span class="sr-only"> triable</span></a></th>
+							<th scope="col" class="header"><a href="#">Cost<span class="sr-only"> triable</span></a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="quantity_data">08/10/12</td>
+							<td class="quantity_data">447765896321</td>
+							<td class="quantity_data">BT Freefone</td>
+							<td class="quantity_data">talk</td>
+							<td class="quantity_data">0:05:40</td>
+							<td class="quantity_data">0.214</td>
+						</tr>
+						<tr>
+							<td class="quantity_data">09/10/12</td>
+							<td class="quantity_data">447765896321</td>
+							<td class="quantity_data">BT Freefone</td>
+							<td class="quantity_data">talk</td>
+							<td class="quantity_data">0:19:09</td>
+							<td class="quantity_data">0.158</td>
+						</tr>
+						<tr>
+							<td class="quantity_data">10/10/12</td>
+							<td class="quantity_data">447765896322</td>
+							<td class="quantity_data">Free</td>
+							<td class="quantity_data">talk</td>
+							<td class="quantity_data">0:10:06</td>
+							<td class="quantity_data">0.089</td>
+						</tr>
+						<tr>
+							<td class="quantity_data">11/10/12</td>
+							<td class="quantity_data">447765896324</td>
+							<td class="quantity_data">Orange</td>
+							<td class="quantity_data">SMS</td>
+							<td class="quantity_data">-</td>
+							<td class="quantity_data">0.10</td>
+						</tr>
+					</tbody>
+				</table>
+            <!-- /step bar -->
+        </div>
+      </div><!-- /.container-fluid -->
+  </div>
+
+  <h2 id="responsivetable" class="page-header">Responsive table</h2>
+    
+  <h3>Default scroll table</h3>
+  <p class="lead">Native Bootstrap solution</p>    
+<div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.table-responsive -->    
+    
+  <h3>Orange card responsive table</h3>
+  <p class="lead">Table responsive switch row to card display on tablet.</p>  
+  <div class="" data-example-id="">
+      <div class="container-fluid">
+        <div class="row">
+          		<table class="table o-responsive-table" summary="Monthly calls received">
+					<caption>Calls received</caption>
+					<thead class="cf">
+						<tr>
+							<th scope="col" class="header">Date</th>
+							<th scope="col" class="header">Number</th>
+							<th scope="col" class="header">Place called</th>
+							<th scope="col" class="header">Call class</th>
+							<th scope="col" class="header">Duration</th>
+							<th scope="col" class="header">Cost</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope='row'>8 octobre 2012</th>
+							<td data-title="number">447765896321</td>
+							<td data-title="place called">BT Freefone</td>
+							<td data-title="call class">talk</td>
+							<td data-title="duration">0:05:40</td>
+							<td data-title="cost">0.214</td>
+						</tr>
+						<tr>
+							<th scope='row'>9 octobre 2012</th>
+							<td data-title="number">447765896321</td>
+							<td data-title="place called">BT Freefone</td>
+							<td data-title="call class">talk</td>
+							<td data-title="duration">0:19:09</td>
+							<td data-title="cost">0.158</td>
+						</tr>
+						<tr>
+							<th scope='row'>10 octobre 2012</th>
+							<td data-title="number">447765896322</td>
+							<td data-title="place called">Free</td>
+							<td data-title="call class">talk</td>
+							<td data-title="duration">0:10:06</td>
+							<td data-title="cost">0.089</td>
+						</tr>
+						<tr>
+							<th scope='row'>11 octobre 2012</th>
+							<td data-title="number">447765896324</td>
+							<td data-title="place called">Orange</td>
+							<td data-title="call class">SMS</td>
+							<td data-title="duration">-</td>
+							<td data-title="cost">0.10</td>
+						</tr>
+					</tbody>
+				</table>
+            <!-- /step bar -->
+        </div>
+      </div><!-- /.container-fluid -->
+  </div>
+
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,20 @@
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import "variables-orange2015.less";
+@import "IE8_font-size2015.less";
+a {
+  color: @link-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
+  text-decoration: none;
+}

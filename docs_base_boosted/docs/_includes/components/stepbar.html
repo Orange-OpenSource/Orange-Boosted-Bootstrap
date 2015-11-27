@@ -1,0 +1,93 @@
+<div class="bs-docs-section">
+  <h1 id="stepbar" class="page-header">Stepbar</h1>
+  <p class='lead'>Indicate the current step within a sequential navigation.</p>
+  <h2 id="stepbar-default">Default stepbar</h2>
+  <p>Declare a list, each item need to contain a first <code>&lt;div&gt;</code> with class <code>.arrow</code> and attribute <code>aria-hidden="true"</code>, next add the correct css classes. 
+							Add the <code>o-wizard-step-bar</code> class on the <code>ul</code> element (root of your list). Then, to design steps, add <code>visited</code>, <code>on</code> or 				<code>next</code> classes if yout want a visited step, the current step or a futur step. These classes are to be added to the list items (<code>li</code> tag).<br />
+							The number of steps can be adjusted using the special attribute <code>data-step</code> (present on the <code>ul</code> tag of the component). 5 steps max.</p>
+  
+  <div class="bs-example" data-example-id="default-stepbar">
+      <div class="container-fluid">
+        <div class="row">
+            <!-- step bar -->
+            <ul class="o-wizard-step-bar" data-steps="5">
+                <li class="visited">
+                    <div>
+                        <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
+                        <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
+                    </div>
+                </li>
+                <li class="visited">
+                    <div class="arrow" aria-hidden="true"></div>
+                    <div>
+                        <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
+                        <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
+                    </div>
+                </li>
+                <li class="on">
+                    <div class="arrow" aria-hidden="true"></div>
+                    <div>
+                        <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
+                        <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
+                    </div>
+                </li>
+                <li class="next">
+                    <div class="arrow" aria-hidden="true"></div>
+                    <div>
+                        <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
+                        <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
+                    </div>
+                </li>
+                <li class="next">
+                    <div class="arrow" aria-hidden="true"></div>
+                    <div>
+                        <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
+                        <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
+                    </div>
+                </li>
+            </ul>
+            <!-- /step bar -->
+        </div>
+      </div><!-- /.container-fluid -->
+  </div>
+{% highlight html %}
+<ul class="o-wizard-step-bar" data-steps="5">
+    <li class="visited">
+        <div>
+            <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
+            <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
+        </div>
+    </li>
+    <li class="visited">
+        <div class="arrow" aria-hidden="true"></div>
+        <div>
+            <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
+            <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
+        </div>
+    </li>
+    <li class="on">
+        <div class="arrow" aria-hidden="true"></div>
+        <div>
+            <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
+            <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
+        </div>
+    </li>
+    <li class="next">
+        <div class="arrow" aria-hidden="true"></div>
+        <div>
+            <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
+            <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
+        </div>
+    </li>
+    <li class="next">
+        <div class="arrow" aria-hidden="true"></div>
+        <div>
+            <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
+            <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
+        </div>
+    </li>
+</ul>
+{% endhighlight %}
+
+</div>
+

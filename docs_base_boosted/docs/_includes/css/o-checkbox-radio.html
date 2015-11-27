@@ -1,0 +1,102 @@
+<h4 id="orange-branded-checkboxes-and-radios">Orange branded checkboxes and radios</h4>
+<p>Doesn't work onto IE8, fallback to default browser checkboxes and radios</p>
+<p>You can quickly used Orange branded checkboxes and radios by adding the class <code>.o-checkbox</code> or <code>.o-radio</code> onto the <code>&lt;input&gt;</code>.</p>
+  <p>The brand applies only if your respect the put the <code>&lt;input&gt;</code> before the <code>&lt;label&gt;</code></p>
+  <p>If you need to pull right the checkboxes or radios, add the class <code>.o-checkbox-right</code> or <code>.o-radio-right</code></p>
+  <div class="bs-example" data-example-id="block-checkboxes-radios-orange">
+    <form>                      
+      <div>                        
+          <input type="checkbox" class="o-checkbox" id="idChk1">
+          <label for="idChk1">Orange checkbox unchecked</label>
+      </div>
+      <div>                        
+          <input type="checkbox" class="o-checkbox" id="idChk2" disabled="disabled">
+          <label for="idChk2">Orange checkbox unchecked disabled</label>
+      </div>
+      <div>                        
+          <input type="checkbox" class="o-checkbox" id="idChk3" checked>
+          <label for="idChk3">Orange checkbox checked </label>
+      </div>
+      <div>                        
+          <input type="checkbox" class="o-checkbox" id="idChk4"  disabled="disabled" checked>
+          <label for="idChk4">Orange checkbox checked disabled</label>
+      </div>
+      <div>
+          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5"> 
+          <label for="idChk5">Orange checkbox with label before</label>
+      </div>
+
+      <div>
+          <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">                          
+        <label for="optionsRadiosOrange1">
+          Orange radio checked
+        </label>
+      </div>
+      <div>
+          <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">                          
+        <label for="optionsRadiosOrange2">
+          Orange radio unchecked
+        </label>
+      </div>
+      <div>
+          <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">                          
+        <label for="optionsRadiosOrange5">
+          Orange radio align right
+        </label>
+      </div>
+        <div>
+          <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>                          
+        <label for="optionsRadiosOrange3">
+          Orange radio checked disabled
+        </label>
+      </div>
+      <div>
+          <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>                          
+        <label for="optionsRadiosOrange4">
+          Orange radio unchecked disabled
+        </label>
+      </div>
+    </form>
+  </div><!-- /.bs-example -->
+{% highlight html %}
+<div>                        
+  <input type="checkbox" class="o-checkbox" id="idChk1">
+  <label for="idChk1">Orange checkbox unchecked</label>
+</div>
+<div>                        
+  <input type="checkbox" class="o-checkbox" id="idChk2" disabled="disabled">
+  <label for="idChk2">Orange checkbox unchecked disabled</label>
+</div>
+<div>                        
+  <input type="checkbox" class="o-checkbox" id="idChk3" checked>
+  <label for="idChk3">Orange checkbox checked </label>
+</div>
+<div>                        
+  <input type="checkbox" class="o-checkbox" id="idChk4"  disabled="disabled" checked>
+  <label for="idChk4">Orange checkbox checked disabled</label>
+</div>
+<div>
+  <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5"> 
+  <label for="idChk5">Orange checkbox with label before</label>
+</div>
+<div>
+  <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">                       
+  <label for="optionsRadiosOrange1">Orange radio checked</label>
+</div>
+<div>
+  <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">                          
+  <label for="optionsRadiosOrange2">Orange radio unchecked</label>
+</div>
+<div>
+  <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">                          
+  <label for="optionsRadiosOrange5">Orange radio align right</label>
+</div>
+<div>
+  <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>                          
+  <label for="optionsRadiosOrange3">Orange radio checked disabled</label>
+</div>
+<div>
+  <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>                          
+  <label for="optionsRadiosOrange4">Orange radio unchecked disabled</label>
+</div>
+{% endhighlight %}

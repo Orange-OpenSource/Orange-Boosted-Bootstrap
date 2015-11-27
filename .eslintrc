@@ -1,0 +1,20 @@
+{
+    "rules": {    
+        "quotes": [
+            2,
+            "single"
+        ],
+        "linebreak-style": [
+            0,
+            "unix"
+        ],
+        "semi": [
+            0,
+            "never"
+        ]
+    },
+    "env": {
+        "node": true
+    },
+    "extends": "eslint:recommended"
+}
