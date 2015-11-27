@@ -1,15 +1,13 @@
 {
   "name": "boosted",
-  "version": "3.2.0",
-  "author": {
-    "name": "Orange SA",
-    "email": ""
-  },
   "description": "Orange Boosted with Boostrap",
   "keywords": [
     "Bootstrap",
     "Orange"
   ],
+  "homepage": "http://orange-opensource.github.io/Orange-Boosted-Bootstrap",      
+  "license": "MIT",    
+  "moduleType": "globals",
   "main": [
     "dist/css/bootstrap-orange2015.css",
     "dist/css/bootstrap-orange-theme2015.css",
@@ -39,15 +37,11 @@
     "/.*",
     "*.zip"
   ],
-  "homepage": "http://orange-opensource.github.io/Orange-Boosted-Bootstrap",
   "devDependencies": {
     "bootstrap": "3.3.6",
     "bootstrapaccessibilityplugin": ">=1.0.3",
     "bootstrap-datepicker": "~1.4.0"
-  },  
-  "ignore": [
-  ],    
-  "license": "MIT",
+  },   
   "dependencies": {
     "jquery-validation": "~1.13.1"
   }
