@@ -1,0 +1,105 @@
+/*!
+ boosted - v3.1.1 - Orange Boosted with Boostrap
+ Copyright 2015 Orange SA, all right reserved
+MIT Licensed 
+*/
+
+/** Old values in BS 3.1.1
+@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
+@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
+@gray: lighten(@brand-orange-black, 33.5%); // #555
+@gray-before-light: lighten(@brand-orange-black, 40%); //#666
+@gray-light: lighten(@brand-orange-black, 80%); //#ccc
+@gray-lighter: lighten(@brand-orange-black, 93.5%);
+*/
+/** BS 3.3.2 values 
+@gray-base:              #000;
+
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+**/
+/*
+According to the brand, no inverse navigations bar
+ALL is BLACK => Inverse navbar = default navbar
+// Default navbar
+@navbar-default-color:          @brand-orange-black;
+@navbar-default-bg:             @brand-orange-white;
+@navbar-default-border:         @navbar-default-bg;
+
+// Default Navbar links
+@navbar-default-link-color: @brand-orange-black;
+@navbar-default-link-hover-color: @brand-primary;
+@navbar-default-link-hover-bg: transparent;
+@navbar-default-link-active-color: @brand-primary;
+@navbar-default-link-active-bg: @navbar-default-link-hover-bg;
+@navbar-default-link-disabled-color: @gray-before-light;
+@navbar-default-link-disabled-bg: transparent;
+
+// Default Navbar brand label
+@navbar-default-brand-color: @navbar-default-link-color;
+@navbar-default-brand-hover-color: @brand-primary;
+@navbar-default-brand-hover-bg: transparent;
+
+// Default Navbar toggle
+@navbar-default-toggle-hover-bg: @brand-primary;
+@navbar-default-toggle-icon-bar-bg: @brand-orange-black;
+@navbar-default-toggle-border-color: @brand-orange-black;
+*/
+/*
+@state-info-text: darken(@brand-info, 30%);
+@state-info-bg: @brand-info;
+@state-info-border: @state-info-text;
+
+@state-warning-text: darken(@brand-warning, 30%);
+@state-warning-bg: @brand-warning;
+@state-warning-border: @state-warning-text;
+
+@state-danger-text: darken(@brand-danger, 30%);
+@state-danger-bg: @brand-danger;
+@state-danger-border: @state-danger-text;
+*/
+/*
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @background;
+    background-color: @color;
+    border-color: none;
+    text-decoration: none;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+      border-color: @border;
+      color: @color;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+*/
+/*# sourceMappingURL=bootstrap-orange-theme2015.css.map */
