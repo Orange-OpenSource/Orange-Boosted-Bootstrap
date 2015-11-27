@@ -44,7 +44,10 @@
     "bootstrap": "3.3.6",
     "bootstrapaccessibilityplugin": ">=1.0.3",
     "bootstrap-datepicker": "~1.4.0"
-  },
+  },  
+  "ignore": [
+  ],    
+  "license": "MIT",
   "dependencies": {
     "jquery-validation": "~1.13.1"
   }
