@@ -3,7 +3,15 @@
   "description": "Orange Boosted with Boostrap",
   "keywords": [
     "Bootstrap",
-    "Orange"
+    "Orange",
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
   ],
   "homepage": "http://orange-opensource.github.io/Orange-Boosted-Bootstrap",      
   "license": "MIT",    
