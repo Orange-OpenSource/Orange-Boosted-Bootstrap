@@ -15,6 +15,9 @@ module.exports = function (grunt) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
   };
 
+  /* boosted mod */
+  var serveStatic = require('serve-static');
+  /* end mod */
   var fs = require('fs');
   var path = require('path');
   var glob = require('glob');
@@ -336,14 +339,28 @@ module.exports = function (grunt) {
       }
     },
 
+    /* boosted mod */
     connect: {
-      server: {
+    //   server: {
+    //     options: {
+    //       port: 3000,
+    //       base: '.'
+    //     }
+    //   }
+    // },
+      livereload: {
         options: {
-          port: 3000,
-          base: '.'
+          open: true,
+          port: 9000,
+          middleware: function (connect) {
+            return [
+              serveStatic('_gh_pages')
+            ];
+          }
         }
       }
-    },
+      },
+    /* end mod */
 
     jekyll: {
       options: {
@@ -380,7 +397,12 @@ module.exports = function (grunt) {
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css', 'docs']
+        tasks: ['dist-css', 'docs'],
+        /* boosted mod */
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        }
+        /* end mod */
       },
       docs: {
         files: 'docs/assets/scss/**/*.scss',
@@ -541,4 +563,14 @@ module.exports = function (grunt) {
       done();
     });
   });
+  
+  /* boosted mod */
+  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+    grunt.task.run([
+      'dist',
+      'connect:livereload',
+      'watch'
+    ]);
+  });
+  /* end mod */
 };
