@@ -393,16 +393,13 @@ module.exports = function (grunt) {
     watch: {
       src: {
         files: '<%= jscs.core.src %>',
-        tasks: ['babel:dev']
+        /* boosted mod */
+        tasks: ['babel:dev', 'dist-js', 'docs', 'jekyll:docs']
+        /* end mod */
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css', 'docs'],
-        /* boosted mod */
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        }
-        /* end mod */
+        tasks: ['scsslint','dist-css', 'docs', 'jekyll:docs']
       },
       docs: {
         files: 'docs/assets/scss/**/*.scss',
