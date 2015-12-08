@@ -1,0 +1,66 @@
+.skiplinks {
+	z-index: 99999;
+}
+.skiplinks .skiplinks_section li {
+	float: left;
+}
+.skiplinks .skiplinks_section a {
+	border-color: #999;
+	border-style: none solid none none;
+	border-width: 0 1px 0 0;
+	display: block;
+	font-weight: bold;
+	padding: 10px;
+}
+.skiplinks .skiplinks_section a:hover {
+	cursor: pointer;
+}
+.skiplinks .skiplinks_section a:hover, .skiplinks .skiplinks_section a:focus {
+	color: #f60;
+	outline: 0 none;
+	background-color: #FFF;
+}
+.skiplinks .skiplinks_section.skiplinks_show {
+	background: none repeat scroll 0 0 $gray-light;
+	border: 2px solid #000;
+	border-radius: 2px;
+	box-shadow: 2px 2px 1634px 1604px rgba(0, 0, 0, 0.3);
+	height: auto;
+	left: 50%;
+	margin-left: -175px;
+	overflow: hidden;
+	position: absolute;
+	top: 20px;
+	width: auto;
+	z-index: 10000000;
+}
+.skiplinks .axs_hide {
+	border: 0 none !important;
+	height: 1px;
+	overflow: hidden;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px;
+}
+.skiplinks .skiplinks_section a:hover {
+	cursor: pointer;
+}
+.skiplinks .skiplinks_section a:hover, .skiplinks .skiplinks_section a:focus {
+	color: #f50;
+	outline: 0 none;
+}
+.skiplinks a, .skiplinks ul, .skiplinks li, .skiplinks div {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	color: #000;
+	float: none;
+	font-family: Arial;
+	font-size: 0.95em;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-shadow: none;
+	list-style: none;
+}
