@@ -1,4 +1,4 @@
-<header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+<header class="navbar navbar-dark navbar-static-top bd-navbar" role="banner">
   {% comment %}
   <nav class="nav navbar-nav pull-xs-right">
     <div class="nav-item dropdown">
@@ -29,17 +29,20 @@
       &#9776;
     </button>
     <a class="navbar-brand hidden-sm-up" href="{{ site.baseurl }}/">
-      Bootstrap
+      B<span class="text-primary">oo</span>sted
     </a>
   </div>
   <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
     <nav class="nav navbar-nav">
-      <a class="nav-item nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Bootstrap</a>
+      <a class="nav-item nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">
+        B<span class="text-primary">oo</span>sted
+      </a>
       <a class="nav-item nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
       <a class="nav-item nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
       <a class="nav-item nav-link" href="{{ site.themes }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a>
       <a class="nav-item nav-link" href="{{ site.expo }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a>
       <a class="nav-item nav-link" href="{{ site.blog }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a>
+      <a class="nav-item nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/boostwatch/">Boostwatch</a>
     </nav>
   </div>
 </header>
