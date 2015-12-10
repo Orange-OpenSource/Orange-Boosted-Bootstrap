@@ -86,21 +86,21 @@
 }
 
 /* a top level navigation item in the mega menu */
-.nav-item {
-	list-style: none;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
+// .nav-item {
+// 	list-style: none;
+// 	display: inline-block;
+// 	padding: 0;
+// 	margin: 0;
+// }
 
 /* first descendant link within a top level navigation item */
-.nav-item > a {
-	position: relative;
-	display: inline-block;
-	padding: 0.5em 1em;
-	margin: 0 0 -1px 0;
-	border: 1px solid transparent;
-}
+// .nav-item > a {
+// 	position: relative;
+// 	display: inline-block;
+// 	padding: 0.5em 1em;
+// 	margin: 0 0 -1px 0;
+// 	border: 1px solid transparent;
+// }
 
 /* focus/open states of first descendant link within a top level 
 navigation item */
@@ -111,10 +111,10 @@ navigation item */
 
 /* open state of first descendant link within a top level 
 navigation item */
-.nav-item > a.open {
-	border-bottom: none;
-	z-index: 1;
-}
+// .nav-item > a.open {
+// 	border-bottom: none;
+// 	z-index: 1;
+// }
 
 /* sub-navigation panel */
 .sub-nav {

@@ -549,7 +549,8 @@ $nav-local-arrow-width: 10px;
 $nav-local-border-color: $gray-light;
 
 $nav-local-arrow-outer-width:           ($nav-local-arrow-width + 1);
-$nav-local-arrow-outer-color:           fadein($nav-local-border-color, 0%);
+// $nav-local-arrow-outer-color:           fadein($nav-local-border-color, 0%);
+$nav-local-arrow-outer-color:           $nav-local-border-color;
 
 //== Step process bar
 $o-wizard-step-bar-arrow-color: $brand-orange-white;

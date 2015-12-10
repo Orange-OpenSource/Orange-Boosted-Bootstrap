@@ -7,7 +7,7 @@ group: boostwatch
 {% include boostwatch/modal.html %}
 {% include boostwatch/tableSorter.html %}
 {% include boostwatch/bulletPoint.html %}
-{% include boostwatch/local.html %}
+{% include boostwatch/navLocal.html %}
 {% include boostwatch/navTab.html %}
 {% include boostwatch/accordion.html %}
 {% include boostwatch/ofooter.html %}
@@ -67,7 +67,7 @@ group: boostwatch
                 </div>
               </div>
             <div style="display: none;" id="source-button" class="btn btn-primary btn-xs">&lt; &gt;</div>
-         </div>   
+         </div>
 
           </div>
         </div>
@@ -98,7 +98,7 @@ group: boostwatch
               <button type="button" class="btn btn-link">Link</button>
             </p>
         <h2>Hover</h2>
-            
+
             <p class="bs-component">
               <button type="button" class="btn btn-default hover">Default</button>
               <button type="button" class="btn btn-primary hover">Primary</button>
@@ -108,7 +108,7 @@ group: boostwatch
               <button type="button" class="btn btn-danger hover">Danger</button>
               <button type="button" class="btn btn-link hover">Link</button>
             </p>
-         <h2>Pressed</h2>   
+         <h2>Pressed</h2>
             <p class="bs-component">
               <button type="button" class="btn btn-default active">Default</button>
               <button type="button" class="btn btn-primary active">Primary</button>
@@ -118,8 +118,8 @@ group: boostwatch
               <button type="button" class="btn btn-danger active">Danger</button>
               <button type="button" class="btn btn-link active">Link</button>
             </p>
-         <h2>Disabled</h2>   
-            
+         <h2>Disabled</h2>
+
             <p class="bs-component">
               <button type="button" class="btn btn-default disabled">Default</button>
               <button type="button" class="btn btn-primary disabled">Primary</button>
@@ -130,7 +130,7 @@ group: boostwatch
               <button type="button" class="btn btn-link disabled">Link</button>
             </p>
 
-         <h2>Dropdowns</h2>   
+         <h2>Dropdowns</h2>
 
             <div style="margin-bottom: 15px;">
               <div class="btn-toolbar bs-component" style="margin: 0;">
@@ -196,7 +196,7 @@ group: boostwatch
               </div>
             </div>
 
-         <h2>Sizes</h2>   
+         <h2>Sizes</h2>
             <p class="bs-component">
               <button type="button" class="btn btn-primary btn-lg">Large button</button>
               <button type="button" class="btn btn-primary">Default button</button>
@@ -294,8 +294,8 @@ group: boostwatch
             <div class="bs-component">
               <h2>Example body text</h2>
               <p>Nullam quis risus eget <a href="#">urna mollis ornare</a>
- vel eu leo. Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies 
+ vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
 vehicula.</p>
               <p><small>This line of text is meant to be treated as fine print.</small></p>
               <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
@@ -344,7 +344,7 @@ vehicula.</p>
           </div>
         </div>
       </div>
-  
+
 
       <!-- Forms
       ================================================== -->
@@ -378,24 +378,24 @@ vehicula.</p>
                           <input type="checkbox"> Checkbox default
                         </label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk1">
                           <label for="idChk1">Orange checkbox unchecked</label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk2" disabled="disabled">
                           <label for="idChk2">Orange checkbox unchecked disabled</label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk3" checked>
                           <label for="idChk3">Orange checkbox checked </label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk4"  disabled="disabled" checked>
                           <label for="idChk4">Orange checkbox checked disabled</label>
                       </div>
                       <div>
-                          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5"> 
+                          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5">
                           <label for="idChk5">Orange checkbox with label before</label>
                       </div>
                     </div>
@@ -428,31 +428,31 @@ vehicula.</p>
                     <label class="col-lg-3 control-label">Orange Radios</label>
                     <div class="col-lg-9">
                       <div>
-                          <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">                          
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">
                         <label for="optionsRadiosOrange1">
                           Orange radio checked
                         </label>
                       </div>
                       <div>
-                          <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">                          
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">
                         <label for="optionsRadiosOrange2">
                           Orange radio unchecked
                         </label>
                       </div>
                       <div>
-                          <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">                          
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">
                         <label for="optionsRadiosOrange5">
                           Orange radio align right
                         </label>
                       </div>
                         <div>
-                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>                          
+                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>
                         <label for="optionsRadiosOrange3">
                           Orange radio checked disabled
                         </label>
                       </div>
                       <div>
-                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>                          
+                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>
                         <label for="optionsRadiosOrange4">
                           Orange radio unchecked disabled
                         </label>
@@ -581,36 +581,36 @@ vehicula.</p>
               </ul>
               <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                  <p>Raw denim you probably haven't heard of them jean 
-shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master 
-cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. 
-Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater 
-eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia 
-cillum iphone. Seitan aliquip quis cardigan american apparel, butcher 
+                  <p>Raw denim you probably haven't heard of them jean
+shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
+cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater
+eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
 voluptate nisi qui.</p>
                 </div>
                 <div class="tab-pane fade" id="profile">
-                  <p>Food truck fixie locavore, accusamus mcsweeney's 
-marfa nulla single-origin coffee squid. Exercitation +1 labore velit, 
-blog sartorial PBR leggings next level wes anderson artisan four loko 
+                  <p>Food truck fixie locavore, accusamus mcsweeney's
+marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
+blog sartorial PBR leggings next level wes anderson artisan four loko
 farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim
  craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo
  nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
                 </div>
                 <div class="tab-pane fade" id="dropdown1">
-                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu 
-before they sold out mcsweeney's organic lomo retro fanny pack lo-fi 
+                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu
+before they sold out mcsweeney's organic lomo retro fanny pack lo-fi
 farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
- beer, iphone skateboard locavore carles etsy salvia banksy hoodie 
-helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit 
+ beer, iphone skateboard locavore carles etsy salvia banksy hoodie
+helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit
 cred pitchfork.</p>
                 </div>
                 <div class="tab-pane fade" id="dropdown2">
-                  <p>Trust fund seitan letterpress, keytar raw denim 
-keffiyeh etsy art party before they sold out master cleanse gluten-free 
-squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, 
-art party locavore wolf cliche high life echo park Austin. Cred vinyl 
-keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS 
+                  <p>Trust fund seitan letterpress, keytar raw denim
+keffiyeh etsy art party before they sold out master cleanse gluten-free
+squid scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+art party locavore wolf cliche high life echo park Austin. Cred vinyl
+keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
 viral locavore cosby sweater.</p>
                 </div>
               </div>
@@ -657,7 +657,7 @@ viral locavore cosby sweater.</p>
                 </li>
               </ul>
             </div>
-          </div>          
+          </div>
         </div>
 
 
@@ -680,7 +680,7 @@ viral locavore cosby sweater.</p>
                 <li class="active">Data</li>
               </ul>
             </div>
-          </div>  
+          </div>
           <div class="col-lg-6">
             <h2 id="pager">Pager</h2>
             <div class="bs-component">
@@ -727,7 +727,7 @@ viral locavore cosby sweater.</p>
                 <li><a href="#">5</a></li>
                 <li><a href="#">»</a></li>
               </ul>
-                
+
               <ul class="o-pagination pagination-sm">
                 <li class="disabled"><a href="#">< Previous</a></li>
                 <li class="active"><a href="#">1</a></li>
@@ -739,7 +739,7 @@ viral locavore cosby sweater.</p>
               </ul>
             </div>
           </div>
-          
+
         </div>
       </div>
 

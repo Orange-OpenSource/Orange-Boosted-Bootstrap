@@ -6,9 +6,9 @@
 
 // Core variables and mixins
 @import "variables";
-/* boosted mod */
+// boosted mod
 @import "o-variables";
-/* end mod */
+// end mod
 @import "mixins";
 
 // Reset and dependencies
@@ -58,12 +58,12 @@
 @import "utilities-spacing";
 @import "utilities-responsive";
 
-/* boosted mod */
+// boosted mod
 @import "o-iconOrange";
 @import "o-bullet_points";
 @import "o-step_bar";
 @import "o-main_megamenu";
-@import "o-local";
+@import "o-nav-local";
 @import "o-accordion";
 @import "o-tablesorter";
 @import "o-modal";
@@ -75,8 +75,7 @@
 @import "o-responsive_table";
 @import "o-checkbox";
 @import "o-radio";
-/*@import "../../bower_components/bootstrap/less/mixins";
-@import "../../bower_components/bootstrap-datepicker/less/datepicker3";
-*/
+//@import "../../bower_components/bootstrap/less/mixins";
+//@import "../../bower_components/bootstrap-datepicker/less/datepicker3";
 @import "orange-css"
-/* end mod */
+// end mod
