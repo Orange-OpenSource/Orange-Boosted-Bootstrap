@@ -1516,7 +1516,7 @@ ul.o-wizard-step-bar {
 ul.o-wizard-step-bar li {
   position: relative;
   float: left;
-  padding: 9px 20px;
+  padding: 8px 20px;
   font-weight: bold;
   color: #000;
   list-style: none;
@@ -1543,21 +1543,21 @@ ul.o-wizard-step-bar li.on > .arrow:after {
   border-style: solid;
 }
 ul.o-wizard-step-bar li.on > .arrow {
-  border-width: 29px 14.5px;
+  border-width: 28px 14px;
 }
 ul.o-wizard-step-bar li.on > .arrow:after {
   content: "";
-  border-width: 29px 14.5px;
+  border-width: 28px 14px;
 }
 ul.o-wizard-step-bar li.on > .arrow {
   top: 50%;
   top: 0;
-  margin-left: -29px;
+  margin-left: -28px;
   border-right-color: #f16e00;
   border-left-width: 0;
 }
 ul.o-wizard-step-bar li.on > .arrow:after {
-  bottom: -29px;
+  bottom: -28px;
   content: " ";
   border-right-width: 0;
   border-left-color: #000;
@@ -1572,21 +1572,21 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
   border-style: solid;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow {
-  border-width: 29px 14.5px;
+  border-width: 28px 14px;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow:after {
   content: "";
-  border-width: 29px 14.5px;
+  border-width: 28px 14px;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow {
   top: 50%;
   top: 0;
-  margin-left: -29px;
+  margin-left: -28px;
   border-right-color: #ddd;
   border-left-width: 0;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow:after {
-  bottom: -29px;
+  bottom: -28px;
   content: " ";
   border-right-width: 0;
   border-left-color: #f16e00;
@@ -1602,21 +1602,21 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
     border-style: solid;
   }
   ul.o-wizard-step-bar li.on > .arrow {
-    border-width: 19px 9.5px;
+    border-width: 18px 9px;
   }
   ul.o-wizard-step-bar li.on > .arrow:after {
     content: "";
-    border-width: 19px 9.5px;
+    border-width: 18px 9px;
   }
   ul.o-wizard-step-bar li.on > .arrow {
     top: 50%;
     top: 0;
-    margin-left: -19.1px;
+    margin-left: -18.1px;
     border-right-color: #f16e00;
     border-left-width: 0;
   }
   ul.o-wizard-step-bar li.on > .arrow:after {
-    bottom: -19px;
+    bottom: -18px;
     content: " ";
     border-right-width: 0;
     border-left-color: #000;
@@ -1631,21 +1631,21 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
     border-style: solid;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow {
-    border-width: 19px 9.5px;
+    border-width: 18px 9px;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow:after {
     content: "";
-    border-width: 19px 9.5px;
+    border-width: 18px 9px;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow {
     top: 50%;
     top: 0;
-    margin-left: -19.1px;
+    margin-left: -18.1px;
     border-right-color: #ddd;
     border-left-width: 0;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow:after {
-    bottom: -19px;
+    bottom: -18px;
     content: " ";
     border-right-width: 0;
     border-left-color: #f16e00;
@@ -2398,7 +2398,7 @@ table.tablesorter caption {
 .o-pagination > li > span {
   position: relative;
   float: left;
-  padding: 9px 20px;
+  padding: 8px 20px;
   margin-left: 0;
   line-height: 1.42857143;
   color: #000;
@@ -2466,7 +2466,7 @@ table.tablesorter caption {
   /*top: 1px;*/
   display: inline-block;
   /* permet de positionner les pseudo-éléments */
-  padding-left: 30px;
+  padding-left: 28.5px;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
@@ -2477,7 +2477,7 @@ table.tablesorter caption {
 /* Align checkbox on the right*/
 .o-checkbox-right.o-checkbox[type="checkbox"]:not(:checked) + label,
 .o-checkbox-right.o-checkbox[type="checkbox"]:checked + label {
-  padding-right: 30px;
+  padding-right: 28.5px;
   padding-left: 0;
   /* fait un peu d'espace pour notre case à venir */
 }
@@ -2487,8 +2487,8 @@ table.tablesorter caption {
 .o-checkbox[type="checkbox"]:checked + label:before {
   position: absolute;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   content: "";
   background-color: #fff;
   /* dim. de la case */
@@ -2506,8 +2506,8 @@ table.tablesorter caption {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   font-family: 'Glyphicons Halflings';
   font-size: 14px;
   color: #fff;
@@ -2581,7 +2581,7 @@ table.tablesorter caption {
   /*top: 1px;*/
   display: inline-block;
   /* permet de positionner les pseudo-éléments */
-  padding-left: 30px;
+  padding-left: 28.5px;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
@@ -2592,7 +2592,7 @@ table.tablesorter caption {
 /* Align radio on the right*/
 .o-radio-right.o-radio[type="radio"]:not(:checked) + label,
 .o-radio-right.o-radio[type="radio"]:checked + label {
-  padding-right: 30px;
+  padding-right: 28.5px;
   padding-left: 0;
   /* fait un peu d'espace pour notre case à venir */
 }
@@ -2602,8 +2602,8 @@ table.tablesorter caption {
 .o-radio[type="radio"]:checked + label:before {
   position: absolute;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   content: "";
   background-color: #fff;
   /* dim. de la case */
@@ -2622,8 +2622,8 @@ table.tablesorter caption {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   font-size: 14px;
   color: #fff;
   /* dim. de la case */
@@ -3622,8 +3622,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
 @line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
-@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;  
-@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;  
+@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
  *
  *
  **/
@@ -3729,7 +3729,7 @@ html {
   float: right;
 }
 .navbar-toggle-complement .navbar-nav {
-  margin: 9px 0 0 0;
+  margin: 8px 0 0 0;
 }
 .navbar-toggle-complement li {
   float: left;

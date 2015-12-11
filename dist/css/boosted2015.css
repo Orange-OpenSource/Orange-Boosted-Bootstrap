@@ -1516,7 +1516,7 @@ ul.o-wizard-step-bar {
 ul.o-wizard-step-bar li {
   position: relative;
   float: left;
-  padding: .9rem 2rem;
+  padding: .8rem 2rem;
   font-weight: bold;
   color: #000;
   list-style: none;
@@ -1543,21 +1543,21 @@ ul.o-wizard-step-bar li.on > .arrow:after {
   border-style: solid;
 }
 ul.o-wizard-step-bar li.on > .arrow {
-  border-width: 2.9rem 1.45rem;
+  border-width: 2.8rem 1.4rem;
 }
 ul.o-wizard-step-bar li.on > .arrow:after {
   content: "";
-  border-width: 2.9rem 1.45rem;
+  border-width: 2.8rem 1.4rem;
 }
 ul.o-wizard-step-bar li.on > .arrow {
   top: 50%;
   top: 0;
-  margin-left: -2.9rem;
+  margin-left: -2.8rem;
   border-right-color: #f16e00;
   border-left-width: 0;
 }
 ul.o-wizard-step-bar li.on > .arrow:after {
-  bottom: -2.9rem;
+  bottom: -2.8rem;
   content: " ";
   border-right-width: 0;
   border-left-color: #000;
@@ -1572,21 +1572,21 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
   border-style: solid;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow {
-  border-width: 2.9rem 1.45rem;
+  border-width: 2.8rem 1.4rem;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow:after {
   content: "";
-  border-width: 2.9rem 1.45rem;
+  border-width: 2.8rem 1.4rem;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow {
   top: 50%;
   top: 0;
-  margin-left: -2.9rem;
+  margin-left: -2.8rem;
   border-right-color: #ddd;
   border-left-width: 0;
 }
 ul.o-wizard-step-bar li.on + li.next > .arrow:after {
-  bottom: -2.9rem;
+  bottom: -2.8rem;
   content: " ";
   border-right-width: 0;
   border-left-color: #f16e00;
@@ -1602,21 +1602,21 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
     border-style: solid;
   }
   ul.o-wizard-step-bar li.on > .arrow {
-    border-width: 1.9rem .95rem;
+    border-width: 1.8rem .9rem;
   }
   ul.o-wizard-step-bar li.on > .arrow:after {
     content: "";
-    border-width: 1.9rem .95rem;
+    border-width: 1.8rem .9rem;
   }
   ul.o-wizard-step-bar li.on > .arrow {
     top: 50%;
     top: 0;
-    margin-left: -2rem;
+    margin-left: -1.9rem;
     border-right-color: #f16e00;
     border-left-width: 0;
   }
   ul.o-wizard-step-bar li.on > .arrow:after {
-    bottom: -1.9rem;
+    bottom: -1.8rem;
     content: " ";
     border-right-width: 0;
     border-left-color: #000;
@@ -1631,21 +1631,21 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
     border-style: solid;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow {
-    border-width: 1.9rem .95rem;
+    border-width: 1.8rem .9rem;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow:after {
     content: "";
-    border-width: 1.9rem .95rem;
+    border-width: 1.8rem .9rem;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow {
     top: 50%;
     top: 0;
-    margin-left: -2rem;
+    margin-left: -1.9rem;
     border-right-color: #ddd;
     border-left-width: 0;
   }
   ul.o-wizard-step-bar li.on + li.next > .arrow:after {
-    bottom: -1.9rem;
+    bottom: -1.8rem;
     content: " ";
     border-right-width: 0;
     border-left-color: #f16e00;
@@ -2398,7 +2398,7 @@ table.tablesorter caption {
 .o-pagination > li > span {
   position: relative;
   float: left;
-  padding: .9rem 2rem;
+  padding: .8rem 2rem;
   margin-left: 0;
   line-height: 1.42857143;
   color: #000;
@@ -3663,8 +3663,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
 @line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
-@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;  
-@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;  
+@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
  *
  *
  **/
@@ -3772,7 +3772,7 @@ html {
   float: right;
 }
 .navbar-toggle-complement .navbar-nav {
-  margin: .9rem 0 0 0;
+  margin: .8rem 0 0 0;
 }
 .navbar-toggle-complement li {
   float: left;

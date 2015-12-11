@@ -2549,7 +2549,7 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 10px;
+  padding-top: 9px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #000;
@@ -2557,8 +2557,8 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 40px;
-  padding: 9px 20px;
+  height: 38px;
+  padding: 8px 20px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #000;
@@ -2621,7 +2621,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 40px;
+    line-height: 38px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -2711,8 +2711,8 @@ fieldset[disabled] .checkbox label {
 }
 .form-control-static {
   min-height: 34px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-bottom: 0;
 }
 .form-control-static.input-lg,
@@ -2798,7 +2798,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 50px;
+  padding-right: 47.5px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2806,9 +2806,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
   text-align: center;
   pointer-events: none;
 }
@@ -3078,13 +3078,13 @@ select[multiple].input-lg {
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
 .form-horizontal .checkbox-inline {
-  padding-top: 10px;
+  padding-top: 9px;
   margin-top: 0;
   margin-bottom: 0;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 30px;
+  min-height: 29px;
 }
 .form-horizontal .form-group {
   margin-right: -10px;
@@ -3092,7 +3092,7 @@ select[multiple].input-lg {
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
-    padding-top: 10px;
+    padding-top: 9px;
     margin-bottom: 0;
     text-align: right;
   }
@@ -3114,7 +3114,7 @@ select[multiple].input-lg {
 }
 .btn {
   display: inline-block;
-  padding: 9px 20px;
+  padding: 8px 20px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: bold;
@@ -4015,7 +4015,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 9px 20px;
+  padding: 8px 20px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
@@ -4493,11 +4493,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-form {
   padding: 10px 10px;
-  margin-top: 14px;
-  margin-top: 54px;
-  margin-top: 18px;
+  margin-top: 15px;
+  margin-top: 54.2px;
+  margin-top: 20px;
   margin-right: -10px;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   margin-bottom: 0;
   margin-left: -10px;
   border-top: 1px solid transparent;
@@ -4595,10 +4595,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 14px;
-  margin-top: 54px;
-  margin-top: 18px;
-  margin-bottom: 14px;
+  margin-top: 15px;
+  margin-top: 54.2px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -4890,7 +4890,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 9px 20px;
+  padding: 8px 20px;
   margin-left: -1px;
   line-height: 1.42857143;
   color: #000;
@@ -6957,8 +6957,8 @@ button.close {
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
 @line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
-@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;  
-@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;  
+@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
  *
  *
  **/

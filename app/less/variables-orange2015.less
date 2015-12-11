@@ -96,8 +96,8 @@
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
 @line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
-@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;  
-@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;  
+@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
  *
  *
  **/
@@ -146,7 +146,7 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 //** for REM size
-@padding-base-vertical: 0.9rem;//9px;
+@padding-base-vertical: 0.8rem;//8px;
 @padding-base-horizontal: 2rem;//20px;
 
 
@@ -268,11 +268,11 @@
 
 //** Default `.form-control` height
 // for REM size
-@input-height-base:              (2.2 + (@padding-base-vertical * 2) );
+@input-height-base:              (2.4 + (@padding-base-vertical * 2) );
 //** Large `.form-control` height
-@input-height-large:             ((ceil(@font-size-large * @line-height-large * 10) + (@padding-large-vertical * 20) + 2) / 10);
+@input-height-large:             ((ceil(@font-size-large * @line-height-large * 10) + (@padding-large-vertical * 20) + 4) / 10);
 //** Small `.form-control` height
-@input-height-small:             ((floor(@font-size-small * @line-height-small * 10) + (@padding-small-vertical * 20) + 2) / 10);
+@input-height-small:             ((floor(@font-size-small * @line-height-small * 10) + (@padding-small-vertical * 20) + 4) / 10);
 
 //** `.form-group` margin
 @form-group-margin-bottom: @font-size-base;
