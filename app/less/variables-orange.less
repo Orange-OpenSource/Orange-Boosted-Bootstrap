@@ -11,7 +11,7 @@
 //@brand-orange: #C15800;
 @brand-orange: #F16E00;
 //used to invert colors
-@brand-orange-black: #000;
+@gray-base: #000;
 @brand-orange-white: #fff;
 /////////////////////////////////////////////////////////////
 //
@@ -22,18 +22,18 @@
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-before-light:      lighten(@gray-base, 40%); //#666
-@gray-before-light-plus: #999;
+@gray: #999;
 @gray-light:             lighten(@gray-base, 80%); // #ccc
 @gray-light-plus:        #ddd; // used for ghosted states on white BG
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
 /** Old values in BS 3.1.1
-@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
-@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
-@gray: lighten(@brand-orange-black, 33.5%); // #555
-@gray-before-light: lighten(@brand-orange-black, 40%); //#666
-@gray-light: lighten(@brand-orange-black, 80%); //#ccc
-@gray-lighter: lighten(@brand-orange-black, 93.5%);
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 26.75%); // #444
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-before-light: lighten(@gray-base, 40%); //#666
+@gray-light: lighten(@gray-base, 80%); //#ccc
+@gray-lighter: lighten(@gray-base, 93.5%);
 */
 /** BS 3.3.2 values 
 @gray-base:              #000;
@@ -181,13 +181,13 @@
 @btn-primary-color: @brand-orange-white;
 @btn-primary-bg: @brand-primary;
 @btn-primary-border: darken(@btn-primary-bg, 5%);
-@btn-success-color: @brand-orange-black;
+@btn-success-color: @gray-base;
 @btn-success-bg: @brand-success;
 @btn-success-border: darken(@btn-success-bg, 5%);
-@btn-info-color: @brand-orange-black;
+@btn-info-color: @gray-base;
 @btn-info-bg: @brand-info;
 @btn-info-border: darken(@btn-info-bg, 5%);
-@btn-warning-color: @brand-orange-black;
+@btn-warning-color: @gray-base;
 @btn-warning-bg: @brand-warning;
 @btn-warning-border: darken(@btn-warning-bg, 5%);
 @btn-danger-color: @brand-orange-white;
@@ -294,7 +294,7 @@
 @dropdown-header-color:          @gray-light;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
-@dropdown-caret-color:           @brand-orange-black;
+@dropdown-caret-color:           @gray-base;
 
 
 //-- Z-index master list
@@ -405,7 +405,7 @@
 // default navbar
 // Reset default navbar basics
 @navbar-default-color: @gray-light;
-@navbar-default-bg: @brand-orange-black;
+@navbar-default-bg: @gray-base;
 @navbar-default-border: darken(@navbar-default-bg, 10%);
 
 // default navbar links
@@ -423,18 +423,18 @@
 @navbar-default-brand-hover-bg: @navbar-default-link-hover-bg;
 
 // default navbar toggle
-@navbar-default-toggle-hover-bg: @brand-orange-black;
+@navbar-default-toggle-hover-bg: @gray-base;
 @navbar-default-toggle-icon-bar-bg: @brand-orange-white;
 @navbar-default-toggle-border-color: @gray-dark;
 
 
 // Inverted navbar
-@navbar-inverse-color:             @brand-orange-black;
+@navbar-inverse-color:             @gray-base;
 @navbar-inverse-bg: @gray-lighter;
 @navbar-inverse-border: darken(@navbar-inverse-bg, 6.5%);
 
 // Inverted Navbar links
-@navbar-inverse-link-color: @brand-orange-black;
+@navbar-inverse-link-color: @gray-base;
 @navbar-inverse-link-hover-color: @gray-dark;
 @navbar-inverse-link-hover-bg: transparent;
 @navbar-inverse-link-active-color: @gray-dark;
@@ -485,9 +485,9 @@
 @o-nav-tabs-bg: @gray-lighter;
 
 @o-nav-tabs-bg: @gray-lighter;
-@o-nav-tabs-color: @brand-orange-black;
+@o-nav-tabs-color: @gray-base;
 @o-nav-tabs-active-bg: @body-bg;
-@o-nav-tabs-active-color: @brand-orange-black;
+@o-nav-tabs-active-color: @gray-base;
 
 //** o-nav-tabs outer arrow width
 @o-nav-tabs-arrow-outer-width:           (@o-nav-tabs-arrow-width + 1);
@@ -597,7 +597,7 @@
 //** Tooltip text color
 @tooltip-color:               @brand-orange-white;
 //** Tooltip background color
-@tooltip-bg:                  @brand-orange-black;
+@tooltip-bg:                  @gray-base;
 @tooltip-opacity:             .9;
 
 //** Tooltip arrow width
@@ -653,9 +653,9 @@
 @label-danger-bg:             @brand-danger;
 
 //** Default label text color
-@label-color:                 @brand-orange-black;
+@label-color:                 @gray-base;
 //** Default text color of a linked label
-@label-link-hover-color:      @brand-orange-black;
+@label-link-hover-color:      @gray-base;
 
 
 //== Modals
@@ -678,7 +678,7 @@
 @modal-content-fallback-border-color:          #999;
 
 //** Modal backdrop background color
-@modal-backdrop-bg:           @brand-orange-black;
+@modal-backdrop-bg:           @gray-base;
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      .5;
 //** Modal header border color
@@ -700,15 +700,15 @@
 @alert-link-font-weight:      bold;
 
 @alert-success-bg:            @brand-success;
-@alert-success-text:          @brand-orange-black;
+@alert-success-text:          @gray-base;
 @alert-success-border:        @state-success-border;
 
 @alert-info-bg:               @brand-info;
-@alert-info-text:             @brand-orange-black;
+@alert-info-text:             @gray-base;
 @alert-info-border:           @state-info-border;
 
 @alert-warning-bg:            @brand-warning;
-@alert-warning-text:          @brand-orange-black;
+@alert-warning-text:          @gray-base;
 @alert-warning-border:        @state-warning-border;
 
 @alert-danger-bg:             @brand-danger;
@@ -795,15 +795,15 @@
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
-@panel-success-text:          @brand-orange-black;
+@panel-success-text:          @gray-base;
 @panel-success-border:        @state-success-border;
 @panel-success-heading-bg:    @brand-success;
 
-@panel-info-text: @brand-orange-black;
+@panel-info-text: @gray-base;
 @panel-info-border: @state-info-border;
 @panel-info-heading-bg: @brand-info;
 
-@panel-warning-text: @brand-orange-black;
+@panel-warning-text: @gray-base;
 @panel-warning-border: @state-warning-border;
 @panel-warning-heading-bg: @brand-warning;
 
@@ -896,7 +896,7 @@
 //##
 
 @close-font-weight:           bold;
-@close-color:                 @brand-orange-black;
+@close-color:                 @gray-base;
 @close-text-shadow:           0 1px 0 @brand-orange-white;
 
 

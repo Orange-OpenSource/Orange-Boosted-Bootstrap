@@ -38,17 +38,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: appConfig,
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       less: {
         files: ['<%= yeoman.app %>/less/{,*/}*.less'],
         tasks: ['less', 'copy:styles']
       },
       js: {
         files: ['<%= yeoman.app %>/js/{,*/}*.js'],
-        tasks: ['newer:eslint', 'copy:js'],
+        tasks: ['newer:eslint'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
@@ -650,7 +646,7 @@ module.exports = function (grunt) {
         overwrite: true,
         replacements: [{
               from: '<h2 id="glyphicons-glyphs">Available glyphs</h2>',
-              to: '<h2 id="orange-icons">Orange Icons</h2><p>Icons created from the Orange brand.</p><div class="bs-glyphicons"><ul class="bs-glyphicons-list">{% for iconClassName in site.data.orange-icons %}<li><span class="glyphicon {{ iconClassName }}" aria-hidden="true"></span><span class="glyphicon-class">{{ iconClassName }}</span></li>{% endfor %}</ul></div><h2 id="glyphicons-glyphs">Available glyphs</h2>'
+              to: '<h2 id="orange-icons">Orange Icons</h2><p>Icons created from the Orange brand.</p><div class="bs-glyphicons"><ul class="bs-glyphicons-list">{% for iconClassName in site.data.orange-icons %}<li><span class="{{ iconClassName }}" aria-hidden="true"></span><span class="glyphicon-class">{{ iconClassName }}</span></li>{% endfor %}</ul></div><h2 id="glyphicons-glyphs">Available glyphs</h2>'
           }, {
               from: '<li><a href="#glyphicons-glyphs">Available glyphs</a></li>',
               to: '<li><a href="#orange-icons">Orange Icons</a></li><li><a href="#glyphicons-glyphs">Available glyphs</a></li>'

@@ -1,5 +1,5 @@
 /*!
- boosted - v3.2.0 - Orange Boosted with Boostrap
+ boosted - v - Orange Boosted with Boostrap
  Copyright 2015 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -624,7 +624,7 @@ table.tablesorter caption {
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
-  color: #555;
+  color: #999;
   background-color: #fff;
 }
 .nav-tabs > li.active > a,
@@ -873,7 +873,7 @@ table.tablesorter caption {
   min-height: 50px;
   color: #ddd;
   background-color: #282828;
-  border-top: 1px solid #555;
+  border-top: 1px solid #999;
 }
 .o-footer-inverse .o-footer-bottom {
   min-height: 50px;
@@ -1614,7 +1614,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
   background-color: #ccc;
-  border-color: #555;
+  border-color: #999;
 }
 .datepicker table tr td.selected:focus,
 .datepicker table tr td.selected:hover:focus,
@@ -1626,7 +1626,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .datepicker table tr td.selected.disabled:hover.focus {
   color: #fff;
   background-color: #b3b3b3;
-  border-color: #161616;
+  border-color: #595959;
 }
 .datepicker table tr td.selected:hover,
 .datepicker table tr td.selected:hover:hover,
@@ -1634,7 +1634,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .datepicker table tr td.selected.disabled:hover:hover {
   color: #fff;
   background-color: #b3b3b3;
-  border-color: #373737;
+  border-color: #7a7a7a;
 }
 .datepicker table tr td.selected:active,
 .datepicker table tr td.selected:hover:active,
@@ -1650,7 +1650,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .open > .dropdown-toggle.datepicker table tr td.selected.disabled:hover {
   color: #fff;
   background-color: #b3b3b3;
-  border-color: #373737;
+  border-color: #7a7a7a;
 }
 .datepicker table tr td.selected:active:hover,
 .datepicker table tr td.selected:hover:active:hover,
@@ -1690,7 +1690,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .open > .dropdown-toggle.datepicker table tr td.selected.disabled:hover.focus {
   color: #fff;
   background-color: #a1a1a1;
-  border-color: #161616;
+  border-color: #595959;
 }
 .datepicker table tr td.selected:active,
 .datepicker table tr td.selected:hover:active,
@@ -1743,7 +1743,7 @@ fieldset[disabled] .datepicker table tr td.selected:hover.focus,
 fieldset[disabled] .datepicker table tr td.selected.disabled.focus,
 fieldset[disabled] .datepicker table tr td.selected.disabled:hover.focus {
   background-color: #ccc;
-  border-color: #555;
+  border-color: #999;
 }
 .datepicker table tr td.selected .badge,
 .datepicker table tr td.selected:hover .badge,
@@ -1775,7 +1775,7 @@ fieldset[disabled] .datepicker table tr td.selected.disabled:hover.focus {
   color: #fff;
   text-decoration: underline;
   background-color: #ccc;
-  border-color: #555;
+  border-color: #999;
 }
 .datepicker table tr td.selected:active,
 .datepicker table tr td.selected:hover:active,
@@ -1852,7 +1852,7 @@ fieldset[disabled] .datepicker table tr td.selected:hover.active,
 fieldset[disabled] .datepicker table tr td.selected.disabled.active,
 fieldset[disabled] .datepicker table tr td.selected.disabled:hover.active {
   background-color: #ccc;
-  border-color: #555;
+  border-color: #999;
 }
 .datepicker table tr td.selected .badge,
 .datepicker table tr td.selected:hover .badge,
@@ -2444,12 +2444,12 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   border-width: 1px 0;
 }
 /** Old values in BS 3.1.1
-@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
-@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
-@gray: lighten(@brand-orange-black, 33.5%); // #555
-@gray-before-light: lighten(@brand-orange-black, 40%); //#666
-@gray-light: lighten(@brand-orange-black, 80%); //#ccc
-@gray-lighter: lighten(@brand-orange-black, 93.5%);
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 26.75%); // #444
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-before-light: lighten(@gray-base, 40%); //#666
+@gray-light: lighten(@gray-base, 80%); //#ccc
+@gray-lighter: lighten(@gray-base, 93.5%);
 */
 /** BS 3.3.2 values 
 @gray-base:              #000;

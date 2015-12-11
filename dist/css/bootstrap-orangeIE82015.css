@@ -1,5 +1,5 @@
 /*!
- boosted - v3.2.0 - Orange Boosted with Boostrap
+ boosted - v - Orange Boosted with Boostrap
  Copyright 2015 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -1543,7 +1543,7 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #232323;
+  color: #333;
   background-color: #eee;
   border-radius: 0;
 }
@@ -6937,38 +6937,46 @@ button.close {
     display: none !important;
   }
 }
-/** Old values in BS 3.1.1
-@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
-@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
-@gray: lighten(@brand-orange-black, 33.5%); // #555
-@gray-before-light: lighten(@brand-orange-black, 40%); //#666
-@gray-light: lighten(@brand-orange-black, 80%); //#ccc
-@gray-lighter: lighten(@brand-orange-black, 93.5%);
-*/
-/** BS 3.3.2 values 
-@gray-base:              #000;
+/**
+ *
+ Play with 16px
+@font-size-base: 1.6rem;
+@font-size-large: (ceil((@font-size-base * 1.4)*10)/10); // 2.2rem
+@font-size-small: (ceil((@font-size-base * 0.85)*10)/10); // 1.4rem
+@font-size-h1: (floor((@font-size-base * 3.125)*10)/10); // 5rem
+@font-size-h2: (floor((@font-size-base * 2.5)*10)/10); // 4rem
+@font-size-h3: (ceil((@font-size-base * 2.1)*10)/10); // 3.4rem
+@font-size-h4: (ceil((@font-size-base * 1.875)*10)/10); //3rem
+@font-size-h5: (ceil((@font-size-base * 1.5)*10)/10); //2.4rem
+@font-size-h6: (ceil((@font-size-base * 1.25)*10)/10); //3rem
 
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
-**/
+
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.25; // 20/16
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+//** For REM size
+@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;  
+@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;
+ *
+ *
+ **/
 /*
 According to the brand, no inverse navigations bar
 ALL is BLACK => Inverse navbar = default navbar
 // Default navbar
-@navbar-default-color:          @brand-orange-black;
+@navbar-default-color:          @gray-base;
 @navbar-default-bg:             @brand-orange-white;
 @navbar-default-border:         @navbar-default-bg;
 
 // Default Navbar links
-@navbar-default-link-color: @brand-orange-black;
+@navbar-default-link-color: @gray-base;
 @navbar-default-link-hover-color: @brand-primary;
 @navbar-default-link-hover-bg: transparent;
 @navbar-default-link-active-color: @brand-primary;
 @navbar-default-link-active-bg: @navbar-default-link-hover-bg;
-@navbar-default-link-disabled-color: @gray-before-light;
+@navbar-default-link-disabled-color: @gray-dark;
 @navbar-default-link-disabled-bg: transparent;
 
 // Default Navbar brand label
@@ -6978,8 +6986,8 @@ ALL is BLACK => Inverse navbar = default navbar
 
 // Default Navbar toggle
 @navbar-default-toggle-hover-bg: @brand-primary;
-@navbar-default-toggle-icon-bar-bg: @brand-orange-black;
-@navbar-default-toggle-border-color: @brand-orange-black;
+@navbar-default-toggle-icon-bar-bg: @gray-base;
+@navbar-default-toggle-border-color: @gray-base;
 */
 /*
 @state-info-text: darken(@brand-info, 30%);
@@ -6993,47 +7001,6 @@ ALL is BLACK => Inverse navbar = default navbar
 @state-danger-text: darken(@brand-danger, 30%);
 @state-danger-bg: @brand-danger;
 @state-danger-border: @state-danger-text;
-*/
-/*
-.button-variant(@color; @background; @border) {
-  color: @color;
-  background-color: @background;
-  border-color: @border;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
-    color: @background;
-    background-color: @color;
-    border-color: none;
-    text-decoration: none;
-  }
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      background-color: @background;
-      border-color: @border;
-      color: @color;
-    }
-  }
-
-  .badge {
-    color: @background;
-    background-color: @color;
-  }
-}
 */
 a {
   color: #000;
@@ -7056,5 +7023,8 @@ nav a,
 .nav a,
 a.btn {
   text-decoration: none;
+}
+.form-horizontal .control-label {
+  text-align: left;
 }
 /*# sourceMappingURL=bootstrap-orangeIE82015.css.map */

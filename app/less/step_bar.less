@@ -91,7 +91,7 @@ ul.o-wizard-step-bar {
 	padding:0;
     li {
         background-color: @gray-light-plus;
-        color: @brand-orange-black;
+        color: @gray-base;
         font-weight:bold;        
         position:relative;
         padding: @padding-base-vertical @padding-base-horizontal;
@@ -104,17 +104,17 @@ ul.o-wizard-step-bar {
         cursor:pointer;
     }
     li.visited{
-        background-color: @brand-orange-black;
+        background-color: @gray-base;
     }
     li.on{
         background-color: @brand-orange;
     }
-    .arrow-right(@o-wizard-step-bar-arrow-outer-width;0;@o-wizard-step-bar-arrow-width;@brand-orange;@brand-orange-black);
+    .arrow-right(@o-wizard-step-bar-arrow-outer-width;0;@o-wizard-step-bar-arrow-width;@brand-orange;@gray-base);
     
     .arrow-right-next(@o-wizard-step-bar-arrow-outer-width;0;@o-wizard-step-bar-arrow-width;@gray-light-plus;@brand-orange);
     
     @media (max-width: @screen-sm-max) {
-        .arrow-right(@o-wizard-step-bar-arrow-outer-width-small;0;@o-wizard-step-bar-arrow-width-small;@brand-orange;@brand-orange-black);
+        .arrow-right(@o-wizard-step-bar-arrow-outer-width-small;0;@o-wizard-step-bar-arrow-width-small;@brand-orange;@gray-base);
 
         .arrow-right-next(@o-wizard-step-bar-arrow-outer-width-small;0;@o-wizard-step-bar-arrow-width-small;@gray-light-plus;@brand-orange);
         

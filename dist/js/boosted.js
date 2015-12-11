@@ -1,5 +1,5 @@
 /*!
- boosted - v3.2.0 - Orange Boosted with Boostrap
+ boosted - v - Orange Boosted with Boostrap
  Copyright 2015 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -2453,7 +2453,7 @@ $('.close').removeAttr('aria-hidden').wrapInner('<span aria-hidden="true"></span
   // Modal Extension
   // ===============================
 
-	//$('.modal-dialog').attr( {'role' : 'document'})
+	$('.modal-dialog').attr( {'role' : 'document'})
     var modalhide =   $.fn.modal.Constructor.prototype.hide
     $.fn.modal.Constructor.prototype.hide = function(){
        var modalOpener = this.$element.parent().find('[data-target="#' + this.$element.attr('id') + '"]')

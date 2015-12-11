@@ -23,40 +23,23 @@
 
 @brand-orange: #F16E00;
 //used to invert colors
-@brand-orange-black: #000;
 @brand-orange-white: #fff;
 /////////////////////////////////////////////////////////////
 //
 //## Gray and brand colors for use across Bootstrap.
-@gray-footer:            @brand-orange-black;
-
-@gray-darker:            #232323;
-@gray-dark:              #333;
-@gray:                   #444;
-@gray-before-light:      #666; // used for ghosted states on black BG
-@gray-before-light-plus: #999;
+@gray-footer:            @gray-base;
+        
+@gray-base:              #000;
+@gray-darker:            #333;
+@gray-dark:              #666;
+@gray:                   #999;
 @gray-light:             #ccc;
 @gray-light-plus:        #ddd; // used for ghosted states on white BG
 @gray-lighter:           #eee;
 @gray-lighter-plus:      #f6f6f6;
+@gray-lighter-plus-plus: #fafafa;
 
-/** Old values in BS 3.1.1
-@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
-@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
-@gray: lighten(@brand-orange-black, 33.5%); // #555
-@gray-before-light: lighten(@brand-orange-black, 40%); //#666
-@gray-light: lighten(@brand-orange-black, 80%); //#ccc
-@gray-lighter: lighten(@brand-orange-black, 93.5%);
-*/
-/** BS 3.3.2 values 
-@gray-base:              #000;
 
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
-**/
 
 @brand-primary: @brand-orange;
 @brand-success: #32C832;
@@ -71,9 +54,9 @@
 //** Background color for `<body>`.
 @body-bg: @brand-orange-white;
 //** Global text color on `<body>`.
-@text-color: @brand-orange-black;
+@text-color: @gray-base;
 //** Global textual link color.
-@link-color: @brand-orange-black;
+@link-color: @gray-base;
 //** Link hover color set via `darken()` function.
 @link-hover-color: @brand-primary;
 //** Link hover decoration.
@@ -93,8 +76,35 @@
 
 @html-font-size-base: 62.5%;
 
-@font-size-base: 1.4rem;
+/**
+ *
+ Play with 16px
+@font-size-base: 1.6rem;
+@font-size-large: (ceil((@font-size-base * 1.4)*10)/10); // 2.2rem
+@font-size-small: (ceil((@font-size-base * 0.85)*10)/10); // 1.4rem
+@font-size-h1: (floor((@font-size-base * 3.125)*10)/10); // 5rem
+@font-size-h2: (floor((@font-size-base * 2.5)*10)/10); // 4rem
+@font-size-h3: (ceil((@font-size-base * 2.1)*10)/10); // 3.4rem
+@font-size-h4: (ceil((@font-size-base * 1.875)*10)/10); //3rem
+@font-size-h5: (ceil((@font-size-base * 1.5)*10)/10); //2.4rem
+@font-size-h6: (ceil((@font-size-base * 1.25)*10)/10); //3rem
+
+
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.25; // 20/16
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
+@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;  
+@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.2)/2);//0.9rem;//9px;
+ *
+ *
+ **/
+
+
+@font-size-base: 1.4rem;
+//** For REM size              
 @font-size-large: (ceil((@font-size-base * 1.4)*10)/10); // 2rem
 @font-size-small: (ceil((@font-size-base * 0.85)*10)/10); // 1.2rem
 @font-size-h1: (floor((@font-size-base * 3.6)*10)/10); // 5rem
@@ -110,13 +120,13 @@
 @line-height-base:        1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
-@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem
+@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family: @font-family-titles;
 @headings-font-weight: @brand-font-weight-bold;
 @headings-line-height: 1.1;
-@headings-color: @brand-orange-black;
+@headings-color: @gray-base;
 
 //== Iconography
 //
@@ -138,7 +148,10 @@
 //** for REM size
 @padding-base-vertical: 0.9rem;//9px;
 @padding-base-horizontal: 2rem;//20px;
-@padding-large-vertical: 1.2rem;//12px;
+
+
+
+@padding-large-vertical: 1.2rem;//12px;      
 @padding-large-horizontal: 2rem;//20px;
 @padding-small-vertical: 0.5rem;//5px;
 @padding-small-horizontal: 1rem;//10px;
@@ -155,7 +168,7 @@
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    @brand-orange-white;
 //** Global background color for active items (e.g., navs or dropdowns).
-@component-active-bg:       @brand-orange-black;
+@component-active-bg:       @gray-base;
 
 //** for REM size
 //** Width of the `border` for generating carets that indicator dropdowns.
@@ -191,7 +204,7 @@
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 @btn-font-weight: @brand-font-weight-bold;
-@btn-default-color: @brand-orange-black;
+@btn-default-color: @gray-base;
 @btn-default-bg: @brand-orange-white;
 @btn-default-border: @btn-default-color;
 
@@ -199,13 +212,13 @@
 @btn-primary-bg: @brand-primary;
 @btn-primary-border: @btn-primary-bg;
 
-@btn-success-color: @brand-orange-black;
+@btn-success-color: @gray-base;
 @btn-success-bg: @brand-success;
 @btn-success-border: @btn-success-bg;
 
 @btn-info-color: @brand-orange-white;
-@btn-info-bg: @brand-orange-black;
-@btn-info-hover-bg: @gray;
+@btn-info-bg: @gray-base;
+@btn-info-hover-bg: @gray-dark;
 @btn-info-active-bg: @brand-orange;
 @btn-info-border: @btn-info-bg;
 
@@ -217,7 +230,7 @@
 @btn-danger-bg: @brand-danger;
 @btn-danger-border: @btn-danger-bg;
 
-@btn-link-disabled-color: @gray-before-light;
+@btn-link-disabled-color: @gray-dark;
 
 // Allows for customizing button radius independently from global border radius
 @btn-border-radius-base:         @border-radius-base;
@@ -234,7 +247,7 @@
 @input-bg-disabled: @gray-lighter-plus;
 
 //** Text color for `<input>`s
-@input-color: @brand-orange-black;
+@input-color: @gray-base;
 //** `<input>` border color
 @input-border: @gray-light;
 
@@ -248,10 +261,10 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus: @brand-orange-black;
+@input-border-focus: @gray-base;
 
 //** Placeholder text color
-@input-color-placeholder: @gray-before-light;
+@input-color-placeholder: @gray-dark;
 
 //** Default `.form-control` height
 // for REM size
@@ -264,13 +277,13 @@
 //** `.form-group` margin
 @form-group-margin-bottom: @font-size-base;
 
-@legend-color:                   @gray-dark;
+@legend-color:                   @gray-darker;
 @legend-border-color:            @gray-lighter;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           @brand-orange-white;
 //** Border color for textual input addons
-@input-group-addon-border-color: @brand-orange-black;
+@input-group-addon-border-color: @gray-base;
 
 //** Disabled cursor for form controls and buttons.
 @cursor-disabled:                not-allowed;
@@ -285,31 +298,31 @@
 //** Dropdown menu `border-color`.
 @dropdown-border:                rgba(0,0,0,.15);
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       @brand-orange-black;
+@dropdown-fallback-border:       @gray-base;
 
 //** Divider color for between dropdown items.
 @dropdown-divider-bg:            @gray-lighter;
 
 //** Dropdown link text color.
-@dropdown-link-color:            @brand-orange-black;
+@dropdown-link-color:            @gray-base;
 //** Hover color for dropdown links.
 @dropdown-link-hover-color:      @brand-orange-white;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         @brand-orange-black;
+@dropdown-link-hover-bg:         @gray-base;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @brand-orange-white;
 //** Active dropdown menu item background color.
-@dropdown-link-active-bg:        @brand-orange-black;
+@dropdown-link-active-bg:        @gray-base;
 
 //** Disabled dropdown menu item background color.
-@dropdown-link-disabled-color:   @gray-before-light;
+@dropdown-link-disabled-color:   @gray-dark;
 
 //** Text color for headers within dropdown menus.
-@dropdown-header-color:          @brand-orange-black;
+@dropdown-header-color:          @gray-base;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
-@dropdown-caret-color:           @brand-orange-black;
+@dropdown-caret-color:           @gray-base;
 
 
 //-- Z-index master list
@@ -426,17 +439,17 @@
 According to the brand, no inverse navigations bar
 ALL is BLACK => Inverse navbar = default navbar
 // Default navbar
-@navbar-default-color:          @brand-orange-black;
+@navbar-default-color:          @gray-base;
 @navbar-default-bg:             @brand-orange-white;
 @navbar-default-border:         @navbar-default-bg;
 
 // Default Navbar links
-@navbar-default-link-color: @brand-orange-black;
+@navbar-default-link-color: @gray-base;
 @navbar-default-link-hover-color: @brand-primary;
 @navbar-default-link-hover-bg: transparent;
 @navbar-default-link-active-color: @brand-primary;
 @navbar-default-link-active-bg: @navbar-default-link-hover-bg;
-@navbar-default-link-disabled-color: @gray-before-light;
+@navbar-default-link-disabled-color: @gray-dark;
 @navbar-default-link-disabled-bg: transparent;
 
 // Default Navbar brand label
@@ -446,14 +459,14 @@ ALL is BLACK => Inverse navbar = default navbar
 
 // Default Navbar toggle
 @navbar-default-toggle-hover-bg: @brand-primary;
-@navbar-default-toggle-icon-bar-bg: @brand-orange-black;
-@navbar-default-toggle-border-color: @brand-orange-black;
+@navbar-default-toggle-icon-bar-bg: @gray-base;
+@navbar-default-toggle-border-color: @gray-base;
 */
 
 // inverse navbar
 // Reset inverse navbar basics
 @navbar-inverse-color: @brand-orange-white;
-@navbar-inverse-bg: @brand-orange-black;
+@navbar-inverse-bg: @gray-base;
 @navbar-inverse-border: @navbar-inverse-bg;
 
 // inverse navbar links
@@ -509,34 +522,34 @@ ALL is BLACK => Inverse navbar = default navbar
 //=== Shared nav styles
 // for REM size 
 @nav-link-padding: 1rem 1rem;
-@nav-link-hover-bg: @brand-orange-black;//@gray-lighter;
-@nav-disabled-link-color: @gray-before-light;
+@nav-link-hover-bg: @gray-base;//@gray-lighter;
+@nav-disabled-link-color: @gray-dark;
 @nav-disabled-link-hover-color: @nav-disabled-link-color;
 @nav-open-link-hover-color: @brand-orange-white;
 
 //== Tabs
-@o-nav-tabsackground-color: @brand-orange-black;
-@o-nav-tabsorder-color: @brand-orange-black;
+@o-nav-tabsackground-color: @gray-base;
+@o-nav-tabsorder-color: @gray-base;
 
-@nav-tabs-border-color: @brand-orange-black;
-@nav-tabs-link-hover-border-color: @brand-orange-black;
-@nav-tabs-link-hover-bg: @brand-orange-black;
+@nav-tabs-border-color: @gray-base;
+@nav-tabs-link-hover-border-color: @gray-base;
+@nav-tabs-link-hover-bg: @gray-base;
 @nav-tabs-link-hover-color: @brand-orange-white;
-@nav-tabs-link-hover-border-color:@brand-orange-black;
+@nav-tabs-link-hover-border-color:@gray-base;
 @nav-tabs-active-link-hover-bg: @body-bg;
-@nav-tabs-active-link-hover-color: @brand-orange-black;
-@nav-tabs-active-link-hover-border-color:@brand-orange-black;
-@nav-tabs-justified-link-border-color: @brand-orange-black;
-@nav-tabs-justified-active-link-border-color: @brand-orange-black;
+@nav-tabs-active-link-hover-color: @gray-base;
+@nav-tabs-active-link-hover-border-color:@gray-base;
+@nav-tabs-justified-link-border-color: @gray-base;
+@nav-tabs-justified-active-link-border-color: @gray-base;
 
-@o-nav-tabs-arrow-color: @brand-orange-black;
+@o-nav-tabs-arrow-color: @gray-base;
 @o-nav-tabs-arrow-width: 14px;
 @o-nav-tabs-arrow-height: 7px;
-@o-nav-tabs-border-color: @brand-orange-black;
+@o-nav-tabs-border-color: @gray-base;
 
 @o-nav-tabs-bg: @brand-orange-white;
-@o-nav-tabs-color: @brand-orange-black;
-@o-nav-tabs-active-bg: @brand-orange-black;
+@o-nav-tabs-color: @gray-base;
+@o-nav-tabs-active-bg: @gray-base;
 @o-nav-tabs-active-color: @brand-orange-white;
 
 
@@ -549,7 +562,7 @@ ALL is BLACK => Inverse navbar = default navbar
 
 //== Pills
 @nav-pills-border-radius: @border-radius-base;
-@nav-pills-active-link-hover-bg: @brand-orange-black;
+@nav-pills-active-link-hover-bg: @gray-base;
 @nav-pills-active-link-hover-color: @brand-orange-white;
 
 
@@ -578,18 +591,18 @@ ALL is BLACK => Inverse navbar = default navbar
 //
 //##
 
-@pagination-color: @brand-orange-black;
+@pagination-color: @gray-base;
 @pagination-bg: @brand-orange-white;
-@pagination-border: @brand-orange-black;
+@pagination-border: @gray-base;
 @pagination-hover-color: @brand-orange-white;
-@pagination-hover-bg: @brand-orange-black;
-@pagination-hover-border: @brand-orange-black;
+@pagination-hover-bg: @gray-base;
+@pagination-hover-border: @gray-base;
 @pagination-active-color: @brand-orange;
-@pagination-active-bg: @brand-orange-black;
-@pagination-active-border: @brand-orange-black;
-@pagination-disabled-color: @gray-before-light;
+@pagination-active-bg: @gray-base;
+@pagination-active-border: @gray-base;
+@pagination-disabled-color: @gray-dark;
 @pagination-disabled-bg: @brand-orange-white;
-@pagination-disabled-border: @brand-orange-black;
+@pagination-disabled-border: @gray-base;
 
 
 //== Pager
@@ -659,7 +672,7 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Tooltip max width
 @tooltip-max-width:           200px;
 //** Tooltip text color
-@tooltip-color:               @brand-orange-black;
+@tooltip-color:               @gray-base;
 //** Tooltip background color
 @tooltip-bg:                  @gray-light-plus;
 @tooltip-opacity:             .9;
@@ -717,7 +730,7 @@ ALL is BLACK => Inverse navbar = default navbar
 @label-danger-bg:             @brand-danger;
 
 //** Default label text color
-@label-color:                 @brand-orange-black;
+@label-color:                 @gray-base;
 //** Default text color of a linked label
 @label-link-hover-color:      @brand-primary;
 
@@ -739,14 +752,14 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Modal content border color
 @modal-content-border-color:                   rgba(0,0,0,.2);
 //** Modal content border color **for IE8**
-@modal-content-fallback-border-color:          @brand-orange-black;
+@modal-content-fallback-border-color:          @gray-base;
 
 //** Modal backdrop background color
 @modal-backdrop-bg:           @brand-orange-white;
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      0.5;
 //** Modal header border color
-@modal-header-border-color:   @brand-orange-black;
+@modal-header-border-color:   @gray-base;
 //** Modal footer border color
 @modal-footer-border-color:   @modal-header-border-color;
 
@@ -764,19 +777,19 @@ ALL is BLACK => Inverse navbar = default navbar
 @alert-link-font-weight:      @brand-font-weight-bold;
 
 @alert-success-bg:            @brand-orange-white;
-@alert-success-text:          @brand-orange-black;
+@alert-success-text:          @gray-base;
 @alert-success-border:        @brand-success;
 
 @alert-info-bg:               @brand-orange-white;
-@alert-info-text:             @brand-orange-black;
+@alert-info-text:             @gray-base;
 @alert-info-border:           @brand-info;
 
 @alert-warning-bg:            @brand-orange-white;
-@alert-warning-text:          @brand-orange-black;
+@alert-warning-text:          @gray-base;
 @alert-warning-border:        @brand-warning;
 
 @alert-danger-bg:             @brand-orange-white;
-@alert-danger-text:           @brand-orange-black;
+@alert-danger-text:           @gray-base;
 @alert-danger-border:         @brand-danger;
 
 
@@ -787,7 +800,7 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Background color of the whole progress component
 @progress-bg:                 @gray-lighter;
 //** Progress bar text color
-@progress-bar-color:          @brand-orange-black;
+@progress-bar-color:          @gray-base;
 //** Variable for setting rounded corners on progress bar.
 @progress-border-radius:      @border-radius-base;
 
@@ -810,7 +823,7 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Background color on `.list-group-item`
 @list-group-bg:                 @brand-orange-white;
 //** `.list-group-item` border color
-@list-group-border:             @brand-orange-black;
+@list-group-border:             @gray-base;
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
@@ -832,9 +845,9 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
-@list-group-link-color:         @brand-orange-black;
+@list-group-link-color:         @gray-base;
 @list-group-link-hover-color:   @brand-primary;
-@list-group-link-heading-color: @brand-orange-black;
+@list-group-link-heading-color: @gray-base;
 
 
 //== Panels
@@ -848,30 +861,30 @@ ALL is BLACK => Inverse navbar = default navbar
 @panel-border-radius:         @border-radius-base;
 
 //** Border color for elements within panels
-@panel-inner-border:          @brand-orange-black;
+@panel-inner-border:          @gray-base;
 @panel-footer-bg:             @brand-orange-white;
 
-@panel-default-text:          @brand-orange-black;
-@panel-default-border:        @brand-orange-black;
+@panel-default-text:          @gray-base;
+@panel-default-border:        @gray-base;
 @panel-default-heading-bg:    @brand-orange-white;
 
-@panel-primary-text:          @brand-orange-black;
+@panel-primary-text:          @gray-base;
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
-@panel-success-text:          @brand-orange-black;
+@panel-success-text:          @gray-base;
 @panel-success-border:        @state-success-border;
 @panel-success-heading-bg:    @brand-success;
 
-@panel-info-text: @brand-orange-black;
+@panel-info-text: @gray-base;
 @panel-info-border: @state-info-border;
 @panel-info-heading-bg: @brand-info;
 
-@panel-warning-text: @brand-orange-black;
+@panel-warning-text: @gray-base;
 @panel-warning-border: @state-warning-border;
 @panel-warning-heading-bg: @brand-warning;
 
-@panel-danger-text: @brand-orange-black;
+@panel-danger-text: @gray-base;
 @panel-danger-border: @state-danger-border;
 @panel-danger-heading-bg: @brand-danger;
 
@@ -883,9 +896,9 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Padding around the thumbnail image
 @thumbnail-padding:           0;
 //** Thumbnail background color
-@thumbnail-bg:                @brand-orange-black;
+@thumbnail-bg:                @gray-base;
 //** Thumbnail border color
-@thumbnail-border:            @brand-orange-black;
+@thumbnail-border:            @gray-base;
 //** Thumbnail border radius
 @thumbnail-border-radius:     @border-radius-base;
 
@@ -901,14 +914,14 @@ ALL is BLACK => Inverse navbar = default navbar
 //##
 
 @well-bg:                     @brand-orange-white;
-@well-border:                 @brand-orange-black;
+@well-border:                 @gray-base;
 
 
 //== Badges
 //
 //##
 
-@badge-color:                 @brand-orange-black;
+@badge-color:                 @gray-base;
 //** Linked badge text color on hover
 @badge-link-hover-color:      @brand-orange;
 @badge-bg:                    @brand-orange-white;
@@ -916,7 +929,7 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Badge text color in active nav link
 @badge-active-color:          @brand-orange-white;
 //** Badge background color in active nav link
-@badge-active-bg:             @brand-orange-black;
+@badge-active-bg:             @gray-base;
 
 @badge-font-weight:           @brand-font-weight-bold;
 @badge-line-height:           1;
@@ -932,7 +945,7 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Breadcrumb background color
 @breadcrumb-bg:                 @brand-orange-white;
 //** Breadcrumb text color
-@breadcrumb-color:              @brand-orange-black;
+@breadcrumb-color:              @gray-base;
 //** Text color of current page in the breadcrumb
 @breadcrumb-active-color:       @brand-primary;
 //** Textual separator for between breadcrumb elements
@@ -945,15 +958,15 @@ ALL is BLACK => Inverse navbar = default navbar
 
 @carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
-@carousel-control-color:                      @brand-orange-black;
+@carousel-control-color:                      @gray-base;
 @carousel-control-width:                      3rem;
 @carousel-control-opacity:                    .5;
 @carousel-control-font-size:                  @font-size-large;
 
 @carousel-indicator-active-bg:                @brand-primary;
-@carousel-indicator-border-color:             @brand-orange-black;
+@carousel-indicator-border-color:             @gray-base;
 
-@carousel-caption-color:                      @brand-orange-black;
+@carousel-caption-color:                      @gray-base;
 
 
 //== Close
@@ -961,7 +974,7 @@ ALL is BLACK => Inverse navbar = default navbar
 //##
 
 @close-font-weight:           @brand-font-weight-bold;
-@close-color:                 @brand-orange-black;
+@close-color:                 @gray-base;
 @close-text-shadow:           0 1px 0 @brand-orange-white;
 
 
@@ -971,10 +984,10 @@ ALL is BLACK => Inverse navbar = default navbar
 
 @code-color: @gray-darker;
 @code-bg: @gray-lighter;
-@kbd-color: @brand-orange-black;
+@kbd-color: @gray-base;
 @kbd-bg: @gray-lighter;
 @pre-bg: @gray-lighter-plus;
-@pre-color: @gray-dark;
+@pre-color: @gray-darker;
 @pre-border-color: @gray-light;
 @pre-scrollable-max-height: 340px;
 
@@ -987,13 +1000,13 @@ ALL is BLACK => Inverse navbar = default navbar
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 //** Text muted color
-@text-muted:                  @gray-before-light;
+@text-muted:                  @gray-dark;
 //** Abbreviations and acronyms border color
-@abbr-border-color:           @gray-before-light;
+@abbr-border-color:           @gray-dark;
 //** Headings small color
-@headings-small-color:        @gray-before-light;
+@headings-small-color:        @gray-dark;
 //** Blockquote small color
-@blockquote-small-color:      @gray-before-light;
+@blockquote-small-color:      @gray-dark;
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
@@ -1004,55 +1017,6 @@ ALL is BLACK => Inverse navbar = default navbar
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
-
-//surcharge et custo for mixins
-
-
-// Button variants
-// -------------------------
-// Easily pump out default styles, as well as :hover, :focus, :active,
-// and disabled options for all buttons
-/*
-.button-variant(@color; @background; @border) {
-  color: @color;
-  background-color: @background;
-  border-color: @border;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
-    color: @background;
-    background-color: @color;
-    border-color: none;
-    text-decoration: none;
-  }
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      background-color: @background;
-      border-color: @border;
-      color: @color;
-    }
-  }
-
-  .badge {
-    color: @background;
-    background-color: @color;
-  }
-}
-*/
 
 
 // Navbar vertical align
@@ -1121,7 +1085,6 @@ ALL is BLACK => Inverse navbar = default navbar
     color: @text-color;
   }
 }
-
 
 // Form control focus state
 //
