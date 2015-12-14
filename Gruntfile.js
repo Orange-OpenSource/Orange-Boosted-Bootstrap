@@ -343,6 +343,12 @@ module.exports = function (grunt) {
         cwd: 'fonts/',
         src: ['*'],
         dest: 'dist/fonts/'
+      },
+      img: {
+        expand: true,
+        cwd: 'img/',
+        src: ['*'],
+        dest: 'dist/img/'
       }
       /* end mod */
     },
@@ -411,7 +417,7 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs/assets/**/*', 'docs/_includes/**/*', '!docs/assets/css'],
+        files: ['docs/assets/**/*', 'docs/_includes/**/*', '!docs/assets/**/*'],
         tasks: ['dist-css', 'docs', 'jekyll:docs']
         /* end mod */
       }
@@ -524,7 +530,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'csscomb:dist', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
@@ -570,7 +576,7 @@ module.exports = function (grunt) {
       done();
     });
   });
-  
+
   /* boosted mod */
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     grunt.task.run([
