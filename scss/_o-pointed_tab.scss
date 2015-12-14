@@ -1,11 +1,11 @@
 
-/********************************************************/
-/******************** pointed tab *********************/
-/********************************************************/
+//
+//  pointed tab
+//
 
 .o-nav-tabs {
-  position: relative;  
-  // Reset font and text properties given new insertion method
+  @include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
+  position: relative;
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: normal;
@@ -16,27 +16,28 @@
   background-clip: padding-box;
   border: 2px solid $o-nav-tabs-border-color;
   border-radius: $border-radius-large;
-  @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+  white-space: normal;
 
-  // Overrides for proper insertion
-  white-space: normal;  
-  > li.active a{
-      &,
-      &:hover{
-          background-color: $o-nav-tabs-active-bg;
-          color: $o-nav-tabs-active-color;      
-          border: none;
+  .nav-item .nav-link {
+    position: relative;
+
+    &.active {
+      background-color: $o-nav-tabs-active-bg;
+      color: $o-nav-tabs-active-color;
+    }
+
+    @include hover {
+      &.active {
+        background-color: $o-nav-tabs-active-bg;
+        color: $o-nav-tabs-active-color;
       }
+    }
+
+    @include focus {
+      background-color: $o-nav-tabs-active-bg;
+      color: $o-nav-tabs-active-color;
+    }
   }
-  > li.active a{
-      &:focus{          
-          background-color: $o-nav-tabs-active-bg;
-          color: $o-nav-tabs-active-color;     
-          border: none;
-          outline-color: white;
-      }
-  } 
-  @include arrow-bottom($o-nav-tabs-arrow-outer-width, -$o-nav-tabs-arrow-outer-height, $o-nav-tabs-arrow-width, $o-nav-tabs-arrow-outer-color, $o-nav-tabs-arrow-color, $o-nav-tabs-arrow-color);
 }
 
 .o-nav-tabs-content {
