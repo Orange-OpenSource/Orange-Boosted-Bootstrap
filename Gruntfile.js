@@ -210,7 +210,16 @@ module.exports = function (grunt) {
           'js/src/popover.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      /* boosted mod */
+      plugins: {
+        src: [
+          'dist/js/<%= pkg.name %>.js',
+          'bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js'
+        ],
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
+      /* end mod */
     },
 
     uglify: {
@@ -515,7 +524,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test-js', ['eslint', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'lineremover', 'babel:dist', 'stamp', 'uglify:core', 'commonjs']);
+  grunt.registerTask('dist-js', ['babel:dev', 'concat:bootstrap', 'lineremover', 'babel:dist', 'stamp', 'concat:plugins','uglify:core', 'commonjs']);
 
   grunt.registerTask('test-scss', ['scsslint']);
 

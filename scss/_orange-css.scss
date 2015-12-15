@@ -385,6 +385,7 @@ caption {
 	padding: $padding-large-vertical 0;
   font-size: $font-size-h1;
 	font-weight: bold;
+  caption-side: top;
 }
 
 // Force bold onto panel heading and footer and wells

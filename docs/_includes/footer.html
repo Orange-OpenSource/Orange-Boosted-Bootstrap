@@ -48,6 +48,19 @@ SimpleJekyllSearch.init({
 </script>
 {% endif %}
 
+<!-- boosted mod -->
+{% if page.title == "Boostwatch" %}
+<script>
+				$(document).ready(function() {
+					$("#myTable").tablesorter({
+						sortList: [[4,1]]
+					});
+				});
+
+			</script>
+{% endif %}
+<!-- end mode -->
+
 <script>
 Holder.addTheme('gray', {
   background: '#777',
