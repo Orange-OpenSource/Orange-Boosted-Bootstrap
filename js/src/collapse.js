@@ -1,6 +1,5 @@
 import Util from './util'
 
-var test ;
 
 /**
  * --------------------------------------------------------------------------
@@ -110,6 +109,7 @@ const Collapse = (($) => {
     }
 
     show() {
+
       if (this._isTransitioning ||
         $(this._element).hasClass(ClassName.IN)) {
         return
@@ -161,7 +161,9 @@ const Collapse = (($) => {
       }
 
       this.setTransitioning(true)
-
+	  
+	  $(this._element).parent().find('h4.panel-title').removeClass('panel-chevron-closed').addClass('panel-chevron-open')
+		
       let complete = () => {
         $(this._element)
           .removeClass(ClassName.COLLAPSING)
@@ -191,6 +193,7 @@ const Collapse = (($) => {
     }
 
     hide() {
+		
       if (this._isTransitioning ||
         !$(this._element).hasClass(ClassName.IN)) {
         return
@@ -234,7 +237,8 @@ const Collapse = (($) => {
       }
 
       this._element.style[dimension] = 0
-
+	  $(this._element).parent().find('h4.panel-title').addClass('panel-chevron-closed').removeClass('panel-chevron-open')
+	  
       if (!Util.supportsTransitionEnd()) {
         complete()
         return
@@ -306,15 +310,13 @@ const Collapse = (($) => {
     // static
 
 	static _keydown(e , that , target )  {
-		test = that ;
-		
       var $this = $(that)
       , $items
       , $tablist = $this.closest('div.panel-group ')
       , index
       , k = e.which || e.keyCode
 		
-      if (!/(32|37|38|39|40)/.test(k)) return
+      
       if(k==32) 					// space
 	  $this.click();
 	  
@@ -464,6 +466,7 @@ const Collapse = (($) => {
 	  
 	  let target = Collapse._getTargetFromElement(this)
 	  let k = event.which || event.keyCode ;
+	  if (!/(32|37|38|39|40)/.test(k)) return 
 	  Collapse._keydown.call($(target), event, this , target)
 	  event.preventDefault()
 	  event.stopPropagation()
