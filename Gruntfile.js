@@ -426,7 +426,7 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs/assets/**/*', 'docs/_includes/**/*', '!docs/assets/**/*'],
+        files: ['docs/examples/**/*', 'docs/_includes/**/*', '!docs/assets/**/*'],
         tasks: ['dist-css', 'docs', 'jekyll:docs']
         /* end mod */
       }
