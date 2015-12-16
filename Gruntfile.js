@@ -218,6 +218,10 @@ module.exports = function (grunt) {
           'bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      docsOrange: {
+        src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css'],
+        dest: 'docs/assets/css/docs.min.css'
       }
       /* end mod */
     },
@@ -274,7 +278,9 @@ module.exports = function (grunt) {
             autoprefixer
           ]
         },
-        src: 'docs/assets/css/docs.min.css'
+        /* boosted mod */
+        src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css']
+        /* end mod */
       },
       examples: {
         options: {
@@ -334,6 +340,10 @@ module.exports = function (grunt) {
       docs: {
         src: 'docs/assets/css/src/docs.css',
         dest: 'docs/assets/css/src/docs.css'
+      },
+      docsOrange: {
+        src: 'docs-orange/assets/css/src/docs-orange.css',
+        dest: 'docs-orange/assets/css/src/docs-orange.css'
       }
     },
 
@@ -560,7 +570,9 @@ module.exports = function (grunt) {
   });
 
   // Docs task.
-  grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
+  /* boosted mod */
+  grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'csscomb:docsOrange', 'concat:docsOrange', 'cssmin:docs']);
+  /* end mod */
   grunt.registerTask('docs-js', ['uglify:docsJs']);
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs']);

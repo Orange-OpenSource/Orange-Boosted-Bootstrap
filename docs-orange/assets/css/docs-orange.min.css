@@ -1,0 +1,28 @@
+.bd-pageheader {
+  color: #fff;
+  background-color: #000;
+}
+
+.bd-pageheader h1 {
+  font-size: 5rem;
+}
+
+.bd-pageheader p {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .bd-pageheader h1 {
+    font-size: 5rem;
+  }
+  .bd-pageheader p {
+    font-size: 1.4rem;
+  }
+}
+
+.bd-search .form-control {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+}
