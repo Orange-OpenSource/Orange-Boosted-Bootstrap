@@ -11,7 +11,6 @@ var test ;
 
 const Collapse = (($) => {
 
- console.log('load');
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -71,7 +70,6 @@ const Collapse = (($) => {
   class Collapse {
 
     constructor(element, config) {
-	  console.log('constructor');
       this._isTransitioning = false
       this._element         = element
       this._config          = this._getConfig(config)
@@ -112,7 +110,6 @@ const Collapse = (($) => {
     }
 
     show() {
-		console.log('show');
       if (this._isTransitioning ||
         $(this._element).hasClass(ClassName.IN)) {
         return
@@ -142,7 +139,6 @@ const Collapse = (($) => {
       }
 
       if (actives) {
-		 console.log('actives'+actives);
         Collapse._jQueryInterface.call($(actives), 'hide')
         if (!activesData) {
           $(actives).data(DATA_KEY, null)
@@ -195,7 +191,6 @@ const Collapse = (($) => {
     }
 
     hide() {
-		console.log('hide');
       if (this._isTransitioning ||
         !$(this._element).hasClass(ClassName.IN)) {
         return
@@ -255,7 +250,6 @@ const Collapse = (($) => {
     }
 
     dispose() {
-		console.log('dispose');
       $.removeData(this._element, DATA_KEY)
 
       this._config          = null
@@ -339,13 +333,11 @@ const Collapse = (($) => {
     }
 
     static _getTargetFromElement(element) {
-		console.log('_getTargetFromElement');
       let selector = Util.getSelectorFromElement(element)
       return selector ? $(selector)[0] : null
     }
 
     static _jQueryInterface(config) {
-		console.log('_jQueryInterface');
       return this.each(function () {
         let $this   = $(this)
         let data    = $this.data(DATA_KEY)
@@ -472,7 +464,6 @@ const Collapse = (($) => {
 	  
 	  let target = Collapse._getTargetFromElement(this)
 	  let k = event.which || event.keyCode ;
-	  console.log(' --- keydown : '+ k )
 	  Collapse._keydown.call($(target), event, this , target)
 	  event.preventDefault()
 	  event.stopPropagation()
@@ -482,7 +473,6 @@ const Collapse = (($) => {
   
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     event.preventDefault()
-	console.log('click event');
     let target = Collapse._getTargetFromElement(this)
     let data   = $(target).data(DATA_KEY)
     let config = data ? 'toggle' : $(this).data()
