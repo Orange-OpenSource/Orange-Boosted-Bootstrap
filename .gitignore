@@ -54,3 +54,8 @@ docs/.jekyll-metadata
 # Folders to ignore
 bower_components
 node_modules
+less
+_gh_pages
+dist
+docs
+js/dist

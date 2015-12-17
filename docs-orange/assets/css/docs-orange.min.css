@@ -1,14 +1,9 @@
 .bd-pageheader {
-  color: #fff;
   background-color: #000;
-}
-
-.bd-pageheader h1 {
-  font-size: 5rem;
-}
-
-.bd-pageheader p {
-  font-size: 1.4rem;
+  color: #fff;
+  border-top: 2px solid #333;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 @media (min-width: 768px) {
@@ -20,9 +15,45 @@
   }
 }
 
+.bd-pageheader h1 {
+  font-size: 5rem;
+}
+
+.bd-pageheader p {
+  font-size: 1.4rem;
+}
+
 .bd-search .form-control {
-  height: auto;
-  padding-top: 0;
-  padding-bottom: 0;
   background-color: transparent;
+  height: auto;
+}
+
+.bd-navbar {
+  font-size: 1.8rem;
+  min-height: 6.8rem;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .bd-navbar .nav-link {
+    float: none;
+  }
+  .bd-navbar .nav-link + .nav-link {
+    margin-left: 0;
+  }
+}
+
+.bd-navbar .navbar-nav .nav-link {
+  color: #fff;
+  margin-top: 2.8rem;
+  padding: 1rem;
+}
+
+.bd-navbar .navbar-nav .nav-link.active, .bd-navbar .navbar-nav .nav-link:hover, .bd-navbar .navbar-nav .nav-link:focus {
+  background-color: #000;
+  color: #f16e00;
+}
+
+.bd-navbar .dropdown-menu {
+  font-size: inherit;
 }

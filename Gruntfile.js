@@ -219,9 +219,13 @@ module.exports = function (grunt) {
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
-      docsOrange: {
+      docsOrangeCss: {
         src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css'],
         dest: 'docs/assets/css/docs.min.css'
+      },
+      docsOrangeJs: {
+        src: ['docs/assets/js/src/application.js', 'docs-orange/assets/js/application-orange.js'],
+        dest: 'docs/assets/js/src/application.js'
       }
       /* end mod */
     },
@@ -357,6 +361,12 @@ module.exports = function (grunt) {
         dest: 'docs/dist/'
       },
       /* boosted mod */
+      docsOrange: {
+        expand: true,
+        cwd: 'docs-orange',
+        src: ['**/*', '!assets/**/*'],
+        dest: 'docs'
+      },
       fonts: {
         expand: true,
         cwd: 'fonts/',
@@ -456,17 +466,17 @@ module.exports = function (grunt) {
       src: {
         files: '<%= jscs.core.src %>',
         /* boosted mod */
-        tasks: ['babel:dev', 'dist-js', 'docs', 'jekyll:docs']
+        tasks: ['babel:dev', 'dist-js', 'docs']
         /* end mod */
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css', 'docs', 'jekyll:docs']
+        tasks: ['dist-css', 'docs']
       },
       docs: {
         /* boosted mod */
-        files: ['docs/examples/**/*', 'docs/_includes/**/*', '!docs/assets/**/*'],
-        tasks: ['dist-css', 'docs', 'jekyll:docs']
+        files: ['docs/examples/**/*', 'docs/_includes/**/*', 'docs-orange/**/*', '!docs/assets/**/*'],
+        tasks: ['dist-css', 'docs']
         /* end mod */
       }
     },
@@ -600,12 +610,12 @@ module.exports = function (grunt) {
 
   // Docs task.
   /* boosted mod */
-  grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'csscomb:docsOrange', 'concat:docsOrange', 'cssmin:docs']);
-  /* end mod */
-  grunt.registerTask('docs-js', ['uglify:docsJs']);
+  grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'csscomb:docsOrange', 'concat:docsOrangeCss', 'cssmin:docs']);
+  grunt.registerTask('docs-js', ['concat:docsOrangeJs', 'uglify:docsJs']);
+   /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
-  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace']);
+  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'copy:docsOrange', 'jekyll:docs', 'replace']);
   /* end mod */
   grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
 
