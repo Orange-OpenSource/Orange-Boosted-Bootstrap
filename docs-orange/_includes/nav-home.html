@@ -1,4 +1,5 @@
 <header class="navbar navbar-dark navbar-static-top bd-navbar" role="banner">
+  <div class="container">
   {% comment %}
   <nav class="nav navbar-nav pull-xs-right">
     <div class="nav-item dropdown">
@@ -33,13 +34,17 @@
     </a>
   </div>
   <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
-    <nav class="nav navbar-nav">
-      <a class="nav-item nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">
+    <nav class="nav navbar-nav" id="id_li_for_cdu">
+      <a class="navbar-brand nav-item" href="{{ site.baseurl }}/">
+        <img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage' width='48px'/>
+      </a>
+      <a class="nav-item nav-link" href="{{ site.baseurl }}/">
         B<span class="text-primary">oo</span>sted
       </a>
-      <a class="nav-item nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
-      <a class="nav-item nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+      <a class="nav-item nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/">Documentation</a>
+      <a class="nav-item nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/">Examples</a>
       <a class="nav-item nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/boostwatch/">Boostwatch</a>
     </nav>
+  </div>
   </div>
 </header>

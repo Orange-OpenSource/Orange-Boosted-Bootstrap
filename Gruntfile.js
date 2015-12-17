@@ -446,6 +446,10 @@ module.exports = function (grunt) {
           replacements: [{
                 from: 'href="/',
                 to: 'href="../../'
+            },
+            {
+              from: 'src="../dist',
+              to: 'src="../../dist',
             }]
         },
         docsOrangeJs: {

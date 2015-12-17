@@ -91,6 +91,7 @@ html {
 .navbar-brand {
   height: $navbar-height;
   margin: 0;
+  padding: 1rem;
 }
 
 .navbar-header {
@@ -122,6 +123,18 @@ html {
 // Builds on top of the `.nav` components with its own modifier class to make
 // the nav the full height of the horizontal nav (above 768px).
 .navbar-nav {
+  #uci_link {
+    color: $brand-orange-white;
+    font-weight: $brand-font-weight-bold;
+    margin-top: 2.8rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    float: left;
+
+    @include hover-focus{
+      color: $brand-orange;
+    }
+  }
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
     > li {
