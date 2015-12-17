@@ -411,12 +411,28 @@ module.exports = function (grunt) {
 
     /* boosted mod */
     replace: {
-      remplace: {
-        src: ['_gh_pages/**/*.html'],
+      paths1: {
+        src: ['_gh_pages/*.html'],
         overwrite: true,
         replacements: [{
               from: 'href="/',
               to: 'href="'
+          }]
+      },
+      paths2: {
+        src: ['_gh_pages/*/*.html'],
+        overwrite: true,
+        replacements: [{
+              from: 'href="/',
+              to: 'href="../'
+          }]
+      },
+      paths3: {
+        src: ['_gh_pages/*/*/*.html'],
+        overwrite: true,
+        replacements: [{
+              from: 'href="/',
+              to: 'href="../../'
           }]
       }
     },
@@ -588,8 +604,9 @@ module.exports = function (grunt) {
   /* end mod */
   grunt.registerTask('docs-js', ['uglify:docsJs']);
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
+  /* boosted mod */
   grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace']);
-
+  /* end mod */
   grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
 
   // Publish to GitHub
@@ -616,7 +633,6 @@ module.exports = function (grunt) {
     grunt.task.run([
       'dist',
       'docs',
-      'jekyll:docs',
       'connect:livereload',
       'watch'
     ]);
