@@ -126,7 +126,8 @@ html {
   @media (min-width: $grid-float-breakpoint) {
     > li {
       > a {
-        @include navbar-vertical-align((($navbar-padding-vertical) + $line-height-computed));
+        // @include navbar-vertical-align($navbar-padding-vertical + $line-height-computed);
+        margin-top: 2.8rem;
       }
     }
   }

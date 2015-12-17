@@ -7,12 +7,8 @@
 /////////////////////////////////////////////////////////////
 $brand-font-weight-bold: bold;
 $brand-font-weight-normal: normal;
-// Core color #000 / #FF7900
-// Core color #FFF / #F16E00
-//$brand-orange: #F16E00; // alternative Orange color for digital
-// secondary color #4BB4E6 #FFD200 #50BE87 #A885D8 #FFB4E6
-// Greys #f6f6f6 #EEEEEE #DDDDDD #CCCCCC #999999 #666666 #444444 #333333 #232323
-//yellow blue green purple pink
+
+// secondary color
 $brand-yellow: #ffd200; //black text
 $brand-blue: #4bb4e6; //black text
 $brand-green: #50be87;//black text
@@ -20,11 +16,10 @@ $brand-purple: #a885d8;//black text
 $brand-pink: #ffb4e6;//black text
 
 $brand-orange: #f16e00;
-//used to invert colors
+
 $brand-orange-black: #000;
 $brand-orange-white: #fff;
-/////////////////////////////////////////////////////////////
-//
+
 //## Gray and brand colors for use across Bootstrap.
 $gray-footer:            $brand-orange-black;
 
@@ -43,7 +38,7 @@ $brand-success: #32c832;
 $brand-info: #527ebd;
 $brand-warning: #fc0;
 $brand-danger: #dc3c14;
-
+/////////////////////////////////////////////////////////////
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
