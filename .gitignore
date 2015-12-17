@@ -56,5 +56,6 @@ bower_components
 node_modules
 _gh_pages
 dist
-#docs
 js/dist
+docs/assets/css
+docs/dist
