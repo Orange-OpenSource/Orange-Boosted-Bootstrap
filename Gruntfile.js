@@ -565,9 +565,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
 
   // Default task.
-  /* boosted mod */
-  // grunt.registerTask('default', ['clean:dist', 'test']);
-  /* end mod */
+  grunt.registerTask('default', ['clean:dist', 'test']);
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
@@ -590,7 +588,7 @@ module.exports = function (grunt) {
   /* end mod */
   grunt.registerTask('docs-js', ['uglify:docsJs']);
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
-  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs']);
+  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace']);
 
   grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
 
@@ -621,15 +619,6 @@ module.exports = function (grunt) {
       'jekyll:docs',
       'connect:livereload',
       'watch'
-    ]);
-  });
-
-  grunt.registerTask('default', 'Build boosted', function (target) {
-    grunt.task.run([
-      'dist',
-      'docs',
-      'jekyll:docs',
-      'replace'
     ]);
   });
   /* end mod */
