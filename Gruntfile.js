@@ -424,30 +424,38 @@ module.exports = function (grunt) {
 
     /* boosted mod */
     replace: {
-      paths1: {
-        src: ['_gh_pages/*.html'],
-        overwrite: true,
-        replacements: [{
-              from: 'href="/',
-              to: 'href="'
-          }]
-      },
-      paths2: {
-        src: ['_gh_pages/*/*.html'],
-        overwrite: true,
-        replacements: [{
-              from: 'href="/',
-              to: 'href="../'
-          }]
-      },
-      paths3: {
-        src: ['_gh_pages/*/*/*.html'],
-        overwrite: true,
-        replacements: [{
-              from: 'href="/',
-              to: 'href="../../'
-          }]
-      }
+        paths1: {
+          src: ['_gh_pages/*.html'],
+          overwrite: true,
+          replacements: [{
+                from: 'href="/',
+                to: 'href="'
+            }]
+        },
+        paths2: {
+          src: ['_gh_pages/*/*.html'],
+          overwrite: true,
+          replacements: [{
+                from: 'href="/',
+                to: 'href="../'
+            }]
+        },
+        paths3: {
+          src: ['_gh_pages/*/*/*.html'],
+          overwrite: true,
+          replacements: [{
+                from: 'href="/',
+                to: 'href="../../'
+            }]
+        },
+        docsOrangeJs: {
+          src: ['docs/assets/js/src/application.js'],
+          overwrite: true,
+          replacements: [{
+                from: '.bd-example [href=#]',
+                to: '[href=#]'
+            }]
+        }
     },
     /* end mod */
 
@@ -614,11 +622,12 @@ module.exports = function (grunt) {
   // Docs task.
   /* boosted mod */
   grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'csscomb:docsOrange', 'concat:docsOrangeCss', 'cssmin:docs']);
-  grunt.registerTask('docs-js', ['copy:docsOrangeJs', 'uglify:docsJs']);
+  grunt.registerTask('docs-js', ['replace:docsOrangeJs', 'uglify:docsJs']);
    /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
-  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'copy:docsOrange', 'jekyll:docs', 'replace']);
+  grunt.registerTask('replace-paths', ['replace:paths1', 'replace:paths2', 'replace:paths3']);
+  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'copy:docsOrange', 'jekyll:docs', 'replace-paths']);
   /* end mod */
   grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
 
