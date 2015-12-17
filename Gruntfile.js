@@ -222,10 +222,6 @@ module.exports = function (grunt) {
       docsOrangeCss: {
         src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css'],
         dest: 'docs/assets/css/docs.min.css'
-      },
-      docsOrangeJs: {
-        src: ['docs/assets/js/src/application.js', 'docs-orange/assets/js/application-orange.js'],
-        dest: 'docs/assets/js/src/application.js'
       }
       /* end mod */
     },
@@ -366,6 +362,13 @@ module.exports = function (grunt) {
         cwd: 'docs-orange',
         src: ['**/*', '!assets/**/*'],
         dest: 'docs'
+      },
+      docsOrangeJs: {
+        expand: true,
+        flatten: true,
+        cwd: 'docs-orange',
+        src: ['assets/js/application.js'],
+        dest: 'docs/assets/js/src'
       },
       fonts: {
         expand: true,
@@ -611,7 +614,7 @@ module.exports = function (grunt) {
   // Docs task.
   /* boosted mod */
   grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'csscomb:docsOrange', 'concat:docsOrangeCss', 'cssmin:docs']);
-  grunt.registerTask('docs-js', ['concat:docsOrangeJs', 'uglify:docsJs']);
+  grunt.registerTask('docs-js', ['copy:docsOrangeJs', 'uglify:docsJs']);
    /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
