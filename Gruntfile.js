@@ -409,6 +409,19 @@ module.exports = function (grunt) {
       }
     },
 
+    /* boosted mod */
+    replace: {
+      remplace: {
+        src: ['_gh_pages/**/*.html'],
+        overwrite: true,
+        replacements: [{
+              from: 'href="/',
+              to: 'href="'
+          }]
+      }
+    },
+    /* end mod */
+
     htmllint: {
       options: {
         ignore: [
@@ -552,7 +565,9 @@ module.exports = function (grunt) {
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'test']);
+  /* boosted mod */
+  // grunt.registerTask('default', ['clean:dist', 'test']);
+  /* end mod */
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
@@ -606,6 +621,15 @@ module.exports = function (grunt) {
       'jekyll:docs',
       'connect:livereload',
       'watch'
+    ]);
+  });
+
+  grunt.registerTask('default', 'Build boosted', function (target) {
+    grunt.task.run([
+      'dist',
+      'docs',
+      'jekyll:docs',
+      'replace'
     ]);
   });
   /* end mod */
