@@ -92,6 +92,16 @@ html {
   height: $navbar-height;
   margin: 0;
   padding: 1rem;
+
+  &.nav-link {
+    margin: 0;
+  }
+
+  img {
+    color: $brand-orange-white;
+    font-size: 1.2rem;
+    font-weight: $brand-font-weight-normal;
+  }
 }
 
 .navbar-header {
@@ -137,12 +147,10 @@ html {
   }
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
-    > li {
-      > a {
+      .nav-link {
         // @include navbar-vertical-align($navbar-padding-vertical + $line-height-computed);
         margin-top: 2.8rem;
       }
-    }
   }
 
   > li {
