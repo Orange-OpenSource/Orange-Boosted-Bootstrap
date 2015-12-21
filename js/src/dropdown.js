@@ -267,7 +267,7 @@ const Dropdown = (($) => {
   // set default acessibility Attributes
   $( document ).ready( function () {
 	$('.dropdown-menu').attr('role','menu')
-	$('.dropdown-menua a.dropdown-item').attr('role','menuitem')
+	$('.dropdown-menu a.dropdown-item').attr('role','menuitem')
   })
   /**
    * ------------------------------------------------------------------------
