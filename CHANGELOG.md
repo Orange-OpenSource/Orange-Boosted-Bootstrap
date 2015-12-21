@@ -1,3 +1,21 @@
+<a name"3.2.1"></a>
+## 3.2.1 (2015-12-21)
+
+
+#### Bug Fixes
+
+* **megamenu:** fix bg color of dropdown for mobile display
+* **forms:** button position and size in formgroups 
+* **helvetica fontfamily:** Font-familly woff was buggy (1px upper on firefox)
+
+
+#### Features
+
+* **core:**
+  * Update Orange Icons library (337) solaris icons
+  * Update Orange grey palette
+  * Horizontal form : label align left according to the brand guidelines
+
 <a name"3.2.0"></a>
 ## 3.2.0 (2015-11-27)
 

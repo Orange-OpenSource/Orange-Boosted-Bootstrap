@@ -31,7 +31,7 @@ To get started, check out <http://orange-opensource.github.io/Orange-Boosted-Boo
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v3.1.1/boosted-v3.1.1.zip).
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v3.2.1/boosted-v3.2.1.zip).
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`.
 - Install with [Bower](http://bower.io): `bower install boosted`.
 - Install with [npm](https://www.npmjs.com): `npm install boosted`.
