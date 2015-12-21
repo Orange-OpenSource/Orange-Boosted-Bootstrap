@@ -218,14 +218,14 @@ ul.o-wizard-step-bar[data-steps="5"] li {
   color: #fff !important;
 }
 @media (max-width: 767px) {
-  .navbar-nav .open .dropdown-menu {
+  .navbar-nav .nav-item.open .dropdown-menu {
     background-color: #fff;
   }
-  .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-nav .nav-item.open .dropdown-menu > li > a {
     color: #333;
   }
-  .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-nav .nav-item.open .dropdown-menu > li > a:hover,
+  .navbar-nav .nav-item.open .dropdown-menu > li > a:focus {
     color: #262626;
     text-decoration: none;
     background-color: #f5f5f5;
