@@ -207,23 +207,21 @@
             </div>
 
             <div id="localNavigation" class="container">
-			<nav  class="navbar navbar-default nav-local" role="navigation" role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-						<span class="sr-only">toggle navigation</span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
+			<nav  class="navbar nav-local" role="navigation">
+				<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+					<span class="sr-only">toggle navigation</span>
+					<span class="icon-bar"></span>
+				</button>
 
-				<div class="collapse navbar-collapse local" id="bs-example-navbar-collapse-2">
+				<div class="collapse navbar-toggleable-xs local" id="bs-example-navbar-collapse-2">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">news home</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">world</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">entertainment</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">finance</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">technology</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">weather</a><div class='arrow' aria-hidden='true'></div></li>
-						<li class="dropdown">
+						<li class="nav-item"><a class="nav-link active" href="#">news home<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">world<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">entertainment<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">finance<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">technology<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">weather<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item dropdown">
 							<a href="#" class="dropdown-toggle active" data-toggle="dropdown"><span class="sr-only">more categories </span>... <b class="caret" aria-hidden="true"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">sport</a></li>
@@ -232,8 +230,8 @@
 							</ul>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
+					<ul class="nav navbar-nav pull-md-right">
+						<li class="nav-item dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">more <span class="sr-only">options</span><b class="caret" aria-hidden="true"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">all categories</a></li>
@@ -406,10 +404,10 @@
 
 
 				<div id="infos" class="col-xs-12 col-sm-12 col-md-4">
-					<ul class="nav nav-tabs nav-tabs-justified o-nav-tabs">
-						<li class="active"><a href="#mostRead" data-toggle="tab">Most read</a><div class="arrow" aria-hidden="true"></div></li>
-						<li><a href="#mostShared" data-toggle="tab">Most shared</a><div class="arrow" aria-hidden="true"></div></li>
-						<li><a href="#mostRecent" data-toggle="tab">Most recent</a><div class="arrow" aria-hidden="true"></div></li>
+					<ul class="nav nav-tabs o-nav-tabs">
+						<li class="nav-item"><a class="nav-link active" href="#mostRead" data-toggle="tab">Most read<div class="arrow" aria-hidden="true"></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#mostShared" data-toggle="tab">Most shared<div class="arrow" aria-hidden="true"></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#mostRecent" data-toggle="tab">Most recent<div class="arrow" aria-hidden="true"></div></a></li>
 					</ul>
 					<!-- Tab panes -->
 					<div class="tab-content o-nav-tabs-content">
