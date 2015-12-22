@@ -1,5 +1,5 @@
 /*!
- boosted - v3.2.0 - Orange Boosted with Boostrap
+ boosted - v3.2.1 - Orange Boosted with Boostrap
  Copyright 2015 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -4265,7 +4265,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555;
+  color: #999;
   cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -4755,7 +4755,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #555;
+  color: #999;
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
@@ -4796,7 +4796,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #555;
+    color: #999;
     background-color: transparent;
   }
 }
@@ -4817,7 +4817,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 fieldset[disabled] .navbar-default .btn-link:hover,
 .navbar-default .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #555;
+  color: #999;
 }
 .navbar-inverse {
   background-color: #eee;
@@ -4937,7 +4937,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   content: "/\00a0";
 }
 .breadcrumb > .active {
-  color: #555;
+  color: #999;
 }
 .pagination {
   display: inline-block;
@@ -5495,7 +5495,7 @@ a.thumbnail.active {
 }
 a.list-group-item,
 button.list-group-item {
-  color: #555;
+  color: #999;
 }
 a.list-group-item .list-group-item-heading,
 button.list-group-item .list-group-item-heading {
@@ -5505,7 +5505,7 @@ a.list-group-item:hover,
 button.list-group-item:hover,
 a.list-group-item:focus,
 button.list-group-item:focus {
-  color: #555;
+  color: #999;
   text-decoration: none;
   background-color: #f5f5f5;
 }
@@ -6986,12 +6986,12 @@ button.close {
   }
 }
 /** Old values in BS 3.1.1
-@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
-@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
-@gray: lighten(@brand-orange-black, 33.5%); // #555
-@gray-before-light: lighten(@brand-orange-black, 40%); //#666
-@gray-light: lighten(@brand-orange-black, 80%); //#ccc
-@gray-lighter: lighten(@brand-orange-black, 93.5%);
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 26.75%); // #444
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-before-light: lighten(@gray-base, 40%); //#666
+@gray-light: lighten(@gray-base, 80%); //#ccc
+@gray-lighter: lighten(@gray-base, 93.5%);
 */
 /** BS 3.3.2 values 
 @gray-base:              #000;

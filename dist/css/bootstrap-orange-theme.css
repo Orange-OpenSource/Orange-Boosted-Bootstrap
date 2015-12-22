@@ -1,16 +1,16 @@
 /*!
- boosted - v3.2.0 - Orange Boosted with Boostrap
+ boosted - v3.2.1 - Orange Boosted with Boostrap
  Copyright 2015 Orange SA, all right reserved
 MIT Licensed 
 */
 
 /** Old values in BS 3.1.1
-@gray-darker: lighten(@brand-orange-black, 13.5%); // #222
-@gray-dark: lighten(@brand-orange-black, 26.75%); // #444
-@gray: lighten(@brand-orange-black, 33.5%); // #555
-@gray-before-light: lighten(@brand-orange-black, 40%); //#666
-@gray-light: lighten(@brand-orange-black, 80%); //#ccc
-@gray-lighter: lighten(@brand-orange-black, 93.5%);
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 26.75%); // #444
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-before-light: lighten(@gray-base, 40%); //#666
+@gray-light: lighten(@gray-base, 80%); //#ccc
+@gray-lighter: lighten(@gray-base, 93.5%);
 */
 /** BS 3.3.2 values 
 @gray-base:              #000;
