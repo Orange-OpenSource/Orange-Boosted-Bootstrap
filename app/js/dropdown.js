@@ -28,7 +28,6 @@
         var $parent = selector && $(selector)
 
         /* boosted mod */
-//      return $parent && $parent.length ? $parent : $this.parent()
         //looking for closest parent with .dropdown class
         var dropdownParent = $(this).closest('.dropdown');
         if(!dropdownParent.length){
@@ -36,7 +35,6 @@
             dropdownParent = $this.parent();
         }
         return $parent && $parent.length ? $parent : dropdownParent;
-        return $parent && $parent.length ? $parent : $this.closest('.dropdown');
         /* end mod */
       }
     
