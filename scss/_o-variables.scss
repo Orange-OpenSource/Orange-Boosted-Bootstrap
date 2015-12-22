@@ -566,17 +566,26 @@ $o-wizard-step-bar-arrow-outer-color:           fadein($o-wizard-step-bar-border
 
 $pagination-color: $brand-orange-black;
 $pagination-bg: $brand-orange-white;
-$pagination-border: $brand-orange-black;
+$pagination-border-color: $brand-orange-black;
+
 $pagination-hover-color: $brand-orange-white;
 $pagination-hover-bg: $brand-orange-black;
 $pagination-hover-border: $brand-orange-black;
+
 $pagination-active-color: $brand-orange;
 $pagination-active-bg: $brand-orange-black;
 $pagination-active-border: $brand-orange-black;
+
 $pagination-disabled-color: $gray-before-light;
 $pagination-disabled-bg: $brand-orange-white;
 $pagination-disabled-border: $brand-orange-black;
 
+$pagination-padding-x:                2rem;
+$pagination-padding-y:                1rem;
+$pagination-padding-x-sm:             1rem;
+$pagination-padding-y-sm:             .5rem;
+$pagination-padding-x-lg:             2rem;
+$pagination-padding-y-lg:             1.2rem;
 
 //== Pager
 //
@@ -584,7 +593,7 @@ $pagination-disabled-border: $brand-orange-black;
 
 
 $pager-bg: $pagination-bg;
-$pager-border: $pagination-border;
+$pager-border-color: $pagination-border-color;
 $pager-border-radius: 0;
 $pager-hover-bg: $pagination-hover-bg;
 $pager-active-bg: $pagination-active-bg;
@@ -757,22 +766,14 @@ $alert-danger-border:         $brand-danger;
 //
 //##
 
-//** Background color of the whole progress component
 $progress-bg:                 $gray-lighter;
-//** Progress bar text color
 $progress-bar-color:          $brand-orange-black;
-//** Variable for setting rounded corners on progress bar.
 $progress-border-radius:      $border-radius-base;
 
-//** Default progress bar color
 $progress-bar-bg:             $brand-primary;
-//** Success progress bar color
 $progress-bar-success-bg:     $brand-success;
-//** Warning progress bar color
 $progress-bar-warning-bg:     $brand-warning;
-//** Danger progress bar color
 $progress-bar-danger-bg:      $brand-danger;
-//** Info progress bar color
 $progress-bar-info-bg:        $brand-info;
 
 
@@ -900,16 +901,13 @@ $badge-border-radius:         0;
 //
 //##
 
-$breadcrumb-padding-vertical:   8px;
-$breadcrumb-padding-horizontal: 15px;
-//** Breadcrumb background color
+$breadcrumb-padding-vertical:   .8rem;
+$breadcrumb-padding-horizontal: 1.5rem;
+
 $breadcrumb-bg:                 $brand-orange-white;
-//** Breadcrumb text color
-$breadcrumb-color:              $brand-orange-black;
-//** Text color of current page in the breadcrumb
+$breadcrumb-divider-color:              $brand-orange-black;
 $breadcrumb-active-color:       $brand-primary;
-//** Textual separator for between breadcrumb elements
-$breadcrumb-separator: ">";
+$breadcrumb-divider: ">";
 
 
 //== Carousel
@@ -1127,4 +1125,8 @@ $hr-border:                   $gray-lighter;
 // focus state mixin
 @mixin focus {
   &:focus { @content }
+}
+
+@mixin active {
+  &:active { @content }
 }

@@ -18,7 +18,7 @@
       text-decoration: none;
       color: $pagination-color;
       background-color: $pagination-bg;
-      border-right: 1px solid $pagination-border;
+      border-right: 1px solid $pagination-border-color;
       margin-left: 0;
     }
     &:first-child {
@@ -45,7 +45,7 @@
     &:focus {
       color: $pagination-active-color;
       background-color: $pagination-bg;
-      border-color: $pagination-border;
+      border-color: $pagination-border-color;
       text-decoration: underline;
     }
   }
@@ -58,7 +58,7 @@
       z-index: 2;
       color: $pagination-active-color;
       background-color: $pagination-bg;
-      border-color: $pagination-border;
+      border-color: $pagination-border-color;
       cursor: default;
     }
   }
