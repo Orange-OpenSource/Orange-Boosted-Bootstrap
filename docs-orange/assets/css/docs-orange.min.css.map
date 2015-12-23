@@ -21,6 +21,7 @@
 		"../../../scss/mixins/_text-truncate.scss",
 		"../../../scss/mixins/_alert.scss",
 		"../../../scss/mixins/_buttons.scss",
+		"../../../scss/mixins/_cards.scss",
 		"../../../scss/mixins/_pagination.scss",
 		"../../../scss/mixins/_lists.scss",
 		"../../../scss/mixins/_list-group.scss",
