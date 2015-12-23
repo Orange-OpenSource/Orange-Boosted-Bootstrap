@@ -72,6 +72,12 @@
 .text-uppercase      { text-transform: uppercase !important; }
 .text-capitalize     { text-transform: capitalize !important; }
 
+// Weight and italics
+
+.font-weight-normal  { font-weight: normal; }
+.font-weight-bold    { font-weight: bold; }
+.font-italic         { font-style: italic; }
+
 // Contextual colors
 
 .text-muted {
