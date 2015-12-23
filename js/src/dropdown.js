@@ -117,7 +117,7 @@ const Dropdown = (($) => {
 	  
       $(parent).toggleClass(ClassName.OPEN)
       $(parent).trigger($.Event(Event.SHOWN, relatedTarget))
-	  $(this).parent().find('.dropdown-menu a:first-child').focus()
+	  $(this).parent().find('.dropdown-menu a').first().focus()
 
       return false
     }
