@@ -513,7 +513,7 @@ const Modal = (($) => {
     Modal._jQueryInterface.call($(target), config, this)
   })
 
-	$(document).ready({
+	$(document).ready(function (){
 	  // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
 	  var $modals =  $('[data-toggle="modal"]');
 	  $modals.each(function() {
