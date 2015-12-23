@@ -109,11 +109,15 @@ const Dropdown = (($) => {
         return false
       }
 
-      this.focus()
+      //this.focus()
       this.setAttribute('aria-expanded', 'true')
-
+	  
+	  
+	  // patch to select  by default first item 
+	  
       $(parent).toggleClass(ClassName.OPEN)
       $(parent).trigger($.Event(Event.SHOWN, relatedTarget))
+	  $(this).parent().find('.dropdown-menu a').first().focus()
 
       return false
     }
@@ -203,6 +207,7 @@ const Dropdown = (($) => {
     }
 
     static _dataApiKeydownHandler(event) {
+		console.log('_dataApiKeydownHandler')
       if (!/(38|40|27|32)/.test(event.which) ||
          /input|textarea/i.test(event.target.tagName)) {
         return
@@ -259,7 +264,11 @@ const Dropdown = (($) => {
 
   }
 
-
+  // set default acessibility Attributes
+  $( document ).ready( function () {
+	$('.dropdown-menu').attr('role','menu')
+	$('.dropdown-menu a.dropdown-item').attr('role','menuitem')
+  })
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
