@@ -47,8 +47,8 @@ module.exports = function (grunt) {
       'Edge >= 12',
       'Explorer >= 9',
       // Out of leniency, we prefix these 1 version further back than the official policy.
-      'iOS >= 7',
-      'Safari >= 7.1',
+      'iOS >= 8',
+      'Safari >= 8',
       // The following remain NOT officially supported, but we're lenient and include their prefixes to avoid severely breaking in them.
       'Android 2.3',
       'Android >= 4',
@@ -302,7 +302,7 @@ module.exports = function (grunt) {
         compatibility: 'ie9',
         keepSpecialComments: '*',
         sourceMap: true,
-        noAdvanced: true
+        advanced: false
       },
       core: {
         files: [
@@ -500,17 +500,6 @@ module.exports = function (grunt) {
       }
     },
 
-    sed: {
-      versionNumber: {
-        pattern: (function () {
-          var old = grunt.option('oldver');
-          return old ? RegExp.quote(old) : old;
-        })(),
-        replacement: grunt.option('newver'),
-        recursive: true
-      }
-    },
-
     'saucelabs-qunit': {
       all: {
         options: {
@@ -543,7 +532,27 @@ module.exports = function (grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+
+    compress: {
+      main: {
+        options: {
+          archive: 'bootstrap-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: 'bootstrap-<%= pkg.version %>-dist'
+          }
+        ]
+      }
     }
+
   });
 
 
@@ -612,11 +621,6 @@ module.exports = function (grunt) {
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
 
-  // Version numbering task.
-  // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
-  // This can be overzealous, so its changes should always be manually reviewed!
-  grunt.registerTask('change-version-number', 'sed');
-
   grunt.registerTask('commonjs', ['babel:umd', 'npm-js']);
 
   grunt.registerTask('npm-js', 'Generate npm-js entrypoint module in dist dir.', function () {
@@ -637,7 +641,8 @@ module.exports = function (grunt) {
   grunt.registerTask('replace-paths', ['replace:paths1', 'replace:paths2', 'replace:paths3']);
   grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'copy:docsOrange', 'jekyll:docs', 'replace-paths']);
   /* end mod */
-  grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
+  grunt.registerTask('docs-github', ['jekyll:github']);
+  grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
 
   // Publish to GitHub
   grunt.registerTask('publish', ['buildcontrol:pages']);
