@@ -9,7 +9,9 @@ kramdown:
 permalink:        pretty
 
 # Server
-source:           docs
+# boosted mod
+source:           .tmpdocs
+# end boosted mod
 destination:      _gh_pages
 host:             0.0.0.0
 port:             9001

@@ -1,6 +1,7 @@
-@import '../../../scss/variables';
-@import '../../../scss/o-variables';
-@import '../../../scss/mixins';
+.bd-masthead {
+  background-color: $brand-orange-black;
+  color: $brand-orange-white;
+}
 
 .bd-pageheader {
   background-color: $brand-orange-black;
