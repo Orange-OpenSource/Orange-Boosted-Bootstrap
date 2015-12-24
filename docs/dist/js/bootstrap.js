@@ -1547,11 +1547,7 @@ var Dropdown = (function ($) {
       this._addEventListeners();
     }
 
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
+    // set default acessibility Attributes
 
     // getters
 
@@ -1592,11 +1588,14 @@ var Dropdown = (function ($) {
           return false;
         }
 
-        this.focus();
+        //this.focus()
         this.setAttribute('aria-expanded', 'true');
+
+        // patch to select  by default first item
 
         $(parent).toggleClass(ClassName.OPEN);
         $(parent).trigger($.Event(Event.SHOWN, relatedTarget));
+        $(this).parent().find('.dropdown-menu a').first().focus();
 
         return false;
       }
@@ -1688,6 +1687,7 @@ var Dropdown = (function ($) {
     }, {
       key: '_dataApiKeydownHandler',
       value: function _dataApiKeydownHandler(event) {
+        console.log('_dataApiKeydownHandler');
         if (!/(38|40|27|32)/.test(event.which) || /input|textarea/i.test(event.target.tagName)) {
           return;
         }
@@ -1750,6 +1750,16 @@ var Dropdown = (function ($) {
 
     return Dropdown;
   })();
+
+  $(document).ready(function () {
+    $('.dropdown-menu').attr('role', 'menu');
+    $('.dropdown-menu a.dropdown-item').attr('role', 'menuitem');
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
 
   $(document).on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.ROLE_MENU, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.ROLE_LISTBOX, Dropdown._dataApiKeydownHandler).on(Event.CLICK_DATA_API, Dropdown._clearMenus).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, Dropdown.prototype.toggle).on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function (e) {
     e.stopPropagation();
@@ -2285,6 +2295,31 @@ var Modal = (function ($) {
     Modal._jQueryInterface.call($(target), config, this);
   });
 
+  $(document).ready(function () {
+    // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
+    var $modals = $('[data-toggle="modal"]');
+    $modals.each(function () {
+
+      //modal = l'élement déclencheur de l'aperçu de la popin
+      //modalPanel = la fenêtre modal à proprement parler
+      var modal = $(this),
+          modalPanel = modal.attr('data-target') ? $(modal.attr('data-target')) : $(modal.attr('href'));
+
+      //On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
+      modalPanel.attr({ 'role': 'dialog' }); //LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
+
+      //On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
+      var modalTitle = modalPanel.find('.modal-title');
+      if (modalTitle) {
+        var modalTitleId = modalTitle.attr('id');
+        if (modalTitleId) {
+          modalPanel.attr({ 'aria-labelledby': modalTitleId });
+        }
+      }
+    });
+
+    $('.modal-dialog').attr({ 'role': 'document' });
+  });
   /**
    * ------------------------------------------------------------------------
    * jQuery

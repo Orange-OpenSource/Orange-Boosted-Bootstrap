@@ -6012,8 +6012,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-style: normal;
   font-weight: normal;
 
-  src: url("icon-font-pathicon-orange.eot?6vtdzi");
-  src: url("icon-font-pathicon-orange.eot?6vtdzi#iefix") format("embedded-opentype"), url("icon-font-pathicon-orange.ttf?6vtdzi") format("truetype"), url("icon-font-pathicon-orange.woff?6vtdzi") format("woff"), url("icon-font-pathicon-orange.svg?6vtdzi#icon-orange") format("svg");
+  src: url("../fonts/icon-orange.eot?6vtdzi");
+  src: url("../fonts/icon-orange.eot?6vtdzi#iefix") format("embedded-opentype"), url("../fonts/icon-orange.ttf?6vtdzi") format("truetype"), url("../fonts/icon-orange.woff?6vtdzi") format("woff"), url("../fonts/icon-orange.svg?6vtdzi#icon-orange") format("svg");
 }
 
 .icon-popout-care,
@@ -8926,7 +8926,7 @@ ul.o-wizard-step-bar[data-steps='5'] li {
   left: 0;
   width: 2rem;
   height: 2rem;
-  font-family: "icon-orange" !important;
+  font-family: 'icon-orange' !important;
   font-size: 1.4rem;
   color: #fff;
   /* dim. de la case */

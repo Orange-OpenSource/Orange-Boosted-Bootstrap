@@ -53,7 +53,7 @@
 /* Aspect général de la coche */
 .o-checkbox[type="checkbox"]:not(:checked) + label:after,
 .o-checkbox[type="checkbox"]:checked + label:after{
-  font-family: "icon-orange" !important;
+  font-family: 'icon-orange' !important;
   content: '\ea2b';
   position: absolute;
   top: 0; 
