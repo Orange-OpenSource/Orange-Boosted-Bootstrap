@@ -4,7 +4,7 @@
 .o-pagination {
   display: inline-block;
   padding-left: 0;
-  margin: $line-height-computed 0;
+  margin: $line-height 0;
   border-radius: $border-radius-base;
 
   > li {
@@ -14,7 +14,7 @@
       position: relative;
       float: left; // Collapse white-space
       padding: $padding-base-vertical $padding-base-horizontal;
-      line-height: $line-height-base;
+      line-height: $line-height;
       text-decoration: none;
       color: $pagination-color;
       background-color: $pagination-bg;

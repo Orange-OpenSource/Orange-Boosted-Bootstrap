@@ -1,6 +1,6 @@
 // html font-size forcée à 10px par BT
 html {
-  font-size: $html-font-size-base;
+  font-size: $font-size-root;
   // Orange brand All is bold only plain texts are not bold
   font-weight: $brand-font-weight-normal;
 }
@@ -626,6 +626,6 @@ a.btn {
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
   ~ .form-control-feedback {
-    top: ($line-height-computed + .5); // Height of the `label` and its margin
+    top: ($line-height + .5); // Height of the `label` and its margin
   }
 }

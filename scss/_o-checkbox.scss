@@ -6,7 +6,7 @@
   position: absolute;
   left: -9999px;
 }
- 
+
 /* on prépare le label */
 .o-checkbox[type="checkbox"]:not(:checked) + label,
 .o-checkbox[type="checkbox"]:checked + label{
@@ -18,7 +18,7 @@
   display: inline-block;
   font-style: normal;
   font-weight: normal;
-  line-height: $line-height-computed;
+  line-height: $line-height;
   border: 1px dotted transparent;
 }
 
@@ -26,7 +26,7 @@
 .o-checkbox-right.o-checkbox[type="checkbox"]:not(:checked) + label,
 .o-checkbox-right.o-checkbox[type="checkbox"]:checked + label{
     padding-left: 0;
-    padding-right: ($input-height-base * 0.75); /* fait un peu d'espace pour notre case à venir */    
+    padding-right: ($input-height-base * 0.75); /* fait un peu d'espace pour notre case à venir */
 }
 
 /* Aspect des checkboxes */
@@ -35,8 +35,8 @@
 .o-checkbox[type="checkbox"]:checked + label:before{
   content: "";
   position: absolute;
-  left:0; 
-  width: ($input-height-base/2); 
+  left:0;
+  width: ($input-height-base/2);
   height: ($input-height-base/2); /* dim. de la case */
   border: 2px solid $gray-light;
   background-color: #fff;
@@ -49,18 +49,18 @@
       right: 0;
 }
 
- 
+
 /* Aspect général de la coche */
 .o-checkbox[type="checkbox"]:not(:checked) + label:after,
 .o-checkbox[type="checkbox"]:checked + label:after{
   font-family: 'icon-orange' !important;
   content: '\ea2b';
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   font-size: $font-size-base;
   color: $brand-orange-white;
-  width: ($input-height-base/2); 
+  width: ($input-height-base/2);
   height: ($input-height-base/2); /* dim. de la case */
   text-align: center;
   /*transition: all .2s; /* on prévoit une animation */
@@ -92,7 +92,7 @@
 
 /* aspect désactivée */
 .o-checkbox[type="checkbox"]:disabled:not(:checked) + label:before,
-.o-checkbox[type="checkbox"]:disabled:checked + label:before{  
+.o-checkbox[type="checkbox"]:disabled:checked + label:before{
   border-color: $gray-light-plus;
 }
 /* styles de la coche (si cochée/désactivée) */
@@ -105,7 +105,7 @@
 .o-checkbox[type="checkbox"]:disabled + label{
   color: $gray-light-plus;
 }
- 
+
 /* aspect au focus de l'élément */
 .o-checkbox[type="checkbox"]:checked:focus + label,
 .o-checkbox[type="checkbox"]:not(:checked):focus + label{
