@@ -219,7 +219,7 @@ module.exports = function (grunt) {
           'bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
-      },      
+      },
       /* end mod */
     },
 
@@ -275,9 +275,7 @@ module.exports = function (grunt) {
             autoprefixer
           ]
         },
-        /* boosted mod */
-        src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css']
-        /* end mod */
+        src: ['docs/assets/css/docs.min.css']
       },
       examples: {
         options: {

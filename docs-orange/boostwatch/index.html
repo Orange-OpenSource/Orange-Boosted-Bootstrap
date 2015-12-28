@@ -4,6 +4,19 @@ title: Boostwatch
 group: boostwatch
 ---
 
+<h2 id="orange-icons">Orange Icons</h2>
+<p>Icons created from the Orange brand.</p>
+<div class="bs-glyphicons">
+    <ul class="bs-glyphicons-list">
+        {% for iconClassName in site.data.orange-icons %}
+        <li>
+            <span class="{{ iconClassName }}" aria-hidden="true"></span>
+            <span class="glyphicon-class">{{ iconClassName }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% include boostwatch/modal.html %}
 {% include boostwatch/tableSorter.html %}
 {% include boostwatch/bulletPoint.html %}
@@ -707,17 +720,6 @@ vehicula.</p>
             <span class="label label-info">Info</span>
         </div>
     </div>
-    <div class="col-lg-4">
-        <!-- badgges are gone, keep 'em ?-->
-        <h3>Badges</h3>
-        <div class="">
-            <ul class="nav nav-pills">
-                <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
-                <li><a href="#">Profile <span class="badge"></span></a></li>
-                <li><a href="#">Messages <span class="badge">3</span></a></li>
-            </ul>
-        </div>
-    </div>
 </div>
 
 
@@ -743,240 +745,52 @@ vehicula.</p>
 <h3 id="progress-animated">Animated</h3>
 <progress class="progress progress-striped progress-animated" value="45" max="100">45%</progress>
 
-      <!-- Containers
-      ================================================== -->
-      <div class="">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="container">Containers</h1>
-            </div>
-            <div class="">
-              <div class="jumbotron">
-                <h1>Jumbotron</h1>
-                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Containers
+================================================== -->
+<h2 id="container" class="page-header">Containers</h2>
+<h3>Cards</h3>
+<div class="row">todo</div>
 
 
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>List groups</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <span class="badge">14</span>
-                  Cras justo odio
-                </li>
-                <li class="list-group-item">
-                  <span class="badge">2</span>
-                  Dapibus ac facilisis in
-                </li>
-                <li class="list-group-item">
-                  <span class="badge">1</span>
-                  Morbi leo risus
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="">
-              <div class="list-group">
-                <a href="#" class="list-group-item active">
-                  Cras justo odio
-                </a>
-                <a href="#" class="list-group-item">Dapibus ac facilisis in
-                </a>
-                <a href="#" class="list-group-item">Morbi leo risus
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="">
-              <div class="list-group">
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">List group item heading</h4>
-                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">List group item heading</h4>
-                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Dialogs
+================================================== -->
+<h2 id="dialogs" class="page-header">Dialogs</h2>
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-2">
+    <h2>Popovers</h2>
+    <div class="">
+        <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
 
+        <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Panels</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel
-                </div>
-              </div>
+        <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+        sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
 
-              <div class="panel panel-default">
-                <div class="panel-heading">Panel heading</div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
+        <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
+    </div>
+    <h2>Tooltips</h2>
+    <div class="">
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
 
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Panel content
-                </div>
-                <div class="panel-footer">Panel footer</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="">
-              <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel primary</h3>
-                </div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Top</button>
 
-              <div class="panel panel-success">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel success</h3>
-                </div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Bottom</button>
 
-              <div class="panel panel-warning">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel warning</h3>
-                </div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="">
-              <div class="panel panel-danger">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel danger</h3>
-                </div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Right</button>
+    </div>
+    </div>
+</div>
 
-              <div class="panel panel-info">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Panel info</h3>
-                </div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Wells</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="">
-              <div class="well">
-                Look, I'm in a well!
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="">
-              <div class="well well-sm">
-                Look, I'm in a small well!
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="">
-              <div class="well well-lg">
-                Look, I'm in a large well!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dialogs
-      ================================================== -->
-      <div class="">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="dialogs">Dialogs</h1>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-2">
-            <h2>Popovers</h2>
-            <div class="">
-              <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
-
-              <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
-
-              <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-              sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
-
-              <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
-            </div>
-            <h2>Tooltips</h2>
-            <div class="">
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
-
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Top</button>
-
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Bottom</button>
-
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Right</button>
-            </div>
-          </div>
-          </div>
-        </div>
-
-      <div id="source-modal" class="modal fade">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
+<div id="source-modal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h4 class="modal-title">Source Code</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Source Code</h4>
             </div>
             <div class="modal-body">
-              <pre></pre>
+                <pre></pre>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
