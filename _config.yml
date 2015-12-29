@@ -26,7 +26,7 @@ gems:
 
 # Custom vars
 current_version:  4.0.0-alpha.2
-repo:             https://github.com/twbs/bootstrap
+repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
 slack:            https://bootstrap-slack.herokuapp.com
 
 download:

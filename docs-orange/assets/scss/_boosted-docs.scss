@@ -32,7 +32,6 @@
 }
 
 .bd-search {
-
   .form-control {
     background-color: transparent;
     height: auto;
@@ -74,11 +73,29 @@
   }
 }
 
-/*
- * Glyphicons
- *
- * Special styles for displaying the icons and their classes in the docs.
- */
+.bd-footer {
+    color: $brand-orange-white;
+    background-color: $brand-orange-black;
+    text-align: center;
+    margin-top: 0;
+
+    a {
+        color: $brand-orange-white;
+        text-decoration: underline;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $brand-orange;
+        }
+    }
+
+}
+
+//
+// Glyphicons
+//
+// Special styles for displaying the icons and their classes in the docs.
 
 .bs-glyphicons .glyphicon {
     color: #F16E00;
@@ -96,7 +113,6 @@
   width: 25%;
   height: 150px;
   padding: 10px;
-  /*font-size: 10px;*/
   line-height: 1.4;
   text-align: center;
   background-color: #f9f9f9;
@@ -110,7 +126,7 @@
 .bs-glyphicons .glyphicon-class {
   display: block;
   text-align: center;
-  word-wrap: break-word; /* Help out IE10+ with class names */
+  word-wrap: break-word; // Help out IE10+ with class names
 }
 .bs-glyphicons li:hover {
   color: #fff;
@@ -124,6 +140,5 @@
   }
   .bs-glyphicons li {
     width: 12.5%;
-    /*font-size: 12px;*/
   }
 }
