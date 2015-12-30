@@ -561,6 +561,17 @@ caption {
   }
 }
 
+.form-group {
+    .control-label {
+        font-weight: $brand-font-weight-bold;
+    }
+}
+
+.form-control {
+  height: $input-height;
+  border-width: 2px;
+}
+
 
 // bits from bootstrap-orange2015.less
 
@@ -620,6 +631,10 @@ a.btn {
         padding-top: ($padding-small-vertical + .1);
       }
     }
+  }
+
+  .control-label {
+    text-align: left;
   }
 }
 

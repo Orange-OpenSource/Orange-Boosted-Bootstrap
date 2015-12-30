@@ -254,10 +254,13 @@ $input-color-placeholder: $gray-before-light;
 // Default `.form-control` height
 // for REM size
 $input-height-base:              (2.4 + ($padding-base-vertical * 2));
+$input-height: $input-height-base;
 // Large `.form-control` height
 $input-height-large:             ((ceil($font-size-large * $line-height-large * 10) + ($padding-large-vertical * 20) + 4) / 10);
+$input-height-lg: $input-height-large;
 // Small `.form-control` height
 $input-height-small:             ((floor($font-size-small * $line-height-small * 10) + ($padding-small-vertical * 20) + 4) / 10);
+$input-height-sm: $input-height-small;
 
 // `.form-group` margin
 $form-group-margin-bottom: $font-size-base;
