@@ -472,7 +472,7 @@ const Collapse = (($) => {
 	  event.stopPropagation()
       return false ;
 	}
- )
+ ) 
   
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     event.preventDefault()
@@ -482,8 +482,9 @@ const Collapse = (($) => {
 
     Collapse._jQueryInterface.call($(target), config)
   })
-
-
+  $(function () {
+	$(".o-accordion .panel-heading h4 a ").prepend('<div class=arrow></div>');
+  });
   /**
    * ------------------------------------------------------------------------
    * jQuery

@@ -1,6 +1,32 @@
 //
 //		Accordions
 //
+
+.o-accordion .panel-title {
+		position : relative ;
+	}
+	
+.o-accordion .panel-title .arrow {
+	border-top 	:  10px solid #555 ;
+	border-left 		:  7px solid transparent;
+	border-right 	:  7px solid transparent ;
+	position : absolute ;
+	left 	: 0px ;
+	top		:  2px; ;
+	transition-duration : 0.5s ;
+	transition-timing-function : ease ;
+}
+
+.panel-chevron-closed  .arrow {
+	 transform: rotate(-90deg);
+}
+
+
+
+.o-accordion-orange-style .panel-title .arrow {
+	border-top 	:  10px solid #f16e00 ;
+}
+	
 .o-accordion .panel {
 	border: 0;
 }
@@ -18,14 +44,12 @@
 		font-size: 1.6rem;
 
 		&.panel-chevron-open {
-			background-image: url('../img/triangle_down.png');
 			background-position: 0 50%;
 			background-repeat: no-repeat;
 			padding-left: 19px;
 		}
 
 		&.panel-chevron-closed {
-			background-image: url('../img/triangle_right.png');
 			background-position: 0 50%;
 			background-repeat: no-repeat;
 			padding-left: 19px;
@@ -36,11 +60,9 @@
 .o-accordion.o-accordion-orange-style  .panel-default > .panel-heading {
 	.panel-title {
 		&.panel-chevron-open {
-			background-image: url('../img/triangle_down_orange.png');
 		}
 
 		&.panel-chevron-closed {
-			background-image: url('../img/triangle_right_orange.png');
 		}
 	}
 }
