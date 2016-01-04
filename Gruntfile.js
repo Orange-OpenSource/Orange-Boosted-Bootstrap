@@ -445,6 +445,10 @@ module.exports = function (grunt) {
             {
               from: 'src="dist',
               to: 'src="../dist',
+            },
+            {
+              from: 'src="/examples',
+              to: 'src="../examples',
             }]
         },
         paths3: {

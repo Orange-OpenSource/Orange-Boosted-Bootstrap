@@ -15,6 +15,14 @@ title: Examples
     <h4>News template</h4>
     <p>Main mega menu.</p>
   </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-brand-2015/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/brand_2015.jpg" alt="">
+    </a>
+    <h4>News Orange Brand</h4>
+    <p>A single news page, Orange branded 2015.</p>
+  </div>
 </div>
 
 

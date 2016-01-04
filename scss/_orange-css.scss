@@ -572,6 +572,18 @@ caption {
   border-width: 2px;
 }
 
+//
+// Cards
+//
+
+.card {
+    border-color: $brand-orange-black;
+
+    .card-block {
+        background-color: $brand-orange-black;
+        color: white;
+    }
+}
 
 // bits from bootstrap-orange2015.less
 
