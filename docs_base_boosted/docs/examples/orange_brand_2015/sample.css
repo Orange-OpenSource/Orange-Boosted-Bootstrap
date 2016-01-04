@@ -1,7 +1,7 @@
 .hero-container {
     position: relative;
 }
-.hero-container .caption {            
+.hero-container .caption {
     bottom: 0;
     display: block;
     left: 0;
@@ -19,7 +19,7 @@
 .discovery-module-one-pop-out {
     margin: 2rem;
     position: relative;
-}        
+}
 
 .discovery-module-one-pop-out .discovery-header-button,
   .discovery-module-carousel-pop-out .discovery-header-button,
@@ -27,11 +27,11 @@
     margin-top: 2rem;
 }
 
-.discovery-module-one-pop-out .discovery-caption, .discovery-module-carousel-pop-out .discovery-caption {        
+.discovery-module-one-pop-out .discovery-caption, .discovery-module-carousel-pop-out .discovery-caption {
     margin-top: 5rem;
 }
 .popular-services {
-    margin: 2rem;   
+    margin: 2rem;
 }
 .popular-services-links{
     color: #F16E00;
@@ -39,7 +39,7 @@
     font-weight: bold;
 }
 .discovery-module-carousel-pop-out .carousel-inner .item{
-    padding: 0 3rem 2rem 3rem;   
+    padding: 0 3rem 2rem 3rem;
 }
 .black-background {
     background-color: #000;
@@ -55,9 +55,9 @@
     margin-top: 3rem;
 }
 
-.navbar-nav > li > a[class^="icon-orange"], .navbar-nav > li > a[class*=" icon-orange-"] {
-    font-size: 3rem;       
-    line-height: 1;   
+.navbar-nav > li > a[class^="icon-"], .navbar-nav > li > a[class*=" icon-"] {
+    font-size: 3rem;
+    line-height: 1;
 }
 
 .navbar-inverse #id_for_cdu_link a{
@@ -67,7 +67,7 @@
     color: #F16E00;
 }
 
-@media (max-width: 991px) { 
+@media (max-width: 991px) {
     .hero-container .caption {
         padding: 3%;
         margin: 6%;
