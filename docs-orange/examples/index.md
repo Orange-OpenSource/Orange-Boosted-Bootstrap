@@ -23,6 +23,14 @@ title: Examples
     <h4>News Orange Brand</h4>
     <p>A single news page, Orange branded 2015.</p>
   </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-admin/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
+    </a>
+    <h4>Administration mainpage</h4>
+    <p>Administration for Orange applications example.</p>
+  </div>
 </div>
 
 

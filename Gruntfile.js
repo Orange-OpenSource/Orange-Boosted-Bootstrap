@@ -447,6 +447,18 @@ module.exports = function (grunt) {
               to: 'src="../dist',
             },
             {
+              from: 'src="/dist',
+              to: 'src="../dist',
+            },
+            {
+              from: 'src="/assets',
+              to: 'src="../assets',
+            },
+            {
+              from: 'src="/../assets',
+              to: 'src="../assets',
+            },
+            {
               from: 'src="/examples',
               to: 'src="../examples',
             }]
