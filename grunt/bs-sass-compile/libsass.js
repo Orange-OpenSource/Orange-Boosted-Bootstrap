@@ -25,9 +25,9 @@ module.exports = function configureLibsass(grunt) {
       },
       docs: {
         files: {
-          'docs/assets/css/docs.min.css': 'docs/assets/scss/docs.scss',
           /* boosted mod */
-          'docs-orange/assets/css/docs-orange.min.css': 'docs-orange/assets/scss/docs-orange.scss'
+          //'docs/assets/css/docs.min.css': 'docs/assets/scss/docs.scss',
+          '.tmpdocs/assets/css/docs.min.css': '.tmpdocs/assets/scss/docs.scss'
           /* end mod */
         }
       }

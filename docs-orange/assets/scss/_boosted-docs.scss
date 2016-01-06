@@ -1,0 +1,189 @@
+.bd-masthead {
+  background-color: $brand-orange-black;
+  color: $brand-orange-white;
+  border: 2px solid $gray-dark;
+  padding-top: 4rem;
+
+  .lead {
+    font-size: 2.1rem;
+
+    a {
+        color: $brand-orange-white;
+        text-decoration: underline;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $brand-orange;
+            text-decoration: none;
+        }
+    }
+
+    .btn {
+        font-size: $font-size-base;
+        color: $brand-orange;
+        text-decoration: none;
+
+        &.btn-lg {
+            font-size: $font-size-lg;
+            padding: 1.2rem 2rem;
+        }
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $brand-orange-black;
+        }
+    }
+  }
+
+  .bd-boosted-icon {
+      font-family: $font-family-titles;
+      font-size: 5rem;
+      font-weight: 500;
+  }
+}
+
+.bd-pageheader {
+  background-color: $brand-orange-black;
+  color: $brand-orange-white;
+  border-top: 2px solid $gray-dark;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @include media-breakpoint-up(md) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+.bd-featurette {
+    font-size: $font-size-base;
+}
+
+.bd-search {
+  .form-control {
+    background-color: transparent;
+    height: auto;
+  }
+}
+
+.bd-navbar {
+  font-size: 1.8rem;
+  min-height: 6.8rem;
+  padding: 0;
+
+  @include media-breakpoint-down(sm) {
+    .nav-link {
+      float: none;
+
+      + .nav-link {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $brand-orange-white;
+      margin-top: 2.8rem;
+      padding: 1rem;
+
+      &.active,
+      &:hover,
+      &:focus {
+        background-color: $brand-orange-black;
+        color: $brand-orange;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    font-size: inherit;
+  }
+}
+
+.bd-footer {
+    color: $brand-orange-white;
+    background-color: $brand-orange-black;
+    text-align: center;
+    margin-top: 0;
+    font-size: $font-size-base;
+
+    a {
+        color: $brand-orange-white;
+        text-decoration: underline;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $brand-orange;
+            text-decoration: none;
+        }
+    }
+
+}
+
+//
+// Glyphicons
+//
+// Special styles for displaying the icons and their classes in the docs.
+
+.bs-glyphicons .glyphicon {
+    color: #F16E00;
+}
+.bs-glyphicons {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+.bs-glyphicons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.bs-glyphicons li {
+  float: left;
+  width: 25%;
+  height: 150px;
+  padding: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #fff;
+}
+.bs-glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.bs-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; // Help out IE10+ with class names
+}
+.bs-glyphicons li:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+@media (min-width: 768px) {
+  .bs-glyphicons {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .bs-glyphicons li {
+    width: 12.5%;
+  }
+}

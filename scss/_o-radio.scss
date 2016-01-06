@@ -6,7 +6,7 @@
   position: absolute;
   left: -9999px;
 }
- 
+
 /* on prépare le label */
 .o-radio[type="radio"]:not(:checked) + label,
 .o-radio[type="radio"]:checked + label{
@@ -18,7 +18,7 @@
   display: inline-block;
   font-style: normal;
   font-weight: normal;
-  line-height: $line-height-computed;
+  line-height: $line-height;
   border: 1px dotted transparent;
 }
 
@@ -26,7 +26,7 @@
 .o-radio-right.o-radio[type="radio"]:not(:checked) + label,
 .o-radio-right.o-radio[type="radio"]:checked + label{
     padding-left: 0;
-    padding-right: ($input-height-base * 0.75); /* fait un peu d'espace pour notre case à venir */    
+    padding-right: ($input-height-base * 0.75); /* fait un peu d'espace pour notre case à venir */
 }
 
 /* Aspect des radioes */
@@ -35,8 +35,8 @@
 .o-radio[type="radio"]:checked + label:before{
   content: "";
   position: absolute;
-  left:0; 
-  width: ($input-height-base/2); 
+  left:0;
+  width: ($input-height-base/2);
   height: ($input-height-base/2); /* dim. de la case */
   border: 3px solid $gray-light;
   background-color: #fff;
@@ -50,17 +50,17 @@
       right: 0;
 }
 
- 
+
 /* Aspect général de la coche */
 .o-radio[type="radio"]:not(:checked) + label:after,
 .o-radio[type="radio"]:checked + label:after{
   content: '';
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   font-size: $font-size-base;
   color: $brand-orange-white;
-  width: ($input-height-base/2); 
+  width: ($input-height-base/2);
   height: ($input-height-base/2); /* dim. de la case */
   text-align: center;
   /*transition: all .2s; /* on prévoit une animation */
@@ -91,7 +91,7 @@
 
 /* aspect désactivée */
 .o-radio[type="radio"]:disabled:not(:checked) + label:before,
-.o-radio[type="radio"]:disabled:checked + label:before{  
+.o-radio[type="radio"]:disabled:checked + label:before{
   border-color: $gray-light-plus;
 }
 /* styles de la coche (si cochée/désactivée) */
@@ -103,7 +103,7 @@
 .o-radio[type="radio"]:disabled + label{
   color: $gray-light-plus;
 }
- 
+
 /* aspect au focus de l'élément */
 .o-radio[type="radio"]:checked:focus + label,
 .o-radio[type="radio"]:not(:checked):focus + label{

@@ -1,19 +1,8 @@
 // html font-size forcée à 10px par BT
 html {
-  font-size: $html-font-size-base;
+  font-size: $font-size-root;
   // Orange brand All is bold only plain texts are not bold
   font-weight: $brand-font-weight-normal;
-}
-
-.navbar .nav-item {
-  // Orange brand All is bold
-  font-weight: $brand-font-weight-bold;
-}
-
-// Navbar background
-.navbar-light,
-.navbar-dark {
-  background: $brand-orange-black;
 }
 
 //
@@ -44,11 +33,61 @@ html {
   margin-bottom: 0;
 }
 
-
-// Navbar toggle
 //
-// Custom button for toggling the `.navbar-collapse`, powered by the collapse
-// JavaScript plugin.
+// Navbar
+//
+
+.navbar {
+    padding: 0;
+
+    &.navbar-light,
+    &.navbar-dark {
+        background: $brand-orange-black;
+    }
+
+    .nav-item {
+        font-weight: $brand-font-weight-bold;
+
+        .nav-link {
+            margin-top: 2.8rem;
+            padding: 1rem;
+            padding-bottom: 0;
+        }
+
+        .dropdown-toggle {
+            @include hover-focus {
+                color: $brand-orange;
+            }
+            display: block;
+            margin-top: 2.8rem;
+            padding: 1rem;
+            padding-bottom: 0;
+            color: $brand-orange-white;
+        }
+    }
+
+    .form-inline {
+        margin-top: 1.8rem;
+        margin-left: 1rem;
+    }
+
+    .btn-inverse-outline {
+        @include hover-focus{
+            color: $brand-orange;
+            border-color: $brand-orange;
+        }
+
+        @include active {
+            color: $brand-orange-white;
+            background-color: $brand-orange;
+            border-color: $brand-orange;
+        }
+
+        color: $brand-orange-white;
+        background-color: $brand-orange-black;
+        border-color: $brand-orange-white;
+    }
+}
 
 .navbar-toggler {
   @include navbar-toggle-vertical-align($navbar-toggle-vertical-margin);
@@ -57,7 +96,7 @@ html {
   padding: $nav-link-padding;
   margin-right: $navbar-padding-horizontal;
   background-color: transparent;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
   border: 1px solid transparent;
   border-radius: $border-radius-base;
 
@@ -184,6 +223,22 @@ a:focus {
 .close:focus {
   outline: dotted 1px $brand-orange-black;
 }
+
+//
+// Progress bar
+//
+
+.progress.progress-default{
+    &[value]::-webkit-progress-value {
+        background-color: $brand-orange;
+    }
+
+    &[value]::-moz-progress-bar {
+    background-color: $brand-orange;
+  }
+}
+
+
 
 //
 // Carousel
@@ -506,6 +561,29 @@ caption {
   }
 }
 
+.form-group {
+    .control-label {
+        font-weight: $brand-font-weight-bold;
+    }
+}
+
+.form-control {
+  height: $input-height;
+  border-width: 2px;
+}
+
+//
+// Cards
+//
+
+.card {
+    border-color: $brand-orange-black;
+
+    .card-block {
+        background-color: $brand-orange-black;
+        color: white;
+    }
+}
 
 // bits from bootstrap-orange2015.less
 
@@ -566,11 +644,15 @@ a.btn {
       }
     }
   }
+
+  .control-label {
+    text-align: left;
+  }
 }
 
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
   ~ .form-control-feedback {
-    top: ($line-height-computed + .5); // Height of the `label` and its margin
+    top: ($line-height + .5); // Height of the `label` and its margin
   }
 }

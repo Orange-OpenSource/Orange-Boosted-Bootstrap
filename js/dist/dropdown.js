@@ -6,7 +6,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0): dropdown.js
+ * Bootstrap (v4.0.0-alpha.2): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ var Dropdown = (function ($) {
    */
 
   var NAME = 'dropdown';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.0-alpha.2';
   var DATA_KEY = 'bs.dropdown';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -67,11 +67,7 @@ var Dropdown = (function ($) {
       this._addEventListeners();
     }
 
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
+    // set default acessibility Attributes
 
     // getters
 
@@ -112,11 +108,14 @@ var Dropdown = (function ($) {
           return false;
         }
 
-        this.focus();
+        //this.focus()
         this.setAttribute('aria-expanded', 'true');
+
+        // patch to select  by default first item
 
         $(parent).toggleClass(ClassName.OPEN);
         $(parent).trigger($.Event(Event.SHOWN, relatedTarget));
+        $(this).parent().find('.dropdown-menu a').first().focus();
 
         return false;
       }
@@ -208,6 +207,7 @@ var Dropdown = (function ($) {
     }, {
       key: '_dataApiKeydownHandler',
       value: function _dataApiKeydownHandler(event) {
+        console.log('_dataApiKeydownHandler');
         if (!/(38|40|27|32)/.test(event.which) || /input|textarea/i.test(event.target.tagName)) {
           return;
         }
@@ -270,6 +270,16 @@ var Dropdown = (function ($) {
 
     return Dropdown;
   })();
+
+  $(document).ready(function () {
+    $('.dropdown-menu').attr('role', 'menu');
+    $('.dropdown-menu a.dropdown-item').attr('role', 'menuitem');
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
 
   $(document).on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.ROLE_MENU, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.ROLE_LISTBOX, Dropdown._dataApiKeydownHandler).on(Event.CLICK_DATA_API, Dropdown._clearMenus).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, Dropdown.prototype.toggle).on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function (e) {
     e.stopPropagation();

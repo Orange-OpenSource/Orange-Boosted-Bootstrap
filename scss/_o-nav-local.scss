@@ -4,7 +4,7 @@
 
 // mixin for arrows
 @mixin arrow-generic($arrow-outer-width, $arrow-width) {
-    > li.active > .arrow {
+    >.nav-item > .nav-link.active > .arrow {
         &,
         &::after {
         position: absolute;
@@ -16,11 +16,11 @@
         }
     }
 
-    > li.active > .arrow {
+    >.nav-item > .nav-link.active > .arrow {
       border-width: $arrow-outer-width;
     }
 
-    > li.active > .arrow::after {
+    >.nav-item > .nav-link.active > .arrow::after {
       content: '';
       border-width: $arrow-width;
     }
@@ -28,7 +28,7 @@
 
 @mixin arrow-bottom($arrow-outer-width, $arrow-outer-height, $arrow-width, $arrow-outer-color, $arrow-color, $focus-color) {
     @include arrow-generic($arrow-outer-width, $arrow-width);
-    > li.active > .arrow {
+    >.nav-item > .nav-link.active > .arrow {
         bottom: $arrow-outer-height;
         left: 50%;
         margin-left: -$arrow-outer-width;
@@ -44,7 +44,7 @@
         }
     }
 
-    > li.active a:focus {
+    >.nav-item > .nav-link.active a:focus {
         border-color: $focus-color;
 
         +.arrow {
@@ -60,7 +60,7 @@
 @mixin arrow-top($arrow-outer-width, $arrow-outer-height, $arrow-width, $arrow-outer-color, $arrow-color, $focus-color) {
     @include arrow-generic($arrow-outer-width, $arrow-width);
 
-    > li.active > .arrow {
+    >.nav-item > .nav-link.active > .arrow {
         bottom: $arrow-outer-height;
         left: 50%;
         margin-left: -$arrow-outer-width;
@@ -76,7 +76,7 @@
         }
     }
 
-    > li.active a:focus {
+    >.nav-item > .nav-link.active a:focus {
         border-color: $focus-color;
 
         +.arrow {
@@ -115,18 +115,18 @@
                     padding: 1rem 0;
                     margin-top: 0;
                     color: $brand-orange-black;
-                }
 
-                &.active > a,
-                > a:hover,
-                > a:focus {
-                    color: $brand-orange;
-                    background-color: transparent;
-                }
+                    &.active,
+                    &:hover,
+                    &:focus {
+                        color: $brand-orange;
+                        background-color: transparent;
+                    }
 
-                > a:hover,
-                > a:focus {
-                    text-decoration: underline;
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                    }
                 }
 
                 .dropdown-menu {

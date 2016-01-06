@@ -47,8 +47,8 @@ module.exports = function (grunt) {
       'Edge >= 12',
       'Explorer >= 9',
       // Out of leniency, we prefix these 1 version further back than the official policy.
-      'iOS >= 7',
-      'Safari >= 7.1',
+      'iOS >= 8',
+      'Safari >= 8',
       // The following remain NOT officially supported, but we're lenient and include their prefixes to avoid severely breaking in them.
       'Android 2.3',
       'Android >= 4',
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
 
   Object.keys(configBridge.paths).forEach(function (key) {
     configBridge.paths[key].forEach(function (val, i, arr) {
-      arr[i] = path.join('./docs/assets', val);
+      arr[i] = path.join('./.tmpdocs/assets', val);
     });
   });
 
@@ -88,7 +88,8 @@ module.exports = function (grunt) {
     // Task configuration.
     clean: {
       dist: 'dist',
-      docs: 'docs/dist'
+      docs: 'docs/dist',
+      tmp: '.tmpdocs'
     },
 
     // JS build configuration
@@ -175,7 +176,7 @@ module.exports = function (grunt) {
         options: {
           requireCamelCaseOrUpperCaseIdentifiers: null
         },
-        src: ['docs/assets/js/src/*.js', 'docs/assets/js/*.js', '!docs/assets/js/*.min.js']
+        src: ['.tmpdocs/assets/js/src/*.js', '.tmpdocs/assets/js/*.js', '!.tmpdocs/assets/js/*.min.js']
       }
     },
 
@@ -219,10 +220,6 @@ module.exports = function (grunt) {
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
-      docsOrangeCss: {
-        src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css'],
-        dest: 'docs/assets/css/docs.min.css'
-      }
       /* end mod */
     },
 
@@ -240,7 +237,7 @@ module.exports = function (grunt) {
       },
       docsJs: {
         src: configBridge.paths.docsJs,
-        dest: 'docs/assets/js/docs.min.js'
+        dest: '.tmpdocs/assets/js/docs.min.js'
       }
     },
 
@@ -278,9 +275,7 @@ module.exports = function (grunt) {
             autoprefixer
           ]
         },
-        /* boosted mod */
-        src: ['docs/assets/css/docs.min.css', 'docs-orange/assets/css/docs-orange.min.css']
-        /* end mod */
+        src: ['docs/assets/css/docs.min.css']
       },
       examples: {
         options: {
@@ -302,7 +297,7 @@ module.exports = function (grunt) {
         compatibility: 'ie9',
         keepSpecialComments: '*',
         sourceMap: true,
-        noAdvanced: true
+        advanced: false
       },
       core: {
         files: [
@@ -316,8 +311,8 @@ module.exports = function (grunt) {
         ]
       },
       docs: {
-        src: 'docs/assets/css/docs.min.css',
-        dest: 'docs/assets/css/docs.min.css'
+        src: '.tmpdocs/assets/css/docs.min.css',
+        dest: '.tmpdocs/assets/css/docs.min.css'
       }
     },
 
@@ -333,17 +328,13 @@ module.exports = function (grunt) {
       },
       examples: {
         expand: true,
-        cwd: 'docs/examples/',
+        cwd: '.tmpdocs/examples/',
         src: '**/*.css',
-        dest: 'docs/examples/'
+        dest: '.tmpdocs/examples/'
       },
       docs: {
-        src: 'docs/assets/css/src/docs.css',
-        dest: 'docs/assets/css/src/docs.css'
-      },
-      docsOrange: {
-        src: 'docs-orange/assets/css/src/docs-orange.css',
-        dest: 'docs-orange/assets/css/src/docs-orange.css'
+        src: '.tmpdocs/assets/css/src/docs.css',
+        dest: '.tmpdocs/assets/css/src/docs.css'
       }
     },
 
@@ -354,22 +345,34 @@ module.exports = function (grunt) {
         src: [
           '**/*'
         ],
-        dest: 'docs/dist/'
+        dest: '.tmpdocs/dist/'
       },
       /* boosted mod */
-      docsOrange: {
-        expand: true,
-        cwd: 'docs-orange',
-        src: ['**/*', '!assets/**/*'],
-        dest: 'docs'
+      tmpdocs: {
+        files: [
+          {
+            cwd: 'docs',
+            expand: true,
+            src: ['{,**/}*'],
+            dest: '.tmpdocs'
+          },
+          {
+            cwd: 'docs-orange',
+            expand: true,
+            src: ['{,**/}*'],
+            dest: '.tmpdocs'
+          }
+        ]
       },
+      /*
       docsOrangeJs: {
         expand: true,
         flatten: true,
         cwd: 'docs-orange',
         src: ['assets/js/application.js'],
-        dest: 'docs/assets/js/src'
+        dest: '.tmpdocs/assets/js/src'
       },
+      */
       fonts: {
         expand: true,
         cwd: 'fonts/',
@@ -442,6 +445,22 @@ module.exports = function (grunt) {
             {
               from: 'src="dist',
               to: 'src="../dist',
+            },
+            {
+              from: 'src="/dist',
+              to: 'src="../dist',
+            },
+            {
+              from: 'src="/assets',
+              to: 'src="../assets',
+            },
+            {
+              from: 'src="/../assets',
+              to: 'src="../assets',
+            },
+            {
+              from: 'src="/examples',
+              to: 'src="../examples',
             }]
         },
         paths3: {
@@ -457,7 +476,7 @@ module.exports = function (grunt) {
             }]
         },
         docsOrangeJs: {
-          src: ['docs/assets/js/src/application.js'],
+          src: ['.tmpdocs/assets/js/src/application.js'],
           overwrite: true,
           replacements: [{
                 from: '.bd-example [href=#]',
@@ -500,17 +519,6 @@ module.exports = function (grunt) {
       }
     },
 
-    sed: {
-      versionNumber: {
-        pattern: (function () {
-          var old = grunt.option('oldver');
-          return old ? RegExp.quote(old) : old;
-        })(),
-        replacement: grunt.option('newver'),
-        recursive: true
-      }
-    },
-
     'saucelabs-qunit': {
       all: {
         options: {
@@ -543,7 +551,27 @@ module.exports = function (grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+
+    compress: {
+      main: {
+        options: {
+          archive: 'bootstrap-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: 'bootstrap-<%= pkg.version %>-dist'
+          }
+        ]
+      }
     }
+
   });
 
 
@@ -602,7 +630,7 @@ module.exports = function (grunt) {
     require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
   })(process.env.TWBS_SASS || 'libsass');
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
-  grunt.registerTask('sass-compile', ['sass:core', 'sass:docs']);
+  grunt.registerTask('sass-compile', ['sass:core', 'copy:tmpdocs', 'sass:docs']);
 
   grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'csscomb:dist', 'cssmin:core', 'cssmin:docs']);
 
@@ -611,11 +639,6 @@ module.exports = function (grunt) {
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
-
-  // Version numbering task.
-  // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
-  // This can be overzealous, so its changes should always be manually reviewed!
-  grunt.registerTask('change-version-number', 'sed');
 
   grunt.registerTask('commonjs', ['babel:umd', 'npm-js']);
 
@@ -629,15 +652,16 @@ module.exports = function (grunt) {
 
   // Docs task.
   /* boosted mod */
-  grunt.registerTask('docs-css', ['postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'csscomb:docsOrange', 'concat:docsOrangeCss', 'cssmin:docs']);
+  grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
   grunt.registerTask('docs-js', ['replace:docsOrangeJs', 'uglify:docsJs']);
    /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
   grunt.registerTask('replace-paths', ['replace:paths1', 'replace:paths2', 'replace:paths3']);
-  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'copy:docsOrange', 'jekyll:docs', 'replace-paths']);
+  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace-paths']);
   /* end mod */
-  grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
+  grunt.registerTask('docs-github', ['jekyll:github']);
+  grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
 
   // Publish to GitHub
   grunt.registerTask('publish', ['buildcontrol:pages']);

@@ -5,11 +5,13 @@
 
 .o-nav-tabs {
   @include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
+  @include arrow-bottom($o-nav-tabs-arrow-outer-width, -$o-nav-tabs-arrow-outer-height, $o-nav-tabs-arrow-width, $o-nav-tabs-arrow-outer-color, $o-nav-tabs-arrow-color, $o-nav-tabs-arrow-color);
+
   position: relative;
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: normal;
-  line-height: $line-height-base;
+  line-height: $line-height;
   text-align: left;
   background-color: $o-nav-tabs-bg;
   color: $o-nav-tabs-color;
