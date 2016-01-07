@@ -9,14 +9,6 @@ title: Examples
 
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/orange-news/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_news.jpg" alt="">
-    </a>
-    <h4>News template</h4>
-    <p>Main mega menu.</p>
-  </div>
-
-  <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-brand-2015/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/brand_2015.jpg" alt="">
     </a>
@@ -25,11 +17,43 @@ title: Examples
   </div>
 
   <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-news/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_news.jpg" alt="">
+    </a>
+    <h4>News template</h4>
+    <p>Main mega menu.</p>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-dashboard/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_dashboard.jpg" alt="">
+    </a>
+    <h4>Dashboard Orange branded</h4>
+    <p>A simple Orange branded dashboard application.</p>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-admin/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
     </a>
     <h4>Administration mainpage</h4>
     <p>Administration for Orange applications example.</p>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-admin/edit.html">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
+    </a>
+    <h4>Administration edition page</h4>
+    <p>Administration news edition for Orange applications example.</p>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-form/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_form.jpg" alt="">
+    </a>
+    <h4>Form</h4>
+    <p>Complex form page with validation.</p>
   </div>
 </div>
 

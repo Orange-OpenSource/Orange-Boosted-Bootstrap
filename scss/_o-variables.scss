@@ -548,11 +548,11 @@ $nav-local-arrow-outer-color:           $nav-local-border-color;
 
 // Step process bar
 $o-wizard-step-bar-arrow-color: $brand-orange-white;
-$o-wizard-step-bar-arrow-width: ($line-height + $padding-base-vertical);
+$o-wizard-step-bar-arrow-width: ($line-height-computed + $padding-base-vertical);
 //$o-wizard-step-bar-arrow-width: 25px;
 $o-wizard-step-bar-border-color: $gray-light;
 
-$o-wizard-step-bar-arrow-width-small: (($line-height / 2) + $padding-base-vertical);
+$o-wizard-step-bar-arrow-width-small: (($line-height-computed / 2) + $padding-base-vertical);
 
 $o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + 0.1);
 
@@ -1032,7 +1032,7 @@ $hr-border:                   $gray-lighter;
 {
   // Color the label and help text
   .help-block,
-  .control-label,
+  .form-control-label,
   .radio,
   .checkbox,
   .radio-inline,
