@@ -464,7 +464,9 @@ var Collapse = (function ($) {
 
     Collapse._jQueryInterface.call($(target), config);
   });
-
+  $(function () {
+    $(".o-accordion .panel-heading h4 a ").prepend('<div class=arrow></div>');
+  });
   /**
    * ------------------------------------------------------------------------
    * jQuery
