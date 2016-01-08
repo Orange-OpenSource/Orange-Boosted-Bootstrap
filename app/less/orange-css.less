@@ -1,12 +1,12 @@
 // html font-size forcée Ã  10px par BT
-html{ 
-    font-size: @html-font-size-base; 
+html{
+    font-size: @html-font-size-base;
     /*Orange brand All is bold only plain texts are not bold*/
     font-weight:@brand-font-weight-normal;
 }
 .navbar *{
     /*Orange brand All is bold*/
-    font-weight:@brand-font-weight-bold;   
+    font-weight:@brand-font-weight-bold;
 }
 
 //
@@ -28,7 +28,7 @@ html{
 // Labels
 // --------------------------------------------------
 
-.label {    
+.label {
   border-radius: @border-radius-base;
 }
 .table label.o-checkbox,
@@ -85,13 +85,13 @@ html{
 
 .navbar-toggle-complement{
     position: relative;
-    float: right;   
+    float: right;
 }
 .navbar-toggle-complement .navbar-nav {
     margin: @padding-base-vertical 0 0 0;
 }
 .navbar-toggle-complement li{
-    float: left;   
+    float: left;
 }
 
 @media (min-width: @screen-sm) {
@@ -104,18 +104,18 @@ html{
 //
 // Builds on top of the `.nav` components with its own modifier class to make
 // the nav the full height of the horizontal nav (above 768px).
-.navbar-nav {  
+.navbar-nav {
   // Uncollapse the nav
-  @media (min-width: @grid-float-breakpoint) {    
+  @media (min-width: @grid-float-breakpoint) {
     > li {
-      > a {        
+      > a {
         .navbar-vertical-align(((@navbar-padding-vertical)+@line-height-computed));
       }
     }
   }
-    
+
   > li {
-    > a {        
+    > a {
         font-size: @navbar-font-size;
     }
   }
@@ -149,7 +149,7 @@ a:focus {
 // --------------------------------------------------
 // .carousel-inner > .item {
 //   position: absolute;
-//   top: -999999em; 
+//   top: -999999em;
 //   display: block;
 //   -webkit-transition: 0.6s ease-in-out left;
 //           transition: 0.6s ease-in-out left;
@@ -179,7 +179,7 @@ a:focus {
 
 .carousel{
   margin-bottom: 3rem;
-  
+
   .carousel-control{
     top: auto;
     bottom: calc(50% - 3rem);
@@ -190,7 +190,7 @@ a:focus {
     opacity: .8;
     text-shadow: none;
     transition: width 0.5s ease;
-    
+
     &.left,
     &.right{
       background-image: none;
@@ -200,7 +200,7 @@ a:focus {
         width: 12rem;
       }
     }
-    
+
     .glyphicon{
       color: @brand-orange;
       position: relative;
@@ -214,9 +214,9 @@ a:focus {
     .glyphicon-chevron-right{
         right: auto;
     }
-    
+
   }
-  
+
   & .carousel-control,
   & .carousel-control{
     display: block;
@@ -225,18 +225,18 @@ a:focus {
 
 .carousel-indicators{
     bottom: -3rem;
-    
+
     &:hover{
       cursor: default;
     }
-    
+
     li{
       border-radius: 0;
       background-color: @gray-light-plus;
       border: none;
       width: 1.6rem;
       height: .4rem;
-      margin: 0 .4rem 0 .4rem; 
+      margin: 0 .4rem 0 .4rem;
       &:hover{
           background-color: @brand-orange;
           cursor: pointer;
@@ -245,7 +245,7 @@ a:focus {
           background-color: @brand-orange;
           width: 1.6rem;
           height: .4rem;
-          margin: 0 .4rem 0 .4rem; 
+          margin: 0 .4rem 0 .4rem;
       }
    }
 }
@@ -279,7 +279,7 @@ a:focus {
 }
 
 // Force the color for Heading into thumbnails
-.thumbnail {  
+.thumbnail {
   // Image captions
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: @thumbnail-caption-color;
@@ -300,7 +300,7 @@ a:focus {
 }
 
 .hero-container .frame {
-    left: 0;           
+    left: 0;
     margin: (@grid-gutter-width+1rem);
     max-width: 15%;
     position: absolute;
@@ -308,43 +308,41 @@ a:focus {
 }
 
 .hero-container .caption {
-    margin: 5rem (@grid-gutter-width+1rem); 
+    margin: 5rem (@grid-gutter-width+1rem);
 }
 
 .hero-container .category {
     color: @brand-orange;
     font-size: 2rem
-}                  
+}
 
 /* Orange - July 2015 */
 
 /* Recommended @font-face snippet for web fonts */
 
 @font-face{
-	font-family:"HelvNeue75"; 
+	font-family:"HelvNeue75";
   font-style: normal;
   font-weight: 700;
-	src:url("@{icon-font-path}HelvNeue75_W1G.eot?#iefix");
-	src:url("@{icon-font-path}HelvNeue75_W1G.eot?#iefix") format("opentype"),
+	src:url("@{icon-font-path}HelvNeue75_W1G.eot?#iefix") format('eot')
 	url("@{icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
 	url("@{icon-font-path}HelvNeue75_W1G.woff") format("woff"),
 	url("@{icon-font-path}HelvNeue75_W1G.ttf") format("truetype"),
 	url("@{icon-font-path}HelvNeue75_W1G.svg") format("svg");
 }
 @font-face{
-	font-family:"HelvNeue55";  
+	font-family:"HelvNeue55";
   font-style: normal;
   font-weight: 400;
-	src:url("@{icon-font-path}HelvNeue55_W1G.eot?#iefix");
-	src:url("@{icon-font-path}HelvNeue55_W1G.eot?#iefix") format("opentype"),
-	url("@{icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
+	src:url("@{icon-font-path}HelvNeue55_W1G.eot?#iefix") format('eot')
+	url("@{icon-font-path}HelvNeue55_W1G.woff2") format("woff2")
 	url("@{icon-font-path}HelvNeue55_W1G.woff") format("woff"),
 	url("@{icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
 	url("@{icon-font-path}HelvNeue55_W1G.svg") format("svg");
 }
 
 // == TABLES
-.table {  
+.table {
   // Cells
   > thead,
   > tbody,
@@ -355,17 +353,17 @@ a:focus {
         // Remove border top and put border-botom
         border-top: 0;
         border-bottom: 1px solid @table-border-color;
-      }      
+      }
       > th {
           font-size: @font-size-h5;
       }
     }
   }
-    
+
   > thead th {
       border-bottom: 2px;
   }
-    
+
 }
 .table-row-variant-border(success; @state-success-border);
 .table-row-variant-border(info; @state-info-border);
@@ -435,8 +433,8 @@ caption{
   &:active,
   &.active{
     color: @active-color;
-    background-color: @active-bg-color;   
-    border-color: @active-bg-color;   
+    background-color: @active-bg-color;
+    border-color: @active-bg-color;
   }
   &:active,
   &.active,
@@ -462,13 +460,13 @@ caption{
     background-color: @color;
   }
 }
-.btn { 
+.btn {
   &.disabled,
   &[disabled],
-  fieldset[disabled] & {    
+  fieldset[disabled] & {
     .opacity(.2);
   }
-  
+
   border-width: 2px;
 }
 .form-control {
