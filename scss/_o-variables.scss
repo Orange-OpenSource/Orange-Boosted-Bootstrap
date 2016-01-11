@@ -69,9 +69,9 @@ $font-size-root: 62.5%;
 $font-size-base: 1.4rem;
 
 // For REM size
-$font-size-lg: (ceil(($font-size-base * 1.4) * 10) / 10); // 2rem
+$font-size-lg: 1.6rem;
 $font-size-large:$font-size-lg;
-$font-size-sm: (ceil(($font-size-base * 0.85) * 10) / 10); // 1.2rem
+$font-size-sm: 1.4rem;
 $font-size-small: $font-size-sm;
 $font-size-h1: (floor(($font-size-base * 3.6) * 10) / 10); // 5rem
 $font-size-h2: (floor(($font-size-base * 2.85) * 10) / 10); // 4rem
@@ -122,9 +122,9 @@ $padding-xs-vertical: 0.1rem;//1px;
 // Fix by the brand, minimum space = 10px
 $padding-xs-horizontal: 1rem;//10px;
 
-$line-height-lg:  1.2; // 24/20
+$line-height-lg:  (20/16);
 $line-height-large: $line-height-lg;
-$line-height-sm:  1.5; // 18/12
+$line-height-sm:  (20/14);
 $line-height-small: $line-height-sm;
 
 $enable-rounded: false;
@@ -262,6 +262,15 @@ $input-height-lg: $input-height-large;
 $input-height-small:             ((floor($font-size-small * $line-height-small * 10) + ($padding-small-vertical * 20) + 4) / 10);
 $input-height-sm: $input-height-small;
 
+$input-padding-x: 2rem;
+$input-padding-y: 0.8rem;   //40px height
+
+$input-padding-x-sm: 1rem;
+$input-padding-y-sm: 0.3rem;    //30px height
+
+$input-padding-x-lg: 2rem;
+$input-padding-y-lg: 1.3rem;    //50px height
+
 // `.form-group` margin
 $form-group-margin-bottom: $font-size-base;
 
@@ -275,7 +284,6 @@ $input-group-addon-border-color: $brand-orange-black;
 
 // Disabled cursor for form controls and buttons.
 $cursor-disabled:                not-allowed;
-
 
 // Dropdowns
 //
