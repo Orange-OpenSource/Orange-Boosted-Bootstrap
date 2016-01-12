@@ -1,0 +1,191 @@
+<!-- Forms
+================================================== -->
+<h2 id="forms" class="">Forms</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <form class="form-horizontal">
+            <fieldset>
+                <legend>Legend</legend>
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-lg-3 form-control-label">Email</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-lg-3 form-control-label">Password</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+                        <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Checkbox default
+                        </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="o-checkbox" id="idChk1">
+                            <label for="idChk1">Orange checkbox unchecked</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="o-checkbox" id="idChk2" disabled="disabled">
+                            <label for="idChk2">Orange checkbox unchecked disabled</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="o-checkbox" id="idChk3" checked>
+                            <label for="idChk3">Orange checkbox checked </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="o-checkbox" id="idChk4"  disabled="disabled" checked>
+                            <label for="idChk4">Orange checkbox checked disabled</label>
+                        </div>
+                        <div>
+                            <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5">
+                            <label for="idChk5">Orange checkbox with label before</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="textArea" class="col-lg-3 form-control-label">Textarea</label>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 form-control-label">Radios</label>
+                    <div class="col-lg-9">
+                        <div class="radio">
+                        <label>
+                            <input name="optionsRadios" id="optionsRadios1" value="option1" checked="checked" type="radio">
+                            Option one is this
+                        </label>
+                        </div>
+                        <div class="radio">
+                        <label>
+                            <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+                            Option two can be something else
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 form-control-label">Orange Radios</label>
+                    <div class="col-lg-9">
+                        <div>
+                            <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">
+                        <label for="optionsRadiosOrange1">
+                            Orange radio checked
+                        </label>
+                        </div>
+                        <div>
+                            <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">
+                        <label for="optionsRadiosOrange2">
+                            Orange radio unchecked
+                        </label>
+                        </div>
+                        <div>
+                            <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">
+                        <label for="optionsRadiosOrange5">
+                            Orange radio align right
+                        </label>
+                        </div>
+                        <div>
+                            <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>
+                        <label for="optionsRadiosOrange3">
+                            Orange radio checked disabled
+                        </label>
+                        </div>
+                        <div>
+                            <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>
+                        <label for="optionsRadiosOrange4">
+                            Orange radio unchecked disabled
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="select" class="col-lg-3 form-control-label">Selects</label>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="select">
+                        <option selected="selected">1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                        <br>
+                        <select multiple="multiple" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-9 col-lg-offset-3">
+                        <button class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-4 col-lg-offset-1">
+
+        <form class="">
+        <div class="form-group">
+            <label class="form-control-label" for="focusedInput">Focused input</label>
+            <input class="form-control" id="focusedInput" value="This is focused..." type="text">
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" for="disabledInput">Disabled input</label>
+            <input class="form-control" id="disabledInput" placeholder="Disabled input here..." disabled="disabled" type="text">
+        </div>
+
+        <div class="form-group has-warning">
+            <label class="form-control-label" for="inputWarning">Input warning</label>
+            <input class="form-control" id="inputWarning" type="text">
+        </div>
+
+        <div class="form-group has-error">
+            <label class="form-control-label" for="inputError">Input error</label>
+            <input class="form-control" id="inputError" type="text">
+        </div>
+
+        <div class="form-group has-success">
+            <label class="form-control-label" for="inputSuccess">Input success</label>
+            <input class="form-control" id="inputSuccess" type="text">
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" for="inputLarge">Large input</label>
+            <input class="form-control input-lg" id="inputLarge" type="text">
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" for="inputDefault">Default input</label>
+            <input class="form-control" id="inputDefault" type="text">
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" for="inputSmall">Small input</label>
+            <input class="form-control input-sm" id="inputSmall" type="text">
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label">Input addons</label>
+            <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="text">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Button</button>
+            </span>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

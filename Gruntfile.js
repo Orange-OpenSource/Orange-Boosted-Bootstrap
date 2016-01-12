@@ -220,6 +220,13 @@ module.exports = function (grunt) {
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
+      docsJs: {
+          src: [
+              '.tmpdocs/assets/js/src/application.js',
+              '.tmpdocs/assets/js/src/application-orange.js'
+          ],
+          dest: '.tmpdocs/assets/js/src/application.js'
+      }
       /* end mod */
     },
 
@@ -653,7 +660,7 @@ module.exports = function (grunt) {
   // Docs task.
   /* boosted mod */
   grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
-  grunt.registerTask('docs-js', ['replace:docsOrangeJs', 'uglify:docsJs']);
+  grunt.registerTask('docs-js', [/*'replace:docsOrangeJs',*/ 'concat:docsJs', 'uglify:docsJs']);
    /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
