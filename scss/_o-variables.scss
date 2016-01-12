@@ -209,10 +209,10 @@ $btn-padding-x: $padding-base-horizontal;
 $btn-padding-y: $padding-base-vertical;
 
 $btn-padding-x-sm: $padding-small-horizontal;
-$btn-padding-y-sm: $padding-small-vertical;
+$btn-padding-y-sm: 0.3rem;
 
 $btn-padding-x-lg:  $padding-large-horizontal;
-$btn-padding-y-lg:  $padding-large-vertical;
+$btn-padding-y-lg:  1.3rem;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:         $border-radius;
