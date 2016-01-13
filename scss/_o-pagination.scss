@@ -1,16 +1,19 @@
 //
-// Pagination (multiple pages)
-// --------------------------------------------------
+// Orange pagination
+//
+.o-pagination .page-link {
+    border: none;
+}
+
 .o-pagination {
   display: inline-block;
   padding-left: 0;
   margin: $line-height-computed 0;
   border-radius: $border-radius-base;
 
-  > li {
+  > .page-item {
     display: inline; // Remove list-style and block-level defaults
-    > a,
-    > span {
+    > .page-link {
       position: relative;
       float: left; // Collapse white-space
       padding: $padding-base-vertical $padding-base-horizontal;
@@ -22,16 +25,14 @@
       margin-left: 0;
     }
     &:first-child {
-      > a,
-      > span {
+      > .page-link {
         margin-left: 0;
         @include border-left-radius($border-radius-base);
         margin-right: -1px;
       }
     }
     &:last-child {
-      > a,
-      > span {
+      > .page-link {
         @include border-right-radius($border-radius-base);
         border-right: 0;
         margin-left: -1px;
@@ -39,8 +40,7 @@
     }
   }
 
-  > li > a,
-  > li > span {
+  > .page-item > .page-link {
     &:hover,
     &:focus {
       color: $pagination-active-color;
@@ -50,8 +50,7 @@
     }
   }
 
-  > .active > a,
-  > .active > span {
+  > .active .page-link {
     &,
     &:hover,
     &:focus {
@@ -64,12 +63,9 @@
   }
 
   > .disabled {
-    > span,
-    > span:hover,
-    > span:focus,
-    > a,
-    > a:hover,
-    > a:focus {
+    > .page-link:hover,
+    > .page-link:focus,
+    > .page-link {
       color: $pagination-disabled-color;
       background-color: $pagination-disabled-bg;
       border-color: $pagination-disabled-border;

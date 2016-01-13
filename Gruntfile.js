@@ -520,7 +520,7 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs/examples/**/*', 'docs/_includes/**/*', 'docs-orange/**/*', '!docs/assets/**/*'],
+        files: ['docs-orange/**/*'],
         tasks: ['dist-css', 'docs']
         /* end mod */
       }

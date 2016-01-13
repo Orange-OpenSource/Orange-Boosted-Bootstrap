@@ -589,29 +589,29 @@ caption {
 
 // bits from bootstrap-orange2015.less
 
-// a {
-//   color: $link-color;
-//   text-decoration: underline;
-//
-//   &:hover,
-//   &:focus {
-//     color: $link-hover-color;
-//     text-decoration: $link-hover-decoration;
-//   }
-//
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
 //   &:focus {
 //     @include tab-focus();
 //   }
-// }
-//
-// nav a,
-// .dropdown-menu a,
-// .dropdown a,
-// .navbar a,
-// .nav a,
-// a.btn {
-//   text-decoration: none;
-// }
+}
+
+nav a,
+.dropdown-menu a,
+.dropdown a,
+.navbar a,
+.nav a,
+a.btn {
+  text-decoration: none;
+}
 
 // Horizontal forms
 //
