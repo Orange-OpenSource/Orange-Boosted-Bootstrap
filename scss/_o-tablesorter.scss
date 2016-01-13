@@ -3,49 +3,49 @@
 //
 
 .tablesorter {
-	caption {
-		background-color: $brand-orange-white;
-		color: $brand-orange-black;
-		font-size: $font-size-h1;
-		font-weight: bold;
-		padding: $padding-large-vertical 0;
-	}
+  caption {
+    padding: $padding-large-vertical 0;
+    font-size: $font-size-h1;
+    font-weight: bold;
+    color: $brand-orange-black;
+    background-color: $brand-orange-white;
+  }
 
-	th {
-		cursor: pointer;
-		font-weight: bold;
-		padding-right: 30px;
-		text-align: left;
+  th {
+    padding-right: 30px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
 
-		&.header {
-			background-position: 95% 50%;
-			background-repeat: no-repeat;
+    &.header {
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
 
-			@include hover {
-				background-image: url('../img/triangle_sort.png');
-			}
-		}
+      @include hover {
+        background-image: url("../img/triangle_sort.png");
+      }
+    }
 
-		&.tablesorter-headerDesc {
-			background-image: url('../img/triangle_down.png');
-		}
+    &.tablesorter-headerDesc {
+      background-image: url("../img/triangle_down.png");
+    }
 
-		&.tablesorter-headerAsc {
-			background-image: url('../img/triangle_up.png');
-		}
+    &.tablesorter-headerAsc {
+      background-image: url("../img/triangle_up.png");
+    }
 
-		a {
-			color: $brand-orange-black;
-			text-decoration: none;
+    a {
+      color: $brand-orange-black;
+      text-decoration: none;
 
-			@include hover-focus {
-				color: $brand-orange;
-				text-decoration: underline;
-			}
-		}
-	}
+      @include hover-focus {
+        color: $brand-orange;
+        text-decoration: underline;
+      }
+    }
+  }
 
-	td {
-		text-align: left;
-	}
+  td {
+    text-align: left;
+  }
 }

@@ -13,10 +13,10 @@
     }
 
     .nav-link {
-      border-width: 2px;
       padding: 1rem 2rem;
-      font-weight: bold;
       font-size: 1.6rem;
+      font-weight: bold;
+      border-width: 2px;
 
       @include hover {
         color: $nav-tabs-link-hover-color;
@@ -30,9 +30,9 @@
 
       @include focus {
         border-width: 2px;
+        outline-width: 1px;
         outline-style: dotted;
         outline-offset: -6px;
-        outline-width: 1px;
       }
     }
   }
@@ -49,32 +49,32 @@
     // Active state
     &,
     &.active {
-        > a {
-          font-weight: bold;
+      > a {
+        font-weight: bold;
 
-          &:hover {
-              color: $nav-pills-active-link-hover-color;
-              background-color: $nav-pills-active-link-hover-bg;
-          }
-          
-          &:focus {
-              outline: none;
-              background-color: $brand-orange;
-              color: $brand-orange-white;
-          }
+        &:hover {
+          color: $nav-pills-active-link-hover-color;
+          background-color: $nav-pills-active-link-hover-bg;
         }
+
+        &:focus {
+          color: $brand-orange-white;
+          background-color: $brand-orange;
+          outline: none;
+        }
+      }
     }
   }
 }
 
 .tab-content {
+  padding: 1em;
+  border-color: transparent $brand-orange-black $brand-orange-black;
   border-style: solid;
   border-width: 2px;
-  border-color: transparent $brand-orange-black $brand-orange-black;
-  padding: 1em;
 }
 
 .tab-content-clear {
-  border: 0;
   padding: 1em;
+  border: 0;
 }

@@ -38,64 +38,62 @@ html {
 //
 
 .navbar {
-    padding: 0;
+  padding: 0;
 
-    &.navbar-light,
-    &.navbar-dark {
-        background: $brand-orange-black;
+  &.navbar-light,
+  &.navbar-dark {
+    background: $brand-orange-black;
+  }
+
+  .nav-item {
+    font-weight: $brand-font-weight-bold;
+
+    .nav-link {
+      padding-bottom: 1rem;
+      margin-top: 2.8rem;
     }
 
-    .nav-item {
-        font-weight: $brand-font-weight-bold;
+    .dropdown-toggle {
+      @include hover-focus {
+        color: $brand-orange;
+      }
+      display: block;
+      padding-top: 0.425rem;
+      padding-bottom: 1rem;
+      margin-top: 2.8rem;
+      color: $brand-orange-white;
+    }
+  }
 
-        .nav-link {
-            margin-top: 2.8rem;
-            padding-bottom: 1rem;
-        }
+  .nav-item + .nav-item {
+    margin-left: 2rem;
+  }
 
-        .dropdown-toggle {
-            @include hover-focus {
-                color: $brand-orange;
-            }
-            display: block;
-            margin-top: 2.8rem;
-            padding-top: 0.425rem;
-            padding-bottom: 1rem;
-            color: $brand-orange-white;
-        }
+  .form-inline {
+    margin-top: 1.8rem;
+    margin-left: 1rem;
+  }
+
+  .btn-inverse-outline {
+    @include hover-focus {
+      color: $brand-orange;
+      border-color: $brand-orange;
     }
 
-    .nav-item + .nav-item {
-        margin-left: 2rem;
+    @include active {
+      color: $brand-orange-white;
+      background-color: $brand-orange;
+      border-color: $brand-orange;
     }
 
-    .form-inline {
-        margin-top: 1.8rem;
-        margin-left: 1rem;
-    }
-
-    .btn-inverse-outline {
-        @include hover-focus{
-            color: $brand-orange;
-            border-color: $brand-orange;
-        }
-
-        @include active {
-            color: $brand-orange-white;
-            background-color: $brand-orange;
-            border-color: $brand-orange;
-        }
-
-        color: $brand-orange-white;
-        background-color: $brand-orange-black;
-        border-color: $brand-orange-white;
-    }
+    color: $brand-orange-white;
+    background-color: $brand-orange-black;
+    border-color: $brand-orange-white;
+  }
 }
 
 .navbar-toggler {
   @include navbar-toggle-vertical-align($navbar-toggle-vertical-margin);
-  // position: relative;
-  // float: right;
   padding: $nav-link-padding;
   margin-right: $navbar-padding-horizontal;
   background-color: transparent;
@@ -132,17 +130,17 @@ html {
 
 .navbar-brand {
   height: $navbar-height;
-  margin: 0;
   padding: 1rem;
+  margin: 0;
 
   &.nav-link {
     margin: 0;
   }
 
   img {
-    color: $brand-orange-white;
     font-size: 1.2rem;
     font-weight: $brand-font-weight-normal;
+    color: $brand-orange-white;
   }
 }
 
@@ -175,24 +173,23 @@ html {
 // Builds on top of the `.nav` components with its own modifier class to make
 // the nav the full height of the horizontal nav (above 768px).
 .navbar-nav {
-  #uci_link {
-    color: $brand-orange-white;
-    font-weight: $brand-font-weight-bold;
+  .nav-item-cdu {
+    float: left;
+    padding: .425rem 0 1rem;
     margin-top: 2.8rem;
     margin-left: 1rem;
-    padding: .425rem 0 1rem 0;
-    float: left;
+    font-weight: $brand-font-weight-bold;
+    color: $brand-orange-white;
 
-    @include hover-focus{
+    @include hover-focus {
       color: $brand-orange;
     }
   }
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
-      .nav-link {
-        // @include navbar-vertical-align($navbar-padding-vertical + $line-height-computed);
-        margin-top: 2.8rem;
-      }
+    .nav-link {
+      margin-top: 2.8rem;
+    }
   }
 
   > li {
@@ -231,12 +228,12 @@ a:focus {
 // Progress bar
 //
 
-.progress.progress-default{
-    &[value]::-webkit-progress-value {
-        background-color: $brand-orange;
-    }
+.progress.progress-default {
+  &[value]::-webkit-progress-value {
+    background-color: $brand-orange;
+  }
 
-    &[value]::-moz-progress-bar {
+  &[value]::-moz-progress-bar {
     background-color: $brand-orange;
   }
 }
@@ -405,25 +402,25 @@ a:focus {
 
 // Recommended @font-face snippet for web fonts
 
-@font-face{
-	font-family: 'HelvNeue75';
+@font-face {
+  font-family: "HelvNeue75";
   font-style: normal;
   font-weight: 700;
-	src: url('#{$icon-font-path}HelvNeue75_W1G.eot') format('eot'),
-  url('#{$icon-font-path}HelvNeue75_W1G.woff2') format('woff2'),
-	url('#{$icon-font-path}HelvNeue75_W1G.woff') format('woff'),
-	url('#{$icon-font-path}HelvNeue75_W1G.ttf') format('truetype'),
-	url('#{$icon-font-path}HelvNeue75_W1G.svg') format('svg');
+  src: url("#{$icon-font-path}HelvNeue75_W1G.eot") format("eot"),
+  url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
+	url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff"),
+	url("#{$icon-font-path}HelvNeue75_W1G.ttf") format("truetype"),
+	url("#{$icon-font-path}HelvNeue75_W1G.svg") format("svg");
 }
-@font-face{
-	font-family: 'HelvNeue55';
+@font-face {
+  font-family: "HelvNeue55";
   font-style: normal;
   font-weight: 400;
-  src: url('#{$icon-font-path}HelvNeue55_W1G.eot') format('eot'),
-  url('#{$icon-font-path}HelvNeue55_W1G.woff2') format('woff2'),
-	url('#{$icon-font-path}HelvNeue55_W1G.woff') format('woff'),
-	url('#{$icon-font-path}HelvNeue55_W1G.ttf') format('truetype'),
-	url('#{$icon-font-path}HelvNeue55_W1G.svg') format('svg');
+  src: url("#{$icon-font-path}HelvNeue55_W1G.eot') format("eot"),
+  url('#{$icon-font-path}HelvNeue55_W1G.woff2') format('woff2"),
+	url("#{$icon-font-path}HelvNeue55_W1G.woff') format('woff'),
+	url('#{$icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
+	url("#{$icon-font-path}HelvNeue55_W1G.svg") format("svg");
 }
 
 // == TABLES
@@ -441,15 +438,14 @@ a:focus {
       }
 
       > th {
-          font-size: $font-size-h5;
+        font-size: $font-size-h5;
       }
     }
   }
 
   > thead th {
-      border-bottom: 2px;
+    border-bottom: 2px;
   }
-
 }
 
 @include table-row-variant-border(success, $state-success-border);
@@ -460,12 +456,12 @@ a:focus {
 
 // force caption for tables
 caption {
-	background-color: $brand-orange-white;
-	color: $brand-orange-black;
-	padding: $padding-large-vertical 0;
+  padding: $padding-large-vertical 0;
   font-size: $font-size-h1;
-	font-weight: bold;
+  font-weight: bold;
+  color: $brand-orange-black;
   caption-side: top;
+  background-color: $brand-orange-white;
 }
 
 // Force bold onto panel heading and footer and wells
@@ -492,7 +488,7 @@ caption {
   .open > .dropdown-toggle & {
     color: $hover-color;
     background-color: $hover-bg-color;
-        border-color: $hover-bg-color;
+    border-color: $hover-bg-color;
   }
 
   &:focus,
@@ -520,7 +516,7 @@ caption {
     &:active,
     &.active {
       background-color: $background;
-          border-color: $border;
+      border-color: $border;
     }
   }
 
@@ -565,9 +561,9 @@ caption {
 }
 
 .form-group {
-    .form-control-label {
-        font-weight: $brand-font-weight-bold;
-    }
+  .form-control-label {
+    font-weight: $brand-font-weight-bold;
+  }
 }
 
 .form-control {
@@ -579,12 +575,12 @@ caption {
 //
 
 .card {
-    border-color: $brand-orange-black;
+  border-color: $brand-orange-black;
 
-    .card-block {
-        background-color: $brand-orange-black;
-        color: white;
-    }
+  .card-block {
+    color: #fff;
+    background-color: $brand-orange-black;
+  }
 }
 
 // bits from bootstrap-orange2015.less
@@ -622,9 +618,9 @@ a.btn {
   // Reset spacing and right align labels, but scope to media queries so that
   // labels on narrow viewports stack the same as a default form example.
   @media (min-width: $screen-sm-min) {
-      .form-control-label {
-        padding-top: ($padding-base-vertical + .1); // Default padding plus a border
-      }
+    .form-control-label {
+      padding-top: ($padding-base-vertical + .1); // Default padding plus a border
+    }
   }
 
   // Form group sizes
@@ -663,8 +659,8 @@ a.btn {
 // Forms
 //
 .form-group {
-    input[type="radio"],
-    input[type="checkbox"] {
-        width: auto;
-    }
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+  }
 }
