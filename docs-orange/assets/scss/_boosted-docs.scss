@@ -187,3 +187,14 @@
     width: 12.5%;
   }
 }
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 20rem;
+    display: none;
+    background-color: #ccc;
+    z-index: 100;
+}
