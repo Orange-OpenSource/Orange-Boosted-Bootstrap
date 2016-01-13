@@ -416,10 +416,10 @@ a:focus {
   font-family: "HelvNeue55";
   font-style: normal;
   font-weight: 400;
-  src: url("#{$icon-font-path}HelvNeue55_W1G.eot') format("eot"),
-  url('#{$icon-font-path}HelvNeue55_W1G.woff2') format('woff2"),
-	url("#{$icon-font-path}HelvNeue55_W1G.woff') format('woff'),
-	url('#{$icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
+  src: url("#{$icon-font-path}HelvNeue55_W1G.eot") format("eot"),
+  url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
+	url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff"),
+	url("#{$icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
 	url("#{$icon-font-path}HelvNeue55_W1G.svg") format("svg");
 }
 
