@@ -1,72 +1,72 @@
 //
-//	Footer
+//  Footer
 //
 
 .o-footer {
-	background-color: $brand-orange-black;
-	color: $brand-orange-white;
+  color: $brand-orange-white;
+  background-color: $brand-orange-black;
 
-	* {
-		font-weight: $brand-font-weight-bold;
-	}
+  * {
+    font-weight: $brand-font-weight-bold;
+  }
 
-	.o-footer-top ul {
-		list-style: none;
-		background: $brand-orange-black;
-		margin: 0 auto;
-		padding: 30px 0;
-		font-size: $font-size-small;
+  .o-footer-top ul {
+    padding: 30px 0;
+    margin: 0 auto;
+    font-size: $font-size-small;
+    list-style: none;
+    background: $brand-orange-black;
 
-		li {
-			h2:first-child {
-				font-weight: $brand-font-weight-bold;
-				font-size: $font-size-base;
-				color: $brand-orange-white;
-				margin: 0 0 18px;
-			}
+    li {
+      h2:first-child {
+        margin: 0 0 18px;
+        font-size: $font-size-base;
+        font-weight: $brand-font-weight-bold;
+        color: $brand-orange-white;
+      }
 
-			a {
-				color: $gray-light-plus;
-				font-size: $font-size-small;
-				line-height: 2.8;
-			}
-		}
-	}
+      a {
+        font-size: $font-size-small;
+        line-height: 2.8;
+        color: $gray-light-plus;
+      }
+    }
+  }
 
-	.o-footer-bottom {
-		background-color: $brand-orange-black;
-		color: $gray-light-plus;
-		min-height: 50px;
-		border-top: 1px solid $gray;
+  .o-footer-bottom {
+    min-height: 50px;
+    color: $gray-light-plus;
+    background-color: $brand-orange-black;
+    border-top: 1px solid $gray;
 
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 10px;
-			text-align: center;
+    ul {
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+      list-style: none;
 
-			li {
-				display: inline;
-				margin-right: 20px;
-				font-size: $font-size-small;
+      li {
+        display: inline;
+        margin-right: 20px;
+        font-size: $font-size-small;
 
-				a {
-					color: $brand-orange-white;
-					font-size: $font-size-small;
-				}
-			}
-		}
-	}
+        a {
+          font-size: $font-size-small;
+          color: $brand-orange-white;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
   .o-footer .navbar-nav > li {
     float: left;
 
-	a {
-		margin-top: 2.8rem;
-		margin-bottom: 0;
-		padding: 1rem;
-	}
+    a {
+      padding: 1rem;
+      margin-top: 2.8rem;
+      margin-bottom: 0;
+    }
   }
 }
