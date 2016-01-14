@@ -1,8 +1,10 @@
 .bd-masthead {
   background-color: $brand-orange-black;
   color: $brand-orange-white;
-  border: 2px solid $gray-dark;
+  border: none;
+  border-top: 2px solid $gray-dark;
   padding-top: 4rem;
+  background-image: none;
 
   .lead {
     font-size: 2.1rem;
@@ -20,13 +22,14 @@
     }
 
     .btn {
-        font-size: $font-size-base;
+        font-size: $font-size-lg;
+        font-weight: $btn-font-weight;
         color: $brand-orange;
         text-decoration: none;
 
         &.btn-lg {
             font-size: $font-size-lg;
-            padding: 1.2rem 2rem;
+            padding: $btn-padding-y-lg $btn-padding-x-lg;
         }
 
         &:active,
@@ -100,7 +103,7 @@
     .nav-link {
       color: $brand-orange-white;
       margin-top: 2.8rem;
-      padding: 1rem;
+    //   padding: 1rem;
 
       &.active,
       &:hover,
@@ -186,4 +189,17 @@
   .bs-glyphicons li {
     width: 12.5%;
   }
+}
+
+.scrollup {
+    width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+    border-bottom: 30px solid #ccc;
+    position: fixed;
+    bottom: 50px;
+    right: 20rem;
+    display: none;
+    z-index: 100;
 }

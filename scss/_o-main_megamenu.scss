@@ -2,19 +2,19 @@
 // Main mega menu
 //
 .navbar-default {
-	box-shadow: none;
-	border-radius: 0;
-	border: 0 none;
-	border-image-width : 0 0 0 0;
+  border: 0 none;
+  border-radius: 0;
+  border-image-width: 0;
+  box-shadow: none;
 }
 
 .navbar-default .nav .nav-item .nav-item-cdu:hover,
 .navbar-default .nav .nav-item .nav-item-cdu:focus {
-	background-color: transparent;
-	text-decoration: underline;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .navbar-default .nav .nav-item .nav-item-cdu {
-	color: #FFF !important;
+  color: #fff !important;
 }
 
 // remove bootstrap transparent bg on small device
@@ -22,103 +22,100 @@
   @media (max-width: $grid-float-breakpoint-max) {
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
-        background-color: $dropdown-bg;
-        > li > a {
-            color: $dropdown-link-color;
-            &:hover,
-            &:focus {
-                text-decoration: none;
-                color: $dropdown-link-hover-color;
-                background-color: $dropdown-link-hover-bg;
-            }
+      background-color: $dropdown-bg;
+      > li > a {
+        color: $dropdown-link-color;
+        &:hover,
+        &:focus {
+          color: $dropdown-link-hover-color;
+          text-decoration: none;
+          background-color: $dropdown-link-hover-bg;
         }
+      }
     }
   }
 }
 
 
 @media (max-width: $screen-sm-max) {
-	.navbar-default .navbar-form .form-control {
-		font-size: 0.95em;
-		height: auto;
-	}
-	.navbar-default .sub-nav {
-		position: relative;
-	}
-	.navbar-default .navbar-collapse {
-		max-height:none;
-	}
+  .navbar-default .navbar-form .form-control {
+    height: auto;
+    font-size: 0.95em;
+  }
+  .navbar-default .sub-nav {
+    position: relative;
+  }
+  .navbar-default .navbar-collapse {
+    max-height: none;
+  }
 }
 
 .nav-menu .sub-nav .container,
 .nav-menu .sub-nav .container-fluid,
 .nav-menu .sub-nav.container,
 .nav-menu .sub-nav.container-fluid {
-	z-index: 1;
-	background-color: #FFF;
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
 
 // mega menu list
 .nav-menu {
-	display: block;
-	position: relative;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	z-index: 15;
+  position: relative;
+  z-index: 15;
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 // sub-navigation panel
 .sub-nav {
-	position: absolute;
-	display: none;
-	border: 1px solid transparent;
-	margin-top: 1px;
-	left: 0;
+  position: absolute;
+  left: 0;
+  display: none;
+  margin-top: 1px;
+  border: 1px solid transparent;
 }
 
 // sub-navigation panel open state
 .sub-nav.open {
-	display: block;
+  display: block;
 }
 
 // list of items within sub-navigation panel
 .sub-nav ul {
-	display: inline-block;
-	vertical-align: top;
-	margin: 0 1em 0 0;
-	padding: 0;
+  display: inline-block;
+  padding: 0;
+  margin: 0 1em 0 0;
+  vertical-align: top;
 }
 
 // list item within sub-navigation panel
 .sub-nav li {
-	display: block;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 // link item within sub-navigation panel list
 .sub-nav li a {
-	color: #000;
+  color: #000;
 }
 .sub-nav li a:focus, .sub-nav li a:hover {
-	color: $brand-orange;
+  color: $brand-orange;
 }
-.mMenu{
-
-
-    // Specific dropdowns
-    // make dropdown border overlap tab border
-    background-color: $dropdown-bg;
-    border: 1px solid $dropdown-fallback-border; // IE8 fallback
-    border: 1px solid $dropdown-border;
-    border-radius: $border-radius-base;
-    @include box-shadow(0 6px 12px rgba(0,0,0,.175));
-    background-clip: padding-box;
-    // Remove the top rounded corners here since there is a hard edge above the menu
-    @include border-top-radius(0);
+.mMenu {
+  // Specific dropdowns
+  // make dropdown border overlap tab border
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border: 1px solid $dropdown-border;
+  border-radius: $border-radius-base;
+  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  // Remove the top rounded corners here since there is a hard edge above the menu
+  @include border-top-radius(0);
 }
 
 //
@@ -126,34 +123,34 @@
 //
 
 .mega-menu.navbar {
-    background-color: $brand-orange-black;
+  padding: 0;
+  color: $brand-orange-white;
+  background-color: $brand-orange-black;
+
+  .navbar-toggle {
+    border-color: $brand-orange-white;
+    &:hover,
+    &:focus {
+      background-color: $brand-orange;
+    }
+    .icon-bar {
+      background-color: $brand-orange-white;
+    }
+  }
+
+  .nav > li > a {
     color: $brand-orange-white;
-    padding: 0;
-
-    .navbar-toggle {
-        border-color: $brand-orange-white;
-        &:hover,
-        &:focus{
-            background-color: $brand-orange;
-        }
-        .icon-bar {
-            background-color: $brand-orange-white;
-        }
+    &:hover,
+    &:focus {
+      color: $brand-orange;
     }
-
-    .nav > li > a {
-        color: $brand-orange-white;
-        &:hover,
-        &:focus {
-            color: $brand-orange;
-        }
-    }
+  }
 }
 
 .mega-menu .nav,
 .mega-menu .collapse,
 .mega-menu .dropdown {
-	position : static;
+  position: static;
 }
 
 .mega-menu .container {
@@ -169,10 +166,10 @@
 }
 
 .mega-menu .nav-item.dropdown .dropdown-menu {
-  left: 0;
   right: 0;
+  left: 0;
 }
 
 .mega-menu .nav-item.dropdown .dropdown-menu ul {
-    list-style: none;
+  list-style: none;
 }

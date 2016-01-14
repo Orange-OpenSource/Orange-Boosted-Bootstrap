@@ -1,4 +1,3 @@
-
 //
 //  pointed tab
 //
@@ -12,32 +11,32 @@
   font-size: $font-size-base;
   font-weight: normal;
   line-height: $line-height;
-  text-align: left;
-  background-color: $o-nav-tabs-bg;
   color: $o-nav-tabs-color;
+  text-align: left;
+  white-space: normal;
+  background-color: $o-nav-tabs-bg;
   background-clip: padding-box;
   border: 2px solid $o-nav-tabs-border-color;
   border-radius: $border-radius-large;
-  white-space: normal;
 
   .nav-item .nav-link {
     position: relative;
 
     &.active {
-      background-color: $o-nav-tabs-active-bg;
       color: $o-nav-tabs-active-color;
+      background-color: $o-nav-tabs-active-bg;
     }
 
     @include hover {
       &.active {
-        background-color: $o-nav-tabs-active-bg;
         color: $o-nav-tabs-active-color;
+        background-color: $o-nav-tabs-active-bg;
       }
     }
 
     @include focus {
-      background-color: $o-nav-tabs-active-bg;
       color: $o-nav-tabs-active-color;
+      background-color: $o-nav-tabs-active-bg;
     }
   }
 }

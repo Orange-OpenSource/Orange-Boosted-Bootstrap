@@ -1,0 +1,82 @@
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Download
+    - title: Browsers & devices
+    - title: Options
+    - title: Flexbox
+    - title: Build tools
+    - title: Best practices
+
+- title: Layout
+  pages:
+    - title: Overview
+    - title: Grid
+    - title: Media object
+    - title: Responsive utilities
+
+- title: Content
+  pages:
+    - title: Reboot
+    - title: Typography
+    - title: Code
+    - title: Images
+    - title: Tables
+    - title: Figures
+
+- title: Components
+  pages:
+    - title: Buttons
+    - title: Button group
+    - title: Button dropdown
+    - title: Forms
+    - title: Input group
+    - title: Dropdowns
+    - title: Jumbotron
+    - title: Label
+    - title: Alerts
+    - title: Card
+    - title: Navs
+    - title: Navbar
+    # boosted mod
+    - title: Orange pointed tabs
+    - title: Local navigation
+    - title: Orange megamenu
+    - title: Orange footer
+    # end mod
+    - title: Breadcrumb
+    # boosted mod
+    - title: Stepbar
+    # end mod
+    - title: Pagination
+    # boosted mod
+    - title: Orange Pagination
+    # end mod
+    - title: Progress
+    - title: List group
+    - title: Modal
+    - title: Scrollspy
+    - title: Tooltips
+    - title: Popovers
+    - title: Collapse
+    # boosted mod
+    - title: Orange accordion
+    # end mod
+    - title: Carousel
+    - title: Utilities
+
+# - title: Extend
+#   pages:
+#     - title: Approach
+#     - title: Icon fonts
+
+- title: About
+  pages:
+    - title: History
+    - title: Team
+    - title: Accessibility
+    - title: Brand
+    - title: License
+    - title: Translations
+
+- title: Migration

@@ -3,85 +3,85 @@
 //
 
 @mixin arrow-wizard-next($arrow-width, $arrow-color-right) {
-    li.on + li.next > .arrow {
-      &,
-      &::after {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-color: $arrow-color-right;
-        border-style: solid;
-      }
+  li.on + li.next > .arrow {
+    &,
+    &::after {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: $arrow-color-right;
+      border-style: solid;
     }
+  }
 
-    li.on + li.next > .arrow {
-      border-width: $arrow-width ($arrow-width / 2);
-    }
+  li.on + li.next > .arrow {
+    border-width: $arrow-width ($arrow-width / 2);
+  }
 
-    li.on + li.next > .arrow::after {
-      border-width: $arrow-width ($arrow-width / 2);
-      content: '';
-    }
+  li.on + li.next > .arrow::after {
+    content: "";
+    border-width: $arrow-width ($arrow-width / 2);
+  }
 }
 
 @mixin arrow-right-next($arrow-outer-width, $arrow-outer-height, $arrow-width, $arrow-color-right, $arrow-color-left) {
-    @include arrow-wizard-next($arrow-width, $arrow-color-right);
+  @include arrow-wizard-next($arrow-width, $arrow-color-right);
 
-    li.on + li.next > .arrow {
-        margin-left: -$arrow-outer-width;
-        top: $arrow-outer-height;
-        border-left-width: 0;
-        border-right-color: $arrow-color-right;
+  li.on + li.next > .arrow {
+    top: $arrow-outer-height;
+    margin-left: -$arrow-outer-width;
+    border-right-color: $arrow-color-right;
+    border-left-width: 0;
 
-        &::after {
-          content: ' ';
-          bottom: -$arrow-width;
-          border-right-width: 0;
-          border-left-color: $arrow-color-left;
-        }
+    &::after {
+      bottom: -$arrow-width;
+      content: " ";
+      border-right-width: 0;
+      border-left-color: $arrow-color-left;
     }
+  }
 }
 
 @mixin arrow-wizard($arrow-width, $arrow-color-right) {
-    li.on > .arrow {
-      &,
-      &::after {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-color: $arrow-color-right;
-        border-style: solid;
-      }
+  li.on > .arrow {
+    &,
+    &::after {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: $arrow-color-right;
+      border-style: solid;
     }
+  }
 
-    li.on > .arrow {
-      border-width: $arrow-width ($arrow-width / 2);
-    }
+  li.on > .arrow {
+    border-width: $arrow-width ($arrow-width / 2);
+  }
 
-    li.on > .arrow::after {
-      border-width: $arrow-width ($arrow-width / 2);
-      content: '';
-    }
+  li.on > .arrow::after {
+    content: "";
+    border-width: $arrow-width ($arrow-width / 2);
+  }
 }
 
 @mixin arrow-right($arrow-outer-width, $arrow-outer-height, $arrow-width, $arrow-color-right, $arrow-color-left) {
-    @include arrow-wizard($arrow-width, $arrow-color-right);
+  @include arrow-wizard($arrow-width, $arrow-color-right);
 
-    li.on > .arrow {
-        margin-left: -$arrow-outer-width;
-        top: $arrow-outer-height;
-        border-left-width: 0;
-        border-right-color: $arrow-color-right;
+  li.on > .arrow {
+    top: $arrow-outer-height;
+    margin-left: -$arrow-outer-width;
+    border-right-color: $arrow-color-right;
+    border-left-width: 0;
 
-        &::after {
-          content: ' ';
-          bottom: -$arrow-width;
-          border-right-width: 0;
-          border-left-color: $arrow-color-left;
-        }
+    &::after {
+      bottom: -$arrow-width;
+      content: " ";
+      border-right-width: 0;
+      border-left-color: $arrow-color-left;
     }
+  }
 }
 
 // visited = black
@@ -89,55 +89,54 @@
 // Default = next = $gray-light-plus (#ddd)
 
 ul.o-wizard-step-bar {
-    @include arrow-right($o-wizard-step-bar-arrow-outer-width, 0, $o-wizard-step-bar-arrow-width, $brand-orange, $brand-orange-black);
-    @include arrow-right-next($o-wizard-step-bar-arrow-outer-width, 0, $o-wizard-step-bar-arrow-width, $gray-light-plus, $brand-orange);
+  @include arrow-right($o-wizard-step-bar-arrow-outer-width, 0, $o-wizard-step-bar-arrow-width, $brand-orange, $brand-orange-black);
+  @include arrow-right-next($o-wizard-step-bar-arrow-outer-width, 0, $o-wizard-step-bar-arrow-width, $gray-light-plus, $brand-orange);
+  padding: 0;
+  margin: 1em;
+  clear: both;
 
-	clear: both;
-	margin: 1em;
-	padding: 0;
+  li {
+    position: relative;
+    float: left;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-weight: bold;
+    color: $brand-orange-black;
+    list-style: none;
+    background-color: $gray-light-plus;
+  }
 
-    li {
-        background-color: $gray-light-plus;
-        color: $brand-orange-black;
-        font-weight: bold;
-        position: relative;
-        padding: $padding-base-vertical $padding-base-horizontal;
-        float: left;
-        list-style: none;
-    }
+  li.visited *,
+  li.on {
+    color: $brand-orange-white;
+    cursor: pointer;
+  }
 
-    li.visited *,
-    li.on {
-        color: $brand-orange-white;
-        cursor: pointer;
-    }
+  li.visited {
+    background-color: $brand-orange-black;
+  }
 
-    li.visited {
-        background-color: $brand-orange-black;
-    }
+  li.on {
+    background-color: $brand-orange;
+  }
 
-    li.on {
-        background-color: $brand-orange;
-    }
-
-    @media (max-width: $screen-sm-max) {
-        @include arrow-right($o-wizard-step-bar-arrow-outer-width-small, 0, $o-wizard-step-bar-arrow-width-small, $brand-orange, $brand-orange-black);
-        @include arrow-right-next($o-wizard-step-bar-arrow-outer-width-small, 0, $o-wizard-step-bar-arrow-width-small, $gray-light-plus, $brand-orange);
-    }
+  @media (max-width: $screen-sm-max) {
+    @include arrow-right($o-wizard-step-bar-arrow-outer-width-small, 0, $o-wizard-step-bar-arrow-width-small, $brand-orange, $brand-orange-black);
+    @include arrow-right-next($o-wizard-step-bar-arrow-outer-width-small, 0, $o-wizard-step-bar-arrow-width-small, $gray-light-plus, $brand-orange);
+  }
 }
 
 ul.o-wizard-step-bar[data-steps='2'] li {
-    width: 50%;
+  width: 50%;
 }
 
 ul.o-wizard-step-bar[data-steps='3'] li {
-    width: 33%;
+  width: 33%;
 }
 
 ul.o-wizard-step-bar[data-steps='4'] li {
-    width: 25%;
+  width: 25%;
 }
 
 ul.o-wizard-step-bar[data-steps='5'] li {
-    width: 20%;
+  width: 20%;
 }

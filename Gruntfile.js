@@ -223,6 +223,13 @@ module.exports = function (grunt) {
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
+      docsJs: {
+          src: [
+              '.tmpdocs/assets/js/src/application.js',
+              '.tmpdocs/assets/js/src/application-orange.js'
+          ],
+          dest: '.tmpdocs/assets/js/src/application.js'
+      }
       /* end mod */
     },
 
@@ -516,7 +523,7 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs/examples/**/*', 'docs/_includes/**/*', 'docs-orange/**/*', '!docs/assets/**/*'],
+        files: ['docs-orange/**/*'],
         tasks: ['dist-css', 'docs']
         /* end mod */
       }
@@ -638,7 +645,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'csscomb:dist', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
@@ -656,7 +663,7 @@ module.exports = function (grunt) {
   // Docs task.
   /* boosted mod */
   grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
-  grunt.registerTask('docs-js', ['replace:docsOrangeJs', 'uglify:docsJs']);
+  grunt.registerTask('docs-js', [/*'replace:docsOrangeJs',*/ 'concat:docsJs', 'uglify:docsJs']);
    /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
