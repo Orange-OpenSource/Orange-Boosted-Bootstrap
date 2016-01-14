@@ -24,32 +24,37 @@
     </div>
   </nav>
   {% endcomment %}
-
-  <div class="clearfix">
-    <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
-      &#9776;
-    </button>
-    <a class="navbar-brand hidden-sm-up" href="{{ site.baseurl }}/">
-      B<span class="text-primary">oo</span>sted
-    </a>
-  </div>
-  <nav class="collapse navbar-toggleable-xs" id="bd-main-nav">
-    <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
-          <img src="dist/img/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage' width='48px'/>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/">
-          B<span class="text-primary">oo</span>sted
-        </a>
-      </li>
-      <li class="nav-item"><a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/">Documentation</a></li>
-      <li class="nav-item"><a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/">Examples</a></li>
-      <li class="nav-item"><a class="nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/boostwatch/">Boostwatch</a></li>
-      <li class="nav-item" id="id_li_for_cdu"></li>
-    </ul>
+  <nav>
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">      
+        &#9776;
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="{{ site.baseurl }}/">
+        B<span class="text-primary">oo</span>sted
+      </a>
+    </div>
+    <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img src="dist/img/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage' width='48px'/>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-item nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/">B<span class="text-primary">oo</span>sted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/boostwatch/">Boostwatch</a>
+        </li>
+        <li class="nav-item" id="id_li_for_cdu"></li>
+      </ul>
+    </div>    
   </nav>
-  </div>
+  </div> 
 </header>
