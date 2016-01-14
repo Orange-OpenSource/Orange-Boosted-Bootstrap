@@ -371,15 +371,6 @@ module.exports = function (grunt) {
           }
         ]
       },
-      /*
-      docsOrangeJs: {
-        expand: true,
-        flatten: true,
-        cwd: 'docs-orange',
-        src: ['assets/js/application.js'],
-        dest: '.tmpdocs/assets/js/src'
-      },
-      */
       fonts: {
         expand: true,
         cwd: 'fonts/',
@@ -478,16 +469,20 @@ module.exports = function (grunt) {
                 to: 'href="../../'
             },
             {
+              from: 'src="/dist',
+              to: 'src="../../dist',
+            },
+            {
               from: 'src="dist',
               to: 'src="../../dist',
-            }]
-        },
-        docsOrangeJs: {
-          src: ['.tmpdocs/assets/js/src/application.js'],
-          overwrite: true,
-          replacements: [{
-                from: '.bd-example [href=#]',
-                to: '[href=#]'
+            },
+            {
+              from: 'src="/assets',
+              to: 'src="../../assets',
+            },
+            {
+              from: 'src="/../assets',
+              to: 'src="../../assets',
             }]
         }
     },
@@ -660,7 +655,7 @@ module.exports = function (grunt) {
   // Docs task.
   /* boosted mod */
   grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
-  grunt.registerTask('docs-js', [/*'replace:docsOrangeJs',*/ 'concat:docsJs', 'uglify:docsJs']);
+  grunt.registerTask('docs-js', ['concat:docsJs', 'uglify:docsJs']);
    /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
