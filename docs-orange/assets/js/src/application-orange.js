@@ -44,37 +44,41 @@
            rect.top < (window.innerHeight || document. documentElement.clientHeight);
   }
 
-  function onVisibilityChange(el) {
-    return function () {
-      var sidebar = document.getElementById('docsNavbarContent');
+  function onSidebarVisibilityChange(el) {
+    if (el) {
+      return function () {
 
-      if (isElementInViewport(el)) {
-        sidebar.style.position = 'static';
-        sidebar.style.top = 'auto';
-      } else {
-        sidebar.style.position = 'fixed';
-        sidebar.style.top = '0';
-      }
-    };
+        var sidebar = document.getElementById('docsNavbarContent');
+
+        if (isElementInViewport(el)) {
+          sidebar.style.position = 'static';
+          sidebar.style.top = 'auto';
+        } else {
+          sidebar.style.position = 'fixed';
+          sidebar.style.top = '0';
+        }
+      };
+    }
   }
 
   function onFooterVisibilityChange(el, scrollTopElm, defaultPos) {
-    return function () {
+    if (el) {
+      return function () {
 
-      var footerStyles = window.getComputedStyle(el, null);
-      var footerHeight = footerStyles.height;
+        var footerRect = el.getBoundingClientRect();
 
-      if (isElementInViewport(el)) {
-        scrollTopElm.style.bottom = footerHeight;
-      } else {
-        scrollTopElm.style.bottom = defaultPos;
-      }
-    };
+        if (footerRect.top < (window.innerHeight || document. documentElement.clientHeight)) {
+          scrollTopElm.style.bottom = (window.innerHeight - footerRect.top + parseInt(defaultPos)) + 'px';
+        } else {
+          scrollTopElm.style.bottom = defaultPos;
+        }
+      };
+    }
   }
 
   window.onload = function () {
     var pageHeader = document.getElementById('page_header');
-    var pageWatcher = onVisibilityChange(pageHeader);
+    var pageWatcher = onSidebarVisibilityChange(pageHeader);
     var findScrollTopElm = document.getElementsByClassName('scroll-top');
     var scrollTopElm = findScrollTopElm.item(0);
     var scrollTopStyles = window.getComputedStyle(scrollTopElm, null);

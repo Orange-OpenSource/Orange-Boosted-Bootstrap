@@ -210,6 +210,7 @@
     right: 20rem;
     z-index: 100;
     text-decoration: none;
+    display: none;
 
     &:visited {
         color: $brand-orange-black;
