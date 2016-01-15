@@ -11,7 +11,7 @@
 	<body role="document">
 
 		<div class="skiplinks" >
-			<div class="skiplinks_section axs_hide">
+			<div class="skiplinks-section axs_hide">
 				<ul>
 					<li id="cdu_skiplink">
 					</li>
@@ -533,18 +533,18 @@
 			};
 
 			$(".skiplinks_trigger").focus(function(){
-				$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+				$(".skiplinks-section").addClass("skiplinks_show").removeClass("axs_hide")
 			});
 			$(".skiplinks_trigger").blur(function(){
-				$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+				$(".skiplinks-section").removeClass("skiplinks_show").addClass("axs_hide")
 			});
 
 			function skiplinksAfterLoad(){
 				$(".skiplinks_trigger").focus(function(){
-					$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+					$(".skiplinks-section").addClass("skiplinks_show").removeClass("axs_hide")
 				});
 				$(".skiplinks_trigger").blur(function(){
-					$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+					$(".skiplinks-section").removeClass("skiplinks_show").addClass("axs_hide")
 				});
 			}
 		</script>

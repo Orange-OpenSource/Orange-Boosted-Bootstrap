@@ -1,10 +1,10 @@
 .skiplinks {
   z-index: 99999;
 }
-.skiplinks .skiplinks_section li {
+.skiplinks .skiplinks-section li {
   float: left;
 }
-.skiplinks .skiplinks_section a {
+.skiplinks .skiplinks-section a {
   display: block;
   padding: 10px;
   font-weight: bold;
@@ -12,15 +12,15 @@
   border-style: none solid none none;
   border-width: 0 1px 0 0;
 }
-.skiplinks .skiplinks_section a:hover {
+.skiplinks .skiplinks-section a:hover {
   cursor: pointer;
 }
-.skiplinks .skiplinks_section a:hover, .skiplinks .skiplinks_section a:focus {
+.skiplinks .skiplinks-section a:hover, .skiplinks .skiplinks-section a:focus {
   color: #f16e00;
   background-color: #fff;
   outline: 0 none;
 }
-.skiplinks .skiplinks_section.skiplinks_show {
+.skiplinks .skiplinks-section.skiplinks-show {
   position: absolute;
   top: 20px;
   left: 50%;
@@ -34,18 +34,10 @@
   border-radius: 0;
   box-shadow: 2px 2px 1634px 1604px rgba(0, 0, 0, 0.3);
 }
-.skiplinks .axs_hide {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0 !important;
-  overflow: hidden;
-  border: 0 none !important;
-}
-.skiplinks .skiplinks_section a:hover {
+.skiplinks .skiplinks-section a:hover {
   cursor: pointer;
 }
-.skiplinks .skiplinks_section a:hover, .skiplinks .skiplinks_section a:focus {
+.skiplinks .skiplinks-section a:hover, .skiplinks .skiplinks-section a:focus {
   color: #f50;
   outline: 0 none;
 }

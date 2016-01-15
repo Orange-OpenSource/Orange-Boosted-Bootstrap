@@ -1088,7 +1088,6 @@ $hr-border:                   $gray-lighter;
 
 // Remove all shadows
 @mixin box-shadow($shadow) {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
