@@ -1,7 +1,7 @@
 /*!
  * Bootstrap's Gruntfile
  * http://getbootstrap.com
- * Copyright 2013-2015 Twitter, Inc.
+ * Copyright 2013-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -24,37 +24,8 @@ module.exports = function (grunt) {
   var isTravis = require('is-travis');
   var npmShrinkwrap = require('npm-shrinkwrap');
   var mq4HoverShim = require('mq4-hover-shim');
-  var autoprefixer = require('autoprefixer')({
-    browsers: [
-      //
-      // Official browser support policy:
-      // http://v4-alpha.getbootstrap.com/getting-started/browsers-devices/#supported-browsers
-      //
-      'Chrome >= 35', // Exact version number here is kinda arbitrary
-      // Rather than using Autoprefixer's native "Firefox ESR" version specifier string,
-      // we deliberately hardcode the number. This is to avoid unwittingly severely breaking the previous ESR in the event that:
-      // (a) we happen to ship a new Bootstrap release soon after the release of a new ESR,
-      //     such that folks haven't yet had a reasonable amount of time to upgrade; and
-      // (b) the new ESR has unprefixed CSS properties/values whose absence would severely break webpages
-      //     (e.g. `box-sizing`, as opposed to `background: linear-gradient(...)`).
-      //     Since they've been unprefixed, Autoprefixer will stop prefixing them,
-      //     thus causing them to not work in the previous ESR (where the prefixes were required).
-      'Firefox >= 31', // Current Firefox Extended Support Release (ESR)
-      // Note: Edge versions in Autoprefixer & Can I Use refer to the EdgeHTML rendering engine version,
-      // NOT the Edge app version shown in Edge's "About" screen.
-      // For example, at the time of writing, Edge 20 on an up-to-date system uses EdgeHTML 12.
-      // See also https://github.com/Fyrd/caniuse/issues/1928
-      'Edge >= 12',
-      'Explorer >= 9',
-      // Out of leniency, we prefix these 1 version further back than the official policy.
-      'iOS >= 8',
-      'Safari >= 8',
-      // The following remain NOT officially supported, but we're lenient and include their prefixes to avoid severely breaking in them.
-      'Android 2.3',
-      'Android >= 4',
-      'Opera >= 12'
-    ]
-  });
+  var autoprefixerSettings = require('./grunt/autoprefixer-settings.js');
+  var autoprefixer = require('autoprefixer')(autoprefixerSettings);
 
   var generateCommonJSModule = require('./grunt/bs-commonjs-generator.js');
   var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' });
@@ -265,7 +236,12 @@ module.exports = function (grunt) {
         config: 'scss/.scss-lint.yml',
         reporterOutput: null
       },
-      src: ['scss/*.scss', '!scss/_normalize.scss']
+      core: {
+        src: ['scss/*.scss', '!scss/_normalize.scss']
+      },
+      docs: {
+        src: ['docs/assets/scss/*.scss', '!scss/_normalize.scss', '!docs/assets/scss/docs.scss']
+      }
     },
 
     postcss: {
@@ -499,7 +475,14 @@ module.exports = function (grunt) {
           'Attribute “autocomplete” not allowed on element “button” at this point.',
           'Element “div” not allowed as child of element “progress” in this context. (Suppressing further errors from this subtree.)',
           'Consider using the “h1” element as a top-level heading only (all “h1” elements are treated as top-level headings by many screen readers and other tools).',
-          'The “datetime” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
+          'The “datetime” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “color” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “date” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “datetime-local” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “month” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “time” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “week” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'Attribute “integrity” not allowed on element “script” at this point.' // Until https://github.com/jzaefferer/grunt-html/issues/86 gets fixed
         ]
       },
       src: ['_gh_pages/**/*.html', 'js/tests/visual/*.html']
@@ -627,7 +610,7 @@ module.exports = function (grunt) {
   // JS distribution task.
   grunt.registerTask('dist-js', ['babel:dev', 'concat:bootstrap', 'lineremover', 'babel:dist', 'stamp', 'concat:plugins','uglify:core', 'commonjs']);
 
-  grunt.registerTask('test-scss', ['scsslint']);
+  grunt.registerTask('test-scss', ['scsslint:core']);
 
   // CSS distribution task.
   // Supported Compilers: sass (Ruby) and libsass.
@@ -660,10 +643,11 @@ module.exports = function (grunt) {
   grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
   grunt.registerTask('docs-js', ['concat:docsJs', 'uglify:docsJs']);
    /* end mod */
+  grunt.registerTask('lint-docs-css', ['scsslint:docs']);
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
   grunt.registerTask('replace-paths', ['replace:paths1', 'replace:paths2', 'replace:paths3']);
-  grunt.registerTask('docs', ['docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace-paths']);
+  grunt.registerTask('docs', ['lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace-paths']);
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github']);
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);

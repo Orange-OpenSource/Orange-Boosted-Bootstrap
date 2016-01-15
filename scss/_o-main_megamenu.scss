@@ -106,17 +106,6 @@
 .sub-nav li a:focus, .sub-nav li a:hover {
   color: $brand-orange;
 }
-.mMenu {
-  // Specific dropdowns
-  // make dropdown border overlap tab border
-  background-color: $dropdown-bg;
-  background-clip: padding-box;
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
-  // Remove the top rounded corners here since there is a hard edge above the menu
-  @include border-top-radius(0);
-}
 
 //
 // Mega menu

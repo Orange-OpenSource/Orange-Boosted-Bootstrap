@@ -255,7 +255,7 @@ const Dropdown = (($) => {
         index++
       }
 
-      if (!~index) {
+      if (index < 0) {
         index = 0
       }
 

@@ -200,16 +200,6 @@
 
 -
   browser: >
-    Safari
-  summary: >
-    Incorrect placement of `position: fixed` element when it's a child of a `position: relative; left: X%;` element.
-  upstream_bug: >
-    WebKit#147284, Safari#21993128
-  origin: >
-    Bootstrap#16814
-
--
-  browser: >
     Safari (OS X)
   summary: >
     Scrollbar clipped in `select[multiple]` with padding.
@@ -312,10 +302,20 @@
 
 -
   browser: >
-    Safari (iOS 9+)
+    Safari (iOS)
   summary: >
-    Sometimes excessive automatic zoom is applied after opening a modal, and the user isn't allowed to zoom out
+    `position:fixed` is incorrectly positioned when tab bar is visible on iPhone 6S+ Safari
   upstream_bug: >
-    WebKit#150715
+    WebKit#153056
   origin: >
-    WebKit#138201
+    Bootstrap#18859
+
+-
+  browser: >
+    Safari (iPad Pro)
+  summary: >
+    Rendering of descendants of `position: fixed` element gets clipped on iPad Pro in Landscape orientation
+  upstream_bug: >
+    WebKit#152637, Safari#24030853
+  origin: >
+    Bootstrap#18738
