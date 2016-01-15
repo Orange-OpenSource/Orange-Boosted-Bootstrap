@@ -191,15 +191,31 @@
   }
 }
 
-.scrollup {
-    width: 0;
-	height: 0;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-    border-bottom: 30px solid #ccc;
+// .scrollup {
+//     width: 0;
+// 	height: 0;
+// 	border-left: 20px solid transparent;
+// 	border-right: 20px solid transparent;
+//     border-bottom: 25px solid $brand-orange-black;
+//     position: fixed;
+//     bottom: 50px;
+//     right: 20rem;
+//     display: none;
+//     z-index: 100;
+// }
+
+.scroll-top {
     position: fixed;
     bottom: 50px;
     right: 20rem;
-    display: none;
     z-index: 100;
+    text-decoration: none;
+
+    &:visited {
+        color: $brand-orange-black;
+    }
+
+    .scroll-top-text {
+        margin-top: -0.6rem;
+    }
 }

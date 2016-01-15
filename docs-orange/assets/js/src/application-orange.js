@@ -11,13 +11,14 @@
 
       $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-          $('.scrollup').fadeIn();
+          $('.scroll-top').fadeIn();
         } else {
-          $('.scrollup').fadeOut();
+          $('.scroll-top').fadeOut();
         }
+
       });
 
-      $('.scrollup').click(function () {
+      $('.scroll-top').click(function () {
 
         $('html, body').animate({
           scrollTop: 0
@@ -57,14 +58,37 @@
     };
   }
 
+  function onFooterVisibilityChange(el, scrollTopElm, defaultPos) {
+    return function () {
+
+      var footerStyles = window.getComputedStyle(el, null);
+      var footerHeight = footerStyles.height;
+
+      if (isElementInViewport(el)) {
+        scrollTopElm.style.bottom = footerHeight;
+      } else {
+        scrollTopElm.style.bottom = defaultPos;
+      }
+    };
+  }
+
   window.onload = function () {
     var pageHeader = document.getElementById('page_header');
     var pageWatcher = onVisibilityChange(pageHeader);
+    var findScrollTopElm = document.getElementsByClassName('scroll-top');
+    var scrollTopElm = findScrollTopElm.item(0);
+    var scrollTopStyles = window.getComputedStyle(scrollTopElm, null);
+    var scrollTopDefaultBottom = scrollTopStyles.bottom;
+    var findFooter = document.getElementsByTagName('footer');
+    var footerELm = findFooter.item(findFooter.length - 1);
+    var footerWatcher = onFooterVisibilityChange(footerELm, scrollTopElm, scrollTopDefaultBottom);
 
     if (window.addEventListener) {
       addEventListener('scroll', pageWatcher, false);
+      addEventListener('scroll', footerWatcher, false);
     } else if (window.attachEvent)  {
       attachEvent('onscroll', pageWatcher);
+      attachEvent('scroll', footerWatcher);
     }
   };
 })();
