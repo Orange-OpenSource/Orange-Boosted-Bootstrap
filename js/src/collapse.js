@@ -75,7 +75,7 @@ const Collapse = (($) => {
       this._triggerArray    = $.makeArray($(
         `[data-toggle="collapse"][href="#${element.id}"],` +
         `[data-toggle="collapse"][data-target="#${element.id}"]`
-      ))
+     ))
 
       this._parent = this._config.parent ? this._getParent() : null
 
@@ -161,9 +161,9 @@ const Collapse = (($) => {
       }
 
       this.setTransitioning(true)
-	  
-	  $(this._element).parent().find('h4.panel-title').removeClass('panel-chevron-closed').addClass('panel-chevron-open')
-		
+
+      $(this._element).parent().find('h4.panel-title').removeClass('panel-chevron-closed').addClass('panel-chevron-open')
+
       let complete = () => {
         $(this._element)
           .removeClass(ClassName.COLLAPSING)
@@ -193,7 +193,7 @@ const Collapse = (($) => {
     }
 
     hide() {
-		
+
       if (this._isTransitioning ||
         !$(this._element).hasClass(ClassName.IN)) {
         return
@@ -237,8 +237,8 @@ const Collapse = (($) => {
       }
 
       this._element.style[dimension] = 0
-	  $(this._element).parent().find('h4.panel-title').addClass('panel-chevron-closed').removeClass('panel-chevron-open')
-	  
+      $(this._element).parent().find('h4.panel-title').addClass('panel-chevron-closed').removeClass('panel-chevron-open')
+
       if (!Util.supportsTransitionEnd()) {
         complete()
         return
@@ -287,7 +287,7 @@ const Collapse = (($) => {
         this._addAriaAndCollapsedClass(
           Collapse._getTargetFromElement(element),
           [element]
-        )
+       )
       })
 
       return parent
@@ -309,30 +309,38 @@ const Collapse = (($) => {
 
     // static
 
-	static _keydown(e , that , target )  {
-      var $this = $(that)
-      , $items
-      , $tablist = $this.closest('div.panel-group ')
-      , index
-      , k = e.which || e.keyCode
-		
-      
-      if(k==32) 					// space
-	  $this.click();
-	  
-      $items = $tablist.find('[role=tab]')
-      index = $items.index($items.filter(':focus'))
+  static _keydown(e, that) {
+    let $items,
+      $tablist = $this.closest('div.panel-group '),
+      $this = $(that),
+      index,
+      k = e.which || e.keyCode
 
-      if (k == 38 || k == 37) index--                      // up & left
-      if (k == 39 || k == 40) index++                      // down & right
-      if(index < 0) index = $items.length -1
-      if(index == $items.length) index = 0
-
-      $items.eq(index).focus()
-      e.preventDefault()
-      e.stopPropagation()
-
+    if (k === 32) { 					// space
+      $this.click()
     }
+
+    $items = $tablist.find('[role=tab]')
+    index = $items.index($items.filter(':focus'))
+
+    if (k === 38 || k === 37) {
+      index--                      // up & left
+    }
+    if (k === 39 || k === 40) {
+      index++                      // down & right
+    }
+    if (index < 0) {
+      index = $items.length - 1
+    }
+    if (index === $items.length) {
+      index = 0
+    }
+
+    $items.eq(index).focus()
+    e.preventDefault()
+    e.stopPropagation()
+
+  }
 
     static _getTargetFromElement(element) {
       let selector = Util.getSelectorFromElement(element)
@@ -348,7 +356,7 @@ const Collapse = (($) => {
           Default,
           $this.data(),
           typeof config === 'object' && config
-        )
+       )
 
         if (!data && _config.toggle && /show|hide/.test(config)) {
           _config.toggle = false
@@ -376,104 +384,101 @@ const Collapse = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  var uniqueId = function(prefix) {
-		return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1);
-	}
+  let uniqueId = function(prefix) {
+    return '${0}-${Math.floor(Math.random() * 1000 + 1)}'(prefix || 'ui-id')
+  }
 
-	var $colltabs =  $('[data-toggle="collapse"]:not(.navbar-toggle)');
-	$colltabs.attr({ 'role':'tab', 'aria-selected':'false', 'aria-expanded':'false' });
-	$colltabs.each(function() {
-		var colltab = $(this),
-		collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
-		parent  = colltab.attr('data-parent'),
-		collparent = parent && $(parent),
-		collid = colltab.attr('id') || uniqueId('ui-collapse'),
-		heading = '';
+  let $colltabs =  $('[data-toggle="collapse"]:not(.navbar-toggle)')
+  $colltabs.attr({ role:'tab', 'aria-selected':'false', 'aria-expanded':'false' })
+  $colltabs.each(function() {
+    let collid = colltab.attr('id') || uniqueId('ui-collapse'),
+      collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
+      collparent = parent && $(parent),
+      colltab = $(this),
+      heading = '',
+      parent  = colltab.attr('data-parent')
 
+    colltab.attr('id', collid)
+    if (collparent) {
+      $(collparent).find('div:not(.collapse,.panel-body), h4').attr('role', 'presentation')
+      collparent.attr({ role: 'tablist', 'aria-multiselectable' : 'true' })
 
-		colltab.attr('id', collid);
-		if(collparent){
-			$(collparent).find('div:not(.collapse,.panel-body), h4').attr('role','presentation');
-			collparent.attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
+      heading = collpanel.parent().children().first() // On sélectionne le heading (panel-heading)
 
-			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
+      if (collpanel.hasClass('in')) {
+        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true', tabindex:'0' })
 
-			if(collpanel.hasClass('in')){
-				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true', 'tabindex':'0' });
+        // don't change the attribute for menu panel specific case
+        if (!colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role:'tabpanel', tabindex:'0', 'aria-labelledby':collid, 'aria-hidden':'false' })
+        }
 
-				// don't change the attribute for menu panel specific case
-				if(!colltab.hasClass('navbar-toggle')) {
-					collpanel.attr({ 'role':'tabpanel', 'tabindex':'0', 'aria-labelledby':collid, 'aria-hidden':'false' });
-				}
+        // Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
+        // Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
+        if (heading.hasClass('panel-heading')) {
+          heading.addClass('panel-selected')
+          heading.children().first().addClass('panel-chevron-open')
+        }
+      } else {
+        colltab.attr({ 'aria-controls' : collpanel.attr('id'), tabindex:'-1' })
+        // don't change the attribute for menu panel specific case
+        if (!colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role:'tabpanel', tabindex:'-1', 'aria-labelledby':collid, 'aria-hidden':'true' })
+        }
 
-				//Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
-				//Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
-				if(heading.hasClass('panel-heading') ){
-					heading.addClass( 'panel-selected' );
-					heading.children().first().addClass('panel-chevron-open');
-				}
+        // Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
+        if (heading.hasClass('panel-heading')) {
+          heading.children().first().addClass('panel-chevron-closed')
+        }
+      }
+    } else {
+      heading = collpanel.parent().children().first() // On sélectionne le heading (panel-heading)
+      if (collpanel.hasClass('in')) {
+        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true' })
+        // don't change the attribute for menu panel specific case
+        if (!colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role:'tabpanel', 'aria-labelledby':collid, 'aria-hidden':'false' })
+        }
 
-			}else{
-				colltab.attr({'aria-controls' : collpanel.attr('id'), 'tabindex':'-1' });
-		// don't change the attribute for menu panel specific case
-		if(!colltab.hasClass('navbar-toggle')) {
-		  collpanel.attr({ 'role':'tabpanel', 'tabindex':'-1', 'aria-labelledby':collid, 'aria-hidden':'true' });
-		}
+        // Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
+        // Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
+        if (heading.hasClass('panel-heading')) {
+          heading.addClass('panel-selected')
+          heading.children().first().addClass('panel-chevron-open')
+        }
 
-				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
-				if(heading.hasClass('panel-heading') ){
-					heading.children().first().addClass('panel-chevron-closed');
-				}
-			}
-		}else{
-			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
+      } else {
+        colltab.attr({ 'aria-controls' : collpanel.attr('id'), 'aria-selected':'false', 'aria-expanded':'false'  })
+        // don't change the attribute for menu panel specific case
+        if (!colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role:'tabpanel', 'aria-labelledby':collid, 'aria-hidden':'true' })
+        }
 
-			if(collpanel.hasClass('in')){
-				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true' });
-		// don't change the attribute for menu panel specific case
-		if(!colltab.hasClass('navbar-toggle')) {
-		  collpanel.attr({ 'role':'tabpanel', 'aria-labelledby':collid, 'aria-hidden':'false' });
-		}
-
-				//Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
-				//Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
-				if(heading.hasClass('panel-heading') ){
-					heading.addClass( 'panel-selected' );
-					heading.children().first().addClass('panel-chevron-open');
-				}
-
-			}else{
-				colltab.attr({'aria-controls' : collpanel.attr('id'), 'aria-selected':'false', 'aria-expanded':'false'  })
-		// don't change the attribute for menu panel specific case
-		if(!colltab.hasClass('navbar-toggle')) {
-		  collpanel.attr({ 'role':'tabpanel', 'aria-labelledby':collid, 'aria-hidden':'true' });
-		}
-
-				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
-				if(heading.hasClass('panel-heading') ){
-					heading.children().first().addClass('panel-chevron-closed');
-				}
-			}
-		}
-	})
+        // Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
+        if (heading.hasClass('panel-heading')) {
+          heading.children().first().addClass('panel-chevron-closed')
+        }
+      }
+    }
+  })
 
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
    * ------------------------------------------------------------------------
    */
-  $(document).on('keydown.collapse.data-api','[data-toggle="collapse"]' , function (event) {
-	  
-	  let target = Collapse._getTargetFromElement(this)
-	  let k = event.which || event.keyCode ;
-	  if (!/(32|37|38|39|40)/.test(k)) return 
-	  Collapse._keydown.call($(target), event, this , target)
-	  event.preventDefault()
-	  event.stopPropagation()
-      return false ;
-	}
- ) 
-  
+  $(document).on('keydown.collapse.data-api', '[data-toggle="collapse"]', function (event) {
+    let target = Collapse._getTargetFromElement(this)
+    let k = event.which || event.keyCode
+    if (!/(32|37|38|39|40)/.test(k)) {
+      return true
+    }
+    Collapse._keydown.call($(target), event, this)
+    event.preventDefault()
+    event.stopPropagation()
+    return false
+  })
+
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     event.preventDefault()
     let target = Collapse._getTargetFromElement(this)
@@ -482,9 +487,9 @@ const Collapse = (($) => {
 
     Collapse._jQueryInterface.call($(target), config)
   })
-  $(function () {
-	$(".o-accordion .panel-heading h4 a ").prepend('<div class=arrow></div>');
-  });
+  $(() => {
+    $('.o-accordion .panel-heading h4 a ').prepend('<div class=arrow></div>')
+  })
   /**
    * ------------------------------------------------------------------------
    * jQuery

@@ -294,23 +294,33 @@ var Collapse = (function ($) {
 
     }], [{
       key: '_keydown',
-      value: function _keydown(e, that, target) {
-        var $this = $(that),
-            $items,
+      value: function _keydown(e, that) {
+        var $items = undefined,
             $tablist = $this.closest('div.panel-group '),
-            index,
+            $this = $(that),
+            index = undefined,
             k = e.which || e.keyCode;
 
-        if (k == 32) // space
+        if (k === 32) {
+          // space
           $this.click();
+        }
 
         $items = $tablist.find('[role=tab]');
         index = $items.index($items.filter(':focus'));
 
-        if (k == 38 || k == 37) index--; // up & left
-        if (k == 39 || k == 40) index++; // down & right
-        if (index < 0) index = $items.length - 1;
-        if (index == $items.length) index = 0;
+        if (k === 38 || k === 37) {
+          index--; // up & left
+        }
+        if (k === 39 || k === 40) {
+          index++; // down & right
+        }
+        if (index < 0) {
+          index = $items.length - 1;
+        }
+        if (index === $items.length) {
+          index = 0;
+        }
 
         $items.eq(index).focus();
         e.preventDefault();
@@ -363,64 +373,63 @@ var Collapse = (function ($) {
   })();
 
   var uniqueId = function uniqueId(prefix) {
-    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * 1000 + 1);
+    return '${0}-${Math.floor(Math.random() * 1000 + 1)}'(prefix || 'ui-id');
   };
 
   var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
-  $colltabs.attr({ 'role': 'tab', 'aria-selected': 'false', 'aria-expanded': 'false' });
+  $colltabs.attr({ role: 'tab', 'aria-selected': 'false', 'aria-expanded': 'false' });
   $colltabs.each(function () {
-    var colltab = $(this),
+    var collid = colltab.attr('id') || uniqueId('ui-collapse'),
         collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
-        parent = colltab.attr('data-parent'),
         collparent = parent && $(parent),
-        collid = colltab.attr('id') || uniqueId('ui-collapse'),
-        heading = '';
+        colltab = $(this),
+        heading = '',
+        parent = colltab.attr('data-parent');
 
     colltab.attr('id', collid);
     if (collparent) {
       $(collparent).find('div:not(.collapse,.panel-body), h4').attr('role', 'presentation');
-      collparent.attr({ 'role': 'tablist', 'aria-multiselectable': 'true' });
+      collparent.attr({ role: 'tablist', 'aria-multiselectable': 'true' });
 
-      heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
+      heading = collpanel.parent().children().first(); // On sélectionne le heading (panel-heading)
 
       if (collpanel.hasClass('in')) {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true', 'tabindex': '0' });
+        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true', tabindex: '0' });
 
         // don't change the attribute for menu panel specific case
         if (!colltab.hasClass('navbar-toggle')) {
-          collpanel.attr({ 'role': 'tabpanel', 'tabindex': '0', 'aria-labelledby': collid, 'aria-hidden': 'false' });
+          collpanel.attr({ role: 'tabpanel', tabindex: '0', 'aria-labelledby': collid, 'aria-hidden': 'false' });
         }
 
-        //Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
-        //Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
+        // Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
+        // Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
         if (heading.hasClass('panel-heading')) {
           heading.addClass('panel-selected');
           heading.children().first().addClass('panel-chevron-open');
         }
       } else {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'tabindex': '-1' });
+        colltab.attr({ 'aria-controls': collpanel.attr('id'), tabindex: '-1' });
         // don't change the attribute for menu panel specific case
         if (!colltab.hasClass('navbar-toggle')) {
-          collpanel.attr({ 'role': 'tabpanel', 'tabindex': '-1', 'aria-labelledby': collid, 'aria-hidden': 'true' });
+          collpanel.attr({ role: 'tabpanel', tabindex: '-1', 'aria-labelledby': collid, 'aria-hidden': 'true' });
         }
 
-        //Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
+        // Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
         if (heading.hasClass('panel-heading')) {
           heading.children().first().addClass('panel-chevron-closed');
         }
       }
     } else {
-      heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
-
+      heading = collpanel.parent().children().first(); // On sélectionne le heading (panel-heading)
       if (collpanel.hasClass('in')) {
         colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true' });
         // don't change the attribute for menu panel specific case
         if (!colltab.hasClass('navbar-toggle')) {
-          collpanel.attr({ 'role': 'tabpanel', 'aria-labelledby': collid, 'aria-hidden': 'false' });
+          collpanel.attr({ role: 'tabpanel', 'aria-labelledby': collid, 'aria-hidden': 'false' });
         }
 
-        //Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
-        //Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
+        // Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
+        // Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
         if (heading.hasClass('panel-heading')) {
           heading.addClass('panel-selected');
           heading.children().first().addClass('panel-chevron-open');
@@ -429,10 +438,10 @@ var Collapse = (function ($) {
         colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'false', 'aria-expanded': 'false' });
         // don't change the attribute for menu panel specific case
         if (!colltab.hasClass('navbar-toggle')) {
-          collpanel.attr({ 'role': 'tabpanel', 'aria-labelledby': collid, 'aria-hidden': 'true' });
+          collpanel.attr({ role: 'tabpanel', 'aria-labelledby': collid, 'aria-hidden': 'true' });
         }
 
-        //Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
+        // Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
         if (heading.hasClass('panel-heading')) {
           heading.children().first().addClass('panel-chevron-closed');
         }
@@ -446,11 +455,12 @@ var Collapse = (function ($) {
    * ------------------------------------------------------------------------
    */
   $(document).on('keydown.collapse.data-api', '[data-toggle="collapse"]', function (event) {
-
     var target = Collapse._getTargetFromElement(this);
     var k = event.which || event.keyCode;
-    if (!/(32|37|38|39|40)/.test(k)) return;
-    Collapse._keydown.call($(target), event, this, target);
+    if (!/(32|37|38|39|40)/.test(k)) {
+      return true;
+    }
+    Collapse._keydown.call($(target), event, this);
     event.preventDefault();
     event.stopPropagation();
     return false;
@@ -465,7 +475,7 @@ var Collapse = (function ($) {
     Collapse._jQueryInterface.call($(target), config);
   });
   $(function () {
-    $(".o-accordion .panel-heading h4 a ").prepend('<div class=arrow></div>');
+    $('.o-accordion .panel-heading h4 a ').prepend('<div class=arrow></div>');
   });
   /**
    * ------------------------------------------------------------------------
