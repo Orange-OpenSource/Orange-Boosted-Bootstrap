@@ -120,11 +120,16 @@
 }
 
 .bd-footer {
+    padding: 0;
     color: $brand-orange-white;
     background-color: $brand-orange-black;
     text-align: center;
-    margin-top: 0;
+    margin-top: 4rem;
     font-size: $font-size-base;
+
+    .o-footer-top {
+        padding: 4rem 0;
+    }
 
     a {
         color: $brand-orange-white;
@@ -191,22 +196,9 @@
   }
 }
 
-// .scrollup {
-//     width: 0;
-// 	height: 0;
-// 	border-left: 20px solid transparent;
-// 	border-right: 20px solid transparent;
-//     border-bottom: 25px solid $brand-orange-black;
-//     position: fixed;
-//     bottom: 50px;
-//     right: 20rem;
-//     display: none;
-//     z-index: 100;
-// }
-
 .scroll-top {
     position: fixed;
-    bottom: 50px;
+    bottom: 4rem;
     right: 20rem;
     z-index: 100;
     text-decoration: none;
