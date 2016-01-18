@@ -11,6 +11,7 @@
     "grunt-autoprefixer": "~3.0.0",
     "grunt-autoshot": "^0.2.1",
     "grunt-banner": "~0.6.0",
+    "grunt-bootlint": "^0.10.0",
     "grunt-concurrent": "~2.0.4",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-compress": "~0.14.0",
@@ -33,8 +34,8 @@
     "grunt-text-replace": "^0.4.0",
     "gruntify-eslint": "^1.1.0",
     "load-grunt-tasks": "~3.3.0",
-    "serve-static": "^1.10.0",
     "qunit": "^0.7.7",
+    "serve-static": "^1.10.0",
     "time-grunt": "^1.2.0"
   },
   "private": false,

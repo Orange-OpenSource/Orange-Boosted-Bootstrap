@@ -157,6 +157,14 @@ module.exports = function (grunt) {
           '!dist/css/*.min.css'
        ]
     },
+    
+    bootlint: {
+      options: {
+        stoponerror: false,
+        relaxerror: []
+      },
+      files: ['docs/{,**/}*.html', 'docs/{,**/}*.htm',]
+    },
 
     // Banner
     banner: '/*!\n <%= yeoman.pkg.name %> - v<%= yeoman.pkg.version %> - ' +      
