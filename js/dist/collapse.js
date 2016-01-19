@@ -373,16 +373,16 @@ var Collapse = (function ($) {
   })();
 
   var uniqueId = function uniqueId(prefix) {
-    return '${0}-${Math.floor(Math.random() * 1000 + 1)}'(prefix || 'ui-id');
+    return (prefix || 'ui-id') + '-${Math.floor(Math.random() * 1000 + 1)}';
   };
 
   var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
   $colltabs.attr({ role: 'tab', 'aria-selected': 'false', 'aria-expanded': 'false' });
   $colltabs.each(function () {
-    var collid = colltab.attr('id') || uniqueId('ui-collapse'),
+    var colltab = $(this),
+        collid = colltab.attr('id') || uniqueId('ui-collapse'),
         collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
         collparent = parent && $(parent),
-        colltab = $(this),
         heading = '',
         parent = colltab.attr('data-parent');
 
