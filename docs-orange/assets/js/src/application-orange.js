@@ -67,7 +67,7 @@
 
         var footerRect = el.getBoundingClientRect();
 
-        if (footerRect.top < (window.innerHeight || document. documentElement.clientHeight)) {
+        if (isElementInViewport(el)) {
           scrollTopElm.style.bottom = (window.innerHeight - footerRect.top + parseInt(defaultPos)) + 'px';
         } else {
           scrollTopElm.style.bottom = defaultPos;
