@@ -96,62 +96,59 @@
 		</header>
 
 
-	<main id="content" class="container" role="main">
-
-        <div class="row">
-            <!-- step bar -->
-            <ul class="o-wizard-step-bar" data-steps="5">
-                <li class="visited">
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
-                        <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
-                    </div>
-                </li>
-                <li class="visited">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
-                        <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
-                    </div>
-                </li>
-                <li class="on">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
-                        <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
-                    </div>
-                </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
-                        <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
-                    </div>
-                </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
-                        <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
-                    </div>
-                </li>
-            </ul>
-            <!-- /step bar -->
-        </div>
-		<form class="row form-horizontal" role="form" id="myForm">
-			<div class="form-group">
+	<main id="content" role="main">
+    <!-- step bar -->
+    <ul class="o-wizard-step-bar" data-steps="5">
+        <li class="visited">
+            <div>
+                <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
+                <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
+            </div>
+        </li>
+        <li class="visited">
+            <div class="arrow" aria-hidden="true"></div>
+            <div>
+                <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
+                <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
+            </div>
+        </li>
+        <li class="on">
+            <div class="arrow" aria-hidden="true"></div>
+            <div>
+                <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
+                <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
+            </div>
+        </li>
+        <li class="next">
+            <div class="arrow" aria-hidden="true"></div>
+            <div>
+                <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
+                <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
+            </div>
+        </li>
+        <li class="next">
+            <div class="arrow" aria-hidden="true"></div>
+            <div>
+                <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
+                <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
+            </div>
+        </li>
+    </ul>
+    <!-- /step bar -->
+		<form class="container-fluid form-horizontal" role="form" id="myForm">
+			<div class="row form-group">
 				<label for="inputEmail" class="col-sm-2 control-label">Email</label>
 				<div class="col-sm-10">
 					<input type="email" class="form-control" id="inputEmail" placeholder="email@provider.com">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="row form-group">
 				<label for="inputPasswor3" class="col-sm-2 control-label">Password</label>
 				<div class="col-sm-10">
 					<input type="password" class="form-control" id="inputPassword" placeholder="password">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="row form-group">
 				<label for="inputCountry" class="col-sm-2 control-label">Country</label>
 				<div class="col-sm-10">
 					<select class="form-control" id="country" name="inputCountry">
@@ -175,20 +172,20 @@
 					</select>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="row form-group">
 				<label for="inputComment" class="col-sm-2 control-label">Comment</label>
 				<div class="col-sm-10">
 					<textarea class="form-control" rows="3" id="inputComment"></textarea>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="row form-group">
 				<label for="inputDoc" class="col-sm-2 control-label">Documentation</label>
 				<div class="col-sm-10">
 					<input type="file" id="exampleInputFile">
 					<p class="help-block">File max size : 100MB</p>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="row form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					<button type="submit" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-chevron-left"></span> Previous</button>
 					<button type="submit" class="btn btn-default btn-xs">Save</button>

@@ -39,7 +39,7 @@
 		</div>
 
 		<header role="banner">
-            <nav class="navbar navbar-inverse" role="navigation">
+      <nav class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -71,144 +71,142 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
 		</nav>
-        </header>
-
-
-		<main id="content" class="container" role="main">
-            <div id="header" class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <a href="#">
-                            <img src="images/logo-orange.png">
-                        </a>
-                        <h1>news administration</h1>
-                    </div>
-                </div>
+    </header>
+    
+    <div id="header" class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#">
+                    <img src="images/logo-orange.png">
+                </a>
+                <h1>news administration</h1>
             </div>
+        </div>
+    </div>
 
-            <div id="localContainer" class="container">
+    <div id="localContainer" class="container">
 			<nav id="localNavigation" class="navbar navbar-default nav-local" role="navigation">
-
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-						<span class="sr-only">toggle navigation</span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-
-				<div class="collapse navbar-collapse local" id="bs-example-navbar-collapse-2">
-					<ul class="nav navbar-nav local-nav">
-						<li><a href="#">all</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">world</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">entertainment</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">finance</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">technology</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">weather</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">sport</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">video</a><div class='arrow' aria-hidden='true'></div></li>
-						<li><a href="#">pictures</a><div class='arrow' aria-hidden='true'></div></li>
-						<li class="active"><a href="#">health</a><div class='arrow' aria-hidden='true'></div></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-
+        <div class="container-fluid">
+  				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+  						<span class="sr-only">toggle navigation</span>
+  						<span class="icon-bar"></span>
+  					</button>
+  				</div>
+  
+  				<div class="collapse navbar-collapse local" id="bs-example-navbar-collapse-2">
+  					<ul class="nav navbar-nav local-nav">
+  						<li><a href="#">all</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">world</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">entertainment</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">finance</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">technology</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">weather</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">sport</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">video</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">pictures</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li class="active"><a href="#">health</a><div class='arrow' aria-hidden='true'></div></li>
+  					</ul>
+  				</div><!-- /.navbar-collapse -->
+        </div>
 			</nav>       
 		</div><!-- /.container -->
-
-			<div class="row">
-				<a href="edit.html" class="btn btn-primary">Add a news</a>
-				<table id="news-table" class="table table-striped tablesorter">
-					<thead>
-						<tr>
-							<th scope="col"><a href="#">ID<span class="sr-only"> sortable</span></a></th>
-							<th scope="col"><a href="#">title<span class="sr-only"> sortable</span></a></th>
-							<th scope="col"><a href="#">date<span class="sr-only"> sortable</span></a></th>
-							<th scope="col"><a href="#">category<span class="sr-only"> sortable</span></a></th>
-							<th scope="col">actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Eat 5 fruits and vegetables a day</td>
-							<td>07/07/2014 09:00</td>
-							<td>Health</td>
-							<td>
-								<a href="edit.html" class="btn btn-primary">Edit</a>
-								<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
-							</td>
-						</tr>
-						<tr>
-							<td>9</td>
-							<td>Eat potatoes</td>
-							<td>09/24/2014 10:00</td>
-							<td>Health</td>
-							<td>
-								<a href="edit.html" class="btn btn-primary">Edit</a>
-								<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
-							</td>
-						</tr>
-						<tr>
-							<td>10</td>
-							<td>Chikungunya: protect yourself</td>
-							<td>09/06/2014 09:00</td>
-							<td>Health</td>
-							<td>
-								<a href="edit.html" class="btn btn-primary">Edit</a>
-								<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-
-				<!-- Modal -->
-				<div class="modal fade" id="confirm-dialog" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h2 class="modal-title h4" id="myModalLabel">Are you sure?</h2>
-							</div>
-							<div class="modal-body">
-								<p>If you delete this entry, all information will be permanently lost. Are you sure?</p>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-								<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
-							</div>
-						</div>
+    
+		<main id="content" role="main" class="container">
+      <div class="row">
+        <div class="col-xs-12">        
+          <a href="edit.html" class="btn btn-primary">Add a news</a>
+        </div>          
+  			<table id="news-table" class="table table-striped tablesorter col-xs-12">
+  				<thead>
+  					<tr>
+  						<th scope="col"><a href="#">ID<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col"><a href="#">title<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col"><a href="#">date<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col"><a href="#">category<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col">actions</th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr>
+  						<td>1</td>
+  						<td>Eat 5 fruits and vegetables a day</td>
+  						<td>07/07/2014 09:00</td>
+  						<td>Health</td>
+  						<td>
+  							<a href="edit.html" class="btn btn-primary">Edit</a>
+  							<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
+  						</td>
+  					</tr>
+  					<tr>
+  						<td>9</td>
+  						<td>Eat potatoes</td>
+  						<td>09/24/2014 10:00</td>
+  						<td>Health</td>
+  						<td>
+  							<a href="edit.html" class="btn btn-primary">Edit</a>
+  							<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
+  						</td>
+  					</tr>
+  					<tr>
+  						<td>10</td>
+  						<td>Chikungunya: protect yourself</td>
+  						<td>09/06/2014 09:00</td>
+  						<td>Health</td>
+  						<td>
+  							<a href="edit.html" class="btn btn-primary">Edit</a>
+  							<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
+  						</td>
+  					</tr>
+  				</tbody>
+  			</table>
+  
+  			<!-- Nav tabs A-->
+  			<ul class="nav nav-tabs col-xs-12">
+  				<li class="active"><a href="#help" data-toggle="tab">Help</a></li>
+  				<li><a href="#faq" data-toggle="tab">FAQ</a></li>
+  			</ul>
+  			<div class="tab-content col-xs-12">
+  				<div class="tab-pane active" id="help"><p>From this view, you can edit or delete entry of your web site. You can also add an entry by clicking on "add an news" button.<br/>You can reorder column by clicking on them.<br/>Finaly, you can search an item by typing his title or his ID in the search field, at the top of the page.</p>
+  				</div>
+  				<div class="tab-pane" id="faq">
+  					<p>
+  					<ul>
+  						<li><a href="#">I can't delete an entry</a></li>
+  						<li><a href="#">I've got an error 500 when i try to edit an entry</a></li>
+  						<li><a href="#">Another question</a></li>
+  					</ul>
+  					</p>
+  			</div>
+  		</div><!-- fin nav tabs A -->
+  		<hr class="col-xs-12">                             
+  	 </div>
+		</main><!--/.container-->       
+  
+		<!-- Modal -->
+		<div class="modal fade" id="confirm-dialog" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title h4" id="myModalLabel">Are you sure?</h2>
 					</div>
-				</div><!-- fin modal -->
-
-				<!-- Nav tabs A-->
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#help" data-toggle="tab">Help</a></li>
-					<li><a href="#faq" data-toggle="tab">FAQ</a></li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="help"><p>From this view, you can edit or delete entry of your web site. You can also add an entry by clicking on "add an news" button.<br/>You can reorder column by clicking on them.<br/>Finaly, you can search an item by typing his title or his ID in the search field, at the top of the page.</p>
+					<div class="modal-body">
+						<p>If you delete this entry, all information will be permanently lost. Are you sure?</p>
 					</div>
-					<div class="tab-pane" id="faq">
-						<p>
-						<ul>
-							<li><a href="#">I can't delete an entry</a></li>
-							<li><a href="#">I've got an error 500 when i try to edit an entry</a></li>
-							<li><a href="#">Another question</a></li>
-						</ul>
-						</p>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+					</div>
 				</div>
-			</div><!-- fin nav tabs A -->
-
-			</div><!-- fin de la row globale-->
-
-		<hr>
-
-		</main><!--/.container-->
+			</div>
+		</div><!-- fin modal -->
 
 
 	<footer role="contentinfo">
 		<div class="container">
 			<span>© Orange 2015</span>
-			<span id="id_for_cdu_link" class="navbar-right"></span>
+			<span id="id_for_cdu_link" class="pull-right"></span>
 		</div>
 	</footer>
 
@@ -245,6 +243,7 @@
 		accessibilitytoolbar_custom={
 			idSkipLinkIdLinkMode:"cdu_skiplink",
 			cssSkipLinkClassName: "skiplinks_trigger",
+      idLinkModeContainer: "id_for_cdu_link",
 			callback:skiplinksAfterLoad
 		};
 
