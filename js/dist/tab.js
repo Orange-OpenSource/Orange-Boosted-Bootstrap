@@ -158,7 +158,7 @@ var Tab = (function ($) {
         var $active = $(container).find('> .active');
         $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex': '-1', 'aria-selected': false });
         $active.filter('.tab-pane').attr({ 'aria-hidden': true, 'tabIndex': '-1' });
-        //---	 
+        //---
         var active = $(container).find(Selector.ACTIVE_CHILD)[0];
         var isTransitioning = callback && Util.supportsTransitionEnd() && (active && $(active).hasClass(ClassName.FADE) || Boolean($(container).find(Selector.FADE_CHILD)[0]));
 
@@ -174,7 +174,7 @@ var Tab = (function ($) {
           $(active).removeClass(ClassName.IN);
         }
 
-        if (element.tagName == 'A') {
+        if (element.tagName === 'A') {
           // $(container).find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '0','aria-selected' : true }).focus() // (DOESN'T WORK ?)
           $('#' + element.id).attr({ 'tabIndex': '0', 'aria-selected': true }).focus();
         }
@@ -238,11 +238,11 @@ var Tab = (function ($) {
         $items = $ul.find('[role=tab]:visible');
         index = $items.index($items.filter(':focus'));
 
-        if (k == 38 || k == 37) index--; // up & left
-        if (k == 39 || k == 40) index++; // down & right
+        if (k === 38 || k === 37) index--; // up & left
+        if (k === 39 || k === 40) index++; // down & right
 
         if (index < 0) index = $items.length - 1;
-        if (index == $items.length) index = 0;
+        if (index === $items.length) index = 0;
 
         var nextTab = $items.eq(index);
         if (nextTab.attr('role') === 'tab') {
