@@ -1,1 +1,7 @@
-{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":[]}
+/*!
+ boosted - v3.2.1 - Orange Boosted with Boostrap
+ Copyright 2016 Orange SA, all right reserved
+MIT Licensed 
+*/
+
+{"version":3,"sources":["bootstrap-orange-theme2015.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;;;IAwBI;AACJ;;;;;;;;;;;;;;;;;;;;;;;;;;EA0BE;AACF;;;;;;;;;;;;EAYE","file":"bootstrap-orange-theme2015.css"}
