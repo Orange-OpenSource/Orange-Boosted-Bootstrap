@@ -177,30 +177,22 @@
 
   <h2 id="grid-media-queries">Media queries</h2>
   <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Extra extra small devices (phones, less than 481px) */</span>
-<span class="cm">/* No media query since this is the default in Boost */</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Extra small devices (phones, less than 768px) */</span>
+<span class="cm">/* No media query since this is the default in Bootstrap */</span>
 
-<span class="cm">/* Extra small devices (phones 481px and up) */</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xs-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-  
-<span class="cm">/* Small devices (tablets, 769px and up) */</span>
+<span class="cm">/* Small devices (tablets, 768px and up) */</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="cm">/* Medium devices (desktops, 1025px and up) */</span>
+<span class="cm">/* Medium devices (desktops, 992px and up) */</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="cm">/* Large devices (large desktops, 1281px and up) */</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-  
-<span class="cm">/* Extra large devices (large desktops, 1441px and up) */</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xlg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<span class="cm">/* Large devices (large desktops, 1200px and up) */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
   <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xxs-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xs-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xs-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xs-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xlg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
   <h2 id="grid-options">Grid options</h2>
   <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
@@ -210,28 +202,20 @@
         <tr>
           <th></th>
           <th>
-            Extra extra small devices
-            <small>Phones (&lt;481px)</small>
-          </th>
-          <th>
             Extra small devices
-            <small>Phones (&ge;481px)</small>
+            <small>Phones (&lt;768px)</small>
           </th>
           <th>
             Small devices
-            <small>Tablets (&ge;769px)</small>
+            <small>Tablets (&ge;768px)</small>
           </th>
           <th>
             Medium devices
-            <small>Desktops (&ge;1025px)</small>
+            <small>Desktops (&ge;992px)</small>
           </th>
           <th>
             Large devices
-            <small>Desktops (&ge;1281px)</small>
-          </th>
-          <th>
-            Extra large devices
-            <small>Desktops (&ge;1441px)</small>
+            <small>Desktops (&ge;1200px)</small>
           </th>
         </tr>
       </thead>
@@ -244,49 +228,43 @@
         <tr>
           <th class="text-nowrap" scope="row">Container width</th>
           <td>None (auto)</td>
-          <td>480px</td>
-          <td>768px</td>
-          <td>960px</td>
-          <td>1200px</td>
-          <td>1300px</td>
+          <td>750px</td>
+          <td>970px</td>
+          <td>1170px</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Class prefix</th>
-          <td><code>.col-xxs-</code></td>
           <td><code>.col-xs-</code></td>
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
-          <td><code>.col-xlg-</code></td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row"># of columns</th>
-          <td colspan="6">12</td>
+          <td colspan="4">12</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Column width</th>
           <td class="text-muted">Auto</td>
-          <td>~40px</td>
-          <td>~64px</td>
-          <td>~80px</td>
-          <td>~100px</td>
-          <td>~108px</td>
+          <td>~62px</td>
+          <td>~81px</td>
+          <td>~97px</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Gutter width</th>
-          <td colspan="6">20px (10px on each side of a column)</td>
+          <td colspan="4">30px (15px on each side of a column)</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Nestable</th>
-          <td colspan="6">Yes</td>
+          <td colspan="4">Yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Offsets</th>
-          <td colspan="6">Yes</td>
+          <td colspan="4">Yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Column ordering</th>
-          <td colspan="6">Yes</td>
+          <td colspan="4">Yes</td>
         </tr>
       </tbody>
     </table>
@@ -549,8 +527,8 @@
   <h3>Variables</h3>
   <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@grid-columns</span><span class="nd">:</span>              <span class="nt">12</span><span class="p">;</span>
-<span class="k">@grid-gutter-width</span><span class="nd">:</span>         <span class="nt">20px</span><span class="p">;</span>
-<span class="k">@grid-float-breakpoint</span><span class="nd">:</span>     <span class="nt">769px</span><span class="p">;</span></code></pre></figure>
+<span class="k">@grid-gutter-width</span><span class="nd">:</span>         <span class="nt">30px</span><span class="p">;</span>
+<span class="k">@grid-float-breakpoint</span><span class="nd">:</span>     <span class="nt">768px</span><span class="p">;</span></code></pre></figure>
 
   <h3>Mixins</h3>
   <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
