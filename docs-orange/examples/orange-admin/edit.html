@@ -78,7 +78,7 @@
 						<div class="col-md-6">
 							<div class="form-group required">
 								<label for="PostDate">date (<span id="date-format">mm/dd/yyyy</span>): <span class="star">*</span></label>
-								<input name="data[Post][date]" class="form-control" type="date" id="PostDate" required="required" aria-required="true" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
+								<input pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" class="form-control" type="date" id="PostDate" required="required" aria-required="true" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
 							</div>
 						</div>
 					</div>
@@ -159,10 +159,6 @@
 				});
 			}
 
-                $('#PostDate').datepicker({
-                keyboardNavigation: false,
-                toggleActive: true
-                });
 		</script>
 
 		<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>

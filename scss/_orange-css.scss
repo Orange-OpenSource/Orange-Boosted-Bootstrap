@@ -182,7 +182,7 @@ html {
     color: $brand-orange-white !important;
 
     @include hover-focus {
-      color: $brand-orange;
+      color: $brand-orange !important;
     }
   }
   // Uncollapse the nav
