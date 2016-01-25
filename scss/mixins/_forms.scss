@@ -14,7 +14,7 @@
   &.radio label,
   &.checkbox label,
   &.radio-inline label,
-  &.checkbox-inline label  {
+  &.checkbox-inline label {
     color: $color;
   }
   // Set the border and box shadow on specific inputs to match
@@ -32,8 +32,8 @@
   // Set validation states also for addons
   .input-group-addon {
     color: $color;
-    border-color: $color;
     background-color: lighten($color, 40%);
+    border-color: $color;
   }
   // Optional feedback icon
   .form-control-feedback {

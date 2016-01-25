@@ -15,14 +15,14 @@
   @include hover {
     color: $color;
     background-color: $active-background;
-        border-color: $active-border;
+    border-color: $active-border;
   }
 
   &:focus,
   &.focus {
     color: $color;
     background-color: $active-background;
-        border-color: $active-border;
+    border-color: $active-border;
   }
 
   &:active,
@@ -30,9 +30,9 @@
   .open > &.dropdown-toggle {
     color: $color;
     background-color: $active-background;
-        border-color: $active-border;
-    // Remove the gradient for the pressed/active state
     background-image: none;
+    border-color: $active-border;
+    // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
     &:hover,
@@ -40,7 +40,7 @@
     &.focus {
       color: $color;
       background-color: darken($background, 17%);
-          border-color: darken($border, 25%);
+      border-color: darken($border, 25%);
     }
   }
 
@@ -49,11 +49,11 @@
     &:focus,
     &.focus {
       background-color: $background;
-          border-color: $border;
+      border-color: $border;
     }
     @include hover {
       background-color: $background;
-          border-color: $border;
+      border-color: $border;
     }
   }
 }
@@ -71,12 +71,12 @@
   .open > &.dropdown-toggle {
     color: #fff;
     background-color: $color;
-        border-color: $color;
+    border-color: $color;
   }
   @include hover {
     color: #fff;
     background-color: $color;
-        border-color: $color;
+    border-color: $color;
   }
 
   &.disabled,

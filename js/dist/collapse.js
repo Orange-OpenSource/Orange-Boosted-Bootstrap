@@ -373,7 +373,7 @@ var Collapse = (function ($) {
   })();
 
   var uniqueId = function uniqueId(prefix) {
-    return (prefix || 'ui-id') + '-${Math.floor(Math.random() * 1000 + 1)}';
+    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * 1000 + 1);
   };
 
   var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
