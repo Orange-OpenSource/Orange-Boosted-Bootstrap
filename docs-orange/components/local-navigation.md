@@ -33,8 +33,8 @@ Add the `.nav-local` class to the nav tag, `.local` onto the nav links content, 
         <ul class="nav navbar-nav pull-md-right">
             <li class="nav-item"><a class="nav-link" href="#">Accusantium<div class='arrow' aria-hidden='true'></div></a></li>
             <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu1">Dropdown <b class="caret" aria-hidden="true"></b></a>
-            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu2">Dropdown <b class="caret" aria-hidden="true"></b></a>
+            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                 <a href="#" role="menuitem" class="dropdown-item">Action</a>
                 <a href="#" role="menuitem" class="dropdown-item">Another action</a>
                 <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
@@ -63,8 +63,8 @@ Add the `.nav-local` class to the nav tag, `.local` onto the nav links content, 
         </ul>
         <ul class="nav navbar-nav pull-md-right">
             <li class="nav-item dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu2">Dropdown <b class="caret" aria-hidden="true"></b></a>
-                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu3">Dropdown <b class="caret" aria-hidden="true"></b></a>
+                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
                     <a href="#" role="menuitem" class="dropdown-item">Action</a>
                     <a href="#" role="menuitem" class="dropdown-item">Another action</a>
                     <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
