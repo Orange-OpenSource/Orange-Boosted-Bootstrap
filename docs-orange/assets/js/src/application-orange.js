@@ -81,18 +81,24 @@
     var pageWatcher = onSidebarVisibilityChange(pageHeader);
     var findScrollTopElm = document.getElementsByClassName('scroll-top');
     var scrollTopElm = findScrollTopElm.item(0);
-    var scrollTopStyles = window.getComputedStyle(scrollTopElm, null);
-    var scrollTopDefaultBottom = scrollTopStyles.bottom;
+    var scrollTopStyles;
+    var scrollTopDefaultBottom;
     var findFooter = document.getElementsByTagName('footer');
     var footerELm = findFooter.item(findFooter.length - 1);
-    var footerWatcher = onFooterVisibilityChange(footerELm, scrollTopElm, scrollTopDefaultBottom);
+    var footerWatcher;
+
+    if (scrollTopElm) {
+      scrollTopStyles = window.getComputedStyle(scrollTopElm, null);
+      scrollTopDefaultBottom = scrollTopStyles.bottom;
+      footerWatcher = onFooterVisibilityChange(footerELm, scrollTopElm, scrollTopDefaultBottom);
+    }
 
     if (window.addEventListener) {
       addEventListener('scroll', pageWatcher, false);
-      addEventListener('scroll', footerWatcher, false);
+      if (footerWatcher) {addEventListener('scroll', footerWatcher, false);}
     } else if (window.attachEvent)  {
       attachEvent('onscroll', pageWatcher);
-      attachEvent('scroll', footerWatcher);
+      if (footerWatcher) {attachEvent('scroll', footerWatcher);}
     }
   };
 })();
