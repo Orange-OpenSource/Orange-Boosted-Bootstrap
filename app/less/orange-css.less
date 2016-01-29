@@ -109,7 +109,7 @@ html{
   @media (min-width: @grid-float-breakpoint) {
     > li {
       > a {
-        .navbar-vertical-align(((@navbar-padding-vertical)+@line-height-computed));
+        .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
       }
     }
   }
@@ -118,6 +118,21 @@ html{
     > a {
         font-size: @navbar-font-size;
     }
+  }
+}
+.navbar-text {
+  // Uncollapse the nav
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
+    padding-top:  @navbar-padding-vertical;
+  }
+  font-size: @navbar-font-size;
+}
+
+.navbar-brand-text {
+  // Uncollapse the nav
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
   }
 }
 
