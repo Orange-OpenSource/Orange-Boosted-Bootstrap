@@ -75,8 +75,12 @@ html{
   }
 }
 .navbar-brand {
-    height: @navbar-height;
-    margin: 0;
+  height: @navbar-height;
+  margin: 0;
+  > img {
+    float:left;
+  }
+  
 }
 .navbar-header {
   padding-right: @navbar-padding-horizontal;
@@ -134,6 +138,8 @@ html{
   @media (min-width: @grid-float-breakpoint) {
     .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
   }
+  position: absolute;
+  padding: 0 @nav-link-padding;
 }
 
 .nav {

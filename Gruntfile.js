@@ -820,12 +820,12 @@ module.exports = function (grunt) {
           // Add the megamenu and localNavigation to the navbar nav menu
             {
               from: '<li><a href="#navbar-forms">Forms</a></li>',
-              to: '<li><a href="#megamenu">Orange megamenu</a></li><li><a href="#local1">Default local navigation</a></li><li><a href="#local2">Two levels local navigation</a></li><li><a href="#navbar-forms">Forms</a></li>'
+              to: '<li><a href="#navbar-brand-image-text">Brand image and text</a></li><li><a href="#megamenu">Orange megamenu</a></li><li><a href="#local1">Default local navigation</a></li><li><a href="#local2">Two levels local navigation</a></li><li><a href="#navbar-forms">Forms</a></li>'
           },
           // Add the megamenu and localNavigation to the inclusion list of the navbar.html native page
             {
               from: '<h2 id="navbar-forms">Forms</h2>',
-              to: '{% include components/megamenu.html %}{% include components/local.html %}<h2 id="navbar-forms">Forms</h2>'
+              to: '{% include components/navbar-brand-text.html %}{% include components/megamenu.html %}{% include components/local.html %}<h2 id="navbar-forms">Forms</h2>'
           },
           // Replace the default bootstrap accordions by o-accordion orange
             {
