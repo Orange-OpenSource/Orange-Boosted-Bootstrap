@@ -49,9 +49,6 @@
     - title: Stepbar
     # end mod
     - title: Pagination
-    # boosted mod
-    - title: Orange Pagination
-    # end mod
     - title: Progress
     - title: List group
     - title: Modal
