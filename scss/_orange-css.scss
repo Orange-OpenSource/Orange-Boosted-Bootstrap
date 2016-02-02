@@ -533,6 +533,15 @@ caption {
 .btn-primary {
   @include button-variant-orange($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
+
+.btn-secondary {
+  @include button-variant-orange($btn-default-color, $btn-default-bg, $btn-default-border, $btn-default-color, $btn-primary-bg, $btn-default-bg, $btn-default-bg);
+}
+
+.btn-outline-secondary {
+  @include button-outline-variant($btn-info-bg);
+}
+
 // Success appears as green
 .btn-success {
   @include button-variant-orange($btn-success-color, $btn-success-bg, $btn-success-border, darken($btn-success-bg, 10%), darken($btn-success-bg, 20%), $btn-success-color, $btn-default-color);
