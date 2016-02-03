@@ -41,29 +41,39 @@
 // Pills
 // -------------------------
 .nav-pills {
-  > li {
-    + li {
+  .nav-item {
+    + .nav-item {
       margin-left: ($grid-gutter-width / 4);
     }
+  }
 
-    // Active state
-    &,
-    &.active {
-      > a {
-        font-weight: bold;
+  .nav-link {
+    @include active {
+      background-color: $nav-pills-active-link-bg;
+    }
 
-        &:hover {
-          color: $nav-pills-active-link-hover-color;
-          background-color: $nav-pills-active-link-hover-bg;
-        }
-
-        &:focus {
-          color: $brand-orange-white;
-          background-color: $brand-orange;
-          outline: none;
-        }
+    @include hover {
+      color: $nav-pills-active-link-color;
+      cursor: default;
+      background-color: $nav-pills-active-link-bg;
+      &.disabled {
+        color: $nav-disabled-link-color;
+        cursor: $cursor-disabled;
+        background-color: $nav-disabled-link-hover-bg;
       }
     }
+
+    @include focus {
+      color: $nav-pills-focus-link-color;
+      background-color: $nav-pills-focus-link-bg;
+      outline: none;
+      &.disabled {
+        color: $nav-disabled-link-color;
+        background-color: $nav-disabled-link-hover-bg;
+      }
+    }
+
+    font-weight: bold;
   }
 }
 

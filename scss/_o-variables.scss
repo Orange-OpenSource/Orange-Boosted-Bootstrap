@@ -541,8 +541,11 @@ $o-nav-tabs-arrow-outer-color:           fadein($o-nav-tabs-border-color, 0%);
 
 // Pills
 $nav-pills-border-radius: $border-radius-base;
+$nav-pills-active-link-bg: $brand-orange-black;
 $nav-pills-active-link-hover-bg: $brand-orange-black;
 $nav-pills-active-link-hover-color: $brand-orange-white;
+$nav-pills-focus-link-bg: $brand-orange;
+$nav-pills-focus-link-color: $brand-orange-white;
 
 
 // Local navigation
