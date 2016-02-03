@@ -22,7 +22,9 @@
 
         $('html, body').animate({
           scrollTop: 0
-        }, 600);
+        }, 600, function () {
+          $('header li a').first().focus();
+        });
 
         return false;
       });
