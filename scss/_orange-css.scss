@@ -25,7 +25,7 @@ html {
 // --------------------------------------------------
 
 .label {
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
 }
 
 .table label.o-checkbox,
@@ -99,7 +99,7 @@ html {
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
 
   @include hover-focus {
     background-color: $brand-orange;
@@ -345,34 +345,6 @@ a:focus {
   .input-group > .form-control {
     // Feedback states
     border-color: $state-warning-text;
-  }
-}
-
-// Force the color for Heading into thumbnails
-.thumbnail {
-  // Image captions
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    color: $thumbnail-caption-color;
-  }
-}
-
-// Panel, put a display block on header links for accordions full width click area
-.panel-title {
-  > a,
-  > small > a,
-  > .small > a {
-    display: block;
   }
 }
 
