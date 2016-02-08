@@ -4,8 +4,8 @@
 <h2 id="buttons" class="">Buttons</h2>
 <h3>Default</h3>
 <p class="">
-    <button type="button" class="btn btn-secondary">Default</button>
     <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
     <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-warning">Warning</button>
@@ -15,19 +15,19 @@
 
 <h3>Hover</h3>
 <p class="">
-    <button type="button" class="btn btn-secondary hover">Default</button>
-    <button type="button" class="btn btn-primary hover">Primary</button>
-    <button type="button" class="btn btn-success hover">Success</button>
-    <button type="button" class="btn btn-info hover">Info</button>
-    <button type="button" class="btn btn-warning hover">Warning</button>
-    <button type="button" class="btn btn-danger hover">Danger</button>
-    <button type="button" class="btn btn-link hover">Link</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Primary</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Secondary</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Success</button>
+    <button type="button" class="btn btn-secondary" style="pointer-events: none;">Info</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Warning</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Danger</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Link</button>
 </p>
 
 <h3>Pressed</h3>
 <p class="">
-    <button type="button" class="btn btn-secondary active">Default</button>
     <button type="button" class="btn btn-primary active">Primary</button>
+    <button type="button" class="btn btn-secondary active">Secondary</button>
     <button type="button" class="btn btn-success active">Success</button>
     <button type="button" class="btn btn-info active">Info</button>
     <button type="button" class="btn btn-warning active">Warning</button>
@@ -37,20 +37,22 @@
 
 <h3>Disabled</h3>
 <p class="">
-    <button type="button" class="btn btn-secondary disabled">Default</button>
-    <button type="button" class="btn btn-primary disabled">Primary</button>
-    <button type="button" class="btn btn-success disabled">Success</button>
-    <button type="button" class="btn btn-info disabled">Info</button>
-    <button type="button" class="btn btn-warning disabled">Warning</button>
-    <button type="button" class="btn btn-danger disabled">Danger</button>
-    <button type="button" class="btn btn-link disabled">Link</button>
+    <button type="button" class="btn btn-primary" disabled>Primary</button>
+    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+    <button type="button" class="btn btn-success" disabled>Success</button>
+    <button type="button" class="btn btn-info" disabled>Info</button>
+    <button type="button" class="btn btn-warning" disabled>Warning</button>
+    <button type="button" class="btn btn-danger" disabled>Danger</button>
+    <button type="button" class="btn btn-link" disabled>Link</button>
 </p>
 
 <h3>Dropdowns</h3>
 <div class="btn-toolbar">
     <div class="btn-group">
-        <button type="button" class="btn btn-secondary">Default</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Primary
+            <span class="sr-only">menu primary</span>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -61,8 +63,9 @@
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span><span class="sr-only">menu primary</span></button>
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            Secondary
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -73,8 +76,10 @@
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span><span class="sr-only">menu success</span></button>
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            Success
+            <span class="sr-only">menu success</span>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -85,8 +90,10 @@
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span><span class="sr-only">menu info</span></button>
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+            Info
+            <span class="sr-only">menu info</span>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -97,8 +104,10 @@
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span><span class="sr-only">menu warning</span></button>
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+            Warning
+            <span class="sr-only">menu warning</span>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
