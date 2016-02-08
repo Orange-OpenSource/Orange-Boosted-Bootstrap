@@ -379,10 +379,10 @@ var Collapse = (function ($) {
   var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
   $colltabs.attr({ role: 'tab', 'aria-selected': 'false', 'aria-expanded': 'false' });
   $colltabs.each(function () {
-    var colltab = $(this),
-        collid = colltab.attr('id') || uniqueId('ui-collapse'),
-        collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
+    var collid = $(this).attr('id') || uniqueId('ui-collapse'),
+        collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href')),
         collparent = parent && $(parent),
+        colltab = $(this),
         heading = '',
         parent = colltab.attr('data-parent');
 
