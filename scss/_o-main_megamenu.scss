@@ -111,8 +111,8 @@
   // make dropdown border overlap tab border
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
+  border: 1px solid $dropdown-border-color;
+  border-radius: $border-radius;
   @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   // Remove the top rounded corners here since there is a hard edge above the menu
   @include border-top-radius(0);
@@ -178,10 +178,10 @@
 
 
 /*----*/
-	
+
 .mega-menu .container {
-    position: static; 
-}	
+    position: static;
+}
 
 .mega-menu .dropdown-menu {
     margin: 0 0 0;
@@ -199,9 +199,9 @@
 	color: #fff;
 }
 
-/* --- http://s3.smpk.fr/orange/2020/www/prehome.html --- */	
+/* --- http://s3.smpk.fr/orange/2020/www/prehome.html --- */
 .sticky {
-	position: static; // modif 
+	position: static; // modif
 	left: 0;
 	top: 0;
 	z-index: 100;
@@ -232,7 +232,7 @@
 }
 
 #topmenu > #topmenucontent {
-  
+
     margin: 0px auto;
 }
 
@@ -335,7 +335,7 @@ div#followbar {
 
 ul {
 	padding-left : 0;
-	
+
 }
 
 .mega-menu .dropdown-menu .row {
@@ -357,7 +357,7 @@ ul {
 .mega-menu-searchPanel {
 	margin : 25px 0 0 0;
 	float :right;
-	text-align : right; 
+	text-align : right;
 }
 
 
@@ -369,19 +369,19 @@ ul {
 #megaMenuSearchTop {
 		display : none;
 	}
-	
-	
+
+
 #megaMenubackTop {
 	display :none;
-}	
-	
+}
+
 #topmenu > #topmenucontent > div.right > #megaMenuCloseTop {
 
 	font-size : 28px;
 	padding:5px 10px;
 }
 
- 
+
 .megaMenuSearchInputText {
 	color : #fff;
 	background-color : #555 ;
@@ -398,7 +398,7 @@ ul {
 	width : calc(100% - 120px) ;
 	max-width : calc(100% - 120px) ;
 	border : 0px solid;
-	
+
 	margin: 0 20px 0 0;
 	vertical-align : bottom;
 	border: 1px solid transparent;
@@ -408,7 +408,7 @@ ul {
 
 .megaMenuSearchWraper {
 	padding : 30px 0 ;
-	
+
 }
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
@@ -426,7 +426,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 }
 
 .visible {
-	right :0 
+	right :0
 }
 
 
@@ -452,20 +452,20 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 
 
 /**** language bar in 320 ******/
-.menu-footer-320, 
+.menu-footer-320,
 .navbar-langBar {
 	 display :none;
 	}
 
-.menu-footer-320 ul, 
+.menu-footer-320 ul,
 .navbar-langBar ul {
 	  border : 0 none;
 	}
-	
+
 .navbar-langBar {
 	border : 1px solid #333;
 	}
-	
+
 .menu-footer-320 ul,
 .navbar-langBar ul  {
 	 color :white;
@@ -473,48 +473,48 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 	 list-style-type: none;
 	}
 
-.menu-footer-320 ul a ,	
+.menu-footer-320 ul a ,
 .navbar-langBar ul a {
 	 color :white;
 	}
-	
+
 .navbar-langBar ul li  {
 	  padding : 10px;
 	   float : right ;
 	}
-	
+
 .menu-footer-320 li {
 	padding : 10px;
 	float : left ;
 }
-/*************************************/	
+/*************************************/
 @media (max-width: 767px) {
 
 	#topmenu > #topmenucontent > div.navbar-brand-Smallblock {
 		display : inline-block;
 	}
-	
+
 	#megaMenubackTop {
 		display : none ;
 	}
-	
+
 	.navbar-nav .open .dropdown-menu {
 		background : #000;
 	}
-	
+
 	.container {
 		max-width: 100%;
 	}
-	
-	
+
+
 	#megaMenuAccountTop {
 			display : none;
 	}
-	
+
 	#topmenu > #topmenucontent > #megamenu-top-main {
 		display : none ;
 	}
-	
+
 	/********************************************/
 	.mega-menu .container .navbar-brand  {
 		display : none;
@@ -523,20 +523,20 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 	{
 		font-size: 1.9rem;
 	}
-	
+
 	.mega-menu .container  h3,
 	.mega-menu .container  li > a
 	{
 		font-size: 1.4rem;
 	}
-	
+
 	.mega-menu .container  .nav-menu li.nav-item,
 	.mega-menu .container  li ul > li 	{
 		width : 100%;
-		
+
 		clear : both ;
 	}
-	
+
 	.mega-menu .container  div > h2,
 	.mega-menu .container  li ul > li a,
 	.mega-menu .container  li div > h3	{
@@ -547,26 +547,26 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 	.mega-menu .container  li div > h3	{
 		padding-top		: .425rem;
 		padding-bottom	: 1rem;
-		
+
 		margin-top: 0.8rem;
 		border-bottom : 1px solid #555;
 	}
-	
-	
+
+
 	.mega-menu .dropdown-menu .row {
 		padding: 0px 0px;
 	}
-	
+
 	.mega-menu .container  .nav-menu li.nav-item > a {
 		width : 100%;
-		
+
 	}
-	
+
 	.container {
 	    padding-right: 0rem;
 		padding-left : 0rem;
 	}
-	
+
 	.navbar .nav-item .dropdown-toggle {
 		margin-top: 0.8rem;
 	}
@@ -574,58 +574,58 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 	#Searchpanel {
 		display :none ;
 	}
-	
+
 	.navbar .nav-item+.nav-item {
 		margin-left: 0rem;
 	}
-	
+
 	.navbar .nav-item {
 		padding-left: 1rem;
 	}
-	
+
 	.mega-menu .nav-menu .dropdown-menu {
 		position : static;
 	}
-	
+
 	.nav-item {
 		border-bottom: 1px solid #333;
 	}
-	
+
 	/* !!!! must add .mega-menu to every one under !!!! */
 	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-		padding-left: 0; 
+		padding-left: 0;
 	}
-	
+
 	.closingBare {
 		display :none ;
 	}
-	
+
 	div #megaMenuCloseTop,
 	.navbar-toggleable-xs  {
 		display:none;
 	}
-	
+
 	#megaMenuCloseTop.active {
 		display:inline-block;
 	}
-	
+
 	.navbar-toggleable-xs.active  {
 		display:block;
 	}
-	
+
 	div #megaMenubackTop.disabled {
 		display : none ;
 	}
-	
+
 	div #megaMenubackTop {
 		margin-right : 0px;
 	}
-	
+
 	.navbar-toggleable-xs {
 		position : relative;
 		overflow : hidden ;
 	}
-	
+
 	.mega-menu div .nav {
 		position: inherit;
 	}
@@ -634,60 +634,60 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 		transition-duration : 0.3s ;
 		left :0;
 	}
-	
+
 	.menu-level1 {
 		left :-100%;
 	}
-	
+
 	.menu-level2 {
 		left :-200%;
 	}
-	
+
 	.navbar-toggleable-xs ul li ul ul  {
 		display : none;
 		top : 0;
 		left : 100%;
 		position : absolute;
-		
+
 		width : 100%;
 	}
-	
+
 	.mega-menu-content > div {
-		position: inherit; 
+		position: inherit;
 		padding-right: 0rem;
 	}
-	
-	
+
+
 	.navbar-toggleable-xs ul li ul ul.open {
 		display: block;
 	}
 
-	
+
 	.mega-menu .navbar-toggleable-xs  .nav-item .dropdown-menu {
 		top : 0;
 		left : 100%;
 		position : absolute;
 		width : 100%;
 	}
-	
+
 	.mega-menu .row {
-		margin-right: 0; 
-		margin-left: 0; 
+		margin-right: 0;
+		margin-left: 0;
 	}
-	
+
 	.back_menu1title {
 		color : #fff;
 		font-size: 1.9rem;
 	}
-	
+
 	.back_menu1title::before ,
 	.mega-menu-content-title::before {
 		content: "<";
 		font-size: 1.6em;
 		font-family: monospace;
 	}
-	
-	.row ul > li > a::before, 
+
+	.row ul > li > a::before,
 	.nav-item > a::before,
 	.mega-menu-content h3::before {
 		float:right ;
@@ -697,23 +697,23 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 		margin-right: 0.5em;
 
 	}
-	
+
 	 .mega-menu .container li ul > li.container {
 		margin-top: -5px;;
 		padding-top: 0rem;
 	}
-	
+
 	.menu-footer-320.active{
 		border-bottom : 1px solid #333;
 		margin-top : -1px;
 		display : block;
 	}
-	
+
 	.navbar-langBar.active {
 		display : block;
 		border-bottom : 1px solid  #333;
 	}
-	
+
 }
 
 @media (max-width: 327px) {
@@ -725,23 +725,23 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
 
 
 @media (max-width: 960px) {
-	
+
 	#megaMenuSearchTop {
 		display :inline-block;
-	}	
-	
+	}
+
 	#megaMenubackTop {
 		display :inline-block;
-	}	
-	
+	}
+
 	#megaMenuCloseTop {
 		display :inline-block;
 	}
-	
+
 	#topmenu > #topmenucontent > div.right > a {
 		margin-left: 8px;
 	}
-	
+
 	#topmenulang {
 		display :none;
 	}
