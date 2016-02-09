@@ -7,7 +7,7 @@ import Util from './util'
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-var test 
+var test ;
 const Tab = (($) => {
 
 
@@ -147,47 +147,46 @@ const Tab = (($) => {
     }
 
 	static _keydown(e) {
-  console.log('keydown!')
-  var $this = $(this)
+      console.log('keydown!');
+      var $this = $(this)
       , $items
       , $ul = $this.closest('ul[role=tablist] ')
       , index
       , k = e.which || e.keyCode
 
-  $this = $(this)
-  if (!/(37|38|39|40)/.test(k)) return
+      $this = $(this)
+      if (!/(37|38|39|40)/.test(k)) return
 
-  $items = $ul.find('[role=tab]:visible')
-  index = $items.index($items.filter(':focus'))
+      $items = $ul.find('[role=tab]:visible')
+      index = $items.index($items.filter(':focus'))
 
-  if (k === 38 || k === 37) index--                         // up & left
-  if (k === 39 || k === 40) index++                        // down & right
+      if (k == 38 || k == 37) index--                         // up & left
+      if (k == 39 || k == 40) index++                        // down & right
 
 
-  if (index < 0) index = $items.length - 1
-  if (index === $items.length) index = 0
+      if(index < 0) index = $items.length -1
+      if(index == $items.length) index = 0
 
-  var nextTab = $items.eq(index)
-  if (nextTab.attr('role') === 'tab') {
+      var nextTab = $items.eq(index)
+      if(nextTab.attr('role') ==='tab'){
 
         nextTab.tab('show')      //Comment this line for dynamically loaded tabPabels, to save Ajax requests on arrow key navigation
         .focus()
       }
       // nextTab.focus()
 
-  e.preventDefault()
-  e.stopPropagation()
-}
+      e.preventDefault()
+      e.stopPropagation()
+    }
 
     // private
 
     _activate(element, container, callback) {
-			      console.log('activate')
-	  //--- rajout
-	        var $active = $(container).find('> .active')
-      $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '-1', 'aria-selected' : false })
-      $active.filter('.tab-pane').attr({ 'aria-hidden' : true, 'tabIndex' : '-1' })
-      //---
+	  //--- rajout 
+	  var $active = $(container).find('> .active')
+      $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '-1','aria-selected' : false })
+      $active.filter('.tab-pane').attr({ 'aria-hidden' : true,'tabIndex' : '-1' })
+      //---	  
       let active          = $(container).find(Selector.ACTIVE_CHILD)[0]
       let isTransitioning = callback
         && Util.supportsTransitionEnd()
@@ -215,13 +214,13 @@ const Tab = (($) => {
       if (active) {
         $(active).removeClass(ClassName.IN)
       }
-
-	       if (element.tagName === 'A')
+	 
+	 if (element.tagName == 'A')
 	 {
 		// $(container).find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '0','aria-selected' : true }).focus() // (DOESN'T WORK ?)
-		  $('#' + element.id).attr({ 'tabIndex' : '0', 'aria-selected' : true }).focus()
+		$('#'+element.id).attr({ 'tabIndex' : '0','aria-selected' : true }).focus()
 	 }
-      $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false, 'tabIndex' : '0' })
+      $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false,'tabIndex' : '0' })
 
     }
 
@@ -264,7 +263,7 @@ const Tab = (($) => {
       if (callback) {
         callback()
       }
-
+	  
     }
 
 
@@ -305,13 +304,13 @@ const Tab = (($) => {
     })
 
 
-  $(document)
-	.on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
-		  if (!/(38|40|39|37)/.test(event.which)) {
-  return
-}
-		  event.preventDefault()
-		  Tab._keydown.call($(this), event)
+    $(document)
+	.on('keydown.tab.data-api','[data-toggle="tab"], [data-toggle="pill"]' , function (event) {
+		if (!/(38|40|39|37)/.test(event.which)) {
+        return
+      }
+		event.preventDefault()
+		Tab._keydown.call($(this), event)
 	})
   /**
    * ------------------------------------------------------------------------
@@ -321,35 +320,35 @@ const Tab = (($) => {
   // ajout de l'accesibilité
   // ===============================
 
-
-  var uniqueId = function(prefix) {
-     return (prefix || 'ui-id') + '-' + Math.floor((Math.random() * 1000) + 1)
-   }
+  
+   var uniqueId = function(prefix) {
+      return (prefix || 'ui-id') + '-' + Math.floor((Math.random()*1000)+1)
+  }
 
   var $tablist = $('.nav-tabs, .nav-pills')
         , $lis = $tablist.children('li')
         , $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
 
-  $tablist.attr('role', 'tablist')
-  $lis.attr('role', 'presentation')
-  $tabs.attr('role', 'tab')
+    $tablist.attr('role', 'tablist')
+    $lis.attr('role', 'presentation')
+    $tabs.attr('role', 'tab')
 
-  $tabs.each(function( index ) {
+    $tabs.each(function( index ) {
       var tabpanel = $($(this).attr('href'))
         , tab = $(this)
         , tabid = tab.attr('id') || uniqueId('ui-tab')
 
-      tab.attr('id', tabid)
+        tab.attr('id', tabid)
 
-      if (tab.hasClass('active')) {
+      if(tab.hasClass('active')){
         tab.attr( { 'tabIndex' : '0', 'aria-selected' : 'true', 'aria-controls': tab.attr('href').substr(1) } )
         tabpanel.attr({ 'role' : 'tabpanel', 'tabIndex' : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
-      }else {
+      }else{
         tab.attr( { 'tabIndex' : '-1', 'aria-selected' : 'false', 'aria-controls': tab.attr('href').substr(1) } )
         tabpanel.attr( { 'role' : 'tabpanel', 'tabIndex' : '-1', 'aria-hidden' : 'true', 'aria-labelledby':tabid } )
       }
     })
-
+   
   $.fn[NAME]             = Tab._jQueryInterface
   $.fn[NAME].Constructor = Tab
   $.fn[NAME].noConflict  = function () {
