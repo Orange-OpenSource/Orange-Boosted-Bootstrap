@@ -52,7 +52,7 @@
 	z-index: 10;
 }
 
-#topmenu > #topmenucontent {
+#topmenu > .topmenucontent {
 	width: 100%;
 	height: 40px;
 	background: #000;
@@ -62,7 +62,7 @@
 	position: relative;
 }
 
-#topmenu > #topmenucontent {
+#topmenu > .topmenucontent {
   
     margin: 0px auto;
 }
@@ -72,7 +72,7 @@
     border-color: #fff !important;
 }
 
-#topmenu > #topmenucontent > div.left {
+#topmenu > .topmenucontent > div.left {
     display: inline-block;
     margin-left: 10px;
 }
@@ -88,7 +88,7 @@
     border-color: #fff !important;
 }
 
-#topmenu > #topmenucontent > div.left > div {
+#topmenu > .topmenucontent > div.left > div {
     height: 24px;
     vertical-align: top;
     background: url('../img/menu_icon_rect.png') center no-repeat;
@@ -102,7 +102,7 @@
     cursor: pointer;
 }
 
-#topmenu > #topmenucontent > div.left > a {
+#topmenu > .topmenucontent > div.left > a {
     text-decoration: none;
     margin: 12px 18px 0px 0px;
     display: inline-block;
@@ -114,14 +114,14 @@
     border-color: #f16e00 !important;
 }
 
-#topmenu > #topmenucontent > div.right {
+#topmenu > .topmenucontent > div.right {
     display: inline-block;
     position: absolute;
     top: 6px;
     right: 10px;
 }
 
-#topmenu > #topmenucontent > div.right > img:first-of-type {
+#topmenu > .topmenucontent > div.right > img:first-of-type {
     cursor: pointer;
     overflow: hidden;
     max-width: 0px;
@@ -139,15 +139,15 @@ div#followbar {
 	width :100%;
 }
 
-#topmenu > #topmenucontent > div.right > img {
+#topmenu > .topmenucontent > div.right > img {
     margin-left: 22px;
     vertical-align: bottom;
 }
 
-#topmenu > #topmenucontent > div.right > a {
+#topmenu > .topmenucontent > div.right > a {
     text-decoration: none;
     padding: 5px 0px 5px 0px;
-    margin-left: 8px;
+    margin-left: 18px;
 }
 
 .closingBare {
@@ -173,9 +173,11 @@ ul {
     padding: 20px 10px;
 }
 
+/*
 .mega-menu.navbar {
 	padding :0 0 10px;
 }
+*/
 
 .mega-menu .btn-default {
     color: #fff;
@@ -183,57 +185,552 @@ ul {
     border-color:#fff;
 }
 
+.mega-menu-searchPanel {
+	margin : 25px 0 0 0;
+	float :right;
+	text-align : right; 
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+#megaMenuSearchTop {
+		display : none;
+	}
+	
+	
+#megaMenubackTop {
+	display :none;
+}	
+	
+#topmenu > .topmenucontent > div.right > #megaMenuCloseTop {
+
+	font-size : 28px;
+	padding:5px 10px;
+}
+
+ 
+.megaMenuSearchInputText {
+	color : #fff;
+	background-color : #555 ;
+	width : 100%;
+	border : 0px solid;
+	vertical-align : bottom;
+	border: 1px solid transparent;
+	padding : 10px 5px 8px;
+}
+
+.megaMenuSearchInputwrapp {
+	color : #fff;
+	background-color : #555 ;
+	width : calc(100% - 120px) ;
+	max-width : calc(100% - 120px) ;
+	border : 0px solid;
+	
+	margin: 0 20px 0 0;
+	vertical-align : bottom;
+	border: 1px solid transparent;
+	position : relative;
+	overflow:hidden ;
+}
+
+.megaMenuSearchWraper {
+	padding : 30px 0 ;
+	
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
+	 outline-color: #f16e00 ;
+}
+
+.megaMenuSearchInputClose {
+	position : absolute;
+	right : -30px;
+	top :0;
+	font-size : 18px;
+	padding :5px 15px;
+	overflow:hidden ;
+	transition-duration : 0.2s ;
+}
+
+.visible {
+	right :0 
+}
+
+
+
+.navbar .nav-item .dropdown-toggle {
+    margin-top: 3.8rem;
+}
+
+.mega-menu.navbar .nav > li > a.active {
+	color : #f16e00 ;
+}
+
+.navbar-brand-small img {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #fff;
+	width : 25px;
+}
+
+#topmenu > .topmenucontent > div.navbar-brand-Smallblock {
+	display : none;
+}
+
+
+/**** language bar in 320 ******/
+.menu-footer-320, 
+.navbar-langBar {
+	 display :none;
+	}
+
+.navbar-smallsearchBar {
+	display :none;
+}
+
+.menu-footer-320 ul, 
+.navbar-langBar ul {
+	  border : 0 none;
+	}
+	
+.navbar-langBar {
+	border : 1px solid #333;
+	}
+	
+.menu-footer-320 ul,
+.navbar-langBar ul  {
+	 color :white;
+	 margin-bottom: 0rem;
+	 list-style-type: none;
+	}
+
+.menu-footer-320 ul a ,	
+.navbar-langBar ul a {
+	 color :white;
+	}
+	
+.navbar-langBar ul li  {
+	  padding : 10px;
+	   float : right ;
+	}
+	
+.menu-footer-320 li {
+	padding : 10px;
+	float : left ;
+}
+
+
+
+.mega-menu-content > div.logo-menu-discover-wrap {
+	position:relative; 
+	height : 180px;  
+	text-align:center; 
+}
+
+.logo-menu-discover {
+		width :100%; 
+		height: 150px;  
+		position : absolute; 
+		top: 0; 
+		left : 0; 
+		z-index : -1; 
+		font-size: 180px;   
+	}
+	
+/*************************************/	
+@media (max-width: 767px) {
+
+	#topmenu > .topmenucontent > div.navbar-brand-Smallblock {
+		display : inline-block;
+	}
+	
+	#megaMenubackTop {
+		display : none ;
+	}
+	
+	.navbar-nav .open .dropdown-menu {
+		background : #000;
+	}
+	
+	.container {
+		max-width: 100%;
+	}
+	
+	
+	#megaMenuAccountTop {
+			display : none;
+	}
+	
+	#topmenu > .topmenucontent > #megamenu-top-main {
+		display : none ;
+	}
+	
+	/********************************************/
+	.mega-menu .container .navbar-brand  {
+		display : none;
+	}
+	.mega-menu .container  h2
+	{
+		font-size: 1.9rem;
+	}
+	
+	.mega-menu .container  h3,
+	.mega-menu .container  li > a
+	{
+		font-size: 1.4rem;
+	}
+	
+	.mega-menu .container  .nav-menu li.nav-item,
+	.mega-menu .container  li ul > li 	{
+		width : 100%;
+		
+		clear : both ;
+	}
+	
+	.mega-menu .container  div > h2,
+	.mega-menu .container  li ul > li a,
+	.mega-menu .container  li div > h3	{
+		padding-left : 10px;
+	}
+	.mega-menu .container  div > h2,
+	.mega-menu .container  li ul > li,
+	.mega-menu .container  li div > h3	{
+		padding-top		: .425rem;
+		padding-bottom	: 1rem;
+		
+		margin-top: 0.8rem;
+		border-bottom : 1px solid #555;
+	}
+	
+	
+	.mega-menu .dropdown-menu .row {
+		padding: 0px 0px;
+	}
+	
+	.mega-menu .container  .nav-menu li.nav-item > a {
+		width : 100%;
+		
+	}
+	
+	.container {
+	    padding-right: 0rem;
+		padding-left : 0rem;
+	}
+	
+	.navbar .nav-item .dropdown-toggle {
+		margin-top: 0.8rem;
+	}
+
+	#Searchpanel {
+		display :none ;
+	}
+	
+	.navbar .nav-item+.nav-item {
+		margin-left: 0rem;
+	}
+	
+	.navbar .nav-item {
+		padding-left: 1rem;
+	}
+	
+	.mega-menu .nav-menu .dropdown-menu {
+		position : static;
+	}
+	
+	.nav-item {
+		border-bottom: 1px solid #333;
+	}
+	
+	/* !!!! must add .mega-menu to every one under !!!! */
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+		padding-left: 0; 
+	}
+	
+	.closingBare {
+		display :none ;
+	}
+	
+	div #megaMenuCloseTop,
+	.navbar-toggleable-xs  {
+		display:none;
+	}
+	
+	#megaMenuCloseTop.active {
+		display:inline-block;
+	}
+	
+	.navbar-toggleable-xs.active  {
+		display:block;
+	}
+	
+	div #megaMenubackTop.disabled {
+		display : none ;
+	}
+	
+	div #megaMenubackTop {
+		margin-right : 0px;
+	}
+	
+	.navbar-toggleable-xs {
+		position : relative;
+		overflow : hidden ;
+	}
+	
+	.mega-menu div .nav {
+		position: inherit;
+	}
+
+	.nav-menu {
+		transition-duration : 0.3s ;
+		left :0;
+	}
+	
+	.menu-level1 {
+		left :-100%;
+	}
+	
+	.menu-level2 {
+		left :-200%;
+	}
+	
+	.navbar-toggleable-xs ul li ul ul  {
+		display : none;
+		top : 0;
+		left : 100%;
+		position : absolute;
+		
+		width : 100%;
+	}
+	
+	.mega-menu-content > div {
+		position: inherit; 
+		padding-right: 0rem;
+	}
+	
+	
+	.navbar-toggleable-xs ul li ul ul.open {
+		display: block;
+	}
+
+	
+	.mega-menu .navbar-toggleable-xs  .nav-item .dropdown-menu {
+		top : 0;
+		left : 100%;
+		position : absolute;
+	
+		width : 100%;
+	}
+	
+	.mega-menu .row {
+		margin-right: 0; 
+		margin-left: 0; 
+	}
+	
+	.back_menu1title {
+		color : #fff;
+		font-size: 1.9rem;
+	}
+	
+	.back_menu1title::before ,
+	.mega-menu-content-title::before {
+		content: "<";
+		font-size: 1.6em;
+		font-family: monospace;
+	}
+	
+	.row ul > li > a::before, 
+	.nav-item > a::before,
+	.mega-menu-content h3::before {
+		float:right ;
+		content: ">";
+		font-size: 1.6em;
+		font-family: monospace;
+		margin-right: 0.5em;
+
+	}
+	
+	 .mega-menu .container li ul > li.container {
+		margin-top: -5px;;
+		padding-top: 0rem;
+	}
+	
+	.menu-footer-320.active{
+		border-bottom : 1px solid #333;
+		margin-top : -1px;
+		display : block;
+	}
+	
+	.navbar-langBar.active {
+		display : block;
+		border-bottom : 1px solid  #333;
+	}
+	
+	.navbar-smallsearchBar.active {
+		display : block;
+		
+	}
+	
+	.mega-menu-content > div.logo-menu-discover-wrap {
+		position:relative; 
+		height : 49vw;  
+		text-align:center; 
+
+	}
+	.logo-menu-discover {
+		width :100%; 
+		height:49vw; 
+		position : absolute; 
+		top: 0; 
+		left : 0; 
+		z-index : -1; 
+		font-size: 48vw; 
+	}
+	
+	.navbar-smallsearchBar .megaMenuSearchInputwrapp {
+		margin : 0 0 0 20px;
+	}
+	
+	
+	.navbar-smallsearchBar .btn {
+		margin-left : 5px;
+		padding: .27rem 2rem;
+	}
+}
+
+@media (max-width: 327px) {
+
+
+
+}
+
+
+
+@media (max-width: 960px) {
+
+	
+	#megaMenuSearchTop {
+		display :inline-block;
+	}	
+	
+	#megaMenubackTop {
+		display :inline-block;
+	}	
+	
+	#megaMenuCloseTop {
+		display :inline-block;
+	}
+	
+	#topmenu > .topmenucontent > div.right > a {
+		margin-left: 8px;
+		
+	}
+	
+	#topmenulang {
+		display :none;
+	}
+}
+
+.icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+	border: 1px solid #fff;
+}
+
+.mega-menu.navbar .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+#megaMenubackTop {
+	border : 0px solid ;
+}
+
 
   </style>
+
 </head>
-<body>
-
-
-
+<body> 
 
 	<header role="banner">
-            <nav id="main_nav" class="navbar mega-menu" role="navigation">
+        <nav id="main_nav" class="navbar mega-menu" role="navigation">
 			
 			<div class="black border-bottom sticky " id="topmenu" style="top: -5px;">
 			
-				<div class="black color_white weight_normal container" id="topmenucontent">
-					<div class="left color_white f15 ft13">
+				<div class="black color_white weight_normal container topmenucontent" >
+					<div class="left color_white f15 ft13 navbar-brand-Smallblock">
+						
+						<a class="navbar-brand-small" href="#"><img src="../../../docs-orange/examples/orange-news/images/logo-orange.png" alt="Link to the homepage"></a>
+					</div>
+					<div id=megamenu-top-main class="left color_white f15 ft13">
 						<div onclick="openMenu()">
 						</div><!-- ‡	
-						 --><a href="Javascript:void(0)" class="color_orange">Personal</a><!-- 
+						 --><a href="Javascript:void(0)" class="color_orange" >Personal</a><!-- 
 						 --><a href="Javascript:void(0)">Business</a><!-- 
 						 --><a href="Javascript:void(0)">Follow us </a>
 					</div>
 					<div class="right color_white f15 ft13">
-						<img src="img/search.png" alt="" onclick="openMenu()">
-						<img width="31px" src="../../../docs-orange/examples/orange-news/images/white_icon_buy.png" alt=""><a href="Javascript:void(0)">Cart</a>
-						<img src="../../../docs-orange/examples/orange-news/images/icontop_cloud.png" alt=""><a href="Javascript:void(0)">Cloud</a>
-						<img width="15px" src="../../../docs-orange/examples/orange-news/images/icontop_account.png" alt=""><a href="Javascript:void(0)">My account</a>
-				
-						<a href="Javascript:void(0)" class="color_orange f15 ft13">EN</a>
+						<a href="Javascript:void(0)">
+							<span class="icon-shop_subscriptions" >
+							</span>
+						</a>
+						<a href="Javascript:void(0)"  id=megaMenuAccountTop  >
+							<span class="icon-my_account" >
+							</span>
+						</a>
+						<a href="Javascript:void(0)" id=megaMenuSearchTop  >
+							<span class="icon-search" >
+							</span>
+						</a>
+						<a  id=megaMenubackTop  type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+					
+						<a href="Javascript:void(0)" id=megaMenuCloseTop >
+							x
+						</a>
+				 
+						<a id=topmenulang href="Javascript:void(0)" class="color_orange f15 ft13">EN</a>
 					</div>
 				</div>
 			
 			</div>
 			<div class="container">
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-toggleable-xs" id="bs-example-navbar-collapse-1">
-					<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+				<div class="navbar-smallsearchBar" >
+					<div class=megaMenuSearchWraper>
+						<div class="megaMenuSearchInputwrapp" style="float : left;" >
+							<input class="megaMenuSearchInputText" type="text" value="" /> 
+							<div class="megaMenuSearchInputClose" >X</div>
+						</div>
+						<button type="button" class="btn btn-primary"><span class="icon-search" >
+							</span></button>
+					</div>
+				</div>
+				<div class="navbar-langBar" >
+					<ul class="navbar " >
+						<li><a href="#">English</a></li>
+						<li><a href="#" class="color_orange" >Français</a></li>
+					</ul>
+				</div>
+				<div class="navbar-toggleable-xs" id="bs-example-navbar-collapse-1">
 						<a class="navbar-brand" href="#"><img src="../../../docs-orange/examples/orange-news/images/logo-orange.png" alt="Link to the homepage"></a>
                         <ul class="nav navbar-nav nav-menu">
 						  <li class="nav-item dropdown">
-                            <a href="#" title="open the news menu" class="nav-link dropdown-toggle active" data-toggle="dropdown"><span class="sr-only">open the </span>Produits et service <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                            <a href="#" title="open the news menu" class="nav-link dropdown-toggle " data-toggle="dropdown"><span class="sr-only">open the </span>Produits et service <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li class=container >
 									
                                     <div class="row mega-menu-content">
 										<h2 class=mega-menu-content-title >
-										Accueil Produits et service  >
+										Accueil Produits et service  
 										</h2>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 											<h3> Pour votre mobile </h3>
@@ -286,7 +783,49 @@ ul {
                         </li>
 
                         <li class="nav-item dropdown ">
-                            <a href="#" title="open the shop menu" class="nav-link dropdown-toggle active" data-toggle="dropdown"><span class="sr-only">open the </span>Découvrir <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                            <a href="#" title="open the shop menu" class="nav-link dropdown-toggle " data-toggle="dropdown"><span class="sr-only">open the </span>discover <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class=container >
+									
+                                    <div class="row mega-menu-content">
+										<h2 class=mega-menu-content-title >
+										 home discover
+										</h2>
+                                        <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap"  >
+												<div class="icon-frame-fun logo-menu-discover logo-menu-discover" >
+												</div>
+												<div style="padding-top :40%" > fun </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap">
+										    
+											<div class="icon-frame-tariff logo-menu-discover"  >
+											</div>
+											<div style="padding-top :40%" > tariff </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap">
+											<div class="icon-frame-money logo-menu-discover" >
+											</div>
+											<div style="padding-top :40%" > money </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap">
+											<div class="icon-frame-care logo-menu-discover" >
+											</div>
+											<div style="padding-top :40%" > care </div>
+                                        </div>
+										<div class=closingBare >
+											<div class=closingBare_button >
+												<a role="button" class="pull-right" href="#" title="close the menu">
+													<span class="sr-only">close the menu</span><span class="glyphicon glyphicon-remove">X</span>
+												</a>
+											</div>
+											
+										</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a href="#" title="open the shop menu" class="nav-link dropdown-toggle " data-toggle="dropdown"><span class="sr-only">open the </span>Découvrir <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <div class="row mega-menu-content">
@@ -327,11 +866,34 @@ ul {
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown " id=Searchpanel style=" float :right" >
+                            <a href="#" title="open the shop menu" class="nav-link dropdown-toggle active" data-toggle="dropdown">
+								<span class="sr-only">open the search </span><img src="../../../docs-orange/examples/orange-news/images/search.png" alt="Link to the homepage"><b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span>
+							</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class=container >
+									<div class=megaMenuSearchWraper>
+										<div style="display:inline-block; " class="megaMenuSearchInputwrapp" >
+											<input class="megaMenuSearchInputText" type="text" value="" style="" /> 
+											<div class="megaMenuSearchInputClose" >X</div>
+										</div>
+										<button type="button" class="btn btn-primary">Search</button>
+									</div>
+                                </li>
+                            </ul>
+                        </li>
 					
 					</ul>
 					
+					
 				</div><!-- /.navbar-collapse -->
-				
+				<div class="menu-footer-320 left  f15 ft13">
+					<ul>
+						<li><a href="Javascript:void(0)" class="color_orange" >Personal</a></li>
+						<li><a href="Javascript:void(0)">Business</a></li>
+						<li><a href="Javascript:void(0)">Follow us </a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- /.container-fluid -->
 			
@@ -348,9 +910,145 @@ ul {
 <!-- JavaScript Includes -->
 <script src="../vendor/jquery.min.js"></script>
 <script src="../../dist/util.js"></script>
-<script src="../../dist/dropdown.js"></script>
+
 <script src="../../dist/megamenu.js"></script>
 	<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+<script type="text/javascript" >
+  $('.mega-menu .dropdown-toggle').on('click',function() {
+	 
+	 $('.mega-menu .dropdown-toggle').each(function(){
+		$(this).removeClass('active');
+	 });
+	 $(this).addClass('active');
+  } );  
+  
+  // extending to level 2 in 320
+  $('h3').on('click',function() {
+	  $('#megaMenubackTop').parent().find('#megaMenuCloseTop').addClass('active');
+	  $('#megaMenuCloseTop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').addClass('active');
+	 $(this).addClass('disabled');
+  } ); 
+  
+
+  
+  // extending to level 1 in 320
+  $('.nav-item .nav-link').on('click',function(elem) {
+	console.log('extanding 1');
+	$('.open').removeClass('open');
+	// standard 
+	$(this).parent().addClass('open');
+	$(this).attr('aria-expanded','true');
+	
+	//320
+	if ( document.body.clientWidth < 768 ) 
+	{ 
+		$(this).parent().parent().addClass('menu-level1');
+		var height = $(this).parent().find("ul[role=menu]").outerHeight() ;
+		$('.navbar-toggleable-xs').css({height : height}) ;
+	}
+	else 
+	{
+		$('.navbar-toggleable-xs').css({height : 'inherit'}) ;
+	}
+  } );
+  
+  // extending to level 2 in 320
+  $('.nav-item ul li div h3').on('click',function() {
+		console.log('extanding 2');
+		$(this).parent().find('ul').addClass('open');
+		
+		
+		console.log('this:'+this.innerHTML );
+		$(this).parent().find('ul').prepend('<li class="back_menu1" ><h4 class="back_menu1title">'+ this.innerHTML +'</h4></li>');
+		$('.back_menu1').on('click',back_To_menu1);
+		
+		if ( document.body.clientWidth < 768 ) 
+		{ 
+			var height = $(this).parent().find("ul").outerHeight() ;
+			$('.navbar-toggleable-xs').css({height : height}) ;
+			$('.menu-level1').addClass('menu-level2');
+		}
+  } );
+  
+   // back to level 0 in 320
+  $('.nav-item .row h2').on('click',function() {
+		console.log('back to 0');
+		
+		$('.menu-level1').removeClass('menu-level1');
+		$('.navbar-toggleable-xs').css({height : 'inherit'}) ;
+		
+  } );
+  
+   // back to level 1 in 320
+ function back_To_menu1 (elem) {
+	$('.menu-level1').removeClass('menu-level2');
+	$('.back_menu1').remove();
+	$('.row .open').removeClass('open');
+	if ( document.body.clientWidth < 768 ) 
+	{ 
+		var height = $('.menu-level1 > .nav-item.open ul ').outerHeight() ;
+		$('.navbar-toggleable-xs').css({height : height}) ;
+		console.log( 'back to 1 : ' + height );
+	}
+  } 
+  
+  
+  //  openning mega menu in 320
+  $('#megaMenubackTop').on('click',function() {
+	  $('.menu-level1').removeClass('menu-level1').removeClass('menu-level2');
+	  $('.navbar-toggleable-xs').css({height : 'inherit'}) ;
+	  $('.topmenucontent .icon-search').removeClass('color_orange');
+	  $('#megaMenubackTop').parent().find('#megaMenuCloseTop').addClass('active');
+	  $('#megaMenuCloseTop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').addClass('active');
+	  $('#megaMenuCloseTop').parent().parent().parent().parent().find('.navbar-langBar').addClass('active');
+	  $('#megaMenuCloseTop').parent().parent().parent().parent().find('.menu-footer-320').addClass('active');
+	   $('.navbar-smallsearchBar').removeClass('active');
+	 $(this).addClass('disabled');
+  } );
+  
+  // close mega menu in 320
+  $('#megaMenuCloseTop , .closingBare_button a').on('click',function() {
+	$('.open').removeClass('open');
+	 
+	 $('#megaMenuCloseTop').parent().find('#megaMenubackTop').removeClass('disabled');
+	 $('#megaMenuCloseTop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').removeClass('active');
+	 $('#megaMenuCloseTop').parent().parent().parent().parent().find('.navbar-langBar').removeClass('active');
+	 $('#megaMenuCloseTop').parent().parent().parent().parent().find('.menu-footer-320').removeClass('active');
+	 $(this).removeClass('active');
+	 
+	 console.log('megaMenuCloseTop ');
+  } );
+  
+  
+  
+ // search bar 
+  $('#megaMenuSearchTop').on('click',function() {
+	 $( "#megaMenuCloseTop" ).trigger( "click" );
+	 $('.topmenucontent .icon-search').addClass('color_orange');
+	 $('.navbar-smallsearchBar').addClass('active');
+	 console.log('search bar  ');
+  } ); 
+  
+  // clear search  
+  $('.megaMenuSearchInputClose').on('click',function() {
+	 $(this).parent().find('input').val('');
+	 $(this).removeClass("visible");
+  } );
+
+  $('.megaMenuSearchInputText').on('keyup',function() {
+	if ($(this).val() != '' ) 
+	{
+		 $(this).parent().find('.megaMenuSearchInputClose').addClass('visible');
+	}
+	else 
+	{
+		$(this).parent().find('.megaMenuSearchInputClose').removeClass('visible');
+	}
+	
+  } );
+  
+
+ </script>
 
 </body>
 </html>

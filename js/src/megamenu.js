@@ -14,7 +14,7 @@ const Megamenu = (($) => {
   let megamenuItems = '.mega-menu ul.navbar-nav > li > a'
 
   function uuid() {
-    return `ui-${(Math.random().toString(16) + "000000000").substr(2, 8)}`
+    return `ui-${Math.random().toString(16).concat('000000000').substr(2, 8)}`
   }
 
   // arrow keys management
