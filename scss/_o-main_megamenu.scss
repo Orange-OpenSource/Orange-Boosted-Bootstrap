@@ -8,10 +8,10 @@
   box-shadow:  none;
 }
 
-.navbar-default .nav .nav-item .nav-item-cdu: hover,
-.navbar-default .nav .nav-item .nav-item-cdu: focus {
-  text-decoration:  underline;
-  background-color:  transparent;
+.navbar-default .nav .nav-item .nav-item-cdu:hover,
+.navbar-default .nav .nav-item .nav-item-cdu:focus {
+  text-decoration:underline;
+  background-color:transparent;
 }
 .navbar-default .nav .nav-item .nav-item-cdu {
   color:  #fff !important;
@@ -103,7 +103,7 @@
 .sub-nav li a {
   color:  #000;
 }
-.sub-nav li a: focus, .sub-nav li a: hover {
+.sub-nav li a:focus, .sub-nav li a:hover {
   color:  $brand-orange;
 }
 .mmenu {
@@ -292,7 +292,7 @@
   display:  inline-block;
 }
 
-.topmenu > .topmenucontent > div.right > img: first-of-type {
+.topmenu > .topmenucontent > div.right > img:first-of-type {
   max-width:  0;
   overflow:  hidden;
   cursor:  pointer;
@@ -481,9 +481,9 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   font-size:  25px;
 }
 
-.row li a: hover {
+.row li a:hover {
   color:  #f16e00;
-  text-decoration:  underline;
+  text-decoration:underline;
 }
 
 @media (max-width:  767px) {
