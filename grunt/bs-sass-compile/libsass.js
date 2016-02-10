@@ -13,14 +13,22 @@ module.exports = function configureLibsass(grunt) {
       },
       core: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
+        /* boosted mod */
+        //   'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
+        'dist/css/<%= pkg.name %>.css': 'scss/bootstrap.scss'
+        /* end mod */
         }
       },
       extras: {
         files: {
-          'dist/css/<%= pkg.name %>-flex.css': 'scss/<%= pkg.name %>-flex.scss',
-          'dist/css/<%= pkg.name %>-grid.css': 'scss/<%= pkg.name %>-grid.scss',
-          'dist/css/<%= pkg.name %>-reboot.css': 'scss/<%= pkg.name %>-reboot.scss'
+          /* boosted mod */
+        //   'dist/css/<%= pkg.name %>-flex.css': 'scss/<%= pkg.name %>-flex.scss',
+        //   'dist/css/<%= pkg.name %>-grid.css': 'scss/<%= pkg.name %>-grid.scss',
+        //   'dist/css/<%= pkg.name %>-reboot.css': 'scss/<%= pkg.name %>-reboot.scss'
+          'dist/css/<%= pkg.name %>-flex.css': 'scss/bootstrap-flex.scss',
+          'dist/css/<%= pkg.name %>-grid.css': 'scss/bootstrap-grid.scss',
+          'dist/css/<%= pkg.name %>-reboot.css': 'scss/bootstrap-reboot.scss'
+          /* end mod */
         }
       },
       docs: {
