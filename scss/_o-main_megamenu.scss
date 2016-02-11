@@ -10,8 +10,8 @@
 
 .navbar-default .nav .nav-item .nav-item-cdu:hover,
 .navbar-default .nav .nav-item .nav-item-cdu:focus {
-  text-decoration:underline;
-  background-color:transparent;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .navbar-default .nav .nav-item .nav-item-cdu {
   color:  #fff !important;
@@ -21,7 +21,7 @@
 .navbar-nav {
   @media (max-width:  $grid-float-breakpoint-max) {
     // Dropdowns get custom display when collapsed
-    .open .dropdown-menu {
+    .open .dropdown-megamenu {
       background-color:  $dropdown-bg;
       > li > a {
         color:  $dropdown-link-color;
@@ -157,20 +157,34 @@
   position:  relative;
 }
 
-.mega-menu .dropdown-menu {
+.mega-menu .dropdown-megamenu {
+  position: absolute;
+  top: 100%;
   left:  auto;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 1.4rem;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #000;
+  border-radius: 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+
 }
 
-.mega-menu .dropdown-menu .row {
-  padding:  20 30;
-}
 
-.mega-menu .nav-item.dropdown .dropdown-menu {
+.mega-menu .nav-item.dropdown .dropdown-megamenu {
   right:  0;
   left:  0;
 }
 
-.mega-menu .nav-item.dropdown .dropdown-menu ul {
+.mega-menu .nav-item.dropdown .dropdown-megamenu ul {
   list-style:  none;
 }
 
@@ -187,19 +201,21 @@
   position:  static;
 }
 
-.mega-menu .dropdown-menu {
+.mega-menu .dropdown-megamenu {
+  width: 100%;
   margin:  0;
   color:  #fff;
   background-color:  #000;
   border-top:  1px solid rgba(35,35,35,.9);
   border-right:  0 solid;
+  border-left:  0 solid;
 }
 
-.mega-menu .dropdown-menu h3 {
+.mega-menu .dropdown-megamenu h3 {
   color:  #fff;
 }
 
-.dropdown-menu a {
+.dropdown-megamenu a {
   color:  #fff;
 }
 
@@ -230,7 +246,7 @@
   z-index:  100;
   box-sizing:  border-box;
   width:  100%;
-  height:  40;
+  height:  46px;
   overflow:  hidden;
   background:  #000;
 }
@@ -288,7 +304,7 @@
 .topmenu > .topmenucontent > div.right {
   position:  absolute;
   top:  6px;
-  right:  10;
+  right:  10px;
   display:  inline-block;
 }
 
@@ -320,7 +336,7 @@
 }
 
 .mega-menu-content-title {
-  padding:  10;
+  padding:  10px;
   color:  #fff;
 }
 
@@ -329,8 +345,8 @@
   padding-left:  0;
 }
 
-.mega-menu .dropdown-menu .row {
-  padding:  20 10;
+.mega-menu .dropdown-megamenu .row {
+  padding:  20px 10px;
 }
 
 .mega-menu .btn-default {
@@ -348,18 +364,19 @@
   display:  none;
   }
 
-.megamenuclosetop {
+.megamenubacktop {
   display:  none;
+  padding: 4px;
 }
 
 .topmenu > .topmenucontent > div.right > .megamenuclosetop {
-  padding:  5px 10;
+  padding:  5px 10px;
   font-size:  28px;
 }
 
 .megamenusearchinputtext {
   width:  100%;
-  padding:  10 5px 8px;
+  padding:  10px 5px 8px;
   color:  #fff;
   vertical-align:  bottom;
   background-color:  #555;
@@ -368,9 +385,9 @@
 
 .megamenusearchinputwrapp {
   position:  relative;
-  width:  calc(100% - 120);
-  max-width:  calc(100% - 120);
-  margin:  0 20 0 0;
+  width:  calc(100% - 120px);
+  max-width:  calc(100% - 120px);
+  margin:  0 20px 0 0;
   overflow:  hidden;
   color:  #fff;
   vertical-align:  bottom;
@@ -379,7 +396,7 @@
 }
 
 .megamenusearchwraper {
-  padding:  30 0;
+  padding:  30px 0;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
@@ -400,7 +417,10 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   right:  0;
 }
 
-.navbar .nav-item .megamenu-dropdown-toggle {
+.mega-menu .megamenu-dropdown-toggle {
+  display: block;
+  padding-top: .425rem;
+  padding-bottom: 1rem;
   margin-top:  3.8rem;
 }
 
@@ -410,6 +430,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .navbar-brand-small img {
   width:  25px;
+  margin: 0 10px;
   font-size:  0.7rem;
   font-weight:  400;
   color:  #fff;
@@ -424,8 +445,12 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   display:  none;
 }
 
-.navbar-smallsearchbar {
+.container .navbar-smallsearchbar {
   display:  none;
+}
+
+.open>.dropdown-megamenu {
+  display: block;
 }
 
 .menu-footer-320 ul,
@@ -451,17 +476,17 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .navbar-langbar ul li {
   float:  right;
-  padding:  10;
+  padding:  10px;
 }
 
 .menu-footer-320 li {
   float:  left;
-  padding:  10;
+  padding:  10px;
 }
 
 .mega-menu-content > div.logo-menu-discover-wrap {
   position:  relative;
-  height:  180;
+  height:  180px;
   text-align:  center;
 }
 
@@ -473,20 +498,61 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   z-index:  -1;
   width:  100%;
   height:  150px;
-  font-size:  180;
+  font-size:  175px;
 }
 
 .logo-menu-discover-caption {
-  padding-top:  70;
+  padding-top:  70px;
   font-size:  25px;
 }
 
-.row li a:hover {
+.row mega-menu-content li a:hover {
   color:  #f16e00;
-  text-decoration:underline;
+  text-decoration: underline;
+}
+
+.megamenu-top-main {
+  margin-left: 10px;
+}
+
+div.megamenu-top-main > a {
+  display: inline-block;
+  margin: 12px 18px 0 0;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+@media (max-width:  960px) {
+  .logo-menu-discover-caption {
+    padding-top:  calc(50% - 10px);
+    font-size:  25px;
+  }
+
+  .megamenusearchtop {
+    display:  inline-block;
+  }
+
+  .megamenubacktop {
+    display:  inline-block;
+  }
+
+  .megamenuclosetop {
+    display:  inline-block;
+  }
+
+  .topmenu > .topmenucontent > div.right > a {
+    margin-left:  8px;
+  }
+
+  .topmenulang {
+    display: none;
+  }
 }
 
 @media (max-width:  767px) {
+  .mega-menu .dropdown-megamenu .row {
+    padding: 0 0 20px;
+  }
 
   .logo-menu-discover-caption {
     padding-top:  calc(45% - 4vw);
@@ -497,7 +563,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     display:  inline-block;
   }
 
-  .navbar-nav .open .dropdown-menu {
+  .navbar-nav .open .dropdown-megamenu {
     background:  #000;
   }
 
@@ -534,7 +600,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   .mega-menu .container  div > h2,
   .mega-menu .container  li ul > li a,
   .mega-menu .container  li div > h3 {
-    padding-left:  10;
+    padding-left:  10px;
   }
 
   .mega-menu .container  div > h2,
@@ -546,9 +612,6 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     border-bottom:  1px solid #555;
   }
 
-  .mega-menu .dropdown-menu .row {
-    padding:  0;
-  }
 
   .mega-menu .container  .nav-menu li.nav-item > a {
     width:  100%;
@@ -567,7 +630,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     display:  none;
   }
 
-  .navbar .nav-item+.nav-item {
+  .mega-menu.navbar.navbar .nav-item+.nav-item {
     margin-left:  0;
   }
 
@@ -575,7 +638,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     padding-left:  1rem;
   }
 
-  .mega-menu .nav-menu .dropdown-menu {
+  .mega-menu .nav-menu .dropdown-megamenu {
     position:  static;
   }
 
@@ -606,11 +669,11 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     display: block;
   }
 
-  div .megamenuclosetop.disabled {
+  div .megamenubacktop.disabled {
     display:  none;
   }
 
-  div .megamenuclosetop {
+  div .megamenubacktop {
     margin-right:  0;
   }
 
@@ -649,11 +712,15 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     padding-right:  0;
   }
 
+  .open>.dropdown-megamenu {
+    display: block;
+  }
+
   .navbar-toggleable-xs ul li ul ul.open {
     display:  block;
   }
 
-  .mega-menu .navbar-toggleable-xs  .nav-item .dropdown-menu {
+  .mega-menu .navbar-toggleable-xs  .nav-item .dropdown-megamenu {
     position:  absolute;
     top:  0;
     left:  100%;
@@ -736,37 +803,13 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 @media (max-width:  327px) {
 }
 
-@media (max-width:  960) {
-  .logo-menu-discover-caption {
-    padding-top:  calc(50% - 10px);
-    font-size:  25px;
-  }
 
-  .megamenusearchtop {
-    display:  inline-block;
-  }
-
-  .megamenuclosetop {
-    display:  inline-block;
-  }
-
-  .megamenuclosetop {
-    display:  inline-block;
-  }
-
-  .topmenu > .topmenucontent > div.right > a {
-    margin-left:  8px;
-  }
-
-  .topmenulang {
-    display: none;
-  }
-}
 
 .icon-bar {
   display:  block;
   width:  22px;
   height:  2px;
+  margin-top: 4px;
   border:  1px solid #fff;
   border-radius:  1px;
 }
@@ -776,6 +819,8 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 }
 
 .megamenuclosetop {
+  position: relative;
+  top: -5px;
   border:  0 solid;
 }
 
