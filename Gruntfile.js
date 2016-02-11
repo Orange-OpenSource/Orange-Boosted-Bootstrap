@@ -203,10 +203,10 @@ module.exports = function (grunt) {
       },
       fontIcons: {
           src: [
-          'dist/css/bootstrap.css',
+          'dist/css/<%= pkg.name %>.css',
           'bower_components/fontawesome/css/font-awesome.css'
           ],
-          dest: 'dist/css/bootstrap.css'
+          dest: 'dist/css/<%= pkg.name %>.css'
       }
       /* end mod */
     },
@@ -557,7 +557,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'bootstrap-<%= pkg.version %>-dist.zip',
+          archive: 'boosted-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -567,7 +567,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'bootstrap-<%= pkg.version %>-dist'
+            dest: 'boosted-<%= pkg.version %>-dist'
           }
         ]
       }

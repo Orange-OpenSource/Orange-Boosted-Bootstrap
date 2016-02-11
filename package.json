@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "boosted",
+  "description": "Orange Boosted is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.2.",
   "version": "4.0.0-alpha.2",
   "keywords": [
     "css",
@@ -11,21 +11,21 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://boosted.orange.com",
   "author": "Twitter, Inc.",
   "scripts": {
     "change-version": "node grunt/change-version.js",
     "test": "grunt test"
   },
-  "style": "dist/css/bootstrap.css",
-  "sass": "scss/bootstrap.scss",
+  "style": "dist/css/boosted.css",
+  "sass": "scss/boosted.scss",
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
   "license": "MIT",
   "devDependencies": {
@@ -62,7 +62,7 @@
     "load-grunt-tasks": "~3.4.0",
     "markdown-it": "^5.0.0",
     "mq4-hover-shim": "^0.3.0",
-    "npm-shrinkwrap": "^200.1.0",  
+    "npm-shrinkwrap": "^200.1.0",
     "shelljs": "^0.5.3",
     "time-grunt": "^1.2.1",
     "serve-static": "^1.10.0",

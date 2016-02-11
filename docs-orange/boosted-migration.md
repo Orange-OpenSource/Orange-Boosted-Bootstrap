@@ -39,3 +39,15 @@ Dropped the `.horizontal-form`class. Each row of form is now contained in a `.fo
 Class `.control-label`is now `.form-control-label`.
 
 For more information please check the new [forms](../components/forms/) for documentation and examples.
+
+
+### Skiplinks
+
+Rename the `.skiplinks_section` class to `.skiplinks-section`.
+Rename the `.skiplinks_show` class to `.skiplinks-show`.
+Replace the `.axs_hide` class by `.sr-only` native class included into Bootstrap.
+
+
+### Glyphicons
+
+Rename all the class containing  `_` to `-`.

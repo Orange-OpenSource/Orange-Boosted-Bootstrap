@@ -3,7 +3,7 @@ layout: simple
 title: Examples
 ---
 
-[Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
+[Download the Boosted source code]({{ site.download.source }}) to snag these examples.
 
 ## Orange brand
 
