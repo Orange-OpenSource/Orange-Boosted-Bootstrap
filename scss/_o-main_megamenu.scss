@@ -328,12 +328,13 @@
 }
 
 .closing-bare {
-  min-height:  40;
+  clear: both;
+  height: 40px;
 }
 
 .closing-bare-button {
   float:  right;
-  padding:  20 10 10;
+  padding:  20px 10px 10px;
 }
 
 .mega-menu-content-title {
@@ -412,6 +413,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   overflow:  hidden;
   font-size:  18px;
   transition-duration:  0.2s;
+  cursor: pointer;
 }
 
 .visible {
@@ -499,7 +501,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   z-index:  -1;
   width:  100%;
   height:  150px;
-  font-size:  175px;
+  font-size:  170px;
 }
 
 .logo-menu-discover-caption {
