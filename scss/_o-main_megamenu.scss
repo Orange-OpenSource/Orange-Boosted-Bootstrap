@@ -147,9 +147,24 @@
   }
 }
 
+.mega-menu a {
+  color: #fff;
+}
+
+.mega-menu .dropdown-menu a {
+  color: #000;
+}
+
+.mega-menu .dropdown-menu a.dropdown-item:hover,
+.mega-menu .dropdown-menu a.dropdown-item:focus {
+  color: #fff;
+}
+.dropdown-menu {
+  right: 0;
+  left: initial;
+}
 .mega-menu .nav,
-.mega-menu .collapse,
-.mega-menu .dropdown {
+.mega-menu .collapse {
   position:  static;
 }
 
@@ -328,8 +343,8 @@
 }
 
 .closing-bare {
-  clear: both;
   height: 40px;
+  clear: both;
 }
 
 .closing-bare-button {
@@ -372,7 +387,7 @@
 }
 
 .topmenu > .topmenucontent > div.right > .megamenuclosetop {
-  padding:  5px 10px;
+  padding:  5px 4px;
   font-size:  28px;
 }
 
@@ -412,8 +427,8 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   padding:  5px 15px;
   overflow:  hidden;
   font-size:  18px;
-  transition-duration:  0.2s;
   cursor: pointer;
+  transition-duration:  0.2s;
 }
 
 .visible {
@@ -511,7 +526,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .row mega-menu-content li a:hover {
   color:  #f16e00;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .megamenu-top-main {
@@ -523,6 +538,15 @@ div.megamenu-top-main > a {
   margin: 12px 18px 0 0;
   text-decoration: none;
   transition: all 0.5s;
+}
+
+.topmenulang {
+  position: relative;
+  float: right;
+}
+
+.mega-menu .navbar .topmenulang a {
+  margin-top: 0.8rem;
 }
 
 @media (max-width:  960px) {
@@ -790,7 +814,7 @@ div.megamenu-top-main > a {
     z-index:  -1;
     width: 100%;
     height: 49vw;
-    font-size:  48vw;
+    font-size:  45vw;
   }
 
   .navbar-smallsearchbar .megamenusearchinputwrapp {

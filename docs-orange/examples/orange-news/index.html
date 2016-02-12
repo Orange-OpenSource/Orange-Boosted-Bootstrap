@@ -7,6 +7,13 @@
 		<title>news home</title>
         <link rel="stylesheet" href="../../dist/css/boosted.min.css" />
 		<link href="example.css" rel="stylesheet">
+		<style>
+		@media (max-width : 768px) {
+			#accessibilitytoolbarGraphic, #accessibilitytoolbarGraphic * {
+				display :none ;
+			}
+		}
+		</style>
 	</head>
 	<body role="document">
 
@@ -33,27 +40,43 @@
 			
 			<div class="black border-bottom sticky topmenu" style="top: -5px;">
 			
-				<div class="black color-white weight_normal container topmenucontent" >
+				<div class="black weight_normal container topmenucontent" style="overflow:initial" >
+				    
 					<div class="left color-white f15 ft13 navbar-brand-smallblock">
 						
 						<a class="navbar-brand-small" href="#"><img src="images/logo-orange.png" alt="Link to the homepage"></a>
 					</div>
 					<div class="megamenu-top-main color-white f15 ft13">
 						<div onclick="openMenu()">
-						</div><!-- ‡	
-						 --><a href="Javascript:void(0)" class="color-orange" >Personal</a><!-- 
-						 --><a href="Javascript:void(0)">Business</a><!-- 
-						 --><a href="Javascript:void(0)">Follow us </a>
+						</div>
+						
+								<a href="Javascript:void(0)" class="color-orange" >Personal</a>
+							
+						    <a href="Javascript:void(0)">Business</a>
+							
+							<a href="Javascript:void(0)">Follow us </a>
+						
 					</div>
-					<div class="right color-white f15 ft13">
-						<a href="Javascript:void(0)">
+					<div class="right f15 ft13">
+						<div class="nav-item dropdown topmenulang " role="presentation" >
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+							style="margin-top: 0.3rem; margin-left : 20px;" >
+							EN <span class="caret" aria-hidden="true"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a class="dropdown-item" href="#" role="menuitem">EN</a></li>
+								<li><a class="dropdown-item" href="#" role="menuitem">FR</a></li>
+								<li><a class="dropdown-item" href="#" role="menuitem">ES</a></li>
+							</ul>
+						</div>
+						<a>
 							<span class="icon-buy" >
 							</span>
 						</a>
-						<a href="Javascript:void(0)"  class="megamenuaccounttop"  >
+						<a   class="megamenuaccounttop"  >
 							<span class="icon-my-account" style="color: #fff!important;"></span>
 						</a>
-						<a href="Javascript:void(0)" class="megamenusearchtop"  >
+						<a  class="megamenusearchtop"  >
 							<span class="icon-search" >
 							</span>
 						</a>
@@ -64,9 +87,8 @@
 							<span class="icon-bar"></span>
 						</a>
 					
-						<a href="Javascript:void(0)" class=megamenuclosetop >x</a>
-				 
-						<a  href="Javascript:void(0)" class="color-orange f15 ft13 topmenulang ">EN</a>
+						<a class=megamenuclosetop >x</a>
+				
 					</div>
 				</div>
 			
@@ -204,14 +226,14 @@
                                 </li>
                             </ul>
                         </li>
-                         <li class="nav-item dropdown">
+                         <li class="nav-item ">
                             <a href="#" title="open the news menu" class=" megamenu-dropdown-toggle " ><span class="sr-only">open the </span>Produits et service <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
                             <ul class="dropdown-megamenu" role="menu">
                                 <li class=container >
 									
                                     <div class="row mega-menu-content">
 										<h2 class=mega-menu-content-title >
-										Accueil Produits et service  
+										My orange
 										</h2>
                                         <div class="col-xs-12 col-sm-12 col-md-3">
 											<h3> Pour votre mobile </h3>
