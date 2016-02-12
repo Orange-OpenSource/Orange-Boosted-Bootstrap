@@ -15,6 +15,10 @@ Provide pagination links for your site or app with the multi-page pagination com
 
 Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.
 
+{% callout info %}
+It's good practice to wrap navigation element in a `<nav>` tag with proper role, but keep in mind it should only be used for major/primary navigation.
+{% endcallout %}
+
 {% example html %}
 <nav role="navigation">
   <ul class="pagination">
