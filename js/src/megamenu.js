@@ -67,6 +67,7 @@ const Megamenu = (($) => {
 
   // extending to level 1 in 320
   $('.nav-item .megamenu-dropdown-toggle').on('click', function() {
+    $('.closing-bare').css({ height : '0' })
     $('.open').removeClass('open')
 	// standard
     $(this).parent().addClass('open')
@@ -81,6 +82,7 @@ const Megamenu = (($) => {
       $('.navbar-toggleable-xs').css({
         height : 'inherit'
       })
+      $('.closing-bare').animate({ height : '40px' }, 200)
     }
   })
 

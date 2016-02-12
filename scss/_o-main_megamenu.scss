@@ -199,7 +199,7 @@
   left:  0;
 }
 
-.mega-menu .nav-item.dropdown .dropdown-megamenu ul {
+.mega-menu .nav-item  ul {
   list-style:  none;
 }
 
@@ -218,6 +218,7 @@
 }
 
 .mega-menu .dropdown-megamenu {
+  left: 0;
   width: 100%;
   margin:  0;
   color:  #fff;
@@ -345,6 +346,7 @@
 .closing-bare {
   height: 40px;
   clear: both;
+  overflow: hidden;
 }
 
 .closing-bare-button {
@@ -433,6 +435,10 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .visible {
   right:  0;
+}
+
+.mega-menu .dropdown-mega {
+  position: static;
 }
 
 .mega-menu .megamenu-dropdown-toggle {
@@ -627,18 +633,34 @@ div.megamenu-top-main > a {
   .mega-menu .container  div > h2,
   .mega-menu .container  li ul > li a,
   .mega-menu .container  li div > h3 {
-    padding-left:  10px;
+    padding-left:  0;
+  }
+
+  .mega-menu .container  div > h2,
+  .mega-menu .container  li ul > li {
+    border-bottom:  1px solid #555;
   }
 
   .mega-menu .container  div > h2,
   .mega-menu .container  li ul > li,
   .mega-menu .container  li div > h3 {
-    padding-top:  .425rem;
-    padding-bottom:  1rem;
-    margin-top:  0.8rem;
-    border-bottom:  1px solid #555;
+    padding-top:  0;
+    padding-bottom:  0;
+    margin-top:  0;
   }
 
+  .mega-menu .container  .row.mega-menu-content > div {
+    padding: 10px 0 10px 10px;
+    border-bottom:  1px solid #555;
+  }
+  .mega-menu h4 {
+    margin: 0;
+  }
+
+  .mega-menu .container  .row.mega-menu-content > div ul li,
+  .mega-menu .row.mega-menu-content > h2 {
+    padding: 10px 0 10px 10px;
+  }
 
   .mega-menu .container  .nav-menu li.nav-item > a {
     width:  100%;
