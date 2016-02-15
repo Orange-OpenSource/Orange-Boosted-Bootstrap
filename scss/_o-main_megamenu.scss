@@ -147,9 +147,24 @@
   }
 }
 
+.mega-menu a {
+  color: #fff;
+}
+
+.mega-menu .dropdown-menu a {
+  color: #000;
+}
+
+.mega-menu .dropdown-menu a.dropdown-item:hover,
+.mega-menu .dropdown-menu a.dropdown-item:focus {
+  color: #fff;
+}
+.dropdown-menu {
+  right: 0;
+  left: initial;
+}
 .mega-menu .nav,
-.mega-menu .collapse,
-.mega-menu .dropdown {
+.mega-menu .collapse {
   position:  static;
 }
 
@@ -184,7 +199,7 @@
   left:  0;
 }
 
-.mega-menu .nav-item.dropdown .dropdown-megamenu ul {
+.mega-menu .nav-item  ul {
   list-style:  none;
 }
 
@@ -203,6 +218,7 @@
 }
 
 .mega-menu .dropdown-megamenu {
+  left: 0;
   width: 100%;
   margin:  0;
   color:  #fff;
@@ -328,8 +344,9 @@
 }
 
 .closing-bare {
-  clear: both;
   height: 40px;
+  overflow: hidden;
+  clear: both;
 }
 
 .closing-bare-button {
@@ -372,7 +389,7 @@
 }
 
 .topmenu > .topmenucontent > div.right > .megamenuclosetop {
-  padding:  5px 10px;
+  padding:  5px 4px;
   font-size:  28px;
 }
 
@@ -412,12 +429,16 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   padding:  5px 15px;
   overflow:  hidden;
   font-size:  18px;
-  transition-duration:  0.2s;
   cursor: pointer;
+  transition-duration:  0.2s;
 }
 
 .visible {
   right:  0;
+}
+
+.mega-menu .dropdown-mega {
+  position: static;
 }
 
 .mega-menu .megamenu-dropdown-toggle {
@@ -511,7 +532,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .row mega-menu-content li a:hover {
   color:  #f16e00;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .megamenu-top-main {
@@ -523,6 +544,15 @@ div.megamenu-top-main > a {
   margin: 12px 18px 0 0;
   text-decoration: none;
   transition: all 0.5s;
+}
+
+.topmenulang {
+  position: relative;
+  float: right;
+}
+
+.mega-menu .navbar .topmenulang a {
+  margin-top: 0.8rem;
 }
 
 @media (max-width:  960px) {
@@ -554,7 +584,7 @@ div.megamenu-top-main > a {
 
 @media (max-width:  767px) {
   .mega-menu .dropdown-megamenu .row {
-    padding: 0 0 20px;
+    padding: 0;
   }
 
   .logo-menu-discover-caption {
@@ -603,18 +633,34 @@ div.megamenu-top-main > a {
   .mega-menu .container  div > h2,
   .mega-menu .container  li ul > li a,
   .mega-menu .container  li div > h3 {
-    padding-left:  10px;
+    padding-left:  0;
+  }
+
+  .mega-menu .container  div > h2,
+  .mega-menu .container  li ul > li {
+    border-bottom:  1px solid #555;
   }
 
   .mega-menu .container  div > h2,
   .mega-menu .container  li ul > li,
   .mega-menu .container  li div > h3 {
-    padding-top:  .425rem;
-    padding-bottom:  1rem;
-    margin-top:  0.8rem;
-    border-bottom:  1px solid #555;
+    padding-top:  0;
+    padding-bottom:  0;
+    margin-top:  0;
   }
 
+  .mega-menu .container  .row.mega-menu-content > div {
+    padding: 10px 0 10px 10px;
+    border-bottom:  1px solid #555;
+  }
+  .mega-menu h4 {
+    margin: 0;
+  }
+
+  .mega-menu .container  .row.mega-menu-content > div ul li,
+  .mega-menu .row.mega-menu-content > h2 {
+    padding: 10px 0 10px 10px;
+  }
 
   .mega-menu .container  .nav-menu li.nav-item > a {
     width:  100%;
@@ -790,7 +836,7 @@ div.megamenu-top-main > a {
     z-index:  -1;
     width: 100%;
     height: 49vw;
-    font-size:  48vw;
+    font-size:  45vw;
   }
 
   .navbar-smallsearchbar .megamenusearchinputwrapp {
