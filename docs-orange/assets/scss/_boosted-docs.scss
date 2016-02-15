@@ -22,20 +22,30 @@
     }
 
     .btn {
-        font-size: $font-size-lg;
+//         font-size: $font-size-lg;
+//         font-weight: $btn-font-weight;
+//         color: $brand-orange;
+//         text-decoration: none;
+//
+//         &.btn-lg {
+//             font-size: $font-size-lg;
+//             padding: $btn-padding-y-lg $btn-padding-x-lg;
+//         }
+//
+//         &:active,
+//         &:hover,
+//         &:focus {
+//             color: $brand-orange-white;
+//         }
+        // @include orange-button-variant($btn-info-color, $btn-info-bg, $btn-info-hover-color, $btn-info-hover-bg);
+        @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
+        border-color: $brand-orange-white;
         font-weight: $btn-font-weight;
-        color: $brand-orange;
         text-decoration: none;
 
         &.btn-lg {
             font-size: $font-size-lg;
             padding: $btn-padding-y-lg $btn-padding-x-lg;
-        }
-
-        &:active,
-        &:hover,
-        &:focus {
-            color: $brand-orange-white;
         }
     }
   }

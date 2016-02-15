@@ -46,7 +46,13 @@ $link-color: $brand-orange-black;
 //* Link hover color set via `darken()` function.
 $link-hover-color: $brand-primary;
 // Link hover decoration.
+$link-color-disabled: $gray-light;
 $link-hover-decoration: none;
+$link-hover-color-disabled: $link-color-disabled;
+$link-color-inverse: $brand-orange-white;
+$link-hover-color-inverse: $brand-orange;
+$link-color-inverse-disabled: $gray-before-light;
+$link-hover-color-inverse-disabled: $gray-before-light;
 
 
 // Typography
@@ -158,9 +164,6 @@ $table-border-color: $gray-light;
 // For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight: $brand-font-weight-bold;
-// $btn-default-color: $brand-orange-black;
-// $btn-default-bg: $brand-orange-white;
-// $btn-default-border: $btn-default-color;
 
 $btn-primary-color: $brand-orange-white;
 $btn-primary-bg: $brand-primary;
@@ -171,40 +174,23 @@ $btn-primary-active-bg: $btn-primary-bg;
 
 $btn-secondary-color: $brand-orange-black;
 $btn-secondary-bg: $brand-orange-white;
-$btn-secondary-hover-color: $brand-orange-white;
-$btn-secondary-hover-bg: $brand-orange-black;
-$btn-secondary-active-color: $brand-orange-white;
-$btn-secondary-active-bg: $brand-orange;
 
 $btn-success-color: $brand-orange-black;
 $btn-success-bg: $brand-success;
-$btn-success-hover-color: $brand-orange-white;
-$btn-success-hover-bg: $brand-orange-black;
-$btn-success-active-color: $brand-orange-white;
-$btn-success-active-bg: $brand-orange;
 
 $btn-info-color: $brand-orange-white;
 $btn-info-bg: $brand-orange-black;
 $btn-info-hover-color: $brand-orange-black;
 $btn-info-hover-bg: $brand-orange-white;
-$btn-info-active-color: $brand-orange-white;
-$btn-info-active-bg: $brand-orange;
 
 $btn-warning-color: $btn-primary-color;
 $btn-warning-bg: $btn-primary-bg;
-$btn-warning-hover-color: $btn-primary-hover-color;
-$btn-warning-hover-bg: $btn-primary-hover-bg;
-$btn-warning-active-color: $btn-primary-active-color;
-$btn-warning-active-bg: $btn-primary-active-bg;
 
 $btn-danger-color: $brand-orange-black;
 $btn-danger-bg: $brand-danger;
-$btn-danger-hover-color: $btn-primary-hover-color;
-$btn-danger-hover-bg: $btn-primary-hover-bg;
-$btn-danger-active-color: $btn-primary-active-color;
-$btn-danger-active-bg: $btn-primary-active-bg;
 
 $btn-link-disabled-color: $gray-light;
+$btn-link-disabled-black-bg-color: $gray-before-light;
 
 $btn-padding-x: $padding-base-horizontal;
 $btn-padding-y: $padding-base-vertical;
