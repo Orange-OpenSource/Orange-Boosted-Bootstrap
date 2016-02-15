@@ -49,8 +49,10 @@
 - icon-alarm-clock         
 - icon-antenna             
 - icon-anti-spam           
-- icon-antivirus           
-- icon-arrow-down          
+- icon-antivirus  
+- icon-arrow-down
+- icon-arrow-next
+- icon-arrow-previous
 - icon-arrow-up            
 - icon-assistance          
 - icon-attachment          
@@ -190,6 +192,7 @@
 - icon-location-pin-compass
 - icon-lock
 - icon-logistics
+- icon-menu
 - icon-map-pin
 - icon-medical-chart
 - icon-messaging
