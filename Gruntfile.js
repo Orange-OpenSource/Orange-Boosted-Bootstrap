@@ -660,7 +660,7 @@ module.exports = function (grunt) {
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
   grunt.registerTask('replace-paths', ['replace:paths1', 'replace:paths2', 'replace:paths3']);
-  grunt.registerTask('docs', ['lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace-paths']);
+  grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace-paths']);
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github']);
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);

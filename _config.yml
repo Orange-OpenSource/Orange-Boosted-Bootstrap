@@ -15,8 +15,10 @@ source:           .tmpdocs
 destination:      _gh_pages
 host:             0.0.0.0
 port:             9001
-baseurl:          ""
-url:              http://boosted.orange.com
+# boosted mod
+baseurl:          "http://boosted.orange.com/v4-alpha"
+url:              http://boosted.orange.com/v4-alpha
+# end boosted mod
 encoding:         UTF-8
 exclude:          [assets/scss/]
 
