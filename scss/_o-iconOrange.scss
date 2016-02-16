@@ -32,6 +32,7 @@
 .icon-menu,
 .icon-arrow-next,
 .icon-arrow-previous,
+.icon-delete,
 .icon-2for1cinematicket,
 .icon-3g,
 .icon-4g,
@@ -405,6 +406,10 @@
 .icon-frame-work,
 .icon-frame-care {
   color: $brand-orange;
+}
+
+.icon-delete:before {
+    content: "\ea54";
 }
 
 .icon-menu:before {
