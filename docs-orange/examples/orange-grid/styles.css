@@ -1,3 +1,14 @@
+.container{
+ background-color: red; 
+}
+.row{
+ background-color: blue; 
+}
 [class^="col-"]{
-  background-color: #ddd;
+  background-color: green;
+  min-height: 500px;
+}
+[class^="col-"] > div{ 
+  background-color: #ddd; 
+  min-height: 500px;
 }

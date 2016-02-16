@@ -333,7 +333,7 @@ $grid-breakpoints: (
   xl: 1281px,
   // Extra large screen / wide desktop
   xlg: 1441px
-) !default;
+); 
 
 
 // Grid containers
@@ -346,7 +346,19 @@ $container-max-widths: (
   lg: 960px,
   xl: 1200px,
   xlg: 1300px
-) !default;
+); 
+
+$container-gutter-widths: (
+  xs: 1.8rem,
+  sm: 2.2rem,
+  md: 4.4rem,
+  xlg: 4rem
+); 
+$cols-gutter-widths: (
+  xs: 1rem,
+  sm: 1rem,
+  xlg: 3rem
+); 
 
 // Navbar
 //
