@@ -408,18 +408,18 @@
   color: $brand-orange;
 }
 
-.icon-delete:before {
-    content: "\ea54";
+.icon-delete::before {
+  content: "\ea54";
 }
 
-.icon-menu:before {
-    content: "\ea51";
+.icon-menu::before {
+  content: "\ea51";
 }
-.icon-arrow-next:before {
-    content: "\ea52";
+.icon-arrow-next::before {
+  content: "\ea52";
 }
-.icon-arrow-previous:before {
-    content: "\ea53";
+.icon-arrow-previous::before {
+  content: "\ea53";
 }
 .icon-2for1cinematicket::before {
   content: "\e900";

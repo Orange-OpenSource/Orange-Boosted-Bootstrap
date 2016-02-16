@@ -361,7 +361,7 @@ fieldset[disabled] a.btn {
     &:disabled,
     &.disabled {
       @include hover {
-          color: $link-hover-color-inverse-disabled;
+        color: $link-hover-color-inverse-disabled;
       }
       color: $link-color-inverse-disabled;
     }
