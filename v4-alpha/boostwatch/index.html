@@ -1,0 +1,3796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, Bootstrap contributors, and Orange SA">
+
+<title>
+  
+    Boostwatch &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="http://boosted.orange.com/v4-alpha/dist/css/boosted.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="http://boosted.orange.com/v4-alpha/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="http://boosted.orange.com/v4-alpha/apple-touch-icon.png">
+<link rel="icon" href="http://boosted.orange.com/v4-alpha/favicon.ico">
+
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-dark navbar-static-top bd-navbar" role="banner">
+  <div class="container">
+  
+
+  <div class="clearfix">
+    <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+      &#9776;
+    </button>
+    <a class="navbar-brand hidden-sm-up" href="http://boosted.orange.com/v4-alpha/">
+      B<span class="text-primary">oo</span>sted
+    </a>
+  </div>
+  <nav class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="navbar-brand" href="http://boosted.orange.com/v4-alpha/">
+          <img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage' width='48px'/>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://boosted.orange.com/v4-alpha/">
+          B<span class="text-primary">oo</span>sted
+        </a>
+      </li>
+      <li class="nav-item"><a class="nav-link " href="http://boosted.orange.com/v4-alpha/getting-started/introduction/">Documentation</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://boosted.orange.com/v4-alpha/examples/">Examples</a></li>
+      <li class="nav-item"><a class="nav-link active" href="http://boosted.orange.com/v4-alpha/boostwatch/">Boostwatch</a></li>
+      <li class="nav-item" id="id_li_for_cdu"></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+
+    <div id="content">
+        <div class="bd-pageheader text-xs-center text-sm-left" id="page_header">
+  <div class="container">
+    <h1>Boostwatch</h1>
+    <p class="lead">
+    </p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-push-9 bd-sidebar">
+            <div class="bd-sidebar">
+  <nav class="bd-links" id="docsNavbarContent">
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#orange-icons">Orange icons</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#modal">Modal window</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#tables">Complex tables</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#bulletpoint">Bullet point</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#local">Local navigation</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#accordion">Accordions</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#footer">Footer</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#stepbar">Stepbar</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#navbar">Navbar</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#buttons">Buttons</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#type">Typography</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#forms">Forms</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#nav">Navs</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#pagination">Pagination</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#indicators">Indicators</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#progress">Progress bars</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#container">Containers</a>
+      </div>
+      <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#dialogs">Dialogs</a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+        <div class="col-md-9 col-md-pull-3 bd-content">
+            <h2 id="orange-icons">Orange Icons</h2>
+<p>Icons created from the Orange brand.</p>
+<div class="bs-glyphicons">
+    <ul class="bs-glyphicons-list">
+        
+        <li>
+            <span class="icon-popout-care" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-care</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-family" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-family</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-fun" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-fun</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-home" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-home</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-money" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-money</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-on-the-move" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-on-the-move</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-tariff" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-tariff</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-tech" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-tech</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-wellbeing" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-wellbeing</span>
+        </li>
+        
+        <li>
+            <span class="icon-popout-work" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-popout-work</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-family" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-family</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-fun" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-fun</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-home" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-home</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-money" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-money</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-on-the-move" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-on-the-move</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-tariff" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-tariff</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-tech" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-tech</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-wellbeing" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-wellbeing</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-work" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-work</span>
+        </li>
+        
+        <li>
+            <span class="icon-frame-care" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-frame-care</span>
+        </li>
+        
+        <li>
+            <span class="icon-2for1cinematicket" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-2for1cinematicket</span>
+        </li>
+        
+        <li>
+            <span class="icon-3g" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-3g</span>
+        </li>
+        
+        <li>
+            <span class="icon-4g" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-4g</span>
+        </li>
+        
+        <li>
+            <span class="icon-4g-cam" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-4g-cam</span>
+        </li>
+        
+        <li>
+            <span class="icon-4g-plus" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-4g-plus</span>
+        </li>
+        
+        <li>
+            <span class="icon-about-event" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-about-event</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessibility-cognition" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessibility-cognition</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessibility-dexterity" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessibility-dexterity</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessibility-hearing" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessibility-hearing</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessibility-mobility" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessibility-mobility</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessibility-speech" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessibility-speech</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessibility-vision" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessibility-vision</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessory-headphones" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessory-headphones</span>
+        </li>
+        
+        <li>
+            <span class="icon-accessory-shop" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-accessory-shop</span>
+        </li>
+        
+        <li>
+            <span class="icon-address-book" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-address-book</span>
+        </li>
+        
+        <li>
+            <span class="icon-administrator" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-administrator</span>
+        </li>
+        
+        <li>
+            <span class="icon-advertising" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-advertising</span>
+        </li>
+        
+        <li>
+            <span class="icon-aeroplane" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-aeroplane</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-3" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-3</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-4" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-4</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-7" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-7</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-9" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-9</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-12" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-12</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-16" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-16</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-17" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-17</span>
+        </li>
+        
+        <li>
+            <span class="icon-age-rating-mono-18" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-age-rating-mono-18</span>
+        </li>
+        
+        <li>
+            <span class="icon-agriculture" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-agriculture</span>
+        </li>
+        
+        <li>
+            <span class="icon-airbox-auto" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-airbox-auto</span>
+        </li>
+        
+        <li>
+            <span class="icon-alarm-clock" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-alarm-clock</span>
+        </li>
+        
+        <li>
+            <span class="icon-antenna" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-antenna</span>
+        </li>
+        
+        <li>
+            <span class="icon-anti-spam" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-anti-spam</span>
+        </li>
+        
+        <li>
+            <span class="icon-antivirus" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-antivirus</span>
+        </li>
+        
+        <li>
+            <span class="icon-arrow-down" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-arrow-down</span>
+        </li>
+        
+        <li>
+            <span class="icon-arrow-next" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-arrow-next</span>
+        </li>
+        
+        <li>
+            <span class="icon-arrow-previous" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-arrow-previous</span>
+        </li>
+        
+        <li>
+            <span class="icon-arrow-up" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-arrow-up</span>
+        </li>
+        
+        <li>
+            <span class="icon-assistance" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-assistance</span>
+        </li>
+        
+        <li>
+            <span class="icon-attachment" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-attachment</span>
+        </li>
+        
+        <li>
+            <span class="icon-avatar" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-avatar</span>
+        </li>
+        
+        <li>
+            <span class="icon-banking" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-banking</span>
+        </li>
+        
+        <li>
+            <span class="icon-battery-1-bar" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-battery-1-bar</span>
+        </li>
+        
+        <li>
+            <span class="icon-battery-2-bar" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-battery-2-bar</span>
+        </li>
+        
+        <li>
+            <span class="icon-battery-charging" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-battery-charging</span>
+        </li>
+        
+        <li>
+            <span class="icon-battery-empty" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-battery-empty</span>
+        </li>
+        
+        <li>
+            <span class="icon-battery-full" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-battery-full</span>
+        </li>
+        
+        <li>
+            <span class="icon-battery-full-2" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-battery-full-2</span>
+        </li>
+        
+        <li>
+            <span class="icon-bill-euro" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-bill-euro</span>
+        </li>
+        
+        <li>
+            <span class="icon-billboard" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-billboard</span>
+        </li>
+        
+        <li>
+            <span class="icon-birthday" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-birthday</span>
+        </li>
+        
+        <li>
+            <span class="icon-bluetooth" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-bluetooth</span>
+        </li>
+        
+        <li>
+            <span class="icon-book-download" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-book-download</span>
+        </li>
+        
+        <li>
+            <span class="icon-bookmark" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-bookmark</span>
+        </li>
+        
+        <li>
+            <span class="icon-bookmark-smart" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-bookmark-smart</span>
+        </li>
+        
+        <li>
+            <span class="icon-broadcast" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-broadcast</span>
+        </li>
+        
+        <li>
+            <span class="icon-burst-mode" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-burst-mode</span>
+        </li>
+        
+        <li>
+            <span class="icon-business-invoices" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-business-invoices</span>
+        </li>
+        
+        <li>
+            <span class="icon-business-lounge" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-business-lounge</span>
+        </li>
+        
+        <li>
+            <span class="icon-business-telephonie" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-business-telephonie</span>
+        </li>
+        
+        <li>
+            <span class="icon-buy" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-buy</span>
+        </li>
+        
+        <li>
+            <span class="icon-buy-back-euro" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-buy-back-euro</span>
+        </li>
+        
+        <li>
+            <span class="icon-buzz" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-buzz</span>
+        </li>
+        
+        <li>
+            <span class="icon-calendar-30" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-calendar-30</span>
+        </li>
+        
+        <li>
+            <span class="icon-calendar-day" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-calendar-day</span>
+        </li>
+        
+        <li>
+            <span class="icon-calendar-month" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-calendar-month</span>
+        </li>
+        
+        <li>
+            <span class="icon-calendar-week" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-calendar-week</span>
+        </li>
+        
+        <li>
+            <span class="icon-call" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-call</span>
+        </li>
+        
+        <li>
+            <span class="icon-call-forward" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-call-forward</span>
+        </li>
+        
+        <li>
+            <span class="icon-call-log" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-call-log</span>
+        </li>
+        
+        <li>
+            <span class="icon-camera" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-camera</span>
+        </li>
+        
+        <li>
+            <span class="icon-change-wallpaper" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-change-wallpaper</span>
+        </li>
+        
+        <li>
+            <span class="icon-charger" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-charger</span>
+        </li>
+        
+        <li>
+            <span class="icon-check-your-balance" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-check-your-balance</span>
+        </li>
+        
+        <li>
+            <span class="icon-child-protection" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-child-protection</span>
+        </li>
+        
+        <li>
+            <span class="icon-cineday-silhouette" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-cineday-silhouette</span>
+        </li>
+        
+        <li>
+            <span class="icon-clock" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-clock</span>
+        </li>
+        
+        <li>
+            <span class="icon-cloud-backup" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-cloud-backup</span>
+        </li>
+        
+        <li>
+            <span class="icon-commercial-representitive" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-commercial-representitive</span>
+        </li>
+        
+        <li>
+            <span class="icon-community-sms" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-community-sms</span>
+        </li>
+        
+        <li>
+            <span class="icon-conference-call" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-conference-call</span>
+        </li>
+        
+        <li>
+            <span class="icon-connected-object" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-connected-object</span>
+        </li>
+        
+        <li>
+            <span class="icon-construction" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-construction</span>
+        </li>
+        
+        <li>
+            <span class="icon-contact-card" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-contact-card</span>
+        </li>
+        
+        <li>
+            <span class="icon-control-centre" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-control-centre</span>
+        </li>
+        
+        <li>
+            <span class="icon-control-mydata" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-control-mydata</span>
+        </li>
+        
+        <li>
+            <span class="icon-copy" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-copy</span>
+        </li>
+        
+        <li>
+            <span class="icon-crane" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-crane</span>
+        </li>
+        
+        <li>
+            <span class="icon-currency-euro" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-currency-euro</span>
+        </li>
+        
+        <li>
+            <span class="icon-delete" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-delete</span>
+        </li>
+        
+        <li>
+            <span class="icon-data-protection" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-data-protection</span>
+        </li>
+        
+        <li>
+            <span class="icon-data-services" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-data-services</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-desktop-computer" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-desktop-computer</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-desktop-computer-connected" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-desktop-computer-connected</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-fixed-line-phone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-fixed-line-phone</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-laptop-computer" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-laptop-computer</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-laptop-computer-connected" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-laptop-computer-connected</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-smart-phone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-smart-phone</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-tablet" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-tablet</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-tablet-connected" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-tablet-connected</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-tv" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-tv</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-connected-printer" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-connected-printer</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-manager" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-manager</span>
+        </li>
+        
+        <li>
+            <span class="icon-device-managment-express" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-device-managment-express</span>
+        </li>
+        
+        <li>
+            <span class="icon-dialler" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-dialler</span>
+        </li>
+        
+        <li>
+            <span class="icon-disable-apps" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-disable-apps</span>
+        </li>
+        
+        <li>
+            <span class="icon-document-stack" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-document-stack</span>
+        </li>
+        
+        <li>
+            <span class="icon-document-word" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-document-word</span>
+        </li>
+        
+        <li>
+            <span class="icon-document-zip" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-document-zip</span>
+        </li>
+        
+        <li>
+            <span class="icon-download" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-download</span>
+        </li>
+        
+        <li>
+            <span class="icon-draft" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-draft</span>
+        </li>
+        
+        <li>
+            <span class="icon-dual-sim-packaging" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-dual-sim-packaging</span>
+        </li>
+        
+        <li>
+            <span class="icon-ebook" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-ebook</span>
+        </li>
+        
+        <li>
+            <span class="icon-edashboard" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-edashboard</span>
+        </li>
+        
+        <li>
+            <span class="icon-edit-draft" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-edit-draft</span>
+        </li>
+        
+        <li>
+            <span class="icon-edit-email" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-edit-email</span>
+        </li>
+        
+        <li>
+            <span class="icon-edit-image" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-edit-image</span>
+        </li>
+        
+        <li>
+            <span class="icon-electric-car" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-electric-car</span>
+        </li>
+        
+        <li>
+            <span class="icon-electric-car-charging" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-electric-car-charging</span>
+        </li>
+        
+        <li>
+            <span class="icon-electricity-provider" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-electricity-provider</span>
+        </li>
+        
+        <li>
+            <span class="icon-elevator" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-elevator</span>
+        </li>
+        
+        <li>
+            <span class="icon-email" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-email</span>
+        </li>
+        
+        <li>
+            <span class="icon-emap" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-emap</span>
+        </li>
+        
+        <li>
+            <span class="icon-emergency-service" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-emergency-service</span>
+        </li>
+        
+        <li>
+            <span class="icon-employees-1" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-employees-1</span>
+        </li>
+        
+        <li>
+            <span class="icon-epg" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-epg</span>
+        </li>
+        
+        <li>
+            <span class="icon-event-agenda" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-event-agenda</span>
+        </li>
+        
+        <li>
+            <span class="icon-event-organiser" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-event-organiser</span>
+        </li>
+        
+        <li>
+            <span class="icon-event-speaker" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-event-speaker</span>
+        </li>
+        
+        <li>
+            <span class="icon-expert" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-expert</span>
+        </li>
+        
+        <li>
+            <span class="icon-family-place" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-family-place</span>
+        </li>
+        
+        <li>
+            <span class="icon-favourite" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-favourite</span>
+        </li>
+        
+        <li>
+            <span class="icon-filter" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-filter</span>
+        </li>
+        
+        <li>
+            <span class="icon-finance" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-finance</span>
+        </li>
+        
+        <li>
+            <span class="icon-fire" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-fire</span>
+        </li>
+        
+        <li>
+            <span class="icon-flexible-storage" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-flexible-storage</span>
+        </li>
+        
+        <li>
+            <span class="icon-folder-camera" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-folder-camera</span>
+        </li>
+        
+        <li>
+            <span class="icon-folder-document" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-folder-document</span>
+        </li>
+        
+        <li>
+            <span class="icon-folder-favourite" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-folder-favourite</span>
+        </li>
+        
+        <li>
+            <span class="icon-folder-sd" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-folder-sd</span>
+        </li>
+        
+        <li>
+            <span class="icon-football" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-football</span>
+        </li>
+        
+        <li>
+            <span class="icon-free-tag" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-free-tag</span>
+        </li>
+        
+        <li>
+            <span class="icon-front-end-dashboard" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-front-end-dashboard</span>
+        </li>
+        
+        <li>
+            <span class="icon-gaugecapacity" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-gaugecapacity</span>
+        </li>
+        
+        <li>
+            <span class="icon-gauge-counter" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-gauge-counter</span>
+        </li>
+        
+        <li>
+            <span class="icon-gauge-rate" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-gauge-rate</span>
+        </li>
+        
+        <li>
+            <span class="icon-gauge-mon-reseau" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-gauge-mon-reseau</span>
+        </li>
+        
+        <li>
+            <span class="icon-generic-document" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-generic-document</span>
+        </li>
+        
+        <li>
+            <span class="icon-geolocation" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-geolocation</span>
+        </li>
+        
+        <li>
+            <span class="icon-hands-free" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-hands-free</span>
+        </li>
+        
+        <li>
+            <span class="icon-health" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-health</span>
+        </li>
+        
+        <li>
+            <span class="icon-health-monitor" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-health-monitor</span>
+        </li>
+        
+        <li>
+            <span class="icon-help-guide" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-help-guide</span>
+        </li>
+        
+        <li>
+            <span class="icon-history" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-history</span>
+        </li>
+        
+        <li>
+            <span class="icon-home" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-home</span>
+        </li>
+        
+        <li>
+            <span class="icon-home-alarm" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-home-alarm</span>
+        </li>
+        
+        <li>
+            <span class="icon-homescreen" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-homescreen</span>
+        </li>
+        
+        <li>
+            <span class="icon-hospital" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-hospital</span>
+        </li>
+        
+        <li>
+            <span class="icon-hotel" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-hotel</span>
+        </li>
+        
+        <li>
+            <span class="icon-image" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-image</span>
+        </li>
+        
+        <li>
+            <span class="icon-image-file" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-image-file</span>
+        </li>
+        
+        <li>
+            <span class="icon-improvement" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-improvement</span>
+        </li>
+        
+        <li>
+            <span class="icon-inbox" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-inbox</span>
+        </li>
+        
+        <li>
+            <span class="icon-info" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-info</span>
+        </li>
+        
+        <li>
+            <span class="icon-international-globe" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-international-globe</span>
+        </li>
+        
+        <li>
+            <span class="icon-internet" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-internet</span>
+        </li>
+        
+        <li>
+            <span class="icon-internet-browser" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-internet-browser</span>
+        </li>
+        
+        <li>
+            <span class="icon-keeper" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-keeper</span>
+        </li>
+        
+        <li>
+            <span class="icon-keyboard" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-keyboard</span>
+        </li>
+        
+        <li>
+            <span class="icon-lightbulb-sh" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-lightbulb-sh</span>
+        </li>
+        
+        <li>
+            <span class="icon-ligue-1" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-ligue-1</span>
+        </li>
+        
+        <li>
+            <span class="icon-live" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-live</span>
+        </li>
+        
+        <li>
+            <span class="icon-livebox" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-livebox</span>
+        </li>
+        
+        <li>
+            <span class="icon-livebox-phone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-livebox-phone</span>
+        </li>
+        
+        <li>
+            <span class="icon-location-pin-compass" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-location-pin-compass</span>
+        </li>
+        
+        <li>
+            <span class="icon-lock" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-lock</span>
+        </li>
+        
+        <li>
+            <span class="icon-logistics" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-logistics</span>
+        </li>
+        
+        <li>
+            <span class="icon-menu" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-menu</span>
+        </li>
+        
+        <li>
+            <span class="icon-map-pin" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-map-pin</span>
+        </li>
+        
+        <li>
+            <span class="icon-medical-chart" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-medical-chart</span>
+        </li>
+        
+        <li>
+            <span class="icon-messaging" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-messaging</span>
+        </li>
+        
+        <li>
+            <span class="icon-messaging-compose-sms" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-messaging-compose-sms</span>
+        </li>
+        
+        <li>
+            <span class="icon-messaging-unified" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-messaging-unified</span>
+        </li>
+        
+        <li>
+            <span class="icon-messaging-untitled-compose" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-messaging-untitled-compose</span>
+        </li>
+        
+        <li>
+            <span class="icon-microphone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-microphone</span>
+        </li>
+        
+        <li>
+            <span class="icon-mini-games" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mini-games</span>
+        </li>
+        
+        <li>
+            <span class="icon-mirroring" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mirroring</span>
+        </li>
+        
+        <li>
+            <span class="icon-mobile-applications" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mobile-applications</span>
+        </li>
+        
+        <li>
+            <span class="icon-mobile-data-toggle" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mobile-data-toggle</span>
+        </li>
+        
+        <li>
+            <span class="icon-mobile-insurance" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mobile-insurance</span>
+        </li>
+        
+        <li>
+            <span class="icon-mobile-network-coverage" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mobile-network-coverage</span>
+        </li>
+        
+        <li>
+            <span class="icon-mobile-security" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mobile-security</span>
+        </li>
+        
+        <li>
+            <span class="icon-mobile-setup" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mobile-setup</span>
+        </li>
+        
+        <li>
+            <span class="icon-mon-reseau" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-mon-reseau</span>
+        </li>
+        
+        <li>
+            <span class="icon-money" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-money</span>
+        </li>
+        
+        <li>
+            <span class="icon-move-to-folder" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-move-to-folder</span>
+        </li>
+        
+        <li>
+            <span class="icon-multi-sim" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-multi-sim</span>
+        </li>
+        
+        <li>
+            <span class="icon-multiple-timezone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-multiple-timezone</span>
+        </li>
+        
+        <li>
+            <span class="icon-music-file" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-music-file</span>
+        </li>
+        
+        <li>
+            <span class="icon-music-player" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-music-player</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-account" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-account</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-bill-uk" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-bill-uk</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-boutique" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-boutique</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-essential" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-essential</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-essential-tablet" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-essential-tablet</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-livebox" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-livebox</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-media" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-media</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-orange" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-orange</span>
+        </li>
+        
+        <li>
+            <span class="icon-my-plug" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-my-plug</span>
+        </li>
+        
+        <li>
+            <span class="icon-networks" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-networks</span>
+        </li>
+        
+        <li>
+            <span class="icon-newspaper" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-newspaper</span>
+        </li>
+        
+        <li>
+            <span class="icon-nfc" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-nfc</span>
+        </li>
+        
+        <li>
+            <span class="icon-no-sim" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-no-sim</span>
+        </li>
+        
+        <li>
+            <span class="icon-numero-unique" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-numero-unique</span>
+        </li>
+        
+        <li>
+            <span class="icon-office" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-office</span>
+        </li>
+        
+        <li>
+            <span class="icon-oil-and-gas" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-oil-and-gas</span>
+        </li>
+        
+        <li>
+            <span class="icon-online-help" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-online-help</span>
+        </li>
+        
+        <li>
+            <span class="icon-orangewallet" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orangewallet</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-assistant" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-assistant</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-cash" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-cash</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-corporate" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-corporate</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-events" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-events</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-expert" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-expert</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-insurance" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-insurance</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-orange-business-consultant" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-orange-business-consultant</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-orange-startup-smartphone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-orange-startup-smartphone</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-recycle" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-recycle</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-repair" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-repair</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-experts-tranquil" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-experts-tranquil</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-gesture" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-gesture</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-jobs" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-jobs</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-messenger" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-messenger</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-money" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-money</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-pro" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-pro</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-protect" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-protect</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-radio" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-radio</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-reflections" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-reflections</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-tv" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-tv</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-wallet" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-wallet</span>
+        </li>
+        
+        <li>
+            <span class="icon-orange-wifi" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-orange-wifi</span>
+        </li>
+        
+        <li>
+            <span class="icon-organisation" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-organisation</span>
+        </li>
+        
+        <li>
+            <span class="icon-outbox" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-outbox</span>
+        </li>
+        
+        <li>
+            <span class="icon-outdoor-sports-mountain-biking" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-outdoor-sports-mountain-biking</span>
+        </li>
+        
+        <li>
+            <span class="icon-outdoor-sports-skiing" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-outdoor-sports-skiing</span>
+        </li>
+        
+        <li>
+            <span class="icon-parental-control" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-parental-control</span>
+        </li>
+        
+        <li>
+            <span class="icon-pda-device" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-pda-device</span>
+        </li>
+        
+        <li>
+            <span class="icon-pdf-file" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-pdf-file</span>
+        </li>
+        
+        <li>
+            <span class="icon-phone-advisor" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-phone-advisor</span>
+        </li>
+        
+        <li>
+            <span class="icon-phone-protection" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-phone-protection</span>
+        </li>
+        
+        <li>
+            <span class="icon-picture-messaging" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-picture-messaging</span>
+        </li>
+        
+        <li>
+            <span class="icon-pioneering" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-pioneering</span>
+        </li>
+        
+        <li>
+            <span class="icon-play-and-win" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-play-and-win</span>
+        </li>
+        
+        <li>
+            <span class="icon-playmode-random" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-playmode-random</span>
+        </li>
+        
+        <li>
+            <span class="icon-power" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-power</span>
+        </li>
+        
+        <li>
+            <span class="icon-powerpoint-file" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-powerpoint-file</span>
+        </li>
+        
+        <li>
+            <span class="icon-presentation" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-presentation</span>
+        </li>
+        
+        <li>
+            <span class="icon-previous" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-previous</span>
+        </li>
+        
+        <li>
+            <span class="icon-printer" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-printer</span>
+        </li>
+        
+        <li>
+            <span class="icon-public-transport" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-public-transport</span>
+        </li>
+        
+        <li>
+            <span class="icon-recommend" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-recommend</span>
+        </li>
+        
+        <li>
+            <span class="icon-record" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-record</span>
+        </li>
+        
+        <li>
+            <span class="icon-recycle-device" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-recycle-device</span>
+        </li>
+        
+        <li>
+            <span class="icon-relationship" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-relationship</span>
+        </li>
+        
+        <li>
+            <span class="icon-reload" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-reload</span>
+        </li>
+        
+        <li>
+            <span class="icon-remote-control" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-remote-control</span>
+        </li>
+        
+        <li>
+            <span class="icon-responsible" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-responsible</span>
+        </li>
+        
+        <li>
+            <span class="icon-restore-to-phone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-restore-to-phone</span>
+        </li>
+        
+        <li>
+            <span class="icon-rewards" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-rewards</span>
+        </li>
+        
+        <li>
+            <span class="icon-running" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-running</span>
+        </li>
+        
+        <li>
+            <span class="icon-scan-ticket" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-scan-ticket</span>
+        </li>
+        
+        <li>
+            <span class="icon-sd-card" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-sd-card</span>
+        </li>
+        
+        <li>
+            <span class="icon-search" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-search</span>
+        </li>
+        
+        <li>
+            <span class="icon-servers" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-servers</span>
+        </li>
+        
+        <li>
+            <span class="icon-settings" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-settings</span>
+        </li>
+        
+        <li>
+            <span class="icon-setup-and-repair" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-setup-and-repair</span>
+        </li>
+        
+        <li>
+            <span class="icon-setup-and-repair-cog" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-setup-and-repair-cog</span>
+        </li>
+        
+        <li>
+            <span class="icon-setup-internet" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-setup-internet</span>
+        </li>
+        
+        <li>
+            <span class="icon-share" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-share</span>
+        </li>
+        
+        <li>
+            <span class="icon-shipping" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-shipping</span>
+        </li>
+        
+        <li>
+            <span class="icon-shop-pin" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-shop-pin</span>
+        </li>
+        
+        <li>
+            <span class="icon-shop-subscriptions" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-shop-subscriptions</span>
+        </li>
+        
+        <li>
+            <span class="icon-signal-boost" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-signal-boost</span>
+        </li>
+        
+        <li>
+            <span class="icon-sim" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-sim</span>
+        </li>
+        
+        <li>
+            <span class="icon-simple-mode" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-simple-mode</span>
+        </li>
+        
+        <li>
+            <span class="icon-smart-home" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-smart-home</span>
+        </li>
+        
+        <li>
+            <span class="icon-smart-lightswitch" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-smart-lightswitch</span>
+        </li>
+        
+        <li>
+            <span class="icon-smart-powerstation" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-smart-powerstation</span>
+        </li>
+        
+        <li>
+            <span class="icon-smart-tap" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-smart-tap</span>
+        </li>
+        
+        <li>
+            <span class="icon-smart-watch" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-smart-watch</span>
+        </li>
+        
+        <li>
+            <span class="icon-social-network" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-social-network</span>
+        </li>
+        
+        <li>
+            <span class="icon-software-update" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-software-update</span>
+        </li>
+        
+        <li>
+            <span class="icon-startup-wizard" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-startup-wizard</span>
+        </li>
+        
+        <li>
+            <span class="icon-stop-secret" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-stop-secret</span>
+        </li>
+        
+        <li>
+            <span class="icon-store-locator" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-store-locator</span>
+        </li>
+        
+        <li>
+            <span class="icon-subscription-package" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-subscription-package</span>
+        </li>
+        
+        <li>
+            <span class="icon-support" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-support</span>
+        </li>
+        
+        <li>
+            <span class="icon-surveillance-camera" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-surveillance-camera</span>
+        </li>
+        
+        <li>
+            <span class="icon-target-location" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-target-location</span>
+        </li>
+        
+        <li>
+            <span class="icon-tarif" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-tarif</span>
+        </li>
+        
+        <li>
+            <span class="icon-tariff" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-tariff</span>
+        </li>
+        
+        <li>
+            <span class="icon-task-list" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-task-list</span>
+        </li>
+        
+        <li>
+            <span class="icon-team-connect" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-team-connect</span>
+        </li>
+        
+        <li>
+            <span class="icon-temperature" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-temperature</span>
+        </li>
+        
+        <li>
+            <span class="icon-terms-conditions" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-terms-conditions</span>
+        </li>
+        
+        <li>
+            <span class="icon-text-alerts" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-text-alerts</span>
+        </li>
+        
+        <li>
+            <span class="icon-tick" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-tick</span>
+        </li>
+        
+        <li>
+            <span class="icon-tick-circle" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-tick-circle</span>
+        </li>
+        
+        <li>
+            <span class="icon-tickets" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-tickets</span>
+        </li>
+        
+        <li>
+            <span class="icon-top-up-dollar" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-top-up-dollar</span>
+        </li>
+        
+        <li>
+            <span class="icon-top-up-euro" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-top-up-euro</span>
+        </li>
+        
+        <li>
+            <span class="icon-top-up-uk-bank" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-top-up-uk-bank</span>
+        </li>
+        
+        <li>
+            <span class="icon-touch-screen" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-touch-screen</span>
+        </li>
+        
+        <li>
+            <span class="icon-town" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-town</span>
+        </li>
+        
+        <li>
+            <span class="icon-townhall" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-townhall</span>
+        </li>
+        
+        <li>
+            <span class="icon-track-your-delivery" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-track-your-delivery</span>
+        </li>
+        
+        <li>
+            <span class="icon-track-your-order" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-track-your-order</span>
+        </li>
+        
+        <li>
+            <span class="icon-trash" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-trash</span>
+        </li>
+        
+        <li>
+            <span class="icon-tv-plus" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-tv-plus</span>
+        </li>
+        
+        <li>
+            <span class="icon-unique" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-unique</span>
+        </li>
+        
+        <li>
+            <span class="icon-unlocked" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-unlocked</span>
+        </li>
+        
+        <li>
+            <span class="icon-upload" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-upload</span>
+        </li>
+        
+        <li>
+            <span class="icon-usb-key" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-usb-key</span>
+        </li>
+        
+        <li>
+            <span class="icon-vehicle" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-vehicle</span>
+        </li>
+        
+        <li>
+            <span class="icon-video" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-video</span>
+        </li>
+        
+        <li>
+            <span class="icon-video-file" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-video-file</span>
+        </li>
+        
+        <li>
+            <span class="icon-video-phone" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-video-phone</span>
+        </li>
+        
+        <li>
+            <span class="icon-video-meeting2" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-video-meeting2</span>
+        </li>
+        
+        <li>
+            <span class="icon-virtual-gamepad" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-virtual-gamepad</span>
+        </li>
+        
+        <li>
+            <span class="icon-visual-voicemail" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-visual-voicemail</span>
+        </li>
+        
+        <li>
+            <span class="icon-vod-portrait" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-vod-portrait</span>
+        </li>
+        
+        <li>
+            <span class="icon-volte" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-volte</span>
+        </li>
+        
+        <li>
+            <span class="icon-volume-high" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-volume-high</span>
+        </li>
+        
+        <li>
+            <span class="icon-volume-low" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-volume-low</span>
+        </li>
+        
+        <li>
+            <span class="icon-volume-mid" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-volume-mid</span>
+        </li>
+        
+        <li>
+            <span class="icon-volume-none" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-volume-none</span>
+        </li>
+        
+        <li>
+            <span class="icon-vowifi" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-vowifi</span>
+        </li>
+        
+        <li>
+            <span class="icon-web-cam" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-web-cam</span>
+        </li>
+        
+        <li>
+            <span class="icon-wifi" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-wifi</span>
+        </li>
+        
+        <li>
+            <span class="icon-wifi-0" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-wifi-0</span>
+        </li>
+        
+        <li>
+            <span class="icon-wifi-1" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-wifi-1</span>
+        </li>
+        
+        <li>
+            <span class="icon-wifi-2" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-wifi-2</span>
+        </li>
+        
+        <li>
+            <span class="icon-zoom-in" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-zoom-in</span>
+        </li>
+        
+        <li>
+            <span class="icon-zoom-out" aria-hidden="true"></span>
+            <span class="glyphicon-class">icon-zoom-out</span>
+        </li>
+        
+    </ul>
+</div>
+
+<h2 id="modal" class="">Modal window</h2>
+<p class="lead">Modal window or popin.</p>
+<div class="" data-example-id="">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a accessible modal window, <a href="#">a test link</a> ...</p>
+                <p>An other paragraph of text for this modal window</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="tables">Tables</h2>
+<h3 id="default-tables">Default tables</h3>
+
+<div class="container-fluid">
+    <div class="row">
+    <table class="table table-striped table-hover ">
+    <caption>Optional table caption.</caption>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Status</th>
+            <th>Column heading</th>
+            <th>Column heading</th>
+            <th>Column heading</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="active">
+            <th scope="row">1</th>
+            <td></td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td></td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>
+                <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+                <span class="sr-only">success</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td></td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>
+                <span class="glyphicon glyphicon-info-sign text-info" aria-hidden="true"></span>
+                <span class="sr-only">information</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td></td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>
+                <span class="glyphicon glyphicon-warning-sign text-warning" aria-hidden="true"></span>
+                <span class="sr-only">warning</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td></td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td>
+                <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
+                <span class="sr-only">danger</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        </tbody>
+    </table>
+</div><!-- /example -->
+</div>
+
+
+    <style>
+
+    @media only screen and (max-width : 650px) {
+
+        #myTable .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+        #myTable * html .cf { zoom: 1; }
+        #myTable *:first-child+html .cf { zoom: 1; }
+        #myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+        #myTable th,
+        #myTable td { margin: 0; vertical-align: top; }
+        #myTable th { text-align: left; }
+        #myTable table { display: block; position: relative; width: 100%; }
+        #myTable thead { display: block; float: left; }
+        #myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+        #myTable thead tr { display: block; }
+        #myTable th { display: block; text-align: right; }
+        #myTable tbody tr { display: inline-block; vertical-align: top; }
+        #myTable td { display: block; min-height: 1.25em; text-align: left; }
+
+        /* sort out borders */
+        #myTable th { border-bottom: 0; border-left: 0; border-top: 1px solid #A6A6A6; }
+        #myTable td { border-right: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-bottom: 0; }
+        #myTable th:last-child,
+        #myTable td:last-child { border-bottom: 1px solid #babcbf; }
+
+    }
+
+    /* accessibility */
+    table.tablesorter > thead > tr > th[aria-sort="descending"]:after {
+        content:"trié par ordre décroissant";
+        border: 0 none;
+        clip: rect(0px, 0px, 0px, 0px);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    /* accessibility */
+    table.tablesorter > thead > tr > th[aria-sort="ascending"]:after {
+        content:"trié par ordre croissant";
+        border: 0 none;
+        clip: rect(0px, 0px, 0px, 0px);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+</style>
+
+<h3 id="complextable" class="">Complex table</h3>
+<p class="lead">Table with sortable columns.</p>
+<div class="container-fluid">
+    <div class="row">
+        <table id="myTable" class="table tablesorter" summary="Monthly calls received">
+            <caption>Calls received</caption>
+            <thead class="cf">
+                <tr>
+                    <th scope="col" class="header"><a href="#">Date<span class="sr-only"> triable</span></a></th>
+                    <th scope="col" class="header"><a href="#">Number<span class="sr-only"> triable</span></a></th>
+                    <th scope="col" class="header"><a href="#">Place called<span class="sr-only"> triable</span></a></th>
+                    <th scope="col" class="header"><a href="#">Call class<span class="sr-only"> triable</span></a></th>
+                    <th scope="col" class="header"><a href="#">Duration<span class="sr-only"> triable</span></a></th>
+                    <th scope="col" class="header"><a href="#">Cost<span class="sr-only"> triable</span></a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="quantity_data">08/10/12</td>
+                    <td class="quantity_data">447765896321</td>
+                    <td class="quantity_data">BT Freefone</td>
+                    <td class="quantity_data">talk</td>
+                    <td class="quantity_data">0:05:40</td>
+                    <td class="quantity_data">0.214</td>
+                </tr>
+                <tr>
+                    <td class="quantity_data">09/10/12</td>
+                    <td class="quantity_data">447765896321</td>
+                    <td class="quantity_data">BT Freefone</td>
+                    <td class="quantity_data">talk</td>
+                    <td class="quantity_data">0:19:09</td>
+                    <td class="quantity_data">0.158</td>
+                </tr>
+                <tr>
+                    <td class="quantity_data">10/10/12</td>
+                    <td class="quantity_data">447765896322</td>
+                    <td class="quantity_data">Free</td>
+                    <td class="quantity_data">talk</td>
+                    <td class="quantity_data">0:10:06</td>
+                    <td class="quantity_data">0.089</td>
+                </tr>
+                <tr>
+                    <td class="quantity_data">11/10/12</td>
+                    <td class="quantity_data">447765896324</td>
+                    <td class="quantity_data">Orange</td>
+                    <td class="quantity_data">SMS</td>
+                    <td class="quantity_data">-</td>
+                    <td class="quantity_data">0.10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /.container-fluid -->
+
+<h2 id="responsivetable" class="">Responsive table</h2>
+<h3>Default scroll table</h3>
+<p class="lead">Native Bootstrap solution</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+        </tbody>
+    </table>
+</div><!-- /.table-responsive -->
+
+<h3>Orange card responsive table</h3>
+<p class="lead">Table responsive switch row to card display on tablet.</p>
+<div class="container-fluid">
+    <div class="row">
+        <table class="table o-responsive-table" summary="Monthly calls received">
+            <caption>Calls received</caption>
+            <thead class="cf">
+                <tr>
+                    <th scope="col" class="header">Date</th>
+                    <th scope="col" class="header">Number</th>
+                    <th scope="col" class="header">Place called</th>
+                    <th scope="col" class="header">Call class</th>
+                    <th scope="col" class="header">Duration</th>
+                    <th scope="col" class="header">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope='row'>8 octobre 2012</th>
+                    <td data-title="number">447765896321</td>
+                    <td data-title="place called">BT Freefone</td>
+                    <td data-title="call class">talk</td>
+                    <td data-title="duration">0:05:40</td>
+                    <td data-title="cost">0.214</td>
+                </tr>
+                <tr>
+                    <th scope='row'>9 octobre 2012</th>
+                    <td data-title="number">447765896321</td>
+                    <td data-title="place called">BT Freefone</td>
+                    <td data-title="call class">talk</td>
+                    <td data-title="duration">0:19:09</td>
+                    <td data-title="cost">0.158</td>
+                </tr>
+                <tr>
+                    <th scope='row'>10 octobre 2012</th>
+                    <td data-title="number">447765896322</td>
+                    <td data-title="place called">Free</td>
+                    <td data-title="call class">talk</td>
+                    <td data-title="duration">0:10:06</td>
+                    <td data-title="cost">0.089</td>
+                </tr>
+                <tr>
+                    <th scope='row'>11 octobre 2012</th>
+                    <td data-title="number">447765896324</td>
+                    <td data-title="place called">Orange</td>
+                    <td data-title="call class">SMS</td>
+                    <td data-title="duration">-</td>
+                    <td data-title="cost">0.10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- /.container-fluid -->
+
+<h2 class="" id="bulletpoint">Bullet point</h2>
+<div class="container-fluid">
+	<div class="row">
+		<ul class="o-square-list">
+			<li>
+				<span>first</span>
+				<ul>
+					<li>
+						<span>1.1</span>
+						<ul>
+							<li><span>1.1.1</span></li>
+							<li><span>1.1.2</span></li>
+						</ul>
+					</li>
+					<li>
+						<span>1.2</span>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span>second</span>
+			</li>
+			<li>
+				<span>third</span>
+			</li>
+			<li>
+				<span>fourth</span>
+			</li>
+		</ul>
+	</div>
+</div><!-- /.container-fluid -->
+
+<h2 id="local" class="">Local navigation bar</h2>
+<p class="lead">Two types of local navigation.</p>
+<h3 id="local1">Default local navigation</h3>
+<div class="" data-example-id="">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar nav-local" role="navigation">
+                <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-toggleable-xs local" id="exCollapsingNavbar1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">Voluptatem<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu1">Dropdown <b class="caret" aria-hidden="true"></b></a>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <a href="#" role="menuitem" class="dropdown-item">Action</a>
+                            <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+                            <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-md-right">
+                        <li class="nav-item"><a class="nav-link" href="#">Accusantium<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu2">Dropdown <b class="caret" aria-hidden="true"></b></a>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                            <a href="#" role="menuitem" class="dropdown-item">Action</a>
+                            <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+                            <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<h3 id="local2">Two levels local navigation</h3>
+<div class="" data-example-id="">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar nav-local" role="navigation">
+                <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-toggleable-xs local" id="exCollapsingNavbar2">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">Voluptatem<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea<div class='arrow' aria-hidden='true'></div></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-md-right">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu3">Dropdown <b class="caret" aria-hidden="true"></b></a>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                                <a href="#" role="menuitem" class="dropdown-item">Action</a>
+                                <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+                                <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+                                <div role="presentation" class="dropdown-divider"></div>
+                                <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="navbar-collapse sublocal">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Natus error sit<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Accusantium<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Totam rem aperiam<div class='arrow' aria-hidden='true'></div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sed ut<div class='arrow' aria-hidden='true'></div></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Nav tabs A-->
+<h2 id="tab" class="">tabs bars</h2>
+<p class="lead">Two types of Tabs bar.</p>
+<h3 id="tabA">Default tabs bar</h3>
+<div class="" data-example-id="">
+	<div class="container-fluid">
+	<div class="row">
+		<ul class="nav nav-tabs">
+			<li class="nav-item"><a class="nav-link active" href="#home1" data-toggle="tab">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#profile1" data-toggle="tab">Profile</a></li>
+			<li class="nav-item"><a class="nav-link" href="#messages1" data-toggle="tab">Messages</a></li>
+			<li class="nav-item"><a class="nav-link" href="#settings1" data-toggle="tab">Settings</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="home1">Lorem ipsum dolor sit
+				amet, consectetur adipiscing elit. In iaculis volutpat quam, non
+				suscipit arcu accumsan at. Aliquam pellentesque.<a href="#">test focus 4</a></div>
+			<div class="tab-pane" id="profile1">Sed ut perspiciatis unde omnis iste natus error sit
+				voluptatem accusantium doloremque laudantium, totam rem aperiam,
+				eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+				sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+				adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+				magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+				ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+				Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+				molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+			<div class="tab-pane" id="messages1">At vero eos et accusamus et iusto odio dignissimos ducimus
+				qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+				molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+				qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+				rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+				omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
+				aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae
+				sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+				ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
+			<div class="tab-pane" id="settings1">Lorem ipsum dolor sit
+				amet, consectetur adipiscing elit. In iaculis volutpat quam, non
+				suscipit arcu accumsan at. Aliquam pellentesque.</div>
+		</div>
+
+
+		<!-- Nav content without border-->
+		<div class="">
+			<h3 id="tab-clear">Content without border</h3>
+		</div>
+		<ul class="nav nav-tabs">
+			<li class="nav-item"><a class="nav-link active" href="#home3" data-toggle="tab">Home</a></li>
+			<li class="nav-item "><a class="nav-link" href="#profile3" data-toggle="tab">Profile</a></li>
+			<li class="nav-item "><a class="nav-link" href="#messages3" data-toggle="tab">Messages</a></li>
+			<li class="nav-item "><a class="nav-link" href="#settings3" data-toggle="tab">Settings</a></li>
+		</ul>
+		<div class="tab-content tab-content-clear">
+			<div class="tab-pane active" id="home3">Lorem ipsum dolor sit
+				amet, consectetur adipiscing elit. In iaculis volutpat quam, non
+				suscipit arcu accumsan at. Aliquam pellentesque.<a href="#">test focus 4</a></div>
+			<div class="tab-pane" id="profile3">Sed ut perspiciatis unde omnis iste natus error sit
+				voluptatem accusantium doloremque laudantium, totam rem aperiam,
+				eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+				sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+				adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+				magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+				ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+				Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+				molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+			<div class="tab-pane" id="messages3">At vero eos et accusamus et iusto odio dignissimos ducimus
+				qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+				molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+				qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+				rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+				omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
+				aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae
+				sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+				ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
+			<div class="tab-pane" id="settings3">Lorem ipsum dolor sit
+				amet, consectetur adipiscing elit. In iaculis volutpat quam, non
+				suscipit arcu accumsan at. Aliquam pellentesque.</div>
+		</div>
+
+		<!-- Nav tabs B-->
+		<div class="">
+			<h3 id="tabB">Orange pointed tabs</h3>
+		</div>
+		<ul class="nav nav-tabs o-nav-tabs">
+			<li class="nav-item"><a class="nav-link active" href="#home2" data-toggle="tab">Home<div class="arrow" aria-hidden="true"></div></a></li>
+			<li class="nav-item"><a class="nav-link" href="#profile2" data-toggle="tab">Profile<div class="arrow" aria-hidden="true"></div></a></li>
+			<li class="nav-item"><a class="nav-link" href="#messages2" data-toggle="tab">Messages<div class="arrow" aria-hidden="true"></div></a></li>
+			<li class="nav-item"><a class="nav-link" href="#settings2" data-toggle="tab">Settings<div class="arrow" aria-hidden="true"></div></a></li>
+		</ul>
+		<div class="tab-content o-nav-tabs-content">
+			<div class="tab-pane active" id="home2">Lorem ipsum dolor sit
+				amet, consectetur adipiscing elit. In iaculis volutpat quam, non
+				suscipit arcu accumsan at. Aliquam pellentesque.</div>
+			<div class="tab-pane" id="profile2">Sed ut perspiciatis unde omnis iste natus error sit
+				voluptatem accusantium doloremque laudantium, totam rem aperiam,
+				eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+				sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+				Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+				adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+				magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+				ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+				Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+				molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+			</div>
+			<div class="tab-pane" id="messages2">At vero eos et accusamus et iusto odio dignissimos ducimus
+				qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+				molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+				qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+				rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+				eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+				omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
+				aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae
+				sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+				ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+				asperiores repellat
+			</div>
+			<div class="tab-pane" id="settings2">Lorem ipsum dolor sit
+				amet, consectetur adipiscing elit. In iaculis volutpat quam, non
+				suscipit arcu accumsan at. Aliquam pellentesque.
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<h2 class="" id="accordion">Accordions</h2>
+<p class="lead">Three types of accordions.</p>
+<div class="container-fluid">
+    <div class="row">
+        <h3>one at a time accordion:</h3>
+        <div class="o-accordion panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne"> Collapsible Group Item #1 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">Anim pariatur cliche reprehenderit,
+                            enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                            moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
+                            truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                            sunt aliqua put a bird on it squid single-origin coffee nulla
+                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                            labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
+                            excepteur butcher vice lomo. Leggings occaecat craft beer
+                            farm-to-table, raw denim aesthetic synth nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title" id="accordion-1-title-2">
+                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo"> Collapsible Group Item #2 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">Anim pariatur cliche reprehenderit,
+                            enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                            moon officia aute, non cupidatat skateboard dolor brunch. Food
+                            truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                            sunt aliqua put a bird on it squid single-origin coffee nulla
+                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                            labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
+                            excepteur butcher vice lomo. Leggings occaecat craft beer
+                            farm-to-table, raw denim aesthetic synth nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title" id="accordion-1-title-3">
+                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree"> Collapsible Group Item #3 </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">Anim pariatur cliche reprehenderit,
+                            enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                            moon officia aute, non cupidatat skateboard dolor brunch. Food
+                            truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                            sunt aliqua put a bird on it squid single-origin coffee nulla
+                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                            labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                            excepteur butcher vice lomo. Leggings occaecat craft beer
+                            farm-to-table, raw denim aesthetic synth nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+        <div class="row" id="section-2">
+            <h3 id="accordion2">multiple-opened-items version:</h3>
+            <div class="o-accordion panel-group" id="accordion-2" data-multipleAtATime="true">
+                    <div class="panel multipleAtATime panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" id="accordion-2-title-1">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#collapse2One"> Collapsible Group Item #1 </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2One" class="panel-collapse collapse in">
+                            <div class="panel-body">Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
+                                truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
+                                excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                    </div>
+                    <div class="panel multipleAtATime panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" id="accordion-2-title-2">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#collapse2Two"> Collapsible Group Item #2 </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2Two" class="panel-collapse collapse">
+                            <div class="panel-body">Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food
+                                truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
+                                excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                    </div>
+                    <div class="panel multipleAtATime panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" id="accordion-2-title-3">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#collapse2Three"> Collapsible Group Item #3 </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2Three" class="panel-collapse collapse">
+                            <div class="panel-body">Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food
+                                truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+
+
+        <div class="row" id="section-3">
+            <h3 id="accordion3">orange caret version:</h3>
+            <div class="o-accordion o-accordion-orange-style panel-group" id="accordion-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" id="accordion-3-title-1">
+                                <a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3One"> Collapsible Group Item #1 </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3One" class="panel-collapse collapse in">
+                            <div class="panel-body">Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
+                                truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
+                                excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" id="accordion-3-title-2">
+                                <a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Two"> Collapsible Group Item #2 </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3Two" class="panel-collapse collapse">
+                            <div class="panel-body">Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food
+                                truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
+                                excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" id="accordion-3-title-3">
+                                <a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Three"> Collapsible Group Item #3 </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3Three" class="panel-collapse collapse">
+                            <div class="panel-body">Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food
+                                truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                haven't heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+</div> <!-- container -->
+
+<h2 id="footer" class="">Footer</h2>
+<h3 id="footer-default">Default footer</h3>
+<footer class="navbar" role="contentinfo">
+    <div class="container-fluid">
+          <div class="o-footer">
+              <h1 class="sr-only">footer - site map & informations</h1>
+              <div class="container-fluid o-footer-top">
+                  <div class="row">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <ul>
+                              <li><h2>Sed ut perspiciatis</h2></li>
+                              <li><a href="#">Unde omnis istea</a></li>
+                              <li><a href="#">Natus error sit</a></li>
+                              <li><a href="#">Voluptatem</a></li>
+                              <li><a href="#">Totam rem aperiam</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <ul>
+                              <li><h2>Voluptatem accusantium</h2></li>
+                              <li><a href="#">Natus error sit</a></li>
+                              <li><a href="#">Unde omnis istea</a></li>
+                              <li><a href="#">Voluptatem</a></li>
+                              <li><a href="#">Doloremque</a></li>
+                              <li><a href="#">Totam rem aperiam</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <ul>
+                              <li><h2>Natus error sit</h2></li>
+                              <li><a href="#">Doloremque</a></li>
+                              <li><a href="#">Totam rem aperiam</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <ul>
+                              <li><h2>Doloremque laudantium</h2></li>
+                              <li><a href="#">Doloremque</a></li>
+                              <li><a href="#">Unde omnis istea</a></li>
+                              <li><a href="#">Voluptatem</a></li>
+                              <li><a href="#">Totam rem aperiam</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <ul>
+                              <li><h2>Totam rem aperiam</h2></li>
+                              <li><a href="#">Totam rem aperiam</a></li>
+                              <li><a href="#">Unde omnis istea</a></li>
+                              <li><a href="#">Natus error sit</a></li>
+                              <li><a href="#">Voluptatem</a></li>
+                              <li><a href="#">Doloremque</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <ul>
+                              <li><h2>Accusantium</h2></li>
+                              <li><a href="#">Unde omnis istea</a></li>
+                              <li><a href="#">Natus error sit</a></li>
+                              <li><a href="#">Voluptatem</a></li>
+                              <li><a href="#">Totam rem aperiam</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <ul class="nav navbar-nav">
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#"><span class="icon-orange-location"></span>Locate a store</a></li>
+                              <li><a href="#">Coverage map</a></li>
+                              <li><a href="#">Business</a></li>
+                              <li><a href="#">Child protection</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="o-footer-bottom">
+                  <ul>
+                      <li>© Orange 2015</li>
+                      <li><a href="#">Natus error sit</a></li>
+                      <li><a href="#">Voluptatem</a></li>
+                      <li><a href="#">Totam rem aperiam</a></li>
+                      <li><a href="#">Unde omnis istea</a></li>
+                      <li><a href="#">Natus error sit</a></li>
+                      <li><a href="#">Voluptatem</a></li>
+                  </ul>
+              </div>
+        </div>
+    </div>
+</footer>
+
+<h2 id="stepbar" class="">Stepbar</h21>
+<p class="lead">Indicate the current step within a sequential navigation.</p>
+<h3 id="stepbar-default">Default stepbar</h3>
+
+<div class="" data-example-id="default-stepbar">
+    <div class="container-fluid">
+      <div class="row">
+          <ul class="o-wizard-step-bar" data-steps="5">
+              <li class="visited">
+                  <div>
+                      <div><span class="hidden-sm-down">Step&nbsp;</span> 1</div>
+                      <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-sm-down hidden-md-down">Voluptatem</a></div>
+                  </div>
+              </li>
+              <li class="visited">
+                  <div class="arrow" aria-hidden="true"></div>
+                  <div>
+                      <div><span class="hidden-sm-down">Step&nbsp;</span> 2</div>
+                      <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-sm-down hidden-md-down">Aperiam</a></div>
+                  </div>
+              </li>
+              <li class="on">
+                  <div class="arrow" aria-hidden="true"></div>
+                  <div>
+                      <div><span class="hidden-sm-down">Step&nbsp;</span> 3</div>
+                      <div><span class="hidden-sm-down hidden-md-down">Accusantinum</span></div>
+                  </div>
+              </li>
+              <li class="next">
+                  <div class="arrow" aria-hidden="true"></div>
+                  <div>
+                      <div><span class="hidden-sm-down">Step&nbsp;</span> 4</div>
+                      <div><span class="hidden-sm-down hidden-md-down">Ipsam</span></div>
+                  </div>
+              </li>
+              <li class="next">
+                  <div class="arrow" aria-hidden="true"></div>
+                  <div>
+                      <div><span class="hidden-sm-down">Step&nbsp;</span> 5</div>
+                      <div><span class="hidden-sm-down hidden-md-down">Aspernatur</span></div>
+                  </div>
+              </li>
+          </ul>
+      </div>
+    </div><!-- /.container-fluid -->
+</div>
+
+<h2 id="navbar" class="">Navbar</h2>
+
+<div class="row">
+  <nav class="navbar navbar-dark bg-faded">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar3">
+        &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar3">
+        <a class="navbar-brand" href="#"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage" width="48px"></a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu3">Dropdown <b class="caret" aria-hidden="true"></b></a>
+                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                <a href="#" role="menuitem" class="dropdown-item">Action</a>
+                <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+                <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline pull-md-left">
+            <input class="form-control" type="text" placeholder="Search" name="searchField" title="search">
+            <button class="btn btn-inverse-outline" type="submit">Search</button>
+        </form>
+        <ul class="nav navbar-nav pull-md-right">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu4">Dropdown <b class="caret" aria-hidden="true"></b></a>
+                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+                <a href="#" role="menuitem" class="dropdown-item">Action</a>
+                <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+                <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+            </div>
+        </li>
+        </ul>
+    </div>
+   </nav>
+
+</div>
+
+<!-- Buttons
+================================================== -->
+
+<h2 id="buttons" class="">Buttons</h2>
+<h3>Default</h3>
+<p class="">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+</p>
+
+<h3>Hover</h3>
+<p class="">
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Primary</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Secondary</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Success</button>
+    <button type="button" class="btn btn-secondary" style="pointer-events: none;">Info</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Warning</button>
+    <button type="button" class="btn btn-info" style="pointer-events: none;">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+</p>
+
+<h3>Pressed</h3>
+<p class="">
+    <button type="button" class="btn btn-primary active">Primary</button>
+    <button type="button" class="btn btn-secondary active">Secondary</button>
+    <button type="button" class="btn btn-success active">Success</button>
+    <button type="button" class="btn btn-info active">Info</button>
+    <button type="button" class="btn btn-warning active">Warning</button>
+    <button type="button" class="btn btn-danger active">Danger</button>
+    <button type="button" class="btn btn-link active">Link</button>
+</p>
+
+<h3>Disabled</h3>
+<p class="">
+    <button type="button" class="btn btn-primary" disabled>Primary</button>
+    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+    <button type="button" class="btn btn-success" disabled>Success</button>
+    <button type="button" class="btn btn-info" disabled>Info</button>
+    <button type="button" class="btn btn-warning" disabled>Warning</button>
+    <button type="button" class="btn btn-danger" disabled>Danger</button>
+    <button type="button" class="btn btn-link" disabled>Link</button>
+</p>
+
+<div style="background-color: black; padding: 2rem;">
+    <h3 id="default-black-bg" style="color: white;">Default</h3>
+    <p class="">
+        <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+        <button type="button" class="btn btn-inverse btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-inverse btn-success">Success</button>
+        <button type="button" class="btn btn-inverse btn-info">Info</button>
+        <button type="button" class="btn btn-inverse btn-warning">Warning</button>
+        <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+        <button type="button" class="btn btn-inverse btn-link">Link</button>
+    </p>
+
+    <h3 id="hover-black-bg" style="color: white;">Hover</h3>
+    <p class="">
+        <button type="button" class="btn btn-inverse btn-secondary" style="pointer-events: none;">Primary</button>
+        <button type="button" class="btn btn-inverse btn-info" style="pointer-events: none;">Secondary</button>
+        <button type="button" class="btn btn-inverse btn-secondary" style="pointer-events: none;">Success</button>
+        <button type="button" class="btn btn-inverse btn-secondary" style="pointer-events: none;">Info</button>
+        <button type="button" class="btn btn-inverse btn-secondary" style="pointer-events: none;">Warning</button>
+        <button type="button" class="btn btn-inverse btn-secondary" style="pointer-events: none;">Danger</button>
+        <button type="button" class="btn btn-inverse btn-link">Link</button>
+    </p>
+
+    <h3 id="pressed-black-bg" style="color: white;">Pressed</h3>
+    <p class="">
+        <button type="button" class="btn btn-inverse btn-primary active">Primary</button>
+        <button type="button" class="btn btn-inverse btn-secondary active">Secondary</button>
+        <button type="button" class="btn btn-inverse btn-success active">Success</button>
+        <button type="button" class="btn btn-inverse btn-info active">Info</button>
+        <button type="button" class="btn btn-inverse btn-warning active">Warning</button>
+        <button type="button" class="btn btn-inverse btn-danger active">Danger</button>
+        <button type="button" class="btn btn-inverse btn-link active">Link</button>
+    </p>
+
+    <h3 id="disabled-black-bg" style="color: white;">Disabled</h3>
+    <p class="">
+        <button type="button" class="btn btn-inverse btn-primary" disabled>Primary</button>
+        <button type="button" class="btn btn-inverse btn-secondary" disabled>Secondary</button>
+        <button type="button" class="btn btn-inverse btn-success" disabled>Success</button>
+        <button type="button" class="btn btn-inverse btn-info" disabled>Info</button>
+        <button type="button" class="btn btn-inverse btn-warning" disabled>Warning</button>
+        <button type="button" class="btn btn-inverse btn-danger" disabled>Danger</button>
+        <button type="button" class="btn btn-inverse btn-link" disabled>Link</button>
+    </p>
+</div>
+
+<h3>Dropdowns</h3>
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Primary
+            <span class="sr-only">menu primary</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            Secondary
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            Success
+            <span class="sr-only">menu success</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+            Info
+            <span class="sr-only">menu info</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+            Warning
+            <span class="sr-only">menu warning</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+</div>
+
+<h3>Sizes</h3>
+<p class="">
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-primary">Default button</button>
+    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+</p>
+
+<p class="">
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+</p>
+
+
+<p class="">
+    <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-secondary">Left</a>
+        <a href="#" class="btn btn-secondary">Middle</a>
+        <a href="#" class="btn btn-secondary">Right</a>
+    </div>
+</p>
+
+<p class="">
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">3</button>
+            <button type="button" class="btn btn-secondary">4</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary">5</button>
+            <button type="button" class="btn btn-secondary">6</button>
+            <button type="button" class="btn btn-secondary">7</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary">8</button>
+            <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                Dropdown
+                <span class="caret" aria-hidden="true"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</p>
+
+<p class="">
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary">Button</button>
+        <button type="button" class="btn btn-secondary">Button</button>
+        <button type="button" class="btn btn-secondary">Button</button>
+        <button type="button" class="btn btn-secondary">Button</button>
+    </div>
+</p>
+
+<!-- Typography
+================================================== -->
+
+<h2 id="type" class="">Typography</h2>
+<!-- Headings -->
+<div class="row">
+    <div class="col-lg-4">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    </div>
+
+    <div class="col-lg-4">
+        <h3>Example body text</h3>
+        <p>Nullam quis risus eget <a href="#">urna mollis ornare</a>
+vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
+vehicula.</p>
+        <p><small>This line of text is meant to be treated as fine print.</small></p>
+        <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+        <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+        <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+    </div>
+
+    <div class="col-lg-4">
+        <h3>Emphasis classes</h3>
+        <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+        <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    </div>
+</div>
+<!-- Blockquotes -->
+<div class="row">
+    <h3 id="type-blockquotes">Blockquotes</h3>
+    <div class="col-lg-6">
+        <blockquote class="blockquote">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+    </div>
+    <div class="col-lg-6">
+        <blockquote class="blockquote pull-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+    </div>
+</div>
+
+<!-- Forms
+================================================== -->
+<h2 id="forms" class="">Forms</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <form class="form-horizontal">
+            <fieldset>
+              <legend>Legend</legend>
+              <div class="form-group row">
+                  <label for="inputEmail" class="col-lg-3 form-control-label">Email</label>
+                  <div class="col-lg-9">
+                      <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label for="inputPassword" class="col-lg-3 form-control-label">Password</label>
+                  <div class="col-lg-9">
+                      <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+                      <div class="checkbox">
+                      <label>
+                          <input type="checkbox"> Checkbox default
+                      </label>
+                      </div>
+                      <div>
+                          <input type="checkbox" class="o-checkbox" id="idChk1">
+                          <label for="idChk1">Orange checkbox unchecked</label>
+                      </div>
+                      <div>
+                          <input type="checkbox" class="o-checkbox" id="idChk2" disabled="disabled">
+                          <label for="idChk2">Orange checkbox unchecked disabled</label>
+                      </div>
+                      <div>
+                          <input type="checkbox" class="o-checkbox" id="idChk3" checked>
+                          <label for="idChk3">Orange checkbox checked </label>
+                      </div>
+                      <div>
+                          <input type="checkbox" class="o-checkbox" id="idChk4"  disabled="disabled" checked>
+                          <label for="idChk4">Orange checkbox checked disabled</label>
+                      </div>
+                      <div>
+                          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5">
+                          <label for="idChk5">Orange checkbox with label before</label>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label for="textArea" class="col-lg-3 form-control-label">Textarea</label>
+                  <div class="col-lg-9">
+                      <textarea class="form-control" rows="3" id="textArea"></textarea>
+                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-lg-3 form-control-label">Radios</label>
+                  <div class="col-lg-9">
+                      <div class="radio">
+                      <label>
+                          <input name="optionsRadios" id="optionsRadios1" value="option1" checked="checked" type="radio">
+                          Option one is this
+                      </label>
+                      </div>
+                      <div class="radio">
+                      <label>
+                          <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+                          Option two can be something else
+                      </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-lg-3 form-control-label">Orange Radios</label>
+                  <div class="col-lg-9">
+                      <div>
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">
+                      <label for="optionsRadiosOrange1">
+                          Orange radio checked
+                      </label>
+                      </div>
+                      <div>
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">
+                      <label for="optionsRadiosOrange2">
+                          Orange radio unchecked
+                      </label>
+                      </div>
+                      <div>
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">
+                      <label for="optionsRadiosOrange5">
+                          Orange radio align right
+                      </label>
+                      </div>
+                      <div>
+                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>
+                      <label for="optionsRadiosOrange3">
+                          Orange radio checked disabled
+                      </label>
+                      </div>
+                      <div>
+                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>
+                      <label for="optionsRadiosOrange4">
+                          Orange radio unchecked disabled
+                      </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label for="select" class="col-lg-3 form-control-label">Selects</label>
+                  <div class="col-lg-9">
+                      <select class="form-control" id="select">
+                      <option selected="selected">1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      </select>
+                      <br>
+                      <select multiple="multiple" class="form-control" title="Multiselect sample">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <div class="col-lg-9 col-lg-offset-3">
+                      <button class="btn btn-secondary">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </div>
+          </fieldset>
+      </form>
+  </div>
+  <div class="col-lg-4 col-lg-offset-1">
+      <form class="">
+          <div class="form-group">
+              <label class="form-control-label" for="focusedInput">Focused input</label>
+              <input class="form-control" id="focusedInput" value="This is focused..." type="text">
+          </div>
+
+          <div class="form-group">
+              <label class="form-control-label" for="disabledInput">Disabled input</label>
+              <input class="form-control" id="disabledInput" placeholder="Disabled input here..." disabled="disabled" type="text">
+          </div>
+
+          <div class="form-group has-warning">
+              <label class="form-control-label" for="inputWarning">Input warning</label>
+              <input class="form-control" id="inputWarning" type="text">
+          </div>
+
+          <div class="form-group has-error">
+              <label class="form-control-label" for="inputError">Input error</label>
+              <input class="form-control" id="inputError" type="text">
+          </div>
+
+          <div class="form-group has-success">
+              <label class="form-control-label" for="inputSuccess">Input success</label>
+              <input class="form-control" id="inputSuccess" type="text">
+          </div>
+
+          <div class="form-group">
+              <label class="form-control-label" for="inputLarge">Large input</label>
+              <input class="form-control input-lg" id="inputLarge" type="text">
+          </div>
+
+          <div class="form-group">
+              <label class="form-control-label" for="inputDefault">Default input</label>
+              <input class="form-control" id="inputDefault" type="text">
+          </div>
+
+          <div class="form-group">
+              <label class="form-control-label" for="inputSmall">Small input</label>
+              <input class="form-control input-sm" id="inputSmall" type="text">
+          </div>
+
+          <div class="form-group">
+              <label class="form-control-label">Input addons</label>
+              <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input class="form-control" type="text" title="Input addons field">
+              <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Button</button>
+              </span>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Navs
+================================================== -->
+<h2 id="nav" class="">Navs</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <h3 id="bs-nav-tabs">Tabs</h3>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" href="#home" data-toggle="tab">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#profile" data-toggle="tab">Profile</a></li>
+            <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                Dropdown <span class="caret" aria-hidden="true" role="button"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#dropdown1" data-toggle="tab">Action</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#dropdown2" data-toggle="tab">Another action</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="home">
+                <p>Raw denim you probably haven't heard of them jean
+    shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
+    cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+    Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater
+    eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+    cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
+    voluptate nisi qui.</p>
+            </div>
+            <div class="tab-pane fade" id="profile">
+                <p>Food truck fixie locavore, accusamus mcsweeney's
+    marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
+    blog sartorial PBR leggings next level wes anderson artisan four loko
+    farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim
+    craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo
+    nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown1">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu
+    before they sold out mcsweeney's organic lomo retro fanny pack lo-fi
+    farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
+    beer, iphone skateboard locavore carles etsy salvia banksy hoodie
+    helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit
+    cred pitchfork.</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+                <p>Trust fund seitan letterpress, keytar raw denim
+    keffiyeh etsy art party before they sold out master cleanse gluten-free
+    squid scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+    art party locavore wolf cliche high life echo park Austin. Cred vinyl
+    keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
+    viral locavore cosby sweater.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <h3 id="bs-nav-pills">Pills</h3>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                Dropdown <span class="caret" aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link"" href="#">Profile</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                Dropdown <span class="caret" aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <h3 id="bs-nav-breadcrumbs">Breadcrumbs</h3>
+        <div class="">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active">Home</li>
+            </ul>
+
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Library</li>
+            </ul>
+
+            <ul class="breadcrumb" style="margin-bottom: 5px;">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active">Data</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2 id="pagination">Pagination</h2>
+<div class="row">
+    <nav role="navigation">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link disabled" href="#" aria-label="Previous">
+                    <span aria-hidden="true" class="fa fa-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link active" href="#" aria-label="Go to page 1">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true" class="fa fa-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="row">
+    <nav role="navigation">
+        <ul class="pagination">
+            <li class="page-item">
+            <a class="page-link page-item-labelled" href="#" aria-label="Previous">
+                <span aria-hidden="true" class="fa fa-chevron-left"></span>
+                <span>Back</span>
+            </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 1">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
+            <li class="page-item"><a class="page-link active" href="#" aria-label="Go to page 5">5</a></li>
+            <li class="page-item">
+                <a class="page-link page-item-labelled disabled" href="#" aria-label="Next">
+                    <span>Next</span>
+                    <span aria-hidden="true" class="fa fa-chevron-right"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- Indicators
+================================================== -->
+<h2 id="indicators" class="">Indicators</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Alerts</h3>
+        <div class="alert alert-dismissable alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4>Warning!</h4>
+            <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="alert alert-dismissable alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="alert alert-dismissable alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="alert alert-dismissable alert-info">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4">
+        <h3>Labels</h3>
+        <div class="" style="margin-bottom: 40px;">
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+            <span class="label label-info">Info</span>
+        </div>
+    </div>
+</div>
+
+<!-- Progress bars
+================================================== -->
+<h2 id="progress" class="">Progress bars</h2>
+
+<h3 id="progress-basic">Basic</h3>
+<progress class="progress progress-default" value="60" max="100">60%</progress>
+
+<h3 id="progress-alternatives">Contextual alternatives</h3>
+<progress class="progress progress-info" value="20" max="100">20%</progress>
+<progress class="progress progress-success" value="40" max="100">40%</progress>
+<progress class="progress progress-warning" value="60" max="100">60%</progress>
+<progress class="progress progress-danger" value="80" max="100">80%</progress>
+
+<h3 id="progress-striped">Striped</h3>
+<progress class="progress progress-striped progress-info" value="20" max="100">20%</progress>
+<progress class="progress progress-striped progress-success" value="40" max="100">40%</progress>
+<progress class="progress progress-striped progress-warning" value="60" max="100">60%</progress>
+<progress class="progress progress-striped progress-danger" value="80" max="100">80%</progress>
+
+<h3 id="progress-animated">Animated</h3>
+<progress class="progress progress-striped progress-animated" value="45" max="100">45%</progress>
+
+<!-- Containers
+================================================== -->
+<h2 id="container" class="">Containers</h2>
+<h3>Cards</h3>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Button</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dialogs
+================================================== -->
+<h2 id="dialogs" class="">Dialogs</h2>
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-2">
+    <h3>Popovers</h3>
+    <div class="">
+        <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
+
+        <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
+
+        <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+        sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
+
+        <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
+    </div>
+    <h3>Tooltips</h3>
+    <div class="">
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
+
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Top</button>
+
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Bottom</button>
+
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Right</button>
+    </div>
+    </div>
+</div>
+
+<div id="source-modal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body">
+                <pre></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a href="#" class="scroll-top">
+    <span class="icon-arrow-up" aria-hidden="true"></span>
+    <div class="scroll-top-text">back to top</div>
+</a>
+
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <footer class="bd-footer navbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="o-footer">
+                <div class="container-fluid o-footer-top" role="contentinfo">
+                    <h1 class="sr-only">footer - site map & informations</h1>
+        <p>This documentation is an adaptation made by Orange</p>
+    <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+
+    <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.2/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+                </div>
+                <div class="o-footer-bottom">
+                    <ul class="">
+                      <li>Currently v4.0.0-alpha.2</li>
+                      <li>&middot;</li>
+                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
+                      <li>&middot;</li>
+                      <li><a href="examples">Examples</a></li>
+                      <li>&middot;</li>
+                      <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.2">Original Bootstrap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://boosted.orange.com/v4-alpha/assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+<script src="http://boosted.orange.com/v4-alpha/assets/js/vendor/tether.min.js"></script>
+
+
+  <script src="http://boosted.orange.com/v4-alpha/dist/js/boosted.js"></script>
+
+
+
+  
+    <script src="http://boosted.orange.com/v4-alpha/../assets/js/vendor/anchor.min.js"></script>
+  
+    <script src="http://boosted.orange.com/v4-alpha/../assets/js/vendor/clipboard.min.js"></script>
+  
+    <script src="http://boosted.orange.com/v4-alpha/../assets/js/vendor/holder.min.js"></script>
+  
+    <script src="http://boosted.orange.com/v4-alpha/../assets/js/src/application.js"></script>
+  
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="http://boosted.orange.com/v4-alpha/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://boosted.orange.com/v4-alpha/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+
+
+<script>
+				$(document).ready(function() {
+					$("#myTable").tablesorter({
+						sortList: [[4,1]]
+					});
+				});
+
+			</script>
+
+
+<script>
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+<script>
+			accessibilitytoolbar_custom={
+				idLinkModeContainer:"id_li_for_cdu",
+				//idSkipLinkIdLinkMode:"cdu_skiplink",
+				//cssSkipLinkClassName: "skiplinks_trigger",
+				cssLinkModeClassName:"nav-item-cdu"
+				//callback:skiplinksAfterLoad
+			};
+</script>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+  </body>
+</html>

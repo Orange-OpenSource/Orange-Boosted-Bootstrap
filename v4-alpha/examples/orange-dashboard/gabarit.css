@@ -1,0 +1,116 @@
+
+.navbar-default .navbar-brand {
+  background: none;
+}
+#orange_logo {
+  float: left;
+}
+#app_name {
+  margin-left: 20px;
+  font-size: 1.1em;
+  text-shadow: none;
+}
+#app_name:hover, #app_name:focus {
+  color: #f16e00;
+}
+.nav-shift {
+  margin-left: 6%;
+}
+.orange {
+  color: #f16e00;
+}
+#content {
+  margin: 10px 10px 0 10px;
+}
+#content .well {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #eee;
+  background-image: none;
+  border-color: #eee;
+  border-radius: 0;
+  box-shadow: none;
+}
+#content .info-block {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: inherit;
+  background-color: #eee;
+}
+.tab-content {
+  background-color: white;
+}
+.tab-pane, .tab-pane:active, .tab-pane:focus {
+  outline: 0 !important;
+}
+.col .info-block {
+  padding-bottom: 99999px;
+  margin-bottom: -99999px;
+}
+.col-wrap {
+  overflow: hidden;
+}
+.col-base {
+  padding: 10px;
+  margin-top: -15px;
+}
+.tab-content {
+  padding: 10px;
+}
+.form-control:focus {
+  background-color: white;
+}
+#messages .input-group {
+  margin-bottom: 10px;
+}
+.center {
+  text-align: center;
+}
+table .alert-img {
+  width: 20px;
+}
+.warning {
+  color: #f16e00;
+}
+.ok {
+  color: #0da520;
+}
+.error {
+  color: red;
+}
+.info-block .sub-block {
+  padding: 10px 10px 1px;
+  margin: 10px;
+  background-color: #ccc;
+}
+footer {
+  background-color: #333;
+  /*height: auto;*/
+}
+footer a {
+  color: white;
+}
+.navbar-inverse #id_for_cdu_link a {
+  color: #fff;
+}
+.navbar-inverse #id_for_cdu_link a:hover,.navbar-inverse #id_for_cdu_link a:focus {
+  color: #f16e00;
+}
+
+
+@media (max-width: 992px) {
+  .col .info-block {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .row.base.col-wrap {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 560px) {
+  .hide-when-small {
+    display: none !important;
+  }
+}
