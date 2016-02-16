@@ -206,10 +206,25 @@
   }
 }
 
+// Back to top
+//
+//
+
+$back-top-btn-height: 6rem;
+
+@media (max-width: #{map-get($grid-breakpoints, sm)}){
+  body {
+      margin-bottom: $back-top-btn-height;
+  }
+  .container {
+    margin: 0 1rem;
+  }
+}
+
 .scroll-top {
     position: fixed;
     bottom: 4rem;
-    right: 20rem;
+    right: 1rem;
     z-index: 100;
     text-decoration: none;
     display: none;
@@ -219,6 +234,25 @@
     }
 
     .scroll-top-text {
-        margin-top: -0.6rem;
+      margin-top: -0.6rem;
+    }
+
+    @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+      color: $brand-orange-white;
+      background-color: $brand-orange-black;
+      width: 100%;
+      height: $back-top-btn-height;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+
+      span[class*="icon-"]::before {
+          color: $brand-orange-white;
+          line-height: $back-top-btn-height;
+      }
+
+      .scroll-top-text {
+        display: none;
+      }
     }
 }

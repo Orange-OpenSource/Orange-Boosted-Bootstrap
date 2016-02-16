@@ -10,12 +10,12 @@
     $(document).ready(function () {
 
       $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          $('.scroll-top').fadeIn();
+        if ($(this).scrollTop() > window.innerHeight) {
+          $('.scroll-top').fadeIn(function () {
+          });
         } else {
           $('.scroll-top').fadeOut();
         }
-
       });
 
       $('.scroll-top').click(function () {
@@ -23,7 +23,7 @@
         $('html, body').animate({
           scrollTop: 0
         }, 600, function () {
-          $('header li a').first().focus();
+          $('a.navbar-brand:visible').first().focus();
         });
 
         return false;
@@ -64,7 +64,7 @@
   }
 
   function onFooterVisibilityChange(el, scrollTopElm, defaultPos) {
-    if (el) {
+    if (el && window.innerWidth > 544) {
       return function () {
 
         var footerRect = el.getBoundingClientRect();
