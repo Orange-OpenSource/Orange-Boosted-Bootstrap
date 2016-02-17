@@ -10,12 +10,12 @@
       border-color: $brand-orange-black;
     }
 
-    width: 4rem;
-    padding: 1rem 0;
+    width: $pagination-width;
+    padding: calc((#{$pagination-width} - 4px - #{$font-size-base}) / 2) 0;
     margin-left: 0;
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
     font-weight: $brand-font-weight-bold;
-    line-height: $font-size-lg;
+    line-height: $font-size-base;
     text-align: center;
     border: solid 2px transparent;
 
@@ -29,9 +29,14 @@
   .page-item:first-child .page-link,
   .page-item:last-child .page-link {
     width: auto;
-    min-width: 4rem;
-    height: 4rem;
+    padding: calc((#{$pagination-width} - 4px - #{$font-size-base}) / 2) 0;
+    min-width: $pagination-width;
+    height: $pagination-width;
     border: solid 2px $brand-orange-black;
+
+    span[class*="icon-"] {
+        font-size: $font-size-base;
+    }
 
     &.disabled {
       @include hover {
@@ -47,6 +52,46 @@
       width: auto;
       min-width: 4rem;
       padding: 1rem 1.6rem;
+    }
+  }
+
+  &.pagination-lg {
+    .page-link {
+      width: $pagination-width-lg;
+      padding: calc((#{$pagination-width-lg} - 4px - #{$font-size-lg}) / 2) 0;
+      font-size: $font-size-lg;
+      line-height: $font-size-lg;
+    }
+
+    .page-item:first-child .page-link,
+    .page-item:last-child .page-link {
+      padding: calc((#{$pagination-width-lg} - 4px - #{$font-size-lg}) / 2) 0;
+      min-width: $pagination-width-lg;
+      height: $pagination-width-lg;
+
+      span[class*="icon-"] {
+          font-size: $font-size-lg;
+      }
+    }
+  }
+
+  &.pagination-sm {
+    .page-link {
+      width: $pagination-width-sm;
+      padding: calc((#{$pagination-width-sm} - 4px - #{$font-size-sm}) / 2) 0;
+      font-size: $font-size-sm;
+      line-height: $font-size-sm;
+    }
+
+    .page-item:first-child .page-link,
+    .page-item:last-child .page-link {
+      padding: calc((#{$pagination-width-sm} - 4px - #{$font-size-sm}) / 2) 0;
+      min-width: $pagination-width-sm;
+      height: $pagination-width-sm;
+
+      span[class*="icon-"] {
+          font-size: $font-size-sm;
+      }
     }
   }
 }
