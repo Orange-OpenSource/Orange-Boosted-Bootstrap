@@ -519,7 +519,7 @@ a.btn {
   .form-group-lg {
     @media (min-width: $screen-sm-min) {
       .form-control-label {
-        padding-top: (($padding-large-vertical * $line-height-large) + .1);
+        padding-top: (($padding-large-vertical * $line-height-lg) + .1);
       }
     }
   }

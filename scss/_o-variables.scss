@@ -70,21 +70,17 @@ $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 
 $font-size-root: 62.5%;
-$font-size-base: 1.4rem;
+$font-size-base: 1.6rem;
 
 // For REM size
-$font-size-lg: 1.6rem;
-$font-size-large:$font-size-lg;
+$font-size-lg: 1.8rem;
 $font-size-sm: 1.4rem;
-$font-size-small: $font-size-sm;
-$font-size-h1: (floor(($font-size-base * 3.6) * 10) / 10); // 5rem
-$font-size-h2: (floor(($font-size-base * 2.85) * 10) / 10); // 4rem
-$font-size-h3: (ceil(($font-size-base * 2) * 10) / 10); // 2.8rem
-$font-size-h4: $font-size-large;
-$font-size-h5: 1.6rem;
-$font-size-h6: $font-size-base;
-
-
+$font-size-h1: 5rem;
+$font-size-h2: 4rem;
+$font-size-h3: 3.4rem;
+$font-size-h4: 3rem;
+$font-size-h5: 2.4rem;
+$font-size-h6: 2rem;
 
 // Unit-less `line-height` for use in components like buttons.
 $line-height:        1.428571429; // 20/14
@@ -120,9 +116,7 @@ $padding-small-vertical: 0.5rem;//5px;
 $padding-small-horizontal: 1rem;//10px;
 
 $line-height-lg:  (20 / 16);
-$line-height-large: $line-height-lg;
 $line-height-sm:  (20 / 14);
-$line-height-small: $line-height-sm;
 
 $enable-rounded: false;
 
@@ -231,10 +225,10 @@ $input-color-placeholder: $gray-before-light;
 $input-height-base:              (2.4 + ($padding-base-vertical * 2));
 $input-height: $input-height-base;
 // Large `.form-control` height
-$input-height-large:             ((ceil($font-size-large * $line-height-large * 10) + ($padding-large-vertical * 20) + 4) / 10);
+$input-height-large:             ((ceil($font-size-lg * $line-height-lg * 10) + ($padding-large-vertical * 20) + 4) / 10);
 $input-height-lg: $input-height-large;
 // Small `.form-control` height
-$input-height-small:             ((floor($font-size-small * $line-height-small * 10) + ($padding-small-vertical * 20) + 4) / 10);
+$input-height-small:             ((floor($font-size-sm * $line-height-sm * 10) + ($padding-small-vertical * 20) + 4) / 10);
 $input-height-sm: $input-height-small;
 
 $input-padding-x: 2rem;
@@ -456,6 +450,10 @@ $pagination-padding-y-sm:             .5rem;
 $pagination-padding-x-lg:             2rem;
 $pagination-padding-y-lg:             1.2rem;
 
+$pagination-width: 4rem;
+$pagination-width-lg: 6rem;
+$pagination-width-sm: 3rem;
+
 // Jumbotron
 //
 //
@@ -674,7 +672,7 @@ $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 $carousel-control-color:                      $brand-orange-black;
 $carousel-control-width:                      3rem;
 $carousel-control-opacity:                    .5;
-$carousel-control-font-size:                  $font-size-large;
+$carousel-control-font-size:                  $font-size-lg;
 
 $carousel-indicator-active-bg:                $brand-primary;
 $carousel-indicator-border-color:             $brand-orange-black;

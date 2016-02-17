@@ -196,6 +196,19 @@ fieldset[disabled] a.btn {
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-primary-color, $btn-primary-bg);
 
+    &.disabled,
+    &:disabled {
+      @include hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+
     &:active,
     &.active,
     .open > &.dropdown-toggle {
@@ -291,6 +304,19 @@ fieldset[disabled] a.btn {
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-warning-color, $btn-warning-bg);
+
+    &.disabled,
+    &:disabled {
+      @include hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
 
     &:active,
     &.active,
