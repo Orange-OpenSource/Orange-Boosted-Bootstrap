@@ -578,7 +578,7 @@
 }
 
 @media (max-width:  960px) {
-  .mega-menu {
+  .mega-menu.navbar  {
     .logo-menu-discover-caption {
       padding-top:  calc(50% - 10px);
       font-size:  25px;
@@ -607,7 +607,7 @@
 }
 
 @media (max-width:  767px) {
-  .mega-menu {
+  .mega-menu.navbar  {
     .dropdown-megamenu .row {
       padding: 0;
     }
@@ -696,7 +696,7 @@
       padding-left:  0;
     }
 
-    .navbar .nav-item .megamenu-dropdown-toggle {
+    .nav-item .megamenu-dropdown-toggle {
       margin-top:  0.8rem;
     }
 
@@ -708,7 +708,7 @@
       margin-left:  0;
     }
 
-    .navbar .nav-item {
+     .nav-item {
       padding-left:  1rem;
     }
 
@@ -872,3 +872,22 @@
     }
   }
 }
+
+  .icon-bar {
+    display:  block;
+    width:  22px;
+    height:  2px;
+    margin-top: 4px;
+    border:  1px solid #fff;
+    border-radius:  1px;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color:  #fff;
+  }
+
+  .megamenuclosetop {
+    position: relative;
+    top: -5px;
+    border:  0 solid;
+  }
