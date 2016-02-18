@@ -1,6 +1,6 @@
 .lead {
   font-size: (floor(($font-size-base * 1.15) * 10) / 10);
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     font-size: ($font-size-base * 1.5);
   }
 }
@@ -10,13 +10,15 @@ pre {
 .panel-title {
   font-size: (ceil(($font-size-base * 1.125) * 10) / 10);
 }
-@media screen and (min-width: $screen-sm-min) {
-  .carousel-control {
+@media screen {
+  @include media-breakpoint-up(sm) {
+    .carousel-control {
     .glyphicon-chevron-left,
     .glyphicon-chevron-right,
     .icon-prev,
     .icon-next {
       font-size: 3rem;
+      }
     }
   }
 }

@@ -12,7 +12,7 @@
       padding: 0;
     }
     // for tablet, display 2 cards by rows
-    @media (min-width: $screen-sm-min) {
+    @include media-breakpoint-up(sm) {
       tr {
         float: left;
         width: 45%;

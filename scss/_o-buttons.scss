@@ -5,18 +5,18 @@
   border-color: $background;
   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
 
-  @include hover {
+  @include hover-focus {
     color: $hover-color;
     background-color: $hover-background;
     border-color: $hover-background;
   }
 
-  &:focus,
-  &.focus {
-    color: $hover-color;
-    background-color: $hover-background;
-    border-color: $hover-background;
-  }
+//   &:focus,
+//   &.focus {
+//     color: $hover-color;
+//     background-color: $hover-background;
+//     border-color: $hover-background;
+//   }
 
   &:active,
   &.active,
@@ -64,18 +64,18 @@
 
   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
 
-  @include hover {
+  @include hover-focus {
     color: $brand-orange-white;
     background-color: $brand-orange-black;
     border-color: $brand-orange-black;
   }
 
-  &:focus,
-  &.focus {
-    color: $brand-orange-white;
-    background-color: $brand-orange;
-    border-color: $brand-orange;
-  }
+//   &:focus,
+//   &.focus {
+//     color: $brand-orange-white;
+//     background-color: $brand-orange;
+//     border-color: $brand-orange;
+//   }
 
   &:active,
   &.active,
@@ -122,18 +122,18 @@
   border-color: $background;
   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
 
-  @include hover {
+  @include hover-focus {
     color: $brand-orange-black;
     background-color: $brand-orange-white;
     border-color: $brand-orange-white;
   }
 
-  &:focus,
-  &.focus {
-    color: $brand-orange-black;
-    background-color: $brand-orange-white;
-    border-color: $brand-orange-white;
-  }
+//   &:focus,
+//   &.focus {
+//     color: $brand-orange-black;
+//     background-color: $brand-orange-white;
+//     border-color: $brand-orange-white;
+//   }
 
   &:active,
   &.active,
@@ -196,18 +196,31 @@ fieldset[disabled] a.btn {
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-primary-color, $btn-primary-bg);
 
+    &.disabled,
+    &:disabled {
+      @include hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+
     &:active,
     &.active,
     .open > &.dropdown-toggle {
       color: $brand-orange-white;
-      background-color: $brand-orange-black;
+      background-color: $brand-orange-clear;
       border-color: $brand-orange-white;
 
       &:hover,
       &:focus,
       &.focus {
         color: $brand-orange-white;
-        background-color: $brand-orange-black;
+        background-color: $brand-orange-clear;
         border-color: $brand-orange-white;
       }
     }
@@ -221,60 +234,64 @@ fieldset[disabled] a.btn {
   &:disabled {
     @include hover {
       color: $btn-link-disabled-color;
-      background-color: $brand-orange-white;
+      background-color: $brand-orange-clear;
       border-color: $btn-link-disabled-color;
     }
 
     color: $btn-link-disabled-color;
-    background-color: $brand-orange-white;
+    background-color: $brand-orange-clear;
     border-color: $btn-link-disabled-color;
   }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-secondary-color, $btn-secondary-bg);
 
-    @include hover {
+    @include hover-focus {
       color: $brand-orange-white;
-      background-color: $brand-orange-black;
+      background-color: $brand-orange-clear;
       border-color: $brand-orange-white;
     }
 
-    &:focus,
-    &.focus {
-      color: $brand-orange-white;
-      background-color: $brand-orange-black;
-      border-color: $brand-orange-white;
-    }
+    // &:focus,
+    // &.focus {
+    //   color: $brand-orange-white;
+    //   background-color: $brand-orange-black;
+    //   border-color: $brand-orange-white;
+    // }
 
+    background-color: $brand-orange-white;
     border-color: $brand-orange-white;
   }
 }
 .btn-info {
   @include orange-button-variant($btn-info-color, $btn-info-bg, $btn-info-hover-color, $btn-info-hover-bg);
 
-  @include hover {
+  @include hover-focus {
+    background-color: $brand-orange-clear;
     border-color: $brand-orange-black;
   }
 
-  &:focus,
-  &.focus {
-    border-color: $brand-orange-black;
-  }
+//   &:focus,
+//   &.focus {
+//     background-color: $brand-orange-clear;
+//     border-color: $brand-orange-black;
+//   }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
+    background-color: $brand-orange-clear;
     border-color: $brand-orange-white;
 
     &.disabled,
     &:disabled {
       @include hover {
         color: $btn-link-disabled-black-bg-color;
-        background-color: $brand-orange-black;
+        background-color: $brand-orange-clear;
         border-color: $btn-link-disabled-black-bg-color;
      }
 
       color: $btn-link-disabled-black-bg-color;
-      background-color: $brand-orange-black;
+      background-color: $brand-orange-clear;
       border-color: $btn-link-disabled-black-bg-color;
     }
   }
@@ -292,18 +309,31 @@ fieldset[disabled] a.btn {
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-warning-color, $btn-warning-bg);
 
+    &.disabled,
+    &:disabled {
+      @include hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+
     &:active,
     &.active,
     .open > &.dropdown-toggle {
       color: $brand-orange-white;
-      background-color: $brand-orange-black;
+      background-color: $brand-orange-clear;
       border-color: $brand-orange-white;
 
       &:hover,
       &:focus,
       &.focus {
         color: $brand-orange-white;
-        background-color: $brand-orange-black;
+        background-color: $brand-orange-clear;
         border-color: $brand-orange-white;
       }
     }

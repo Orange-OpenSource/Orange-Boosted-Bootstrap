@@ -178,7 +178,6 @@ html {
     float: left;
     padding: .425rem 0 1rem;
     margin-top: 2.8rem;
-    margin-left: 1rem;
     font-weight: $brand-font-weight-bold;
     color: $brand-orange-white !important;
 
@@ -506,7 +505,7 @@ a.btn {
 .form-horizontal {
   // Reset spacing and right align labels, but scope to media queries so that
   // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     .form-control-label {
       padding-top: ($padding-base-vertical + .1); // Default padding plus a border
     }
@@ -517,15 +516,15 @@ a.btn {
   // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
   // inputs and labels within a `.form-group`.
   .form-group-lg {
-    @media (min-width: $screen-sm-min) {
+    @include media-breakpoint-up(sm) {
       .form-control-label {
-        padding-top: (($padding-large-vertical * $line-height-large) + .1);
+        padding-top: (($padding-large-vertical * $line-height-lg) + .1);
       }
     }
   }
 
   .form-group-sm {
-    @media (min-width: $screen-sm-min) {
+    @include media-breakpoint-up(sm) {
       .form-control-label {
         padding-top: ($padding-small-vertical + .1);
       }

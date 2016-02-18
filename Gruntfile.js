@@ -201,13 +201,6 @@ module.exports = function (grunt) {
           ],
           dest: '.tmpdocs/assets/js/src/application.js'
       },
-      fontIcons: {
-          src: [
-          'dist/css/<%= pkg.name %>.css',
-          'bower_components/fontawesome/css/font-awesome.css'
-          ],
-          dest: 'dist/css/<%= pkg.name %>.css'
-      }
       /* end mod */
     },
 
@@ -360,12 +353,6 @@ module.exports = function (grunt) {
       fonts: {
         expand: true,
         cwd: 'fonts/',
-        src: ['*'],
-        dest: 'dist/fonts/'
-      },
-      fontIcons: {
-        expand: true,
-        cwd: 'bower_components/fontawesome/fonts/',
         src: ['*'],
         dest: 'dist/fonts/'
       },
@@ -633,10 +620,10 @@ module.exports = function (grunt) {
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
   grunt.registerTask('sass-compile', ['sass:core', 'copy:tmpdocs', 'sass:docs']);
 
-  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'csscomb:dist', 'concat:fontIcons', 'cssmin:core', 'cssmin:docs']);
+  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'csscomb:dist', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:fontIcons','copy:img']);
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
