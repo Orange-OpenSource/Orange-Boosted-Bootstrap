@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Stepbar
+title: Orange stepbar
 group: components
 ---
 
