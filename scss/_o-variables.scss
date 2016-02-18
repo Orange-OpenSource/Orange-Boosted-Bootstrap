@@ -117,7 +117,7 @@ $padding-base-vertical: 1rem;//10px;
 $padding-base-horizontal: 2rem;//20px;
 $padding-large-vertical: 1.2rem;//12px;
 $padding-large-horizontal: 2rem;//20px;
-$padding-small-vertical: 0.5rem;//5px;
+$padding-small-vertical: .5rem;//5px;
 $padding-small-horizontal: 1rem;//10px;
 
 $line-height-lg:  (20 / 18);
@@ -143,8 +143,8 @@ $component-active-bg:       $brand-orange-black;
 
 // Padding for `<th>`s and `<td>`s.
 // for REM size
-$table-cell-padding: 0.9rem;//9px;
-$table-sm-cell-padding:  0.5rem;//5px;
+$table-cell-padding: .9rem;//9px;
+$table-sm-cell-padding:  .5rem;//5px;
 
 // Default background color used for all tables.
 $table-bg: $brand-orange-white;
@@ -195,7 +195,7 @@ $btn-padding-x: $padding-base-horizontal;
 $btn-padding-y: $padding-base-vertical;
 
 $btn-padding-x-sm: $padding-small-horizontal;
-$btn-padding-y-sm: 0.3rem;
+$btn-padding-y-sm: .3rem;
 
 $btn-padding-x-lg:  $padding-large-horizontal;
 $btn-padding-y-lg:  1.3rem;
@@ -237,10 +237,10 @@ $input-height-small:             ((floor($font-size-sm * $line-height-sm * 10) +
 $input-height-sm: $input-height-small;
 
 $input-padding-x: 2rem;
-$input-padding-y: 0.8rem;   //40px height
+$input-padding-y: .8rem;   //40px height
 
 $input-padding-x-sm: 1rem;
-$input-padding-y-sm: 0.3rem;    //30px height
+$input-padding-y-sm: .3rem;    //30px height
 
 $input-padding-x-lg: 2rem;
 $input-padding-y-lg: 1.3rem;    //50px height
@@ -401,7 +401,7 @@ $nav-local-arrow-outer-color:           $nav-local-border-color;
 // Step process bar
 $o-wizard-step-bar-arrow-width: ($line-height-computed + $padding-base-vertical);
 $o-wizard-step-bar-arrow-width-small: (($line-height-computed / 2) + $padding-base-vertical);
-$o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + 0.1);
+$o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + .1);
 $o-wizard-step-bar-arrow-outer-width:           ($o-wizard-step-bar-arrow-width);
 
 // Pagination
@@ -546,7 +546,7 @@ $modal-content-border-color:                   rgba(0,0,0,.2);
 // Modal backdrop background color
 $modal-backdrop-bg:           $brand-orange-white;
 // Modal backdrop opacity
-$modal-backdrop-opacity:      0.5;
+$modal-backdrop-opacity:      .5;
 // Modal header border color
 $modal-header-border-color:   $brand-orange-black;
 // Modal footer border color

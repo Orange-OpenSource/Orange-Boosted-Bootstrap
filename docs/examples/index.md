@@ -5,19 +5,6 @@ title: Examples
 
 [Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
 
-## Orange brand
-
-<div class="row bd-examples">
-  <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/orange-news/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_news.jpg" alt="">
-    </a>
-    <h4>News template</h4>
-    <p>Main mega menu.</p>
-  </div>
-</div>
-
-
 ## Framework
 
 Examples that focus on implementing uses of built-in components provided by Bootstrap.

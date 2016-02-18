@@ -40,7 +40,7 @@
 @media (max-width:  $screen-sm-max) {
   .navbar-default .navbar-form .form-control {
     height:  auto;
-    font-size:  0.95em;
+    font-size:  .95em;
   }
   .navbar-default .sub-nav {
     position:  relative;
@@ -56,7 +56,7 @@
 .nav-menu .sub-nav.container-fluid {
   z-index:  1;
   background-color:  #fff;
-  box-shadow:  0 6px 12px rgba(0, 0, 0, 0.176);
+  box-shadow:  0 6px 12px rgba(0, 0, 0, .176);
 }
 
 // mega menu list
@@ -311,7 +311,7 @@
     display:  inline-block;
     margin:  12px 18px 0 0;
     text-decoration:  none;
-    transition:  all 0.5s;
+    transition:  all .5s;
   }
 
   .color-orange, .color-orange * {
@@ -330,7 +330,7 @@
     max-width:  0;
     overflow:  hidden;
     cursor:  pointer;
-    transition:  all 0.5s;
+    transition:  all .5s;
   }
 
   .topmenu > .topmenucontent > div.right > img {
@@ -431,7 +431,7 @@
     overflow:  hidden;
     font-size:  18px;
     cursor: pointer;
-    transition-duration:  0.2s;
+    transition-duration:  .2s;
   }
 
   .visible {
@@ -456,7 +456,7 @@
   .navbar-brand-small img {
     width:  25px;
     margin: 0 10px;
-    font-size:  0.7rem;
+    font-size:  .7rem;
     font-weight:  400;
     color:  #fff;
   }
@@ -544,7 +544,7 @@
     display: inline-block;
     margin: 12px 18px 0 0;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all .5s;
   }
 
   .topmenulang {
@@ -553,7 +553,7 @@
   }
 
   .navbar .topmenulang a {
-    margin-top: 0.8rem;
+    margin-top: .8rem;
   }
 
 
@@ -697,7 +697,7 @@
     }
 
     .nav-item .megamenu-dropdown-toggle {
-      margin-top:  0.8rem;
+      margin-top:  .8rem;
     }
 
     .searchpanel {
@@ -760,7 +760,7 @@
 
     .nav-menu {
       left: 0;
-      transition-duration:  0.3s;
+      transition-duration:  .3s;
     }
 
     .menu-level1 {
@@ -820,7 +820,7 @@
     .nav-item > a::before,
     .mega-menu-content h3::before {
       float: right;
-      margin-right:  0.5em;
+      margin-right:  .5em;
       font-family:  monospace;
       font-size:  1.6em;
       content:  ">";

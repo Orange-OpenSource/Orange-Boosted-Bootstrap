@@ -5,6 +5,7 @@
  */
 
 // Core variables and mixins
+@import "custom";
 @import "variables";
 // boosted mod
 @import "o-variables";
@@ -36,7 +37,7 @@
 @import "card";
 @import "breadcrumb";
 @import "pagination";
-@import "labels";
+@import "tags";
 @import "jumbotron";
 @import "alert";
 @import "progress";

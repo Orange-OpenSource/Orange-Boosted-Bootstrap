@@ -32,7 +32,7 @@
     $('.bd-example-indeterminate [type="checkbox"]').prop('indeterminate', true)
 
     // Disable empty links in docs examples
-    $('[href=#]').click(function (e) {
+    $('.bd-example [href=#]').click(function (e) {
       e.preventDefault()
     })
 

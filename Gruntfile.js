@@ -92,7 +92,7 @@ module.exports = function (grunt) {
           'js/dist/scrollspy.js' : 'js/src/scrollspy.js',
           'js/dist/tab.js'       : 'js/src/tab.js',
           'js/dist/tooltip.js'   : 'js/src/tooltip.js',
-          'js/dist/megamenu.js'   : 'js/src/megamenu.js',
+          'js/dist/megamenu.js'  : 'js/src/megamenu.js',
           'js/dist/popover.js'   : 'js/src/popover.js'
         }
       },
@@ -119,7 +119,7 @@ module.exports = function (grunt) {
           'dist/js/umd/scrollspy.js' : 'js/src/scrollspy.js',
           'dist/js/umd/tab.js'       : 'js/src/tab.js',
           'dist/js/umd/tooltip.js'   : 'js/src/tooltip.js',
-          'dist/js/umd/megamenu.js'   : 'js/src/megamenu.js',
+          'dist/js/umd/megamenu.js'  : 'js/src/megamenu.js',
           'dist/js/umd/popover.js'   : 'js/src/popover.js'
         }
       }
@@ -240,7 +240,7 @@ module.exports = function (grunt) {
         src: ['scss/{,**/}*.scss', '!scss/_normalize.scss']
       },
       docs: {
-        src: ['docs/assets/scss/*.scss', '!scss/_normalize.scss', '!docs/assets/scss/docs.scss']
+        src: ['docs/assets/scss/*.scss', '!docs/assets/scss/docs.scss']
       }
     },
 
@@ -261,7 +261,7 @@ module.exports = function (grunt) {
             autoprefixer
           ]
         },
-        src: ['docs/assets/css/docs.min.css']
+        src: 'docs/assets/css/docs.min.css'
       },
       examples: {
         options: {
@@ -299,28 +299,6 @@ module.exports = function (grunt) {
       docs: {
         src: '.tmpdocs/assets/css/docs.min.css',
         dest: '.tmpdocs/assets/css/docs.min.css'
-      }
-    },
-
-    csscomb: {
-      options: {
-        config: 'scss/.csscomb.json'
-      },
-      dist: {
-        expand: true,
-        cwd: 'dist/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'dist/css/'
-      },
-      examples: {
-        expand: true,
-        cwd: '.tmpdocs/examples/',
-        src: '**/*.css',
-        dest: '.tmpdocs/examples/'
-      },
-      docs: {
-        src: '.tmpdocs/assets/css/src/docs.css',
-        dest: '.tmpdocs/assets/css/src/docs.css'
       }
     },
 
@@ -544,7 +522,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'boosted-<%= pkg.version %>-dist.zip',
+          archive: '<%= pkg.name %>-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -554,7 +532,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'boosted-<%= pkg.version %>-dist'
+            dest: '<%= pkg.name %>-<%= pkg.version %>-dist'
           }
         ]
       }
@@ -608,7 +586,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test-js', ['eslint', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dev', 'concat:bootstrap', 'lineremover', 'babel:dist', 'stamp', 'concat:plugins','uglify:core', 'commonjs']);
+  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'lineremover', 'babel:dist', 'stamp', 'uglify:core', 'commonjs']);
 
   grunt.registerTask('test-scss', ['scsslint:core']);
 
@@ -618,13 +596,14 @@ module.exports = function (grunt) {
     require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
   })(process.env.TWBS_SASS || 'libsass');
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
-  grunt.registerTask('sass-compile', ['sass:core', 'copy:tmpdocs', 'sass:docs']);
+  grunt.registerTask('sass-compile', ['sass:core', 'sass:docs']);
 
-  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'csscomb:dist', 'cssmin:core', 'cssmin:docs']);
+  /* boosted mod */
+  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'concat:fontIcons', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
-
+  /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
 
@@ -640,9 +619,9 @@ module.exports = function (grunt) {
 
   // Docs task.
   /* boosted mod */
-  grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
+  grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'cssmin:docs']);
   grunt.registerTask('docs-js', ['concat:docsJs', 'uglify:docsJs']);
-   /* end mod */
+  /* end mod */
   grunt.registerTask('lint-docs-css', ['scsslint:docs']);
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */

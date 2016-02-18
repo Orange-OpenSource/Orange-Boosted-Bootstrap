@@ -35,7 +35,7 @@
 <script src="{{ site.baseurl }}/assets/js/ie-emulation-modes-warning.js"></script>
 
 {% if page.layout == "docs" %}
-<script src="{{ site.baseurl }}/assets/js/vendor/jekyll-search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/vendor/jekyll-search.min.js"></script>
 
 <script>
 SimpleJekyllSearch.init({
@@ -48,17 +48,6 @@ SimpleJekyllSearch.init({
 </script>
 {% endif %}
 
-{% if page.title == "Boostwatch" %}
-<script>
-				$(document).ready(function() {
-					$("#myTable").tablesorter({
-						sortList: [[4,1]]
-					});
-				});
-
-			</script>
-{% endif %}
-
 <script>
 Holder.addTheme('gray', {
   background: '#777',
@@ -66,15 +55,4 @@ Holder.addTheme('gray', {
   font: 'Helvetica',
   fontweight: 'normal'
 })
-</script>
-
-<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
-<script>
-			accessibilitytoolbar_custom={
-				idLinkModeContainer:"id_li_for_cdu"
-				//idSkipLinkIdLinkMode:"cdu_skiplink",
-				//cssSkipLinkClassName: "skiplinks_trigger",
-				//cssLinkModeClassName:"nav-item-cdu",
-				//callback:skiplinksAfterLoad
-			};
 </script>

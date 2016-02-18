@@ -13,7 +13,7 @@
 //   Doing so gives us access to the same core utilities provided by Bootstrap.
 //   For example, consistent media queries through those mixins.
 //
-// - Bootstrap's **docs variables** are prefixed with `%bd-`.
+// - Bootstrap's **docs variables** are prefixed with `$bd-`.
 //   These custom colors avoid collision with the components Bootstrap provides.
 //
 // - Classes are prefixed with `.bd-`.
@@ -24,24 +24,19 @@
 
 // Load Bootstrap variables and mixins
 @import "../../../scss/variables";
-/* boosted mod */
-@import '../../../scss/o-variables';
-/* end mod */
 @import "../../../scss/mixins";
 
 // Local docs variables
-/* boosted mod */
-// Local docs variables
-$bd-purple:         $brand-orange-black !default;//#563d7c;
-$bd-purple-bright:  $bd-purple !default;//lighten(saturate($bd-purple, 5%), 15%);
-$bd-purple-light:   $bd-purple !default;//#cdbfe3;
-$bd-graphite:       $brand-orange-black !default;//#2a2730;
-$bd-graphite-light: $gray-darker !default;//lighten($bd-graphite, 40%);
-$bd-yellow:         $brand-orange !default;//#ffe484;
-$bd-danger:         $brand-danger !default;//#d9534f;
-$bd-warning:        $brand-warning !default;//#f0ad4e;
-$bd-info:           $brand-info !default;//#5bc0de;
-/* end mod */
+$bd-purple:         #563d7c;
+$bd-purple-bright:  lighten(saturate($bd-purple, 5%), 15%);
+$bd-purple-light:   #cdbfe3;
+$bd-graphite:       #2a2730;
+$bd-graphite-light: lighten($bd-graphite, 40%);
+$bd-yellow:         #ffe484;
+$bd-danger:         #d9534f;
+$bd-warning:        #f0ad4e;
+$bd-info:           #5bc0de;
+
 // Load docs components
 @import "booticon";
 @import "nav";
@@ -67,7 +62,3 @@ $bd-info:           $brand-info !default;//#5bc0de;
 // Load docs dependencies
 @import "syntax";
 @import "anchor";
-
-/* boosted mod */
-@import "boosted-docs"
-/* end mod */

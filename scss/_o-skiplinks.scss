@@ -32,7 +32,7 @@
   background: none repeat scroll 0 0 $gray-light;
   border: 2px solid #000;
   border-radius: 0;
-  box-shadow: 2px 2px 1634px 1604px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 1634px 1604px rgba(0, 0, 0, .3);
 }
 .skiplinks .skiplinks-section a:hover {
   cursor: pointer;
@@ -45,7 +45,7 @@
   float: none;
   padding: 0;
   margin: 0;
-  font-size: 0.95em;
+  font-size: .95em;
   font-weight: normal;
   line-height: normal;
   color: #000;
