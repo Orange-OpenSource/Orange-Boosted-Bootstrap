@@ -135,6 +135,7 @@ const Megamenu = (($) => {
     $('.megamenuclosetop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').removeClass('active')
     $('.megamenuclosetop').parent().parent().parent().parent().find('.navbar-langbar').removeClass('active')
     $('.megamenuclosetop').parent().parent().parent().parent().find('.menu-footer-320').removeClass('active')
+    $('.megamenu-dropdown-toggle').removeClass('active')
     $(this).removeClass('active')
   })
 
@@ -156,6 +157,14 @@ const Megamenu = (($) => {
       $(this).parent().find('.megamenusearchinputclose').addClass('visible')
     } else {
       $(this).parent().find('.megamenusearchinputclose').removeClass('visible')
+    }
+  })
+
+  $(window).on('scroll', () => {
+    if ($(window).scrollTop() > 70) {
+      $('.mega-menu .topmenu').addClass('resorbe')
+    } else {
+      $('.mega-menu .topmenu').removeClass('resorbe')
     }
   })
 })(jQuery)

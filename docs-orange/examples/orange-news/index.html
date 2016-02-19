@@ -70,24 +70,29 @@
 							</ul>
 						</div>
 						<a>
-							<span class="icon-buy" >
+              <span class="sr-only">basket</span>
+							<span class="icon-buy" aria-hidden="true" >
 							</span>
 						</a>
 						<a   class="megamenuaccounttop"  >
 							<span class="icon-my-account" style="color: #fff!important;"></span>
 						</a>
-						<a  class="megamenusearchtop"  >
-							<span class="icon-search" >
+						<a  class="megamenusearchtop" >
+              <span class="sr-only">Search</span>
+							<span class="icon-search" aria-hidden="true" >
 							</span>
 						</a>
 						<a  class="megamenubacktop"  >
 							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+							<span class="icon-bar" aria-hidden="true" ></span>
+							<span class="icon-bar" aria-hidden="true" ></span>
+							<span class="icon-bar"aria-hidden="true" ></span>
 						</a>
-					
-						<a class=megamenuclosetop >x</a>
+						<a class=megamenuclosetop >	
+              <span class="icon-delete" aria-hidden="true" >
+							</span>
+              <span class="sr-only">Toggle navigation</span>
+             </a>
 				
 					</div>
 				</div>
@@ -99,9 +104,9 @@
 					<div class=megamenusearchwraper>
 						<div class="megamenusearchinputwrapp" style="float : left;" >
 							<input class="megamenusearchinputtext" type="text" value="" /> 
-							<div class="megamenusearchinputclose" >X</div>
+							<div class="megamenusearchinputclose" > <span class="icon-delete" aria-hidden="true" ></span></div>
 						</div>
-						<button type="button" class="btn btn-primary">
+						<button type="button" class="btn btn-inverse btn-primary">
 						<span class="icon-search" ></span>
 						</button>
 					</div>
@@ -114,129 +119,124 @@
 				</div>
 				<div class="navbar-toggleable-xs" id="bs-example-navbar-collapse-1">
 						<a class="navbar-brand" href="#"><img src="images/logo-orange.png" alt="Link to the homepage"></a>
-                        <ul class="nav navbar-nav nav-menu">
-						  <li class="nav-item dropdown-mega">
-                            <a href="#" title="open the news menu" class=" megamenu-dropdown-toggle " ><span class="sr-only">open the </span>Produits et service <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
-                            <ul class="dropdown-megamenu" role="menu">
-                                <li class=container >
-									
-                                    <div class="row mega-menu-content">
-										<h2 class=mega-menu-content-title >
-										Accueil Produits et service  
-										</h2>
-                                        <div class="col-xs-12 col-sm-12 col-md-3">
-											<h3> Pour votre mobile </h3>
-                                            <ul>
-                                                <li><a href="#">Iphone 6</a></li>
-                                                <li><a href="#">Phones </a></li>
-                                                <li><a href="#">Tablets</a></li>
-                                                <li><a href="#">Acessories</a></li>
-                                                <li><a href="#">Comming soon</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-3">
-											<h3> Pour votre tablette </h3>
-                                            <ul>
-                                                <li><a href="#">Phones</a></li>
-                                                <li><a href="#">Plans</a></li>
-                                                <li><a href="#">Acessories</a></li>
-                                                <li><a href="#">Connected objects</a></li>
-                                                <li><a href="#">Options</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-3">
-											<h3> Pour la maison </h3>
-                                            <ul>
-                                                <li><a href="#">Pay monthly offers</a></li>
-                                                <li><a href="#">Shared Plans</a></li>
-                                                <li><a href="#">Orange TV</a></li>
-                                                <li><a href="#">>Broadband + mobile</a></li>
-                                                <li><a href="#">Customer Offers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-3">
-											<div style="disply : inline-block; position: relative; width :200px; height : 200px;" >
-												<div class="icon-frame-tariff logo-menu-accueil" >
-												</div>
-												<div style="padding : 35px 35px 35px 45px; font-size : 18px; margin-bottom: 20px; " > Swimming <br> in minuites. Desparate <br> for data.
-												</div>
-											</div>
-											<p>
-												if your orange plan isn't working out, we 'll change it to fit around you.
-											</p>
-											<button type="button" class="btn btn-default">Find out more</button>
-                                        </div>
-										<div class="closing-bare" >
-											<div class=closing-bare-button >
-												<a role="button" class="pull-right" href="#" title="close the menu">
-													<span class="sr-only">close the menu</span><span class="glyphicon glyphicon-remove">X</span>
-												</a>
-											</div>
-											<span class="icon-free-tag" >
-											</span>
-											promotions
-											<span class="icon-top-up-dollar" >
-											</span>
-											Top up
-											
-										</div>
-                                    </div>
-                                </li>
-                            </ul>
+            <ul class="nav navbar-nav nav-menu">
+              <li class="nav-item dropdown-mega">
+                <a href="#" title="open the news menu" class=" megamenu-dropdown-toggle " ><span class="sr-only">open the </span>Discover <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                <ul class="dropdown-megamenu" role="menu">
+                    <li class=container >
+                        <div class="row mega-menu-content">
+                          <h2 class=mega-menu-content-title >
+                          <a>Accueil Produits et service</a>  
+                          </h2>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <h3><a> Pour votre mobile </a></h3>
+                                <ul>
+                                    <li><a href="#">Iphone 6</a></li>
+                                    <li><a href="#">Phones </a></li>
+                                    <li><a href="#">Tablets</a></li>
+                                    <li><a href="#">Acessories</a></li>
+                                    <li><a href="#">Comming soon</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <h3><a>  Pour votre tablette </a> </h3>
+                                <ul>
+                                    <li><a href="#">Phones</a></li>
+                                    <li><a href="#">Plans</a></li>
+                                    <li><a href="#">Acessories</a></li>
+                                    <li><a href="#">Connected objects</a></li>
+                                    <li><a href="#">Options</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <h3><a>  Pour la maison </a> </h3>
+                                <ul>
+                                    <li><a href="#">Pay monthly offers</a></li>
+                                    <li><a href="#">Shared Plans</a></li>
+                                    <li><a href="#">Orange TV</a></li>
+                                    <li><a href="#">>Broadband + mobile</a></li>
+                                    <li><a href="#">Customer Offers</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                              <div style="disply : inline-block; position: relative; width :200px; height : 200px;" >
+                                <div class="icon-frame-tariff logo-menu-accueil" >
+                                </div>
+                                <div style="padding : 35px 35px 35px 45px; font-size : 18px; margin-bottom: 20px; " > Swimming <br> in minuites. Desparate <br> for data.
+                                </div>
+                              </div>
+                              <p>
+                                if your orange plan isn't working out, we 'll change it to fit around you.
+                              </p>
+                              <button type="button" class="btn btn-inverse btn-info">Find out more</button>
+                                                </div>
+                            <div class="closing-bare" >
+                              <div class=closing-bare-button >
+                                <a role="button" class="pull-right" href="#" title="close the menu">
+                                  <span class="sr-only">close the menu</span><span class="icon-delete" aria-hidden="true" >
+                                </a>
+                              </div>
+                              <span class="icon-free-tag" >
+                              </span>
+                              promotions
+                              <span class="icon-top-up-dollar" >
+                              </span>
+                              Top up
+                              </div>
+                              </div>
+                            </li>
+                          </ul>
                         </li>
 
                         <li class="nav-item dropdown-mega ">
-                            <a href="#" title="open the shop menu" class="megamenu-dropdown-toggle " ><span class="sr-only">open the </span>discover <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                            <a href="#" title="open the shop menu" class="megamenu-dropdown-toggle " ><span class="sr-only">open the </span>Shop <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
                             <ul class="dropdown-megamenu" role="menu">
                                 <li class=container >
-									
                                     <div class="row mega-menu-content">
-										<h2 class=mega-menu-content-title >
-										 Home discover
-										</h2>
+                                      <h2 class=mega-menu-content-title >
+                                       <a>Home discover</a>
+                                      </h2>
                                         <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap"  >
-												<div class="icon-frame-fun logo-menu-discover logo-menu-discover" >
-												</div>
-												<div class="logo-menu-discover-caption" > fun </div>
+                                        <div class="icon-frame-fun logo-menu-discover logo-menu-discover" >
+                                        </div>
+                                        <div class="logo-menu-discover-caption" > <a> fun </a> </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap">
-										    
-											<div class="icon-frame-tariff logo-menu-discover"  >
-											</div>
-											<div class="logo-menu-discover-caption" > tariff </div>
+                                          <div class="icon-frame-tariff logo-menu-discover"  >
+                                          </div>
+                                          <div class="logo-menu-discover-caption" > <a> tariff </a>  </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap">
-											<div class="icon-frame-money logo-menu-discover" >
-											</div>
-											<div class="logo-menu-discover-caption" > money </div>
+                                          <div class="icon-frame-money logo-menu-discover" >
+                                          </div>
+                                          <div class="logo-menu-discover-caption" ><a>  money </a>  </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-6 col-md-3 logo-menu-discover-wrap">
-											<div class="icon-frame-care logo-menu-discover" >
-											</div>
-											<div class="logo-menu-discover-caption" > care </div>
+                                          <div class="icon-frame-care logo-menu-discover" >
+                                          </div>
+                                          <div class="logo-menu-discover-caption" ><a> care </a> </div>
                                         </div>
-										<div class=closing-bare >
-											<div class=closing-bare-button >
-												<a role="button" class="pull-right" href="#" title="close the menu">
-													<span class="sr-only">close the menu</span><span class="glyphicon glyphicon-remove">X</span>
-												</a>
-											</div>
-										</div>
+                                      <div class=closing-bare >
+                                        <div class=closing-bare-button >
+                                          <a role="button" class="pull-right" href="#" title="close the menu">
+                                            <span class="sr-only">close the menu</span><span class="icon-delete" aria-hidden="true" ></span>
+                                          </a>
+                                        </div>
+                                      </div>
                                     </div>
                                 </li>
                             </ul>
                         </li>
                          <li class="nav-item dropdown-mega ">
-                            <a href="#" title="open the news menu" class=" megamenu-dropdown-toggle " ><span class="sr-only">open the </span>My orange <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                            <a href="#" title="open the news menu" class=" megamenu-dropdown-toggle " ><span class="sr-only">open the </span>My Orange <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
                             <ul class="dropdown-megamenu" role="menu">
                                 <li class=container >
-									
                                     <div class="row mega-menu-content">
-										<h2 class=mega-menu-content-title >
-										My orange
-										</h2>
+                                        <h2 class=mega-menu-content-title >
+                                        <a>My orange</a>
+                                        </h2>
                                         <div class="col-xs-12 col-sm-12 col-md-3">
-											<h3> Pour votre mobile </h3>
+                                            <h3> Pour votre mobile </h3>
                                             <ul>
                                                 <li><a href="#">Iphone 6</a></li>
                                                 <li><a href="#">Phones </a></li>
@@ -246,7 +246,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-3">
-											<h3> Pour votre tablette </h3>
+                                            <h3> Pour votre tablette </h3>
                                             <ul>
                                                 <li><a href="#">Phones</a></li>
                                                 <li><a href="#">Plans</a></li>
@@ -256,7 +256,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-3">
-											<h3> Pour la maison </h3>
+                                            <h3> Pour la maison </h3>
                                             <ul>
                                                 <li><a href="#">Pay monthly offers</a></li>
                                                 <li><a href="#">Shared Plans</a></li>
@@ -266,25 +266,97 @@
                                             </ul>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-3">
-											<div style="disply : inline-block; position: relative; width :200px; height : 200px;" >
-												<div class="icon-frame-tariff logo-menu-accueil" >
-												</div>
-												<div style="padding : 35px; font-size : 20px; margin-bottom: 20px; " > Swimming <br> in minuites. Desparate <br> for data.
-												</div>
-											</div>
-											<p>
-												if your orange plan isn't working out, we 'll change it to fit around you.
-											</p>
-											<button type="button" class="btn btn-default">Find out more</button>
+                                      <div style="disply : inline-block; position: relative; width :200px; height : 200px;" >
+                                        <div class="icon-frame-tariff logo-menu-accueil" >
                                         </div>
-										<div class=closing-bare >
-											<div class=closing-bare-button >
-												<a role="button" class="pull-right" href="#" title="close the menu">
-													<span class="sr-only">close the menu</span><span class="glyphicon glyphicon-remove">X</span>
-												</a>
-											</div>
-											<image src="../../../docs-orange/examples/orange-news/images/promotion.png" />
-										</div>
+                                        <div style="padding : 35px; font-size : 20px; margin-bottom: 20px; " > Swimming <br> in minuites. Desparate <br> for data.
+                                        </div>
+                                      </div>
+                                      <p>
+                                        if your orange plan isn't working out, we 'll change it to fit around you.
+                                      </p>
+                                      <button type="button" class="btn btn-default">Find out more</button>
+                                                        </div>
+                                    <div class=closing-bare >
+                                      <div class=closing-bare-button >
+                                        <a role="button" class="pull-right" href="#" title="close the menu">
+                                          <span class="sr-only">close the menu</span>
+                                          <span class="icon-delete" aria-hidden="true" >
+                                          </span>
+                                        </a>
+                                      </div>
+                                      
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown-mega">
+                            <a href="#" title="open the news menu" class=" megamenu-dropdown-toggle " ><span class="sr-only">open the </span>Help <b class="caret" aria-hidden="true"></b><span class="sr-only"> menu</span></a>
+                            <ul class="dropdown-megamenu" role="menu">
+                                <li class=container >
+									
+                                    <div class="row mega-menu-content">
+                                      <h2 class=mega-menu-content-title >
+                                        <a>Accueil Produits et service </a>
+                                      </h2>
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                            <h3> Pour votre mobile </h3>
+                                            <ul>
+                                                <li><a href="#">Iphone 6</a></li>
+                                                <li><a href="#">Phones </a></li>
+                                                <li><a href="#">Tablets</a></li>
+                                                <li><a href="#">Acessories</a></li>
+                                                <li><a href="#">Comming soon</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                            <h3> Pour votre tablette </h3>
+                                            <ul>
+                                                <li><a href="#">Phones</a></li>
+                                                <li><a href="#">Plans</a></li>
+                                                <li><a href="#">Acessories</a></li>
+                                                <li><a href="#">Connected objects</a></li>
+                                                <li><a href="#">Options</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                            <h3> Pour la maison </h3>
+                                            <ul>
+                                                <li><a href="#">Pay monthly offers</a></li>
+                                                <li><a href="#">Shared Plans</a></li>
+                                                <li><a href="#">Orange TV</a></li>
+                                                <li><a href="#">>Broadband + mobile</a></li>
+                                                <li><a href="#">Customer Offers</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-3">
+                                          <div style="disply : inline-block; position: relative; width :200px; height : 200px;" >
+                                            <div class="icon-frame-tariff logo-menu-accueil" >
+                                            </div>
+                                            <div style="padding : 35px 35px 35px 45px; font-size : 18px; margin-bottom: 20px; " > Swimming <br> in minuites. Desparate <br> for data.
+                                            </div>
+                                          </div>
+                                          <p>
+                                            if your orange plan isn't working out, we 'll change it to fit around you.
+                                          </p>
+                                          <button type="button" class="btn btn-default">Find out more</button>
+                                                            </div>
+                                        <div class="closing-bare" >
+                                          <div class=closing-bare-button >
+                                            <a role="button" class="pull-right" href="#" title="close the menu">
+                                              <span class="sr-only">close the menu</span><span class="icon-delete" aria-hidden="true" >
+                                              </span>
+                                            </a>
+                                          </div>
+                                          <span class="icon-free-tag" >
+                                          </span>
+                                          promotions
+                                          <span class="icon-top-up-dollar" >
+                                          </span>
+                                          Top up
+                                          
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -301,9 +373,12 @@
 									<div class=megamenusearchwraper>
 										<div style="display:inline-block; " class="megamenusearchinputwrapp" >
 											<input class="megamenusearchinputtext" type="text" value="" style="" /> 
-											<div class="megamenusearchinputclose" >X</div>
+											<div class="megamenusearchinputclose" >
+                        <span class="icon-delete" aria-hidden="true" >
+                        </span>
+                      </div>
 										</div>
-										<button type="button" class="btn btn-primary">Search</button>
+										<button type="button" class="btn btn-inverse btn-primary">Search</button>
 									</div>
                                 </li>
                             </ul>

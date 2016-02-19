@@ -14,7 +14,7 @@
   background-color: transparent;
 }
 .navbar-default .nav .nav-item .nav-item-cdu {
-  color:  #fff !important;
+  color:  $brand-orange-white !important;
 }
 
 // remove bootstrap transparent bg on small device
@@ -55,7 +55,7 @@
 .nav-menu .sub-nav.container,
 .nav-menu .sub-nav.container-fluid {
   z-index:  1;
-  background-color:  #fff;
+  background-color:  $brand-orange-white;
   box-shadow:  0 6px 12px rgba(0, 0, 0, 0.176);
 }
 
@@ -101,7 +101,7 @@
 
 // link item within sub-navigation panel list
 .sub-nav li a {
-  color:  #000;
+  color:  $brand-orange-black;
 }
 .sub-nav li a:focus, .sub-nav li a:hover {
   color:  $brand-orange;
@@ -123,7 +123,7 @@
 //
 
 .mega-menu {
-  position:  fixed;
+  position:  $megamenu-position;
   top:  0;
   left:  0;
   z-index: 10;
@@ -156,16 +156,16 @@
 
 
   a {
-    color: #fff;
+    color: $brand-orange-white;
   }
 
   .dropdown-menu a {
-    color: #000;
+    color: $brand-orange-black;
   }
 
   .dropdown-menu a.dropdown-item:hover,
   .dropdown-menu a.dropdown-item:focus {
-    color: #fff;
+    color: $brand-orange-white;
   }
   .dropdown-menu {
     right: 0;
@@ -193,9 +193,9 @@
     font-size: 1.4rem;
     text-align: left;
     list-style: none;
-    background-color: #fff;
+    background-color: $brand-orange-white;
     background-clip: padding-box;
-    border: 1px solid #000;
+    border: 1px solid $brand-orange-black;
     border-radius: 0;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 
@@ -222,22 +222,21 @@
     left: 0;
     width: 100%;
     margin:  0;
-    color:  #fff;
-    background-color:  #000;
+    color:  $brand-orange-white;
+    background-color:  $brand-orange-black;
     border-top:  1px solid rgba(35,35,35,.9);
     border-right:  0 solid;
     border-left:  0 solid;
   }
 
   .dropdown-megamenu h3 {
-    color:  #fff;
+    color:  $brand-orange-white;
   }
 
   .dropdown-megamenu a {
-    color:  #fff;
+    color:  $brand-orange-white;
   }
 
-  // --- http://s3.smpk.fr/orange/2020/www/prehome.html
   .sticky {
     position:  static;
     top:  0;
@@ -247,16 +246,19 @@
   }
 
   .black {
-    background-color:  #000 !important;
+    background-color:  $brand-orange-black !important;
   }
 
   .border-bottom {
-    border-bottom:  solid 1px #232323 !important;
+    border-bottom:  $megamenu-border !important;
   }
 
   .topmenu {
     z-index:  10;
     width:  100%;
+    height: 46px;
+    overflow: hidden;
+    transition: 0.3s;
   }
 
   .topmenu > .topmenucontent {
@@ -266,7 +268,7 @@
     width:  100%;
     height:  46px;
     overflow:  hidden;
-    background:  #000;
+    background:  $brand-orange-black;
   }
 
   .topmenu > .topmenucontent {
@@ -274,8 +276,8 @@
   }
 
   .color-white, .color-white * {
-    color:  #fff !important;
-    border-color:  #fff !important;
+    color:  $brand-orange-white !important;
+    border-color:  $brand-orange-white !important;
   }
 
   .topmenu > .topmenucontent > div.left {
@@ -283,6 +285,9 @@
     margin-left:  10;
   }
 
+  .resorbe {
+    height: 0;
+  }
   .f15 {
     font-size:  1.5rem;
     line-height:  1.7rem;
@@ -290,8 +295,8 @@
   }
 
   .color-white, .color-white * {
-    color:  #fff !important;
-    border-color:  #fff !important;
+    color:  $brand-orange-white !important;
+    border-color:  $brand-orange-white !important;
   }
 
   .topmenu > .topmenucontent > div.left > div {
@@ -302,8 +307,6 @@
     overflow:  hidden;
     vertical-align:  top;
     cursor:  pointer;
-    background:  url("../img/menu_icon_rect.png") center no-repeat;
-    background-size:  24px;
     transition:  all 1s;
   }
 
@@ -315,8 +318,8 @@
   }
 
   .color-orange, .color-orange * {
-    color:  #f16e00 !important;
-    border-color:  #f16e00 !important;
+    color:  $megamenu-hover-color !important;
+    border-color:  $megamenu-hover-color !important;
   }
 
   .topmenu > .topmenucontent > div.right {
@@ -352,12 +355,12 @@
 
   .closing-bare-button {
     float:  right;
-    padding:  20px 10px 10px;
+    padding:  10px 0;
   }
 
   .mega-menu-content-title {
     padding:  10px;
-    color:  #fff;
+    color:  $brand-orange-white;
   }
 
   ul {
@@ -369,17 +372,11 @@
     padding:  20px 10px;
   }
 
-  .btn-default {
-    color:  #fff;
-    background-color:  #000;
-    border-color:  #fff;
-  }
-
-
   .megamenu-dropdown-toggle::after {
     display:  none;
   }
 
+  .megamenuclosetop,
   .megamenusearchtop {
     display:  none;
     }
@@ -389,15 +386,10 @@
     padding: 4px;
   }
 
-  .topmenu > .topmenucontent > div.right > .megamenuclosetop {
-    padding:  5px 4px;
-    font-size:  28px;
-  }
-
   .megamenusearchinputtext {
     width:  100%;
     padding:  10px 5px 8px;
-    color:  #fff;
+    color:  $brand-orange-white;
     vertical-align:  bottom;
     background-color:  #555;
     border:  1px solid transparent;
@@ -409,7 +401,7 @@
     max-width:  calc(100% - 120px);
     margin:  0 20px 0 0;
     overflow:  hidden;
-    color:  #fff;
+    color:  $brand-orange-white;
     vertical-align:  bottom;
     background-color:  #555;
     border:  1px solid transparent;
@@ -420,13 +412,13 @@
   }
 
   input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
-    outline-color:  #f16e00;
+    outline-color:  $megamenu-hover-color;
   }
 
   .megamenusearchinputclose {
     position:  absolute;
     top:  0;
-    right:  -30px;
+    right:  -45px;
     padding:  5px 15px;
     overflow:  hidden;
     font-size:  18px;
@@ -450,7 +442,7 @@
   }
 
   .nav > li > a.active {
-    color:  #f16e00;
+    color:  $megamenu-hover-color;
   }
 
   .navbar-brand-small img {
@@ -458,7 +450,7 @@
     margin: 0 10px;
     font-size:  0.7rem;
     font-weight:  400;
-    color:  #fff;
+    color:  $brand-orange-white;
   }
 
   .topmenu > .topmenucontent > div.navbar-brand-smallblock {
@@ -484,19 +476,19 @@
   }
 
   .navbar-langbar {
-    border:  1px solid #333;
+    border:  $megamenu-border;
   }
 
   .menu-footer-320 ul,
   .navbar-langbar ul {
     margin-bottom:  0;
-    color:  #fff;
+    color:  $brand-orange-white;
     list-style-type:  none;
   }
 
   .menu-footer-320 ul a,
   .navbar-langbar ul a {
-    color: #fff;
+    color: $brand-orange-white;
   }
 
   .navbar-langbar ul li {
@@ -532,7 +524,7 @@
   }
 
   .row mega-menu-content li a:hover {
-    color:  #f16e00;
+    color:  $megamenu-hover-color;
     text-decoration: underline !important;
   }
 
@@ -562,23 +554,17 @@
     width:  22px;
     height:  2px;
     margin-top: 4px;
-    border:  1px solid #fff;
+    border:  1px solid $brand-orange-white;
     border-radius:  1px;
   }
 
   .navbar-toggle .icon-bar {
-    background-color:  #fff;
-  }
-
-  .megamenuclosetop {
-    position: relative;
-    top: -5px;
-    border:  0 solid;
+    background-color:  $brand-orange-white;
   }
 }
 
 @media (max-width:  960px) {
-  .mega-menu.navbar  {
+  .mega-menu.navbar {
     .logo-menu-discover-caption {
       padding-top:  calc(50% - 10px);
       font-size:  25px;
@@ -600,6 +586,10 @@
       margin-left:  8px;
     }
 
+    .topmenu > .topmenucontent > div.right > a.megamenubacktop {
+      margin-left:  16px;
+    }
+
     .topmenulang {
       display: none;
     }
@@ -607,7 +597,7 @@
 }
 
 @media (max-width:  767px) {
-  .mega-menu.navbar  {
+  .mega-menu.navbar {
     .dropdown-megamenu .row {
       padding: 0;
     }
@@ -622,7 +612,7 @@
     }
 
     .navbar-nav .open .dropdown-megamenu {
-      background:  #000;
+      background:  $brand-orange-black;
     }
 
     .container {
@@ -663,7 +653,7 @@
 
     .container  div > h2,
     .container  li ul > li {
-      border-bottom:  1px solid #555;
+      border-bottom:  $megamenu-border;
     }
 
     .container  div > h2,
@@ -708,7 +698,7 @@
       margin-left:  0;
     }
 
-     .nav-item {
+    .nav-item {
       padding-left:  1rem;
     }
 
@@ -717,7 +707,7 @@
     }
 
     .nav-item {
-      border-bottom:  1px solid #333;
+      border-bottom:  $megamenu-border;
     }
 
     .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
@@ -806,14 +796,18 @@
 
     .back-menu1title {
       font-size:  1.9rem;
-      color:  #fff;
+      color:  $brand-orange-white;
     }
 
     .back-menu1title::before ,
     .mega-menu-content-title::before {
-      font-family:  monospace;
-      font-size:  1.6em;
-      content:  "<";
+      font-family: icon-orange  !important;
+      font-size:  1em;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      content: "\ea53";
+      speak: none;
     }
 
     .row ul > li > a::before,
@@ -821,9 +815,13 @@
     .mega-menu-content h3::before {
       float: right;
       margin-right:  0.5em;
-      font-family:  monospace;
-      font-size:  1.6em;
-      content:  ">";
+      font-family: icon-orange !important;
+      font-size:  1em;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      content: "\ea52";
+      speak: none;
     }
 
     .container li ul > li.container {
@@ -834,12 +832,12 @@
     .menu-footer-320.active {
       display:  block;
       margin-top:  -1px;
-      border-bottom:  1px solid #333;
+      border-bottom: $megamenu-border;
     }
 
     .navbar-langbar.active {
       display:  block;
-      border-bottom:  1px solid  #333;
+      border-bottom: $megamenu-border;
     }
 
     .navbar-smallsearchbar.active {
@@ -873,21 +871,15 @@
   }
 }
 
-  .icon-bar {
-    display:  block;
-    width:  22px;
-    height:  2px;
-    margin-top: 4px;
-    border:  1px solid #fff;
-    border-radius:  1px;
-  }
+.icon-bar {
+  display:  block;
+  width:  22px;
+  height:  2px;
+  margin-top: 4px;
+  border:  1px solid $brand-orange-white;
+  border-radius:  1px;
+}
 
-  .navbar-toggle .icon-bar {
-    background-color:  #fff;
-  }
-
-  .megamenuclosetop {
-    position: relative;
-    top: -5px;
-    border:  0 solid;
-  }
+.navbar-toggle .icon-bar {
+  background-color: $brand-orange-white;
+}
