@@ -16,8 +16,8 @@
       padding: 1rem 2rem;
       font-size: 1.6rem;
       font-weight: bold;
-      border-width: 2px;
       line-height: $font-size-base;
+      border-width: 2px;
 
       @include hover {
         color: $nav-tabs-link-hover-color;

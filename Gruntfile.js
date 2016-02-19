@@ -188,11 +188,12 @@ module.exports = function (grunt) {
       },
       /* boosted mod */
       docsJs: {
-          src: [
-              '.tmpdocs/assets/js/src/application.js',
-              '.tmpdocs/assets/js/src/application-orange.js'
-          ],
-          dest: '.tmpdocs/assets/js/src/application.js'
+        src: [
+            '.tmpdocs/assets/js/src/application.js',
+            '.tmpdocs/assets/js/src/application-orange.js'
+        ],
+        dest: '.tmpdocs/assets/js/src/application.js'
+      }
       /* end mod */
     },
 

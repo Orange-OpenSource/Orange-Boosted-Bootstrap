@@ -13,11 +13,11 @@ pre {
 @media screen {
   @include media-breakpoint-up(sm) {
     .carousel-control {
-    .glyphicon-chevron-left,
-    .glyphicon-chevron-right,
-    .icon-prev,
-    .icon-next {
-      font-size: 3rem;
+      .glyphicon-chevron-left,
+      .glyphicon-chevron-right,
+      .icon-prev,
+      .icon-next {
+        font-size: 3rem;
       }
     }
   }

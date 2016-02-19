@@ -23,7 +23,7 @@
     // Dropdowns get custom display when collapsed
     .open .dropdown-megamenu {
       background-color:  $dropdown-bg;
-      > li > a {
+      a {
         color:  $dropdown-link-color;
         &:hover,
         &:focus {
@@ -278,7 +278,7 @@
     border-color:  #fff !important;
   }
 
-  .topmenu > .topmenucontent > div.left {
+  .topmenu > .topmenucontent > .left {
     display:  inline-block;
     margin-left:  10;
   }
@@ -294,7 +294,7 @@
     border-color:  #fff !important;
   }
 
-  .topmenu > .topmenucontent > div.left > div {
+  .topmenucontent > .left > div {
     display:  inline-block;
     width:  0;
     height:  24px;
@@ -307,7 +307,7 @@
     transition:  all 1s;
   }
 
-  .topmenu > .topmenucontent > div.left > a {
+  .topmenucontent > .left > a {
     display:  inline-block;
     margin:  12px 18px 0 0;
     text-decoration:  none;
@@ -319,26 +319,26 @@
     border-color:  #f16e00 !important;
   }
 
-  .topmenu > .topmenucontent > div.right {
+  .topmenucontent > .right {
     position:  absolute;
     top:  6px;
     right:  10px;
     display:  inline-block;
   }
 
-  .topmenu > .topmenucontent > div.right > img:first-of-type {
+  .topmenucontent > .right > img:first-of-type {
     max-width:  0;
     overflow:  hidden;
     cursor:  pointer;
     transition:  all .5s;
   }
 
-  .topmenu > .topmenucontent > div.right > img {
+  .topmenucontent > .right > img {
     margin-left:  22px;
     vertical-align:  bottom;
   }
 
-  .topmenu > .topmenucontent > div.right > a {
+  .topmenucontent > .right > a {
     padding:  5px 0;
     margin-left:  18px;
     text-decoration:  none;
@@ -389,7 +389,7 @@
     padding: 4px;
   }
 
-  .topmenu > .topmenucontent > div.right > .megamenuclosetop {
+  .topmenucontent > .right > .megamenuclosetop {
     padding:  5px 4px;
     font-size:  28px;
   }
@@ -461,7 +461,7 @@
     color:  #fff;
   }
 
-  .topmenu > .topmenucontent > div.navbar-brand-smallblock {
+  .topmenu > .topmenucontent > .navbar-brand-smallblock {
     display:  none;
   }
 
@@ -509,7 +509,7 @@
     padding:  10px;
   }
 
-  .mega-menu-content > div.logo-menu-discover-wrap {
+  .mega-menu-content > .logo-menu-discover-wrap {
     position:  relative;
     height:  180px;
     text-align:  center;
@@ -531,7 +531,7 @@
     font-size:  25px;
   }
 
-  .row mega-menu-content li a:hover {
+  .mega-menu-content li a:hover {
     color:  #f16e00;
     text-decoration: underline !important;
   }
@@ -540,7 +540,7 @@
     margin-left: 10px;
   }
 
-  div.megamenu-top-main > a {
+  .megamenu-top-main > a {
     display: inline-block;
     margin: 12px 18px 0 0;
     text-decoration: none;
@@ -578,7 +578,7 @@
 }
 
 @media (max-width:  960px) {
-  .mega-menu.navbar  {
+  .mega-menu.navbar {
     .logo-menu-discover-caption {
       padding-top:  calc(50% - 10px);
       font-size:  25px;
@@ -596,7 +596,7 @@
       display:  inline-block;
     }
 
-    .topmenu > .topmenucontent > div.right > a {
+    .topmenucontent > .right > a {
       margin-left:  8px;
     }
 
@@ -607,7 +607,7 @@
 }
 
 @media (max-width:  767px) {
-  .mega-menu.navbar  {
+  .mega-menu.navbar {
     .dropdown-megamenu .row {
       padding: 0;
     }
@@ -617,7 +617,7 @@
       font-size:  8vw;
     }
 
-    .topmenu > .topmenucontent > div.navbar-brand-smallblock {
+    .topmenu > .topmenucontent > .navbar-brand-smallblock {
       display:  inline-block;
     }
 
@@ -640,41 +640,41 @@
     .container .navbar-brand {
       display:  none;
     }
-    .container  h2 {
+    .container h2 {
       font-size:  1.9rem;
     }
 
-    .container  h3,
-    .container  li > a {
+    .container h3,
+    .container li > a {
       font-size:  1.4rem;
     }
 
-    .container  .nav-menu li.nav-item,
-    .container  li ul > li {
+    .container .nav-menu li.nav-item,
+    .container li ul > li {
       width:  100%;
       clear:  both;
     }
 
-    .container  div > h2,
-    .container  li ul > li a,
-    .container  li div > h3 {
+    .container div > h2,
+    .container li ul > li a,
+    .container li div > h3 {
       padding-left:  0;
     }
 
-    .container  div > h2,
-    .container  li ul > li {
+    .container div > h2,
+    .container li ul > li {
       border-bottom:  1px solid #555;
     }
 
-    .container  div > h2,
-    .container  li ul > li,
-    .container  li div > h3 {
+    .container div > h2,
+    .container li ul > li,
+    .container li div > h3 {
       padding-top:  0;
       padding-bottom:  0;
       margin-top:  0;
     }
 
-    .container  .row.mega-menu-content > div {
+    .container .row.mega-menu-content > div {
       padding: 10px 0 10px 10px;
       border-bottom:  1px solid #555;
     }
@@ -682,12 +682,12 @@
       margin: 0;
     }
 
-    .container  .row.mega-menu-content > div ul li,
+    .mega-menu-content > div ul li,
     .row.mega-menu-content > h2 {
       padding: 10px 0 10px 10px;
     }
 
-    .container  .nav-menu li.nav-item > a {
+    .container .nav-menu li.nav-item > a {
       width:  100%;
     }
 
@@ -708,7 +708,7 @@
       margin-left:  0;
     }
 
-     .nav-item {
+    .nav-item {
       padding-left:  1rem;
     }
 
@@ -846,7 +846,7 @@
       display:  block;
     }
 
-    .mega-menu-content > div.logo-menu-discover-wrap {
+    .mega-menu-content > .logo-menu-discover-wrap {
       position: relative;
       height:  49vw;
       text-align: center;
@@ -873,21 +873,21 @@
   }
 }
 
-  .icon-bar {
-    display:  block;
-    width:  22px;
-    height:  2px;
-    margin-top: 4px;
-    border:  1px solid #fff;
-    border-radius:  1px;
-  }
+.icon-bar {
+  display:  block;
+  width:  22px;
+  height:  2px;
+  margin-top: 4px;
+  border:  1px solid #fff;
+  border-radius:  1px;
+}
 
-  .navbar-toggle .icon-bar {
-    background-color:  #fff;
-  }
+.navbar-toggle .icon-bar {
+  background-color:  #fff;
+}
 
-  .megamenuclosetop {
-    position: relative;
-    top: -5px;
-    border:  0 solid;
-  }
+.megamenuclosetop {
+  position: relative;
+  top: -5px;
+  border:  0 solid;
+}

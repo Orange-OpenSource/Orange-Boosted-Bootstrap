@@ -14,7 +14,7 @@
     ul {
       padding: 30px 0;
       margin: 0 auto;
-    font-size: $font-size-sm;
+      font-size: $font-size-sm;
       list-style: none;
       background: $brand-orange-black;
     }
@@ -50,10 +50,10 @@
     li {
       display: inline;
       margin-right: 20px;
-        font-size: $font-size-sm;
+      font-size: $font-size-sm;
 
       a {
-          font-size: $font-size-sm;
+        font-size: $font-size-sm;
         font-weight: $brand-font-weight-bold;
         color: $brand-orange-white;
       }
