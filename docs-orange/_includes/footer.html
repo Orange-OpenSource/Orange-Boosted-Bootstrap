@@ -36,13 +36,11 @@
   <script src="{{ site.baseurl }}/dist/js/boosted.js"></script>
 {% endif %}
 
-{% if site.github %}
-  <script src="{{ site.baseurl }}/assets/js/docs.min.js"></script>
-{% else %}
-  {% for file in site.data.configBridge.paths.docsJs %}
-    <script src="{{ site.baseurl }}/{{ file }}"></script>
-  {% endfor %}
-{% endif %}
+<script src="{{ site.baseurl }}/dist/js/vendors/jquery.tablesorter.js"></script>
+
+
+
+<script src="{{ site.baseurl }}/assets/js/docs.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
@@ -61,39 +59,3 @@ SimpleJekyllSearch.init({
 })
 </script>
 {% endif %}
-
-{% if page.title == "Boostwatch" %}
-<script>
-				$(document).ready(function() {
-					$("#myTable").tablesorter({
-						sortList: [[4,1]]
-					});
-				});
-
-			</script>
-{% endif %}
-
-<script>
-Holder.addTheme('gray', {
-  background: '#777',
-  foreground: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
-</script>
-
-<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
-<script>
-			accessibilitytoolbar_custom={
-				idLinkModeContainer:"id_li_for_cdu",
-				//idSkipLinkIdLinkMode:"cdu_skiplink",
-				//cssSkipLinkClassName: "skiplinks_trigger",
-				cssLinkModeClassName:"nav-item-cdu"
-				//callback:skiplinksAfterLoad
-			};
-</script>
-<script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-</script>

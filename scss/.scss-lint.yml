@@ -87,7 +87,9 @@ linters:
     enabled: true
 
   ImportantRule:
-    enabled: true
+  # Boosted mod 
+    enabled: false
+  # end mod
 
   ImportPath:
     enabled: true
@@ -436,7 +438,9 @@ linters:
     enabled: true
 
   QualifyingElement:
-    enabled: true
+  # Boosted mod 
+    enabled: false
+  # end mod
     allow_element_with_attribute: false
     allow_element_with_class: false
     allow_element_with_id: false

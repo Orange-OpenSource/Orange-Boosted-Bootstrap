@@ -108,30 +108,29 @@
 
       > li {
         position: relative;
+      }
+      .dropdown-menu {
+        margin-top: 0;
+      }
+    }
+    .nav-item > a,
+    .nav-item .nav-link{
+      display: inline-block;
+      height: 2.2em;
+      padding: 1rem 0;
+      margin-top: 0;
+      color: $brand-orange-black;
 
-        > a {
-          display: inline-block;
-          height: 2.2em;
-          padding: 1rem 0;
-          margin-top: 0;
-          color: $brand-orange-black;
+      &.active,
+      &:hover,
+      &:focus {
+        color: $brand-orange;
+        background-color: transparent;
+      }
 
-          &.active,
-          &:hover,
-          &:focus {
-            color: $brand-orange;
-            background-color: transparent;
-          }
-
-          &:hover,
-          &:focus {
-            text-decoration: underline;
-          }
-        }
-
-        .dropdown-menu {
-          margin-top: 0;
-        }
+      &:hover,
+      &:focus {
+        text-decoration: underline;
       }
     }
   }
@@ -164,7 +163,7 @@
     background-color: $brand-orange-black;
   }
 
-  .nav-local .navbar-nav .open .dropdown-menu {
+  .nav-local .open .dropdown-menu {
     > a {
       color: $brand-orange-black;
 

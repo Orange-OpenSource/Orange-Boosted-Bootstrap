@@ -187,20 +187,12 @@ module.exports = function (grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       /* boosted mod */
-      plugins: {
-        src: [
-          'dist/js/<%= pkg.name %>.js',
-          'bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js'
-        ],
-        dest: 'dist/js/<%= pkg.name %>.js'
-      },
       docsJs: {
           src: [
               '.tmpdocs/assets/js/src/application.js',
               '.tmpdocs/assets/js/src/application-orange.js'
           ],
           dest: '.tmpdocs/assets/js/src/application.js'
-      },
       /* end mod */
     },
 
@@ -339,6 +331,12 @@ module.exports = function (grunt) {
         cwd: 'img/',
         src: ['*'],
         dest: 'dist/img/'
+      },
+      vendorsjs: {
+        expand: true,
+        cwd: 'bower_components/jquery.tablesorter/dist/js/',
+        src: ['*'],
+        dest: 'dist/js/vendors/'
       }
       /* end mod */
     },
@@ -459,8 +457,7 @@ module.exports = function (grunt) {
           'The “datetime-local” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
           'The “month” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
           'The “time” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “week” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'Attribute “integrity” not allowed on element “script” at this point.' // Until https://github.com/jzaefferer/grunt-html/issues/86 gets fixed
+          'The “week” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
         ]
       },
       src: ['_gh_pages/**/*.html', 'js/tests/visual/*.html']
@@ -599,10 +596,10 @@ module.exports = function (grunt) {
   grunt.registerTask('sass-compile', ['sass:core', 'sass:docs']);
 
   /* boosted mod */
-  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'concat:fontIcons', 'cssmin:core', 'cssmin:docs']);
+  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img']);
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorsjs']);
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
