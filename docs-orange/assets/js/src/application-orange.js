@@ -64,7 +64,7 @@
   }
 
   function onFooterVisibilityChange(el, scrollTopElm, defaultPos) {
-    if (el && window.innerWidth > 544) {
+    if (el && window.innerWidth > 768) {
       return function () {
 
         var footerRect = el.getBoundingClientRect();
@@ -96,7 +96,9 @@
     }
 
     if (window.addEventListener) {
-      addEventListener('scroll', pageWatcher, false);
+      if (window.innerWidth > 768) {
+        addEventListener('scroll', pageWatcher, false);
+      }
       if (footerWatcher) {addEventListener('scroll', footerWatcher, false);}
     } else if (window.attachEvent)  {
       attachEvent('onscroll', pageWatcher);

@@ -12,7 +12,7 @@
 .o-radio[type="radio"]:checked + label {
   position: relative; // permet de positionner les pseudo-éléments
   display: inline-block;
-  padding-left: ($input-height-base * 0.75); // fait un peu d"espace pour notre case à venir
+  padding-left: ($input-height-base * .75); // fait un peu d"espace pour notre case à venir
   font-style: normal;
   font-weight: normal;
   line-height: $line-height-computed;
@@ -23,7 +23,7 @@
 // Align radio on the right*/
 .o-radio-right.o-radio[type="radio"]:not(:checked) + label,
 .o-radio-right.o-radio[type="radio"]:checked + label {
-  padding-right: ($input-height-base * 0.75); // fait un peu d"espace pour notre case à venir
+  padding-right: ($input-height-base * .75); // fait un peu d"espace pour notre case à venir
   padding-left: 0;
 }
 

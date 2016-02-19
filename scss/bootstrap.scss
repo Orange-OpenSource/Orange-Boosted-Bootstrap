@@ -5,6 +5,7 @@
  */
 
 // Core variables and mixins
+@import "custom";
 @import "variables";
 // boosted mod
 @import "o-variables";
@@ -36,7 +37,7 @@
 @import "card";
 @import "breadcrumb";
 @import "pagination";
-@import "labels";
+@import "tags";
 @import "jumbotron";
 @import "alert";
 @import "progress";
@@ -64,8 +65,7 @@
 @import "o-accordion";
 @import "o-tablesorter";
 @import "o-modal";
-@import "o-classic_tab";
-@import "o-pointed_tab";
+@import "o-nav";
 @import "o-skiplinks";
 @import "o-footer";
 @import "o-pagination";

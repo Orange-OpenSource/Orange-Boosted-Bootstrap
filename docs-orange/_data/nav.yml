@@ -2,16 +2,20 @@
   pages:
     - title: Introduction
     - title: Download
+    - title: Contents
     - title: Browsers & devices
+    - title: JavaScript
     - title: Options
     - title: Flexbox
     - title: Build tools
     - title: Best practices
+    - title: Accessibility
 
 - title: Layout
   pages:
     - title: Overview
     - title: Grid
+    - title: Flexbox grid
     - title: Media object
     - title: Responsive utilities
 
@@ -46,7 +50,7 @@
     # end mod
     - title: Breadcrumb
     # boosted mod
-    - title: Stepbar
+    - title: Orange stepbar
     # end mod
     - title: Pagination
     - title: Progress
@@ -71,7 +75,6 @@
   pages:
     - title: History
     - title: Team
-    - title: Accessibility
     - title: Brand
     - title: License
     - title: Translations

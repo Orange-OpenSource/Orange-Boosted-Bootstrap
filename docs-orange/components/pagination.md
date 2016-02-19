@@ -16,15 +16,15 @@ Provide pagination links for your site or app with the multi-page pagination com
 Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.
 
 {% callout info %}
-It's good practice to wrap navigation element in a `<nav>` tag with proper role, but keep in mind it should only be used for major/primary navigation.
+It's good practice to wrap navigation element in a `<nav role="navigation">` tag with proper role, but keep in mind it should only be used for major/primary navigation.
 {% endcallout %}
 
 {% example html %}
 <nav role="navigation">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+      <a class="page-link disabled" href="#" aria-label="Go to previous page">
+        <span aria-hidden="true" class="icon-arrow-previous"></span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
@@ -34,8 +34,8 @@ It's good practice to wrap navigation element in a `<nav>` tag with proper role,
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+      <a class="page-link" href="#" aria-label="Go to next page">
+        <span aria-hidden="true" class="icon-arrow-next"></span>
         <span class="sr-only">Next</span>
       </a>
     </li>
@@ -57,8 +57,8 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 <nav role="navigation">
   <ul class="pagination">
     <li class="page-item ">
-      <a class="page-link disabled" href="#" tabindex="-1" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+     <a class="page-link disabled" href="#" aria-label="Go to previous page">
+        <span aria-hidden="true" class="icon-arrow-previous"></span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
@@ -70,8 +70,8 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+      <a class="page-link" href="#" aria-label="Go to next page">
+        <span aria-hidden="true" class="icon-arrow-next"></span>
         <span class="sr-only">Next</span>
       </a>
     </li>
@@ -85,8 +85,8 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 <nav role="navigation">
   <ul class="pagination">
     <li class="page-item ">
-      <span class="page-link disabled" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+      <span class="page-link disabled" aria-label="Go to previous page">
+        <span aria-hidden="true" class="icon-arrow-previous"></span>
         <span class="sr-only">Previous</span>
       </span>
     </li>
@@ -104,8 +104,8 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 <nav role="navigation">
   <ul class="pagination pagination-lg">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+      <a class="page-link disabled" href="#" aria-label="Go to previous page">
+        <span aria-hidden="true" class="icon-arrow-previous"></span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
@@ -113,8 +113,8 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+      <a class="page-link" href="#" aria-label="Go to next page">
+        <span aria-hidden="true" class="icon-arrow-next"></span>
         <span class="sr-only">Next</span>
       </a>
     </li>
@@ -126,8 +126,8 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 <nav role="navigation">
   <ul class="pagination pagination-sm">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+      <a class="page-link disabled" href="#" aria-label="Go to previous page">
+        <span aria-hidden="true" class="icon-arrow-previous"></span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
@@ -135,8 +135,8 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
     <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
+      <a class="page-link" href="#" aria-label="Go to next page">
+        <span aria-hidden="true" class="icon-arrow-next"></span>
         <span class="sr-only">Next</span>
       </a>
     </li>

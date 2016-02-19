@@ -33,7 +33,6 @@
     "tether": "^1.1.1"
   },
   "devDependencies": {
-    "jquery.tablesorter": "~2.25.0",
-    "fontawesome": "~4.5.0"
+    "jquery.tablesorter": "~2.25.0"
   }
 }

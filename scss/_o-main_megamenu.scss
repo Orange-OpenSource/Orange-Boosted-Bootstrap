@@ -23,7 +23,7 @@
     // Dropdowns get custom display when collapsed
     .open .dropdown-megamenu {
       background-color:  $dropdown-bg;
-      > li > a {
+      a {
         color:  $dropdown-link-color;
         &:hover,
         &:focus {
@@ -40,7 +40,7 @@
 @media (max-width:  $screen-sm-max) {
   .navbar-default .navbar-form .form-control {
     height:  auto;
-    font-size:  0.95em;
+    font-size:  .95em;
   }
   .navbar-default .sub-nav {
     position:  relative;
@@ -56,7 +56,7 @@
 .nav-menu .sub-nav.container-fluid {
   z-index:  1;
   background-color:  $brand-orange-white;
-  box-shadow:  0 6px 12px rgba(0, 0, 0, 0.176);
+  box-shadow:  0 6px 12px rgba(0, 0, 0, .176);
 }
 
 // mega menu list
@@ -280,7 +280,7 @@
     border-color:  $brand-orange-white !important;
   }
 
-  .topmenu > .topmenucontent > div.left {
+  .topmenu > .topmenucontent > .left {
     display:  inline-block;
     margin-left:  10;
   }
@@ -291,7 +291,7 @@
   .f15 {
     font-size:  1.5rem;
     line-height:  1.7rem;
-    letter-spacing:  -0.015em;
+    letter-spacing:  -.015em;
   }
 
   .color-white, .color-white * {
@@ -299,7 +299,7 @@
     border-color:  $brand-orange-white !important;
   }
 
-  .topmenu > .topmenucontent > div.left > div {
+  .topmenucontent > .left > div {
     display:  inline-block;
     width:  0;
     height:  24px;
@@ -310,11 +310,11 @@
     transition:  all 1s;
   }
 
-  .topmenu > .topmenucontent > div.left > a {
+  .topmenucontent > .left > a {
     display:  inline-block;
     margin:  12px 18px 0 0;
     text-decoration:  none;
-    transition:  all 0.5s;
+    transition:  all .5s;
   }
 
   .color-orange, .color-orange * {
@@ -322,26 +322,26 @@
     border-color:  $megamenu-hover-color !important;
   }
 
-  .topmenu > .topmenucontent > div.right {
+  .topmenucontent > .right {
     position:  absolute;
     top:  6px;
     right:  10px;
     display:  inline-block;
   }
 
-  .topmenu > .topmenucontent > div.right > img:first-of-type {
+  .topmenucontent > .right > img:first-of-type {
     max-width:  0;
     overflow:  hidden;
     cursor:  pointer;
-    transition:  all 0.5s;
+    transition:  all .5s;
   }
 
-  .topmenu > .topmenucontent > div.right > img {
+  .topmenucontent > .right > img {
     margin-left:  22px;
     vertical-align:  bottom;
   }
 
-  .topmenu > .topmenucontent > div.right > a {
+  .topmenucontent > .right > a {
     padding:  5px 0;
     margin-left:  18px;
     text-decoration:  none;
@@ -423,7 +423,7 @@
     overflow:  hidden;
     font-size:  18px;
     cursor: pointer;
-    transition-duration:  0.2s;
+    transition-duration:  .2s;
   }
 
   .visible {
@@ -448,12 +448,12 @@
   .navbar-brand-small img {
     width:  25px;
     margin: 0 10px;
-    font-size:  0.7rem;
+    font-size:  .7rem;
     font-weight:  400;
     color:  $brand-orange-white;
   }
 
-  .topmenu > .topmenucontent > div.navbar-brand-smallblock {
+  .topmenu > .topmenucontent > .navbar-brand-smallblock {
     display:  none;
   }
 
@@ -501,7 +501,7 @@
     padding:  10px;
   }
 
-  .mega-menu-content > div.logo-menu-discover-wrap {
+  .mega-menu-content > .logo-menu-discover-wrap {
     position:  relative;
     height:  180px;
     text-align:  center;
@@ -523,7 +523,7 @@
     font-size:  25px;
   }
 
-  .row mega-menu-content li a:hover {
+  .mega-menu-content li a:hover {
     color:  $megamenu-hover-color;
     text-decoration: underline !important;
   }
@@ -532,11 +532,11 @@
     margin-left: 10px;
   }
 
-  div.megamenu-top-main > a {
+  .megamenu-top-main > a {
     display: inline-block;
     margin: 12px 18px 0 0;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all .5s;
   }
 
   .topmenulang {
@@ -545,7 +545,7 @@
   }
 
   .navbar .topmenulang a {
-    margin-top: 0.8rem;
+    margin-top: .8rem;
   }
 
 
@@ -582,7 +582,7 @@
       display:  inline-block;
     }
 
-    .topmenu > .topmenucontent > div.right > a {
+    .topmenucontent > .right > a {
       margin-left:  8px;
     }
 
@@ -607,7 +607,7 @@
       font-size:  8vw;
     }
 
-    .topmenu > .topmenucontent > div.navbar-brand-smallblock {
+    .topmenu > .topmenucontent > .navbar-brand-smallblock {
       display:  inline-block;
     }
 
@@ -630,41 +630,41 @@
     .container .navbar-brand {
       display:  none;
     }
-    .container  h2 {
+    .container h2 {
       font-size:  1.9rem;
     }
 
-    .container  h3,
-    .container  li > a {
+    .container h3,
+    .container li > a {
       font-size:  1.4rem;
     }
 
-    .container  .nav-menu li.nav-item,
-    .container  li ul > li {
+    .container .nav-menu li.nav-item,
+    .container li ul > li {
       width:  100%;
       clear:  both;
     }
 
-    .container  div > h2,
-    .container  li ul > li a,
-    .container  li div > h3 {
+    .container div > h2,
+    .container li ul > li a,
+    .container li div > h3 {
       padding-left:  0;
     }
 
-    .container  div > h2,
-    .container  li ul > li {
+    .container div > h2,
+    .container li ul > li {
       border-bottom:  $megamenu-border;
     }
 
-    .container  div > h2,
-    .container  li ul > li,
-    .container  li div > h3 {
+    .container div > h2,
+    .container li ul > li,
+    .container li div > h3 {
       padding-top:  0;
       padding-bottom:  0;
       margin-top:  0;
     }
 
-    .container  .row.mega-menu-content > div {
+    .container .row.mega-menu-content > div {
       padding: 10px 0 10px 10px;
       border-bottom:  1px solid #555;
     }
@@ -672,12 +672,12 @@
       margin: 0;
     }
 
-    .container  .row.mega-menu-content > div ul li,
+    .mega-menu-content > div ul li,
     .row.mega-menu-content > h2 {
       padding: 10px 0 10px 10px;
     }
 
-    .container  .nav-menu li.nav-item > a {
+    .container .nav-menu li.nav-item > a {
       width:  100%;
     }
 
@@ -687,7 +687,7 @@
     }
 
     .nav-item .megamenu-dropdown-toggle {
-      margin-top:  0.8rem;
+      margin-top:  .8rem;
     }
 
     .searchpanel {
@@ -750,7 +750,7 @@
 
     .nav-menu {
       left: 0;
-      transition-duration:  0.3s;
+      transition-duration:  .3s;
     }
 
     .menu-level1 {
@@ -814,7 +814,7 @@
     .nav-item > a::before,
     .mega-menu-content h3::before {
       float: right;
-      margin-right:  0.5em;
+      margin-right:  .5em;
       font-family: icon-orange !important;
       font-size:  1em;
       font-style: normal;
@@ -844,7 +844,7 @@
       display:  block;
     }
 
-    .mega-menu-content > div.logo-menu-discover-wrap {
+    .mega-menu-content > .logo-menu-discover-wrap {
       position: relative;
       height:  49vw;
       text-align: center;

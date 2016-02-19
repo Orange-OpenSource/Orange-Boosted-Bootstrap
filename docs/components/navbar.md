@@ -34,8 +34,8 @@ Here's an example of all the sub-components included in a default, light navbar:
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Features</a>
@@ -56,7 +56,7 @@ Here's an example of all the sub-components included in a default, light navbar:
 
 ### Brand
 
-The `.navbar-brand` can be applied to most elements, but an anchor works best.
+The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
@@ -64,7 +64,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best.
 </nav>
 
 <nav class="navbar navbar-light bg-faded">
-  <h1 class="navbar-brand">Navbar</h1>
+  <h1 class="navbar-brand m-b-0">Navbar</h1>
 </nav>
 
 {% endexample %}
@@ -76,8 +76,8 @@ Navbar navigation is similar to our regular nav options—use the `.nav` base cl
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
   <ul class="nav navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Features</a>
@@ -116,8 +116,8 @@ Here are some examples to show what we mean.
   <nav class="navbar navbar-dark bg-inverse">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -137,8 +137,8 @@ Here are some examples to show what we mean.
   <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -158,8 +158,8 @@ Here are some examples to show what we mean.
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -263,8 +263,8 @@ For more complex navbar patterns, like those used in Bootstrap v3, use the `.nav
   <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
     <a class="navbar-brand" href="#">Responsive navbar</a>
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>

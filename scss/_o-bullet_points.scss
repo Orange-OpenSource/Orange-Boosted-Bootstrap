@@ -1,26 +1,26 @@
 //********************************************************/
 //******************* bullet points **********************/
 //********************************************************/
-ul.o-square-list {
+.o-square-list {
   color: $brand-orange;
   list-style-type: square;
 }
-ul.o-square-list li span {
+.o-square-list li span {
   color: #000;
 }
-ul.o-square-list ul {
+.o-square-list ul {
   padding-left: 15px;
   color: #999;
   list-style-type: square;
 }
-ul.o-square-list ul li span {
+.o-square-list ul li span {
   color: #000;
 }
-ul.o-square-list ul ul {
+.o-square-list ul ul {
   padding-left: 15px;
   color: $gray-light;
   list-style-type: square;
 }
-ul.o-square-list ul ul li span {
+.o-square-list ul ul span {
   color: #000;
 }

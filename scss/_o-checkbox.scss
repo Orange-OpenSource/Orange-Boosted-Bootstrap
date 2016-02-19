@@ -12,7 +12,7 @@
 .o-checkbox[type="checkbox"]:checked + label {
   position: relative; // permet de positionner les pseudo-éléments */
   display: inline-block;
-  padding-left: ($input-height-base * 0.75); // fait un peu d"espace pour notre case à venir */
+  padding-left: ($input-height-base * .75); // fait un peu d"espace pour notre case à venir */
   font-style: normal;
   font-weight: normal;
   line-height: $line-height-computed;
@@ -23,7 +23,7 @@
 // Align checkbox on the right*/
 .o-checkbox-right.o-checkbox[type="checkbox"]:not(:checked) + label,
 .o-checkbox-right.o-checkbox[type="checkbox"]:checked + label {
-  padding-right: ($input-height-base * 0.75); // fait un peu d"espace pour notre case à venir */
+  padding-right: ($input-height-base * .75); // fait un peu d"espace pour notre case à venir */
   padding-left: 0;
 }
 
