@@ -212,7 +212,7 @@
 
 $back-top-btn-height: 6rem;
 
-@media (max-width: #{map-get($grid-breakpoints, sm)}){
+@include media-breakpoint-down(sm) {
   body {
       margin-bottom: $back-top-btn-height;
   }
@@ -237,7 +237,7 @@ $back-top-btn-height: 6rem;
       margin-top: -0.6rem;
     }
 
-    @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+    @include media-breakpoint-down(sm) {
       color: $brand-orange-white;
       background-color: $brand-orange-black;
       width: 100%;
