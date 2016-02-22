@@ -154,8 +154,8 @@
 								</div>
 								<div class="form-group">
 									<label for="pro_check" class="col-sm-2 control-label">Pro ? <span class="star">*</span> </label>
-									<div class="col-sm-10">
-										<input id="pro_check" type="checkbox" class="checkbox"> 
+									<div class="col-sm-10 checkbox">
+										<input id="pro_check" type="checkbox" class="o-checkbox"> 
 									</div>
 								</div>
 
@@ -195,7 +195,7 @@
 								<div class="form-group">
 									<label for="mac" class="col-sm-2 control-label">MAC <span class="star">*</span> </label>
 									<div class="col-sm-10">
-										<input class="form-control required" required="" aria-required="true" name="mac" id="mac" maxlength="10">
+										<input class="form-control required" required="" aria-required="true" name="mac" id="mac" maxlength="10" type="text">
 									</div>
 								</div>
 								<div class="center">
@@ -207,7 +207,7 @@
 							<form id="search-messages" name="searchMesages" method="post" action="" class="form-horizontal">
 								<div class="input-group">
 									<span class="input-group-addon">@</span>
-									<input type="text" class="form-control" placeholder="regexp">
+									<input type="text" class="form-control" placeholder="regexp" title="found a message by regexp">
 								</div>
 								<div class="center">
 									<button type="submit" class="btn btn-primary">search</button>
@@ -236,7 +236,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><img src="images/Cancel.png" class="alert-img"/></td>
+								<td><img src="images/Cancel.png" alt="Cancel" class="alert-img"/></td>
 								<td>08/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447765896321</a></td>
 								<td>BT</td>
@@ -244,7 +244,7 @@
 								<td class="hide-when-small">0:05:40</td>
 							</tr>
 							<tr>
-								<td><img src="images/Ok.png" class="alert-img"/></td>
+								<td><img src="images/Ok.png" alt="OK" class="alert-img"/></td>
 								<td>09/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447765896327</a></td>
 								<td>Warn</td>
@@ -252,7 +252,7 @@
 								<td class="hide-when-small">0:19:09</td>
 							</tr>
 							<tr>
-								<td><img src="images/Warning.png" class="alert-img"/></td>
+								<td><img src="images/Warning.png" alt="Warning" class="alert-img"/></td>
 								<td>10/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447765896322</a></td>
 								<td>MMK</td>
@@ -260,7 +260,7 @@
 								<td class="hide-when-small">0:10:06</td>
 							</tr>
 							<tr>
-								<td><img src="images/Ok.png" class="alert-img"/></td>
+								<td><img src="images/Ok.png" alt="OK" class="alert-img"/></td>
 								<td>11/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447754233245</a></td>
 								<td>YYI</td>
@@ -298,19 +298,19 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td><img src="images/Cancel.png" class="alert-img"/></td>
+											<td><img src="images/Cancel.png" alt="Cancel" class="alert-img"/></td>
 											<td>447765896321</td>
 											<td>BT</td>
 											<td><span class="error">stopped</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Ok.png" class="alert-img"/></td>
+											<td><img src="images/Ok.png" alt="OK" class="alert-img"/></td>
 											<td>447765896327</td>
 											<td>Warn</td>
 											<td><span class="ok">ok</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Warning.png" class="alert-img"/></td>
+											<td><img src="images/Warning.png" alt="Warning" class="alert-img"/></td>
 											<td>447765896322</td>
 											<td>MMK</td>
 											<td><span class="warning">disfunction</span></td>
@@ -333,19 +333,19 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td><img src="images/Cancel.png" class="alert-img"/></td>
+											<td><img src="images/Cancel.png" alt="Cancel" class="alert-img"/></td>
 											<td>447765896321</td>
 											<td>BT</td>
 											<td><span class="error">stopped</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Ok.png" class="alert-img"/></td>
+											<td><img src="images/Ok.png" alt="OK" class="alert-img"/></td>
 											<td>447765896327</td>
 											<td>Warn</td>
 											<td><span class="ok">ok</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Warning.png" class="alert-img"/></td>
+											<td><img src="images/Warning.png" alt="Warning" class="alert-img"/></td>
 											<td>447765896322</td>
 											<td>MMK</td>
 											<td><span class="warning">disfunction</span></td>
@@ -368,19 +368,19 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td><img src="images/Cancel.png" class="alert-img"/></td>
+											<td><img src="images/Cancel.png" alt="Cancel" class="alert-img"/></td>
 											<td>447765896321</td>
 											<td>BT</td>
 											<td><span class="error">stopped</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Ok.png" class="alert-img"/></td>
+											<td><img src="images/Ok.png" alt="OK" class="alert-img"/></td>
 											<td>447765896327</td>
 											<td>Warn</td>
 											<td><span class="ok">ok</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Warning.png" class="alert-img"/></td>
+											<td><img src="images/Warning.png" alt="Warning" class="alert-img"/></td>
 											<td>447765896322</td>
 											<td>MMK</td>
 											<td><span class="warning">disfunction</span></td>
