@@ -162,11 +162,10 @@ const Megamenu = (($) => {
 
   $(window).on('scroll', () => {
     if ($(window).scrollTop() > 70) {
-      $('.mega-menu .topmenu').css({ overflow: 'hidden'})
+      $('.mega-menu .topmenu').css({ overflow: 'hidden' })
       $('.mega-menu .topmenu').addClass('resorbe')
     } else {
-      $('.mega-menu .topmenu').css({ overflow: 'initial'})
-      console.log('remove hidden')
+      $('.mega-menu .topmenu').css({ overflow: 'initial' })
       $('.mega-menu .topmenu').removeClass('resorbe')
     }
   })
