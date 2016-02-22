@@ -256,9 +256,8 @@
   .topmenu {
     z-index:  10;
     width:  100%;
-    height: 46px;
-    overflow: hidden;
-    transition: 0.3s;
+    height: 47px;
+    transition: .3s;
   }
 
   .topmenu > .topmenucontent {
@@ -267,7 +266,6 @@
     box-sizing:  border-box;
     width:  100%;
     height:  46px;
-    overflow:  hidden;
     background:  $brand-orange-black;
   }
 
@@ -586,7 +584,7 @@
       margin-left:  8px;
     }
 
-    .topmenu > .topmenucontent > div.right > a.megamenubacktop {
+    .topmenucontent > div.right > a.megamenubacktop {
       margin-left:  16px;
     }
 
