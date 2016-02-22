@@ -10,14 +10,8 @@
   color: #000;
   vertical-align: middle;
 }
-#header input {
-  height: 35px;
-}
 #search {
   margin-top: 25px;
-}
-#search input {
-  padding: 0 10px;
 }
 #localNavigation {
   padding-right: 0;
@@ -100,14 +94,6 @@
 }
 #newsSupp {
   clear: both;
-}
-#newsSupp p {
-  height: 180px;
-  overflow: hidden;
-  text-align: justify;
-}
-#newsSupp .news {
-  height: 310px;
 }
 #infos {
   margin-top: 22px;
