@@ -48,6 +48,6 @@ Rename the `.skiplinks_show` class to `.skiplinks-show`.
 Replace the `.axs_hide` class by `.sr-only` native class included into Bootstrap.
 
 
-### Glyphicons
+### Font icons
 
 Rename all the class containing  `_` to `-`.

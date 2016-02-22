@@ -55,7 +55,7 @@
     margin-top: 3rem;
 }
 
-.navbar-nav > li > a[class^="icon-"], .navbar-nav > li > a[class*=" icon-"] {
+.navbar-nav li > a[class^="icon-"], .navbar-nav li > a[class*=" icon-"] {
     font-size: 3rem;
     line-height: 1;
 }

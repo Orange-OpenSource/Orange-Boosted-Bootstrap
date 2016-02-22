@@ -129,6 +129,9 @@
   z-index: 10;
   width:  100%;
 }
+.mega-menu [class^="icon-"], .mega-menu [class*=" icon-"] {
+  font-size: 3rem;
+}
 
 .mega-menu.navbar {
   padding:  0;

@@ -270,22 +270,6 @@ a:focus {
     }
   }
 
-//   .glyphicon {
-//     position: relative;
-//     top: auto;
-//     margin: auto;
-//     color: $brand-orange;
-//     text-shadow: none;
-//   }
-//
-//   .glyphicon-chevron-left {
-//     left: auto;
-//   }
-//
-//   .glyphicon-chevron-right {
-//     right: auto;
-//   }
-
   span[aria-hidden="true"] {
     font-size: 3rem;
     color: $brand-orange;
@@ -539,7 +523,7 @@ a.btn {
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
   ~ .form-control-feedback {
-    top: ($line-height + .5); // Height of the `label` and its margin
+    top: ($line-height-base + .5); // Height of the `label` and its margin
   }
 }
 
