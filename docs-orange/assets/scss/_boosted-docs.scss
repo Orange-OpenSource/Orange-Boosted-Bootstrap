@@ -156,22 +156,19 @@
 }
 
 //
-// Glyphicons
+// Font icons
 //
 // Special styles for displaying the icons and their classes in the docs.
 
-.bs-glyphicons .glyphicon {
-    color: #F16E00;
-}
-.bs-glyphicons {
+.doc-fonticon {
   margin: 0 -10px 20px;
   overflow: hidden;
 }
-.bs-glyphicons-list {
+.doc-fonticon-list {
   padding-left: 0;
   list-style: none;
 }
-.bs-glyphicons li {
+.doc-fonticon li {
   float: left;
   width: 25%;
   height: 150px;
@@ -181,27 +178,23 @@
   background-color: #f9f9f9;
   border: 1px solid #fff;
 }
-.bs-glyphicons .glyphicon {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-.bs-glyphicons .glyphicon-class {
+
+.doc-fonticon .fonticon-class {
   display: block;
   text-align: center;
   word-wrap: break-word; // Help out IE10+ with class names
 }
-.bs-glyphicons li:hover {
+.doc-fonticon li:hover {
   color: #fff;
   background-color: #000;
 }
 
 @media (min-width: 768px) {
-  .bs-glyphicons {
+  .doc-fonticon {
     margin-right: 0;
     margin-left: 0;
   }
-  .bs-glyphicons li {
+  .doc-fonticon li {
     width: 12.5%;
   }
 }
