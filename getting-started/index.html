@@ -271,6 +271,11 @@ Copy any changes made here over to the README too. -->
       <span class="c">&lt;!-- To use the old orange brand, just remove the 2015 postfix--&gt;</span>      
       <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span>
       <span class="c">&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;</span>
+      <span class="c">&lt;!-- --&gt;</span>
+      <span class="c">&lt;!-- IE11 WARNING
+      &lt;!-- IE11 enterprise docmode IE8 --&gt;</span>    
+      <span class="c">&lt;!-- If your application is executed into IE8 compatibility mode, or included into a frame you need to replace the following test `if lt IE 9` by `if IE` otherwise your website will crash --&gt;</span>
+      <span class="c">&lt;!-- --&gt;</span>
       <span class="c">&lt;!--[if lt IE 9]&gt;
         &lt;link rel="stylesheet" href="css/bootstrap-orangeIE82015.css" /&gt;
         &lt;link rel="stylesheet" href="css/bootstrap-orange-themeIE82015.css" /&gt;
@@ -291,7 +296,7 @@ Copy any changes made here over to the README too. -->
     <span class="c">&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="c">&lt;!-- jQuery validate --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="c">&lt;!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/boosted.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
       
@@ -1010,11 +1015,11 @@ Copy any changes made here over to the README too. -->
 
     <!-- Footer
 ================================================== -->
-<footer class="navbar">
+<footer class="navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
-            <div class="o-footer">                
-                <div class="container-fluid o-footer-top bs-docs-footer">
+            <div class="col-xs-12 o-footer">                
+                <div class="o-footer-top bs-docs-footer">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
@@ -1022,13 +1027,10 @@ Copy any changes made here over to the README too. -->
     <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v3.3.6/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
                 </div>
                 <div class="o-footer-bottom">
-                    <ul class="">
-                      <li>Currently v3.2.1</li>
-                      <li>&middot;</li>
-                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
-                      <li>&middot;</li>
-                      <li><a href="../getting-started/#examples">Examples</a></li>
-                      <li>&middot;</li>
+                    <ul>
+                      <li>Currently v3.2.1</li>                      
+                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>                      
+                      <li><a href="../getting-started/#examples">Examples</a></li>                      
                       <li><a href="https://github.com/twbs/bootstrap/tree/v3.3.6">Original Bootstrap</a></li>
                     </ul>
                 </div>
