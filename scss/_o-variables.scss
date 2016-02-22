@@ -88,7 +88,7 @@ $font-size-h5: 2.4rem;
 $font-size-h6: 2rem;
 
 // Unit-less `line-height` for use in components like buttons.
-$line-height: (20 / 16); //line spacing 20px
+$line-heigh-base: (20 / 16); //line spacing 20px
 // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 // For REM size
 $line-height-computed: 2rem;
@@ -101,8 +101,6 @@ $headings-color: $brand-orange-black;
 
 // Iconography
 //
-// Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
-
 // Load fonts from this directory.
 $icon-font-path:          "../fonts/";
 // for REM size
@@ -163,6 +161,7 @@ $table-border-color: $gray-light;
 // For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight: $brand-font-weight-bold;
+$btn-line-height: (20 / 16);
 
 $btn-primary-color: $brand-orange-white;
 $btn-primary-bg: $brand-primary;
@@ -536,7 +535,7 @@ $modal-inner-padding:         15px;
 // Padding applied to the modal title
 $modal-title-padding:         15px;
 // Modal title line-height
-$modal-title-line-height:     $line-height;
+$modal-title-line-height:     $line-height-base;
 
 // Background color of modal content area
 $modal-content-bg:                             $brand-orange-white;
