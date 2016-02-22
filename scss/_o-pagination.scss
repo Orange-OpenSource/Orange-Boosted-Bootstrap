@@ -34,10 +34,6 @@
     padding: calc((#{$pagination-width} - 4px - #{$font-size-base}) / 2) 0;
     border: solid 2px $brand-orange-black;
 
-    span[class*="icon-"] {
-      font-size: $font-size-base;
-    }
-
     &.disabled {
       @include hover {
         cursor: $cursor-disabled;
@@ -68,9 +64,6 @@
       min-width: $pagination-width-lg;
       height: $pagination-width-lg;
       padding: calc((#{$pagination-width-lg} - 4px - #{$font-size-lg}) / 2) 0;
-      span[class*="icon-"] {
-        font-size: $font-size-lg;
-      }
     }
   }
 
@@ -87,9 +80,6 @@
       min-width: $pagination-width-sm;
       height: $pagination-width-sm;
       padding: calc((#{$pagination-width-sm} - 4px - #{$font-size-sm}) / 2) 0;
-      span[class*="icon-"] {
-        font-size: $font-size-sm;
-      }
     }
   }
 }
