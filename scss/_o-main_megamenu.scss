@@ -638,25 +638,25 @@
     }
 
     .container .nav-menu li.nav-item,
-    .container li ul > li {
+    .container li  li {
       width:  100%;
       clear:  both;
     }
 
     .container div > h2,
-    .container li ul > li a,
-    .container li div > h3 {
+     li  li a,
+    .container li  h3 {
       padding-left:  0;
     }
 
     .container div > h2,
-    .container li ul > li {
+    .container li  li {
       border-bottom:  $megamenu-border;
     }
 
     .container div > h2,
-    .container li ul > li,
-    .container li div > h3 {
+    .container li  li,
+    .container li  h3 {
       padding-top:  0;
       padding-bottom:  0;
       margin-top:  0;
@@ -666,16 +666,12 @@
       padding: 10px 0 10px 10px;
       border-bottom:  1px solid #555;
     }
+
     h4 {
       margin: 0;
     }
 
-    .mega-menu-content > div ul li,
-    .row.mega-menu-content > h2 {
-      padding: 10px 0 10px 10px;
-    }
-
-    .container .nav-menu li.nav-item > a {
+    .nav-menu li.nav-item > a {
       width:  100%;
     }
 
@@ -759,7 +755,7 @@
       left: -200%;
     }
 
-    .navbar-toggleable-xs ul li ul ul {
+    ul ul ul {
       position:  absolute;
       top:  0;
       left:  100%;
@@ -776,7 +772,7 @@
       display: block;
     }
 
-    .navbar-toggleable-xs ul li ul ul.open {
+    ul ul ul.open {
       display:  block;
     }
 
@@ -800,7 +796,7 @@
     .back-menu1title::before ,
     .mega-menu-content-title::before {
       font-family: icon-orange  !important;
-      font-size:  1em;
+      font-size:  .8em;
       font-style: normal;
       font-weight: 400;
       font-variant: normal;
@@ -808,21 +804,7 @@
       speak: none;
     }
 
-    .row ul > li > a::before,
-    .nav-item > a::before,
-    .mega-menu-content h3::before {
-      float: right;
-      margin-right:  .5em;
-      font-family: icon-orange !important;
-      font-size:  1em;
-      font-style: normal;
-      font-weight: 400;
-      font-variant: normal;
-      content: "\ea52";
-      speak: none;
-    }
-
-    .container li ul > li.container {
+    .container li  li.container {
       padding-top:  0;
       margin-top:  -5px;
     }
@@ -866,6 +848,25 @@
       padding:  .27rem 2rem;
       margin-left:  5px;
     }
+  }
+
+  .row ul > li > a::before,
+  .nav-item > a::before,
+  .mega-menu-content h3::before {
+    float: right;
+    margin-right:  .5em;
+    font-family: icon-orange !important;
+    font-size:  1em;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    content: "\ea52";
+    speak: none;
+  }
+
+  .mega-menu-content > div ul li,
+  .container .row.mega-menu-content  h2.mega-menu-content-title {
+    padding: 10px 0 10px 10px !important;
   }
 }
 
