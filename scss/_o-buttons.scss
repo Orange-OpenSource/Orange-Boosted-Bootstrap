@@ -11,13 +11,6 @@
     border-color: $hover-background;
   }
 
-//   &:focus,
-//   &.focus {
-//     color: $hover-color;
-//     background-color: $hover-background;
-//     border-color: $hover-background;
-//   }
-
   &:active,
   &.active,
   .open > &.dropdown-toggle {
@@ -70,13 +63,6 @@
     border-color: $brand-orange-black;
   }
 
-//   &:focus,
-//   &.focus {
-//     color: $brand-orange-white;
-//     background-color: $brand-orange;
-//     border-color: $brand-orange;
-//   }
-
   &:active,
   &.active,
   .open > &.dropdown-toggle {
@@ -127,13 +113,6 @@
     background-color: $brand-orange-white;
     border-color: $brand-orange-white;
   }
-
-//   &:focus,
-//   &.focus {
-//     color: $brand-orange-black;
-//     background-color: $brand-orange-white;
-//     border-color: $brand-orange-white;
-//   }
 
   &:active,
   &.active,
@@ -192,6 +171,25 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   @include orange-button-variant($btn-primary-color, $btn-primary-bg);
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $brand-orange-black;
+    background-color: $brand-orange-clear;
+    background-image: none;
+    border-color: $brand-orange-black;
+    // Remove the gradient for the pressed/active state
+    @include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-black;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-black;
+    }
+  }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-primary-color, $btn-primary-bg);
@@ -252,13 +250,6 @@ fieldset[disabled] a.btn {
       border-color: $brand-orange-white;
     }
 
-    // &:focus,
-    // &.focus {
-    //   color: $brand-orange-white;
-    //   background-color: $brand-orange-black;
-    //   border-color: $brand-orange-white;
-    // }
-
     background-color: $brand-orange-white;
     border-color: $brand-orange-white;
   }
@@ -270,12 +261,6 @@ fieldset[disabled] a.btn {
     background-color: $brand-orange-clear;
     border-color: $brand-orange-black;
   }
-
-//   &:focus,
-//   &.focus {
-//     background-color: $brand-orange-clear;
-//     border-color: $brand-orange-black;
-//   }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
@@ -305,6 +290,25 @@ fieldset[disabled] a.btn {
 }
 .btn-warning {
   @include orange-button-variant($btn-warning-color, $btn-warning-bg);
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $brand-orange-black;
+    background-color: $brand-orange-clear;
+    background-image: none;
+    border-color: $brand-orange-black;
+    // Remove the gradient for the pressed/active state
+    @include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-black;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-black;
+    }
+  }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-warning-color, $btn-warning-bg);
