@@ -7,6 +7,14 @@
   margin-right: auto;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  /* boosted mod */
+  @each $breakpoint, $container-gutter-width in $container-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      padding-left:  ($container-gutter-width / 2);
+      padding-right: ($container-gutter-width / 2);
+    }
+  }
+  /* end mod */
   @if not $enable-flex {
     @include clearfix();
   }
@@ -31,6 +39,14 @@
   }
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
+  /* boosted mod */
+  @each $breakpoint, $container-gutter-width in $container-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      margin-left:  ($container-gutter-width / -2);
+      margin-right: ($container-gutter-width / -2);
+    }
+  }
+  /* end mod */
 }
 
 @mixin make-col($size, $columns: $grid-columns, $gutter: $grid-gutter-width) {
