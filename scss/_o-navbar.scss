@@ -3,8 +3,8 @@
 //
 
 .navbar {
-  padding: 0;
   height: 10rem;
+  padding: 0;
   font-size: $font-size-base;
 
   &.navbar-light,
@@ -17,9 +17,9 @@
     font-weight: $brand-font-weight-bold;
 
     .nav-link {
-        padding: 0;
-        line-height: $btn-line-height;
-        margin-top: 5.9rem;
+      padding: 0;
+      margin-top: 5.9rem;
+      line-height: $btn-line-height;
     }
 
     .dropdown-toggle {
@@ -27,10 +27,8 @@
         color: $brand-orange;
       }
       display: block;
-    //   padding-top: .425rem;
-    //   padding-bottom: 1rem;
-      line-height: $btn-line-height;
       margin-top: 5.9rem;
+      line-height: $btn-line-height;
       color: $brand-orange-white;
     }
   }
@@ -113,11 +111,11 @@
   }
 
   img {
+    width: auto;
+    height: 5rem;
     font-size: 1.2rem;
     font-weight: $brand-font-weight-normal;
     color: $brand-orange-white;
-    height: 5rem;
-    width: auto;
   }
 }
 
