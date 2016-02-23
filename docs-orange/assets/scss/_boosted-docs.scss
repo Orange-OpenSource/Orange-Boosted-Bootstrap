@@ -7,7 +7,7 @@
   background-image: none;
 
   .lead {
-    font-size: 2.1rem;
+    font-size: $font-size-h6;
 
     a {
         color: $brand-orange-white;
@@ -22,22 +22,6 @@
     }
 
     .btn {
-//         font-size: $font-size-lg;
-//         font-weight: $btn-font-weight;
-//         color: $brand-orange;
-//         text-decoration: none;
-//
-//         &.btn-lg {
-//             font-size: $font-size-lg;
-//             padding: $btn-padding-y-lg $btn-padding-x-lg;
-//         }
-//
-//         &:active,
-//         &:hover,
-//         &:focus {
-//             color: $brand-orange-white;
-//         }
-        // @include orange-button-variant($btn-info-color, $btn-info-bg, $btn-info-hover-color, $btn-info-hover-bg);
         @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
         border-color: $brand-orange-white;
         font-weight: $btn-font-weight;
@@ -52,7 +36,7 @@
 
   .bd-boosted-icon {
       font-family: $font-family-titles;
-      font-size: 5rem;
+      font-size: $font-size-h1;
       font-weight: 500;
   }
 }
@@ -66,20 +50,20 @@
 
   @include media-breakpoint-up(md) {
     h1 {
-      font-size: 5rem;
+      font-size: $font-size-h1;
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: $font-size-base;
     }
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: $font-size-h1;
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: $font-size-base;
   }
 }
 
@@ -96,7 +80,7 @@
 
 .bd-navbar {
   font-size: 1.8rem;
-  min-height: 6.8rem;
+  min-height: 10rem;
   padding: 0;
 
   @include media-breakpoint-down(sm) {
@@ -112,7 +96,7 @@
   .navbar-nav {
     .nav-link {
       color: $brand-orange-white;
-      margin-top: 2.8rem;
+    //   margin-top: 2.8rem;
     //   padding: 1rem;
 
       &.active,
@@ -153,6 +137,15 @@
         }
     }
 
+}
+
+#outline-buttons::after {
+  content: "\e91e";
+  font-family: "icon-orange" !important;
+  font-size: inherit;
+  color: $brand-danger;
+  padding-left: 0.6rem;
+  vertical-align: bottom;
 }
 
 //
