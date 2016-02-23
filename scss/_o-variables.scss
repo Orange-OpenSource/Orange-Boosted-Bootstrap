@@ -88,10 +88,10 @@ $font-size-h5: 2.4rem;
 $font-size-h6: 2rem;
 
 // Unit-less `line-height` for use in components like buttons.
-$line-heigh-base: (20 / 16); //line spacing 20px
+$line-height-base: (20 / 16); //line spacing 20px
 // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 // For REM size
-$line-height-computed: 2rem;
+$line-height-computed: 1;
 
 // By default, this inherits from the `<body>`.
 $headings-font-family: $font-family-titles;
@@ -161,7 +161,7 @@ $table-border-color: $gray-light;
 // For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight: $brand-font-weight-bold;
-$btn-line-height: (20 / 16);
+$btn-line-height: 1;
 
 $btn-primary-color: $brand-orange-white;
 $btn-primary-bg: $brand-primary;
@@ -194,10 +194,10 @@ $btn-padding-x: $padding-base-horizontal;
 $btn-padding-y: $padding-base-vertical;
 
 $btn-padding-x-sm: $padding-small-horizontal;
-$btn-padding-y-sm: .3rem;
+$btn-padding-y-sm: .6rem;
 
 $btn-padding-x-lg:  $padding-large-horizontal;
-$btn-padding-y-lg:  1.3rem;
+$btn-padding-y-lg:  1.4rem;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:         $border-radius;
@@ -320,7 +320,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 // Basics of a navbar
 //$navbar-height - $element-height
 // for REM size
-$navbar-height:                    6.8rem;
+$navbar-height:                    10rem;
 $navbar-font-size:                 1.8rem;
 $navbar-border-radius:             $border-radius;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
