@@ -96,8 +96,6 @@
   .navbar-nav {
     .nav-link {
       color: $brand-orange-white;
-    //   margin-top: 2.8rem;
-    //   padding: 1rem;
 
       &.active,
       &:hover,
@@ -139,11 +137,17 @@
 
 }
 
-#outline-buttons::after {
+#outline-buttons::after,
+#supported-content::after,
+#brand::after,
+#nav::after,
+#color-schemes::after,
+#containers::after,
+#placement::after {
   content: "\e91e";
+  color: $brand-danger;
   font-family: "icon-orange" !important;
   font-size: inherit;
-  color: $brand-danger;
   padding-left: 0.6rem;
   vertical-align: bottom;
 }
