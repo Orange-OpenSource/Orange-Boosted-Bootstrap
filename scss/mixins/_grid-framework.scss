@@ -5,20 +5,19 @@
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   $breakpoint-counter: 0;
-  /* boosted mod */
+  // boosted mod
   $saved-col-generated: ();
-  /* end mod */
+  // end mod
   @each $breakpoint in map-keys($breakpoints) {
     $breakpoint-counter: ($breakpoint-counter + 1);
-    @include media-breakpoint-up($breakpoint, $breakpoints) {      
-      /* boosted mod */
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // boosted mod
       @if map-has-key($cols-gutter-widths, $breakpoint) {
         $local-gutter: map-get($cols-gutter-widths, $breakpoint);
-      }
-      @else {
+      } @else {
         $local-gutter: $gutter;
       }
-      /* end mod */
+      // end mod
       @if $enable-flex {
         .col-#{$breakpoint} {
           position: relative;
@@ -30,24 +29,24 @@
           padding-left:  ($local-gutter / 2);
         }
       }
-             
-      /* boosted mod */
+
+      // boosted mod
       @if length($saved-col-generated) {
         #{$saved-col-generated} {
           padding-right: ($local-gutter / 2);
           padding-left:  ($local-gutter / 2);
         }
       }
-      /* end mod */
-      
+      // end mod
+
       @for $i from 1 through $columns {
         .col-#{$breakpoint}-#{$i} {
           @include make-col($i, $columns, $local-gutter);
         }
-        
-        /* boosted mod */
-        $saved-col-generated: append($saved-col-generated, '.col-#{$breakpoint}-#{$i}','comma');
-        /* end mod */
+
+        // boosted mod
+        $saved-col-generated: append($saved-col-generated, ".col-#{$breakpoint}-#{$i}","comma");
+        // end mod
       }
       @each $modifier in (pull, push) {
         @for $i from 0 through $columns {

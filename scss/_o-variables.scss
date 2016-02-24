@@ -324,16 +324,16 @@ $grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
   // Small screen / phone
-  sm: 481px,
+  sm: 480px,
   // Medium screen / tablet
-  md: 769px,
-  // Large screen / desktop
-  lg: 1025px,
-  // Extra large screen / wide desktop
-  xl: 1281px,
-  // Extra large screen / wide desktop
-  xlg: 1441px
-); 
+  md: 768px,
+  // Large screen / desktop (target 1024 screen resolutions)
+  lg: 992px,
+  // Extra large screen / wide desktop (target 1280 screen resolutions)
+  xl: 1220px,
+  // Extra large screen / wide desktop (target 1440 screen resolutions)
+  xlg: 1380px
+);
 
 
 // Grid containers
@@ -341,24 +341,26 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 480px,
-  md: 768px,
-  lg: 960px,
-  xl: 1200px,
+  xs: 302px,
+  sm: 458px,
+  md: 724px,
+  lg: 940px,
+  xl: 1180px,
   xlg: 1300px
-); 
+);
 
 $container-gutter-widths: (
+  /*
   xs: 1.8rem,
   sm: 2.2rem,
   md: 4.4rem,
   xlg: 4rem
-); 
+  */
+);
 $cols-gutter-widths: (
   xs: 1rem,
-  sm: 1rem,
-  xlg: 3rem
-); 
+  sm: 1rem
+);
 
 // Navbar
 //

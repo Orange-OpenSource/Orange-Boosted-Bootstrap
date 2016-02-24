@@ -26,6 +26,45 @@ gems:
   - jekyll-redirect-from
   - jekyll-sitemap
 
+# boosted mod
+grid:
+  xs:
+    breakpoint: 0
+    width: 302 
+    gutter: 10
+    desc: Extra small devices
+    subdesc: Portrait phone (&lt;480px)
+  sm:
+    breakpoint: 480
+    width: 458 
+    gutter: 10
+    desc: Small devices
+    subdesc: Landscape phones (&ge;480px - &lt;768px)
+  md:
+    breakpoint: 768
+    width: 724 
+    gutter: 20
+    desc: Medium devices
+    subdesc: Tablet (&ge;768px - &lt;992px)
+  lg:
+    breakpoint: 992
+    width: 940 
+    gutter: 20
+    desc: Large devices
+    subdesc: Desktop (&ge;992px - &lt;1120px) (target 1024 screen resolutions)
+  xl:
+    breakpoint: 1220
+    width: 1180 
+    gutter: 20
+    desc: Extra large devices
+    subdesc: Desktop (&ge;1220px - &lt;1380px) (target 1280 screen resolutions)
+  xlg:
+    breakpoint: 1380
+    width: 1300 
+    gutter: 20
+    desc: Extra extra large devices
+    subdesc: Desktop (&ge;1380px) (target 1440 screen resolutions)
+# end boosted mod
 # Custom vars
 current_version:  4.0.0-alpha.2
 repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
