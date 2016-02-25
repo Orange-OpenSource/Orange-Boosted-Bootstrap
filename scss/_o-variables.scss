@@ -411,6 +411,9 @@ $o-wizard-step-bar-arrow-width-small: (($line-height-computed / 2) + $padding-ba
 $o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + .1);
 $o-wizard-step-bar-arrow-outer-width:           ($o-wizard-step-bar-arrow-width);
 
+$o-stepbar-height: 4rem;
+$o-stepbar-arrow-ratio: 3 / 8;
+
 // Pagination
 //
 //
