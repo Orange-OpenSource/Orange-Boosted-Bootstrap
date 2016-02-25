@@ -16,7 +16,7 @@ Here's how to quickly get started with the necessary Booted files and a template
 
 ## About Orange Brand
 
-All Boosted components are compliant with Orange Brand Guidelines. Some bootstrap features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem"></span>, use them at your own risks.
+All Boosted components are compliant with Orange Brand Guidelines. Some bootstrap features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks.
 
 ## Quick start
 
