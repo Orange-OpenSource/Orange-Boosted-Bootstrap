@@ -295,11 +295,11 @@ var Collapse = (function ($) {
     }], [{
       key: '_keydown',
       value: function _keydown(e, that) {
-        var $items = undefined,
-            $tablist = $this.closest('div.panel-group '),
-            $this = $(that),
-            index = undefined,
-            k = e.which || e.keyCode;
+        var $items = undefined;
+        var $tablist = $this.closest('div.panel-group ');
+        var $this = $(that);
+        var index = undefined;
+        var k = e.which || e.keyCode;
 
         if (k === 32) {
           // space
@@ -310,7 +310,8 @@ var Collapse = (function ($) {
         index = $items.index($items.filter(':focus'));
 
         if (k === 38 || k === 37) {
-          index--; // up & left
+          index--;
+          // up & left
         }
         if (k === 39 || k === 40) {
           index++; // down & right
@@ -379,14 +380,14 @@ var Collapse = (function ($) {
   var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
   $colltabs.attr({ role: 'tab', 'aria-selected': 'false', 'aria-expanded': 'false' });
   $colltabs.each(function () {
-    var collid = $(this).attr('id') || uniqueId('ui-collapse'),
-        collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href')),
-        collparent = parent && $(parent),
-        colltab = $(this),
-        heading = '',
-        parent = colltab.attr('data-parent');
+    var collid = $(this).attr('id') || uniqueId('ui-collapse');
+    var collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'));
+    var collparent = parent && $(parent);
+    var $colltab = $(this);
+    var heading = '';
+    var parent = $colltab.attr('data-parent');
 
-    colltab.attr('id', collid);
+    $colltab.attr('id', collid);
     if (collparent) {
       $(collparent).find('div:not(.collapse,.panel-body), h4').attr('role', 'presentation');
       collparent.attr({ role: 'tablist', 'aria-multiselectable': 'true' });
@@ -394,10 +395,10 @@ var Collapse = (function ($) {
       heading = collpanel.parent().children().first(); // On sélectionne le heading (panel-heading)
 
       if (collpanel.hasClass('in')) {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true', tabindex: '0' });
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true', tabindex: '0' });
 
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role: 'tabpanel', tabindex: '0', 'aria-labelledby': collid, 'aria-hidden': 'false' });
         }
 
@@ -408,9 +409,9 @@ var Collapse = (function ($) {
           heading.children().first().addClass('panel-chevron-open');
         }
       } else {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), tabindex: '-1' });
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), tabindex: '-1' });
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role: 'tabpanel', tabindex: '-1', 'aria-labelledby': collid, 'aria-hidden': 'true' });
         }
 
@@ -422,9 +423,9 @@ var Collapse = (function ($) {
     } else {
       heading = collpanel.parent().children().first(); // On sélectionne le heading (panel-heading)
       if (collpanel.hasClass('in')) {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true' });
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'true', 'aria-expanded': 'true' });
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role: 'tabpanel', 'aria-labelledby': collid, 'aria-hidden': 'false' });
         }
 
@@ -435,9 +436,9 @@ var Collapse = (function ($) {
           heading.children().first().addClass('panel-chevron-open');
         }
       } else {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'false', 'aria-expanded': 'false' });
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected': 'false', 'aria-expanded': 'false' });
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role: 'tabpanel', 'aria-labelledby': collid, 'aria-hidden': 'true' });
         }
 

@@ -108,16 +108,14 @@ const Dropdown = (($) => {
       if (showEvent.isDefaultPrevented()) {
         return false
       }
-
+      // Boosted mod
       // this.focus()
+      $(parent).find('.dropdown-menu li:not(.disabled) a:not(.disabled)').first().trigger('focus')
+      // end mod
       this.setAttribute('aria-expanded', 'true')
 
-
-      // patch to select by default first item
       $(parent).toggleClass(ClassName.OPEN)
       $(parent).trigger($.Event(Event.SHOWN, relatedTarget))
-      $(this).parent().find('.dropdown-menu a').first().focus()
-
       return false
     }
 
@@ -261,12 +259,13 @@ const Dropdown = (($) => {
     }
 
   }
-
+  // Boosted mod
   // set default acessibility Attributes
   $(document).ready(($) => {
     $('.dropdown-menu').attr('role', 'menu')
     $('.dropdown-menu a.dropdown-item').attr('role', 'menuitem')
   })
+  // end mod
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation

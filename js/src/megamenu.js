@@ -39,8 +39,8 @@ const Megamenu = (($) => {
     $(megamenuItems).eq(index).trigger('focus')
   })
 
-    // WAI-ARIA
-  $('.mega-menu .dropdown-toggle').each(function() {
+  // WAI-ARIA
+  $('.mega-menu .dropdown-toggle').each(function () {
     let dropdownToggleId = uuid()
     let dropdownMenu = $(this).next('ul.dropdown-menu')
     let dropdownMenuId = uuid()
@@ -51,29 +51,29 @@ const Megamenu = (($) => {
     $(dropdownMenu).attr('aria-labelledby', dropdownToggleId)
   })
 
-  $('.mega-menu .megamenu-dropdown-toggle').on('click', function() {
-    $('.mega-menu .megamenu-dropdown-toggle').each(function() {
+  $('.mega-menu .megamenu-dropdown-toggle').on('click', function () {
+    $('.mega-menu .megamenu-dropdown-toggle').each(function () {
       $(this).removeClass('active')
     })
     $(this).addClass('active')
   })
 
   // extending to level 2 in 320
-  $('.mega-menu h3').on('click', function() {
+  $('.mega-menu h3').on('click', function () {
     $('.megamenuclosetop').parent().find('.megamenuclosetop').addClass('active')
     $('.megamenuclosetop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').addClass('active')
     $(this).addClass('disabled')
   })
 
   // extending to level 1 in 320
-  $('.nav-item .megamenu-dropdown-toggle').on('click', function() {
+  $('.nav-item .megamenu-dropdown-toggle').on('click', function () {
     $('.closing-bare').css({ height : '0' })
     $('.open').removeClass('open')
-	// standard
+    // standard
     $(this).parent().addClass('open')
     $(this).attr('aria-expanded', 'true')
 
-	// 320
+    // 320
     if (document.body.clientWidth < 768) {
       $(this).parent().parent().addClass('menu-level1')
       let outerHeight = $(this).parent().find('ul[role=menu]').outerHeight()
@@ -87,7 +87,7 @@ const Megamenu = (($) => {
   })
 
   // extending to level 2 in 320
-  $('.nav-item ul li div h3').on('click', function() {
+  $('.nav-item ul li div h3').on('click', function () {
     $(this).parent().find('ul').addClass('open')
     $(this).parent().find('ul').prepend(`<li class="back_menu1" ><h4 class="back-menu1title">${this.innerHTML}</h4></li>`)
     $('.back_menu1').on('click', backToMenu1)
@@ -98,14 +98,14 @@ const Megamenu = (($) => {
     }
   })
 
-   // back to level 0 in 320
+  // back to level 0 in 320
   $('.nav-item .row h2').on('click', () => {
     $('.menu-level1').removeClass('menu-level1')
     $('.navbar-toggleable-xs').css({ height : 'inherit' })
   })
 
-   // back to level 1 in 320
-  function backToMenu1 () {
+  // back to level 1 in 320
+  function backToMenu1() {
     $('.menu-level1').removeClass('menu-level2')
     $('.back_menu1').remove()
     $('.row .open').removeClass('open')
@@ -116,7 +116,7 @@ const Megamenu = (($) => {
   }
 
   //  openning mega menu in 320
-  $('.megamenubacktop').on('click', function() {
+  $('.megamenubacktop').on('click', function () {
     $('.menu-level1').removeClass('menu-level1').removeClass('menu-level2')
     $('.navbar-toggleable-xs').css({ height : 'inherit' })
     $('.topmenucontent .icon-search').removeClass('color-orange')
@@ -129,7 +129,7 @@ const Megamenu = (($) => {
   })
 
   // close mega menu in 320
-  $('.megamenuclosetop , .closing-bare-button a').on('click', function() {
+  $('.megamenuclosetop , .closing-bare-button a').on('click', function () {
     $('.open').removeClass('open')
     $('.megamenuclosetop').parent().find('.megamenubacktop').removeClass('disabled')
     $('.megamenuclosetop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').removeClass('active')
@@ -139,7 +139,7 @@ const Megamenu = (($) => {
     $(this).removeClass('active')
   })
 
- // search bar
+  // search bar
   $('.megamenusearchtop').on('click', () => {
     $('.megamenuclosetop').trigger('click')
     $('.topmenucontent .icon-search').addClass('color-orange')
@@ -147,12 +147,12 @@ const Megamenu = (($) => {
   })
 
   // clear search
-  $('.megamenusearchinputclose').on('click', function() {
+  $('.megamenusearchinputclose').on('click', function () {
     $(this).parent().find('input').val('')
     $(this).removeClass('visible')
   })
 
-  $('.megamenusearchinputtext').on('keyup', function() {
+  $('.megamenusearchinputtext').on('keyup', function () {
     if ($(this).val() !== '') {
       $(this).parent().find('.megamenusearchinputclose').addClass('visible')
     } else {

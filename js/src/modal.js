@@ -517,11 +517,11 @@ const Modal = (($) => {
   $(document).ready(() => {
     // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
     let $modals =  $('[data-toggle="modal"]')
-    $modals.each(function() {
+    $modals.each(function () {
       // modal = l'élement déclencheur de l'aperçu de la popin
       // modalPanel = la fenêtre modal à proprement parler
-      let modal = $(this),
-        modalPanel = modal.attr('data-target') ? $(modal.attr('data-target')) : $(modal.attr('href'))
+      let $modal = $(this)
+      let modalPanel = $modal.attr('data-target') ? $($modal.attr('data-target')) : $($modal.attr('href'))
 
       // On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
       modalPanel.attr({ role : 'dialog' })// LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });

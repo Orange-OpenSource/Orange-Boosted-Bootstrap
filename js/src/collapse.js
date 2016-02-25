@@ -310,13 +310,14 @@ const Collapse = (($) => {
     // static
 
   static _keydown(e, that) {
-    let $items,
-      $tablist = $this.closest('div.panel-group '),
-      $this = $(that),
-      index,
-      k = e.which || e.keyCode
+    let $items
+    let $tablist = $this.closest('div.panel-group ')
+    let $this = $(that)
+    let index
+    let k = e.which || e.keyCode
 
-    if (k === 32) { 					// space
+    if (k === 32) {
+      // space
       $this.click()
     }
 
@@ -324,7 +325,8 @@ const Collapse = (($) => {
     index = $items.index($items.filter(':focus'))
 
     if (k === 38 || k === 37) {
-      index--                      // up & left
+      index--
+      // up & left
     }
     if (k === 39 || k === 40) {
       index++                      // down & right
@@ -384,21 +386,21 @@ const Collapse = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  let uniqueId = function(prefix) {
+  let uniqueId = function (prefix) {
     return `${prefix || 'ui-id'}-${Math.floor(Math.random() * 1000 + 1)}`
   }
 
   let $colltabs =  $('[data-toggle="collapse"]:not(.navbar-toggle)')
   $colltabs.attr({ role:'tab', 'aria-selected':'false', 'aria-expanded':'false' })
-  $colltabs.each(function() {
-    let collid = $(this).attr('id') || uniqueId('ui-collapse'),
-      collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href')),
-      collparent = parent && $(parent),
-      colltab = $(this),
-      heading = '',
-      parent  = colltab.attr('data-parent')
+  $colltabs.each(function () {
+    let collid = $(this).attr('id') || uniqueId('ui-collapse')
+    let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
+    let collparent = parent && $(parent)
+    let $colltab = $(this)
+    let heading = ''
+    let parent  = $colltab.attr('data-parent')
 
-    colltab.attr('id', collid)
+    $colltab.attr('id', collid)
     if (collparent) {
       $(collparent).find('div:not(.collapse,.panel-body), h4').attr('role', 'presentation')
       collparent.attr({ role: 'tablist', 'aria-multiselectable' : 'true' })
@@ -406,10 +408,10 @@ const Collapse = (($) => {
       heading = collpanel.parent().children().first() // On sélectionne le heading (panel-heading)
 
       if (collpanel.hasClass('in')) {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true', tabindex:'0' })
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true', tabindex:'0' })
 
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role:'tabpanel', tabindex:'0', 'aria-labelledby':collid, 'aria-hidden':'false' })
         }
 
@@ -420,9 +422,9 @@ const Collapse = (($) => {
           heading.children().first().addClass('panel-chevron-open')
         }
       } else {
-        colltab.attr({ 'aria-controls' : collpanel.attr('id'), tabindex:'-1' })
+        $colltab.attr({ 'aria-controls' : collpanel.attr('id'), tabindex:'-1' })
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role:'tabpanel', tabindex:'-1', 'aria-labelledby':collid, 'aria-hidden':'true' })
         }
 
@@ -434,9 +436,9 @@ const Collapse = (($) => {
     } else {
       heading = collpanel.parent().children().first() // On sélectionne le heading (panel-heading)
       if (collpanel.hasClass('in')) {
-        colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true' })
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true' })
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role:'tabpanel', 'aria-labelledby':collid, 'aria-hidden':'false' })
         }
 
@@ -448,9 +450,9 @@ const Collapse = (($) => {
         }
 
       } else {
-        colltab.attr({ 'aria-controls' : collpanel.attr('id'), 'aria-selected':'false', 'aria-expanded':'false'  })
+        $colltab.attr({ 'aria-controls' : collpanel.attr('id'), 'aria-selected':'false', 'aria-expanded':'false' })
         // don't change the attribute for menu panel specific case
-        if (!colltab.hasClass('navbar-toggle')) {
+        if (!$colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ role:'tabpanel', 'aria-labelledby':collid, 'aria-hidden':'true' })
         }
 

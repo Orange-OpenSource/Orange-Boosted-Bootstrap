@@ -344,13 +344,13 @@ module.exports = function (grunt) {
 
     /* boosted mod */
     connect: {
-    //   server: {
-    //     options: {
-    //       port: 3000,
-    //       base: '.'
-    //     }
-    //   }
-    // },
+      //   server: {
+      //     options: {
+      //       port: 3000,
+      //       base: '.'
+      //     }
+      //   }
+      // },
       livereload: {
         options: {
           open: true,
@@ -362,7 +362,7 @@ module.exports = function (grunt) {
           }
         }
       }
-      },
+    },
     /* end mod */
 
     jekyll: {
@@ -381,66 +381,72 @@ module.exports = function (grunt) {
 
     /* boosted mod */
     replace: {
-        paths1: {
-          src: ['_gh_pages/*.html'],
-          overwrite: true,
-          replacements: [{
-                from: 'href="/',
-                to: 'href="'
-            }]
-        },
-        paths2: {
-          src: ['_gh_pages/*/*.html'],
-          overwrite: true,
-          replacements: [{
-                from: 'href="/',
-                to: 'href="../'
-            },
-            {
-              from: 'src="dist',
-              to: 'src="../dist',
-            },
-            {
-              from: 'src="/dist',
-              to: 'src="../dist',
-            },
-            {
-              from: 'src="/assets',
-              to: 'src="../assets',
-            },
-            {
-              from: 'src="/../assets',
-              to: 'src="../assets',
-            },
-            {
-              from: 'src="/examples',
-              to: 'src="../examples',
-            }]
-        },
-        paths3: {
-          src: ['_gh_pages/*/*/*.html'],
-          overwrite: true,
-          replacements: [{
-                from: 'href="/',
-                to: 'href="../../'
-            },
-            {
-              from: 'src="/dist',
-              to: 'src="../../dist',
-            },
-            {
-              from: 'src="dist',
-              to: 'src="../../dist',
-            },
-            {
-              from: 'src="/assets',
-              to: 'src="../../assets',
-            },
-            {
-              from: 'src="/../assets',
-              to: 'src="../../assets',
-            }]
-        }
+      paths1: {
+        src: ['_gh_pages/*.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'href="/',
+            to: 'href="'
+          }
+        ]
+      },
+      paths2: {
+        src: ['_gh_pages/*/*.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'href="/',
+            to: 'href="../'
+          },
+          {
+            from: 'src="dist',
+            to: 'src="../dist'
+          },
+          {
+            from: 'src="/dist',
+            to: 'src="../dist'
+          },
+          {
+            from: 'src="/assets',
+            to: 'src="../assets'
+          },
+          {
+            from: 'src="/../assets',
+            to: 'src="../assets'
+          },
+          {
+            from: 'src="/examples',
+            to: 'src="../examples'
+          }
+        ]
+      },
+      paths3: {
+        src: ['_gh_pages/*/*/*.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'href="/',
+            to: 'href="../../'
+          },
+          {
+            from: 'src="/dist',
+            to: 'src="../../dist'
+          },
+          {
+            from: 'src="dist',
+            to: 'src="../../dist'
+          },
+          {
+            from: 'src="/assets',
+            to: 'src="../../assets'
+          },
+          {
+            from: 'src="/../assets',
+            to: 'src="../../assets'
+          }
+        ]
+      }
     },
     /* end mod */
 
