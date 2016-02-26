@@ -3,44 +3,41 @@
 <h3 id="stepbar-default">Default stepbar</h3>
 
 <div class="" data-example-id="default-stepbar">
-    <div class="container-fluid">
-      <div class="row">
-          <ul class="o-wizard-step-bar" data-steps="5">
-              <li class="visited">
-                  <div>
-                      <div><span class="hidden-sm-down">Step&nbsp;</span> 1</div>
-                      <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-sm-down hidden-md-down">Voluptatem</a></div>
-                  </div>
-              </li>
-              <li class="visited">
-                  <div class="arrow" aria-hidden="true"></div>
-                  <div>
-                      <div><span class="hidden-sm-down">Step&nbsp;</span> 2</div>
-                      <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-sm-down hidden-md-down">Aperiam</a></div>
-                  </div>
-              </li>
-              <li class="on">
-                  <div class="arrow" aria-hidden="true"></div>
-                  <div>
-                      <div><span class="hidden-sm-down">Step&nbsp;</span> 3</div>
-                      <div><span class="hidden-sm-down hidden-md-down">Accusantinum</span></div>
-                  </div>
-              </li>
-              <li class="next">
-                  <div class="arrow" aria-hidden="true"></div>
-                  <div>
-                      <div><span class="hidden-sm-down">Step&nbsp;</span> 4</div>
-                      <div><span class="hidden-sm-down hidden-md-down">Ipsam</span></div>
-                  </div>
-              </li>
-              <li class="next">
-                  <div class="arrow" aria-hidden="true"></div>
-                  <div>
-                      <div><span class="hidden-sm-down">Step&nbsp;</span> 5</div>
-                      <div><span class="hidden-sm-down hidden-md-down">Aspernatur</span></div>
-                  </div>
-              </li>
+    <div class="row">
+        <div class="o-stepbar">
+            <span class="hidden-md-up stepbar-header">Step</span>
+            <ul>
+                <li class="done stepbar-item">
+                    <a class="stepbar-link" href="#" title="Step 1 : sign in">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Sign in</span>
+                    </a>
+                </li>
+                <li class="stepbar-item current">
+                    <a class="stepbar-link" href="#" title="Step 2 : Review">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Review</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 3 : Delivery">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Delivery</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 4 : Payment">
+                        <span class="step-number">4</span>
+                        <span class="step-title">Payment</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 5 : Place order">
+                        <span class="step-number">5</span>
+                        <span class="step-title">Place order</span>
+                    </a>
+                </li>
           </ul>
       </div>
-    </div><!-- /.container-fluid -->
+    </div><!-- row -->
 </div>
