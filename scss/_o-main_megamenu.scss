@@ -154,6 +154,7 @@
     &:hover,
     &:focus {
       color:  $brand-orange;
+      text-decoration: underline;
     }
   }
 
@@ -562,6 +563,12 @@
   .navbar-toggle .icon-bar {
     background-color:  $brand-orange-white;
   }
+
+  .dropdown-mega a:hover,
+    .li a:hover {
+    color: $megamenu-hover-color;
+    text-decoration: underline;
+  }
 }
 
 @media (max-width:  960px) {
@@ -851,22 +858,21 @@
       padding:  .27rem 2rem;
       margin-left:  5px;
     }
-  }
 
-  .row ul > li > a::before,
-  .nav-item > a::before,
-  .mega-menu-content h3::before {
-    float: right;
-    margin-right:  .5em;
-    font-family: icon-orange !important;
-    font-size:  1em;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    content: "\ea52";
-    speak: none;
+    .mega-menu-content  li > a::before,
+    .nav-item > a::before,
+    .mega-menu-content h3::before {
+      float: right;
+      margin-right:  .5em;
+      font-family: icon-orange !important;
+      font-size:  1em;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      content: "\ea52";
+      speak: none;
+    }
   }
-
   .mega-menu-content > div ul li,
   .container .row.mega-menu-content  h2.mega-menu-content-title {
     padding: 10px 0 10px 10px !important;
