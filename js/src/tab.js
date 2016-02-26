@@ -1,5 +1,6 @@
 import Util from './util'
 
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0-alpha.2): tab.js
@@ -144,49 +145,50 @@ const Tab = (($) => {
       $.removeClass(this._element, DATA_KEY)
       this._element = null
     }
+    // Boosted mod
+    static _keydown(e) {
+      let $this = $(this)
+      let $items
+      let $ul = $this.closest('ul[role=tablist] ')
+      let index
+      let k = e.which || e.keyCode
+      $this = $(this)
+      if (!/(37|38|39|40)/.test(k)) {
+        return
+      }
+      $items = $ul.find('[role=tab]:visible')
+      index = $items.index($items.filter(':focus'))
 
-	static _keydown(e) {
-  let $this = $(this)
-  let $items
-  let $ul = $this.closest('ul[role=tablist] ')
-  let index
-  let k = e.which || e.keyCode
-  $this = $(this)
-  if (!/(37|38|39|40)/.test(k)) {
-    return
-  }
-  $items = $ul.find('[role=tab]:visible')
-  index = $items.index($items.filter(':focus'))
+      if (k === 38 || k === 37) {
+        index--
+      }	// up & left
+      if (k === 39 || k === 40) {
+        index++
+      }	// down & right
 
-  if (k === 38 || k === 37) {
-    index--
-  }	// up & left
-  if (k === 39 || k === 40) {
-    index++
-  }	// down & right
+      if (index < 0) {
+        index = $items.length - 1
+      }
+      if (index === $items.length) {
+        index = 0
+      }
+      let nextTab = $items.eq(index)
+      if (nextTab.attr('role') === 'tab') {
+        nextTab.tab('show').trigger('focus')
+      }
 
-  if (index < 0) {
-    index = $items.length - 1
-  }
-  if (index === $items.length) {
-    index = 0
-  }
-  let nextTab = $items.eq(index)
-  if (nextTab.attr('role') === 'tab') {
-    nextTab.tab('show').focus()
-  }
-
-  e.preventDefault()
-  e.stopPropagation()
-}
-
+      e.preventDefault()
+      e.stopPropagation()
+    }
+    // end mod
     // private
 
     _activate(element, container, callback) {
+      // Boosted mod
       let $active = $(container).find('> .active')
       $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex : '-1', 'aria-selected' : false })
       $active.filter('.tab-pane').attr({ 'aria-hidden' : true, tabIndex : '-1' })
-
+      // end mod
       let active          = $(container).find(Selector.ACTIVE_CHILD)[0]
       let isTransitioning = callback
         && Util.supportsTransitionEnd()
@@ -214,13 +216,13 @@ const Tab = (($) => {
       if (active) {
         $(active).removeClass(ClassName.IN)
       }
-
+      // Boosted mod
       if (element.tagName === 'A') {
         let elemID = `#${element.id}`
-        $(elemID).attr({ tabIndex : '0', 'aria-selected' : true }).focus()
+        $(elemID).attr({ tabIndex : '0', 'aria-selected' : true }).trigger('focus')
       }
       $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false, tabIndex : '0' })
-
+      // end mod
     }
 
     _transitionComplete(element, active, isTransitioning, callback) {
@@ -301,24 +303,26 @@ const Tab = (($) => {
       Tab._jQueryInterface.call($(this), 'show')
     })
 
-
+  // Boosted mod
   $(document)
-	.on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
-  if (!/(38|40|39|37)/.test(event.which)) {
-    return
-  }
-  event.preventDefault()
-  Tab._keydown.call($(this), event)
-})
+    .on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
+      if (!/(38|40|39|37)/.test(event.which)) {
+        return
+      }
+      event.preventDefault()
+      Tab._keydown.call($(this), event)
+    })
+  // end mod
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
    */
+  // Boosted mod
   // ajout de l'accesibilité
   // ===============================
 
-  let uniqueId = function(prefix) {
+  let uniqueId = function (prefix) {
     return `${prefix || 'ui-id'}-${Math.floor(Math.random() * 1000 + 1)}`
   }
 
@@ -329,21 +333,22 @@ const Tab = (($) => {
   $tablist.attr('role', 'tablist')
   $lis.attr('role', 'presentation')
   $tabs.attr('role', 'tab')
-  $tabs.each(function() {
+  $tabs.each(function () {
     let tabpanel = $($(this).attr('href'))
-    let tab = $(this)
-    let tabid = tab.attr('id') || uniqueId('ui-tab')
+    let $tab = $(this)
+    let tabid = $tab.attr('id') || uniqueId('ui-tab')
 
-    tab.attr('id', tabid)
+    $tab.attr('id', tabid)
 
-    if (tab.hasClass('active')) {
-      tab.attr({ tabIndex : '0', 'aria-selected' : 'true', 'aria-controls': tab.attr('href').substr(1) })
+    if ($tab.hasClass('active')) {
+      $tab.attr({ tabIndex : '0', 'aria-selected' : 'true', 'aria-controls': $tab.attr('href').substr(1) })
       tabpanel.attr({ role : 'tabpanel', tabIndex : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
     } else {
-      tab.attr({ tabIndex : '-1', 'aria-selected' : 'false', 'aria-controls': tab.attr('href').substr(1) })
+      $tab.attr({ tabIndex : '-1', 'aria-selected' : 'false', 'aria-controls': $tab.attr('href').substr(1) })
       tabpanel.attr({ role : 'tabpanel', tabIndex : '-1', 'aria-hidden' : 'true', 'aria-labelledby':tabid })
     }
   })
+  // end mod
 
   $.fn[NAME]             = Tab._jQueryInterface
   $.fn[NAME].Constructor = Tab

@@ -8,44 +8,46 @@ Indicate the current step within a sequential navigation.
 
 ## Default stepbar
 
-Declare a list, each item need to contain a first `<div>` with class `.arrow` and attribute `aria-hidden="true"`, next add the correct css classes. Add the `o-wizard-step-bar` class on the `ul` element (root of your list). Then, to design steps, add `visited`, `on` or `next` classes if yout want a visited step, the current step or a futur step. These classes are to be added to the list items (`li` tag).
-The number of steps can be adjusted using the special attribute `data-step` (present on the `ul` tag of the component). 5 steps max.
+Declare a `.o-stepbar` div contaning the stepbar. Within a `<ul>`list delcare `.stepbar-item` elements up to 5. Fill the `.step-number`and `.step-title` accordingly.
+
+Use `.done` and `.current` classes in correct order. There is only one `.current` item. Fill a correct description on each `.stepbar-link` `title`attributes.
+
+In mobile view a `.stepbar-header` is needed before the list, Orange brand labels it "Step".
 
 {% example html %}
-<ul class="o-wizard-step-bar" data-steps="5">
-    <li class="visited">
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
-            <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
-        </div>
-    </li>
-    <li class="visited">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
-            <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
-        </div>
-    </li>
-    <li class="on">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
-            <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
-        </div>
-    </li>
-    <li class="next">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
-            <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
-        </div>
-    </li>
-    <li class="next">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
-            <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
-        </div>
-    </li>
-</ul>
+<div class="o-stepbar">
+    <span class="hidden-md-up stepbar-header">Step</span>
+    <ul>
+        <li class="done stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                <span class="step-number">1</span>
+                <span class="step-title">Voluptatem</span>
+            </a>
+        </li>
+        <li class="stepbar-item current">
+            <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                <span class="step-number">2</span>
+                <span class="step-title">Aperiam</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 3 : Lorem">
+                <span class="step-number">3</span>
+                <span class="step-title">Lorem</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 4 : Ipsam">
+                <span class="step-number">4</span>
+                <span class="step-title">Ipsam</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 5 : Aspernatur">
+                <span class="step-number">5</span>
+                <span class="step-title">Aspernatur</span>
+            </a>
+        </li>
+    </ul>
+</div>
 {% endexample %}

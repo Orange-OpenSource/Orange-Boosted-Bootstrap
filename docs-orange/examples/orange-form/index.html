@@ -81,47 +81,43 @@
 
 
 	<main id="content" class="container" role="main">
-
         <div class="row">
-            <!-- step bar -->
-            <ul class="o-wizard-step-bar" data-steps="5">
-                <li class="visited">
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
-                        <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
-                    </div>
-                </li>
-                <li class="visited">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
-                        <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
-                    </div>
-                </li>
-                <li class="on">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
-                        <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
-                    </div>
-                </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
-                        <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
-                    </div>
-                </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
-                        <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
-                    </div>
-                </li>
-            </ul>
-            <!-- /step bar -->
-        </div>
+            <div class="o-stepbar">
+                <span class="hidden-md-up stepbar-header">Step</span>
+                <ul>
+                    <li class="done stepbar-item">
+                        <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                            <span class="step-number">1</span>
+                            <span class="step-title">Voluptatem</span>
+                        </a>
+                    </li>
+                    <li class="stepbar-item current">
+                        <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                            <span class="step-number">2</span>
+                            <span class="step-title">Aperiam</span>
+                        </a>
+                    </li>
+                    <li class="stepbar-item next">
+                        <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
+                            <span class="step-number">3</span>
+                            <span class="step-title">Accusantinum</span>
+                        </a>
+                    </li>
+                    <li class="stepbar-item next">
+                        <a class="stepbar-link" href="#" title="Step 4 : Ipsam">
+                            <span class="step-number">4</span>
+                            <span class="step-title">Ipsam</span>
+                        </a>
+                    </li>
+                    <li class="stepbar-item next">
+                        <a class="stepbar-link" href="#" title="Step 5 : Aspernatur">
+                            <span class="step-number">5</span>
+                            <span class="step-title">Aspernatur</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- row -->
 		<form role="form" id="myForm">
 			<div class="form-group row">
 				<label for="inputEmail" class="col-sm-2 form-control-label">Email</label>

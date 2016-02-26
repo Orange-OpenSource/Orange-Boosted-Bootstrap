@@ -81,3 +81,7 @@ Replace the `.axs_hide` class by `.sr-only` native class included into Bootstrap
 ### Font icons
 
 Rename all the class containing  `_` to `-`.
+
+### Step bar
+
+Class names and semantic changed, see [Orange stepbar](../components/orange-stepbar/) for documentation and examples.

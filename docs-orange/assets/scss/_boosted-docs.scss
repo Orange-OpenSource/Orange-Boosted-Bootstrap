@@ -7,7 +7,7 @@
   background-image: none;
 
   .lead {
-    font-size: 2.1rem;
+    font-size: $font-size-h6;
 
     a {
         color: $brand-orange-white;
@@ -22,22 +22,6 @@
     }
 
     .btn {
-//         font-size: $font-size-lg;
-//         font-weight: $btn-font-weight;
-//         color: $brand-orange;
-//         text-decoration: none;
-//
-//         &.btn-lg {
-//             font-size: $font-size-lg;
-//             padding: $btn-padding-y-lg $btn-padding-x-lg;
-//         }
-//
-//         &:active,
-//         &:hover,
-//         &:focus {
-//             color: $brand-orange-white;
-//         }
-        // @include orange-button-variant($btn-info-color, $btn-info-bg, $btn-info-hover-color, $btn-info-hover-bg);
         @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
         border-color: $brand-orange-white;
         font-weight: $btn-font-weight;
@@ -52,7 +36,7 @@
 
   .bd-boosted-icon {
       font-family: $font-family-titles;
-      font-size: 5rem;
+      font-size: $font-size-h1;
       font-weight: 500;
   }
 }
@@ -66,20 +50,20 @@
 
   @include media-breakpoint-up(md) {
     h1 {
-      font-size: 5rem;
+      font-size: $font-size-h1;
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: $font-size-base;
     }
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: $font-size-h1;
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: $font-size-base;
   }
 }
 
@@ -96,7 +80,7 @@
 
 .bd-navbar {
   font-size: 1.8rem;
-  min-height: 6.8rem;
+  min-height: $navbar-height;
   padding: 0;
 
   @include media-breakpoint-down(sm) {
@@ -112,8 +96,6 @@
   .navbar-nav {
     .nav-link {
       color: $brand-orange-white;
-      margin-top: 2.8rem;
-    //   padding: 1rem;
 
       &.active,
       &:hover,
@@ -155,6 +137,52 @@
 
 }
 
+@mixin brand-warning {
+  &::before {
+    @include sr-only;
+    content: "warning, not brand compliant";
+  }
+
+  &::after {
+    content: "\e91e";
+    color: $brand-danger;
+    font-family: "icon-orange" !important;
+    font-size: inherit;
+    padding-left: 0.6rem;
+    vertical-align: bottom;
+  }
+}
+
+#outline-buttons,
+#supported-content,
+#brand,
+#nav,
+#color-schemes,
+#containers,
+#placement {
+    @include brand-warning;
+}
+
+// #outline-buttons::after,
+// #supported-content::after,
+// #brand::after,
+// #nav::after,
+// #color-schemes::after,
+// #containers::after,
+// #placement::after {
+//   content: "\e91e";
+//   color: $brand-danger;
+//   font-family: "icon-orange" !important;
+//   font-size: inherit;
+//   padding-left: 0.6rem;
+//   vertical-align: bottom;
+// }
+
+// #outline-buttons::before {
+//     @include sr-only;
+//     content: "warning, not brand compliant";
+// }
+
 //
 // Font icons
 //
@@ -166,7 +194,7 @@
 .doc-fonticon-list {
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;  
+  font-size: 3rem;
 }
 .doc-fonticon li {
   float: left;
@@ -183,6 +211,7 @@
   display: block;
   text-align: center;
   word-wrap: break-word; // Help out IE10+ with class names
+  font-size: $font-size-base;
 }
 .doc-fonticon li:hover {
   color: #fff;
@@ -221,7 +250,7 @@ $back-top-btn-height: 6rem;
     z-index: 100;
     text-decoration: none;
     display: none;
-    span[class*="icon-"] {    
+    span[class*="icon-"] {
       font-size: 3rem;
     }
     &:visited {
