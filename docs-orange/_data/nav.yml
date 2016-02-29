@@ -77,9 +77,18 @@
 - title: About
   pages:
     - title: History
+# boosted mod
+    - title: Boosted history
+# end mod
     - title: Team
     - title: Brand
+# boosted mod
+    - title: Orange brand
+# end mod
     - title: License
+# boosted mod
+    - title: Boosted license
+# end mod
     - title: Translations
 
 - title: Migration
