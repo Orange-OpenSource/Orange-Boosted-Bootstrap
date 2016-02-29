@@ -27,6 +27,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
 
 .o-stepbar {
   &,
+  ol,
   ul {
     padding: 0;
     margin: 0;
@@ -41,6 +42,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
     padding-left: calc(#{$o-stepbar-height} * #{$o-stepbar-arrow-ratio} + #{$padding-base-horizontal});
     font-weight: bold;
     color: $brand-orange-black;
+    white-space: nowrap;
     list-style: none;
     background-color: $gray-light-plus;
 
@@ -118,6 +120,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
       vertical-align: middle;
     }
 
+    ol,
     ul {
       display: inline-block;
       padding: 0;
