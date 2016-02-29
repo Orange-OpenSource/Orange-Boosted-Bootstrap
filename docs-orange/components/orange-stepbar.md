@@ -8,16 +8,18 @@ Indicate the current step within a sequential navigation.
 
 ## Default stepbar
 
-Declare a `.o-stepbar` div contaning the stepbar. Within a `<ul>`list delcare `.stepbar-item` elements up to 5. Fill the `.step-number`and `.step-title` accordingly.
+Declare a `.o-stepbar` nav tag contaning the stepbar. Within a `<ol>`ordered list delcare `.stepbar-item` elements up to 5. Fill the `.step-number`and `.step-title` accordingly.
 
 Use `.done` and `.current` classes in correct order. There is only one `.current` item. Fill a correct description on each `.stepbar-link` `title`attributes.
 
 In mobile view a `.stepbar-header` is needed before the list, Orange brand labels it "Step".
 
+Be carful to choose short labels when using 5 steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title`attributle of the `<a>`link.
+
 {% example html %}
-<div class="o-stepbar">
+<nav class="o-stepbar" role="navigation">
     <span class="hidden-md-up stepbar-header">Step</span>
-    <ul>
+    <ol>
         <li class="done stepbar-item">
             <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
                 <span class="step-number">1</span>
@@ -31,9 +33,9 @@ In mobile view a `.stepbar-header` is needed before the list, Orange brand label
             </a>
         </li>
         <li class="stepbar-item next">
-            <a class="stepbar-link" href="#" title="Step 3 : Lorem">
+            <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
                 <span class="step-number">3</span>
-                <span class="step-title">Lorem</span>
+                <span class="step-title">Accusantinum</span>
             </a>
         </li>
         <li class="stepbar-item next">
@@ -48,6 +50,6 @@ In mobile view a `.stepbar-header` is needed before the list, Orange brand label
                 <span class="step-title">Aspernatur</span>
             </a>
         </li>
-    </ul>
-</div>
+    </ol>
+</nav>
 {% endexample %}
