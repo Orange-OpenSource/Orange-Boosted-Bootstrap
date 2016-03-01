@@ -381,6 +381,28 @@ module.exports = function (grunt) {
 
     /* boosted mod */
     replace: {
+      bootstrapfiles: {
+        src: ['_gh_pages/{,**/}*.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'bootstrap.min.css',
+            to: 'boosted.min.css'
+          },
+          {
+            from: 'bootstrap.css',
+            to: 'boosted.css'
+          },
+          {
+            from: 'bootstrap.min.js',
+            to: 'boosted.min.js'
+          },
+          {
+            from: 'bootstrap.js',
+            to: 'boosted.js'
+          }
+        ]
+      },
       paths1: {
         src: ['_gh_pages/*.html'],
         overwrite: true,
@@ -629,8 +651,7 @@ module.exports = function (grunt) {
   grunt.registerTask('lint-docs-css', ['scsslint:docs']);
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
-  grunt.registerTask('replace-paths', ['replace:paths1', 'replace:paths2', 'replace:paths3']);
-  grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace-paths']);
+  grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace']);
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github']);
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
