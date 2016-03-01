@@ -116,6 +116,15 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         <td>1300px</td>
       </tr>
       <tr>
+        <th class="text-nowrap" scope="row">Column width</th>
+        <td>16px</td>
+        <td>29px</td>
+        <td>42px</td>
+        <td>60px</td>
+        <td>80px</td>
+        <td>90px</td>
+      </tr>
+      <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
         <td colspan="2">10px (5px on each side of a column)</td>
         <td colspan="4">20px (10px on each side of a column)</td>

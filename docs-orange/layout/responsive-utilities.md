@@ -64,7 +64,7 @@ Try to use these on a limited basis and avoid creating entirely different versio
             {% assign number = forloop.index %}
             {% capture bpsize %}{{ site.grid | size }}{% endcapture %}
             <tr>
-              <th scope="row"><code>number{{ number }}.hidden-{{ breakpoints[0] }}-down</code></th>
+              <th scope="row"><code>.hidden-{{ breakpoints[0] }}-down</code></th>
               {% for i in (1..bpsize) %}
                 {% if number < i %}
                   <td class="is-visible">Visible</td>
