@@ -103,7 +103,7 @@ We occasionally use media queries that go in the other direction (the given scre
 @media (max-width: 1219px) { ... }
 
 // Extra large devices (desktops, less than 1380px)
-@media (max-width: 1279px) { ... }
+@media (max-width: 1379px) { ... }
 
 // Extra extra large devices (large desktops)
 // No media query since the extra-extra-large breakpoint has no upper bound on its width
