@@ -74,18 +74,18 @@ $font-family-serif: "HelvNeue55", Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 
-$font-size-root: 62.5%;
-$font-size-base: 1.6rem;
+//$font-size-root: 62.5%;
+//$font-size-base: 1rem;
 
 // For REM size
-$font-size-lg: 1.8rem;
-$font-size-sm: 1.4rem;
-$font-size-h1: 5rem;
-$font-size-h2: 4rem;
-$font-size-h3: 3.4rem;
-$font-size-h4: 3rem;
-$font-size-h5: 2.4rem;
-$font-size-h6: 2rem;
+$font-size-lg: 1.125rem; // 18px
+$font-size-sm: .875rem; // 14px
+$font-size-h1: 3.125rem; // 50px
+$font-size-h2: 2.5rem; // 40px
+$font-size-h3: 2.125rem; // 34px
+$font-size-h4: 1.875rem; // 30px
+$font-size-h5: 1.5rem; // 24px
+$font-size-h6: 1.25rem; // 20px
 
 // Unit-less `line-height` for use in components like buttons.
 $line-height-base: (20 / 16); //line spacing 20px
@@ -104,19 +104,19 @@ $headings-color: $brand-orange-black;
 // Load fonts from this directory.
 $icon-font-path:          "../fonts/";
 // for REM size
-$icon-font-weight:        3rem;
+$icon-font-weight:        1.875rem;
 
 
 // Components
 //
 // Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 // for REM size
-$padding-base-vertical: 1rem;//10px;
-$padding-base-horizontal: 2rem;//20px;
-$padding-large-vertical: 1.2rem;//12px;
-$padding-large-horizontal: 2rem;//20px;
-$padding-small-vertical: .5rem;//5px;
-$padding-small-horizontal: 1rem;//10px;
+$padding-base-vertical: .625rem;//10px;
+$padding-base-horizontal: 1.25rem;//20px;
+$padding-large-vertical: .75rem;//12px;
+$padding-large-horizontal: 1.25rem;//20px;
+$padding-small-vertical: .3125rem;//5px;
+$padding-small-horizontal: .625rem;//10px;
 
 $line-height-lg:  (20 / 18);
 $line-height-sm:  (20 / 14);
@@ -141,8 +141,8 @@ $component-active-bg:       $brand-orange-black;
 
 // Padding for `<th>`s and `<td>`s.
 // for REM size
-$table-cell-padding: .9rem;//9px;
-$table-sm-cell-padding:  .5rem;//5px;
+$table-cell-padding: .5625rem;//9px;
+$table-sm-cell-padding:  .3125rem;//5px;
 
 // Default background color used for all tables.
 $table-bg: $brand-orange-white;
@@ -194,10 +194,10 @@ $btn-padding-x: $padding-base-horizontal;
 $btn-padding-y: $padding-base-vertical;
 
 $btn-padding-x-sm: $padding-small-horizontal;
-$btn-padding-y-sm: .6rem;
+$btn-padding-y-sm: .375rem;
 
 $btn-padding-x-lg:  $padding-large-horizontal;
-$btn-padding-y-lg:  1.4rem;
+$btn-padding-y-lg:  .875rem;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:         $border-radius;
@@ -235,14 +235,14 @@ $input-height-lg: $input-height-large;
 $input-height-small:             ((floor($font-size-sm * $line-height-sm * 10) + ($padding-small-vertical * 20) + 4) / 10);
 $input-height-sm: $input-height-small;
 
-$input-padding-x: 2rem;
-$input-padding-y: .8rem;   //40px height
+$input-padding-x: 1.25rem;
+$input-padding-y: .5rem;   //40px height
 
-$input-padding-x-sm: 1rem;
-$input-padding-y-sm: .3rem;    //30px height
+$input-padding-x-sm: .625rem;
+$input-padding-y-sm: .1875rem;    //30px height
 
-$input-padding-x-lg: 2rem;
-$input-padding-y-lg: 1.3rem;    //50px height
+$input-padding-x-lg: 1.25rem;
+$input-padding-y-lg: .8125rem;    //50px height
 
 // `.form-group` margin
 $form-group-margin-bottom: $font-size-base;
@@ -306,7 +306,7 @@ $screen-sm-max:              ($screen-md-min - 1);
 $grid-columns:              12;
 // Padding between columns. Gets divided in half for the left and right.
 // For REM size
-$grid-gutter-width: 2rem;
+$grid-gutter-width: 1.25rem;
 // Navbar collapse
 // Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min;
@@ -320,13 +320,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 // Basics of a navbar
 //$navbar-height - $element-height
 // for REM size
-$navbar-height:                    10rem;
-$navbar-font-size:                 1.8rem;
+$navbar-height:                    6.25rem;
+$navbar-font-size:                 1.125rem;
 $navbar-border-radius:             $border-radius;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
-$navbar-toggle-vertical-margin:    4.6rem;
+$navbar-toggle-vertical-margin:    2.875rem;
 // For REM size
-$navbar-padding-vertical:          1rem;//(($navbar-height - $line-height-computed) / 2); //1.5 rem
+$navbar-padding-vertical:          .625rem;//(($navbar-height - $line-height-computed) / 2); //1.5 rem
 
 // Navbar
 
@@ -354,7 +354,7 @@ $megamenu-position:                 fixed;
 
 //= Shared nav styles
 // for REM size
-$nav-link-padding: 1rem 1rem;
+$nav-link-padding: .625rem .625rem;
 $nav-link-hover-bg: $brand-orange-black;//$gray-lighter;
 $nav-disabled-link-color: $gray-before-light;
 $nav-disabled-link-hover-color: $nav-disabled-link-color;
@@ -411,7 +411,7 @@ $o-wizard-step-bar-arrow-width-small: (($line-height-computed / 2) + $padding-ba
 $o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + .1);
 $o-wizard-step-bar-arrow-outer-width:           ($o-wizard-step-bar-arrow-width);
 
-$o-stepbar-height: 4rem;
+$o-stepbar-height: 2.5rem;
 $o-stepbar-arrow-ratio: 3 / 8;
 
 // Pagination
@@ -434,16 +434,16 @@ $pagination-disabled-color: $gray-before-light;
 $pagination-disabled-bg: $brand-orange-white;
 $pagination-disabled-border: $brand-orange-black;
 
-$pagination-padding-x:                2rem;
-$pagination-padding-y:                1rem;
-$pagination-padding-x-sm:             1rem;
-$pagination-padding-y-sm:             .5rem;
-$pagination-padding-x-lg:             2rem;
-$pagination-padding-y-lg:             1.2rem;
+$pagination-padding-x:                1.25rem;
+$pagination-padding-y:                .625rem;
+$pagination-padding-x-sm:             .625rem;
+$pagination-padding-y-sm:             .3125rem;
+$pagination-padding-x-lg:             1.25rem;
+$pagination-padding-y-lg:             .75rem;
 
-$pagination-width: 4rem;
-$pagination-width-lg: 6rem;
-$pagination-width-sm: 3rem;
+$pagination-width: 2.5rem;
+$pagination-width-lg: 3.75rem;
+$pagination-width-sm: 1.875rem;
 
 // Jumbotron
 //
@@ -644,9 +644,9 @@ $list-group-link-heading-color: $brand-orange-black;
 //
 //
 
-$breadcrumb-padding-y:   .8rem;
-$breadcrumb-padding-x: 1.5rem;
-$breadcrumb-item-padding: .8rem;
+$breadcrumb-padding-y:   .5rem;
+$breadcrumb-padding-x: .9375rem;
+$breadcrumb-item-padding: .5rem;
 
 $breadcrumb-bg:                 $brand-orange-white;
 $breadcrumb-divider-color:      $brand-orange-black;
@@ -661,7 +661,7 @@ $breadcrumb-divider: ">";
 $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
 $carousel-control-color:                      $brand-orange-black;
-$carousel-control-width:                      3rem;
+$carousel-control-width:                      1.875rem;
 $carousel-control-opacity:                    .5;
 $carousel-control-font-size:                  $font-size-lg;
 
@@ -752,7 +752,7 @@ $hr-border-color:             $gray-lighter;
 @mixin navbar-toggle-vertical-align($element-height) {
   @if not(ispixel($element-height)) {
     margin-top: (($navbar-height - $element-height));
-    margin-bottom: 1rem;
+    margin-bottom: .625rem;
   }
 }
 

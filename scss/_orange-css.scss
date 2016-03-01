@@ -85,15 +85,16 @@ a:focus {
 // --------------------------------------------------
 
 .carousel {
-  margin-bottom: 3rem;
+  margin-bottom: 1.875rem;
 }
 
-.carousel .carousel-control {
+.carousel-control {
   top: auto;
-  bottom: calc(50% - 3rem);
-  width: 6rem;
-  height: 6rem;
-  padding-top: 1.5rem;
+  bottom: calc(50% - 1.875rem);
+  width: 3.75rem;
+  height: 3.75rem;
+  padding-top: .9375rem;
+  text-decoration: none;
   text-shadow: none;
   background-color: $brand-orange-white;
   opacity: .8;
@@ -106,27 +107,27 @@ a:focus {
 
     &:hover,
     &:focus {
-      width: 12rem;
+      width: 7.5rem;
     }
   }
 
   span[aria-hidden="true"] {
-    font-size: 3rem;
+    font-size: 1.875rem;
     color: $brand-orange;
   }
 }
 
 .carousel-indicators {
-  bottom: -3rem;
+  bottom: -1.875rem;
 
   &:hover {
     cursor: default;
   }
 
   li {
-    width: 1.6rem;
-    height: .4rem;
-    margin: 0 .4rem;
+    width: 1rem;
+    height: .25rem;
+    margin: 0 .25rem;
     background-color: $gray-light-plus;
     border: 0;
     border-radius: 0;
@@ -137,9 +138,9 @@ a:focus {
     }
 
     &.active {
-      width: 1.6rem;
-      height: .4rem;
-      margin: 0 .4rem;
+      width: 1rem;
+      height: .25rem;
+      margin: 0 .25rem;
       background-color: $brand-orange;
     }
   }
@@ -187,15 +188,15 @@ a:focus {
   top: 0;
   left: 0;
   max-width: 15%;
-  margin: ($grid-gutter-width + 1rem);
+  margin: ($grid-gutter-width + .625rem);
 }
 
 .hero-container .caption {
-  margin: 5rem ($grid-gutter-width + 1rem);
+  margin: 3.125rem ($grid-gutter-width + .625rem);
 }
 
 .hero-container .category {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: $brand-orange;
 }
 
@@ -236,10 +237,11 @@ a:focus {
         // Remove border top and put border-botom
         border-top: 0;
         border-bottom: 1px solid $table-border-color;
+        font-size: $font-size-sm;
       }
-
-      > th {
-        font-size: $font-size-h5;
+      & [class^="icon-"], 
+      & [class*=" icon-"] {
+        font-size: $icon-font-weight
       }
     }
   }
