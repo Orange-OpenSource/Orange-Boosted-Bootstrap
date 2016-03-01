@@ -60,7 +60,7 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th></th>
+        <th>Viewport breakpoints</th>
         <th class="text-xs-center">
           Extra small<br>
           <small>&lt;480px</small>
@@ -89,9 +89,22 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
     </thead>
     <tbody>
       <tr>
-        <th class="text-nowrap" scope="row">Grid behavior</th>
-        <td>Horizontal at all times</td>
-        <td colspan="5">Collapsed to start, horizontal above breakpoints</td>
+        <th class="text-nowrap" scope="row">Targetted resolution</th>
+        <td>320px</td>
+        <td>480px</td>
+        <td>768px</td>
+        <td>1024px</td>
+        <td>1280px</td>
+        <td>1440px</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Device</th>
+        <td>Mobile portrait</td>
+        <td>Mobile landscape</td>
+        <td>Tablet portrait</td>
+        <td>Small desktop / Tablet landscape</td>
+        <td>Medium desktop</td>
+        <td>Large desktop</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Container width</th>
@@ -103,6 +116,15 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         <td>1300px</td>
       </tr>
       <tr>
+        <th class="text-nowrap" scope="row">Gutter width</th>
+        <td colspan="2">10px (5px on each side of a column)</td>
+        <td colspan="4">20px (10px on each side of a column)</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row"># of columns</th>
+        <td colspan="6">12</td>
+      </tr>
+      <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
         <td><code>.col-xs-</code></td>
         <td><code>.col-sm-</code></td>
@@ -110,15 +132,6 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         <td><code>.col-lg-</code></td>
         <td><code>.col-xl-</code></td>
         <td><code>.col-xxl-</code></td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row"># of columns</th>
-        <td colspan="6">12</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="2">10px (5px on each side of a column)</td>
-        <td colspan="4">20px (10px on each side of a column)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Nestable</th>
