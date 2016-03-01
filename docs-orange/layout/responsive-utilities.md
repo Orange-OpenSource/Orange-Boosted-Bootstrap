@@ -271,7 +271,11 @@ Green checkmarks indicate the element **is visible** in your current viewport.
     <span class="hidden-lg-only not-visible">Your viewport is NOT exactly large</span>
   </div>
   <div class="col-xs-6 col-sm-3">
-    <span class="hidden-lg-down visible">&#10004; Your viewport is exactly extra large</span>
+    <span class="hidden-lg-down hidden-xxl-up visible">&#10004; Your viewport is exactly extra large</span>
     <span class="hidden-xl-only not-visible">Your viewport is NOT exactly extra large</span>
+  </div>
+  <div class="col-xs-6 col-sm-3">
+    <span class="hidden-xl-down visible">&#10004; Your viewport is exactly extra extra large</span>
+    <span class="hidden-xxl-only not-visible">Your viewport is NOT exactly extra extra large</span>
   </div>
 </div>
