@@ -182,6 +182,8 @@
       }
     }
 
+    .open > .nav-link,
+    .active > .nav-link,
     .nav-link.open,
     .nav-link.active {
       @include plain-hover-focus {
@@ -214,6 +216,8 @@
       }
     }
 
+    .open > .nav-link,
+    .active > .nav-link,
     .nav-link.open,
     .nav-link.active {
       @include plain-hover-focus {

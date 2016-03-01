@@ -97,13 +97,13 @@
   .local,
   .sublocal {
     @include clearfix();
-    padding: 0 1rem;
+    padding: .625rem;
     border-bottom: 1px solid $gray-light;
 
     .navbar-nav {
       @include arrow-top($nav-local-arrow-outer-width, 0, $nav-local-arrow-width, $nav-local-arrow-outer-color, $nav-local-arrow-color, $nav-local-arrow-color);
       .nav-item + .nav-item {
-        margin-left: 1.5rem;
+        margin-left: .9375rem;
       }
 
       > li {
@@ -117,7 +117,7 @@
     .nav-item .nav-link {
       display: inline-block;
       height: 2.2em;
-      padding: 1rem 0;
+      padding: .625rem 0;
       margin-top: 0;
       color: $brand-orange-black;
 

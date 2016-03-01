@@ -130,7 +130,7 @@
   width:  100%;
 }
 .mega-menu [class^="icon-"], .mega-menu [class*=" icon-"] {
-  font-size: 3rem;
+  font-size: 1.875rem;
 }
 
 .mega-menu.navbar {
@@ -194,7 +194,7 @@
     min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
-    font-size: 1.4rem;
+    font-size: .875rem;
     text-align: left;
     list-style: none;
     background-color: $brand-orange-white;
@@ -291,8 +291,8 @@
     height: 0;
   }
   .f15 {
-    font-size:  1.5rem;
-    line-height:  1.7rem;
+    font-size:  .9375rem;
+    line-height:  1.0625rem;
     letter-spacing:  -.015em;
   }
 
@@ -438,9 +438,9 @@
 
   .megamenu-dropdown-toggle {
     display: block;
-    padding-top: .425rem;
-    padding-bottom: 1rem;
-    margin-top:  3.8rem;
+    padding-top: .265625rem;
+    padding-bottom: .625rem;
+    margin-top:  2.375rem;
   }
 
   .nav > li > a.active {
@@ -450,7 +450,7 @@
   .navbar-brand-small img {
     width:  25px;
     margin: 0 10px;
-    font-size:  .7rem;
+    font-size:  .4375rem;
     font-weight:  400;
     color:  $brand-orange-white;
   }
@@ -547,7 +547,7 @@
   }
 
   .navbar .topmenulang a {
-    margin-top: .8rem;
+    margin-top: .5rem;
   }
 
 
@@ -639,12 +639,12 @@
       display:  none;
     }
     .container h2 {
-      font-size:  1.9rem;
+      font-size:  1.1875rem;
     }
 
     .container h3,
     .container li > a {
-      font-size:  1.4rem;
+      font-size:  .875rem;
     }
 
     .container .nav-menu li.nav-item,
@@ -691,7 +691,7 @@
     }
 
     .nav-item .megamenu-dropdown-toggle {
-      margin-top:  .8rem;
+      margin-top:  .5rem;
     }
 
     .searchpanel {
@@ -703,7 +703,7 @@
     }
 
     .nav-item {
-      padding-left:  1rem;
+      padding-left:  .625rem;
     }
 
     .nav-menu .dropdown-megamenu {
@@ -799,7 +799,7 @@
     }
 
     .back-menu1title {
-      font-size:  1.9rem;
+      font-size:  1.1875rem;
       color:  $brand-orange-white;
     }
 
@@ -855,7 +855,7 @@
     }
 
     .navbar-smallsearchbar .btn {
-      padding:  .27rem 2rem;
+      padding:  .16875rem 1.25rem;
       margin-left:  5px;
     }
 

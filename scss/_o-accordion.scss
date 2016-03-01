@@ -32,16 +32,16 @@
 }
 
 .o-accordion .panel-default > .panel-heading {
-  padding: 1rem 1.5rem;
+  padding: .625rem .9375rem;
 
   + .panel-collapse .panel-body {
-    padding: 1.5rem;
+    padding: .9375rem;
     background-color: $brand-orange-white;
     border-top: 1px solid $brand-orange-black;
   }
 
   .panel-title {
-    font-size: 1.6rem;
+    font-size: 1rem;
 
     &.panel-chevron-open {
       padding-left: 19px;

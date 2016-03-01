@@ -14,7 +14,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
   &::after {
     position: absolute;
     top: 0;
-    right: -1.5rem;
+    right: -.9375rem;
     z-index: 500;
     display: block;
     width: calc(#{$o-stepbar-height} * #{$o-stepbar-arrow-ratio});
@@ -107,7 +107,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
       }
 
       width: $pagination-width;
-      margin-right: .2rem;
+      margin-right: .125rem;
       line-height: $font-size-base;
       text-align: center;
     }
@@ -115,7 +115,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
 
   @include media-breakpoint-down(sm) {
     .stepbar-header {
-      margin-right: 1rem;
+      margin-right: .625rem;
       font-weight: $brand-font-weight-bold;
       vertical-align: middle;
     }
