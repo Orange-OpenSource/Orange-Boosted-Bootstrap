@@ -22,7 +22,7 @@ At a high level, here's how the grid system works:
 - Column classes indicate the number of columns you'd like to use out of the possible 12 per row. So if you want three equal-width columns, you'd use `.col-sm-4`.
 - Column `width`s are set in percentages, so they're always fluid and sized relative to their parent element.
 - Columns have horizontal `padding` to create the gutters between individual columns.
-- There are five grid tiers, one for each [responsive breakpoint]({{ site.baseurl }}/layout/overview/#responsive-breakpoints): extra small, small, medium, large, and extra large.
+- There are six grid tiers, one for each [responsive breakpoint]({{ site.baseurl }}/layout/overview/#responsive-breakpoints): extra small, small, medium, large, extra large and extra extra large.
 - Grid tiers are based on minimum widths, meaning they apply to that one tier and all those above it (e.g., `.col-sm-4` applies to small, medium, large, and extra large devices).
 - You can use predefined grid classes or Sass mixins for more semantic markup.
 
@@ -48,7 +48,7 @@ If you're using Bootstrap's compiled CSS, this the example you'll want to start 
 </div>
 {% endexample %}
 
-The above example creates three equal-width columns on small, medium, large, and extra large devices using our [predefined grid classes](#predefined-classes). Those columns are centered in the page with the parent `.container`.
+The above example creates three equal-width columns on small, medium, large, extra large and extra extra large devices using our [predefined grid classes](#predefined-classes). Those columns are centered in the page with the parent `.container`.
 
 ## Grid options
 
@@ -63,11 +63,11 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         <th></th>
         <th class="text-xs-center">
           Extra small<br>
-          <small>&lt;544px</small>
+          <small>&lt;480px</small>
         </th>
         <th class="text-xs-center">
           Small<br>
-          <small>&ge;544px</small>
+          <small>&ge;480px</small>
         </th>
         <th class="text-xs-center">
           Medium<br>
@@ -75,11 +75,15 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         </th>
         <th class="text-xs-center">
           Large<br>
-          <small>&ge;992px</small>
+          <small>&ge;960px</small>
         </th>
         <th class="text-xs-center">
           Extra large<br>
-          <small>&ge;1200px</small>
+          <small>&ge;1220px</small>
+        </th>
+        <th class="text-xs-center">
+          Extra extra large<br>
+          <small>&ge;1380px</small>
         </th>
       </tr>
     </thead>
@@ -87,15 +91,16 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
       <tr>
         <th class="text-nowrap" scope="row">Grid behavior</th>
         <td>Horizontal at all times</td>
-        <td colspan="4">Collapsed to start, horizontal above breakpoints</td>
+        <td colspan="5">Collapsed to start, horizontal above breakpoints</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Container width</th>
-        <td>None (auto)</td>
-        <td>576px</td>
-        <td>720px</td>
+        <td>302px</td>
+        <td>458px</td>
+        <td>724px</td>
         <td>940px</td>
-        <td>1140px</td>
+        <td>1180px</td>
+        <td>1300px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Class prefix</th>
@@ -104,26 +109,28 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         <td><code>.col-md-</code></td>
         <td><code>.col-lg-</code></td>
         <td><code>.col-xl-</code></td>
+        <td><code>.col-xxl-</code></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row"># of columns</th>
-        <td colspan="5">12</td>
+        <td colspan="6">12</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="5">1.875rem / 30px (15px on each side of a column)</td>
+        <td colspan="2">10px (5px on each side of a column)</td>
+        <td colspan="4">20px (10px on each side of a column)</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Nestable</th>
-        <td colspan="5">Yes</td>
+        <td colspan="6">Yes</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Offsets</th>
-        <td colspan="5">Yes</td>
+        <td colspan="6">Yes</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Column ordering</th>
-        <td colspan="5">Yes</td>
+        <td colspan="6">Yes</td>
       </tr>
     </tbody>
   </table>
@@ -139,26 +146,35 @@ Variables and maps determine the number of columns, the gutter width, and the me
 
 {% highlight scss %}
 $grid-columns:      12;
-$grid-gutter-width: 15px;
+$grid-gutter-width: 10px;
 
 $grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
   // Small screen / phone
-  sm: 544px,
+  sm: 480px,
   // Medium screen / tablet
   md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
+  // Large screen / desktop (target 1024 screen resolutions)
+  lg: 960px,
+  // Extra large screen / wide desktop (target 1280 screen resolutions)
+  xl: 1220px,
+  // Extra large screen / wide desktop (target 1440 screen resolutions)
+  xxl: 1380px
 );
 
 $container-max-widths: (
-  sm: 576px,
-  md: 720px,
+  xs: 302px,
+  sm: 458px,
+  md: 724px,
   lg: 940px,
-  xl: 1140px
+  xl: 1180px,
+  xxl: 1300px
+);
+
+$cols-gutter-widths: (
+  xs: 1rem,
+  sm: 1rem
 );
 {% endhighlight %}
 

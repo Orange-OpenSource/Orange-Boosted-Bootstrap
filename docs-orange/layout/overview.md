@@ -51,53 +51,34 @@ Since Bootstrap is developed to be mobile first, we use a handful of [media quer
 Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 {% highlight scss %}
-  {% comment %} 
-    Boosted mod
-  {% endcomment %}
-  {% if site.grid %}
-  {% for breakpoints in site.grid %} 
-  {% if forloop.index == 1 %}
-// Extra small devices (portrait phones, less than {{ breakpoints[1].breakpoint }}px)      
+// Extra small devices (portrait phones, less than 480px)
 // No media query since this is the default in Bootstrap
-  {% else %}
-//{{ breakpoints[1].desc }} {{ breakpoints[1].subdesc }}
-@media (min-width: {{ breakpoints[1].breakpoint }} px) { ... }
-  {% endif %}
-  {% endfor %}
-  {% else %}
-// Extra small devices (portrait phones, less than 544px)
-// No media query since this is the default in Bootstrap
-// Small devices (landscape phones, 544px and up)
-@media (min-width: 544px) { ... }
+
+// Small devices (landscape phones, 480px and up)
+@media (min-width: 480px) { ... }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { ... }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+// Large devices (desktops, 960px and up)
+@media (min-width: 960px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-  {% endif %}
+// Extra large devices (large desktops, 1220px and up)
+@media (min-width: 1220px) { ... }
+
+// Extra extra large devices (large desktops, 1380px and up)
+@media (min-width: 1380px) { ... }
 {% endhighlight %}
 
 Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
 
 {% highlight scss %}
-{% comment %} 
-  Boosted mod
-{% endcomment %}
-{% if site.grid %}
-{% for breakpoints in site.grid %} 
-@include media-breakpoint-up({{ breakpoints[0] }}) { ... }
-{% endfor %}
-  {% else %}
 @include media-breakpoint-up(xs) { ... }
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
-  {% endif %}
+@include media-breakpoint-up(xxl) { ... }
 // Example usage:
 @include media-breakpoint-up(sm) {
   .some-class {
@@ -109,20 +90,23 @@ Since we write our source CSS in Sass, all our media queries are available via S
 We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
 
 {% highlight scss %}
-// Extra small devices (portrait phones, less than 544px)
-@media (max-width: 543px) { ... }
+// Extra small devices (portrait phones, less than 480px)
+@media (max-width: 479px) { ... }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) { ... }
 
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991px) { ... }
+// Medium devices (tablets, less than 960px)
+@media (max-width: 959px) { ... }
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199px) { ... }
+// Large devices (desktops, less than 1220px)
+@media (max-width: 1219px) { ... }
 
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
+// Extra large devices (desktops, less than 1380px)
+@media (max-width: 1279px) { ... }
+
+// Extra extra large devices (large desktops)
+// No media query since the extra-extra-large breakpoint has no upper bound on its width
 {% endhighlight %}
 
 Once again, these media queries are also available via Sass mixins:
@@ -132,4 +116,5 @@ Once again, these media queries are also available via Sass mixins:
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
+@include media-breakpoint-down(xl) { ... }
 {% endhighlight %}

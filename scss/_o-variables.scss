@@ -332,7 +332,7 @@ $grid-breakpoints: (
   // Extra large screen / wide desktop (target 1280 screen resolutions)
   xl: 1220px,
   // Extra large screen / wide desktop (target 1440 screen resolutions)
-  xlg: 1380px
+  xxl: 1380px
 );
 
 
@@ -346,7 +346,7 @@ $container-max-widths: (
   md: 724px,
   lg: 940px,
   xl: 1180px,
-  xlg: 1300px
+  xxl: 1300px
 );
 
 $container-gutter-widths: (
@@ -354,7 +354,7 @@ $container-gutter-widths: (
   xs: 1.8rem,
   sm: 2.2rem,
   md: 4.4rem,
-  xlg: 4rem
+  xxl: 4rem
   */
 );
 $cols-gutter-widths: (
