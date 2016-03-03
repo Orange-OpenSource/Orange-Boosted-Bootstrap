@@ -10,13 +10,25 @@
   @if not $enable-flex {
     @include clearfix();
   }
+  // boosted mod
+  @each $breakpoint, $container-margin in $container-fluid-margin-widths {
+    @include media-breakpoint-up($breakpoint) {
+      margin-left: $container-margin;
+      margin-right: $container-margin;
+    }
+  }  
+  // end mod
 }
 
 
 // For each breakpoint, define the maximum width of the container in a media query
 @mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
   @each $breakpoint, $container-max-width in $max-widths {
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {      
+      // boosted mod
+      margin-left: auto;
+      margin-right: auto;
+      // end mod
       max-width: $container-max-width;
     }
   }

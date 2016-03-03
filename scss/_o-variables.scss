@@ -328,11 +328,11 @@ $grid-breakpoints: (
   // Medium screen / tablet
   md: 768px,
   // Large screen / desktop (target 1024 screen resolutions)
-  lg: 960px,
+  lg: 980px,
   // Extra large screen / wide desktop (target 1280 screen resolutions)
   xl: 1220px,
   // Extra large screen / wide desktop (target 1440 screen resolutions)
-  xxl: 1380px
+  xxl: 1340px
 );
 
 
@@ -341,25 +341,25 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  xs: 302px,
-  sm: 458px,
-  md: 724px,
-  lg: 940px,
-  xl: 1180px,
-  xxl: 1300px
+  xs: 312px,
+  sm: 468px,
+  md: 744px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1320px
 );
 
-$container-gutter-widths: (
-  /*
-  xs: 1.8rem,
-  sm: 2.2rem,
-  md: 4.4rem,
-  xxl: 4rem
-  */
+$container-fluid-margin-widths: (  
+  xs: 1.25%,
+  sm: 1.25%,
+  md: 1.5625%,
+  lg: 3.125%,
+  xl: 3.125%,
+  xxl: 4.16667%
 );
 $cols-gutter-widths: (
-  xs: 1rem,
-  sm: 1rem
+  xs: .625rem,
+  sm: .625rem
 );
 
 // Navbar

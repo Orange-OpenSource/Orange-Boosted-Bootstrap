@@ -56,6 +56,8 @@ While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for
 
 See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
 
+We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution. 
+
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
@@ -75,7 +77,7 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         </th>
         <th class="text-xs-center">
           Large<br>
-          <small>&ge;960px</small>
+          <small>&ge;980px</small>
         </th>
         <th class="text-xs-center">
           Extra large<br>
@@ -83,7 +85,7 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         </th>
         <th class="text-xs-center">
           Extra extra large<br>
-          <small>&ge;1380px</small>
+          <small>&ge;1340px</small>
         </th>
       </tr>
     </thead>
@@ -107,13 +109,22 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
         <td>Large desktop</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Container width</th>
+        <th class="text-nowrap" scope="row">Container max-width</th>
         <td>302px</td>
         <td>458px</td>
         <td>724px</td>
-        <td>940px</td>
-        <td>1180px</td>
-        <td>1300px</td>
+        <td>960px</td>
+        <td>1200px</td>
+        <td>1320px</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Container-fluid margin</th>
+        <td>1.25%</td>
+        <td>1.25%</td>
+        <td>1.5625%</td>
+        <td>3.125%</td>
+        <td>3.125%</td>
+        <td>4.16667%</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Column width</th>
@@ -178,25 +189,33 @@ $grid-breakpoints: (
   // Medium screen / tablet
   md: 768px,
   // Large screen / desktop (target 1024 screen resolutions)
-  lg: 960px,
+  lg: 980px,
   // Extra large screen / wide desktop (target 1280 screen resolutions)
   xl: 1220px,
   // Extra large screen / wide desktop (target 1440 screen resolutions)
-  xxl: 1380px
+  xxl: 1340px
 );
 
 $container-max-widths: (
-  xs: 302px,
-  sm: 458px,
-  md: 724px,
-  lg: 940px,
-  xl: 1180px,
-  xxl: 1300px
+  xs: 312px,
+  sm: 468px,
+  md: 744px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1320px
 );
 
+$container-fluid-margin-widths: (  
+  xs: 1.25%,
+  sm: 1.25%,
+  md: 1.5625%,
+  lg: 3.125%,
+  xl: 3.125%,
+  xxl: 4.16667%
+);
 $cols-gutter-widths: (
-  xs: 1rem,
-  sm: 1rem
+  xs: .625rem,
+  sm: .625rem
 );
 {% endhighlight %}
 

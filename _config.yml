@@ -47,8 +47,8 @@ grid:
     desc: Medium devices
     subdesc: Tablet (&ge;768px - &lt;960px)
   lg:
-    breakpoint: 960
-    width: 940 
+    breakpoint: 980
+    width: 960 
     gutter: 20
     desc: Large devices
     subdesc: Desktop (&ge;960px - &lt;1120px) (target 1024 screen resolutions)
@@ -59,7 +59,7 @@ grid:
     desc: Extra large devices
     subdesc: Desktop (&ge;1220px - &lt;1380px) (target 1280 screen resolutions)
   xxl:
-    breakpoint: 1380
+    breakpoint: 1340
     width: 1300 
     gutter: 20
     desc: Extra extra large devices
