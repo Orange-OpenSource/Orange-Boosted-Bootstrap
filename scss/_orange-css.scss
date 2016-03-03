@@ -235,12 +235,12 @@ a:focus {
       > th,
       > td {
         // Remove border top and put border-botom
+        font-size: $font-size-sm;
         border-top: 0;
         border-bottom: 1px solid $table-border-color;
-        font-size: $font-size-sm;
       }
-      & [class^="icon-"], 
-      & [class*=" icon-"] {
+      [class^="icon-"],
+      [class*=" icon-"] {
         font-size: ($font-size-sm * $line-height-base);
       }
     }
