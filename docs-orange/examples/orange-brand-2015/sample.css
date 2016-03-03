@@ -17,21 +17,21 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6ffffff, endColorstr=#e6ffffff);
 }
 .discovery-module-one-pop-out {
-    margin: 2rem;
+    margin: 1.25rem;
     position: relative;
 }
 
 .discovery-module-one-pop-out .discovery-header-button,
   .discovery-module-carousel-pop-out .discovery-header-button,
   .popular-services .popular-services-header-button{
-    margin-top: 2rem;
+    margin-top: 1.25rem;
 }
 
 .discovery-module-one-pop-out .discovery-caption, .discovery-module-carousel-pop-out .discovery-caption {
-    margin-top: 5rem;
+    margin-top: 3.125rem;
 }
 .popular-services {
-    margin: 2rem;
+    margin: 1.25rem;
 }
 .popular-services-links{
     color: #F16E00;
@@ -39,7 +39,7 @@
     font-weight: bold;
 }
 .discovery-module-carousel-pop-out .carousel-inner .carousel-item{
-    padding: 0 3rem 2rem 3rem;
+    padding: 0 1.875rem 1.25rem 1.875rem;
 }
 .black-background {
     background-color: #000;
@@ -52,11 +52,11 @@
 }
 
 .brand-spacing {
-    margin-top: 3rem;
+    margin-top: 1.875rem;
 }
 
 .navbar-nav li > a[class^="icon-"], .navbar-nav li > a[class*=" icon-"] {
-    font-size: 3rem;
+    font-size: 1.875rem;
     line-height: 1;
 }
 

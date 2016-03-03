@@ -12,10 +12,10 @@
 .o-radio[type="radio"]:checked + label {
   position: relative; // permet de positionner les pseudo-éléments
   display: inline-block;
-  padding-left: ($input-height-base * .75); // fait un peu d"espace pour notre case à venir
+  padding-left: (($font-size-base * $line-height-base) + $input-padding-x); // fait un peu d"espace pour notre case à venir
   font-style: normal;
-  font-weight: normal;
-  line-height: $line-height-computed;
+  font-weight: bold;
+  line-height: $line-height-base;
   cursor: pointer;    // affiche un curseur adapté
   border: 1px dotted transparent;
 }
@@ -23,7 +23,7 @@
 // Align radio on the right*/
 .o-radio-right.o-radio[type="radio"]:not(:checked) + label,
 .o-radio-right.o-radio[type="radio"]:checked + label {
-  padding-right: ($input-height-base * .75); // fait un peu d"espace pour notre case à venir
+  padding-right: (($font-size-base * $line-height-base) + $input-padding-x); // fait un peu d"espace pour notre case à venir
   padding-left: 0;
 }
 
@@ -33,8 +33,8 @@
 .o-radio[type="radio"]:checked + label::before {
   position: absolute;
   left: 0;
-  width: ($input-height-base / 2);
-  height: ($input-height-base / 2); // dim. de la case
+  width: ($font-size-base * $line-height-base);
+  height: ($font-size-base * $line-height-base); // dim. de la case
   content: "";
   background-color: #fff;
   border: 3px solid $gray-light;
@@ -55,9 +55,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: ($input-height-base / 2);
-  height: ($input-height-base / 2); // dim. de la case
-  font-size: $font-size-base;
+  width: ($font-size-base * $line-height-base);
+  height: ($font-size-base * $line-height-base); // dim. de la case
+  font-size: ($font-size-base * $line-height-base);
   color: $brand-orange-white;
   text-align: center;
   content: "";
