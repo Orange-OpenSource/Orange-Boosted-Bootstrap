@@ -113,9 +113,9 @@ We have include a security margin for container fluid. The goal is to fit exactl
         <td>302px</td>
         <td>458px</td>
         <td>724px</td>
-        <td>960px</td>
-        <td>1200px</td>
-        <td>1320px</td>
+        <td>940px</td>
+        <td>1180px</td>
+        <td>1300px</td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Container-fluid margin</th>
