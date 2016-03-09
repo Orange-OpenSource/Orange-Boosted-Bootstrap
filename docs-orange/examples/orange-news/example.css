@@ -6,7 +6,7 @@
 }
 #header h1 {
   display: inline-block;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   color: #000;
   vertical-align: middle;
 }
@@ -134,8 +134,11 @@ footer a, footer span {
   color: inherit;
   text-align: center;
 }
-.mega-menu #id_for_cdu_link a {
-  color: #fff;
+#uci_link {
+  margin-top: 3.6875rem !important;
+  color: #fff !important;
+  float: left;
+  line-height: 1;
 }
 .mega-menu #id_for_cdu_link a:hover,.mega-menu #id_for_cdu_link a:focus {
   color: #f16e00;
