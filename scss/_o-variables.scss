@@ -18,7 +18,7 @@ $brand-pink: #ffb4e6;//black text
 // Gray and brand colors for use across Bootstrap.
 $gray-dark:              #333;
 $gray-darker:            $gray-dark;
-$gray:                   #444;
+// $gray:                   #444; // not in brand guidelines anymore
 $gray-before-light:      #666; // used for ghosted states on black BG
 $gray-before-light-plus: #999;
 $gray-light:             #ccc;
@@ -321,6 +321,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 //$navbar-height - $element-height
 // for REM size
 $navbar-height:                    6.25rem;
+$navbar-height-sm: 3.125rem;
 $navbar-font-size:                 1.125rem;
 $navbar-border-radius:             $border-radius;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
@@ -340,11 +341,14 @@ $navbar-light-hover-color:          $navbar-dark-hover-color;
 $navbar-light-active-color:         $navbar-dark-active-color;
 $navbar-light-disabled-color:       $navbar-dark-disabled-color;
 
+// supra navbar
+$navbar-supra-height: 2.5rem;
+
 // Mega-Menu
 //
 //
 
-$megamenu-border:                   1px solid #333;
+$megamenu-border:                   1px solid $gray-dark;
 $megamenu-hover-color:              $brand-primary;
 $megamenu-position:                 fixed;
 
