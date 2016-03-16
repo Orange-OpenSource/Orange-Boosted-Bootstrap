@@ -59,7 +59,7 @@ grid:
     desc: Extra large devices
     subdesc: Desktop (&ge;1220px - &lt;1380px) (target 1280 screen resolutions)
   xxl:
-    breakpoint: 1340
+    breakpoint: 1380
     width: 1300 
     gutter: 20
     desc: Extra extra large devices

@@ -85,7 +85,7 @@ We have include a security margin for container fluid. The goal is to fit exactl
         </th>
         <th class="text-xs-center">
           Extra extra large<br>
-          <small>&ge;1340px</small>
+          <small>&ge;1380px</small>
         </th>
       </tr>
     </thead>
@@ -193,7 +193,7 @@ $grid-breakpoints: (
   // Extra large screen / wide desktop (target 1280 screen resolutions)
   xl: 1220px,
   // Extra large screen / wide desktop (target 1440 screen resolutions)
-  xxl: 1340px
+  xxl: 1380px
 );
 
 $container-max-widths: (
@@ -214,8 +214,8 @@ $container-fluid-margin-widths: (
   xxl: 4.16667%
 );
 $cols-gutter-widths: (
-  xs: .625rem,
-  sm: .625rem
+  xs: 10px,
+  sm: 10px
 );
 {% endhighlight %}
 

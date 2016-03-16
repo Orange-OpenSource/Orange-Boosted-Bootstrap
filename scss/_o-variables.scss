@@ -307,7 +307,7 @@ $screen-sm-max:              ($screen-md-min - 1);
 $grid-columns:              12;
 // Padding between columns. Gets divided in half for the left and right.
 // For REM size
-$grid-gutter-width: 1.25rem;
+$grid-gutter-width: 20px;
 // Navbar collapse
 // Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min;
@@ -333,7 +333,7 @@ $grid-breakpoints: (
   // Extra large screen / wide desktop (target 1280 screen resolutions)
   xl: 1220px,
   // Extra large screen / wide desktop (target 1440 screen resolutions)
-  xxl: 1340px
+  xxl: 1380px
 );
 
 
@@ -359,8 +359,8 @@ $container-fluid-margin-widths: (
   xxl: 4.16667%
 );
 $cols-gutter-widths: (
-  xs: .625rem,
-  sm: .625rem
+  xs: 10px,
+  sm: 10px
 );
 
 // Navbar
