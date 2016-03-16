@@ -151,3 +151,9 @@ footer a, footer span {
     font-size: inherit;
   }
 }
+
+@media (max-width: 543px) {
+  #id_li_for_cdu {
+    display: none !important;
+  }
+}

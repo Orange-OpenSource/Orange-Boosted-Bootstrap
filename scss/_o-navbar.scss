@@ -116,24 +116,6 @@
 }
 
 @include media-breakpoint-down(xs) {
-//   .collapse {
-//     &.search-bar,
-//     &.mmega-menu {
-//       position: absolute;
-//       width: 100%;
-//       background-color: $brand-orange-black;
-//       top: $navbar-height-sm;
-//     }
-//
-//     &.search-bar {
-//       z-index: 100;
-//     }
-//
-//     &.mmega-menu {
-//       z-index: 150;
-//     }
-//   }
-
   .navbar {
     min-height: $navbar-height-sm;
 

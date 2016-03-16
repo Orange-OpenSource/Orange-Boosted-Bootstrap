@@ -1,174 +1,194 @@
-
 /**
  * --------------------------------------------------------------------------
- * Orange Boosted
- * Based on
- * Bootstrap (v4.0.0): alert.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Mega menu
  * --------------------------------------------------------------------------
  */
 
-const Megamenu = (($) => {
-  'use strict'
+const MegaMenu = (($) => {
 
-  let megamenuItems = '.mega-menu ul.navbar-nav > li > a'
 
-  function uuid() {
-    let id = `${Math.random().toString(16)}000000000`
-    return `ui-${id.substr(2, 8)}`
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  const NAME                = 'megamenu'
+  const VERSION             = '4.0.0-alpha.2'
+  const DATA_KEY            = 'bs.megamenu'
+  const JQUERY_NO_CONFLICT  = $.fn[NAME]
+
+  const Event = {
+    MEGAMENU_SHOWN : 'shown.bs.collapse',
+    MEGAMENU_SHOW : 'show.bs.collapse',
+    MEGAMENU_HIDE : 'hide.bs.collapse'
   }
 
-  // arrow keys management
-  $(document).on('keydown', megamenuItems, (e) => {
-    if (!/(37|38|39|40)/.test(e.which)) {
-      return
+  const ClassName = {
+    FOLDED : 'folded',
+    NAVBAR_TOGGLE_ICON_OPEN : 'icon-menu',
+    NAVBAR_TOGGLE_ICON_CLOSE : 'icon-delete'
+  }
+
+  const Dimension = {
+    MEDIA_BP_SM : 544,
+    NAVBAR_HEIGHT_PX : '50px'
+  }
+
+  const Selector = {
+    MEGAMENU    : '.mega-menu.panel',
+    MEGAMENU_TITLE_L1 : '.mega-menu h2',
+    MEGAMENU_TITLE_L2 : '.mega-menu h3',
+    MEGAMENU_FOOTER : '.mega-menu .footer',
+    NAVBAR : 'header .navbar-toggleable-xs.collapse',
+    NAVBAR_TOGGLER : 'header .navbar-toggler',
+    NAVBAR_ITEM : 'header .navbar-toggleable-xs.collapse .nav-item',
+    NAVBAR_ITEM_FOLDED : 'header .navbar-toggleable-xs.collapse .nav-item.folded a[data-toggle="collapse"]',
+    NAVBAR_ITEM_MEGAMENU_TOGGLE   : 'header .navbar-toggleable-xs.collapse .nav-item .nav-link[data-toggle="collapse"]'
+  }
+
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  class MegaMenu {
+
+    constructor(element) {
+      this._element = element
+    //   this._addAria(this._element);
     }
-    e.preventDefault()
-    e.stopPropagation()
 
-    let k = e.which || e.keyCode
-    let index = $(megamenuItems).index(e.target)
+    // getters
 
-    if ((k === 37 || k === 38) && index > 0) {
-      index--
-    }  // up & left
-    if ((k === 39 || k === 40) && index < $(megamenuItems).length - 1) {
-      index++
-    }  // down & right
+    static get VERSION() {
+      return VERSION
+    }
 
-    $(megamenuItems).eq(index).trigger('focus')
-  })
+    // public
 
-  // WAI-ARIA
-  $('.mega-menu .dropdown-toggle').each(function () {
-    let dropdownToggleId = uuid()
-    let dropdownMenu = $(this).next('ul.dropdown-menu')
-    let dropdownMenuId = uuid()
-    $(this).attr('id', dropdownToggleId)
-    $(dropdownMenu).attr('id', dropdownMenuId)
-    $(this).attr('aria-owns', dropdownMenuId)
-    $(this).attr('aria-controls', dropdownMenuId)
-    $(dropdownMenu).attr('aria-labelledby', dropdownToggleId)
-  })
+    // private
 
-  $('.mega-menu .megamenu-dropdown-toggle').on('click', function () {
-    $('.mega-menu .megamenu-dropdown-toggle').each(function () {
-      $(this).removeClass('active')
-    })
-    $(this).addClass('active')
-  })
+    // static
+    static _jQueryInterface(config) {
+      return this.each(function () {
+        let $this   = $(this)
+        let data    = $this.data(DATA_KEY)
+        let _config = $.extend(
+          {},
+        //   Default,
+          $this.data(),
+          typeof config === 'object' && config
+        )
 
-  // extending to level 2 in 320
-  $('.mega-menu h3').on('click', function () {
-    $('.megamenuclosetop').parent().find('.megamenuclosetop').addClass('active')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').addClass('active')
-    $(this).addClass('disabled')
-  })
+        if (!data) {
+          data = new MegaMenu(this, _config)
+          $this.data(DATA_KEY, data)
+        }
 
-  // extending to level 1 in 320
-  $('.nav-item .megamenu-dropdown-toggle').on('click', function () {
-    $('.closing-bare').css({ height : '0' })
-    $('.open').removeClass('open')
-    // standard
-    $(this).parent().addClass('open')
-    $(this).attr('aria-expanded', 'true')
-
-    // 320
-    if (document.body.clientWidth < 768) {
-      $(this).parent().parent().addClass('menu-level1')
-      let outerHeight = $(this).parent().find('ul[role=menu]').outerHeight()
-      $('.navbar-toggleable-xs').css({ height : outerHeight })
-    } else {
-      $('.navbar-toggleable-xs').css({
-        height : 'inherit'
+        if (typeof config === 'string') {
+          if (data[config] === undefined) {
+            throw new Error(`No method named "${config}"`)
+          }
+          data[config]()
+        }
       })
-      $('.closing-bare').animate({ height : '40px' }, 200)
-    }
-  })
-
-  // extending to level 2 in 320
-  $('.nav-item ul li div h3').on('click', function () {
-    $(this).parent().find('ul').addClass('open')
-    $(this).parent().find('ul').prepend(`<li class="back_menu1" ><h4 class="back-menu1title">${this.innerHTML}</h4></li>`)
-    $('.back_menu1').on('click', backToMenu1)
-    if (document.body.clientWidth < 768) {
-      let outerHeight = $(this).parent().find('ul').outerHeight()
-      $('.navbar-toggleable-xs').css({ height : outerHeight })
-      $('.menu-level1').addClass('menu-level2')
-    }
-  })
-
-  // back to level 0 in 320
-  $('.nav-item .row h2').on('click', () => {
-    $('.menu-level1').removeClass('menu-level1')
-    $('.navbar-toggleable-xs').css({ height : 'inherit' })
-  })
-
-  // back to level 1 in 320
-  function backToMenu1() {
-    $('.menu-level1').removeClass('menu-level2')
-    $('.back_menu1').remove()
-    $('.row .open').removeClass('open')
-    if (document.body.clientWidth < 768) {
-      let outerHeight = $('.menu-level1 > .nav-item.open ul ').outerHeight()
-      $('.navbar-toggleable-xs').css({ height : outerHeight })
     }
   }
 
-  //  openning mega menu in 320
-  $('.megamenubacktop').on('click', function () {
-    $('.menu-level1').removeClass('menu-level1').removeClass('menu-level2')
-    $('.navbar-toggleable-xs').css({ height : 'inherit' })
-    $('.topmenucontent .icon-search').removeClass('color-orange')
-    $('.megamenubacktop').parent().find('.megamenuclosetop').addClass('active')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').addClass('active')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.navbar-langbar').addClass('active')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.menu-footer-320').addClass('active')
-    $('.navbar-smallsearchbar').removeClass('active')
-    $(this).addClass('disabled')
-  })
+  $(document).ready(() => {
 
-  // close mega menu in 320
-  $('.megamenuclosetop , .closing-bare-button a').on('click', function () {
-    $('.open').removeClass('open')
-    $('.megamenuclosetop').parent().find('.megamenubacktop').removeClass('disabled')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.container .navbar-toggleable-xs').removeClass('active')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.navbar-langbar').removeClass('active')
-    $('.megamenuclosetop').parent().parent().parent().parent().find('.menu-footer-320').removeClass('active')
-    $('.megamenu-dropdown-toggle').removeClass('active')
-    $(this).removeClass('active')
-  })
+    // megamenu accessibility
+    $(Selector.MEGAMENU).on(Event.MEGAMENU_SHOWN, function () {
+      // set focus on first focusable link (skip home title)
+      $(this).find('a:not(:first):first').focus()
+    })
 
-  // search bar
-  $('.megamenusearchtop').on('click', () => {
-    $('.megamenuclosetop').trigger('click')
-    $('.topmenucontent .icon-search').addClass('color-orange')
-    $('.navbar-smallsearchbar').addClass('active')
-  })
+    // tell navbar megamenu toggle it has popup
+    $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).attr('aria-haspopup', true)
 
-  // clear search
-  $('.megamenusearchinputclose').on('click', function () {
-    $(this).parent().find('input').val('')
-    $(this).removeClass('visible')
-  })
+     // megamenu logic
 
-  $('.megamenusearchinputtext').on('keyup', function () {
-    if ($(this).val() !== '') {
-      $(this).parent().find('.megamenusearchinputclose').addClass('visible')
-    } else {
-      $(this).parent().find('.megamenusearchinputclose').removeClass('visible')
+    if (window.innerWidth < Dimension.MEDIA_BP_SM) {
+
+      $(Selector.MEGAMENU_TITLE_L2).click(function() {
+
+        if (!$(this).hasClass(ClassName.FOLDED)) {
+          $(Selector.MEGAMENU_TITLE_L1).hide()
+          $(Selector.MEGAMENU_TITLE_L2).not($(this)).hide()
+          $(this).next('ul').show()
+          $(Selector.MEGAMENU_FOOTER).hide()
+          $(this).addClass(ClassName.FOLDED)
+          $(Selector.MEGAMENU).css('top', Dimension.NAVBAR_HEIGHT_PX)
+        } else {
+          $(Selector.MEGAMENU_TITLE_L1).show()
+          $(Selector.MEGAMENU_TITLE_L2).not($(this)).show()
+          $(this).next('ul').hide()
+          $(Selector.MEGAMENU_FOOTER).show()
+          $(this).removeClass(ClassName.FOLDED)
+          $(Selector.MEGAMENU).css('top', `${parseInt(Dimension.NAVBAR_HEIGHT_PX, 10) * 2}px`)
+        }
+      })
+
+      // navbar
+      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).click(function() {
+        let parentItem = $(this).parent()
+
+        if (!parentItem.hasClass(ClassName.FOLDED)) {
+          parentItem.addClass(ClassName.FOLDED)
+          $(Selector.NAVBAR_ITEM).not(parentItem).hide()
+        } else {
+          parentItem.removeClass(ClassName.FOLDED)
+          $(Selector.NAVBAR_ITEM).show()
+        }
+      })
+
+      $(Selector.NAVBAR).on(Event.MEGAMENU_HIDE, () => {
+        // switch toggler icon
+        $(Selector.NAVBAR_TOGGLER).find(`.${ClassName.NAVBAR_TOGGLE_ICON_CLOSE}`).removeClass(ClassName.NAVBAR_TOGGLE_ICON_CLOSE).addClass(ClassName.NAVBAR_TOGGLE_ICON_OPEN)
+
+        // close mega-menu
+        if ($(Selector.NAVBAR_ITEM_FOLDED)) {
+          $($(Selector.NAVBAR_ITEM_FOLDED).attr('href')).collapse('hide')
+        }
+      })
+
+      $(Selector.NAVBAR).on(Event.MEGAMENU_SHOW, () => {
+        // switch toggler icon
+        $(Selector.NAVBAR_TOGGLER).find(`.${ClassName.NAVBAR_TOGGLE_ICON_OPEN}`).removeClass(ClassName.NAVBAR_TOGGLE_ICON_OPEN).addClass(ClassName.NAVBAR_TOGGLE_ICON_CLOSE)
+
+        // reset all items
+        $(Selector.NAVBAR_ITEM).removeClass(ClassName.FOLDED)
+        $(Selector.NAVBAR_ITEM).show()
+
+        // reset navigation
+        $(Selector.MEGAMENU_TITLE_L2).removeClass(ClassName.FOLDED)
+        $(Selector.MEGAMENU_TITLE_L1).show()
+        $(Selector.MEGAMENU_TITLE_L2).show()
+        $(Selector.MEGAMENU_FOOTER).show()
+        $(`${Selector.MEGAMENU} ul`).hide()
+        $(Selector.MEGAMENU).css('top', `${parseInt(Dimension.NAVBAR_HEIGHT_PX, 10) * 2}px`)
+      })
     }
   })
 
-  $(window).on('scroll', () => {
-    if ($(window).scrollTop() > 70) {
-      $('.mega-menu .topmenu').css({ overflow: 'hidden' })
-      $('.mega-menu .topmenu').addClass('resorbe')
-    } else {
-      $('.mega-menu .topmenu').css({ overflow: 'initial' })
-      $('.mega-menu .topmenu').removeClass('resorbe')
-    }
-  })
+     /**
+     * ------------------------------------------------------------------------
+     * jQuery
+     * ------------------------------------------------------------------------
+     */
+
+  $.fn[NAME]             = MegaMenu._jQueryInterface
+  $.fn[NAME].Constructor = MegaMenu
+  $.fn[NAME].noConflict  = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return MegaMenu._jQueryInterface
+  }
+
+  return MegaMenu
+
 })(jQuery)
 
-export default Megamenu
+export default MegaMenu

@@ -68,15 +68,15 @@
             </nav>
 
             <nav class="navbar navbar-dark" role="navigation">
-                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                     <span class="sr-only">toggle navigation</span>
                     <span class="icon-menu"></span>
                 </button>
                 <div class="container" >
                     <a class="navbar-brand"><img src="images/logo-orange.jpg" alt='Back to homepage' title='Back to homepage'/></a>
-                    <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-                        <li class="nav-item"><a href="#" class="nav-link">Discover</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="#collapseShop">Shop</a></li>
+                    <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
+                        <li class="nav-item"><a class="nav-link" href="#collapseDiscover" data-parent="#collapsingNavbar" data-toggle="collapse" aria-expanded="false" aria-controls="#collapseDiscover" title="open discover menu">Discover</a></li>
+                        <li class="nav-item"><a class="nav-link" data-parent="#collapsingNavbar" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="#collapseShop" title="open shop menu">Shop</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
                         <li class="nav-item" id="id_li_for_cdu"></li>
@@ -111,39 +111,72 @@
             </div>
         </div>
 
-        <div class="collapse mmega-menu" id="collapseShop">
-            <div class="container">
-                <h2><a href="#">Home Shop</a></h2>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-3">
-                        <h3><a href="#">Internet</a></h3>
-                        <ul>
-                            <li><a href="#">iPhone 6</a></li>
-                            <li><a href="#">Phones </a></li>
-                            <li><a href="#">Tablets</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Coming soon</a></li>
-                        </ul>
+        <div class="mega-menu panel">
+            <div class="collapse panel-collapse " id="collapseDiscover" aria-labelledby="menu_title">
+                <div class="container">
+                    <h2 aria-hidden="true" id="menu_title"><a href="#">Home Discover</a></h2>
+                    <div class="row">
+                        <div class="hero-wrapper col-xs-12 col-sm-6 col-md-3">
+                            <span class="hero icon-frame-fun"></span>
+                            <a href="#" class="hero-link">Fun</a>
+                        </div>
+                        <div class="hero-wrapper col-xs-12 col-sm-6 col-md-3">
+                            <span class="hero icon-frame-money"></span>
+                            <a href="#" class="hero-link">Money</a>
+                        </div>
+                        <div class="hero-wrapper col-xs-12 col-sm-6 col-md-3">
+                            <span class="hero icon-frame-care"></span>
+                            <a href="#" class="hero-link">Care</a>
+                        </div>
+                        <div class="hero-wrapper col-xs-12 col-sm-6 col-md-3">
+                            <span class="hero icon-frame-tariff"></span>
+                            <a href="#" class="hero-link">Tariff</a>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3">
-                        <h3><a href="#">Mobile</a></h3>
-                        <ul>
-                            <li><a href="#">Phones </a></li>
-                            <li><a href="#">Plans</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Connected objects</a></li>
-                            <li><a href="#">Options</a></li>
-                            <li><a href="#">Bundles</a></li>
-                        </ul>
+                    <div class="row footer">
+                        <div class="pull-md-right hidden-xs-down">
+                            <a data-toggle="collapse" href="#collapseDiscover" aria-expanded="false" aria-controls="#collapseDiscover" title="close discover menu"><span class="icon-delete"></span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="row footer">
-                    <div class="pull-md-left">
-                        <a href="#">Promotions</a>
-                        <a href="#">Top up</a>
+            </div>
+        </div>
+
+        <div class="mega-menu panel">
+            <div class="collapse panel-collapse" id="collapseShop" aria-labelledby="menu_title">
+                <div class="container">
+                    <h2 aria-hidden="true" id="menu_title"><a href="#">Home Shop</a></h2>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-3">
+                            <h3 id="list_title_1"><a href="#">Internet</a></h3>
+                            <ul aria-labelledby="list_title_1" role="menu">
+                                <li role="menuitem"><a href="#">iPhone 6</a></li>
+                                <li role="menuitem"><a href="#">Phones </a></li>
+                                <li role="menuitem"><a href="#">Tablets</a></li>
+                                <li role="menuitem"><a href="#">Accessories</a></li>
+                                <li role="menuitem"><a href="#">Coming soon</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3">
+                            <h3 id="list_title_2"><a href="#">Mobile</a></h3>
+                            <ul aria-labelledby="list_title_2" role="menu">
+                                <li role="menuitem"><a href="#">Phones </a></li>
+                                <li role="menuitem"><a href="#">Plans</a></li>
+                                <li role="menuitem"><a href="#">Accessories</a></li>
+                                <li role="menuitem"><a href="#">Connected objects</a></li>
+                                <li role="menuitem"><a href="#">Options</a></li>
+                                <li role="menuitem"><a href="#">Bundles</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="pull-md-right hidden-xs-down">
-                        <a data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="#collapseShop">X</a>
+                    <div class="row footer">
+                        <div class="pull-md-left">
+                            <a href="#">Promotions</a>
+                            <a href="#">Top up</a>
+                        </div>
+                        <div class="pull-md-right hidden-xs-down">
+                            <a data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="#collapseShop" title="close shop menu"><span class="icon-delete"></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -487,8 +520,8 @@
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="../../assets/js/vendor/tether.min.js"></script>
     <script src="../../dist/js/boosted.js"></script>
-    <script src="mmenu.js"></script>
-		<script type="text/javascript">
+
+    <script type="text/javascript">
 			// Surcharge des valeurs du script de la toolbar
 			accessibilitytoolbar_custom={
 				idLinkModeContainer:"id_li_for_cdu"
