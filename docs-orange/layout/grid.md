@@ -109,7 +109,7 @@ We have include a security margin for container fluid. The goal is to fit exactl
         <td>Large desktop</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Container max-width</th>
+        <th scope="row">Container max-width (Design Area)</th>
         <td>302px</td>
         <td>458px</td>
         <td>724px</td>
