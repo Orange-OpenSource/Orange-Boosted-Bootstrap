@@ -33,19 +33,19 @@ grid:
     width: 302 
     gutter: 10
     desc: Extra small devices
-    subdesc: Portrait phone (&lt;480px)
+    subdesc: Portrait phone (&lt;480px) (target 320 screen resolutions)
   sm:
     breakpoint: 480
     width: 458 
     gutter: 10
     desc: Small devices
-    subdesc: Landscape phones (&ge;480px - &lt;768px)
+    subdesc: Landscape phones (&ge;480px - &lt;768px) (target 480 screen resolutions)
   md:
     breakpoint: 768
     width: 724 
     gutter: 20
     desc: Medium devices
-    subdesc: Tablet (&ge;768px - &lt;960px)
+    subdesc: Tablet (&ge;768px - &lt;960px) (target 768 screen resolutions)
   lg:
     breakpoint: 980
     width: 960 
