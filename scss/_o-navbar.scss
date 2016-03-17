@@ -13,6 +13,11 @@
     background: $brand-orange-black;
   }
 
+  .navbar-toggleable-xs {
+    position: static;
+    width: auto;
+  }
+
   .nav-item {
     font-weight: $brand-font-weight-bold;
 
@@ -20,6 +25,15 @@
       padding: 0;
       margin-top: 3.6875rem;
       line-height: $btn-line-height;
+    }
+
+    .nav-link.icon {
+      margin-top: calc((#{$navbar-height} - #{$font-size-h4}) / 2);
+
+      span[class^="icon-"] {
+        font-size: $font-size-h4;
+        font-weight: $brand-font-weight-normal;
+      }
     }
 
     .dropdown-toggle {
@@ -62,16 +76,152 @@
     background-color: $brand-orange-black;
     border-color: $brand-orange-white;
   }
+
+
+}
+
+.navbar.supra {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
+  min-height: $navbar-supra-height;
+  font-size: $font-size-sm;
+  border-bottom: 1px solid $gray-dark;
+  .navbar-brand {
+    display: none;
+  }
+
+  .nav-item {
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+      margin-top: calc((#{$navbar-supra-height} - #{$font-size-sm}) / 2);
+
+      span[class^="icon-"] {
+        font-size: $font-size-h5;
+        font-weight: $brand-font-weight-normal;
+      }
+    }
+
+    .dropdown-menu {
+      top: $navbar-supra-height;
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .navbar {
+    min-height: $navbar-height-sm;
+
+    .navbar-toggleable-xs {
+      position: absolute;
+      top: $navbar-height-sm;
+      z-index: 100;
+      width: 100%;
+      margin: 0 -.625rem;
+      background-color: $brand-orange-black;
+
+    //   &.in {
+    //     padding-top: $navbar-height-sm;
+    //   }
+
+    //   &.collapsing{
+    //     transition: none;
+    //   }
+
+      .nav-item {
+        display: block;
+        float: none;
+        padding: calc((#{$font-size-h1} - #{$font-size-h5}) / 2) 0;
+        margin-left: 0;
+        font-size: $font-size-h5;
+        line-height: 1;
+        border-top: 1px solid $gray-dark;
+
+        .nav-link {
+          margin-top: 0;
+        }
+
+        .nav-link::before {
+          float: right;
+          margin-right: .625rem;
+          font-family: icon-orange;
+          font-size: $font-size-base;
+          font-weight: $brand-font-weight-normal;
+          color: $brand-orange-white;
+          content: "\ea52";
+        }
+
+        .nav-link.icon {
+          padding: .625rem;
+          margin-top: 0;
+        }
+
+        &:first-child {
+          margin-left: 0;
+
+        //   .nav-link {
+        //     margin-top: 0;
+        //   }
+        }
+      }
+
+      .nav-item.folded {
+        .nav-link::before {
+          float: none;
+          padding-right: 2rem;
+          margin-right: 0;
+          font-family: icon-orange;
+          font-size: $font-size-h5;
+          font-weight: $brand-font-weight-normal;
+          color: $brand-orange-white;
+          content: "\ea53";
+        }
+      }
+
+      .nav-item + .nav-item {
+        margin-left: 0;
+      }
+    }
+
+    .nav-item {
+      margin-left: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .nav-link {
+        padding: 0;
+        margin-top: 0;
+
+        &.icon {
+          padding: .625rem;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .nav-item + .nav-item {
+      margin-left: 0;
+    }
+  }
+
 }
 
 .navbar-toggler {
-  @include navbar-toggle-vertical-align($navbar-toggle-vertical-margin);
-  padding: $nav-link-padding;
-  margin-right: $navbar-padding-horizontal;
+  @include pull-right;
+  padding: .625rem;
+  font-size: $font-size-h4;
   background-color: transparent;
   background-image: none;
-  border: 1px solid transparent;
-  border-radius: $border-radius;
+  border: 0;
 
   @include hover-focus {
     background-color: $brand-orange;
@@ -81,22 +231,6 @@
   // styles to `:focus`.
   &:focus {
     outline: 0;
-  }
-
-  // Bars
-  .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-  }
-
-  .icon-bar + .icon-bar {
-    margin-top: 4px;
-  }
-
-  @media (min-width: $grid-float-breakpoint) {
-    display: none;
   }
 }
 
@@ -118,6 +252,16 @@
     font-size: .75rem;
     font-weight: $brand-font-weight-normal;
     color: $brand-orange-white;
+  }
+}
+
+.navbar-brand {
+  @include media-breakpoint-down(xs) {
+    padding: calc(#{$navbar-height-sm} / 4) 0;
+
+    img {
+      height: calc(#{$navbar-height-sm} / 2);
+    }
   }
 }
 
@@ -168,9 +312,9 @@
     }
   }
 
-  > li {
-    > a {
-      font-size: $font-size-base;
-    }
-  }
+//   > li {
+//     > a {
+//       font-size: $font-size-base;
+//     }
+//   }
 }

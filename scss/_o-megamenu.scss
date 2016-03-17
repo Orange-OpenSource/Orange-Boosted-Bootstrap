@@ -1,0 +1,189 @@
+//
+// Main mega menu
+//
+
+.mega-menu {
+  position: absolute;
+  z-index: 110;
+  width: 100%;
+  background-color: $brand-orange-black;
+
+  .panel-collapse {
+    border-top: 1px solid $gray-dark;
+  }
+
+  h2 {
+    margin: calc(#{$font-size-h2} / 2) 0;
+    line-height: 1;
+  }
+
+  h3 {
+    line-height: 1;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    font-weight: $brand-font-weight-bold;
+    color: $brand-orange-white;
+    text-decoration: none;
+  }
+
+  .o-frame-wrapper {
+    margin-bottom: 1.25rem;
+  }
+
+  .o-frame {
+    @include hover{
+      cursor: default;
+    }
+    font-size: calc((#{map-get($container-max-widths, xl)} / 4) - 1.25rem);
+    color: $brand-orange;
+    + .o-frame-link {
+      top: calc((((#{map-get($container-max-widths, xl)} / 4) - 1.25rem) / 2) - #{$font-size-h3} / 2);
+      width: 100%;
+      font-size: $font-size-h3;
+      line-height: $font-size-h3;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: calc((#{map-get($container-max-widths, lg)} / 4) - 1.25rem);
+      + .o-frame-link {
+        top: calc((((#{map-get($container-max-widths, lg)} / 4) - 1.25rem) / 2) - #{$font-size-h4} / 2);
+        width: 100%;
+        font-size: $font-size-h4;
+        line-height: $font-size-h4;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      font-size: calc((#{map-get($container-max-widths, md)} / 4) - 1.25rem);
+      + .o-frame-link {
+        top: calc((((#{map-get($container-max-widths, md)} / 4) - 1.25rem) / 2) - #{$font-size-h5} / 2);
+        width: 100%;
+        font-size: $font-size-h5;
+        line-height: $font-size-h5;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: calc((#{map-get($container-max-widths, sm)} / 2) - 1.25rem);
+      + .o-frame-link {
+        top: calc((((#{map-get($container-max-widths, sm)} / 2) - 1.25rem) / 2) - #{$font-size-h3} / 2);
+        width: calc(#{map-get($container-max-widths, sm)} / 2);
+        font-size: $font-size-h3;
+        line-height: $font-size-h3;
+      }
+    }
+ }
+
+  .o-frame + .o-frame-link {
+    position: absolute;
+    left: 0;
+    display: block;
+    font-weight: $brand-font-weight-bold;
+    color: $brand-orange-white;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 0 .625rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+@include media-breakpoint-down(xs) {
+  .mega-menu {
+    position: absolute;
+    top: calc(#{$font-size-h1} * 2);
+    z-index: 110;
+    width: 100%;
+    font-size: $font-size-h5;
+
+    h2,
+    h3 {
+      padding: calc((#{$font-size-h2} - #{$font-size-h5}) / 2) 0;
+      margin: 0;
+      font-size: $font-size-h5;
+      border-top: 1px solid $gray-dark;
+
+      &::before {
+        float: right;
+        font-family: icon-orange;
+        font-size: $font-size-base;
+        font-weight: $brand-font-weight-normal;
+        color: $brand-orange-white;
+        content: "\ea52";
+      }
+
+      &.folded {
+        padding: 0;
+        margin: calc((#{$font-size-h1} - #{$font-size-h5}) / 2) 0;
+        font-size: $font-size-h5;
+        line-height: 1;
+        border-top: 0;
+      }
+
+      &.folded::before {
+        float: none;
+        padding-right: 2rem;
+        font-family: icon-orange;
+        font-size: $font-size-h5;
+        font-weight: $brand-font-weight-normal;
+        color: $brand-orange-white;
+        content: "\ea53";
+      }
+    }
+
+    h2 {
+      border-color: transparent;
+    }
+
+    ul {
+      display: none;
+      margin-bottom: 0;
+
+      li {
+        padding: calc((#{$font-size-h2} - #{$font-size-h5}) / 2) 0;
+        font-size: $font-size-h5;
+        line-height: 1;
+        border-top: 1px solid $gray-dark;
+      }
+    }
+
+    .footer {
+      padding: 0;
+      margin: 0;
+
+      a {
+        display: block;
+        padding: calc((#{$font-size-h2} - #{$font-size-h5}) / 2) 0;
+        margin: 0;
+        line-height: 1;
+        border-top: 1px solid $gray-dark;
+      }
+    }
+  }
+}
+
+.search-bar {
+  padding: 1.25rem 0;
+  background-color: $brand-orange-black;
+  border-top: 1px solid $gray-dark;
+
+  .form-group {
+    width: 90%;
+
+    .form-control {
+      width: 100%;
+      padding-top: .625rem;
+      padding-bottom: .625rem;
+      color: $brand-orange-white;
+      background-color: $gray-dark;
+      border: 0;
+
+    }
+  }
+}

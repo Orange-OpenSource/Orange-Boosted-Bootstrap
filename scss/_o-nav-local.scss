@@ -106,6 +106,10 @@
         margin-left: .9375rem;
       }
 
+      .nav-item:first-child {
+        margin-left: 0;
+      }
+
       > li {
         position: relative;
       }
