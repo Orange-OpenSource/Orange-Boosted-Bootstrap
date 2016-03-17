@@ -32,17 +32,17 @@
     text-decoration: none;
   }
 
-  .hero-wrapper {
+  .o-frame-wrapper {
     margin-bottom: 1.25rem;
   }
 
-  .hero {
+  .o-frame {
     @include hover{
       cursor: default;
     }
     font-size: calc((#{map-get($container-max-widths, xl)} / 4) - 1.25rem);
     color: $brand-orange;
-    + .hero-link {
+    + .o-frame-link {
       top: calc((((#{map-get($container-max-widths, xl)} / 4) - 1.25rem) / 2) - #{$font-size-h3} / 2);
       width: 100%;
       font-size: $font-size-h3;
@@ -51,7 +51,7 @@
 
     @include media-breakpoint-down(lg) {
       font-size: calc((#{map-get($container-max-widths, lg)} / 4) - 1.25rem);
-      + .hero-link {
+      + .o-frame-link {
         top: calc((((#{map-get($container-max-widths, lg)} / 4) - 1.25rem) / 2) - #{$font-size-h4} / 2);
         width: 100%;
         font-size: $font-size-h4;
@@ -60,7 +60,7 @@
     }
     @include media-breakpoint-down(md) {
       font-size: calc((#{map-get($container-max-widths, md)} / 4) - 1.25rem);
-      + .hero-link {
+      + .o-frame-link {
         top: calc((((#{map-get($container-max-widths, md)} / 4) - 1.25rem) / 2) - #{$font-size-h5} / 2);
         width: 100%;
         font-size: $font-size-h5;
@@ -69,7 +69,7 @@
     }
     @include media-breakpoint-down(sm) {
       font-size: calc((#{map-get($container-max-widths, sm)} / 2) - 1.25rem);
-      + .hero-link {
+      + .o-frame-link {
         top: calc((((#{map-get($container-max-widths, sm)} / 2) - 1.25rem) / 2) - #{$font-size-h3} / 2);
         width: calc(#{map-get($container-max-widths, sm)} / 2);
         font-size: $font-size-h3;
@@ -78,7 +78,7 @@
     }
  }
 
-  .hero + .hero-link {
+  .o-frame + .o-frame-link {
     position: absolute;
     left: 0;
     display: block;
