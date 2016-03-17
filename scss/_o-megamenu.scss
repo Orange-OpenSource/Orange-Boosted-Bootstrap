@@ -37,7 +37,7 @@
   }
 
   .o-frame {
-    @include hover{
+    @include hover {
       cursor: default;
     }
     font-size: calc((#{map-get($container-max-widths, xl)} / 4) - 1.25rem);
@@ -169,21 +169,23 @@
 }
 
 .search-bar {
-  padding: 1.25rem 0;
+//   padding: 1.25rem 0;
   background-color: $brand-orange-black;
   border-top: 1px solid $gray-dark;
 
-  .form-group {
-    width: 90%;
+  .form-inline {
+    margin: 1.25rem 0;
+    .form-group {
+      width: 90%;
 
-    .form-control {
-      width: 100%;
-      padding-top: .625rem;
-      padding-bottom: .625rem;
-      color: $brand-orange-white;
-      background-color: $gray-dark;
-      border: 0;
-
+      .form-control {
+        width: 100%;
+        padding-top: .625rem;
+        padding-bottom: .625rem;
+        color: $brand-orange-white;
+        background-color: $gray-dark;
+        border: 0;
+      }
     }
   }
 }
