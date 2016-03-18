@@ -37,61 +37,109 @@
   }
 
   .o-frame {
-    @include hover {
-      cursor: default;
-    }
-    font-size: calc((#{map-get($container-max-widths, xl)} / 4) - 1.25rem);
-    color: $brand-orange;
-    + .o-frame-link {
-      top: calc((((#{map-get($container-max-widths, xl)} / 4) - 1.25rem) / 2) - #{$font-size-h3} / 2);
-      width: 100%;
-      font-size: $font-size-h3;
-      line-height: $font-size-h3;
-    }
-
-    @include media-breakpoint-down(lg) {
-      font-size: calc((#{map-get($container-max-widths, lg)} / 4) - 1.25rem);
-      + .o-frame-link {
-        top: calc((((#{map-get($container-max-widths, lg)} / 4) - 1.25rem) / 2) - #{$font-size-h4} / 2);
-        width: 100%;
-        font-size: $font-size-h4;
-        line-height: $font-size-h4;
-      }
-    }
-    @include media-breakpoint-down(md) {
-      font-size: calc((#{map-get($container-max-widths, md)} / 4) - 1.25rem);
-      + .o-frame-link {
-        top: calc((((#{map-get($container-max-widths, md)} / 4) - 1.25rem) / 2) - #{$font-size-h5} / 2);
-        width: 100%;
-        font-size: $font-size-h5;
-        line-height: $font-size-h5;
-      }
-    }
-    @include media-breakpoint-down(sm) {
-      font-size: calc((#{map-get($container-max-widths, sm)} / 2) - 1.25rem);
-      + .o-frame-link {
-        top: calc((((#{map-get($container-max-widths, sm)} / 2) - 1.25rem) / 2) - #{$font-size-h3} / 2);
-        width: calc(#{map-get($container-max-widths, sm)} / 2);
-        font-size: $font-size-h3;
-        line-height: $font-size-h3;
-      }
-    }
- }
-
-  .o-frame + .o-frame-link {
-    position: absolute;
-    left: 0;
-    display: block;
-    font-weight: $brand-font-weight-bold;
-    color: $brand-orange-white;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width});
+    height: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width});
     text-align: center;
+    display: table;
+    font-size: $font-size-h3;
+
+      .o-frame-text {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        word-wrap: break-word;
+        margin: 0;
+        padding: $font-size-h3;
+      }
+
+      @include media-breakpoint-down(xl) {
+        width: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width});
+        height: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width});
+        font-size: $font-size-h4;
+
+        .o-frame-text {
+          padding: $font-size-h4;
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width});
+        height: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width});
+        font-size: $font-size-h4;
+
+        .o-frame-text {
+          padding: $font-size-h4;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        width: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width});
+        height: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width});
+        font-size: $font-size-h5;
+
+        .o-frame-text {
+          padding: $font-size-h5;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: calc((#{map-get($container-max-widths, sm)} / 2) - #{$grid-gutter-width} / 2);
+        height: calc((#{map-get($container-max-widths, sm)} / 2) - #{$grid-gutter-width} / 2);
+        font-size: $font-size-h3;
+
+        .o-frame-text {
+          padding: $font-size-h3;
+        }
+      }
+  }
+
+  .o-frame-fun {
+    background-image: url(../img/orange-frame-fun.svg);
+  }
+
+  .o-frame-care {
+    background-image: url(../img/orange-frame-care.svg);
+  }
+
+  .o-frame-family {
+    background-image: url(../img/orange-frame-family.svg);
+  }
+
+  .o-frame-home {
+    background-image: url(../img/orange-frame-home.svg);
+  }
+
+  .o-frame-money {
+    background-image: url(../img/orange-frame-money.svg);
+  }
+
+  .o-frame-move {
+    background-image: url(../img/orange-frame-move.svg);
+  }
+
+  .o-frame-tariff {
+    background-image: url(../img/orange-frame-tariff.svg);
+  }
+
+  .o-frame-tech {
+    background-image: url(../img/orange-frame-tech.svg);
+  }
+
+  .o-frame-wellbeing {
+    background-image: url(../img/orange-frame-wellbeing.svg);
+  }
+
+  .o-frame-work {
+    background-image: url(../img/orange-frame-work.svg);
   }
 
   .footer {
     padding: 0 .625rem;
     margin-bottom: 1rem;
   }
-
 }
 
 @include media-breakpoint-down(xs) {
