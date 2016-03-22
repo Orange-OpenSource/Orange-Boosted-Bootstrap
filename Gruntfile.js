@@ -92,6 +92,7 @@ module.exports = function (grunt) {
           'js/dist/scrollspy.js' : 'js/src/scrollspy.js',
           'js/dist/tab.js'       : 'js/src/tab.js',
           'js/dist/tooltip.js'   : 'js/src/tooltip.js',
+          'js/dist/navbar.js'  : 'js/src/navbar.js',
           'js/dist/megamenu.js'  : 'js/src/megamenu.js',
           'js/dist/popover.js'   : 'js/src/popover.js'
         }
@@ -119,6 +120,7 @@ module.exports = function (grunt) {
           'dist/js/umd/scrollspy.js' : 'js/src/scrollspy.js',
           'dist/js/umd/tab.js'       : 'js/src/tab.js',
           'dist/js/umd/tooltip.js'   : 'js/src/tooltip.js',
+          'dist/js/umd/navbar.js'  : 'js/src/navbar.js',
           'dist/js/umd/megamenu.js'  : 'js/src/megamenu.js',
           'dist/js/umd/popover.js'   : 'js/src/popover.js'
         }
@@ -181,6 +183,7 @@ module.exports = function (grunt) {
           'js/src/scrollspy.js',
           'js/src/tab.js',
           'js/src/tooltip.js',
+          'js/src/navbar.js',
           'js/src/megamenu.js',
           'js/src/popover.js'
         ],

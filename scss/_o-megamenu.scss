@@ -86,12 +86,12 @@
       }
 
       @include media-breakpoint-down(sm) {
-        width: calc((#{map-get($container-max-widths, sm)} / 2) - #{$grid-gutter-width} / 2);
-        height: calc((#{map-get($container-max-widths, sm)} / 2) - #{$grid-gutter-width} / 2);
-        font-size: $font-size-h3;
+        width: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width} / 2);
+        height: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width} / 2);
+        font-size: $font-size-h5;
 
         .o-frame-text {
-          padding: $font-size-h3;
+          padding: $font-size-h5;
         }
       }
   }
@@ -149,6 +149,18 @@
     z-index: 110;
     width: 100%;
     font-size: $font-size-h5;
+
+    .container {
+      margin: 0;
+
+      .row {
+          margin: 0 -5px;
+
+          &.footer a {
+            padding-left: 5px;
+          }
+      }
+    }
 
     h2,
     h3 {
