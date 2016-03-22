@@ -37,7 +37,7 @@
   }
 
   .o-frame {
-    @include hover{
+    @include hover {
       cursor: default;
     }
     font-size: calc((#{map-get($container-max-widths, xl)} / 4) - 1.25rem);

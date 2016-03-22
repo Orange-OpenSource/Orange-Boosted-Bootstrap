@@ -58,7 +58,7 @@ const MegaMenu = (($) => {
 
     constructor(element) {
       this._element = element
-    //   this._addAria(this._element);
+      // this._addAria(this._element);
     }
 
     // getters
@@ -109,11 +109,11 @@ const MegaMenu = (($) => {
     // tell navbar megamenu toggle it has popup
     $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).attr('aria-haspopup', true)
 
-     // megamenu logic
+    // megamenu logic
 
     if (window.innerWidth < Dimension.MEDIA_BP_SM) {
 
-      $(Selector.MEGAMENU_TITLE_L2).click(function() {
+      $(Selector.MEGAMENU_TITLE_L2).click(function () {
 
         if (!$(this).hasClass(ClassName.FOLDED)) {
           $(Selector.MEGAMENU_TITLE_L1).hide()
@@ -133,7 +133,7 @@ const MegaMenu = (($) => {
       })
 
       // navbar
-      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).click(function() {
+      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).click(function () {
         let parentItem = $(this).parent()
 
         if (!parentItem.hasClass(ClassName.FOLDED)) {
@@ -174,11 +174,11 @@ const MegaMenu = (($) => {
     }
   })
 
-     /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
 
   $.fn[NAME]             = MegaMenu._jQueryInterface
   $.fn[NAME].Constructor = MegaMenu

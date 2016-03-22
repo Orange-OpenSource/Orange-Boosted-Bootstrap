@@ -476,6 +476,13 @@ module.exports = function (grunt) {
       options: {
         ignore: [
           'Element “img” is missing required attribute “src”.',
+          /* boosted mod Src : https://www.w3.org/TR/html-aria/ */
+          'The “banner” role is unnecessary for element “header”.',
+          'Element “form” does not need a “role” attribute.',
+          'The “contentinfo” role is unnecessary for element “footer”.',
+          'Bad value “search” for attribute “role” on element “form”.',
+          'Attribute “aria-required” not allowed on element “input” at this point.',
+          /* end mod */
           'Attribute “autocomplete” is only allowed when the input type is “color”, “date”, “datetime”, “datetime-local”, “email”, “month”, “number”, “password”, “range”, “search”, “tel”, “text”, “time”, “url”, or “week”.',
           'Attribute “autocomplete” not allowed on element “button” at this point.',
           'Element “div” not allowed as child of element “progress” in this context. (Suppressing further errors from this subtree.)',
@@ -574,8 +581,9 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Docs HTML validation task
-  grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
-
+  /* boosted mod */
+  grunt.registerTask('validate-html', ['docs', 'htmllint']);
+  /* end mod */
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
   };

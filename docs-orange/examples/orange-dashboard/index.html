@@ -84,7 +84,7 @@
 					</ul>
 					<ul class="nav navbar-nav pull-md-right">
 						<li class="nav-item dropdown" role="presentation">
-							<a class="nav-link" href="#" class="dropdown-toggle active" data-toggle="dropdown">
+							<a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">
 								<span class="icon-international-globe" aria-hidden="true"></span>
 								<span class="hidden-xs hidden-sm">&nbsp;language</span>&nbsp;<b class="caret" aria-hidden="true"></b>
 							</a>
@@ -130,7 +130,7 @@
 					</ul>
 					<div class="tab-content">
 						<div class="tab-pane active" id="users">
-							<form id="search-users" name="searchUsers" method="post" action="">
+							<form id="search-users" name="searchUsers" method="post" action="/">
 								<div class="form-group row">
 									<label for="phone" class="col-sm-2 form-control-label">Phone <span class="star">*</span> </label>
 									<div class="col-sm-10">
@@ -176,7 +176,7 @@
 
 						</div>
 						<div class="tab-pane" id="devices">
-							<form id="search-devices" name="searchDevices" method="post" action="" class="form-horizontal">
+							<form id="search-devices" name="searchDevices" method="post" action="/" class="form-horizontal">
 								<div class="form-group">
 									<label for="mac" class="col-sm-2 control-label">MAC <span class="star">*</span> </label>
 									<div class="col-sm-10">
@@ -189,7 +189,7 @@
 							</form>
 						</div>
 						<div class="tab-pane" id="messages">
-							<form id="search-messages" name="searchMesages" method="post" action="" class="form-horizontal">
+							<form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
 								<div class="input-group">
 									<span class="input-group-addon">@</span>
 									<input type="text" class="form-control" placeholder="regexp" title="Found a message by regexp">
@@ -207,16 +207,16 @@
 			<div class="col-md-6 col" id="second">
 				<div class="info-block">
 					<h1 id="alerts" class="h2">my alerts</h1>
-					<table id="myTable" class="table tablesorter" summary="Monthly alerts received">
+					<table id="myTable" class="table tablesorter">
 						<caption>Alerts received</caption>
 						<thead class="cf">
 							<tr>
 								<th class="header" scope="col"></th>
 								<th class="header" scope="col"><a href="#">date<span class="sr-only"> sortable</span></a></th>
-								<th class="header" scope="col" class="hide-when-small"><a href="#">id<span class="sr-only"> sortable</span></a></th>
+								<th class="header hide-when-small" scope="col"><a href="#">id<span class="sr-only"> sortable</span></a></th>
 								<th class="header" scope="col"><a href="#">type<span class="sr-only"> sortable</span></a></th>
 								<th class="header" scope="col"><a href="#">status<span class="sr-only"> sortable</span></a></th>
-								<th class="header" scope="col" class="hide-when-small"><a href="#">duration<span class="sr-only"> sortable</span></a></th>
+								<th class="header hide-when-small" scope="col"><a href="#">duration<span class="sr-only"> sortable</span></a></th>
 							</tr>
 						</thead>
 						<tbody>
