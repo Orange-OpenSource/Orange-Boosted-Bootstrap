@@ -15,12 +15,8 @@ Provide pagination links for your site or app with the multi-page pagination com
 
 Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.
 
-{% callout info %}
-It's good practice to wrap navigation element in a `<nav role="navigation">` tag with proper role, but keep in mind it should only be used for major/primary navigation.
-{% endcallout %}
-
 {% example html %}
-<nav role="navigation">
+<nav>
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link disabled" href="#" aria-label="Go to previous page">
@@ -54,7 +50,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 {% endcallout %}
 
 {% example html %}
-<nav role="navigation">
+<nav>
   <ul class="pagination">
     <li class="page-item ">
      <a class="page-link disabled" href="#" aria-label="Go to previous page">
@@ -82,7 +78,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 You can optionally swap out active or disabled anchors for `<span>`, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.
 
 {% example html %}
-<nav role="navigation">
+<nav>
   <ul class="pagination">
     <li class="page-item ">
       <span class="page-link disabled" aria-label="Go to previous page">
@@ -101,7 +97,7 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes.
 
 {% example html %}
-<nav role="navigation">
+<nav>
   <ul class="pagination pagination-lg">
     <li class="page-item">
       <a class="page-link disabled" href="#" aria-label="Go to previous page">
@@ -123,7 +119,7 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 {% endexample %}
 
 {% example html %}
-<nav role="navigation">
+<nav>
   <ul class="pagination pagination-sm">
     <li class="page-item">
       <a class="page-link disabled" href="#" aria-label="Go to previous page">

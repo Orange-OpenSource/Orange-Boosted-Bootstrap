@@ -17,7 +17,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% example html %}
 <header role="banner">
-    <nav class="navbar navbar-dark" role="navigation">
+    <nav class="navbar navbar-dark">
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
             <span class="sr-only">toggle navigation</span>
             <span class="icon-menu"></span>
@@ -54,7 +54,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
 
 {% example html %}
-<nav class="navbar navbar-dark supra" role="navigation">
+<nav class="navbar navbar-dark supra">
     <div class="container">
         <ul class="nav navbar-nav">
             <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
@@ -92,7 +92,7 @@ A supra bar should never be used on its own and always be included in header and
 
 {% example html %}
 <header role="banner" id="demo_navbar">
-    <nav class="navbar navbar-dark supra" role="navigation">
+    <nav class="navbar navbar-dark supra">
         <div class="container">
             <ul class="nav navbar-nav">
                 <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
@@ -122,7 +122,7 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-dark" role="navigation">
+    <nav class="navbar navbar-dark">
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
             <span class="sr-only">toggle navigation</span>
             <span class="icon-menu"></span>

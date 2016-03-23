@@ -9,7 +9,7 @@ group: components
 Add the `.nav-local` class to the nav tag, `.local` onto the nav links content, and a `div` tag with the class `arrow` with the `attribute aria-hidden='true'` to switch from classic navbar to Orange local navigation.
 
 {% example html %}
-<nav class="navbar nav-local" role="navigation">
+<nav class="navbar nav-local">
     <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -50,7 +50,7 @@ Add the `.nav-local` class to the nav tag, `.local` onto the nav links content, 
 ## Two level local navigation
 
 {% example html %}
-<nav class="navbar nav-local" role="navigation">
+<nav class="navbar nav-local">
     <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#exCollapsingNavbar2">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
