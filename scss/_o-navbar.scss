@@ -2,6 +2,13 @@
 //
 //
 
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 120;
+}
+
 .navbar {
   min-height: $navbar-height;
   padding: 0;
@@ -122,9 +129,10 @@
     .navbar-toggleable-xs {
       position: absolute;
       top: $navbar-height-sm;
+      left: 0;
       z-index: 100;
       width: 100%;
-      margin: 0 -.625rem;
+      margin: 0;
       background-color: $brand-orange-black;
 
     //   &.in {
