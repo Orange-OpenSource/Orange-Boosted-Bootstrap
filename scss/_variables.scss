@@ -120,7 +120,10 @@ $link-hover-decoration: underline !default;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 544px,
+  // boosted mod
+  //sm: 544px,
+  sm: 480px,
+  // end mod
   md: 768px,
   lg: 992px,
   xl: 1200px

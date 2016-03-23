@@ -3,7 +3,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.2): navbar.js
+ * Boosted (v4.0.0-alpha.2): navbar.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,42 +20,31 @@ const Navbar = (($) => {
   const NAME                = 'navbar'
   const VERSION             = '4.0.0-alpha.2'
   const DATA_KEY            = 'bs.navbar'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const DATA_API_KEY        = '.data-api'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const TRANSITION_DURATION = 600
 
   const Default = {
     sticky : true,
-    parent : ''
+    trigger : ''
   }
 
   const DefaultType = {
     sticky : 'boolean',
-    parent : 'string'
-  }
-
-  const Event = {
-    PAGE_SCROLL : 'scroll',
-    SHOW           : `show${EVENT_KEY}`,
-    HIDE           : `hide${EVENT_KEY}`,
-    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
-  }
-
-  const ClassName = {
-    IN         : 'in',
+    trigger : 'string'
   }
 
   const Dimension = {
-    WIDTH  : 'width',
-    HEIGHT : 'height'
+    MEDIA_BP_SM : 544
+  }
+
+  const Event = {
+    PAGE_SCROLL : 'scroll'
   }
 
   const Selector = {
     CONFORTP_BAR : '#accessibilitytoolbarGraphic',
     HIDE_SUPRA_TRIGGER : '#hide_supra_trigger',
     SUPRA_BAR : '.navbar.supra',
-    ACTIVES     : '.panel > .in, .panel > .collapsing',
+    MEGAMENU_PANEL : '.mega-menu.panel'
   }
 
 
@@ -71,19 +60,18 @@ const Navbar = (($) => {
       this._element         = element
       this._supraBar        = $(element).find(Selector.SUPRA_BAR)
       this._config          = this._getConfig(config)
-      this._parent = this._config.parent ? this._getParent() : null
+      this._initialHeight = $(this._element).outerHeight()
+      this._initialSupraHeight = $(this._supraBar).outerHeight()
+      this._triggerElm = $(this._config.trigger)[0]
+      this._throttleTimer = 0
 
-      if (!this._config.parent) {
-        this._addAriaAndNavbardClass(this._element)
-      }
-
-      if(this._config.sticky) {
+      if (this._config.sticky) {
         $(this._element).addClass('fixed-header')
-        $(document.body).css('padding-top', $(this._element).height())
+        $(Selector.MEGAMENU_PANEL).addClass('sticky')
+        $(document.body).css('padding-top', this._initialHeight)
         this._addEventListeners()
       }
     }
-
 
     // getters
 
@@ -95,10 +83,6 @@ const Navbar = (($) => {
       return Default
     }
 
-
-    // public
-
-
     // private
 
     _getConfig(config) {
@@ -107,67 +91,45 @@ const Navbar = (($) => {
       return config
     }
 
-    _getDimension() {
-      let hasWidth = $(this._element).hasClass(Dimension.WIDTH)
-      return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT
-    }
+    _isElementInViewport (el, topOffset) {
+      let rect = el.getBoundingClientRect()
 
-    _getParent() {
-      let parent   = $(this._config.parent)[0]
-      let selector =
-        `[data-toggle="collapse"][data-parent="${this._config.parent}"]`
-
-      $(parent).find(selector).each((i, element) => {
-        this._addAriaAndNavbardClass(
-          Navbar._getTargetFromElement(element),
-          [element]
-        )
-      })
-
-      return parent
-    }
-
-    _addAriaAndNavbardClass(element) {
-      if (element) {
-        let isOpen = $(element).hasClass(ClassName.IN)
-        element.setAttribute('aria-expanded', isOpen)
+      if (!topOffset) {
+        topOffset = 0
       }
+
+      return rect.bottom > topOffset &&
+        rect.right > 0 &&
+        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.top < (window.innerHeight || document.documentElement.clientHeight)
+    }
+
+    _scrollHandler() {
+      if (this._throttleTimer) {
+        window.clearTimeout(this._throttleTimer)
+      }
+
+      this._throttleTimer = window.setTimeout(this._managePageScroll.bind(this), 100)
     }
 
     _managePageScroll() {
-        function _isElementInViewport (el, topOffset) {
-            var rect = el.getBoundingClientRect();
-
-            if(!topOffset){ topOffset = 0; }
-
-            return rect.bottom > topOffset &&
-            rect.right > 0 &&
-            rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-            rect.top < (window.innerHeight || document.documentElement.clientHeight);
-            }
-
-      if(_isElementInViewport($(Selector.HIDE_SUPRA_TRIGGER)[0], 0)){
-        // document.getElementById('top_menu').style.display = 'block';
-        // document.body.style.paddingTop = defaultBodyTop+'px';
-        console.log('in viewport !')
-      }else{
-        // document.getElementById('top_menu').style.display = 'none';
-        // document.body.style.paddingTop = defaultBodyTop - defaultMenuTop +'px';
-        console.log('not in viewport !')
+      if (this._isElementInViewport(this._triggerElm, 0)) {
+        $(Selector.SUPRA_BAR).show()
+        $(document.body).css('padding-top', this._initialHeight)
+      } else {
+        $(Selector.SUPRA_BAR).hide()
+        $(document.body).css('padding-top', this._initialHeight - this._initialSupraHeight)
       }
     }
 
     _addEventListeners() {
-      window.addEventListener(Event.PAGE_SCROLL, this._managePageScroll)
+      if (window.innerWidth >= Dimension.MEDIA_BP_SM) {
+        window.addEventListener(Event.PAGE_SCROLL, this._scrollHandler.bind(this))
+      }
     }
 
 
     // static
-
-    static _getTargetFromElement(element) {
-      let selector = Util.getSelectorFromElement(element)
-      return selector ? $(selector)[0] : null
-    }
 
     static _jQueryInterface(config) {
       return this.each(function () {
@@ -182,7 +144,6 @@ const Navbar = (($) => {
 
         if (!data) {
           data = new Navbar(this, _config)
-          console.log(data)
           $this.data(DATA_KEY, data)
         }
 
@@ -196,23 +157,6 @@ const Navbar = (($) => {
     }
 
   }
-
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
-
-//   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-//     event.preventDefault()
-
-//     let target = Navbar._getTargetFromElement(this)
-//     let data   = $(target).data(DATA_KEY)
-//     let config = data ? 'toggle' : $(this).data()
-
-//     Navbar._jQueryInterface.call($(target), config)
-//   })
-
 
   /**
    * ------------------------------------------------------------------------

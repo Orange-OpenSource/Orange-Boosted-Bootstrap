@@ -8,6 +8,10 @@
   width: 100%;
   background-color: $brand-orange-black;
 
+  &.sticky {
+    position: fixed;
+  }
+
   .panel-collapse {
     border-top: 1px solid $gray-dark;
   }
@@ -37,14 +41,14 @@
   }
 
   .o-frame {
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: table;
     width: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width});
     height: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width});
-    text-align: center;
-    display: table;
+    margin: 0 auto;
     font-size: $font-size-h3;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
       .o-frame-text {
         display: table-cell;

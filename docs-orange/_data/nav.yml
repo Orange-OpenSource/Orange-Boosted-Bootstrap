@@ -46,9 +46,10 @@
     - title: Navs
     - title: Navbar
     # boosted mod
+    - title: Orange navbar
+    - title: Orange megamenu
     - title: Orange pointed tabs
     - title: Local navigation
-    - title: Orange megamenu
     - title: Orange footer
     # end mod
     - title: Breadcrumb
