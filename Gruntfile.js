@@ -22,9 +22,7 @@ module.exports = function (grunt) {
   /* end mod */
   var fs = require('fs');
   var path = require('path');
-  var glob = require('glob');
   var isTravis = require('is-travis');
-  var npmShrinkwrap = require('npm-shrinkwrap');
   var mq4HoverShim = require('mq4-hover-shim');
   var autoprefixerSettings = require('./grunt/autoprefixer-settings.js');
   var autoprefixer = require('autoprefixer')(autoprefixerSettings);
@@ -34,7 +32,9 @@ module.exports = function (grunt) {
 
   Object.keys(configBridge.paths).forEach(function (key) {
     configBridge.paths[key].forEach(function (val, i, arr) {
+      /* boosted mod */
       arr[i] = path.join('./.tmpdocs/assets', val);
+      /* end mod */
     });
   });
 
@@ -62,7 +62,9 @@ module.exports = function (grunt) {
     clean: {
       dist: 'dist',
       docs: 'docs/dist',
+      /* Boosted mod */
       tmp: '.tmpdocs'
+      /* end mod */
     },
 
     // JS build configuration
@@ -94,8 +96,10 @@ module.exports = function (grunt) {
           'js/dist/scrollspy.js' : 'js/src/scrollspy.js',
           'js/dist/tab.js'       : 'js/src/tab.js',
           'js/dist/tooltip.js'   : 'js/src/tooltip.js',
-          'js/dist/navbar.js'  : 'js/src/navbar.js',
+          /* Boosted mod */
+          'js/dist/navbar.js'    : 'js/src/navbar.js',
           'js/dist/megamenu.js'  : 'js/src/megamenu.js',
+          /* end mod */
           'js/dist/popover.js'   : 'js/src/popover.js'
         }
       },
@@ -122,8 +126,10 @@ module.exports = function (grunt) {
           'dist/js/umd/scrollspy.js' : 'js/src/scrollspy.js',
           'dist/js/umd/tab.js'       : 'js/src/tab.js',
           'dist/js/umd/tooltip.js'   : 'js/src/tooltip.js',
-          'dist/js/umd/navbar.js'  : 'js/src/navbar.js',
+          /* Boosted mod */
+          'dist/js/umd/navbar.js'    : 'js/src/navbar.js',
           'dist/js/umd/megamenu.js'  : 'js/src/megamenu.js',
+          /* end mod */
           'dist/js/umd/popover.js'   : 'js/src/popover.js'
         }
       }
@@ -153,7 +159,9 @@ module.exports = function (grunt) {
         options: {
           requireCamelCaseOrUpperCaseIdentifiers: null
         },
+        /* Boosted mod */
         src: ['.tmpdocs/assets/js/src/*.js', '.tmpdocs/assets/js/*.js', '!.tmpdocs/assets/js/*.min.js']
+        /* end mod */
       }
     },
 
@@ -185,8 +193,10 @@ module.exports = function (grunt) {
           'js/src/scrollspy.js',
           'js/src/tab.js',
           'js/src/tooltip.js',
+          /* Boosted mod */
           'js/src/navbar.js',
           'js/src/megamenu.js',
+          /* end mod */
           'js/src/popover.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
@@ -198,8 +208,8 @@ module.exports = function (grunt) {
             '.tmpdocs/assets/js/src/application-orange.js'
         ],
         dest: '.tmpdocs/assets/js/src/application.js'
+        /* end mod */
       }
-      /* end mod */
     },
 
     uglify: {
@@ -216,7 +226,9 @@ module.exports = function (grunt) {
       },
       docsJs: {
         src: configBridge.paths.docsJs,
+        /* Boosted mod */
         dest: '.tmpdocs/assets/js/docs.min.js'
+        /* end mod */
       }
     },
 
@@ -235,7 +247,9 @@ module.exports = function (grunt) {
         reporterOutput: null
       },
       core: {
+        /* Boosted mod */
         src: ['scss/{,**/}*.scss', '!scss/_normalize.scss']
+        /* end mod */
       },
       docs: {
         src: ['docs/assets/scss/*.scss', '!docs/assets/scss/docs.scss']
@@ -295,8 +309,10 @@ module.exports = function (grunt) {
         ]
       },
       docs: {
+        /* Boosted mod */
         src: '.tmpdocs/assets/css/docs.min.css',
         dest: '.tmpdocs/assets/css/docs.min.css'
+        /* end mod */
       }
     },
 
@@ -307,9 +323,9 @@ module.exports = function (grunt) {
         src: [
           '**/*'
         ],
+        /* boosted mod */
         dest: '.tmpdocs/dist/'
       },
-      /* boosted mod */
       tmpdocs: {
         files: [
           {
@@ -343,12 +359,12 @@ module.exports = function (grunt) {
         cwd: 'bower_components/jquery.tablesorter/dist/js/',
         src: ['*'],
         dest: 'dist/js/vendors/'
+        /* end mod */
       }
-      /* end mod */
     },
 
-    /* boosted mod */
     connect: {
+      /* boosted mod */
       //   server: {
       //     options: {
       //       port: 3000,
@@ -365,10 +381,10 @@ module.exports = function (grunt) {
               serveStatic('_gh_pages')
             ];
           }
+          /* end mod */
         }
       }
     },
-    /* end mod */
 
     jekyll: {
       options: {
@@ -488,7 +504,7 @@ module.exports = function (grunt) {
           'Element “form” does not need a “role” attribute.',
           'The “contentinfo” role is unnecessary for element “footer”.',
           'Bad value “search” for attribute “role” on element “form”.',
-          'Attribute “aria-required” not allowed on element “input” at this point.',                                                                                  
+          'Attribute “aria-required” not allowed on element “input” at this point.',
           'Element “input” is missing one or more of the following attributes: “aria-expanded”, “aria-valuemax”, “aria-valuemin”, “aria-valuenow”, “role”.',
           /* end mod */
           'Attribute “autocomplete” is only allowed when the input type is “color”, “date”, “datetime”, “datetime-local”, “email”, “month”, “number”, “password”, “range”, “search”, “tel”, “text”, “time”, “url”, or “week”.',
@@ -640,10 +656,10 @@ module.exports = function (grunt) {
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
   grunt.registerTask('sass-compile', ['sass:core', 'sass:docs']);
 
-  /* boosted mod */
   grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
+  /* boosted mod */
   grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorsjs']);
   /* end mod */
   // Default task.
@@ -662,34 +678,21 @@ module.exports = function (grunt) {
   // Docs task.
   /* boosted mod */
   grunt.registerTask('docs-css', ['sass:docs','postcss:docs', 'postcss:examples', 'cssmin:docs']);
-  grunt.registerTask('docs-js', ['concat:docsJs', 'uglify:docsJs']);
   /* end mod */
   grunt.registerTask('lint-docs-css', ['scsslint:docs']);
+  /* boosted mod */
+  grunt.registerTask('docs-js', ['concat:docsJs', 'uglify:docsJs']);
+  /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
   grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace']);
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github']);
+
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
 
   // Publish to GitHub
   grunt.registerTask('publish', ['buildcontrol:pages']);
-
-  // Task for updating the cached npm packages used by the Travis build (which are controlled by test-infra/npm-shrinkwrap.json).
-  // This task should be run and the updated file should be committed whenever Bootstrap's dependencies change.
-  grunt.registerTask('update-shrinkwrap', ['exec:npmUpdate', '_update-shrinkwrap']);
-  grunt.registerTask('_update-shrinkwrap', function () {
-    var done = this.async();
-    npmShrinkwrap({ dev: true, dirname: __dirname }, function (err) {
-      if (err) {
-        grunt.fail.warn(err);
-      }
-      var dest = 'grunt/npm-shrinkwrap.json';
-      fs.renameSync('npm-shrinkwrap.json', dest);
-      grunt.log.writeln('File ' + dest.cyan + ' updated.');
-      done();
-    });
-  });
 
   /* boosted mod */
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
