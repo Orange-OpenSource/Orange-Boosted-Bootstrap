@@ -47,6 +47,9 @@ const Dropdown = (($) => {
     ROLE_MENU     : '[role="menu"]',
     ROLE_LISTBOX  : '[role="listbox"]',
     NAVBAR_NAV    : '.navbar-nav',
+    // Boosted mod
+    FIRST_ITEM_IN_MENU : '.dropdown-menu .dropdown-item:not(.disabled)',
+    // end mod
     VISIBLE_ITEMS : '[role="menu"] li:not(.disabled) a, '
                   + '[role="listbox"] li:not(.disabled) a'
   }
@@ -62,6 +65,11 @@ const Dropdown = (($) => {
 
     constructor(element) {
       this._element = element
+
+      // Boosted mod
+      console.log('lol')
+      this._addAria(this._element)
+      // end mod
 
       this._addEventListeners()
     }
@@ -108,14 +116,19 @@ const Dropdown = (($) => {
       if (showEvent.isDefaultPrevented()) {
         return false
       }
+
       // Boosted mod
       // this.focus()
-      $(parent).find('.dropdown-menu li:not(.disabled) a:not(.disabled)').first().trigger('focus')
       // end mod
       this.setAttribute('aria-expanded', 'true')
 
       $(parent).toggleClass(ClassName.OPEN)
       $(parent).trigger($.Event(Event.SHOWN, relatedTarget))
+
+      // Boosted mod
+      $(parent).find(Selector.FIRST_ITEM_IN_MENU).first().focus()
+      // end mod
+
       return false
     }
 
@@ -263,7 +276,7 @@ const Dropdown = (($) => {
   // set default acessibility Attributes
   $(document).ready(($) => {
     $('.dropdown-menu').attr('role', 'menu')
-    $('.dropdown-menu a.dropdown-item').attr('role', 'menuitem')
+    $('.dropdown-menu .dropdown-item').attr('role', 'menuitem')
   })
   // end mod
   /**
