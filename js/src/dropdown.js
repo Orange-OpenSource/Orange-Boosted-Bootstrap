@@ -66,11 +66,6 @@ const Dropdown = (($) => {
     constructor(element) {
       this._element = element
 
-      // Boosted mod
-      console.log('lol')
-      this._addAria(this._element)
-      // end mod
-
       this._addEventListeners()
     }
 
