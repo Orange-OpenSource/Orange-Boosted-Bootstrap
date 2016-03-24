@@ -61,3 +61,6 @@ dist
 js/dist
 docs/assets/css
 docs/dist
+
+# Jenkins
+reports

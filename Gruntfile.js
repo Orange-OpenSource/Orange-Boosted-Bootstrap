@@ -15,6 +15,8 @@ module.exports = function (grunt) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
   };
 
+  /* Jenkins flag */
+  var JENKINS = grunt.option('jenkins');
   /* boosted mod */
   var serveStatic = require('serve-static');
   /* end mod */
@@ -477,6 +479,8 @@ module.exports = function (grunt) {
 
     htmllint: {
       options: {
+        reporter: JENKINS && 'checkstyle',
+        reporterOutput: JENKINS && 'reports/htmllint.xml',
         ignore: [
           'Element “img” is missing required attribute “src”.',
           /* boosted mod Src : https://www.w3.org/TR/html-aria/ */
