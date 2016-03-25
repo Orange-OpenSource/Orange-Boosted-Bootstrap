@@ -112,16 +112,13 @@ const Dropdown = (($) => {
         return false
       }
 
-      // Boosted mod
-      // this.focus()
-      // end mod
       this.setAttribute('aria-expanded', 'true')
 
       $(parent).toggleClass(ClassName.OPEN)
       $(parent).trigger($.Event(Event.SHOWN, relatedTarget))
 
       // Boosted mod
-      $(parent).find(Selector.FIRST_ITEM_IN_MENU).first().focus()
+      $(parent).find(Selector.FIRST_ITEM_IN_MENU).first().trigger('focus')
       // end mod
 
       return false

@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 
   /* Jenkins flag */
   var JENKINS = grunt.option('jenkins');
-  if(process.env._JAVA_OPTIONS) {
+  if (process.env._JAVA_OPTIONS) {
     delete process.env._JAVA_OPTIONS;
   }
   /* boosted mod */
@@ -294,9 +294,9 @@ module.exports = function (grunt) {
     // boosted mod
     rtlcss: {
       core:{
-          expand : false,
-          dest   : 'dist/css/boosted-rtl.css',
-          src    : ['dist/css/boosted.css']
+        expand : false,
+        dest   : 'dist/css/boosted-rtl.css',
+        src    : ['dist/css/boosted.css']
       }
     },
     // end mod
@@ -361,7 +361,7 @@ module.exports = function (grunt) {
         src: ['**/*', '!**/screenshots/**', '!index.md'],
         dest: '.tmpdocs/examples/',
         rename: function (dest, src) {
-          return dest+'rtl-'+src;
+          return dest + 'rtl-' + src;
         }
       },
       fonts: {
@@ -658,16 +658,11 @@ module.exports = function (grunt) {
   // Test task.
   var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
-  if (runSubset('core') &&
-    // Skip core tests if this is a Savage build
-    process.env.TRAVIS_REPO_SLUG !== 'twbs-savage/bootstrap') {
+  if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'test-js', 'docs']);
   }
   // Skip HTML validation if running a different subset of the test suite
-  if (runSubset('validate-html') &&
-      isTravis &&
-      // Skip HTML5 validator when [skip validator] is in the commit message
-      isUndefOrNonZero(process.env.TWBS_DO_VALIDATOR)) {
+  if (runSubset('validate-html')) {
     testSubtasks.push('validate-html');
   }
   // Only run Sauce Labs tests if there's a Sauce access key

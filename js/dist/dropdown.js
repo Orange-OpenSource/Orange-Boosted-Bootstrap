@@ -49,6 +49,9 @@ var Dropdown = (function ($) {
     ROLE_MENU: '[role="menu"]',
     ROLE_LISTBOX: '[role="listbox"]',
     NAVBAR_NAV: '.navbar-nav',
+    // Boosted mod
+    FIRST_ITEM_IN_MENU: '.dropdown-menu .dropdown-item:not(.disabled)',
+    // end mod
     VISIBLE_ITEMS: '[role="menu"] li:not(.disabled) a, ' + '[role="listbox"] li:not(.disabled) a'
   };
 
@@ -108,14 +111,16 @@ var Dropdown = (function ($) {
         if (showEvent.isDefaultPrevented()) {
           return false;
         }
-        // Boosted mod
-        // this.focus()
-        $(parent).find('.dropdown-menu li:not(.disabled) a:not(.disabled)').first().trigger('focus');
-        // end mod
+
         this.setAttribute('aria-expanded', 'true');
 
         $(parent).toggleClass(ClassName.OPEN);
         $(parent).trigger($.Event(Event.SHOWN, relatedTarget));
+
+        // Boosted mod
+        $(parent).find(Selector.FIRST_ITEM_IN_MENU).first().trigger('focus');
+        // end mod
+
         return false;
       }
     }, {
@@ -271,7 +276,7 @@ var Dropdown = (function ($) {
 
   $(document).ready(function ($) {
     $('.dropdown-menu').attr('role', 'menu');
-    $('.dropdown-menu a.dropdown-item').attr('role', 'menuitem');
+    $('.dropdown-menu .dropdown-item').attr('role', 'menuitem');
   });
   // end mod
   /**
