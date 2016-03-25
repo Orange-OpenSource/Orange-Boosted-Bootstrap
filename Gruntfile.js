@@ -17,6 +17,9 @@ module.exports = function (grunt) {
 
   /* Jenkins flag */
   var JENKINS = grunt.option('jenkins');
+  if(process.env.JAVA_TOOL_OPTIONS) {
+    delete process.env.JAVA_TOOL_OPTIONS;
+  }
   /* boosted mod */
   var serveStatic = require('serve-static');
   /* end mod */
