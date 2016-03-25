@@ -288,6 +288,16 @@ module.exports = function (grunt) {
       }
     },
 
+    // boosted mod
+    rtlcss: {
+      core:{
+          expand : false,
+          dest   : 'dist/css/boosted-rtl.css',
+          src    : ['dist/css/boosted.css']
+      }
+    },
+    // end mod
+
     cssmin: {
       options: {
         // TODO: disable `zeroUnits` optimization once clean-css 3.2 is released
@@ -341,6 +351,15 @@ module.exports = function (grunt) {
             dest: '.tmpdocs'
           }
         ]
+      },
+      rtl: {
+        expand: true,
+        cwd: 'docs-orange/examples/',
+        src: ['**/*', '!**/screenshots/**', '!index.md'],
+        dest: '.tmpdocs/examples/',
+        rename: function (dest, src) {
+          return dest+'rtl-'+src;
+        }
       },
       fonts: {
         expand: true,
@@ -487,6 +506,24 @@ module.exports = function (grunt) {
           {
             from: 'src="/../assets',
             to: 'src="../../assets'
+          }
+        ]
+      },
+      rtl: {
+        src: ['.tmpdocs/examples/rtl-*/**/*.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'boosted.css',
+            to: 'boosted-rtl.css'
+          },
+          {
+            from: 'boosted.min.css',
+            to: 'boosted-rtl.min.css'
+          },
+          {
+            from: '<html lang="en">',
+            to: '<html lang="en" dir="rtl">'
           }
         ]
       }
@@ -656,7 +693,7 @@ module.exports = function (grunt) {
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
   grunt.registerTask('sass-compile', ['sass:core', 'sass:docs']);
 
-  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'cssmin:core', 'cssmin:docs']);
+  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'rtlcss:core','cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
   /* boosted mod */
@@ -685,7 +722,7 @@ module.exports = function (grunt) {
   /* end mod */
   grunt.registerTask('lint-docs-js', ['jscs:assets']);
   /* boosted mod */
-  grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'jekyll:docs', 'replace']);
+  grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl','copy:docs', 'jekyll:docs', 'replace']);
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github']);
 
