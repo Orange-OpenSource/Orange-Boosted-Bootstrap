@@ -113,7 +113,7 @@ const MegaMenu = (($) => {
 
     if (window.innerWidth < Dimension.MEDIA_BP_SM) {
 
-      $(Selector.MEGAMENU_TITLE_L2).on ('click', function () {
+      $(Selector.MEGAMENU_TITLE_L2).on('click', function () {
 
         if (!$(this).hasClass(ClassName.FOLDED)) {
           $(Selector.MEGAMENU_TITLE_L1).hide()
