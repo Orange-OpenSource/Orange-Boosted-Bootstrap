@@ -291,9 +291,9 @@ module.exports = function (grunt) {
     // boosted mod
     rtlcss: {
       core:{
-          expand : false,
-          dest   : 'dist/css/boosted-rtl.css',
-          src    : ['dist/css/boosted.css']
+        expand : false,
+        dest   : 'dist/css/boosted-rtl.css',
+        src    : ['dist/css/boosted.css']
       }
     },
     // end mod
@@ -358,7 +358,7 @@ module.exports = function (grunt) {
         src: ['**/*', '!**/screenshots/**', '!index.md'],
         dest: '.tmpdocs/examples/',
         rename: function (dest, src) {
-          return dest+'rtl-'+src;
+          return dest + 'rtl-' + src;
         }
       },
       fonts: {

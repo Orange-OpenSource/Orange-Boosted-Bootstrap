@@ -23,7 +23,7 @@ const Navbar = (($) => {
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
 
   const Default = {
-    sticky : true,
+    sticky : false,
     trigger : ''
   }
 
@@ -42,7 +42,6 @@ const Navbar = (($) => {
 
   const Selector = {
     CONFORTP_BAR : '#accessibilitytoolbarGraphic',
-    HIDE_SUPRA_TRIGGER : '#hide_supra_trigger',
     SUPRA_BAR : '.navbar.supra',
     MEGAMENU_PANEL : '.mega-menu.panel'
   }
