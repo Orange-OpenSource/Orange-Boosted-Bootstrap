@@ -113,7 +113,7 @@ const MegaMenu = (($) => {
 
     if (window.innerWidth < Dimension.MEDIA_BP_SM) {
 
-      $(Selector.MEGAMENU_TITLE_L2).click(function () {
+      $(Selector.MEGAMENU_TITLE_L2).on ('click', function () {
 
         if (!$(this).hasClass(ClassName.FOLDED)) {
           $(Selector.MEGAMENU_TITLE_L1).hide()
@@ -133,7 +133,7 @@ const MegaMenu = (($) => {
       })
 
       // navbar
-      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).click(function () {
+      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).on('click', function () {
         let parentItem = $(this).parent()
 
         if (!parentItem.hasClass(ClassName.FOLDED)) {
