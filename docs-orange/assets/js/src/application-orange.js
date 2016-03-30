@@ -3,11 +3,15 @@
 
   $(function () {
 
-    $('[href=#]').click(function (e) {
+    $('[href="#"]').click(function (e) {
       e.preventDefault()
     });
 
     $(document).ready(function () {
+
+      // init megamenu demo
+      $('.mega-menu.panel').megamenu();
+      console.log('init');
 
       $(window).scroll(function () {
         if ($(this).scrollTop() > window.innerHeight) {
