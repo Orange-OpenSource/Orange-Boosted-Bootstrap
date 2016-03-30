@@ -27,7 +27,7 @@ Megamenu has a footer section where additional links can be added and a button t
 <div class="mega-menu panel" style="position: static">
     <div class="collapse panel-collapse in" id="collapseExample" aria-labelledby="menu_title">
         <div class="container">
-            <h2 aria-hidden="true" id="menu_title"><a href="#">Home Shop</a></h2>
+            <h2 role="presentation" id="menu_title"><a aria-hidden="true" href="#">Home Shop</a></h2>
             <div class="row">
                 <div class="col-xs-12 col-md-3">
                     <h3 id="list_title_1"><a href="#">Internet</a></h3>
@@ -91,7 +91,7 @@ Be sure to use `.panel` and `.pane-collapse` classes to the megamenu section and
 Using javascript, simply declare your navbar component with the needed options.
 
 {% highlight js %}
-$('mega-menu.panel').megamenu();
+$('.mega-menu.panel').megamenu();
 {% endhighlight %}
 
 See a full implementation in the Orange News [example page](../..//examples/orange-news/)
