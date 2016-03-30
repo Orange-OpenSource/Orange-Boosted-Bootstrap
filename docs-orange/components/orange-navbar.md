@@ -187,7 +187,7 @@ Using javascript your can initialize the navbar component with the following opt
 
 ## Usage
 
-In your document javascript simply declare your navbar component with the needed options.
+Using javascript, simply declare your navbar component with the needed options.
 
 {% highlight js %}
 $('#demo_navbar').navbar({sticky: true, trigger: '#hide_supra_trigger'});

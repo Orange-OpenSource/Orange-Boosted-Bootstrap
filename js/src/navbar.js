@@ -64,6 +64,8 @@ const Navbar = (($) => {
       this._triggerElm = $(this._config.trigger)[0]
       this._throttleTimer = 0
 
+      this._addAria()
+
       if (this._config.sticky) {
         $(this._element).addClass('fixed-header')
         $(Selector.MEGAMENU_PANEL).addClass('sticky')
@@ -127,6 +129,9 @@ const Navbar = (($) => {
       }
     }
 
+    _addAria() {
+      $(this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true)
+    }
 
     // static
 

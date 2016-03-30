@@ -68,4 +68,11 @@ $(function () {
     assert.strictEqual($(document.body).css('padding-top'), elHeight + 'px')
   })
 
+  QUnit.test('should add aria to toggle elements', function (assert) {
+    assert.expect(1)
+    var $el = $('<div><div class="navbar"><div class="nav-link" data-toggle="collapse"></div></div></div>')
+    $el.boostedNavbar()
+    assert.strictEqual($el.find('.nav-link[data-toggle]').attr('aria-haspopup'), 'true')
+  })
+
 })

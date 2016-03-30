@@ -56,7 +56,7 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">EN</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">EN</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a class="dropdown-item" href="#">FR</a></li>
                                 <li><a class="dropdown-item" href="#">SP</a></li>
@@ -113,7 +113,7 @@
         <div class="mega-menu panel">
             <div class="collapse panel-collapse " id="collapseDiscover" aria-labelledby="menu_title_discover">
                 <div class="container">
-                    <h2 aria-hidden="true" id="menu_title_discover"><a href="#">Home Discover</a></h2>
+                    <h2 role="presentation" id="menu_title_discover"><a aria-hidden="true" href="#">Home Discover</a></h2>
                     <div class="row">
                         <div class="o-frame-wrapper col-xs-6 col-sm-6 col-md-3">
                             <a href="#" class="o-frame o-frame-fun">
@@ -148,7 +148,7 @@
         <div class="mega-menu panel">
             <div class="collapse panel-collapse" id="collapseShop" aria-labelledby="menu_title2">
                 <div class="container">
-                    <h2 aria-hidden="true" id="menu_title2"><a href="#">Home Shop</a></h2>
+                    <h2 role="presentation" id="menu_title2"><a aria-hidden="true" href="#">Home Shop</a></h2>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-3">
                             <h3 id="list_title_1"><a href="#">Internet</a></h3>
@@ -537,6 +537,7 @@
 
             $(document).ready(function(){
               $('header').navbar({sticky: true, trigger: '#hide_supra_trigger'});
+              $('.mega-menu.panel').megamenu();
             });
 		</script>
 

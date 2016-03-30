@@ -6,6 +6,13 @@ group: components
 
 Megamenu is based on the [collapse](../collapse) component.
 
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Megamenu panel
+
 It consists of 3 or 4 columns depending on project design needs. A `h2` title is used as a general title of the megamenu. Each column is headlined by a `h3` title.
 
 Megamenu has a footer section where additional links can be added and a button to close the panel.
@@ -78,5 +85,13 @@ Megamenu has a footer section where additional links can be added and a button t
 Megamenu should be used in combination with the [navbar](../navbar) component.
 
 Be sure to use `.panel` and `.pane-collapse` classes to the megamenu section and `data-parent` attribute in the navbar `.nav-link` get an opened megamenu closed when another gets opened.
+
+## Usage
+
+Using javascript, simply declare your navbar component with the needed options.
+
+{% highlight js %}
+$('mega-menu.panel').megamenu();
+{% endhighlight %}
 
 See a full implementation in the Orange News [example page](../..//examples/orange-news/)

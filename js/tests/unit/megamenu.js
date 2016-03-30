@@ -44,4 +44,16 @@ $(function () {
     assert.strictEqual($megamenu[0], $el[0], 'collection contains element')
   })
 
+  QUnit.test('should focus first focusable link', function (assert) {
+    assert.expect(1)
+    var done = assert.async();
+    var $el = $('#megamenu_test').boostedMegaMenu();
+    var $focusable = $('#megamenu_test a:not([aria-hidden="true"]):first')
+    $el.trigger('shown.bs.collapse');
+    setTimeout(function () {
+      assert.strictEqual(document.activeElement, $focusable[0], 'Link was focused');
+      done();
+    });
+  })
+
 })

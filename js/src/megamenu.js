@@ -58,7 +58,7 @@ const MegaMenu = (($) => {
 
     constructor(element) {
       this._element = element
-      // this._addAria(this._element);
+      this._addEventListeners()
     }
 
     // getters
@@ -70,6 +70,13 @@ const MegaMenu = (($) => {
     // public
 
     // private
+    _addEventListeners() {
+      // megamenu accessibility
+      $(this._element).on(Event.MEGAMENU_SHOWN, function () {
+        // set focus on first focusable link (ignore aria-hidden)
+        $(this).find('a:not([aria-hidden="true"]):first').trigger('focus')
+      })
+    }
 
     // static
     static _jQueryInterface(config) {
@@ -99,17 +106,6 @@ const MegaMenu = (($) => {
   }
 
   $(document).ready(() => {
-
-    // megamenu accessibility
-    $(Selector.MEGAMENU).on(Event.MEGAMENU_SHOWN, function () {
-      // set focus on first focusable link (skip home title)
-      $(this).find('a:not(:first):first').focus()
-    })
-
-    // tell navbar megamenu toggle it has popup
-    $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).attr('aria-haspopup', true)
-
-    // megamenu logic
 
     if (window.innerWidth < Dimension.MEDIA_BP_SM) {
 
