@@ -378,6 +378,10 @@ const Collapse = (($) => {
     Collapse._jQueryInterface.call($(target), config)
   })
 
+  $(() => {
+    $('.o-accordion .panel-heading h4 a').prepend('<div class=arrow></div>')
+  })
+
 
   /**
    * ------------------------------------------------------------------------

@@ -11,7 +11,6 @@
 
       // init megamenu demo
       $('.mega-menu.panel').megamenu();
-      console.log('init');
 
       $(window).scroll(function () {
         if ($(this).scrollTop() > window.innerHeight) {

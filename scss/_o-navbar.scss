@@ -38,7 +38,7 @@
       margin-top: calc((#{$navbar-height} - #{$font-size-h4}) / 2);
 
       span[class^="icon-"] {
-        font-size: $font-size-h4;
+        font-size: calc(#{$font-size-h4} - 1px); // remove 1px to fit
         font-weight: $brand-font-weight-normal;
       }
     }
@@ -126,6 +126,11 @@
   .navbar {
     min-height: $navbar-height-sm;
 
+    .container {
+      max-width: none;
+      margin: 0;
+    }
+
     .navbar-toggleable-xs {
       position: absolute;
       top: $navbar-height-sm;
@@ -135,18 +140,11 @@
       margin: 0;
       background-color: $brand-orange-black;
 
-    //   &.in {
-    //     padding-top: $navbar-height-sm;
-    //   }
-
-    //   &.collapsing{
-    //     transition: none;
-    //   }
-
       .nav-item {
         display: block;
         float: none;
         padding: calc((#{$font-size-h1} - #{$font-size-h5}) / 2) 0;
+        padding-left: .625rem;
         margin-left: 0;
         font-size: $font-size-h5;
         line-height: 1;
@@ -173,10 +171,6 @@
 
         &:first-child {
           margin-left: 0;
-
-        //   .nav-link {
-        //     margin-top: 0;
-        //   }
         }
       }
 
@@ -224,9 +218,8 @@
 }
 
 .navbar-toggler {
-  @include pull-right;
   padding: .625rem;
-  font-size: $font-size-h4;
+  font-size: calc(#{$font-size-h4} - 1px);
   background-color: transparent;
   background-image: none;
   border: 0;
@@ -319,10 +312,4 @@
       margin-top: 1.75rem;
     }
   }
-
-//   > li {
-//     > a {
-//       font-size: $font-size-base;
-//     }
-//   }
 }

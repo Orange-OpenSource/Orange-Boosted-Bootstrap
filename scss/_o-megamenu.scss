@@ -149,12 +149,13 @@
 @include media-breakpoint-down(xs) {
   .mega-menu {
     position: absolute;
-    top: calc(#{$font-size-h1} * 2);
-    z-index: 110;
+    top: calc(#{$font-size-h1} * 2 + 3px);
+    z-index: 120;
     width: 100%;
     font-size: $font-size-h5;
 
     .container {
+      max-width: none;
       margin: 0;
 
       .row {
@@ -233,7 +234,6 @@
 }
 
 .search-bar {
-//   padding: 1.25rem 0;
   background-color: $brand-orange-black;
   border-top: 1px solid $gray-dark;
 
