@@ -49,6 +49,8 @@ Orange navbar is the main navigation of project website. It should always be inc
 </header>
 {% endexample %}
 
+Using icons as links is possible, be sure to add the `.icon` class to the `.nav-link` element for proper alignement.
+
 ## Supra bar
 
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
@@ -63,13 +65,13 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
         </ul>
         <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link icon">
                     <span class="sr-only">basket</span>
                     <span class="icon-buy" aria-hidden="true"></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link icon">
                     <span class="sr-only">my account</span>
                     <span class="icon-avatar"></span>
                 </a>
@@ -101,13 +103,13 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
             <ul class="nav navbar-nav pull-xs-right">
                 <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="#" class="nav-link icon">
                         <span class="sr-only">basket</span>
                         <span class="icon-buy" aria-hidden="true"></span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link icon">
                         <span class="sr-only">my account</span>
                         <span class="icon-avatar"></span>
                     </a>

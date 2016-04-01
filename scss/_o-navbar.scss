@@ -114,6 +114,15 @@
       }
     }
 
+    .nav-link.icon {
+      margin-top: calc((#{$navbar-supra-height} - #{$font-size-h6}) / 2);
+
+      span[class^="icon-"] {
+        font-size: $font-size-h6;
+        font-weight: $brand-font-weight-normal;
+      }
+    }
+
     .dropdown-menu {
       top: $navbar-supra-height;
       right: 0;
