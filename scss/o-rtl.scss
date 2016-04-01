@@ -1,0 +1,18 @@
+// Orange rtl overrides
+//
+//
+
+// invert chevrons
+
+.icon-arrow-next::before {
+  content: "\ea53";
+}
+.icon-arrow-previous::before {
+  content: "\ea52";
+}
+
+// rotate stepbar chevrons
+.stepbar-item::after {
+  transform: rotateY(180deg);
+}
+

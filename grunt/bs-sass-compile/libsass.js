@@ -31,6 +31,16 @@ module.exports = function configureLibsass(grunt) {
           /* end mod */
         }
       },
+      // boosted mod
+      rtl: {
+        options: {
+          sourceMap: false
+        },
+        files: {
+          'dist/css/o-rtl.css': 'scss/o-rtl.scss'
+        }
+      },
+      // end mod
       docs: {
         files: {
           /* boosted mod */

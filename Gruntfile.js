@@ -66,6 +66,7 @@ module.exports = function (grunt) {
       dist: 'dist',
       docs: 'docs/dist',
       /* Boosted mod */
+      rtl: 'dist/css/o-rtl.*',
       tmp: '.tmpdocs'
       /* end mod */
     },
@@ -205,6 +206,10 @@ module.exports = function (grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       /* boosted mod */
+      rtlCss: {
+        src: ['dist/css/boosted-rtl.css', 'dist/css/o-rtl.css'],
+        dest: 'dist/css/boosted-rtl.css'
+      },
       docsJs: {
         src: [
             '.tmpdocs/assets/js/src/application.js',
@@ -689,9 +694,9 @@ module.exports = function (grunt) {
     require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
   })(process.env.TWBS_SASS || 'libsass');
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
-  grunt.registerTask('sass-compile', ['sass:core', 'sass:docs']);
+  grunt.registerTask('sass-compile', ['sass:core', 'sass:rtl', 'sass:docs']);
 
-  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'rtlcss:core','cssmin:core', 'cssmin:docs']);
+  grunt.registerTask('dist-css', ['sass-compile', 'postcss:core', 'rtlcss:core','concat:rtlCss', 'clean:rtl', 'cssmin:core', 'cssmin:docs']);
 
   // Full distribution task.
   /* boosted mod */
