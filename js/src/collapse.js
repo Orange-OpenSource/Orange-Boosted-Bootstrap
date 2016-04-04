@@ -57,6 +57,7 @@ const Collapse = (($) => {
 
   const Selector = {
     ACTIVES     : '.panel > .in, .panel > .collapsing',
+    ACCORDION_HEADING: '.o-accordion .panel .panel-heading .panel-title a',
     DATA_TOGGLE : '[data-toggle="collapse"]'
   }
 
@@ -357,10 +358,21 @@ const Collapse = (($) => {
 
   let $collTabHeadings =  $('.panel-heading')
   let $collTabPanels =  $('.panel-collapse:not(.mega-menu)')
+  let $accordionTabs = $(Selector.ACCORDION_HEADING)
 
   $collTabHeadings.attr({ role: 'tab' })
   $collTabPanels.attr({ role: 'tabpanel' })
   $('.panel').attr('role', 'presentation')
+
+  $accordionTabs.on('click', function() {
+    let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
+
+    if (collpanel.hasClass('in')) {
+      $(this).parent().removeClass('panel-chevron-open').addClass('panel-chevron-closed')
+    } else {
+      $(this).parent().removeClass('panel-chevron-closed').addClass('panel-chevron-open')
+    }
+  })
 
   /**
    * ------------------------------------------------------------------------
@@ -379,7 +391,17 @@ const Collapse = (($) => {
   })
 
   $(() => {
-    $('.o-accordion .panel-heading h4 a').prepend('<div class=arrow></div>')
+    $(Selector.ACCORDION_HEADING).each(function() {
+      let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
+
+      if (collpanel.hasClass('in')) {
+        $(this).parent().removeClass('panel-chevron-closed').addClass('panel-chevron-open')
+      } else {
+        $(this).parent().removeClass('panel-chevron-open').addClass('panel-chevron-closed')
+      }
+
+      $(this).prepend('<div class=arrow></div>')
+    })
   })
 
 
