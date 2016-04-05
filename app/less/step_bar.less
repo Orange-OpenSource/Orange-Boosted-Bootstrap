@@ -1,128 +1,172 @@
-/********************************************************/
-/****************** wizard step bar *********************/
-/********************************************************/
-.arrow-wizard-next(@arrow-width;@arrow-color-right){
-    li.on + li.next > .arrow {
-      &,
-      &:after {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-color: @arrow-color-right;
-        border-style: solid;
+//
+// Orange stepbar
+//
+
+@import "variables-orange2015.less";
+
+// inline svgs
+
+@arrow-black-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23000000%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E";
+
+@arrow-orange-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23f16e00%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E";
+
+@arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23dddddd%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E";
+
+.stepbar-arrow (@svg) {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -1.5rem;
+    z-index: 500;
+    display: block;
+    width: @o-stepbar-arrow-width;
+    height: @o-stepbar-height;
+    content: "";
+    background-image: url("data:image/svg+xml,@{svg}");
+    background-size: @o-stepbar-arrow-width @o-stepbar-height;
+  }
+}
+
+.o-stepbar {
+  &,
+  ol,
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .stepbar-item {
+    .stepbar-arrow(@arrow-grey-svg);
+    position: relative;
+    float: left;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: @brand-orange-black;
+    white-space: nowrap;
+    list-style: none;
+    background-color: @gray-light-plus;
+
+    &:first-child {
+      padding-left: @padding-base-horizontal;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
       }
     }
-    li.on + li.next > .arrow {
-      border-width: @arrow-width (@arrow-width/2);
-    }
-    li.on + li.next > .arrow:after {
-      border-width: @arrow-width (@arrow-width/2);
-      content: "";
-    }
-}
 
-.arrow-right-next(@arrow-outer-width;@arrow-outer-height;@arrow-width;@arrow-color-right;@arrow-color-left){    
-    .arrow-wizard-next(@arrow-width;@arrow-color-right);
-    li.on + li.next > .arrow{
-        top: 50%;
-        //left: -@arrow-outer-width;
-        margin-left: -@arrow-outer-width;
-        top: @arrow-outer-height;
-        border-left-width: 0;
-        border-right-color: @arrow-color-right;
-        &:after {
-          content: " ";
-          //left: 1px;
-          bottom: -@arrow-width;
-          border-right-width: 0;
-          border-left-color: @arrow-color-left;
-        }
-    }
-}
-
-.arrow-wizard(@arrow-width;@arrow-color-right){
-    li.on > .arrow {
-      &,
-      &:after {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-color: @arrow-color-right;
-        border-style: solid;
+    &.done {
+      .stepbar-arrow(@arrow-black-svg);
+      background-color: @brand-orange-black;
+      .stepbar-link {
+        color: @brand-orange-white;
       }
     }
-    li.on > .arrow {
-      border-width: @arrow-width (@arrow-width/2);
-    }
-    li.on > .arrow:after {
-      border-width: @arrow-width (@arrow-width/2);
-      content: "";
-    }
-}
 
-.arrow-right(@arrow-outer-width;@arrow-outer-height;@arrow-width;@arrow-color-right;@arrow-color-left){    
-    .arrow-wizard(@arrow-width;@arrow-color-right);
-    li.on > .arrow{
-        top: 50%;
-        //left: -@arrow-outer-width;
-        margin-left: -@arrow-outer-width;
-        top: @arrow-outer-height;
-        border-left-width: 0;
-        border-right-color: @arrow-color-right;
-        &:after {
-          content: " ";
-          //left: 1px;
-          bottom: -@arrow-width;
-          border-right-width: 0;
-          border-left-color: @arrow-color-left;
+    &.current {
+      .stepbar-arrow(@arrow-orange-svg);
+      background-color: @brand-orange;
+      .stepbar-link {
+        color: @brand-orange-white;
+      }
+    }
+
+    @media(max-width: @screen-sm-max) {
+      &::after,
+      &.done::after,
+      &.current::after {
+        display: none;
+      }
+    }
+
+    .stepbar-link {
+      text-decoration: none;
+
+      .step-number::after {
+        content: ".";
+      }
+
+      .step-number::after {
+        @media(max-width: @screen-sm-max) {
+          display: none;
         }
+      }
+
+      .step-title {
+        @media(max-width: @screen-sm-max) {
+          display: none;
+        }
+      }
     }
+
+    @media(max-width: @screen-sm-max) {
+      &,
+      &:first-child {
+        padding: 1.2rem 0;
+      }
+
+      width: @pagination-width;
+      margin-right: .2rem;
+      line-height: 1.6rem;
+      text-align: center;
+    }
+  }
+
+  @media(max-width: @screen-sm-max) {
+    .stepbar-header {
+      margin-right: 1rem;
+      font-weight: @brand-font-weight-bold;
+      vertical-align: middle;
+      font-size: 1.6rem;
+    }
+
+    ol,
+    ul {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      vertical-align: middle;
+    }
+  }
 }
 
-/* visited = black */
-/* on (current step) = orange */
-/* Default = next = @gray-light-plus (#ddd) */
-//.arrow-right(@o-wizard-step-bar-arrow-outer-width;0;@o-wizard-step-bar-arrow-width;@o-wizard-step-bar-arrow-height;@o-wizard-step-bar-arrow-color-right;@o-wizard-step-bar-arrow-color;@o-wizard-step-bar-arrow-color);
-ul.o-wizard-step-bar {
-	clear:both;
-	margin:1em;
-	padding:0;
-    li {
-        background-color: @gray-light-plus;
-        color: @gray-base;
-        font-weight:bold;        
-        position:relative;
-        padding: @padding-base-vertical @padding-base-horizontal;
-        float:left;	
-        list-style:none;
-    }
-    li.visited *,
-    li.on{        
-        color: @brand-orange-white;        
-        cursor:pointer;
-    }
-    li.visited{
-        background-color: @gray-base;
-    }
-    li.on{
-        background-color: @brand-orange;
-    }
-    .arrow-right(@o-wizard-step-bar-arrow-outer-width;0;@o-wizard-step-bar-arrow-width;@brand-orange;@gray-base);
-    
-    .arrow-right-next(@o-wizard-step-bar-arrow-outer-width;0;@o-wizard-step-bar-arrow-width;@gray-light-plus;@brand-orange);
-    
-    @media (max-width: @screen-sm-max) {
-        .arrow-right(@o-wizard-step-bar-arrow-outer-width-small;0;@o-wizard-step-bar-arrow-width-small;@brand-orange;@gray-base);
+@media(min-width: @screen-lg-min) {
+  // one item
+  .stepbar-item:nth-child(1):nth-last-child(1) {
+    width: 100%;
+  }
 
-        .arrow-right-next(@o-wizard-step-bar-arrow-outer-width-small;0;@o-wizard-step-bar-arrow-width-small;@gray-light-plus;@brand-orange);
-        
-    }
-    
-    
+  // two items
+  .stepbar-item:nth-child(1):nth-last-child(2),
+  .stepbar-item:nth-child(2):nth-last-child(1) {
+    width: 50%;
+  }
+
+  // three items
+  .stepbar-item:nth-child(1):nth-last-child(3),
+  .stepbar-item:nth-child(2):nth-last-child(2),
+  .stepbar-item:nth-child(3):nth-last-child(1) {
+    width: 33.3333%;
+  }
+
+  // four items
+  .stepbar-item:nth-child(1):nth-last-child(4),
+  .stepbar-item:nth-child(2):nth-last-child(3),
+  .stepbar-item:nth-child(3):nth-last-child(2),
+  .stepbar-item:nth-child(4):nth-last-child(1) {
+    width: 25%;
+  }
+
+  // five items
+  .stepbar-item:nth-child(1):nth-last-child(5),
+  .stepbar-item:nth-child(2):nth-last-child(4),
+  .stepbar-item:nth-child(3):nth-last-child(3),
+  .stepbar-item:nth-child(4):nth-last-child(2),
+  .stepbar-item:nth-child(5):nth-last-child(1) {
+    width: 20%;
+  }
 }
-ul.o-wizard-step-bar[data-steps="2"] li { width: 50%; }
-ul.o-wizard-step-bar[data-steps="3"] li { width: 33%; }
-ul.o-wizard-step-bar[data-steps="4"] li { width: 25%; }
-ul.o-wizard-step-bar[data-steps="5"] li { width: 20%; }

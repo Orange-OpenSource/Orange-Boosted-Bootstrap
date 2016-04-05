@@ -2,91 +2,96 @@
   <h1 id="stepbar" class="page-header">Stepbar</h1>
   <p class='lead'>Indicate the current step within a sequential navigation.</p>
   <h2 id="stepbar-default">Default stepbar</h2>
-  <p>Declare a list, each item need to contain a first <code>&lt;div&gt;</code> with class <code>.arrow</code> and attribute <code>aria-hidden="true"</code>, next add the correct css classes. 
-							Add the <code>o-wizard-step-bar</code> class on the <code>ul</code> element (root of your list). Then, to design steps, add <code>visited</code>, <code>on</code> or 				<code>next</code> classes if yout want a visited step, the current step or a futur step. These classes are to be added to the list items (<code>li</code> tag).<br />
-							The number of steps can be adjusted using the special attribute <code>data-step</code> (present on the <code>ul</code> tag of the component). 5 steps max.</p>
-  
+
+<p>
+Declare a <code>.o-stepbar</code> nav tag contaning the stepbar. Within a <code>&lt;ol&gt;</code> ordered list delcare <code>.stepbar-item</code> elements up to 5. Fill the <code>.step-number</code> and <code>.step-title</code> accordingly.
+
+Use <code>.done</code> and <code>.current</code> classes in correct order. There is only one <code>.current</code> item. Fill a correct description on each <code>.stepbar-link</code> <code>title</code> attributes.
+
+In mobile view a <code>.stepbar-header</code> is needed before the list, Orange brand labels it “Step”.
+
+Be carful to choose short labels when using 5 steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the <code>title</code> attributle of the <code>&lt;a&gt;</code>link.
+</p>
+
   <div class="bs-example" data-example-id="default-stepbar">
       <div class="container-fluid">
         <div class="row">
             <!-- step bar -->
-            <ul class="o-wizard-step-bar" data-steps="5">
-                <li class="visited">
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
-                        <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
-                    </div>
+            <nav class="o-stepbar">
+            <span class="hidden-md hidden-lg stepbar-header">Step</span>
+            <ol>
+                <li class="done stepbar-item">
+                    <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Voluptatem</span>
+                    </a>
                 </li>
-                <li class="visited">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
-                        <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
-                    </div>
+                <li class="stepbar-item current">
+                    <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Aperiam</span>
+                    </a>
                 </li>
-                <li class="on">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
-                        <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
-                    </div>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Accusantinum</span>
+                    </a>
                 </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
-                        <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
-                    </div>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 4 : Ipsam">
+                        <span class="step-number">4</span>
+                        <span class="step-title">Ipsam</span>
+                    </a>
                 </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
-                        <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
-                    </div>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 5 : Aspernatur">
+                        <span class="step-number">5</span>
+                        <span class="step-title">Aspernatur</span>
+                    </a>
                 </li>
-            </ul>
+            </ol>
+        </nav>
             <!-- /step bar -->
         </div>
       </div><!-- /.container-fluid -->
   </div>
 {% highlight html %}
-<ul class="o-wizard-step-bar" data-steps="5">
-    <li class="visited">
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
-            <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
-        </div>
-    </li>
-    <li class="visited">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
-            <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
-        </div>
-    </li>
-    <li class="on">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
-            <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
-        </div>
-    </li>
-    <li class="next">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
-            <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
-        </div>
-    </li>
-    <li class="next">
-        <div class="arrow" aria-hidden="true"></div>
-        <div>
-            <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
-            <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
-        </div>
-    </li>
-</ul>
+<nav class="o-stepbar">
+            <span class="hidden-md hidden-lg stepbar-header">Step</span>
+            <ol>
+                <li class="done stepbar-item">
+                    <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Voluptatem</span>
+                    </a>
+                </li>
+                <li class="stepbar-item current">
+                    <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Aperiam</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Accusantinum</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 4 : Ipsam">
+                        <span class="step-number">4</span>
+                        <span class="step-title">Ipsam</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 5 : Aspernatur">
+                        <span class="step-number">5</span>
+                        <span class="step-title">Aspernatur</span>
+                    </a>
+                </li>
+            </ol>
+        </nav>
 {% endhighlight %}
 
 </div>
