@@ -40,11 +40,11 @@ module.exports = function (grunt) {
     watch: {
       less: {
         files: ['<%= yeoman.app %>/less/{,*/}*.less'],
-        tasks: ['less', 'copy:styles']
+        tasks: ['dist', 'docs']
       },
       js: {
         files: ['<%= yeoman.app %>/js/{,*/}*.js'],
-        tasks: ['newer:eslint'],
+        tasks: ['dist', 'docs'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9000,
+        port: 9001,
         // change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost',
         livereload: 35730
@@ -157,7 +157,7 @@ module.exports = function (grunt) {
           '!dist/css/*.min.css'
        ]
     },
-    
+
     bootlint: {
       options: {
         stoponerror: false,
@@ -167,7 +167,7 @@ module.exports = function (grunt) {
     },
 
     // Banner
-    banner: '/*!\n <%= yeoman.pkg.name %> - v<%= yeoman.pkg.version %> - ' +      
+    banner: '/*!\n <%= yeoman.pkg.name %> - v<%= yeoman.pkg.version %> - ' +
       '<%= yeoman.pkg.description %>\n ' +
       'Copyright <%= grunt.template.today("yyyy") %> <%= yeoman.pkg.author.name %>, all right reserved\n'+
       'MIT Licensed \n*/\n',
@@ -182,7 +182,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     // Generate changelog based on git commit
     changelog: {
       options: {
@@ -695,13 +695,13 @@ module.exports = function (grunt) {
               to: '<li><a href="#sass-installation">Installation</a></li> -->'
           }, {
               from: '<a href="#" class="navbar-brand">Brand</a>',
-              to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage" width="48px"/></a>'
+              to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>'
           }, {
               from: '<a class="navbar-brand" href="#">Brand</a>',
-              to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage" width="48px"/></a>'
+              to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>'
           }, {
               from: '<img alt="Brand" width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">',
-              to: '<img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage" width="48px"/>'
+              to: '<img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/>'
           }, {
               from: '<li><a href="#examples-framework">Using the framework</a></li>',
               to: '<li><a href="#examples-orange">Orange page example</a></li><li><a href="#examples-framework">Using the framework</a></li>'
@@ -785,7 +785,7 @@ module.exports = function (grunt) {
           // Put the orange logo to replace the bootstrap one and the project name
             {
               from: '<a class="navbar-brand" href="#">Project Name</a>',
-              to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage" width="48px"/></a>'
+              to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>'
           },
           // Add the Orange pagination to the nav of the components page
             {

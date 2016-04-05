@@ -4,10 +4,6 @@ html{
     /*Orange brand All is bold only plain texts are not bold*/
     font-weight:@brand-font-weight-normal;
 }
-.navbar *{
-    /*Orange brand All is bold*/
-    font-weight:@brand-font-weight-bold;
-}
 
 //
 // Caret
@@ -36,6 +32,25 @@ html{
     margin-bottom: 0;
 }
 
+// Navbar
+//
+//
+
+.navbar {
+  min-height: @navbar-height;
+  font-size: @navbar-font-size;
+  font-weight:@brand-font-weight-bold;
+  border: 0;
+
+  .navbar-brand {
+    padding: calc(@navbar-height / 4) 0;
+
+    img {
+      height: 5rem;
+      width: auto;
+    }
+  }
+}
 
 // Navbar toggle
 //
@@ -75,12 +90,12 @@ html{
   }
 }
 .navbar-brand {
-  height: @navbar-height;
+//   height: @navbar-height;
   margin: 0;
   > img {
     float:left;
   }
-  
+
 }
 .navbar-header {
   padding-right: @navbar-padding-horizontal;
@@ -114,13 +129,13 @@ html{
     > li {
       > a {
         .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
+        margin-top: 4.5rem;
+        font-size: @navbar-font-size;
       }
     }
-  }
 
-  > li {
-    > a {
-        font-size: @navbar-font-size;
+    li:first-child a{
+        padding-left: 2rem;
     }
   }
 }
