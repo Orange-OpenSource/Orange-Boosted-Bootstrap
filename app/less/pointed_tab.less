@@ -4,7 +4,7 @@
 /********************************************************/
 
 .o-nav-tabs {
-  position: relative;  
+  position: relative;
   // Reset font and text properties given new insertion method
   font-family: @font-family-base;
   font-size: @font-size-base;
@@ -19,26 +19,104 @@
   .box-shadow(0 5px 10px rgba(0,0,0,.2));
 
   // Overrides for proper insertion
-  white-space: normal;  
+  white-space: normal;
   > li.active a{
       &,
       &:hover{
           background-color: @o-nav-tabs-active-bg;
-          color: @o-nav-tabs-active-color;      
+          color: @o-nav-tabs-active-color;
           border: none;
       }
   }
   > li.active a{
-      &:focus{          
+      &:focus{
           background-color: @o-nav-tabs-active-bg;
-          color: @o-nav-tabs-active-color;     
+          color: @o-nav-tabs-active-color;
           border: none;
           outline-color: white;
       }
-  } 
+  }
   .arrow-bottom(@o-nav-tabs-arrow-outer-width;-@o-nav-tabs-arrow-outer-height;@o-nav-tabs-arrow-width;@o-nav-tabs-arrow-outer-color;@o-nav-tabs-arrow-color;@o-nav-tabs-arrow-color);
 }
 
 .o-nav-tabs-content {
   padding: 9px 14px;
+}
+
+/** Create a mixin for arrows **/
+.arrow-generic(@arrow-outer-width;@arrow-width){
+    > li.active > .arrow {
+      &,
+      &:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+      }
+    }
+    > li.active > .arrow {
+      border-width: @arrow-outer-width;
+    }
+    > li.active > .arrow:after {
+      border-width: @arrow-width;
+      content: "";
+    }
+}
+
+.arrow-bottom(@arrow-outer-width;@arrow-outer-height;@arrow-width;@arrow-outer-color;@arrow-color;@focus-color){
+    .arrow-generic(@arrow-outer-width;@arrow-width);
+    > li.active > .arrow{
+        left: 50%;
+        margin-left: -@arrow-outer-width;
+        bottom: @arrow-outer-height;
+        border-bottom-width: 0;
+        border-top-color: @arrow-outer-color; // IE8 fallback
+        border-top-color: @arrow-outer-color;
+        &:after {
+          content: " ";
+          bottom: 1px;
+          margin-left: -@arrow-width;
+          border-bottom-width: 0;
+          border-top-color: @arrow-color;
+        }
+    }
+    > li.active a:focus{
+        +.arrow{
+            border-top-color: @arrow-outer-color;
+            &:after{
+                border-top-color: @focus-color;
+            }
+        }
+        border-color: @focus-color;
+    }
+}
+
+.arrow-top(@arrow-outer-width;@arrow-outer-height;@arrow-width;@arrow-outer-color;@arrow-color;@focus-color){
+    .arrow-generic(@arrow-outer-width;@arrow-width);
+    > li.active > .arrow{
+        left: 50%;
+        margin-left: -@arrow-outer-width;
+        bottom: @arrow-outer-height;
+        border-top-width: 0;
+        border-bottom-color: @arrow-outer-color; // IE8 fallback
+        border-bottom-color: @arrow-outer-color;
+        &:after {
+          content: " ";
+          top: 1px;
+          margin-left: -@arrow-width;
+          border-top-width: 0;
+          border-bottom-color: @arrow-color;
+        }
+    }
+    > li.active a:focus{
+        +.arrow{
+            border-bottom-color: @arrow-outer-color;
+            &:after{
+                border-bottom-color: @focus-color;
+            }
+        }
+        border-color: @focus-color;
+    }
 }
