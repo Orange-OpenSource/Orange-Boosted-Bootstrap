@@ -254,6 +254,10 @@ body {
   text-decoration: underline;
 }
 
+.bs-docs-masthead .lead a.btn{
+  text-decoration: none;
+}
+
 .o-footer a:hover,.o-footer a:focus, .bs-docs-masthead .lead a:hover, .bs-docs-masthead .lead a:focus{
 	color: #F16E00;
   text-decoration: none;
