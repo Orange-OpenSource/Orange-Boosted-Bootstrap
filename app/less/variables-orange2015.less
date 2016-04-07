@@ -25,6 +25,7 @@
 //used to invert colors
 @brand-orange-white: #fff;
 @brand-orange-black: #000;
+@brand-orange-clear: transparent;
 /////////////////////////////////////////////////////////////
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -204,6 +205,9 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
+@btn-font-size: 1.6rem;
+@btn-font-size-sm: 1.4rem;
+@btn-font-size-lg: 1.6rem;
 @btn-font-weight: @brand-font-weight-bold;
 @btn-default-color: @gray-base;
 @btn-default-bg: @brand-orange-white;
@@ -231,7 +235,33 @@
 @btn-danger-bg: @brand-danger;
 @btn-danger-border: @btn-danger-bg;
 
-@btn-link-disabled-color: @gray-dark;
+@btn-primary-color: @brand-orange-white;
+@btn-primary-bg: @brand-primary;
+@btn-primary-hover-color: @btn-primary-color;
+@btn-primary-hover-bg: @brand-orange-black;
+@btn-primary-active-color: @btn-primary-color;
+@btn-primary-active-bg: @btn-primary-bg;
+
+@btn-secondary-color: @brand-orange-black;
+@btn-secondary-bg: @brand-orange-clear;
+
+@btn-success-color: @brand-orange-black;
+@btn-success-bg: @brand-success;
+
+@btn-info-color: @brand-orange-white;
+@btn-info-bg: @brand-orange-black;
+@btn-info-hover-color: @brand-orange-black;
+@btn-info-hover-bg: @brand-orange-white;
+
+@btn-link-disabled-color: @gray-light;
+@btn-link-disabled-black-bg-color: @gray-light;
+@link-color-disabled: @gray-light;
+@link-hover-decoration: none;
+@link-hover-color-disabled: @link-color-disabled;
+@link-color-inverse: @brand-orange-white;
+@link-hover-color-inverse: @brand-orange;
+@link-color-inverse-disabled: @gray-dark;
+@link-hover-color-inverse-disabled: @gray-dark;
 
 // Allows for customizing button radius independently from global border radius
 @btn-border-radius-base:         @border-radius-base;
