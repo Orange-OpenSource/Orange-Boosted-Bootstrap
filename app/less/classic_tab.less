@@ -5,23 +5,22 @@
 	cursor: pointer;
 }
 
-/*.nav > li > a padding 1rem 2rem*/
-
 // Give the tabs something to sit on
 .nav-tabs {
   > li {
-      + li {          
+      + li {
         margin-left: (@grid-gutter-width / 2);
       }
     // Actual tabs (as links)
     > a {
-        padding: 1rem 2rem;
-        font-weight: bold;
-        font-size: 1.6rem;
+      padding: 1rem 2rem;
+      font-weight: @brand-font-weight-bold;
+      font-size: @navbar-font-size;
+      line-height: @navbar-font-size;
+
       &:hover ,
       &:focus {
         color: @nav-tabs-link-hover-color;
-        //outline:none;
         background-color: @nav-tabs-link-hover-bg;
       }
     }
@@ -37,9 +36,6 @@
     // Active state, and its :hover to override normal :hover
     &.active > a {
       &:focus {
-          //outline:none;
-          //background-color: @brand-orange;
-          //color: @brand-orange-white;
           border-width: 2px;
           outline-style: dotted;
           outline-offset: -6px;
@@ -62,17 +58,17 @@
     // Active state
     &,
     &.active {
-        > a {        
+        > a {
           font-weight: bold;
 
-          &:hover {          
+          &:hover {
               color: @nav-pills-active-link-hover-color;
               background-color: @nav-pills-active-link-hover-bg;
           }
           &:focus {
               outline:none;
               background-color: @brand-orange;
-              color: @brand-orange-white;        
+              color: @brand-orange-white;
           }
         }
     }
