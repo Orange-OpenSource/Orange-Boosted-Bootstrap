@@ -1252,6 +1252,10 @@ h1[id] {
   background-color: #000;
 }
 
+.bs-glyphicons span[class^="icon-"]{
+    font-size: 3rem;
+}
+
 @media (min-width: 768px) {
   .bs-glyphicons {
     margin-right: 0;
