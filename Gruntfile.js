@@ -788,15 +788,15 @@ module.exports = function (grunt) {
               to: '<a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>'
           },
           // Add the Orange pagination to the nav of the components page
-            {
-              from: '<li><a href="#pagination-default">Default pagination</a></li>',
-              to: '<li><a href="#pagination-default">Default pagination</a></li><li><a href="#orange-pagination">Orange pagination</a></li>'
-          },
+        //     {
+        //       from: '<li><a href="#pagination-default">Default pagination</a></li>',
+        //       to: '<li><a href="#pagination-default">Default pagination</a></li><li><a href="#orange-pagination">Orange pagination</a></li>'
+        //   },
           // Add the inclusion into pagination.html to o-pagination.html, before the pager
-            {
-              from: '<h2 id="pagination-pager">Pager</h2>',
-              to: '{% include components/o-pagination.html %}<h2 id="pagination-pager">Pager</h2>'
-          },
+        //     {
+        //       from: '<h2 id="pagination-pager">Pager</h2>',
+        //       to: '{% include components/o-pagination.html %}<h2 id="pagination-pager">Pager</h2>'
+        //   },
           // Add the complex table to the nav of the Javascript page
             {
               from: '<li><a href="#transitions">Transitions</a></li>',
