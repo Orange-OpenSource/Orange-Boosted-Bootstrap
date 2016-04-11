@@ -151,8 +151,6 @@
 @padding-base-vertical: 0.8rem;//8px;
 @padding-base-horizontal: 2rem;//20px;
 
-
-
 @padding-large-vertical: 1.2rem;//12px;
 @padding-large-horizontal: 2rem;//20px;
 @padding-small-vertical: 0.5rem;//5px;
@@ -161,11 +159,11 @@
 // Fix by the brand, minimum space = 10px
 @padding-xs-horizontal: 1rem;//10px;
 
-@line-height-large:  1.2; // 24/20
-@line-height-small:  1.5; // 18/12
-@border-radius-base: 0px;
-@border-radius-large: 0px;
-@border-radius-small: 0px;
+@line-height-large:   1.2; // 24/20
+@line-height-small:   1.5; // 18/12
+@border-radius-base:  0;
+@border-radius-large: 0;
+@border-radius-small: 0;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    @brand-orange-white;
@@ -204,7 +202,7 @@
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
-
+//** for REM size
 @btn-font-size: 1.6rem;
 @btn-font-size-sm: 1.4rem;
 @btn-font-size-lg: 1.6rem;
@@ -601,18 +599,6 @@ ALL is BLACK => Inverse navbar = default navbar
 @o-stepbar-height: 4rem;
 @o-stepbar-arrow-width: 1.5rem;
 
-@o-wizard-step-bar-arrow-color: @brand-orange-white;
-@o-wizard-step-bar-arrow-width: (@line-height-computed+@padding-base-vertical);
-//@o-wizard-step-bar-arrow-width: 25px;
-@o-wizard-step-bar-border-color: @gray-light;
-
-@o-wizard-step-bar-arrow-width-small: ((@line-height-computed/2)+@padding-base-vertical);
-
-@o-wizard-step-bar-arrow-outer-width-small:           (@o-wizard-step-bar-arrow-width-small+0.1);
-
-@o-wizard-step-bar-arrow-outer-width:           (@o-wizard-step-bar-arrow-width);
-@o-wizard-step-bar-arrow-outer-color:           fadein(@o-wizard-step-bar-border-color, 0%);
-
 //== Pagination
 //
 //##
@@ -963,7 +949,7 @@ ALL is BLACK => Inverse navbar = default navbar
 
 @badge-font-weight:           @brand-font-weight-bold;
 @badge-line-height:           1;
-@badge-border-radius:         0px;
+@badge-border-radius:         0;
 
 
 //== Breadcrumbs

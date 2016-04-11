@@ -1524,9 +1524,8 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item {
   position: relative;
   float: left;
-  padding: 8px 20px;
-  padding-left: 2rem;
-  font-size: 1.6rem;
+  padding: 8px 10px 8px 25px;
+  font-size: 16px;
   font-weight: bold;
   color: #000;
   white-space: nowrap;
@@ -1536,18 +1535,18 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item::after {
   position: absolute;
   top: 0;
-  right: -1.5rem;
+  right: -15px;
   z-index: 500;
   display: block;
-  width: 1.5rem;
-  height: 4rem;
+  width: 15px;
+  height: 40px;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23dddddd%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E");
-  -webkit-background-size: 1.5rem 4rem;
-          background-size: 1.5rem 4rem;
+  -webkit-background-size: 15px 40px;
+          background-size: 15px 40px;
 }
 .o-stepbar .stepbar-item:first-child {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .o-stepbar .stepbar-item:last-child::after {
   display: none;
@@ -1558,15 +1557,15 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item.done::after {
   position: absolute;
   top: 0;
-  right: -1.5rem;
+  right: -15px;
   z-index: 500;
   display: block;
-  width: 1.5rem;
-  height: 4rem;
+  width: 15px;
+  height: 40px;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23000000%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E");
-  -webkit-background-size: 1.5rem 4rem;
-          background-size: 1.5rem 4rem;
+  -webkit-background-size: 15px 40px;
+          background-size: 15px 40px;
 }
 .o-stepbar .stepbar-item.done .stepbar-link {
   color: #fff;
@@ -1577,15 +1576,15 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item.current::after {
   position: absolute;
   top: 0;
-  right: -1.5rem;
+  right: -15px;
   z-index: 500;
   display: block;
-  width: 1.5rem;
-  height: 4rem;
+  width: 15px;
+  height: 40px;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23f16e00%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E");
-  -webkit-background-size: 1.5rem 4rem;
-          background-size: 1.5rem 4rem;
+  -webkit-background-size: 15px 40px;
+          background-size: 15px 40px;
 }
 .o-stepbar .stepbar-item.current .stepbar-link {
   color: #fff;
@@ -1628,7 +1627,7 @@ ul.o-square-list ul ul li span {
 @media (max-width: 767px) {
   .o-stepbar .stepbar-header {
     margin-right: 1rem;
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: bold;
     vertical-align: middle;
   }
@@ -2124,7 +2123,7 @@ table.tablesorter th.headerSortUp {
 }
 table.tablesorter caption {
   padding: 12px 0;
-  font-size: 36px;
+  font-size: 50px;
   font-weight: bold;
   color: #000;
   background-color: #fff;
@@ -2167,9 +2166,9 @@ table.tablesorter caption {
 }
 .nav-tabs > li > a {
   padding: 1rem 2rem;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 16px;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
@@ -2536,9 +2535,9 @@ table.tablesorter caption {
   width: 4rem;
   padding: 1rem 0;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 16px;
   text-align: center;
   border: 2px solid transparent;
 }
@@ -3803,14 +3802,14 @@ html {
   margin-bottom: 0;
 }
 .navbar {
-  min-height: 68px;
-  font-size: 18px;
+  min-height: 100px;
+  font-size: 16px;
   font-weight: bold;
   border: 0;
 }
 .navbar .navbar-brand {
-  padding: -webkit-calc(68px / 4) 0;
-  padding:         calc(68px / 4) 0;
+  padding: -webkit-calc(100px / 4) 0;
+  padding:         calc(100px / 4) 0;
 }
 .navbar .navbar-brand img {
   width: auto;
@@ -3870,13 +3869,13 @@ html {
 }
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    margin-top: 19px;
-    margin-top: 55px;
-    margin-top: 28px;
+    margin-top: 35px;
+    margin-top: 87px;
+    margin-top: 60px;
     margin-top: 4.5rem;
-    margin-bottom: 19px;
+    margin-bottom: 35px;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 16px;
   }
   .navbar-nav li:first-child a {
     padding-left: 2rem;
@@ -3888,15 +3887,15 @@ html {
   }
 }
 .navbar-text {
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   .navbar-text {
     padding-top: 10px;
-    margin-top: 19px;
-    margin-top: 55px;
-    margin-top: 28px;
-    margin-bottom: 19px;
+    margin-top: 35px;
+    margin-top: 87px;
+    margin-top: 60px;
+    margin-bottom: 35px;
     margin-bottom: 0;
   }
 }
@@ -3911,10 +3910,10 @@ html {
 }
 @media (min-width: 768px) {
   .navbar-brand-text {
-    margin-top: 19px;
-    margin-top: 55px;
-    margin-top: 28px;
-    margin-bottom: 19px;
+    margin-top: 35px;
+    margin-top: 87px;
+    margin-top: 60px;
+    margin-bottom: 35px;
     margin-bottom: 0;
   }
 }
@@ -4178,7 +4177,7 @@ a:focus {
 }
 caption {
   padding: 12px 0;
-  font-size: 36px;
+  font-size: 50px;
   font-weight: bold;
   color: #000;
   background-color: #fff;

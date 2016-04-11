@@ -1266,19 +1266,19 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 50px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 40px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 h5,
 .h5 {
@@ -3184,7 +3184,7 @@ input[type="search"] {
   .input-group-lg input[type="time"],
   .input-group-lg input[type="datetime-local"],
   .input-group-lg input[type="month"] {
-    line-height: 48px;
+    line-height: 50px;
   }
 }
 .form-group {
@@ -3301,40 +3301,40 @@ select[multiple].input-sm {
   line-height: 1.5;
 }
 .input-lg {
-  height: 48px;
+  height: 50px;
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
   border-radius: 0;
 }
 select.input-lg {
-  height: 48px;
-  line-height: 48px;
+  height: 50px;
+  line-height: 50px;
 }
 textarea.input-lg,
 select[multiple].input-lg {
   height: auto;
 }
 .form-group-lg .form-control {
-  height: 48px;
+  height: 50px;
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
   border-radius: 0;
 }
 .form-group-lg select.form-control {
-  height: 48px;
-  line-height: 48px;
+  height: 50px;
+  line-height: 50px;
 }
 .form-group-lg textarea.form-control,
 .form-group-lg select[multiple].form-control {
   height: auto;
 }
 .form-group-lg .form-control-static {
-  height: 48px;
-  min-height: 38px;
+  height: 50px;
+  min-height: 40px;
   padding: 13px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
 }
 .has-feedback {
@@ -3358,9 +3358,9 @@ select[multiple].input-lg {
 .input-lg + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 }
 .input-sm + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
@@ -3646,7 +3646,7 @@ select[multiple].input-lg {
 @media (min-width: 480px) {
   .form-horizontal .form-group-lg .control-label {
     padding-top: 13px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media (min-width: 480px) {
@@ -4092,7 +4092,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
   border-radius: 0;
 }
@@ -4498,17 +4498,17 @@ tbody.collapse.in {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 48px;
+  height: 50px;
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
   border-radius: 0;
 }
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
-  height: 48px;
-  line-height: 48px;
+  height: 50px;
+  line-height: 50px;
 }
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
@@ -4575,7 +4575,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon.input-lg {
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 0;
 }
 .input-group-addon input[type="radio"],
@@ -4827,7 +4827,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 68px;
+  min-height: 100px;
   margin-bottom: 0;
   border: 1px solid transparent;
 }
@@ -4935,9 +4935,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  height: 68px;
+  height: 100px;
   padding: 10px 10px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -4957,11 +4957,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   float: right;
   padding: 9px 10px;
-  margin-top: 17px;
-  margin-top: 54.6px;
-  margin-top: 24px;
+  margin-top: 33px;
+  margin-top: 86.6px;
+  margin-top: 56px;
   margin-right: 10px;
-  margin-bottom: 17px;
+  margin-bottom: 33px;
   margin-bottom: 0;
   background-color: transparent;
   background-image: none;
@@ -5036,11 +5036,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-form {
   padding: 10px 10px;
-  margin-top: 15px;
-  margin-top: 54.2px;
-  margin-top: 20px;
+  margin-top: 31px;
+  margin-top: 86.2px;
+  margin-top: 52px;
   margin-right: -10px;
-  margin-bottom: 15px;
+  margin-bottom: 31px;
   margin-bottom: 0;
   margin-left: -10px;
   border-top: 1px solid transparent;
@@ -5138,10 +5138,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 15px;
-  margin-top: 54.2px;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 31px;
+  margin-top: 86.2px;
+  margin-top: 52px;
+  margin-bottom: 31px;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5150,10 +5150,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-btn.btn-sm {
-  margin-top: 19px;
-  margin-top: 55px;
-  margin-top: 28px;
-  margin-bottom: 19px;
+  margin-top: 35px;
+  margin-top: 87px;
+  margin-top: 60px;
+  margin-bottom: 35px;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5162,10 +5162,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-btn.btn-xs {
-  margin-top: 23px;
-  margin-top: 55.8px;
-  margin-top: 36px;
-  margin-bottom: 23px;
+  margin-top: 39px;
+  margin-top: 87.8px;
+  margin-top: 68px;
+  margin-bottom: 39px;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5174,10 +5174,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-text {
-  margin-top: 24px;
-  margin-top: 56px;
-  margin-top: 38px;
-  margin-bottom: 24px;
+  margin-top: 40px;
+  margin-top: 88px;
+  margin-top: 70px;
+  margin-bottom: 40px;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5487,7 +5487,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
 }
 .pagination-lg > li:first-child > a,
@@ -6179,8 +6179,8 @@ button.list-group-item-danger.active:focus {
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-left-radius: -1px;
-  border-top-right-radius: -1px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -6202,8 +6202,8 @@ button.list-group-item-danger.active:focus {
   padding: 10px 15px;
   background-color: #fff;
   border-top: 1px solid #000;
-  border-bottom-right-radius: -1px;
-  border-bottom-left-radius: -1px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
@@ -6217,14 +6217,14 @@ button.list-group-item-danger.active:focus {
 .panel > .list-group:first-child .list-group-item:first-child,
 .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
-  border-top-left-radius: -1px;
-  border-top-right-radius: -1px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 .panel > .list-group:last-child .list-group-item:last-child,
 .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
   border-bottom: 0;
-  border-bottom-right-radius: -1px;
-  border-bottom-left-radius: -1px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
   border-top-left-radius: 0;
@@ -6249,15 +6249,15 @@ button.list-group-item-danger.active:focus {
 }
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
-  border-top-left-radius: -1px;
-  border-top-right-radius: -1px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 .panel > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
-  border-top-left-radius: -1px;
-  border-top-right-radius: -1px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
@@ -6267,7 +6267,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: -1px;
+  border-top-left-radius: -1;
 }
 .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
@@ -6277,19 +6277,19 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: -1px;
+  border-top-right-radius: -1;
 }
 .panel > .table:last-child,
 .panel > .table-responsive:last-child > .table:last-child {
-  border-bottom-right-radius: -1px;
-  border-bottom-left-radius: -1px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 .panel > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-right-radius: -1px;
-  border-bottom-left-radius: -1px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -6299,7 +6299,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: -1px;
+  border-bottom-left-radius: -1;
 }
 .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
@@ -6309,7 +6309,7 @@ button.list-group-item-danger.active:focus {
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: -1px;
+  border-bottom-right-radius: -1;
 }
 .panel > .panel-body + .table,
 .panel > .panel-body + .table-responsive,
@@ -6879,7 +6879,7 @@ button.close {
   font-size: 14px;
   background-color: #ddd;
   border-bottom: 1px solid #d0d0d0;
-  border-radius: -1px -1px 0 0;
+  border-radius: -1 -1 0 0;
 }
 .popover-content {
   padding: 9px 14px;
@@ -7046,7 +7046,7 @@ button.close {
   bottom: 0;
   left: 0;
   width: 30px;
-  font-size: 18px;
+  font-size: 20px;
   color: #000;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -7162,18 +7162,18 @@ button.close {
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-prev,
   .carousel-control .icon-next {
-    width: 27px;
-    height: 27px;
-    margin-top: -9px;
-    font-size: 27px;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    font-size: 30px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: -9px;
+    margin-left: -10px;
   }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -9px;
+    margin-right: -10px;
   }
   .carousel-caption {
     right: 20%;

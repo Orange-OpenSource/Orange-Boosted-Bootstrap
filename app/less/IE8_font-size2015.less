@@ -4,14 +4,15 @@
 
 @font-size-base: 14px;
 //** For FIXED size
-@font-size-large: (ceil(@font-size-base * 1.25));
-@font-size-small: (ceil(@font-size-base * 0.85));
-@font-size-h1: (floor(@font-size-base * 2.6));
-@font-size-h2: (floor(@font-size-base * 2.15));
-@font-size-h3: (ceil(@font-size-base * 1.7));
-@font-size-h4: (ceil(@font-size-base * 1.25));
+@font-size-large: 20px;
+@font-size-small: 12px;
+@font-size-h1: 50px;
+@font-size-h2: 40px;
+@font-size-h3: 28px;
+@font-size-h4: @font-size-large;
 @font-size-h5: 16px;
 @font-size-h6: @font-size-base;
+
 //** For FIXED size
 @line-height-computed: (floor(@font-size-base * @line-height-base));
 //** For FIXED size
@@ -30,13 +31,10 @@
 // Fix by the brand, minimum space = 10px
 @padding-xs-horizontal: 10px;
 //** for fixed size
-@navbar-height:                    68px;
-@navbar-font-size:                 18px;
+@navbar-height:                    100px;
+@navbar-font-size:                 16px;
 @navbar-padding-vertical:          10px;
 @navbar-toggle-vertical-margin:    46px;
-
-//** For REM size
-@grid-gutter-width: 20px;
 
 // for FIXED size
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -54,8 +52,10 @@
 //** for FIXED size
 @table-cell-padding: 9px;
 @table-condensed-cell-padding: 5px;
-//** Padding for cells in `.table-condensed`.
-@table-condensed-cell-padding:  5px;
+
+@btn-font-size: 16px;
+@btn-font-size-sm: 14px;
+@btn-font-size-lg: 16px;
 
 //** Padding around the thumbnail caption
 //** for fixed size
@@ -65,6 +65,11 @@
 @nav-link-padding: 10px 10px;
 
 @carousel-control-width: 30px;
+
+//== Step process bar
+@o-stepbar-height: 40px;
+@o-stepbar-arrow-width: 15px;
+
 // Navbar toggle
 //
 // Custom button for toggling the `.navbar-collapse`, powered by the collapse

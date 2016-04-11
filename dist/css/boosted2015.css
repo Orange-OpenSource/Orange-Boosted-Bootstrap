@@ -2511,8 +2511,7 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item {
   position: relative;
   float: left;
-  padding: .8rem 2rem;
-  padding-left: 2rem;
+  padding: .8rem 1rem .8rem 2.5rem;
   font-size: 1.6rem;
   font-weight: bold;
   color: #000;
@@ -2534,7 +2533,7 @@ ul.o-square-list ul ul li span {
           background-size: 1.5rem 4rem;
 }
 .o-stepbar .stepbar-item:first-child {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 .o-stepbar .stepbar-item:last-child::after {
   display: none;

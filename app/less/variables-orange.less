@@ -356,7 +356,7 @@
 @grid-gutter-xxl-width:     20px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
@@ -387,6 +387,7 @@
 //@navbar-height - @element-height
 //** for REM size
 @navbar-height:                    5rem;
+@navbar-font-size:                 1.6rem;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
@@ -502,17 +503,8 @@
 @nav-local-arrow-outer-color:           fadein(@nav-local-border-color, 0%);
 
 //== Step process bar
-@o-wizard-step-bar-arrow-color: @brand-orange-white;
-@o-wizard-step-bar-arrow-width: (@line-height-computed+@padding-base-vertical);
-//@o-wizard-step-bar-arrow-width: 25px;
-@o-wizard-step-bar-border-color: @gray-light;
-
-@o-wizard-step-bar-arrow-width-small: ((@line-height-computed/2)+@padding-base-vertical);
-
-@o-wizard-step-bar-arrow-outer-width-small:           40px;
-
-@o-wizard-step-bar-arrow-outer-width:           (@o-wizard-step-bar-arrow-width);
-@o-wizard-step-bar-arrow-outer-color:           fadein(@o-wizard-step-bar-border-color, 0%);
+@o-stepbar-height: 4rem;
+@o-stepbar-arrow-width: 1.5rem;
 
 //== Pagination
 //
