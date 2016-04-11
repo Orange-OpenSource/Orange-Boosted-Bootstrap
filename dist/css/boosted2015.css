@@ -1591,7 +1591,7 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
   border-right-width: 0;
   border-left-color: #f16e00;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   ul.o-wizard-step-bar li.on > .arrow,
   ul.o-wizard-step-bar li.on > .arrow:after {
     position: absolute;
@@ -1945,7 +1945,7 @@ navigation item */
 .nav-local .navbar-nav > li.active a:focus + .arrow:after {
   border-bottom-color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
   .sublocal {
     display: block;
     width: 100%;
@@ -2089,7 +2089,7 @@ table.tablesorter caption {
   margin-bottom: -2px;
 }
 .nav-tabs > li + li {
-  margin-left: 1rem;
+  margin-left: 10px;
 }
 .nav-tabs > li > a {
   padding: 1rem 2rem;
@@ -2113,7 +2113,7 @@ table.tablesorter caption {
   outline-offset: -6px;
 }
 .nav-pills > li + li {
-  margin-left: .5rem;
+  margin-left: 5px;
 }
 .nav-pills > li > a,
 .nav-pills > li.active > a {
@@ -2452,7 +2452,7 @@ table.tablesorter caption {
   background-color: #fff;
   border-color: #000;
 }
-@media all and (max-width: 991px) {
+@media all and (max-width: 767px) {
   .o-responsive-table thead {
     display: none;
   }
@@ -2484,7 +2484,7 @@ table.tablesorter caption {
     border-bottom: 2px solid #ccc;
   }
 }
-@media all and (max-width: 991px) and (min-width: 768px) {
+@media all and (max-width: 767px) and (min-width: 480px) {
   .o-responsive-table tr {
     float: left;
     width: 45%;
@@ -3735,7 +3735,7 @@ html {
   float: right;
   padding: 1rem 1rem;
   margin-top: 2.2rem;
-  margin-right: 1rem;
+  margin-right: 10px;
   margin-bottom: 1rem;
   background-color: transparent;
   background-image: none;
@@ -3767,8 +3767,8 @@ html {
   float: left;
 }
 .navbar-header {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .navbar-toggle-complement {
   position: relative;
@@ -3780,7 +3780,7 @@ html {
 .navbar-toggle-complement li {
   float: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .navbar-toggle-complement {
     display: none;
   }
@@ -3965,10 +3965,10 @@ a:focus {
   top: 0;
   left: 0;
   max-width: 15%;
-  margin: 3rem;
+  margin: 21px;
 }
 .hero-container .caption {
-  margin: 5rem 3rem;
+  margin: 5rem 21px;
 }
 .hero-container .category {
   font-size: 2rem;
@@ -3981,14 +3981,14 @@ a:focus {
   font-style: normal;
   font-weight: 700;
 
-  src: url("../fonts/HelvNeue75_W1G.eot?#iefix") format('eot') url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff"), url("../fonts/HelvNeue75_W1G.ttf") format("truetype"), url("../fonts/HelvNeue75_W1G.svg") format("svg");
+  src: url("../fonts/HelvNeue75_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff"), url("../fonts/HelvNeue75_W1G.ttf") format("truetype"), url("../fonts/HelvNeue75_W1G.svg") format("svg");
 }
 @font-face {
   font-family: "HelvNeue55";
   font-style: normal;
   font-weight: 400;
 
-  src: url("../fonts/HelvNeue55_W1G.eot?#iefix") format('eot') url("../fonts/HelvNeue55_W1G.woff2") format("woff2") url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
+  src: url("../fonts/HelvNeue55_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,

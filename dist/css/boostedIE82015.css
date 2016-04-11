@@ -1591,7 +1591,7 @@ ul.o-wizard-step-bar li.on + li.next > .arrow:after {
   border-right-width: 0;
   border-left-color: #f16e00;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   ul.o-wizard-step-bar li.on > .arrow,
   ul.o-wizard-step-bar li.on > .arrow:after {
     position: absolute;
@@ -1945,7 +1945,7 @@ navigation item */
 .nav-local .navbar-nav > li.active a:focus + .arrow:after {
   border-bottom-color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 479px) {
   .sublocal {
     display: block;
     width: 100%;
@@ -3737,7 +3737,7 @@ html {
 .navbar-toggle-complement li {
   float: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .navbar-toggle-complement {
     display: none;
   }
@@ -3938,14 +3938,14 @@ a:focus {
   font-style: normal;
   font-weight: 700;
 
-  src: url("../fonts/HelvNeue75_W1G.eot?#iefix") format('eot') url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff"), url("../fonts/HelvNeue75_W1G.ttf") format("truetype"), url("../fonts/HelvNeue75_W1G.svg") format("svg");
+  src: url("../fonts/HelvNeue75_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff"), url("../fonts/HelvNeue75_W1G.ttf") format("truetype"), url("../fonts/HelvNeue75_W1G.svg") format("svg");
 }
 @font-face {
   font-family: "HelvNeue55";
   font-style: normal;
   font-weight: 400;
 
-  src: url("../fonts/HelvNeue55_W1G.eot?#iefix") format('eot') url("../fonts/HelvNeue55_W1G.woff2") format("woff2") url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
+  src: url("../fonts/HelvNeue55_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,

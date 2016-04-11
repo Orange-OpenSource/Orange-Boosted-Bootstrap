@@ -1,0 +1,182 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  .container-fixed(@grid-gutter-xs-width);
+  max-width: @container-xs;
+
+  @media (min-width: @screen-sm-min) {
+    .container-fixed(@grid-gutter-sm-width);
+    max-width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    .container-fixed(@grid-gutter-md-width);
+    max-width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    .container-fixed(@grid-gutter-lg-width);
+    max-width: @container-lg;
+  }
+  @media (min-width: @screen-xl-min) {
+    .container-fixed(@grid-gutter-xl-width);
+    max-width: @container-xl;
+  }
+  @media (min-width: @screen-xxl-min) {
+    .container-fixed(@grid-gutter-xxl-width);
+    max-width: @container-xxl;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  .container-fixed(@grid-gutter-xs-width);
+
+  @media (min-width: @screen-sm-min) {
+    .container-fixed(@grid-gutter-sm-width);
+  }
+  @media (min-width: @screen-md-min) {
+    .container-fixed(@grid-gutter-md-width);
+  }
+  @media (min-width: @screen-lg-min) {
+    .container-fixed(@grid-gutter-lg-width);
+  }
+  @media (min-width: @screen-xl-min) {
+    .container-fixed(@grid-gutter-xl-width);
+  }
+  @media (min-width: @screen-xxl-min) {
+    .container-fixed(@grid-gutter-xxl-width);
+  }
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.o-container-fluid {
+  .container-fixed(@grid-gutter-xs-width,@o-container-fluid-xs-margin);
+
+  @media (min-width: @screen-sm-min) {
+    .container-fixed(@grid-gutter-sm-width,@o-container-fluid-sm-margin);
+  }
+  @media (min-width: @screen-md-min) {
+    .container-fixed(@grid-gutter-md-width,@o-container-fluid-md-margin);
+  }
+  @media (min-width: @screen-lg-min) {
+    .container-fixed(@grid-gutter-lg-width,@o-container-fluid-lg-margin);
+  }
+  @media (min-width: @screen-xl-min) {
+    .container-fixed(@grid-gutter-xl-width,@o-container-fluid-xl-margin);
+  }
+  @media (min-width: @screen-xxl-min) {
+    .container-fixed(@grid-gutter-xxl-width,@o-container-fluid-xxl-margin);
+  }
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  .make-row(@grid-gutter-xs-width);
+
+  @media (min-width: @screen-sm-min) {
+    .make-row(@grid-gutter-sm-width);
+  }
+  @media (min-width: @screen-md-min) {
+    .make-row(@grid-gutter-md-width);
+  }
+  @media (min-width: @screen-lg-min) {
+    .make-row(@grid-gutter-lg-width);
+  }
+  @media (min-width: @screen-xl-min) {
+    .make-row(@grid-gutter-xl-width);
+  }
+  @media (min-width: @screen-xxl-min) {
+    .make-row(@grid-gutter-xxl-width);
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+.make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(xs,@grid-gutter-xs-width);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .float-grid-columns(xs,@grid-gutter-sm-width);
+  .make-grid(sm,@grid-gutter-sm-width);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .float-grid-columns(xs,@grid-gutter-md-width);
+  .float-grid-columns(sm,@grid-gutter-md-width);
+  .make-grid(md,@grid-gutter-md-width);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .float-grid-columns(xs,@grid-gutter-lg-width);
+  .float-grid-columns(sm,@grid-gutter-lg-width);
+  .float-grid-columns(md,@grid-gutter-lg-width);
+  .make-grid(lg,@grid-gutter-lg-width);
+}
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-xl-min) {
+  .float-grid-columns(xs,@grid-gutter-xl-width);
+  .float-grid-columns(sm,@grid-gutter-xl-width);
+  .float-grid-columns(md,@grid-gutter-xl-width);
+  .float-grid-columns(lg,@grid-gutter-xl-width);
+  .make-grid(xl,@grid-gutter-xl-width);
+}
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-xxl-min) {
+  .float-grid-columns(xs,@grid-gutter-xxl-width);
+  .float-grid-columns(sm,@grid-gutter-xxl-width);
+  .float-grid-columns(md,@grid-gutter-xxl-width);
+  .float-grid-columns(lg,@grid-gutter-xxl-width);
+  .float-grid-columns(xl,@grid-gutter-xxl-width);
+  .make-grid(xxl,@grid-gutter-xxl-width);
+}

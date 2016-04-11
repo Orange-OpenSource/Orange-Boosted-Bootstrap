@@ -4,9 +4,9 @@
   <p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
 
   <h2 id="grid-intro">Introduction</h2>
-  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Boosted grid system works:</p>
   <ul>
-    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+    <li>Rows must be placed within a <code>.container</code> (fixed-width), <code>.container-fluid</code> (full-width) or <code>.o-container-fluid</code> (full-width with security margins) for proper alignment and padding. <code>.o-container-fluid</code> need to be used for the main page content, not as a subcontainer</li>
     <li>Use rows to create horizontal groups of columns.</li>
     <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
     <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
@@ -21,24 +21,32 @@
   <h2 id="grid-media-queries">Media queries</h2>
   <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
 {% highlight scss %}
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* Extra small devices (phones, less than 481px) */
+/* No media query since this is the default in Boosted */
 
-/* Small devices (tablets, 768px and up) */
+/* Small devices (phones 480px and up) */
 @media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
+  
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Large devices (desktops, 980px and up) */
 @media (min-width: @screen-lg-min) { ... }
+
+/* Extra large devices (large desktops, 1220px and up) */
+@media (min-width: @screen-xl-min) { ... }
+  
+/* Extra extra large devices (large desktops, 1380px and up) */
+@media (min-width: @screen-xxl-min) { ... }
 {% endhighlight %}
   <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
 {% highlight scss %}
 @media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
-@media (min-width: @screen-lg-min) { ... }
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) { ... }
+@media (min-width: @screen-xl-min) and (max-width: @screen-xl-max) { ... }
+@media (min-width: @screen-xlg-min) { ... }
 {% endhighlight %}
 
   <h2 id="grid-options">Grid options</h2>
@@ -47,37 +55,87 @@
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th></th>
+          <th>Viewport breakpoints</th>
           <th>
-            Extra small devices
-            <small>Phones (&lt;768px)</small>
+            Extra small
+            <small>Phones (&lt;480px)</small>
           </th>
           <th>
-            Small devices
+            Small
+            <small>Phones (&ge;480px)</small>
+          </th>
+          <th>
+            Medium
             <small>Tablets (&ge;768px)</small>
           </th>
           <th>
-            Medium devices
-            <small>Desktops (&ge;992px)</small>
+            Large
+            <small>Desktops (&ge;980px)</small>
           </th>
           <th>
-            Large devices
-            <small>Desktops (&ge;1200px)</small>
+            Extra large
+            <small>Desktops (&ge;1220px)</small>
+          </th>
+          <th>
+            Extra extra large
+            <small>Desktops (&ge;1380px)</small>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="text-nowrap" scope="row">Grid behavior</th>
-          <td>Horizontal at all times</td>
-          <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          <th class="text-nowrap" scope="row">Targetted resolution</th>
+          <td>320px</td>
+          <td>480px</td>
+          <td>760px</td>
+          <td>1024px</td>
+          <td>1280px</td>
+          <td>1440px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Container width</th>
-          <td>None (auto)</td>
-          <td>750px</td>
-          <td>970px</td>
-          <td>1170px</td>
+          <th class="text-nowrap" scope="row">Device</th>
+          <td>Mobile portrait</td>
+          <td>Mobile landscape</td>
+          <td>Tablet portrait</td>
+          <td>Small desktop / Tablet landscape</td>
+          <td>Medium desktop</td>
+          <td>Large desktop</td>
+        </tr>
+        <tr>
+          <th scope="row">Container max-width (Design Area)</th>
+          <td>302px</td>
+          <td>458px</td>
+          <td>724px</td>
+          <td>940px</td>
+          <td>1180px</td>
+          <td>1300px</td>
+        </tr>
+        <tr>
+          <th scope="row">o-container-fluid margin</th>
+          <td>1.25%</td>
+          <td>1.25%</td>
+          <td>1.5625%</td>
+          <td>3.125%</td>
+          <td>3.125%</td>
+          <td>4.16667%</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Column width</th>
+          <td>~16px</td>
+          <td>~29px</td>
+          <td>~42px</td>
+          <td>~60px</td>
+          <td>~80px</td>
+          <td>~90px</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Gutter width</th>
+          <td colspan="2">10px (5px on each side of a column)</td>
+          <td colspan="4">20px (10px on each side of a column)</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row"># of columns</th>
+          <td colspan="6">12</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Class prefix</th>
@@ -85,33 +143,20 @@
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
-        </tr>
-        <tr>
-          <th class="text-nowrap" scope="row"># of columns</th>
-          <td colspan="4">12</td>
-        </tr>
-        <tr>
-          <th class="text-nowrap" scope="row">Column width</th>
-          <td class="text-muted">Auto</td>
-          <td>~62px</td>
-          <td>~81px</td>
-          <td>~97px</td>
-        </tr>
-        <tr>
-          <th class="text-nowrap" scope="row">Gutter width</th>
-          <td colspan="4">20px (10px on each side of a column)</td>
+          <td><code>.col-xl-</code></td>
+          <td><code>.col-xxl-</code></td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Nestable</th>
-          <td colspan="4">Yes</td>
+          <td colspan="6">Yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Offsets</th>
-          <td colspan="4">Yes</td>
+          <td colspan="6">Yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Column ordering</th>
-          <td colspan="4">Yes</td>
+          <td colspan="6">Yes</td>
         </tr>
       </tbody>
     </table>
@@ -397,8 +442,8 @@
   <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
 {% highlight scss %}
 @grid-columns:              12;
-@grid-gutter-width:         30px;
-@grid-float-breakpoint:     768px;
+@grid-gutter-width:         20px;
+@grid-float-breakpoint:     769px;
 {% endhighlight %}
 
   <h3>Mixins</h3>

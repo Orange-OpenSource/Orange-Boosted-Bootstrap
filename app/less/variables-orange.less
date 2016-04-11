@@ -316,40 +316,27 @@
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-//** Deprecated `@screen-xs` as of v3.0.1
-@screen-xs:                  480px;
-//** Deprecated `@screen-xs-min` as of v3.2.0
-@screen-xs-min:              @screen-xs;
-//** Deprecated `@screen-phone` as of v3.0.1
-@screen-phone:               @screen-xs-min;
-
 // Small screen / tablet
-//** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  768px;
-@screen-sm-min:              @screen-sm;
-//** Deprecated `@screen-tablet` as of v3.0.1
-@screen-tablet:              @screen-sm-min;
+@screen-sm-min:              480px;
 
 // Medium screen / desktop
-//** Deprecated `@screen-md` as of v3.0.1
-@screen-md:                  992px;
-@screen-md-min:              @screen-md;
-//** Deprecated `@screen-desktop` as of v3.0.1
-@screen-desktop:             @screen-md-min;
+@screen-md-min:              768px;
 
 // Large screen / wide desktop
-//** Deprecated `@screen-lg` as of v3.0.1
-@screen-lg:                  1200px;
-@screen-lg-min:              @screen-lg;
-//** Deprecated `@screen-lg-desktop` as of v3.0.1
-@screen-lg-desktop:          @screen-lg-min;
+@screen-lg-min:              980px;
+
+// Large screen / wide desktop
+@screen-xl-min:              1220px;
+
+// Large screen / wide desktop
+@screen-xxl-min:              1380px;
 
 // So media queries don't overlap when required, provide a maximum
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xl-min - 1);
+@screen-xl-max:              (@screen-xxl-min - 1);
 
 
 //== Grid system
@@ -359,33 +346,38 @@
 //** Number of columns in the grid.
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width: 20px;
+@grid-gutter-width:         20px;
+
+@grid-gutter-xs-width:      10px;
+@grid-gutter-sm-width:      10px;
+@grid-gutter-md-width:      20px;
+@grid-gutter-lg-width:      20px;
+@grid-gutter-xl-width:      20px;
+@grid-gutter-xxl-width:     20px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint:     @screen-sm-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
+// o-container-fluid security margins acording to the brand
+@o-container-fluid-xs-margin:      1.25%;
+@o-container-fluid-sm-margin:      1.25%;
+@o-container-fluid-md-margin:      1.5625%;
+@o-container-fluid-lg-margin:      3.125%;
+@o-container-fluid-xl-margin:      3.125%;
+@o-container-fluid-xxl-margin:     4.16667%;
 
 //== Container sizes
 //
 //## Define the maximum width of `.container` for different screen sizes.
 
-// Small screen / tablet
-@container-tablet:             (720px + @grid-gutter-width);
-//** For `@screen-sm-min` and up.
-@container-sm:                 @container-tablet;
-
-// Medium screen / desktop
-@container-desktop:            (940px + @grid-gutter-width);
-//** For `@screen-md-min` and up.
-@container-md:                 @container-desktop;
-
-// Large screen / wide desktop
-@container-large-desktop:      (1140px + @grid-gutter-width);
-//** For `@screen-lg-min` and up.
-@container-lg:                 @container-large-desktop;
-
+@container-xs: 312px;
+@container-sm: 468px;
+@container-md: 744px;
+@container-lg: 960px;
+@container-xl: 1200px;
+@container-xxl: 1320px;
 
 //== Navbar
 //
