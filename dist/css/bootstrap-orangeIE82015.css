@@ -4086,7 +4086,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #666;
+  color: #ccc;
   text-decoration: none;
 }
 .btn-lg,
@@ -7580,8 +7580,8 @@ button.close {
 @line-height-base:        1.25; // 20/16
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 //** For REM size
-@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem   
-@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;  
+@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem
+@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
 @padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
  *
  *
