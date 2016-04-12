@@ -13,6 +13,14 @@
 @font-size-h5: 16px;
 @font-size-h6: @font-size-base;
 
+
+@font-size-h1-mobile: 20px;
+@font-size-h2-mobile: 18px;
+@font-size-h3-mobile: 16px;
+@font-size-h4-mobile: 14px;
+@font-size-h5-mobile: @font-size-h4-mobile;
+@font-size-h6-mobile: @font-size-h5-mobile;
+
 //** For FIXED size
 @line-height-computed: (floor(@font-size-base * @line-height-base));
 //** For FIXED size
@@ -43,12 +51,12 @@
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
-
+@form-group-margin-bottom:       20px;
 //** for FIXED size
 //** Width of the `border` for generating carets that indicator dropdowns.
-@caret-width-base:          4px;
+@caret-width-base:          8px;
 //** Carets increase slightly in size for larger components.
-@caret-width-large:         5px;
+@caret-width-large:         8px;
 //** for FIXED size
 @table-cell-padding: 9px;
 @table-condensed-cell-padding: 5px;
@@ -57,6 +65,13 @@
 @btn-font-size-sm: 14px;
 @btn-font-size-lg: 16px;
 
+
+@pagination-width: 40px;
+@pagination-width-lg: 37.5px;
+@pagination-width-sm: 18.75px;
+
+@pagination-padding: 1opx 20px;
+
 //** Padding around the thumbnail caption
 //** for fixed size
 @thumbnail-caption-padding:   20px;
@@ -64,6 +79,7 @@
 //** for fixed size
 @nav-link-padding: 10px 10px;
 
+@breadcrumb-separator-size: 10px;
 @carousel-control-width: 30px;
 
 //== Step process bar

@@ -9,7 +9,7 @@
           border: 2px solid @brand-orange-clear;
           font-size: @navbar-font-size;
           font-weight: @brand-font-weight-bold;
-          line-height: @navbar-font-size;
+          line-height: 1;
           margin-left: 0;
           padding: 1rem 0;
           width: @pagination-width;
@@ -45,7 +45,13 @@
       }
 
       &.labelled > a{
-        padding: 1rem 1.6rem;
+        padding: @pagination-padding;
+        .icon-arrow-next {
+          padding-left: 10px;
+        }
+        .icon-arrow-previous {
+          padding-right: 10px;
+        }
       }
   }
 }

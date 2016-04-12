@@ -116,6 +116,20 @@
 @font-size-h5: 1.6rem;
 @font-size-h6: @font-size-base;
 
+@font-size-h1: 3.4rem;
+@font-size-h2: 3.0rem;
+@font-size-h3: 2.4rem;
+@font-size-h4: 2rem;
+@font-size-h5: 1.8rem;
+@font-size-h6: 1.6rem;
+
+@font-size-h1-mobile: 2.0rem;
+@font-size-h2-mobile: 1.8rem;
+@font-size-h3-mobile: 1.6rem;
+@font-size-h4-mobile: 1.4rem;
+@font-size-h5-mobile: @font-size-h4-mobile;
+@font-size-h6-mobile: @font-size-h5-mobile;
+
 
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -172,9 +186,9 @@
 
 //** for REM size
 //** Width of the `border` for generating carets that indicator dropdowns.
-@caret-width-base:          0.4rem;//4px;
+@caret-width-base:          0.8rem;//8px;
 //** Carets increase slightly in size for larger components.
-@caret-width-large:         0.55rem;//5px;
+@caret-width-large:         0.8rem;//8px;
 
 
 //== Tables
@@ -304,7 +318,7 @@
 @input-height-small:             ((floor(@font-size-small * @line-height-small * 10) + (@padding-small-vertical * 20) + 4) / 10);
 
 //** `.form-group` margin
-@form-group-margin-bottom: @font-size-base;
+@form-group-margin-bottom:       2rem;
 
 @legend-color:                   @gray-darker;
 @legend-border-color:            @gray-lighter;
@@ -619,6 +633,8 @@ ALL is BLACK => Inverse navbar = default navbar
 @pagination-width: 4rem;
 @pagination-width-lg: 3.75rem;
 @pagination-width-sm: 1.875rem;
+
+@pagination-padding: 1rem 2rem;
 
 
 //== Pager
@@ -958,6 +974,9 @@ ALL is BLACK => Inverse navbar = default navbar
 
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
+@breadcrumb-separator-padding-vertical: 0;
+@breadcrumb-separator-padding-horizontal: 10px;
+@breadcrumb-separator-size: 1rem;
 //** Breadcrumb background color
 @breadcrumb-bg:                 @brand-orange-white;
 //** Breadcrumb text color

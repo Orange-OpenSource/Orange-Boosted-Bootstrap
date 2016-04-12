@@ -5,6 +5,16 @@ html{
     font-weight:@brand-font-weight-normal;
 }
 
+// reduce the size of titles for mobile display
+@media (max-width: @screen-sm-max) {
+  h1, .h1 { font-size: @font-size-h1-mobile; }
+  h2, .h2 { font-size: @font-size-h2-mobile; }
+  h3, .h3 { font-size: @font-size-h3-mobile; }
+  h4, .h4 { font-size: @font-size-h4-mobile; }
+  h5, .h5 { font-size: @font-size-h5-mobile; }
+  h6, .h6 { font-size: @font-size-h6-mobile; }
+}
+
 //
 // Caret
 // --------------------------------------------------
@@ -26,10 +36,49 @@ html{
 
 .label {
   border-radius: @border-radius-base;
+  margin-bottom: 10px;
+  font-size: @font-size-h5;
 }
 .table label.o-checkbox,
 .table label.o-radio{
     margin-bottom: 0;
+}
+
+//
+// Button groups
+// --------------------------------------------------
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  margin-left: -10px; // Offset the first child's margin
+  &:extend(.clearfix all);
+
+  .btn,
+  .btn-group,
+  .input-group {
+    float: left;
+  }
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 10px;
+  }
+}
+
+// Block button
+// --------------------------------------------------
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 10px;
+}
+
+//
+// Dropdown menus
+// --------------------------------------------------
+// The dropdown menu (ul)
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
 }
 
 // Navbar
@@ -391,7 +440,7 @@ a:focus {
         border-bottom: 1px solid @table-border-color;
       }
       > th {
-          font-size: @font-size-h5;
+          font-size: @font-size-h6;
       }
     }
   }
@@ -412,7 +461,7 @@ caption{
 	background-color: @brand-orange-white;
 	color: @gray-base;
 	padding: @padding-large-vertical 0;
-    font-size: @font-size-h1;
+  font-size: @font-size-h1;
 	font-weight: bold;
 }
 
