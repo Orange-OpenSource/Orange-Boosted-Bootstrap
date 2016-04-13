@@ -53,24 +53,27 @@ lead: ""
                       </ul>
                     </li>
                   </ul>
-                  <form class="navbar-form navbar-left">
-                    <input class="form-control col-lg-8" placeholder="Search" type="text">
-                  </form>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret" aria-hidden="true"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
+                    <li>
+                        <a aria-haspopup="true" href="#collapseSearchBar" data-toggle="collapse" class="icon" aria-expanded="false" aria-controls="collapseSearchBar">
+                            <span class="sr-only">open search bar</span>
+                            <span class="icon-search" aria-hidden="true"></span>
+                        </a>
                     </li>
                   </ul>
                 </div>
               </div>
+              <div style="" aria-expanded="true" class="search-bar collapse in" id="collapseSearchBar">
+                <div class="container-fluid">
+                    <form class="form-inline" role="search">
+                        <div class="form-group">
+                            <label class="sr-only" for="search_btn">search bar</label>
+                            <input id="search_btn" class="form-control" type="text">
+                        </div>
+                        <button type="submit" class="btn btn-inverse btn-primary">Search</button>
+                    </form>
+                </div>
+            </div>
             </div>
           </div>
         </div>
