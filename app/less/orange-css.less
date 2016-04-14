@@ -184,6 +184,11 @@ html{
         margin-top: 4.5rem;
         margin-bottom: 0;
         font-size: @navbar-font-size;
+
+        &.icon {
+            font-size: 3rem;
+            margin-top: 2.5rem;
+        }
       }
     }
 
@@ -231,6 +236,28 @@ a:focus {
 .close:hover,
 .close:focus {
   outline: dotted 1px black;
+}
+
+.search-bar {
+  background-color: @brand-orange-black;
+  border-top: 1px solid @gray-darker;
+
+  .form-inline {
+    margin: 2rem 0;
+    .form-group {
+      width: 87%;
+      margin-right: .6rem;
+
+      .form-control {
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: @brand-orange-white;
+        background-color: @gray-dark;
+        border: 0;
+      }
+    }
+  }
 }
 
 //
