@@ -2,42 +2,35 @@
 /********************** Accordions **********************/
 /********************************************************/
 .o-accordion .panel{
-	border:0;
-}
-.o-accordion .panel-default > .panel-heading {
-	//background-color: #eee;
-}
-
-.o-accordion .panel-default > .panel-heading + .panel-collapse .panel-body {
-//	border-style: none solid solid;
-//	border-width: 0 1px 1px;
-//	border-color: #ddd;
-//	background-color: #fff;
+	border-top:0;  
+	border-left:0;  
+	border-right:0;
 }
 
 .o-accordion .panel-default > .panel-heading {
 	background-image: none;
 	filter: none;
+  + .panel-collapse > .panel-body {
+    border-top: 0;
+  }
 }
 /* Custom class */
-.o-accordion .panel-selected{
-//	background-color: #ccc !important;
-}
-.o-accordion .panel-chevron-open{
-	background-image: url("../images/triangle_down.png");
-	background-position: 0 50%;
-	background-repeat: no-repeat;
-	padding-left: 19px;
-}
-.o-accordion.o-accordion-orange-style .panel-chevron-open{
-	background-image: url("../images/triangle_down_orange.png");
-}
-.o-accordion .panel-chevron-closed{
-	background-image: url("../images/triangle_right.png");
-	background-position: 0 50%;
-	background-repeat: no-repeat;
-	padding-left: 19px;
-}
+         
+.o-accordion.o-accordion-orange-style .panel-chevron-open,
 .o-accordion.o-accordion-orange-style .panel-chevron-closed{
-	background-image: url("../images/triangle_right_orange.png");
+	// background-image: url("../images/triangle_down_orange.png");
+  color: @brand-orange;
+}
+.o-accordion .panel-chevron-closed, .o-accordion .panel-chevron-open{
+	padding-left: 30px;
+}
+.o-accordion .panel-chevron-closed::before{
+	font-family: "icon-orange";
+	content: "\ea52";
+  font-size: 16px;
+}
+.o-accordion .panel-chevron-open::before{
+	font-family: "icon-orange";
+	content: "\e920";
+  font-size: 16px;
 }
