@@ -1,5 +1,5 @@
 /*!
- boosted - v3.2.1 - Orange Boosted with Boostrap
+ boosted - v3.3.0-alpha.1 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -3936,6 +3936,10 @@ html {
     margin-bottom: 0;
     font-size: 16px;
   }
+  .navbar-nav > li > a.icon {
+    margin-top: 2.5rem;
+    font-size: 3rem;
+  }
   .navbar-nav li:first-child a {
     padding-left: 2rem;
   }
@@ -3995,6 +3999,25 @@ a:focus {
 .close:hover,
 .close:focus {
   outline: dotted 1px black;
+}
+.search-bar {
+  background-color: #000;
+  border-top: 1px solid #333;
+}
+.search-bar .form-inline {
+  margin: 2rem 0;
+}
+.search-bar .form-inline .form-group {
+  width: 87%;
+  margin-right: .6rem;
+}
+.search-bar .form-inline .form-group .form-control {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  background-color: #666;
+  border: 0;
 }
 .carousel {
   margin-bottom: 3rem;

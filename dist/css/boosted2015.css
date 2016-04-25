@@ -1,5 +1,5 @@
 /*!
- boosted - v3.2.1 - Orange Boosted with Boostrap
+ boosted - v3.3.0-alpha.1 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -4820,6 +4820,71 @@ fieldset[disabled] .btn {
 .btn-link.btn-inverse.disabled.hover {
   color: #666;
 }
+.o-panel {
+  position: relative;
+  height: 19.5rem;
+  overflow: hidden;
+}
+.o-panel .panel-image {
+  min-height: 100%;
+  background-color: #000;
+}
+.o-panel .panel-image img {
+  width: 100%;
+  height: auto;
+}
+.o-panel .panel-block {
+  position: absolute;
+  bottom: 0;
+  width: -webkit-calc(100% - 2rem);
+  width:         calc(100% - 2rem);
+  min-height: 7rem;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  background-color: #000;
+}
+.o-panel .panel-block .panel-link {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+}
+@media (max-width: 479px) {
+  .o-panel {
+    height: 14.2rem;
+    margin-bottom: 1rem;
+  }
+  .o-panel .panel-block {
+    width: -webkit-calc(100% - 1rem);
+    width:         calc(100% - 1rem);
+    min-height: 6rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .o-panel {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .o-panel {
+    height: 14.2rem;
+  }
+  .o-panel .panel-block {
+    width: -webkit-calc(100% - 2rem);
+    width:         calc(100% - 2rem);
+    min-height: 6rem;
+  }
+}
+@media (min-width: 1220px) {
+  .o-panel {
+    height: 21.5rem;
+  }
+}
+@media (min-width: 1380px) {
+  .o-panel {
+    height: 24rem;
+  }
+}
 html {
   font-size: 62.5%;
   /*Orange brand All is bold only plain texts are not bold*/
@@ -4968,6 +5033,10 @@ html {
     margin-bottom: 0;
     font-size: 1.6rem;
   }
+  .navbar-nav > li > a.icon {
+    margin-top: 2.5rem;
+    font-size: 3rem;
+  }
   .navbar-nav li:first-child a {
     padding-left: 2rem;
   }
@@ -5027,6 +5096,25 @@ a:focus {
 .close:hover,
 .close:focus {
   outline: dotted 1px black;
+}
+.search-bar {
+  background-color: #000;
+  border-top: 1px solid #333;
+}
+.search-bar .form-inline {
+  margin: 2rem 0;
+}
+.search-bar .form-inline .form-group {
+  width: 87%;
+  margin-right: .6rem;
+}
+.search-bar .form-inline .form-group .form-control {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  background-color: #666;
+  border: 0;
 }
 .carousel {
   margin-bottom: 3rem;
