@@ -14,8 +14,8 @@
 		parent  = colltab.attr('data-parent'),
 		collparent = parent && $(parent),
 		collid = colltab.attr('id') || uniqueId('ui-collapse'),
-    heading = '';  
-    
+    heading = '';
+
 		colltab.attr('id', collid);
 		if(collparent){
 			$(collparent).find('div:not(.collapse,.panel-body), h4').attr('role','presentation');
@@ -51,7 +51,7 @@
 			}
 		}
 	})
-    
+
   $.fn.collapse.Constructor.prototype.addAriaAndCollapsedClass = function($element, $trigger){
     var isOpen = $element.hasClass('in')
 
@@ -59,14 +59,14 @@
     $element.attr('aria-hidden', isOpen)
     $element.attr('tabindex', isOpen ? 0 : -1)
     $trigger
-      .toggleClass('collapsed', !isOpen) 
+      .toggleClass('collapsed', !isOpen)
       .toggleClass('panel-chevron-closed', !isOpen)
       .toggleClass('panel-chevron-open', isOpen)
       .attr('aria-expanded', isOpen)
       .attr('aria-selected', isOpen)
       .attr('tabindex', isOpen ? 0 : -1)
   }
-  
+
   $.fn.collapse.Constructor.prototype.hide = function () {
     if (this.transitioning || !this.$element.hasClass('in')) return
 
@@ -108,10 +108,10 @@
     this.$element
       [dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+      .emulateTransitionEnd($.fn.collapse.Constructor.TRANSITION_DURATION)
   }
-  
-  $.fn.collapse.Constructor.prototype.prototype.show = function () {
+
+  $.fn.collapse.Constructor.prototype.show = function () {
     if (this.transitioning || this.$element.hasClass('in')) return
 
     var activesData
@@ -127,7 +127,7 @@
     if (startEvent.isDefaultPrevented()) return
 
     if (actives && actives.length && !$(this.options.parent).attr('data-multipleAtATime')) {
-      Plugin.call(actives, 'hide')
+      $.fn.collapse.call(actives, 'hide')
       activesData || actives.data('bs.collapse', null)
     }
 
@@ -147,9 +147,9 @@
       .toggleClass('panel-chevron-open', true)
       .attr('aria-expanded', true)
       .attr('aria-selected', true)
-      .attr('tabindex', 0)   
-   
-    
+      .attr('tabindex', 0)
+
+
     this.transitioning = 1
 
     var complete = function () {
@@ -167,9 +167,9 @@
 
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+      .emulateTransitionEnd($.fn.collapse.Constructor.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
   }
-  
+
 	var collToggle = $.fn.collapse.Constructor.prototype.toggle;
 	$.fn.collapse.Constructor.prototype.toggle = function(){
 		var prevTab = this.$parent && this.$parent.find('[aria-expanded="true"]'),
@@ -185,7 +185,7 @@
       /*
 			var newHeadingSelected = $curPanel.parent().children().first(); //Selection du nouveau heading déplié (panel-heading)
 			var oldHeadingSelected = $prevPanel.parent().children().first(); //Selection de l'ancien heading déplié (panel-heading)
-      
+
 			//Si on a bien le nouveau heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
 			//Enfin, on modifie les classes pour les chevrons (on vire la classe chevron droite et on ajoute la classe chevron bas)
 			if(newHeadingSelected.hasClass('panel-heading') ){
@@ -226,7 +226,7 @@
 			}
 		}else{
 			collToggle.apply(this, arguments);
-      
+
 			$curPanel = this.$element;
 
 			if ($.support.transition) {
