@@ -69,7 +69,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage' width='48px'/></a>
+        <a class="navbar-brand" href="../"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage'/></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">
@@ -161,9 +161,9 @@
   <p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
 
   <h2 id="grid-intro">Introduction</h2>
-  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Boosted grid system works:</p>
   <ul>
-    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+    <li>Rows must be placed within a <code>.container</code> (fixed-width), <code>.container-fluid</code> (full-width) or <code>.o-container-fluid</code> (full-width with security margins) for proper alignment and padding. <code>.o-container-fluid</code> need to be used for the main page content, not as a subcontainer</li>
     <li>Use rows to create horizontal groups of columns.</li>
     <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
     <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
@@ -177,22 +177,30 @@
 
   <h2 id="grid-media-queries">Media queries</h2>
   <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Extra small devices (phones, less than 768px) */</span>
-<span class="cm">/* No media query since this is the default in Bootstrap */</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Extra small devices (phones, less than 481px) */</span>
+<span class="cm">/* No media query since this is the default in Boosted */</span>
 
-<span class="cm">/* Small devices (tablets, 768px and up) */</span>
+<span class="cm">/* Small devices (phones 480px and up) */</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="cm">/* Medium devices (desktops, 992px and up) */</span>
+  
+<span class="cm">/* Medium devices (tablets, 768px and up) */</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="cm">/* Large devices (large desktops, 1200px and up) */</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<span class="cm">/* Large devices (desktops, 980px and up) */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+
+<span class="cm">/* Extra large devices (large desktops, 1220px and up) */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xl-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+  
+<span class="cm">/* Extra extra large devices (large desktops, 1380px and up) */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xxl-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
   <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xs-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xl-min</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xl-max</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-xlg-min</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
   <h2 id="grid-options">Grid options</h2>
   <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
@@ -200,37 +208,87 @@
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th></th>
+          <th>Viewport breakpoints</th>
           <th>
-            Extra small devices
-            <small>Phones (&lt;768px)</small>
+            Extra small
+            <small>Phones (&lt;480px)</small>
           </th>
           <th>
-            Small devices
+            Small
+            <small>Phones (&ge;480px)</small>
+          </th>
+          <th>
+            Medium
             <small>Tablets (&ge;768px)</small>
           </th>
           <th>
-            Medium devices
-            <small>Desktops (&ge;992px)</small>
+            Large
+            <small>Desktops (&ge;980px)</small>
           </th>
           <th>
-            Large devices
-            <small>Desktops (&ge;1200px)</small>
+            Extra large
+            <small>Desktops (&ge;1220px)</small>
+          </th>
+          <th>
+            Extra extra large
+            <small>Desktops (&ge;1380px)</small>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="text-nowrap" scope="row">Grid behavior</th>
-          <td>Horizontal at all times</td>
-          <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          <th class="text-nowrap" scope="row">Targetted resolution</th>
+          <td>320px</td>
+          <td>480px</td>
+          <td>760px</td>
+          <td>1024px</td>
+          <td>1280px</td>
+          <td>1440px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Container width</th>
-          <td>None (auto)</td>
-          <td>750px</td>
-          <td>970px</td>
-          <td>1170px</td>
+          <th class="text-nowrap" scope="row">Device</th>
+          <td>Mobile portrait</td>
+          <td>Mobile landscape</td>
+          <td>Tablet portrait</td>
+          <td>Small desktop / Tablet landscape</td>
+          <td>Medium desktop</td>
+          <td>Large desktop</td>
+        </tr>
+        <tr>
+          <th scope="row">Container max-width (Design Area)</th>
+          <td>302px</td>
+          <td>458px</td>
+          <td>724px</td>
+          <td>940px</td>
+          <td>1180px</td>
+          <td>1300px</td>
+        </tr>
+        <tr>
+          <th scope="row">o-container-fluid margin</th>
+          <td>1.25%</td>
+          <td>1.25%</td>
+          <td>1.5625%</td>
+          <td>3.125%</td>
+          <td>3.125%</td>
+          <td>4.16667%</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Column width</th>
+          <td>~16px</td>
+          <td>~29px</td>
+          <td>~42px</td>
+          <td>~60px</td>
+          <td>~80px</td>
+          <td>~90px</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Gutter width</th>
+          <td colspan="2">10px (5px on each side of a column)</td>
+          <td colspan="4">20px (10px on each side of a column)</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row"># of columns</th>
+          <td colspan="6">12</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Class prefix</th>
@@ -238,33 +296,20 @@
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
-        </tr>
-        <tr>
-          <th class="text-nowrap" scope="row"># of columns</th>
-          <td colspan="4">12</td>
-        </tr>
-        <tr>
-          <th class="text-nowrap" scope="row">Column width</th>
-          <td class="text-muted">Auto</td>
-          <td>~62px</td>
-          <td>~81px</td>
-          <td>~97px</td>
-        </tr>
-        <tr>
-          <th class="text-nowrap" scope="row">Gutter width</th>
-          <td colspan="4">30px (15px on each side of a column)</td>
+          <td><code>.col-xl-</code></td>
+          <td><code>.col-xxl-</code></td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Nestable</th>
-          <td colspan="4">Yes</td>
+          <td colspan="6">Yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Offsets</th>
-          <td colspan="4">Yes</td>
+          <td colspan="6">Yes</td>
         </tr>
         <tr>
           <th class="text-nowrap" scope="row">Column ordering</th>
-          <td colspan="4">Yes</td>
+          <td colspan="6">Yes</td>
         </tr>
       </tbody>
     </table>
@@ -527,8 +572,8 @@
   <h3>Variables</h3>
   <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@grid-columns</span><span class="nd">:</span>              <span class="nt">12</span><span class="p">;</span>
-<span class="k">@grid-gutter-width</span><span class="nd">:</span>         <span class="nt">30px</span><span class="p">;</span>
-<span class="k">@grid-float-breakpoint</span><span class="nd">:</span>     <span class="nt">768px</span><span class="p">;</span></code></pre></figure>
+<span class="k">@grid-gutter-width</span><span class="nd">:</span>         <span class="nt">20px</span><span class="p">;</span>
+<span class="k">@grid-float-breakpoint</span><span class="nd">:</span>     <span class="nt">769px</span><span class="p">;</span></code></pre></figure>
 
   <h3>Mixins</h3>
   <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
@@ -690,30 +735,43 @@
   <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
   <div class="bs-example bs-example-type" data-example-id="simple-headings">
     <table class="table">
+    <thead>
+        <tr>
+          <th>Title</th>
+          <th>Size on desktop</th>
+          <th>Size on mobile (sm and xs)</th>
+        </tr>
+    </thead>
       <tbody>
         <tr>
           <td><h1>h1. Bootstrap heading</h1></td>
-          <td class="type-info">Semibold 36px</td>
+          <td class="type-info">Bold 34px</td>
+          <td class="type-info">Bold 20px</td>
         </tr>
         <tr>
           <td><h2>h2. Bootstrap heading</h2></td>
-          <td class="type-info">Semibold 30px</td>
+          <td class="type-info">Bold 30px</td>
+          <td class="type-info">Bold 18px</td>
         </tr>
         <tr>
           <td><h3>h3. Bootstrap heading</h3></td>
-          <td class="type-info">Semibold 24px</td>
+          <td class="type-info">Bold 24px</td>
+          <td class="type-info">Bold 16px</td>
         </tr>
         <tr>
           <td><h4>h4. Bootstrap heading</h4></td>
-          <td class="type-info">Semibold 18px</td>
+          <td class="type-info">Bold 20px</td>
+          <td class="type-info">Bold 14px</td>
         </tr>
         <tr>
           <td><h5>h5. Bootstrap heading</h5></td>
-          <td class="type-info">Semibold 14px</td>
+          <td class="type-info">Bold 18px</td>
+          <td class="type-info">Bold 14px</td>
         </tr>
         <tr>
           <td><h6>h6. Bootstrap heading</h6></td>
-          <td class="type-info">Semibold 12px</td>
+          <td class="type-info">Bold 16px</td>
+          <td class="type-info">Bold 14px</td>
         </tr>
       </tbody>
     </table>
@@ -3669,11 +3727,11 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 
     <!-- Footer
 ================================================== -->
-<footer class="navbar">
+<footer class="navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
-            <div class="o-footer">                
-                <div class="container-fluid o-footer-top bs-docs-footer">
+            <div class="col-xs-12 o-footer">                
+                <div class="o-footer-top bs-docs-footer">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
@@ -3681,13 +3739,10 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v3.3.6/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
                 </div>
                 <div class="o-footer-bottom">
-                    <ul class="">
-                      <li>Currently v3.2.1</li>
-                      <li>&middot;</li>
-                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
-                      <li>&middot;</li>
-                      <li><a href="../getting-started/#examples">Examples</a></li>
-                      <li>&middot;</li>
+                    <ul>
+                      <li>Currently v3.3.0-alpha.2</li>                      
+                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>                      
+                      <li><a href="../getting-started/#examples">Examples</a></li>                      
                       <li><a href="https://github.com/twbs/bootstrap/tree/v3.3.6">Original Bootstrap</a></li>
                     </ul>
                 </div>

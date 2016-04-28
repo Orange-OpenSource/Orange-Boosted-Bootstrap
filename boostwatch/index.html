@@ -64,7 +64,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage' width='48px'/></a>
+        <a class="navbar-brand" href="../"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage'/></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">
@@ -117,7 +117,7 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal" id="myModal">
+    <div class="modal" id="myModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -500,110 +500,12 @@
 
 
 <div class="bs-docs-section clearfix">
-  <h1 id="local" class="page-header">Local navigation bar</h1>
-  <p class="lead">Two types of local navigation.</p>
-  <h2 id="local1">Default local navigation</h2>
-  
-  <div class="" data-example-id="">
-      <div class="container-fluid">
-        <div class="row">
-            <nav class="navbar navbar-default nav-local" role="navigation">
-							<div class="container-fluid">
-								<!-- Brand and toggle get grouped for better mobile display -->
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-									</button>
-								</div>
-
-								<!-- Collect the nav links, forms, and other content for toggling -->
-								<div class="collapse navbar-collapse local" id="bs-example-navbar-collapse">
-									<ul class="nav navbar-nav">
-										<li class="active"><a href="#">Voluptatem</a><div class='arrow' aria-hidden='true'></div></li>
-										<li><a href="#">Unde omnis istea</a><div class='arrow' aria-hidden='true'></div></li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown <b class="caret" aria-hidden="true"></b></a>
-											<ul class="dropdown-menu" role="menu">
-												<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-												<li role="presentation"><a href="#" role="menuitem">Another action</a></li>
-												<li role="presentation"><a href="#" role="menuitem">Something else here</a></li>
-												<li role="presentation" class="divider"></li>
-												<li role="presentation"><a href="#" role="menuitem">Separated link</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="nav navbar-nav navbar-right">
-										<li><a href="#">Accusantium</a><div class='arrow' aria-hidden='true'></div></li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown <b class="caret" aria-hidden="true"></b></a>
-											<ul class="dropdown-menu" role="menu">
-												<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-												<li role="presentation"><a href="#" role="menuitem">Another action</a></li>
-												<li role="presentation"><a href="#" role="menuitem">Something else here</a></li>
-												<li role="presentation" class="divider"></li>
-												<li role="presentation"><a href="#" role="menuitem">Separated link</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</nav>
-        </div>
-      </div><!-- /.container-fluid -->
-  </div>
-    
-<h2 id="local2">Two levels local navigation</h2>
-  <div class="" data-example-id="">
-      <div class="container-fluid">
-        <div class="row">
-            <nav class="navbar navbar-default nav-local" role="navigation">
-				<div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-                    </div>
-
-                    <!-- Local nav with 2 level : 1st level -->
-                    <div class="collapse navbar-collapse local" id="bs-example-navbar-collapse-2">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Voluptatem</a><div class='arrow' aria-hidden='true'></div></li>
-                            <li><a href="#">Unde omnis istea</a><div class='arrow' aria-hidden='true'></div></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown <b class="caret" aria-hidden="true"></b></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a href="#" role="menuitem">Action</a></li>
-                                    <li role="presentation"><a href="#" role="menuitem">Another action</a></li>
-                                    <li role="presentation"><a href="#" role="menuitem">Something else here</a></li>
-                                    <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a href="#" role="menuitem">Separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Local nav with 2 level : 2nd level. Be careful about small devices, this component is not completely adapted -->
-                    <div class="navbar-collapse sublocal">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">Natus error sit</a><div class='arrow' aria-hidden='true'></div></li>
-                            <li><a href="#">Accusantium</a><div class='arrow' aria-hidden='true'></div></li>
-                            <li class="active"><a href="#">Totam rem aperiam</a><div class='arrow' aria-hidden='true'></div></li>
-                            <li><a href="#">Sed ut</a><div class='arrow' aria-hidden='true'></div></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- /step bar -->
-        </div>
-      </div><!-- /.container-fluid -->
-  </div>
+<h1 id="local">Local navigation</h2>
+    <ul class="nav nav-local">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
 </div>
 
 
@@ -743,198 +645,196 @@
 
 
 <div class="bs-docs-section clearfix">
-    <h1 class="page-header" id="accordion">Accordions</h1>
-          <p class="lead">Three types of accordions.</p>
-          	<div class="container-fluid">
-                <div class="row">
-					<h2 id="accordion1">one at a time accordion:</h2>
-				    <div class="o-accordion panel-group" id="accordion-1">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-1-title-1">
-											<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne"> Collapsible Group Item #1 </a>
-										</h4>
-									</div>
-									<div id="collapseOne" class="panel-collapse collapse in">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-1-title-2">
-											<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo"> Collapsible Group Item #2 </a>
-										</h4>
-									</div>
-									<div id="collapseTwo" class="panel-collapse collapse">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-1-title-3">
-											<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree"> Collapsible Group Item #3 </a>
-										</h4>
-									</div>
-									<div id="collapseThree" class="panel-collapse collapse">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-							</div>
-					</div> <!-- row -->
-					<div class="row" id="section-2">
-						<h2 id="accordion2">multiple-opened-items version:</h2>
-                        <div class="o-accordion panel-group" id="accordion-2" data-multipleAtATime="true">
-								<div class="panel multipleAtATime panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-2-title-1">
-											<a class="accordion-toggle" data-toggle="collapse" href="#collapse2One"> Collapsible Group Item #1 </a>
-										</h4>
-									</div>
-									<div id="collapse2One" class="panel-collapse collapse in">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-								<div class="panel multipleAtATime panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-2-title-2">
-											<a class="accordion-toggle" data-toggle="collapse" href="#collapse2Two"> Collapsible Group Item #2 </a>
-										</h4>
-									</div>
-									<div id="collapse2Two" class="panel-collapse collapse">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-								<div class="panel multipleAtATime panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-2-title-3">
-											<a class="accordion-toggle" data-toggle="collapse" href="#collapse2Three"> Collapsible Group Item #3 </a>
-										</h4>
-									</div>
-									<div id="collapse2Three" class="panel-collapse collapse">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-							</div>
-						</div>
-					</div> <!-- row -->
-					
-
-					<div class="row" id="section-3">
-						<h2 id="accordion3">orange caret version:</h2>
-                        <div class="o-accordion o-accordion-orange-style panel-group" id="accordion-3">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-3-title-1">
-											<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3One"> Collapsible Group Item #1 </a>
-										</h4>
-									</div>
-									<div id="collapse3One" class="panel-collapse collapse in">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-3-title-2">
-											<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Two"> Collapsible Group Item #2 </a>
-										</h4>
-									</div>
-									<div id="collapse3Two" class="panel-collapse collapse">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title" id="accordion-3-title-3">
-											<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Three"> Collapsible Group Item #3 </a>
-										</h4>
-									</div>
-									<div id="collapse3Three" class="panel-collapse collapse">
-										<div class="panel-body">Anim pariatur cliche reprehenderit,
-											enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-											moon officia aute, non cupidatat skateboard dolor brunch. Food
-											truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-											sunt aliqua put a bird on it squid single-origin coffee nulla
-											assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-											labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-											excepteur butcher vice lomo. Leggings occaecat craft beer
-											farm-to-table, raw denim aesthetic synth nesciunt you probably
-											haven't heard of them accusamus labore sustainable VHS.</div>
-									</div>
-							</div>
-                        </div>
-				    </div> <!-- row -->
-    </div> <!-- container -->
+  <h1 class="page-header" id="accordion">Accordions</h1>
+  <p class="lead">Three types of accordions.</p>
+  <div class="container-fluid">
+    <div class="row">
+			<h2 id="accordion1">one at a time accordion:</h2>
+			<div class="o-accordion panel-group" id="accordion-1">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title" id="accordion-1-title-1">
+							<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne"> Collapsible Group Item #1 </a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">Anim pariatur cliche reprehenderit,
+							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
+							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+							sunt aliqua put a bird on it squid single-origin coffee nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+							labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
+							excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably
+							haven't heard of them accusamus labore sustainable VHS.</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title" id="accordion-1-title-2">
+							<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo"> Collapsible Group Item #2 </a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">Anim pariatur cliche reprehenderit,
+							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non cupidatat skateboard dolor brunch. Food
+							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+							sunt aliqua put a bird on it squid single-origin coffee nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
+							excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably
+							haven't heard of them accusamus labore sustainable VHS.</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title" id="accordion-1-title-3">
+							<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree"> Collapsible Group Item #3 </a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">Anim pariatur cliche reprehenderit,
+							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non cupidatat skateboard dolor brunch. Food
+							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+							sunt aliqua put a bird on it squid single-origin coffee nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+							excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably
+							haven't heard of them accusamus labore sustainable VHS.</div>
+					</div>
+				</div>
+			</div>
+    </div> <!-- row -->
+    <div class="row" id="section-2">
+			<h2 id="accordion2">multiple-opened-items version:</h2>
+      <div class="o-accordion panel-group" id="accordion-2" data-multipleAtATime="true">
+				<div class="panel multipleAtATime panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title" id="accordion-2-title-1">
+							<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse2One"> Collapsible Group Item #1 </a>
+						</h4>
+					</div>
+					<div id="collapse2One" class="panel-collapse collapse in">
+						<div class="panel-body">Anim pariatur cliche reprehenderit,
+							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
+							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+							sunt aliqua put a bird on it squid single-origin coffee nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+							labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
+							excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably
+							haven't heard of them accusamus labore sustainable VHS.</div>
+					</div>
+				</div>
+				<div class="panel multipleAtATime panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title" id="accordion-2-title-2">
+							<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse2Two"> Collapsible Group Item #2 </a>
+						</h4>
+					</div>
+					<div id="collapse2Two" class="panel-collapse collapse">
+						<div class="panel-body">Anim pariatur cliche reprehenderit,
+							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non cupidatat skateboard dolor brunch. Food
+							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+							sunt aliqua put a bird on it squid single-origin coffee nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
+							excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably
+							haven't heard of them accusamus labore sustainable VHS.</div>
+					</div>
+				</div>
+				<div class="panel multipleAtATime panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title" id="accordion-2-title-3">
+							<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse2Three"> Collapsible Group Item #3 </a>
+						</h4>
+					</div>
+					<div id="collapse2Three" class="panel-collapse collapse">
+						<div class="panel-body">Anim pariatur cliche reprehenderit,
+							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non cupidatat skateboard dolor brunch. Food
+							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+							sunt aliqua put a bird on it squid single-origin coffee nulla
+							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+							excepteur butcher vice lomo. Leggings occaecat craft beer
+							farm-to-table, raw denim aesthetic synth nesciunt you probably
+							haven't heard of them accusamus labore sustainable VHS.</div>
+					</div>
+			   </div>
+      </div>
+    </div> <!-- row -->	
+    <div class="row" id="section-3">
+		<h2 id="accordion3">orange caret version:</h2>
+    <div class="o-accordion o-accordion-orange-style panel-group" id="accordion-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title" id="accordion-3-title-1">
+						<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3One"> Collapsible Group Item #1 </a>
+					</h4>
+				</div>
+				<div id="collapse3One" class="panel-collapse collapse in">
+					<div class="panel-body">Anim pariatur cliche reprehenderit,
+						enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+						moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
+						truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+						sunt aliqua put a bird on it squid single-origin coffee nulla
+						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+						labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
+						excepteur butcher vice lomo. Leggings occaecat craft beer
+						farm-to-table, raw denim aesthetic synth nesciunt you probably
+						haven't heard of them accusamus labore sustainable VHS.</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title" id="accordion-3-title-2">
+						<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Two"> Collapsible Group Item #2 </a>
+					</h4>
+				</div>
+				<div id="collapse3Two" class="panel-collapse collapse">
+					<div class="panel-body">Anim pariatur cliche reprehenderit,
+						enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+						moon officia aute, non cupidatat skateboard dolor brunch. Food
+						truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+						sunt aliqua put a bird on it squid single-origin coffee nulla
+						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+						labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
+						excepteur butcher vice lomo. Leggings occaecat craft beer
+						farm-to-table, raw denim aesthetic synth nesciunt you probably
+						haven't heard of them accusamus labore sustainable VHS.</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title" id="accordion-3-title-3">
+						<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Three"> Collapsible Group Item #3 </a>
+					</h4>
+				</div>
+				<div id="collapse3Three" class="panel-collapse collapse">
+					<div class="panel-body">Anim pariatur cliche reprehenderit,
+						enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+						moon officia aute, non cupidatat skateboard dolor brunch. Food
+						truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+						sunt aliqua put a bird on it squid single-origin coffee nulla
+						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+						labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+						excepteur butcher vice lomo. Leggings occaecat craft beer
+						farm-to-table, raw denim aesthetic synth nesciunt you probably
+						haven't heard of them accusamus labore sustainable VHS.</div>
+				</div>
+		  </div>
+    </div>
+	 </div> <!-- row -->				
+  </div> <!-- container -->
 </div>
 <div class="bs-docs-section clearfix">
   <h1 id="footer" class="page-header">Footer</h1>
@@ -942,11 +842,12 @@
    <!-- Footer -->
     <footer class="navbar" role="contentinfo">
         <div class="container-fluid">
-              <div class="o-footer">
+              <div class="row o-footer">
+                <div class="col-xs-12">
                   <h1 class="sr-only">footer - site map & informations</h1>
                   <div class="container-fluid o-footer-top">
                       <div class="row">
-                          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <div class="col-xs-12 col-sm-6 col-md-2">
                               <ul>
                                   <li><h2>Sed ut perspiciatis</h2></li>
                                   <li><a href="#">Unde omnis istea</a></li>
@@ -955,7 +856,7 @@
                                   <li><a href="#">Totam rem aperiam</a></li>
                               </ul>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <div class="col-xs-12 col-sm-6 col-md-2">
                               <ul>
                                   <li><h2>Voluptatem accusantium</h2></li>
                                   <li><a href="#">Natus error sit</a></li>
@@ -965,14 +866,14 @@
                                   <li><a href="#">Totam rem aperiam</a></li>
                               </ul>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <div class="col-xs-12 col-sm-6 col-md-2">
                               <ul>
                                   <li><h2>Natus error sit</h2></li>
                                   <li><a href="#">Doloremque</a></li>
                                   <li><a href="#">Totam rem aperiam</a></li>
                               </ul>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <div class="col-xs-12 col-sm-6 col-md-2">
                               <ul>
                                   <li><h2>Doloremque laudantium</h2></li>
                                   <li><a href="#">Doloremque</a></li>
@@ -981,7 +882,7 @@
                                   <li><a href="#">Totam rem aperiam</a></li>
                               </ul>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <div class="col-xs-12 col-sm-6 col-md-2">
                               <ul>
                                   <li><h2>Totam rem aperiam</h2></li>
                                   <li><a href="#">Totam rem aperiam</a></li>
@@ -991,7 +892,7 @@
                                   <li><a href="#">Doloremque</a></li>
                               </ul>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                          <div class="col-xs-12 col-sm-6 col-md-2">
                               <ul>
                                   <li><h2>Accusantium</h2></li>
                                   <li><a href="#">Unde omnis istea</a></li>
@@ -1005,7 +906,7 @@
                           <div class="col-xs-12">
                               <ul class="nav navbar-nav">
                                   <li><a href="#">Contact us</a></li>
-                                  <li><a href="#"><span class="icon-orange-location"></span>Locate a store</a></li>
+                                  <li><a href="#"><span class="icon-location_pin_compass"></span>Locate a store</a></li>
                                   <li><a href="#">Coverage map</a></li>
                                   <li><a href="#">Business</a></li>
                                   <li><a href="#">Child protection</a></li>
@@ -1024,6 +925,7 @@
                           <li><a href="#">Voluptatem</a></li>
                       </ul>
                   </div>
+                </div>
             </div>
         </div><!-- /.container-fluid -->
     </footer>
@@ -1032,46 +934,45 @@
   <h1 id="stepbar" class="page-header">Stepbar</h1>
   <p class="lead">Indicate the current step within a sequential navigation.</p>
   <h2 id="stepbar-default">Default stepbar</h2>
-  
+
   <div class="" data-example-id="default-stepbar">
       <div class="container-fluid">
         <div class="row">
-            <ul class="o-wizard-step-bar" data-steps="5">
-                <li class="visited">
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 1</div>
-                        <div><a href="#" title="Step 1&nbsp;: Voluptatem" class="hidden-xs hidden-sm">Voluptatem</a></div>
-                    </div>
+            <nav class="o-stepbar">
+            <span class="hidden-md hidden-lg stepbar-header">Step</span>
+            <ol>
+                <li class="done stepbar-item">
+                    <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Voluptatem</span>
+                    </a>
                 </li>
-                <li class="visited">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 2</div>
-                        <div><a href="#" title="Step 2&nbsp;: Aperiam" class="hidden-xs hidden-sm">Aperiam</a></div>
-                    </div>
+                <li class="stepbar-item current">
+                    <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Aperiam</span>
+                    </a>
                 </li>
-                <li class="on">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 3</div>
-                        <div><span class="hidden-xs hidden-sm">Accusantinum</span></div>
-                    </div>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Accusantinum</span>
+                    </a>
                 </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 4</div>
-                        <div><span class="hidden-xs hidden-sm">Ipsam</span></div>
-                    </div>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 4 : Ipsam">
+                        <span class="step-number">4</span>
+                        <span class="step-title">Ipsam</span>
+                    </a>
                 </li>
-                <li class="next">
-                    <div class="arrow" aria-hidden="true"></div>
-                    <div>
-                        <div><span class="hidden-xs">Step&nbsp;</span> 5</div>
-                        <div><span class="hidden-xs hidden-sm">Aspernatur</span></div>
-                    </div>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 5 : Aspernatur">
+                        <span class="step-number">5</span>
+                        <span class="step-title">Aspernatur</span>
+                    </a>
                 </li>
-            </ul>
+            </ol>
+        </nav>
         </div>
       </div><!-- /.container-fluid -->
   </div>
@@ -1084,7 +985,8 @@
       <div class="bs-docs-section clearfix">
         <div class="row">
           <div class="">
-            <div class="page-header">             <h1 id="navbar">Navbar</h1>
+            <div class="page-header">
+              <h1 id="navbar">Navbar</h1>
             </div>
 
             <div class="bs-component">
@@ -1095,7 +997,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage" width="48px"/></a>
+                  <a href="#" class="navbar-brand"><img src="../dist/images/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-respnsive-collapse">
                   <ul class="nav navbar-nav">
@@ -1114,27 +1016,28 @@
                       </ul>
                     </li>
                   </ul>
-                  <form class="navbar-form navbar-left">
-                    <input class="form-control col-lg-8" placeholder="Search" type="text">
-                  </form>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret" aria-hidden="true"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
+                    <li>
+                        <a aria-haspopup="true" href="#collapseSearchBar" data-toggle="collapse" class="icon" aria-expanded="false" aria-controls="collapseSearchBar">
+                            <span class="sr-only">open search bar</span>
+                            <span class="icon-search" aria-hidden="true"></span>
+                        </a>
                     </li>
                   </ul>
                 </div>
               </div>
-            <div style="display: none;" id="source-button" class="btn btn-primary btn-xs">&lt; &gt;</div>
-         </div>   
-
+              <div style="" aria-expanded="true" class="search-bar collapse in" id="collapseSearchBar">
+                <div class="container-fluid">
+                    <form class="form-inline" role="search">
+                        <div class="form-group">
+                            <label class="sr-only" for="search_btn">search bar</label>
+                            <input id="search_btn" class="form-control" type="text">
+                        </div>
+                        <button type="submit" class="btn btn-inverse btn-primary">Search</button>
+                    </form>
+                </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1164,7 +1067,7 @@
               <button type="button" class="btn btn-link">Link</button>
             </p>
         <h2>Hover</h2>
-            
+
             <p class="bs-component">
               <button type="button" class="btn btn-default hover">Default</button>
               <button type="button" class="btn btn-primary hover">Primary</button>
@@ -1174,7 +1077,7 @@
               <button type="button" class="btn btn-danger hover">Danger</button>
               <button type="button" class="btn btn-link hover">Link</button>
             </p>
-         <h2>Pressed</h2>   
+         <h2>Pressed</h2>
             <p class="bs-component">
               <button type="button" class="btn btn-default active">Default</button>
               <button type="button" class="btn btn-primary active">Primary</button>
@@ -1184,19 +1087,88 @@
               <button type="button" class="btn btn-danger active">Danger</button>
               <button type="button" class="btn btn-link active">Link</button>
             </p>
-         <h2>Disabled</h2>   
-            
+         <h2>Disabled</h2>
+
             <p class="bs-component">
-              <button type="button" class="btn btn-default disabled">Default</button>
-              <button type="button" class="btn btn-primary disabled">Primary</button>
-              <button type="button" class="btn btn-success disabled">Success</button>
-              <button type="button" class="btn btn-info disabled">Info</button>
-              <button type="button" class="btn btn-warning disabled">Warning</button>
-              <button type="button" class="btn btn-danger disabled">Danger</button>
-              <button type="button" class="btn btn-link disabled">Link</button>
+              <button type="button" class="btn btn-default disabled" disabled="disabled">Default</button>
+              <button type="button" class="btn btn-primary disabled" disabled="disabled">Primary</button>
+              <button type="button" class="btn btn-success disabled" disabled="disabled">Success</button>
+              <button type="button" class="btn btn-info disabled" disabled="disabled">Info</button>
+              <button type="button" class="btn btn-warning disabled" disabled="disabled">Warning</button>
+              <button type="button" class="btn btn-danger disabled" disabled="disabled">Danger</button>
+              <button type="button" class="btn btn-link disabled" disabled="disabled">Link</button>
             </p>
 
-         <h2>Dropdowns</h2>   
+         <div style="background-color: black; padding: 2rem;">
+             <h2 style="color: white;">Default</h2>
+            <p class="bs-component">
+              <button type="button" class="btn btn-inverse btn-default">Default</button>
+              <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+              <button type="button" class="btn btn-inverse btn-success">Success</button>
+              <button type="button" class="btn btn-inverse btn-info">Info</button>
+              <button type="button" class="btn btn-inverse btn-warning">Warning</button>
+              <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+              <button type="button" class="btn btn-inverse btn-link">Link</button>
+            </p>
+        <h2 style="color: white;">Hover</h2>
+
+            <p class="bs-component">
+              <button type="button" class="btn btn-inverse btn-default hover">Default</button>
+              <button type="button" class="btn btn-inverse btn-primary hover">Primary</button>
+              <button type="button" class="btn btn-inverse btn-success hover">Success</button>
+              <button type="button" class="btn btn-inverse btn-info hover">Info</button>
+              <button type="button" class="btn btn-inverse btn-warning hover">Warning</button>
+              <button type="button" class="btn btn-inverse btn-danger hover">Danger</button>
+              <button type="button" class="btn btn-inverse btn-link hover">Link</button>
+            </p>
+         <h2 style="color: white;">Pressed</h2>
+            <p class="bs-component">
+              <button type="button" class="btn btn-inverse btn-default active">Default</button>
+              <button type="button" class="btn btn-inverse btn-primary active">Primary</button>
+              <button type="button" class="btn btn-inverse btn-success active">Success</button>
+              <button type="button" class="btn btn-inverse btn-info active">Info</button>
+              <button type="button" class="btn btn-inverse btn-warning active">Warning</button>
+              <button type="button" class="btn btn-inverse btn-danger active">Danger</button>
+              <button type="button" class="btn btn-inverse btn-link active">Link</button>
+            </p>
+         <h2 style="color: white;">Disabled</h2>
+
+            <p class="bs-component">
+              <button type="button" class="btn btn-inverse btn-default disabled" disabled="disabled">Default</button>
+              <button type="button" class="btn btn-inverse btn-primary disabled" disabled="disabled">Primary</button>
+              <button type="button" class="btn btn-inverse btn-success disabled" disabled="disabled">Success</button>
+              <button type="button" class="btn btn-inverse btn-info disabled" disabled="disabled">Info</button>
+              <button type="button" class="btn btn-inverse btn-warning disabled" disabled="disabled">Warning</button>
+              <button type="button" class="btn btn-inverse btn-danger disabled" disabled="disabled">Danger</button>
+              <button type="button" class="btn btn-inverse btn-link disabled" disabled="disabled">Link</button>
+            </p>
+         </div>
+         <div style="background-color: #4bb4e6; padding: 2rem;">
+             <h2>Light background</h2>
+            <p class="bs-component">
+              <button type="button" class="btn btn-default">Default</button>
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-link">Link</button>
+            </p>
+         </div>
+         <div style="background-color: #595959; padding: 2rem;">
+             <h2 style="color: white;">Dark background</h2>
+            <p class="bs-component">
+              <button type="button" class="btn btn-inverse btn-default">Default</button>
+              <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+              <button type="button" class="btn btn-inverse btn-success">Success</button>
+              <button type="button" class="btn btn-inverse btn-info">Info</button>
+              <button type="button" class="btn btn-inverse btn-warning">Warning</button>
+              <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+              <button type="button" class="btn btn-inverse btn-link">Link</button>
+            </p>
+         </div>
+
+         <h2>Dropdowns</h2>
 
             <div style="margin-bottom: 15px;">
               <div class="btn-toolbar bs-component" style="margin: 0;">
@@ -1262,7 +1234,7 @@
               </div>
             </div>
 
-         <h2>Sizes</h2>   
+         <h2>Sizes</h2>
             <p class="bs-component">
               <button type="button" class="btn btn-primary btn-lg">Large button</button>
               <button type="button" class="btn btn-primary">Default button</button>
@@ -1360,8 +1332,8 @@
             <div class="bs-component">
               <h2>Example body text</h2>
               <p>Nullam quis risus eget <a href="#">urna mollis ornare</a>
- vel eu leo. Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies 
+ vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
 vehicula.</p>
               <p><small>This line of text is meant to be treated as fine print.</small></p>
               <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
@@ -1410,7 +1382,7 @@ vehicula.</p>
           </div>
         </div>
       </div>
-  
+
 
       <!-- Forms
       ================================================== -->
@@ -1444,24 +1416,24 @@ vehicula.</p>
                           <input type="checkbox"> Checkbox default
                         </label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk1">
                           <label for="idChk1">Orange checkbox unchecked</label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk2" disabled="disabled">
                           <label for="idChk2">Orange checkbox unchecked disabled</label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk3" checked>
                           <label for="idChk3">Orange checkbox checked </label>
                       </div>
-                      <div>                        
+                      <div>
                           <input type="checkbox" class="o-checkbox" id="idChk4"  disabled="disabled" checked>
                           <label for="idChk4">Orange checkbox checked disabled</label>
                       </div>
                       <div>
-                          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5"> 
+                          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5">
                           <label for="idChk5">Orange checkbox with label before</label>
                       </div>
                     </div>
@@ -1494,31 +1466,31 @@ vehicula.</p>
                     <label class="col-lg-3 control-label">Orange Radios</label>
                     <div class="col-lg-9">
                       <div>
-                          <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">                          
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">
                         <label for="optionsRadiosOrange1">
                           Orange radio checked
                         </label>
                       </div>
                       <div>
-                          <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">                          
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange2" value="option2" type="radio" class="o-radio">
                         <label for="optionsRadiosOrange2">
                           Orange radio unchecked
                         </label>
                       </div>
                       <div>
-                          <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">                          
+                          <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">
                         <label for="optionsRadiosOrange5">
                           Orange radio align right
                         </label>
                       </div>
                         <div>
-                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>                          
+                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange3" value="option4" checked="checked" type="radio" class="o-radio" disabled>
                         <label for="optionsRadiosOrange3">
                           Orange radio checked disabled
                         </label>
                       </div>
                       <div>
-                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>                          
+                          <input name="optionsRadiosOrange2" id="optionsRadiosOrange4" value="option4" type="radio" class="o-radio" disabled>
                         <label for="optionsRadiosOrange4">
                           Orange radio unchecked disabled
                         </label>
@@ -1547,7 +1519,7 @@ vehicula.</p>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-9 col-lg-offset-3">
-                      <button class="btn btn-default">Cancel</button>
+                      <button type="button" class="btn btn-default">Cancel</button>
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -1647,36 +1619,36 @@ vehicula.</p>
               </ul>
               <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="home">
-                  <p>Raw denim you probably haven't heard of them jean 
-shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master 
-cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. 
-Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater 
-eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia 
-cillum iphone. Seitan aliquip quis cardigan american apparel, butcher 
+                  <p>Raw denim you probably haven't heard of them jean
+shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
+cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater
+eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia
+cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
 voluptate nisi qui.</p>
                 </div>
                 <div class="tab-pane fade" id="profile">
-                  <p>Food truck fixie locavore, accusamus mcsweeney's 
-marfa nulla single-origin coffee squid. Exercitation +1 labore velit, 
-blog sartorial PBR leggings next level wes anderson artisan four loko 
+                  <p>Food truck fixie locavore, accusamus mcsweeney's
+marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
+blog sartorial PBR leggings next level wes anderson artisan four loko
 farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim
  craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo
  nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
                 </div>
                 <div class="tab-pane fade" id="dropdown1">
-                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu 
-before they sold out mcsweeney's organic lomo retro fanny pack lo-fi 
+                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu
+before they sold out mcsweeney's organic lomo retro fanny pack lo-fi
 farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
- beer, iphone skateboard locavore carles etsy salvia banksy hoodie 
-helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit 
+ beer, iphone skateboard locavore carles etsy salvia banksy hoodie
+helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit
 cred pitchfork.</p>
                 </div>
                 <div class="tab-pane fade" id="dropdown2">
-                  <p>Trust fund seitan letterpress, keytar raw denim 
-keffiyeh etsy art party before they sold out master cleanse gluten-free 
-squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, 
-art party locavore wolf cliche high life echo park Austin. Cred vinyl 
-keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS 
+                  <p>Trust fund seitan letterpress, keytar raw denim
+keffiyeh etsy art party before they sold out master cleanse gluten-free
+squid scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+art party locavore wolf cliche high life echo park Austin. Cred vinyl
+keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS
 viral locavore cosby sweater.</p>
                 </div>
               </div>
@@ -1723,7 +1695,7 @@ viral locavore cosby sweater.</p>
                 </li>
               </ul>
             </div>
-          </div>          
+          </div>
         </div>
 
 
@@ -1746,7 +1718,7 @@ viral locavore cosby sweater.</p>
                 <li class="active">Data</li>
               </ul>
             </div>
-          </div>  
+          </div>
           <div class="col-lg-6">
             <h2 id="pager">Pager</h2>
             <div class="bs-component">
@@ -1766,46 +1738,32 @@ viral locavore cosby sweater.</p>
           <div class="col-lg-12">
             <h2 id="pagination">Pagination</h2>
             <div class="bs-component">
-              <ul class="pagination">
-                <li class="disabled"><a href="#">«</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
+                <nav>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#"><span aria-hidden="true" class="icon-arrow_previous"></span><span class="sr-only">previous</span></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><span aria-hidden="true" class="icon-arrow_next"></span><span class="sr-only">next</span></a></li>
+                    </ul>
+                </nav>
 
-              <ul class="pagination pagination-lg">
-                <li class="disabled"><a href="#">«</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
-
-              <ul class="pagination pagination-sm">
-                <li class="disabled"><a href="#">«</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
-                
-              <ul class="o-pagination pagination-sm">
-                <li class="disabled"><a href="#">< Previous</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">next ></a></li>
-              </ul>
+                <nav>
+                    <ul class="pagination">
+                        <li class="disabled labelled"><a href="#"><span aria-hidden="true" class="icon-arrow_previous"></span> Back</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="labelled"><a href="#">Next <span aria-hidden="true" class="icon-arrow_next"></span></a></li>
+                    </ul>
+                </nav>
             </div>
           </div>
-          
+
         </div>
       </div>
 
@@ -1825,7 +1783,7 @@ viral locavore cosby sweater.</p>
           <div class="col-lg-12">
             <h2>Alerts</h2>
             <div class="bs-component">
-              <div class="alert alert-dismissable alert-warning">
+              <div class="alert alert-dismissible alert-warning">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <h4>Warning!</h4>
                 <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
@@ -1836,7 +1794,7 @@ viral locavore cosby sweater.</p>
         <div class="row">
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="alert alert-dismissable alert-danger">
+              <div class="alert alert-dismissible alert-danger">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
               </div>
@@ -1844,7 +1802,7 @@ viral locavore cosby sweater.</p>
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="alert alert-dismissable alert-success">
+              <div class="alert alert-dismissible alert-success">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
               </div>
@@ -1852,7 +1810,7 @@ viral locavore cosby sweater.</p>
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="alert alert-dismissable alert-info">
+              <div class="alert alert-dismissible alert-info">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
               </div>
@@ -2182,7 +2140,7 @@ viral locavore cosby sweater.</p>
           </div>
         </div>
 
-      <div id="source-modal" class="modal fade">
+      <div id="source-modal" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -2231,7 +2189,6 @@ viral locavore cosby sweater.</p>
     <ul class="nav">
         <li><a href="#accordion1">One at the time</a></li>
         <li><a href="#accordion2">Multiple opened items</a></li>
-        <li><a href="#accordion3">Orange caret</a></li>
     </ul> 
 </li>
 <li>
@@ -2291,11 +2248,11 @@ viral locavore cosby sweater.</p>
 
     <!-- Footer
 ================================================== -->
-<footer class="navbar">
+<footer class="navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
-            <div class="o-footer">                
-                <div class="container-fluid o-footer-top bs-docs-footer">
+            <div class="col-xs-12 o-footer">                
+                <div class="o-footer-top bs-docs-footer">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
@@ -2303,13 +2260,10 @@ viral locavore cosby sweater.</p>
     <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v3.3.6/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
                 </div>
                 <div class="o-footer-bottom">
-                    <ul class="">
-                      <li>Currently v3.2.1</li>
-                      <li>&middot;</li>
-                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
-                      <li>&middot;</li>
-                      <li><a href="../getting-started/#examples">Examples</a></li>
-                      <li>&middot;</li>
+                    <ul>
+                      <li>Currently v3.3.0-alpha.2</li>                      
+                      <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>                      
+                      <li><a href="../getting-started/#examples">Examples</a></li>                      
                       <li><a href="https://github.com/twbs/bootstrap/tree/v3.3.6">Original Bootstrap</a></li>
                     </ul>
                 </div>

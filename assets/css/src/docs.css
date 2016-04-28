@@ -60,7 +60,6 @@ body {
 /* Bootstrap "B" icon */
 .bs-docs-booticon {
   display: block;
-  font-weight: 500;
   color: #fff;
   cursor: default;
   background-color: #000;
@@ -230,7 +229,7 @@ body {
 .bs-docs-masthead,
 .bs-docs-header {
   position: relative;
-  background-color: #000; 
+  background-color: #000;
   color: #FFF;
   border-top: 2px solid #333;
 }
@@ -251,8 +250,12 @@ body {
   color: #fff;
 }
 .o-footer a, .bs-docs-masthead .lead a{
-	color: #FFF;  
+	color: #FFF;
   text-decoration: underline;
+}
+
+.bs-docs-masthead .lead a.btn{
+  text-decoration: none;
 }
 
 .o-footer a:hover,.o-footer a:focus, .bs-docs-masthead .lead a:hover, .bs-docs-masthead .lead a:focus{
@@ -422,7 +425,7 @@ body {
   /*font-size: 16px;*/
   line-height: 1.5;
   /*color: #555;*/
-  
+
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -700,7 +703,7 @@ h1[id] {
   margin: 20px 0;
   border: 1px solid #eee;
   border-left-width: 5px;
-  
+
 }
 .bs-callout h4 {
   margin-top: 0;
@@ -850,7 +853,7 @@ h1[id] {
     background-color: #fff;
     border-color: #ddd;
     border-width: 1px;
-    
+
   }
   .bs-example + .highlight,
   .bs-example + .zero-clipboard + .highlight {
@@ -1247,6 +1250,10 @@ h1[id] {
 .bs-glyphicons li:hover {
   color: #fff;
   background-color: #000;
+}
+
+.bs-glyphicons span[class^="icon-"]{
+    font-size: 3rem;
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,59 @@
+/* general */
+
+html,body {
+    height:100%;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+}
+
+/* page header */
+
+header {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 0 0 0 2rem;
+  float: left;
+}
+
+header .btn {
+  float: left;
+}
+
+/* links page */
+
+main {
+  margin-bottom: 10rem;
+}
+
+.link-icon {
+  height: 6rem;
+  width: auto;
+}
+
+.link-icon img {
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  /*h3 {
+    font-size: 2rem;
+  }*/
+
+  .link-icon {
+    height: 4.2rem;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 979px) {
+  .link-icon {
+    height: 4.2rem;
+  }
+}

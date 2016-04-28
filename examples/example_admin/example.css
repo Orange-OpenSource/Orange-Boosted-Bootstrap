@@ -4,8 +4,8 @@
 #img-home{
 	vertical-align: inherit;
 }
-#header{
-	margin-top: 20px;
+header{
+	margin-bottom: 20px;
 }
 #header a{
 	display: inline-block;

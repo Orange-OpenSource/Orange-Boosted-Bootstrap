@@ -102,11 +102,11 @@
 }
 #newsSupp p{
 	text-align: justify;
-	height: 180px;
+	min-height: 180px;
 	overflow: hidden;
 }
 #newsSupp .news{
-	height: 310px;
+	min-height: 310px;
 }
 #infos {
 	margin-top:22px;
