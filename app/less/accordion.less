@@ -10,27 +10,34 @@
 .o-accordion .panel-default > .panel-heading {
 	background-image: none;
 	filter: none;
+  padding: 0;
   + .panel-collapse > .panel-body {
     border-top: 0;
   }
+  /* put the padding onto the link to increase the clic area */
+  a {
+    padding: @panel-heading-padding;
+  }
 }
 /* Custom class */
-         
-.o-accordion.o-accordion-orange-style .panel-chevron-open,
-.o-accordion.o-accordion-orange-style .panel-chevron-closed{
-	// background-image: url("../images/triangle_down_orange.png");
-  color: @brand-orange;
-}
-.o-accordion .panel-chevron-closed, .o-accordion .panel-chevron-open{
-	padding-left: 30px;
-}
-.o-accordion .panel-chevron-closed::before{
-	font-family: "icon-orange";
-	content: "\ea52";
-  font-size: 16px;
-}
+ 
+.o-accordion .panel-chevron-closed::before,
 .o-accordion .panel-chevron-open::before{
 	font-family: "icon-orange";
-	content: "\e920";
   font-size: 16px;
+  margin-right: 14px;
+  display: inline-block;
+	content: "\ea52";
+}
+.o-accordion .panel-chevron-open::before{
+	-webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.o-accordion-orange-style .panel-chevron-open::before,
+.o-accordion-orange-style .panel-chevron-closed::before{
+  color: @brand-orange;
 }

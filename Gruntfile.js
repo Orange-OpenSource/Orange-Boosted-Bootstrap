@@ -186,7 +186,7 @@ module.exports = function (grunt) {
     // Generate changelog based on git commit
     changelog: {
       options: {
-        from: 'v3.1.0',
+        from: 'v3.2.1',
         commitLink: function (commitHash) {
           //TODO externalize orangeforge git url + project name etc..
           return '[' + commitHash.substring(0, 8) + '](https://orangeforge.rd.francetelecom.fr/plugins/git/boost-a0242/boost?p=boost.git&a=commit&h=' + commitHash + ')';
@@ -831,16 +831,6 @@ module.exports = function (grunt) {
             {
               from: 'class="panel-group"',
               to: 'class="o-accordion panel-group"'
-          },
-          // Inject Orange Accordions into javascript doc page
-            {
-              from: '<h2 id="collapse-usage">Usage</h2>',
-              to: '{% include js/accordion.html %}<h2 id="collapse-usage">Usage</h2>'
-          },
-          // Inject Orange Accordions into the navigation javascriptpage
-            {
-              from: '<li><a href="#collapse-usage">Usage</a></li>',
-              to: '<li><a href="#collapse-orange">Accordion Orange</a></li><li><a href="#collapse-usage">Usage</a></li>'
           },
           // fix semantic aria roles error into the native documentation
             {
