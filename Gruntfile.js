@@ -189,7 +189,7 @@ module.exports = function (grunt) {
         from: 'v3.2.1',
         commitLink: function (commitHash) {
           //TODO externalize orangeforge git url + project name etc..
-          return '[' + commitHash.substring(0, 8) + '](https://orangeforge.rd.francetelecom.fr/plugins/git/boost-a0242/boost?p=boost.git&a=commit&h=' + commitHash + ')';
+          return '[' + commitHash.substring(0, 8) + '](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/' + commitHash + ')';
         }
       }
     },
