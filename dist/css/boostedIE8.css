@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.0-alpha.1 - Orange Boosted with Boostrap
+ boosted - v3.3.0-alpha.2 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -426,32 +426,37 @@ navigation item */
   border-left: 0;
 }
 .o-accordion .panel-default > .panel-heading {
+  padding: 0;
   background-image: none;
           filter: none;
 
   -webkit-filter: none;
+  /* put the padding onto the link to increase the clic area */
 }
 .o-accordion .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: 0;
 }
+.o-accordion .panel-default > .panel-heading a {
+  padding: 10px 15px;
+}
 /* Custom class */
-.o-accordion.o-accordion-orange-style .panel-chevron-open,
-.o-accordion.o-accordion-orange-style .panel-chevron-closed {
-  color: #f16e00;
-}
-.o-accordion .panel-chevron-closed,
-.o-accordion .panel-chevron-open {
-  padding-left: 30px;
-}
-.o-accordion .panel-chevron-closed::before {
+.o-accordion .panel-chevron-closed::before,
+.o-accordion .panel-chevron-open::before {
+  display: inline-block;
+  margin-right: 14px;
   font-family: "icon-orange";
   font-size: 16px;
   content: "\ea52";
 }
 .o-accordion .panel-chevron-open::before {
-  font-family: "icon-orange";
-  font-size: 16px;
-  content: "\e920";
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.o-accordion-orange-style .panel-chevron-open::before,
+.o-accordion-orange-style .panel-chevron-closed::before {
+  color: #f16e00;
 }
 /********************************************************/
 /************************ Table *************************/

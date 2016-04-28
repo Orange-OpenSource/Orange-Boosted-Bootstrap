@@ -1,9 +1,10 @@
-<a name"3.3.0-alpha.1"></a>
-### 3.3.0-alpha.1 (2016-04-25)
+<a name"3.3.0-alpha.2"></a>
+### 3.3.0-alpha.2 (2016-04-28)
 
 
 #### Bug Fixes
 
+* **build:** update commit link for changelog generation ([ca360ce2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ca360ce247445d4f3b8656fd0882efa499c26655))
 * **component:**
   * accordion borders ([77087ce9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/77087ce92500468d858c38b1363c59346186687f))
   * accordion borders ([6c1e5d32](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c1e5d32115bd553705feb1a5798c3778da7a5a1))
@@ -18,6 +19,8 @@
   * stepbar branding ([29076327](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2907632766ea790f5311ac7e6d6eeac2cd21e712))
   * navbar branding ([8674f7f9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8674f7f9d926d92df4383b9f0665edc047bca2fd))
 * **core:**
+  * accordions multipleatatime ([0fd694a6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0fd694a6cc73831eb5332d351df7b2243f54e677))
+  * try to fix accordions multipleatatime ([9c9e6163](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9c9e61633995f311863cd7d1b615e2f564517afc))
   * remove the shadow into tabs, move the border for accordions ([bdc9488a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bdc9488a48b3b38f1c5ae701e67f999cca61d413))
   * update breadcrumb and navigation sizes ([0421254e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0421254e5e18093eb1d1728f78ac55fd3b447cdb))
   * fix step_bar padding ([d9ec17f9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d9ec17f92544a303607c4dbfe736d9b00ddfb8f1))
@@ -38,7 +41,9 @@
 
 #### Features
 
+* **build:** tag v3.3.0-alpha.1 ([b263ac6d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b263ac6df86bad5bf6130605e1cc7ad551414cdc))
 * **core:**
+  * update icon library ([5ac1454e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ac1454e017e4864841e20895aec2897de19ffbc))
   * rebuild the dist ([983e0340](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/983e034016654c2eb10eefdc1f35b46e541d4992))
   * report the grid from orange brand ([8ec57570](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8ec57570b4c5d1eee208b9c2db8085d465f64a8b))
 * **doc:**
