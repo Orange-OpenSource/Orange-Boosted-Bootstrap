@@ -96,10 +96,10 @@ html{
   border: 0;
 
   .navbar-brand {
-    padding: calc(@navbar-height / 4) 0;
+    padding: @navbar-brand-logo-padding 0;
 
     img {
-      height: 5rem;
+      height: @navbar-brand-logo-height;
       width: auto;
     }
   }
@@ -181,7 +181,7 @@ html{
     > li {
       > a {
         .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
-        margin-top: 4.5rem;
+        margin-top: @navbar-item-margin-top;
         margin-bottom: 0;
         font-size: @navbar-font-size;
 
