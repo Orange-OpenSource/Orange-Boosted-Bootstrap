@@ -178,7 +178,7 @@ module.exports = function (grunt) {
           banner: '<%= banner %>'
         },
         files: {
-          src: ['dist/js/*', 'dist/css/*', 'dist/examples/**/*.css', 'dist/examples/**/*.js']
+          src: ['dist/js/*', 'dist/css/*.css', 'dist/examples/**/*.css', 'dist/examples/**/*.js']
         }
       }
     },
@@ -209,10 +209,9 @@ module.exports = function (grunt) {
           outputSourceFiles: true,
           sourceMapURL: '<%= yeoman.packageName %>.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>.css.map'
-        },
-        files: {
-          'dist/css/<%= yeoman.packageName %>.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>.less'
-        }
+        },          
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>.less',
+        dest: 'dist/css/<%= yeoman.packageName %>.css'
       },
       compileTheme: {
         options: {
@@ -222,9 +221,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>-theme.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>-theme.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>-theme.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>-theme.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>-theme.less',
+        dest: 'dist/css/<%= yeoman.packageName %>-theme.css'
       },
       compileBoosted: {
         options: {
@@ -234,9 +232,8 @@ module.exports = function (grunt) {
           sourceMapURL: 'boosted.css.map',
           sourceMapFilename: 'dist/css/boosted.css.map'
         },
-        files: {
-          'dist/css/boosted.css': '<%= yeoman.app %>/less/boosted.less'
-        }
+        src: '<%= yeoman.app %>/less/boosted.less',
+        dest: 'dist/css/boosted.css'
       },
       compileCoreIE: {
         options: {
@@ -246,9 +243,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>IE8.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>IE8.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>IE8.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>IE8.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>IE8.less',
+        dest: 'dist/css/<%= yeoman.packageName %>IE8.css'
       },
       compileThemeIE: {
         options: {
@@ -258,9 +254,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>-themeIE8.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>-themeIE8.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>-themeIE8.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>-themeIE8.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>-themeIE8.less',
+        dest: 'dist/css/<%= yeoman.packageName %>-themeIE8.css'
       },
       compileBoostedIE: {
         options: {
@@ -270,9 +265,8 @@ module.exports = function (grunt) {
           sourceMapURL: 'boostedIE8.css.map',
           sourceMapFilename: 'dist/css/boostedIE8.css.map'
         },
-        files: {
-          'dist/css/boostedIE8.css': '<%= yeoman.app %>/less/boostedIE8.less'
-        }
+        src: '<%= yeoman.app %>/less/boostedIE8.less',
+        dest: 'dist/css/boostedIE8.css'
       },
       compileCoreIE2015: {
         options: {
@@ -282,9 +276,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>IE82015.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>IE82015.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>IE82015.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>IE82015.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>IE82015.less',
+        dest: 'dist/css/<%= yeoman.packageName %>IE82015.css'
       },
       compileThemeIE2015: {
         options: {
@@ -294,9 +287,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>-themeIE82015.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>-themeIE82015.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>-themeIE82015.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>-themeIE82015.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>-themeIE82015.less',
+        dest: 'dist/css/<%= yeoman.packageName %>-themeIE82015.css'
       },
       compileBoostedIE2015: {
         options: {
@@ -306,9 +298,8 @@ module.exports = function (grunt) {
           sourceMapURL: 'boostedIE82015.css.map',
           sourceMapFilename: 'dist/css/boostedIE82015.css.map'
         },
-        files: {
-          'dist/css/boostedIE82015.css': '<%= yeoman.app %>/less/boostedIE82015.less'
-        }
+        src: '<%= yeoman.app %>/less/boostedIE82015.less',
+        dest: 'dist/css/boostedIE82015.css'
       },
       compileCore2015: {
         options: {
@@ -318,9 +309,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>2015.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>2015.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>2015.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>2015.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>2015.less',
+        dest: 'dist/css/<%= yeoman.packageName %>2015.css'
       },
       compileTheme2015: {
         options: {
@@ -330,9 +320,8 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= yeoman.packageName %>-theme2015.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>-theme2015.css.map'
         },
-        files: {
-          'dist/css/<%= yeoman.packageName %>-theme2015.css': '<%= yeoman.app %>/less/<%= yeoman.packageName %>-theme2015.less'
-        }
+        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>-theme2015.less',
+        dest: 'dist/css/<%= yeoman.packageName %>-theme2015.css'
       },
       compileBoosted2015: {
         options: {
@@ -342,9 +331,8 @@ module.exports = function (grunt) {
           sourceMapURL: 'boosted2015.css.map',
           sourceMapFilename: 'dist/css/boosted2015.css.map'
         },
-        files: {
-          'dist/css/boosted2015.css': '<%= yeoman.app %>/less/boosted2015.less'
-        }
+        src: '<%= yeoman.app %>/less/boosted2015.less',
+        dest: 'dist/css/boosted2015.css'
       }
     },
 
@@ -405,6 +393,7 @@ module.exports = function (grunt) {
         //    and then simplify the fix for https://github.com/twbs/bootstrap/issues/14837 accordingly
         compatibility: 'ie8',
         keepSpecialComments: '*',
+        sourceMap: true,
         advanced: false
       },
       dist: {
@@ -1143,7 +1132,7 @@ module.exports = function (grunt) {
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:dist', 'usebanner', 'csscomb:dist', 'cssmin:dist']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:dist', 'csscomb:dist', 'cssmin:dist', 'usebanner']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:dist', 'dist-js']);
