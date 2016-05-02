@@ -1,6 +1,6 @@
 // forms validation fall back for old navigators
-$(document).ready(function () {
 'use strict';
+$(document).ready(function () {
     if(typeof validate == 'function')
     {
         $('form').validate({

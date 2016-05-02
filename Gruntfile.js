@@ -163,7 +163,7 @@ module.exports = function (grunt) {
         stoponerror: false,
         relaxerror: []
       },
-      files: ['docs/{,**/}*.html', 'docs/{,**/}*.htm',]
+      files: ['docs/{,**/}*.html', 'docs/{,**/}*.htm']
     },
 
     // Banner
@@ -420,7 +420,7 @@ module.exports = function (grunt) {
           'bower_components/bootstrapaccessibilityplugin/src/js/functions.js',
           'bower_components/bootstrapaccessibilityplugin/src/js/alert.js',
           'bower_components/bootstrapaccessibilityplugin/src/js/modal.js',
-          'bower_components/bootstrapaccessibilityplugin/src/js/dropdown.js',
+          'bower_components/bootstrapaccessibilityplugin/src/js/dropdown.js'
           //tab.js is incompatible with bs 3.3.5
           // 'bower_components/bootstrapaccessibilityplugin/src/js/tab.js'
           // we don't need the collapse, replace by our own accordion.js
@@ -1121,7 +1121,7 @@ module.exports = function (grunt) {
   // Test task.
   grunt.registerTask('test', ['dist-css', 'dist-js', 'csslint:dist','test-js', 'docs']);
   // grunt.registerTask('test-js', ['eslint:boostFiles', 'eslint:nodeFiles', 'qunit']);
-  grunt.registerTask('test-js', ['eslint:boostFiles', 'eslint:nodeFiles']);
+  grunt.registerTask('test-js', ['eslint:boostedFiles', 'eslint:nodeFiles']);
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);

@@ -1,5 +1,5 @@
+'use strict';  
 (function($) {
-  'use strict';  
     $('.carousel-indicators').attr('aria-hidden', 'true')
 // Carousel Extension
   // ===============================

@@ -9,7 +9,7 @@
 
 // Core CSS
 @import "../../bower_components/bootstrap/less/scaffolding.less";
-@import "../../bower_components/bootstrap/less/type.less";
+@import "type.less";
 @import "../../bower_components/bootstrap/less/code.less";
 @import "grid.less";
 @import "../../bower_components/bootstrap/less/tables.less";
@@ -43,7 +43,7 @@
 @import "../../bower_components/bootstrap/less/modals.less";
 @import "../../bower_components/bootstrap/less/tooltip.less";
 @import "../../bower_components/bootstrap/less/popovers.less";
-@import "../../bower_components/bootstrap/less/carousel.less";
+@import "carousel.less";
 
 // Utility classes
 @import "../../bower_components/bootstrap/less/utilities.less";
@@ -112,4 +112,12 @@ nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
   & ~ .form-control-feedback {
      top: (@line-height-computed + .5); // Height of the `label` and its margin
   }
+}
+
+
+.nav-divider(@color: #e5e5e5) {
+  height: 1px;
+  margin: ((@line-height-computed / 2) - .1) 0;
+  overflow: hidden;
+  background-color: @color;
 }

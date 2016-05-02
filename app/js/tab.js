@@ -1,32 +1,30 @@
   /*! bootstrap-accessibility-plugin - v1.0.4 - 2014-10-25
 * https://github.com/paypal/bootstrap-accessibility-plugin
 * Copyright (c) 2014 PayPal Accessibility Team; Licensed BSD */
-  
+'use strict';  
   // Tab Extension
   // ===============================
-  (function($) {
-  'use strict';
-  
+  (function($) {  
    var uniqueId = function(prefix) {
-      return (prefix || 'ui-id') + '-' + Math.floor((Math.random()*1000)+1)
+      return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1)
   }
 
-  var $tablist = $('.nav-tabs, .nav-pills')
-        , $lis = $tablist.children('li')
-        , $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
+  var $tablist = $('.nav-tabs, .nav-pills'),
+        $lis = $tablist.children('li'),
+        $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
 
     $tablist.attr('role', 'tablist')
     $lis.attr('role', 'presentation')
     $tabs.attr('role', 'tab')
 
-    $tabs.each(function( index ) {
-      var tabpanel = $($(this).attr('href'))
-        , tab = $(this)
-        , tabid = tab.attr('id') || uniqueId('ui-tab')
+    $tabs.each(function() {
+      var tabpanel = $($(this).attr('href')),
+        tab = $(this),
+        tabid = tab.attr('id') || uniqueId('ui-tab')
 
         tab.attr('id', tabid)
 
-      if(tab.parent().hasClass('active')){
+      if(tab.parent().hasClass('active')) {
         tab.attr( { 'tabIndex' : '0', 'aria-selected' : 'true', 'aria-controls': tab.attr('href').substr(1) } )
         tabpanel.attr({ 'role' : 'tabpanel', 'tabIndex' : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
       }else{
@@ -36,29 +34,37 @@
     })
 
     $.fn.tab.Constructor.prototype.keydown = function (e) {
-      console.log('keydown!');
-      var $this = $(this)
-      , $items
-      , $ul = $this.closest('ul[role=tablist] ')
-      , index
-      , k = e.which || e.keyCode
+      var $this = $(this),
+      $items,
+      $ul = $this.closest('ul[role=tablist] '),
+      index,
+      k = e.which || e.keyCode
 
       $this = $(this)
-      if (!/(37|38|39|40)/.test(k)) return
+      if (!/(37|38|39|40)/.test(k)) {
+        return
+      }
 
       $items = $ul.find('[role=tab]:visible')
       index = $items.index($items.filter(':focus'))
 
-      if (k == 38 || k == 37) index--                         // up & left
-      if (k == 39 || k == 40) index++                        // down & right
+      if (k == 38 || k == 37) {
+        index--                         // up & left
+      }
+      if (k == 39 || k == 40) {
+        index++                        // down & right
+      }
 
 
-      if(index < 0) index = $items.length -1
-      if(index == $items.length) index = 0
+      if(index < 0) {
+        index = $items.length -1
+      }
+      if(index == $items.length) {
+        index = 0
+      }
 
       var nextTab = $items.eq(index)
-      if(nextTab.attr('role') ==='tab'){
-
+      if(nextTab.attr('role') ==='tab') {
         nextTab.tab('show')      //Comment this line for dynamically loaded tabPabels, to save Ajax requests on arrow key navigation
         .focus()
       }

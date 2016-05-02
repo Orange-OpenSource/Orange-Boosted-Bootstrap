@@ -134,6 +134,7 @@
       "counter-increment",
       "resize",
       "-webkit-user-select",
+      "-khtml-user-select",
       "-moz-user-select",
       "-ms-user-select",
       "-o-user-select",
