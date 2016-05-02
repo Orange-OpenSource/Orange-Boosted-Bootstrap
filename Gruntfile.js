@@ -874,7 +874,7 @@ module.exports = function (grunt) {
           // WARNING for stripped, not recommended by the brand TEAM
             {
               from: '<p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>',
-              to: '<p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>. INFORMATION : Stripped row have been disables, because it\'s not recommended by the Orange brand</p>'
+              to: '<p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>. WARNING : Be careful use of stripped row is not recommended by the Orange brand</p>'
           }, {
               from: '{{ page.title }} &middot; Bootstrap',
               to: '{{ page.title }} &middot; Boosted'
