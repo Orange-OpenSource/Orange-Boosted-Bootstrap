@@ -22,6 +22,8 @@ sass_repo:        https://github.com/twbs/bootstrap-sass
 download:
   source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.3.0-alpha.2/boosted-v3.3.0-alpha.2.zip
   dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.3.0-alpha.2/boosted-v3.3.0-alpha.2-dist.zip
+  sourcestable:   https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.2.1/boosted-v3.2.1.zip
+  diststable:     https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.2.1/boosted-v3.2.1-dist.zip
   sass:           https://github.com/twbs/bootstrap-sass/archive/v3.3.6.tar.gz
 
 blog:             http://blog.getbootstrap.com
