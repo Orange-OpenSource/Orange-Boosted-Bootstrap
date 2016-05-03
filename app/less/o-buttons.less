@@ -36,6 +36,20 @@
       background-color: @active-background;
       border-color: @active-background;
     }
+
+    &.disabled,
+    &:disabled {
+      color: @brand-orange-white;
+      background-color: @btn-link-disabled-color;
+      border-color: @btn-link-disabled-color;
+
+      &:hover,
+      &.hover {
+        color: @brand-orange-white;
+        background-color: @btn-link-disabled-color;
+        border-color: @btn-link-disabled-color;
+      }
+    }
   }
 
   &.disabled,
@@ -92,6 +106,21 @@
       background-color: @brand-orange;
       border-color: @brand-orange;
     }
+
+    &.disabled,
+    &:disabled {
+      color: @btn-link-disabled-color;
+      background-color: transparent;
+      border-color: @btn-link-disabled-color;
+
+      &:hover,
+      &.hover {
+        color: @btn-link-disabled-color;
+        background-color: transparent;
+        border-color: @btn-link-disabled-color;
+      }
+    }
+
   }
 
   &.disabled,
@@ -147,6 +176,20 @@
       color: @brand-orange-white;
       background-color: @brand-orange;
       border-color: @brand-orange;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: @brand-orange-black;
+      background-color: @btn-link-disabled-black-bg-color;
+      border-color: @btn-link-disabled-black-bg-color;
+
+      &:hover,
+      &.hover {
+        color: @brand-orange-black;
+        background-color: @btn-link-disabled-black-bg-color;
+        border-color: @btn-link-disabled-black-bg-color;
+      }
     }
   }
 
@@ -258,6 +301,20 @@
 
   &.disabled,
   &:disabled {
+    &:active,
+    &.active {
+      color: @btn-link-disabled-color;
+      background-color: @brand-orange-clear;
+      border-color: @btn-link-disabled-color;
+
+      &:hover,
+      &.hover {
+        color: @btn-link-disabled-color;
+        background-color: @brand-orange-clear;
+        border-color: @btn-link-disabled-color;
+      }
+    }
+
     &:hover,
     &.hover {
       color: @btn-link-disabled-color;
@@ -304,6 +361,20 @@
 
     &.disabled,
     &:disabled {
+      &:active,
+      &.active {
+        color: @btn-link-disabled-black-bg-color;
+        background-color: @brand-orange-clear;
+        border-color: @btn-link-disabled-black-bg-color;
+
+        &:hover,
+        &.hover {
+          color: @btn-link-disabled-black-bg-color;
+          background-color: @brand-orange-clear;
+          border-color: @btn-link-disabled-black-bg-color;
+        }
+      }
+
       &:hover,
       &.hover {
         color: @btn-link-disabled-black-bg-color;
