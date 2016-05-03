@@ -1,5 +1,5 @@
-'use strict';
 (function($) {    
+  'use strict';
     var megamenuItems = '.mega-menu ul.navbar-nav > li > a';
     
     function uuid() {

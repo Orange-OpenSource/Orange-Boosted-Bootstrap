@@ -7,11 +7,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
-'use strict';
+
 +function ($) {
   // TOOLTIP PUBLIC CLASS DEFINITION
   // ===============================
-
+  'use strict';
   var Tooltip = function (element, options) {
     this.type       = null
     this.options    = null

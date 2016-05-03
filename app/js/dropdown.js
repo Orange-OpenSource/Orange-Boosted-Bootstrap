@@ -2,8 +2,8 @@
 // for megamenu we need to modify the way item parent is returned in getParent() function
 // then we need to redefine very method that uses getParent()
 // and unbind / rebind event with new methods
-'use strict';
 (function($) {    
+  'use strict';
     var backdrop = '.dropdown-backdrop';
     var toggle   = '[data-toggle="dropdown"]';
     

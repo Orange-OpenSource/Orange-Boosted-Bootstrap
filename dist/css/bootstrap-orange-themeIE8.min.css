@@ -2,4 +2,7 @@
  boosted - v3.3.0-alpha.2 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
-*/html{font-size:62.5%}.btn:focus{outline:dotted 2px #000}div.active:focus{outline:dotted 1px #000}a:focus{outline:dotted 1px #000}.close:focus,.close:hover{outline:dotted 1px #000}.nav>li>a:focus,.nav>li>a:hover{outline:dotted 1px #000}.carousel-inner>.item{position:absolute;top:-999999em;display:block;-webkit-transition:.6s ease-in-out left;-o-transition:.6s ease-in-out left;transition:.6s ease-in-out left}.carousel-inner>.active{top:0}.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{position:relative}.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}
+*/
+
+html{font-size:62.5%}.btn:focus{outline:dotted 2px #000}div.active:focus{outline:dotted 1px #000}a:focus{outline:dotted 1px #000}.close:focus,.close:hover{outline:dotted 1px #000}.nav>li>a:focus,.nav>li>a:hover{outline:dotted 1px #000}.carousel-inner>.item{position:absolute;top:-999999em;display:block;-webkit-transition:.6s ease-in-out left;-o-transition:.6s ease-in-out left;transition:.6s ease-in-out left}.carousel-inner>.active{top:0}.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{position:relative}.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}
+/*# sourceMappingURL=bootstrap-orange-themeIE8.min.css.map */

@@ -43,7 +43,10 @@
           'undelegate'
         ]
         for (var i = 0; i < eventAliases.length; i++) {
-          $.fn[eventAliases[i]] = undefined
+          var eventAlias = eventAliases[i]
+          $.fn[eventAlias] = function () {
+            throw new Error('Using the ".' + eventAlias + '()" method is not allowed, so that Bootstrap can be compatible with custom jQuery builds which exclude the "event aliases" module that defines said method. See https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#js')
+          }
         }
       })()
     </script>
@@ -54,7 +57,7 @@
     <script>
       // See https://github.com/axemclion/grunt-saucelabs#test-result-details-with-qunit
       var log = []
-      // Require assert.expect in each test.
+      // Require assert.expect in each test
       QUnit.config.requireExpects = true
       QUnit.done(function (testResults) {
         var tests = []
@@ -132,17 +135,15 @@
     <!-- Plugin sources -->
     <script>$.support.transition = false</script>
 
-    <script src="../../js/carousel.js"></script>
-    <script src="../../js/dropdown.js"></script>
-    <script src="../../js/tab.js"></script>
-    <script src="../../js/modal.js"></script>
+    <script src="../../../dist/js/boosted.js"></script>
 
     <!-- Unit tests -->
     <script src="unit/carousel.js"></script>
+	  <!-- <script src="unit/collapse.js"></script> -->
     <script src="unit/dropdown.js"></script>
-    <script src="unit/modal.js"></script>
+    <!-- <script src="unit/modal.js"></script> -->
     <script src="unit/tab.js"></script>
-
+    <script src="unit/tooltip.js"></script>
 
   </head>
   <body>

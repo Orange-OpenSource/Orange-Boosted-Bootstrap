@@ -1,7 +1,6 @@
 // Accordion
 (function($) {
-	'use strict';
-
+  'use strict';
 	var uniqueId = function(prefix) {
 		return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1);
 	}
@@ -105,8 +104,7 @@
 
     if (!$.support.transition) return complete.call(this)
 
-    this.$element
-      [dimension](0)
+    this.$element[dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd($.fn.collapse.Constructor.TRANSITION_DURATION)
   }
@@ -169,14 +167,13 @@
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd($.fn.collapse.Constructor.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
   }
-
 })(jQuery);
 
 var $accordions =  $('[data-multipleAtATime="true"]');
 if($accordions)
 {
     $accordions.each(function() {
-        'use strict';
-        $(this).attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
+      'use strict';
+      $(this).attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
     })
 }

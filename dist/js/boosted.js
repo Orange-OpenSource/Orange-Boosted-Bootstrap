@@ -1246,11 +1246,9 @@ MIT Licensed
 
 
 +function ($) {
-  'use strict';
-
   // TOOLTIP PUBLIC CLASS DEFINITION
   // ===============================
-
+  'use strict';
   var Tooltip = function (element, options) {
     this.type       = null
     this.options    = null
@@ -1288,7 +1286,7 @@ MIT Licensed
     this.type      = type
     this.$element  = $(element)
     this.options   = this.getOptions(options)
-    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
+    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : this.options.viewport.selector || this.options.viewport)
     this.inState   = { click: false, hover: false, focus: false }
 
     if (this.$element[0] instanceof document.constructor && !this.options.selector) {
@@ -1312,7 +1310,7 @@ MIT Licensed
     }
 
     this.options.selector ?
-      (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
+      this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' }) :
       this.fixTitle()
   }
 
@@ -1338,7 +1336,9 @@ MIT Licensed
     var defaults = this.getDefaults()
 
     this._options && $.each(this._options, function (key, value) {
-      if (defaults[key] != value) options[key] = value
+      if (defaults[key] != value) {
+        options[key] = value
+      }
     })
 
     return options
@@ -1366,16 +1366,22 @@ MIT Licensed
 
     self.hoverState = 'in'
 
-    if (!self.options.delay || !self.options.delay.show) return self.show()
+    if (!self.options.delay || !self.options.delay.show) {
+      return self.show()
+    }
 
     self.timeout = setTimeout(function () {
-      if (self.hoverState == 'in') self.show()
+      if (self.hoverState == 'in') {
+        self.show()
+      }
     }, self.options.delay.show)
   }
 
   Tooltip.prototype.isInStateTrue = function () {
     for (var key in this.inState) {
-      if (this.inState[key]) return true
+      if (this.inState[key]) {
+        return true
+      }
     }
 
     return false
@@ -1394,16 +1400,22 @@ MIT Licensed
       self.inState[obj.type == 'focusout' ? 'focus' : 'hover'] = false
     }
 
-    if (self.isInStateTrue()) return
+    if (self.isInStateTrue()) {
+      return
+    }
 
     clearTimeout(self.timeout)
 
     self.hoverState = 'out'
 
-    if (!self.options.delay || !self.options.delay.hide) return self.hide()
+    if (!self.options.delay || !self.options.delay.hide) {
+      return self.hide()
+    }
 
     self.timeout = setTimeout(function () {
-      if (self.hoverState == 'out') self.hide()
+      if (self.hoverState == 'out') {
+        self.hide()
+      }
     }, self.options.delay.hide)
   }
 
@@ -1414,7 +1426,9 @@ MIT Licensed
       this.$element.trigger(e)
 
       var inDom = $.contains(this.$element[0].ownerDocument.documentElement, this.$element[0])
-      if (e.isDefaultPrevented() || !inDom) return
+      if (e.isDefaultPrevented() || !inDom) {
+        return
+      }
       var that = this
 
       var $tip = this.tip()
@@ -1425,7 +1439,9 @@ MIT Licensed
       $tip.attr('id', tipId)
       this.$element.attr('aria-describedby', tipId)
 
-      if (this.options.animation) $tip.addClass('fade')
+      if (this.options.animation) {
+        $tip.addClass('fade')
+      }
 
       var placement = typeof this.options.placement == 'function' ?
         this.options.placement.call(this, $tip[0], this.$element[0]) :
@@ -1433,7 +1449,9 @@ MIT Licensed
 
       var autoToken = /\s?auto?\s?/i
       var autoPlace = autoToken.test(placement)
-      if (autoPlace) placement = placement.replace(autoToken, '') || 'top'
+      if (autoPlace) {
+        placement = placement.replace(autoToken, '') || 'top'
+      }
 
       $tip
         .detach()
@@ -1472,7 +1490,9 @@ MIT Licensed
         that.$element.trigger('shown.bs.' + that.type)
         that.hoverState = null
 
-        if (prevHoverState == 'out') that.leave(that)
+        if (prevHoverState == 'out') {
+          that.leave(that)
+        }
       }
 
       $.support.transition && this.$tip.hasClass('fade') ?
@@ -1493,8 +1513,12 @@ MIT Licensed
     var marginLeft = parseInt($tip.css('margin-left'), 10)
 
     // we must check for NaN for ie 8/9
-    if (isNaN(marginTop))  marginTop  = 0
-    if (isNaN(marginLeft)) marginLeft = 0
+    if (isNaN(marginTop)) {
+      marginTop  = 0
+    }
+    if (isNaN(marginLeft)) {
+      marginLeft = 0
+    }
 
     offset.top  += marginTop
     offset.left += marginLeft
@@ -1522,8 +1546,11 @@ MIT Licensed
 
     var delta = this.getViewportAdjustedDelta(placement, offset, actualWidth, actualHeight)
 
-    if (delta.left) offset.left += delta.left
-    else offset.top += delta.top
+    if (delta.left) {
+      offset.left += delta.left
+    } else {
+      offset.top += delta.top
+    }
 
     var isVertical          = /top|bottom/.test(placement)
     var arrowDelta          = isVertical ? delta.left * 2 - width + actualWidth : delta.top * 2 - height + actualHeight
@@ -1553,7 +1580,9 @@ MIT Licensed
     var e    = $.Event('hide.bs.' + this.type)
 
     function complete() {
-      if (that.hoverState != 'in') $tip.detach()
+      if (that.hoverState != 'in') {
+        $tip.detach()
+      }
       that.$element
         .removeAttr('aria-describedby')
         .trigger('hidden.bs.' + that.type)
@@ -1562,7 +1591,9 @@ MIT Licensed
 
     this.$element.trigger(e)
 
-    if (e.isDefaultPrevented()) return
+    if (e.isDefaultPrevented()) {
+      return
+    }
 
     $tip.removeClass('in')
 
@@ -1617,7 +1648,9 @@ MIT Licensed
 
   Tooltip.prototype.getViewportAdjustedDelta = function (placement, pos, actualWidth, actualHeight) {
     var delta = { top: 0, left: 0 }
-    if (!this.$viewport) return delta
+    if (!this.$viewport) {
+      return delta
+    }
 
     var viewportPadding = this.options.viewport && this.options.viewport.padding || 0
     var viewportDimensions = this.getPosition(this.$viewport)
@@ -1655,8 +1688,9 @@ MIT Licensed
   }
 
   Tooltip.prototype.getUID = function (prefix) {
-    do prefix += ~~(Math.random() * 1000000)
-    while (document.getElementById(prefix))
+    do {
+      prefix += ~~(Math.random() * 1000000)
+    } while (document.getElementById(prefix))
     return prefix
   }
 
@@ -1671,7 +1705,7 @@ MIT Licensed
   }
 
   Tooltip.prototype.arrow = function () {
-    return (this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow'))
+    return this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow')
   }
 
   Tooltip.prototype.enable = function () {
@@ -1698,8 +1732,11 @@ MIT Licensed
 
     if (e) {
       self.inState.click = !self.inState.click
-      if (self.isInStateTrue()) self.enter(self)
-      else self.leave(self)
+      if (self.isInStateTrue()) {
+        self.enter(self)
+      } else {
+        self.leave(self)
+      }
     } else {
       self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
     }
@@ -1729,9 +1766,15 @@ MIT Licensed
       var data    = $this.data('bs.tooltip')
       var options = typeof option == 'object' && option
 
-      if (!data && /destroy|hide/.test(option)) return
-      if (!data) $this.data('bs.tooltip', (data = new Tooltip(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (!data && /destroy|hide/.test(option)) {
+        return
+      }
+      if (!data) {
+        $this.data('bs.tooltip', data = new Tooltip(this, options))
+      }
+      if (typeof option == 'string') {
+        data[option]()
+      }
     })
   }
 
@@ -2506,8 +2549,7 @@ $('.close').removeAttr('aria-hidden').wrapInner('<span aria-hidden="true"></span
  })(jQuery);
 // Accordion
 (function($) {
-	'use strict';
-
+  'use strict';
 	var uniqueId = function(prefix) {
 		return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1);
 	}
@@ -2611,8 +2653,7 @@ $('.close').removeAttr('aria-hidden').wrapInner('<span aria-hidden="true"></span
 
     if (!$.support.transition) return complete.call(this)
 
-    this.$element
-      [dimension](0)
+    this.$element[dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd($.fn.collapse.Constructor.TRANSITION_DURATION)
   }
@@ -2675,135 +2716,90 @@ $('.close').removeAttr('aria-hidden').wrapInner('<span aria-hidden="true"></span
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd($.fn.collapse.Constructor.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
   }
-
-	var collToggle = $.fn.collapse.Constructor.prototype.toggle;
-	$.fn.collapse.Constructor.prototype.toggle = function(){
-		var prevTab = this.$parent && this.$parent.find('[aria-expanded="true"]'),
-    href,
-    curTab,
-    $curPanel = this.$element;
-
-		if(prevTab){
-			var prevPanel = prevTab.attr('data-target') || (href = prevTab.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, ''),
-			$prevPanel = $(prevPanel);
-
-			if (this.$parent){ curTab = this.$parent.find('[data-toggle=collapse][href="#' + this.$element.attr('id') + '"]');}
-      /*
-			var newHeadingSelected = $curPanel.parent().children().first(); //Selection du nouveau heading déplié (panel-heading)
-			var oldHeadingSelected = $prevPanel.parent().children().first(); //Selection de l'ancien heading déplié (panel-heading)
-
-			//Si on a bien le nouveau heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
-			//Enfin, on modifie les classes pour les chevrons (on vire la classe chevron droite et on ajoute la classe chevron bas)
-			if(newHeadingSelected.hasClass('panel-heading') ){
-				newHeadingSelected.addClass('panel-selected');
-				newHeadingSelected.find('.panel-chevron-closed').removeClass('panel-chevron-closed').addClass('panel-chevron-open');
-			}
-			//Si on a bien l'ancien heading, on lui retire la classe panel-selected.
-			//Enfin, on modifie les classes pour les chevrons (on vire la classe chevron bas et on ajoute la classe chevron droite)
-			if(oldHeadingSelected.hasClass('panel-heading') ){
-				oldHeadingSelected.removeClass('panel-selected');
-				oldHeadingSelected.find('.panel-chevron-open').removeClass('panel-chevron-open').addClass('panel-chevron-closed');
-			}
-           */
-			//Fix pour IE8 : sans cela, impossible de sélectionner l'onglet actif
-			if(navigator.appVersion.indexOf('MSIE 8.')!=-1){
-				curTab.attr({ 'aria-selected':'true','aria-expanded':'true' });
-				prevTab.attr({ 'aria-selected':'false','aria-expanded':'false' });
-			}
-
-			collToggle.apply(this, arguments);
-    }
-      /*
-			if ($.support.transition) {
-				this.$element.one($.support.transition.end, function(){
-
-					prevTab.attr({ 'aria-selected':'false','aria-expanded':'false','tabIndex' : '-1' });
-					$prevPanel.attr({ 'aria-hidden' : 'true','tabIndex' : '-1'});
-
-					curTab.attr({ 'aria-selected':'true','aria-expanded':'true','tabIndex' : '0' });
-
-					if($curPanel.hasClass('in')){
-						$curPanel.attr({ 'aria-hidden' : 'false','tabIndex' : '0' });
-					}else{
-						curTab.attr({ 'aria-selected':'false','aria-expanded':'false'});
-						$curPanel.attr({ 'aria-hidden' : 'true','tabIndex' : '-1' });
-					}
-				});
-			}
-		}else{
-			collToggle.apply(this, arguments);
-
-			$curPanel = this.$element;
-
-			if ($.support.transition) {
-				this.$element.one($.support.transition.end, function(){
-					curTab = $curPanel.parent().find('[data-toggle=collapse]');
-					if($curPanel.hasClass('in')){
-						$curPanel.attr({ 'aria-hidden' : 'false','tabIndex' : '0' });
-						curTab.attr({ 'aria-selected':'true','aria-expanded':'true' });
-					}else{
-						$curPanel.attr({ 'aria-hidden' : 'true','tabIndex' : '-1' });
-						curTab.attr({ 'aria-selected':'false','aria-expanded':'false'});
-					}
-				})
-			}
-		}  */
-	}
 })(jQuery);
 
 var $accordions =  $('[data-multipleAtATime="true"]');
 if($accordions)
 {
     $accordions.each(function() {
-        'use strict';
-        $(this).attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
+      'use strict';
+      $(this).attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
     })
 }
 
 (function($) {
-  'use strict';  
-    $('.carousel-indicators').attr('aria-hidden', 'true')
-// Carousel Extension
+  'use strict';
+  $('.carousel-indicators').attr('aria-hidden', 'true')
+  // Carousel Extension
   // ===============================
+    
+  $.fn.carousel.Constructor.prototype.slide = function (type, next) {
+    var $active   = this.$element.find('.item.active')
+    var $next     = next || this.getItemForDirection(type, $active)
+    var isCycling = this.interval
+    var direction = type == 'next' ? 'left' : 'right'
+    var that      = this
+
+    if ($next.hasClass('active')) return (this.sliding = false)
+
+    var relatedTarget = $next[0]
+    var slideEvent = $.Event('slide.bs.carousel', {
+      relatedTarget: relatedTarget,
+      direction: direction
+    })
+    this.$element.trigger(slideEvent)
+    if (slideEvent.isDefaultPrevented()) return
+
+    this.sliding = true
+
+    isCycling && this.pause()
+
+    if (this.$indicators.length) {
+      this.$indicators.find('.active').removeClass('active')
+      var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
+      $nextIndicator && $nextIndicator.addClass('active')
+    }
+
+    var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
+    if ($.support.transition && this.$element.hasClass('slide')) {
+      $next.addClass(type)
+      $next[0].offsetWidth // force reflow
+      $active.addClass(direction)
+      $next.addClass(direction)
+      $active
+        .one('bsTransitionEnd', function () {
+          $next.removeClass([type, direction].join(' ')).addClass('active')
+          $active.removeClass(['active', direction].join(' '))
+          that.sliding = false
+          setTimeout(function () {
+            that.$element.trigger(slidEvent)
+          }, 0)
+        })
+        // .emulateTransitionEnd($.fn.carousel.TRANSITION_DURATION)
+    } else {
+      $active.removeClass('active')
+      $next.addClass('active')
+      this.sliding = false
+      this.$element.trigger(slidEvent)
+    }
+
+    isCycling && this.cycle()
+    return this
+  }
   
-                     /*
-      var slideCarousel = $.fn.carousel.Constructor.prototype.slide
-      $.fn.carousel.Constructor.prototype.slide = function (type, next) {
-        var $active = this.$element.find('.item.active')
-          , $next = next || $active[type]()
-        
-        slideCarousel.apply(this, arguments)
-
-      // $active
-      //   .one('bsTransitionEnd', function () {
-      //     $active.attr({'aria-selected':false, 'tabIndex': '-1'})
-      //     $next.attr({'aria-selected':true, 'tabIndex': '0'})  
-      //     /*
-      //     var $ul = $next.closest('div[role=listbox]')
-      //       , $items = $ul.find('[role=option]')
-      //       , index = $items.index($items.filter('.active'))
-      //     
-      //       // if index = 0, hide the prev link
-      //       if(index===0){
-      //           $("[data-slide='prev']", $ul).hide();
-      //       }
-      //       else{                
-      //           $("[data-slide='prev']", $ul).show();
-      //       }
-      //       // if index = last item, hide the next link
-      //       if(index===($items.length -1)){
-      //           $("[data-slide='next']", $ul).hide();
-      //       }
-      //       else{                
-      //           $("[data-slide='next']", $ul).show();
-      //       }     */
-      //       //.focus()
-      //  })
-      
-      //}     
-
-     var $this;
      $.fn.carousel.Constructor.prototype.keydown = function (e) {
+       if (/input|textarea/i.test(e.target.tagName)) return
+        var k = e.which || e.keyCode
+        switch (k) {
+          case 37:
+          case 38: this.prev(); break
+          case 39:
+          case 40: this.next(); break
+          default: return
+        }
+
+        /*
+    
      $this = $this || $(this)
      if(this instanceof Node){ $this = $(this)}
      var $ul = $this.closest('div[role=listbox]'),
@@ -2839,6 +2835,7 @@ if($accordions)
         }
 
       }
+      */
 
       e.preventDefault()
       e.stopPropagation()
@@ -2849,10 +2846,8 @@ if($accordions)
 // for megamenu we need to modify the way item parent is returned in getParent() function
 // then we need to redefine very method that uses getParent()
 // and unbind / rebind event with new methods
-
-(function($) {
-  'use strict';  
-    
+(function($) {    
+  'use strict';
     var backdrop = '.dropdown-backdrop';
     var toggle   = '[data-toggle="dropdown"]';
     
@@ -3007,9 +3002,8 @@ if($accordions)
     .on('keydown.bs.dropdown.data-api', '[role="menu"]', $.fn.dropdown.prototype.keydown)
     .on('keydown.bs.dropdown.data-api', '[role="listbox"]', $.fn.dropdown.prototype.keydown);
 })(jQuery);
-(function($) {
-    'use strict';  
-    
+(function($) {    
+  'use strict';
     var megamenuItems = '.mega-menu ul.navbar-nav > li > a';
     
     function uuid() {
@@ -3048,9 +3042,8 @@ if($accordions)
     
 })(jQuery);
 // Modal Extension
-(function($) {
+(function($) {  
   'use strict';
-  
   // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
   var $modals =  $('[data-toggle="modal"]');
   $modals.each(function() {
@@ -4101,52 +4094,50 @@ if($accordions)
 
 // forms validation fall back for old navigators
 $(document).ready(function () {
-'use strict';
-    if(typeof validate == 'function')
-    {
-        $('form').validate({
-            errorPlacement: function (error, element) {
-                error.appendTo('label[for=' + $(element).attr('id') + ']');
-            },
-            errorElement: 'em'
-        });
-        // Duplicate Validation Message for Firefox
-        $('#sign-up input:not([type=submit]):not([type=file])[title]').each(function () {
-            var validationMessage = $(this).attr('title');
-            $(this).attr('x-moz-errormessage', validationMessage);
-        });
-        $('form').removeAttr('novalidate');
-    }
+  'use strict';
+  if(typeof validate == 'function')
+  {
+      $('form').validate({
+          errorPlacement: function (error, element) {
+              error.appendTo('label[for=' + $(element).attr('id') + ']');
+          },
+          errorElement: 'em'
+      });
+      // Duplicate Validation Message for Firefox
+      $('#sign-up input:not([type=submit]):not([type=file])[title]').each(function () {
+          var validationMessage = $(this).attr('title');
+          $(this).attr('x-moz-errormessage', validationMessage);
+      });
+      $('form').removeAttr('novalidate');
+  }
 });
   /*! bootstrap-accessibility-plugin - v1.0.4 - 2014-10-25
 * https://github.com/paypal/bootstrap-accessibility-plugin
 * Copyright (c) 2014 PayPal Accessibility Team; Licensed BSD */
-  
   // Tab Extension
   // ===============================
-  (function($) {
-  'use strict';
-  
+  (function($) {  
+    'use strict';
    var uniqueId = function(prefix) {
-      return (prefix || 'ui-id') + '-' + Math.floor((Math.random()*1000)+1)
+      return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1)
   }
 
-  var $tablist = $('.nav-tabs, .nav-pills')
-        , $lis = $tablist.children('li')
-        , $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
+  var $tablist = $('.nav-tabs, .nav-pills'),
+        $lis = $tablist.children('li'),
+        $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
 
     $tablist.attr('role', 'tablist')
     $lis.attr('role', 'presentation')
     $tabs.attr('role', 'tab')
 
-    $tabs.each(function( index ) {
-      var tabpanel = $($(this).attr('href'))
-        , tab = $(this)
-        , tabid = tab.attr('id') || uniqueId('ui-tab')
+    $tabs.each(function() {
+      var tabpanel = $($(this).attr('href')),
+        tab = $(this),
+        tabid = tab.attr('id') || uniqueId('ui-tab')
 
         tab.attr('id', tabid)
 
-      if(tab.parent().hasClass('active')){
+      if(tab.parent().hasClass('active')) {
         tab.attr( { 'tabIndex' : '0', 'aria-selected' : 'true', 'aria-controls': tab.attr('href').substr(1) } )
         tabpanel.attr({ 'role' : 'tabpanel', 'tabIndex' : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
       }else{
@@ -4156,29 +4147,37 @@ $(document).ready(function () {
     })
 
     $.fn.tab.Constructor.prototype.keydown = function (e) {
-      console.log('keydown!');
-      var $this = $(this)
-      , $items
-      , $ul = $this.closest('ul[role=tablist] ')
-      , index
-      , k = e.which || e.keyCode
+      var $this = $(this),
+      $items,
+      $ul = $this.closest('ul[role=tablist] '),
+      index,
+      k = e.which || e.keyCode
 
       $this = $(this)
-      if (!/(37|38|39|40)/.test(k)) return
+      if (!/(37|38|39|40)/.test(k)) {
+        return
+      }
 
       $items = $ul.find('[role=tab]:visible')
       index = $items.index($items.filter(':focus'))
 
-      if (k == 38 || k == 37) index--                         // up & left
-      if (k == 39 || k == 40) index++                        // down & right
+      if (k == 38 || k == 37) {
+        index--                         // up & left
+      }
+      if (k == 39 || k == 40) {
+        index++                        // down & right
+      }
 
 
-      if(index < 0) index = $items.length -1
-      if(index == $items.length) index = 0
+      if(index < 0) {
+        index = $items.length -1
+      }
+      if(index == $items.length) {
+        index = 0
+      }
 
       var nextTab = $items.eq(index)
-      if(nextTab.attr('role') ==='tab'){
-
+      if(nextTab.attr('role') ==='tab') {
         nextTab.tab('show')      //Comment this line for dynamically loaded tabPabels, to save Ajax requests on arrow key navigation
         .focus()
       }
@@ -4203,6 +4202,7 @@ $(document).ready(function () {
       /* end fix*/
       element.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '0','aria-selected' : true })
       element.filter('.tab-pane').attr({ 'aria-hidden' : false,'tabIndex' : '0' })
+      callback && callback()
    }
   })(jQuery);
 /* =========================================================

@@ -67,7 +67,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/**/*.html',
           '<%= yeoman.app %>/**/*.js',
           '<%= yeoman.app %>/**/*.css',
-          'docs_base_boosted/**/*.*',
+          'docs_base_boosted/{,*/}/*.*',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -192,13 +192,6 @@ module.exports = function (grunt) {
           return '[' + commitHash.substring(0, 8) + '](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/' + commitHash + ')';
         }
       }
-    },
-
-    qunit: {
-      options: {
-        inject: 'app/js/tests/unit/phantom.js'
-      },
-      files: 'app/js/tests/index.html'
     },
 
     less: {
@@ -449,7 +442,7 @@ module.exports = function (grunt) {
           'bower_components/bootstrap/js/tab.js',
           'bower_components/bootstrap/js/affix.js',
           '.tmp/js/bootstrap-accessibility.js',
-          '<%= yeoman.app %>/js/accordion.js',
+          '<%= yeoman.app %>/js/collapse.js',
           '<%= yeoman.app %>/js/carousel.js',
           '<%= yeoman.app %>/js/dropdown.js',
           '<%= yeoman.app %>/js/megamenu.js',
@@ -465,7 +458,7 @@ module.exports = function (grunt) {
         src: [
           'bower_components/bootstrap/dist/js/bootstrap.js',
           '.tmp/js/bootstrap-accessibility.js',
-          '<%= yeoman.app %>/js/accordion.js',
+          '<%= yeoman.app %>/js/collapse.js',
           '<%= yeoman.app %>/js/carousel.js',
           '<%= yeoman.app %>/js/dropdown.js',
           '<%= yeoman.app %>/js/megamenu.js',
@@ -526,6 +519,37 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }]
       }
+    },
+
+    qunit: {
+      options: {
+        inject: '<%= yeoman.app %>/js/tests/unit/phantom.js'
+      },
+      files: '<%= yeoman.app %>/js/tests/index.html'
+    },
+    
+    'saucelabs-qunit': {
+      all: {
+        options: {
+          build: process.env.TRAVIS_JOB_ID,
+          throttled: 10,
+          maxRetries: 3,
+          maxPollRetries: 4,
+          urls: ['http://127.0.0.1:3000/js/tests/index.html?hidepassed'],
+          browsers: grunt.file.readYAML('sauce_browsers.yml')
+        }
+      }
+    },
+    
+    htmllint: {
+      options: {
+        ignore: [
+          'Attribute "autocomplete" not allowed on element "button" at this point.',
+          'Attribute "autocomplete" is only allowed when the input type is "color", "date", "datetime", "datetime-local", "email", "month", "number", "password", "range", "search", "tel", "text", "time", "url", or "week".',
+          'Element "img" is missing required attribute "src".'
+        ]
+      },
+      src: 'docs/{,*/}*.html'
     },
 
     // make a zipfile
@@ -1117,11 +1141,42 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+  
+  // Docs HTML validation task
+  grunt.registerTask('validate-html', ['docs', 'htmllint']);
 
+  var runSubset = function (subset) {
+    return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
+  };
+  var isUndefOrNonZero = function (val) {
+    return val === undefined || val !== '0';
+  };
+  
+  // Test task.
+  var testSubtasks = [];
+  // Skip core tests if running a different subset of the test suite
+  if (runSubset('core') &&
+      // Skip core tests if this is a Savage build
+      process.env.TRAVIS_REPO_SLUG !== 'twbs-savage/bootstrap') {
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js', 'docs']);
+  }
+  // Skip HTML validation if running a different subset of the test suite
+  if (runSubset('validate-html')) {
+    testSubtasks.push('validate-html');
+  }
+  // Only run Sauce Labs tests if there's a Sauce access key
+  if (typeof process.env.SAUCE_ACCESS_KEY !== 'undefined' &&
+      // Skip Sauce if running a different subset of the test suite
+      runSubset('sauce-js-unit') &&
+      // Skip Sauce on Travis when [skip sauce] is in the commit message
+      isUndefOrNonZero(process.env.TWBS_DO_SAUCE)) {
+    testSubtasks.push('connect');
+    testSubtasks.push('saucelabs-qunit');
+  }
+  
   // Test task.
   grunt.registerTask('test', ['dist-css', 'dist-js', 'csslint:dist','test-js', 'docs']);
-  // grunt.registerTask('test-js', ['eslint:boostFiles', 'eslint:nodeFiles', 'qunit']);
-  grunt.registerTask('test-js', ['eslint:boostedFiles', 'eslint:nodeFiles']);
+  grunt.registerTask('test-js', ['eslint:boostedFiles', 'eslint:nodeFiles', 'qunit']);
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);

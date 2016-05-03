@@ -1,10 +1,10 @@
   /*! bootstrap-accessibility-plugin - v1.0.4 - 2014-10-25
 * https://github.com/paypal/bootstrap-accessibility-plugin
 * Copyright (c) 2014 PayPal Accessibility Team; Licensed BSD */
-'use strict';  
   // Tab Extension
   // ===============================
   (function($) {  
+    'use strict';
    var uniqueId = function(prefix) {
       return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1)
   }
@@ -89,5 +89,6 @@
       /* end fix*/
       element.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '0','aria-selected' : true })
       element.filter('.tab-pane').attr({ 'aria-hidden' : false,'tabIndex' : '0' })
+      callback && callback()
    }
   })(jQuery);

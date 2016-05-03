@@ -1,47 +1,76 @@
-'use strict';  
 (function($) {
-    $('.carousel-indicators').attr('aria-hidden', 'true')
-// Carousel Extension
+  'use strict';
+  $('.carousel-indicators').attr('aria-hidden', 'true')
+  // Carousel Extension
   // ===============================
+    
+  $.fn.carousel.Constructor.prototype.slide = function (type, next) {
+    var $active   = this.$element.find('.item.active')
+    var $next     = next || this.getItemForDirection(type, $active)
+    var isCycling = this.interval
+    var direction = type == 'next' ? 'left' : 'right'
+    var that      = this
+
+    if ($next.hasClass('active')) return (this.sliding = false)
+
+    var relatedTarget = $next[0]
+    var slideEvent = $.Event('slide.bs.carousel', {
+      relatedTarget: relatedTarget,
+      direction: direction
+    })
+    this.$element.trigger(slideEvent)
+    if (slideEvent.isDefaultPrevented()) return
+
+    this.sliding = true
+
+    isCycling && this.pause()
+
+    if (this.$indicators.length) {
+      this.$indicators.find('.active').removeClass('active')
+      var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
+      $nextIndicator && $nextIndicator.addClass('active')
+    }
+
+    var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
+    if ($.support.transition && this.$element.hasClass('slide')) {
+      $next.addClass(type)
+      $next[0].offsetWidth // force reflow
+      $active.addClass(direction)
+      $next.addClass(direction)
+      $active
+        .one('bsTransitionEnd', function () {
+          $next.removeClass([type, direction].join(' ')).addClass('active')
+          $active.removeClass(['active', direction].join(' '))
+          that.sliding = false
+          setTimeout(function () {
+            that.$element.trigger(slidEvent)
+          }, 0)
+        })
+        // .emulateTransitionEnd($.fn.carousel.TRANSITION_DURATION)
+    } else {
+      $active.removeClass('active')
+      $next.addClass('active')
+      this.sliding = false
+      this.$element.trigger(slidEvent)
+    }
+
+    isCycling && this.cycle()
+    return this
+  }
   
-                     /*
-      var slideCarousel = $.fn.carousel.Constructor.prototype.slide
-      $.fn.carousel.Constructor.prototype.slide = function (type, next) {
-        var $active = this.$element.find('.item.active')
-          , $next = next || $active[type]()
-        
-        slideCarousel.apply(this, arguments)
-
-      // $active
-      //   .one('bsTransitionEnd', function () {
-      //     $active.attr({'aria-selected':false, 'tabIndex': '-1'})
-      //     $next.attr({'aria-selected':true, 'tabIndex': '0'})  
-      //     /*
-      //     var $ul = $next.closest('div[role=listbox]')
-      //       , $items = $ul.find('[role=option]')
-      //       , index = $items.index($items.filter('.active'))
-      //     
-      //       // if index = 0, hide the prev link
-      //       if(index===0){
-      //           $("[data-slide='prev']", $ul).hide();
-      //       }
-      //       else{                
-      //           $("[data-slide='prev']", $ul).show();
-      //       }
-      //       // if index = last item, hide the next link
-      //       if(index===($items.length -1)){
-      //           $("[data-slide='next']", $ul).hide();
-      //       }
-      //       else{                
-      //           $("[data-slide='next']", $ul).show();
-      //       }     */
-      //       //.focus()
-      //  })
-      
-      //}     
-
-     var $this;
      $.fn.carousel.Constructor.prototype.keydown = function (e) {
+       if (/input|textarea/i.test(e.target.tagName)) return
+        var k = e.which || e.keyCode
+        switch (k) {
+          case 37:
+          case 38: this.prev(); break
+          case 39:
+          case 40: this.next(); break
+          default: return
+        }
+
+        /*
+    
      $this = $this || $(this)
      if(this instanceof Node){ $this = $(this)}
      var $ul = $this.closest('div[role=listbox]'),
@@ -77,6 +106,7 @@
         }
 
       }
+      */
 
       e.preventDefault()
       e.stopPropagation()

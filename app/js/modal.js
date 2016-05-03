@@ -1,6 +1,6 @@
-'use strict';
 // Modal Extension
 (function($) {  
+  'use strict';
   // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
   var $modals =  $('[data-toggle="modal"]');
   $modals.each(function() {
