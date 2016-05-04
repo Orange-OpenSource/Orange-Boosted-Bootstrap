@@ -4657,6 +4657,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-primary:active.disabled,
+.btn-primary.active.disabled,
+.open > .btn-primary.dropdown-toggle.disabled,
+.btn-primary:active:disabled,
+.btn-primary.active:disabled,
+.open > .btn-primary.dropdown-toggle:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-primary:active.disabled:hover,
+.btn-primary.active.disabled:hover,
+.open > .btn-primary.dropdown-toggle.disabled:hover,
+.btn-primary:active:disabled:hover,
+.btn-primary.active:disabled:hover,
+.open > .btn-primary.dropdown-toggle:disabled:hover,
+.btn-primary:active.disabled.hover,
+.btn-primary.active.disabled.hover,
+.open > .btn-primary.dropdown-toggle.disabled.hover,
+.btn-primary:active:disabled.hover,
+.btn-primary.active:disabled.hover,
+.open > .btn-primary.dropdown-toggle:disabled.hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
@@ -4737,6 +4763,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-primary.btn-inverse:active.disabled,
+.btn-primary.btn-inverse.active.disabled,
+.open > .btn-primary.btn-inverse.dropdown-toggle.disabled,
+.btn-primary.btn-inverse:active:disabled,
+.btn-primary.btn-inverse.active:disabled,
+.open > .btn-primary.btn-inverse.dropdown-toggle:disabled {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-primary.btn-inverse:active.disabled:hover,
+.btn-primary.btn-inverse.active.disabled:hover,
+.open > .btn-primary.btn-inverse.dropdown-toggle.disabled:hover,
+.btn-primary.btn-inverse:active:disabled:hover,
+.btn-primary.btn-inverse.active:disabled:hover,
+.open > .btn-primary.btn-inverse.dropdown-toggle:disabled:hover,
+.btn-primary.btn-inverse:active.disabled.hover,
+.btn-primary.btn-inverse.active.disabled.hover,
+.open > .btn-primary.btn-inverse.dropdown-toggle.disabled.hover,
+.btn-primary.btn-inverse:active:disabled.hover,
+.btn-primary.btn-inverse.active:disabled.hover,
+.open > .btn-primary.btn-inverse.dropdown-toggle:disabled.hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 .btn-primary.btn-inverse.disabled,
 .btn-primary.btn-inverse:disabled {
@@ -4822,6 +4874,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-default:active.disabled,
+.btn-default.active.disabled,
+.open > .btn-default.dropdown-toggle.disabled,
+.btn-default:active:disabled,
+.btn-default.active:disabled,
+.open > .btn-default.dropdown-toggle:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-default:active.disabled:hover,
+.btn-default.active.disabled:hover,
+.open > .btn-default.dropdown-toggle.disabled:hover,
+.btn-default:active:disabled:hover,
+.btn-default.active:disabled:hover,
+.open > .btn-default.dropdown-toggle:disabled:hover,
+.btn-default:active.disabled.hover,
+.btn-default.active.disabled.hover,
+.open > .btn-default.dropdown-toggle.disabled.hover,
+.btn-default:active:disabled.hover,
+.btn-default.active:disabled.hover,
+.open > .btn-default.dropdown-toggle:disabled.hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
 .btn-default.disabled,
 .btn-default:disabled {
   color: #fff;
@@ -4844,6 +4922,26 @@ fieldset[disabled] .btn {
 }
 .btn-default.disabled,
 .btn-default:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-default.disabled:active,
+.btn-default:disabled:active,
+.btn-default.disabled.active,
+.btn-default:disabled.active {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-default.disabled:active:hover,
+.btn-default:disabled:active:hover,
+.btn-default.disabled.active:hover,
+.btn-default:disabled.active:hover,
+.btn-default.disabled:active.hover,
+.btn-default:disabled:active.hover,
+.btn-default.disabled.active.hover,
+.btn-default:disabled.active.hover {
   color: #ccc;
   background-color: transparent;
   border-color: #ccc;
@@ -4894,6 +4992,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-default.btn-inverse:active.disabled,
+.btn-default.btn-inverse.active.disabled,
+.open > .btn-default.btn-inverse.dropdown-toggle.disabled,
+.btn-default.btn-inverse:active:disabled,
+.btn-default.btn-inverse.active:disabled,
+.open > .btn-default.btn-inverse.dropdown-toggle:disabled {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-default.btn-inverse:active.disabled:hover,
+.btn-default.btn-inverse.active.disabled:hover,
+.open > .btn-default.btn-inverse.dropdown-toggle.disabled:hover,
+.btn-default.btn-inverse:active:disabled:hover,
+.btn-default.btn-inverse.active:disabled:hover,
+.open > .btn-default.btn-inverse.dropdown-toggle:disabled:hover,
+.btn-default.btn-inverse:active.disabled.hover,
+.btn-default.btn-inverse.active.disabled.hover,
+.open > .btn-default.btn-inverse.dropdown-toggle.disabled.hover,
+.btn-default.btn-inverse:active:disabled.hover,
+.btn-default.btn-inverse.active:disabled.hover,
+.open > .btn-default.btn-inverse.dropdown-toggle:disabled.hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 .btn-default.btn-inverse.disabled,
 .btn-default.btn-inverse:disabled {
@@ -4953,6 +5077,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-info:active.disabled,
+.btn-info.active.disabled,
+.open > .btn-info.dropdown-toggle.disabled,
+.btn-info:active:disabled,
+.btn-info.active:disabled,
+.open > .btn-info.dropdown-toggle:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-info:active.disabled:hover,
+.btn-info.active.disabled:hover,
+.open > .btn-info.dropdown-toggle.disabled:hover,
+.btn-info:active:disabled:hover,
+.btn-info.active:disabled:hover,
+.open > .btn-info.dropdown-toggle:disabled:hover,
+.btn-info:active.disabled.hover,
+.btn-info.active.disabled.hover,
+.open > .btn-info.dropdown-toggle.disabled.hover,
+.btn-info:active:disabled.hover,
+.btn-info.active:disabled.hover,
+.open > .btn-info.dropdown-toggle:disabled.hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 .btn-info.disabled,
 .btn-info:disabled {
@@ -5020,6 +5170,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-info.btn-inverse:active.disabled,
+.btn-info.btn-inverse.active.disabled,
+.open > .btn-info.btn-inverse.dropdown-toggle.disabled,
+.btn-info.btn-inverse:active:disabled,
+.btn-info.btn-inverse.active:disabled,
+.open > .btn-info.btn-inverse.dropdown-toggle:disabled {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-info.btn-inverse:active.disabled:hover,
+.btn-info.btn-inverse.active.disabled:hover,
+.open > .btn-info.btn-inverse.dropdown-toggle.disabled:hover,
+.btn-info.btn-inverse:active:disabled:hover,
+.btn-info.btn-inverse.active:disabled:hover,
+.open > .btn-info.btn-inverse.dropdown-toggle:disabled:hover,
+.btn-info.btn-inverse:active.disabled.hover,
+.btn-info.btn-inverse.active.disabled.hover,
+.open > .btn-info.btn-inverse.dropdown-toggle.disabled.hover,
+.btn-info.btn-inverse:active:disabled.hover,
+.btn-info.btn-inverse.active:disabled.hover,
+.open > .btn-info.btn-inverse.dropdown-toggle:disabled.hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
 .btn-info.btn-inverse.disabled,
 .btn-info.btn-inverse:disabled {
   color: #000;
@@ -5036,6 +5212,26 @@ fieldset[disabled] .btn {
 }
 .btn-info.btn-inverse.disabled,
 .btn-info.btn-inverse:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-info.btn-inverse.disabled:active,
+.btn-info.btn-inverse:disabled:active,
+.btn-info.btn-inverse.disabled.active,
+.btn-info.btn-inverse:disabled.active {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-info.btn-inverse.disabled:active:hover,
+.btn-info.btn-inverse:disabled:active:hover,
+.btn-info.btn-inverse.disabled.active:hover,
+.btn-info.btn-inverse:disabled.active:hover,
+.btn-info.btn-inverse.disabled:active.hover,
+.btn-info.btn-inverse:disabled:active.hover,
+.btn-info.btn-inverse.disabled.active.hover,
+.btn-info.btn-inverse:disabled.active.hover {
   color: #ccc;
   background-color: transparent;
   border-color: #ccc;
@@ -5084,6 +5280,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-success:active.disabled,
+.btn-success.active.disabled,
+.open > .btn-success.dropdown-toggle.disabled,
+.btn-success:active:disabled,
+.btn-success.active:disabled,
+.open > .btn-success.dropdown-toggle:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-success:active.disabled:hover,
+.btn-success.active.disabled:hover,
+.open > .btn-success.dropdown-toggle.disabled:hover,
+.btn-success:active:disabled:hover,
+.btn-success.active:disabled:hover,
+.open > .btn-success.dropdown-toggle:disabled:hover,
+.btn-success:active.disabled.hover,
+.btn-success.active.disabled.hover,
+.open > .btn-success.dropdown-toggle.disabled.hover,
+.btn-success:active:disabled.hover,
+.btn-success.active:disabled.hover,
+.open > .btn-success.dropdown-toggle:disabled.hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 .btn-success.disabled,
 .btn-success:disabled {
@@ -5142,6 +5364,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-success.btn-inverse:active.disabled,
+.btn-success.btn-inverse.active.disabled,
+.open > .btn-success.btn-inverse.dropdown-toggle.disabled,
+.btn-success.btn-inverse:active:disabled,
+.btn-success.btn-inverse.active:disabled,
+.open > .btn-success.btn-inverse.dropdown-toggle:disabled {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-success.btn-inverse:active.disabled:hover,
+.btn-success.btn-inverse.active.disabled:hover,
+.open > .btn-success.btn-inverse.dropdown-toggle.disabled:hover,
+.btn-success.btn-inverse:active:disabled:hover,
+.btn-success.btn-inverse.active:disabled:hover,
+.open > .btn-success.btn-inverse.dropdown-toggle:disabled:hover,
+.btn-success.btn-inverse:active.disabled.hover,
+.btn-success.btn-inverse.active.disabled.hover,
+.open > .btn-success.btn-inverse.dropdown-toggle.disabled.hover,
+.btn-success.btn-inverse:active:disabled.hover,
+.btn-success.btn-inverse.active:disabled.hover,
+.open > .btn-success.btn-inverse.dropdown-toggle:disabled.hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
 .btn-success.btn-inverse.disabled,
 .btn-success.btn-inverse:disabled {
   color: #000;
@@ -5192,6 +5440,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-warning:active.disabled,
+.btn-warning.active.disabled,
+.open > .btn-warning.dropdown-toggle.disabled,
+.btn-warning:active:disabled,
+.btn-warning.active:disabled,
+.open > .btn-warning.dropdown-toggle:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-warning:active.disabled:hover,
+.btn-warning.active.disabled:hover,
+.open > .btn-warning.dropdown-toggle.disabled:hover,
+.btn-warning:active:disabled:hover,
+.btn-warning.active:disabled:hover,
+.open > .btn-warning.dropdown-toggle:disabled:hover,
+.btn-warning:active.disabled.hover,
+.btn-warning.active.disabled.hover,
+.open > .btn-warning.dropdown-toggle.disabled.hover,
+.btn-warning:active:disabled.hover,
+.btn-warning.active:disabled.hover,
+.open > .btn-warning.dropdown-toggle:disabled.hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 .btn-warning.disabled,
 .btn-warning:disabled {
@@ -5273,6 +5547,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-warning.btn-inverse:active.disabled,
+.btn-warning.btn-inverse.active.disabled,
+.open > .btn-warning.btn-inverse.dropdown-toggle.disabled,
+.btn-warning.btn-inverse:active:disabled,
+.btn-warning.btn-inverse.active:disabled,
+.open > .btn-warning.btn-inverse.dropdown-toggle:disabled {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-warning.btn-inverse:active.disabled:hover,
+.btn-warning.btn-inverse.active.disabled:hover,
+.open > .btn-warning.btn-inverse.dropdown-toggle.disabled:hover,
+.btn-warning.btn-inverse:active:disabled:hover,
+.btn-warning.btn-inverse.active:disabled:hover,
+.open > .btn-warning.btn-inverse.dropdown-toggle:disabled:hover,
+.btn-warning.btn-inverse:active.disabled.hover,
+.btn-warning.btn-inverse.active.disabled.hover,
+.open > .btn-warning.btn-inverse.dropdown-toggle.disabled.hover,
+.btn-warning.btn-inverse:active:disabled.hover,
+.btn-warning.btn-inverse.active:disabled.hover,
+.open > .btn-warning.btn-inverse.dropdown-toggle:disabled.hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 .btn-warning.btn-inverse.disabled,
 .btn-warning.btn-inverse:disabled {
@@ -5359,6 +5659,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-danger:active.disabled,
+.btn-danger.active.disabled,
+.open > .btn-danger.dropdown-toggle.disabled,
+.btn-danger:active:disabled,
+.btn-danger.active:disabled,
+.open > .btn-danger.dropdown-toggle:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-danger:active.disabled:hover,
+.btn-danger.active.disabled:hover,
+.open > .btn-danger.dropdown-toggle.disabled:hover,
+.btn-danger:active:disabled:hover,
+.btn-danger.active:disabled:hover,
+.open > .btn-danger.dropdown-toggle:disabled:hover,
+.btn-danger:active.disabled.hover,
+.btn-danger.active.disabled.hover,
+.open > .btn-danger.dropdown-toggle.disabled.hover,
+.btn-danger:active:disabled.hover,
+.btn-danger.active:disabled.hover,
+.open > .btn-danger.dropdown-toggle:disabled.hover {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc;
+}
 .btn-danger.disabled,
 .btn-danger:disabled {
   color: #fff;
@@ -5416,6 +5742,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-danger.btn-inverse:active.disabled,
+.btn-danger.btn-inverse.active.disabled,
+.open > .btn-danger.btn-inverse.dropdown-toggle.disabled,
+.btn-danger.btn-inverse:active:disabled,
+.btn-danger.btn-inverse.active:disabled,
+.open > .btn-danger.btn-inverse.dropdown-toggle:disabled {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.btn-danger.btn-inverse:active.disabled:hover,
+.btn-danger.btn-inverse.active.disabled:hover,
+.open > .btn-danger.btn-inverse.dropdown-toggle.disabled:hover,
+.btn-danger.btn-inverse:active:disabled:hover,
+.btn-danger.btn-inverse.active:disabled:hover,
+.open > .btn-danger.btn-inverse.dropdown-toggle:disabled:hover,
+.btn-danger.btn-inverse:active.disabled.hover,
+.btn-danger.btn-inverse.active.disabled.hover,
+.open > .btn-danger.btn-inverse.dropdown-toggle.disabled.hover,
+.btn-danger.btn-inverse:active:disabled.hover,
+.btn-danger.btn-inverse.active:disabled.hover,
+.open > .btn-danger.btn-inverse.dropdown-toggle:disabled.hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
+}
 .btn-danger.btn-inverse.disabled,
 .btn-danger.btn-inverse:disabled {
   color: #000;
@@ -5467,6 +5819,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-outline-primary:active.disabled,
+.btn-outline-primary.active.disabled,
+.open > .btn-outline-primary.dropdown-toggle.disabled,
+.btn-outline-primary:active:disabled,
+.btn-outline-primary.active:disabled,
+.open > .btn-outline-primary.dropdown-toggle:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-outline-primary:active.disabled:hover,
+.btn-outline-primary.active.disabled:hover,
+.open > .btn-outline-primary.dropdown-toggle.disabled:hover,
+.btn-outline-primary:active:disabled:hover,
+.btn-outline-primary.active:disabled:hover,
+.open > .btn-outline-primary.dropdown-toggle:disabled:hover,
+.btn-outline-primary:active.disabled.hover,
+.btn-outline-primary.active.disabled.hover,
+.open > .btn-outline-primary.dropdown-toggle.disabled.hover,
+.btn-outline-primary:active:disabled.hover,
+.btn-outline-primary.active:disabled.hover,
+.open > .btn-outline-primary.dropdown-toggle:disabled.hover {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
 }
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
@@ -5528,6 +5906,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-outline-secondary:active.disabled,
+.btn-outline-secondary.active.disabled,
+.open > .btn-outline-secondary.dropdown-toggle.disabled,
+.btn-outline-secondary:active:disabled,
+.btn-outline-secondary.active:disabled,
+.open > .btn-outline-secondary.dropdown-toggle:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-outline-secondary:active.disabled:hover,
+.btn-outline-secondary.active.disabled:hover,
+.open > .btn-outline-secondary.dropdown-toggle.disabled:hover,
+.btn-outline-secondary:active:disabled:hover,
+.btn-outline-secondary.active:disabled:hover,
+.open > .btn-outline-secondary.dropdown-toggle:disabled:hover,
+.btn-outline-secondary:active.disabled.hover,
+.btn-outline-secondary.active.disabled.hover,
+.open > .btn-outline-secondary.dropdown-toggle.disabled.hover,
+.btn-outline-secondary:active:disabled.hover,
+.btn-outline-secondary.active:disabled.hover,
+.open > .btn-outline-secondary.dropdown-toggle:disabled.hover {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
 .btn-outline-secondary.disabled,
 .btn-outline-secondary:disabled {
   color: #ccc;
@@ -5587,6 +5991,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-outline-info:active.disabled,
+.btn-outline-info.active.disabled,
+.open > .btn-outline-info.dropdown-toggle.disabled,
+.btn-outline-info:active:disabled,
+.btn-outline-info.active:disabled,
+.open > .btn-outline-info.dropdown-toggle:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-outline-info:active.disabled:hover,
+.btn-outline-info.active.disabled:hover,
+.open > .btn-outline-info.dropdown-toggle.disabled:hover,
+.btn-outline-info:active:disabled:hover,
+.btn-outline-info.active:disabled:hover,
+.open > .btn-outline-info.dropdown-toggle:disabled:hover,
+.btn-outline-info:active.disabled.hover,
+.btn-outline-info.active.disabled.hover,
+.open > .btn-outline-info.dropdown-toggle.disabled.hover,
+.btn-outline-info:active:disabled.hover,
+.btn-outline-info.active:disabled.hover,
+.open > .btn-outline-info.dropdown-toggle:disabled.hover {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
 }
 .btn-outline-info.disabled,
 .btn-outline-info:disabled {
@@ -5648,6 +6078,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-outline-success:active.disabled,
+.btn-outline-success.active.disabled,
+.open > .btn-outline-success.dropdown-toggle.disabled,
+.btn-outline-success:active:disabled,
+.btn-outline-success.active:disabled,
+.open > .btn-outline-success.dropdown-toggle:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-outline-success:active.disabled:hover,
+.btn-outline-success.active.disabled:hover,
+.open > .btn-outline-success.dropdown-toggle.disabled:hover,
+.btn-outline-success:active:disabled:hover,
+.btn-outline-success.active:disabled:hover,
+.open > .btn-outline-success.dropdown-toggle:disabled:hover,
+.btn-outline-success:active.disabled.hover,
+.btn-outline-success.active.disabled.hover,
+.open > .btn-outline-success.dropdown-toggle.disabled.hover,
+.btn-outline-success:active:disabled.hover,
+.btn-outline-success.active:disabled.hover,
+.open > .btn-outline-success.dropdown-toggle:disabled.hover {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
 .btn-outline-success.disabled,
 .btn-outline-success:disabled {
   color: #ccc;
@@ -5708,6 +6164,32 @@ fieldset[disabled] .btn {
   background-color: #f16e00;
   border-color: #f16e00;
 }
+.btn-outline-warning:active.disabled,
+.btn-outline-warning.active.disabled,
+.open > .btn-outline-warning.dropdown-toggle.disabled,
+.btn-outline-warning:active:disabled,
+.btn-outline-warning.active:disabled,
+.open > .btn-outline-warning.dropdown-toggle:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-outline-warning:active.disabled:hover,
+.btn-outline-warning.active.disabled:hover,
+.open > .btn-outline-warning.dropdown-toggle.disabled:hover,
+.btn-outline-warning:active:disabled:hover,
+.btn-outline-warning.active:disabled:hover,
+.open > .btn-outline-warning.dropdown-toggle:disabled:hover,
+.btn-outline-warning:active.disabled.hover,
+.btn-outline-warning.active.disabled.hover,
+.open > .btn-outline-warning.dropdown-toggle.disabled.hover,
+.btn-outline-warning:active:disabled.hover,
+.btn-outline-warning.active:disabled.hover,
+.open > .btn-outline-warning.dropdown-toggle:disabled.hover {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
 .btn-outline-warning.disabled,
 .btn-outline-warning:disabled {
   color: #ccc;
@@ -5767,6 +6249,32 @@ fieldset[disabled] .btn {
   color: #fff;
   background-color: #f16e00;
   border-color: #f16e00;
+}
+.btn-outline-danger:active.disabled,
+.btn-outline-danger.active.disabled,
+.open > .btn-outline-danger.dropdown-toggle.disabled,
+.btn-outline-danger:active:disabled,
+.btn-outline-danger.active:disabled,
+.open > .btn-outline-danger.dropdown-toggle:disabled {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
+}
+.btn-outline-danger:active.disabled:hover,
+.btn-outline-danger.active.disabled:hover,
+.open > .btn-outline-danger.dropdown-toggle.disabled:hover,
+.btn-outline-danger:active:disabled:hover,
+.btn-outline-danger.active:disabled:hover,
+.open > .btn-outline-danger.dropdown-toggle:disabled:hover,
+.btn-outline-danger:active.disabled.hover,
+.btn-outline-danger.active.disabled.hover,
+.open > .btn-outline-danger.dropdown-toggle.disabled.hover,
+.btn-outline-danger:active:disabled.hover,
+.btn-outline-danger.active:disabled.hover,
+.open > .btn-outline-danger.dropdown-toggle:disabled.hover {
+  color: #ccc;
+  background-color: transparent;
+  border-color: #ccc;
 }
 .btn-outline-danger.disabled,
 .btn-outline-danger:disabled {
