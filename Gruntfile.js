@@ -202,7 +202,7 @@ module.exports = function (grunt) {
           outputSourceFiles: true,
           sourceMapURL: '<%= yeoman.packageName %>.css.map',
           sourceMapFilename: 'dist/css/<%= yeoman.packageName %>.css.map'
-        },          
+        },
         src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>.less',
         dest: 'dist/css/<%= yeoman.packageName %>.css'
       },
@@ -432,16 +432,10 @@ module.exports = function (grunt) {
           'bower_components/bootstrap/js/transition.js',
           'bower_components/bootstrap/js/alert.js',
           'bower_components/bootstrap/js/button.js',
-          'bower_components/bootstrap/js/carousel.js',
-          'bower_components/bootstrap/js/collapse.js',
-          'bower_components/bootstrap/js/dropdown.js',
-          'bower_components/bootstrap/js/modal.js',
           '<%= yeoman.app %>/js/tooltip.js',
           'bower_components/bootstrap/js/popover.js',
           'bower_components/bootstrap/js/scrollspy.js',
-          'bower_components/bootstrap/js/tab.js',
           'bower_components/bootstrap/js/affix.js',
-          '.tmp/js/bootstrap-accessibility.js',
           '<%= yeoman.app %>/js/collapse.js',
           '<%= yeoman.app %>/js/carousel.js',
           '<%= yeoman.app %>/js/dropdown.js',
@@ -450,6 +444,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/js/tablesorter.js',
           '<%= yeoman.app %>/js/form.js',
           '<%= yeoman.app %>/js/tab.js',
+          '.tmp/js/bootstrap-accessibility.js',
           'bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js'
         ],
         dest: 'dist/js/<%= yeoman.pkg.name %>.js'
@@ -527,7 +522,7 @@ module.exports = function (grunt) {
       },
       files: '<%= yeoman.app %>/js/tests/index.html'
     },
-    
+
     'saucelabs-qunit': {
       all: {
         options: {
@@ -540,7 +535,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     htmllint: {
       options: {
         ignore: [
@@ -766,10 +761,12 @@ module.exports = function (grunt) {
           }, {
               from: 'bootstrap.min.js',
               to: 'boosted.min.js'
-          }, {
-              from: 'js/boosted.js',
-              to: 'js/boosted.min.js'
-          }, {
+          },
+          // {
+          //     from: 'js/boosted.js',
+          //     to: 'js/boosted.min.js'
+          // },
+           {
               from: 'js/bootstrap.js',
               to: 'js/boosted.min.js'
           }, {
@@ -1141,7 +1138,7 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
-  
+
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['docs', 'htmllint']);
 
@@ -1151,7 +1148,7 @@ module.exports = function (grunt) {
   var isUndefOrNonZero = function (val) {
     return val === undefined || val !== '0';
   };
-  
+
   // Test task.
   var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
@@ -1173,7 +1170,7 @@ module.exports = function (grunt) {
     testSubtasks.push('connect');
     testSubtasks.push('saucelabs-qunit');
   }
-  
+
   // Test task.
   grunt.registerTask('test', ['dist-css', 'dist-js', 'csslint:dist','test-js', 'docs']);
   grunt.registerTask('test-js', ['eslint:boostedFiles', 'eslint:nodeFiles', 'qunit']);
