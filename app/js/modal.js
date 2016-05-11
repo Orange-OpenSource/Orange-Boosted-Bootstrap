@@ -94,8 +94,8 @@
     this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
 
     this.$dialog.on('mousedown.dismiss.bs.modal', function () {
-      that.$element.one('mouseup.dismiss.bs.modal', function (e) {
-        if ($(e.target).is(that.$element)) that.ignoreBackdropClick = true
+      that.$element.one('mouseup.dismiss.bs.modal', function (evt) {
+        if ($(evt.target).is(that.$element)) that.ignoreBackdropClick = true
       })
     })
 
@@ -120,15 +120,15 @@
 
       that.enforceFocus()
 
-      var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
+      var evt = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
 
       transition ?
         that.$dialog // wait for modal to slide in
           .one('bsTransitionEnd', function () {
-            that.$element.trigger('focus').trigger(e)
+            that.$element.trigger('focus').trigger(evt)
           })
           .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
-        that.$element.trigger('focus').trigger(e)
+        that.$element.trigger('focus').trigger(evt)
     })
   }
 
