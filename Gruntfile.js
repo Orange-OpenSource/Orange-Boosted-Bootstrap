@@ -552,7 +552,7 @@ module.exports = function (grunt) {
           'Element "img" is missing required attribute "src".'
         ]
       },
-      src: ['docs/{,*/}*.html','app/js/tests/visual/*.html']
+      src: ['docs/{,**/}*.html','app/js/tests/visual/*.html']
     },
 
     // make a zipfile
