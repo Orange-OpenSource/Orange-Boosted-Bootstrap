@@ -14,7 +14,13 @@ module.exports = function (grunt) {
   // show elapsed time at the end
   require('time-grunt')(grunt);
 
-  grunt.loadNpmTasks('gruntify-eslint');
+  grunt.loadNpmTasks('gruntify-eslint');    
+  
+  /* Jenkins flag */
+  var JENKINS = grunt.option('jenkins');
+  if (process.env._JAVA_OPTIONS) {
+    delete process.env._JAVA_OPTIONS;
+  }
 
   // configurable paths
   var appConfig = {
@@ -537,14 +543,16 @@ module.exports = function (grunt) {
     },
 
     htmllint: {
-      options: {
+      options: {  
+        reporter: JENKINS && 'checkstyle',
+        reporterOutput: JENKINS && 'reports/htmllint.xml',
         ignore: [
           'Attribute "autocomplete" not allowed on element "button" at this point.',
           'Attribute "autocomplete" is only allowed when the input type is "color", "date", "datetime", "datetime-local", "email", "month", "number", "password", "range", "search", "tel", "text", "time", "url", or "week".',
           'Element "img" is missing required attribute "src".'
         ]
       },
-      src: 'docs/{,*/}*.html'
+      src: ['docs/{,*/}*.html','app/js/tests/visual/*.html']
     },
 
     // make a zipfile
