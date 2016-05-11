@@ -549,7 +549,15 @@ module.exports = function (grunt) {
         ignore: [
           'Attribute "autocomplete" not allowed on element "button" at this point.',
           'Attribute "autocomplete" is only allowed when the input type is "color", "date", "datetime", "datetime-local", "email", "month", "number", "password", "range", "search", "tel", "text", "time", "url", or "week".',
-          'Element "img" is missing required attribute "src".'
+          'Element "img" is missing required attribute "src".',
+          'Element “input” is missing one or more of the following attributes: “aria-expanded”, “aria-valuemax”, “aria-valuemin”, “aria-valuenow”, “role”.',
+          'The “datetime” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “color” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “date” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “datetime-local” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “month” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “time” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
+          'The “week” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
         ]
       },
       src: ['docs/{,**/}*.html','app/js/tests/visual/*.html']
