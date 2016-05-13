@@ -64,7 +64,7 @@ module.exports = function (grunt) {
     // Task configuration.
     clean: {
       dist: 'dist',
-      docs: 'docs/dist',
+      docs: ['docs/dist','_gh_pages'],
       /* Boosted mod */
       rtl: 'dist/css/o-rtl.*',
       tmp: '.tmpdocs'
