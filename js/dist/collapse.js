@@ -59,6 +59,7 @@ var Collapse = (function ($) {
 
   var Selector = {
     ACTIVES: '.panel > .in, .panel > .collapsing',
+    ACCORDION_HEADING: '.o-accordion .panel .panel-heading .panel-title a',
     DATA_TOGGLE: '[data-toggle="collapse"]'
   };
 
@@ -344,10 +345,21 @@ var Collapse = (function ($) {
 
   var $collTabHeadings = $('.panel-heading');
   var $collTabPanels = $('.panel-collapse:not(.mega-menu)');
+  var $accordionTabs = $(Selector.ACCORDION_HEADING);
 
   $collTabHeadings.attr({ role: 'tab' });
   $collTabPanels.attr({ role: 'tabpanel' });
   $('.panel').attr('role', 'presentation');
+
+  $accordionTabs.on('click', function () {
+    var collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'));
+
+    if (collpanel.hasClass('in')) {
+      $(this).parent().removeClass('panel-chevron-open').addClass('panel-chevron-closed');
+    } else {
+      $(this).parent().removeClass('panel-chevron-closed').addClass('panel-chevron-open');
+    }
+  });
 
   /**
    * ------------------------------------------------------------------------
@@ -363,6 +375,20 @@ var Collapse = (function ($) {
     var config = data ? 'toggle' : $(this).data();
 
     Collapse._jQueryInterface.call($(target), config);
+  });
+
+  $(function () {
+    $(Selector.ACCORDION_HEADING).each(function () {
+      var collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'));
+
+      if (collpanel.hasClass('in')) {
+        $(this).parent().removeClass('panel-chevron-closed').addClass('panel-chevron-open');
+      } else {
+        $(this).parent().removeClass('panel-chevron-open').addClass('panel-chevron-closed');
+      }
+
+      $(this).prepend('<div class=arrow></div>');
+    });
   });
 
   /**

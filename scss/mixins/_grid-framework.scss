@@ -47,7 +47,7 @@
         }
 
         // boosted mod
-        $saved-col-generated: append($saved-col-generated, unquote('.col-#{$breakpoint}-#{$i}'),'comma');
+        $saved-col-generated: append($saved-col-generated, unquote(".col-#{$breakpoint}-#{$i}"),"comma");
         // end mod
       }
       @each $modifier in (pull, push) {

@@ -364,7 +364,7 @@ const Collapse = (($) => {
   $collTabPanels.attr({ role: 'tabpanel' })
   $('.panel').attr('role', 'presentation')
 
-  $accordionTabs.on('click', function() {
+  $accordionTabs.on('click', function () {
     let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
 
     if (collpanel.hasClass('in')) {
@@ -391,7 +391,7 @@ const Collapse = (($) => {
   })
 
   $(() => {
-    $(Selector.ACCORDION_HEADING).each(function() {
+    $(Selector.ACCORDION_HEADING).each(function () {
       let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
 
       if (collpanel.hasClass('in')) {
