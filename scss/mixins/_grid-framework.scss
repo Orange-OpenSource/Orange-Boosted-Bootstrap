@@ -3,10 +3,12 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
+
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   $breakpoint-counter: 0;
   // boosted mod
   $saved-col-generated: ();
+  $local-gutter: $gutter;
   // end mod
   @each $breakpoint in map-keys($breakpoints) {
     $breakpoint-counter: ($breakpoint-counter + 1);
@@ -31,7 +33,7 @@
       }
 
       // boosted mod
-      @if length($saved-col-generated) {
+      @if length($saved-col-generated) > 0 {
         #{$saved-col-generated} {
           padding-right: ($local-gutter / 2);
           padding-left:  ($local-gutter / 2);
@@ -45,7 +47,7 @@
         }
 
         // boosted mod
-        $saved-col-generated: append($saved-col-generated, ".col-#{$breakpoint}-#{$i}","comma");
+        $saved-col-generated: append($saved-col-generated, unquote('.col-#{$breakpoint}-#{$i}'),'comma');
         // end mod
       }
       @each $modifier in (pull, push) {
