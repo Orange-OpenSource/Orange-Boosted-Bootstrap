@@ -1083,7 +1083,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "HelvNeue55", Arial, sans-serif;
+  font-family: "HelvNeue55", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #000;
@@ -1185,7 +1185,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "HelvNeue75", Arial, sans-serif;
+  font-family: "HelvNeue75", Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 1.1;
   color: #000;
@@ -6720,7 +6720,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "HelvNeue55", Arial, sans-serif;
+  font-family: "HelvNeue55", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
@@ -6741,23 +6741,23 @@ button.close {
   line-break: auto;
 }
 .tooltip.in {
-  filter: alpha(opacity=90);
-  opacity: .9;
+  filter: alpha(opacity=100);
+  opacity: 1;
 }
 .tooltip.top {
-  padding: 5px 0;
+  padding: 10px 0;
   margin-top: -3px;
 }
 .tooltip.right {
-  padding: 0 5px;
+  padding: 0 10px;
   margin-left: 3px;
 }
 .tooltip.bottom {
-  padding: 5px 0;
+  padding: 10px 0;
   margin-top: 3px;
 }
 .tooltip.left {
-  padding: 0 5px;
+  padding: 0 10px;
   margin-left: -3px;
 }
 .tooltip-inner {
@@ -6778,57 +6778,57 @@ button.close {
 .tooltip.top .tooltip-arrow {
   bottom: 0;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
+  margin-left: -10px;
+  border-width: 10px 10px 0;
   border-top-color: #ddd;
 }
 .tooltip.top-left .tooltip-arrow {
-  right: 5px;
+  right: 10px;
   bottom: 0;
-  margin-bottom: -5px;
-  border-width: 5px 5px 0;
+  margin-bottom: -10px;
+  border-width: 10px 10px 0;
   border-top-color: #ddd;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
-  left: 5px;
-  margin-bottom: -5px;
-  border-width: 5px 5px 0;
+  left: 10px;
+  margin-bottom: -10px;
+  border-width: 10px 10px 0;
   border-top-color: #ddd;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
+  margin-top: -10px;
+  border-width: 10px 10px 10px 0;
   border-right-color: #ddd;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
+  margin-top: -10px;
+  border-width: 10px 0 10px 10px;
   border-left-color: #ddd;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
+  margin-left: -10px;
+  border-width: 0 10px 10px;
   border-bottom-color: #ddd;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
-  right: 5px;
-  margin-top: -5px;
-  border-width: 0 5px 5px;
+  right: 10px;
+  margin-top: -10px;
+  border-width: 0 10px 10px;
   border-bottom-color: #ddd;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
-  left: 5px;
-  margin-top: -5px;
-  border-width: 0 5px 5px;
+  left: 10px;
+  margin-top: -10px;
+  border-width: 0 10px 10px;
   border-bottom-color: #ddd;
 }
 .popover {
@@ -6839,7 +6839,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "HelvNeue55", Arial, sans-serif;
+  font-family: "HelvNeue55", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
@@ -6965,6 +6965,49 @@ button.close {
   content: " ";
   border-right-width: 0;
   border-left-color: #ddd;
+}
+.tooltip {
+  font-size: 16px;
+}
+.tooltip.top {
+  padding: 10px 0;
+  margin-top: -10px;
+}
+.tooltip.right {
+  padding: 0 10px;
+  margin-left: 10px;
+}
+.tooltip.bottom {
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.tooltip.left {
+  padding: 0 10px;
+  margin-left: -10px;
+}
+.tooltip-inner {
+  padding: 10px;
+}
+.popover {
+  font-size: 16px;
+}
+.popover.top {
+  margin-top: -20px;
+}
+.popover.right {
+  margin-left: 20px;
+}
+.popover.bottom {
+  margin-top: 20px;
+}
+.popover.left {
+  margin-left: -20px;
+}
+.popover-title {
+  padding: 10px;
+}
+.popover-content {
+  padding: 10px;
 }
 .carousel {
   position: relative;

@@ -5,16 +5,16 @@
   "dependencies": {},
   "repository": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap",
   "description": "Orange Boosted with Boostrap",
+  "homepage": "http://boosted.orange.com",
   "devDependencies": {
     "eslint-friendly-formatter": "^1.2.2",
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.0",
     "grunt-autoshot": "^0.2.1",
     "grunt-banner": "~0.6.0",
-    "grunt-bootlint": "^0.10.0",
     "grunt-concurrent": "~2.0.4",
     "grunt-contrib-clean": "~1.0.0",
-    "grunt-contrib-compress": "~0.14.0",
+    "grunt-contrib-compress": "^1.2.0",
     "grunt-contrib-concat": "~0.5.1",
     "grunt-contrib-connect": "^0.11.2",
     "grunt-contrib-copy": "~0.8.0",
@@ -26,9 +26,9 @@
     "grunt-contrib-qunit": "^1.0.1",
     "grunt-contrib-uglify": "~0.10.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-html": "~5.0.1",
     "grunt-conventional-changelog": "^1.0.0",
     "grunt-csscomb": "^3.1.0",
+    "grunt-html": "~5.0.1",
     "grunt-jekyll": "^0.4.2",
     "grunt-newer": "^1.1.1",
     "grunt-saucelabs": "~8.6.1",
@@ -40,6 +40,14 @@
     "serve-static": "^1.10.0",
     "time-grunt": "^1.2.0"
   },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "app",
+    "Gruntfile.js",
+    "NOTICE.TXT",
+    "LICENSE"
+  ],
   "private": false,
   "engines": {
     "node": ">=0.10.0"

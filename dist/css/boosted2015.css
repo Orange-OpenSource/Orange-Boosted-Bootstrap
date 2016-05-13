@@ -927,6 +927,22 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   border: solid #000;
   border-width: 1px 0;
 }
+/*! Orange Boosted with Bootstrap
+
+Module name: icon-orange
+Version:     1.0.0
+Created:     2015 by Orange
+
+Copyright (C) 2015-2016 Orange SA
+
+This part of the software is proprietary of Orange.
+You shall not disclose such Confidential Information and shall use it only in
+accordance with the terms of the agreement you entered into.
+Unauthorized copying of this file, via any medium is strictly prohibited.
+
+If you are Orange employee you shall use this software in accordance with
+the Orange Source Charter (http://opensource.itn.ftgroup/index.php/Orange_Source_Charter)
+*/
 @font-face {
   font-family: 'icon-orange';
   font-style: normal;
@@ -4104,7 +4120,7 @@ table.tablesorter caption {
 }
 .o-nav-tabs {
   position: relative;
-  font-family: "HelvNeue55", Arial, sans-serif;
+  font-family: "HelvNeue55", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6395,6 +6411,36 @@ fieldset[disabled] .btn {
     height: 24rem;
   }
 }
+/*! Orange Boosted with Bootstrap
+
+Module name: Helvetica Font Family
+Version:     ?
+Created:     ?
+
+Copyright (C) ?
+
+This part of the software is proprietary of ???.
+You shall not disclose such Confidential Information and shall use it only in
+accordance with the terms of the agreement you entered into.
+Unauthorized copying of this file, via any medium is strictly prohibited.
+
+If you are Orange employee you shall use this software in accordance with
+the ??
+*/
+@font-face {
+  font-family: "HelvNeue75";
+  font-style: normal;
+  font-weight: 700;
+
+  src: url("../fonts/HelvNeue75_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff"), url("../fonts/HelvNeue75_W1G.ttf") format("truetype"), url("../fonts/HelvNeue75_W1G.svg") format("svg");
+}
+@font-face {
+  font-family: "HelvNeue55";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("../fonts/HelvNeue55_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
+}
 html {
   font-size: 62.5%;
   font-weight: normal;
@@ -6744,20 +6790,6 @@ a:focus {
 .hero-container .category {
   font-size: 2rem;
   color: #f16e00;
-}
-@font-face {
-  font-family: "HelvNeue75";
-  font-style: normal;
-  font-weight: 700;
-
-  src: url("../fonts/HelvNeue75_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff"), url("../fonts/HelvNeue75_W1G.ttf") format("truetype"), url("../fonts/HelvNeue75_W1G.svg") format("svg");
-}
-@font-face {
-  font-family: "HelvNeue55";
-  font-style: normal;
-  font-weight: 400;
-
-  src: url("../fonts/HelvNeue55_W1G.eot?#iefix") format('eot'), url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,

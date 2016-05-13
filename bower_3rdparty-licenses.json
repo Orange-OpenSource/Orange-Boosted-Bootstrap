@@ -1,0 +1,35 @@
+{
+  "jquery@undefined": {
+    "licenses": [
+      "MIT"
+    ]
+  },
+  "bootstrap@3.3.6": {
+    "licenses": [
+      "MIT"
+    ],
+    "homepage": "http://getbootstrap.com",
+    "repository": "git+https://github.com/twbs/bootstrap"
+  },
+  "bootstrap-datepicker@1.4.1": {
+    "licenses": [
+      "Apache-2.0",
+      "Apache*"
+    ],
+    "repository": "git+https://github.com/eternicode/bootstrap-datepicker"
+  },
+  "bootstrap-accessibility-plugin@1.0.2": {
+    "licenses": [
+      "BSD"
+    ],
+    "homepage": "https://github.com/paypal/bootstrap-accessibility-plugin",
+    "repository": "git+https://github.com/paypal/bootstrap-accessibility-plugin"
+  },
+  "jquery-validation@1.13.1": {
+    "licenses": [
+      "MIT"
+    ],
+    "repository": "https://github.com/jzaefferer/jquery-validation",
+    "homepage": "http://jqueryvalidation.org/"
+  }
+}
