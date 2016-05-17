@@ -1,3 +1,38 @@
+<a name"3.3.0-alpha.3"></a>
+### 3.3.0-alpha.3 (2016-05-17)
+
+
+#### Bug Fixes
+
+* **component:**
+  * accordion ([388e0055](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/388e0055289315f9283e97e138567498712ca626))
+  *  disabled buttons ([415de632](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/415de632e855a7fd32d9fd8c463f54a8ea8c1c8d))
+* **core:**
+  * clean notice.txt ([f6cf52b7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f6cf52b7dae9a62f9dbdee09fa767607cd1305ec))
+  * fix eslint warning ([cf0d7ada](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cf0d7ada123cc5c5ff0f3fb4e218947664a00fbe))
+  * fix glyphicons name for arrow next and previous ([5b16999e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5b16999e58d77ea2dc6adc610ee2f5d5847f5835))
+  * fix css linting errors and eslint errors ([8abe3aa1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8abe3aa1f64a069b5a987d2bb25227eca4496757))
+  * fix cssmap file who generate error onto chrome, update less and cssmin dependenc ([2afd9c39](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2afd9c396f95e9bd2d459b8217f5f5d48fd32017))
+  * IE8 sizes ([b3664785](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b36647851d00cf8c58dc76b0cd4ff0bc856161b6))
+  * remove icon-orange increment after file name for IE8 compatibility reasons ([742539f0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/742539f036716585eaf90e215efb56a43a5a3fdb))
+* **doc:**
+  * add exception to htmllint ([d18b06a4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d18b06a4b5df5cb385ad943f37fe6dd4f3e676d3))
+  * fix htmllint errors ([654829e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/654829e3fcdc63297315578d07e2456328250897))
+  * put stable url into config file for download ([770dc7e8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/770dc7e86ef0fb4484b568f841037dcaa4f021bc))
+  * orange panel ([0e73269e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0e73269e72c32c1bb81ea0f574cb40a79e4d840e))
+* **test:** passing bs unit tests ([2e2d2b2c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2e2d2b2caa20180dbe18b4727a140c4ae548658d))
+
+
+#### Features
+
+* **build:** put back unit tests ([e96d5eda](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e96d5eda3f6017e57ba60d1174b9e436a4695fa0))
+* **core:**
+  * clean the repository and start listing all the licenses ([70597ea1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/70597ea1cf82012bd9fd9661514f33a6ba7623c1))
+  * update tooltip and popover component to align to Orange brand ([3f28eb84](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f28eb849d9c4bed608841670b7f75952050bbbc))
+  * update font family icon and put back qunit tests ([54d36b68](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/54d36b681f57ce3fd6e0a3dfadb29f5f1ec5ef13))
+* **docs:** add a jenkins flag for htmllint report ([b1f92bc4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b1f92bc4b7d6c86ff6b6f9471c512feee77d07e5))
+
+
 <a name"3.3.0-alpha.2"></a>
 ### 3.3.0-alpha.2 (2016-04-28)
 
