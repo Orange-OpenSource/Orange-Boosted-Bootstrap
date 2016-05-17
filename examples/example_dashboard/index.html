@@ -84,8 +84,8 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#">
-						<img id="orange_logo" src="images/logo-orange.png" alt=''/>
-						<span id="app_name">APP&NAME <span class="sr-only">Homepage</span></span>
+						<img id="orange_logo" src="../../dist/images/logo-orange.png" alt=''/>
+						<span id="app_name">APP&amp;NAME <span class="sr-only">Homepage</span></span>
 					</a>
 				</div>
 
@@ -145,7 +145,7 @@
 					</ul>
 					<div class="tab-content">
 						<div class="tab-pane active" id="users">
-							<form id="search-users" name="searchUsers" method="post" action="" class="form-horizontal">
+							<form id="search-users" name="searchUsers" method="post" action="/" class="form-horizontal">
 								<div class="form-group">
 									<label for="phone" class="col-sm-2 control-label">Phone <span class="star">*</span> </label>
 									<div class="col-sm-10">
@@ -191,7 +191,7 @@
 
 						</div>
 						<div class="tab-pane" id="devices">
-							<form id="search-devices" name="searchDevices" method="post" action="" class="form-horizontal">
+							<form id="search-devices" name="searchDevices" method="post" action="/" class="form-horizontal">
 								<div class="form-group">
 									<label for="mac" class="col-sm-2 control-label">MAC <span class="star">*</span> </label>
 									<div class="col-sm-10">
@@ -204,7 +204,7 @@
 							</form>
 						</div>
 						<div class="tab-pane" id="messages">
-							<form id="search-messages" name="searchMesages" method="post" action="" class="form-horizontal">
+							<form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
 								<div class="input-group">
 									<span class="input-group-addon">@</span>
 									<input type="text" class="form-control" placeholder="regexp" title="found a message by regexp">
@@ -222,7 +222,7 @@
 			<div class="col-md-6 col" id="second">
 				<div class="info-block">
 					<h1 id="alerts" class="h2">my alerts</h1>
-					<table id="myTable" class="table tablesorter" summary="Monthly alerts received">
+					<table id="myTable" class="table tablesorter">
 						<caption>Alerts received</caption>
 						<thead class="cf">
 							<tr>
@@ -411,7 +411,7 @@
     <!-- jQuery validate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
-    <script src="../../dist/js/boosted.min.js"></script>
+    <script src="../../dist/js/boosted.js"></script>
 	<script>
 		$(document).ready(function() 
 											{ 

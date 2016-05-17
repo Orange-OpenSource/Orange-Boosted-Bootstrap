@@ -1,72 +1,8 @@
 /*!
- boosted - v3.3.0-alpha.2 - Orange Boosted with Boostrap
+ boosted - v3.3.0-alpha.3 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
 
-/**
- *
- Play with 16px
-@font-size-base: 1.6rem;
-@font-size-large: (ceil((@font-size-base * 1.4)*10)/10); // 2.2rem
-@font-size-small: (ceil((@font-size-base * 0.85)*10)/10); // 1.4rem
-@font-size-h1: (floor((@font-size-base * 3.125)*10)/10); // 5rem
-@font-size-h2: (floor((@font-size-base * 2.5)*10)/10); // 4rem
-@font-size-h3: (ceil((@font-size-base * 2.1)*10)/10); // 3.4rem
-@font-size-h4: (ceil((@font-size-base * 1.875)*10)/10); //3rem
-@font-size-h5: (ceil((@font-size-base * 1.5)*10)/10); //2.4rem
-@font-size-h6: (ceil((@font-size-base * 1.25)*10)/10); //3rem
 
-
-
-//** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.25; // 20/16
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-//** For REM size
-@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem
-@padding-large-vertical: (((5-(floor((@font-size-large * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
-@padding-small-vertical: (((3-(floor((@font-size-small * @line-height-base)*10)/10))-0.4)/2);//0.9rem;//9px;
- *
- *
- **/
-/*
-According to the brand, no inverse navigations bar
-ALL is BLACK => Inverse navbar = default navbar
-// Default navbar
-@navbar-default-color:          @gray-base;
-@navbar-default-bg:             @brand-orange-white;
-@navbar-default-border:         @navbar-default-bg;
-
-// Default Navbar links
-@navbar-default-link-color: @gray-base;
-@navbar-default-link-hover-color: @brand-primary;
-@navbar-default-link-hover-bg: transparent;
-@navbar-default-link-active-color: @brand-primary;
-@navbar-default-link-active-bg: @navbar-default-link-hover-bg;
-@navbar-default-link-disabled-color: @gray-dark;
-@navbar-default-link-disabled-bg: transparent;
-
-// Default Navbar brand label
-@navbar-default-brand-color: @navbar-default-link-color;
-@navbar-default-brand-hover-color: @brand-primary;
-@navbar-default-brand-hover-bg: transparent;
-
-// Default Navbar toggle
-@navbar-default-toggle-hover-bg: @brand-primary;
-@navbar-default-toggle-icon-bar-bg: @gray-base;
-@navbar-default-toggle-border-color: @gray-base;
-*/
-/*
-@state-info-text: darken(@brand-info, 30%);
-@state-info-bg: @brand-info;
-@state-info-border: @state-info-text;
-
-@state-warning-text: darken(@brand-warning, 30%);
-@state-warning-bg: @brand-warning;
-@state-warning-border: @state-warning-text;
-
-@state-danger-text: darken(@brand-danger, 30%);
-@state-danger-bg: @brand-danger;
-@state-danger-border: @state-danger-text;
-*/
-/*# sourceMappingURL=bootstrap-orange-themeIE82015.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJib290c3RyYXAtb3JhbmdlLXRoZW1lSUU4MjAxNS5jc3MifQ== */

@@ -77,14 +77,14 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<a href="#">
-						<img src="images/logo-orange.png" alt="Back to the homepage">
+						<img src="../../dist/images/logo-orange.png" alt="Back to the homepage">
 					</a>
 					<h1>edit a news</h1>
 				</div>
 			</div>
 		
 			<div class="row">
-				<form action="#" id="PostAdminEditForm" method="post" accept-charset="utf-8" class="col-xs-12">
+				<form action="/" id="PostAdminEditForm" method="post" accept-charset="utf-8" class="col-xs-12">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group required">
@@ -95,7 +95,7 @@
 						<div class="col-md-6">
 							<div class="form-group required">
 								<label for="PostDate">date (<span id="date-format">mm/dd/yyyy</span>): <span class="star">*</span></label>
-								<input name="data[Post][date]" class="form-control" type="date" id="PostDate" required="required" aria-required="true" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
+								<input type="date" name="data[Post][date]" class="form-control" id="PostDate" required="required" aria-required="true" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
 							</div>
 						</div>
 					</div>
@@ -121,10 +121,10 @@
 						<label for="PostContent">content:</label>
 						<textarea name="data[Post][contenue]" class="form-control" cols="30" rows="6" id="PostContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
 					</div>
-					<div id="radio-action" class="form-inline">
-						<input class="required o-radio" required="required" aria-required="true" name="action" value="saveDraft" id="draft" type="radio" checked="checked">
+					<div id="radio-action" class="form-inline" role="radiogroup" aria-required="true">
+						<input type="radio" class="required o-radio" required="required" name="action" value="saveDraft" id="draft" checked="checked">
 						<label for="draft">Save as a draft</label>
-						<input class="required o-radio" required="required" aria-required="true" name="action" value="onlineNow" id="now" type="radio">
+						<input type="radio" class="required o-radio" required="required" name="action" value="onlineNow" id="now">
 						<label for="now">Online now!</label>
 					</div>
 					<div class="submit">
@@ -151,7 +151,7 @@
     <!-- jQuery validate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
-    <script src="../../dist/js/boosted.min.js"></script>
+    <script src="../../dist/js/boosted.js"></script>
 		<script type="text/javascript">
 			// Surcharge des valeurs du script de la toolbar
 			accessibilitytoolbar_custom={
