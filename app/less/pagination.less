@@ -3,8 +3,17 @@
 // --------------------------------------------------
 
 .pagination {
+    // TODO put it to variables
+    font-family: "HelvNeue75";
+    display: inline-block;
+    list-style: none;
 
   > li {
+      float: left;
+      margin: 0;
+      + li{          
+         margin-left: 10px;
+      }
       > a {
           border: 2px solid @brand-orange-clear;
           font-size: @navbar-font-size;
@@ -14,7 +23,10 @@
           padding: 1rem 0;
           width: @pagination-width;
           text-align: center;
-
+        .icon-arrow-next, 
+        .icon-arrow-previous {
+          font-size: 1.4rem;
+        }
           &:hover,
           &:focus {
               color: @brand-orange-black;
@@ -22,9 +34,14 @@
               border: 2px solid @brand-orange-black;
           }
       }
+      &.presentation{
+          padding: 1rem 0;
+          font-size: @navbar-font-size;          
+          font-weight: @brand-font-weight-bold;
+      }
 
-      &:first-child > a,
-      &:last-child > a {
+      &.bordered > a,
+      &.bordered > a {
         border: 2px solid @brand-orange-black;
         width: auto;
         min-width: @pagination-width;
@@ -39,8 +56,8 @@
       &.disabled > a,
       &.disabled > a:hover,
       &.disabled > a:focus {
-          border: 2px solid @gray-light-plus;
-          color: @gray-light-plus;
+          border: 2px solid @gray-light;
+          color: @gray-light;
           background-color: @brand-orange-clear;
       }
 
