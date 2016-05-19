@@ -10,6 +10,8 @@
   background-color: @breadcrumb-bg;
   border-radius: @border-radius-base;
   font-weight: bold;
+  // TODO put those values in variable-orange file!!
+  font-family: "HelvNeue75";
 
   > li {
     display: inline-block;
@@ -17,7 +19,8 @@
     + li:before {
       font-family: "icon-orange";
       content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
-      padding: @breadcrumb-separator-padding-vertical @breadcrumb-separator-padding-horizontal;
+      // TODO put those values in variable-orange file
+      padding: 0 8px 0 5px;//@breadcrumb-separator-padding-vertical @breadcrumb-separator-padding-horizontal;
       color: @breadcrumb-color;
       font-size: @breadcrumb-separator-size;
     }
