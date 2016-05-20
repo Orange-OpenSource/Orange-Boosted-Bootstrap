@@ -103,6 +103,30 @@ html{
       width: auto;
     }
   }
+
+  &.minimized {
+    min-height: @navbar-height-minimized;
+
+    .navbar-brand {
+      padding: @navbar-brand-logo-padding-minimized 0;
+      height: @navbar-height-minimized;
+
+      img {
+        height: @navbar-brand-logo-height-minimized;
+      }
+    }
+
+.navbar-nav {
+  // Uncollapse the nav
+  @media (min-width: @grid-float-breakpoint) {
+    > li {
+      > a {
+        margin-top: @navbar-item-margin-top-minimized;
+      }
+    }
+  }
+  }
+  }
 }
 
 // Navbar toggle
