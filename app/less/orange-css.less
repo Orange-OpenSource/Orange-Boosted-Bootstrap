@@ -408,6 +408,15 @@ a:focus {
       display: block;
   }
 }
+// remove the margin-top forced into bootstrap
+.panel-group {
+  // Tighten up margin so it's only between panels
+  .panel {
+    + .panel {
+      margin-top: 0px;
+    }
+  }
+}
 
 .o-footer, .o-footer-inverse {
     padding: @navbar-padding-vertical;

@@ -8,15 +8,19 @@
 // Give the tabs something to sit on
 .nav-tabs {
   > li {
+      // TODO put it to variables
+      font-family: "HelvNeue75";
       + li {
-        margin-left: (@grid-gutter-width / 2);
+        // TODO Put to Variables
+        margin-left: 8px;
       }
     // Actual tabs (as links)
     > a {
       padding: 1rem 2rem;
       font-weight: @brand-font-weight-bold;
       font-size: @navbar-font-size;
-      line-height: @navbar-font-size;
+      line-height: @navbar-font-size;      
+      border-width: 2px;
 
       &:hover ,
       &:focus {
