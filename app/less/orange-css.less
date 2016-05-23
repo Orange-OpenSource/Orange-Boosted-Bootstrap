@@ -372,7 +372,7 @@ a:focus {
       border-radius: 0;
       background-color: @gray-light-plus;
       border: none;
-      width: 1.6rem;
+      width: @font-size-base-up;
       height: .4rem;
       margin: 0 .4rem 0 .4rem;
       &:hover{
@@ -381,11 +381,20 @@ a:focus {
       }
       &.active{
           background-color: @brand-orange;
-          width: 1.6rem;
+          width: @font-size-base-up;
           height: .4rem;
           margin: 0 .4rem 0 .4rem;
       }
    }
+}
+
+label, input, .form-control{
+// TODO Put it in variables
+  font-family: "HelvNeue75";
+  font-size: @font-size-base-up;
+}                             
+.form-control {
+  padding: @padding-base-vertical (@padding-base-horizontal / 2);
 }
 
 //
