@@ -51,7 +51,7 @@
   }
 
 	var $colltabs =  $('[data-toggle="collapse"]:not(.navbar-toggle)');
-	$colltabs.attr({ 'role':'tab', 'aria-selected':'false', 'aria-expanded':'false' });
+	$colltabs.attr({ 'role':'tab', 'aria-expanded':'false' });
 	$colltabs.each(function() {
 		var colltab = $(this),
     collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
@@ -68,7 +68,7 @@
 			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
 
 			if(collpanel.hasClass('in')){
-				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-selected':'true', 'aria-expanded':'true'});//, 'tabindex':'0' });
+				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-expanded':'true'});
 
 				// don't change the attribute for menu panel specific case
         if(!colltab.hasClass('navbar-toggle')) {
@@ -82,7 +82,7 @@
 				}
 
 			}else{
-				colltab.attr({'aria-controls' : collpanel.attr('id')});//, 'tabindex':'-1' });
+				colltab.attr({'aria-controls' : collpanel.attr('id')});
         // don't change the attribute for menu panel specific case
         if(!colltab.hasClass('navbar-toggle')) {
           collpanel.attr({ 'role':'tabpanel', 'tabindex':'-1', 'aria-labelledby':collid, 'aria-hidden':'true' });
@@ -141,8 +141,6 @@
       // boosted mod
       .toggleClass('panel-chevron-closed', false)
       .toggleClass('panel-chevron-open', true)
-      .attr('aria-selected', true)
-      //.attr('tabindex', 0)
       // end mod
 
     this.transitioning = 1
@@ -192,8 +190,6 @@
       // boosted mod
       .toggleClass('panel-chevron-closed', true)
       .toggleClass('panel-chevron-open', false)
-      .attr('aria-selected', false)
-      //.attr('tabindex', -1)
       // end mod
 
     this.transitioning = 1
@@ -241,8 +237,6 @@
       // boosted mod
       .toggleClass('panel-chevron-closed', !isOpen)
       .toggleClass('panel-chevron-open', isOpen)
-      .attr('aria-selected', isOpen)
-      //.attr('tabindex', isOpen ? 0 : -1)
       // end mod
   }
 
