@@ -1,5 +1,20 @@
 
-Other property License???
+
+<version>1.0</version>
+<id><![CDATA[Helvetica Neue LT W07 55 Roman]]></id>
+<vendor>Monotype Imaging Inc.</vendor>
+<credits>
+<name>Fonts.com WebFonts</name>
+<URL>http://webfonts.fonts.com</URL>
+</credits>
+<license>
+<URL>http://webfonts.fonts.com/Legal</URL>
+</license>
+<copyright><![CDATA[Copyright © 2014 Monotype Imaging Inc. All rights reserved.]]></copyright>
+<trademark><![CDATA[Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. Patent and Trademark Office and may be registered in certain other jurisdictions.]]></trademark>
+Orange Company had buy the right for used Helvetica onto digital applications. 
+Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc 
+Parts list under Monotype Imaging Inc Copyright
 app/fonts/HelvNeue55_W1G.eot
 app/fonts/HelvNeue55_W1G.ttf
 app/fonts/HelvNeue55_W1G.woff2
@@ -20,8 +35,17 @@ dist/fonts/HelvNeue55_W1G.woff
 dist/fonts/HelvNeue75_W1G.eot
 dist/fonts/HelvNeue75_W1G.ttf
 dist/fonts/HelvNeue75_W1G.woff2
+End of the parts list under Monotype Imaging Inc Copyright
 
-Orange property
+
+Parts list under Orange SA Copyright
+Copyright (C) 2016 Orange SA All rights reserved
+
+The following parts of software is confidential and proprietary information of Orange.
+You shall not disclose such Confidential Information and shall use it only in
+accordance with the terms of the agreement you entered into.
+Unauthorized copying of this file, via any medium is strictly prohibited.
+
 app/fonts/icon-orange.eot
 app/fonts/icon-orange.ttf
 app/fonts/icon-orange.svg
@@ -30,7 +54,6 @@ dist/fonts/icon-orange.eot
 dist/fonts/icon-orange.ttf
 dist/fonts/icon-orange.svg
 dist/fonts/icon-orange.woff
-
 app/images/ORANGE_LOGO_rgb.jpg
 app/images/logo-orange.png
 dist/images/ORANGE_LOGO_rgb.jpg
@@ -73,10 +96,6 @@ docs_base_boosted/examples/orange_brand_2015-rtl/images/discovery-frame-carousel
 docs_base_boosted/examples/orange_brand_2015-rtl/images/Fun-frame_frame-carousel.png
 docs_base_boosted/examples/orange_brand_2015-rtl/images/popular-services-1.png
 docs_base_boosted/examples/orange_brand_2015-rtl/images/une-nouvelle-marque_grid-full-width.jpg
+End of the parts list under Orange SA Copyright
 
 
-
-This NOTICE.TXT file contains certain notices of software components included
-with the software that is required to provide you. Notwithstanding anything in the notices in this file,
-your use of these software components together with the Boosted
-software (Boosted software hereinafter referred to as 'Software') is
