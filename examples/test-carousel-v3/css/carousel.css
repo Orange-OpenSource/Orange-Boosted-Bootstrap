@@ -1,12 +1,12 @@
 /* slick plugin */
 
 .slick-track {
-    height: 70rem;
+    height: 60rem;
 }
 
 .slick-slide img {
-  width: auto;
-  height: 70rem;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Arrows */
@@ -44,6 +44,12 @@
     outline: none;
     width: 120px;
 }
+
+/*.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+    display: none !important;
+}*/
+
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
@@ -184,6 +190,28 @@
     background-color: #F16E00;
 }
 
+/* orange carousel */
+.o-slide {
+    position: relative;
+}
+
+.o-slide .frame {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    max-width: 20%;
+}
+
+.o-slide .caption {
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+    width: 45%;
+    padding: 1.6rem 2rem;
+    opacity: .9;
+    background-color: white;
+}
+
 /* Mobile */
 @media (max-width: 768px){
   .slick-track {
@@ -198,5 +226,10 @@
   .slick-prev,
   .slick-next {
     display: none !important;
+  }
+
+  .o-slide .frame,
+  .o-slide .caption{
+      display: none;
   }
 }
