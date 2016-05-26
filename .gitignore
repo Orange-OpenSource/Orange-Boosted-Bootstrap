@@ -57,7 +57,7 @@ docs/.jekyll-metadata
 bower_components
 node_modules
 _gh_pages
-dist
+# dist
 js/dist
 docs/assets/css
 docs/dist
