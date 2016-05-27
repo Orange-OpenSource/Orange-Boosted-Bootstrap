@@ -10,9 +10,11 @@
   background-color: @breadcrumb-bg;
   border-radius: @border-radius-base;
   font-weight: bold;
+  display: block;
+  overflow: hidden;
 
   > li {
-    display: inline-block;
+    float: left;
 
     + li:before {
       font-family: "icon-orange";
