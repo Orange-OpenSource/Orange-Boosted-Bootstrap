@@ -5,6 +5,13 @@ html{
     font-weight:@brand-font-weight-normal;
 }
 
+// titles letter spacing
+h1, .h1 { letter-spacing: @letter-spacing-h1; }
+h2, .h2 { letter-spacing: @letter-spacing-h2; }
+h3, .h3 { letter-spacing: @letter-spacing-h3; }
+h4, .h4 { letter-spacing: @letter-spacing-h4; }
+h5, .h5 { letter-spacing: @letter-spacing-h5; }
+
 // reduce the size of titles for mobile display
 @media (max-width: @screen-sm-max) {
   h1, .h1 { font-size: @font-size-h1-mobile; }
@@ -390,7 +397,7 @@ a:focus {
 
 label, input, .form-control{
   font-size: @font-size-base-up;
-}                             
+}
 .form-control {
   padding: @padding-base-vertical (@padding-base-horizontal / 2);
 }
