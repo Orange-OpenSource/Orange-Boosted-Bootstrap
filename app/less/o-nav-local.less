@@ -2,8 +2,8 @@
 //
 //
 .nav-local {
-  border-bottom: 1px solid @gray-light;
-  
+  // border-bottom: 1px solid @gray-light;
+
   > li {
     float: left;
 
@@ -31,4 +31,35 @@
         background-color: @brand-orange-white;
     }
   }
+
+}
+
+.nav-local.inverse {
+  background-color: @brand-orange-black;
+
+  > li {
+
+    > a{
+      color: @brand-orange-white;
+      background-color: @brand-orange-black;
+
+      &:hover,
+      &:focus {
+        color: @brand-orange;
+        background-color: @brand-orange-black;
+      }
+    }
+
+    &.active > a{
+        color: @brand-orange;
+        background-color: @brand-orange-black;
+    }
+  }
+
+}
+
+.nav-local-separator {
+  border: 1px solid @gray-darker;
+  margin: 0;
+  padding: 0;
 }
