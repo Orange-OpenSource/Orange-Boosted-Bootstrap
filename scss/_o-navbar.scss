@@ -26,7 +26,7 @@
   }
 
   .nav-item {
-    font-weight: $brand-font-weight-bold;
+    font-weight: bold;
 
     .nav-link {
       padding: 0;
@@ -39,7 +39,7 @@
 
       span[class^="icon-"] {
         font-size: calc(#{$font-size-h4} - 1px); // remove 1px to fit
-        font-weight: $brand-font-weight-normal;
+        font-weight: normal;
       }
     }
 
@@ -110,7 +110,7 @@
 
       span[class^="icon-"] {
         font-size: $font-size-h5;
-        font-weight: $brand-font-weight-normal;
+        font-weight: normal;
       }
     }
 
@@ -119,7 +119,7 @@
 
       span[class^="icon-"] {
         font-size: $font-size-h6;
-        font-weight: $brand-font-weight-normal;
+        font-weight: normal;
       }
     }
 
@@ -168,7 +168,7 @@
           margin-right: .625rem;
           font-family: icon-orange;
           font-size: $font-size-base;
-          font-weight: $brand-font-weight-normal;
+          font-weight: normal;
           color: #fff;
           content: "\e93e";
         }
@@ -190,7 +190,7 @@
           margin-right: 0;
           font-family: icon-orange;
           font-size: $font-size-h5;
-          font-weight: $brand-font-weight-normal;
+          font-weight: normal;
           color: #fff;
           content: "\e93f";
         }
@@ -260,7 +260,7 @@
     width: auto;
     height: 3.125rem;
     font-size: .75rem;
-    font-weight: $brand-font-weight-normal;
+    font-weight: normal;
     color: #fff;
   }
 }
@@ -307,7 +307,7 @@
   .nav-item-cdu {
     float: left;
     margin-top: 3.6875rem;
-    font-weight: $brand-font-weight-bold;
+    font-weight: bold;
     line-height: $btn-line-height;
     color: #fff !important;
 

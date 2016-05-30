@@ -1,13 +1,17 @@
 //
 //  Footer
 //
+.o-footer,
+.o-footer-inverse {
+  padding: $navbar-padding-vertical;
+}
 
 .o-footer {
   color: #fff;
   background-color: #000;
-
+  
   * {
-    font-weight: $brand-font-weight-bold;
+    font-weight: bold;
   }
 
   .o-footer-top {
@@ -23,7 +27,7 @@
       h2:first-child {
         margin: 0 0 18px;
         font-size: $font-size-base;
-        font-weight: $brand-font-weight-bold;
+        font-weight: bold;
         color: #fff;
       }
 
@@ -54,7 +58,7 @@
 
       a {
         font-size: $font-size-sm;
-        font-weight: $brand-font-weight-bold;
+        font-weight: bold;
         color: #fff;
       }
     }

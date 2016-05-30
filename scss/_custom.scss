@@ -42,7 +42,7 @@ $brand-danger:              #cd3c14;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-flex:               false;
-$enable-rounded:            true;
+$enable-rounded:            false;
 $enable-shadows:            false;
 $enable-gradients:          false;
 $enable-transitions:        false;
@@ -186,6 +186,13 @@ $font-size-h4:   1.25rem; // 20px
 $font-size-h5:   1.125rem; // 18px
 $font-size-h6:   1rem; // 16px
 
+$font-size-h1-mobile:   1.25rem; // 20px
+$font-size-h2-mobile:   1.125rem; // 18px
+$font-size-h3-mobile:   1rem; // 16px
+$font-size-h4-mobile:   .875rem; // 14px
+$font-size-h5-mobile:   .875rem; // 14px
+$font-size-h6-mobile:   .875rem; // 14px
+
 $display1-size: 6rem !default;
 $display2-size: 5.5rem !default;
 $display3-size: 4.5rem !default;
@@ -223,7 +230,7 @@ $mark-padding: .2em !default;
 
 $dt-font-weight: bold !default;
 
-$kbd-box-shadow:         inset 0 -.1rem 0 rgba(0,0,0,.25) !default;
+$kbd-box-shadow:         none;
 $nested-kbd-font-weight: bold !default;
 
 $list-inline-padding: 5px !default;
@@ -276,7 +283,11 @@ $btn-active-box-shadow:          none;
 
 $btn-primary-color:              #fff;
 $btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             $btn-primary-bg !default;
+$btn-primary-border:             $btn-primary-bg;
+$btn-primary-hover-color:        $btn-primary-color;
+$btn-primary-hover-bg:           #000;
+$btn-primary-active-color:       $btn-primary-color;
+$btn-primary-active-bg:          $btn-primary-bg;
 
 $btn-secondary-color:            #000;
 $btn-secondary-bg:               transparent;
@@ -284,11 +295,13 @@ $btn-secondary-border:           #ccc !default;
 
 $btn-info-color:                 #fff;
 $btn-info-bg:                    #000;
-$btn-info-border:                $btn-info-bg !default;
+$btn-info-border:                $btn-info-bg;
+$btn-info-hover-color:           #000;
+$btn-info-hover-bg: #fff;
 
 $btn-success-color:              #000;
 $btn-success-bg:                 $brand-success;
-$btn-success-border:             $btn-success-bg !default;
+$btn-success-border:             $btn-success-bg;
 
 $btn-warning-color:              $btn-primary-color;
 $btn-warning-bg:                 $btn-primary-bg;
@@ -296,9 +309,10 @@ $btn-warning-border:             $btn-primary-border;
 
 $btn-danger-color:               #fff;
 $btn-danger-bg:                  $brand-danger;
-$btn-danger-border:              $btn-danger-bg !default;
+$btn-danger-border:              $btn-danger-bg;
 
 $btn-link-disabled-color:        $gray-light-o;
+$btn-link-disabled-black-bg-color: $gray;
 
 $btn-padding-x-sm:               .625rem;
 $btn-padding-y-sm:               .375rem;
@@ -397,19 +411,19 @@ $custom-select-color:         $input-color !default;
 $custom-select-bg:            #fff !default;
 $custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator:     url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") !default;
-$custom-select-border-width:  $input-btn-border-width !default;
+$custom-select-border-width:  $input-btn-border-width;
 $custom-select-border-color:  $input-border-color !default;
 $custom-select-border-radius: $border-radius !default;
 
 $custom-select-focus-border-color: #51a7e8 !default;
-$custom-select-focus-box-shadow:   inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 5px rgba(81, 167, 232, .5) !default;
+$custom-select-focus-box-shadow:   none;
 
 $custom-select-sm-padding-y: .2rem !default;
 $custom-select-sm-font-size: 75% !default;
 
 $custom-file-height:           2.5rem !default;
 $custom-file-width:            14rem !default;
-$custom-file-focus-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
+$custom-file-focus-box-shadow: none;
 
 $custom-file-padding-x:     .5rem !default;
 $custom-file-padding-y:     1rem !default;
@@ -419,7 +433,7 @@ $custom-file-bg:            #fff !default;
 $custom-file-border-width:  $border-width !default;
 $custom-file-border-color:  #ddd !default;
 $custom-file-border-radius: $border-radius !default;
-$custom-file-box-shadow:    inset 0 .2rem .4rem rgba(0,0,0,.05) !default;
+$custom-file-box-shadow:    none;
 $custom-file-button-color:  $custom-file-color !default;
 $custom-file-button-bg:     #eee !default;
 $custom-file-text: (
@@ -511,6 +525,8 @@ $nav-disabled-link-hover-bg:    transparent;
 
 $nav-tabs-border-color:                       #000;
 $nav-tabs-border-width:                       $border-width;
+$nav-tabs-link-hover-color:                   #fff;
+$nav-tabs-link-hover-bg:                      #000;
 $nav-tabs-link-hover-border-color:            #000;
 $nav-tabs-active-link-hover-color:            #000;
 $nav-tabs-active-link-hover-bg:               $body-bg;
@@ -851,45 +867,20 @@ $pre-scrollable-max-height:   340px;
 
 //////// BOOSTED SPECIFIC ////////
 
-$btn-primary-hover-color: $btn-primary-color;
-$btn-primary-hover-bg: #000;
-$btn-primary-active-color: $btn-primary-color;
-$btn-primary-active-bg: $btn-primary-bg;
-
-$btn-info-hover-color: #000;
-$btn-info-hover-bg: #fff;
-
-$btn-link-disabled-black-bg-color: $gray;
-
-
-$text-color: $body-color;
-// Link hover decoration.
-$link-color-disabled: $gray-light-o;
-$link-hover-color-disabled: $link-color-disabled;
-$link-color-inverse: #fff;
-$link-hover-color-inverse: $brand-primary;
-$link-color-inverse-disabled: $gray;
-$link-hover-color-inverse-disabled: $gray;
 
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$brand-font-weight-bold: bold;
-$brand-font-weight-normal: normal;
-
 
 // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 // For REM size
-$line-height-computed: 1;
+
 
 // Iconography
 //
 // Load fonts from this directory.
 $icon-font-path:          "../fonts/";
-// for REM size
-$icon-font-weight:        1.875rem;
-$icon-font-weight-sm:     1.25rem;
 
 
 // Components
@@ -902,11 +893,6 @@ $padding-large-vertical: .75rem;//12px;
 $padding-large-horizontal: 1.25rem;//20px;
 $padding-small-vertical: .3125rem;//5px;
 $padding-small-horizontal: .625rem;//10px;
-
-
-$enable-rounded: false;
-
-$input-btn-border-width: $border-width;
 
 
 // Navbar
@@ -923,7 +909,7 @@ $navbar-border-radius:             $border-radius;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-toggle-vertical-margin:    2.875rem;
 // For REM size
-$navbar-padding-vertical:          .625rem;//(($navbar-height - $line-height-computed) / 2); //1.5 rem
+$navbar-padding-vertical:          .625rem;//(($navbar-height - 1) / 2); //1.5 rem
 
 
 // supra navbar
@@ -943,8 +929,6 @@ $megamenu-position:                 fixed;
 // Tabs
 
 
-$nav-tabs-link-hover-bg: #000;
-$nav-tabs-link-hover-color: #fff;
 
 $o-nav-tabs-arrow-color: #000;
 $o-nav-tabs-arrow-width: 14px;
@@ -979,8 +963,8 @@ $nav-local-arrow-outer-width:           ($nav-local-arrow-width + 1);
 $nav-local-arrow-outer-color:           $nav-local-border-color;
 
 // Step process bar
-$o-wizard-step-bar-arrow-width: ($line-height-computed + $padding-base-vertical);
-$o-wizard-step-bar-arrow-width-small: (($line-height-computed / 2) + $padding-base-vertical);
+$o-wizard-step-bar-arrow-width: (1 + $padding-base-vertical);
+$o-wizard-step-bar-arrow-width-small: ((1 / 2) + $padding-base-vertical);
 $o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + .1);
 $o-wizard-step-bar-arrow-outer-width:           ($o-wizard-step-bar-arrow-width);
 
@@ -993,16 +977,6 @@ $o-stepbar-arrow-ratio: 3 / 8;
 $pagination-width: 2.5rem;
 $pagination-width-lg: 3.75rem;
 $pagination-width-sm: 1.875rem;
-
-
-
-
-// Type
-//
-//
-
-// Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px;
 
 
 //surcharge et custo for mixins
@@ -1019,65 +993,9 @@ $component-offset-horizontal: 180px;
 // Example: an element has a height of 30px, so write out `@include navbar-vertical-align(30px);` to calculate the appropriate top margin.
 // rewrite the Bootstrap mixin to align element at the bottom
 
-@mixin navbar-vertical-align($element-height) {
-  margin-bottom: 0;
-  @include media-breakpoint-down(xs) {
-    margin-top: 0;
-  }
-}
-@mixin navbar-vertical-align($element-height) {
-  @if ispixel($element-height) {
-    margin-top: (($navbar-height - ($navbar-padding-vertical + ((unit($element-height)) / 10))));
-  }
-}
-@mixin navbar-vertical-align($element-height) {
-  @if  not(get-unit($element-height)) {
-    margin-top: (($navbar-height - ($navbar-padding-vertical + ((unit($element-height)) / 10))));
-  }
-}
-@mixin navbar-vertical-align($element-height) {
-  @if not(ispixel($element-height)) {
-    margin-top: (($navbar-height - ($navbar-padding-vertical + $element-height)));
-  }
-}
-@mixin navbar-toggle-vertical-align($element-height) {
-  @if not(ispixel($element-height)) {
-    margin-top: (($navbar-height - $element-height));
-    margin-bottom: .625rem;
-  }
-}
-
 // Remove all shadows
 @mixin box-shadow($shadow) {
   box-shadow: none;
-}
-
-// Change the table states color
-@mixin table-row-variant-border($state, $color) {
-  // Exact selectors below required to override `.table-striped` and prevent
-  // inheritance to nested tables.
-  .table > thead > tr,
-  .table > tbody > tr,
-  .table > tfoot > tr {
-    > td.#{$state},
-    > th.#{$state},
-    &.#{$state} > td,
-    &.#{$state} > th {
-      background-color: $color;
-    }
-  }
-
-  // Hover states for `.table-hover`
-  // Note: this is not available for cells or rows within `thead` or `tfoot`.
-  .table-hover > tbody > tr {
-    > td.#{$state}:hover,
-    > th.#{$state}:hover,
-    &.#{$state}:hover > td,
-    &:hover > .#{$state},
-    &.#{$state}:hover > th {
-      background-color: darken($color, 5%);
-    }
-  }
 }
 
 // focus state mixin

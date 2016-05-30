@@ -116,7 +116,7 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
   @include media-breakpoint-down(sm) {
     .stepbar-header {
       margin-right: .625rem;
-      font-weight: $brand-font-weight-bold;
+      font-weight: bold;
       vertical-align: middle;
     }
 

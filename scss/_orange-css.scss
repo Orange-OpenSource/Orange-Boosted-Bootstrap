@@ -1,8 +1,29 @@
-// html font-size forcée à 10px par BT
-html {
-  font-size: $font-size-root;
-  // Orange brand All is bold only plain texts are not bold
-  font-weight: $brand-font-weight-normal;
+// Change the table states color
+@mixin table-row-variant-border($state, $color) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.#{$state},
+    > th.#{$state},
+    &.#{$state} > td,
+    &.#{$state} > th {
+      background-color: $color;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover > tbody > tr {
+    > td.#{$state}:hover,
+    > th.#{$state}:hover,
+    &.#{$state}:hover > td,
+    &:hover > .#{$state},
+    &.#{$state}:hover > th {
+      background-color: darken($color, 5%);
+    }
+  }
 }
 
 //
@@ -11,13 +32,6 @@ html {
 // Fix the border-top style to display caret onto IE8
 .caret {
   border-top-style: solid;
-}
-
-//
-// Alerts
-// --------------------------------------------------
-.alert {
-  border-width: 2px;
 }
 
 //
@@ -36,8 +50,6 @@ html {
 //
 // Navbar
 //
-
-
 
 .nav {
   // Open dropdowns
@@ -178,11 +190,6 @@ a:focus {
   }
 }
 
-.o-footer,
-.o-footer-inverse {
-  padding: $navbar-padding-vertical;
-}
-
 .hero-container .frame {
   position: absolute;
   top: 0;
@@ -251,12 +258,8 @@ caption {
 
 .form-group {
   .form-control-label {
-    font-weight: $brand-font-weight-bold;
+    font-weight: bold;
   }
-}
-
-.form-control {
-  border-width: 2px;
 }
 
 //
@@ -273,32 +276,6 @@ caption {
 }
 
 // bits from bootstrap-orange2015.less
-
-a {
-  color: $link-color;
-  text-decoration: underline;
-
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-
-//   &:focus {
-//     @include tab-focus();
-//   }
-}
-
-nav a,
-.dropdown-menu a,
-.dropdown a,
-.navbar a,
-.nav a,
-a.btn {
-  text-decoration: none;
-}
-
-
 
 // Reposition feedback icon if input has visible label above
 .has-feedback label {

@@ -23,10 +23,10 @@
 // Happy Bootstrapping!
 
 // Load Bootstrap variables and mixins
-@import "../../../scss/variables";
 /* boosted mod */
-@import '../../../scss/o-variables';
+@import '../../../scss/custom';
 /* end mod */
+@import "../../../scss/variables";
 @import "../../../scss/mixins";
 
 // Local docs variables

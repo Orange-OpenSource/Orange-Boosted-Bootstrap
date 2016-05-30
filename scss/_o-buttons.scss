@@ -381,23 +381,23 @@ fieldset[disabled] a.btn {
   &:disabled,
   &.disabled {
     @include hover {
-      color: $link-hover-color-disabled;
+      color: $btn-link-disabled-color;
     }
-    color: $link-color-disabled;
+    color: $btn-link-disabled-color;
   }
 
   &.btn-inverse {
     @include hover {
-      color: $link-hover-color-inverse;
+      color: $btn-primary-bg;
     }
-    color: $link-color-inverse;
+    color: $btn-primary-color;
 
     &:disabled,
     &.disabled {
       @include hover {
-        color: $link-hover-color-inverse-disabled;
+        color: $btn-link-disabled-black-bg-color;
       }
-      color: $link-color-inverse-disabled;
+      color: $btn-link-disabled-black-bg-color;
     }
   }
 }
