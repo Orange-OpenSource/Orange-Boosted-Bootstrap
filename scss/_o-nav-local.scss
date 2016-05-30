@@ -155,7 +155,7 @@
 }
 
 
-@include media-breakpoint-down('sm') {
+@include media-breakpoint-down(sm) {
   .nav-local .navbar-nav > li.active .arrow {
     display: none !important;
   }

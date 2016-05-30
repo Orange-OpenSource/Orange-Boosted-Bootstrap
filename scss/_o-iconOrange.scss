@@ -1,19 +1,20 @@
-/*! Orange Boosted with Bootstrap
- * 
- * Module name: icon-orange
- * Version:     1.0.0
- * Created:     2015 by Orange
- * 
- * Copyright (C) 2015-2016 Orange SA
- * 
- * This part of the software is proprietary of Orange.
- * You shall not disclose such Confidential Information and shall use it only in
- * accordance with the terms of the agreement you entered into.
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * 
- * If you are Orange employee you shall use this software in accordance with
- * the Orange Source Charter (http://opensource.itn.ftgroup/index.php/Orange-Source-Charter)
-*/
+//
+// Orange Boosted with Bootstrap
+//
+// Module name: icon-orange
+// Version:     1.0.0
+// Created:     2015 by Orange
+//
+// Copyright (C) 2015-2016 Orange SA
+//
+// This part of the software is proprietary of Orange.
+// You shall not disclose such Confidential Information and shall use it only in
+// accordance with the terms of the agreement you entered into.
+// Unauthorized copying of this file, via any medium is strictly prohibited.
+//
+// If you are Orange employee you shall use this software in accordance with
+// the Orange Source Charter (http://opensource.itn.ftgroup/index.php/Orange-Source-Charter)
+
 @font-face {
   font-family: "icon-orange";
   src: url("#{$icon-font-path}icon-orange.eot");
@@ -681,7 +682,7 @@
   font-family: "icon-orange" !important;
   font-style: normal;
   font-variant: normal;
-  line-height: 0.875; // Font generate with 16px as a default font-size, but boosted used 14px so 14/16 = .875
+  line-height: 1;
   text-transform: none;
   speak: none;
 
@@ -714,7 +715,7 @@
 }
 
 
-.icon-checkbox-tick:before {
+.icon-checkbox-tick::before {
   content: "\eb77";
 }
 .icon-2for1cinematicket::before {

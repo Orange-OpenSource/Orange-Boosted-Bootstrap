@@ -12,7 +12,7 @@
   }
   // boosted mod
   @each $breakpoint, $container-margin in $container-fluid-margin-widths {
-    @include media-breakpoint-up($breakpoint) {      
+    @include media-breakpoint-up($breakpoint) {
       margin-right: $container-margin;
       margin-left: $container-margin;
       // reset margin for second level container

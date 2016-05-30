@@ -26,27 +26,27 @@
       background-color: #000;
       border-color: #000;
     }
-    .icon-arrow-next, 
+    .icon-arrow-next,
     .icon-arrow-previous {
       font-size: .875rem;
     }
   }
-  .page-item {    
+  .page-item {
     float: left;
     margin: 0;
     + .page-item {
       margin-left: 10px;
     }
-    &.presentation{
-      padding: .625rem 0;      
+    &.presentation {
+      padding: .625rem 0;
       font-weight: bold;
     }
     &.bordered > .page-link,
     &.bordered > .page-link {
-      border: 2px solid #000;
       width: auto;
       min-width: $pagination-width;
-    }     
+      border: 2px solid #000;
+    }
   }
   .page-item:first-child .page-link,
   .page-item:last-child .page-link {
