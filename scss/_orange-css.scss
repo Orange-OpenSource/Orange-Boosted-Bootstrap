@@ -45,23 +45,23 @@ html {
     &,
     &:hover,
     &:focus {
-      color: $brand-orange-white;
+      color: #fff;
     }
   }
 }
 
 // back from accessibility plugin css
 div.active:focus {
-  outline: dotted 1px $brand-orange-black;
+  outline: dotted 1px #000;
 }
 
 a:focus {
-  outline: dotted 1px $brand-orange-black;
+  outline: dotted 1px #000;
 }
 
 .close:hover,
 .close:focus {
-  outline: dotted 1px $brand-orange-black;
+  outline: dotted 1px #000;
 }
 
 //
@@ -70,11 +70,11 @@ a:focus {
 
 .progress.progress-default {
   &[value]::-webkit-progress-value {
-    background-color: $brand-orange;
+    background-color: $brand-primary;
   }
 
   &[value]::-moz-progress-bar {
-    background-color: $brand-orange;
+    background-color: $brand-primary;
   }
 }
 
@@ -96,7 +96,7 @@ a:focus {
   padding-top: .9375rem;
   text-decoration: none;
   text-shadow: none;
-  background-color: $brand-orange-white;
+  background-color: #fff;
   opacity: .8;
   transition: width .5s ease;
 
@@ -113,7 +113,7 @@ a:focus {
 
   span[aria-hidden="true"] {
     font-size: 1.875rem;
-    color: $brand-orange;
+    color: $brand-primary;
   }
 }
 
@@ -128,20 +128,20 @@ a:focus {
     width: 1rem;
     height: .25rem;
     margin: 0 .25rem;
-    background-color: $gray-light-plus;
+    background-color: $gray-lighter-o;
     border: 0;
     border-radius: 0;
 
     &:hover {
       cursor: pointer;
-      background-color: $brand-orange;
+      background-color: $brand-primary;
     }
 
     &.active {
       width: 1rem;
       height: .25rem;
       margin: 0 .25rem;
-      background-color: $brand-orange;
+      background-color: $brand-primary;
     }
   }
 }
@@ -150,10 +150,10 @@ a:focus {
 // Forms control into input groups
 //
 .input-group > .form-control {
-  border-color: $brand-orange-black;
+  border-color: #000;
 
   &:focus {
-    border-color: $brand-orange;
+    border-color: $brand-primary;
   }
 }
 
@@ -197,32 +197,7 @@ a:focus {
 
 .hero-container .category {
   font-size: 1.25rem;
-  color: $brand-orange;
-}
-
-// Orange - July 2015
-
-// Recommended @font-face snippet for web fonts
-
-@font-face {
-  font-family: "HelvNeue75";
-  font-style: normal;
-  font-weight: 700;
-  src: url("#{$icon-font-path}HelvNeue75_W1G.eot") format("eot"),
-  url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
-	url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff"),
-	url("#{$icon-font-path}HelvNeue75_W1G.ttf") format("truetype"),
-	url("#{$icon-font-path}HelvNeue75_W1G.svg") format("svg");
-}
-@font-face {
-  font-family: "HelvNeue55";
-  font-style: normal;
-  font-weight: 400;
-  src: url("#{$icon-font-path}HelvNeue55_W1G.eot") format("eot"),
-  url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
-	url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff"),
-	url("#{$icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
-	url("#{$icon-font-path}HelvNeue55_W1G.svg") format("svg");
+  color: $brand-primary;
 }
 
 // == TABLES
@@ -262,9 +237,9 @@ caption {
   padding: $padding-large-vertical 0;
   font-size: $font-size-h1;
   font-weight: bold;
-  color: $brand-orange-black;
+  color: #000;
   caption-side: top;
-  background-color: $brand-orange-white;
+  background-color: #fff;
 }
 
 // Force bold onto panel heading and footer and wells
@@ -289,11 +264,11 @@ caption {
 //
 
 .card {
-  border-color: $brand-orange-black;
+  border-color: #000;
 
   .card-block {
     color: #fff;
-    background-color: $brand-orange-black;
+    background-color: #000;
   }
 }
 

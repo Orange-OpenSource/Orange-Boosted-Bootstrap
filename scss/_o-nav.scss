@@ -9,7 +9,7 @@
     margin-bottom: -2px;
 
     + .nav-item {
-      margin-left: ($grid-gutter-width / 2);
+      margin-left: .5rem;
     }
 
     .nav-link {
@@ -128,7 +128,7 @@
 
 .tab-content {
   padding: 1em;
-  border-color: transparent $brand-orange-black $brand-orange-black;
+  border-color: transparent #000 #000;
   border-style: solid;
   border-width: 2px;
 }

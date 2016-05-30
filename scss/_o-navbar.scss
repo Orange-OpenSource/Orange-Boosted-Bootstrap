@@ -16,8 +16,8 @@
 
   &.navbar-light,
   &.navbar-dark {
-    color: $brand-orange-white;
-    background: $brand-orange-black;
+    color: #fff;
+    background: #000;
   }
 
   .navbar-toggleable-xs {
@@ -45,12 +45,12 @@
 
     .dropdown-toggle {
       @include hover-focus {
-        color: $brand-orange;
+        color: $brand-primary;
       }
       display: block;
       margin-top: 3.6875rem;
       line-height: $btn-line-height;
-      color: $brand-orange-white;
+      color: #fff;
     }
   }
 
@@ -69,19 +69,19 @@
 
   .btn-inverse-outline {
     @include hover-focus {
-      color: $brand-orange;
-      border-color: $brand-orange;
+      color: $brand-primary;
+      border-color: $brand-primary;
     }
 
     @include active {
-      color: $brand-orange-white;
-      background-color: $brand-orange;
-      border-color: $brand-orange;
+      color: #fff;
+      background-color: $brand-primary;
+      border-color: $brand-primary;
     }
 
-    color: $brand-orange-white;
-    background-color: $brand-orange-black;
-    border-color: $brand-orange-white;
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
   }
 
 
@@ -147,7 +147,7 @@
       z-index: 100;
       width: 100%;
       margin: 0;
-      background-color: $brand-orange-black;
+      background-color: #000;
 
       .nav-item {
         display: block;
@@ -169,8 +169,8 @@
           font-family: icon-orange;
           font-size: $font-size-base;
           font-weight: $brand-font-weight-normal;
-          color: $brand-orange-white;
-          content: "\ea52";
+          color: #fff;
+          content: "\e93e";
         }
 
         .nav-link.icon {
@@ -191,8 +191,8 @@
           font-family: icon-orange;
           font-size: $font-size-h5;
           font-weight: $brand-font-weight-normal;
-          color: $brand-orange-white;
-          content: "\ea53";
+          color: #fff;
+          content: "\e93f";
         }
       }
 
@@ -234,7 +234,7 @@
   border: 0;
 
   @include hover-focus {
-    background-color: $brand-orange;
+    background-color: $brand-primary;
   }
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
@@ -261,7 +261,7 @@
     height: 3.125rem;
     font-size: .75rem;
     font-weight: $brand-font-weight-normal;
-    color: $brand-orange-white;
+    color: #fff;
   }
 }
 
@@ -293,7 +293,7 @@
   float: left;
 }
 
-@media (min-width: $screen-sm) {
+@include media-breakpoint-up(md) {
   .navbar-toggle-complement {
     display: none;
   }
@@ -309,14 +309,14 @@
     margin-top: 3.6875rem;
     font-weight: $brand-font-weight-bold;
     line-height: $btn-line-height;
-    color: $brand-orange-white !important;
+    color: #fff !important;
 
     @include hover-focus {
-      color: $brand-orange !important;
+      color: $brand-primary !important;
     }
   }
   // Uncollapse the nav
-  @media (min-width: $grid-float-breakpoint) {
+  @include media-breakpoint-up(md) {
     .nav-link {
       margin-top: 1.75rem;
     }

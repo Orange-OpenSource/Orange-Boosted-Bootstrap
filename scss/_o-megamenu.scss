@@ -6,7 +6,7 @@
   position: absolute;
   z-index: 200;
   width: 100%;
-  background-color: $brand-orange-black;
+  background-color: #000;
 
   &.sticky {
     position: fixed;
@@ -32,7 +32,7 @@
 
   a {
     font-weight: $brand-font-weight-bold;
-    color: $brand-orange-white;
+    color: #fff;
     text-decoration: none;
   }
 
@@ -179,8 +179,8 @@
         font-family: icon-orange;
         font-size: $font-size-base;
         font-weight: $brand-font-weight-normal;
-        color: $brand-orange-white;
-        content: "\ea52";
+        color: #fff;
+        content: "\e93e";
       }
 
       &.folded {
@@ -197,8 +197,8 @@
         font-family: icon-orange;
         font-size: $font-size-h5;
         font-weight: $brand-font-weight-normal;
-        color: $brand-orange-white;
-        content: "\ea53";
+        color: #fff;
+        content: "\e93f";
       }
     }
 
@@ -234,7 +234,7 @@
 }
 
 .search-bar {
-  background-color: $brand-orange-black;
+  background-color: #000;
   border-top: 1px solid $gray-dark;
 
   .form-inline {
@@ -246,7 +246,7 @@
         width: 100%;
         padding-top: .625rem;
         padding-bottom: .625rem;
-        color: $brand-orange-white;
+        color: #fff;
         background-color: $gray-dark;
         border: 0;
       }

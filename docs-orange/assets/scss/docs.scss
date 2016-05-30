@@ -32,15 +32,15 @@
 // Local docs variables
 /* boosted mod */
 // Local docs variables
-$bd-purple:         $brand-orange-black !default;//#563d7c;
-$bd-purple-bright:  $bd-purple !default;//lighten(saturate($bd-purple, 5%), 15%);
-$bd-purple-light:   $bd-purple !default;//#cdbfe3;
-$bd-graphite:       $brand-orange-black !default;//#2a2730;
-$bd-graphite-light: $gray-darker !default;//lighten($bd-graphite, 40%);
-$bd-yellow:         $brand-orange !default;//#ffe484;
-$bd-danger:         $brand-danger !default;//#d9534f;
-$bd-warning:        $brand-warning !default;//#f0ad4e;
-$bd-info:           $brand-info !default;//#5bc0de;
+$bd-purple:         #000;
+$bd-purple-bright:  $bd-purple;
+$bd-purple-light:   $bd-purple;
+$bd-graphite:       #000;
+$bd-graphite-light: #000;
+$bd-yellow:         $brand-primary;
+$bd-danger:         $brand-danger;
+$bd-warning:        $brand-warning;
+$bd-info:           $brand-info;
 /* end mod */
 // Load docs components
 @import "booticon";

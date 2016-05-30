@@ -32,17 +32,17 @@
 
   &.disabled,
   &:disabled {
-    color: $brand-orange-white;
+    color: #fff;
     background-color: $btn-link-disabled-color;
     border-color: $btn-link-disabled-color;
     &:focus,
     &.focus {
-      color: $brand-orange-white;
+      color: #fff;
       background-color: $btn-link-disabled-color;
       border-color: $btn-link-disabled-color;
     }
     @include hover {
-      color: $brand-orange-white;
+      color: #fff;
       background-color: $btn-link-disabled-color;
       border-color: $btn-link-disabled-color;
     }
@@ -58,27 +58,27 @@
   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
 
   @include hover-focus {
-    color: $brand-orange-white;
-    background-color: $brand-orange-black;
-    border-color: $brand-orange-black;
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
   }
 
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $brand-orange-white;
-    background-color: $brand-orange;
+    color: #fff;
+    background-color: $brand-primary;
     background-image: none;
-    border-color: $brand-orange;
+    border-color: $brand-primary;
     // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
     &:hover,
     &:focus,
     &.focus {
-      color: $brand-orange-white;
-      background-color: $brand-orange;
-      border-color: $brand-orange;
+      color: #fff;
+      background-color: $brand-primary;
+      border-color: $brand-primary;
     }
   }
 
@@ -109,39 +109,39 @@
   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
 
   @include hover-focus {
-    color: $brand-orange-black;
-    background-color: $brand-orange-white;
-    border-color: $brand-orange-white;
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
   }
 
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $brand-orange-white;
-    background-color: $brand-orange;
+    color: #fff;
+    background-color: $brand-primary;
     background-image: none;
-    border-color: $brand-orange;
+    border-color: $brand-primary;
     // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
     &:hover,
     &:focus,
     &.focus {
-      color: $brand-orange-white;
-      background-color: $brand-orange;
-      border-color: $brand-orange;
+      color: #fff;
+      background-color: $brand-primary;
+      border-color: $brand-primary;
     }
   }
 
   &.disabled,
   &:disabled {
     @include hover {
-      color: $brand-orange-black;
+      color: #000;
       background-color: $btn-link-disabled-black-bg-color;
       border-color: $btn-link-disabled-black-bg-color;
     }
 
-    color: $brand-orange-black;
+    color: #000;
     background-color: $btn-link-disabled-black-bg-color;
     border-color: $btn-link-disabled-black-bg-color;
   }
@@ -175,19 +175,19 @@ fieldset[disabled] a.btn {
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $brand-orange-black;
-    background-color: $brand-orange-clear;
+    color: #000;
+    background-color: transparent;
     background-image: none;
-    border-color: $brand-orange-black;
+    border-color: #000;
     // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
     &:hover,
     &:focus,
     &.focus {
-      color: $brand-orange-black;
-      background-color: $brand-orange-clear;
-      border-color: $brand-orange-black;
+      color: #000;
+      background-color: transparent;
+      border-color: #000;
     }
   }
 
@@ -197,12 +197,12 @@ fieldset[disabled] a.btn {
     &.disabled,
     &:disabled {
       @include hover {
-        color: $brand-orange-black;
+        color: #000;
         background-color: $btn-link-disabled-black-bg-color;
         border-color: $btn-link-disabled-black-bg-color;
       }
 
-      color: $brand-orange-black;
+      color: #000;
       background-color: $btn-link-disabled-black-bg-color;
       border-color: $btn-link-disabled-black-bg-color;
     }
@@ -210,16 +210,16 @@ fieldset[disabled] a.btn {
     &:active,
     &.active,
     .open > &.dropdown-toggle {
-      color: $brand-orange-white;
-      background-color: $brand-orange-clear;
-      border-color: $brand-orange-white;
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
 
       &:hover,
       &:focus,
       &.focus {
-        color: $brand-orange-white;
-        background-color: $brand-orange-clear;
-        border-color: $brand-orange-white;
+        color: #fff;
+        background-color: transparent;
+        border-color: #fff;
       }
     }
   }
@@ -232,12 +232,12 @@ fieldset[disabled] a.btn {
   &:disabled {
     @include hover {
       color: $btn-link-disabled-color;
-      background-color: $brand-orange-clear;
+      background-color: transparent;
       border-color: $btn-link-disabled-color;
     }
 
     color: $btn-link-disabled-color;
-    background-color: $brand-orange-clear;
+    background-color: transparent;
     border-color: $btn-link-disabled-color;
   }
 
@@ -245,38 +245,38 @@ fieldset[disabled] a.btn {
     @include orange-button-inverse-variant($btn-secondary-color, $btn-secondary-bg);
 
     @include hover-focus {
-      color: $brand-orange-white;
-      background-color: $brand-orange-clear;
-      border-color: $brand-orange-white;
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
     }
 
-    background-color: $brand-orange-white;
-    border-color: $brand-orange-white;
+    background-color: #fff;
+    border-color: #fff;
   }
 }
 .btn-info {
   @include orange-button-variant($btn-info-color, $btn-info-bg, $btn-info-hover-color, $btn-info-hover-bg);
 
   @include hover-focus {
-    background-color: $brand-orange-clear;
-    border-color: $brand-orange-black;
+    background-color: transparent;
+    border-color: #000;
   }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
-    background-color: $brand-orange-clear;
-    border-color: $brand-orange-white;
+    background-color: transparent;
+    border-color: #fff;
 
     &.disabled,
     &:disabled {
       @include hover {
         color: $btn-link-disabled-black-bg-color;
-        background-color: $brand-orange-clear;
+        background-color: transparent;
         border-color: $btn-link-disabled-black-bg-color;
      }
 
       color: $btn-link-disabled-black-bg-color;
-      background-color: $brand-orange-clear;
+      background-color: transparent;
       border-color: $btn-link-disabled-black-bg-color;
     }
   }
@@ -294,19 +294,19 @@ fieldset[disabled] a.btn {
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $brand-orange-black;
-    background-color: $brand-orange-clear;
+    color: #000;
+    background-color: transparent;
     background-image: none;
-    border-color: $brand-orange-black;
+    border-color: #000;
     // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
     &:hover,
     &:focus,
     &.focus {
-      color: $brand-orange-black;
-      background-color: $brand-orange-clear;
-      border-color: $brand-orange-black;
+      color: #000;
+      background-color: transparent;
+      border-color: #000;
     }
   }
 
@@ -316,12 +316,12 @@ fieldset[disabled] a.btn {
     &.disabled,
     &:disabled {
       @include hover {
-        color: $brand-orange-black;
+        color: #000;
         background-color: $btn-link-disabled-black-bg-color;
         border-color: $btn-link-disabled-black-bg-color;
       }
 
-      color: $brand-orange-black;
+      color: #000;
       background-color: $btn-link-disabled-black-bg-color;
       border-color: $btn-link-disabled-black-bg-color;
     }
@@ -329,16 +329,16 @@ fieldset[disabled] a.btn {
     &:active,
     &.active,
     .open > &.dropdown-toggle {
-      color: $brand-orange-white;
-      background-color: $brand-orange-clear;
-      border-color: $brand-orange-white;
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
 
       &:hover,
       &:focus,
       &.focus {
-        color: $brand-orange-white;
-        background-color: $brand-orange-clear;
-        border-color: $brand-orange-white;
+        color: #fff;
+        background-color: transparent;
+        border-color: #fff;
       }
     }
   }

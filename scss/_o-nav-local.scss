@@ -92,13 +92,13 @@
 .nav-local {
   min-height: 1em;
   margin: 10px 20px;
-  background-color: $brand-orange-white;
+  background-color: #fff;
 
   .local,
   .sublocal {
     @include clearfix();
     padding: .625rem;
-    border-bottom: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light-o;
 
     .navbar-nav {
       @include arrow-top($nav-local-arrow-outer-width, 0, $nav-local-arrow-width, $nav-local-arrow-outer-color, $nav-local-arrow-color, $nav-local-arrow-color);
@@ -123,12 +123,12 @@
       height: 2.2em;
       padding: .625rem 0;
       margin-top: 0;
-      color: $brand-orange-black;
+      color: #000;
 
       &.active,
       &:hover,
       &:focus {
-        color: $brand-orange;
+        color: $brand-primary;
         background-color: transparent;
       }
 
@@ -154,27 +154,28 @@
   margin-right: 20px;
 }
 
-@media (max-width: $screen-xs-max) {
+
+@include media-breakpoint-down('sm') {
   .nav-local .navbar-nav > li.active .arrow {
     display: none !important;
   }
 
   .nav-local .navbar-toggler {
-    border-color: $brand-orange-black;
+    border-color: #000;
   }
 
   .nav-local .navbar-toggler .icon-bar {
-    background-color: $brand-orange-black;
+    background-color: #000;
   }
 
   .nav-local .open .dropdown-menu {
     > a {
-      color: $brand-orange-black;
+      color: #000;
 
       &:hover,
       &:focus {
-        color: $brand-orange-white;
-        background-color: $brand-orange-black;
+        color: #fff;
+        background-color: #000;
       }
     }
   }

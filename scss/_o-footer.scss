@@ -3,8 +3,8 @@
 //
 
 .o-footer {
-  color: $brand-orange-white;
-  background-color: $brand-orange-black;
+  color: #fff;
+  background-color: #000;
 
   * {
     font-weight: $brand-font-weight-bold;
@@ -16,7 +16,7 @@
       margin: 0 auto;
       font-size: $font-size-sm;
       list-style: none;
-      background: $brand-orange-black;
+      background: #000;
     }
 
     li {
@@ -24,21 +24,21 @@
         margin: 0 0 18px;
         font-size: $font-size-base;
         font-weight: $brand-font-weight-bold;
-        color: $brand-orange-white;
+        color: #fff;
       }
 
       a {
         font-size: $font-size-sm;
         line-height: 2.8;
-        color: $gray-light-plus;
+        color: $gray-lighter-o;
       }
     }
   }
 
   .o-footer-bottom {
     min-height: 50px;
-    color: $gray-light-plus;
-    background-color: $brand-orange-black;
+    color: $gray-lighter-o;
+    background-color: #000;
     border-top: 1px solid $gray-dark;
 
     ul {
@@ -55,7 +55,7 @@
       a {
         font-size: $font-size-sm;
         font-weight: $brand-font-weight-bold;
-        color: $brand-orange-white;
+        color: #fff;
       }
     }
   }

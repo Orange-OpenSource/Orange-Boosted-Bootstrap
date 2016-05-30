@@ -2,7 +2,7 @@
 //******************* bullet points **********************/
 //********************************************************/
 .o-square-list {
-  color: $brand-orange;
+  color: $brand-primary;
   list-style-type: square;
 }
 .o-square-list li span {
@@ -18,7 +18,7 @@
 }
 .o-square-list ul ul {
   padding-left: 15px;
-  color: $gray-light;
+  color: $gray-light-o;
   list-style-type: square;
 }
 .o-square-list ul ul span {

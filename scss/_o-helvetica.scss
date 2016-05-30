@@ -1,0 +1,26 @@
+
+
+// Orange - July 2015
+
+// Recommended @font-face snippet for web fonts
+
+@font-face {
+  font-family: "HelvNeueOrange";
+  font-style: normal;
+  font-weight: 700;
+  src: url("#{$icon-font-path}HelvNeue75_W1G.eot") format("eot"),
+  url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
+	url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff"),
+	url("#{$icon-font-path}HelvNeue75_W1G.ttf") format("truetype"),
+	url("#{$icon-font-path}HelvNeue75_W1G.svg") format("svg");
+}
+@font-face {
+  font-family: "HelvNeueOrange";
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$icon-font-path}HelvNeue55_W1G.eot") format("eot"),
+  url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
+	url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff"),
+	url("#{$icon-font-path}HelvNeue55_W1G.ttf") format("truetype"),
+	url("#{$icon-font-path}HelvNeue55_W1G.svg") format("svg");
+}

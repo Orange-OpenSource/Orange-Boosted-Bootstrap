@@ -9,8 +9,8 @@
     padding: $padding-large-vertical 0;
     font-size: $font-size-h1;
     font-weight: bold;
-    color: $brand-orange-black;
-    background-color: $brand-orange-white;
+    color: #000;
+    background-color: #fff;
   }
 
   th {
@@ -37,11 +37,11 @@
     }
 
     a {
-      color: $brand-orange-black;
+      color: #000;
       text-decoration: none;
 
       @include hover-focus {
-        color: $brand-orange;
+        color: $brand-primary;
         text-decoration: underline;
       }
     }

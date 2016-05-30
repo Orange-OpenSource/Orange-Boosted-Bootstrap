@@ -1,8 +1,9 @@
 <h2 id="pagination">Pagination</h2>
-<div class="row">
+Standard pagination with numbers
+<div>
     <nav>
         <ul class="pagination">
-            <li class="page-item">
+            <li class="page-item bordered">
                 <a class="page-link disabled" href="#" aria-label="Previous">
                     <span aria-hidden="true" class="icon-arrow-previous"></span>
                     <span class="sr-only">Previous</span>
@@ -13,7 +14,7 @@
             <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
             <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
             <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
-            <li class="page-item">
+            <li class="page-item bordered">
                 <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true" class="icon-arrow-next"></span>
                     <span class="sr-only">Next</span>
@@ -22,23 +23,57 @@
         </ul>
     </nav>
 </div>
-
-<div class="row">
+Buttons
+<div>
     <nav>
         <ul class="pagination">
-            <li class="page-item">
+            <li class="page-item bordered">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true" class="icon-arrow-previous"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item bordered">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true" class="icon-arrow-next"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+Buttons + page counter
+<div>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item presentation" role="presentation">Page 2 of 10</li>
+            <li class="page-item bordered">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true" class="icon-arrow-previous"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item bordered">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true" class="icon-arrow-next"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+Buttons + Back/Next labels
+<div>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item bordered">
             <a class="page-link page-item-labelled" href="#" aria-label="Previous">
                 <span aria-hidden="true" class="icon-arrow-previous"></span>
                 <span>Back</span>
             </a>
             </li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 1">1</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
-            <li class="page-item"><a class="page-link active" href="#" aria-label="Go to page 5">5</a></li>
-            <li class="page-item">
-                <a class="page-link page-item-labelled disabled" href="#" aria-label="Next">
+            <li class="page-item bordered">
+                <a class="page-link page-item-labelled" href="#" aria-label="Next">
                     <span>Next</span>
                     <span aria-hidden="true" class="icon-arrow-next"></span>
                 </a>

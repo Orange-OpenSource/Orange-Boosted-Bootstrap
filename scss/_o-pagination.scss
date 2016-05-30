@@ -2,12 +2,14 @@
 // Orange pagination
 //
 .pagination {
+  display: inline-block;
+  list-style: none;
 
   .page-link {
     @include hover-focus {
-      color: $brand-orange-black;
-      background-color: $brand-orange-white;
-      border-color: $brand-orange-black;
+      color: #000;
+      background-color: #fff;
+      border-color: #000;
     }
 
     width: $pagination-width;
@@ -20,27 +22,47 @@
     border: solid 2px transparent;
 
     &.active {
-      color: $brand-orange-white;
-      background-color: $brand-orange-black;
-      border-color: $brand-orange-black;
+      color: #fff;
+      background-color: #000;
+      border-color: #000;
+    }
+    .icon-arrow-next, 
+    .icon-arrow-previous {
+      font-size: .875rem;
     }
   }
-
+  .page-item {    
+    float: left;
+    margin: 0;
+    + .page-item {
+      margin-left: 10px;
+    }
+    &.presentation{
+      padding: .625rem 0;      
+      font-weight: bold;
+    }
+    &.bordered > .page-link,
+    &.bordered > .page-link {
+      border: 2px solid #000;
+      width: auto;
+      min-width: $pagination-width;
+    }     
+  }
   .page-item:first-child .page-link,
   .page-item:last-child .page-link {
     width: auto;
     min-width: $pagination-width;
     height: $pagination-width;
     padding: calc((#{$pagination-width} - 4px - #{$font-size-base}) / 2) 0;
-    border: solid 2px $brand-orange-black;
+    border: solid 2px #000;
 
     &.disabled {
       @include hover {
         cursor: $cursor-disabled;
       }
 
-      color: $gray-light-plus;
-      border-color: $gray-light-plus;
+      color: $gray-lighter-o;
+      border-color: $gray-lighter-o;
 
     }
 

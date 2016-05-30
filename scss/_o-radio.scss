@@ -37,7 +37,7 @@
   height: ($font-size-base * $line-height-base); // dim. de la case
   content: "";
   background-color: #fff;
-  border: 3px solid $gray-light;
+  border: 3px solid $gray-light-o;
   border-radius: 50%;
 }
 
@@ -58,7 +58,7 @@
   width: ($font-size-base * $line-height-base);
   height: ($font-size-base * $line-height-base); // dim. de la case
   font-size: ($font-size-base * $line-height-base);
-  color: $brand-orange-white;
+  color: #fff;
   text-align: center;
   content: "";
 }
@@ -82,27 +82,27 @@
 }
 // Aspect si "cochée"
 .o-radio[type="radio"]:checked + label::before {
-  border-color: $brand-orange;
+  border-color: $brand-primary;
   border-width: 6px;
 }
 
 // aspect désactivée
 .o-radio[type="radio"]:disabled:not(:checked) + label::before,
 .o-radio[type="radio"]:disabled:checked + label::before {
-  border-color: $gray-light-plus;
+  border-color: $gray-lighter-o;
 }
 // styles de la coche (si cochée/désactivée)
 .o-radio[type="radio"]:disabled:checked + label::after {
-  color: $brand-orange-white;
-  border-color: $gray-light-plus;
+  color: #fff;
+  border-color: $gray-lighter-o;
 }
 // on style aussi le label quand désactivé
 .o-radio[type="radio"]:disabled + label {
-  color: $gray-light-plus;
+  color: $gray-lighter-o;
 }
 
 // aspect au focus de l"élément
 .o-radio[type="radio"]:checked:focus + label,
 .o-radio[type="radio"]:not(:checked):focus + label {
-  border: 1px dotted $brand-orange-black;
+  border: 1px dotted #000;
 }

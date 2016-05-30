@@ -1,5 +1,5 @@
 // small device display as card
-@media all and (max-width: $screen-sm-max) {
+@include media-breakpoint-down(md) {
   .o-responsive-table {
     thead {
       display: none;
@@ -12,7 +12,7 @@
       padding: 0;
     }
     // for tablet, display 2 cards by rows
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       tr {
         float: left;
         width: 45%;
@@ -40,7 +40,7 @@
       th[scope="row"] {
         font-weight: bold;
         border-top: 0;
-        border-bottom: 2px solid $gray-light;
+        border-bottom: 2px solid $gray-light-o;
       }
     }
   }

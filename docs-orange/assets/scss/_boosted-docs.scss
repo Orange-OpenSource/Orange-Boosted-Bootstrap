@@ -1,6 +1,6 @@
 .bd-masthead {
-  background-color: $brand-orange-black;
-  color: $brand-orange-white;
+  background-color: #000;
+  color: #fff;
   border: none;
   border-top: 2px solid $gray-dark;
   padding-top: 2.5rem;
@@ -10,20 +10,20 @@
     font-size: $font-size-h6;
 
     a {
-        color: $brand-orange-white;
+        color: #fff;
         text-decoration: underline;
 
         &:active,
         &:hover,
         &:focus {
-            color: $brand-orange;
+            color: $brand-primary;
             text-decoration: none;
         }
     }
 
     .btn {
         @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
-        border-color: $brand-orange-white;
+        border-color: #fff;
         font-weight: $btn-font-weight;
         text-decoration: none;
 
@@ -35,15 +35,15 @@
   }
 
   .bd-boosted-icon {
-      font-family: $font-family-titles;
+      font-family: $font-family-base;
       font-size: $font-size-h1;
       font-weight: 500;
   }
 }
 
 .bd-pageheader {
-  background-color: $brand-orange-black;
-  color: $brand-orange-white;
+  background-color: #000;
+  color: #fff;
   border-top: 2px solid $gray-dark;
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
@@ -95,13 +95,13 @@
 
   .navbar-nav {
     .nav-link {
-      color: $brand-orange-white;
+      color: #fff;
 
       &.active,
       &:hover,
       &:focus {
-        background-color: $brand-orange-black;
-        color: $brand-orange;
+        background-color: #000;
+        color: $brand-primary;
         font-weight: $brand-font-weight-bold;
       }
     }
@@ -114,8 +114,8 @@
 
 .bd-footer {
     padding: 0;
-    color: $brand-orange-white;
-    background-color: $brand-orange-black;
+    color: #fff;
+    background-color: #000;
     text-align: center;
     margin-top: 2.5rem;
     font-size: $font-size-base;
@@ -125,13 +125,13 @@
     }
 
     a {
-        color: $brand-orange-white;
+        color: #fff;
         text-decoration: underline;
 
         &:active,
         &:hover,
         &:focus {
-            color: $brand-orange;
+            color: $brand-primary;
             text-decoration: none;
         }
     }
@@ -145,7 +145,7 @@
   }
 
   &::after {
-    content: "\e91e";
+    content: "\e936";
     color: $brand-danger;
     font-family: "icon-orange" !important;
     font-size: inherit;
@@ -164,25 +164,6 @@
     @include brand-warning;
 }
 
-// #outline-buttons::after,
-// #supported-content::after,
-// #brand::after,
-// #nav::after,
-// #color-schemes::after,
-// #containers::after,
-// #placement::after {
-//   content: "\e91e";
-//   color: $brand-danger;
-//   font-family: "icon-orange" !important;
-//   font-size: inherit;
-//   padding-left: .375rem;
-//   vertical-align: bottom;
-// }
-
-// #outline-buttons::before {
-//     @include sr-only;
-//     content: "warning, not brand compliant";
-// }
 
 //
 // Font icons
@@ -255,7 +236,7 @@ $back-top-btn-height: 3.75rem;
       font-size: 1.875rem;
     }
     &:visited {
-        color: $brand-orange-black;
+        color: #000;
     }
 
     .scroll-top-text {
@@ -263,8 +244,8 @@ $back-top-btn-height: 3.75rem;
     }
 
     @include media-breakpoint-down(sm) {
-      color: $brand-orange-white;
-      background-color: $brand-orange-black;
+      color: #fff;
+      background-color: #000;
       width: 100%;
       height: $back-top-btn-height;
       bottom: 0;
@@ -272,7 +253,7 @@ $back-top-btn-height: 3.75rem;
       text-align: center;
 
       span[class*="icon-"]::before {
-        color: $brand-orange-white;
+        color: #fff;
         line-height: $back-top-btn-height;
       }
 

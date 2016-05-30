@@ -37,7 +37,7 @@
   height: ($font-size-base * $line-height-base); // dim. de la case */
   content: "";
   background-color: #fff;
-  border: 2px solid $gray-light;
+  border: 2px solid $gray-light-o;
 }
 
 // Align checkbox on the right*/
@@ -58,9 +58,9 @@
   height: ($font-size-base * $line-height-base);// dim. de la case */
   font-family: "icon-orange" !important;
   font-size: $font-size-base;
-  color: $brand-orange-white;
+  color: #fff;
   text-align: center;
-  content: "\ea2b";
+  content: "\eb77";
 }
 .o-checkbox-right.o-checkbox[type="checkbox"]:not(:checked) + label::after,
 .o-checkbox-right.o-checkbox[type="checkbox"]:checked + label::after {
@@ -77,34 +77,34 @@
 }
 // Aspect si "cochée" */
 .o-checkbox[type="checkbox"]:checked + label::after {
-  background-color: $brand-orange;
+  background-color: $brand-primary;
   opacity: 1; // coche opaque */
   transform: scale(1); // mise à l"échelle 1:1 */
 }
 // Aspect si "cochée" */
 .o-checkbox[type="checkbox"]:checked + label::before {
-  background-color: $brand-orange;
-  border-color: $brand-orange;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
 }
 
 // aspect désactivée */
 .o-checkbox[type="checkbox"]:disabled:not(:checked) + label::before,
 .o-checkbox[type="checkbox"]:disabled:checked + label::before {
-  border-color: $gray-light-plus;
+  border-color: $gray-lighter-o;
 }
 // styles de la coche (si cochée/désactivée) */
 .o-checkbox[type="checkbox"]:disabled:checked + label::after {
-  color: $brand-orange-white;
-  background-color: $gray-light-plus;
-  border-color: $gray-light-plus;
+  color: #fff;
+  background-color: $gray-lighter-o;
+  border-color: $gray-lighter-o;
 }
 // on style aussi le label quand désactivé */
 .o-checkbox[type="checkbox"]:disabled + label {
-  color: $gray-light-plus;
+  color: $gray-lighter-o;
 }
 
 // aspect au focus de l"élément */
 .o-checkbox[type="checkbox"]:checked:focus + label,
 .o-checkbox[type="checkbox"]:not(:checked):focus + label {
-  border: 1px dotted $brand-orange-black;
+  border: 1px dotted #000;
 }

@@ -41,10 +41,10 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
     padding: $padding-base-vertical $padding-base-horizontal;
     padding-left: calc(#{$o-stepbar-height} * #{$o-stepbar-arrow-ratio} + #{$padding-base-horizontal});
     font-weight: bold;
-    color: $brand-orange-black;
+    color: #000;
     white-space: nowrap;
     list-style: none;
-    background-color: $gray-light-plus;
+    background-color: $gray-lighter-o;
 
     &:first-child {
       padding-left: $padding-base-horizontal;
@@ -58,17 +58,17 @@ $arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F
 
     &.done {
       @include stepbar-arrow($arrow-black-svg);
-      background-color: $brand-orange-black;
+      background-color: #000;
       .stepbar-link {
-        color: $brand-orange-white;
+        color: #fff;
       }
     }
 
     &.current {
       @include stepbar-arrow($arrow-orange-svg);
-      background-color: $brand-orange;
+      background-color: $brand-primary;
       .stepbar-link {
-        color: $brand-orange-white;
+        color: #fff;
       }
     }
 
