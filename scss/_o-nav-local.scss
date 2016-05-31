@@ -2,181 +2,43 @@
 //      Nav local
 //
 
-// mixin for arrows
-@mixin arrow-generic($arrow-outer-width, $arrow-width) {
-  >.nav-item > .nav-link.active > .arrow {
-    &,
-    &::after {
-      position: absolute;
-      display: block;
-      width: 0;
-      height: 0;
-      border-color: transparent;
-      border-style: solid;
-    }
+.o-nav-local {
+  margin-bottom: $spacer;
+
+  hr {
+    border: 1px solid $gray-light;
+    margin: 0;
+    padding: 0;
   }
 
-  >.nav-item > .nav-link.active > .arrow {
-    border-width: $arrow-outer-width;
-  }
+  .nav-link {
+    padding: 1.0625rem 0;
+    line-height: 1;
+    font-weight: bold;
 
-  >.nav-item > .nav-link.active > .arrow::after {
-    content: "";
-    border-width: $arrow-width;
-  }
-}
-
-@mixin arrow-bottom($arrow-outer-width, $arrow-outer-height, $arrow-width, $arrow-outer-color, $arrow-color, $focus-color) {
-  @include arrow-generic($arrow-outer-width, $arrow-width);
-  >.nav-item > .nav-link.active > .arrow {
-    bottom: $arrow-outer-height;
-    left: 50%;
-    margin-left: -$arrow-outer-width;
-    border-top-color: $arrow-outer-color;
-    border-bottom-width: 0;
-
-    &::after {
-      bottom: 1px;
-      margin-left: -$arrow-width;
-      content: " ";
-      border-top-color: $arrow-color;
-      border-bottom-width: 0;
-    }
-  }
-
-  >.nav-item > .nav-link.active a:focus {
-    border-color: $focus-color;
-
-    +.arrow {
-      border-top-color: $arrow-outer-color;
-
-      &::after {
-        border-top-color: $focus-color;
-      }
+    &.active {
+      color: $brand-primary;
     }
   }
 }
 
-@mixin arrow-top($arrow-outer-width, $arrow-outer-height, $arrow-width, $arrow-outer-color, $arrow-color, $focus-color) {
-  @include arrow-generic($arrow-outer-width, $arrow-width);
+.o-nav-local.inverse {
+  background-color: black;
 
-  >.nav-item > .nav-link.active > .arrow {
-    bottom: $arrow-outer-height;
-    left: 50%;
-    margin-left: -$arrow-outer-width;
-    border-top-width: 0;
-    border-bottom-color: $arrow-outer-color;
+  hr {
+    border: 1px solid $gray-dark;
+  }
 
-    &::after {
-      top: 1px;
-      margin-left: -$arrow-width;
-      content: " ";
-      border-top-width: 0;
-      border-bottom-color: $arrow-color;
+  .nav-link {
+     @include hover-focus {
+      color: $brand-primary;
     }
-  }
 
-  >.nav-item > .nav-link.active a:focus {
-    border-color: $focus-color;
+    color: white;
+    background-color: black;
 
-    +.arrow {
-      border-bottom-color: $arrow-outer-color;
-
-      &::after {
-        border-bottom-color: $focus-color;
-      }
-    }
-  }
-}
-
-.nav-local {
-  min-height: 1em;
-  margin: 10px 20px;
-  background-color: #fff;
-
-  .local,
-  .sublocal {
-    @include clearfix();
-    padding: .625rem;
-    border-bottom: 1px solid $gray-light-o;
-
-    .navbar-nav {
-      @include arrow-top($nav-local-arrow-outer-width, 0, $nav-local-arrow-width, $nav-local-arrow-outer-color, $nav-local-arrow-color, $nav-local-arrow-color);
-      .nav-item + .nav-item {
-        margin-left: .9375rem;
-      }
-
-      .nav-item:first-child {
-        margin-left: 0;
-      }
-
-      > li {
-        position: relative;
-      }
-      .dropdown-menu {
-        margin-top: 0;
-      }
-    }
-    .nav-item > a,
-    .nav-item .nav-link {
-      display: inline-block;
-      height: 2.2em;
-      padding: .625rem 0;
-      margin-top: 0;
-      color: #000;
-
-      &.active,
-      &:hover,
-      &:focus {
-        color: $brand-primary;
-        background-color: transparent;
-      }
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.nav-local .container-fluid {
-  padding: 0;
-}
-
-.nav-local .container-fluid > .navbar-header,
-.nav-local .container-fluid > .navbar-collapse {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.nav-local .navbar-toggler {
-  margin-right: 20px;
-}
-
-
-@include media-breakpoint-down(sm) {
-  .nav-local .navbar-nav > li.active .arrow {
-    display: none !important;
-  }
-
-  .nav-local .navbar-toggler {
-    border-color: #000;
-  }
-
-  .nav-local .navbar-toggler .icon-bar {
-    background-color: #000;
-  }
-
-  .nav-local .open .dropdown-menu {
-    > a {
-      color: #000;
-
-      &:hover,
-      &:focus {
-        color: #fff;
-        background-color: #000;
-      }
+    &.active {
+      color: $brand-primary;
     }
   }
 }
