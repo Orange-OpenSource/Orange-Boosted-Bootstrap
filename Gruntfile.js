@@ -703,7 +703,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorsjs']);
   /* end mod */
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'test']);
+  grunt.registerTask('default', ['dist', 'test']);
 
   grunt.registerTask('commonjs', ['babel:umd', 'npm-js']);
 
