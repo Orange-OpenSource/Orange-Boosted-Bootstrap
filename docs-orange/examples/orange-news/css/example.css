@@ -157,3 +157,13 @@ footer a, footer span {
     display: none !important;
   }
 }
+
+
+/* custom select */
+.select-theme-default.select-target {
+  width:100%
+}
+
+.select-theme-default.select-content {
+  max-width: 100%;
+}
