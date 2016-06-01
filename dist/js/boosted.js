@@ -1,6 +1,6 @@
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://boosted.orange.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v4.0.0-alpha.1 (http://boosted.orange.com)
+ * Copyright 2011-2016 Orange SA
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
