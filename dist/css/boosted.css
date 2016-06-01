@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -527,6 +528,27 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  h1, .h1 {
+    font-size: 1.25rem;
+  }
+  h2, .h2 {
+    font-size: 1.125rem;
+  }
+  h3, .h3 {
+    font-size: 1rem;
+  }
+  h4, .h4 {
+    font-size: 0.875rem;
+  }
+  h5, .h5 {
+    font-size: 0.875rem;
+  }
+  h6, .h6 {
+    font-size: 0.875rem;
+  }
 }
 
 .lead {
@@ -4598,8 +4620,10 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb {
-  padding: 0.625rem 0.625rem;
-  margin-bottom: 1.25rem;
+  padding: 0.625rem 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.428571;
   list-style: none;
   background-color: #fff;
 }
@@ -4616,10 +4640,12 @@ input[type="button"].btn-block {
 
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  font-family: "icon-orange";
+  font-size: 0.625rem;
   color: #000;
-  content: ">";
+  content: "";
 }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -7670,22 +7696,6 @@ fieldset[disabled] a.btn {
   src: url("../fonts/HelvNeue55_W1G.eot") format("eot"), url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff"), url("../fonts/HelvNeue55_W1G.ttf") format("truetype"), url("../fonts/HelvNeue55_W1G.svg") format("svg");
 }
 
-/*! Orange Boosted with Bootstrap
- * 
- * Module name: icon-orange
- * Version:     1.0.0
- * Created:     2015 by Orange
- * 
- * Copyright (C) 2015-2016 Orange SA
- * 
- * This part of the software is proprietary of Orange.
- * You shall not disclose such Confidential Information and shall use it only in
- * accordance with the terms of the agreement you entered into.
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * 
- * If you are Orange employee you shall use this software in accordance with
- * the Orange Source Charter (http://opensource.itn.ftgroup/index.php/Orange-Source-Charter)
-*/
 @font-face {
   font-family: "icon-orange";
   src: url("../fonts/icon-orange.eot");
@@ -8349,7 +8359,7 @@ fieldset[disabled] a.btn {
   font-family: "icon-orange" !important;
   font-style: normal;
   font-variant: normal;
-  line-height: 0.875;
+  line-height: 1;
   text-transform: none;
   speak: none;
   -webkit-font-smoothing: antialiased;
@@ -8379,7 +8389,7 @@ fieldset[disabled] a.btn {
   color: #f16e00;
 }
 
-.icon-checkbox-tick:before {
+.icon-checkbox-tick::before {
   content: "\eb77";
 }
 
@@ -12261,6 +12271,11 @@ fieldset[disabled] a.btn {
   border: 0 none;
 }
 
+.o-footer,
+.o-footer-inverse {
+  padding: 0.625rem;
+}
+
 .o-footer {
   color: #fff;
   background-color: #000;
@@ -12377,9 +12392,9 @@ fieldset[disabled] a.btn {
 
 .pagination .page-item.bordered > .page-link,
 .pagination .page-item.bordered > .page-link {
-  border: 2px solid #000;
   width: auto;
   min-width: 2.5rem;
+  border: 2px solid #000;
 }
 
 .pagination .page-item:first-child .page-link,
@@ -12687,17 +12702,8 @@ fieldset[disabled] a.btn {
   border: 1px dotted #000;
 }
 
-html {
-  font-size: 16px;
-  font-weight: normal;
-}
-
 .caret {
   border-top-style: solid;
-}
-
-.alert {
-  border-width: 2px;
 }
 
 .label {
@@ -12814,11 +12820,6 @@ a:focus {
 
 .has-warning .input-group > .form-control {
   border-color: #000;
-}
-
-.o-footer,
-.o-footer-inverse {
-  padding: 0.625rem;
 }
 
 .hero-container .frame {
@@ -12973,10 +12974,6 @@ caption {
   font-weight: bold;
 }
 
-.form-control {
-  border-width: 2px;
-}
-
 .card {
   border-color: #000;
 }
@@ -12984,25 +12981,6 @@ caption {
 .card .card-block {
   color: #fff;
   background-color: #000;
-}
-
-a {
-  color: #000;
-  text-decoration: underline;
-}
-
-a:hover, a:focus {
-  color: #f16e00;
-  text-decoration: none;
-}
-
-nav a,
-.dropdown-menu a,
-.dropdown a,
-.navbar a,
-.nav a,
-a.btn {
-  text-decoration: none;
 }
 
 .has-feedback label ~ .form-control-feedback {
