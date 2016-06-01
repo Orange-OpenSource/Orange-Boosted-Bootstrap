@@ -1,7 +1,7 @@
 {
   "name": "boosted",
-  "description": "Orange Boosted is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.2.",
-  "version": "4.0.0-alpha.2",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.2.",
+  "version": "4.0.0-alpha.1",
   "keywords": [
     "css",
     "sass",
@@ -9,10 +9,11 @@
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "Orange"
   ],
   "homepage": "http://boosted.orange.com",
-  "author": "Twitter, Inc.",
+  "author": "Orange SA",
   "scripts": {
     "change-version": "node grunt/change-version.js",
     "shrinkwrap": "npm shrinkwrap --dev && mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
@@ -25,6 +26,9 @@
     "type": "git",
     "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git"
   },
+  "files": [
+    "dist/"
+  ],
   "bugs": {
     "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },

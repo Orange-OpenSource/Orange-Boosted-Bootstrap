@@ -1,6 +1,11 @@
 .breadcrumb {
-  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-  margin-bottom: $spacer-y;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;  
+  // boosted mod
+  // margin-bottom: $spacer-y;
+  font-size: $breadcrumb-font-size;
+  font-weight: bold;
+  line-height: $breadcrumb-line-height;
+  // end mod
   list-style: none;
   background-color: $breadcrumb-bg;
   @include border-radius($border-radius);
@@ -15,6 +20,10 @@
     display: inline-block; // Suppress underlining of the separator in modern browsers
     padding-right: $breadcrumb-item-padding;
     padding-left: $breadcrumb-item-padding;
+    // boosted mod
+    font-family: $breadcrumb-font-family;
+    font-size: $breadcrumb-divider-font-size;
+    // end mod
     color: $breadcrumb-divider-color;
     content: "#{$breadcrumb-divider}";
   }

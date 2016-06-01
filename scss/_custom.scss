@@ -782,13 +782,17 @@ $figure-caption-font-size: 90%;
 // Breadcrumbs
 
 $breadcrumb-padding-y:          .625rem;
-$breadcrumb-padding-x:          .625rem;
-$breadcrumb-item-padding:       0;
+$breadcrumb-padding-x:          .9375rem;
+$breadcrumb-item-padding:       .625rem;
 
 $breadcrumb-bg:                 #fff;
 $breadcrumb-divider-color:      #000;
 $breadcrumb-active-color:       $brand-primary;
-$breadcrumb-divider:            ">";
+$breadcrumb-font-family:        "icon-orange";
+$breadcrumb-divider:            "\e93e";
+$breadcrumb-divider-font-size:  .625rem;
+$breadcrumb-font-size:          $font-size-sm;
+$breadcrumb-line-height:        $line-height-sm;
 
 // Media objects
 
