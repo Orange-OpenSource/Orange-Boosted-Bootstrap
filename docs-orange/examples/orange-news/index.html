@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>news home</title>
         <link rel="stylesheet" href="../../dist/css/boosted.css" />
-		<link href="example.css" rel="stylesheet">
+		<link href="css/example.css" rel="stylesheet">
 		<style>
 		@media (max-width : 768px) {
 			#accessibilitytoolbarGraphic, #accessibilitytoolbarGraphic * {
@@ -197,59 +197,34 @@
             </section>
 
 			 <div class="o-nav-local">
-				<hr>
+				<hr aria-hidden="true">
 				<nav class="container">
-					<ul class="nav nav-inline">
-						<li class="nav-item"><a class="nav-link active" href="#">news home</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">world</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">entertainment</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">finance</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">technology</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">weather</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">sport</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">video</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">pictures</a></li>
+					<a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#collapseExample" aria-haspopup="true">target</a>
+					<ul class="nav nav-inline collapse" id="collapseExample">
+						<li class="nav-item"><a class="nav-link active" href="#">News home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">World</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Finance</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Weather</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Pictures</a></li>
 					</ul>
 				</nav>
-				<hr>
+				<hr aria-hidden="true">
 			</div>
 
-            <!--<div id="localNavigation" class="container">
-			<nav  class="navbar nav-local">
-				<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-					<span class="sr-only">toggle navigation</span>
-					<span class="icon-bar"></span>
-				</button>
-
-				<div class="collapse navbar-toggleable-xs local" id="bs-example-navbar-collapse-2">
-					<ul class="nav navbar-nav">
-						<li class="nav-item"><a class="nav-link active" href="#">news home<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item"><a class="nav-link" href="#">world<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item"><a class="nav-link" href="#">entertainment<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item"><a class="nav-link" href="#">finance<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item"><a class="nav-link" href="#">technology<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item"><a class="nav-link" href="#">weather<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item dropdown">
-							<a href="#" class="dropdown-toggle active" data-toggle="dropdown"><span class="sr-only">more categories </span>... <b class="caret" aria-hidden="true"></b></a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">sport</a></li>
-								<li><a class="dropdown-item" href="#">video</a></li>
-								<li><a class="dropdown-item" href="#">pictures</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav pull-md-right">
-						<li class="nav-item dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">more <span class="sr-only">options</span><b class="caret" aria-hidden="true"></b></a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">all categories</a></li>
-								<li><a class="dropdown-item" href="#">customize category</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>-->
+			<!--<select class="local-select">
+				<option>news home</option>
+				<option>entertainment</option>
+				<option>finance</option>
+				<option>technology</option>
+				<option>weather</option>
+				<option>sport</option>
+				<option>video</option>
+				<option>pictures</option>
+			</select>-->
 
 		<section class="container">
 			<div class="row">
@@ -535,6 +510,8 @@
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="../../assets/js/vendor/tether.min.js"></script>
     <script src="../../dist/js/boosted.js"></script>
+
+	<script src="js/example.js"></script>
 
     <script type="text/javascript">
 			// Surcharge des valeurs du script de la toolbar

@@ -10,7 +10,7 @@ Wrap your `<ul>` list in a `<nav>` tag with `.container` class. Use `<hr>` tag o
 
 {% example html %}
  <div class="o-nav-local">
-    <hr>
+    <hr aria-hidden="true">
     <nav class="container">
         <ul class="nav nav-inline">
             <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
@@ -18,7 +18,7 @@ Wrap your `<ul>` list in a `<nav>` tag with `.container` class. Use `<hr>` tag o
             <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
         </ul>
     </nav>
-    <hr>
+    <hr aria-hidden="true">
 </div>
 {% endexample %}
 
@@ -29,7 +29,7 @@ Simply add `.inverse` class to your `.o-nav-local` container.
 {% example html %}
 <div style="margin: 2rem 0; padding: 2rem 0; background-color: black;">
     <div class="o-nav-local inverse">
-        <hr>
+        <hr aria-hidden="true">
         <nav class="container">
             <ul class="nav nav-inline">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
@@ -37,7 +37,7 @@ Simply add `.inverse` class to your `.o-nav-local` container.
             <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
             </ul>
         </nav>
-        <hr>
+        <hr aria-hidden="true">
     </div>
 </div>
 {% endexample %}

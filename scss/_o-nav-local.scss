@@ -6,7 +6,7 @@
   margin-bottom: $spacer;
 
   hr {
-    border: 1px solid $gray-light;
+    border-top: 1px solid $gray-light;
     margin: 0;
     padding: 0;
   }
@@ -26,7 +26,7 @@
   background-color: black;
 
   hr {
-    border: 1px solid $gray-dark;
+    border-top: 1px solid $gray-dark;
   }
 
   .nav-link {
@@ -40,5 +40,67 @@
     &.active {
       color: $brand-primary;
     }
+  }
+}
+
+// Mobile
+
+@include media-breakpoint-down(sm) {
+  .o-nav-local {
+
+    .container {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .local-select {
+      position: relative;
+      width: 100%;
+      padding-left: .625rem;
+
+      &::after {
+          content: "\e93c";
+          color: black;
+          font-family: "icon-orange";
+          font-size: inherit;
+          padding-left: .375rem;
+          // vertical-align: middle;
+          position: absolute;
+          right: .625rem;
+          top: 1rem;
+        }
+    }
+
+    .nav-inline {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-top: 1px;
+      width: 100%;
+      background-color: white;
+      z-index: 20;
+
+      .nav-item {
+        margin-left: 0;
+        display: block;
+
+        .nav-link {
+          @include hover-focus {
+            background-color: $brand-primary;
+            color: white;
+          }
+          padding-left: .625rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .nav-inline {
+    display: block;
   }
 }
