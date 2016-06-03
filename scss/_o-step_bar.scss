@@ -129,9 +129,54 @@ $arrow-orange: "%23f16e00";
           width: 4.5rem;
         }
       }
-
-
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .o-stepbar {
+    .stepbar-header {
+      margin-right: .625rem;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+
+  .o-stepbar .stepbar-item {
+    &.done,
+    &.current,
+    &.next {
+      width: 2.5rem;
+      padding: .75rem 0;
+      margin-right: .0625rem;
+      line-height: 1;
+      text-align: center;
+
+      .stepbar-link .step-number {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        width: 2.5rem;
+      }
+    }
+
+    &::after,
+    &.done::after,
+    &.current::after,
+    &.next::after {
+      display: none;
+    }
+
+    &.current .stepbar-link {
+
+      .step-number::after,
+      .step-title {
+        display: none;
+      }
+    }
+
+
   }
 }
 
