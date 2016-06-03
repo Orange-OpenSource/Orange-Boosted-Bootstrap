@@ -6,15 +6,15 @@
   margin-bottom: $spacer;
 
   hr {
-    border-top: 1px solid $gray-light;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    border-top: 1px solid $gray-light;
   }
 
   .nav-link {
     padding: 1.0625rem 0;
-    line-height: 1;
     font-weight: bold;
+    line-height: 1;
 
     &.active {
       color: $brand-primary;
@@ -23,19 +23,19 @@
 }
 
 .o-nav-local.inverse {
-  background-color: black;
+  background-color: #000;
 
   hr {
     border-top: 1px solid $gray-dark;
   }
 
   .nav-link {
-     @include hover-focus {
+    @include hover-focus {
       color: $brand-primary;
     }
 
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
 
     &.active {
       color: $brand-primary;
@@ -49,10 +49,10 @@
   .o-nav-local {
 
     .container {
-      margin: 0;
-      padding: 0;
-      max-width: 100%;
       position: relative;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
     }
 
     .local-select {
@@ -61,38 +61,37 @@
       padding-left: .625rem;
 
       &::after {
-          content: "\e93c";
-          color: black;
-          font-family: "icon-orange";
-          font-size: inherit;
-          padding-left: .375rem;
-          // vertical-align: middle;
-          position: absolute;
-          right: .625rem;
-          top: 1rem;
-        }
+        position: absolute;
+        top: 1rem;
+        right: .625rem;
+        padding-left: .375rem;
+        font-family: "icon-orange";
+        font-size: inherit;
+        color: #000;
+        content: "\e93c";
+      }
     }
 
     .nav-inline {
       position: absolute;
-      left: 0;
       top: 0;
-      margin-top: 1px;
-      width: 100%;
-      background-color: white;
+      left: 0;
       z-index: 20;
+      width: 100%;
+      margin-top: 1px;
+      background-color: #fff;
 
       .nav-item {
-        margin-left: 0;
         display: block;
+        margin-left: 0;
 
         .nav-link {
           @include hover-focus {
+            color: #fff;
             background-color: $brand-primary;
-            color: white;
           }
-          padding-left: .625rem;
           width: 100%;
+          padding-left: .625rem;
         }
       }
     }
