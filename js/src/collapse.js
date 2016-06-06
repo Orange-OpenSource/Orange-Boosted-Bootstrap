@@ -364,16 +364,6 @@ const Collapse = (($) => {
   $collTabPanels.attr({ role: 'tabpanel' })
   $('.panel').attr('role', 'presentation')
 
-  $accordionTabs.on('click', function () {
-    let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
-
-    if (collpanel.hasClass('in')) {
-      $(this).parent().removeClass('panel-chevron-open').addClass('panel-chevron-closed')
-    } else {
-      $(this).parent().removeClass('panel-chevron-closed').addClass('panel-chevron-open')
-    }
-  })
-
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
@@ -394,16 +384,9 @@ const Collapse = (($) => {
     $(Selector.ACCORDION_HEADING).each(function () {
       let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
 
-      if (collpanel.hasClass('in')) {
-        $(this).parent().removeClass('panel-chevron-closed').addClass('panel-chevron-open')
-      } else {
-        $(this).parent().removeClass('panel-chevron-open').addClass('panel-chevron-closed')
-      }
-
       $(this).prepend('<div class=arrow></div>')
     })
   })
-
 
   /**
    * ------------------------------------------------------------------------
