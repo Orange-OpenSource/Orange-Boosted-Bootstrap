@@ -1,29 +1,27 @@
 <h2 id="local">Local navigation bar</h2>
-<p class="lead">Two types of local navigation.</p>
-<h3 id="local1">Default local navigation</h3>
-<div data-example-id="">
-    <div class="o-nav-local">
-        <hr aria-hidden="true">
-        <nav class="container">
-            <ul class="nav nav-inline">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
-            </ul>
-        </nav>
-        <hr aria-hidden="true">
-    </div>
+<div class="o-nav-local">
+    <hr aria-hidden="true">
+    <nav class="container">
+        <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
+        <ul class="nav nav-inline collapse" id="localNav1">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+        </ul>
+    </nav>
+    <hr aria-hidden="true">
 </div>
-<h3 id="local2">Inversed local navigation</h3>
+
 <div data-example-id="">
     <div style="margin: 2rem 0; padding: 2rem 0; background-color: black;">
         <div class="o-nav-local inverse">
             <hr aria-hidden="true">
             <nav class="container">
-                <ul class="nav nav-inline">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+                <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
+                <ul class="nav nav-inline collapse" id="localNav2">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
                 </ul>
             </nav>
             <hr aria-hidden="true">
