@@ -45,7 +45,7 @@
 
 // Mobile
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xs) {
   .o-nav-local {
 
     .container {
@@ -69,7 +69,9 @@
         font-size: inherit;
         color: #000;
         content: "\e93c";
-        // vertical-align: middle;
+
+
+
       }
     }
 
@@ -95,6 +97,12 @@
           padding-left: .625rem;
         }
       }
+    }
+  }
+
+  .o-nav-local.inverse {
+    .local-select::after {
+      color: #fff;
     }
   }
 }

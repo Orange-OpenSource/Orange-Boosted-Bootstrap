@@ -12,8 +12,6 @@ Declare a `.o-stepbar` nav tag contaning the stepbar. Within a `<ol>`ordered lis
 
 Use `.done` and `.current` classes in correct order. There is only one `.current` item. Fill a correct description on each `.stepbar-link` `title`attributes.
 
-In mobile view a `.stepbar-header` is needed before the list, Orange brand labels it "Step".
-
 Be carful to choose short labels when using 5 steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title`attributle of the `<a>`link.
 
 {% example html %}
