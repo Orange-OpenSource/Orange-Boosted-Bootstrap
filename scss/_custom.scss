@@ -164,9 +164,9 @@ $grid-gutter-width: 20px;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "HelvNeueOrange",Helvetica,Arial,-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-$font-family-serif:      "HelvNeueOrange",Helvetica,Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:  "HelvNeueOrange",Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-sans-serif: "HelvNeueOrange","Helvetica Neue",Helvetica,Arial,-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:      "HelvNeueOrange","Helvetica Neue",Helvetica,Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:       $font-family-sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
@@ -621,6 +621,7 @@ $tooltip-opacity:             .9;
 $tooltip-padding-y:           ($spacer / 2);
 $tooltip-padding-x:           ($spacer / 2);
 $tooltip-margin:              5px;
+$tooltip-font-weight:         bold;
 
 $tooltip-arrow-width:         5px;
 $tooltip-arrow-color:         $tooltip-bg;
@@ -633,6 +634,7 @@ $popover-max-width:                   276px;
 $popover-border-width:                $border-width;
 $popover-border-color:                $gray-lighter-o;
 $popover-box-shadow:                  none;
+$popover-font-weight:                 bold;
 
 $popover-title-bg:                    $popover-bg;
 $popover-title-padding-x:             10px;
