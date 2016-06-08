@@ -16,7 +16,6 @@ Be carful to choose short labels when using 5 steps process, otherwise label wil
 
 {% example html %}
 <nav class="o-stepbar">
-    <span class="hidden-md-up stepbar-header">Step</span>
     <ol>
         <li class="done stepbar-item">
             <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
