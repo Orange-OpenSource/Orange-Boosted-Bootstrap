@@ -8,8 +8,8 @@
   .panel-title {
     position: relative;
     margin: 0;
-    line-height: 1;
     font-size: $font-size-base;
+    line-height: 1;
 
     a {
       display: block;
@@ -31,14 +31,6 @@
     .collapsed .arrow {
       transform: rotate(0deg);
     }
-  }
-
-  .panel-chevron-closed  .arrow {
-    // transform: rotate(-180deg);
-  }
-  .panel-chevron-open  .arrow,
-  .collapsed .arrow {
-    // transform: rotate(0deg);
   }
 
   .panel {

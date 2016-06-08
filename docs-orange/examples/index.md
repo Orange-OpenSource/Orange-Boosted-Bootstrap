@@ -5,6 +5,34 @@ title: Examples
 
 [Download the Boosted source code]({{ site.download.source }}) to snag these examples.
 
+## Orange modules
+
+<div class="row bd-examples">
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/module-012-product-details/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-012-product-details.png" alt="">
+    </a>
+    <h4>Product details</h4>
+    <p>Layout for desktop and mobile shop.</p>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/module-002-quick-links/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-002-quick-links.png" alt="">
+    </a>
+    <h4>Quick links</h4>
+    <p></p>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/module-006-content-panel/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-006-content-panels.png" alt="">
+    </a>
+    <h4>Content panels</h4>
+    <p></p>
+  </div>
+</div>
+
 ## Orange brand
 
 <div class="row bd-examples">
