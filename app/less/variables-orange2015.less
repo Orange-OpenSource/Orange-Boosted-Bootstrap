@@ -141,6 +141,9 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 /// for REM size
+@padding-generic: 1rem 2rem;//10px 20px;
+@padding-sm-generic : .6rem 1rem;
+@padding-lg-generic : 1.5rem 3rem;
 @padding-base-vertical: 0.8rem;//8px;
 @padding-base-horizontal: 2rem;//20px;
 
@@ -195,7 +198,7 @@
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
-/// for REM size
+/// for REM size      
 @btn-font-size: 1.6rem;
 @btn-font-size-sm: 1.4rem;
 @btn-font-size-lg: 1.6rem;
@@ -525,6 +528,9 @@
 @o-nav-tabsackground-color: @gray-base;
 @o-nav-tabsorder-color: @gray-base;
 
+// for REM size
+@nav-tab-margin: .8rem;
+
 @nav-tabs-border-color: @gray-base;
 @nav-tabs-link-hover-border-color: @gray-base;
 @nav-tabs-link-hover-bg: @gray-base;
@@ -536,24 +542,6 @@
 @nav-tabs-justified-link-border-color: @gray-base;
 @nav-tabs-justified-active-link-border-color: @gray-base;
 
-@o-nav-tabs-arrow-color: @gray-base;
-@o-nav-tabs-arrow-width: 14px;
-@o-nav-tabs-arrow-height: 7px;
-@o-nav-tabs-border-color: @gray-base;
-
-@o-nav-tabs-bg: @brand-orange-white;
-@o-nav-tabs-color: @gray-base;
-@o-nav-tabs-active-bg: @gray-base;
-@o-nav-tabs-active-color: @brand-orange-white;
-
-
-/// o-nav-tabs outer arrow width
-@o-nav-tabs-arrow-outer-width:           (@o-nav-tabs-arrow-width + 1);
-/// o-nav-tabs outer arrow height
-@o-nav-tabs-arrow-outer-height:           (@o-nav-tabs-arrow-height + 1);
-/// o-nav-tabs outer arrow color
-@o-nav-tabs-arrow-outer-color:           fadein(@o-nav-tabs-border-color, 0%);
-
 //== Pills
 @nav-pills-border-radius: @border-radius-base;
 @nav-pills-active-link-hover-bg: @gray-base;
@@ -564,12 +552,18 @@
 @nav-local-arrow-color: @brand-orange-white;
 @nav-local-arrow-width: 10px;
 @nav-local-border-color: @gray-light;
+// for REM size  
+@nav-local-padding-vertical: 1.7rem;
 
 @nav-local-arrow-outer-width:           (@nav-local-arrow-width + 1);
 @nav-local-arrow-outer-color:           fadein(@nav-local-border-color, 0%);
 
 //== Step process bar
 @o-stepbar-height: 4rem;
+@o-stepbar-mobile-width: 5.6rem;    
+@o-stepbar-mobile-margin-right: 1rem;    
+@o-stepbar-mobile-padding-vertical: 1.2rem;
+@o-stepbar-mobile-last-width: 7.2rem;
 @o-stepbar-arrow-width: 1.6rem;
 
 //== Pagination
@@ -593,7 +587,7 @@
 @pagination-width-lg: 3.75rem;
 @pagination-width-sm: 1.875rem;
 
-@pagination-padding: 1rem 2rem;
+@pagination-padding: @padding-generic;
 
 
 //== Pager
