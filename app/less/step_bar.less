@@ -2,15 +2,17 @@
 // Orange stepbar
 //
 
-// inline svgs
+// url encoded colors
+@arrow-black: '%23000000';
+@arrow-gray: '%23dddddd';
+@arrow-orange: '%23f16e00';
 
-@arrow-black-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23000000%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E";
+// generate url encoded svg with color
+.arrow-svg (@color) {
+@arrow-svg: '%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20id%3D%22path4690%22%20d%3D%22M%200%200%20L%2015%2020%20L%200%2040%20Z%22%20style%3D%22fill%3A@{color}%3B%22%2F%3E%0A%20%20%3Cpath%20id%3D%22path4700%22%20d%3D%22M%201%200%20L%200%200%20L%2015%2020%20L%200%2040%20L%201%2040%20L%2016%2020%20Z%22%20style%3D%22fill%3A%23ffffff%3B%22%2F%3E%0A%3C%2Fsvg%3E';
+}
 
-@arrow-orange-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23f16e00%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E";
-
-@arrow-grey-svg: "%3Csvg%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20%20%20width%3D%22450%22%0A%20%20%20height%3D%221200%22%0A%20%20%20viewBox%3D%220%200%20450%201200%22%3E%0A%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23dddddd%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A1px%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C1200%20337.49996%2C600.86279%200%2C0%20M%200%2C1200%200%2C599.13714%20M%200%2C600.86279%200%2C0%22%2F%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%3Bstroke-width%3A0%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-opacity%3A1%22%0A%20%20%20%20%20%20%20d%3D%22M%200%2C0%20112.50002%2C0%20450%2C600.86279%20112.50002%2C1200%200%2C1200%20337.49998%2C600.86279%200%2C0%22%2F%3E%0A%3C%2Fsvg%3E";
-
-.stepbar-arrow (@svg) {
+.stepbar-arrow (@color) {
   &::after {
     position: absolute;
     top: 0;
@@ -20,8 +22,9 @@
     width: @o-stepbar-arrow-width;
     height: @o-stepbar-height;
     content: "";
-    background-image: url("data:image/svg+xml,@{svg}");
     background-size: @o-stepbar-arrow-width @o-stepbar-height;
+    .arrow-svg(@color);
+    background-image: url("data:image/svg+xml,@{arrow-svg}");
   }
 }
 
@@ -35,12 +38,13 @@
   }
 
   .stepbar-item {
-    .stepbar-arrow(@arrow-grey-svg);
+    .stepbar-arrow(@arrow-gray);
     position: relative;
     float: left;
-    padding: @padding-base-vertical ( @padding-base-horizontal / 2 ) @padding-base-vertical (( @padding-base-horizontal / 2 ) + @o-stepbar-arrow-width);
+    padding: @padding-large-vertical ( @padding-base-horizontal / 2 ) @padding-large-vertical (( @padding-base-horizontal / 2 ) + @o-stepbar-arrow-width);
     font-weight: bold;
     font-size: @navbar-font-size;
+    line-height: @navbar-font-size;
     color: @brand-orange-black;
     white-space: nowrap;
     list-style: none;
@@ -57,26 +61,60 @@
     }
 
     &.done {
-      .stepbar-arrow(@arrow-black-svg);
+      .stepbar-arrow(@arrow-black);
       background-color: @brand-orange-black;
       .stepbar-link {
         color: @brand-orange-white;
         &:focus,
         &:hover {
-          color: @brand-primary;            
+          color: @brand-primary;
         }
       }
     }
 
     &.current {
-      .stepbar-arrow(@arrow-orange-svg);
+      .stepbar-arrow(@arrow-orange);
       background-color: @brand-primary;
       .stepbar-link {
         color: @brand-orange-white;
       }
     }
 
+    @media(max-width: @screen-md-max) {
+      &.done,
+      &.next {
+        // width: @pagination-width;
+        width: 5.6rem;
+        // margin-right: .1rem;
+        line-height: @font-size-base-up;
+        text-align: center;
+        padding: 1.2rem 0;
+        padding-left: 1.6rem;
+      }
+
+      &:first-child,
+      &:last-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        width: 7.2rem;
+      }
+
+      &.done .step-title,
+      &.done .step-number::after,
+      &.next .step-title,
+      &.next .step-number::after{
+        display: none;
+      }
+    }
+
     @media(max-width: @screen-sm-max) {
+      &.done,
+      &.next {
+        padding-left: 0;
+      }
+
       &::after,
       &.done::after,
       &.current::after {
@@ -135,7 +173,30 @@
   }
 }
 
-@media(min-width: @screen-sm) {
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .o-stepbar {
+    .stepbar-item.current + .stepbar-item.next{
+      width: 5.6rem;
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .o-stepbar {
+    .stepbar-item,
+    .stepbar-item.current,
+    .stepbar-item.done,
+    .stepbar-item.next,
+    .stepbar-item.current + .stepbar-item.next
+    .stepbar-item:first-child,
+    .stepbar-item:last-child{
+      width: @pagination-width;
+    }
+  }
+}
+
+
+@media(min-width: @screen-md) {
   // one item
   .stepbar-item:nth-child(1):nth-last-child(1) {
     width: 100%;
