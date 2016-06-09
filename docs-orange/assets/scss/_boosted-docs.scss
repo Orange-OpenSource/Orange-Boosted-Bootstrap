@@ -45,25 +45,30 @@
   background-color: #000;
   color: #fff;
   border-top: 2px solid $gray-dark;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
+  padding: 0;
 
-  @include media-breakpoint-up(md) {
+  h1 {
+    font-size: $font-size-h1;
+    font-weight: bold;
+    margin: 2.6875rem 0;
+  }
+
+  p {
+    font-size: $font-size-base;
+  }
+
+  @include media-breakpoint-down(xs) {
     h1 {
-      font-size: $font-size-h1;
+      font-size: $font-size-h2;
+      font-weight: bold;
+      text-align: left;
+      line-height: 1;
+      margin: 1.25rem 0;
     }
 
     p {
       font-size: $font-size-base;
     }
-  }
-
-  h1 {
-    font-size: $font-size-h1;
-  }
-
-  p {
-    font-size: $font-size-base;
   }
 }
 
@@ -219,9 +224,6 @@ $back-top-btn-height: 3.75rem;
 @include media-breakpoint-down(sm) {
   body {
       margin-bottom: $back-top-btn-height;
-  }
-  .container {
-    margin: 0 .625rem;
   }
 }
 

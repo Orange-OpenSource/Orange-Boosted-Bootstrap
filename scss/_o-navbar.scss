@@ -135,6 +135,23 @@
   .navbar {
     min-height: $navbar-height-sm;
 
+    .navbar-toggler {
+      float: right;
+      padding: .875rem;
+      font-size: 1.25rem;
+      background-color: transparent;
+      background-image: none;
+      border: 0;
+
+      @include hover-focus {
+        background-color: $brand-primary;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
     .container {
       max-width: none;
       margin: 0;
@@ -152,14 +169,16 @@
       .nav-item {
         display: block;
         float: none;
-        padding: calc((#{$font-size-h1} - #{$font-size-h5}) / 2) 0;
+        padding: 1rem 0;
         padding-left: .625rem;
         margin-left: 0;
         font-size: $font-size-h5;
         line-height: 1;
         border-top: 1px solid $gray-dark;
 
-        .nav-link {
+        .nav-link,
+        .dropdown-toggle,
+        .nav-item-cdu {
           margin-top: 0;
         }
 
@@ -173,6 +192,10 @@
           content: "\e93e";
         }
 
+        .nav-link.active::before {
+          display: none;
+        }
+
         .nav-link.icon {
           padding: .625rem;
           margin-top: 0;
@@ -180,6 +203,10 @@
 
         &:first-child {
           margin-left: 0;
+        }
+
+        .nav-item-cdu {
+          float: none;
         }
       }
 
@@ -226,23 +253,10 @@
 
 }
 
-.navbar-toggler {
-  padding: .625rem;
-  font-size: calc(#{$font-size-h4} - 1px);
-  background-color: transparent;
-  background-image: none;
-  border: 0;
 
-  @include hover-focus {
-    background-color: $brand-primary;
-  }
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
-  &:focus {
-    outline: 0;
-  }
-}
 
 .navbar-brand {
   @include focus {
@@ -280,24 +294,24 @@
   padding-left: $navbar-padding-horizontal;
 }
 
-.navbar-toggle-complement {
-  position: relative;
-  float: right;
-}
+// .navbar-toggle-complement {
+//   position: relative;
+//   float: right;
+// }
 
-.navbar-toggle-complement .navbar-nav {
-  margin: $padding-base-vertical 0 0;
-}
+// .navbar-toggle-complement .navbar-nav {
+//   margin: $padding-base-vertical 0 0;
+// }
 
-.navbar-toggle-complement li {
-  float: left;
-}
+// .navbar-toggle-complement li {
+//   float: left;
+// }
 
-@include media-breakpoint-up(md) {
-  .navbar-toggle-complement {
-    display: none;
-  }
-}
+// @include media-breakpoint-up(md) {
+//   .navbar-toggle-complement {
+//     display: none;
+//   }
+// }
 
 // Navbar nav links
 //

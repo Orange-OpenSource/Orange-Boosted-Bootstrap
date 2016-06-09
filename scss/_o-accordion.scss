@@ -4,42 +4,33 @@
 
 .o-accordion,
 .o-accordion-triangle {
+
   .panel-title {
     position: relative;
-    font-size: $font-size-base;
-  }
-
-
-  .panel-title {
     margin: 0;
+    font-size: $font-size-base;
+    line-height: 1;
+
+    a {
+      display: block;
+      padding: 1.0625rem 0;
+    }
+
     .arrow {
       position: absolute;
-      top: 2px;
+      top: 1.1875rem;
       right: 10px;
       border-top: 10px solid #000;
       border-right: 7px solid transparent;
       border-left: 7px solid transparent;
       transition-timing-function: ease;
       transition-duration: .5s;
-    }
-    &.panel-chevron-open {
-      padding-right: 20px;
-      background-repeat: no-repeat;
-      background-position: 0 50%;
+      transform: rotate(180deg);
     }
 
-    &.panel-chevron-closed {
-      padding-right: 20px;
-      background-repeat: no-repeat;
-      background-position: 0 50%;
+    .collapsed .arrow {
+      transform: rotate(0deg);
     }
-  }
-
-  .panel-chevron-closed  .arrow {
-    // transform: rotate(-180deg);
-  }
-  .panel-chevron-open  .arrow {
-    transform: rotate(180deg);
   }
 
   .panel {
@@ -48,7 +39,7 @@
   }
 
   .panel-default > .panel-heading {
-    padding: .625rem 0;
+    padding: 0;
 
     + .panel-collapse .panel-body {
       padding: .625rem;

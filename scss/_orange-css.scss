@@ -267,11 +267,102 @@ caption {
 //
 
 .card {
+  background-color: #000;
   border-color: #000;
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   .card-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 4.75rem;
+    padding: .625rem .75rem;
+    overflow: hidden;
+
+    .card-title {
+      margin-bottom: 0;
+      line-height: 1;
+    }
+  }
+
+  .card-block,
+  .card-block .card-title,
+  .card-block .card-title a {
     color: #fff;
     background-color: #000;
+  }
+
+}
+
+@include media-breakpoint-up(xs) {
+  .card {
+    height: 8.875rem;
+
+    .card-block {
+      min-height: 3.75rem;
+
+      .card-title {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .card {
+    height: 12.1875rem;
+
+    .card-block {
+      min-height: 3.75rem;
+
+      .card-title {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .card {
+    height: 8.875rem;
+
+    .card-block {
+      min-height: 3.75rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .card {
+    height: 12.1875rem;
+
+    .card-block {
+      min-height: 4.75rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card {
+    height: 13.4375rem;
+
+    .card-block {
+      min-height: 4.75rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .card {
+    height: 15rem;
+
+    .card-block {
+      min-height: 4.75rem;
+    }
   }
 }
 
