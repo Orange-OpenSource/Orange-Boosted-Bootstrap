@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.0-alpha.3 - Orange Boosted with Boostrap
+ boosted - v3.3.0-alpha.4 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -1266,15 +1266,15 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 50px;
+  font-size: 34px;
 }
 h2,
 .h2 {
-  font-size: 40px;
+  font-size: 30px;
 }
 h3,
 .h3 {
-  font-size: 28px;
+  font-size: 24px;
 }
 h4,
 .h4 {
@@ -1282,11 +1282,11 @@ h4,
 }
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 p {
   margin: 0 0 10px;
