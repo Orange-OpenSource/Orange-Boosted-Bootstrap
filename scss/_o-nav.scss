@@ -39,53 +39,6 @@
   }
 }
 
-//
-//  pointed tab
-//
-
-.o-nav-tabs {
-  @include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
-
-  position: relative;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: normal;
-  line-height: $line-height-base;
-  color: $o-nav-tabs-color;
-  text-align: left;
-  white-space: normal;
-  background-color: $o-nav-tabs-bg;
-  background-clip: padding-box;
-  border: 2px solid $o-nav-tabs-border-color;
-  border-radius: $border-radius-lg;
-
-  .nav-item .nav-link {
-    position: relative;
-
-    &.active {
-      color: $o-nav-tabs-active-color;
-      background-color: $o-nav-tabs-active-bg;
-    }
-
-    @include hover {
-      &.active {
-        color: $o-nav-tabs-active-color;
-        background-color: $o-nav-tabs-active-bg;
-      }
-    }
-
-    @include focus {
-      color: $o-nav-tabs-active-color;
-      background-color: $o-nav-tabs-active-bg;
-    }
-  }
-}
-
-.o-nav-tabs-content {
-  padding: 9px 14px;
-}
-
-
 // Pills
 // -------------------------
 .nav-pills {
