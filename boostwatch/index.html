@@ -110,7 +110,7 @@
         <div class="col-md-9" role="main">
           <div class="bs-docs-section clearfix">
   <h1 id="modal" class="page-header">Modal window</h1>
-  <p class="lead">Modal window or popin.</p>  
+  <p class="lead">Modal window or popin.</p>
   <div class="" data-example-id="">
     <!-- Button trigger modal -->
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -122,12 +122,12 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" >&times;<span class="sr-only">fermer la fenêtre</span></button>
+            <button type="button" class="close" data-dismiss="modal">&times;<span class="sr-only">fermer la fenêtre</span></button>
             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
           <div class="modal-body">
-           <p>This is a accessible modal window, <a href="#">a test link</a> ...</p>
-              <p>An other paragraph of text for this modal window</p>
+            <p>This is a accessible modal window, <a href="#">a test link</a> ...</p>
+            <p>An other paragraph of text for this modal window</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -135,11 +135,9 @@
         </div>
       </div>
     </div>
-            <!-- /step bar -->
+    <!-- /step bar -->
   </div>
 </div>
-
-
 <!-- Tables
       ================================================== -->
       <div class="bs-docs-section">
@@ -502,340 +500,261 @@
 
 <div class="bs-docs-section clearfix">
 <h2 id="local">Local navigation</h2>
-    <ul class="nav nav-local">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-    </ul>
+    <div class="o-nav-local">
+        <hr aria-hidden="true">
+        <nav class="container">
+            <ul class="nav nav-local">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+        </nav>
+        <hr aria-hidden="true">
+    </div>
+    <div style="margin: 2rem 0; padding: 2rem 0; background-color: black;">
+        <div class="o-nav-local inverse">
+            <hr aria-hidden="true">
+            <nav class="container">
+                <ul class="nav nav-local">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>
+            </nav>
+            <hr aria-hidden="true">
+        </div>
+    </div>
 </div>
 
 
 <div class="bs-docs-section clearfix">
-  	<!-- Nav tabs A-->
-<h1 id="tab" class="page-header">tabs bars</h1>
-      <p class="lead">Two types of Tabs bar.</p>
-    <h2 id="tabA">Default tabs bar</h2>
-    <div class="" data-example-id="">
-      <div class="container-fluid">
-        <div class="row">
-			<ul class="nav nav-tabs" role="tablist">
-				<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-				<li><a href="#profile" data-toggle="tab">Profile</a></li>
-				<li><a href="#messages" data-toggle="tab">Messages</a></li>
-				<li><a href="#settings" data-toggle="tab">Settings</a></li>
-			</ul>
-			<div class="tab-content">
-				<div class="tab-pane active" id="home">Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. In iaculis volutpat quam, non
-					suscipit arcu accumsan at. Aliquam pellentesque.<a href="#">test focus 4</a></div>
-				<div class="tab-pane" id="profile">Sed ut perspiciatis unde omnis iste natus error sit 
-					voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-					eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-					sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-					Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-					adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore 
-					magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
-					ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-					Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
-					molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
-				<div class="tab-pane" id="messages">At vero eos et accusamus et iusto odio dignissimos ducimus 
-					qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas 
-					molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa 
-					qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
-					rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-					eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, 
-					omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et 
-					aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae 
-					sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
-					ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
-				<div class="tab-pane" id="settings">Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. In iaculis volutpat quam, non
-					suscipit arcu accumsan at. Aliquam pellentesque.</div>
-			</div>
-            
-            
-			<!-- Nav content without border-->
-			<div class="page-header">
-				<h2 id="tab-clear">Content without border</h2>
-			</div>
-            <ul class="nav nav-tabs" role="tablist">
-				<li class="active"><a href="#home3" data-toggle="tab">Home</a></li>
-				<li><a href="#profile3" data-toggle="tab">Profile</a></li>
-				<li><a href="#messages3" data-toggle="tab">Messages</a></li>
-				<li><a href="#settings3" data-toggle="tab">Settings</a></li>
-			</ul>
-			<div class="tab-content tab-content-clear">
-				<div class="tab-pane active" id="home3">Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. In iaculis volutpat quam, non
-					suscipit arcu accumsan at. Aliquam pellentesque.<a href="#">test focus 4</a></div>
-				<div class="tab-pane" id="profile3">Sed ut perspiciatis unde omnis iste natus error sit 
-					voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-					eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-					sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-					Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-					adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore 
-					magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
-					ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-					Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
-					molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
-				<div class="tab-pane" id="messages3">At vero eos et accusamus et iusto odio dignissimos ducimus 
-					qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas 
-					molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa 
-					qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
-					rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-					eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, 
-					omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et 
-					aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae 
-					sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
-					ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
-				<div class="tab-pane" id="settings3">Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. In iaculis volutpat quam, non
-					suscipit arcu accumsan at. Aliquam pellentesque.</div>
-			</div>            
-
-			<!-- Nav tabs B-->
-			<div class="page-header">
-				<h2 id="tabB">Orange pointed tabs</h2>
-			</div>
-			<ul class="nav nav-tabs o-nav-tabs">
-				<li class="active"><a href="#home2" data-toggle="tab">Home</a><div class="arrow" aria-hidden="true"></div></li>
-				<li><a href="#profile2" data-toggle="tab">Profile</a><div class="arrow" aria-hidden="true"></div></li>
-				<li><a href="#messages2" data-toggle="tab">Messages</a><div class="arrow" aria-hidden="true"></div></li>
-				<li><a href="#settings2" data-toggle="tab">Settings</a><div class="arrow" aria-hidden="true"></div></li>
-			</ul>
-			<div class="tab-content o-nav-tabs-content">
-				<div class="tab-pane active" id="home2">Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. In iaculis volutpat quam, non
-					suscipit arcu accumsan at. Aliquam pellentesque.</div>
-				<div class="tab-pane" id="profile2">Sed ut perspiciatis unde omnis iste natus error sit 
-					voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-					eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-					sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-					Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-					adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore 
-					magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
-					ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-					Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
-					molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-				</div>
-				<div class="tab-pane" id="messages2">At vero eos et accusamus et iusto odio dignissimos ducimus 
-					qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas 
-					molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa 
-					qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
-					rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-					eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, 
-					omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et 
-					aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae 
-					sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
-					ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus 
-					asperiores repellat
-				</div>
-				<div class="tab-pane" id="settings2">Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. In iaculis volutpat quam, non
-					suscipit arcu accumsan at. Aliquam pellentesque.
-				</div>
-            </div>
-          </div>
+  <!-- Nav tabs A -->
+  <h1 id="tab" class="page-header">tabs bars</h1>
+  <p class="lead">Two types of Tabs bar.</p>
+  <h2 id="tabA">Default tabs bar</h2>
+  <div class="" data-example-id="">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+          <li><a href="#profile" data-toggle="tab">Profile</a></li>
+          <li><a href="#messages" data-toggle="tab">Messages</a></li>
+          <li><a href="#settings" data-toggle="tab">Settings</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at.
+            Aliquam pellentesque.<a href="#">test focus 4</a></div>
+          <div class="tab-pane" id="profile">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+            ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+          <div class="tab-pane" id="messages">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+            culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est
+            et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus
+            id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+            maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
+          <div class="tab-pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at.
+            Aliquam pellentesque.</div>
         </div>
+
+
+        <!-- Nav content without border -->
+        <div class="page-header">
+          <h2 id="tab-clear">Content without border</h2>
+        </div>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#home3" data-toggle="tab">Home</a></li>
+          <li><a href="#profile3" data-toggle="tab">Profile</a></li>
+          <li><a href="#messages3" data-toggle="tab">Messages</a></li>
+          <li><a href="#settings3" data-toggle="tab">Settings</a></li>
+        </ul>
+        <div class="tab-content tab-content-clear">
+          <div class="tab-pane active" id="home3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at.
+            Aliquam pellentesque.<a href="#">test focus 4</a></div>
+          <div class="tab-pane" id="profile3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+            ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+          <div class="tab-pane" id="messages3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+            culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est
+            et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus
+            id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+            molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+            maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
+          <div class="tab-pane" id="settings3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at.
+            Aliquam pellentesque.</div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>
-
-
 <div class="bs-docs-section clearfix">
   <h1 class="page-header" id="accordion">Accordions</h1>
   <p class="lead">Three types of accordions.</p>
   <div class="container-fluid">
     <div class="row">
-			<h2 id="accordion1">one at a time accordion:</h2>
-			<div class="o-accordion panel-group" id="accordion-1">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title" id="accordion-1-title-1">
+      <h2 id="accordion1">one at a time accordion:</h2>
+      <div class="o-accordion panel-group" id="accordion-1">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-1-title-1">
 							<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne"> Collapsible Group Item #1 </a>
 						</h4>
-					</div>
-					<div id="collapseOne" class="panel-collapse collapse in">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-							moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
-							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-							sunt aliqua put a bird on it squid single-origin coffee nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-							labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
-							excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably
-							haven't heard of them accusamus labore sustainable VHS.</div>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title" id="accordion-1-title-2">
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt <a href="#">test focus 2</a>              sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+              denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-1-title-2">
 							<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo"> Collapsible Group Item #2 </a>
 						</h4>
-					</div>
-					<div id="collapseTwo" class="panel-collapse collapse">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-							moon officia aute, non cupidatat skateboard dolor brunch. Food
-							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-							sunt aliqua put a bird on it squid single-origin coffee nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
-							excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably
-							haven't heard of them accusamus labore sustainable VHS.</div>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title" id="accordion-1-title-3">
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+              tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>              excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+              you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-1-title-3">
 							<a data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree"> Collapsible Group Item #3 </a>
 						</h4>
-					</div>
-					<div id="collapseThree" class="panel-collapse collapse">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-							moon officia aute, non cupidatat skateboard dolor brunch. Food
-							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-							sunt aliqua put a bird on it squid single-origin coffee nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-							excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably
-							haven't heard of them accusamus labore sustainable VHS.</div>
-					</div>
-				</div>
-			</div>
-    </div> <!-- row -->
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+              tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+              of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row -->
     <div class="row" id="section-2">
-			<h2 id="accordion2">multiple-opened-items version:</h2>
+      <h2 id="accordion2">multiple-opened-items version:</h2>
       <div class="o-accordion panel-group" id="accordion-2" data-multipleAtATime="true">
-				<div class="panel multipleAtATime panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title" id="accordion-2-title-1">
+        <div class="panel multipleAtATime panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-2-title-1">
 							<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse2One"> Collapsible Group Item #1 </a>
 						</h4>
-					</div>
-					<div id="collapse2One" class="panel-collapse collapse in">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-							moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
-							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-							sunt aliqua put a bird on it squid single-origin coffee nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-							labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
-							excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably
-							haven't heard of them accusamus labore sustainable VHS.</div>
-					</div>
-				</div>
-				<div class="panel multipleAtATime panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title" id="accordion-2-title-2">
+          </div>
+          <div id="collapse2One" class="panel-collapse collapse in">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt <a href="#">test focus 2</a>              sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+              denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+        <div class="panel multipleAtATime panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-2-title-2">
 							<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse2Two"> Collapsible Group Item #2 </a>
 						</h4>
-					</div>
-					<div id="collapse2Two" class="panel-collapse collapse">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-							moon officia aute, non cupidatat skateboard dolor brunch. Food
-							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-							sunt aliqua put a bird on it squid single-origin coffee nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
-							excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably
-							haven't heard of them accusamus labore sustainable VHS.</div>
-					</div>
-				</div>
-				<div class="panel multipleAtATime panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title" id="accordion-2-title-3">
+          </div>
+          <div id="collapse2Two" class="panel-collapse collapse">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+              tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>              excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+              you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+        <div class="panel multipleAtATime panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-2-title-3">
 							<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse2Three"> Collapsible Group Item #3 </a>
 						</h4>
-					</div>
-					<div id="collapse2Three" class="panel-collapse collapse">
-						<div class="panel-body">Anim pariatur cliche reprehenderit,
-							enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-							moon officia aute, non cupidatat skateboard dolor brunch. Food
-							truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-							sunt aliqua put a bird on it squid single-origin coffee nulla
-							assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-							labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-							excepteur butcher vice lomo. Leggings occaecat craft beer
-							farm-to-table, raw denim aesthetic synth nesciunt you probably
-							haven't heard of them accusamus labore sustainable VHS.</div>
-					</div>
-			   </div>
+          </div>
+          <div id="collapse2Three" class="panel-collapse collapse">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+              tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+              of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
       </div>
-    </div> <!-- row -->	
+    </div>
+    <!-- row -->
     <div class="row" id="section-3">
-		<h2 id="accordion3">orange caret version:</h2>
-    <div class="o-accordion o-accordion-orange-style panel-group" id="accordion-3">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title" id="accordion-3-title-1">
+      <h2 id="accordion3">orange triangle version:</h2>
+      <div class="o-accordion-triangle panel-group" id="accordion-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-3-title-1">
 						<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3One"> Collapsible Group Item #1 </a>
 					</h4>
-				</div>
-				<div id="collapse3One" class="panel-collapse collapse in">
-					<div class="panel-body">Anim pariatur cliche reprehenderit,
-						enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-						moon officia aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food
-						truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-						sunt aliqua put a bird on it squid single-origin coffee nulla
-						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-						labore wes anderson cred nesciunt <a href="#">test focus 2</a> sapiente ea proident. Ad vegan
-						excepteur butcher vice lomo. Leggings occaecat craft beer
-						farm-to-table, raw denim aesthetic synth nesciunt you probably
-						haven't heard of them accusamus labore sustainable VHS.</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title" id="accordion-3-title-2">
+          </div>
+          <div id="collapse3One" class="panel-collapse collapse in">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat <a href="#">test focus 1</a> skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt <a href="#">test focus 2</a>              sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+              denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-3-title-2">
 						<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Two"> Collapsible Group Item #2 </a>
 					</h4>
-				</div>
-				<div id="collapse3Two" class="panel-collapse collapse">
-					<div class="panel-body">Anim pariatur cliche reprehenderit,
-						enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-						moon officia aute, non cupidatat skateboard dolor brunch. Food
-						truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-						sunt aliqua put a bird on it squid single-origin coffee nulla
-						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-						labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>
-						excepteur butcher vice lomo. Leggings occaecat craft beer
-						farm-to-table, raw denim aesthetic synth nesciunt you probably
-						haven't heard of them accusamus labore sustainable VHS.</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title" id="accordion-3-title-3">
+          </div>
+          <div id="collapse3Two" class="panel-collapse collapse">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+              tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan <a href="#">test focus 3</a>              excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+              you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" id="accordion-3-title-3">
 						<a data-toggle="collapse" data-parent="#accordion-3" href="#collapse3Three"> Collapsible Group Item #3 </a>
 					</h4>
-				</div>
-				<div id="collapse3Three" class="panel-collapse collapse">
-					<div class="panel-body">Anim pariatur cliche reprehenderit,
-						enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-						moon officia aute, non cupidatat skateboard dolor brunch. Food
-						truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-						sunt aliqua put a bird on it squid single-origin coffee nulla
-						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-						labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-						excepteur butcher vice lomo. Leggings occaecat craft beer
-						farm-to-table, raw denim aesthetic synth nesciunt you probably
-						haven't heard of them accusamus labore sustainable VHS.</div>
-				</div>
-		  </div>
+          </div>
+          <div id="collapse3Three" class="panel-collapse collapse">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+              aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+              tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+              helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+              of them accusamus labore sustainable VHS.</div>
+          </div>
+        </div>
+      </div>
     </div>
-	 </div> <!-- row -->				
-  </div> <!-- container -->
+    <!-- row -->
+  </div>
+  <!-- container -->
 </div>
 <div class="bs-docs-section clearfix">
   <h1 id="footer" class="page-header">Footer</h1>
@@ -943,34 +862,34 @@
             <span class="hidden-md hidden-lg stepbar-header">Step</span>
             <ol>
                 <li class="done stepbar-item">
-                    <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                    <a class="stepbar-link" href="#" title="Step 1 : Sign in">
                         <span class="step-number">1</span>
-                        <span class="step-title">Voluptatem</span>
+                        <span class="step-title">Sign in</span>
                     </a>
                 </li>
                 <li class="stepbar-item current">
-                    <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                    <div class="stepbar-link" title="Step 2 : Review">
                         <span class="step-number">2</span>
-                        <span class="step-title">Aperiam</span>
-                    </a>
+                        <span class="step-title">Review</span>
+                    </div>
                 </li>
                 <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
+                    <div class="stepbar-link" title="Step 3 : Delivery">
                         <span class="step-number">3</span>
-                        <span class="step-title">Accusantinum</span>
-                    </a>
+                        <span class="step-title">Delivery</span>
+                    </div>
                 </li>
                 <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 4 : Ipsam">
+                    <div class="stepbar-link" title="Step 4 : Payment">
                         <span class="step-number">4</span>
-                        <span class="step-title">Ipsam</span>
-                    </a>
+                        <span class="step-title">Payment</span>
+                    </div>
                 </li>
                 <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 5 : Aspernatur">
+                    <div class="stepbar-link" title="Step 5 : Place order">
                         <span class="step-number">5</span>
-                        <span class="step-title">Aspernatur</span>
-                    </a>
+                        <span class="step-title">Place order</span>
+                    </div>
                 </li>
             </ol>
         </nav>
@@ -1027,7 +946,7 @@
                   </ul>
                 </div>
               </div>
-              <div style="" aria-expanded="true" class="search-bar collapse in" id="collapseSearchBar">
+              <div style="" role="search" aria-expanded="true" class="search-bar collapse in" id="collapseSearchBar">
                 <div class="container-fluid">
                     <form class="form-inline" role="search">
                         <div class="form-group">
@@ -1057,119 +976,101 @@
 
         <div class="row">
           <!-- <div class="col-lg-6"> -->
-<h2>Default</h2>
+        <h2>Default</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-default">Default</button>
-              <button type="button" class="btn btn-primary">Primary</button>
-              <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-info">Info</button>
-              <button type="button" class="btn btn-warning">Warning</button>
-              <button type="button" class="btn btn-danger">Danger</button>
-              <button type="button" class="btn btn-link">Link</button>
+              <button type="button" class="btn btn-default">Submit</button>
+              <button type="button" class="btn btn-info">Submit</button>
+              <button type="button" class="btn btn-primary">Buy now</button>
+              <button type="button" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-danger">Delete</button>
             </p>
         <h2>Hover</h2>
-
             <p class="bs-component">
-              <button type="button" class="btn btn-default hover">Default</button>
-              <button type="button" class="btn btn-primary hover">Primary</button>
-              <button type="button" class="btn btn-success hover">Success</button>
-              <button type="button" class="btn btn-info hover">Info</button>
-              <button type="button" class="btn btn-warning hover">Warning</button>
-              <button type="button" class="btn btn-danger hover">Danger</button>
-              <button type="button" class="btn btn-link hover">Link</button>
+              <button type="button" class="btn hover btn-default">Submit</button>
+              <button type="button" class="btn hover btn-info">Submit</button>
+              <button type="button" class="btn hover btn-primary">Buy now</button>
+              <button type="button" class="btn hover btn-success">Save</button>
+              <button type="button" class="btn hover btn-danger">Delete</button>
             </p>
          <h2>Pressed</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-default active">Default</button>
-              <button type="button" class="btn btn-primary active">Primary</button>
-              <button type="button" class="btn btn-success active">Success</button>
-              <button type="button" class="btn btn-info active">Info</button>
-              <button type="button" class="btn btn-warning active">Warning</button>
-              <button type="button" class="btn btn-danger active">Danger</button>
-              <button type="button" class="btn btn-link active">Link</button>
+              <button type="button" class="btn active btn-default">Submit</button>
+              <button type="button" class="btn active btn-info">Submit</button>
+              <button type="button" class="btn active btn-primary">Buy now</button>
+              <button type="button" class="btn active btn-success">Save</button>
+              <button type="button" class="btn active btn-danger">Delete</button>
             </p>
          <h2>Disabled</h2>
 
             <p class="bs-component">
-              <button type="button" class="btn btn-default disabled" disabled="disabled">Default</button>
-              <button type="button" class="btn btn-primary disabled" disabled="disabled">Primary</button>
-              <button type="button" class="btn btn-success disabled" disabled="disabled">Success</button>
-              <button type="button" class="btn btn-info disabled" disabled="disabled">Info</button>
-              <button type="button" class="btn btn-warning disabled" disabled="disabled">Warning</button>
-              <button type="button" class="btn btn-danger disabled" disabled="disabled">Danger</button>
-              <button type="button" class="btn btn-link disabled" disabled="disabled">Link</button>
+
+              <button type="button" class="btn disabled btn-default">Submit</button>
+              <button type="button" class="btn disabled btn-info">Submit</button>
+              <button type="button" class="btn disabled btn-primary">Buy now</button>
+              <button type="button" class="btn disabled btn-success">Save</button>
+              <button type="button" class="btn disabled btn-danger">Delete</button>
             </p>
 
          <div style="background-color: black; padding: 2rem;">
-             <h2 style="color: white;">Default</h2>
+
+        <h2 style="color: white;">Default</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-inverse btn-default">Default</button>
-              <button type="button" class="btn btn-inverse btn-primary">Primary</button>
-              <button type="button" class="btn btn-inverse btn-success">Success</button>
-              <button type="button" class="btn btn-inverse btn-info">Info</button>
-              <button type="button" class="btn btn-inverse btn-warning">Warning</button>
-              <button type="button" class="btn btn-inverse btn-danger">Danger</button>
-              <button type="button" class="btn btn-inverse btn-link">Link</button>
+              <button type="button" class="btn btn-inverse btn-info">Submit</button>
+              <button type="button" class="btn btn-inverse btn-default">Submit</button>
+              <button type="button" class="btn btn-inverse btn-primary">Buy now</button>
+              <button type="button" class="btn btn-inverse btn-success">Save</button>
+              <button type="button" class="btn btn-inverse btn-danger">Delete</button>
             </p>
         <h2 style="color: white;">Hover</h2>
-
             <p class="bs-component">
-              <button type="button" class="btn btn-inverse btn-default hover">Default</button>
-              <button type="button" class="btn btn-inverse btn-primary hover">Primary</button>
-              <button type="button" class="btn btn-inverse btn-success hover">Success</button>
-              <button type="button" class="btn btn-inverse btn-info hover">Info</button>
-              <button type="button" class="btn btn-inverse btn-warning hover">Warning</button>
-              <button type="button" class="btn btn-inverse btn-danger hover">Danger</button>
-              <button type="button" class="btn btn-inverse btn-link hover">Link</button>
+              <button type="button" class="btn btn-inverse hover btn-info">Submit</button>
+              <button type="button" class="btn btn-inverse hover btn-default">Submit</button>
+              <button type="button" class="btn btn-inverse hover btn-primary">Buy now</button>
+              <button type="button" class="btn btn-inverse hover btn-success">Save</button>
+              <button type="button" class="btn btn-inverse hover btn-danger">Delete</button>
             </p>
          <h2 style="color: white;">Pressed</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-inverse btn-default active">Default</button>
-              <button type="button" class="btn btn-inverse btn-primary active">Primary</button>
-              <button type="button" class="btn btn-inverse btn-success active">Success</button>
-              <button type="button" class="btn btn-inverse btn-info active">Info</button>
-              <button type="button" class="btn btn-inverse btn-warning active">Warning</button>
-              <button type="button" class="btn btn-inverse btn-danger active">Danger</button>
-              <button type="button" class="btn btn-inverse btn-link active">Link</button>
+              <button type="button" class="btn btn-inverse active btn-info">Submit</button>
+              <button type="button" class="btn btn-inverse active btn-default">Submit</button>
+              <button type="button" class="btn btn-inverse active btn-primary">Buy now</button>
+              <button type="button" class="btn btn-inverse active btn-success">Save</button>
+              <button type="button" class="btn btn-inverse active btn-danger">Delete</button>
             </p>
          <h2 style="color: white;">Disabled</h2>
 
             <p class="bs-component">
-              <button type="button" class="btn btn-inverse btn-default disabled" disabled="disabled">Default</button>
-              <button type="button" class="btn btn-inverse btn-primary disabled" disabled="disabled">Primary</button>
-              <button type="button" class="btn btn-inverse btn-success disabled" disabled="disabled">Success</button>
-              <button type="button" class="btn btn-inverse btn-info disabled" disabled="disabled">Info</button>
-              <button type="button" class="btn btn-inverse btn-warning disabled" disabled="disabled">Warning</button>
-              <button type="button" class="btn btn-inverse btn-danger disabled" disabled="disabled">Danger</button>
-              <button type="button" class="btn btn-inverse btn-link disabled" disabled="disabled">Link</button>
+
+              <button type="button" class="btn btn-inverse disabled btn-info">Submit</button>
+              <button type="button" class="btn btn-inverse disabled btn-default">Submit</button>
+              <button type="button" class="btn btn-inverse disabled btn-primary">Buy now</button>
+              <button type="button" class="btn btn-inverse disabled btn-success">Save</button>
+              <button type="button" class="btn btn-inverse disabled btn-danger">Delete</button>
             </p>
          </div>
+         <!--
          <div style="background-color: #4bb4e6; padding: 2rem;">
              <h2>Light background</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-default">Default</button>
-              <button type="button" class="btn btn-primary">Primary</button>
-              <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-info">Info</button>
-              <button type="button" class="btn btn-warning">Warning</button>
-              <button type="button" class="btn btn-danger">Danger</button>
-              <button type="button" class="btn btn-link">Link</button>
+              <button type="button" class="btn btn-default">Submit</button>
+              <button type="button" class="btn btn-info">Submit</button>
+              <button type="button" class="btn btn-primary">Buy now</button>
+              <button type="button" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-danger">Delete</button>
             </p>
          </div>
          <div style="background-color: #595959; padding: 2rem;">
              <h2 style="color: white;">Dark background</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-inverse btn-default">Default</button>
-              <button type="button" class="btn btn-inverse btn-primary">Primary</button>
-              <button type="button" class="btn btn-inverse btn-success">Success</button>
-              <button type="button" class="btn btn-inverse btn-info">Info</button>
-              <button type="button" class="btn btn-inverse btn-warning">Warning</button>
-              <button type="button" class="btn btn-inverse btn-danger">Danger</button>
-              <button type="button" class="btn btn-inverse btn-link">Link</button>
+              <button type="button" class="btn btn-inverse btn-default">Submit</button>
+              <button type="button" class="btn btn-inverse btn-info">Submit</button>
+              <button type="button" class="btn btn-inverse btn-primary">Buy now</button>
+              <button type="button" class="btn btn-inverse btn-success">Save</button>
+              <button type="button" class="btn btn-inverse btn-danger">Delete</button>
             </p>
          </div>
-
-         <h2>Dropdowns</h2>
+-->
+         <h2>Split buttons</h2>
 
             <div style="margin-bottom: 15px;">
               <div class="btn-toolbar bs-component" style="margin: 0;">
@@ -1237,15 +1138,16 @@
 
          <h2>Sizes</h2>
             <p class="bs-component">
-              <button type="button" class="btn btn-primary btn-lg">Large button</button>
-              <button type="button" class="btn btn-primary">Default button</button>
-              <button type="button" class="btn btn-primary btn-sm">Small button</button>
-              <button type="button" class="btn btn-primary btn-xs">Mini button</button>
+              <button type="button" class="btn btn-default btn-lg">Large button</button>
+              <button type="button" class="btn btn-default">Default button</button>
+              <button type="button" class="btn btn-default btn-sm">Small button</button>
+              <button type="button" class="btn btn-default btn-xs">Mini button</button>
             </p>
 <!--
           </div>
           <div class="col-lg-6">
 -->
+<!--
             <p class="bs-component">
               <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
             </p>
@@ -1300,7 +1202,7 @@
               </div>
             </div>
 
-          <!-- </div> -->
+      -->
         </div>
       </div>
 
@@ -1396,21 +1298,21 @@ vehicula.</p>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6">
+        <!--<div class="row">
+          <div class="col-lg-6"> -->
             <div class="well bs-component">
               <form class="form-horizontal">
                 <fieldset>
                   <legend>Legend</legend>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-3 control-label">Email</label>
-                    <div class="col-lg-9">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
                       <input class="form-control" id="inputEmail" placeholder="Email" type="text">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword" class="col-lg-3 control-label">Password</label>
-                    <div class="col-lg-9">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
                       <input class="form-control" id="inputPassword" placeholder="Password" type="password">
                       <div class="checkbox">
                         <label>
@@ -1440,15 +1342,15 @@ vehicula.</p>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="textArea" class="col-lg-3 control-label">Textarea</label>
-                    <div class="col-lg-9">
+                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                    <div class="col-lg-10">
                       <textarea class="form-control" rows="3" id="textArea"></textarea>
                       <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-lg-3 control-label">Radios</label>
-                    <div class="col-lg-9">
+                    <label class="col-lg-2 control-label">Radios</label>
+                    <div class="col-lg-10">
                       <div class="radio">
                         <label>
                           <input name="optionsRadios" id="optionsRadios1" value="option1" checked="checked" type="radio">
@@ -1464,8 +1366,8 @@ vehicula.</p>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-lg-3 control-label">Orange Radios</label>
-                    <div class="col-lg-9">
+                    <label class="col-lg-2 control-label">Orange Radios</label>
+                    <div class="col-lg-10">
                       <div>
                           <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">
                         <label for="optionsRadiosOrange1">
@@ -1498,9 +1400,51 @@ vehicula.</p>
                       </div>
                     </div>
                   </div>
+                  <!--
                   <div class="form-group">
-                    <label for="select" class="col-lg-3 control-label">Selects</label>
-                    <div class="col-lg-9">
+                    <label class="col-lg-2 control-label">Orange mobile switch</label>
+                    <div class="col-lg-10">
+                      <div>
+                          <input name="optionsSwitchOrange" id="optionsSwitchOrange1" value="option1" checked="checked" type="radio" class="o-radio o-mobile-switch o-mobile-switch-check">
+                        <label for="optionsSwitchOrange1">
+                          Orange switch check
+                        </label>
+                      </div>
+                      <div>
+                          <input name="optionsSwitchOrange" id="optionsSwitchOrange2" value="option2" type="radio" class="o-radio o-mobile-switch o-mobile-switch-cross">
+                        <label for="optionsSwitchOrange2">
+                          Orange switch cross
+                        </label>
+                      </div>
+                      <div>
+                          <input name="optionsSwitchOrange3" id="optionsSwitchOrange5" value="option5" type="radio" class="o-radio o-mobile-switch o-mobile-switch-check o-radio-right">
+                        <label for="optionsSwitchOrange5">
+                          Orange switch align right check
+                        </label>
+                      </div>
+                      <div>
+                          <input name="optionsSwitchOrange3" id="optionsSwitchOrange6" value="option5" type="radio" class="o-radio o-mobile-switch o-mobile-switch-cross o-radio-right">
+                        <label for="optionsSwitchOrange6">
+                          Orange switch align right cross
+                        </label>
+                      </div>
+                      <div>
+                        <input name="optionsSwitchOrange2" id="optionsSwitchOrange3" value="option4" checked="checked" type="radio" class="o-radio o-mobile-switch-check o-mobile-switch" disabled>
+                        <label for="optionsSwitchOrange3">
+                          Orange switch check disabled
+                        </label>
+                      </div>
+                      <div>
+                          <input name="optionsSwitchOrange2" id="optionsSwitchOrange4" value="option4" type="radio" class="o-radio  o-mobile-switch-cross o-mobile-switch" disabled>
+                        <label for="optionsSwitchOrange4">
+                          Orange switch cross disabled
+                        </label>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <div class="col-lg-10">
                       <select class="form-control" id="select">
                         <option selected="selected">1</option>
                         <option>2</option>
@@ -1519,7 +1463,7 @@ vehicula.</p>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="col-lg-9 col-lg-offset-3">
+                    <div class="col-lg-10 col-lg-offset-2">
                       <button type="button" class="btn btn-default">Cancel</button>
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
@@ -1527,8 +1471,10 @@ vehicula.</p>
                 </fieldset>
               </form>
             </div>
+            <!--
           </div>
           <div class="col-lg-4 col-lg-offset-1">
+              -->
 
               <form class="bs-component">
                 <div class="form-group">
@@ -1538,7 +1484,7 @@ vehicula.</p>
 
                 <div class="form-group">
                   <label class="control-label" for="disabledInput">Disabled input</label>
-                  <input class="form-control" id="disabledInput" placeholder="Disabled input here..." disabled="disabled" type="text">
+                  <input class="form-control" id="disabledInput" disabled="disabled" type="text">
                 </div>
 
                 <div class="form-group has-warning">
@@ -1583,9 +1529,11 @@ vehicula.</p>
                 </div>
               </form>
 
-          </div>
-        </div>
+          <!-- </div>
+        </div> -->
       </div>
+
+
 
       <!-- Navs
       ================================================== -->
@@ -1702,22 +1650,32 @@ viral locavore cosby sweater.</p>
 
         <div class="row">
           <div class="col-lg-6">
+              <!-- TODO put accessibility informations (aria and others) -->
             <h2 id="bs-nav-breadcrumbs">Breadcrumbs</h2>
             <div class="bs-component">
-              <ul class="breadcrumb">
-                <li class="active">Home</li>
-              </ul>
+              <nav>
+                <span class="sr-only">You are here: </span>
+                <ul class="breadcrumb">
+                  <li>Home</li>
+                </ul>
+              </nav>
 
-              <ul class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active">Library</li>
-              </ul>
+              <nav>
+                <span class="sr-only">You are here: </span>
+                <ul class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li>Library</li>
+                </ul>
+              </nav>
 
-              <ul class="breadcrumb" style="margin-bottom: 5px;">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Library</a></li>
-                <li class="active">Data</li>
-              </ul>
+              <nav>
+                <span class="sr-only">You are here: </span>
+                <ul class="breadcrumb" style="margin-bottom: 5px;">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Library</a></li>
+                  <li>Data</li>
+                </ul>
+              </nav>
             </div>
           </div>
           <div class="col-lg-6">
@@ -1738,28 +1696,54 @@ viral locavore cosby sweater.</p>
         <div class="row">
           <div class="col-lg-12">
             <h2 id="pagination">Pagination</h2>
+            Standard pagination with numbers
             <div class="bs-component">
                 <nav>
                     <ul class="pagination">
-                        <li class="disabled"><a href="#"><span aria-hidden="true" class="icon-arrow-previous"></span><span class="sr-only">previous</span></a></li>
+                        <li class="bordered disabled"><a href="#"><span aria-hidden="true" class="icon-arrow-previous"></span><span class="sr-only">previous</span></a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
-                        <li><a href="#"><span aria-hidden="true" class="icon-arrow-next"></span><span class="sr-only">next</span></a></li>
+                        <li class="bordered"><a href="#"><span class="sr-only">next</span><span aria-hidden="true" class="icon-arrow-next"></span></a></li>
                     </ul>
                 </nav>
-
+Buttons
                 <nav>
                     <ul class="pagination">
-                        <li class="disabled labelled"><a href="#"><span aria-hidden="true" class="icon-arrow-previous"></span> Back</a></li>
-                        <li class="active"><a href="#">1</a></li>
+                        <li class="bordered"><a href="#"><span aria-hidden="true" class="icon-arrow-previous"></span></a></li>
+                        <!-- <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li class="labelled"><a href="#">Next <span aria-hidden="true" class="icon-arrow-next"></span></a></li>
+                        <li><a href="#">5</a></li> -->
+                        <li class="bordered"><a href="#"><span aria-hidden="true" class="icon-arrow-next"></span></a></li>
+                    </ul>
+                </nav>
+Buttons + page counter
+                <nav>
+                    <ul class="pagination">
+                        <li class="presentation" role="presentation">Page 2 of 10</li>
+                        <li class="bordered"><a href="#"><span aria-hidden="true" class="icon-arrow-previous"></span></a></li>
+                        <!-- <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li> -->
+                        <li class="bordered"><a href="#"><span aria-hidden="true" class="icon-arrow-next"></span></a></li>
+                    </ul>
+                </nav>
+Buttons + Back/Next labels
+                <nav>
+                    <ul class="pagination">
+                        <li class="bordered labelled"><a href="#"><span aria-hidden="true" class="icon-arrow-previous"></span>Back</a></li>
+                        <!-- <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li> -->
+                        <li class="bordered labelled"><a href="#">Next<span aria-hidden="true" class="icon-arrow-next"></span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -2262,7 +2246,7 @@ viral locavore cosby sweater.</p>
                 </div>
                 <div class="o-footer-bottom">
                     <ul>
-                      <li>Currently v3.3.0-alpha.3</li>                      
+                      <li>Currently v3.3.0-alpha.4</li>                      
                       <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>                      
                       <li><a href="../getting-started/#examples">Examples</a></li>                      
                       <li><a href="https://github.com/twbs/bootstrap/tree/v3.3.6">Original Bootstrap</a></li>

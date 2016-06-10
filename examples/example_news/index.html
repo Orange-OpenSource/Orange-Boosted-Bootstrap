@@ -206,31 +206,40 @@
   		</nav>
     </header>
 
-    <main role="main" id="content" class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <h1>News</h1>
+    <main role="main" id="content" class="">
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>News</h1>
+                </div>
+                <div id="search" class="col-sm-6 hidden-xs">
+                    <form class="form-inline pull-right" role="search">
+                        <div class="form-group">
+                            <label class="sr-only" for="search_btn">search bar</label>
+                            <input id="search_btn" type="text" class="form-control" placeholder="type your search here">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
             </div>
-            <div id="search" class="col-sm-6 hidden-xs">
-                <form class="form-inline pull-right" role="search">
-                    <div class="form-group">
-                        <label class="sr-only" for="search_btn">search bar</label>
-                        <input id="search_btn" type="text" class="form-control" placeholder="type your search here">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-            </div>
+        </section>
+
+        <div class="o-nav-local">
+            <hr aria-hidden="true">
+            <nav class="container">
+                <ul class="nav nav-local">
+                    <li role="presentation" class="active"><a href="#">News home</a></li>
+                    <li role="presentation"><a href="#">World</a></li>
+                    <li role="presentation"><a href="#">Entertainement</a></li>
+                    <li role="presentation"><a href="#">Finance</a></li>
+                    <li role="presentation"><a href="#">Technology</a></li>
+                    <li role="presentation"><a href="#">Weather</a></li>
+                </ul>
+            </nav>
+            <hr aria-hidden="true">
         </div>
 
-        <ul class="nav nav-local">
-            <li role="presentation" class="active"><a href="#">News home</a></li>
-            <li role="presentation"><a href="#">World</a></li>
-            <li role="presentation"><a href="#">Entertainement</a></li>
-            <li role="presentation"><a href="#">Finance</a></li>
-            <li role="presentation"><a href="#">Technology</a></li>
-            <li role="presentation"><a href="#">Weather</a></li>
-        </ul>
-
+        <section class="container">
         <div class="row">
             <div class="col-xs-12 col-md-8">
                 <h2 id="newsLeaderTitle" class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit<small>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</small></h2>
@@ -324,7 +333,7 @@
                           <li><a href="#">5</a></li>
                           <li><a href="#"><span class="icon-arrow-next" aria-hidden="true"></span><span class="sr-only">next</span></a></li>
                       </ul>
-                  </nav>                    
+                  </nav>
                 </div><!-- fin comments -->
 
 
@@ -485,7 +494,8 @@
                 </div><!-- fin de la div accordéon -->
             </div><!--fin de la div de 4 colonnes -->
         </div><!-- fin de la row globale-->
-    </main><!--/.container-->
+        </section>
+    </main>
     <hr>
 
 		<footer id="footer" role="contentinfo">
