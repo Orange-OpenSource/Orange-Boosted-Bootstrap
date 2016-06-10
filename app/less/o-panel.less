@@ -1,9 +1,10 @@
 // Orange content panel
 //
 //
+
 .o-panel {
    position: relative;
-   height: 19.5rem;
+   height: @o-panel-height;
    overflow: hidden;
 
   .panel-image {
@@ -19,10 +20,10 @@
   .panel-block {
     position: absolute;
     bottom: 0;
-    padding: 1rem 1.2rem;
+    padding: @o-panel-block-padding;
     color: @brand-orange-white;
     background-color: @brand-orange-black;
-    min-height: 7rem;
+    min-height: @o-panel-block-min-height;
     width: calc(100% - 2rem);
 
     .panel-link {
@@ -49,10 +50,10 @@
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
   .o-panel {
-    margin-bottom: 1rem;
+    margin-bottom: @o-panel-block-margin-bottom-xs;
 
     .panel-block {
-      min-height: 6rem;
+      min-height: @o-panel-block-min-height-xs;
       width: calc(100% - 1rem);
     }
   }
@@ -60,10 +61,10 @@
 
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
   .o-panel {
-    height: 14.2rem;
+    height: @o-panel-height-md;
 
     .panel-block {
-      min-height: 6rem;
+      min-height: @o-panel-block-min-height-xs;
       width: calc(100% - 2rem);
     }
   }
@@ -71,12 +72,12 @@
 
 @media (min-width: @screen-xl-min) {
   .o-panel {
-    height: 21.5rem;
+    height: @o-panel-height-sm;
   }
 }
 
 @media (min-width: @screen-xxl-min) {
   .o-panel {
-    height: 24rem;
+    height: @o-panel-height-xxl;
   }
 }

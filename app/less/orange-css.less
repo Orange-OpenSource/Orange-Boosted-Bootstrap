@@ -215,14 +215,14 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
         font-size: @navbar-font-size;
 
         .icon {
-            font-size: 3rem;
-            margin-top: 2.5rem;
+            font-size: @icon-font-weight;
+            margin-top: @navbar-brand-logo-padding;
         }
       }
     }
 
     li:first-child a{
-        padding-left: 2rem;
+        padding-left: @padding-base-horizontal;
     }
   }
 }
@@ -272,15 +272,15 @@ a:focus {
   border-top: 1px solid @gray-darker;
 
   .form-inline {
-    margin: 2rem 0;
+    margin: @form-group-margin-bottom 0;
     .form-group {
       width: 87%;
-      margin-right: .6rem;
+      margin-right: @form-search-margin-right;
 
       .form-control {
         width: 100%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: @navbar-padding-vertical;
+        padding-bottom: @navbar-padding-vertical;
         color: @brand-orange-white;
         background-color: @gray-dark;
         border: 0;
@@ -323,15 +323,15 @@ a:focus {
 // }
 
 .carousel{
-  margin-bottom: 3rem;
+  margin-bottom: @carousel-margin-bottom;
 
   .carousel-control{
     top: auto;
-    bottom: calc(50% - 3rem);
+    bottom: calc(50% - @carousel-control-width);
     background-color: @brand-orange-white;
-    height: 6rem;
-    width: 6rem;
-    padding-top: 1.5rem;
+    height: (@carousel-control-width * 2);
+    width: (@carousel-control-width * 2);
+    padding-top: (@carousel-control-width / 2);
     opacity: .8;
     text-shadow: none;
     transition: width 0.5s ease;
@@ -342,7 +342,7 @@ a:focus {
       background-repeat: no-repeat;
       &:hover,
       &:focus{
-        width: 12rem;
+        width: (@carousel-control-width * 4);
       }
     }
 
@@ -369,7 +369,7 @@ a:focus {
 }
 
 .carousel-indicators{
-    bottom: -3rem;
+    bottom: -@carousel-margin-bottom;
 
     &:hover{
       cursor: default;
@@ -380,8 +380,8 @@ a:focus {
       background-color: @gray-light-plus;
       border: none;
       width: @font-size-base-up;
-      height: .4rem;
-      margin: 0 .4rem 0 .4rem;
+      height: @carousel-indicator-height;
+      margin: 0 @carousel-indicator-height 0 @carousel-indicator-height;
       &:hover{
           background-color: @brand-orange;
           cursor: pointer;
@@ -389,8 +389,8 @@ a:focus {
       &.active{
           background-color: @brand-orange;
           width: @font-size-base-up;
-          height: .4rem;
-          margin: 0 .4rem 0 .4rem;
+          height: @carousel-indicator-height;
+          margin: 0 @carousel-indicator-height 0 @carousel-indicator-height;
       }
    }
 }
@@ -458,23 +458,6 @@ label, input, .form-control{
 
 .o-footer, .o-footer-inverse {
     padding: @navbar-padding-vertical;
-}
-
-.hero-container .frame {
-    left: 0;
-    margin: (@grid-gutter-width+1rem);
-    max-width: 15%;
-    position: absolute;
-    top: 0;
-}
-
-.hero-container .caption {
-    margin: 5rem (@grid-gutter-width+1rem);
-}
-
-.hero-container .category {
-    color: @brand-orange;
-    font-size: 2rem
 }
 
 // == TABLES
