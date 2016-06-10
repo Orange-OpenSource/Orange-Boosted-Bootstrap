@@ -400,8 +400,8 @@ const Collapse = (($) => {
       $(this).prev('.local-select').focus()
     })
 
-    $(document).ready(function() {
-      $('.o-nav-local .local-select').each(() => {
+    $(document).ready(() => {
+      $('.o-nav-local .local-select').each(function () {
         $(this).text($(this).next('.nav-inline.collapse').find('.nav-item:first-child .nav-link').text())
       })
     })

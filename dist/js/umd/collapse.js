@@ -405,10 +405,8 @@
       });
 
       $(document).ready(function () {
-        var _this4 = this;
-
         $('.o-nav-local .local-select').each(function () {
-          $(_this4).text($(_this4).next('.nav-inline.collapse').find('.nav-item:first-child .nav-link').text());
+          $(this).text($(this).next('.nav-inline.collapse').find('.nav-item:first-child .nav-link').text());
         });
       });
 
