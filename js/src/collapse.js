@@ -358,7 +358,7 @@ const Collapse = (($) => {
 
   let $collTabHeadings =  $('.panel-heading')
   let $collTabPanels =  $('.panel-collapse:not(.mega-menu)')
-  let $accordionTabs = $(Selector.ACCORDION_HEADING)
+  // let $accordionTabs = $(Selector.ACCORDION_HEADING)
 
   $collTabHeadings.attr({ role: 'tab' })
   $collTabPanels.attr({ role: 'tabpanel' })
@@ -382,10 +382,33 @@ const Collapse = (($) => {
 
   $(() => {
     $(Selector.ACCORDION_HEADING).each(function () {
-      let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
+      // let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
 
       $(this).prepend('<div class=arrow></div>')
     })
+
+    // local navigation
+    $('.o-nav-local .nav-inline.collapse .nav-link').on('click', function() {
+        $(this).parent().parent().prev('.local-select').text($(this).text());
+    });
+
+    $('.o-nav-local .nav-inline.collapse').on('shown.bs.collapse', function(){
+        $(this).find('.nav-item:first-child .nav-link').focus();
+    });
+
+    $('.o-nav-local .nav-inline.collapse').on('hidden.bs.collapse', function(){
+        $(this).prev('.local-select').focus();
+    });
+
+    $(document).ready(function(){
+        $('.o-nav-local .local-select').each(function() {
+          $(this).text($(this).next('.nav-inline.collapse').find('.nav-item:first-child .nav-link').text());
+        });
+    });
+
+    $(document).on('click', function(){
+        $('.o-nav-local .collapse.in').collapse('hide');
+    });
   })
 
   /**

@@ -91,28 +91,6 @@ Holder.addTheme('gray', {
 				//callback:skiplinksAfterLoad
 			};
 </script>
-<script type="text/javascript">
-    $('#collapseExample a').on('click', function() {
-        $('a[href="#collapseExample"]').text($(this).text());
-        $('#collapseExample').collapse('hide');
-    });
-
-    $('#collapseExample').on('shown.bs.collapse', function(){
-        $(this).find('.nav-link').first().focus();
-    });
-
-    $('#collapseExample').on('hidden.bs.collapse', function(){
-        $('a[href="#collapseExample"]').focus();
-    });
-
-    $(document).ready(function(){
-        $('.o-nav-local .local-select').text($('.o-nav-local.inverse ul li:first-child').text());
-    });
-
-    $(document).on('click', function(){
-        $('.o-nav-local .collapse.in').collapse('hide');
-    });
-</script>
 <script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
