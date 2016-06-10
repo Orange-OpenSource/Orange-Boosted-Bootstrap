@@ -835,8 +835,8 @@ $close-text-shadow:           0 1px 0 #fff;
 // Code
 
 $code-font-size:              90%;
-$code-padding-x:              ($spacer / 2);
-$code-padding-y:              ($spacer / 2);
+$code-padding-x:              .0625rem;
+$code-padding-y:              .0625rem;
 $code-color:                  $gray-dark;
 $code-bg:                     $gray-lightest;
 
