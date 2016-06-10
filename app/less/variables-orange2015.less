@@ -84,12 +84,6 @@
 /// For REM size
 @font-size-large: (ceil((@font-size-base * 1.4)*10)/10); // 2rem
 @font-size-small: (ceil((@font-size-base * 0.85)*10)/10); // 1.2rem
-@font-size-h1: (floor((@font-size-base * 3.6)*10)/10); // 5rem
-@font-size-h2: (floor((@font-size-base * 2.85)*10)/10); // 4rem
-@font-size-h3: (ceil((@font-size-base * 2)*10)/10); // 2.8rem
-@font-size-h4: @font-size-large;
-@font-size-h5: 1.6rem;
-@font-size-h6: @font-size-base;
 
 @font-size-h1: 3.4rem;
 @font-size-h2: 3.0rem;
@@ -141,9 +135,6 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 /// for REM size
-@padding-generic: 1rem 2rem;//10px 20px;
-@padding-sm-generic : .6rem 1rem;
-@padding-lg-generic : 1.5rem 3rem;
 @padding-base-vertical: 0.8rem;//8px;
 @padding-base-horizontal: 2rem;//20px;
 
@@ -200,8 +191,15 @@
 //## For each of Bootstrap's buttons, define text, background and border color.
 /// for REM size      
 @btn-font-size: 1.6rem;
+@btn-line-height: 1.25; // 20/16
+@btn-padding: .7rem 1.8rem .9rem 1.8rem;
 @btn-font-size-sm: 1.4rem;
+@btn-line-height-sm: @line-height-base; // 20/14
 @btn-font-size-lg: 1.6rem;
+@btn-line-height-lg: 1.25; // 20/16
+@btn-padding-sm : .3rem .8rem .3rem .8rem;
+@btn-padding-lg : 1.2rem 2.8rem 1.4rem 2.8rem;
+
 @btn-font-weight: @brand-font-weight-bold;
 @btn-default-color: @gray-base;
 @btn-default-bg: @brand-orange-white;
@@ -301,6 +299,7 @@
 
 /// `.form-group` margin
 @form-group-margin-bottom:       2rem;
+@form-search-margin-right:       .6rem;
 
 @legend-color:                   @gray-darker;
 @legend-border-color:            @gray-lighter;
@@ -442,7 +441,7 @@
 //@navbar-height - @element-height
 /// for REM size
 @navbar-height:                    10rem;
-@navbar-height-minimized:                    8rem;
+@navbar-height-minimized:          8rem;
 @navbar-font-size:                 1.6rem;
 @navbar-margin-bottom:             0;
 @navbar-border-radius:             @border-radius-base;
@@ -531,6 +530,8 @@
 // for REM size
 @nav-tab-margin: .8rem;
 
+@nav-tab-line-height: 1.25; // 20/16
+@nav-tab-padding: .7rem 2rem .9rem 2rem;
 @nav-tabs-border-color: @gray-base;
 @nav-tabs-link-hover-border-color: @gray-base;
 @nav-tabs-link-hover-bg: @gray-base;
@@ -587,7 +588,7 @@
 @pagination-width-lg: 3.75rem;
 @pagination-width-sm: 1.875rem;
 
-@pagination-padding: @padding-generic;
+@pagination-padding: 1rem 2rem;
 
 
 //== Pager
@@ -939,8 +940,10 @@
 
 @carousel-indicator-active-bg:                @brand-primary;
 @carousel-indicator-border-color:             @gray-base;
+@carousel-indicator-height:                   .4rem;
 
 @carousel-caption-color:                      @gray-base;
+@carousel-margin-bottom:                      3rem;
 
 
 //== Close

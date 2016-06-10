@@ -1,3 +1,20 @@
+.hero-container .frame {
+    left: 0;
+    margin: 3rem;
+    max-width: 15%;
+    position: absolute;
+    top: 0;
+}
+
+.hero-container .caption {
+    margin: 5rem 3rem;
+}
+
+.hero-container .category {
+    color: #F16E00;
+    font-size: 2rem
+}
+
 .hero-container {
     position: relative;
 }
