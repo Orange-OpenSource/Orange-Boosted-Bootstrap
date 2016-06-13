@@ -388,16 +388,16 @@ const Collapse = (($) => {
     })
 
     // local navigation
-    $('.o-nav-local .nav-inline.collapse .nav-link').on('click', () => {
-      $(this).parent().parent().prev('.local-select').text($(this).text())
+    $('.o-nav-local .nav-inline.collapse .nav-link').on('click', (event) => {
+      $(event.currentTarget).parent().parent().prev('.local-select').text($(event.currentTarget).text())
     })
 
-    $('.o-nav-local .nav-inline.collapse').on('shown.bs.collapse', () => {
-      $(this).find('.nav-item:first-child .nav-link').focus()
+    $('.o-nav-local .nav-inline.collapse').on('shown.bs.collapse', (event) => {
+      $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus')
     })
 
-    $('.o-nav-local .nav-inline.collapse').on('hidden.bs.collapse', () => {
-      $(this).prev('.local-select').focus()
+    $('.o-nav-local .nav-inline.collapse').on('hidden.bs.collapse', (event) => {
+      $(event.currentTarget).prev('.local-select').trigger('focus')
     })
 
     $(document).ready(() => {
@@ -407,7 +407,7 @@ const Collapse = (($) => {
     })
 
     $(document).on('click', () => {
-      $('.o-nav-local .collapse.in').collapse('hide')
+      Collapse._jQueryInterface.call($('.o-nav-local .collapse.in'), 'hide')
     })
   })
 
