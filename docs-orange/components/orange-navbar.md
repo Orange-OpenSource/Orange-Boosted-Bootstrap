@@ -18,13 +18,13 @@ Orange navbar is the main navigation of project website. It should always be inc
 {% example html %}
 <header role="banner">
     <nav class="navbar navbar-dark">
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
             <span class="sr-only">toggle navigation</span>
             <span class="icon-menu"></span>
         </button>
         <div class="container" >
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt='Back to homepage' title='Back to homepage'/></a>
-            <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
+            <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar3">
                 <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
