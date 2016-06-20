@@ -1498,5 +1498,23 @@ h1[id] {
   }
 }
 
+/* buttons presentation */
 
+#buttons_default button,
+#buttons_inverse button{
+  margin-right: 1rem;
+}
 
+#buttons_default {
+  padding-left: 2rem;
+}
+
+#buttons_inverse {
+  background-color: #000;
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+#buttons_inverse h2 {
+  color: #fff;
+}
