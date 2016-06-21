@@ -9,7 +9,7 @@
   > li {
       float: left;
       margin: 0;
-      + li{          
+      + li{
          margin-left: 10px;
       }
       > a {
@@ -21,7 +21,7 @@
           padding: @navbar-padding-vertical 0;
           width: @pagination-width;
           text-align: center;
-        .icon-arrow-next, 
+        .icon-arrow-next,
         .icon-arrow-previous {
           font-size: @font-size-base;
         }
@@ -56,17 +56,39 @@
 
       &.labelled > a{
         padding: @pagination-padding;
-        .icon-arrow-next {
-          padding-left: 10px;
+
+        &.prev {
+          padding-left: @pagination-label-padding;
         }
-        .icon-arrow-previous {
-          padding-right: 10px;
+
+        &.prev:before {
+          font-family: "icon-orange";
+          content: "\e93f";
+          position: absolute;
+          color: #000;
+          font-size: @font-size-base;
+          left: @pagination-arrow-padding;
+          top: @pagination-arrow-top;
+        }
+
+        &.next {
+          padding-right: @pagination-label-padding;
+        }
+
+        &.next:before {
+          font-family: "icon-orange";
+          content: "\e93e";
+          position: absolute;
+          color: #000;
+          font-size: @font-size-base;
+          right: @pagination-arrow-padding;
+          top: @pagination-arrow-top;
         }
       }
   }
   .presentation{
       padding: @navbar-padding-vertical 0;
-      font-size: @navbar-font-size;          
+      font-size: @navbar-font-size;
       font-weight: @brand-font-weight-bold;
   }
 }
