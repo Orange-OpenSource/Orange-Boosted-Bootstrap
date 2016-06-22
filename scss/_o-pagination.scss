@@ -30,6 +30,14 @@
     .icon-arrow-previous {
       font-size: .875rem;
     }
+
+    .icon-arrow-next::before {
+      margin-left: 1px;
+    }
+
+    .icon-arrow-previous::before {
+      margin-right: 1px;
+    }
   }
   .page-item {
     float: left;
@@ -69,7 +77,29 @@
     &.page-item-labelled {
       width: auto;
       min-width: 2.5rem;
-      padding: .625rem 1rem;
+      padding: .5625rem 1.125rem .6875rem;
+
+      .icon-arrow-previous::before,
+      .icon-arrow-next::before {
+        position: absolute;
+        top: .6875rem;
+      }
+    }
+
+    &.page-item-labelled.prev {
+      padding-left: 2.375rem;
+      .icon-arrow-previous::before {
+        left: 1.125rem;
+        margin-right: 0;
+      }
+    }
+
+    &.page-item-labelled.next {
+      padding-right: 2.375rem;
+      .icon-arrow-next::before {
+        right: 1.125rem;
+        margin-left: 0;
+      }
     }
   }
 
