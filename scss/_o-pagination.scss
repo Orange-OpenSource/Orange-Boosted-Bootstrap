@@ -12,8 +12,9 @@
       border-color: #000;
     }
 
+    position: relative;
     width: $pagination-width;
-    padding: calc((#{$pagination-width} - 4px - #{$font-size-base}) / 2) 0;
+    padding: .625rem 0;
     margin-left: 0;
     font-size: $font-size-base;
     font-weight: bold;
@@ -26,24 +27,32 @@
       background-color: #000;
       border-color: #000;
     }
-    .icon-arrow-next,
-    .icon-arrow-previous {
-      font-size: .875rem;
+
+    &.prev::before {
+      position: absolute;
+      top: .6875rem;
+      left: .8125rem;
+      content: "";
+      width: .5625rem;
+      height: .875rem;
+      background-image: #{$pagination-icon-prev};
     }
 
-    .icon-arrow-next::before {
-      margin-left: 1px;
-    }
-
-    .icon-arrow-previous::before {
-      margin-right: 1px;
+    &.next::before {
+      position: absolute;
+      top: .6875rem;
+      right: .8125rem;
+      content: "";
+      width: .5625rem;
+      height: .875rem;
+      background-image: #{$pagination-icon-next};
     }
   }
   .page-item {
     float: left;
     margin: 0;
     + .page-item {
-      margin-left: 10px;
+      margin-left: .625rem;
     }
     &.presentation {
       padding: .625rem 0;
@@ -56,12 +65,12 @@
       border: 2px solid #000;
     }
   }
-  .page-item:first-child .page-link,
-  .page-item:last-child .page-link {
+  .page-item .page-link.prev,
+  .page-item .page-link.next {
     width: auto;
     min-width: $pagination-width;
     height: $pagination-width;
-    padding: calc((#{$pagination-width} - 4px - #{$font-size-base}) / 2) 0;
+    padding: 0;
     border: solid 2px #000;
 
     &.disabled {
@@ -71,34 +80,48 @@
 
       color: $gray-lighter-o;
       border-color: $gray-lighter-o;
+    }
 
+    &.prev.disabled::before {
+      background-image: #{$pagination-icon-prev-disabled};
+    }
+
+    &.next.disabled::before {
+      background-image: #{$pagination-icon-next-disabled};
     }
 
     &.page-item-labelled {
       width: auto;
       min-width: 2.5rem;
       padding: .5625rem 1.125rem .6875rem;
-
-      .icon-arrow-previous::before,
-      .icon-arrow-next::before {
-        position: absolute;
-        top: .6875rem;
-      }
     }
 
     &.page-item-labelled.prev {
       padding-left: 2.375rem;
-      .icon-arrow-previous::before {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: .6875rem;
         left: 1.125rem;
-        margin-right: 0;
+        content: "";
+        width: .5625rem;
+        height: .875rem;
+        background-image: #{$pagination-icon-prev};
       }
     }
 
     &.page-item-labelled.next {
       padding-right: 2.375rem;
-      .icon-arrow-next::before {
+
+      &::before {
+        position: absolute;
+        top: .6875rem;
         right: 1.125rem;
-        margin-left: 0;
+        content: "";
+        width: .5625rem;
+        height: .875rem;
+        background-image: #{$pagination-icon-next};
       }
     }
   }
@@ -106,32 +129,52 @@
   &.pagination-lg {
     .page-link {
       width: $pagination-width-lg;
-      padding: calc((#{$pagination-width-lg} - 4px - #{$font-size-lg}) / 2) 0;
+      padding: 1.1875rem 0;
       font-size: $font-size-lg;
       line-height: $font-size-lg;
     }
 
-    .page-item:first-child .page-link,
-    .page-item:last-child .page-link {
+    .page-item .page-link.prev,
+    .page-item .page-link.next {
       min-width: $pagination-width-lg;
       height: $pagination-width-lg;
-      padding: calc((#{$pagination-width-lg} - 4px - #{$font-size-lg}) / 2) 0;
+      padding: 0;
+
+      &::before {
+        top: 1.3125rem;
+        left:1.4375rem;
+      }
+
+      &.next::before {
+        left: auto;
+        right:1.4375rem;
+      }
     }
   }
 
   &.pagination-sm {
     .page-link {
       width: $pagination-width-sm;
-      padding: calc((#{$pagination-width-sm} - 4px - #{$font-size-sm}) / 2) 0;
+      padding: .375rem 0;
       font-size: $font-size-sm;
       line-height: $font-size-sm;
     }
 
-    .page-item:first-child .page-link,
-    .page-item:last-child .page-link {
+    .page-item .page-link.prev,
+    .page-item .page-link.next {
       min-width: $pagination-width-sm;
       height: $pagination-width-sm;
-      padding: calc((#{$pagination-width-sm} - 4px - #{$font-size-sm}) / 2) 0;
+      padding: 0;
+
+      &::before {
+        top: .375rem;
+        left: .5rem;
+      }
+
+      &.next::before {
+        left: auto;
+        right: .5rem;
+      }
     }
   }
 }

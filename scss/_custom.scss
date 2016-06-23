@@ -566,6 +566,11 @@ $pagination-disabled-color:            $gray;
 $pagination-disabled-bg:               #fff;
 $pagination-disabled-border:           #000;
 
+$pagination-icon-prev: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%2F%3E%3C%2Fsvg%3E") !default;
+$pagination-icon-prev-disabled: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E") !default;
+$pagination-icon-next: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%2F%3E%3C%2Fsvg%3E") !default;
+$pagination-icon-next-disabled: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E") !default;
+
 
 // Jumbotron
 
