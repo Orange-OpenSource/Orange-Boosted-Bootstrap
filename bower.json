@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
+  "name": "boosted",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "keywords": [
     "css",
@@ -15,8 +15,8 @@
   "license": "MIT",
   "moduleType": "globals",
   "main": [
-    "scss/bootstrap.scss",
-    "dist/js/bootstrap.js"
+    "dist/css/boosted.css",
+    "dist/js/boosted.js"
   ],
   "ignore": [
     "/.*",
