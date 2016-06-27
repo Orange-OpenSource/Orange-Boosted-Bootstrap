@@ -314,7 +314,7 @@
   });
 
   $(document).on('click', function(){
-      $('.o-nav-local .collapse.in').collapse('hide');
+      Plugin.call($('.o-nav-local .collapse.in'), 'hide');
   });
 
 }(jQuery);
