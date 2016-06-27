@@ -165,7 +165,8 @@
 #nav,
 #color-schemes,
 #containers,
-#placement {
+#placement,
+#sizing {
     @include brand-warning;
 }
 
@@ -316,3 +317,21 @@ $back-top-btn-height: 3.75rem;
         position: absolute;
         width: 1px;
     }
+
+// boostwatch
+
+// buttons dipslay
+#buttons_default,
+#buttons_inverse {
+  padding-left: 1.25rem;
+
+  button {
+    margin-right: .625rem;
+  }
+}
+
+#buttons_inverse {
+  color: #fff;
+  background-color: #000;
+  padding: 1.25rem;
+}
