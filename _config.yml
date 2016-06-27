@@ -72,7 +72,7 @@ slack:            https://bootstrap-slack.herokuapp.com
 
 download:
   source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.2.zip
-  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0/boosted-4.0.0-alpha.2-dist.zip
+  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.2/boosted-4.0.0-alpha.2-dist.zip
 
 blog:             http://blog.getbootstrap.com
 expo:             http://expo.getbootstrap.com

@@ -12,10 +12,8 @@ group: getting-started
 ### Compiled
 Download just the compiled and minified CSS and JavaScript. Doesn't include any documentation or original source files.
 
-{% comment %}
 <a href="{{ site.download.dist }}" class="btn btn-secondary">Download Boosted</a>
-{% endcomment %}
-<span class="text-muted">Coming soon!</span>
+
 {% endmarkdown %}
   </div>
   <div class="col-sm-6">

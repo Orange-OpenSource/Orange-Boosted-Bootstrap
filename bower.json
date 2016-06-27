@@ -1,6 +1,6 @@
 {
   "name": "boosted",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.2.",
   "keywords": [
     "css",
     "js",
@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://boosted.orange.com",
   "license": "MIT",
   "moduleType": "globals",
   "main": [
@@ -34,5 +34,9 @@
   },
   "devDependencies": {
     "jquery.tablesorter": "~2.25.0"
-  }
+  },
+  "author": {
+    "name": "Orange SA"
+  },
+  "version": "4.0.0-alpha.2"
 }
