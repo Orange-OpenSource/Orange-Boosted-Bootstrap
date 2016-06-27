@@ -1,3 +1,14 @@
+<a name"3.3.0-alpha.5"></a>
+### 3.3.0-alpha.5 (2016-06-27)
+
+
+#### Features
+
+* **chore:**
+  * update frames and popout icons to include B2B ([59567ea9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/59567ea9807ee32f33a22f37b99e114550c157c9))
+  * remove o-navtabs ([922a5ee6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/922a5ee6f9e37e2e40f7576690adafc62bc7ee88))
+
+
 <a name"3.3.0-alpha.4"></a>
 ### 3.3.0-alpha.4 (2016-06-10)
 
