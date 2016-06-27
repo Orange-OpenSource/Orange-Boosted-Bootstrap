@@ -1,3 +1,50 @@
+<a name"3.3.0-alpha.4"></a>
+### 3.3.0-alpha.4 (2016-06-10)
+
+
+#### Bug Fixes
+
+* **component:**
+  * stepbar ([579c0410](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/579c0410609e10ecb88f8a292b67f06598f66acb))
+  * local navigation ([f88c6f0b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f88c6f0b791250386540041672c657c439f882ca))
+  * stepbar ([d7ba7e49](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d7ba7e49d8c0cbe9bb38924597b113c611016f52))
+  * local navigation ([60080343](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/600803432b4649fe4050cbeea27d2fd97410e97b))
+  * local navigation ([9b26c299](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9b26c2991aaab151dd01a4279535acaca092aa59))
+  * breadcrumb ([4070cbfc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4070cbfc618da7bbd175079010a3735269feb86e))
+  * accordion accessibilty ([2bf978eb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2bf978ebfce75329c73927c24df77e44a78a3cfa))
+  * navbar minimized ([789db1be](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/789db1be257236dcdff4e2b9c5bdb34534c969a6))
+* **core:**
+  * move panel sizes to variables to be compliant with IE8 ([4d4023d9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4d4023d9dfb2924e0a28748b06892c4cd2a9b973))
+  * remove rem sizes for IE8 css ([a6e6238a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a6e6238ab59b28ea204781fcc90dab420e7b2ded))
+  * remove rem from IE8 CSS ([94bf75ff](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/94bf75ffb9a877209e4d29298a75db4137bd5314))
+  * update font-weight for popover and spacing for breadcrumbs ([476b75c2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/476b75c2d53bd50ade292b3b636c21308ba33d83))
+  * fix pagination mode ([1be8a8bf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1be8a8bf9653c1b64b6eac2d7e9d9ff9cc043c23))
+  * merge font-face declaration for bold and normal display into one font-family nam ([1cfeb74e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1cfeb74e97f53225d1012e6d4296f6bab1230cb5))
+  * fix link color on stepbarlink done state rollover ([3f376865](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f3768656ba71f3a5d01a03b774ae16e9c689090))
+  * update checkbox orange icon ([f1f56a7c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f1f56a7c22cc560d33258f4c918599e09e9a6f96))
+  * update tabs font and spacing ([4e2ef76a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4e2ef76abb849ce4a08aa56a9b86b5c706723d69))
+  * Update pagination according to the brand ([e71cd37c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e71cd37ca1b580370e985fd91c9e6968a72f3aba))
+  * fix buttons colors/alignement according to the brand ([7cd160ec](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7cd160eca4c367005db4a7fc5bd998f937dd5761))
+  * D&U working ([cb69a035](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cb69a035f1e972962824ba3f79be49fa495a1e31))
+  * fix brand color ([b99461a0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b99461a035e95db537aec1555100c0b16aa89706))
+  * update brand color ([5383cfde](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5383cfde6f6ca56b865928d88cb98323abfa3e09))
+  * fix labels size ([8b063658](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8b063658ca79eabfdc2b3248dff1e6e46edcd9da))
+* **doc:**
+  * update button size class ([a2d67435](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a2d67435711046a0466ea0cb7427e6500725eae5))
+  * place the icon popout tech at the right place ([4b8d4196](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4b8d419699ee60d0a0219533c68dc1c4bf648c7c))
+  * navbar search ([15242f69](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/15242f692f5e5e068156c72f7e4ed37bdea48c15))
+* **test:** fix csslint warning onto pagination.less ([b2480427](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b2480427e5c06962ebdbd1a53f458790cafd2c49))
+
+
+#### Features
+
+* **build:** update the dist ([3c3c9341](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3c3c93418c5f91a4f742ddcfeddb6cd41e473fa9))
+* **component:** letter spacing for headings ([3a9d8664](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a9d8664d115e2e24df83403f2ce3c7ed1d23b3e))
+* **core:** update accordion arrow position and remove oldbrand files ([5dcc2979](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5dcc29792feb981d2a9db665ec1eb6dec7186362))
+* **legal:** update the notice.txt to explain font licences and orange copyright onto ressour ([20cf91f9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/20cf91f9840a589838f3522420a1294b71dd2f21))
+* **tests:** add unit tests onto accordions ([ddab5f62](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ddab5f6231b1b250c117b26c16b4d483e7461220))
+
+
 <a name"3.3.0-alpha.3"></a>
 ### 3.3.0-alpha.3 (2016-05-17)
 
