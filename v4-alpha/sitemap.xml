@@ -1,297 +1,376 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/accessibility/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/alerts/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/extend/approach/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/best-practices/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/boosted-migration/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/about/brand/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/breadcrumb/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/browser-bugs/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/browsers-devices/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/build-tools/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/button-dropdown/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/button-group/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/buttons/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/card/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/carousel/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/content/code/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/collapse/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/contents/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/download/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/dropdowns/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/content/figures/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/flexbox/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/forms/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/layout/grid/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/about/history/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/extend/icon-fonts/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/content/images/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/boostwatch/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/extend/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/input-group/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/introduction/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/javascript/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/jumbotron/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/label/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/about/license/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/list-group/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/local-navigation/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/layout/media-object/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/migration/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/modal/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/navbar/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/navs/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/getting-started/options/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-accordion/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-footer/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-forms/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-megamenu/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-modal/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-pointed-tabs/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-stepbar/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/orange-tables/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/layout/overview/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/pagination/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/popovers/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/progress/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/content/reboot/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/layout/responsive-utilities/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/scrollspy/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/content/tables/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/about/team/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/tooltips/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/about/translations/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/content/typography/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/components/utilities/</loc>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/album/index.html</loc>
-    <lastmod>2016-02-04T09:33:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/blog/index.html</loc>
-    <lastmod>2016-02-04T09:33:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/carousel/index.html</loc>
-    <lastmod>2016-02-04T09:33:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/cover/index.html</loc>
-    <lastmod>2016-02-04T09:33:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/dashboard/index.html</loc>
-    <lastmod>2016-02-04T09:33:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/grid/index.html</loc>
-    <lastmod>2016-02-04T09:33:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/jumbotron/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/justified-nav/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/narrow-jumbotron/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/navbar-top-fixed/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/navbar-top/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/navbar/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/offcanvas/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/orange-admin/edit.html</loc>
-    <lastmod>2016-02-15T09:20:39+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/orange-admin/index.html</loc>
-    <lastmod>2016-02-15T09:20:39+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/orange-brand-2015/index.html</loc>
-    <lastmod>2016-02-15T09:20:39+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/orange-dashboard/index.html</loc>
-    <lastmod>2016-02-15T09:20:39+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/orange-form/index.html</loc>
-    <lastmod>2016-02-15T09:20:39+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/orange-news/index.html</loc>
-    <lastmod>2016-02-15T16:43:42+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/signin/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/starter-template/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/sticky-footer-navbar/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/sticky-footer/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://boosted.orange.com/v4-alphahttp://boosted.orange.com/v4-alpha/examples/tooltip-viewport/index.html</loc>
-    <lastmod>2016-02-04T09:33:43+01:00</lastmod>
-  </url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/accessibility/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/alerts/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/extend/approach/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/best-practices/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/boosted-history/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/boosted-license/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/boosted-migration/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/brand/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/breadcrumb/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/browser-bugs/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/browsers-devices/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/build-tools/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/button-dropdown/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/button-group/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/buttons-inversed/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/buttons/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/card/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/carousel/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/content/code/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/collapse/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/contents/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/download/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/dropdowns/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/content/figures/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/layout/flexbox-grid/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/flexbox/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/forms/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/layout/grid/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/history/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/extend/icon-fonts/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/content/images/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/boostwatch/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/extend/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/input-group/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/introduction/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/javascript/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/jumbotron/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/license/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/list-group/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/local-navigation/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/layout/media-object/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/migration/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/modal/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/navbar/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/navs/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/getting-started/options/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-accordion/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/orange-brand/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-footer/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-forms/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-megamenu/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-modal/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-navbar/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-stepbar/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/orange-tables/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/layout/overview/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/pagination/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/popovers/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/progress/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/content/reboot/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/layout/responsive-utilities/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/scrollspy/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/content/tables/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/tag/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/team/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/tooltips/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/about/translations/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/content/typography/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/components/utilities/</loc>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/album/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/blog/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/carousel/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/cover/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/dashboard/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/grid/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/jumbotron/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/justified-nav/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/module-002-quick-links/index.html</loc>
+<lastmod>2016-06-27T12:45:15+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/module-006-content-panel/index.html</loc>
+<lastmod>2016-06-27T12:45:15+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/module-012-product-details/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/narrow-jumbotron/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/navbar-top-fixed/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/navbar-top/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/navbar/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/offcanvas/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-admin/edit.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-admin/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-brand-2015/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-dashboard/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-form/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-grid/index-fluid.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-grid/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/orange-news/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-module-002-quick-links/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-module-006-content-panel/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-module-012-product-details/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-admin/edit.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-admin/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-brand-2015/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-dashboard/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-form/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-grid/index-fluid.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-grid/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/rtl-orange-news/index.html</loc>
+<lastmod>2016-06-27T13:06:58+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/signin/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/starter-template/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/sticky-footer-navbar/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/sticky-footer/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
+<url>
+<loc>http://boosted.orange.com/v4-alpha/examples/tooltip-viewport/index.html</loc>
+<lastmod>2016-06-27T12:45:16+02:00</lastmod>
+</url>
 </urlset>

@@ -3,19 +3,22 @@
 
   $(function () {
 
-    $('[href=#]').click(function (e) {
+    $('[href="#"]').click(function (e) {
       e.preventDefault()
     });
 
     $(document).ready(function () {
 
+      // init megamenu demo
+      $('.mega-menu.panel').megamenu();
+
       $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          $('.scroll-top').fadeIn();
+        if ($(this).scrollTop() > window.innerHeight) {
+          $('.scroll-top').fadeIn(function () {
+          });
         } else {
           $('.scroll-top').fadeOut();
         }
-
       });
 
       $('.scroll-top').click(function () {
@@ -23,7 +26,7 @@
         $('html, body').animate({
           scrollTop: 0
         }, 600, function () {
-          $('header li a').first().focus();
+          $('a.navbar-brand:visible').first().focus();
         });
 
         return false;
@@ -64,7 +67,7 @@
   }
 
   function onFooterVisibilityChange(el, scrollTopElm, defaultPos) {
-    if (el) {
+    if (el && window.innerWidth > 768) {
       return function () {
 
         var footerRect = el.getBoundingClientRect();
@@ -96,7 +99,9 @@
     }
 
     if (window.addEventListener) {
-      addEventListener('scroll', pageWatcher, false);
+      if (window.innerWidth > 768) {
+        addEventListener('scroll', pageWatcher, false);
+      }
       if (footerWatcher) {addEventListener('scroll', footerWatcher, false);}
     } else if (window.attachEvent)  {
       attachEvent('onscroll', pageWatcher);

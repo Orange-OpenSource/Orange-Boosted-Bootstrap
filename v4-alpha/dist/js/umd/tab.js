@@ -164,16 +164,20 @@
           $.removeClass(this._element, DATA_KEY);
           this._element = null;
         }
+
+        // Boosted mod
       }, {
         key: '_activate',
 
+        // end mod
         // private
 
         value: function _activate(element, container, callback) {
+          // Boosted mod
           var $active = $(container).find('> .active');
           $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex: '-1', 'aria-selected': false });
           $active.filter('.tab-pane').attr({ 'aria-hidden': true, tabIndex: '-1' });
-
+          // end mod
           var active = $(container).find(Selector.ACTIVE_CHILD)[0];
           var isTransitioning = callback && _Util['default'].supportsTransitionEnd() && (active && $(active).hasClass(ClassName.FADE) || Boolean($(container).find(Selector.FADE_CHILD)[0]));
 
@@ -188,12 +192,13 @@
           if (active) {
             $(active).removeClass(ClassName.IN);
           }
-
+          // Boosted mod
           if (element.tagName === 'A') {
             var elemID = '#' + element.id;
-            $(elemID).attr({ tabIndex: '0', 'aria-selected': true }).focus();
+            $(elemID).attr({ tabIndex: '0', 'aria-selected': true }).trigger('focus');
           }
           $(element).filter('.tab-pane.active').attr({ 'aria-hidden': false, tabIndex: '0' });
+          // end mod
         }
       }, {
         key: '_transitionComplete',
@@ -267,7 +272,7 @@
           }
           var nextTab = $items.eq(index);
           if (nextTab.attr('role') === 'tab') {
-            nextTab.tab('show').focus();
+            nextTab.tab('show').trigger('focus');
           }
 
           e.preventDefault();
@@ -308,6 +313,7 @@
       Tab._jQueryInterface.call($(this), 'show');
     });
 
+    // Boosted mod
     $(document).on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
       if (!/(38|40|39|37)/.test(event.which)) {
         return;
@@ -315,11 +321,13 @@
       event.preventDefault();
       Tab._keydown.call($(this), event);
     });
+    // end mod
     /**
      * ------------------------------------------------------------------------
      * jQuery
      * ------------------------------------------------------------------------
      */
+    // Boosted mod
     // ajout de l'accesibilité
     // ===============================
 
@@ -336,19 +344,20 @@
     $tabs.attr('role', 'tab');
     $tabs.each(function () {
       var tabpanel = $($(this).attr('href'));
-      var tab = $(this);
-      var tabid = tab.attr('id') || uniqueId('ui-tab');
+      var $tab = $(this);
+      var tabid = $tab.attr('id') || uniqueId('ui-tab');
 
-      tab.attr('id', tabid);
+      $tab.attr('id', tabid);
 
-      if (tab.hasClass('active')) {
-        tab.attr({ tabIndex: '0', 'aria-selected': 'true', 'aria-controls': tab.attr('href').substr(1) });
+      if ($tab.hasClass('active')) {
+        $tab.attr({ tabIndex: '0', 'aria-selected': 'true', 'aria-controls': $tab.attr('href').substr(1) });
         tabpanel.attr({ role: 'tabpanel', tabIndex: '0', 'aria-hidden': 'false', 'aria-labelledby': tabid });
       } else {
-        tab.attr({ tabIndex: '-1', 'aria-selected': 'false', 'aria-controls': tab.attr('href').substr(1) });
+        $tab.attr({ tabIndex: '-1', 'aria-selected': 'false', 'aria-controls': $tab.attr('href').substr(1) });
         tabpanel.attr({ role: 'tabpanel', tabIndex: '-1', 'aria-hidden': 'true', 'aria-labelledby': tabid });
       }
     });
+    // end mod
 
     $.fn[NAME] = Tab._jQueryInterface;
     $.fn[NAME].Constructor = Tab;

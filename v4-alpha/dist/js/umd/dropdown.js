@@ -66,6 +66,9 @@
       ROLE_MENU: '[role="menu"]',
       ROLE_LISTBOX: '[role="listbox"]',
       NAVBAR_NAV: '.navbar-nav',
+      // Boosted mod
+      FIRST_ITEM_IN_MENU: '.dropdown-menu .dropdown-item:not(.disabled)',
+      // end mod
       VISIBLE_ITEMS: '[role="menu"] li:not(.disabled) a, ' + '[role="listbox"] li:not(.disabled) a'
     };
 
@@ -84,6 +87,7 @@
         this._addEventListeners();
       }
 
+      // Boosted mod
       // set default acessibility Attributes
 
       // getters
@@ -125,13 +129,14 @@
             return false;
           }
 
-          // this.focus()
           this.setAttribute('aria-expanded', 'true');
 
-          // patch to select by default first item
           $(parent).toggleClass(ClassName.OPEN);
           $(parent).trigger($.Event(Event.SHOWN, relatedTarget));
-          $(this).parent().find('.dropdown-menu a').first().focus();
+
+          // Boosted mod
+          $(parent).find(Selector.FIRST_ITEM_IN_MENU).first().trigger('focus');
+          // end mod
 
           return false;
         }
@@ -288,8 +293,9 @@
 
     $(document).ready(function ($) {
       $('.dropdown-menu').attr('role', 'menu');
-      $('.dropdown-menu a.dropdown-item').attr('role', 'menuitem');
+      $('.dropdown-menu .dropdown-item').attr('role', 'menuitem');
     });
+    // end mod
     /**
      * ------------------------------------------------------------------------
      * Data Api implementation
