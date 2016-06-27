@@ -5,10 +5,19 @@
 .o-accordion-triangle
 {
    .panel{
-    border-top:0;  
-    border-left:0;  
+    border-top:0;
+    border-left:0;
     border-right:0;
   }
+
+  .panel-default {
+    border-bottom: none;
+
+    .panel-heading {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
   .panel-default > .panel-heading
     {
     background-image: none;
