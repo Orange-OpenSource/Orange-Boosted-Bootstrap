@@ -3,13 +3,13 @@
 //
 
 // url encoded colors
-@arrow-black: '%23000000';
-@arrow-gray: '%23dddddd';
-@arrow-orange: '%23f16e00';
+@arrow-black: '000000';
+@arrow-gray: 'dddddd';
+@arrow-orange: 'f16e00';
 
 // generate url encoded svg with color
 .arrow-svg (@color) {
-@arrow-svg: '%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20id%3D%22path4690%22%20d%3D%22M%200%200%20L%2015%2020%20L%200%2040%20Z%22%20style%3D%22fill%3A@{color}%3B%22%2F%3E%0A%20%20%3Cpath%20id%3D%22path4700%22%20d%3D%22M%201%200%20L%200%200%20L%2015%2020%20L%200%2040%20L%201%2040%20L%2016%2020%20Z%22%20style%3D%22fill%3A%23ffffff%3B%22%2F%3E%0A%3C%2Fsvg%3E';
+@arrow-svg: '%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23@{color}%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E';
 }
 
 .stepbar-arrow (@color) {

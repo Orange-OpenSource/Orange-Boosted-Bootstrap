@@ -3,7 +3,7 @@
 <footer class="navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 o-footer">                
+            <div class="col-xs-12 o-footer">
                 <div class="o-footer-top bs-docs-footer">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
@@ -13,9 +13,9 @@
                 </div>
                 <div class="o-footer-bottom">
                     <ul>
-                      <li>Currently v{{ site.boosted_version }}</li>                      
-                      <li><a href="{{ site.repo }}">GitHub</a></li>                      
-                      <li><a href="../getting-started/#examples">Examples</a></li>                      
+                      <li>Currently v{{ site.boosted_version }}</li>
+                      <li><a href="{{ site.repo }}">GitHub</a></li>
+                      <li><a href="../getting-started/#examples">Examples</a></li>
                       <li><a href="https://github.com/twbs/bootstrap/tree/v{{ site.current_version }}">Original Bootstrap</a></li>
                     </ul>
                 </div>
@@ -28,7 +28,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<script src="../dist/js/boosted.min.js"></script>       
+<script src="../dist/js/boosted.min.js"></script>
 
 <script src="../assets/js/docs.min.js"></script>
 
@@ -37,28 +37,29 @@
 <!---initialization of table sorting -->
 {% if page.slug == "boostwatch" %}
 			<script>
-				$(document).ready(function() { 
-					$("#myTable").tablesorter({ 
-						sortList: [[4,1]] 
-					}); 
+				$(document).ready(function() {
+					$("#myTable").tablesorter({
+						sortList: [[4,1]]
+					});
                     $('[data-toggle="tooltip"]').tooltip();
                     $('[data-toggle="popover"]').popover();
                     $('[data-toggle="dropdown"]').dropdown();
-                    
+
 				});
-                
+
 			</script>
 {% endif %}
 {% if page.slug == "js" %}
 			<script>
-				$(document).ready(function() { 
-					$("#myTable").tablesorter({ 
-						sortList: [[0,1]] 
-					});                     
+				$(document).ready(function() {
+					$("#myTable").tablesorter({
+						sortList: [[0,1]]
+					});
 				});
-                
+
 			</script>
 {% endif %}
+
 <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
 <script>
 // Surcharge des valeurs du script de la toolbar
