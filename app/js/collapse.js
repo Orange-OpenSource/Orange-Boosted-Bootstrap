@@ -294,4 +294,27 @@
     Plugin.call($target, option)
   })
 
+  // local navigation
+  $('.o-nav-local .nav-local.collapse a').on('click', function() {
+      $(this).parent().parent().prev('.local-select').text($(this).text());
+  });
+
+  $('.o-nav-local .nav-local.collapse').on('shown.bs.collapse', function(){
+      $(this).find('li:first-child a').focus();
+  });
+
+  $('.o-nav-local .nav-local.collapse').on('hidden.bs.collapse', function(){
+      $(this).prev('.local-select').focus();
+  });
+
+  $(document).ready(function(){
+      $('.o-nav-local .local-select').each(function() {
+        $(this).text($(this).next('.nav-local.collapse').find('li:first-child a').text());
+      });
+  });
+
+  $(document).on('click', function(){
+      $('.o-nav-local .collapse.in').collapse('hide');
+  });
+
 }(jQuery);

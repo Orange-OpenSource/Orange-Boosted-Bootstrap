@@ -4,11 +4,8 @@
 #header a{
 	display: inline-block;
 }
-#header h1 {
-	color: #000000;
-	display: inline-block;
-	margin-left: 20px;
-	vertical-align: middle;
+h1 {
+	padding-top: 20px;
 }
 #header input{
 	height:35px;
