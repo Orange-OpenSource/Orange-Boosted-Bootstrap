@@ -23,6 +23,7 @@
     // boosted mod
     font-family: $breadcrumb-font-family;
     font-size: $breadcrumb-divider-font-size;
+    line-height: 1;
     // end mod
     color: $breadcrumb-divider-color;
     content: "#{$breadcrumb-divider}";
