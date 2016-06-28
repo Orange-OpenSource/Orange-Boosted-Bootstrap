@@ -17,18 +17,18 @@
   &.has-danger,
   &.has-warning,
   &.has-success {
-      .form-control-label {
-        color: #000;
-      }
+    .form-control-label {
+      color: #000;
+    }
   }
 
   &.has-danger {
     .form-control-message {
-      color: $brand-danger;
-      padding: .625rem 0;
       display: inline-block;
+      padding: .625rem 0;
       font-size: $font-size-sm;
       font-weight: bold;
+      color: $brand-danger;
     }
   }
 }
