@@ -58,6 +58,9 @@
     - title: Pagination
     - title: Progress
     - title: List group
+    # boosted mod
+    - title: Orange list
+    # end mod
     - title: Modal
     - title: Scrollspy
     - title: Tooltips
