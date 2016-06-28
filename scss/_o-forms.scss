@@ -1,0 +1,34 @@
+//
+//  Orange forms
+//
+
+.form-group {
+
+  &.row {
+    .form-control-label {
+      padding: .625rem;
+    }
+  }
+
+  .form-control-label {
+    padding: .625rem 0;
+  }
+
+  &.has-danger,
+  &.has-warning,
+  &.has-success {
+      .form-control-label {
+        color: #000;
+      }
+  }
+
+  &.has-danger {
+    .form-control-message {
+      color: $brand-danger;
+      padding: .625rem 0;
+      display: inline-block;
+      font-size: $font-size-sm;
+      font-weight: bold;
+    }
+  }
+}
