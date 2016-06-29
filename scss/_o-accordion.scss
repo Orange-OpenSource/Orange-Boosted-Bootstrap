@@ -10,32 +10,31 @@
     margin: 0;
     font-size: $font-size-base;
     line-height: 1;
+    border-bottom: 1px solid $gray-light-o;
 
     a {
+      position: relative;
       display: block;
       padding: 1.0625rem 0;
-    }
 
-    .arrow {
-      position: absolute;
-      top: 1.1875rem;
-      right: 10px;
-      border-top: 10px solid #000;
-      border-right: 7px solid transparent;
-      border-left: 7px solid transparent;
-      transition-timing-function: ease;
-      transition-duration: .5s;
-      transform: rotate(180deg);
-    }
+      &::after {
+        position: absolute;
+        top: 1.3125rem;
+        right: .625rem;
+        width: .875rem;
+        height: .4375rem;
+        content: "";
+        background-image: $accordion-arrow-icon;
+      }
 
-    .collapsed .arrow {
-      transform: rotate(0deg);
+      &.collapsed::after {
+        transform: rotate(180deg);
+      }
     }
   }
 
   .panel {
     border: 0;
-    border-bottom: 1px solid $gray-light-o;
   }
 
   .panel-default > .panel-heading {

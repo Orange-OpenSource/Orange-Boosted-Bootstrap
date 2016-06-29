@@ -381,12 +381,6 @@ const Collapse = (($) => {
   })
 
   $(() => {
-    $(Selector.ACCORDION_HEADING).each(function () {
-      // let collpanel = $(this).attr('data-target') ? $($(this).attr('data-target')) : $($(this).attr('href'))
-
-      $(this).prepend('<div class=arrow></div>')
-    })
-
     // local navigation
     $('.o-nav-local .nav-inline.collapse .nav-link').on('click', (event) => {
       $(event.currentTarget).parent().parent().prev('.local-select').text($(event.currentTarget).text())
