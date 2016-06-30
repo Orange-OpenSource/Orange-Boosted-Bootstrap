@@ -11,15 +11,14 @@
   }
 
   .panel-default {
-    border-bottom: none;
+    border-bottom: 1px solid #ccc;
 
-    .panel-heading {
-      border-bottom: 1px solid #ccc;
+    &:first-child .panel-heading {
+      border-top: 1px solid #ccc;
     }
   }
 
-  .panel-default > .panel-heading
-    {
+  .panel-default > .panel-heading {
     background-image: none;
     filter: none;
     padding: 0;
@@ -32,6 +31,7 @@
       line-height: @font-size-base-up;
     }
   }
+
   .panel-chevron-closed::after,
   .panel-chevron-open::after{
     font-family: "icon-orange";
