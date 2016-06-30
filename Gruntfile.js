@@ -642,7 +642,9 @@ module.exports = function (grunt) {
     // Generate changelog based on git commit
     changelog: {
       options: {
-        from: 'v4.0.0-alpha.1',
+        from: 'v4.0.0-alpha.2',
+        // to: 'v4.0.0-alpha.2',
+        // version: 'v4.0.0-alpha.2', 
         commitLink: function (commitHash) {
           //TODO externalize orangeforge git url + project name etc..
           return '[' + commitHash.substring(0, 8) + '](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/' + commitHash + ')';
