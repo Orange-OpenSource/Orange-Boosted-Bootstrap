@@ -10,7 +10,6 @@
     margin: 0;
     font-size: $font-size-base;
     line-height: 1;
-    border-bottom: 1px solid $gray-light-o;
 
     a {
       position: relative;
@@ -34,7 +33,11 @@
   }
 
   .panel {
-    border: 0;
+    border-bottom: 1px solid $gray-light-o;
+
+    &:first-child .panel-title {
+      border-top: 1px solid $gray-light-o;
+    }
   }
 
   .panel-default > .panel-heading {
