@@ -405,6 +405,12 @@ label, input, .form-control{
 //
 // Forms control into input groups
 //
+.form-group {
+  label.control-label {
+    margin-bottom: 1rem;
+  }
+}
+
 .input-group > .form-control{
     border-color: @gray-base;
     &:focus{
@@ -412,18 +418,38 @@ label, input, .form-control{
     }
 }
 .has-success {
+  .control-label {
+    color: #000;
+  }
+
     & .input-group > .form-control{
         // Feedback states
         border-color: @state-success-text;
     }
 }
 .has-error {
+  .control-label {
+    color: #000;
+  }
+
     & .input-group > .form-control{
         // Feedback states
         border-color: @state-danger-text;
     }
+
+  .form-control-message {
+    color: @brand-danger;
+    padding: 1rem 0;
+    display: inline-block;
+    font-size: @font-size-base;
+    font-weight: bold;
+  }
 }
 .has-warning {
+  .control-label {
+    color: #000;
+  }
+
     & .input-group > .form-control{
         // Feedback states
         border-color: @state-warning-text;
