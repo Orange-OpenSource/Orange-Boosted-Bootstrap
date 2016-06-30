@@ -5,12 +5,20 @@
 .o-accordion-triangle
 {
    .panel{
-    border-top:0;  
-    border-left:0;  
+    border-top:0;
+    border-left:0;
     border-right:0;
   }
-  .panel-default > .panel-heading
-    {
+
+  .panel-default {
+    border-bottom: 1px solid #ccc;
+
+    &:first-child .panel-heading {
+      border-top: 1px solid #ccc;
+    }
+  }
+
+  .panel-default > .panel-heading {
     background-image: none;
     filter: none;
     padding: 0;
@@ -23,6 +31,7 @@
       line-height: @font-size-base-up;
     }
   }
+
   .panel-chevron-closed::after,
   .panel-chevron-open::after{
     font-family: "icon-orange";
