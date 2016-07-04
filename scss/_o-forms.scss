@@ -10,8 +10,21 @@
     }
   }
 
+  &.is-required .form-control-label::after {
+      content: "*";
+      margin-left: 6px;
+      color: $brand-primary;
+      font-weight: bold;
+    }
+
   .form-control-label {
     padding: .625rem 0;
+  }
+
+  // browser reset
+  .form-control:invalid {
+    box-shadow: none;
+    outline: none;
   }
 
   &.has-danger,
@@ -29,6 +42,13 @@
       font-size: $font-size-sm;
       font-weight: bold;
       color: $brand-danger;
+    }
+  }
+
+  select.form-control {
+    &:not([size]):not([multiple]) {
+      height: 2.5rem;
+      padding: .5rem .625rem .5rem .4375rem;
     }
   }
 }
