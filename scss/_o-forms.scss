@@ -35,13 +35,17 @@
     }
   }
 
-  &.has-danger {
-    .form-control-message {
+  .form-control-message {
       display: inline-block;
       padding: .625rem 0;
       font-size: $font-size-sm;
-      font-weight: bold;
+      font-weight: normal;
+  }
+
+  &.has-danger {
+    .form-control-message {
       color: $brand-danger;
+      font-weight: bold;
     }
   }
 
