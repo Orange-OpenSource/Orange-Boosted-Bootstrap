@@ -11,11 +11,11 @@
   }
 
   &.is-required .form-control-label::after {
-      content: "*";
-      margin-left: 6px;
-      color: $brand-primary;
-      font-weight: bold;
-    }
+    margin-left: 6px;
+    font-weight: bold;
+    color: $brand-primary;
+    content: "*";
+  }
 
   .form-control-label {
     padding: .625rem 0;
@@ -23,8 +23,8 @@
 
   // browser reset
   .form-control:invalid {
-    box-shadow: none;
     outline: none;
+    box-shadow: none;
   }
 
   &.has-danger,
@@ -36,16 +36,16 @@
   }
 
   .form-control-message {
-      display: inline-block;
-      padding: .625rem 0;
-      font-size: $font-size-sm;
-      font-weight: normal;
+    display: inline-block;
+    padding: .625rem 0;
+    font-size: $font-size-sm;
+    font-weight: normal;
   }
 
   &.has-danger {
     .form-control-message {
-      color: $brand-danger;
       font-weight: bold;
+      color: $brand-danger;
     }
   }
 
