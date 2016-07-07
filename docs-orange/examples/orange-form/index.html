@@ -125,26 +125,27 @@
 					<div class="form-group row is-required">
 						<label for="inputName" class="col-sm-3 form-control-label">Name</label>
 						<div class="col-sm-9">
-							<input type="text" class="form-control" id="inputName" required="true">
+							<input type="text" class="form-control" id="inputName" required>
 						</div>
 					</div>
 					<div class="form-group row is-required">
 						<label for="inputEmail" class="col-sm-3 form-control-label">Email</label>
 						<div class="col-sm-9">
-							<input type="email" class="form-control" id="inputEmail" placeholder="email@provider.com" required="true">
+							<input type="email" class="form-control" id="inputEmail" placeholder="email@provider.com" required>
 						</div>
 					</div>
 					<div class="form-group row is-required">
 						<label for="inputPassword" class="col-sm-3 form-control-label">Password</label>
 						<div class="col-sm-9">
-							<input type="password" class="form-control" id="inputPassword" placeholder="password" required="true" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$">
+							<input type="password" class="form-control" id="inputPassword" placeholder="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$">
 							<span class="form-control-message">Minimum six characters with one lowercase, one uppercase and a number</span>
 						</div>
 					</div>
 					<div class="form-group row is-required">
 						<label for="country" class="col-sm-3 form-control-label">Country</label>
 						<div class="col-sm-9">
-							<select class="form-control" id="country" name="inputCountry" required="true">
+							<select class="form-control" id="country" name="inputCountry" required>
+								<option value="" label="Please select"></option>
 								<option value="AF"> Afghanistan </option>
 								<option value="AL"> Albania </option>
 								<option value="DZ"> Algeria </option>
