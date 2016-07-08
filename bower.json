@@ -46,11 +46,11 @@
     "*.zip"
   ],
   "devDependencies": {
-    "bootstrap": "3.3.6",
-    "bootstrapaccessibilityplugin": ">=1.0.3",
     "bootstrap-datepicker": "~1.4.0"
   },   
   "dependencies": {
+    "bootstrap": "3.3.6",
+    "bootstrapaccessibilityplugin": ">=1.0.3",
     "jquery-validation": "~1.13.1"
   },
   "author": {
