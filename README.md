@@ -10,15 +10,14 @@ And also specific components only available in Boosted.
 [Stepbar](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/components/#stepbar)
 [Orange link pagination](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/components/#orange-pagination)
 [Accordions with indicator](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/javascript/#collapse-example-accordion)
-[Orange pointed tabs](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/components/#o-nav-tabs)
 [Complex table](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/javascript/#complextable)
 [Responsive table, display as cards onto tablets and mobile](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/css/#tables-responsive)
 [Popin (modal window)](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/javascript/#modals)
 [Orange branded checkboxes and radios](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/css/#orange-branded-checkboxes-and-radios)
 [Forms with new html5 elements and a Javascript validation](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/examples/example_form/)
 [Footer](http://orange-opensource.github.io/Orange-Boosted-Bootstrap/components/#footer)
-        
-                
+
+
 To get started, check out <http://orange-opensource.github.io/Orange-Boosted-Bootstrap>!
 
 ## Table of contents
@@ -84,7 +83,7 @@ boosted/
     ├── HelvNeue55_W1G.svg
     ├── HelvNeue55_W1G.ttf
     ├── HelvNeue55_W1G.woff
-    ├── HelvNeue55_W1G.woff2   
+    ├── HelvNeue55_W1G.woff2
     ├── icon-orange.eot
     ├── icon-orange.svg
     ├── icon-orange.ttf
@@ -92,7 +91,7 @@ boosted/
 ```
 
 We provide compiled CSS and JS (`*.*`), as well as compiled and minified CSS and JS (`*.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`*.map`) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional Bootstrap theme.
-                             
+
 
 ## Bugs and feature requests
 

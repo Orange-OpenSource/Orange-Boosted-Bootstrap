@@ -14,8 +14,8 @@ module.exports = function (grunt) {
   // show elapsed time at the end
   require('time-grunt')(grunt);
 
-  grunt.loadNpmTasks('gruntify-eslint');    
-  
+  grunt.loadNpmTasks('gruntify-eslint');
+
   /* Jenkins flag */
   var JENKINS = grunt.option('jenkins');
   if (process.env._JAVA_OPTIONS) {
@@ -477,7 +477,7 @@ module.exports = function (grunt) {
     },
 
     htmllint: {
-      options: {  
+      options: {
         reporter: JENKINS && 'checkstyle',
         reporterOutput: JENKINS && 'reports/htmllint.xml',
         ignore: [
@@ -770,7 +770,7 @@ module.exports = function (grunt) {
           // Add the NavTabs to the navigation
             {
               from: '<li><a href="#nav-pills">Pills</a></li>',
-              to: '<li><a href="#nav-tabs-a">Standard tabs bar</a></li><li><a href="#o-nav-tabs">Orange pointed tabs</a></li><li><a href="#nav-pills">Pills</a></li>'
+              to: '<li><a href="#nav-tabs-a">Standard tabs bar</a></li><li><a href="#nav-pills">Pills</a></li>'
           },
           // Add the NavTabs to the inclusion list of the navs.html native page
             {

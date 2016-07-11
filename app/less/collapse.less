@@ -2,7 +2,6 @@
 // Accordions //
 //
 .o-accordion,
-.o-accordion-triangle
 {
    .panel{
     border-top:0;
@@ -30,37 +29,18 @@
       padding: @panel-heading-padding;
       line-height: @font-size-base-up;
     }
+
+    a::after{
+      font-family: "icon-orange";
+      font-size: 16px;
+      margin-right: 10px;
+      float: right;
+      content: "\e93d";
+    }
+
+    a.collapsed::after {
+      transform: rotate(180deg);
+    }
   }
 
-  .panel-chevron-closed::after,
-  .panel-chevron-open::after{
-    font-family: "icon-orange";
-    font-size: 16px;
-    margin-right: 10px;
-    float: right;
-    content: "\e93e";
-  }
-}
-// Custom class //
-.o-accordion .panel-chevron-open::after{
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-.o-accordion .panel-chevron-closed::after{
-	-webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.o-accordion-triangle .panel-chevron-open::after{
-  content: "\e93d";
-}
-
-.o-accordion-triangle .panel-chevron-closed::after{
-  content: "\e93c";
 }

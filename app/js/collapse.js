@@ -74,14 +74,7 @@
         if(!colltab.hasClass('navbar-toggle')) {
             collpanel.attr({ 'role':'tabpanel', 'tabindex':'0', 'aria-labelledby':collid, 'aria-hidden':'false' });
         }
-
-				//Si on a bien le heading, on lui ajoute la classe panel-selected qui indique que panel est ouvert.
-				//Enfin, on ajoute une classe sur le premier enfant du header pour ajouter le chevron bas (ouvert)
-				if(heading.hasClass('panel-heading') ){
-					colltab.addClass('panel-chevron-open');
-				}
-
-			}else{
+			} else {
 				colltab.attr({'aria-controls' : collpanel.attr('id')});
         // don't change the attribute for menu panel specific case
         if(!colltab.hasClass('navbar-toggle')) {
@@ -90,7 +83,7 @@
 
 				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
 				if(heading.hasClass('panel-heading') ){
-					colltab.addClass('panel-chevron-closed');
+          colltab.addClass('collapsed');
 				}
 			}
 		}
@@ -138,10 +131,6 @@
     this.$trigger
       .removeClass('collapsed')
       .attr('aria-expanded', true)
-      // boosted mod
-      .toggleClass('panel-chevron-closed', false)
-      .toggleClass('panel-chevron-open', true)
-      // end mod
 
     this.transitioning = 1
 
@@ -187,10 +176,6 @@
     this.$trigger
       .addClass('collapsed')
       .attr('aria-expanded', false)
-      // boosted mod
-      .toggleClass('panel-chevron-closed', true)
-      .toggleClass('panel-chevron-open', false)
-      // end mod
 
     this.transitioning = 1
 
@@ -234,10 +219,6 @@
     $trigger
       .toggleClass('collapsed', !isOpen)
       .attr('aria-expanded', isOpen)
-      // boosted mod
-      .toggleClass('panel-chevron-closed', !isOpen)
-      .toggleClass('panel-chevron-open', isOpen)
-      // end mod
   }
 
   function getTargetFromTrigger($trigger) {
