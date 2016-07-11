@@ -16,8 +16,8 @@ And also specific components only available in Boosted.
 [Orange branded checkboxes and radios](http://boosted.orange.com/css/#orange-branded-checkboxes-and-radios)
 [Forms with new html5 elements and a Javascript validation](http://boosted.orange.com/examples/example_form/)
 [Footer](http://boosted.orange.com/components/#footer)
-        
-                
+
+
 To get started, check out <http://boosted.orange.com/getting-started/>!
 
 ## Table of contents
@@ -83,7 +83,7 @@ boosted/
     ├── HelvNeue55_W1G.svg
     ├── HelvNeue55_W1G.ttf
     ├── HelvNeue55_W1G.woff
-    ├── HelvNeue55_W1G.woff2   
+    ├── HelvNeue55_W1G.woff2
     ├── icon-orange.eot
     ├── icon-orange.svg
     ├── icon-orange.ttf
@@ -91,7 +91,7 @@ boosted/
 ```
 
 We provide compiled CSS and JS (`*.*`), as well as compiled and minified CSS and JS (`*.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`*.map`) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional Bootstrap theme.
-                             
+
 
 ## Bugs and feature requests
 

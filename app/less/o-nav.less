@@ -8,10 +8,11 @@
 // Give the tabs something to sit on
 .nav-tabs {
   > li {
-      + li {
-        // TODO Put to Variables
-        margin-left: @nav-tab-margin;
-      }
+
+    + li {
+      margin-left: @nav-tab-margin;
+    }
+
     // Actual tabs (as links)
     > a {
       padding: @nav-tab-padding;
@@ -59,7 +60,11 @@
     }
     margin-bottom: -2px;
   }
-    border-bottom-width: 2px;
+
+  .nav-item > a {
+    margin-bottom: 0;
+  }
+  border-bottom-width: 2px;
 }
 
 // Pills
