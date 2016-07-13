@@ -11,14 +11,15 @@ $(function() {
 // $(document).ready(function(){
   $("#main-slick-carousel").on('init', function(){
     // adding accessibility
-    $('.slick-slider.slick-dotted .slick-dots').attr('aria-hidden', true);
+    // $('.slick-slider.slick-dotted .slick-dots').attr('aria-hidden', true);
     $('.slick-slider.slick-dotted .slick-dots li button').text(function(index, text) {
-      return "go to slide " + text;
+      return "slide " + text;
     });
     $('.slick-slider .slick-prev').attr('aria-label', 'Previous slide');
     $('.slick-slider .slick-next').attr('aria-label', 'Next slide');
-    setTimeout(function(){
-      $('.slick-slider').attr('role', 'region').attr('aria-label', 'accessible carousel');
-    }, 500);
+
+    // setTimeout(function(){
+    //   $('.slick-slider').attr('role', 'region').attr('aria-label', 'accessible carousel');
+    // }, 500);
   });
 // });
