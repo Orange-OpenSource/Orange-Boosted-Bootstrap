@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../../dist/css/boosted.min.css" />
 		<link href="example.css" rel="stylesheet">
 	</head>
-	<body role="document">
+	<body>
 		<div class="skiplinks" >
 			<div class="skiplinks-section sr-only">
 				<ul>
@@ -23,7 +23,7 @@
 		</div>
 
 		<header role="banner">
-            <nav class="navbar navbar-dark" role="navigation">
+            <nav class="navbar navbar-dark">
 			<div class="container-fluid">
                 <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#orange-navbar-collapse">
                     <span class="sr-only">toggle navigation</span>
@@ -35,12 +35,12 @@
                     <a class="navbar-brand" href="#"><span class="sr-only">Link to the homepage</span></a>
 					<ul class="nav navbar-nav" role="tablist">
 						<li role="presentation" class="nav-item"><a class="nav-link" href="#" role="button">edit news &nbsp;<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
-						<li role="presentation" class="nav-item"><a class="nav-link" href="#" role="button">preferences &nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+						<li role="presentation" class="nav-item"><a class="nav-link" href="#" role="button">preferences &nbsp;<span class="icon-settings" aria-hidden="true"></span></a></li>
 					</ul>
 					<ul class="nav navbar-nav pull-md-right">
 						<li role="presentation" class="nav-item dropdown">
-							<a href="#" class="dropdown-toggle active" data-toggle="dropdown" type="button">
-								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>hello <span class="orange">admin&nbsp;</span><b class="caret" aria-hidden="true"></b>
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+								<span class="icon-avatar" aria-hidden="true"></span>hello <span class="orange">admin&nbsp;</span><b class="caret" aria-hidden="true"></b>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">logout</a></li>
@@ -54,12 +54,12 @@
         </header>
 
 
-		<main id="content" class="container" role="main">
+		<main id="content" class="container">
             <div id="header" class="container">
                 <div class="row">
                     <div class="col-sm-6">
                         <a href="#">
-                            <img src="images/logo-orange.png">
+                            <img src="images/logo-orange.png" alt="Back to homepage">
                         </a>
                         <h1>news administration</h1>
                     </div>
@@ -67,7 +67,7 @@
             </div>
 
             <div id="localContainer" class="container">
-        	<nav id="localNavigation" class="navbar nav-local" role="navigation">
+        	<nav id="localNavigation" class="navbar nav-local">
                 <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
                     <span class="sr-only">toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -75,7 +75,7 @@
 				<div class="collapse navbar-toggleable-xs local" id="bs-example-navbar-collapse-2">
 					<ul class="nav navbar-nav">
 						<li class="nav-item"><a class="nav-link" href="#">all<div class='arrow' aria-hidden='true'></div></a></li>
-						<li class="nav-item"><a class="nav-link"href="#">world<div class='arrow' aria-hidden='true'></div></a></li>
+						<li class="nav-item"><a class="nav-link" href="#">world<div class='arrow' aria-hidden='true'></div></a></li>
 						<li class="nav-item"><a class="nav-link" href="#">entertainment<div class='arrow' aria-hidden='true'></div></a></li>
 						<li class="nav-item"><a class="nav-link" href="#">finance<div class='arrow' aria-hidden='true'></div></a></li>
 						<li class="nav-item"><a class="nav-link" href="#">technology<div class='arrow' aria-hidden='true'></div></a></li>
@@ -164,15 +164,13 @@
 					<div class="tab-pane active" id="help"><p>From this view, you can edit or delete entry of your web site. You can also add an entry by clicking on "add an news" button.<br/>You can reorder column by clicking on them.<br/>Finaly, you can search an item by typing his title or his ID in the search field, at the top of the page.</p>
 					</div>
 					<div class="tab-pane" id="faq">
-						<p>
-						<ul>
-							<li><a href="#">I can't delete an entry</a></li>
-							<li><a href="#">I've got an error 500 when i try to edit an entry</a></li>
-							<li><a href="#">Another question</a></li>
-						</ul>
-						</p>
-				</div>
-			</div><!-- fin nav tabs A -->
+                        <ul>
+                            <li><a href="#">I can't delete an entry</a></li>
+                            <li><a href="#">I've got an error 500 when i try to edit an entry</a></li>
+                            <li><a href="#">Another question</a></li>
+                        </ul>
+				    </div>
+			    </div><!-- fin nav tabs A -->
 
 			</div><!-- fin de la row globale-->
 
@@ -194,6 +192,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="../../dist/js/boosted.js"></script>
+    <script src="../../dist/js/vendors/jquery.tablesorter.js"></script>
 
 	<script>
 		$(document).ready(function() {

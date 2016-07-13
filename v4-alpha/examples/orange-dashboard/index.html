@@ -38,7 +38,7 @@
 
 	</head>
 
-	<body role="document">
+	<body>
 
 		<div class="skiplinks" >
 			<div class="skiplinks-section sr-only">
@@ -60,7 +60,7 @@
 
 
 		<header role="banner">
-            <nav class="navbar navbar-dark" role="navigation">
+            <nav class="navbar navbar-dark">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
                 <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -84,8 +84,8 @@
 					</ul>
 					<ul class="nav navbar-nav pull-md-right">
 						<li class="nav-item dropdown" role="presentation">
-							<a class="nav-link" href="#" class="dropdown-toggle active" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+							<a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">
+								<span class="icon-international-globe" aria-hidden="true"></span>
 								<span class="hidden-xs hidden-sm">&nbsp;language</span>&nbsp;<b class="caret" aria-hidden="true"></b>
 							</a>
 							<ul class="dropdown-menu">
@@ -95,7 +95,7 @@
 						</li>
 						<li class="nav-item dropdown" role="presentation">
 							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								<span class="icon-avatar" aria-hidden="true"></span>
 								<span class="hidden-xs hidden-sm">&nbsp;hello
 									<span class="orange">admin</span>&nbsp;
 								</span><b class="caret" aria-hidden="true"></b>
@@ -113,7 +113,7 @@
 		</header>
 
 
-	   <main id="content" class="container-fluid" role="main">
+	   <main id="content" class="container-fluid">
 
 		<div class="well">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 
@@ -130,7 +130,7 @@
 					</ul>
 					<div class="tab-content">
 						<div class="tab-pane active" id="users">
-							<form id="search-users" name="searchUsers" method="post" action="">
+							<form id="search-users" name="searchUsers" method="post" action="/">
 								<div class="form-group row">
 									<label for="phone" class="col-sm-2 form-control-label">Phone <span class="star">*</span> </label>
 									<div class="col-sm-10">
@@ -176,7 +176,7 @@
 
 						</div>
 						<div class="tab-pane" id="devices">
-							<form id="search-devices" name="searchDevices" method="post" action="" class="form-horizontal">
+							<form id="search-devices" name="searchDevices" method="post" action="/" class="form-horizontal">
 								<div class="form-group">
 									<label for="mac" class="col-sm-2 control-label">MAC <span class="star">*</span> </label>
 									<div class="col-sm-10">
@@ -189,10 +189,10 @@
 							</form>
 						</div>
 						<div class="tab-pane" id="messages">
-							<form id="search-messages" name="searchMesages" method="post" action="" class="form-horizontal">
+							<form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
 								<div class="input-group">
 									<span class="input-group-addon">@</span>
-									<input type="text" class="form-control" placeholder="regexp">
+									<input type="text" class="form-control" placeholder="regexp" title="Found a message by regexp">
 								</div>
 								<div class="center">
 									<button type="submit" class="btn btn-primary">search</button>
@@ -207,21 +207,21 @@
 			<div class="col-md-6 col" id="second">
 				<div class="info-block">
 					<h1 id="alerts" class="h2">my alerts</h1>
-					<table id="myTable" class="table tablesorter" summary="Monthly alerts received">
+					<table id="myTable" class="table tablesorter">
 						<caption>Alerts received</caption>
 						<thead class="cf">
 							<tr>
 								<th class="header" scope="col"></th>
 								<th class="header" scope="col"><a href="#">date<span class="sr-only"> sortable</span></a></th>
-								<th class="header" scope="col" class="hide-when-small"><a href="#">id<span class="sr-only"> sortable</span></a></th>
+								<th class="header hide-when-small" scope="col"><a href="#">id<span class="sr-only"> sortable</span></a></th>
 								<th class="header" scope="col"><a href="#">type<span class="sr-only"> sortable</span></a></th>
 								<th class="header" scope="col"><a href="#">status<span class="sr-only"> sortable</span></a></th>
-								<th class="header" scope="col" class="hide-when-small"><a href="#">duration<span class="sr-only"> sortable</span></a></th>
+								<th class="header hide-when-small" scope="col"><a href="#">duration<span class="sr-only"> sortable</span></a></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td><img src="images/Cancel.png" class="alert-img"/></td>
+								<td><img src="images/Cancel.png" class="alert-img" alt="cancel"/></td>
 								<td>08/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447765896321</a></td>
 								<td>BT</td>
@@ -229,7 +229,7 @@
 								<td class="hide-when-small">0:05:40</td>
 							</tr>
 							<tr>
-								<td><img src="images/Ok.png" class="alert-img"/></td>
+								<td><img src="images/Ok.png" class="alert-img" alt="OK"/></td>
 								<td>09/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447765896327</a></td>
 								<td>Warn</td>
@@ -237,7 +237,7 @@
 								<td class="hide-when-small">0:19:09</td>
 							</tr>
 							<tr>
-								<td><img src="images/Warning.png" class="alert-img"/></td>
+								<td><img src="images/Warning.png" class="alert-img" alt="warning"/></td>
 								<td>10/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447765896322</a></td>
 								<td>MMK</td>
@@ -245,7 +245,7 @@
 								<td class="hide-when-small">0:10:06</td>
 							</tr>
 							<tr>
-								<td><img src="images/Ok.png" class="alert-img"/></td>
+								<td><img src="images/Ok.png" class="alert-img" alt="ok"/></td>
 								<td>11/10/12</td>
 								<td class="hide-when-small"><a href="#"><span class="sr-only">view system with id </span>447754233245</a></td>
 								<td>YYI</td>
@@ -283,19 +283,19 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td><img src="images/Cancel.png" class="alert-img"/></td>
+											<td><img src="images/Cancel.png" class="alert-img" alt="cancel"/></td>
 											<td>447765896321</td>
 											<td>BT</td>
 											<td><span class="error">stopped</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Ok.png" class="alert-img"/></td>
+											<td><img src="images/Ok.png" class="alert-img" alt="OK"/></td>
 											<td>447765896327</td>
 											<td>Warn</td>
 											<td><span class="ok">ok</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Warning.png" class="alert-img"/></td>
+											<td><img src="images/Warning.png" class="alert-img" alt="warning"/></td>
 											<td>447765896322</td>
 											<td>MMK</td>
 											<td><span class="warning">disfunction</span></td>
@@ -318,19 +318,19 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td><img src="images/Cancel.png" class="alert-img"/></td>
+											<td><img src="images/Cancel.png" class="alert-img" alt="cancel"/></td>
 											<td>447765896321</td>
 											<td>BT</td>
 											<td><span class="error">stopped</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Ok.png" class="alert-img"/></td>
+											<td><img src="images/Ok.png" class="alert-img" alt="OK"/></td>
 											<td>447765896327</td>
 											<td>Warn</td>
 											<td><span class="ok">ok</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Warning.png" class="alert-img"/></td>
+											<td><img src="images/Warning.png" class="alert-img" alt="warning"/></td>
 											<td>447765896322</td>
 											<td>MMK</td>
 											<td><span class="warning">disfunction</span></td>
@@ -353,19 +353,19 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td><img src="images/Cancel.png" class="alert-img"/></td>
+											<td><img src="images/Cancel.png" class="alert-img" alt="cancel"/></td>
 											<td>447765896321</td>
 											<td>BT</td>
 											<td><span class="error">stopped</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Ok.png" class="alert-img"/></td>
+											<td><img src="images/Ok.png" class="alert-img" alt="ok"/></td>
 											<td>447765896327</td>
 											<td>Warn</td>
 											<td><span class="ok">ok</span></td>
 										</tr>
 										<tr>
-											<td><img src="images/Warning.png" class="alert-img"/></td>
+											<td><img src="images/Warning.png" class="alert-img" alt="warning"/></td>
 											<td>447765896322</td>
 											<td>MMK</td>
 											<td><span class="warning">disfunction</span></td>

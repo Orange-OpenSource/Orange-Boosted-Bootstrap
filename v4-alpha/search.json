@@ -41,6 +41,20 @@
 
     
         {
+            "title" : "Boosted history",
+            "url"   : "http://boosted.orange.com/v4-alpha/about/boosted-history/"
+        } ,
+    
+
+    
+        {
+            "title" : "Boosted license FAQs",
+            "url"   : "http://boosted.orange.com/v4-alpha/about/boosted-license/"
+        } ,
+    
+
+    
+        {
             "title" : "Boostwatch",
             "url"   : "http://boosted.orange.com/v4-alpha/boostwatch/"
         } ,
@@ -99,6 +113,13 @@
         {
             "title" : "Buttons",
             "url"   : "http://boosted.orange.com/v4-alpha/components/buttons/"
+        } ,
+    
+
+    
+        {
+            "title" : "Buttons inversed",
+            "url"   : "http://boosted.orange.com/v4-alpha/components/buttons-inversed/"
         } ,
     
 
@@ -188,6 +209,13 @@
 
     
         {
+            "title" : "Flexbox grid system",
+            "url"   : "http://boosted.orange.com/v4-alpha/layout/flexbox-grid/"
+        } ,
+    
+
+    
+        {
             "title" : "Forms",
             "url"   : "http://boosted.orange.com/v4-alpha/components/forms/"
         } ,
@@ -246,13 +274,6 @@
         {
             "title" : "Jumbotron",
             "url"   : "http://boosted.orange.com/v4-alpha/components/jumbotron/"
-        } ,
-    
-
-    
-        {
-            "title" : "Labels",
-            "url"   : "http://boosted.orange.com/v4-alpha/components/label/"
         } ,
     
 
@@ -328,6 +349,13 @@
 
     
         {
+            "title" : "Orange brand guidelines",
+            "url"   : "http://boosted.orange.com/v4-alpha/about/orange-brand/"
+        } ,
+    
+
+    
+        {
             "title" : "Orange footer",
             "url"   : "http://boosted.orange.com/v4-alpha/components/orange-footer/"
         } ,
@@ -356,8 +384,15 @@
 
     
         {
-            "title" : "Orange pointed tabs",
-            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-pointed-tabs/"
+            "title" : "Orange navbar",
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-navbar/"
+        } ,
+    
+
+    
+        {
+            "title" : "Orange stepbar",
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-stepbar/"
         } ,
     
 
@@ -419,15 +454,15 @@
 
     
         {
-            "title" : "Stepbar",
-            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-stepbar/"
+            "title" : "Tables",
+            "url"   : "http://boosted.orange.com/v4-alpha/content/tables/"
         } ,
     
 
     
         {
-            "title" : "Tables",
-            "url"   : "http://boosted.orange.com/v4-alpha/content/tables/"
+            "title" : "Tags",
+            "url"   : "http://boosted.orange.com/v4-alpha/components/tag/"
         } ,
     
 
