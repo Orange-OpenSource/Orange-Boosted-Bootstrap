@@ -42,10 +42,10 @@
   // For mobile display emphase the border
   @include media-breakpoint-down(sm) {
     .panel {
-      border-bottom: 2px;
+      border-bottom-width: 2px;
 
       &:first-child .panel-title {
-        border-top: 2px;
+        border-top-width: 2px;
       }
     }
   }
