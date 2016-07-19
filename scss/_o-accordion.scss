@@ -39,6 +39,16 @@
       border-top: 1px solid $gray-light-o;
     }
   }
+  // For mobile display emphase the border
+  @include media-breakpoint-down(sm) {
+    .panel {
+      border-bottom: 2px;
+
+      &:first-child .panel-title {
+        border-top: 2px;
+      }
+    }
+  }
 
   .panel-default > .panel-heading {
     padding: 0;
