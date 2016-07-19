@@ -16,6 +16,17 @@
       border-top: 1px solid #ccc;
     }
   }
+  
+  // For mobile display emphase the border
+  @media (max-width: @screen-sm-max) {
+    .panel-default {
+      border-bottom-width: 2px;
+
+      &:first-child .panel-heading {
+        border-top-width: 2px;
+      }
+    }
+  }
 
   .panel-default > .panel-heading {
     background-image: none;
