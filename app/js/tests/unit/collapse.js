@@ -339,7 +339,7 @@ $(function () {
 
     $target.trigger('click')
   })
-  
+
   /** BOOSTED mod */
   QUnit.test('should change aria-hidden from active accordion element to "true" and set the newly active one to "false"', function (assert) {
     assert.expect(3)
@@ -373,7 +373,7 @@ $(function () {
 
     $target3.trigger('click')
   })
-  
+
   QUnit.test('should change tabindex from active accordion element to "-1" and set the newly active one to "0"', function (assert) {
     assert.expect(3)
     var done = assert.async()
@@ -406,9 +406,9 @@ $(function () {
 
     $target3.trigger('click')
   })
-    
-  QUnit.test('should toggle "panel-chevron-closed" class from active o-accordion target', function (assert) {
-    assert.expect(3)
+
+  QUnit.test('should toggle "collapsed" class from inactive o-accordion panel', function (assert) {
+    assert.expect(1)
     var done = assert.async()
 
     var accordionHTML = '<div class="o-accordion panel-group" id="accordion">'
@@ -418,29 +418,27 @@ $(function () {
         + '</div>'
     var $groups = $(accordionHTML).appendTo('#qunit-fixture').find('.panel')
 
-    var $target1 = $('<a role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
+    var $target1 = $('<a class="collapsed" role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
 
-    $('<div id="body1" class="in"/>').appendTo($groups.eq(0))
+    $('<div id="body1"/>').appendTo($groups.eq(0))
 
     var $target2 = $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
 
     $('<div id="body2"/>').appendTo($groups.eq(1))
 
-    var $target3 = $('<a class="collapsed" data-toggle="collapse" role="button" href="#body3" data-parent="#accordion"/>').appendTo($groups.eq(2))
+    var $target3 = $('<a data-toggle="collapse" role="button" href="#body3" data-parent="#accordion"/>').appendTo($groups.eq(2))
 
-    $('<div id="body3"/>')
+    $('<div id="body3" class="in"/>')
       .appendTo($groups.eq(2))
-      .on('shown.bs.collapse', function () {
-        assert.ok($target1.hasClass('panel-chevron-closed'), 'inactive target 1 have class "panel-chevron-open"')
-        assert.ok($target2.hasClass('panel-chevron-closed'), 'inactive target 2 have class "panel-chevron-open"')
-        assert.ok($target3.hasClass('panel-chevron-open'), 'active target 3 have class "panel-chevron-closed"')
+      .on('hidden.bs.collapse', function () {
+        assert.ok($target3.hasClass('collapsed'), 'inactive target has class "collapsed"')
 
         done()
       })
 
     $target3.trigger('click')
   })
-  
+
   QUnit.test('should not hide other panel on accordion with data-multipleAtATime attribute = "true"', function (assert) {
     assert.expect(3)
     var done = assert.async()
@@ -475,7 +473,7 @@ $(function () {
     $target3.trigger('click')
   })
 
-  
+
   /** End mod */
 
   QUnit.test('should change aria-expanded from active accordion target to "false" and set the newly active one to "true"', function (assert) {
