@@ -401,3 +401,150 @@ fieldset[disabled] a.btn {
     }
   }
 }
+
+// single toggle
+
+.switch {
+
+  &.form-group {
+    margin-bottom: 0;
+  }
+
+  input[type="checkbox"].toggle {
+    width: 1px;
+    height: 1px;
+  }
+
+  .toggle + label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+  }
+
+  input.toggle + label {
+    display: inline-block;
+    width: 3.75rem;
+    height: 1.875rem;
+    padding: 0;
+    margin: .3125rem 0;
+  }
+
+  input.toggle + label::before,
+  input.toggle + label::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+  }
+
+  input.toggle + label::before {
+    right: 0;
+    background-color: #000;
+    background-image: $toggle-switch-icon;
+  }
+
+  input.toggle + label::after {
+    top: 2px;
+    left: 2px;
+    width: 1.75rem;
+    height: 1.625rem;
+    margin-left: 1.75rem;
+    background-color: #fff;
+    transition: margin .4s;
+  }
+
+  input.toggle:checked + label::after {
+    margin-left: 0;
+  }
+}
+
+.switch input:focus.toggle + label::after {
+  outline: 1px #fff dotted;
+}
+
+// 3 way toggles
+
+.btn-group[data-toggle=buttons] {
+  border: 2px solid #000;
+
+  .btn {
+    width: 2.5rem;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+    border-top: 0;
+    border-right: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 2px solid #fff;
+
+    &:first-child {
+      margin-left: -2px;
+      border-left-color: #000;
+    }
+
+    &:last-child {
+      margin-right: -2px;
+      border-right-color: #000;
+    }
+
+    &.active {
+      color: #fff;
+      background-color: #000;
+      border-right-color: #000;
+      border-left-color: #000;
+    }
+
+    @include hover {
+      color: $brand-primary;
+      background-color: #fff;
+
+      &.active {
+        color: #fff;
+        background-color: #000;
+        border-right-color: #000;
+        border-left-color: #000;
+      }
+    }
+  }
+
+  &.no-outline {
+    border-color: transparent;
+
+    .btn {
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+
+      &:first-child {
+        border-left-color: transparent;
+      }
+
+      &:last-child {
+        border-right-color: transparent;
+      }
+
+      &.active {
+        color: $brand-primary;
+        background-color: #fff;
+        border-color: transparent;
+        outline-color: #000;
+      }
+
+      @include hover {
+        color: #000;
+        background-color: #fff;
+        border-color: #000;
+
+        &.active {
+          color: $brand-primary;
+          background-color: #fff;
+          border-color: transparent;
+          outline-color: #000;
+        }
+      }
+    }
+  }
+}
