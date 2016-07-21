@@ -212,17 +212,6 @@ module.exports = function (grunt) {
         src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>IE82015.less',
         dest: 'dist/css/<%= yeoman.packageName %>IE82015.css'
       },
-      compileThemeIE2015: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= yeoman.packageName %>-themeIE82015.css.map',
-          sourceMapFilename: 'dist/css/<%= yeoman.packageName %>-themeIE82015.css.map'
-        },
-        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>-themeIE82015.less',
-        dest: 'dist/css/<%= yeoman.packageName %>-themeIE82015.css'
-      },
       compileBoostedIE2015: {
         options: {
           strictMath: true,
@@ -244,17 +233,6 @@ module.exports = function (grunt) {
         },
         src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>2015.less',
         dest: 'dist/css/<%= yeoman.packageName %>2015.css'
-      },
-      compileTheme2015: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= yeoman.packageName %>-theme2015.css.map',
-          sourceMapFilename: 'dist/css/<%= yeoman.packageName %>-theme2015.css.map'
-        },
-        src: '<%= yeoman.app %>/less/<%= yeoman.packageName %>-theme2015.less',
-        dest: 'dist/css/<%= yeoman.packageName %>-theme2015.css'
       },
       compileBoosted2015: {
         options: {
@@ -645,7 +623,9 @@ module.exports = function (grunt) {
         overwrite: true,
         replacements: [{
               from: '<h2 id="glyphicons-glyphs">Available glyphs</h2>',
-              to: '<h2 id="orange-icons">Orange Icons</h2><p>Icons created from the Orange brand.</p><div class="bs-glyphicons"><ul class="bs-glyphicons-list">{% for iconClassName in site.data.orange-icons %}<li><span class="{{ iconClassName }}" aria-hidden="true"></span><span class="glyphicon-class">{{ iconClassName }}</span></li>{% endfor %}</ul></div><h2 id="glyphicons-glyphs">Available glyphs</h2>'
+              to: '<h2 id="orange-icons">Orange Icons</h2><p>Icons created from the Orange brand.'+
+        'Copyright (C) 2016 Orange SA All rights reserved'+
+        'See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p><div class="bs-glyphicons"><ul class="bs-glyphicons-list">{% for iconClassName in site.data.orange-icons %}<li><span class="{{ iconClassName }}" aria-hidden="true"></span><span class="glyphicon-class">{{ iconClassName }}</span></li>{% endfor %}</ul></div><h2 id="glyphicons-glyphs">Available glyphs</h2>'
           }, {
               from: '<li><a href="#glyphicons-glyphs">Available glyphs</a></li>',
               to: '<li><a href="#orange-icons">Orange Icons</a></li><li><a href="#glyphicons-glyphs">Available glyphs</a></li>'
