@@ -277,6 +277,17 @@ module.exports = function (grunt) {
         },
         src: '<%= yeoman.app %>/less/orangeHelvetica.less',
         dest: 'dist/css/orangeHelvetica.css'
+      },
+      compileIcons: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'orangeIcons.css.map',
+          sourceMapFilename: 'dist/css/orangeIcons.css.map'
+        },
+        src: '<%= yeoman.app %>/less/orangeIcons.less',
+        dest: 'dist/css/orangeIcons.css'
       }
     },
 
