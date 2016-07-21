@@ -266,6 +266,17 @@ module.exports = function (grunt) {
         },
         src: '<%= yeoman.app %>/less/boosted2015.less',
         dest: 'dist/css/boosted2015.css'
+      },
+      compileHelvetica: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'orangeHelvetica.css.map',
+          sourceMapFilename: 'dist/css/orangeHelvetica.css.map'
+        },
+        src: '<%= yeoman.app %>/less/orangeHelvetica.less',
+        dest: 'dist/css/orangeHelvetica.css'
       }
     },
 
