@@ -331,13 +331,6 @@ $btn-border-radius:              $border-radius;
 $btn-border-radius-lg:           $border-radius-lg;
 $btn-border-radius-sm:           $border-radius-sm;
 
-
-// toggle switches
-
-// $toggle-switch-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2030%22%3E%3Cpath%20d%3D%22M7.732%2015.275l4.3%204.1L22.27%209.64M39.396%209.447l11.208%2011.106m-11.208%200L50.604%209.447%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.999%22%2F%3E%3Cview%20viewBox%3D%220%200%2030%2030%22%2F%3E%3Cview%20viewBox%3D%2230%200%2030%2030%22%2F%3E%3C%2Fsvg%3E");
-
-$toggle-switch-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2030%22%20width%3D%2260%22%20height%3D%2230%22%3E%3Cview%20viewBox%3D%220%200%2030%2030%22%2F%3E%3Cview%20viewBox%3D%2230%200%2030%2030%22%2F%3E%3Cpath%20d%3D%22M0%200h60v30H0z%22%2F%3E%3Cpath%20style%3D%22line-height%3Anormal%3Btext-indent%3A0%3Btext-align%3Astart%3Btext-decoration-line%3Anone%3Btext-decoration-style%3Asolid%3Btext-decoration-color%3A%23000000%3Btext-transform%3Anone%3Bblock-progression%3Atb%3Bisolation%3Aauto%3Bmix-blend-mode%3Anormal%22%20d%3D%22M40.452%208.383l-2.11%202.13L42.87%2015l-4.53%204.488%202.112%202.13%204.55-4.51%204.548%204.51%202.11-2.13L47.13%2015l4.53-4.488-2.11-2.13-4.55%204.51-4.548-4.51zM21.236%208.554l-9.203%208.752-3.267-3.116-2.07%202.17%205.333%205.086%2011.273-10.718-2.067-2.174z%22%20color%3D%22%23000%22%20font-family%3D%22sans-serif%22%20white-space%3D%22normal%22%20overflow%3D%22visible%22%20solid-color%3D%22%23000000%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
-
 // Accordions
 
 $accordion-arrow-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%200l7%207H0l7-7z%22%2F%3E%3C%2Fsvg%3E");
@@ -578,9 +571,10 @@ $pagination-disabled-border:           #000;
 
 $pagination-icon-prev: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%2F%3E%3C%2Fsvg%3E") !default;
 $pagination-icon-prev-disabled: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E") !default;
+$pagination-icon-prev-active: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E") !default;
 $pagination-icon-next: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%2F%3E%3C%2Fsvg%3E") !default;
 $pagination-icon-next-disabled: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E") !default;
-
+$pagination-icon-next-active: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E") !default;
 
 // Jumbotron
 
