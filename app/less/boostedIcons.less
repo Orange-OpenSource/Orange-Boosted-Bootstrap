@@ -1,0 +1,45 @@
+@import "variables-orange2015.less";
+@font-face {
+	font-family: 'boosted';
+	src:url('@{icon-font-path}boosted.eot');
+	src:url('@{icon-font-path}boosted.eot?#iefix') format('embedded-opentype'),
+		url('@{icon-font-path}boosted.ttf') format('truetype'),
+		url('@{icon-font-path}boosted.woff') format('woff'),
+		url('@{icon-font-path}boosted.svg?#boosted') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.boosted-arrow_up,
+.boosted-arrow_down,
+.boosted-arrow-next,
+.boosted-arrow-previous,
+.boosted-checkbox_tick{
+  // use !important to prevent issues with browser extensions that change fonts //
+  font-family: "boosted" !important;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 0.875; // Font generate with 16px as a default font-size, but boosted used 14px so 14/16 = .875
+  text-transform: none;
+  speak: none;
+
+  // Better Font Rendering =========== //
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.boosted-arrow_up:before {
+    content: "\e900";
+}
+.boosted-arrow_down:before {
+    content: "\e901";
+}
+.boosted-arrow-next:before {
+    content: "\e902";
+}
+.boosted-arrow-previous:before {
+    content: "\e903";
+}
+.boosted-checkbox_tick:before {
+    content: "\e904";
+}
+
