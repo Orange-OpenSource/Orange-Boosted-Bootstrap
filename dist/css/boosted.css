@@ -7749,68 +7749,92 @@ fieldset[disabled] a.btn {
   color: #666;
 }
 
-.switch.form-group {
-  margin-bottom: 0;
+.checkbox-label,
+.checkbox-label::before,
+.checkbox-label .on,
+.checkbox-label .off {
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 
-.switch input[type="checkbox"].toggle {
-  width: 1px;
-  height: 1px;
-}
-
-.switch .toggle + label {
+.checkbox-label {
   position: relative;
   display: block;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  outline: none;
-}
-
-.switch input.toggle + label {
-  display: inline-block;
   width: 3.75rem;
   height: 1.875rem;
-  padding: 0;
   margin: .3125rem 0;
+  background: #666;
+  border: 2px solid #666;
 }
 
-.switch input.toggle + label::before,
-.switch input.toggle + label::after {
+.checkbox-label.rounded, .checkbox-label.rounded::before {
+  border-radius: 1.625rem;
+}
+
+.checkbox-label .on {
+  position: absolute;
+  left: .375rem;
+  z-index: 0;
+  display: block;
+  font-weight: bold;
+  line-height: 1.625rem;
+  color: #fff;
+  opacity: 0;
+}
+
+.checkbox-label .off {
+  position: absolute;
+  right: .375rem;
+  z-index: 0;
+  display: block;
+  font-weight: bold;
+  line-height: 1.625rem;
+  color: #fff;
+  text-align: right;
+  opacity: 1;
+}
+
+.checkbox-label::before {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
+  z-index: 1;
   display: block;
-  content: "";
-}
-
-.switch input.toggle + label::before {
-  right: 0;
-  background-color: #000;
-  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2030%22%20width%3D%2260%22%20height%3D%2230%22%3E%3Cview%20viewBox%3D%220%200%2030%2030%22%2F%3E%3Cview%20viewBox%3D%2230%200%2030%2030%22%2F%3E%3Cpath%20d%3D%22M0%200h60v30H0z%22%2F%3E%3Cpath%20style%3D%22line-height%3Anormal%3Btext-indent%3A0%3Btext-align%3Astart%3Btext-decoration-line%3Anone%3Btext-decoration-style%3Asolid%3Btext-decoration-color%3A%23000000%3Btext-transform%3Anone%3Bblock-progression%3Atb%3Bisolation%3Aauto%3Bmix-blend-mode%3Anormal%22%20d%3D%22M40.452%208.383l-2.11%202.13L42.87%2015l-4.53%204.488%202.112%202.13%204.55-4.51%204.548%204.51%202.11-2.13L47.13%2015l4.53-4.488-2.11-2.13-4.55%204.51-4.548-4.51zM21.236%208.554l-9.203%208.752-3.267-3.116-2.07%202.17%205.333%205.086%2011.273-10.718-2.067-2.174z%22%20color%3D%22%23000%22%20font-family%3D%22sans-serif%22%20white-space%3D%22normal%22%20overflow%3D%22visible%22%20solid-color%3D%22%23000000%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.switch input.toggle + label::after {
-  top: 2px;
-  left: 2px;
-  width: 1.75rem;
+  width: 1.625rem;
   height: 1.625rem;
-  margin-left: 1.75rem;
-  background-color: #fff;
-  -webkit-transition: margin .4s;
-  -o-transition: margin .4s;
-  transition: margin .4s;
+  content: "";
+  background: #fff;
 }
 
-.switch input.toggle:checked + label::after {
-  margin-left: 0;
+.checkbox:focus + .checkbox-label::before {
+  outline: 1px dotted #fff;
 }
 
-.switch input:focus.toggle + label::after {
-  outline: 1px #fff dotted;
+.checkbox:checked + .checkbox-label {
+  background: #f16e00;
+  border-color: #f16e00;
+}
+
+.checkbox:checked + .checkbox-label .on {
+  opacity: 1;
+}
+
+.checkbox:checked + .checkbox-label .off {
+  opacity: 0;
+}
+
+.checkbox:checked + .checkbox-label::before {
+  left: 1.875rem;
+}
+
+.checkbox.success:checked + .checkbox-label {
+  background: #32c832;
+  border-color: #32c832;
+}
+
+.form-group .form-control-label.checkbox-label {
+  padding: 0;
 }
 
 .btn-group[data-toggle=buttons] {
@@ -9175,6 +9199,12 @@ fieldset[disabled] a.btn {
   border-color: #000;
 }
 
+.pagination .page-link:active {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
+}
+
 .pagination .page-link.active {
   color: #fff;
   background-color: #000;
@@ -9191,6 +9221,10 @@ fieldset[disabled] a.btn {
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%2F%3E%3C%2Fsvg%3E");
 }
 
+.pagination .page-link.prev:active::before {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
 .pagination .page-link.next::before {
   position: absolute;
   top: .6875rem;
@@ -9199,6 +9233,10 @@ fieldset[disabled] a.btn {
   height: .875rem;
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.pagination .page-link.next:active::before {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .pagination .page-link .label {
@@ -9224,11 +9262,16 @@ fieldset[disabled] a.btn {
   font-weight: bold;
 }
 
-.pagination .page-item.bordered > .page-link,
 .pagination .page-item.bordered > .page-link {
   width: auto;
   min-width: 2.5rem;
   border: 2px solid #000;
+}
+
+.pagination .page-item.bordered > .page-link:active {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
 }
 
 .pagination .page-item .page-link.prev,
@@ -9251,13 +9294,22 @@ fieldset[disabled] a.btn {
   cursor: not-allowed;
 }
 
-.pagination .page-item .page-link.prev.prev.disabled::before,
-.pagination .page-item .page-link.next.prev.disabled::before {
+.pagination .page-item .page-link.prev.disabled:active,
+.pagination .page-item .page-link.next.disabled:active {
+  color: #ddd;
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.pagination .page-item .page-link.prev.prev.disabled::before, .pagination .page-item .page-link.prev.prev.disabled:active::before,
+.pagination .page-item .page-link.next.prev.disabled::before,
+.pagination .page-item .page-link.next.prev.disabled:active::before {
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.pagination .page-item .page-link.prev.next.disabled::before,
-.pagination .page-item .page-link.next.next.disabled::before {
+.pagination .page-item .page-link.prev.next.disabled::before, .pagination .page-item .page-link.prev.next.disabled:active::before,
+.pagination .page-item .page-link.next.next.disabled::before,
+.pagination .page-item .page-link.next.next.disabled:active::before {
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E");
 }
 
