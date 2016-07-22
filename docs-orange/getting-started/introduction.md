@@ -20,9 +20,13 @@ All Boosted components are compliant with Orange Brand Guidelines. Some bootstra
 
 ## Quick start
 
-Once you have [downloaded](getting-started/download/) boosted source files, copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
+Once you have [downloaded](getting-started/download/) boosted source files, copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS. You can also add orangeHelvetica and orangeIcons if needed, be careful both files are under copyright, see NOTICE.txt for more information.
 
 {% highlight html %}
+<!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+<link rel="stylesheet" href="path/to/your/orangeHelvetica.css">
+<!-- Copyright © 2016 Orange SA. All rights reserved -->
+<link rel="stylesheet" href="path/to/your/orangeIcons.css">
 <link rel="stylesheet" href="path/to/your/boosted.css">
 {% endhighlight %}
 
@@ -54,6 +58,22 @@ Put it all together and your pages should look like this:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- 
+      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. 
+      Patent and Trademark Office and may be registered in certain other jurisdictions.
+      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+      Orange Company had buy the right for used Helvetica onto digital applications.
+      If you are not autorized to used it, don't include the orangeHelvetica.css 
+      See NOTICE.txt for more informations.
+    -->
+    <link rel="stylesheet" href="css/orangeHelvetica.css" />
+    <!--
+      Orange Icons
+      Copyright (C) 2016 Orange SA All rights reserved
+      See NOTICE.txt for more informations.
+    -->
+    <link rel="stylesheet" href="css/orangeIcons.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="path/to/your/boosted.css">

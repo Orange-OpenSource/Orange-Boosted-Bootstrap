@@ -17,7 +17,9 @@ module.exports = function configureRubySass(grunt) {
         files: {
           /* boosted mod */
         //   'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
-        'dist/css/<%= pkg.name %>.css': 'scss/bootstrap.scss'
+        'dist/css/<%= pkg.name %>.css': 'scss/bootstrap.scss',
+        'dist/css/orangeHelvetica.css': 'scss/orangeHelvetica.scss',
+        'dist/css/orangeIcons.css': 'scss/orangeIcons.scss'
           /* end mod */
         }
       },
