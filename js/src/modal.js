@@ -25,6 +25,7 @@ const Modal = (($) => {
   const JQUERY_NO_CONFLICT           = $.fn[NAME]
   const TRANSITION_DURATION          = 300
   const BACKDROP_TRANSITION_DURATION = 150
+  const ESCAPE_KEYCODE               = 27 // KeyboardEvent.which value for Escape (Esc) key
 
   const Default = {
     backdrop : true,
@@ -223,6 +224,7 @@ const Modal = (($) => {
       }
 
       this._element.style.display = 'block'
+      this._element.removeAttribute('aria-hidden')
       this._element.scrollTop = 0
 
       if (transition) {
@@ -270,7 +272,7 @@ const Modal = (($) => {
     _setEscapeEvent() {
       if (this._isShown && this._config.keyboard) {
         $(this._element).on(Event.KEYDOWN_DISMISS, (event) => {
-          if (event.which === 27) {
+          if (event.which === ESCAPE_KEYCODE) {
             this.hide()
           }
         })
@@ -290,6 +292,7 @@ const Modal = (($) => {
 
     _hideModal() {
       this._element.style.display = 'none'
+      this._element.setAttribute('aria-hidden', 'true')
       this._showBackdrop(() => {
         $(document.body).removeClass(ClassName.OPEN)
         this._resetAdjustments()
@@ -398,7 +401,7 @@ const Modal = (($) => {
       }
 
       if (this._isBodyOverflowing && !isModalOverflowing) {
-        this._element.style.paddingRight = `${this._scrollbarWidth}px~`
+        this._element.style.paddingRight = `${this._scrollbarWidth}px`
       }
     }
 
@@ -408,13 +411,7 @@ const Modal = (($) => {
     }
 
     _checkScrollbar() {
-      let fullWindowWidth = window.innerWidth
-      if (!fullWindowWidth) { // workaround for missing window.innerWidth in IE8
-        let documentElementRect = document.documentElement.getBoundingClientRect()
-        fullWindowWidth =
-          documentElementRect.right - Math.abs(documentElementRect.left)
-      }
-      this._isBodyOverflowing = document.body.clientWidth < fullWindowWidth
+      this._isBodyOverflowing = document.body.clientWidth < window.innerWidth
       this._scrollbarWidth = this._getScrollbarWidth()
     }
 

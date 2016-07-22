@@ -111,7 +111,7 @@ When feasible, we aim to report such upstream bugs to the relevant browser vendo
 | Mozilla       | Firefox                      | Gecko            | https://bugzilla.mozilla.org/enter_bug.cgi                                            | "Core" is normally the right product option to choose.   |
 | Apple         | Safari                       | WebKit           | https://bugs.webkit.org/enter_bug.cgi?product=WebKit <br> https://bugreport.apple.com | In Apple's bug reporter, choose "Safari" as the product. |
 | Google, Opera | Chrome, Chromium, Opera v15+ | Blink            | https://code.google.com/p/chromium/issues/list                                        | Click the "New issue" button.                            |
-| Microsoft     | Internet Explorer / Edge     | Trident/EdgeHTML | https://connect.microsoft.com/IE/feedback/LoadSubmitFeedbackForm                      |                                                          |
+| Microsoft     | Edge                         | EdgeHTML         | https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/                 |                                                          |
 
 ### Issues bots
 
@@ -233,7 +233,7 @@ includes code changes) and under the terms of the
 [Adhere to the Code Guide.](http://codeguide.co/#css)
 
 - When feasible, default color palettes should comply with [WCAG color contrast guidelines](http://www.w3.org/TR/WCAG20/#visual-audio-contrast).
-- Except in rare cases, don't remove default `:focus` styles (via e.g. `outline: none;`) without providing alternative styles. See [this A11Y Project post](http://a11yproject.com/posts/never-remove-css-outlines/) for more details.
+- Except in rare cases, don't remove default `:focus` styles (via e.g. `outline: none;`) without providing alternative styles. See [this A11Y Project post](http://a11yproject.com/posts/never-remove-css-outlines) for more details.
 
 ### JS
 

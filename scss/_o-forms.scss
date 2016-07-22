@@ -4,9 +4,15 @@
 
 .form-group {
 
+  .form-control-label {
+    // padding: .625rem 0;
+    margin-bottom: .625rem;
+  }
+
   &.row {
     .form-control-label {
-      padding: .625rem;
+      padding: .625rem 0;
+      margin-bottom: 0;
     }
   }
 
@@ -15,10 +21,6 @@
     font-weight: bold;
     color: $brand-primary;
     content: "*";
-  }
-
-  .form-control-label {
-    padding: .625rem 0;
   }
 
   // browser reset

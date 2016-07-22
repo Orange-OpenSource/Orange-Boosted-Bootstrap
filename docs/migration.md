@@ -59,14 +59,15 @@ This list highlights key changes by component between v3.x.x and v4.0.0.
 
 ### Reboot
 
-New to Bootstrap 4 is the Reboot, a new stylesheet that builds on Normalize with our own somewhat opinionated reset styles. Selectors appearing in this file only use elements—there are no classes here. This isolates our reset styles from our component styles for a more modular approach. Some of the most important resets this includes are the `box-sizing: border` change, moving from `rem` to `em` units on many elements, link styles, and many form element resets.
+New to Bootstrap 4 is the Reboot, a new stylesheet that builds on Normalize with our own somewhat opinionated reset styles. Selectors appearing in this file only use elements—there are no classes here. This isolates our reset styles from our component styles for a more modular approach. Some of the most important resets this includes are the `box-sizing: border-box` change, moving from `rem` to `em` units on many elements, link styles, and many form element resets.
 
 ### Typography
 
 - Moved all `.text-` utilities to the `_utilities.scss` file.
-- Dropped the `.page-header` class entirely.
+- Dropped `.page-header` as, aside from the border, all it's styles can be applied via utilities.
 - `.dl-horizontal` has been dropped. Instead, use `.row` on `<dl>` and use grid column classes (or mixins) on its `<dt>` and `<dd>` children.
 - Custom `<blockquote>` styling has moved to classes—`.blockquote` and the `.blockquote-reverse` modifier.
+- `.list-inline` now requires that its children list items have the new `.list-inline-item` class applied to them.
 
 ### Images
 
@@ -87,26 +88,46 @@ New to Bootstrap 4 is the Reboot, a new stylesheet that builds on Normalize with
 - Renamed `.control-label` to `.form-control-label`.
 - Renamed `.input-lg` and `.input-sm` to `.form-control-lg` and `.form-control-sm`, respectively.
 - Dropped `.form-group-*` classes for simplicity's sake. Use `.form-control-*` classes instead now.
-- Dropped `.help-block`. Use the `.text-muted` utility class instead.
+- Dropped `.help-block` and replaced it with `.form-text` for block-level help text. For inline help text and other flexible options, use utility classes like `.text-muted`.
 - Horizontal forms overhauled:
   - Dropped the `.form-horizontal` class requirement.
-  - `.form-group` no longer mixins the `.row` class, so it's now required for grid layouts.
+  - `.form-group` no longer applies styles from the `.row` via mixin, so `.row` is now required for horizontal grid layouts (e.g., `<div class="form-group row">`).
   - Added new `.form-control-label` class to vertically center labels with `.form-control`s.
 
 ### Buttons
 
 - Renamed `.btn-default` to `.btn-secondary`.
-- Dropped the `.btn-xs` class entirely.
+- Dropped the `.btn-xs` class entirely as `.btn-sm` is proportionally much smaller than v3's.
 - The [stateful button](http://getbootstrap.com/javascript/#buttons-methods) feature of the `button.js` jQuery plugin has been dropped. This includes the `$().button(string)` and `$().button('reset')` methods. We advise using a tiny bit of custom JavaScript instead, which will have the benefit of behaving exactly the way you want it to.
   - Note that the other features of the plugin (button checkboxes, button radios, single-toggle buttons) have been retained in v4.
 
 ### Button group
 
-- Dropped the `.btn-group-xs` class entirely.
+- Dropped the `.btn-group-xs` class entirely given removal of `.btn-xs`.
+
+### Dropdowns
+
+- Switched from parent selectors to singular classes for all components, modifiers, etc.
+- Simplified dropdown styles to no longer ship with upward or downward facing arrows attached to the dropdown menu.
+- Dropdowns can be built with `<div>`s or `<ul>`s now.
+- Rebuilt dropdown styles and markup to provide easy, built-in support for `<a>` and `<button>` based dropdown items.
+- Dropdown items now require `.dropdown-item`.
+- Dropdown toggles no longer require an explicit `<span class="caret"></span>`; this is now provided automatically via CSS's `::after` on `.dropdown-toggle`.
 
 ### Grid system
 
 - Added a new `~480px` grid breakpoint, meaning there are now five total tiers.
+- Renamed the responsive grid modifier classes from `.col-{breakpoint}-{modifier}-{size}` to `.{modifier}-{breakpoint}-{size}` for simpler grid classes. For example, instead of `.col-md-3.col-md-push-9` it's `col-md-3.push-md-9`.
+- Overhauled the grid mixins to merge `make-col` and `make-col-span` into a single `make-col` mixin, thereby ensuring mixins and predefined classes utilize the same float/flex behaviors.
+- Added flexbox utility classes for grid system and components.
+
+### List groups
+
+- Replaced `a.list-group-item` with an explicit class, `.list-group-item-action`, for styling link and button versions of list group items.
+
+### Modal
+
+- The `remote` option (which could be used to automatically load and inject external content into a modal) and the corresponding `loaded.bs.modal` event were removed. We recommend instead using client-side templating or a data binding framework, or calling [jQuery.load](http://api.jquery.com/load/) yourself.
 
 ### Navs
 
@@ -126,10 +147,11 @@ New to Bootstrap 4 is the Reboot, a new stylesheet that builds on Normalize with
 
 - An explicit class, `.breadcrumb-item`, is now required on the descendants of `.breadcrumb`s
 
-### Labels and badges
+### Labels, badges, and tags
 
 - Renamed `.label` to `.tag` to disambiguate from the `<label>` element.
-- Dropped the badge component. Use the `.tag-pill` modifier together with the label component instead.
+- Dropped the `.badge` component as it was nearly identical to labels/tags. Use the `.tag-pill` modifier together with the label component instead for that rounded look.
+- Tags are no longer floated automatically in list groups and other components. Utility classes are now required for that.
 
 ### Panels, thumbnails, and wells
 
@@ -203,14 +225,11 @@ TODO: audit classes in v3 that aren't present in v4
 
 ### Responsive utilities
 
-The following deprecated variables have been removed in v4.0.0:
-
-* `@screen-phone`, `@screen-tablet`, `@screen-desktop`, `@screen-lg-desktop`. Use the more abstract `$screen-{xs,sm,md,lg,xl}-*` variables instead.
-* `@screen-sm`, `@screen-md`, `@screen-lg`. Use the more clearly named `$screen-{xs,sm,md,lg,xl}-min` variables instead.
-* `@screen-xs`, `@screen-xs-min`. The extra small breakpoint has no lower bound, so these variables were logically absurd. Reformulate your expression in terms of `$screen-xs-max` instead.
+All `@screen-` variables have been removed in v4.0.0. Use the `media-breakpoint-up()`, `media-breakpoint-down()`, or `media-breakpoint-only()` Sass mixins or the `$grid-breakpoints` Sass map instead.
 
 The responsive utility classes have also been overhauled.
 
+- The `.hidden` and `.show` classes have been removed because they conflicted with jQuery's `$(...).hide()` and `$(...).show()` methods. Instead, try toggling the `[hidden]` attribute, use inline styles like `style="display: none;"` and `style="display: block;"`, or toggle the `.invisible` class.
 - The old classes (`.hidden-xs` `.hidden-sm` `.hidden-md` `.hidden-lg` `.visible-xs-block` `.visible-xs-inline` `.visible-xs-inline-block` `.visible-sm-block` `.visible-sm-inline` `.visible-sm-inline-block` `.visible-md-block` `.visible-md-inline` `.visible-md-inline-block` `.visible-lg-block` `.visible-lg-inline` `.visible-lg-inline-block`) are gone.
 - They have been replaced by `.hidden-xs-up` `.hidden-xs-down` `.hidden-sm-up` `.hidden-sm-down` `.hidden-md-up` `.hidden-md-down` `.hidden-lg-up` `.hidden-lg-down`.
 - The `.hidden-*-up` classes hide the element when the viewport is at the given breakpoint or larger (e.g. `.hidden-md-up` hides an element on medium, large, and extra-large devices).
@@ -223,7 +242,6 @@ Note that the changes to the grid breakpoints in v4 means that you'll need to go
 ## Misc notes to prioritize
 
 - Removed the `min--moz-device-pixel-ratio` typo hack for retina media queries
-- Dropped `.hidden` and `.show` because they conflict with jQuery's `$(...).hide()` and `$(...).show()` methods.
 - Change buttons' `[disabled]` to `:disabled` as IE9+ supports `:disabled`. However `fieldset[disabled]` is still necessary because [native disabled fieldsets are still buggy in IE11](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#Browser_compatibility).
 
 TODO: audit list of stuff in v3 that was marked as deprecated

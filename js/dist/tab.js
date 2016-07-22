@@ -176,10 +176,7 @@ var Tab = (function ($) {
           $(active).removeClass(ClassName.IN);
         }
         // Boosted mod
-        if (element.tagName === 'A') {
-          var elemID = '#' + element.id;
-          $(elemID).attr({ tabIndex: '0', 'aria-selected': true }).trigger('focus');
-        }
+        $(element).filter('.nav-link.active').attr({ tabIndex: '0', 'aria-selected': true });
         $(element).filter('.tab-pane.active').attr({ 'aria-hidden': false, tabIndex: '0' });
         // end mod
       }

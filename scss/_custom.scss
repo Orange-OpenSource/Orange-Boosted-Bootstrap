@@ -36,6 +36,7 @@ $brand-success:             #32c832;
 $brand-info:                #527edb;
 $brand-warning:             #fc0;
 $brand-danger:              #cd3c14;
+$brand-inverse:             #000;
 
 // Options
 //
@@ -320,11 +321,8 @@ $btn-padding-y-sm:               .375rem;
 $btn-padding-x-lg:               1.25rem;
 $btn-padding-y-lg:               .875rem;
 
-$btn-block-spacing-y:            5px !default;
-$btn-toolbar-margin:             5px !default;
-
-$split-btn-dropdown-toggle-padding-x:     8px !default;
-$split-btn-lg-dropdown-toggle-padding-x: 12px !default;
+$btn-block-spacing-y:            .5rem !default;
+$btn-toolbar-margin:             .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:              $border-radius;
@@ -353,8 +351,10 @@ $input-border-radius:            $border-radius;
 $input-border-radius-lg:         $border-radius-lg;
 $input-border-radius-sm:         $border-radius-sm;
 
+$input-bg-focus:                 $input-bg;
 $input-border-focus:             $gray-light;
 $input-box-shadow-focus:         none;
+$input-color-focus:              $input-color;
 
 $input-color-placeholder:        $gray;
 
@@ -411,7 +411,9 @@ $custom-select-padding-x:          .75rem  !default;
 $custom-select-padding-y:          .375rem !default;
 $custom-select-indicator-padding:  1rem !default; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-color:         $input-color !default;
+$custom-select-disabled-color: $gray-light !default;
 $custom-select-bg:            #fff !default;
+$custom-select-disabled-bg:   $gray-lighter !default;
 $custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator:     url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") !default;
 $custom-select-border-width:  $input-btn-border-width;
@@ -528,6 +530,7 @@ $nav-disabled-link-hover-bg:    transparent;
 
 $nav-tabs-border-color:                       #000;
 $nav-tabs-border-width:                       $border-width;
+$nav-tabs-border-radius:                      $border-radius;
 $nav-tabs-link-hover-color:                   #fff;
 $nav-tabs-link-hover-bg:                      #000;
 $nav-tabs-link-hover-border-color:            #000;
@@ -616,6 +619,8 @@ $card-bg:                  #fff;
 
 $card-link-hover-color:    #fff;
 
+$card-img-overlay-padding: 1.25rem;
+
 $card-deck-margin:         $spacer;
 
 $card-columns-sm-up-column-gap: $spacer;
@@ -638,6 +643,7 @@ $tooltip-arrow-color:         $tooltip-bg;
 
 // Popovers
 
+$popover-inner-padding:               1px !default;
 $popover-bg:                          $gray-lighter-o;
 $popover-max-width:                   276px;
 $popover-border-width:                $border-width;
@@ -833,7 +839,7 @@ $carousel-caption-width:                      70%;
 $carousel-caption-sm-up-width:                60%;
 $carousel-caption-color:                      #000;
 
-
+$carousel-icon-width:                         20px;
 // Close
 
 $close-font-weight:           bold;

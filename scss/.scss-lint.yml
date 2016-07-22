@@ -25,6 +25,8 @@ linters:
   BorderZero:
     enabled: true
     convention: zero # or `none`
+    exclude:
+      - _normalize.scss
 
   ChainedClasses:
     enabled: false
@@ -105,6 +107,8 @@ linters:
   LeadingZero:
     enabled: true
     style: exclude_zero # or 'include_zero'
+    exclude:
+      - _normalize.scss
 
   MergeableSelector:
     enabled: false
@@ -133,6 +137,8 @@ linters:
     ignore_unspecified: false
     min_properties: 2
     separate_groups: false
+    exclude:
+      - _normalize.scss
     order:
       - position
       - top
@@ -455,7 +461,7 @@ linters:
 
   Shorthand:
     enabled: true
-    allowed_shorthands: [1, 2, 3]
+    allowed_shorthands: [1, 2, 3, 4]
 
   SingleLinePerProperty:
     enabled: false
