@@ -57,18 +57,19 @@
   content: '\eb77';
   position: absolute;
   top: 0; 
-  left: 0;
+  left: 2px;
   font-size: @btn-font-size;
   color: @brand-orange-white;
-  width: (@input-height-base/2); 
+  width: @btn-font-size; 
   height: (@input-height-base/2); // dim. de la case //
   text-align: center;
   //transition: all .2s; // on prévoit une animation //
 }
+
 .o-checkbox-right.o-checkbox[type="checkbox"]:not(:checked) + label:after,
 .o-checkbox-right.o-checkbox[type="checkbox"]:checked + label:after{
     left: auto;
-    right: 0;
+    right: 2px;
 }
 
 
