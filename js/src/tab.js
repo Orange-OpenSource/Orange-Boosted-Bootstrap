@@ -184,11 +184,6 @@ const Tab = (($) => {
     // private
 
     _activate(element, container, callback) {
-      // Boosted mod
-      let $active = $(container).find('> .active')
-      $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex : '-1', 'aria-selected' : false })
-      $active.filter('.tab-pane').attr({ 'aria-hidden' : true, tabIndex : '-1' })
-      // end mod
       let active          = $(container).find(Selector.ACTIVE_CHILD)[0]
       let isTransitioning = callback
         && Util.supportsTransitionEnd()
@@ -204,6 +199,11 @@ const Tab = (($) => {
         callback
       )
 
+      // Boosted mod
+      $(container).find('.nav-link').attr({ tabIndex : '-1', 'aria-selected' : false })
+      $(container).find('.tab-pane').attr({ 'aria-hidden' : true, tabIndex : '-1' })
+      // end mod
+
       if (active && isTransitioning) {
         $(active)
           .one(Util.TRANSITION_END, complete)
@@ -216,10 +216,6 @@ const Tab = (($) => {
       if (active) {
         $(active).removeClass(ClassName.IN)
       }
-      // Boosted mod
-      $(element).filter('.nav-link.active').attr({ tabIndex : '0', 'aria-selected' : true })
-      $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false, tabIndex : '0' })
-      // end mod
     }
 
     _transitionComplete(element, active, isTransitioning, callback) {
@@ -239,6 +235,10 @@ const Tab = (($) => {
 
       $(element).addClass(ClassName.ACTIVE)
       element.setAttribute('aria-expanded', true)
+      // Boosted mod
+      $(element).filter('.nav-link.active').attr({ tabIndex : '0', 'aria-selected' : true })
+      $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false, tabIndex : '0' })
+      // end mod
 
       if (isTransitioning) {
         Util.reflow(element)
