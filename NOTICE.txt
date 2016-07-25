@@ -41,10 +41,12 @@ End of the parts list under Monotype Imaging Inc Copyright
 Parts list under Orange SA Copyright
 Copyright (C) 2016 Orange SA All rights reserved
 
-The following parts of software is confidential and proprietary information of Orange.
-You shall not disclose such Confidential Information and shall use it only in
-accordance with the terms of the agreement you entered into.
-Unauthorized copying of this file, via any medium is strictly prohibited.
+The following parts are proprietary information of Orange.
+You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software 
+or displayed on this website (http://boosted.orange.com) and owned by Orange SA and its subsidiaries,
+in whole or part of, in any medium, except as required for reasonable and customary use in describing the origin of the software 
+and reproducing the content of the NOTICE and DOCUMENTATION files.
+Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
 app/fonts/icon-orange.eot
 app/fonts/icon-orange.ttf
