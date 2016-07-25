@@ -24,6 +24,13 @@ const Tab = (($) => {
   const DATA_API_KEY        = '.data-api'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
   const TRANSITION_DURATION = 150
+  // boosted mod
+  const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
+  const ARROW_UP_KEYCODE    = 38 // KeyboardEvent.which value for up arrow key
+  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
+  const ARROW_DOWN_KEYCODE  = 40 // KeyboardEvent.which value for down arrow key
+  const RANDOM_NUMBER       = 1000
+  // end mod
 
   const Event = {
     HIDE           : `hide${EVENT_KEY}`,
@@ -153,16 +160,16 @@ const Tab = (($) => {
       let index
       let k = e.which || e.keyCode
       $this = $(this)
-      if (!/(37|38|39|40)/.test(k)) {
+      if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
         return
       }
       $items = $ul.find('[role=tab]:visible')
       index = $items.index($items.filter(':focus'))
 
-      if (k === 38 || k === 37) {
+      if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
         index--
       }	// up & left
-      if (k === 39 || k === 40) {
+      if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
         index++
       }	// down & right
 
@@ -186,8 +193,14 @@ const Tab = (($) => {
     _activate(element, container, callback) {
       // Boosted mod
       let $active = $(container).find('> .active')
-      $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex : '-1', 'aria-selected' : false })
-      $active.filter('.tab-pane').attr({ 'aria-hidden' : true, tabIndex : '-1' })
+      $active.find('[data-toggle=tab], [data-toggle=pill]').attr({
+        tabIndex : '-1',
+        'aria-selected' : false
+      })
+      $active.filter('.tab-pane').attr({
+        'aria-hidden' : true,
+        tabIndex : '-1'
+      })
       // end mod
       let active          = $(container).find(Selector.ACTIVE_CHILD)[0]
       let isTransitioning = callback
@@ -217,8 +230,14 @@ const Tab = (($) => {
         $(active).removeClass(ClassName.IN)
       }
       // Boosted mod
-      $(element).filter('.nav-link.active').attr({ tabIndex : '0', 'aria-selected' : true })
-      $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false, tabIndex : '0' })
+      $(element).filter('.nav-link.active').attr({
+        tabIndex : '0',
+        'aria-selected' : true
+      })
+      $(element).filter('.tab-pane.active').attr({
+        'aria-hidden' : false,
+        tabIndex : '0'
+      })
       // end mod
     }
 
@@ -303,7 +322,7 @@ const Tab = (($) => {
   // Boosted mod
   $(document)
     .on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
-      if (!/(38|40|39|37)/.test(event.which)) {
+      if (!/(ARROW_UP_KEYCODE|ARROW_DOWN_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_LEFT_KEYCODE)/.test(event.which)) {
         return
       }
       event.preventDefault()
@@ -320,7 +339,7 @@ const Tab = (($) => {
   // ===============================
 
   let uniqueId = function (prefix) {
-    return `${prefix || 'ui-id'}-${Math.floor(Math.random() * 1000 + 1)}`
+    return `${prefix || 'ui-id'}-${Math.floor(Math.random() * RANDOM_NUMBER + 1)}`
   }
 
   let $tablist = $('.nav-tabs, .nav-pills')
@@ -338,11 +357,29 @@ const Tab = (($) => {
     $tab.attr('id', tabid)
 
     if ($tab.hasClass('active')) {
-      $tab.attr({ tabIndex : '0', 'aria-selected' : 'true', 'aria-controls': $tab.attr('href').substr(1) })
-      tabpanel.attr({ role : 'tabpanel', tabIndex : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
+      $tab.attr({
+        tabIndex : '0',
+        'aria-selected' : 'true',
+        'aria-controls': $tab.attr('href').substr(1)
+      })
+      tabpanel.attr({
+        role : 'tabpanel',
+        tabIndex : '0',
+        'aria-hidden' : 'false',
+        'aria-labelledby':tabid
+      })
     } else {
-      $tab.attr({ tabIndex : '-1', 'aria-selected' : 'false', 'aria-controls': $tab.attr('href').substr(1) })
-      tabpanel.attr({ role : 'tabpanel', tabIndex : '-1', 'aria-hidden' : 'true', 'aria-labelledby':tabid })
+      $tab.attr({
+        tabIndex : '-1',
+        'aria-selected' : 'false',
+        'aria-controls': $tab.attr('href').substr(1)
+      })
+      tabpanel.attr({
+        role : 'tabpanel',
+        tabIndex : '-1',
+        'aria-hidden' : 'true',
+        'aria-labelledby':tabid
+      })
     }
   })
   // end mod

@@ -21,6 +21,9 @@ const Navbar = (($) => {
   const VERSION             = '4.0.0-alpha.2'
   const DATA_KEY            = 'bs.navbar'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
+  // boosted mod
+  const SCROLLTIMEOUT       = 100
+  // end mod
 
   const Default = {
     sticky : false,
@@ -110,7 +113,7 @@ const Navbar = (($) => {
         window.clearTimeout(this._throttleTimer)
       }
 
-      this._throttleTimer = window.setTimeout(this._managePageScroll.bind(this), 100)
+      this._throttleTimer = window.setTimeout(this._managePageScroll.bind(this), SCROLLTIMEOUT)
     }
 
     _managePageScroll() {
