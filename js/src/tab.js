@@ -191,7 +191,6 @@ const Tab = (($) => {
     // private
 
     _activate(element, container, callback) {
-
       let active          = $(container).find(Selector.ACTIVE_CHILD)[0]
       let isTransitioning = callback
         && Util.supportsTransitionEnd()
@@ -224,12 +223,6 @@ const Tab = (($) => {
       if (active) {
         $(active).removeClass(ClassName.IN)
       }
-        'aria-selected' : true
-      })
-      $(element).filter('.tab-pane.active').attr({
-        'aria-hidden' : false,
-        tabIndex : '0'
-      })
     }
 
     _transitionComplete(element, active, isTransitioning, callback) {
