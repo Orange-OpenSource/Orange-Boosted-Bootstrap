@@ -41,8 +41,12 @@ module.exports = function (grunt) {
     ]
   };
 
+  var configBridge = grunt.file.readJSON('./docs_base_bootstrap/grunt/configBridge.json', { encoding: 'utf8' });
+
   grunt.initConfig({
     yeoman: appConfig,
+    jqueryCheck: configBridge.config.jqueryCheck.join('\n'),
+    jqueryVersionCheck: configBridge.config.jqueryVersionCheck.join('\n'),
     watch: {
       less: {
         files: ['<%= yeoman.app %>/less/{,*/}*.less'],
@@ -384,8 +388,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/js/tablesorter.js',
           '<%= yeoman.app %>/js/form.js',
           '<%= yeoman.app %>/js/tab.js',
-          '.tmp/js/bootstrap-accessibility.js',
-          'bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js'
+          '.tmp/js/bootstrap-accessibility.js'
         ],
         dest: 'dist/js/<%= yeoman.pkg.name %>.js'
       },
@@ -400,8 +403,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/js/modal.js',
           '<%= yeoman.app %>/js/tablesorter.js',
           '<%= yeoman.app %>/js/form.js',
-          '<%= yeoman.app %>/js/tab.js',
-          'bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js'
+          '<%= yeoman.app %>/js/tab.js'
         ],
         dest: '.tmp/js/<%= yeoman.pkg.name %>.js'
       }

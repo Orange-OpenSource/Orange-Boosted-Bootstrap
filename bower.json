@@ -51,10 +51,9 @@
     "*.zip"
   ],
   "devDependencies": {
-    "bootstrap-datepicker": "~1.4.0"
   },   
   "dependencies": {
-    "bootstrap": "3.3.6",
+    "bootstrap": "3.3.7",
     "bootstrapaccessibilityplugin": ">=1.0.3",
     "jquery-validation": "~1.13.1"
   },

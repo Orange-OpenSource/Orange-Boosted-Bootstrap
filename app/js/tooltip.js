@@ -1,17 +1,19 @@
 /* ========================================================================
- * Bootstrap: tooltip.js v3.3.6
+ * Bootstrap: tooltip.js v3.3.7
  * http://getbootstrap.com/javascript/#tooltip
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
 
 +function ($) {
+  'use strict';
+
   // TOOLTIP PUBLIC CLASS DEFINITION
   // ===============================
-  'use strict';
+
   var Tooltip = function (element, options) {
     this.type       = null
     this.options    = null
@@ -24,7 +26,7 @@
     this.init('tooltip', element, options)
   }
 
-  Tooltip.VERSION  = '3.3.6'
+  Tooltip.VERSION  = '3.3.7'
 
   Tooltip.TRANSITION_DURATION = 150
 
@@ -49,7 +51,7 @@
     this.type      = type
     this.$element  = $(element)
     this.options   = this.getOptions(options)
-    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : this.options.viewport.selector || this.options.viewport)
+    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
     this.inState   = { click: false, hover: false, focus: false }
 
     if (this.$element[0] instanceof document.constructor && !this.options.selector) {
@@ -73,7 +75,7 @@
     }
 
     this.options.selector ?
-      this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' }) :
+      (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
       this.fixTitle()
   }
 
@@ -99,9 +101,7 @@
     var defaults = this.getDefaults()
 
     this._options && $.each(this._options, function (key, value) {
-      if (defaults[key] != value) {
-        options[key] = value
-      }
+      if (defaults[key] != value) options[key] = value
     })
 
     return options
@@ -129,22 +129,16 @@
 
     self.hoverState = 'in'
 
-    if (!self.options.delay || !self.options.delay.show) {
-      return self.show()
-    }
+    if (!self.options.delay || !self.options.delay.show) return self.show()
 
     self.timeout = setTimeout(function () {
-      if (self.hoverState == 'in') {
-        self.show()
-      }
+      if (self.hoverState == 'in') self.show()
     }, self.options.delay.show)
   }
 
   Tooltip.prototype.isInStateTrue = function () {
     for (var key in this.inState) {
-      if (this.inState[key]) {
-        return true
-      }
+      if (this.inState[key]) return true
     }
 
     return false
@@ -163,22 +157,16 @@
       self.inState[obj.type == 'focusout' ? 'focus' : 'hover'] = false
     }
 
-    if (self.isInStateTrue()) {
-      return
-    }
+    if (self.isInStateTrue()) return
 
     clearTimeout(self.timeout)
 
     self.hoverState = 'out'
 
-    if (!self.options.delay || !self.options.delay.hide) {
-      return self.hide()
-    }
+    if (!self.options.delay || !self.options.delay.hide) return self.hide()
 
     self.timeout = setTimeout(function () {
-      if (self.hoverState == 'out') {
-        self.hide()
-      }
+      if (self.hoverState == 'out') self.hide()
     }, self.options.delay.hide)
   }
 
@@ -189,9 +177,7 @@
       this.$element.trigger(e)
 
       var inDom = $.contains(this.$element[0].ownerDocument.documentElement, this.$element[0])
-      if (e.isDefaultPrevented() || !inDom) {
-        return
-      }
+      if (e.isDefaultPrevented() || !inDom) return
       var that = this
 
       var $tip = this.tip()
@@ -202,9 +188,7 @@
       $tip.attr('id', tipId)
       this.$element.attr('aria-describedby', tipId)
 
-      if (this.options.animation) {
-        $tip.addClass('fade')
-      }
+      if (this.options.animation) $tip.addClass('fade')
 
       var placement = typeof this.options.placement == 'function' ?
         this.options.placement.call(this, $tip[0], this.$element[0]) :
@@ -212,9 +196,7 @@
 
       var autoToken = /\s?auto?\s?/i
       var autoPlace = autoToken.test(placement)
-      if (autoPlace) {
-        placement = placement.replace(autoToken, '') || 'top'
-      }
+      if (autoPlace) placement = placement.replace(autoToken, '') || 'top'
 
       $tip
         .detach()
@@ -253,9 +235,7 @@
         that.$element.trigger('shown.bs.' + that.type)
         that.hoverState = null
 
-        if (prevHoverState == 'out') {
-          that.leave(that)
-        }
+        if (prevHoverState == 'out') that.leave(that)
       }
 
       $.support.transition && this.$tip.hasClass('fade') ?
@@ -276,12 +256,8 @@
     var marginLeft = parseInt($tip.css('margin-left'), 10)
 
     // we must check for NaN for ie 8/9
-    if (isNaN(marginTop)) {
-      marginTop  = 0
-    }
-    if (isNaN(marginLeft)) {
-      marginLeft = 0
-    }
+    if (isNaN(marginTop))  marginTop  = 0
+    if (isNaN(marginLeft)) marginLeft = 0
 
     offset.top  += marginTop
     offset.left += marginLeft
@@ -309,11 +285,8 @@
 
     var delta = this.getViewportAdjustedDelta(placement, offset, actualWidth, actualHeight)
 
-    if (delta.left) {
-      offset.left += delta.left
-    } else {
-      offset.top += delta.top
-    }
+    if (delta.left) offset.left += delta.left
+    else offset.top += delta.top
 
     var isVertical          = /top|bottom/.test(placement)
     var arrowDelta          = isVertical ? delta.left * 2 - width + actualWidth : delta.top * 2 - height + actualHeight
@@ -343,20 +316,18 @@
     var e    = $.Event('hide.bs.' + this.type)
 
     function complete() {
-      if (that.hoverState != 'in') {
-        $tip.detach()
-      }
+      if (that.hoverState != 'in') $tip.detach()
+      if (that.$element) { // TODO: Check whether guarding this code with this `if` is really necessary.
       that.$element
         .removeAttr('aria-describedby')
         .trigger('hidden.bs.' + that.type)
+      }
       callback && callback()
     }
 
     this.$element.trigger(e)
 
-    if (e.isDefaultPrevented()) {
-      return
-    }
+    if (e.isDefaultPrevented()) return
 
     $tip.removeClass('in')
 
@@ -391,10 +362,12 @@
     var elRect    = el.getBoundingClientRect()
     if (elRect.width == null) {
       // width and height are missing in IE8, so compute them manually; see https://github.com/twbs/bootstrap/issues/14093
-      elRect = el.getBoundingClientRect()
       elRect = $.extend({}, elRect, { width: elRect.right - elRect.left, height: elRect.bottom - elRect.top })
     }
-    var elOffset  = isBody ? { top: 0, left: 0 } : $element.offset()
+    var isSvg = window.SVGElement && el instanceof window.SVGElement
+    // Avoid using $.offset() on SVGs since it gives incorrect results in jQuery 3.
+    // See https://github.com/twbs/bootstrap/issues/20280
+    var elOffset  = isBody ? { top: 0, left: 0 } : (isSvg ? null : $element.offset())
     var scroll    = { scroll: isBody ? document.documentElement.scrollTop || document.body.scrollTop : $element.scrollTop() }
     var outerDims = isBody ? { width: $(window).width(), height: $(window).height() } : null
 
@@ -411,9 +384,7 @@
 
   Tooltip.prototype.getViewportAdjustedDelta = function (placement, pos, actualWidth, actualHeight) {
     var delta = { top: 0, left: 0 }
-    if (!this.$viewport) {
-      return delta
-    }
+    if (!this.$viewport) return delta
 
     var viewportPadding = this.options.viewport && this.options.viewport.padding || 0
     var viewportDimensions = this.getPosition(this.$viewport)
@@ -451,9 +422,8 @@
   }
 
   Tooltip.prototype.getUID = function (prefix) {
-    do {
-      prefix += ~~(Math.random() * 1000000)
-    } while (document.getElementById(prefix))
+    do prefix += ~~(Math.random() * 1000000)
+    while (document.getElementById(prefix))
     return prefix
   }
 
@@ -468,7 +438,7 @@
   }
 
   Tooltip.prototype.arrow = function () {
-    return this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow')
+    return (this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow'))
   }
 
   Tooltip.prototype.enable = function () {
@@ -495,11 +465,8 @@
 
     if (e) {
       self.inState.click = !self.inState.click
-      if (self.isInStateTrue()) {
-        self.enter(self)
-      } else {
-        self.leave(self)
-      }
+      if (self.isInStateTrue()) self.enter(self)
+      else self.leave(self)
     } else {
       self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
     }
@@ -516,6 +483,7 @@
       that.$tip = null
       that.$arrow = null
       that.$viewport = null
+      that.$element = null
     })
   }
 
@@ -529,15 +497,9 @@
       var data    = $this.data('bs.tooltip')
       var options = typeof option == 'object' && option
 
-      if (!data && /destroy|hide/.test(option)) {
-        return
-      }
-      if (!data) {
-        $this.data('bs.tooltip', data = new Tooltip(this, options))
-      }
-      if (typeof option == 'string') {
-        data[option]()
-      }
+      if (!data && /destroy|hide/.test(option)) return
+      if (!data) $this.data('bs.tooltip', (data = new Tooltip(this, options)))
+      if (typeof option == 'string') data[option]()
     })
   }
 

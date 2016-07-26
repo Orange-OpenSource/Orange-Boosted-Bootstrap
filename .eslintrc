@@ -1,5 +1,10 @@
 {
     "rules": {    
+        "no-unexpected-multiline":0,
+        "no-shadow": [
+            "error",
+            "allow": ["e"]
+        ],
         "quotes": [
             2,
             "single"

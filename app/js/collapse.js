@@ -1,11 +1,12 @@
 /* ========================================================================
- * Bootstrap: collapse.js v3.3.6
+ * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
  * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
+/* jshint latedef: false */
 
 +function ($) {
   'use strict';
@@ -29,7 +30,7 @@
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION  = '3.3.6'
+  Collapse.VERSION  = '3.3.7'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -189,7 +190,8 @@
 
     if (!$.support.transition) return complete.call(this)
 
-    this.$element[dimension](0)
+    this.$element
+      [dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
@@ -274,7 +276,7 @@
 
     Plugin.call($target, option)
   })
-
+  // boosted mod
   // local navigation
   $('.o-nav-local .nav-local.collapse a').on('click', function() {
       $(this).parent().parent().prev('.local-select').text($(this).text());
@@ -297,5 +299,6 @@
   $(document).on('click', function(){
       Plugin.call($('.o-nav-local .collapse.in'), 'hide');
   });
+  // end mod
 
 }(jQuery);

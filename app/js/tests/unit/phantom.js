@@ -39,20 +39,14 @@
   })
 
   QUnit.testStart(function (obj) {
-    console.log('\n\ntestStart '+ obj.name)
-    console.log('================================================\n')
     sendMessage('qunit.testStart', obj.name)
   })
 
   QUnit.testDone(function (obj) {
-    console.log('\n\ntestDone '+ obj.name)
-    console.log('================================================\n')
     sendMessage('qunit.testDone', obj.name, obj.failed, obj.passed, obj.total, obj.duration)
   })
 
   QUnit.moduleStart(function (obj) {
-    console.log('\n\nmoduleStart '+ obj.name)
-    console.log('================================================\n')
     sendMessage('qunit.moduleStart', obj.name)
   })
 

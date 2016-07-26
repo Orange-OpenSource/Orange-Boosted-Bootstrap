@@ -11,13 +11,6 @@
     "homepage": "http://getbootstrap.com",
     "repository": "git+https://github.com/twbs/bootstrap"
   },
-  "bootstrap-datepicker@1.4.1": {
-    "licenses": [
-      "Apache-2.0",
-      "Apache*"
-    ],
-    "repository": "git+https://github.com/eternicode/bootstrap-datepicker"
-  },
   "bootstrap-accessibility-plugin@1.0.2": {
     "licenses": [
       "BSD"
