@@ -673,16 +673,16 @@ module.exports = function (grunt) {
               to: '<!--[if lt IE 9]><link href="../dist/css/bootstrap-orangeIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../dist/css/bootstrap-orange<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
           }, {
               from: '<link href="../dist/css/bootstrap-theme.css" rel="stylesheet">',
-              to: '<!--[if lt IE 9]><link href="../dist/css/bootstrap-orange-themeIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../dist/css/bootstrap-orange-theme<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
+              to: '<!--[if lt IE 9]><link href="../dist/css/boostedIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../dist/css/boosted<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
           }, {
               from: '<link href="../../css/bootstrap.css" rel="stylesheet">',
               to: '<!--[if lt IE 9]><link href="../../css/bootstrap-orangeIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../../css/bootstrap-orange<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
           }, {
               from: '<link href="../../css/bootstrap-theme.css" rel="stylesheet">',
-              to: '<!--[if lt IE 9]><link href="../../css/bootstrap-orange-themeIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../../css/bootstrap-orange-theme<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
+              to: '<!--[if lt IE 9]><link href="../../css/boostedIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../../css/boosted<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
           }, {
               from: '<link href="data:text/css;charset=utf-8," data-href="../dist/css/bootstrap-theme.css" rel="stylesheet" id="bs-theme-stylesheet">',
-              to: '<!--[if lt IE 9]><link href="../dist/css/bootstrap-orange-themeIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../dist/css/bootstrap-orange-theme<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
+              to: '<!--[if lt IE 9]><link href="../dist/css/boostedIE8<%= yeoman.docbrandversion %>.css" rel="stylesheet"><![endif]--><!--[if (gte IE 9) | (!IE)]><!--> <link href="../dist/css/boosted<%= yeoman.docbrandversion %>.css" rel="stylesheet"> <!--<![endif]-->'
           }, {
               from: '<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->',
               to: ''
@@ -700,13 +700,13 @@ module.exports = function (grunt) {
               to: 'bootstrap-orange<%= yeoman.docbrandversion %>.css'
           }, {
               from: 'bootstrap-theme.css',
-              to: 'bootstrap-orange-theme<%= yeoman.docbrandversion %>.css'
+              to: 'boosted<%= yeoman.docbrandversion %>.css'
           }, {
               from: 'bootstrap.min.css',
               to: 'bootstrap-orange<%= yeoman.docbrandversion %>.min.css'
           }, {
               from: 'bootstrap-theme.min.css',
-              to: 'bootstrap-orange-theme<%= yeoman.docbrandversion %>.min.css'
+              to: 'boosted<%= yeoman.docbrandversion %>.min.css'
           }, {
               from: 'bootstrap.js',
               to: 'boosted.js'
