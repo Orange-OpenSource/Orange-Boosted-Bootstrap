@@ -22,6 +22,7 @@
   * local navigation ([d9594cf3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d9594cf36a246fb403e2c3c93d7bfbef1348799b))
   * local navigation ([fbc3afaa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fbc3afaa99f5bb135143ea22f118b85fff511556))
 * **doc:**
+  * add the link to config file orange-icons.json ([94fe1dee](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/94fe1deee56eba0f8e017ad09998b2ca16f9176c))
   * update readme link for download ([e6cf8144](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e6cf8144b30b7d05a82e5c091a4fefdf77653e5a))
   * remove tests wording ([dac5b37c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dac5b37cae2b87fb62c7ca64c2bfacab4d12315b))
   * buttons presentation ([6e1ba12c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6e1ba12c2389e3e829d506b0e86472bb2e72b735))
