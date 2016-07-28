@@ -235,6 +235,9 @@ Green checkmarks indicate the element **is visible** in your current viewport.
     <span class="hidden-lg-down not-visible">Large or narrower</span>
   </div>
 </div>
+
+<hr>
+
 <div class="row responsive-utilities-test visible-on">
   <div class="col-xs-6 col-sm-3">
     <span class="hidden-xs-down visible">&#10004; Visible on small or wider</span>
@@ -253,6 +256,9 @@ Green checkmarks indicate the element **is visible** in your current viewport.
     <span class="hidden-xl-up not-visible">Extra large</span>
   </div>
 </div>
+
+<hr>
+
 <div class="row responsive-utilities-test visible-on">
   <div class="col-xs-6 col-sm-3">
     <span class="hidden-sm-up visible">&#10004; Your viewport is exactly extra small</span>

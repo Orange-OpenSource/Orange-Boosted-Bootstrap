@@ -26,6 +26,13 @@ var Tab = (function ($) {
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var TRANSITION_DURATION = 150;
+  // boosted mod
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  var RANDOM_NUMBER = 1000;
+  // end mod
 
   var Event = {
     HIDE: 'hide' + EVENT_KEY,
@@ -158,8 +165,14 @@ var Tab = (function ($) {
       value: function _activate(element, container, callback) {
         // Boosted mod
         var $active = $(container).find('> .active');
-        $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex: '-1', 'aria-selected': false });
-        $active.filter('.tab-pane').attr({ 'aria-hidden': true, tabIndex: '-1' });
+        $active.find('[data-toggle=tab], [data-toggle=pill]').attr({
+          tabIndex: '-1',
+          'aria-selected': false
+        });
+        $active.filter('.tab-pane').attr({
+          'aria-hidden': true,
+          tabIndex: '-1'
+        });
         // end mod
         var active = $(container).find(Selector.ACTIVE_CHILD)[0];
         var isTransitioning = callback && Util.supportsTransitionEnd() && (active && $(active).hasClass(ClassName.FADE) || Boolean($(container).find(Selector.FADE_CHILD)[0]));
@@ -176,8 +189,14 @@ var Tab = (function ($) {
           $(active).removeClass(ClassName.IN);
         }
         // Boosted mod
-        $(element).filter('.nav-link.active').attr({ tabIndex: '0', 'aria-selected': true });
-        $(element).filter('.tab-pane.active').attr({ 'aria-hidden': false, tabIndex: '0' });
+        $(element).filter('.nav-link.active').attr({
+          tabIndex: '0',
+          'aria-selected': true
+        });
+        $(element).filter('.tab-pane.active').attr({
+          'aria-hidden': false,
+          tabIndex: '0'
+        });
         // end mod
       }
     }, {
@@ -231,16 +250,16 @@ var Tab = (function ($) {
         var index = undefined;
         var k = e.which || e.keyCode;
         $this = $(this);
-        if (!/(37|38|39|40)/.test(k)) {
+        if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
           return;
         }
         $items = $ul.find('[role=tab]:visible');
         index = $items.index($items.filter(':focus'));
 
-        if (k === 38 || k === 37) {
+        if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
           index--;
         } // up & left
-        if (k === 39 || k === 40) {
+        if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
           index++;
         } // down & right
 
@@ -295,7 +314,7 @@ var Tab = (function ($) {
 
   // Boosted mod
   $(document).on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
-    if (!/(38|40|39|37)/.test(event.which)) {
+    if (!/(ARROW_UP_KEYCODE|ARROW_DOWN_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_LEFT_KEYCODE)/.test(event.which)) {
       return;
     }
     event.preventDefault();
@@ -312,7 +331,7 @@ var Tab = (function ($) {
   // ===============================
 
   var uniqueId = function uniqueId(prefix) {
-    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * 1000 + 1);
+    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * RANDOM_NUMBER + 1);
   };
 
   var $tablist = $('.nav-tabs, .nav-pills');
@@ -330,11 +349,29 @@ var Tab = (function ($) {
     $tab.attr('id', tabid);
 
     if ($tab.hasClass('active')) {
-      $tab.attr({ tabIndex: '0', 'aria-selected': 'true', 'aria-controls': $tab.attr('href').substr(1) });
-      tabpanel.attr({ role: 'tabpanel', tabIndex: '0', 'aria-hidden': 'false', 'aria-labelledby': tabid });
+      $tab.attr({
+        tabIndex: '0',
+        'aria-selected': 'true',
+        'aria-controls': $tab.attr('href').substr(1)
+      });
+      tabpanel.attr({
+        role: 'tabpanel',
+        tabIndex: '0',
+        'aria-hidden': 'false',
+        'aria-labelledby': tabid
+      });
     } else {
-      $tab.attr({ tabIndex: '-1', 'aria-selected': 'false', 'aria-controls': $tab.attr('href').substr(1) });
-      tabpanel.attr({ role: 'tabpanel', tabIndex: '-1', 'aria-hidden': 'true', 'aria-labelledby': tabid });
+      $tab.attr({
+        tabIndex: '-1',
+        'aria-selected': 'false',
+        'aria-controls': $tab.attr('href').substr(1)
+      });
+      tabpanel.attr({
+        role: 'tabpanel',
+        tabIndex: '-1',
+        'aria-hidden': 'true',
+        'aria-labelledby': tabid
+      });
     }
   });
   // end mod
