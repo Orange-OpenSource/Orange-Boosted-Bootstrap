@@ -3,8 +3,22 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
-
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+
+    @if $enable-flex {
+      width: 100%;
+    }
+  }
+
   $breakpoint-counter: 0;
   // boosted mod
   $saved-col-generated: ();
@@ -12,6 +26,13 @@
   // end mod
   @each $breakpoint in map-keys($breakpoints) {
     $breakpoint-counter: ($breakpoint-counter + 1);
+
+    @for $i from 1 through $columns {
+      .col-#{$breakpoint}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       // boosted mod
       @if map-has-key($cols-gutter-widths, $breakpoint) {
@@ -20,6 +41,8 @@
         $local-gutter: $gutter;
       }
       // end mod
+
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
       @if $enable-flex {
         .col-#{$breakpoint} {
           position: relative;
