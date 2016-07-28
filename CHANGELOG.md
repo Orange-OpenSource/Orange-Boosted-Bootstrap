@@ -1,3 +1,41 @@
+<a name"4.0.0-alpha.3"></a>
+### 4.0.0-alpha.3 (2016-07-28)
+
+
+#### Bug Fixes
+
+* **component:**
+  * tab focus management ([2ceb4969](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2ceb4969ec67b663131d18e189bea200c4ad8068))
+  * tab focus management ([6a62da26](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6a62da265545ca83729dee29bc6d88173570ed22))
+  * pagination ([14811770](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/14811770e30f228938d69f655fd2484673d0107f))
+  * toggle switches ([6c4add00](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c4add00aba819956f55e17cf6c5a679f8ff0ccd))
+  * forms ([999cd56f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/999cd56f77f2e2e9befac8cc92e0db8aab7af008))
+  * forms ([7d6d0859](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7d6d08593ec48bdbdc8b098097fb3067aa8af0e9))
+  * forms ([017b89fd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/017b89fd84319de736fe8fd27317e51d82d19cc0))
+  * forms ([00ebd321](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/00ebd3215c905f3aea7ce5678994b2f366ebd4cd))
+  * accordion ([9ccbe5c6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9ccbe5c693cb61e4e498c30758560822e631c086))
+  * forms ([b38abd7a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b38abd7a2c61c13c3e65d88d06c25874cfe7ad09))
+  * breadcrumb ([bfacff94](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bfacff94d2c3ead5e4909718f188f7f1086401ca))
+  * forms ([41fa777a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/41fa777a732d419b27bdbef761772a682a326028))
+  * accordion ([a31115be](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a31115bed8172d7bea9dcb723a9b8387ad571fcb))
+* **doc:**
+  * add the file orange-icons.json ([76ad5806](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/76ad5806981b50bc7f2133a09097f86f2a917de1))
+  * add the link to config file orange-icons.json ([7ff0fe56](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7ff0fe56f6b553e2293b8e6c8c6f1217429bfee8))
+  * orange list ([389a9c38](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/389a9c388e760d984c64b38ec22a9928d302374b))
+
+
+#### Features
+
+* **accordions:** enlarge the border for mobile display 2px, for more readability ([3b198ded](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3b198ded35999583ff7eb77920d6ace529888b9d))
+* **build:**
+  * rebuild the history CHANGELOG.md from the begining of the v4-dev branch ([cb0467d9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cb0467d9361af870a72361d0d44894f95bc9c47e))
+  * add changelog as a npm dependencies, and create the task into Gruntfile.js ([25c8cab2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/25c8cab2202bbb55364712200692a92a3938c071))
+* **component:** toggle switches ([f6a0d5aa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f6a0d5aa1fcdb1f2148520b7207e91ae5b029ba2))
+* **icons:**
+  * add the howto create custom icons and patch from V4 alpha.3 official ([4ecf508f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4ecf508f5091aa64100349dd7a127ef26927131d))
+  * remove the default inclusion of Orange icons font family and Helvetica. WARNING  ([ee903a62](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ee903a62185c0f1d66bbf07e7dac440dc180f42f))
+
+
 <a name"v4.0.0-alpha.2"></a>
 ### v4.0.0-alpha.2 (2016-06-26)
 
