@@ -1,8 +1,8 @@
 /*!
  * Bootstrap Docs (http://getbootstrap.com)
- * Copyright 2011-2014 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
- * details, see http://creativecommons.org/licenses/by/3.0/.
+ * details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
 
@@ -26,6 +26,13 @@ body {
 .table code {
   /*font-size: 13px;*/
   font-weight: normal;
+}
+
+/* Inline code within headings retain the heading's background-color */
+h2 code,
+h3 code,
+h4 code {
+  background-color: inherit;
 }
 
 /* Outline button for use within the docs */
@@ -185,47 +192,12 @@ body {
 
 
 /*
- * Social buttons
- *
- * Twitter and GitHub social action buttons (for homepage and footer).
- */
-
-.bs-docs-social {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.bs-docs-social-buttons {
-  display: inline-block;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.bs-docs-social-buttons li {
-  display: inline-block;
-  padding: 5px 8px;
-  line-height: 1;
-}
-.bs-docs-social-buttons .twitter-follow-button {
-  width: 225px !important;
-}
-.bs-docs-social-buttons .twitter-share-button {
-  width: 98px !important;
-}
-/* Style the GitHub buttons via CSS instead of inline attributes */
-.github-btn {
-  overflow: hidden;
-  border: 0;
-}
-
-
-/*
  * Homepage
  *
  * Tweaks to the custom homepage and the masthead (main jumbotron).
  */
 
 /* Share masthead with page headers */
-
 .bs-docs-masthead,
 .bs-docs-header {
   position: relative;
@@ -763,6 +735,7 @@ h1[id] {
   width: 180px;
   height: 20px;
   margin-top: 6px;
+  border: none;
 }
 .bs-team img {
   float: left;
@@ -1498,5 +1471,49 @@ h1[id] {
   }
 }
 
+/*
+ * AnchorJS Styles
+ */
+.anchorjs-link {
+  color: inherit;
+}
 
+@media (max-width: 480px) {
+  .anchorjs-link {
+    display: none;
+  }
+}
 
+*:hover > .anchorjs-link {
+  opacity: .75;
+  -webkit-transition: color .16s linear;
+       -o-transition: color .16s linear;
+          transition: color .16s linear;
+}
+
+*:hover > .anchorjs-link:hover,
+.anchorjs-link:focus {
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* buttons presentation */
+
+#buttons_default button,
+#buttons_inverse button{
+  margin-right: 1rem;
+}
+
+#buttons_default {
+  padding-left: 2rem;
+}
+
+#buttons_inverse {
+  background-color: #000;
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+#buttons_inverse h2 {
+  color: #fff;
+}
