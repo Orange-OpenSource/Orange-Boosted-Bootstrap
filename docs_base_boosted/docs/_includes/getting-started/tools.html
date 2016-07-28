@@ -1,0 +1,116 @@
+<div class="bs-docs-section">
+  <h1 id="tools" class="page-header">Tools</h1>
+
+  <h2 id="tools-bootlint">Bootlint</h2>
+  <p><strong><a href="https://github.com/twbs/bootlint">Bootlint</a></strong> is the official Bootstrap HTML <a href="http://en.wikipedia.org/wiki/Lint_(software)">linter</a> tool. It automatically checks for several common HTML mistakes in webpages that are using Bootstrap in a fairly "vanilla" way. Vanilla Bootstrap's components/widgets require their parts of the DOM to conform to certain structures. Bootlint checks that instances of Bootstrap components have correctly-structured HTML. Consider adding Bootlint to your Bootstrap web development toolchain so that none of the common mistakes slow down your project's development.</p>
+  
+  <h2 id="create-icon">Howto create an icons library using icomoon</h2>
+  <p>To create an icons library using icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong>.</p>
+  <h3>Create your own project</h3>
+  <p>Go to the top left menu and select <code>manage projects</code>:</p>
+  <p><img class="img-responsive" src="../assets/img/manage_projects.png" alt="manage projects menu"/></p>
+  
+  <p>Then, select <code>import project</code> link and select the file <code>orange-icons.json</code></p>
+  <p>It will load all the Orange Icons into a new project</p>
+  <p><img class="img-responsive" src="../assets/img/import_projects.png" alt="import project link"/></p> 
+                     
+  <p>You can now access to all the icons by clicking onto <code>Load</code></p>   
+  <p><img class="img-responsive" src="../assets/img/new_project.png" alt="Load project"/></p>
+  
+  <h3>Select your icons</h3> 
+  <p>You will find 2 sets : the 1st one contains all the Orange Frames and Popout, the 2nd one contains all the Solaris icons.</p> 
+   
+    
+    <p><img class="img-responsive" src="../assets/img/select_mode.png" alt="Select mode activated"/></p>
+    <p>By default there is no selected icon, you can make your selection for your own project.
+    Check that you are in selection mode (3rd icon in the top bar, after <code>import icons</code> and <code>icon library</code>), when an icon is selected, its border becomes yellow.
+    </p>
+<p>
+If you need to add a specific icon which is no present into the selection provided, create a new empty set for your project, and add icons to it.
+</p>
+<p><strong>Warning!</strong> Icons format recommendation<br>
+You need to import icons in SVG, within a square layout to preserve icons consistency ; if the layout is not a square, you will have some surprises.</p>
+<p><img class="img-responsive" src="../assets/img/warning_icon.png" alt="Example of bad icon import"/></p> 
+ 
+<h3>Download and adapt your project font</h3>
+<p>Have you finished your shopping?</p>
+<p>
+Now you can create your font for your project.  
+Click onto <code>generate font</code> at the bottom right of the page.</p>
+<p><img class="img-responsive" src="../assets/img/generate_font.png" alt="Generate font link"/></p>
+<p> 
+Depending of the number of icons selected, it can take a little bit of time...
+</p>     
+<p>Setting your font preferences</p>
+<p><img class="img-responsive" src="../assets/img/preference.png" alt="preference link"/></p>
+<p>
+Now you have a <code>Download</code> button at the bottom right but <strong>WAIT!!!</strong> 
+We know, you want to download your font but first you need to make some change into <code>preferences</code> to name your font with a name dedicated to YOUR project. 
+</p>
+
+<p>On the top menu bar, click onto <code>Preferences</code>.</p>
+
+<p>By default the font-family is named <code>orange-icons</code>, rename it for your project (MYPROJECT-icons or other) and customize the class prefix by adding your project name to create a unique css selector.
+You also can get Stylesheet variables for scss or less and if you want change the version. 
+And uncheck IE8 support if you rely on Boosted 4!</p> 
+<p><img class="img-responsive" src="../assets/img/param_export.png" alt="Option window"/>
+</p>     
+<p>
+Close the Preferences window, you’re now ready to download your font.
+</p>
+
+<p>The download is a zip file, <code>MYPROJECT-icons.zip</code>.</p>
+
+<p><img class="img-responsive" src="../assets/img/arbo_zip.png" alt="Zip contains"/>
+<p>Unzip it.
+The demo.html and demo-files folder offer a sample page displaying the icons - you don’t need them for your project.
+The fonts folder is the one you need! It contains <code>MYPROJECT-icons</code>.eot, svg, ttf and woff files
+And finally the “style.css” file contains all the css classes.
+
+Rename it to <code>MYPROJECT-icons.css</code>.
+
+</p>
+<p>
+As you use Boosted 3, you will also need to update this css file. 
+Why? Because it is generated with a fontsize base at 16px. 
+Boosted 4 is now based on the same value (16px) but Boosted3 was set on a different value (14px).
+In <code>MYPROJECT-icons.css</code> you will find: 
+</p>
+{% highlight css %}
+[class^="myprojecticon-"], [class*=" myprojecticonicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'MYPROJECT-font'!important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
+{% endhighlight %}
+<p>This needs to be changed as follow:</p>
+{% highlight css %}
+[class^="myprojecticon-"], [class*=" myprojecticonicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "MYPROJECT-font" !important;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 0.875; /* Font generate with 16px as a default font-size, but boosted used 14px so 14/16 = .875 */
+  text-transform: none;
+  speak: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+{% endhighlight %}
+<p>Adapt your file for SCSS or LESS if needed, you can now use your icons.</p>
+
+  
+  
+  
+</div>

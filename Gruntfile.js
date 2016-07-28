@@ -627,7 +627,8 @@ module.exports = function (grunt) {
               from: '<h2 id="glyphicons-glyphs">Available glyphs</h2>',
               to: '<h2 id="orange-icons">Orange Icons</h2><p>Icons created from the Orange brand.'+
         'Copyright (C) 2016 Orange SA All rights reserved'+
-        'See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p><div class="bs-glyphicons"><ul class="bs-glyphicons-list">{% for iconClassName in site.data.orange-icons %}<li><span class="{{ iconClassName }}" aria-hidden="true"></span><span class="glyphicon-class">{{ iconClassName }}</span></li>{% endfor %}</ul></div><h2 id="glyphicons-glyphs">Available glyphs</h2>'
+        'See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p>'+
+        '<p>The best practice is to create your own icons libray (<a href="../getting-started/#create-icon">See howto in getting started section</a>)</p><div class="bs-glyphicons"><ul class="bs-glyphicons-list">{% for iconClassName in site.data.orange-icons %}<li><span class="{{ iconClassName }}" aria-hidden="true"></span><span class="glyphicon-class">{{ iconClassName }}</span></li>{% endfor %}</ul></div><h2 id="glyphicons-glyphs">Available glyphs</h2>'
           }, {
               from: '<li><a href="#glyphicons-glyphs">Available glyphs</a></li>',
               to: '<li><a href="#orange-icons">Orange Icons</a></li><li><a href="#glyphicons-glyphs">Available glyphs</a></li>'
