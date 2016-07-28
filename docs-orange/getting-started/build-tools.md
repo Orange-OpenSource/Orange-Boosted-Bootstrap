@@ -59,7 +59,7 @@ Running our documentation locally requires the use of Jekyll, a decently flexibl
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
 ## Howto create an icons library using icomoon
-To create an icons library using icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong> and download the <a href="../assets/orange-icons.json">config file orange-icons.json</a>.
+To create an icons library using icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong> and download the <a href="{{ site.baseurl }}/assets/orange-icons.json">config file orange-icons.json</a>.
 
 ### Create your own project
 
