@@ -18,15 +18,13 @@ gems:
 
 # Custom vars
 current_version:  3.3.7
-boosted_version:  3.3.0-alpha.5
+boosted_version:  3.3.0
 repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
 
 download:
-  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.3.0-alpha.5/boosted-v3.3.0-alpha.5.zip
-  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.3.0-alpha.5/boosted-v3.3.0-alpha.5-dist.zip
-  sourcestable:   https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.2.1/boosted-v3.2.1.zip
-  diststable:     https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.2.1/boosted-v3.2.1-dist.zip
+  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.3.0/boosted-v3.3.0.zip
+  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.3.0/boosted-v3.3.0-dist.zip
   sass:           https://github.com/twbs/bootstrap-sass/archive/v3.3.7.tar.gz
 
 blog:             http://blog.getbootstrap.com
