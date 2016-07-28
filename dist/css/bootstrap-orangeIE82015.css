@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.0-alpha.5 - Orange Boosted with Boostrap
+ boosted - v3.3.0 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
