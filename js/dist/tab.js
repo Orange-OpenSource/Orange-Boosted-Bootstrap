@@ -6,7 +6,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.2): tab.js
+ * Bootstrap (v4.0.0-alpha.3): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ var Tab = (function ($) {
    */
 
   var NAME = 'tab';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha.3';
   var DATA_KEY = 'bs.tab';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -163,21 +163,15 @@ var Tab = (function ($) {
       // private
 
       value: function _activate(element, container, callback) {
-        // Boosted mod
-        var $active = $(container).find('> .active');
-        $active.find('[data-toggle=tab], [data-toggle=pill]').attr({
-          tabIndex: '-1',
-          'aria-selected': false
-        });
-        $active.filter('.tab-pane').attr({
-          'aria-hidden': true,
-          tabIndex: '-1'
-        });
-        // end mod
         var active = $(container).find(Selector.ACTIVE_CHILD)[0];
         var isTransitioning = callback && Util.supportsTransitionEnd() && (active && $(active).hasClass(ClassName.FADE) || Boolean($(container).find(Selector.FADE_CHILD)[0]));
 
         var complete = $.proxy(this._transitionComplete, this, element, active, isTransitioning, callback);
+
+        // Boosted mod
+        $(container).find('.nav-link').attr({ tabIndex: '-1', 'aria-selected': false });
+        $(container).find('.tab-pane').attr({ 'aria-hidden': true, tabIndex: '-1' });
+        // end mod
 
         if (active && isTransitioning) {
           $(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
@@ -188,16 +182,6 @@ var Tab = (function ($) {
         if (active) {
           $(active).removeClass(ClassName.IN);
         }
-        // Boosted mod
-        $(element).filter('.nav-link.active').attr({
-          tabIndex: '0',
-          'aria-selected': true
-        });
-        $(element).filter('.tab-pane.active').attr({
-          'aria-hidden': false,
-          tabIndex: '0'
-        });
-        // end mod
       }
     }, {
       key: '_transitionComplete',
@@ -216,6 +200,10 @@ var Tab = (function ($) {
 
         $(element).addClass(ClassName.ACTIVE);
         element.setAttribute('aria-expanded', true);
+        // Boosted mod
+        $(element).filter('.nav-link.active').attr({ tabIndex: '0', 'aria-selected': true });
+        $(element).filter('.tab-pane.active').attr({ 'aria-hidden': false, tabIndex: '0' });
+        // end mod
 
         if (isTransitioning) {
           Util.reflow(element);

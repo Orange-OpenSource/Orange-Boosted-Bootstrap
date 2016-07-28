@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -4036,24 +4036,6 @@ input[type="button"].btn-block {
   text-decoration: none;
 }
 
-@media (min-width: 480px) {
-  .navbar-toggleable-xs {
-    display: block !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .navbar-toggleable-sm {
-    display: block !important;
-  }
-}
-
-@media (min-width: 980px) {
-  .navbar-toggleable-md {
-    display: block !important;
-  }
-}
-
 .navbar-nav .nav-item {
   float: left;
 }
@@ -4136,6 +4118,63 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-divider {
   background-color: rgba(255, 255, 255, 0.075);
+}
+
+.navbar-toggleable-xs::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+@media (max-width: 479px) {
+  .navbar-toggleable-xs .navbar-nav .nav-item {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 480px) {
+  .navbar-toggleable-xs {
+    display: block !important;
+  }
+}
+
+.navbar-toggleable-sm::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+@media (max-width: 767px) {
+  .navbar-toggleable-sm .navbar-nav .nav-item {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggleable-sm {
+    display: block !important;
+  }
+}
+
+.navbar-toggleable-md::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+@media (max-width: 979px) {
+  .navbar-toggleable-md .navbar-nav .nav-item {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar-toggleable-md {
+    display: block !important;
+  }
 }
 
 .card {

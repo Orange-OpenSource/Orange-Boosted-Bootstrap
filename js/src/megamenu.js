@@ -15,7 +15,7 @@ const MegaMenu = (($) => {
    */
 
   const NAME                = 'megamenu'
-  const VERSION             = '4.0.0-alpha.2'
+  const VERSION             = '4.0.0-alpha.3'
   const DATA_KEY            = 'bs.megamenu'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
 
