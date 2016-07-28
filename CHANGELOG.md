@@ -1,3 +1,46 @@
+<a name"3.3.0"></a>
+## 3.3.0 (2016-07-28)
+
+
+#### Bug Fixes
+
+* **checkbox:**
+  * fix checkbox absolute position to be compatible with form-label class ([20e2ddee](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/20e2ddee58d20dd3b6b9fb8c07b6483377ba72d9))
+  * update the tick position ([3a8abc03](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a8abc03cb75a76c48f78e5d56d9629f0afe1a13))
+* **component:**
+  * css for ng-boost ([36f0d951](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/36f0d951fef7310ade1c249b2636cd3f631371b2))
+  * css for ng-boost ([61cb6c9a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/61cb6c9a6b6fa74b62a33d773523a324ff1948df))
+  * accordion ([d803b5f9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d803b5f9e7436585fa4e465fd75d1d80bccda718))
+  * forms ([9989b959](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9989b9590d46ebaef9d5f02a2769d9ba50b0948f))
+  * accordion ([5dbcd5bf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5dbcd5bfaae38762fae08d6ee5829a0e919744e0))
+  * tabs ([dd1ca2b5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dd1ca2b5e54b8a91f60073740225d40b60088c62))
+  * pagination ([ce6fd018](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ce6fd018a1586a2e4df5a18adb883fce719a5046))
+  * stepbar ([6fdc7535](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6fdc7535a25c2fd3464985dc3629dfb7b9c2d726))
+  * pagination ([02fde00b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/02fde00bb86928c077da9f6618f180992f73b5e7))
+  * tab borders ([f8848272](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f884827223c212790d72c94959a9d95bc05a12a3))
+  * local navigation ([a7db5f53](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a7db5f5385238eeed0196e475a4e963c14b4168e))
+  * local navigation ([d9594cf3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d9594cf36a246fb403e2c3c93d7bfbef1348799b))
+  * local navigation ([fbc3afaa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fbc3afaa99f5bb135143ea22f118b85fff511556))
+* **doc:**
+  * update readme link for download ([e6cf8144](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e6cf8144b30b7d05a82e5c091a4fefdf77653e5a))
+  * remove tests wording ([dac5b37c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dac5b37cae2b87fb62c7ca64c2bfacab4d12315b))
+  * buttons presentation ([6e1ba12c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6e1ba12c2389e3e829d506b0e86472bb2e72b735))
+  * buttons ([d611f446](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d611f446f3628bab60bbf92103d531fc4740852d))
+* **icons:** update cache refresh ([2cdb9377](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2cdb93770dba55564d68913cb7eecf5538890cba))
+* **test:** collapse ([000ab66d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/000ab66d13642cbb229f759aaf2416bceb9bc8fc))
+
+
+#### Features
+
+* **accordions:** enlarge the border for mobile display 2px, for more readability ([68cd2212](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/68cd22120157d0128d0ec320e1f5f559c8b0a15e))
+* **component:** toggle switches ([f3aa11a8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f3aa11a83dcbb07ecce45e6aa6094f2bd05d103e))
+* **font:** remove the default inclusion of helvetica family. WARNING the project need to ad ([051657ba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/051657ba7bedcd443970942d622e481b579e3137))
+* **icons:**
+  * add th howto create custom icons ([f3bf8ad0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f3bf8ad0b7df3d8f5b339ed91a711b2a3073831d))
+  * create a dedicated font called boosted for technical icons (checkbox, arrows...) ([2ca6540b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2ca6540b7d3712bb8b95e7cb1ae21f78c7cd0e84))
+  * remove the default inclusion of Orange icons font family. WARNING the project ne ([b5bd5ef1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b5bd5ef126950a95109249b40cf2b84bb16cd230))
+
+
 <a name"3.3.0-alpha.5"></a>
 ### 3.3.0-alpha.5 (2016-06-27)
 
