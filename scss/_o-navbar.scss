@@ -139,12 +139,19 @@
       float: right;
       padding: .875rem;
       font-size: 1.25rem;
+      color: #fff;
       background-color: transparent;
       background-image: none;
       border: 0;
       color: $navbar-dark-color;
 
       @include hover-focus {
+        color: #000;
+        background-color: #fff;
+      }
+
+      &:active {
+        color: #fff;
         background-color: $brand-primary;
       }
 
@@ -283,6 +290,7 @@
 .navbar-brand {
   @include media-breakpoint-down(xs) {
     padding: calc(#{$navbar-height-sm} / 4) 0;
+    margin-right: .625rem;
 
     img {
       height: calc(#{$navbar-height-sm} / 2);
