@@ -1,3 +1,13 @@
+<a name"4.0.0-alpha.3.1"></a>
+### 4.0.0-alpha.3.1 (2016-07-29)
+
+
+#### Bug Fixes
+
+* **component:** navbar toggle ([c62a7716](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c62a7716421dea8f32d8ddc094b00f2c27ad50e7))
+* **navbar:** put back the color onto the mobile menu icon ([57d88275](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/57d8827550c2fc84ff1bca81071886874acdb83b))
+
+
 <a name"4.0.0-alpha.3"></a>
 ### 4.0.0-alpha.3 (2016-07-28)
 
