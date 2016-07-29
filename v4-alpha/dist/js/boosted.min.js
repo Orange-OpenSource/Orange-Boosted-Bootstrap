@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.3 (http://boosted.orange.com)
+ * Bootstrap v4.0.0-alpha.3.1 (http://boosted.orange.com)
  * Copyright 2011-2016 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
