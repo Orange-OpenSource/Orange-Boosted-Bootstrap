@@ -16,7 +16,7 @@
 
   &.navbar-light,
   &.navbar-dark {
-    color: #fff;
+    color: $navbar-dark-color;
     background: #000;
   }
 
@@ -142,6 +142,7 @@
       background-color: transparent;
       background-image: none;
       border: 0;
+      color: $navbar-dark-color;
 
       @include hover-focus {
         background-color: $brand-primary;

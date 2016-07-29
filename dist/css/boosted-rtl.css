@@ -8317,6 +8317,7 @@ fieldset[disabled] a.btn {
     background-color: transparent;
     background-image: none;
     border: 0;
+    color: #fff;
   }
   .navbar .navbar-toggler:focus, .navbar .navbar-toggler:hover {
     background-color: #f16e00;
