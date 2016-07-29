@@ -139,11 +139,10 @@
       float: right;
       padding: .875rem;
       font-size: 1.25rem;
-      color: #fff;
+      color: $navbar-dark-color;
       background-color: transparent;
       background-image: none;
       border: 0;
-      color: $navbar-dark-color;
 
       @include hover-focus {
         color: #000;

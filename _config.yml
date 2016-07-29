@@ -66,13 +66,13 @@ grid:
     subdesc: Desktop (&ge;1380px) (target 1440 screen resolutions)
 # end boosted mod
 # Custom vars
-current_version:  4.0.0-alpha.3
+current_version:  4.0.0-alpha.3.1
 repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
 slack:            https://bootstrap-slack.herokuapp.com
 
 download:
-  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.3.zip
-  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.3/boosted-4.0.0-alpha.3-dist.zip
+  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.3.1.zip
+  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.3/boosted-4.0.0-alpha.3.1-dist.zip
 
 blog:             http://blog.getbootstrap.com
 expo:             http://expo.getbootstrap.com
