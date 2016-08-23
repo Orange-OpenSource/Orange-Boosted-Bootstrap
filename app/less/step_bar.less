@@ -13,7 +13,7 @@
 }
 
 .stepbar-arrow (@color) {
-  &::after {
+  &:after {
     position: absolute;
     top: 0;
     right: -@o-stepbar-arrow-width;
@@ -55,7 +55,7 @@
     }
 
     &:last-child {
-      &::after {
+      &:after {
         display: none;
       }
     }
@@ -100,9 +100,9 @@
       }
 
       &.done .step-title,
-      &.done .step-number::after,
+      &.done .step-number:after,
       &.next .step-title,
-      &.next .step-number::after{
+      &.next .step-number:after{
         display: none;
       }
     }
@@ -113,9 +113,9 @@
         padding-left: 0;
       }
 
-      &::after,
-      &.done::after,
-      &.current::after {
+      &:after,
+      &.done:after,
+      &.current:after {
         display: none;
       }
     }
@@ -123,11 +123,11 @@
     .stepbar-link {
       text-decoration: none;
 
-      .step-number::after {
+      .step-number:after {
         content: ".";
       }
 
-      .step-number::after {
+      .step-number:after {
         @media(max-width: @screen-sm-max) {
           display: none;
         }

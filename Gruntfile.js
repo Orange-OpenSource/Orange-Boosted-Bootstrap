@@ -40,9 +40,14 @@ module.exports = function (grunt) {
       'Safari >= 6'
     ]
   };
+  var path = require('path');
 
-  var configBridge = grunt.file.readJSON('./docs_base_bootstrap/grunt/configBridge.json', { encoding: 'utf8' });
-
+  var configBridge = grunt.file.readJSON('./docs_base_boosted/grunt/configBridge.json', { encoding: 'utf8' });
+  Object.keys(configBridge.paths).forEach(function (key) {
+    configBridge.paths[key].forEach(function (val, i, arr) {
+      arr[i] = path.join('./docs_generated/docs/assets', val);
+    });
+  });
   grunt.initConfig({
     yeoman: appConfig,
     jqueryCheck: configBridge.config.jqueryCheck.join('\n'),
@@ -434,6 +439,10 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= concat.boosted.dest %>',
         dest: 'dist/js/<%= yeoman.pkg.name %>.min.js'
+      },
+      docsJs: {
+        src: configBridge.paths.docsJs,
+        dest: 'docs_generated/docs/assets/js/docs.min.js'
       }
     },
     // concat: {
@@ -1071,6 +1080,7 @@ module.exports = function (grunt) {
   grunt.registerTask('docs', [
     'clean:docs',
     'copy:createDocbsGenerated',
+    'uglify:docsJs',
     'replace:remplace',
     'replace:removes',
     'jekyll:bootstrap',
