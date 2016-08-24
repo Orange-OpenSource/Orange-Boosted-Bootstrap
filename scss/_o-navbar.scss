@@ -61,7 +61,7 @@
       }
 
       @include focus {
-        outline: 1px dotted white;
+        outline: 1px dotted #fff;
         outline-offset: .625rem;
       }
 
@@ -288,7 +288,7 @@
     outline: none;
 
     img {
-      outline: 1px dotted white;
+      outline: 1px dotted #fff;
       outline-offset: .625rem;
     }
   }
@@ -351,8 +351,8 @@
 .navbar-nav {
   .nav-item-cdu {
     display: inline-block;
-    margin-top: 3.75rem;
     padding-right: .75rem;
+    margin-top: 3.75rem;
     font-weight: bold;
     line-height: $btn-line-height;
     color: #fff !important;
