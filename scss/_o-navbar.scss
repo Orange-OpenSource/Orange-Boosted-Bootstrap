@@ -30,8 +30,20 @@
 
     .nav-link {
       padding: 0;
-      margin-top: 3.6875rem;
+      margin-top: 3.75rem;
       line-height: $btn-line-height;
+
+      &:focus {
+        outline: 1px dotted #fff;
+        outline-offset: .625rem;
+      }
+    }
+
+    .nav-item-cdu {
+      &:focus {
+        outline: 1px dotted #fff;
+        outline-offset: .625rem;
+      }
     }
 
     .nav-link.icon {
@@ -261,13 +273,14 @@
 }
 
 
-
-  // We remove the `outline` here, but later compensate by attaching `:hover`
-  // styles to `:focus`.
-
 .navbar-brand {
   @include focus {
     outline: none;
+
+    img {
+      outline: 1px dotted white;
+      outline-offset: .625rem;
+    }
   }
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
@@ -327,14 +340,21 @@
 // the nav the full height of the horizontal nav (above 768px).
 .navbar-nav {
   .nav-item-cdu {
-    float: left;
+    display: inline-block;
     margin-top: 3.6875rem;
+    padding-right: .75rem;
     font-weight: bold;
     line-height: $btn-line-height;
     color: #fff !important;
 
     @include hover-focus {
       color: $brand-primary !important;
+    }
+
+    .uci-plus-orange {
+      position: absolute;
+      bottom: 2.0625rem;
+      padding: 0;
     }
   }
   // Uncollapse the nav
