@@ -16,7 +16,7 @@ Here's how to quickly get started with the necessary Boosted files and a templat
 
 ## About Orange Brand
 
-All Boosted components are compliant with Orange Brand Guidelines. Some bootstrap features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks.
+All Boosted components are compliant with Orange Brand Guidelines. Some bootstrap features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks. Please note the entire bootstrap doc is preserved and enhancend when necessary with orange brand specifics, i.e. [navbar](../../components/navbar/) page contains unsupported features, check out [navbar orange](../../components/navbar-orange/) page to find out what to use.
 
 ## Quick start
 
@@ -59,12 +59,12 @@ Put it all together and your pages should look like this:
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- 
-      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. 
+    <!--
+      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
       Orange Company had buy the right for used Helvetica onto digital applications.
-      If you are not autorized to used it, don't include the orangeHelvetica.css 
+      If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
     <link rel="stylesheet" href="css/orangeHelvetica.css" />
