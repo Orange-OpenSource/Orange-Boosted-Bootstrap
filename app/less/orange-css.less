@@ -103,6 +103,15 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
   .navbar-brand {
     padding: @navbar-brand-logo-padding 0;
 
+    &:focus {
+      outline: none;
+
+      img {
+        outline: 1px #fff dotted;
+        outline-offset: @navbar-brand-logo-focus-offset;
+       }
+    }
+
     img {
       height: @navbar-brand-logo-height;
       width: auto;
@@ -121,17 +130,17 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
       }
     }
 
-.navbar-nav {
-  // Uncollapse the nav
-  @media (min-width: @grid-float-breakpoint) {
-    > li {
-      > a {
-        margin-top: @navbar-item-margin-top-minimized;
+    .navbar-nav {
+      // Uncollapse the nav
+      @media (min-width: @grid-float-breakpoint) {
+        > li {
+          > a {
+            margin-top: @navbar-item-margin-top-minimized;
+          }
+        }
       }
     }
-  }
-  }
-  }
+   }
 }
 
 // Navbar toggle
@@ -218,11 +227,20 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
             font-size: @icon-font-weight;
             margin-top: @navbar-brand-logo-padding;
         }
+
+        &:focus {
+          outline: dotted 1px #fff;
+          outline-offset: 0;
+        }
       }
     }
 
-    li:first-child a{
-        padding-left: @padding-base-horizontal;
+    > li:first-child{
+        margin-left: @padding-base-horizontal;
+
+        > a {
+          padding-left: 0;
+        }
     }
   }
 }
