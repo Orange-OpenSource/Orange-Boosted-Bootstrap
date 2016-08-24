@@ -59,10 +59,20 @@
       @include hover-focus {
         color: $brand-primary;
       }
+
+      @include focus {
+        outline: 1px dotted white;
+        outline-offset: .625rem;
+      }
+
       display: block;
-      margin-top: 3.6875rem;
+      margin-top: 3.75rem;
       line-height: $btn-line-height;
       color: #fff;
+
+      .caret {
+        position: absolute;
+      }
     }
   }
 
@@ -341,7 +351,7 @@
 .navbar-nav {
   .nav-item-cdu {
     display: inline-block;
-    margin-top: 3.6875rem;
+    margin-top: 3.75rem;
     padding-right: .75rem;
     font-weight: bold;
     line-height: $btn-line-height;
