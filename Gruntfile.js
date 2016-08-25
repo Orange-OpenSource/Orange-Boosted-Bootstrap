@@ -754,7 +754,7 @@ module.exports = function (grunt) {
           // Add the Stepbar and footer to the component page
             {
               from: '{% include components/navbar.html %}',
-              to: '{% include components/navbar.html %}{% include components/stepbar.html %}{% include components/ofooter.html %}'
+              to: '{% include components/navbar.html %}{% include components/stepbar.html %}{% include components/ofooter.html %}{% include components/toggles.html %}'
           },
           // Put the orange logo to replace the bootstrap one and the project name
             {
