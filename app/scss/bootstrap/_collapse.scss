@@ -1,0 +1,57 @@
+//
+// Accordions //
+//
+.o-accordion
+{
+   .panel{
+    border-top:0;
+    border-left:0;
+    border-right:0;
+  }
+
+  .panel-default {
+    border-bottom: 1px solid #ccc;
+
+    &:first-child .panel-heading {
+      border-top: 1px solid #ccc;
+    }
+  }
+  
+  // For mobile display emphase the border
+  @media (max-width: $screen-sm-max) {
+    .panel-default {
+      border-bottom-width: 2px;
+
+      &:first-child .panel-heading {
+        border-top-width: 2px;
+      }
+    }
+  }
+
+  .panel-default > .panel-heading {
+    background-image: none;
+    filter: none;
+    padding: 0;
+    + .panel-collapse > .panel-body {
+      border-top: 0;
+    }
+    // put the padding onto the link to increase the clic area //
+    a {
+      padding: $panel-heading-padding;
+      line-height: $font-size-base-up;
+    }
+
+    a:after{
+      font-family: "boosted";
+      font-size: 13px;
+      margin-right: 10px;
+      float: right;
+      content: "\e900";
+    }
+
+    .panel-title .collapsed:after {
+      transform: rotate(180deg);
+    }
+  }
+
+}

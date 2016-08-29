@@ -1,0 +1,18 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+// Base class
+.tooltip {           
+  font-size: $font-size-base;  
+  font-weight: bold;       
+  &.top    { margin-top:  -$tooltip-arrow-width; padding: $tooltip-arrow-width 0; }
+  &.right  { margin-left: $tooltip-arrow-width; padding: 0 $tooltip-arrow-width; }
+  &.bottom { margin-top:  $tooltip-arrow-width; padding: $tooltip-arrow-width 0; }
+  &.left   { margin-left: -$tooltip-arrow-width; padding: 0 $tooltip-arrow-width; }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  padding: 10px;  
+}

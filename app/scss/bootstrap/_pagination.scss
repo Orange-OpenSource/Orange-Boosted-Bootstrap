@@ -1,0 +1,160 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+.pagination {
+    display: inline-block;
+    list-style: none;
+
+  > li {
+      float: left;
+      margin: 0;
+      + li{
+         margin-left: 10px;
+      }
+      > a {
+          border: 2px solid $brand-orange-clear;
+          font-size: $navbar-font-size;
+          font-weight: $brand-font-weight-bold;
+          line-height: 1;
+          margin-left: 0;
+          padding: $navbar-padding-vertical 0;
+          width: $pagination-width;
+          text-align: center;
+        .icon-arrow-next,
+        .icon-arrow-previous {
+          font-size: $font-size-base;
+        }
+
+        .icon-arrow-next:before {
+          margin-left: 2px;
+        }
+        .icon-arrow-previous:before {
+          margin-right: 2px;
+        }
+
+          &:hover,
+          &:focus {
+              color: $brand-orange-black;
+              background-color: $brand-orange-clear;
+              border: 2px solid $brand-orange-black;
+          }
+      }
+
+      &.bordered > a,
+      &.bordered > a {
+        border: 2px solid $brand-orange-black;
+        width: auto;
+        min-width: $pagination-width;
+      }
+
+      &.active > a,
+      &.active > a:hover,
+      &.active > a:focus {
+          color: $brand-orange-white;
+      }
+
+      &.disabled > a,
+      &.disabled > a:hover,
+      &.disabled > a:focus {
+          border: 2px solid $gray-light;
+          color: $gray-light;
+          background-color: $brand-orange-clear;
+      }
+  }
+}
+
+.pager {
+  display: inline-block;
+
+  li {
+    float: left;
+    margin: 0;
+    + li{
+        margin-left: 10px;
+    }
+
+    & > a {
+      position: relative;
+      border: 2px solid black;
+      font-size: $navbar-font-size;
+      font-weight: $brand-font-weight-bold;
+      line-height: 1;
+      margin-left: 0;
+      padding: $navbar-padding-vertical 0;
+      min-width: $pagination-width;
+      text-align: center;
+
+      .icon-arrow-previous,
+      .icon-arrow-next {
+        font-size: $font-size-base;
+      }
+
+      .icon-arrow-next:before {
+        margin-left: 2px;
+      }
+      .icon-arrow-previous:before {
+        margin-right: 2px;
+      }
+    }
+
+    & > a:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+  .disabled >a,
+  .disabled >a:hover {
+    color: #ccc;
+    border-color: #ccc;
+  }
+
+  .presentation{
+    padding: $navbar-padding-vertical 0;
+    font-size: $navbar-font-size;
+    font-weight: $brand-font-weight-bold;
+  }
+
+  .previous,
+  .next {
+    position: relative;
+
+    > a {
+      padding: $pagination-padding;
+    }
+  }
+
+  .previous > a {
+    padding-left: $pagination-label-padding;
+  }
+
+  .previous > a:before {
+    font-family: "boosted";
+    content: "\e903";
+    position: absolute;
+    color: #000;
+    font-size: $font-size-base;
+    left: $pagination-arrow-padding;
+    top: $pagination-arrow-top;
+  }
+
+  .next > a {
+    padding-right: $pagination-label-padding;
+  }
+
+  .next > a:before {
+    font-family: "boosted";
+    content: "\e902";
+    position: absolute;
+    color: #000;
+    font-size: $font-size-base;
+    right: $pagination-arrow-padding;
+    top: $pagination-arrow-top;
+  }
+
+  .previous.disabled > a:before,
+  .next.disabled > a:before {
+    color: #ccc;
+  }
+}

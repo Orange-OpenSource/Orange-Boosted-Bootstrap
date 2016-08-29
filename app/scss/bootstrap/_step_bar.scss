@@ -1,0 +1,206 @@
+//
+// Orange stepbar
+//
+
+.o-stepbar {
+  &,
+  ol,
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .stepbar-item {
+    @include stepbar-arrow($arrow-gray);
+    position: relative;
+    float: left;
+    padding: $padding-large-vertical ( $padding-base-horizontal / 2 ) $padding-large-vertical (( $padding-base-horizontal / 2 ) + $o-stepbar-arrow-width);
+    font-weight: bold;
+    font-size: $navbar-font-size;
+    line-height: $navbar-font-size;
+    color: $brand-orange-black;
+    white-space: nowrap;
+    list-style: none;
+    background-color: $gray-light-plus;
+
+    &:first-child {
+      padding-left: ( $padding-base-horizontal / 2 );
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.done {
+      @include stepbar-arrow($arrow-black);
+      background-color: $brand-orange-black;
+      .stepbar-link {
+        color: $brand-orange-white;
+        &:focus,
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+
+    &.current {
+      @include stepbar-arrow($arrow-orange);
+      background-color: $brand-primary;
+      .stepbar-link {
+        color: $brand-orange-white;
+      }
+    }
+
+    @media(max-width: $screen-md-max) {
+      &.done,
+      &.next {
+        width: $o-stepbar-mobile-width;
+        line-height: $font-size-base-up;
+        text-align: center;
+        padding: $o-stepbar-mobile-padding-vertical 0;
+        padding-left: $o-stepbar-arrow-width;
+      }
+
+      &:first-child,
+      &:last-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        width: $o-stepbar-mobile-last-width;
+      }
+
+      &.done .step-title,
+      &.done .step-number:after,
+      &.next .step-title,
+      &.next .step-number:after{
+        display: none;
+      }
+    }
+
+    @media(max-width: $screen-sm-max) {
+      &.done,
+      &.next {
+        padding-left: 0;
+      }
+
+      &:after,
+      &.done:after,
+      &.current:after {
+        display: none;
+      }
+    }
+
+    .stepbar-link {
+      text-decoration: none;
+
+      .step-number:after {
+        content: ".";
+      }
+
+      .step-number:after {
+        @media(max-width: $screen-sm-max) {
+          display: none;
+        }
+      }
+
+      .step-title {
+        @media(max-width: $screen-sm-max) {
+          display: none;
+        }
+      }
+    }
+
+    @media(max-width: $screen-sm-max) {
+      &,
+      &:first-child {
+        padding: $o-stepbar-mobile-padding-vertical 0;
+      }
+
+      width: $pagination-width;
+      margin-right: ($o-stepbar-mobile-margin-right / 5);
+      line-height: $font-size-base-up;
+      text-align: center;
+    }
+  }
+
+  @media(max-width: $screen-sm-max) {
+    .stepbar-header {
+      margin-right: $o-stepbar-mobile-margin-right;
+      font-weight: $brand-font-weight-bold;
+      vertical-align: middle;
+      font-size: $navbar-font-size;
+    }
+
+    ol,
+    ul {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .o-stepbar {
+    .stepbar-item.current + .stepbar-item.next{
+      width: $o-stepbar-mobile-width;
+    }
+  }
+}
+
+@media(max-width: $screen-sm-max) {
+  .o-stepbar {
+    .stepbar-item,
+    .stepbar-item.current,
+    .stepbar-item.done,
+    .stepbar-item.next,
+    .stepbar-item.current + .stepbar-item.next
+    .stepbar-item:first-child,
+    .stepbar-item:last-child{
+      width: $pagination-width;
+    }
+  }
+}
+
+
+@media(min-width: $screen-md-min) {
+  // one item
+  .stepbar-item:nth-child(1):nth-last-child(1) {
+    width: 100%;
+  }
+
+  // two items
+  .stepbar-item:nth-child(1):nth-last-child(2),
+  .stepbar-item:nth-child(2):nth-last-child(1) {
+    width: 50%;
+  }
+
+  // three items
+  .stepbar-item:nth-child(1):nth-last-child(3),
+  .stepbar-item:nth-child(2):nth-last-child(2),
+  .stepbar-item:nth-child(3):nth-last-child(1) {
+    width: 33.3333%;
+  }
+
+  // four items
+  .stepbar-item:nth-child(1):nth-last-child(4),
+  .stepbar-item:nth-child(2):nth-last-child(3),
+  .stepbar-item:nth-child(3):nth-last-child(2),
+  .stepbar-item:nth-child(4):nth-last-child(1) {
+    width: 25%;
+  }
+
+  // five items
+  .stepbar-item:nth-child(1):nth-last-child(5),
+  .stepbar-item:nth-child(2):nth-last-child(4),
+  .stepbar-item:nth-child(3):nth-last-child(3),
+  .stepbar-item:nth-child(4):nth-last-child(2),
+  .stepbar-item:nth-child(5):nth-last-child(1) {
+    width: 20%;
+  }
+}

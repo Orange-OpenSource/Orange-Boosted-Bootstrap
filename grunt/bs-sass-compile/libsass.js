@@ -15,8 +15,8 @@ module.exports = function configureLibsass(grunt) {
         files: {
         /* boosted mod */
         //   'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
-        'dist/css/<%= yeoman.pkg.name %>.css': 'app/scss/boosted2015.scss',
-        'dist/css/<%= yeoman.pkg.name %>.css': 'app/scss/bootstrap-orange2015.scss',
+        'dist/css/bootstrap-orange2015.css': 'app/scss/bootstrap-orange2015.scss',
+        'dist/css/<%= yeoman.pkg.name %>2015.css': 'app/scss/boosted2015.scss',        
         'dist/css/orangeHelvetica.css': 'app/scss/orangeHelvetica.scss',
         'dist/css/orangeIcons.css': 'app/scss/orangeIcons.scss'
         /* end mod */

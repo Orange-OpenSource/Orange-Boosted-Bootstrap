@@ -1,0 +1,21 @@
+//
+// Modal //
+//
+.modal-title {
+  font-weight: bold;
+  color: #000000;
+}
+.modal-content {
+  border-radius: 0;
+}
+.modal-header {
+  padding: 5px 5px 5px 20px;
+  background-color: $gray-light;
+}
+.modal-header  .close{
+  opacity: 0.5;
+}
+.modal-footer {
+  padding: 5px 5px 5px 20px;
+  text-align: center;
+}

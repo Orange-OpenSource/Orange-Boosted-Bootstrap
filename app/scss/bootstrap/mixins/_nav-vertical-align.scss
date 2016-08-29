@@ -1,0 +1,25 @@
+@mixin navbar-vertical-align($element-height){ 
+                      margin-bottom: 0;                          
+                      @media (max-width: $grid-float-breakpoint-max) {
+                          margin-top: 0;                              
+                      }       
+                      $currentUnit: str-slice(inspect($element-height), str-length(inspect($element-height)) - 2, str-length(inspect($element-height)));
+                      @if $currentUnit == em {                                 
+                        //stuff for em
+                        margin-top: (($navbar-height - ($navbar-padding-vertical + inspect($element-height))));
+                      }@else if $currentUnit == px {
+                        // px
+                        margin-top: (($navbar-height - ($navbar-padding-vertical + ((str-slice(inspect($element-height), 0, str-length(inspect($element-height)) - 2))/10))));
+                      }@else {
+                        // no unit
+                        margin-top: (($navbar-height - ($navbar-padding-vertical + inspect($element-height))));
+                      }                                     
+                    }
+                    @mixin navbar-toggle-vertical-align($element-height){
+                        $currentUnit: str-slice(inspect($element-height), str-length(inspect($element-height)) - 2, str-length(inspect($element-height)));
+                        @if $currentUnit == em {                                 
+                          //stuff for em
+                          margin-top: (($navbar-height - $element-height));
+                          margin-bottom: 1rem;
+                        }     
+                    }

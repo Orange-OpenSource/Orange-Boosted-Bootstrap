@@ -924,22 +924,6 @@ module.exports = function (grunt) {
           to: '"'
         }]
 
-      },
-      sass: {
-        src: ['app/scss{,**/}*.scss'],
-        overwrite: true,
-        //options: {
-        replacements: [{
-          from: 'bootstrap/scss',
-          to: 'bootstrap/less'          
-        },{
-          from: 'bootstrap/less',
-          to: 'bootstrap-sass/assets/stylesheets/bootstrap'          
-        },{
-          from: 'less',
-          to: 'scss'
-        }]
-
       }
     },
 
@@ -1099,7 +1083,7 @@ module.exports = function (grunt) {
     require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
   })(process.env.TWBS_SASS || 'libsass');
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
-  grunt.registerTask('sass-compile', ['replace:sass','sass:core']);
+  grunt.registerTask('sass-compile', ['sass:core']);
 
   grunt.registerTask('docs', [
     'clean:docs',

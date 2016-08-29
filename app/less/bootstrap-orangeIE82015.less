@@ -1,6 +1,8 @@
 // Core variables and mixins
 @import "../../bower_components/bootstrap/less/variables.less";
 @import "mixins.less";
+// Specific IE8 mixin
+@import "../../bower_components/bootstrap/less/mixins/nav-divider.less";
 
 // Reset and dependencies
 @import "../../bower_components/bootstrap/less/normalize.less";
@@ -72,11 +74,4 @@ nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
 
 .form-horizontal .control-label {
   text-align: left;
-}
-
-.nav-divider(@color: #e5e5e5) {
-  height: 1px;
-  margin: ((@line-height-computed / 2) - 1) 0;
-  overflow: hidden;
-  background-color: @color;
 }

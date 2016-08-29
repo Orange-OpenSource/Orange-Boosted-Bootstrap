@@ -1,6 +1,8 @@
 // Core variables and mixins
 @import "../../bower_components/bootstrap/less/variables.less";
 @import "mixins.less";
+// only for REM mixin
+@import "mixins/nav-divider-rem.less";
 
 // Reset and dependencies
 @import "../../bower_components/bootstrap/less/normalize.less";
@@ -114,12 +116,4 @@ nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
   & ~ .form-control-feedback {
      top: (@line-height-computed + .5); // Height of the `label` and its margin
   }
-}
-
-
-.nav-divider(@color: #e5e5e5) {
-  height: 1px;
-  margin: ((@line-height-computed / 2) - .1) 0;
-  overflow: hidden;
-  background-color: @color;
 }
