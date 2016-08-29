@@ -54,8 +54,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "bootstrapaccessibilityplugin": ">=1.0.3",
-    "jquery-validation": "~1.13.1",
-    "bootstrap-sass": "^3.3.7"
+    "jquery-validation": "~1.13.1"
   },
   "author": {
     "name": "Orange SA"
