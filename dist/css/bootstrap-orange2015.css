@@ -4954,10 +4954,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   float: right;
   padding: 9px 10px;
-  margin-top: -12rem;
   margin-top: 5.6rem;
   margin-right: 10px;
-  margin-bottom: -12rem;
   margin-bottom: 0;
   background-color: transparent;
   background-image: none;
@@ -5032,11 +5030,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-form {
   padding: 10px 10px;
-  margin-top: 3rem;
   margin-top: 8.6rem;
   margin-top: 5rem;
   margin-right: -10px;
-  margin-bottom: 3rem;
   margin-bottom: 0;
   margin-left: -10px;
   border-top: 1px solid transparent;
@@ -5134,10 +5130,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 3rem;
   margin-top: 8.6rem;
   margin-top: 5rem;
-  margin-bottom: 3rem;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5146,10 +5140,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-btn.btn-sm {
-  margin-top: 3.4rem;
   margin-top: 8.68rem;
   margin-top: 5.8rem;
-  margin-bottom: 3.4rem;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5158,10 +5150,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-btn.btn-xs {
-  margin-top: -6rem;
   margin-top: 6.8rem;
   margin-top: -13rem;
-  margin-bottom: -6rem;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -5170,10 +5160,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-text {
-  margin-top: 4rem;
   margin-top: 8.8rem;
   margin-top: 7rem;
-  margin-bottom: 4rem;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
