@@ -52,14 +52,14 @@ class Converter
     def shared_mixins
       @shared_mixins ||= begin
         log_status '  Reading shared mixins from mixins.less'
-        CLASSES_TO_MIXINS + read_mixins(read_files('app/less', bootstrap_less_files.grep(/mixins\//)).values.join("\n"),
+        CLASSES_TO_MIXINS + read_mixins(read_cached_files('app/less', bootstrap_less_files.grep(/mixins\//)).values.join("\n"),
                                         nested: NESTED_MIXINS)
       end
     end
 
     def process_stylesheet_assets
       log_status 'Processing stylesheets...'
-      files   = read_files('app/less', bootstrap_less_files)
+      files   = read_cached_files('app/less', bootstrap_less_files)
       save_to = @save_to[:scss]
 
       log_status '  Converting LESS files to Scss:'

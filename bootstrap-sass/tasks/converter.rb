@@ -21,9 +21,8 @@ require 'forwardable'
 require 'term/ansicolor'
 require 'fileutils'
 
-require_relative 'converter/fonts_conversion'
+
 require_relative 'converter/less_conversion'
-require_relative 'converter/js_conversion'
 require_relative 'converter/logger'
 require_relative 'converter/network'
 
@@ -31,20 +30,16 @@ class Converter
   extend Forwardable
   include Network
   include LessConversion
-  include JsConversion
-  include FontsConversion
 
   def initialize(repo: 'Orange-OpenSource/Orange-Boosted-Bootstrap', branch: 'v3.3.0', save_to: {}, cache_path: 'tmp/converter-cache-bootstrap')
     @logger     = Logger.new
     @repo       = repo
     @branch     = branch || 'master'
-    @branch_sha = get_branch_sha
+    @branch_sha = 'get_branch_sha'
     @cache_path = cache_path
     @repo_url   = "https://github.com/#@repo"
     @save_to    = {
-        js:    'assets/javascripts/bootstrap',
-        scss:  '../app/scss/bootstrap',
-        fonts: 'assets/fonts/bootstrap'}.merge(save_to)
+        scss:  '../app/scss/bootstrap'}.merge(save_to)
   end
 
   def_delegators :@logger, :log, :log_status, :log_processing, :log_transform, :log_file_info, :log_processed, :log_http_get_file, :log_http_get_files, :silence_log
@@ -58,12 +53,10 @@ class Converter
     puts '-' * 60
 
     @save_to.each { |_, v| FileUtils.mkdir_p(v) }
+    FileUtils.mkdir_p('tmp/boosted/less')
     FileUtils.copy_entry '../bower_components/bootstrap/less', 'tmp/boosted/less'
     FileUtils.copy_entry '../app/less', 'tmp/boosted/less'
-#    process_font_assets
     process_stylesheet_assets
-#    process_javascript_assets
-    store_version
   end
 
   def save_file(path, content, mode='w')
@@ -72,10 +65,4 @@ class Converter
     File.open(path, mode) { |file| file.write(content) }
   end
 
-  # Update version.rb file with BOOTSTRAP_SHA
-  def store_version
-    path    = 'lib/bootstrap-sass/version.rb'
-    content = File.read(path).sub(/BOOTSTRAP_SHA\s*=\s*['"][\w]+['"]/, "BOOTSTRAP_SHA = '#@branch_sha'")
-    File.open(path, 'w') { |f| f.write(content) }
-  end
 end
