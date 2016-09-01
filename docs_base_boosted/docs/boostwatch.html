@@ -20,11 +20,7 @@ lead: ""
 <!-- Navbar
       ================================================== -->
       <div class="bs-docs-section clearfix">
-        <div class="row">
-          <div class="">
-            <div class="page-header">
-              <h1 id="navbar">Navbar</h1>
-            </div>
+          <h1 class="page-header" id="navbar">Navbar<a class="doc-link" href="../components/#navbar" title="go to navbar documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
 
             <div class="bs-component">
               <div class="navbar navbar-default">
@@ -76,20 +72,11 @@ lead: ""
             </div>
             </div>
           </div>
-        </div>
-      </div>
-
 
       <!-- Buttons
       ================================================== -->
       <div class="bs-docs-section">
-        <div class="page-header">
-          <div class="row">
-            <div class="col-lg-12">
-              <h1 id="buttons">Buttons</h1>
-            </div>
-          </div>
-        </div>
+        <h1 class="page-header" id="buttons">Buttons<a class="doc-link" href="../css/#buttons" title="go to buttons documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
 
         <div class="row" id="buttons_default">
           <h2>Default</h2>
@@ -245,93 +232,81 @@ lead: ""
     <!-- Toggle switches
     =================================================== -->
     <div class="bs-docs-section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1 id="toggle">Toggle and switches</h1>
+      <h1 class="page-header" id="toggle">Toggle and switches<a class="doc-link" href="../components/#toggles" title="go to toggle and switches documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
+
+      <h2>Switches</h2>
+      <div style="margin-left: 10px;">
+        <div class="form-group toggle row">
+          <label for="checkbox1" class="col-md-3 col-xs-8">WiFi</label>
+          <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
+          <div class="checkbox-label col-xs-3" aria-hidden="true">
+            <span class="on icon-checkbox_tick"></span>
+            <span class="off icon-delete"></span>
+          </div>
+        </div>
+
+        <div class="form-group toggle row">
+          <label for="checkbox3" class="col-md-3 col-xs-8">Bluetooth</label>
+          <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
+          <div class="checkbox-label col-xs-3" aria-hidden="true">
+            <span class="on icon-checkbox_tick"></span>
+            <span class="off icon-delete"></span>
+          </div>
+        </div>
+
+        <div class="form-group toggle row">
+          <label for="checkbox2" class="col-md-3 col-xs-8">WiFi</label>
+          <input class="checkbox sr-only" id="checkbox2" type="checkbox"/>
+          <div class="checkbox-label rounded col-xs-3" aria-hidden="true">
+            <span class="on">On</span>
+            <span class="off">Off</span>
+          </div>
+        </div>
+
+        <div class="form-group toggle row">
+          <label for="checkbox4" class="col-md-3 col-xs-8">Bluetooth</label>
+          <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
+          <div class="checkbox-label rounded col-xs-3" aria-hidden="true">
+            <span class="on">On</span>
+            <span class="off">Off</span>
           </div>
         </div>
       </div>
 
-      <h3>Switches</h3>
-
-      <div class="form-group toggle row">
-        <label for="checkbox1" class="col-md-3 col-xs-8">WiFi</label>
-        <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-        <div class="checkbox-label col-xs-3" aria-hidden="true">
-          <span class="on icon-checkbox_tick"></span>
-          <span class="off icon-delete"></span>
+      <h2>3 way toggle</h2>
+      <div style="margin-left: 10px;">
+        <div class="btn-group" data-toggle="buttons" role="group">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> 2
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option3" autocomplete="off"> 3
+          </label>
         </div>
       </div>
-
-      <div class="form-group toggle row">
-        <label for="checkbox3" class="col-md-3 col-xs-8">Bluetooth</label>
-        <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
-        <div class="checkbox-label col-xs-3" aria-hidden="true">
-          <span class="on icon-checkbox_tick"></span>
-          <span class="off icon-delete"></span>
+        <h3>without outline</h3>
+      <div style="margin-left: 10px;">
+        <div class="btn-group no-outline" data-toggle="buttons" role="group">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option21" autocomplete="off" checked> 1
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option22" autocomplete="off"> 2
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option33" autocomplete="off"> 3
+          </label>
         </div>
       </div>
-
-      <div class="form-group toggle row">
-        <label for="checkbox2" class="col-md-3 col-xs-8">WiFi</label>
-        <input class="checkbox sr-only" id="checkbox2" type="checkbox"/>
-        <div class="checkbox-label rounded col-xs-3" aria-hidden="true">
-          <span class="on">On</span>
-          <span class="off">Off</span>
-        </div>
-      </div>
-
-      <div class="form-group toggle row">
-        <label for="checkbox4" class="col-md-3 col-xs-8">Bluetooth</label>
-        <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-        <div class="checkbox-label rounded col-xs-3" aria-hidden="true">
-          <span class="on">On</span>
-          <span class="off">Off</span>
-        </div>
-      </div>
-
-      <h3>3 way toggle</h3>
-
-      <div class="btn-group" data-toggle="buttons" role="group">
-        <label class="btn btn-secondary active">
-          <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
-        </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option2" autocomplete="off"> 2
-        </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option3" autocomplete="off"> 3
-        </label>
-      </div>
-
-      <h3>3 way toggle without outline</h3>
-
-      <div class="btn-group no-outline" data-toggle="buttons" role="group">
-        <label class="btn btn-secondary active">
-          <input type="radio" name="options" id="option21" autocomplete="off" checked> 1
-        </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option22" autocomplete="off"> 2
-        </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option33" autocomplete="off"> 3
-        </label>
-      </div>
-
-
     </div>
 
       <!-- Typography
       ================================================== -->
       <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="type">Typography</h1>
-            </div>
-          </div>
-        </div>
+        <h1 class="page-header" id="type">Typography<a class="doc-link" href="../css/#type" title="go to typography documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
 
         <!-- Headings -->
 
@@ -406,13 +381,7 @@ vehicula.</p>
       <!-- Forms
       ================================================== -->
       <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="forms">Forms</h1>
-            </div>
-          </div>
-        </div>
+        <h1 class="page-header" id="forms">Forms<a class="doc-link" href="../css/#forms" title="go to forms documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
 
         <!--<div class="row">
           <div class="col-lg-6"> -->
@@ -623,9 +592,6 @@ vehicula.</p>
                   </div>
                 </div>
               </form>
-
-          <!-- </div>
-        </div> -->
       </div>
 
 
@@ -633,18 +599,11 @@ vehicula.</p>
       <!-- Navs
       ================================================== -->
       <div class="bs-docs-section">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="nav">Navs</h1>
-            </div>
-          </div>
-        </div>
+        <h1 class="page-header" id="nav">Navs<a class="doc-link" href="../components/#nav" title="go to navs documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
 
         <div class="row">
           <div class="col-lg-6">
-            <h2 id="bs-nav-tabs">Tabs</h2>
+            <h2 id="bs-nav-tabs">Tabs<a class="doc-link" href="../components/#nav-tabs" title="go to tabs documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#home9" data-toggle="tab">Home</a></li>
@@ -699,7 +658,7 @@ viral locavore cosby sweater.</p>
             </div>
           </div>
           <div class="col-lg-6">
-            <h2 id="bs-nav-pills">Pills</h2>
+            <h2 id="bs-nav-pills">Pills<a class="doc-link" href="../components/#nav-pills" title="go to pills documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <ul class="nav nav-pills">
                 <li class="active"><a href="#">Home</a></li>
@@ -746,7 +705,7 @@ viral locavore cosby sweater.</p>
         <div class="row">
           <div class="col-lg-6">
               <!-- TODO put accessibility informations (aria and others) -->
-            <h2 id="bs-nav-breadcrumbs">Breadcrumbs</h2>
+            <h2 id="bs-nav-breadcrumbs">Breadcrumbs<a class="doc-link" href="../components/#breadcrumbs" title="go to breadcrumbs documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <nav>
                 <span class="sr-only">You are here: </span>
@@ -774,7 +733,7 @@ viral locavore cosby sweater.</p>
             </div>
           </div>
           <div class="col-lg-6">
-            <h2 id="pager">Pager</h2>
+            <h2 id="pager">Pager<a class="doc-link" href="../components/#pagination-pager" title="go to pager documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <nav>
                 <ul class="pager">
@@ -802,7 +761,7 @@ viral locavore cosby sweater.</p>
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <h2 id="pagination">Pagination</h2>
+            <h2 id="pagination">Pagination<a class="doc-link" href="../components/#pagination" title="go to pagination documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             Standard pagination with numbers
             <div class="bs-component">
                 <nav>
@@ -825,18 +784,11 @@ viral locavore cosby sweater.</p>
       <!-- Indicators
       ================================================== -->
       <div class="bs-docs-section">
+        <h1 class="page-header" id="indicators">Indicators</h1>
 
         <div class="row">
           <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="indicators">Indicators</h1>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Alerts</h2>
+            <h2>Alerts<a class="doc-link" href="../components/#alerts" title="go to alerts documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <div class="alert alert-dismissible alert-warning">
                 <button type="button" class="close" data-dismiss="alert">×</button>
@@ -874,7 +826,7 @@ viral locavore cosby sweater.</p>
         </div>
         <div class="row">
           <div class="col-lg-4">
-            <h2>Labels</h2>
+            <h2>Labels<a class="doc-link" href="../components/#labels" title="go to labels documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component" style="margin-bottom: 40px;">
               <span class="label label-default">Default</span>
               <span class="label label-primary">Primary</span>
@@ -885,7 +837,7 @@ viral locavore cosby sweater.</p>
             </div>
           </div>
           <div class="col-lg-4">
-            <h2>Badges</h2>
+            <h2>Badges<a class="doc-link" href="../components/#badges" title="go to badges documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <ul class="nav nav-pills">
                 <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
@@ -900,12 +852,7 @@ viral locavore cosby sweater.</p>
       <!-- Progress bars
       ================================================== -->
       <div class="bs-docs-section">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="progress">Progress bars</h1>
-            </div>
+        <h1 class="page-header" id="progress">Progress bars<a class="doc-link" href="../components/#progress" title="go to progress bars documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
 
             <h3 id="progress-basic">Basic</h3>
             <div class="bs-component">
@@ -967,33 +914,27 @@ viral locavore cosby sweater.</p>
                 <div class="progress-bar progress-bar-danger" style="width: 10%"></div>
               </div>
             </div>
-          </div>
-        </div>
       </div>
+
 
       <!-- Containers
       ================================================== -->
       <div class="bs-docs-section">
+        <h1 class="page-header" id="container">Containers</h1>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="container">Containers</h1>
-            </div>
             <div class="bs-component">
               <div class="jumbotron">
-                <h1>Jumbotron</h1>
+                <h2>Jumbotron<a class="doc-link" href="../components/#jumbotron" title="go to jumbotron documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
                 <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 <p><a class="btn btn-primary btn-lg">Learn more</a></p>
               </div>
             </div>
-          </div>
-        </div>
+
 
 
         <div class="row">
           <div class="col-lg-12">
-            <h2>List groups</h2>
+            <h2>List groups<a class="doc-link" href="../components/#list-group" title="go to list group documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
           </div>
         </div>
         <div class="row">
@@ -1047,7 +988,7 @@ viral locavore cosby sweater.</p>
 
         <div class="row">
           <div class="col-lg-12">
-            <h2>Panels</h2>
+            <h2>Panels<a class="doc-link" href="../components/#panels" title="go to panels documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
           </div>
         </div>
         <div class="row">
@@ -1129,7 +1070,7 @@ viral locavore cosby sweater.</p>
 
         <div class="row">
           <div class="col-lg-12">
-            <h2>Wells</h2>
+            <h2>Wells<a class="doc-link" href="../components/#wells" title="go to wells documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
           </div>
         </div>
         <div class="row">
@@ -1160,17 +1101,11 @@ viral locavore cosby sweater.</p>
       <!-- Dialogs
       ================================================== -->
       <div class="bs-docs-section">
+        <h1 class="page-header" id="dialogs">Dialogs</h1>
 
         <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="dialogs">Dialogs</h1>
-            </div>
-          </div>
-        </div>
-        <div class="row">
             <div class="col-lg-10 col-lg-offset-2">
-            <h2>Popovers</h2>
+            <h2>Popovers<a class="doc-link" href="../javascript/#popovers" title="go to popovers documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
 
@@ -1181,7 +1116,7 @@ viral locavore cosby sweater.</p>
 
               <button title="" data-original-title="" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
             </div>
-            <h2>Tooltips</h2>
+            <h2>Tooltips<a class="doc-link" href="../javascript/#tooltips" title="go to tooltips documentation page"><span class="icon-Forward_curved_arrow"></span></a></h2>
             <div class="bs-component">
               <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
 
