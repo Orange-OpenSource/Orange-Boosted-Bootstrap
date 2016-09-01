@@ -92,6 +92,10 @@
 
       .on {
         color: #000;
+
+        &.icon-checkbox-tick {
+          color: white;
+        }
       }
     }
   }
