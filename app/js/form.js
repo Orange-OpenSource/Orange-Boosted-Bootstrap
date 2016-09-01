@@ -14,52 +14,52 @@ $(document).ready(function () {
           var validationMessage = $(this).attr('title');
           $(this).attr('x-moz-errormessage', validationMessage);
       });
-      $('form').removeAttr('novalidate');   
+      $('form').removeAttr('novalidate');
   }
-  
+
   // first init, set all class checked to checkboxes checked
   $('.checkbox:checked').each(function(){
     $(this).toggleClass('checked',true);
   });
-  
+
   // make toggle focusable
   // $('.checkbox-label').attr('tabindex','0');
-  
+
   // Allow user to activate the checkbox-label with the space bar
   /*$('.checkbox-label').on('keypress', function(e){
     // check the keycode for space?
     if (e.keyCode == 0 || e.keyCode == 32) {
-      // if keycode is space => trigger a click to the input 
-      $(this).parent().find('input').trigger('click');    
+      // if keycode is space => trigger a click to the input
+      $(this).parent().find('input').trigger('click');
       e.preventDefault()
-      e.stopPropagation()      
+      e.stopPropagation()
     }
   });
   */
   // attach event onto all checkbox to update the display onclick
-  $('.checkbox').on('click', function() {   
+  $('.checkbox').on('click', function() {
     $(this).toggleClass('checked',$(this).prop('checked'));
     // force IE8 repaint!
-    $(this).parent().toggleClass('forceiepaint');       
+    $(this).parent().toggleClass('forceiepaint');
   });
   // add an event for IE8 active checkbox when clicking onto the label
-  $('.checkbox').parent().find('label').on('click', function(e) {   
-    $('#'+$(this).attr('for')).trigger('click');      
+  $('.checkbox').parent().find('label').on('click', function(e) {
+    $('#'+$(this).attr('for')).trigger('click');
     e.preventDefault()
-    e.stopPropagation()     
+    e.stopPropagation()
   });
-  
+
   // push event for IE8 to the parent
-  $('.checkbox-label').on('click', function(e) {    
-    $(this).parent().find('input').trigger('click');    
+  $('.checkbox-label').on('click', function(e) {
+    $(this).parent().find('input').trigger('click');
     e.preventDefault()
     e.stopPropagation()
   });
   // push event for IE8 to the parent
-  $('.checkbox-label>span').on('click', function(e) {    
+  $('.checkbox-label>span').on('click', function(e) {
     $(this).parent().trigger('click');
     e.preventDefault()
     e.stopPropagation()
-  }); 
-    
+  });
+
 });
