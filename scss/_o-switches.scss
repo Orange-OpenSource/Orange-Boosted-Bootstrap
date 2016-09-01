@@ -89,6 +89,10 @@
     + .toggle {
       background: $brand-success;
       border-color: $brand-success;
+
+      .on {
+        color: #000;
+      }
     }
   }
 }
