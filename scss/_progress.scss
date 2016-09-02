@@ -18,6 +18,17 @@
   height: $spacer-y; // todo: make a new var for this
   margin-bottom: $spacer-y;
 }
+
+// BOOSTED MOD progress is half height on mobile
+@include media-breakpoint-down(md) {
+  .progress {
+    display: block;
+    width: 100%;
+    height: ($spacer-y / 2); // todo: make a new var for this
+    margin-bottom: ($spacer-y / 2);
+  } 
+}
+
 .progress[value] {
   // Set overall background
   background-color: $progress-bg;
