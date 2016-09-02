@@ -9,7 +9,7 @@
     margin-bottom: -2px;
 
     + .nav-item {
-      margin-left: .5rem;      
+      margin-left: .5rem;
       // On mobile no margin between tabs
       @include media-breakpoint-down(md) {
         margin-left: 0;

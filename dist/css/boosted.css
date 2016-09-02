@@ -4736,8 +4736,17 @@ a.tag:focus, a.tag:hover {
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 979px) {
+  .progress {
+    display: block;
+    width: 100%;
+    height: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+}
+
 .progress[value] {
-  background-color: #eee;
+  background-color: #ccc;
   border: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -4758,17 +4767,17 @@ a.tag:focus, a.tag:hover {
 }
 
 .progress[value]::-webkit-progress-bar {
-  background-color: #eee;
+  background-color: #ccc;
 }
 
 base::-moz-progress-bar,
 .progress[value] {
-  background-color: #eee;
+  background-color: #ccc;
 }
 
 @media screen and (min-width: 0\0) {
   .progress {
-    background-color: #eee;
+    background-color: #ccc;
   }
   .progress-bar {
     display: inline-block;
@@ -7589,6 +7598,10 @@ fieldset[disabled] a.btn {
   border-color: #32c832;
 }
 
+.checkbox.success:checked + .checkbox-label .on {
+  color: #000;
+}
+
 .form-group .form-control-label.checkbox-label {
   padding: 0;
 }
@@ -8206,8 +8219,18 @@ fieldset[disabled] a.btn {
 
 .navbar .nav-item .nav-link {
   padding: 0;
-  margin-top: 3.6875rem;
+  margin-top: 3.75rem;
   line-height: 1;
+}
+
+.navbar .nav-item .nav-link:focus {
+  outline: 1px dotted #fff;
+  outline-offset: .625rem;
+}
+
+.navbar .nav-item .nav-item-cdu:focus {
+  outline: 1px dotted #fff;
+  outline-offset: .625rem;
 }
 
 .navbar .nav-item .nav-link.icon {
@@ -8221,13 +8244,22 @@ fieldset[disabled] a.btn {
 
 .navbar .nav-item .dropdown-toggle {
   display: block;
-  margin-top: 3.6875rem;
+  margin-top: 3.75rem;
   line-height: 1;
   color: #fff;
 }
 
 .navbar .nav-item .dropdown-toggle:focus, .navbar .nav-item .dropdown-toggle:hover {
   color: #f16e00;
+}
+
+.navbar .nav-item .dropdown-toggle:focus {
+  outline: 1px dotted #fff;
+  outline-offset: .625rem;
+}
+
+.navbar .nav-item .dropdown-toggle .caret {
+  position: absolute;
 }
 
 .navbar .nav-item + .nav-item {
@@ -8422,6 +8454,11 @@ fieldset[disabled] a.btn {
   outline: none;
 }
 
+.navbar-brand:focus img {
+  outline: 1px dotted #fff;
+  outline-offset: .625rem;
+}
+
 .navbar-brand.nav-link {
   margin: 0;
 }
@@ -8450,8 +8487,9 @@ fieldset[disabled] a.btn {
 }
 
 .navbar-nav .nav-item-cdu {
-  float: left;
-  margin-top: 3.6875rem;
+  display: inline-block;
+  padding-right: .75rem;
+  margin-top: 3.75rem;
   font-weight: bold;
   line-height: 1;
   color: #fff !important;
@@ -8459,6 +8497,12 @@ fieldset[disabled] a.btn {
 
 .navbar-nav .nav-item-cdu:focus, .navbar-nav .nav-item-cdu:hover {
   color: #f16e00 !important;
+}
+
+.navbar-nav .nav-item-cdu .uci-plus-orange {
+  position: absolute;
+  bottom: 2.0625rem;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -8707,6 +8751,12 @@ fieldset[disabled] a.btn {
 
 .nav-tabs .nav-item + .nav-item {
   margin-left: .5rem;
+}
+
+@media (max-width: 979px) {
+  .nav-tabs .nav-item + .nav-item {
+    margin-left: 0;
+  }
 }
 
 .nav-tabs .nav-item .nav-link {
