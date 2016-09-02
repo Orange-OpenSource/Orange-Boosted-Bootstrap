@@ -26,6 +26,7 @@ lead: ""
               <div class="navbar navbar-default">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -61,7 +62,7 @@ lead: ""
               </div>
               <div style="" role="search" aria-expanded="true" class="search-bar collapse in" id="collapseSearchBar">
                 <div class="container-fluid">
-                    <form class="form-inline" role="search">
+                    <form class="form-inline" role="search" action="#">
                         <div class="form-group">
                             <label class="sr-only" for="search_btn">search bar</label>
                             <input id="search_btn" class="form-control" type="text">
@@ -107,11 +108,11 @@ lead: ""
 
               <p class="bs-component">
 
-                <button type="button" class="btn disabled btn-default">Submit</button>
-                <button type="button" class="btn disabled btn-info">Submit</button>
-                <button type="button" class="btn disabled btn-primary">Buy now</button>
-                <button type="button" class="btn disabled btn-success">Save</button>
-                <button type="button" class="btn disabled btn-danger">Delete</button>
+                <button type="button" class="btn disabled btn-default" disabled="disabled">Submit</button>
+                <button type="button" class="btn disabled btn-info" disabled="disabled">Submit</button>
+                <button type="button" class="btn disabled btn-primary" disabled="disabled">Buy now</button>
+                <button type="button" class="btn disabled btn-success" disabled="disabled">Save</button>
+                <button type="button" class="btn disabled btn-danger" disabled="disabled">Delete</button>
               </p>
         </div>
          <div class="row" id="buttons_inverse">
@@ -144,80 +145,13 @@ lead: ""
 
               <p class="bs-component">
 
-                <button type="button" class="btn btn-inverse disabled btn-info">Submit</button>
-                <button type="button" class="btn btn-inverse disabled btn-default">Submit</button>
-                <button type="button" class="btn btn-inverse disabled btn-primary">Buy now</button>
-                <button type="button" class="btn btn-inverse disabled btn-success">Save</button>
-                <button type="button" class="btn btn-inverse disabled btn-danger">Delete</button>
+                <button type="button" class="btn btn-inverse disabled btn-info" disabled="disabled">Submit</button>
+                <button type="button" class="btn btn-inverse disabled btn-default" disabled="disabled">Submit</button>
+                <button type="button" class="btn btn-inverse disabled btn-primary" disabled="disabled">Buy now</button>
+                <button type="button" class="btn btn-inverse disabled btn-success" disabled="disabled">Save</button>
+                <button type="button" class="btn btn-inverse disabled btn-danger" disabled="disabled">Delete</button>
               </p>
          </div>
-         <div class="row">
-            <h2>Split buttons</h2>
-
-            <div style="margin-bottom: 15px;">
-              <div class="btn-toolbar bs-component" style="margin: 0;">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default">Default</button>
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Primary</button>
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-success">Success</button>
-                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-info">Info</button>
-                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-
-                <div class="btn-group">
-                  <button type="button" class="btn btn-warning">Warning</button>
-                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret" aria-hidden="true"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </div>
         <div class="row">
                 <h2>Sizes</h2>
                     <p class="bs-component">
@@ -237,43 +171,45 @@ lead: ""
       <h2>Switches</h2>
       <div style="margin-left: 10px;">
         <div class="form-group toggle row">
-          <label for="checkbox1" class="col-md-3 col-xs-8">WiFi</label>
-          <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-          <div class="checkbox-label col-xs-3" aria-hidden="true">
-            <span class="on icon-checkbox_tick"></span>
-            <span class="off icon-delete"></span>
-          </div>
+        <label for="checkbox1" class="col-md-3 col-xs-8" id="label-wifi-1">WiFi</label>
+        <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked aria-labelledby="label-wifi-1 label-wifi-2"/>
+        <label for="checkbox1" class="checkbox-label col-xs-3" id="label-wifi-2">
+          <span class="sr-only">on</span>
+          <span class="on icon-checkbox_tick" aria-hidden="true"></span>
+          <span class="off icon-delete" aria-hidden="true"></span>
+        </label>
         </div>
 
         <div class="form-group toggle row">
-          <label for="checkbox3" class="col-md-3 col-xs-8">Bluetooth</label>
-          <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
-          <div class="checkbox-label col-xs-3" aria-hidden="true">
-            <span class="on icon-checkbox_tick"></span>
-            <span class="off icon-delete"></span>
-          </div>
+        <label for="checkbox3" class="col-md-3 col-xs-8" id="label-bluetooth-1">Bluetooth</label>
+        <input class="checkbox success sr-only" id="checkbox3" type="checkbox" aria-labelledby="label-bluetooth-1 label-bluetooth-2"/>
+        <label for="checkbox3" class="checkbox-label col-xs-3" id="label-bluetooth-2">
+          <span class="sr-only">on</span>
+          <span class="on icon-checkbox_tick" aria-hidden="true"></span>
+          <span class="off icon-delete" aria-hidden="true"></span>
+        </label>
         </div>
 
         <div class="form-group toggle row">
-          <label for="checkbox2" class="col-md-3 col-xs-8">WiFi</label>
-          <input class="checkbox sr-only" id="checkbox2" type="checkbox"/>
-          <div class="checkbox-label rounded col-xs-3" aria-hidden="true">
+        <label for="checkbox2" class="col-md-3 col-xs-8" id="label-wifi-3">WiFi</label>
+        <input class="checkbox sr-only" id="checkbox2" type="checkbox" aria-labelledby="label-wifi-3 label-wifi-4"/>
+        <label for="checkbox2" class="checkbox-label rounded col-xs-3" id="label-wifi-4">
             <span class="on">On</span>
-            <span class="off">Off</span>
-          </div>
+          <span class="off" aria-hidden="true">Off</span>
+        </label>
         </div>
 
         <div class="form-group toggle row">
-          <label for="checkbox4" class="col-md-3 col-xs-8">Bluetooth</label>
-          <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-          <div class="checkbox-label rounded col-xs-3" aria-hidden="true">
+        <label for="checkbox4" class="col-md-3 col-xs-8" id="label-bluetooth-3">Bluetooth</label>
+        <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked aria-labelledby="label-bluetooth-3 label-bluetooth-4"/>
+        <label for="checkbox4" class="checkbox-label rounded col-xs-3" id="label-bluetooth-4">
             <span class="on">On</span>
-            <span class="off">Off</span>
-          </div>
+          <span class="off" aria-hidden="true">Off</span>
+        </label>
         </div>
       </div>
 
-      <h2>3 way toggle</h2>
+      <h3 id="three-way-toggle">3 way toggle</h3>
       <div style="margin-left: 10px;">
         <div class="btn-group" data-toggle="buttons" role="group">
           <label class="btn btn-secondary active">
@@ -386,7 +322,7 @@ vehicula.</p>
         <!--<div class="row">
           <div class="col-lg-6"> -->
             <div class="well bs-component">
-              <form class="form-horizontal">
+              <form class="form-horizontal" action="#">
                 <fieldset>
                   <legend>Legend</legend>
                   <div class="form-group">
@@ -429,8 +365,7 @@ vehicula.</p>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-lg-2 control-label">Orange Radios</label>
-                    <div class="col-lg-10">
+                    <div class="col-lg-offset-2 col-lg-10">
                       <div>
                           <input name="optionsRadiosOrange" id="optionsRadiosOrange1" value="option1" checked="checked" type="radio" class="o-radio">
                         <label for="optionsRadiosOrange1">
@@ -506,7 +441,7 @@ vehicula.</p>
                     </div>
                   </div> -->
                   <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <label for="select" class="col-lg-2 control-label">Select</label>
                     <div class="col-lg-10">
                       <select class="form-control" id="select">
                         <option selected="selected">1</option>
@@ -515,8 +450,12 @@ vehicula.</p>
                         <option>4</option>
                         <option>5</option>
                       </select>
-                      <br>
-                      <select multiple="multiple" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="select-multi" class="col-lg-2 control-label">Select-multi</label>
+                    <div class="col-lg-10">
+                      <select multiple="multiple" class="form-control" id="select-multi">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -539,7 +478,7 @@ vehicula.</p>
           <div class="col-lg-4 col-lg-offset-1">
               -->
 
-              <form class="bs-component">
+              <form class="bs-component" action="#">
                 <div class="form-group">
                   <label class="control-label" for="focusedInput">Focused input</label>
                   <input class="form-control" id="focusedInput" value="This is focused..." type="text">
@@ -582,10 +521,10 @@ vehicula.</p>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label">Input addons</label>
+                  <label class="control-label" for="input-addon">Input addons</label>
                   <div class="input-group">
                     <span class="input-group-addon">$</span>
-                    <input class="form-control" type="text">
+                    <input class="form-control" type="text" id="input-addon">
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="button">Button</button>
                     </span>
@@ -877,32 +816,6 @@ viral locavore cosby sweater.</p>
 
               <div class="progress">
                 <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <h3 id="progress-striped">Striped</h3>
-            <div class="bs-component">
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-info" style="width: 20%"></div>
-              </div>
-
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
-              </div>
-
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
-              </div>
-
-              <div class="progress progress-striped">
-                <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <h3 id="progress-animated">Animated</h3>
-            <div class="bs-component">
-              <div class="progress progress-striped active">
-                <div class="progress-bar" style="width: 45%"></div>
               </div>
             </div>
 

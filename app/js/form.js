@@ -48,18 +48,5 @@ $(document).ready(function () {
     e.preventDefault()
     e.stopPropagation()
   });
-
-  // push event for IE8 to the parent
-  $('.checkbox-label').on('click', function(e) {
-    $(this).parent().find('input').trigger('click');
-    e.preventDefault()
-    e.stopPropagation()
-  });
-  // push event for IE8 to the parent
-  $('.checkbox-label>span').on('click', function(e) {
-    $(this).parent().trigger('click');
-    e.preventDefault()
-    e.stopPropagation()
-  });
-
+    
 });
