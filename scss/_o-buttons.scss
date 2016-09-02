@@ -488,6 +488,9 @@ fieldset[disabled] a.btn {
     + .checkbox-label {
       background: $brand-success;
       border-color: $brand-success;
+      .on {
+        color: #000;
+      }
     }
   }
 }
