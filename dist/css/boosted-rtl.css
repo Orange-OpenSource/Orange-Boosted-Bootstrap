@@ -7598,7 +7598,7 @@ fieldset[disabled] a.btn {
   border-color: #32c832;
 }
 
-.checkbox.success:checked + .checkbox-label .on {
+.checkbox.success:checked + .checkbox-label.rounded .on {
   color: #000;
 }
 
