@@ -66,7 +66,7 @@
 
       @for $i from 1 through $columns {
         .col-#{$breakpoint}-#{$i} {
-          @include make-col($i, $columns, $local-gutter);
+          @include make-col($i, $columns);
         }
 
         // boosted mod

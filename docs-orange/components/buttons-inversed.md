@@ -63,7 +63,7 @@ To get the inversed button behaviour, simply add `.btn-inverse` class to your `<
 The default styles can be used on secondary colors backgrounds, in this case remove the `.btn-inverse` class if any.
 
 {% example html %}
-<div style="background-color: #4bb4e6; padding: 2rem">
+<div style="background-color: #eee; padding: 2rem">
     <button type="button" class="btn btn-primary">Primary</button>
 
     <button type="button" class="btn btn-secondary">Secondary</button>

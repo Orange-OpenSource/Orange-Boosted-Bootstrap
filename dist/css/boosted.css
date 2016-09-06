@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2437,14 +2437,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .has-success .form-control-feedback,
 .has-success .form-control-label,
-.has-success .radio,
-.has-success .checkbox,
-.has-success .radio-inline,
-.has-success .checkbox-inline,
-.has-success.radio label,
-.has-success.checkbox label,
-.has-success.radio-inline label,
-.has-success.checkbox-inline label,
+.has-success .form-check-label,
+.has-success .form-check-inline,
 .has-success .custom-control {
   color: #32c832;
 }
@@ -2469,14 +2463,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .has-warning .form-control-feedback,
 .has-warning .form-control-label,
-.has-warning .radio,
-.has-warning .checkbox,
-.has-warning .radio-inline,
-.has-warning .checkbox-inline,
-.has-warning.radio label,
-.has-warning.checkbox label,
-.has-warning.radio-inline label,
-.has-warning.checkbox-inline label,
+.has-warning .form-check-label,
+.has-warning .form-check-inline,
 .has-warning .custom-control {
   color: #fc0;
 }
@@ -2501,14 +2489,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .has-danger .form-control-feedback,
 .has-danger .form-control-label,
-.has-danger .radio,
-.has-danger .checkbox,
-.has-danger .radio-inline,
-.has-danger .checkbox-inline,
-.has-danger.radio label,
-.has-danger.checkbox label,
-.has-danger.radio-inline label,
-.has-danger.checkbox-inline label,
+.has-danger .form-check-label,
+.has-danger .form-check-inline,
 .has-danger .custom-control {
   color: #cd3c14;
 }
@@ -4415,7 +4397,6 @@ input[type="button"].btn-block {
             column-gap: 1.25rem;
   }
   .card-columns .card {
-    display: inline-block;
     width: 100%;
   }
 }
@@ -4636,13 +4617,13 @@ a.tag:focus, a.tag:hover {
 }
 
 .alert-dismissible {
-  padding-right: 35px;
+  padding-right: 30px;
 }
 
 .alert-dismissible .close {
   position: relative;
-  top: -2px;
-  right: -21px;
+  top: -.125rem;
+  right: -15px;
   color: inherit;
 }
 
@@ -4901,14 +4882,6 @@ base::-moz-progress-bar,
   .progress-danger .progress-bar {
     background-color: #cd3c14;
   }
-}
-
-.media {
-  margin-top: 15px;
-}
-
-.media:first-child {
-  margin-top: 0;
 }
 
 .media,
@@ -5841,10 +5814,6 @@ button.close {
   }
 }
 
-.bg-inverse {
-  background-color: #000;
-}
-
 .bg-faded {
   background-color: #f6f6f6;
 }
@@ -5892,6 +5861,15 @@ a.bg-warning:focus, a.bg-warning:hover {
 
 a.bg-danger:focus, a.bg-danger:hover {
   background-color: #9f2e0f !important;
+}
+
+.bg-inverse {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+a.bg-inverse:focus, a.bg-inverse:hover {
+  background-color: black !important;
 }
 
 .clearfix::after {
@@ -6376,7 +6354,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 }
 
 a.text-muted:focus, a.text-muted:hover {
-  color: #4d4d4d;
+  color: #4d4d4d !important;
 }
 
 .text-primary {
@@ -6384,7 +6362,7 @@ a.text-muted:focus, a.text-muted:hover {
 }
 
 a.text-primary:focus, a.text-primary:hover {
-  color: #be5700;
+  color: #be5700 !important;
 }
 
 .text-success {
@@ -6392,7 +6370,7 @@ a.text-primary:focus, a.text-primary:hover {
 }
 
 a.text-success:focus, a.text-success:hover {
-  color: #289f28;
+  color: #289f28 !important;
 }
 
 .text-info {
@@ -6400,7 +6378,7 @@ a.text-success:focus, a.text-success:hover {
 }
 
 a.text-info:focus, a.text-info:hover {
-  color: #2b60cf;
+  color: #2b60cf !important;
 }
 
 .text-warning {
@@ -6408,7 +6386,7 @@ a.text-info:focus, a.text-info:hover {
 }
 
 a.text-warning:focus, a.text-warning:hover {
-  color: #cca300;
+  color: #cca300 !important;
 }
 
 .text-danger {
@@ -6416,7 +6394,7 @@ a.text-warning:focus, a.text-warning:hover {
 }
 
 a.text-danger:focus, a.text-danger:hover {
-  color: #9f2e0f;
+  color: #9f2e0f !important;
 }
 
 .text-hide {
