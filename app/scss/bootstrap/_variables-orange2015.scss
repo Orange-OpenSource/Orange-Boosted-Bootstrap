@@ -791,7 +791,7 @@ $alert-danger-border:         $brand-danger !default;
 //##
 
 /// Background color of the whole progress component
-$progress-bg:                 $gray-lighter !default;
+$progress-bg:                 $gray-light !default;
 /// Progress bar text color
 $progress-bar-color:          $gray-base !default;
 /// Variable for setting rounded corners on progress bar.
@@ -870,15 +870,15 @@ $panel-success-border:        $state-success-border !default;
 $panel-success-heading-bg:    $brand-success !default;
 
 $panel-info-text: $gray-base !default;
-$panel-info-border: $state-info-border !default;
+$panel-info-border: $brand-info !default;
 $panel-info-heading-bg: $brand-info !default;
 
 $panel-warning-text: $gray-base !default;
-$panel-warning-border: $state-warning-border !default;
+$panel-warning-border: $brand-warning !default;
 $panel-warning-heading-bg: $brand-warning !default;
 
 $panel-danger-text: $brand-orange-white !default;
-$panel-danger-border: $state-danger-border !default;
+$panel-danger-border: $brand-danger !default;
 $panel-danger-heading-bg: $brand-danger !default;
 
 $o-panel-height: 19.5rem !default;
