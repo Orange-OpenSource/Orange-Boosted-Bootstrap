@@ -555,7 +555,7 @@
     width: 50%;
     text-align: center;
   }
-
+  
   .on {
     left: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -633,6 +633,9 @@
     + .checkbox-label {
       background: $brand-success;
       border-color: $brand-success;
+      .rounded .on {
+        color: #000;
+      }
     }
   }
   
@@ -640,6 +643,9 @@
     + .checkbox-label {
       background: $brand-success;
       border-color: $brand-success;
+      &.rounded .on {
+        color: #000;
+      }
     }
   }
 }
