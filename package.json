@@ -1,7 +1,7 @@
 {
   "name": "boosted",
   "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.3.",
-  "version": "4.0.0-alpha.3.1",
+  "version": "4.0.0-alpha.4",
   "keywords": [
     "css",
     "sass",
@@ -29,7 +29,7 @@
   },
   "style": "dist/css/boosted.css",
   "sass": "scss/boosted.scss",
-  "main": "./dist/js/npm",
+  "main": "dist/js/boosted",
   "repository": {
     "type": "git",
     "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git"
@@ -86,16 +86,13 @@
   "files": [
     "dist",
     "grunt",
-    "js/*.js",
+    "js/**/*.js",
     "scss/**/*.scss",
     "Gruntfile.js",
     "LICENSE"
   ],
   "jspm": {
     "main": "js/bootstrap",
-    "ignore": [
-      "dist/js/npm"
-    ],
     "directories": {
       "lib": "dist"
     },

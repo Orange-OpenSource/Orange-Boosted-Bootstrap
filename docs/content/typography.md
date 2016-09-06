@@ -28,30 +28,57 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 
 <div class="bd-example bd-example-type">
   <table class="table">
+  <!-- BOOSTED MOD -->
+    <thead>
+    <tr>
+    <th scope="col">Heading</th>
+    <th scope="col">Computer size</th>
+    <th scope="col">Mobile size</th>
+    </tr>
+    </thead>
+  <!-- END MOD -->    
     <tbody>
       <tr>
         <td><h1>h1. Bootstrap heading</h1></td>
-        <td class="type-info">Semibold 36px</td>
+        <!-- BOOSTED MOD -->
+        <td class="type-info">Bold 34px</td>
+        <td class="type-info">Bold 20px</td>
+        <!-- END MOD -->
       </tr>
       <tr>
         <td><h2>h2. Bootstrap heading</h2></td>
-        <td class="type-info">Semibold 30px</td>
+        <!-- BOOSTED MOD -->
+        <td class="type-info">Bold 30px</td>
+        <td class="type-info">Bold 18px</td>
+        <!-- END MOD -->
       </tr>
       <tr>
         <td><h3>h3. Bootstrap heading</h3></td>
-        <td class="type-info">Semibold 24px</td>
+        <!-- BOOSTED MOD -->
+        <td class="type-info">Bold 24px</td>
+        <td class="type-info">Bold 16px</td>
+        <!-- END MOD -->
       </tr>
       <tr>
         <td><h4>h4. Bootstrap heading</h4></td>
-        <td class="type-info">Semibold 18px</td>
+        <!-- BOOSTED MOD -->
+        <td class="type-info">Bold 20px</td>
+        <td class="type-info">Bold 14px</td>
+        <!-- END MOD -->
       </tr>
       <tr>
         <td><h5>h5. Bootstrap heading</h5></td>
-        <td class="type-info">Semibold 14px</td>
+        <!-- BOOSTED MOD -->
+        <td class="type-info">Bold 18px</td>
+        <td class="type-info">Bold 14px</td>
+        <!-- END MOD -->
       </tr>
       <tr>
         <td><h6>h6. Bootstrap heading</h6></td>
-        <td class="type-info">Semibold 12px</td>
+        <!-- BOOSTED MOD -->
+        <td class="type-info">Bold 16px</td>
+        <td class="type-info">Bold 14px</td>        
+        <!-- END MOD -->
       </tr>
     </tbody>
   </table>

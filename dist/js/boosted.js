@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.3.1 (http://boosted.orange.com)
+ * Bootstrap v4.0.0-alpha.4 (http://boosted.orange.com)
  * Copyright 2011-2016 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -20,7 +20,7 @@ if (typeof jQuery === 'undefined') {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): util.js
+ * Bootstrap (v4.0.0-alpha.4): util.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */'use strict';var _get=function get(_x,_x2,_x3){var _again=true;_function: while(_again) {var object=_x,property=_x2,receiver=_x3;_again = false;if(object === null)object = Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc === undefined){var parent=Object.getPrototypeOf(object);if(parent === null){return undefined;}else {_x = parent;_x2 = property;_x3 = receiver;_again = true;desc = parent = undefined;continue _function;}}else if('value' in desc){return desc.value;}else {var getter=desc.get;if(getter === undefined){return undefined;}return getter.call(receiver);}}};var _createClass=(function(){function defineProperties(target,props){for(var i=0;i < props.length;i++) {var descriptor=props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if('value' in descriptor)descriptor.writable = true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};})();function _inherits(subClass,superClass){if(typeof superClass !== 'function' && superClass !== null){throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__ = superClass;}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function');}}var Util=(function($){ /**
@@ -36,14 +36,14 @@ function toType(obj){return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].to
    */var Util={TRANSITION_END:'bsTransitionEnd',getUID:function getUID(prefix){do { /* eslint-disable no-bitwise */prefix += ~ ~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
 /* eslint-enable no-bitwise */}while(document.getElementById(prefix));return prefix;},getSelectorFromElement:function getSelectorFromElement(element){var selector=element.getAttribute('data-target');if(!selector){selector = element.getAttribute('href') || '';selector = /^#[a-z]/i.test(selector)?selector:null;}return selector;},reflow:function reflow(element){new Function('bs','return bs')(element.offsetHeight);},triggerTransitionEnd:function triggerTransitionEnd(element){$(element).trigger(transition.end);},supportsTransitionEnd:function supportsTransitionEnd(){return Boolean(transition);},typeCheckConfig:function typeCheckConfig(componentName,config,configTypes){for(var property in configTypes) {if(configTypes.hasOwnProperty(property)){var expectedTypes=configTypes[property];var value=config[property];var valueType=undefined;if(value && isElement(value)){valueType = 'element';}else {valueType = toType(value);}if(!new RegExp(expectedTypes).test(valueType)){throw new Error(componentName.toUpperCase() + ': ' + ('Option "' + property + '" provided type "' + valueType + '" ') + ('but expected type "' + expectedTypes + '".'));}}}}};setTransitionEndSupport();return Util;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): alert.js
+ * Bootstrap (v4.0.0-alpha.4): alert.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Alert=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='alert';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.alert';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=150;var Selector={DISMISS:'[data-dismiss="alert"]'};var Event={CLOSE:'close' + EVENT_KEY,CLOSED:'closed' + EVENT_KEY,CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY};var ClassName={ALERT:'alert',FADE:'fade',IN:'in'}; /**
+   */var NAME='alert';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.alert';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=150;var Selector={DISMISS:'[data-dismiss="alert"]'};var Event={CLOSE:'close' + EVENT_KEY,CLOSED:'closed' + EVENT_KEY,CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY};var ClassName={ALERT:'alert',FADE:'fade',IN:'in'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -61,14 +61,14 @@ value:function close(element){element = element || this._element;var rootElement
    * ------------------------------------------------------------------------
    */$.fn[NAME] = Alert._jQueryInterface;$.fn[NAME].Constructor = Alert;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Alert._jQueryInterface;};return Alert;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): button.js
+ * Bootstrap (v4.0.0-alpha.4): button.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Button=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='button';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.button';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var ClassName={ACTIVE:'active',BUTTON:'btn',FOCUS:'focus'};var Selector={DATA_TOGGLE_CARROT:'[data-toggle^="button"]',DATA_TOGGLE:'[data-toggle="buttons"]',INPUT:'input',ACTIVE:'.active',BUTTON:'.btn'};var Event={CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY,FOCUS_BLUR_DATA_API:'focus' + EVENT_KEY + DATA_API_KEY + ' ' + ('blur' + EVENT_KEY + DATA_API_KEY)}; /**
+   */var NAME='button';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.button';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var ClassName={ACTIVE:'active',BUTTON:'btn',FOCUS:'focus'};var Selector={DATA_TOGGLE_CARROT:'[data-toggle^="button"]',DATA_TOGGLE:'[data-toggle="buttons"]',INPUT:'input',ACTIVE:'.active',BUTTON:'.btn'};var Event={CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY,FOCUS_BLUR_DATA_API:'focus' + EVENT_KEY + DATA_API_KEY + ' ' + ('blur' + EVENT_KEY + DATA_API_KEY)}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -85,14 +85,14 @@ value:function toggle(){var triggerChangeEvent=true;var rootElement=$(this._elem
    * ------------------------------------------------------------------------
    */$.fn[NAME] = Button._jQueryInterface;$.fn[NAME].Constructor = Button;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Button._jQueryInterface;};return Button;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): carousel.js
+ * Bootstrap (v4.0.0-alpha.4): carousel.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Carousel=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='carousel';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.carousel';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=600;var ARROW_LEFT_KEYCODE=37; // KeyboardEvent.which value for left arrow key
+   */var NAME='carousel';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.carousel';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=600;var ARROW_LEFT_KEYCODE=37; // KeyboardEvent.which value for left arrow key
 var ARROW_RIGHT_KEYCODE=39; // KeyboardEvent.which value for right arrow key
 var Default={interval:5000,keyboard:true,slide:false,pause:'hover',wrap:true};var DefaultType={interval:'(number|boolean)',keyboard:'boolean',slide:'(boolean|string)',pause:'(string|boolean)',wrap:'boolean'};var Direction={NEXT:'next',PREVIOUS:'prev'};var Event={SLIDE:'slide' + EVENT_KEY,SLID:'slid' + EVENT_KEY,KEYDOWN:'keydown' + EVENT_KEY,MOUSEENTER:'mouseenter' + EVENT_KEY,MOUSELEAVE:'mouseleave' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY,CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY};var ClassName={CAROUSEL:'carousel',ACTIVE:'active',SLIDE:'slide',RIGHT:'right',LEFT:'left',ITEM:'carousel-item'};var Selector={ACTIVE:'.active',ACTIVE_ITEM:'.active.carousel-item',ITEM:'.carousel-item',NEXT_PREV:'.next, .prev',INDICATORS:'.carousel-indicators',DATA_SLIDE:'[data-slide], [data-slide-to]',DATA_RIDE:'[data-ride="carousel"]'}; /**
    * ------------------------------------------------------------------------
@@ -114,14 +114,14 @@ return;}this._isSliding = true;if(isCycling){this.pause();}this._setActiveIndica
    * ------------------------------------------------------------------------
    */$.fn[NAME] = Carousel._jQueryInterface;$.fn[NAME].Constructor = Carousel;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Carousel._jQueryInterface;};return Carousel;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): collapse.js
+ * Bootstrap (v4.0.0-alpha.4): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Collapse=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='collapse';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.collapse';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=600;var Default={toggle:true,parent:''};var DefaultType={toggle:'boolean',parent:'string'};var Event={SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY};var ClassName={IN:'in',COLLAPSE:'collapse',COLLAPSING:'collapsing',COLLAPSED:'collapsed'};var Dimension={WIDTH:'width',HEIGHT:'height'};var Selector={ACTIVES:'.panel > .in, .panel > .collapsing',ACCORDION_HEADING:'.o-accordion .panel .panel-heading .panel-title a',DATA_TOGGLE:'[data-toggle="collapse"]'}; /**
+   */var NAME='collapse';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.collapse';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=600;var Default={toggle:true,parent:''};var DefaultType={toggle:'boolean',parent:'string'};var Event={SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY};var ClassName={IN:'in',COLLAPSE:'collapse',COLLAPSING:'collapsing',COLLAPSED:'collapsed'};var Dimension={WIDTH:'width',HEIGHT:'height'};var Selector={ACTIVES:'.panel > .in, .panel > .collapsing',ACCORDION_HEADING:'.o-accordion .panel .panel-heading .panel-title a',DATA_TOGGLE:'[data-toggle="collapse"]'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -150,14 +150,14 @@ $('.o-nav-local .nav-inline.collapse .nav-link').on('click',function(event){$(ev
    * ------------------------------------------------------------------------
    */$.fn[NAME] = Collapse._jQueryInterface;$.fn[NAME].Constructor = Collapse;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Collapse._jQueryInterface;};return Collapse;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): dropdown.js
+ * Bootstrap (v4.0.0-alpha.4): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Dropdown=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='dropdown';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.dropdown';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var ESCAPE_KEYCODE=27; // KeyboardEvent.which value for Escape (Esc) key
+   */var NAME='dropdown';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.dropdown';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var ESCAPE_KEYCODE=27; // KeyboardEvent.which value for Escape (Esc) key
 var ARROW_UP_KEYCODE=38; // KeyboardEvent.which value for up arrow key
 var ARROW_DOWN_KEYCODE=40; // KeyboardEvent.which value for down arrow key
 var RIGHT_MOUSE_BUTTON_WHICH=3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
@@ -189,14 +189,14 @@ index++;}if(index < 0){index = 0;}items[index].focus();}},{key:'VERSION',get:fun
    * ------------------------------------------------------------------------
    */$.fn[NAME] = Dropdown._jQueryInterface;$.fn[NAME].Constructor = Dropdown;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Dropdown._jQueryInterface;};return Dropdown;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): modal.js
+ * Bootstrap (v4.0.0-alpha.4): modal.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Modal=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='modal';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.modal';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=300;var BACKDROP_TRANSITION_DURATION=150;var ESCAPE_KEYCODE=27; // KeyboardEvent.which value for Escape (Esc) key
+   */var NAME='modal';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.modal';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=300;var BACKDROP_TRANSITION_DURATION=150;var ESCAPE_KEYCODE=27; // KeyboardEvent.which value for Escape (Esc) key
 var Default={backdrop:true,keyboard:true,focus:true,show:true};var DefaultType={backdrop:'(boolean|string)',keyboard:'boolean',focus:'boolean',show:'boolean'};var Event={HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,FOCUSIN:'focusin' + EVENT_KEY,RESIZE:'resize' + EVENT_KEY,CLICK_DISMISS:'click.dismiss' + EVENT_KEY,KEYDOWN_DISMISS:'keydown.dismiss' + EVENT_KEY,MOUSEUP_DISMISS:'mouseup.dismiss' + EVENT_KEY,MOUSEDOWN_DISMISS:'mousedown.dismiss' + EVENT_KEY,CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY};var ClassName={SCROLLBAR_MEASURER:'modal-scrollbar-measure',BACKDROP:'modal-backdrop',OPEN:'modal-open',FADE:'fade',IN:'in'};var Selector={DIALOG:'.modal-dialog',DATA_TOGGLE:'[data-toggle="modal"]',DATA_DISMISS:'[data-dismiss="modal"]',FIXED_CONTENT:'.navbar-fixed-top, .navbar-fixed-bottom, .is-fixed'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -229,14 +229,14 @@ var modalTitle=modalPanel.find('.modal-title');if(modalTitle){var modalTitleId=m
    * ------------------------------------------------------------------------
    */$.fn[NAME] = Modal._jQueryInterface;$.fn[NAME].Constructor = Modal;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Modal._jQueryInterface;};return Modal;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): scrollspy.js
+ * Bootstrap (v4.0.0-alpha.4): scrollspy.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var ScrollSpy=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='scrollspy';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.scrollspy';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var Default={offset:10,method:'auto',target:''};var DefaultType={offset:'number',method:'string',target:'(string|element)'};var Event={ACTIVATE:'activate' + EVENT_KEY,SCROLL:'scroll' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={DROPDOWN_ITEM:'dropdown-item',DROPDOWN_MENU:'dropdown-menu',NAV_LINK:'nav-link',NAV:'nav',ACTIVE:'active'};var Selector={DATA_SPY:'[data-spy="scroll"]',ACTIVE:'.active',LIST_ITEM:'.list-item',LI:'li',LI_DROPDOWN:'li.dropdown',NAV_LINKS:'.nav-link',DROPDOWN:'.dropdown',DROPDOWN_ITEMS:'.dropdown-item',DROPDOWN_TOGGLE:'.dropdown-toggle'};var OffsetMethod={OFFSET:'offset',POSITION:'position'}; /**
+   */var NAME='scrollspy';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.scrollspy';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var Default={offset:10,method:'auto',target:''};var DefaultType={offset:'number',method:'string',target:'(string|element)'};var Event={ACTIVATE:'activate' + EVENT_KEY,SCROLL:'scroll' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={DROPDOWN_ITEM:'dropdown-item',DROPDOWN_MENU:'dropdown-menu',NAV_LINK:'nav-link',NAV:'nav',ACTIVE:'active'};var Selector={DATA_SPY:'[data-spy="scroll"]',ACTIVE:'.active',LIST_ITEM:'.list-item',LI:'li',LI_DROPDOWN:'li.dropdown',NAV_LINKS:'.nav-link',DROPDOWN:'.dropdown',DROPDOWN_ITEMS:'.dropdown-item',DROPDOWN_TOGGLE:'.dropdown-toggle'};var OffsetMethod={OFFSET:'offset',POSITION:'position'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -257,14 +257,14 @@ $link.parents(Selector.LI).find(Selector.NAV_LINKS).addClass(ClassName.ACTIVE);}
    * ------------------------------------------------------------------------
    */$.fn[NAME] = ScrollSpy._jQueryInterface;$.fn[NAME].Constructor = ScrollSpy;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return ScrollSpy._jQueryInterface;};return ScrollSpy;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): tab.js
+ * Bootstrap (v4.0.0-alpha.4): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Tab=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='tab';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.tab';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=150; // boosted mod
+   */var NAME='tab';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.tab';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=150; // boosted mod
 var ARROW_LEFT_KEYCODE=37; // KeyboardEvent.which value for left arrow key
 var ARROW_UP_KEYCODE=38; // KeyboardEvent.which value for up arrow key
 var ARROW_RIGHT_KEYCODE=39; // KeyboardEvent.which value for right arrow key
@@ -302,7 +302,7 @@ $(document).on('keydown.tab.data-api','[data-toggle="tab"], [data-toggle="pill"]
 var uniqueId=function uniqueId(prefix){return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * RANDOM_NUMBER + 1);};var $tablist=$('.nav-tabs, .nav-pills');var $lis=$tablist.children('li');var $tabs=$tablist.find('[data-toggle="tab"], [data-toggle="pill"]');$tablist.attr('role','tablist');$lis.attr('role','presentation');$tabs.attr('role','tab');$tabs.each(function(){var tabpanel=$($(this).attr('href'));var $tab=$(this);var tabid=$tab.attr('id') || uniqueId('ui-tab');$tab.attr('id',tabid);if($tab.hasClass('active')){$tab.attr({tabIndex:'0','aria-selected':'true','aria-controls':$tab.attr('href').substr(1)});tabpanel.attr({role:'tabpanel',tabIndex:'0','aria-hidden':'false','aria-labelledby':tabid});}else {$tab.attr({tabIndex:'-1','aria-selected':'false','aria-controls':$tab.attr('href').substr(1)});tabpanel.attr({role:'tabpanel',tabIndex:'-1','aria-hidden':'true','aria-labelledby':tabid});}}); // end mod
 $.fn[NAME] = Tab._jQueryInterface;$.fn[NAME].Constructor = Tab;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Tab._jQueryInterface;};return Tab;})(jQuery); /* global Tether */ /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): tooltip.js
+ * Bootstrap (v4.0.0-alpha.4): tooltip.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Tooltip=(function($){ /**
@@ -312,7 +312,7 @@ $.fn[NAME] = Tab._jQueryInterface;$.fn[NAME].Constructor = Tab;$.fn[NAME].noConf
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='tooltip';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.tooltip';var EVENT_KEY='.' + DATA_KEY;var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=150;var CLASS_PREFIX='bs-tether';var Default={animation:true,template:'<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div></div>',trigger:'hover focus',title:'',delay:0,html:false,selector:false,placement:'top',offset:'0 0',constraints:[]};var DefaultType={animation:'boolean',template:'string',title:'(string|element|function)',trigger:'string',delay:'(number|object)',html:'boolean',selector:'(string|boolean)',placement:'(string|function)',offset:'string',constraints:'array'};var AttachmentMap={TOP:'bottom center',RIGHT:'middle left',BOTTOM:'top center',LEFT:'middle right'};var HoverState={IN:'in',OUT:'out'};var Event={HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,INSERTED:'inserted' + EVENT_KEY,CLICK:'click' + EVENT_KEY,FOCUSIN:'focusin' + EVENT_KEY,FOCUSOUT:'focusout' + EVENT_KEY,MOUSEENTER:'mouseenter' + EVENT_KEY,MOUSELEAVE:'mouseleave' + EVENT_KEY};var ClassName={FADE:'fade',IN:'in'};var Selector={TOOLTIP:'.tooltip',TOOLTIP_INNER:'.tooltip-inner'};var TetherClass={element:false,enabled:false};var Trigger={HOVER:'hover',FOCUS:'focus',CLICK:'click',MANUAL:'manual'}; /**
+   */var NAME='tooltip';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.tooltip';var EVENT_KEY='.' + DATA_KEY;var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=150;var CLASS_PREFIX='bs-tether';var Default={animation:true,template:'<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div></div>',trigger:'hover focus',title:'',delay:0,html:false,selector:false,placement:'top',offset:'0 0',constraints:[]};var DefaultType={animation:'boolean',template:'string',title:'(string|element|function)',trigger:'string',delay:'(number|object)',html:'boolean',selector:'(string|boolean)',placement:'(string|function)',offset:'string',constraints:'array'};var AttachmentMap={TOP:'bottom center',RIGHT:'middle left',BOTTOM:'top center',LEFT:'middle right'};var HoverState={IN:'in',OUT:'out'};var Event={HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,INSERTED:'inserted' + EVENT_KEY,CLICK:'click' + EVENT_KEY,FOCUSIN:'focusin' + EVENT_KEY,FOCUSOUT:'focusout' + EVENT_KEY,MOUSEENTER:'mouseenter' + EVENT_KEY,MOUSELEAVE:'mouseleave' + EVENT_KEY};var ClassName={FADE:'fade',IN:'in'};var Selector={TOOLTIP:'.tooltip',TOOLTIP_INNER:'.tooltip-inner'};var TetherClass={element:false,enabled:false};var Trigger={HOVER:'hover',FOCUS:'focus',CLICK:'click',MANUAL:'manual'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -381,14 +381,14 @@ $(Selector.MEGAMENU_TITLE_L2).removeClass(ClassName.FOLDED);$(Selector.MEGAMENU_
    * ------------------------------------------------------------------------
    */$.fn[NAME] = MegaMenu._jQueryInterface;$.fn[NAME].Constructor = MegaMenu;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return MegaMenu._jQueryInterface;};return MegaMenu;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): popover.js
+ * Bootstrap (v4.0.0-alpha.4): popover.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Popover=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='popover';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.popover';var EVENT_KEY='.' + DATA_KEY;var JQUERY_NO_CONFLICT=$.fn[NAME];var Default=$.extend({},Tooltip.Default,{placement:'right',trigger:'click',content:'',template:'<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-title"></h3>' + '<div class="popover-content"></div></div>'});var DefaultType=$.extend({},Tooltip.DefaultType,{content:'(string|element|function)'});var ClassName={FADE:'fade',IN:'in'};var Selector={TITLE:'.popover-title',CONTENT:'.popover-content',ARROW:'.popover-arrow'};var Event={HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,INSERTED:'inserted' + EVENT_KEY,CLICK:'click' + EVENT_KEY,FOCUSIN:'focusin' + EVENT_KEY,FOCUSOUT:'focusout' + EVENT_KEY,MOUSEENTER:'mouseenter' + EVENT_KEY,MOUSELEAVE:'mouseleave' + EVENT_KEY}; /**
+   */var NAME='popover';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.popover';var EVENT_KEY='.' + DATA_KEY;var JQUERY_NO_CONFLICT=$.fn[NAME];var Default=$.extend({},Tooltip.Default,{placement:'right',trigger:'click',content:'',template:'<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-title"></h3>' + '<div class="popover-content"></div></div>'});var DefaultType=$.extend({},Tooltip.DefaultType,{content:'(string|element|function)'});var ClassName={FADE:'fade',IN:'in'};var Selector={TITLE:'.popover-title',CONTENT:'.popover-content',ARROW:'.popover-arrow'};var Event={HIDE:'hide' + EVENT_KEY,HIDDEN:'hidden' + EVENT_KEY,SHOW:'show' + EVENT_KEY,SHOWN:'shown' + EVENT_KEY,INSERTED:'inserted' + EVENT_KEY,CLICK:'click' + EVENT_KEY,FOCUSIN:'focusin' + EVENT_KEY,FOCUSOUT:'focusout' + EVENT_KEY,MOUSEENTER:'mouseenter' + EVENT_KEY,MOUSELEAVE:'mouseleave' + EVENT_KEY}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------

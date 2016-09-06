@@ -89,9 +89,7 @@ linters:
     enabled: true
 
   ImportantRule:
-  # Boosted mod 
     enabled: false
-  # end mod
 
   ImportPath:
     enabled: true
