@@ -11,7 +11,11 @@
 
     + li {
       margin-left: $nav-tab-margin;
-    }
+      // for mobile display remove the margin between tabs
+      @media all and (max-width: $screen-sm-max) {        
+        margin-left: 0;
+      }
+    }    
 
     // Actual tabs (as links)
     > a {
@@ -21,6 +25,12 @@
       line-height: $nav-tab-line-height;
       border-width: 2px;
       border-bottom-width: 0;
+      margin-right: 0;
+      // for mobile display unselected tabs hadd #666 background color and white text
+      @media all and (max-width: $screen-sm-max) {        
+        background-color: $gray-dark;
+        color: #FFF;
+      }
 
       &:hover ,
       &:focus {
