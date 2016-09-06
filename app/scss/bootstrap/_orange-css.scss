@@ -442,6 +442,40 @@ label, input, .form-control{
     }
 }
 .has-error {
+  position: relative;
+
+  &.top {
+    .control-label {
+      margin-bottom: 0;
+    }
+
+    .form-control-message {
+      position: absolute;
+      top: 2.4rem;
+    }
+
+    .form-control {
+      margin-top: 4rem;
+    }
+  }
+
+  &.right {
+    .clearfix;
+
+    .control-label {
+      display: block;
+    }
+
+    .form-control,
+    .form-control-message {
+      float: left;
+
+      &:not(.form-control) {
+        margin-left: 1rem;
+      }
+    }
+  }
+
   .control-label {
     color: #000;
   }
@@ -454,7 +488,7 @@ label, input, .form-control{
   .form-control-message {
     color: $brand-danger;
     padding: 1rem 0;
-    display: inline-block;
+    display: block;
     font-size: $font-size-base;
     font-weight: bold;
   }

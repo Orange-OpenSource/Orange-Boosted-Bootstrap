@@ -546,7 +546,7 @@
 
   .on,
   .off {
-    position: absolute;    
+    position: absolute;
     z-index: 0;
     display: block;
     font-weight: bold;
@@ -555,13 +555,13 @@
     width: 50%;
     text-align: center;
   }
-  
+
   .on {
     left: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     opacity: 0;
   }
-  
+
   .off {
     right: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -581,70 +581,72 @@
   }
 }
 
-.checkbox {
-  position: absolute;
-  // display: none;
+.toggle {
+  .checkbox {
+    position: absolute;
+    display: none;
 
-  &:focus {
-    + .checkbox-label:before {
-      outline: 2px dotted #000;
-    }
-  }
-  
-  &.checked{
-    + .checkbox-label {
-      background: $brand-primary;
-      border-color: $brand-primary;
-      .on {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-        opacity: 1;
-      }
-      .off {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        opacity: 0;
-      }
-      &:before {
-        left: auto;
-        right: 0;
+    &:focus {
+      + .checkbox-label:before {
+        outline: 2px dotted #000;
       }
     }
-  }
-  
-  &:checked {
-    + .checkbox-label {
-      background: $brand-primary;
-      border-color: $brand-primary;
-      .on {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-        opacity: 1;
-      }
-      .off {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        opacity: 0;
-      }
-      &:before {
-        left: auto;
-        right: 0;
-      }
-    }
-  }
 
-  &.success.checked{
-    + .checkbox-label {
-      background: $brand-success;
-      border-color: $brand-success;
-      .rounded .on {
-        color: #000;
+    &.checked{
+      + .checkbox-label {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        .on {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
+        }
+        .off {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          opacity: 0;
+        }
+        &:before {
+          left: auto;
+          right: 0;
+        }
       }
     }
-  }
-  
-  &.success:checked {
-    + .checkbox-label {
-      background: $brand-success;
-      border-color: $brand-success;
-      &.rounded .on {
-        color: #000;
+
+    &:checked {
+      + .checkbox-label {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        .on {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
+        }
+        .off {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          opacity: 0;
+        }
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &.success.checked{
+      + .checkbox-label {
+        background: $brand-success;
+        border-color: $brand-success;
+        .rounded .on {
+          color: #000;
+        }
+      }
+    }
+
+    &.success:checked {
+      + .checkbox-label {
+        background: $brand-success;
+        border-color: $brand-success;
+        &.rounded .on {
+          color: #000;
+        }
       }
     }
   }
