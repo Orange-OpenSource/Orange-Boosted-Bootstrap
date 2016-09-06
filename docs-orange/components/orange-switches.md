@@ -47,7 +47,7 @@ Default color is brand primary. Success color is also supported, use `.success` 
 
 ### Rounded
 
-Finally use .rounded class on `.checkbox-label` element to get rounded switch alternate version.
+Finally use .rounded class on `.toggle` element to get rounded switch alternate version.
 
 {% example html %}
 <div class="form-group row o-switch">
