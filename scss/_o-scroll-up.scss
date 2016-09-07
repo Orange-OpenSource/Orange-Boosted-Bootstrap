@@ -1,0 +1,33 @@
+// o-scroll-up
+//
+//
+
+.o-scroll-up {
+  &::before {
+    font-family: icon-orange;
+    font-size: 1.8rem;
+    line-height: $o-scroll-up-height;
+    text-align: center;
+    content: "\e93f";
+  }
+
+  position: fixed;
+  right: 0;
+  bottom: 2.5rem;
+  z-index: 100;
+  display: none;
+  width: $o-scroll-up-width;
+  height: $o-scroll-up-height;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: $gray-light;
+  opacity: .8;
+  transform: rotate(90deg);
+  justify-content: center;
+  align-items: center;
+  &:visited,
+  &:hover {
+    color: #fff;
+  }
+}
