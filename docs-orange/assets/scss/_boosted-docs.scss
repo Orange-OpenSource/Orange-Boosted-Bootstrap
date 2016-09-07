@@ -213,55 +213,6 @@
   }
 }
 
-// Back to top
-//
-//
-
-$back-top-btn-height: 3.75rem;
-
-@include media-breakpoint-down(sm) {
-  body {
-      margin-bottom: $back-top-btn-height;
-  }
-}
-
-.scroll-top {
-    position: fixed;
-    bottom: 2.5rem;
-    right: .625rem;
-    z-index: 100;
-    text-decoration: none;
-    display: none;
-    span[class*="icon-"] {
-      font-size: 1.875rem;
-    }
-    &:visited {
-        color: #000;
-    }
-
-    .scroll-top-text {
-      margin-top: -0.375rem;
-    }
-
-    @include media-breakpoint-down(sm) {
-      color: #fff;
-      background-color: #000;
-      width: 100%;
-      height: $back-top-btn-height;
-      bottom: 0;
-      right: 0;
-      text-align: center;
-
-      span[class*="icon-"]::before {
-        color: #fff;
-        line-height: $back-top-btn-height;
-      }
-
-      .scroll-top-text {
-        display: none;
-      }
-    }
-}
 
 
     @media only screen and (max-width : 650px) {

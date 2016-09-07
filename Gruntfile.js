@@ -84,6 +84,7 @@ module.exports = function (grunt) {
           'js/dist/dropdown.js'  : 'js/src/dropdown.js',
           'js/dist/modal.js'     : 'js/src/modal.js',
           'js/dist/scrollspy.js' : 'js/src/scrollspy.js',
+          'js/dist/scrollup.js'  : 'js/src/o-scroll-up.js',
           'js/dist/tab.js'       : 'js/src/tab.js',
           'js/dist/tooltip.js'   : 'js/src/tooltip.js',
           /* Boosted mod */
@@ -133,6 +134,7 @@ module.exports = function (grunt) {
           'js/src/dropdown.js',
           'js/src/modal.js',
           'js/src/scrollspy.js',
+          'js/src/o-scroll-up.js',
           'js/src/tab.js',
           'js/src/tooltip.js',
           /* Boosted mod */
@@ -201,7 +203,7 @@ module.exports = function (grunt) {
         src: ['docs/assets/scss/*.scss', '!docs/assets/scss/docs.scss']
       }
     },
-        
+
     // boosted mod
     rtlcss: {
       core:{
