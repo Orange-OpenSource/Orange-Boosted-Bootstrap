@@ -50,3 +50,71 @@ Be carful to choose short labels when using 5 steps process, otherwise label wil
     </ol>
 </nav>
 {% endexample %}
+
+## Mobile stepbar
+
+For mobile view, two classes depending on what you wish to display.
+
+### with numbers
+
+Use `.xs-numbers` class to display step numbers and current step label. You can have up to 4 steps. Further steps will collapse onto new line.
+
+{% example html %}
+<nav class="o-stepbar xs-numbers">
+    <ol>
+        <li class="current stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 4 : Payment">
+                <span class="step-number">4</span>
+                <span class="step-title">Payment</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+{% endexample %}
+
+### with labels
+
+Use `.xs-labels` class to display step labels without number. You can have up to 3 steps. Further steps will collapse onto new line.
+
+{% example html %}
+<nav class="o-stepbar xs-labels">
+    <ol>
+        <li class="current stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+{% endexample %}

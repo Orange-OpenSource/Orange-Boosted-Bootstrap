@@ -966,14 +966,13 @@ $nav-local-arrow-outer-width:           ($nav-local-arrow-width + 1);
 $nav-local-arrow-outer-color:           $nav-local-border-color;
 
 // Step process bar
-$o-wizard-step-bar-arrow-width: (1 + $padding-base-vertical);
-$o-wizard-step-bar-arrow-width-small: ((1 / 2) + $padding-base-vertical);
-$o-wizard-step-bar-arrow-outer-width-small:           ($o-wizard-step-bar-arrow-width-small + .1);
-$o-wizard-step-bar-arrow-outer-width:           ($o-wizard-step-bar-arrow-width);
-
 $o-stepbar-height: 2.5rem;
 $o-stepbar-arrow-width: 1rem;
 $o-stepbar-arrow-ratio: 3 / 8;
+
+$o-stepbar-mobile-padding-vertical: .4375rem;
+$o-stepbar-mobile-arrow-width: .75rem;
+$o-stepbar-mobile-arrow-height: 1.875rem;
 
 // Pagination
 //
