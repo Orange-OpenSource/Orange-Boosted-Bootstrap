@@ -38,10 +38,10 @@ Default color is brand primary. Success color is also supported, use `.success` 
 <div class="form-group row o-switch">
   <label for="checkbox3" class="form-control-label col-md-3 col-xs-8">Success</label>
   <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
-  <div for="checkbox3" class="toggle form-control-label col-xs-3" aria-hidden="true">
+  <label for="checkbox3" class="toggle form-control-label col-xs-3" aria-hidden="true">
     <span class="on icon-checkbox-tick"></span>
     <span class="off icon-delete"></span>
-  </div>
+  </label>
 </div>
 {% endexample %}
 
@@ -53,10 +53,10 @@ Finally use .rounded class on `.toggle` element to get rounded switch alternate 
 <div class="form-group row o-switch">
   <label for="checkbox4" class="form-control-label col-md-3 col-xs-8">Rounded</label>
   <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-  <div for="checkbox4" class="toggle rounded form-control-label col-xs-3" aria-hidden="true">
+  <label for="checkbox4" class="toggle rounded form-control-label col-xs-3" aria-hidden="true">
     <span class="on">On</span>
     <span class="off">Off</span>
-  </div>
+  </label>
 </div>
 {% endexample %}
 

@@ -92,10 +92,10 @@
 
       .on {
         color: #000;
+      }
 
-        &.icon-checkbox-tick {
-          color: white;
-        }
+      .on.icon-checkbox-tick {
+        color: #fff;
       }
     }
   }
