@@ -90,6 +90,7 @@ module.exports = function (grunt) {
           /* Boosted mod */
           'js/dist/navbar.js'    : 'js/src/navbar.js',
           'js/dist/megamenu.js'  : 'js/src/megamenu.js',
+          'js/dist/switch.js'    : 'js/src/switch.js',
           /* end mod */
           'js/dist/popover.js'   : 'js/src/popover.js'
         }
@@ -140,6 +141,7 @@ module.exports = function (grunt) {
           /* Boosted mod */
           'js/src/navbar.js',
           'js/src/megamenu.js',
+          'js/src/switch.js',
           /* end mod */
           'js/src/popover.js'
         ],
