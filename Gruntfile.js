@@ -362,7 +362,7 @@ module.exports = function (grunt) {
           'bower_components/bootstrapaccessibilityplugin/src/js/functions.js',
           'bower_components/bootstrapaccessibilityplugin/src/js/alert.js',
           'bower_components/bootstrapaccessibilityplugin/src/js/modal.js',
-          'bower_components/bootstrapaccessibilityplugin/src/js/dropdown.js'
+          // 'bower_components/bootstrapaccessibilityplugin/src/js/dropdown.js'
           //tab.js is incompatible with bs 3.3.5
           // 'bower_components/bootstrapaccessibilityplugin/src/js/tab.js'
           // we don't need the collapse, replace by our own accordion.js

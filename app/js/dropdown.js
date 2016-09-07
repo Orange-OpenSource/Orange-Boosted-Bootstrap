@@ -111,7 +111,7 @@
 
       // boosted mod
       // focus first menu item
-      $parent.find('a[role=menuitem]').first().trigger('focus');
+      $parent.find('.dropdown-menu a').first().trigger('focus');
       // end mod
 
     }
