@@ -110,8 +110,13 @@
         .trigger($.Event('shown.bs.dropdown', relatedTarget))
 
       // boosted mod
-      // focus first menu item
-      $parent.find('.dropdown-menu a').first().trigger('focus');
+      if($parent.find('.dropdown-menu li.active').length > 0) {
+        // focus active menu item
+        $parent.find('.dropdown-menu li.active a').trigger('focus');
+      } else {
+        // or first item if none active
+        $parent.find('.dropdown-menu a').first().trigger('focus');
+      }
       // end mod
 
     }
