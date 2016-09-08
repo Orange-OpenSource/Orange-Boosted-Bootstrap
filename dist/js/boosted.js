@@ -414,7 +414,7 @@ value:function toggle(){if($(this._element).prev('input').prop('checked')){$(thi
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='scrollup';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.scrollup';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var Default={offset:10,method:'auto',target:''};var Event={SCROLL:'scroll' + EVENT_KEY,CLICK_SCROLL:'click' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={SCROLL_TOP:'o-scroll-up'};var Selector={SCROLL_TOP:'.o-scroll-up'}; /**
+   */var NAME='scrollup';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.scrollup';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var SCROLLANIMATE=500;var Default={offset:10,method:'auto',target:''};var Event={SCROLL:'scroll' + EVENT_KEY,CLICK_SCROLL:'click' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={SCROLL_TOP:'o-scroll-up'};var Selector={SCROLL_TOP:'.o-scroll-up'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -425,7 +425,7 @@ value:function toggle(){if($(this._element).prev('input').prop('checked')){$(thi
    */ // getters
 _createClass(ScrollUp,[{key:'dispose', // public
 value:function dispose(){$.removeData(this._element,DATA_KEY);$(this._scrollElement).off(EVENT_KEY);this._element = null;this._scrollElement = null;} // private
-},{key:'_process',value:function _process(){if($(this._scrollElement).scrollTop() > $(this._scrollElement).height() * 1.0){$(Selector.SCROLL_TOP).fadeIn();}else {$(Selector.SCROLL_TOP).fadeOut();}}},{key:'_clear',value:function _clear(){$(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);}},{key:'_backToTop',value:function _backToTop(){$('html, body').animate({scrollTop:0},500);} // static
+},{key:'_process',value:function _process(){if($(this._scrollElement).scrollTop() > $(this._scrollElement).height() * 1.0){$(Selector.SCROLL_TOP).fadeIn();}else {$(Selector.SCROLL_TOP).fadeOut();}}},{key:'_clear',value:function _clear(){$(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);}},{key:'_backToTop',value:function _backToTop(){$('html, body').animate({scrollTop:0},SCROLLANIMATE);} // static
 }],[{key:'_jQueryInterface',value:function _jQueryInterface(){return this.each(function(){var data=$(this).data(DATA_KEY);if(!data){data = new ScrollUp(this);$(this).data(DATA_KEY,data);}});}},{key:'VERSION',get:function get(){return VERSION;}},{key:'Default',get:function get(){return Default;}}]);return ScrollUp;})();$(window).on(Event.LOAD_DATA_API,function(){var scrollUps=$.makeArray($(Selector.SCROLL_TOP));for(var i=scrollUps.length;i--;) {var $scrollup=$(scrollUps[i]);ScrollUp._jQueryInterface.call($scrollup,$scrollup.data());}}); /**
    * ------------------------------------------------------------------------
    * jQuery

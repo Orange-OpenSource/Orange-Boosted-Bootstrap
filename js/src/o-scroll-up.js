@@ -21,6 +21,9 @@ const ScrollUp = (($) => {
   const DATA_API_KEY       = '.data-api'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
 
+  const SCROLLANIMATE      = 500
+
+
   const Default = {
     offset : 10,
     method : 'auto',
@@ -98,10 +101,10 @@ const ScrollUp = (($) => {
       $(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE)
     }
 
-    _backToTop(){
+    _backToTop() {
       $('html, body').animate({
         scrollTop: 0
-      }, 500)
+      }, SCROLLANIMATE)
     }
 
     // static
