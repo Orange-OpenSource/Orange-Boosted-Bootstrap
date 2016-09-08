@@ -15,18 +15,18 @@
 </title>
 
 <!-- helvetica -->
-<link href="../dist/css/orangeHelvetica.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-alpha/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
-<link href="../dist/css/orangeIcons.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-alpha/dist/css/orangeIcons.css" rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="../dist/css/boosted.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-alpha/dist/css/boosted.css" rel="stylesheet">
 
 <!-- Documentation extras -->
-<link href="../assets/css/docs.min.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-alpha/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="http://boosted.orange.com/v4-alpha/apple-touch-icon.png">
+<link rel="icon" href="http://boosted.orange.com/v4-alpha/favicon.ico">
 
   </head>
   <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
@@ -43,16 +43,16 @@
           <span class="icon-menu"></span>
       </button>
       <div class="container" >
-          <a class="navbar-brand"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+          <a class="navbar-brand" href="http://boosted.orange.com/v4-alpha/"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
           <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
               <li class="nav-item">
-                <a class="nav-link" href="../">
+                <a class="nav-link" href="http://boosted.orange.com/v4-alpha/">
                   B<span class="text-primary">oo</span>sted
                 </a>
               </li>
-              <li class="nav-item"><a class="nav-link " href="../getting-started/introduction/">Documentation</a></li>
-              <li class="nav-item"><a class="nav-link " href="../examples/">Examples</a></li>
-              <li class="nav-item"><a class="nav-link active" href="../boostwatch/">Boostwatch</a></li>
+              <li class="nav-item"><a class="nav-link " href="http://boosted.orange.com/v4-alpha/getting-started/introduction/">Documentation</a></li>
+              <li class="nav-item"><a class="nav-link " href="http://boosted.orange.com/v4-alpha/examples/">Examples</a></li>
+              <li class="nav-item"><a class="nav-link active" href="http://boosted.orange.com/v4-alpha/boostwatch/">Boostwatch</a></li>
               <li class="nav-item" id="id_li_for_cdu"></li>
           </ul>
       </div>
@@ -137,18 +137,14 @@
   </nav>
 </div>
 
-            <a href="#" class="scroll-top">
-                <span class="icon-arrow-up" aria-hidden="true"></span>
-                <div class="scroll-top-text">back to top</div>
-                <span class="sr-only">back to top</span>
-            </a>
+            <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text hidden-sm-down">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
         </div>
         <div class="col-xs-12 col-md-9 pull-md-3 bd-content">
             <h2 id="orange-icons">Orange Icons</h2>
 <p>Icons created from the Orange brand.</p>
 <p>Copyright (C) 2016 Orange SA All rights reserved</p>
 <p>See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p>
-<p>The best practice is to create your own icons libray (<a href="../getting-started/build-tools/#howto-create-an-icons-library-using-icomoon">See howto in getting started section</a>)</p>
+<p>The best practice is to create your own icons libray (<a href="http://boosted.orange.com/v4-alpha/getting-started/build-tools/#howto-create-an-icons-library-using-icomoon">See howto in getting started section</a>)</p>
 
 <div class="doc-fonticon">
     <ul class="doc-fonticon-list">
@@ -4115,125 +4111,204 @@
     </div>
 </footer>
 
-<h2 id="stepbar">Stepbar</h2>
+<h2 id="stepbar">Stepbar<a class="doc-link" href="../components/orange-stepbar/" title="go to step bar documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 <p class="lead">Indicate the current step within a sequential navigation.</p>
 
-<div data-example-id="default-stepbar">
-    <div class="row">
-        <nav class="o-stepbar">
-            <ol>
-                <li class="stepbar-item current">
-                    <a class="stepbar-link" href="#" title="Step 1 : sign in">
-                        <span class="step-number">1</span>
-                        <span class="step-title">Sign in</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 2 : Review">
-                        <span class="step-number">2</span>
-                        <span class="step-title">Review</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 3 : Delivery">
-                        <span class="step-number">3</span>
-                        <span class="step-title">Delivery</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 4 : Payment">
-                        <span class="step-number">4</span>
-                        <span class="step-title">Payment</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 5 : Place order">
-                        <span class="step-number">5</span>
-                        <span class="step-title">Place order</span>
-                    </a>
-                </li>
-          </ol>
-      </nav>
-    </div><!-- row -->
+<h3>default stepbar</h3>
+<nav class="o-stepbar">
+    <ol>
+        <li class="stepbar-item current">
+            <a class="stepbar-link" href="#" title="Step 1 : sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 4 : Payment">
+                <span class="step-number">4</span>
+                <span class="step-title">Payment</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <a class="stepbar-link" href="#" title="Step 5 : Place order">
+                <span class="step-number">5</span>
+                <span class="step-title">Place order</span>
+            </a>
+        </li>
+    </ol>
+</nav>
 
-    <div style="margin-bottom: 1rem;"></div>
+<h3>Mobile stepbar with step numbers</h3>
 
-    <div class="row">
-        <nav class="o-stepbar">
-            <ol>
-                <li class="done stepbar-item">
-                    <a class="stepbar-link" href="#" title="Step 1 : sign in">
-                        <span class="step-number">1</span>
-                        <span class="step-title">Sign in</span>
-                    </a>
-                </li>
-                <li class="stepbar-item current">
-                    <a class="stepbar-link" href="#" title="Step 2 : Review">
-                        <span class="step-number">2</span>
-                        <span class="step-title">Review</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 3 : Delivery">
-                        <span class="step-number">3</span>
-                        <span class="step-title">Delivery</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 4 : Payment">
-                        <span class="step-number">4</span>
-                        <span class="step-title">Payment</span>
-                    </a>
-                </li>
-                <li class="stepbar-item next">
-                    <a class="stepbar-link" href="#" title="Step 5 : Place order">
-                        <span class="step-number">5</span>
-                        <span class="step-title">Place order</span>
-                    </a>
-                </li>
-          </ol>
-      </nav>
-    </div><!-- row -->
+<nav class="o-stepbar xs-numbers" style="margin-top: 30px;">
+    <ol>
+        <li class="current stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 4 : Payment">
+                <span class="step-number">4</span>
+                <span class="step-title">Payment</span>
+            </div>
+        </li>
+    </ol>
+</nav>
 
-    <div style="margin-bottom: 1rem;"></div>
+<nav class="o-stepbar xs-numbers" style="margin-top: 30px;">
+    <ol>
+        <li class="done stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item current">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 4 : Payment">
+                <span class="step-number">4</span>
+                <span class="step-title">Payment</span>
+            </div>
+        </li>
+    </ol>
+</nav>
 
-    <div class="row">
-        <nav class="o-stepbar">
-            <ol>
-                <li class="stepbar-item done">
-                    <a class="stepbar-link" href="#" title="Step 1 : sign in">
-                        <span class="step-number">1</span>
-                        <span class="step-title">Sign in</span>
-                    </a>
-                </li>
-                <li class="stepbar-item done">
-                    <a class="stepbar-link" href="#" title="Step 2 : Review">
-                        <span class="step-number">2</span>
-                        <span class="step-title">Review</span>
-                    </a>
-                </li>
-                <li class="stepbar-item done">
-                    <a class="stepbar-link" href="#" title="Step 3 : Delivery">
-                        <span class="step-number">3</span>
-                        <span class="step-title">Delivery</span>
-                    </a>
-                </li>
-                <li class="stepbar-item done">
-                    <a class="stepbar-link" href="#" title="Step 4 : Payment">
-                        <span class="step-number">4</span>
-                        <span class="step-title">Payment</span>
-                    </a>
-                </li>
-                <li class="stepbar-item current">
-                    <a class="stepbar-link" href="#" title="Step 5 : Place order">
-                        <span class="step-number">5</span>
-                        <span class="step-title">Place order</span>
-                    </a>
-                </li>
-          </ol>
-      </nav>
-    </div><!-- row -->
-</div>
+<nav class="o-stepbar xs-numbers" style="margin-top: 30px;">
+    <ol>
+        <li class="done stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item done">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item done">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+        <li class="stepbar-item current">
+            <div class="stepbar-link" title="Step 4 : Payment">
+                <span class="step-number">4</span>
+                <span class="step-title">Payment</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+
+<h3>Mobile stepbar with step labels</h3>
+
+<nav class="o-stepbar xs-labels" style="margin-top: 30px;">
+    <ol>
+        <li class="current stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+
+<nav class="o-stepbar xs-labels" style="margin-top: 30px;">
+    <ol>
+        <li class="done stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item current">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item next">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+
+<nav class="o-stepbar xs-labels" style="margin-top: 30px;">
+    <ol>
+        <li class="done stepbar-item">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+                <span class="step-number">1</span>
+                <span class="step-title">Sign in</span>
+            </a>
+        </li>
+        <li class="stepbar-item done">
+            <div class="stepbar-link" title="Step 2 : Review">
+                <span class="step-number">2</span>
+                <span class="step-title">Review</span>
+            </div>
+        </li>
+        <li class="stepbar-item current">
+            <div class="stepbar-link" title="Step 3 : Delivery">
+                <span class="step-number">3</span>
+                <span class="step-title">Delivery</span>
+            </div>
+        </li>
+    </ol>
+</nav>
 
 <h2 id="navbar">Navbar</h2>
 
@@ -4539,39 +4614,41 @@
 
 <h3>Switches</h3>
 
-<div class="form-group row">
-  <label for="checkbox1" class="form-control-label col-md-3 col-xs-8">WiFi</label>
-  <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-  <label for="checkbox1" class="checkbox-label form-control-label col-xs-3" aria-hidden="true">
-    <span class="on icon-checkbox-tick"></span>
-    <span class="off icon-delete"></span>
+<div class="form-group row o-switch">
+  <label for="checkbox1" class="form-control-label col-md-3 col-xs-8" id="label-wifi-1">WiFi</label>
+  <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked aria-labelledby="label-wifi-1 label-wifi-2"/>
+  <label for="checkbox1" class="toggle form-control-label col-xs-3" id="label-wifi-2">
+    <span class="sr-only">on</span>
+    <span class="on icon-checkbox-tick" aria-hidden="true"></span>
+    <span class="off icon-delete" aria-hidden="true"></span>
   </label>
 </div>
 
-<div class="form-group row">
-  <label for="checkbox3" class="form-control-label col-md-3 col-xs-8">Bluetooth</label>
-  <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
-  <label for="checkbox3" class="checkbox-label form-control-label col-xs-3" aria-hidden="true">
-    <span class="on icon-checkbox-tick"></span>
-    <span class="off icon-delete"></span>
+<div class="form-group row o-switch">
+  <label for="checkbox3" class="form-control-label col-md-3 col-xs-8" id="label-bluetooth-1">Bluetooth</label>
+  <input class="checkbox success sr-only" id="checkbox3" type="checkbox" aria-labelledby="label-bluetooth-1 label-bluetooth-2"/>
+  <label for="checkbox3" class="toggle form-control-label col-xs-3" id="label-bluetooth-2">
+    <span class="sr-only">on</span>
+    <span class="on icon-checkbox-tick" aria-hidden="true"></span>
+    <span class="off icon-delete" aria-hidden="true"></span>
   </label>
 </div>
 
-<div class="form-group row">
-  <label for="checkbox2" class="form-control-label col-md-3 col-xs-8">WiFi</label>
-  <input class="checkbox sr-only" id="checkbox2" type="checkbox"/>
-  <label for="checkbox2" class="checkbox-label rounded form-control-label col-xs-3" aria-hidden="true">
+<div class="form-group row o-switch">
+  <label for="checkbox2" class="form-control-label col-md-3 col-xs-8" id="label-wifi-3">WiFi</label>
+  <input class="checkbox sr-only" id="checkbox2" type="checkbox" aria-labelledby="label-wifi-3 label-wifi-4"/>
+  <label for="checkbox2" class="toggle rounded form-control-label col-xs-3" id="label-wifi-4">
     <span class="on">On</span>
-    <span class="off">Off</span>
+    <span class="off" aria-hidden="true">Off</span>
   </label>
 </div>
 
-<div class="form-group row">
-  <label for="checkbox4" class="form-control-label col-md-3 col-xs-8">Bluetooth</label>
-  <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-  <label for="checkbox4" class="checkbox-label rounded form-control-label col-xs-3" aria-hidden="true">
+<div class="form-group row o-switch">
+  <label for="checkbox4" class="form-control-label col-md-3 col-xs-8" id="label-bluetooth-3">Bluetooth</label>
+  <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked  aria-labelledby="label-bluetooth-3 label-bluetooth-4"/>
+  <label for="checkbox4" class="toggle rounded form-control-label col-xs-3" id="label-bluetooth-4">
     <span class="on">On</span>
-    <span class="off">Off</span>
+    <span class="off" aria-hidden="true">Off</span>
   </label>
 </div>
 
@@ -4593,13 +4670,13 @@
 
 <div class="btn-group no-outline" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option21" autocomplete="off" checked> 1
+    <input type="radio" name="options2" id="option21" autocomplete="off" checked> 1
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option22" autocomplete="off"> 2
+    <input type="radio" name="options2" id="option22" autocomplete="off"> 2
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option33" autocomplete="off"> 3
+    <input type="radio" name="options2" id="option33" autocomplete="off"> 3
   </label>
 </div>
 <!-- Typography
@@ -5086,14 +5163,6 @@ Buttons + Back/Next labels
 <progress class="progress progress-warning" value="60" max="100">60%</progress>
 <progress class="progress progress-danger" value="80" max="100">80%</progress>
 
-<h3 id="progress-striped">Striped</h3>
-<progress class="progress progress-striped progress-info" value="20" max="100">20%</progress>
-<progress class="progress progress-striped progress-success" value="40" max="100">40%</progress>
-<progress class="progress progress-striped progress-warning" value="60" max="100">60%</progress>
-<progress class="progress progress-striped progress-danger" value="80" max="100">80%</progress>
-
-<h3 id="progress-animated">Animated</h3>
-<progress class="progress progress-striped progress-animated" value="45" max="100">45%</progress>
 
 <!-- Containers
 ================================================== -->
@@ -5171,17 +5240,17 @@ Buttons + Back/Next labels
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
 
-    <p>Orange modified code licensed <a rel="license" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v3.3.0/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.3/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.4/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
                 </div>
                 <div class="o-footer-bottom">
                     <ul>
-                      <li>Currently v4.0.0-alpha.3.1</li>
+                      <li>Currently v4.0.0-alpha.4</li>
                       <li>&middot;</li>
                       <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
                       <li>&middot;</li>
                       <li><a href="examples">Examples</a></li>
                       <li>&middot;</li>
-                      <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.3">Original Bootstrap</a></li>
+                      <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4">Original Bootstrap</a></li>
                     </ul>
                 </div>
             </div>
@@ -5190,23 +5259,23 @@ Buttons + Back/Next labels
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="http://boosted.orange.com/v4-alpha/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
-<script src="../assets/js/vendor/tether.min.js"></script>
-
-
-  <script src="../dist/js/boosted.js"></script>
+<script src="http://boosted.orange.com/v4-alpha/assets/js/vendor/tether.min.js"></script>
 
 
-<script src="../dist/js/vendors/jquery.tablesorter.js"></script>
+  <script src="http://boosted.orange.com/v4-alpha/dist/js/boosted.js"></script>
+
+
+<script src="http://boosted.orange.com/v4-alpha/dist/js/vendors/jquery.tablesorter.js"></script>
 
 
 
-<script src="../assets/js/docs.min.js"></script>
+<script src="http://boosted.orange.com/v4-alpha/assets/js/docs.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+<script src="http://boosted.orange.com/v4-alpha/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://boosted.orange.com/v4-alpha/assets/js/ie-emulation-modes-warning.js"></script>
 
 
 

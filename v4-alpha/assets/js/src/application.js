@@ -106,27 +106,7 @@
     $(document).ready(function () {
 
       // init megamenu demo
-      $('.mega-menu.panel').megamenu();
-
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > window.innerHeight) {
-          $('.scroll-top').fadeIn(function () {
-          });
-        } else {
-          $('.scroll-top').fadeOut();
-        }
-      });
-
-      $('.scroll-top').click(function () {
-
-        $('html, body').animate({
-          scrollTop: 0
-        }, 600, function () {
-          $('a.navbar-brand:visible').first().focus();
-        });
-
-        return false;
-      });
+      $('.mega-menu.panel').megamenu();        
     });
   })
 }(jQuery);
