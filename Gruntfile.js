@@ -561,7 +561,7 @@ module.exports = function (grunt) {
     // Generate changelog based on git commit
     changelog: {
       options: {
-        from: 'v4.0.0-alpha.3',
+        from: 'v4.0.0-alpha.3.1',
         // to: 'v4.0.0-alpha.2',
         // version: 'v4.0.0-alpha.2',
         commitLink: function (commitHash) {

@@ -1,3 +1,37 @@
+<a name"4.0.0-alpha.4"></a>
+### 4.0.0-alpha.4 (2016-09-08)
+
+
+#### Bug Fixes
+
+* **chore:** code lint ([d8caba5e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d8caba5ecb20b74b2a2b1a2f535fca7cac9e4e05))
+* **component:**
+  * stepbar mobile ([86ef4234](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86ef42347120fd9b10687efabe8265c4bcc304d8))
+  * switches ([d30d8066](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d30d80663148fb567f3f991c3456302360bcee27))
+  * switches ([cd701a55](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cd701a55e1dbe14b4b74cd7259f9e89cdf73c896))
+  * toggle switches ([2a27c286](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2a27c286b38fd7f2d08142c6dd6210df18ef3a0a))
+  * navbar accessibility ([1a692359](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1a692359f2db2c97a4d2a350afb60e8f18178ecd))
+  * navbar accessibility ([0f7bce81](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0f7bce819b6c1b07c9718cab29095aff7b01dd95))
+  * navbar accessibility ([64ca4357](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64ca4357461c67029a06bc0fcca8df739c25852b))
+* **doc:**
+  * megamenu broken link ([c0e4ea8e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c0e4ea8e4a5358536dcb6cc44c4c81c267e3d9c4))
+  * toggles ([c6b3729f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c6b3729f7016d8e691c4667b2ffac1de660aca02))
+  * content warning ([86d4fabe](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86d4fabe59547c24341dcfd18f846d45e27237f5))
+* **nav-tabs:**
+  * remove margin between tabs on mobile display ([f4c9c81c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f4c9c81c417c7225fa4217011159abc416e492a5))
+  * remove margin between tabs on mobile display ([caac5500](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/caac5500c92bedf7c6825d41ebb7860dd05abf86))
+* **o-scroll:** fix js linting errors ([1b5e720d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1b5e720dce1f7a39790014afbb3fda63d9d0ce49))
+* **progress:** brand alignement for progressbar ([7450f8ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7450f8cef313ca4c99bf0f2766301e7bfd46903d))
+* **switch:**
+  * add an aria-labelledby onto the input for accessibility purpose. Without the ari ([8bd2502d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8bd2502d74ad6896881525b4aa4df41c94a73e7c))
+  * fix text color for switch on with text on green background ([c49824dc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c49824dceb3bb25587b918a2dc9c5ca9c1c6ec75))
+
+
+#### Features
+
+* **o-scroll:** update the o-scroll component, add the doc, and prepare the alpha.4 release ([5bae6fcf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5bae6fcf3268af0e3c8a0d10384933317e525707))
+
+
 <a name"4.0.0-alpha.3.1"></a>
 ### 4.0.0-alpha.3.1 (2016-07-29)
 
