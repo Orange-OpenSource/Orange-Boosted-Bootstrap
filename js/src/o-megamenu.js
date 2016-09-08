@@ -1,7 +1,9 @@
 /* eslint no-magic-numbers: ["error", { "ignore": [1,2] }] */
+
 /**
  * --------------------------------------------------------------------------
- * Mega menu
+ * Boosted (v4.0.0-alpha.4): o-megamenu.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
@@ -15,7 +17,7 @@ const MegaMenu = (($) => {
    */
 
   const NAME                = 'megamenu'
-  const VERSION             = '4.0.0-alpha.3'
+  const VERSION             = '4.0.0-alpha.4'
   const DATA_KEY            = 'bs.megamenu'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
 

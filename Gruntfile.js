@@ -76,23 +76,23 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          'js/dist/util.js'      : 'js/src/util.js',
-          'js/dist/alert.js'     : 'js/src/alert.js',
-          'js/dist/button.js'    : 'js/src/button.js',
-          'js/dist/carousel.js'  : 'js/src/carousel.js',
-          'js/dist/collapse.js'  : 'js/src/collapse.js',
-          'js/dist/dropdown.js'  : 'js/src/dropdown.js',
-          'js/dist/modal.js'     : 'js/src/modal.js',
-          'js/dist/scrollspy.js' : 'js/src/scrollspy.js',
-          'js/dist/o-scroll-up.js'  : 'js/src/o-scroll-up.js',
-          'js/dist/tab.js'       : 'js/src/tab.js',
-          'js/dist/tooltip.js'   : 'js/src/tooltip.js',
+          'js/dist/util.js'       : 'js/src/util.js',
+          'js/dist/alert.js'      : 'js/src/alert.js',
+          'js/dist/button.js'     : 'js/src/button.js',
+          'js/dist/carousel.js'   : 'js/src/carousel.js',
+          'js/dist/collapse.js'   : 'js/src/collapse.js',
+          'js/dist/dropdown.js'   : 'js/src/dropdown.js',
+          'js/dist/modal.js'      : 'js/src/modal.js',
+          'js/dist/scrollspy.js'  : 'js/src/scrollspy.js',
+          'js/dist/tab.js'        : 'js/src/tab.js',
+          'js/dist/tooltip.js'    : 'js/src/tooltip.js',
           /* Boosted mod */
-          'js/dist/navbar.js'    : 'js/src/navbar.js',
-          'js/dist/megamenu.js'  : 'js/src/megamenu.js',
-          'js/dist/switch.js'    : 'js/src/switch.js',
+          'js/dist/o-navbar.js'   : 'js/src/o-navbar.js',
+          'js/dist/o-megamenu.js' : 'js/src/o-megamenu.js',
+          'js/dist/o-switch.js'   : 'js/src/o-switch.js',
+          'js/dist/o-scroll-up.js': 'js/src/o-scroll-up.js',
           /* end mod */
-          'js/dist/popover.js'   : 'js/src/popover.js'
+          'js/dist/popover.js'    : 'js/src/popover.js'
         }
       },
       dist: {
@@ -135,13 +135,13 @@ module.exports = function (grunt) {
           'js/src/dropdown.js',
           'js/src/modal.js',
           'js/src/scrollspy.js',
-          'js/src/o-scroll-up.js',
           'js/src/tab.js',
           'js/src/tooltip.js',
           /* Boosted mod */
-          'js/src/navbar.js',
-          'js/src/megamenu.js',
-          'js/src/switch.js',
+          'js/src/o-navbar.js',
+          'js/src/o-megamenu.js',
+          'js/src/o-switch.js',
+          'js/src/o-scroll-up.js',
           /* end mod */
           'js/src/popover.js'
         ],
@@ -492,7 +492,7 @@ module.exports = function (grunt) {
       docs: {
         /* boosted mod */
         files: ['docs-orange/**/*'],
-        tasks: ['dist-css', 'docs']
+        tasks: ['docs']
         /* end mod */
       }
     },

@@ -3,12 +3,25 @@
 //
 
 .o-scroll-up {
-  &::before {
-    font-family: icon-orange;
-    font-size: 1.8rem;
-    line-height: $o-scroll-up-height;
+  .o-scroll-up-icon {
+    &::before {
+      font-family: icon-orange;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      text-align: center;
+      content: "\e93f";
+    }
+    float: right;
+    width: $o-scroll-up-width;
+    height: $o-scroll-up-height;
+    color: #fff;
     text-align: center;
-    content: "\e93f";
+    text-decoration: none;
+    background-color: $gray-light;
+    opacity: .8;
+    transform: rotate(90deg);
+    justify-content: center;
+    align-items: center;
   }
 
   position: fixed;
@@ -16,18 +29,10 @@
   bottom: 2.5rem;
   z-index: 100;
   display: none;
-  width: $o-scroll-up-width;
-  height: $o-scroll-up-height;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  background-color: $gray-light;
-  opacity: .8;
-  transform: rotate(90deg);
-  justify-content: center;
-  align-items: center;
-  &:visited,
-  &:hover {
-    color: #fff;
+  .o-scroll-up-text {
+    display: inline-block;
+    padding: .3125rem .625rem;
+    background-color: #fff;
+    opacity: .8;
   }
 }

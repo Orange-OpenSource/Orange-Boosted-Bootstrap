@@ -63,6 +63,9 @@
     - title: Orange list
     # end mod
     - title: Scrollspy
+    # boosted mod
+    - title: Scroll up
+    # end mod
     - title: Tag
     - title: Tooltips
     # boosted mod

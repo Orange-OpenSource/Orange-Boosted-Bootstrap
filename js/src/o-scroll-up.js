@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.3): scrollup.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Boosted (v4.0.0-alpha.4): o-scroll-up.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
@@ -15,7 +15,7 @@ const ScrollUp = (($) => {
    */
 
   const NAME               = 'scrollup'
-  const VERSION            = '4.0.0-alpha.3'
+  const VERSION            = '4.0.0-alpha.4'
   const DATA_KEY           = 'bs.scrollup'
   const EVENT_KEY          = `.${DATA_KEY}`
   const DATA_API_KEY       = '.data-api'
@@ -88,9 +88,9 @@ const ScrollUp = (($) => {
 
     _process() {
       if ($(this._scrollElement).scrollTop() > $(this._scrollElement).height()*1.0) {
-        $(Selector.SCROLL_TOP).fadeIn();
+        $(Selector.SCROLL_TOP).fadeIn()
       } else {
-        $(Selector.SCROLL_TOP).fadeOut();
+        $(Selector.SCROLL_TOP).fadeOut()
       }
     }
 
@@ -99,9 +99,9 @@ const ScrollUp = (($) => {
     }
 
     _backToTop(){
-      $("html, body").animate({
+      $('html, body').animate({
         scrollTop: 0
-      }, 500);
+      }, 500)
     }
 
     // static

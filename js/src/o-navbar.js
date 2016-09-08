@@ -3,8 +3,8 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.3): navbar.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Boosted (v4.0.0-alpha.4): o-navbar.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
@@ -18,7 +18,7 @@ const Navbar = (($) => {
    */
 
   const NAME                = 'navbar'
-  const VERSION             = '4.0.0-alpha.3'
+  const VERSION             = '4.0.0-alpha.4'
   const DATA_KEY            = 'bs.navbar'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
   // boosted mod

@@ -330,14 +330,14 @@ if(html){if(!$(content).parent().is($element)){$element.empty().append(content);
 },{key:'_getAttachment',value:function _getAttachment(placement){return AttachmentMap[placement.toUpperCase()];}},{key:'_setListeners',value:function _setListeners(){var _this18=this;var triggers=this.config.trigger.split(' ');triggers.forEach(function(trigger){if(trigger === 'click'){$(_this18.element).on(_this18.constructor.Event.CLICK,_this18.config.selector,$.proxy(_this18.toggle,_this18));}else if(trigger !== Trigger.MANUAL){var eventIn=trigger === Trigger.HOVER?_this18.constructor.Event.MOUSEENTER:_this18.constructor.Event.FOCUSIN;var eventOut=trigger === Trigger.HOVER?_this18.constructor.Event.MOUSELEAVE:_this18.constructor.Event.FOCUSOUT;$(_this18.element).on(eventIn,_this18.config.selector,$.proxy(_this18._enter,_this18)).on(eventOut,_this18.config.selector,$.proxy(_this18._leave,_this18));}});if(this.config.selector){this.config = $.extend({},this.config,{trigger:'manual',selector:''});}else {this._fixTitle();}}},{key:'_fixTitle',value:function _fixTitle(){var titleType=typeof this.element.getAttribute('data-original-title');if(this.element.getAttribute('title') || titleType !== 'string'){this.element.setAttribute('data-original-title',this.element.getAttribute('title') || '');this.element.setAttribute('title','');}}},{key:'_enter',value:function _enter(event,context){var dataKey=this.constructor.DATA_KEY;context = context || $(event.currentTarget).data(dataKey);if(!context){context = new this.constructor(event.currentTarget,this._getDelegateConfig());$(event.currentTarget).data(dataKey,context);}if(event){context._activeTrigger[event.type === 'focusin'?Trigger.FOCUS:Trigger.HOVER] = true;}if($(context.getTipElement()).hasClass(ClassName.IN) || context._hoverState === HoverState.IN){context._hoverState = HoverState.IN;return;}clearTimeout(context._timeout);context._hoverState = HoverState.IN;if(!context.config.delay || !context.config.delay.show){context.show();return;}context._timeout = setTimeout(function(){if(context._hoverState === HoverState.IN){context.show();}},context.config.delay.show);}},{key:'_leave',value:function _leave(event,context){var dataKey=this.constructor.DATA_KEY;context = context || $(event.currentTarget).data(dataKey);if(!context){context = new this.constructor(event.currentTarget,this._getDelegateConfig());$(event.currentTarget).data(dataKey,context);}if(event){context._activeTrigger[event.type === 'focusout'?Trigger.FOCUS:Trigger.HOVER] = false;}if(context._isWithActiveTrigger()){return;}clearTimeout(context._timeout);context._hoverState = HoverState.OUT;if(!context.config.delay || !context.config.delay.hide){context.hide();return;}context._timeout = setTimeout(function(){if(context._hoverState === HoverState.OUT){context.hide();}},context.config.delay.hide);}},{key:'_isWithActiveTrigger',value:function _isWithActiveTrigger(){for(var trigger in this._activeTrigger) {if(this._activeTrigger[trigger]){return true;}}return false;}},{key:'_getConfig',value:function _getConfig(config){config = $.extend({},this.constructor.Default,$(this.element).data(),config);if(config.delay && typeof config.delay === 'number'){config.delay = {show:config.delay,hide:config.delay};}Util.typeCheckConfig(NAME,config,this.constructor.DefaultType);return config;}},{key:'_getDelegateConfig',value:function _getDelegateConfig(){var config={};if(this.config){for(var key in this.config) {if(this.constructor.Default[key] !== this.config[key]){config[key] = this.config[key];}}}return config;} // static
 }],[{key:'_jQueryInterface',value:function _jQueryInterface(config){return this.each(function(){var data=$(this).data(DATA_KEY);var _config=typeof config === 'object'?config:null;if(!data && /destroy|hide/.test(config)){return;}if(!data){data = new Tooltip(this,_config);$(this).data(DATA_KEY,data);}if(typeof config === 'string'){if(data[config] === undefined){throw new Error('No method named "' + config + '"');}data[config]();}});}},{key:'VERSION',get:function get(){return VERSION;}},{key:'Default',get:function get(){return Default;}},{key:'NAME',get:function get(){return NAME;}},{key:'DATA_KEY',get:function get(){return DATA_KEY;}},{key:'Event',get:function get(){return Event;}},{key:'EVENT_KEY',get:function get(){return EVENT_KEY;}},{key:'DefaultType',get:function get(){return DefaultType;}}]);return Tooltip;})();$.fn[NAME] = Tooltip._jQueryInterface;$.fn[NAME].Constructor = Tooltip;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Tooltip._jQueryInterface;};return Tooltip;})(jQuery); /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.3): navbar.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Boosted (v4.0.0-alpha.4): o-navbar.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var Navbar=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='navbar';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.navbar';var JQUERY_NO_CONFLICT=$.fn[NAME]; // boosted mod
+   */var NAME='navbar';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.navbar';var JQUERY_NO_CONFLICT=$.fn[NAME]; // boosted mod
 var SCROLLTIMEOUT=100; // end mod
 var Default={sticky:false,trigger:''};var DefaultType={sticky:'boolean',trigger:'string'};var Dimension={MEDIA_BP_SM:544};var Event={PAGE_SCROLL:'scroll'};var Selector={CONFORTP_BAR:'#accessibilitytoolbarGraphic',SUPRA_BAR:'.navbar.supra',MEGAMENU_PANEL:'.mega-menu.panel'}; /**
    * ------------------------------------------------------------------------
@@ -352,13 +352,14 @@ _createClass(Navbar,[{key:'_getConfig', // private
 value:function _getConfig(config){config = $.extend({},Default,config);Util.typeCheckConfig(NAME,config,DefaultType);return config;}},{key:'_isElementInViewport',value:function _isElementInViewport(el,topOffset){var rect=el.getBoundingClientRect();if(!topOffset){topOffset = 0;}return rect.bottom > topOffset && rect.right > 0 && rect.left < (window.innerWidth || document.documentElement.clientWidth) && rect.top < (window.innerHeight || document.documentElement.clientHeight);}},{key:'_scrollHandler',value:function _scrollHandler(){if(this._throttleTimer){window.clearTimeout(this._throttleTimer);}this._throttleTimer = window.setTimeout(this._managePageScroll.bind(this),SCROLLTIMEOUT);}},{key:'_managePageScroll',value:function _managePageScroll(){if(this._isElementInViewport(this._triggerElm,0)){$(Selector.SUPRA_BAR).show();$(document.body).css('padding-top',this._initialHeight);}else {$(Selector.SUPRA_BAR).hide();$(document.body).css('padding-top',this._initialHeight - this._initialSupraHeight);}}},{key:'_addEventListeners',value:function _addEventListeners(){if(window.innerWidth >= Dimension.MEDIA_BP_SM){window.addEventListener(Event.PAGE_SCROLL,this._scrollHandler.bind(this));}}},{key:'_addAria',value:function _addAria(){$(this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup',true);} // static
 }],[{key:'_jQueryInterface',value:function _jQueryInterface(config){return this.each(function(){var $this=$(this);var data=$this.data(DATA_KEY);var _config=$.extend({},Default,$this.data(),typeof config === 'object' && config);if(!data){data = new Navbar(this,_config);$this.data(DATA_KEY,data);}if(typeof config === 'string'){if(data[config] === undefined){throw new Error('No method named "' + config + '"');}data[config]();}});}},{key:'VERSION',get:function get(){return VERSION;}},{key:'Default',get:function get(){return Default;}}]);return Navbar;})();$.fn[NAME] = Navbar._jQueryInterface;$.fn[NAME].Constructor = Navbar;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Navbar._jQueryInterface;};return Navbar;})(jQuery); /* eslint no-magic-numbers: ["error", { "ignore": [1,2] }] */ /**
  * --------------------------------------------------------------------------
- * Mega menu
+ * Boosted (v4.0.0-alpha.4): o-megamenu.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */var MegaMenu=(function($){ /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='megamenu';var VERSION='4.0.0-alpha.3';var DATA_KEY='bs.megamenu';var JQUERY_NO_CONFLICT=$.fn[NAME];var Event={MEGAMENU_SHOWN:'shown.bs.collapse',MEGAMENU_SHOW:'show.bs.collapse',MEGAMENU_HIDE:'hide.bs.collapse'};var ClassName={FOLDED:'folded',NAVBAR_TOGGLE_ICON_OPEN:'icon-menu',NAVBAR_TOGGLE_ICON_CLOSE:'icon-delete'};var Dimension={MEDIA_BP_SM:544,NAVBAR_HEIGHT_PX:'50px'};var Selector={MEGAMENU:'.mega-menu.panel',MEGAMENU_TITLE_L1:'.mega-menu h2',MEGAMENU_TITLE_L2:'.mega-menu h3',MEGAMENU_FOOTER:'.mega-menu .footer',NAVBAR:'header .navbar-toggleable-xs.collapse',NAVBAR_TOGGLER:'header .navbar-toggler',NAVBAR_ITEM:'header .navbar-toggleable-xs.collapse .nav-item',NAVBAR_ITEM_FOLDED:'header .navbar-toggleable-xs.collapse .nav-item.folded a[data-toggle="collapse"]',NAVBAR_ITEM_MEGAMENU_TOGGLE:'header .navbar-toggleable-xs.collapse .nav-item .nav-link[data-toggle="collapse"]'}; /**
+   */var NAME='megamenu';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.megamenu';var JQUERY_NO_CONFLICT=$.fn[NAME];var Event={MEGAMENU_SHOWN:'shown.bs.collapse',MEGAMENU_SHOW:'show.bs.collapse',MEGAMENU_HIDE:'hide.bs.collapse'};var ClassName={FOLDED:'folded',NAVBAR_TOGGLE_ICON_OPEN:'icon-menu',NAVBAR_TOGGLE_ICON_CLOSE:'icon-delete'};var Dimension={MEDIA_BP_SM:544,NAVBAR_HEIGHT_PX:'50px'};var Selector={MEGAMENU:'.mega-menu.panel',MEGAMENU_TITLE_L1:'.mega-menu h2',MEGAMENU_TITLE_L2:'.mega-menu h3',MEGAMENU_FOOTER:'.mega-menu .footer',NAVBAR:'header .navbar-toggleable-xs.collapse',NAVBAR_TOGGLER:'header .navbar-toggler',NAVBAR_ITEM:'header .navbar-toggleable-xs.collapse .nav-item',NAVBAR_ITEM_FOLDED:'header .navbar-toggleable-xs.collapse .nav-item.folded a[data-toggle="collapse"]',NAVBAR_ITEM_MEGAMENU_TOGGLE:'header .navbar-toggleable-xs.collapse .nav-item .nav-link[data-toggle="collapse"]'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -380,6 +381,56 @@ $(Selector.MEGAMENU_TITLE_L2).removeClass(ClassName.FOLDED);$(Selector.MEGAMENU_
    * jQuery
    * ------------------------------------------------------------------------
    */$.fn[NAME] = MegaMenu._jQueryInterface;$.fn[NAME].Constructor = MegaMenu;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return MegaMenu._jQueryInterface;};return MegaMenu;})(jQuery); /**
+ * --------------------------------------------------------------------------
+ * Boosted (v4.0.0-alpha.4): o-switch.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */var Switch=(function($){ /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */var NAME='switch';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.switch';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var ClassName={CHECKED:'checked',SWITCH:"o-switch"};var Selector={SWITCH:'.o-switch',TOGGLE:'.o-switch .toggle',LABEL:'.o-switch label'};var Event={CLICK_DATA_API:'click' + EVENT_KEY + DATA_API_KEY}; /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */var Switch=(function(){function Switch(element){_classCallCheck(this,Switch);this._element = element;} /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */ // getters
+_createClass(Switch,[{key:'toggle', // private
+value:function toggle(){if($(this._element).prev('input').prop('checked')){$(this._element).prev('input').prop('checked',false);}else {$(this._element).prev('input').prop('checked',true);}} // public
+},{key:'dispose',value:function dispose(){$.removeData(this._element,DATA_KEY);this._element = null;} // static
+}],[{key:'_jQueryInterface',value:function _jQueryInterface(config){return this.each(function(){var data=$(this).data(DATA_KEY);if(!data){data = new Switch(this);$(this).data(DATA_KEY,data);}if(config === 'toggle'){data[config]();}});}},{key:'VERSION',get:function get(){return VERSION;}}]);return Switch;})();$(document).on('click',Selector.TOGGLE,function(event){event.preventDefault();Switch._jQueryInterface.call($(this),'toggle');}); /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */$.fn[NAME] = Switch._jQueryInterface;$.fn[NAME].Constructor = Switch;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return Switch._jQueryInterface;};return Switch;})(jQuery); /**
+ * --------------------------------------------------------------------------
+ * Boosted (v4.0.0-alpha.4): o-scroll-up.js
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */var ScrollUp=(function($){ /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */var NAME='scrollup';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.scrollup';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var Default={offset:10,method:'auto',target:''};var Event={SCROLL:'scroll' + EVENT_KEY,CLICK_SCROLL:'click' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={SCROLL_TOP:'o-scroll-up'};var Selector={SCROLL_TOP:'.o-scroll-up'}; /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */var ScrollUp=(function(){function ScrollUp(element){_classCallCheck(this,ScrollUp);this._element = element;this._scrollElement = window;$(window).on(Event.SCROLL,$.proxy(this._process,this));$(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL,$.proxy(this._backToTop,this));this._process();} /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */ // getters
+_createClass(ScrollUp,[{key:'dispose', // public
+value:function dispose(){$.removeData(this._element,DATA_KEY);$(this._scrollElement).off(EVENT_KEY);this._element = null;this._scrollElement = null;} // private
+},{key:'_process',value:function _process(){if($(this._scrollElement).scrollTop() > $(this._scrollElement).height() * 1.0){$(Selector.SCROLL_TOP).fadeIn();}else {$(Selector.SCROLL_TOP).fadeOut();}}},{key:'_clear',value:function _clear(){$(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);}},{key:'_backToTop',value:function _backToTop(){$('html, body').animate({scrollTop:0},500);} // static
+}],[{key:'_jQueryInterface',value:function _jQueryInterface(){return this.each(function(){var data=$(this).data(DATA_KEY);if(!data){data = new ScrollUp(this);$(this).data(DATA_KEY,data);}});}},{key:'VERSION',get:function get(){return VERSION;}},{key:'Default',get:function get(){return Default;}}]);return ScrollUp;})();$(window).on(Event.LOAD_DATA_API,function(){var scrollUps=$.makeArray($(Selector.SCROLL_TOP));for(var i=scrollUps.length;i--;) {var $scrollup=$(scrollUps[i]);ScrollUp._jQueryInterface.call($scrollup,$scrollup.data());}}); /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */$.fn[NAME] = ScrollUp._jQueryInterface;$.fn[NAME].Constructor = ScrollUp;$.fn[NAME].noConflict = function(){$.fn[NAME] = JQUERY_NO_CONFLICT;return ScrollUp._jQueryInterface;};return ScrollUp;})(jQuery); /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0-alpha.4): popover.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)

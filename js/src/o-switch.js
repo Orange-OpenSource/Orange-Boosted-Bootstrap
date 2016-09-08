@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.3): switch.js
+ * Boosted (v4.0.0-alpha.4): o-switch.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ const Switch = (($) => {
    */
 
   const NAME                = 'switch'
-  const VERSION             = '4.0.0-alpha.3'
+  const VERSION             = '4.0.0-alpha.4'
   const DATA_KEY            = 'bs.switch'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
