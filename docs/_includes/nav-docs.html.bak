@@ -55,9 +55,4 @@
       </ul>
     </div>
   {% endfor %}
-  </nav>
-  <!-- boosted mod -->
-  <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text hidden-sm-down">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
-  <!-- end mod -->
-
-
+</nav>

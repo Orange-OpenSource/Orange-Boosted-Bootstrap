@@ -24,25 +24,20 @@
 // Happy Bootstrapping!
 
 // Load Bootstrap variables and mixins
-/* boosted mod */
-@import '../../../scss/custom';
-/* end mod */
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
 
 // Local docs variables
-/* boosted mod */
-// Local docs variables
-$bd-purple:         #000;
-$bd-purple-bright:  $bd-purple;
-$bd-purple-light:   $bd-purple;
-$bd-graphite:       #000;
-$bd-graphite-light: #000;
-$bd-yellow:         $brand-primary;
-$bd-danger:         $brand-danger;
-$bd-warning:        $brand-warning;
-$bd-info:           $brand-info;
-/* end mod */
+$bd-purple:         #563d7c;
+$bd-purple-bright:  lighten(saturate($bd-purple, 5%), 15%);
+$bd-purple-light:   #cdbfe3;
+$bd-graphite:       #2a2730;
+$bd-graphite-light: lighten($bd-graphite, 40%);
+$bd-yellow:         #ffe484;
+$bd-danger:         #d9534f;
+$bd-warning:        #f0ad4e;
+$bd-info:           #5bc0de;
+
 // Load docs components
 @import "booticon";
 @import "nav";
@@ -68,9 +63,3 @@ $bd-info:           $brand-info;
 // Load docs dependencies
 @import "syntax";
 @import "anchor";
-
-/* boosted mod */
-@import "o-buttons";
-@import "o-switches";
-@import "boosted-docs"
-/* end mod */

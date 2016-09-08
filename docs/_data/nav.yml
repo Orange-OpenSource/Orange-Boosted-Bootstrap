@@ -33,6 +33,10 @@
     - title: Alerts
     - title: Breadcrumb
     - title: Buttons
+    # boosted mod
+    - title: Buttons inversed
+    - title: Orange switches
+    # end mod
     - title: Button group
     - title: Card
     - title: Carousel
@@ -45,12 +49,28 @@
     - title: Modal
     - title: Navs
     - title: Navbar
+    # boosted mod
+    - title: Navbar Orange
+    - title: Orange megamenu
+    - title: Local navigation
+    - title: Orange footer
+    - title: Orange stepbar
+    # end mod
     - title: Pagination
     - title: Popovers
     - title: Progress
+    # boosted mod
+    - title: Orange list
+    # end mod
     - title: Scrollspy
+    # boosted mod
+    - title: Scroll up
+    # end mod
     - title: Tag
     - title: Tooltips
+    # boosted mod
+    - title: Orange accordion
+    # end mod
     - title: Utilities
 
 # - title: Extend
@@ -61,9 +81,21 @@
 - title: About
   pages:
     - title: History
+# boosted mod
+    - title: Boosted history
+# end mod
     - title: Team
     - title: Brand
+# boosted mod
+    - title: Orange brand
+# end mod
     - title: License
+# boosted mod
+    - title: Boosted license
+# end mod
     - title: Translations
 
 - title: Migration
+# boosted mod
+- title: Boosted migration
+# end mod
