@@ -72,9 +72,9 @@
     "test": "grunt test"
   },
   "jspm": {
-    "main": "js/boosted",
+    "main": "dist/js/boosted",
     "shim": {
-      "js/boosted": {
+      "dist/js/boosted": {
         "deps": "jquery",
         "exports": "$"
       }
@@ -85,5 +85,6 @@
       "images",
       "js"
     ]
-  }
+  },
+  "main": "dist/js/boosted.js"
 }
