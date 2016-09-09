@@ -37,17 +37,57 @@
     }
   }
 
-  .form-control-message {
-    display: inline-block;
-    padding: .625rem 0;
+  .form-control-message,
+  .form-control-feedback {
+    // display: inline-block;
+    // padding: .625rem 0;
     font-size: $font-size-sm;
     font-weight: normal;
+    line-height: 1;
+    margin-top: .625rem;
   }
 
   &.has-danger {
-    .form-control-message {
+    position: relative;
+
+    .form-control-message,
+    .form-control-feedback {
       font-weight: bold;
       color: $brand-danger;
+    }
+
+    &.top {
+      .form-control-label {
+        margin-bottom: 0;
+      }
+
+      .form-control-message,
+      .form-control-feedback {
+        position: absolute;
+        top: 1.375rem;
+      }
+
+      .form-control {
+        margin-top: 2.125rem;
+      }
+    }
+
+    &.right {
+      @include clearfix;
+
+      .form-control-label {
+        display: block;
+      }
+
+      .form-control,
+      .form-control-message,
+      .form-control-feedback {
+        float: left;
+
+        &:not(.form-control) {
+          margin-left: .625rem;
+        }
+      }
     }
   }
 
