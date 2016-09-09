@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg5829"
+   viewBox="0 0 354.33125 354.33"
+   height="99.999802mm"
+   width="100.00015mm">
+  <defs
+     id="defs5831">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6391">
+      <path
+         d="m 0,841.89 595.28,0 L 595.28,0 0,0 0,841.89 Z"
+         id="path6393" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata5834">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(303.59419,-355.1972)"
+     id="layer1">
+    <g
+       style="fill:#ff7900;fill-opacity:1"
+       id="g6385"
+       transform="matrix(1.25,0,0,-1.25,-498.47932,1058.5432)">
+      <g
+         style="fill:#ff7900;fill-opacity:1"
+         id="g6387">
+        <g
+           style="fill:#ff7900;fill-opacity:1"
+           id="g6389"
+           clip-path="url(#clipPath6391)">
+          <g
+             style="fill:#ff7900;fill-opacity:1"
+             id="g6395"
+             transform="translate(403.0781,448.4658)">
+            <path
+               d="m 0,0 c -4.275,4.273 -9.285,7.365 -14.623,9.283 2.584,5.272 4.035,11.194 4.035,17.459 -0.002,21.954 -17.799,39.751 -39.758,39.751 -6.045,0 -11.769,-1.356 -16.9,-3.769 -1.902,5.55 -5.065,10.763 -9.49,15.193 -15.528,15.522 -40.697,15.522 -56.222,-0.001 -4.275,-4.276 -7.366,-9.284 -9.286,-14.62 -5.271,2.579 -11.191,4.031 -17.455,4.031 -21.956,0 -39.755,-17.799 -39.755,-39.755 0,-6.045 1.358,-11.773 3.773,-16.902 -5.552,-1.905 -10.768,-5.064 -15.195,-9.491 -15.523,-15.525 -15.523,-40.696 0,-56.219 4.279,-4.276 9.286,-7.366 14.622,-9.288 -2.579,-5.269 -4.033,-11.191 -4.033,-17.454 0,-21.955 17.796,-39.755 39.754,-39.753 6.048,0 11.774,1.352 16.905,3.771 1.904,-5.55 5.062,-10.765 9.492,-15.195 15.523,-15.524 40.691,-15.527 56.218,0 4.275,4.277 7.367,9.285 9.289,14.623 5.268,-2.581 11.191,-4.034 17.453,-4.034 21.953,0 39.754,17.799 39.754,39.753 0,6.048 -1.355,11.774 -3.771,16.904 5.548,1.904 10.763,5.064 15.193,9.491 C 15.523,-40.695 15.523,-15.527 0,0 m 36.295,-169.253 -283.465,0 0,283.464 283.465,0 0,-283.464 z"
+               style="fill:#ff7900;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path6397" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
