@@ -7706,16 +7706,57 @@ fieldset[disabled] a.btn {
   color: #000;
 }
 
-.form-group .form-control-message {
-  display: inline-block;
-  padding: .625rem 0;
+.form-group .form-control-message,
+.form-group .form-control-feedback {
+  margin-top: .625rem;
   font-size: 0.875rem;
   font-weight: normal;
+  line-height: 1;
 }
 
-.form-group.has-danger .form-control-message {
+.form-group.has-danger {
+  position: relative;
+}
+
+.form-group.has-danger .form-control-message,
+.form-group.has-danger .form-control-feedback {
   font-weight: bold;
   color: #cd3c14;
+}
+
+.form-group.has-danger.top .form-control-label {
+  margin-bottom: 0;
+}
+
+.form-group.has-danger.top .form-control-message,
+.form-group.has-danger.top .form-control-feedback {
+  position: absolute;
+  top: 1.375rem;
+}
+
+.form-group.has-danger.top .form-control {
+  margin-top: 2.125rem;
+}
+
+.form-group.has-danger.right::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.form-group.has-danger.right .form-control-label {
+  display: block;
+}
+
+.form-group.has-danger.right .form-control,
+.form-group.has-danger.right .form-control-message,
+.form-group.has-danger.right .form-control-feedback {
+  float: right;
+}
+
+.form-group.has-danger.right .form-control-message,
+.form-group.has-danger.right .form-control-feedback {
+  margin-right: .625rem;
 }
 
 .form-group select.form-control:not([size]):not([multiple]) {
@@ -9533,9 +9574,9 @@ fieldset[disabled] a.btn {
 
 .o-scroll-up.static {
   position: static;
-  float: right;
   z-index: auto;
   display: inline;
+  float: right;
 }
 
 .o-scroll-up.static .o-scroll-up-text {
