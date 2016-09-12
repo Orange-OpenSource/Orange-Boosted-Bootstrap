@@ -414,7 +414,7 @@ value:function toggle(){if($(this._element).prev('input').prop('checked')){$(thi
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='scrollup';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.scrollup';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var SCROLLANIMATE=500;var Default={offset:10,method:'auto',target:''};var Event={SCROLL:'scroll' + EVENT_KEY,CLICK_SCROLL:'click' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={SCROLL_TOP:'o-scroll-up'};var Selector={SCROLL_TOP:'.o-scroll-up'}; /**
+   */var NAME='scrollup';var VERSION='4.0.0-alpha.4';var DATA_KEY='bs.scrollup';var EVENT_KEY='.' + DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var SCROLLANIMATE=500;var Default={offset:10,method:'auto',target:''};var Event={SCROLL:'scroll' + EVENT_KEY,CLICK_SCROLL:'click' + EVENT_KEY,LOAD_DATA_API:'load' + EVENT_KEY + DATA_API_KEY};var ClassName={SCROLL_TOP:'o-scroll-up'};var Selector={SCROLL_TOP:'.o-scroll-up:not(.static)'}; /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
