@@ -41,10 +41,10 @@
   .form-control-feedback {
     // display: inline-block;
     // padding: .625rem 0;
+    margin-top: .625rem;
     font-size: $font-size-sm;
     font-weight: normal;
     line-height: 1;
-    margin-top: .625rem;
   }
 
   &.has-danger {
@@ -83,10 +83,11 @@
       .form-control-message,
       .form-control-feedback {
         float: left;
+      }
 
-        &:not(.form-control) {
-          margin-left: .625rem;
-        }
+      .form-control-message,
+      .form-control-feedback {
+        margin-left: .625rem;
       }
     }
   }
