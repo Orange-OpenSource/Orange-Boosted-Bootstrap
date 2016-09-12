@@ -41,7 +41,7 @@ const ScrollUp = (($) => {
   }
 
   const Selector = {
-    SCROLL_TOP : '.o-scroll-up'
+    SCROLL_TOP : '.o-scroll-up:not(.static)'
   }
 
 

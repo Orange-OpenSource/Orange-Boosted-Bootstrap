@@ -7,7 +7,7 @@
     &::before {
       font-family: icon-orange;
       font-size: 1.25rem;
-      line-height: 1.5;
+      line-height: 2;
       text-align: center;
       content: "\e93f";
     }
@@ -29,10 +29,50 @@
   bottom: 2.5rem;
   z-index: 100;
   display: none;
+  // put a safety space between the right of the screen and the scroll link
+  @each $breakpoint, $container-margin in $container-fluid-margin-widths {
+    @include media-breakpoint-up($breakpoint) {
+      right: $container-margin;
+    }
+  }
+  @include media-breakpoint-up(xs) {
+    bottom: .25rem;
+  }
+  @include media-breakpoint-up(sm) {
+    bottom: .375rem;
+  }
+  @include media-breakpoint-up(md) {
+    bottom: .75rem;
+  }
+  @include media-breakpoint-up(lg) {
+    bottom: 2rem;
+  }
+  @include media-breakpoint-up(xl) {
+    bottom: 2.5rem;
+  }
+  @include media-breakpoint-up(xxl) {
+    bottom: 3.75rem;
+  }
+
   .o-scroll-up-text {
     display: inline-block;
-    padding: .3125rem .625rem;
+    padding: (($o-scroll-up-height - 1.25) / 2) .625rem;
     background-color: #fff;
     opacity: .8;
+  }
+  // custom class to allow a fixed position
+  &.static {
+    position: static;
+    z-index: auto;
+    display: inline;
+    float: left;
+    .o-scroll-up-text {
+      float: left;
+    }
+    .o-scroll-up-icon {
+      position: relative;
+      display: inline-block;
+      float: none;
+    }
   }
 }
