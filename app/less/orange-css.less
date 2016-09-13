@@ -431,78 +431,138 @@ label, input, .form-control{
         border-color: @brand-orange;
     }
 }
-.has-success {
-  .control-label {
-    color: #000;
-  }
 
-    & .input-group > .form-control{
-        // Feedback states
-        border-color: @state-success-text;
-    }
-}
-.has-error {
-  position: relative;
-
-  &.top {
+.form-group {
+  &.has-success {
     .control-label {
-      margin-bottom: 0;
+      color: #000;
     }
 
-    .form-control-message {
-      position: absolute;
-      top: 2.4rem;
-    }
-
-    .form-control {
-      margin-top: 4rem;
-    }
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: @state-success-text;
+      }
   }
+  &.has-error {
+    position: relative;
 
-  &.right {
-    .clearfix;
+    &.top {
+      .control-label {
+        margin-bottom: 0;
+      }
 
-    .control-label {
-      display: block;
+      .form-control-message {
+        position: absolute;
+        top: 2.4rem;
+      }
+
+      .form-control {
+        margin-top: 4rem;
+      }
     }
 
-    .form-control,
-    .form-control-message {
-      float: left;
+    &.right {
+      .clearfix;
 
-      &:not(.form-control) {
+      .control-label {
+        display: block;
+      }
+
+      .form-control,
+      .form-control-message {
+        float: left;
+      }
+
+      .form-control-message {
         margin-left: 1rem;
+      }
+    }
+
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: @state-danger-text;
+      }
+
+    .form-control-message {
+      color: @brand-danger;
+      padding: 1rem 0;
+      display: block;
+      font-size: @font-size-base;
+      font-weight: bold;
+    }
+  }
+
+  &.has-warning {
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: @state-warning-text;
+      }
+  }
+}
+
+.form-horizontal {
+  .form-group.has-error {
+     &.top {
+       padding-top: 4rem;
+
+       .form-control {
+         margin-top: 0;
+       }
+
+       .form-control-message {
+         top: 0;
+       }
+     }
+
+     .form-control-message {
+      padding: 1rem;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .form-horizontal {
+    .form-group.has-error {
+      margin-bottom: 0;
+
+      .form-control-message {
+        padding-left: 0;
+      }
+
+      &.top {
+        padding-top: 0;
+
+        .form-control {
+          margin-top: 4rem;
+        }
+
+        .form-control-message {
+          top: 2rem;
+        }
+        .control-label {
+          // margin-bottom: 1rem;
+        }
       }
     }
   }
 
-  .control-label {
-    color: #000;
-  }
-
-    & .input-group > .form-control{
-        // Feedback states
-        border-color: @state-danger-text;
+  .form-group.has-error {
+    &.right {
+      .form-control-message {
+        margin-left: 0;
+      }
     }
-
-  .form-control-message {
-    color: @brand-danger;
-    padding: 1rem 0;
-    display: block;
-    font-size: @font-size-base;
-    font-weight: bold;
   }
 }
-.has-warning {
-  .control-label {
-    color: #000;
-  }
 
-    & .input-group > .form-control{
-        // Feedback states
-        border-color: @state-warning-text;
-    }
-}
 
 // Force the color for Heading into thumbnails
 .thumbnail {
