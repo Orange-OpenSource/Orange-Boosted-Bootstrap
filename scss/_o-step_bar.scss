@@ -94,6 +94,10 @@ $arrow-orange: "f16e00";
       .stepbar-link {
         color: #fff;
       }
+
+      &:last-child::after {
+        display: none;
+      }
     }
 
     &.current {
