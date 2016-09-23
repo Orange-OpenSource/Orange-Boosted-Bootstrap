@@ -728,6 +728,60 @@ Ensure that an alternative indication of state is also provided. For instance, y
 </div>
 {% endexample %}
 
+#### Error message positioning
+You can optionally set the error message on top of the input without changing the markup by adding `.top` class to the `.form-group`.
+
+{% example html %}
+<form>
+  <div class="form-group has-danger top">
+    <label for="exampleInputUser2">User name</label>
+    <input type="text" class="form-control form-control-danger" id="exampleInputUser2" >
+    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+  </div>
+</form>
+{% endexample %}
+
+Or to the right of the input with `.right` class. In that case you need to adjust the input width to have both input and message on the same line.
+{% example html %}
+<form>
+  <div class="form-group has-danger right">
+    <label for="exampleInputUser3">User name</label>
+    <input type="text" class="form-control form-control-danger" id="exampleInputUser3" style="width: 40%;">
+    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+  </div>
+</form>
+{% endexample %}
+
+This also works for horizontal forms though the markup is a bit different.
+For top and bottom positionning use `offset-sm-*` to compensate the label width.
+For right positionning use `col-sm-*` so that label, input and message can fit in a single line.
+
+{% example html %}
+<form>
+    <div class="form-group row has-danger">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+        <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    </div>
+    <div class="form-group row has-danger top">
+      <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+        <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    </div>
+    <div class="form-group row has-danger right">
+      <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+      <div class="col-sm-4 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    </div>
+</form>
+{% endexample %}
+
 {% example html %}
 <div class="form-check has-success">
   <label class="form-check-label">

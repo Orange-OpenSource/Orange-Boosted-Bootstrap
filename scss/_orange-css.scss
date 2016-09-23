@@ -158,38 +158,6 @@ a:focus {
   }
 }
 
-//
-// Forms control into input groups
-//
-.input-group > .form-control {
-  border-color: #000;
-
-  &:focus {
-    border-color: $brand-primary;
-  }
-}
-
-.has-success {
-  .input-group > .form-control {
-    // Feedback states
-    border-color: $state-success-text;
-  }
-}
-
-.has-error {
-  .input-group > .form-control {
-    // Feedback states
-    border-color: $state-danger-text;
-  }
-}
-
-.has-warning {
-  .input-group > .form-control {
-    // Feedback states
-    border-color: $state-warning-text;
-  }
-}
-
 .hero-container .frame {
   position: absolute;
   top: 0;
@@ -254,12 +222,6 @@ caption {
 .panel-footer,
 .well {
   font-weight: bold;
-}
-
-.form-group {
-  .form-control-label {
-    font-weight: bold;
-  }
 }
 
 //

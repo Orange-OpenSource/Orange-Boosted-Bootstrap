@@ -154,12 +154,6 @@
               <div class="form-control-feedback">This is an error message</div>
           </div>
 
-          <div class="form-group has-danger top">
-              <label class="form-control-label" for="inputError">Input error</label>
-              <input class="form-control" id="inputError" type="text">
-              <div class="form-control-feedback">This is an error message on top</div>
-          </div>
-
           <div class="form-group has-success">
               <label class="form-control-label" for="inputSuccess">Input success</label>
               <input class="form-control" id="inputSuccess" type="text">
@@ -194,3 +188,45 @@
       </form>
   </div>
 </div>
+
+<form>
+  <div class="form-group has-danger">
+    <label for="exampleInputUser1">User name</label>
+    <input type="text" class="form-control form-control-danger" id="exampleInputUser1" >
+    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+  </div>
+  <div class="form-group has-danger top">
+    <label for="exampleInputUser2">User name</label>
+    <input type="text" class="form-control form-control-danger" id="exampleInputUser2" >
+    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+  </div>
+  <div class="form-group has-danger right">
+    <label for="exampleInputUser3">User name</label>
+    <input type="text" class="form-control form-control-danger" id="exampleInputUser3" style="width: 40%;">
+    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+  </div>
+</form>
+
+<form>
+    <div class="form-group row has-danger">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+        <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    </div>
+    <div class="form-group row has-danger top">
+      <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+        <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    </div>
+    <div class="form-group row has-danger right">
+      <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+      <div class="col-sm-4 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    </div>
+</form>

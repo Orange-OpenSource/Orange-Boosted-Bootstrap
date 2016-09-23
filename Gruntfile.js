@@ -491,7 +491,7 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs-orange/**/*'],
+        files: ['docs-orange/**/*', 'docs/**/*'],
         tasks: ['docs']
         /* end mod */
       }
@@ -593,7 +593,7 @@ module.exports = function (grunt) {
 
   // Test task.
   var testSubtasks = [];
-  // Skip core tests if running a different subset of the test suite
+  // Skip core tests if running a different subset of the test suite0
   if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs']);
   }
