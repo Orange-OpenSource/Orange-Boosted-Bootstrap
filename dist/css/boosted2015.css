@@ -139,10 +139,10 @@ ul.o-square-list ul ul li span {
   .o-stepbar .stepbar-item {
     padding: .7rem 1rem .7rem 3.2rem;
   }
-  .o-stepbar .stepbar-item::after,
-  .o-stepbar .stepbar-item.done::after,
-  .o-stepbar .stepbar-item.current::after,
-  .o-stepbar .stepbar-item.next::after {
+  .o-stepbar .stepbar-item:after,
+  .o-stepbar .stepbar-item.done:after,
+  .o-stepbar .stepbar-item.current:after,
+  .o-stepbar .stepbar-item.next:after {
     right: -1.2rem;
     width: 1.2rem;
     height: 3rem;
@@ -3560,6 +3560,9 @@ input,
 }
 .input-group > .form-control:focus {
   border-color: #f16e00;
+}
+.form-group .form-control-message {
+  display: none;
 }
 .form-group.has-success .control-label {
   color: #000;
