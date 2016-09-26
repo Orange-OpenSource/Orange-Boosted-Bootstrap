@@ -57,7 +57,10 @@
       padding-left: @padding-base-horizontal;
     }
 
-    &:last-child {
+    &:last-child,
+    &.done:last-child,
+    &.current:last-child,
+    &.next:last-child {
       &:after {
         display: none;
       }

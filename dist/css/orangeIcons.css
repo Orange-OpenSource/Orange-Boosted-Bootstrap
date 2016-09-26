@@ -1,3 +1,9 @@
+/*!
+ boosted - v3.3.0 - Orange Boosted with Boostrap
+ Copyright 2016 Orange SA, all right reserved
+MIT Licensed 
+*/
+
 /*! Orange Boosted with Bootstrap
         Orange Icons
         Copyright (C) 2016 Orange SA All rights reserved
@@ -5,10 +11,11 @@
 */
 @font-face {
   font-family: 'icon-orange';
+  font-style: normal;
+  font-weight: normal;
+
   src: url('../fonts/icon-orange.eot?aaqub7');
   src: url('../fonts/icon-orange.eot?aaqub7#iefix') format('embedded-opentype'), url('../fonts/icon-orange.ttf?aaqub7') format('truetype'), url('../fonts/icon-orange.woff?aaqub7') format('woff'), url('../fonts/icon-orange.svg?aaqub7#icon-orange') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 .icon-checkbox_tick,
 .icon-2for1cinematicket,
@@ -675,8 +682,9 @@
   font-family: "icon-orange" !important;
   font-style: normal;
   font-variant: normal;
-  line-height: 0.875;
+  line-height: .875;
   text-transform: none;
+
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -711,7 +719,7 @@
 .icon-popout-performance,
 .icon-popout-security,
 .icon-popout-teamwork {
-  color: #F16E00;
+  color: #f16e00;
 }
 .icon-checkbox_tick:before {
   content: "\eb77";
