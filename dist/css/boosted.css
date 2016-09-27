@@ -7706,16 +7706,57 @@ fieldset[disabled] a.btn {
   color: #000;
 }
 
-.form-group .form-control-message {
-  display: inline-block;
-  padding: .625rem 0;
+.form-group .form-control-message,
+.form-group .form-control-feedback {
+  margin-top: .625rem;
   font-size: 0.875rem;
   font-weight: normal;
+  line-height: 1;
 }
 
-.form-group.has-danger .form-control-message {
+.form-group.has-danger {
+  position: relative;
+}
+
+.form-group.has-danger .form-control-message,
+.form-group.has-danger .form-control-feedback {
   font-weight: bold;
   color: #cd3c14;
+}
+
+.form-group.has-danger.top .form-control-label {
+  margin-bottom: 0;
+}
+
+.form-group.has-danger.top .form-control-message,
+.form-group.has-danger.top .form-control-feedback {
+  position: absolute;
+  top: 1.375rem;
+}
+
+.form-group.has-danger.top .form-control {
+  margin-top: 2.125rem;
+}
+
+.form-group.has-danger.right::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.form-group.has-danger.right .form-control-label {
+  display: block;
+}
+
+.form-group.has-danger.right .form-control,
+.form-group.has-danger.right .form-control-message,
+.form-group.has-danger.right .form-control-feedback {
+  float: left;
+}
+
+.form-group.has-danger.right .form-control-message,
+.form-group.has-danger.right .form-control-feedback {
+  margin-left: .625rem;
 }
 
 .form-group select.form-control:not([size]):not([multiple]) {
@@ -9428,12 +9469,14 @@ fieldset[disabled] a.btn {
   bottom: 2.5rem;
   z-index: 100;
   display: none;
+  right: 1.25%;
+  bottom: .25rem;
 }
 
 .o-scroll-up .o-scroll-up-icon {
   float: right;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 2.5rem;
+  height: 2.5rem;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -9457,16 +9500,93 @@ fieldset[disabled] a.btn {
 .o-scroll-up .o-scroll-up-icon::before {
   font-family: icon-orange;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 2;
   text-align: center;
   content: "\e93f";
 }
 
+@media (min-width: 480px) {
+  .o-scroll-up {
+    right: 1.25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .o-scroll-up {
+    right: 1.5625%;
+  }
+}
+
+@media (min-width: 980px) {
+  .o-scroll-up {
+    right: 3.125%;
+  }
+}
+
+@media (min-width: 1220px) {
+  .o-scroll-up {
+    right: 3.125%;
+  }
+}
+
+@media (min-width: 1380px) {
+  .o-scroll-up {
+    right: 4.16667%;
+  }
+}
+
+@media (min-width: 480px) {
+  .o-scroll-up {
+    bottom: .375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .o-scroll-up {
+    bottom: .75rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .o-scroll-up {
+    bottom: 2rem;
+  }
+}
+
+@media (min-width: 1220px) {
+  .o-scroll-up {
+    bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1380px) {
+  .o-scroll-up {
+    bottom: 3.75rem;
+  }
+}
+
 .o-scroll-up .o-scroll-up-text {
   display: inline-block;
-  padding: .3125rem .625rem;
+  padding: 0.625rem 0.625rem;
   background-color: #fff;
   opacity: .8;
+}
+
+.o-scroll-up.static {
+  position: static;
+  z-index: auto;
+  display: inline;
+  float: left;
+}
+
+.o-scroll-up.static .o-scroll-up-text {
+  float: left;
+}
+
+.o-scroll-up.static .o-scroll-up-icon {
+  position: relative;
+  display: inline-block;
+  float: none;
 }
 
 .caret {
