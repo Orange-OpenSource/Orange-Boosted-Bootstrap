@@ -2,8 +2,21 @@
 //    Accordions
 //
 
-.o-accordion,
-.o-accordion-triangle {
+.panel {
+  border-bottom: 1px solid $gray-light-o;
+
+  &.panel-default > .panel-heading {
+    padding: 0;
+
+    + .panel-collapse {
+      padding: .625rem;
+      background-color: #fff;
+    }
+  }
+
+  &:first-child .panel-title {
+    border-top: 1px solid $gray-light-o;
+  }
 
   .panel-title {
     position: relative;
@@ -31,31 +44,14 @@
       }
     }
   }
-
+}
+// For mobile display emphase the border
+@include media-breakpoint-down(sm) {
   .panel {
-    border-bottom: 1px solid $gray-light-o;
+    border-bottom-width: 2px;
 
     &:first-child .panel-title {
-      border-top: 1px solid $gray-light-o;
-    }
-  }
-  // For mobile display emphase the border
-  @include media-breakpoint-down(sm) {
-    .panel {
-      border-bottom-width: 2px;
-
-      &:first-child .panel-title {
-        border-top-width: 2px;
-      }
-    }
-  }
-
-  .panel-default > .panel-heading {
-    padding: 0;
-
-    + .panel-collapse .panel-body {
-      padding: .625rem;
-      background-color: #fff;
+      border-top-width: 2px;
     }
   }
 }

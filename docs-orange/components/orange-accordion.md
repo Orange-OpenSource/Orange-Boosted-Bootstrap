@@ -9,7 +9,7 @@ Extend the default collapse behavior to create an accordion with the panel compo
 ### Default accordion
 
 {% example html %}
-<div class="o-accordion panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+<div id="accordion-1" role="tablist" aria-multiselectable="true">
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
             <h4 class="panel-title">
@@ -73,7 +73,7 @@ Extend the default collapse behavior to create an accordion with the panel compo
 ### Mulitple openable
 
 {% example html %}
-<div class="o-accordion panel-group" id="accordion-2">
+<div id="accordion-2">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title" id="accordion-2-title-1">
