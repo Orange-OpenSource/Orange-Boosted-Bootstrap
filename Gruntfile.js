@@ -491,7 +491,7 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs-orange/**/*', 'docs/**/*'],
+        files: ['docs-orange/**/*', 'docs/**/*.md'],
         tasks: ['docs']
         /* end mod */
       }
