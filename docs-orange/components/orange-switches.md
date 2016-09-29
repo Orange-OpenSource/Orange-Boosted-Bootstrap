@@ -65,7 +65,7 @@ Finally use .rounded class on `.toggle` element to get rounded switch alternate 
 Wrap 3 radio type inputs into a `.btn-group element`. If using several btn-group toggles, make to have different `name` attribute for each group.
 
 {% example html %}
-<div class="btn-group" data-toggle="buttons" role="group">
+<div class="o-switch btn-group" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
     <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
   </label>
@@ -80,10 +80,10 @@ Wrap 3 radio type inputs into a `.btn-group element`. If using several btn-group
 
 ### without outline
 
-Alternatively, use .no-outline class on `.btn-group` element to get the clear version.
+Alternatively, use `.no-outline` class on `.btn-group` element to get the clear version.
 
 {% example html %}
-<div class="btn-group no-outline" data-toggle="buttons" role="group">
+<div class="o-switch btn-group no-outline" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
     <input type="radio" name="options2" id="option21" autocomplete="off" checked> 1
   </label>
