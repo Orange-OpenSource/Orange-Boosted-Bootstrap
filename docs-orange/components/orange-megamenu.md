@@ -24,8 +24,8 @@ Megamenu has a footer section where additional links can be added and a button t
 </a>
 
 <!-- megamenu content -->
-<div class="mega-menu panel" style="position: static">
-    <div class="collapse panel-collapse in" id="collapseExample" aria-labelledby="menu_title">
+<div class="mega-menu" style="position: static">
+    <div class="collapse in" id="collapseExample" aria-labelledby="menu_title">
         <div class="container">
             <h2 role="presentation" id="menu_title"><a aria-hidden="true" href="#">Home Shop</a></h2>
             <div class="row">
@@ -84,14 +84,14 @@ Megamenu has a footer section where additional links can be added and a button t
 
 Megamenu should be used in combination with the [navbar](../navbar) component.
 
-Be sure to use `.panel` and `.pane-collapse` classes to the megamenu section and `data-parent` attribute in the navbar `.nav-link` get an opened megamenu closed when another gets opened.
+Be sure to use `.collapse` classes to the megamenu section and `data-parent` attribute in the navbar `.nav-link` get an opened megamenu closed when another gets opened.
 
 ## Usage
 
 Using javascript, simply declare your navbar component with the needed options.
 
 {% highlight js %}
-$('.mega-menu.panel').megamenu();
+$('.mega-menu').megamenu();
 {% endhighlight %}
 
 See a full implementation in the Orange News [example page](../..//examples/orange-news/)

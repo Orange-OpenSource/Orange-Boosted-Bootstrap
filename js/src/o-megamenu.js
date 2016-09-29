@@ -39,7 +39,7 @@ const MegaMenu = (($) => {
   }
 
   const Selector = {
-    MEGAMENU    : '.mega-menu.panel',
+    MEGAMENU    : '.mega-menu',
     MEGAMENU_TITLE_L1 : '.mega-menu h2',
     MEGAMENU_TITLE_L2 : '.mega-menu h3',
     MEGAMENU_FOOTER : '.mega-menu .footer',
