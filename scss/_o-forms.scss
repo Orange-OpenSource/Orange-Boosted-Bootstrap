@@ -154,10 +154,28 @@
     }
   }
 
-  select.form-control {
-    &:not([size]):not([multiple]) {
-      height: 2.5rem;
-      padding: .5rem .625rem .5rem .4375rem;
+  // select.form-control {
+  //   &:not([size]):not([multiple]) {
+  //     height: 2.5rem;
+  //     padding: .5rem .625rem .5rem .4375rem;
+  //   }
+  // }
+}
+
+select.form-control {
+  &:not([size]):not([multiple]) {
+    height: auto;
+    padding-top: .4375rem;
+    padding-bottom: .4375rem;
+
+    &.form-control-lg {
+      padding-top: .65625rem;
+      padding-bottom: .65625rem;
+    }
+
+    &.form-control-sm {
+      padding-top: .1875rem;
+      padding-bottom: .1875rem;
     }
   }
 }
