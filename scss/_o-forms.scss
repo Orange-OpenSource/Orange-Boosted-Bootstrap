@@ -2,11 +2,16 @@
 //  Orange forms
 //
 
-.input-group > .form-control {
-  border-color: #000;
+.input-group {
+  & > .input-group-addon,
+  & > .form-control {
+    border-color: #000;
+  }
 
-  &:focus {
-    border-color: $brand-primary;
+  & > .form-control {
+    &:focus {
+      border-color: $brand-primary;
+    }
   }
 }
 
@@ -154,5 +159,19 @@
       height: 2.5rem;
       padding: .5rem .625rem .5rem .4375rem;
     }
+  }
+}
+
+// Reposition feedback icon if input has visible label above
+.has-feedback label {
+  ~ .form-control-feedback {
+    top: ($line-height-base + .5); // Height of the `label` and its margin
+  }
+}
+
+.form-group {
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
   }
 }

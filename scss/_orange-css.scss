@@ -232,22 +232,3 @@ caption {
 .well {
   font-weight: bold;
 }
-
-// bits from bootstrap-orange2015.less
-
-// Reposition feedback icon if input has visible label above
-.has-feedback label {
-  ~ .form-control-feedback {
-    top: ($line-height-base + .5); // Height of the `label` and its margin
-  }
-}
-
-//
-// Forms
-//
-.form-group {
-  input[type="radio"],
-  input[type="checkbox"] {
-    width: auto;
-  }
-}
