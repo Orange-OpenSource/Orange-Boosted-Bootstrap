@@ -11,6 +11,12 @@
     border-color: $hover-background;
   }
 
+  &.focus {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-background;
+  }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
