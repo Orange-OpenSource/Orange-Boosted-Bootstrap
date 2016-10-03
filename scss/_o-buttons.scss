@@ -197,14 +197,14 @@ fieldset[disabled] a.btn {
     }
   }
 
-    &.disabled.active,
-    &.disabled:active,
-    &:disabled.active,
-    &:disabled:active {
-      color: #fff;
-      background-color: $btn-link-disabled-color;
-      border-color: $btn-link-disabled-color;
-    }
+  &.disabled.active,
+  &.disabled:active,
+  &:disabled.active,
+  &:disabled:active {
+    color: #fff;
+    background-color: $btn-link-disabled-color;
+    border-color: $btn-link-disabled-color;
+  }
 
   &.btn-inverse {
     @include orange-button-inverse-variant($btn-primary-color, $btn-primary-bg);

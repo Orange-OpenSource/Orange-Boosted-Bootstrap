@@ -3,12 +3,12 @@
 //
 
 .input-group {
-  & > .input-group-addon,
-  & > .form-control {
+  > .input-group-addon,
+  > .form-control {
     border-color: #000;
   }
 
-  & > .form-control {
+  > .form-control {
     &:focus {
       border-color: $brand-primary;
     }
@@ -147,19 +147,12 @@
       .form-control-feedback {
         margin-left: .625rem;
       }
-      }
+    }
 
-      .form-control-feedback {
-        margin-top: .8125rem;
+    .form-control-feedback {
+      margin-top: .8125rem;
     }
   }
-
-  // select.form-control {
-  //   &:not([size]):not([multiple]) {
-  //     height: 2.5rem;
-  //     padding: .5rem .625rem .5rem .4375rem;
-  //   }
-  // }
 }
 
 select.form-control {
