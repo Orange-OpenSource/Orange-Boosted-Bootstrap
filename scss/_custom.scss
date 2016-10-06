@@ -407,20 +407,20 @@ $custom-checkbox-indeterminate-box-shadow: none;
 $custom-radio-radius: 50%;
 $custom-radio-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E") !default;
 
-$custom-select-padding-x:          .75rem  !default;
-$custom-select-padding-y:          .375rem !default;
+$custom-select-padding-x:          .5rem  !default;
+$custom-select-padding-y:          .4375rem !default;
 $custom-select-indicator-padding:  1rem !default; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-color:         $input-color !default;
 $custom-select-disabled-color: $gray-light !default;
 $custom-select-bg:            #fff !default;
 $custom-select-disabled-bg:   $gray-lighter !default;
 $custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
-$custom-select-indicator:     url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") !default;
+$custom-select-indicator:     url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M0%200h14L7%207%200%200z%22%2F%3E%3C%2Fsvg%3E") !default;
 $custom-select-border-width:  $input-btn-border-width;
 $custom-select-border-color:  $input-border-color !default;
 $custom-select-border-radius: $border-radius;
 
-$custom-select-focus-border-color: #51a7e8 !default;
+$custom-select-focus-border-color: $gray-light-o !default;
 $custom-select-focus-box-shadow:   none;
 
 $custom-select-sm-padding-y: .2rem !default;

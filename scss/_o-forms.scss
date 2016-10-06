@@ -240,3 +240,12 @@ select.form-control {
     border-width: 6px;
   }
 }
+
+// custom select
+
+.custom-select {
+  font-weight: bold;
+  background-position-x: right .625rem;
+  background-size: .875rem;
+  padding-right: 1.875rem;
+}
