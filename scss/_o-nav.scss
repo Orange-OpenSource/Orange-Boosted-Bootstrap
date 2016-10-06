@@ -57,6 +57,14 @@
 // Pills
 // -------------------------
 .nav-pills {
+  &.nav-stacked .nav-item {
+    margin: 0;
+
+    + .nav-item {
+      margin-left: 0;
+    }
+  }
+
   .nav-item {
     + .nav-item {
       margin-left: ($grid-gutter-width / 4);
