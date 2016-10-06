@@ -38,6 +38,8 @@ Dropped the `.horizontal-form`class. Each row of form is now contained in a `.fo
 
 Class `.control-label`is now `.form-control-label`.
 
+Dropped `.o-checkbox` and `.o-radio`, now using native custom form [components](../components/forms/#checkboxes-and-radios-1).
+
 For more information please check the new [forms](../components/forms/) documentation and examples.
 
 

@@ -186,3 +186,57 @@ select.form-control {
     width: auto;
   }
 }
+
+// custom checkboxes
+
+.custom-control .custom-control-description {
+  font-weight: bold;
+}
+
+.form-group .custom-control {
+  display: inline-block;
+}
+
+.custom-control-indicator {
+  background-color: #fff;
+  border: 2px solid $gray;
+}
+
+.custom-control-input:checked ~ .custom-control-indicator {
+  background-size: 1rem;
+  border: 0;
+}
+
+.custom-control-input:active ~ .custom-control-indicator,
+.custom-control-input:indeterminate ~ .custom-control-indicator {
+  border: 0;
+}
+
+.custom-control-input:disabled ~ .custom-control-indicator {
+  background-color: #fff;
+  border: 2px solid $gray-light-o;
+}
+
+.custom-control-input:checked:disabled ~ .custom-control-indicator {
+  background-color: $gray-light-o;
+  background-image: $custom-checkbox-checked-icon;
+  border: 0;
+}
+
+.custom-radio {
+  .custom-control-input ~ .custom-control-indicator,
+  .custom-control-input:disabled ~ .custom-control-indicator {
+    border-width: 2px;
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #fff;
+    background-image: none;
+    border: 6px solid $brand-primary;
+  }
+
+  .custom-control-input:checked:disabled ~ .custom-control-indicator {
+    border-color: $gray-light-o;
+    border-width: 6px;
+  }
+}
