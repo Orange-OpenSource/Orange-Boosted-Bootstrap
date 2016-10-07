@@ -237,6 +237,10 @@ Navbars can be statically placed (their default behavior), static without rounde
 
 ## Collapsible content
 
+<!--- boosted mod -->
+For brand responsive collapsible navbar please checkout the [Navbar Orange](/components/navbar-orange/) page.
+<!--- end mod -->
+
 Our collapse plugin allows you to use a `<button>` or `<a>` to toggle hidden content.
 
 {% example html %}
