@@ -2912,6 +2912,12 @@ fieldset[disabled] .btn {
 .btn-link.btn-inverse.disabled.hover {
   color: #666;
 }
+.checkbox.checked + .checkbox-label .on {
+  display: block;
+}
+.checkbox.checked + .checkbox-label .off {
+  display: none;
+}
 .checkbox-label,
 .checkbox-label:before,
 .checkbox-label .on,
@@ -2930,34 +2936,29 @@ fieldset[disabled] .btn {
   display: block;
   width: 6rem;
   height: 3rem;
+  padding: 0 .6rem;
   margin: .5rem 0;
   cursor: pointer;
   background: #666;
   border: 2px solid #666;
 }
-.checkbox-label.rounded,
-.checkbox-label.rounded:before {
-  border-radius: 2.6rem;
-}
 .checkbox-label .on,
 .checkbox-label .off {
-  position: absolute;
-  z-index: 0;
   display: block;
-  width: 50%;
   font-weight: bold;
   line-height: 2.6rem;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .checkbox-label .on {
-  left: 0;
+  display: none;
+  text-align: left;
   opacity: 0;
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .checkbox-label .off {
-  right: 0;
+  text-align: right;
   opacity: 1;
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -2972,6 +2973,19 @@ fieldset[disabled] .btn {
   height: 2.6rem;
   content: "";
   background: #fff;
+}
+.checkbox-label.rounded {
+  width: auto;
+  min-width: 6rem;
+  padding: 0 1.4rem;
+  border-radius: 2.6rem;
+}
+.checkbox-label.rounded .on,
+.checkbox-label.rounded .off {
+  width: auto;
+}
+.checkbox-label.rounded:before {
+  border-radius: 2.6rem;
 }
 .toggle .checkbox {
   position: absolute;
@@ -3169,6 +3183,89 @@ fieldset[disabled] .btn {
   .o-panel {
     height: 24rem;
   }
+}
+.o-calendar {
+  width: 32rem;
+  margin: 1rem;
+  background-color: #fff;
+}
+.o-calendar .month-wrap {
+  position: relative;
+  height: 4rem;
+}
+.o-calendar .month-wrap .btn-prev,
+.o-calendar .month-wrap .btn-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  border: 0;
+}
+.o-calendar .month-wrap .btn-next {
+  right: 0;
+  left: auto;
+}
+.o-calendar .month-wrap .month {
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+  text-align: center;
+}
+.o-calendar .cal-table {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.o-calendar .cal-table thead {
+  font-size: 1.4rem;
+  color: #666;
+}
+.o-calendar .cal-table tr {
+  border-bottom: 1px solid #666;
+}
+.o-calendar .cal-table th,
+.o-calendar .cal-table td {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  text-align: center;
+}
+.o-calendar .cal-table td {
+  font-weight: bold;
+}
+.o-calendar .cal-table td.today {
+  background-color: #fff;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+}
+.o-calendar .cal-table td:hover,
+.o-calendar .cal-table td.focus {
+  color: #fff;
+  background-color: #000;
+  outline: 0;
+}
+.o-calendar .cal-table td.active,
+.o-calendar .cal-table td:active {
+  color: #fff;
+  background-color: #f16e00;
+  outline: 0;
+}
+.o-calendar .cal-table td.empty,
+.o-calendar .cal-table td.empty:hover {
+  color: #ddd;
+  background-color: #fff;
+}
+.o-calendar .cal-table td.disabled {
+  color: #666;
+  background-color: #eee;
+}
+.o-calendar .cal-table td.disabled:hover {
+  color: #666;
+  cursor: not-allowed;
+  background-color: #eee;
 }
 @font-face {
   font-family: 'boosted';

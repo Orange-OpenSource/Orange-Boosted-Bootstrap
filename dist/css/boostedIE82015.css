@@ -2912,6 +2912,12 @@ fieldset[disabled] .btn {
 .btn-link.btn-inverse.disabled.hover {
   color: #666;
 }
+.checkbox.checked + .checkbox-label .on {
+  display: block;
+}
+.checkbox.checked + .checkbox-label .off {
+  display: none;
+}
 .checkbox-label,
 .checkbox-label:before,
 .checkbox-label .on,
@@ -2930,34 +2936,29 @@ fieldset[disabled] .btn {
   display: block;
   width: 60px;
   height: 30px;
+  padding: 0 .6rem;
   margin: 5px 0;
   cursor: pointer;
   background: #666;
   border: 2px solid #666;
 }
-.checkbox-label.rounded,
-.checkbox-label.rounded:before {
-  border-radius: 26px;
-}
 .checkbox-label .on,
 .checkbox-label .off {
-  position: absolute;
-  z-index: 0;
   display: block;
-  width: 50%;
   font-weight: bold;
   line-height: 26px;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .checkbox-label .on {
-  left: 0;
+  display: none;
+  text-align: left;
   opacity: 0;
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .checkbox-label .off {
-  right: 0;
+  text-align: right;
   opacity: 1;
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -2972,6 +2973,19 @@ fieldset[disabled] .btn {
   height: 26px;
   content: "";
   background: #fff;
+}
+.checkbox-label.rounded {
+  width: auto;
+  min-width: 6rem;
+  padding: 0 1.4rem;
+  border-radius: 26px;
+}
+.checkbox-label.rounded .on,
+.checkbox-label.rounded .off {
+  width: auto;
+}
+.checkbox-label.rounded:before {
+  border-radius: 26px;
 }
 .toggle .checkbox {
   position: absolute;
