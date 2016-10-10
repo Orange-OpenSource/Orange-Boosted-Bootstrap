@@ -459,6 +459,7 @@ module.exports = function (grunt) {
           'The “contentinfo” role is unnecessary for element “footer”.',
           'Bad value “search” for attribute “role” on element “form”.',
           'Attribute “aria-required” not allowed on element “input” at this point.',
+          'Attribute “interval” not allowed on element “div” at this point.',
           'Element “input” is missing one or more of the following attributes: “aria-expanded”, “aria-valuemax”, “aria-valuemin”, “aria-valuenow”, “role”.',
           /* end mod */
           'Attribute “autocomplete” is only allowed when the input type is “color”, “date”, “datetime”, “datetime-local”, “email”, “hidden”, “month”, “number”, “password”, “range”, “search”, “tel”, “text”, “time”, “url”, or “week”.',
