@@ -210,7 +210,11 @@ fieldset[disabled] a.btn {
     @include orange-button-inverse-variant($btn-primary-color, $btn-primary-bg);
 
     &.disabled,
-    &:disabled {
+    &:disabled,
+    &.disabled.active,
+    &.disabled:active,
+    &:disabled.active,
+    &:disabled:active {
       @include hover {
         color: #000;
         background-color: $btn-link-disabled-black-bg-color;
