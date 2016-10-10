@@ -17,7 +17,7 @@ Using checkbox as switch / toggle with styling
 
 ### Default
 
-Wrap a label / checkbox input pattern into form-group with `.toggle` class.
+Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` followed by a `.toggle` class.
 
 {% example html %}
 <div class="form-group row o-switch">
@@ -47,7 +47,7 @@ Default color is brand primary. Success color is also supported, use `.success` 
 
 ### Rounded
 
-Finally use .rounded class on `.toggle` element to get rounded switch alternate version.
+Finally use `.rounded` class on `.toggle` element to get rounded switch alternate version.
 
 {% example html %}
 <div class="form-group row o-switch">
@@ -62,7 +62,7 @@ Finally use .rounded class on `.toggle` element to get rounded switch alternate 
 
 ## 3 way toggle
 
-Wrap 3 radio type inputs into a `.btn-group element`. If using several btn-group toggles, make to have different `name` attribute for each group.
+Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several btn-group toggles, make to have different `name` attribute for each group.
 
 {% example html %}
 <div class="o-switch btn-group" data-toggle="buttons" role="group">
