@@ -516,6 +516,16 @@
 
 // switches
 
+.checkbox.checked + .checkbox-label {
+  .on {
+    display: block;
+  }
+
+  .off {
+    display: none;
+  }
+}
+
 .checkbox-label,
 .checkbox-label:before,
 .checkbox-label .on,
@@ -538,34 +548,29 @@
   background: @gray-dark;
   border: 2px solid @gray-dark;
   cursor: pointer;
-
-  &.rounded,
-  &.rounded:before {
-    border-radius: @checkbox-label-size;
-  }
+  padding: 0 .6rem;
 
   .on,
   .off {
-    position: absolute;
-    z-index: 0;
     display: block;
     font-weight: bold;
     line-height: @checkbox-label-size;
     color: #fff;
-    width: 50%;
-    text-align: center;
+    text-align: left;
   }
 
   .on {
-    left: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     opacity: 0;
+    // margin-left: 0;
+    display: none;
+    text-align: left;
   }
 
   .off {
-    right: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
+    text-align: right;
   }
 
   &:before {
@@ -578,6 +583,22 @@
     height: @checkbox-label-size;
     content: "";
     background: #fff;
+  }
+
+  &.rounded {
+    border-radius: @checkbox-label-size;
+    min-width: 6rem;
+    width: auto;
+    padding: 0 1.4rem;
+
+    .on,
+    .off {
+      width: auto;
+    }
+  }
+
+  &.rounded:before {
+    border-radius: @checkbox-label-size;
   }
 }
 
