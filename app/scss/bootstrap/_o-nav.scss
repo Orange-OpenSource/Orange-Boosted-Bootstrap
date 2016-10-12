@@ -12,10 +12,10 @@
     + li {
       margin-left: $nav-tab-margin;
       // for mobile display remove the margin between tabs
-      @media all and (max-width: $screen-sm-max) {        
+      @media all and (max-width: $screen-sm-max) {
         margin-left: 0;
       }
-    }    
+    }
 
     // Actual tabs (as links)
     > a {
@@ -27,7 +27,7 @@
       border-bottom-width: 0;
       margin-right: 0;
       // for mobile display unselected tabs hadd #666 background color and white text
-      @media all and (max-width: $screen-sm-max) {        
+      @media all and (max-width: $screen-sm-max) {
         background-color: $gray-dark;
         color: #FFF;
       }
@@ -101,6 +101,12 @@
               color: $brand-orange-white;
           }
         }
+    }
+  }
+
+  &.nav-stacked {
+    > li {
+      margin-left: 0;
     }
   }
 }

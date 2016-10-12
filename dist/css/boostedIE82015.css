@@ -205,11 +205,6 @@ ul.o-square-list ul ul li span {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.navbar-default .navbar-brand {
-  min-width: 40px;
-  color: #fff;
-  background: url("../images/home.png") no-repeat scroll center center transparent;
-}
 .navbar-default .nav .nav-item .nav-item-cdu:hover,
 .navbar-default .nav .nav-item .nav-item-cdu:focus {
   text-decoration: underline;
@@ -658,6 +653,9 @@ table.tablesorter caption {
   color: #fff;
   background-color: #f16e00;
   outline: none;
+}
+.nav-pills.nav-stacked > li {
+  margin-left: 0;
 }
 .tab-content {
   padding: 1em;
@@ -3442,20 +3440,9 @@ h5,
   }
 }
 .navbar-brand-text {
-  position: absolute;
-  padding: 0 10px 9px 10px 10px;
-}
-@media (min-width: 768px) {
-  .navbar-brand-text {
-    margin-top: 87px;
-    margin-top: 60px;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 767px) {
-  .navbar-brand-text {
-    margin-top: 0;
-  }
+  display: inline-block;
+  margin-top: 3.2rem;
+  margin-left: 2rem;
 }
 .nav .open > a,
 .nav .open > a:hover,

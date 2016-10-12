@@ -250,12 +250,9 @@ h5, .h5 { letter-spacing: $letter-spacing-h5; }
 }
 
 .navbar-brand-text {
-  // Uncollapse the nav
-  @media (min-width: $grid-float-breakpoint) {
-    @include navbar-vertical-align(($navbar-padding-vertical+$line-height-computed));
-  }
-  position: absolute;
-  padding: 0 $nav-link-padding;
+  display: inline-block;
+  margin-top: 3.2rem;
+  margin-left: 2rem;
 }
 
 .nav {
