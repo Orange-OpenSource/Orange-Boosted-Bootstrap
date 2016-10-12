@@ -4562,7 +4562,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #000;
   text-align: center;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 2px solid #000;
   border-radius: 0;
 }
 .input-group-addon.input-sm {

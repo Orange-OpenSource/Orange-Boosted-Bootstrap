@@ -106,7 +106,7 @@
     .stepbar-item.done:after,
     .stepbar-item.current:after,
     .stepbar-item.next:after {
-      right: -1.2rem;
+      right: -1.2px; /* for edge support */
       width: $o-stepbar-mobile-arrow-width;
       height: $o-stepbar-mobile-arrow-height;
       background-size: cover;
