@@ -18,7 +18,7 @@ $(document).ready(function () {
   }
 
   // first init, set all class checked to checkboxes checked
-  $('.checkbox:checked').each(function(){
+  $('.toggle .checkbox:checked').each(function(){
     $(this).toggleClass('checked',true);
   });
 
@@ -37,13 +37,13 @@ $(document).ready(function () {
   });
   */
   // attach event onto all checkbox to update the display onclick
-  $('.checkbox').on('click', function() {
+  $('.toggle .checkbox').on('click', function() {
     $(this).toggleClass('checked',$(this).prop('checked'));
     // force IE8 repaint!
     $(this).parent().toggleClass('forceiepaint');
   });
   // add an event for IE8 active checkbox when clicking onto the label
-  $('.checkbox').parent().find('label').on('click', function(e) {
+  $('.toggle .checkbox').parent().find('label').on('click', function(e) {
     $('#'+$(this).attr('for')).trigger('click');
     e.preventDefault()
     e.stopPropagation()
