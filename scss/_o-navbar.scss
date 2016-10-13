@@ -90,10 +90,10 @@
     }
 
     .nav-link.icon {
-      margin-top: calc((#{$navbar-height} - #{$font-size-h4}) / 2);
+      margin-top: 3.25rem;
 
       span[class^="icon-"] {
-        font-size: calc(#{$font-size-h4} - 1px); // remove 1px to fit
+        font-size: 1.5rem;
         font-weight: normal;
       }
     }
@@ -243,6 +243,7 @@
       top: $navbar-height-sm;
       left: 0;
       z-index: 100;
+      display: inline-block;
       width: 100%;
       margin: 0;
       background-color: #000;
