@@ -417,10 +417,10 @@ $custom-select-disabled-bg:   $gray-lighter !default;
 $custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator:     url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M0%200h14L7%207%200%200z%22%2F%3E%3C%2Fsvg%3E") !default;
 $custom-select-border-width:  $input-btn-border-width;
-$custom-select-border-color:  $input-border-color !default;
+$custom-select-border-color:  $input-border-color;
 $custom-select-border-radius: $border-radius;
 
-$custom-select-focus-border-color: $gray-light-o !default;
+$custom-select-focus-border-color: $input-border-focus;
 $custom-select-focus-box-shadow:   none;
 
 $custom-select-sm-padding-y: .2rem !default;
