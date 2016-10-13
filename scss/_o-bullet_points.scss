@@ -17,9 +17,9 @@
     &::before {
       margin-right: 1rem;
       font-size: $font-size-sm;
-      line-height: 1.125rem;
+      line-height: 1.25rem;
       color: $brand-primary;
-      vertical-align: top;
+      vertical-align: text-top;
       content: "\25A0";
     }
 
@@ -37,7 +37,7 @@
     color: $gray-light;
   }
 
-  ul > li ul > li::before {
+  ul ul > li::before {
     color: $gray-light-o;
   }
 }
