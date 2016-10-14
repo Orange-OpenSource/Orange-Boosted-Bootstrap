@@ -141,6 +141,16 @@ h5, .h5 { letter-spacing: $letter-spacing-h5; }
       }
     }
    }
+
+   .navbar-form,
+   .navbar-btn {
+     margin-top: 3.6rem;
+   }
+
+   .navbar-text {
+     line-height: 20px;
+     margin-top: 48px;
+   }
 }
 
 // Navbar toggle

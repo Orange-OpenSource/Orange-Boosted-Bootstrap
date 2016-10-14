@@ -604,7 +604,6 @@
 .toggle {
   .checkbox {
     position: absolute;
-    display: none;
 
     &:focus {
       + .checkbox-label:before {
