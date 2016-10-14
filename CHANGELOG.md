@@ -1,3 +1,61 @@
+<a name"3.3.1"></a>
+### 3.3.1 (2016-10-14)
+
+
+#### Bug Fixes
+
+* **checkbox:** update custom toggle js, to prevent js activate on native checkboxes ([f1713b70](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f1713b7065143c7d8207bc87538ecffb24942981))
+* **collapse:** asked by D&U, arrow need to be 14px width 7px height ([4f30a6ac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4f30a6ace8a6f6bd980742b808837936eb1846b5))
+* **component:**
+  * navbar ([70e3e61a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/70e3e61a09e1ffee244bad7f2e21edd3bf076575))
+  * navbar ([e90a1eb5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e90a1eb554fdc30c1458fd98a712298cc3985303))
+  * nav pills ([4a8d0a0c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4a8d0a0cd7686e9a2cdf0fb06b9c7409c314e45b))
+  * stepbar ([0e151447](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0e1514475906e924aff4cac37772d3b81ec2e4f7))
+  * toggle ([57c3a604](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/57c3a6043cbf83bfc00b5c7ced6f1b9e70e75cb0))
+  * stepbar ([52405a93](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/52405a93849528f18b852a95353a3fa8040be4a3))
+  * form error message ([7ee6afdf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7ee6afdfba61dcd1365aa46215854c3a89287f98))
+  * dropdown ([2b8bbc48](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2b8bbc4830e005ad5e9aee877a18b16bcff86807))
+  * dropdown menu scroll ([9befc8ad](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9befc8ad54ab38b27d5abb4b7214d8c7e3340ff6))
+  * checkbox ([20d0829f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/20d0829f3eab16dd5cac04e531ad8ff4f0db4680))
+  * stepbar ([e58ef821](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e58ef821d8f22272d03ab70fcb677e3285a99ce7))
+  * stepbar mobile ([085a54f5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/085a54f5edd4528583f8961683768f4b673190d2))
+  * navbar accessibility ([cbeafad0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cbeafad064eca90881429ea691787a893765abfe))
+  * navbar accessibility ([544b3b60](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/544b3b60394329ce35d794fbe6e4eeb9ea9824c7))
+* **doc:**
+  * forms doc ([2ab4a9a5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2ab4a9a50bc2cb12b4b4854443ef7413fa6509d8))
+  * components page break ([cea6e961](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cea6e96103b5449a7c1ddac1972b6021ddd30726))
+  * minor fixes ([5c6cbb5f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5c6cbb5f2cbebf032bb8ddfde086dfa82973493d))
+  * add a type button to open the modal ([9f5d2b1a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9f5d2b1a8c54232eb80d3daf6db03102ad222df3))
+  * boostwach doc links ([15b25800](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/15b25800d51396248e78304ae6ada629cf129a65))
+  * toggles ([6e016531](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6e0165318a7b0a3b3a2df4cfbdd6d4de8328331e))
+* **input-groups:** put the 2px border to input groups ([c63acf98](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c63acf982082249cc92ccd6e64bac4ea69b7c95c))
+* **links:** underline links in tag p to be well branded ([0217e087](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0217e08768683b8b2a8a63011a9cd250f410ec3a))
+* **nav-tabs:** remove margin between tabs on mobile display ([4d3e77d4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4d3e77d44a700df0790f6bfa820c94e6faab72d4))
+* **o-checkbox:** put back the top:0 value for 2 lines label case ([47dcad5e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/47dcad5e28bd53e6e4a4515434e8977b252eb37f))
+* **package.json:** update package.json for webpack compatibility ([04c12241](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/04c12241b58067b504d75db4000ce007e0a8e2bd))
+* **progressbar:**
+  * update component on mobile display ([9d01c9b3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9d01c9b3b8dd44824013cc9fc061cca88bb42474))
+  * update grey color, adapt progressbar to 10px on mobile display ([44a839bf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/44a839bf923dcfdc34b467d5d86195c149910756))
+* **stepbar:** remove pseudo css selector with :: incompatible with IE8 ([c2fa1292](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c2fa1292e72e682ec3dc657fb80488325ab3fdab))
+* **switch:**
+  * remove the css display none for accessibility reason ([0acacd1d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0acacd1d51d29c409a2db91b32ec8cc6ea31d104))
+  * fix color for switch buttons on green background ([d63a0425](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d63a0425020bdf0db0489746fc24ceba5d50805b))
+  * black color apply only for rounded switch not for icons ([f24da5fc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f24da5fc42418f19a65cd18cc1451bee1d13771f))
+  * put back double label, but add an aria-labelledby onto the input for accessibili ([63849a8d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/63849a8d1263389f32f26f126bc6fdfce98666a0))
+  * fix text color for switch on with text on green background ([9c54b697](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9c54b697e25e03f7f37aae990407f888a469eb04))
+* **switches:** move size to variables files for IE8 compatibility and add javascript to falback ([848887c4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/848887c4277e2a92055790afa3ce02c234450c53))
+
+
+#### Features
+
+* **component:**
+  * orange calendar ([fc6b324c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fc6b324c6e1fb94af00b698a3d5a28497c53a95f))
+  * form error label position ([15677969](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/15677969c87127bfff62fe3064a3d7a864b89aa5))
+* **links:** underline links onto tag P to fit to the brand ([5ad914ab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ad914abdcb96d0e8d98a6877420e4d594e59e1c))
+* **sass:** update sass files ([d4524573](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d45245732a87a8250f3495f258688c130e0cd1b1))
+* **tabs:** update tabs component for mobile display ([c10af606](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c10af606a470fcd963bced4ec75457acf42d3904))
+
+
 <a name"3.3.0"></a>
 ## 3.3.0 (2016-07-28)
 

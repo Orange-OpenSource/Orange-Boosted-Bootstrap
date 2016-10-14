@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.0 - Orange Boosted with Boostrap
+ boosted - v3.3.1 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -2991,7 +2991,6 @@ fieldset[disabled] .btn {
 }
 .toggle .checkbox {
   position: absolute;
-  display: none;
 }
 .toggle .checkbox:focus + .checkbox-label:before {
   outline: 2px dotted #000;
@@ -3428,6 +3427,14 @@ h5,
   .navbar.minimized .navbar-nav > li > a {
     margin-top: 3.3rem;
   }
+}
+.navbar .navbar-form,
+.navbar .navbar-btn {
+  margin-top: 3.6rem;
+}
+.navbar .navbar-text {
+  margin-top: 48px;
+  line-height: 20px;
 }
 .navbar-toggle {
   position: relative;
