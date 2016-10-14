@@ -1,0 +1,102 @@
+// Orange calendar
+//
+//
+
+.o-calendar {
+   margin: @padding-small-horizontal;
+   width: @calendar-width;
+   background-color: #fff;
+
+  .month-wrap {
+    height: @calendar-day-width;
+    position: relative;
+
+    .btn-prev,
+    .btn-next {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: @calendar-day-width;
+      height: @calendar-day-width;
+      padding: 0;
+      border: 0;
+    }
+
+    .btn-next {
+      left: auto;
+      right: 0;
+    }
+
+    .month {
+      padding-top: @padding-small-horizontal;
+      text-align: center;
+      font-weight: bold;
+      font-size: @font-size-base-up;
+      line-height: @font-size-base-up;
+    }
+  }
+
+  .cal-table {
+    font-size: @font-size-base-up;
+    text-align: center;
+    margin: 0 auto;
+
+    thead {
+      font-size: @font-size-base;
+      color: @gray-dark;
+    }
+
+    tr{
+      border-bottom: 1px solid @gray-dark;
+    }
+
+    th,
+    td {
+      width: @calendar-day-width;
+      height: @calendar-day-width;
+      padding: 0;
+      text-align: center;
+    }
+
+    td {
+      font-weight: bold;
+
+      &.today {
+        background-color: #fff;
+        outline: 2px solid #000;
+        outline-offset: -2px;
+      }
+
+      &:hover,
+      &.focus {
+        color: #fff;
+        background-color: #000;
+        outline: 0;
+      }
+
+      &.active,
+      &:active {
+        color: #fff;
+        background-color: @brand-orange;
+        outline: 0;
+      }
+
+      &.empty,
+      &.empty:hover {
+        background-color: #fff;
+        color: @gray-light-plus;
+      }
+
+      &.disabled {
+        color: @gray-dark;
+        background-color: @gray-lighter;
+
+        &:hover {
+          color: @gray-dark;
+          background-color: @gray-lighter;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

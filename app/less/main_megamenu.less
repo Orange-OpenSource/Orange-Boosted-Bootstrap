@@ -9,11 +9,11 @@
 //	background-color: #000;//
 }
 //
-.navbar-default .navbar-brand {
-	color: #ffffff;
-	background: url("../images/home.png") no-repeat scroll center center transparent;
-	min-width: 40px;
-}
+// .navbar-default .navbar-brand {
+// 	color: #ffffff;
+// 	background: url("../images/home.png") no-repeat scroll center center transparent;
+// 	min-width: 40px;
+// }
 //
 .navbar-default .nav .nav-item .nav-item-cdu:hover,
 .navbar-default .nav .nav-item .nav-item-cdu:focus{
@@ -28,9 +28,9 @@
 .navbar-nav {
   @media (max-width: @grid-float-breakpoint-max) {
     // Dropdowns get custom display when collapsed
-    .nav-item.open .dropdown-menu {      
-        background-color: @dropdown-bg;      
-        > li > a { 
+    .nav-item.open .dropdown-menu {
+        background-color: @dropdown-bg;
+        > li > a {
             color: @dropdown-link-color;
             &:hover,
             &:focus {
@@ -66,11 +66,11 @@
 	}
 }
 
-.nav-menu .sub-nav .container, 
+.nav-menu .sub-nav .container,
 .nav-menu .sub-nav .container-fluid,
-.nav-menu .sub-nav.container, 
+.nav-menu .sub-nav.container,
 .nav-menu .sub-nav.container-fluid{
-	z-index: 1; //LLA// 
+	z-index: 1; //LLA//
 	background-color: #FFF; //LLA//
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
@@ -102,15 +102,13 @@
 	border: 1px solid transparent;
 }
 
-// focus/open states of first descendant link within a top level 
-navigation item //
+// focus/open states of first descendant link within a top level navigation item //
 //.nav-item > a:focus,
 .nav-item > a.open {
 	border: 1px solid #dedede;
 }//
 
-// open state of first descendant link within a top level 
-navigation item //
+// open state of first descendant link within a top level navigation item //
 .nav-item > a.open {
 	border-bottom: none;
 	z-index: 1;
@@ -153,8 +151,8 @@ navigation item //
 	color: @brand-orange;
 }
 .mMenu{
-    
-    
+
+
     // Specific dropdowns
     // make dropdown border overlap tab border
     background-color: @dropdown-bg;
@@ -181,18 +179,18 @@ navigation item //
 .mega-menu.navbar{
     background-color: @gray-base;
     color: @brand-orange-white;
-    
+
     .navbar-toggle{
         border-color: @brand-orange-white;
         &:hover,
         &:focus{
-            background-color: @brand-orange;    
+            background-color: @brand-orange;
         }
         .icon-bar{
             background-color: @brand-orange-white;
         }
     }
-    
+
     .nav > li > a{
         color: @brand-orange-white;
         &:hover,

@@ -1,0 +1,20 @@
+// generate url encoded svg with color
+.arrow-svg(@color) {
+@arrow-svg: '%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23@{color}%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E';
+}
+
+.stepbar-arrow(@color) {
+  &:after {
+    position: absolute;
+    top: 0;
+    right: -16px; /* for edge support */
+    z-index: 500;
+    display: block;
+    width: @o-stepbar-arrow-width;
+    height: @o-stepbar-height;
+    content: "";
+    background-size: @o-stepbar-arrow-width @o-stepbar-height;
+    .arrow-svg(@color);
+    background-image: url("data:image/svg+xml,@{arrow-svg}");
+  }
+}

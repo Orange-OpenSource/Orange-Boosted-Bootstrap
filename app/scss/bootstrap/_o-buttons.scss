@@ -1,0 +1,759 @@
+// Orange buttons
+//
+//
+
+@mixin orange-button-variant($color, $background, $hover-color:$btn-primary-hover-color, $hover-background:$btn-primary-hover-bg, $active-color:$btn-primary-active-color, $active-background:$btn-primary-active-bg) {
+
+  color: $color;
+  background-color: $background;
+  border-color: $background;
+//   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-background;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $active-color;
+    background-color: $active-background;
+    background-image: none;
+    border-color: $active-background;
+    // Remove the gradient for the pressed/active state
+    // @include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: $active-color;
+      background-color: $active-background;
+      border-color: $active-background;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $brand-orange-white;
+      background-color: $btn-link-disabled-color;
+      border-color: $btn-link-disabled-color;
+
+      &:hover,
+      &.hover {
+        color: $brand-orange-white;
+        background-color: $btn-link-disabled-color;
+        border-color: $btn-link-disabled-color;
+      }
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $brand-orange-white;
+    background-color: $btn-link-disabled-color;
+    border-color: $btn-link-disabled-color;
+    &:focus,
+    &.focus {
+      color: $brand-orange-white;
+      background-color: $btn-link-disabled-color;
+      border-color: $btn-link-disabled-color;
+    }
+    &:hover {
+      color: $brand-orange-white;
+      background-color: $btn-link-disabled-color;
+      border-color: $btn-link-disabled-color;
+    }
+  }
+}
+
+@mixin orange-button-outline-variant($color) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: $color;
+
+//   $include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    color: $brand-orange-white;
+    background-color: $brand-orange-black;
+    border-color: $brand-orange-black;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $brand-orange-white;
+    background-color: $brand-orange;
+    background-image: none;
+    border-color: $brand-orange;
+    // Remove the gradient for the pressed/active state
+    // $include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-white;
+      background-color: $brand-orange;
+      border-color: $brand-orange;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $btn-link-disabled-color;
+      background-color: transparent;
+      border-color: $btn-link-disabled-color;
+
+      &:hover,
+      &.hover {
+        color: $btn-link-disabled-color;
+        background-color: transparent;
+        border-color: $btn-link-disabled-color;
+      }
+    }
+
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $btn-link-disabled-color;
+    background-color: transparent;
+    border-color: $btn-link-disabled-color;
+    &:focus,
+    &.focus {
+      color: $btn-link-disabled-color;
+      background-color: transparent;
+      border-color: $btn-link-disabled-color;
+    }
+    &:hover,
+    &.hover {
+      color: $btn-link-disabled-color;
+      background-color: transparent;
+      border-color: $btn-link-disabled-color;
+    }
+  }
+}
+
+@mixin orange-button-inverse-variant($color, $background) {
+
+  color: $color;
+  background-color: $background;
+  border-color: $background;
+//   $include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    color: $brand-orange-black;
+    background-color: $brand-orange-white;
+    border-color: $brand-orange-white;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $brand-orange-white;
+    background-color: $brand-orange;
+    background-image: none;
+    border-color: $brand-orange;
+    // Remove the gradient for the pressed/active state
+    // $include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-white;
+      background-color: $brand-orange;
+      border-color: $brand-orange;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+
+      &:hover,
+      &.hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:hover,
+    &.hover {
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+
+    color: $brand-orange-black;
+    background-color: $btn-link-disabled-black-bg-color;
+    border-color: $btn-link-disabled-black-bg-color;
+  }
+}
+
+//
+// Base styles
+//
+
+.btn {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    opacity: 1;
+  }
+  padding: $btn-padding;
+  border-width: 2px;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+
+  &.btn-sm,
+  &.btn-xs {
+    padding: $btn-padding-sm;
+    font-size: $btn-font-size-sm;
+    line-height: $line-height-base;
+  }
+
+  &.btn-lg {
+    padding: $btn-padding-lg;
+    font-size: $btn-font-size-lg;
+    line-height: $btn-line-height-lg;
+  }
+}
+
+
+.btn-primary {
+  @include orange-button-variant($btn-primary-color, $btn-primary-bg);
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $brand-orange-black;
+    background-color: $brand-orange-clear;
+    background-image: none;
+    border-color: $brand-orange-black;
+    // Remove the gradient for the pressed/active state
+    // @include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-black;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-black;
+    }
+  }
+
+  &.btn-inverse {
+    @include orange-button-inverse-variant($btn-primary-color, $btn-primary-bg);
+
+    &.disabled,
+    &:disabled {
+      .hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $brand-orange-white;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-white;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        color: $brand-orange-white;
+        background-color: $brand-orange-clear;
+        border-color: $brand-orange-white;
+      }
+    }
+  }
+}
+
+.btn-default {
+  @include orange-button-variant($btn-secondary-color, $btn-secondary-bg);
+  border-color: $btn-secondary-color;
+
+  &.disabled,
+  &:disabled {
+    &:active,
+    &.active {
+      color: $btn-link-disabled-color;
+      background-color: $brand-orange-clear;
+      border-color: $btn-link-disabled-color;
+
+      &:hover,
+      &.hover {
+        color: $btn-link-disabled-color;
+        background-color: $brand-orange-clear;
+        border-color: $btn-link-disabled-color;
+      }
+    }
+
+    &:hover,
+    &.hover {
+      color: $btn-link-disabled-color;
+      background-color: $brand-orange-clear;
+      border-color: $btn-link-disabled-color;
+    }
+
+    color: $btn-link-disabled-color;
+    background-color: $brand-orange-clear;
+    border-color: $btn-link-disabled-color;
+  }
+
+  &.btn-inverse {
+    @include orange-button-inverse-variant($btn-secondary-color, $btn-secondary-bg);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-white;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-white;
+    }
+
+    background-color: $brand-orange-white;
+    border-color: $brand-orange-white;
+  }
+}
+.btn-info {
+  @include orange-button-variant($btn-info-color, $btn-info-bg, $btn-info-hover-color, $btn-info-hover-bg);
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background-color: $brand-orange-clear;
+    border-color: $brand-orange-black;
+  }
+
+  &.btn-inverse {
+    @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
+    background-color: $brand-orange-clear;
+    border-color: $brand-orange-white;
+
+    &.disabled,
+    &:disabled {
+      &:active,
+      &.active {
+        color: $btn-link-disabled-black-bg-color;
+        background-color: $brand-orange-clear;
+        border-color: $btn-link-disabled-black-bg-color;
+
+        &:hover,
+        &.hover {
+          color: $btn-link-disabled-black-bg-color;
+          background-color: $brand-orange-clear;
+          border-color: $btn-link-disabled-black-bg-color;
+        }
+      }
+
+      &:hover,
+      &.hover {
+        color: $btn-link-disabled-black-bg-color;
+        background-color: $brand-orange-clear;
+        border-color: $btn-link-disabled-black-bg-color;
+     }
+
+      color: $btn-link-disabled-black-bg-color;
+      background-color: $brand-orange-clear;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+  }
+}
+.btn-success {
+  @include orange-button-variant($btn-success-color, $btn-success-bg);
+
+  &.btn-inverse {
+    @include orange-button-inverse-variant($btn-success-color, $btn-success-bg);
+  }
+}
+.btn-warning {
+  @include orange-button-variant($btn-warning-color, $btn-warning-bg);
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $brand-orange-black;
+    background-color: $brand-orange-clear;
+    background-image: none;
+    border-color: $brand-orange-black;
+    // Remove the gradient for the pressed/active state
+    // $include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: $brand-orange-black;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-black;
+    }
+  }
+
+  &.btn-inverse {
+    @include orange-button-inverse-variant($btn-warning-color, $btn-warning-bg);
+
+    &.disabled,
+    &:disabled {
+      &:hover,
+      &.hover {
+        color: $brand-orange-black;
+        background-color: $btn-link-disabled-black-bg-color;
+        border-color: $btn-link-disabled-black-bg-color;
+      }
+
+      color: $brand-orange-black;
+      background-color: $btn-link-disabled-black-bg-color;
+      border-color: $btn-link-disabled-black-bg-color;
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $brand-orange-white;
+      background-color: $brand-orange-clear;
+      border-color: $brand-orange-white;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        color: $brand-orange-white;
+        background-color: $brand-orange-clear;
+        border-color: $brand-orange-white;
+      }
+    }
+  }
+}
+.btn-danger {
+  @include orange-button-variant($btn-danger-color, $btn-danger-bg);
+
+  &.btn-inverse {
+    @include orange-button-inverse-variant($btn-danger-color, $btn-danger-bg);
+  }
+}
+
+// Remove all backgrounds
+.btn-outline-primary {
+  @include orange-button-outline-variant($btn-primary-bg);
+}
+.btn-outline-secondary {
+  @include orange-button-outline-variant($btn-secondary-color);
+}
+.btn-outline-info {
+  @include orange-button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include orange-button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include orange-button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include orange-button-outline-variant($btn-danger-bg);
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  &:disabled,
+  &.disabled {
+    &:hover,
+    &.hover {
+      color: $link-hover-color-disabled;
+    }
+    color: $link-color-disabled;
+  }
+
+  &.btn-inverse {
+    &:hover,
+    &.hover {
+      color: $link-hover-color-inverse;
+    }
+    color: $link-color-inverse;
+
+    &:disabled,
+    &.disabled {
+      &:hover,
+      &.hover {
+        color: $link-hover-color-inverse-disabled;
+      }
+      color: $link-color-inverse-disabled;
+    }
+  }
+}
+
+// switches
+
+.checkbox.checked + .checkbox-label {
+  .on {
+    display: block;
+  }
+
+  .off {
+    display: none;
+  }
+}
+
+.checkbox-label,
+.checkbox-label:before,
+.checkbox-label .on,
+.checkbox-label .off {
+  transition: .4s;
+}
+
+.form-group.toggle label:first-child {
+  padding: $checkbox-toggle-padding-vertical 0;
+  margin-bottom: 0;
+  line-height: 1.25;
+}
+
+.checkbox-label {
+  position: relative;
+  display: block;
+  width: $checkbox-label-width;
+  height: $checkbox-label-height;
+  margin: ($checkbox-toggle-padding-vertical / 2) 0;
+  background: $gray-dark;
+  border: 2px solid $gray-dark;
+  cursor: pointer;
+  padding: 0 .6rem;
+
+  .on,
+  .off {
+    display: block;
+    font-weight: bold;
+    line-height: $checkbox-label-size;
+    color: #fff;
+    text-align: left;
+  }
+
+  .on {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    display: none;
+    text-align: left;
+  }
+
+  .off {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    text-align: right;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: $checkbox-label-size;
+    height: $checkbox-label-size;
+    content: "";
+    background: #fff;
+  }
+
+  &.rounded {
+    border-radius: $checkbox-label-size;
+    min-width: 6rem;
+    width: auto;
+    padding: 0 1.4rem;
+
+    .on,
+    .off {
+      width: auto;
+    }
+  }
+
+  &.rounded:before {
+    border-radius: $checkbox-label-size;
+  }
+}
+
+.toggle {
+  .checkbox {
+    position: absolute;
+
+    &:focus {
+      + .checkbox-label:before {
+        outline: 2px dotted #000;
+      }
+    }
+
+    &.checked{
+      + .checkbox-label {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        .on {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
+        }
+        .off {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          opacity: 0;
+        }
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &:checked {
+      + .checkbox-label {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        .on {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
+        }
+        .off {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          opacity: 0;
+        }
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &.success.checked{
+      + .checkbox-label {
+        background: $brand-success;
+        border-color: $brand-success;
+        .rounded .on {
+          color: #000;
+        }
+      }
+    }
+
+    &.success:checked {
+      + .checkbox-label {
+        background: $brand-success;
+        border-color: $brand-success;
+        &.rounded .on {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.form-group .form-control-label.checkbox-label {
+  padding: 0;
+}
+
+// 3 way toggles
+
+.btn-group[data-toggle=buttons] {
+  border: 2px solid #000;
+
+  .btn {
+    width: $toggles-3-way-width;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+    border-top: 0;
+    border-right: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 2px solid #fff;
+
+    &:first-child {
+      margin-left: -2px;
+      border-left-color: #000;
+    }
+
+    &:last-child {
+      margin-right: -2px;
+      border-right-color: #000;
+    }
+
+    &.active {
+      color: #fff;
+      background-color: #000;
+      border-right-color: #000;
+      border-left-color: #000;
+    }
+
+    &:hover {
+      color: $brand-primary;
+      background-color: #fff;
+
+      &.active {
+        color: #fff;
+        background-color: #000;
+        border-right-color: #000;
+        border-left-color: #000;
+      }
+    }
+  }
+
+  &.no-outline {
+    border-color: transparent;
+
+    .btn {
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+
+      &:first-child {
+        border-left-color: transparent;
+      }
+
+      &:last-child {
+        border-right-color: transparent;
+      }
+
+      &.active {
+        color: $brand-primary;
+        background-color: #fff;
+        border-color: transparent;
+        outline-color: #000;
+      }
+
+      &:hover {
+        color: #000;
+        background-color: #fff;
+        border-color: #000;
+
+        &.active {
+          color: $brand-primary;
+          background-color: #fff;
+          border-color: transparent;
+          outline-color: #000;
+        }
+      }
+    }
+  }
+}

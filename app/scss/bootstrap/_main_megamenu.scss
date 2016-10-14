@@ -1,0 +1,223 @@
+//
+// main mega //
+//
+.navbar-default {
+	box-shadow: none;
+	border-radius: 0;
+	border: 0 none;
+	border-image-width : 0 0 0 0;
+//	background-color: #000;//
+}
+//
+// .navbar-default .navbar-brand {
+// 	color: #ffffff;
+// 	background: url("../images/home.png") no-repeat scroll center center transparent;
+// 	min-width: 40px;
+// }
+//
+.navbar-default .nav .nav-item .nav-item-cdu:hover,
+.navbar-default .nav .nav-item .nav-item-cdu:focus{
+	background-color : transparent;
+	text-decoration:underline;
+}
+.navbar-default .nav .nav-item .nav-item-cdu{
+	color: #FFF !important;
+}
+
+// remove bootstrap transparent bg on small device
+.navbar-nav {
+  @media (max-width: $grid-float-breakpoint-max) {
+    // Dropdowns get custom display when collapsed
+    .nav-item.open .dropdown-menu {
+        background-color: $dropdown-bg;
+        > li > a {
+            color: $dropdown-link-color;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $dropdown-link-hover-color;
+                background-color: $dropdown-link-hover-bg;
+            }
+        }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+    //
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #FFFFFF;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		background-color: #FFFFFF;;
+	}
+    //
+	.navbar-default .navbar-form .form-control {
+		font-size: 0.95em;
+		height: auto;
+	}
+	.navbar-default .sub-nav {
+		position: relative;  //LLA//
+	}
+	.navbar-default .navbar-collapse{
+		max-height:none; //LLA//
+	}
+}
+
+.nav-menu .sub-nav .container,
+.nav-menu .sub-nav .container-fluid,
+.nav-menu .sub-nav.container,
+.nav-menu .sub-nav.container-fluid{
+	z-index: 1; //LLA//
+	background-color: #FFF; //LLA//
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+
+// mega menu list //
+.nav-menu {
+	display: block;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 15;
+}
+
+// a top level navigation item in the mega menu //
+.nav-item {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+// first descendant link within a top level navigation item //
+.nav-item > a {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em 1em;
+	margin: 0 0 -1px 0;
+	border: 1px solid transparent;
+}
+
+// focus/open states of first descendant link within a top level navigation item //
+//.nav-item > a:focus,
+.nav-item > a.open {
+	border: 1px solid #dedede;
+}//
+
+// open state of first descendant link within a top level navigation item //
+.nav-item > a.open {
+	border-bottom: none;
+	z-index: 1;
+}
+
+// sub-navigation panel //
+.sub-nav {
+	position: absolute; //LLA//
+	display: none;
+	border: 1px solid transparent;
+	margin-top: 1px;
+	left: 0; //LLA//
+}
+
+// sub-navigation panel open state //
+.sub-nav.open {
+	display: block;
+}
+
+// list of items within sub-navigation panel //
+.sub-nav ul {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 1em 0 0;
+	padding: 0;
+}
+
+// list item within sub-navigation panel //
+.sub-nav li {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+// link item within sub-navigation panel list//
+.sub-nav li a{
+	color: #000;
+}
+.sub-nav li a:focus, .sub-nav li a:hover{
+	color: $brand-orange;
+}
+.mMenu{
+
+
+    // Specific dropdowns
+    // make dropdown border overlap tab border
+    background-color: $dropdown-bg;
+    border: 1px solid $dropdown-fallback-border; // IE8 fallback
+    border: 1px solid $dropdown-border;
+    border-radius: $border-radius-base;
+    @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+    background-clip: padding-box;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+}
+
+//
+// Mega menu //
+//
+//.mega-menu .navbar-default .navbar-nav > .open > a,
+//.mega-menu .navbar-default .navbar-nav > .open > a:hover,
+//.mega-menu .navbar-default .navbar-nav > .open > a:focus {
+//  background-color: #FFF;
+//	color : black;
+//}
+
+
+.mega-menu.navbar{
+    background-color: $gray-base;
+    color: $brand-orange-white;
+
+    .navbar-toggle{
+        border-color: $brand-orange-white;
+        &:hover,
+        &:focus{
+            background-color: $brand-orange;
+        }
+        .icon-bar{
+            background-color: $brand-orange-white;
+        }
+    }
+
+    .nav > li > a{
+        color: $brand-orange-white;
+        &:hover,
+        &:focus{
+            color: $brand-orange;
+        }
+    }
+}
+
+.mega-menu .nav,
+.mega-menu .collapse,
+.mega-menu .dropdown {
+	position : static;
+}
+.mega-menu .container {
+  position: relative;
+}
+.mega-menu .dropdown-menu {
+  left: auto;
+}
+.mega-menu .dropdown-menu .row {
+  padding: 20px 30px;
+}
+.mega-menu .nav-item.dropdown .dropdown-menu {
+  left: 0;
+  right: 0;
+}
+.mega-menu .nav-item.dropdown .dropdown-menu ul{
+    list-style: none;
+}

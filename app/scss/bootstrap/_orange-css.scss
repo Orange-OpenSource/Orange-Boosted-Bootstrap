@@ -1,0 +1,654 @@
+// html font-size forcée Ã  10px par BT
+html{
+    font-size: $html-font-size-base;
+    //Orange brand All is bold only plain texts are not bold//
+    font-weight:$brand-font-weight-normal;
+}
+
+// titles letter spacing
+h1, .h1 { letter-spacing: $letter-spacing-h1; }
+h2, .h2 { letter-spacing: $letter-spacing-h2; }
+h3, .h3 { letter-spacing: $letter-spacing-h3; }
+h4, .h4 { letter-spacing: $letter-spacing-h4; }
+h5, .h5 { letter-spacing: $letter-spacing-h5; }
+
+// reduce the size of titles for mobile display
+@media (max-width: $screen-sm-max) {
+  h1, .h1 { font-size: $font-size-h1-mobile; }
+  h2, .h2 { font-size: $font-size-h2-mobile; }
+  h3, .h3 { font-size: $font-size-h3-mobile; }
+  h4, .h4 { font-size: $font-size-h4-mobile; }
+  h5, .h5 { font-size: $font-size-h5-mobile; }
+  h6, .h6 { font-size: $font-size-h6-mobile; }
+}
+
+//
+// Caret
+// --------------------------------------------------
+// Fix the border-top style to display caret onto IE8
+.caret {
+    border-top-style: solid;
+}
+
+//
+// Alerts
+// --------------------------------------------------
+.alert {
+    border-width: 2px;
+}
+
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  border-radius: $border-radius-base;
+}
+.table label.o-checkbox,
+.table label.o-radio{
+    margin-bottom: 0;
+}
+
+//
+// Button groups
+// --------------------------------------------------
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  margin-left: -10px; // Offset the first child's margin
+  @include clearfix;
+
+  .btn,
+  .btn-group,
+  .input-group {
+    float: left;
+  }
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 10px;
+  }
+}
+
+// Block button
+// --------------------------------------------------
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 10px;
+}
+
+//
+// Dropdown menus
+// --------------------------------------------------
+// The dropdown menu (ul)
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  > li > a {
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+}
+
+// Navbar
+//
+//
+
+.navbar {
+  min-height: $navbar-height;
+  font-size: $navbar-font-size;
+  font-weight:$brand-font-weight-bold;
+  border: 0;
+
+  .navbar-brand {
+    padding: $navbar-brand-logo-padding 0;
+
+    &:focus {
+      outline: none;
+
+      img {
+        outline: 1px #fff dotted;
+        outline-offset: $navbar-brand-logo-focus-offset;
+       }
+    }
+
+    img {
+      height: $navbar-brand-logo-height;
+      width: auto;
+    }
+  }
+
+  &.minimized {
+    min-height: $navbar-height-minimized;
+
+    .navbar-brand {
+      padding: $navbar-brand-logo-padding-minimized 0;
+      height: $navbar-height-minimized;
+
+      img {
+        height: $navbar-brand-logo-height-minimized;
+      }
+    }
+
+    .navbar-nav {
+      // Uncollapse the nav
+      @media (min-width: $grid-float-breakpoint) {
+        > li {
+          > a {
+            margin-top: $navbar-item-margin-top-minimized;
+          }
+        }
+      }
+    }
+   }
+
+   .navbar-form,
+   .navbar-btn {
+     margin-top: 3.6rem;
+   }
+
+   .navbar-text {
+     line-height: 20px;
+     margin-top: 48px;
+   }
+}
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: $navbar-padding-horizontal;
+  padding: $nav-link-padding;
+  @include navbar-toggle-vertical-align($navbar-toggle-vertical-margin);
+  background-color: transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+
+  // We remove the `outline` here, but later compensate by attaching `:hover`
+  // styles to `:focus`.
+  &:focus {
+    outline: 0;
+  }
+
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+}
+.navbar-brand {
+  margin: 0;
+  > img {
+    float:left;
+  }
+
+}
+.navbar-header {
+  padding-right: $navbar-padding-horizontal;
+  padding-left:  $navbar-padding-horizontal;
+}
+
+.navbar-toggle-complement{
+    position: relative;
+    float: right;
+}
+.navbar-toggle-complement .navbar-nav {
+    margin: $padding-base-vertical 0 0 0;
+}
+.navbar-toggle-complement li{
+    float: left;
+}
+
+@media (min-width: $screen-sm-min) {
+    .navbar-toggle-complement {
+        display: none;
+    }
+}
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+.navbar-nav {
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    > li {
+      > a {
+        @include navbar-vertical-align(($navbar-padding-vertical+$line-height-computed));
+        margin-top: $navbar-item-margin-top;
+        margin-bottom: 0;
+        font-size: $navbar-font-size;
+
+        .icon {
+            font-size: $icon-font-weight;
+            margin-top: $navbar-brand-logo-padding;
+        }
+
+        &:focus {
+          outline: dotted 1px #fff;
+          outline-offset: 0;
+        }
+      }
+    }
+
+    > li:first-child{
+        margin-left: $padding-xs-horizontal;
+    }
+  }
+}
+.navbar-text {
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    @include navbar-vertical-align(($navbar-padding-vertical+$line-height-computed));
+    padding-top:  $navbar-padding-vertical;
+  }
+  font-size: $navbar-font-size;
+}
+
+.navbar-brand-text {
+  display: inline-block;
+  margin-top: 3.2rem;
+  margin-left: 2rem;
+}
+
+.nav {
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      color: $brand-orange-white;
+    }
+  }
+}
+
+// back from accessibility plugin css
+div.active:focus {
+  outline: dotted 1px black;
+}
+a:focus {
+  outline: dotted 1px black;
+}
+.close:hover,
+.close:focus {
+  outline: dotted 1px black;
+}
+
+.search-bar {
+  background-color: $brand-orange-black;
+  border-top: 1px solid $gray-darker;
+
+  .form-inline {
+    margin: $form-group-margin-bottom 0;
+    .form-group {
+      width: 87%;
+      margin-right: $form-search-margin-right;
+
+      .form-control {
+        width: 100%;
+        padding-top: $navbar-padding-vertical;
+        padding-bottom: $navbar-padding-vertical;
+        color: $brand-orange-white;
+        background-color: $gray-dark;
+        border: 0;
+      }
+    }
+  }
+}
+
+//
+// Carousel
+// --------------------------------------------------
+// .carousel-inner > .item {
+//   position: absolute;
+//   top: -999999em;
+//   display: block;
+//   -webkit-transition: 0.6s ease-in-out left;
+//           transition: 0.6s ease-in-out left;
+// }
+// .carousel-inner > .active {
+//   top: 0;
+// }
+// .carousel-inner > .active,
+// .carousel-inner > .next,
+// .carousel-inner > .prev {
+//   position: relative;
+// }
+// .carousel-inner > .next,
+// .carousel-inner > .prev {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+// }
+// .carousel-control .glyphicon{
+//     color: #000000;
+//     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 2px 0 #fff;
+//     filter:progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=0,strength=0)
+//         progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=90,strength=0)
+//         progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=180,strength=0)
+//         progid:DXImageTransform.Microsoft.Shadow(color=#fff,direction=270,strength=0);
+// }
+
+.carousel{
+  margin-bottom: $carousel-margin-bottom;
+
+  .carousel-control{
+    top: auto;
+    bottom: calc(50% - $carousel-control-width);
+    background-color: $brand-orange-white;
+    height: ($carousel-control-width * 2);
+    width: ($carousel-control-width * 2);
+    padding-top: ($carousel-control-width / 2);
+    opacity: .8;
+    text-shadow: none;
+    transition: width 0.5s ease;
+
+    &.left,
+    &.right{
+      background-image: none;
+      background-repeat: no-repeat;
+      &:hover,
+      &:focus{
+        width: ($carousel-control-width * 4);
+      }
+    }
+
+    .glyphicon{
+      color: $brand-orange;
+      position: relative;
+      top: auto;
+      margin: auto;
+      text-shadow: none;
+    }
+    .glyphicon-chevron-left{
+        left: auto;
+    }
+    .glyphicon-chevron-right{
+        right: auto;
+    }
+
+  }
+
+  & .carousel-control,
+  & .carousel-control{
+    display: block;
+  }
+}
+
+.carousel-indicators{
+    bottom: -$carousel-margin-bottom;
+
+    &:hover{
+      cursor: default;
+    }
+
+    li{
+      border-radius: 0;
+      background-color: $gray-light-plus;
+      border: none;
+      width: $font-size-base-up;
+      height: $carousel-indicator-height;
+      margin: 0 $carousel-indicator-height 0 $carousel-indicator-height;
+      &:hover{
+          background-color: $brand-orange;
+          cursor: pointer;
+      }
+      &.active{
+          background-color: $brand-orange;
+          width: $font-size-base-up;
+          height: $carousel-indicator-height;
+          margin: 0 $carousel-indicator-height 0 $carousel-indicator-height;
+      }
+   }
+}
+
+label, input, .form-control{
+  font-size: $font-size-base-up;
+}
+.form-control {
+  padding: $padding-base-vertical ($padding-base-horizontal / 2);
+}
+
+//
+// Forms control into input groups
+//
+.form-group {
+  label.control-label {
+    margin-bottom: 1rem;
+  }
+}
+
+.input-group > .form-control{
+    border-color: $gray-base;
+    &:focus{
+        border-color: $brand-orange;
+    }
+}
+
+.form-group {
+  .form-control-message {
+    display: none;
+  }
+
+  &.has-success {
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: $state-success-text;
+      }
+  }
+  &.has-error {
+    position: relative;
+
+    &.top {
+      .control-label {
+        margin-bottom: 0;
+      }
+
+      .form-control-message {
+        position: absolute;
+        top: 2.4rem;
+      }
+
+      .form-control {
+        margin-top: 4rem;
+      }
+    }
+
+    &.right {
+      .clearfix;
+
+      .control-label {
+        display: block;
+      }
+
+      .form-control,
+      .form-control-message {
+        float: left;
+      }
+
+      .form-control-message {
+        margin-left: 1rem;
+      }
+    }
+
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: $state-danger-text;
+      }
+
+    .form-control-message {
+      color: $brand-danger;
+      padding: 1rem 0;
+      display: block;
+      font-size: $font-size-base;
+      font-weight: bold;
+    }
+  }
+
+  &.has-warning {
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: $state-warning-text;
+      }
+  }
+}
+
+.form-horizontal {
+  .form-group.has-error {
+     &.top {
+       padding-top: 4rem;
+
+       .form-control {
+         margin-top: 0;
+       }
+
+       .form-control-message {
+         top: 0;
+       }
+     }
+
+     .form-control-message {
+      padding: 1rem;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .form-horizontal {
+    .form-group.has-error {
+      margin-bottom: 0;
+
+      .form-control-message {
+        padding-left: 0;
+      }
+
+      &.top {
+        padding-top: 0;
+
+        .form-control {
+          margin-top: 4rem;
+        }
+
+        .form-control-message {
+          top: 2rem;
+        }
+        .control-label {
+          // margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .form-group.has-error {
+    &.right {
+      .form-control-message {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+// Force the color for Heading into thumbnails
+.thumbnail {
+  // Image captions
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $thumbnail-caption-color;
+  }
+}
+
+// Panel, put a display block on header links for accordions full width click area
+.panel-title {
+  > a,
+  > small > a,
+  > .small > a {
+      display: block;
+  }
+}
+// remove the margin-top forced into bootstrap
+.panel-group {
+  // Tighten up margin so it's only between panels
+  .panel {
+    + .panel {
+      margin-top: 0px;
+    }
+  }
+}
+
+.o-footer, .o-footer-inverse {
+    padding: $navbar-padding-vertical;
+}
+
+// == TABLES
+.table {
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        // Remove border top and put border-botom
+        border-top: 0;
+        border-bottom: 1px solid $table-border-color;
+      }
+      > th {
+          font-size: $font-size-h6;
+      }
+    }
+  }
+
+  > thead th {
+      border-bottom: 2px;
+  }
+
+}
+@include table-row-variant-border(success, $state-success-border);
+@include table-row-variant-border(info, $state-info-border);
+@include table-row-variant-border(warning, $state-warning-border);
+@include table-row-variant-border(danger, $state-danger-border);
+
+
+// force caption for tables
+caption{
+	background-color: $brand-orange-white;
+	color: $gray-base;
+	padding: $padding-large-vertical 0;
+  font-size: $font-size-h1;
+	font-weight: bold;
+}
+
+// Force bold onto panel heading and footer and wells
+.panel-heading, .panel-footer, .well{
+    font-weight: bold;
+}
+
+.form-control {
+  border-width: 2px;
+}

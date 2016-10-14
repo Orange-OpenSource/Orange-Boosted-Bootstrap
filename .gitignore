@@ -25,3 +25,4 @@ node_modules
 .tmp
 bower_components
 docs_generated
+bootstrap-sass/tmp

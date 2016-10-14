@@ -1,0 +1,26 @@
+//
+// bullet points //
+//
+ul.o-square-list {
+	list-style-type: square;
+	color: $brand-orange;
+}
+ul.o-square-list li span{
+	color: #000;
+}
+ul.o-square-list ul {
+	list-style-type: square;
+	color: #999;
+	padding-left: 15px;
+}
+ul.o-square-list ul li span{
+	color: #000;
+}
+ul.o-square-list ul ul{
+	list-style-type: square;
+	color: $gray-light;
+	padding-left: 15px;
+}
+ul.o-square-list ul ul li span{
+	color: #000;
+}

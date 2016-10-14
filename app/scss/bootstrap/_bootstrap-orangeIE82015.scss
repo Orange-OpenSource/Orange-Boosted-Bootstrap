@@ -1,0 +1,84 @@
+// Core variables and mixins
+@import "variables-orange2015";
+@import "mixins";
+// Specific IE8 mixin
+@import "mixins/nav-divider";
+
+// Reset and dependencies
+@import "normalize";
+@import "print";
+@import "glyphicons";
+
+// Core CSS
+@import "scaffolding";
+@import "type";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+// Components
+@import "component-animations";
+@import "dropdowns";
+@import "button-groups";
+@import "input-groups";
+@import "navs";
+@import "navbar";
+@import "breadcrumbs";
+@import "pagination";
+@import "pager";
+@import "labels";
+@import "badges";
+@import "jumbotron";
+@import "thumbnails";
+@import "alerts";
+@import "progress-bars";
+@import "media";
+@import "list-group";
+@import "panels";
+@import "responsive-embed";
+@import "wells";
+@import "close";
+
+// Components w/ JavaScript
+@import "modals";
+@import "tooltip";
+@import "popovers";       
+@import "tooltip";
+@import "popovers";
+@import "carousel";
+
+// Utility classes
+@import "utilities";
+@import "responsive-utilities";
+@import "variables-orange2015";
+@import "IE8_font-size2015";
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus {
+    @include tab-focus;
+  }
+}
+p a {  
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
+  text-decoration: none;
+}      
+
+.form-horizontal .control-label {
+  text-align: left;
+}

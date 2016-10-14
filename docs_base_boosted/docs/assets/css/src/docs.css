@@ -1517,3 +1517,22 @@ h1[id] {
 #buttons_inverse h2 {
   color: #fff;
 }
+
+.doc-link {
+  margin-left: 1rem;
+  font-size: 2.4rem;
+}
+
+/* v4 notice above main navbar */
+.v4-tease {
+  display: block;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+.v4-tease:hover {
+  color: #f16e00;  
+  background-color: #000;
+}

@@ -1,0 +1,35 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+  margin-bottom: $line-height-computed;
+  list-style: none;
+  background-color: $breadcrumb-bg;
+  border-radius: $border-radius-base;
+  font-weight: bold;
+  display: block;
+  overflow: hidden;
+
+  > li {
+    float: left;
+
+    + li:before {
+      font-family: "boosted";
+      content: "\e902"; // Unicode space added since inline-block means non-collapsing white-space
+      // TODO put those values in variable-orange file
+      padding: $breadcrumb-separator-padding-vertical $breadcrumb-separator-padding-horizontal;//0 8px 0 5px;//$breadcrumb-separator-padding-vertical $breadcrumb-separator-padding-horizontal;
+      color: $breadcrumb-color;
+      font-size: $breadcrumb-separator-size;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  > .active {
+    color: $breadcrumb-active-color;
+  }
+}

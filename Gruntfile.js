@@ -40,9 +40,14 @@ module.exports = function (grunt) {
       'Safari >= 6'
     ]
   };
+  var path = require('path');
 
-  var configBridge = grunt.file.readJSON('./docs_base_bootstrap/grunt/configBridge.json', { encoding: 'utf8' });
-
+  var configBridge = grunt.file.readJSON('./docs_base_boosted/grunt/configBridge.json', { encoding: 'utf8' });
+  Object.keys(configBridge.paths).forEach(function (key) {
+    configBridge.paths[key].forEach(function (val, i, arr) {
+      arr[i] = path.join('./docs_generated/docs/assets', val);
+    });
+  });
   grunt.initConfig({
     yeoman: appConfig,
     jqueryCheck: configBridge.config.jqueryCheck.join('\n'),
@@ -88,7 +93,7 @@ module.exports = function (grunt) {
       options: {
         port: 9001,
         // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 35730
       },
 
@@ -356,8 +361,8 @@ module.exports = function (grunt) {
           /* build the bootstrap accessibility JS */
           'bower_components/bootstrapaccessibilityplugin/src/js/functions.js',
           'bower_components/bootstrapaccessibilityplugin/src/js/alert.js',
-          'bower_components/bootstrapaccessibilityplugin/src/js/modal.js',
-          'bower_components/bootstrapaccessibilityplugin/src/js/dropdown.js'
+          'bower_components/bootstrapaccessibilityplugin/src/js/modal.js'
+          // 'bower_components/bootstrapaccessibilityplugin/src/js/dropdown.js'
           //tab.js is incompatible with bs 3.3.5
           // 'bower_components/bootstrapaccessibilityplugin/src/js/tab.js'
           // we don't need the collapse, replace by our own accordion.js
@@ -434,6 +439,10 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= concat.boosted.dest %>',
         dest: 'dist/js/<%= yeoman.pkg.name %>.min.js'
+      },
+      docsJs: {
+        src: configBridge.paths.docsJs,
+        dest: 'docs_generated/docs/assets/js/docs.min.js'
       }
     },
     // concat: {
@@ -745,7 +754,7 @@ module.exports = function (grunt) {
           // Add the Stepbar and footer to the component page
             {
               from: '{% include components/navbar.html %}',
-              to: '{% include components/navbar.html %}{% include components/stepbar.html %}{% include components/ofooter.html %}'
+              to: '{% include components/navbar.html %}{% include components/stepbar.html %}{% include components/ofooter.html %}{% include components/toggles.html %}'
           },
           // Put the orange logo to replace the bootstrap one and the project name
             {
@@ -1068,9 +1077,18 @@ module.exports = function (grunt) {
     }
   });
 
+  // CSS distribution task.
+  // Supported Compilers: sass (Ruby) and libsass.
+  (function (sassCompilerName) {
+    require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
+  })(process.env.TWBS_SASS || 'libsass');
+  // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
+  grunt.registerTask('sass-compile', ['sass:core']);
+
   grunt.registerTask('docs', [
     'clean:docs',
     'copy:createDocbsGenerated',
+    'uglify:docsJs',
     'replace:remplace',
     'replace:removes',
     'jekyll:bootstrap',

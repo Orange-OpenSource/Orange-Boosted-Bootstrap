@@ -1,0 +1,111 @@
+// == FORMS ELEMENTS
+// Tuned radios
+// Cachons la case à cocher //
+.o-radio[type="radio"]:not(:checked),
+.o-radio[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+ 
+// on prépare le label //
+.o-radio[type="radio"]:not(:checked) + label,
+.o-radio[type="radio"]:checked + label{
+  position: relative; // permet de positionner les pseudo-éléments //
+  padding-left: ($input-height-base * 0.75); // fait un peu d'espace pour notre case à venir //
+  cursor: pointer;    // affiche un curseur adapté //
+  position: relative;
+  //top: 1px;//
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  line-height: $line-height-computed;
+  border: 1px dotted transparent;
+}
+
+// Align radio on the right//
+.o-radio-right.o-radio[type="radio"]:not(:checked) + label,
+.o-radio-right.o-radio[type="radio"]:checked + label{
+    padding-left: 0;
+    padding-right: ($input-height-base * 0.75); // fait un peu d'espace pour notre case à venir //    
+}
+
+// Aspect des radioes //
+// :before sert à créer la case à cocher //
+.o-radio[type="radio"]:not(:checked) + label:before,
+.o-radio[type="radio"]:checked + label:before{
+  content: "";
+  position: absolute;
+  left:0; 
+  width: ($input-height-base/2); 
+  height: ($input-height-base/2); // dim. de la case //
+  border: 3px solid $gray-light;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+// Align radio on the right//
+.o-radio-right.o-radio[type="radio"]:not(:checked) + label:before,
+.o-radio-right.o-radio[type="radio"]:checked + label:before{
+  left: auto;
+  right: 0;
+}
+
+ 
+// Aspect général de la coche //
+.o-radio[type="radio"]:not(:checked) + label:after,
+.o-radio[type="radio"]:checked + label:after{
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  font-size: $font-size-base;
+  color: $brand-orange-white;
+  width: ($input-height-base/2); 
+  height: ($input-height-base/2); // dim. de la case //
+  text-align: center;
+  //transition: all .2s; // on prévoit une animation //
+}
+.o-radio-right.o-radio[type="radio"]:not(:checked) + label:after,
+.o-radio-right.o-radio[type="radio"]:checked + label:after{
+    left: auto;
+    right: 0;
+}
+
+
+
+// Aspect si "pas cochée" //
+.o-radio[type="radio"]:not(:checked) + label:after{
+  opacity: 0; // coche invisible //
+  transform: scale(0); // mise à l'échelle à 0 //
+}
+// Aspect si "cochée" //
+.o-radio[type="radio"]:checked + label:after{
+  opacity: 1; // coche opaque //
+  transform: scale(1); // mise à l'échelle 1:1 //
+}
+// Aspect si "cochée" //
+.o-radio[type="radio"]:checked + label:before{
+  border-color:$brand-orange;
+  border-width: 6px;
+}
+
+// aspect désactivée //
+.o-radio[type="radio"]:disabled:not(:checked) + label:before,
+.o-radio[type="radio"]:disabled:checked + label:before{  
+  border-color: $gray-light-plus;
+}
+// styles de la coche (si cochée/désactivée) //
+.o-radio[type="radio"]:disabled:checked + label:after{
+  border-color:$gray-light-plus;
+  color: $brand-orange-white;
+}
+// on style aussi le label quand désactivé //
+.o-radio[type="radio"]:disabled + label{
+  color: $gray-light-plus;
+}
+ 
+// aspect au focus de l'élément //
+.o-radio[type="radio"]:checked:focus + label,
+.o-radio[type="radio"]:not(:checked):focus + label{
+  border: 1px dotted $gray-base;
+}

@@ -1,0 +1,18 @@
+//
+// Popovers
+// --------------------------------------------------
+.popover {
+  font-weight: bold;
+  // Offset the popover to account for the popover arrow
+  &.top     { margin-top: ( -$popover-arrow-width * 2); }
+  &.right   { margin-left: ( $popover-arrow-width * 2); }
+  &.bottom  { margin-top: ( $popover-arrow-width * 2); }
+  &.left    { margin-left: ( -$popover-arrow-width * 2); }
+}
+.popover-title {
+  padding: 10px;  
+}
+
+.popover-content {
+  padding: 10px;
+}

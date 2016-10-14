@@ -1,0 +1,40 @@
+//
+// Table //
+//
+table.tablesorter > thead > tr > th{
+	font-weight:bold;
+	padding-right:30px;
+	cursor: pointer;
+}
+table.tablesorter th, table.tablesorter td{
+	text-align:left;
+}
+table.tablesorter th a{
+    color:$gray-base;
+	text-decoration:none;
+}
+table.tablesorter th a:hover, table.tablesorter th a:focus{
+	text-decoration:underline;
+	color:$brand-orange;
+}
+table.tablesorter th.header { 
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+} 
+table.tablesorter .header:hover,
+table.tablesorter .header:focus{ 
+  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path('../images/triangle_sort.png'), '../images/triangle_sort.png')); 
+}
+table.tablesorter .headerSortDown { 
+  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path('../images/triangle_down.png'), '../images/triangle_down.png')); 
+} 
+table.tablesorter .headerSortUp { 
+  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path('../images/triangle_up.png'), '../images/triangle_up.png')); 
+}
+table.tablesorter caption{
+	background-color: $brand-orange-white;
+	color: $gray-base;
+	padding: $padding-large-vertical 0;
+  font-size: $font-size-h1;
+	font-weight: bold;
+}

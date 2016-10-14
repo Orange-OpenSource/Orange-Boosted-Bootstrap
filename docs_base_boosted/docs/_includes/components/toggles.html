@@ -1,0 +1,136 @@
+<div class="bs-docs-section">
+  <h1 id="toggles" class="page-header">Toggles</h1>
+  <p class='lead'>Using checkbox as switch / toggle with styling</p>
+  <h2 id="switch-toggle">Switch</h2>
+    <p>
+      Wrap a label / checkbox input pattern into form-group with .toggle class.
+    </p>
+    <div class="bs-example">
+      <div class="form-group toggle row">
+        <label for="checkbox1" class="col-md-3 col-xs-8">Default</label>
+        <input class="checkbox sr-only checked" id="checkbox1" checked="" type="checkbox">
+        <label for="checkbox1" class="checkbox-label col-xs-3" aria-hidden="true">
+          <span class="on icon-checkbox_tick"></span>
+          <span class="off icon-delete"></span>
+        </label>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="form-group toggle row">
+  <label for="checkbox1" class="col-md-3 col-xs-8">Default</label>
+  <input class="checkbox sr-only checked" id="checkbox1" checked="" type="checkbox">
+  <label for="checkbox1" class="checkbox-label col-xs-3" aria-hidden="true">
+    <span class="on icon-checkbox_tick"></span>
+    <span class="off icon-delete"></span>
+  </label>
+</div>
+{% endhighlight %}
+
+    <p>Default color is brand primary. Success color is also supported, use .success class on input tag</p>
+    <div class="bs-example">
+      <div class="form-group toggle row">
+        <label for="checkbox2" class="col-md-3 col-xs-8">Success</label>
+        <input class="checkbox sr-only checked success" id="checkbox2" checked="" type="checkbox">
+        <label for="checkbox2" class="checkbox-label col-xs-3" aria-hidden="true">
+          <span class="on icon-checkbox_tick"></span>
+          <span class="off icon-delete"></span>
+        </label>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="form-group toggle row">
+  <label for="checkbox2" class="col-md-3 col-xs-8">Success</label>
+  <input class="checkbox sr-only checked success" id="checkbox2" checked="" type="checkbox">
+  <label for="checkbox2" class="checkbox-label col-xs-3" aria-hidden="true">
+    <span class="on icon-checkbox_tick"></span>
+    <span class="off icon-delete"></span>
+  </label>
+</div>
+{% endhighlight %}
+
+    <p>
+      Finally use .rounded class on .checkbox-label element to get rounded switch alternate version. Make sure to set the width according to the lenghtiest toggle state label.
+    </p>
+    <div class="bs-example">
+      <div class="form-group toggle row">
+        <label for="checkbox4" class="col-md-3 col-xs-8">Rounded</label>
+        <input class="checkbox success sr-only checked" id="checkbox4" checked="" type="checkbox">
+        <label for="checkbox4" class="checkbox-label rounded col-xs-3" aria-hidden="true" style="width: 78px;">
+          <span class="on">On</span>
+          <span class="off">Off</span>
+        </label>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="form-group toggle row">
+  <label for="checkbox4" class="col-md-3 col-xs-8">Rounded</label>
+  <input class="checkbox success sr-only checked" id="checkbox4" checked="" type="checkbox">
+  <label for="checkbox4" class="checkbox-label rounded col-xs-3" aria-hidden="true" style="width: 78px;">
+    <span class="on">On</span>
+    <span class="off">Off</span>
+  </label>
+</div>
+{% endhighlight %}
+
+  <h2 id="three-way-toggle">3 way toggle</h2>
+
+  <p>Wrap 3 radio type inputs into a .btn-group element.</p>
+  <div class="bs-example">
+    <div class="btn-group" data-toggle="buttons" role="group" style="margin: 2rem 0;">
+      <label class="btn btn-secondary active">
+        <input name="options" id="option1" autocomplete="off" checked="" type="radio"> 1
+      </label>
+      <label class="btn btn-secondary">
+        <input name="options" id="option2" autocomplete="off" type="radio"> 2
+      </label>
+      <label class="btn btn-secondary">
+        <input name="options" id="option3" autocomplete="off" type="radio"> 3
+      </label>
+    </div>
+  </div>
+{% highlight html %}
+<div class="btn-group" data-toggle="buttons" role="group">
+  <label class="btn btn-secondary active">
+    <input name="options" id="option1" autocomplete="off" checked="" type="radio"> 1
+  </label>
+  <label class="btn btn-secondary">
+    <input name="options" id="option2" autocomplete="off" type="radio"> 2
+  </label>
+  <label class="btn btn-secondary">
+    <input name="options" id="option3" autocomplete="off" type="radio"> 3
+  </label>
+</div>
+{% endhighlight %}
+
+  <p>Alternatively, use .no-outline class on .btn-group element to get the clear version.</p>
+  <div class="bs-example">
+    <div class="btn-group no-outline" data-toggle="buttons" role="group" style="margin: 2rem 0;">
+      <label class="btn btn-secondary active">
+        <input name="options" id="option21" autocomplete="off" checked="" type="radio"> 1
+      </label>
+      <label class="btn btn-secondary">
+        <input name="options" id="option22" autocomplete="off" type="radio"> 2
+      </label>
+      <label class="btn btn-secondary">
+        <input name="options" id="option33" autocomplete="off" type="radio"> 3
+      </label>
+    </div>
+  </div>
+
+{% highlight html %}
+<div class="btn-group no-outline" data-toggle="buttons" role="group">
+  <label class="btn btn-secondary active">
+    <input name="options" id="option21" autocomplete="off" checked="" type="radio"> 1
+  </label>
+  <label class="btn btn-secondary">
+    <input name="options" id="option22" autocomplete="off" type="radio"> 2
+  </label>
+  <label class="btn btn-secondary">
+    <input name="options" id="option33" autocomplete="off" type="radio"> 3
+  </label>
+</div>
+{% endhighlight %}
+</div>

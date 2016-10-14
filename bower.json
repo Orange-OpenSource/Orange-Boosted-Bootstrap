@@ -13,8 +13,8 @@
     "framework",
     "web"
   ],
-  "homepage": "http://orange-opensource.github.io/Orange-Boosted-Bootstrap",      
-  "license": "MIT",    
+  "homepage": "http://orange-opensource.github.io/Orange-Boosted-Bootstrap",
+  "license": "MIT",
   "moduleType": "globals",
   "main": [
     "dist/css/bootstrap-orange2015.css",
@@ -50,8 +50,7 @@
     "/.*",
     "*.zip"
   ],
-  "devDependencies": {
-  },   
+  "devDependencies": {},
   "dependencies": {
     "bootstrap": "3.3.7",
     "bootstrapaccessibilityplugin": ">=1.0.3",

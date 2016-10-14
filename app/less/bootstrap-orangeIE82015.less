@@ -1,6 +1,8 @@
 // Core variables and mixins
 @import "../../bower_components/bootstrap/less/variables.less";
 @import "mixins.less";
+// Specific IE8 mixin
+@import "../../bower_components/bootstrap/less/mixins/nav-divider.less";
 
 // Reset and dependencies
 @import "../../bower_components/bootstrap/less/normalize.less";
@@ -20,7 +22,7 @@
 @import "../../bower_components/bootstrap/less/component-animations.less";
 @import "../../bower_components/bootstrap/less/dropdowns.less";
 @import "../../bower_components/bootstrap/less/button-groups.less";
-@import "../../bower_components/bootstrap/less/input-groups.less";
+@import "input-groups.less";
 @import "../../bower_components/bootstrap/less/navs.less";
 @import "../../bower_components/bootstrap/less/navbar.less";
 @import "breadcrumbs.less";
@@ -31,7 +33,7 @@
 @import "../../bower_components/bootstrap/less/jumbotron.less";
 @import "../../bower_components/bootstrap/less/thumbnails.less";
 @import "../../bower_components/bootstrap/less/alerts.less";
-@import "../../bower_components/bootstrap/less/progress-bars.less";
+@import "progress-bars.less";
 @import "../../bower_components/bootstrap/less/media.less";
 @import "../../bower_components/bootstrap/less/list-group.less";
 @import "../../bower_components/bootstrap/less/panels.less";
@@ -66,17 +68,17 @@ a {
     .tab-focus();
   }
 }
+p a {  
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
 nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
   text-decoration: none;
 }      
 
 .form-horizontal .control-label {
   text-align: left;
-}
-
-.nav-divider(@color: #e5e5e5) {
-  height: 1px;
-  margin: ((@line-height-computed / 2) - 1) 0;
-  overflow: hidden;
-  background-color: @color;
 }

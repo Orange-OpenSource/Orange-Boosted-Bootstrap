@@ -1,0 +1,171 @@
+//
+// Variables for IE lower than 9, give fixed size
+// --------------------------------------------------
+
+$font-size-base: 14px;
+$font-size-base-up: 16px;
+/// For FIXED size
+$font-size-large: 20px;
+$font-size-small: 12px;
+
+$font-size-h1: 34px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
+
+$font-size-h1-mobile: 20px;
+$font-size-h2-mobile: 18px;
+$font-size-h3-mobile: 16px;
+$font-size-h4-mobile: 14px;
+$font-size-h5-mobile: $font-size-h4-mobile;
+$font-size-h6-mobile: $font-size-h5-mobile;
+
+$letter-spacing-h1:-.68px;
+$letter-spacing-h2:-.6px;
+$letter-spacing-h3:-.3px;
+$letter-spacing-h4:-.2px;
+$letter-spacing-h5:-.1px;
+
+/// For FIXED size
+$line-height-computed: (floor($font-size-base * $line-height-base));
+/// for FIXED size
+$icon-font-weight:        30px;
+
+/// for fixed size
+$padding-base-vertical: 8px;
+$padding-base-horizontal: 20px;
+$padding-large-vertical: 12px;
+$padding-large-horizontal: 20px;
+$padding-small-vertical: 5px;
+$padding-small-horizontal: 10px;
+$padding-xs-vertical: 1px;
+// Fix by the brand, minimum space = 10px
+$padding-xs-horizontal: 10px;
+
+$caret-width-base:          8px;
+/// Carets increase slightly in size for larger components.
+$caret-width-large:         8px;
+
+/// for FIXED size
+$table-cell-padding: 9px;
+$table-condensed-cell-padding: 5px;
+
+$btn-font-size: 16px;
+$btn-font-size-sm: 14px;
+$btn-font-size-lg: 16px;
+$btn-padding: 7px 18px 9px 18px;
+$btn-padding-sm: 3px 8px 3px 8px;
+$btn-padding-lg: 12px 28px 14px 28px;
+
+// for FIXED size
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
+/// Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2);
+/// Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
+
+$form-group-margin-bottom:       20px;
+$form-search-margin-right:       6px;
+
+// checkbox-label toggle padding
+$checkbox-toggle-padding-vertical:  10px;
+$checkbox-label-width:              60px;
+$checkbox-label-height:             30px;
+$checkbox-label-size:               26px;
+
+// 3-way switch
+$toggles-3-way-width:               40px;
+
+/// for fixed size
+$navbar-height:                    100px;
+$navbar-height-minimized:          80px;
+$navbar-font-size:                 16px;
+$navbar-padding-vertical:          10px;
+$navbar-toggle-vertical-margin:    46px;
+
+$navbar-item-margin-top: 45px;
+$navbar-brand-logo-padding: 25px;
+$navbar-brand-logo-height: 50px;
+$navbar-item-margin-top-minimized: 33px;
+$navbar-brand-logo-padding-minimized: 20px;
+$navbar-brand-logo-height-minimized: 40px;
+
+
+/// for fixed size
+$nav-link-padding: 10px 9px 10px 10px;
+
+$nav-tab-margin: 8px;
+$nav-tab-padding: 8px 18px 10px 18px;
+
+// for FIXED size
+$nav-local-padding-vertical: 16px;
+
+//== Step process bar
+$o-stepbar-height: 40px;
+$o-stepbar-mobile-width: 56px;
+$o-stepbar-mobile-padding-vertical: 12px;
+$o-stepbar-mobile-margin-right: 10px;
+$o-stepbar-mobile-last-width: 72px;
+$o-stepbar-arrow-width: 16px;
+
+$pagination-width: 40px;
+$pagination-width-lg: 37.5px;
+$pagination-width-sm: 18.75px;
+
+$pagination-padding: 10px 18px;
+$pagination-arrow-padding: 18px;
+$pagination-arrow-top: 11px;
+$pagination-label-padding: 38px;
+
+// Calendar
+$calendar-width: 320px;
+$calendar-day-width: 40px;
+
+/// For FIXED size
+$jumbotron-font-size:            (ceil($font-size-base * 1.5));
+$jumbotron-heading-font-size:    (ceil($font-size-base * 4.5));
+
+$panel-heading-padding:       12px 0;
+$panel-footer-padding:        $panel-heading-padding;
+
+$o-panel-height: 195px;
+$o-panel-block-padding: 10px 12px;
+$o-panel-block-min-height: 70px;
+
+$o-panel-height-sm: 215px;
+$o-panel-height-xxl: 240px;
+$o-panel-block-margin-bottom-xs: 10px;
+$o-panel-block-min-height-xs: 60px;
+$o-panel-height-md: 142px;
+$o-panel-block-min-height-md: 60px;
+
+$thumbnail-caption-padding:   20px;
+
+$breadcrumb-separator-size: 10px;
+
+$carousel-control-width: 30px;
+$carousel-margin-bottom: 30px;
+$carousel-indicator-height: 4px;
+
+
+
+
+// nav local
+$nav-local-padding-vertical: 16px;
+
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+
+@mixin navbar-vertical-align($element-height) {
+    margin-top: (($navbar-height - ($navbar-padding-vertical + $element-height)));
+}
+@mixin navbar-toggle-vertical-align($element-height) when not(ispixel($element-height)) {
+    margin-top: (($navbar-height - (((unit($element-height))*10))));
+    margin-bottom: 10px;
+}

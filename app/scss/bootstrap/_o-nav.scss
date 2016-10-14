@@ -1,0 +1,124 @@
+//
+// classic tab //
+//
+.nav > li > a {
+	cursor: pointer;
+}
+
+// Give the tabs something to sit on
+.nav-tabs {
+  > li {
+
+    + li {
+      margin-left: $nav-tab-margin;
+      // for mobile display remove the margin between tabs
+      @media all and (max-width: $screen-sm-max) {
+        margin-left: 0;
+      }
+    }
+
+    // Actual tabs (as links)
+    > a {
+      padding: $nav-tab-padding;
+      font-weight: $brand-font-weight-bold;
+      font-size: $navbar-font-size;
+      line-height: $nav-tab-line-height;
+      border-width: 2px;
+      border-bottom-width: 0;
+      margin-right: 0;
+      // for mobile display unselected tabs hadd #666 background color and white text
+      @media all and (max-width: $screen-sm-max) {
+        background-color: $gray-dark;
+        color: #FFF;
+      }
+
+      &:hover ,
+      &:focus {
+        color: $nav-tabs-link-hover-color;
+        background-color: $nav-tabs-link-hover-bg;
+      }
+    }
+
+    > a:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      left: 0;
+      bottom: 0;
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover {
+          outline:none;
+          border-width: 2px;
+          border-bottom-width: 0;
+      }
+    }
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &:focus {
+          border-width: 2px;
+          border-bottom-width: 0;
+          outline-style: dotted;
+          outline-offset: -6px;
+          outline-width: 1px;
+      }
+    }
+    margin-bottom: -2px;
+  }
+
+  .nav-item > a {
+    margin-bottom: 0;
+  }
+  border-bottom-width: 2px;
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    + li {
+      margin-left: ($grid-gutter-width / 4);
+    }
+
+    // Active state
+    &,
+    &.active {
+        > a {
+          font-weight: bold;
+
+          &:hover {
+              color: $nav-pills-active-link-hover-color;
+              background-color: $nav-pills-active-link-hover-bg;
+          }
+          &:focus {
+              outline:none;
+              background-color: $brand-orange;
+              color: $brand-orange-white;
+          }
+        }
+    }
+  }
+
+  &.nav-stacked {
+    > li {
+      margin-left: 0;
+    }
+  }
+}
+
+.tab-content{
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  border-color: #000;
+  padding: 1em;
+}
+
+.tab-content-clear{
+  border: none;
+  padding: 1em;
+}

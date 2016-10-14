@@ -516,15 +516,25 @@
 
 // switches
 
+.checkbox.checked + .checkbox-label {
+  .on {
+    display: block;
+  }
+
+  .off {
+    display: none;
+  }
+}
+
 .checkbox-label,
-.checkbox-label::before,
+.checkbox-label:before,
 .checkbox-label .on,
 .checkbox-label .off {
   transition: .4s;
 }
 
 .form-group.toggle label:first-child {
-  padding: 1rem 0;
+  padding: @checkbox-toggle-padding-vertical 0;
   margin-bottom: 0;
   line-height: 1.25;
 }
@@ -532,83 +542,131 @@
 .checkbox-label {
   position: relative;
   display: block;
-  width: 6rem;
-  height: 3rem;
-  margin: .5rem 0;
+  width: @checkbox-label-width;
+  height: @checkbox-label-height;
+  margin: (@checkbox-toggle-padding-vertical / 2) 0;
   background: @gray-dark;
   border: 2px solid @gray-dark;
+  cursor: pointer;
+  padding: 0 .6rem;
 
-  &.rounded,
-  &.rounded::before {
-    border-radius: 2.6rem;
+  .on,
+  .off {
+    display: block;
+    font-weight: bold;
+    line-height: @checkbox-label-size;
+    color: #fff;
+    text-align: left;
   }
 
   .on {
-    position: absolute;
-    left: .6rem;
-    z-index: 0;
-    display: block;
-    font-weight: bold;
-    line-height: 2.6rem;
-    color: #fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     opacity: 0;
+    display: none;
+    text-align: left;
   }
 
   .off {
-    position: absolute;
-    right: .6rem;
-    z-index: 0;
-    display: block;
-    font-weight: bold;
-    line-height: 2.6rem;
-    color: #fff;
-    text-align: right;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
+    text-align: right;
   }
 
-  &::before {
+  &:before {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
     display: block;
-    width: 2.6rem;
-    height: 2.6rem;
+    width: @checkbox-label-size;
+    height: @checkbox-label-size;
     content: "";
     background: #fff;
   }
+
+  &.rounded {
+    border-radius: @checkbox-label-size;
+    min-width: 6rem;
+    width: auto;
+    padding: 0 1.4rem;
+
+    .on,
+    .off {
+      width: auto;
+    }
+  }
+
+  &.rounded:before {
+    border-radius: @checkbox-label-size;
+  }
 }
 
-.checkbox {
-  position: absolute;
-  display: none;
+.toggle {
+  .checkbox {
+    position: absolute;
 
-  &:focus {
-    + .checkbox-label::before {
-      outline: 1px dotted #fff;
-    }
-  }
-
-  &:checked {
-    + .checkbox-label {
-      background: @brand-primary;
-      border-color: @brand-primary;
-      .on {
-        opacity: 1;
-      }
-      .off {
-        opacity: 0;
-      }
-      &::before {
-        left: 3rem;
+    &:focus {
+      + .checkbox-label:before {
+        outline: 2px dotted #000;
       }
     }
-  }
 
-  &.success:checked {
-    + .checkbox-label {
-      background: @brand-success;
-      border-color: @brand-success;
+    &.checked{
+      + .checkbox-label {
+        background: @brand-primary;
+        border-color: @brand-primary;
+        .on {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
+        }
+        .off {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          opacity: 0;
+        }
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &:checked {
+      + .checkbox-label {
+        background: @brand-primary;
+        border-color: @brand-primary;
+        .on {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
+        }
+        .off {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          opacity: 0;
+        }
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    &.success.checked{
+      + .checkbox-label {
+        background: @brand-success;
+        border-color: @brand-success;
+        .rounded .on {
+          color: #000;
+        }
+      }
+    }
+
+    &.success:checked {
+      + .checkbox-label {
+        background: @brand-success;
+        border-color: @brand-success;
+        &.rounded .on {
+          color: #000;
+        }
+      }
     }
   }
 }
@@ -623,7 +681,7 @@
   border: 2px solid #000;
 
   .btn {
-    width: 4rem;
+    width: @toggles-3-way-width;
     padding-right: 0;
     padding-left: 0;
     margin: 0;

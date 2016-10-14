@@ -1,0 +1,172 @@
+//
+// Orange stepbar
+//
+
+.o-stepbar {
+  &,
+  ol,
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  // one item
+  .stepbar-item:first-child:nth-last-child(1) {
+    width: 100%;
+  }
+
+  // two items
+  .stepbar-item:first-child:nth-last-child(2),
+  .stepbar-item:first-child:nth-last-child(2) ~ .stepbar-item {
+    width: 50%;
+  }
+
+  // three items
+  .stepbar-item:first-child:nth-last-child(3),
+  .stepbar-item:first-child:nth-last-child(3) ~ .stepbar-item {
+    width: 33.3333%;
+  }
+
+  // four items
+  .stepbar-item:first-child:nth-last-child(4),
+  .stepbar-item:first-child:nth-last-child(4) ~ .stepbar-item {
+    width: 25%;
+  }
+
+  // five items
+  .stepbar-item:first-child:nth-last-child(5),
+  .stepbar-item:first-child:nth-last-child(5) ~ .stepbar-item {
+    width: 20%;
+  }
+
+  .stepbar-item {
+    @include stepbar-arrow($arrow-gray);
+    position: relative;
+    float: left;
+    padding: $padding-large-vertical ( $padding-base-horizontal / 2 ) $padding-large-vertical ( $padding-base-horizontal + $o-stepbar-arrow-width);
+    font-weight: bold;
+    font-size: $navbar-font-size;
+    line-height: $navbar-font-size;
+    color: $brand-orange-black;
+    white-space: nowrap;
+    list-style: none;
+    background-color: $gray-light-plus;
+
+    &:first-child {
+      padding-left: $padding-base-horizontal;
+    }
+
+    &:last-child,
+    &.done:last-child,
+    &.current:last-child,
+    &.next:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.done {
+      @include stepbar-arrow($arrow-black);
+      background-color: $brand-orange-black;
+      .stepbar-link {
+        color: $brand-orange-white;
+        &:focus,
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+
+    &.current {
+      @include stepbar-arrow($arrow-orange);
+      background-color: $brand-primary;
+      .stepbar-link {
+        color: $brand-orange-white;
+      }
+    }
+
+    .stepbar-link {
+      text-decoration: none;
+
+      .step-number:after {
+        content: ".";
+      }
+    }
+  }
+}
+
+@media(max-width: $screen-sm-max) {
+  .o-stepbar {
+    .stepbar-item {
+      padding: $o-stepbar-mobile-padding-vertical ( $padding-base-horizontal / 2 ) $o-stepbar-mobile-padding-vertical ( $padding-base-horizontal + $o-stepbar-mobile-arrow-width);
+    }
+
+    .stepbar-item:after,
+    .stepbar-item.done:after,
+    .stepbar-item.current:after,
+    .stepbar-item.next:after {
+      right: -1.2px; /* for edge support */
+      width: $o-stepbar-mobile-arrow-width;
+      height: $o-stepbar-mobile-arrow-height;
+      background-size: cover;
+    }
+
+    &.xs-numbers {
+      .step-number:after {
+        display: none;
+      }
+
+      // three items
+      .stepbar-item:first-child:nth-last-child(3),
+      .stepbar-item:first-child:nth-last-child(3) ~ .stepbar-item {
+        width: 20%;
+
+        &.current {
+            width: 60%;
+        }
+      }
+
+      // four and five items
+      .stepbar-item:first-child:nth-last-child(4),
+      .stepbar-item:first-child:nth-last-child(4) ~ .stepbar-item,
+      .stepbar-item:first-child:nth-last-child(5),
+      .stepbar-item:first-child:nth-last-child(5) ~ .stepbar-item {
+        width: 20%;
+
+        &.current {
+            width: 40%;
+        }
+      }
+
+      .stepbar-item {
+        text-align: center;
+        width: 20%;
+        padding-left: $o-stepbar-mobile-arrow-width;
+        padding-right: 0;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &.current {
+          width: 60%;
+
+         .step-number {
+            display: none;
+          }
+        }
+
+        &:not(.current) .step-title {
+          display: none;
+        }
+      }
+    }
+
+    &.xs-labels {
+      .step-number {
+        display: none;
+      }
+    }
+  }
+}

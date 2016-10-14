@@ -9,6 +9,11 @@
     padding: 0;
   }
 
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .nav-local {
     > li {
       float: left;
@@ -28,9 +33,9 @@
         }
       }
 
-      &:first-child a{
-          padding-left: 0;
-      }
+      // &:first-child a{
+      //     padding-left: 0;
+      // }
 
       &.active > a{
           color: @brand-orange;
@@ -60,6 +65,7 @@
         &:focus {
           color: @brand-orange;
           background-color: @brand-orange-black;
+          outline-color: #fff;
         }
       }
 
@@ -84,7 +90,7 @@
       line-height: 1;
       color: @brand-orange;
 
-      &::after {
+      &:after {
         position: absolute;
         top: 1.6rem;
         right: 1rem;
@@ -127,7 +133,7 @@
     .local-select {
       color: @brand-orange;
 
-      &::after {
+      &:after {
         color: #fff;
       }
     }

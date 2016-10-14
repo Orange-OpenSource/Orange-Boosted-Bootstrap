@@ -1,0 +1,147 @@
+// Orange local navigation
+//
+//
+
+.o-nav-local {
+  hr  {
+    border-top: 1px solid $gray-light;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-local {
+    > li {
+      float: left;
+
+      > a{
+        font-size: $navbar-font-size;
+        font-weight: $brand-font-weight-bold;
+        line-height: $navbar-font-size;
+        // TODO put size into variable files, and put px for IE!! and update include boostedIE82015
+        padding-top: $nav-local-padding-vertical;
+        padding-bottom: $nav-local-padding-vertical;
+
+        &:hover,
+        &:focus {
+          color: $brand-orange;
+          background-color: $brand-orange-white;
+        }
+      }
+
+      // &:first-child a{
+      //     padding-left: 0;
+      // }
+
+      &.active > a{
+          color: $brand-orange;
+          background-color: $brand-orange-white;
+      }
+    }
+
+  }
+}
+
+.o-nav-local.inverse {
+
+  hr {
+    border-top: 1px solid $gray-darker;
+  }
+
+  .nav-local {
+    background-color: $brand-orange-black;
+
+    > li {
+
+      > a{
+        color: $brand-orange-white;
+        background-color: $brand-orange-black;
+
+        &:hover,
+        &:focus {
+          color: $brand-orange;
+          background-color: $brand-orange-black;
+          outline-color: #fff;
+        }
+      }
+
+      &.active > a{
+          color: $brand-orange;
+          background-color: $brand-orange-black;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .o-nav-local .container {
+    padding: 0;
+    position: relative;
+
+    .local-select {
+      padding: $nav-local-padding-vertical $padding-xs-horizontal;
+      padding-left: $padding-xs-horizontal;
+      font-size: $font-size-base-up;
+      font-weight: bold;
+      line-height: 1;
+      color: $brand-orange;
+
+      &:after {
+        position: absolute;
+        top: 1.6rem;
+        right: 1rem;
+        padding-left: .6rem;
+        font-family: "boosted";
+        font-size: inherit;
+        color: #000;
+        content: "\e901";
+      }
+    }
+
+    .nav-local {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      background-color: #fff;
+
+      li {
+        display: block;
+        width: 100%;
+
+        a {
+          &:hover,
+          &:focus {
+            background-color: $brand-orange;
+            color: #fff;
+          }
+
+          &:first-child {
+            padding-left: $padding-xs-horizontal;
+          }
+        }
+      }
+    }
+  }
+
+  .o-nav-local.o-nav-local.inverse {
+    .local-select {
+      color: $brand-orange;
+
+      &:after {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .nav-local {
+    display: block;
+  }
+}

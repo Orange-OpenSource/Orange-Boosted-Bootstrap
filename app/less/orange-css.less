@@ -103,6 +103,15 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
   .navbar-brand {
     padding: @navbar-brand-logo-padding 0;
 
+    &:focus {
+      outline: none;
+
+      img {
+        outline: 1px #fff dotted;
+        outline-offset: @navbar-brand-logo-focus-offset;
+       }
+    }
+
     img {
       height: @navbar-brand-logo-height;
       width: auto;
@@ -121,17 +130,27 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
       }
     }
 
-.navbar-nav {
-  // Uncollapse the nav
-  @media (min-width: @grid-float-breakpoint) {
-    > li {
-      > a {
-        margin-top: @navbar-item-margin-top-minimized;
+    .navbar-nav {
+      // Uncollapse the nav
+      @media (min-width: @grid-float-breakpoint) {
+        > li {
+          > a {
+            margin-top: @navbar-item-margin-top-minimized;
+          }
+        }
       }
     }
-  }
-  }
-  }
+   }
+
+   .navbar-form,
+   .navbar-btn {
+     margin-top: 3.6rem;
+   }
+
+   .navbar-text {
+     line-height: 20px;
+     margin-top: 48px;
+   }
 }
 
 // Navbar toggle
@@ -218,11 +237,16 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
             font-size: @icon-font-weight;
             margin-top: @navbar-brand-logo-padding;
         }
+
+        &:focus {
+          outline: dotted 1px #fff;
+          outline-offset: 0;
+        }
       }
     }
 
-    li:first-child a{
-        padding-left: @padding-base-horizontal;
+    > li:first-child{
+        margin-left: @padding-xs-horizontal;
     }
   }
 }
@@ -236,12 +260,9 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
 }
 
 .navbar-brand-text {
-  // Uncollapse the nav
-  @media (min-width: @grid-float-breakpoint) {
-    .navbar-vertical-align((@navbar-padding-vertical+@line-height-computed));
-  }
-  position: absolute;
-  padding: 0 @nav-link-padding;
+  display: inline-block;
+  margin-top: 3.2rem;
+  margin-left: 2rem;
 }
 
 .nav {
@@ -417,44 +438,142 @@ label, input, .form-control{
         border-color: @brand-orange;
     }
 }
-.has-success {
-  .control-label {
-    color: #000;
-  }
 
-    & .input-group > .form-control{
-        // Feedback states
-        border-color: @state-success-text;
-    }
-}
-.has-error {
-  .control-label {
-    color: #000;
-  }
-
-    & .input-group > .form-control{
-        // Feedback states
-        border-color: @state-danger-text;
-    }
-
+.form-group {
   .form-control-message {
-    color: @brand-danger;
-    padding: 1rem 0;
-    display: inline-block;
-    font-size: @font-size-base;
-    font-weight: bold;
-  }
-}
-.has-warning {
-  .control-label {
-    color: #000;
+    display: none;
   }
 
-    & .input-group > .form-control{
-        // Feedback states
-        border-color: @state-warning-text;
+  &.has-success {
+    .control-label {
+      color: #000;
     }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: @state-success-text;
+      }
+  }
+  &.has-error {
+    position: relative;
+
+    &.top {
+      .control-label {
+        margin-bottom: 0;
+      }
+
+      .form-control-message {
+        position: absolute;
+        top: 2.4rem;
+      }
+
+      .form-control {
+        margin-top: 4rem;
+      }
+    }
+
+    &.right {
+      .clearfix;
+
+      .control-label {
+        display: block;
+      }
+
+      .form-control,
+      .form-control-message {
+        float: left;
+      }
+
+      .form-control-message {
+        margin-left: 1rem;
+      }
+    }
+
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: @state-danger-text;
+      }
+
+    .form-control-message {
+      color: @brand-danger;
+      padding: 1rem 0;
+      display: block;
+      font-size: @font-size-base;
+      font-weight: bold;
+    }
+  }
+
+  &.has-warning {
+    .control-label {
+      color: #000;
+    }
+
+      & .input-group > .form-control{
+          // Feedback states
+          border-color: @state-warning-text;
+      }
+  }
 }
+
+.form-horizontal {
+  .form-group.has-error {
+     &.top {
+       padding-top: 4rem;
+
+       .form-control {
+         margin-top: 0;
+       }
+
+       .form-control-message {
+         top: 0;
+       }
+     }
+
+     .form-control-message {
+      padding: 1rem;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .form-horizontal {
+    .form-group.has-error {
+      margin-bottom: 0;
+
+      .form-control-message {
+        padding-left: 0;
+      }
+
+      &.top {
+        padding-top: 0;
+
+        .form-control {
+          margin-top: 4rem;
+        }
+
+        .form-control-message {
+          top: 2rem;
+        }
+        .control-label {
+          // margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .form-group.has-error {
+    &.right {
+      .form-control-message {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 
 // Force the color for Heading into thumbnails
 .thumbnail {
