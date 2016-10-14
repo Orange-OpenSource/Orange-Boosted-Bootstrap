@@ -5964,7 +5964,6 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 
 .sr-only {
   border: 0;
-  bottom: auto;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
@@ -5972,7 +5971,6 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  right: auto;
   width: 1px;
   white-space: nowrap;
 }
@@ -5982,7 +5980,6 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   width: auto;
   height: auto;
   overflow: visible;
-  clip: auto;
   white-space: normal;
   -webkit-clip-path: none;
           clip-path: none;
