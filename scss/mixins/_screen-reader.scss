@@ -43,7 +43,6 @@
 @mixin sr-only-focusable {
   &:active,
   &:focus {
-    clip: auto !important;
 	  clip-path: none !important;
 	  height: auto !important;
 	  overflow: visible !important;
