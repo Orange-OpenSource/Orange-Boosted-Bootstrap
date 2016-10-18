@@ -44,11 +44,11 @@
 @mixin sr-only-focusable {
   &:active,
   &:focus {
-    position: static;
     width: auto;
     height: auto;
     overflow: visible;
     white-space: normal;
+    clip: auto;
     clip-path: none;
   }
 }
