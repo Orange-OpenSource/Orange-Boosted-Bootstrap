@@ -5976,11 +5976,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .sr-only-focusable:active, .sr-only-focusable:focus {
-  position: static;
   width: auto;
   height: auto;
   overflow: visible;
   white-space: normal;
+  clip: auto;
   -webkit-clip-path: none;
           clip-path: none;
 }

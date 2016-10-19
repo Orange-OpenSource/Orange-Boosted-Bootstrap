@@ -75,8 +75,8 @@
 <!-- END MOD -->
       </div>
     </div>
-
-    <div class="container">
+    <!-- BOOSTED MOD -->
+    <main class="container" role="main">
       <div class="row">
         <div class="col-xs-12 col-md-3 push-md-9 bd-sidebar">
           <form class="bd-search hidden-sm-down">
@@ -1147,13 +1147,14 @@
 
         </div>
       </div>
-    </div>
+    </main>    
+    <!-- END MOD -->
 
-    <footer class="bd-footer navbar">
+    <footer class="bd-footer navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
             <div class="o-footer">
-                <div class="container-fluid o-footer-top" role="contentinfo">
+                <div class="container-fluid o-footer-top">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
@@ -1228,7 +1229,7 @@ Holder.addTheme('gray', {
 			accessibilitytoolbar_custom={
 				idLinkModeContainer:"id_li_for_cdu",
 				//idSkipLinkIdLinkMode:"cdu_skiplink",
-				//cssSkipLinkClassName: "skiplinks_trigger",
+				cssSkipLinkClassName: "sr-only sr-only-focusable",
 				cssLinkModeClassName:"nav-item-cdu"
 				//callback:skiplinksAfterLoad
 			};

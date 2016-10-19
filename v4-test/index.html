@@ -60,7 +60,7 @@
 </header>
 
 
-    <main class="bd-masthead" id="content">
+    <main class="bd-masthead" id="content" role="main">
   <div class="container">
     <span class="bd-boosted-icon">Orange B<span class="text-primary">oo</span>sted with Bootstrap</span>
     <p class="lead">Orange Boosted is a framework library accessible, ergonomic and Orange branded based on <a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4" target="_blank">Bootstrap v4.0.0-alpha.4</a>.</p>
@@ -88,11 +88,11 @@
 </div>
 
 
-    <footer class="bd-footer navbar">
+    <footer class="bd-footer navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
             <div class="o-footer">
-                <div class="container-fluid o-footer-top" role="contentinfo">
+                <div class="container-fluid o-footer-top">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
@@ -155,7 +155,7 @@ Holder.addTheme('gray', {
 			accessibilitytoolbar_custom={
 				idLinkModeContainer:"id_li_for_cdu",
 				//idSkipLinkIdLinkMode:"cdu_skiplink",
-				//cssSkipLinkClassName: "skiplinks_trigger",
+				cssSkipLinkClassName: "sr-only sr-only-focusable",
 				cssLinkModeClassName:"nav-item-cdu"
 				//callback:skiplinksAfterLoad
 			};
