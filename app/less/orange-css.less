@@ -432,8 +432,54 @@ label, input, .form-control{
   }
 }
 
+.form-control {
+  &,
+  &.input-lg,
+  &.input-sm {
+    height: auto;
+    line-height: 1.25;
+  }
+
+  &.input-sm {
+    font-size: @font-size-base;
+    padding: @input-padding-y-sm @input-padding-x-sm;
+  }
+
+  &.input-lg {
+    font-size: @font-size-h5;
+    padding: @input-padding-y-lg @input-padding-x-lg;
+  }
+}
+
+select.form-control {
+  padding: .7rem 1rem;
+
+  &.input-lg {
+    padding: @input-select-padding-y-lg @input-padding-x-lg;
+  }
+
+  &.input-sm {
+    padding: @input-select-padding-y-sm @input-padding-x-sm;
+  }
+}
+
+.form-group-lg .form-control {
+  height: auto;
+  line-height: 1.25;
+  font-size: @font-size-h5;
+  padding: @input-padding-y-lg @input-padding-x-lg;
+}
+
+.form-group-sm .form-control {
+  height: auto;
+  line-height: 1.25;
+  font-size: @font-size-base;
+  padding: @input-padding-y-sm @input-padding-x-sm;
+}
+
 .input-group > .form-control{
     border-color: @gray-base;
+
     &:focus{
         border-color: @brand-orange;
     }
