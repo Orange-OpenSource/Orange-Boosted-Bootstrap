@@ -1,32 +1,54 @@
-// Only display content to screen readers
 //
-// See: http://a11yproject.com/posts/how-to-hide-content
+//  Improved screen reader only CSS class
+//  @author Gaël Poupard
+//  @see https://github.com/ffoodd/
+//    @note Based on Yahoo!'s technique
+//    @author Thierry Koblentz
+//    @see https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+//  * 1.
+//    @note `clip` is deprecated but works everywhere
+//    @see https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+//  * 2.
+//    @note `clip-path` is the future-proof version, but not very well supported yet
+//    @see https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+//    @author Yvain Liechti
+//    @see https://twitter.com/ryuran78/status/778943389819604992
+//  * 3.
+//    @note preventing text to be condensed
+//    author J. Renée Beach
+//    @see https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+//
 
 @mixin sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px); // 1
+  clip-path: inset(50%);          // 2
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
   width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  white-space: nowrap;            // 3
 }
 
-// Use in conjunction with .sr-only to only display content when it's focused.
-//
-// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
-//
-// Credit: HTML5 Boilerplate
 
+//
+//  Use in conjunction with .sr-only to only display content when it's focused.
+//  @note Useful for skip links;
+//  @see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+//  @author HTML5 Boilerplate
+//  @see https://github.com/h5bp/html5-boilerplate/blob/a2356c1cbfc560c2b140d4ab507c2a4fdc9f58f0/src/css/main.css#L119
+//  @author Bootstrap
+//  @see https://github.com/twbs/bootstrap/blob/cf5d94f6d5685c371dcb157af74a3c6b14ec8d8e/scss/mixins/_screen-reader.scss
+//
 @mixin sr-only-focusable {
   &:active,
   &:focus {
-    position: static;
     width: auto;
     height: auto;
-    margin: 0;
     overflow: visible;
+    white-space: normal;
     clip: auto;
+    clip-path: none;
   }
 }
