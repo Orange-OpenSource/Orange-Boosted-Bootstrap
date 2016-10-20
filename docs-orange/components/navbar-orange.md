@@ -44,6 +44,20 @@ Orange navbar is the main navigation of project website. It should always be inc
                     </li>
                 </ul>
             </ul>
+            <ul class="nav navbar-nav pull-md-right">
+                <li class="nav-item">
+                    <a href="#" class="nav-link icon">
+                        <span class="sr-only">open basket</span>
+                        <span class="icon-buy" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link icon">
+                        <span class="sr-only">open search bar</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
 </header>

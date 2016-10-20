@@ -202,22 +202,83 @@ a:focus {
   > tbody,
   > tfoot {
     > tr {
+      border-bottom: 1px solid $table-border-color;
+
       > th,
       > td {
-        // Remove border top and put border-botom
+        padding: .625rem .625rem .625rem 0;
         font-size: $font-size-sm;
-        border-top: 0;
-        border-bottom: 1px solid $table-border-color;
+        border: 0;
       }
+
+      > th:first-child,
+      > td:first-child {
+        padding-left: .625rem;
+      }
+
+      > th {
+        font-size: $font-size-base;
+      }
+
       [class^="icon-"],
       [class*=" icon-"] {
-        font-size: ($font-size-sm * $line-height-base);
+        font-size: 1.8125rem;
       }
     }
   }
 
-  > thead th {
-    border-bottom: 2px;
+  thead tr {
+    border-bottom-width: 2px;
+  }
+
+  &.has-checkbox {
+    tr.selected {
+      > td,
+      > th {
+        background-color: $gray-lighter-o;
+      }
+    }
+
+    tr > th:first-child,
+    tr > td:first-child {
+      width: 1.25rem;
+
+      .custom-control.custom-checkbox {
+        padding-left: 1.25rem;
+      }
+    }
+  }
+
+  &.has-icon {
+    tr > td,
+    tr > th {
+      height: 3.125rem;
+      // padding-top: .9375rem;
+      // padding-bottom: .9375rem;
+      vertical-align: middle;
+
+      span,
+      img {
+        vertical-align: middle;
+      }
+
+      span {
+        margin-right: .375rem;
+      }
+
+      img {
+        width: 1.875rem;
+        height: 1.875rem;
+        margin-right: .625rem;
+      }
+
+      [class^="icon-"] {
+        width: 1.875rem;
+        font-size: 1.8125rem;
+        line-height: 0;
+        vertical-align: middle;
+      }
+    }
   }
 }
 
