@@ -58,8 +58,10 @@ h6, .h6 { font-size: $font-size-h6; }
 //
 
 hr {
-  margin-top: $spacer-y;
-  margin-bottom: $spacer-y;
+  // Boosted mod
+  margin-top: ($spacer-y * 2);
+  margin-bottom: ($spacer-y * 2);
+  // end mod
   border: 0;
   border-top: $hr-border-width solid $hr-border-color;
 }
@@ -115,8 +117,10 @@ mark,
 
 // Blockquotes
 .blockquote {
-  padding: ($spacer / 2) $spacer;
-  margin-bottom: $spacer;
+  // Boosted mod
+  padding: $spacer ($spacer * 2);
+  margin-bottom: ($spacer * 2);
+  // end mod
   font-size: $blockquote-font-size;
   border-left: $blockquote-border-width solid $blockquote-border-color;
 }
@@ -133,7 +137,9 @@ mark,
 
 // Opposite alignment of blockquote
 .blockquote-reverse {
-  padding-right: $spacer;
+  // Boosted mod
+  padding-right: ($spacer * 2);
+  // end mod
   padding-left: 0;
   text-align: right;
   border-right: $blockquote-border-width solid $blockquote-border-color;

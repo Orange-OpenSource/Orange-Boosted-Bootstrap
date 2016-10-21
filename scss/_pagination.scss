@@ -1,8 +1,10 @@
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin-top: $spacer-y;
-  margin-bottom: $spacer-y;
+  // boosted mod
+  margin-top: ($spacer-y * 2);
+  margin-bottom: ($spacer-y * 2);
+  // end mod
   @include border-radius();
 }
 

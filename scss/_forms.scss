@@ -191,7 +191,9 @@ select.form-control-lg {
 
 .form-text {
   display: block;
-  margin-top: ($spacer * .25);
+  // boosted mod
+  margin-top: ($spacer * .5);
+  // end mod
 }
 
 
@@ -202,7 +204,9 @@ select.form-control-lg {
 .form-check {
   position: relative;
   display: block;
-  margin-bottom: ($spacer * .75);
+  // boosted mod
+  margin-bottom: ($spacer * 1.5);
+  // end mod
 
   // Move up sibling radios or checkboxes for tighter spacing
   + .form-check {
@@ -258,7 +262,9 @@ select.form-control-lg {
 // Apply contextual and semantic states to individual form controls.
 
 .form-control-feedback {
-  margin-top: ($spacer * .25);
+  // boosted mod
+  margin-top: ($spacer * .5);
+  // end mod
 }
 
 .form-control-success,

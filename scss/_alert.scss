@@ -4,7 +4,9 @@
 
 .alert {
   padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $spacer-y;
+  // boosted mod
+  margin-bottom: ($spacer-y * 2);
+  // end mod
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
 }

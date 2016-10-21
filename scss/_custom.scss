@@ -58,7 +58,7 @@ $enable-print-styles:       true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   1.25rem;
+$spacer:   .625rem; // 10px
 $spacer-x: $spacer;
 $spacer-y: $spacer;
 $spacers: (
@@ -71,12 +71,12 @@ $spacers: (
     y: $spacer-y
   ),
   2: (
-    x: ($spacer-x * 1.5),
-    y: ($spacer-y * 1.5)
+    x: ($spacer-x * 2), // 20px
+    y: ($spacer-y * 2)  // 20px
   ),
   3: (
-    x: ($spacer-x * 3),
-    y: ($spacer-y * 3)
+    x: ($spacer-x * 3), // 30px
+    y: ($spacer-y * 3) // 30px
   )
 );
 $border-width: 2px;
@@ -202,7 +202,7 @@ $display2-weight: 300 !default;
 $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 
-$headings-margin-bottom: $spacer;
+$headings-margin-bottom: ($spacer * 2);
 $headings-font-family:   inherit;
 $headings-font-weight:   700;
 $headings-line-height:   1.1;
@@ -366,7 +366,7 @@ $input-height:                   (($font-size-base * $line-height-base) + ($inpu
 $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2));
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2));
 
-$form-group-margin-bottom:       $spacer-y;
+$form-group-margin-bottom:       ($spacer * 2);
 
 $input-group-addon-bg:           #fff;
 $input-group-addon-border-color: $input-border-color;
@@ -507,8 +507,8 @@ $zindex-modal:             1050;
 // Navbar
 
 $navbar-border-radius:              $border-radius;
-$navbar-padding-x:                  $spacer;
-$navbar-padding-y:                  ($spacer / 2);
+$navbar-padding-x:                  ($spacer * 2);
+$navbar-padding-y:                  $spacer;
 $navbar-brand-padding-y:            1.875rem;
 
 $navbar-divider-padding-y:          .425rem !default;
@@ -524,21 +524,21 @@ $navbar-dark-color:                 #fff;
 $navbar-dark-hover-color:           $brand-primary;
 $navbar-dark-active-color:          $navbar-dark-hover-color;
 $navbar-dark-disabled-color:        $gray-lighter-o;
-$navbar-dark-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;
+$navbar-dark-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 $navbar-dark-toggler-border:        rgba(255,255,255,.1) !default;
 
 $navbar-light-color:                $navbar-dark-color;
 $navbar-light-hover-color:          $navbar-dark-hover-color;
 $navbar-light-active-color:         $navbar-dark-active-color;
 $navbar-light-disabled-color:       $navbar-dark-disabled-color;
-$navbar-light-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;
+$navbar-light-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 $navbar-light-toggler-border:       rgba(0,0,0,.1) !default;
 
 // Navs
 
 $nav-item-margin:               .2rem !default;
 $nav-item-inline-spacer:        1rem !default;
-$nav-link-padding:              ($spacer / 2);
+$nav-link-padding:              $spacer;
 $nav-link-hover-bg:             #000;
 $nav-disabled-link-color:       $gray;
 $nav-disabled-link-hover-color: $gray;
@@ -597,7 +597,7 @@ $pagination-icon-next-active: url("data:image/svg+xml;charset=utf8, %3Csvg%20xml
 
 // Jumbotron
 
-$jumbotron-padding:              $spacer;
+$jumbotron-padding:              ($spacer * 2);
 $jumbotron-bg:                   #fff;
 
 
@@ -637,9 +637,9 @@ $card-link-hover-color:    #fff;
 
 $card-img-overlay-padding: 1.25rem;
 
-$card-deck-margin:         $spacer;
+$card-deck-margin:         ($spacer * 2);
 
-$card-columns-sm-up-column-gap: $spacer;
+$card-columns-sm-up-column-gap: ($spacer * 2);
 
 
 // Tooltips
@@ -648,8 +648,8 @@ $tooltip-max-width:           200px;
 $tooltip-color:               #000;
 $tooltip-bg:                  $gray-lighter-o;
 $tooltip-opacity:             .9;
-$tooltip-padding-y:           ($spacer / 2);
-$tooltip-padding-x:           ($spacer / 2);
+$tooltip-padding-y:           $spacer;
+$tooltip-padding-x:           $spacer;
 $tooltip-margin:              5px;
 $tooltip-font-weight:         bold;
 

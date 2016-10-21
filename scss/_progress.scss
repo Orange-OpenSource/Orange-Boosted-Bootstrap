@@ -3,7 +3,9 @@
 //
 
 @keyframes progress-bar-stripes {
-  from { background-position: $spacer-y 0; }
+  // Boosted mod
+  from { background-position: ($spacer-y * 2) 0; }
+  // end mod
   to { background-position: 0 0; }
 }
 
@@ -15,8 +17,10 @@
 .progress {
   display: block;
   width: 100%;
-  height: $spacer-y; // todo: make a new var for this
-  margin-bottom: $spacer-y;
+  // Boosted mod
+  height: ($spacer-y * 2); // todo: make a new var for this
+  margin-bottom: ($spacer-y * 2);
+  // end mod
 }
 
 // BOOSTED MOD progress is half height on mobile
@@ -24,8 +28,10 @@
   .progress {
     display: block;
     width: 100%;
-    height: ($spacer-y / 2); // todo: make a new var for this
-    margin-bottom: ($spacer-y / 2);
+    // Boosted mod
+    height: $spacer-y; // todo: make a new var for this
+    margin-bottom: $spacer-y;
+    // end mod
   }
 }
 
@@ -84,7 +90,9 @@ base::-moz-progress-bar, // Absurd-but-syntactically-valid selector to make thes
   }
   .progress-bar {
     display: inline-block;
-    height: $spacer-y;
+    // Boosted mod
+    height: ($spacer-y * 2);
+    // end mod
     text-indent: -999rem; // Simulate hiding of value as in native `<progress>`
     background-color: $progress-bar-color;
     @include border-left-radius($progress-border-radius);
@@ -98,27 +106,27 @@ base::-moz-progress-bar, // Absurd-but-syntactically-valid selector to make thes
 //
 // Striped
 //
-
+// Boosted mod replace spacer-y by spacer-y * 2
 .progress-striped[value]::-webkit-progress-value {
   @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
+  background-size: ($spacer-y * 2) ($spacer-y * 2);
 }
 .progress-striped[value]::-moz-progress-bar {
   @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
+  background-size: ($spacer-y * 2) ($spacer-y * 2);
 }
 .progress-striped[value]::-ms-fill {
   @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
+  background-size: ($spacer-y * 2) ($spacer-y * 2);
 }
 // IE9
 @media screen and (min-width:0\0) {
   .progress-bar-striped {
     @include gradient-striped();
-    background-size: $spacer-y $spacer-y;
+    background-size: ($spacer-y * 2) ($spacer-y * 2);
   }
 }
-
+// end mod
 
 //
 // Animated

@@ -3,8 +3,11 @@ layout: docs
 title: Spacing
 group: utilities
 ---
-
-Assign `margin` or `padding` to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. All classes are multiples on the global default value, `1rem`.
+{% comment %} 
+Boosted mod 
+rplace 1rem by .625rem (10px)
+{% endcomment %}
+Assign `margin` or `padding` to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. All classes are multiples on the global default value, `.625rem` (10px).
 
 The classes are named using the format: `{property}{sides}-{size}`
 

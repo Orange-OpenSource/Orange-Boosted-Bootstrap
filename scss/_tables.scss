@@ -5,7 +5,9 @@
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: $spacer;
+  // boosted mod
+  margin-bottom: ($spacer * 2);
+  // end mod
 
   th,
   td {
