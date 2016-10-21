@@ -313,6 +313,10 @@ a:focus {
         padding-left: .625rem;
         border-bottom: 1px solid $table-border-color;
       }
+
+      > th:last-child {
+        border-right: 0;
+      }
     }
 
     tbody {
