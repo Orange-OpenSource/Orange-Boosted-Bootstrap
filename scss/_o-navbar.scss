@@ -22,8 +22,11 @@
 
   .navbar-toggleable-xs {
     position: static;
-    display: inline-block !important;
     width: auto;
+
+    @include media-breakpoint-up(sm) {
+      display: inline-block !important;
+    }
   }
 
   .navbar-toggler {
@@ -202,7 +205,8 @@
 
     .navbar-toggler {
       float: right;
-      padding: .9375rem .9375rem .875rem;
+      height: 3.125rem;
+      padding: .125rem 0 0;
       font-size: 1.25rem;
       color: $navbar-dark-color;
       background-color: transparent;
@@ -243,7 +247,6 @@
       top: $navbar-height-sm;
       left: 0;
       z-index: 100;
-      display: inline-block;
       width: 100%;
       margin: 0;
       background-color: #000;
