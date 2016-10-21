@@ -1,12 +1,19 @@
 //
-//    Accordions
+//    Accordion
 //
 
-.panel {
+.panel,
+.o-accordion {
+  border: 0;
   border-bottom: 1px solid $gray-light-o;
+  margin-bottom: 0;
 
-  &.panel-default > .panel-heading {
+  &.panel-default > .panel-heading,
+  .card-header {
     padding: 0;
+    background-color: #fff;
+    border: 0;
+
 
     + .panel-collapse {
       padding: .625rem;
@@ -14,11 +21,13 @@
     }
   }
 
-  &:first-child .panel-title {
+  &:first-child .panel,
+  &:first-child h5 {
     border-top: 1px solid $gray-light-o;
   }
 
-  .panel-title {
+  .panel-title,
+  h5 {
     position: relative;
     margin: 0;
     font-size: $font-size-base;
@@ -43,6 +52,11 @@
         transform: rotate(180deg);
       }
     }
+  }
+
+  .card-block {
+    padding: 0;
+    margin: .625rem;
   }
 }
 // For mobile display emphase the border
