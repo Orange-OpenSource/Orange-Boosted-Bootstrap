@@ -29,22 +29,8 @@ Orange navbar is the main navigation of project website. It should always be inc
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
-                <ul class="nav navbar-nav pull-md-right">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link icon">
-                            <span class="sr-only">open basket</span>
-                            <span class="icon-buy" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link icon">
-                            <span class="sr-only">open search bar</span>
-                            <span class="icon-search" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                </ul>
             </ul>
-            <ul class="nav navbar-nav pull-md-right">
+            <ul class="nav navbar-nav float-md-right">
                 <li class="nav-item">
                     <a href="#" class="nav-link icon">
                         <span class="sr-only">open basket</span>
@@ -77,7 +63,7 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
             <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
         </ul>
-        <ul class="nav navbar-nav pull-xs-right">
+        <ul class="nav navbar-nav float-xs-right">
             <li class="nav-item">
                     <a href="#" class="nav-link icon">
                     <span class="sr-only">basket</span>
@@ -115,7 +101,7 @@ A supra bar should never be used on its own and always be included in header and
                 <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
             </ul>
-            <ul class="nav navbar-nav pull-xs-right">
+            <ul class="nav navbar-nav float-xs-right">
                 <li class="nav-item">
                         <a href="#" class="nav-link icon">
                         <span class="sr-only">basket</span>

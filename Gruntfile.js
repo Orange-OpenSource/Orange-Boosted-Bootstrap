@@ -1,6 +1,6 @@
 /*!
  * Bootstrap's Gruntfile
- * http://getbootstrap.com
+ * https://getbootstrap.com
  * Copyright 2013-2016 The Bootstrap Authors
  * Copyright 2013-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -72,8 +72,7 @@ module.exports = function (grunt) {
     babel: {
       dev: {
         options: {
-          sourceMap: true,
-          modules: 'ignore'
+          sourceMap: true
         },
         files: {
           'js/dist/util.js'       : 'js/src/util.js',
@@ -97,7 +96,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          modules: 'ignore'
+          extends: '../../js/.babelrc'
         },
         files: {
           '<%= concat.bootstrap.dest %>' : '<%= concat.bootstrap.dest %>'
@@ -107,8 +106,8 @@ module.exports = function (grunt) {
 
     stamp: {
       options: {
-        banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>\n+function ($) {\n',
-        footer: '\n}(jQuery);'
+        banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>\n+function () {\n',
+        footer: '\n}();'
       },
       bootstrap: {
         files: {
@@ -122,8 +121,7 @@ module.exports = function (grunt) {
         // Custom function to remove all export and import statements
         process: function (src) {
           return src.replace(/^(export|import).*/gm, '');
-        },
-        stripBanners: false
+        }
       },
       bootstrap: {
         src: [
@@ -218,11 +216,9 @@ module.exports = function (grunt) {
 
     cssmin: {
       options: {
-        // TODO: disable `zeroUnits` optimization once clean-css 3.2 is released
-        //    and then simplify the fix for https://github.com/twbs/bootstrap/issues/14837 accordingly
-        compatibility: 'ie9',
-        keepSpecialComments: '*',
+        compatibility: 'ie9,-properties.zeroUnits',
         sourceMap: true,
+        // sourceMapInlineSources: true,
         advanced: false
       },
       core: {
@@ -627,7 +623,7 @@ module.exports = function (grunt) {
     require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
   })(process.env.TWBS_SASS || 'libsass');
   // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
-  grunt.registerTask('sass-compile', ['sass:core', 'sass:rtl', 'sass:docs']);
+  grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:rtl', 'sass:docs']);
 
   grunt.registerTask('dist-css', ['sass-compile', 'rtlcss:core','concat:rtlCss', 'clean:rtl', 'exec:postcss', 'cssmin:core', 'cssmin:docs']);
 

@@ -42,8 +42,8 @@
 
   .o-frame {
     display: table;
-    width: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width});
-    height: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width});
+    width: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width-base});
+    height: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width-base});
     margin: 0 auto;
     font-size: $font-size-h3;
     text-align: center;
@@ -60,8 +60,8 @@
     }
 
     @include media-breakpoint-down(xl) {
-      width: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width});
-      height: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width});
+      width: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width-base});
+      height: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width-base});
       font-size: $font-size-h4;
 
       .o-frame-text {
@@ -70,8 +70,8 @@
     }
 
     @include media-breakpoint-down(lg) {
-      width: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width});
-      height: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width});
+      width: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width-base});
+      height: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width-base});
       font-size: $font-size-h4;
 
       .o-frame-text {
@@ -80,8 +80,8 @@
     }
 
     @include media-breakpoint-down(md) {
-      width: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width});
-      height: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width});
+      width: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width-base});
+      height: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width-base});
       font-size: $font-size-h5;
 
       .o-frame-text {
@@ -90,8 +90,8 @@
     }
 
     @include media-breakpoint-down(sm) {
-      width: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width} / 2);
-      height: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width} / 2);
+      width: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width-base} / 2);
+      height: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width-base} / 2);
       font-size: $font-size-h5;
 
       .o-frame-text {

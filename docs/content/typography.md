@@ -1,10 +1,11 @@
 ---
 layout: docs
 title: Typography
+description: Documentation and examples for Bootstrap typography, including global settings, body text, lists, and more.
 group: content
 ---
 
-Bootstrap includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the [textual utility classes]({{ site.baseurl }}/components/utilities/).
+Bootstrap includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the [textual utility classes]({{ site.baseurl }}/utilities/).
 
 ## Contents
 
@@ -15,7 +16,7 @@ Bootstrap includes simple and easily customized typography for headings, body te
 
 Bootstrap sets basic global display, typography, and link styles. Specifically, we:
 
-- Use a [native font stack](/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
+- Use a [native font stack]({{ site.baseurl }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color` and apply link underlines only on `:hover`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
@@ -41,43 +42,43 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <tr>
         <td><h1>h1. Bootstrap heading</h1></td>
         <!-- BOOSTED MOD -->
-        <td class="type-info">Bold 34px</td>
-        <td class="type-info">Bold 20px</td>
+        <td class="type-info">Bold 2.125rem (34px)</td>
+        <td class="type-info">Bold 1.25rem (20px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
         <td><h2>h2. Bootstrap heading</h2></td>
         <!-- BOOSTED MOD -->
-        <td class="type-info">Bold 30px</td>
-        <td class="type-info">Bold 18px</td>
+        <td class="type-info">Bold 1.875rem (30px)</td>
+        <td class="type-info">Bold 1.125rem (18px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
         <td><h3>h3. Bootstrap heading</h3></td>
         <!-- BOOSTED MOD -->
-        <td class="type-info">Bold 24px</td>
-        <td class="type-info">Bold 16px</td>
+        <td class="type-info">Bold 1.5rem (24px)</td>
+        <td class="type-info">Bold 1rem (16px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
         <td><h4>h4. Bootstrap heading</h4></td>
         <!-- BOOSTED MOD -->
-        <td class="type-info">Bold 20px</td>
-        <td class="type-info">Bold 14px</td>
+        <td class="type-info">Bold 1.25rem (20px)</td>
+        <td class="type-info">Bold .875rem (14px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
         <td><h5>h5. Bootstrap heading</h5></td>
         <!-- BOOSTED MOD -->
-        <td class="type-info">Bold 18px</td>
-        <td class="type-info">Bold 14px</td>
+        <td class="type-info">Bold 1.125rem (18px)</td>
+        <td class="type-info">Bold .875rem (14px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
         <td><h6>h6. Bootstrap heading</h6></td>
         <!-- BOOSTED MOD -->
-        <td class="type-info">Bold 16px</td>
-        <td class="type-info">Bold 14px</td>        
+        <td class="type-info">Bold 1rem (16px)</td>
+        <td class="type-info">Bold .875rem (14px)</td>        
         <!-- END MOD -->
       </tr>
     </tbody>
@@ -176,7 +177,7 @@ While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant
 
 ## Text utilities
 
-Change text alignment, transform, style, weight, and color with our [text utilities]({{ site.baseurl }}/components/utilities/#text-alignment).
+Change text alignment, transform, style, weight, and color with our [text utilities]({{ site.baseurl }}/utilities/typography/#text-alignment).
 
 ## Abbreviations
 
@@ -195,7 +196,7 @@ For quoting blocks of content from another source within your document. Wrap `<b
 
 {% example html %}
 <blockquote class="blockquote">
-  <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
 {% endexample %}
 
@@ -205,7 +206,7 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 
 {% example html %}
 <blockquote class="blockquote">
-  <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 {% endexample %}
@@ -216,7 +217,7 @@ Add `.blockquote-reverse` for a blockquote with right-aligned content.
 
 {% example html %}
 <blockquote class="blockquote blockquote-reverse">
-  <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 {% endexample %}

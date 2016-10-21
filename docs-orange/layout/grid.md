@@ -205,7 +205,7 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-$container-fluid-margin-widths: (  
+$container-fluid-margin-widths: (
   xs: 1.25%,
   sm: 1.25%,
   md: 1.5625%,
@@ -213,9 +213,20 @@ $container-fluid-margin-widths: (
   xl: 3.125%,
   xxl: 4.16667%
 );
-$cols-gutter-widths: (
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:      12;
+$grid-gutter-width-base: 20px;
+$grid-gutter-widths: (
   xs: 10px,
-  sm: 10px
+  sm: 10px,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base,
+  xxl: $grid-gutter-width-base
 );
 {% endhighlight %}
 
