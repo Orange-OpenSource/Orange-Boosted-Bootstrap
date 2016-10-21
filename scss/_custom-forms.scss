@@ -11,10 +11,10 @@
 
 .custom-control {
   position: relative;
-  display: inline-block;
+  display: inline-block;  
   padding-left: $custom-control-gutter;
   cursor: pointer;
-
+  
   + .custom-control {
     margin-left: $custom-control-spacer-x;
   }
@@ -61,7 +61,10 @@
 
 .custom-control-indicator {
   position: absolute;
-  top: .25rem;
+  // Boosted mod
+  // put back top 0 because custom boosted is fat 
+  top: 0;
+  // end mod
   left: 0;
   display: block;
   width: $custom-control-indicator-size;
