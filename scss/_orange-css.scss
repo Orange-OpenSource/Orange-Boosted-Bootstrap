@@ -280,6 +280,47 @@ a:focus {
       }
     }
   }
+
+  &.table-reflow {
+    thead,
+    tbody, {
+      > tr {
+        border: 0;
+      }
+
+      > tr > td {
+        line-height: 1.25rem;
+      }
+
+      > tr > th:first-child {
+        border-bottom: 2px solid $table-border-color;
+      }
+
+      > tr > th,
+      > tr > td {
+        border-bottom: 1px solid $table-border-color;
+      }
+
+      > tr > td:last-child {
+        border-right: 0;
+      }
+    }
+
+    thead > tr {
+      border: 0;
+
+      > th:not(:first-child) {
+        padding-left: .625rem;
+        border-bottom: 1px solid $table-border-color;
+      }
+    }
+
+    tbody {
+      > tr > th:first-child {
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 @include table-row-variant-border(success, $state-success-border);
