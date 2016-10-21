@@ -4,9 +4,9 @@
 
 .panel,
 .o-accordion {
+  margin-bottom: 0;
   border: 0;
   border-bottom: 1px solid $gray-light-o;
-  margin-bottom: 0;
 
   &.panel-default > .panel-heading,
   .card-header {
