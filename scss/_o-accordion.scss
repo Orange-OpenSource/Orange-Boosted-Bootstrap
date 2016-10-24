@@ -2,38 +2,30 @@
 //    Accordion
 //
 
-.panel,
-.o-accordion {
+.card.o-accordion {
   margin-bottom: 0;
   border: 0;
   border-bottom: 1px solid $gray-light-o;
 
-  &.panel-default > .panel-heading,
+  &:first-child {
+    border-top: 1px solid $gray-light-o;
+  }
+
   .card-header {
     padding: 0;
     background-color: #fff;
     border: 0;
 
-
-    + .panel-collapse {
-      padding: .625rem;
-      background-color: #fff;
+    &,
+    h5 {
+      margin: 0;
+      font-size: $font-size-base;
+      font-weight: bold;
+      line-height: 1;
     }
-  }
 
-  &:first-child .panel,
-  &:first-child h5 {
-    border-top: 1px solid $gray-light-o;
-  }
-
-  .panel-title,
-  h5 {
-    position: relative;
-    margin: 0;
-    font-size: $font-size-base;
-    line-height: 1;
-
-    a {
+    a[data-toggle="collapse"],
+    h5 a[data-toggle="collapse"]  {
       position: relative;
       display: block;
       padding: 1.0625rem 0;
@@ -61,10 +53,10 @@
 }
 // For mobile display emphase the border
 @include media-breakpoint-down(sm) {
-  .panel {
+  .card.o-accordion {
     border-bottom-width: 2px;
 
-    &:first-child .panel-title {
+    &:first-child {
       border-top-width: 2px;
     }
   }

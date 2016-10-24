@@ -59,3 +59,7 @@ Rename all the class containing  `_` to `-`.
 ### Step bar
 
 Class names and semantic changed, see [Orange stepbar](../components/orange-stepbar/) for documentation and examples.
+
+### Accordions
+
+[Accordions](../components/orange-accordion/) are now based on card structure. Be sure to use `.card-header` and `.card-block` in a `.card` element, in addition of the `.o-accordion` for each card. To get multiple openable behaviour just add `.multi` class on the same level.
