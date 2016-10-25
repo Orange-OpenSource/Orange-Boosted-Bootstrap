@@ -341,7 +341,10 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-success text-xs-center">
+{% comment %}
+boosted mod, remove card-invers to display black text on dunctionnal colors
+{% endcomment %}
+<div class="card card-success text-xs-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -349,7 +352,10 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-info text-xs-center">
+{% comment %}
+boosted mod, remove card-invers to display black text on dunctionnal colors
+{% endcomment %}
+<div class="card card-info text-xs-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -357,7 +363,10 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-warning text-xs-center">
+{% comment %}
+boosted mod, remove card-invers to display black text on dunctionnal colors
+{% endcomment %}
+<div class="card card-warning text-xs-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
