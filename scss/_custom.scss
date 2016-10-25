@@ -278,7 +278,7 @@ $table-sm-cell-padding:         .3125rem;//5px;
 
 $table-bg:                      #fff;
 $table-bg-accent:               $gray-lightest;
-$table-bg-hover:                $gray-lighter;
+$table-bg-hover:                rgba(0,0,0,.068); // #eee on white bg
 $table-bg-active:               $gray-lightest;
 
 $table-border-width:            ($border-width / 2); // 1px
