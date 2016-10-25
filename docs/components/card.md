@@ -599,3 +599,18 @@ Card columns can also be extended and customized with some additional code. Show
   }
 }
 {% endhighlight %}
+
+## Orange brand
+
+To get brand compliant cards simply add `.o-card` class to your card component.
+
+{% example html %}
+<div class="o-card card">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <div class="card-block">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary btn-inverse">Button</a>
+    </div>
+</div>
+{% endexample %}
