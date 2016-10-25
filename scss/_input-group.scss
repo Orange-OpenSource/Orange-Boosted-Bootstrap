@@ -158,9 +158,12 @@
   // element above the siblings.
   > .btn {
     position: relative;
-    + .btn {
-      margin-left: (-$input-btn-border-width);
-    }
+    // Boostaed mod
+    // with the 2px border, break the display on segmented buttons
+    // components/input-group/#segmented-buttons
+    // + .btn {
+    //   margin-left: (-$input-btn-border-width);
+    // }
     // Bring the "active" button to the front
     @include hover-focus-active {
       z-index: 3;
