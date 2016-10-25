@@ -56,8 +56,7 @@ const Collapse = (($) => {
   }
 
   const Selector = {
-    ACTIVES     : '.card > .in, .card > .collapsing',
-    ACCORDION_HEADING: '.o-accordion .panel .panel-heading .panel-title a',
+    ACTIVES     : '.card:not(.multi) > .in, .card:not(.multi) > .collapsing', // boosted mod
     DATA_TOGGLE : '[data-toggle="collapse"]'
   }
 
@@ -358,7 +357,6 @@ const Collapse = (($) => {
 
   let $collTabHeadings =  $('.panel-heading')
   let $collTabPanels =  $('.panel-collapse:not(.mega-menu)')
-  // let $accordionTabs = $(Selector.ACCORDION_HEADING)
 
   $collTabHeadings.attr({ role: 'tab' })
   $collTabPanels.attr({ role: 'tabpanel' })
