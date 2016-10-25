@@ -654,7 +654,7 @@ $card-border-width:        $border-width;
 $card-border-radius:       $border-radius;
 $card-border-color:        #000;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
-$card-cap-bg:              $gray-lightest;
+$card-cap-bg:              #fff;
 $card-bg:                  #fff;
 
 $card-link-hover-color:    #fff;
