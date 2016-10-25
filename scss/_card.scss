@@ -52,12 +52,22 @@
   > .list-group:first-child {
     .list-group-item:first-child {
       @include border-top-radius($card-border-radius);
+      // boosted mod
+      // fix double border issue when list is in card
+      // see https://github.com/twbs/bootstrap/pull/20903
+      border-top: 0;
+      // end mod
     }
   }
 
   > .list-group:last-child {
     .list-group-item:last-child {
       @include border-bottom-radius($card-border-radius);
+      // boosted mod
+      // fix double border issue when list is in card
+      // see https://github.com/twbs/bootstrap/pull/20903
+      border-bottom: 0;
+      // end mod
     }
   }
 }
