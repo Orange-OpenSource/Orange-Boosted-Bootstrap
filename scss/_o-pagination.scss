@@ -137,8 +137,8 @@
 
     &.disabled {
       @include hover {
-        cursor: $cursor-disabled;
         color: $gray-lighter-o;
+        cursor: $cursor-disabled;
         background-color: #fff;
         border-color: $gray-lighter-o;
 
