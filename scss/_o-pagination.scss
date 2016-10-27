@@ -104,9 +104,35 @@
     padding: 0;
     border: solid 2px #000;
 
+    @include hover {
+      color: #fff;
+      background-color: #000;
+
+      &:active {
+        background-color: $brand-primary;
+      }
+
+      &.prev::before {
+        background-image: #{$pagination-icon-prev-active};
+      }
+
+      &.next::before {
+        background-image: #{$pagination-icon-next-active};
+      }
+    }
+
     &.disabled {
       @include hover {
         cursor: $cursor-disabled;
+        color: $gray-lighter-o;
+        background-color: #fff;
+        border-color: $gray-lighter-o;
+
+        &:active {
+          color: $gray-lighter-o;
+          background-color: #fff;
+          border-color: $gray-lighter-o;
+        }
       }
 
       &:active {
