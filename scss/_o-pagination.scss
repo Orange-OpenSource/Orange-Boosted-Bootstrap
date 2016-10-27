@@ -88,10 +88,24 @@
       min-width: $pagination-width;
       border: 2px solid #000;
 
+      &:focus {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+      }
+
       &:active {
         color: #fff;
         background-color: $brand-primary;
         border-color: $brand-primary;
+      }
+
+      &.prev:focus::before {
+        background-image: #{$pagination-icon-prev-active};
+      }
+
+      &.next:focus::before {
+        background-image: #{$pagination-icon-next-active};
       }
     }
   }
