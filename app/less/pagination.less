@@ -39,6 +39,12 @@
               background-color: @brand-orange-clear;
               border: 2px solid @brand-orange-black;
           }
+
+          &:active:hover {
+            color: #fff;
+            background-color: @brand-orange;
+            border-color: @brand-orange;
+          }
       }
 
       &.bordered > a,
@@ -46,6 +52,18 @@
         border: 2px solid @brand-orange-black;
         width: auto;
         min-width: @pagination-width;
+
+        &:hover {
+          color: #fff;
+          background-color: #000;
+          border-color: #000;
+        }
+
+        &:active:hover {
+          color: #fff;
+          background-color: @brand-primary;
+          border-color: @brand-primary;
+        }
       }
 
       &.active > a,
@@ -56,7 +74,10 @@
 
       &.disabled > a,
       &.disabled > a:hover,
-      &.disabled > a:focus {
+      &.disabled > a:focus,
+      &.bordered.disabled > a,
+      &.bordered.disabled > a:hover,
+      &.bordered.disabled > a:focus {
           border: 2px solid @gray-light;
           color: @gray-light;
           background-color: @brand-orange-clear;
@@ -70,11 +91,12 @@
   li {
     float: left;
     margin: 0;
+
     + li{
         margin-left: 10px;
     }
 
-    & > a {
+    > a {
       position: relative;
       border: 2px solid black;
       font-size: @navbar-font-size;
@@ -96,18 +118,34 @@
       .icon-arrow-previous:before {
         margin-right: 2px;
       }
+
+      &:focus {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: #000;
+      }
+
+      &:active:hover {
+        color: #fff;
+        background-color: @brand-orange;
+        border-color: @brand-orange;
+      }
     }
 
-    & > a:hover {
-      color: #000;
+    &.disabled > a,
+    &.disabled > a:hover,
+    &.disabled > a:focus,
+    &.disabled > a:active,
+    &.disabled > a:active:hover {
+      color: #ccc;
       background-color: #fff;
+      border-color: #ccc;
     }
-  }
-
-  .disabled >a,
-  .disabled >a:hover {
-    color: #ccc;
-    border-color: #ccc;
   }
 
   .presentation{
@@ -122,6 +160,12 @@
 
     > a {
       padding: @pagination-padding;
+
+       &:focus:before,
+       &:hover:before,
+       &:active:hover:before {
+        color: #fff;
+      }
     }
   }
 
@@ -154,7 +198,10 @@
   }
 
   .previous.disabled > a:before,
-  .next.disabled > a:before {
+  .next.disabled > a:before,
+  .previous.disabled > a:active:hover:before,
+  .next.disabled > a:active:hover:before
+   {
     color: #ccc;
   }
 }
