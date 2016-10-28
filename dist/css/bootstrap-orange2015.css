@@ -1381,32 +1381,33 @@ a.bg-primary:focus {
   background-color: #be5700;
 }
 .bg-success {
-  background-color: #fff;
+  background-color: #32c832;
 }
 a.bg-success:hover,
 a.bg-success:focus {
-  background-color: #e6e6e6;
+  background-color: #289f28;
 }
 .bg-info {
-  background-color: #fff;
+  background-color: #527edb;
 }
 a.bg-info:hover,
 a.bg-info:focus {
-  background-color: #e6e6e6;
+  background-color: #2b60cf;
 }
 .bg-warning {
-  background-color: #fff;
+  background-color: #f16e00;
 }
 a.bg-warning:hover,
 a.bg-warning:focus {
-  background-color: #e6e6e6;
+  background-color: #be5700;
 }
 .bg-danger {
-  background-color: #fff;
+  color: #fff;
+  background-color: #cd3c14;
 }
 a.bg-danger:hover,
 a.bg-danger:focus {
-  background-color: #e6e6e6;
+  background-color: #9f2e0f;
 }
 .page-header {
   padding-bottom: .9rem;

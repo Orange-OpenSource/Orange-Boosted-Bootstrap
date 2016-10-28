@@ -381,8 +381,8 @@ ul.o-square-list ul ul li span {
   float: left;
 }
 .o-nav-local .nav-local > li > a {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.7rem;
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.6rem;
@@ -871,11 +871,28 @@ table.tablesorter caption {
   background-color: transparent;
   border: 2px solid #000;
 }
+.pagination > li > a:active:hover {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
+}
 .pagination > li.bordered > a,
 .pagination > li.bordered > a {
   width: auto;
   min-width: 4rem;
   border: 2px solid #000;
+}
+.pagination > li.bordered > a:hover,
+.pagination > li.bordered > a:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+.pagination > li.bordered > a:active:hover,
+.pagination > li.bordered > a:active:hover {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
 }
 .pagination > li.active > a,
 .pagination > li.active > a:hover,
@@ -884,7 +901,10 @@ table.tablesorter caption {
 }
 .pagination > li.disabled > a,
 .pagination > li.disabled > a:hover,
-.pagination > li.disabled > a:focus {
+.pagination > li.disabled > a:focus,
+.pagination > li.bordered.disabled > a,
+.pagination > li.bordered.disabled > a:hover,
+.pagination > li.bordered.disabled > a:focus {
   color: #ccc;
   background-color: transparent;
   border: 2px solid #ccc;
@@ -920,13 +940,27 @@ table.tablesorter caption {
 .pager li > a .icon-arrow-previous:before {
   margin-right: 2px;
 }
-.pager li > a:hover {
-  color: #000;
-  background-color: #fff;
+.pager li > a:focus {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
 }
-.pager .disabled > a,
-.pager .disabled > a:hover {
+.pager li > a:hover {
+  color: #fff;
+  background-color: #000;
+}
+.pager li > a:active:hover {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
+}
+.pager li.disabled > a,
+.pager li.disabled > a:hover,
+.pager li.disabled > a:focus,
+.pager li.disabled > a:active,
+.pager li.disabled > a:active:hover {
   color: #ccc;
+  background-color: #fff;
   border-color: #ccc;
 }
 .pager .presentation {
@@ -941,6 +975,14 @@ table.tablesorter caption {
 .pager .previous > a,
 .pager .next > a {
   padding: .9rem 1.8rem 1.1rem 1.8rem;
+}
+.pager .previous > a:focus:before,
+.pager .next > a:focus:before,
+.pager .previous > a:hover:before,
+.pager .next > a:hover:before,
+.pager .previous > a:active:hover:before,
+.pager .next > a:active:hover:before {
+  color: #fff;
 }
 .pager .previous > a {
   padding-left: 3.8rem;
@@ -967,7 +1009,9 @@ table.tablesorter caption {
   content: "\e902";
 }
 .pager .previous.disabled > a:before,
-.pager .next.disabled > a:before {
+.pager .next.disabled > a:before,
+.pager .previous.disabled > a:active:hover:before,
+.pager .next.disabled > a:active:hover:before {
   color: #ccc;
 }
 @media all and (max-width: 767px) {
@@ -3649,6 +3693,41 @@ input,
 }
 .form-group label.control-label {
   margin-bottom: 1rem;
+}
+.form-control,
+.form-control.input-lg,
+.form-control.input-sm {
+  height: auto;
+  line-height: 1.25;
+}
+.form-control.input-sm {
+  padding: .425rem .8rem;
+  font-size: 1.4rem;
+}
+.form-control.input-lg {
+  padding: 1.175rem 2.4rem;
+  font-size: 1.8rem;
+}
+select.form-control {
+  padding: .7rem 1rem;
+}
+select.form-control.input-lg {
+  padding: 1.05rem 2.4rem;
+}
+select.form-control.input-sm {
+  padding: .3rem .8rem;
+}
+.form-group-lg .form-control {
+  height: auto;
+  padding: 1.175rem 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+.form-group-sm .form-control {
+  height: auto;
+  padding: .425rem .8rem;
+  font-size: 1.4rem;
+  line-height: 1.25;
 }
 .input-group > .form-control {
   border-color: #000;
