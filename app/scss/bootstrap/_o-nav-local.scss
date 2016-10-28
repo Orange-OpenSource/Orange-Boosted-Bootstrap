@@ -23,8 +23,8 @@
         font-weight: $brand-font-weight-bold;
         line-height: $navbar-font-size;
         // TODO put size into variable files, and put px for IE!! and update include boostedIE82015
-        padding-top: $nav-local-padding-vertical;
-        padding-bottom: $nav-local-padding-vertical;
+        padding-top: $nav-local-padding-vertical-top;
+        padding-bottom: $nav-local-padding-vertical-bottom;
 
         &:hover,
         &:focus {

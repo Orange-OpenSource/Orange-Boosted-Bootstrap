@@ -123,13 +123,15 @@ mark,
 }
 @include bg-variant('.bg-primary', $brand-primary);
 
-@include bg-variant('.bg-success', $state-success-bg);
+@include bg-variant('.bg-success', $state-success-text);
 
-@include bg-variant('.bg-info', $state-info-bg);
+@include bg-variant('.bg-info', $state-info-text);
 
-@include bg-variant('.bg-warning', $state-warning-bg);
-
-@include bg-variant('.bg-danger', $state-danger-bg);
+@include bg-variant('.bg-warning', $state-warning-text);
+.bg-danger {
+  color: $state-danger-bg;
+  @include bg-variant($state-danger-text);
+}
 
 
 // Page header

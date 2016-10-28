@@ -301,6 +301,15 @@ $input-height-large:             ((ceil($font-size-large * $line-height-large * 
 /// Small `.form-control` height
 $input-height-small:             ((floor($font-size-small * $line-height-small * 10) + ($padding-small-vertical * 20) + 4) / 10) !default;
 
+$input-padding-x-sm: .8rem !default;
+$input-padding-y-sm: .425rem !default;
+$input-padding-x-lg: 2.4rem !default;
+$input-padding-y-lg: 1.175rem !default;
+
+$input-select-padding-y: .7rem !default;
+$input-select-padding-y-sm: .3rem !default;
+$input-select-padding-y-lg: 1.05rem !default;
+
 /// `.form-group` margin
 $form-group-margin-bottom:       2rem !default;
 $form-search-margin-right:       .6rem !default;
@@ -563,6 +572,8 @@ $nav-pills-active-link-hover-color: $brand-orange-white !default;
 
 //== Local navigation
 $nav-local-padding-vertical: 1.6rem !default;
+$nav-local-padding-vertical-top: 1.5rem !default;
+$nav-local-padding-vertical-bottom: 1.7rem !default;
 $nav-local-arrow-color: $brand-orange-white !default;
 $nav-local-arrow-width: 10px !default;
 $nav-local-border-color: $gray-light !default;
