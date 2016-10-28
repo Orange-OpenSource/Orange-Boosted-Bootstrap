@@ -128,16 +128,17 @@ mark,
   .bg-variant(@brand-primary);
 }
 .bg-success {
-  .bg-variant(@state-success-bg);
+  .bg-variant(@state-success-text);
 }
 .bg-info {
-  .bg-variant(@state-info-bg);
+  .bg-variant(@state-info-text);
 }
 .bg-warning {
-  .bg-variant(@state-warning-bg);
+  .bg-variant(@state-warning-text);
 }
 .bg-danger {
-  .bg-variant(@state-danger-bg);
+  color: @state-danger-bg;
+  .bg-variant(@state-danger-text);
 }
 
 
