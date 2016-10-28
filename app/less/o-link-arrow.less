@@ -1,0 +1,26 @@
+//
+// o-link-arrow
+// --------------------------------------------------
+
+
+.o-link-arrow {
+  text-decoration: none;  
+  font-weight: @brand-font-weight-bold;
+  font-size: @navbar-font-size;
+  
+  &:after {
+    font-family: "boosted";
+    content: "\e902"; // Unicode space added since inline-block means non-collapsing white-space
+    // TODO put those values in variable-orange file
+    padding: @o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal;//0 8px 0 5px;//@o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal;
+    color: @o-link-arrow-color;
+    font-size: @o-link-arrow-separator-size;    
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      color: @link-hover-color;
+      text-decoration: @link-hover-decoration;
+    }
+  }
+}

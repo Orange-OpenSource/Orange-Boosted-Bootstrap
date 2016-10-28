@@ -3267,6 +3267,23 @@ fieldset[disabled] .btn {
 .boosted-checkbox_tick:before {
   content: "\e904";
 }
+.o-link-arrow {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.o-link-arrow:after {
+  padding: 0 10px;
+  font-family: "boosted";
+  font-size: 10px;
+  color: #000;
+  content: "\e902";
+}
+.o-link-arrow:hover:after,
+.o-link-arrow:focus:after {
+  color: #f16e00;
+  text-decoration: none;
+}
 html {
   font-size: 62.5%;
   font-weight: normal;
