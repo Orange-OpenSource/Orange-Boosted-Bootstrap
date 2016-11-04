@@ -12,14 +12,14 @@ group: components
 ## Large popin
 
 <div class="bd-example bd-example-modal">
-    <div class="popin modal">
+    <div class="modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="btn"><span class="close"></span></button>
                 </div>
                 <div class="modal-body">
-                    <div class="card card-block has-icon">
+                    <div class="card card-block has-info">
                         <div class="card-icon">
                             <span class="icon-Warning-important"></span>
                         </div>
@@ -43,14 +43,14 @@ group: components
     live demo
 </button>
 
-<div class="popin modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn" data-dismiss="modal"><span class="close"></span></button>
             </div>
             <div class="modal-body">
-                <div class="card card-block has-icon">
+                <div class="card card-block has-info">
                     <div class="card-icon">
                         <span class="icon-Warning-important"></span>
                     </div>
@@ -72,14 +72,14 @@ group: components
 ## Small popin
 
 <div class="bd-example bd-example-modal">
-    <div class="popin modal">
+    <div class="modal">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="btn"><span class="close"></span></button>
                 </div>
                 <div class="modal-body">
-                    <div class="card card-block has-icon">
+                    <div class="card card-block has-info">
                         <div class="card-icon">
                             <span class="icon-Warning-important"></span>
                         </div>
@@ -103,14 +103,14 @@ group: components
     live demo
 </button>
 
-<div class="popin modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn" data-dismiss="modal"><span class="close"></span></button>
             </div>
             <div class="modal-body">
-                <div class="card card-block has-icon">
+                <div class="card card-block has-info">
                     <div class="card-icon">
                         <span class="icon-Warning-important"></span>
                     </div>
@@ -131,14 +131,14 @@ group: components
 
 
 <div class="bd-example bd-example-modal">
-    <div class="popin modal">
+    <div class="modal">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="btn"><span class="close"></span></button>
                 </div>
                 <div class="modal-body">
-                    <div class="card card-block has-icon on-top">
+                    <div class="card card-block has-info on-top">
                         <div class="card-icon">
                             <span class="icon-Warning-important"></span>
                         </div>
@@ -162,14 +162,14 @@ group: components
     live demo
 </button>
 
-<div class="popin modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn" data-dismiss="modal"><span class="close"></span></button>
             </div>
             <div class="modal-body">
-                <div class="card card-block has-icon on-top">
+                <div class="card card-block has-info on-top">
                     <div class="card-icon">
                         <span class="icon-Warning-important"></span>
                     </div>

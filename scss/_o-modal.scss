@@ -1,168 +1,145 @@
-// .modal-content
-//
-//
-
-// .modal-title {
-//   font-weight: bold;
-//   color: #000;
-// }
-// .modal-content {
-//   border-radius: 0;
-// }
-// .modal-header {
-//   padding: 5px 5px 5px 20px;
-//   background-color: $gray-light-o;
-// }
-// .modal-header .close {
-//   opacity: .5;
-// }
-// .modal-footer {
-//   padding: 5px 5px 5px 20px;
-//   text-align: center;
-// }
-
-.modal.popin .modal-dialog,
-.modal-demo.popin .modal-dialog {
-  max-width: 43.75rem;
+.modal {
 
   .modal-content {
-    border: 0;
     padding: 2.5rem;
+    border: 0;
+  }
 
-    .modal-header {
+  .modal-header {
+    position: relative;
+    min-height: 1.25rem;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    border: 0;
+
+    .btn {
+      position: absolute;
+      top: -.625rem;
+      right: -.625rem;
+      padding: .625rem;
+      background-color: transparent;
       border: 0;
-      padding: 0;
-      min-height: 1.25rem;
-      margin-bottom: 40px;
-      position: relative;
-
-      .btn{
-        position: absolute;
-        background-color: transparent;
-        right: -10px;
-        top: -10px;
-        border: 0;
-        padding: 10px;
-
-        .close {
-          margin: 0;
-          width: 1.25rem;
-          height: 1.25rem;
-          background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20height%3D%2220%22%20width%3D%2220%22%3E%3Cg%20stroke%3D%22%23000%22%20stroke-width%3D%22.966%22%3E%3Cpath%20d%3D%22M19.657.343L.343%2019.657%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M.345.345l19.312%2019.312%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-        }
-      }
-    }
-
-    .modal-body {
-      border: 0;
-      padding: 0;
-
-      .card,
-      .card.card-block {
-        border: 0;
-        padding: 0;
-        margin: 0 0 2.5rem 0;
-        width: auto;
-
-        .card-title {
-          margin-bottom: 1.25rem;
-        }
-
-        .card-text {
-        }
-
-        &.has-icon {
-          margin-left: 3.75rem;
-
-          .card-icon {
-            position: absolute;
-            left: -3.75rem;
-            color: $brand-info;
-
-            span[class^="icon-"] {
-              font-size: 46px;
-            }
-          }
-        }
-      }
 
 
-    }
-
-    .modal-footer {
-      border: 0;
-      padding: 0;
-
-      .btn + .btn {
-        margin-left: 1.25rem;
+      .close {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0;
+        background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20height%3D%2220%22%20width%3D%2220%22%3E%3Cg%20stroke%3D%22%23666%22%20stroke-width%3D%22.966%22%3E%3Cpath%20d%3D%22M19.657.343L.343%2019.657%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M.345.345l19.312%2019.312%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
       }
     }
   }
 
-  &.modal-sm {
-    max-width: 18.75rem;
+  .modal-body {
+    padding: 0;
+    border: 0;
+  }
 
-    .modal-content {
-      padding: 1.25rem;
+  .modal-footer {
+    padding: 0;
+    border: 0;
 
-      .modal-header {
-        margin-bottom: 0;
+    .btn + .btn {
+      margin-left: 1.25rem;
+    }
+  }
+}
+
+.modal .modal-sm {
+
+  .modal-content {
+    padding: 1.25rem;
+  }
+
+  .modal-header {
+    margin-bottom: 0;
+  }
+
+  .modal-footer {
+    margin: 1.25rem 0;
+
+    .float-xs-right {
+      float: none !important;
+      text-align: center;
+    }
+  }
+}
+
+.modal {
+  .card-block,
+  .card.card-block {
+    width: auto;
+    padding: 0;
+    margin: 0 0 2.5rem;
+    border: 0;
+
+    .card-title {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .card-block.has-info,
+  .card.card-block.has-info {
+    margin-left: 3.75rem;
+
+    .card-icon {
+      position: absolute;
+      left: -3.75rem;
+    }
+
+    .card-icon span[class^="icon-"] {
+      font-size: 2.875rem;
+    }
+
+    &.has-info .card-icon {
+      color: $brand-info;
+    }
+  }
+}
+
+.modal .modal-sm {
+  .card.card-block {
+    margin-bottom: 1.25rem;
+    margin-left: 0;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-block.has-info,
+  .card.card-block.has-info {
+    position: relative;
+    margin-top: 1.25rem;
+
+    .card-icon {
+      position: absolute;
+      left: 0;
+    }
+
+    span[class^="icon-"] {
+      font-size: 2rem;
+    }
+
+    .card-title {
+      margin-left: 2.5rem;
+    }
+
+    &.on-top {
+      margin-top: 0;
+
+      .card-icon {
+        position: static;
+        margin-bottom: 1.25rem;
+        text-align: center;
       }
 
-      .modal-body {
-        .card.card-block {
-          margin-left: 0;
-          margin-bottom: 1.25rem;
-
-          .card-title {
-            font-size: 1rem;
-          }
-
-          &.has-icon {
-            position: relative;
-            margin-top: 1.25rem;
-
-            .card-icon {
-              position: absolute;
-              left: 0;
-
-              span[class^="icon-"] {
-                font-size: 2rem;
-              }
-            }
-
-            .card-title {
-              margin-left: 2.5rem;
-            }
-
-            &.on-top {
-              margin-top: 0;
-
-              .card-icon {
-                position: static;
-                text-align: center;
-                margin-bottom: 1.25rem;
-
-                span[class^="icon-"] {
-                  font-size: 4rem;
-                }
-              }
-
-              .card-title {
-                margin-left: 0;
-              }
-            }
-          }
-        }
+      span[class^="icon-"] {
+        font-size: 4rem;
       }
 
-      .modal-footer {
-        margin: 1.25rem 0;
-
-        .float-xs-right {
-          float: none !important;
-          text-align: center;
-        }
+      .card-title {
+        margin-left: 0;
       }
     }
   }
