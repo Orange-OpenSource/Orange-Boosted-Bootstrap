@@ -3,7 +3,7 @@
   color: #fff;
   border: none;
   border-top: 2px solid $gray-dark;
-  padding-top: 2.5rem;
+  padding: 2.5rem .625rem;
   background-image: none;
 
   .lead {
@@ -45,7 +45,7 @@
   background-color: #000;
   color: #fff;
   border-top: 2px solid $gray-dark;
-  padding: 0 0 1.25rem;
+  padding: 0;
 
   h1 {
     font-size: $font-size-h1;
@@ -55,6 +55,7 @@
 
   p {
     font-size: $font-size-base;
+    margin-bottom: 1.25rem;
   }
 
   @include media-breakpoint-down(xs) {
