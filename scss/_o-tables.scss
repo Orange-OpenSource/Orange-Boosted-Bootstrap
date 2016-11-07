@@ -224,16 +224,16 @@ caption {
       background-position: 95% 50%;
 
       @include hover {
-        background-image: url("../img/triangle_sort.png");
+        // background-image: url("../img/triangle_sort.png");
       }
     }
 
     &.tablesorter-headerDesc {
-      background-image: url("../img/triangle_down.png");
+      // background-image: url("../img/triangle_down.png");
     }
 
     &.tablesorter-headerAsc {
-      background-image: url("../img/triangle_up.png");
+      // background-image: url("../img/triangle_up.png");
     }
 
     a {
