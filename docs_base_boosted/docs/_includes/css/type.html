@@ -471,4 +471,44 @@ You can use the mark tag to <mark>highlight</mark> text.
     <h4>Auto-truncating</h4>
     <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
   </div>
+
+  <!-- Lists -->
+  <h2 id="type-links">Links</h2>
+
+  <h3 id="default-link">Defaul link</h3>
+  <p>By default, links are black, and not underlined</p>
+  <div class="bs-example" data-example-id="default-link-example">
+    <a href="#">This is a sample default link</a>
+  </div>
+{% highlight html %}
+<a href="#">This is a sample default link</a>
+{% endhighlight %}
+  
+  <h3 id="underlined-link">Link underline</h3>
+  <p>A link into a <code>p</code> tag become underlined, to be clearly identified.</p>
+  <div class="bs-example" data-example-id="underlined-link-example">
+    <p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
+  </div>
+{% highlight html %}
+<p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
+{% endhighlight %}  
+  
+  <h3 id="o-link-arrow">Link with arrow</h3>  
+  <p>Add the class <code>o-link-arrow</code> to a link, add an arrow after the text link.</p>
+  <div class="bs-example" data-example-id="o-link-arrow-example">
+    <a href="#" class="o-link-arrow">This is a sample link with arrow</a>
+  </div>
+{% highlight html %}
+<a href="#" class="o-link-arrow">This is a sample link with arrow</a>
+{% endhighlight %}  
+
+  <h3 id="o-link-arrow-back">Link with arrow back</h3>
+  <p>To convert arrow link to backward link, add <code>back</code> to the link with class <code>o-link-arrow</code>.</p>
+  <div class="bs-example" data-example-id="o-link-arrow-back-example">
+    <a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
+  </div>
+{% highlight html %}
+<a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
+{% endhighlight %}  
+  
 </div>
