@@ -3329,6 +3329,22 @@ fieldset[disabled] .btn {
   color: #f16e00;
   text-decoration: none;
 }
+.o-link-arrow.back:after {
+  padding: 0;
+  content: "";
+}
+.o-link-arrow.back:before {
+  padding: 0 10px 0 0;
+  font-family: "boosted";
+  font-size: 1rem;
+  color: #000;
+  content: "\e903";
+}
+.o-link-arrow.back:hover:before,
+.o-link-arrow.back:focus:before {
+  color: #f16e00;
+  text-decoration: none;
+}
 @font-face {
   font-family: 'boosted';
   font-style: normal;
@@ -3842,6 +3858,9 @@ select.form-control.input-sm {
   .form-group.has-error.right .form-control-message {
     margin-left: 0;
   }
+}
+.help-block {
+  color: #666;
 }
 .thumbnail h1,
 .thumbnail h2,
