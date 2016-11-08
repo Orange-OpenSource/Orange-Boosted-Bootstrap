@@ -121,7 +121,8 @@ Carousel._jQueryInterface=function _jQueryInterface(config){return this.each(fun
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='collapse';var VERSION='4.0.0-alpha.5';var DATA_KEY='bs.collapse';var EVENT_KEY='.'+DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=600;var Default={toggle:true,parent:''};var DefaultType={toggle:'boolean',parent:'string'};var Event={SHOW:'show'+EVENT_KEY,SHOWN:'shown'+EVENT_KEY,HIDE:'hide'+EVENT_KEY,HIDDEN:'hidden'+EVENT_KEY,CLICK_DATA_API:'click'+EVENT_KEY+DATA_API_KEY};var ClassName={IN:'in',COLLAPSE:'collapse',COLLAPSING:'collapsing',COLLAPSED:'collapsed'};var Dimension={WIDTH:'width',HEIGHT:'height'};var Selector={ACTIVES:'.card > .in, .card > .collapsing',ACCORDION_HEADING:'.o-accordion .panel .panel-heading .panel-title a',DATA_TOGGLE:'[data-toggle="collapse"]'};/**
+   */var NAME='collapse';var VERSION='4.0.0-alpha.5';var DATA_KEY='bs.collapse';var EVENT_KEY='.'+DATA_KEY;var DATA_API_KEY='.data-api';var JQUERY_NO_CONFLICT=$.fn[NAME];var TRANSITION_DURATION=600;var Default={toggle:true,parent:''};var DefaultType={toggle:'boolean',parent:'string'};var Event={SHOW:'show'+EVENT_KEY,SHOWN:'shown'+EVENT_KEY,HIDE:'hide'+EVENT_KEY,HIDDEN:'hidden'+EVENT_KEY,CLICK_DATA_API:'click'+EVENT_KEY+DATA_API_KEY};var ClassName={IN:'in',COLLAPSE:'collapse',COLLAPSING:'collapsing',COLLAPSED:'collapsed'};var Dimension={WIDTH:'width',HEIGHT:'height'};var Selector={ACTIVES:'.card:not(.multi) > .in, .card:not(.multi) > .collapsing',// boosted mod
+DATA_TOGGLE:'[data-toggle="collapse"]'};/**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -138,8 +139,7 @@ Collapse._getTargetFromElement=function _getTargetFromElement(element){var selec
 // add aria-controls attribute
 // accordion tabs
 // add role tab & tabpanel
-var $collTabHeadings=$('.panel-heading');var $collTabPanels=$('.panel-collapse:not(.mega-menu)');// let $accordionTabs = $(Selector.ACCORDION_HEADING)
-$collTabHeadings.attr({role:'tab'});$collTabPanels.attr({role:'tabpanel'});$('.panel').attr('role','presentation');/**
+var $collTabHeadings=$('.panel-heading');var $collTabPanels=$('.panel-collapse:not(.mega-menu)');$collTabHeadings.attr({role:'tab'});$collTabPanels.attr({role:'tabpanel'});$('.panel').attr('role','presentation');/**
    * ------------------------------------------------------------------------
    * Data Api implementation
    * ------------------------------------------------------------------------
