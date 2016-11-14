@@ -50,9 +50,9 @@
         padding-left: .625rem;
       }
 
-      > th {
-        font-size: $font-size-base;
-      }
+      // > th {
+      //   font-size: $font-size-base;
+      // }
 
       [class^="icon-"],
       [class*=" icon-"] {
@@ -62,12 +62,15 @@
   }
 
   thead {
-    th {
-      font-weight: bold;
-    }
 
-    tr {
+
+    > tr {
       border-bottom-width: 2px;
+
+      > th {
+        font-size: $font-size-base;
+        font-weight: bold;
+      }
     }
   }
 
