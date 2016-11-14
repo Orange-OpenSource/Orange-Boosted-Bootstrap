@@ -4,6 +4,246 @@
         <h1 class="page-header" id="tables">Tables<a class="doc-link" href="../css/#tables" title="go to tables documentation page"><span class="icon-Forward_curved_arrow"></span></a></h1>
         <h2 id="default-tables">Default tables</h2>
 
+        <h3>Striped table</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <table class="table table-striped table-hover ">
+                <caption></caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Status</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td></td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td></td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">3</th>
+                    <td>
+                    </td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td></td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                    </td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Checkbox table</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <table class="table table-hover has-checkbox">
+              <caption></caption>
+              <thead>
+                  <tr>
+                      <th>
+                        <input id="table_head_check_1" class="o-checkbox" type="checkbox">
+                        <label for="table_head_check_1"><span class="sr-only">select all rows</span>&nbsp;</label>
+                      </th>
+                      <th>Status</th>
+                      <th>Column heading</th>
+                      <th>Column heading</th>
+                      <th>Column heading</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <th scope="row">
+                        <input id="table_body_check_1" class="o-checkbox" type="checkbox" checked>
+                        <label for="table_body_check_1"><span class="sr-only">select row 1</span>&nbsp;</label>
+                      </th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">
+                        <input id="table_body_check_2" class="o-checkbox" type="checkbox">
+                        <label for="table_body_check_2"><span class="sr-only">select row 2</span>&nbsp;</label>
+                      </th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">
+                        <input id="table_body_check_3" class="o-checkbox" type="checkbox">
+                        <label for="table_body_check_3"><span class="sr-only">select row 3</span>&nbsp;</label>
+                      </th>
+                      <td></td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                      <td>Column content</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Thumbnails table</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <table class="table table-hover has-checkbox has-icon">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>
+                        <input id="table2_head_check_1" class="o-checkbox" type="checkbox">
+                        <label for="table2_head_check_1"><span class="sr-only">select row 1</span>&nbsp;</label>
+                    </th>
+                    <th>Name</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                      <input id="table2_body_check_1" class="o-checkbox" type="checkbox">
+                      <label for="table2_body_check_1"><span class="sr-only">select row 1</span>&nbsp;</label>
+                    </th>
+                    <td>
+                        <span class="icon-folder_document"></span>
+                        <span class="sr-only">folder</span>
+                        <span>Finance</span>
+                    </td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                      <input id="table2_body_check_2" class="o-checkbox" type="checkbox" checked>
+                      <label for="table2_body_check_2"><span class="sr-only">select row 2</span>&nbsp;</label>
+                    </th>
+                    <td>
+                        <span class="icon-unknown_file"></span>
+                        <span class="sr-only">file</span>
+                        <span>File</span>
+                    </td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr class="selected">
+                    <th scope="row">
+                      <input id="table2_body_check_3" class="o-checkbox" type="checkbox">
+                      <label for="table2_body_check_3"><span class="sr-only">select row 3</span>&nbsp;</label>
+                    </th>
+                    <td>
+                        <img src="../../assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
+                    </td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                      <input id="table2_body_check_4" class="o-checkbox" type="checkbox">
+                      <label for="table2_body_check_4"><span class="sr-only">select row 4</span>&nbsp;</label>
+                    </th>
+                    <td>
+                        <img src="../../assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
+                    </td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Icons table</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <table class="table table-hover has-icon" style="width: 60%;">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>Item 1</th>
+                    <th class="text-center">Item 2</th>
+                    <th class="text-center">Item 3</th>
+                    <th class="text-center" style="width: 14rem;">Item 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Item 1</th>
+                    <td class="text-center">
+                        <span class="icon-tick" style="color: #32C832;"></span>
+                        <span class="sr-only">checked</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="icon-tick" style="color: #32C832;"></span>
+                        <span class="sr-only">checked</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="icon-tick" style="color: #32C832;"></span>
+                        <span class="sr-only">checked</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Item 2</th>
+                    <td class="text-center">
+                        <span class="icon-tick" style="color: #32C832;"></span>
+                        <span class="sr-only">checked</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="icon-tick" style="color: #32C832;"></span>
+                        <span class="sr-only">checked</span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Item 3</th>
+                    <td class="text-center">
+                        <span class="icon-tick" style="color: #32C832;"></span>
+                        <span class="sr-only">checked</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
             <div class="bs-component">
               <table class="table table-striped table-hover ">
                 <caption>Optional table caption.</caption>
