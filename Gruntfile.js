@@ -774,12 +774,12 @@ module.exports = function (grunt) {
           // Add the complex table to the nav of the Javascript page
             {
               from: '<li><a href="#transitions">Transitions</a></li>',
-              to: '<li><a href="#transitions">Transitions</a></li><li><a href="#complextable">Table sorter</a></li>'
+              to: '<li><a href="#transitions">Transitions</a></li><li><a href="#complextable">Table sorter</a></li><li><a href="#orange-popin">Orange Popin</a></li>'
           },
           // Add the complex table to the inclusion list of the javascript page
             {
               from: '{% include js/modal.html %}',
-              to: '{% include js/tableSorter.html %}{% include js/modal.html %}'
+              to: '{% include js/tableSorter.html %}{% include js/modal.html %}{% include js/orangePopin.html %}'
           },
           // Add the NavTabs to the navigation
             {
