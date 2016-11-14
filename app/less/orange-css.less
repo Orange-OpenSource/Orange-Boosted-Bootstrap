@@ -656,29 +656,175 @@ select.form-control {
 }
 
 // == TABLES
+// .table {
+//   // Cells
+//   > thead,
+//   > tbody,
+//   > tfoot {
+//     > tr {
+//       > th,
+//       > td {
+//         // Remove border top and put border-botom
+//         border-top: 0;
+//         border-bottom: 1px solid @table-border-color;
+//       }
+//       > th {
+//           font-size: @font-size-h6;
+//       }
+//     }
+//   }
+
+//   > thead th {
+//       border-bottom: 2px;
+//   }
+
+// }
+
 .table {
   // Cells
   > thead,
   > tbody,
   > tfoot {
     > tr {
+      border-bottom: 1px solid @table-border-color;
+
       > th,
       > td {
-        // Remove border top and put border-botom
-        border-top: 0;
-        border-bottom: 1px solid @table-border-color;
+        padding: 1rem 1rem 1rem 0;
+        border: 0;
       }
+
+      > th:first-child,
+      > td:first-child {
+        padding-left: 1rem;
+      }
+
       > th {
-          font-size: @font-size-h6;
+        font-size: @font-size-base;
+      }
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        font-size: 2.9rem;
       }
     }
   }
 
-  > thead th {
-      border-bottom: 2px;
+  > thead {
+    > tr {
+      border-bottom-width: 2px;
+        > th {
+        font-size: @font-size-base-up;
+        font-weight: bold;
+      }
+    }
   }
 
+  tbody > th {
+    font-weight: normal;
+  }
+
+  &.has-checkbox {
+    // Boosted mod
+    // for display into tables with description sr-only (reg introduce in alpha.5 whith display inline-block
+    .custom-control {
+      display: inline;
+    }
+    // end mod
+    tr.active,
+    tr.selected {
+      > td,
+      > th {
+        background-color: @gray-light-plus;
+      }
+    }
+
+    tr > th:first-child,
+    tr > td:first-child {
+      width: 2rem;
+
+      .custom-control.custom-checkbox {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  &.has-icon {
+    tr > td,
+    tr > th {
+      height: 5rem;
+      vertical-align: middle;
+
+      span,
+      img {
+        vertical-align: middle;
+      }
+
+      span {
+        margin-right: .6rem;
+      }
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+      }
+
+      [class^="icon-"] {
+        width: 3rem;
+        font-size: 3rem;
+        line-height: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &.table-reflow {
+    thead,
+    tbody, {
+      > tr {
+        border: 0;
+      }
+
+      > tr > td {
+        line-height: 2rem;
+      }
+
+      > tr > th:first-child {
+        border-bottom: 2px solid @table-border-color;
+      }
+
+      > tr > th,
+      > tr > td {
+        border-bottom: 1px solid @table-border-color;
+      }
+
+      > tr > td:last-child {
+        border-right: 0;
+      }
+    }
+
+    thead > tr {
+      border: 0;
+
+      > th:not(:first-child) {
+        padding-left: 1rem;
+        border-bottom: 1px solid @table-border-color;
+      }
+
+      > th:last-child {
+        border-right: 0;
+      }
+    }
+
+    tbody {
+      > tr > th:first-child {
+        padding-left: 0;
+      }
+    }
+  }
 }
+
 .table-row-variant-border(success; @state-success-border);
 .table-row-variant-border(info; @state-info-border);
 .table-row-variant-border(warning; @state-warning-border);
