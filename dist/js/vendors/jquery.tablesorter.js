@@ -8,7 +8,7 @@
 	}
 }(function($) {
 
-/*! TableSorter (FORK) v2.25.9 *//*
+/*! TableSorter (FORK) v2.25.6 *//*
 * Client-side table sorting with ease!
 * @requires jQuery v1.2.6+
 *
@@ -31,7 +31,7 @@
 	'use strict';
 	var ts = $.tablesorter = {
 
-		version : '2.25.9',
+		version : '2.25.6',
 
 		parsers : [],
 		widgets : [],
@@ -951,15 +951,8 @@
 								index = 0;
 								while ( index <= span ) {
 									// duplicate text (or not) to spanned columns
-									// instead of setting duplicate span to empty string, use textExtraction to try to get a value
-									// see http://stackoverflow.com/q/36449711/145346
-									txt = c.duplicateSpan || index === 0 ?
-										val :
-										typeof c.textExtraction !== 'string' ?
-											ts.getElementText( c, cell, cacheIndex + index ) || '' :
-											'';
-									rowData.raw[ cacheIndex + index ] = txt;
-									cols[ cacheIndex + index ] = txt;
+									rowData.raw[ cacheIndex + index ] = c.duplicateSpan || index === 0 ? val : '';
+									cols[ cacheIndex + index ] = c.duplicateSpan || index === 0 ? val : '';
 									index++;
 								}
 								cacheIndex += span;

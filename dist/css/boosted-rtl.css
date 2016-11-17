@@ -9303,12 +9303,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   padding-right: .625rem;
 }
 
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th {
-  font-size: 1rem;
-}
-
 .table > thead > tr [class^="icon-"],
 .table > thead > tr [class*=" icon-"],
 .table > tbody > tr [class^="icon-"],
@@ -9318,12 +9312,13 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   font-size: 1.8125rem;
 }
 
-.table thead th {
-  font-weight: bold;
+.table thead > tr {
+  border-bottom-width: 2px;
 }
 
-.table thead tr {
-  border-bottom-width: 2px;
+.table thead > tr > th {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .table tbody > th {
