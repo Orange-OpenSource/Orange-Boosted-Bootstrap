@@ -63,7 +63,6 @@
 
 		colltab.attr('id', collid);
 		if(collparent){
-			$(collparent).find('div:not(.collapse,.panel-body), h4').attr('role','presentation');
 			collparent.attr({'role' : 'tablist'});
 
 			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
