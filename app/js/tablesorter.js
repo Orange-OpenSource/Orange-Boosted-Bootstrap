@@ -844,6 +844,8 @@
                 return /^[-+]?\d*$/.test($.trim(s.replace(/[,.']/g, '')));
             };
             this.clearTableBody = function (table) {
+                // boosted mod fix for pager plugin
+                /*                
                 if ($.browser.msie) {
                     function empty() {
                         while (this.firstChild)
@@ -853,6 +855,8 @@
                 } else {
                     table.tBodies[0].innerHTML = "";
                 }
+                */
+                table.tBodies[0].innerHTML = "";
             };
         }
     });
