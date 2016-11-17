@@ -791,11 +791,6 @@ module.exports = function (grunt) {
               from: '<h2 id="navbar-forms">Forms</h2>',
               to: '{% include components/navbar-brand-text.html %}{% include components/megamenu.html %}{% include components/local.html %}<h2 id="navbar-forms">Forms</h2>'
           },
-          // Replace the default bootstrap accordions by o-accordion orange
-            {
-              from: 'class="panel-group"',
-              to: 'class="o-accordion panel-group"'
-          },
           // fix semantic aria roles error into the native documentation
             {
               from: '<ul class="nav nav-tabs" >',
