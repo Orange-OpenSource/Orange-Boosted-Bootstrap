@@ -519,7 +519,7 @@ select.form-control {
     }
 
     &.right {
-      .clearfix;
+      @include clearfix;
 
       .control-label {
         display: block;
