@@ -69,6 +69,13 @@
 
     
         {
+            "title" : "Borders",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/borders/"
+        } ,
+    
+
+    
+        {
             "title" : "Brand guidelines",
             "url"   : "http://boosted.orange.com/v4-test/about/brand/"
         } ,
@@ -132,6 +139,20 @@
 
     
         {
+            "title" : "Clearfix",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/clearfix/"
+        } ,
+    
+
+    
+        {
+            "title" : "Close icon",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/close-icon/"
+        } ,
+    
+
+    
+        {
             "title" : "Code",
             "url"   : "http://boosted.orange.com/v4-test/content/code/"
         } ,
@@ -146,6 +167,13 @@
 
     
         {
+            "title" : "Colors",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/colors/"
+        } ,
+    
+
+    
+        {
             "title" : "Contents",
             "url"   : "http://boosted.orange.com/v4-test/getting-started/contents/"
         } ,
@@ -155,6 +183,13 @@
         {
             "title" : "Customization options",
             "url"   : "http://boosted.orange.com/v4-test/getting-started/options/"
+        } ,
+    
+
+    
+        {
+            "title" : "Display property",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/display-property/"
         } ,
     
 
@@ -237,6 +272,13 @@
 
     
         {
+            "title" : "Image replacement",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/image-replacement/"
+        } ,
+    
+
+    
+        {
             "title" : "Images",
             "url"   : "http://boosted.orange.com/v4-test/content/images/"
         } ,
@@ -253,6 +295,13 @@
         {
             "title" : "Introduction",
             "url"   : "http://boosted.orange.com/v4-test/getting-started/introduction/"
+        } ,
+    
+
+    
+        {
+            "title" : "Invisible content",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/invisible-content/"
         } ,
     
 
@@ -377,15 +426,15 @@
 
     
         {
-            "title" : "Orange modal",
-            "url"   : "http://boosted.orange.com/v4-test/components/orange-modal/"
+            "title" : "Orange navbar",
+            "url"   : "http://boosted.orange.com/v4-test/components/navbar-orange/"
         } ,
     
 
     
         {
-            "title" : "Orange navbar",
-            "url"   : "http://boosted.orange.com/v4-test/components/navbar-orange/"
+            "title" : "Orange popin",
+            "url"   : "http://boosted.orange.com/v4-test/components/orange-popin/"
         } ,
     
 
@@ -447,8 +496,22 @@
 
     
         {
+            "title" : "Responsive helpers",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/responsive-helpers/"
+        } ,
+    
+
+    
+        {
             "title" : "Responsive utilities",
             "url"   : "http://boosted.orange.com/v4-test/layout/responsive-utilities/"
+        } ,
+    
+
+    
+        {
+            "title" : "Screenreaders",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/screenreaders/"
         } ,
     
 
@@ -463,6 +526,20 @@
         {
             "title" : "Scrollspy",
             "url"   : "http://boosted.orange.com/v4-test/components/scrollspy/"
+        } ,
+    
+
+    
+        {
+            "title" : "Sizing and positioning",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/sizing-and-positioning/"
+        } ,
+    
+
+    
+        {
+            "title" : "Spacing",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/spacing/"
         } ,
     
 
@@ -504,14 +581,21 @@
     
         {
             "title" : "Typography",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/typography/"
+        } ,
+    
+
+    
+        {
+            "title" : "Typography",
             "url"   : "http://boosted.orange.com/v4-test/content/typography/"
         } ,
     
 
     
         {
-            "title" : "Utility classes",
-            "url"   : "http://boosted.orange.com/v4-test/components/utilities/"
+            "title" : "Vertical alignment",
+            "url"   : "http://boosted.orange.com/v4-test/utilities/vertical-align/"
         } ,
     
 

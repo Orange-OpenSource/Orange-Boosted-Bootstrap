@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>form</title>
+		    <link rel="stylesheet" href="../../dist/css/orangeHelvetica.css" />
+		    <link rel="stylesheet" href="../../dist/css/orangeIcons.css" />
+
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../../dist/css/bootstrap-orangeIE82015.css" />
+        <link rel="stylesheet" href="../../dist/css/boostedIE82015.css">
+        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!--[if (gte IE 9) | (!IE)]><!-->
+        <link rel="stylesheet" href="../../dist/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../dist/css/boosted2015.css">
+        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <!--<![endif]-->
+		<link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body role="document">
+
+		<div class="skiplinks" >
+			<div class="skiplinks_section axs_hide">
+				<ul>
+					<li id="cdu_skiplink">
+					</li>
+					<li>
+						<a href="#mainNav" class="skiplinks_trigger">main navigation</a>
+					</li>
+					<li>
+						<a href="#content" class="skiplinks_trigger">content</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<header role="banner">
+            <nav id="mainNav" class="navbar navbar-inverse" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img id="orange_logo" src="../../dist/images/logo-orange.png" alt=''/>
+						<span id="app_name">APP&amp;NAME <span class="sr-only">Homepage</span></span>
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav nav-menu nav-shift">
+						<li class="nav-item"><a href="#" title="open the news menu">dashboard</a></li>
+						<li class="nav-item"><a href="#" title="open the news menu">manage</a></li>
+						<li class="nav-item"><a href="#" title="open the news menu">parameters</a></li>
+						<li class="nav-item" id="id_for_cdu_link"></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="nav-item">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+								<span class="hidden-xs hidden-sm">&nbsp;language</span>&nbsp;<b class="caret" aria-hidden="true"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">français</a></li>
+								<li><a href="#">english</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								<span class="hidden-xs hidden-sm">&nbsp;hello
+									<span class="orange">admin</span>&nbsp;
+								</span><b class="caret" aria-hidden="true"></b>
+
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">logout</a></li>
+								<li><a href="#">preferences</a></li>
+							</ul>
+						</li>
+					</ul>
+			</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		</header>
+
+
+	<main id="content" role="main" class="container">
+    <div class="row">
+        <!-- step bar -->        
+		    <nav class="o-stepbar xs-labels">
+            <ol>
+                <li class="done stepbar-item">
+                    <a class="stepbar-link" href="#" title="Step 1 : Voluptatem">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Voluptatem</span>
+                    </a>
+                </li>
+                <li class="stepbar-item current">
+                    <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Aperiam</span>
+                    </a>
+                </li>
+                <li class="stepbar-item next">
+                    <a class="stepbar-link" href="#" title="Step 3 : Accusantinum">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Accusantinum</span>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+        <!-- /step bar -->
+    </div><!-- row -->
+    <div class="row">
+		<form class="container-fluid form-horizontal" role="form" id="myForm">
+			<div class="row form-group">
+				<label for="inputEmail" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="inputEmail" placeholder="email@provider.com">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword" placeholder="password">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label for="country" class="col-sm-2 control-label">Country</label>
+				<div class="col-sm-10">
+					<select class="form-control" id="country" name="inputCountry">
+						<option value="AF"> Afghanistan </option>
+						<option value="AL"> Albania </option>
+						<option value="DZ"> Algeria </option>
+						<option value="AS"> American Samoa </option>
+						<option value="AD"> Andorra </option>
+						<option value="AO"> Angola </option>
+						<option value="AI"> Anguilla </option>
+						<option value="AQ"> Antarctica </option>
+						<option value="AG"> Antigua and Barbuda </option>
+						<option value="AR"> Argentina </option>
+						<option value="AM"> Armenia </option>
+						<option value="AW"> Aruba </option>
+						<option value="AU"> Australia </option>
+						<option value="AT"> Austria </option>
+						<option value="AZ"> Azerbaijan </option>
+						<option value="BS"> Bahamas </option>
+						<option value="OT"> ... </option>
+					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<label for="inputComment" class="col-sm-2 control-label">Comment</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" rows="3" id="inputComment"></textarea>
+				</div>
+			</div>
+			<div class="row form-group">
+				<label for="exampleInputFile" class="col-sm-2 control-label">Documentation</label>
+				<div class="col-sm-10">
+					<input type="file" id="exampleInputFile">
+					<p class="help-block">File max size : 100MB</p>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default btn-xs"><span class="icon-arrow-previous" aria-hidden="true"></span> Previous</button>
+					<button type="submit" class="btn btn-default btn-xs">Save</button>
+					<button type="submit" class="btn btn-primary btn-xs">Next <span class="icon-arrow-next" aria-hidden="true"></span></button>
+				</div>
+			</div>
+		</form>
+    </div>
+	</main><!--/.container-->
+
+	<footer role="contentinfo">
+		<div class="container-fluid ">
+			<p>
+				<a href="#"><span>contact</span></a>
+				<a href="#" class="pull-right"><span>help</span></a>
+			</p>
+		</div>
+	</footer>
+
+		<!-- Placed at the end of the document so the pages load faster -->
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQuery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+    <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
+    <script src="../../dist/js/boosted.js"></script>
+
+	<script type="text/javascript">
+		// Surcharge des valeurs du script de la toolbar
+		accessibilitytoolbar_custom={
+			idLinkModeContainer:"id_for_cdu_link",
+			cssLinkModeClassName:"nav-item-cdu",
+			idSkipLinkIdLinkMode:"cdu_skiplink",
+			cssSkipLinkClassName: "skiplinks_trigger",
+			callback:skiplinksAfterLoad
+		};
+
+
+		$(".skiplinks_trigger").focus(function(){
+			$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+		});
+		$(".skiplinks_trigger").blur(function(){
+			$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+		});
+
+		function skiplinksAfterLoad(){
+			$(".skiplinks_trigger").focus(function(){
+				$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+			});
+			$(".skiplinks_trigger").blur(function(){
+				$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+			});
+		}
+
+	</script>
+	<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+	</body>
+</html>
