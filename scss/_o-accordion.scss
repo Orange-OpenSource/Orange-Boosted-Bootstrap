@@ -2,7 +2,7 @@
 //    Accordion
 //
 
-.card.o-accordion {
+.o-accordion .card {
   margin-bottom: 0;
   border: 0;
   border-bottom: 1px solid $gray-light-o;
@@ -24,8 +24,8 @@
       line-height: 1;
     }
 
-    a[data-toggle="collapse"],
-    h5 a[data-toggle="collapse"] {
+    a,
+    h5 a {
       position: relative;
       display: block;
       padding: 1.0625rem 0;
@@ -53,7 +53,7 @@
 }
 // For mobile display emphase the border
 @include media-breakpoint-down(sm) {
-  .card.o-accordion {
+  .o-accordion .card {
     border-bottom-width: 2px;
 
     &:first-child {
