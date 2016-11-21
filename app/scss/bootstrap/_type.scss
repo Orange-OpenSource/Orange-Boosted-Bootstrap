@@ -130,8 +130,8 @@ mark,
 @include bg-variant('.bg-warning', $state-warning-text);
 .bg-danger {
   color: $state-danger-bg;
-  @include bg-variant($state-danger-text);
 }
+@include bg-variant('.bg-danger', $state-danger-text);
 
 
 // Page header

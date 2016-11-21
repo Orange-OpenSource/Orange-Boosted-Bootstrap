@@ -2,11 +2,11 @@
 @at-root {
   @font-face {
   	font-family: 'boosted';
-  	src:url('$icon-font-pathboosted.eot');
-  	src:url('$icon-font-pathboosted.eot?#iefix') format('embedded-opentype'),
-  		url('$icon-font-pathboosted.ttf') format('truetype'),
-  		url('$icon-font-pathboosted.woff') format('woff'),
-  		url('$icon-font-pathboosted.svg?#boosted') format('svg');
+  	src:url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}boosted.eot'), '#{$icon-font-path}boosted.eot'));
+  	src:url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}boosted.eot?#iefix'), '#{$icon-font-path}boosted.eot?#iefix')) format('embedded-opentype'),
+  		url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}boosted.ttf'), '#{$icon-font-path}boosted.ttf')) format('truetype'),
+  		url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}boosted.woff'), '#{$icon-font-path}boosted.woff')) format('woff'),
+  		url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}boosted.svg?#boosted'), '#{$icon-font-path}boosted.svg?#boosted')) format('svg');
   	font-weight: normal;
   	font-style: normal;
   }

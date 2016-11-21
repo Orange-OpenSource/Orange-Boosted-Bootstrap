@@ -181,6 +181,11 @@ class Converter
               rule = replace_all rule, /(\$icon-font-path+)/, '#{\1}'
               replace_asset_url rule, :font
             }
+          when 'boostedIcons.less'
+            file = replace_rules(file, /\s*@font-face/) { |rule|
+              rule = replace_all rule, /(\$icon-font-path+)/, '#{\1}'
+              replace_asset_url rule, :font
+            }
           when 'orangeHelvetica.less'
             file = replace_rules(file, /\s*@font-face/) { |rule|
               rule = replace_all rule, /(\$icon-font-path+)/, '#{\1}'
@@ -190,6 +195,7 @@ class Converter
             file = apply_mixin_parent_selector(file, '\.(text|bg)-(success|primary|info|warning|danger)')
             # .bg-primary will not get patched automatically as it includes an additional rule. fudge for now
             file = replace_all(file, "  @include bg-variant($brand-primary);\n}", "}\n@include bg-variant('.bg-primary', $brand-primary);")
+            file = replace_all(file, "  @include bg-variant($state-danger-text);\n}", "}\n@include bg-variant('.bg-danger', $state-danger-text);")
         end
 
         path = File.join save_to, name.sub(/\.less$/, '.scss')
