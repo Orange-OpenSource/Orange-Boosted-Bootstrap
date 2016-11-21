@@ -9,13 +9,14 @@
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "Orange"
   ],
   "homepage": "http://boosted.orange.com",
   "license": "MIT",
   "moduleType": "globals",
   "main": [
-    "dist/css/boosted.css",
+    "scss/boosted.css",
     "dist/js/boosted.js"
   ],
   "ignore": [

@@ -1,5 +1,5 @@
 # Ignore docs files
-#_gh_pages
+_gh_pages
 _site
 
 # Ignore ruby files
@@ -48,15 +48,11 @@ scss-lint-report.xml
 docs/.jekyll-metadata
 
 # Folders to ignore
-.tmp
-.tmpdocs
 bower_components
 node_modules
 _gh_pages
-# dist
-js/dist
-docs/assets/css
-docs/dist
+.tmp
+.tmpdocs
 
 # Jenkins
 reports

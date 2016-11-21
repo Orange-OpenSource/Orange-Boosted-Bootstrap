@@ -3,17 +3,17 @@
 /* global Package:true */
 
 Package.describe({
-  name: 'twbs:bootstrap',  // https://atmospherejs.com/twbs/bootstrap
-  summary: 'The most popular front-end framework for developing responsive, mobile first projects on the web.',
+  name: 'Orange-OpenSource:Orange-Boosted-Bootstrap',  // https://atmospherejs.com/twbs/bootstrap
+  summary: 'Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.4.',
   version: '4.0.0-alpha.5',
-  git: 'https://github.com/twbs/bootstrap.git'
+  git: 'https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git'
 });
 
 Package.onUse(function (api) {
   api.versionsFrom('METEOR@1.0');
   api.use('jquery', 'client');
   api.addFiles([
-    'dist/css/bootstrap.css',
-    'dist/js/bootstrap.js'
+    'dist/css/boosted.css',
+    'dist/js/boosted.js'
   ], 'client');
 });

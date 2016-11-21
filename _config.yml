@@ -24,6 +24,7 @@ exclude:          [assets/scss/]
 
 gems:
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 # boosted mod
 grid:
