@@ -5,70 +5,154 @@
   display: inline-block;
   list-style: none;
 
-  .page-link {
-    @include hover-focus {
-      color: #000;
-      background-color: #fff;
-      border-color: #000;
+  //current bootstrap implementation, active class subject to move to page-link level
+  .page-item {
+
+    .page-link {
+      @include hover-focus {
+        color: #000;
+        background-color: #fff;
+        border-color: #000;
+      }
+
+      position: relative;
+      width: $pagination-width;
+      padding: .625rem 0;
+      margin-left: 0;
+      font-size: $font-size-base;
+      font-weight: bold;
+      line-height: $font-size-base;
+      text-align: center;
+      border: solid 2px transparent;
     }
 
-    &:active {
-      color: #fff;
-      background-color: $brand-primary;
-      border-color: $brand-primary;
+    &:first-child,
+    &:last-child {
+      .page-link {
+        width: auto;
+        min-width: $pagination-width;
+        height: $pagination-width;
+        padding: 0;
+        border: solid 2px #000;
+        color: #fff;
+
+        &::before {
+          position: absolute;
+          top: .6875rem;
+          left: .8125rem;
+          width: .5625rem;
+          height: .875rem;
+          content: "";
+        }
+
+        &.has-label {
+          padding: .5625rem 1.125rem .5625rem 2rem;
+          color: #000;
+
+           @include hover-focus {
+             color: #fff;
+           }
+
+          &:active {
+            color: #fff;
+          }
+        }
+      }
+
+      &:last-child .page-link.has-label {
+        padding: .5625rem 2rem .5625rem 1.125rem;
+      }
+
+      @include hover-focus {
+        .page-link {
+          color: #000;
+          background-color: #000;
+        }
+
+        &:first-child .page-link::before {
+          background-image: #{$pagination-icon-prev-active};
+        }
+
+        &:last-child .page-link::before {
+          background-image: #{$pagination-icon-next-active};
+        }
+      }
+
+      &:active {
+        .page-link {
+          color: $brand-primary;
+          background-color: $brand-primary;
+          border-color: $brand-primary;
+        }
+
+        &:first-child .page-link::before {
+          background-image: #{$pagination-icon-prev-active};
+        }
+
+        &:last-child .page-link::before {
+          background-image: #{$pagination-icon-next-active};
+        }
+      }
     }
 
-    position: relative;
-    width: $pagination-width;
-    padding: .625rem 0;
-    margin-left: 0;
-    font-size: $font-size-base;
-    font-weight: bold;
-    line-height: $font-size-base;
-    text-align: center;
-    border: solid 2px transparent;
-
-    &.active {
-      color: #fff;
-      background-color: #000;
-      border-color: #000;
-    }
-
-    &.prev::before {
-      position: absolute;
-      top: .6875rem;
-      left: .8125rem;
-      width: .5625rem;
-      height: .875rem;
-      content: "";
+    &:first-child .page-link::before {
       background-image: #{$pagination-icon-prev};
     }
 
-    &.prev:active::before {
-      background-image: #{$pagination-icon-prev-active};
-    }
-
-    &.next::before {
-      position: absolute;
-      top: .6875rem;
+    &:last-child .page-link::before {
+      left: auto;
       right: .8125rem;
-      width: .5625rem;
-      height: .875rem;
-      content: "";
       background-image: #{$pagination-icon-next};
     }
 
-    &.next:active::before {
-      background-image: #{$pagination-icon-next-active};
+    &:active {
+      .page-link {
+        color: #fff;
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+      }
     }
 
-    .label {
-      display: inline-block;
-      margin: .5625rem 1.125rem .5625rem 2rem;
+    &.active,
+    &.active:active {
+      .page-link {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+      }
     }
 
-    &.next .label {
-      margin: .5625rem 2rem .5625rem 1.125rem;
+    &.disabled,
+    &.disabled:active {
+      @include hover-focus {
+        .page-link{
+          color: #fff;
+          border-color: $gray-light-o;
+          background-color: #fff;
+        }
+
+        &:first-child .page-link::before {
+          background-image: #{$pagination-icon-prev-disabled};
+        }
+
+        &:last-child .page-link::before {
+          background-image: #{$pagination-icon-next-disabled};
+        }
+      }
+
+      .page-link{
+        color: #fff;
+        border-color: $gray-light-o;
+        background-color: #fff;
+      }
+
+      &:first-child .page-link::before {
+        background-image: #{$pagination-icon-prev-disabled};
+      }
+
+      &:last-child .page-link::before {
+        background-image: #{$pagination-icon-next-disabled};
+      }
     }
   }
 
@@ -78,96 +162,58 @@
     + .page-item {
       margin-left: .625rem;
     }
+
     &.presentation {
       padding: .625rem 0;
       font-weight: bold;
     }
-
-    &.bordered > .page-link {
-      width: auto;
-      min-width: $pagination-width;
-      border: 2px solid #000;
-
-      &:focus {
-        color: #fff;
-        background-color: #000;
-        border-color: #000;
-      }
-
-      &:active {
-        color: #fff;
-        background-color: $brand-primary;
-        border-color: $brand-primary;
-      }
-
-      &.prev:focus::before {
-        background-image: #{$pagination-icon-prev-active};
-      }
-
-      &.next:focus::before {
-        background-image: #{$pagination-icon-next-active};
-      }
-    }
   }
 
-  .page-item .page-link.prev,
-  .page-item .page-link.next {
-    width: auto;
-    min-width: $pagination-width;
-    height: $pagination-width;
-    padding: 0;
-    border: solid 2px #000;
+  .page-item.presentation + .page-item {
+    .page-link {
+        width: auto;
+        min-width: $pagination-width;
+        height: $pagination-width;
+        padding: 0;
+        border: solid 2px #000;
+        color: #fff;
 
-    @include hover {
-      color: #fff;
-      background-color: #000;
-
-      &:active {
-        background-color: $brand-primary;
+        &::before {
+          position: absolute;
+          top: .6875rem;
+          left: .8125rem;
+          width: .5625rem;
+          height: .875rem;
+          content: "";
+        }
       }
 
-      &.prev::before {
-        background-image: #{$pagination-icon-prev-active};
+      .page-link::before {
+        background-image: #{$pagination-icon-prev};
       }
 
-      &.next::before {
-        background-image: #{$pagination-icon-next-active};
-      }
-    }
+      @include hover-focus {
+        .page-link {
+          color: #000;
+          background-color: #000;
+        }
 
-    &.disabled {
-      @include hover {
-        color: $gray-lighter-o;
-        cursor: $cursor-disabled;
-        background-color: #fff;
-        border-color: $gray-lighter-o;
-
-        &:active {
-          color: $gray-lighter-o;
-          background-color: #fff;
-          border-color: $gray-lighter-o;
+        .page-link::before {
+          background-image: #{$pagination-icon-prev-active};
         }
       }
 
       &:active {
-        color: $gray-lighter-o;
-        background-color: #fff;
-        border-color: $gray-lighter-o;
+        .page-link {
+          color: #fff;
+          background-color: $brand-primary;
+          border-color: $brand-primary;
+        }
+
+        .page-link::before {
+          background-image: #{$pagination-icon-prev-active};
+        }
       }
-
-      color: $gray-lighter-o;
-      border-color: $gray-lighter-o;
-    }
-
-    &.prev.disabled::before,
-    &.prev.disabled:active::before {
-      background-image: #{$pagination-icon-prev-disabled};
-    }
-
-    &.next.disabled::before,
-    &.next.disabled:active::before {
-      background-image: #{$pagination-icon-next-disabled};
-    }
   }
 
   &.pagination-lg {
@@ -178,8 +224,8 @@
       line-height: $font-size-lg;
     }
 
-    .page-item .page-link.prev,
-    .page-item .page-link.next {
+    .page-item:first-child .page-link,
+    .page-item:last-child .page-link {
       min-width: $pagination-width-lg;
       height: $pagination-width-lg;
       padding: 0;
@@ -188,11 +234,11 @@
         top: 1.3125rem;
         left: 1.4375rem;
       }
+    }
 
-      &.next::before {
-        right: 1.4375rem;
-        left: auto;
-      }
+    .page-item:last-child .page-link::before {
+      right: 1.4375rem;
+      left: auto;
     }
   }
 
@@ -204,8 +250,8 @@
       line-height: $font-size-sm;
     }
 
-    .page-item .page-link.prev,
-    .page-item .page-link.next {
+    .page-item:first-child .page-link,
+    .page-item:last-child .page-link {
       min-width: $pagination-width-sm;
       height: $pagination-width-sm;
       padding: 0;
@@ -214,11 +260,11 @@
         top: .375rem;
         left: .5rem;
       }
+    }
 
-      &.next::before {
-        right: .5rem;
-        left: auto;
-      }
+    .page-item:last-child .page-link::before {
+      right: .5rem;
+      left: auto;
     }
   }
 }
