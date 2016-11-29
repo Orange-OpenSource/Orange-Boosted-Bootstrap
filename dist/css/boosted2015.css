@@ -68,11 +68,11 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item:after {
   position: absolute;
   top: 0;
-  right: -16px;
-  /* for edge support */
+  right: -1.6rem;
   z-index: 500;
   display: block;
-  width: 1.6rem;
+  width: 16px;
+  /* for Edge support*/
   height: 4rem;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23dddddd%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
@@ -94,11 +94,11 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item.done:after {
   position: absolute;
   top: 0;
-  right: -16px;
-  /* for edge support */
+  right: -1.6rem;
   z-index: 500;
   display: block;
-  width: 1.6rem;
+  width: 16px;
+  /* for Edge support*/
   height: 4rem;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23000000%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
@@ -118,11 +118,11 @@ ul.o-square-list ul ul li span {
 .o-stepbar .stepbar-item.current:after {
   position: absolute;
   top: 0;
-  right: -16px;
-  /* for edge support */
+  right: -1.6rem;
   z-index: 500;
   display: block;
-  width: 1.6rem;
+  width: 16px;
+  /* for Edge support*/
   height: 4rem;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23f16e00%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
@@ -146,9 +146,9 @@ ul.o-square-list ul ul li span {
   .o-stepbar .stepbar-item.done:after,
   .o-stepbar .stepbar-item.current:after,
   .o-stepbar .stepbar-item.next:after {
-    right: -1.2px;
-    /* for edge support */
-    width: 1.2rem;
+    right: -1.2rem;
+    width: 12px;
+    /* for Edge support*/
     height: 3rem;
     -webkit-background-size: cover;
             background-size: cover;

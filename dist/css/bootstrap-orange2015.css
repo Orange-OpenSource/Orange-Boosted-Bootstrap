@@ -7567,12 +7567,12 @@ button.close {
     display: none !important;
   }
 }
-@media (min-width: 980px) {
+@media (min-width: 980px) and (max-width: 1219px) {
   .hidden-lg {
     display: none !important;
   }
 }
-@media (min-width: 1220px) {
+@media (min-width: 1220px) and (max-width: 1379px) {
   .hidden-xl {
     display: none !important;
   }

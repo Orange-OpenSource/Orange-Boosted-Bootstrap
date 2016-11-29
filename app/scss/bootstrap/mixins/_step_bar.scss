@@ -7,10 +7,10 @@
   &:after {
     position: absolute;
     top: 0;
-    right: -16px; /* for edge support */
+    right: -$o-stepbar-arrow-width;
     z-index: 500;
     display: block;
-    width: $o-stepbar-arrow-width;
+    width: 16px; /* for Edge support*/
     height: $o-stepbar-height;
     content: "";
     background-size: $o-stepbar-arrow-width $o-stepbar-height;
