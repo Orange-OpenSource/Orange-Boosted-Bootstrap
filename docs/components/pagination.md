@@ -94,6 +94,7 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
       </span>
     </li>
     <li class="page-item active"><span class="page-link">1 <span class="sr-only">(current)</span></span></li>
+    <li class="aria-hidden"></li>
   </ul>
 </nav>
 {% endexample %}
