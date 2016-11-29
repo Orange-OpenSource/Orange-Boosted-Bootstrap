@@ -171,6 +171,14 @@ a {
   }
 }
 
+p a {
+  text-decoration: underline;
+
+  @include hover-focus {
+    text-decoration: underline;
+  }
+}
+
 // And undo these styles for placeholder links/named anchors (without href)
 // which have not been made explicitly keyboard-focusable (without tabindex).
 // It would be more straightforward to just use a[href] in previous block, but that

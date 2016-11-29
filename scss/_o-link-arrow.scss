@@ -1,0 +1,48 @@
+//
+// o-link-arrow
+// --------------------------------------------------
+
+
+.o-link-arrow {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: $font-size-base;
+
+  &:after {
+    font-family: "icon-orange";
+    content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
+    // TODO put those values in variable-orange file
+    padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
+    color: $o-link-arrow-color;
+    font-size: $o-link-arrow-separator-size;
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+  }
+  // previous link
+  &.back {
+    &:after {
+      content: ""; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0;
+    }
+    &:before {
+      font-family: "icon-orange";
+      content: "\e93f"; // Unicode space added since inline-block means non-collapsing white-space
+      // TODO put those values in variable-orange file
+      padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal $o-link-arrow-separator-padding-vertical 0;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
+      color: $o-link-arrow-color;
+      font-size: $o-link-arrow-separator-size;
+    }
+    &:hover,
+    &:focus {
+      &:before {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+      }
+    }
+  }
+}
