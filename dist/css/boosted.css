@@ -8429,7 +8429,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   float: left;
   padding: 0.625rem 1.25rem;
   padding-left: 2rem;
+  font-size: 1rem;
   font-weight: bold;
+  line-height: 1.25;
   color: #000;
   white-space: nowrap;
   list-style: none;
@@ -8527,7 +8529,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .o-stepbar .stepbar-item.done::after,
   .o-stepbar .stepbar-item.current::after,
   .o-stepbar .stepbar-item.next::after {
-    right: -.75rem;
+    right: -0.6875rem;
     width: 0.75rem;
     height: 1.875rem;
     -webkit-background-size: cover;
@@ -8580,38 +8582,38 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .o-link-arrow {
-  text-decoration: none;
-  font-weight: bold;
   font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.o-link-arrow:after {
-  font-family: "icon-orange";
-  content: "\e93e";
+.o-link-arrow::after {
   padding: 0 0.625rem;
-  color: #000;
+  font-family: "icon-orange";
   font-size: 0.625rem;
+  color: #000;
+  content: "\e93e";
 }
 
-.o-link-arrow:hover:after, .o-link-arrow:focus:after {
+.o-link-arrow:hover::after, .o-link-arrow:focus::after {
   color: #f16e00;
   text-decoration: none;
 }
 
-.o-link-arrow.back:after {
-  content: "";
+.o-link-arrow.back::after {
   padding: 0;
+  content: "";
 }
 
-.o-link-arrow.back:before {
-  font-family: "icon-orange";
-  content: "\e93f";
+.o-link-arrow.back::before {
   padding: 0 0.625rem 0 0;
-  color: #000;
+  font-family: "icon-orange";
   font-size: 0.625rem;
+  color: #000;
+  content: "\e93f";
 }
 
-.o-link-arrow.back:hover:before, .o-link-arrow.back:focus:before {
+.o-link-arrow.back:hover::before, .o-link-arrow.back:focus::before {
   color: #f16e00;
   text-decoration: none;
 }
@@ -9859,7 +9861,6 @@ caption {
 }
 
 .tab-content-clear {
-  /*padding: 1.125rem;*/
   border: 0;
 }
 
@@ -10034,8 +10035,8 @@ caption {
   min-width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  border: solid 2px #000;
   color: #fff;
+  border: solid 2px #000;
 }
 
 .pagination .page-item:first-child .page-link::before, .pagination .page-item:last-child .page-link::before {
@@ -10096,8 +10097,8 @@ caption {
 }
 
 .pagination .page-item:last-child .page-link::before {
-  left: auto;
   right: .8125rem;
+  left: auto;
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%2F%3E%3C%2Fsvg%3E");
 }
 
@@ -10115,8 +10116,8 @@ caption {
 
 .pagination .page-item.disabled:focus .page-link, .pagination .page-item.disabled:hover .page-link, .pagination .page-item.disabled:active:focus .page-link, .pagination .page-item.disabled:active:hover .page-link {
   color: #fff;
-  border-color: #ccc;
   background-color: #fff;
+  border-color: #ccc;
 }
 
 .pagination .page-item.disabled:focus:first-child .page-link::before, .pagination .page-item.disabled:hover:first-child .page-link::before, .pagination .page-item.disabled:active:focus:first-child .page-link::before, .pagination .page-item.disabled:active:hover:first-child .page-link::before {
@@ -10129,8 +10130,8 @@ caption {
 
 .pagination .page-item.disabled .page-link, .pagination .page-item.disabled:active .page-link {
   color: #fff;
-  border-color: #ccc;
   background-color: #fff;
+  border-color: #ccc;
 }
 
 .pagination .page-item.disabled:first-child .page-link::before, .pagination .page-item.disabled:active:first-child .page-link::before {
@@ -10160,8 +10161,8 @@ caption {
   min-width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  border: solid 2px #000;
   color: #fff;
+  border: solid 2px #000;
 }
 
 .pagination .page-item.presentation + .page-item .page-link::before {
