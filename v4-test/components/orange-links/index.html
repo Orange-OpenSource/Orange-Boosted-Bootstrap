@@ -10,7 +10,7 @@
 
 <title>
   
-    Best practices &middot; Bootstrap
+    Orange links &middot; Bootstrap
   
 </title>
 
@@ -63,9 +63,9 @@
     <div class="bd-pageheader">
       <div class="container">
         
-  <h1>Getting started</h1>
+  <h1>Components</h1>
   <p class="lead">
-    An overview of Bootstrap, including how to download and use it, some basic templates and examples, and more.
+    Over a dozen reusable components built to provide buttons, dropdowns, input groups, navigation, alerts, and much more.
   </p>
 
 
@@ -92,7 +92,7 @@
 
   
 
-  <div class="bd-toc-item active">
+  <div class="bd-toc-item ">
     
         <a class="bd-toc-link" href="../../getting-started/introduction">
       
@@ -219,7 +219,7 @@
 
           
 
-          <li class="active bd-sidenav-active">
+          <li class="">
             <a href="../../getting-started/best-practices/">
               Best practices
             </a>
@@ -440,7 +440,7 @@
 
   
 
-  <div class="bd-toc-item ">
+  <div class="bd-toc-item active">
     
         <a class="bd-toc-link" href="../../components/alerts">
       
@@ -525,7 +525,7 @@
 
           
 
-          <li class="">
+          <li class="active bd-sidenav-active">
             <a href="../../components/orange-links/">
               Orange links
             </a>
@@ -1298,20 +1298,52 @@
 
         </div>
         <div class="col-xs-12 col-md-9 pull-md-3 bd-content">
-          <h1 class="bd-title" id="content">Best practices</h1>
-          <p>We’ve designed and developed Bootstrap to work in a number of environments. Here are some of the best practices we’ve gathered from years of working on and using it ourselves.</p>
+          <h1 class="bd-title" id="content">Orange links</h1>
+          <h2 id="contents">Contents</h2>
 
-<div class="bd-callout bd-callout-info">
-<p><strong>Heads up!</strong> This copy is a work in progress.</p>
-</div>
-
-<h3 id="general-outline">General outline</h3>
-<ul>
-  <li>Working with CSS</li>
-  <li>Working with Sass files</li>
-  <li>Building new CSS components</li>
-  <li>Ask in Slack</li>
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#default" id="markdown-toc-default">Default</a></li>
+  <li><a href="#underlined" id="markdown-toc-underlined">Underlined</a></li>
+  <li><a href="#with-arrow" id="markdown-toc-with-arrow">With arrow</a></li>
+  <li><a href="#with-back-arrow" id="markdown-toc-with-back-arrow">With back arrow</a></li>
 </ul>
+
+<h2 id="default">Default</h2>
+
+<p>By default, links are black, and not underlined</p>
+
+<div class="bd-example" data-example-id="">
+<a href="#">This is a sample default link</a>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>This is a sample default link<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<h2 id="underlined">Underlined</h2>
+
+<p>A link into a p tag become underlined, to be clearly identified.</p>
+
+<div class="bd-example" data-example-id="">
+<p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Some text in a paragraph, and so <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>the link are underline<span class="nt">&lt;/a&gt;&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="with-arrow">With arrow</h2>
+
+<p>Add the class o-link-arrow to a link, add an arrow after the text link.</p>
+
+<div class="bd-example" data-example-id="">
+<a href="#" class="o-link-arrow">This is a sample link with arrow</a>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"o-link-arrow"</span><span class="nt">&gt;</span>This is a sample link with arrow<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<h2 id="with-back-arrow">With back arrow</h2>
+
+<p>To convert arrow link to backward link, add back to the link with class o-link-arrow.</p>
+
+<div class="bd-example" data-example-id="">
+<a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"o-link-arrow back"</span><span class="nt">&gt;</span>This is a sample link with arrow for backward<span class="nt">&lt;/a&gt;</span></code></pre></div>
 
         </div>
       </div>

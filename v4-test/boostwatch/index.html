@@ -15,18 +15,18 @@
 </title>
 
 <!-- helvetica -->
-<link href="http://boosted.orange.com/v4-test/dist/css/orangeHelvetica.css" rel="stylesheet">
+<link href="../dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
-<link href="http://boosted.orange.com/v4-test/dist/css/orangeIcons.css" rel="stylesheet">
+<link href="../dist/css/orangeIcons.css" rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="http://boosted.orange.com/v4-test/dist/css/boosted.css" rel="stylesheet">
+<link href="../dist/css/boosted.css" rel="stylesheet">
 
 <!-- Documentation extras -->
-<link href="http://boosted.orange.com/v4-test/assets/css/docs.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="http://boosted.orange.com/v4-test/apple-touch-icon.png">
-<link rel="icon" href="http://boosted.orange.com/v4-test/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="../favicon.ico">
 
   </head>
   <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
@@ -43,16 +43,16 @@
           <span class="icon-menu"></span>
       </button>
       <div class="container" >
-          <a class="navbar-brand logo" href="http://boosted.orange.com/v4-test/"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+          <a class="navbar-brand logo" href="../"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
           <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
               <li class="nav-item">
-                <a class="nav-link" href="http://boosted.orange.com/v4-test/">
+                <a class="nav-link" href="../">
                   B<span class="text-primary">oo</span>sted
                 </a>
               </li>
-              <li class="nav-item"><a class="nav-link " href="http://boosted.orange.com/v4-test/getting-started/introduction/">Documentation</a></li>
-              <li class="nav-item"><a class="nav-link " href="http://boosted.orange.com/v4-test/examples/">Examples</a></li>
-              <li class="nav-item"><a class="nav-link active" href="http://boosted.orange.com/v4-test/boostwatch/">Boostwatch</a></li>
+              <li class="nav-item"><a class="nav-link " href="../getting-started/introduction/">Documentation</a></li>
+              <li class="nav-item"><a class="nav-link " href="../examples/">Examples</a></li>
+              <li class="nav-item"><a class="nav-link active" href="../boostwatch/">Boostwatch</a></li>
               <li class="nav-item" id="id_li_for_cdu"></li>
           </ul>
       </div>
@@ -100,6 +100,9 @@
           <a class="bd-toc-link" href="#stepbar">Stepbar</a>
       </div>
       <div class="bd-toc-item ">
+          <a class="bd-toc-link" href="#link">Links</a>
+      </div>
+      <div class="bd-toc-item ">
           <a class="bd-toc-link" href="#navbar">Navbar</a>
       </div>
       <div class="bd-toc-item ">
@@ -144,7 +147,7 @@
 <p>Icons created from the Orange brand.</p>
 <p>Copyright (C) 2016 Orange SA All rights reserved</p>
 <p>See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p>
-<p>The best practice is to create your own icons libray (<a href="http://boosted.orange.com/v4-test/getting-started/build-tools/#howto-create-an-icons-library-using-icomoon">See howto in getting started section</a>)</p>
+<p>The best practice is to create your own icons libray (<a href="../getting-started/build-tools/#howto-create-an-icons-library-using-icomoon">See howto in getting started section</a>)</p>
 
 <div class="doc-fonticon">
     <ul class="doc-fonticon-list">
@@ -4080,8 +4083,8 @@
 <h2 id="accordion">Accordions<a class="doc-link" href="../components/orange-accordion/" title="go to accordion documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 
 <h3>One at a time</h3>
-<div id="accordion-1" role="tablist">
-  <div class="card o-accordion">
+<div id="accordion-1" role="tablist" class="o-accordion">
+  <div class="card">
     <div class="card-header" role="tab" id="headingOne">
       <h5>
         <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -4096,7 +4099,7 @@
       </div>
     </div>
   </div>
-  <div class="card o-accordion">
+  <div class="card">
     <div class="card-header" role="tab" id="headingTwo">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -4110,7 +4113,7 @@
       </div>
     </div>
   </div>
-  <div class="card o-accordion">
+  <div class="card">
     <div class="card-header" role="tab" id="headingThree">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -4127,8 +4130,8 @@
 </div>
 
 <h3 id="accordion2">Multiple openable</h3>
-<div id="accordion-2" role="tablist">
-  <div class="o-accordion card multi">
+<div id="accordion-2" role="tablist" class="o-accordion">
+  <div class="card multi">
     <div class="card-header" role="tab" id="headingOne-1">
       <h5>
         <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
@@ -4143,7 +4146,7 @@
       </div>
     </div>
   </div>
-  <div class="o-accordion card multi">
+  <div class="card multi">
     <div class="card-header" role="tab" id="headingTwo-1">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapseTwo-1" aria-expanded="false" aria-controls="collapseTwo-1">
@@ -4157,7 +4160,7 @@
       </div>
     </div>
   </div>
-  <div class="o-accordion card multi">
+  <div class="card multi">
     <div class="card-header" role="tab" id="headingThree-1">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapseThree-1" aria-expanded="false" aria-controls="collapseThree-1">
@@ -4461,6 +4464,14 @@
     </li>
   </ol>
 </nav>
+<h2 id="link">Links<a class="doc-link" href="../content/typography/#links" title="go to typography documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
+<a href="#">This is a sample default link</a>
+<h2 id="underlined-link">Link underline</h2>
+<p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
+<h2 id="o-link-arrow">Link with arrow</h2>
+<a href="#" class="o-link-arrow">This is a sample link with arrow</a>
+<h2 id="o-link-arrow-back">Link with arrow back</h2>
+<a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
 <h2 id="navbar">Navbar<a class="doc-link" href="../components/navbar/" title="go to navbar documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 <nav class="navbar navbar-dark bg-faded">
   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar3">
@@ -5251,20 +5262,21 @@
     </div>
   </div>
 </div>
-<h2 id="pagination">Pagination<a class="doc-link" href="../components/pagination/" title="go to pagination documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2> Standard pagination with numbers
+<h2 id="pagination">Pagination<a class="doc-link" href="../components/pagination/" title="go to pagination documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
+Standard pagination with numbers
 <div>
   <nav>
     <ul class="pagination">
-      <li class="page-item bordered">
-        <a class="page-link prev disabled" href="#" aria-label="Previous"></a>
+            <li class="page-item">
+                <a class="page-link disabled" href="#" aria-label="Previous"></a>
       </li>
-      <li class="page-item"><a class="page-link active" href="#" aria-label="Go to page 1">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#" aria-label="Go to page 1">1</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
-      <li class="page-item bordered">
-        <a class="page-link next" href="#" aria-label="Next"></a>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next"></a>
       </li>
     </ul>
   </nav>
@@ -5273,11 +5285,11 @@ Buttons
 <div>
   <nav>
     <ul class="pagination">
-      <li class="page-item bordered">
-        <a class="page-link prev" href="#" aria-label="Previous"></a>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous"></a>
       </li>
-      <li class="page-item bordered">
-        <a class="page-link next" href="#" aria-label="Next"></a>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next"></a>
       </li>
     </ul>
   </nav>
@@ -5287,11 +5299,11 @@ Buttons + page counter
   <nav>
     <ul class="pagination">
       <li class="page-item presentation" role="presentation">Page 2 of 10</li>
-      <li class="page-item bordered">
-        <a class="page-link prev" href="#" aria-label="Previous"></a>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous"></a>
       </li>
-      <li class="page-item bordered">
-        <a class="page-link next" href="#" aria-label="Next"></a>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next"></a>
       </li>
     </ul>
   </nav>
@@ -5300,11 +5312,11 @@ Buttons + Back/Next labels
 <div>
   <nav>
     <ul class="pagination">
-      <li class="page-item bordered">
-        <a class="page-link prev" href="#" aria-label="Previous"><span class="label">Back</span></a>
+            <li class="page-item">
+                <a class="page-link has-label" href="#" aria-label="Previous">Back</a>
       </li>
-      <li class="page-item bordered">
-        <a class="page-link next" href="#" aria-label="Next"><span class="label">Next</span></a>
+            <li class="page-item">
+                <a class="page-link has-label" href="#" aria-label="Next">Next</a>
       </li>
     </ul>
   </nav>
@@ -5469,23 +5481,23 @@ Buttons + Back/Next labels
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text hidden-sm-down">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://boosted.orange.com/v4-test/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
-<script src="http://boosted.orange.com/v4-test/assets/js/vendor/tether.min.js"></script>
-
-
-  <script src="http://boosted.orange.com/v4-test/dist/js/boosted.js"></script>
+<script src="../assets/js/vendor/tether.min.js"></script>
 
 
-<script src="http://boosted.orange.com/v4-test/dist/js/vendors/jquery.tablesorter.js"></script>
+  <script src="../dist/js/boosted.js"></script>
+
+
+<script src="../dist/js/vendors/jquery.tablesorter.js"></script>
 
 
 
-<script src="http://boosted.orange.com/v4-test/assets/js/docs.min.js"></script>
+<script src="../assets/js/docs.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="http://boosted.orange.com/v4-test/assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="http://boosted.orange.com/v4-test/assets/js/ie-emulation-modes-warning.js"></script>
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../assets/js/ie-emulation-modes-warning.js"></script>
 
 
 

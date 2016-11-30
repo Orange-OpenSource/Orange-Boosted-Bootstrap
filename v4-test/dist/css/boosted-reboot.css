@@ -328,6 +328,14 @@ a:focus {
   outline-offset: -2px;
 }
 
+p a {
+  text-decoration: underline;
+}
+
+p a:focus, p a:hover {
+  text-decoration: underline;
+}
+
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
