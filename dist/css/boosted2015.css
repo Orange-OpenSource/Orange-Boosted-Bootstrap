@@ -146,12 +146,12 @@ ul.o-square-list ul ul li span {
   .o-stepbar .stepbar-item.done:after,
   .o-stepbar .stepbar-item.current:after,
   .o-stepbar .stepbar-item.next:after {
-    right: -1.2rem;
+    right: -11px;
     width: 12px;
     /* for Edge support*/
-    height: 3rem;
-    -webkit-background-size: cover;
-            background-size: cover;
+    height: 100%;
+    -webkit-background-size: 12px 100%;
+            background-size: 12px 100%;
   }
   .o-stepbar.xs-numbers .step-number:after {
     display: none;
@@ -179,7 +179,7 @@ ul.o-square-list ul ul li span {
   .o-stepbar.xs-numbers .stepbar-item {
     width: 20%;
     padding-right: 0;
-    padding-left: 1.2rem;
+    padding-left: 12px;
     text-align: center;
   }
   .o-stepbar.xs-numbers .stepbar-item:first-child {

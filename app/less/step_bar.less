@@ -106,10 +106,10 @@
     .stepbar-item.done:after,
     .stepbar-item.current:after,
     .stepbar-item.next:after {
-      right: -@o-stepbar-mobile-arrow-width;
+      right: -11px;
       width: 12px; /* for Edge support*/
-      height: @o-stepbar-mobile-arrow-height;
-      background-size: cover;
+      height: 100%;
+      background-size: 12px 100%;
     }
 
     &.xs-numbers {
@@ -142,7 +142,7 @@
       .stepbar-item {
         text-align: center;
         width: 20%;
-        padding-left: @o-stepbar-mobile-arrow-width;
+        padding-left: 12px;
         padding-right: 0;
 
         &:first-child {
