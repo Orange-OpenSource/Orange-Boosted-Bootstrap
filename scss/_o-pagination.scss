@@ -33,8 +33,8 @@
         min-width: $pagination-width;
         height: $pagination-width;
         padding: 0;
-        border: solid 2px #000;
         color: #fff;
+        border: solid 2px #000;
 
         &::before {
           position: absolute;
@@ -49,9 +49,9 @@
           padding: .5625rem 1.125rem .5625rem 2rem;
           color: #000;
 
-           @include hover-focus {
-             color: #fff;
-           }
+          @include hover-focus {
+            color: #fff;
+          }
 
           &:active {
             color: #fff;
@@ -100,8 +100,8 @@
     }
 
     &:last-child .page-link::before {
-      left: auto;
       right: .8125rem;
+      left: auto;
       background-image: #{$pagination-icon-next};
     }
 
@@ -125,10 +125,10 @@
     &.disabled,
     &.disabled:active {
       @include hover-focus {
-        .page-link{
+        .page-link {
           color: #fff;
-          border-color: $gray-light-o;
           background-color: #fff;
+          border-color: $gray-light-o;
         }
 
         &:first-child .page-link::before {
@@ -140,10 +140,10 @@
         }
       }
 
-      .page-link{
+      .page-link {
         color: #fff;
-        border-color: $gray-light-o;
         background-color: #fff;
+        border-color: $gray-light-o;
       }
 
       &:first-child .page-link::before {
@@ -171,49 +171,49 @@
 
   .page-item.presentation + .page-item {
     .page-link {
-        width: auto;
-        min-width: $pagination-width;
-        height: $pagination-width;
-        padding: 0;
-        border: solid 2px #000;
-        color: #fff;
+      width: auto;
+      min-width: $pagination-width;
+      height: $pagination-width;
+      padding: 0;
+      color: #fff;
+      border: solid 2px #000;
 
-        &::before {
-          position: absolute;
-          top: .6875rem;
-          left: .8125rem;
-          width: .5625rem;
-          height: .875rem;
-          content: "";
-        }
+      &::before {
+        position: absolute;
+        top: .6875rem;
+        left: .8125rem;
+        width: .5625rem;
+        height: .875rem;
+        content: "";
+      }
+    }
+
+    .page-link::before {
+      background-image: #{$pagination-icon-prev};
+    }
+
+    @include hover-focus {
+      .page-link {
+        color: #000;
+        background-color: #000;
       }
 
       .page-link::before {
-        background-image: #{$pagination-icon-prev};
+        background-image: #{$pagination-icon-prev-active};
+      }
+    }
+
+    &:active {
+      .page-link {
+        color: #fff;
+        background-color: $brand-primary;
+        border-color: $brand-primary;
       }
 
-      @include hover-focus {
-        .page-link {
-          color: #000;
-          background-color: #000;
-        }
-
-        .page-link::before {
-          background-image: #{$pagination-icon-prev-active};
-        }
+      .page-link::before {
+        background-image: #{$pagination-icon-prev-active};
       }
-
-      &:active {
-        .page-link {
-          color: #fff;
-          background-color: $brand-primary;
-          border-color: $brand-primary;
-        }
-
-        .page-link::before {
-          background-image: #{$pagination-icon-prev-active};
-        }
-      }
+    }
   }
 
   &.pagination-lg {

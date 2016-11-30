@@ -70,11 +70,11 @@ $arrow-orange: "f16e00";
     @include stepbar-arrow($arrow-gray);
     position: relative;
     float: left;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
     padding: $padding-base-vertical $padding-base-horizontal;
     padding-left: 2rem;
+    font-size: $font-size-base;
     font-weight: bold;
+    line-height: $line-height-base;
     color: #000;
     white-space: nowrap;
     list-style: none;
@@ -177,7 +177,7 @@ $arrow-orange: "f16e00";
     .stepbar-item.done::after,
     .stepbar-item.current::after,
     .stepbar-item.next::after {
-      right: -($o-stepbar-mobile-arrow-width - 0.0625); // remove 1px for mobile display error
+      right: -($o-stepbar-mobile-arrow-width - .0625); // remove 1px for mobile display error
       width: $o-stepbar-mobile-arrow-width;
       height: $o-stepbar-mobile-arrow-height;
       background-size: cover;

@@ -4,42 +4,40 @@
 
 
 .o-link-arrow {
-  text-decoration: none;
-  font-weight: bold;
   font-size: $font-size-base;
+  font-weight: bold;
+  text-decoration: none;
 
-  &:after {
-    font-family: "icon-orange";
-    content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
-    // TODO put those values in variable-orange file
+  &::after {
     padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-    color: $o-link-arrow-color;
+    font-family: "icon-orange";
     font-size: $o-link-arrow-separator-size;
+    color: $o-link-arrow-color;
+    content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
   }
   &:hover,
   &:focus {
-    &:after {
+    &::after {
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
     }
   }
   // previous link
   &.back {
-    &:after {
-      content: ""; // Unicode space added since inline-block means non-collapsing white-space
+    &::after {
       padding: 0;
+      content: ""; // Unicode space added since inline-block means non-collapsing white-space
     }
-    &:before {
-      font-family: "icon-orange";
-      content: "\e93f"; // Unicode space added since inline-block means non-collapsing white-space
-      // TODO put those values in variable-orange file
+    &::before {
       padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal $o-link-arrow-separator-padding-vertical 0;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-      color: $o-link-arrow-color;
+      font-family: "icon-orange";
       font-size: $o-link-arrow-separator-size;
+      color: $o-link-arrow-color;
+      content: "\e93f"; // Unicode space added since inline-block means non-collapsing white-space
     }
     &:hover,
     &:focus {
-      &:before {
+      &::before {
         color: $link-hover-color;
         text-decoration: $link-hover-decoration;
       }
