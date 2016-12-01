@@ -41,7 +41,7 @@
       border: solid 2px #000;
 
       @include focus {
-        color: #000;
+        color: #fff;
       }
 
       &::before {
