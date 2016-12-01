@@ -2,13 +2,15 @@
 //    Accordion
 //
 
-.o-accordion .card {
-  margin-bottom: 0;
-  border: 0;
-  border-bottom: 1px solid $gray-light-o;
+.o-accordion {
+  .card {
+    margin-bottom: 0;
+    border: 0;
+    border-bottom: 1px solid $gray-light-o;
 
-  &:first-child {
-    border-top: 1px solid $gray-light-o;
+    &:first-child {
+      border-top: 1px solid $gray-light-o;
+    }
   }
 
   .card-header {
@@ -24,8 +26,7 @@
       line-height: 1;
     }
 
-    a,
-    h5 a {
+    a {
       position: relative;
       display: block;
       padding: 1.0625rem 0;
