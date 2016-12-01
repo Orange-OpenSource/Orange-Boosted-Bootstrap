@@ -15,6 +15,11 @@
         border-color: #000;
       }
 
+      @include focus {
+        outline: 1px dotted #fff;
+        outline-offset: -2px;
+      }
+
       position: relative;
       width: $pagination-width;
       padding: .625rem 0;
@@ -26,39 +31,46 @@
       border: solid 2px transparent;
     }
 
-    &:first-child,
-    &:last-child {
-      .page-link {
-        width: auto;
-        min-width: $pagination-width;
-        height: $pagination-width;
-        padding: 0;
-        color: #fff;
-        border: solid 2px #000;
+    &:first-child .page-link,
+    &:last-child .page-link {
+      width: auto;
+      min-width: $pagination-width;
+      height: $pagination-width;
+      padding: 0;
+      color: #fff;
+      border: solid 2px #000;
 
-        &::before {
-          position: absolute;
-          top: .6875rem;
-          left: .8125rem;
-          width: .5625rem;
-          height: .875rem;
-          content: "";
-        }
+      @include focus {
+        color: #000;
+      }
 
-        &.has-label {
-          padding: .5625rem 1.125rem .5625rem 2rem;
+      &::before {
+        position: absolute;
+        top: .6875rem;
+        left: .8125rem;
+        width: .5625rem;
+        height: .875rem;
+        content: "";
+      }
+
+      &.has-label {
+        padding: .5625rem 1.125rem .5625rem 2rem;
+        color: #000;
+
+        @include focus {
           color: #000;
-
-          @include hover-focus {
-            color: #fff;
-          }
-
-          &:active {
-            color: #fff;
-          }
         }
       }
 
+      &.has-label:hover,
+      &.has-label:hover:focus,
+      &.has-label:active {
+        color: #fff;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
       &:last-child .page-link.has-label {
         padding: .5625rem 2rem .5625rem 1.125rem;
       }
@@ -77,22 +89,23 @@
           background-image: #{$pagination-icon-next-active};
         }
       }
+    }
 
-      &:active {
-        .page-link {
-          color: $brand-primary;
-          background-color: $brand-primary;
-          border-color: $brand-primary;
-        }
-
-        &:first-child .page-link::before {
-          background-image: #{$pagination-icon-prev-active};
-        }
-
-        &:last-child .page-link::before {
-          background-image: #{$pagination-icon-next-active};
-        }
+    &:first-child:active,
+    &:last-child:active {
+      .page-link {
+        color: $brand-primary;
+        background-color: $brand-primary;
+        border-color: $brand-primary;
       }
+    }
+
+    &:first-child:active .page-link::before {
+      background-image: #{$pagination-icon-prev-active};
+    }
+
+    &:last-child:active .page-link::before {
+      background-image: #{$pagination-icon-next-active};
     }
 
     &:first-child .page-link::before {
