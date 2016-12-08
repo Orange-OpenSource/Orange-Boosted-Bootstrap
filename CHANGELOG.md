@@ -1,3 +1,34 @@
+<a name"3.3.2"></a>
+### 3.3.2 (2016-12-08)
+
+
+#### Bug Fixes
+
+* **collapse:** update collapse js, remove auto adding role presentation. ([95d2229e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/95d2229e25d4339ea97091bd5480888064ba6bba))
+* **component:**
+  * stepbar ([c661bc18](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c661bc18b58d27fc52fbf9569b6d53f982cafb30))
+  * tables ([a4ab76cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a4ab76cf03bfc9d3e479ad942403bf2cac11e5e8))
+  * orange popin ([5cc8b69e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5cc8b69e5517ec9c3785db60febe7aa929ba02d6))
+  * form ([86c7f8bb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86c7f8bb542e4abf37c2489272a2cc2a09b7b23c))
+  * pagination ([b27e6676](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b27e667622a39114db8ff48385bd82a1991560a4))
+  * local navigation ([1cce195a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1cce195a7a75ae4daa577d98d63feebf902424b7))
+  * inout control sizing ([31e7dc6b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/31e7dc6b48ba694b3ff6243785431012dc000527))
+* **contextual-background:** put back the colors for contextual background ([263d0ee2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/263d0ee2731e9c45a5e3c95d4115bc291f9f2dfc))
+* **dropdown:** focus state ([abf7166e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/abf7166e301078b3ddd6cbbafec720549388ef50))
+* **responsive:** update media queries for hidden-xl and hidden-lg ([db4e33fa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/db4e33fa6eb5d4c6f6f4361666472af18f9e6da2))
+* **scss:** fix boostedIcon conversion fix issue #21 ([5aa1d3ad](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5aa1d3adcd1591b18da24dcd56a57f9f1cf9f43b))
+* **stepbar:** fix arrow position error on zoom ([9a8c9338](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9a8c9338d7f3ab2b9c743b98fea524b05b4c4492))
+* **tablesorter:** fix older use of $.browser in table sorter. doesn't work with tablesorter pager  ([243c6e4a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/243c6e4a1b4603733cbc7fddae81db1dba503db9))
+
+
+#### Features
+
+* **arrow-links:**
+  * update arrow link documentation and add a backward mode ([9367a5a7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9367a5a73bcba8e4c801947de898d80dfd5904aa))
+  * create a new link component to allow display a link followed by an arrow ([7dcc5893](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dcc589309a1d66be976ed02f4c6de8fc55793b6))
+* **component:** orange popin ([83dccdfc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/83dccdfcdd5757ffbad09707d8cd9db2f77e30e7))
+
+
 <a name"3.3.1"></a>
 ### 3.3.1 (2016-10-14)
 
