@@ -3580,6 +3580,15 @@ h5,
   padding: 10px 20px;
   font-weight: bold;
 }
+.dropdown-menu > li > a:focus {
+  color: #000;
+  background-color: #fff;
+  outline: 1px dotted #000;
+}
+.dropdown-menu > li > a:focus:hover {
+  color: #fff;
+  background-color: #000;
+}
 .navbar {
   min-height: 10rem;
   font-size: 1.6rem;
