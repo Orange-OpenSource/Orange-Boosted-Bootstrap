@@ -1211,6 +1211,38 @@
     <h4>Auto-truncating</h4>
     <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
   </div>
+
+  <!-- Lists -->
+  <h2 id="type-links">Links</h2>
+
+  <h3 id="default-link">Defaul link</h3>
+  <p>By default, links are black, and not underlined</p>
+  <div class="bs-example" data-example-id="default-link-example">
+    <a href="#">This is a sample default link</a>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>This is a sample default link<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+  
+  <h3 id="underlined-link">Link underline</h3>
+  <p>A link into a <code>p</code> tag become underlined, to be clearly identified.</p>
+  <div class="bs-example" data-example-id="underlined-link-example">
+    <p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Some text in a paragraph, and so <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>the link are underline<span class="nt">&lt;/a&gt;&lt;/p&gt;</span></code></pre></figure>  
+  
+  <h3 id="o-link-arrow">Link with arrow</h3>  
+  <p>Add the class <code>o-link-arrow</code> to a link, add an arrow after the text link.</p>
+  <div class="bs-example" data-example-id="o-link-arrow-example">
+    <a href="#" class="o-link-arrow">This is a sample link with arrow</a>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"o-link-arrow"</span><span class="nt">&gt;</span>This is a sample link with arrow<span class="nt">&lt;/a&gt;</span></code></pre></figure>  
+
+  <h3 id="o-link-arrow-back">Link with arrow back</h3>
+  <p>To convert arrow link to backward link, add <code>back</code> to the link with class <code>o-link-arrow</code>.</p>
+  <div class="bs-example" data-example-id="o-link-arrow-back-example">
+    <a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"o-link-arrow back"</span><span class="nt">&gt;</span>This is a sample link with arrow for backward<span class="nt">&lt;/a&gt;</span></code></pre></figure>  
+  
 </div>
 
 <div class="bs-docs-section">
@@ -1260,15 +1292,15 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
   <h1 id="tables" class="page-header">Tables</h1>
 
   <h2 id="tables-example">Basic example</h2>
-  <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
+  <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles. For correct spacing on first column add <code>.has-checkbox</code> class on <code>&lt;table&gt;</code> element.</p>
   <div class="bs-example" data-example-id="simple-table">
-    <table class="table">
+    <table class="table has-checkbox">
       <caption>Optional table caption.</caption>
       <thead>
         <tr>
           <th>
               <input type="checkbox" title="Select all" id="idChk10" class="o-checkbox">
-              <label for="idChk10"><span class="sr-only">Select all</span>&nbsp;</label>              
+              <label for="idChk10"><span class="sr-only">Select all</span>&nbsp;</label>
           </th>
           <th>First Name</th>
           <th>Last Name</th>
@@ -1306,7 +1338,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
       </tbody>
     </table>
   </div><!-- /example -->
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table has-checkbox"</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
@@ -1353,6 +1385,83 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
   ...
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
+<h2 id="tables-example">Thumbnails</h2>
+<p>In addition to <code>.has-checkbox</code> use <code>.has-icon</code> to specify the table is using icons and thumbnails to get correct row height.</p>
+<div class="bs-example" data-example-id="">
+  <table class="table table-hover has-checkbox has-icon">
+    <caption></caption>
+    <thead>
+        <tr>
+            <th>
+                <input id="table2_head_check_1" class="o-checkbox" type="checkbox">
+                <label for="table2_head_check_1"><span class="sr-only">select row 1</span>&nbsp;</label>
+            </th>
+            <th>Name</th>
+            <th>Column heading</th>
+            <th>Column heading</th>
+            <th>Column heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+              <input id="table2_body_check_1" class="o-checkbox" type="checkbox">
+              <label for="table2_body_check_1"><span class="sr-only">select row 1</span>&nbsp;</label>
+            </th>
+            <td>
+                <span class="icon-folder_document"></span>
+                <span class="sr-only">folder</span>
+                <span>Finance</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">
+              <input id="table2_body_check_2" class="o-checkbox" type="checkbox">
+              <label for="table2_body_check_2"><span class="sr-only">select row 2</span>&nbsp;</label>
+            </th>
+            <td>
+                <span class="icon-unknown_file"></span>
+                <span class="sr-only">file</span>
+                <span>File</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr class="selected">
+            <th scope="row">
+              <input id="table2_body_check_3" class="o-checkbox" type="checkbox" checked>
+              <label for="table2_body_check_3"><span class="sr-only">select row 3</span>&nbsp;</label>
+            </th>
+            <td>
+                <img src="../../assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        <tr>
+            <th scope="row">
+              <input id="table2_body_check_4" class="o-checkbox" type="checkbox">
+              <label for="table2_body_check_4"><span class="sr-only">select row 4</span>&nbsp;</label>
+            </th>
+            <td>
+                <img src="../../assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
+            </td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover has-checkbox has-icon"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
   <h2 id="tables-bordered">Bordered table</h2>
   <p>Add <code>.table-bordered</code> for borders on all sides of the table and cells. WARNING : Be careful use of bordered table is not recommended by the Orange brand</p>
@@ -1549,7 +1658,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
           <td>
               <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
               <span class="sr-only">success</span>
-          </td> 
+          </td>
           <td>Column content</td>
           <td>Column content</td>
           <td>Column content</td>
@@ -1566,7 +1675,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
           <td>
               <span class="glyphicon glyphicon-info-sign text-info" aria-hidden="true"></span>
               <span class="sr-only">information</span>
-          </td>            
+          </td>
           <td>Column content</td>
           <td>Column content</td>
           <td>Column content</td>
@@ -1620,8 +1729,8 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="c">&lt;!-- Success icon --&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-ok text-success"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>success<span class="nt">&lt;/span&gt;</span>
-    
-<span class="c">&lt;!-- Info icon --&gt;</span>    
+
+<span class="c">&lt;!-- Info icon --&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-info-sign text-info"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>information<span class="nt">&lt;/span&gt;</span>
 
@@ -1629,9 +1738,9 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-warning-sign text-warning"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>warning<span class="nt">&lt;/span&gt;</span>
 
-<span class="c">&lt;!-- Danger icon --&gt;</span>    
+<span class="c">&lt;!-- Danger icon --&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-exclamation-sign text-danger"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/span&gt;</span>    </code></pre></figure>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/span&gt;</span></code></pre></figure>
   <div class="bs-callout bs-callout-warning" id="callout-tables-context-accessibility">
     <h4>Conveying meaning to assistive technologies</h4>
     <p>Using color to add meaning to a table row or individual cell only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the visible text in the relevant table row/cell), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
@@ -3727,6 +3836,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     <li><a href="#type-addresses">Addresses</a></li>
     <li><a href="#type-blockquotes">Blockquotes</a></li>
     <li><a href="#type-lists">Lists</a></li>
+    <li><a href="#type-links">Links</a></li>
   </ul>
 </li>
 <li>
@@ -3847,11 +3957,11 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
 
-    <p>Orange modified code licensed <a rel="license" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v3.3.1/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v3.3.7/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Orange modified code licensed <a rel="license" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v3.3.2/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v3.3.7/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
                 </div>
                 <div class="o-footer-bottom">
                     <ul>
-                      <li>Currently v3.3.1</li>
+                      <li>Currently v3.3.2</li>
                       <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
                       <li><a href="../getting-started/#examples">Examples</a></li>
                       <li><a href="https://github.com/twbs/bootstrap/tree/v3.3.7">Original Bootstrap</a></li>

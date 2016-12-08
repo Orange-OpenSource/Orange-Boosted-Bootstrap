@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.1 - Orange Boosted with Boostrap
+ boosted - v3.3.2 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -1328,7 +1328,6 @@ if (typeof jQuery === 'undefined') {
 
 		colltab.attr('id', collid);
 		if(collparent){
-			$(collparent).find('div:not(.collapse,.panel-body), h4').attr('role','presentation');
 			collparent.attr({'role' : 'tablist'});
 
 			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
@@ -3272,6 +3271,8 @@ if (typeof jQuery === 'undefined') {
                 return /^[-+]?\d*$/.test($.trim(s.replace(/[,.']/g, '')));
             };
             this.clearTableBody = function (table) {
+                // boosted mod fix for pager plugin
+                /*                
                 if ($.browser.msie) {
                     function empty() {
                         while (this.firstChild)
@@ -3281,6 +3282,8 @@ if (typeof jQuery === 'undefined') {
                 } else {
                     table.tBodies[0].innerHTML = "";
                 }
+                */
+                table.tBodies[0].innerHTML = "";
             };
         }
     });

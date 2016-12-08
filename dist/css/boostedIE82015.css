@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.1 - Orange Boosted with Boostrap
+ boosted - v3.3.2 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -69,10 +69,10 @@ ul.o-square-list ul ul li span {
   position: absolute;
   top: 0;
   right: -16px;
-  /* for edge support */
   z-index: 500;
   display: block;
   width: 16px;
+  /* for Edge support*/
   height: 40px;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23dddddd%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
@@ -95,10 +95,10 @@ ul.o-square-list ul ul li span {
   position: absolute;
   top: 0;
   right: -16px;
-  /* for edge support */
   z-index: 500;
   display: block;
   width: 16px;
+  /* for Edge support*/
   height: 40px;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23000000%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
@@ -119,10 +119,10 @@ ul.o-square-list ul ul li span {
   position: absolute;
   top: 0;
   right: -16px;
-  /* for edge support */
   z-index: 500;
   display: block;
   width: 16px;
+  /* for Edge support*/
   height: 40px;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2240%22%20viewBox%3D%220%200%2016%2040%22%3E%3Cpath%20d%3D%22M0%200l14%2020L0%2040z%22%20fill%3D%22%23f16e00%22%2F%3E%3Cpath%20d%3D%22M2%200H0l14%2020L0%2040h2l14-20z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
@@ -146,12 +146,12 @@ ul.o-square-list ul ul li span {
   .o-stepbar .stepbar-item.done:after,
   .o-stepbar .stepbar-item.current:after,
   .o-stepbar .stepbar-item.next:after {
-    right: -1.2px;
-    /* for edge support */
-    width: 1.2rem;
-    height: 3rem;
-    -webkit-background-size: cover;
-            background-size: cover;
+    right: -11px;
+    width: 12px;
+    /* for Edge support*/
+    height: 100%;
+    -webkit-background-size: 12px 100%;
+            background-size: 12px 100%;
   }
   .o-stepbar.xs-numbers .step-number:after {
     display: none;
@@ -179,7 +179,7 @@ ul.o-square-list ul ul li span {
   .o-stepbar.xs-numbers .stepbar-item {
     width: 20%;
     padding-right: 0;
-    padding-left: 1.2rem;
+    padding-left: 12px;
     text-align: center;
   }
   .o-stepbar.xs-numbers .stepbar-item:first-child {
@@ -381,8 +381,8 @@ ul.o-square-list ul ul li span {
   float: left;
 }
 .o-nav-local .nav-local > li > a {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 17px;
   font-size: 16px;
   font-weight: bold;
   line-height: 16px;
@@ -555,24 +555,6 @@ table.tablesorter caption {
   font-weight: bold;
   color: #000;
   background-color: #fff;
-}
-.modal-title {
-  font-weight: bold;
-  color: #000;
-}
-.modal-content {
-  border-radius: 0;
-}
-.modal-header {
-  padding: 5px 5px 5px 20px;
-  background-color: #ccc;
-}
-.modal-header .close {
-  opacity: .5;
-}
-.modal-footer {
-  padding: 5px 5px 5px 20px;
-  text-align: center;
 }
 .nav > li > a {
   cursor: pointer;
@@ -871,11 +853,28 @@ table.tablesorter caption {
   background-color: transparent;
   border: 2px solid #000;
 }
+.pagination > li > a:active:hover {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
+}
 .pagination > li.bordered > a,
 .pagination > li.bordered > a {
   width: auto;
   min-width: 40px;
   border: 2px solid #000;
+}
+.pagination > li.bordered > a:hover,
+.pagination > li.bordered > a:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+.pagination > li.bordered > a:active:hover,
+.pagination > li.bordered > a:active:hover {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
 }
 .pagination > li.active > a,
 .pagination > li.active > a:hover,
@@ -884,7 +883,10 @@ table.tablesorter caption {
 }
 .pagination > li.disabled > a,
 .pagination > li.disabled > a:hover,
-.pagination > li.disabled > a:focus {
+.pagination > li.disabled > a:focus,
+.pagination > li.bordered.disabled > a,
+.pagination > li.bordered.disabled > a:hover,
+.pagination > li.bordered.disabled > a:focus {
   color: #ccc;
   background-color: transparent;
   border: 2px solid #ccc;
@@ -920,13 +922,27 @@ table.tablesorter caption {
 .pager li > a .icon-arrow-previous:before {
   margin-right: 2px;
 }
-.pager li > a:hover {
-  color: #000;
-  background-color: #fff;
+.pager li > a:focus {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
 }
-.pager .disabled > a,
-.pager .disabled > a:hover {
+.pager li > a:hover {
+  color: #fff;
+  background-color: #000;
+}
+.pager li > a:active:hover {
+  color: #fff;
+  background-color: #f16e00;
+  border-color: #f16e00;
+}
+.pager li.disabled > a,
+.pager li.disabled > a:hover,
+.pager li.disabled > a:focus,
+.pager li.disabled > a:active,
+.pager li.disabled > a:active:hover {
   color: #ccc;
+  background-color: #fff;
   border-color: #ccc;
 }
 .pager .presentation {
@@ -941,6 +957,14 @@ table.tablesorter caption {
 .pager .previous > a,
 .pager .next > a {
   padding: 10px 18px;
+}
+.pager .previous > a:focus:before,
+.pager .next > a:focus:before,
+.pager .previous > a:hover:before,
+.pager .next > a:hover:before,
+.pager .previous > a:active:hover:before,
+.pager .next > a:active:hover:before {
+  color: #fff;
 }
 .pager .previous > a {
   padding-left: 38px;
@@ -967,7 +991,9 @@ table.tablesorter caption {
   content: "\e902";
 }
 .pager .previous.disabled > a:before,
-.pager .next.disabled > a:before {
+.pager .next.disabled > a:before,
+.pager .previous.disabled > a:active:hover:before,
+.pager .next.disabled > a:active:hover:before {
   color: #ccc;
 }
 .o-checkbox[type="checkbox"]:not(:checked),
@@ -3223,6 +3249,39 @@ fieldset[disabled] .btn {
 .boosted-checkbox_tick:before {
   content: "\e904";
 }
+.o-link-arrow {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.o-link-arrow:after {
+  padding: 0 10px;
+  font-family: "boosted";
+  font-size: 10px;
+  color: #000;
+  content: "\e902";
+}
+.o-link-arrow:hover:after,
+.o-link-arrow:focus:after {
+  color: #f16e00;
+  text-decoration: none;
+}
+.o-link-arrow.back:after {
+  padding: 0;
+  content: "";
+}
+.o-link-arrow.back:before {
+  padding: 0 10px 0 0;
+  font-family: "boosted";
+  font-size: 10px;
+  color: #000;
+  content: "\e903";
+}
+.o-link-arrow.back:hover:before,
+.o-link-arrow.back:focus:before {
+  color: #f16e00;
+  text-decoration: none;
+}
 html {
   font-size: 62.5%;
   font-weight: normal;
@@ -3309,6 +3368,15 @@ h5,
 .dropdown-menu > li > a {
   padding: 10px 20px;
   font-weight: bold;
+}
+.dropdown-menu > li > a:focus {
+  color: #000;
+  background-color: #fff;
+  outline: 1px dotted #000;
+}
+.dropdown-menu > li > a:focus:hover {
+  color: #fff;
+  background-color: #000;
 }
 .navbar {
   min-height: 100px;
@@ -3565,6 +3633,41 @@ input,
 .form-group label.control-label {
   margin-bottom: 1rem;
 }
+.form-control,
+.form-control.input-lg,
+.form-control.input-sm {
+  height: auto;
+  line-height: 1.25;
+}
+.form-control.input-sm {
+  padding: 4.25px 8px;
+  font-size: 14px;
+}
+.form-control.input-lg {
+  padding: 11.75px 24px;
+  font-size: 18px;
+}
+select.form-control {
+  padding: .7rem 1rem;
+}
+select.form-control.input-lg {
+  padding: 10.5px 24px;
+}
+select.form-control.input-sm {
+  padding: 3px 8px;
+}
+.form-group-lg .form-control {
+  height: auto;
+  padding: 11.75px 24px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+.form-group-sm .form-control {
+  height: auto;
+  padding: 4.25px 8px;
+  font-size: 14px;
+  line-height: 1.25;
+}
 .input-group > .form-control {
   border-color: #000;
 }
@@ -3662,6 +3765,9 @@ input,
     margin-left: 0;
   }
 }
+.help-block {
+  color: #666;
+}
 .thumbnail h1,
 .thumbnail h2,
 .thumbnail h3,
@@ -3688,22 +3794,130 @@ input,
 .o-footer-inverse {
   padding: 10px;
 }
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+  border-bottom: 1px solid #ccc;
+}
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  border-top: 0;
-  border-bottom: 1px solid #ccc;
+  padding: 1rem 1rem 1rem 0;
+  border: 0;
+}
+.table > thead > tr > th:first-child,
+.table > tbody > tr > th:first-child,
+.table > tfoot > tr > th:first-child,
+.table > thead > tr > td:first-child,
+.table > tbody > tr > td:first-child,
+.table > tfoot > tr > td:first-child {
+  padding-left: 1rem;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th {
-  font-size: 16px;
+  font-size: 14px;
 }
-.table > thead th {
-  border-bottom: 2px;
+.table > thead > tr [class^="icon-"],
+.table > tbody > tr [class^="icon-"],
+.table > tfoot > tr [class^="icon-"],
+.table > thead > tr [class*=" icon-"],
+.table > tbody > tr [class*=" icon-"],
+.table > tfoot > tr [class*=" icon-"] {
+  font-size: 2.9rem;
+}
+.table > thead > tr {
+  border-bottom-width: 2px;
+}
+.table > thead > tr > th {
+  font-size: 16px;
+  font-weight: bold;
+}
+.table tbody > th {
+  font-weight: normal;
+}
+.table.has-checkbox .custom-control {
+  display: inline;
+}
+.table.has-checkbox tr.active > td,
+.table.has-checkbox tr.selected > td,
+.table.has-checkbox tr.active > th,
+.table.has-checkbox tr.selected > th {
+  background-color: #ddd;
+}
+.table.has-checkbox tr > th:first-child,
+.table.has-checkbox tr > td:first-child {
+  width: 2rem;
+}
+.table.has-checkbox tr > th:first-child .custom-control.custom-checkbox,
+.table.has-checkbox tr > td:first-child .custom-control.custom-checkbox {
+  padding-left: 2rem;
+}
+.table.has-icon tr > td,
+.table.has-icon tr > th {
+  height: 5rem;
+  vertical-align: middle;
+}
+.table.has-icon tr > td span,
+.table.has-icon tr > th span,
+.table.has-icon tr > td img,
+.table.has-icon tr > th img {
+  vertical-align: middle;
+}
+.table.has-icon tr > td span,
+.table.has-icon tr > th span {
+  margin-right: .6rem;
+}
+.table.has-icon tr > td img,
+.table.has-icon tr > th img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.table.has-icon tr > td [class^="icon-"],
+.table.has-icon tr > th [class^="icon-"] {
+  width: 3rem;
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: middle;
+}
+.table.table-reflow thead > tr,
+.table.table-reflow tbody > tr {
+  border: 0;
+}
+.table.table-reflow thead > tr > td,
+.table.table-reflow tbody > tr > td {
+  line-height: 2rem;
+}
+.table.table-reflow thead > tr > th:first-child,
+.table.table-reflow tbody > tr > th:first-child {
+  border-bottom: 2px solid #ccc;
+}
+.table.table-reflow thead > tr > th,
+.table.table-reflow tbody > tr > th,
+.table.table-reflow thead > tr > td,
+.table.table-reflow tbody > tr > td {
+  border-bottom: 1px solid #ccc;
+}
+.table.table-reflow thead > tr > td:last-child,
+.table.table-reflow tbody > tr > td:last-child {
+  border-right: 0;
+}
+.table.table-reflow thead > tr {
+  border: 0;
+}
+.table.table-reflow thead > tr > th:not(:first-child) {
+  padding-left: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.table.table-reflow thead > tr > th:last-child {
+  border-right: 0;
+}
+.table.table-reflow tbody > tr > th:first-child {
+  padding-left: 0;
 }
 .table > thead > tr > td.success,
 .table > tbody > tr > td.success,

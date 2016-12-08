@@ -1,5 +1,5 @@
 /*!
- boosted - v3.3.1 - Orange Boosted with Boostrap
+ boosted - v3.3.2 - Orange Boosted with Boostrap
  Copyright 2016 Orange SA, all right reserved
 MIT Licensed 
 */
@@ -6666,7 +6666,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #fff;
+  background-color: #333;
 }
 .modal-backdrop.fade {
   filter: alpha(opacity=0);
@@ -6715,7 +6715,7 @@ button.close {
 }
 @media (min-width: 480px) {
   .modal-dialog {
-    width: 600px;
+    width: 700px;
     margin: 30px auto;
   }
   .modal-content {
@@ -6730,7 +6730,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-lg {
-    width: 900px;
+    width: 700px;
   }
 }
 .tooltip {
@@ -7567,12 +7567,12 @@ button.close {
     display: none !important;
   }
 }
-@media (min-width: 980px) {
+@media (min-width: 980px) and (max-width: 1219px) {
   .hidden-lg {
     display: none !important;
   }
 }
-@media (min-width: 1220px) {
+@media (min-width: 1220px) and (max-width: 1379px) {
   .hidden-xl {
     display: none !important;
   }
