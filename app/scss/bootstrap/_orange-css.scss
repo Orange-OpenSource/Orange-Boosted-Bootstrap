@@ -5,6 +5,13 @@ html{
     font-weight:$brand-font-weight-normal;
 }
 
+// for OSX only
+b,
+strong {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // titles letter spacing
 h1, .h1 { letter-spacing: $letter-spacing-h1; }
 h2, .h2 { letter-spacing: $letter-spacing-h2; }
