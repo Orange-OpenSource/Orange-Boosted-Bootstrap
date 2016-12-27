@@ -1,0 +1,10 @@
+// Tags
+
+.tag {
+  font-size: .8125rem;
+
+  &.tag-primary,
+  &.tag-danger {
+    color: #fff;
+  }
+}
