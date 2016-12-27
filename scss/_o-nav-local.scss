@@ -8,7 +8,7 @@
   hr {
     padding: 0;
     margin: 0;
-    border-top: 1px solid $gray-light;
+    border-top: 1px solid $gray-light-o;
   }
 
   .nav-link {
@@ -59,7 +59,6 @@
     .local-select {
       position: relative;
       width: 100%;
-      padding-left: .625rem;
 
       &::after {
         position: absolute;
@@ -70,9 +69,6 @@
         font-size: inherit;
         color: #000;
         content: "\e93c";
-
-
-
       }
     }
 
@@ -90,12 +86,17 @@
         margin-left: 0;
 
         .nav-link {
-          @include hover-focus {
+          @include hover {
             color: #fff;
             background-color: $brand-primary;
           }
+
+          @include focus {
+            color: #fff;
+            background-color: #fff;
+          }
+
           width: 100%;
-          padding-left: .625rem;
         }
       }
     }
@@ -111,5 +112,14 @@
 @include media-breakpoint-up(sm) {
   .nav-inline {
     display: block;
+  }
+}
+
+// Vertical version
+
+.o-nav-local.stacked {
+  .nav-item {
+    display: block;
+    margin-left: 0;
   }
 }
