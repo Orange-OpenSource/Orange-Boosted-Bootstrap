@@ -266,7 +266,7 @@ $border-radius-sm:       0;
 $component-active-color: #fff;
 $component-active-bg:    #000;
 
-$caret-width:            .3em !default;
+$caret-width:            .4375em !default;
 $caret-width-lg:         $caret-width !default;
 
 
@@ -346,7 +346,7 @@ $btn-border-radius-sm:           $border-radius-sm;
 
 // Accordions
 
-$accordion-arrow-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%200l7%207H0l7-7z%22%2F%3E%3C%2Fsvg%3E");
+$accordion-arrow-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
 
 // Forms
 

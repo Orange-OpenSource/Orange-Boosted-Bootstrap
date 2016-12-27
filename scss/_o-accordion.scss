@@ -41,7 +41,7 @@
         background-image: $accordion-arrow-icon;
       }
 
-      &.collapsed::after {
+      &[aria-expanded="true"]::after {
         transform: rotate(180deg);
       }
     }
