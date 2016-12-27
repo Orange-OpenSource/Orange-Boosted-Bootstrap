@@ -23,7 +23,7 @@ Orange navbar is the main navigation of project website. It should always be inc
             <span class="icon-menu"></span>
         </button>
         <div class="container" >
-            <a class="navbar-brand logo"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar3">
                 <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -130,7 +130,7 @@ A supra bar should never be used on its own and always be included in header and
             <span class="icon-menu"></span>
         </button>
         <div class="container" >
-            <a class="navbar-brand logo"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar2">
                 <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -178,10 +178,10 @@ Using javascript your can initialize the navbar component with the following opt
        <td>Tells wether or not the navbar should stick to the top of page</td>
      </tr>
      <tr>
-       <td>trigger</td>
-       <td>selector</td>
-       <td>empty string</td>
-       <td>Hides the supra bar when the "trigger" element is no longer in viewport</td>
+       <td>hideSupra</td>
+       <td>boolean</td>
+       <td>false</td>
+       <td>Hides the supra bar on page scroll. Show when scroll to top.</td>
      </tr>
     </tbody>
   </table>
@@ -192,7 +192,7 @@ Using javascript your can initialize the navbar component with the following opt
 Using javascript, simply declare your navbar component with the needed options.
 
 {% highlight js %}
-$('#demo_navbar').navbar({sticky: true, trigger: '#hide_supra_trigger'});
+$('#demo_navbar').navbar({sticky: true, hideSupra: true});
 {% endhighlight %}
 
 See a full implementation in the Orange News [example page](../..//examples/orange-news/)

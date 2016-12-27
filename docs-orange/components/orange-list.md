@@ -8,7 +8,7 @@ group: components
 
 ### Bullet points
 
-Simply add `.o-square list` class to the root element of a list (`<ul>`). Maximum elements depth is 3.
+Simply add `o-square-list` class to the root element of a list (`<ul>`). Maximum elements depth is 3.
 
 {% example html %}
 <ul class="o-square-list">

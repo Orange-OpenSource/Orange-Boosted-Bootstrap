@@ -74,7 +74,7 @@
                     <span class="icon-menu"></span>
                 </button>
                 <div class="container" >
-                    <a class="navbar-brand logo"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+                    <a class="navbar-brand"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
                     <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
                         <li class="nav-item"><a class="nav-link" href="#collapseDiscover" data-parent="#collapsingNavbar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDiscover" title="open discover menu">Discover</a></li>
                         <li class="nav-item"><a class="nav-link" data-parent="#collapsingNavbar" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="open shop menu">Shop</a></li>
@@ -195,7 +195,7 @@
 
         <main id="content">
             <section class="container">
-	            <h1>News</h1>
+	            <h1 id="hide_supra_trigger">News</h1>
             </section>
 
 			 <div class="o-nav-local">
@@ -523,7 +523,7 @@
 			}
 
             $(document).ready(function(){
-              $('header').navbar({sticky: true, trigger: '#hide_supra_trigger'});
+              $('header').navbar({sticky: true, hideSupra: true});
               $('.mega-menu.panel').megamenu();
             });
 		</script>

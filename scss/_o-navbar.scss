@@ -32,42 +32,45 @@
 
   .navbar-brand {
     @include focus {
-      outline: none;
-
-      img {
-        outline: 1px dotted #fff;
-        outline-offset: .625rem;
-      }
+      outline: 1px dotted #fff;
+      outline-offset: .625rem;
     }
 
+    margin: 0;
     padding: 0;
-    margin-top: 3.75rem;
     font-size: 1rem;
     font-weight: bold;
     line-height: 1;
-    color: $brand-primary;
-
-    &.logo {
-      padding-top: 1.5625rem;
-      padding-bottom: 1.5625rem;
-      margin: 0;
-    }
-
-    &.nav-link {
-      margin: 0;
-    }
 
     img {
+      float: left;
       width: auto;
       height: 3.125rem;
+      margin-top: 1.5625rem;
       font-size: 1rem;
       font-weight: bold;
       line-height: 5.25rem;
       color: $brand-primary;
     }
+
+    > span {
+      display: inline-block;
+      margin-top: 3.75rem;
+      margin-left: .625rem;
+      color: #fff;
+    }
+
+    &:hover > span {
+      color: $brand-primary;
+
+      .text-primary {
+        color: #fff !important;
+      }
+    }
   }
 
   .nav-item {
+    position: relative;
     font-weight: bold;
 
     > .nav-link,
@@ -108,10 +111,17 @@
         outline-offset: .625rem;
       }
 
+      position: relative;
       display: block;
+      padding-right: 1.5rem;
       margin-top: 3.75rem;
       line-height: $btn-line-height;
       color: #fff;
+
+      &::after {
+        top: .3125rem;
+        right: 0;
+      }
 
       .caret {
         position: absolute;
@@ -152,6 +162,25 @@
 
 }
 
+.navbar.minimized {
+  min-height: $navbar-height-minimized;
+
+  .nav-link {
+    margin-top: 2.8125rem;
+  }
+
+  .navbar-brand {
+    img {
+      height: 2.5rem;
+      margin-top: 1.25rem;
+    }
+
+    > span {
+      margin-top: 2.8125rem;
+    }
+  }
+}
+
 .navbar.supra {
   @include media-breakpoint-down(xs) {
     display: none;
@@ -160,6 +189,7 @@
   min-height: $navbar-supra-height;
   font-size: $font-size-sm;
   border-bottom: 1px solid $gray-dark;
+
   .navbar-brand {
     display: none;
   }
@@ -197,7 +227,8 @@
 }
 
 @include media-breakpoint-down(xs) {
-  .navbar {
+  .navbar,
+  .navbar.minimized {
     min-height: $navbar-height-sm;
 
     .navbar-toggler {
@@ -225,12 +256,16 @@
       }
     }
 
-    .navbar-brand.logo {
-      padding: calc(#{$navbar-height-sm} / 4) 0;
-      margin-right: .625rem;
+    .navbar-brand {
+      font-size: $font-size-sm;
 
       img {
-        height: calc(#{$navbar-height-sm} / 2);
+        height: 1.875rem;
+        margin-top: .625rem;
+      }
+
+      > span {
+        margin-top: 1.6875rem;
       }
     }
 
@@ -266,7 +301,7 @@
 
         .nav-link::before {
           float: right;
-          margin-right: .625rem;
+          margin-right: 1.25rem;
           font-family: icon-orange;
           font-size: $font-size-base;
           font-weight: normal;
@@ -364,7 +399,7 @@
 
     .uci-plus-orange {
       position: absolute;
-      bottom: 2.0625rem;
+      bottom: .6875rem;
       padding: 0;
     }
   }

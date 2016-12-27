@@ -35,7 +35,7 @@ Here's an example of all the sub-components included in a default, non-responsiv
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><span>Navbar</span></a>
   <ul class="nav navbar-nav">
     <li class="nav-item active">
       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -69,7 +69,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 {% example html %}
 <!-- As a link -->
 <nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><span>Navbar</span></a>
 </nav>
 
 <!-- As a heading -->
@@ -94,7 +94,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">
     <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+    <span>Bootstrap</span>
   </a>
 </nav>
 {% endexample %}
@@ -228,7 +228,7 @@ Similarly, you can use utility classes to align navbar text to other navbar elem
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><span>Navbar</span></a>
   <span class="navbar-text float-xs-left">
     Navbar text that's floated left
   </span>
@@ -243,7 +243,7 @@ Here are some examples to show what we mean.
 
 <div class="bd-example">
   <nav class="navbar navbar-dark bg-inverse">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><span>Navbar</span></a>
     <ul class="nav navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -264,7 +264,7 @@ Here are some examples to show what we mean.
     </form>
   </nav>
   <nav class="navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><span>Navbar</span></a>
     <ul class="nav navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -285,7 +285,7 @@ Here are some examples to show what we mean.
     </form>
   </nav>
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><span>Navbar</span></a>
     <ul class="nav navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -328,7 +328,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 {% example html %}
 <div class="container">
   <nav class="navbar navbar-light bg-faded">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><span>Navbar</span></a>
   </nav>
 </div>
 {% endexample %}
@@ -336,7 +336,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><span>Navbar</span></a>
   </div>
 </nav>
 {% endexample %}
@@ -390,7 +390,7 @@ For more complex navbar patterns, like those used in Bootstrap v3, use the `.nav
 <nav class="navbar navbar-light bg-faded">
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
   <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><span>Navbar</span></a>
     <ul class="nav navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
