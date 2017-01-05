@@ -1,70 +1,71 @@
+// scss-lint:disable IdSelector
 .bd-masthead {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-top: 2px solid $gray-dark;
   padding: 2.5rem .625rem;
+  color: #fff;
+  background-color: #000;
   background-image: none;
+  border: 0;
+  border-top: 2px solid $gray-dark;
 
   .lead {
     font-size: $font-size-h6;
 
     a {
-        color: #fff;
-        text-decoration: underline;
+      color: #fff;
+      text-decoration: underline;
 
-        &:active,
-        &:hover,
-        &:focus {
-            color: $brand-primary;
-            text-decoration: none;
-        }
+      &:active,
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+        text-decoration: none;
+      }
     }
 
     .btn {
-        @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
-        border-color: #fff;
-        font-weight: $btn-font-weight;
-        text-decoration: none;
+      @include orange-button-inverse-variant($btn-info-color, $btn-info-bg);
+      font-weight: $btn-font-weight;
+      text-decoration: none;
+      border-color: #fff;
 
-        &.btn-lg {
-            font-size: $font-size-lg;
-            padding: $btn-padding-y-lg $btn-padding-x-lg;
-        }
+      &.btn-lg {
+        padding: $btn-padding-y-lg $btn-padding-x-lg;
+        font-size: $font-size-lg;
+      }
     }
   }
 
   .bd-boosted-icon {
-      font-family: $font-family-base;
-      font-size: $font-size-h1;
-      font-weight: 500;
+    font-family: $font-family-base;
+    font-size: $font-size-h1;
+    font-weight: 500;
   }
 }
 
 .bd-pageheader {
-  background-color: #000;
-  color: #fff;
-  border-top: 2px solid $gray-dark;
   padding: 0;
+  color: #fff;
+  background-color: #000;
+  border-top: 2px solid $gray-dark;
 
   h1 {
+    margin: 2.6875rem 0;
     font-size: $font-size-h1;
     font-weight: bold;
-    margin: 2.6875rem 0;
   }
 
   p {
-    font-size: $font-size-base;
     margin-bottom: 1.25rem;
+    font-size: $font-size-base;
   }
 
   @include media-breakpoint-down(xs) {
     h1 {
+      margin: 1.25rem 0;
       font-size: $font-size-h2;
       font-weight: bold;
-      text-align: left;
       line-height: 1;
-      margin: 1.25rem 0;
+      text-align: left;
     }
 
     p {
@@ -74,20 +75,20 @@
 }
 
 .bd-featurette {
-    font-size: $font-size-base;
+  font-size: $font-size-base;
 }
 
 .bd-search {
   .form-control {
-    background-color: transparent;
     height: auto;
+    background-color: transparent;
   }
 }
 
 .bd-navbar {
-  font-size: 1rem;
   min-height: $navbar-height;
   padding: 0;
+  font-size: 1rem;
 
   @include media-breakpoint-down(sm) {
     .nav-link {
@@ -106,9 +107,9 @@
       &.active,
       &:hover,
       &:focus {
-        background-color: #000;
-        color: $brand-primary;
         font-weight: bold;
+        color: $brand-primary;
+        background-color: #000;
       }
     }
   }
@@ -119,51 +120,35 @@
 }
 
 .bd-footer {
-    padding: 0;
+  padding: 0;
+  margin-top: 2.5rem;
+  font-size: $font-size-base;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+
+  .o-footer-top {
+    padding: 2.5rem 0;
+  }
+
+  a {
     color: #fff;
-    background-color: #000;
-    text-align: center;
-    margin-top: 2.5rem;
-    font-size: $font-size-base;
+    text-decoration: underline;
 
-    .o-footer-top {
-        padding: 2.5rem 0;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $brand-primary;
+      text-decoration: none;
     }
-
-    a {
-        color: #fff;
-        text-decoration: underline;
-
-        &:active,
-        &:hover,
-        &:focus {
-            color: $brand-primary;
-            text-decoration: none;
-        }
-    }
-
+  }
 }
 
 .bd-example-tabs .nav-tabs {
   margin-bottom: 0;
 }
 
-@mixin brand-warning {
-  &::before {
-    @include sr-only;
-    content: "warning, not brand compliant";
-  }
-
-  &::after {
-    content: "\e936";
-    color: $brand-danger;
-    font-family: "icon-orange" !important;
-    font-size: inherit;
-    padding-left: .375rem;
-    vertical-align: bottom;
-  }
-}
-
+// brand-warning
 #outline-buttons,
 #supported-content,
 #text,
@@ -171,7 +156,19 @@
 #placement,
 #collapsible-content,
 #sizing {
-    @include brand-warning;
+  &::before {
+    @include sr-only;
+    content: "warning, not brand compliant";
+  }
+
+  &::after {
+    padding-left: .375rem;
+    font-family: "icon-orange" !important;
+    font-size: inherit;
+    color: $brand-danger;
+    vertical-align: bottom;
+    content: "\e936";
+  }
 }
 
 
@@ -185,8 +182,8 @@
 }
 .doc-fonticon-list {
   padding-left: 0;
-  list-style: none;
   font-size: 1.875rem;
+  list-style: none;
 }
 .doc-fonticon li {
   float: left;
@@ -201,9 +198,9 @@
 
 .doc-fonticon .fonticon-class {
   display: block;
+  font-size: $font-size-base;
   text-align: center;
   word-wrap: break-word; // Help out IE10+ with class names
-  font-size: $font-size-base;
 }
 .doc-fonticon li:hover {
   color: #fff;
@@ -221,54 +218,53 @@
 }
 
 @media only screen and (max-width : 650px) {
+  #myTable .cf::after { display: block; height: 0;clear: both; font-size: 0; visibility: hidden; content: " ";   }
+  #myTable * html .cf { zoom: 1; }
+  #myTable *:first-child+html .cf { zoom: 1; }
+  #myTable table { width: 100%; border-spacing: 0; border-collapse: collapse; }
+  #myTable th,
+  #myTable td { margin: 0; vertical-align: top; }
+  #myTable th { text-align: left; }
+  #myTable table { position: relative; display: block; width: 100%; }
+  #myTable thead { display: block; float: left; }
+  #myTable tbody { position: relative; display: block; width: auto; overflow-x: auto; white-space: nowrap; }
+  #myTable thead tr { display: block; }
+  #myTable th { display: block; text-align: right; }
+  #myTable tbody tr { display: inline-block; vertical-align: top; }
+  #myTable td { display: block; min-height: 1.25em; text-align: left; }
 
-    #myTable .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-    #myTable * html .cf { zoom: 1; }
-    #myTable *:first-child+html .cf { zoom: 1; }
-    #myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
-    #myTable th,
-    #myTable td { margin: 0; vertical-align: top; }
-    #myTable th { text-align: left; }
-    #myTable table { display: block; position: relative; width: 100%; }
-    #myTable thead { display: block; float: left; }
-    #myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
-    #myTable thead tr { display: block; }
-    #myTable th { display: block; text-align: right; }
-    #myTable tbody tr { display: inline-block; vertical-align: top; }
-    #myTable td { display: block; min-height: 1.25em; text-align: left; }
-
-    /* sort out borders */
-    #myTable th { border-bottom: 0; border-left: 0; border-top: 1px solid #A6A6A6; }
-    #myTable td { border-right: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-bottom: 0; }
-    #myTable th:last-child,
-    #myTable td:last-child { border-bottom: 1px solid #babcbf; }
+  // sort out borders
+  #myTable th { border-top: 1px solid #a6a6a6; border-bottom: 0; border-left: 0;  }
+  #myTable td { border-right: 1px solid #a6a6a6; border-bottom: 0; }
+  #myTable th:last-child,
+  #myTable td:last-child { border-bottom: 1px solid #babcbf; }
 
 }
 
-/* accessibility */
-table.tablesorter > thead > tr > th[aria-sort="descending"]:after {
-    content:"trié par ordre décroissant";
-    border: 0 none;
-    clip: rect(0px, 0px, 0px, 0px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+// // accessibility
+table.tablesorter > thead > tr > th[aria-sort="descending"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  content: "trié par ordre décroissant";
+  border: 0 none;
 }
 
-/* accessibility */
-table.tablesorter > thead > tr > th[aria-sort="ascending"]:after {
-    content:"trié par ordre croissant";
-    border: 0 none;
-    clip: rect(0px, 0px, 0px, 0px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+// // accessibility
+table.tablesorter > thead > tr > th[aria-sort="ascending"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  content: "trié par ordre croissant";
+  border: 0 none;
 }
 
 // boostwatch
@@ -284,12 +280,13 @@ table.tablesorter > thead > tr > th[aria-sort="ascending"]:after {
 }
 
 #buttons_inverse {
+  padding: 1.25rem;
   color: #fff;
   background-color: #000;
-  padding: 1.25rem;
 }
 
 .doc-link {
   margin-left: .625rem;
   font-size: 1.5rem;
 }
+// scss-lint:enable IdSelector
