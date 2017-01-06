@@ -3,7 +3,93 @@ layout: simple
 title: Examples
 ---
 
-[Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
+[comment]: # Boosted mod
+
+[Download the Boosted source code]({{ site.download.source }}) to snag these examples.
+
+## Orange modules
+
+<div class="row bd-examples">
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/module-012-product-details/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-012-product-details.png" alt="">
+    </a>
+    <h4>Product details</h4>
+    <p>Layout for desktop and mobile shop.</p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/module-002-quick-links/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-002-quick-links.png" alt="">
+    </a>
+    <h4>Quick links</h4>
+    <p></p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/module-006-content-panel/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-006-content-panels.png" alt="">
+    </a>
+    <h4>Content panels</h4>
+    <p></p>
+  </div>
+</div>
+
+## Orange brand
+
+<div class="row bd-examples">
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-brand-2015/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/brand_2015.jpg" alt="">
+    </a>
+    <h4>News Orange Brand</h4>
+    <p>A single news page, Orange branded 2015.</p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-news/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_news.jpg" alt="">
+    </a>
+    <h4>News template</h4>
+    <p>Main mega menu.</p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-dashboard/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_dashboard.jpg" alt="">
+    </a>
+    <h4>Dashboard Orange branded</h4>
+    <p>A simple Orange branded dashboard application.</p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-admin/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
+    </a>
+    <h4>Administration mainpage</h4>
+    <p>Administration for Orange applications example.</p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-admin/edit.html">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
+    </a>
+    <h4>Administration edition page</h4>
+    <p>Administration news edition for Orange applications example.</p>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/orange-form/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_form.jpg" alt="">
+    </a>
+    <h4>Form</h4>
+    <p>Complex form page with validation.</p>
+  </div>
+</div>
+
+
+[comment]: # end mod
+
 
 ## Framework
 

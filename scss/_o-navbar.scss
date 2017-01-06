@@ -16,7 +16,7 @@
 
   &.navbar-light,
   &.navbar-dark {
-    color: $navbar-dark-color;
+    color: $navbar-inverse-color;
     background: #000;
   }
 
@@ -235,7 +235,7 @@
       height: 3.125rem;
       padding: .125rem 0 0;
       font-size: 1.25rem;
-      color: $navbar-dark-color;
+      color: $navbar-inverse-color;
       background-color: transparent;
       background-image: none;
       border: 0;
