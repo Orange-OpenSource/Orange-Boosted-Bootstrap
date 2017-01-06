@@ -24,13 +24,13 @@ Orange navbar is the main navigation of project website. It should always be inc
         </button>
         <div class="container" >
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar3">
+            <ul class="navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar3">
                 <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
             </ul>
-            <ul class="nav navbar-nav float-right">
+            <ul class="navbar-nav float-right">
                 <li class="nav-item">
                     <a href="#" class="nav-link icon">
                         <span class="sr-only">open basket</span>
@@ -58,12 +58,12 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
 {% example html %}
 <nav class="navbar navbar-dark supra">
     <div class="container">
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav">
             <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
         </ul>
-        <ul class="nav navbar-nav float-right">
+        <ul class="navbar-nav float-right">
             <li class="nav-item">
                     <a href="#" class="nav-link icon">
                     <span class="sr-only">basket</span>
@@ -96,12 +96,12 @@ A supra bar should never be used on its own and always be included in header and
 <header role="banner" id="demo_navbar">
     <nav class="navbar navbar-dark supra">
         <div class="container">
-            <ul class="nav navbar-nav">
+            <ul class="navbar-nav">
                 <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
             </ul>
-            <ul class="nav navbar-nav float-right">
+            <ul class="navbar-nav float-right">
                 <li class="nav-item">
                         <a href="#" class="nav-link icon">
                         <span class="sr-only">basket</span>
@@ -131,13 +131,13 @@ A supra bar should never be used on its own and always be included in header and
         </button>
         <div class="container" >
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar2">
+            <ul class="navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar2">
                 <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
             </ul>
-            <ul class="nav navbar-nav float-right">
+            <ul class="navbar-nav float-right">
                 <li class="nav-item">
                     <a href="#" class="nav-link icon">
                         <span class="sr-only">open basket</span>
