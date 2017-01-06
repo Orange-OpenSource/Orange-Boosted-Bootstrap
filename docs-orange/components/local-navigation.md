@@ -13,7 +13,7 @@ Wrap your `<ul>` list in a `<nav>` tag with `.container` class. Use `<hr>` tag o
     <hr aria-hidden="true">
     <nav class="container">
         <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
-        <ul class="nav nav-inline collapse" id="localNav1">
+        <ul class="nav justify-content-center collapse" id="localNav1">
             <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
@@ -33,7 +33,7 @@ Simply add `.inverse` class to your `.o-nav-local` container.
         <hr aria-hidden="true">
         <nav class="container">
             <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
-            <ul class="nav nav-inline collapse" id="localNav2">
+            <ul class="nav justify-content-center collapse" id="localNav2">
                 <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>

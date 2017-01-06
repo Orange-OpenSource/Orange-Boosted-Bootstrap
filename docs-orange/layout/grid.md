@@ -58,116 +58,114 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
 
 We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution. 
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Viewport breakpoints</th>
-        <th class="text-xs-center">
-          Extra small<br>
-          <small>&lt;480px</small>
-        </th>
-        <th class="text-xs-center">
-          Small<br>
-          <small>&ge;480px</small>
-        </th>
-        <th class="text-xs-center">
-          Medium<br>
-          <small>&ge;768px</small>
-        </th>
-        <th class="text-xs-center">
-          Large<br>
-          <small>&ge;980px</small>
-        </th>
-        <th class="text-xs-center">
-          Extra large<br>
-          <small>&ge;1220px</small>
-        </th>
-        <th class="text-xs-center">
-          Extra extra large<br>
-          <small>&ge;1380px</small>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="text-nowrap" scope="row">Targetted resolution</th>
-        <td>320px</td>
-        <td>480px</td>
-        <td>768px</td>
-        <td>1024px</td>
-        <td>1280px</td>
-        <td>1440px</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Device</th>
-        <td>Mobile portrait</td>
-        <td>Mobile landscape</td>
-        <td>Tablet portrait</td>
-        <td>Small desktop / Tablet landscape</td>
-        <td>Medium desktop</td>
-        <td>Large desktop</td>
-      </tr>
-      <tr>
-        <th scope="row">Container max-width (Design Area)</th>
-        <td>302px</td>
-        <td>458px</td>
-        <td>724px</td>
-        <td>940px</td>
-        <td>1180px</td>
-        <td>1300px</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Container-fluid margin</th>
-        <td>1.25%</td>
-        <td>1.25%</td>
-        <td>1.5625%</td>
-        <td>3.125%</td>
-        <td>3.125%</td>
-        <td>4.16667%</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Column width</th>
-        <td>16px</td>
-        <td>29px</td>
-        <td>42px</td>
-        <td>60px</td>
-        <td>80px</td>
-        <td>90px</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="2">10px (5px on each side of a column)</td>
-        <td colspan="4">20px (10px on each side of a column)</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row"># of columns</th>
-        <td colspan="6">12</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Class prefix</th>
-        <td><code>.col-xs-</code></td>
-        <td><code>.col-sm-</code></td>
-        <td><code>.col-md-</code></td>
-        <td><code>.col-lg-</code></td>
-        <td><code>.col-xl-</code></td>
-        <td><code>.col-xxl-</code></td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Nestable</th>
-        <td colspan="6">Yes</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Offsets</th>
-        <td colspan="6">Yes</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap" scope="row">Column ordering</th>
-        <td colspan="6">Yes</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table class="table table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th>Viewport breakpoints</th>
+      <th class="text-center">
+        Extra small<br>
+        <small>&lt;480px</small>
+      </th>
+      <th class="text-center">
+        Small<br>
+        <small>&ge;480px</small>
+      </th>
+      <th class="text-center">
+        Medium<br>
+        <small>&ge;768px</small>
+      </th>
+      <th class="text-center">
+        Large<br>
+        <small>&ge;980px</small>
+      </th>
+      <th class="text-center">
+        Extra large<br>
+        <small>&ge;1220px</small>
+      </th>
+      <th class="text-center">
+        Extra extra large<br>
+        <small>&ge;1380px</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-nowrap" scope="row">Targetted resolution</th>
+      <td>320px</td>
+      <td>480px</td>
+      <td>768px</td>
+      <td>1024px</td>
+      <td>1280px</td>
+      <td>1440px</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Device</th>
+      <td>Mobile portrait</td>
+      <td>Mobile landscape</td>
+      <td>Tablet portrait</td>
+      <td>Small desktop / Tablet landscape</td>
+      <td>Medium desktop</td>
+      <td>Large desktop</td>
+    </tr>
+    <tr>
+      <th scope="row">Container max-width (Design Area)</th>
+      <td>302px</td>
+      <td>458px</td>
+      <td>724px</td>
+      <td>940px</td>
+      <td>1180px</td>
+      <td>1300px</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Container-fluid margin</th>
+      <td>1.25%</td>
+      <td>1.25%</td>
+      <td>1.5625%</td>
+      <td>3.125%</td>
+      <td>3.125%</td>
+      <td>4.16667%</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Column width</th>
+      <td>16px</td>
+      <td>29px</td>
+      <td>42px</td>
+      <td>60px</td>
+      <td>80px</td>
+      <td>90px</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Gutter width</th>
+      <td colspan="2">10px (5px on each side of a column)</td>
+      <td colspan="4">20px (10px on each side of a column)</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row"># of columns</th>
+      <td colspan="6">12</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Class prefix</th>
+      <td><code>.col-</code></td>
+      <td><code>.col-sm-</code></td>
+      <td><code>.col-md-</code></td>
+      <td><code>.col-lg-</code></td>
+      <td><code>.col-xl-</code></td>
+      <td><code>.col-xxl-</code></td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Nestable</th>
+      <td colspan="6">Yes</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Offsets</th>
+      <td colspan="6">Yes</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Column ordering</th>
+      <td colspan="6">Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Sass mixins
 
@@ -374,27 +372,27 @@ Using a single set of `.col-md-*` grid classes, you can create a basic grid syst
 
 ### Example: Mobile and desktop
 
-Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding `.col-xs-*` and `.col-md-*` to your columns. See the example below for a better idea of how it all works.
+Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding `.col-*` and `.col-md-*` to your columns. See the example below for a better idea of how it all works.
 
 <div class="bd-example-row">
 {% example html %}
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="row">
-  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
 
 <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
 <div class="row">
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
 
 <!-- Columns are always 50% wide, on mobile and desktop -->
 <div class="row">
-  <div class="col-xs-6">.col-xs-6</div>
-  <div class="col-xs-6">.col-xs-6</div>
+  <div class="col-6">.col-6</div>
+  <div class="col-6">.col-6</div>
 </div>
 {% endexample %}
 </div>
@@ -406,15 +404,15 @@ Build on the previous example by creating even more dynamic and powerful layouts
 <div class="bd-example-row">
 {% example html %}
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
 <div class="row">
-  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
   <!-- Optional: clear the XS cols if their content doesn't match in height -->
   <div class="clearfix hidden-sm-up"></div>
-  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
 </div>
 {% endexample %}
 </div>
@@ -426,9 +424,9 @@ If more than 12 columns are placed within a single row, each group of extra colu
 <div class="bd-example-row">
 {% example html %}
 <div class="row">
-  <div class="col-xs-9">.col-xs-9</div>
-  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+  <div class="col-9">.col-9</div>
+  <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+  <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
 </div>
 {% endexample %}
 </div>
@@ -440,14 +438,14 @@ With the four tiers of grids available you're bound to run into issues where, at
 <div class="bd-example-row">
 {% example html %}
 <div class="row">
-  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 
   <!-- Add the extra clearfix for only the required viewport -->
   <div class="clearfix hidden-sm-up"></div>
 
-  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 </div>
 {% endexample %}
 </div>
@@ -498,11 +496,11 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
   <div class="col-sm-9">
     Level 1: .col-sm-9
     <div class="row">
-      <div class="col-xs-8 col-sm-6">
-        Level 2: .col-xs-8 .col-sm-6
+      <div class="col-8 col-sm-6">
+        Level 2: .col-8 .col-sm-6
       </div>
-      <div class="col-xs-4 col-sm-6">
-        Level 2: .col-xs-4 .col-sm-6
+      <div class="col-4 col-sm-6">
+        Level 2: .col-4 .col-sm-6
       </div>
     </div>
   </div>

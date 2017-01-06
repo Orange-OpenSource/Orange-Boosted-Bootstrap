@@ -15,7 +15,7 @@ According to the brand, Orange pages need to have only black footer.
               <h1 class="sr-only">footer - site map & informations</h1>
               <div class="container-fluid o-footer-top">
                   <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                           <ul>
                               <li><h2>Sed ut perspiciatis</h2></li>
                               <li><a href="#">Unde omnis istea</a></li>
@@ -24,7 +24,7 @@ According to the brand, Orange pages need to have only black footer.
                               <li><a href="#">Totam rem aperiam</a></li>
                           </ul>
                       </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                           <ul>
                               <li><h2>Voluptatem accusantium</h2></li>
                               <li><a href="#">Natus error sit</a></li>
@@ -34,14 +34,14 @@ According to the brand, Orange pages need to have only black footer.
                               <li><a href="#">Totam rem aperiam</a></li>
                           </ul>
                       </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                           <ul>
                               <li><h2>Natus error sit</h2></li>
                               <li><a href="#">Doloremque</a></li>
                               <li><a href="#">Totam rem aperiam</a></li>
                           </ul>
                       </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                           <ul>
                               <li><h2>Doloremque laudantium</h2></li>
                               <li><a href="#">Doloremque</a></li>
@@ -50,7 +50,7 @@ According to the brand, Orange pages need to have only black footer.
                               <li><a href="#">Totam rem aperiam</a></li>
                           </ul>
                       </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                           <ul>
                               <li><h2>Totam rem aperiam</h2></li>
                               <li><a href="#">Totam rem aperiam</a></li>
@@ -60,7 +60,7 @@ According to the brand, Orange pages need to have only black footer.
                               <li><a href="#">Doloremque</a></li>
                           </ul>
                       </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                           <ul>
                               <li><h2>Accusantium</h2></li>
                               <li><a href="#">Unde omnis istea</a></li>
@@ -71,7 +71,7 @@ According to the brand, Orange pages need to have only black footer.
                       </div>
                   </div>
                   <div class="row">
-                      <div class="col-xs-12">
+                      <div class="col-12">
                           <ul class="nav navbar-nav">
                               <li><a href="#">Contact us</a></li>
                               <li><a href="#"><span class="icon-location-pin-compass" aria-hidden="true"></span>Locate a store</a></li>

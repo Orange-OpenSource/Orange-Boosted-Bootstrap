@@ -7,11 +7,16 @@ group: getting-started
 
 Bootstrap uses [Grunt](http://gruntjs.com) for its CSS and JavaScript build system and Jekyll for the written documentation. Our Gruntfile includes convenient methods for working with the framework, including compiling code, running tests, and more.
 
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ## Tooling setup
 
 To use our Gruntfile and run our documentation locally, you'll need a copy of Bootstrap's source files, Node, and Grunt. Follow these steps and you should be ready to rock:
 
-1. [Download and install Node](https://nodejs.org/download), which we use to manage our dependencies.
+1. [Download and install Node](https://nodejs.org/download/), which we use to manage our dependencies.
 2. Install the Grunt command line tools, `grunt-cli`, with `npm install -g grunt-cli`.
 3. Navigate to the root `/bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json](https://github.com/twbs/bootstrap/blob/master/package.json).
 4. [Install Ruby][install-ruby], install [Bundler][gembundler] with `gem install bundler`, and finally run `bundle install`. This will install all Ruby dependencies, such as Jekyll and plugins.
@@ -34,15 +39,6 @@ Our Gruntfile includes the following commands and tasks:
 | `grunt docs` | Builds and tests CSS, JavaScript, and other assets which are used when running the documentation locally via `jekyll serve`. |
 | `grunt watch` | This is a convenience method for watching just Sass files and automatically building them whenever you save. |
 
-## Switching Sass compilers
-
-Bootstrap will be compiled with [libsass][libsass] by default, but you can opt into traditional Ruby Sass by setting the `TWBS_SASS` environment variable. Two options are supported:
-
-* `libsass` (default) to use [libsass][libsass] via [grunt-sass][grunt-sass].
-* `sass` to use [Ruby Sass][ruby-sass] via [grunt-contrib-sass][grunt-contrib-sass].
-
-For example, run `TWBS_SASS=sass grunt` to test and build Bootstrap with Ruby Sass.
-
 ## Autoprefixer
 
 Bootstrap uses [Autoprefixer][autoprefixer] (included in our Gruntfile and build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
@@ -55,7 +51,7 @@ Running our documentation locally requires the use of Jekyll, a decently flexibl
 
 1. Run through the [tooling setup](#tooling-setup) above to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. From the root `/bootstrap` directory, run `bundle exec jekyll serve` in the command line.
-3. Open <http://localhost:9001> in your browser, and voil√†.
+3. Open <http://localhost:9001> in your browser, and voil‡.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
@@ -63,8 +59,4 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
 
 Should you encounter problems with installing dependencies or running Grunt commands, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
 
-[ruby-sass]: https://github.com/sass/sass
-[grunt-contrib-sass]: https://github.com/gruntjs/grunt-contrib-sass
-[libsass]: https://github.com/sass/libsass
-[grunt-sass]: https://github.com/sindresorhus/grunt-sass
 [autoprefixer]: https://github.com/postcss/autoprefixer

@@ -30,7 +30,7 @@ Orange navbar is the main navigation of project website. It should always be inc
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
             </ul>
-            <ul class="nav navbar-nav float-xs-right">
+            <ul class="nav navbar-nav float-right">
                 <li class="nav-item">
                     <a href="#" class="nav-link icon">
                         <span class="sr-only">open basket</span>
@@ -63,7 +63,7 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
             <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
         </ul>
-        <ul class="nav navbar-nav float-xs-right">
+        <ul class="nav navbar-nav float-right">
             <li class="nav-item">
                     <a href="#" class="nav-link icon">
                     <span class="sr-only">basket</span>
@@ -101,7 +101,7 @@ A supra bar should never be used on its own and always be included in header and
                 <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
             </ul>
-            <ul class="nav navbar-nav float-xs-right">
+            <ul class="nav navbar-nav float-right">
                 <li class="nav-item">
                         <a href="#" class="nav-link icon">
                         <span class="sr-only">basket</span>
@@ -137,7 +137,7 @@ A supra bar should never be used on its own and always be included in header and
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
             </ul>
-            <ul class="nav navbar-nav float-xs-right">
+            <ul class="nav navbar-nav float-right">
                 <li class="nav-item">
                     <a href="#" class="nav-link icon">
                         <span class="sr-only">open basket</span>
@@ -160,32 +160,30 @@ A supra bar should never be used on its own and always be included in header and
 
 Using javascript your can initialize the navbar component with the following options :
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
-    <thead>
-     <tr>
-       <th style="width: 100px;">Name</th>
-       <th style="width: 50px;">Type</th>
-       <th style="width: 50px;">Default</th>
-       <th>Description</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-       <td>sticky</td>
-       <td>boolean</td>
-       <td>false</td>
-       <td>Tells wether or not the navbar should stick to the top of page</td>
-     </tr>
-     <tr>
-       <td>hideSupra</td>
-       <td>boolean</td>
-       <td>false</td>
-       <td>Hides the supra bar on page scroll. Show when scroll to top.</td>
-     </tr>
-    </tbody>
-  </table>
-</div>
+<table class="table table-bordered table-striped table-responsive">
+  <thead>
+   <tr>
+     <th style="width: 100px;">Name</th>
+     <th style="width: 50px;">Type</th>
+     <th style="width: 50px;">Default</th>
+     <th>Description</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+     <td>sticky</td>
+     <td>boolean</td>
+     <td>false</td>
+     <td>Tells wether or not the navbar should stick to the top of page</td>
+   </tr>
+   <tr>
+     <td>hideSupra</td>
+     <td>boolean</td>
+     <td>false</td>
+     <td>Hides the supra bar on page scroll. Show when scroll to top.</td>
+   </tr>
+  </tbody>
+</table>
 
 ## Usage
 
