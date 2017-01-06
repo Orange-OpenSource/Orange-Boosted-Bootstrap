@@ -385,6 +385,9 @@ $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-pa
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2));
 
 $form-group-margin-bottom:       ($spacer * 2);
+$form-text-margin-top:           ($spacer * .5);
+$form-check-margin-bottom:       ($spacer * 1.5);
+$form-feedback-margin-top:       ($spacer * .5);
 
 $input-group-addon-bg:           #fff;
 $input-group-addon-border-color: $input-border-color;
@@ -786,6 +789,8 @@ $alert-danger-border:         $brand-danger;
 
 // Progress bars
 
+$progress-height:             ($spacer-y * 2);
+
 $progress-bg:                 $gray-light-o;
 $progress-bar-color:          #000;
 $progress-border-radius:      $border-radius;
@@ -837,6 +842,7 @@ $thumbnail-box-shadow:        none;
 // Figures
 
 $figure-caption-font-size: 90%;
+$figure-caption-color:     $gray-dark;
 
 
 // Breadcrumbs
