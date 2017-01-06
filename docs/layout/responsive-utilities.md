@@ -37,26 +37,26 @@ Try to use these on a limited basis and avoid creating entirely different versio
           </th>
         {% endfor %}
       {% else %}
-      <th>
-        Extra small devices
-        <small>Portrait phones (&lt;544px)</small>
-      </th>
-      <th>
-        Small devices
-        <small>Landscape phones (&ge;544px - &lt;768px)</small>
-      </th>
-      <th>
-        Medium devices
-        <small>Tablets (&ge;768px - &lt;992px)</small>
-      </th>
-      <th>
-        Large devices
-        <small>Desktops (&ge;992px - &lt;1200px)</small>
-      </th>
-      <th>
-        Extra large devices
-        <small>Desktops (&ge;1200px)</small>
-      </th>
+        <th>
+          Extra small devices
+          <small>Portrait phones (&lt;544px)</small>
+        </th>
+        <th>
+          Small devices
+          <small>Landscape phones (&ge;544px - &lt;768px)</small>
+        </th>
+        <th>
+          Medium devices
+          <small>Tablets (&ge;768px - &lt;992px)</small>
+        </th>
+        <th>
+          Large devices
+          <small>Desktops (&ge;992px - &lt;1200px)</small>
+        </th>
+        <th>
+          Extra large devices
+          <small>Desktops (&ge;1200px)</small>
+        </th>
       {% endif %}
     </tr>
   </thead>
