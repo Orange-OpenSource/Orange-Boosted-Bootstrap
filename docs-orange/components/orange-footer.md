@@ -72,7 +72,7 @@ According to the brand, Orange pages need to have only black footer.
                   </div>
                   <div class="row">
                       <div class="col-12">
-                          <ul class="nav navbar-nav">
+                          <ul class="navbar-nav">
                               <li><a href="#">Contact us</a></li>
                               <li><a href="#"><span class="icon-location-pin-compass" aria-hidden="true"></span>Locate a store</a></li>
                               <li><a href="#">Coverage map</a></li>
