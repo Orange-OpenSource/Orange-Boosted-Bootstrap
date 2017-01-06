@@ -1,18 +1,12 @@
 ---
 layout: docs
 title: Responsive utilities
-description: Use responsive display utility classes for showing and hiding content by device, via media query.
 group: layout
 ---
 
 For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.
 
 Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.
-
-## Contents
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
 
 ##  Available classes
 
@@ -37,26 +31,26 @@ Try to use these on a limited basis and avoid creating entirely different versio
           </th>
         {% endfor %}
       {% else %}
-      <th>
-        Extra small devices
-        <small>Portrait phones (&lt;544px)</small>
-      </th>
-      <th>
-        Small devices
-        <small>Landscape phones (&ge;544px - &lt;768px)</small>
-      </th>
-      <th>
-        Medium devices
-        <small>Tablets (&ge;768px - &lt;992px)</small>
-      </th>
-      <th>
-        Large devices
-        <small>Desktops (&ge;992px - &lt;1200px)</small>
-      </th>
-      <th>
-        Extra large devices
-        <small>Desktops (&ge;1200px)</small>
-      </th>
+        <th>
+          Extra small devices
+          <small>Portrait phones (&lt;544px)</small>
+        </th>
+        <th>
+          Small devices
+          <small>Landscape phones (&ge;544px - &lt;768px)</small>
+        </th>
+        <th>
+          Medium devices
+          <small>Tablets (&ge;768px - &lt;992px)</small>
+        </th>
+        <th>
+          Large devices
+          <small>Desktops (&ge;992px - &lt;1200px)</small>
+        </th>
+        <th>
+          Extra large devices
+          <small>Desktops (&ge;1200px)</small>
+        </th>
       {% endif %}
     </tr>
   </thead>
@@ -262,27 +256,28 @@ Green checkmarks indicate the element **is visible** in your current viewport.
 <hr>
 
 <div class="row responsive-utilities-test visible-on">
-  <div class="col-6 col-sm-4">
+  <div class="col-6 col-sm-3">
     <span class="hidden-sm-up visible">&#10004; Your viewport is exactly extra small</span>
     <span class="hidden-xs-down not-visible">Your viewport is NOT exactly extra small</span>
   </div>
-  <div class="col-6 col-sm-4">
+  <div class="col-6 col-sm-3">
     <span class="hidden-xs-down hidden-md-up visible">&#10004; Your viewport is exactly small</span>
     <span class="hidden-sm-only not-visible">Your viewport is NOT exactly small</span>
   </div>
-  <div class="col-6 col-sm-4">
+  <div class="col-6 col-sm-3">
     <span class="hidden-sm-down hidden-lg-up visible">&#10004; Your viewport is exactly medium</span>
     <span class="hidden-md-only not-visible">Your viewport is NOT exactly medium</span>
   </div>
-  </div>
-
-<div class="row responsive-utilities-test visible-on">
-  <div class="col-6 col-sm-4">
+  <div class="col-6 col-sm-3">
     <span class="hidden-md-down hidden-xl-up visible">&#10004; Your viewport is exactly large</span>
     <span class="hidden-lg-only not-visible">Your viewport is NOT exactly large</span>
   </div>
-  <div class="col-6 col-sm-4">
-    <span class="hidden-lg-down visible">&#10004; Your viewport is exactly extra large</span>
+  <div class="col-6 col-sm-3">
+    <span class="hidden-lg-down hidden-xxl-up visible">&#10004; Your viewport is exactly extra large</span>
     <span class="hidden-xl-only not-visible">Your viewport is NOT exactly extra large</span>
+  </div>
+  <div class="col-6 col-sm-3">
+    <span class="hidden-xl-down visible">&#10004; Your viewport is exactly extra extra large</span>
+    <span class="hidden-xxl-only not-visible">Your viewport is NOT exactly extra extra large</span>
   </div>
 </div>

@@ -133,7 +133,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
-**Animated progress bars don't work in Opera 12**—as they don't support CSS3 animations.
+**Animated progress bars don't work in Opera 12**â€”as they don't support CSS3 animations.
 
 <div class="bd-example">
   <div class="progress">

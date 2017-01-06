@@ -397,7 +397,7 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-<div class="card card-success mb-3 text-center">
+<div class="card card-inverse card-success mb-3 text-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -405,7 +405,7 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-<div class="card card-info mb-3 text-center">
+<div class="card card-inverse card-info mb-3 text-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -413,7 +413,7 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-<div class="card card-warning mb-3 text-center">
+<div class="card card-inverse card-warning mb-3 text-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>

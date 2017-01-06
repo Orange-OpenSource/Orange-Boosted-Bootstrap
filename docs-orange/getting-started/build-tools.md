@@ -51,11 +51,9 @@ Running our documentation locally requires the use of Jekyll, a decently flexibl
 
 1. Run through the [tooling setup](#tooling-setup) above to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. From the root `/bootstrap` directory, run `bundle exec jekyll serve` in the command line.
-3. Open <http://localhost:9001> in your browser, and voil�.
+3. Open <http://localhost:9001> in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
-
-[comment]: # Boosted mod
 
 ## Howto create an icons library using icomoon
 To create an icons library using icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong> and download the <a href="{{ site.baseurl }}/assets/orange-icons.json">config file orange-icons.json</a>.
@@ -133,8 +131,6 @@ And finally the “style.css” file contains all the css classes.
 Rename it to <code>MYPROJECT-icons.css</code>.
 
 Adapt your file for SCSS or LESS if needed, you can now use your icons.
-
-[comment]: # End mod
 
 ## Troubleshooting
 
