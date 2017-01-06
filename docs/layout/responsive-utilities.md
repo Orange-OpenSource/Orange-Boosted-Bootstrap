@@ -26,29 +26,74 @@ Try to use these on a limited basis and avoid creating entirely different versio
   <thead>
     <tr>
       <th></th>
-      <th>
-        Extra small devices
-        <small>Portrait phones (&lt;544px)</small>
-      </th>
-      <th>
-        Small devices
-        <small>Landscape phones (&ge;544px - &lt;768px)</small>
-      </th>
-      <th>
-        Medium devices
-        <small>Tablets (&ge;768px - &lt;992px)</small>
-      </th>
-      <th>
-        Large devices
-        <small>Desktops (&ge;992px - &lt;1200px)</small>
-      </th>
-      <th>
-        Extra large devices
-        <small>Desktops (&ge;1200px)</small>
-      </th>
+      {% comment %} 
+        Boosted mod
+      {% endcomment %}
+      {% if site.grid %}
+        {% for breakpoints in site.grid %}
+          <th>
+          {{ breakpoints[0] }}
+            <small>{{ breakpoints[1].subdesc }}</small>
+          </th>
+        {% endfor %}
+      {% else %}
+        <th>
+          Extra small devices
+          <small>Portrait phones (&lt;544px)</small>
+        </th>
+        <th>
+          Small devices
+          <small>Landscape phones (&ge;544px - &lt;768px)</small>
+        </th>
+        <th>
+          Medium devices
+          <small>Tablets (&ge;768px - &lt;992px)</small>
+        </th>
+        <th>
+          Large devices
+          <small>Desktops (&ge;992px - &lt;1200px)</small>
+        </th>
+        <th>
+          Extra large devices
+          <small>Desktops (&ge;1200px)</small>
+        </th>
+      {% endif %}
     </tr>
   </thead>
   <tbody>
+      {% comment %} 
+        Boosted mod
+      {% endcomment %}
+      {% if site.grid %}
+        {% for breakpoints in site.grid %}          
+          {% assign number = forloop.index %}
+          {% capture bpsize %}{{ site.grid | size }}{% endcapture %}
+          <tr>
+            <th scope="row"><code>.hidden-{{ breakpoints[0] }}-down</code></th>
+            {% for i in (1..bpsize) %}
+              {% if number < i %}
+                <td class="is-visible">Visible</td>
+              {% else %} 
+                <td class="is-hidden">Hidden</td>
+              {% endif %}
+            {% endfor %}
+          </tr>
+        {% endfor %}
+        {% for breakpoints in site.grid %}   
+          {% assign number = forloop.index %}
+          {% capture bpsize %}{{ site.grid | size }}{% endcapture %}
+          <tr>
+            <th scope="row"><code>.hidden-{{ breakpoints[0] }}-up</code></th>
+            {% for i in (1..bpsize) %}
+              {% if number < i %}
+                <td class="is-hidden">Hidden</td>
+              {% else %} 
+                <td class="is-visible">Visible</td>
+              {% endif %}
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      {% else %}
     <tr>
       <th scope="row"><code>.hidden-xs-down</code></th>
       <td class="is-hidden">Hidden</td>
@@ -129,6 +174,8 @@ Try to use these on a limited basis and avoid creating entirely different versio
       <td class="is-visible">Visible</td>
       <td class="is-hidden">Hidden</td>
     </tr>
+    
+      {% endif %}
   </tbody>
 </table>
 

@@ -51,9 +51,90 @@ Running our documentation locally requires the use of Jekyll, a decently flexibl
 
 1. Run through the [tooling setup](#tooling-setup) above to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. From the root `/bootstrap` directory, run `bundle exec jekyll serve` in the command line.
-3. Open <http://localhost:9001> in your browser, and voil�.
+3. Open <http://localhost:9001> in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
+
+[comment]: # Boosted mod
+
+## Howto create an icons library using icomoon
+To create an icons library using icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong> and download the <a href="{{ site.baseurl }}/assets/orange-icons.json">config file orange-icons.json</a>.
+
+### Create your own project
+
+Go to the top left menu and select <code>manage projects</code>:
+
+![manage projects menu]({{ site.baseurl }}/assets/img/manage_projects.png)
+
+Then, select <code>import project</code> link and select the file <code>orange-icons.json</code>
+It will load all the Orange Icons into a new project
+
+![import project link]({{ site.baseurl }}/assets/img/import_projects.png)
+                   
+You can now access to all the icons by clicking onto <code>Load</code>
+     
+![Load project]({{ site.baseurl }}/assets/img/new_project.png)
+  
+### Select your icons 
+
+You will find 2 sets : the 1st one contains all the Orange Frames and Popout, the 2nd one contains all the Solaris icons. 
+   
+![Select mode activated]({{ site.baseurl }}/assets/img/select_mode.png)    
+    
+By default there is no selected icon, you can make your selection for your own project.
+Check that you are in selection mode (3rd icon in the top bar, after <code>import icons</code> and <code>icon library</code>), when an icon is selected, its border becomes yellow.
+
+If you need to add a specific icon which is no present into the selection provided, create a new empty set for your project, and add icons to it.
+
+<strong>Warning!</strong> Icons format recommendation<br>
+You need to import icons in SVG, within a square layout to preserve icons consistency ; if the layout is not a square, you will have some surprises.
+
+![Example of bad icon import]({{ site.baseurl }}/assets/img/warning_icon.png)
+ 
+### Download and adapt your project font
+
+Have you finished your shopping?
+
+Now you can create your font for your project.  
+Click onto <code>generate font</code> at the bottom right of the page.
+
+![Generate font link]({{ site.baseurl }}/assets/img/generate_font.png)
+ 
+Depending of the number of icons selected, it can take a little bit of time...
+     
+Setting your font preferences
+
+![preference link]({{ site.baseurl }}/assets/img/preference.png)
+
+Now you have a <code>Download</code> button at the bottom right but <strong>WAIT!!!</strong> 
+We know, you want to download your font but first you need to make some change into <code>preferences</code> to name your font with a name dedicated to YOUR project. 
+
+
+On the top menu bar, click onto <code>Preferences</code>.
+
+By default the font-family is named <code>orange-icons</code>, rename it for your project (MYPROJECT-icons or other) and customize the class prefix by adding your project name to create a unique css selector.
+You also can get Stylesheet variables for scss or less and if you want change the version. 
+And uncheck IE8 support if you rely on Boosted 4! 
+
+![Option window]({{ site.baseurl }}/assets/img/param_export.png)
+
+Close the Preferences window, you’re now ready to download your font.
+
+
+The download is a zip file, <code>MYPROJECT-icons.zip</code>.
+
+![Zip contains]({{ site.baseurl }}/assets/img/arbo_zip.png)
+
+Unzip it.
+The demo.html and demo-files folder offer a sample page displaying the icons - you don’t need them for your project.
+The fonts folder is the one you need! It contains <code>MYPROJECT-icons</code>.eot, svg, ttf and woff files
+And finally the “style.css” file contains all the css classes.
+
+Rename it to <code>MYPROJECT-icons.css</code>.
+
+Adapt your file for SCSS or LESS if needed, you can now use your icons.
+
+[comment]: # End mod
 
 ## Troubleshooting
 

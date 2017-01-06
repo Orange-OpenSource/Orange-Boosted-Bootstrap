@@ -6,9 +6,10 @@
  */
 
 // Core variables and mixins
+@import "custom";
 @import "variables";
 @import "mixins";
-@import "custom";
+
 
 // Reset and dependencies
 @import "normalize";
