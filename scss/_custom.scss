@@ -514,30 +514,30 @@ $custom-control-disabled-cursor:             $cursor-disabled;
 $custom-control-disabled-indicator-bg:       #eee !default;
 $custom-control-disabled-description-color:  #767676 !default;
 
-$custom-control-checked-indicator-color:      #fff !default;
-$custom-control-checked-indicator-bg:         $brand-primary !default;
+$custom-control-checked-indicator-color:      $white;
+$custom-control-checked-indicator-bg:         $brand-primary;
 $custom-control-checked-indicator-box-shadow: none;
 
 $custom-control-focus-indicator-box-shadow: none;
 
-$custom-control-active-indicator-color:      #fff !default;
-$custom-control-active-indicator-bg:         $brand-primary !default;
+$custom-control-active-indicator-color:      $white;
+$custom-control-active-indicator-bg:         $brand-primary;
 $custom-control-active-indicator-box-shadow: none;
 
 $custom-checkbox-radius: $border-radius;
 $custom-checkbox-checked-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14%202l-8%208-3-3-2%202%205%205L16%204l-2-2z%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E");
 
 $custom-checkbox-indeterminate-bg: $brand-primary;
-$custom-checkbox-indeterminate-indicator-color: $custom-control-checked-indicator-color !default;
+$custom-checkbox-indeterminate-indicator-color: $custom-control-checked-indicator-color;
 $custom-checkbox-indeterminate-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
 $custom-checkbox-indeterminate-box-shadow: none;
 
 $custom-radio-radius: 50%;
-$custom-radio-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-checked-indicator-color}'/%3E%3C/svg%3E") !default;
+$custom-radio-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-checked-indicator-color}'/%3E%3C/svg%3E");
 
-$custom-select-padding-x:          .5rem  !default;
-$custom-select-padding-y:          .4375rem !default;
-$custom-select-indicator-padding:  1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-padding-x:          .5rem;
+$custom-select-padding-y:          .4375rem;
+$custom-select-indicator-padding:  1rem; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-line-height:        $input-line-height !default;
 $custom-select-color:              $input-color !default;
 $custom-select-disabled-color:     $gray-light !default;
