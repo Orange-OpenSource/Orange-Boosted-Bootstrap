@@ -28,7 +28,7 @@ group: components
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="float-xs-right">
+                    <div class="float-right">
                         <button type="button" class="btn btn-secondary">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                     </div>
@@ -59,7 +59,7 @@ group: components
                 </div>
             </div>
             <div class="modal-footer">
-                <div class="float-xs-right">
+                <div class="float-right">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Submit</button>
                 </div>
@@ -88,7 +88,7 @@ group: components
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="float-xs-right">
+                    <div class="float-right">
                         <button type="button" class="btn btn-secondary">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                     </div>
@@ -119,7 +119,7 @@ group: components
                 </div>
             </div>
             <div class="modal-footer">
-                <div class="float-xs-right">
+                <div class="float-right">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Submit</button>
                 </div>
@@ -147,7 +147,7 @@ group: components
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="float-xs-right">
+                    <div class="float-right">
                         <button type="button" class="btn btn-secondary">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                     </div>
@@ -178,7 +178,7 @@ group: components
                 </div>
             </div>
             <div class="modal-footer">
-                <div class="float-xs-right">
+                <div class="float-right">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Submit</button>
                 </div>

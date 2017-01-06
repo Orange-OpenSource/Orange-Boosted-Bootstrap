@@ -17,7 +17,7 @@ The ScrollSpy plugin is for automatically updating nav targets based on scroll p
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar navbar-light bg-faded">
     <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav navbar-nav">
+    <ul class="nav nav-pills">
       <li class="nav-item"><a class="nav-link" href="#fat">@fat</a></li>
       <li class="nav-item"><a class="nav-link" href="#mdo">@mdo</a></li>
       <li class="nav-item dropdown">
@@ -117,8 +117,7 @@ $('[data-spy="scroll"]').each(function () {
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`.
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
      <tr>
        <th style="width: 100px;">Name</th>
@@ -135,13 +134,11 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
        <td>Pixels to offset from top when calculating position of scroll.</td>
      </tr>
     </tbody>
-  </table>
-</div>
+</table>
 
 ### Events
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
      <tr>
        <th style="width: 150px;">Event Type</th>
@@ -154,8 +151,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
        <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
     </tr>
     </tbody>
-  </table>
-</div>
+</table>
+
 {% highlight js %}
 $('#myScrollspy').on('activate.bs.scrollspy', function () {
   // do something…

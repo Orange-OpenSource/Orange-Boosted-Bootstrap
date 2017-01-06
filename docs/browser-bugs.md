@@ -44,8 +44,7 @@ There are several features specified in Web standards which would allow us to ma
 
 We publicly list these "most wanted" feature requests here, in the hopes of expediting the process of getting them implemented.
 
-<div class="table-responsive">
-  <table class="bd-browser-bugs table table-bordered table-hover">
+<table class="bd-browser-bugs table table-bordered table-hover table-responsive">
     <thead>
       <tr>
         <th>Browser(s)</th>
@@ -64,5 +63,4 @@ We publicly list these "most wanted" feature requests here, in the hopes of expe
       </tr>
       {% endfor %}
     </tbody>
-  </table>
-</div>
+</table>

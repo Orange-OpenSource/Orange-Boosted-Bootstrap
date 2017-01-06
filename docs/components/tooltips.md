@@ -146,8 +146,7 @@ You should only add tooltips to HTML elements that are traditionally keyboard-fo
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
       <tr>
         <th style="width: 100px;">Name</th>
@@ -165,7 +164,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       </tr>
       <tr>
         <td>container</td>
-        <td>string | false</td>
+      <td>string | element | false</td>
         <td>false</td>
         <td>
           <p>Appends the tooltip to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize.</p>
@@ -245,8 +244,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
         <td>Offset of the popover relative to its target. For more information refer to Tether's <a href="http://tether.io/#constraints">offset docs</a>.</td>
       </tr>
     </tbody>
-  </table>
-</div>
+</table>
 
 {% callout info %}
 #### Data attributes for individual tooltips
@@ -286,8 +284,7 @@ Hides and destroys an element's tooltip. Tooltips that use delegation (which are
 
 ### Events
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
       <tr>
         <th style="width: 150px;">Event Type</th>
@@ -312,8 +309,7 @@ Hides and destroys an element's tooltip. Tooltips that use delegation (which are
         <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
       </tr>
     </tbody>
-  </table>
-</div>
+</table>
 
 {% highlight js %}
 $('#myTooltip').on('hidden.bs.tooltip', function () {

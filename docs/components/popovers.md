@@ -163,8 +163,7 @@ Enable popovers via JavaScript:
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
       <tr>
         <th style="width: 100px;">Name</th>
@@ -218,7 +217,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
         <td>string | function</td>
         <td>'right'</td>
         <td>
-          <p>How to position the popover - top | bottom | left | right | auto.<br>When "auto" is specified, it will dynamically reorient the popover. For example, if placement is "auto left", the popover will display to the left when possible, otherwise it will display right.</p>
+        <p>How to position the popover - top | bottom | left | right.</p>
           <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
         </td>
       </tr>
@@ -268,8 +267,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
         <td>Offset of the popover relative to its target. For more information refer to Tether's <a href="http://tether.io/#offset">offset docs</a>.</td>
       </tr>
     </tbody>
-  </table>
-</div>
+</table>
 
 {% callout info %}
 #### Data attributes for individual popovers
@@ -310,8 +308,7 @@ Hides and destroys an element's popover. Popovers that use delegation (which are
 
 ### Events
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
      <tr>
         <th style="width: 150px;">Event Type</th>
@@ -336,8 +333,7 @@ Hides and destroys an element's popover. Popovers that use delegation (which are
         <td>This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
       </tr>
     </tbody>
-  </table>
-</div>
+</table>
 
 {% highlight js %}
 $('#myPopover').on('hidden.bs.popover', function () {
