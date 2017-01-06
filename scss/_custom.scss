@@ -1060,10 +1060,6 @@ $pagination-width-sm: 1.875rem;
 // Example: an element has a height of 30px, so write out `@include navbar-vertical-align(30px);` to calculate the appropriate top margin.
 // rewrite the Bootstrap mixin to align element at the bottom
 
-// Remove all shadows
-@mixin box-shadow($shadow) {
-  box-shadow: none;
-}
 
 // focus state mixin
 @mixin focus {

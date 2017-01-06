@@ -442,11 +442,10 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 
 Use contextual classes to color table rows or individual cells.
 
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
     <colgroup>
-      <col class="col-xs-1">
-      <col class="col-xs-7">
+    <col class="col-1">
+    <col class="col-7">
     </colgroup>
     <thead>
       <tr>
@@ -486,8 +485,7 @@ Use contextual classes to color table rows or individual cells.
         <td>Indicates a dangerous or potentially negative action</td>
       </tr>
     </tbody>
-  </table>
-</div>
+</table>
 
 <div class="bd-example">
   <table class="table">
@@ -670,7 +668,7 @@ Regular table background variants are not available with the inverse table, howe
 
 ## Responsive tables
 
-Create responsive tables by wrapping any `.table` in `.table-responsive` to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.
+Create responsive tables by adding `.table-responsive` to any `.table` to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.
 
 {% callout warning %}
 #### Vertical clipping/truncation
@@ -678,23 +676,8 @@ Create responsive tables by wrapping any `.table` in `.table-responsive` to make
 Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
 {% endcallout %}
 
-{% callout warning %}
-#### Firefox and fieldsets
-
-Firefox has some awkward fieldset styling involving `width` that interferes with the responsive table. This cannot be overridden without a Firefox-specific hack that we **don't** provide in Bootstrap:
-
-{% highlight css %}
-@-moz-document url-prefix() {
-  fieldset { display: table-cell; }
-}
-{% endhighlight %}
-
-For more information, read [this Stack Overflow answer](https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685).
-{% endcallout %}
-
 <div class="bd-example">
-  <div class="table-responsive">
-    <table class="table">
+  <table class="table table-responsive">
       <thead>
         <tr>
           <th>#</th>
@@ -736,10 +719,8 @@ For more information, read [this Stack Overflow answer](https://stackoverflow.co
         </tr>
       </tbody>
     </table>
-  </div>
 
-  <div class="table-responsive">
-    <table class="table table-bordered">
+  <table class="table table-bordered table-responsive">
       <thead>
         <tr>
           <th>#</th>
@@ -781,71 +762,10 @@ For more information, read [this Stack Overflow answer](https://stackoverflow.co
         </tr>
       </tbody>
     </table>
-  </div>
 </div>
 
 {% highlight html %}
-<div class="table-responsive">
-  <table class="table">
+<table class="table table-responsive">
     ...
-  </table>
-</div>
-{% endhighlight %}
-
-
-### Reflow
-Turn traditional tables on their side by using `table-reflow`. When using reflow, the table header becomes the first column of the table, the first row within the table body becomes the second column, the second row becomes the third column, etc.
-
-{% callout warning %}
-#### Content order and complex tables
-
-Beware that the `table-reflow` style changes the visual order of content. Make sure that you only apply this style to well-formed and simple data tables (and in particular, don't use this for layout tables) with appropriate `<th>` table header cells for each row and column.
-
-In addition, this class will not work correctly for tables with cells that span multiple rows or columns (using `rowspan` or `colspan` attributes).
-
-{% endcallout %}
-
-{% example html %}
-<table class="table table-reflow">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Table heading</th>
-      <th>Table heading</th>
-      <th>Table heading</th>
-      <th>Table heading</th>
-      <th>Table heading</th>
-      <th>Table heading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-  </tbody>
 </table>
-{% endexample %}
+{% endhighlight %}
