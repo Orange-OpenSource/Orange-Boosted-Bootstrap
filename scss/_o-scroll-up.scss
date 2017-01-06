@@ -11,6 +11,8 @@
       text-align: center;
       content: "\e93f";
     }
+    align-items: center;
+    justify-content: center;
     float: right;
     width: $o-scroll-up-width;
     height: $o-scroll-up-height;
@@ -20,8 +22,6 @@
     background-color: $gray;
     opacity: .8;
     transform: rotate(90deg);
-    justify-content: center;
-    align-items: center;
   }
 
   position: fixed;
