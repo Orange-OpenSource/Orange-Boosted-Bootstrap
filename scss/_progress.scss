@@ -19,6 +19,7 @@
   height: $progress-height;
   color: $progress-bar-color;
   background-color: $progress-bar-bg;
+  margin-bottom: $progress-height;
 }
 
 // BOOSTED MOD progress is half height on mobile
@@ -28,10 +29,6 @@
     width: 100%;
     // Boosted mod
     height: $spacer-y; // todo: make a new var for this
-    // end mod
-  }
-}
-
 // Striped
 .progress-bar-striped {
   @include gradient-striped();
