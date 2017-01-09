@@ -30,7 +30,7 @@
     "scss-lint": "bundle exec scss-lint --config scss/.scss-lint.yml --exclude scss/_normalize.scss scss/*.scss",
     "scss-lint-docs": "bundle exec scss-lint --config scss/.scss-lint.yml --exclude .tmpdocs/assets/scss/docs.scss .tmpdocs/assets/scss/*.scss",
     "uglify": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output dist/js/boosted.min.js dist/js/boosted.js",
-    "uglify-docs": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output .tmpdocs/assets/js/docs.min.js .tmpdocs/assets/js/vendor/*.js .tmpdocs/assets/js/src/application.js",
+    "uglify-docs": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output .tmpdocs/assets/js/docs.min.js .tmpdocs/assets/js/vendor/anchor.min.js .tmpdocs/assets/js/vendor/clipboard.min.js .tmpdocs/assets/js/vendor/holder.min.js .tmpdocs/assets/js/src/application.js .tmpdocs/assets/js/src/application-boosted.js",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
     "test": "npm run eslint && grunt test"
   },
