@@ -66,7 +66,10 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: 3px $dropdown-item-padding-x;
+  // Boosted mod
+  // set padding top and bottom dynamic by adding a var in _custom.scss
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  // End mod
   clear: both;
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
@@ -130,7 +133,10 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: $dropdown-padding-y $dropdown-item-padding-x;
+  // Boosted Mod
+  // replace $dropdown-item-y used by native bootstrap by $dropdown-item-padding-y to be consistent with dropdown-item padding
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  // end mod
   margin-bottom: 0; // for use with heading elements
   font-size: $font-size-sm;
   color: $dropdown-header-color;
