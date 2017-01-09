@@ -91,9 +91,9 @@ const ScrollUp = (($) => {
 
     _process() {
       if ($(this._scrollElement).scrollTop() > $(this._scrollElement).height()*1.0) {
-        $(Selector.SCROLL_TOP).fadeIn()
+        $(Selector.SCROLL_TOP).show()
       } else {
-        $(Selector.SCROLL_TOP).fadeOut()
+        $(Selector.SCROLL_TOP).hide()
       }
     }
 
