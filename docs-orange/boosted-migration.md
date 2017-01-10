@@ -62,4 +62,4 @@ Class names and semantic changed, see [Orange stepbar](../components/orange-step
 
 ### Accordions
 
-[Accordions](../components/orange-accordion/) are now based on card structure. Be sure to use `.card-title` and `.card-block` in a `.card` element, in addition of the `.o-accordion` for each card. To get multiple openable behaviour just add `.multi` class on the same level.
+[Accordions](../components/collapse/#accordion-example) are now based on card structure. Be sure to use `.card-header` and `.card-block` in a `.card` element, in addition of the `.o-accordion` on the main container. To get multiple openable behaviour just add `.multi` class on each `.card` item.
