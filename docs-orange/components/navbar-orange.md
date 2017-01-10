@@ -17,33 +17,35 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% example html %}
 <header role="banner">
-    <nav class="navbar navbar-dark">
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-            <span class="sr-only">toggle navigation</span>
-            <span class="icon-menu"></span>
-        </button>
-        <div class="container" >
+    <nav class="navbar navbar-inverse navbar-toggleable">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="sr-only">toggle navigation</span>
+                <span class="icon-menu"></span>
+            </button>
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <ul class="navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar3">
-                <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
-            </ul>
-            <ul class="navbar-nav float-right">
-                <li class="nav-item">
-                    <a href="#" class="nav-link icon">
-                        <span class="sr-only">open basket</span>
-                        <span class="icon-buy" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link icon">
-                        <span class="sr-only">open search bar</span>
-                        <span class="icon-search" aria-hidden="true"></span>
-                    </a>
-                </li>
-            </ul>
+            <div class="navbar-collapse collapse" id="collapsingNavbar">
+                <ul class="navbar-nav" id="collapsingNavbar3">
+                    <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon">
+                            <span class="sr-only">open basket</span>
+                            <span class="icon-buy" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon">
+                            <span class="sr-only">open search bar</span>
+                            <span class="icon-search" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -56,14 +58,14 @@ Using icons as links is possible, be sure to add the `.icon` class to the `.nav-
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
 
 {% example html %}
-<nav class="navbar navbar-dark supra">
+<nav class="navbar navbar-inverse navbar-toggleable supra">
     <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
         </ul>
-        <ul class="navbar-nav float-right">
+        <ul class="navbar-nav">
             <li class="nav-item">
                     <a href="#" class="nav-link icon">
                     <span class="sr-only">basket</span>
@@ -94,14 +96,14 @@ A supra bar should never be used on its own and always be included in header and
 
 {% example html %}
 <header role="banner" id="demo_navbar">
-    <nav class="navbar navbar-dark supra">
+    <nav class="navbar navbar-inverse navbar-toggleable supra">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
             </ul>
-            <ul class="navbar-nav float-right">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                         <a href="#" class="nav-link icon">
                         <span class="sr-only">basket</span>
@@ -124,33 +126,35 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-dark">
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-            <span class="sr-only">toggle navigation</span>
-            <span class="icon-menu"></span>
-        </button>
-        <div class="container" >
+    <nav class="navbar navbar-inverse navbar-toggleable">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                <span class="sr-only">toggle navigation</span>
+                <span class="icon-menu"></span>
+            </button>
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <ul class="navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar2">
-                <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
-            </ul>
-            <ul class="navbar-nav float-right">
-                <li class="nav-item">
-                    <a href="#" class="nav-link icon">
-                        <span class="sr-only">open basket</span>
-                        <span class="icon-buy" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link icon">
-                        <span class="sr-only">open search bar</span>
-                        <span class="icon-search" aria-hidden="true"></span>
-                    </a>
-                </li>
-            </ul>
+            <div class="navbar-collapse collapse" id="collapsingNavbar2">
+                <ul class="navbar-nav" id="collapsingNavbar3">
+                    <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon">
+                            <span class="sr-only">open basket</span>
+                            <span class="icon-buy" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon">
+                            <span class="sr-only">open search bar</span>
+                            <span class="icon-search" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
