@@ -25,7 +25,7 @@ Orange navbar is the main navigation of project website. It should always be inc
             </button>
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <div class="navbar-collapse collapse" id="collapsingNavbar">
-                <ul class="navbar-nav" id="collapsingNavbar3">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
@@ -134,7 +134,7 @@ A supra bar should never be used on its own and always be included in header and
             </button>
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <div class="navbar-collapse collapse" id="collapsingNavbar2">
-                <ul class="navbar-nav" id="collapsingNavbar3">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>

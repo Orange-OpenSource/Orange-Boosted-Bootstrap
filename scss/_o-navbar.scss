@@ -236,12 +236,11 @@
 
     .navbar-toggler {
       position: absolute;
-      right: .625rem;
-      padding: .625rem .75rem;
       top: .265625rem;
       right: .625rem;
-      font-size: 1.25rem;
       z-index: 1000;
+      padding: .625rem .75rem;
+      font-size: 1.25rem;
       color: $navbar-inverse-color;
       background-color: transparent;
       background-image: none;
@@ -263,9 +262,9 @@
     }
 
     .navbar-brand {
-      font-size: $font-size-sm;
       align-self: flex-start;
       margin-left: .625rem;
+      font-size: $font-size-sm;
 
       img {
         height: 1.875rem;
@@ -273,8 +272,8 @@
     }
 
     .navbar-collapse {
-      margin-top: .625rem;
       width: 100%;
+      margin-top: .625rem;
 
       .navbar-nav {
         align-items: stretch;
@@ -283,9 +282,9 @@
 
     &.navbar-toggleable > .container {
       display: block;
+      width: 100%;
       padding-top: .625rem;
       margin: 0;
-      width: 100%;
     }
 
     &.navbar-toggleable {
