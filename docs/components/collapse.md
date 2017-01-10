@@ -92,7 +92,7 @@ Extend the default collapse behavior to create an accordion.
 
 [comment]: # Boosted mod
 
-### Mulitple openable
+### Multiple openable
 
 Simply add the `.multi` class on each panel to get multi openable accordions.
 
