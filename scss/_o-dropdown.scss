@@ -2,12 +2,7 @@
 // dropdown
 //
 
-.dropdown-toggle {
-  padding-right: calc(.625rem + #{$caret-width} * 2 + .625rem);
-}
-
 .dropdown-toggle::after {
-  position: absolute;
   top: 1.0625rem;
   margin-left: .625rem;
 }
