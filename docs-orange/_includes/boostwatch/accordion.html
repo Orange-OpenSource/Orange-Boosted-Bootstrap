@@ -1,9 +1,9 @@
-<h2 id="accordion">Accordions<a class="doc-link" href="../components/orange-accordion/" title="go to accordion documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
+<h2 id="accordion">Accordions<a class="doc-link" href="../components/collapse/#accordion-example" title="go to accordion documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 
 <h3>One at a time</h3>
 <div id="accordion-1" role="tablist" class="o-accordion">
   <div class="card">
-    <div class="card-title" role="tab" id="headingOne">
+    <div class="card-header" role="tab" id="headingOne">
       <h5>
         <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Collapsible Group Item #1
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-title" role="tab" id="headingTwo">
+    <div class="card-header" role="tab" id="headingTwo">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Collapsible Group Item #2
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-title" role="tab" id="headingThree">
+    <div class="card-header" role="tab" id="headingThree">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Collapsible Group Item #3
@@ -48,9 +48,9 @@
 </div>
 
 <h3 id="accordion2">Multiple openable</h3>
-<div id="accordion-2" role="tablist" class="o-accordion">
+<div id="accordion-2" role="tablist"  aria-multiselectable="true" class="o-accordion">
   <div class="card multi">
-    <div class="card-title" role="tab" id="headingOne-1">
+    <div class="card-header" role="tab" id="headingOne-1">
       <h5>
         <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
           Collapsible Group Item #1
@@ -65,7 +65,7 @@
     </div>
   </div>
   <div class="card multi">
-    <div class="card-title" role="tab" id="headingTwo-1">
+    <div class="card-header" role="tab" id="headingTwo-1">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapseTwo-1" aria-expanded="false" aria-controls="collapseTwo-1">
           Collapsible Group Item #2
@@ -79,7 +79,7 @@
     </div>
   </div>
   <div class="card multi">
-    <div class="card-title" role="tab" id="headingThree-1">
+    <div class="card-header" role="tab" id="headingThree-1">
       <h5>
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapseThree-1" aria-expanded="false" aria-controls="collapseThree-1">
           Collapsible Group Item #3
