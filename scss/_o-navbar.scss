@@ -49,19 +49,19 @@
       color: $brand-primary;
     }
 
-    > span {
-      display: inline-block;
-      margin-left: .625rem;
-      color: #fff;
-    }
+    // > span {
+    //   display: inline-block;
+    //   margin-left: .625rem;
+    //   color: #fff;
+    // }
 
-    &:hover > span {
-      color: $brand-primary;
+    // &:hover > span {
+    //   color: $brand-primary;
 
-      .text-primary {
-        color: #fff !important;
-      }
-    }
+    //   .text-primary {
+    //     color: #fff !important;
+    //   }
+    // }
   }
 
   .navbar-nav {
