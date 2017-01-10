@@ -26,7 +26,9 @@ html {
 //
 // Variables
 //
-
+// Refuse alpha 6 custom moving after variables
+@import "custom";
+// end mod
 @import "variables";
 
 //
@@ -37,7 +39,5 @@ html {
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";
-
-@import "custom";
 
 @import "grid";

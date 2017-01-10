@@ -6,7 +6,10 @@
  */
 
 // Core variables and mixins
+// Boosted mod
+// Refuse alpha 6 custom moving after variables
 @import "custom";
+// end mod
 @import "variables";
 @import "mixins";
 
