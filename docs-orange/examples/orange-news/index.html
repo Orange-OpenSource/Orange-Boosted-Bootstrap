@@ -36,14 +36,14 @@
 		</div>
 
         <header role="banner">
-            <nav class="navbar navbar-dark supra">
+            <nav class="navbar navbar-inverse navbar-toggleable supra">
                 <div class="container">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
                     </ul>
-                    <ul class="navbar-nav float-right">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                              <a href="#" class="nav-link icon">
                                 <span class="sr-only">basket</span>
@@ -67,21 +67,23 @@
                 </div>
             </nav>
 
-            <nav class="navbar navbar-dark">
-                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                    <span class="sr-only">toggle navigation</span>
-                    <span class="icon-menu"></span>
-                </button>
-                <div class="container" >
+            <nav class="navbar navbar-inverse navbar-toggleable">
+                <div class="container">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+						<span class="sr-only">toggle navigation</span>
+						<span class="icon-menu"></span>
+					</button>
                     <a class="navbar-brand"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-                    <ul class="navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
-                        <li class="nav-item"><a class="nav-link" href="#collapseDiscover" data-parent="#collapsingNavbar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDiscover" title="open discover menu">Discover</a></li>
-                        <li class="nav-item"><a class="nav-link" data-parent="#collapsingNavbar" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="open shop menu">Shop</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
-                        <li class="nav-item" id="id_li_for_cdu"></li>
-                    </ul>
-                    <!--<ul class="navbar-nav float-right">
+                    <div class="navbar-collapse collapse" id="collapsingNavbar">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link" href="#collapseDiscover" data-parent="#collapsingNavbar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDiscover" title="open discover menu">Discover</a></li>
+							<li class="nav-item"><a class="nav-link" data-parent="#collapsingNavbar" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="open shop menu">Shop</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+							<li class="nav-item" id="id_li_for_cdu"></li>
+						</ul>
+                    </div>
+					<!--<ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="#" class="nav-link icon">
                                 <span class="sr-only">open basket</span>
@@ -501,7 +503,8 @@
 	<script type="text/javascript">
 			// Surcharge des valeurs du script de la toolbar
 			accessibilitytoolbar_custom={
-				idLinkModeContainer:"id_li_for_cdu"
+				idLinkModeContainer:"id_li_for_cdu",
+				cssLinkModeClassName:"nav-item-cdu"
 			};
 
 			$(".skiplinks_trigger").focus(function(){

@@ -15,19 +15,13 @@
   font-size: $font-size-base;
 
   &.navbar-light,
-  &.navbar-dark {
+  &.navbar-inverse {
     color: $navbar-inverse-color;
     background: #000;
   }
 
-  .nav.navbar-nav {
-    @include media-breakpoint-up(sm) {
-      display: inline-block !important; // in case we use several navbar-nav in navbar
-    }
-  }
-
-  .navbar-toggler {
-    color: #fff;
+  &.navbar-toggleable > .container {
+    align-items: flex-end;
   }
 
   .navbar-brand {
@@ -36,6 +30,8 @@
       outline-offset: .625rem;
     }
 
+    display: flex;
+    align-items: flex-end;
     padding: 0;
     margin: 0;
     font-size: 1rem;
@@ -46,7 +42,7 @@
       float: left;
       width: auto;
       height: 3.125rem;
-      margin-top: 1.5625rem;
+      margin-top: 0;
       font-size: 1rem;
       font-weight: bold;
       line-height: 5.25rem;
@@ -55,7 +51,6 @@
 
     > span {
       display: inline-block;
-      margin-top: 3.75rem;
       margin-left: .625rem;
       color: #fff;
     }
@@ -69,6 +64,14 @@
     }
   }
 
+  .navbar-nav {
+    align-items: flex-end;
+  }
+
+  .navbar-nav + .navbar-nav {
+    margin-left: auto; // pull second navbar-nav to right
+  }
+
   .nav-item {
     position: relative;
     font-weight: bold;
@@ -76,7 +79,6 @@
     > .nav-link,
     &.nav-link {
       padding: 0;
-      margin-top: 3.75rem;
       line-height: $btn-line-height;
 
       &:focus {
@@ -86,14 +88,22 @@
     }
 
     .nav-item-cdu {
+      @include hover-focus {
+        color: $brand-primary !important;
+      }
+
       &:focus {
         outline: 1px dotted #fff;
         outline-offset: .625rem;
       }
+
+      display: block;
+      line-height: $btn-line-height;
+      color: #fff !important;
     }
 
     .nav-link.icon {
-      margin-top: 3.25rem;
+      margin-top: 0;
 
       span[class^="icon-"] {
         font-size: 1.5rem;
@@ -114,7 +124,6 @@
       position: relative;
       display: block;
       padding-right: 1.5rem;
-      margin-top: 3.75rem;
       line-height: $btn-line-height;
       color: #fff;
 
@@ -165,17 +174,12 @@
   min-height: $navbar-height-minimized;
 
   .nav-link {
-    margin-top: 2.8125rem;
+    margin-top: 0;
   }
 
   .navbar-brand {
     img {
       height: 2.5rem;
-      margin-top: 1.25rem;
-    }
-
-    > span {
-      margin-top: 2.8125rem;
     }
   }
 }
@@ -200,8 +204,6 @@
 
     .nav-link,
     .dropdown-toggle {
-      margin-top: calc((#{$navbar-supra-height} - #{$font-size-sm}) / 2);
-
       span[class^="icon-"] {
         font-size: $font-size-h5;
         font-weight: normal;
@@ -209,8 +211,6 @@
     }
 
     .nav-link.icon {
-      margin-top: calc((#{$navbar-supra-height} - #{$font-size-h6}) / 2);
-
       span[class^="icon-"] {
         font-size: $font-size-h6;
         font-weight: normal;
@@ -230,11 +230,18 @@
   .navbar.minimized {
     min-height: $navbar-height-sm;
 
+    &.supra {
+      display: none;
+    }
+
     .navbar-toggler {
-      float: right;
-      height: 3.125rem;
-      padding: .125rem 0 0;
+      position: absolute;
+      right: .625rem;
+      padding: .625rem .75rem;
+      top: .265625rem;
+      right: .625rem;
       font-size: 1.25rem;
+      z-index: 1000;
       color: $navbar-inverse-color;
       background-color: transparent;
       background-image: none;
@@ -257,34 +264,33 @@
 
     .navbar-brand {
       font-size: $font-size-sm;
+      align-self: flex-start;
+      margin-left: .625rem;
 
       img {
         height: 1.875rem;
-        margin-top: .625rem;
-      }
-
-      > span {
-        margin-top: 1.6875rem;
       }
     }
 
-    .container {
-      max-width: none;
-      margin: 0;
-    }
-
-    .navbar-toggleable-xs {
-      position: absolute;
-      top: $navbar-height-sm;
-      left: 0;
-      z-index: 100;
+    .navbar-collapse {
+      margin-top: .625rem;
       width: 100%;
+
+      .navbar-nav {
+        align-items: stretch;
+      }
+    }
+
+    &.navbar-toggleable > .container {
+      display: block;
+      padding-top: .625rem;
       margin: 0;
-      background-color: #000;
+      width: 100%;
+    }
+
+    &.navbar-toggleable {
 
       .nav-item {
-        display: block;
-        float: none;
         padding: 1rem 0;
         padding-left: .625rem;
         margin-left: 0;
@@ -316,13 +322,20 @@
           padding: .625rem;
           margin-top: 0;
         }
+      }
 
-        &:first-child {
-          margin-left: 0;
+      .nav-item > .nav-link,
+      &.nav-link {
+        @include focus {
+          outline: 0;
         }
 
-        .nav-item-cdu {
-          float: none;
+        padding: 0;
+        margin-top: 0;
+
+        &.icon {
+          padding: .78125rem .625rem;
+          margin-top: 0;
         }
       }
 
@@ -338,74 +351,7 @@
           content: "\e93f";
         }
       }
-
-      .nav-item + .nav-item {
-        margin-left: 0;
-      }
-    }
-
-    .nav-item {
-      margin-left: 0;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      > .nav-link,
-      &.nav-link {
-        @include focus {
-          outline: 0;
-        }
-
-        padding: 0;
-        margin-top: 0;
-
-        &.icon {
-          padding: .78125rem .625rem;
-          margin-top: 0;
-        }
-      }
-    }
-
-    .nav-item + .nav-item {
-      margin-left: 0;
     }
   }
 
-}
-
-.navbar-header {
-  padding-right: $navbar-padding-horizontal;
-  padding-left: $navbar-padding-horizontal;
-}
-
-// Navbar nav links
-//
-// Builds on top of the `.nav` components with its own modifier class to make
-// the nav the full height of the horizontal nav (above 768px).
-.navbar-nav {
-  .nav-item-cdu {
-    display: inline-block;
-    padding-right: .75rem;
-    margin-top: 3.75rem;
-    font-weight: bold;
-    line-height: $btn-line-height;
-    color: #fff !important;
-
-    @include hover-focus {
-      color: $brand-primary !important;
-    }
-
-    .uci-plus-orange {
-      position: absolute;
-      bottom: .6875rem;
-      padding: 0;
-    }
-  }
-  // Uncollapse the nav
-  @include media-breakpoint-up(md) {
-    .nav-link {
-      margin-top: 1.75rem;
-    }
-  }
 }

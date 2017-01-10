@@ -140,14 +140,14 @@ footer a, footer span {
   text-align: center;
 }
 #uci_link {
-  margin-top: 3.75rem !important;
-  color: #fff !important;
+  /*margin-top: 3.75rem !important;*/
+  /*color: #fff !important;
   float: left;
-  line-height: 1;
+  line-height: 1;*/
 }
 
 .navbar.minimized #uci_link {
-  margin-top: 2.875rem !important;
+  /*margin-top: 2.875rem !important;*/
 }
 
 .mega-menu #id_for_cdu_link a:hover,.mega-menu #id_for_cdu_link a:focus {
