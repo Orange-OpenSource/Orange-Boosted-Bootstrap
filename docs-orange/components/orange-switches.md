@@ -23,7 +23,7 @@ Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` follow
 <div class="form-group row o-switch">
   <label for="checkbox1" class="form-control-label col-md-3 col-8">Default</label>
   <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-  <div class="toggle form-control-label col-3" aria-hidden="true">
+  <div class="toggle form-control-label" aria-hidden="true">
     <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
     <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
   </div>
@@ -38,7 +38,7 @@ Default color is brand primary. Success color is also supported, use `.success` 
 <div class="form-group row o-switch">
   <label for="checkbox3" class="form-control-label col-md-3 col-8">Success</label>
   <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
-  <label for="checkbox3" class="toggle form-control-label col-3" aria-hidden="true">
+  <label for="checkbox3" class="toggle form-control-label" aria-hidden="true">
     <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
     <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
   </label>
@@ -53,7 +53,7 @@ Finally use `.rounded` class on `.toggle` element to get rounded switch alternat
 <div class="form-group row o-switch">
   <label for="checkbox4" class="form-control-label col-md-3 col-8">Rounded</label>
   <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-  <label for="checkbox4" class="toggle rounded form-control-label col-3" aria-hidden="true" style="width: 78px;">
+  <label for="checkbox4" class="toggle rounded form-control-label" aria-hidden="true" style="width: 78px;">
     <span class="on">On</span>
     <span class="off">Off</span>
   </label>
