@@ -7,15 +7,44 @@
 }
 
 .page-item {
-  &:first-child {
-    .page-link {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
+  // Boosted mod
+  &.presentation {
+    padding: .625rem 0;
+    font-weight: bold;
+  }
+  &.presentation + .page-item .page-link,
+  &:first-child .page-link {
+    margin-left: 0;
+    @include border-left-radius($border-radius);
+    border-color: $black;
+    &::before {
+      position: absolute;
+      left: .8125rem;
+      width: .5625rem;
+      height: 100%;
+      content: "";
+      background-image: #{$pagination-icon-prev};
+      background-repeat: no-repeat;
+      background-position: 0 10%;
     }
   }
+  // End mod
   &:last-child {
     .page-link {
       @include border-right-radius($border-radius);
+      // Boosted mod
+      border-color: $black;
+      &::before {
+        position: absolute;
+        right: .8125rem;
+        width: .5625rem;
+        height: 100%;
+        content: "";
+        background-image: #{$pagination-icon-next};
+        background-repeat: no-repeat;
+        background-position: 0 10%;
+      }
+      // End mod
     }
   }
 
@@ -26,6 +55,16 @@
     border-color: $pagination-active-border;
   }
 
+  // Boosted mod
+  &.active:first-child .page-link::before {
+    background-image: #{$pagination-icon-prev-active};
+  }
+
+  &.active:last-child .page-link::before {
+    background-image: #{$pagination-icon-next-active};
+  }
+  // end mod
+
   &.disabled .page-link {
     color: $pagination-disabled-color;
     pointer-events: none;
@@ -33,13 +72,32 @@
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border;
   }
+
+  // Boosted mod
+  &.disabled:first-child .page-link::before {
+    background-image: #{$pagination-icon-prev-disabled};
+  }
+
+  &.disabled:last-child .page-link::before {
+    background-image: #{$pagination-icon-next-disabled};
+  }
+
+  + .page-item {
+    margin-left: .625rem;
+  }
+  // End mod
 }
 
 .page-link {
   position: relative;
   display: block;
+  // Boosted mod
+  min-width: $pagination-min-width;
+  min-height: $pagination-min-width;
   padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: -1px;
+  margin-left: 0;
+  font-weight: bold;
+  // End mod
   line-height: $pagination-line-height;
   color: $pagination-color;
   background-color: $pagination-bg;
@@ -52,16 +110,53 @@
     border-color: $pagination-hover-border;
   }
 }
-
+// Boosted mod
+.page-item {
+  &.presentation + .page-item,
+  &:first-child,
+  &:last-child {
+    .page-link {
+      @include hover-focus {
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border;
+      }
+    }
+  }
+  &.presentation + .page-item .page-link,
+  &:first-child .page-link {
+    @include hover-focus {
+      &::before {
+        background-image: #{$pagination-icon-prev-active};
+      }
+    }
+    &.has-label {
+      padding-right: 1.125rem;
+      padding-left: 2rem;
+    }
+  }
+  &:last-child .page-link {
+    @include hover-focus {
+      &::before {
+        background-image: #{$pagination-icon-next-active};
+      }
+    }
+    &.has-label {
+      padding-right: 2rem;
+      padding-left: 1.125rem;
+    }
+  }
+}
+// End mod
 
 //
 // Sizing
 //
-
+// Boosted mod add a min size param
 .pagination-lg {
-  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg, $pagination-min-width-lg);
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm, $pagination-min-width-sm);
 }

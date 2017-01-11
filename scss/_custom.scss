@@ -700,30 +700,31 @@ $nav-tabs-link-hover-bg:                      $black;
 
 // Pagination
 
-$pagination-padding-x:                1.25rem;
-$pagination-padding-y:                .625rem;
+$pagination-padding-x:                .8rem;
+$pagination-padding-y:                $spacer-y;
 $pagination-padding-x-sm:             .625rem;
-$pagination-padding-y-sm:             .3125rem;
-$pagination-padding-x-lg:             1.25rem;
-$pagination-padding-y-lg:             .75rem;
-$pagination-line-height:              1.25 !default;
+$pagination-padding-y-sm:             .375rem;
+$pagination-padding-x-lg:             1.125rem;
+$pagination-padding-y-lg:             .875rem;
+
+$pagination-line-height:              1;
 
 $pagination-color:                     #000;
 $pagination-bg:                        #fff;
 $pagination-border-width:              $border-width;
-$pagination-border-color:              #000;
+$pagination-border-color:              transparent;
 
-$pagination-hover-color:               #fff;
-$pagination-hover-bg:                  #000;
-$pagination-hover-border:              #000;
+$pagination-hover-color:               $black;
+$pagination-hover-bg:                  $white;
+$pagination-hover-border:              $black;
 
-$pagination-active-color:              $brand-primary;
-$pagination-active-bg:                 #000;
-$pagination-active-border:             #000;
+$pagination-active-color:              $white;
+$pagination-active-bg:                 $black;
+$pagination-active-border:             $black;
 
-$pagination-disabled-color:            $gray;
+$pagination-disabled-color:            $gray-light-o;
 $pagination-disabled-bg:               #fff;
-$pagination-disabled-border:           #000;
+$pagination-disabled-border:           $gray-light-o;
 
 $pagination-icon-prev: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%2F%3E%3C%2Fsvg%3E") !default;
 $pagination-icon-prev-disabled: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M9%202L7%200%200%207l7%207%202-2-5-5%205-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E") !default;
@@ -731,6 +732,10 @@ $pagination-icon-prev-active: url("data:image/svg+xml;charset=utf8, %3Csvg%20xml
 $pagination-icon-next: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%2F%3E%3C%2Fsvg%3E") !default;
 $pagination-icon-next-disabled: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%209%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23DDD%22%2F%3E%3C%2Fsvg%3E") !default;
 $pagination-icon-next-active: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%209%2014%22%3E%3Cpath%20d%3D%22M0%202l2-2%207%207-7%207-2-2%205-5-5-5z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E") !default;
+// Boosted Var
+$pagination-min-width: 2.5rem;
+$pagination-min-width-lg: 3.125rem;
+$pagination-min-width-sm: 1.875rem;
 
 // Jumbotron
 
@@ -1155,14 +1160,6 @@ $o-stepbar-arrow-ratio: 3 / 8;
 $o-stepbar-mobile-padding-vertical: .4375rem;
 $o-stepbar-mobile-arrow-width: .75rem;
 $o-stepbar-mobile-arrow-height: 1.875rem;
-
-// Pagination
-//
-//
-$pagination-width: 2.5rem;
-$pagination-width-lg: 3.75rem;
-$pagination-width-sm: 1.875rem;
-
 
 //surcharge et custo for mixins
 
