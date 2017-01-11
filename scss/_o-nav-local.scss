@@ -11,6 +11,14 @@
     border-top: 1px solid $gray-light-o;
   }
 
+  .nav-item + .nav-item {
+    margin-left: 1rem;
+  }
+
+  .nav.flex-column .nav-item {
+    margin-left: 0;
+  }
+
   .nav-link {
     padding: .9375rem 0 1.0625rem;
     font-size: $font-size-base;
@@ -35,6 +43,10 @@
       color: $brand-primary;
     }
 
+    &:focus {
+      outline-color: #fff;
+    }
+
     color: #fff;
     background-color: #000;
 
@@ -48,13 +60,6 @@
 
 @include media-breakpoint-down(xs) {
   .o-nav-local {
-
-    .container {
-      position: relative;
-      max-width: 100%;
-      padding: 0;
-      margin: 0;
-    }
 
     .local-select {
       position: relative;
@@ -72,7 +77,8 @@
       }
     }
 
-    .nav-inline {
+    .nav {
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -80,9 +86,13 @@
       width: 100%;
       margin-top: 1px;
       background-color: #fff;
+      flex-flow: column;
+
+      &.show {
+        display: flex;
+      }
 
       .nav-item {
-        display: block;
         margin-left: 0;
 
         .nav-link {
@@ -92,7 +102,7 @@
           }
 
           @include focus {
-            color: #fff;
+            color: #000;
             background-color: #fff;
           }
 
@@ -106,20 +116,10 @@
     .local-select::after {
       color: #fff;
     }
-  }
-}
 
-@include media-breakpoint-up(sm) {
-  .nav-inline {
-    display: block;
-  }
-}
-
-// Vertical version
-
-.o-nav-local.stacked {
-  .nav-item {
-    display: block;
-    margin-left: 0;
+    .nav-item .nav-link:focus {
+      color: $brand-primary;
+      background-color: #000;
+    }
   }
 }
