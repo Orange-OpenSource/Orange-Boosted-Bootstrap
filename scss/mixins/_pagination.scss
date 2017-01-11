@@ -1,9 +1,13 @@
 // Pagination
 
-@mixin pagination-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+@mixin pagination-size($padding-y, $padding-x, $font-size, $line-height, $border-radius, $pagination-min-width) {
   .page-link {
     padding: $padding-y $padding-x;
     font-size: $font-size;
+    // Boosted mod
+    min-width: $pagination-min-width;
+    min-height: $pagination-min-width;
+    // end mod
   }
 
   .page-item {
