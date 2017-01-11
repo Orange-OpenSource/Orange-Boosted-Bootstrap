@@ -10,16 +10,7 @@ pre {
 .panel-title {
   font-size: (ceil(($font-size-base * 1.125) * 10) / 10);
 }
-@media screen {
-  @include media-breakpoint-up(sm) {
-    .carousel-control {
-      .icon-arrow-prev,
-      .icon-arrow-next {
-        font-size: 1.875rem;
-      }
-    }
-  }
-}
+
 .popover-title {
   line-height: 1.125rem;
 }
