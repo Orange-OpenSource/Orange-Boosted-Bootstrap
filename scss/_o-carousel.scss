@@ -1,0 +1,72 @@
+//
+// Carousel
+// --------------------------------------------------
+
+.carousel {
+  margin-bottom: 1.875rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: auto;
+  bottom: calc(50% - 1.875rem);
+  width: 3.75rem;
+  height: 3.75rem;
+  text-decoration: none;
+  text-shadow: none;
+  background-color: #fff;
+  opacity: .8;
+  transition: width .5s ease;
+
+  &:hover,
+  &:focus {
+    width: 7.5rem;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  background-repeat: no-repeat;
+  font-size: 1.875rem;
+  color: $brand-primary;
+  margin-top: -1.125rem;
+
+  &:before {
+    font-family: "icon-orange";
+  }
+}
+
+.carousel-control-prev-icon:before {
+  content: "\e93f";
+}
+
+.carousel-control-next-icon:before {
+  content: "\e93e";
+}
+
+.carousel-indicators {
+  bottom: -2.3125rem;
+
+  &:hover {
+    cursor: default;
+  }
+
+  li {
+    flex-grow: 0;
+    width: .625rem;
+    height: .625rem;
+    margin-right: .375rem;
+    background-color: $gray-lighter-o;
+    border: 0;
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.active {
+      background-color: $brand-primary;
+    }
+  }
+}
