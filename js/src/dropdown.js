@@ -119,9 +119,6 @@ const Dropdown = (($) => {
         return false
       }
 
-      // Boosted mod
-	  //this.focus()
-	  // end mod
 	  this.setAttribute('aria-expanded', 'true')
 
       $(parent).toggleClass(ClassName.SHOW)

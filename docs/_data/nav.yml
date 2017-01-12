@@ -33,7 +33,6 @@
     - title: Breadcrumb
     - title: Buttons
     # boosted mod
-    - title: Orange switches
     - title: Orange links
     # end mod
     - title: Button group
@@ -56,7 +55,6 @@
     - title: Orange megamenu
     - title: Local navigation
     - title: Orange footer
-    - title: Orange stepbar
     # end mod
     - title: Pagination
     - title: Popovers
@@ -68,11 +66,10 @@
     - title: Scrollspy
     # boosted mod
     - title: Scroll up
+    - title: Stepbar
+    - title: Switches
     # end mod
     - title: Tooltips
-    # boosted mod
-    - title: Orange accordion
-    # end mod
 
 - title: Utilities
   pages:

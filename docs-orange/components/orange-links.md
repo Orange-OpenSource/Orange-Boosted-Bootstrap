@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Orange links
+description: Boosted default link presentations
 group: components
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Orange navbar
+description: Orange specific navbar used for Orange portal.
 group: components
 ---
 
@@ -17,7 +18,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% example html %}
 <header role="banner">
-    <nav class="navbar navbar-inverse navbar-toggleable">
+    <nav class="navbar navbar-inverse navbar-toggleable-sm">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="sr-only">toggle navigation</span>
@@ -58,7 +59,7 @@ Using icons as links is possible, be sure to add the `.icon` class to the `.nav-
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
 
 {% example html %}
-<nav class="navbar navbar-inverse navbar-toggleable supra">
+<nav class="navbar navbar-inverse navbar-toggleable-sm supra">
     <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
@@ -96,7 +97,7 @@ A supra bar should never be used on its own and always be included in header and
 
 {% example html %}
 <header role="banner" id="demo_navbar">
-    <nav class="navbar navbar-inverse navbar-toggleable supra">
+    <nav class="navbar navbar-inverse navbar-toggleable-sm supra">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
@@ -126,7 +127,7 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-inverse navbar-toggleable">
+    <nav class="navbar navbar-inverse navbar-toggleable-sm">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
                 <span class="sr-only">toggle navigation</span>
