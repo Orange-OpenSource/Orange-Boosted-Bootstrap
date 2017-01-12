@@ -4,9 +4,6 @@
 
 @mixin nav-divider($color: #e5e5e5) {
   height: 1px;
-  // Boosted mod
-  margin: $spacer-y 0;
-  // end mod
   overflow: hidden;
   background-color: $color;
 }
