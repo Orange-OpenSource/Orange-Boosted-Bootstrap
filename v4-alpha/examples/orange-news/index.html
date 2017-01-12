@@ -44,7 +44,7 @@
                         <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
                     </ul>
-                    <ul class="nav navbar-nav pull-xs-right">
+                    <ul class="nav navbar-nav float-xs-right">
                         <li class="nav-item">
                              <a href="#" class="nav-link icon">
                                 <span class="sr-only">basket</span>
@@ -69,10 +69,10 @@
             </nav>
 
             <nav class="navbar navbar-dark">
-                <!--<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                     <span class="sr-only">toggle navigation</span>
                     <span class="icon-menu"></span>
-                </button>-->
+                </button>
                 <div class="container" >
                     <a class="navbar-brand"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
                     <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
@@ -82,7 +82,7 @@
                         <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
                         <li class="nav-item" id="id_li_for_cdu"></li>
                     </ul>
-                    <ul class="nav navbar-nav pull-xs-right">
+                    <!--<ul class="nav navbar-nav float-xs-right">
                         <li class="nav-item">
                             <a href="#" class="nav-link icon">
                                 <span class="sr-only">open basket</span>
@@ -101,7 +101,7 @@
                                 <span class="icon-menu" aria-hidden="true"></span>
                             </a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </nav>
         </header>
@@ -113,13 +113,13 @@
                         <label class="sr-only" for="search_btn">search bar</label>
                         <input id="search_btn" type="text" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-inverse btn-primary pull-md-right">Search</button>
+                    <button type="submit" class="btn btn-inverse btn-primary float-md-right">Search</button>
                 </form>
             </div>
         </div>
 
-        <div class="mega-menu panel">
-            <div class="collapse panel-collapse " id="collapseDiscover" aria-labelledby="menu_title_discover">
+        <div class="mega-menu">
+            <div class="collapse" id="collapseDiscover" aria-labelledby="menu_title_discover">
                 <div class="container">
                     <h2 role="presentation" id="menu_title_discover"><a aria-hidden="true" href="#">Home Discover</a></h2>
                     <div class="row">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     <div class="row footer">
-                        <div class="pull-md-right hidden-xs-down">
+                        <div class="float-md-right hidden-xs-down">
                             <a data-toggle="collapse" href="#collapseDiscover" aria-expanded="false" aria-controls="collapseDiscover" title="close discover menu"><span class="icon-delete"></span></a>
                         </div>
                     </div>
@@ -153,8 +153,8 @@
             </div>
         </div>
 
-        <div class="mega-menu panel">
-            <div class="collapse panel-collapse" id="collapseShop" aria-labelledby="menu_title2">
+        <div class="mega-menu">
+            <div class="collapse" id="collapseShop" aria-labelledby="menu_title2">
                 <div class="container">
                     <h2 role="presentation" id="menu_title2"><a aria-hidden="true" href="#">Home Shop</a></h2>
                     <div class="row">
@@ -181,11 +181,11 @@
                         </div>
                     </div>
                     <div class="row footer">
-                        <div class="pull-md-left">
+                        <div class="float-md-left">
                             <a href="#">Promotions</a>
                             <a href="#">Top up</a>
                         </div>
-                        <div class="pull-md-right hidden-xs-down">
+                        <div class="float-md-right hidden-xs-down">
                             <a data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete"></span></a>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
 
         <main id="content">
             <section class="container">
-	            <h1>News</h1>
+	            <h1 id="hide_supra_trigger">News</h1>
             </section>
 
 			 <div class="o-nav-local">
@@ -346,7 +346,7 @@
 							<p>Donec id elit non mi porta gravida at eget metus. Fusce
 								dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
 								fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-								mollis euismod. </p>
+								mollis euismod. Donec sed odio dui. </p>
 							<p><a class="btn btn-secondary" href="#" title="view details about news 3">View details »</a></p>
 						</div>
 
@@ -414,15 +414,13 @@
 
 
 					<h2 class="h3">related stories</h2>
-					<div class="panel-group o-accordion" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> Collapsible #1 </a>
-								</h4>
+					<div id="accordion" role="tablist" aria-multiselectable="true" class="o-accordion">
+						<div class="card">
+							<div class="card-header" role="tab" id="headingOne">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-controls="collapseOne"> Collapsible #1 </a>
 							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">Anim pariatur cliche reprehenderit,
+							<div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="card-block">Anim pariatur cliche reprehenderit,
 									enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
 									moon officia aute, non cupidatat skateboard dolor brunch. Food
 									truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -434,14 +432,14 @@
 									haven't heard of them accusamus labore sustainable VHS.</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> Collapsible #2 </a>
+						<div class="card">
+							<div class="card-header" role="tab" id="headingTwo">
+								<h4 class="card-header">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseTwo"> Collapsible #2 </a>
 								</h4>
 							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body">Anim pariatur cliche reprehenderit,
+							<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="card-block">Anim pariatur cliche reprehenderit,
 									enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
 									moon officia aute, non cupidatat skateboard dolor brunch. Food
 									truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -453,14 +451,14 @@
 									haven't heard of them accusamus labore sustainable VHS.</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Collapsible #3 </a>
+						<div class="card">
+							<div class="card-header" role="tab" id="headingThree">
+								<h4 class="card-header">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseThree"> Collapsible #2 </a>
 								</h4>
 							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">Anim pariatur cliche reprehenderit,
+							<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="card-block">Anim pariatur cliche reprehenderit,
 									enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
 									moon officia aute, non cupidatat skateboard dolor brunch. Food
 									truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -525,7 +523,7 @@
 			}
 
             $(document).ready(function(){
-              $('header').navbar({sticky: true, trigger: '#hide_supra_trigger'});
+              $('header').navbar({sticky: true, hideSupra: true});
               $('.mega-menu.panel').megamenu();
             });
 		</script>
