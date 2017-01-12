@@ -17,7 +17,7 @@ According to the brand, Orange pages need to have only black footer.
 {% example html %}
 <footer class="navbar" role="contentinfo">
     <div class="container-fluid">
-          <div class="o-footer">
+          <div class="o-footer col-12">
               <h1 class="sr-only">footer - site map & informations</h1>
               <div class="container-fluid o-footer-top">
                   <div class="row">

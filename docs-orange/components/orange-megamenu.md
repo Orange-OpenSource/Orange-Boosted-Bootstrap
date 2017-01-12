@@ -71,11 +71,12 @@ Megamenu has a footer section where additional links can be added and a button t
                 </div>
             </div>
             <div class="row footer">
-                <div class="float-md-left">
-                    <a href="#">Footer link</a>
+                <div class="col-12 col-sm-11">
+                    <a href="#">Promotions</a>
+                    <a href="#">Top up</a>
                 </div>
-                <div class="float-md-right hidden-xs-down">
-                    <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" title="close shop menu"><span class="icon-delete"></span></a>
+                <div class="col-1 hidden-xs-down">
+                    <a class="float-right" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete" aria-hidden="true"></span></a>
                 </div>
             </div>
         </div>
