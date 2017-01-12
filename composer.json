@@ -1,6 +1,6 @@
 {
   "name": "Orange-OpenSource/Orange-Boosted-Bootstrap",
-  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.4.",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.6.",
   "keywords": [
     "css",
     "js",
@@ -10,7 +10,7 @@
     "front-end",
     "framework",
     "web",
-	"Orange"
+	  "Orange"
   ],
   "homepage": "http://boosted.orange.com",
   "authors": [
