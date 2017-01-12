@@ -42,6 +42,8 @@
   .form-control-label,
   .col-form-label {
     font-weight: bold;
+    padding-top: calc(#{$input-padding-y} + #{$input-btn-border-width});
+    padding-bottom: calc(#{$input-padding-y} + #{$input-btn-border-width});
   }
 
   .form-control-label {
@@ -49,15 +51,35 @@
   }
 
   &.row {
+
+    .form-control-feedback {
+      padding-left: 0;
+    }
+
     &.has-danger.top {
-      padding-top: 2.5rem;
+      flex-direction: row;
+
+      label,
+      .col-form-label,
+      .form-control-label {
+        order: 2;
+      }
 
       .form-control {
+        order: 3;
         margin-top: 0;
       }
 
       .form-control-feedback {
-        top: 1rem;
+        order: 1;
+      }
+    }
+
+    &.has-danger.right {
+      label,
+      .col-form-label,
+      .form-control-label {
+        min-width: auto;
       }
     }
 
@@ -83,6 +105,7 @@
   &.has-danger,
   &.has-warning,
   &.has-success {
+    .col-form-label,
     .form-control-label {
       color: #000;
     }
@@ -108,39 +131,34 @@
     }
 
     &.top {
+      display: flex;
+      flex-direction: column;
+
       .form-control-label {
         margin-bottom: 0;
       }
 
-      .form-control-feedback {
-        position: absolute;
-        top: 1.375rem;
-      }
-
-      .form-control-feedback {
-        top: 1.8rem;
-        margin-top: 0;
-      }
-
       .form-control {
-        margin-top: 1.5rem;
+        order: 3;
       }
 
-      // padding-top for col-* elements
+      .form-control-feedback {
+        order: 2;
+      }
 
+      .form-control-feedback {
+        margin-top: 0;
+        margin-bottom: .8125rem;
+      }
     }
 
     &.right {
-      @include clearfix;
+      display: flex;
+      flex-flow: row wrap;
 
       label,
       .form-control-label {
-        display: block;
-      }
-
-      .form-control,
-      .form-control-feedback {
-        float: left;
+        min-width: 100%;
       }
 
       .form-control-message,
@@ -200,6 +218,7 @@ select.form-control {
 .custom-control-indicator {
   background-color: #fff;
   border: 2px solid $gray;
+  top: auto;
 }
 
 .custom-control-input:checked ~ .custom-control-indicator {
