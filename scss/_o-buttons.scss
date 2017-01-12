@@ -3,6 +3,8 @@
 //
 
 .btn {
+  // due to css that underline link in paragraph, need to ensure link with btn style are not underline
+  text-decoration: none;
   &.disabled,
   &:disabled {
     opacity: 1;
