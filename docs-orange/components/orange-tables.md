@@ -1,8 +1,14 @@
 ---
 layout: docs
 title: Orange tables
+description: Multiple Orange branded tables
 group: components
 ---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 ### Checkbox tables
 

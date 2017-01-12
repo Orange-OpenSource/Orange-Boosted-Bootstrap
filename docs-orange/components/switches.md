@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Orange switches
+title: Switches
+description: Boosted switches provide custom checkbox and radio presentation.
 group: components
 ---
 

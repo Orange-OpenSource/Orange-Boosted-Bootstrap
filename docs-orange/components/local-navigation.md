@@ -1,8 +1,14 @@
 ---
 layout: docs
 title: Local navigation
+description: Local navigation is used as a secondary level navigation.
 group: components
 ---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 ## Default local navigation
 
