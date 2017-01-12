@@ -41,42 +41,42 @@ All HTML headings, `<h1>` through `<h6>`, are available.
   <!-- END MOD -->    
     <tbody>
       <tr>
-        <td><h1>h1. Bootstrap heading</h1></td>
+        <td><h1>h1. Boosted heading</h1></td>
         <!-- BOOSTED MOD -->
         <td class="type-info">Bold 2.125rem (34px)</td>
         <td class="type-info">Bold 1.25rem (20px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
-        <td><h2>h2. Bootstrap heading</h2></td>
+        <td><h2>h2. Boosted heading</h2></td>
         <!-- BOOSTED MOD -->
         <td class="type-info">Bold 1.875rem (30px)</td>
         <td class="type-info">Bold 1.125rem (18px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
-        <td><h3>h3. Bootstrap heading</h3></td>
+        <td><h3>h3. Boosted heading</h3></td>
         <!-- BOOSTED MOD -->
         <td class="type-info">Bold 1.5rem (24px)</td>
         <td class="type-info">Bold 1rem (16px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
-        <td><h4>h4. Bootstrap heading</h4></td>
+        <td><h4>h4. Boosted heading</h4></td>
         <!-- BOOSTED MOD -->
         <td class="type-info">Bold 1.25rem (20px)</td>
         <td class="type-info">Bold .875rem (14px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
-        <td><h5>h5. Bootstrap heading</h5></td>
+        <td><h5>h5. Boosted heading</h5></td>
         <!-- BOOSTED MOD -->
         <td class="type-info">Bold 1.125rem (18px)</td>
         <td class="type-info">Bold .875rem (14px)</td>
         <!-- END MOD -->
       </tr>
       <tr>
-        <td><h6>h6. Bootstrap heading</h6></td>
+        <td><h6>h6. Boosted heading</h6></td>
         <!-- BOOSTED MOD -->
         <td class="type-info">Bold 1rem (16px)</td>
         <td class="type-info">Bold .875rem (14px)</td>        
@@ -87,23 +87,23 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 </div>
 
 {% highlight html %}
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
+<h1>h1. Boosted heading</h1>
+<h2>h2. Boosted heading</h2>
+<h3>h3. Boosted heading</h3>
+<h4>h4. Boosted heading</h4>
+<h5>h5. Boosted heading</h5>
+<h6>h6. Boosted heading</h6>
 {% endhighlight %}
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 {% example html %}
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<p class="h1">h1. Boosted heading</p>
+<p class="h2">h2. Boosted heading</p>
+<p class="h3">h3. Boosted heading</p>
+<p class="h4">h4. Boosted heading</p>
+<p class="h5">h5. Boosted heading</p>
+<p class="h6">h6. Boosted heading</p>
 {% endexample %}
 
 ### Customizing headings

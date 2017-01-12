@@ -31,7 +31,7 @@ Once you have [downloaded](getting-started/download/) boosted source files, copy
 <link rel="stylesheet" href="path/to/your/boosted.css">
 {% endhighlight %}
 
-Add our JavaScript plugins, jQuery, and Tether near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Tether first, as our code depends on them.
+Add our JavaScript plugins, jQuery, and Tether near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Tether first, as our code depends on them. While we use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/) in our docs, the full version is also supported.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -43,19 +43,13 @@ And that's it—you're on your way to a fully Boosted by Orange site. If you're 
 
 ## Starter template
 
-Be sure to have your pages set up with the latest design and development standards. That means:
-
-* Using an HTML5 doctype
-* Forcing Internet Explorer to use its latest rendering mode ([read more](http://stackoverflow.com/q/6771258))
-* And, utilizing the viewport meta tag.
-
-Put it all together and your pages should look like this:
+Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
 
 {% highlight html %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags always come first -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -90,7 +84,7 @@ Put it all together and your pages should look like this:
 </html>
 {% endhighlight %}
 
-That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/layout/overview) or [our official examples]({{ site.baseurl }}/examples/) to start laying out your site's content and components.
+That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/layout/overview/) or [our official examples]({{ site.baseurl }}/examples/) to start laying out your site's content and components.
 
 ## Important globals
 
@@ -137,7 +131,7 @@ Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box
 
 ### Normalize.css
 
-For improved cross-browser rendering, we use [Normalize.css](http://necolas.github.io/normalize.css/) to correct small inconsistencies across browsers and devices. We further build on this with our own, slightly more opinionated styles with [Reboot]({{ site.baseurl }}/content/reboot/).
+For improved cross-browser rendering, we use [Normalize.css](https://necolas.github.io/normalize.css/) to correct small inconsistencies across browsers and devices. We further build on this with our own, slightly more opinionated styles with [Reboot]({{ site.baseurl }}/content/reboot/).
 
 ## Community
 

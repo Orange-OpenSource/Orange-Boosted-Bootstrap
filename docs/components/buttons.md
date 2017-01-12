@@ -43,6 +43,77 @@ Bootstrap includes six predefined button styles, each serving its own semantic p
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
+[comment]: # Boosted mod
+### Dark backgrounds
+
+To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
+
+{% example html %}
+<div style="background-color: black; padding: 2rem">
+    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+    <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+
+    <!-- Secondary, outline button -->
+    <button type="button" class="btn btn-inverse btn-secondary">Secondary</button>
+
+    <!-- Indicates a successful or positive action -->
+    <button type="button" class="btn btn-inverse btn-success">Success</button>
+
+    <!-- Contextual button for informational alert messages -->
+    <button type="button" class="btn btn-inverse btn-info">Info</button>
+
+    <!-- Indicates caution should be taken with this action -->
+    <button type="button" class="btn btn-inverse btn-warning">Warning</button>
+
+    <!-- Indicates a dangerous or potentially negative action -->
+    <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+
+    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+    <button type="button" class="btn btn-inverse btn-link">Link</button>
+</div>
+{% endexample %}
+
+{% example html %}
+<div style="background-color: #595959; padding: 2rem">
+    <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+
+    <button type="button" class="btn btn-inverse btn-secondary">Secondary</button>
+
+    <button type="button" class="btn btn-inverse btn-success">Success</button>
+
+    <button type="button" class="btn btn-inverse btn-info">Info</button>
+
+    <button type="button" class="btn btn-inverse btn-warning">Warning</button>
+
+    <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+
+    <button type="button" class="btn btn-inverse btn-link">Link</button>
+</div>
+{% endexample %}
+
+### Light backgrounds
+
+The default styles can be used on secondary colors backgrounds, in this case remove the `.btn-inverse` class if any.
+
+{% example html %}
+<div style="background-color: #eee; padding: 2rem">
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    <button type="button" class="btn btn-secondary">Secondary</button>
+
+    <button type="button" class="btn btn-success">Success</button>
+
+    <button type="button" class="btn btn-info">Info</button>
+
+    <button type="button" class="btn btn-warning">Warning</button>
+
+    <button type="button" class="btn btn-danger">Danger</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+</div>
+{% endexample %}
+
+
 ## Button tags
 
 The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
@@ -57,6 +128,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="reset" value="Reset">
 {% endexample %}
 
+[comment]: # end mod
 ## Outline buttons
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
