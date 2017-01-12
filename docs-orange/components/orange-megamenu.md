@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Orange megamenu
+description: Boosted mega-menu is use for landing page with many cross-link
 group: components
 ---
 

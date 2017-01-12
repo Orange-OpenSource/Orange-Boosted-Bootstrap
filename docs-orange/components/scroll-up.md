@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Scroll up
+description: Back to top component to be used on longer pages
 group: components
 ---
 

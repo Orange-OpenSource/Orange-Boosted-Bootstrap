@@ -1,10 +1,16 @@
 ---
 layout: docs
 title: Orange footer
+description: Standardised Orange footer
 group: components
 ---
 
 Structure it with `o-footer` class and `o-footer-top` & `o-footer-bottom` to obtain two different parts. On top part, with bootstrap classes (`col-*`), you can have 6 columns to diplay content. Put an `ul` (or `ol`) to obtain one colum. The first element of each column need to be an header tag (`hx`) and it will be displayed in bold. On the bottom part, just put an `ul` (or `ol`) list to have more information links (disclaimer etc). These links will be center on the page and displayed in line.
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 According to the brand, Orange pages need to have only black footer.
 

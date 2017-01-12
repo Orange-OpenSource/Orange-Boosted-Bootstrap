@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Orange popin
+description: Popin container
 group: components
 ---
 

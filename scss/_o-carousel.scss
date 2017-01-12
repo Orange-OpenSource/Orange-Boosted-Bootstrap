@@ -26,22 +26,22 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-image: none;
-  background-repeat: no-repeat;
+  margin-top: -1.125rem;
   font-size: 1.875rem;
   color: $brand-primary;
-  margin-top: -1.125rem;
+  background-image: none;
+  background-repeat: no-repeat;
 
-  &:before {
+  &::before {
     font-family: "icon-orange";
   }
 }
 
-.carousel-control-prev-icon:before {
+.carousel-control-prev-icon::before {
   content: "\e93f";
 }
 
-.carousel-control-next-icon:before {
+.carousel-control-next-icon::before {
   content: "\e93e";
 }
 

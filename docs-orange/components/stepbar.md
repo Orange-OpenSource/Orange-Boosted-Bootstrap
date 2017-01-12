@@ -1,8 +1,14 @@
 ---
 layout: docs
-title: Orange stepbar
+title: Stepbar
+description: Step process bar used for multiple steps forms process
 group: components
 ---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 Indicate the current step within a sequential navigation.
 

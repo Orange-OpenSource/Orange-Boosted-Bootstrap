@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduction
-description: Get started with Bootstrap using the Bootstrap CDN and a template starter page.
+description: Get started with Boosted using the Boosted source and a template starter page.
 group: getting-started
 redirect_from: "/getting-started/"
 ---

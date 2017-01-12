@@ -1,8 +1,14 @@
 ---
 layout: docs
 title: Orange list
+description: Boosted list branded
 group: components
 ---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 ## Orange list
 

@@ -78,15 +78,15 @@
     }
 
     .nav {
-      display: none;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 20;
+      display: none;
+      flex-flow: column;
       width: 100%;
       margin-top: 1px;
       background-color: #fff;
-      flex-flow: column;
 
       &.show {
         display: flex;
