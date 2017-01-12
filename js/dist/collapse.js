@@ -361,10 +361,6 @@ var Collapse = function ($) {
       $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus');
     });
 
-    $('.o-nav-local .nav-inline.collapse').on('hidden.bs.collapse', function (event) {
-      $(event.currentTarget).prev('.local-select').trigger('focus');
-    });
-
     $(document).ready(function () {
       $('.o-nav-local .local-select').each(function () {
         $(this).text($(this).next('.nav-inline.collapse').find('.nav-item:first-child .nav-link').text());

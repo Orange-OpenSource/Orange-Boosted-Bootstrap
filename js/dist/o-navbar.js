@@ -48,6 +48,7 @@ var Navbar = function ($) {
   var Selector = {
     CONFORTP_BAR: '#accessibilitytoolbarGraphic',
     SUPRA_BAR: '.navbar.supra',
+    NAVBAR: '.navbar:not(.supra)',
     MEGAMENU_PANEL: '.mega-menu.panel'
   };
 
@@ -66,8 +67,6 @@ var Navbar = function ($) {
       this._config = this._getConfig(config);
       this._initialHeight = $(this._element).outerHeight();
       this._initialSupraHeight = $(this._supraBar).outerHeight();
-      this._triggerElm = $(this._config.trigger)[0];
-      this._throttleTimer = 0;
 
       this._addAria();
 
@@ -75,7 +74,26 @@ var Navbar = function ($) {
         $(this._element).addClass('fixed-header');
         $(Selector.MEGAMENU_PANEL).addClass('sticky');
         $(document.body).css('padding-top', this._initialHeight);
-        this._addEventListeners();
+
+        $(window).on('scroll', function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 0) {
+            $(Selector.NAVBAR).addClass('minimized');
+          } else {
+            $(Selector.NAVBAR).removeClass('minimized');
+          }
+        });
+      }
+
+      if (this._config.hideSupra) {
+        $(window).on('scroll', function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 0) {
+            $(Selector.SUPRA_BAR).hide();
+          } else {
+            $(Selector.SUPRA_BAR).show();
+          }
+        });
       }
     }
 
@@ -87,40 +105,6 @@ var Navbar = function ($) {
       config = $.extend({}, Default, config);
       Util.typeCheckConfig(NAME, config, DefaultType);
       return config;
-    };
-
-    Navbar.prototype._isElementInViewport = function _isElementInViewport(el, topOffset) {
-      var rect = el.getBoundingClientRect();
-
-      if (!topOffset) {
-        topOffset = 0;
-      }
-
-      return rect.bottom > topOffset && rect.right > 0 && rect.left < (window.innerWidth || document.documentElement.clientWidth) && rect.top < (window.innerHeight || document.documentElement.clientHeight);
-    };
-
-    Navbar.prototype._scrollHandler = function _scrollHandler() {
-      if (this._throttleTimer) {
-        window.clearTimeout(this._throttleTimer);
-      }
-
-      this._throttleTimer = window.setTimeout(this._managePageScroll.bind(this), SCROLLTIMEOUT);
-    };
-
-    Navbar.prototype._managePageScroll = function _managePageScroll() {
-      if (this._isElementInViewport(this._triggerElm, 0)) {
-        $(Selector.SUPRA_BAR).show();
-        $(document.body).css('padding-top', this._initialHeight);
-      } else {
-        $(Selector.SUPRA_BAR).hide();
-        $(document.body).css('padding-top', this._initialHeight - this._initialSupraHeight);
-      }
-    };
-
-    Navbar.prototype._addEventListeners = function _addEventListeners() {
-      if (window.innerWidth >= Dimension.MEDIA_BP_SM) {
-        window.addEventListener(Event.PAGE_SCROLL, this._scrollHandler.bind(this));
-      }
     };
 
     Navbar.prototype._addAria = function _addAria() {
