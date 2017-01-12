@@ -41,9 +41,9 @@
   label,
   .form-control-label,
   .col-form-label {
-    font-weight: bold;
     padding-top: calc(#{$input-padding-y} + #{$input-btn-border-width});
     padding-bottom: calc(#{$input-padding-y} + #{$input-btn-border-width});
+    font-weight: bold;
   }
 
   .form-control-label {
@@ -66,8 +66,8 @@
       }
 
       .form-control {
-        order: 3;
         margin-top: 0;
+        order: 3;
       }
 
       .form-control-feedback {
@@ -216,9 +216,9 @@ select.form-control {
 }
 
 .custom-control-indicator {
+  top: auto;
   background-color: #fff;
   border: 2px solid $gray;
-  top: auto;
 }
 
 .custom-control-input:checked ~ .custom-control-indicator {
