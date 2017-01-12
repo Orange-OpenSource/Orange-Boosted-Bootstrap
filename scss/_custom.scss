@@ -606,7 +606,7 @@ $form-icon-danger: str-replace-boosted(url("data:image/svg+xml;charset=utf8,%3Cs
 
 $dropdown-min-width:             10rem;
 $dropdown-padding-y:             0;
-$dropdown-margin-top:            0;
+$dropdown-margin-top:            -2px;
 $dropdown-bg:                    #fff;
 $dropdown-border-color:          #000;
 $dropdown-border-width:          $border-width;
