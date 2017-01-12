@@ -15,9 +15,10 @@ group: components
 The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar navbar-light bg-faded">
+  <!--- boosted mod nav-pills not supported -->
+  <nav id="navbar-example2" class="navbar navbar-light bg-faded navbar-toggleable">
     <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav nav-pills">
+    <ul class="nav navbar-nav">
       <li class="nav-item"><a class="nav-link" href="#fat">@fat</a></li>
       <li class="nav-item"><a class="nav-link" href="#mdo">@mdo</a></li>
       <li class="nav-item dropdown">
@@ -31,6 +32,7 @@ The ScrollSpy plugin is for automatically updating nav targets based on scroll p
       </li>
     </ul>
   </nav>
+  <!--- end mod -->
   <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
     <h4 id="fat">@fat</h4>
     <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
