@@ -124,48 +124,7 @@ $arrow-orange: "f16e00";
   }
 }
 
-// @include media-breakpoint-down(md) {
-//   .o-stepbar {
-//     ol,
-//     ul {
-//       display: inline-block;
-//       vertical-align: middle;
-//     }
-
-//     .stepbar-item {
-//       &.done,
-//       &.next {
-//         width: 3.5rem;
-//         padding: .75rem 0;
-//         margin-right: .125rem;
-//         line-height: $font-size-base;
-//         text-align: center;
-
-//         .stepbar-link .step-number {
-//           margin-left: 1rem;
-//         }
-
-//         .stepbar-link .step-number::after {
-//           display: none;
-//         }
-
-//         .stepbar-link .step-title {
-//           display: none;
-//         }
-
-//         &:first-child .stepbar-link .step-number,
-//         &:last-child .stepbar-link .step-number {
-//           margin-left: 0;
-//         }
-
-//         &:last-child {
-//           width: 4.5rem;
-//         }
-//       }
-//     }
-//   }
-// }
-
+// For mobile display in any case, reduce the padding and the height
 @include media-breakpoint-down(xs) {
   .o-stepbar {
     .stepbar-item {
