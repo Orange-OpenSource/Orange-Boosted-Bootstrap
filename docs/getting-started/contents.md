@@ -1,38 +1,38 @@
 ---
 layout: docs
 title: Contents
-description: Learn about what's included in Bootstrap's precompiled and source code directories.
+description: Learn about what's included in Boosted's precompiled and source code directories.
 group: getting-started
 ---
 
-Bootstrap can come in one of two forms, as precompiled or source code. Learn more about each flavor's contents and structure below. Remember, no matter the implementation flavor, **Bootstrap's JavaScript plugins require jQuery**.
+Boosted can come in one of two forms, as precompiled or source code. Learn more about each flavor's contents and structure below. Remember, no matter the implementation flavor, **Boosted's JavaScript plugins require jQuery**.
 
-## Precompiled Bootstrap
+## Precompiled Boosted
 
 Once downloaded, unzip the compressed folder and you'll see something like this:
 
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too. -->
 
 {% highlight plaintext %}
-bootstrap/
+boosted/
 ├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   └── bootstrap.min.css.map
+│   ├── boosted.css
+│   ├── boosted.css.map
+│   ├── boosted.min.css
+│   └── boosted.min.css.map
 └── js/
-    ├── bootstrap.js
-    └── bootstrap.min.js
+    ├── boosted.js
+    └── boosted.min.js
 {% endhighlight %}
 
-This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools.
+This is the most basic form of Boosted: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.
 
-## Bootstrap source code
+## Boosted source code
 
-The Bootstrap source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+The Boosted source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 {% highlight plaintext %}
-bootstrap/
+boosted/
 ├── dist/
 │   ├── css/
 │   └── js/
@@ -42,4 +42,4 @@ bootstrap/
 └── scss/
 {% endhighlight %}
 
-The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `docs/` folder includes the source code for our documentation, and `examples/` of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.
+The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `docs/` folder includes the source code for our documentation, and `examples/` of Boosted usage. Beyond that, any other included file provides support for packages, license information, and development.

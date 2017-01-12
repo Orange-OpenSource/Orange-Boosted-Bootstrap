@@ -57,7 +57,7 @@ This `font-family` is applied to the `<body>` and automatically inherited global
 
 ## Headings and paragraphs
 
-All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: .5rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
+All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: 1.25rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
 
 <div class="bd-example">
 {% markdown %}
