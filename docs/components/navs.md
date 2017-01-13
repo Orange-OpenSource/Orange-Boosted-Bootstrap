@@ -134,7 +134,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item hidden-xs-down">
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
@@ -242,7 +242,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
       <a class="dropdown-item" href="#">Separated link</a>
     </div>
   </li>
-  <li class="nav-item">
+  <li class="nav-item hidden-xs-down">
     <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
@@ -332,7 +332,7 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Messages</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item hidden-xs-down">
     <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
   </li>
 </ul>
@@ -394,7 +394,7 @@ Activates a tab element and content container. Tab should have either a `data-ta
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item hidden-xs-down">
     <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Messages</a>
   </li>
   <li class="nav-item">
