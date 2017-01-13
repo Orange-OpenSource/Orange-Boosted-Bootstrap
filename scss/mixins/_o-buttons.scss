@@ -19,7 +19,7 @@
 
   &:active,
   &.active,
-  .open > &.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: $active-color;
     background-color: $active-background;
     background-image: none;
@@ -71,7 +71,7 @@
 
   &:active,
   &.active,
-  .open > &.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: #fff;
     background-color: $brand-primary;
     background-image: none;
@@ -122,7 +122,7 @@
 
   &:active,
   &.active,
-  .open > &.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: #fff;
     background-color: $brand-primary;
     background-image: none;

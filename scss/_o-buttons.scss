@@ -27,7 +27,7 @@ fieldset[disabled] a.btn {
 
   &:active,
   &.active,
-  .open > &.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: #000;
     background-color: transparent;
     background-image: none;
@@ -75,7 +75,7 @@ fieldset[disabled] a.btn {
 
     &:active,
     &.active,
-    .open > &.dropdown-toggle {
+    .show > &.dropdown-toggle {
       color: #fff;
       background-color: transparent;
       border-color: #fff;
@@ -160,7 +160,7 @@ fieldset[disabled] a.btn {
 
   &:active,
   &.active,
-  .open > &.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: #000;
     background-color: transparent;
     background-image: none;
@@ -195,7 +195,7 @@ fieldset[disabled] a.btn {
 
     &:active,
     &.active,
-    .open > &.dropdown-toggle {
+    .show > &.dropdown-toggle {
       color: #fff;
       background-color: transparent;
       border-color: #fff;
