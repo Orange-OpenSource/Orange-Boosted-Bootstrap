@@ -85,7 +85,12 @@ const Navbar = (($) => {
 
       if (this._config.hideSupra) {
         $(window).on('scroll', function() {
+          if($(window).innerWidth() < 768) {
+            return
+          }
+
           var scroll = $(window).scrollTop()
+
           if(scroll > 0) {
             $(Selector.SUPRA_BAR).hide()
           } else {
