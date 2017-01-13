@@ -79,12 +79,6 @@
   }
 
   &.has-checkbox {
-    // Boosted mod
-    // for display into tables with description sr-only (reg introduce in alpha.5 whith display inline-block
-    .custom-control {
-      display: inline;
-    }
-    // end mod
     tr.selected {
       > td,
       > th {

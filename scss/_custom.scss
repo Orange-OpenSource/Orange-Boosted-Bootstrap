@@ -150,7 +150,7 @@ $enable-print-styles:       true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   .625rem; // 10px
+$spacer:   1.25rem; // 20px
 $spacer-x: $spacer;
 $spacer-y: $spacer;
 $spacers: (
@@ -159,16 +159,24 @@ $spacers: (
     y: 0
   ),
   1: (
-    x: $spacer-x,
-    y: $spacer-y
+    x: ($spacer-x * .25), // 5
+    y: ($spacer-y * .25)
   ),
   2: (
-    x: ($spacer-x * 2), // 20px
-    y: ($spacer-y * 2)  // 20px
+    x: ($spacer-x * .5), // 10
+    y: ($spacer-y * .5)
   ),
   3: (
-    x: ($spacer-x * 3), // 30px
-    y: ($spacer-y * 3) // 30px
+    x: $spacer-x, // 20
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5), // 30
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3), // 60
+    y: ($spacer-y * 3)
   )
 );
 $border-width: 2px;
@@ -691,7 +699,7 @@ $nav-tabs-link-hover-bg:                      $black;
 // Pagination
 
 $pagination-padding-x:                .8rem;
-$pagination-padding-y:                $spacer-y;
+$pagination-padding-y:                ($spacer / 2);
 $pagination-padding-x-sm:             .625rem;
 $pagination-padding-y-sm:             .375rem;
 $pagination-padding-x-lg:             1.125rem;
@@ -874,7 +882,7 @@ $modal-transition:            transform .3s ease-out !default;
 
 $alert-padding-x:             15px;
 $alert-padding-y:             15px;
-$alert-margin-bottom:         $spacer-y * 2;
+$alert-margin-bottom:         $spacer;
 $alert-border-radius:         $border-radius;
 $alert-link-font-weight:      $font-weight-bold;
 $alert-border-width:          $border-width;
@@ -898,7 +906,7 @@ $alert-danger-border:         $brand-danger;
 
 // Progress bars
 
-$progress-height:             ($spacer-y * 2);
+$progress-height:             $spacer;
 $progress-font-size:          1rem;
 $progress-bg:                 $gray-light-o;
 $progress-border-radius:      $border-radius;

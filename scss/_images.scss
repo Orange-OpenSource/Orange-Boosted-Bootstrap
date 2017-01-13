@@ -33,9 +33,7 @@
 }
 
 .figure-img {
-  // boosted mod
-  margin-bottom: $spacer-y;
-  // end mod
+  margin-bottom: ($spacer-y / 2);
   line-height: 1;
 }
 
