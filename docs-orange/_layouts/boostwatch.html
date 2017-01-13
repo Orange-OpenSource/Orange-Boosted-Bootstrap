@@ -1,22 +1,31 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
 
-<div class="bd-pageheader text-center text-sm-left" id="page_header">
-  <div class="container">
-    <h1>{{ page.title }}</h1>
-    <p class="lead">
-    </p>
-  </div>
-</div>
+    {% include nav-home.html %}
 
-<div class="container">
-    <div class="row">
+    <!-- BOOSTED MOD -->
+    <main class="container" role="main">
+      <div class="row">
         <div class="col-12 col-md-3 push-md-9 bd-sidebar">
-            {% include nav-boostwatch.html %}
+          {% include nav-boostwatch.html %}
         </div>
         <div class="col-12 col-md-9 pull-md-3 bd-content">
-            {{ content }}
+          <h1 class="bd-title" id="content">{{ page.title }}</h1>
+          {{ content }}
         </div>
-    </div>
-</div>
+      </div>
+    </main>    
+    <!-- END MOD -->
+
+    {% include footer.html %}
+  </body>
+</html>

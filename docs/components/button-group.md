@@ -29,7 +29,7 @@ Wrap a series of buttons with `.btn` in `.btn-group`.
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
 {% example html %}
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar flex-wrap" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -50,7 +50,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
 
 {% example html %}
-<div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar flex-wrap mb-3" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -63,7 +63,7 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
   </div>
 </div>
 
-<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar flex-wrap justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>

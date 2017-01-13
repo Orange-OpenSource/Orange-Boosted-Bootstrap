@@ -27,8 +27,13 @@
     display: block;
     width: 100%;
     // Boosted mod
-    height: $spacer-y; // todo: make a new var for this
+    font-size: $font-size-sm;
+    line-height: ($progress-height / 2);
     // end mod
+  }
+  // Boosted mod
+  .progress-bar {
+    height: ($progress-height / 2);
   }
 }
 
