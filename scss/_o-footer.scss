@@ -44,6 +44,14 @@
         color: $gray-lighter-o;
       }
     }
+
+    .navbar-nav {
+      flex-direction: row;
+
+      li + li {
+        margin-left: 1.25rem;
+      }
+    }
   }
 
   .o-footer-body {
@@ -89,14 +97,14 @@
   }
 }
 
-@media (min-width: 768px) {
-  .o-footer .navbar-nav > li {
-    float: left;
+// @media (min-width: 768px) {
+//   .o-footer .navbar-nav > li {
+//     float: left;
 
-    a {
-      padding: .625rem;
-      margin-top: 1.75rem;
-      margin-bottom: 0;
-    }
-  }
-}
+//     a {
+//       padding: .625rem;
+//       margin-top: 1.75rem;
+//       margin-bottom: 0;
+//     }
+//   }
+// }
