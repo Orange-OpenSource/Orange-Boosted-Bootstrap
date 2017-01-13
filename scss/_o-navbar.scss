@@ -20,7 +20,8 @@
     background: #000;
   }
 
-  &.navbar-toggleable > .container {
+  &.navbar-toggleable > .container,
+  &.navbar-toggleable-sm > .container {
     align-items: flex-end;
   }
 
@@ -39,33 +40,17 @@
     line-height: 1;
 
     img {
-      float: left;
       width: auto;
       height: 3.125rem;
       margin-top: 0;
       font-size: 1rem;
       font-weight: bold;
-      line-height: 5.25rem;
       color: $brand-primary;
     }
-
-    // > span {
-    //   display: inline-block;
-    //   margin-left: .625rem;
-    //   color: #fff;
-    // }
-
-    // &:hover > span {
-    //   color: $brand-primary;
-
-    //   .text-primary {
-    //     color: #fff !important;
-    //   }
-    // }
   }
 
-  .navbar-nav {
-    align-items: flex-end;
+  .navbar-collapse {
+    align-self: flex-end;
   }
 
   .navbar-nav + .navbar-nav {
@@ -280,14 +265,16 @@
       }
     }
 
-    &.navbar-toggleable > .container {
+    &.navbar-toggleable > .container,
+    &.navbar-toggleable-sm > .container {
       display: block;
       width: 100%;
       padding-top: .625rem;
       margin: 0;
     }
 
-    &.navbar-toggleable {
+    &.navbar-toggleable,
+    &.navbar-toggleable-sm {
 
       .nav-item {
         padding: 1rem 0;
