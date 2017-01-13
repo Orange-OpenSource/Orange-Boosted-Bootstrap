@@ -121,9 +121,9 @@
     }
 
     .dropdown-menu {
-      left: auto;
-      right: -.375rem;
       top: 1.5rem;
+      right: -.375rem;
+      left: auto;
     }
   }
 
@@ -356,7 +356,7 @@
               margin-right: 1.25rem;
             }
 
-            .dropdown-menu .dropdown-item{
+            .dropdown-menu .dropdown-item {
               color: #fff;
               background-color: #000;
               border-top: 1px solid $gray-dark;

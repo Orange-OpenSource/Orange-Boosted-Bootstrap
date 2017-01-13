@@ -18,13 +18,13 @@
     background-color: $active-background;
     border-color: $active-border;
   }
-
   &:focus,
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
       box-shadow: $btn-box-shadow, 0 0 0 2px rgba($border, .5);
     } @else {
+      // Boosted mod disable box-shadow
       // box-shadow: 0 0 0 2px rgba($border, .5);
     }
   }
@@ -61,6 +61,7 @@
 
   &:focus,
   &.focus {
+    // Boosted mod disable box-shadow
     // box-shadow: 0 0 0 2px rgba($color, .5);
   }
 
