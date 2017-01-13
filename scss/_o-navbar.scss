@@ -20,8 +20,7 @@
     background: #000;
   }
 
-  &.navbar-toggleable > .container,
-  &.navbar-toggleable-sm > .container {
+  > .container {
     align-items: flex-end;
   }
 
@@ -108,17 +107,23 @@
 
       position: relative;
       display: block;
-      padding-right: 1.5rem;
       line-height: $btn-line-height;
       color: #fff;
 
       &::after {
         top: .3125rem;
+        color: #fff;
       }
 
       .caret {
         position: absolute;
       }
+    }
+
+    .dropdown-menu {
+      left: auto;
+      right: -.375rem;
+      top: 1.5rem;
     }
   }
 
@@ -210,134 +215,155 @@
   }
 }
 
-@include media-breakpoint-down(xs) {
-  .navbar,
-  .navbar.minimized {
-    min-height: $navbar-height-sm;
+.navbar-toggleable {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    &.supra {
-      display: none;
-    }
+    &#{$infix} {
+      @include media-breakpoint-down($breakpoint) {
+        &,
+        &.minimized {
+          min-height: $navbar-height-sm;
 
-    .navbar-toggler {
-      position: absolute;
-      top: .265625rem;
-      right: .625rem;
-      z-index: 1000;
-      padding: .625rem .75rem;
-      font-size: 1.25rem;
-      color: $navbar-inverse-color;
-      background-color: transparent;
-      background-image: none;
-      border: 0;
+          &.supra {
+            display: none;
+          }
 
-      @include hover-focus {
-        color: #000;
-        background-color: #fff;
-      }
+          .navbar-brand {
+            align-self: flex-start;
+            margin-left: .625rem;
+            font-size: $font-size-sm;
 
-      &:active {
-        color: #fff;
-        background-color: $brand-primary;
-      }
+            img {
+              height: 1.875rem;
+            }
+          }
 
-      &:focus {
-        outline: 0;
-      }
-    }
+          > .container {
+            display: block;
+            width: 100%;
+            padding-top: .625rem;
+            margin: 0;
+          }
 
-    .navbar-brand {
-      align-self: flex-start;
-      margin-left: .625rem;
-      font-size: $font-size-sm;
 
-      img {
-        height: 1.875rem;
-      }
-    }
 
-    .navbar-collapse {
-      width: 100%;
-      margin-top: .625rem;
+          .navbar-collapse {
+            width: 100%;
+            margin-top: .625rem;
 
-      .navbar-nav {
-        align-items: stretch;
-      }
-    }
+            .navbar-nav {
+              align-items: stretch;
+            }
+          }
 
-    &.navbar-toggleable > .container,
-    &.navbar-toggleable-sm > .container {
-      display: block;
-      width: 100%;
-      padding-top: .625rem;
-      margin: 0;
-    }
+          .navbar-toggler {
+            position: absolute;
+            top: .265625rem;
+            right: .625rem;
+            z-index: 1000;
+            padding: .625rem .75rem;
+            font-size: 1.25rem;
+            color: $navbar-inverse-color;
+            background-color: transparent;
+            background-image: none;
+            border: 0;
 
-    &.navbar-toggleable,
-    &.navbar-toggleable-sm {
+            @include hover-focus {
+              color: #000;
+              background-color: #fff;
+            }
 
-      .nav-item {
-        padding: 1rem 0;
-        padding-left: .625rem;
-        margin-left: 0;
-        font-size: $font-size-h5;
-        line-height: 1;
-        border-top: 1px solid $gray-dark;
+            &:active {
+              color: #fff;
+              background-color: $brand-primary;
+            }
 
-        .nav-link,
-        .dropdown-toggle,
-        .nav-item-cdu {
-          margin-top: 0;
-        }
+            &:focus {
+              outline: 0;
+            }
+          }
 
-        .nav-link::before {
-          float: right;
-          margin-right: 1.25rem;
-          font-family: icon-orange;
-          font-size: $font-size-base;
-          font-weight: normal;
-          color: #fff;
-          content: "\e93e";
-        }
+          .nav-item {
+            padding: 1rem 0;
+            padding-left: .625rem;
+            font-size: $font-size-h5;
+            line-height: 1;
+            border-top: 1px solid $gray-dark;
 
-        .nav-link.active::before {
-          display: none;
-        }
+            &,
+            &:first-child,
+            &+ .nav-item {
+              margin-left: 0;
+            }
 
-        .nav-link.icon {
-          padding: .625rem;
-          margin-top: 0;
-        }
-      }
+            .nav-link,
+            .dropdown-toggle,
+            .nav-item-cdu {
+              margin-top: 0;
+            }
 
-      .nav-item > .nav-link,
-      &.nav-link {
-        @include focus {
-          outline: 0;
-        }
+            .nav-link::before {
+              float: right;
+              margin-right: 1.25rem;
+              font-family: icon-orange;
+              font-size: $font-size-base;
+              font-weight: normal;
+              color: #fff;
+              content: "\e93e";
+            }
 
-        padding: 0;
-        margin-top: 0;
+            .nav-link.active::before {
+              display: none;
+            }
 
-        &.icon {
-          padding: .78125rem .625rem;
-          margin-top: 0;
-        }
-      }
+            .nav-link.icon {
+              padding: .625rem;
+              margin-top: 0;
+            }
+          }
 
-      .nav-item.folded {
-        .nav-link::before {
-          float: none;
-          padding-right: 2rem;
-          margin-right: 0;
-          font-family: icon-orange;
-          font-size: $font-size-h5;
-          font-weight: normal;
-          color: #fff;
-          content: "\e93f";
+          .nav-item > .nav-link {
+            @include focus {
+              outline: 0;
+            }
+
+            padding: 0;
+            margin-top: 0;
+
+            &.icon {
+              padding: .78125rem .625rem;
+              margin-top: 0;
+            }
+          }
+
+          .nav-item.dropdown {
+            padding: 0;
+
+            .dropdown-toggle,
+            .dropdown-menu .dropdown-item {
+              padding: 1rem 0 1rem .625rem;
+            }
+
+            .dropdown-toggle:focus {
+              outline: 0;
+            }
+
+            .dropdown-toggle::after {
+              float: right;
+              margin-top: .5rem;
+              margin-right: 1.25rem;
+            }
+
+            .dropdown-menu .dropdown-item{
+              color: #fff;
+              background-color: #000;
+              border-top: 1px solid $gray-dark;
+            }
+          }
         }
       }
     }
   }
-
 }
