@@ -239,7 +239,7 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
 
 <div class="bd-example">
-  <div class="btn-toolbar" role="toolbar">
+  <div class="btn-toolbar flex-wrap" role="toolbar">
     <div class="btn-group">
       <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Large button
@@ -266,7 +266,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
       </div>
     </div><!-- /btn-group -->
   </div><!-- /btn-toolbar -->
-  <div class="btn-toolbar" role="toolbar">
+  <div class="btn-toolbar flex-wrap" role="toolbar">
     <div class="btn-group">
       <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Small button
