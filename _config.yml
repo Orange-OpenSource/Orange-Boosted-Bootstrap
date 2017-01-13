@@ -74,13 +74,13 @@ social_logo_path: /assets/brand/bootstrap-social-logo.png
 social_image_path: /assets/brand/bootstrap-social.png
 
 # Custom vars
-current_version:  4.0.0-alpha.5
+current_version:  4.0.0-alpha.6
 repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
 slack:            https://bootstrap-slack.herokuapp.com
 
 download:
-  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.5.zip
-  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.5/boosted-4.0.0-alpha.5-dist.zip
+  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.6.zip
+  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.5/boosted-4.0.0-alpha.6-dist.zip
 
 blog:             https://blog.getbootstrap.com
 expo:             https://expo.getbootstrap.com

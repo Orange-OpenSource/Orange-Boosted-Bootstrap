@@ -28,6 +28,10 @@
     width: 100%;
     // Boosted mod
     height: $spacer-y; // todo: make a new var for this
+    // end mod
+  }
+}
+
 // Striped
 .progress-bar-striped {
   @include gradient-striped();

@@ -493,16 +493,6 @@ $form-check-input-margin-x: .25rem !default;
 
 $form-check-inline-margin-x: .75rem !default;
 
-$form-text-margin-top:     ($spacer * .5);
-$form-feedback-margin-top: $form-text-margin-top !default;
-
-$form-check-margin-bottom:  ($spacer * 1.5);
-$form-check-input-gutter:   1.25rem !default;
-$form-check-input-margin-y: .25rem !default;
-$form-check-input-margin-x: .25rem !default;
-
-$form-check-inline-margin-x: .75rem !default;
-
 $form-group-margin-bottom:       ($spacer * 2);
 
 $input-group-addon-bg:           $white;
@@ -986,7 +976,7 @@ $breadcrumb-line-height:        $line-height-sm;
 $carousel-control-color:                      #000;
 $carousel-control-width:                      1.875rem;
 $carousel-control-opacity:                    .5;
-$carousel-indicator-height:                   3px !default;
+
 $carousel-indicator-width:                    30px !default;
 $carousel-indicator-height:                   3px !default;
 $carousel-indicator-spacer:                   3px !default;

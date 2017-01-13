@@ -2,7 +2,7 @@
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.4): o-megamenu.js
+ * Boosted (v4.0.0-alpha.6): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ const MegaMenu = (($) => {
    */
 
   const NAME                = 'megamenu'
-  const VERSION             = '4.0.0-alpha.4'
+  const VERSION             = '4.0.0-alpha.6'
   const DATA_KEY            = 'bs.megamenu'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
 

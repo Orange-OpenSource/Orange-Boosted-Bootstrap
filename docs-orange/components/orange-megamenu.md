@@ -76,7 +76,7 @@ Megamenu has a footer section where additional links can be added and a button t
                     <a href="#">Top up</a>
                 </div>
                 <div class="col-1 hidden-xs-down">
-                    <a class="float-right" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete" aria-hidden="true"></span></a>
+                    <a class="float-right" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseExample" title="close shop menu"><span class="icon-delete" aria-hidden="true"></span></a>
                 </div>
             </div>
         </div>
