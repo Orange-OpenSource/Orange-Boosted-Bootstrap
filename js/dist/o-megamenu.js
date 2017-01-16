@@ -8,7 +8,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.4): o-megamenu.js
+ * Boosted (v4.0.0-alpha.6): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -22,7 +22,7 @@ var MegaMenu = function ($) {
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.0.0-alpha.4';
+  var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
 

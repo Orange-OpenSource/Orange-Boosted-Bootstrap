@@ -4,7 +4,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.4): o-switch.js
+ * Boosted (v4.0.0-alpha.6): o-switch.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ var Switch = function ($) {
    */
 
   var NAME = 'switch';
-  var VERSION = '4.0.0-alpha.4';
+  var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.switch';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';

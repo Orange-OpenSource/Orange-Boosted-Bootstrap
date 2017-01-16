@@ -6,7 +6,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.5): collapse.js
+ * Bootstrap (v4.0.0-alpha.6): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ var Collapse = function ($) {
    */
 
   var NAME = 'collapse';
-  var VERSION = '4.0.0-alpha.5';
+  var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.collapse';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -46,7 +46,7 @@ var Collapse = function ($) {
   };
 
   var ClassName = {
-    IN: 'in',
+    SHOW: 'show',
     COLLAPSE: 'collapse',
     COLLAPSING: 'collapsing',
     COLLAPSED: 'collapsed'
@@ -58,7 +58,7 @@ var Collapse = function ($) {
   };
 
   var Selector = {
-    ACTIVES: '.card:not(.multi) > .in, .card:not(.multi) > .collapsing', // boosted mod
+    ACTIVES: '.card:not(.multi) > .show, .card:not(.multi) > .collapsing', // boosted mod
     DATA_TOGGLE: '[data-toggle="collapse"]'
   };
 
@@ -93,7 +93,7 @@ var Collapse = function ($) {
     // public
 
     Collapse.prototype.toggle = function toggle() {
-      if ($(this._element).hasClass(ClassName.IN)) {
+      if ($(this._element).hasClass(ClassName.SHOW)) {
         this.hide();
       } else {
         this.show();
@@ -103,7 +103,11 @@ var Collapse = function ($) {
     Collapse.prototype.show = function show() {
       var _this = this;
 
-      if (this._isTransitioning || $(this._element).hasClass(ClassName.IN)) {
+      if (this._isTransitioning) {
+        throw new Error('Collapse is transitioning');
+      }
+
+      if ($(this._element).hasClass(ClassName.SHOW)) {
         return;
       }
 
@@ -111,7 +115,7 @@ var Collapse = function ($) {
       var activesData = void 0;
 
       if (this._parent) {
-        actives = $.makeArray($(Selector.ACTIVES));
+        actives = $.makeArray($(this._parent).find(Selector.ACTIVES));
         if (!actives.length) {
           actives = null;
         }
@@ -151,7 +155,7 @@ var Collapse = function ($) {
       this.setTransitioning(true);
 
       var complete = function complete() {
-        $(_this._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.IN);
+        $(_this._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.SHOW);
 
         _this._element.style[dimension] = '';
 
@@ -176,7 +180,11 @@ var Collapse = function ($) {
     Collapse.prototype.hide = function hide() {
       var _this2 = this;
 
-      if (this._isTransitioning || !$(this._element).hasClass(ClassName.IN)) {
+      if (this._isTransitioning) {
+        throw new Error('Collapse is transitioning');
+      }
+
+      if (!$(this._element).hasClass(ClassName.SHOW)) {
         return;
       }
 
@@ -193,7 +201,7 @@ var Collapse = function ($) {
 
       Util.reflow(this._element);
 
-      $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.IN);
+      $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
 
       this._element.setAttribute('aria-expanded', false);
 
@@ -261,7 +269,7 @@ var Collapse = function ($) {
 
     Collapse.prototype._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
       if (element) {
-        var isOpen = $(element).hasClass(ClassName.IN);
+        var isOpen = $(element).hasClass(ClassName.SHOW);
         element.setAttribute('aria-expanded', isOpen);
 
         if (triggerArray.length) {
@@ -353,22 +361,22 @@ var Collapse = function ($) {
 
   $(function () {
     // local navigation
-    $('.o-nav-local .nav-inline.collapse .nav-link').on('click', function (event) {
+    $('.o-nav-local .nav.collapse .nav-link').on('click', function (event) {
       $(event.currentTarget).parent().parent().prev('.local-select').text($(event.currentTarget).text());
     });
 
-    $('.o-nav-local .nav-inline.collapse').on('shown.bs.collapse', function (event) {
+    $('.o-nav-local .nav.collapse').on('shown.bs.collapse', function (event) {
       $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus');
     });
 
     $(document).ready(function () {
       $('.o-nav-local .local-select').each(function () {
-        $(this).text($(this).next('.nav-inline.collapse').find('.nav-item:first-child .nav-link').text());
+        $(this).text($(this).next('.nav.collapse').find('.nav-item:first-child .nav-link').text());
       });
     });
 
     $(document).on('click', function () {
-      Collapse._jQueryInterface.call($('.o-nav-local .collapse.in'), 'hide');
+      Collapse._jQueryInterface.call($('.o-nav-local .collapse.show'), 'hide');
     });
   });
 

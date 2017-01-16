@@ -1,3 +1,69 @@
+<a name"4.0.0-alpha.6"></a>
+### 4.0.0-alpha.6 (2017-01-16)
+
+
+#### Bug Fixes
+
+* **accordion:**
+  * update accordion classes following alpha.6, and merge boosted specific documenta ([8de10d34](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8de10d34fae8ca01f87e68a42a4d8d63327c13a9))
+  * update accordion classes following alpha.6, and merge boosted specific documenta ([a151643e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a151643e941a0ce5213ceafa9ad640a2d26bb250))
+* **button:**
+  * ensure that link within a paragraph with .btn class are not underline ([b81d028a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b81d028ab1346e7a862f5dcdbe09efa2264c2fee))
+  * ensure that link within a paragraph with .btn class are not underline ([7dac3604](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dac36047bd1196dea063b15f21df8ec63182fd5))
+* **buttons:**
+  * remove buttons focus shadow ([823809b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/823809b240b9a98ad91ee91b8b614968d1d727ab))
+  * remove buttons focus shadow ([658c0526](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/658c0526949835f8655ceac0ce773adb820675cf))
+* **component:**
+  * buttons ([3f3fe1e9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f3fe1e9736993cba8ee0cd979147f95fc8b6e98))
+  * footer ([8a3263d3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8a3263d3c832e53e910d7518d7fc2ecbd4979f05))
+  * tables ([e05a5ea5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e05a5ea5136495bab81869e62be1bd60294c0a82))
+  * tags ([dc0bdb8b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dc0bdb8b22e6b87ab5fbf7437d56cc30dc541985))
+  * navbar ([b4a97940](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b4a97940b2174edc6804d411c08fe846d31edb57))
+  * o-list ([f027f6db](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f027f6db6e152dad28437d3f7a3d167b71bd3905))
+  * navbar ([5c5ca055](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5c5ca0552c5b1163c9731548f91127bccf311740))
+  * buttons ([dff90f86](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dff90f86060d05835b10f130e27fce8327640ef1))
+  * forms ([f66bd126](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f66bd12679ac70bad9036a34b2d73f1735432cd6))
+  * scrollspy ([9a629857](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9a629857332545e7c2dd97b4709a6a131978d079))
+  * local navigation ([b5791660](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b57916606bb910c5f2aae5da9c456416815913a8))
+  * carousel ([6802892c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6802892c2b13f80b089c772c123de89a91de1ed1))
+  * carousel ([174a1d6c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/174a1d6cc21e08b331c65ba57cefde375941cbfb))
+  * navbar ([ae9bd644](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ae9bd644e50344db2121dd6986cf15fdde291e76))
+  * buttons ([64a03317](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64a03317e408dab0fde2f7c7b11346662d8ae27f))
+  * forms ([e7cbaa95](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e7cbaa9538d1cdd3e1b91c07467404aefdd48f53))
+  * scrollspy ([51b7195a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/51b7195a828fe9cf9c79ec6c587648c23dc68751))
+  * local navigation ([9bb1a928](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9bb1a928dea0abaed2e7e645c632c9f7190efd23))
+  * carousel ([5ef3648b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ef3648ba40484fafc851ac3a3eafa9f79a23a9b))
+  * carousel ([47291968](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/47291968f090b47094ee57a40b79560ab1d7b53a))
+  * navbar ([6cc35f38](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6cc35f38861cdd3cbf2c278ab1a726fac55e80ff))
+* **custom-select:** update custom select size to match all other form components ([0ac2166a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0ac2166a319b77fd7618d6d26bd2c6d2f445d20d))
+* **dropdown:**
+  * fix dropdown-menu overlay ([dd5604e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dd5604e3e9073b38cee8be5c14d0272e6539b91b))
+  * remove margin on nav-divider ([53f81fe8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/53f81fe867c2bc71660eb2c51f83b3b3ec653255))
+  * update dropdown scss following alpha.6 merge ([15ff9db6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/15ff9db66067b477a88496746e2b65b5750622e9))
+  * following alpha.6 update, fix dropdown item padding ([b600b2ad](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b600b2ad878690d160466f14a763d8738bba2942))
+  * fix dropdown-menu overlay ([db842938](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/db84293820cd1d5999366de83c9eaccaf3367806))
+  * remove margin on nav-divider ([1af1e526](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1af1e52683e60bdf98ecbe91e289b6843fd68c87))
+  * update dropdown scss following alpha.6 merge ([6b57ac52](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6b57ac52f176e3962077881b37a642b5a7f05137))
+  * following alpha.6 update, fix dropdown item padding ([7ef49b86](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7ef49b867fcea2a01b9dd2dae23c5fc4b1dd8b4d))
+* **forms:** update the spacing between two form groups ([3f0eaedc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f0eaedc2cbe8aa8054741be6e01b9170fd94bab))
+* **grid:**
+  * Fix merge error onto the grid padding ([d74821ad](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d74821ad1d71b6e02a5828caf62c98aee6a76af5))
+  * Fix merge error onto the grid padding ([ad6b24ed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ad6b24ed055ac0bb5173b2fb7078558249ed1254))
+* **links:**
+  * put back the underline option for link inside a paragraph (lost during merge) ([a35f9478](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a35f9478535c4e5ca7216676689682412f113f82))
+  * put back the underline option for link inside a paragraph (lost during merge) ([8cac5f22](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8cac5f223eae0adcbcb2ca32d3d17cd5c094bc8c))
+* **navbar:**
+  * fix documentation duplicate ID errors ([c62e5553](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c62e5553668b7f9fff23b882a6daf08a1057d073))
+  * fix documentation duplicate ID errors ([8f40a2d1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8f40a2d1b197a4f50caeefc2b24a84a4a2a55260))
+* **pagination:**
+  * following alpha.6 merge fix pagination Boosted custom definitions and sizes ([9a0bf375](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9a0bf3755804f500efb046a66af8ae5b24768b14))
+  * following alpha.6 merge fix pagination Boosted custom definitions and sizes ([cbd6c70f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cbd6c70f3be72c0d7cb0aa652bfe79ad6e88f6ca))
+* **progress:** update progressbar font-size new var in bootstrap Alpha.6 impact on the progress ([406f8b31](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/406f8b31118713becc32f9430a18f64efd830d1f))
+* **scroll-up:**
+  * replace fadein and fadeout effect by hide and show classic function, becaus jque ([83bfae46](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/83bfae4651e3673b0accb8f6eb805b50491e3669))
+  * replace fadein and fadeout effect by hide and show classic function, becaus jque ([1bc462ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1bc462ce977c03f8118e89859d9e6351857a68a1))
+
+
 <a name"4.0.0-alpha.5"></a>
 ### 4.0.0-alpha.5 (2017-01-12)
 

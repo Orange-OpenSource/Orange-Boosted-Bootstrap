@@ -6,7 +6,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.4): o-navbar.js
+ * Boosted (v4.0.0-alpha.6): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ var Navbar = function ($) {
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.0.0-alpha.4';
+  var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   // boosted mod
@@ -87,7 +87,12 @@ var Navbar = function ($) {
 
       if (this._config.hideSupra) {
         $(window).on('scroll', function () {
+          if ($(window).innerWidth() < 768) {
+            return;
+          }
+
           var scroll = $(window).scrollTop();
+
           if (scroll > 0) {
             $(Selector.SUPRA_BAR).hide();
           } else {

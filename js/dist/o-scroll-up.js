@@ -4,7 +4,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.4): o-scroll-up.js
+ * Boosted (v4.0.0-alpha.6): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ var ScrollUp = function ($) {
    */
 
   var NAME = 'scrollup';
-  var VERSION = '4.0.0-alpha.4';
+  var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -81,9 +81,9 @@ var ScrollUp = function ($) {
 
     ScrollUp.prototype._process = function _process() {
       if ($(this._scrollElement).scrollTop() > $(this._scrollElement).height() * 1.0) {
-        $(Selector.SCROLL_TOP).fadeIn();
+        $(Selector.SCROLL_TOP).show();
       } else {
-        $(Selector.SCROLL_TOP).fadeOut();
+        $(Selector.SCROLL_TOP).hide();
       }
     };
 
