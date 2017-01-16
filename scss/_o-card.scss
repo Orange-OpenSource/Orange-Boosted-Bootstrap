@@ -6,21 +6,23 @@
   background-color: #000;
   border-color: #000;
 
-  img {
+  .card-img-top {
     width: 100%;
     height: auto;
+    margin-bottom: 1.875rem;
   }
 
   .card-block {
     position: absolute;
     bottom: 0;
     width: 100%;
-    min-height: 4.75rem;
+    min-height: 3.25rem;
     padding: .625rem .75rem;
     overflow: hidden;
 
     .card-title {
       margin-bottom: 0;
+      font-size: $font-size-lg;
       line-height: 1;
     }
   }
@@ -34,70 +36,13 @@
 
 }
 
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-down(md) {
   .o-card.card {
-    height: 8.875rem;
 
     .card-block {
-      min-height: 3.75rem;
-
       .card-title {
-        font-size: 1.125rem;
+        font-size: 1rem;
       }
-    }
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .o-card.card {
-    height: 12.1875rem;
-
-    .card-block {
-      min-height: 3.75rem;
-
-      .card-title {
-        font-size: 1.125rem;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .o-card.card {
-    height: 8.875rem;
-
-    .card-block {
-      min-height: 3.75rem;
-    }
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .o-card.card {
-    height: 12.1875rem;
-
-    .card-block {
-      min-height: 4.75rem;
-    }
-  }
-}
-
-@include media-breakpoint-up(xl) {
-  .o-card.card {
-    height: 13.4375rem;
-
-    .card-block {
-      min-height: 4.75rem;
-    }
-  }
-}
-
-@include media-breakpoint-up(xxl) {
-  .o-card.card {
-    height: 15rem;
-
-    .card-block {
-      min-height: 4.75rem;
     }
   }
 }

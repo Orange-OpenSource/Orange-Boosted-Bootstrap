@@ -95,6 +95,10 @@
       }
     }
 
+    &.show .dropdown-toggle::after {
+      transform: rotateZ(180deg);
+    }
+
     .dropdown-toggle {
       @include hover-focus {
         color: $brand-primary;
@@ -121,8 +125,8 @@
     }
 
     .dropdown-menu {
-      top: 1.5rem;
-      right: -.375rem;
+      top: 2rem;
+      right: -.75rem;
       left: auto;
     }
   }
@@ -345,6 +349,10 @@
 
           .nav-item.dropdown .dropdown-toggle:focus {
             outline: 0;
+          }
+
+          .nav-item.dropdown .dropdown-toggle::before {
+            display: none;
           }
 
           .nav-item.dropdown .dropdown-toggle::after {
