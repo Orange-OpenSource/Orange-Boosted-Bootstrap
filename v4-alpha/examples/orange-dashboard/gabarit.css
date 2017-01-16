@@ -24,7 +24,8 @@
 }
 #content .well{
 	background-image: none;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	border-radius: 0;
 	background-color: #EEEEEE;
 	border-color: #EEEEEE;
