@@ -2,7 +2,6 @@
 <html lang="en" dir="rtl">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>my dashboard</title>
 
@@ -62,33 +61,25 @@
 
 
 		<header role="banner">
-            <nav class="navbar navbar-dark">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-                <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-toggleable-xs" id="bs-example-navbar-collapse-1">
-                    <a class="navbar-brand" href="#">
-						<img id="orange_logo" src="images/logo-orange.png" alt="Homepage"/>
-						<span id="app_name">APP&NAME</span>
-					</a>
-
-                    <ul class="nav navbar-nav">
+            <nav class="navbar navbar-inverse navbar-toggleable-sm">
+			<div class="container">
+				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#orange-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-menu"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+				<div class="navbar-collapse collapse" id="orange-navbar-collapse">
+                    <ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link" href="#" title="open the news menu">dashboard</a></li>
 						<li class="nav-item"><a class="nav-link" href="#" title="open the news menu">manage</a></li>
 						<li class="nav-item"><a class="nav-link" href="#" title="open the news menu">parameters</a></li>
 						<li class="nav-item" id="id_for_cdu_link"></li>
 					</ul>
-					<ul class="nav navbar-nav float-md-right">
+					<ul class="navbar-nav">
 						<li class="nav-item dropdown" role="presentation">
-							<a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">
+							<a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown" role="button">
 								<span class="icon-international-globe" aria-hidden="true"></span>
-								<span class="hidden-xs hidden-sm">&nbsp;language</span>&nbsp;<b class="caret" aria-hidden="true"></b>
+								<span class="hidden-xs hidden-sm">&nbsp;language</span>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">français</a></li>
@@ -96,12 +87,11 @@
 							</ul>
 						</li>
 						<li class="nav-item dropdown" role="presentation">
-							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button">
 								<span class="icon-avatar" aria-hidden="true"></span>
 								<span class="hidden-xs hidden-sm">&nbsp;hello
 									<span class="orange">admin</span>&nbsp;
-								</span><b class="caret" aria-hidden="true"></b>
-
+								</span>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">logout</a></li>
@@ -392,10 +382,12 @@
 	</footer>
 
 
-		<!-- Placed at the end of the document so the pages load faster -->
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../assets/js/vendor/tether.min.js"></script>
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="../../dist/js/boosted.js"></script>
 	<script>
@@ -439,7 +431,7 @@
 			});
 		}
 	</script>
-	<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+	<!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
 
 	</body>
 </html>

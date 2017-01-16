@@ -2,7 +2,6 @@
 <html lang="en" dir="rtl">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>news home</title>
     <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
@@ -37,14 +36,14 @@
 		</div>
 
         <header role="banner">
-            <nav class="navbar navbar-dark supra">
+            <nav class="navbar navbar-inverse navbar-toggleable-sm supra">
                 <div class="container">
-                    <ul class="nav navbar-nav">
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
                     </ul>
-                    <ul class="nav navbar-nav float-xs-right">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                              <a href="#" class="nav-link icon">
                                 <span class="sr-only">basket</span>
@@ -58,7 +57,7 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">EN</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">EN</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a class="dropdown-item" href="#">FR</a></li>
                                 <li><a class="dropdown-item" href="#">SP</a></li>
@@ -68,21 +67,23 @@
                 </div>
             </nav>
 
-            <nav class="navbar navbar-dark">
-                <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                    <span class="sr-only">toggle navigation</span>
-                    <span class="icon-menu"></span>
-                </button>
-                <div class="container" >
+            <nav class="navbar navbar-inverse navbar-toggleable-sm">
+                <div class="container">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+						<span class="sr-only">toggle navigation</span>
+						<span class="icon-menu"></span>
+					</button>
                     <a class="navbar-brand"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-                    <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
-                        <li class="nav-item"><a class="nav-link" href="#collapseDiscover" data-parent="#collapsingNavbar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDiscover" title="open discover menu">Discover</a></li>
-                        <li class="nav-item"><a class="nav-link" data-parent="#collapsingNavbar" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="open shop menu">Shop</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
-                        <li class="nav-item" id="id_li_for_cdu"></li>
-                    </ul>
-                    <!--<ul class="nav navbar-nav float-xs-right">
+                    <div class="navbar-collapse collapse" id="collapsingNavbar">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link" href="#collapseDiscover" data-parent="#collapsingNavbar" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDiscover" title="open discover menu">Discover</a></li>
+							<li class="nav-item"><a class="nav-link" data-parent="#collapsingNavbar" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="open shop menu">Shop</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+							<li class="nav-item" id="id_li_for_cdu"></li>
+						</ul>
+                    </div>
+					<!--<ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="#" class="nav-link icon">
                                 <span class="sr-only">open basket</span>
@@ -123,31 +124,31 @@
                 <div class="container">
                     <h2 role="presentation" id="menu_title_discover"><a aria-hidden="true" href="#">Home Discover</a></h2>
                     <div class="row">
-                        <div class="o-frame-wrapper col-xs-6 col-sm-6 col-md-3">
+                        <div class="o-frame-wrapper col-6 col-sm-6 col-md-3">
                             <a href="#" class="o-frame o-frame-fun">
                                 <p class="o-frame-text">Fun</p>
                             </a>
                         </div>
-                        <div class="o-frame-wrapper col-xs-6 col-sm-6 col-md-3">
+                        <div class="o-frame-wrapper col-6 col-sm-6 col-md-3">
                             <a href="#" class="o-frame o-frame-money">
                                 <p class="o-frame-text">Money</p>
                             </a>
                         </div>
-                        <div class="o-frame-wrapper col-xs-6 col-sm-6 col-md-3">
+                        <div class="o-frame-wrapper col-6 col-sm-6 col-md-3">
                             <a href="#" class="o-frame o-frame-care">
                                 <p class="o-frame-text">Care</p>
                             </a>
                         </div>
-                        <div class="o-frame-wrapper col-xs-6 col-sm-6 col-md-3">
+                        <div class="o-frame-wrapper col-6 col-sm-6 col-md-3">
                             <a href="#" class="o-frame o-frame-tariff">
                                 <p class="o-frame-text">Tariff</p>
                             </a>
                         </div>
                     </div>
                     <div class="row footer">
-                        <div class="float-md-right hidden-xs-down">
-                            <a data-toggle="collapse" href="#collapseDiscover" aria-expanded="false" aria-controls="collapseDiscover" title="close discover menu"><span class="icon-delete"></span></a>
-                        </div>
+                      <div class="col-12 hidden-xs-down">
+                        <a class="float-right" data-toggle="collapse" href="#collapseDiscover" aria-expanded="false" aria-controls="collapseShop" title="close discover menu"><span class="icon-delete" aria-hidden="true"></span></a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -158,7 +159,7 @@
                 <div class="container">
                     <h2 role="presentation" id="menu_title2"><a aria-hidden="true" href="#">Home Shop</a></h2>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="col-12 col-sm-12 col-md-3">
                             <h3 id="list_title_1"><a href="#">Internet</a></h3>
                             <ul aria-labelledby="list_title_1" role="menu">
                                 <li role="menuitem"><a href="#">iPhone 6</a></li>
@@ -168,7 +169,7 @@
                                 <li role="menuitem"><a href="#">Coming soon</a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="col-12 col-sm-12 col-md-3">
                             <h3 id="list_title_2"><a href="#">Mobile</a></h3>
                             <ul aria-labelledby="list_title_2" role="menu">
                                 <li role="menuitem"><a href="#">Phones </a></li>
@@ -181,13 +182,13 @@
                         </div>
                     </div>
                     <div class="row footer">
-                        <div class="float-md-left">
-                            <a href="#">Promotions</a>
-                            <a href="#">Top up</a>
-                        </div>
-                        <div class="float-md-right hidden-xs-down">
-                            <a data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete"></span></a>
-                        </div>
+                      <div class="col-12 col-sm-11">
+                        <a href="#">Promotions</a>
+                        <a href="#">Top up</a>
+                      </div>
+                      <div class="col-1 hidden-xs-down">
+                        <a class="float-right" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete" aria-hidden="true"></span></a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -202,7 +203,7 @@
 				<hr aria-hidden="true">
 				<nav class="container">
 					<a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#collapseExample" aria-haspopup="true">target</a>
-					<ul class="nav nav-inline collapse" id="collapseExample">
+					<ul class="nav collapse" id="collapseExample">
 						<li class="nav-item"><a class="nav-link active" href="#">News home</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">World</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
@@ -219,7 +220,7 @@
 
 		<section class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-8">
+				<div class="col-12 col-sm-12 col-md-8">
 					<h2 id="newsLeaderTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit<small>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</small></h2>
 					<div id="newsLeader">
 						<a title="Bored of lorem ipsum?" href="" target="_self" data-toggle="modal" data-target="#myModal">
@@ -303,8 +304,7 @@
 						</ul>
 						<div>
 							<ul class="pagination">
-								<li class="page-item"><a class="page-link disabled">
-                                    <span aria-hidden="true" class="icon-arrow-previous"></span>
+								<li class="page-item"><a class="page-link disabled">                                    
                                     <span class="sr-only">Previous</span>
                                 </a></li>
 								<li class="page-item"><a class="page-link active" href="#" aria-label="Current page 1">1</a></li>
@@ -312,8 +312,7 @@
 								<li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
 								<li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
 								<li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
-								<li class="page-item"><a class="page-link" href="#" aria-label="Go to next page">
-                                    <span aria-hidden="true" class="icon-arrow-next"></span>
+								<li class="page-item"><a class="page-link" href="#" aria-label="Go to next page">                                    
                                     <span class="sr-only">Next</span>
                                 </a></li>
 							</ul>
@@ -381,7 +380,7 @@
 
 
 
-				<div id="infos" class="col-xs-12 col-sm-12 col-md-4">
+				<div id="infos" class="col-12 col-sm-12 col-md-4">
 					<ul class="nav nav-tabs">
 						<li class="nav-item"><a class="nav-link active" href="#mostRead" data-toggle="tab">Most read<div class="arrow" aria-hidden="true"></div></a></li>
 						<li class="nav-item"><a class="nav-link" href="#mostShared" data-toggle="tab">Most shared<div class="arrow" aria-hidden="true"></div></a></li>
@@ -417,9 +416,11 @@
 					<div id="accordion" role="tablist" aria-multiselectable="true" class="o-accordion">
 						<div class="card">
 							<div class="card-header" role="tab" id="headingOne">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-controls="collapseOne"> Collapsible #1 </a>
+                <h3 class="mb-0">
+								  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-controls="collapseOne"> Collapsible #1 </a>
+                </h3>
 							</div>
-							<div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
 								<div class="card-block">Anim pariatur cliche reprehenderit,
 									enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
 									moon officia aute, non cupidatat skateboard dolor brunch. Food
@@ -434,9 +435,9 @@
 						</div>
 						<div class="card">
 							<div class="card-header" role="tab" id="headingTwo">
-								<h4 class="card-header">
+								<h3 class="mb-0">
 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseTwo"> Collapsible #2 </a>
-								</h4>
+								</h3>
 							</div>
 							<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
 								<div class="card-block">Anim pariatur cliche reprehenderit,
@@ -453,9 +454,9 @@
 						</div>
 						<div class="card">
 							<div class="card-header" role="tab" id="headingThree">
-								<h4 class="card-header">
+								<h3 class="mb-0">
 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseThree"> Collapsible #2 </a>
-								</h4>
+								</h3>
 							</div>
 							<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
 								<div class="card-block">Anim pariatur cliche reprehenderit,
@@ -491,19 +492,19 @@
 			</div>
 		</footer>
 
-		<!-- Placed at the end of the document so the pages load faster -->
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- jQuery validate -->
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-    <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
-    <script src="../../assets/js/vendor/tether.min.js"></script>
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../../dist/js/boosted.js"></script>
 
 	<script type="text/javascript">
 			// Surcharge des valeurs du script de la toolbar
 			accessibilitytoolbar_custom={
-				idLinkModeContainer:"id_li_for_cdu"
+				idLinkModeContainer:"id_li_for_cdu",
+				cssLinkModeClassName:"nav-item-cdu"
 			};
 
 			$(".skiplinks_trigger").focus(function(){
@@ -528,6 +529,6 @@
             });
 		</script>
 
-		<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+		<!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
 	</body>
 </html>

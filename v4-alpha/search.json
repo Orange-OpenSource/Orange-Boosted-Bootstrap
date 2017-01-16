@@ -12,6 +12,8 @@
     
 
     
+
+    
         {
             "title" : "Accessibility",
             "url"   : "/getting-started/accessibility/"
@@ -29,6 +31,13 @@
         {
             "title" : "Approach",
             "url"   : "/extend/approach/"
+        } ,
+    
+
+    
+        {
+            "title" : "Badges",
+            "url"   : "/components/badge/"
         } ,
     
 
@@ -113,13 +122,6 @@
         {
             "title" : "Buttons",
             "url"   : "/components/buttons/"
-        } ,
-    
-
-    
-        {
-            "title" : "Buttons inversed",
-            "url"   : "/components/buttons-inversed/"
         } ,
     
 
@@ -231,14 +233,7 @@
     
         {
             "title" : "Flexbox",
-            "url"   : "/getting-started/flexbox/"
-        } ,
-    
-
-    
-        {
-            "title" : "Flexbox grid system",
-            "url"   : "/layout/flexbox-grid/"
+            "url"   : "/utilities/flexbox/"
         } ,
     
 
@@ -384,13 +379,6 @@
 
     
         {
-            "title" : "Orange accordion",
-            "url"   : "/components/orange-accordion/"
-        } ,
-    
-
-    
-        {
             "title" : "Orange brand guidelines",
             "url"   : "/about/orange-brand/"
         } ,
@@ -400,13 +388,6 @@
         {
             "title" : "Orange footer",
             "url"   : "/components/orange-footer/"
-        } ,
-    
-
-    
-        {
-            "title" : "Orange forms",
-            "url"   : "/components/orange-forms/"
         } ,
     
 
@@ -447,20 +428,6 @@
 
     
         {
-            "title" : "Orange stepbar",
-            "url"   : "/components/orange-stepbar/"
-        } ,
-    
-
-    
-        {
-            "title" : "Orange switches",
-            "url"   : "/components/orange-switches/"
-        } ,
-    
-
-    
-        {
             "title" : "Orange tables",
             "url"   : "/components/orange-tables/"
         } ,
@@ -484,6 +451,13 @@
         {
             "title" : "Popovers",
             "url"   : "/components/popovers/"
+        } ,
+    
+
+    
+        {
+            "title" : "Position",
+            "url"   : "/utilities/position/"
         } ,
     
 
@@ -538,8 +512,8 @@
 
     
         {
-            "title" : "Sizing and positioning",
-            "url"   : "/utilities/sizing-and-positioning/"
+            "title" : "Sizing",
+            "url"   : "/utilities/sizing/"
         } ,
     
 
@@ -552,15 +526,22 @@
 
     
         {
-            "title" : "Tables",
-            "url"   : "/content/tables/"
+            "title" : "Stepbar",
+            "url"   : "/components/stepbar/"
         } ,
     
 
     
         {
-            "title" : "Tags",
-            "url"   : "/components/tag/"
+            "title" : "Switches",
+            "url"   : "/components/switches/"
+        } ,
+    
+
+    
+        {
+            "title" : "Tables",
+            "url"   : "/content/tables/"
         } ,
     
 

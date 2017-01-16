@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-<meta name="author" content="Mark Otto, Jacob Thornton, Bootstrap contributors, and Orange SA">
 
 <title>
   
@@ -37,111 +33,103 @@
     </a>
 
     <header class="" role="banner">
-  <nav class="navbar navbar-dark">
-      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+  <nav class="navbar navbar-toggleable-sm navbar-inverse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarHead">
           <span class="sr-only">toggle navigation</span>
           <span class="icon-menu"></span>
       </button>
       <div class="container" >
-          <a class="navbar-brand" href="../">
+        <a class="navbar-brand" href="../">
             <img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage"/>
-            <span>B<span class="text-primary">oo</span>sted</span>
-          </a>
-          <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsingNavbar">
-              <li class="nav-item"><a class="nav-link " href="../getting-started/introduction/">Documentation</a></li>
-              <li class="nav-item"><a class="nav-link " href="../examples/">Examples</a></li>
-              <li class="nav-item"><a class="nav-link active" href="../boostwatch/">Boostwatch</a></li>
-              <li class="nav-item" id="id_li_for_cdu"></li>
-          </ul>
-      </div>
+        </a>
+        <div class="navbar-collapse collapse" id="collapsingNavbarHead">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../">B<span class="text-primary">oo</span>sted</a></li>
+                <li class="nav-item"><a class="nav-link " href="../getting-started/introduction/">Documentation</a></li>
+                <li class="nav-item"><a class="nav-link " href="../examples/">Examples</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../boostwatch/">Boostwatch</a></li>
+                <li class="nav-item" id="id_li_for_cdu"></li>
+            </ul>
+        </div>
+    </div>
   </nav>
 </header>
 
 
     <!-- BOOSTED MOD -->
-    <main id="content" role="main">
-        <div class="bd-pageheader text-xs-center text-sm-left" id="page_header">
-  <div class="container">
-    <h1>Boostwatch</h1>
-    <p class="lead">
-    </p>
-  </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-3 push-md-9 bd-sidebar">
-            <div class="bd-sidebar">
-  <nav class="bd-links" id="docsNavbarContent">
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#orange-icons">Orange icons</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#modal">Modal window</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#tables">Tables</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#bulletpoint">Bullet point</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#local">Local navigation</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#accordion">Accordions</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#footer">Footer</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#stepbar">Stepbar</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#link">Links</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#navbar">Navbar</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#megamenu">Megamenu</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#buttons">Buttons</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#switches">Toggle switches</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#type">Typography</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#forms">Forms</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#nav">Navs</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#pagination">Pagination</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#indicators">Indicators</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#progress">Progress bars</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#container">Containers</a>
-      </div>
-      <div class="bd-toc-item ">
-          <a class="bd-toc-link" href="#dialogs">Dialogs</a>
-      </div>
-  </nav>
-</div>
+    <main class="container" role="main">
+      <div class="row">
+        <div class="col-12 col-md-3 push-md-9 bd-sidebar">
+          <nav class="bd-links" id="docsNavbarContent">
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#orange-icons">Orange icons</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#modal">Modal window</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#tables">Tables</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#bulletpoint">Bullet point</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#local">Local navigation</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#accordion">Accordions</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#footer">Footer</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#stepbar">Stepbar</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#link">Links</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#navbar">Navbar</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#megamenu">Megamenu</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#buttons">Buttons</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#switches">Toggle switches</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#type">Typography</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#forms">Forms</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#nav">Navs</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#pagination">Pagination</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#indicators">Indicators</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#progress">Progress bars</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#container">Containers</a>
+    </div>
+    <div class="bd-toc-item ">
+        <a class="bd-toc-link" href="#dialogs">Dialogs</a>
+    </div>
+</nav>
 
         </div>
-        <div class="col-xs-12 col-md-9 pull-md-3 bd-content">
-            <h2 id="orange-icons">Orange Icons</h2>
+        <div class="col-12 col-md-9 pull-md-3 bd-content">
+          <h1 class="bd-title" id="content">Boostwatch</h1>
+          <h2 id="orange-icons">Orange Icons</h2>
 <p>Icons created from the Orange brand.</p>
 <p>Copyright (C) 2016 Orange SA All rights reserved</p>
 <p>See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p>
@@ -3493,7 +3481,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <div class="float-xs-right">
+          <div class="float-right">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-primary">Submit</button>
           </div>
@@ -3507,7 +3495,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <table class="table table-striped table-hover ">
+    <table class="table table-striped table-hover col-12">
       <caption></caption>
       <thead>
         <tr>
@@ -3564,7 +3552,7 @@
 <h3>Checkbox table</h3>
 <div class="container-fluid">
   <div class="row">
-    <table class="table table-hover has-checkbox">
+    <table class="table table-hover has-checkbox col-12">
       <caption></caption>
       <thead>
         <tr>
@@ -3657,7 +3645,7 @@
 <h3>Thumbnails table</h3>
 <div class="container-fluid">
   <div class="row">
-    <table class="table table-hover has-checkbox has-icon">
+    <table class="table table-hover has-checkbox has-icon col-12">
       <caption></caption>
       <thead>
         <tr>
@@ -3747,39 +3735,39 @@
 <h3>Icons table</h3>
 <div class="container-fluid">
   <div class="row">
-    <table class="table table-hover has-icon" style="width: 60%;">
+    <table class="table table-hover has-icon col-12" style="width: 60%;">
       <caption></caption>
       <thead>
         <tr>
           <th>Item 1</th>
-          <th class="text-xs-center">Item 1</th>
-          <th class="text-xs-center">Item 1</th>
-          <th class="text-xs-center">Item 1</th>
+          <th class="text-center">Item 1</th>
+          <th class="text-center">Item 1</th>
+          <th class="text-center">Item 1</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>Item 1</th>
-          <td class="text-xs-center">
+          <td class="text-center">
             <span class="icon-tick" style="color: #32C832;"></span>
             <span class="sr-only">checked</span>
           </td>
-          <td class="text-xs-center">
+          <td class="text-center">
             <span class="icon-tick" style="color: #32C832;"></span>
             <span class="sr-only">checked</span>
           </td>
-          <td class="text-xs-center">
+          <td class="text-center">
             <span class="icon-tick" style="color: #32C832;"></span>
             <span class="sr-only">checked</span>
           </td>
         </tr>
         <tr>
           <th>Item 2</th>
-          <td class="text-xs-center">
+          <td class="text-center">
             <span class="icon-tick" style="color: #32C832;"></span>
             <span class="sr-only">checked</span>
           </td>
-          <td class="text-xs-center">
+          <td class="text-center">
             <span class="icon-tick" style="color: #32C832;"></span>
             <span class="sr-only">checked</span>
           </td>
@@ -3787,7 +3775,7 @@
         </tr>
         <tr>
           <th>Item 3</th>
-          <td class="text-xs-center">
+          <td class="text-center">
             <span class="icon-tick" style="color: #32C832;"></span>
             <span class="sr-only">checked</span>
           </td>
@@ -3802,7 +3790,7 @@
 <h3 id="complextable">Sortable table</h3>
 <div class="container-fluid">
   <div class="row">
-    <table id="myTable" class="table tablesorter">
+    <table id="myTable" class="table table-responsive tablesorter col-12">
       <caption>Calls received</caption>
       <thead class="cf">
         <tr>
@@ -3856,57 +3844,55 @@
 <h2 id="responsivetable">Responsive table</h2>
 <h3>Default scroll table</h3>
 <p class="lead">Native Bootstrap solution</p>
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
 <!-- /.table-responsive -->
 
 <h3>Orange card responsive table</h3>
 <p class="lead">Table responsive switch row to card display on tablet.</p>
 <div class="container-fluid">
   <div class="row">
-    <table class="table o-responsive-table">
+    <table class="table o-responsive-table col-12">
       <caption>Calls received</caption>
       <thead class="cf">
         <tr>
@@ -3993,7 +3979,7 @@
   <hr aria-hidden="true">
   <nav class="container">
     <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
-    <ul class="nav nav-inline collapse" id="localNav1">
+    <ul class="nav collapse" id="localNav1">
       <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
@@ -4008,7 +3994,7 @@
       <hr aria-hidden="true">
       <nav class="container">
         <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
-        <ul class="nav nav-inline collapse" id="localNav2">
+        <ul class="nav collapse" id="localNav2">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
@@ -4024,7 +4010,7 @@
 <ul class="nav nav-tabs">
   <li class="nav-item"><a class="nav-link active" href="#home1" data-toggle="tab">Home</a></li>
   <li class="nav-item"><a class="nav-link" href="#profile1" data-toggle="tab">Profile</a></li>
-  <li class="nav-item"><a class="nav-link" href="#messages1" data-toggle="tab">Messages</a></li>
+  <li class="nav-item hidden-xs-down"><a class="nav-link" href="#messages1" data-toggle="tab">Messages</a></li>
   <li class="nav-item"><a class="nav-link" href="#settings1" data-toggle="tab">Settings</a></li>
 </ul>
 <div class="tab-content">
@@ -4054,7 +4040,7 @@
 <ul class="nav nav-tabs">
   <li class="nav-item"><a class="nav-link active" href="#home3" data-toggle="tab">Home</a></li>
   <li class="nav-item "><a class="nav-link" href="#profile3" data-toggle="tab">Profile</a></li>
-  <li class="nav-item "><a class="nav-link" href="#messages3" data-toggle="tab">Messages</a></li>
+  <li class="nav-item hidden-xs-down"><a class="nav-link" href="#messages3" data-toggle="tab">Messages</a></li>
   <li class="nav-item "><a class="nav-link" href="#settings3" data-toggle="tab">Settings</a></li>
 </ul>
 <div class="tab-content tab-content-clear">
@@ -4078,7 +4064,7 @@
   <div class="tab-pane" id="settings3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis volutpat quam, non suscipit arcu accumsan at. Aliquam
     pellentesque.</div>
 </div>
-<h2 id="accordion">Accordions<a class="doc-link" href="../components/orange-accordion/" title="go to accordion documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
+<h2 id="accordion">Accordions<a class="doc-link" href="../components/collapse/#accordion-example" title="go to accordion documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 
 <h3>One at a time</h3>
 <div id="accordion-1" role="tablist" class="o-accordion">
@@ -4091,7 +4077,7 @@
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-block">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
@@ -4128,7 +4114,7 @@
 </div>
 
 <h3 id="accordion2">Multiple openable</h3>
-<div id="accordion-2" role="tablist" class="o-accordion">
+<div id="accordion-2" role="tablist"  aria-multiselectable="true" class="o-accordion">
   <div class="card multi">
     <div class="card-header" role="tab" id="headingOne-1">
       <h5>
@@ -4138,7 +4124,7 @@
       </h5>
     </div>
 
-    <div id="collapseOne-1" class="collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+    <div id="collapseOne-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne-1">
       <div class="card-block">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
@@ -4179,7 +4165,7 @@
   <h1 class="sr-only">footer - site map & informations</h1>
   <div class="container-fluid o-footer-top">
     <div class="row">
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
         <ul>
           <li>
             <h2>Sed ut perspiciatis</h2></li>
@@ -4189,7 +4175,7 @@
           <li><a href="#">Totam rem aperiam</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
         <ul>
           <li>
             <h2>Voluptatem accusantium</h2></li>
@@ -4200,7 +4186,7 @@
           <li><a href="#">Totam rem aperiam</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
         <ul>
           <li>
             <h2>Natus error sit</h2></li>
@@ -4208,7 +4194,7 @@
           <li><a href="#">Totam rem aperiam</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
         <ul>
           <li>
             <h2>Doloremque laudantium</h2></li>
@@ -4218,7 +4204,7 @@
           <li><a href="#">Totam rem aperiam</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
         <ul>
           <li>
             <h2>Totam rem aperiam</h2></li>
@@ -4229,7 +4215,7 @@
           <li><a href="#">Doloremque</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
         <ul>
           <li>
             <h2>Accusantium</h2></li>
@@ -4241,8 +4227,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
-        <ul class="nav navbar-nav">
+      <div class="col-12">
+        <ul class="navbar-nav">
           <li><a href="#">Contact us</a></li>
           <li><a href="#"><span class="icon-orange-location"></span>Locate a store</a></li>
           <li><a href="#">Coverage map</a></li>
@@ -4471,96 +4457,103 @@
 <h2 id="o-link-arrow-back">Link with arrow back</h2>
 <a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
 <h2 id="navbar">Navbar<a class="doc-link" href="../components/navbar/" title="go to navbar documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
-<nav class="navbar navbar-dark bg-faded">
-  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar3">
-    &#9776;
-  </button>
-  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar3">
+<nav class="navbar navbar-inverse navbar-toggleable-sm">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <span class="sr-only">toggle navigation</span>
+      <span class="icon-menu"></span>
+    </button>
     <a class="navbar-brand" href="#"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"></a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu3">Dropdown <b class="caret" aria-hidden="true"></b></a>
-        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
-          <a href="#" role="menuitem" class="dropdown-item">Action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav float-md-right">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu4">Dropdown <b class="caret" aria-hidden="true"></b></a>
-        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
-          <a href="#" role="menuitem" class="dropdown-item">Action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-        </div>
-      </li>
-    </ul>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu3">Dropdown</a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+            <a href="#" role="menuitem" class="dropdown-item">Action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu4">Dropdown</a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+            <a href="#" role="menuitem" class="dropdown-item">Action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 <h3>without logo</h3>
-<nav class="navbar navbar-dark bg-faded">
-  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar4">
-    &#9776;
-  </button>
-  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar4">
+<nav class="navbar navbar-inverse navbar-toggleable-sm">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+      <span class="sr-only">toggle navigation</span>
+      <span class="icon-menu"></span>
+    </button>
     <a class="navbar-brand" href="#"><span>Navbar brand</span></a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu5">Dropdown <b class="caret" aria-hidden="true"></b></a>
-        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu5">
-          <a href="#" role="menuitem" class="dropdown-item">Action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav float-md-right">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu6">Dropdown <b class="caret" aria-hidden="true"></b></a>
-        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu6">
-          <a href="#" role="menuitem" class="dropdown-item">Action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-          <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-        </div>
-      </li>
-    </ul>
+    <div class="navbar-collapse collapse" id="collapsingNavbar2">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu5">Dropdown</a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu5">
+            <a href="#" role="menuitem" class="dropdown-item">Action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu6">Dropdown</a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu6">
+            <a href="#" role="menuitem" class="dropdown-item">Action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Another action</a>
+            <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 <h2 id="megamenu">Megamenu<a class="doc-link" href="../components/orange-megamenu/" title="go to mega menu documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 <div class="mega-menu" style="position: static">
-    <div class="collapse in" id="collapseShop" aria-labelledby="menu_title2">
+    <div class="collapse show" id="collapseShop" aria-labelledby="menu_title2">
         <div class="container">
             <h2 role="presentation" id="menu_title2"><a aria-hidden="true" href="#">Home Shop</a></h2>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-3">
                     <h3 id="list_title_1"><a href="#">Internet</a></h3>
                     <ul aria-labelledby="list_title_1" role="menu">
                         <li role="menuitem"><a href="#">iPhone 6</a></li>
@@ -4570,7 +4563,7 @@
                         <li role="menuitem"><a href="#">Coming soon</a></li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-3">
+                <div class="col-12 col-sm-12 col-md-3">
                     <h3 id="list_title_2"><a href="#">Mobile</a></h3>
                     <ul aria-labelledby="list_title_2" role="menu">
                         <li role="menuitem"><a href="#">Phones </a></li>
@@ -4581,15 +4574,16 @@
                         <li role="menuitem"><a href="#">Bundles</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="row footer">
-                <div class="float-md-left">
+              </div>
+              <div class="row footer">
+                <div class="col-12 col-sm-11">
                     <a href="#">Promotions</a>
                     <a href="#">Top up</a>
                 </div>
-                <div class="float-md-right hidden-xs-down">
-                    <a data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete"></span></a>
+                <div class="col-1 hidden-xs-down">
+                    <a class="float-right" data-toggle="collapse" href="#collapseShop" aria-expanded="false" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete" aria-hidden="true"></span></a>
                 </div>
+              </div>
             </div>
         </div>
     </div>
@@ -4676,8 +4670,8 @@
 </div>
 
 <h3>Dropdowns</h3>
-<div class="btn-toolbar">
-    <div class="btn-group">
+<div class="btn-toolbar flex-wrap">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Primary
             <span class="sr-only">menu primary</span>
@@ -4691,7 +4685,7 @@
         </ul>
     </div>
 
-    <div class="btn-group">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Secondary
         </button>
@@ -4704,7 +4698,7 @@
         </ul>
     </div>
 
-    <div class="btn-group">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Success
             <span class="sr-only">menu success</span>
@@ -4718,7 +4712,7 @@
         </ul>
     </div>
 
-    <div class="btn-group">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Info
             <span class="sr-only">menu info</span>
@@ -4732,7 +4726,7 @@
         </ul>
     </div>
 
-    <div class="btn-group">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Warning
             <span class="sr-only">menu warning</span>
@@ -4760,38 +4754,37 @@
 
 
 
-<div class="btn-group btn-group-justified">
+<div class="btn-group btn-group-justified mb-2">
     <a href="#" class="btn btn-secondary">Left</a>
     <a href="#" class="btn btn-secondary">Middle</a>
     <a href="#" class="btn btn-secondary">Right</a>
 </div>
 
-<div class="btn-toolbar">
-    <div class="btn-group">
+<div class="btn-toolbar flex-wrap mb-2">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-secondary">1</button>
         <button type="button" class="btn btn-secondary">2</button>
         <button type="button" class="btn btn-secondary">3</button>
         <button type="button" class="btn btn-secondary">4</button>
     </div>
 
-    <div class="btn-group">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-secondary">5</button>
         <button type="button" class="btn btn-secondary">6</button>
         <button type="button" class="btn btn-secondary">7</button>
     </div>
 
-    <div class="btn-group">
+    <div class="btn-group mr-2">
         <button type="button" class="btn btn-secondary">8</button>
         <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            Dropdown
-            <span class="caret" aria-hidden="true"></span>
-        </button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Dropdown link</a></li>
-            <li><a href="#">Dropdown link</a></li>
-            <li><a href="#">Dropdown link</a></li>
-            </ul>
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              Dropdown            
+          </button>
+          <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="#">Dropdown link</a></li>
+              <li class="dropdown-item"><a href="#">Dropdown link</a></li>
+              <li class="dropdown-item"><a href="#">Dropdown link</a></li>
+          </ul>
         </div>
     </div>
 </div>
@@ -4807,45 +4800,45 @@
 <h2 id="switches">Toggle and switches<a class="doc-link" href="../components/orange-switches/" title="go to switches documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 
 <h3>Switches</h3>
-
+<div class="container-fluid">
 <div class="form-group row o-switch">
-  <label for="checkbox1" class="form-control-label col-md-3 col-xs-8" id="label-wifi-1">WiFi</label>
+  <label for="checkbox1" class="form-control-label col-md-3 col-8" id="label-wifi-1">WiFi</label>
   <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked aria-labelledby="label-wifi-1 label-wifi-2" />
-  <label for="checkbox1" class="toggle form-control-label col-xs-3" id="label-wifi-2">
+  <label for="checkbox1" class="toggle form-control-label" id="label-wifi-2">
     <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
     <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
   </label>
 </div>
 
 <div class="form-group row o-switch">
-  <label for="checkbox3" class="form-control-label col-md-3 col-xs-8" id="label-bluetooth-1">Bluetooth</label>
+  <label for="checkbox3" class="form-control-label col-md-3 col-8" id="label-bluetooth-1">Bluetooth</label>
   <input class="checkbox success sr-only" id="checkbox3" type="checkbox" aria-labelledby="label-bluetooth-1 label-bluetooth-2"
   />
-  <label for="checkbox3" class="toggle form-control-label col-xs-3" id="label-bluetooth-2">
+  <label for="checkbox3" class="toggle form-control-label" id="label-bluetooth-2">
     <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
     <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
   </label>
 </div>
 
 <div class="form-group row o-switch">
-  <label for="checkbox2" class="form-control-label col-md-3 col-xs-8" id="label-wifi-3">WiFi</label>
+  <label for="checkbox2" class="form-control-label col-md-3 col-8" id="label-wifi-3">WiFi</label>
   <input class="checkbox sr-only" id="checkbox2" type="checkbox" aria-labelledby="label-wifi-3 label-wifi-4" />
-  <label for="checkbox2" class="toggle rounded form-control-label col-xs-3" id="label-wifi-4" style="width: 78px;">
+  <label for="checkbox2" class="toggle rounded form-control-label" id="label-wifi-4" style="width: 78px;">
     <span class="on">On</span>
     <span class="off">Off</span>
   </label>
 </div>
 
 <div class="form-group row o-switch">
-  <label for="checkbox4" class="form-control-label col-md-3 col-xs-8" id="label-bluetooth-3">Bluetooth</label>
+  <label for="checkbox4" class="form-control-label col-md-3 col-8" id="label-bluetooth-3">Bluetooth</label>
   <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked aria-labelledby="label-bluetooth-3 label-bluetooth-4"
   />
-  <label for="checkbox4" class="toggle rounded form-control-label col-xs-3" id="label-bluetooth-4" style="width: 126px;">
+  <label for="checkbox4" class="toggle rounded form-control-label" id="label-bluetooth-4" style="width: 126px;">
     <span class="on">Activé</span>
     <span class="off">Désactivé</span>
   </label>
 </div>
-
+</div>
 <h3>3 way toggle</h3>
 
 <div class="o-switch btn-group" data-toggle="buttons" role="group">
@@ -4878,6 +4871,7 @@
 
 <h2 id="type">Typography<a class="doc-link" href="../components/typography/" title="go to typography documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 <!-- Headings -->
+<div class="container-fluid">
 <div class="row">
   <div class="col-lg-4">
     <h1>Heading 1</h1>
@@ -4911,8 +4905,8 @@
   </div>
 </div>
 <!-- Blockquotes -->
+<h3 id="type-blockquotes">Blockquotes</h3>
 <div class="row">
-  <h3 id="type-blockquotes">Blockquotes</h3>
   <div class="col-lg-6">
     <blockquote class="blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -4926,10 +4920,12 @@
     </blockquote>
   </div>
 </div>
+</div>
 <!-- Forms
 ================================================== -->
 <h2 id="forms">Forms<a class="doc-link" href="../components/forms/" title="go to form documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
-<div class="row">
+<div class="container-fluid">
+  <div class="row">
     <div class="col-lg-6">
         <form class="form-horizontal container-fluid">
             <fieldset>
@@ -4972,10 +4968,6 @@
                             <span class="custom-control-description">Orange checkbox checked disabled</span>
                         </label>
                       </div>
-                      <!--<div>
-                          <input type="checkbox"  class="o-checkbox o-checkbox-right" id="idChk5">
-                          <label for="idChk5">Orange checkbox with label before</label>
-                      </div>-->
                   </div>
               </div>
               <div class="form-group row">
@@ -5002,12 +4994,6 @@
                             <span class="custom-control-description">Or toggle this other custom radio</span>
                         </label>
                       </div>
-                      <!--<div>
-                        <input name="optionsRadiosOrange" id="optionsRadiosOrange5" value="option5" type="radio" class="o-radio o-radio-right">
-                        <label for="optionsRadiosOrange5">
-                            Orange radio align right
-                        </label>
-                      </div>-->
                       <div>
                         <label class="custom-control custom-radio">
                             <input id="radio3" name="radio-disabled" type="radio" class="custom-control-input" checked disabled>
@@ -5108,6 +5094,7 @@
               </div>
           </div>
       </form>
+    </div>
   </div>
 </div>
 
@@ -5129,26 +5116,20 @@
   </div>
 </form>
 
-<form>
+<form class="container-fluid">
     <div class="form-group row has-danger">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-      </div>
+        <input type="email" class="form-control col-sm-10" id="inputEmail3" placeholder="Email">
         <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
     </div>
     <div class="form-group row has-danger top">
       <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      </div>
+        <input type="email" class="form-control col-sm-10" id="inputEmail4" placeholder="Email">
         <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
     </div>
     <div class="form-group row has-danger right">
       <label for="inputEmail5" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-4">
-        <input type="email" class="form-control" id="inputEmail5" placeholder="Email">
-      </div>
+        <input type="email" class="form-control col-sm-4" id="inputEmail5" placeholder="Email">
       <div class="col-sm-4 form-control-feedback">Shucks, check the formatting of that and try again.</div>
     </div>
 </form>
@@ -5156,17 +5137,18 @@
 <!-- Navs
 ================================================== -->
 <h2 id="nav">Navs</h2>
+<div class="container-fluid">
 <div class="row">
   <div class="col-lg-6">
     <h3 id="bs-nav-tabs">Tabs<a class="doc-link" href="../components/navs/#tabs" title="go to tabs documentation page"><span class="icon-Forward-curved-arrow"></span></a></h3>
     <ul class="nav nav-tabs">
       <li class="nav-item"><a class="nav-link active" href="#home" data-toggle="tab">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#profile" data-toggle="tab">Profile</a></li>
-      <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+      <li class="nav-item hidden-xs-down"><a class="nav-link" href="#profile" data-toggle="tab">Profile</a></li>
+      <li class="nav-item hidden-xs-down"><a class="nav-link disabled">Disabled</a></li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-                Dropdown <span class="caret" aria-hidden="true" role="button"></span>
-                </a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+          Dropdown
+        </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#dropdown1" data-toggle="tab">Action</a></li>
           <li class="dropdown-divider"></li>
@@ -5175,7 +5157,7 @@
       </li>
     </ul>
     <div id="myTabContent" class="tab-content">
-      <div class="tab-pane fade active in" id="home">
+      <div class="tab-pane fade active show" id="home">
         <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master
           cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
           synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan
@@ -5204,12 +5186,12 @@
     <h3 id="bs-nav-pills">Pills<a class="doc-link" href="../components/navs/#pills" title="go to pills documentation page"><span class="icon-Forward-curved-arrow"></span></a></h3>
     <ul class="nav nav-pills">
       <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-      <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+      <li class="nav-item hidden-xs-down"><a class="nav-link" href="#">Profile</a></li>
+      <li class="nav-item hidden-xs-down"><a class="nav-link disabled" href="#">Disabled</a></li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-                Dropdown <span class="caret" aria-hidden="true"></span>
-                </a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+          Dropdown 
+        </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -5220,14 +5202,14 @@
       </li>
     </ul>
     <br>
-    <ul class="nav nav-pills nav-stacked">
+    <ul class="nav nav-pills nav-fill">
       <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-      <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+      <li class="nav-item hidden-xs-down"><a class="nav-link" href="#">Profile</a></li>
+      <li class="nav-item hidden-xs-down"><a class="nav-link disabled" href="#">Disabled</a></li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-                Dropdown <span class="caret" aria-hidden="true"></span>
-                </a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+          Dropdown
+        </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -5260,6 +5242,7 @@
     </div>
   </div>
 </div>
+</div>
 <h2 id="pagination">Pagination<a class="doc-link" href="../components/pagination/" title="go to pagination documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 Standard pagination with numbers
 <div>
@@ -5271,8 +5254,8 @@ Standard pagination with numbers
             <li class="page-item active"><a class="page-link" href="#" aria-label="Go to page 1">1</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
-      <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
-      <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
+      <li class="page-item  hidden-xs-down"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
+      <li class="page-item  hidden-xs-down"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
             <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next"></a>
       </li>
@@ -5322,8 +5305,8 @@ Buttons + Back/Next labels
 <!-- Indicators
 ================================================== -->
 <h2 id="indicators">Indicators<a class="doc-link" href="../components/alerts/" title="go to alerts documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
-
-<div class="row">
+<div class="container-fluid">
+  <div class="row">
     <div class="col-lg-12">
         <h3>Alerts</h3>
         <div class="alert alert-dismissable alert-warning">
@@ -5332,8 +5315,8 @@ Buttons + Back/Next labels
             <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
         </div>
     </div>
-</div>
-<div class="row">
+  </div>
+  <div class="row">
     <div class="col-lg-4">
         <div class="alert alert-dismissable alert-danger">
             <button type="button" class="close" data-dismiss="alert">×</button>
@@ -5352,19 +5335,20 @@ Buttons + Back/Next labels
             <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
         </div>
     </div>
-</div>
-<div class="row">
+  </div>
+  <div class="row">
     <div class="col-lg-4">
-        <h3>Tags<a class="doc-link" href="../components/tag/" title="go to tag documentation page"><span class="icon-Forward-curved-arrow"></span></a></h3>
+        <h3>Badge<a class="doc-link" href="../components/badge/" title="go to badge documentation page"><span class="icon-Forward-curved-arrow"></span></a></h3>
         <div style="margin-bottom: 40px;">
-            <span class="tag tag-default">Default</span>
-            <span class="tag tag-primary">Primary</span>
-            <span class="tag tag-success">Success</span>
-            <span class="tag tag-warning">Warning</span>
-            <span class="tag tag-danger">Danger</span>
-            <span class="tag tag-info">Info</span>
+            <span class="badge badge-default">Default</span>
+            <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-success">Success</span>
+            <span class="badge badge-warning">Warning</span>
+            <span class="badge badge-danger">Danger</span>
+            <span class="badge badge-info">Info</span>
         </div>
     </div>
+  </div>
 </div>
 
 <!-- Progress bars
@@ -5372,36 +5356,65 @@ Buttons + Back/Next labels
 <h2 id="progress">Progress bars<a class="doc-link" href="../components/progress/" title="go to progress documentation page"><span class="icon-Forward-curved-arrow"></span></a></h2>
 
 <h3 id="progress-basic">Basic</h3>
-<progress class="progress progress-default" value="60" max="100">60%</progress>
+<div class="bd-example" data-example-id="">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+
 
 <h3 id="progress-alternatives">Contextual alternatives</h3>
-<progress class="progress progress-info" value="20" max="100">20%</progress>
-<progress class="progress progress-success" value="40" max="100">40%</progress>
-<progress class="progress progress-warning" value="60" max="100">60%</progress>
-<progress class="progress progress-danger" value="80" max="100">80%</progress>
-
+<div class="bd-example" data-example-id="">
+  <div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
 
 <!-- Containers
 ================================================== -->
 <h2 id="container">Containers</h2>
 <h3>Cards<a class="doc-link" href="../components/card/" title="go to card documentation page"><span class="icon-Forward-curved-arrow"></span></a></h3>
-<div class="row">
-    <div class="col-md-4">
-        <div class="o-card card">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
-            <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary btn-inverse">Button</a>
-            </div>
-        </div>
-    </div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="o-card card">
+              <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+              <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary btn-inverse">Button</a>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
 <!-- Dialogs
 ================================================== -->
 <h2 id="dialogs">Dialogs</h2>
-<div class="row">
+<div class="container-fluid">
+  <div class="row">
     <div class="col-lg-10 offset-lg-2">
     <h3>Popovers<a class="doc-link" href="../components/popovers/" title="go to popovers documentation page"><span class="icon-Forward-curved-arrow"></span></a></h3>
     <div>
@@ -5425,6 +5438,7 @@ Buttons + Back/Next labels
         <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Right</button>
     </div>
     </div>
+  </div>
 </div>
 
 <div id="source-modal" class="modal fade">
@@ -5443,32 +5457,28 @@ Buttons + Back/Next labels
 
 
         </div>
-    </div>
-</div>
-
-    </main>
+      </div>
+    </main>    
     <!-- END MOD -->
 
     <footer class="bd-footer navbar" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
-            <div class="o-footer">
+            <div class="o-footer col-12">
                 <div class="container-fluid o-footer-top">
                     <h1 class="sr-only">footer - site map & informations</h1>
         <p>This documentation is an adaptation made by Orange</p>
     <p>Original version designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
 
-    <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.5/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Orange modified code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.6/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
                 </div>
                 <div class="o-footer-bottom">
                     <ul>
-                      <li>Currently v4.0.0-alpha.5</li>
-                      <li>&middot;</li>
+                      <li>Currently v4.0.0-alpha.6</li>                      
                       <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
-                      <li>&middot;</li>
-                      <li><a href="examples">Examples</a></li>
-                      <li>&middot;</li>
-                      <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.5">Original Bootstrap</a></li>
+                      <li><a href="../examples">Examples</a></li>                      
+                      <li><a href="../about/history/">About</a></li>
+                      <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.6">Original Bootstrap</a></li>
                     </ul>
                 </div>
             </div>
@@ -5478,7 +5488,7 @@ Buttons + Back/Next labels
 <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text hidden-sm-down">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 <script src="../assets/js/vendor/tether.min.js"></script>
@@ -5520,7 +5530,7 @@ Holder.addTheme('gray', {
 })
 </script>
 
-<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+<!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
 <script>
 			accessibilitytoolbar_custom={
 				idLinkModeContainer:"id_li_for_cdu",
