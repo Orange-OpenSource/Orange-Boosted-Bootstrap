@@ -234,10 +234,9 @@
             align-self: flex-start;
             margin-left: .625rem;
             font-size: $font-size-sm;
-
-            img {
-              height: 1.875rem;
-            }
+          }
+          .navbar-brand img {
+            height: 1.875rem;
           }
 
           > .container {
@@ -247,15 +246,13 @@
             margin: 0;
           }
 
-
-
           .navbar-collapse {
             width: 100%;
             margin-top: .625rem;
+          }
 
-            .navbar-nav {
-              align-items: stretch;
-            }
+          .navbar-collapse .navbar-nav {
+            align-items: stretch;
           }
 
           .navbar-toggler {
@@ -274,54 +271,54 @@
               color: #000;
               background-color: #fff;
             }
+          }
 
-            &:active {
-              color: #fff;
-              background-color: $brand-primary;
-            }
+          .navbar-toggler:active {
+            color: #fff;
+            background-color: $brand-primary;
+          }
 
-            &:focus {
-              outline: 0;
-            }
+          .navbar-toggler:focus {
+            outline: 0;
           }
 
           .nav-item {
             padding: 1rem 0;
             padding-left: .625rem;
+            margin-left: 0;
             font-size: $font-size-h5;
             line-height: 1;
             border-top: 1px solid $gray-dark;
+          }
 
-            &,
-            &:first-child,
-            &+ .nav-item {
-              margin-left: 0;
-            }
+          .nav-item:first-child,
+          .nav-item + .nav-item {
+            margin-left: 0;
+          }
 
-            .nav-link,
-            .dropdown-toggle,
-            .nav-item-cdu {
-              margin-top: 0;
-            }
+          .nav-item .nav-link,
+          .nav-item .dropdown-toggle,
+          .nav-item .nav-item-cdu {
+            margin-top: 0;
+          }
 
-            .nav-link::before {
-              float: right;
-              margin-right: 1.25rem;
-              font-family: icon-orange;
-              font-size: $font-size-base;
-              font-weight: normal;
-              color: #fff;
-              content: "\e93e";
-            }
+          .nav-item .nav-link::before {
+            float: right;
+            margin-right: 1.25rem;
+            font-family: icon-orange;
+            font-size: $font-size-base;
+            font-weight: normal;
+            color: #fff;
+            content: "\e93e";
+          }
 
-            .nav-link.active::before {
-              display: none;
-            }
+          .nav-item .nav-link.active::before {
+            display: none;
+          }
 
-            .nav-link.icon {
-              padding: .625rem;
-              margin-top: 0;
-            }
+          .nav-item .nav-link.icon {
+            padding: .625rem;
+            margin-top: 0;
           }
 
           .nav-item > .nav-link {
@@ -331,36 +328,35 @@
 
             padding: 0;
             margin-top: 0;
-
-            &.icon {
-              padding: .78125rem .625rem;
-              margin-top: 0;
-            }
+          }
+          .nav-item > .nav-link.icon {
+            padding: .78125rem .625rem;
+            margin-top: 0;
           }
 
           .nav-item.dropdown {
             padding: 0;
+          }
 
-            .dropdown-toggle,
-            .dropdown-menu .dropdown-item {
-              padding: 1rem 0 1rem .625rem;
-            }
+          .nav-item.dropdown .dropdown-toggle,
+          .nav-item.dropdown .dropdown-item {
+            padding: 1rem 0 1rem .625rem;
+          }
 
-            .dropdown-toggle:focus {
-              outline: 0;
-            }
+          .nav-item.dropdown .dropdown-toggle:focus {
+            outline: 0;
+          }
 
-            .dropdown-toggle::after {
-              float: right;
-              margin-top: .5rem;
-              margin-right: 1.25rem;
-            }
+          .nav-item.dropdown .dropdown-toggle::after {
+            float: right;
+            margin-top: .5rem;
+            margin-right: 1.25rem;
+          }
 
-            .dropdown-menu .dropdown-item {
-              color: #fff;
-              background-color: #000;
-              border-top: 1px solid $gray-dark;
-            }
+          .nav-item.dropdown .dropdown-item {
+            color: #fff;
+            background-color: #000;
+            border-top: 1px solid $gray-dark;
           }
         }
       }
