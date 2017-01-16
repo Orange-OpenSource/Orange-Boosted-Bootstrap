@@ -16,581 +16,581 @@
     
         {
             "title" : "Accessibility",
-            "url"   : "/getting-started/accessibility/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/accessibility/"
         } ,
     
 
     
         {
             "title" : "Alerts",
-            "url"   : "/components/alerts/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/alerts/"
         } ,
     
 
     
         {
             "title" : "Approach",
-            "url"   : "/extend/approach/"
+            "url"   : "http://boosted.orange.com/v4-alpha/extend/approach/"
         } ,
     
 
     
         {
             "title" : "Badges",
-            "url"   : "/components/badge/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/badge/"
         } ,
     
 
     
         {
             "title" : "Best practices",
-            "url"   : "/getting-started/best-practices/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/best-practices/"
         } ,
     
 
     
         {
             "title" : "Boosted history",
-            "url"   : "/about/boosted-history/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/boosted-history/"
         } ,
     
 
     
         {
             "title" : "Boosted license FAQs",
-            "url"   : "/about/boosted-license/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/boosted-license/"
         } ,
     
 
     
         {
             "title" : "Boostwatch",
-            "url"   : "/boostwatch/"
+            "url"   : "http://boosted.orange.com/v4-alpha/boostwatch/"
         } ,
     
 
     
         {
             "title" : "Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework.",
-            "url"   : "/"
+            "url"   : "http://boosted.orange.com/v4-alpha/"
         } ,
     
 
     
         {
             "title" : "Borders",
-            "url"   : "/utilities/borders/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/borders/"
         } ,
     
 
     
         {
             "title" : "Brand guidelines",
-            "url"   : "/about/brand/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/brand/"
         } ,
     
 
     
         {
             "title" : "Breadcrumb",
-            "url"   : "/components/breadcrumb/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/breadcrumb/"
         } ,
     
 
     
         {
             "title" : "Browsers and devices",
-            "url"   : "/getting-started/browsers-devices/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/browsers-devices/"
         } ,
     
 
     
         {
             "title" : "Build tools",
-            "url"   : "/getting-started/build-tools/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/build-tools/"
         } ,
     
 
     
         {
             "title" : "Button group",
-            "url"   : "/components/button-group/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/button-group/"
         } ,
     
 
     
         {
             "title" : "Buttons",
-            "url"   : "/components/buttons/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/buttons/"
         } ,
     
 
     
         {
             "title" : "Cards",
-            "url"   : "/components/card/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/card/"
         } ,
     
 
     
         {
             "title" : "Carousel",
-            "url"   : "/components/carousel/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/carousel/"
         } ,
     
 
     
         {
             "title" : "Clearfix",
-            "url"   : "/utilities/clearfix/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/clearfix/"
         } ,
     
 
     
         {
             "title" : "Close icon",
-            "url"   : "/utilities/close-icon/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/close-icon/"
         } ,
     
 
     
         {
             "title" : "Code",
-            "url"   : "/content/code/"
+            "url"   : "http://boosted.orange.com/v4-alpha/content/code/"
         } ,
     
 
     
         {
             "title" : "Collapse",
-            "url"   : "/components/collapse/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/collapse/"
         } ,
     
 
     
         {
             "title" : "Colors",
-            "url"   : "/utilities/colors/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/colors/"
         } ,
     
 
     
         {
             "title" : "Contents",
-            "url"   : "/getting-started/contents/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/contents/"
         } ,
     
 
     
         {
             "title" : "Customization options",
-            "url"   : "/getting-started/options/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/options/"
         } ,
     
 
     
         {
             "title" : "Display property",
-            "url"   : "/utilities/display-property/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/display-property/"
         } ,
     
 
     
         {
             "title" : "Download",
-            "url"   : "/getting-started/download/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/download/"
         } ,
     
 
     
         {
             "title" : "Dropdowns",
-            "url"   : "/components/dropdowns/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/dropdowns/"
         } ,
     
 
     
         {
             "title" : "Examples",
-            "url"   : "/examples/"
+            "url"   : "http://boosted.orange.com/v4-alpha/examples/"
         } ,
     
 
     
         {
             "title" : "Extend",
-            "url"   : "/extend/"
+            "url"   : "http://boosted.orange.com/v4-alpha/extend/"
         } ,
     
 
     
         {
             "title" : "Figures",
-            "url"   : "/content/figures/"
+            "url"   : "http://boosted.orange.com/v4-alpha/content/figures/"
         } ,
     
 
     
         {
             "title" : "Flexbox",
-            "url"   : "/utilities/flexbox/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/flexbox/"
         } ,
     
 
     
         {
             "title" : "Forms",
-            "url"   : "/components/forms/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/forms/"
         } ,
     
 
     
         {
             "title" : "Grid system",
-            "url"   : "/layout/grid/"
+            "url"   : "http://boosted.orange.com/v4-alpha/layout/grid/"
         } ,
     
 
     
         {
             "title" : "History",
-            "url"   : "/about/history/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/history/"
         } ,
     
 
     
         {
             "title" : "Icon fonts",
-            "url"   : "/extend/icon-fonts/"
+            "url"   : "http://boosted.orange.com/v4-alpha/extend/icon-fonts/"
         } ,
     
 
     
         {
             "title" : "Image replacement",
-            "url"   : "/utilities/image-replacement/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/image-replacement/"
         } ,
     
 
     
         {
             "title" : "Images",
-            "url"   : "/content/images/"
+            "url"   : "http://boosted.orange.com/v4-alpha/content/images/"
         } ,
     
 
     
         {
             "title" : "Input group",
-            "url"   : "/components/input-group/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/input-group/"
         } ,
     
 
     
         {
             "title" : "Introduction",
-            "url"   : "/getting-started/introduction/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/introduction/"
         } ,
     
 
     
         {
             "title" : "Invisible content",
-            "url"   : "/utilities/invisible-content/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/invisible-content/"
         } ,
     
 
     
         {
             "title" : "JavaScript",
-            "url"   : "/getting-started/javascript/"
+            "url"   : "http://boosted.orange.com/v4-alpha/getting-started/javascript/"
         } ,
     
 
     
         {
             "title" : "Jumbotron",
-            "url"   : "/components/jumbotron/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/jumbotron/"
         } ,
     
 
     
         {
             "title" : "License FAQs",
-            "url"   : "/about/license/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/license/"
         } ,
     
 
     
         {
             "title" : "List group",
-            "url"   : "/components/list-group/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/list-group/"
         } ,
     
 
     
         {
             "title" : "Local navigation",
-            "url"   : "/components/local-navigation/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/local-navigation/"
         } ,
     
 
     
         {
             "title" : "Media object",
-            "url"   : "/layout/media-object/"
+            "url"   : "http://boosted.orange.com/v4-alpha/layout/media-object/"
         } ,
     
 
     
         {
             "title" : "Migrating to boosted v4",
-            "url"   : "/boosted-migration/"
+            "url"   : "http://boosted.orange.com/v4-alpha/boosted-migration/"
         } ,
     
 
     
         {
             "title" : "Migrating to v4",
-            "url"   : "/migration/"
+            "url"   : "http://boosted.orange.com/v4-alpha/migration/"
         } ,
     
 
     
         {
             "title" : "Modal",
-            "url"   : "/components/modal/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/modal/"
         } ,
     
 
     
         {
             "title" : "Navbar",
-            "url"   : "/components/navbar/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/navbar/"
         } ,
     
 
     
         {
             "title" : "Navs",
-            "url"   : "/components/navs/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/navs/"
         } ,
     
 
     
         {
             "title" : "Orange brand guidelines",
-            "url"   : "/about/orange-brand/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/orange-brand/"
         } ,
     
 
     
         {
             "title" : "Orange footer",
-            "url"   : "/components/orange-footer/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-footer/"
         } ,
     
 
     
         {
             "title" : "Orange links",
-            "url"   : "/components/orange-links/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-links/"
         } ,
     
 
     
         {
             "title" : "Orange list",
-            "url"   : "/components/orange-list/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-list/"
         } ,
     
 
     
         {
             "title" : "Orange megamenu",
-            "url"   : "/components/orange-megamenu/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-megamenu/"
         } ,
     
 
     
         {
             "title" : "Orange navbar",
-            "url"   : "/components/navbar-orange/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/navbar-orange/"
         } ,
     
 
     
         {
             "title" : "Orange popin",
-            "url"   : "/components/orange-popin/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-popin/"
         } ,
     
 
     
         {
             "title" : "Orange tables",
-            "url"   : "/components/orange-tables/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/orange-tables/"
         } ,
     
 
     
         {
             "title" : "Overview",
-            "url"   : "/layout/overview/"
+            "url"   : "http://boosted.orange.com/v4-alpha/layout/overview/"
         } ,
     
 
     
         {
             "title" : "Pagination",
-            "url"   : "/components/pagination/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/pagination/"
         } ,
     
 
     
         {
             "title" : "Popovers",
-            "url"   : "/components/popovers/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/popovers/"
         } ,
     
 
     
         {
             "title" : "Position",
-            "url"   : "/utilities/position/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/position/"
         } ,
     
 
     
         {
             "title" : "Progress",
-            "url"   : "/components/progress/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/progress/"
         } ,
     
 
     
         {
             "title" : "Reboot",
-            "url"   : "/content/reboot/"
+            "url"   : "http://boosted.orange.com/v4-alpha/content/reboot/"
         } ,
     
 
     
         {
             "title" : "Responsive helpers",
-            "url"   : "/utilities/responsive-helpers/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/responsive-helpers/"
         } ,
     
 
     
         {
             "title" : "Responsive utilities",
-            "url"   : "/layout/responsive-utilities/"
+            "url"   : "http://boosted.orange.com/v4-alpha/layout/responsive-utilities/"
         } ,
     
 
     
         {
             "title" : "Screenreaders",
-            "url"   : "/utilities/screenreaders/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/screenreaders/"
         } ,
     
 
     
         {
             "title" : "Scroll up",
-            "url"   : "/components/scroll-up/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/scroll-up/"
         } ,
     
 
     
         {
             "title" : "Scrollspy",
-            "url"   : "/components/scrollspy/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/scrollspy/"
         } ,
     
 
     
         {
             "title" : "Sizing",
-            "url"   : "/utilities/sizing/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/sizing/"
         } ,
     
 
     
         {
             "title" : "Spacing",
-            "url"   : "/utilities/spacing/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/spacing/"
         } ,
     
 
     
         {
             "title" : "Stepbar",
-            "url"   : "/components/stepbar/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/stepbar/"
         } ,
     
 
     
         {
             "title" : "Switches",
-            "url"   : "/components/switches/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/switches/"
         } ,
     
 
     
         {
             "title" : "Tables",
-            "url"   : "/content/tables/"
+            "url"   : "http://boosted.orange.com/v4-alpha/content/tables/"
         } ,
     
 
     
         {
             "title" : "Team",
-            "url"   : "/about/team/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/team/"
         } ,
     
 
     
         {
             "title" : "Tooltips",
-            "url"   : "/components/tooltips/"
+            "url"   : "http://boosted.orange.com/v4-alpha/components/tooltips/"
         } ,
     
 
     
         {
             "title" : "Translations",
-            "url"   : "/about/translations/"
+            "url"   : "http://boosted.orange.com/v4-alpha/about/translations/"
         } ,
     
 
     
         {
             "title" : "Typography",
-            "url"   : "/content/typography/"
+            "url"   : "http://boosted.orange.com/v4-alpha/content/typography/"
         } ,
     
 
     
         {
             "title" : "Typography",
-            "url"   : "/utilities/typography/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/typography/"
         } ,
     
 
     
         {
             "title" : "Vertical alignment",
-            "url"   : "/utilities/vertical-align/"
+            "url"   : "http://boosted.orange.com/v4-alpha/utilities/vertical-align/"
         } ,
     
 
     
         {
             "title" : "Wall of browser bugs",
-            "url"   : "/browser-bugs/"
+            "url"   : "http://boosted.orange.com/v4-alpha/browser-bugs/"
         } 
     
 
