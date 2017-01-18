@@ -11,6 +11,7 @@
 
 .navbar {
   min-height: $navbar-height;
+  height: $navbar-height; // IE flex support
   padding: 0;
   font-size: $font-size-base;
 
@@ -30,8 +31,9 @@
       outline-offset: .625rem;
     }
 
-    display: flex;
-    align-items: flex-end;
+    // display: flex;
+    // align-items: flex-end;
+    display: inline-block;
     padding: 0;
     margin: 0;
     font-size: 1rem;
@@ -166,6 +168,7 @@
 
 .navbar.minimized {
   min-height: $navbar-height-minimized;
+  height: $navbar-height-minimized; // IE flex support
 
   .nav-link {
     margin-top: 0;
@@ -184,6 +187,7 @@
   }
 
   min-height: $navbar-supra-height;
+  height: $navbar-supra-height; // IE flex support
   font-size: $font-size-sm;
   border-bottom: 1px solid $gray-dark;
 
@@ -229,13 +233,14 @@
         &,
         &.minimized {
           min-height: $navbar-height-sm;
+          height: $navbar-height-sm; // IE flex support
 
           &.supra {
             display: none;
           }
 
           .navbar-brand {
-            align-self: flex-start;
+            // align-self: flex-start;
             margin-left: .625rem;
             font-size: $font-size-sm;
           }
