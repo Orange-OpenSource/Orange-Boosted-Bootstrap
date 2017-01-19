@@ -40,14 +40,15 @@ const MegaMenu = (($) => {
 
   const Selector = {
     MEGAMENU    : '.mega-menu',
+    MEGAMENU_COLLAPSE_ACTIVE : '.mega-menu > .collapse.show',
     MEGAMENU_TITLE_L1 : '.mega-menu h2',
     MEGAMENU_TITLE_L2 : '.mega-menu h3',
     MEGAMENU_FOOTER : '.mega-menu .footer',
-    NAVBAR : 'header .navbar-toggleable-xs.collapse',
+    NAVBAR : 'header .navbar.collapse',
     NAVBAR_TOGGLER : 'header .navbar-toggler',
-    NAVBAR_ITEM : 'header .navbar-toggleable-xs.collapse .nav-item',
-    NAVBAR_ITEM_FOLDED : 'header .navbar-toggleable-xs.collapse .nav-item.folded a[data-toggle="collapse"]',
-    NAVBAR_ITEM_MEGAMENU_TOGGLE   : 'header .navbar-toggleable-xs.collapse .nav-item .nav-link[data-toggle="collapse"]'
+    NAVBAR_ITEM : 'header .navbar.collapse .nav-item',
+    NAVBAR_ITEM_FOLDED : 'header .navbar.collapse .nav-item.folded a[data-toggle="collapse"]',
+    NAVBAR_ITEM_MEGAMENU_TOGGLE   : 'header .navbar .nav-item .nav-link[data-toggle="collapse"]'
   }
 
 
@@ -109,6 +110,12 @@ const MegaMenu = (($) => {
   }
 
   $(document).ready(() => {
+
+    $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).on('click', function () {
+      $thisCollapse = $($(this).attr('href'))
+
+      Collapse._jQueryInterface.call($(Selector.MEGAMENU_COLLAPSE_ACTIVE).not($thisCollapse), 'hide')
+    })
 
     if (window.innerWidth < Dimension.MEDIA_BP_SM) {
 
