@@ -233,14 +233,18 @@
         &,
         &.minimized {
           min-height: $navbar-height-sm;
-          height: $navbar-height-sm; // IE flex support
+          height: auto;
+          display: inline-block;
+          width: 100%;
 
           &.supra {
             display: none;
           }
 
           .navbar-brand {
-            // align-self: flex-start;
+            @include focus {
+              outline-offset: .5rem;
+            }
             margin-left: .625rem;
             font-size: $font-size-sm;
           }
@@ -251,7 +255,7 @@
           > .container {
             display: block;
             width: 100%;
-            padding-top: .625rem;
+            padding: .625rem 0;
             margin: 0;
           }
 
