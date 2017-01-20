@@ -68,14 +68,14 @@
             </nav>
 
 			<nav class="navbar navbar-toggleable-sm navbar-inverse">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarHead">
-                  <span class="sr-only">toggle navigation</span>
-                  <span class="icon-menu"></span>
-              </button>
               <div class="container" >
                 <a class="navbar-brand" href>
                     <img src="dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage"/>
                 </a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarHead">
+                  <span class="sr-only">toggle navigation</span>
+                  <span class="icon-menu"></span>
+              	</button>
                 <div class="navbar-collapse collapse" id="collapsingNavbarHead">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -84,7 +84,7 @@
                                 <div class="container">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link head" href id="link_1">Mobile</a>
+                                            <a class="nav-link" href id="link_1">Mobile</a>
                                             <ul class="navbar-nav sub">
                                                 <li class="nav-item"><a class="nav-link back" href id="back_link_1">Mobile</a></li>
                                                 <li class="nav-item"><a class="nav-link" href>Phones</a></li>
@@ -93,7 +93,7 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link head" href id="link_2">Internet</a>
+                                            <a class="nav-link" href id="link_2">Internet</a>
                                             <ul class="navbar-nav sub">
                                                 <li class="nav-item"><a class="nav-link back" href id="back_link_2">Internet</a></li>
                                                 <li class="nav-item"><a class="nav-link" href>Pay monthly offers</a></li>
@@ -101,7 +101,7 @@
                                                 <li class="nav-item"><a class="nav-link" href>Orange TV</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link head" href>Link 3</a></li>
+                                        <li class="nav-item"><a class="nav-link" href>Link 3</a></li>
                                     </ul>
                                     <a data-toggle="collapse" href="#mega_level_1_collapse" aria-expanded="true" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete"></span></a>
                                 </div>
@@ -553,32 +553,33 @@
 
             $(document).ready(function(){
               $('header').navbar({sticky: true, hideSupra: true});
-              $('.mega-menu.panel').megamenu();
+              $('.mega-menu').megamenu();
 
 			  $('a').on('click', function(e){
 				e.preventDefault();
 			});
 
-			  $('#link_1').on('click', function(){
-					$('.navbar-collapse > .navbar-nav').css('transform', 'translateX(-100%)');
+			/* custom nav */
+			if (window.innerWidth < 768) {
+
+			  $('#link_1, #link_2').on('click', function(){
+
 					$('.navbar-nav.sub').hide();
 					$(this).next('.navbar-nav.sub').show();
-				});
-
-				$('#back_link_1').on('click', function(){
-					$('.navbar-collapse > .navbar-nav').css('transform', 'translateX(0)');
-				});
-
-				$('#link_2').on('click', function(){
+					$(this).next('.navbar-nav.sub').find('.nav-link').attr('tabindex', '0');
+					$('.navbar-collapse > .navbar-nav').one('transitionend', function() {
+						$('.navbar-nav.sub:visible').find('.nav-link.back').trigger('focus');
+					});
 					$('.navbar-collapse > .navbar-nav').css('transform', 'translateX(-100%)');
-					$('.navbar-nav.sub').hide();
-					$(this).next('.navbar-nav.sub').show();
+					// $(this).next('.navbar-nav.sub').find('.nav-link.back').trigger('focus');
 				});
 
-				$('#back_link_2').on('click', function(){
-					$('.navbar-collapse > .navbar-nav').css('transform', 'translateX(0)');
+				$('#back_link_1, #back_link_2').on('click', function(){
+					$('.navbar-collapse > .navbar-nav').css('transform', 'none');
+					$(this).closest('.navbar-nav.sub').find('.nav-link').attr('tabindex', '-1');
+					$(this).closest('.navbar-nav.sub').prev('.nav-link').trigger('focus');
 				});
-
+			}
             });
 		</script>
 

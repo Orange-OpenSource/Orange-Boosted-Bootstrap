@@ -225,10 +225,10 @@ footer a, footer span {
         flex-direction: column;
     }
 
-    #mega_level_1_collapse .nav-link.head {
+    /*#mega_level_1_collapse .nav-link.head {
         font-size: 20px;
         margin-bottom: 1rem;
-    }
+    }*/
 
     #mega_level_1_collapse .navbar-nav.sub .nav-link {
         line-height: 20px;
@@ -241,8 +241,18 @@ footer a, footer span {
 }
 
 @media (max-width: 767px) {
-    .navbar-toggleable-sm .nav-item {
-        padding-left: 0;
+    /* cancel position fixed on mobile */
+    body {
+      padding-top: 0 !important;
+    }
+
+    header.fixed-header {
+      position: static;
+    }
+
+    .navbar-toggleable-sm {
+      display: inline-block;
+      width: 100%;
     }
 
     .navbar-collapse > .navbar-nav,
@@ -251,13 +261,13 @@ footer a, footer span {
     }
 
     .navbar-collapse {
-        position: absolute;
+        position: relative;
         background-color: #000;
         overflow: hidden;
     }
 
     .navbar-collapse > .navbar-nav {
-        transform: translateX(0);
+        transform: none;
     }
 
     #collapsingNavbarHead .nav-link[data-toggle="collapse"]::before {
