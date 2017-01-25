@@ -20,11 +20,11 @@ Orange navbar is the main navigation of project website. It should always be inc
 <header role="banner">
     <nav class="navbar navbar-inverse navbar-toggleable-sm">
         <div class="container">
+            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="sr-only">toggle navigation</span>
                 <span class="icon-menu"></span>
             </button>
-            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <div class="navbar-collapse collapse" id="collapsingNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
@@ -129,11 +129,11 @@ A supra bar should never be used on its own and always be included in header and
     </nav>
     <nav class="navbar navbar-inverse navbar-toggleable-sm">
         <div class="container">
+            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
                 <span class="sr-only">toggle navigation</span>
                 <span class="icon-menu"></span>
             </button>
-            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <div class="navbar-collapse collapse" id="collapsingNavbar2">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>

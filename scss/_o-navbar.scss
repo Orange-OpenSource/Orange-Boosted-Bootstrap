@@ -54,6 +54,10 @@
     align-self: flex-end;
   }
 
+  .navbar-nav {
+    align-items: flex-end;
+  }
+
   .navbar-nav + .navbar-nav {
     margin-left: auto; // pull second navbar-nav to right
   }
