@@ -10,8 +10,8 @@
 }
 
 .navbar {
-  min-height: $navbar-height;
   height: $navbar-height; // IE flex support
+  min-height: $navbar-height;
   padding: 0;
   font-size: $font-size-base;
 
@@ -167,8 +167,8 @@
 }
 
 .navbar.minimized {
-  min-height: $navbar-height-minimized;
   height: $navbar-height-minimized; // IE flex support
+  min-height: $navbar-height-minimized;
 
   .nav-link {
     margin-top: 0;
@@ -186,8 +186,8 @@
     display: none;
   }
 
-  min-height: $navbar-supra-height;
   height: $navbar-supra-height; // IE flex support
+  min-height: $navbar-supra-height;
   font-size: $font-size-sm;
   border-bottom: 1px solid $gray-dark;
 
@@ -232,10 +232,10 @@
       @include media-breakpoint-down($breakpoint) {
         &,
         &.minimized {
-          min-height: $navbar-height-sm;
-          height: auto;
           display: inline-block;
           width: 100%;
+          height: auto;
+          min-height: $navbar-height-sm;
 
           &.supra {
             display: none;
