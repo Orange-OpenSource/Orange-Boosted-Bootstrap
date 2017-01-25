@@ -48,7 +48,6 @@
 .white-header {
     background-color: #FFF;
     color: #000;
-    border-top: 1px solid #000;
 }
 
 .brand-spacing {
@@ -65,6 +64,10 @@
 }
 .navbar-inverse #id_for_cdu_link a:hover,.navbar-inverse #id_for_cdu_link a:focus{
     color: #F16E00;
+}
+
+footer {
+    background-color: #000;
 }
 
 @media (max-width: 991px) {
