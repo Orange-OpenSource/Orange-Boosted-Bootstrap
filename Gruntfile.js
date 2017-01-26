@@ -145,6 +145,10 @@ module.exports = function (grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       /* boosted mod */
+      vendorsCss: {
+        src: ['dist/css/boosted.css', 'bower_components/slick-carousel/slick/slick.css'],
+        dest: 'dist/css/boosted.css'
+      },
       rtlCss: {
         src: ['dist/css/boosted-rtl.css', 'dist/css/o-rtl.css'],
         dest: 'dist/css/boosted-rtl.css'
@@ -226,8 +230,9 @@ module.exports = function (grunt) {
       },
       vendorsjs: {
         expand: true,
-        cwd: 'bower_components/jquery.tablesorter/dist/js/',
-        src: ['*'],
+        flatten: true,
+        cwd: 'bower_components/',
+        src: ['jquery.tablesorter/dist/js/jquery.tablesorter.min.js', 'slick-carousel/slick/slick.min.js'],
         dest: 'dist/js/vendors/'
         /* end mod */
       }
@@ -573,10 +578,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test-scss', ['exec:scss-lint'])
 
-  // CSS distribution task.  
+  // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
+  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'concat:vendorsCss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
 
   // Full distribution task.
   /* boosted mod */
@@ -589,8 +594,8 @@ module.exports = function (grunt) {
   grunt.registerTask('docs-css', ['exec:sass-docs','exec:clean-css-docs', 'exec:postcss-docs'])
   grunt.registerTask('lint-docs-css', ['exec:scss-lint-docs'])
   /* boosted mod */
-  grunt.registerTask('docs-js', ['concat:docsJs', 'exec:uglify-docs'])  
-  grunt.registerTask('docs', ['copy:tmpdocs','lint-docs-css','docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl','copy:docs', 'jekyll:docs', 'replace'])
+  grunt.registerTask('docs-js', ['concat:docsJs', 'exec:uglify-docs'])
+  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl','copy:docs', 'jekyll:docs', 'replace'])
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github'])
 

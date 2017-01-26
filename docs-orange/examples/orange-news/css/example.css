@@ -205,8 +205,9 @@ footer a, footer span {
         margin-left: 0;
     }
 
-    #mega_level_1_collapse .navbar-nav:not(.sub) {
+    #mega_level_1_collapse .navbar-nav {
         flex-direction: row;
+        align-items: flex-start;
     }
 
     #mega_level_1_collapse .navbar-nav:not(.sub) .nav-item {
@@ -267,7 +268,7 @@ footer a, footer span {
     }
 
     .navbar-collapse > .navbar-nav {
-        transform: none;
+        transform: translateX(0);
     }
 
     #collapsingNavbarHead .nav-link[data-toggle="collapse"]::before {
@@ -309,8 +310,8 @@ footer a, footer span {
     #mega_level_1_collapse .navbar-nav.sub {
         position: absolute;
         top: 0px;
+        left: 100%;
         width: 100%;
-        transform: translateX(100%);
         background-color: #000;
         display: none;
         border-top: 1px solid #333;
