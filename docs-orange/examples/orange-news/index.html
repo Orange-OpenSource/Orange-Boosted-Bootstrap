@@ -76,25 +76,25 @@
                   <span class="sr-only">toggle navigation</span>
                   <span class="icon-menu"></span>
               	</button>
-                <div class="navbar-collapse collapse" id="collapsingNavbarHead">
+                <div class="mega-menu navbar-collapse collapse" id="collapsingNavbarHead">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link collapsed" href="#mega_level_1_collapse" data-toggle="collapse">Shop</a>
-                            <div class="collapse" id="mega_level_1_collapse">
+                            <div class="mega-menu-panel collapse" id="mega_level_1_collapse">
                                 <div class="container">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link head" href id="link_1">Mobile</a>
-                                            <ul class="navbar-nav sub">
-                                                <li class="nav-item"><a class="nav-link back" href id="back_link_1">Mobile</a></li>
+                                            <a class="nav-link" href="">Mobile</a>
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item"><a class="nav-link back" href="">Mobile</a></li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href id="sublink_1">Phones</a>
-                                                    <ul class="navbar-nav sub">
-                                                        <li class="nav-item"><a class="nav-link back" href id="back_sublink_1">Phones</a></li>
+                                                    <a class="nav-link" href="">Phones</a>
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link back" href="">Phones</a></li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href id="subsublink_1">Sub link 1</a>
-                                                            <ul class="navbar-nav sub">
-                                                                <li class="nav-item"><a class="nav-link back" href id="back_subsublink_1">Sub link 1</a></li>
+                                                            <a class="nav-link" href="">Sub link 1</a>
+                                                            <ul class="navbar-nav">
+                                                                <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href>Sub sub link 1</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href>Sub sub link 2</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href>Sub sub link 3</a></li>
@@ -109,17 +109,17 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link head" href id="link_2">Internet</a>
-                                            <ul class="navbar-nav sub">
-                                                <li class="nav-item"><a class="nav-link back" href id="back_link_2">Internet</a></li>
+                                            <a class="nav-link" href="">Internet</a>
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item"><a class="nav-link back" href="">Internet</a></li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href id="sublink_2">Pay monthly offers</a>
-                                                    <ul class="navbar-nav sub">
-                                                        <li class="nav-item"><a class="nav-link back" href id="back_sublink_1">Pay monthly offers</a></li>
+                                                    <a class="nav-link" href="">Pay monthly offers</a>
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item"><a class="nav-link back" href="">Pay monthly offers</a></li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href id="subsublink_2">Sub link 1</a>
-                                                            <ul class="navbar-nav sub">
-                                                                <li class="nav-item"><a class="nav-link back" href id="back_subsublink_2">Sub link 1</a></li>
+                                                            <a class="nav-link" href="">Sub link 1</a>
+                                                            <ul class="navbar-nav">
+                                                                <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href>Sub sub link 1</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href>Sub sub link 2</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href>Sub sub link 3</a></li>
@@ -133,14 +133,14 @@
                                                 <li class="nav-item"><a class="nav-link" href>Orange TV</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link head" href>Link 3</a></li>
+                                        <li class="nav-item"><a class="nav-link" href>Link 3</a></li>
                                     </ul>
                                     <a data-toggle="collapse" href="#mega_level_1_collapse" aria-expanded="true" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete"></span></a>
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link collapsed" href data-toggle="collapse">Discover</a></li>
-                        <li class="nav-item"><a class="nav-link collapsed" href data-toggle="collapse">My Orange</a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="" data-toggle="collapse">Discover</a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="" data-toggle="collapse">My Orange</a></li>
                     </ul>
                 </div>
             </div>
@@ -477,78 +477,13 @@
 			}
 
             $(document).ready(function(){
-              $('header').navbar({sticky: true, hideSupra: true});
-              $('.mega-menu').megamenu();
+              $('header').navbar({sticky: false, hideSupra: true});
+			  $('#collapsingNavbarHead').megamenu();
 
-			  $('a').on('click', function(e){
-				e.preventDefault();
-			});
-
-			  /* custom nav */
-			  if (window.innerWidth < 768) {
-				$('#link_1, #link_2, #sublink_1, #subsublink_1, #sublink_2, #subsublink_2').on('click', function(){
-					var $thisNav = $(this).closest('.navbar-nav');
-					var $targetNav =  $(this).next('.navbar-nav.sub');
-					var $rootNav = $('.navbar-collapse > .navbar-nav');
-					var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
-					var navWidth = $rootNav.width();
-
-					if($rootNav.hasClass('transitioning')) {
-						return false;
-					}
-
-					// hide all nav on same level
-					$thisNav.find('.navbar-nav.sub').hide();
-
-					// show target navbar-nav
-					$targetNav.show();
-
-					// make only visible elements focusable
-					$rootNav.find('>.nav-item .nav-link').attr('tabindex', '-1');
-					$thisNav.find('.nav-link').attr('tabindex', '-1');
-					$targetNav.find('.nav-link').attr('tabindex', '0');
-
-					// translate menu
-					$rootNav.addClass('transitioning');
-					$rootNav.css('transform', 'translateX('+(currentTranslatePos - navWidth)+'px)');
-
-					// focus on target nav first item
-					$rootNav.one('transitionend', function() {
-					$rootNav.removeClass('transitioning');
-					$targetNav.find('.nav-link').first().trigger('focus');
-					});
-				});
-
-				$('#back_link_1, #back_link_2, #back_sublink_1, #back_subsublink_1, #back_sublink_2, #back_subsublink_2').on('click', function(){
-					var $thisNav = $(this).closest('.navbar-nav.sub');
-					var $targetNav = $thisNav.parent().closest('.navbar-nav');
-					var $rootNav = $('.navbar-collapse > .navbar-nav');
-					var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
-					var navWidth = $rootNav.width();
-
-					if($rootNav.hasClass('transitioning')) {
-						return false;
-					}
-
-					// make only visible elements focusable
-					$targetNav.find('.nav-link').attr('tabindex', '0');
-					if(currentTranslatePos === -navWidth) {
-						$rootNav.find('>.nav-item .nav-link').attr('tabindex', '0');
-					}
-					$thisNav.find('.nav-link').attr('tabindex', '-1');
-
-					// translate menu
-					$rootNav.addClass('transitioning');
-					$rootNav.css('transform', 'translateX('+(currentTranslatePos + navWidth)+'px)');
-
-					// focus on target nav first item
-					$rootNav.one('transitionend', function() {
-					$rootNav.removeClass('transitioning');
-					$targetNav.find('.nav-link').first().trigger('focus');
-					});
-				});
-			   }
-    		});
+			//   $('a').on('click', function(e){
+			// 	e.preventDefault();
+			// 	});
+		   });
 		</script>
 
 		<!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
