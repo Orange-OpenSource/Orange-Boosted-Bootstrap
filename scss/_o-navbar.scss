@@ -195,6 +195,11 @@
   font-size: $font-size-sm;
   border-bottom: 1px solid $gray-dark;
 
+  > .container,
+  > .container .navbar-nav {
+    align-items: center;
+  }
+
   .navbar-brand {
     display: none;
   }
@@ -236,92 +241,6 @@
   }
 }
 
-@include media-breakpoint-up(md) {
-  .navbar{
-    .mega-menu > .navbar-nav {
-        transition: none;
-        transform: none;
-    }
-
-    .mega-menu-panel {
-      position: absolute;
-      z-index: 2000;
-      left: 0;
-      top: 100px;
-      width: 100%;
-      background-color: #000;
-      padding: 1rem 0;
-      border-top: 1px solid #333;
-
-      > .container > .navbar-nav {
-        flex-direction: row;
-        align-items: flex-start;
-
-        > .nav-item {
-          flex-grow: 1;
-          padding: 1rem 0;
-        }
-
-        > .nav-item > .nav-link {
-          font-size: 1.25rem;
-          margin-bottom: 1rem;
-        }
-
-        .navbar-nav {
-          position: static;
-          display: block;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .navbar-nav .nav-link {
-          line-height: 1.25rem;
-        }
-
-        .nav-item:first-child,
-        .nav-item + .nav-item {
-          margin-left: 0;
-        }
-
-        .nav-link {
-          color: #fff;
-        }
-
-        .nav-link.back {
-          display: none;
-        }
-      }
-
-      a[data-toggle="collapse"] {
-        display: block;
-        color: #fff;
-        float: right;
-      }
-    }
-  }
-
-  .search-bar {
-    background-color: #000;
-    border-top: 1px solid $gray-dark;
-
-    .form-inline {
-      margin: 1.25rem 0;
-      .form-group {
-        width: 90%;
-
-        .form-control {
-          width: 100%;
-          padding-top: .625rem;
-          padding-bottom: .625rem;
-          color: #fff;
-          background-color: $gray-dark;
-          border: 0;
-        }
-      }
-    }
-  }
-}
-
 .navbar-toggleable {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
@@ -354,7 +273,7 @@
           > .container {
             display: block;
             width: 100%;
-            padding: .625rem 0;
+            padding: .625rem 0 0 0;
             margin: 0;
           }
 
@@ -498,8 +417,6 @@
           }
 
           .mega-menu-panel {
-            margin-top: 1rem;
-
             .nav-link.back {
               display: block;
             }
@@ -519,11 +436,88 @@
               }
             }
 
-            > .container > .navbar-nav .navbar-nav {
-              border-top: 1px solid #333;
+            > .container > .navbar-nav {
+              > .nav-item {
+                border: 0;
+              }
+
+              .navbar-nav .nav-item:last-child {
+                border-bottom: 1px solid #333;
+              }
             }
           }
         }
+      }
+
+      @include media-breakpoint-up($next) {
+        &{
+          .mega-menu {
+            overflow: visible;
+          }
+
+          .mega-menu > .navbar-nav {
+              transition: none;
+              transform: none;
+          }
+
+          .mega-menu-panel {
+            position: absolute;
+            z-index: 2000;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            background-color: #000;
+            padding: 1rem 0;
+            border-top: 1px solid #333;
+
+            > .container > .navbar-nav {
+              flex-direction: row;
+              align-items: flex-start;
+
+              > .nav-item {
+                flex-grow: 1;
+                padding: 1rem 0;
+              }
+
+              > .nav-item > .nav-link {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+              }
+
+              .navbar-nav {
+                position: static;
+                display: block;
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              .navbar-nav .nav-link {
+                line-height: 1.25rem;
+              }
+
+              .nav-item:first-child,
+              .nav-item + .nav-item {
+                margin-left: 0;
+              }
+
+              .nav-link {
+                color: #fff;
+              }
+
+              .nav-link.back {
+                display: none;
+              }
+            }
+
+            a[data-toggle="collapse"] {
+              display: block;
+              color: #fff;
+              float: right;
+            }
+          }
+        }
+
+
       }
     }
   }

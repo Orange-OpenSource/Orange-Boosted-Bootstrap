@@ -134,7 +134,7 @@ const MegaMenu = (($) => {
     }
 
     _goBackward(e) {
-      e.preventDefault();
+      e.preventDefault()
 
       const $thisNav = $(this).closest(Selector.NAV_MENU)
       const $targetNav = $thisNav.parent().closest(Selector.NAV_MENU)
@@ -153,7 +153,6 @@ const MegaMenu = (($) => {
       if(currentTranslatePos === -navWidth) {
           $rootNav.find('>.nav-item .nav-link').attr('tabindex', '0')
       }
-      $thisNav.find(Selector.NAV_LINK).attr('tabindex', '-1')
 
       // handle expanded state
       $thisNavBackLink.attr('aria-expanded', false)
@@ -167,6 +166,7 @@ const MegaMenu = (($) => {
         $rootNav.removeClass(ClassName.TRANSITIONING)
         $targetNav.find(Selector.NAV_LINK).first().trigger('focus')
         $targetNavToggler.attr('aria-expanded', true)
+        $thisNav.hide()
       })
     }
 
