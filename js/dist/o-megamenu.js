@@ -26,33 +26,22 @@ var MegaMenu = function ($) {
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
 
-  var Event = {
-    MEGAMENU_SHOWN: 'shown.bs.collapse',
-    MEGAMENU_SHOW: 'show.bs.collapse',
-    MEGAMENU_HIDE: 'hide.bs.collapse'
-  };
+  var Event = {};
 
   var ClassName = {
-    FOLDED: 'folded',
-    NAVBAR_TOGGLE_ICON_OPEN: 'icon-menu',
-    NAVBAR_TOGGLE_ICON_CLOSE: 'icon-delete'
+    TRANSITIONING: 'transitioning'
   };
 
-  var Dimension = {
-    MEDIA_BP_SM: 544,
-    NAVBAR_HEIGHT_PX: '50px'
-  };
+  var Dimension = {};
 
   var Selector = {
     MEGAMENU: '.mega-menu',
-    MEGAMENU_TITLE_L1: '.mega-menu h2',
-    MEGAMENU_TITLE_L2: '.mega-menu h3',
-    MEGAMENU_FOOTER: '.mega-menu .footer',
-    NAVBAR: 'header .navbar-toggleable-xs.collapse',
-    NAVBAR_TOGGLER: 'header .navbar-toggler',
-    NAVBAR_ITEM: 'header .navbar-toggleable-xs.collapse .nav-item',
-    NAVBAR_ITEM_FOLDED: 'header .navbar-toggleable-xs.collapse .nav-item.folded a[data-toggle="collapse"]',
-    NAVBAR_ITEM_MEGAMENU_TOGGLE: 'header .navbar-toggleable-xs.collapse .nav-item .nav-link[data-toggle="collapse"]'
+    ROOT_NAV: '.mega-menu > .navbar-nav',
+    MEGAMENU_PANEL_NAV: '.mega-menu-panel > .container > .navbar-nav',
+    MEGAMENU_NAV: '.nav-link + .navbar-nav',
+    NAV_MENU: '.navbar-nav',
+    NAV_LINK: '.nav-link',
+    NAV_BACK_LINK: '.nav-link.back'
   };
 
   /**
@@ -66,7 +55,10 @@ var MegaMenu = function ($) {
       _classCallCheck(this, MegaMenu);
 
       this._element = element;
+      this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
+      this._$goBackLinks = $(Selector.NAV_BACK_LINK);
       this._addEventListeners();
+      this._addAriaAttributes(this._element);
     }
 
     // getters
@@ -74,16 +66,108 @@ var MegaMenu = function ($) {
     // public
 
     // private
+
     MegaMenu.prototype._addEventListeners = function _addEventListeners() {
-      // megamenu accessibility
-      $(this._element).on(Event.MEGAMENU_SHOWN, function () {
-        // set focus on first focusable link (ignore aria-hidden)
-        $(this).find('a:not([aria-hidden="true"]):first').trigger('focus');
+      this._$goForwardLinks.on('click', this._goForward);
+      this._$goBackLinks.on('click', this._goBackward);
+    };
+
+    MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
+      var $subNavs = $(element).find('.nav-link + .navbar-nav');
+
+      $subNavs.each(function () {
+        var navId = Util.getUID(NAME);
+        var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
+        var $thisNav = $(this);
+        var $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK);
+
+        $thisNav.attr('id', navId);
+        $thisNavToggler.attr({ 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        $thisNavBackLink.attr({ 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+      });
+    };
+
+    MegaMenu.prototype._goForward = function _goForward(e) {
+      e.preventDefault();
+
+      var $thisNav = $(this).closest(Selector.NAV_MENU);
+      var $targetNav = $(this).next(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+      var $thisNavToggler = $(this);
+      var $targetNavBackLink = $targetNav.find(Selector.NAV_BACK_LINK);
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
+      var navWidth = $rootNav.width();
+
+      if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
+        return false;
+      }
+
+      // hide all nav on same level
+      $thisNav.find(Selector.NAV_MENU).hide();
+
+      // show target navbar-nav
+      $targetNav.show();
+
+      // make only visible elements focusable
+      if (currentTranslatePos === 0) {
+        $rootNav.find('>.nav-item .nav-link').attr('tabindex', '-1');
+      }
+      $thisNav.find(Selector.NAV_LINK).attr('tabindex', '-1');
+      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0');
+
+      // handle expanded state
+      $thisNavToggler.attr('aria-expanded', false);
+
+      // translate menu
+      $rootNav.addClass(ClassName.TRANSITIONING);
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePos - navWidth) + 'px)');
+
+      // focus on target nav first item
+      $rootNav.one('transitionend', function () {
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+        $targetNav.find(Selector.NAV_LINK).first().trigger('focus');
+        $targetNavBackLink.attr('aria-expanded', true);
+      });
+    };
+
+    MegaMenu.prototype._goBackward = function _goBackward(e) {
+      e.preventDefault();
+
+      var $thisNav = $(this).closest(Selector.NAV_MENU);
+      var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+      var $targetNavToggler = $targetNav.prev(Selector.NAV_LINK);
+      var $thisNavBackLink = $(this);
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
+      var navWidth = $rootNav.width();
+
+      if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
+        return false;
+      }
+
+      // make only visible elements focusable
+      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0');
+      if (currentTranslatePos === -navWidth) {
+        $rootNav.find('>.nav-item .nav-link').attr('tabindex', '0');
+      }
+
+      // handle expanded state
+      $thisNavBackLink.attr('aria-expanded', false);
+
+      // translate menu
+      $rootNav.addClass(ClassName.TRANSITIONING);
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePos + navWidth) + 'px)');
+
+      // focus on target nav first item
+      $rootNav.one('transitionend', function () {
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+        $targetNav.find(Selector.NAV_LINK).first().trigger('focus');
+        $targetNavToggler.attr('aria-expanded', true);
+        $thisNav.hide();
       });
     };
 
     // static
-
 
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -116,71 +200,6 @@ var MegaMenu = function ($) {
 
     return MegaMenu;
   }();
-
-  $(document).ready(function () {
-
-    if (window.innerWidth < Dimension.MEDIA_BP_SM) {
-
-      $(Selector.MEGAMENU_TITLE_L2).on('click', function () {
-
-        if (!$(this).hasClass(ClassName.FOLDED)) {
-          $(Selector.MEGAMENU_TITLE_L1).hide();
-          $(Selector.MEGAMENU_TITLE_L2).not($(this)).hide();
-          $(this).next('ul').show();
-          $(Selector.MEGAMENU_FOOTER).hide();
-          $(this).addClass(ClassName.FOLDED);
-          $(Selector.MEGAMENU).css('top', Dimension.NAVBAR_HEIGHT_PX);
-        } else {
-          $(Selector.MEGAMENU_TITLE_L1).show();
-          $(Selector.MEGAMENU_TITLE_L2).not($(this)).show();
-          $(this).next('ul').hide();
-          $(Selector.MEGAMENU_FOOTER).show();
-          $(this).removeClass(ClassName.FOLDED);
-          $(Selector.MEGAMENU).css('top', parseInt(Dimension.NAVBAR_HEIGHT_PX, 10) * 2 + 'px');
-        }
-      });
-
-      // navbar
-      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).on('click', function () {
-        var parentItem = $(this).parent();
-
-        if (!parentItem.hasClass(ClassName.FOLDED)) {
-          parentItem.addClass(ClassName.FOLDED);
-          $(Selector.NAVBAR_ITEM).not(parentItem).hide();
-        } else {
-          parentItem.removeClass(ClassName.FOLDED);
-          $(Selector.NAVBAR_ITEM).show();
-        }
-      });
-
-      $(Selector.NAVBAR).on(Event.MEGAMENU_HIDE, function () {
-        // switch toggler icon
-        $(Selector.NAVBAR_TOGGLER).find('.' + ClassName.NAVBAR_TOGGLE_ICON_CLOSE).removeClass(ClassName.NAVBAR_TOGGLE_ICON_CLOSE).addClass(ClassName.NAVBAR_TOGGLE_ICON_OPEN);
-
-        // close mega-menu
-        if ($(Selector.NAVBAR_ITEM_FOLDED)) {
-          $($(Selector.NAVBAR_ITEM_FOLDED).attr('href')).collapse('hide');
-        }
-      });
-
-      $(Selector.NAVBAR).on(Event.MEGAMENU_SHOW, function () {
-        // switch toggler icon
-        $(Selector.NAVBAR_TOGGLER).find('.' + ClassName.NAVBAR_TOGGLE_ICON_OPEN).removeClass(ClassName.NAVBAR_TOGGLE_ICON_OPEN).addClass(ClassName.NAVBAR_TOGGLE_ICON_CLOSE);
-
-        // reset all items
-        $(Selector.NAVBAR_ITEM).removeClass(ClassName.FOLDED);
-        $(Selector.NAVBAR_ITEM).show();
-
-        // reset navigation
-        $(Selector.MEGAMENU_TITLE_L2).removeClass(ClassName.FOLDED);
-        $(Selector.MEGAMENU_TITLE_L1).show();
-        $(Selector.MEGAMENU_TITLE_L2).show();
-        $(Selector.MEGAMENU_FOOTER).show();
-        $(Selector.MEGAMENU + ' ul').hide();
-        $(Selector.MEGAMENU).css('top', parseInt(Dimension.NAVBAR_HEIGHT_PX, 10) * 2 + 'px');
-      });
-    }
-  });
 
   /**
    * ------------------------------------------------------------------------
