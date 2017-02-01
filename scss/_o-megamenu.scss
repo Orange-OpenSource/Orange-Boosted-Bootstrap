@@ -1,215 +1,29 @@
 //
-// Main mega menu
+// Mega menu
 //
 
 .mega-menu {
-  position: absolute;
-  z-index: 200;
-  width: 100%;
-  background-color: #000;
-
-  &.sticky {
-    position: fixed;
-  }
-
-  .collapse {
-    border-top: 1px solid $gray-dark;
-  }
-
-  h2 {
-    margin: calc(#{$font-size-h2} / 2) 0;
-    line-height: 1;
-  }
-
-  h3 {
-    line-height: 1;
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  a {
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .o-frame-wrapper {
-    margin-bottom: 1.25rem;
-  }
-
-  .o-frame {
-    display: table;
-    width: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width-base});
-    height: calc((#{map-get($container-max-widths, xxl)} / 4) - #{$grid-gutter-width-base});
-    margin: 0 auto;
-    font-size: $font-size-h3;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .o-frame-text {
-      display: table-cell;
-      padding: $font-size-h3;
-      margin: 0;
-      text-align: center;
-      word-wrap: break-word;
-      vertical-align: middle;
-    }
-
-    @include media-breakpoint-down(xl) {
-      width: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width-base});
-      height: calc((#{map-get($container-max-widths, xl)} / 4) - #{$grid-gutter-width-base});
-      font-size: $font-size-h4;
-
-      .o-frame-text {
-        padding: $font-size-h4;
-      }
-    }
-
-    @include media-breakpoint-down(lg) {
-      width: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width-base});
-      height: calc((#{map-get($container-max-widths, lg)} / 4) - #{$grid-gutter-width-base});
-      font-size: $font-size-h4;
-
-      .o-frame-text {
-        padding: $font-size-h4;
-      }
-    }
-
-    @include media-breakpoint-down(md) {
-      width: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width-base});
-      height: calc((#{map-get($container-max-widths, md)} / 4) - #{$grid-gutter-width-base});
-      font-size: $font-size-h5;
-
-      .o-frame-text {
-        padding: $font-size-h5;
-      }
-    }
-
-    @include media-breakpoint-down(sm) {
-      width: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width-base} / 2);
-      height: calc((#{map-get($container-max-widths, xs)} / 2) - #{$grid-gutter-width-base} / 2);
-      font-size: $font-size-h5;
-
-      .o-frame-text {
-        padding: $font-size-h5;
-      }
-    }
-  }
-
-  .footer {
-    padding: 0 .625rem;
-    margin-bottom: 1rem;
-  }
+    overflow: hidden;
 }
 
-@include media-breakpoint-down(xs) {
-  .mega-menu {
+.mega-menu > .navbar-nav {
+    transition: transform .5s;
+}
+
+.mega-menu > .navbar-nav {
+    transform: translateX(0);
+}
+
+.mega-menu-panel > .navbar-nav,
+.mega-menu-panel > .container > .navbar-nav {
+    flex-direction: column;
+}
+
+.mega-menu-panel > .navbar-nav .navbar-nav,
+.mega-menu-panel > .container > .navbar-nav .navbar-nav {
     position: absolute;
-    top: calc(#{$font-size-h1} * 2 + 3px);
-    z-index: 120;
+    top: 0px;
     width: 100%;
-    font-size: $font-size-h5;
-
-    .container {
-      max-width: none;
-      margin: 0;
-
-      .row {
-        margin: 0 -5px;
-
-        &.footer a {
-          padding-left: 5px;
-        }
-      }
-    }
-
-    h2,
-    h3 {
-      padding: calc((#{$font-size-h2} - #{$font-size-h5}) / 2) 0;
-      margin: 0;
-      font-size: $font-size-h5;
-      border-top: 1px solid $gray-dark;
-
-      &::before {
-        float: right;
-        font-family: icon-orange;
-        font-size: $font-size-base;
-        font-weight: normal;
-        color: #fff;
-        content: "\e93e";
-      }
-
-      &.folded {
-        padding: 0;
-        margin: calc((#{$font-size-h1} - #{$font-size-h5}) / 2) 0;
-        font-size: $font-size-h5;
-        line-height: 1;
-        border-top: 0;
-      }
-
-      &.folded::before {
-        float: none;
-        padding-right: 2rem;
-        font-family: icon-orange;
-        font-size: $font-size-h5;
-        font-weight: normal;
-        color: #fff;
-        content: "\e93f";
-      }
-    }
-
-    h2 {
-      border-color: transparent;
-    }
-
-    ul {
-      display: none;
-      margin-bottom: 0;
-
-      li {
-        padding: calc((#{$font-size-h2} - #{$font-size-h5}) / 2) 0;
-        font-size: $font-size-h5;
-        line-height: 1;
-        border-top: 1px solid $gray-dark;
-      }
-    }
-
-    .footer {
-      padding: 0;
-      margin: 0;
-
-      a {
-        display: block;
-        padding: calc((#{$font-size-h2} - #{$font-size-h5}) / 2) 0;
-        margin: 0;
-        line-height: 1;
-        border-top: 1px solid $gray-dark;
-      }
-    }
-  }
-}
-
-.search-bar {
-  background-color: #000;
-  border-top: 1px solid $gray-dark;
-
-  .form-inline {
-    margin: 1.25rem 0;
-    .form-group {
-      width: 90%;
-
-      .form-control {
-        width: 100%;
-        padding-top: .625rem;
-        padding-bottom: .625rem;
-        color: #fff;
-        background-color: $gray-dark;
-        border: 0;
-      }
-    }
-  }
+    left: 100%;
+    display: none;
 }
