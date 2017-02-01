@@ -3739,6 +3739,7 @@ var MegaMenu = function ($) {
   var Selector = {
     MEGAMENU: '.mega-menu',
     ROOT_NAV: '.mega-menu > .navbar-nav',
+    MEGAMENU_PANEL: '.mega-menu-panel',
     MEGAMENU_PANEL_NAV: '.mega-menu-panel > .container > .navbar-nav',
     MEGAMENU_NAV: '.nav-link + .navbar-nav',
     NAV_MENU: '.navbar-nav',
@@ -3777,15 +3778,19 @@ var MegaMenu = function ($) {
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
       var $subNavs = $(element).find('.nav-link + .navbar-nav');
 
+      $(element).attr('role', 'menu');
+      $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
+      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menu-item');
+
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
         var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
         var $thisNav = $(this);
         var $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK);
 
-        $thisNav.attr('id', navId);
-        $thisNavToggler.attr({ 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
-        $thisNavBackLink.attr({ 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        $thisNav.attr({ 'id': navId, 'role': 'menu' });
+        $thisNavToggler.attr({ 'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        $thisNavBackLink.attr({ 'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
       });
     };
 
