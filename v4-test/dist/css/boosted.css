@@ -12174,7 +12174,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable.minimized .nav-item .nav-item-cdu {
     margin-top: 0;
   }
-  .navbar-toggleable .nav-item .nav-link[role="menu-item"]::before, .navbar-toggleable.minimized .nav-item .nav-link[role="menu-item"]::before {
+  .navbar-toggleable .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
     margin-right: 1.25rem;
     font-family: icon-orange;
@@ -12426,7 +12426,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-sm.minimized .nav-item .nav-item-cdu {
     margin-top: 0;
   }
-  .navbar-toggleable-sm .nav-item .nav-link[role="menu-item"]::before, .navbar-toggleable-sm.minimized .nav-item .nav-link[role="menu-item"]::before {
+  .navbar-toggleable-sm .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-sm.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
     margin-right: 1.25rem;
     font-family: icon-orange;
@@ -12678,7 +12678,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-md.minimized .nav-item .nav-item-cdu {
     margin-top: 0;
   }
-  .navbar-toggleable-md .nav-item .nav-link[role="menu-item"]::before, .navbar-toggleable-md.minimized .nav-item .nav-link[role="menu-item"]::before {
+  .navbar-toggleable-md .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-md.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
     margin-right: 1.25rem;
     font-family: icon-orange;
@@ -12930,7 +12930,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-lg.minimized .nav-item .nav-item-cdu {
     margin-top: 0;
   }
-  .navbar-toggleable-lg .nav-item .nav-link[role="menu-item"]::before, .navbar-toggleable-lg.minimized .nav-item .nav-link[role="menu-item"]::before {
+  .navbar-toggleable-lg .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-lg.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
     margin-right: 1.25rem;
     font-family: icon-orange;
@@ -13182,7 +13182,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-xl.minimized .nav-item .nav-item-cdu {
     margin-top: 0;
   }
-  .navbar-toggleable-xl .nav-item .nav-link[role="menu-item"]::before, .navbar-toggleable-xl.minimized .nav-item .nav-link[role="menu-item"]::before {
+  .navbar-toggleable-xl .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-xl.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
     margin-right: 1.25rem;
     font-family: icon-orange;
@@ -13448,7 +13448,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   margin-top: 0;
 }
 
-.navbar-toggleable-xxl .nav-item .nav-link[role="menu-item"]::before, .navbar-toggleable-xxl.minimized .nav-item .nav-link[role="menu-item"]::before {
+.navbar-toggleable-xxl .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-xxl.minimized .nav-item .nav-link[role="menuitem"]::before {
   float: right;
   margin-right: 1.25rem;
   font-family: icon-orange;

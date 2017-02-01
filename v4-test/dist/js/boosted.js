@@ -3780,7 +3780,7 @@ var MegaMenu = function ($) {
 
       $(element).attr('role', 'menu');
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
-      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menu-item');
+      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
 
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
@@ -3789,8 +3789,8 @@ var MegaMenu = function ($) {
         var $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK);
 
         $thisNav.attr({ 'id': navId, 'role': 'menu' });
-        $thisNavToggler.attr({ 'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
-        $thisNavBackLink.attr({ 'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        $thisNavToggler.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        $thisNavBackLink.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
       });
     };
 
