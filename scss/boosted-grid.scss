@@ -22,20 +22,13 @@ html {
   box-sizing: inherit;
 }
 
-
-//
-// Variables
-//
-// Refuse alpha 6 custom moving after variables
 @import "custom";
-// end mod
 @import "variables";
 
 //
 // Grid mixins
 //
 
-@import "mixins/clearfix";
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";

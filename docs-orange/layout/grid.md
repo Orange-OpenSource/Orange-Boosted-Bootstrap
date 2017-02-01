@@ -333,7 +333,7 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 {% example html %}
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="row">
-  <div class="col col-md-8">.col .col-md-8</div>
+  <div class="col-12 col-md-8">.col-12 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
 
@@ -554,13 +554,13 @@ Use flexbox utilities for controlling the **visual order** of your content.
 {% example html %}
 <div class="container">
   <div class="row">
-    <div class="col flex-unordered">
+    <div class="col order-0">
       First, but unordered
     </div>
-    <div class="col flex-last">
+    <div class="col order-last">
       Second, but last
     </div>
-    <div class="col flex-first">
+    <div class="col order-first">
       Third, but first
     </div>
   </div>

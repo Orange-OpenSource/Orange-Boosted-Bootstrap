@@ -18,7 +18,7 @@ Have a need for Boosted's brand resources? Great! We have a few guidelines we fo
 <p><br>To find out how you can use our mark to make yours, read the core guideline.</p>
 
 ### space &amp; position
-	
+  
 <img src="{{ site.baseurl }}/assets/brand/orange-space-position.jpg" alt="">
 <p><strong>space</strong></p>
 <p>The logo should have as much space around it as possible, to help it stand out and protect it from typography or other graphic elements appearing too close to it. In simple terms, the minimum exclusion zone is equal to half the width of the logo itself, so if the logo is 20mm x 20mm, the clear space would be 10mm on all sides.</p>

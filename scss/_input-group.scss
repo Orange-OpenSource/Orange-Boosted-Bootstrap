@@ -30,8 +30,7 @@
 .input-group .form-control {
   // Vertically centers the content of the addons within the input group
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 
   &:not(:first-child):not(:last-child) {
     @include border-radius(0);
@@ -144,9 +143,8 @@
   // element above the siblings.
   > .btn {
     position: relative;
-    // Vertically stretch the button and center its content
-    flex: 1;
-    // Boostaed mod
+
+    // Boosted mod
     // with the 2px border, break the display on segmented buttons
     // components/input-group/#segmented-buttons
     // + .btn {

@@ -195,9 +195,6 @@ $sizes: (
 
 $body-bg:       $white;
 $body-color:    $black;
-$inverse-bg:    $black;
-$inverse-color: $white;
-
 
 // Links
 //
@@ -272,7 +269,6 @@ $grid-gutter-widths: (
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif: "HelvNeueOrange", "Helvetica Neue", Helvetica,Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-serif:      "HelvNeueOrange", "Helvetica Neue", Helvetica, Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:       $font-family-sans-serif;
 
@@ -324,8 +320,6 @@ $lead-font-weight: 300 !default;
 $small-font-size: 80% !default;
 
 $text-muted: $gray;
-
-$abbr-border-color: $gray;
 
 $blockquote-small-color:  $gray;
 $blockquote-font-size:    ($font-size-base * 1.25);
@@ -440,7 +434,6 @@ $btn-padding-x-lg:               1.25rem;
 $btn-padding-y-lg:               .875rem;
 
 $btn-block-spacing-y:            .5rem !default;
-$btn-toolbar-margin:             .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:              $border-radius;
@@ -513,7 +506,6 @@ $custom-control-spacer-x: 1rem !default;
 $custom-control-spacer-y: .25rem !default;
 
 $custom-control-indicator-size:       1.25rem !default;
-$custom-control-indicator-margin-y:   (($line-height-base * 1rem) - $custom-control-indicator-size) / -2 !default;
 $custom-control-indicator-bg:         #ddd !default;
 $custom-control-indicator-bg-size:    50% 50% !default;
 $custom-control-indicator-box-shadow: none;
@@ -560,7 +552,6 @@ $custom-select-border-radius: $border-radius;
 $custom-select-focus-border-color: $input-border-focus;
 $custom-select-focus-box-shadow:   none;
 
-$custom-select-sm-padding-y: .2rem !default;
 $custom-select-sm-font-size: 75% !default;
 
 $custom-file-height:           2.5rem !default;
@@ -632,7 +623,6 @@ $dropdown-header-color:          #000;
 // of components dependent on the z-axis and are designed to all work together.
 
 $zindex-dropdown-backdrop:  990 !default;
-$zindex-navbar:             1000 !default;
 $zindex-dropdown:           1000 !default;
 $zindex-fixed:              1030 !default;
 $zindex-sticky:             1030 !default;
@@ -644,11 +634,8 @@ $zindex-tooltip:            1070 !default;
 
 // Navbar
 
-$navbar-border-radius:              $border-radius;
 $navbar-padding-x:                  ($spacer * 2);
 $navbar-padding-y:                  $spacer;
-
-$navbar-brand-padding-y:            1.875rem;
 
 $navbar-toggler-padding-x:           .75rem !default;
 $navbar-toggler-padding-y:           .5rem !default;
@@ -671,10 +658,7 @@ $navbar-light-toggler-border:       rgba($black,.1) !default;
 
 // Navs
 
-$nav-item-margin:               .2rem !default;
-$nav-item-inline-spacer:        1rem !default;
 $nav-link-padding:              $spacer;
-$nav-link-hover-bg:             #000;
 $nav-disabled-link-color:       $gray;
 
 $nav-disabled-link-hover-bg:    transparent;
@@ -686,8 +670,6 @@ $nav-tabs-link-hover-border-color:            #000;
 $nav-tabs-active-link-hover-color:            #000;
 $nav-tabs-active-link-hover-bg:               $body-bg;
 $nav-tabs-active-link-hover-border-color:     #000;
-$nav-tabs-justified-link-border-color:        #000;
-$nav-tabs-justified-active-link-border-color: #000;
 
 $nav-pills-border-radius:     $border-radius;
 $nav-pills-active-link-color: $component-active-color;
@@ -930,14 +912,11 @@ $list-group-hover-bg:           $gray-lightest;
 $list-group-active-color:       $component-active-color;
 $list-group-active-bg:          $component-active-bg;
 $list-group-active-border:      $list-group-active-bg;
-$list-group-active-text-color:  $list-group-active-color;
 
 $list-group-disabled-color:      $gray-light-o;
 $list-group-disabled-bg:         #fff;
-$list-group-disabled-text-color: $list-group-disabled-color;
 
 $list-group-link-color:          #000;
-$list-group-link-heading-color:  #000;
 $list-group-link-hover-color:    $brand-primary;
 
 $list-group-link-active-color:   $list-group-color !default;
@@ -1017,7 +996,6 @@ $close-font-weight:           $font-weight-bold;
 $close-color:                 #000;
 $close-text-shadow:           0 1px 0 #fff;
 
-
 // Code
 
 $code-font-size:              90%;
@@ -1029,9 +1007,7 @@ $code-bg:                     $gray-lightest;
 $kbd-color:                   #000;
 $kbd-bg:                      $gray-lighter;
 
-$pre-bg:                      $gray-lightest;
 $pre-color:                   $gray-dark;
-$pre-border-color:            $gray-light-o;
 $pre-scrollable-max-height:   340px;
 
 

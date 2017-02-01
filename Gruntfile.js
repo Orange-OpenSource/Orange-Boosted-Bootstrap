@@ -232,7 +232,7 @@ module.exports = function (grunt) {
         expand: true,
         flatten: true,
         cwd: 'bower_components/',
-        src: ['jquery.tablesorter/dist/js/jquery.tablesorter.min.js', 'slick-carousel/slick/slick.min.js'],
+        src: ['jquery.tablesorter/dist/js/*', 'slick-carousel/slick/slick.min.js'],
         dest: 'dist/js/vendors/'
         /* end mod */
       }
@@ -466,6 +466,9 @@ module.exports = function (grunt) {
       htmlhint: {
         command: 'npm run htmlhint'
       },
+      htmllint: {
+        command: 'npm run htmllint'
+      },
       sass: {
         command: 'npm run sass'
       },
@@ -541,7 +544,7 @@ module.exports = function (grunt) {
 
   // Docs HTML validation task
   /* boosted mod */
-  grunt.registerTask('validate-html', ['docs', 'htmllint', 'exec:htmlhint'])
+  grunt.registerTask('validate-html', ['docs', 'exec:htmllint', 'exec:htmlhint'])
   /* end mod */
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset

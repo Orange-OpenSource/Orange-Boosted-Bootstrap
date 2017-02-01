@@ -1,4 +1,9 @@
 /*!
+ * Boosted v4.0.0-alpha.6 (https://boosted.orange.com)
+ * Copyright 2014-2017 The Boosted Authors
+ * Copyright 2014-2017 Orange
+ * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
+ * This a fork of Bootstrap : Initial license below
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -6,16 +11,10 @@
  */
 
 // Core variables and mixins
-// Boosted mod
-// Refuse alpha 6 custom moving after variables
 @import "custom";
-// end mod
 @import "variables";
 @import "mixins";
 
-
-// Reset and dependencies
-@import "normalize";
 @import "print";
 
 // Core CSS

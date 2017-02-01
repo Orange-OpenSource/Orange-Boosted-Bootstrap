@@ -1,11 +1,9 @@
 // Bootstrap Reboot only
 //
 // Includes only Normalize and our custom Reboot reset.
-// Refuse alpha 6 custom moving after variables
+
 @import "custom";
-// end mod
 @import "variables";
 @import "mixins";
 
-@import "normalize";
 @import "reboot";
