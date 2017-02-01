@@ -29,10 +29,10 @@
   margin-top: -1.125rem;
   font-size: 1.875rem;
   color: #000;
-  text-shadow: 1px0 0 #fff,
-              0 1px 0 #fff,
-               -1px0 0 #fff,
-              0 -1px 0 #fff;
+  text-shadow: 1px 0 0 #fff,
+               0 1px 0 #fff,
+               -1px 0 0 #fff,
+               0 -1px 0 #fff;
   background-image: none;
   background-repeat: no-repeat;
 
@@ -153,20 +153,20 @@
   font-size: 1.875rem;
   line-height: 1;
   color: #000;
-  text-shadow: 1px0 0 #fff,
-              0 1px 0 #fff,
-               -1px0 0 #fff,
-              0 -1px 0 #fff;
+  text-shadow: 1px 0 0 #fff,
+               0 1px 0 #fff,
+               -1px 0 0 #fff,
+               0 -1px 0 #fff;
   opacity: 1;
 }
 
 .inverse .slick-prev::before,
 .inverse .slick-next::before {
   color: #fff;
-  text-shadow: 1px0 0 #000,
-              0 1px 0 #000,
-               -1px0 0 #000,
-              0 -1px 0 #000;
+  text-shadow: 1px 0 0 #000,
+               0 1px 0 #000,
+               -1px 0 0 #000,
+               0 -1px 0 #000;
 }
 
 .slick-prev {
@@ -182,7 +182,7 @@
   content: "\e93f";
 }
 
-[dir="rtl"] .slick-prev::before {
+[dir='rtl'] .slick-prev::before {
   content: "\e93e";
 }
 
@@ -199,7 +199,7 @@
   content: "\e93e";
 }
 
-[dir="rtl"] .slick-next::before {
+[dir='rtl'] .slick-next::before {
   content: "\e93f";
 }
 

@@ -3,27 +3,27 @@
 //
 
 .mega-menu {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .mega-menu > .navbar-nav {
-    transition: transform .5s;
+  transition: transform .5s;
 }
 
 .mega-menu > .navbar-nav {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .mega-menu-panel > .navbar-nav,
 .mega-menu-panel > .container > .navbar-nav {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .mega-menu-panel > .navbar-nav .navbar-nav,
 .mega-menu-panel > .container > .navbar-nav .navbar-nav {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    left: 100%;
-    display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+  width: 100%;
 }

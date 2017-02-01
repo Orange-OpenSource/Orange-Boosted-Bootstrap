@@ -273,14 +273,14 @@
           > .container {
             display: block;
             width: 100%;
-            padding: .625rem 0 0 0;
+            padding: .625rem 0 0;
             margin: 0;
           }
 
           .navbar-collapse {
+            position: static;
             width: 100%;
             margin-top: .625rem;
-            position: static;
           }
 
           .navbar-collapse .navbar-nav {
@@ -396,128 +396,118 @@
 
           .mega-menu > .navbar-nav > .nav-item {
             padding: 1rem 0 0;
-
-            > .nav-link {
-              margin: 0 0 1rem .625rem;
-            }
           }
 
-          .mega-menu .nav-link[data-toggle="collapse"] {
-            &::before {
-              content: "";
-              border-top: 0.4375em solid;
-              border-right: 0.4375em solid transparent;
-              border-left: 0.4375em solid transparent;
-              transform: rotateZ(180deg);
-            }
-
-            &.collapsed::before {
-              transform: rotateZ(0deg);
-            }
+          .mega-menu > .navbar-nav > .nav-item > .nav-link {
+            margin: 0 0 1rem .625rem;
           }
 
-          .mega-menu-panel {
-            .nav-link.back {
-              display: block;
-            }
+          .mega-menu .nav-link[data-toggle="collapse"]::before {
+            content: "";
+            border-top: .4375em solid;
+            border-right: .4375em solid transparent;
+            border-left: .4375em solid transparent;
+            transform: rotateZ(180deg);
+          }
 
-            .nav-link.back::before {
-              float: left;
-              transform: rotateZ(180deg);
-            }
+          .mega-menu .nav-link.collapsed::before {
+            transform: rotateZ(0deg);
+          }
 
-            > .container {
-              width: 100%;
-              margin: 0;
-              padding: 0;
+          .mega-menu-panel .nav-link.back {
+            display: block;
+          }
 
-              a[data-toggle="collapse"] {
-                display: none;
-              }
-            }
+          .mega-menu-panel .nav-link.back::before {
+            float: left;
+            transform: rotateZ(180deg);
+          }
 
-            > .container > .navbar-nav {
-              > .nav-item {
-                border: 0;
-              }
+          .mega-menu-panel > .container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+          }
 
-              .navbar-nav .nav-item:last-child {
-                border-bottom: 1px solid #333;
-              }
-            }
+          .mega-menu-panel > .container a[data-toggle="collapse"] {
+            display: none;
+          }
+
+          .mega-menu-panel > .container > .navbar-nav > .nav-item {
+            border: 0;
+          }
+
+          .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-item:last-child {
+            border-bottom: 1px solid #333;
           }
         }
       }
 
       @include media-breakpoint-up($next) {
-        &{
-          .mega-menu {
-            overflow: visible;
-          }
-
-          .mega-menu > .navbar-nav {
-              transition: none;
-              transform: none;
-          }
-
-          .mega-menu-panel {
-            position: absolute;
-            z-index: 2000;
-            left: 0;
-            top: 100px;
-            width: 100%;
-            background-color: #000;
-            padding: 1rem 0;
-            border-top: 1px solid #333;
-
-            > .container > .navbar-nav {
-              flex-direction: row;
-              align-items: flex-start;
-
-              > .nav-item {
-                flex-grow: 1;
-                padding: 1rem 0;
-              }
-
-              > .nav-item > .nav-link {
-                font-size: 1.25rem;
-                margin-bottom: 1rem;
-              }
-
-              .navbar-nav {
-                position: static;
-                display: block;
-                flex-direction: column;
-                align-items: flex-start;
-              }
-
-              .navbar-nav .nav-link {
-                line-height: 1.25rem;
-              }
-
-              .nav-item:first-child,
-              .nav-item + .nav-item {
-                margin-left: 0;
-              }
-
-              .nav-link {
-                color: #fff;
-              }
-
-              .nav-link.back {
-                display: none;
-              }
-            }
-
-            a[data-toggle="collapse"] {
-              display: block;
-              color: #fff;
-              float: right;
-            }
-          }
+        .mega-menu {
+          overflow: visible;
         }
 
+        .mega-menu > .navbar-nav {
+          transition: none;
+          transform: none;
+        }
 
+        .mega-menu-panel {
+          position: absolute;
+          top: 100px;
+          left: 0;
+          z-index: 2000;
+          width: 100%;
+          padding: 1rem 0;
+          background-color: #000;
+          border-top: 1px solid #333;
+
+          > .container > .navbar-nav {
+            flex-direction: row;
+            align-items: flex-start;
+          }
+
+          > .container > .navbar-nav > .nav-item {
+            flex-grow: 1;
+            padding: 1rem 0;
+          }
+
+          > .container > .navbar-nav > .nav-item > .nav-link {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+          }
+
+          > .container > .navbar-nav .navbar-nav {
+            position: static;
+            display: block;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          > .container > .navbar-nav .navbar-nav .nav-link {
+            line-height: 1.25rem;
+          }
+
+          > .container > .navbar-nav .nav-item:first-child,
+          > .container > .navbar-nav .nav-item + .nav-item {
+            margin-left: 0;
+          }
+
+          > .container > .navbar-nav .nav-link {
+            color: #fff;
+          }
+
+          > .container > .navbar-nav .nav-link.back {
+            display: none;
+          }
+
+          a[data-toggle="collapse"] {
+            display: block;
+            float: right;
+            color: #fff;
+          }
+        }
       }
     }
   }
