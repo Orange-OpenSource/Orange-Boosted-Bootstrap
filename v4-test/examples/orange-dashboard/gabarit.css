@@ -1,95 +1,96 @@
 
 .navbar-default .navbar-brand {
-	background: none;
+  background: none;
 }
 #orange_logo {
-	float: left;
+  float: left;
 }
 #app_name{
-	font-size: 1.1em;
-	margin-left: 20px;
-	text-shadow: none;
+  font-size: 1.1em;
+  margin-left: 20px;
+  text-shadow: none;
 }
 #app_name:hover, #app_name:focus {
-	color: #F16E00;
+  color: #F16E00;
 }
 .nav-shift{
-	margin-left: 6%;
+  margin-left: 6%;
 }
 .orange{
-	color: #F16E00;
+  color: #F16E00;
 }
 #content {
-	margin: 10px 10px 0 10px;
+  margin: 10px 10px 0 10px;
 }
 #content .well{
-	background-image: none;
-	box-shadow: none;
-	border-radius: 0;
-	background-color: #EEEEEE;
-	border-color: #EEEEEE;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  background-color: #EEEEEE;
+  border-color: #EEEEEE;
     padding: 1.25rem;
     margin-bottom: 1.25rem;
 }
 #content .info-block {
-	background-color: #EEEEEE;
-	color: inherit;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
+  background-color: #EEEEEE;
+  color: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 .tab-content {
-	background-color: white;
+  background-color: white;
 }
 .tab-pane, .tab-pane:active, .tab-pane:focus {
-	outline: 0 !important;
+  outline: 0 !important;
 }
 .col .info-block{
-	margin-bottom: -99999px;
-	padding-bottom: 99999px;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
 }
 .col-wrap{
-	overflow: hidden;
+  overflow: hidden;
 }
 .col-base{
-	margin-top: -15px;
-	padding: 10px;
+  margin-top: -15px;
+  padding: 10px;
 }
 .tab-content {
-	padding: 10px;
+  padding: 10px;
 }
 .form-control:focus {
-	background-color: white;
+  background-color: white;
 }
 #messages .input-group{
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .center{
-	text-align:center;
+  text-align:center;
 }
 table .alert-img{
-	width: 20px;
+  width: 20px;
 }
 .warning {
-	color: #F16E00;
+  color: #F16E00;
 }
 .ok {
-	color: #0DA520;
+  color: #0DA520;
 }
 .error {
-	color : red;
+  color : red;
 }
 .info-block .sub-block{
-	background-color: #CCCCCC;
-	padding: 10px 10px 1px;
-	margin: 10px;
+  background-color: #CCCCCC;
+  padding: 10px 10px 1px;
+  margin: 10px;
 }
 footer {
-	background-color: #333333;
-	/*height: auto;*/
+  background-color: #333333;
+  /*height: auto;*/
 }
 footer a {
-	color: white;
+  color: white;
 }
 .navbar-inverse #id_for_cdu_link a{
     color: #fff;
@@ -100,18 +101,18 @@ footer a {
 
 
 @media (max-width: 992px) {
-	.col .info-block{
-		margin-bottom: 10px;
-		padding-bottom: 10px;
-	}
-	.row.base.col-wrap{
-		display: none;
-	}
+  .col .info-block{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .row.base.col-wrap{
+    display: none;
+  }
 }
 
 @media only screen and (max-width : 560px) {
 
-	.hide-when-small {
-		display:none !important;
-	}
+  .hide-when-small {
+    display:none !important;
+  }
 }

@@ -1,41 +1,41 @@
 * {
-	text-shadow: none !important;
+  text-shadow: none !important;
 }
 .navbar-default .navbar-brand {
-	background: none;
+  background: none;
 }
 #orange_logo {
-	float: left;
+  float: left;
 }
 #app_name{
-	color: #999999;
-	font-size: 1.1em;
-	margin-left: 20px;
-	text-shadow: none;
+  color: #999999;
+  font-size: 1.1em;
+  margin-left: 20px;
+  text-shadow: none;
 }
 #app_name:hover, #app_name:focus {
-	color: #F16E00;
+  color: #F16E00;
 }
 .nav-shift{
-	margin-left: 6%;
+  margin-left: 6%;
 }
 .orange{
-	color: #F16E00;
+  color: #F16E00;
 }
 
 .form-horizontal {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 #content form {
-	margin-top: 30px;
-	margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 footer {
-	background-color: #333333;
-	height: auto;
+  background-color: #333333;
+  height: auto;
 }
 footer a {
-	color: white;
+  color: white;
 }
 
 .navbar-inverse #id_for_cdu_link a{

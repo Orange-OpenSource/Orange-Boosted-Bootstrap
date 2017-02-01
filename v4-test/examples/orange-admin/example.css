@@ -1,66 +1,66 @@
 .orange{
-	color: #F16E00;
+  color: #F16E00;
 }
 #img-home{
-	vertical-align: inherit;
+  vertical-align: inherit;
 }
 #header{
-	margin-top: 20px;
+  margin-top: 20px;
 }
 #header a{
-	display: inline-block;
+  display: inline-block;
 }
 #header h1 {
-	color: #000000;
-	display: inline-block;
-	margin-left: 20px;
-	vertical-align: middle;
+  color: #000000;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
 }
 #header input{
-	height:35px;
+  height:35px;
 }
 #localContainer{
-	padding: 0;
-	padding-bottom: 30px;
+  padding: 0;
+  padding-bottom: 30px;
 }
 #localNavigation{
-	margin: 5px 0 10px;
+  margin: 5px 0 10px;
 }
 #news-table {
-	margin-top : 10px;
+  margin-top : 10px;
 }
 #news-table th{
-	color: black;
+  color: black;
 }
 .tab-content .tab-pane p{
-	margin-left: 10px;
-	margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 #PostAdminEditForm {
-	margin-right: 10px;
-	margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 #radio-action label {
-	margin-right: 15px;
+  margin-right: 15px;
 }
 footer div span{
-	padding-right: 42px;
-	margin-top: 10px;
+  padding-right: 42px;
+  margin-top: 10px;
 }
 footer div span:nth-child(8){
-	padding-right: 0;
+  padding-right: 0;
 }
 footer {
-	background-color: #EEEEEE;
+  background-color: #EEEEEE;
   border-bottom: 1px solid #F3F3F3;
   border-top: 1px solid #D6D6D6;
-	overflow: hidden;
-	min-height: 54px;
-	height: auto;
+  overflow: hidden;
+  min-height: 54px;
+  height: auto;
   margin: 10px auto 20px;
 }
 footer a {
-	color: inherit;
+  color: inherit;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
