@@ -3817,10 +3817,10 @@ var MegaMenu = function ($) {
 
       // make only visible elements focusable
       if (currentTranslatePos === 0) {
-        $rootNav.find('>.nav-item .nav-link').attr('tabindex', '-1');
+        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '-1', 'aria-hidden': true });
       }
-      $thisNav.find(Selector.NAV_LINK).attr('tabindex', '-1');
-      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0');
+      $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': '-1', 'aria-hidden': true });
+      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
 
       // handle expanded state
       $thisNavToggler.attr('aria-expanded', false);
@@ -3853,9 +3853,9 @@ var MegaMenu = function ($) {
       }
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0');
+      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
       if (currentTranslatePos === -navWidth) {
-        $rootNav.find('>.nav-item .nav-link').attr('tabindex', '0');
+        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '0', 'aria-hidden': false });
       }
 
       // handle expanded state
