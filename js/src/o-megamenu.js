@@ -81,7 +81,7 @@ const MegaMenu = (($) => {
 
       $(element).attr('role', 'menu')
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu')
-      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menu-item')
+      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem')
 
       $subNavs.each(function() {
         const navId = Util.getUID(NAME)
@@ -90,8 +90,8 @@ const MegaMenu = (($) => {
         const $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK)
 
         $thisNav.attr({'id': navId, 'role': 'menu'})
-        $thisNavToggler.attr({'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
-        $thisNavBackLink.attr({'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
+        $thisNavToggler.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
+        $thisNavBackLink.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
       })
     }
 
@@ -118,10 +118,10 @@ const MegaMenu = (($) => {
 
       // make only visible elements focusable
       if(currentTranslatePos === 0) {
-          $rootNav.find('>.nav-item .nav-link').attr('tabindex', '-1')
+          $rootNav.find('>.nav-item .nav-link').attr({'tabindex': '-1', 'aria-hidden': true})
       }
-      $thisNav.find(Selector.NAV_LINK).attr('tabindex', '-1')
-      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0')
+      $thisNav.find(Selector.NAV_LINK).attr({'tabindex': '-1', 'aria-hidden': true})
+      $targetNav.find(Selector.NAV_LINK).attr({'tabindex': '0', 'aria-hidden': false})
 
       // handle expanded state
       $thisNavToggler.attr('aria-expanded', false)
@@ -154,9 +154,9 @@ const MegaMenu = (($) => {
       }
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0')
+      $targetNav.find(Selector.NAV_LINK).attr({'tabindex': '0', 'aria-hidden': false})
       if(currentTranslatePos === -navWidth) {
-          $rootNav.find('>.nav-item .nav-link').attr('tabindex', '0')
+          $rootNav.find('>.nav-item .nav-link').attr({'tabindex': '0', 'aria-hidden': false})
       }
 
       // handle expanded state
