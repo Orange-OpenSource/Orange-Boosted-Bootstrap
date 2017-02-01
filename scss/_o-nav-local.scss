@@ -85,8 +85,9 @@
       display: none;
       flex-flow: column;
       width: 100%;
-      margin-top: 1px;
+      margin-top: -1px;
       background-color: #fff;
+      border: 2px solid $gray-light-o;
 
       &.show {
         display: flex;

@@ -36,6 +36,7 @@ const MegaMenu = (($) => {
   const Selector = {
     MEGAMENU    : '.mega-menu',
     ROOT_NAV : '.mega-menu > .navbar-nav',
+    MEGAMENU_PANEL : '.mega-menu-panel',
     MEGAMENU_PANEL_NAV : '.mega-menu-panel > .container > .navbar-nav',
     MEGAMENU_NAV : '.nav-link + .navbar-nav',
     NAV_MENU : '.navbar-nav',
@@ -78,15 +79,19 @@ const MegaMenu = (($) => {
     _addAriaAttributes(element) {
       const $subNavs = $(element).find('.nav-link + .navbar-nav')
 
+      $(element).attr('role', 'menu')
+      $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu')
+      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menu-item')
+
       $subNavs.each(function() {
         const navId = Util.getUID(NAME)
         const $thisNavToggler = $(this).prev(Selector.NAV_LINK)
         const $thisNav = $(this)
         const $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK)
 
-        $thisNav.attr('id', navId)
-        $thisNavToggler.attr({'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
-        $thisNavBackLink.attr({'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
+        $thisNav.attr({'id': navId, 'role': 'menu'})
+        $thisNavToggler.attr({'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
+        $thisNavBackLink.attr({'role': 'menu-item', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
       })
     }
 
