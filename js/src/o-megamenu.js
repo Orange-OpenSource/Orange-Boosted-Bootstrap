@@ -157,7 +157,7 @@ const MegaMenu = (($) => {
 
       // make only visible elements focusable
       $targetNav.find(Selector.NAV_LINK).attr({'tabindex': '0', 'aria-hidden': false})
-      if(currentTranslatePos === -100) {
+      if(currentTranslatePercentage === -100) {
           $rootNav.find('>.nav-item .nav-link').attr({'tabindex': '0', 'aria-hidden': false})
       }
 

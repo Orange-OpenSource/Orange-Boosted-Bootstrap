@@ -315,7 +315,7 @@
           }
 
           .nav-item {
-            padding: 1rem 0 1rem .625rem;
+            // padding: 1rem 0 1rem .625rem;
             margin-left: 0;
             font-size: $font-size-h5;
             line-height: 1;
@@ -354,15 +354,15 @@
 
           .nav-item > .nav-link {
             @include focus {
-              outline: 0;
+              outline-offset: -1px;
             }
 
-            padding: 0;
+            padding: 1rem 0 1rem .625rem;
             margin-top: 0;
           }
+
           .nav-item > .nav-link.icon {
             padding: .78125rem .625rem;
-            margin-top: 0;
           }
 
           .nav-item.dropdown {
@@ -395,11 +395,11 @@
           }
 
           .mega-menu > .navbar-nav > .nav-item {
-            padding: 1rem 0 0;
+            // padding: 1rem 0 0;
           }
 
           .mega-menu > .navbar-nav > .nav-item > .nav-link {
-            margin: 0 0 1rem .625rem;
+            // margin: 0 0 1rem .625rem;
           }
 
           .mega-menu .nav-link[data-toggle="collapse"]::before {
