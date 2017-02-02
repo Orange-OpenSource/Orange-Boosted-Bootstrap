@@ -3804,6 +3804,7 @@ var MegaMenu = function ($) {
       var $targetNavBackLink = $targetNav.find(Selector.NAV_BACK_LINK);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
+      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
       if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
@@ -3827,7 +3828,7 @@ var MegaMenu = function ($) {
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
-      $rootNav.css('transform', 'translateX(' + (currentTranslatePos - navWidth) + 'px)');
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
@@ -3847,6 +3848,7 @@ var MegaMenu = function ($) {
       var $thisNavBackLink = $(this);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
+      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
       if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
@@ -3854,7 +3856,7 @@ var MegaMenu = function ($) {
 
       // make only visible elements focusable
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
-      if (currentTranslatePos === -navWidth) {
+      if (currentTranslatePos === -100) {
         $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '0', 'aria-hidden': false });
       }
 
@@ -3863,7 +3865,7 @@ var MegaMenu = function ($) {
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
-      $rootNav.css('transform', 'translateX(' + (currentTranslatePos + navWidth) + 'px)');
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
