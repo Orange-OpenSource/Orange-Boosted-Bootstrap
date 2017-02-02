@@ -3817,6 +3817,9 @@ var MegaMenu = function ($) {
       // show target navbar-nav
       $targetNav.show();
 
+      // adapt main collapse height to target height
+      $(Selector.MEGAMENU).height($targetNav.height());
+
       // make only visible elements focusable
       if (currentTranslatePos === 0) {
         $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '-1', 'aria-hidden': true });
@@ -3855,6 +3858,8 @@ var MegaMenu = function ($) {
       // make only visible elements focusable
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
       if (currentTranslatePercentage === -100) {
+        // reset main collapse height
+        $(Selector.MEGAMENU).css('height', 'auto');
         $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '0', 'aria-hidden': false });
       }
 
