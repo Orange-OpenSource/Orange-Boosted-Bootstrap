@@ -91,7 +91,7 @@ const MegaMenu = (($) => {
 
         $thisNav.attr({'id': navId, 'role': 'menu'})
         $thisNavToggler.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
-        $thisNavBackLink.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
+        $thisNavBackLink.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-label': 'go back'})
       })
     }
 
@@ -134,7 +134,7 @@ const MegaMenu = (($) => {
       $rootNav.one('transitionend', function() {
         $rootNav.removeClass(ClassName.TRANSITIONING)
         $targetNav.find(Selector.NAV_LINK).first().trigger('focus')
-        $targetNavBackLink.attr('aria-expanded', true)
+        // $targetNavBackLink.attr('aria-expanded', true)
       })
     }
 
@@ -160,7 +160,7 @@ const MegaMenu = (($) => {
       }
 
       // handle expanded state
-      $thisNavBackLink.attr('aria-expanded', false)
+      // $thisNavBackLink.attr('aria-expanded', false)
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING)
