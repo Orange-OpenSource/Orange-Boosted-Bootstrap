@@ -3744,7 +3744,8 @@ var MegaMenu = function ($) {
     MEGAMENU_NAV: '.nav-link + .navbar-nav',
     NAV_MENU: '.navbar-nav',
     NAV_LINK: '.nav-link',
-    NAV_BACK_LINK: '.nav-link.back'
+    NAV_LINK_BACK: '.nav-link.back',
+    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
   };
 
   /**
@@ -3759,7 +3760,7 @@ var MegaMenu = function ($) {
 
       this._element = element;
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
-      this._$goBackLinks = $(Selector.NAV_BACK_LINK);
+      this._$goBackLinks = $(Selector.NAV_LINK_BACK);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
     }
@@ -3786,7 +3787,7 @@ var MegaMenu = function ($) {
         var navId = Util.getUID(NAME);
         var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
         var $thisNav = $(this);
-        var $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK);
+        var $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK);
 
         $thisNav.attr({ 'id': navId, 'role': 'menu' });
         $thisNavToggler.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
@@ -3801,7 +3802,7 @@ var MegaMenu = function ($) {
       var $targetNav = $(this).next(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
       var $thisNavToggler = $(this);
-      var $targetNavBackLink = $targetNav.find(Selector.NAV_BACK_LINK);
+      var $targetNavBackLink = $targetNav.find(Selector.NAV_LINK_BACK);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
       var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
@@ -3823,9 +3824,6 @@ var MegaMenu = function ($) {
       $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': '-1', 'aria-hidden': true });
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
 
-      // handle expanded state
-      $thisNavToggler.attr('aria-expanded', false);
-
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
       $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - 100) + '%)');
@@ -3833,8 +3831,8 @@ var MegaMenu = function ($) {
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
         $rootNav.removeClass(ClassName.TRANSITIONING);
-        $targetNav.find(Selector.NAV_LINK).first().trigger('focus');
-        // $targetNavBackLink.attr('aria-expanded', true)
+        $thisNavToggler.attr('aria-expanded', true);
+        $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
       });
     };
 
@@ -3844,7 +3842,7 @@ var MegaMenu = function ($) {
       var $thisNav = $(this).closest(Selector.NAV_MENU);
       var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
-      var $targetNavToggler = $targetNav.prev(Selector.NAV_LINK);
+      var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
       var $thisNavBackLink = $(this);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
@@ -3860,9 +3858,6 @@ var MegaMenu = function ($) {
         $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '0', 'aria-hidden': false });
       }
 
-      // handle expanded state
-      // $thisNavBackLink.attr('aria-expanded', false)
-
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
       $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + 100) + '%)');
@@ -3870,8 +3865,8 @@ var MegaMenu = function ($) {
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
         $rootNav.removeClass(ClassName.TRANSITIONING);
-        $targetNav.find(Selector.NAV_LINK).first().trigger('focus');
-        $targetNavToggler.attr('aria-expanded', true);
+        $targetNavToggler.attr('aria-expanded', false);
+        $targetNavToggler.trigger('focus');
         $thisNav.hide();
       });
     };
