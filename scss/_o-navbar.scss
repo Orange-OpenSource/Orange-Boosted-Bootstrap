@@ -315,7 +315,6 @@
           }
 
           .nav-item {
-            // padding: 1rem 0 1rem .625rem;
             margin-left: 0;
             font-size: $font-size-h5;
             line-height: 1;
@@ -392,14 +391,6 @@
             color: #fff;
             background-color: #000;
             border-top: 1px solid $gray-dark;
-          }
-
-          .mega-menu > .navbar-nav > .nav-item {
-            // padding: 1rem 0 0;
-          }
-
-          .mega-menu > .navbar-nav > .nav-item > .nav-link {
-            // margin: 0 0 1rem .625rem;
           }
 
           .mega-menu .nav-link[data-toggle="collapse"]::before {

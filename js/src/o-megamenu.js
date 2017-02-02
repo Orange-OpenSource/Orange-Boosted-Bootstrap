@@ -41,7 +41,8 @@ const MegaMenu = (($) => {
     MEGAMENU_NAV : '.nav-link + .navbar-nav',
     NAV_MENU : '.navbar-nav',
     NAV_LINK : '.nav-link',
-    NAV_BACK_LINK : '.nav-link.back'
+    NAV_LINK_BACK : '.nav-link.back',
+    NAV_LINK_EXPANDED : '.nav-link[aria-expanded=true]'
   }
 
 
@@ -56,7 +57,7 @@ const MegaMenu = (($) => {
     constructor(element) {
       this._element = element
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
-      this._$goBackLinks = $(Selector.NAV_BACK_LINK)
+      this._$goBackLinks = $(Selector.NAV_LINK_BACK)
       this._addEventListeners()
       this._addAriaAttributes(this._element)
     }
@@ -87,7 +88,7 @@ const MegaMenu = (($) => {
         const navId = Util.getUID(NAME)
         const $thisNavToggler = $(this).prev(Selector.NAV_LINK)
         const $thisNav = $(this)
-        const $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK)
+        const $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK)
 
         $thisNav.attr({'id': navId, 'role': 'menu'})
         $thisNavToggler.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
@@ -102,7 +103,7 @@ const MegaMenu = (($) => {
       const $targetNav =  $(this).next(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
       const $thisNavToggler = $(this)
-      const $targetNavBackLink = $targetNav.find(Selector.NAV_BACK_LINK)
+      const $targetNavBackLink = $targetNav.find(Selector.NAV_LINK_BACK)
       const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10)
       const navWidth = $rootNav.width()
       const currentTranslatePercentage = 100 * currentTranslatePos / navWidth
@@ -124,9 +125,6 @@ const MegaMenu = (($) => {
       $thisNav.find(Selector.NAV_LINK).attr({'tabindex': '-1', 'aria-hidden': true})
       $targetNav.find(Selector.NAV_LINK).attr({'tabindex': '0', 'aria-hidden': false})
 
-      // handle expanded state
-      $thisNavToggler.attr('aria-expanded', false)
-
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING)
       $rootNav.css('transform', 'translateX('+(currentTranslatePercentage - 100)+'%)')
@@ -134,8 +132,8 @@ const MegaMenu = (($) => {
       // focus on target nav first item
       $rootNav.one('transitionend', function() {
         $rootNav.removeClass(ClassName.TRANSITIONING)
-        $targetNav.find(Selector.NAV_LINK).first().trigger('focus')
-        // $targetNavBackLink.attr('aria-expanded', true)
+        $thisNavToggler.attr('aria-expanded', true)
+        $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus')
       })
     }
 
@@ -145,7 +143,7 @@ const MegaMenu = (($) => {
       const $thisNav = $(this).closest(Selector.NAV_MENU)
       const $targetNav = $thisNav.parent().closest(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
-      const $targetNavToggler = $targetNav.prev(Selector.NAV_LINK)
+      const $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED)
       const $thisNavBackLink = $(this)
       const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10)
       const navWidth = $rootNav.width()
@@ -161,9 +159,6 @@ const MegaMenu = (($) => {
           $rootNav.find('>.nav-item .nav-link').attr({'tabindex': '0', 'aria-hidden': false})
       }
 
-      // handle expanded state
-      // $thisNavBackLink.attr('aria-expanded', false)
-
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING)
       $rootNav.css('transform', 'translateX('+(currentTranslatePercentage + 100)+'%)')
@@ -171,8 +166,8 @@ const MegaMenu = (($) => {
       // focus on target nav first item
       $rootNav.one('transitionend', function() {
         $rootNav.removeClass(ClassName.TRANSITIONING)
-        $targetNav.find(Selector.NAV_LINK).first().trigger('focus')
-        $targetNavToggler.attr('aria-expanded', true)
+        $targetNavToggler.attr('aria-expanded', false)
+        $targetNavToggler.trigger('focus')
         $thisNav.hide()
       })
     }
