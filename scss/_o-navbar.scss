@@ -290,7 +290,7 @@
           .navbar-toggler {
             position: absolute;
             top: .265625rem;
-            right: .625rem;
+            right: 0;
             z-index: 1000;
             padding: .625rem .75rem;
             font-size: 1.25rem;
@@ -334,7 +334,7 @@
 
           .nav-item .nav-link[role="menuitem"]::before {
             float: right;
-            margin-right: 1.25rem;
+            margin-right: 1rem;
             font-family: icon-orange;
             font-size: $font-size-base;
             font-weight: normal;
@@ -399,6 +399,8 @@
             border-right: .4375em solid transparent;
             border-left: .4375em solid transparent;
             transform: rotateZ(180deg);
+            margin-top: .3125rem;
+            margin-right: .9375rem;
           }
 
           .mega-menu .nav-link.collapsed::before {
@@ -474,6 +476,12 @@
             display: block;
             flex-direction: column;
             align-items: flex-start;
+          }
+
+          > .container > .navbar-nav .nav-link {
+            @include focus {
+              outline-offset: 0;
+            }
           }
 
           > .container > .navbar-nav .navbar-nav .nav-link {
