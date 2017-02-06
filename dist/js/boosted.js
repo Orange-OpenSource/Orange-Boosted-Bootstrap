@@ -3727,6 +3727,10 @@ var MegaMenu = function ($) {
   var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
 
   var Event = {};
 
@@ -3739,11 +3743,15 @@ var MegaMenu = function ($) {
   var Selector = {
     MEGAMENU: '.mega-menu',
     ROOT_NAV: '.mega-menu > .navbar-nav',
+    MEGAMENU_PANEL: '.mega-menu-panel',
     MEGAMENU_PANEL_NAV: '.mega-menu-panel > .container > .navbar-nav',
     MEGAMENU_NAV: '.nav-link + .navbar-nav',
     NAV_MENU: '.navbar-nav',
+    NAV_ITEM: '.nav-item',
     NAV_LINK: '.nav-link',
-    NAV_BACK_LINK: '.nav-link.back'
+    NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
+    NAV_LINK_BACK: '.nav-link.back',
+    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
   };
 
   /**
@@ -3757,8 +3765,10 @@ var MegaMenu = function ($) {
       _classCallCheck(this, MegaMenu);
 
       this._element = element;
+      this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
-      this._$goBackLinks = $(Selector.NAV_BACK_LINK);
+      this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
+      this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
     }
@@ -3770,37 +3780,93 @@ var MegaMenu = function ($) {
     // private
 
     MegaMenu.prototype._addEventListeners = function _addEventListeners() {
-      this._$goForwardLinks.on('click', this._goForward);
-      this._$goBackLinks.on('click', this._goBackward);
+      var _this25 = this;
+
+      this._$goForwardLinks.on('click', function (event) {
+        return _this25._goForward(event);
+      });
+      this._$goBackLinks.on('click', function (event) {
+        return _this25._goBackward(event);
+      });
+      this._$navLinks.on('keydown', function (event) {
+        return _this25._manageKeyDown(event);
+      });
+      this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
     };
 
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
       var $subNavs = $(element).find('.nav-link + .navbar-nav');
 
+      $(element).attr('role', 'application');
+      $(element).find('> .navbar-nav').attr('role', 'menu');
+      $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
+      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
+      $(element).find(Selector.NAV_LINK_BACK).attr({ 'aria-hidden': true });
+      $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
+
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
         var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
         var $thisNav = $(this);
-        var $thisNavBackLink = $thisNav.find(Selector.NAV_BACK_LINK);
+        var $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK);
+        var $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK);
+        var goBackLabel = 'go back to ' + $topMenu.text() + ' menu';
 
-        $thisNav.attr('id', navId);
-        $thisNavToggler.attr({ 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
-        $thisNavBackLink.attr({ 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        if (!$topMenu.length) {
+          goBackLabel = 'go back to ' + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + ' menu';
+        }
+
+        $thisNav.attr({ 'id': navId, 'role': 'menu' });
+        $thisNavToggler.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
+        $thisNavBackLink.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-label': goBackLabel });
       });
+    };
+
+    MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
+      var $thisTarget = $(event.target);
+
+      // test key code
+      if (/input|textarea/i.test(event.target.tagName)) {
+        return;
+      }
+
+      // proceed according to key code
+      switch (event.which) {
+        case ARROW_LEFT_KEYCODE:
+          this._goBackward(event);
+          break;
+        case ARROW_RIGHT_KEYCODE:
+          this._goForward(event);
+          break;
+        case ARROW_UP_KEYCODE:
+          // focus prev nav link
+          $thisTarget.parent().prev().find('>.nav-link').not(Selector.NAV_LINK_BACK).trigger('focus');
+          break;
+        case ARROW_DOWN_KEYCODE:
+          // focus next nav link
+          $thisTarget.parent().next().find('>.nav-link').trigger('focus');
+          break;
+        default:
+          return;
+      }
+    };
+
+    MegaMenu.prototype._collapseFocus = function _collapseFocus() {
+      $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
     };
 
     MegaMenu.prototype._goForward = function _goForward(e) {
       e.preventDefault();
-
-      var $thisNav = $(this).closest(Selector.NAV_MENU);
-      var $targetNav = $(this).next(Selector.NAV_MENU);
+      var $this = $(e.target);
+      var $thisNav = $this.closest(Selector.NAV_MENU);
+      var $targetNav = $this.next(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
-      var $thisNavToggler = $(this);
-      var $targetNavBackLink = $targetNav.find(Selector.NAV_BACK_LINK);
+      var $thisNavToggler = $this;
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
+      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
-      if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
+      if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
 
@@ -3810,61 +3876,62 @@ var MegaMenu = function ($) {
       // show target navbar-nav
       $targetNav.show();
 
-      // make only visible elements focusable
-      if (currentTranslatePos === 0) {
-        $rootNav.find('>.nav-item .nav-link').attr('tabindex', '-1');
-      }
-      $thisNav.find(Selector.NAV_LINK).attr('tabindex', '-1');
-      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0');
+      // adapt main collapse height to target height
+      $(Selector.MEGAMENU).height($targetNav.height());
 
-      // handle expanded state
-      $thisNavToggler.attr('aria-expanded', false);
+      // make only visible elements focusable
+      if (currentTranslatePercentage === 0) {
+        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': -1, 'aria-hidden': true });
+      }
+      $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': -1, 'aria-hidden': true });
+      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
-      $rootNav.css('transform', 'translateX(' + (currentTranslatePos - navWidth) + 'px)');
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
         $rootNav.removeClass(ClassName.TRANSITIONING);
-        $targetNav.find(Selector.NAV_LINK).first().trigger('focus');
-        $targetNavBackLink.attr('aria-expanded', true);
+        $thisNavToggler.attr('aria-expanded', true);
+        $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
       });
     };
 
     MegaMenu.prototype._goBackward = function _goBackward(e) {
       e.preventDefault();
 
-      var $thisNav = $(this).closest(Selector.NAV_MENU);
+      var $this = $(e.target);
+      var $thisNav = $this.closest(Selector.NAV_MENU);
       var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
-      var $targetNavToggler = $targetNav.prev(Selector.NAV_LINK);
-      var $thisNavBackLink = $(this);
+      var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
+      var $thisNavBackLink = $this;
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
+      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
-      if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
+      if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).attr('tabindex', '0');
-      if (currentTranslatePos === -navWidth) {
-        $rootNav.find('>.nav-item .nav-link').attr('tabindex', '0');
+      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
+      if (currentTranslatePercentage === -100) {
+        // reset main collapse height
+        $(Selector.MEGAMENU).css('height', 'auto');
+        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': 0, 'aria-hidden': false });
       }
-
-      // handle expanded state
-      $thisNavBackLink.attr('aria-expanded', false);
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
-      $rootNav.css('transform', 'translateX(' + (currentTranslatePos + navWidth) + 'px)');
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
         $rootNav.removeClass(ClassName.TRANSITIONING);
-        $targetNav.find(Selector.NAV_LINK).first().trigger('focus');
-        $targetNavToggler.attr('aria-expanded', true);
+        $targetNavToggler.attr('aria-expanded', false);
+        $targetNavToggler.trigger('focus');
         $thisNav.hide();
       });
     };
