@@ -3768,6 +3768,7 @@ var MegaMenu = function ($) {
       this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
+      this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
     }
@@ -3790,6 +3791,7 @@ var MegaMenu = function ($) {
       this._$navLinks.on('keydown', function (event) {
         return _this25._manageKeyDown(event);
       });
+      this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
     };
 
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
@@ -3799,7 +3801,7 @@ var MegaMenu = function ($) {
       $(element).find('> .navbar-nav').attr('role', 'menu');
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $(element).find(Selector.NAV_LINK_BACK).attr({ 'aria-hidden': true, 'tabindex': -1 });
+      $(element).find(Selector.NAV_LINK_BACK).attr({ 'aria-hidden': true });
       $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
 
       $subNavs.each(function () {
@@ -3807,10 +3809,16 @@ var MegaMenu = function ($) {
         var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
         var $thisNav = $(this);
         var $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK);
+        var $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK);
+        var goBackLabel = 'go back to ' + $topMenu.text() + ' menu';
+
+        if (!$topMenu.length) {
+          goBackLabel = 'go back to ' + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + ' menu';
+        }
 
         $thisNav.attr({ 'id': navId, 'role': 'menu' });
         $thisNavToggler.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
-        $thisNavBackLink.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-label': 'go back' });
+        $thisNavBackLink.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-label': goBackLabel });
       });
     };
 
@@ -3843,6 +3851,10 @@ var MegaMenu = function ($) {
       }
     };
 
+    MegaMenu.prototype._collapseFocus = function _collapseFocus() {
+      $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
+    };
+
     MegaMenu.prototype._goForward = function _goForward(e) {
       e.preventDefault();
       var $this = $(e.target);
@@ -3850,7 +3862,6 @@ var MegaMenu = function ($) {
       var $targetNav = $this.next(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
       var $thisNavToggler = $this;
-      var $targetNavBackLink = $targetNav.find(Selector.NAV_LINK_BACK);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
       var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
@@ -3873,7 +3884,7 @@ var MegaMenu = function ($) {
         $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': -1, 'aria-hidden': true });
       }
       $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': -1, 'aria-hidden': true });
-      $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).attr({ 'tabindex': 0, 'aria-hidden': false });
+      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
@@ -3905,7 +3916,7 @@ var MegaMenu = function ($) {
       }
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).attr({ 'tabindex': 0, 'aria-hidden': false });
+      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
       if (currentTranslatePercentage === -100) {
         // reset main collapse height
         $(Selector.MEGAMENU).css('height', 'auto');
