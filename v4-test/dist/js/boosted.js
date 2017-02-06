@@ -3747,6 +3747,7 @@ var MegaMenu = function ($) {
     MEGAMENU_PANEL_NAV: '.mega-menu-panel > .container > .navbar-nav',
     MEGAMENU_NAV: '.nav-link + .navbar-nav',
     NAV_MENU: '.navbar-nav',
+    NAV_ITEM: '.nav-item',
     NAV_LINK: '.nav-link',
     NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
     NAV_LINK_BACK: '.nav-link.back',
@@ -3794,10 +3795,12 @@ var MegaMenu = function ($) {
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
       var $subNavs = $(element).find('.nav-link + .navbar-nav');
 
-      $(element).attr('role', 'menu');
+      $(element).attr('role', 'application');
+      $(element).find('> .navbar-nav').attr('role', 'menu');
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
       $(element).find(Selector.NAV_LINK_BACK).attr({ 'aria-hidden': true, 'tabindex': -1 });
+      $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
 
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
