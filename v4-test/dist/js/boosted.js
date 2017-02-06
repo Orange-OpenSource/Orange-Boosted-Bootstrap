@@ -3727,6 +3727,10 @@ var MegaMenu = function ($) {
   var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
 
   var Event = {};
 
@@ -3744,6 +3748,7 @@ var MegaMenu = function ($) {
     MEGAMENU_NAV: '.nav-link + .navbar-nav',
     NAV_MENU: '.navbar-nav',
     NAV_LINK: '.nav-link',
+    NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
     NAV_LINK_BACK: '.nav-link.back',
     NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
   };
@@ -3759,8 +3764,9 @@ var MegaMenu = function ($) {
       _classCallCheck(this, MegaMenu);
 
       this._element = element;
+      this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
-      this._$goBackLinks = $(Selector.NAV_LINK_BACK);
+      this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
     }
@@ -3772,8 +3778,17 @@ var MegaMenu = function ($) {
     // private
 
     MegaMenu.prototype._addEventListeners = function _addEventListeners() {
-      this._$goForwardLinks.on('click', this._goForward);
-      this._$goBackLinks.on('click', this._goBackward);
+      var _this25 = this;
+
+      this._$goForwardLinks.on('click', function (event) {
+        return _this25._goForward(event);
+      });
+      this._$goBackLinks.on('click', function (event) {
+        return _this25._goBackward(event);
+      });
+      this._$navLinks.on('keydown', function (event) {
+        return _this25._manageKeyDown(event);
+      });
     };
 
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
@@ -3782,6 +3797,7 @@ var MegaMenu = function ($) {
       $(element).attr('role', 'menu');
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
+      $(element).find(Selector.NAV_LINK_BACK).attr({ 'aria-hidden': true, 'tabindex': -1 });
 
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
@@ -3795,19 +3811,48 @@ var MegaMenu = function ($) {
       });
     };
 
+    MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
+      var $thisTarget = $(event.target);
+
+      // test key code
+      if (/input|textarea/i.test(event.target.tagName)) {
+        return;
+      }
+
+      // proceed according to key code
+      switch (event.which) {
+        case ARROW_LEFT_KEYCODE:
+          this._goBackward(event);
+          break;
+        case ARROW_RIGHT_KEYCODE:
+          this._goForward(event);
+          break;
+        case ARROW_UP_KEYCODE:
+          // focus prev nav link
+          $thisTarget.parent().prev().find('>.nav-link').not(Selector.NAV_LINK_BACK).trigger('focus');
+          break;
+        case ARROW_DOWN_KEYCODE:
+          // focus next nav link
+          $thisTarget.parent().next().find('>.nav-link').trigger('focus');
+          break;
+        default:
+          return;
+      }
+    };
+
     MegaMenu.prototype._goForward = function _goForward(e) {
       e.preventDefault();
-
-      var $thisNav = $(this).closest(Selector.NAV_MENU);
-      var $targetNav = $(this).next(Selector.NAV_MENU);
+      var $this = $(e.target);
+      var $thisNav = $this.closest(Selector.NAV_MENU);
+      var $targetNav = $this.next(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
-      var $thisNavToggler = $(this);
+      var $thisNavToggler = $this;
       var $targetNavBackLink = $targetNav.find(Selector.NAV_LINK_BACK);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
       var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
-      if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
+      if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
 
@@ -3821,11 +3866,11 @@ var MegaMenu = function ($) {
       $(Selector.MEGAMENU).height($targetNav.height());
 
       // make only visible elements focusable
-      if (currentTranslatePos === 0) {
-        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '-1', 'aria-hidden': true });
+      if (currentTranslatePercentage === 0) {
+        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': -1, 'aria-hidden': true });
       }
-      $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': '-1', 'aria-hidden': true });
-      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
+      $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': -1, 'aria-hidden': true });
+      $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).attr({ 'tabindex': 0, 'aria-hidden': false });
 
       // translate menu
       $rootNav.addClass(ClassName.TRANSITIONING);
@@ -3842,25 +3887,26 @@ var MegaMenu = function ($) {
     MegaMenu.prototype._goBackward = function _goBackward(e) {
       e.preventDefault();
 
-      var $thisNav = $(this).closest(Selector.NAV_MENU);
+      var $this = $(e.target);
+      var $thisNav = $this.closest(Selector.NAV_MENU);
       var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
       var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
-      var $thisNavBackLink = $(this);
+      var $thisNavBackLink = $this;
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
       var navWidth = $rootNav.width();
       var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
-      if ($rootNav.hasClass(ClassName.TRANSITIONING)) {
+      if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': '0', 'aria-hidden': false });
+      $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).attr({ 'tabindex': 0, 'aria-hidden': false });
       if (currentTranslatePercentage === -100) {
         // reset main collapse height
         $(Selector.MEGAMENU).css('height', 'auto');
-        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': '0', 'aria-hidden': false });
+        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': 0, 'aria-hidden': false });
       }
 
       // translate menu

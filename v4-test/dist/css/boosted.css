@@ -12135,7 +12135,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable .navbar-toggler, .navbar-toggleable.minimized .navbar-toggler {
     position: absolute;
     top: .265625rem;
-    right: .625rem;
+    right: 0;
     z-index: 1000;
     padding: .625rem .75rem;
     font-size: 1.25rem;
@@ -12175,7 +12175,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-toggleable .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     font-family: icon-orange;
     font-size: 1rem;
     font-weight: normal;
@@ -12231,6 +12231,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
+    margin-top: .3125rem;
+    margin-right: .9375rem;
   }
   .navbar-toggleable .mega-menu .nav-link.collapsed::before, .navbar-toggleable.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -12319,6 +12321,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .navbar-toggleable .mega-menu-panel > .container > .navbar-nav .nav-link:focus {
+    outline-offset: 0;
+  }
   .navbar-toggleable .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     line-height: 1.25rem;
   }
@@ -12379,7 +12384,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-sm .navbar-toggler, .navbar-toggleable-sm.minimized .navbar-toggler {
     position: absolute;
     top: .265625rem;
-    right: .625rem;
+    right: 0;
     z-index: 1000;
     padding: .625rem .75rem;
     font-size: 1.25rem;
@@ -12419,7 +12424,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-toggleable-sm .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-sm.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     font-family: icon-orange;
     font-size: 1rem;
     font-weight: normal;
@@ -12475,6 +12480,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
+    margin-top: .3125rem;
+    margin-right: .9375rem;
   }
   .navbar-toggleable-sm .mega-menu .nav-link.collapsed::before, .navbar-toggleable-sm.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -12563,6 +12570,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .navbar-toggleable-sm .mega-menu-panel > .container > .navbar-nav .nav-link:focus {
+    outline-offset: 0;
+  }
   .navbar-toggleable-sm .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     line-height: 1.25rem;
   }
@@ -12623,7 +12633,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-md .navbar-toggler, .navbar-toggleable-md.minimized .navbar-toggler {
     position: absolute;
     top: .265625rem;
-    right: .625rem;
+    right: 0;
     z-index: 1000;
     padding: .625rem .75rem;
     font-size: 1.25rem;
@@ -12663,7 +12673,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-toggleable-md .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-md.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     font-family: icon-orange;
     font-size: 1rem;
     font-weight: normal;
@@ -12719,6 +12729,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
+    margin-top: .3125rem;
+    margin-right: .9375rem;
   }
   .navbar-toggleable-md .mega-menu .nav-link.collapsed::before, .navbar-toggleable-md.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -12807,6 +12819,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .navbar-toggleable-md .mega-menu-panel > .container > .navbar-nav .nav-link:focus {
+    outline-offset: 0;
+  }
   .navbar-toggleable-md .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     line-height: 1.25rem;
   }
@@ -12867,7 +12882,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-lg .navbar-toggler, .navbar-toggleable-lg.minimized .navbar-toggler {
     position: absolute;
     top: .265625rem;
-    right: .625rem;
+    right: 0;
     z-index: 1000;
     padding: .625rem .75rem;
     font-size: 1.25rem;
@@ -12907,7 +12922,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-toggleable-lg .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-lg.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     font-family: icon-orange;
     font-size: 1rem;
     font-weight: normal;
@@ -12963,6 +12978,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
+    margin-top: .3125rem;
+    margin-right: .9375rem;
   }
   .navbar-toggleable-lg .mega-menu .nav-link.collapsed::before, .navbar-toggleable-lg.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -13051,6 +13068,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .navbar-toggleable-lg .mega-menu-panel > .container > .navbar-nav .nav-link:focus {
+    outline-offset: 0;
+  }
   .navbar-toggleable-lg .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     line-height: 1.25rem;
   }
@@ -13111,7 +13131,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-toggleable-xl .navbar-toggler, .navbar-toggleable-xl.minimized .navbar-toggler {
     position: absolute;
     top: .265625rem;
-    right: .625rem;
+    right: 0;
     z-index: 1000;
     padding: .625rem .75rem;
     font-size: 1.25rem;
@@ -13151,7 +13171,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-toggleable-xl .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-xl.minimized .nav-item .nav-link[role="menuitem"]::before {
     float: right;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     font-family: icon-orange;
     font-size: 1rem;
     font-weight: normal;
@@ -13207,6 +13227,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
+    margin-top: .3125rem;
+    margin-right: .9375rem;
   }
   .navbar-toggleable-xl .mega-menu .nav-link.collapsed::before, .navbar-toggleable-xl.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -13295,6 +13317,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .navbar-toggleable-xl .mega-menu-panel > .container > .navbar-nav .nav-link:focus {
+    outline-offset: 0;
+  }
   .navbar-toggleable-xl .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     line-height: 1.25rem;
   }
@@ -13362,7 +13387,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 .navbar-toggleable-xxl .navbar-toggler, .navbar-toggleable-xxl.minimized .navbar-toggler {
   position: absolute;
   top: .265625rem;
-  right: .625rem;
+  right: 0;
   z-index: 1000;
   padding: .625rem .75rem;
   font-size: 1.25rem;
@@ -13409,7 +13434,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 .navbar-toggleable-xxl .nav-item .nav-link[role="menuitem"]::before, .navbar-toggleable-xxl.minimized .nav-item .nav-link[role="menuitem"]::before {
   float: right;
-  margin-right: 1.25rem;
+  margin-right: 1rem;
   font-family: icon-orange;
   font-size: 1rem;
   font-weight: normal;
@@ -13477,6 +13502,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   -webkit-transform: rotateZ(180deg);
        -o-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
+  margin-top: .3125rem;
+  margin-right: .9375rem;
 }
 
 .navbar-toggleable-xxl .mega-menu .nav-link.collapsed::before, .navbar-toggleable-xxl.minimized .mega-menu .nav-link.collapsed::before {
@@ -13575,6 +13602,10 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.navbar-toggleable-xxl .mega-menu-panel > .container > .navbar-nav .nav-link:focus {
+  outline-offset: 0;
 }
 
 .navbar-toggleable-xxl .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
