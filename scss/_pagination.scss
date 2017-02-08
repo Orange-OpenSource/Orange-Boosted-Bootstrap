@@ -19,13 +19,13 @@
     border-color: $black;
     &::before {
       position: absolute;
+      top: .6875rem;
       left: .8125rem;
       width: .5625rem;
-      height: 100%;
+      height: .875rem;
       content: "";
       background-image: #{$pagination-icon-prev};
       background-repeat: no-repeat;
-      background-position: 0 10%;
     }
   }
   // End mod
@@ -36,13 +36,13 @@
       border-color: $black;
       &::before {
         position: absolute;
+        top: .6875rem;
         right: .8125rem;
         width: .5625rem;
-        height: 100%;
+        height: .875rem;
         content: "";
         background-image: #{$pagination-icon-next};
         background-repeat: no-repeat;
-        background-position: 0 10%;
       }
       // End mod
     }
@@ -108,7 +108,19 @@
     text-decoration: none;
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border;
+
+    // Boosted mod
+    span {
+      color: #000;
+    }
+    // end mod
   }
+
+  // Boosted mod
+  span {
+    color: #fff;
+  }
+  // end mod
 }
 // Boosted mod
 .page-item {
@@ -155,8 +167,16 @@
 // Boosted mod add a min size param
 .pagination-lg {
   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg, $pagination-min-width-lg);
+  .page-item:first-child .page-link::before,
+  .page-item:last-child .page-link::before {
+    top: 1rem;
+  }
 }
 
 .pagination-sm {
   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm, $pagination-min-width-sm);
+  .page-item:first-child .page-link::before,
+  .page-item:last-child .page-link::before {
+    top: auto;
+  }
 }

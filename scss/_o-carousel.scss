@@ -6,6 +6,12 @@
   margin-bottom: 1.875rem;
 }
 
+.carousel .carousel-item {
+  img {
+    width: 100%;
+  }
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
