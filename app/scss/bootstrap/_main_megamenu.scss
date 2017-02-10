@@ -70,7 +70,6 @@
 .nav-menu .sub-nav .container-fluid,
 .nav-menu .sub-nav.container,
 .nav-menu .sub-nav.container-fluid{
-	z-index: 1; //LLA//
 	background-color: #FFF; //LLA//
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
@@ -82,7 +81,6 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	z-index: 15;
 }
 
 // a top level navigation item in the mega menu //
@@ -111,7 +109,6 @@
 // open state of first descendant link within a top level navigation item //
 .nav-item > a.open {
 	border-bottom: none;
-	z-index: 1;
 }
 
 // sub-navigation panel //
