@@ -774,8 +774,8 @@ pre code {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: 1.25%;
   margin-left: 1.25%;
   width: 312px;
@@ -788,6 +788,66 @@ pre code {
   display: table;
   clear: both;
   content: "";
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .container::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 980px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1220px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1380px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
 }
 
 .container .container-fluid {
@@ -898,8 +958,8 @@ pre code {
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: 1.25%;
   margin-left: 1.25%;
 }
@@ -908,6 +968,66 @@ pre code {
   display: table;
   clear: both;
   content: "";
+}
+
+@media (min-width: 480px) {
+  .container-fluid {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .container-fluid::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container-fluid::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 980px) {
+  .container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container-fluid::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1220px) {
+  .container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container-fluid::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1380px) {
+  .container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .container-fluid::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
 }
 
 .container-fluid .container-fluid {
