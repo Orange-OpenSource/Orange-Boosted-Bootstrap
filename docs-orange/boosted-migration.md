@@ -58,7 +58,7 @@ Rename all the class containing  `_` to `-`.
 
 ### Step bar
 
-Class names and semantic changed, see [Orange stepbar](../components/orange-stepbar/) for documentation and examples.
+Class names and semantic changed, see [Orange stepbar](../components/stepbar/) for documentation and examples.
 
 ### Accordions
 
