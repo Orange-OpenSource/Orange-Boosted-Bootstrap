@@ -67,6 +67,7 @@ var MegaMenu = function ($) {
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
       this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
+      this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
     }
@@ -90,6 +91,9 @@ var MegaMenu = function ($) {
         return _this._manageKeyDown(event);
       });
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      this._$navLinkCollapses.on('click', function (event) {
+        return _this._handleCollapseToggle(event);
+      });
     };
 
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
@@ -153,6 +157,13 @@ var MegaMenu = function ($) {
       $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
     };
 
+    MegaMenu.prototype._handleCollapseToggle = function _handleCollapseToggle(e) {
+      var $this = $(e.target);
+      var $thisCollapse = $($this.attr('href'));
+
+      this._$topCollapseMenus.not($thisCollapse).collapse('hide');
+    };
+
     MegaMenu.prototype._goForward = function _goForward(e) {
       e.preventDefault();
       var $this = $(e.target);
@@ -167,6 +178,7 @@ var MegaMenu = function ($) {
       if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+      $rootNav.addClass(ClassName.TRANSITIONING);
 
       // hide all nav on same level
       $thisNav.find(Selector.NAV_MENU).hide();
@@ -185,14 +197,13 @@ var MegaMenu = function ($) {
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
 
       // translate menu
-      $rootNav.addClass(ClassName.TRANSITIONING);
       $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
-        $rootNav.removeClass(ClassName.TRANSITIONING);
         $thisNavToggler.attr('aria-expanded', true);
         $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
+        $rootNav.removeClass(ClassName.TRANSITIONING);
       });
     };
 
@@ -212,6 +223,7 @@ var MegaMenu = function ($) {
       if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+      $rootNav.addClass(ClassName.TRANSITIONING);
 
       // make only visible elements focusable
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
@@ -222,15 +234,14 @@ var MegaMenu = function ($) {
       }
 
       // translate menu
-      $rootNav.addClass(ClassName.TRANSITIONING);
       $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
-        $rootNav.removeClass(ClassName.TRANSITIONING);
         $targetNavToggler.attr('aria-expanded', false);
         $targetNavToggler.trigger('focus');
         $thisNav.hide();
+        $rootNav.removeClass(ClassName.TRANSITIONING);
       });
     };
 

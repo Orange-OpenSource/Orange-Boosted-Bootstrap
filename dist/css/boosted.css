@@ -2752,7 +2752,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #32c832;
 }
 
-.has-success .form-control {
+.has-success .form-control,
+.has-success .custom-select,
+.has-success .custom-file-control {
   border-color: #32c832;
 }
 
@@ -2774,7 +2776,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #fc0;
 }
 
-.has-warning .form-control {
+.has-warning .form-control,
+.has-warning .custom-select,
+.has-warning .custom-file-control {
   border-color: #fc0;
 }
 
@@ -2796,7 +2800,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #cd3c14;
 }
 
-.has-danger .form-control {
+.has-danger .form-control,
+.has-danger .custom-select,
+.has-danger .custom-file-control {
   border-color: #cd3c14;
 }
 
@@ -2815,6 +2821,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -2853,6 +2861,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4799,6 +4809,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4832,6 +4844,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -5374,6 +5388,8 @@ a.badge:focus, a.badge:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -11065,10 +11081,6 @@ fieldset[disabled] a.btn {
   color: #666;
 }
 
-.rounded .on {
-  color: #000;
-}
-
 .card.o-card {
   background-color: #000;
   border-color: #000;
@@ -11452,6 +11464,8 @@ fieldset[disabled] a.btn {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -12230,6 +12244,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     border-top: 1px solid #333;
   }
   .navbar-toggleable .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-toggleable.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
+    margin-top: .3125rem;
+    margin-right: .9375rem;
     content: "";
     border-top: .4375em solid;
     border-right: .4375em solid transparent;
@@ -12237,8 +12253,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
-    margin-top: .3125rem;
-    margin-right: .9375rem;
   }
   .navbar-toggleable .mega-menu .nav-link.collapsed::before, .navbar-toggleable.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -12479,6 +12493,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     border-top: 1px solid #333;
   }
   .navbar-toggleable-sm .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-toggleable-sm.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
+    margin-top: .3125rem;
+    margin-right: .9375rem;
     content: "";
     border-top: .4375em solid;
     border-right: .4375em solid transparent;
@@ -12486,8 +12502,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
-    margin-top: .3125rem;
-    margin-right: .9375rem;
   }
   .navbar-toggleable-sm .mega-menu .nav-link.collapsed::before, .navbar-toggleable-sm.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -12728,6 +12742,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     border-top: 1px solid #333;
   }
   .navbar-toggleable-md .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-toggleable-md.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
+    margin-top: .3125rem;
+    margin-right: .9375rem;
     content: "";
     border-top: .4375em solid;
     border-right: .4375em solid transparent;
@@ -12735,8 +12751,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
-    margin-top: .3125rem;
-    margin-right: .9375rem;
   }
   .navbar-toggleable-md .mega-menu .nav-link.collapsed::before, .navbar-toggleable-md.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -12977,6 +12991,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     border-top: 1px solid #333;
   }
   .navbar-toggleable-lg .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-toggleable-lg.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
+    margin-top: .3125rem;
+    margin-right: .9375rem;
     content: "";
     border-top: .4375em solid;
     border-right: .4375em solid transparent;
@@ -12984,8 +13000,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
-    margin-top: .3125rem;
-    margin-right: .9375rem;
   }
   .navbar-toggleable-lg .mega-menu .nav-link.collapsed::before, .navbar-toggleable-lg.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -13226,6 +13240,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     border-top: 1px solid #333;
   }
   .navbar-toggleable-xl .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-toggleable-xl.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
+    margin-top: .3125rem;
+    margin-right: .9375rem;
     content: "";
     border-top: .4375em solid;
     border-right: .4375em solid transparent;
@@ -13233,8 +13249,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     -webkit-transform: rotateZ(180deg);
          -o-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
-    margin-top: .3125rem;
-    margin-right: .9375rem;
   }
   .navbar-toggleable-xl .mega-menu .nav-link.collapsed::before, .navbar-toggleable-xl.minimized .mega-menu .nav-link.collapsed::before {
     -webkit-transform: rotateZ(0deg);
@@ -13501,6 +13515,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .navbar-toggleable-xxl .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-toggleable-xxl.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
+  margin-top: .3125rem;
+  margin-right: .9375rem;
   content: "";
   border-top: .4375em solid;
   border-right: .4375em solid transparent;
@@ -13508,8 +13524,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   -webkit-transform: rotateZ(180deg);
        -o-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
-  margin-top: .3125rem;
-  margin-right: .9375rem;
 }
 
 .navbar-toggleable-xxl .mega-menu .nav-link.collapsed::before, .navbar-toggleable-xxl.minimized .mega-menu .nav-link.collapsed::before {
@@ -13712,6 +13726,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     left: 0;
     z-index: 20;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: column;
         -ms-flex-flow: column;
             flex-flow: column;
