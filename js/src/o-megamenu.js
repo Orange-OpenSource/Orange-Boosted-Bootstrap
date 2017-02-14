@@ -162,6 +162,7 @@ const MegaMenu = (($) => {
       if(!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
           return false
       }
+      $rootNav.addClass(ClassName.TRANSITIONING)
 
       // hide all nav on same level
       $thisNav.find(Selector.NAV_MENU).hide()
@@ -180,14 +181,13 @@ const MegaMenu = (($) => {
       $targetNav.find(Selector.NAV_LINK).attr({'tabindex': 0, 'aria-hidden': false})
 
       // translate menu
-      $rootNav.addClass(ClassName.TRANSITIONING)
       $rootNav.css('transform', 'translateX('+(currentTranslatePercentage - 100)+'%)')
 
       // focus on target nav first item
       $rootNav.one('transitionend', function() {
-        $rootNav.removeClass(ClassName.TRANSITIONING)
         $thisNavToggler.attr('aria-expanded', true)
         $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus')
+        $rootNav.removeClass(ClassName.TRANSITIONING)
       })
     }
 
@@ -207,6 +207,7 @@ const MegaMenu = (($) => {
       if(currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
           return false
       }
+      $rootNav.addClass(ClassName.TRANSITIONING)
 
       // make only visible elements focusable
       $targetNav.find(Selector.NAV_LINK).attr({'tabindex': 0, 'aria-hidden': false})
@@ -217,15 +218,14 @@ const MegaMenu = (($) => {
       }
 
       // translate menu
-      $rootNav.addClass(ClassName.TRANSITIONING)
       $rootNav.css('transform', 'translateX('+(currentTranslatePercentage + 100)+'%)')
 
       // focus on target nav first item
       $rootNav.one('transitionend', function() {
-        $rootNav.removeClass(ClassName.TRANSITIONING)
         $targetNavToggler.attr('aria-expanded', false)
         $targetNavToggler.trigger('focus')
         $thisNav.hide()
+        $rootNav.removeClass(ClassName.TRANSITIONING)
       })
     }
 
