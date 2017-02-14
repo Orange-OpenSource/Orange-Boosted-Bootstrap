@@ -66,6 +66,7 @@ const MegaMenu = (($) => {
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
       this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL)
+      this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE)
       this._addEventListeners()
       this._addAriaAttributes(this._element)
     }
@@ -85,6 +86,7 @@ const MegaMenu = (($) => {
       this._$goBackLinks.on('click', (event) => this._goBackward(event))
       this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
+      this._$navLinkCollapses.on('click', (event) => this._handleCollapseToggle(event))
     }
 
     _addAriaAttributes(element) {
@@ -146,6 +148,13 @@ const MegaMenu = (($) => {
 
     _collapseFocus(){
       $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus')
+    }
+
+    _handleCollapseToggle(e){
+      const $this = $(e.target)
+      const $thisCollapse = $($this.attr('href'))
+
+      this._$topCollapseMenus.not($thisCollapse).collapse('hide')
     }
 
     _goForward(e) {
