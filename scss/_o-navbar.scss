@@ -394,13 +394,13 @@
           }
 
           .mega-menu .nav-link[data-toggle="collapse"]::before {
+            margin-top: .3125rem;
+            margin-right: .9375rem;
             content: "";
             border-top: .4375em solid;
             border-right: .4375em solid transparent;
             border-left: .4375em solid transparent;
             transform: rotateZ(180deg);
-            margin-top: .3125rem;
-            margin-right: .9375rem;
           }
 
           .mega-menu .nav-link.collapsed::before {
