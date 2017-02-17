@@ -330,19 +330,23 @@ const Tab = (($) => {
     return `${prefix || 'ui-id'}-${Math.floor(Math.random() * RANDOM_NUMBER + 1)}`
   }
 
-  let $tablist = $('.nav-tabs, .nav-pills')
-  let $lis = $tablist.children('li')
-  let $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
+  let $tablists = $('.nav-tabs, .nav-pills')
+  let $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]')
 
-  $tablist.attr('role', 'tablist')
-  $lis.attr('role', 'presentation')
-  $tabs.attr('role', 'tab')
   $tabs.each(function () {
     let tabpanel = $($(this).attr('href'))
     let $tab = $(this)
+    let $tablist = $tab.closest('.nav-tabs, .nav-pills')
+    let $li = $tab.parent('li')
     let tabid = $tab.attr('id') || uniqueId('ui-tab')
 
     $tab.attr('id', tabid)
+    // put role tab, presentation and tablist only if there's at least one tabpanel
+    if(tabpanel) {
+      $tab.attr('role', 'tab')      
+      $tablist.attr('role', 'tablist')
+      $li.attr('role', 'presentation')
+    }
 
     if ($tab.hasClass('active')) {
       $tab.attr({
