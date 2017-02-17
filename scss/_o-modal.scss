@@ -146,3 +146,12 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .modal {
+
+    .modal-content {
+      padding: 1.25rem;
+    }
+  }
+}
