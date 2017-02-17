@@ -1,5 +1,3 @@
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29,6 +27,7 @@ var MegaMenu = function ($) {
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  var POS_MODULO = 5;
 
   var Event = {};
 
@@ -59,16 +58,23 @@ var MegaMenu = function ($) {
    */
 
   var MegaMenu = function () {
-    function MegaMenu(element) {
+    function MegaMenu(element, config) {
       _classCallCheck(this, MegaMenu);
 
       this._element = element;
+      this._config = config;
+
       this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
       this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
+      this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
+
+      if ($(this._config).length > 0) {
+        this._initPosition($(this._config));
+      }
     }
 
     // getters
@@ -90,6 +96,9 @@ var MegaMenu = function ($) {
         return _this._manageKeyDown(event);
       });
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      this._$navLinkCollapses.on('click', function (event) {
+        return _this._handleCollapseToggle(event);
+      });
     };
 
     MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
@@ -153,6 +162,31 @@ var MegaMenu = function ($) {
       $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
     };
 
+    MegaMenu.prototype._handleCollapseToggle = function _handleCollapseToggle(e) {
+      var $this = $(e.target);
+      var $thisCollapse = $($this.attr('href'));
+
+      this._$topCollapseMenus.not($thisCollapse).collapse('hide');
+    };
+
+    MegaMenu.prototype._initPosition = function _initPosition($target) {
+      var position = $target.parents().index(this._element);
+      var translatePercentage = -(position % POS_MODULO) * 100 / 2;
+      var $thisNav = $target.closest(Selector.NAV_MENU);
+
+      // open collapse
+      $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+
+      // show menu and hide other
+      $target.parents(Selector.NAV_MENU).show();
+
+      // translate to pos
+      $(Selector.ROOT_NAV).css('transform', 'translateX(' + translatePercentage + '%)');
+
+      //set focus on target link
+      $target.trigger('focus');
+    };
+
     MegaMenu.prototype._goForward = function _goForward(e) {
       e.preventDefault();
       var $this = $(e.target);
@@ -167,6 +201,7 @@ var MegaMenu = function ($) {
       if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+      $rootNav.addClass(ClassName.TRANSITIONING);
 
       // hide all nav on same level
       $thisNav.find(Selector.NAV_MENU).hide();
@@ -185,14 +220,13 @@ var MegaMenu = function ($) {
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
 
       // translate menu
-      $rootNav.addClass(ClassName.TRANSITIONING);
       $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
-        $rootNav.removeClass(ClassName.TRANSITIONING);
         $thisNavToggler.attr('aria-expanded', true);
         $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
+        $rootNav.removeClass(ClassName.TRANSITIONING);
       });
     };
 
@@ -212,6 +246,7 @@ var MegaMenu = function ($) {
       if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+      $rootNav.addClass(ClassName.TRANSITIONING);
 
       // make only visible elements focusable
       $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
@@ -222,40 +257,34 @@ var MegaMenu = function ($) {
       }
 
       // translate menu
-      $rootNav.addClass(ClassName.TRANSITIONING);
       $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + 100) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
-        $rootNav.removeClass(ClassName.TRANSITIONING);
         $targetNavToggler.attr('aria-expanded', false);
         $targetNavToggler.trigger('focus');
         $thisNav.hide();
+        $rootNav.removeClass(ClassName.TRANSITIONING);
       });
     };
 
     // static
 
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var $this = $(this);
-        var data = $this.data(DATA_KEY);
-        var _config = $.extend({},
-        //   Default,
-        $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+      // return this.each(function () {
+      //   const $element = $(this)
+      //   let data       = $element.data(DATA_KEY)
 
-        if (!data) {
-          data = new MegaMenu(this, _config);
-          $this.data(DATA_KEY, data);
-        }
+      //   if (!data) {
+      //     data = new MegaMenu(this)
+      //     $element.data(DATA_KEY, data)
+      //   }
 
-        if (typeof config === 'string') {
-          if (data[config] === undefined) {
-            throw new Error('No method named "' + config + '"');
-          }
-          data[config]();
-        }
-      });
+      //   // if (config === 'close') {
+      //     data[config](this)
+      //   // }
+      // })
+      new MegaMenu(this, config);
     };
 
     _createClass(MegaMenu, null, [{
