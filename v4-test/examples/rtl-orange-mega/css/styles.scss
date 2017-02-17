@@ -1,0 +1,170 @@
+body {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/**
+ * @section Mega navbar ===============
+ *
+ * @note min-height is meeant to make nav full height
+ * 1. 6.25rem equals to navbar's min-height
+ */
+[id="nav"] {
+  background: #e6e6e6;
+  min-height: calc(100vh - 6.25rem); /* 1 */
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition:
+    transform 300ms ease-in 50ms,
+    visibility 0s linear 300ms;
+  visibility: hidden;
+  width: 18.75rem;
+
+  &.is-opened {
+    transform: none;
+    transition-delay: 50ms, 0ms;
+  }
+}
+
+ /* @subsection Top level -------------------- */
+.navbar-mega {
+  position: relative;
+  transition: transform 300ms ease-in-out 50ms;
+  width: 100%;
+}
+
+.navbar-mega li + li {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.navbar-mega a {
+  display: block;
+  font-size: .875rem;
+  text-align: left;
+}
+
+/**
+ * @subsection Menu position --------------------
+ *
+ * @note Generating translations for 10 levels max.
+ * @note Simply customize the 10 to adjust it
+ *
+ * @cacedédi to Dany, @for loop works, just as the calcul directly in Sass
+ */
+@for $i from 1 through 10 {
+  #nav[data-level="#{$i}"] .navbar-mega {
+    $i: $i - 1;
+    /* Let the magic happen! */
+    transform: translateX($i * -100%);
+  }
+}
+
+ /* @subsection Sub levels -------------------- */
+.fresh-menu ul {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.fresh-menu a {
+  padding: .25rem .75rem .25rem 1.25rem;
+  transition:
+    color 300ms ease-in,
+    background 300ms ease-in;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    background: #f16e00;
+  }
+}
+
+ /* @subsection Design things -------------------- */
+.icon-arrow-next::before {
+  float: right;
+  padding-top: .25rem;
+}
+
+.icon-arrow-previous::before {
+  float: left;
+  padding: .25rem .5rem 0 0;
+}
+
+.navbar-mega .btn {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #fff;
+    color: #f16e00;
+  }
+}
+
+.icon-arrow-down {
+  position: absolute;
+  right: .5rem;
+}
+
+.js-close-subnav {
+  background: #fff;
+  font-weight: bold;
+}
+
+ /**
+  * @subsection Sub levels states --------------------
+  *
+  * @note It's important to toggle visibility for a11y:
+  * @note Focusables things in hidden menus shouldn't receive focus
+  * @note Transition is meant to delay hiding subnav (avoids flickering)
+  */
+.is-closed {
+  transition: visibility 0s linear 300ms;
+  visibility: hidden;
+}
+
+.is-opened,
+.has-subnav-opened {
+  transition-delay: 0ms;
+  visibility: visible;
+}
+
+/**
+ * @subsection Hamburger button --------------------
+ *
+ */
+.btn-hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.875rem;
+  transition: color 300ms ease-in;
+
+  &:hover,
+  &:focus {
+    border: 0;
+    color: #f16e00;
+    outline: none;
+  }
+
+  &::before {
+    content: "\ea48";
+    font: normal normal 1em/1 "icon-orange";
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &[aria-expanded="true"]::before {
+    content: "\e99d";
+  }
+}

@@ -91,17 +91,12 @@
 
 #container, #event-container, #footer-bottom-container #footer-bottom, #footer-middle-container #footer-middle, #footer-top-container #footer-top, #header-container, #header-container #header, #highlights-container, #menu-container, #menu-container #menu > .navbar .navbar-container .container, #menu-hamburger, #mmenu-orange, #navbar-fixed-container, a, span {
     -webkit-transition-duration: .2s;
-    -o-transition-duration: .2s;
-       transition-duration: .2s;
+    transition-duration: .2s;
     -webkit-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-       transition-timing-function: ease;
+    transition-timing-function: ease;
     -webkit-transition-property: all;
-    -o-transition-property: all;
     transition-property: all;
 }
 .mega-menu *{
-  -webkit-transition: inherit;
-  -o-transition: inherit;
   transition: inherit;
 }
