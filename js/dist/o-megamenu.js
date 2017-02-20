@@ -63,7 +63,6 @@ var MegaMenu = function ($) {
 
       this._element = element;
       this._config = config;
-
       this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
@@ -129,6 +128,34 @@ var MegaMenu = function ($) {
       });
     };
 
+    MegaMenu.prototype._initPosition = function _initPosition($target) {
+      var position = $target.parents().index(this._element);
+      var translatePercentage = -(position % POS_MODULO) * 100 / 2;
+      var $thisNav = $target.closest(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+
+      $rootNav.addClass(ClassName.TRANSITIONING);
+
+      // open collapse
+      $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+
+      // show menu and hide other
+      $target.parents(Selector.NAV_MENU).show();
+
+      // set aria on parent links
+      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({ 'tabindex': -1, 'aria-hidden': true, 'aria-expanded': true });
+
+      // translate to pos
+      $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
+
+      $rootNav.one('transitionend', function () {
+        //set focus on target link
+        $target.trigger('focus');
+
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+      });
+    };
+
     MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
       var $thisTarget = $(event.target);
 
@@ -169,24 +196,6 @@ var MegaMenu = function ($) {
       this._$topCollapseMenus.not($thisCollapse).collapse('hide');
     };
 
-    MegaMenu.prototype._initPosition = function _initPosition($target) {
-      var position = $target.parents().index(this._element);
-      var translatePercentage = -(position % POS_MODULO) * 100 / 2;
-      var $thisNav = $target.closest(Selector.NAV_MENU);
-
-      // open collapse
-      $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
-
-      // show menu and hide other
-      $target.parents(Selector.NAV_MENU).show();
-
-      // translate to pos
-      $(Selector.ROOT_NAV).css('transform', 'translateX(' + translatePercentage + '%)');
-
-      //set focus on target link
-      $target.trigger('focus');
-    };
-
     MegaMenu.prototype._goForward = function _goForward(e) {
       e.preventDefault();
       var $this = $(e.target);
@@ -201,6 +210,7 @@ var MegaMenu = function ($) {
       if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+
       $rootNav.addClass(ClassName.TRANSITIONING);
 
       // hide all nav on same level
@@ -246,6 +256,7 @@ var MegaMenu = function ($) {
       if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+
       $rootNav.addClass(ClassName.TRANSITIONING);
 
       // make only visible elements focusable
@@ -272,18 +283,28 @@ var MegaMenu = function ($) {
 
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       // return this.each(function () {
-      //   const $element = $(this)
-      //   let data       = $element.data(DATA_KEY)
+      //   const $this   = $(this)
+      //   let data    = $this.data(DATA_KEY)
+      //   const _config = $.extend(
+      //     {},
+      //   //   Default,
+      //     $this.data(),
+      //     typeof config === 'object' && config
+      //   )
 
       //   if (!data) {
-      //     data = new MegaMenu(this)
-      //     $element.data(DATA_KEY, data)
+      //     data = new MegaMenu(this, _config)
+      //     $this.data(DATA_KEY, data)
       //   }
 
-      //   // if (config === 'close') {
-      //     data[config](this)
-      //   // }
+      //   if (typeof config === 'string') {
+      //     // if (data[config] === undefined) {
+      //     //   throw new Error(`No method named "${config}"`)
+      //     // }
+      //     data[config]()
+      //   }
       // })
+
       new MegaMenu(this, config);
     };
 
