@@ -392,27 +392,7 @@ $targetNav.find(Selector.NAV_LINK).attr({'tabindex':0,'aria-hidden':false});if(c
 $(Selector.MEGAMENU).css('height','auto');$rootNav.find('>.nav-item .nav-link').attr({'tabindex':0,'aria-hidden':false});}// translate menu
 $rootNav.css('transform','translateX('+(currentTranslatePercentage+100)+'%)');// focus on target nav first item
 $rootNav.one('transitionend',function(){$targetNavToggler.attr('aria-expanded',false);$targetNavToggler.trigger('focus');$thisNav.hide();$rootNav.removeClass(ClassName.TRANSITIONING);});};// static
-MegaMenu._jQueryInterface=function _jQueryInterface(config){// return this.each(function () {
-//   const $this   = $(this)
-//   let data    = $this.data(DATA_KEY)
-//   const _config = $.extend(
-//     {},
-//   //   Default,
-//     $this.data(),
-//     typeof config === 'object' && config
-//   )
-//   if (!data) {
-//     data = new MegaMenu(this, _config)
-//     $this.data(DATA_KEY, data)
-//   }
-//   if (typeof config === 'string') {
-//     // if (data[config] === undefined) {
-//     //   throw new Error(`No method named "${config}"`)
-//     // }
-//     data[config]()
-//   }
-// })
-new MegaMenu(this,config);};_createClass(MegaMenu,null,[{key:'VERSION',get:function get(){return VERSION;}}]);return MegaMenu;}();/**
+MegaMenu._jQueryInterface=function _jQueryInterface(config){return this.each(function(){if(typeof config!=='string'||!/^[.#].*/.test(config)){throw new Error('Selector "'+config+'" is not a valid jQuery Selector');}var $element=$(this);var data=$element.data(DATA_KEY);if(!data){data=new MegaMenu(this,config);$element.data(DATA_KEY,data);}else{throw new Error('Component '+DATA_KEY+' was already initialized');}});};_createClass(MegaMenu,null,[{key:'VERSION',get:function get(){return VERSION;}}]);return MegaMenu;}();/**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------

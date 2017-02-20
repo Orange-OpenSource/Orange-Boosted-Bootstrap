@@ -278,30 +278,21 @@ const MegaMenu = (($) => {
     // static
 
     static _jQueryInterface(config) {
-      // return this.each(function () {
-      //   const $this   = $(this)
-      //   let data    = $this.data(DATA_KEY)
-      //   const _config = $.extend(
-      //     {},
-      //   //   Default,
-      //     $this.data(),
-      //     typeof config === 'object' && config
-      //   )
+      return this.each(function () {
+        if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
+          throw new Error(`Selector "${config}" is not a valid jQuery Selector`)
+        }
 
-      //   if (!data) {
-      //     data = new MegaMenu(this, _config)
-      //     $this.data(DATA_KEY, data)
-      //   }
+        const $element = $(this)
+        let data       = $element.data(DATA_KEY)
 
-      //   if (typeof config === 'string') {
-      //     // if (data[config] === undefined) {
-      //     //   throw new Error(`No method named "${config}"`)
-      //     // }
-      //     data[config]()
-      //   }
-      // })
-
-      new MegaMenu(this, config)
+        if (!data) {
+          data = new MegaMenu(this, config)
+          $element.data(DATA_KEY, data)
+        } else {
+          throw new Error(`Component ${DATA_KEY} was already initialized`)
+        }
+      })
     }
   }
 
