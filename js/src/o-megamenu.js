@@ -279,8 +279,10 @@ const MegaMenu = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-          throw new Error(`Selector "${config}" is not a valid jQuery Selector`)
+        if(typeof config !== 'undefined') {
+          if (typeof config !== 'string' || !/^[.#undefined].*/.test(config)) {
+            throw new Error(`Selector "${config}" is not a valid jQuery Selector`)
+          }
         }
 
         const $element = $(this)
