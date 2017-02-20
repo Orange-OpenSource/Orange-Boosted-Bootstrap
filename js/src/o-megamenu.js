@@ -18,14 +18,15 @@ const MegaMenu = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'megamenu'
-  const VERSION             = '4.0.0-alpha.6'
-  const DATA_KEY            = 'bs.megamenu'
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
-  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
-  const ARROW_UP_KEYCODE  = 38 // KeyboardEvent.which value for up arrow key
-  const ARROW_DOWN_KEYCODE = 40 // KeyboardEvent.which value for down arrow key
+  var NAME = 'megamenu';
+  var VERSION = '4.0.0-alpha.6';
+  var DATA_KEY = 'bs.megamenu';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  var POS_MODULO = 5;
 
   const Event = {
   }
@@ -60,8 +61,9 @@ const MegaMenu = (($) => {
 
   class MegaMenu {
 
-    constructor(element) {
+    constructor(element, config) {
       this._element = element
+	    this._config = config
       this._$navLinks = $(this._element).find(Selector.NAV_LINK)
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
@@ -69,6 +71,10 @@ const MegaMenu = (($) => {
       this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE)
       this._addEventListeners()
       this._addAriaAttributes(this._element)
+
+      if ($(this._config).length > 0) {
+        this._initPosition($(this._config));
+      }
     }
 
     // getters
@@ -116,6 +122,35 @@ const MegaMenu = (($) => {
         $thisNavBackLink.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-label': goBackLabel})
       })
     }
+
+    _initPosition($target) {
+      const position = $target.parents().index(this._element)
+      const translatePercentage = -(position % POS_MODULO) * 100 / 2
+      const $thisNav = $target.closest(Selector.NAV_MENU)
+      const $rootNav = $(Selector.ROOT_NAV)
+
+      $rootNav.addClass(ClassName.TRANSITIONING)
+
+      // open collapse
+      $target.closest(Selector.MEGAMENU_PANEL).collapse('show')
+
+      // show menu and hide other
+      $target.parents(Selector.NAV_MENU).show()
+
+      // set aria on parent links
+      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({'tabindex': -1, 'aria-hidden': true, 'aria-expanded': true})
+
+      // translate to pos
+      $rootNav.css('transform', 'translateX(' + translatePercentage + '%)')
+
+      $rootNav.one('transitionend', function() {
+        //set focus on target link
+        $target.trigger('focus')
+
+        $rootNav.removeClass(ClassName.TRANSITIONING)
+      })
+
+    };
 
     _manageKeyDown(event) {
       const $thisTarget = $(event.target)
@@ -171,6 +206,7 @@ const MegaMenu = (($) => {
       if(!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
           return false
       }
+
       $rootNav.addClass(ClassName.TRANSITIONING)
 
       // hide all nav on same level
@@ -216,6 +252,7 @@ const MegaMenu = (($) => {
       if(currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
           return false
       }
+
       $rootNav.addClass(ClassName.TRANSITIONING)
 
       // make only visible elements focusable
@@ -241,28 +278,30 @@ const MegaMenu = (($) => {
     // static
 
     static _jQueryInterface(config) {
-      return this.each(function () {
-        const $this   = $(this)
-        let data    = $this.data(DATA_KEY)
-        const _config = $.extend(
-          {},
-        //   Default,
-          $this.data(),
-          typeof config === 'object' && config
-        )
+      // return this.each(function () {
+      //   const $this   = $(this)
+      //   let data    = $this.data(DATA_KEY)
+      //   const _config = $.extend(
+      //     {},
+      //   //   Default,
+      //     $this.data(),
+      //     typeof config === 'object' && config
+      //   )
 
-        if (!data) {
-          data = new MegaMenu(this, _config)
-          $this.data(DATA_KEY, data)
-        }
+      //   if (!data) {
+      //     data = new MegaMenu(this, _config)
+      //     $this.data(DATA_KEY, data)
+      //   }
 
-        if (typeof config === 'string') {
-          if (data[config] === undefined) {
-            throw new Error(`No method named "${config}"`)
-          }
-          data[config]()
-        }
-      })
+      //   if (typeof config === 'string') {
+      //     // if (data[config] === undefined) {
+      //     //   throw new Error(`No method named "${config}"`)
+      //     // }
+      //     data[config]()
+      //   }
+      // })
+
+      new MegaMenu(this, config)
     }
   }
 
