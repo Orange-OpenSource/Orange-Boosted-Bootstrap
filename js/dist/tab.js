@@ -315,19 +315,23 @@ var Tab = function ($) {
     return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * RANDOM_NUMBER + 1);
   };
 
-  var $tablist = $('.nav-tabs, .nav-pills');
-  var $lis = $tablist.children('li');
-  var $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]');
+  var $tablists = $('.nav-tabs, .nav-pills');
+  var $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]');
 
-  $tablist.attr('role', 'tablist');
-  $lis.attr('role', 'presentation');
-  $tabs.attr('role', 'tab');
   $tabs.each(function () {
     var tabpanel = $($(this).attr('href'));
     var $tab = $(this);
+    var $tablist = $tab.closest('.nav-tabs, .nav-pills');
+    var $li = $tab.parent('li');
     var tabid = $tab.attr('id') || uniqueId('ui-tab');
 
     $tab.attr('id', tabid);
+    // put role tab, presentation and tablist only if there's at least one tabpanel
+    if (tabpanel) {
+      $tab.attr('role', 'tab');
+      $tablist.attr('role', 'tablist');
+      $li.attr('role', 'presentation');
+    }
 
     if ($tab.hasClass('active')) {
       $tab.attr({
