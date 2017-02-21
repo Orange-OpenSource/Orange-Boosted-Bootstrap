@@ -54,11 +54,14 @@
     })
 
     // Insert copy to clipboard button before .highlight
+    // boosted mod
+    // change class btn-clipboard to btn btn-sm btn-secondary
     $('.highlight').each(function () {
-      var btnHtml = '<div class="bd-clipboard"><span class="btn-clipboard" title="Copy to clipboard">Copy</span></div>'
+      var btnHtml = '<div class="bd-clipboard"><span class="btn btn-sm btn-secondary" title="Copy to clipboard">Copy</span></div>'
       $(this).before(btnHtml)
       $('.btn-clipboard').tooltip()
     })
+    // end mod
 
     var clipboard = new Clipboard('.btn-clipboard', {
       target: function (trigger) {
