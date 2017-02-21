@@ -18,15 +18,15 @@ const MegaMenu = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  var NAME = 'megamenu';
-  var VERSION = '4.0.0-alpha.6';
-  var DATA_KEY = 'bs.megamenu';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
-  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
-  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
-  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  var POS_MODULO = 5;
+  const NAME = 'megamenu';
+  const VERSION = '4.0.0-alpha.6';
+  const DATA_KEY = 'bs.megamenu';
+  const JQUERY_NO_CONFLICT = $.fn[NAME];
+  const ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  const ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  const ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  const ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  // const POS_MODULO = 5;
 
   const Event = {
   }
@@ -42,7 +42,6 @@ const MegaMenu = (($) => {
     MEGAMENU    : '.mega-menu',
     ROOT_NAV : '.mega-menu > .navbar-nav',
     MEGAMENU_PANEL : '.mega-menu-panel',
-    MEGAMENU_PANEL_NAV : '.mega-menu-panel > .container > .navbar-nav',
     MEGAMENU_NAV : '.nav-link + .navbar-nav',
     NAV_MENU : '.navbar-nav',
     NAV_ITEM : '.nav-item',
@@ -71,10 +70,12 @@ const MegaMenu = (($) => {
       this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE)
       this._addEventListeners()
       this._addAriaAttributes(this._element)
+      this.goTo = this._initPosition
 
-      if ($(this._config).length > 0) {
-        this._initPosition($(this._config));
-      }
+      // if ($(this._config).length > 0) {
+      //   this._posModulo = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
+      //   this._initPosition($(this._config));
+      // }
     }
 
     // getters
@@ -123,13 +124,22 @@ const MegaMenu = (($) => {
       })
     }
 
-    _initPosition($target) {
+    _initPosition(target) {
+      if ($(target).length === 0) {
+        return
+      }
+
+      const $target = $(target);
       const position = $target.parents().index(this._element)
-      const translatePercentage = -(position % POS_MODULO) * 100 / 2
+      const posModulo = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
+      const translatePercentage = -(position % posModulo) * 100 / 2
       const $thisNav = $target.closest(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
 
-      $rootNav.addClass(ClassName.TRANSITIONING)
+      if($rootNav.is(':visible')) {
+        // transitionend event will not fire if menu is hidden
+        $rootNav.addClass(ClassName.TRANSITIONING)
+      }
 
       // open collapse
       $target.closest(Selector.MEGAMENU_PANEL).collapse('show')
@@ -279,20 +289,20 @@ const MegaMenu = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        if(typeof config !== 'undefined') {
-          if (typeof config !== 'string' || !/^[.#undefined].*/.test(config)) {
-            throw new Error(`Selector "${config}" is not a valid jQuery Selector`)
-          }
-        }
-
         const $element = $(this)
         let data       = $element.data(DATA_KEY)
 
         if (!data) {
           data = new MegaMenu(this, config)
           $element.data(DATA_KEY, data)
-        } else {
-          throw new Error(`Component ${DATA_KEY} was already initialized`)
+        }
+
+        if(typeof config !== 'undefined' && config.length > 0) {
+          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
+            throw new Error(`Selector "${config}" is not supported`)
+          }
+
+          data.goTo(config)
         }
       })
     }
