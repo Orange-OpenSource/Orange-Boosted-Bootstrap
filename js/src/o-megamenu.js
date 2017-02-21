@@ -285,6 +285,11 @@ const MegaMenu = (($) => {
     static _jQueryInterface(config) {
       return this.each(function () {
         const $element = $(this)
+
+        if(!$element.is(Selector.MEGAMENU)) {
+          throw new Error('Element is not a mega menu')
+        }
+
         let data       = $element.data(DATA_KEY)
 
         if (!data) {
