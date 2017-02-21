@@ -2739,7 +2739,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .form-control-danger {
   padding-left: 1.875rem;
   background-repeat: no-repeat;
-  background-position: center right 0.5625rem;
+  background-position: center left 0.5625rem;
   -webkit-background-size: 1.125rem 1.125rem;
           background-size: 1.125rem 1.125rem;
 }
@@ -2821,6 +2821,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -2859,6 +2861,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -3867,7 +3871,7 @@ tbody.collapse.show {
   line-height: 1.25;
   color: #000;
   vertical-align: middle;
-  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M0%200h14L7%207%200%200z%22%2F%3E%3C%2Fsvg%3E") no-repeat right 0.5rem center;
+  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M0%200h14L7%207%200%200z%22%2F%3E%3C%2Fsvg%3E") no-repeat left 0.5rem center;
   -webkit-background-size: 8px 10px;
           background-size: 8px 10px;
   border: 2px solid #ccc;
@@ -4805,6 +4809,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4838,6 +4844,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -5380,6 +5388,8 @@ a.badge:focus, a.badge:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -11454,6 +11464,8 @@ fieldset[disabled] a.btn {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -13714,6 +13726,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     right: 0;
     z-index: 20;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: column;
         -ms-flex-flow: column;
             flex-flow: column;
@@ -15191,279 +15205,6 @@ a:focus {
     display: none;
 }
 
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
 .icon-arrow-next::before {
   content: "\ea53";
 }
