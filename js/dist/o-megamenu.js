@@ -290,6 +290,11 @@ var MegaMenu = function ($) {
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var $element = $(this);
+
+        if (!$element.is(Selector.MEGAMENU)) {
+          throw new Error('Element is not a mega menu');
+        }
+
         var data = $element.data(DATA_KEY);
 
         if (!data) {

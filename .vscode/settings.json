@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+		"_gh_pages": true,
+		".tmpdocs": true,
+        "bower_components": true,
+        "dist": true,
+        "node_modules": true
+	}
+}
