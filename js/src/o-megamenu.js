@@ -71,11 +71,6 @@ const MegaMenu = (($) => {
       this._addEventListeners()
       this._addAriaAttributes(this._element)
       this.goTo = this._initPosition
-
-      // if ($(this._config).length > 0) {
-      //   this._posModulo = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
-      //   this._initPosition($(this._config));
-      // }
     }
 
     // getters
@@ -129,17 +124,14 @@ const MegaMenu = (($) => {
         return
       }
 
-      const $target = $(target);
+      const $target = $(target).first();
       const position = $target.parents().index(this._element)
-      const posModulo = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
-      const translatePercentage = -(position % posModulo) * 100 / 2
+      const rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
+      const translatePercentage = -(position - rootPosition) * 100 / 2
       const $thisNav = $target.closest(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
 
-      if($rootNav.is(':visible')) {
-        // transitionend event will not fire if menu is hidden
-        $rootNav.addClass(ClassName.TRANSITIONING)
-      }
+      $rootNav.addClass(ClassName.TRANSITIONING)
 
       // open collapse
       $target.closest(Selector.MEGAMENU_PANEL).collapse('show')
@@ -153,13 +145,16 @@ const MegaMenu = (($) => {
       // translate to pos
       $rootNav.css('transform', 'translateX(' + translatePercentage + '%)')
 
-      $rootNav.one('transitionend', function() {
+      // adapt main collapse height to target height
+      $(this._element).height($thisNav.height())
+
+      //set focus on target link
+      setTimeout(function(){
         //set focus on target link
         $target.trigger('focus')
 
         $rootNav.removeClass(ClassName.TRANSITIONING)
-      })
-
+      }, 1000)
     };
 
     _manageKeyDown(event) {

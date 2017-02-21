@@ -92,7 +92,7 @@
                                                     <ul class="navbar-nav">
                                                         <li class="nav-item"><a class="nav-link back" href="">Phones</a></li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="">Sub link 1</a>
+                                                            <a class="nav-link" href="" id="test">Sub link 1</a>
                                                             <ul class="navbar-nav">
                                                                 <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href="">Sub sub link 1</a></li>
@@ -505,13 +505,13 @@
         });
       }
 
-            $(document).ready(function(){
-              $('header').navbar({sticky: false, hideSupra: true});
-			  $('#collapsingNavbarHead').megamenu();
+      $(document).ready(function(){
+        $('header').navbar({sticky: false, hideSupra: true});
+			  // $('#collapsingNavbarHead').megamenu('#test');
 
-			//   $('a').on('click', function(e){
-			// 	e.preventDefault();
-			// 	});
+        $('#collapsingNavbarHead').on('shown.bs.collapse', function(){
+          $('#collapsingNavbarHead').megamenu('#test');
+        })
 		   });
     </script>
 

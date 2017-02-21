@@ -70,11 +70,6 @@ var MegaMenu = function ($) {
       this._addEventListeners();
       this._addAriaAttributes(this._element);
       this.goTo = this._initPosition;
-
-      // if ($(this._config).length > 0) {
-      //   this._posModulo = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
-      //   this._initPosition($(this._config));
-      // }
     }
 
     // getters
@@ -134,17 +129,14 @@ var MegaMenu = function ($) {
         return;
       }
 
-      var $target = $(target);
+      var $target = $(target).first();
       var position = $target.parents().index(this._element);
-      var posModulo = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
-      var translatePercentage = -(position % posModulo) * 100 / 2;
+      var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
+      var translatePercentage = -(position - rootPosition) * 100 / 2;
       var $thisNav = $target.closest(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
 
-      if ($rootNav.is(':visible')) {
-        // transitionend event will not fire if menu is hidden
-        $rootNav.addClass(ClassName.TRANSITIONING);
-      }
+      $rootNav.addClass(ClassName.TRANSITIONING);
 
       // open collapse
       $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
@@ -158,12 +150,16 @@ var MegaMenu = function ($) {
       // translate to pos
       $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
 
-      $rootNav.one('transitionend', function () {
+      // adapt main collapse height to target height
+      $(this._element).height($thisNav.height());
+
+      //set focus on target link
+      setTimeout(function () {
         //set focus on target link
         $target.trigger('focus');
 
         $rootNav.removeClass(ClassName.TRANSITIONING);
-      });
+      }, 1000);
     };
 
     MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
