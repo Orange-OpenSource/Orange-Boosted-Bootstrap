@@ -2821,6 +2821,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -2859,6 +2861,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4805,6 +4809,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4838,6 +4844,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -5076,8 +5084,8 @@ tbody.collapse.show {
 
 .badge {
   display: inline-block;
-  padding: 0.25em 0.4em;
-  font-size: 75%;
+  padding: 0.1875rem 0.625rem;
+  font-size: 0.875rem;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -5101,56 +5109,62 @@ a.badge:focus, a.badge:hover {
 }
 
 .badge-pill {
-  padding-right: 0.6em;
-  padding-left: 0.6em;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
 }
 
 .badge-default {
-  background-color: #ccc;
+  background-color: #000;
+  color: #fff;
 }
 
 .badge-default[href]:focus, .badge-default[href]:hover {
-  background-color: #b3b3b3;
+  background-color: #e6e6e6;
 }
 
 .badge-primary {
   background-color: #f16e00;
+  color: #fff;
 }
 
 .badge-primary[href]:focus, .badge-primary[href]:hover {
-  background-color: #be5700;
+  background-color: #e6e6e6;
 }
 
 .badge-success {
   background-color: #32c832;
+  color: #000;
 }
 
 .badge-success[href]:focus, .badge-success[href]:hover {
-  background-color: #289f28;
+  background-color: black;
 }
 
 .badge-info {
   background-color: #527edb;
+  color: #000;
 }
 
 .badge-info[href]:focus, .badge-info[href]:hover {
-  background-color: #2b60cf;
+  background-color: black;
 }
 
 .badge-warning {
   background-color: #fc0;
+  color: #000;
 }
 
 .badge-warning[href]:focus, .badge-warning[href]:hover {
-  background-color: #cca300;
+  background-color: black;
 }
 
 .badge-danger {
   background-color: #cd3c14;
+  color: #fff;
 }
 
 .badge-danger[href]:focus, .badge-danger[href]:hover {
-  background-color: #9f2e0f;
+  background-color: #e6e6e6;
 }
 
 .jumbotron {
@@ -5380,6 +5394,8 @@ a.badge:focus, a.badge:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -11454,6 +11470,8 @@ fieldset[disabled] a.btn {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -13714,6 +13732,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     left: 0;
     z-index: 20;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: column;
         -ms-flex-flow: column;
             flex-flow: column;
@@ -14695,22 +14715,6 @@ caption {
   position: relative;
   display: inline-block;
   float: none;
-}
-
-.badge {
-  font-size: .8125rem;
-}
-
-.badge.badge-primary, .badge.badge-danger {
-  color: #fff;
-}
-
-a.badge:focus, a.badge:hover {
-  color: #000;
-}
-
-a.badge:focus.badge-primary, a.badge:focus.badge-danger, a.badge:hover.badge-primary, a.badge:hover.badge-danger {
-  color: #fff;
 }
 
 .dropdown-toggle::after {
