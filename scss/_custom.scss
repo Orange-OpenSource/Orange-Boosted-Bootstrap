@@ -808,21 +808,28 @@ $popover-arrow-outer-color:           $popover-border-color;
 
 // Badges
 
-$badge-default-bg:            $gray-light-o;
+$badge-default-bg:            $black;
+$badge-default-color:         $white;
 $badge-primary-bg:            $brand-primary;
+$badge-primary-color:         $white;
 $badge-success-bg:            $brand-success;
+$badge-success-color:         $black;
 $badge-info-bg:               $brand-info;
+$badge-info-color:            $black;
 $badge-warning-bg:            $brand-warning;
+$badge-warning-color:         $black;
 $badge-danger-bg:             $brand-danger;
+$badge-danger-color:          $white;
 
-$badge-color:                 #000;
+$badge-color:                 $black;
 $badge-link-hover-color:      $brand-primary;
-$badge-font-size:             75% !default;
+$badge-font-size:             .875rem;
 $badge-font-weight:           $font-weight-bold;
-$badge-padding-x:             .4em !default;
-$badge-padding-y:             .25em !default;
 
-$badge-pill-padding-x:        .6em !default;
+$badge-padding-x:             .625rem;
+$badge-padding-y:             .1875rem;
+
+$badge-pill-padding-x:        .625rem;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
 $badge-pill-border-radius:    $border-radius;

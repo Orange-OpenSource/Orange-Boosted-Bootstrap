@@ -1,7 +1,9 @@
 // Badges
-
-@mixin badge-variant($color) {
-  background-color: $color;
+// boosted mod
+// add a txt color for accessibility purpose
+@mixin badge-variant($bgcolor,$color) {
+  background-color: $bgcolor;
+  color: $color;
 
   &[href] {
     @include hover-focus {
