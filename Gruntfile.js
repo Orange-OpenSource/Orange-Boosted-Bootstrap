@@ -146,7 +146,7 @@ module.exports = function (grunt) {
       },
       /* boosted mod */
       vendorsCss: {
-        src: ['dist/css/boosted.css', 'bower_components/slick-carousel/slick/slick.css'],
+        src: ['dist/css/boosted.css'],
         dest: 'dist/css/boosted.css'
       },
       rtlCss: {
@@ -232,7 +232,7 @@ module.exports = function (grunt) {
         expand: true,
         flatten: true,
         cwd: 'bower_components/',
-        src: ['jquery.tablesorter/dist/js/*', 'slick-carousel/slick/slick.min.js'],
+        src: ['jquery.tablesorter/dist/js/*'],
         dest: 'dist/js/vendors/'
         /* end mod */
       }
