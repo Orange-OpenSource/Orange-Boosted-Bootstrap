@@ -231,8 +231,8 @@ module.exports = function (grunt) {
       vendorsjs: {
         expand: true,
         flatten: true,
-        cwd: 'bower_components/',
-        src: ['jquery.tablesorter/dist/js/*'],
+        cwd: 'js/vendors',
+        src: ['*'],
         dest: 'dist/js/vendors/'
         /* end mod */
       }

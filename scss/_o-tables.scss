@@ -219,26 +219,49 @@ caption {
 
   th {
     padding-right: 30px;
-    // font-weight: bold;
     text-align: left;
     cursor: pointer;
 
     &.header {
-      background-repeat: no-repeat;
-      background-position: 95% 50%;
+      position: relative;
+    }
 
-      @include hover {
-        // background-image: url("../img/triangle_sort.png");
+    &.tablesorter-headerDesc .tablesorter-header-inner::after {
+      position: absolute;
+      top: 1.125rem;
+      margin-left: .625rem;
+      width: .875rem;
+      height: .4375rem;
+      content: "";
+      background-image: $accordion-arrow-icon;
+      transform: rotate(180deg);      
+    }
+
+    &.tablesorter-headerAsc .tablesorter-header-inner::after {
+      position: absolute;
+      top: 1.125rem;
+      margin-left: .625rem;
+      width: .875rem;
+      height: .4375rem;
+      content: "";
+      background-image: $accordion-arrow-icon;
+    }
+
+    &.tablesorter-headerUnSorted {
+      @include hover-focus {
+        .tablesorter-header-inner::after {
+          position: absolute;
+          top: .75rem;
+          margin-left: .625rem;
+          width: .875rem;
+          height: 1.0625rem;
+          content: "";
+          background-image: $o-sortable-hover-icon;
+        }
       }
     }
 
-    &.tablesorter-headerDesc {
-      // background-image: url("../img/triangle_down.png");
-    }
-
-    &.tablesorter-headerAsc {
-      // background-image: url("../img/triangle_up.png");
-    }
+    
 
     a {
       color: #000;

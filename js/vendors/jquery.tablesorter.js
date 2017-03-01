@@ -9,9 +9,10 @@
 }(function(jQuery) {
 
 /*! TableSorter (FORK) v2.28.5 *//*
+* fork from github.com/virtualidentityag/tablesorter.git copy/paste in the project because there's actually no build version compatible jquery 3 available
 * Client-side table sorting with ease!
 * @requires jQuery v1.2.6+
-*
+* 
 * Copyright (c) 2007 Christian Bach
 * fork maintained by Rob Garrison
 *

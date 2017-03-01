@@ -10,33 +10,6 @@
     <link rel="stylesheet" href="../../dist/css/boosted.css" />
     <link href="gabarit.css" rel="stylesheet">
 
-    <style>/* accessibility */
-      table.tablesorter > thead > tr > th[aria-sort="descending"]:after {
-        content:"sorted in descending order";
-        border: 0 none;
-        clip: rect(0px, 0px, 0px, 0px);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-      }
-
-      /* accessibility */
-      table.tablesorter > thead > tr > th[aria-sort="ascending"]:after {
-        content:"sorted in ascending order";
-        border: 0 none;
-        clip: rect(0px, 0px, 0px, 0px);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-      }
-    </style>
-
   </head>
 
   <body>
@@ -204,11 +177,11 @@
             <thead class="cf">
               <tr>
                 <th class="header" scope="col"></th>
-                <th class="header" scope="col"><a href="#">date<span class="sr-only"> sortable</span></a></th>
-                <th class="header hide-when-small" scope="col"><a href="#">id<span class="sr-only"> sortable</span></a></th>
-                <th class="header" scope="col"><a href="#">type<span class="sr-only"> sortable</span></a></th>
-                <th class="header" scope="col"><a href="#">status<span class="sr-only"> sortable</span></a></th>
-                <th class="header hide-when-small" scope="col"><a href="#">duration<span class="sr-only"> sortable</span></a></th>
+                <th class="header" scope="col">date</th>
+                <th class="header hide-when-small" scope="col">id</th>
+                <th class="header" scope="col">type</th>
+                <th class="header" scope="col">status</th>
+                <th class="header hide-when-small" scope="col">duration</th>
               </tr>
             </thead>
             <tbody>
@@ -389,7 +362,8 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
-    <script src="../../dist/js/boosted.js"></script>
+    <script src="../../dist/js/boosted.js"></script>  
+    <script src="../../dist/js/vendors/jquery.tablesorter.min.js"></script>
   <script>
     $(document).ready(function(){
             $("#myTable").tablesorter({

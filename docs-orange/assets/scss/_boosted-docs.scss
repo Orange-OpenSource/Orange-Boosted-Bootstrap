@@ -217,56 +217,6 @@
   }
 }
 
-@media only screen and (max-width : 650px) {
-  #myTable .cf::after { display: block; height: 0;clear: both; font-size: 0; visibility: hidden; content: " ";   }
-  #myTable * html .cf { zoom: 1; }
-  #myTable *:first-child+html .cf { zoom: 1; }
-  #myTable table { width: 100%; border-spacing: 0; border-collapse: collapse; }
-  #myTable th,
-  #myTable td { margin: 0; vertical-align: top; }
-  #myTable th { text-align: left; }
-  #myTable table { position: relative; display: block; width: 100%; }
-  #myTable thead { display: block; float: left; }
-  #myTable tbody { position: relative; display: block; width: auto; overflow-x: auto; white-space: nowrap; }
-  #myTable thead tr { display: block; }
-  #myTable th { display: block; text-align: right; }
-  #myTable tbody tr { display: inline-block; vertical-align: top; }
-  #myTable td { display: block; min-height: 1.25em; text-align: left; }
-
-  // sort out borders
-  #myTable th { border-top: 1px solid #a6a6a6; border-bottom: 0; border-left: 0;  }
-  #myTable td { border-right: 1px solid #a6a6a6; border-bottom: 0; }
-  #myTable th:last-child,
-  #myTable td:last-child { border-bottom: 1px solid #babcbf; }
-
-}
-
-// // accessibility
-table.tablesorter > thead > tr > th[aria-sort="descending"]::after {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  content: "trié par ordre décroissant";
-  border: 0 none;
-}
-
-// // accessibility
-table.tablesorter > thead > tr > th[aria-sort="ascending"]::after {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  content: "trié par ordre croissant";
-  border: 0 none;
-}
-
 // boostwatch
 
 // buttons dipslay
