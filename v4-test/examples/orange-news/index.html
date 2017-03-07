@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000000">
     <title>news home</title>
     <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
     <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
@@ -93,7 +92,7 @@
                                                     <ul class="navbar-nav">
                                                         <li class="nav-item"><a class="nav-link back" href="">Phones</a></li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" href="">Sub link 1</a>
+                                                            <a class="nav-link" href="" id="test">Sub link 1</a>
                                                             <ul class="navbar-nav">
                                                                 <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li>
                                                                 <li class="nav-item"><a class="nav-link" href="">Sub sub link 1</a></li>
@@ -506,13 +505,12 @@
         });
       }
 
-            $(document).ready(function(){
-              $('header').navbar({sticky: false, hideSupra: true});
-			  $('#collapsingNavbarHead').megamenu();
-
-			//   $('a').on('click', function(e){
-			// 	e.preventDefault();
-			// 	});
+      $(document).ready(function(){
+        $('header').navbar({sticky: false, hideSupra: true});
+        // active it to open mega menu on #test link
+        // $('#collapsingNavbarHead').on('shown.bs.collapse', function(){
+        //  $('#collapsingNavbarHead').megamenu('#test');
+        // })
 		   });
     </script>
 

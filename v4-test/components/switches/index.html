@@ -1243,21 +1243,25 @@
 <p>Wrap a label / checkbox input pattern into <code class="highlighter-rouge">.form-group</code> with <code class="highlighter-rouge">.o-switch</code> followed by a <code class="highlighter-rouge">.toggle</code> class.</p>
 
 <div class="bd-example" data-example-id="">
-<div class="form-group row o-switch">
+<div class="form-group row">
   <label for="checkbox1" class="form-control-label col-md-3 col-8">Default</label>
-  <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked="" />
-  <div class="toggle form-control-label" aria-hidden="true">
-    <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
-    <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
+  <div class="o-switch">
+    <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked="" />
+    <div class="toggle form-control-label" aria-hidden="true">
+      <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
+      <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
+    </div>
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row o-switch"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span> <span class="na">class=</span><span class="s">"form-control-label col-md-3 col-8"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox sr-only"</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle form-control-label"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"on icon-checkbox-tick"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>on<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"off icon-delete"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>off<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-switch"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox sr-only"</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle form-control-label"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"on icon-checkbox-tick"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>on<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"off icon-delete"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>off<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
@@ -1266,22 +1270,26 @@
 <p>Default color is brand primary. Success color is also supported, use <code class="highlighter-rouge">.success</code> class on input tag</p>
 
 <div class="bd-example" data-example-id="">
-<div class="form-group row o-switch">
+<div class="form-group row">
   <label for="checkbox3" class="form-control-label col-md-3 col-8">Success</label>
-  <input class="checkbox success sr-only" id="checkbox3" type="checkbox" />
-  <label for="checkbox3" class="toggle form-control-label" aria-hidden="true">
-    <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
-    <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
-  </label>
+  <div class="o-switch">
+    <input class="checkbox success sr-only" id="checkbox3" type="checkbox" />
+    <label for="checkbox3" class="toggle form-control-label" aria-hidden="true">
+      <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
+      <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
+    </label>
+  </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row o-switch"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3"</span> <span class="na">class=</span><span class="s">"form-control-label col-md-3 col-8"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox success sr-only"</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3"</span> <span class="na">class=</span><span class="s">"toggle form-control-label"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"on icon-checkbox-tick"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>on<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"off icon-delete"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>off<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-switch"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox success sr-only"</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3"</span> <span class="na">class=</span><span class="s">"toggle form-control-label"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"on icon-checkbox-tick"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>on<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"off icon-delete"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>off<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h3 id="rounded">Rounded</h3>
@@ -1289,22 +1297,26 @@
 <p>Finally use <code class="highlighter-rouge">.rounded</code> class on <code class="highlighter-rouge">.toggle</code> element to get rounded switch alternate version. Make sure to set <code class="highlighter-rouge">.toggle</code> element width to fix the lenghtiest status label.</p>
 
 <div class="bd-example" data-example-id="">
-<div class="form-group row o-switch">
+<div class="form-group row">
   <label for="checkbox4" class="form-control-label col-md-3 col-8">Rounded</label>
-  <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked="" />
-  <label for="checkbox4" class="toggle rounded form-control-label" aria-hidden="true" style="width: 78px;">
-    <span class="on">On</span>
-    <span class="off">Off</span>
-  </label>
+  <div class="o-switch">
+    <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked="" />
+    <label for="checkbox4" class="toggle rounded form-control-label" aria-hidden="true" style="width: 78px;">
+      <span class="on">On</span>
+      <span class="off">Off</span>
+    </label>
+  </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row o-switch"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span> <span class="na">class=</span><span class="s">"form-control-label col-md-3 col-8"</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox success sr-only"</span> <span class="na">id=</span><span class="s">"checkbox4"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span> <span class="na">class=</span><span class="s">"toggle rounded form-control-label"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">style=</span><span class="s">"width: 78px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"on"</span><span class="nt">&gt;</span>On<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"off"</span><span class="nt">&gt;</span>Off<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-switch"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox success sr-only"</span> <span class="na">id=</span><span class="s">"checkbox4"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span> <span class="na">class=</span><span class="s">"toggle rounded form-control-label"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">style=</span><span class="s">"width: 78px;"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"on"</span><span class="nt">&gt;</span>On<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"off"</span><span class="nt">&gt;</span>Off<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h2 id="3-way-toggle">3 way toggle</h2>
@@ -1407,7 +1419,7 @@
   <script src="http://boosted.orange.com/v4-test/dist/js/boosted.js"></script>
 
 
-<script src="http://boosted.orange.com/v4-test/dist/js/vendors/jquery.tablesorter.min.js"></script>
+<script src="http://boosted.orange.com/v4-test/dist/js/vendors/jquery.tablesorter.js"></script>
 
 
 

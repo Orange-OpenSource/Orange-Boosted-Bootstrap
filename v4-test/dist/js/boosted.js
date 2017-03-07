@@ -3735,6 +3735,7 @@ var MegaMenu = function ($) {
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  // const POS_MODULO = 5;
 
   var Event = {};
 
@@ -3748,7 +3749,6 @@ var MegaMenu = function ($) {
     MEGAMENU: '.mega-menu',
     ROOT_NAV: '.mega-menu > .navbar-nav',
     MEGAMENU_PANEL: '.mega-menu-panel',
-    MEGAMENU_PANEL_NAV: '.mega-menu-panel > .container > .navbar-nav',
     MEGAMENU_NAV: '.nav-link + .navbar-nav',
     NAV_MENU: '.navbar-nav',
     NAV_ITEM: '.nav-item',
@@ -3765,10 +3765,11 @@ var MegaMenu = function ($) {
    */
 
   var MegaMenu = function () {
-    function MegaMenu(element) {
+    function MegaMenu(element, config) {
       _classCallCheck(this, MegaMenu);
 
       this._element = element;
+      this._config = config;
       this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
@@ -3776,6 +3777,7 @@ var MegaMenu = function ($) {
       this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE);
       this._addEventListeners();
       this._addAriaAttributes(this._element);
+      this.goTo = this._initPosition;
     }
 
     // getters
@@ -3828,6 +3830,44 @@ var MegaMenu = function ($) {
         $thisNavToggler.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
         $thisNavBackLink.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-label': goBackLabel });
       });
+    };
+
+    MegaMenu.prototype._initPosition = function _initPosition(target) {
+      if ($(target).length === 0) {
+        return;
+      }
+
+      var $target = $(target).first();
+      var position = $target.parents().index(this._element);
+      var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
+      var translatePercentage = -(position - rootPosition) * 100 / 2;
+      var $thisNav = $target.closest(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+
+      $rootNav.addClass(ClassName.TRANSITIONING);
+
+      // open collapse
+      $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+
+      // show menu and hide other
+      $target.parents(Selector.NAV_MENU).show();
+
+      // set aria on parent links
+      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({ 'tabindex': -1, 'aria-hidden': true, 'aria-expanded': true });
+
+      // translate to pos
+      $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
+
+      // adapt main collapse height to target height
+      $(this._element).height($thisNav.height());
+
+      //set focus on target link
+      setTimeout(function () {
+        //set focus on target link
+        $target.trigger('focus');
+
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+      }, 1000);
     };
 
     MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
@@ -3884,6 +3924,7 @@ var MegaMenu = function ($) {
       if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+
       $rootNav.addClass(ClassName.TRANSITIONING);
 
       // hide all nav on same level
@@ -3929,6 +3970,7 @@ var MegaMenu = function ($) {
       if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
+
       $rootNav.addClass(ClassName.TRANSITIONING);
 
       // make only visible elements focusable
@@ -3955,22 +3997,25 @@ var MegaMenu = function ($) {
 
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $(this);
-        var data = $this.data(DATA_KEY);
-        var _config = $.extend({},
-        //   Default,
-        $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+        var $element = $(this);
 
-        if (!data) {
-          data = new MegaMenu(this, _config);
-          $this.data(DATA_KEY, data);
+        if (!$element.is(Selector.MEGAMENU)) {
+          throw new Error('Element is not a mega menu');
         }
 
-        if (typeof config === 'string') {
-          if (data[config] === undefined) {
-            throw new Error('No method named "' + config + '"');
+        var data = $element.data(DATA_KEY);
+
+        if (!data) {
+          data = new MegaMenu(this, config);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config !== 'undefined' && config.length > 0) {
+          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
+            throw new Error('Selector "' + config + '" is not supported');
           }
-          data[config]();
+
+          data.goTo(config);
         }
       });
     };
