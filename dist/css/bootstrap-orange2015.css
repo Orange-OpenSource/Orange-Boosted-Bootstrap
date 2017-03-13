@@ -1,6 +1,6 @@
 /*!
  boosted - v3.3.2 - Orange Boosted with Boostrap
- Copyright 2016 Orange SA, all right reserved
+ Copyright 2017 Orange SA, all right reserved
 MIT Licensed 
 */
 
@@ -6200,7 +6200,7 @@ button.list-group-item-danger.active:focus {
   padding: 10px;
 }
 .panel-heading {
-  padding: 1.7rem 0;
+  padding: 1.7rem 1rem;
   border-bottom: 1px solid transparent;
   border-top-left-radius: -1;
   border-top-right-radius: -1;
@@ -6222,7 +6222,7 @@ button.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-footer {
-  padding: 1.7rem 0;
+  padding: 1.7rem 1rem;
   background-color: #fff;
   border-top: 1px solid #000;
   border-bottom-right-radius: -1;
@@ -6984,8 +6984,33 @@ button.close {
   border-left-color: #ddd;
 }
 .tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "HelvNeueOrange", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
+  font-style: normal;
+  font-weight: normal;
   font-weight: bold;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: normal;
+  filter: alpha(opacity=0);
+  opacity: 0;
+
+  line-break: auto;
+}
+.tooltip.in {
+  filter: alpha(opacity=100);
+  opacity: 1;
 }
 .tooltip.top {
   padding: 10px 0;
@@ -7004,7 +7029,75 @@ button.close {
   margin-left: -10px;
 }
 .tooltip-inner {
+  max-width: 200px;
   padding: 10px;
+  color: #000;
+  text-align: center;
+  background-color: #ddd;
+  border-radius: 0;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px 10px 0;
+  border-top-color: #ddd;
+}
+.tooltip.top-left .tooltip-arrow {
+  right: 10px;
+  bottom: 0;
+  margin-bottom: -10px;
+  border-width: 10px 10px 0;
+  border-top-color: #ddd;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 10px;
+  margin-bottom: -10px;
+  border-width: 10px 10px 0;
+  border-top-color: #ddd;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  border-width: 10px 10px 10px 0;
+  border-right-color: #ddd;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+  border-width: 10px 0 10px 10px;
+  border-left-color: #ddd;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 0 10px 10px;
+  border-bottom-color: #ddd;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 10px;
+  margin-top: -10px;
+  border-width: 0 10px 10px;
+  border-bottom-color: #ddd;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 10px;
+  margin-top: -10px;
+  border-width: 0 10px 10px;
+  border-bottom-color: #ddd;
 }
 .popover {
   font-weight: bold;
