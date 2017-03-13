@@ -1,0 +1,119 @@
+// Core variables and mixins
+@import "variables-orange2015";
+@import "mixins";
+// only for REM mixin
+@import "mixins/nav-divider-rem";
+
+// Reset and dependencies
+@import "normalize";
+@import "print";
+@import "glyphicons";
+
+// Core CSS
+@import "scaffolding";
+@import "type";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+// Components
+@import "component-animations";
+@import "dropdowns";
+@import "button-groups";
+@import "input-groups";
+@import "navs";
+@import "navbar";
+@import "breadcrumbs";
+@import "pagination";
+@import "pager";
+@import "labels";
+@import "badges";
+@import "jumbotron";
+@import "thumbnails";
+@import "alerts";
+@import "progress-bars";
+@import "media";
+@import "list-group";
+@import "panels";
+@import "responsive-embed";
+@import "wells";
+@import "close";
+
+// Components w/ JavaScript
+@import "modals";
+@import "tooltip";
+@import "popovers";
+@import "tooltip";
+@import "popovers";
+@import "carousel";
+
+// Utility classes
+@import "utilities";
+@import "responsive-utilities";
+@import "special_font-size";
+@import "variables-orange2015";
+a {
+  color: $link-color;
+//   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus {
+    @include tab-focus;
+  }
+}
+nav a, .dropdown-menu a, .dropdown a, .navbar a, .nav a, a.btn {
+  text-decoration: none;
+}
+
+// Horizontal forms
+//
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+
+.form-horizontal {
+    // Reset spacing and right align labels, but scope to media queries so that
+    // labels on narrow viewports stack the same as a default form example.
+    @media (min-width: $screen-sm-min) {
+        .control-label {
+          padding-top: ($padding-base-vertical + 0.1); // Default padding plus a border
+        }
+    }
+
+  // Form group sizes
+  //
+  // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
+  // inputs and labels within a `.form-group`.
+  .form-group-lg {
+    @media (min-width: $screen-sm-min) {
+      .control-label {
+        padding-top: (($padding-large-vertical * $line-height-large) + 0.1);
+      }
+    }
+  }
+  .form-group-sm {
+    @media (min-width: $screen-sm-min) {
+      .control-label {
+        padding-top: ($padding-small-vertical + 0.1);
+      }
+    }
+  }
+
+  .control-label {
+    text-align: left;
+  }
+}
+
+// Reposition feedback icon if input has visible label above
+.has-feedback label {
+
+  & ~ .form-control-feedback {
+     top: ($line-height-computed + .5); // Height of the `label` and its margin
+  }
+}
