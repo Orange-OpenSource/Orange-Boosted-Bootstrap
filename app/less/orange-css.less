@@ -162,7 +162,7 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
 
    .navbar-form,
    .navbar-btn {
-     margin-top: 3.6rem;
+     margin-top: @3-6rem;
    }
 
    .navbar-text {
@@ -279,8 +279,8 @@ h5, .h5 { letter-spacing: @letter-spacing-h5; }
 
 .navbar-brand-text {
   display: inline-block;
-  margin-top: 3.2rem;
-  margin-left: 2rem;
+  margin-top: @3-2rem;
+  margin-left: @2rem;
 }
 
 .nav {
@@ -446,7 +446,7 @@ label, input, .form-control{
 //
 .form-group {
   label.control-label {
-    margin-bottom: 1rem;
+    margin-bottom: @1rem;
   }
 }
 
@@ -470,7 +470,7 @@ label, input, .form-control{
 }
 
 select.form-control {
-  padding: .7rem 1rem;
+  padding: @-7rem @1rem;
 
   &.input-lg {
     padding: @input-select-padding-y-lg @input-padding-x-lg;
@@ -528,11 +528,11 @@ select.form-control {
 
       .form-control-message {
         position: absolute;
-        top: 2.4rem;
+        top: @2-4rem;
       }
 
       .form-control {
-        margin-top: 4rem;
+        margin-top: @4rem;
       }
     }
 
@@ -549,7 +549,7 @@ select.form-control {
       }
 
       .form-control-message {
-        margin-left: 1rem;
+        margin-left: @1rem;
       }
     }
 
@@ -564,7 +564,7 @@ select.form-control {
 
     .form-control-message {
       color: @brand-danger;
-      padding: 1rem 0;
+      padding: @1rem 0;
       display: block;
       font-size: @font-size-base;
       font-weight: bold;
@@ -586,7 +586,7 @@ select.form-control {
 .form-horizontal {
   .form-group.has-error {
      &.top {
-       padding-top: 4rem;
+       padding-top: @4rem;
 
        .form-control {
          margin-top: 0;
@@ -598,7 +598,7 @@ select.form-control {
      }
 
      .form-control-message {
-      padding: 1rem;
+      padding: @1rem;
     }
   }
 }
@@ -616,11 +616,11 @@ select.form-control {
         padding-top: 0;
 
         .form-control {
-          margin-top: 4rem;
+          margin-top: @4rem;
         }
 
         .form-control-message {
-          top: 2rem;
+          top: @2rem;
         }
         .control-label {
           // margin-bottom: 1rem;
@@ -674,29 +674,6 @@ select.form-control {
 }
 
 // == TABLES
-// .table {
-//   // Cells
-//   > thead,
-//   > tbody,
-//   > tfoot {
-//     > tr {
-//       > th,
-//       > td {
-//         // Remove border top and put border-botom
-//         border-top: 0;
-//         border-bottom: 1px solid @table-border-color;
-//       }
-//       > th {
-//           font-size: @font-size-h6;
-//       }
-//     }
-//   }
-
-//   > thead th {
-//       border-bottom: 2px;
-//   }
-
-// }
 
 .table {
   // Cells
@@ -708,13 +685,13 @@ select.form-control {
 
       > th,
       > td {
-        padding: 1rem 1rem 1rem 0;
+        padding: @1rem @1rem @1rem 0;
         border: 0;
       }
 
       > th:first-child,
       > td:first-child {
-        padding-left: 1rem;
+        padding-left: @1rem;
       }
 
       > th {
@@ -723,7 +700,7 @@ select.form-control {
 
       [class^="icon-"],
       [class*=" icon-"] {
-        font-size: 2.9rem;
+        font-size: @2-9rem;
       }
     }
   }
@@ -759,10 +736,10 @@ select.form-control {
 
     tr > th:first-child,
     tr > td:first-child {
-      width: 2rem;
+      width: @2rem;
 
       .custom-control.custom-checkbox {
-        padding-left: 2rem;
+        padding-left: @2rem;
       }
     }
   }
@@ -770,7 +747,7 @@ select.form-control {
   &.has-icon {
     tr > td,
     tr > th {
-      height: 5rem;
+      height: @5rem;
       vertical-align: middle;
 
       span,
@@ -779,18 +756,18 @@ select.form-control {
       }
 
       span {
-        margin-right: .6rem;
+        margin-right: @-6rem;
       }
 
       img {
-        width: 3rem;
-        height: 3rem;
-        margin-right: 1rem;
+        width: @3rem;
+        height: @3rem;
+        margin-right: @1rem;
       }
 
       [class^="icon-"] {
-        width: 3rem;
-        font-size: 3rem;
+        width: @3rem;
+        font-size: @3rem;
         line-height: 0;
         vertical-align: middle;
       }
@@ -805,7 +782,7 @@ select.form-control {
       }
 
       > tr > td {
-        line-height: 2rem;
+        line-height: @2rem;
       }
 
       > tr > th:first-child {
@@ -826,7 +803,7 @@ select.form-control {
       border: 0;
 
       > th:not(:first-child) {
-        padding-left: 1rem;
+        padding-left: @1rem;
         border-bottom: 1px solid @table-border-color;
       }
 

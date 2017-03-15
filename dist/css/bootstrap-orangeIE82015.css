@@ -7765,4 +7765,7 @@ a.btn {
 .form-horizontal .control-label {
   text-align: left;
 }
+.has-checkbox.table tr > th:first-child {
+  width: auto !important;
+}
 /*# sourceMappingURL=bootstrap-orangeIE82015.css.map */
