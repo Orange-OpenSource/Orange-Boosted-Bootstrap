@@ -253,14 +253,12 @@ ul.o-square-list ul ul li span {
 .nav-menu .sub-nav .container-fluid,
 .nav-menu .sub-nav.container,
 .nav-menu .sub-nav.container-fluid {
-  z-index: 1;
   background-color: #fff;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .176);
           box-shadow: 0 6px 12px rgba(0, 0, 0, .176);
 }
 .nav-menu {
   position: relative;
-  z-index: 15;
   display: block;
   padding: 0;
   margin: 0;
@@ -283,7 +281,6 @@ ul.o-square-list ul ul li span {
   border: 1px solid #dedede;
 }
 .nav-item > a.open {
-  z-index: 1;
   border-bottom: none;
 }
 .sub-nav {
