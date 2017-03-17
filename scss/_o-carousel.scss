@@ -2,6 +2,8 @@
 // Carousel
 // --------------------------------------------------
 
+// native boostrap
+
 .carousel {
   margin-bottom: 1.875rem;
 }
@@ -79,5 +81,50 @@
     &.active {
       background-color: $brand-primary;
     }
+  }
+}
+
+// swiper
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-image: none;
+    background-size: 0;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+    content: "\e93f";
+    font-family: "icon-orange";
+    font-size: 1.875rem;
+}
+
+.swiper-button-next::before {
+    content: "\e93e";
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    border: 1px solid #fff;
+    width: .625rem;
+    height: .625rem;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f16e00;
+}
+
+@include media-breakpoint-down(sm) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }

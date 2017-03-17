@@ -146,7 +146,7 @@ module.exports = function (grunt) {
       },
       /* boosted mod */
       vendorsCss: {
-        src: ['dist/css/boosted.css'],
+        src: ['node_modules/swiper/dist/css/swiper.css', 'dist/css/boosted.css'],
         dest: 'dist/css/boosted.css'
       },
       rtlCss: {
@@ -231,8 +231,8 @@ module.exports = function (grunt) {
       vendorsjs: {
         expand: true,
         flatten: true,
-        cwd: 'js/vendors',
-        src: ['*'],
+        cwd: '.',
+        src: ['js/vendors/**/*.js', 'node_modules/swiper/dist/js/swiper.js'],
         dest: 'dist/js/vendors/'
         /* end mod */
       }

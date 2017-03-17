@@ -48,7 +48,8 @@
   "license": "MIT",
   "dependencies": {
     "jquery": ">=1.9.1",
-    "tether": "^1.4.0"
+    "tether": "^1.4.0",
+    "swiper": "^3.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

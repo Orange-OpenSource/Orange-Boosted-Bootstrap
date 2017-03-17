@@ -7,7 +7,6 @@
     <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
     <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
     <link rel="stylesheet" href="../../dist/css/boosted.min.css" />
-    <link rel="stylesheet" href="./css/vendors/slick.css" />
     <link href="sample.css" rel="stylesheet">
 </head>
 <body>
@@ -20,7 +19,7 @@
                     <a href="#main_nav" class="skiplinks_trigger">main navigation</a>
                 </li>
                 <li>
-                    <a href="#main-slick-carousel" class="skiplinks_trigger">content</a>
+                    <a href="#main-carousel" class="skiplinks_trigger">content</a>
                 </li>
                 <li>
                     <a href="#footer" class="skiplinks_trigger">footer</a>
@@ -71,7 +70,7 @@
 
     <main>
         <div class="container">
-            <div id="main-slick-carousel">
+            <!--<div id="main-carousel">
                 <div>
                     <img src="./images/une-nouvelle-marque_grid-full-width.jpg" alt="" class="img-fluid"/>
                     <div class="frame">
@@ -99,6 +98,42 @@
                         <div class="title ">You can find Boosted on <a href="http://omd.com.francetelecom.fr/">Orange Modular Design</a> and fetch more hero pictures on <a href="http://www.orangelibrairie.com/visuels/banque-images?marque=orange-hero">orangelibrairie.com</a>. insert your body text in here.</div>
                     </div>
                 </div>
+            </div>-->
+
+            <div id="main-carousel" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/une-nouvelle-marque_grid-full-width.jpg" alt="" class="img-fluid"/>
+                        <div class="frame">
+                            <img src="./images/Fun-frame_frame-carousel.png" alt="Fun"  class="img-fluid"/>
+                        </div>
+                        <div class="caption ">
+                            <div class="title "> Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin. </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg" alt=""  class="img-fluid"/>
+                        <div class="frame">
+                            <img src="./images/Fun-frame_frame-carousel.png" alt="Fun"  class="img-fluid"/>
+                        </div>
+                        <div class="caption ">
+                            <div class="title ">You can use any hero picture to illustrate your purpose insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin. </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/offset_LARGE_123305_chemisier_jaune.jpg" alt=""  class="img-fluid"/>
+                        <div class="frame">
+                            <img src="./images/Fun-frame_frame-carousel.png" alt="Fun"  class="img-fluid"/>
+                        </div>
+                        <div class="caption ">
+                            <div class="title ">You can find Boosted on <a href="http://omd.com.francetelecom.fr/">Orange Modular Design</a> and fetch more hero pictures on <a href="http://www.orangelibrairie.com/visuels/banque-images?marque=orange-hero">orangelibrairie.com</a>. insert your body text in here.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
 
@@ -108,7 +143,7 @@
             <div class="container">
                 <!-- Header title + link to see all -->
                 <div class="row">
-                    <div class="col-11">
+                    <div class="col-10">
                         <h2>Discovery module – one pop-out Title here</h2>
                     </div>
                     <div class="col-1">
@@ -137,61 +172,23 @@
         <!-- Discovery module – two or more pop-outs in a carousel -->
         <!-- According to the brand, frames and popout can't be bigger than 220px width-->
         <div class="container">
-        <div id="discovery-carousel">
-                <div>
-                        <!-- Header title + link to see all -->
-                    <div class="row">
-                        <div class="col-11">
-                            <h2>Discovery module – two pop-outs in a carousel Title 1 here</h2>
-                        </div>
-                        <div class="col-1">
-                            <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
-                        </div>
-                    </div>
-                    <div class="row brand-spacing discovery-carousel-frame-row">
-                        <div class="col-4">
-                            <img src="./images/discovery-frame-carousel.png" alt="Insight heading to goes here" class="frame img-fluid" />
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
+            <div id="discovery-carousel" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                            <!-- Header title + link to see all -->
+                        <div class="row">
+                            <div class="col-10">
+                                <h2>Discovery module – two pop-outs in a carousel Title 1 here</h2>
+                            </div>
+                            <div class="col-1">
+                                <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
+                        <div class="row brand-spacing discovery-carousel-frame-row">
+                            <div class="col-4">
+                                <img src="./images/discovery-frame-carousel.png" alt="Insight heading to goes here" class="frame img-fluid" />
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="row white-header">
-                        <div class="col-11">
-                            <h2>Discovery module – 3 pop-outs in a carousel Title 2 here</h2>
-                        </div>
-                        <div class="col-1">
-                            <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row brand-spacing discovery-carousel-frame-row ">
-                            <div class="col-3">
-                                <img src="./images/discovery-frame-carousel-whitetext.png" alt="Insight heading to goes here" class="frame img-fluid" />
-                            </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
                                 <div class="discovery-caption">
                                     <p class="brand-spacing">
@@ -202,18 +199,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-3">
-                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                                <div class="discovery-caption">
-                                    <p class="brand-spacing">
-                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                    </p>
-                                    <a href="#" class="btn btn-secondary discovery-header-button">
-                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
                                 <div class="discovery-caption">
                                     <p class="brand-spacing">
@@ -226,141 +212,195 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="row">
-                        <div class="col-11">
-                            <h2>Discovery module – 4 pop-outs in a carousel Title 3 here</h2>
+                    <div class="swiper-slide">
+                        <div class="row white-header">
+                            <div class="col-11">
+                                <h2>Discovery module – 3 pop-outs in a carousel Title 2 here</h2>
+                            </div>
+                            <div class="col-1">
+                                <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
+                            </div>
                         </div>
-                        <div class="col-1">
-                            <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
+                        <div>
+                            <div class="row brand-spacing discovery-carousel-frame-row ">
+                                <div class="col-3">
+                                    <img src="./images/discovery-frame-carousel-whitetext.png" alt="Insight heading to goes here" class="frame img-fluid" />
+                                </div>
+                                <div class="col-3">
+                                    <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                    <div class="discovery-caption">
+                                        <p class="brand-spacing">
+                                            Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                        </p>
+                                        <a href="#" class="btn btn-secondary discovery-header-button">
+                                            Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                    <div class="discovery-caption">
+                                        <p class="brand-spacing">
+                                            Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                        </p>
+                                        <a href="#" class="btn btn-secondary discovery-header-button">
+                                            Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                    <div class="discovery-caption">
+                                        <p class="brand-spacing">
+                                            Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                        </p>
+                                        <a href="#" class="btn btn-secondary discovery-header-button">
+                                            Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row brand-spacing discovery-carousel-frame-row">
-                        <div class="col-2">
-                            <img src="./images/discovery-frame.png" alt="Insight heading to goes here" class="frame img-fluid" />
-                        </div>
-                        <div class="col-2 offset-xs-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
+
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-11">
+                                <h2>Discovery module – 4 pop-outs in a carousel Title 3 here</h2>
+                            </div>
+                            <div class="col-1">
+                                <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
+                        <div class="row brand-spacing discovery-carousel-frame-row">
+                            <div class="col-2">
+                                <img src="./images/discovery-frame.png" alt="Insight heading to goes here" class="frame img-fluid" />
+                            </div>
+                            <div class="col-2 offset-xs-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-11">
+                                <h2>Discovery module – 5 pop-outs in a carousel Title 4 here</h2>
+                            </div>
+                            <div class="col-1">
+                                <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
+                        <div class="row brand-spacing discovery-carousel-frame-row">
+                            <div class="col-2">
+                                <img src="./images/discovery-frame.png" alt="Insight heading to goes here" class="frame img-fluid" />
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
+                                <div class="discovery-caption">
+                                    <p class="brand-spacing">
+                                        Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
+                                    </p>
+                                    <a href="#" class="btn btn-secondary discovery-header-button">
+                                        Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
 
-                <div>
-                    <div class="row">
-                        <div class="col-11">
-                            <h2>Discovery module – 5 pop-outs in a carousel Title 4 here</h2>
-                        </div>
-                        <div class="col-1">
-                            <a href="#" class="btn btn-secondary float-right discovery-header-button">See all<span class="sr-only">&nbsp;about the module XXXX</span></a>
-                        </div>
-                    </div>
-                    <div class="row brand-spacing discovery-carousel-frame-row">
-                        <div class="col-2">
-                            <img src="./images/discovery-frame.png" alt="Insight heading to goes here" class="frame img-fluid" />
-                        </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <img src="./images/discovery-popout-2byslide.png" alt=""  class="pop-out img-fluid"/>
-                            <div class="discovery-caption">
-                                <p class="brand-spacing">
-                                    Insert your body text in here. Ommoditatur sendand amusanti nobisci psandae dolupta tatur, con corrum sam fugitatiunt aliae pa doluptatur sit aut alite excerei ctasimin.
-                                </p>
-                                <a href="#" class="btn btn-secondary discovery-header-button">
-                                    Find out more<span class="sr-only">&nbsp;about the TITLE OF THE INSIGHT</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
-
 
 
         <!-- Most popular services -->
@@ -504,7 +544,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="./js/vendors/slick.min.js"></script>
+    <script src="../../dist/js/vendors/swiper.js"></script>
     <script src="../../dist/js/boosted.js"></script>
 
     <script type="text/javascript">
@@ -533,22 +573,35 @@
             });
         }
 
-        $('#main-slick-carousel, #discovery-carousel').slick({
-            arrows: true,
-            dots: true,
-            infinite: false,
-            accessibility: true
-        });
+        var mySwiper = new Swiper ('#main-carousel', {
+        // enable accessibility
+        a11y: true,
+        keyboardControl: true,
 
-        $('.slick-slider').on('init', function(){
-            // adding accessibility
-            $('.slick-slider.slick-dotted .slick-dots').attr('aria-hidden', true);
-            $('.slick-slider .slick-prev').attr('aria-label', 'Previous slide');
-            $('.slick-slider .slick-next').attr('aria-label', 'Next slide');
-            setTimeout(function(){
-            $('.slick-slider').attr('role', 'region').attr('aria-label', 'accessible carousel');
-            }, 500);
-        });
+        // If we need pagination
+        pagination: '.swiper-pagination',
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+        autoHeight: true
+        })
+
+        var swiper2 = new Swiper ('#discovery-carousel', {
+        // enable accessibility
+        a11y: true,
+        keyboardControl: true,
+
+        // If we need pagination
+        pagination: '.swiper-pagination',
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+        autoHeight: true
+        })
     </script>
     <!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
 </body>
