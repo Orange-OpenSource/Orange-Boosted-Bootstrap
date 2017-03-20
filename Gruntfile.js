@@ -557,7 +557,7 @@ module.exports = function (grunt) {
   var testSubtasks = []
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
-    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'copy:tmpdocs', 'test-scss', 'qunit', 'docs'])
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs'])
   }
   // Skip HTML validation if running a different subset of the test suite
   if (runSubset('validate-html')) {
@@ -584,11 +584,11 @@ module.exports = function (grunt) {
   // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'concat:vendorCss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
+  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'concat:vendorCss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
 
   // Full distribution task.
   /* boosted mod */
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorjs'])
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorjs'])
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test'])
