@@ -234,15 +234,15 @@ caption {
       height: .4375rem;
       content: "";
       background-image: $accordion-arrow-icon;
-      transform: rotate(180deg);      
+      transform: rotate(180deg);
     }
 
     &.tablesorter-headerAsc .tablesorter-header-inner::after {
       position: absolute;
       top: 1.125rem;
-      margin-left: .625rem;
       width: .875rem;
       height: .4375rem;
+      margin-left: .625rem;
       content: "";
       background-image: $accordion-arrow-icon;
     }
@@ -252,16 +252,14 @@ caption {
         .tablesorter-header-inner::after {
           position: absolute;
           top: .75rem;
-          margin-left: .625rem;
           width: .875rem;
           height: 1.0625rem;
+          margin-left: .625rem;
           content: "";
           background-image: $o-sortable-hover-icon;
         }
       }
     }
-
-    
 
     a {
       color: #000;

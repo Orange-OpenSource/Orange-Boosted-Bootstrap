@@ -38,6 +38,9 @@
     - title: Button group
     - title: Card
     - title: Carousel
+    # boosted mod
+    - title: Custom carousel
+    # end mod
     - title: Collapse
     - title: Dropdowns
     - title: Forms

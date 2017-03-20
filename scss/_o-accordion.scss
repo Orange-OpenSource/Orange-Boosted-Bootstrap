@@ -6,9 +6,9 @@
   .card {
     margin-bottom: 0;
     border: 0;
-    border-bottom: 1px solid $gray-light-o;    
     // border 1px for first child only
     border-top: 1px solid $gray-light-o;
+    border-bottom: 1px solid $gray-light-o;
     // remove border for card other than the first one
     ~ .card {
       border-top: 0;
@@ -57,9 +57,9 @@
 // For mobile display emphase the border
 @include media-breakpoint-down(sm) {
   .o-accordion .card {
-    border-bottom-width: 2px;
     // border 1px for first child only
     border-top: 2px;
+    border-bottom-width: 2px;
     // remove border for card other than the first one
     ~ .card {
       border-top: 0;

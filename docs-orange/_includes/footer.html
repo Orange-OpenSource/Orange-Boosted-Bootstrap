@@ -58,16 +58,46 @@ SimpleJekyllSearch.init({
   json: '{{ site.baseurl }}/search.json'
 })
 </script>
+
+<script src="../../dist/js/vendors/swiper.js"></script>
+<script>
+  new Swiper ('.swiper-container', {
+      // enable accessibility
+      a11y: true,
+      keyboardControl: true,
+
+      // If we need pagination
+      pagination: '.swiper-pagination',
+
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+  })
+</script>
 {% endif %}
 
 
 {% if page.title == "Boostwatch" %}
+<script src="../../dist/js/vendors/swiper.js"></script>
 <script>
         $(document).ready(function() {
           $("#myTable").tablesorter({
 						sortList: [[4,1]]
 					});
         });
+
+        new Swiper ('.swiper-container', {
+          // enable accessibility
+          a11y: true,
+          keyboardControl: true,
+
+          // If we need pagination
+          pagination: '.swiper-pagination',
+
+          // Navigation arrows
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+      })
 
       </script>
 {% endif %}
