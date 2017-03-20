@@ -557,7 +557,7 @@ module.exports = function (grunt) {
   var testSubtasks = []
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
-    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs'])
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'copy:tmpdocs', 'test-scss', 'qunit', 'docs'])
   }
   // Skip HTML validation if running a different subset of the test suite
   if (runSubset('validate-html')) {
