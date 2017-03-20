@@ -148,16 +148,14 @@ var Tab = function ($) {
 
     Tab._keydown = function _keydown(e) {
       var $this = $(this);
-      var $items = void 0;
-      var $ul = $this.closest('ul[role=tablist] ');
+      var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
       var index = void 0;
       var k = e.which || e.keyCode;
       $this = $(this);
       if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
         return;
       }
-      $items = $ul.find('[role=tab]:visible');
-      index = $items.index($items.filter(':focus'));
+      index = Items.index(Items.filter(':focus'));
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
         index--;
@@ -167,12 +165,12 @@ var Tab = function ($) {
       } // down & right
 
       if (index < 0) {
-        index = $items.length - 1;
+        index = Items.length - 1;
       }
-      if (index === $items.length) {
+      if (index === Items.length) {
         index = 0;
       }
-      var nextTab = $items.eq(index);
+      var nextTab = Items.eq(index);
       if (nextTab.attr('role') === 'tab') {
         nextTab.tab('show').trigger('focus');
       }
@@ -194,8 +192,14 @@ var Tab = function ($) {
       };
 
       // Boosted mod
-      $(container).find('.nav-link').attr({ tabIndex: '-1', 'aria-selected': false });
-      $(container).find('.tab-pane').attr({ 'aria-hidden': true, tabIndex: '-1' });
+      $(container).find('.nav-link').attr({
+        tabIndex: '-1',
+        'aria-selected': false
+      });
+      $(container).find('.tab-pane').attr({
+        'aria-hidden': true,
+        tabIndex: '-1'
+      });
       // end mod
 
       if (active && isTransitioning) {
@@ -225,8 +229,14 @@ var Tab = function ($) {
       $(element).addClass(ClassName.ACTIVE);
       element.setAttribute('aria-expanded', true);
       // Boosted mod
-      $(element).filter('.nav-link.active').attr({ tabIndex: '0', 'aria-selected': true });
-      $(element).filter('.tab-pane.active').attr({ 'aria-hidden': false, tabIndex: '0' });
+      $(element).filter('.nav-link.active').attr({
+        tabIndex: '0',
+        'aria-selected': true
+      });
+      $(element).filter('.tab-pane.active').attr({
+        'aria-hidden': false,
+        tabIndex: '0'
+      });
       // end mod
 
       if (isTransitioning) {
@@ -311,9 +321,9 @@ var Tab = function ($) {
   // ajout de l'accesibilité
   // ===============================
 
-  var uniqueId = function uniqueId(prefix) {
+  function uniqueId(prefix) {
     return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * RANDOM_NUMBER + 1);
-  };
+  }
 
   var $tablists = $('.nav-tabs, .nav-pills');
   var $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]');

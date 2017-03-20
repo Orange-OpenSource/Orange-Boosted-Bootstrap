@@ -121,7 +121,7 @@ const Dropdown = (($) => {
         return false
       }
 
-	  this.setAttribute('aria-expanded', 'true')
+      this.setAttribute('aria-expanded', 'true')
 
       $(parent).toggleClass(ClassName.SHOW)
       $(parent).trigger($.Event(Event.SHOWN, relatedTarget))

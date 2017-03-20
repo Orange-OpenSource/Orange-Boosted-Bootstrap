@@ -20,23 +20,12 @@ var Switch = function ($) {
   var NAME = 'switch';
   var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.switch';
-  var EVENT_KEY = '.' + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-
-  var ClassName = {
-    CHECKED: 'checked',
-    SWITCH: "o-switch"
-  };
 
   var Selector = {
     SWITCH: '.o-switch',
     TOGGLE: '.o-switch .toggle',
     LABEL: '.o-switch label'
-  };
-
-  var Event = {
-    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
   };
 
   /**

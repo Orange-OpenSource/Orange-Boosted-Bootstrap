@@ -422,6 +422,8 @@
             margin: 0;
           }
 
+// scss-lint:disable SelectorDepth
+
           .mega-menu-panel > .container a[data-toggle="collapse"] {
             display: none;
           }
@@ -455,6 +457,8 @@
           padding: 1rem 0;
           background-color: #000;
           border-top: 1px solid #333;
+
+// scss-lint:disable SelectorDepth
 
           > .container > .navbar-nav {
             flex-direction: row;
@@ -497,10 +501,13 @@
             color: #fff;
           }
 
+// scss-lint:disable SelectorDepth
+
           > .container > .navbar-nav .nav-link.back {
             display: none;
           }
 
+// scss-lint:enable SelectorDepth
           a[data-toggle="collapse"] {
             display: block;
             float: right;

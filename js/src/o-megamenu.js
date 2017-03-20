@@ -18,24 +18,20 @@ const MegaMenu = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME = 'megamenu';
-  const VERSION = '4.0.0-alpha.6';
-  const DATA_KEY = 'bs.megamenu';
-  const JQUERY_NO_CONFLICT = $.fn[NAME];
-  const ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
-  const ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
-  const ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
-  const ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  // const POS_MODULO = 5;
-
-  const Event = {
-  }
+  const NAME = 'megamenu'
+  const VERSION = '4.0.0-alpha.6'
+  const DATA_KEY = 'bs.megamenu'
+  const JQUERY_NO_CONFLICT = $.fn[NAME]
+  const ARROW_LEFT_KEYCODE = 37 // KeyboardEvent.which value for left arrow key
+  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
+  const ARROW_UP_KEYCODE = 38 // KeyboardEvent.which value for up arrow key
+  const ARROW_DOWN_KEYCODE = 40 // KeyboardEvent.which value for down arrow key
+  const TIMEOUT = 1000 // Timeout befor focusing first element
+  const PERCENTAGE = 100 // Width slide proportion
+  const SPLITLENGHT = 4
 
   const ClassName = {
     TRANSITIONING: 'transitioning'
-  }
-
-  const Dimension = {
   }
 
   const Selector = {
@@ -62,7 +58,7 @@ const MegaMenu = (($) => {
 
     constructor(element, config) {
       this._element = element
-	    this._config = config
+      this._config = config
       this._$navLinks = $(this._element).find(Selector.NAV_LINK)
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
@@ -98,36 +94,50 @@ const MegaMenu = (($) => {
       $(element).find('> .navbar-nav').attr('role', 'menu')
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu')
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem')
-      $(element).find(Selector.NAV_LINK_BACK).attr({'aria-hidden': true})
+      $(element).find(Selector.NAV_LINK_BACK).attr({
+        'aria-hidden': true
+      })
       $(element).find(Selector.NAV_ITEM).attr('role', 'presentation')
 
-      $subNavs.each(function() {
+      $subNavs.each(function () {
         const navId = Util.getUID(NAME)
         const $thisNavToggler = $(this).prev(Selector.NAV_LINK)
         const $thisNav = $(this)
         const $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK)
         const $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK)
-        let goBackLabel = 'go back to ' + $topMenu.text() + ' menu'
+        let goBackLabel = `go back to ${$topMenu.text()} menu`
 
-        if(!$topMenu.length) {
-          goBackLabel = 'go back to ' + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + ' menu'
+        if (!$topMenu.length) {
+          goBackLabel = `go back to ${$(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text()} menu`
         }
 
-        $thisNav.attr({'id': navId, 'role': 'menu'})
-        $thisNavToggler.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true})
-        $thisNavBackLink.attr({'role': 'menuitem', 'aria-controls': navId, 'aria-label': goBackLabel})
+        $thisNav.attr({
+          id: navId,
+          role: 'menu'
+        })
+        $thisNavToggler.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-expanded': false,
+          'aria-haspopup': true
+        })
+        $thisNavBackLink.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-label': goBackLabel
+        })
       })
     }
 
     _initPosition(target) {
-      if ($(target).length === 0) {
+      if (!$(target).length) {
         return
       }
 
-      const $target = $(target).first();
+      const $target = $(target).first()
       const position = $target.parents().index(this._element)
       const rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
-      const translatePercentage = -(position - rootPosition) * 100 / 2
+      const translatePercentage = -(position - rootPosition) * PERCENTAGE / 2
       const $thisNav = $target.closest(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
 
@@ -140,22 +150,26 @@ const MegaMenu = (($) => {
       $target.parents(Selector.NAV_MENU).show()
 
       // set aria on parent links
-      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({'tabindex': -1, 'aria-hidden': true, 'aria-expanded': true})
+      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
+        tabindex: -1,
+        'aria-hidden': true,
+        'aria-expanded': true
+      })
 
       // translate to pos
-      $rootNav.css('transform', 'translateX(' + translatePercentage + '%)')
+      $rootNav.css('transform', `translateX(${translatePercentage}%)`)
 
       // adapt main collapse height to target height
       $(this._element).height($thisNav.height())
 
-      //set focus on target link
-      setTimeout(function(){
-        //set focus on target link
+      // set focus on target link
+      setTimeout(() =>  {
+        // set focus on target link
         $target.trigger('focus')
 
         $rootNav.removeClass(ClassName.TRANSITIONING)
-      }, 1000)
-    };
+      }, TIMEOUT)
+    }
 
     _manageKeyDown(event) {
       const $thisTarget = $(event.target)
@@ -166,7 +180,7 @@ const MegaMenu = (($) => {
       }
 
       // proceed according to key code
-      switch(event.which){
+      switch (event.which) {
         case ARROW_LEFT_KEYCODE:
           this._goBackward(event)
           break
@@ -186,11 +200,11 @@ const MegaMenu = (($) => {
       }
     }
 
-    _collapseFocus(){
+    _collapseFocus() {
       $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus')
     }
 
-    _handleCollapseToggle(e){
+    _handleCollapseToggle(e) {
       const $this = $(e.target)
       const $thisCollapse = $($this.attr('href'))
 
@@ -198,18 +212,18 @@ const MegaMenu = (($) => {
     }
 
     _goForward(e) {
-      e.preventDefault();
+      e.preventDefault()
       const $this = $(e.target)
       const $thisNav = $this.closest(Selector.NAV_MENU)
       const $targetNav =  $this.next(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
       const $thisNavToggler = $this
-      const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10)
+      const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
       const navWidth = $rootNav.width()
-      const currentTranslatePercentage = 100 * currentTranslatePos / navWidth
+      const currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth
 
-      if(!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
-          return false
+      if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
+        return false
       }
 
       $rootNav.addClass(ClassName.TRANSITIONING)
@@ -224,21 +238,31 @@ const MegaMenu = (($) => {
       $(Selector.MEGAMENU).height($targetNav.height())
 
       // make only visible elements focusable
-      if(currentTranslatePercentage === 0) {
-          $rootNav.find('>.nav-item .nav-link').attr({'tabindex': -1, 'aria-hidden': true})
+      if (!currentTranslatePercentage) {
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: -1,
+          'aria-hidden': true
+        })
       }
-      $thisNav.find(Selector.NAV_LINK).attr({'tabindex': -1, 'aria-hidden': true})
-      $targetNav.find(Selector.NAV_LINK).attr({'tabindex': 0, 'aria-hidden': false})
+      $thisNav.find(Selector.NAV_LINK).attr({
+        tabindex: -1,
+        'aria-hidden': true
+      })
+      $targetNav.find(Selector.NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      })
 
       // translate menu
-      $rootNav.css('transform', 'translateX('+(currentTranslatePercentage - 100)+'%)')
+      $rootNav.css('transform', `translateX(${currentTranslatePercentage - PERCENTAGE}%)`)
 
       // focus on target nav first item
-      $rootNav.one('transitionend', function() {
+      $rootNav.one('transitionend', () => {
         $thisNavToggler.attr('aria-expanded', true)
         $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus')
         $rootNav.removeClass(ClassName.TRANSITIONING)
       })
+      return true
     }
 
     _goBackward(e) {
@@ -249,35 +273,41 @@ const MegaMenu = (($) => {
       const $targetNav = $thisNav.parent().closest(Selector.NAV_MENU)
       const $rootNav = $(Selector.ROOT_NAV)
       const $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED)
-      const $thisNavBackLink = $this
-      const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10)
+      const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
       const navWidth = $rootNav.width()
-      const currentTranslatePercentage = 100 * currentTranslatePos / navWidth
+      const currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth
 
-      if(currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
-          return false
+      if (!currentTranslatePercentage || $rootNav.hasClass(ClassName.TRANSITIONING)) {
+        return false
       }
 
       $rootNav.addClass(ClassName.TRANSITIONING)
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).attr({'tabindex': 0, 'aria-hidden': false})
-      if(currentTranslatePercentage === -100) {
+      $targetNav.find(Selector.NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      })
+      if (currentTranslatePercentage === -PERCENTAGE) {
         // reset main collapse height
         $(Selector.MEGAMENU).css('height', 'auto')
-        $rootNav.find('>.nav-item .nav-link').attr({'tabindex': 0, 'aria-hidden': false})
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: 0,
+          'aria-hidden': false
+        })
       }
 
       // translate menu
-      $rootNav.css('transform', 'translateX('+(currentTranslatePercentage + 100)+'%)')
+      $rootNav.css('transform', `translateX(${currentTranslatePercentage + PERCENTAGE}%)`)
 
       // focus on target nav first item
-      $rootNav.one('transitionend', function() {
+      $rootNav.one('transitionend', () => {
         $targetNavToggler.attr('aria-expanded', false)
         $targetNavToggler.trigger('focus')
         $thisNav.hide()
         $rootNav.removeClass(ClassName.TRANSITIONING)
       })
+      return true
     }
 
     // static
@@ -286,7 +316,7 @@ const MegaMenu = (($) => {
       return this.each(function () {
         const $element = $(this)
 
-        if(!$element.is(Selector.MEGAMENU)) {
+        if (!$element.is(Selector.MEGAMENU)) {
           throw new Error('Element is not a mega menu')
         }
 
@@ -297,7 +327,7 @@ const MegaMenu = (($) => {
           $element.data(DATA_KEY, data)
         }
 
-        if(typeof config !== 'undefined' && config.length > 0) {
+        if (typeof config !== 'undefined' && config) {
           if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
             throw new Error(`Selector "${config}" is not supported`)
           }

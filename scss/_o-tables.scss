@@ -229,9 +229,9 @@ caption {
     &.tablesorter-headerDesc .tablesorter-header-inner::after {
       position: absolute;
       top: 1.125rem;
-      margin-left: .625rem;
       width: .875rem;
       height: .4375rem;
+      margin-left: .625rem;
       content: "";
       background-image: $accordion-arrow-icon;
       transform: rotate(180deg);

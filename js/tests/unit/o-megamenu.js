@@ -1,5 +1,5 @@
 $(function () {
-  'use strict';
+  'use strict'
 
   QUnit.module('megamenu plugin')
 
@@ -24,36 +24,33 @@ $(function () {
     assert.strictEqual($.fn.megamenu, undefined, 'megamenu was set back to undefined (org value)')
   })
 
-  QUnit.test('should throw explicit error on undefined method', function (assert) {
+  QUnit.test('should throw explicit error on wrong ID parameter', function (assert) {
     assert.expect(1)
-    var $el = $('<div/>')
-    $el.boostedMegaMenu()
+    var $el = $('<div class="mega-menu"/>')
     try {
-      $el.boostedMegaMenu('noMethod')
+      $el.boostedMegaMenu('noid')
     }
     catch (err) {
-      assert.strictEqual(err.message, 'No method named "noMethod"')
+      assert.strictEqual(err.message, 'Selector "noid" is not supported')
+    }
+  })
+
+  QUnit.test('should throw explicit error if element is not a megamenu', function (assert) {
+    assert.expect(1)
+    var $el = $('<div/>')
+    try {
+      $el.boostedMegaMenu()
+    }
+    catch (err) {
+      assert.strictEqual(err.message, 'Element is not a mega menu')
     }
   })
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
     assert.expect(2)
-    var $el = $('<div/>')
+    var $el = $('<div class="mega-menu navbar-collapse collapse" id="collapsingNavbarHead">< ul class="navbar-nav" > <li class="nav-item"> <a class="nav-link collapsed" href="#mega_level_1_collapse" data-toggle="collapse">Shop</a><div class="mega-menu-panel collapse" id="mega_level_1_collapse"><div class="container"><ul class="navbar-nav"> <li class="nav-item"> <a class="nav-link" href="">Mobile</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Mobile</a></li> <li class="nav-item"> <a class="nav-link" href="">Phones</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Phones</a></li> <li class="nav-item"> <a class="nav-link" href="" id="test">Sub link 1</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li> <li class="nav-item"><a class="nav-link" href="">Sub sub link 1</a></li> <li class="nav-item"><a class="nav-link" href="">Sub sub link 2</a></li> <li class="nav-item"><a class="nav-link" href="">Sub sub link 3</a></li></ul></li> <li class="nav-item"><a class="nav-link" href="">Sub link 2</a></li> <li class="nav-item"><a class="nav-link" href="">Sub link 3</a></li></ul></li> <li class="nav-item"><a class="nav-link" href="">Plans</a></li> <li class="nav-item"><a class="nav-link" href="">Accessories</a></li></ul></li> <li class="nav-item"> <a class="nav-link" href="">Internet</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Internet</a></li> <li class="nav-item"> <a class="nav-link" href="">Pay monthly offers</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Pay monthly offers</a></li> <li class="nav-item"> <a class="nav-link" href="">Sub link 1</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li> <li class="nav-item"><a class="nav-link" href="">Sub sub link 1</a></li> <li class="nav-item"><a class="nav-link" href="">Sub sub link 2</a></li> <li class="nav-item"><a class="nav-link" href="">Sub sub link 3</a></li></ul></li> <li class="nav-item"><a class="nav-link" href="">Sub link 2</a></li> <li class="nav-item"><a class="nav-link" href="">Sub link 3</a></li></ul></li> <li class="nav-item"><a class="nav-link" href="">Shared plans</a></li> <li class="nav-item"><a class="nav-link" href="">Orange TV</a></li></ul></li> <li class="nav-item"> <a class="nav-link" href>Link 3</a><ul class="navbar-nav"> <li class="nav-item"><a class="nav-link back" href="">Link 3</a></li> <li class="nav-item"><a class="nav-link" href="">Item 1</a></li> <li class="nav-item"><a class="nav-link" href="">Item 2</a></li> <li class="nav-item"><a class="nav-link" href="">Item 3</a></li> <li class="nav-item"><a class="nav-link" href="">Item 4</a></li> <li class="nav-item"><a class="nav-link" href="">Item 5</a></li> <li class="nav-item"><a class="nav-link" href="">Item 6</a></li> <li class="nav-item"><a class="nav-link" href="">Item 7</a></li> <li class="nav-item"><a class="nav-link" href="">Item 8</a></li><li class="nav-item"><a class="nav-link" href="">Item 9</a></li> <li class="nav-item"><a class="nav-link" href="">Item 10</a></li> <li class="nav-item"><a class="nav-link" href="">Item 11</a></li> <li class="nav-item"><a class="nav-link" href="">Item 12</a></li> <li class="nav-item"><a class="nav-link" href="">Item 13</a></li></ul></li></ul> <a data-toggle="collapse" href="#mega_level_1_collapse" aria-expanded="true" aria-controls="collapseShop" title="close shop menu"><span class="icon-delete"></span></a></div></div></li> <li class="nav-item"> <a class="nav-link collapsed" href="#mega_level_2_collapse" data-toggle="collapse">Discover</a><div class="mega-menu-panel collapse" id="mega_level_2_collapse"><div class="container"><ul class="navbar-nav"> <li class="nav-item"> <a class="nav-link" href="">Test 1</a></li></ul></div></div></li> <li class="nav-item"><a class="nav-link collapsed" href="" data-toggle="collapse">My Orange</a></li></ul ></div >')
     var $megamenu = $el.boostedMegaMenu()
     assert.ok($megamenu instanceof $, 'returns jquery collection')
     assert.strictEqual($megamenu[0], $el[0], 'collection contains element')
   })
-
-  QUnit.test('should focus first focusable link', function (assert) {
-    assert.expect(1)
-    var done = assert.async();
-    var $el = $('#megamenu_test').boostedMegaMenu();
-    var $focusable = $('#megamenu_test a:not([aria-hidden="true"]):first')
-    $el.trigger('shown.bs.collapse');
-    setTimeout(function () {
-      assert.strictEqual(document.activeElement, $focusable[0], 'Link was focused');
-      done();
-    });
-  })
-
 })

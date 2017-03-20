@@ -21,9 +21,7 @@ const Navbar = (($) => {
   const VERSION             = '4.0.0-alpha.6'
   const DATA_KEY            = 'bs.navbar'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  // boosted mod
-  const SCROLLTIMEOUT       = 100
-  // end mod
+  const BREAKPOINT = 768
 
   const Default = {
     sticky : false,
@@ -33,14 +31,6 @@ const Navbar = (($) => {
   const DefaultType = {
     sticky : 'boolean',
     trigger : 'string'
-  }
-
-  const Dimension = {
-    MEDIA_BP_SM : 544
-  }
-
-  const Event = {
-    PAGE_SCROLL : 'scroll'
   }
 
   const Selector = {
@@ -73,9 +63,9 @@ const Navbar = (($) => {
         $(Selector.MEGAMENU_PANEL).addClass('sticky')
         $(document.body).css('padding-top', this._initialHeight)
 
-        $(window).on('scroll', function() {
-          var scroll = $(window).scrollTop()
-          if(scroll > 0) {
+        $(window).on('scroll', () => {
+          const Scroll = $(window).scrollTop()
+          if (Scroll > 0) {
             $(Selector.NAVBAR).addClass('minimized')
           } else {
             $(Selector.NAVBAR).removeClass('minimized')
@@ -84,14 +74,14 @@ const Navbar = (($) => {
       }
 
       if (this._config.hideSupra) {
-        $(window).on('scroll', function() {
-          if($(window).innerWidth() < 768) {
+        $(window).on('scroll', () => {
+          if ($(window).innerWidth() < BREAKPOINT) {
             return
           }
 
-          var scroll = $(window).scrollTop()
+          const Scroll = $(window).scrollTop()
 
-          if(scroll > 0) {
+          if (Scroll > 0) {
             $(Selector.SUPRA_BAR).hide()
           } else {
             $(Selector.SUPRA_BAR).show()
@@ -126,9 +116,9 @@ const Navbar = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let $this   = $(this)
+        const $this   = $(this)
         let data    = $this.data(DATA_KEY)
-        let _config = $.extend(
+        const _config = $.extend(
           {},
           Default,
           $this.data(),

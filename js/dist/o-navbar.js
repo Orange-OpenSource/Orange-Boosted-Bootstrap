@@ -23,9 +23,7 @@ var Navbar = function ($) {
   var VERSION = '4.0.0-alpha.6';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-  // boosted mod
-  var SCROLLTIMEOUT = 100;
-  // end mod
+  var BREAKPOINT = 768;
 
   var Default = {
     sticky: false,
@@ -35,14 +33,6 @@ var Navbar = function ($) {
   var DefaultType = {
     sticky: 'boolean',
     trigger: 'string'
-  };
-
-  var Dimension = {
-    MEDIA_BP_SM: 544
-  };
-
-  var Event = {
-    PAGE_SCROLL: 'scroll'
   };
 
   var Selector = {
@@ -76,8 +66,8 @@ var Navbar = function ($) {
         $(document.body).css('padding-top', this._initialHeight);
 
         $(window).on('scroll', function () {
-          var scroll = $(window).scrollTop();
-          if (scroll > 0) {
+          var Scroll = $(window).scrollTop();
+          if (Scroll > 0) {
             $(Selector.NAVBAR).addClass('minimized');
           } else {
             $(Selector.NAVBAR).removeClass('minimized');
@@ -87,13 +77,13 @@ var Navbar = function ($) {
 
       if (this._config.hideSupra) {
         $(window).on('scroll', function () {
-          if ($(window).innerWidth() < 768) {
+          if ($(window).innerWidth() < BREAKPOINT) {
             return;
           }
 
-          var scroll = $(window).scrollTop();
+          var Scroll = $(window).scrollTop();
 
-          if (scroll > 0) {
+          if (Scroll > 0) {
             $(Selector.SUPRA_BAR).hide();
           } else {
             $(Selector.SUPRA_BAR).show();

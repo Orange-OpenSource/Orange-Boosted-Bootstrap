@@ -45,7 +45,6 @@ const ScrollUp = (($) => {
   }
 
 
-
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -90,7 +89,7 @@ const ScrollUp = (($) => {
     // private
 
     _process() {
-      if ($(this._scrollElement).scrollTop() > $(this._scrollElement).height()*1.0) {
+      if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
         $(Selector.SCROLL_TOP).show()
       } else {
         $(Selector.SCROLL_TOP).hide()
@@ -130,9 +129,9 @@ const ScrollUp = (($) => {
    */
 
   $(window).on(Event.LOAD_DATA_API, () => {
-    let scrollUps = $.makeArray($(Selector.SCROLL_TOP))
+    const scrollUps = $.makeArray($(Selector.SCROLL_TOP))
     for (let i = scrollUps.length; i--;) {
-      let $scrollup = $(scrollUps[i])
+      const $scrollup = $(scrollUps[i])
       ScrollUp._jQueryInterface.call($scrollup, $scrollup.data())
     }
   })

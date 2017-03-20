@@ -17,23 +17,12 @@ const Switch = (($) => {
   const NAME                = 'switch'
   const VERSION             = '4.0.0-alpha.6'
   const DATA_KEY            = 'bs.switch'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const DATA_API_KEY        = '.data-api'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
-
-  const ClassName = {
-    CHECKED : 'checked',
-    SWITCH: "o-switch",
-  }
 
   const Selector = {
     SWITCH: '.o-switch',
     TOGGLE: '.o-switch .toggle',
     LABEL: '.o-switch label'
-  }
-
-  const Event = {
-    CLICK_DATA_API      : `click${EVENT_KEY}${DATA_API_KEY}`
   }
 
 
@@ -59,7 +48,7 @@ const Switch = (($) => {
     // private
     toggle() {
 
-      if($(this._element).prev('input').prop('checked')) {
+      if ($(this._element).prev('input').prop('checked')) {
         $(this._element).prev('input').prop('checked', false)
       } else {
         $(this._element).prev('input').prop('checked', true)
@@ -101,7 +90,7 @@ const Switch = (($) => {
    */
 
   $(document)
-    .on('click', Selector.TOGGLE, function(event) {
+    .on('click', Selector.TOGGLE, function (event) {
       event.preventDefault()
 
       Switch._jQueryInterface.call($(this), 'toggle')

@@ -157,31 +157,29 @@ const Tab = (($) => {
     // Boosted mod
     static _keydown(e) {
       let $this = $(this)
-      let $items
-      let $ul = $this.closest('ul[role=tablist] ')
+      const Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible')
       let index
-      let k = e.which || e.keyCode
+      const k = e.which || e.keyCode
       $this = $(this)
       if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
         return
       }
-      $items = $ul.find('[role=tab]:visible')
-      index = $items.index($items.filter(':focus'))
+      index = Items.index(Items.filter(':focus'))
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
         index--
-      }	// up & left
+      } // up & left
       if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
         index++
-      }	// down & right
+      } // down & right
 
       if (index < 0) {
-        index = $items.length - 1
+        index = Items.length - 1
       }
-      if (index === $items.length) {
+      if (index === Items.length) {
         index = 0
       }
-      let nextTab = $items.eq(index)
+      const nextTab = Items.eq(index)
       if (nextTab.attr('role') === 'tab') {
         nextTab.tab('show').trigger('focus')
       }
@@ -207,8 +205,14 @@ const Tab = (($) => {
       )
 
       // Boosted mod
-      $(container).find('.nav-link').attr({ tabIndex : '-1', 'aria-selected' : false })
-      $(container).find('.tab-pane').attr({ 'aria-hidden' : true, tabIndex : '-1' })
+      $(container).find('.nav-link').attr({
+        tabIndex : '-1',
+        'aria-selected' : false
+      })
+      $(container).find('.tab-pane').attr({
+        'aria-hidden' : true,
+        tabIndex : '-1'
+      })
       // end mod
 
       if (active && isTransitioning) {
@@ -243,8 +247,14 @@ const Tab = (($) => {
       $(element).addClass(ClassName.ACTIVE)
       element.setAttribute('aria-expanded', true)
       // Boosted mod
-      $(element).filter('.nav-link.active').attr({ tabIndex : '0', 'aria-selected' : true })
-      $(element).filter('.tab-pane.active').attr({ 'aria-hidden' : false, tabIndex : '0' })
+      $(element).filter('.nav-link.active').attr({
+        tabIndex : '0',
+        'aria-selected' : true
+      })
+      $(element).filter('.tab-pane.active').attr({
+        'aria-hidden' : false,
+        tabIndex : '0'
+      })
       // end mod
 
       if (isTransitioning) {
@@ -326,24 +336,24 @@ const Tab = (($) => {
   // ajout de l'accesibilité
   // ===============================
 
-  let uniqueId = function (prefix) {
+  function uniqueId(prefix) {
     return `${prefix || 'ui-id'}-${Math.floor(Math.random() * RANDOM_NUMBER + 1)}`
   }
 
-  let $tablists = $('.nav-tabs, .nav-pills')
-  let $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]')
+  const $tablists = $('.nav-tabs, .nav-pills')
+  const $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]')
 
   $tabs.each(function () {
-    let tabpanel = $($(this).attr('href'))
-    let $tab = $(this)
-    let $tablist = $tab.closest('.nav-tabs, .nav-pills')
-    let $li = $tab.parent('li')
-    let tabid = $tab.attr('id') || uniqueId('ui-tab')
+    const tabpanel = $($(this).attr('href'))
+    const $tab = $(this)
+    const $tablist = $tab.closest('.nav-tabs, .nav-pills')
+    const $li = $tab.parent('li')
+    const tabid = $tab.attr('id') || uniqueId('ui-tab')
 
     $tab.attr('id', tabid)
     // put role tab, presentation and tablist only if there's at least one tabpanel
-    if(tabpanel) {
-      $tab.attr('role', 'tab')      
+    if (tabpanel) {
+      $tab.attr('role', 'tab')
       $tablist.attr('role', 'tablist')
       $li.attr('role', 'presentation')
     }

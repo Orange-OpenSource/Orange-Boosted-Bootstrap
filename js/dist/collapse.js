@@ -336,11 +336,12 @@ var Collapse = function ($) {
   // accordion tabs
   // add role tab & tabpanel
 
-  var $collTabHeadings = $('.panel-heading');
-  var $collTabPanels = $('.panel-collapse:not(.mega-menu)');
-
-  $collTabHeadings.attr({ role: 'tab' });
-  $collTabPanels.attr({ role: 'tabpanel' });
+  $('.panel-heading').attr({
+    role: 'tab'
+  });
+  $('.panel-collapse:not(.mega-menu)').attr({
+    role: 'tabpanel'
+  });
   $('.panel').attr('role', 'presentation');
 
   /**

@@ -80,7 +80,7 @@ var ScrollUp = function ($) {
     // private
 
     ScrollUp.prototype._process = function _process() {
-      if ($(this._scrollElement).scrollTop() > $(this._scrollElement).height() * 1.0) {
+      if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
         $(Selector.SCROLL_TOP).show();
       } else {
         $(Selector.SCROLL_TOP).hide();

@@ -27,15 +27,13 @@ var MegaMenu = function ($) {
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  // const POS_MODULO = 5;
-
-  var Event = {};
+  var TIMEOUT = 1000; // Timeout befor focusing first element
+  var PERCENTAGE = 100; // Width slide proportion
+  var SPLITLENGHT = 4;
 
   var ClassName = {
     TRANSITIONING: 'transitioning'
   };
-
-  var Dimension = {};
 
   var Selector = {
     MEGAMENU: '.mega-menu',
@@ -103,7 +101,9 @@ var MegaMenu = function ($) {
       $(element).find('> .navbar-nav').attr('role', 'menu');
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $(element).find(Selector.NAV_LINK_BACK).attr({ 'aria-hidden': true });
+      $(element).find(Selector.NAV_LINK_BACK).attr({
+        'aria-hidden': true
+      });
       $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
 
       $subNavs.each(function () {
@@ -118,21 +118,33 @@ var MegaMenu = function ($) {
           goBackLabel = 'go back to ' + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + ' menu';
         }
 
-        $thisNav.attr({ 'id': navId, 'role': 'menu' });
-        $thisNavToggler.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-expanded': false, 'aria-haspopup': true });
-        $thisNavBackLink.attr({ 'role': 'menuitem', 'aria-controls': navId, 'aria-label': goBackLabel });
+        $thisNav.attr({
+          id: navId,
+          role: 'menu'
+        });
+        $thisNavToggler.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-expanded': false,
+          'aria-haspopup': true
+        });
+        $thisNavBackLink.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-label': goBackLabel
+        });
       });
     };
 
     MegaMenu.prototype._initPosition = function _initPosition(target) {
-      if ($(target).length === 0) {
+      if (!$(target).length) {
         return;
       }
 
       var $target = $(target).first();
       var position = $target.parents().index(this._element);
       var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
-      var translatePercentage = -(position - rootPosition) * 100 / 2;
+      var translatePercentage = -(position - rootPosition) * PERCENTAGE / 2;
       var $thisNav = $target.closest(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
 
@@ -145,7 +157,11 @@ var MegaMenu = function ($) {
       $target.parents(Selector.NAV_MENU).show();
 
       // set aria on parent links
-      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({ 'tabindex': -1, 'aria-hidden': true, 'aria-expanded': true });
+      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
+        tabindex: -1,
+        'aria-hidden': true,
+        'aria-expanded': true
+      });
 
       // translate to pos
       $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
@@ -153,13 +169,13 @@ var MegaMenu = function ($) {
       // adapt main collapse height to target height
       $(this._element).height($thisNav.height());
 
-      //set focus on target link
+      // set focus on target link
       setTimeout(function () {
-        //set focus on target link
+        // set focus on target link
         $target.trigger('focus');
 
         $rootNav.removeClass(ClassName.TRANSITIONING);
-      }, 1000);
+      }, TIMEOUT);
     };
 
     MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
@@ -209,9 +225,9 @@ var MegaMenu = function ($) {
       var $targetNav = $this.next(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
       var $thisNavToggler = $this;
-      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
-      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
+      var currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth;
 
       if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
@@ -229,14 +245,23 @@ var MegaMenu = function ($) {
       $(Selector.MEGAMENU).height($targetNav.height());
 
       // make only visible elements focusable
-      if (currentTranslatePercentage === 0) {
-        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': -1, 'aria-hidden': true });
+      if (!currentTranslatePercentage) {
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: -1,
+          'aria-hidden': true
+        });
       }
-      $thisNav.find(Selector.NAV_LINK).attr({ 'tabindex': -1, 'aria-hidden': true });
-      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
+      $thisNav.find(Selector.NAV_LINK).attr({
+        tabindex: -1,
+        'aria-hidden': true
+      });
+      $targetNav.find(Selector.NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      });
 
       // translate menu
-      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - 100) + '%)');
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - PERCENTAGE) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
@@ -244,6 +269,7 @@ var MegaMenu = function ($) {
         $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
         $rootNav.removeClass(ClassName.TRANSITIONING);
       });
+      return true;
     };
 
     MegaMenu.prototype._goBackward = function _goBackward(e) {
@@ -254,27 +280,32 @@ var MegaMenu = function ($) {
       var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
       var $rootNav = $(Selector.ROOT_NAV);
       var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
-      var $thisNavBackLink = $this;
-      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[4], 10);
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
-      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
+      var currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth;
 
-      if (currentTranslatePercentage === 0 || $rootNav.hasClass(ClassName.TRANSITIONING)) {
+      if (!currentTranslatePercentage || $rootNav.hasClass(ClassName.TRANSITIONING)) {
         return false;
       }
 
       $rootNav.addClass(ClassName.TRANSITIONING);
 
       // make only visible elements focusable
-      $targetNav.find(Selector.NAV_LINK).attr({ 'tabindex': 0, 'aria-hidden': false });
-      if (currentTranslatePercentage === -100) {
+      $targetNav.find(Selector.NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      });
+      if (currentTranslatePercentage === -PERCENTAGE) {
         // reset main collapse height
         $(Selector.MEGAMENU).css('height', 'auto');
-        $rootNav.find('>.nav-item .nav-link').attr({ 'tabindex': 0, 'aria-hidden': false });
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: 0,
+          'aria-hidden': false
+        });
       }
 
       // translate menu
-      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + 100) + '%)');
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + PERCENTAGE) + '%)');
 
       // focus on target nav first item
       $rootNav.one('transitionend', function () {
@@ -283,6 +314,7 @@ var MegaMenu = function ($) {
         $thisNav.hide();
         $rootNav.removeClass(ClassName.TRANSITIONING);
       });
+      return true;
     };
 
     // static
@@ -302,7 +334,7 @@ var MegaMenu = function ($) {
           $element.data(DATA_KEY, data);
         }
 
-        if (typeof config !== 'undefined' && config.length > 0) {
+        if (typeof config !== 'undefined' && config) {
           if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
             throw new Error('Selector "' + config + '" is not supported');
           }
