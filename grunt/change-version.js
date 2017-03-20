@@ -71,7 +71,7 @@ function replaceRecursively(directory, excludedDirectories, allowedExtensions, o
     else {
       console.log('EXCLUDED:' + filepath)
     }
-    }
+  }
   walkAsync(directory, excludedDirectories, updateFile, function (err) {
     console.error('ERROR while traversing directory!:')
     console.error(err)

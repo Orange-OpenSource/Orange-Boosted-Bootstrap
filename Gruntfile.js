@@ -25,7 +25,7 @@ module.exports = function (grunt) {
   var serveStatic = require('serve-static')
   /* end mod */
   var path = require('path')
-  var isTravis = require('is-travis')
+// var isTravis = require('is-travis')
 
   var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' })
 
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
     clean: {
       dist: 'dist',
       /* Boosted mod */
-      docs: ['docs/dist','_gh_pages'],
+      docs: ['docs/dist', '_gh_pages'],
       rtl: 'dist/css/o-rtl.*',
       tmp: '.tmpdocs'
       /* end mod */
@@ -145,7 +145,7 @@ module.exports = function (grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       /* boosted mod */
-      vendorsCss: {
+      vendorCss: {
         src: ['node_modules/swiper/dist/css/swiper.css', 'dist/css/boosted.css'],
         dest: 'dist/css/boosted.css'
       },
@@ -155,8 +155,8 @@ module.exports = function (grunt) {
       },
       docsJs: {
         src: [
-            '.tmpdocs/assets/js/src/application.js',
-            '.tmpdocs/assets/js/src/application-orange.js'
+          '.tmpdocs/assets/js/src/application.js',
+          '.tmpdocs/assets/js/src/application-orange.js'
         ],
         dest: '.tmpdocs/assets/js/src/application.js'
         /* end mod */
@@ -213,7 +213,7 @@ module.exports = function (grunt) {
         src: ['**/*', '!**/screenshots/**', '!index.md'],
         dest: '.tmpdocs/examples/',
         rename: function (dest, src) {
-          return dest + 'rtl-' + src;
+          return dest + 'rtl-' + src
         }
       },
       fonts: {
@@ -228,12 +228,12 @@ module.exports = function (grunt) {
         src: ['*'],
         dest: 'dist/img/'
       },
-      vendorsjs: {
+      vendorjs: {
         expand: true,
         flatten: true,
         cwd: '.',
-        src: ['js/vendors/**/*.js', 'node_modules/swiper/dist/js/swiper.js'],
-        dest: 'dist/js/vendors/'
+        src: ['js/vendor/**/*.js', 'node_modules/swiper/dist/js/swiper.js'],
+        dest: 'dist/js/vendor/'
         /* end mod */
       }
     },
@@ -251,10 +251,10 @@ module.exports = function (grunt) {
         options: {
           open: true,
           port: 9000,
-          middleware: function (connect) {
+          middleware: function () {
             return [
               serveStatic('_gh_pages')
-            ];
+            ]
           }
           /* end mod */
         }
@@ -431,8 +431,8 @@ module.exports = function (grunt) {
       },
       docs: {
         /* boosted mod */
-        files: ['docs/assets/scss/**/*.scss','docs-orange/**/*', 'docs/**/*.md'],
-        tasks: ['dist-css','docs']
+        files: ['docs/assets/scss/**/*.scss', 'docs-orange/**/*', 'docs/**/*.md'],
+        tasks: ['dist-css', 'docs']
         /* end mod */
       }
     },
@@ -554,7 +554,7 @@ module.exports = function (grunt) {
   }
 
   // Test task.
-  var testSubtasks = [];
+  var testSubtasks = []
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs'])
@@ -584,21 +584,21 @@ module.exports = function (grunt) {
   // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'concat:vendorsCss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
+  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'concat:vendorCss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
 
   // Full distribution task.
   /* boosted mod */
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorsjs'])
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorjs'])
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test'])
 
   // Docs task.
-  grunt.registerTask('docs-css', ['exec:sass-docs','exec:clean-css-docs', 'exec:postcss-docs'])
+  grunt.registerTask('docs-css', ['exec:sass-docs', 'exec:clean-css-docs', 'exec:postcss-docs'])
   grunt.registerTask('lint-docs-css', ['exec:scss-lint-docs'])
   /* boosted mod */
   grunt.registerTask('docs-js', ['concat:docsJs', 'exec:uglify-docs'])
-  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl','copy:docs', 'jekyll:docs', 'replace'])
+  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl', 'copy:docs', 'jekyll:docs', 'replace'])
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github'])
 
@@ -608,7 +608,7 @@ module.exports = function (grunt) {
   grunt.registerTask('publish', ['buildcontrol:pages'])
 
   /* boosted mod */
-  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+  grunt.registerTask('serve', 'Compile then start a connect web server', function () {
     grunt.task.run([
       'dist',
       'docs',
