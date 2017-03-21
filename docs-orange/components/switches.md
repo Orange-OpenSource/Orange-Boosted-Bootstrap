@@ -67,7 +67,7 @@ Finally use `.rounded` class on `.toggle` element to get rounded switch alternat
 </div>
 {% endexample %}
 
-## 3 way toggle
+## The 3 way toggle
 
 Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several btn-group toggles, make to have different `name` attribute for each group.
 

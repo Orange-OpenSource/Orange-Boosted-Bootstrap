@@ -17,16 +17,16 @@
     <div class="skiplinks" >
       <div class="skiplinks-section sr-only">
         <ul>
-          <li id="cdu_skiplink">
+          <li id="cdu-skiplink">
           </li>
           <li>
-            <a href="#search" class="skiplinks_trigger">first section - search</a>
+            <a href="#search" class="skiplinks-trigger">first section - search</a>
           </li>
           <li>
-            <a href="#alerts" class="skiplinks_trigger">second section - alerts</a>
+            <a href="#alerts" class="skiplinks-trigger">second section - alerts</a>
           </li>
           <li>
-            <a href="#sysInfo" class="skiplinks_trigger">third section - systems information</a>
+            <a href="#sysInfo" class="skiplinks-trigger">third section - systems information</a>
           </li>
         </ul>
       </div>
@@ -103,9 +103,9 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="pro_check" class="col-sm-2 form-control-label">Pro ? <span class="star">*</span> </label>
+                  <label for="pro-check" class="col-sm-2 form-control-label">Pro ? <span class="star">*</span> </label>
                   <div class="col-sm-10">
-                    <input id="pro_check" type="checkbox" class="form-control">
+                    <input id="pro-check" type="checkbox" class="form-control">
                   </div>
                 </div>
 
@@ -384,23 +384,23 @@
     accessibilitytoolbar_custom={
       idLinkModeContainer:"id_for_cdu_link",
       cssLinkModeClassName:"nav-item-cdu",
-      idSkipLinkIdLinkMode:"cdu_skiplink",
-      cssSkipLinkClassName: "skiplinks_trigger",
+      idSkipLinkIdLinkMode:"cdu-skiplink",
+      cssSkipLinkClassName: "skiplinks-trigger",
       callback:skiplinksAfterLoad
     };
 
-    $(".skiplinks_trigger").focus(function(){
+    $(".skiplinks-trigger").focus(function(){
       $(".skiplinks-section").addClass("skiplinks-show").removeClass("sr-only")
     });
-    $(".skiplinks_trigger").blur(function(){
+    $(".skiplinks-trigger").blur(function(){
       $(".skiplinks-section").removeClass("skiplinks-show").addClass("sr-only")
     });
 
     function skiplinksAfterLoad(){
-      $(".skiplinks_trigger").focus(function(){
+      $(".skiplinks-trigger").focus(function(){
         $(".skiplinks-section").addClass("skiplinks-show").removeClass("sr-only")
       });
-      $(".skiplinks_trigger").blur(function(){
+      $(".skiplinks-trigger").blur(function(){
         $(".skiplinks-section").removeClass("skiplinks-show").addClass("sr-only")
       });
     }
@@ -409,3 +409,4 @@
 
   </body>
 </html>
+

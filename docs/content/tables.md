@@ -443,48 +443,48 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 Use contextual classes to color table rows or individual cells.
 
 <table class="table table-bordered table-striped table-responsive">
-    <colgroup>
+  <colgroup>
     <col class="col-1">
     <col class="col-7">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">
-          <code>.table-active</code>
-        </th>
-        <td>Applies the hover color to a particular row or cell</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <code>.table-success</code>
-        </th>
-        <td>Indicates a successful or positive action</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <code>.table-info</code>
-        </th>
-        <td>Indicates a neutral informative change or action</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <code>.table-warning</code>
-        </th>
-        <td>Indicates a warning that might need attention</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <code>.table-danger</code>
-        </th>
-        <td>Indicates a dangerous or potentially negative action</td>
-      </tr>
-    </tbody>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <code>.table-active</code>
+      </th>
+      <td>Applies the hover color to a particular row or cell</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>.table-success</code>
+      </th>
+      <td>Indicates a successful or positive action</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>.table-info</code>
+      </th>
+      <td>Indicates a neutral informative change or action</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>.table-warning</code>
+      </th>
+      <td>Indicates a warning that might need attention</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <code>.table-danger</code>
+      </th>
+      <td>Indicates a dangerous or potentially negative action</td>
+    </tr>
+  </tbody>
 </table>
 
 <div class="bd-example">

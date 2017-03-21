@@ -82,7 +82,8 @@
   })
 
 </script>
-{% endif %} {% if page.title == "Boostwatch" %}
+{% endif %}
+{% if page.title == "Boostwatch" %}
 <script src="../../dist/js/vendor/swiper.js"></script>
 <script>
   $(document).ready(function () {
@@ -103,9 +104,8 @@
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
   })
-</script>
-{% endif %}
-
+</script>{% 
+endif %}
 <script>
         Holder.addTheme('gray', {
           bg: '#777',
@@ -113,14 +113,13 @@
           font: 'Helvetica',
           fontweight: 'normal'
         })
-
 </script>
 
 <!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
 <script>
   accessibilitytoolbar_custom = {
-    idLinkModeContainer: "id_li_for_cdu",
-    //idSkipLinkIdLinkMode:"cdu_skiplink",
+    idLinkModeContainer: "id-li-for-cdu",
+    //idSkipLinkIdLinkMode:"cdu-skiplink",
     cssSkipLinkClassName: "sr-only sr-only-focusable",
     cssLinkModeClassName: "nav-item-cdu"
     //callback:skiplinksAfterLoad

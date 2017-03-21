@@ -26,13 +26,13 @@ Megamenu has a footer section where additional links can be added and a button t
 
 <!-- megamenu content -->
 <div class="mega-menu" style="position: static">
-    <div class="collapse show" id="collapseExample" aria-labelledby="menu_title">
+    <div class="collapse show" id="collapseExample" aria-labelledby="menu-title">
         <div class="container">
-            <h2 role="presentation" id="menu_title"><a aria-hidden="true" href="#">Home Shop</a></h2>
+            <h2 role="presentation" id="menu-title"><a aria-hidden="true" href="#">Home Shop</a></h2>
             <div class="row">
                 <div class="col-12 col-md-3">
-                    <h3 id="list_title_1"><a href="#">Internet</a></h3>
-                    <ul aria-labelledby="list_title_1" role="menu">
+                    <h3 id="list-title-1"><a href="#">Internet</a></h3>
+                    <ul aria-labelledby="list-title-1" role="menu">
                         <li role="menuitem"><a href="#">iPhone 6</a></li>
                         <li role="menuitem"><a href="#">Phones </a></li>
                         <li role="menuitem"><a href="#">Tablets</a></li>
@@ -41,8 +41,8 @@ Megamenu has a footer section where additional links can be added and a button t
                     </ul>
                 </div>
                 <div class="col-12 col-md-3">
-                    <h3 id="list_title_2"><a href="#">Mobile</a></h3>
-                    <ul aria-labelledby="list_title_2" role="menu">
+                    <h3 id="list-title-2"><a href="#">Mobile</a></h3>
+                    <ul aria-labelledby="list-title-2" role="menu">
                         <li role="menuitem"><a href="#">Phones </a></li>
                         <li role="menuitem"><a href="#">Plans</a></li>
                         <li role="menuitem"><a href="#">Accessories</a></li>
@@ -52,8 +52,8 @@ Megamenu has a footer section where additional links can be added and a button t
                     </ul>
                 </div>
                 <div class="col-12 col-md-3">
-                    <h3 id="list_title_3"><a href="#">Lorem</a></h3>
-                    <ul aria-labelledby="list_title_3" role="menu">
+                    <h3 id="list-title-3"><a href="#">Lorem</a></h3>
+                    <ul aria-labelledby="list-title-3" role="menu">
                         <li role="menuitem"><a href="#">Lorem ipsum </a></li>
                         <li role="menuitem"><a href="#">Lorem ipsum</a></li>
                         <li role="menuitem"><a href="#">Lorem ipsum</a></li>
@@ -61,8 +61,8 @@ Megamenu has a footer section where additional links can be added and a button t
                     </ul>
                 </div>
                 <div class="col-12 col-md-3">
-                    <h3 id="list_title_4"><a href="#">Ipsum</a></h3>
-                    <ul aria-labelledby="list_title_4" role="menu">
+                    <h3 id="list-title-4"><a href="#">Ipsum</a></h3>
+                    <ul aria-labelledby="list-title-4" role="menu">
                         <li role="menuitem"><a href="#">Lorem ipsum </a></li>
                         <li role="menuitem"><a href="#">Lorem ipsum</a></li>
                         <li role="menuitem"><a href="#">Lorem ipsum</a></li>

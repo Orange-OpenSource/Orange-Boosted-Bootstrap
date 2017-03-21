@@ -163,7 +163,7 @@ footer a, footer span {
 }
 
 @media (max-width: 543px) {
-  #id_li_for_cdu {
+  #id-li-for-cdu {
     display: none !important;
   }
 }

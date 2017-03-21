@@ -21,11 +21,11 @@ Orange navbar is the main navigation of project website. It should always be inc
     <nav class="navbar navbar-inverse navbar-toggleable-sm">
         <div class="container">
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar">
                 <span class="sr-only">toggle navigation</span>
                 <span class="icon-menu"></span>
             </button>
-            <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <div class="navbar-collapse collapse" id="collapsing-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -96,7 +96,7 @@ A supra bar should never be used on its own and always be included in header and
 ## Full example
 
 {% example html %}
-<header role="banner" id="demo_navbar">
+<header role="banner" id="demo-navbar  ">
     <nav class="navbar navbar-inverse navbar-toggleable-sm supra">
         <div class="container">
             <ul class="navbar-nav">
@@ -130,11 +130,11 @@ A supra bar should never be used on its own and always be included in header and
     <nav class="navbar navbar-inverse navbar-toggleable-sm">
         <div class="container">
             <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2">
                 <span class="sr-only">toggle navigation</span>
                 <span class="icon-menu"></span>
             </button>
-            <div class="navbar-collapse collapse" id="collapsingNavbar2">
+            <div class="navbar-collapse collapse" id="collapsing-navbar2">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -167,26 +167,26 @@ Using javascript your can initialize the navbar component with the following opt
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
-   <tr>
-     <th style="width: 100px;">Name</th>
-     <th style="width: 50px;">Type</th>
-     <th style="width: 50px;">Default</th>
-     <th>Description</th>
-   </tr>
+    <tr>
+      <th style="width: 100px;">Name</th>
+      <th style="width: 50px;">Type</th>
+      <th style="width: 50px;">Default</th>
+      <th>Description</th>
+    </tr>
   </thead>
   <tbody>
-   <tr>
-     <td>sticky</td>
-     <td>boolean</td>
-     <td>false</td>
-     <td>Tells wether or not the navbar should stick to the top of page</td>
-   </tr>
-   <tr>
-     <td>hideSupra</td>
-     <td>boolean</td>
-     <td>false</td>
-     <td>Hides the supra bar on page scroll. Show when scroll to top.</td>
-   </tr>
+    <tr>
+      <td>sticky</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Tells wether or not the navbar should stick to the top of page</td>
+    </tr>
+    <tr>
+      <td>hideSupra</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Hides the supra bar on page scroll. Show when scroll to top.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -195,7 +195,7 @@ Using javascript your can initialize the navbar component with the following opt
 Using javascript, simply declare your navbar component with the needed options.
 
 {% highlight js %}
-$('#demo_navbar').navbar({sticky: true, hideSupra: true});
+$('#demo-navbar  ').navbar({sticky: true, hideSupra: true});
 {% endhighlight %}
 
 See a full implementation in the Orange News [example page](../..//examples/orange-news/)

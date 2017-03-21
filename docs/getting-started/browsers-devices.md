@@ -23,42 +23,42 @@ Alternative browsers which use the latest version of WebKit, Blink, or Gecko, wh
 Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
 
 <table class="table table-bordered table-striped table-responsive">
-    <thead>
-      <tr>
-        <td></td>
-        <th>Chrome</th>
-        <th>Firefox</th>
-        <th>Safari</th>
-        <th>Android Browser &amp; WebView</th>
-        <th>Microsoft Edge</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Android</th>
-        <td class="text-success">Supported</td>
-        <td class="text-success">Supported</td>
-        <td class="text-muted">N/A</td>
-        <td class="text-success">Android v5.0+ supported</td>
-        <td class="text-muted">N/A</td>
-      </tr>
-      <tr>
-        <th scope="row">iOS</th>
-        <td class="text-success">Supported</td>
-        <td class="text-success">Supported</td>
-        <td class="text-success">Supported</td>
-        <td class="text-muted">N/A</td>
-        <td class="text-muted">N/A</td>
-      </tr>
-      <tr>
-        <th scope="row">Windows 10 Mobile</th>
-        <td class="text-muted">N/A</td>
-        <td class="text-muted">N/A</td>
-        <td class="text-muted">N/A</td>
-        <td class="text-muted">N/A</td>
-        <td class="text-success">Supported</td>
-      </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <td></td>
+      <th>Chrome</th>
+      <th>Firefox</th>
+      <th>Safari</th>
+      <th>Android Browser &amp; WebView</th>
+      <th>Microsoft Edge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Android</th>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-success">Android v5.0+ supported</td>
+      <td class="text-muted">N/A</td>
+    </tr>
+    <tr>
+      <th scope="row">iOS</th>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+    </tr>
+    <tr>
+      <th scope="row">Windows 10 Mobile</th>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-success">Supported</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Desktop browsers

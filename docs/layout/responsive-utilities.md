@@ -60,40 +60,38 @@ Try to use these on a limited basis and avoid creating entirely different versio
       {% endif %}
     </tr>
   </thead>
-  <tbody>
-      {% comment %} 
-        Boosted mod
-      {% endcomment %}
-      {% if site.grid %}
-        {% for breakpoints in site.grid %}          
-          {% assign number = forloop.index %}
-          {% capture bpsize %}{{ site.grid | size }}{% endcapture %}
-          <tr>
-            <th scope="row"><code>.hidden-{{ breakpoints[0] }}-down</code></th>
-            {% for i in (1..bpsize) %}
-              {% if number < i %}
-                <td class="is-visible">Visible</td>
-              {% else %} 
-                <td class="is-hidden">Hidden</td>
-              {% endif %}
-            {% endfor %}
-          </tr>
-        {% endfor %}
-        {% for breakpoints in site.grid %}   
-          {% assign number = forloop.index %}
-          {% capture bpsize %}{{ site.grid | size }}{% endcapture %}
-          <tr>
-            <th scope="row"><code>.hidden-{{ breakpoints[0] }}-up</code></th>
-            {% for i in (1..bpsize) %}
-              {% if number < i %}
-                <td class="is-hidden">Hidden</td>
-              {% else %} 
-                <td class="is-visible">Visible</td>
-              {% endif %}
-            {% endfor %}
-          </tr>
-        {% endfor %}
-      {% else %}
+  <tbody>{% comment %} Boosted mod {% endcomment %}{% 
+    if site.grid %}{% 
+      for breakpoints in site.grid %}{% 
+        assign number = forloop.index %}{% 
+        capture bpsize %}{{ site.grid | size }}{% endcapture 
+        %}
+        <tr>
+          <th scope="row"><code>.hidden-{{ breakpoints[0] }}-down</code></th>{% 
+            for i in (1..bpsize) %}{% 
+              if number < i %}
+              <td class="is-visible">Visible</td>{% 
+              else %} 
+              <td class="is-hidden">Hidden</td>{% 
+              endif %}{% 
+            endfor %}
+        </tr>{% 
+      endfor %}{% 
+      for breakpoints in site.grid %}{% 
+        assign number = forloop.index %}{% 
+        capture bpsize %}{{ site.grid | size }}{% endcapture %}
+        <tr>
+          <th scope="row"><code>.hidden-{{ breakpoints[0] }}-up</code></th>{% 
+          for i in (1..bpsize) %}{% 
+            if number < i %}
+              <td class="is-hidden">Hidden</td>{% 
+            else %} 
+              <td class="is-visible">Visible</td>{% 
+            endif %}{% 
+          endfor %}
+        </tr>{% 
+      endfor %}{% 
+    else %}
     <tr>
       <th scope="row"><code>.hidden-xs-down</code></th>
       <td class="is-hidden">Hidden</td>

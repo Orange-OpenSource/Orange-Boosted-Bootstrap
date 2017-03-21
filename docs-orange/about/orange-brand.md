@@ -17,7 +17,7 @@ Have a need for Boosted's brand resources? Great! We have a few guidelines we fo
 </ul>
 <p><br>To find out how you can use our mark to make yours, read the core guideline.</p>
 
-### space &amp; position
+### space and position
   
 <img src="{{ site.baseurl }}/assets/brand/orange-space-position.jpg" alt="">
 <p><strong>space</strong></p>
