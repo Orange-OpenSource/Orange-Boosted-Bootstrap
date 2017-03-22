@@ -220,8 +220,8 @@
 // boostwatch
 
 // buttons dipslay
-#buttons_default,
-#buttons_inverse {
+#buttons-default,
+#buttons-inverse {
   padding-left: 1.25rem;
 
   button {
@@ -229,7 +229,7 @@
   }
 }
 
-#buttons_inverse {
+#buttons-inverse {
   padding: 1.25rem;
   color: #fff;
   background-color: #000;
