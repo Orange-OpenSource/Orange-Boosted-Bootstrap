@@ -184,7 +184,7 @@ module.exports = function (grunt) {
     // Banner
     banner: '/*!\n <%= yeoman.pkg.name %> - v<%= yeoman.pkg.version %> - ' +
       '<%= yeoman.pkg.description %>\n ' +
-      'Copyright <%= grunt.template.today("yyyy") %> <%= yeoman.pkg.author.name %>, all right reserved\n'+
+      'Copyright 2015 - <%= grunt.template.today("yyyy") %> <%= yeoman.pkg.author.name %>, all right reserved\n'+
       'MIT Licensed \n*/\n',
     usebanner: {
       dist: {
