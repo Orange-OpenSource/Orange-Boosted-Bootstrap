@@ -1,6 +1,6 @@
 /*!
- boosted - v3.3.2 - Orange Boosted with Boostrap
- Copyright 2017 Orange SA, all right reserved
+ boosted - v3.3.3 - Orange Boosted with Boostrap
+ Copyright 2015 - 2017 Orange SA, all right reserved
 MIT Licensed 
 */
 
@@ -433,7 +433,7 @@ ul.o-square-list ul ul li span {
     position: absolute;
     top: 1.6rem;
     right: 1rem;
-    padding-left: 6rem;
+    padding-left: .6rem;
     font-family: "boosted";
     font-size: inherit;
     color: #000;
@@ -2964,7 +2964,7 @@ fieldset[disabled] .btn {
   display: block;
   width: 6rem;
   height: 3rem;
-  padding: 0 6rem;
+  padding: 0 .6rem;
   margin: .5rem 0;
   cursor: pointer;
   background: #666;
@@ -3078,7 +3078,7 @@ fieldset[disabled] .btn {
   border: 2px solid #000;
 }
 .btn-group[data-toggle=buttons] .btn {
-  width: 4rem;
+  min-width: 4rem;
   padding-right: 0;
   padding-left: 0;
   margin: 0;
@@ -4090,7 +4090,7 @@ select.form-control.input-sm {
 }
 .table.has-icon tr > td span,
 .table.has-icon tr > th span {
-  margin-right: 6rem;
+  margin-right: .6rem;
 }
 .table.has-icon tr > td img,
 .table.has-icon tr > th img {

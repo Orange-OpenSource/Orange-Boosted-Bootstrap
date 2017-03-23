@@ -1,6 +1,6 @@
 /*!
- boosted - v3.3.2 - Orange Boosted with Boostrap
- Copyright 2017 Orange SA, all right reserved
+ boosted - v3.3.3 - Orange Boosted with Boostrap
+ Copyright 2015 - 2017 Orange SA, all right reserved
 MIT Licensed 
 */
 

@@ -1,6 +1,6 @@
 /*!
- boosted - v3.3.2 - Orange Boosted with Boostrap
- Copyright 2017 Orange SA, all right reserved
+ boosted - v3.3.3 - Orange Boosted with Boostrap
+ Copyright 2015 - 2017 Orange SA, all right reserved
 MIT Licensed 
 */
 
@@ -3078,7 +3078,7 @@ fieldset[disabled] .btn {
   border: 2px solid #000;
 }
 .btn-group[data-toggle=buttons] .btn {
-  width: 40px;
+  min-width: 40px;
   padding-right: 0;
   padding-left: 0;
   margin: 0;
