@@ -145,10 +145,6 @@ module.exports = function (grunt) {
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       /* boosted mod */
-      vendorCss: {
-        src: ['node_modules/swiper/dist/css/swiper.css', 'dist/css/boosted.css'],
-        dest: 'dist/css/boosted.css'
-      },
       rtlCss: {
         src: ['dist/css/boosted-rtl.css', 'dist/css/o-rtl.css'],
         dest: 'dist/css/boosted-rtl.css'
@@ -213,7 +209,7 @@ module.exports = function (grunt) {
         src: ['**/*', '!**/screenshots/**', '!index.md'],
         dest: '.tmpdocs/examples/',
         rename: function (dest, src) {
-          return dest + 'rtl-' + src
+          return dest + 'rtl-' + src;
         }
       },
       fonts: {
@@ -228,12 +224,19 @@ module.exports = function (grunt) {
         src: ['*'],
         dest: 'dist/img/'
       },
-      vendorjs: {
+      vendorsCss: {
         expand: true,
         flatten: true,
         cwd: '.',
-        src: ['js/vendor/**/*.js', 'node_modules/swiper/dist/js/swiper.js'],
-        dest: 'dist/js/vendor/'
+        src: ['node_modules/swiper/dist/css/swiper.min.css'],
+        dest: 'dist/css/vendors/'
+      },
+      vendorsJs: {
+        expand: true,
+        flatten: true,
+        cwd: '.',
+        src: ['js/vendors/**/*.js', 'node_modules/swiper/dist/js/swiper.min.js'],
+        dest: 'dist/js/vendors/'
         /* end mod */
       }
     },
@@ -251,7 +254,7 @@ module.exports = function (grunt) {
         options: {
           open: true,
           port: 9000,
-          middleware: function () {
+          middleware: function (connect) {
             return [
               serveStatic('_gh_pages')
             ]
@@ -554,7 +557,7 @@ module.exports = function (grunt) {
   }
 
   // Test task.
-  var testSubtasks = []
+  var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs'])
@@ -584,11 +587,11 @@ module.exports = function (grunt) {
   // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'concat:vendorCss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
+  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
 
   // Full distribution task.
   /* boosted mod */
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorjs'])
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorsCss', 'copy:vendorsJs'])
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test'])
