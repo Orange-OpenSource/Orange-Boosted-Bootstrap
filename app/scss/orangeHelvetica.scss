@@ -19,27 +19,27 @@ Don't use and distribute Helvetica font family if you're not explicitly authoriz
 */
 @at-root {
   @font-face{
-  	font-family:'HelvNeueOrange';
+    font-family:'HelvNeueOrange';
     font-style: normal;
-    font-weight: 700;
-    src:url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.eot'), '#{$icon-font-path}HelvNeue75_W1G.eot'));
-  	src:url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.eot?#iefix'), '#{$icon-font-path}HelvNeue75_W1G.eot?#iefix')) format('embedded-opentype'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.woff2'), '#{$icon-font-path}HelvNeue75_W1G.woff2')) format('woff2'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.woff'), '#{$icon-font-path}HelvNeue75_W1G.woff')) format('woff'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.ttf'), '#{$icon-font-path}HelvNeue75_W1G.ttf')) format('truetype'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.svg'), '#{$icon-font-path}HelvNeue75_W1G.svg')) format('svg');
+    font-weight: 400;
+    src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.eot'), '#{$icon-font-path}HelvNeue55_W1G.eot'));
+    src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.eot?#iefix'), '#{$icon-font-path}HelvNeue55_W1G.eot?#iefix')) format('embedded-opentype'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.woff2'), '#{$icon-font-path}HelvNeue55_W1G.woff2')) format('woff2'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.woff'), '#{$icon-font-path}HelvNeue55_W1G.woff')) format('woff'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.ttf'), '#{$icon-font-path}HelvNeue55_W1G.ttf')) format('truetype'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.svg'), '#{$icon-font-path}HelvNeue55_W1G.svg')) format('svg');
   }
 }
 @at-root {
   @font-face{
-  	font-family:'HelvNeueOrange';
+    font-family:'HelvNeueOrange';
     font-style: normal;
-    font-weight: 400;
-    src:url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.eot'), '#{$icon-font-path}HelvNeue55_W1G.eot'));
-  	src:url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.eot?#iefix'), '#{$icon-font-path}HelvNeue55_W1G.eot?#iefix')) format('embedded-opentype'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.woff2'), '#{$icon-font-path}HelvNeue55_W1G.woff2')) format('woff2'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.woff'), '#{$icon-font-path}HelvNeue55_W1G.woff')) format('woff'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.ttf'), '#{$icon-font-path}HelvNeue55_W1G.ttf')) format('truetype'),
-  	url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue55_W1G.svg'), '#{$icon-font-path}HelvNeue55_W1G.svg')) format('svg');
+    font-weight: 700;
+    src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.eot'), '#{$icon-font-path}HelvNeue75_W1G.eot'));
+    src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.eot?#iefix'), '#{$icon-font-path}HelvNeue75_W1G.eot?#iefix')) format('embedded-opentype'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.woff2'), '#{$icon-font-path}HelvNeue75_W1G.woff2')) format('woff2'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.woff'), '#{$icon-font-path}HelvNeue75_W1G.woff')) format('woff'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.ttf'), '#{$icon-font-path}HelvNeue75_W1G.ttf')) format('truetype'),
+    url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}HelvNeue75_W1G.svg'), '#{$icon-font-path}HelvNeue75_W1G.svg')) format('svg');
   }
 }

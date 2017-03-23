@@ -92,9 +92,9 @@
 
       &:after {
         position: absolute;
-        top: 1.6rem;
-        right: 1rem;
-        padding-left: .6rem;
+        top: $1-6rem;
+        right: $1rem;
+        padding-left: @-6rem;
         font-family: "boosted";
         font-size: inherit;
         color: #000;
