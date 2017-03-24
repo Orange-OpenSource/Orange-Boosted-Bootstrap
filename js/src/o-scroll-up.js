@@ -101,9 +101,13 @@ const ScrollUp = (($) => {
     }
 
     _backToTop() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, SCROLLANIMATE)
+      if (typeof $.animate === 'function') {
+        $('html, body').animate({
+          scrollTop: 0
+        }, SCROLLANIMATE)
+      } else {
+        $('html, body').scrollTop(0)
+      }
     }
 
     // static

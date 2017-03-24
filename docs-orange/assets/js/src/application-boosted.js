@@ -14,7 +14,7 @@
       $('.mega-menu.panel').megamenu()
     })
   })
-}(jQuery) // eslint-disable-line
+}(jQuery); // eslint-disable-line
 
 (function () { // eslint-disable-line
 
