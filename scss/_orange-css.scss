@@ -31,16 +31,16 @@
 
 // back from accessibility plugin css
 div.active:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 a:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 .close:hover,
 .close:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 //
