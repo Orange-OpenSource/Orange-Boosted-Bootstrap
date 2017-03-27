@@ -221,13 +221,13 @@ select.form-control {
   border: 2px solid $gray;
 }
 
-.custom-control-input:checked ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
   background-size: 1rem;
   border: 0;
 }
 
-.custom-control-input:active ~ .custom-control-indicator,
-.custom-control-input:indeterminate ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:active ~ .custom-control-indicator,
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   border: 0;
 }
 
@@ -236,7 +236,7 @@ select.form-control {
   border: 2px solid $gray-light-o;
 }
 
-.custom-control-input:checked:disabled ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-indicator {
   background-color: $gray-light-o;
   background-image: $custom-checkbox-checked-icon;
   border: 0;
