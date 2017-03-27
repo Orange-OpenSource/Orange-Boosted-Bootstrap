@@ -1,12 +1,13 @@
-# [Boosted](https://boosted.orange.com)
+# [Boosted](http://boosted.orange.com)
 
 ![Bower version](https://img.shields.io/bower/v/boosted.svg)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 [![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4-dev.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
 
 Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/orgs/twbs/people) with the massive support and involvement of the community.
 
-To get started, check out <https://boosted.orange.com>!
+To get started, check out <http://boosted.orange.com>!
 
 ## Table of contents
 
@@ -29,6 +30,7 @@ Several quick start options are available:
 - Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-alpha.6`
 - Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-alpha.6`
 - Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-alpha.6`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-alpha.6`
 
 Read the [Getting started page](http://boosted.orange.com/v4-alpha/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -85,7 +87,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <https://boosted.orange.com>. The docs may also be run locally.
+Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://boosted.orange.com>. The docs may also be run locally.
 
 ### Running documentation locally
 
@@ -98,7 +100,7 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
 
 ### Documentation for previous releases
 
-Documentation for v3.x has been made available for the time being at <https://boosted.orange.com/v3/> while folks transition to Bootstrap 4.
+Documentation for v3.x has been made available for the time being at <http://boosted.orange.com/v3/> while folks transition to Bootstrap 4.
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
