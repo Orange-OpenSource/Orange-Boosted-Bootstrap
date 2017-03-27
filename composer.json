@@ -33,6 +33,6 @@
     }
   },
   "replace": {
-    "twitter/bootstrap": "self.version"
+    "Orange-OpenSource/Orange-Boosted-Bootstrap": "self.version"
   }
 }

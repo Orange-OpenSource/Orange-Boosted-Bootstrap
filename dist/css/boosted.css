@@ -14102,9 +14102,9 @@ caption {
 .tablesorter th.tablesorter-headerDesc .tablesorter-header-inner::after {
   position: absolute;
   top: 1.125rem;
-  margin-left: .625rem;
   width: .875rem;
   height: .4375rem;
+  margin-left: .625rem;
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
   -webkit-transform: rotate(180deg);

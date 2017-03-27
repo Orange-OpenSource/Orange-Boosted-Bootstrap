@@ -13,7 +13,7 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/twbs/bootstrap/issues) is
+The [issue tracker](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues) is
 the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests)
 and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
@@ -51,7 +51,7 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
 
-For a complete look at our labels, see the [project labels page](https://github.com/twbs/bootstrap/labels).
+For a complete look at our labels, see the [project labels page](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/labels).
 
 
 ## Bug reports
@@ -143,12 +143,12 @@ project (indentation, accurate comments, etc.) and any other requirements
 
 **Do not edit `bootstrap.css`, or `bootstrap.js`
 directly!** Those files are automatically generated. You should edit the
-source files in [`/bootstrap/scss/`](https://github.com/twbs/bootstrap/tree/master/scss)
-and/or [`/bootstrap/js/`](https://github.com/twbs/bootstrap/tree/master/js) instead.
+source files in [`/bootstrap/scss/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/scss)
+and/or [`/bootstrap/js/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/js) instead.
 
 Similarly, when contributing to Bootstrap's documentation, you should edit the
 documentation source files in
-[the `/bootstrap/docs/` directory of the `master` branch](https://github.com/twbs/bootstrap/tree/master/docs).
+[the `/bootstrap/docs/` directory of the `master` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/docs).
 **Do not edit the `gh-pages` branch.** That branch is generated from the
 documentation source files and is managed separately by the Bootstrap Core Team.
 
@@ -164,7 +164,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd bootstrap
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/twbs/bootstrap.git
+   git remote add upstream https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:

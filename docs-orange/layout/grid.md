@@ -1,11 +1,11 @@
 ---
 layout: docs
 title: Grid system
-description: Documentation and examples for using Bootstrap's responsive flexbox grid system.
+description: Documentation and examples for using Boosted's responsive flexbox grid system.
 group: layout
 ---
 
-Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. It's based on a 12 column layout and has multiple tiers, one for each [media query range]({{ site.baseurl }}/layout/overview/#responsive-breakpoints). You can use it with Sass mixins or our predefined classes.
+Boosted includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. It's based on a 12 column layout and has multiple tiers, one for each [media query range]({{ site.baseurl }}/layout/overview/#responsive-breakpoints). You can use it with Sass mixins or our predefined classes.
 
 ## Contents
 
@@ -14,7 +14,7 @@ Bootstrap includes a powerful mobile-first flexbox grid system for building layo
 
 ## How it works
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+Boosted's grid system uses a series of containers, rows, and columns to layout and align content. It's built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
 
 <div class="bd-example bd-example-row">
 <div class="container">

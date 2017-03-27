@@ -6,7 +6,7 @@ group: getting-started
 redirect_from: "/getting-started/"
 ---
 
-Bootstrap is the world's most popular framework for building responsive, mobile-first sites and applications. Inside you'll find high quality HTML, CSS, and JavaScript to make starting any project easier than ever.
+Boosted is a fork of Bootstrap which is the world's most popular framework for building responsive, mobile-first sites and applications. Inside you'll find high quality HTML, CSS, and JavaScript to make starting any project easier than ever.
 
 Here's how to quickly get started with the necessary Boosted files and a template starter page.
 
@@ -70,13 +70,13 @@ Be sure to have your pages set up with the latest design and development standar
     -->
     <link rel="stylesheet" href="css/orangeIcons.css" />
 
-    <!-- Bootstrap CSS -->
+    <!-- Boosted CSS -->
     <link rel="stylesheet" href="path/to/your/boosted.css">
   </head>
   <body>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- jQuery first, then Tether, then Boosted JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.tether }}" integrity="{{ site.cdn.tether_hash }}" crossorigin="anonymous"></script>
     <script src="path/to/your/boosted.js"></script>

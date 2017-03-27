@@ -96,7 +96,9 @@
     "grunt",
     "js/**/*.js",
     "scss/**/*.scss",
+    "fonts",
     "Gruntfile.js",
+    "NOTICE.txt",
     "LICENSE"
   ],
   "jspm": {

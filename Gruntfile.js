@@ -224,19 +224,19 @@ module.exports = function (grunt) {
         src: ['*'],
         dest: 'dist/img/'
       },
-      vendorsCss: {
+      vendorCss: {
         expand: true,
         flatten: true,
         cwd: '.',
         src: ['node_modules/swiper/dist/css/swiper.min.css'],
-        dest: 'dist/css/vendors/'
+        dest: 'dist/css/vendor/'
       },
-      vendorsJs: {
+      vendorJs: {
         expand: true,
         flatten: true,
         cwd: '.',
-        src: ['js/vendors/**/*.js', 'node_modules/swiper/dist/js/swiper.min.js'],
-        dest: 'dist/js/vendors/'
+        src: ['js/vendor/**/*.js', 'node_modules/swiper/dist/js/swiper.min.js'],
+        dest: 'dist/js/vendor/'
         /* end mod */
       }
     },
@@ -365,6 +365,16 @@ module.exports = function (grunt) {
           {
             from: 'src="/../assets',
             to: 'src="../../assets'
+          }
+        ]
+      },
+      bootstrap: {
+        src: ['.tmpdocs/_includes/page-headers.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'Bootstrap',
+            to: 'Boosted'
           }
         ]
       },
@@ -591,7 +601,7 @@ module.exports = function (grunt) {
 
   // Full distribution task.
   /* boosted mod */
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorsCss', 'copy:vendorsJs'])
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorCss', 'copy:vendorJs'])
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test'])
@@ -601,7 +611,7 @@ module.exports = function (grunt) {
   grunt.registerTask('lint-docs-css', ['exec:scss-lint-docs'])
   /* boosted mod */
   grunt.registerTask('docs-js', ['concat:docsJs', 'exec:uglify-docs'])
-  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl', 'copy:docs', 'jekyll:docs', 'replace'])
+  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:bootstrap', 'replace:rtl', 'copy:docs', 'jekyll:docs', 'replace'])
   /* end mod */
   grunt.registerTask('docs-github', ['jekyll:github'])
 
