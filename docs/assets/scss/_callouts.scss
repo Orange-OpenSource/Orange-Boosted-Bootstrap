@@ -31,8 +31,9 @@
 // Variations
 @mixin bs-callout-variant($color) {
   border-left-color: $color;
-
-  h4 { color: $color; }
+  // boosted mod disable written color for callout
+  // h4 { color: $color; }
+  // end mod
 }
 
 .bd-callout-info { @include bs-callout-variant($bd-info); }
