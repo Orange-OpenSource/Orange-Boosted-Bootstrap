@@ -209,7 +209,7 @@ module.exports = function (grunt) {
         src: ['**/*', '!**/screenshots/**', '!index.md'],
         dest: '.tmpdocs/examples/',
         rename: function (dest, src) {
-          return dest + 'rtl-' + src;
+          return dest + 'rtl-' + src
         }
       },
       fonts: {
@@ -254,7 +254,7 @@ module.exports = function (grunt) {
         options: {
           open: true,
           port: 9000,
-          middleware: function (connect) {
+          middleware: function () {
             return [
               serveStatic('_gh_pages')
             ]
@@ -567,7 +567,7 @@ module.exports = function (grunt) {
   }
 
   // Test task.
-  var testSubtasks = [];
+  var testSubtasks = []
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs'])
@@ -601,7 +601,7 @@ module.exports = function (grunt) {
 
   // Full distribution task.
   /* boosted mod */
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts','copy:img','copy:vendorCss', 'copy:vendorJs'])
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorCss', 'copy:vendorJs'])
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test'])
