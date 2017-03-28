@@ -597,11 +597,11 @@ module.exports = function (grunt) {
   // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
+  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
 
   // Full distribution task.
   /* boosted mod */
-  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'copy:tmpdocs', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorCss', 'copy:vendorJs'])
+  grunt.registerTask('dist', ['clean:dist', 'clean:tmp', 'dist-css', 'dist-js', 'copy:fonts', 'copy:img', 'copy:vendorCss', 'copy:vendorJs'])
   /* end mod */
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test'])
