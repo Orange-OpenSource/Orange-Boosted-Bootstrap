@@ -16,9 +16,17 @@ Indicate the current step within a sequential navigation.
 
 Declare a `.o-stepbar` nav tag contaning the stepbar. Within a `<ol>`ordered list delcare `.stepbar-item` elements up to 5. Fill the `.step-number`and `.step-title` accordingly.
 
-Use `.done` and `.current` classes in correct order. There is only one `.current` item. Fill a correct description on each `.stepbar-link` `title`attributes.
 
-Be carful to choose short labels when using 5 steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title`attributle of the `<a>`link.
+Be careful to choose short labels when using 5 steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title`attributle of the `<a>`link.
+
+Fill a correct description on each `.stepbar-link` `title` attributes.
+Use `.done` and `.current` classes in correct order. There is only one `.current` item.
+
+{% callout warning %}
+#### Accessibility
+
+In addition to this `.current` class, you must use `aria-current="step"` state to represent the current step within the process. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's a step.
+{% endcallout %}
 
 {% example html %}
 <nav class="o-stepbar">
@@ -30,7 +38,7 @@ Be carful to choose short labels when using 5 steps process, otherwise label wil
             </a>
         </li>
         <li class="stepbar-item current">
-            <a class="stepbar-link" href="#" title="Step 2 : Aperiam">
+            <a class="stepbar-link" href="#" title="Step 2 : Aperiam" aria-current="step">
                 <span class="step-number">2</span>
                 <span class="step-title">Aperiam</span>
             </a>
@@ -69,7 +77,7 @@ Use `.xs-numbers` class to display step numbers and current step label. You can 
 <nav class="o-stepbar xs-numbers">
     <ol>
         <li class="current stepbar-item">
-            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in" aria-current="step">
                 <span class="step-number">1</span>
                 <span class="step-title">Sign in</span>
             </a>
@@ -104,7 +112,7 @@ Use `.xs-labels` class to display step labels without number. You can have up to
 <nav class="o-stepbar xs-labels">
     <ol>
         <li class="current stepbar-item">
-            <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+            <a class="stepbar-link" href="#" title="Step 1 : Sign in"  aria-current="step">
                 <span class="step-number">1</span>
                 <span class="step-title">Sign in</span>
             </a>
