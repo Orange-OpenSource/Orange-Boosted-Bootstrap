@@ -48,7 +48,6 @@
 .white-header {
     background-color: #FFF;
     color: #000;
-    border-top: 1px solid #000;
 }
 
 .brand-spacing {
@@ -67,6 +66,10 @@
     color: #F16E00;
 }
 
+footer {
+    background-color: #000;
+}
+
 @media (max-width: 991px) {
     .hero-container .caption {
         padding: 3%;
@@ -79,4 +82,30 @@
         clear: both;
         position: relative;
     }
+}
+
+.swiper-slide .row {
+  flex-wrap: nowrap;
+}
+
+.swiper-slide .frame {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  max-width: 20%;
+}
+
+.swiper-slide .caption {
+  position: absolute;
+  bottom: 40px;
+  left: 1.25rem;
+  width: 45%;
+  padding: 1rem 1.25rem;
+  background-color: #fff;
+  opacity: .9;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
 }

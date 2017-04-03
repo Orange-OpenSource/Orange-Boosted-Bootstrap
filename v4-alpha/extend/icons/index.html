@@ -6,7 +6,7 @@
 
 <title>
   
-    Images &middot; Bootstrap
+    Icons &middot; Bootstrap
   
 </title>
 
@@ -60,11 +60,6 @@
     <div class="bd-pageheader">
       <div class="container">
         
-  <h1>Content</h1>
-  <p class="lead">
-    Styles for displaying content with some of the most commonly used HTML elements, including normalization, typography, images, tables, and more.
-  </p>
-
 
 <!-- BOOSTED MOD -->
 <!-- remove ads -->
@@ -293,7 +288,7 @@
 
   
 
-  <div class="bd-toc-item active">
+  <div class="bd-toc-item ">
       <a class="bd-toc-link" href="http://boosted.orange.com/v4-alpha/content/reboot/">
         Content
       </a>
@@ -344,7 +339,7 @@
 
           
 
-          <li class="active bd-sidenav-active">
+          <li class="">
             <a href="http://boosted.orange.com/v4-alpha/content/images/">
               Images
             </a>
@@ -1046,7 +1041,7 @@
 
   
 
-  <div class="bd-toc-item ">
+  <div class="bd-toc-item active">
       <a class="bd-toc-link" href="http://boosted.orange.com/v4-alpha/extend/icons/">
         Extend
       </a>
@@ -1058,7 +1053,7 @@
 
           
 
-          <li class="">
+          <li class="active bd-sidenav-active">
             <a href="http://boosted.orange.com/v4-alpha/extend/icons/">
               Icons
             </a>
@@ -1228,72 +1223,29 @@
 
         </div>
         <div class="col-12 col-md-9 pull-md-3 bd-content">
-          <h1 class="bd-title" id="content">Images</h1>
-          <p>Opt your images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.</p>
+          <h1 class="bd-title" id="content">Icons</h1>
+          <p>Bootstrap doesn’t include an icon library by default, but we have a handful of recommendations for you to choose from. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.</p>
 
-<h2 id="contents">Contents</h2>
+<h2 id="preferred">Preferred</h2>
+<p>We’ve tested and used these icon sets ourselves.</p>
 
-<ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#responsive-images" id="markdown-toc-responsive-images">Responsive images</a></li>
-  <li><a href="#image-thumbnails" id="markdown-toc-image-thumbnails">Image thumbnails</a></li>
-  <li><a href="#aligning-images" id="markdown-toc-aligning-images">Aligning images</a></li>
+<ul>
+  <li><a href="https://useiconic.com/open/">Iconic</a></li>
+  <li><a href="https://octicons.github.com/">Octicons</a></li>
+  <li><a href="http://www.entypo.com/">Entypo</a></li>
 </ul>
 
-<h2 id="responsive-images">Responsive images</h2>
+<h2 id="more-options">More options</h2>
+<p>While we haven’t tried these out, they do look promising and provide multiple formats—including SVG.</p>
 
-<p>Images in Bootstrap are made responsive with <code class="highlighter-rouge">.img-fluid</code>. <code class="highlighter-rouge">max-width: 100%;</code> and <code class="highlighter-rouge">height: auto;</code> are applied to the image so that it scales with the parent element.</p>
-
-<div class="bd-example">
-  <img data-src="holder.js/100px250" class="img-fluid" alt="Generic responsive image" />
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">alt=</span><span class="s">"Responsive image"</span><span class="nt">&gt;</span></code></pre></figure>
-
-<div class="bd-callout bd-callout-warning">
-<h4 id="svg-images-and-ie-10">SVG images and IE 10</h4>
-
-<p>In Internet Explorer 10, SVG images with <code class="highlighter-rouge">.img-fluid</code> are disproportionately sized. To fix this, add <code class="highlighter-rouge">width: 100% \9;</code> where necessary. This fix improperly sizes other image formats, so Bootstrap doesn’t apply it automatically.</p>
-</div>
-
-<h2 id="image-thumbnails">Image thumbnails</h2>
-
-<p>In addition to our <a href="http://boosted.orange.com/v4-alpha/utilities/borders/">border-radius utilities</a>, you can use <code class="highlighter-rouge">.img-thumbnail</code> to give an image a rounded 1px border appearance.</p>
-
-<div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" />
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-thumbnail"</span><span class="nt">&gt;</span></code></pre></figure>
-
-<h2 id="aligning-images">Aligning images</h2>
-
-<p>Align images with the <a href="http://boosted.orange.com/v4-alpha/utilities/responsive-helpers/#responsive-floats">helper float classes</a> or <a href="http://boosted.orange.com/v4-alpha/utilities/typography/#text-alignment">text alignment classes</a>. <code class="highlighter-rouge">block</code>-level images can be centered using <a href="http://boosted.orange.com/v4-alpha/utilities/spacing/#horizontal-centering">the <code class="highlighter-rouge">.mx-auto</code> margin utility class</a>.</p>
-
-<div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="rounded float-left" alt="A generic square placeholder image with rounded corners" />
-  <img data-src="holder.js/200x200" class="rounded float-right" alt="A generic square placeholder image with rounded corners" />
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded float-left"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded float-right"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
-
-<div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="rounded mx-auto d-block" alt="A generic square placeholder image with rounded corners" />
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded mx-auto d-block"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
-
-<div class="bd-example bd-example-images">
-  <div class="text-center">
-    <img data-src="holder.js/200x200" class="rounded" alt="A generic square placeholder image with rounded corners" />
-  </div>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
+<ul>
+  <li><a href="https://material.io/icons/">Google Material icons</a></li>
+  <li><a href="http://ionicons.com/">Ionicons</a></li>
+  <li><a href="http://colebemis.com/feather/">Feather</a></li>
+  <li><a href="http://demo.amitjakhu.com/dripicons/">Dripicons</a></li>
+  <li><a href="http://ikons.piotrkwiatkowski.co.uk/">Ikons</a></li>
+  <li><a href="http://glyph.smarticons.co/">Glyph</a></li>
+</ul>
 
         </div>
       </div>

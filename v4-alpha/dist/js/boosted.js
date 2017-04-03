@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.6 (http://boosted.orange.com)
+ * Bootstrap v4.0.0-alpha.6.1 (http://boosted.orange.com)
  * Copyright 2011-2017 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -141,13 +141,16 @@ var Util = function ($) {
     },
     getSelectorFromElement: function getSelectorFromElement(element) {
       var selector = element.getAttribute('data-target');
-
-      if (!selector) {
+      if (!selector || selector === '#') {
         selector = element.getAttribute('href') || '';
-        selector = /^#[a-z]/i.test(selector) ? selector : null;
       }
 
-      return selector;
+      try {
+        var $selector = $(selector);
+        return $selector.length > 0 ? selector : null;
+      } catch (error) {
+        return null;
+      }
     },
     reflow: function reflow(element) {
       return element.offsetHeight;
@@ -628,10 +631,9 @@ var Carousel = function ($) {
     // public
 
     Carousel.prototype.next = function next() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding');
+      if (!this._isSliding) {
+        this._slide(Direction.NEXT);
       }
-      this._slide(Direction.NEXT);
     };
 
     Carousel.prototype.nextWhenVisible = function nextWhenVisible() {
@@ -642,10 +644,9 @@ var Carousel = function ($) {
     };
 
     Carousel.prototype.prev = function prev() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding');
+      if (!this._isSliding) {
+        this._slide(Direction.PREV);
       }
-      this._slide(Direction.PREVIOUS);
     };
 
     Carousel.prototype.pause = function pause(event) {
@@ -701,7 +702,7 @@ var Carousel = function ($) {
         return;
       }
 
-      var direction = index > activeIndex ? Direction.NEXT : Direction.PREVIOUS;
+      var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
 
       this._slide(direction, this._items[index]);
     };
@@ -772,7 +773,7 @@ var Carousel = function ($) {
 
     Carousel.prototype._getItemByDirection = function _getItemByDirection(direction, activeElement) {
       var isNextDirection = direction === Direction.NEXT;
-      var isPrevDirection = direction === Direction.PREVIOUS;
+      var isPrevDirection = direction === Direction.PREV;
       var activeIndex = this._getItemIndex(activeElement);
       var lastItemIndex = this._items.length - 1;
       var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
@@ -781,16 +782,20 @@ var Carousel = function ($) {
         return activeElement;
       }
 
-      var delta = direction === Direction.PREVIOUS ? -1 : 1;
+      var delta = direction === Direction.PREV ? -1 : 1;
       var itemIndex = (activeIndex + delta) % this._items.length;
 
       return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
     };
 
     Carousel.prototype._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
+      var targetIndex = this._getItemIndex(relatedTarget);
+      var fromIndex = this._getItemIndex($(this._element).find(Selector.ACTIVE_ITEM)[0]);
       var slideEvent = $.Event(Event.SLIDE, {
         relatedTarget: relatedTarget,
-        direction: eventDirectionName
+        direction: eventDirectionName,
+        from: fromIndex,
+        to: targetIndex
       });
 
       $(this._element).trigger(slideEvent);
@@ -814,8 +819,9 @@ var Carousel = function ($) {
       var _this5 = this;
 
       var activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0];
+      var activeElementIndex = this._getItemIndex(activeElement);
       var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
-
+      var nextElementIndex = this._getItemIndex(nextElement);
       var isCycling = Boolean(this._interval);
 
       var directionalClassName = void 0;
@@ -857,7 +863,9 @@ var Carousel = function ($) {
 
       var slidEvent = $.Event(Event.SLID, {
         relatedTarget: nextElement,
-        direction: eventDirectionName
+        direction: eventDirectionName,
+        from: activeElementIndex,
+        to: nextElementIndex
       });
 
       if (Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.SLIDE)) {
@@ -1055,7 +1063,8 @@ var Collapse = function ($) {
 
   var Selector = {
     ACTIVES: '.card:not(.multi) > .show, .card:not(.multi) > .collapsing', // boosted mod
-    DATA_TOGGLE: '[data-toggle="collapse"]'
+    DATA_TOGGLE: '[data-toggle="collapse"]',
+    DATA_CHILDREN: 'data-children'
   };
 
   /**
@@ -1072,11 +1081,18 @@ var Collapse = function ($) {
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
-
       this._parent = this._config.parent ? this._getParent() : null;
 
       if (!this._config.parent) {
         this._addAriaAndCollapsedClass(this._element, this._triggerArray);
+      }
+
+      this._selectorActives = Selector.ACTIVES;
+      if (this._parent) {
+        var childrenSelector = this._parent.hasAttribute(Selector.DATA_CHILDREN) ? this._parent.getAttribute(Selector.DATA_CHILDREN) : null;
+        if (childrenSelector !== null) {
+          this._selectorActives = childrenSelector + ' > .show, ' + childrenSelector + ' > .collapsing';
+        }
       }
 
       if (this._config.toggle) {
@@ -1099,11 +1115,7 @@ var Collapse = function ($) {
     Collapse.prototype.show = function show() {
       var _this6 = this;
 
-      if (this._isTransitioning) {
-        throw new Error('Collapse is transitioning');
-      }
-
-      if ($(this._element).hasClass(ClassName.SHOW)) {
+      if (this._isTransitioning || $(this._element).hasClass(ClassName.SHOW)) {
         return;
       }
 
@@ -1111,7 +1123,7 @@ var Collapse = function ($) {
       var activesData = void 0;
 
       if (this._parent) {
-        actives = $.makeArray($(this._parent).find(Selector.ACTIVES));
+        actives = $.makeArray($(this._parent).find(this._selectorActives));
         if (!actives.length) {
           actives = null;
         }
@@ -1176,11 +1188,7 @@ var Collapse = function ($) {
     Collapse.prototype.hide = function hide() {
       var _this7 = this;
 
-      if (this._isTransitioning) {
-        throw new Error('Collapse is transitioning');
-      }
-
-      if (!$(this._element).hasClass(ClassName.SHOW)) {
+      if (this._isTransitioning || !$(this._element).hasClass(ClassName.SHOW)) {
         return;
       }
 
@@ -1191,9 +1199,8 @@ var Collapse = function ($) {
       }
 
       var dimension = this._getDimension();
-      var offsetDimension = dimension === Dimension.WIDTH ? 'offsetWidth' : 'offsetHeight';
 
-      this._element.style[dimension] = this._element[offsetDimension] + 'px';
+      this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + 'px';
 
       Util.reflow(this._element);
 
@@ -1332,11 +1339,12 @@ var Collapse = function ($) {
   // accordion tabs
   // add role tab & tabpanel
 
-  var $collTabHeadings = $('.panel-heading');
-  var $collTabPanels = $('.panel-collapse:not(.mega-menu)');
-
-  $collTabHeadings.attr({ role: 'tab' });
-  $collTabPanels.attr({ role: 'tabpanel' });
+  $('.panel-heading').attr({
+    role: 'tab'
+  });
+  $('.panel-collapse:not(.mega-menu)').attr({
+    role: 'tabpanel'
+  });
   $('.panel').attr('role', 'presentation');
 
   /**
@@ -1346,7 +1354,9 @@ var Collapse = function ($) {
    */
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    event.preventDefault();
+    if (!/input|textarea/i.test(event.target.tagName)) {
+      event.preventDefault();
+    }
 
     var target = Collapse._getTargetFromElement(this);
     var data = $(target).data(DATA_KEY);
@@ -1414,9 +1424,11 @@ var Dropdown = function ($) {
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
+  var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
   var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
+  var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + '|' + ARROW_DOWN_KEYCODE + '|' + ESCAPE_KEYCODE + '|' + SPACE_KEYCODE);
 
   var Event = {
     HIDE: 'hide' + EVENT_KEY,
@@ -1595,7 +1607,7 @@ var Dropdown = function ($) {
     };
 
     Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
-      if (!/(38|40|27|32)/.test(event.which) || /input|textarea/i.test(event.target.tagName)) {
+      if (!REGEXP_KEYDOWN.test(event.which) || /input|textarea/i.test(event.target.tagName)) {
         return;
       }
 
@@ -2204,28 +2216,32 @@ var Modal = function ($) {
   });
 
   $(document).ready(function () {
-    // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
-    var $modals = $('[data-toggle="modal"]');
-    $modals.each(function () {
+    $('[data-toggle="modal"]').each(function () {
       // modal = l'élement déclencheur de l'aperçu de la popin
-      // modalPanel = la fenêtre modal à proprement parler
-      var $modal = $(this);
-      var modalPanel = $modal.attr('data-target') ? $($modal.attr('data-target')) : $($modal.attr('href'));
+      // ModalPanel = la fenêtre modal à proprement parler
+      var Modal = $(this);
+      var ModalPanel = Modal.attr('data-target') ? $(Modal.attr('data-target')) : $(Modal.attr('href'));
 
       // On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
-      modalPanel.attr({ role: 'dialog' }); // LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
+      ModalPanel.attr({
+        role: 'dialog'
+      }); // LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
 
       // On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
-      var modalTitle = modalPanel.find('.modal-title');
-      if (modalTitle) {
-        var modalTitleId = modalTitle.attr('id');
-        if (modalTitleId) {
-          modalPanel.attr({ 'aria-labelledby': modalTitleId });
+      var ModalTitle = ModalPanel.find('.modal-title');
+      if (ModalTitle) {
+        var ModalTitleId = ModalTitle.attr('id');
+        if (ModalTitleId) {
+          ModalPanel.attr({
+            'aria-labelledby': ModalTitleId
+          });
         }
       }
     });
 
-    $('.modal-dialog').attr({ role: 'document' });
+    $('.modal-dialog').attr({
+      role: 'document'
+    });
   });
   /**
    * ------------------------------------------------------------------------
@@ -2365,9 +2381,12 @@ var ScrollSpy = function ($) {
           target = $(targetSelector)[0];
         }
 
-        if (target && (target.offsetWidth || target.offsetHeight)) {
-          // todo (fat): remove sketch reliance on jQuery position/offset
-          return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
+        if (target) {
+          var targetBCR = target.getBoundingClientRect();
+          if (targetBCR.width || targetBCR.height) {
+            // todo (fat): remove sketch reliance on jQuery position/offset
+            return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
+          }
         }
         return null;
       }).filter(function (item) {
@@ -2422,7 +2441,7 @@ var ScrollSpy = function ($) {
     };
 
     ScrollSpy.prototype._getOffsetHeight = function _getOffsetHeight() {
-      return this._scrollElement === window ? window.innerHeight : this._scrollElement.offsetHeight;
+      return this._scrollElement === window ? window.innerHeight : this._scrollElement.getBoundingClientRect().height;
     };
 
     ScrollSpy.prototype._process = function _process() {
@@ -2701,16 +2720,14 @@ var Tab = function ($) {
 
     Tab._keydown = function _keydown(e) {
       var $this = $(this);
-      var $items = void 0;
-      var $ul = $this.closest('ul[role=tablist] ');
+      var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
       var index = void 0;
       var k = e.which || e.keyCode;
       $this = $(this);
       if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
         return;
       }
-      $items = $ul.find('[role=tab]:visible');
-      index = $items.index($items.filter(':focus'));
+      index = Items.index(Items.filter(':focus'));
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
         index--;
@@ -2720,12 +2737,12 @@ var Tab = function ($) {
       } // down & right
 
       if (index < 0) {
-        index = $items.length - 1;
+        index = Items.length - 1;
       }
-      if (index === $items.length) {
+      if (index === Items.length) {
         index = 0;
       }
-      var nextTab = $items.eq(index);
+      var nextTab = Items.eq(index);
       if (nextTab.attr('role') === 'tab') {
         nextTab.tab('show').trigger('focus');
       }
@@ -2747,8 +2764,14 @@ var Tab = function ($) {
       };
 
       // Boosted mod
-      $(container).find('.nav-link').attr({ tabIndex: '-1', 'aria-selected': false });
-      $(container).find('.tab-pane').attr({ 'aria-hidden': true, tabIndex: '-1' });
+      $(container).find('.nav-link').attr({
+        tabIndex: '-1',
+        'aria-selected': false
+      });
+      $(container).find('.tab-pane').attr({
+        'aria-hidden': true,
+        tabIndex: '-1'
+      });
       // end mod
 
       if (active && isTransitioning) {
@@ -2778,8 +2801,14 @@ var Tab = function ($) {
       $(element).addClass(ClassName.ACTIVE);
       element.setAttribute('aria-expanded', true);
       // Boosted mod
-      $(element).filter('.nav-link.active').attr({ tabIndex: '0', 'aria-selected': true });
-      $(element).filter('.tab-pane.active').attr({ 'aria-hidden': false, tabIndex: '0' });
+      $(element).filter('.nav-link.active').attr({
+        tabIndex: '0',
+        'aria-selected': true
+      });
+      $(element).filter('.tab-pane.active').attr({
+        'aria-hidden': false,
+        tabIndex: '0'
+      });
       // end mod
 
       if (isTransitioning) {
@@ -2864,23 +2893,27 @@ var Tab = function ($) {
   // ajout de l'accesibilité
   // ===============================
 
-  var uniqueId = function uniqueId(prefix) {
+  function uniqueId(prefix) {
     return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * RANDOM_NUMBER + 1);
-  };
+  }
 
-  var $tablist = $('.nav-tabs, .nav-pills');
-  var $lis = $tablist.children('li');
-  var $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]');
+  var $tablists = $('.nav-tabs, .nav-pills');
+  var $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]');
 
-  $tablist.attr('role', 'tablist');
-  $lis.attr('role', 'presentation');
-  $tabs.attr('role', 'tab');
   $tabs.each(function () {
     var tabpanel = $($(this).attr('href'));
     var $tab = $(this);
+    var $tablist = $tab.closest('.nav-tabs, .nav-pills');
+    var $li = $tab.parent('li');
     var tabid = $tab.attr('id') || uniqueId('ui-tab');
 
     $tab.attr('id', tabid);
+    // put role tab, presentation and tablist only if there's at least one tabpanel
+    if (tabpanel) {
+      $tab.attr('role', 'tab');
+      $tablist.attr('role', 'tablist');
+      $li.attr('role', 'presentation');
+    }
 
     if ($tab.hasClass('active')) {
       $tab.attr({
@@ -3043,7 +3076,6 @@ var Tooltip = function ($) {
       this._timeout = 0;
       this._hoverState = '';
       this._activeTrigger = {};
-      this._isTransitioning = false;
       this._tether = null;
 
       // protected
@@ -3132,9 +3164,6 @@ var Tooltip = function ($) {
 
       var showEvent = $.Event(this.constructor.Event.SHOW);
       if (this.isWithContent() && this._isEnabled) {
-        if (this._isTransitioning) {
-          throw new Error('Tooltip is transitioning');
-        }
         $(this.element).trigger(showEvent);
 
         var isInTheDom = $.contains(this.element.ownerDocument.documentElement, this.element);
@@ -3161,7 +3190,11 @@ var Tooltip = function ($) {
 
         var container = this.config.container === false ? document.body : $(this.config.container);
 
-        $(tip).data(this.constructor.DATA_KEY, this).appendTo(container);
+        $(tip).data(this.constructor.DATA_KEY, this);
+
+        if (!$.contains(this.element.ownerDocument.documentElement, this.tip)) {
+          $(tip).appendTo(container);
+        }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
 
@@ -3184,7 +3217,6 @@ var Tooltip = function ($) {
         var complete = function complete() {
           var prevHoverState = _this22._hoverState;
           _this22._hoverState = null;
-          _this22._isTransitioning = false;
 
           $(_this22.element).trigger(_this22.constructor.Event.SHOWN);
 
@@ -3194,7 +3226,6 @@ var Tooltip = function ($) {
         };
 
         if (Util.supportsTransitionEnd() && $(this.tip).hasClass(ClassName.FADE)) {
-          this._isTransitioning = true;
           $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(Tooltip._TRANSITION_DURATION);
           return;
         }
@@ -3208,9 +3239,6 @@ var Tooltip = function ($) {
 
       var tip = this.getTipElement();
       var hideEvent = $.Event(this.constructor.Event.HIDE);
-      if (this._isTransitioning) {
-        throw new Error('Tooltip is transitioning');
-      }
       var complete = function complete() {
         if (_this23._hoverState !== HoverState.SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
@@ -3218,7 +3246,6 @@ var Tooltip = function ($) {
 
         _this23.element.removeAttribute('aria-describedby');
         $(_this23.element).trigger(_this23.constructor.Event.HIDDEN);
-        _this23._isTransitioning = false;
         _this23.cleanupTether();
 
         if (callback) {
@@ -3239,7 +3266,7 @@ var Tooltip = function ($) {
       this._activeTrigger[Trigger.HOVER] = false;
 
       if (Util.supportsTransitionEnd() && $(this.tip).hasClass(ClassName.FADE)) {
-        this._isTransitioning = true;
+
         $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
       } else {
         complete();
@@ -3541,7 +3568,7 @@ var Tooltip = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-navbar.js
+ * Boosted (v4.0.0-alpha.6.1): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3555,12 +3582,10 @@ var Navbar = function ($) {
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-  // boosted mod
-  var SCROLLTIMEOUT = 100;
-  // end mod
+  var BREAKPOINT = 768;
 
   var Default = {
     sticky: false,
@@ -3570,14 +3595,6 @@ var Navbar = function ($) {
   var DefaultType = {
     sticky: 'boolean',
     trigger: 'string'
-  };
-
-  var Dimension = {
-    MEDIA_BP_SM: 544
-  };
-
-  var Event = {
-    PAGE_SCROLL: 'scroll'
   };
 
   var Selector = {
@@ -3611,8 +3628,8 @@ var Navbar = function ($) {
         $(document.body).css('padding-top', this._initialHeight);
 
         $(window).on('scroll', function () {
-          var scroll = $(window).scrollTop();
-          if (scroll > 0) {
+          var Scroll = $(window).scrollTop();
+          if (Scroll > 0) {
             $(Selector.NAVBAR).addClass('minimized');
           } else {
             $(Selector.NAVBAR).removeClass('minimized');
@@ -3622,13 +3639,13 @@ var Navbar = function ($) {
 
       if (this._config.hideSupra) {
         $(window).on('scroll', function () {
-          if ($(window).innerWidth() < 768) {
+          if ($(window).innerWidth() < BREAKPOINT) {
             return;
           }
 
-          var scroll = $(window).scrollTop();
+          var Scroll = $(window).scrollTop();
 
-          if (scroll > 0) {
+          if (Scroll > 0) {
             $(Selector.SUPRA_BAR).hide();
           } else {
             $(Selector.SUPRA_BAR).show();
@@ -3708,7 +3725,7 @@ var Navbar = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-megamenu.js
+ * Boosted (v4.0.0-alpha.6.1): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3722,37 +3739,32 @@ var MegaMenu = function ($) {
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-
-  var Event = {
-    MEGAMENU_SHOWN: 'shown.bs.collapse',
-    MEGAMENU_SHOW: 'show.bs.collapse',
-    MEGAMENU_HIDE: 'hide.bs.collapse'
-  };
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  var TIMEOUT = 1000; // Timeout befor focusing first element
+  var PERCENTAGE = 100; // Width slide proportion
+  var SPLITLENGHT = 4;
 
   var ClassName = {
-    FOLDED: 'folded',
-    NAVBAR_TOGGLE_ICON_OPEN: 'icon-menu',
-    NAVBAR_TOGGLE_ICON_CLOSE: 'icon-delete'
-  };
-
-  var Dimension = {
-    MEDIA_BP_SM: 544,
-    NAVBAR_HEIGHT_PX: '50px'
+    TRANSITIONING: 'transitioning'
   };
 
   var Selector = {
     MEGAMENU: '.mega-menu',
-    MEGAMENU_TITLE_L1: '.mega-menu h2',
-    MEGAMENU_TITLE_L2: '.mega-menu h3',
-    MEGAMENU_FOOTER: '.mega-menu .footer',
-    NAVBAR: 'header .navbar-toggleable-xs.collapse',
-    NAVBAR_TOGGLER: 'header .navbar-toggler',
-    NAVBAR_ITEM: 'header .navbar-toggleable-xs.collapse .nav-item',
-    NAVBAR_ITEM_FOLDED: 'header .navbar-toggleable-xs.collapse .nav-item.folded a[data-toggle="collapse"]',
-    NAVBAR_ITEM_MEGAMENU_TOGGLE: 'header .navbar-toggleable-xs.collapse .nav-item .nav-link[data-toggle="collapse"]'
+    ROOT_NAV: '.mega-menu > .navbar-nav',
+    MEGAMENU_PANEL: '.mega-menu-panel',
+    MEGAMENU_NAV: '.nav-link + .navbar-nav',
+    NAV_MENU: '.navbar-nav',
+    NAV_ITEM: '.nav-item',
+    NAV_LINK: '.nav-link',
+    NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
+    NAV_LINK_BACK: '.nav-link.back',
+    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
   };
 
   /**
@@ -3762,11 +3774,19 @@ var MegaMenu = function ($) {
    */
 
   var MegaMenu = function () {
-    function MegaMenu(element) {
+    function MegaMenu(element, config) {
       _classCallCheck(this, MegaMenu);
 
       this._element = element;
+      this._config = config;
+      this._$navLinks = $(this._element).find(Selector.NAV_LINK);
+      this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
+      this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
+      this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
+      this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE);
       this._addEventListeners();
+      this._addAriaAttributes(this._element);
+      this.goTo = this._initPosition;
     }
 
     // getters
@@ -3774,35 +3794,271 @@ var MegaMenu = function ($) {
     // public
 
     // private
+
     MegaMenu.prototype._addEventListeners = function _addEventListeners() {
-      // megamenu accessibility
-      $(this._element).on(Event.MEGAMENU_SHOWN, function () {
-        // set focus on first focusable link (ignore aria-hidden)
-        $(this).find('a:not([aria-hidden="true"]):first').trigger('focus');
+      var _this25 = this;
+
+      this._$goForwardLinks.on('click', function (event) {
+        return _this25._goForward(event);
       });
+      this._$goBackLinks.on('click', function (event) {
+        return _this25._goBackward(event);
+      });
+      this._$navLinks.on('keydown', function (event) {
+        return _this25._manageKeyDown(event);
+      });
+      this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      this._$navLinkCollapses.on('click', function (event) {
+        return _this25._handleCollapseToggle(event);
+      });
+    };
+
+    MegaMenu.prototype._addAriaAttributes = function _addAriaAttributes(element) {
+      var $subNavs = $(element).find('.nav-link + .navbar-nav');
+
+      $(element).attr('role', 'application');
+      $(element).find('> .navbar-nav').attr('role', 'menu');
+      $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
+      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
+      $(element).find(Selector.NAV_LINK_BACK).attr({
+        'aria-hidden': true
+      });
+      $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
+
+      $subNavs.each(function () {
+        var navId = Util.getUID(NAME);
+        var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
+        var $thisNav = $(this);
+        var $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK);
+        var $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK);
+        var goBackLabel = 'go back to ' + $topMenu.text() + ' menu';
+
+        if (!$topMenu.length) {
+          goBackLabel = 'go back to ' + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + ' menu';
+        }
+
+        $thisNav.attr({
+          id: navId,
+          role: 'menu'
+        });
+        $thisNavToggler.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-expanded': false,
+          'aria-haspopup': true
+        });
+        $thisNavBackLink.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-label': goBackLabel
+        });
+      });
+    };
+
+    MegaMenu.prototype._initPosition = function _initPosition(target) {
+      if (!$(target).length) {
+        return;
+      }
+
+      var $target = $(target).first();
+      var position = $target.parents().index(this._element);
+      var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
+      var translatePercentage = -(position - rootPosition) * PERCENTAGE / 2;
+      var $thisNav = $target.closest(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+
+      $rootNav.addClass(ClassName.TRANSITIONING);
+
+      // open collapse
+      $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+
+      // show menu and hide other
+      $target.parents(Selector.NAV_MENU).show();
+
+      // set aria on parent links
+      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
+        tabindex: -1,
+        'aria-hidden': true,
+        'aria-expanded': true
+      });
+
+      // translate to pos
+      $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
+
+      // adapt main collapse height to target height
+      $(this._element).height($thisNav.height());
+
+      // set focus on target link
+      setTimeout(function () {
+        // set focus on target link
+        $target.trigger('focus');
+
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+      }, TIMEOUT);
+    };
+
+    MegaMenu.prototype._manageKeyDown = function _manageKeyDown(event) {
+      var $thisTarget = $(event.target);
+
+      // test key code
+      if (/input|textarea/i.test(event.target.tagName)) {
+        return;
+      }
+
+      // proceed according to key code
+      switch (event.which) {
+        case ARROW_LEFT_KEYCODE:
+          this._goBackward(event);
+          break;
+        case ARROW_RIGHT_KEYCODE:
+          this._goForward(event);
+          break;
+        case ARROW_UP_KEYCODE:
+          // focus prev nav link
+          $thisTarget.parent().prev().find('>.nav-link').not(Selector.NAV_LINK_BACK).trigger('focus');
+          break;
+        case ARROW_DOWN_KEYCODE:
+          // focus next nav link
+          $thisTarget.parent().next().find('>.nav-link').trigger('focus');
+          break;
+        default:
+          return;
+      }
+    };
+
+    MegaMenu.prototype._collapseFocus = function _collapseFocus() {
+      $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
+    };
+
+    MegaMenu.prototype._handleCollapseToggle = function _handleCollapseToggle(e) {
+      var $this = $(e.target);
+      var $thisCollapse = $($this.attr('href'));
+
+      this._$topCollapseMenus.not($thisCollapse).collapse('hide');
+    };
+
+    MegaMenu.prototype._goForward = function _goForward(e) {
+      e.preventDefault();
+      var $this = $(e.target);
+      var $thisNav = $this.closest(Selector.NAV_MENU);
+      var $targetNav = $this.next(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+      var $thisNavToggler = $this;
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
+      var navWidth = $rootNav.width();
+      var currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth;
+
+      if (!$this.next(Selector.NAV_MENU).length || $rootNav.hasClass(ClassName.TRANSITIONING)) {
+        return false;
+      }
+
+      $rootNav.addClass(ClassName.TRANSITIONING);
+
+      // hide all nav on same level
+      $thisNav.find(Selector.NAV_MENU).hide();
+
+      // show target navbar-nav
+      $targetNav.show();
+
+      // adapt main collapse height to target height
+      $(Selector.MEGAMENU).height($targetNav.height());
+
+      // make only visible elements focusable
+      if (!currentTranslatePercentage) {
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: -1,
+          'aria-hidden': true
+        });
+      }
+      $thisNav.find(Selector.NAV_LINK).attr({
+        tabindex: -1,
+        'aria-hidden': true
+      });
+      $targetNav.find(Selector.NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      });
+
+      // translate menu
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage - PERCENTAGE) + '%)');
+
+      // focus on target nav first item
+      $rootNav.one('transitionend', function () {
+        $thisNavToggler.attr('aria-expanded', true);
+        $targetNav.find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+      });
+      return true;
+    };
+
+    MegaMenu.prototype._goBackward = function _goBackward(e) {
+      e.preventDefault();
+
+      var $this = $(e.target);
+      var $thisNav = $this.closest(Selector.NAV_MENU);
+      var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
+      var $rootNav = $(Selector.ROOT_NAV);
+      var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
+      var navWidth = $rootNav.width();
+      var currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth;
+
+      if (!currentTranslatePercentage || $rootNav.hasClass(ClassName.TRANSITIONING)) {
+        return false;
+      }
+
+      $rootNav.addClass(ClassName.TRANSITIONING);
+
+      // make only visible elements focusable
+      $targetNav.find(Selector.NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      });
+      if (currentTranslatePercentage === -PERCENTAGE) {
+        // reset main collapse height
+        $(Selector.MEGAMENU).css('height', 'auto');
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: 0,
+          'aria-hidden': false
+        });
+      }
+
+      // translate menu
+      $rootNav.css('transform', 'translateX(' + (currentTranslatePercentage + PERCENTAGE) + '%)');
+
+      // focus on target nav first item
+      $rootNav.one('transitionend', function () {
+        $targetNavToggler.attr('aria-expanded', false);
+        $targetNavToggler.trigger('focus');
+        $thisNav.hide();
+        $rootNav.removeClass(ClassName.TRANSITIONING);
+      });
+      return true;
     };
 
     // static
 
-
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $(this);
-        var data = $this.data(DATA_KEY);
-        var _config = $.extend({},
-        //   Default,
-        $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+        var $element = $(this);
 
-        if (!data) {
-          data = new MegaMenu(this, _config);
-          $this.data(DATA_KEY, data);
+        if (!$element.is(Selector.MEGAMENU)) {
+          throw new Error('Element is not a mega menu');
         }
 
-        if (typeof config === 'string') {
-          if (data[config] === undefined) {
-            throw new Error('No method named "' + config + '"');
+        var data = $element.data(DATA_KEY);
+
+        if (!data) {
+          data = new MegaMenu(this, config);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config !== 'undefined' && config) {
+          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
+            throw new Error('Selector "' + config + '" is not supported');
           }
-          data[config]();
+
+          data.goTo(config);
         }
       });
     };
@@ -3816,71 +4072,6 @@ var MegaMenu = function ($) {
 
     return MegaMenu;
   }();
-
-  $(document).ready(function () {
-
-    if (window.innerWidth < Dimension.MEDIA_BP_SM) {
-
-      $(Selector.MEGAMENU_TITLE_L2).on('click', function () {
-
-        if (!$(this).hasClass(ClassName.FOLDED)) {
-          $(Selector.MEGAMENU_TITLE_L1).hide();
-          $(Selector.MEGAMENU_TITLE_L2).not($(this)).hide();
-          $(this).next('ul').show();
-          $(Selector.MEGAMENU_FOOTER).hide();
-          $(this).addClass(ClassName.FOLDED);
-          $(Selector.MEGAMENU).css('top', Dimension.NAVBAR_HEIGHT_PX);
-        } else {
-          $(Selector.MEGAMENU_TITLE_L1).show();
-          $(Selector.MEGAMENU_TITLE_L2).not($(this)).show();
-          $(this).next('ul').hide();
-          $(Selector.MEGAMENU_FOOTER).show();
-          $(this).removeClass(ClassName.FOLDED);
-          $(Selector.MEGAMENU).css('top', parseInt(Dimension.NAVBAR_HEIGHT_PX, 10) * 2 + 'px');
-        }
-      });
-
-      // navbar
-      $(Selector.NAVBAR_ITEM_MEGAMENU_TOGGLE).on('click', function () {
-        var parentItem = $(this).parent();
-
-        if (!parentItem.hasClass(ClassName.FOLDED)) {
-          parentItem.addClass(ClassName.FOLDED);
-          $(Selector.NAVBAR_ITEM).not(parentItem).hide();
-        } else {
-          parentItem.removeClass(ClassName.FOLDED);
-          $(Selector.NAVBAR_ITEM).show();
-        }
-      });
-
-      $(Selector.NAVBAR).on(Event.MEGAMENU_HIDE, function () {
-        // switch toggler icon
-        $(Selector.NAVBAR_TOGGLER).find('.' + ClassName.NAVBAR_TOGGLE_ICON_CLOSE).removeClass(ClassName.NAVBAR_TOGGLE_ICON_CLOSE).addClass(ClassName.NAVBAR_TOGGLE_ICON_OPEN);
-
-        // close mega-menu
-        if ($(Selector.NAVBAR_ITEM_FOLDED)) {
-          $($(Selector.NAVBAR_ITEM_FOLDED).attr('href')).collapse('hide');
-        }
-      });
-
-      $(Selector.NAVBAR).on(Event.MEGAMENU_SHOW, function () {
-        // switch toggler icon
-        $(Selector.NAVBAR_TOGGLER).find('.' + ClassName.NAVBAR_TOGGLE_ICON_OPEN).removeClass(ClassName.NAVBAR_TOGGLE_ICON_OPEN).addClass(ClassName.NAVBAR_TOGGLE_ICON_CLOSE);
-
-        // reset all items
-        $(Selector.NAVBAR_ITEM).removeClass(ClassName.FOLDED);
-        $(Selector.NAVBAR_ITEM).show();
-
-        // reset navigation
-        $(Selector.MEGAMENU_TITLE_L2).removeClass(ClassName.FOLDED);
-        $(Selector.MEGAMENU_TITLE_L1).show();
-        $(Selector.MEGAMENU_TITLE_L2).show();
-        $(Selector.MEGAMENU_FOOTER).show();
-        $(Selector.MEGAMENU + ' ul').hide();
-        $(Selector.MEGAMENU).css('top', parseInt(Dimension.NAVBAR_HEIGHT_PX, 10) * 2 + 'px');
-      });
-    }
-  });
 
   /**
    * ------------------------------------------------------------------------
@@ -3900,7 +4091,7 @@ var MegaMenu = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-switch.js
+ * Boosted (v4.0.0-alpha.6.1): o-switch.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3914,25 +4105,14 @@ var Switch = function ($) {
    */
 
   var NAME = 'switch';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.switch';
-  var EVENT_KEY = '.' + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-
-  var ClassName = {
-    CHECKED: 'checked',
-    SWITCH: "o-switch"
-  };
 
   var Selector = {
     SWITCH: '.o-switch',
     TOGGLE: '.o-switch .toggle',
     LABEL: '.o-switch label'
-  };
-
-  var Event = {
-    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
   };
 
   /**
@@ -4024,7 +4204,7 @@ var Switch = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-scroll-up.js
+ * Boosted (v4.0.0-alpha.6.1): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4038,7 +4218,7 @@ var ScrollUp = function ($) {
    */
 
   var NAME = 'scrollup';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -4100,7 +4280,7 @@ var ScrollUp = function ($) {
     // private
 
     ScrollUp.prototype._process = function _process() {
-      if ($(this._scrollElement).scrollTop() > $(this._scrollElement).height() * 1.0) {
+      if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
         $(Selector.SCROLL_TOP).show();
       } else {
         $(Selector.SCROLL_TOP).hide();
@@ -4112,9 +4292,13 @@ var ScrollUp = function ($) {
     };
 
     ScrollUp.prototype._backToTop = function _backToTop() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, SCROLLANIMATE);
+      if (typeof $.animate === 'function') {
+        $('html, body').animate({
+          scrollTop: 0
+        }, SCROLLANIMATE);
+      } else {
+        $('html, body').scrollTop(0);
+      }
     };
 
     // static

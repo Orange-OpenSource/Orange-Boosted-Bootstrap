@@ -71,13 +71,6 @@
 
     
         {
-            "title" : "Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework.",
-            "url"   : "http://boosted.orange.com/v4-alpha/"
-        } ,
-    
-
-    
-        {
             "title" : "Borders",
             "url"   : "http://boosted.orange.com/v4-alpha/utilities/borders/"
         } ,
@@ -183,6 +176,13 @@
 
     
         {
+            "title" : "Custom carousel",
+            "url"   : "http://boosted.orange.com/v4-alpha/components/custom-carousel/"
+        } ,
+    
+
+    
+        {
             "title" : "Customization options",
             "url"   : "http://boosted.orange.com/v4-alpha/getting-started/options/"
         } ,
@@ -260,8 +260,8 @@
 
     
         {
-            "title" : "Icon fonts",
-            "url"   : "http://boosted.orange.com/v4-alpha/extend/icon-fonts/"
+            "title" : "Icons",
+            "url"   : "http://boosted.orange.com/v4-alpha/extend/icons/"
         } ,
     
 
@@ -374,6 +374,13 @@
         {
             "title" : "Navs",
             "url"   : "http://boosted.orange.com/v4-alpha/components/navs/"
+        } ,
+    
+
+    
+        {
+            "title" : "Orange Boosted with Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework.",
+            "url"   : "http://boosted.orange.com/v4-alpha/"
         } ,
     
 
