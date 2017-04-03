@@ -127,7 +127,6 @@ const Tooltip = (($) => {
       this._timeout          = 0
       this._hoverState       = ''
       this._activeTrigger    = {}
-      this._isTransitioning  = false
       this._tether           = null
 
       // protected
@@ -249,9 +248,6 @@ const Tooltip = (($) => {
 
       const showEvent = $.Event(this.constructor.Event.SHOW)
       if (this.isWithContent() && this._isEnabled) {
-        if (this._isTransitioning) {
-          throw new Error('Tooltip is transitioning')
-        }
         $(this.element).trigger(showEvent)
 
         const isInTheDom = $.contains(
@@ -283,9 +279,11 @@ const Tooltip = (($) => {
 
         const container = this.config.container === false ? document.body : $(this.config.container)
 
-        $(tip)
-          .data(this.constructor.DATA_KEY, this)
-          .appendTo(container)
+        $(tip).data(this.constructor.DATA_KEY, this)
+
+        if (!$.contains(this.element.ownerDocument.documentElement, this.tip)) {
+          $(tip).appendTo(container)
+        }
 
         $(this.element).trigger(this.constructor.Event.INSERTED)
 
@@ -308,7 +306,6 @@ const Tooltip = (($) => {
         const complete = () => {
           const prevHoverState = this._hoverState
           this._hoverState   = null
-          this._isTransitioning = false
 
           $(this.element).trigger(this.constructor.Event.SHOWN)
 
@@ -318,7 +315,6 @@ const Tooltip = (($) => {
         }
 
         if (Util.supportsTransitionEnd() && $(this.tip).hasClass(ClassName.FADE)) {
-          this._isTransitioning = true
           $(this.tip)
             .one(Util.TRANSITION_END, complete)
             .emulateTransitionEnd(Tooltip._TRANSITION_DURATION)
@@ -332,9 +328,6 @@ const Tooltip = (($) => {
     hide(callback) {
       const tip       = this.getTipElement()
       const hideEvent = $.Event(this.constructor.Event.HIDE)
-      if (this._isTransitioning) {
-        throw new Error('Tooltip is transitioning')
-      }
       const complete  = () => {
         if (this._hoverState !== HoverState.SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip)
@@ -342,7 +335,6 @@ const Tooltip = (($) => {
 
         this.element.removeAttribute('aria-describedby')
         $(this.element).trigger(this.constructor.Event.HIDDEN)
-        this._isTransitioning = false
         this.cleanupTether()
 
         if (callback) {
@@ -364,7 +356,7 @@ const Tooltip = (($) => {
 
       if (Util.supportsTransitionEnd() &&
           $(this.tip).hasClass(ClassName.FADE)) {
-        this._isTransitioning = true
+
         $(tip)
           .one(Util.TRANSITION_END, complete)
           .emulateTransitionEnd(TRANSITION_DURATION)
