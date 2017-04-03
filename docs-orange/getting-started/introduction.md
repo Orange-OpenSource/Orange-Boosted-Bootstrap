@@ -21,7 +21,7 @@ All Boosted components are compliant with Orange Brand Guidelines. Some bootstra
 
 ## Quick start
 
-Once you have [downloaded](getting-started/download/) boosted source files, copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS. You can also add orangeHelvetica and orangeIcons if needed, be careful both files are under copyright, see NOTICE.txt for more information.
+Once you have [downloaded](../download/) boosted source files, copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS. You can also add orangeHelvetica and orangeIcons if needed, be careful both files are under copyright, see NOTICE.txt for more information.
 
 {% highlight html %}
 <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
