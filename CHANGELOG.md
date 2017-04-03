@@ -1,3 +1,77 @@
+<a name"4.0.0-alpha.6.1"></a>
+### 4.0.0-alpha.6.1 (2017-04-03)
+
+
+#### Bug Fixes
+
+* **accordions:** fix issue #51 add a security spacing around the arrow for header link ([e39196dd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e39196dd77ad33d0a6c3acee1d1323e143e8d676))
+* **badge:** fix badge size and color to better match the brand ([39633350](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3963335030db17267f783031bb898bb7aad46e9d))
+* **build:** o-carousel ([ac318438](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ac318438a179fc477a797a3afcbb215c93684d17))
+* **carousel:** remove scss for specific slick component from core ([5ce00b93](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ce00b93d10e781171b21479b816eceb57e7b99c))
+* **chore:** code lint ([1570a1b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1570a1b2a9dce0283e7296ec72678644ffead83c))
+* **component:**
+  * o-carousel ([5e0c83d5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5e0c83d52956b584841e9f70e94095a642f9b54b))
+  * switches ([bd75f04a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bd75f04a50d47854e091924de354c8a31ceea42d))
+  * MegaMenu ([51462f91](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/51462f91017534084d806befd8c9d9de9e691bad))
+  * MegaMenu ([49522428](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/49522428154058c4d33e40b6550cab1ca8065e42))
+  * MegaMenu ([a80cc30e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a80cc30ee38e9daec5167d1e0dac9541a3fae82a))
+  * MegaMenu ([6aeded01](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6aeded01954e66f389e394f08d2c0ac9fa6395e1))
+  * MegaMenu ([3b0e35a4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3b0e35a4876a10993e067c45964b9d190ce58dfa))
+  * MegaMenu ([4da9b79b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4da9b79b24195b84c64401c4816c12a8436c6da9))
+  * MegaMenu ([1645158b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1645158b920d7df5a3fb19cde63f8ad0160b8d2c))
+  * modal ([4e0c7775](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4e0c7775844970f55b416cdf3126d34dd52825d8))
+  * megamenu ([249088f3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/249088f3cf331356e6c9a43d052f7188888835a9))
+  * Carousel ([b284e6c5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b284e6c526f215973b8d5754c53f6ab86d235268))
+  * dropdown ([7e68792b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7e68792b624e06258f1af09ce3c9af1bc2adcdbb))
+  * pagination ([eba08dda](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eba08ddac618a8f27408b59b23d2aea81bb1ae8e))
+  * megamenu accessibility ([a39cc04f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a39cc04f110b79a3903a0b23255bed1eaed80445))
+  * megamenu accessibility ([67f74cbd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/67f74cbda180d12b0dfcb112daf48e31dbccb45e))
+  * megamenu ([9871bb30](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9871bb3081e75a5065f341b6215713d38cef7013))
+  * megamenu accessibility ([7369f58c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7369f58c9ff4d5df7ba1aca5f97d3674e78ed96a))
+  * megamenu accessibility ([9183101b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9183101b9a51980e7f63bd9ddc4cd4308832e068))
+  * megamenu accessibility ([f0836cd1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f0836cd1801a2fad82647a4d607c07683094f8a4))
+  * megamenu accessibility ([e2693ed2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e2693ed29fd06593d511d3470020bbf66bff0a2e))
+  * megamenu accessibility ([e74c0d9b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e74c0d9b6576256f1c8ad67ea1b0ad4dc3efff68))
+  * megamenu accessibility ([698917cb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/698917cb66d19c65d74a5e3bd602740022bc6c61))
+  * mega menu ([494eaa7d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/494eaa7ddcc4440984d5c09bc4173f475e8dd74c))
+  * mega menu ([1e96e983](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1e96e983abad58871a26c6fe10405ee28369a662))
+  * navbar ([489c7615](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/489c76155eb8268f49869160fdf8d9dfead39d82))
+  * navbar ([2d5e9711](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2d5e971172ad2fce9d13c622679ac851d3ce18f3))
+  * mega menu ([8760940e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8760940e265b113ce63e4b0b7debb1a49c74a9bb))
+  * alert padding ([b6b3891b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b6b3891b40b91bc92bf2ff1875b9612720c36283))
+  * navbar ([46864216](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/46864216f42766766ecdc0359804fa7c1793820a))
+  * navs ([e244bef7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e244bef7cca699a23579f1c422757a0238cf2d33))
+  * o-card ([d516cd7b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d516cd7bb044bcd258c063ab8c306a1b482a80d0))
+* **custom-forms:** fix indeterminate state of custom radio issue #46 ([17f3c497](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/17f3c4972ab5e9ece364e11d185c78739a52299a))
+* **dist:** dist for ng-boosted ([90ba25a8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/90ba25a82f3a6157bc32025ee674fb8b4169c36f))
+* **doc:**
+  * o-carousel ([8e239844](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8e239844466746c1a9922495dca3fbfb9b4fa75f))
+  * footer ([d8748eeb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d8748eeb6e640a826895dec6761af53194cdb24c))
+  * mega menu ([9d9585d2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9d9585d2035ad1ea400a7b07a5bb10cbf9f6b17c))
+  * mega menu ([ae8b1898](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ae8b1898bcbc5e178e8fa10cccdc35d85d7ca784))
+  * news page megamenu ([84db4121](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/84db41215427f824a089d9d9987d987e4a273ed3))
+* **font:**
+  * update font declaration order ([635d2d26](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/635d2d26072c933d26679779d667faf2a85bb196))
+  * update font-family helvetica import. fix issue #41 ([f85cac55](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f85cac55b9322b3555f3b4b8eb3196e0bbfc0a66))
+* **megamenu:** move transition class adding at the begining and remove at the end ([c9eaefd6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c9eaefd6a7dfda9388ad682ad10b1966e6fa3fca))
+* **o-accordions:** replace first-child selector by a default border and a sibling selector to remov ([0663507f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0663507f9030dd1707bad6818a0e147dc76efd98))
+* **o-buttons:** fix build error issue #44 ([b0000877](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b000087774a811b4486992b95dfad750322ba1dc))
+* **outline:** remove default outline color. Use the current component color for the outline as ([2e5bd260](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2e5bd260316fe2ecacb68fdb4c96bddd478133f8))
+* **sortable:** update sortable js dependency. now works with jquery3 also remove links from th  ([e1efd1bc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e1efd1bcbaa4e822be6e8bd92238ba9e0b28fd29))
+* **tabs:**
+  * update tabs role. Add role tablist only if there's at least one panel ([9ef4347c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9ef4347ca24b66cef4e4e661ec8a8ba99953583e))
+  * update tab plugin. Don't add aria-role if nav-tabs or nav-pills doesn't have a t ([e1b4c469](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e1b4c469e5bb1c820c20d86cea075057a9009373))
+* **transitionning:** merge bootstrap fix for component is transitionning. See issue #50 ([bb16f760](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bb16f7609121716ce96b31340e82651bcbe8dee1))
+
+
+#### Features
+
+* **component:**
+  * MegaMenu ([977290e6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/977290e6382768aa31d69044c9ab57de5ab83946))
+  * megamenu keyboard navigation ([ef0eb5dc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ef0eb5dc2f61e13d9160925456d7e51377f35340))
+  * orange carousel ([7928b722](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7928b7227fa0ea4268d603bd7290b611f59a4610))
+
+
 <a name"4.0.0-alpha.6"></a>
 ### 4.0.0-alpha.6 (2017-01-16)
 

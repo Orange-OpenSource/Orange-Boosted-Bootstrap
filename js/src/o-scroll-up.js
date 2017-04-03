@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-scroll-up.js
+ * Boosted (v4.0.0-alpha.6.1): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ const ScrollUp = (($) => {
    */
 
   const NAME               = 'scrollup'
-  const VERSION            = '4.0.0-alpha.6'
+  const VERSION            = '4.0.0-alpha.6.1'
   const DATA_KEY           = 'bs.scrollup'
   const EVENT_KEY          = `.${DATA_KEY}`
   const DATA_API_KEY       = '.data-api'

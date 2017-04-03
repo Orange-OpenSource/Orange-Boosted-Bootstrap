@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.6 (http://boosted.orange.com)
+ * Bootstrap v4.0.0-alpha.6.1 (http://boosted.orange.com)
  * Copyright 2011-2017 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -141,13 +141,16 @@ var Util = function ($) {
     },
     getSelectorFromElement: function getSelectorFromElement(element) {
       var selector = element.getAttribute('data-target');
-
-      if (!selector) {
+      if (!selector || selector === '#') {
         selector = element.getAttribute('href') || '';
-        selector = /^#[a-z]/i.test(selector) ? selector : null;
       }
 
-      return selector;
+      try {
+        var $selector = $(selector);
+        return $selector.length > 0 ? selector : null;
+      } catch (error) {
+        return null;
+      }
     },
     reflow: function reflow(element) {
       return element.offsetHeight;
@@ -628,10 +631,9 @@ var Carousel = function ($) {
     // public
 
     Carousel.prototype.next = function next() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding');
+      if (!this._isSliding) {
+        this._slide(Direction.NEXT);
       }
-      this._slide(Direction.NEXT);
     };
 
     Carousel.prototype.nextWhenVisible = function nextWhenVisible() {
@@ -642,10 +644,9 @@ var Carousel = function ($) {
     };
 
     Carousel.prototype.prev = function prev() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding');
+      if (!this._isSliding) {
+        this._slide(Direction.PREV);
       }
-      this._slide(Direction.PREV);
     };
 
     Carousel.prototype.pause = function pause(event) {
@@ -788,9 +789,13 @@ var Carousel = function ($) {
     };
 
     Carousel.prototype._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
+      var targetIndex = this._getItemIndex(relatedTarget);
+      var fromIndex = this._getItemIndex($(this._element).find(Selector.ACTIVE_ITEM)[0]);
       var slideEvent = $.Event(Event.SLIDE, {
         relatedTarget: relatedTarget,
-        direction: eventDirectionName
+        direction: eventDirectionName,
+        from: fromIndex,
+        to: targetIndex
       });
 
       $(this._element).trigger(slideEvent);
@@ -814,8 +819,9 @@ var Carousel = function ($) {
       var _this5 = this;
 
       var activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0];
+      var activeElementIndex = this._getItemIndex(activeElement);
       var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
-
+      var nextElementIndex = this._getItemIndex(nextElement);
       var isCycling = Boolean(this._interval);
 
       var directionalClassName = void 0;
@@ -857,7 +863,9 @@ var Carousel = function ($) {
 
       var slidEvent = $.Event(Event.SLID, {
         relatedTarget: nextElement,
-        direction: eventDirectionName
+        direction: eventDirectionName,
+        from: activeElementIndex,
+        to: nextElementIndex
       });
 
       if (Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.SLIDE)) {
@@ -1055,7 +1063,8 @@ var Collapse = function ($) {
 
   var Selector = {
     ACTIVES: '.card:not(.multi) > .show, .card:not(.multi) > .collapsing', // boosted mod
-    DATA_TOGGLE: '[data-toggle="collapse"]'
+    DATA_TOGGLE: '[data-toggle="collapse"]',
+    DATA_CHILDREN: 'data-children'
   };
 
   /**
@@ -1072,11 +1081,18 @@ var Collapse = function ($) {
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
-
       this._parent = this._config.parent ? this._getParent() : null;
 
       if (!this._config.parent) {
         this._addAriaAndCollapsedClass(this._element, this._triggerArray);
+      }
+
+      this._selectorActives = Selector.ACTIVES;
+      if (this._parent) {
+        var childrenSelector = this._parent.hasAttribute(Selector.DATA_CHILDREN) ? this._parent.getAttribute(Selector.DATA_CHILDREN) : null;
+        if (childrenSelector !== null) {
+          this._selectorActives = childrenSelector + ' > .show, ' + childrenSelector + ' > .collapsing';
+        }
       }
 
       if (this._config.toggle) {
@@ -1099,11 +1115,7 @@ var Collapse = function ($) {
     Collapse.prototype.show = function show() {
       var _this6 = this;
 
-      if (this._isTransitioning) {
-        throw new Error('Collapse is transitioning');
-      }
-
-      if ($(this._element).hasClass(ClassName.SHOW)) {
+      if (this._isTransitioning || $(this._element).hasClass(ClassName.SHOW)) {
         return;
       }
 
@@ -1111,7 +1123,7 @@ var Collapse = function ($) {
       var activesData = void 0;
 
       if (this._parent) {
-        actives = $.makeArray($(this._parent).find(Selector.ACTIVES));
+        actives = $.makeArray($(this._parent).find(this._selectorActives));
         if (!actives.length) {
           actives = null;
         }
@@ -1176,11 +1188,7 @@ var Collapse = function ($) {
     Collapse.prototype.hide = function hide() {
       var _this7 = this;
 
-      if (this._isTransitioning) {
-        throw new Error('Collapse is transitioning');
-      }
-
-      if (!$(this._element).hasClass(ClassName.SHOW)) {
+      if (this._isTransitioning || !$(this._element).hasClass(ClassName.SHOW)) {
         return;
       }
 
@@ -1191,9 +1199,8 @@ var Collapse = function ($) {
       }
 
       var dimension = this._getDimension();
-      var offsetDimension = dimension === Dimension.WIDTH ? 'offsetWidth' : 'offsetHeight';
 
-      this._element.style[dimension] = this._element[offsetDimension] + 'px';
+      this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + 'px';
 
       Util.reflow(this._element);
 
@@ -1347,7 +1354,9 @@ var Collapse = function ($) {
    */
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    event.preventDefault();
+    if (!/input|textarea/i.test(event.target.tagName)) {
+      event.preventDefault();
+    }
 
     var target = Collapse._getTargetFromElement(this);
     var data = $(target).data(DATA_KEY);
@@ -2372,9 +2381,12 @@ var ScrollSpy = function ($) {
           target = $(targetSelector)[0];
         }
 
-        if (target && (target.offsetWidth || target.offsetHeight)) {
-          // todo (fat): remove sketch reliance on jQuery position/offset
-          return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
+        if (target) {
+          var targetBCR = target.getBoundingClientRect();
+          if (targetBCR.width || targetBCR.height) {
+            // todo (fat): remove sketch reliance on jQuery position/offset
+            return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
+          }
         }
         return null;
       }).filter(function (item) {
@@ -2429,7 +2441,7 @@ var ScrollSpy = function ($) {
     };
 
     ScrollSpy.prototype._getOffsetHeight = function _getOffsetHeight() {
-      return this._scrollElement === window ? window.innerHeight : this._scrollElement.offsetHeight;
+      return this._scrollElement === window ? window.innerHeight : this._scrollElement.getBoundingClientRect().height;
     };
 
     ScrollSpy.prototype._process = function _process() {
@@ -3064,7 +3076,6 @@ var Tooltip = function ($) {
       this._timeout = 0;
       this._hoverState = '';
       this._activeTrigger = {};
-      this._isTransitioning = false;
       this._tether = null;
 
       // protected
@@ -3153,9 +3164,6 @@ var Tooltip = function ($) {
 
       var showEvent = $.Event(this.constructor.Event.SHOW);
       if (this.isWithContent() && this._isEnabled) {
-        if (this._isTransitioning) {
-          throw new Error('Tooltip is transitioning');
-        }
         $(this.element).trigger(showEvent);
 
         var isInTheDom = $.contains(this.element.ownerDocument.documentElement, this.element);
@@ -3182,7 +3190,11 @@ var Tooltip = function ($) {
 
         var container = this.config.container === false ? document.body : $(this.config.container);
 
-        $(tip).data(this.constructor.DATA_KEY, this).appendTo(container);
+        $(tip).data(this.constructor.DATA_KEY, this);
+
+        if (!$.contains(this.element.ownerDocument.documentElement, this.tip)) {
+          $(tip).appendTo(container);
+        }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
 
@@ -3205,7 +3217,6 @@ var Tooltip = function ($) {
         var complete = function complete() {
           var prevHoverState = _this22._hoverState;
           _this22._hoverState = null;
-          _this22._isTransitioning = false;
 
           $(_this22.element).trigger(_this22.constructor.Event.SHOWN);
 
@@ -3215,7 +3226,6 @@ var Tooltip = function ($) {
         };
 
         if (Util.supportsTransitionEnd() && $(this.tip).hasClass(ClassName.FADE)) {
-          this._isTransitioning = true;
           $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(Tooltip._TRANSITION_DURATION);
           return;
         }
@@ -3229,9 +3239,6 @@ var Tooltip = function ($) {
 
       var tip = this.getTipElement();
       var hideEvent = $.Event(this.constructor.Event.HIDE);
-      if (this._isTransitioning) {
-        throw new Error('Tooltip is transitioning');
-      }
       var complete = function complete() {
         if (_this23._hoverState !== HoverState.SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
@@ -3239,7 +3246,6 @@ var Tooltip = function ($) {
 
         _this23.element.removeAttribute('aria-describedby');
         $(_this23.element).trigger(_this23.constructor.Event.HIDDEN);
-        _this23._isTransitioning = false;
         _this23.cleanupTether();
 
         if (callback) {
@@ -3260,7 +3266,7 @@ var Tooltip = function ($) {
       this._activeTrigger[Trigger.HOVER] = false;
 
       if (Util.supportsTransitionEnd() && $(this.tip).hasClass(ClassName.FADE)) {
-        this._isTransitioning = true;
+
         $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
       } else {
         complete();
@@ -3562,7 +3568,7 @@ var Tooltip = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-navbar.js
+ * Boosted (v4.0.0-alpha.6.1): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3576,7 +3582,7 @@ var Navbar = function ($) {
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var BREAKPOINT = 768;
@@ -3719,7 +3725,7 @@ var Navbar = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-megamenu.js
+ * Boosted (v4.0.0-alpha.6.1): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3733,7 +3739,7 @@ var MegaMenu = function ($) {
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
@@ -4085,7 +4091,7 @@ var MegaMenu = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-switch.js
+ * Boosted (v4.0.0-alpha.6.1): o-switch.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4099,7 +4105,7 @@ var Switch = function ($) {
    */
 
   var NAME = 'switch';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.switch';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
 
@@ -4198,7 +4204,7 @@ var Switch = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6): o-scroll-up.js
+ * Boosted (v4.0.0-alpha.6.1): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4212,7 +4218,7 @@ var ScrollUp = function ($) {
    */
 
   var NAME = 'scrollup';
-  var VERSION = '4.0.0-alpha.6';
+  var VERSION = '4.0.0-alpha.6.1';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';

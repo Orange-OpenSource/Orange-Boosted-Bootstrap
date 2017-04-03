@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Boosted v4.0.0-alpha.6 (https://boosted.orange.com)
+ * Boosted v4.0.0-alpha.6.1 (http://boosted.orange.com)
  * Copyright 2014-2017 The Boosted Authors
  * Copyright 2014-2017 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
@@ -11532,14 +11532,14 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   border: 2px solid #666;
 }
 
-.custom-control-input:checked ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
   -webkit-background-size: 1rem 1rem;
           background-size: 1rem;
   border: 0;
 }
 
-.custom-control-input:active ~ .custom-control-indicator,
-.custom-control-input:indeterminate ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:active ~ .custom-control-indicator,
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   border: 0;
 }
 
@@ -11548,7 +11548,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   border: 2px solid #ccc;
 }
 
-.custom-control-input:checked:disabled ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-indicator {
   background-color: #ccc;
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14%202l-8%208-3-3-2%202%205%205L16%204l-2-2z%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E");
   border: 0;
@@ -14914,16 +14914,16 @@ caption {
 }
 
 div.active:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 a:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 .close:hover,
 .close:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 .progress.progress-default[value]::-webkit-progress-value {
