@@ -18,17 +18,17 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
 <table class="table table-hover has-checkbox">
     <thead>
         <tr>
-            <th>
+            <th scope="col">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description sr-only">select all</span>
                 </label>
             </th>
-            <th>Status</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
+            <th scope="col">Status</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
         </tr>
     </thead>
     <tbody>
@@ -40,7 +40,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
                     <span class="custom-control-description sr-only">select row 1</span>
                 </label>
             </th>
-            <td></td>
+            <td>ok</td>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -53,7 +53,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
                     <span class="custom-control-description sr-only">select row 2</span>
                 </label>
             </th>
-            <td></td>
+            <td>ok</td>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -66,8 +66,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
                     <span class="custom-control-description sr-only">select row 3</span>
                 </label>
             </th>
-            <td>
-            </td>
+            <td>ok</td>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -80,7 +79,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
                     <span class="custom-control-description sr-only">select row 4</span>
                 </label>
             </th>
-            <td></td>
+            <td>ok</td>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -93,8 +92,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
                     <span class="custom-control-description sr-only">select row 5</span>
                 </label>
             </th>
-            <td>
-            </td>
+            <td>ok</td>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
@@ -111,17 +109,17 @@ In addition use `.has-icon` to specify the table is using icons and thumbnails t
 <table class="table table-hover has-checkbox has-icon">
     <thead>
         <tr>
-            <th>
+            <th scope="col">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description sr-only">select all</span>
                 </label>
             </th>
-            <th>Name</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
+            <th scope="col">Name</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
         </tr>
     </thead>
     <tbody>

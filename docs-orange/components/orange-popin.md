@@ -17,7 +17,7 @@ group: components
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn"><span class="close"></span></button>
+                    <button type="button" class="btn" aria-label="close"><span class="close"></span></button>
                 </div>
                 <div class="modal-body">
                     <div class="card card-block has-info">
@@ -48,7 +48,7 @@ group: components
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn" data-dismiss="modal"><span class="close"></span></button>
+                <button type="button" class="btn" data-dismiss="modal" aria-label="close"><span class="close"></span></button>
             </div>
             <div class="modal-body">
                 <div class="card card-block has-info">
@@ -77,7 +77,7 @@ group: components
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn"><span class="close"></span></button>
+                    <button type="button" class="btn" aria-label="close"><span class="close"></span></button>
                 </div>
                 <div class="modal-body">
                     <div class="card card-block has-info">
@@ -108,7 +108,7 @@ group: components
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn" data-dismiss="modal"><span class="close"></span></button>
+                <button type="button" class="btn" data-dismiss="modal" aria-label="close"><span class="close"></span></button>
             </div>
             <div class="modal-body">
                 <div class="card card-block has-info">
@@ -136,7 +136,7 @@ group: components
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn"><span class="close"></span></button>
+                    <button type="button" class="btn" aria-label="close"><span class="close"></span></button>
                 </div>
                 <div class="modal-body">
                     <div class="card card-block has-info on-top">
@@ -167,7 +167,7 @@ group: components
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn" data-dismiss="modal"><span class="close"></span></button>
+                <button type="button" class="btn" data-dismiss="modal" aria-label="close"><span class="close"></span></button>
             </div>
             <div class="modal-body">
                 <div class="card card-block has-info on-top">

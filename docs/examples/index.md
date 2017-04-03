@@ -9,83 +9,83 @@ title: Examples
 
 ## Orange modules
 
-<div class="row bd-examples">
-  <div class="col-6 col-md-4">
+<ul class="row bd-examples">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/module-012-product-details/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-012-product-details.png" alt="">
-    </a>
-    <h4>Product details</h4>
+      <span class="h4">Product details</span>
+    </a>    
     <p>Layout for desktop and mobile shop.</p>
-  </div>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/module-002-quick-links/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-002-quick-links.png" alt="">
+      <span class="h4">Quick links</span>
     </a>
-    <h4>Quick links</h4>
-    <p></p>
-  </div>
+    <p>Icon, text and description links</p>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/module-006-content-panel/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/module-006-content-panels.png" alt="">
+      <span class="h4">Content panels</span>
     </a>
-    <h4>Content panels</h4>
-    <p></p>
-  </div>
-</div>
+    <p>Panel display sample</p>
+  </li>
+</ul>
 
 ## Orange brand
 
-<div class="row bd-examples">
-  <div class="col-6 col-md-4">
+<ul class="row bd-examples">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-brand-2015/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/brand_2015.jpg" alt="">
+      <span class="h4">News Orange Brand</span>
     </a>
-    <h4>News Orange Brand</h4>
     <p>A single news page, Orange branded 2015.</p>
-  </div>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-news/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_news.jpg" alt="">
+      <span class="h4">News template</span>
     </a>
-    <h4>News template</h4>
     <p>Main mega menu.</p>
-  </div>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-dashboard/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_dashboard.jpg" alt="">
+      <span class="h4">Dashboard Orange branded</span>
     </a>
-    <h4>Dashboard Orange branded</h4>
     <p>A simple Orange branded dashboard application.</p>
-  </div>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-admin/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
+      <span class="h4">Administration mainpage</span>
     </a>
-    <h4>Administration mainpage</h4>
     <p>Administration for Orange applications example.</p>
-  </div>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-admin/edit.html">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_admin.jpg" alt="">
+      <span class="h4">Administration edition page</span>
     </a>
-    <h4>Administration edition page</h4>
     <p>Administration news edition for Orange applications example.</p>
-  </div>
+  </li>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/orange-form/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/example_form.jpg" alt="">
+      <span class="h4">Form</span>
     </a>
-    <h4>Form</h4>
     <p>Complex form page with validation.</p>
-  </div>
-</div>
+  </li>
+</ul>
 
 
 [comment]: # end mod
@@ -95,157 +95,157 @@ title: Examples
 
 Examples that focus on implementing uses of built-in components provided by Bootstrap.
 
-<div class="row bd-examples">
-  <div class="col-6 col-md-4">
+<ul class="row bd-examples">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/starter-template/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/starter-template.jpg" alt="">
+      <span class="h4">Starter template</span>
     </a>
-    <h4>Starter template</h4>
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/grid/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/grid.jpg" alt="">
+      <span class="h4">Grids</span>
     </a>
-    <h4>Grids</h4>
     <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
-  </div>
+  </li>
   <div class="clearfix hidden-md-up"></div>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/jumbotron/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.jpg" alt="">
+      <span class="h4">Jumbotron</span>
     </a>
-    <h4>Jumbotron</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/narrow-jumbotron/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron-narrow.jpg" alt="">
+      <span class="h4">Narrow jumbotron</span>
     </a>
-    <h4>Narrow jumbotron</h4>
     <p>Build a more custom page by narrowing the default container and jumbotron.</p>
-  </div>
-</div>
+  </li>
+</ul>
 
 ## Navbars
 
 Taking the default navbar component and showing how it can be moved, placed, and extended.
 
-<div class="row bd-examples">
-  <div class="col-6 col-md-4">
+<ul class="row bd-examples">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/navbars/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/navbar.jpg" alt="">
+      <span class="h4">Navbar</span>
     </a>
-    <h4>Navbar</h4>
     <p>Super basic template that includes the navbar along with some additional content.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/navbar-top/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/navbar-static.jpg" alt="">
+      <span class="h4">Static top navbar</span>
     </a>
-    <h4>Static top navbar</h4>
     <p>Super basic template with a static top navbar along with some additional content.</p>
-  </div>
+  </li>
   <div class="clearfix hidden-md-up"></div>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/navbar-top-fixed/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/navbar-fixed.jpg" alt="">
+      <span class="h4">Fixed navbar</span>
     </a>
-    <h4>Fixed navbar</h4>
     <p>Super basic template with a fixed top navbar along with some additional content.</p>
-  </div>
-</div>
+  </li>
+</ul>
 
 ## Custom components
 
 Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.
 
-<div class="row bd-examples">
-  <div class="col-6 col-md-4">
+<ul class="row bd-examples">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/album/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/album.jpg" alt="">
+      <span class="h4">Album</span>
     </a>
-    <h4>Album</h4>
     <p>Simple one-page template for photo galleries, portfolios, and more.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/cover/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/cover.jpg" alt="">
+      <span class="h4">Cover</span>
     </a>
-    <h4>Cover</h4>
     <p>A one-page template for building simple and beautiful home pages.</p>
-  </div>
+  </li>
   <div class="clearfix hidden-md-up"></div>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/carousel/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/carousel.jpg" alt="">
+      <span class="h4">Carousel</span>
     </a>
-    <h4>Carousel</h4>
     <p>Customize the navbar and carousel, then add some new components.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/blog/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/blog.jpg" alt="">
+      <span class="h4">Blog</span>
     </a>
-    <h4>Blog</h4>
     <p>Simple two-column blog layout with custom navigation, header, and type.</p>
-  </div>
+  </li>
   <div class="clearfix hidden-md-up"></div>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/dashboard/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/dashboard.jpg" alt="">
+      <span class="h4">Dashboard</span>
     </a>
-    <h4>Dashboard</h4>
     <p>Basic admin dashboard shell with fixed sidebar and navbar.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/signin/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/sign-in.jpg" alt="">
+      <span class="h4">Sign-in page</span>
     </a>
-    <h4>Sign-in page</h4>
     <p>Custom form layout and design for a simple sign in form.</p>
-  </div>
+  </li>
   <div class="clearfix hidden-md-up"></div>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/justified-nav/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/justified-nav.jpg" alt="">
+      <span class="h4">Justified nav</span>
     </a>
-    <h4>Justified nav</h4>
     <p>Create a custom navbar with justified links. Heads up! Not too Safari friendly.</p>
-  </div>
-  <div class="col-6 col-md-4">
+  </li>
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/sticky-footer/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/sticky-footer.jpg" alt="">
+      <span class="h4">Sticky footer</span>
     </a>
-    <h4>Sticky footer</h4>
     <p>Attach a footer to the bottom of the viewport when the content is shorter than it.</p>
-  </div>
+  </li>
   <div class="clearfix hidden-md-up"></div>
 
-  <div class="col-6 col-md-4">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/sticky-footer-navbar/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/sticky-footer-navbar.jpg" alt="">
+      <span class="h4">Sticky footer w/ navbar</span>
     </a>
-    <h4>Sticky footer w/ navbar</h4>
     <p>Attach a footer to the bottom of the viewport with a fixed top navbar.</p>
-  </div>
-</div>
+  </li>
+</ul>
 
 ## Experiments
 
 Examples that focus on future-friendly features or techniques.
 
-<div class="row bd-examples">
-  <div class="col-6 col-md-4">
+<ul class="row bd-examples">
+  <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/offcanvas/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/offcanvas.jpg" alt="">
+      <span class="h4">Offcanvas</span>
     </a>
-    <h4>Offcanvas</h4>
     <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
-  </div>
-</div>
+  </li>
+</ul>
