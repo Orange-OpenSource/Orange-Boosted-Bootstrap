@@ -14982,3 +14982,16 @@ a:focus {
           transform: rotateY(180deg);
 }
 /*# sourceMappingURL=o-rtl.css.map */
+.icon-arrow-next::before {
+  content: "\ea53";
+}
+
+.icon-arrow-previous::before {
+  content: "\ea52";
+}
+
+.stepbar-item::after {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=o-rtl.css.map */

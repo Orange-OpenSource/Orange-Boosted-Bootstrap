@@ -3869,24 +3869,35 @@ var MegaMenu = function ($) {
 
       $rootNav.addClass(ClassName.TRANSITIONING);
 
-      // open collapse
-      $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+      // open collapse     
+      if ($target.attr('data-toggle') === 'collapse') {
+        $target.siblings(Selector.MEGAMENU_PANEL).collapse('show');
+        this._$topCollapseMenus.not($target.siblings(Selector.MEGAMENU_PANEL)).collapse('hide');
+        $(this._element).height('auto');
+        $rootNav.css('transform', 'translateX(0%)');
+      } else {
+        $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+        this._$topCollapseMenus.not($target.closest(Selector.MEGAMENU_PANEL)).collapse('hide');
 
-      // show menu and hide other
-      $target.parents(Selector.NAV_MENU).show();
+        // show menu and hide other
+        $target.parents(Selector.NAV_MENU).show();
 
-      // set aria on parent links
-      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
-        tabindex: -1,
-        'aria-hidden': true,
-        'aria-expanded': true
-      });
+        // set aria on parent links
+        $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
+          tabindex: -1,
+          'aria-hidden': true,
+          'aria-expanded': true
+        });
 
-      // translate to pos
-      $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
-
-      // adapt main collapse height to target height
-      $(this._element).height($thisNav.height());
+        // translate to pos
+        $rootNav.css('transform', 'translateX(' + translatePercentage + '%)');
+        if (translatePercentage) {
+          // adapt main collapse height to target height        
+          $(this._element).height($thisNav.height());
+        } else {
+          $(this._element).height('auto');
+        }
+      }
 
       // set focus on target link
       setTimeout(function () {
