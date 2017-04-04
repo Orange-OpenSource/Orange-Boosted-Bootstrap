@@ -208,7 +208,7 @@ Do more with buttons. Control button states or create groups of buttons for more
 Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to the `<button>`.
 
 {% example html %}
-<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+<button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
   Single toggle
 </button>
 {% endexample %}
@@ -223,13 +223,13 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 
 {% example html %}
 <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary active">
+  <label class="btn btn-secondary active">
     <input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-secondary">
     <input type="checkbox" autocomplete="off"> Checkbox 2
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-secondary">
     <input type="checkbox" autocomplete="off"> Checkbox 3
   </label>
 </div>
@@ -237,13 +237,13 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 
 {% example html %}
 <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary active">
+  <label class="btn btn-secondary active">
     <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-secondary">
     <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-secondary">
     <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
   </label>
 </div>
