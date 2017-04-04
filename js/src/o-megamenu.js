@@ -143,7 +143,7 @@ const MegaMenu = (($) => {
 
       $rootNav.addClass(ClassName.TRANSITIONING)
 
-      // open collapse     
+      // open collapse
       if ($target.attr('data-toggle') === 'collapse') {
         $target.siblings(Selector.MEGAMENU_PANEL).collapse('show')
         this._$topCollapseMenus.not($target.siblings(Selector.MEGAMENU_PANEL)).collapse('hide')
@@ -166,7 +166,7 @@ const MegaMenu = (($) => {
         // translate to pos
         $rootNav.css('transform', `translateX(${translatePercentage}%)`)
         if (translatePercentage) {
-          // adapt main collapse height to target height        
+          // adapt main collapse height to target height
           $(this._element).height($thisNav.height())
         } else {
           $(this._element).height('auto')
