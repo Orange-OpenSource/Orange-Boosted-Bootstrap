@@ -303,6 +303,18 @@
               color: #000;
               background-color: #fff;
             }
+
+            .svg-menu {
+              display: block;
+              width: 1.25rem;
+              height: 1.25rem;
+            }
+          }
+
+          .navbar-toggler:hover {
+            .svg-menu::after {
+              background-image: $svg-menu-hover;
+            }
           }
 
           .navbar-toggler:active {
@@ -312,6 +324,10 @@
 
           .navbar-toggler:focus {
             outline: 0;
+
+            .svg-menu::after {
+              background-image: $svg-menu-hover;
+            }
           }
 
           .nav-item {

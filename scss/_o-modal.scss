@@ -93,6 +93,17 @@
       font-size: 2.875rem;
     }
 
+    .card-icon [class^="svg-"] {
+      display: block;
+      width: 2.875rem;
+      height: 2.875rem;
+    }
+
+    .card-icon [class^="svg-"]::after {
+      width: 2.875rem;
+      height: 2.875rem;
+    }
+
     &.has-info .card-icon {
       color: $brand-info;
     }
@@ -123,6 +134,16 @@
       font-size: 2rem;
     }
 
+    .card-icon [class^="svg-"] {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .card-icon [class^="svg-"]::after {
+      width: 2rem;
+      height: 2rem;
+    }
+
     .card-title {
       margin-left: 2.5rem;
     }
@@ -138,6 +159,17 @@
 
       span[class^="icon-"] {
         font-size: 4rem;
+      }
+
+      span[class^="svg-"] {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto;
+      }
+
+      span[class^="svg-"]::after {
+        width: 4rem;
+        height: 4rem;
       }
 
       .card-title {

@@ -33,10 +33,21 @@
       opacity: 0;
     }
 
+    .on.svg-checkbox-tick::after {
+      top: .1875rem;
+      left: -.125rem;
+    }
+
     .off {
       display: block;
       text-align: right;
       opacity: 1;
+
+      &.svg-delete::after {
+        top: .1875rem;
+        right: -.125rem;
+        left: auto;
+      }
     }
 
     &::before {
