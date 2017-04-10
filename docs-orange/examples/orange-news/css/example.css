@@ -123,6 +123,15 @@
 #mostRead > ul li:nth-child(6) .glyphicon-chevron-right {
   font-size: 12px;
 }
+
+.svg-arrow-next::after {
+  height: .875rem;
+  width: .5625rem;
+  top: .25rem;
+  left: auto;
+  right: -1rem;
+}
+
 #accordion {
   margin-top: 10px;
 }

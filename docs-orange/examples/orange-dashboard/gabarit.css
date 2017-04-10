@@ -98,6 +98,12 @@ footer a {
     color: #F16E00;
 }
 
+.svg-avatar {
+  left: -1.25rem;
+  right: 0;
+  top: -2px;
+}
+
 
 @media (max-width: 992px) {
   .col .info-block{

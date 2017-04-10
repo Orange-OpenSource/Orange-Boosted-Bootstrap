@@ -4,6 +4,7 @@
 //         See NOTICE.txt for more informations
 
 @import "custom";
+@import "mixins/orangeIcons";
 
 @font-face {
   font-family: "icon-orange";
@@ -2712,40 +2713,114 @@
   content: "\eb81";
 }
 
+// Using svg
 
 .svg-delete,
 .svg-checkbox-tick,
 .svg-warning-circle,
-.svg-menu {
+.svg-menu,
+.svg-tick,
+.svg-arrow-previous,
+.svg-arrow-next,
+.svg-settings,
+.svg-search,
+.svg-avatar,
+.svg-buy {
   position: relative;
 }
 
 .svg-delete::after,
 .svg-checkbox-tick::after,
 .svg-warning-circle::after,
-.svg-menu::after {
-  background-repeat: no-repeat;
-  background-size: cover;
+.svg-menu::after,
+.svg-tick::after,
+.svg-arrow-previous::after,
+.svg-arrow-next::after,
+.svg-settings::after,
+.svg-search::after,
+.svg-avatar::after,
+.svg-buy::after {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
   width: 1.25rem;
   height: 1.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.svg-delete::after {
-  background-image: $svg-delete;
+.svg-delete {
+  @include svg-delete("fff");
 }
 
-.svg-checkbox-tick::after {
-  background-image: $svg-checkbox-tick;
+.svg-checkbox-tick {
+  @include svg-checkbox-tick("fff");
 }
 
-.svg-warning-circle::after {
-  background-image: $svg-warning-circle;
+.svg-warning-circle {
+  @include svg-warning-circle("527EDB");
 }
 
-.svg-menu::after {
-  background-image: $svg-menu;
+.svg-menu {
+  @include svg-menu("fff");
+}
+
+.svg-menu:hover {
+  @include svg-menu("000");
+}
+
+.svg-tick {
+  @include svg-tick("32C832");
+}
+
+.svg-arrow-previous {
+  @include svg-arrow-previous("000");
+}
+
+.svg-arrow-previous:hover,
+.svg-arrow-previous:focus,
+.svg-arrow-previous:active, {
+  @include svg-arrow-previous("fff");
+}
+
+.svg-arrow-next {
+  @include svg-arrow-next("000");
+}
+
+.svg-arrow-next.btn-primary {
+  @include svg-arrow-next("fff");
+}
+
+.svg-arrow-next.btn-primary:active {
+  @include svg-arrow-next("000");
+}
+
+.svg-settings {
+  @include svg-settings("fff");
+}
+
+.svg-settings:hover,
+.svg-settings:focus {
+  @include svg-settings("f16e00");
+}
+
+.svg-search {
+  @include svg-search("fff");
+}
+
+.svg-search:hover {
+  @include svg-search("f16e00");
+}
+
+.svg-avatar {
+  @include svg-avatar("fff");
+}
+
+.svg-avatar:hover {
+  @include svg-avatar("f16e00");
+}
+
+.svg-buy {
+  @include svg-buy("fff");
 }

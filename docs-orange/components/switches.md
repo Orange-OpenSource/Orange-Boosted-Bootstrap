@@ -26,8 +26,8 @@ Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` follow
   <div class="o-switch">
     <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
     <div class="toggle form-control-label" aria-hidden="true">
-      <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
-      <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
+      <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
+      <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
     </div>
   </div>
 </div>
@@ -43,8 +43,8 @@ Default color is brand primary. Success color is also supported, use `.success` 
   <div class="o-switch">
     <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
     <label for="checkbox3" class="toggle form-control-label" aria-hidden="true">
-      <span class="on icon-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
-      <span class="off icon-delete" role="presentation"><span class="sr-only">off</span></span>
+      <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
+      <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
     </label>
   </div>
 </div>

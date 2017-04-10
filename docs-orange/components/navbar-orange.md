@@ -34,15 +34,13 @@ Orange navbar is the main navigation of project website. It should always be inc
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link icon">
+                        <a href="#" class="nav-link icon svg-buy">
                             <span class="sr-only">open basket</span>
-                            <span class="icon-buy" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link icon">
+                        <a href="#" class="nav-link icon svg-search">
                             <span class="sr-only">open search bar</span>
-                            <span class="icon-search" aria-hidden="true"></span>
                         </a>
                     </li>
                 </ul>
@@ -73,15 +71,13 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                    <a href="#" class="nav-link icon">
+                    <a href="#" class="nav-link icon svg-buy">
                     <span class="sr-only">basket</span>
-                    <span class="icon-buy" aria-hidden="true"></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link icon">
+                <a href="#" class="nav-link icon svg-avatar">
                     <span class="sr-only">my account</span>
-                    <span class="icon-avatar"></span>
                 </a>
             </li>
             <li class="nav-item dropdown">
@@ -111,15 +107,13 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                        <a href="#" class="nav-link icon">
+                        <a href="#" class="nav-link icon svg-buy">
                         <span class="sr-only">basket</span>
-                        <span class="icon-buy" aria-hidden="true"></span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link icon">
+                    <a href="#" class="nav-link icon svg-avatar">
                         <span class="sr-only">my account</span>
-                        <span class="icon-avatar"></span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -148,15 +142,13 @@ A supra bar should never be used on its own and always be included in header and
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link icon">
+                        <a href="#" class="nav-link icon svg-buy">
                             <span class="sr-only">open basket</span>
-                            <span class="icon-buy" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link icon">
+                        <a href="#" class="nav-link icon svg-search">
                             <span class="sr-only">open search bar</span>
-                            <span class="icon-search" aria-hidden="true"></span>
                         </a>
                     </li>
                 </ul>

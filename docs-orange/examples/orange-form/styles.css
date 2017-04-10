@@ -48,3 +48,29 @@ footer a {
 .navbar-nav span[class*="icon-"] {
     font-size: 1.25rem;
 }
+
+.btn-sm::after {
+  top: .375rem;
+  left: .5rem;
+  height: .875rem;
+  width: .5625rem;
+}
+
+.btn-sm.svg-arrow-previous {
+  padding-left: 1.5rem;
+}
+
+.btn-sm.svg-arrow-next {
+  padding-right: 1.5rem;
+}
+
+.btn-sm.svg-arrow-next::after {
+  left: auto;
+  right: .5rem;
+}
+
+.svg-avatar {
+  left: -1.25rem;
+  right: 0;
+  top: -2px;
+}

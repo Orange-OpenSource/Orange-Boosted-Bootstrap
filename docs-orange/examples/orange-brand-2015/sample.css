@@ -109,3 +109,11 @@ footer {
   max-width: 100%;
   height: auto;
 }
+
+.nav-link.svg-search,
+.nav-link.svg-avatar,
+.nav-link.svg-search::after,
+.nav-link.svg-avatar::after {
+    width: 1.875rem;
+    height: 1.875rem;
+}

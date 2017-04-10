@@ -52,13 +52,21 @@
         padding-left: .625rem;
       }
 
-      // > th {
-      //   font-size: $font-size-base;
-      // }
-
       [class^="icon-"],
       [class*=" icon-"] {
         font-size: 1.8125rem;
+      }
+
+      [class^="svg-"] {
+        display: block;
+        width: 1.8125rem;
+        height: 1.8125rem;
+        margin: 0 auto;
+      }
+
+      [class^="svg-"]::after {
+        width: 1.8125rem;
+        height: 1.8125rem;
       }
     }
   }
@@ -114,10 +122,6 @@
         vertical-align: middle;
       }
 
-      span {
-        margin-right: .375rem;
-      }
-
       img {
         width: 1.875rem;
         height: 1.875rem;
@@ -126,6 +130,7 @@
 
       [class^="icon-"] {
         width: 1.875rem;
+        margin-right: .375rem;
         font-size: 1.8125rem;
         line-height: 0;
         vertical-align: middle;

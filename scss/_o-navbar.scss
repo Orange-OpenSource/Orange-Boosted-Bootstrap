@@ -99,6 +99,18 @@
         font-size: 1.5rem;
         font-weight: normal;
       }
+
+      &[class*="svg-"],
+      &[class*="svg-"]::after {
+        height: 1.875rem;
+        width: 1.875rem;
+      }
+    }
+
+    .nav-link:not(.icon)[class*="svg-"]::after {
+      left: auto;
+      right: -1.875rem;
+      top: -.0625rem;
     }
 
     &.show .dropdown-toggle::after {
@@ -222,6 +234,12 @@
         font-size: $font-size-h6;
         font-weight: normal;
       }
+
+      &[class*="svg-"],
+      &[class*="svg-"]::after {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
     }
 
     .dropdown-menu {
@@ -312,21 +330,25 @@
           }
 
           .navbar-toggler:hover {
-            .svg-menu::after {
-              background-image: $svg-menu-hover;
+            .svg-menu {
+              @include svg-menu("000");
+            }
+          }
+
+          .navbar-toggler:focus {
+            outline: 0;
+
+            .svg-menu {
+              @include svg-menu("000");
             }
           }
 
           .navbar-toggler:active {
             color: #fff;
             background-color: $brand-primary;
-          }
 
-          .navbar-toggler:focus {
-            outline: 0;
-
-            .svg-menu::after {
-              background-image: $svg-menu-hover;
+            .svg-menu {
+              @include svg-menu("fff");
             }
           }
 

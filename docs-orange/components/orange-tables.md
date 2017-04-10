@@ -200,15 +200,15 @@ In addition use `.has-icon` to specify the table is using icons and thumbnails t
                 <span class="sr-only">info</span>
             </td>
             <td>
-                <span class="icon-tick" style="color: #32C832;"></span>
+                <span class="svg-tick"></span>
                 <span class="sr-only">checked</span>
             </td>
             <td>
-                <span class="icon-tick" style="color: #32C832;"></span>
+                <span class="svg-tick"></span>
                 <span class="sr-only">checked</span>
             </td>
             <td>
-                <span class="icon-tick" style="color: #32C832;"></span>
+                <span class="svg-tick"></span>
                 <span class="sr-only">checked</span>
             </td>
         </tr>

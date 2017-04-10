@@ -73,7 +73,10 @@ footer a {
     color: #F16E00;
 }
 
-
+.svg-avatar::after {
+  left: 1.25rem;
+  top: -2px;
+}
 
 @media (max-width: 767px) {
   .navbar .btn{
