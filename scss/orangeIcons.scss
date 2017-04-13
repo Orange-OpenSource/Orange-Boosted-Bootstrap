@@ -2751,76 +2751,76 @@
 }
 
 .svg-delete {
-  @include svg-delete("fff");
+  @include svg-delete("#fff");
 }
 
 .svg-checkbox-tick {
-  @include svg-checkbox-tick("fff");
+  @include svg-checkbox-tick("#fff");
 }
 
 .svg-warning-circle {
-  @include svg-warning-circle("527EDB");
+  @include svg-warning-circle($brand-info);
 }
 
 .svg-menu {
-  @include svg-menu("fff");
+  @include svg-menu("#fff");
 }
 
 .svg-menu:hover {
-  @include svg-menu("000");
+  @include svg-menu("#000");
 }
 
 .svg-tick {
-  @include svg-tick("32C832");
+  @include svg-tick($brand-success);
 }
 
 .svg-arrow-previous {
-  @include svg-arrow-previous("000");
+  @include svg-arrow-previous("#000");
 }
 
 .svg-arrow-previous:hover,
 .svg-arrow-previous:focus,
 .svg-arrow-previous:active, {
-  @include svg-arrow-previous("fff");
+  @include svg-arrow-previous("#fff");
 }
 
 .svg-arrow-next {
-  @include svg-arrow-next("000");
+  @include svg-arrow-next("#000");
 }
 
 .svg-arrow-next.btn-primary {
-  @include svg-arrow-next("fff");
+  @include svg-arrow-next("#fff");
 }
 
 .svg-arrow-next.btn-primary:active {
-  @include svg-arrow-next("000");
+  @include svg-arrow-next("#000");
 }
 
 .svg-settings {
-  @include svg-settings("fff");
+  @include svg-settings("#fff");
 }
 
 .svg-settings:hover,
 .svg-settings:focus {
-  @include svg-settings("f16e00");
+  @include svg-settings($brand-primary);
 }
 
 .svg-search {
-  @include svg-search("fff");
+  @include svg-search("#fff");
 }
 
 .svg-search:hover {
-  @include svg-search("f16e00");
+  @include svg-search($brand-primary);
 }
 
 .svg-avatar {
-  @include svg-avatar("fff");
+  @include svg-avatar("#fff");
 }
 
 .svg-avatar:hover {
-  @include svg-avatar("f16e00");
+  @include svg-avatar($brand-primary);
 }
 
 .svg-buy {
-  @include svg-buy("fff");
+  @include svg-buy("#fff");
 }
