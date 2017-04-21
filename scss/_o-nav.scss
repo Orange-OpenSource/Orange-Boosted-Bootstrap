@@ -52,6 +52,20 @@
       background-color: transparent;
     }
   }
+
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+
+    .nav-item {
+      margin-bottom: 0;
+
+      .nav-link {
+        border: 0;
+        padding: .625rem .625rem .625rem 1.25rem;
+      }
+    }
+  }
 }
 
 // Pills
@@ -98,6 +112,29 @@
     }
 
     font-weight: bold;
+  }
+
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+
+    .nav-item {
+      margin: 0;
+
+      .nav-link {
+        display: block;
+        border: 0;
+        margin: 0;
+        padding: .625rem .625rem .625rem 1.25rem;
+        color: #000;
+        background: #fff;
+      }
+
+      .nav-link:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
   }
 }
 

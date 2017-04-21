@@ -55,6 +55,7 @@
   }
 
   .navbar-nav {
+    flex-wrap: wrap;
     align-items: flex-end;
   }
 
@@ -146,6 +147,24 @@
       top: 2rem;
       right: -.75rem;
       left: auto;
+
+      .nav-item {
+        margin: 0;
+
+        .nav-link {
+          display: block;
+          border: 0;
+          margin: 0;
+          padding: .625rem .625rem .625rem 1.25rem;
+          color: #000;
+          background: #fff;
+        }
+
+        .nav-link:hover {
+          color: #fff;
+          background: #000;
+        }
+      }
     }
   }
 

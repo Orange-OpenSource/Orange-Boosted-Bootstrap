@@ -87,6 +87,7 @@ module.exports = function (grunt) {
           /* Boosted mod */
           'js/dist/o-navbar.js'   : 'js/src/o-navbar.js',
           'js/dist/o-megamenu.js' : 'js/src/o-megamenu.js',
+          'js/dist/o-priority-nav.js' : 'js/src/o-priority-nav.js',
           'js/dist/o-switch.js'   : 'js/src/o-switch.js',
           'js/dist/o-scroll-up.js': 'js/src/o-scroll-up.js',
           /* end mod */
@@ -137,6 +138,7 @@ module.exports = function (grunt) {
           /* Boosted mod */
           'js/src/o-navbar.js',
           'js/src/o-megamenu.js',
+          'js/src/o-priority-nav.js',
           'js/src/o-switch.js',
           'js/src/o-scroll-up.js',
           /* end mod */

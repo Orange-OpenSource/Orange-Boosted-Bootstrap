@@ -55,7 +55,9 @@ const Tab = (($) => {
     LIST                  : 'ul:not(.dropdown-menu), ol:not(.dropdown-menu), nav:not(.dropdown-menu)',
     FADE_CHILD            : '> .nav-item .fade, > .fade',
     ACTIVE                : '.active',
-    ACTIVE_CHILD          : '> .nav-item > .active, > .active',
+    // Boosted mod
+    ACTIVE_CHILD          : '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active',
+    // end mod
     DATA_TOGGLE           : '[data-toggle="tab"], [data-toggle="pill"]',
     DROPDOWN_TOGGLE       : '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD : '> .dropdown-menu .active'
