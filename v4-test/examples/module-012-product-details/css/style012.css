@@ -27,6 +27,20 @@ header .btn {
   float: left;
 }
 
+.btn.svg-arrow-previous {
+  padding-left: 2rem;
+  -webkit-transition:none;
+  -o-transition:none;
+  transition: none;
+}
+
+.btn.svg-arrow-previous::after {
+  height: .875rem;
+  width: .5625rem;
+  top: .6875rem;
+  left: .8125rem;
+}
+
 /* shop page */
 
 main {

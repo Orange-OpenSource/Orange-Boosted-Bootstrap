@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Boosted v4.0.0-alpha.6 (https://boosted.orange.com)
+ * Boosted v4.0.0-alpha.6.1 (http://boosted.orange.com)
  * Copyright 2014-2017 The Boosted Authors
  * Copyright 2014-2017 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
@@ -2953,6 +2953,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border: 2px solid transparent;
   padding: 0.625rem 1.125rem;
   font-size: 1rem;
+}
+
+.btn, .btn::after {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -11161,10 +11164,21 @@ fieldset[disabled] a.btn {
   opacity: 0;
 }
 
+.o-switch .toggle .on.svg-checkbox-tick::after {
+  top: .1875rem;
+  left: -.125rem;
+}
+
 .o-switch .toggle .off {
   display: block;
   text-align: right;
   opacity: 1;
+}
+
+.o-switch .toggle .off.svg-delete::after {
+  top: .1875rem;
+  right: -.125rem;
+  left: auto;
 }
 
 .o-switch .toggle::before {
@@ -11532,14 +11546,14 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   border: 2px solid #666;
 }
 
-.custom-control-input:checked ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
   -webkit-background-size: 1rem 1rem;
           background-size: 1rem;
   border: 0;
 }
 
-.custom-control-input:active ~ .custom-control-indicator,
-.custom-control-input:indeterminate ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:active ~ .custom-control-indicator,
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
   border: 0;
 }
 
@@ -11548,7 +11562,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   border: 2px solid #ccc;
 }
 
-.custom-control-input:checked:disabled ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-indicator {
   background-color: #ccc;
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14%202l-8%208-3-3-2%202%205%205L16%204l-2-2z%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E");
   border: 0;
@@ -11941,6 +11955,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .navbar .navbar-nav {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -11989,6 +12006,17 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   font-weight: normal;
 }
 
+.navbar .nav-item .nav-link.icon[class*="svg-"], .navbar .nav-item .nav-link.icon[class*="svg-"]::after {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+.navbar .nav-item .nav-link:not(.icon)[class*="svg-"]::after {
+  left: auto;
+  right: -1.875rem;
+  top: -.0625rem;
+}
+
 .navbar .nav-item.show .dropdown-toggle::after {
   -webkit-transform: rotateZ(180deg);
        -o-transform: rotateZ(180deg);
@@ -12024,6 +12052,24 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   top: 2rem;
   right: -.75rem;
   left: auto;
+}
+
+.navbar .nav-item .dropdown-menu .nav-item {
+  margin: 0;
+}
+
+.navbar .nav-item .dropdown-menu .nav-item .nav-link {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: .625rem .625rem .625rem 1.25rem;
+  color: #000;
+  background: #fff;
+}
+
+.navbar .nav-item .dropdown-menu .nav-item .nav-link:hover {
+  color: #fff;
+  background: #000;
 }
 
 .navbar .nav-item + .nav-item {
@@ -12109,6 +12155,11 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   font-weight: normal;
 }
 
+.navbar.supra .nav-item .nav-link.icon[class*="svg-"], .navbar.supra .nav-item .nav-link.icon[class*="svg-"]::after {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
 .navbar.supra .nav-item .dropdown-menu {
   top: 2.5rem;
   right: 0;
@@ -12174,12 +12225,26 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     color: #000;
     background-color: #fff;
   }
+  .navbar-toggleable .navbar-toggler .svg-menu, .navbar-toggleable.minimized .navbar-toggler .svg-menu {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .navbar-toggleable .navbar-toggler:hover .svg-menu::after, .navbar-toggleable.minimized .navbar-toggler:hover .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
+  .navbar-toggleable .navbar-toggler:focus, .navbar-toggleable.minimized .navbar-toggler:focus {
+    outline: 0;
+  }
+  .navbar-toggleable .navbar-toggler:focus .svg-menu::after, .navbar-toggleable.minimized .navbar-toggler:focus .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
   .navbar-toggleable .navbar-toggler:active, .navbar-toggleable.minimized .navbar-toggler:active {
     color: #fff;
     background-color: #f16e00;
   }
-  .navbar-toggleable .navbar-toggler:focus, .navbar-toggleable.minimized .navbar-toggler:focus {
-    outline: 0;
+  .navbar-toggleable .navbar-toggler:active .svg-menu::after, .navbar-toggleable.minimized .navbar-toggler:active .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='fff'/%3E%3C/svg%3E");
   }
   .navbar-toggleable .nav-item, .navbar-toggleable.minimized .nav-item {
     margin-left: 0;
@@ -12423,12 +12488,26 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     color: #000;
     background-color: #fff;
   }
+  .navbar-toggleable-sm .navbar-toggler .svg-menu, .navbar-toggleable-sm.minimized .navbar-toggler .svg-menu {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .navbar-toggleable-sm .navbar-toggler:hover .svg-menu::after, .navbar-toggleable-sm.minimized .navbar-toggler:hover .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
+  .navbar-toggleable-sm .navbar-toggler:focus, .navbar-toggleable-sm.minimized .navbar-toggler:focus {
+    outline: 0;
+  }
+  .navbar-toggleable-sm .navbar-toggler:focus .svg-menu::after, .navbar-toggleable-sm.minimized .navbar-toggler:focus .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
   .navbar-toggleable-sm .navbar-toggler:active, .navbar-toggleable-sm.minimized .navbar-toggler:active {
     color: #fff;
     background-color: #f16e00;
   }
-  .navbar-toggleable-sm .navbar-toggler:focus, .navbar-toggleable-sm.minimized .navbar-toggler:focus {
-    outline: 0;
+  .navbar-toggleable-sm .navbar-toggler:active .svg-menu::after, .navbar-toggleable-sm.minimized .navbar-toggler:active .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='fff'/%3E%3C/svg%3E");
   }
   .navbar-toggleable-sm .nav-item, .navbar-toggleable-sm.minimized .nav-item {
     margin-left: 0;
@@ -12672,12 +12751,26 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     color: #000;
     background-color: #fff;
   }
+  .navbar-toggleable-md .navbar-toggler .svg-menu, .navbar-toggleable-md.minimized .navbar-toggler .svg-menu {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .navbar-toggleable-md .navbar-toggler:hover .svg-menu::after, .navbar-toggleable-md.minimized .navbar-toggler:hover .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
+  .navbar-toggleable-md .navbar-toggler:focus, .navbar-toggleable-md.minimized .navbar-toggler:focus {
+    outline: 0;
+  }
+  .navbar-toggleable-md .navbar-toggler:focus .svg-menu::after, .navbar-toggleable-md.minimized .navbar-toggler:focus .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
   .navbar-toggleable-md .navbar-toggler:active, .navbar-toggleable-md.minimized .navbar-toggler:active {
     color: #fff;
     background-color: #f16e00;
   }
-  .navbar-toggleable-md .navbar-toggler:focus, .navbar-toggleable-md.minimized .navbar-toggler:focus {
-    outline: 0;
+  .navbar-toggleable-md .navbar-toggler:active .svg-menu::after, .navbar-toggleable-md.minimized .navbar-toggler:active .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='fff'/%3E%3C/svg%3E");
   }
   .navbar-toggleable-md .nav-item, .navbar-toggleable-md.minimized .nav-item {
     margin-left: 0;
@@ -12921,12 +13014,26 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     color: #000;
     background-color: #fff;
   }
+  .navbar-toggleable-lg .navbar-toggler .svg-menu, .navbar-toggleable-lg.minimized .navbar-toggler .svg-menu {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .navbar-toggleable-lg .navbar-toggler:hover .svg-menu::after, .navbar-toggleable-lg.minimized .navbar-toggler:hover .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
+  .navbar-toggleable-lg .navbar-toggler:focus, .navbar-toggleable-lg.minimized .navbar-toggler:focus {
+    outline: 0;
+  }
+  .navbar-toggleable-lg .navbar-toggler:focus .svg-menu::after, .navbar-toggleable-lg.minimized .navbar-toggler:focus .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
   .navbar-toggleable-lg .navbar-toggler:active, .navbar-toggleable-lg.minimized .navbar-toggler:active {
     color: #fff;
     background-color: #f16e00;
   }
-  .navbar-toggleable-lg .navbar-toggler:focus, .navbar-toggleable-lg.minimized .navbar-toggler:focus {
-    outline: 0;
+  .navbar-toggleable-lg .navbar-toggler:active .svg-menu::after, .navbar-toggleable-lg.minimized .navbar-toggler:active .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='fff'/%3E%3C/svg%3E");
   }
   .navbar-toggleable-lg .nav-item, .navbar-toggleable-lg.minimized .nav-item {
     margin-left: 0;
@@ -13170,12 +13277,26 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     color: #000;
     background-color: #fff;
   }
+  .navbar-toggleable-xl .navbar-toggler .svg-menu, .navbar-toggleable-xl.minimized .navbar-toggler .svg-menu {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .navbar-toggleable-xl .navbar-toggler:hover .svg-menu::after, .navbar-toggleable-xl.minimized .navbar-toggler:hover .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
+  .navbar-toggleable-xl .navbar-toggler:focus, .navbar-toggleable-xl.minimized .navbar-toggler:focus {
+    outline: 0;
+  }
+  .navbar-toggleable-xl .navbar-toggler:focus .svg-menu::after, .navbar-toggleable-xl.minimized .navbar-toggler:focus .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+  }
   .navbar-toggleable-xl .navbar-toggler:active, .navbar-toggleable-xl.minimized .navbar-toggler:active {
     color: #fff;
     background-color: #f16e00;
   }
-  .navbar-toggleable-xl .navbar-toggler:focus, .navbar-toggleable-xl.minimized .navbar-toggler:focus {
-    outline: 0;
+  .navbar-toggleable-xl .navbar-toggler:active .svg-menu::after, .navbar-toggleable-xl.minimized .navbar-toggler:active .svg-menu::after {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='fff'/%3E%3C/svg%3E");
   }
   .navbar-toggleable-xl .nav-item, .navbar-toggleable-xl.minimized .nav-item {
     margin-left: 0;
@@ -13428,13 +13549,31 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   background-color: #fff;
 }
 
+.navbar-toggleable-xxl .navbar-toggler .svg-menu, .navbar-toggleable-xxl.minimized .navbar-toggler .svg-menu {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.navbar-toggleable-xxl .navbar-toggler:hover .svg-menu::after, .navbar-toggleable-xxl.minimized .navbar-toggler:hover .svg-menu::after {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+}
+
+.navbar-toggleable-xxl .navbar-toggler:focus, .navbar-toggleable-xxl.minimized .navbar-toggler:focus {
+  outline: 0;
+}
+
+.navbar-toggleable-xxl .navbar-toggler:focus .svg-menu::after, .navbar-toggleable-xxl.minimized .navbar-toggler:focus .svg-menu::after {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='000'/%3E%3C/svg%3E");
+}
+
 .navbar-toggleable-xxl .navbar-toggler:active, .navbar-toggleable-xxl.minimized .navbar-toggler:active {
   color: #fff;
   background-color: #f16e00;
 }
 
-.navbar-toggleable-xxl .navbar-toggler:focus, .navbar-toggleable-xxl.minimized .navbar-toggler:focus {
-  outline: 0;
+.navbar-toggleable-xxl .navbar-toggler:active .svg-menu::after, .navbar-toggleable-xxl.minimized .navbar-toggler:active .svg-menu::after {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250'%3E%3Cpath d='M130.5 251.25c-13.375 2.625-26 13-32.25 26.125-3.375 7.375-3.875 9.5-3.875 19.5 0 10.25.375 12 4.125 19.625 5.25 10.625 12.375 17.75 22.75 22.75l8.125 3.875h991.25l8.125-3.875c10.25-5 18.125-12.75 22.75-22.5 11.125-23.75 1.25-50.75-22.75-62.25l-8.125-3.875-492.5-.125c-270.875-.125-494.875.25-497.625.75zM128.625 564.25c-13 3.5-23.5 12.25-30.125 25.125-3.625 6.75-4 8.625-4 19.375-.125 10.75.25 12.625 3.75 20 4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-4c9.125-4.5 11.25-6.125 17.625-14.125 6.75-8.375 9.25-16.25 9.25-28.75 0-9.25-.5-11.625-3.875-18.75-4.875-10.375-12.625-18.125-23-23l-8.125-3.875-493.125-.25c-388-.125-494.375.125-498.875 1.375zM128.125 876.75c-13.875 4.375-23.625 12.875-29.875 25.75-3.375 7.25-3.875 9.375-3.875 19.375s.5 12.125 3.875 19.375c4.875 10.25 12.625 18 23 23l8.125 3.875h991.25l8.125-3.875c10.375-4.875 18.125-12.625 23-23 3.5-7.25 3.875-9.375 3.875-19.375s-.375-12.125-3.875-19.375c-4.875-10.25-12.625-18-23-23l-8.125-3.875-493.75-.25c-396.625-.125-494.75.125-498.75 1.375z' fill='fff'/%3E%3C/svg%3E");
 }
 
 .navbar-toggleable-xxl .nav-item, .navbar-toggleable-xxl.minimized .nav-item {
@@ -13675,15 +13814,42 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   margin-left: 0;
 }
 
-.o-nav-local .nav-link {
+.o-nav-local .nav-link,
+.o-nav-local .dropdown-toggle {
+  display: inline-block;
   padding: .9375rem 0 1.0625rem;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1;
 }
 
-.o-nav-local .nav-link.active {
+.o-nav-local .nav-link.active,
+.o-nav-local .dropdown-toggle.active {
   color: #f16e00;
+}
+
+.o-nav-local .dropdown-toggle.show {
+  color: #000;
+}
+
+.o-nav-local .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.o-nav-local .dropdown-menu .nav-item,
+.o-nav-local .dropdown-menu .nav-item + .nav-item {
+  margin: 0;
+}
+
+.o-nav-local .dropdown-menu .nav-link {
+  display: block;
+  padding: .625rem .625rem .625rem 1.25rem;
+}
+
+.o-nav-local .dropdown-menu .nav-link:hover {
+  color: #fff;
+  background: #000;
 }
 
 .o-nav-local.inverse {
@@ -13711,71 +13877,11 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   color: #f16e00;
 }
 
-@media (max-width: 767px) {
-  .o-nav-local .local-select {
-    position: relative;
-    width: 100%;
-  }
-  .o-nav-local .local-select::after {
-    position: absolute;
-    top: 1rem;
-    right: .625rem;
-    padding-left: .375rem;
-    font-family: "icon-orange";
-    font-size: inherit;
-    color: #000;
-    content: "\e93c";
-  }
-  .o-nav-local .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    width: 100%;
-    margin-top: -1px;
-    background-color: #fff;
-    border: 2px solid #ccc;
-  }
-  .o-nav-local .nav.show {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .o-nav-local .nav .nav-item {
-    margin-left: 0;
-  }
-  .o-nav-local .nav .nav-item .nav-link {
-    width: 100%;
-  }
-  .o-nav-local .nav .nav-item .nav-link:hover {
-    color: #fff;
-    background-color: #f16e00;
-  }
-  .o-nav-local .nav .nav-item .nav-link:focus {
-    color: #000;
-    background-color: #fff;
-  }
-  .o-nav-local.inverse .local-select::after {
-    color: #fff;
-  }
-  .o-nav-local.inverse .nav-item .nav-link:focus {
-    color: #f16e00;
-    background-color: #000;
-  }
-}
-
 .o-accordion .card {
   margin-bottom: 0;
   border: 0;
-  border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .o-accordion .card ~ .card {
@@ -13799,7 +13905,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 .o-accordion .card-header a {
   position: relative;
   display: block;
-  padding: 1.0625rem 0;
+  padding: 1.0625rem 2.125rem 1.0625rem 0;
 }
 
 .o-accordion .card-header a::after {
@@ -13825,8 +13931,8 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 767px) {
   .o-accordion .card {
-    border-bottom-width: 2px;
     border-top: 2px;
+    border-bottom-width: 2px;
   }
   .o-accordion .card ~ .card {
     border-top: 0;
@@ -13868,6 +13974,22 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 .table > tfoot > tr [class^="icon-"],
 .table > tfoot > tr [class*=" icon-"] {
   font-size: 1.8125rem;
+}
+
+.table > thead > tr [class^="svg-"],
+.table > tbody > tr [class^="svg-"],
+.table > tfoot > tr [class^="svg-"] {
+  display: block;
+  width: 1.8125rem;
+  height: 1.8125rem;
+  margin: 0 auto;
+}
+
+.table > thead > tr [class^="svg-"]::after,
+.table > tbody > tr [class^="svg-"]::after,
+.table > tfoot > tr [class^="svg-"]::after {
+  width: 1.8125rem;
+  height: 1.8125rem;
 }
 
 .table thead > tr {
@@ -13916,11 +14038,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   vertical-align: middle;
 }
 
-.table.has-icon tr > td span,
-.table.has-icon tr > th span {
-  margin-right: .375rem;
-}
-
 .table.has-icon tr > td img,
 .table.has-icon tr > th img {
   width: 1.875rem;
@@ -13931,6 +14048,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 .table.has-icon tr > td [class^="icon-"],
 .table.has-icon tr > th [class^="icon-"] {
   width: 1.875rem;
+  margin-right: .375rem;
   font-size: 1.8125rem;
   line-height: 0;
   vertical-align: middle;
@@ -14102,9 +14220,9 @@ caption {
 .tablesorter th.tablesorter-headerDesc .tablesorter-header-inner::after {
   position: absolute;
   top: 1.125rem;
-  margin-left: .625rem;
   width: .875rem;
   height: .4375rem;
+  margin-left: .625rem;
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
   -webkit-transform: rotate(180deg);
@@ -14115,9 +14233,9 @@ caption {
 .tablesorter th.tablesorter-headerAsc .tablesorter-header-inner::after {
   position: absolute;
   top: 1.125rem;
-  margin-left: .625rem;
   width: .875rem;
   height: .4375rem;
+  margin-left: .625rem;
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
 }
@@ -14125,9 +14243,9 @@ caption {
 .tablesorter th.tablesorter-headerUnSorted:focus .tablesorter-header-inner::after, .tablesorter th.tablesorter-headerUnSorted:hover .tablesorter-header-inner::after {
   position: absolute;
   top: .75rem;
-  margin-left: .625rem;
   width: .875rem;
   height: 1.0625rem;
+  margin-left: .625rem;
   content: "";
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%2017%22%3E%3Cpath%20d%3D%22M%207%2C17%200%2C10%20h%2014%20l%20-7%2C7%20z%22%2F%3E%3Cpath%20d%3D%22M%207%2C0%2014%2C7%200%2C7%207%2C0%20z%22%2F%3E%3C%2Fsvg%3E");
 }
@@ -14238,6 +14356,19 @@ caption {
   font-size: 2.875rem;
 }
 
+.modal .card-block.has-info .card-icon [class^="svg-"],
+.modal .card.card-block.has-info .card-icon [class^="svg-"] {
+  display: block;
+  width: 2.875rem;
+  height: 2.875rem;
+}
+
+.modal .card-block.has-info .card-icon [class^="svg-"]::after,
+.modal .card.card-block.has-info .card-icon [class^="svg-"]::after {
+  width: 2.875rem;
+  height: 2.875rem;
+}
+
 .modal .card-block.has-info.has-info .card-icon,
 .modal .card.card-block.has-info.has-info .card-icon {
   color: #527edb;
@@ -14269,6 +14400,18 @@ caption {
   font-size: 2rem;
 }
 
+.modal .modal-sm .card-block.has-info .card-icon [class^="svg-"],
+.modal .modal-sm .card.card-block.has-info .card-icon [class^="svg-"] {
+  width: 2rem;
+  height: 2rem;
+}
+
+.modal .modal-sm .card-block.has-info .card-icon [class^="svg-"]::after,
+.modal .modal-sm .card.card-block.has-info .card-icon [class^="svg-"]::after {
+  width: 2rem;
+  height: 2rem;
+}
+
 .modal .modal-sm .card-block.has-info .card-title,
 .modal .modal-sm .card.card-block.has-info .card-title {
   margin-left: 2.5rem;
@@ -14289,6 +14432,19 @@ caption {
 .modal .modal-sm .card-block.has-info.on-top span[class^="icon-"],
 .modal .modal-sm .card.card-block.has-info.on-top span[class^="icon-"] {
   font-size: 4rem;
+}
+
+.modal .modal-sm .card-block.has-info.on-top span[class^="svg-"],
+.modal .modal-sm .card.card-block.has-info.on-top span[class^="svg-"] {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+}
+
+.modal .modal-sm .card-block.has-info.on-top span[class^="svg-"]::after,
+.modal .modal-sm .card.card-block.has-info.on-top span[class^="svg-"]::after {
+  width: 4rem;
+  height: 4rem;
 }
 
 .modal .modal-sm .card-block.has-info.on-top .card-title,
@@ -14356,6 +14512,20 @@ caption {
   background-color: transparent;
 }
 
+.nav-tabs .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.nav-tabs .dropdown-menu .nav-item {
+  margin-bottom: 0;
+}
+
+.nav-tabs .dropdown-menu .nav-item .nav-link {
+  border: 0;
+  padding: .625rem .625rem .625rem 1.25rem;
+}
+
 .nav-pills.nav-stacked .nav-item {
   margin: 0;
 }
@@ -14397,6 +14567,29 @@ caption {
 .nav-pills .nav-link:focus.disabled {
   color: #666;
   background-color: transparent;
+}
+
+.nav-pills .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.nav-pills .dropdown-menu .nav-item {
+  margin: 0;
+}
+
+.nav-pills .dropdown-menu .nav-item .nav-link {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: .625rem .625rem .625rem 1.25rem;
+  color: #000;
+  background: #fff;
+}
+
+.nav-pills .dropdown-menu .nav-item .nav-link:hover {
+  color: #fff;
+  background: #000;
 }
 
 .tab-content {
@@ -14857,6 +15050,50 @@ caption {
   background-color: #f16e00;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  width: auto;
+  height: auto;
+  text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  cursor: pointer;
+  background-image: none;
+  -webkit-background-size: 0 0;
+          background-size: 0;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-family: "icon-orange";
+  font-size: 1.875rem;
+  content: "\e93f";
+}
+
+.swiper-button-next::before {
+  content: "\e93e";
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  width: .625rem;
+  height: .625rem;
+  border: 1px solid #fff;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f16e00;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
 .caret {
   border-top-style: solid;
 }
@@ -14865,21 +15102,17 @@ caption {
   border-radius: 0.25rem;
 }
 
-.nav .show > a, .nav .show > a:hover, .nav .show > a:focus {
-  color: #fff;
-}
-
 div.active:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 a:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 .close:hover,
 .close:focus {
-  outline: dotted 1px #000;
+  outline: dotted 1px;
 }
 
 .progress.progress-default[value]::-webkit-progress-value {
