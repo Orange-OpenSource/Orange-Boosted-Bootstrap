@@ -413,18 +413,24 @@ MegaMenu._jQueryInterface=function _jQueryInterface(config){return this.each(fun
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
-   */var PriorityNav=function(){function PriorityNav(element,config){_classCallCheck(this,PriorityNav);this._element=element;this._config=config;this._$menu=$(element);this._$allNavElements=this._$menu.find(Selector.NAV_ELEMENTS);this._bindUIActions();this._setupMenu();}// getters
+   */var PriorityNav=function(){function PriorityNav(element,config){_classCallCheck(this,PriorityNav);this._element=element;this._config=config;if($(element).is('ul')){this._$menu=$(element);}else{this._$menu=$(element).find('ul').first();}this._$allNavElements=this._$menu.find(Selector.NAV_ELEMENTS);this._bindUIActions();this._setupMenu();}// getters
 // public
 // private
 PriorityNav.prototype._setupMenu=function _setupMenu(){var $allNavElements=this._$allNavElements;// Checking top position of first item (sometimes changes)
 var firstPos=this._$menu.find(Selector.FIRST_ELEMENT).position();// Empty collection in which to put menu items to move
 var $wrappedElements=$();// Used to snag the previous menu item in addition to ones that have wrapped
 var first=true;// move priority element out of wrap
-var $priorityEl=this._$menu.find(Selector.PRIORITY_ELEMENT);if($priorityEl.length>0&&$priorityEl.position().top!==firstPos.top){while($priorityEl.position().top!==firstPos.top){$priorityEl.insertBefore($priorityEl.prev());}}// Loop through all the nav items...
+// const $priorityEl = this._$menu.find(Selector.PRIORITY_ELEMENT)
+// if ($priorityEl.length > 0 && $priorityEl.position().top !== firstPos.top) {
+//   while ($priorityEl.position().top !== firstPos.top) {
+//     $priorityEl.insertBefore($priorityEl.prev())
+//   }
+// }
+// Loop through all the nav items...
 this._$allNavElements.each(function(i){var $elm=$(this);// ...in which to find wrapped elements
 var pos=$elm.position();if(pos.top!==firstPos.top){// If element is wrapped, add it to set
 $wrappedElements=$wrappedElements.add($elm);// Add the previous one too, if first
-if(first){$wrappedElements=$wrappedElements.add($allNavElements.eq(i-1));first=false;}}});if($wrappedElements.length){// Clone set before altering
+if(first){$wrappedElements=$wrappedElements.add($allNavElements.eq(i-1));first=false;}}});if($wrappedElements.length>1){// Clone set before altering
 var newSet=$wrappedElements.clone();// Hide ones that we're moving
 $wrappedElements.addClass(ClassName.HIDE);// Add wrapped elements to dropdown
 this._$menu.find('.overflow-nav-list').append(newSet);// Show new menu

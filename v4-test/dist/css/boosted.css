@@ -13816,6 +13816,9 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 .o-nav-local ul + ul {
   margin-left: 1rem;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 
 .o-nav-local .nav-item + .nav-item {

@@ -13806,6 +13806,21 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   border-top: 1px solid #ccc;
 }
 
+.o-nav-local > .container,
+.o-nav-local > .container-fluid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.o-nav-local ul + ul {
+  margin-right: 1rem;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
 .o-nav-local .nav-item + .nav-item {
   margin-right: 1rem;
 }
@@ -15145,6 +15160,19 @@ a:focus {
 .well {
   font-weight: bold;
 }
+.icon-arrow-next::before {
+  content: "\ea53";
+}
+
+.icon-arrow-previous::before {
+  content: "\ea52";
+}
+
+.stepbar-item::after {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=o-rtl.css.map */
 .icon-arrow-next::before {
   content: "\ea53";
 }
