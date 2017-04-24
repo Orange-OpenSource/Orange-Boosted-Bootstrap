@@ -13806,6 +13806,18 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   border-top: 1px solid #ccc;
 }
 
+.o-nav-local > .container,
+.o-nav-local > .container-fluid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.o-nav-local ul + ul {
+  margin-left: 1rem;
+}
+
 .o-nav-local .nav-item + .nav-item {
   margin-left: 1rem;
 }
