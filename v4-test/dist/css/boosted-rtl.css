@@ -13838,6 +13838,11 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   line-height: 1;
 }
 
+.o-nav-local .nav-link:focus,
+.o-nav-local .dropdown-toggle:focus {
+  outline: 1px dotted #000;
+}
+
 .o-nav-local .nav-link.active,
 .o-nav-local .dropdown-toggle.active {
   color: #f16e00;
@@ -14511,7 +14516,7 @@ caption {
   background-color: #fff;
 }
 
-.nav-tabs .nav-item .nav-link:focus {
+.nav-tabs .nav-item .nav-link:focus, .nav-tabs .nav-item .nav-link.dropdown-toggle:focus {
   outline-width: 1px;
   outline-style: dotted;
   outline-offset: -6px;
@@ -14582,6 +14587,12 @@ caption {
 .nav-pills .nav-link:focus.disabled {
   color: #666;
   background-color: transparent;
+}
+
+.nav-pills .nav-link:focus, .nav-pills .nav-link.dropdown-toggle:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-offset: -6px;
 }
 
 .nav-pills .dropdown-menu {
@@ -15160,19 +15171,6 @@ a:focus {
 .well {
   font-weight: bold;
 }
-.icon-arrow-next::before {
-  content: "\ea53";
-}
-
-.icon-arrow-previous::before {
-  content: "\ea52";
-}
-
-.stepbar-item::after {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-/*# sourceMappingURL=o-rtl.css.map */
 .icon-arrow-next::before {
   content: "\ea53";
 }

@@ -164,7 +164,7 @@ var ARROW_UP_KEYCODE=38;// KeyboardEvent.which value for up arrow key
 var ARROW_DOWN_KEYCODE=40;// KeyboardEvent.which value for down arrow key
 var RIGHT_MOUSE_BUTTON_WHICH=3;// MouseEvent.which value for the right button (assuming a right-handed mouse)
 var REGEXP_KEYDOWN=new RegExp(ARROW_UP_KEYCODE+'|'+ARROW_DOWN_KEYCODE+'|'+ESCAPE_KEYCODE+'|'+SPACE_KEYCODE);var Event={HIDE:'hide'+EVENT_KEY,HIDDEN:'hidden'+EVENT_KEY,SHOW:'show'+EVENT_KEY,SHOWN:'shown'+EVENT_KEY,CLICK:'click'+EVENT_KEY,CLICK_DATA_API:'click'+EVENT_KEY+DATA_API_KEY,FOCUSIN_DATA_API:'focusin'+EVENT_KEY+DATA_API_KEY,KEYDOWN_DATA_API:'keydown'+EVENT_KEY+DATA_API_KEY};var ClassName={BACKDROP:'dropdown-backdrop',DISABLED:'disabled',SHOW:'show'};var Selector={BACKDROP:'.dropdown-backdrop',DATA_TOGGLE:'[data-toggle="dropdown"]',FORM_CHILD:'.dropdown form',ROLE_MENU:'[role="menu"]',ROLE_LISTBOX:'[role="listbox"]',NAVBAR_NAV:'.navbar-nav',// Boosted mod
-FIRST_ITEM_IN_MENU:'.dropdown-menu .dropdown-item:not(.disabled)',// end mod
+FIRST_ITEM_IN_MENU:'.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)',// end mod
 VISIBLE_ITEMS:'[role="menu"] li:not(.disabled) a, '+'[role="listbox"] li:not(.disabled) a'};/**
    * ------------------------------------------------------------------------
    * Class Definition
