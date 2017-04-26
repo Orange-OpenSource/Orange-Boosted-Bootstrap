@@ -409,7 +409,7 @@ MegaMenu._jQueryInterface=function _jQueryInterface(config){return this.each(fun
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
-   */var NAME='prioritynav';var VERSION='4.0.0-alpha.6.1';var DATA_KEY='bs.prioritynav';var JQUERY_NO_CONFLICT=$.fn[NAME];var RESIZE_DURATION=500;var Event={RESIZE:'resize'};var ClassName={PRIORITY:'priority',HIDE:'sr-only'};var Selector={NAV_ELEMENTS:'li:not(\'.overflow-nav\')',FIRST_ELEMENT:'li:first',PRIORITY_ELEMENT:'.priority'};/**
+   */var NAME='prioritynav';var VERSION='4.0.0-alpha.6.1';var DATA_KEY='bs.prioritynav';var JQUERY_NO_CONFLICT=$.fn[NAME];var RESIZE_DURATION=500;var Event={RESIZE:'resize',FOCUS:'focus'};var ClassName={PRIORITY:'priority',HIDE:'sr-only'};var Selector={NAV_ELEMENTS:'li:not(\'.overflow-nav\')',FIRST_ELEMENT:'li:first',PRIORITY_ELEMENT:'.priority'};/**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
@@ -430,13 +430,14 @@ var first=true;// move priority element out of wrap
 this._$allNavElements.each(function(i){var $elm=$(this);// ...in which to find wrapped elements
 var pos=$elm.position();if(pos.top!==firstPos.top){// If element is wrapped, add it to set
 $wrappedElements=$wrappedElements.add($elm);// Add the previous one too, if first
-if(first){$wrappedElements=$wrappedElements.add($allNavElements.eq(i-1));first=false;}}});if($wrappedElements.length>1){// Clone set before altering
+if(first){$wrappedElements=$wrappedElements.add($allNavElements.eq(i-1));first=false;}}});if($wrappedElements.length){// Clone set before altering
 var newSet=$wrappedElements.clone();// Hide ones that we're moving
 $wrappedElements.addClass(ClassName.HIDE);$wrappedElements.find('.nav-link').attr('tabindex',-1);// Add wrapped elements to dropdown
 this._$menu.find('.overflow-nav-list').append(newSet);// Show new menu
 this._$menu.find('.overflow-nav').addClass('show-inline-block');// Make overflow visible again so dropdown can be seen.
-this._$menu.find('.o-nav-local').css('overflow','visible');}//hide menu from AT
-this._$menu.find('.overflow-nav').attr('aria-hidden',true);};PriorityNav.prototype._tearDown=function _tearDown(){this._$menu.find('.overflow-nav-list').empty();this._$menu.find('.overflow-nav').removeClass('show-inline-block');this._$allNavElements.removeClass(ClassName.HIDE);this._$allNavElements.find('.nav-link').attr('tabindex',0);};PriorityNav.prototype._bindUIActions=function _bindUIActions(){var _this26=this;$(window).on(Event.RESIZE,function(){_this26._$menu.addClass('resizing');setTimeout(function(){_this26._tearDown();_this26._setupMenu();_this26._$menu.removeClass('resizing');},RESIZE_DURATION);});this._$menu.find('.overflow-nav .dropdown-toggle').on('focus',function(e){$(e.target).dropdown('toggle');});};// static
+this._$menu.find('.o-nav-local').css('overflow','visible');// Check if menu doesn't overflow after process
+if(this._$menu.find('.overflow-nav').position().top!==firstPos.top){var $item=$(this._element).find('.'+ClassName.HIDE).first().prev();var $itemDuplicate=$item.clone();$item.addClass(ClassName.HIDE);$item.find('.nav-link').attr('tabindex',-1);this._$menu.find('.overflow-nav-list').prepend($itemDuplicate);}}//hide menu from AT
+this._$menu.find('.overflow-nav').attr('aria-hidden',true);};PriorityNav.prototype._tearDown=function _tearDown(){this._$menu.find('.overflow-nav-list').empty();this._$menu.find('.overflow-nav').removeClass('show-inline-block');this._$allNavElements.removeClass(ClassName.HIDE);this._$allNavElements.find('.nav-link').attr('tabindex',0);};PriorityNav.prototype._bindUIActions=function _bindUIActions(){var _this26=this;$(window).on(Event.RESIZE,function(){_this26._$menu.addClass('resizing');setTimeout(function(){_this26._tearDown();_this26._setupMenu();_this26._$menu.removeClass('resizing');},RESIZE_DURATION);});this._$menu.find('.overflow-nav .dropdown-toggle').on(Event.FOCUS,function(e){$(e.target).dropdown('toggle');});};// static
 PriorityNav._jQueryInterface=function _jQueryInterface(config){return this.each(function(){var $element=$(this);var data=$element.data(DATA_KEY);if(!data){data=new PriorityNav(this,config);$element.data(DATA_KEY,data);}if(typeof config!=='undefined'&&config){if(typeof config!=='string'||!/^[.#].*/.test(config)){throw new Error('Selector "'+config+'" is not supported');}}});};_createClass(PriorityNav,null,[{key:'VERSION',get:function get(){return VERSION;}}]);return PriorityNav;}();/**
    * ------------------------------------------------------------------------
    * jQuery
