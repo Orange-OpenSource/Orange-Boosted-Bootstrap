@@ -276,6 +276,7 @@ const Dropdown = (($) => {
   // Boosted mod
   // set default acessibility Attributes
   $(document).ready(($) => {
+    $('.dropdown-toggle').attr('aria-haspopup', true)
     $('.dropdown-menu').attr('role', 'menu')
     $('.dropdown-menu .dropdown-item').attr('role', 'menuitem')
   })
