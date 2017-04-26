@@ -180,7 +180,7 @@ Dropdown._jQueryInterface=function _jQueryInterface(config){return this.each(fun
 index--;}if(event.which===ARROW_DOWN_KEYCODE&&index<items.length-1){// down
 index++;}if(index<0){index=0;}items[index].focus();};_createClass(Dropdown,null,[{key:'VERSION',get:function get(){return VERSION;}}]);return Dropdown;}();// Boosted mod
 // set default acessibility Attributes
-$(document).ready(function($){$('.dropdown-menu').attr('role','menu');$('.dropdown-menu .dropdown-item').attr('role','menuitem');});// end mod
+$(document).ready(function($){$('.dropdown-toggle').attr('aria-haspopup',true);$('.dropdown-menu').attr('role','menu');$('.dropdown-menu .dropdown-item').attr('role','menuitem');});// end mod
 /**
    * ------------------------------------------------------------------------
    * Data Api implementation
@@ -435,7 +435,7 @@ var newSet=$wrappedElements.clone();// Hide ones that we're moving
 $wrappedElements.addClass(ClassName.HIDE);// Add wrapped elements to dropdown
 this._$menu.find('.overflow-nav-list').append(newSet);// Show new menu
 this._$menu.find('.overflow-nav').addClass('show-inline-block');// Make overflow visible again so dropdown can be seen.
-this._$menu.find('.o-nav-local').css('overflow','visible');}};PriorityNav.prototype._tearDown=function _tearDown(){this._$menu.find('.overflow-nav-list').empty();this._$menu.find('.overflow-nav').removeClass('show-inline-block');this._$allNavElements.removeClass(ClassName.HIDE);};PriorityNav.prototype._bindUIActions=function _bindUIActions(){var _this26=this;$(window).on(Event.RESIZE,function(){_this26._$menu.addClass('resizing');setTimeout(function(){_this26._tearDown();_this26._setupMenu();_this26._$menu.removeClass('resizing');},RESIZE_DURATION);});};// static
+this._$menu.find('.o-nav-local').css('overflow','visible');}};PriorityNav.prototype._tearDown=function _tearDown(){this._$menu.find('.overflow-nav-list').empty();this._$menu.find('.overflow-nav').removeClass('show-inline-block');this._$allNavElements.removeClass(ClassName.HIDE);};PriorityNav.prototype._bindUIActions=function _bindUIActions(){var _this26=this;$(window).on(Event.RESIZE,function(){_this26._$menu.addClass('resizing');setTimeout(function(){_this26._tearDown();_this26._setupMenu();_this26._$menu.removeClass('resizing');},RESIZE_DURATION);});this._$menu.find('.overflow-nav .dropdown-toggle').on('focus',function(e){$(e.target).dropdown('toggle');});};// static
 PriorityNav._jQueryInterface=function _jQueryInterface(config){return this.each(function(){var $element=$(this);var data=$element.data(DATA_KEY);if(!data){data=new PriorityNav(this,config);$element.data(DATA_KEY,data);}if(typeof config!=='undefined'&&config){if(typeof config!=='string'||!/^[.#].*/.test(config)){throw new Error('Selector "'+config+'" is not supported');}}});};_createClass(PriorityNav,null,[{key:'VERSION',get:function get(){return VERSION;}}]);return PriorityNav;}();/**
    * ------------------------------------------------------------------------
    * jQuery
