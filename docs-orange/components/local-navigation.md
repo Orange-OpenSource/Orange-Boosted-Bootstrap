@@ -14,13 +14,19 @@ group: components
 
 Wrap your `<ul>` list in a `<nav>` tag with `.container` class. Use `<hr>` tag on top and bottom outside the de `.container`. Wrap the whole in a `.o-nav-local` container.
 
+{% callout warning %}
+#### Accessibility
+
+In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the local navigation. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
+{% endcallout %}
+
 {% example html %}
 <div class="o-nav-local">
     <hr aria-hidden="true">
     <nav class="container">
         <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
         <ul class="nav collapse" id="localNav1">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
         </ul>
@@ -40,7 +46,7 @@ Simply add `.inverse` class to your `.o-nav-local` container.
         <nav class="container">
             <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
             <ul class="nav collapse" id="localNav2">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
             </ul>
