@@ -29,9 +29,21 @@ The most basic list group is an unordered list with list items and the proper cl
 
 Add `.active` to a `.list-group-item` to indicate the current active selection.
 
+
+[comment]: # Boosted mod
+
+{% callout warning %}
+#### Accessibility
+
+In addition to the `.active` class, you must use `aria-selected="true"` state to represent the selected item within the list group. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the selected state of the element.
+{% endcallout %}
+
+
+[comment]: # End mod
+
 {% example html %}
 <ul class="list-group">
-  <li class="list-group-item active">Cras justo odio</li>
+  <li class="list-group-item active" aria-selected="true">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
   <li class="list-group-item">Morbi leo risus</li>
   <li class="list-group-item">Porta ac consectetur ac</li>
@@ -61,7 +73,7 @@ Be sure to **not use the standard `.btn` classes here**.
 
 {% example html %}
 <div class="list-group">
-  <a href="#" class="list-group-item active">
+  <a href="#" class="list-group-item active" aria-selected="true">
     Cras justo odio
   </a>
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
@@ -75,7 +87,7 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 
 {% example html %}
 <div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action active">
+  <button type="button" class="list-group-item list-group-item-action active" aria-selected="true">
     Cras justo odio
   </button>
   <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
@@ -136,12 +148,11 @@ Add badges to any list group item to show unread counts, activity, and more with
 {% endexample %}
 
 ## Custom content
-
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/utilities/flexbox/).
 
 {% example html %}
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" aria-selected="true">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
       <small>3 days ago</small>
