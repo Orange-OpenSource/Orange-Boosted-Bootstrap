@@ -58,6 +58,16 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 
 Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
 
+[comment]: # Boosted mod
+
+{% callout warning %}
+#### Accessibility
+
+In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the pagination's pages. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
+{% endcallout %}
+
+[comment]: # End mod
+
 While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
 
 {% example html %}
@@ -68,7 +78,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active">
-      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      <a class="page-link" href="#" aria-current="page">2 <span class="sr-only">(current)</span></a>
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
