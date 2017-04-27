@@ -1,7 +1,7 @@
 //
 // Tables
 //
-
+// scss-lint:disable QualifyingElement
 // Change the table states color
 @mixin table-row-variant-border($state, $color) {
   // Exact selectors below required to override `.table-striped` and prevent
@@ -191,15 +191,15 @@
   }
 }
 
-@include table-row-variant-border(success, $state-success-border);
-@include table-row-variant-border(info, $state-info-border);
-@include table-row-variant-border(warning, $state-warning-border);
-@include table-row-variant-border(danger, $state-danger-border);
+@include table-row-variant-border(success, $state-success-border-color);
+@include table-row-variant-border(info, $state-info-border-color);
+@include table-row-variant-border(warning, $state-warning-border-color);
+@include table-row-variant-border(danger, $state-danger-border-color);
 
 
 // force caption for tables
 caption {
-  padding: $padding-large-vertical 0;
+  padding: .75rem 0;
   font-size: $font-size-h1;
   font-weight: bold;
   color: #000;
@@ -215,7 +215,7 @@ caption {
 
 .tablesorter {
   caption {
-    padding: $padding-large-vertical 0;
+    padding: .75rem 0;
     font-size: $font-size-h1;
     font-weight: bold;
     color: #000;

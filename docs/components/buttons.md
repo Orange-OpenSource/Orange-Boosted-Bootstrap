@@ -113,6 +113,7 @@ The default styles can be used on secondary colors backgrounds, in this case rem
 </div>
 {% endexample %}
 
+[comment]: # end mod
 
 ## Button tags
 
@@ -128,7 +129,6 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="reset" value="Reset">
 {% endexample %}
 
-[comment]: # end mod
 ## Outline buttons
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.

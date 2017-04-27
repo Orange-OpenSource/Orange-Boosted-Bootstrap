@@ -15,8 +15,7 @@ See also:
 * [WebKit bug 159753: [meta] Issues affecting Bootstrap](https://bugs.webkit.org/show_bug.cgi?id=159753)
 * [jQuery's browser bug workarounds](https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o)
 
-<div class="table-responsive">
-  <table class="bd-browser-bugs table table-bordered table-hover">
+<table class="bd-browser-bugs table table-bordered table-hover table-responsive">
     <thead>
       <tr>
         <th>Browser(s)</th>
@@ -36,7 +35,6 @@ See also:
       {% endfor %}
     </tbody>
   </table>
-</div>
 
 # Most wanted features
 

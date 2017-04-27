@@ -75,7 +75,7 @@ Megamenu has a footer section where additional links can be added and a button t
                     <a href="#">Promotions</a>
                     <a href="#">Top up</a>
                 </div>
-                <div class="col-1 hidden-xs-down">
+                <div class="col-1 d-none d-sm-block">
                     <a class="float-right svg-delete" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" title="close shop menu"></a>
                 </div>
             </div>

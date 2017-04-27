@@ -1,6 +1,7 @@
 //
 //  Orange forms
 //
+// scss-lint:disable QualifyingElement
 
 .input-group {
   > .input-group-addon,
@@ -37,21 +38,7 @@
 }
 
 .form-group {
-
-  label,
-  .form-control-label,
-  .col-form-label {
-    padding-top: calc(#{$input-padding-y} + #{$input-btn-border-width});
-    padding-bottom: calc(#{$input-padding-y} + #{$input-btn-border-width});
-    font-weight: bold;
-  }
-
-  .form-control-label {
-    margin-bottom: 0;
-  }
-
   &.row {
-
     .form-control-feedback {
       padding-left: 0;
     }
@@ -81,11 +68,6 @@
       .form-control-label {
         min-width: auto;
       }
-    }
-
-    .form-control-label {
-      padding: .625rem 0;
-      margin-bottom: 0;
     }
   }
 

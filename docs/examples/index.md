@@ -93,7 +93,7 @@ title: Examples
 
 ## Framework
 
-Examples that focus on implementing uses of built-in components provided by Bootstrap.
+Examples that focus on implementing uses of built-in components provided by boosted.
 
 <ul class="row bd-examples">
   <li class="col-6 col-md-4">
@@ -246,6 +246,6 @@ Examples that focus on future-friendly features or techniques.
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/offcanvas.jpg" alt="">
       <span class="h4">Offcanvas</span>
     </a>
-    <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
+    <p>Build a toggleable off-canvas navigation menu for use with boosted.</p>
   </li>
 </ul>

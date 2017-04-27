@@ -29,14 +29,13 @@
     </div>
 
 <header role="banner">
-      <nav id="mainNav" class="navbar navbar-inverse navbar-toggleable-sm">
+      <nav id="mainNav" class="navbar navbar-inverse bg-inverse navbar-expand-md">
         <div class="container">
       <a class="navbar-brand" href="#"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#orange-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="svg-menu"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="orange-navbar-collapse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+      <div class="navbar-collapse justify-content-between collapse" id="orange-navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">dashboard</a></li>
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">manage</a></li>
@@ -47,7 +46,7 @@
           <li role="presentation" class="nav-item dropdown">
             <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button">
               <span class="icon-international-globe" aria-hidden="true"></span>
-              <span class="hidden-xs hidden-sm">&nbsp;language</span>
+              <span class="d-none d-sm-block">&nbsp;language</span>
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">français</a></li>
@@ -57,7 +56,7 @@
           <li role="presentation" class="nav-item dropdown">
             <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button">
               <span class="svg-avatar" aria-hidden="true"></span>
-              <span class="hidden-xs hidden-sm">&nbsp;hello
+              <span class="d-none d-sm-block">&nbsp;hello
                 <span class="orange">admin</span>
               </span>
             </a>

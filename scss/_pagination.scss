@@ -12,20 +12,22 @@
     padding: .625rem 0;
     font-weight: bold;
   }
-  &.presentation + .page-item .page-link,
-  &:first-child .page-link {
-    margin-left: 0;
-    @include border-left-radius($border-radius);
-    border-color: $black;
-    &::before {
-      position: absolute;
-      top: .6875rem;
-      left: .8125rem;
-      width: .5625rem;
-      height: .875rem;
-      content: "";
-      background-image: #{$pagination-icon-prev};
-      background-repeat: no-repeat;
+  &.presentation + .page-item,
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+      @include border-left-radius($border-radius);
+      border-color: $black;
+      &::before {
+        position: absolute;
+        top: .6875rem;
+        left: .8125rem;
+        width: .5625rem;
+        height: .875rem;
+        content: "";
+        background-image: #{$pagination-icon-prev};
+        background-repeat: no-repeat;
+      }
     }
   }
   // End mod
@@ -52,7 +54,7 @@
     z-index: 2;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
-    border-color: $pagination-active-border;
+    border-color: $pagination-active-border-color;
   }
 
   // Boosted mod
@@ -68,9 +70,8 @@
   &.disabled .page-link {
     color: $pagination-disabled-color;
     pointer-events: none;
-    cursor: $cursor-disabled; // While `pointer-events: none` removes the cursor in modern browsers, we provide a disabled cursor as a fallback.
     background-color: $pagination-disabled-bg;
-    border-color: $pagination-disabled-border;
+    border-color: $pagination-disabled-border-color;
   }
 
   // Boosted mod
@@ -107,7 +108,7 @@
     color: $pagination-hover-color;
     text-decoration: none;
     background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border;
+    border-color: $pagination-hover-border-color;
 
     // Boosted mod
     span {
@@ -131,7 +132,7 @@
       @include hover-focus {
         color: $pagination-active-color;
         background-color: $pagination-active-bg;
-        border-color: $pagination-active-border;
+        border-color: $pagination-active-border-color;
       }
     }
   }

@@ -37,5 +37,5 @@ Similar to our navigation components, breadcrumbs work fine with or without the 
   <a class="breadcrumb-item" href="#">Library</a>
   <a class="breadcrumb-item" href="#">Data</a>
   <span class="breadcrumb-item active" aria-current="location">Bootstrap</span>
-</nav>1
+</nav>
 {% endexample %}

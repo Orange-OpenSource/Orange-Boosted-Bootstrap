@@ -36,14 +36,14 @@
     </div>
 
         <header role="banner">
-            <nav class="navbar navbar-inverse navbar-toggleable-sm supra">
+            <nav class="navbar navbar-inverse bg-inverse navbar-expand-md supra">
                 <div class="container">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
                     </ul>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                              <a href="#" class="nav-link icon svg-buy">
                                 <span class="sr-only">basket</span>
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">EN</a>
+                            <a class="nav-link dropdown-toggle d-flex flex-nowrap align-items-center" href="#" data-toggle="dropdown" role="button">EN</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a class="dropdown-item" href="#">FR</a></li>
                                 <li><a class="dropdown-item" href="#">SP</a></li>
@@ -65,14 +65,13 @@
                 </div>
             </nav>
 
-          <nav class="navbar navbar-toggleable-md navbar-inverse" role="navigation">
+          <nav class="navbar navbar-expand-md navbar-inverse bg-inverse" role="navigation">
               <div class="container" >
                 <a class="navbar-brand" href="#">
-                    <img src="dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage"/>
+                    <img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead">
-                  <span class="sr-only">toggle navigation</span>
-                  <span class="svg-menu"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead" aria-controls="collapsing-navbarHead" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="mega-menu navbar-collapse collapse" id="collapsing-navbarHead">
                     <ul class="navbar-nav">
@@ -183,7 +182,7 @@
        <div class="o-nav-local">
         <hr aria-hidden="true">
         <nav class="container">
-          <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#collapseExample" aria-haspopup="true">target</a>
+          <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#collapseExample" aria-haspopup="true">target</a>
           <ul class="nav collapse" id="collapseExample">
             <li class="nav-item"><a class="nav-link active" href="#">News home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">World</a></li>
@@ -363,9 +362,9 @@
 
         <div id="infos" class="col-12 col-sm-12 col-md-4">
           <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" href="#mostRead" data-toggle="tab">Most read<div class="arrow" aria-hidden="true"></div></a></li>
-            <li class="nav-item"><a class="nav-link" href="#mostShared" data-toggle="tab">Most shared<div class="arrow" aria-hidden="true"></div></a></li>
-            <li class="nav-item"><a class="nav-link" href="#mostRecent" data-toggle="tab">Most recent<div class="arrow" aria-hidden="true"></div></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#mostRead" data-toggle="tab">Most read</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mostShared" data-toggle="tab">Most shared</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mostRecent" data-toggle="tab">Most recent</a></li>
           </ul>
           <!-- Tab panes -->
           <div class="tab-content">

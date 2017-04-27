@@ -18,10 +18,9 @@
     border-left: $caret-width solid transparent;
   }
 
-  // Prevent the focus on the dropdown toggle when closing dropdowns
-  &:focus {
-    outline: 0;
-  }
+  &:empty::after {
+    margin-left: 0;
+}
 }
 
 .dropup {
@@ -66,10 +65,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  // Boosted mod
-  // set padding top and bottom dynamic by adding a var in _custom.scss
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-  // End mod
   clear: both;
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
@@ -94,7 +90,6 @@
   &.disabled,
   &:disabled {
     color: $dropdown-link-disabled-color;
-    cursor: $cursor-disabled;
     background-color: transparent;
     // Remove CSS gradients if they're enabled
     @if $enable-gradients {
@@ -133,24 +128,11 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  // Boosted Mod
-  // replace $dropdown-item-y used by native bootstrap by $dropdown-item-padding-y to be consistent with dropdown-item padding
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-  // end mod
+  padding: $dropdown-padding-y $dropdown-item-padding-x;
   margin-bottom: 0; // for use with heading elements
   font-size: $font-size-sm;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
-}
-
-// Backdrop to catch body clicks on mobile, etc.
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: $zindex-dropdown-backdrop;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)

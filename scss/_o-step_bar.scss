@@ -70,7 +70,7 @@ $arrow-orange: "f16e00";
     @include stepbar-arrow($arrow-gray);
     position: relative;
     float: left;
-    padding: $padding-base-vertical $padding-base-horizontal;
+    padding: ($spacer / 2) $spacer;
     padding-left: 2rem;
     font-size: $font-size-base;
     font-weight: bold;
@@ -81,7 +81,7 @@ $arrow-orange: "f16e00";
     background-color: $gray-lighter-o;
 
     &:first-child {
-      padding-left: $padding-base-horizontal;
+      padding-left: $spacer;
     }
 
     &:last-child {
@@ -128,8 +128,8 @@ $arrow-orange: "f16e00";
 @include media-breakpoint-down(xs) {
   .o-stepbar {
     .stepbar-item {
-      padding: $o-stepbar-mobile-padding-vertical ($padding-base-horizontal / 2) $o-stepbar-mobile-padding-vertical ($padding-base-horizontal + $o-stepbar-mobile-arrow-width);
-      line-height: $btn-line-height;
+      padding: $o-stepbar-mobile-padding-vertical ($spacer / 2) $o-stepbar-mobile-padding-vertical ($spacer + $o-stepbar-mobile-arrow-width);
+      line-height: $input-btn-line-height;
     }
 
     .stepbar-item::after,

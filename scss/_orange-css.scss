@@ -1,33 +1,5 @@
+// scss-lint:disable QualifyingElement
 //
-// Caret
-// --------------------------------------------------
-// Fix the border-top style to display caret onto IE8
-.caret {
-  border-top-style: solid;
-}
-
-//
-// Labels
-// --------------------------------------------------
-
-.label {
-  border-radius: $border-radius;
-}
-
-//
-// Navbar
-//
-
-// .nav {
-//   // Open dropdowns
-//   .show > a {
-//     &,
-//     &:hover,
-//     &:focus {
-//       color: #fff;
-//     }
-//   }
-// }
 
 // back from accessibility plugin css
 div.active:focus {

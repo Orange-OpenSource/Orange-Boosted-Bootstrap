@@ -34,6 +34,7 @@ const Tooltip = (($) => {
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
   const TRANSITION_DURATION = 150
   const CLASS_PREFIX        = 'bs-tether'
+  const TETHER_PREFIX_REGEX = new RegExp(`(^|\\s)${CLASS_PREFIX}\\S+`, 'g')
 
   const Default = {
     animation   : true,
@@ -333,6 +334,7 @@ const Tooltip = (($) => {
           tip.parentNode.removeChild(tip)
         }
 
+        this._cleanTipClass()
         this.element.removeAttribute('aria-describedby')
         $(this.element).trigger(this.constructor.Event.HIDDEN)
         this.cleanupTether()
@@ -428,6 +430,14 @@ const Tooltip = (($) => {
 
     _getAttachment(placement) {
       return AttachmentMap[placement.toUpperCase()]
+    }
+
+    _cleanTipClass() {
+      const $tip = $(this.getTipElement())
+      const tabClass = $tip.attr('class').match(TETHER_PREFIX_REGEX)
+      if (tabClass !== null && tabClass.length > 0) {
+        $tip.removeClass(tabClass.join(''))
+      }
     }
 
     _setListeners() {
@@ -593,6 +603,14 @@ const Tooltip = (($) => {
           show : config.delay,
           hide : config.delay
         }
+      }
+
+      if (config.title && typeof config.title === 'number') {
+        config.title = config.title.toString()
+      }
+
+      if (config.content && typeof config.content === 'number') {
+        config.content = config.content.toString()
       }
 
       Util.typeCheckConfig(

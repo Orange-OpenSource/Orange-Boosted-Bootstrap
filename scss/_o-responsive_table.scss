@@ -1,4 +1,5 @@
 // small device display as card
+// scss-lint:disable QualifyingElement
 @include media-breakpoint-down(md) {
   .o-responsive-table {
     thead {

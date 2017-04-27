@@ -440,9 +440,7 @@ linters:
     enabled: true
 
   QualifyingElement:
-  # Boosted mod 
-    enabled: false
-  # end mod
+    enabled: true
     allow_element_with_attribute: false
     allow_element_with_class: false
     allow_element_with_id: false

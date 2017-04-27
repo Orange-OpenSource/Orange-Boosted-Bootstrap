@@ -50,8 +50,8 @@
   }
 
   .dropdown-menu {
-    left: auto;
     right: 0;
+    left: auto;
 
     .nav-item,
     .nav-item + .nav-item {
@@ -120,12 +120,6 @@
 //     }
 
 //     .nav {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       z-index: 20;
-//       display: none;
-//       flex-flow: column;
 //       width: 100%;
 //       margin-top: -1px;
 //       background-color: #fff;

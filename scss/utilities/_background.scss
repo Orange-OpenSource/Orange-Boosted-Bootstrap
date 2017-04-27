@@ -3,7 +3,10 @@
 //
 
 .bg-faded {
-  background-color: darken($body-bg, 3%);
+  // boosted mod
+  // bg-faded used for navbar background, so force it to black
+  background-color: $black;
+  // end mod
 }
 
 @include bg-variant('.bg-primary', $brand-primary);

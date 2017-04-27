@@ -1,4 +1,5 @@
-<header class="navbar navbar-light navbar-toggleable-md bd-navbar">
+<!-- Boosted mod navbar-inverse and remove bd-navbar class-->
+<header class="navbar navbar-inverse bg-inverse navbar-expand-md">
   <nav class="container">
     {% comment %}
     <nav class="nav navbar-nav float-right">
@@ -25,35 +26,32 @@
     </nav>
     {% endcomment %}
 
-    <div class="d-flex justify-content-between hidden-lg-up">
+    <div class="d-flex align-items-center justify-content-between">
       <a class="navbar-brand" href="{{ site.baseurl }}/">
-          Bootstrap
-        </a>
+        <!-- Boosted mod change brand -->          
+        <img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage" />
+        <!-- end mod -->
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      </div>
-
+    </div>
+    <!-- Boosted mod remove analytics, blog, expo and add boostwatch and confort plus --> 
     <div class="collapse navbar-collapse" id="bd-main-nav">
         <ul class="nav navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-item nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Bootstrap</a>
+          <li class="nav-item">
+            <a class="nav-item nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/">B<span class="text-primary">oo</span>sted</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            <a class="nav-item nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/getting-started/introduction/">Documentation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+            <a class="nav-item nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/examples/">Examples</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link" href="{{ site.themes }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a>
+            <a class="nav-item nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/boostwatch/">Boostwatch</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-item nav-link" href="{{ site.expo }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item nav-link" href="{{ site.blog }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a>
-          </li>
+          <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
       </div>
     </nav>

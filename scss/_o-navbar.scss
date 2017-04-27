@@ -1,6 +1,7 @@
 // Orange navbar
 //
 //
+// scss-lint:disable QualifyingElement
 
 .fixed-header {
   position: fixed;
@@ -10,71 +11,27 @@
 }
 
 .navbar {
-  height: $navbar-height; // IE flex support
-  min-height: $navbar-height;
-  padding: 0;
-  font-size: $font-size-base;
-
-  &.navbar-light,
-  &.navbar-inverse {
-    color: $navbar-inverse-color;
-    background: #000;
-  }
-
-  > .container {
-    align-items: flex-end;
-  }
-
   .navbar-brand {
     @include focus {
       outline: 1px dotted #fff;
       outline-offset: .625rem;
     }
 
-    // display: flex;
-    // align-items: flex-end;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1;
-
     img {
+      flex-wrap: wrap;
       width: auto;
       height: 3.125rem;
       margin-top: 0;
-      font-size: 1rem;
-      font-weight: bold;
-      color: $brand-primary;
     }
   }
 
-  .navbar-collapse {
-    align-self: flex-end;
-  }
-
-  .navbar-nav {
-    flex-wrap: wrap;
-    align-items: flex-end;
-  }
-
-  .navbar-nav + .navbar-nav {
-    margin-left: auto; // pull second navbar-nav to right
-  }
-
   .nav-item {
-    // position: relative;
-    font-weight: bold;
-
     > .nav-link,
     &.nav-link {
-      padding: 0;
-      line-height: $btn-line-height;
+      line-height: $input-btn-line-height;
 
       &:focus {
         outline: 1px dotted #fff;
-        outline-offset: .625rem;
       }
     }
 
@@ -85,15 +42,17 @@
 
       &:focus {
         outline: 1px dotted #fff;
-        outline-offset: .625rem;
       }
 
       display: block;
-      line-height: $btn-line-height;
+      line-height: $input-btn-line-height;
       color: #fff !important;
     }
 
     .nav-link.icon {
+      box-sizing: content-box;
+      padding-top: .4375rem;
+      padding-bottom: .4375rem;
       margin-top: 0;
 
       span[class^="icon-"] {
@@ -103,15 +62,15 @@
 
       &[class*="svg-"],
       &[class*="svg-"]::after {
-        height: 1.875rem;
         width: 1.875rem;
+        height: 1.875rem;
       }
     }
 
     .nav-link:not(.icon)[class*="svg-"]::after {
-      left: auto;
-      right: -1.875rem;
       top: -.0625rem;
+      right: -1.875rem;
+      left: auto;
     }
 
     &.show .dropdown-toggle::after {
@@ -130,11 +89,13 @@
 
       position: relative;
       display: block;
-      line-height: $btn-line-height;
+      line-height: $input-btn-line-height;
       color: #fff;
 
       &::after {
         top: .3125rem;
+        display: flex;
+        align-self: center;
         color: #fff;
       }
 
@@ -147,37 +108,9 @@
       top: 2rem;
       right: -.75rem;
       left: auto;
-
-      .nav-item {
-        margin: 0;
-
-        .nav-link {
-          display: block;
-          border: 0;
-          margin: 0;
-          padding: .625rem .625rem .625rem 1.25rem;
-          color: #000;
-          background: #fff;
-        }
-
-        .nav-link:hover {
-          color: #fff;
-          background: #000;
-        }
-      }
     }
   }
-
-  .nav-item + .nav-item {
-    margin-left: 1.25rem;
-  }
-
-  .nav-item:first-child {
-    margin-left: 1.875rem;
-  }
-
   .form-inline {
-    margin-top: 2.1875rem;
     margin-left: .625rem;
   }
 
@@ -197,8 +130,6 @@
     background-color: #000;
     border-color: #fff;
   }
-
-
 }
 
 .navbar.minimized {
@@ -223,7 +154,8 @@
 
   height: $navbar-supra-height; // IE flex support
   min-height: $navbar-supra-height;
-  font-size: $font-size-sm;
+  padding-top: 0;
+  padding-bottom: 0;
   border-bottom: 1px solid $gray-dark;
 
   > .container,
@@ -235,9 +167,14 @@
     display: none;
   }
 
+  .nav-link {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+
   .nav-item {
     &:first-child {
-      margin-left: 0;
+      margin-left: -$nav-link-padding-x;
     }
 
     .nav-link,
@@ -256,8 +193,8 @@
 
       &[class*="svg-"],
       &[class*="svg-"]::after {
-        height: 1.25rem;
         width: 1.25rem;
+        height: 1.25rem;
       }
     }
 
@@ -269,27 +206,15 @@
   }
 }
 
-//todo move this where it belongs
-.navbar {
-  .container,
-  .navbar-nav,
-  .navbar .nav-item {
-    position: static;
-  }
-}
-
-.navbar-toggleable {
+.navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
 
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
         &,
         &.minimized {
-          display: inline-block;
-          width: 100%;
-          height: auto;
           min-height: $navbar-height-sm;
 
           &.supra {
@@ -300,52 +225,20 @@
             @include focus {
               outline-offset: .5rem;
             }
-            margin-left: .625rem;
             font-size: $font-size-sm;
           }
           .navbar-brand img {
             height: 1.875rem;
           }
 
-          > .container {
-            display: block;
-            width: 100%;
-            padding: .625rem 0 0;
-            margin: 0;
-          }
-
-          .navbar-collapse {
-            position: static;
-            width: 100%;
-            margin-top: .625rem;
-          }
-
           .navbar-collapse .navbar-nav {
             align-items: stretch;
           }
 
-          .navbar-toggler {
-            position: absolute;
-            top: .265625rem;
-            right: 0;
-            z-index: 1000;
-            padding: .625rem .75rem;
-            font-size: 1.25rem;
-            color: $navbar-inverse-color;
-            background-color: transparent;
-            background-image: none;
-            border: 0;
-
-            @include hover-focus {
-              color: #000;
-              background-color: #fff;
-            }
-
-            .svg-menu {
-              display: block;
-              width: 1.25rem;
-              height: 1.25rem;
-            }
+          .svg-menu {
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
           }
 
           .navbar-toggler:hover {
@@ -365,10 +258,6 @@
           .navbar-toggler:active {
             color: #fff;
             background-color: $brand-primary;
-
-            .svg-menu {
-              @include svg-menu("fff");
-            }
           }
 
           .nav-item {
@@ -408,7 +297,7 @@
             margin-top: 0;
           }
 
-          .nav-item > .nav-link {
+          .nav-link {
             @include focus {
               outline-offset: -1px;
             }
@@ -417,7 +306,7 @@
             margin-top: 0;
           }
 
-          .nav-item > .nav-link.icon {
+          .nav-link.icon {
             padding: .78125rem .625rem;
           }
 
@@ -486,6 +375,7 @@
           }
 
           .mega-menu-panel > .container > .navbar-nav > .nav-item {
+            padding: 0;
             border: 0;
           }
 
@@ -528,6 +418,7 @@
           }
 
           > .container > .navbar-nav > .nav-item > .nav-link {
+            padding: 0;
             margin-bottom: 1rem;
             font-size: 1.25rem;
           }
@@ -539,13 +430,8 @@
             align-items: flex-start;
           }
 
-          > .container > .navbar-nav .nav-link {
-            @include focus {
-              outline-offset: 0;
-            }
-          }
-
           > .container > .navbar-nav .navbar-nav .nav-link {
+            padding: 0;
             line-height: 1.25rem;
           }
 

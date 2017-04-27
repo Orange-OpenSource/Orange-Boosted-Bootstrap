@@ -19,7 +19,7 @@ Active element used to be set on `<li>` tag and will be on the `<a>` as a genera
 
 Class `.navbar-inverse` is changed to `.navbar-dark` and `.navbar-light`. Please note that `.navbar-light` will render exactly the same as `.navbar-dark` since it's the only one allowed in orange brand guidelines at the moment.
 
-Class `.navbar-toggle` is now `.navbar-toggler` and can be put directly inside a `<button>` tag. Use classes `.hidden-*` to specify wether it should be displayed or not.
+Class `.navbar-toggle` is now `.navbar-toggler` and can be put directly inside a `<button>` tag. Use classes `.d-none d-${BP}-block` to specify wether it should be displayed or not at which breakpoint.
 
 For more information please check the new [navbar](../components/navbar/) for documentation and examples.
 

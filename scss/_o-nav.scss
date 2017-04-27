@@ -3,11 +3,7 @@
 //
 
 .nav-tabs {
-  border-width: 2px;
-
   .nav-item {
-    margin-bottom: -2px;
-
     + .nav-item {
       margin-left: .5rem;
       // On mobile no margin between tabs
@@ -15,57 +11,33 @@
         margin-left: 0;
       }
     }
-
-    .nav-link {
-      position: relative;
-      padding: .625rem 1.125rem;
-      font-size: 1rem;
-      font-weight: bold;
-      line-height: $font-size-base;
-      border-width: 2px;
-      border-bottom-width: 0;
-
-      @include hover-focus {
-        color: $nav-tabs-link-hover-color;
-        background-color: $nav-tabs-link-hover-bg;
-
-        &.active {
-          color: $nav-tabs-active-link-hover-color;
-          background-color: $nav-tabs-active-link-hover-bg;
-        }
-      }
-
-      &,
-      &.dropdown-toggle {
-        @include focus {
-          outline-width: 1px;
-          outline-style: dotted;
-          outline-offset: -6px;
-        }
-      }
-    }
-
-    .nav-link::before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      content: "";
-      background-color: transparent;
-    }
   }
 
-  .dropdown-menu {
-    left: auto;
-    right: 0;
+  .nav-link {
+    @include hover-focus {
+      color: $nav-tabs-link-hover-color;
+      background-color: $nav-tabs-link-hover-bg;
 
-    .nav-item {
-      margin-bottom: 0;
+      &.active {
+        color: $nav-tabs-active-link-color;
+        background-color: $nav-tabs-active-link-bg;
+      }
+    }
 
-      .nav-link {
-        border: 0;
-        padding: .625rem .625rem .625rem 1.25rem;
+    &,
+    &.dropdown-toggle {
+      @include focus {
+        outline-width: 1px;
+        outline-style: dotted;
+        outline-offset: -6px;
+      }
+    }
+
+    + .nav-link {
+      margin-left: .5rem;
+      // On mobile no margin between tabs
+      @include media-breakpoint-down(md) {
+        margin-left: 0;
       }
     }
   }
@@ -99,7 +71,6 @@
       background-color: $nav-pills-active-link-bg;
       &.disabled {
         color: $nav-disabled-link-color;
-        cursor: $cursor-disabled;
         background-color: $nav-disabled-link-hover-bg;
       }
     }
@@ -113,13 +84,10 @@
         background-color: $nav-disabled-link-hover-bg;
       }
     }
-
-    font-weight: bold;
   }
-
   .dropdown-menu {
-    left: auto;
     right: 0;
+    left: auto;
 
     .nav-item {
       margin: 0;
@@ -130,11 +98,11 @@
           outline-offset: -2px;
         }
         display: block;
-        border: 0;
-        margin: 0;
         padding: .625rem .625rem .625rem 1.25rem;
+        margin: 0;
         color: #000;
         background: #fff;
+        border: 0;
       }
 
       .nav-link:hover {

@@ -24,7 +24,7 @@ You can see a sample on how it works by scrolling this page.
 
 {% highlight html %}
 <a href="#" class="o-scroll-up" title="back to top">
-  <span class="o-scroll-up-text hidden-sm-down">Back to top</span>
+  <span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span>
   <span class="o-scroll-up-icon" aria-hidden="true"></span>
 </a>
 {% endhighlight %}

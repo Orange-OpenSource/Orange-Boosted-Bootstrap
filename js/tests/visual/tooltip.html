@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="../../../dist/css/boosted.min.css">
   <title>Tooltip</title>
 </head>
-
 <body>
   <div class="container">
     <h1>Tooltip <small>Bootstrap Visual Test</small></h1>
 
-    <p class="text-muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard
-      of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie
-      sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry
-      richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa,
-      four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>,
-      scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan
-      cred raw denim single-origin coffee viral.</p>
+      <p class="text-muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.</p>
 
     <hr>
 
@@ -49,26 +41,7 @@
   <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
-      testTooltipTransitionError()
     })
-
-    // Should throw an error because tooltip is in transition
-    function testTooltipTransitionError() {
-      var err = false
-      $('#btnOne').on('shown.bs.tooltip', function () {
-        $('#btnOne').tooltip('hide').off('shown.bs.tooltip')
-        if (!err) {
-          alert('No error thrown for : testTooltipTransitionError')
-        }
-      })
-      try {
-        $('#btnOne').tooltip('show').tooltip('hide')
-      }
-      catch (e) {
-        err = true
-        console.error(e.message)
-      }
-    }
   </script>
 </body>
 </html>

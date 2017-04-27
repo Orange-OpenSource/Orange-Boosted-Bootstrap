@@ -16,26 +16,11 @@ module.exports = function (grunt) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&')
   }
 
-  /* Jenkins flag */
-  var JENKINS = grunt.option('jenkins')
-  if (process.env._JAVA_OPTIONS) {
-    delete process.env._JAVA_OPTIONS
-  }
   /* boosted mod */
   var serveStatic = require('serve-static')
   /* end mod */
-  var path = require('path')
-// var isTravis = require('is-travis')
 
-  var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' })
-
-  Object.keys(configBridge.paths).forEach(function (key) {
-    configBridge.paths[key].forEach(function (val, i, arr) {
-      /* boosted mod */
-      arr[i] = path.join('./.tmpdocs', val)
-      /* end mod */
-    })
-  })
+  var isTravis = require('is-travis')
 
   // Project configuration.
   grunt.initConfig({
@@ -96,7 +81,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          extends: '../../js/.babelrc'
+          extends: '../../.babelrc'
         },
         files: {
           '<%= concat.bootstrap.dest %>' : '<%= concat.bootstrap.dest %>'
@@ -245,141 +230,16 @@ module.exports = function (grunt) {
 
     connect: {
       /* boosted mod */
-      //   server: {
-      //     options: {
-      //       port: 3000,
-      //       base: '.'
-      //     }
-      //   }
-      // },
-      livereload: {
+      server: {
         options: {
-          open: true,
-          port: 9000,
-          middleware: function () {
-            return [
-              serveStatic('_gh_pages')
-            ]
-          }
-          /* end mod */
-        }
-      }
-    },
-
-    jekyll: {
-      options: {
-        bundleExec: true,
-        config: '_config.yml',
-        incremental: false
-      },
-      docs: {},
-      github: {
-        options: {
-          raw: 'github: true'
+          port: 3000,
+          base: '.'
         }
       }
     },
 
     /* boosted mod */
-    replace: {
-      bootstrapfiles: {
-        src: ['_gh_pages/{,**/}*.html'],
-        overwrite: true,
-        replacements: [
-          {
-            from: 'bootstrap.min.css',
-            to: 'boosted.min.css'
-          },
-          {
-            from: 'bootstrap.css',
-            to: 'boosted.css'
-          },
-          {
-            from: 'bootstrap.min.js',
-            to: 'boosted.min.js'
-          },
-          {
-            from: 'bootstrap.js',
-            to: 'boosted.js'
-          }
-        ]
-      },
-      paths1: {
-        src: ['_gh_pages/*.html'],
-        overwrite: true,
-        replacements: [
-          {
-            from: 'href="/',
-            to: 'href="'
-          }
-        ]
-      },
-      paths2: {
-        src: ['_gh_pages/*/*.html'],
-        overwrite: true,
-        replacements: [
-          {
-            from: 'href="/',
-            to: 'href="../'
-          },
-          {
-            from: 'src="dist',
-            to: 'src="../dist'
-          },
-          {
-            from: 'src="/dist',
-            to: 'src="../dist'
-          },
-          {
-            from: 'src="/assets',
-            to: 'src="../assets'
-          },
-          {
-            from: 'src="/../assets',
-            to: 'src="../assets'
-          },
-          {
-            from: 'src="/examples',
-            to: 'src="../examples'
-          }
-        ]
-      },
-      paths3: {
-        src: ['_gh_pages/*/*/*.html'],
-        overwrite: true,
-        replacements: [
-          {
-            from: 'href="/',
-            to: 'href="../../'
-          },
-          {
-            from: 'src="/dist',
-            to: 'src="../../dist'
-          },
-          {
-            from: 'src="dist',
-            to: 'src="../../dist'
-          },
-          {
-            from: 'src="/assets',
-            to: 'src="../../assets'
-          },
-          {
-            from: 'src="/../assets',
-            to: 'src="../../assets'
-          }
-        ]
-      },
-      bootstrap: {
-        src: ['.tmpdocs/_includes/page-headers.html'],
-        overwrite: true,
-        replacements: [
-          {
-            from: 'Bootstrap',
-            to: 'Boosted'
-          }
-        ]
-      },
+    replace: {      
       rtl: {
         src: ['.tmpdocs/examples/rtl-*/**/*.html'],
         overwrite: true,
@@ -401,53 +261,21 @@ module.exports = function (grunt) {
     },
     /* end mod */
 
-    htmllint: {
-      options: {
-        reporter: JENKINS && 'checkstyle',
-        reporterOutput: JENKINS && 'reports/htmllint.xml',
-        ignore: [
-          /* boosted mod Src : https://www.w3.org/TR/html-aria/ */
-          'The “banner” role is unnecessary for element “header”.',
-          'Element “form” does not need a “role” attribute.',
-          'The “contentinfo” role is unnecessary for element “footer”.',
-          'Bad value “search” for attribute “role” on element “form”.',
-          'Attribute “aria-required” not allowed on element “input” at this point.',
-          'Attribute “interval” not allowed on element “div” at this point.',
-          'Element “input” is missing one or more of the following attributes: “aria-expanded”, “aria-valuemax”, “aria-valuemin”, “aria-valuenow”, “role”.',
-          'Element “main” does not need a “role” attribute.',
-          /* end mod */
-          'Attribute “autocomplete” is only allowed when the input type is “color”, “date”, “datetime”, “datetime-local”, “email”, “hidden”, “month”, “number”, “password”, “range”, “search”, “tel”, “text”, “time”, “url”, or “week”.',
-          'Attribute “autocomplete” not allowed on element “button” at this point.',
-          'Consider using the “h1” element as a top-level heading only (all “h1” elements are treated as top-level headings by many screen readers and other tools).',
-          'Element “div” not allowed as child of element “progress” in this context. (Suppressing further errors from this subtree.)',
-          'Element “img” is missing required attribute “src”.',
-          'The “color” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “date” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “datetime” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “datetime-local” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “month” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “time” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.',
-          'The “week” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
-        ]
-      },
-      src: ['_gh_pages/**/*.html', 'js/tests/visual/*.html']
-    },
-
     watch: {
       src: {
         files: '<%= concat.bootstrap.src %>',
         /* boosted mod */
-        tasks: ['babel:dev', 'dist-js', 'docs']
+        tasks: ['babel:dev', 'dist-js']
         /* end mod */
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css', 'docs']
+        tasks: ['dist-css','copy:docs']
       },
       docs: {
         /* boosted mod */
         files: ['docs/assets/scss/**/*.scss', 'docs-orange/**/*', 'docs/**/*.md'],
-        tasks: ['dist-css', 'docs']
+        tasks: ['docs']
         /* end mod */
       }
     },
@@ -483,6 +311,12 @@ module.exports = function (grunt) {
       },
       htmllint: {
         command: 'npm run htmllint'
+      },
+      jekyll: {
+        command: 'npm run jekyll'
+      },
+      'jekyll-github': {
+        command: 'npm run jekyll-github'
       },
       sass: {
         command: 'npm run sass'
@@ -559,7 +393,7 @@ module.exports = function (grunt) {
 
   // Docs HTML validation task
   /* boosted mod */
-  grunt.registerTask('validate-html', ['docs', 'exec:htmllint', 'exec:htmlhint'])
+  grunt.registerTask('validate-html', ['docs', 'exec:jekyll', 'exec:htmllint', 'exec:htmlhint'])
   /* end mod */
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset
@@ -592,14 +426,14 @@ module.exports = function (grunt) {
   grunt.registerTask('test', testSubtasks)
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'exec:uglify'])
+  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'exec:uglify','copy:docs'])
 
   grunt.registerTask('test-scss', ['exec:scss-lint'])
 
   // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs'])
+  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs','copy:docs'])
 
   // Full distribution task.
   /* boosted mod */
@@ -613,23 +447,12 @@ module.exports = function (grunt) {
   grunt.registerTask('lint-docs-css', ['exec:scss-lint-docs'])
   /* boosted mod */
   grunt.registerTask('docs-js', ['concat:docsJs', 'exec:uglify-docs'])
-  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:bootstrap', 'replace:rtl', 'copy:docs', 'jekyll:docs', 'replace'])
+  grunt.registerTask('docs', ['copy:tmpdocs', 'lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:rtl', 'replace:rtl', 'copy:docs'])
   /* end mod */
-  grunt.registerTask('docs-github', ['jekyll:github'])
+  grunt.registerTask('docs-github', ['exec:jekyll-github'])
 
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress'])
 
   // Publish to GitHub
   grunt.registerTask('publish', ['buildcontrol:pages'])
-
-  /* boosted mod */
-  grunt.registerTask('serve', 'Compile then start a connect web server', function () {
-    grunt.task.run([
-      'dist',
-      'docs',
-      'connect:livereload',
-      'watch'
-    ])
-  })
-  /* end mod */
 }

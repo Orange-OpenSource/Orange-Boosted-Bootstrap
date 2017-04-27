@@ -12,6 +12,14 @@ Group a series of buttons together on a single line with the button group. Add o
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
+{% callout warning %}
+## Ensure correct `role` and provide a label
+
+In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate `role` attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
+
+In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
+{% endcallout %}
+
 ## Basic example
 
 Wrap a series of buttons with `.btn` in `.btn-group`.
@@ -29,7 +37,7 @@ Wrap a series of buttons with `.btn` in `.btn-group`.
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
 {% example html %}
-<div class="btn-toolbar flex-wrap" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -50,7 +58,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
 
 {% example html %}
-<div class="btn-toolbar flex-wrap mb-3" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -59,11 +67,11 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
   </div>
   <div class="input-group">
     <span class="input-group-addon" id="btnGroupAddon">@</span>
-    <input type="text" class="form-control" placeholder="Input group example" aria-describedby="btnGroupAddon" aria-label="Input group example">
+    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
   </div>
 </div>
 
-<div class="btn-toolbar flex-wrap justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -72,7 +80,7 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
   </div>
   <div class="input-group">
     <span class="input-group-addon" id="btnGroupAddon2">@</span>
-    <input type="text" class="form-control" placeholder="Input group example" aria-describedby="btnGroupAddon2" aria-label="Input group example">
+    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
   </div>
 </div>
 {% endexample %}

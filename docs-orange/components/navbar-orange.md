@@ -18,14 +18,15 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% example html %}
 <header role="banner">
-    <nav class="navbar navbar-inverse navbar-toggleable-sm">
+    <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar">
-                <span class="sr-only">toggle navigation</span>
-                <span class="svg-menu"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="collapsing-navbar">
+            <div class="d-flex align-items-center justify-content-between">
+                <a class="navbar-brand"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -62,14 +63,14 @@ In addition to this `.active` class to show the current page in the navbar, you 
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
 
 {% example html %}
-<nav class="navbar navbar-inverse navbar-toggleable-sm supra">
+<nav class="navbar navbar-inverse bg-inverse navbar-expand-md supra">
     <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
         </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                     <a href="#" class="nav-link icon svg-buy">
                     <span class="sr-only">basket</span>
@@ -98,14 +99,14 @@ A supra bar should never be used on its own and always be included in header and
 
 {% example html %}
 <header role="banner" id="demo-navbar  ">
-    <nav class="navbar navbar-inverse navbar-toggleable-sm supra">
+    <nav class="navbar navbar-inverse bg-inverse navbar-expand-md supra">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
             </ul>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                         <a href="#" class="nav-link icon svg-buy">
                         <span class="sr-only">basket</span>
@@ -126,14 +127,13 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-inverse navbar-toggleable-sm">
+    <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand"><img src="../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2">
-                <span class="sr-only">toggle navigation</span>
-                <span class="svg-menu"></span>
+            <a class="navbar-brand"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse" id="collapsing-navbar2">
+            <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>

@@ -277,7 +277,7 @@ Use the `.form-inline` class to display a series of labels, form controls, and b
 
 - Controls are `display: flex`, collapsing any HTML white space and allowing you to provide alignment control with [spacing]({{ site.baseurl }}/utilities/spacing/) and [flexbox]({{ site.baseurl }}/utilities/flexbox/) utilities.
 - Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
-- Controls **only appear inline in viewports that are at least 768px wide** to account for narrow viewports on mobile devices.
+- Controls **only appear inline in viewports that are at least 480px wide** to account for narrow viewports on mobile devices.
 
 You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
 
@@ -350,7 +350,8 @@ Be sure to add `.col-form-label` to your `<label>`s as well so they're verticall
         <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
       </div>
     </div>
-    <fieldset class="form-group row">
+    <fieldset class="form-group">
+      <div class="row">
       <legend class="col-form-legend col-sm-2">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
@@ -372,6 +373,7 @@ Be sure to add `.col-form-label` to your `<label>`s as well so they're verticall
           </label>
         </div>
       </div>
+      </div>
     </fieldset>
     <div class="form-group row">
       <label class="col-sm-2">Checkbox</label>
@@ -388,6 +390,55 @@ Be sure to add `.col-form-label` to your `<label>`s as well so they're verticall
         <button type="submit" class="btn btn-primary">Sign in</button>
       </div>
     </div>
+  </form>
+</div>
+{% endexample %}
+
+More complex layouts can also be created with the grid system.
+
+{% example html %}
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4" class="col-form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4" class="col-form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress" class="col-form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2" class="col-form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="inputCity" class="col-form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState" class="col-form-label">State</label>
+        <select id="inputState" class="form-control">Choose</select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip" class="col-form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Check me out
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
   </form>
 </div>
 {% endexample %}
@@ -412,7 +463,6 @@ Grid-based form layouts also support large and small inputs.
   </form>
 </div>
 {% endexample %}
-
 
 ## Checkboxes and radios
 
@@ -674,8 +724,8 @@ Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`
 {% example html %}
 <form class="form-inline">
   <div class="form-group">
-    <label for="inputPassword4">Password</label>
-    <input type="password" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+    <label for="inputPassword6">Password</label>
+    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
     <small id="passwordHelpInline" class="text-muted">
       Must be 8-20 characters long.
     </small>
