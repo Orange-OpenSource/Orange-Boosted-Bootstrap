@@ -35,10 +35,13 @@
         }
       }
 
-      @include focus {
-        outline-width: 1px;
-        outline-style: dotted;
-        outline-offset: -6px;
+      &,
+      &.dropdown-toggle {
+        @include focus {
+          outline-width: 1px;
+          outline-style: dotted;
+          outline-offset: -6px;
+        }
       }
     }
 
@@ -122,6 +125,10 @@
       margin: 0;
 
       .nav-link {
+        @include focus {
+          outline: 1px dotted #000;
+          outline-offset: -2px;
+        }
         display: block;
         border: 0;
         margin: 0;

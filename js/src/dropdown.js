@@ -55,7 +55,7 @@ const Dropdown = (($) => {
     ROLE_LISTBOX  : '[role="listbox"]',
     NAVBAR_NAV    : '.navbar-nav',
     // Boosted mod
-    FIRST_ITEM_IN_MENU : '.dropdown-menu .dropdown-item:not(.disabled)',
+    FIRST_ITEM_IN_MENU : '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)',
     // end mod
     VISIBLE_ITEMS : '[role="menu"] li:not(.disabled) a, '
                   + '[role="listbox"] li:not(.disabled) a'
@@ -145,7 +145,6 @@ const Dropdown = (($) => {
     _addEventListeners() {
       $(this._element).on(Event.CLICK, this.toggle)
     }
-
 
     // static
 

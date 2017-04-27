@@ -21,12 +21,13 @@ const PriorityNav = (($) => {
   const RESIZE_DURATION = 500
 
   const Event = {
-    RESIZE: 'resize'
+    RESIZE: 'resize',
+    FOCUS: 'focus'
   }
 
   const ClassName = {
     PRIORITY: 'priority',
-    HIDE: 'hide'
+    HIDE: 'sr-only'
   }
 
   const Selector = {
@@ -48,7 +49,11 @@ const PriorityNav = (($) => {
       this._element = element
       this._config = config
 
-      this._$menu = $(element)
+      if($(element).is('ul')) {
+        this._$menu = $(element)
+      } else {
+        this._$menu = $(element).find('ul').first()
+      }
       this._$allNavElements = this._$menu.find(Selector.NAV_ELEMENTS)
       this._bindUIActions()
       this._setupMenu()
@@ -75,15 +80,6 @@ const PriorityNav = (($) => {
 
       // Used to snag the previous menu item in addition to ones that have wrapped
       let first = true
-
-      // move priority element out of wrap
-      const $priorityEl = this._$menu.find(Selector.PRIORITY_ELEMENT)
-
-      if ($priorityEl.length > 0 && $priorityEl.position().top !== firstPos.top) {
-        while ($priorityEl.position().top !== firstPos.top) {
-          $priorityEl.insertBefore($priorityEl.prev())
-        }
-      }
 
       // Loop through all the nav items...
       this._$allNavElements.each(function (i) {
@@ -112,6 +108,7 @@ const PriorityNav = (($) => {
 
         // Hide ones that we're moving
         $wrappedElements.addClass(ClassName.HIDE)
+        $wrappedElements.find('.nav-link').attr('tabindex', -1)
 
         // Add wrapped elements to dropdown
         this._$menu.find('.overflow-nav-list').append(newSet)
@@ -121,7 +118,21 @@ const PriorityNav = (($) => {
 
         // Make overflow visible again so dropdown can be seen.
         this._$menu.find('.o-nav-local').css('overflow', 'visible')
+
+        // Check if menu doesn't overflow after process
+        if(this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
+          const $item = $(this._element).find('.' + ClassName.HIDE).first().prev()
+          const $itemDuplicate = $item.clone()
+
+          $item.addClass(ClassName.HIDE)
+          $item.find('.nav-link').attr('tabindex', -1)
+
+          this._$menu.find('.overflow-nav-list').prepend($itemDuplicate)
+        }
       }
+
+      //hide menu from AT
+      this._$menu.find('.overflow-nav').attr('aria-hidden', true)
 
     }
 
@@ -129,6 +140,7 @@ const PriorityNav = (($) => {
       this._$menu.find('.overflow-nav-list').empty()
       this._$menu.find('.overflow-nav').removeClass('show-inline-block')
       this._$allNavElements.removeClass(ClassName.HIDE)
+      this._$allNavElements.find('.nav-link').attr('tabindex', 0)
     }
 
     _bindUIActions() {
@@ -140,6 +152,10 @@ const PriorityNav = (($) => {
           this._setupMenu()
           this._$menu.removeClass('resizing')
         }, RESIZE_DURATION)
+      })
+
+      this._$menu.find('.overflow-nav .dropdown-toggle').on(Event.FOCUS, (e) => {
+        $(e.target).dropdown('toggle')
       })
     }
 

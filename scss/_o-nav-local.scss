@@ -11,6 +11,16 @@
     border-top: 1px solid $gray-light-o;
   }
 
+  > .container,
+  > .container-fluid {
+    display: flex;
+  }
+
+  ul + ul {
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+
   .nav-item + .nav-item {
     margin-left: 1rem;
   }
@@ -21,6 +31,9 @@
 
   .nav-link,
   .dropdown-toggle {
+    @include focus {
+      outline: 1px dotted #000;
+    }
     display: inline-block;
     padding: .9375rem 0 1.0625rem;
     font-size: $font-size-base;
@@ -46,6 +59,9 @@
     }
 
     .nav-link {
+      @include focus {
+        outline-offset: -2px;
+      }
       display: block;
       padding: .625rem .625rem .625rem 1.25rem;
     }
