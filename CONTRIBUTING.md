@@ -28,10 +28,6 @@ restrictions:
   Use [GitHub's "reactions" feature](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments) 
   instead. We reserve the right to delete comments which violate this rule.
 
-* Please **do not** open issues or pull requests regarding the code in
-  [`Normalize`](https://github.com/necolas/normalize.css) (open them in
-  its repository).
-
 * Please **do not** open issues regarding the official themes offered on <https://themes.getbootstrap.com/>.
   Instead, please email any questions or feedback regarding those themes to `themes AT getbootstrap DOT com`.
 
@@ -46,7 +42,7 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 - `docs` - Issues for improving or updating our documentation.
 - `examples` - Issues involving the example templates included in our docs.
 - `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified. New features require a minor version bump (e.g., `v3.0.0` to `v3.1.0`).
-- `grunt` - Issues with our included JavaScript-based Gruntfile, which is used to run all our tests, concatenate and compile source files, and more.
+- `grunt` - Issues with our build system, which is used to run all our tests, concatenate and compile source files, and more.
 - `help wanted` - Issues we need or would love help from the community to resolve.
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
@@ -73,7 +69,7 @@ Guidelines for bug reports:
 
 3. **Isolate the problem** &mdash; ideally create a [reduced test
    case](https://css-tricks.com/reduced-test-cases/) and a live example.
-   [This JS Bin](https://jsbin.com/qusafa/edit?html,output) is a helpful template.
+   [This JS Bin](https://jsbin.com/lolome/edit?html,output) is a helpful template.
 
 
 A good bug report shouldn't leave others needing to chase you up for more
@@ -245,7 +241,7 @@ includes code changes) and under the terms of the
 
 ### Checking coding style
 
-Run `grunt test` before committing to ensure your changes follow our coding standards.
+Run `npm run test` before committing to ensure your changes follow our coding standards.
 
 
 ## License

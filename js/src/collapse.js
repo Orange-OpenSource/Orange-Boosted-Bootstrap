@@ -56,9 +56,8 @@ const Collapse = (($) => {
   }
 
   const Selector = {
-    ACTIVES     : '.card:not(.multi) > .show, .card:not(.multi) > .collapsing', // boosted mod
-    DATA_TOGGLE : '[data-toggle="collapse"]',
-    DATA_CHILDREN : 'data-children'
+    ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
+    DATA_TOGGLE : '[data-toggle="collapse"]'
   }
 
 
@@ -78,18 +77,11 @@ const Collapse = (($) => {
         `[data-toggle="collapse"][href="#${element.id}"],` +
         `[data-toggle="collapse"][data-target="#${element.id}"]`
       ))
+
       this._parent = this._config.parent ? this._getParent() : null
 
       if (!this._config.parent) {
         this._addAriaAndCollapsedClass(this._element, this._triggerArray)
-      }
-
-      this._selectorActives = Selector.ACTIVES
-      if (this._parent) {
-        const childrenSelector = this._parent.hasAttribute(Selector.DATA_CHILDREN) ? this._parent.getAttribute(Selector.DATA_CHILDREN) : null
-        if (childrenSelector !== null) {
-          this._selectorActives = `${childrenSelector} > .show, ${childrenSelector} > .collapsing`
-        }
       }
 
       if (this._config.toggle) {
@@ -129,7 +121,7 @@ const Collapse = (($) => {
       let activesData
 
       if (this._parent) {
-        actives = $.makeArray($(this._parent).find(this._selectorActives))
+        actives = $.makeArray($(this._parent).children().children(Selector.ACTIVES))
         if (!actives.length) {
           actives = null
         }
@@ -162,7 +154,7 @@ const Collapse = (($) => {
         .addClass(ClassName.COLLAPSING)
 
       this._element.style[dimension] = 0
-      this._element.setAttribute('aria-expanded', true)
+      this._element.setAttribute('aria-expanded', true) // boosted mod
 
       if (this._triggerArray.length) {
         $(this._triggerArray)
@@ -223,7 +215,7 @@ const Collapse = (($) => {
         .removeClass(ClassName.COLLAPSE)
         .removeClass(ClassName.SHOW)
 
-      this._element.setAttribute('aria-expanded', false)
+      this._element.setAttribute('aria-expanded', false) // boosted mod
 
       if (this._triggerArray.length) {
         $(this._triggerArray)
@@ -300,7 +292,7 @@ const Collapse = (($) => {
     _addAriaAndCollapsedClass(element, triggerArray) {
       if (element) {
         const isOpen = $(element).hasClass(ClassName.SHOW)
-        element.setAttribute('aria-expanded', isOpen)
+        element.setAttribute('aria-expanded', isOpen) // boosted mod
 
         if (triggerArray.length) {
           $(triggerArray)

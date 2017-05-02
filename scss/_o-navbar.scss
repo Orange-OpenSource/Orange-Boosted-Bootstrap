@@ -132,6 +132,26 @@
   }
 }
 
+
+.navbar-toggler:hover {
+  .svg-menu {
+    @include svg-menu("000");
+  }
+}
+
+.navbar-toggler:focus {
+  outline: 0;
+
+  .svg-menu {
+    @include svg-menu("000");
+  }
+}
+
+.navbar-toggler:active {
+  color: #fff;
+  background-color: $brand-primary;
+}
+
 .navbar.minimized {
   height: $navbar-height-minimized; // IE flex support
   min-height: $navbar-height-minimized;
@@ -239,25 +259,6 @@
             display: block;
             width: 1.25rem;
             height: 1.25rem;
-          }
-
-          .navbar-toggler:hover {
-            .svg-menu {
-              @include svg-menu("000");
-            }
-          }
-
-          .navbar-toggler:focus {
-            outline: 0;
-
-            .svg-menu {
-              @include svg-menu("000");
-            }
-          }
-
-          .navbar-toggler:active {
-            color: #fff;
-            background-color: $brand-primary;
           }
 
           .nav-item {
