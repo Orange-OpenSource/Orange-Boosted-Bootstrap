@@ -159,7 +159,7 @@ footer a, footer span {
   /*margin-top: 2.875rem !important;*/
 }
 
-.mega-menu #id_for_cdu_link a:hover,.mega-menu #id_for_cdu_link a:focus {
+.mega-menu #id-for-cdu-link a:hover,.mega-menu #id-for-cdu-link a:focus {
   color: #f16e00;
 }
 

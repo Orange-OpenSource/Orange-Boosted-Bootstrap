@@ -98,7 +98,7 @@ A supra bar should never be used on its own and always be included in header and
 ## Full example
 
 {% example html %}
-<header role="banner" id="demo-navbar  ">
+<header role="banner" id="demo-navbar">
     <nav class="navbar navbar-inverse bg-inverse navbar-expand-md supra">
         <div class="container">
             <ul class="navbar-nav">
@@ -192,7 +192,7 @@ Using javascript your can initialize the navbar component with the following opt
 Using javascript, simply declare your navbar component with the needed options.
 
 {% highlight js %}
-$('#demo-navbar  ').navbar({sticky: true, hideSupra: true});
+$('#demo-navbar').navbar({sticky: true, hideSupra: true});
 {% endhighlight %}
 
 See a full implementation in the Orange News [example page](../..//examples/orange-news/)
