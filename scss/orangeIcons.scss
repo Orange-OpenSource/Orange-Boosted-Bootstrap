@@ -2817,10 +2817,16 @@
   @include svg-avatar("#fff");
 }
 
-.svg-avatar:hover {
+.svg-avatar:hover,
+.svg-avatar:active {
   @include svg-avatar($brand-primary);
 }
 
 .svg-buy {
   @include svg-buy("#fff");
+}
+
+.svg-buy:hover,
+.svg-buy:active {
+  @include svg-buy($brand-primary);
 }

@@ -25,91 +25,74 @@
     }
   }
 
-  .nav-item {
-    > .nav-link,
-    &.nav-link {
-      line-height: $input-btn-line-height;
-
-      &:focus {
-        outline: 1px dotted #fff;
-      }
+  .nav-link {
+    @include focus {
+      outline: 1px dotted #fff;
+      outline-offset: .625rem;
     }
 
-    .nav-item-cdu {
-      @include hover-focus {
-        color: $brand-primary !important;
-      }
+    line-height: 1;
+  }
 
-      &:focus {
-        outline: 1px dotted #fff;
-      }
+  .nav-link.icon {
+    margin-top: 0;
 
-      display: block;
-      line-height: $input-btn-line-height;
-      color: #fff !important;
+    span[class^="icon-"] {
+      font-size: 1.5rem;
+      font-weight: normal;
     }
 
-    .nav-link.icon {
-      box-sizing: content-box;
-      padding-top: .4375rem;
-      padding-bottom: .4375rem;
-      margin-top: 0;
-
-      span[class^="icon-"] {
-        font-size: 1.5rem;
-        font-weight: normal;
-      }
-
-      &[class*="svg-"],
-      &[class*="svg-"]::after {
-        width: 1.875rem;
-        height: 1.875rem;
-      }
-    }
-
-    .nav-link:not(.icon)[class*="svg-"]::after {
-      top: -.0625rem;
-      right: -1.875rem;
-      left: auto;
-    }
-
-    &.show .dropdown-toggle::after {
-      transform: rotateZ(180deg);
-    }
-
-    .dropdown-toggle {
-      @include hover-focus {
-        color: $brand-primary;
-      }
-
-      @include focus {
-        outline: 1px dotted #fff;
-        outline-offset: .625rem;
-      }
-
-      position: relative;
-      display: block;
-      line-height: $input-btn-line-height;
-      color: #fff;
-
-      &::after {
-        top: .3125rem;
-        display: flex;
-        align-self: center;
-        color: #fff;
-      }
-
-      .caret {
-        position: absolute;
-      }
-    }
-
-    .dropdown-menu {
-      top: 2rem;
-      right: -.75rem;
-      left: auto;
+    &[class*="svg-"],
+    &[class*="svg-"]::after {
+      width: 1.875rem;
+      height: 1.875rem;
     }
   }
+
+  .nav-link:not(.icon)[class*="svg-"]::after {
+    top: -.0625rem;
+    right: -1.875rem;
+    left: auto;
+  }
+
+  .dropdown-toggle {
+    @include focus {
+      outline: 1px dotted #fff;
+      outline-offset: .5rem;
+    }
+    margin-left: 1.25rem;
+  }
+
+  .dropdown-toggle {
+    @include hover-focus {
+      color: $brand-primary;
+    }
+
+    position: relative;
+    display: block;
+    line-height: $input-btn-line-height;
+    color: #fff;
+
+    &::after {
+      top: .3125rem;
+      color: #fff;
+    }
+
+    .caret {
+      position: absolute;
+    }
+  }
+
+  .dropdown.show .dropdown-toggle::after {
+    transform: rotateZ(180deg);
+  }
+
+  .dropdown-menu {
+    top: 2rem;
+    right: -.75rem;
+    left: auto;
+  }
+
   .form-inline {
     margin-left: .625rem;
   }
@@ -187,42 +170,47 @@
     display: none;
   }
 
-  .nav-link {
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+  .navbar-nav {
+    margin: 0;
+
+    > .nav-link:first-child,
+    .nav-item:first-child .nav-link {
+      margin-left: 0;
+    }
   }
 
-  .nav-item {
-    &:first-child {
-      margin-left: -$nav-link-padding-x;
+  .nav-link,
+  .dropdown-toggle {
+    @include focus {
+      outline-offset: .5rem;
     }
 
-    .nav-link,
-    .dropdown-toggle {
-      span[class^="icon-"] {
-        font-size: $font-size-h5;
-        font-weight: normal;
-      }
+    font-size: $font-size-sm;
+    line-height: 1;
+
+    span[class^="icon-"] {
+      font-size: $font-size-h5;
+      font-weight: normal;
+    }
+  }
+
+  .nav-link.icon {
+    span[class^="icon-"] {
+      font-size: $font-size-h6;
+      font-weight: normal;
     }
 
-    .nav-link.icon {
-      span[class^="icon-"] {
-        font-size: $font-size-h6;
-        font-weight: normal;
-      }
-
-      &[class*="svg-"],
-      &[class*="svg-"]::after {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
+    &[class*="svg-"],
+    &[class*="svg-"]::after {
+      width: 1.25rem;
+      height: 1.25rem;
     }
+  }
 
-    .dropdown-menu {
-      top: $navbar-supra-height;
-      right: 0;
-      left: auto;
-    }
+  .dropdown-menu {
+    top: $navbar-supra-height;
+    right: 0;
+    left: auto;
   }
 }
 
@@ -243,7 +231,7 @@
 
           .navbar-brand {
             @include focus {
-              outline-offset: .5rem;
+              outline-offset: .625rem;
             }
             font-size: $font-size-sm;
           }

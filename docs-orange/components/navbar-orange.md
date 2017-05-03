@@ -20,12 +20,10 @@ Orange navbar is the main navigation of project website. It should always be inc
 <header role="banner">
     <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between">
-                <a class="navbar-brand"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+            </button>
             <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Discover</a></li>
@@ -129,7 +127,7 @@ A supra bar should never be used on its own and always be included in header and
     </nav>
     <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>

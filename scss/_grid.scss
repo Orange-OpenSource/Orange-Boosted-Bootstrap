@@ -16,7 +16,9 @@
 
 @if $enable-grid-classes {
   .container-fluid {
-    width: 100%;
+    // boosted mod
+    // width: 100%;
+    // end mod
     @include make-container();
   }
 }

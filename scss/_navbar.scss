@@ -81,6 +81,10 @@
   .nav-link {
     padding-right: 0;
     padding-left: 0;
+    // boosted mod
+    padding: 0;
+    margin-left: 1.25rem;
+    // end mod
   }
 }
 
@@ -108,8 +112,6 @@
   flex-basis: 100%;
   // boosted mod
   align-self: flex-end;
-  margin-top: auto;
-  margin-bottom: - ($nav-link-padding-y + .1875rem);
   // end mod
 }
 
@@ -135,6 +137,7 @@
   // Boosted mod
   &:active {
     background-color: $brand-primary;
+
     .navbar-toggler-icon {
       background-image: $navbar-inverse-toggler-bg;
     }
@@ -212,13 +215,6 @@
           .dropdown-menu {
             position: absolute;
           }
-
-          // Boosted mod
-          .nav-link,
-          .dropdown-toggle {
-            padding: $nav-link-padding-y $nav-link-padding-x;
-          }
-          // Boosted mod
         }
 
         // For nesting containers, have to redeclare for alignment purposes
