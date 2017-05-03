@@ -30,5 +30,3 @@ matrix:
   exclude:
     - node_js: "4"
       env: TWBS_TEST=browser
-notifications:
-      env: TWBS_TEST=sauce-js-unit
