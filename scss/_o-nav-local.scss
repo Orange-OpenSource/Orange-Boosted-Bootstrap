@@ -100,63 +100,81 @@
 
 // Mobile
 
-// @include media-breakpoint-down(sm) {
-//   .o-nav-local {
+@include media-breakpoint-down(sm) {
+  .o-nav-local {
 
-//     .local-select {
-//       position: relative;
-//       width: 100%;
+    > .container,
+    > .container-fluid {
+      flex-direction: column;
+      position: relative;
+    }
 
-//       &::after {
-//         position: absolute;
-//         top: 1rem;
-//         right: .625rem;
-//         padding-left: .375rem;
-//         font-family: "icon-orange";
-//         font-size: inherit;
-//         color: #000;
-//         content: "\e93c";
-//       }
-//     }
+    .local-select {
+      position: relative;
+      width: 100%;
 
-//     .nav {
-//       width: 100%;
-//       margin-top: -1px;
-//       background-color: #fff;
-//       border: 2px solid $gray-light-o;
+      &::after {
+        position: absolute;
+        top: 1rem;
+        right: .625rem;
+        padding-left: .375rem;
+        font-family: "icon-orange";
+        font-size: inherit;
+        color: #000;
+        content: "\e93c";
+      }
+    }
 
-//       &.show {
-//         display: flex;
-//       }
+    .nav {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      margin-top: -1px;
+      background-color: #fff;
+      border: 2px solid $gray-light-o;
+      flex-direction: column;
+      flex-wrap: nowrap;
 
-//       .nav-item {
-//         margin-left: 0;
+      &.collapse {
+        display: none;
+      }
 
-//         .nav-link {
-//           @include hover {
-//             color: #fff;
-//             background-color: $brand-primary;
-//           }
+      &.collapsing {
+        flex-direction: column;
+      }
 
-//           @include focus {
-//             color: #000;
-//             background-color: #fff;
-//           }
+      &.show {
+        display: flex;
+      }
 
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
+      .nav-item {
+        margin-left: 0;
 
-//   .o-nav-local.inverse {
-//     .local-select::after {
-//       color: #fff;
-//     }
+        .nav-link {
+          @include hover {
+            color: #fff;
+            background-color: $brand-primary;
+          }
 
-//     .nav-item .nav-link:focus {
-//       color: $brand-primary;
-//       background-color: #000;
-//     }
-//   }
-// }
+          @include focus {
+            color: #000;
+            background-color: #fff;
+          }
+
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .o-nav-local.inverse {
+    .local-select::after {
+      color: #fff;
+    }
+
+    .nav-item .nav-link:focus {
+      color: $brand-primary;
+      background-color: #000;
+    }
+  }
+}
