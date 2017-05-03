@@ -24,7 +24,7 @@ cache:
     - node_modules
     - vendor/bundle
 env:
-    - TWBS_TEST=core
+  - TWBS_TEST=core
   - TWBS_TEST=browser
 matrix:
   exclude:
