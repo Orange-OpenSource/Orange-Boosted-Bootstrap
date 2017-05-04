@@ -139,10 +139,6 @@
         display: none;
       }
 
-      &.collapsing {
-        flex-direction: column;
-      }
-
       &.show {
         display: flex;
       }
