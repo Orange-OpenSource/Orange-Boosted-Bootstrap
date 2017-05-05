@@ -361,6 +361,11 @@
 
 // scss-lint:disable SelectorDepth
 
+          .svg-delete {
+            height: 1.25rem;
+            width: 1.25rem;
+          }
+
           > .container > .navbar-nav {
             flex-direction: row;
             align-items: flex-start;
