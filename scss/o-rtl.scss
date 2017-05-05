@@ -2,13 +2,16 @@
 //
 //
 
+@import "mixins";
+
 // invert chevrons
 
-.icon-arrow-next::before {
-  content: "\ea53";
+.svg-arrow-previous {
+  @include svg-arrow-next("#000");
 }
-.icon-arrow-previous::before {
-  content: "\ea52";
+
+.svg-arrow-next {
+  @include svg-arrow-previous("#000");
 }
 
 // rotate stepbar chevrons
