@@ -11,30 +11,7 @@
 }
 
 .navbar {
-  padding-bottom: 1.3125rem;  // 25 - 4 px
-
-  .navbar-brand {
-    @include focus {
-      outline: 1px dotted #fff;
-      outline-offset: .625rem;
-    }
-
-    margin-bottom: .25rem;
-
-    img {
-      flex-wrap: wrap;
-      width: auto;
-      height: 3.125rem;
-      margin-top: 0;
-    }
-  }
-
   .nav-link {
-    @include focus {
-      outline: 1px dotted #fff;
-      outline-offset: .625rem;
-    }
-
     // line-height: 1;
   }
 
@@ -60,14 +37,6 @@
   }
 
   .dropdown-toggle {
-    @include focus {
-      outline: 1px dotted #fff;
-      outline-offset: .5rem;
-    }
-    margin-left: 1.25rem;
-  }
-
-  .dropdown-toggle {
     @include hover-focus {
       color: $brand-primary;
     }
@@ -80,10 +49,6 @@
     &::after {
       top: .3125rem;
       color: #fff;
-    }
-
-    .caret {
-      position: absolute;
     }
   }
 

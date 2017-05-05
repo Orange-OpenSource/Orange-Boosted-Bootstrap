@@ -14,7 +14,6 @@ In addition to the `.active` class, you must use `aria-current="location"` state
 {% endcallout %}
 
 {% example html %}
-
 <ol class="breadcrumb">
   <li class="breadcrumb-item active" aria-current="location">Home</li>
 </ol>

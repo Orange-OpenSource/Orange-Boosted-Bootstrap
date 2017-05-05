@@ -21,7 +21,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x; // boosted mod
+  padding: $navbar-padding-y $navbar-padding-x ($navbar-padding-y - .25rem) $navbar-padding-x; // boosted mod padding bottom = 25-4px
   font-weight: bold; // Boosted mod
 
   // Because flex properties aren't inherited, we need to redeclare these first
@@ -51,6 +51,9 @@
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-padding-x;
+  // Boosted mod
+  margin-bottom: .25rem;
+  // end mod
   font-size: $navbar-brand-font-size;
   // Boosted mod
   font-weight: bold;
@@ -61,6 +64,20 @@
   @include hover-focus {
     text-decoration: none;
   }
+
+  // Boosted mod
+  @include focus {
+    outline: 1px dotted #fff;
+    outline-offset: .625rem;
+  }
+
+  img {
+    flex-wrap: wrap;
+    width: auto;
+    height: $navbar-brand-logo-height;
+    margin-top: 0;
+  }
+  // end mod
 }
 
 
@@ -78,12 +95,24 @@
   // end mod
   list-style: none;
 
+  // boosted mod
   .nav-link {
-    // boosted mod
     padding: 0;
     margin-left: 1.25rem;
-    // end mod
+    @include focus {
+      outline: 1px dotted #fff;
+      outline-offset: .625rem;
+    }
   }
+
+  .dropdown-toggle {
+    @include focus {
+      outline: 1px dotted #fff;
+      outline-offset: .5rem;
+    }
+    margin-left: 1.25rem;
+  }
+  // end mod
 }
 
 
@@ -178,6 +207,10 @@
           }
 
           // boosted mod
+          .dropdown-toggle {
+            margin-left: 0;
+          }
+
           margin-bottom: 0;
           // end mod
         }
@@ -197,6 +230,9 @@
         }
         .navbar-collapse {
           margin-bottom: 0;
+        }
+        .nav-link {
+          margin-left: 0;
         }
         // end mod
 
