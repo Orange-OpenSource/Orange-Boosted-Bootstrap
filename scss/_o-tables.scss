@@ -232,9 +232,13 @@ caption {
       position: relative;
     }
 
-    &.tablesorter-headerDesc .tablesorter-header-inner::after {
+    .tablesorter-header-inner span {
+      padding-right: 1.6875rem;
+    }
+
+    &.tablesorter-headerDesc .tablesorter-header-inner span::after {
       position: absolute;
-      top: 1.125rem;
+      top: 45%;
       width: .875rem;
       height: .4375rem;
       margin-left: .625rem;
@@ -243,9 +247,9 @@ caption {
       transform: rotate(180deg);
     }
 
-    &.tablesorter-headerAsc .tablesorter-header-inner::after {
+    &.tablesorter-headerAsc .tablesorter-header-inner span::after {
       position: absolute;
-      top: 1.125rem;
+      top: 45%;
       width: .875rem;
       height: .4375rem;
       margin-left: .625rem;
@@ -254,16 +258,15 @@ caption {
     }
 
     &.tablesorter-headerUnSorted {
-      @include hover-focus {
-        .tablesorter-header-inner::after {
-          position: absolute;
-          top: .75rem;
-          width: .875rem;
-          height: 1.0625rem;
-          margin-left: .625rem;
-          content: "";
-          background-image: $o-sortable-hover-icon;
-        }
+      .tablesorter-header-inner:hover span::after,
+      .tablesorter-header-inner:focus span::after {
+        position: absolute;
+        top: 31%;
+        width: .875rem;
+        height: 1.0625rem;
+        margin-left: .625rem;
+        content: "";
+        background-image: $o-sortable-hover-icon;
       }
     }
 

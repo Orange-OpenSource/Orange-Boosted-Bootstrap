@@ -62,3 +62,14 @@ Class names and semantic changed, see [Orange stepbar](../components/stepbar/) f
 ### Accordions
 
 [Accordions](../components/collapse/#accordion-example) are now based on card structure. Be sure to use `.card-header` and `.card-block` in a `.card` element, in addition of the `.o-accordion` on the main container. To get multiple openable behaviour just add `.multi` class on each `.card` item.
+
+### Tablesorter
+[Tablesorter](../boostwatch/#complextable) add a template on tablesorter header, need to be added separatly by each project
+$("#myTable").tablesorter({
+  ....
+  // manipulate the template string after is it created
+  onRenderTemplate : function(i, t){
+    // put a span arround the text
+    return '<span>' + t + '</span>';
+  }
+});
