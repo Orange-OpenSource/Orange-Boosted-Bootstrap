@@ -30,6 +30,7 @@ const Tab = (($) => {
   const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
   const ARROW_DOWN_KEYCODE  = 40 // KeyboardEvent.which value for down arrow key
   const RANDOM_NUMBER       = 1000
+  const REGEXP_KEYDOWN           = new RegExp(`${ARROW_LEFT_KEYCODE}|${ARROW_UP_KEYCODE}|${ARROW_RIGHT_KEYCODE}|${ARROW_DOWN_KEYCODE}`)
   // end mod
 
   const Event = {
@@ -155,14 +156,12 @@ const Tab = (($) => {
     }
     // Boosted mod
     static _keydown(e) {
-      let $this = $(this)
+      const $this = $(this)
       const Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible')
-      let index
       const k = e.which || e.keyCode
-      $this = $(this)
-      if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
-        return
-      }
+
+      let index = 0
+
       index = Items.index(Items.filter(':focus'))
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
@@ -179,6 +178,7 @@ const Tab = (($) => {
         index = 0
       }
       const nextTab = Items.eq(index)
+
       if (nextTab.attr('role') === 'tab') {
         nextTab.tab('show').trigger('focus')
       }
@@ -203,7 +203,7 @@ const Tab = (($) => {
       )
 
       // Boosted mod
-      $(container).find('.nav-link').attr({
+      $(container).find('.nav-link:not(.dropdown-toggle)').attr({
         tabIndex : '-1',
         'aria-selected' : false
       })
@@ -245,7 +245,7 @@ const Tab = (($) => {
       $(element).addClass(ClassName.ACTIVE)
       element.setAttribute('aria-expanded', true)
       // Boosted mod
-      $(element).filter('.nav-link.active').attr({
+      $(element).filter('.nav-link:not(.dropdown-toggle).active').attr({
         tabIndex : '0',
         'aria-selected' : true
       })
@@ -318,7 +318,7 @@ const Tab = (($) => {
   // Boosted mod
   $(document)
     .on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
-      if (!/(ARROW_UP_KEYCODE|ARROW_DOWN_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_LEFT_KEYCODE)/.test(event.which)) {
+      if (!REGEXP_KEYDOWN.test(event.which)) {
         return
       }
       event.preventDefault()

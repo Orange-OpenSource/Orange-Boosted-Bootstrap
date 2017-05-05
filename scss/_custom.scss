@@ -598,7 +598,7 @@ $zindex-tooltip:            1070 !default;
 $nav-item-margin:               .2rem !default;
 $nav-item-inline-spacer:        1rem !default;
 $nav-link-padding-y:            ($spacer * .5);
-$nav-link-padding-x:            ($spacer * .5);
+$nav-link-padding-x:            $spacer;
 $nav-link-hover-bg:             $gray-lighter !default;
 $nav-disabled-link-color:       $gray;
 $nav-disabled-link-hover-bg:    transparent;
