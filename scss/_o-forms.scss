@@ -213,7 +213,8 @@ select.form-control {
   border: 0;
 }
 
-.custom-control-input:disabled ~ .custom-control-indicator {
+.custom-control-input:disabled ~ .custom-control-indicator,
+.custom-control-input:active:disabled ~ .custom-control-indicator {
   background-color: #fff;
   border: 2px solid $gray-light-o;
 }

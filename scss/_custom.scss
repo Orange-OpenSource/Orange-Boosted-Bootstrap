@@ -436,7 +436,7 @@ $input-border-radius-lg:         $border-radius-lg;
 $input-border-radius-sm:         $border-radius-sm;
 
 $input-bg-focus:                 $input-bg;
-$input-border-focus-color:       $gray-light;
+$input-border-color-focus:       $gray-light;
 $input-box-shadow-focus:         none;
 $input-color-focus:              $input-color;
 
@@ -512,7 +512,7 @@ $custom-select-border-width:  $input-btn-border-width;
 $custom-select-border-color:  $input-border-color;
 $custom-select-border-radius: $border-radius;
 
-$custom-select-focus-border-color: $input-border-focus-color;
+$custom-select-focus-border-color: $input-border-color-focus;
 $custom-select-focus-box-shadow:   none;
 
 $custom-select-sm-font-size: 75% !default;
