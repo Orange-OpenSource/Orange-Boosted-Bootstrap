@@ -11,11 +11,15 @@
 }
 
 .navbar {
+  padding-bottom: 1.3125rem;  // 25 - 4 px
+
   .navbar-brand {
     @include focus {
       outline: 1px dotted #fff;
       outline-offset: .625rem;
     }
+
+    margin-bottom: .25rem;
 
     img {
       flex-wrap: wrap;
@@ -31,7 +35,7 @@
       outline-offset: .625rem;
     }
 
-    line-height: 1;
+    // line-height: 1;
   }
 
   .nav-link.icon {
