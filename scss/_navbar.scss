@@ -21,7 +21,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x ($navbar-padding-y - .25rem) $navbar-padding-x; // boosted mod padding bottom = 25-4px
+  padding: $navbar-padding-y $navbar-padding-x ($navbar-padding-y - .25rem); // boosted mod padding bottom = 25-4px
   font-weight: bold; // Boosted mod
 
   // Because flex properties aren't inherited, we need to redeclare these first
