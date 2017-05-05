@@ -11,10 +11,6 @@
 }
 
 .navbar {
-  .nav-link {
-    // line-height: 1;
-  }
-
   .nav-link.icon {
     margin-top: 0;
 
@@ -221,7 +217,7 @@
           .nav-item {
             margin-left: 0;
             font-size: $font-size-h5;
-            line-height: 1;
+            // line-height: 1;
             border-top: 1px solid $gray-dark;
           }
 
@@ -260,7 +256,7 @@
               outline-offset: -1px;
             }
 
-            padding: 1rem 0 1rem .625rem;
+            padding: .875rem 0 .875rem .625rem;
             margin-top: 0;
           }
 
@@ -274,7 +270,7 @@
 
           .nav-item.dropdown .dropdown-toggle,
           .nav-item.dropdown .dropdown-item {
-            padding: 1rem 0 1rem .625rem;
+            padding: .875rem 0 .875rem .625rem;
           }
 
           .nav-item.dropdown .dropdown-toggle:focus {
