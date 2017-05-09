@@ -32,9 +32,6 @@
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
-    # boosted mod
-    - title: Orange links
-    # end mod
     - title: Button group
     - title: Card
     - title: Carousel
