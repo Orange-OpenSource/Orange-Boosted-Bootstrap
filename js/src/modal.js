@@ -90,6 +90,10 @@ const Modal = (($) => {
       this._ignoreBackdropClick = false
       this._originalBodyPadding = 0
       this._scrollbarWidth      = 0
+
+      // Boosted mod
+      this._addAria()
+      // end mod
     }
 
 
@@ -488,6 +492,30 @@ const Modal = (($) => {
       return scrollbarWidth
     }
 
+    // Boosted mod
+    _addAria() {
+      const $ModalPanel = $(this._element)
+      const $ModalTitle = $ModalPanel.find('.modal-title')
+      const $ModalDialog = $ModalPanel.find('.modal-dialog')
+
+      $ModalPanel.attr({'role': 'dialog', 'aria-modal': true})
+
+
+      if ($ModalTitle) {
+        const ModalTitleId = $ModalTitle.attr('id')
+        if (ModalTitleId) {
+          $ModalPanel.attr({
+            'aria-labelledby' : ModalTitleId
+          })
+        }
+      }
+
+      if ($ModalDialog) {
+        $ModalDialog.attr('role', 'document')
+      }
+
+    }
+    // end mod
 
     // static
 
@@ -557,34 +585,6 @@ const Modal = (($) => {
     Modal._jQueryInterface.call($(target), config, this)
   })
 
-  $(document).ready(() => {
-    $('[data-toggle="modal"]').each(function () {
-      // modal = l'élement déclencheur de l'aperçu de la popin
-      // ModalPanel = la fenêtre modal à proprement parler
-      const Modal = $(this)
-      const ModalPanel = Modal.attr('data-target') ? $(Modal.attr('data-target')) : $(Modal.attr('href'))
-
-      // On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
-      ModalPanel.attr({
-        role : 'dialog'
-      })// LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
-
-      // On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
-      const ModalTitle = ModalPanel.find('.modal-title')
-      if (ModalTitle) {
-        const ModalTitleId = ModalTitle.attr('id')
-        if (ModalTitleId) {
-          ModalPanel.attr({
-            'aria-labelledby' : ModalTitleId
-          })
-        }
-      }
-    })
-
-    $('.modal-dialog').attr({
-      role : 'document'
-    })
-  })
   /**
    * ------------------------------------------------------------------------
    * jQuery

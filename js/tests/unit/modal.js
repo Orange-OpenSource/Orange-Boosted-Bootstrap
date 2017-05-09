@@ -555,4 +555,13 @@ $(function () {
       })
       .trigger('click')
   })
+
+  QUnit.test('should set aria-modal="true" on the modal container with role=dialog', function (assert) {
+    assert.expect(2)
+    var $el = $('<div id="modal-test"/>')
+    var $modal = $el.bootstrapModal()
+    assert.strictEqual($modal.attr('aria-modal'), 'true', 'check state aria-modal true to role dialog elements')
+    assert.strictEqual($modal.attr('role'), 'dialog', 'check role dialog element on modal')
+  })
+
 })
