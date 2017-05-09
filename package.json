@@ -48,7 +48,7 @@
     "js-test-cloud": "npm-run-all js-test-dep js-launch-cloud",
     "docs": "npm-run-all docs-compile docs-lint",
     "docs-lint": "htmlhint --config docs/.htmlhintrc _gh_pages/ js/tests/visual/ && htmllint --rc docs/.htmllintrc _gh_pages/*.html _gh_pages/**/*.html js/tests/visual/*.html",
-    "docs-clean": "shx mkdir -p .tmpdocs  && shx cp -r docs/* .tmpdocs/ && shx cp -r docs-orange/* .tmpdocs/ && shx rm -rf .tmpdocs/dist/* && shx cp -r dist/* .tmpdocs/dist/",
+    "docs-clean": "shx mkdir -p .tmpdocs && shx rm -rf .tmpdocs/* && shx mkdir -p .tmpdocs && shx cp -r docs/* .tmpdocs/ && shx cp -r docs-orange/* .tmpdocs/ && shx rm -rf .tmpdocs/dist/* && shx cp -r dist/* .tmpdocs/dist/",
     "docs-rtl": "node build/docs-rtl.js",
     "docs-compile": "npm run docs-clean && npm run docs-rtl && npm run css-docs && bundle exec jekyll build",
     "docs-serve": "npm run docs-clean && npm run docs-rtl && npm run css-docs && bundle exec jekyll serve",

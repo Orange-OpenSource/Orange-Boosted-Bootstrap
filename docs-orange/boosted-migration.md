@@ -37,7 +37,7 @@ Dropped the `.horizontal-form`class. Each row of form is now contained in a `.fo
 
 Class `.control-label`is now `.form-control-label`.
 
-[Orange switches](../components/orange-switches/) update : add a class `.o-switch` to `.form-group` element when you want to use custom toggles
+[Orange switches](../components/forms/#orange-switches) update : add a class `.o-switch` to `.form-group` element when you want to use custom toggles
 
 Dropped `.o-checkbox` and `.o-radio`, now using native custom form [components](../components/forms/#checkboxes-and-radios-1).
 
