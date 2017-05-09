@@ -290,6 +290,42 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 </dl>
 {% endexample %}
 
+[comment]: # Boosted mod
+### Orange list with bullet points
+
+Simply add `o-square-list` class to the root element of a list (`<ul>`). Maximum elements depth is 3.
+
+{% example html %}
+<ul class="o-square-list">
+    <li>
+        <span>first</span>
+        <ul>
+            <li>
+                <span>1.1</span>
+                <ul>
+                    <li><span>1.1.1</span></li>
+                    <li><span>1.1.2</span></li>
+                </ul>
+            </li>
+            <li>
+                <span>1.2</span>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span>second</span>
+    </li>
+    <li>
+        <span>third</span>
+    </li>
+    <li>
+        <span>fourth</span>
+    </li>
+</ul>
+{% endexample %}
+
+[comment]: # end mod
+
 ## Responsive typography
 
 *Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Bootstrap doesn't do this for you, but it's fairly easy to add if you need it.
