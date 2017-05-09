@@ -608,4 +608,25 @@ $(function () {
       })
     $dropdown.trigger('click')
   })
+
+  QUnit.test('should set aria-haspopup="true" on dropdown-menu, role="menu" on dropdown-menu, and role="menuitem" on dropdown-item ', function (assert) {
+    assert.expect(3)
+    var dropdownHTML = '<div class="tabs">'
+        + '<div class="dropdown">'
+        + '<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown</a>'
+        + '<div class="dropdown-menu">'
+        + '<a class="dropdown-item" href="#">Secondary link</a>'
+        + '<a class="dropdown-item" href="#">Something else here</a>'
+        + '<div class="divider"/>'
+        + '<a class="dropdown-item" href="#">Another link</a>'
+        + '</div>'
+        + '</div>'
+        + '</div>'
+    var $dropdown = $(dropdownHTML).find('[data-toggle="dropdown"]').bootstrapDropdown()
+    var $dropdownMenu = $dropdown.parent().children('.dropdown-menu')
+    var $dropdownItem = $dropdown.parent().children('.dropdown-menu').children('.dropdown-item')
+    assert.strictEqual($dropdown.attr('aria-haspopup'), 'true', 'aria-haspopup is set to string "true"')
+    assert.strictEqual($dropdownMenu.attr('role'), 'menu', 'role="menu" is set on dropdown-menu')
+    assert.strictEqual($dropdownItem.attr('role'), 'menuitem', 'role="menuitem" is set on dropdown-item')
+  })
 })

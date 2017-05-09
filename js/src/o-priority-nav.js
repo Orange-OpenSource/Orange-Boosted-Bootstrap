@@ -49,7 +49,7 @@ const PriorityNav = (($) => {
       this._element = element
       this._config = config
 
-      if($(element).is('ul')) {
+      if ($(element).is('ul')) {
         this._$menu = $(element)
       } else {
         this._$menu = $(element).find('ul').first()
@@ -131,7 +131,7 @@ const PriorityNav = (($) => {
         }
       }
 
-      //hide menu from AT
+      // hide menu from AT
       this._$menu.find('.overflow-nav').attr('aria-hidden', true)
 
     }

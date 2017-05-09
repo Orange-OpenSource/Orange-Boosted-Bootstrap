@@ -69,7 +69,7 @@ const Dropdown = (($) => {
 
     constructor(element) {
       this._element = element
-
+      this._addAccessibility() // Boosted mod
       this._addEventListeners()
     }
 
@@ -141,6 +141,17 @@ const Dropdown = (($) => {
     _addEventListeners() {
       $(this._element).on(Event.CLICK, this.toggle)
     }
+
+    // boosted mod
+    _addAccessibility() {
+      // force aria-haspopup on element
+      $(this._element).attr('aria-haspopup', true)
+      // ensure that dropdown-menu have the role menu
+      $(this._element).parent().children(Selector.MENU).attr('role', 'menu')
+      // ensure that dropdown-itm's have the role menuitem
+      $(this._element).parent().children(Selector.MENU).children('.dropdown-item').attr('role', 'menuitem')
+    }
+    // end mod
 
     // static
 
@@ -270,14 +281,6 @@ const Dropdown = (($) => {
 
   }
 
-  // Boosted mod
-  // set default acessibility Attributes
-  $(document).ready(($) => {
-    $('.dropdown-toggle').attr('aria-haspopup', true)
-    $('.dropdown-menu').attr('role', 'menu')
-    $('.dropdown-menu .dropdown-item').attr('role', 'menuitem')
-  })
-  // end mod
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
