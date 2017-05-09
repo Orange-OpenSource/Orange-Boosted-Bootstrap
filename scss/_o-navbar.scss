@@ -27,8 +27,8 @@
   }
 
   .nav-link:not(.icon)[class*="svg-"]::after {
-    top: -.0625rem;
-    right: -1.875rem;
+    top: 0;
+    right: 0;
     left: auto;
   }
 
@@ -249,6 +249,10 @@
           .nav-item .nav-link.icon {
             padding: .625rem;
             margin-top: 0;
+          }
+
+          .nav-link[class^="svg-"] {
+            margin: .625rem;
           }
 
           .nav-link {
