@@ -23,7 +23,7 @@ The base `.nav` component does not include any `.active` state. The following ex
 {% example html %}
 <ul class="nav">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -39,9 +39,19 @@ The base `.nav` component does not include any `.active` state. The following ex
 
 Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, or roll your own with say a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
 
+[comment]: # Boosted mod
+
+{% callout warning %}
+#### Accessibility
+
+In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar (except for Tabs panels where `aria-selected` must be used). This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
+{% endcallout %}
+
+[comment]: # End mod
+
 {% example html %}
 <nav class="nav">
-  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled" href="#">Disabled</a>
@@ -61,7 +71,7 @@ Centered with `.justify-content-center`:
 {% example html %}
 <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -80,7 +90,7 @@ Right-aligned with `.justify-content-end`:
 {% example html %}
 <ul class="nav justify-content-end">
   <li class="nav-item">
-  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
   <a class="nav-link" href="#">Link</a>
@@ -101,7 +111,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 {% example html %}
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -119,7 +129,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 
 {% example html %}
 <nav class="nav flex-column">
-  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled" href="#">Disabled</a>
@@ -133,7 +143,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 {% example html %}
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -154,7 +164,7 @@ Take that same HTML, but use `.nav-pills` instead:
 {% example html %}
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -175,7 +185,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 {% example html %}
 <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Longer nav link</a>
@@ -193,7 +203,7 @@ When using a `<nav>`-based navigation, be sure to include `.nav-item` on the anc
 
 {% example html %}
 <nav class="nav nav-pills nav-fill">
-  <a class="nav-item nav-link active" href="#">Active</a>
+  <a class="nav-item nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-item nav-link" href="#">Link</a>
   <a class="nav-item nav-link" href="#">Link</a>
   <a class="nav-item nav-link disabled" href="#">Disabled</a>
@@ -204,7 +214,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
 
 {% example html %}
 <nav class="nav nav-pills nav-justified">
-  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link active" href="#" aria-current="page">Active</a>
     <a class="nav-link" href="#">Longer nav link</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled" href="#">Disabled</a>
@@ -215,7 +225,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation, be sure to 
 
 {% example html %}
 <nav class="nav nav-pills nav-justified">
-  <a class="nav-item nav-link active" href="#">Active</a>
+  <a class="nav-item nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-item nav-link" href="#">Link</a>
   <a class="nav-item nav-link" href="#">Link</a>
   <a class="nav-item nav-link disabled" href="#">Disabled</a>
@@ -228,7 +238,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 
 {% example html %}
 <nav class="nav nav-pills flex-column flex-sm-row">
-  <a class="flex-sm-fill text-sm-center nav-link active" href="#">Active</a>
+  <a class="flex-sm-fill text-sm-center nav-link active" href="#" aria-current="page">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
   <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Disabled</a>
@@ -250,7 +260,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {% example html %}
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -276,7 +286,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {% example html %}
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -306,7 +316,7 @@ Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility I
 <div class="bd-example bd-example-tabs">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true" aria-current="page">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a>
@@ -340,7 +350,7 @@ Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility I
 {% highlight html %}
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true" aria-current="page">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a>
@@ -356,7 +366,7 @@ Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility I
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" aria-current="page">...</div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
   <div class="tab-pane fade" id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab">...</div>
   <div class="tab-pane fade" id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab">...</div>
@@ -367,7 +377,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, as 
 
 <div class="bd-example bd-example-tabs">
   <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="home" aria-expanded="true" aria-current="page">Home</a>
     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="profile">Profile</a>
     <div class="dropdown">
       <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -397,7 +407,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, as 
 
 {% highlight html %}
 <nav class="nav nav-tabs" id="myTab" role="tablist">
-  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-expanded="true">Home</a>
+  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-expanded="true" aria-current="page">Home</a>
   <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile">Profile</a>
   <div class="dropdown">
     <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -410,7 +420,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, as 
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" aria-current="page">...</div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
   <div class="tab-pane fade" id="nav-dropdown1" role="tabpanel" aria-labelledby="nav-dropdown1-tab">...</div>
   <div class="tab-pane fade" id="nav-dropdown2" role="tabpanel" aria-labelledby="nav-dropdown2-tab">...</div>
@@ -481,7 +491,7 @@ And with vertical pills.
   <div class="row">
     <div class="col-3">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-expanded="true">Home</a>
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-expanded="true" aria-current="page">Home</a>
         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-expanded="true">Profile</a>
         <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-expanded="true">Messages</a>
         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-expanded="true">Settings</a>
@@ -596,7 +606,7 @@ Activates a tab element and content container. Tab should have either a `data-ta
 {% highlight html %}
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Home</a>
+    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-current="page">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a>
