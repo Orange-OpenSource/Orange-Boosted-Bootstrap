@@ -85,7 +85,7 @@ const Collapse = (($) => {
       }
 
       if (this._config.toggle) {
-        this.toggle()
+        // this.toggle()  // boosted mod : usless as we instanciate component at DOMContentLoaded
       }
     }
 
@@ -293,6 +293,7 @@ const Collapse = (($) => {
       if (element) {
         const isOpen = $(element).hasClass(ClassName.SHOW)
         element.setAttribute('aria-expanded', isOpen) // boosted mod
+        // todo : add role tab & tabpanel for accordions
 
         if (triggerArray.length) {
           $(triggerArray)
@@ -330,7 +331,7 @@ const Collapse = (($) => {
           $this.data(DATA_KEY, data)
         }
 
-        if (typeof config === 'string') {
+        if (typeof config === 'string' && !/init/.test(config)) { // boosted mod
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }
@@ -340,30 +341,6 @@ const Collapse = (($) => {
     }
 
   }
-
-  /**
-   * ------------------------------------------------------------------------
-   * Adding accessibility
-   * ------------------------------------------------------------------------
-   */
-
-  // single collapse
-  // add aria-controls attribute
-
-  // accordion tabs
-  // add role tab & tabpanel
-
-  $('.panel-heading').attr(
-    {
-      role: 'tab'
-    }
-  )
-  $('.panel-collapse:not(.mega-menu)').attr(
-    {
-      role: 'tabpanel'
-    }
-  )
-  $('.panel').attr('role', 'presentation')
 
   /**
    * ------------------------------------------------------------------------
@@ -382,6 +359,15 @@ const Collapse = (($) => {
 
     Collapse._jQueryInterface.call($(target), config)
   })
+  // Boosted mod
+  .on('DOMContentLoaded', () => {
+    $(Selector.DATA_TOGGLE).each(function () {
+      const target = Collapse._getTargetFromElement(this)
+
+      Collapse._jQueryInterface.call($(target), 'init')
+    })
+  })
+  // end mod
 
   $(() => {
     // local navigation

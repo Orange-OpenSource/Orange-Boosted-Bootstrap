@@ -53,11 +53,11 @@ const Dropdown = (($) => {
     MENU          : '.dropdown-menu',
     NAVBAR_NAV    : '.navbar-nav',
     // Boosted mod
+    MENU_ITEMS : '.dropdown-menu .dropdown-item',
     FIRST_ITEM_IN_MENU : '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)',
     // end mod
     VISIBLE_ITEMS : '.dropdown-menu .dropdown-item:not(.disabled)'
   }
-
 
   /**
    * ------------------------------------------------------------------------
@@ -69,8 +69,8 @@ const Dropdown = (($) => {
 
     constructor(element) {
       this._element = element
-      this._addAccessibility() // Boosted mod
       this._addEventListeners()
+      this._addAccessibility() // Boosted mod
     }
 
 
@@ -144,7 +144,6 @@ const Dropdown = (($) => {
 
     // boosted mod
     _addAccessibility() {
-      // force aria-haspopup on element
       $(this._element).attr('aria-haspopup', true)
       // ensure that dropdown-menu have the role menu
       $(this._element).parent().children(Selector.MENU).attr('role', 'menu')
@@ -164,7 +163,7 @@ const Dropdown = (($) => {
           $(this).data(DATA_KEY, data)
         }
 
-        if (typeof config === 'string') {
+        if (typeof config === 'string' && !/init/.test(config)) { // boosted mod
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }
@@ -295,7 +294,12 @@ const Dropdown = (($) => {
     .on(Event.CLICK_DATA_API, Selector.FORM_CHILD, (e) => {
       e.stopPropagation()
     })
-
+    // Boosted mod
+    .on('DOMContentLoaded', () => {
+      // Instanciate every dropdown in the DOM
+      Dropdown._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
+    })
+    // end mod
 
   /**
    * ------------------------------------------------------------------------

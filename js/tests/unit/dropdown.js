@@ -59,7 +59,7 @@ $(function () {
         + '</div>'
     var $dropdown = $(dropdownHTML).find('[data-toggle="dropdown"]').bootstrapDropdown()
     setTimeout(function () {
-    assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
+      assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
     }, 300)
   })
 
@@ -81,7 +81,7 @@ $(function () {
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
-    assert.strictEqual($dropdown.attr('aria-expanded'), 'true', 'aria-expanded is set to string "true" on click')
+        assert.strictEqual($dropdown.attr('aria-expanded'), 'true', 'aria-expanded is set to string "true" on click')
         done()
       })
     $dropdown.trigger('click')
@@ -132,7 +132,7 @@ $(function () {
         + '</div>'
     var $dropdown = $(dropdownHTML).find('[data-toggle="dropdown"]').bootstrapDropdown().trigger('click')
     setTimeout(function () {
-    assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
+      assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
     }, 300)
   })
 
@@ -154,7 +154,7 @@ $(function () {
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
-    assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
+        assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
         done()
       })
     $dropdown.trigger('click')
@@ -178,7 +178,7 @@ $(function () {
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
-    assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
+        assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
         done()
       })
     $dropdown.trigger('click')
@@ -207,10 +207,11 @@ $(function () {
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
-    assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
-    $(document.body).trigger('click')
-      }).on('hidden.bs.dropdown', function () {
-    assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class removed')
+        assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
+        $(document.body).trigger('click')
+      })
+      .on('hidden.bs.dropdown', function () {
+        assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class removed')
         done()
       })
     $dropdown.trigger('click')
@@ -237,12 +238,12 @@ $(function () {
     $dropdown
      .parent('.dropdown')
      .on('shown.bs.dropdown', function () {
-    assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
+       assert.ok($dropdown.parent('.dropdown').hasClass('show'), '"show" class added on click')
        var e = $.Event('keyup')
        e.which = 9 // Tab
        $(document.body).trigger(e)
      }).on('hidden.bs.dropdown', function () {
-    assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class removed')
+       assert.ok(!$dropdown.parent('.dropdown').hasClass('show'), '"show" class removed')
        done()
      })
     $dropdown.trigger('click')
@@ -274,21 +275,23 @@ $(function () {
 
     $first.parent('.dropdown')
     .on('shown.bs.dropdown', function () {
-    assert.strictEqual($first.parents('.show').length, 1, '"show" class added on click')
-    assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
-    $(document.body).trigger('click')
-    }).on('hidden.bs.dropdown', function () {
-    assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+      assert.strictEqual($first.parents('.show').length, 1, '"show" class added on click')
+      assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
+      $(document.body).trigger('click')
+    })
+    .on('hidden.bs.dropdown', function () {
+      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
       $last.trigger('click')
     })
 
     $last.parent('.btn-group')
     .on('shown.bs.dropdown', function () {
-    assert.strictEqual($last.parent('.show').length, 1, '"show" class added on click')
-    assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
-    $(document.body).trigger('click')
-    }).on('hidden.bs.dropdown', function () {
-    assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+      assert.strictEqual($last.parent('.show').length, 1, '"show" class added on click')
+      assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
+      $(document.body).trigger('click')
+    })
+    .on('hidden.bs.dropdown', function () {
+      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
       done()
     })
     $first.trigger('click')
@@ -320,25 +323,27 @@ $(function () {
 
     $first.parent('.dropdown')
     .on('shown.bs.dropdown', function () {
-    assert.strictEqual($first.parents('.show').length, 1, '"show" class added on click')
+      assert.strictEqual($first.parents('.show').length, 1, '"show" class added on click')
       assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
       var e = $.Event('keyup')
       e.which = 9 // Tab
       $(document.body).trigger(e)
-    }).on('hidden.bs.dropdown', function () {
-    assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+    })
+    .on('hidden.bs.dropdown', function () {
+      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
       $last.trigger('click')
     })
 
     $last.parent('.btn-group')
     .on('shown.bs.dropdown', function () {
-    assert.strictEqual($last.parent('.show').length, 1, '"show" class added on click')
+      assert.strictEqual($last.parent('.show').length, 1, '"show" class added on click')
       assert.strictEqual($('#qunit-fixture .show').length, 1, 'only one dropdown is shown')
       var e = $.Event('keyup')
       e.which = 9 // Tab
       $(document.body).trigger(e)
-    }).on('hidden.bs.dropdown', function () {
-    assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
+    })
+    .on('hidden.bs.dropdown', function () {
+      assert.strictEqual($('#qunit-fixture .show').length, 0, '"show" class removed')
       done()
     })
     $first.trigger('click')
@@ -508,8 +513,8 @@ $(function () {
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
         assert.ok(true, 'shown was fired')
-    $dropdown.trigger($.Event('keydown', { which: 40 }))
-    $dropdown.trigger($.Event('keydown', { which: 40 }))
+        $dropdown.trigger($.Event('keydown', { which: 40 }))
+        $dropdown.trigger($.Event('keydown', { which: 40 }))
         assert.ok(!$(document.activeElement).is('.disabled'), '.disabled is not focused')
         done()
       })
@@ -568,7 +573,7 @@ $(function () {
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
-    $('#textField').trigger('click')
+        $('#textField').trigger('click')
         assert.ok($dropdown.parent('.dropdown').hasClass('show'), 'dropdown menu is shown')
         setTimeout(function () {
           done()
@@ -597,7 +602,7 @@ $(function () {
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
-    $('#textArea').trigger('click')
+        $('#textArea').trigger('click')
         assert.ok($dropdown.parent('.dropdown').hasClass('show'), 'dropdown menu is shown')
         setTimeout(function () {
           done()

@@ -120,8 +120,8 @@ const PriorityNav = (($) => {
         this._$menu.find('.o-nav-local').css('overflow', 'visible')
 
         // Check if menu doesn't overflow after process
-        if(this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-          const $item = $(this._element).find('.' + ClassName.HIDE).first().prev()
+        if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
+          const $item = $(this._element).find(`.${ClassName.HIDE}`).first().prev()
           const $itemDuplicate = $item.clone()
 
           $item.addClass(ClassName.HIDE)

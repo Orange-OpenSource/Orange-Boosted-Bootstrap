@@ -107,7 +107,7 @@ const Button = (($) => {
       }
 
       if (addAriaPressed) {
-      this._element.setAttribute('aria-pressed',
+        this._element.setAttribute('aria-pressed',
         !$(this._element).hasClass(ClassName.ACTIVE))
       }
 

@@ -29,7 +29,6 @@ const Tab = (($) => {
   const ARROW_UP_KEYCODE    = 38 // KeyboardEvent.which value for up arrow key
   const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
   const ARROW_DOWN_KEYCODE  = 40 // KeyboardEvent.which value for down arrow key
-  const RANDOM_NUMBER       = 1000
   const REGEXP_KEYDOWN           = new RegExp(`${ARROW_LEFT_KEYCODE}|${ARROW_UP_KEYCODE}|${ARROW_RIGHT_KEYCODE}|${ARROW_DOWN_KEYCODE}`)
   // end mod
 
@@ -38,7 +37,8 @@ const Tab = (($) => {
     HIDDEN         : `hidden${EVENT_KEY}`,
     SHOW           : `show${EVENT_KEY}`,
     SHOWN          : `shown${EVENT_KEY}`,
-    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
+    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`,
+    KEYDOWN_DATA_API : `keydown${EVENT_KEY}${DATA_API_KEY}` // boosted mod
   }
 
   const ClassName = {
@@ -54,9 +54,7 @@ const Tab = (($) => {
     NAV_LIST_GROUP        : '.nav, .list-group',
     ACTIVE                : '.active',
     DATA_TOGGLE           : '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-    // Boosted mod
-    ACTIVE_CHILD          : '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active',
-    // end mod
+    ACTIVE_CHILD          : '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active', // boosted mod
     DROPDOWN_TOGGLE       : '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD : '> .dropdown-menu .active'
   }
@@ -72,6 +70,7 @@ const Tab = (($) => {
 
     constructor(element) {
       this._element = element
+      this._addAccessibility()  // Boosted mod
     }
 
 
@@ -154,39 +153,7 @@ const Tab = (($) => {
       $.removeData(this._element, DATA_KEY)
       this._element = null
     }
-    // Boosted mod
-    static _keydown(e) {
-      const $this = $(this)
-      const Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible')
-      const k = e.which || e.keyCode
 
-      let index = 0
-
-      index = Items.index(Items.filter(':focus'))
-
-      if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
-        index--
-      } // up & left
-      if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
-        index++
-      } // down & right
-
-      if (index < 0) {
-        index = Items.length - 1
-      }
-      if (index === Items.length) {
-        index = 0
-      }
-      const nextTab = Items.eq(index)
-
-      if (nextTab.attr('role') === 'tab') {
-        nextTab.tab('show').trigger('focus')
-      }
-
-      e.preventDefault()
-      e.stopPropagation()
-    }
-    // end mod
     // private
 
     _activate(element, container, callback) {
@@ -278,8 +245,84 @@ const Tab = (($) => {
       }
     }
 
+    // Boosted mod
+    _addAccessibility() {
+      const $tab = $(this._element)
+      const $tabpanel = $($tab.attr('href'))
+      const $tablist = $tab.closest(Selector.NAV_LIST_GROUP)
+      const tabId = $tab.attr('id') || Util.getUID(NAME)
+
+      $tab.attr('id', tabId)
+
+      if ($tabpanel) {
+        $tab.attr('role', 'tab')
+        $tablist.attr('role', 'tablist')
+        // $li.attr('role', 'presentation')
+      }
+
+      if ($tab.hasClass(ClassName.ACTIVE)) {
+        $tab.attr({
+          tabIndex : '0',
+          'aria-selected' : 'true',
+          'aria-controls': $tab.attr('href').substr(1)
+        })
+        $tabpanel.attr({
+          role : 'tabpanel',
+          tabIndex : '0',
+          'aria-hidden' : 'false',
+          'aria-labelledby': tabId
+        })
+      } else {
+        $tab.attr({
+          tabIndex : '-1',
+          'aria-selected' : 'false',
+          'aria-controls': $tab.attr('href').substr(1)
+        })
+        $tabpanel.attr({
+          role : 'tabpanel',
+          tabIndex : '-1',
+          'aria-hidden' : 'true',
+          'aria-labelledby': tabId
+        })
+      }
+    }
+    // end mod
 
     // static
+
+    // Boosted mod
+    static _dataApiKeydownHandler(e) {
+      const $this = $(this)
+      const Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible')
+      const k = e.which || e.keyCode
+
+      let index = 0
+
+      index = Items.index(Items.filter(':focus'))
+
+      if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
+        index--
+      } // up & left
+      if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
+        index++
+      } // down & right
+
+      if (index < 0) {
+        index = Items.length - 1
+      }
+      if (index === Items.length) {
+        index = 0
+      }
+      const nextTab = Items.eq(index)
+
+      if (nextTab.attr('role') === 'tab') {
+        nextTab.tab('show').trigger('focus')
+      }
+
+      e.preventDefault()
+      e.stopPropagation()
+    }
+    // end mod
 
     static _jQueryInterface(config) {
       return this.each(function () {
@@ -291,7 +334,7 @@ const Tab = (($) => {
           $this.data(DATA_KEY, data)
         }
 
-        if (typeof config === 'string') {
+        if (typeof config === 'string' && !/init/.test(config)) { // boosted mod
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }
@@ -314,15 +357,16 @@ const Tab = (($) => {
       event.preventDefault()
       Tab._jQueryInterface.call($(this), 'show')
     })
-
-  // Boosted mod
-  $(document)
-    .on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
+    // Boosted mod
+    .on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, function (event) {
       if (!REGEXP_KEYDOWN.test(event.which)) {
         return
       }
       event.preventDefault()
-      Tab._keydown.call($(this), event)
+      Tab._dataApiKeydownHandler.call($(this), event)
+    })
+    .on('DOMContentLoaded', () => {
+      Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
     })
   // end mod
   /**
@@ -330,59 +374,6 @@ const Tab = (($) => {
    * jQuery
    * ------------------------------------------------------------------------
    */
-  // Boosted mod
-  // ajout de l'accesibilité
-  // ===============================
-
-  function uniqueId(prefix) {
-    return `${prefix || 'ui-id'}-${Math.floor(Math.random() * RANDOM_NUMBER + 1)}`
-  }
-
-  const $tablists = $('.nav-tabs, .nav-pills')
-  const $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]')
-
-  $tabs.each(function () {
-    const tabpanel = $($(this).attr('href'))
-    const $tab = $(this)
-    const $tablist = $tab.closest('.nav-tabs, .nav-pills')
-    const $li = $tab.parent('li')
-    const tabid = $tab.attr('id') || uniqueId('ui-tab')
-
-    $tab.attr('id', tabid)
-    // put role tab, presentation and tablist only if there's at least one tabpanel
-    if (tabpanel) {
-      $tab.attr('role', 'tab')
-      $tablist.attr('role', 'tablist')
-      $li.attr('role', 'presentation')
-    }
-
-    if ($tab.hasClass('active')) {
-      $tab.attr({
-        tabIndex : '0',
-        'aria-selected' : 'true',
-        'aria-controls': $tab.attr('href').substr(1)
-      })
-      tabpanel.attr({
-        role : 'tabpanel',
-        tabIndex : '0',
-        'aria-hidden' : 'false',
-        'aria-labelledby':tabid
-      })
-    } else {
-      $tab.attr({
-        tabIndex : '-1',
-        'aria-selected' : 'false',
-        'aria-controls': $tab.attr('href').substr(1)
-      })
-      tabpanel.attr({
-        role : 'tabpanel',
-        tabIndex : '-1',
-        'aria-hidden' : 'true',
-        'aria-labelledby':tabid
-      })
-    }
-  })
-  // end mod
 
   $.fn[NAME]             = Tab._jQueryInterface
   $.fn[NAME].Constructor = Tab

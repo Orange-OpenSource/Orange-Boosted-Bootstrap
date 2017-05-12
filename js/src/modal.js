@@ -465,7 +465,7 @@ const Modal = (($) => {
         const padding = $(element).data('padding-right')
         if (typeof padding !== 'undefined') {
           $(element).css('padding-right', padding).removeData('padding-right')
-      }
+        }
       })
 
       // Restore navbar-toggler margin
@@ -473,7 +473,7 @@ const Modal = (($) => {
         const margin = $(element).data('margin-right')
         if (typeof margin !== 'undefined') {
           $(element).css('margin-right', margin).removeData('margin-right')
-    }
+        }
       })
 
       // Restore body padding
@@ -498,8 +498,10 @@ const Modal = (($) => {
       const $ModalTitle = $ModalPanel.find('.modal-title')
       const $ModalDialog = $ModalPanel.find('.modal-dialog')
 
-      $ModalPanel.attr({'role': 'dialog', 'aria-modal': true})
-
+      $ModalPanel.attr({
+        role: 'dialog',
+        'aria-modal': true
+      })
 
       if ($ModalTitle) {
         const ModalTitleId = $ModalTitle.attr('id')
