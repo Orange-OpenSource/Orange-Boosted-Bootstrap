@@ -31,11 +31,11 @@ Once you have [downloaded](../download/) boosted source files, copy-paste the st
 <link rel="stylesheet" href="path/to/your/boosted.css">
 {% endhighlight %}
 
-Add our JavaScript plugins, jQuery, and Tether near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Tether first, as our code depends on them. While we use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/) in our docs, the full version is also supported.
+Add our JavaScript plugins, jQuery, and Popper.js near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Popper.js first, as our code depends on them. While we use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/) in our docs, the full version is also supported.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
-<script src="{{ site.cdn.tether }}" integrity="{{ site.cdn.tether_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 <script src="path/to/your/boosted.js"></script>
 {% endhighlight %}
 
@@ -76,9 +76,9 @@ Be sure to have your pages set up with the latest design and development standar
   <body>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery first, then Tether, then Boosted JS. -->
+    <!-- jQuery first, then Popper, then Boosted JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
-    <script src="{{ site.cdn.tether }}" integrity="{{ site.cdn.tether_hash }}" crossorigin="anonymous"></script>
+    <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
     <script src="path/to/your/boosted.js"></script>
   </body>
 </html>

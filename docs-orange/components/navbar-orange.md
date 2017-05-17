@@ -117,7 +117,7 @@ A supra bar should never be used on its own and always be included in header and
                 </li>
                 <li class="nav-item dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
-                    <ul class="dropdown-menu" role="menu">
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
                         <li><a class="dropdown-item" href="#">FR</a></li>
                         <li><a class="dropdown-item" href="#">SP</a></li>
                     </ul>

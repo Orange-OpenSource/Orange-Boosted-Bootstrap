@@ -8,7 +8,7 @@ In addition to booststrap migration [notes](../migration/), here is what to keep
 
 ### Javascript dependencies
 
-File `tether.min.js` is an external dependency used by tooltip componenent. If not included, tooltip won't work. On top of that, if the file is not included while not using any tooltip, an error will still be logged. You can either include the dependency minding you may use a tooltip later on, or rebuild boosted javascript excluding the `tooltip.js` file from javascript plugins.
+File `popper.js` is an external dependency used by tooltip componenent. If not included, tooltip won't work. On top of that, if the file is not included while not using any tooltip, an error will still be logged. You can either include the dependency minding you may use a tooltip later on, or rebuild boosted javascript excluding the `tooltip.js` file from javascript plugins.
 
 ### Navbars
 

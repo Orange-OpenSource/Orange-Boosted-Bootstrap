@@ -91,8 +91,8 @@
   padding-left: 0;
   // boosted mod
   margin-top: auto;
-  margin-bottom: 0;
   // end mod
+  margin-bottom: 0;
   list-style: none;
 
   // boosted mod
@@ -145,7 +145,7 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  margin: ($spacer / 4) 0;
+  margin: ($spacer / 4) 0; // boosted mod
   font-size: $navbar-toggler-font-size;
   line-height: 1;
   background: transparent; // remove default button style
@@ -202,8 +202,9 @@
         // end mod
         .navbar-nav {
           .dropdown-menu {
-            position: static;
+            position: static !important;
             float: none;
+            transform: unset !important;
           }
 
           // boosted mod
@@ -249,6 +250,11 @@
           .dropdown-menu {
             position: absolute;
           }
+          // boosted mod
+          // .nav-link {
+          //   padding-right: .5rem;
+          //   padding-left: .5rem;
+          // }
         }
 
         // For nesting containers, have to redeclare for alignment purposes
