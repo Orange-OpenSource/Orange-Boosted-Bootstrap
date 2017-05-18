@@ -85,7 +85,7 @@ const Collapse = (($) => {
       }
 
       if (this._config.toggle) {
-        // this.toggle()  // boosted mod : usless as we instanciate component at DOMContentLoaded
+        this.toggle()
       }
     }
 
@@ -322,7 +322,7 @@ const Collapse = (($) => {
           typeof config === 'object' && config
         )
 
-        if (!data && _config.toggle && /show|hide/.test(config)) {
+        if (!data && _config.toggle && /show|hide|init/.test(config)) {
           _config.toggle = false
         }
 
@@ -331,7 +331,13 @@ const Collapse = (($) => {
           $this.data(DATA_KEY, data)
         }
 
-        if (typeof config === 'string' && !/init/.test(config)) { // boosted mod
+        // Boosted mod
+        if (/init/.test(config)) {
+          return
+        }
+        // end mod
+
+        if (typeof config === 'string') {
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }

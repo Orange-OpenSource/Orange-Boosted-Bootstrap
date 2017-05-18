@@ -261,7 +261,13 @@ const Dropdown = (($) => {
           $(this).data(DATA_KEY, data)
         }
 
-        if (typeof config === 'string' && !/init/.test(config)) { // boosted mod
+        // Boosted mod
+        if (/init/.test(config)) {
+          return
+        }
+        // end mod
+
+        if (typeof config === 'string') {
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }

@@ -263,9 +263,13 @@ const Tab = (($) => {
       if ($tab.hasClass(ClassName.ACTIVE)) {
         $tab.attr({
           tabIndex : '0',
-          'aria-selected' : 'true',
-          'aria-controls': $tab.attr('href').substr(1)
+          'aria-selected' : 'true'
         })
+
+        if ($tab.attr('href')) {
+          $tab.attr('aria-controls', $tab.attr('href').substr(1))
+        }
+
         $tabpanel.attr({
           role : 'tabpanel',
           tabIndex : '0',
@@ -276,8 +280,12 @@ const Tab = (($) => {
         $tab.attr({
           tabIndex : '-1',
           'aria-selected' : 'false',
-          'aria-controls': $tab.attr('href').substr(1)
         })
+
+        if ($tab.attr('href')) {
+          $tab.attr('aria-controls', $tab.attr('href').substr(1))
+        }
+
         $tabpanel.attr({
           role : 'tabpanel',
           tabIndex : '-1',
@@ -334,7 +342,13 @@ const Tab = (($) => {
           $this.data(DATA_KEY, data)
         }
 
-        if (typeof config === 'string' && !/init/.test(config)) { // boosted mod
+        // Boosted mod
+        if (/init/.test(config)) {
+          return
+        }
+        // end mod
+
+        if (typeof config === 'string') {
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }

@@ -266,7 +266,7 @@ $(function () {
         + '<a class="dropdown-item" href="#">Action 1</a>'
         + '</div>'
         + '</div>'
-    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]')
+    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]').bootstrapDropdown()
     var $first = $dropdowns.first()
     var $last = $dropdowns.last()
 
@@ -312,7 +312,7 @@ $(function () {
         + '<a class="dropdown-item" href="#">Action 1</a>'
         + '</div>'
         + '</div>'
-    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]')
+    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]').bootstrapDropdown()
     var $first = $dropdowns.first()
     var $last = $dropdowns.last()
 
