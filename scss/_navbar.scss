@@ -248,7 +248,8 @@
           flex-direction: row;
 
           .dropdown-menu {
-            position: absolute;
+            position: absolute !important;
+            top: 100% !important;
           }
           // boosted mod
           // .nav-link {
@@ -319,7 +320,7 @@
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-bg;
+    background-image: $navbar-light-toggler-icon-bg;
   }
 
   .navbar-text {
@@ -364,7 +365,7 @@
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-inverse-toggler-bg;
+    background-image: $navbar-inverse-toggler-icon-bg;
   }
 
   .navbar-text {

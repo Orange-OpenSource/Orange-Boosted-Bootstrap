@@ -53,7 +53,10 @@ const Dropdown = (($) => {
 
   const ClassName = {
     DISABLED : 'disabled',
-    SHOW     : 'show'
+    SHOW      : 'show',
+    DROPUP    : 'dropup',
+    MENURIGHT : 'dropdown-menu-right',
+    MENULEFT  : 'dropdown-menu-left'
   }
 
   const Selector = {
@@ -70,7 +73,9 @@ const Dropdown = (($) => {
 
   const AttachmentMap = {
     TOP    : 'top-start',
-    BOTTOM : 'bottom-start'
+    TOPEND    : 'top-end',
+    BOTTOM    : 'bottom-start',
+    BOTTOMEND : 'bottom-end'
   }
 
   const Default = {
@@ -146,10 +151,15 @@ const Dropdown = (($) => {
         return
       }
 
-      // Handle dropup
-      const dropdownPlacement = $(this._element).parent().hasClass('dropup') ? AttachmentMap.TOP : this._config.placement
-      this._popper = new Popper(this._element, this._menu, {
-        placement : dropdownPlacement,
+      let element = this._element
+      // for dropup with alignment we use the parent as popper container
+      if ($(parent).hasClass(ClassName.DROPUP)) {
+        if ($(this._menu).hasClass(ClassName.MENULEFT) || $(this._menu).hasClass(ClassName.MENURIGHT)) {
+          element = parent
+        }
+      }
+      this._popper = new Popper(element, this._menu, {
+        placement : this._getPlacement(),
         modifiers : {
           offset : {
             offset : this._config.offset
@@ -239,6 +249,25 @@ const Dropdown = (($) => {
       return this._menu
     }
 
+    _getPlacement() {
+      const $parentDropdown = $(this._element).parent()
+      let placement = this._config.placement
+
+      // Handle dropup
+      if ($parentDropdown.hasClass(ClassName.DROPUP) || this._config.placement === AttachmentMap.TOP) {
+        placement = AttachmentMap.TOP
+        if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
+          placement = AttachmentMap.TOPEND
+        }
+      }
+      else {
+        if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
+          placement = AttachmentMap.BOTTOMEND
+        }
+      }
+      return placement
+    }
+
     // boosted mod
     _addAccessibility() {
       $(this._element).attr('aria-haspopup', true)
@@ -271,7 +300,7 @@ const Dropdown = (($) => {
           if (data[config] === undefined) {
             throw new Error(`No method named "${config}"`)
           }
-          data[config].call(this)
+          data[config]()
         }
       })
     }

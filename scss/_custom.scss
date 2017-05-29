@@ -656,8 +656,8 @@ $navbar-light-color:                $navbar-inverse-color;
 $navbar-light-hover-color:          $navbar-inverse-hover-color;
 $navbar-light-active-color:         $navbar-inverse-active-color;
 $navbar-light-disabled-color:       $navbar-inverse-disabled-color;
-$navbar-light-toggler-bg:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' width='20px' height='20px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2.4' stroke-linecap='round' stroke-miterlimit='10' d='M3.6 7.6h24.8M3.6 15.6h24.8M3.6 23.6h24.8'/%3E%3C/svg%3E"), "#", "%23");
-$navbar-light-toggler-bg:           $navbar-inverse-toggler-bg;
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' width='20px' height='20px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2.4' stroke-linecap='round' stroke-miterlimit='10' d='M3.6 7.6h24.8M3.6 15.6h24.8M3.6 23.6h24.8'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-icon-bg:      $navbar-inverse-toggler-bg;
 $navbar-light-toggler-hover-bg:     $navbar-inverse-toggler-hover-bg;
 $navbar-light-toggler-border-color: rgba($black,.1) !default;
 
@@ -761,6 +761,7 @@ $tooltip-margin:              5px;
 $tooltip-font-weight:         $font-weight-bold;
 
 $tooltip-arrow-width:         5px;
+$tooltip-arrow-height:        5px !default;
 $tooltip-arrow-color:         $tooltip-bg;
 
 
@@ -784,6 +785,7 @@ $popover-content-padding-y:           10px;
 $popover-content-padding-x:           10px;
 
 $popover-arrow-width:                 10px;
+$popover-arrow-height:                5px;
 $popover-arrow-color:                 $popover-bg;
 
 $popover-arrow-outer-width:           ($popover-arrow-width + 1px);
