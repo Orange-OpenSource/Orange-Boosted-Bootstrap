@@ -29,8 +29,6 @@ header .btn {
 
 .btn.svg-arrow-previous {
   padding-left: 2rem;
-  -webkit-transition:none;
-  -o-transition:none;
   transition: none;
 }
 
@@ -86,8 +84,7 @@ main {
 
 .rating {
   background: url("../img/stars_sprite.png") no-repeat;
-  -webkit-background-size: 5rem auto;
-          background-size: 5rem auto;
+  background-size: 5rem auto;
   padding-left: 5.25rem;
   font-size: 1rem;
   font-weight: bold;
@@ -107,8 +104,7 @@ main {
 
 .discount {
   background: url('../img/label_discount.png') no-repeat;
-  -webkit-background-size: 7.5rem auto;
-          background-size: 7.5rem auto;
+  background-size: 7.5rem auto;
   font-weight: bold;
   line-height: 1.875rem;
   margin: .625rem 0;

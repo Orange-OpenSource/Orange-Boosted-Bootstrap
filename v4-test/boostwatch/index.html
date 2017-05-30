@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+<!-- Boosted mod -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>
   
-    Boostwatch &middot; Bootstrap
+    Boostwatch &middot; Boosted
   
 </title>
 
-<link href="../dist/css/vendor/swiper.min.css" rel="stylesheet">
-
+<!-- Boosted mod remove social -->
+<!-- Swiper -->
+<link href="http://boosted.orange.com/v4-test/dist/css/vendor/swiper.min.css" rel="stylesheet">
 <!-- helvetica -->
-<link href="../dist/css/orangeHelvetica.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-test/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
-<link href="../dist/css/orangeIcons.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-test/dist/css/orangeIcons.css" rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="../dist/css/boosted.css" rel="stylesheet">
+
+  <link href="http://boosted.orange.com/v4-test/dist/css/boosted.css" rel="stylesheet">
+
+<!-- end mod -->
 
 <!-- Documentation extras -->
-<link href="../assets/css/docs.min.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-test/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="http://boosted.orange.com/v4-test/apple-touch-icon.png">
+<link rel="icon" href="http://boosted.orange.com/v4-test/favicon.ico">
+
+<!-- Boosted mod remove tracking -->
 
   </head>
   <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
@@ -34,37 +43,46 @@
       </div>
     </a>
 
-    <header class="" role="banner">
-  <nav class="navbar navbar-toggleable-sm navbar-inverse">
-    <div class="container">
-      <a class="navbar-brand" href="../">
-        <img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead">
-          <span class="sr-only">toggle navigation</span>
-          <span class="svg-menu"></span>
-        </button>
-      <div class="navbar-collapse collapse" id="collapsing-navbarHead">
+    <!-- Boosted mod navbar-inverse and remove bd-navbar class-->
+<header class="navbar navbar-inverse bg-inverse navbar-expand-md">
+  <nav class="container">
+    
+
+    <a class="navbar-brand" href="http://boosted.orange.com/v4-test/">
+      <!-- Boosted mod change brand -->
+      <img src="http://boosted.orange.com/v4-test/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage" />
+      <!-- end mod -->
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Boosted mod remove analytics, blog, expo and add boostwatch and confort plus -->
+    <div class="collapse navbar-collapse" id="bd-main-nav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="../">B<span class="text-primary">oo</span>sted</a></li>
-          <li class="nav-item"><a class="nav-link " href="../getting-started/introduction/">Documentation</a></li>
-          <li class="nav-item"><a class="nav-link " href="../examples/">Examples</a></li>
-          <li class="nav-item"><a class="nav-link " href="../boostwatch/">Boostwatch</a></li>
+          <li class="nav-item">
+            <a class="nav-item nav-link " href="http://boosted.orange.com/v4-test/">B<span class="text-primary">oo</span>sted</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link " href="http://boosted.orange.com/v4-test/getting-started/introduction/">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link " href="http://boosted.orange.com/v4-test/examples/">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link active" href="http://boosted.orange.com/v4-test/boostwatch/">Boostwatch</a>
+          </li>
           <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 </header>
 
+
     <!-- BOOSTED MOD -->
-    <main class="container" role="main">
+    <div class="container">
       <div class="row">
         <div class="col-12 col-md-3 push-md-9 bd-sidebar">
           <nav class="bd-links" id="docsNavbarContent">
-  <div class="bd-toc-item ">
-    <a class="bd-toc-link" href="#orange-icons">Orange icons</a>
-  </div>
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#modal">Modal window</a>
   </div>
@@ -91,9 +109,6 @@
   </div>
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#navbar">Navbar</a>
-  </div>
-  <div class="bd-toc-item ">
-    <a class="bd-toc-link" href="#megamenu">Megamenu</a>
   </div>
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#buttons">Buttons</a>
@@ -130,13 +145,13 @@
   </div>
 </nav>
         </div>
-        <div class="col-12 col-md-9 pull-md-3 bd-content">
+        <main class="col-12 col-md-9 pull-md-3 bd-content" role="main">
           <h1 class="bd-title" id="content">Boostwatch</h1>
           <!--<h2 id="orange-icons">Orange Icons</h2>
 <p>Icons created from the Orange brand.</p>
 <p>Copyright (C) 2016 Orange SA All rights reserved</p>
 <p>See NOTICE.txt for more informations</p><p>To use it in your project you need to include the file orangeIcons.css</p>
-<p>The best practice is to create your own icons libray (<a href="../getting-started/build-tools/#howto-create-an-icons-library-using-icomoon">See howto in getting started section</a>)</p>
+<p>The best practice is to create your own icons libray (<a href="http://boosted.orange.com/v4-test/getting-started/build-tools/#howto-create-an-icons-library-using-icomoon">See howto in getting started section</a>)</p>
 
 <div class="doc-fonticon">
     <ul class="doc-fonticon-list">
@@ -3463,7 +3478,7 @@
   </button>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" aria-modal="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -3493,7 +3508,7 @@
     </div>
   </div>
 </div>
-<h2 id="tables">Tables</h2>
+<h2 id="tables">Tables<a class="doc-link" href="../content/tables/#orange-brand-tables" title="go to tables documentation page"></a></h2> 
 <h3>Striped table</h3>
 
 <div class="container-fluid">
@@ -3709,7 +3724,7 @@
             </label>
           </th>
           <td>
-            <img src="../../assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
+            <img src="http://boosted.orange.com/v4-test/assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
           </td>
           <td>Column content</td>
           <td>Column content</td>
@@ -3724,7 +3739,7 @@
             </label>
           </th>
           <td>
-            <img src="../../assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
+            <img src="http://boosted.orange.com/v4-test/assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
           </td>
           <td>Column content</td>
           <td>Column content</td>
@@ -3945,7 +3960,7 @@
   </div>
 </div>
 <!-- /.container-fluid -->
-<h2 id="bulletpoint">Bullet point<a class="doc-link" href="../components/orange-list/" title="go to bullet point documentation page"></a></h2>
+<h2 id="bulletpoint">Bullet point<a class="doc-link" href="../content/typography/#orange-list-with-bullet-points" title="go to bullet point documentation page"></a></h2>
 <div class="container-fluid">
   <div class="row">
     <ul class="o-square-list">
@@ -3981,9 +3996,9 @@
 <div class="o-nav-local">
   <hr aria-hidden="true">
   <nav class="container">
-    <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
+    <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
     <ul class="nav collapse" id="localNav1">
-      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
     </ul>
@@ -3992,13 +4007,13 @@
 </div>
 
 <div data-example-id="">
-  <div style="margin: 2rem 0; padding: 2rem 0; background-color: black;">
+  <div style="margin: 2rem 0; padding: 2rem 0;" class="bg-inverse">
     <div class="o-nav-local inverse">
       <hr aria-hidden="true">
       <nav class="container">
-        <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
+        <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
         <ul class="nav collapse" id="localNav2">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
         </ul>
@@ -4297,7 +4312,7 @@
 <nav class="o-stepbar xs-numbers" style="margin-top: 30px;">
   <ol>
     <li class="current stepbar-item">
-      <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+      <a class="stepbar-link" href="#" title="Step 1 : Sign in" aria-current="step">
         <span class="step-number">1</span>
         <span class="step-title">Sign in</span>
       </a>
@@ -4332,7 +4347,7 @@
       </a>
     </li>
     <li class="stepbar-item current">
-      <div class="stepbar-link" title="Step 2 : Review">
+      <div class="stepbar-link" title="Step 2 : Review" aria-current="step">
         <span class="step-number">2</span>
         <span class="step-title">Review</span>
       </div>
@@ -4373,7 +4388,7 @@
       </div>
     </li>
     <li class="stepbar-item current">
-      <div class="stepbar-link" title="Step 4 : Payment">
+      <div class="stepbar-link" title="Step 4 : Payment" aria-current="step">
         <span class="step-number">4</span>
         <span class="step-title">Payment</span>
       </div>
@@ -4386,7 +4401,7 @@
 <nav class="o-stepbar xs-labels" style="margin-top: 30px;">
   <ol>
     <li class="current stepbar-item">
-      <a class="stepbar-link" href="#" title="Step 1 : Sign in">
+      <a class="stepbar-link" href="#" title="Step 1 : Sign in" aria-current="step">
         <span class="step-number">1</span>
         <span class="step-title">Sign in</span>
       </a>
@@ -4415,7 +4430,7 @@
       </a>
     </li>
     <li class="stepbar-item current">
-      <div class="stepbar-link" title="Step 2 : Review">
+      <div class="stepbar-link" title="Step 2 : Review" aria-current="step">
         <span class="step-number">2</span>
         <span class="step-title">Review</span>
       </div>
@@ -4444,7 +4459,7 @@
       </div>
     </li>
     <li class="stepbar-item current">
-      <div class="stepbar-link" title="Step 3 : Delivery">
+      <div class="stepbar-link" title="Step 3 : Delivery" aria-current="step">
         <span class="step-number">3</span>
         <span class="step-title">Delivery</span>
       </div>
@@ -4460,17 +4475,16 @@
 <h2 id="o-link-arrow-back">Link with arrow back</h2>
 <a href="#" class="o-link-arrow back">This is a sample link with arrow for backward</a>
 <h2 id="navbar">Navbar<a class="doc-link" href="../components/navbar/" title="go to navbar documentation page"></a></h2>
-<nav class="navbar navbar-inverse navbar-toggleable-sm">
+<nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar">
-      <span class="sr-only">toggle navigation</span>
-      <span class="svg-menu"></span>
+    <a class="navbar-brand" href="#"><img src="http://boosted.orange.com/v4-test/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-collapse collapse" id="collapsing-navbar">
+    <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="#" aria-current="page">Active <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -4492,7 +4506,7 @@
         </li>
         <li class="nav-item dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu4">Dropdown</a>
-          <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+          <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu4">
             <a href="#" role="menuitem" class="dropdown-item">Action</a>
             <a href="#" role="menuitem" class="dropdown-item">Another action</a>
             <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
@@ -4505,17 +4519,16 @@
   </div>
 </nav>
 <h3>without logo</h3>
-<nav class="navbar navbar-inverse navbar-toggleable-sm">
+<nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
   <div class="container">
     <a class="navbar-brand" href="#"><span>Navbar brand</span></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2">
-      <span class="sr-only">toggle navigation</span>
-      <span class="svg-menu"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-collapse collapse" id="collapsing-navbar2">
+    <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active <span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="#" aria-current="page">Active <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -4537,7 +4550,7 @@
         </li>
         <li class="nav-item dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu6">Dropdown</a>
-          <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu6">
+          <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu6">
             <a href="#" role="menuitem" class="dropdown-item">Action</a>
             <a href="#" role="menuitem" class="dropdown-item">Another action</a>
             <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
@@ -4549,49 +4562,6 @@
     </div>
   </div>
 </nav>
-<h2 id="megamenu">Megamenu<a class="doc-link" href="../components/orange-megamenu/" title="go to mega menu documentation page"></a></h2>
-<div class="mega-menu" style="position: static">
-    <div class="collapse show" id="collapse-shop" aria-labelledby="menu-title2">
-        <div class="container">
-            <h2 role="presentation" id="menu-title2"><a aria-hidden="true" href="#">Home Shop</a></h2>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-3">
-                    <h3 id="list-title-1"><a href="#">Internet</a></h3>
-                    <ul aria-labelledby="list-title-1" role="menu">
-                        <li role="menuitem"><a href="#">iPhone 6</a></li>
-                        <li role="menuitem"><a href="#">Phones </a></li>
-                        <li role="menuitem"><a href="#">Tablets</a></li>
-                        <li role="menuitem"><a href="#">Accessories</a></li>
-                        <li role="menuitem"><a href="#">Coming soon</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3">
-                    <h3 id="list-title-2"><a href="#">Mobile</a></h3>
-                    <ul aria-labelledby="list-title-2" role="menu">
-                        <li role="menuitem"><a href="#">Phones </a></li>
-                        <li role="menuitem"><a href="#">Plans</a></li>
-                        <li role="menuitem"><a href="#">Accessories</a></li>
-                        <li role="menuitem"><a href="#">Connected objects</a></li>
-                        <li role="menuitem"><a href="#">Options</a></li>
-                        <li role="menuitem"><a href="#">Bundles</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="row footer">
-                <div class="col-12 col-sm-11">
-                    <a href="#">Promotions</a>
-                    <a href="#">Top up</a>
-                </div>
-                <div class="col-1 hidden-xs-down">
-                    <a class="float-right" data-toggle="collapse" href="#collapse-shop" aria-expanded="false" aria-controls="collapse-shop" title="close shop menu"><span class="svg-delete" aria-hidden="true"></span></a>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Buttons
 ================================================== -->
 
@@ -4800,7 +4770,7 @@
     <button type="button" class="btn btn-secondary">Button</button>
 </div>
 
-<h2 id="switches">Toggle and switches<a class="doc-link" href="../components/switches/" title="go to switches documentation page"></a></h2>
+<h2 id="switches">Toggle and switches<a class="doc-link" href="../components/forms/#orange-switches" title="go to switches documentation page"></a></h2>
 
 <h3>Switches</h3>
 <div class="container-fluid">
@@ -4939,7 +4909,7 @@
   <div class="row">
     <div class="col-lg-6">
         <form class="form-horizontal container-fluid">
-            <fieldset>
+            <fieldset class="col-12">
               <legend>Legend</legend>
               <div class="form-group row">
                   <label for="inputEmail" class="col-lg-3 form-control-label">Email</label>
@@ -5130,17 +5100,23 @@
 <form class="container-fluid">
     <div class="form-group row has-danger">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-        <input type="email" class="form-control col-sm-10" id="inputEmail3" placeholder="Email">
-        <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+      <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
     </div>
     <div class="form-group row has-danger top">
       <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
-        <input type="email" class="form-control col-sm-10" id="inputEmail4" placeholder="Email">
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
         <div class="col-sm-10 offset-sm-2 form-control-feedback">Shucks, check the formatting of that and try again.</div>
     </div>
     <div class="form-group row has-danger right">
       <label for="inputEmail5" class="col-sm-2 col-form-label">Email</label>
-        <input type="email" class="form-control col-sm-4" id="inputEmail5" placeholder="Email">
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="inputEmail5" placeholder="Email">
+      </div>
       <div class="col-sm-4 form-control-feedback">Shucks, check the formatting of that and try again.</div>
     </div>
 </form>
@@ -5153,7 +5129,7 @@
   <div class="col-12">
     <h3 id="bs-nav-tabs">Tabs<a class="doc-link" href="../components/navs/#tabs" title="go to tabs documentation page"></a></h3>
     <ul class="nav nav-tabs">
-      <li class="nav-item"><a class="nav-link active" href="#home" data-toggle="tab">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#home" data-toggle="tab" aria-current="page">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#profile" data-toggle="tab">Profile</a></li>
       <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
       <li class="nav-item dropdown">
@@ -5196,7 +5172,7 @@
   <div class="col-12">
     <h3 id="bs-nav-pills">Pills<a class="doc-link" href="../components/navs/#pills" title="go to pills documentation page"></a></h3>
     <ul class="nav nav-pills">
-      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
       <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
       <li class="nav-item dropdown">
@@ -5214,7 +5190,7 @@
     </ul>
     <br>
     <ul class="nav nav-pills nav-fill">
-      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
       <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
       <li class="nav-item dropdown">
@@ -5237,18 +5213,18 @@
     <h3 id="bs-nav-breadcrumbs">Breadcrumbs<a class="doc-link" href="../components/breadcrumb/" title="go to breadcrumb documentation page"></a></h3>
     <div>
       <ul class="breadcrumb">
-        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item" aria-current="location">Home</li>
       </ul>
 
       <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item">Library</li>
+        <li class="breadcrumb-item"  aria-current="location">Library</li>
       </ul>
 
       <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item">Data</li>
+        <li class="breadcrumb-item" aria-current="location">Data</li>
       </ul>
     </div>
   </div>
@@ -5262,11 +5238,11 @@ Standard pagination with numbers
             <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1" aria-label="Previous"></a>
       </li>
-            <li class="page-item active"><a class="page-link" href="#" aria-label="Go to page 1">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#" aria-label="Go to page 1" aria-current="page">1</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 2">2</a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Go to page 3">3</a></li>
-      <li class="page-item  hidden-xs-down"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
-      <li class="page-item  hidden-xs-down"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
+      <li class="page-item d-none d-sm-block"><a class="page-link" href="#" aria-label="Go to page 4">4</a></li>
+      <li class="page-item d-none d-sm-block"><a class="page-link" href="#" aria-label="Go to page 5">5</a></li>
             <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next"></a>
       </li>
@@ -5480,9 +5456,9 @@ Buttons + Back/Next labels
 </div>
 
 
-        </div>
+        </main>
       </div>
-    </main>    
+    </div>    
     <!-- END MOD -->
 
     <footer class="bd-footer" role="contentinfo">
@@ -5504,8 +5480,8 @@ Buttons + Back/Next labels
           <ul>
             <li>Currently v4.0.0-alpha.6.1</li>
             <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
-            <li><a href="../examples">Examples</a></li>
-            <li><a href="../about/history/">About</a></li>
+            <li><a href="http://boosted.orange.com/v4-test/examples">Examples</a></li>
+            <li><a href="http://boosted.orange.com/v4-test/about/history/">About</a></li>
             <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.6">Original Bootstrap</a></li>
           </ul>
         </div>
@@ -5514,34 +5490,39 @@ Buttons + Back/Next labels
   </div>
 </footer>
 <!-- boosted mod -->
-<a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text hidden-sm-down">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
+<a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>
-  window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')
+  window.jQuery || document.write('<script src="http://boosted.orange.com/v4-test/assets/js/vendor/jquery.min.js"><\/script>')
 </script>
 
-<script src="../assets/js/vendor/tether.min.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/vendor/popper.min.js"></script>
 
 
-<script src="../dist/js/boosted.js"></script>
+<script src="http://boosted.orange.com/v4-test/dist/js/boosted.js"></script>
 
 
-<script src="../dist/js/vendor/jquery.tablesorter.js"></script>
+<script src="http://boosted.orange.com/v4-test/dist/js/vendor/jquery.tablesorter.js"></script>
 
-<script src="../assets/js/docs.min.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/docs.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/ie-emulation-modes-warning.js"></script>
 
 
 
-<script src="../dist/js/vendor/swiper.min.js"></script>
+<script src="http://boosted.orange.com/v4-test/dist/js/vendor/swiper.min.js"></script>
 <script>
   $(document).ready(function () {
     $("#myTable").tablesorter({
-      sortList: [[4, 1]]
+      sortList: [[4, 1]],
+      // manipulate the template string after is it created
+      onRenderTemplate : function(i, t){
+        // put a span arround the text
+        return '<span>' + t + '</span>';
+      }
     });
   });
 
@@ -5567,7 +5548,7 @@ Buttons + Back/Next labels
         })
 </script>
 
-<!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
+<!-- <script type="text/javascript" src="http://confort-plus.orange.com/js/toolbar-min.js"></script> -->
 <script>
   accessibilitytoolbar_custom = {
     idLinkModeContainer: "id-li-for-cdu",

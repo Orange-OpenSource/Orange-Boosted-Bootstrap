@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
   <head>
     <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 
     <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
     <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../dist/css/boosted-rtl.min.css" />
+        <link rel="stylesheet" href="../../dist/css/boosted.min.css" />
     <link href="styles.css" rel="stylesheet">
   </head>
 
@@ -29,27 +29,26 @@
     </div>
 
 <header role="banner">
-      <nav id="mainNav" class="navbar navbar-inverse navbar-toggleable-sm">
+      <nav id="mainNav" class="navbar navbar-inverse bg-inverse navbar-expand-md">
         <div class="container">
       <a class="navbar-brand" href="#"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#orange-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="svg-menu"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="orange-navbar-collapse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+      <div class="navbar-collapse justify-content-between collapse" id="orange-navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">dashboard</a></li>
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">manage</a></li>
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">parameters</a></li>
-          <li class="nav-item" id="id_for_cdu_link"></li>
+          <li class="nav-item" id="id-for-cdu-link"></li>
         </ul>
         <ul class="navbar-nav">
           <li role="presentation" class="nav-item dropdown">
             <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button">
               <span class="icon-international-globe" aria-hidden="true"></span>
-              <span class="hidden-xs hidden-sm">&nbsp;language</span>
+              <span class="d-none d-sm-block">&nbsp;language</span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-right">
               <li><a class="dropdown-item" href="#">français</a></li>
               <li><a class="dropdown-item" href="#">english</a></li>
             </ul>
@@ -57,11 +56,11 @@
           <li role="presentation" class="nav-item dropdown">
             <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button">
               <span class="svg-avatar" aria-hidden="true"></span>
-              <span class="hidden-xs hidden-sm">&nbsp;hello
+              <span class="d-none d-sm-block">&nbsp;hello
                 <span class="orange">admin</span>
               </span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-right">
               <li><a class="dropdown-item" href="#">logout</a></li>
               <li><a class="dropdown-item" href="#">preferences</a></li>
             </ul>
@@ -198,7 +197,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.9/umd/popper.min.js" integrity="sha256-c477vRLKQv1jt9o7w6TTBzFyFznTaZjoMLTDFi7Hlxc=" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="../../dist/js/boosted.js"></script>
 
@@ -207,7 +206,7 @@
   <script type="text/javascript">
     // Surcharge des valeurs du script de la toolbar
     accessibilitytoolbar_custom={
-      idLinkModeContainer:"id_for_cdu_link",
+      idLinkModeContainer:"id-for-cdu-link",
       cssLinkModeClassName:"nav-item-cdu",
       idSkipLinkIdLinkMode:"cdu-skiplink",
       cssSkipLinkClassName: "skiplinks-trigger",
@@ -232,7 +231,7 @@
     }
 
   </script>
-  <!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
+  <!-- <script type="text/javascript" src="http://confort-plus.orange.com/js/toolbar-min.js"></script> -->
   </body>
 </html>
 

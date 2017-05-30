@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     </title>
     <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
     <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../dist/css/boosted-rtl.min.css" />
+    <link rel="stylesheet" href="../../dist/css/boosted.min.css" />
     <link href="example.css" rel="stylesheet">
   </head>
   <body>
@@ -24,17 +24,14 @@
       </div>
     </div>
     <header role="banner">
-      <nav class="navbar navbar-inverse navbar-toggleable-sm">
+      <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">      
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a>
-          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#orange-navbar-collapse">
-            <span class="sr-only">Toggle navigation
-            </span>
-            <span class="svg-menu">
-            </span>
-          </button>
-          <div class="navbar-collapse collapse" id="orange-navbar-collapse">
+            <img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage"/></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>        
+          <div class="navbar-collapse justify-content-between collapse" id="orange-navbar-collapse">          
             <ul class="navbar-nav" role="tablist">
               <li class="nav-item">
                 <a class="nav-link" href="#" role="button">edit news &nbsp;
@@ -52,7 +49,7 @@
                   </span>hello
                   <span class="orange">admin&nbsp;
                   </span>              </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-right">
                   <li>
                   <a class="dropdown-item" href="#">logout</a>
               </li>
@@ -80,57 +77,37 @@
       <div id="localContainer" class="o-nav-local">
         <hr aria-hidden="true">
         <nav class="container">
-          <a class="hidden-sm-up nav-link active local-select" data-toggle="collapse" href="bs-example-navbar-collapse-2" aria-haspopup="true">Home</a>
+          <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="bs-example-navbar-collapse-2" aria-haspopup="true">Home</a>
           <ul class="nav collapse" id="bs-example-navbar-collapse-2">
             <li class="nav-item">
-              <a class="nav-link" href="#">all
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">all</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">world
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">world</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">entertainment
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">entertainment</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">finance
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">finance</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">technology
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">technology</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">weather
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">weather</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">sport
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">sport</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">video
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">video</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">pictures
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link" href="#">pictures</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">health
-                <div class="arrow" aria-hidden="true">
-                </div></a>
+              <a class="nav-link active" href="#">health</a>
             </li>
           </ul>
           <!-- /.navbar-collapse -->
@@ -232,7 +209,7 @@
       <div class="container">
         <span>© Orange 2015
         </span>
-        <span id="id_for_cdu_link" class="navbar-right">
+        <span id="id-for-cdu-link" class="navbar-right">
         </span>
       </div>
     </footer>
@@ -241,7 +218,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.9/umd/popper.min.js" integrity="sha256-c477vRLKQv1jt9o7w6TTBzFyFznTaZjoMLTDFi7Hlxc=" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
 <script src="../../dist/js/boosted.js"></script>
 <script src="../../dist/js/vendor/jquery.tablesorter.js"></script>
@@ -281,6 +258,6 @@
       });
     }
   </script>
-    <!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://confort-plus.orange.com/js/toolbar-min.js"></script> -->
   </body>
 </html>

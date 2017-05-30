@@ -59,10 +59,10 @@
     line-height: 1;
 }
 
-.navbar-inverse #id_for_cdu_link a{
+.navbar-inverse #id-for-cdu-link a{
     color: #fff;
 }
-.navbar-inverse #id_for_cdu_link a:hover,.navbar-inverse #id_for_cdu_link a:focus{
+.navbar-inverse #id-for-cdu-link a:hover,.navbar-inverse #id-for-cdu-link a:focus{
     color: #F16E00;
 }
 

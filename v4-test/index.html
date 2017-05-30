@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+<!-- Boosted mod -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>
   
-    Orange Boosted with Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework. &middot; Bootstrap
+    Orange Boosted with Bootstrap &middot; The world's most popular mobile-first and responsive front-end framework. &middot; Boosted
   
 </title>
 
-<link href="dist/css/vendor/swiper.min.css" rel="stylesheet">
-
+<!-- Boosted mod remove social -->
+<!-- Swiper -->
+<link href="http://boosted.orange.com/v4-test/dist/css/vendor/swiper.min.css" rel="stylesheet">
 <!-- helvetica -->
-<link href="dist/css/orangeHelvetica.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-test/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
-<link href="dist/css/orangeIcons.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-test/dist/css/orangeIcons.css" rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="dist/css/boosted.css" rel="stylesheet">
+
+  <link href="http://boosted.orange.com/v4-test/dist/css/boosted.css" rel="stylesheet">
+
+<!-- end mod -->
 
 <!-- Documentation extras -->
-<link href="assets/css/docs.min.css" rel="stylesheet">
+<link href="http://boosted.orange.com/v4-test/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="http://boosted.orange.com/v4-test/apple-touch-icon.png">
+<link rel="icon" href="http://boosted.orange.com/v4-test/favicon.ico">
+
+<!-- Boosted mod remove tracking -->
 
   </head>
   <body class="bd-home">
@@ -34,28 +43,40 @@
       </div>
     </a>
 
-    <header class="" role="banner">
-  <nav class="navbar navbar-toggleable-sm navbar-inverse">
-    <div class="container">
-      <a class="navbar-brand" href="">
-        <img src="dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead">
-          <span class="sr-only">toggle navigation</span>
-          <span class="svg-menu"></span>
-        </button>
-      <div class="navbar-collapse collapse" id="collapsing-navbarHead">
+    <!-- Boosted mod navbar-inverse and remove bd-navbar class-->
+<header class="navbar navbar-inverse bg-inverse navbar-expand-md">
+  <nav class="container">
+    
+
+    <a class="navbar-brand" href="http://boosted.orange.com/v4-test/">
+      <!-- Boosted mod change brand -->
+      <img src="http://boosted.orange.com/v4-test/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage" />
+      <!-- end mod -->
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Boosted mod remove analytics, blog, expo and add boostwatch and confort plus -->
+    <div class="collapse navbar-collapse" id="bd-main-nav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="">B<span class="text-primary">oo</span>sted</a></li>
-          <li class="nav-item"><a class="nav-link " href="getting-started/introduction/">Documentation</a></li>
-          <li class="nav-item"><a class="nav-link " href="examples/">Examples</a></li>
-          <li class="nav-item"><a class="nav-link " href="boostwatch/">Boostwatch</a></li>
+          <li class="nav-item">
+            <a class="nav-item nav-link active" href="http://boosted.orange.com/v4-test/">B<span class="text-primary">oo</span>sted</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link " href="http://boosted.orange.com/v4-test/getting-started/introduction/">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link " href="http://boosted.orange.com/v4-test/examples/">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link " href="http://boosted.orange.com/v4-test/boostwatch/">Boostwatch</a>
+          </li>
           <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 </header>
+
 
     <main class="bd-masthead" id="content" role="main">
   <div class="container">
@@ -64,7 +85,7 @@
       <a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.6"
         target="_blank">Bootstrap v4.0.0-alpha.6</a>.</p>
     <p class="lead">
-      <a href="getting-started/download" class="btn btn-primary btn-inverse btn-lg">Download Boosted</a>
+      <a href="http://boosted.orange.com/v4-test/getting-started/download" class="btn btn-primary btn-inverse btn-lg">Download Boosted</a>
     </p>
     <p class="version">Currently v4.0.0-alpha.6.1</p>
   </div>
@@ -75,11 +96,13 @@
     <h2 class="bd-featurette-title">All the core components of Bootstrap accessible and Orange branded.</h2>
     <p class="lead">And also specific components only available in B<span class="text-primary">oo</span>sted.</p>
     <ul class="o-square-list">
+      <li><a href="components/forms/#orange-switches">Orange switches and 3 way toggle</a></li>
+      <li><a href="content/typography/#orange-list-with-bullet-points">Orange list with bullet points</a></li>
       <li><a href="components/orange-megamenu/">Main navigation with or without Mega menu</a></li>
       <li><a href="components/local-navigation">Local navigation</a></li>
       <li><a href="components/stepbar">Stepbar</a></li>
       <li><a href="components/collapse/#accordion-example">Accordions with indicator</a></li>
-      <li><a href="components/orange-tables">Complex table</a></li>
+      <li><a href="content/tables/#orange-brand-tables">Orange brand tables</a></li>
       <li><a href="content/tables/#responsive-tables">Responsive table, display as cards onto tablets and mobile</a></li>
       <li><a href="components/orange-footer/">Footer</a></li>
     </ul>
@@ -105,8 +128,8 @@
           <ul>
             <li>Currently v4.0.0-alpha.6.1</li>
             <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
-            <li><a href="examples">Examples</a></li>
-            <li><a href="about/history/">About</a></li>
+            <li><a href="http://boosted.orange.com/v4-test/examples">Examples</a></li>
+            <li><a href="http://boosted.orange.com/v4-test/about/history/">About</a></li>
             <li><a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.6">Original Bootstrap</a></li>
           </ul>
         </div>
@@ -115,26 +138,26 @@
   </div>
 </footer>
 <!-- boosted mod -->
-<a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text hidden-sm-down">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
+<a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>
-  window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')
+  window.jQuery || document.write('<script src="http://boosted.orange.com/v4-test/assets/js/vendor/jquery.min.js"><\/script>')
 </script>
 
-<script src="/assets/js/vendor/tether.min.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/vendor/popper.min.js"></script>
 
 
-<script src="/dist/js/boosted.js"></script>
+<script src="http://boosted.orange.com/v4-test/dist/js/boosted.js"></script>
 
 
-<script src="/dist/js/vendor/jquery.tablesorter.js"></script>
+<script src="http://boosted.orange.com/v4-test/dist/js/vendor/jquery.tablesorter.js"></script>
 
-<script src="/assets/js/docs.min.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/docs.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="/assets/js/ie-emulation-modes-warning.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://boosted.orange.com/v4-test/assets/js/ie-emulation-modes-warning.js"></script>
 
 
 
@@ -147,7 +170,7 @@
         })
 </script>
 
-<!-- <script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script> -->
+<!-- <script type="text/javascript" src="http://confort-plus.orange.com/js/toolbar-min.js"></script> -->
 <script>
   accessibilitytoolbar_custom = {
     idLinkModeContainer: "id-li-for-cdu",

@@ -54,14 +54,18 @@
     })
 
     // Insert copy to clipboard button before .highlight
-    // boosted mod
-    // change class btn-clipboard to btn btn-sm btn-secondary
     $('.highlight').each(function () {
-      var btnHtml = '<div class="bd-clipboard"><span class="btn btn-sm btn-secondary" title="Copy to clipboard">Copy</span></div>'
+      var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard btn btn-sm btn-secondary" title="Copy to clipboard">Copy</button></div>'
       $(this).before(btnHtml)
-      $('.btn-clipboard').tooltip()
+      $('.btn-clipboard')
+        .tooltip()
+        .on('mouseleave', function () {
+          // explicitly hide tooltip, since after clicking it remains
+          // focused (as it's a button), so tooltip would otherwise
+          // remain visible until focus is moved away
+          $(this).tooltip('hide')
+        })
     })
-    // end mod
 
     var clipboard = new Clipboard('.btn-clipboard', {
       target: function (trigger) {
