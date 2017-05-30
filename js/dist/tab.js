@@ -29,7 +29,7 @@ var Tab = function ($) {
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  var RANDOM_NUMBER = 1000;
+  var REGEXP_KEYDOWN = new RegExp(ARROW_LEFT_KEYCODE + '|' + ARROW_UP_KEYCODE + '|' + ARROW_RIGHT_KEYCODE + '|' + ARROW_DOWN_KEYCODE);
   // end mod
 
   var Event = {
@@ -37,7 +37,8 @@ var Tab = function ($) {
     HIDDEN: 'hidden' + EVENT_KEY,
     SHOW: 'show' + EVENT_KEY,
     SHOWN: 'shown' + EVENT_KEY,
-    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+    KEYDOWN_DATA_API: 'keydown' + EVENT_KEY + DATA_API_KEY // boosted mod
   };
 
   var ClassName = {
@@ -49,14 +50,11 @@ var Tab = function ($) {
   };
 
   var Selector = {
-    A: 'a',
-    LI: 'li',
     DROPDOWN: '.dropdown',
-    LIST: 'ul:not(.dropdown-menu), ol:not(.dropdown-menu), nav:not(.dropdown-menu)',
-    FADE_CHILD: '> .nav-item .fade, > .fade',
+    NAV_LIST_GROUP: '.nav, .list-group',
     ACTIVE: '.active',
-    ACTIVE_CHILD: '> .nav-item > .active, > .active',
-    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"]',
+    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
+    ACTIVE_CHILD: '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active', // boosted mod
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
   };
@@ -72,6 +70,7 @@ var Tab = function ($) {
       _classCallCheck(this, Tab);
 
       this._element = element;
+      this._addAccessibility(); // Boosted mod
     }
 
     // getters
@@ -87,7 +86,7 @@ var Tab = function ($) {
 
       var target = void 0;
       var previous = void 0;
-      var listElement = $(this._element).closest(Selector.LIST)[0];
+      var listElement = $(this._element).closest(Selector.NAV_LIST_GROUP)[0];
       var selector = Util.getSelectorFromElement(this._element);
 
       if (listElement) {
@@ -140,59 +139,24 @@ var Tab = function ($) {
     };
 
     Tab.prototype.dispose = function dispose() {
-      $.removeClass(this._element, DATA_KEY);
+      $.removeData(this._element, DATA_KEY);
       this._element = null;
     };
-    // Boosted mod
 
-
-    Tab._keydown = function _keydown(e) {
-      var $this = $(this);
-      var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
-      var index = void 0;
-      var k = e.which || e.keyCode;
-      $this = $(this);
-      if (!/(ARROW_LEFT_KEYCODE|ARROW_UP_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_DOWN_KEYCODE)/.test(k)) {
-        return;
-      }
-      index = Items.index(Items.filter(':focus'));
-
-      if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
-        index--;
-      } // up & left
-      if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
-        index++;
-      } // down & right
-
-      if (index < 0) {
-        index = Items.length - 1;
-      }
-      if (index === Items.length) {
-        index = 0;
-      }
-      var nextTab = Items.eq(index);
-      if (nextTab.attr('role') === 'tab') {
-        nextTab.tab('show').trigger('focus');
-      }
-
-      e.preventDefault();
-      e.stopPropagation();
-    };
-    // end mod
     // private
 
     Tab.prototype._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-      var active = $(container).find(Selector.ACTIVE_CHILD)[0];
-      var isTransitioning = callback && Util.supportsTransitionEnd() && (active && $(active).hasClass(ClassName.FADE) || Boolean($(container).find(Selector.FADE_CHILD)[0]));
+      var active = $(container).find(Selector.ACTIVE)[0];
+      var isTransitioning = callback && Util.supportsTransitionEnd() && active && $(active).hasClass(ClassName.FADE);
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, isTransitioning, callback);
       };
 
       // Boosted mod
-      $(container).find('.nav-link').attr({
+      $(container).find('.nav-link:not(.dropdown-toggle)').attr({
         tabIndex: '-1',
         'aria-selected': false
       });
@@ -229,7 +193,7 @@ var Tab = function ($) {
       $(element).addClass(ClassName.ACTIVE);
       element.setAttribute('aria-expanded', true);
       // Boosted mod
-      $(element).filter('.nav-link.active').attr({
+      $(element).filter('.nav-link:not(.dropdown-toggle).active').attr({
         tabIndex: '0',
         'aria-selected': true
       });
@@ -261,7 +225,96 @@ var Tab = function ($) {
       }
     };
 
+    // Boosted mod
+
+
+    Tab.prototype._addAccessibility = function _addAccessibility() {
+      var $tab = $(this._element);
+      var $tabpanel = $($tab.attr('href'));
+      var $tablist = $tab.closest(Selector.NAV_LIST_GROUP);
+      var tabId = $tab.attr('id') || Util.getUID(NAME);
+
+      $tab.attr('id', tabId);
+
+      if ($tabpanel) {
+        $tab.attr('role', 'tab');
+        $tablist.attr('role', 'tablist');
+        // $li.attr('role', 'presentation')
+      }
+
+      if ($tab.hasClass(ClassName.ACTIVE)) {
+        $tab.attr({
+          tabIndex: '0',
+          'aria-selected': 'true'
+        });
+
+        if ($tab.attr('href')) {
+          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+        }
+
+        $tabpanel.attr({
+          role: 'tabpanel',
+          tabIndex: '0',
+          'aria-hidden': 'false',
+          'aria-labelledby': tabId
+        });
+      } else {
+        $tab.attr({
+          tabIndex: '-1',
+          'aria-selected': 'false'
+        });
+
+        if ($tab.attr('href')) {
+          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+        }
+
+        $tabpanel.attr({
+          role: 'tabpanel',
+          tabIndex: '-1',
+          'aria-hidden': 'true',
+          'aria-labelledby': tabId
+        });
+      }
+    };
+    // end mod
+
     // static
+
+    // Boosted mod
+
+
+    Tab._dataApiKeydownHandler = function _dataApiKeydownHandler(e) {
+      var $this = $(this);
+      var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
+      var k = e.which || e.keyCode;
+
+      var index = 0;
+
+      index = Items.index(Items.filter(':focus'));
+
+      if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
+        index--;
+      } // up & left
+      if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
+        index++;
+      } // down & right
+
+      if (index < 0) {
+        index = Items.length - 1;
+      }
+      if (index === Items.length) {
+        index = 0;
+      }
+      var nextTab = Items.eq(index);
+
+      if (nextTab.attr('role') === 'tab') {
+        nextTab.tab('show').trigger('focus');
+      }
+
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    // end mod
 
     Tab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -272,6 +325,12 @@ var Tab = function ($) {
           data = new Tab(this);
           $this.data(DATA_KEY, data);
         }
+
+        // Boosted mod
+        if (/init/.test(config)) {
+          return;
+        }
+        // end mod
 
         if (typeof config === 'string') {
           if (data[config] === undefined) {
@@ -301,15 +360,16 @@ var Tab = function ($) {
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     event.preventDefault();
     Tab._jQueryInterface.call($(this), 'show');
-  });
-
+  })
   // Boosted mod
-  $(document).on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (event) {
-    if (!/(ARROW_UP_KEYCODE|ARROW_DOWN_KEYCODE|ARROW_RIGHT_KEYCODE|ARROW_LEFT_KEYCODE)/.test(event.which)) {
+  .on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    if (!REGEXP_KEYDOWN.test(event.which)) {
       return;
     }
     event.preventDefault();
-    Tab._keydown.call($(this), event);
+    Tab._dataApiKeydownHandler.call($(this), event);
+  }).on('DOMContentLoaded', function () {
+    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init');
   });
   // end mod
   /**
@@ -317,59 +377,6 @@ var Tab = function ($) {
    * jQuery
    * ------------------------------------------------------------------------
    */
-  // Boosted mod
-  // ajout de l'accesibilité
-  // ===============================
-
-  function uniqueId(prefix) {
-    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * RANDOM_NUMBER + 1);
-  }
-
-  var $tablists = $('.nav-tabs, .nav-pills');
-  var $tabs = $tablists.find('[data-toggle="tab"], [data-toggle="pill"]');
-
-  $tabs.each(function () {
-    var tabpanel = $($(this).attr('href'));
-    var $tab = $(this);
-    var $tablist = $tab.closest('.nav-tabs, .nav-pills');
-    var $li = $tab.parent('li');
-    var tabid = $tab.attr('id') || uniqueId('ui-tab');
-
-    $tab.attr('id', tabid);
-    // put role tab, presentation and tablist only if there's at least one tabpanel
-    if (tabpanel) {
-      $tab.attr('role', 'tab');
-      $tablist.attr('role', 'tablist');
-      $li.attr('role', 'presentation');
-    }
-
-    if ($tab.hasClass('active')) {
-      $tab.attr({
-        tabIndex: '0',
-        'aria-selected': 'true',
-        'aria-controls': $tab.attr('href').substr(1)
-      });
-      tabpanel.attr({
-        role: 'tabpanel',
-        tabIndex: '0',
-        'aria-hidden': 'false',
-        'aria-labelledby': tabid
-      });
-    } else {
-      $tab.attr({
-        tabIndex: '-1',
-        'aria-selected': 'false',
-        'aria-controls': $tab.attr('href').substr(1)
-      });
-      tabpanel.attr({
-        role: 'tabpanel',
-        tabIndex: '-1',
-        'aria-hidden': 'true',
-        'aria-labelledby': tabid
-      });
-    }
-  });
-  // end mod
 
   $.fn[NAME] = Tab._jQueryInterface;
   $.fn[NAME].Constructor = Tab;

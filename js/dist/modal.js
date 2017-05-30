@@ -69,7 +69,8 @@ var Modal = function ($) {
     DIALOG: '.modal-dialog',
     DATA_TOGGLE: '[data-toggle="modal"]',
     DATA_DISMISS: '[data-dismiss="modal"]',
-    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
+    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
+    NAVBAR_TOGGLER: '.navbar-toggler'
   };
 
   /**
@@ -89,9 +90,12 @@ var Modal = function ($) {
       this._isShown = false;
       this._isBodyOverflowing = false;
       this._ignoreBackdropClick = false;
-      this._isTransitioning = false;
       this._originalBodyPadding = 0;
       this._scrollbarWidth = 0;
+
+      // Boosted mod
+      this._addAria();
+      // end mod
     }
 
     // getters
@@ -106,12 +110,13 @@ var Modal = function ($) {
       var _this = this;
 
       if (this._isTransitioning) {
-        throw new Error('Modal is transitioning');
+        return;
       }
 
       if (Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.FADE)) {
         this._isTransitioning = true;
       }
+
       var showEvent = $.Event(Event.SHOW, {
         relatedTarget: relatedTarget
       });
@@ -156,16 +161,18 @@ var Modal = function ($) {
         event.preventDefault();
       }
 
-      if (this._isTransitioning) {
-        throw new Error('Modal is transitioning');
+      if (this._isTransitioning || !this._isShown) {
+        return;
       }
 
       var transition = Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.FADE);
+
       if (transition) {
         this._isTransitioning = true;
       }
 
       var hideEvent = $.Event(Event.HIDE);
+
       $(this._element).trigger(hideEvent);
 
       if (!this._isShown || hideEvent.isDefaultPrevented()) {
@@ -185,6 +192,7 @@ var Modal = function ($) {
       $(this._dialog).off(Event.MOUSEDOWN_DISMISS);
 
       if (transition) {
+
         $(this._element).one(Util.TRANSITION_END, function (event) {
           return _this2._hideModal(event);
         }).emulateTransitionEnd(TRANSITION_DURATION);
@@ -205,8 +213,11 @@ var Modal = function ($) {
       this._isShown = null;
       this._isBodyOverflowing = null;
       this._ignoreBackdropClick = null;
-      this._originalBodyPadding = null;
       this._scrollbarWidth = null;
+    };
+
+    Modal.prototype.handleUpdate = function handleUpdate() {
+      this._adjustDialog();
     };
 
     // private
@@ -277,6 +288,7 @@ var Modal = function ($) {
       if (this._isShown && this._config.keyboard) {
         $(this._element).on(Event.KEYDOWN_DISMISS, function (event) {
           if (event.which === ESCAPE_KEYCODE) {
+            event.preventDefault();
             _this5.hide();
           }
         });
@@ -290,7 +302,7 @@ var Modal = function ($) {
 
       if (this._isShown) {
         $(window).on(Event.RESIZE, function (event) {
-          return _this6._handleUpdate(event);
+          return _this6.handleUpdate(event);
         });
       } else {
         $(window).off(Event.RESIZE);
@@ -301,7 +313,7 @@ var Modal = function ($) {
       var _this7 = this;
 
       this._element.style.display = 'none';
-      this._element.setAttribute('aria-hidden', 'true');
+      this._element.setAttribute('aria-hidden', true);
       this._isTransitioning = false;
       this._showBackdrop(function () {
         $(document.body).removeClass(ClassName.OPEN);
@@ -391,10 +403,6 @@ var Modal = function ($) {
     // todo (fat): these should probably be refactored out of modal.js
     // ----------------------------------------------------------------------
 
-    Modal.prototype._handleUpdate = function _handleUpdate() {
-      this._adjustDialog();
-    };
-
     Modal.prototype._adjustDialog = function _adjustDialog() {
       var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
 
@@ -418,17 +426,55 @@ var Modal = function ($) {
     };
 
     Modal.prototype._setScrollbar = function _setScrollbar() {
-      var bodyPadding = parseInt($(Selector.FIXED_CONTENT).css('padding-right') || 0, 10);
-
-      this._originalBodyPadding = document.body.style.paddingRight || '';
+      var _this9 = this;
 
       if (this._isBodyOverflowing) {
-        document.body.style.paddingRight = bodyPadding + this._scrollbarWidth + 'px';
+        // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
+        //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
+
+        // Adjust fixed content padding
+        $(Selector.FIXED_CONTENT).each(function (index, element) {
+          var actualPadding = $(element)[0].style.paddingRight;
+          var calculatedPadding = $(element).css('padding-right');
+          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + 'px');
+        });
+
+        // Adjust navbar-toggler margin
+        $(Selector.NAVBAR_TOGGLER).each(function (index, element) {
+          var actualMargin = $(element)[0].style.marginRight;
+          var calculatedMargin = $(element).css('margin-right');
+          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) + _this9._scrollbarWidth + 'px');
+        });
+
+        // Adjust body padding
+        var actualPadding = document.body.style.paddingRight;
+        var calculatedPadding = $('body').css('padding-right');
+        $('body').data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + 'px');
       }
     };
 
     Modal.prototype._resetScrollbar = function _resetScrollbar() {
-      document.body.style.paddingRight = this._originalBodyPadding;
+      // Restore fixed content padding
+      $(Selector.FIXED_CONTENT).each(function (index, element) {
+        var padding = $(element).data('padding-right');
+        if (typeof padding !== 'undefined') {
+          $(element).css('padding-right', padding).removeData('padding-right');
+        }
+      });
+
+      // Restore navbar-toggler margin
+      $(Selector.NAVBAR_TOGGLER).each(function (index, element) {
+        var margin = $(element).data('margin-right');
+        if (typeof margin !== 'undefined') {
+          $(element).css('margin-right', margin).removeData('margin-right');
+        }
+      });
+
+      // Restore body padding
+      var padding = $('body').data('padding-right');
+      if (typeof padding !== 'undefined') {
+        $('body').css('padding-right', padding).removeData('padding-right');
+      }
     };
 
     Modal.prototype._getScrollbarWidth = function _getScrollbarWidth() {
@@ -436,10 +482,38 @@ var Modal = function ($) {
       var scrollDiv = document.createElement('div');
       scrollDiv.className = ClassName.SCROLLBAR_MEASURER;
       document.body.appendChild(scrollDiv);
-      var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+      var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
       return scrollbarWidth;
     };
+
+    // Boosted mod
+
+
+    Modal.prototype._addAria = function _addAria() {
+      var $ModalPanel = $(this._element);
+      var $ModalTitle = $ModalPanel.find('.modal-title');
+      var $ModalDialog = $ModalPanel.find('.modal-dialog');
+
+      $ModalPanel.attr({
+        role: 'dialog',
+        'aria-modal': true
+      });
+
+      if ($ModalTitle) {
+        var ModalTitleId = $ModalTitle.attr('id');
+        if (ModalTitleId) {
+          $ModalPanel.attr({
+            'aria-labelledby': ModalTitleId
+          });
+        }
+      }
+
+      if ($ModalDialog) {
+        $ModalDialog.attr('role', 'document');
+      }
+    };
+    // end mod
 
     // static
 
@@ -486,7 +560,7 @@ var Modal = function ($) {
    */
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    var _this9 = this;
+    var _this10 = this;
 
     var target = void 0;
     var selector = Util.getSelectorFromElement(this);
@@ -508,8 +582,8 @@ var Modal = function ($) {
       }
 
       $target.one(Event.HIDDEN, function () {
-        if ($(_this9).is(':visible')) {
-          _this9.focus();
+        if ($(_this10).is(':visible')) {
+          _this10.focus();
         }
       });
     });
@@ -517,34 +591,6 @@ var Modal = function ($) {
     Modal._jQueryInterface.call($(target), config, this);
   });
 
-  $(document).ready(function () {
-    $('[data-toggle="modal"]').each(function () {
-      // modal = l'élement déclencheur de l'aperçu de la popin
-      // ModalPanel = la fenêtre modal à proprement parler
-      var Modal = $(this);
-      var ModalPanel = Modal.attr('data-target') ? $(Modal.attr('data-target')) : $(Modal.attr('href'));
-
-      // On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
-      ModalPanel.attr({
-        role: 'dialog'
-      }); // LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
-
-      // On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
-      var ModalTitle = ModalPanel.find('.modal-title');
-      if (ModalTitle) {
-        var ModalTitleId = ModalTitle.attr('id');
-        if (ModalTitleId) {
-          ModalPanel.attr({
-            'aria-labelledby': ModalTitleId
-          });
-        }
-      }
-    });
-
-    $('.modal-dialog').attr({
-      role: 'document'
-    });
-  });
   /**
    * ------------------------------------------------------------------------
    * jQuery

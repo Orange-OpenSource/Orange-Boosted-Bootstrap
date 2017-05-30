@@ -58,9 +58,8 @@ var Collapse = function ($) {
   };
 
   var Selector = {
-    ACTIVES: '.card:not(.multi) > .show, .card:not(.multi) > .collapsing', // boosted mod
-    DATA_TOGGLE: '[data-toggle="collapse"]',
-    DATA_CHILDREN: 'data-children'
+    ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
+    DATA_TOGGLE: '[data-toggle="collapse"]'
   };
 
   /**
@@ -77,18 +76,11 @@ var Collapse = function ($) {
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
+
       this._parent = this._config.parent ? this._getParent() : null;
 
       if (!this._config.parent) {
         this._addAriaAndCollapsedClass(this._element, this._triggerArray);
-      }
-
-      this._selectorActives = Selector.ACTIVES;
-      if (this._parent) {
-        var childrenSelector = this._parent.hasAttribute(Selector.DATA_CHILDREN) ? this._parent.getAttribute(Selector.DATA_CHILDREN) : null;
-        if (childrenSelector !== null) {
-          this._selectorActives = childrenSelector + ' > .show, ' + childrenSelector + ' > .collapsing';
-        }
       }
 
       if (this._config.toggle) {
@@ -119,7 +111,7 @@ var Collapse = function ($) {
       var activesData = void 0;
 
       if (this._parent) {
-        actives = $.makeArray($(this._parent).find(this._selectorActives));
+        actives = $.makeArray($(this._parent).children().children(Selector.ACTIVES));
         if (!actives.length) {
           actives = null;
         }
@@ -150,7 +142,7 @@ var Collapse = function ($) {
       $(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
 
       this._element.style[dimension] = 0;
-      this._element.setAttribute('aria-expanded', true);
+      this._element.setAttribute('aria-expanded', true); // boosted mod
 
       if (this._triggerArray.length) {
         $(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
@@ -202,7 +194,7 @@ var Collapse = function ($) {
 
       $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
 
-      this._element.setAttribute('aria-expanded', false);
+      this._element.setAttribute('aria-expanded', false); // boosted mod
 
       if (this._triggerArray.length) {
         $(this._triggerArray).addClass(ClassName.COLLAPSED).attr('aria-expanded', false);
@@ -269,7 +261,8 @@ var Collapse = function ($) {
     Collapse.prototype._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
       if (element) {
         var isOpen = $(element).hasClass(ClassName.SHOW);
-        element.setAttribute('aria-expanded', isOpen);
+        element.setAttribute('aria-expanded', isOpen); // boosted mod
+        // todo : add role tab & tabpanel for accordions
 
         if (triggerArray.length) {
           $(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
@@ -290,7 +283,7 @@ var Collapse = function ($) {
         var data = $this.data(DATA_KEY);
         var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
 
-        if (!data && _config.toggle && /show|hide/.test(config)) {
+        if (!data && _config.toggle && /show|hide|init/.test(config)) {
           _config.toggle = false;
         }
 
@@ -298,6 +291,12 @@ var Collapse = function ($) {
           data = new Collapse(this, _config);
           $this.data(DATA_KEY, data);
         }
+
+        // Boosted mod
+        if (/init/.test(config)) {
+          return;
+        }
+        // end mod
 
         if (typeof config === 'string') {
           if (data[config] === undefined) {
@@ -325,26 +324,6 @@ var Collapse = function ($) {
 
   /**
    * ------------------------------------------------------------------------
-   * Adding accessibility
-   * ------------------------------------------------------------------------
-   */
-
-  // single collapse
-  // add aria-controls attribute
-
-  // accordion tabs
-  // add role tab & tabpanel
-
-  $('.panel-heading').attr({
-    role: 'tab'
-  });
-  $('.panel-collapse:not(.mega-menu)').attr({
-    role: 'tabpanel'
-  });
-  $('.panel').attr('role', 'presentation');
-
-  /**
-   * ------------------------------------------------------------------------
    * Data Api implementation
    * ------------------------------------------------------------------------
    */
@@ -359,7 +338,16 @@ var Collapse = function ($) {
     var config = data ? 'toggle' : $(this).data();
 
     Collapse._jQueryInterface.call($(target), config);
+  })
+  // Boosted mod
+  .on('DOMContentLoaded', function () {
+    $(Selector.DATA_TOGGLE).each(function () {
+      var target = Collapse._getTargetFromElement(this);
+
+      Collapse._jQueryInterface.call($(target), 'init');
+    });
   });
+  // end mod
 
   $(function () {
     // local navigation
