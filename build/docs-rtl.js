@@ -21,18 +21,19 @@ sh.exec("find docs-orange/examples/ -mindepth 1 -maxdepth 1 -type d ! -name 'scr
   console.log('Exit code:', code);
   console.log('Program output:', stdout);
   console.log('Program stderr:', stderr);
-});
 
-sh.exec("find .tmpdocs/examples/rtl-* -type f -name '*.html' -exec sed -i 's/boosted\./boosted\.min\./gi' {} \;", function(code, stdout, stderr) {
-  console.log('Exit code:', code);
-  console.log('Program output:', stdout);
-  console.log('Program stderr:', stderr);
-});
 
-sh.exec("find .tmpdocs/examples/rtl-* -type f -name '*.html' -exec sed -i 's/html lang=\"en\">/html lang=\"en\" dir=\"rtl\"/gi' {} \;", function(code, stdout, stderr) {
-  console.log('Exit code:', code);
-  console.log('Program output:', stdout);
-  console.log('Program stderr:', stderr);
-});
+  sh.exec("find .tmpdocs/examples/rtl-* -type f -name '*.html' -exec sed -i 's/boosted\./boosted-rtl\./gi' {} \;", function(code, stdout, stderr) {
+    console.log('Exit code:', code);
+    console.log('Program output:', stdout);
+    console.log('Program stderr:', stderr);
 
+
+    sh.exec("find .tmpdocs/examples/rtl-* -type f -name '*.html' -exec sed -i 's/html lang=\"en\"/html lang=\"en\" dir=\"rtl\"/gi' {} \;", function(code, stdout, stderr) {
+      console.log('Exit code:', code);
+      console.log('Program output:', stdout);
+      console.log('Program stderr:', stderr);
+    });
+  });
+});
 
