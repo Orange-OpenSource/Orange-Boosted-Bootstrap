@@ -15,25 +15,13 @@
 Orange Company had buy the right for used Helvetica onto digital applications. 
 Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc 
 Parts list under Monotype Imaging Inc Copyright
-fonts/HelvNeue55_W1G.eot
-fonts/HelvNeue55_W1G.ttf
 fonts/HelvNeue55_W1G.woff2
-fonts/HelvNeue75_W1G.svg
 fonts/HelvNeue75_W1G.woff
-fonts/HelvNeue55_W1G.svg
 fonts/HelvNeue55_W1G.woff
-fonts/HelvNeue75_W1G.eot
-fonts/HelvNeue75_W1G.ttf
 fonts/HelvNeue75_W1G.woff2
-dist/fonts/HelvNeue55_W1G.eot
-dist/fonts/HelvNeue55_W1G.ttf
 dist/fonts/HelvNeue55_W1G.woff2
-dist/fonts/HelvNeue75_W1G.svg
 dist/fonts/HelvNeue75_W1G.woff
-dist/fonts/HelvNeue55_W1G.svg
 dist/fonts/HelvNeue55_W1G.woff
-dist/fonts/HelvNeue75_W1G.eot
-dist/fonts/HelvNeue75_W1G.ttf
 dist/fonts/HelvNeue75_W1G.woff2
 End of the parts list under Monotype Imaging Inc Copyright
 
@@ -48,14 +36,10 @@ in whole or part of, in any medium, except as required for reasonable and custom
 and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
-fonts/icon-orange.eot
-fonts/icon-orange.ttf
-fonts/icon-orange.svg
 fonts/icon-orange.woff
-dist/fonts/icon-orange.eot
-dist/fonts/icon-orange.ttf
-dist/fonts/icon-orange.svg
+fonts/icon-orange.woff2
 dist/fonts/icon-orange.woff
+dist/fonts/icon-orange.woff2
 img/ORANGE_LOGO_rgb.jpg
 dist/img/ORANGE_LOGO_rgb.jpg
 docs-orange/assets/img/logo-orange.png
