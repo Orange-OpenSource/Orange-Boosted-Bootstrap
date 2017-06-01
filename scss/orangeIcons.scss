@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "icon-orange";
-  src: url("#{$icon-font-path}icon-orange.woff") format("woff");
+  src: url("#{$icon-font-path}icon-orange.woff2") format("woff2"),
+    url("#{$icon-font-path}icon-orange.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

@@ -125,6 +125,7 @@ The download is a zip file, <code>MYPROJECT-icons.zip</code>.
 Unzip it.
 The demo.html and demo-files folder offer a sample page displaying the icons - you don’t need them for your project.
 The fonts folder is the one you need! It contains <code>MYPROJECT-icons</code>.woff file
+You can next create the woff2 file with [everythingfonts](https://everythingfonts.com/woff-to-woff2)
 And finally the “style.css” file contains all the css classes.
 
 Rename it to <code>MYPROJECT-icons.css</code>.
