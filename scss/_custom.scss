@@ -734,11 +734,11 @@ $card-spacer-x:            1.25rem !default;
 $card-border-width:        $border-width;
 $card-border-radius:       $border-radius;
 $card-border-color:        #000;
-$card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:              #fff;
 $card-bg:                  #fff;
 
-$card-link-hover-color:    #fff;
+$card-inverse-link-hover-color:    #fff;
 
 $card-img-overlay-padding: 1.25rem;
 

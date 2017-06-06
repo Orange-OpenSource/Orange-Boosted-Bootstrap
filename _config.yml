@@ -10,21 +10,21 @@ permalink:        pretty
 
 # Server
 # boosted mod
-source:           .tmpdocs
+source:           .
 # end boosted mod
-destination:      _gh_pages
-host:             0.0.0.0
+destination:      ./_gh_pages
 port:             9001
 # boosted mod
 baseurl:          ""
 url:              http://boosted.orange.com/v4-alpha
 # end boosted mod
 encoding:         UTF-8
-exclude:          [assets/scss/]
+exclude:          [img, fonts, .git, .github, assets/scss/, build, js, node_modules, nuget, scss, vendor, bower.json, composer.json, Gemfile, Gemfile.lock, Gruntfile.js, package.js, package.json, sache.json, bower_components]
 
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-toc
 
 # boosted mod
 grid:
@@ -75,6 +75,7 @@ social_image_path: /assets/brand/bootstrap-social.png
 
 # Custom vars
 current_version:  4.0.0-alpha.6.1
+docs_version:     4.0
 repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
 slack:            https://bootstrap-slack.herokuapp.com
 
@@ -85,6 +86,7 @@ download:
 blog:             https://blog.getbootstrap.com
 expo:             https://expo.getbootstrap.com
 themes:           https://themes.getbootstrap.com
+jobs:             https://jobs.getbootstrap.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

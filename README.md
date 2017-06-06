@@ -43,7 +43,7 @@ Read the [Getting started page](http://boosted.orange.com/v4-alpha/getting-start
 
 ## Status
 
-![Bower](https://img.shields.io/bower/v/boosted.svg)
+[![Bower](https://img.shields.io/bower/v/boosted.svg)](https://bower.io/search/?q=boosted)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 [![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4-dev.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
@@ -103,9 +103,11 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://boosted.orange.com>. The docs may also be run locally.
 
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `_scripts.html` include.
+
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 3. From the root `/Orange-Boosted-Bootstrap` directory, run `bundle exec jekyll serve` in the command line.
 4. Open <http://localhost:9001> in your browser, and voilà.
