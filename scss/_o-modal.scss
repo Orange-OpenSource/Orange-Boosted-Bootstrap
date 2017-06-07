@@ -73,6 +73,7 @@
 
     .card-title {
       margin-bottom: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -112,6 +113,10 @@
       [class^=svg]::after {
         width: 4rem;
         height: 4rem;
+      }
+
+      .card-title {
+        font-size: 1rem;
       }
 
       .card-block {
