@@ -2,6 +2,8 @@
 .modal {
 
   .modal-content {
+    display: flex;
+    flex-direction: column;
     padding: 2.5rem;
     border: 0;
   }
@@ -34,12 +36,51 @@
   }
 
   .modal-body {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     border: 0;
+
+    .card,
+    .card {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      border: 0;
+    }
+
+    .card-block {
+      padding: 0;
+    }
+
+    .card-icon {
+      margin-right: 1.25rem;
+    }
+
+    [class^=svg],
+    [class^=svg]::after {
+      width: 2.875rem;
+      height: 2.875rem;
+    }
+
+    [class^=svg] {
+      display: block;
+    }
+
+    [class^=svg]::after {
+      top: auto;
+    }
+
+    .card-title {
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
   }
 
   .modal-footer {
+    align-self: flex-end;
     padding: 0;
+    margin-top: 2.5rem;
     border: 0;
 
     .btn + .btn {
@@ -48,143 +89,43 @@
   }
 }
 
-.modal .modal-sm {
-
-  .modal-content {
-    padding: 1.25rem;
-  }
-
-  .modal-header {
-    margin-bottom: 0;
-  }
-
-  .modal-footer {
-    margin: 1.25rem 0;
-
-    .float-xs-right {
-      float: none !important;
-      text-align: center;
-    }
-  }
-}
-
-.modal {
-  .card-block,
-  .card.card-block {
-    width: auto;
-    padding: 0;
-    margin: 0 0 2.5rem;
-    border: 0;
-
-    .card-title {
-      margin-bottom: 1.25rem;
-    }
-  }
-
-  .card-block.has-info,
-  .card.card-block.has-info {
-    margin-left: 3.75rem;
-
-    .card-icon {
-      position: absolute;
-      left: -3.75rem;
+@include media-breakpoint-down(xs) {
+  .modal {
+    .modal-content {
+      padding: 1.25rem;
     }
 
-    .card-icon span[class^="icon-"] {
-      font-size: 2.875rem;
+    .modal-header {
+      margin: 0;
     }
 
-    .card-icon [class^="svg-"] {
-      display: block;
-      width: 2.875rem;
-      height: 2.875rem;
-    }
-
-    .card-icon [class^="svg-"]::after {
-      width: 2.875rem;
-      height: 2.875rem;
-    }
-
-    &.has-info .card-icon {
-      color: $brand-info;
-    }
-  }
-}
-
-.modal-sm {
-  .card.card-block {
-    margin-bottom: 1.25rem;
-    margin-left: 0;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-
-  .card-block.has-info,
-  .card.card-block.has-info {
-    position: relative;
-    margin-top: 1.25rem;
-
-    .card-icon {
-      position: absolute;
-      left: 0;
-    }
-
-    span[class^="icon-"] {
-      font-size: 2rem;
-    }
-
-    .card-icon [class^="svg-"] {
-      width: 2rem;
-      height: 2rem;
-    }
-
-    .card-icon [class^="svg-"]::after {
-      width: 2rem;
-      height: 2rem;
-    }
-
-    .card-title {
-      margin-left: 2.5rem;
-    }
-
-    &.on-top {
-      margin-top: 0;
+    .modal-body {
+      .card {
+        flex-direction: column;
+      }
 
       .card-icon {
-        position: static;
-        margin-bottom: 1.25rem;
-        text-align: center;
+        align-self: center;
+        margin-right: 0;
       }
 
-      span[class^="icon-"] {
-        font-size: 4rem;
-      }
-
-      span[class^="svg-"] {
-        width: 4rem;
-        height: 4rem;
-        margin: 0 auto;
-      }
-
-      span[class^="svg-"]::after {
+      .card-icon,
+      [class^=svg]::after {
         width: 4rem;
         height: 4rem;
       }
 
       .card-title {
-        margin-left: 0;
+        font-size: 1rem;
+      }
+
+      .card-block {
+        margin-top: 1.25rem;
       }
     }
-  }
-}
 
-@include media-breakpoint-down(sm) {
-  .modal {
-
-    .modal-content {
-      padding: 1.25rem;
+    .modal-footer {
+      align-self: center;
     }
   }
 }
