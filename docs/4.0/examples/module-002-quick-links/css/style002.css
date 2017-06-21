@@ -29,7 +29,45 @@ header .btn {
   float: left;
 }
 
+header .btn.svg-arrow-previous {
+  margin-right: .375rem;
+  padding-left: 40px;
+}
+
+header .btn.svg-arrow-previous::after {
+  width: 10px;
+  height: 16px;
+  left: 20px;
+  top: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
 /* links page */
+
+.card-link {
+  border: 0;
+}
+
+.card-link .card-img {
+  text-align: left;
+}
+
+.card-link .card-img img {
+  width: 25%;
+}
+
+.card-link .card-block {
+  padding: 1.25rem 0;
+  text-align: left;
+}
+
+.card-link .card-title {
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
 
 main {
   margin-bottom: 6.25rem;

@@ -32,8 +32,16 @@ header .btn {
   align-items: center;
 }
 
-header .btn span {
+header .btn.svg-arrow-previous {
   margin-right: .375rem;
+  padding-left: 40px;
+}
+
+header .btn.svg-arrow-previous::after {
+  width: 10px;
+  height: 16px;
+  left: 20px;
+  top: 10px;
 }
 
 /* links page */
