@@ -279,7 +279,7 @@ const Tab = (($) => {
       } else {
         $tab.attr({
           tabIndex : '-1',
-          'aria-selected' : 'false',
+          'aria-selected' : 'false'
         })
 
         if ($tab.attr('href')) {

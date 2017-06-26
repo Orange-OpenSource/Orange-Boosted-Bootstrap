@@ -19,8 +19,8 @@
       background-color: $nav-tabs-link-hover-bg;
 
       &.active {
-        color: $nav-tabs-active-link-color;
-        background-color: $nav-tabs-active-link-bg;
+        color: $nav-tabs-link-active-color;
+        background-color: $nav-tabs-link-active-bg;
       }
     }
 
@@ -62,16 +62,16 @@
 
   .nav-link {
     @include active {
-      background-color: $nav-pills-active-link-bg;
+      background-color: $nav-pills-link-active-bg;
     }
 
     @include hover {
-      color: $nav-pills-active-link-color;
+      color: $nav-pills-link-active-color;
       cursor: default;
-      background-color: $nav-pills-active-link-bg;
+      background-color: $nav-pills-link-active-bg;
       &.disabled {
-        color: $nav-disabled-link-color;
-        background-color: $nav-disabled-link-hover-bg;
+        color: $nav-link-disabled-color;
+        background-color: $nav-link-disabled-hover-bg;
       }
     }
 
@@ -80,8 +80,8 @@
       background-color: $nav-pills-focus-link-bg;
       outline: none;
       &.disabled {
-        color: $nav-disabled-link-color;
-        background-color: $nav-disabled-link-hover-bg;
+        color: $nav-link-disabled-color;
+        background-color: $nav-link-disabled-hover-bg;
       }
     }
 

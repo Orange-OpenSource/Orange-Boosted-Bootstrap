@@ -282,7 +282,7 @@ Using the `col-{breakpoint}-auto` classes, columns can size itself based on the 
 
 ### Equal-width multi-row
 
-Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display-property/).
+Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
 
 <div class="bd-example-row">
 {% example html %}

@@ -22,7 +22,7 @@ html {
   box-sizing: inherit;
 }
 
-@import "custom";
+@import "functions";
 @import "variables";
 
 //
@@ -32,6 +32,6 @@ html {
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";
-@import "utilities/flex";
 
 @import "grid";
+@import "utilities/flex";

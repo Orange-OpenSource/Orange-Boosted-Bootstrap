@@ -11,22 +11,22 @@ h1, h2, h3, h4, h5, h6,
   color: $headings-color;
 }
 
-h1, .h1 { font-size: $font-size-h1; }
-h2, .h2 { font-size: $font-size-h2; }
-h3, .h3 { font-size: $font-size-h3; }
-h4, .h4 { font-size: $font-size-h4; }
-h5, .h5 { font-size: $font-size-h5; }
-h6, .h6 { font-size: $font-size-h6; }
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
+h5, .h5 { font-size: $h5-font-size; }
+h6, .h6 { font-size: $h6-font-size; }
 
 // Boosted mod
 // reduce the size of titles for mobile display
 @include media-breakpoint-down(sm) {
-  h1, .h1 { font-size: $font-size-h1-mobile; }
-  h2, .h2 { font-size: $font-size-h2-mobile; }
-  h3, .h3 { font-size: $font-size-h3-mobile; }
-  h4, .h4 { font-size: $font-size-h4-mobile; }
-  h5, .h5 { font-size: $font-size-h5-mobile; }
-  h6, .h6 { font-size: $font-size-h6-mobile; }
+  h1, .h1 { font-size: $h1-font-size-mobile; }
+  h2, .h2 { font-size: $h2-font-size-mobile; }
+  h3, .h3 { font-size: $h3-font-size-mobile; }
+  h4, .h4 { font-size: $h4-font-size-mobile; }
+  h5, .h5 { font-size: $h5-font-size-mobile; }
+  h6, .h6 { font-size: $h6-font-size-mobile; }
 }
 // end mod
 .lead {

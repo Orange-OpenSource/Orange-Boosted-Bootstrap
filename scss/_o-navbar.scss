@@ -154,14 +154,14 @@
     line-height: 1;
 
     span[class^="icon-"] {
-      font-size: $font-size-h5;
+      font-size: $h5-font-size;
       font-weight: normal;
     }
   }
 
   .nav-link.icon {
     span[class^="icon-"] {
-      font-size: $font-size-h6;
+      font-size: $h6-font-size;
       font-weight: normal;
     }
 
@@ -216,7 +216,7 @@
 
           .nav-item {
             margin-left: 0;
-            font-size: $font-size-h5;
+            font-size: $h5-font-size;
             // line-height: 1;
             border-top: 1px solid $gray-dark;
           }

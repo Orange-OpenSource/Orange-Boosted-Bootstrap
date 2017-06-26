@@ -16,12 +16,6 @@ module.exports = function (grunt) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&')
   }
 
-  /* boosted mod */
-  var serveStatic = require('serve-static')
-  /* end mod */
-
-  var isTravis = require('is-travis')
-
   // Project configuration.
   grunt.initConfig({
 
@@ -239,7 +233,7 @@ module.exports = function (grunt) {
     },
 
     /* boosted mod */
-    replace: {      
+    replace: {
       rtl: {
         src: ['.tmpdocs/examples/rtl-*/**/*.html'],
         overwrite: true,
@@ -270,7 +264,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['dist-css','copy:docs']
+        tasks: ['dist-css', 'copy:docs']
       },
       docs: {
         /* boosted mod */
@@ -426,14 +420,14 @@ module.exports = function (grunt) {
   grunt.registerTask('test', testSubtasks)
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'exec:uglify','copy:docs'])
+  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'exec:uglify', 'copy:docs'])
 
   grunt.registerTask('test-scss', ['exec:scss-lint'])
 
   // CSS distribution task.
   grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs','copy:docs'])
+  grunt.registerTask('dist-css', ['copy:tmpdocs', 'sass-compile', 'exec:postcss', 'rtlcss', 'concat:rtlCss', 'exec:clean-css', 'exec:clean-css-docs', 'copy:docs'])
 
   // Full distribution task.
   /* boosted mod */

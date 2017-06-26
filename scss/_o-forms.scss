@@ -53,8 +53,8 @@
       }
 
       .form-control {
-        margin-top: 0;
         order: 3;
+        margin-top: 0;
       }
 
       .form-control-feedback {
@@ -221,7 +221,7 @@ select.form-control {
 
 .custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-indicator {
   background-color: $gray-light-o;
-  background-image: $custom-checkbox-checked-icon;
+  background-image: $custom-checkbox-icon-checked;
   border: 0;
 }
 

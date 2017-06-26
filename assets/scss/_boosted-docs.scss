@@ -8,7 +8,7 @@
   border-top: 2px solid $gray-dark;
 
   .lead {
-    font-size: $font-size-h6;
+    font-size: $h6-font-size;
 
     a {
       color: #fff;
@@ -37,7 +37,7 @@
 
   .bd-boosted-icon {
     font-family: $font-family-base;
-    font-size: $font-size-h1;
+    font-size: $h1-font-size;
     font-weight: 500;
   }
 }
@@ -50,7 +50,7 @@
 
   h1 {
     margin: 2.6875rem 0;
-    font-size: $font-size-h1;
+    font-size: $h1-font-size;
     font-weight: bold;
   }
 
@@ -62,7 +62,7 @@
   @include media-breakpoint-down(xs) {
     h1 {
       margin: 1.25rem 0;
-      font-size: $font-size-h2;
+      font-size: $h2-font-size;
       font-weight: bold;
       line-height: 1;
       text-align: left;
@@ -207,6 +207,7 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
 
 .doc-link {
   position: relative;
+  padding-right: 1.875rem;
   margin-left: .625rem;
   font-size: 1.5rem;
 

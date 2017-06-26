@@ -5,9 +5,12 @@
 //
 
 .bd-content {
+  order: 1;
+
   // Hack the sticky header
-  h2[id],
-  h3[id] {
+  > h2[id]:not(.card-title),
+  > h3[id]:not(.card-title),
+  > h4[id]:not(.card-title) {
     &::before {
       position: relative;
       z-index: -1;

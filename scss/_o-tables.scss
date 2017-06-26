@@ -201,7 +201,7 @@
 // force caption for tables
 caption {
   padding: .75rem 0;
-  font-size: $font-size-h1;
+  font-size: $h1-font-size;
   font-weight: bold;
   color: #000;
   caption-side: top;
@@ -217,7 +217,7 @@ caption {
 .tablesorter {
   caption {
     padding: .75rem 0;
-    font-size: $font-size-h1;
+    font-size: $h1-font-size;
     font-weight: bold;
     color: #000;
     background-color: #fff;

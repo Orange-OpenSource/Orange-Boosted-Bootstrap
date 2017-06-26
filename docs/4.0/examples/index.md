@@ -1,6 +1,8 @@
 ---
 layout: simple
 title: Examples
+redirect_from:
+  - /examples/
 ---
 
 [comment]: # Boosted mod

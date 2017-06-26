@@ -26,7 +26,7 @@
     }
   }
 
-  .card-block {
+  .card-body {
     display: flex;
     flex-direction: column;
   }
@@ -71,7 +71,7 @@
       }
     }
 
-    .card-block {
+    .card-body {
       flex-basis: 80%;
       align-self: center;
       padding: 0 1rem;

@@ -157,7 +157,7 @@
     // Boosted mod
     background-color: #fff;
     .navbar-toggler-icon {
-      background-image: $navbar-inverse-toggler-hover-bg;
+      background-image: $navbar-inverse-toggler-icon-hover-bg;
     }
     // end mod
   }
@@ -166,7 +166,7 @@
     background-color: $brand-primary;
 
     .navbar-toggler-icon {
-      background-image: $navbar-inverse-toggler-bg;
+      background-image: $navbar-inverse-toggler-icon-bg;
     }
   }
 
@@ -248,9 +248,14 @@
           flex-direction: row;
 
           .dropdown-menu {
-            position: absolute !important;
-            top: 100% !important;
+            position: absolute;
           }
+
+          .dropdown-menu-right {
+            right: 0;
+            left: auto; // Reset the default from `.dropdown-menu`
+          }
+
           // boosted mod
           // .nav-link {
           //   padding-right: .5rem;

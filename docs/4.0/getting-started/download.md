@@ -15,13 +15,13 @@ toc: true
 <a href="{{ site.download.dist }}" class="btn btn-lg btn-secondary">Download Boosted</a>
 
 ## Source files
-**Want to compile Boosted with your project's asset pipeline?** Choose this option to download our source Sass, JavaScript, and documentation files. Requires a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes), and [some setup]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup).
+**Want to compile Boosted with your project's asset pipeline?** Choose this option to download our source Sass, JavaScript, and documentation files. Requires a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [some setup]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup).
 
 <a href="{{ site.download.source }}" class="btn btn-secondary">Download source</a>
 
 ## Package managers
 
-Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)** for a setup that matches our official compiled versions.
+Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
 
 ### npm
 

@@ -24,9 +24,7 @@
 // Happy Bootstrapping!
 
 // Load Bootstrap variables and mixins
-/* boosted mod */
-@import '../../scss/custom';
-/* end mod */
+@import "../../scss/functions";
 @import "../../scss/variables";
 @import "../../scss/mixins";
 

@@ -27,7 +27,7 @@
   position: fixed;
   right: 0;
   bottom: 2.5rem;
-  z-index: 100;
+  z-index: $zindex-o-scroll-up;
   display: none;
   // put a safety space between the right of the screen and the scroll link
   @each $breakpoint, $container-margin in $container-fluid-margin-widths {
