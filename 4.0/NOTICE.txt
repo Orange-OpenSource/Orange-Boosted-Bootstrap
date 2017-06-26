@@ -1,0 +1,74 @@
+
+
+<version>1.0</version>
+<id><![CDATA[Helvetica Neue LT W07 55 Roman]]></id>
+<vendor>Monotype Imaging Inc.</vendor>
+<credits>
+<name>Fonts.com WebFonts</name>
+<URL>http://webfonts.fonts.com</URL>
+</credits>
+<license>
+<URL>http://webfonts.fonts.com/Legal</URL>
+</license>
+<copyright><![CDATA[Copyright © 2014 Monotype Imaging Inc. All rights reserved.]]></copyright>
+<trademark><![CDATA[Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. Patent and Trademark Office and may be registered in certain other jurisdictions.]]></trademark>
+Orange Company had buy the right for used Helvetica onto digital applications. 
+Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc 
+Parts list under Monotype Imaging Inc Copyright
+fonts/HelvNeue55_W1G.woff2
+fonts/HelvNeue75_W1G.woff
+fonts/HelvNeue55_W1G.woff
+fonts/HelvNeue75_W1G.woff2
+dist/fonts/HelvNeue55_W1G.woff2
+dist/fonts/HelvNeue75_W1G.woff
+dist/fonts/HelvNeue55_W1G.woff
+dist/fonts/HelvNeue75_W1G.woff2
+End of the parts list under Monotype Imaging Inc Copyright
+
+
+Parts list under Orange SA Copyright
+Copyright (C) 2016 - 2017 Orange SA All rights reserved
+
+The following parts are proprietary information of Orange.
+You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software 
+or displayed on this website (http://boosted.orange.com) and owned by Orange SA and its subsidiaries,
+in whole or part of, in any medium, except as required for reasonable and customary use in describing the origin of the software 
+and reproducing the content of the NOTICE and DOCUMENTATION files.
+Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
+
+fonts/icon-orange.woff
+fonts/icon-orange.woff2
+dist/fonts/icon-orange.woff
+dist/fonts/icon-orange.woff2
+img/ORANGE_LOGO_rgb.jpg
+dist/img/ORANGE_LOGO_rgb.jpg
+docs-orange/assets/img/logo-orange.png
+docs-orange/favicon.ico           
+docs-orange/examples/module-002-quick-links/img/icn_facebook_black.png
+docs-orange/examples/module-002-quick-links/img/icn_messaging_black.png
+docs-orange/examples/module-002-quick-links/img/icn_music_black.png
+docs-orange/examples/module-002-quick-links/img/icn_top_black.png  
+docs-orange/examples/module-006-content-panel/img/adaptation.jpg
+docs-orange/examples/module-006-content-panel/img/connexion.jpg
+docs-orange/examples/module-006-content-panel/img/disponibilite.jpg
+docs-orange/examples/module-006-content-panel/img/simplicite.jpg
+docs-orange/examples/module-006-content-panel/img/vignette1.jpg
+docs-orange/examples/module-012-product-details/img/label_discount.png
+docs-orange/examples/module-012-product-details/img/picture_device_3.png
+docs-orange/examples/module-012-product-details/img/picture_klif1.png
+docs-orange/examples/module-012-product-details/img/stars_sprite.png        
+docs-orange/examples/orange_brand_2015/images/discovery-frame.png
+docs-orange/examples/orange_brand_2015/images/discovery-popout.png
+docs-orange/examples/orange_brand_2015/images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg
+docs-orange/examples/orange_brand_2015/images/popular-services-2.png
+docs-orange/examples/orange_brand_2015/images/discovery-frame-carousel.png
+docs-orange/examples/orange_brand_2015/images/discovery-popout-2byslide.png
+docs-orange/examples/orange_brand_2015/images/offset_LARGE_123305_chemisier_jaune.jpg
+docs-orange/examples/orange_brand_2015/images/popular-services-3.png
+docs-orange/examples/orange_brand_2015/images/discovery-frame-carousel-whitetext.png
+docs-orange/examples/orange_brand_2015/images/Fun-frame_frame-carousel.png
+docs-orange/examples/orange_brand_2015/images/popular-services-1.png
+docs-orange/examples/orange_brand_2015/images/une-nouvelle-marque_grid-full-width.jpg
+End of the parts list under Orange SA Copyright
+
+
