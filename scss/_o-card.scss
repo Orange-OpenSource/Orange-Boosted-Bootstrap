@@ -7,7 +7,6 @@
 }
 
 .card-link {
-  text-align: center;
   border: 1px solid #ccc;
 
   .card-title {
@@ -19,6 +18,7 @@
 
   .card-img {
     padding: 0;
+    text-align: center;
 
     img {
       width: 100%;
@@ -29,6 +29,7 @@
   .card-body {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -54,7 +55,6 @@
     height: 3.75rem;
     margin: 0;
     margin-bottom: .625rem;
-    text-align: left;
     border: 0;
   }
 
@@ -63,7 +63,6 @@
       flex-basis: 20%;
       width: auto;
       padding: 0;
-      text-align: left;
 
       img {
         width: auto;
@@ -75,6 +74,7 @@
       flex-basis: 80%;
       align-self: center;
       padding: 0 1rem;
+      text-align: left;
     }
 
     .card-title {
