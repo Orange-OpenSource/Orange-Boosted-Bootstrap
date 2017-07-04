@@ -33,6 +33,7 @@
   .dropdown-toggle {
     @include focus {
       outline: 1px dotted #000;
+      outline-offset: -1px;
     }
     display: inline-block;
     padding: .9375rem 0 1.0625rem;
@@ -107,9 +108,10 @@
     > .container-fluid {
       position: relative;
       flex-direction: column;
+      padding: 0;
     }
 
-    .local-select {
+    > .container > .nav-link:first-child {
       position: relative;
       width: 100%;
 
@@ -117,28 +119,36 @@
         position: absolute;
         top: 1rem;
         right: .625rem;
-        padding-left: .375rem;
         font-family: "icon-orange";
         font-size: inherit;
         color: #000;
         content: "\e93c";
       }
+
+      &[aria-expanded=true]::after {
+        transform: rotateZ(180deg);
+      }
     }
 
     .nav {
       position: absolute;
+      top: 3.125rem;
       left: 0;
       flex-direction: column;
       flex-wrap: nowrap;
       width: 100%;
       margin-top: -1px;
       background-color: #fff;
-      border: 2px solid $gray-light-o;
+      border: 0;
+      background-color: #fff;
+      box-shadow: 0 .3125rem .625rem -.375rem #999;
+      z-index: 200;
 
       &.collapse {
         display: none;
       }
 
+      &.collapsing,
       &.show {
         display: flex;
       }
@@ -164,7 +174,7 @@
   }
 
   .o-nav-local.inverse {
-    .local-select::after {
+    > .container > .nav-link:first-child::after {
       color: #fff;
     }
 

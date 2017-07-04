@@ -396,18 +396,8 @@ const Collapse = (($) => {
 
   $(() => {
     // local navigation
-    $('.o-nav-local .nav.collapse .nav-link').on('click', (event) => {
-      $(event.currentTarget).parent().parent().prev('.local-select').text($(event.currentTarget).text())
-    })
-
     $('.o-nav-local .nav.collapse').on('shown.bs.collapse', (event) => {
       $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus')
-    })
-
-    $(document).ready(() => {
-      $('.o-nav-local .local-select').each(function () {
-        $(this).text($(this).next('.nav.collapse').find('.nav-item:first-child .nav-link').text())
-      })
     })
 
     $(document).on('click', () => {
