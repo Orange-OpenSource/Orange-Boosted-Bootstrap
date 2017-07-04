@@ -74,8 +74,12 @@ footer a {
 }
 
 .svg-avatar::after {
-  left: 1.25rem;
+  left: -1.25rem;
   top: -2px;
+}
+
+.navbar .nav-link.svg-settings::after {
+  right: -1.25rem !important;
 }
 
 @media (max-width: 767px) {
