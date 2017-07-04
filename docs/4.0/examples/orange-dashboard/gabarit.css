@@ -18,6 +18,7 @@
 }
 .orange{
   color: #F16E00;
+  margin-left: 6px;
 }
 #content {
   margin: 10px 10px 0 10px;
@@ -98,10 +99,17 @@ footer a {
     color: #F16E00;
 }
 
+.icon-international-globe {
+  font-size: 1.25rem;
+}
+
 .svg-avatar {
-  left: -1.25rem;
+  display: inline-block;
+  left: 0;
   right: 0;
-  top: -2px;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 
