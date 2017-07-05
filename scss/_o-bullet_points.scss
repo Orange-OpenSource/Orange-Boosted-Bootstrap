@@ -4,7 +4,7 @@
 
 .o-square-list {
   padding-left: 0;
-  color: $brand-primary;
+  color: theme-color("primary");
   text-align: left;
 
   &,
@@ -19,7 +19,7 @@
       margin-right: 1rem;
       font-size: $font-size-sm;
       line-height: 1.25rem;
-      color: $brand-primary;
+      color: theme-color("primary");
       vertical-align: text-top;
       content: "\25A0";
     }
@@ -35,10 +35,10 @@
   }
 
   ul > li::before {
-    color: $gray-light;
+    color: $gray-600;
   }
 
   ul ul > li::before {
-    color: $gray-light-o;
+    color: $gray-500;
   }
 }

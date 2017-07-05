@@ -5,7 +5,7 @@
   background-color: #000;
   background-image: none;
   border: 0;
-  border-top: 2px solid $gray-dark;
+  border-top: 2px solid $gray-900;
 
   .lead {
     font-size: $h6-font-size;
@@ -17,7 +17,7 @@
       &:active,
       &:hover,
       &:focus {
-        color: $brand-primary;
+        color: theme-color("primary");
         text-decoration: none;
       }
     }
@@ -46,7 +46,7 @@
   padding: 0;
   color: #fff;
   background-color: #000;
-  border-top: 2px solid $gray-dark;
+  border-top: 2px solid $gray-900;
 
   h1 {
     margin: 2.6875rem 0;
@@ -104,7 +104,7 @@
     &:active,
     &:hover,
     &:focus {
-      color: $brand-primary;
+      color: theme-color("primary");
       text-decoration: none;
     }
   }
@@ -131,7 +131,7 @@
     padding-left: .375rem;
     font-family: "icon-orange" !important;
     font-size: inherit;
-    color: $brand-danger;
+    color: theme-color("danger");
     vertical-align: bottom;
     content: "\e936";
   }

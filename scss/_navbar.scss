@@ -100,14 +100,14 @@
     padding: 0;
     margin-left: 1.25rem;
     @include focus {
-      outline: 1px dotted #fff;
+      outline: 1px dotted;
       outline-offset: .625rem;
     }
   }
 
   .dropdown-toggle {
     @include focus {
-      outline: 1px dotted #fff;
+      outline: 1px dotted;
       outline-offset: .5rem;
     }
     margin-left: 1.25rem;
@@ -157,16 +157,16 @@
     // Boosted mod
     background-color: #fff;
     .navbar-toggler-icon {
-      background-image: $navbar-inverse-toggler-icon-hover-bg;
+      background-image: $navbar-dark-toggler-icon-hover-bg;
     }
     // end mod
   }
   // Boosted mod
   &:active {
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
 
     .navbar-toggler-icon {
-      background-image: $navbar-inverse-toggler-icon-bg;
+      background-image: $navbar-dark-toggler-icon-bg;
     }
   }
 
@@ -334,25 +334,25 @@
 }
 
 // White links against a dark background
-.navbar-inverse {
+.navbar-dark {
   .navbar-brand {
-    color: $navbar-inverse-active-color;
+    color: $navbar-dark-active-color;
 
     @include hover-focus {
-      color: $navbar-inverse-active-color;
+      color: $navbar-dark-active-color;
     }
   }
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-inverse-color;
+      color: $navbar-dark-color;
 
       @include hover-focus {
-        color: $navbar-inverse-hover-color;
+        color: $navbar-dark-hover-color;
       }
 
       &.disabled {
-        color: $navbar-inverse-disabled-color;
+        color: $navbar-dark-disabled-color;
       }
     }
 
@@ -360,20 +360,20 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: $navbar-inverse-active-color;
+      color: $navbar-dark-active-color;
     }
   }
 
   .navbar-toggler {
-    color: $navbar-inverse-color;
-    border-color: $navbar-inverse-toggler-border-color;
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-inverse-toggler-icon-bg;
+    background-image: $navbar-dark-toggler-icon-bg;
   }
 
   .navbar-text {
-    color: $navbar-inverse-color;
+    color: $navbar-dark-color;
   }
 }

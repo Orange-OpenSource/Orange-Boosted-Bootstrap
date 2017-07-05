@@ -79,7 +79,7 @@
     }
 
     &.active {
-      background-color: $brand-primary;
+      background-color: theme-color("primary");
     }
   }
 }

@@ -62,14 +62,14 @@ footer {
 footer a {
   color: inherit;
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
   background-color: inherit;
 }
-.navbar-inverse #id-for-cdu-link a{
+.navbar-dark #id-for-cdu-link a{
     color: #fff;
 }
-.navbar-inverse #id-for-cdu-link a:hover,.navbar-inverse #id-for-cdu-link a:focus{
+.navbar-dark #id-for-cdu-link a:hover,.navbar-dark #id-for-cdu-link a:focus{
     color: #F16E00;
 }
 

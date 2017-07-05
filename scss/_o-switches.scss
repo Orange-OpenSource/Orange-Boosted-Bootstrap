@@ -14,8 +14,8 @@
     min-width: 3.75rem;
     height: 1.875rem;
     margin: .3125rem 0;
-    background: $gray;
-    border: 2px solid $gray;
+    background: $gray-700;
+    border: 2px solid $gray-700;
 
     &.toggle-rounded,
     &.toggle-rounded::before {
@@ -73,8 +73,8 @@
 
   &:checked {
     + .toggle {
-      background: $brand-primary;
-      border-color: $brand-primary;
+      background: theme-color("primary");
+      border-color: theme-color("primary");
 
       .on {
         display: block;
@@ -94,8 +94,8 @@
 
   &.success:checked {
     + .toggle {
-      background: $brand-success;
-      border-color: $brand-success;
+      background: theme-color("success");
+      border-color: theme-color("success");
 
       .on {
         color: #000;
@@ -154,7 +154,7 @@
     }
 
     @include hover {
-      color: $brand-primary;
+      color: theme-color("primary");
       background-color: #fff;
 
       &.active {
@@ -182,7 +182,7 @@
       }
 
       &.active {
-        color: $brand-primary;
+        color: theme-color("primary");
         background-color: #fff;
         border-color: transparent;
         outline-color: #000;
@@ -194,7 +194,7 @@
         border-color: #000;
 
         &.active {
-          color: $brand-primary;
+          color: theme-color("primary");
           background-color: #fff;
           border-color: transparent;
           outline-color: #000;

@@ -1,13 +1,12 @@
-// Badges
-// boosted mod
-// add a txt color for accessibility purpose
-@mixin badge-variant($bgcolor,$color) {
-  background-color: $bgcolor;
-  color: $color;
+@mixin badge-variant($bg) {
+  @include color-yiq($bg);
+  background-color: $bg;
 
   &[href] {
     @include hover-focus {
-      background-color: darken($color, 10%);
+      @include color-yiq($bg);
+      text-decoration: none;
+      background-color: darken($bg, 10%);
     }
   }
 }

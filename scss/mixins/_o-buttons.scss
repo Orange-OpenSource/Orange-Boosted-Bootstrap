@@ -73,9 +73,9 @@
   &.active,
   .show > &.dropdown-toggle {
     color: #fff;
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
     background-image: none;
-    border-color: $brand-primary;
+    border-color: theme-color("primary");
     // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
@@ -83,8 +83,8 @@
     &:focus,
     &.focus {
       color: #fff;
-      background-color: $brand-primary;
-      border-color: $brand-primary;
+      background-color: theme-color("primary");
+      border-color: theme-color("primary");
     }
   }
 
@@ -124,9 +124,9 @@
   &.active,
   .show > &.dropdown-toggle {
     color: #fff;
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
     background-image: none;
-    border-color: $brand-primary;
+    border-color: theme-color("primary");
     // Remove the gradient for the pressed/active state
     @include box-shadow($btn-active-box-shadow);
 
@@ -134,8 +134,8 @@
     &:focus,
     &.focus {
       color: #fff;
-      background-color: $brand-primary;
-      border-color: $brand-primary;
+      background-color: theme-color("primary");
+      border-color: theme-color("primary");
     }
   }
 

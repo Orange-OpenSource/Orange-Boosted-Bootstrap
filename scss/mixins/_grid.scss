@@ -1,7 +1,7 @@
 /// Grid system
 //
 // Generate semantic grid columns with these mixins.
-
+// BOOSTED MOD : keep variable gutter width (removed from bootstrap)
 @mixin make-container($gutters: $grid-gutter-widths) {
   margin-right: auto;
   margin-left: auto;
@@ -90,27 +90,4 @@
   // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
   // do not appear to require this.
   max-width: percentage($size / $columns);
-}
-
-@mixin make-col-offset($size, $columns: $grid-columns) {
-  margin-left: percentage($size / $columns);
-}
-
-@mixin make-col-push($size, $columns: $grid-columns) {
-  left: if($size > 0, percentage($size / $columns), auto);
-}
-
-@mixin make-col-pull($size, $columns: $grid-columns) {
-  right: if($size > 0, percentage($size / $columns), auto);
-}
-
-@mixin make-col-modifier($type, $size, $columns) {
-  // Work around the lack of dynamic mixin @include support (https://github.com/sass/sass/issues/626)
-  @if $type == push {
-    @include make-col-push($size, $columns);
-  } @else if $type == pull {
-    @include make-col-pull($size, $columns);
-  } @else if $type == offset {
-    @include make-col-offset($size, $columns);
-  }
 }

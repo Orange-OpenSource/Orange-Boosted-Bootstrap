@@ -7,8 +7,8 @@
     margin-bottom: 0;
     border: 0;
     // border 1px for first child only
-    border-top: 1px solid $gray-light-o;
-    border-bottom: 1px solid $gray-light-o;
+    border-top: 1px solid $gray-500;
+    border-bottom: 1px solid $gray-500;
     // remove border for card other than the first one
     ~ .card {
       border-top: 0;

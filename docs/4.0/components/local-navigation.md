@@ -36,7 +36,7 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 Simply add `.inverse` class to your `.o-nav-local` container.
 
 {% example html %}
-<div style="margin: 2rem 0; padding: 2rem 0;" class="bg-inverse">
+<div style="margin: 2rem 0; padding: 2rem 0;" class="bg-dark">
     <div class="o-nav-local inverse">
         <hr aria-hidden="true">
         <nav class="container">

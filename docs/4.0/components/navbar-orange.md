@@ -16,7 +16,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% example html %}
 <header role="banner">
-    <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,7 @@ In addition to this `.active` class to show the current page in the navbar, you 
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
 
 {% example html %}
-<nav class="navbar navbar-inverse bg-inverse navbar-expand-md supra">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
     <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
@@ -78,7 +78,7 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
                 </a>
             </li>
             <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a class="dropdown-item" href="#">FR</a></li>
                     <li><a class="dropdown-item" href="#">SP</a></li>
@@ -95,7 +95,7 @@ A supra bar should never be used on its own and always be included in header and
 
 {% example html %}
 <header role="banner" id="demo-navbar">
-    <nav class="navbar navbar-inverse bg-inverse navbar-expand-md supra">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
@@ -114,7 +114,7 @@ A supra bar should never be used on its own and always be included in header and
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
                         <li><a class="dropdown-item" href="#">FR</a></li>
                         <li><a class="dropdown-item" href="#">SP</a></li>
@@ -123,7 +123,7 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-inverse bg-inverse navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">

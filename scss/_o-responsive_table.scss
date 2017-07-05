@@ -10,7 +10,6 @@
     th,
     td {
       display: block;
-      padding: 0;
     }
     // for tablet, display 2 cards by rows
     @include media-breakpoint-up(md) {
@@ -41,7 +40,7 @@
       th[scope="row"] {
         font-weight: bold;
         border-top: 0;
-        border-bottom: 2px solid $gray-light-o;
+        border-bottom: 2px solid $gray-500;
       }
     }
   }

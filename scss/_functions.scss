@@ -1,3 +1,4 @@
+@import "../node_modules/sass-math-pow/sass/math-pow";
 // Bootstrap functions
 //
 // Utility mixins and functions for evalutating source code across our variables, maps, and mixins.
@@ -46,4 +47,60 @@
   }
 
   @return $string;
+}
+
+// Color contrast
+@mixin color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  // get the relative lum for each color
+  $luminositecouleur: relativelum($r / 255, $g / 255, $b / 255);
+  $luminositeblanc: relativelum(1, 1, 1);
+  // if luminosite doesn't fit with white color return black
+  @if ((($luminositeblanc + .05) / ($luminositecouleur + .05)) < 4.5) {
+    color: #000;
+  } @else {
+    color: #fff;
+  }
+}
+
+// apply Wcag contrast algo : http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+// Convert from HTMLCS JS algo
+@function relativelum ($r, $g, $b) {
+  @return ((transform($r) * .2126) + (transform($g) * .7152) + (transform($b) * .0722));
+}
+
+@function transform ($x) {
+  @if ($x <= .03928) {
+      @return $x / 12.92;
+  } @else {
+      @return poly-pow((($x + .055) / 1.055), 2.4);
+  }
+}
+
+// Retreive color Sass maps
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function grayscale($key: "100") {
+  @return map-get($grays, $key);
+}
+
+// Request a theme color level
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, #000, #fff);
+
+  @if $level < 0 {
+    // Lighter values need a quick double negative for the Sass math to work
+    @return mix($color-base, $color, $level * -1 * $theme-color-interval);
+  } @else {
+    @return mix($color-base, $color, $level * $theme-color-interval);
+  }
 }

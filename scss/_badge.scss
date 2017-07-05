@@ -27,16 +27,6 @@
   top: -1px;
 }
 
-// scss-lint:disable QualifyingElement
-// Add hover effects, but only for links
-a.badge {
-  @include hover-focus {
-    color: $badge-link-hover-color;
-    text-decoration: none;
-  }
-}
-// scss-lint:enable QualifyingElement
-
 // Pill badges
 //
 // Make them extra rounded with a modifier to replace v3's badges.
@@ -50,28 +40,9 @@ a.badge {
 // Colors
 //
 // Contextual variations (linked badges get darker on :hover).
-// boosted mod
-// add a txt color for accessibility purpose
-.badge-default {
-  @include badge-variant($badge-default-bg,$badge-default-color);
-}
 
-.badge-primary {
-  @include badge-variant($badge-primary-bg,$badge-primary-color);
-}
-
-.badge-success {
-  @include badge-variant($badge-success-bg,$badge-success-color);
-}
-
-.badge-info {
-  @include badge-variant($badge-info-bg,$badge-info-color);
-}
-
-.badge-warning {
-  @include badge-variant($badge-warning-bg,$badge-warning-color);
-}
-
-.badge-danger {
-  @include badge-variant($badge-danger-bg,$badge-danger-color);
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
 }

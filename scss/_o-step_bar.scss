@@ -78,7 +78,7 @@ $arrow-orange: "f16e00";
     color: #000;
     white-space: nowrap;
     list-style: none;
-    background-color: $gray-lighter-o;
+    background-color: $gray-400;
 
     &:first-child {
       padding-left: $spacer;
@@ -104,7 +104,7 @@ $arrow-orange: "f16e00";
 
     &.current {
       @include stepbar-arrow($arrow-orange);
-      background-color: $brand-primary;
+      background-color: theme-color("primary");
       .stepbar-link {
         color: #fff;
       }

@@ -720,7 +720,7 @@
 .icon-popout-performance,
 .icon-popout-security,
 .icon-popout-teamwork {
-  color: $brand-primary;
+  color: theme-color("primary");
 }
 
 
@@ -2757,7 +2757,7 @@
 }
 
 .svg-warning-circle {
-  @include svg-warning-circle($brand-info);
+  @include svg-warning-circle(theme-color("info"));
 }
 
 .svg-menu {
@@ -2769,7 +2769,7 @@
 }
 
 .svg-tick {
-  @include svg-tick($brand-success);
+  @include svg-tick(theme-color("success"));
 }
 
 .svg-arrow-previous {
@@ -2800,7 +2800,7 @@
 
 .svg-settings:hover,
 .svg-settings:focus {
-  @include svg-settings($brand-primary);
+  @include svg-settings(theme-color("primary"));
 }
 
 .svg-search {
@@ -2808,7 +2808,7 @@
 }
 
 .svg-search:hover {
-  @include svg-search($brand-primary);
+  @include svg-search(theme-color("primary"));
 }
 
 .svg-avatar {
@@ -2817,7 +2817,7 @@
 
 .svg-avatar:hover,
 .svg-avatar:active {
-  @include svg-avatar($brand-primary);
+  @include svg-avatar(theme-color("primary"));
 }
 
 .svg-buy {
@@ -2826,5 +2826,5 @@
 
 .svg-buy:hover,
 .svg-buy:active {
-  @include svg-buy($brand-primary);
+  @include svg-buy(theme-color("primary"));
 }

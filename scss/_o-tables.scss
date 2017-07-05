@@ -40,7 +40,6 @@
 
       > th,
       > td {
-        padding: .625rem .625rem .625rem 0;
         font-size: $font-size-sm;
         line-height: 1.25rem;
         vertical-align: middle;
@@ -92,7 +91,7 @@
     tr.selected {
       > td,
       > th {
-        background-color: $gray-lighter-o;
+        background-color: $gray-400;
       }
     }
 
@@ -192,10 +191,10 @@
   }
 }
 
-@include table-row-variant-border(success, $state-success-border-color);
-@include table-row-variant-border(info, $state-info-border-color);
-@include table-row-variant-border(warning, $state-warning-border-color);
-@include table-row-variant-border(danger, $state-danger-border-color);
+@include table-row-variant-border(success, theme-color("success"));
+@include table-row-variant-border(info, theme-color("info"));
+@include table-row-variant-border(warning, theme-color("warning"));
+@include table-row-variant-border(danger, theme-color("danger"));
 
 
 // force caption for tables
@@ -275,7 +274,7 @@ caption {
       text-decoration: none;
 
       @include hover-focus {
-        color: $brand-primary;
+        color: theme-color("primary");
         text-decoration: underline;
       }
     }

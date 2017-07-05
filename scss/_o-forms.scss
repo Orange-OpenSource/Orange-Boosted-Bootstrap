@@ -11,29 +11,23 @@
 
   > .form-control {
     &:focus {
-      border-color: $brand-primary;
+      border-color: theme-color("primary");
     }
   }
 }
 
-.has-success {
+.has-success,
+.has-warning {
   .input-group > .form-control {
     // Feedback states
-    border-color: $state-success-text;
+    border-color: $black;
   }
 }
 
 .has-error {
   .input-group > .form-control {
     // Feedback states
-    border-color: $state-danger-text;
-  }
-}
-
-.has-warning {
-  .input-group > .form-control {
-    // Feedback states
-    border-color: $state-warning-text;
+    border-color: $white;
   }
 }
 
@@ -74,7 +68,7 @@
   &.is-required .form-control-label::after {
     margin-left: 6px;
     font-weight: bold;
-    color: $brand-primary;
+    color: theme-color("primary");
     content: "*";
   }
 
@@ -105,7 +99,7 @@
 
     .form-control-feedback {
       font-weight: bold;
-      color: $brand-danger;
+      color: theme-color("danger");
     }
 
     .form-control-danger {
@@ -200,7 +194,7 @@ select.form-control {
 .custom-control-indicator {
   top: auto;
   background-color: #fff;
-  border: 2px solid $gray;
+  border: 2px solid $gray-700;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
@@ -216,11 +210,11 @@ select.form-control {
 .custom-control-input:disabled ~ .custom-control-indicator,
 .custom-control-input:active:disabled ~ .custom-control-indicator {
   background-color: #fff;
-  border: 2px solid $gray-light-o;
+  border: 2px solid $gray-500;
 }
 
 .custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-indicator {
-  background-color: $gray-light-o;
+  background-color: $gray-500;
   background-image: $custom-checkbox-icon-checked;
   border: 0;
 }
@@ -234,11 +228,11 @@ select.form-control {
   .custom-control-input:checked ~ .custom-control-indicator {
     background-color: #fff;
     background-image: none;
-    border: 6px solid $brand-primary;
+    border: 6px solid theme-color("primary");
   }
 
   .custom-control-input:checked:disabled ~ .custom-control-indicator {
-    border-color: $gray-light-o;
+    border-color: $gray-500;
     border-width: 6px;
   }
 }
@@ -253,5 +247,5 @@ select.form-control {
 }
 
 .form-text {
-  color: $gray;
+  color: $gray-700;
 }

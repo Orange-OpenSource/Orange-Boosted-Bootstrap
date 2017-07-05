@@ -4,7 +4,7 @@ title: Introduction
 description: Get started with Boosted using the Boosted source and a template starter page.
 group: getting-started
 redirect_from:
-  - /getting-started/
+  - /docs/4.0/getting-started/
   - /docs/4.0/
   - /docs/
 toc: true

@@ -41,15 +41,14 @@
 //
 // Generate contextual modifier classes for colorizing the alert.
 
-.alert-success {
-  @include alert-variant($alert-success-bg, $alert-success-border-color, $alert-success-text);
-}
-.alert-info {
-  @include alert-variant($alert-info-bg, $alert-info-border-color, $alert-info-text);
-}
-.alert-warning {
-  @include alert-variant($alert-warning-bg, $alert-warning-border-color, $alert-warning-text);
-}
-.alert-danger {
-  @include alert-variant($alert-danger-bg, $alert-danger-border-color, $alert-danger-text);
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    // Boosted mod adapt color with background, and keep initial brand color value for background
+    @if ($color == "secondary" or $color == "danger" or $color == "dark") {
+      @include alert-variant(theme-color-level($color, 0), theme-color-level($color, 0), $white);
+    } @else {
+      @include alert-variant(theme-color-level($color, 0), theme-color-level($color, 0), $black);
+    }
+    // end mod
+  }
 }

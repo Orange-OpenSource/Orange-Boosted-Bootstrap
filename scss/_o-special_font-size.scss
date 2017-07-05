@@ -7,9 +7,7 @@
 pre {
   font-size: ($font-size-base - .1); // Xrem to X-0.0625rem
 }
-.panel-title {
-  font-size: (ceil(($font-size-base * 1.125) * 10) / 10);
-}
+
 
 .popover-title {
   line-height: 1.125rem;

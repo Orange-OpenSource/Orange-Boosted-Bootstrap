@@ -21,11 +21,11 @@ a:focus {
 
 .progress.progress-default {
   &[value]::-webkit-progress-value {
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
   }
 
   &[value]::-moz-progress-bar {
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
   }
 }
 
@@ -34,21 +34,15 @@ a:focus {
   top: 0;
   left: 0;
   max-width: 15%;
-  margin: ($grid-gutter-width-base * 1.5);
+  margin: ($grid-gutter-width * 1.5);
 }
 
 .hero-container .caption {
-  margin: ($grid-gutter-width-base * 2.5) ($grid-gutter-width-base * 1.5);
+  margin: ($grid-gutter-width * 2.5) ($grid-gutter-width * 1.5);
 }
 
 .hero-container .category {
   font-size: 1.25rem;
-  color: $brand-primary;
+  color: theme-color("primary");
 }
 
-// Force bold onto panel heading and footer and wells
-.panel-heading,
-.panel-footer,
-.well {
-  font-weight: bold;
-}
