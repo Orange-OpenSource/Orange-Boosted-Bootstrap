@@ -11,10 +11,10 @@
 
   .card-title {
     align-self: center;
+    width: 100%; // IE fix
     margin: auto 0;
     font-weight: bold;
     word-break: normal;
-    width: 100%; /* IE fix */
   }
 
   .card-img {
