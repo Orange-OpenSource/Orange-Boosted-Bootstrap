@@ -1,6 +1,5 @@
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -12,8 +11,7 @@ html {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 @-ms-viewport {
@@ -39,8 +37,7 @@ body {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -204,8 +201,8 @@ table {
 }
 
 caption {
-  padding-top: 0.671875rem;
-  padding-bottom: 0.671875rem;
+  padding-top: 0.625rem 0.625rem 0.625rem 0;
+  padding-bottom: 0.625rem 0.625rem 0.625rem 0;
   color: #666;
   text-align: left;
   caption-side: bottom;
@@ -263,8 +260,7 @@ button::-moz-focus-inner,
 
 input[type="radio"],
 input[type="checkbox"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 

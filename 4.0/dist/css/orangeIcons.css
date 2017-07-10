@@ -3390,8 +3390,7 @@
   height: 1.25rem;
   content: "";
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 .svg-delete::after {

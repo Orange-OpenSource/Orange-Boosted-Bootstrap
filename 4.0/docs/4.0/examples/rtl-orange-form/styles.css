@@ -1,7 +1,7 @@
 * {
   text-shadow: none !important;
 }
-.navbar-default .navbar-brand {
+.navbar-light .navbar-brand {
   background: none;
 }
 #orange_logo {
@@ -21,6 +21,7 @@
 }
 .orange{
   color: #F16E00;
+  margin-left: 6px;
 }
 
 .form-horizontal {
@@ -38,10 +39,10 @@ footer a {
   color: white;
 }
 
-.navbar-inverse #id-for-cdu-link a{
+.navbar-dark #id-for-cdu-link a{
     color: #fff;
 }
-.navbar-inverse #id-for-cdu-link a:hover,.navbar-inverse #id-for-cdu-link a:focus{
+.navbar-dark #id-for-cdu-link a:hover,.navbar-dark #id-for-cdu-link a:focus{
     color: #F16E00;
 }
 
@@ -50,7 +51,7 @@ footer a {
 }
 
 .btn-sm::after {
-  top: .375rem;
+  top: .5rem;
   left: .5rem;
   height: .875rem;
   width: .5625rem;
@@ -70,7 +71,10 @@ footer a {
 }
 
 .svg-avatar {
-  left: -1.25rem;
+  display: inline-block;
+  left: 0;
   right: 0;
-  top: -2px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
 }
