@@ -90,7 +90,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Just an image -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="">
+    <img src="{{ site.baseurl }}/dist/img/orange_logo.svg" alt="">
   </a>
 </nav>
 {% endexample %}
@@ -99,7 +99,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" class="d-inline-block align-top" alt="">
+    <img src="{{ site.baseurl }}/dist/img/orange_logo.svg" class="d-inline-block align-top" alt="">
     Bootstrap
   </a>
 </nav>

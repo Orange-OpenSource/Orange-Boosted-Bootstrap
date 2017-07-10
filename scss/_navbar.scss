@@ -48,6 +48,9 @@
 
 .navbar-brand {
   display: inline-block;
+  // Boosted mod
+  min-height: $navbar-brand-logo-height;
+  // end mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-padding-x;
@@ -73,7 +76,7 @@
 
   img {
     flex-wrap: wrap;
-    width: auto;
+    width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
     margin-top: 0;
   }

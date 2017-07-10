@@ -18,7 +18,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 <header role="banner">
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -125,7 +125,7 @@ A supra bar should never be used on its own and always be included in header and
     </nav>
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/></a>
+            <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>

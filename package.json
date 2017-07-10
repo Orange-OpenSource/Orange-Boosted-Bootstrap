@@ -23,8 +23,8 @@
     "css-docs": "npm-run-all css-lint-docs css-compile-docs css-prefix-docs css-minify-docs",
     "css-lint": "bundle exec scss-lint --config .scss-lint.yml scss/*.scss",
     "css-lint-docs": "bundle exec scss-lint --config .scss-lint.yml --exclude assets/scss/docs.scss assets/scss/*.scss",
-    "css-compile": "node-sass --output-style expanded --source-map true --precision 6 scss/boosted.scss dist/css/boosted.css && node-sass --output-style expanded --source-map true --precision 6 scss/boosted-grid.scss dist/css/boosted-grid.css && node-sass --output-style expanded --source-map true --precision 6 scss/boosted-reboot.scss dist/css/boosted-reboot.css && node-sass --output-style expanded --source-map true --precision 6 scss/o-rtl.scss dist/css/o-rtl.css && node-sass --output-style expanded --source-map true --precision 6 scss/orangeHelvetica.scss dist/css/orangeHelvetica.css && node-sass --output-style expanded --source-map true --precision 6 scss/orangeIcons.scss dist/css/orangeIcons.css && rtlcss dist/css/boosted.css dist/css/boosted-rtl.css && shx cat dist/css/o-rtl.css >> dist/css/boosted-rtl.css",
-    "css-compile-docs": "node-sass --output-style expanded --source-map true --precision 6 assets/scss/docs.scss assets/css/docs.min.css",
+    "css-compile": "node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 scss/boosted.scss dist/css/boosted.css && node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 scss/boosted-grid.scss dist/css/boosted-grid.css && node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 scss/boosted-reboot.scss dist/css/boosted-reboot.css && node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 scss/o-rtl.scss dist/css/o-rtl.css && node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 scss/orangeHelvetica.scss dist/css/orangeHelvetica.css && node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 scss/orangeIcons.scss dist/css/orangeIcons.css && rtlcss dist/css/boosted.css dist/css/boosted-rtl.css && shx cat dist/css/o-rtl.css >> dist/css/boosted-rtl.css",
+    "css-compile-docs": "node-sass --functions build/sass-functions.js --output-style expanded --source-map true --precision 6 assets/scss/docs.scss assets/css/docs.min.css",
     "css-prefix": "postcss --config build/ --replace dist/css/*.css",
     "css-prefix-docs": "postcss --config build/ --no-map --replace assets/css/docs.min.css",
     "css-minify": "cleancss --level 1 --source-map --output dist/css/boosted.min.css dist/css/boosted.css && cleancss --level 1 --source-map --output dist/css/boosted-grid.min.css dist/css/boosted-grid.css && cleancss --level 1 --source-map --output dist/css/boosted-reboot.min.css dist/css/boosted-reboot.css && cleancss --level 1 --source-map --output dist/css/boosted-rtl.min.css dist/css/boosted-rtl.css && cleancss --level 1 --source-map --output dist/css/orangeHelvetica.min.css dist/css/orangeHelvetica.css && cleancss --level 1 --source-map --output dist/css/orangeIcons.min.css dist/css/orangeIcons.css",
@@ -98,7 +98,6 @@
     "qunit-phantomjs-runner": "^2.3.0",
     "qunitjs": "^2.3.2",
     "rtlcss": "^2.1.2",
-    "sass-math-pow": "^0.1.4",
     "shelljs": "^0.7.7",
     "shx": "^0.2.2",
     "uglify-js": "^3.0.13"
