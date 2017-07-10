@@ -1107,6 +1107,14 @@ var Collapse = function ($) {
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
+      var tabToggles = $(Selector.DATA_TOGGLE);
+      for (var i = 0; i < tabToggles.length; i++) {
+        var elem = tabToggles[i];
+        var selector = Util.getSelectorFromElement(elem);
+        if (selector !== null && $(selector).filter(element).length > 0) {
+          this._triggerArray.push(elem);
+        }
+      }
 
       this._parent = this._config.parent ? this._getParent() : null;
 
@@ -1228,7 +1236,16 @@ var Collapse = function ($) {
       this._element.setAttribute('aria-expanded', false); // boosted mod
 
       if (this._triggerArray.length) {
-        $(this._triggerArray).addClass(ClassName.COLLAPSED).attr('aria-expanded', false);
+        for (var i = 0; i < this._triggerArray.length; i++) {
+          var trigger = this._triggerArray[i];
+          var selector = Util.getSelectorFromElement(trigger);
+          if (selector !== null) {
+            var $elem = $(selector);
+            if (!$elem.hasClass(ClassName.SHOW)) {
+              $(trigger).addClass(ClassName.COLLAPSED).attr('aria-expanded', false);
+            }
+          }
+        }
       }
 
       this.setTransitioning(true);
@@ -1364,11 +1381,14 @@ var Collapse = function ($) {
       event.preventDefault();
     }
 
-    var target = Collapse._getTargetFromElement(this);
-    var data = $(target).data(DATA_KEY);
-    var config = data ? 'toggle' : $(this).data();
-
-    Collapse._jQueryInterface.call($(target), config);
+    var $trigger = $(this);
+    var selector = Util.getSelectorFromElement(this);
+    $(selector).each(function () {
+      var $target = $(this);
+      var data = $target.data(DATA_KEY);
+      var config = data ? 'toggle' : $trigger.data();
+      Collapse._jQueryInterface.call($target, config);
+    });
   })
   // Boosted mod
   .on('DOMContentLoaded', function () {
@@ -1382,18 +1402,8 @@ var Collapse = function ($) {
 
   $(function () {
     // local navigation
-    $('.o-nav-local .nav.collapse .nav-link').on('click', function (event) {
-      $(event.currentTarget).parent().parent().prev('.local-select').text($(event.currentTarget).text());
-    });
-
     $('.o-nav-local .nav.collapse').on('shown.bs.collapse', function (event) {
       $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus');
-    });
-
-    $(document).ready(function () {
-      $('.o-nav-local .local-select').each(function () {
-        $(this).text($(this).next('.nav.collapse').find('.nav-item:first-child .nav-link').text());
-      });
     });
 
     $(document).on('click', function () {
@@ -1520,6 +1530,7 @@ var Dropdown = function ($) {
       this._popper = null;
       this._config = this._getConfig(config);
       this._menu = this._getMenuElement();
+      this._inNavbar = this._detectNavbar();
 
       this._addEventListeners();
       this._addAccessibility(); // Boosted mod
@@ -1561,17 +1572,7 @@ var Dropdown = function ($) {
           element = parent;
         }
       }
-      this._popper = new Popper(element, this._menu, {
-        placement: this._getPlacement(),
-        modifiers: {
-          offset: {
-            offset: this._config.offset
-          },
-          flip: {
-            enabled: this._config.flip
-          }
-        }
-      });
+      this._popper = new Popper(element, this._menu, this._getPopperConfig());
 
       // if this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
@@ -1604,6 +1605,7 @@ var Dropdown = function ($) {
     };
 
     Dropdown.prototype.update = function update() {
+      this._inNavbar = this._detectNavbar();
       if (this._popper !== null) {
         this._popper.scheduleUpdate();
       }
@@ -1652,12 +1654,36 @@ var Dropdown = function ($) {
         if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
           placement = AttachmentMap.TOPEND;
         }
-      } else {
-        if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
-          placement = AttachmentMap.BOTTOMEND;
-        }
+      } else if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
+        placement = AttachmentMap.BOTTOMEND;
       }
       return placement;
+    };
+
+    Dropdown.prototype._detectNavbar = function _detectNavbar() {
+      return $(this._element).closest('.navbar').length > 0;
+    };
+
+    Dropdown.prototype._getPopperConfig = function _getPopperConfig() {
+      var popperConfig = {
+        placement: this._getPlacement(),
+        modifiers: {
+          offset: {
+            offset: this._config.offset
+          },
+          flip: {
+            enabled: this._config.flip
+          }
+        }
+      };
+
+      // Disable Popper.js for Dropdown in Navbar
+      if (this._inNavbar) {
+        popperConfig.modifiers.applyStyle = {
+          enabled: !this._inNavbar
+        };
+      }
+      return popperConfig;
     };
 
     // boosted mod
@@ -4230,7 +4256,7 @@ var Tooltip = function ($) {
 
   var Default = {
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="arrow" x-arrow></div>' + '<div class="tooltip-inner"></div></div>',
+    template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -4267,7 +4293,8 @@ var Tooltip = function ($) {
 
   var Selector = {
     TOOLTIP: '.tooltip',
-    TOOLTIP_INNER: '.tooltip-inner'
+    TOOLTIP_INNER: '.tooltip-inner',
+    ARROW: '.arrow'
   };
 
   var Trigger = {
@@ -4424,6 +4451,9 @@ var Tooltip = function ($) {
             },
             flip: {
               behavior: this.config.fallbackPlacement
+            },
+            arrow: {
+              element: Selector.ARROW
             }
           },
           onCreate: function onCreate(data) {
@@ -4870,7 +4900,7 @@ var Popover = function ($) {
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="arrow" x-arrow></div>' + '<h3 class="popover-title"></h3>' + '<div class="popover-content"></div></div>'
+    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
   var DefaultType = $.extend({}, Tooltip.DefaultType, {
@@ -4883,8 +4913,8 @@ var Popover = function ($) {
   };
 
   var Selector = {
-    TITLE: '.popover-title',
-    CONTENT: '.popover-content'
+    TITLE: '.popover-header',
+    CONTENT: '.popover-body'
   };
 
   var Event = {

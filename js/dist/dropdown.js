@@ -105,6 +105,7 @@ var Dropdown = function ($) {
       this._popper = null;
       this._config = this._getConfig(config);
       this._menu = this._getMenuElement();
+      this._inNavbar = this._detectNavbar();
 
       this._addEventListeners();
       this._addAccessibility(); // Boosted mod
@@ -146,17 +147,7 @@ var Dropdown = function ($) {
           element = parent;
         }
       }
-      this._popper = new Popper(element, this._menu, {
-        placement: this._getPlacement(),
-        modifiers: {
-          offset: {
-            offset: this._config.offset
-          },
-          flip: {
-            enabled: this._config.flip
-          }
-        }
-      });
+      this._popper = new Popper(element, this._menu, this._getPopperConfig());
 
       // if this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
@@ -189,6 +180,7 @@ var Dropdown = function ($) {
     };
 
     Dropdown.prototype.update = function update() {
+      this._inNavbar = this._detectNavbar();
       if (this._popper !== null) {
         this._popper.scheduleUpdate();
       }
@@ -237,12 +229,36 @@ var Dropdown = function ($) {
         if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
           placement = AttachmentMap.TOPEND;
         }
-      } else {
-        if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
-          placement = AttachmentMap.BOTTOMEND;
-        }
+      } else if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
+        placement = AttachmentMap.BOTTOMEND;
       }
       return placement;
+    };
+
+    Dropdown.prototype._detectNavbar = function _detectNavbar() {
+      return $(this._element).closest('.navbar').length > 0;
+    };
+
+    Dropdown.prototype._getPopperConfig = function _getPopperConfig() {
+      var popperConfig = {
+        placement: this._getPlacement(),
+        modifiers: {
+          offset: {
+            offset: this._config.offset
+          },
+          flip: {
+            enabled: this._config.flip
+          }
+        }
+      };
+
+      // Disable Popper.js for Dropdown in Navbar
+      if (this._inNavbar) {
+        popperConfig.modifiers.applyStyle = {
+          enabled: !this._inNavbar
+        };
+      }
+      return popperConfig;
     };
 
     // boosted mod

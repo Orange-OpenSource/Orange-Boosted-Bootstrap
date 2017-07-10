@@ -1,7 +1,6 @@
 @font-face {
   font-family: "icon-orange";
-  src: url("../fonts/icon-orange.eot");
-  src: url("../fonts/icon-orange.eot?#iefix") format("embedded-opentype"), url("../fonts/icon-orange.ttf") format("truetype"), url("../fonts/icon-orange.woff") format("woff"), url("../fonts/icon-orange.svg?#icon-orange") format("svg");
+  src: url("../fonts/icon-orange.woff2") format("woff2"), url("../fonts/icon-orange.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -3391,8 +3390,7 @@
   height: 1.25rem;
   content: "";
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 .svg-delete::after {
