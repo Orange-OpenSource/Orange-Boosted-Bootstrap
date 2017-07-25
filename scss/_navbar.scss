@@ -102,6 +102,7 @@
   .nav-link {
     padding: 0;
     margin-left: 1.25rem;
+    white-space: nowrap;
     @include focus {
       outline: 1px dotted;
       outline-offset: .625rem;
@@ -231,6 +232,7 @@
         }
         .navbar-brand {
           margin: ($spacer / 2);
+          min-height: 0;
         }
         .navbar-collapse {
           margin-bottom: 0;

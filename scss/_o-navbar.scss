@@ -200,6 +200,7 @@
           }
           .navbar-brand img {
             height: 1.875rem;
+            width: 1.875rem;
           }
 
           .navbar-collapse .navbar-nav {
@@ -215,7 +216,6 @@
           .nav-item {
             margin-left: 0;
             font-size: $h5-font-size;
-            // line-height: 1;
             border-top: 1px solid $gray-900;
           }
 
