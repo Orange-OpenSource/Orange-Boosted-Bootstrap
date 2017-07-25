@@ -43,16 +43,16 @@
       label,
       .col-form-label,
       .form-control-label {
-        order: 2;
+        order: 1;
       }
 
       .form-control {
-        order: 3;
         margin-top: 0;
+        order: 2;
       }
 
       .form-control-feedback {
-        order: 1;
+        order: 0;
       }
     }
 
@@ -61,6 +61,11 @@
       .col-form-label,
       .form-control-label {
         min-width: auto;
+      }
+
+      .form-control-feedback {
+        margin-top: 0;
+        align-self: center;
       }
     }
   }
@@ -115,11 +120,11 @@
       }
 
       .form-control {
-        order: 3;
+        order: 2;
       }
 
       .form-control-feedback {
-        order: 2;
+        order: 1;
       }
 
       .form-control-feedback {
