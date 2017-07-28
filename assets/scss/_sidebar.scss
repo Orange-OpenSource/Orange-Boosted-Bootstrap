@@ -116,6 +116,9 @@
   padding: .25rem 1.5rem;
   font-weight: 500;
   // color: $gray-lightest; // boosted mod
+  &:focus {
+    outline-offset: -1px; // boosted mod
+  }
 
   &:hover {
     color: theme-color("primary");
