@@ -394,17 +394,6 @@ const Collapse = (($) => {
   })
   // end mod
 
-  $(() => {
-    // local navigation
-    $('.o-nav-local .nav.collapse').on('shown.bs.collapse', (event) => {
-      $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus')
-    })
-
-    $(document).on('click', () => {
-      Collapse._jQueryInterface.call($('.o-nav-local .collapse.show'), 'hide')
-    })
-  })
-
   /**
    * ------------------------------------------------------------------------
    * jQuery

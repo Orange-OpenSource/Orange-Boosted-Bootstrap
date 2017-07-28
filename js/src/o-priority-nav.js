@@ -27,7 +27,8 @@ const PriorityNav = (($) => {
 
   const ClassName = {
     PRIORITY: 'priority',
-    HIDE: 'sr-only'
+    HIDE: 'sr-only',
+    RESIZING: 'resizing'
   }
 
   const Selector = {
@@ -35,6 +36,15 @@ const PriorityNav = (($) => {
     FIRST_ELEMENT: 'li:first',
     PRIORITY_ELEMENT: '.priority'
   }
+
+  const MenuLabelDefault = 'More'
+
+  const MenuTemplate = (MenuLabel) => `
+    <li class="overflow-nav nav-item dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
+        <ul class="overflow-nav-list dropdown-menu"></ul>
+    </li>
+  `
 
 
   /**
@@ -54,6 +64,7 @@ const PriorityNav = (($) => {
       } else {
         this._$menu = $(element).find('ul').first()
       }
+      this._initMenu()
       this._$allNavElements = this._$menu.find(Selector.NAV_ELEMENTS)
       this._bindUIActions()
       this._setupMenu()
@@ -68,6 +79,17 @@ const PriorityNav = (($) => {
     // public
 
     // private
+
+    _initMenu() {
+      let MenuLabel = this._config
+
+      if (MenuLabel === undefined) {
+        MenuLabel = MenuLabelDefault
+      }
+
+      // add menu template
+      this._$menu.append(MenuTemplate(MenuLabel))
+    }
 
     _setupMenu() {
       const $allNavElements = this._$allNavElements
@@ -145,12 +167,12 @@ const PriorityNav = (($) => {
 
     _bindUIActions() {
       $(window).on(Event.RESIZE, () => {
-        this._$menu.addClass('resizing')
+        this._$menu.addClass(ClassName.RESIZING)
 
         setTimeout(() => {
           this._tearDown()
           this._setupMenu()
-          this._$menu.removeClass('resizing')
+          this._$menu.removeClass(ClassName.RESIZING)
         }, RESIZE_DURATION)
       })
 
@@ -173,8 +195,8 @@ const PriorityNav = (($) => {
         }
 
         if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-            throw new Error(`Selector "${config}" is not supported`)
+          if (typeof config !== 'string') {
+            throw new Error('Priority nav label type must be string')
           }
         }
       })

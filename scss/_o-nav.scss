@@ -137,3 +137,40 @@
 .breadcrum {
   line-height: 1;
 }
+
+// priority nav
+
+.overflow-nav {
+  display: none;
+}
+
+.o-nav-local.resizing {
+  overflow: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show-inline-block {
+  display: inline-block !important;
+}
+
+.overflow-nav-list {
+  .nav-link {
+    border: 0;
+    &:focus {
+      outline-offset: -2px;
+    }
+  }
+
+  .nav-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.o-nav-local .overflow-nav-list {
+  border: 0;
+  box-shadow: 0 .3125rem .625rem -.375rem #999;
+  margin-top: 1px;
+}
