@@ -369,17 +369,6 @@ var Collapse = function ($) {
   });
   // end mod
 
-  $(function () {
-    // local navigation
-    $('.o-nav-local .nav.collapse').on('shown.bs.collapse', function (event) {
-      $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus');
-    });
-
-    $(document).on('click', function () {
-      Collapse._jQueryInterface.call($('.o-nav-local .collapse.show'), 'hide');
-    });
-  });
-
   /**
    * ------------------------------------------------------------------------
    * jQuery

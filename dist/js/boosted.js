@@ -1400,17 +1400,6 @@ var Collapse = function ($) {
   });
   // end mod
 
-  $(function () {
-    // local navigation
-    $('.o-nav-local .nav.collapse').on('shown.bs.collapse', function (event) {
-      $(event.currentTarget).find('.nav-item:first-child .nav-link').trigger('focus');
-    });
-
-    $(document).on('click', function () {
-      Collapse._jQueryInterface.call($('.o-nav-local .collapse.show'), 'hide');
-    });
-  });
-
   /**
    * ------------------------------------------------------------------------
    * jQuery
@@ -3053,13 +3042,20 @@ var PriorityNav = function ($) {
 
   var ClassName = {
     PRIORITY: 'priority',
-    HIDE: 'sr-only'
+    HIDE: 'sr-only',
+    RESIZING: 'resizing'
   };
 
   var Selector = {
     NAV_ELEMENTS: 'li:not(\'.overflow-nav\')',
     FIRST_ELEMENT: 'li:first',
     PRIORITY_ELEMENT: '.priority'
+  };
+
+  var MenuLabelDefault = 'More';
+
+  var MenuTemplate = function MenuTemplate(MenuLabel) {
+    return '\n    <li class="overflow-nav nav-item dropdown">\n        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">' + MenuLabel + '</a>\n        <ul class="overflow-nav-list dropdown-menu"></ul>\n    </li>\n  ';
   };
 
   /**
@@ -3080,6 +3076,7 @@ var PriorityNav = function ($) {
       } else {
         this._$menu = $(element).find('ul').first();
       }
+      this._initMenu();
       this._$allNavElements = this._$menu.find(Selector.NAV_ELEMENTS);
       this._bindUIActions();
       this._setupMenu();
@@ -3090,6 +3087,17 @@ var PriorityNav = function ($) {
     // public
 
     // private
+
+    PriorityNav.prototype._initMenu = function _initMenu() {
+      var MenuLabel = this._config;
+
+      if (MenuLabel === undefined) {
+        MenuLabel = MenuLabelDefault;
+      }
+
+      // add menu template
+      this._$menu.append(MenuTemplate(MenuLabel));
+    };
 
     PriorityNav.prototype._setupMenu = function _setupMenu() {
       var $allNavElements = this._$allNavElements;
@@ -3168,12 +3176,12 @@ var PriorityNav = function ($) {
       var _this21 = this;
 
       $(window).on(Event.RESIZE, function () {
-        _this21._$menu.addClass('resizing');
+        _this21._$menu.addClass(ClassName.RESIZING);
 
         setTimeout(function () {
           _this21._tearDown();
           _this21._setupMenu();
-          _this21._$menu.removeClass('resizing');
+          _this21._$menu.removeClass(ClassName.RESIZING);
         }, RESIZE_DURATION);
       });
 
@@ -3196,8 +3204,8 @@ var PriorityNav = function ($) {
         }
 
         if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-            throw new Error('Selector "' + config + '" is not supported');
+          if (typeof config !== 'string') {
+            throw new Error('Priority nav label type must be string');
           }
         }
       });
@@ -5069,4 +5077,4 @@ var Popover = function ($) {
 }(jQuery);
 
 
-})()
+})();

@@ -30,13 +30,20 @@ var PriorityNav = function ($) {
 
   var ClassName = {
     PRIORITY: 'priority',
-    HIDE: 'sr-only'
+    HIDE: 'sr-only',
+    RESIZING: 'resizing'
   };
 
   var Selector = {
     NAV_ELEMENTS: 'li:not(\'.overflow-nav\')',
     FIRST_ELEMENT: 'li:first',
     PRIORITY_ELEMENT: '.priority'
+  };
+
+  var MenuLabelDefault = 'More';
+
+  var MenuTemplate = function MenuTemplate(MenuLabel) {
+    return '\n    <li class="overflow-nav nav-item dropdown">\n        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">' + MenuLabel + '</a>\n        <ul class="overflow-nav-list dropdown-menu"></ul>\n    </li>\n  ';
   };
 
   /**
@@ -57,6 +64,7 @@ var PriorityNav = function ($) {
       } else {
         this._$menu = $(element).find('ul').first();
       }
+      this._initMenu();
       this._$allNavElements = this._$menu.find(Selector.NAV_ELEMENTS);
       this._bindUIActions();
       this._setupMenu();
@@ -67,6 +75,17 @@ var PriorityNav = function ($) {
     // public
 
     // private
+
+    PriorityNav.prototype._initMenu = function _initMenu() {
+      var MenuLabel = this._config;
+
+      if (MenuLabel === undefined) {
+        MenuLabel = MenuLabelDefault;
+      }
+
+      // add menu template
+      this._$menu.append(MenuTemplate(MenuLabel));
+    };
 
     PriorityNav.prototype._setupMenu = function _setupMenu() {
       var $allNavElements = this._$allNavElements;
@@ -145,12 +164,12 @@ var PriorityNav = function ($) {
       var _this = this;
 
       $(window).on(Event.RESIZE, function () {
-        _this._$menu.addClass('resizing');
+        _this._$menu.addClass(ClassName.RESIZING);
 
         setTimeout(function () {
           _this._tearDown();
           _this._setupMenu();
-          _this._$menu.removeClass('resizing');
+          _this._$menu.removeClass(ClassName.RESIZING);
         }, RESIZE_DURATION);
       });
 
@@ -173,8 +192,8 @@ var PriorityNav = function ($) {
         }
 
         if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-            throw new Error('Selector "' + config + '" is not supported');
+          if (typeof config !== 'string') {
+            throw new Error('Priority nav label type must be string');
           }
         }
       });
