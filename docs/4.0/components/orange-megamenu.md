@@ -6,92 +6,135 @@ group: components
 toc: true
 ---
 
-## How it works
-
-Megamenu is based on the [collapse](../collapse) component.
-
-## Megamenu panel
-
-It consists of 3 or 4 columns depending on project design needs. A `h2` title is used as a general title of the megamenu. Each column is headlined by a `h3` title.
-
-Megamenu has a footer section where additional links can be added and a button to close the panel.
-
-{% example html %}
-<!-- megamenu toggle -->
-<a class="btn btn-info" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Toggle megamenu
-</a>
-
-<!-- megamenu content -->
-<div class="mega-menu" style="position: static">
-    <div class="collapse show" id="collapseExample" aria-labelledby="menu-title">
-        <div class="container">
-            <h2 role="presentation" id="menu-title"><a aria-hidden="true" href="#">Home Shop</a></h2>
-            <div class="row">
-                <div class="col-12 col-md-3">
-                    <h3 id="list-title-1"><a href="#">Internet</a></h3>
-                    <ul aria-labelledby="list-title-1" role="menu">
-                        <li role="menuitem"><a href="#">iPhone 6</a></li>
-                        <li role="menuitem"><a href="#">Phones </a></li>
-                        <li role="menuitem"><a href="#">Tablets</a></li>
-                        <li role="menuitem"><a href="#">Accessories</a></li>
-                        <li role="menuitem"><a href="#">Coming soon</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-3">
-                    <h3 id="list-title-2"><a href="#">Mobile</a></h3>
-                    <ul aria-labelledby="list-title-2" role="menu">
-                        <li role="menuitem"><a href="#">Phones </a></li>
-                        <li role="menuitem"><a href="#">Plans</a></li>
-                        <li role="menuitem"><a href="#">Accessories</a></li>
-                        <li role="menuitem"><a href="#">Connected objects</a></li>
-                        <li role="menuitem"><a href="#">Options</a></li>
-                        <li role="menuitem"><a href="#">Bundles</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-3">
-                    <h3 id="list-title-3"><a href="#">Lorem</a></h3>
-                    <ul aria-labelledby="list-title-3" role="menu">
-                        <li role="menuitem"><a href="#">Lorem ipsum </a></li>
-                        <li role="menuitem"><a href="#">Lorem ipsum</a></li>
-                        <li role="menuitem"><a href="#">Lorem ipsum</a></li>
-                        <li role="menuitem"><a href="#">Lorem ipsum</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-3">
-                    <h3 id="list-title-4"><a href="#">Ipsum</a></h3>
-                    <ul aria-labelledby="list-title-4" role="menu">
-                        <li role="menuitem"><a href="#">Lorem ipsum </a></li>
-                        <li role="menuitem"><a href="#">Lorem ipsum</a></li>
-                        <li role="menuitem"><a href="#">Lorem ipsum</a></li>
-                        <li role="menuitem"><a href="#">Lorem ipsum</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row footer">
-                <div class="col-12 col-sm-11">
-                    <a href="#">Promotions</a>
-                    <a href="#">Top up</a>
-                </div>
-                <div class="col-1 d-none d-sm-block">
-                    <a class="float-right svg-delete" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" title="close shop menu"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endexample %}
-
-Megamenu should be used in combination with the [navbar](../navbar) component.
-
-Be sure to use `.collapse` classes to the megamenu section and `data-parent` attribute in the navbar `.nav-link` get an opened megamenu closed when another gets opened.
-
 ## Usage
 
-Using javascript, simply declare your navbar component with the needed options.
+The plugin is initialised via javascript. Make sure to target the element containinge the `.mega-menu` class.
 
 {% highlight js %}
-$('.mega-menu').megamenu();
+$('#collapsing-navbarHead').megamenu();
 {% endhighlight %}
 
-See a full implementation in the Orange News [example page](../..//examples/orange-news/)
+Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing example :
+
+{% example html %}
+<header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="../../../../dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead" aria-controls="collapsing-navbarHead"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="mega-menu navbar-collapse collapse" id="collapsing-navbarHead">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="#mega-level-1-collapse" data-toggle="collapse">Shop</a>
+                <div class="mega-menu-panel collapse" id="mega-level-1-collapse">
+                  <div class="container">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Mobile</a>
+                        <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link back" href="">Mobile</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="">Phones</a>
+                            <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link back" href="">Phones</a></li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="" id="testLink">Sub link 1</a>
+                                <ul class="navbar-nav">
+                                  <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Sub sub link 1</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Sub sub link 2</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Sub sub link 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="">Sub link 2</a></li>
+                              <li class="nav-item"><a class="nav-link" href="">Sub link 3</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="">Plans</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Accessories</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Internet</a>
+                        <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link back" href="">Internet</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="">Pay monthly offers</a>
+                            <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link back" href="">Pay monthly offers</a></li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="">Sub link 1</a>
+                                <ul class="navbar-nav">
+                                  <li class="nav-item"><a class="nav-link back" href="">Sub link 1</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Sub sub link 1</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Sub sub link 2</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Sub sub link 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="">Sub link 2</a></li>
+                              <li class="nav-item"><a class="nav-link" href="">Sub link 3</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="">Shared plans</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Orange TV</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3</a>
+                        <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link back" href="">Link 3</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 3</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 4</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 5</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 6</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 7</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 8</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 9</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 10</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 11</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 12</a></li>
+                          <li class="nav-item"><a class="nav-link" href="">Item 13</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <a data-toggle="collapse" href="#mega-level-1-collapse" aria-expanded="true" aria-controls="collapse-shop" title="close shop menu"><span class="svg-delete"></span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="#mega-level-2-collapse" data-toggle="collapse">Discover</a>
+                <div class="mega-menu-panel collapse" id="mega-level-2-collapse">
+                  <div class="container">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Test 1</a>
+                      </li>
+                    </ul>
+                    <a data-toggle="collapse" href="#mega-level-2-collapse" aria-expanded="false" aria-controls="mega-level-2-collapse" title="close discover menu"><span class="svg-delete"></span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link collapsed" href="" data-toggle="collapse">My Orange</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+{% endexample %}
+
+## Options
+
+Megamenu can be initialised to point to a specific menu item when main menu is opened. Call the init method with wanted item id.
+
+{% highlight js %}
+$('#collapsing-navbarHead').megamenu('#testLink');
+{% endhighlight %}
+
+See a full implementation in the Orange News [example page](../../examples/orange-news/)
