@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://boosted.orange.com/v4-alpha">
-    <img src="http://boosted.orange.com/v4-alpha/assets/brand/orange-space-position.jpg" width=72 height=72>
+  <a href="http://boosted.orange.com/4.0">
+    <img src="http://boosted.orange.com/4.0/assets/brand/orange-space-position.jpg" width=72 height=72>
   </a>
 
   <h3 align="center">Orange Boosted with Bootstrap</h3>
@@ -8,7 +8,7 @@
   <p align="center">
     Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
     <br>
-    <a href="http://boosted.orange.com/v4-alpha"><strong>Visit Boosted</strong></a>
+    <a href="http://boosted.orange.com/4.0"><strong>Visit Boosted</strong></a>
   </p>
 </p>
 
@@ -39,7 +39,7 @@ Several quick start options are available:
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta`
 - Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta`
 
-Read the [Getting started page](http://boosted.orange.com/v4-alpha/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](http://boosted.orange.com/4.0/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
