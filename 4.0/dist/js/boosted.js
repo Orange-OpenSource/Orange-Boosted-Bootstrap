@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.6.1 (http://boosted.orange.com)
+ * Bootstrap v4.0.0-beta (http://boosted.orange.com)
  * Copyright 2011-2017 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -2482,7 +2482,7 @@ var Modal = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6.1): o-megamenu.js
+ * Boosted (v4.0.0-beta): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2496,7 +2496,7 @@ var MegaMenu = function ($) {
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.0.0-alpha.6.1';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
@@ -2859,7 +2859,7 @@ var MegaMenu = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6.1): o-navbar.js
+ * Boosted (v4.0.0-beta): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2873,7 +2873,7 @@ var Navbar = function ($) {
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.0.0-alpha.6.1';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var BREAKPOINT = 768;
@@ -3014,7 +3014,7 @@ var Navbar = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6.1): o-priority-nav.js
+ * Boosted (v4.0.0-beta): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3028,7 +3028,7 @@ var PriorityNav = function ($) {
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.0.0-alpha.6.1';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
@@ -3237,7 +3237,7 @@ var PriorityNav = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6.1): o-scroll-up.js
+ * Boosted (v4.0.0-beta): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3251,7 +3251,7 @@ var ScrollUp = function ($) {
    */
 
   var NAME = 'scrollup';
-  var VERSION = '4.0.0-alpha.6.1';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -3393,7 +3393,7 @@ var ScrollUp = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6.1): o-switch.js
+ * Boosted (v4.0.0-beta): o-switch.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -3407,7 +3407,7 @@ var Switch = function ($) {
    */
 
   var NAME = 'switch';
-  var VERSION = '4.0.0-alpha.6.1';
+  var VERSION = '4.0.0-beta';
   var DATA_KEY = 'bs.switch';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
 
