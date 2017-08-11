@@ -1137,7 +1137,7 @@
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"path/to/your/orangeIcons.css"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"path/to/your/boosted.css"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<p>Add our JavaScript plugins, jQuery, and Popper.js near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag. Be sure to place jQuery and Popper.js first, as our code depends on them. While we use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a> in our docs, the full version is also supported.</p>
+<p>Add our optional JavaScript plugins, jQuery, and <a href="https://github.com/FezVrasta/popper.js">Popper.js</a>) near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag. Be sure to place jQuery and Popper.js first, as our JavaScript plugins depend on them. While we use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a> in our docs, the full version is also supported.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -1179,6 +1179,7 @@
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
 
+    <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
     <span class="c">&lt;!-- jQuery first, then Popper.js, then Boosted JS. --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -1312,6 +1313,8 @@
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
   })
+
+  $('#collapsing-navbarHead').megamenu();
 
 </script>
 

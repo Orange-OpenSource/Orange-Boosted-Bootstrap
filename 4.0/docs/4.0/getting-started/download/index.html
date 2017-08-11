@@ -1101,7 +1101,7 @@
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#boosted-css-and-js">Boosted CSS and JS</a></li>
+<li class="toc-entry toc-h2"><a href="#compiled-css-and-js">Compiled CSS and JS</a></li>
 <li class="toc-entry toc-h2"><a href="#source-files">Source files</a></li>
 <li class="toc-entry toc-h2"><a href="#package-managers">Package managers</a>
 <ul>
@@ -1115,20 +1115,33 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <h1 class="bd-title" id="content">Download</h1>
-          <p class="bd-lead">Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, Bower, and more.</p>
+          <p class="bd-lead">Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, Bower, RubyGems, and more.</p>
           <!-- BOOSTED MOD -->
           <!-- remove ads -->
           <!-- END MOD -->
-          <h2 id="boosted-css-and-js">Boosted CSS and JS</h2>
+          <h2 id="compiled-css-and-js">Compiled CSS and JS</h2>
 
-<p><strong>Download Bootsted’s ready-to-use code to easily drop into your project.</strong> Includes compiled and minified versions of all our CSS bundles (default, grid only, or Reboot only) and JavaScript plugins. Doesn’t include documentation or source files.</p>
+<p>Download ready-to-use compiled code for <strong>Boosted v4.0.0-alpha.6.1</strong> to easily drop into your project, which includes:</p>
 
-<p><strong>Current version:</strong> v4.0.0-alpha.6.1</p>
+<ul>
+  <li>Compiled and minified CSS bundles (default, grid-only, and Reboot-only)</li>
+  <li>Compiled and minified JavaScript plugins</li>
+</ul>
+
+<p>This doesn’t include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).</p>
 
 <p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.6.1/boosted-4.0.0-alpha.6.1-dist.zip" class="btn btn-lg btn-secondary">Download Boosted</a></p>
 
 <h2 id="source-files">Source files</h2>
-<p><strong>Want to compile Boosted with your project’s asset pipeline?</strong> Choose this option to download our source Sass, JavaScript, and documentation files. Requires a Sass compiler, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and <a href="/4.0/docs/4.0/getting-started/build-tools/#tooling-setup">some setup</a>.</p>
+
+<p>Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:</p>
+
+<ul>
+  <li>Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.</li>
+  <li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> for CSS vendor prefixing</li>
+</ul>
+
+<p>Should you require <a href="/4.0/docs/4.0/getting-started/build-tools/#tooling-setup">build tools</a>, they are included for developing Bootstrap and it’s docs, but they’re likely unsuitable for your own purposes.</p>
 
 <p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.6.1.zip" class="btn btn-secondary">Download source</a></p>
 
@@ -1153,9 +1166,9 @@
 
 <h3 id="bower">Bower</h3>
 
-<p>Install and manage Boosted’s Sass and JavaScript using <a href="https://bower.io">Bower</a>.</p>
+<p>Install and manage Bootstrap’s Sass and JavaScript using <a href="https://bower.io">Bower</a>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bower install boosted#v4.0.0-alpha.6.1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bower install bootstrap#v4.0.0-alpha.6.1</code></pre></figure>
 
 
         </main>
@@ -1228,6 +1241,8 @@
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
   })
+
+  $('#collapsing-navbarHead').megamenu();
 
 </script>
 

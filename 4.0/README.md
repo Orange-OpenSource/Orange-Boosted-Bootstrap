@@ -83,7 +83,7 @@ boosted/
     └── boosted.min.js
 ```
 
-We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`boosted.*.map`) are available for use with certain browsers' developer tools.
+We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.
 
 
 ## Branch usage

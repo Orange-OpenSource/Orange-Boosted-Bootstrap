@@ -1167,7 +1167,6 @@
 <li class="toc-entry toc-h4"><a href="#checkboxes">Checkboxes</a></li>
 <li class="toc-entry toc-h4"><a href="#radios">Radios</a></li>
 <li class="toc-entry toc-h4"><a href="#disabled">Disabled</a></li>
-<li class="toc-entry toc-h4"><a href="#validation-states">Validation states</a></li>
 <li class="toc-entry toc-h4"><a href="#stacked">Stacked</a></li>
 </ul>
 </li>
@@ -2322,7 +2321,7 @@
   <li>HTML form validation is applied via CSS’s two pseudo-classes, <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code>. It applies to <code class="highlighter-rouge">&lt;input&gt;</code>, <code class="highlighter-rouge">&lt;select&gt;</code>, and <code class="highlighter-rouge">&lt;textarea&gt;</code> elements.</li>
   <li>Bootstrap scopes the <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code> styles to parent <code class="highlighter-rouge">.was-validated</code> class, usually applied to the <code class="highlighter-rouge">&lt;form&gt;</code>. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).</li>
   <li>As a fallback, <code class="highlighter-rouge">.is-invalid</code> and <code class="highlighter-rouge">.is-valid</code> classes may be used instead of the pseudo-classes for <a href="#server-side">server side validation</a>. They do not require a <code class="highlighter-rouge">.was-validated</code> parent class.</li>
-  <li>Due to constaints in how CSS works, we cannot (at present) apply styles to a <code class="highlighter-rouge">&lt;label&gt;</code> that comes before a form control in the DOM without the help of custom JavaScript.</li>
+  <li>Due to constraints in how CSS works, we cannot (at present) apply styles to a <code class="highlighter-rouge">&lt;label&gt;</code> that comes before a form control in the DOM without the help of custom JavaScript.</li>
   <li>All modern browsers support the <a href="https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api">constraint validation API</a>, a series of JavaScript methods for validating form controls.</li>
   <li>Feedback messages may utilize the <a href="#browser-default">browser defaults</a> (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.</li>
   <li>You may provide custom validity messages with <code class="highlighter-rouge">setCustomValidity</code> in JavaScript.</li>
@@ -2783,55 +2782,6 @@
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description"</span><span class="nt">&gt;</span>Toggle this custom radio<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/label&gt;</span></code></pre></div>
 
-<h4 id="validation-states">Validation states</h4>
-
-<p>Add other states to your custom forms with our validation classes.</p>
-
-<div class="bd-example" data-example-id="">
-<div class="form-group has-success">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" />
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-</div>
-<div class="form-group has-warning">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" />
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-</div>
-<div class="form-group has-danger mb-0">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" />
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-success"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description"</span><span class="nt">&gt;</span>Check this custom checkbox<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description"</span><span class="nt">&gt;</span>Check this custom checkbox<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-danger mb-0"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description"</span><span class="nt">&gt;</span>Check this custom checkbox<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
 <h4 id="stacked">Stacked</h4>
 
 <p>Custom checkboxes and radios are inline to start. Add a parent with class <code class="highlighter-rouge">.custom-controls-stacked</code> to ensure each form control is on separate lines.</p>
@@ -3137,6 +3087,8 @@
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
   })
+
+  $('#collapsing-navbarHead').megamenu();
 
 </script>
 
