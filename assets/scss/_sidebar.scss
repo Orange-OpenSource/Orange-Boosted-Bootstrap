@@ -51,7 +51,7 @@
 
 .bd-sidebar {
   order: 0;
-  background-color: transparent; // boosted mod
+  // background-color: transparent; // boosted mod
   border-bottom: 1px solid $gray-300;
 
   @include media-breakpoint-up(md) {

@@ -26,7 +26,7 @@ Once you have [downloaded](../download/) boosted source files, copy-paste the st
 <link rel="stylesheet" href="path/to/your/boosted.css">
 {% endhighlight %}
 
-Add our JavaScript plugins, jQuery, and Popper.js near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Popper.js first, as our code depends on them. While we use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/) in our docs, the full version is also supported.
+Add our optional JavaScript plugins, jQuery, and [Popper.js](https://github.com/FezVrasta/popper.js)) near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Popper.js first, as our JavaScript plugins depend on them. While we use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/) in our docs, the full version is also supported.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -71,6 +71,7 @@ Be sure to have your pages set up with the latest design and development standar
   <body>
     <h1>Hello, world!</h1>
 
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Boosted JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>

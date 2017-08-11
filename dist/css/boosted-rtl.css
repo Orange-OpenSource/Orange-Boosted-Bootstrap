@@ -5,7 +5,7 @@
  * Copyright 2014-2017 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -633,10 +633,10 @@ pre code {
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
   margin-left: 1.25%;
   margin-right: 1.25%;
-  width: 312px;
-  max-width: 100%;
+  max-width: 312px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -645,6 +645,7 @@ pre code {
   .container {
     padding-left: 5px;
     padding-right: 5px;
+    width: 100%;
   }
 }
 
@@ -652,6 +653,7 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -659,6 +661,7 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -666,6 +669,7 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -673,6 +677,7 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -738,8 +743,7 @@ pre code {
 
 @media (min-width: 480px) {
   .container {
-    width: 468px;
-    max-width: 100%;
+    max-width: 468px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -747,8 +751,7 @@ pre code {
 
 @media (min-width: 768px) {
   .container {
-    width: 744px;
-    max-width: 100%;
+    max-width: 744px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -756,8 +759,7 @@ pre code {
 
 @media (min-width: 980px) {
   .container {
-    width: 960px;
-    max-width: 100%;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -765,8 +767,7 @@ pre code {
 
 @media (min-width: 1220px) {
   .container {
-    width: 1200px;
-    max-width: 100%;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -774,8 +775,7 @@ pre code {
 
 @media (min-width: 1380px) {
   .container {
-    width: 1320px;
-    max-width: 100%;
+    max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -786,6 +786,7 @@ pre code {
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
   margin-left: 1.25%;
   margin-right: 1.25%;
 }
@@ -794,6 +795,7 @@ pre code {
   .container-fluid {
     padding-left: 5px;
     padding-right: 5px;
+    width: 100%;
   }
 }
 
@@ -801,6 +803,7 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -808,6 +811,7 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -815,6 +819,7 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -822,6 +827,7 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 }
 
@@ -2987,6 +2993,11 @@ tbody.collapse.show {
   margin-right: 0;
 }
 
+.dropup .dropdown-menu {
+  margin-top: 0;
+  margin-bottom: -2px;
+}
+
 .dropup .dropdown-toggle::after {
   border-top: 0;
   border-bottom: 0.4375em solid;
@@ -3598,15 +3609,6 @@ tbody.collapse.show {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-}
-
-@media (max-width: 479px) {
-  .navbar > .container,
-  .navbar > .container-fluid {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 .navbar-brand {
@@ -5902,6 +5904,10 @@ a.bg-dark:focus, a.bg-dark:hover {
   background-color: black !important;
 }
 
+.bg-white {
+  background-color: #fff !important;
+}
+
 .bg-transparent {
   background-color: transparent !important;
 }
@@ -5960,6 +5966,10 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .border-dark {
   border-color: #000 !important;
+}
+
+.border-white {
+  border-color: #fff !important;
 }
 
 .rounded {

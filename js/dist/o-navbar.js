@@ -40,14 +40,14 @@ var Navbar = function ($) {
     SUPRA_BAR: '.navbar.supra',
     NAVBAR: '.navbar:not(.supra)',
     MEGAMENU_PANEL: '.mega-menu.panel'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Navbar = function () {
     function Navbar(element, config) {
       _classCallCheck(this, Navbar);

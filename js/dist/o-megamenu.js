@@ -46,14 +46,14 @@ var MegaMenu = function ($) {
     NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
     NAV_LINK_BACK: '.nav-link.back',
     NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var MegaMenu = function () {
     function MegaMenu(element, config) {
       _classCallCheck(this, MegaMenu);

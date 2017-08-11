@@ -1,21 +1,30 @@
 ---
 layout: docs
 title: Download
-description: Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, Bower, and more.
+description: Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, Bower, RubyGems, and more.
 group: getting-started
 toc: true
 ---
 
-## Boosted CSS and JS
+## Compiled CSS and JS
 
-**Download Bootsted's ready-to-use code to easily drop into your project.** Includes compiled and minified versions of all our CSS bundles (default, grid only, or Reboot only) and JavaScript plugins. Doesn't include documentation or source files.
+Download ready-to-use compiled code for **Boosted v{{ site.current_version}}** to easily drop into your project, which includes:
 
-**Current version:** v{{ site.current_version}}
+- Compiled and minified CSS bundles (default, grid-only, and Reboot-only)
+- Compiled and minified JavaScript plugins
+
+This doesn't include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).
 
 <a href="{{ site.download.dist }}" class="btn btn-lg btn-secondary">Download Boosted</a>
 
 ## Source files
-**Want to compile Boosted with your project's asset pipeline?** Choose this option to download our source Sass, JavaScript, and documentation files. Requires a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [some setup]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup).
+
+Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
+
+- Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
+- [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
+
+Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup), they are included for developing Bootstrap and it's docs, but they're likely unsuitable for your own purposes.
 
 <a href="{{ site.download.source }}" class="btn btn-secondary">Download source</a>
 
@@ -38,10 +47,18 @@ Boosted's `package.json` contains some additional metadata under the following k
 - `sass` - path to Boosted's main [Sass](http://sass-lang.com/) source file
 - `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
 
-### Bower
+### Composer
 
-Install and manage Boosted's Sass and JavaScript using [Bower](https://bower.io).
+You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org):
 
 {% highlight bash %}
-bower install boosted#v{{ site.current_version }}
+composer require orange-opensource/orange-boosted-bootstrap:{{ site.current_version }}
+{% endhighlight %}
+
+### Bower
+
+Install and manage Bootstrap's Sass and JavaScript using [Bower](https://bower.io).
+
+{% highlight bash %}
+bower install bootstrap#v{{ site.current_version }}
 {% endhighlight %}

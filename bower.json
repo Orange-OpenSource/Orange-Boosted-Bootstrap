@@ -1,6 +1,6 @@
 {
   "name": "boosted",
-  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-alpha.6.",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.0.0-beta.",
   "keywords": [
     "css",
     "js",
@@ -39,5 +39,5 @@
   "author": {
     "name": "Orange SA"
   },
-  "version": "4.0.0-alpha.6.1"
+  "version": "4.0.0-beta"
 }

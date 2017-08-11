@@ -18,10 +18,10 @@ html {
   margin-left: auto;
   padding-right: 5px;
   padding-left: 5px;
+  width: 100%;
   margin-right: 1.25%;
   margin-left: 1.25%;
-  width: 312px;
-  max-width: 100%;
+  max-width: 312px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -30,6 +30,7 @@ html {
   .container {
     padding-right: 5px;
     padding-left: 5px;
+    width: 100%;
   }
 }
 
@@ -37,6 +38,7 @@ html {
   .container {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -44,6 +46,7 @@ html {
   .container {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -51,6 +54,7 @@ html {
   .container {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -58,6 +62,7 @@ html {
   .container {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -123,8 +128,7 @@ html {
 
 @media (min-width: 480px) {
   .container {
-    width: 468px;
-    max-width: 100%;
+    max-width: 468px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -132,8 +136,7 @@ html {
 
 @media (min-width: 768px) {
   .container {
-    width: 744px;
-    max-width: 100%;
+    max-width: 744px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -141,8 +144,7 @@ html {
 
 @media (min-width: 980px) {
   .container {
-    width: 960px;
-    max-width: 100%;
+    max-width: 960px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -150,8 +152,7 @@ html {
 
 @media (min-width: 1220px) {
   .container {
-    width: 1200px;
-    max-width: 100%;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -159,8 +160,7 @@ html {
 
 @media (min-width: 1380px) {
   .container {
-    width: 1320px;
-    max-width: 100%;
+    max-width: 1320px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -171,6 +171,7 @@ html {
   margin-left: auto;
   padding-right: 5px;
   padding-left: 5px;
+  width: 100%;
   margin-right: 1.25%;
   margin-left: 1.25%;
 }
@@ -179,6 +180,7 @@ html {
   .container-fluid {
     padding-right: 5px;
     padding-left: 5px;
+    width: 100%;
   }
 }
 
@@ -186,6 +188,7 @@ html {
   .container-fluid {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -193,6 +196,7 @@ html {
   .container-fluid {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -200,6 +204,7 @@ html {
   .container-fluid {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 
@@ -207,6 +212,7 @@ html {
   .container-fluid {
     padding-right: 10px;
     padding-left: 10px;
+    width: 100%;
   }
 }
 

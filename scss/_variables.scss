@@ -564,7 +564,7 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns
 
 $dropdown-min-width:             10rem;
 $dropdown-padding-y:             0;
-$dropdown-margin-top:            -2px;
+$dropdown-spacer:                -2px;
 $dropdown-bg:                    #fff;
 $dropdown-border-color:          #000;
 $dropdown-border-width:          $border-width;

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-alpha.6.1): o-switch.js
+ * Boosted (v4.0.0-beta): o-switch.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ const Switch = (($) => {
    */
 
   const NAME                = 'switch'
-  const VERSION             = '4.0.0-alpha.6.1'
+  const VERSION             = '4.0.0-beta'
   const DATA_KEY            = 'bs.switch'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
 

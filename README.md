@@ -32,12 +32,12 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.6.1.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-alpha.6.1`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-alpha.6.1`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-alpha.6.1`
-- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-alpha.6.1`
+- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta`
+- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta`
 
 Read the [Getting started page](http://boosted.orange.com/v4-alpha/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -83,7 +83,7 @@ boosted/
     └── boosted.min.js
 ```
 
-We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`boosted.*.map`) are available for use with certain browsers' developer tools.
+We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.
 
 
 ## Branch usage

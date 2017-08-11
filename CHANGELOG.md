@@ -1,3 +1,70 @@
+<a name"4.0.0-beta"></a>
+### 4.0.0-beta (2017-08-11)
+
+
+#### Bug Fixes
+
+* **accessibility:** merge accessibility fix following bootstrap merge ([a6ec0157](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a6ec01575deda0d04fd8da87e46a296fc27a11f0))
+* **component:**
+  * navbar logo ([276fc308](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/276fc30886e6a61f97e8f2e8e4470ac528ab3e69))
+  * navbar ([6fe40306](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6fe40306716fc0f9bd8304694dc7450126d52b51))
+  * from error message ([8b441e55](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8b441e55295c8f2b69751725e081561db47ec9be))
+  * cards ([bafbf752](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bafbf752b96cba2584086ee5684aac9af61e0732))
+  * local navigation ([2af813ac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2af813acc01b933bed36d399965f841326c72f2f))
+  * cards ([b4925b0d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b4925b0d5e8a754fa42f7b21a7939cc159d33f91))
+  * orange cards ([35cd134d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/35cd134d3205608621a25f5081be7f1db7ef3dc2))
+  * modal popin ([dc3b9a04](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dc3b9a0479014f921232fdbb60ee797873be5065))
+  * modal popin ([98737857](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9873785732e40e225b46f0dca3c1bbde93993441))
+  * modal ([d546471a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d546471acb1372451542ef02125afcc69bd67da7))
+  * navbar ([9df9e98a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9df9e98a819137dde198977a8b4545c90dafd65b))
+  * navbar ([809f2ee4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/809f2ee412207c20ff964b889b76899f1fe51427))
+  * tabs ([cefc7a8c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cefc7a8c879fc211a808e880bdcd601f4c6ddac6))
+  * navbar ([3fc576d8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3fc576d82377c848c8d2a219adfe4a2d8712d422))
+  * local nav ([ad552050](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ad5520507bc28afcd84509eff80388dc8ca5fec7))
+  * checkboxes ([da6fb260](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/da6fb260d358932b1a3ba7ae9a670cd3629e2703))
+  * navbar ([de71f229](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/de71f229ad3e8981dd05395182bbcc22167e73c9))
+  * priority nav ([9fd8cd88](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9fd8cd8875c801083e2c996e303dcd8ab3cf784d))
+  * dropdown ([3e3ebf8a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3e3ebf8a03952f9e50d89a7eb73fb2f97d5e1638))
+* **core:**
+  * icons ([14b8a0a5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/14b8a0a5fbcf343367e0d8eed9ef5e5a83ed440f))
+  * icons ([6e37a39f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6e37a39f65f4e59b9e1eed227bc2fe7649d08eb4))
+  * icons ([88c11578](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/88c115787177b7c5d177b993e8774082f6c5e6e7))
+* **doc:**
+  * examples ([92b50545](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/92b505453f00f7be1e6ee737324fbcb54d4a0009))
+  * html lint ([64e7d89f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64e7d89feb32f21c5a442fd6eee71ae0100b1a35))
+  * megamenu ([50e1c227](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/50e1c22704b92c0613ffe20197571201616d780d))
+  * fix custom radio sample ([e5c1a242](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e5c1a2429f6d505c2ad271d14e6369fd4dba40e1))
+* **docs:**
+  * megamenu documentation ([b83a8956](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b83a8956b68049c8ba4d18843a1be5d0bdafa7c1))
+  * focus outline ([2f5a268f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2f5a268f3ae46a28cea1b19404eb585a72359177))
+  * examples ([73bc9d59](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/73bc9d59a0bf112a62ed5535a0a514ed282a2ac0))
+  * examples ([896945ef](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/896945ef74e9583f2983817fcb77728669bd5c82))
+* **dropdown:** fix dropdown.js accessibility issue adding aria role's + 3 new unit tests ([5e3f77f5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5e3f77f519bb8e4cc778802b6ec6ce178ed5ab3d))
+* **font:** add the icon-orange.woff2 ([6c745f3f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c745f3fecfb921fc5102561a20802402b5539cf))
+* **fonts:**
+  * add woff2 font file for orangeIcons ([2afdf5d7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2afdf5d7254e8aaa82c9c565dc0f6e688eff3fbb))
+  * fixes issue #54 as explain on http://www.trucsweb.com/tutoriels/css/font-face/ " ([12c2a9bb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/12c2a9bbb9ab4ab845b212ed74337c04913c71d1))
+* **forms:** fix focus state color and custom checkbox disable state active ([7f984cdd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7f984cddbcec0d498223ef8793041673b29710ab))
+* **js:**
+  * tests failing ([1c0774a5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1c0774a5c268ca50586b782a0b8c29cddf89033a))
+  * code refactoring & lint ([4a5be925](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4a5be92578f7a1bfefeb1812c60becf24a5d762c))
+* **megamenu:** update custom megamenu case on mobile view ([b3a3b01b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b3a3b01bb791c10f807d70b52411d9815057f027))
+* **nav:** update navbar index bootstrap patch ([a4d0ce9b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a4d0ce9bd592e74263036b6886ac7504d053bc73))
+* **navbar:**
+  * fix mobile view navbar elements height ([280e7959](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/280e7959fd4607364997e734a4c526f9ad61b696))
+  * fix mobile view navbar elements alignement ([8faad6b3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8faad6b35e75f0596c23dcc5fe8a762f8a383bd0))
+* **rtl:** arrows ([5ed99360](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ed99360ccb0974b74e45070330d932419d40f10))
+* **tablesorter:** pdate tablesorter icon position for mobile display compatibility ([2891d489](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2891d48935a5ce25e7c86fbbb10d1599ecc67fac))
+
+
+#### Features
+
+* **component:**
+  * priority nav ([94f733f1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/94f733f1d986e8d9e15f34428aca9e5d2348be4f))
+  * priority nav ([11f9570f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/11f9570f60d3b021b604ce0c135d997d16a59e32))
+  * priority nav ([18722ab8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/18722ab8de491c61431882e3df118301929d59b4))
+
+
 <a name"4.0.0-alpha.6.1"></a>
 ### 4.0.0-alpha.6.1 (2017-04-03)
 
