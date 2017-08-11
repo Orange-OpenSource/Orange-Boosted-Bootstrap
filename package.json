@@ -71,11 +71,12 @@
     "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^3.4.1"
+  },
   "peerDependencies": {
     "jquery": ">=1.9.1",
-    "popper.js": "^1.11.0",
-    "swiper": "^3.4.1"
+    "popper.js": "^1.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
