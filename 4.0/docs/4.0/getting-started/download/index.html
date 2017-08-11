@@ -1106,6 +1106,7 @@
 <li class="toc-entry toc-h2"><a href="#package-managers">Package managers</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#npm">npm</a></li>
+<li class="toc-entry toc-h3"><a href="#composer">Composer</a></li>
 <li class="toc-entry toc-h3"><a href="#bower">Bower</a></li>
 </ul>
 </li>
@@ -1121,7 +1122,7 @@
           <!-- END MOD -->
           <h2 id="compiled-css-and-js">Compiled CSS and JS</h2>
 
-<p>Download ready-to-use compiled code for <strong>Boosted v4.0.0-alpha.6.1</strong> to easily drop into your project, which includes:</p>
+<p>Download ready-to-use compiled code for <strong>Boosted v4.0.0-beta</strong> to easily drop into your project, which includes:</p>
 
 <ul>
   <li>Compiled and minified CSS bundles (default, grid-only, and Reboot-only)</li>
@@ -1130,7 +1131,7 @@
 
 <p>This doesn’t include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).</p>
 
-<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-alpha.6.1/boosted-4.0.0-alpha.6.1-dist.zip" class="btn btn-lg btn-secondary">Download Boosted</a></p>
+<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-beta/boosted-4.0.0-beta-dist.zip" class="btn btn-lg btn-secondary">Download Boosted</a></p>
 
 <h2 id="source-files">Source files</h2>
 
@@ -1143,7 +1144,7 @@
 
 <p>Should you require <a href="/4.0/docs/4.0/getting-started/build-tools/#tooling-setup">build tools</a>, they are included for developing Bootstrap and it’s docs, but they’re likely unsuitable for your own purposes.</p>
 
-<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-alpha.6.1.zip" class="btn btn-secondary">Download source</a></p>
+<p><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.zip" class="btn btn-secondary">Download source</a></p>
 
 <h2 id="package-managers">Package managers</h2>
 
@@ -1153,7 +1154,7 @@
 
 <p>Install Boosted in your Node powered apps with <a href="https://www.npmjs.org/package/boosted">the npm package</a>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install boosted@4.0.0-alpha.6.1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install boosted@4.0.0-beta</code></pre></figure>
 
 <p><code class="highlighter-rouge">require('boosted')</code> will load all of Boosted’s jQuery plugins onto the jQuery object. The <code class="highlighter-rouge">boosted</code> module itself does not export anything. You can manually load Boosted’s jQuery plugins individually by loading the <code class="highlighter-rouge">/js/*.js</code> files under the package’s top-level directory.</p>
 
@@ -1164,11 +1165,17 @@
   <li><code class="highlighter-rouge">style</code> - path to Boosted’s non-minified CSS that’s been precompiled using the default settings (no customization)</li>
 </ul>
 
+<h3 id="composer">Composer</h3>
+
+<p>You can also install and manage Bootstrap’s Sass and JavaScript using <a href="https://getcomposer.org">Composer</a>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta</code></pre></figure>
+
 <h3 id="bower">Bower</h3>
 
 <p>Install and manage Bootstrap’s Sass and JavaScript using <a href="https://bower.io">Bower</a>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bower install bootstrap#v4.0.0-alpha.6.1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bower install bootstrap#v4.0.0-beta</code></pre></figure>
 
 
         </main>
