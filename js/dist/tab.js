@@ -57,14 +57,14 @@ var Tab = function ($) {
     ACTIVE_CHILD: '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active', // boosted mod
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
   var Tab = function () {
     function Tab(element) {
       _classCallCheck(this, Tab);

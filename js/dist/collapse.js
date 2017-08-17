@@ -60,14 +60,14 @@ var Collapse = function ($) {
   var Selector = {
     ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
     DATA_TOGGLE: '[data-toggle="collapse"]'
-
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
   var Collapse = function () {
     function Collapse(element, config) {
       _classCallCheck(this, Collapse);
