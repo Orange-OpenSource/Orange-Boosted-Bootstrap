@@ -4724,6 +4724,7 @@ tbody.collapse.show {
   top: -1.25rem;
   left: -1.25rem;
   padding: 1.25rem 1.25rem;
+  line-height: 1.25;
   color: inherit;
 }
 
