@@ -46,3 +46,15 @@
     @include badge-variant($value);
   }
 }
+
+// Boosted mod
+.badge[href] {
+    @include focus {
+        outline-color: #fff;
+        outline-offset: -1px;
+
+        &.badge-light {
+          outline-color: #000;
+        }
+    }
+}
