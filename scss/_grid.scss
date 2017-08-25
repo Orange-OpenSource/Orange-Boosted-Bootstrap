@@ -6,6 +6,7 @@
   .container {
     @include make-container();
     @include make-container-max-widths();
+    width: 100%;  // Boosted mod
   }
 }
 
@@ -16,10 +17,8 @@
 
 @if $enable-grid-classes {
   .container-fluid {
-    // boosted mod
-    // width: 100%;
-    // end mod
     @include make-container();
+    width: auto; // Boosted mod
   }
 }
 
