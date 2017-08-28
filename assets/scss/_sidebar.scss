@@ -7,8 +7,8 @@
 .bd-toc {
   @supports (position: sticky) {
     position: sticky;
-    top: 4rem;
-    max-height: calc(100vh - 4rem);
+    top: 0; // boosted mod, unless using fixed navbar
+    max-height: calc(100vh); // boosted mod
     overflow-y: auto;
   }
   order: 2;
@@ -57,9 +57,9 @@
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       position: sticky;
-      top: 4rem;
+      top: 0; // boosted mod, unless using navbar fixed
       z-index: 1000;
-      max-height: calc(100vh - 4rem);
+      max-height: calc(100vh); // boosted mod
     }
     border-right: 1px solid $gray-300;
   }
@@ -72,12 +72,12 @@
 .bd-links {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: $grid-gutter-width / -2; // boosted mod
+  margin-left: $grid-gutter-width / -2; // boosted mod
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 9rem);
+      max-height: calc(100vh - 5rem); // boosted mod
       overflow-y: auto;
     }
   }
@@ -90,9 +90,9 @@
 
 .bd-search {
   position: relative; // To contain the Algolia search
-  padding: 1rem 15px;
-  margin-right: -15px;
-  margin-left: -15px;
+  padding: 1rem $grid-gutter-width / 2; // boosted mod our col-12 has 10px paddings
+  margin-right: $grid-gutter-width / -2; // boosted mod
+  margin-left: $grid-gutter-width / -2; // boosted mod
   border-bottom: 1px solid $gray-300;
 
 // Boosted mod keep basic form-control style
@@ -116,9 +116,6 @@
   padding: .25rem 1.5rem;
   font-weight: 500;
   // color: $gray-lightest; // boosted mod
-  &:focus {
-    outline-offset: -1px; // boosted mod
-  }
 
   &:hover {
     color: theme-color("primary");
@@ -167,4 +164,11 @@
   font-weight: 500;
   color: #000;
   background-color: transparent;
+}
+
+.bd-links a,
+.bd-toc a {
+  &:focus {
+    outline-offset: -1px;
+  }
 }
