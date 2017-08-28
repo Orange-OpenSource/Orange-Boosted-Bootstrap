@@ -32,7 +32,7 @@
     top: -$alert-padding-y;
     right: -$alert-padding-x;
     padding: $alert-padding-y $alert-padding-x;
-    line-height: $line-height-base;  // boosted mod
+    line-height: $alert-padding-y;  // boosted mod
     color: inherit;
   }
 }
