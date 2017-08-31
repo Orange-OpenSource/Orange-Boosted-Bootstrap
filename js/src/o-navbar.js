@@ -34,7 +34,6 @@ const Navbar = (($) => {
   }
 
   const Selector = {
-    CONFORTP_BAR : '#accessibilitytoolbarGraphic',
     SUPRA_BAR : '.navbar.supra',
     NAVBAR : '.navbar:not(.supra)',
     MEGAMENU_PANEL : '.mega-menu.panel'

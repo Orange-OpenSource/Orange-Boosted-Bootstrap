@@ -20,7 +20,6 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 <div class="o-nav-local">
     <hr aria-hidden="true">
     <nav class="container">
-        <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
         <ul class="nav collapse" id="localNav1">
             <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
@@ -40,7 +39,6 @@ Simply add `.inverse` class to your `.o-nav-local` container.
     <div class="o-nav-local inverse">
         <hr aria-hidden="true">
         <nav class="container">
-            <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
             <ul class="nav collapse" id="localNav2">
                 <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>

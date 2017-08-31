@@ -42,7 +42,7 @@ const PriorityNav = (($) => {
   const MenuTemplate = (MenuLabel) => `
     <li class="overflow-nav nav-item dropdown">
         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
-        <ul class="overflow-nav-list dropdown-menu"></ul>
+        <ul class="overflow-nav-list dropdown-menu dropdown-menu-right"></ul>
     </li>
   `
 
