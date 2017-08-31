@@ -7,8 +7,8 @@
 .bd-toc {
   @supports (position: sticky) {
     position: sticky;
-    top: 0; // boosted mod, unless using fixed navbar
-    max-height: calc(100vh); // boosted mod
+    top: 5rem; // boosted mod, unless using fixed navbar
+    max-height: calc(100vh - 5rem); // boosted mod
     overflow-y: auto;
   }
   order: 2;
@@ -57,9 +57,9 @@
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       position: sticky;
-      top: 0; // boosted mod, unless using navbar fixed
+      top: 5rem; // boosted mod, unless using navbar fixed
       z-index: 1000;
-      max-height: calc(100vh); // boosted mod
+      max-height: calc(100vh - 5rem); // boosted mod
     }
     border-right: 1px solid $gray-300;
   }
@@ -77,7 +77,7 @@
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 5rem); // boosted mod
+      max-height: calc(100vh - 9.6rem); // boosted mod
       overflow-y: auto;
     }
   }
