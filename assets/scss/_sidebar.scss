@@ -7,7 +7,7 @@
 .bd-toc {
   @supports (position: sticky) {
     position: sticky;
-    top: 5rem; // boosted mod, unless using fixed navbar
+    top: 5rem; // boosted mod
     max-height: calc(100vh - 5rem); // boosted mod
     overflow-y: auto;
   }
@@ -57,7 +57,7 @@
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       position: sticky;
-      top: 5rem; // boosted mod, unless using navbar fixed
+      top: 5rem; // boosted mod
       z-index: 1000;
       max-height: calc(100vh - 5rem); // boosted mod
     }
