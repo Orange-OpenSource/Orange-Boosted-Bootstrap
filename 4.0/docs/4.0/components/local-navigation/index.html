@@ -52,7 +52,7 @@
     </a>
 
     <!-- Boosted mod remove bd-navbar class-->
-<header class="navbar navbar-dark bg-dark navbar-expand-md">
+<header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
   <nav class="container">
     
 
@@ -1133,7 +1133,6 @@
 <div class="o-nav-local">
     <hr aria-hidden="true" />
     <nav class="container">
-        <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">target</a>
         <ul class="nav collapse" id="localNav1">
             <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
@@ -1146,7 +1145,6 @@
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-nav-local"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;hr</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"d-md-none nav-link active local-select"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">href=</span><span class="s">"#localNav1"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span><span class="nt">&gt;</span>target<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav collapse"</span> <span class="na">id=</span><span class="s">"localNav1"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item active"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -1165,7 +1163,6 @@
     <div class="o-nav-local inverse">
         <hr aria-hidden="true" />
         <nav class="container">
-            <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">target</a>
             <ul class="nav collapse" id="localNav2">
                 <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
@@ -1180,7 +1177,6 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-nav-local inverse"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;hr</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"d-md-none nav-link active local-select"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">href=</span><span class="s">"#localNav2"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span><span class="nt">&gt;</span>target<span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav collapse"</span> <span class="na">id=</span><span class="s">"localNav2"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item active"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -1281,6 +1277,7 @@ Holder.addTheme('gray', {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
   })
 </script>
 

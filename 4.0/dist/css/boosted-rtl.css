@@ -633,19 +633,18 @@ pre code {
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
-  width: 100%;
   margin-left: 1.25%;
   margin-right: 1.25%;
   max-width: 312px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 @media (min-width: 480px) {
   .container {
     padding-left: 5px;
     padding-right: 5px;
-    width: 100%;
   }
 }
 
@@ -653,7 +652,6 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -661,7 +659,6 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -669,7 +666,6 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -677,7 +673,6 @@ pre code {
   .container {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -786,16 +781,15 @@ pre code {
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
-  width: 100%;
   margin-left: 1.25%;
   margin-right: 1.25%;
+  width: auto;
 }
 
 @media (min-width: 480px) {
   .container-fluid {
     padding-left: 5px;
     padding-right: 5px;
-    width: 100%;
   }
 }
 
@@ -803,7 +797,6 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -811,7 +804,6 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -819,7 +811,6 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -827,7 +818,6 @@ pre code {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
   }
 }
 
@@ -3613,7 +3603,6 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  min-height: 3.125rem;
   padding-top: 0;
   padding-bottom: 0;
   margin-left: 1.25rem;
@@ -4688,6 +4677,15 @@ tbody.collapse.show {
   background-color: black;
 }
 
+.badge[href]:focus {
+  outline-color: #fff;
+  outline-offset: -1px;
+}
+
+.badge[href]:focus.badge-light {
+  outline-color: #000;
+}
+
 .jumbotron {
   padding: 2.5rem 1.25rem;
   margin-bottom: 2.5rem;
@@ -4724,6 +4722,7 @@ tbody.collapse.show {
   top: -1.25rem;
   left: -1.25rem;
   padding: 1.25rem 1.25rem;
+  line-height: 1.25rem;
   color: inherit;
 }
 
@@ -5173,7 +5172,7 @@ button.list-group-item-dark.active {
 
 .close {
   float: left;
-  font-size: 1.25;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -11284,6 +11283,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 479px) {
   .navbar-expand-sm, .navbar-expand-sm.minimized {
+    height: auto;
     min-height: 3.125rem;
   }
   .navbar-expand-sm.supra, .navbar-expand-sm.minimized.supra {
@@ -11369,12 +11369,15 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     display: none;
   }
   .navbar-expand-sm .nav-item.dropdown .dropdown-toggle::after, .navbar-expand-sm.minimized .nav-item.dropdown .dropdown-toggle::after {
-    float: left;
+    position: absolute;
+    top: .875rem;
+    left: -.625rem;
     margin-top: .5rem;
     margin-left: 1.25rem;
   }
   .navbar-expand-sm .nav-item.dropdown .dropdown-item, .navbar-expand-sm.minimized .nav-item.dropdown .dropdown-item {
     color: #fff;
+    white-space: normal;
     background-color: #000;
     border-top: 1px solid #333;
   }
@@ -11487,6 +11490,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 767px) {
   .navbar-expand-md, .navbar-expand-md.minimized {
+    height: auto;
     min-height: 3.125rem;
   }
   .navbar-expand-md.supra, .navbar-expand-md.minimized.supra {
@@ -11572,12 +11576,15 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     display: none;
   }
   .navbar-expand-md .nav-item.dropdown .dropdown-toggle::after, .navbar-expand-md.minimized .nav-item.dropdown .dropdown-toggle::after {
-    float: left;
+    position: absolute;
+    top: .875rem;
+    left: -.625rem;
     margin-top: .5rem;
     margin-left: 1.25rem;
   }
   .navbar-expand-md .nav-item.dropdown .dropdown-item, .navbar-expand-md.minimized .nav-item.dropdown .dropdown-item {
     color: #fff;
+    white-space: normal;
     background-color: #000;
     border-top: 1px solid #333;
   }
@@ -11690,6 +11697,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 979px) {
   .navbar-expand-lg, .navbar-expand-lg.minimized {
+    height: auto;
     min-height: 3.125rem;
   }
   .navbar-expand-lg.supra, .navbar-expand-lg.minimized.supra {
@@ -11775,12 +11783,15 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     display: none;
   }
   .navbar-expand-lg .nav-item.dropdown .dropdown-toggle::after, .navbar-expand-lg.minimized .nav-item.dropdown .dropdown-toggle::after {
-    float: left;
+    position: absolute;
+    top: .875rem;
+    left: -.625rem;
     margin-top: .5rem;
     margin-left: 1.25rem;
   }
   .navbar-expand-lg .nav-item.dropdown .dropdown-item, .navbar-expand-lg.minimized .nav-item.dropdown .dropdown-item {
     color: #fff;
+    white-space: normal;
     background-color: #000;
     border-top: 1px solid #333;
   }
@@ -11893,6 +11904,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 1219px) {
   .navbar-expand-xl, .navbar-expand-xl.minimized {
+    height: auto;
     min-height: 3.125rem;
   }
   .navbar-expand-xl.supra, .navbar-expand-xl.minimized.supra {
@@ -11978,12 +11990,15 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     display: none;
   }
   .navbar-expand-xl .nav-item.dropdown .dropdown-toggle::after, .navbar-expand-xl.minimized .nav-item.dropdown .dropdown-toggle::after {
-    float: left;
+    position: absolute;
+    top: .875rem;
+    left: -.625rem;
     margin-top: .5rem;
     margin-left: 1.25rem;
   }
   .navbar-expand-xl .nav-item.dropdown .dropdown-item, .navbar-expand-xl.minimized .nav-item.dropdown .dropdown-item {
     color: #fff;
+    white-space: normal;
     background-color: #000;
     border-top: 1px solid #333;
   }
@@ -12096,6 +12111,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 1379px) {
   .navbar-expand-xxl, .navbar-expand-xxl.minimized {
+    height: auto;
     min-height: 3.125rem;
   }
   .navbar-expand-xxl.supra, .navbar-expand-xxl.minimized.supra {
@@ -12181,12 +12197,15 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
     display: none;
   }
   .navbar-expand-xxl .nav-item.dropdown .dropdown-toggle::after, .navbar-expand-xxl.minimized .nav-item.dropdown .dropdown-toggle::after {
-    float: left;
+    position: absolute;
+    top: .875rem;
+    left: -.625rem;
     margin-top: .5rem;
     margin-left: 1.25rem;
   }
   .navbar-expand-xxl .nav-item.dropdown .dropdown-item, .navbar-expand-xxl.minimized .nav-item.dropdown .dropdown-item {
     color: #fff;
+    white-space: normal;
     background-color: #000;
     border-top: 1px solid #333;
   }
@@ -12298,6 +12317,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .navbar-expand, .navbar-expand.minimized {
+  height: auto;
   min-height: 3.125rem;
 }
 
@@ -12404,13 +12424,16 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .navbar-expand .nav-item.dropdown .dropdown-toggle::after, .navbar-expand.minimized .nav-item.dropdown .dropdown-toggle::after {
-  float: left;
+  position: absolute;
+  top: .875rem;
+  left: -.625rem;
   margin-top: .5rem;
   margin-left: 1.25rem;
 }
 
 .navbar-expand .nav-item.dropdown .dropdown-item, .navbar-expand.minimized .nav-item.dropdown .dropdown-item {
   color: #fff;
+  white-space: normal;
   background-color: #000;
   border-top: 1px solid #333;
 }
@@ -12590,11 +12613,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 .o-nav-local .dropdown-toggle.show {
   color: #000;
-}
-
-.o-nav-local .dropdown-menu {
-  left: 0;
-  right: auto;
 }
 
 .o-nav-local .dropdown-menu .nav-item,

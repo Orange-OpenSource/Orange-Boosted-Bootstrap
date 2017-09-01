@@ -52,7 +52,7 @@
     </a>
 
     <!-- Boosted mod remove bd-navbar class-->
-<header class="navbar navbar-dark bg-dark navbar-expand-md">
+<header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
   <nav class="container">
     
 
@@ -1122,7 +1122,7 @@
           <!-- END MOD -->
           <h2 id="compiled-css-and-js">Compiled CSS and JS</h2>
 
-<p>Download ready-to-use compiled code for <strong>Boosted v4.0.0-beta</strong> to easily drop into your project, which includes:</p>
+<p>Download ready-to-use compiled code for <strong>Boosted v4.0.0-beta.1</strong> to easily drop into your project, which includes:</p>
 
 <ul>
   <li>Compiled and minified CSS bundles (default, grid-only, and Reboot-only)</li>
@@ -1154,7 +1154,7 @@
 
 <p>Install Boosted in your Node powered apps with <a href="https://www.npmjs.org/package/boosted">the npm package</a>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install boosted@4.0.0-beta</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install boosted@4.0.0-beta.1</code></pre></figure>
 
 <p><code class="highlighter-rouge">require('boosted')</code> will load all of Boosted’s jQuery plugins onto the jQuery object. The <code class="highlighter-rouge">boosted</code> module itself does not export anything. You can manually load Boosted’s jQuery plugins individually by loading the <code class="highlighter-rouge">/js/*.js</code> files under the package’s top-level directory.</p>
 
@@ -1169,13 +1169,13 @@
 
 <p>You can also install and manage Bootstrap’s Sass and JavaScript using <a href="https://getcomposer.org">Composer</a>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.1</code></pre></figure>
 
 <h3 id="bower">Bower</h3>
 
 <p>Install and manage Bootstrap’s Sass and JavaScript using <a href="https://bower.io">Bower</a>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bower install bootstrap#v4.0.0-beta</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bower install bootstrap#v4.0.0-beta.1</code></pre></figure>
 
 
         </main>
@@ -1267,6 +1267,7 @@ Holder.addTheme('gray', {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
   })
 </script>
 

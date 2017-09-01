@@ -52,7 +52,7 @@
     </a>
 
     <!-- Boosted mod remove bd-navbar class-->
-<header class="navbar navbar-dark bg-dark navbar-expand-md">
+<header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
   <nav class="container">
     
 
@@ -1356,6 +1356,7 @@ Holder.addTheme('gray', {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
   })
 </script>
 

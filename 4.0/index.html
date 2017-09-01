@@ -50,7 +50,7 @@
     </a>
 
     <!-- Boosted mod remove bd-navbar class-->
-<header class="navbar navbar-dark bg-dark navbar-expand-md">
+<header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
   <nav class="container">
     
 
@@ -93,7 +93,7 @@
     <p class="lead">
       <a href="/4.0/docs/4.0/getting-started/download" class="btn btn-primary btn-inverse btn-lg">Download Boosted</a>
     </p>
-    <p class="version">Currently v4.0.0-beta</p>
+    <p class="version">Currently v4.0.0-beta.1</p>
   </div>
 </main>
 
@@ -132,7 +132,7 @@
         </div>
         <div class="o-footer-bottom">
           <ul>
-            <li>Currently v4.0.0-beta</li>
+            <li>Currently v4.0.0-beta.1</li>
             <li><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a></li>
             <li><a href="/4.0/docs/4.0/examples">Examples</a></li>
             <!-- <li><a href="/4.0/docs/4.0/about/history/">About</a></li> -->
@@ -189,6 +189,7 @@ Holder.addTheme('gray', {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
   })
 </script>
 
