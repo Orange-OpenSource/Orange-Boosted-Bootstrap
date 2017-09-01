@@ -1,4 +1,12 @@
 // scss-lint:disable IdSelector
+.bd-home {
+  background-color: #000;
+
+  .bd-featurette {
+    background-color: #fff;
+  }
+}
+
 .bd-masthead {
   padding: 2.5rem .625rem;
   color: #fff;
