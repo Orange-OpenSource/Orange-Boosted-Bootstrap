@@ -48,6 +48,10 @@
     font-size: $h1-font-size;
     font-weight: 500;
   }
+
+  .version {
+    margin-bottom: 0;
+  }
 }
 
 .bd-pageheader {
@@ -84,6 +88,8 @@
 
 .bd-featurette {
   font-size: $font-size-base;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .bd-search {
@@ -95,7 +101,7 @@
 
 .bd-footer {
   padding: 0;
-  margin-top: 2.5rem;
+  margin-top: 0;
   font-size: $font-size-base;
   color: #fff;
   text-align: center;

@@ -16,7 +16,7 @@ destination:      ./_gh_pages
 port:             9001
 # boosted mod
 baseurl:          ""
-url:              http://boosted.orange.com/v4-alpha
+url:              http://boosted.orange.com
 # end boosted mod
 encoding:         UTF-8
 exclude:          [img, fonts, .git, .github, assets/scss/, build, js, node_modules, nuget, scss, vendor, bower.json, composer.json, Gemfile, Gemfile.lock, Gruntfile.js, package.js, package.json, package-lock.json,sache.json, bower_components]
