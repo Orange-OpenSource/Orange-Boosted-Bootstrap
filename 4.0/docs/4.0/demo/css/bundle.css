@@ -4,7 +4,11 @@
   display: inline-block;
   text-align: center;
   margin-right: 1rem; }
-  .gauge .progress-label {
+  .gauge .gauge-label {
+    padding: 10px 0;
+    font-weight: bold;
+    display: inline-block; }
+  .gauge .gauge-value {
     position: absolute;
     top: calc(50% - 20px);
     left: 50%;
@@ -99,7 +103,7 @@
     text-align: left;
     color: #000;
     background-color: #fff; }
-    .o-tab-container .o-tab-content {
+  .o-tab-container .o-tab-content {
     box-shadow: 0 -2px 0 #000; } }
 
 /* Custom css */
