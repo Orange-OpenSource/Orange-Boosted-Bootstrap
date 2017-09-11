@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Boosted</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../../dist/css/orangeHelvetica.css" rel="stylesheet">
+        <link href="../../../dist/css/orangeIcons.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../dist/css/boosted.css" />
+        <link rel="stylesheet" href="css/bundle.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <main class="container-fluid">
+            <h1>Work in progress</h1>
+
+            <h2>Gauges</h2>
+
+            <div class="gauge green">
+                <!-- htmllint attr-name-style="false" -->
+                <svg aria-hidden="true" class="progress" width="120" height="120" viewBox="0 0 120 120">
+                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
+                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
+                </svg>
+                <label for="control2">SVG</label>
+                <input id="control2" type="range" value="18" readonly class="sr-only"/>
+                <span class="progress-label"></span>
+            </div>
+            <div class="gauge pink">
+                <!-- htmllint attr-name-style="false" -->
+                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
+                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
+                </svg>
+                <label for="control3">HTML</label>
+                <input id="control3" type="range" value="42" readonly class="sr-only"/>
+                <span class="progress-label"></span>
+            </div>
+            <div class="gauge yellow">
+                <!-- htmllint attr-name-style="false" -->
+                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
+                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
+                </svg>
+                <label for="control4">JS</label>
+                <input id="control4" type="range" value="66" readonly class="sr-only"/>
+                <span class="progress-label"></span>
+            </div>
+            <div class="gauge">
+                <!-- htmllint attr-name-style="false" -->
+                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
+                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
+                </svg>
+                <label for="control">CSS</label>
+                <input id="control" type="range" value="100" readonly class="sr-only"/>
+                <span class="progress-label"></span>
+            </div>
+
+            <h2>Custom accordion / tab</h2>
+            <div class="o-tab-container col-md-6">
+                <a class="o-tab-heading" href="#" id="tab1" aria-expanded="true">Tab 1</a>
+                <div class="o-tab-content show" id="tab-1-content">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
+                <a class="o-tab-heading" href="#" id="tab2">Tab 2</a>
+                <div class="o-tab-content" id="tab-2-content">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
+                <a class="o-tab-heading" href="#" id="tab3">Tab 3</a>
+                <div class="o-tab-content" id="tab-3-content">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+            </div>
+            <button type="button" class="btn btn-secondary" id="toggle-layout">Toggle layout</button>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="../../../assets/js/vendor/jquery.min.js"><\/script>')
+        </script>
+        <script src="../../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../../dist/js/boosted.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
