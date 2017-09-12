@@ -984,7 +984,7 @@ $o-link-arrow-separator-size: .625rem;
 // Iconography
 //
 // Load fonts from this directory.
-$icon-font-path:          "../fonts/";
+$icon-font-path:          "../fonts/" !default;
 
 // o-scroll-up
 //
