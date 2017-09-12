@@ -21,46 +21,10 @@
 
             <h2>Gauges</h2>
 
-            <div class="gauge green">
-                <!-- htmllint attr-name-style="false" -->
-                <svg aria-hidden="true" class="progress" width="120" height="120" viewBox="0 0 120 120">
-                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
-                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
-                </svg>
-                <label for="control2">SVG</label>
-                <input id="control2" type="range" value="18" readonly class="sr-only"/>
-                <span class="progress-label"></span>
-            </div>
-            <div class="gauge pink">
-                <!-- htmllint attr-name-style="false" -->
-                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
-                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
-                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
-                </svg>
-                <label for="control3">HTML</label>
-                <input id="control3" type="range" value="42" readonly class="sr-only"/>
-                <span class="progress-label"></span>
-            </div>
-            <div class="gauge yellow">
-                <!-- htmllint attr-name-style="false" -->
-                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
-                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
-                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
-                </svg>
-                <label for="control4">JS</label>
-                <input id="control4" type="range" value="66" readonly class="sr-only"/>
-                <span class="progress-label"></span>
-            </div>
-            <div class="gauge">
-                <!-- htmllint attr-name-style="false" -->
-                <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
-                    <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
-                    <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
-                </svg>
-                <label for="control">CSS</label>
-                <input id="control" type="range" value="100" readonly class="sr-only"/>
-                <span class="progress-label"></span>
-            </div>
+            <div class="gauge green" data-value="18" data-label="SVG"></div>
+            <div class="gauge pink" data-value="42" data-label="HTML"></div>
+            <div class="gauge yellow" data-value="66" data-label="JS"></div>
+            <div class="gauge" data-value="100" data-label="CSS"></div>
 
             <h2>Custom accordion / tab</h2>
             <div class="o-tab-container col-md-6">
