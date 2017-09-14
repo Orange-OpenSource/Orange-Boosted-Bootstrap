@@ -6,7 +6,7 @@
 .fixed-header {
   position: fixed;
   top: 0;
-  z-index: 120;
+  z-index: $zindex-fixed;
   width: 100%;
 }
 
