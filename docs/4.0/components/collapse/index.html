@@ -1683,7 +1683,7 @@ Multiple <code class="highlighter-rouge">&lt;button&gt;</code> or <code class="h
     },
     transformData: function (hits) {
       return hits.map(function (hit) {
-        hit.url = hit.url.replace('http://boosted.orange.com/docs/4.0/', '/docs/');
+        hit.url = hit.url.replace('http://boosted.orange.com/docs/4.0/', '/docs/4.0/');
         return hit;
       });
     },

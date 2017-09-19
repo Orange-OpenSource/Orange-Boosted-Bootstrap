@@ -1193,7 +1193,7 @@ You can let the text <code class="highlighter-rouge">.o-scroll-up-text</code> di
     },
     transformData: function (hits) {
       return hits.map(function (hit) {
-        hit.url = hit.url.replace('http://boosted.orange.com/docs/4.0/', '/docs/');
+        hit.url = hit.url.replace('http://boosted.orange.com/docs/4.0/', '/docs/4.0/');
         return hit;
       });
     },
