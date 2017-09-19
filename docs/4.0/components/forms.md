@@ -988,10 +988,10 @@ Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` follow
   <label for="checkbox1" class="form-control-label col-md-3 col-8">Default</label>
   <div class="o-switch">
     <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-    <div class="toggle form-control-label" aria-hidden="true">
+    <label for="checkbox1" class="toggle form-control-label" aria-hidden="true">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
-    </div>
+    </label>
   </div>
 </div>
 {% endexample %}
