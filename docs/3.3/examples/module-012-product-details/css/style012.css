@@ -1,0 +1,171 @@
+/* general */
+
+html,body {
+    height:100%;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+}
+
+/* page header */
+
+header {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 0 0 0 2rem;
+  float: left;
+}
+
+header .btn {
+  float: left;
+}
+
+/* shop page */
+
+main {
+  margin-bottom: 10rem;
+}
+
+/* shop header */
+
+.shop-category {
+  padding: 3rem 0;
+}
+
+.shop-category h2 {
+  display: inline-block;
+  margin: 0;
+}
+
+.shop-category button {
+  float: right;
+}
+
+/* device preview */
+
+.device-preview {
+  height: 30rem;
+}
+
+.device-preview img{
+  width: auto;
+  height: 100%;
+}
+
+/* device data */
+
+.device-data h3 {
+  line-height: 1;
+  min-height: 4.8rem;
+}
+
+/* rating */
+
+.rating {
+  background: url("../img/stars_sprite.png") no-repeat;
+  background-size: 8rem auto;
+  padding-left: 8.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+  text-decoration: none;
+}
+
+.rating.rated-5 {
+  background-position: 0 -15rem;
+}
+
+.rating.rated-4 {
+  background-position: 0 -11.9rem;
+}
+
+/* discount */
+
+.discount {
+  background: url('../img/label_discount.png') no-repeat;
+  background-size: 12rem auto;
+  font-weight: bold;
+  line-height: 3rem;
+  margin: 1rem 0;
+  padding-left: 4rem;
+}
+
+/* pricing */
+
+.pricing {
+  font-weight: bold;
+  line-height: 1;
+  padding-top: 8.6rem;
+}
+
+.pricing.has-discount {
+  padding-top: 0;
+}
+
+
+.pricing p {
+  margin: 0;
+}
+
+.pricing .currency-fcfa {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.pricing .from {
+  font-size: 1.6rem;
+}
+
+.pricing .old-price{
+  font-size: 2rem;
+  text-decoration: line-through;
+}
+
+.pricing .price {
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #f16e00;
+  margin-bottom: .6rem;
+}
+
+.pricing + ul {
+  list-style-type: square;
+  min-height: 14rem;
+  padding-left: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* mobile view */
+@media (max-width: 767px) {
+  .col-sm-12 {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 4rem;
+  }
+  .device-preview {
+    float: left;
+    max-height: 20rem;
+    width: 50%;
+  }
+
+  .device-data {
+    float: right;
+    width: 50%;
+  }
+
+  .device-data h3{
+    margin-top:0;
+  }
+
+  .device-data button {
+    margin-bottom: 4rem;
+  }
+}

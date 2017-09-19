@@ -1,0 +1,41 @@
+/*!
+ boosted - v3.3.3 - Orange Boosted with Boostrap
+ Copyright 2015 - 2017 Orange SA, all right reserved
+MIT Licensed 
+*/
+
+/*! Orange Boosted with Bootstrap
+
+
+Helvetica Neue LT W07 55 Roman
+<version>1.0</version>
+<vendor>Monotype Imaging Inc.</vendor>
+<credits>
+<name>Fonts.com WebFonts</name>
+<URL>http://webfonts.fonts.com</URL>
+</credits>
+<license>
+<URL>http://webfonts.fonts.com/Legal</URL>
+</license>
+<copyright>Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+<trademark>Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. Patent and Trademark Office and may be registered in certain other jurisdictions.
+Orange Company had buy the right for used Helvetica onto digital applications. 
+Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc 
+*/
+@font-face {
+  font-family: 'HelvNeueOrange';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('../fonts/HelvNeue55_W1G.eot');
+  src: url('../fonts/HelvNeue55_W1G.eot?#iefix') format('embedded-opentype'), url('../fonts/HelvNeue55_W1G.woff2') format('woff2'), url('../fonts/HelvNeue55_W1G.woff') format('woff'), url('../fonts/HelvNeue55_W1G.ttf') format('truetype'), url('../fonts/HelvNeue55_W1G.svg') format('svg');
+}
+@font-face {
+  font-family: 'HelvNeueOrange';
+  font-style: normal;
+  font-weight: 700;
+
+  src: url('../fonts/HelvNeue75_W1G.eot');
+  src: url('../fonts/HelvNeue75_W1G.eot?#iefix') format('embedded-opentype'), url('../fonts/HelvNeue75_W1G.woff2') format('woff2'), url('../fonts/HelvNeue75_W1G.woff') format('woff'), url('../fonts/HelvNeue75_W1G.ttf') format('truetype'), url('../fonts/HelvNeue75_W1G.svg') format('svg');
+}
+/*# sourceMappingURL=orangeHelvetica.css.map */
