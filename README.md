@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://boosted.orange.com/4.0">
-    <img src="http://boosted.orange.com/4.0/assets/brand/orange-space-position.jpg" width=72 height=72>
+  <a href="http://boosted.orange.com/">
+    <img src="http://boosted.orange.com/assets/brand/orange-space-position.jpg" width=72 height=72>
   </a>
 
   <h3 align="center">Orange Boosted with Bootstrap</h3>
@@ -8,7 +8,7 @@
   <p align="center">
     Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
     <br>
-    <a href="http://boosted.orange.com/4.0"><strong>Visit Boosted</strong></a>
+    <a href="http://boosted.orange.com/"><strong>Visit Boosted</strong></a>
   </p>
 </p>
 
@@ -32,12 +32,12 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-beta.1/boosted-4.0.0-beta.1.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta`
-- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta`
+- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.1`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.1`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.1`
+- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta.1`
 
 Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -109,14 +109,14 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/Orange-Boosted-Bootstrap` directory, run `bundle exec jekyll serve` in the command line.
+3. From the root `/Orange-Boosted-Bootstrap` directory, run `npm run docs-serve` in the command line.
 4. Open <http://localhost:9001> in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
 ### Documentation for previous releases
 
-Documentation for v3.x has been made available for the time being at <http://boosted.orange.com/v3/> while folks transition to Bootstrap 4.
+Documentation for v3.x has been made available for the time being at <http://boosted.orange.com/docs/3.3/> while folks transition to Bootstrap 4.
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
