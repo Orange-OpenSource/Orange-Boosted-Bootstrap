@@ -4,14 +4,7 @@
 
     var RADIUS = 54;
     var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
-    var gaugeTemplate = `
-        <svg aria-hidden="true" class="progress" width="120" height="120" viewBox="0 0 120 120">
-            <circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" />
-            <circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" />
-        </svg>
-        <span class="gauge-label"></span>
-        <span class="gauge-value"></span>
-    `;
+    var gaugeTemplate = '<svg aria-hidden="true" class="progress" width="120" height="120" viewBox="0 0 120 120"><circle class="progress-meter" cx="60" cy="60" r="54" stroke-width="12" /><circle class="progress-value" cx="60" cy="60" r="54" stroke-width="12" /></svg><span class="gauge-label"></span><span class="gauge-value"></span>';
 
     $('.gauge').each(function() {
         $(this).html(gaugeTemplate);

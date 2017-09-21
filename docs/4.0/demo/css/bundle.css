@@ -7,7 +7,7 @@
   .gauge .gauge-label {
     padding: 10px 0;
     font-weight: bold;
-    display: inline-block; }
+    display: block; }
   .gauge .gauge-value {
     position: absolute;
     top: calc(50% - 20px);
