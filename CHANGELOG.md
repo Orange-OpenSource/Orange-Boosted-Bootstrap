@@ -1,3 +1,25 @@
+<a name"4.0.0-beta.1"></a>
+### 4.0.0-beta.1 (2017-09-22)
+
+
+#### Bug Fixes
+
+* **component:**
+  * local navigation ([196354a6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/196354a6aead16482ac96aa181e1c5cb15776e50))
+  * alert ([e44abd3f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e44abd3ff60232a43d1ca989ffb41061c833373c))
+  * badges ([ddc15912](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ddc15912f6189723a57debf2b691d0b6533c1f01))
+  * badges ([a2ecddbb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a2ecddbb237943e45695950567c78d4fe0d5970d))
+  * navbar ([239570d6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/239570d63b7ff350fb005b806d0ecc7d008d6ccc))
+  * alert ([55bb18ba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/55bb18ba445519659f40368786074d352319b1f4))
+  * container-fluid width ([0661cfff](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0661cfff0f205e17f46c7bd511f95d1932dd900e))
+  * alert ([152dc6e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/152dc6e3fd2931b55b524367808d10ed61901115))
+* **docs:**
+  * docs layout ([f18393c4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f18393c43f71efb2961f081a48e9ef0593a44d40))
+  * docs layout ([d40862c8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d40862c8fc00584885e268094d5e6195cfe5e190))
+  * docs layout ([b4f7e11d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b4f7e11d1e9550362167b357c32428975626ba19))
+  * Documentation page ([4eb73e29](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4eb73e29feda9e9e3c1374fe16a745118a6e28f8))
+
+
 <a name"4.0.0-beta"></a>
 ### 4.0.0-beta (2017-08-11)
 

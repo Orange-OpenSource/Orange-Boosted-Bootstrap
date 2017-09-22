@@ -10,10 +10,17 @@ fs.readFile('package.json', (err, data) => {
 
   const stampTop =
 `/*!
- * Bootstrap v${pkg.version} (${pkg.homepage})
- * Copyright 2011-${year} ${pkg.author}
+ * Boosted v${pkg.version} (${pkg.homepage})
+ * Copyright 2014-${year} The Boosted Authors
+ * Copyright 2014-${year} Orange
+ * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
+ * This a fork of Bootstrap : Initial license below
+ * Bootstrap v4.0.0-beta (https://getbootstrap.com)
+ * Copyright 2011-${year} The Bootstrap Authors
+ * Copyright 2011-${year} Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
 
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\\'s JavaScript.')

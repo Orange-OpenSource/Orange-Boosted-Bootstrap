@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta): o-priority-nav.js
+ * Boosted (v4.0.0-beta.1): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ const PriorityNav = (($) => {
    */
 
   const NAME = 'prioritynav'
-  const VERSION = '4.0.0-beta'
+  const VERSION = '4.0.0-beta.1'
   const DATA_KEY = 'bs.prioritynav'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
   const RESIZE_DURATION = 500
