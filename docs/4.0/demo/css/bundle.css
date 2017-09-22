@@ -207,6 +207,14 @@ h2 {
 .swiper-slide .card-body p {
   margin: 0; }
 
+@media (max-device-width: 479px) {
+  #bill .card-img img,
+  #shop .card-img img,
+  #timer .card-img img,
+  #unlock .card-img img {
+    width: auto;
+    height: 2.5rem; } }
+
 @media (max-device-width: 767px) {
   body {
     background-color: #eee; }
@@ -216,12 +224,6 @@ h2 {
   #unlock .card-img {
     padding: .625rem;
     text-align: center; }
-  #bill .card-img img,
-  #shop .card-img img,
-  #timer .card-img img,
-  #unlock .card-img img {
-    width: auto;
-    height: 2.5rem; }
   .card-link .card-body {
     padding: 20px;
     text-align: left; }
