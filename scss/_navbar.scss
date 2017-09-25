@@ -42,16 +42,12 @@
 
 .navbar-brand {
   display: inline-block;
+  align-self: flex-end; // boosted mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  // Boosted mod
-  margin-right: .625rem;
-  align-self: flex-end;
-  // end mod
+  margin-right: .625rem; // boosted mod
   font-size: $navbar-brand-font-size;
-  // Boosted mod
-  font-weight: bold;
-  // end mod
+  font-weight: bold; // boosted mod
   line-height: inherit;
   white-space: nowrap;
 
@@ -61,9 +57,9 @@
 
   // Boosted mod
 
-  &+ .navbar-brand {
-    margin-left: 1.25rem;
+  + .navbar-brand {
     margin-right: 0;
+    margin-left: 1.25rem;
   }
 
   @include focus {
