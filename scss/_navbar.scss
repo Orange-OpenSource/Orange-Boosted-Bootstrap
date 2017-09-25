@@ -46,7 +46,7 @@
   padding-bottom: $navbar-brand-padding-y;
   // Boosted mod
   margin-right: .625rem;
-  margin-bottom: .25rem;
+  align-self: flex-end;
   // end mod
   font-size: $navbar-brand-font-size;
   // Boosted mod
@@ -60,6 +60,12 @@
   }
 
   // Boosted mod
+
+  &+ .navbar-brand {
+    margin-left: 1.25rem;
+    margin-right: 0;
+  }
+
   @include focus {
     outline: 1px dotted #fff;
     outline-offset: .625rem;
@@ -70,6 +76,7 @@
     width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
     margin-top: 0;
+    margin-bottom: .25rem;
   }
   // end mod
 }
@@ -284,7 +291,7 @@
 // Dark links against a light background
 .navbar-light {
   .navbar-brand {
-    color: $navbar-light-active-color;
+    color: $navbar-light-color; // boosted mod
 
     @include hover-focus {
       color: $navbar-light-active-color;
@@ -329,7 +336,7 @@
 // White links against a dark background
 .navbar-dark {
   .navbar-brand {
-    color: $navbar-dark-active-color;
+    color: $navbar-dark-color; // boosted mod
 
     @include hover-focus {
       color: $navbar-dark-active-color;

@@ -1,4 +1,7 @@
 $(document).ready(function (){
+    $('#mainNav').navbar({sticky: true});
+
+
     var $inputElms = $('#myForm input[required]');
 
     $inputElms.each(function() {

@@ -78,7 +78,6 @@
   }
 }
 
-
 .navbar-toggler:hover {
   .svg-menu {
     @include svg-menu("000");
@@ -425,5 +424,12 @@
         }
       }
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-brand,
+  .navbar-brand + .navbar-brand {
+    align-self: center;
   }
 }
