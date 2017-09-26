@@ -35,7 +35,6 @@ const Navbar = (($) => {
 
   const Selector = {
     SUPRA_BAR : '.navbar.supra',
-    NAVBAR : '.navbar:not(.supra)',
     MEGAMENU_PANEL : '.mega-menu.panel'
   }
 
@@ -65,9 +64,9 @@ const Navbar = (($) => {
         $(window).on('scroll', () => {
           const Scroll = $(window).scrollTop()
           if (Scroll > 0) {
-            $(Selector.NAVBAR).addClass('minimized')
+            $(this._element).addClass('minimized')
           } else {
-            $(Selector.NAVBAR).removeClass('minimized')
+            $(this._element).removeClass('minimized')
           }
         })
       }
