@@ -6,98 +6,80 @@ group: components
 toc: true
 ---
 
-## How it works
+## Usage
 
-Structure it with `o-footer` class and `o-footer-top` & `o-footer-bottom` to obtain two different parts. On top part, with bootstrap classes (`col-*`), you can have 6 columns to diplay content. Put an `ul` (or `ol`) to obtain one colum. The first element of each column need to be an header tag (`hx`) and it will be displayed in bold. On the bottom part, just put an `ul` (or `ol`) list to have more information links (disclaimer etc). These links will be center on the page and displayed in line.
+Footer can be divided in three parts using `.o-footer-top`, `.o-footer-body` and `.o-footer-bottom` classes. Full width borders can be added using <hr> elements.
+Each footer part must be put in `.container-fluid` or `.container` depending on page layout.
 
-According to the brand, Orange pages need to have only black footer.
+Use `.navbar-nav` for lists. Lists are in row by default and in column when contained in a `.row` block. Use appropriate `.col-` classes to fit all screen resolutions.
+
+According to the brand, Orange footer has black background and white text color.
 
 {% example html %}
-<footer class="navbar" role="contentinfo">
-    <div class="container-fluid">
-          <div class="o-footer col-12">
-              <h1 class="sr-only">footer - site map & informations</h1>
-              <div class="container-fluid o-footer-top">
-                  <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-                          <ul>
-                              <li><h2>Sed ut perspiciatis</h2></li>
-                              <li><a href="#">Unde omnis istea</a></li>
-                              <li><a href="#">Natus error sit</a></li>
-                              <li><a href="#">Voluptatem</a></li>
-                              <li><a href="#">Totam rem aperiam</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-                          <ul>
-                              <li><h2>Voluptatem accusantium</h2></li>
-                              <li><a href="#">Natus error sit</a></li>
-                              <li><a href="#">Unde omnis istea</a></li>
-                              <li><a href="#">Voluptatem</a></li>
-                              <li><a href="#">Doloremque</a></li>
-                              <li><a href="#">Totam rem aperiam</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-                          <ul>
-                              <li><h2>Natus error sit</h2></li>
-                              <li><a href="#">Doloremque</a></li>
-                              <li><a href="#">Totam rem aperiam</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-                          <ul>
-                              <li><h2>Doloremque laudantium</h2></li>
-                              <li><a href="#">Doloremque</a></li>
-                              <li><a href="#">Unde omnis istea</a></li>
-                              <li><a href="#">Voluptatem</a></li>
-                              <li><a href="#">Totam rem aperiam</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-                          <ul>
-                              <li><h2>Totam rem aperiam</h2></li>
-                              <li><a href="#">Totam rem aperiam</a></li>
-                              <li><a href="#">Unde omnis istea</a></li>
-                              <li><a href="#">Natus error sit</a></li>
-                              <li><a href="#">Voluptatem</a></li>
-                              <li><a href="#">Doloremque</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-                          <ul>
-                              <li><h2>Accusantium</h2></li>
-                              <li><a href="#">Unde omnis istea</a></li>
-                              <li><a href="#">Natus error sit</a></li>
-                              <li><a href="#">Voluptatem</a></li>
-                              <li><a href="#">Totam rem aperiam</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-12">
-                          <ul class="navbar-nav">
-                              <li><a href="#">Contact us</a></li>
-                              <li><a href="#"><span class="icon-location-pin-compass" aria-hidden="true"></span>Locate a store</a></li>
-                              <li><a href="#">Coverage map</a></li>
-                              <li><a href="#">Business</a></li>
-                              <li><a href="#">Child protection</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-              <div class="o-footer-bottom">
-                  <ul>
-                      <li>© Orange 2015</li>
-                      <li><a href="#">Natus error sit</a></li>
-                      <li><a href="#">Voluptatem</a></li>
-                      <li><a href="#">Totam rem aperiam</a></li>
-                      <li><a href="#">Unde omnis istea</a></li>
-                      <li><a href="#">Natus error sit</a></li>
-                      <li><a href="#">Voluptatem</a></li>
-                  </ul>
-              </div>
+<footer class="o-footer" role="contentinfo">
+    <h1 class="sr-only">footer - site map & informations</h1>
+    <div class="container-fluid o-footer-top">
+        <span>Follow us</span>
+    </div>
+    <hr aria-hidden="true">
+    <div class="container-fluid o-footer-body">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <h2>Discover</h2>
+                <ul class="navbar-nav">
+                    <li><a href="#">Unde omnis istea</a></li>
+                    <li><a href="#">Natus error sit</a></li>
+                    <li><a href="#">Voluptatem</a></li>
+                    <li><a href="#">Totam rem aperiam</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h2>Shop</h2>
+                <ul class="navbar-nav">
+                    <li><a href="#">Natus error sit</a></li>
+                    <li><a href="#">Unde omnis istea</a></li>
+                    <li><a href="#">Voluptatem</a></li>
+                    <li><a href="#">Doloremque</a></li>
+                    <li><a href="#">Totam rem aperiam</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h2>Services</h2>
+                <ul class="navbar-nav">
+                    <li><a href="#">Doloremque</a></li>
+                    <li><a href="#">Totam rem aperiam</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h2>Support</h2>
+                <ul class="navbar-nav">
+                    <li><a href="#">Doloremque</a></li>
+                    <li><a href="#">Unde omnis istea</a></li>
+                    <li><a href="#">Voluptatem</a></li>
+                    <li><a href="#">Totam rem aperiam</a></li>
+                </ul>
+            </div>
         </div>
+        <ul class="navbar-nav">
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Locate a store</a></li>
+            <li><a href="#">Coverage map</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Child protection</a></li>
+        </ul>
+    </div>
+    <hr aria-hidden="true">
+    <div class="o-footer-bottom container-fluid">
+        <ul class="navbar-nav">
+            <li>© Orange 2017</li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Access for all</a></li>
+            <li><a href="#">Safety online</a></li>
+        </ul>
     </div>
 </footer>
 {% endexample %}

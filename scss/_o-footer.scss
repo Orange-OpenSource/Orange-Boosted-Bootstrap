@@ -2,17 +2,14 @@
 //  Footer
 //
 
-.o-footer,
-.o-footer-inverse {
-  padding: 0;
-}
-
 .o-footer {
-  color: #fff;
+  margin-top: 2.5rem;
   background-color: #000;
 
   * {
+    font-size: $font-size-sm;
     font-weight: bold;
+    color: #fff;
   }
 
   hr {
@@ -21,90 +18,50 @@
     border-top-color: #333;
   }
 
-  .o-footer-top {
-    ul {
-      padding: 30px 0;
-      margin: 0 auto;
-      font-size: $font-size-sm;
-      list-style: none;
-      background: #000;
-    }
+  .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
 
     li {
-      h2:first-child {
-        margin: 0 0 18px;
-        font-size: $font-size-base;
-        font-weight: bold;
-        color: #fff;
-      }
-
-      a {
-        font-size: $font-size-sm;
-        line-height: 2.8;
-        color: $gray-400;
-      }
-    }
-
-    .navbar-nav {
-      flex-direction: row;
-
-      li + li {
-        margin-left: 1.25rem;
-      }
-    }
-  }
-
-  .o-footer-body {
-    padding-top: 1.25rem;
-
-    ul {
-      padding-left: 0;
-      list-style: none;
-
-      li {
-        display: inline;
-        margin-right: 1.25rem;
-        margin-left: 0;
-      }
+      margin-right: 1.25rem;
+      line-height: 2.5rem;
     }
 
     a {
-      color: #fff;
-      text-decoration: none;
+      padding: .625rem 0;
     }
+ }
+
+  .o-footer-top,
+  .o-footer-body,
+  .o-footer-bottom {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
   }
 
-  .o-footer-bottom {
-    color: $gray-400;
-    background-color: #000;
+  .o-footer-top {
+    line-height: 2.5rem;
+  }
 
-    ul {
-      padding: .625rem 0;
-      margin: 0;
-      list-style: none;
-    }
-    li {
-      display: inline;
-      margin-right: 1.25rem;
-      font-size: $font-size-sm;
+  .o-footer-body {
+    .row {
+      h2 {
+        margin-top: .625rem;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+        margin-bottom: .625rem;
+      }
+
+      li {
+        margin-left: 0;
+        line-height: 1.25rem;
+      }
 
       a {
-        font-size: $font-size-sm;
-        font-weight: bold;
-        color: #fff;
+        padding: 0;
       }
     }
   }
 }
-
-// @media (min-width: 768px) {
-//   .o-footer .navbar-nav > li {
-//     float: left;
-
-//     a {
-//       padding: .625rem;
-//       margin-top: 1.75rem;
-//       margin-bottom: 0;
-//     }
-//   }
-// }
