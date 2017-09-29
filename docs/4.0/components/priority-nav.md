@@ -24,7 +24,6 @@ Reduce the size of your browser to see overflowing nav items moved into a nice d
 
 {% example html %}
 <div class="o-nav-local">
-    <hr aria-hidden="true">
     <nav class="container-fluid">
         <ul class="nav">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
@@ -37,7 +36,6 @@ Reduce the size of your browser to see overflowing nav items moved into a nice d
             <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
         </ul>
     </nav>
-    <hr aria-hidden="true">
 </div>
 {% endexample %}
 

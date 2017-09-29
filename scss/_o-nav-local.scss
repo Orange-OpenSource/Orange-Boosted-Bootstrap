@@ -4,12 +4,8 @@
 
 .o-nav-local {
   margin-bottom: ($spacer * 2);
-
-  hr {
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid $gray-500;
-  }
+  border-top: 1px solid $gray-500;
+  border-bottom: 1px solid $gray-500;
 
   > .container,
   > .container-fluid {
@@ -40,10 +36,10 @@
     font-size: $font-size-base;
     font-weight: bold;
     line-height: 1;
+  }
 
-    &.active {
-      color: theme-color("primary");
-    }
+  .nav-item.active > .nav-link {
+    color: theme-color("primary");
   }
 
   .dropdown-toggle.show {
@@ -73,10 +69,8 @@
 
 .o-nav-local.inverse {
   background-color: #000;
-
-  hr {
-    border-top: 1px solid $gray-900;
-  }
+  border-top-color: $gray-900;
+  border-bottom-color: $gray-900;
 
   .nav-link {
     @include hover-focus {
