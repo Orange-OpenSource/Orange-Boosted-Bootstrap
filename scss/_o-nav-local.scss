@@ -25,14 +25,14 @@
     margin-left: 0;
   }
 
-  .nav-link,
-  .dropdown-toggle {
+  .nav .nav-link,
+  .nav .dropdown-toggle {
     @include focus {
       outline: 1px dotted;
       outline-offset: -1px;
     }
     display: inline-block;
-    padding: .9375rem 0 1.0625rem;
+    padding: 1rem ($nav-link-padding-x * .5) 1.125rem;
     font-size: $font-size-base;
     font-weight: bold;
     line-height: 1;
