@@ -99,27 +99,15 @@
   }
 }
 
-.bd-footer {
-  padding: 0;
+.o-footer {
   margin-top: 0;
-  font-size: $font-size-base;
-  color: #fff;
-  text-align: center;
-  background-color: #000;
 
-  .o-footer-top {
-    padding: 2.5rem 0;
-  }
+  .o-footer-body {
+    font-size: $font-size-base !important;
+    padding: 1.25rem 0;
 
-  a {
-    color: #fff;
-    text-decoration: underline;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: theme-color("primary");
-      text-decoration: none;
+    p {
+      margin: 0;
     }
   }
 }
