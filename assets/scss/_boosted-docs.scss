@@ -104,7 +104,7 @@
 
   .o-footer-body {
     padding: 1.25rem 0;
-    font-size: $font-size-base !important;
+    font-size: $font-size-base !important; // stylelint-disable-line declaration-no-important
 
     p {
       margin: 0;
