@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import Util from './util'
 
 
@@ -8,7 +9,7 @@ import Util from './util'
  * --------------------------------------------------------------------------
  */
 
-const Tab = (($) => {
+const Tab = (() => {
 
 
   /**
@@ -53,6 +54,7 @@ const Tab = (($) => {
     DROPDOWN              : '.dropdown',
     NAV_LIST_GROUP        : '.nav, .list-group',
     ACTIVE                : '.active',
+    ACTIVE_UL             : '> li > .active',
     DATA_TOGGLE           : '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
     ACTIVE_CHILD          : '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active', // boosted mod
     DROPDOWN_TOGGLE       : '.dropdown-toggle',
@@ -97,7 +99,8 @@ const Tab = (($) => {
       const selector    = Util.getSelectorFromElement(this._element)
 
       if (listElement) {
-        previous = $.makeArray($(listElement).find(Selector.ACTIVE))
+        const itemSelector = listElement.nodeName === 'UL' ? Selector.ACTIVE_UL : Selector.ACTIVE
+        previous = $.makeArray($(listElement).find(itemSelector))
         previous = previous[previous.length - 1]
       }
 
@@ -157,7 +160,14 @@ const Tab = (($) => {
     // private
 
     _activate(element, container, callback) {
-      const active          = $(container).find(Selector.ACTIVE)[0]
+      let activeElements
+      if (container.nodeName === 'UL') {
+        activeElements = $(container).find(Selector.ACTIVE_UL)
+      } else {
+        activeElements = $(container).children(Selector.ACTIVE)
+      }
+
+      const active          = activeElements[0]
       const isTransitioning = callback
         && Util.supportsTransitionEnd()
         && (active && $(active).hasClass(ClassName.FADE))
@@ -206,11 +216,15 @@ const Tab = (($) => {
           $(dropdownChild).removeClass(ClassName.ACTIVE)
         }
 
-        active.setAttribute('aria-expanded', false)
+        if (active.getAttribute('role') === 'tab') {
+          active.setAttribute('aria-selected', false)
+        }
       }
 
       $(element).addClass(ClassName.ACTIVE)
-      element.setAttribute('aria-expanded', true)
+      if (element.getAttribute('role') === 'tab') {
+        element.setAttribute('aria-selected', true)
+      }
       // Boosted mod
       $(element).filter('.nav-link:not(.dropdown-toggle).active').attr({
         tabIndex : '0',
@@ -349,7 +363,7 @@ const Tab = (($) => {
         // end mod
 
         if (typeof config === 'string') {
-          if (data[config] === undefined) {
+          if (typeof data[config] === 'undefined') {
             throw new Error(`No method named "${config}"`)
           }
           data[config]()
@@ -398,6 +412,6 @@ const Tab = (($) => {
 
   return Tab
 
-})(jQuery)
+})($)
 
 export default Tab

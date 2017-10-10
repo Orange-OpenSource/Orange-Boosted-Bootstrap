@@ -16,7 +16,7 @@
   padding: $nav-link-padding-y $nav-link-padding-x;
 
   // Boosted mod
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   // end mod
 
   @include hover-focus {
@@ -89,13 +89,13 @@
 .nav-pills {
   .nav-link {
     @include border-radius($nav-pills-border-radius);
-
-    &.active,
-    .show > & {
-      color: $nav-pills-link-active-color;
-      background-color: $nav-pills-link-active-bg;
   }
-}
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
 }
 
 

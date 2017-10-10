@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x ($navbar-padding-y - .25rem); // boosted mod padding bottom = 25-4px
-  font-weight: bold; // Boosted mod
+  font-weight: $font-weight-bold; // Boosted mod
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properities so that content nested within behave properly.
@@ -47,7 +47,7 @@
   padding-bottom: $navbar-brand-padding-y;
   margin-right: .625rem; // boosted mod
   font-size: $navbar-brand-font-size;
-  font-weight: bold; // boosted mod
+  font-weight: $font-weight-bold; // boosted mod
   line-height: inherit;
   white-space: nowrap;
 
@@ -86,9 +86,7 @@
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
-  // boosted mod
-  margin-top: auto;
-  // end mod
+  margin-top: auto; // boosted mod
   margin-bottom: 0;
   list-style: none;
 
@@ -103,12 +101,24 @@
     }
   }
 
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+
   .dropdown-toggle {
+    margin-left: 1.25rem;
+
     @include focus {
       outline: 1px dotted;
       outline-offset: .5rem;
     }
-    margin-left: 1.25rem;
+
+
+    &::after {
+      border-top: $caret-width solid;
+      border-bottom: 0;
+    }
   }
   // end mod
 }
@@ -135,12 +145,11 @@
 // on the `.navbar` parent.
 .navbar-collapse {
   flex-basis: 100%;
-  // boosted mod
+  flex-grow: 1;
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
-  // align-items: center;
-  align-self: flex-end;
-  // end mod
+  // align-items: center; // boosted mod
+  align-self: flex-end; // boosted mod
 }
 
 // Button for toggling the navbar when in its collapsed state
@@ -202,12 +211,6 @@
         padding: 0;
         // end mod
         .navbar-nav {
-          .dropdown-menu {
-            position: static !important;
-            float: none;
-            transform: unset !important;
-          }
-
           // boosted mod
           .dropdown-toggle {
             margin-left: 0;
@@ -221,6 +224,18 @@
         > .container-fluid {
           padding-right: 0;
           padding-left: 0;
+        }
+
+        .dropup {
+          .dropdown-menu {
+            position: absolute;
+            top: auto;
+            bottom: 100%;
+          }
+
+          .dropdown-toggle {
+            @include caret(up);
+          }
         }
 
         // boosted mod
@@ -242,8 +257,7 @@
       }
 
       @include media-breakpoint-up($next) {
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-flow: row nowrap;
         justify-content: flex-start;
 
         .navbar-nav {
@@ -257,6 +271,11 @@
             right: 0;
             left: auto; // Reset the default from `.dropdown-menu`
           }
+
+          .nav-link {
+            padding-right: .5rem;
+            padding-left: .5rem;
+          }
         }
 
         // For nesting containers, have to redeclare for alignment purposes
@@ -265,11 +284,12 @@
           flex-wrap: nowrap;
         }
 
-        // scss-lint:disable ImportantRule
         .navbar-collapse {
-          display: flex !important;
+          display: flex !important;  // stylelint-disable-line declaration-no-important
+
+          // Changes flex-bases to auto because of an IE10 bug
+          flex-basis: auto;
         }
-        // scss-lint:enable ImportantRule
 
         .navbar-toggler {
           display: none;
@@ -326,6 +346,13 @@
 
   .navbar-text {
     color: $navbar-light-color;
+    a {
+      color: $navbar-light-active-color;
+
+      @include hover-focus {
+        color: $navbar-light-active-color;
+      }
+    }
   }
 }
 
@@ -371,5 +398,12 @@
 
   .navbar-text {
     color: $navbar-dark-color;
+    a {
+      color: $navbar-dark-active-color;
+
+      @include hover-focus {
+        color: $navbar-dark-active-color;
+      }
+    }
   }
 }

@@ -1,4 +1,8 @@
-// switches
+// Orange switches
+//
+//
+// stylelint-disable selector-max-class
+
 .o-switch {
   .toggle,
   .toggle::before,
@@ -25,7 +29,7 @@
     .on,
     .off {
       display: none;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       line-height: 1.625rem;
       color: #fff;
       text-align: left;
@@ -118,7 +122,7 @@
 
 // 3 way toggles
 
-.o-switch.btn-group[data-toggle=buttons] {
+.o-switch.btn-group[data-toggle="buttons"] {
   border: 2px solid #000;
 
   .btn {

@@ -8,11 +8,10 @@
 @import "mixins/orangeIcons";
 
 @font-face {
-  font-family: "icon-orange";
-  src: url("#{$icon-font-path}icon-orange.woff2") format("woff2"),
-    url("#{$icon-font-path}icon-orange.woff") format("woff");
-  font-weight: normal;
+  font-family: icon-orange;
+  src: url("#{$icon-font-path}icon-orange.woff2") format("woff2"), url("#{$icon-font-path}icon-orange.woff") format("woff");
   font-style: normal;
+  font-weight: $font-weight-normal;
 }
 
 .icon-checkbox-tick,
@@ -678,7 +677,7 @@
 .icon-popout-security,
 .icon-popout-teamwork {
   // use !important to prevent issues with browser extensions that change fonts //
-  font-family: "icon-orange" !important;
+  font-family: icon-orange !important; // stylelint-disable-line declaration-no-important
   font-style: normal;
   font-variant: normal;
   line-height: 1;

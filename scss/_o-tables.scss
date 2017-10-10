@@ -1,7 +1,9 @@
 //
 // Tables
 //
-// scss-lint:disable QualifyingElement
+// stylelint-disable selector-no-qualifying-type
+// stylelint-disable selector-max-type
+
 // Change the table states color
 @mixin table-row-variant-border($state, $color) {
   // Exact selectors below required to override `.table-striped` and prevent
@@ -78,13 +80,13 @@
 
       > th {
         font-size: $font-size-base;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
       }
     }
   }
 
   tbody > th {
-    font-weight: normal;
+    font-weight: $font-weight-normal;
   }
 
   &.has-checkbox {
@@ -201,7 +203,7 @@
 caption {
   padding: .75rem 0;
   font-size: $h1-font-size;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   color: #000;
   caption-side: top;
   background-color: #fff;
@@ -217,7 +219,7 @@ caption {
   caption {
     padding: .75rem 0;
     font-size: $h1-font-size;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     color: #000;
     background-color: #fff;
   }

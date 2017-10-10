@@ -21,7 +21,7 @@ $(function () {
 
   QUnit.test('should provide no conflict', function (assert) {
     assert.expect(1)
-    assert.strictEqual($.fn.dropdown, undefined, 'dropdown was set back to undefined (org value)')
+    assert.strictEqual(typeof $.fn.dropdown, 'undefined', 'dropdown was set back to undefined (org value)')
   })
 
   QUnit.test('should throw explicit error on undefined method', function (assert) {
@@ -162,10 +162,7 @@ $(function () {
         + '</div>'
         + '</div>'
         + '</div>'
-    var $dropdown = $(dropdownHTML)
-          .appendTo('#qunit-fixture')
-          .find('[data-toggle="dropdown"]')
-          .bootstrapDropdown()
+    var $dropdown = $(dropdownHTML).find('[data-toggle="dropdown"]').bootstrapDropdown()
     $dropdown
       .parent('.dropdown')
       .on('shown.bs.dropdown', function () {
@@ -281,7 +278,7 @@ $(function () {
         + '<a class="dropdown-item" href="#">Action 1</a>'
         + '</div>'
         + '</div>'
-    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]').bootstrapDropdown()
+    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]')
     var $first = $dropdowns.first()
     var $last = $dropdowns.last()
 
@@ -327,7 +324,7 @@ $(function () {
         + '<a class="dropdown-item" href="#">Action 1</a>'
         + '</div>'
         + '</div>'
-    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]').bootstrapDropdown()
+    var $dropdowns = $(dropdownHTML).appendTo('#qunit-fixture').find('[data-toggle="dropdown"]')
     var $first = $dropdowns.first()
     var $last = $dropdowns.last()
 
@@ -622,6 +619,35 @@ $(function () {
         $textarea.trigger($.Event('click'))
       })
     $dropdown.trigger('click')
+  })
+
+  QUnit.test('Dropdown should not use Popper.js in navbar', function (assert) {
+    assert.expect(1)
+    var done = assert.async()
+    var html = '<nav class="navbar navbar-expand-md navbar-light bg-light">'
+        + '<div class="dropdown">'
+        + '  <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>'
+        + '  <div class="dropdown-menu" aria-labelledby="dropdown">'
+        + '    <a class="dropdown-item" href="#">Action</a>'
+        + '    <a class="dropdown-item" href="#">Another action</a>'
+        + '    <a class="dropdown-item" href="#">Something else here</a>'
+        + '  </div>'
+        + '</div>'
+        + '</nav>'
+
+    $(html).appendTo('#qunit-fixture')
+    var $triggerDropdown = $('#qunit-fixture')
+      .find('[data-toggle="dropdown"]')
+      .bootstrapDropdown()
+    var $dropdownMenu = $triggerDropdown.next()
+
+    $triggerDropdown
+      .parent('.dropdown')
+      .on('shown.bs.dropdown', function () {
+        assert.ok(typeof $dropdownMenu.attr('style') === 'undefined', 'No inline style applied by Popper.js')
+        done()
+      })
+    $triggerDropdown.trigger($.Event('click'))
   })
 
   QUnit.test('should set aria-haspopup="true" on dropdown-menu, role="menu" on dropdown-menu, and role="menuitem" on dropdown-item ', function (assert) {

@@ -118,6 +118,7 @@ $theme-color-interval: 8% !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
+$enable-caret:              false !default;
 $enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
@@ -166,6 +167,11 @@ $link-color:            #000 !default;
 $link-decoration:       none !default;
 $link-hover-color:      theme-color("primary") !default;
 $link-hover-decoration: none !default;
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom: 1rem !default;
 
 
 // Grid breakpoints
@@ -237,6 +243,7 @@ $line-height-lg:         (20 / 18) !default;
 $line-height-sm:         (20 / 14) !default;
 
 $border-width: 2px;
+$border-color: $gray-200 !default;
 
 $border-radius:          .25rem !default;
 $border-radius-lg:       .3rem !default;
@@ -256,6 +263,7 @@ $transition-collapse:    height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
+// stylelint-disable value-keyword-case
 $font-family-sans-serif: "HelvNeueOrange", "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
@@ -264,6 +272,7 @@ $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.125rem !default; // 18px
 $font-size-sm:   .875rem !default; // 14px
 
+$font-weight-light: 300 !default;
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
@@ -344,11 +353,11 @@ $table-border-color:            $gray-500 !default;
 $table-head-bg:                 $white !default;
 $table-head-color:              $black !default;
 
-$table-inverse-bg:              $black !default;
-$table-inverse-accent-bg:       $gray-900 !default;
-$table-inverse-hover-bg:        $gray-700 !default;
-$table-inverse-border-color:    $gray-500 !default;
-$table-inverse-color:           $white !default;
+$table-dark-bg:              $black !default;
+$table-dark-accent-bg:       $gray-900 !default;
+$table-dark-hover-bg:        $gray-700 !default;
+$table-dark-border-color:    $gray-500 !default;
+$table-dark-color:           $white !default;
 
 
 // Buttons
@@ -461,6 +470,7 @@ $form-check-inline-margin-x: .75rem !default;
 
 $form-group-margin-bottom:       $spacer !default;
 
+$input-group-addon-color:        $input-color !default;
 $input-group-addon-bg:           $white !default;
 $input-group-addon-border-color: $input-border-color !default;
 
@@ -499,7 +509,7 @@ $custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,%3Csv
 
 $custom-select-padding-y:          .4375rem !default;
 $custom-select-padding-x:          .5rem !default;
-$custom-select-height:              $input-height  !default;
+$custom-select-height:             $input-height !default;
 $custom-select-indicator-padding:  1rem !default; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-line-height:        $input-btn-line-height !default;
 $custom-select-color:              $input-color !default;
@@ -724,6 +734,7 @@ $card-inverse-link-hover-color:    #fff !default;
 
 $card-img-overlay-padding: 1.25rem !default;
 
+$card-group-margin:         ($grid-gutter-width / 2) !default;
 $card-deck-margin:         ($spacer * 2) !default;
 
 $card-columns-count:        3 !default;
@@ -793,6 +804,7 @@ $badge-font-size:             .875rem !default;
 $badge-font-weight:           $font-weight-bold !default;
 $badge-padding-y:             .1875rem !default;
 $badge-padding-x:             .625rem !default;
+$badge-border-radius:         $border-radius !default;
 
 $badge-pill-padding-x:        .625rem !default;
 // Use a higher than normal value to ensure completely rounded edges when
@@ -906,7 +918,7 @@ $breadcrumb-bg:                 #fff !default;
 $breadcrumb-divider-color:      #000 !default;
 $breadcrumb-active-color:       theme-color("primary") !default;
 $breadcrumb-divider:            "\e93e" !default;
-$breadcrumb-font-family:        "icon-orange" !default;
+$breadcrumb-font-family:        icon-orange !default;
 $breadcrumb-divider-font-size:  .625rem !default;
 $breadcrumb-font-size:          $font-size-sm !default;
 $breadcrumb-line-height:        $line-height-sm !default;
@@ -955,14 +967,11 @@ $kbd-bg:                      $gray-300 !default;
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
 
-
-
 //////// BOOSTED SPECIFIC ////////
 // Accordions
 
 $accordion-arrow-icon: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E") !default;
 $o-sortable-hover-icon: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%2017%22%3E%3Cpath%20d%3D%22M%207%2C17%200%2C10%20h%2014%20l%20-7%2C7%20z%22%2F%3E%3Cpath%20d%3D%22M%207%2C0%2014%2C7%200%2C7%207%2C0%20z%22%2F%3E%3C%2Fsvg%3E") !default;
-
 
 // arrow Links
 
@@ -971,14 +980,12 @@ $o-link-arrow-separator-padding-horizontal: .625rem !default;
 $o-link-arrow-color: #000 !default;
 $o-link-arrow-separator-size: .625rem !default;
 
-
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
 // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 // For REM size
-
 
 // Iconography
 //
@@ -997,7 +1004,6 @@ $o-scroll-up-font-size: 1.25rem !default; // 20px
 //
 
 
-
 // Mega-Menu
 //
 //
@@ -1010,7 +1016,6 @@ $megamenu-position:                 fixed !default;
 //
 
 // Tabs
-
 
 
 // Pills
@@ -1037,9 +1042,13 @@ $o-stepbar-mobile-arrow-height: 1.875rem !default;
 
 // focus state mixin
 @mixin focus {
-  &:focus { @content }
+  &:focus {
+    @content;
+  }
 }
 
 @mixin active {
-  &:active { @content }
+  &:active {
+    @content;
+  }
 }

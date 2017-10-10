@@ -1,7 +1,8 @@
 //
 // Base styles
 //
-// scss-lint:disable QualifyingElement
+// stylelint-disable selector-no-qualifying-type
+// stylelint-disable selector-max-class
 
 .btn {
   // due to css that underline link in paragraph, need to ensure link with btn style are not underline
@@ -141,7 +142,7 @@ fieldset[disabled] a.btn {
         color: $btn-link-disabled-black-bg-color;
         background-color: transparent;
         border-color: $btn-link-disabled-black-bg-color;
-     }
+      }
 
       color: $btn-link-disabled-black-bg-color;
       background-color: transparent;

@@ -37,15 +37,12 @@
   margin-top: -1.125rem;
   font-size: 1.875rem;
   color: #000;
-  text-shadow: 1px 0 0 #fff,
-               0 1px 0 #fff,
-               -1px 0 0 #fff,
-               0 -1px 0 #fff;
+  text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   background-image: none;
   background-repeat: no-repeat;
 
   &::before {
-    font-family: "icon-orange";
+    font-family: icon-orange;
   }
 }
 
@@ -79,7 +76,7 @@
     }
 
     &.active {
-      background-color: theme-color("primary");
+      background-color: theme-color("primary"); // stylelint-disable-line selector-no-qualifying-type
     }
   }
 }
@@ -98,7 +95,7 @@
 
 .swiper-button-prev::before,
 .swiper-button-next::before {
-  font-family: "icon-orange";
+  font-family: icon-orange;
   font-size: 1.875rem;
   content: "\e93f";
 }

@@ -1,5 +1,5 @@
 // small device display as card
-// scss-lint:disable QualifyingElement
+// stylelint-disable selector-no-qualifying-type
 @include media-breakpoint-down(md) {
   .o-responsive-table {
     thead {
@@ -28,7 +28,7 @@
     td[data-title]::before {
       float: left;
       width: 50%;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       content: attr(data-title);
     }
     tr {
@@ -38,7 +38,7 @@
     }
     tbody {
       th[scope="row"] {
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         border-top: 0;
         border-bottom: 2px solid $gray-500;
       }

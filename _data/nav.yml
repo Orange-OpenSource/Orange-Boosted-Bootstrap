@@ -5,7 +5,7 @@
     - title: Contents
     - title: Browsers & devices
     - title: JavaScript
-    - title: Options
+    - title: Theming
     - title: Build tools
     # - title: Best practices # TODO: Write this content
     - title: Webpack
@@ -92,6 +92,12 @@
     # - title: Approach
     - title: Icons
 
+- title: Migration
+
+# boosted mod
+- title: Boosted migration
+# end mod
+
 # - title: About
 #   pages:
 #     - title: History
@@ -108,8 +114,3 @@
 #     - title: Boosted license
 # end mod
 #     - title: Translations
-
-- title: Migration
-# boosted mod
-- title: Boosted migration
-# end mod

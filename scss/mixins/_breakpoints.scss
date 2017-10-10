@@ -81,10 +81,20 @@
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
 
-  @media (min-width: $min) and (max-width: $max) {
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper) {
       @content;
     }
   }
+}
 
 // Media between the breakpoint's minimum and maximum widths.
 // No minimum for the smallest breakpoint, and no maximum for the largest one.
@@ -98,8 +108,12 @@
       @content;
     }
   } @else if $max == null {
-    @include media-breakpoint-up($name)
+    @include media-breakpoint-up($name) {
+      @content;
+    }
   } @else if $min == null {
-    @include media-breakpoint-down($name)
+    @include media-breakpoint-down($name) {
+      @content;
+    }
   }
 }

@@ -21,7 +21,7 @@ $(function () {
 
   QUnit.test('should provide no conflict', function (assert) {
     assert.expect(1)
-    assert.strictEqual($.fn.megamenu, undefined, 'megamenu was set back to undefined (org value)')
+    assert.strictEqual($.fn.megamenu, 'undefined', 'megamenu was set back to undefined (org value)')
   })
 
   QUnit.test('should throw explicit error on wrong ID parameter', function (assert) {

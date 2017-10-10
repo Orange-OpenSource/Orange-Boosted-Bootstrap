@@ -5,12 +5,12 @@
 
 .o-link-arrow {
   font-size: $font-size-base;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   text-decoration: none;
 
   &::after {
     padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-    font-family: "icon-orange";
+    font-family: icon-orange;
     font-size: $o-link-arrow-separator-size;
     color: $o-link-arrow-color;
     content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
@@ -30,7 +30,7 @@
     }
     &::before {
       padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal $o-link-arrow-separator-padding-vertical 0;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-      font-family: "icon-orange";
+      font-family: icon-orange;
       font-size: $o-link-arrow-separator-size;
       color: $o-link-arrow-color;
       content: "\e93f"; // Unicode space added since inline-block means non-collapsing white-space

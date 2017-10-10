@@ -24,7 +24,7 @@
     h5 {
       margin: 0;
       font-size: $font-size-base;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       line-height: 1;
     }
 
@@ -43,7 +43,7 @@
         background-image: $accordion-arrow-icon;
       }
 
-      &[aria-expanded="true"]::after {
+      &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
         transform: rotate(180deg);
       }
     }

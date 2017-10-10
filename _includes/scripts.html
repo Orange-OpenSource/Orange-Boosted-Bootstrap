@@ -23,19 +23,18 @@
   <script src="{{ site.baseurl }}/assets/js/vendor/clipboard.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/vendor/holder.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/src/application.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/src/pwa.js"></script>
 <!-- Boosted mod -->
   <script src="{{ site.baseurl }}/assets/js/src/application-boosted.js"></script>
 <!-- end mod -->
 {% endif %}
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="{{ site.baseurl }}/assets/js/ie-emulation-modes-warning.js"></script>
 
 {% if page.layout == "docs" %}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  var docsearch = docsearch({
+<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script>
+  docsearch({
     apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
     indexName: 'boosted-orange',
     inputSelector: '#search-input',

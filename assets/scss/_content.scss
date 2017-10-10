@@ -1,4 +1,4 @@
-// scss-lint:disable IdSelector, NestingDepth, SelectorDepth, QualifyingElement
+// stylelint-disable selector-max-combinators, selector-max-compound-selectors, selector-max-type, selector-no-qualifying-type
 
 //
 // Automatically style Markdown-based tables like a Bootstrap `.table`.
@@ -97,8 +97,8 @@
 
   @include media-breakpoint-up(sm) {
     font-size: 3rem;
-    }
   }
+}
 
 .bd-lead {
   font-size: 1.125rem;

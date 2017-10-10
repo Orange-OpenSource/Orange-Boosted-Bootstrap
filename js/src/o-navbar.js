@@ -129,7 +129,7 @@ const Navbar = (($) => {
         }
 
         if (typeof config === 'string') {
-          if (data[config] === undefined) {
+          if (data[config] === 'undefined') {
             throw new Error(`No method named "${config}"`)
           }
           data[config]()

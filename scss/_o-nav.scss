@@ -173,11 +173,11 @@
 }
 
 .hide {
-  display: none !important;
+  display: none !important; // stylelint-disable-line declaration-no-important
 }
 
 .show-inline-block {
-  display: inline-block !important;
+  display: inline-block !important; // stylelint-disable-line declaration-no-important
 }
 
 .overflow-nav-list {

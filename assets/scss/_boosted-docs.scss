@@ -1,4 +1,4 @@
-// scss-lint:disable IdSelector
+// stylelint-disable selector-max-id
 .bd-home {
   background-color: #000;
 
@@ -63,7 +63,7 @@
   h1 {
     margin: 2.6875rem 0;
     font-size: $h1-font-size;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
   }
 
   p {
@@ -75,7 +75,7 @@
     h1 {
       margin: 1.25rem 0;
       font-size: $h2-font-size;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       line-height: 1;
       text-align: left;
     }
@@ -103,8 +103,8 @@
   margin-top: 0;
 
   .o-footer-body {
-    font-size: $font-size-base !important;
     padding: 1.25rem 0;
+    font-size: $font-size-base !important; // stylelint-disable-line declaration-no-important
 
     p {
       margin: 0;
@@ -131,7 +131,7 @@
 
   &::after {
     padding-left: .375rem;
-    font-family: "icon-orange" !important;
+    font-family: icon-orange !important; // stylelint-disable-line declaration-no-important
     font-size: inherit;
     color: theme-color("danger");
     vertical-align: bottom;
@@ -237,4 +237,3 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
     background-image: $doc-link-arrow-hover;
   }
 }
-// scss-lint:enable IdSelector
