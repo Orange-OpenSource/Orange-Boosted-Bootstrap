@@ -41,9 +41,10 @@ And that's it—you're on your way to a fully Boosted by Orange site. If you're 
 Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
 
 {% highlight html %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <title>Hello, world!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -91,7 +92,7 @@ Bootstrap employs a handful of important global styles and settings that you'll 
 Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
 
 {% highlight html %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   ...
 </html>
@@ -119,7 +120,7 @@ On the rare occasion you need to override it, use something like the following:
 }
 {% endhighlight %}
 
-With the above snippet, nested elements—including generated content via `:before` and `:after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
+With the above snippet, nested elementsâ€”including generated content via `::before` and `::after`â€”will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 

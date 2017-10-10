@@ -38,7 +38,7 @@ In addition to the `.active` class, you must use `aria-selected="true"` state to
 
 {% example html %}
 <ul class="list-group">
-  <li class="list-group-item active" aria-selected="true">Cras justo odio</li>
+  <li class="list-group-item active">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
   <li class="list-group-item">Morbi leo risus</li>
   <li class="list-group-item">Porta ac consectetur ac</li>
@@ -68,7 +68,7 @@ Be sure to **not use the standard `.btn` classes here**.
 
 {% example html %}
 <div class="list-group">
-  <a href="#" class="list-group-item active" aria-selected="true">
+  <a href="#" class="list-group-item list-group-item-action active">
     Cras justo odio
   </a>
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
@@ -82,7 +82,7 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 
 {% example html %}
 <div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action active" aria-selected="true">
+  <button type="button" class="list-group-item list-group-item-action active">
     Cras justo odio
   </button>
   <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
@@ -127,15 +127,15 @@ Add badges to any list group item to show unread counts, activity, and more with
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Cras justo odio
-    <span class="badge badge-default badge-pill">14</span>
+    <span class="badge badge-primary badge-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Dapibus ac facilisis in
-    <span class="badge badge-default badge-pill">2</span>
+    <span class="badge badge-primary badge-pill">2</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Morbi leo risus
-    <span class="badge badge-default badge-pill">1</span>
+    <span class="badge badge-primary badge-pill">1</span>
   </li>
 </ul>
 {% endexample %}
@@ -146,7 +146,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 {% example html %}
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" aria-selected="true">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
       <small>3 days ago</small>
@@ -256,7 +256,7 @@ You can activate a list group navigation without writing any JavaScript by simpl
 Enable tabbable list item via JavaScript (each list item needs to be activated individually):
 
 {% highlight js %}
-$('#myList a').click(function (e) {
+$('#myList a').on('click', function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
