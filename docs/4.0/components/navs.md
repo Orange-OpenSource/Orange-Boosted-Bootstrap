@@ -86,16 +86,16 @@ Right-aligned with `.justify-content-end`:
 {% example html %}
 <ul class="nav justify-content-end">
   <li class="nav-item">
-  	<a class="nav-link active" href="#" aria-current="page">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
-  	<a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-  	<a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
   </li>
   <li class="nav-item">
-  	<a class="nav-link disabled" href="#">Disabled</a>
+    <a class="nav-link disabled" href="#">Disabled</a>
   </li>
 </ul>
 {% endexample %}
