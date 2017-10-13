@@ -130,7 +130,7 @@ const Navbar = (() => {
         }
 
         if (typeof config === 'string') {
-          if (data[config] === 'undefined') {
+          if (data[config] === undefined) { // eslint-disable-line no-undefined
             throw new Error(`No method named "${config}"`)
           }
           data[config]()
