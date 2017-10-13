@@ -30,6 +30,9 @@ Add our optional JavaScript plugins, jQuery, and [Popper.js](https://github.com/
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<!-- if you need ajax or effects
+<script src="{{ site.cdn.jquery_full }}" integrity="{{ site.cdn.jquery_full_hash }}" crossorigin="anonymous"></script>
+-->
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 <script src="path/to/your/boosted.js"></script>
 {% endhighlight %}
