@@ -33,7 +33,7 @@
     }
   }
 
-  .nav-link {
+  .nav-link:not(.disabled) {
     @include hover-focus {
       color: $nav-tabs-link-hover-color;
       background-color: $nav-tabs-link-hover-bg;

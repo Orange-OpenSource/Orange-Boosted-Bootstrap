@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import Util from './util'
 
 /* eslint no-magic-numbers: ["error", { "ignore": [1,2] }] */
@@ -9,7 +10,7 @@ import Util from './util'
  * --------------------------------------------------------------------------
  */
 
-const MegaMenu = (($) => {
+const MegaMenu = (() => {
 
 
   /**

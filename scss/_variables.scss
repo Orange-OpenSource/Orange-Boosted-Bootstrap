@@ -106,7 +106,7 @@ $theme-colors: (
   info: $cyan,
   warning: $yellow,
   danger: $red,
-  light: $white,
+  light: $gray-400,
   dark: $black
 ) !default;
 
@@ -118,7 +118,7 @@ $theme-color-interval: 8% !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:              false !default;
+$enable-caret:              true !default;
 $enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
