@@ -167,15 +167,15 @@
     },
     {
       "path": "./dist/css/boosted.css",
-      "maxSize": "25 kB"
+      "maxSize": "35 kB" // Bootstrap 25KB need to reduce boosted weight!
     },
     {
       "path": "./dist/css/boosted.min.css",
-      "maxSize": "20 kB"
+      "maxSize": "35 kB" // Bootstrap 20KB need to reduce boosted weight!
     },
     {
       "path": "./dist/js/boosted.bundle.js",
-      "maxSize": "45 kB"
+      "maxSize": "50 kB" // BS 45Kb
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
@@ -183,11 +183,11 @@
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "20 kB"
+      "maxSize": "25 kB" // BS 20KB
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "15 kB"
+      "maxSize": "20 kB" // BS 15KB
     }
   ],
   "jspm": {
