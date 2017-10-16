@@ -85,7 +85,7 @@ const PriorityNav = (() => {
     _initMenu() {
       let MenuLabel = this._config
 
-      if (MenuLabel === 'undefined') {
+      if (typeof MenuLabel === 'undefined') {
         MenuLabel = MenuLabelDefault
       }
 
