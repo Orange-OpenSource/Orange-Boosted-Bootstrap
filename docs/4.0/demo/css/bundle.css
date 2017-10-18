@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     font-weight: bold; }
-  .gauge .progress {
+  .gauge svg {
     transform: rotate(-90deg);
     background-color: #fff; }
   .gauge .progress-meter,
