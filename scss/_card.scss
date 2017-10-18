@@ -71,7 +71,9 @@
 .card-header {
   padding: $card-spacer-y $card-spacer-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  background-color: $card-cap-bg;
+  font-weight: $font-weight-bold; // boosted mod
+  color: $white; // boosted mod
+  background-color: $black; // boosted mod
   border-bottom: $card-border-width solid $card-border-color;
 
   &:first-child {

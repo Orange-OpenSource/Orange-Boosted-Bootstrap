@@ -224,7 +224,7 @@ h2 {
   #unlock .card-img {
     padding: .625rem;
     text-align: center; }
-  .card-link .card-body {
+  .o-card-link .card-body {
     padding: 20px;
     text-align: left; }
   #single-card {

@@ -2,11 +2,11 @@
 // Cards
 //
 
-.card-deck .card-link {
+.card-deck .o-card-link {
   margin: 0 1rem;
 }
 
-.card-link {
+.o-card-link {
   border: 1px solid #ccc;
 
   .card-title {
@@ -41,7 +41,7 @@
 }
 
 @include media-breakpoint-down(xs) {
-  .card.card-link {
+  .card.o-card-link {
     flex-basis: calc(50% - 2rem);
     margin: 1rem;
   }
@@ -50,8 +50,8 @@
     flex-direction: column;
   }
 
-  .card-deck .card-link,
-  .card-link {
+  .card-deck .o-card-link,
+  .o-card-link {
     flex-direction: row;
     height: 3.75rem;
     margin: 0;
@@ -59,7 +59,7 @@
     border: 0;
   }
 
-  .card-link {
+  .o-card-link {
     .card-img {
       flex-basis: 20%;
       width: auto;
@@ -97,7 +97,7 @@
 }
 
 @include media-breakpoint-only(sm) {
-  .card.card-link {
+  .card.o-card-link {
     flex-basis: calc(50% - 2rem);
     margin: 1rem;
   }
