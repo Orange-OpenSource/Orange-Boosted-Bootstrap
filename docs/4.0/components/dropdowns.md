@@ -480,7 +480,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
 
 {% example html %}
 <div class="dropdown-menu">
-  <form class="px-4 py-3">
+  <form class="px-3 py-3">
     <div class="form-group">
       <label for="exampleDropdownFormEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
