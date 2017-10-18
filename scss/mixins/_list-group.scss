@@ -2,16 +2,34 @@
 
 @mixin list-group-item-variant($state, $background, $color) {
   .list-group-item-#{$state} {
-    color: $color;
+    // boosted mod
+    @if $state == "secondary" or $state == "dark"  {
+      color: $white;
+    } @else {
+      color: $color;
+    }
+    // end mod
     background-color: $background;
   }
 
   a.list-group-item-#{$state},
   button.list-group-item-#{$state} {
-    color: $color;
+    // boosted mod
+    @if $state == "secondary" or $state == "dark"  {
+      color: $white;
+    } @else {
+      color: $color;
+    }
+    // end mod
 
     @include hover-focus {
-      color: $color;
+      // boosted mod
+      @if $state == "secondary" or $state == "dark"  {
+        color: $white;
+      } @else {
+        color: $color;
+      }
+      // end mod
       background-color: darken($background, 5%);
     }
 
