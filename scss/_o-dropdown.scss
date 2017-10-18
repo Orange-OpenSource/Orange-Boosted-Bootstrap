@@ -9,7 +9,7 @@
 
 .dropdown-item {
   padding-left: 1.25rem;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 
   &:focus {
     color: #000;

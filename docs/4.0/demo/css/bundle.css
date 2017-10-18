@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     font-weight: bold; }
-  .gauge .progress {
+  .gauge svg {
     transform: rotate(-90deg);
     background-color: #fff; }
   .gauge .progress-meter,
@@ -224,7 +224,7 @@ h2 {
   #unlock .card-img {
     padding: .625rem;
     text-align: center; }
-  .card-link .card-body {
+  .o-card-link .card-body {
     padding: 20px;
     text-align: left; }
   #single-card {

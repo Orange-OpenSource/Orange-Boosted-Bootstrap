@@ -1,6 +1,7 @@
 //
 // Orange stepbar
 //
+// stylelint-disable selector-max-class
 
 // url encoded colors
 $arrow-black: "000000";
@@ -37,7 +38,7 @@ $arrow-orange: "f16e00";
     overflow: hidden;
   }
 
-    // one item
+  // one item
   .stepbar-item:first-child:nth-last-child(1) {
     width: 100%;
   }
@@ -73,7 +74,7 @@ $arrow-orange: "f16e00";
     padding: ($spacer / 2) $spacer;
     padding-left: 2rem;
     font-size: $font-size-base;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     line-height: $line-height-base;
     color: #000;
     white-space: nowrap;

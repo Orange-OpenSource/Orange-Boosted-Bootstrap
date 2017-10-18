@@ -10,7 +10,7 @@
       background-color: $background;
       // Boosted mod adapt color with background
       @if ($state == "secondary" or $state == "danger" or $state == "dark") {
-        color: $white
+        color: $white;
       }
       // end mod
     }

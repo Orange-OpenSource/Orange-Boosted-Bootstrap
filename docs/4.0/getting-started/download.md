@@ -36,7 +36,7 @@ Pull in Boosted's **source files** into nearly any project with some of the most
 
 Install Boosted in your Node powered apps with [the npm package](https://www.npmjs.org/package/boosted):
 
-{% highlight bash %}
+{% highlight sh %}
 npm install boosted@{{ site.current_version }}
 {% endhighlight %}
 
@@ -55,10 +55,4 @@ You can also install and manage Bootstrap's Sass and JavaScript using [Composer]
 composer require orange-opensource/orange-boosted-bootstrap:{{ site.current_version }}
 {% endhighlight %}
 
-### Bower
 
-Install and manage Bootstrap's Sass and JavaScript using [Bower](https://bower.io).
-
-{% highlight bash %}
-bower install bootstrap#v{{ site.current_version }}
-{% endhighlight %}

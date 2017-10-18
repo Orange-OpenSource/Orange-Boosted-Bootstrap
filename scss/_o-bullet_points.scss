@@ -38,7 +38,7 @@
     color: $gray-600;
   }
 
-  ul ul > li::before {
+  ul ul > li::before { // stylelint-disable-line selector-max-type
     color: $gray-500;
   }
 }

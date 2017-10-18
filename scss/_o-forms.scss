@@ -1,7 +1,8 @@
 //
 //  Orange forms
 //
-// scss-lint:disable QualifyingElement
+// stylelint-disable selector-no-qualifying-type
+// stylelint-disable selector-max-class
 
 .input-group {
   > .input-group-addon,
@@ -72,7 +73,7 @@
 
   &.is-required .form-control-label::after {
     margin-left: 6px;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     color: theme-color("primary");
     content: "*";
   }
@@ -95,7 +96,7 @@
   .form-control-feedback {
     margin-top: .625rem;
     font-size: $font-size-sm;
-    font-weight: normal;
+    font-weight: $font-weight-normal;
     line-height: 1;
   }
 
@@ -103,7 +104,7 @@
     position: relative;
 
     .form-control-feedback {
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       color: theme-color("danger");
     }
 
@@ -189,7 +190,7 @@ select.form-control {
 // custom checkboxes
 
 .custom-control .custom-control-description {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 .form-group .custom-control {
@@ -246,7 +247,7 @@ select.form-control {
 
 .custom-select {
   padding-right: 1.875rem;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   background-position-x: right .625rem;
   background-size: .875rem;
 }

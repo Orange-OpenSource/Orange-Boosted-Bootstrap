@@ -59,6 +59,9 @@ Rename all the class containing  `_` to `-`.
 
 Class names and semantic changed, see [Orange stepbar](../components/stepbar/) for documentation and examples.
 
+### Badge
+`badge-default` have been replace by `badge-dark`
+
 ### Accordions
 
 [Accordions](../components/collapse/#accordion-example) are now based on card structure. Be sure to use `.card-header` and `.card-body` in a `.card` element, in addition of the `.o-accordion` on the main container. To get multiple openable behaviour just add `.multi` class on each `.card` item.

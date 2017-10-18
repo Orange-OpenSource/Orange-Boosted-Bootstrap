@@ -1,3 +1,5 @@
 **/*.min.js
 **/vendor/*
 **/dist/*
+**/docs/**/demo/*
+**/docs/**/examples/orange-*

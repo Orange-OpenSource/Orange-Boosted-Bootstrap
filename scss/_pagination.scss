@@ -1,8 +1,6 @@
 .pagination {
   display: flex;
-  // 1-2: Disable browser default list styles
-  padding-left: 0; // 1
-  list-style: none; // 2
+  @include list-unstyled();
   @include border-radius();
 }
 
@@ -10,7 +8,7 @@
   // Boosted mod
   &.presentation {
     padding: .625rem 0;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
   }
   &.presentation + .page-item,
   &:first-child {
@@ -97,7 +95,7 @@
   min-height: $pagination-min-width;
   padding: $pagination-padding-y $pagination-padding-x;
   margin-left: 0;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   // End mod
   line-height: $pagination-line-height;
   color: $pagination-color;
@@ -124,6 +122,7 @@
   // end mod
 }
 // Boosted mod
+// stylelint-disable selector-max-class
 .page-item {
   &.presentation + .page-item,
   &:first-child,

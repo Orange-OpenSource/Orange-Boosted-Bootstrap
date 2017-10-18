@@ -1,4 +1,4 @@
-// scss-lint:disable VendorPrefix
+// stylelint-disable declaration-no-important
 
 //
 // Right side table of contents
@@ -43,7 +43,7 @@
       text-decoration: none;
     }
   }
-    }
+}
 
 //
 // Left side navigation
@@ -95,11 +95,11 @@
   margin-left: $grid-gutter-width / -2; // boosted mod
   border-bottom: 1px solid $gray-300;
 
-// Boosted mod keep basic form-control style
-//  .form-control:focus {
-//    border-color: $bd-purple-bright;
-//    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
-//  }
+  // Boosted mod keep basic form-control style
+  //  .form-control:focus {
+  //    border-color: $bd-purple-bright;
+  //    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
+  //  }
 }
 
 .bd-search-docs-toggle {

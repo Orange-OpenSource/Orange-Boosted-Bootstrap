@@ -53,3 +53,4 @@ For visually hidden interactive controls, such as traditional "skip" links, `.sr
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 [comment]: # Boosted mod
 - ["aXe core" extension for identifying accessibility issues](https://github.com/dequelabs/axe-core/blob/master/doc/projects.md)
+- [Orange accessibility guidelines](http://a11y-guidelines.orange.com/home_EN/index.html)

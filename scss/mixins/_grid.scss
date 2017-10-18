@@ -10,7 +10,7 @@
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
+      padding-left: ($gutter / 2);
       // width: 100%; //Boosted mod our fluid is not 100% width
     }
   }
@@ -49,7 +49,7 @@
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
+      padding-left: ($gutter / 2);
     }
   }
 }
@@ -62,7 +62,7 @@
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       margin-right: ($gutter / -2);
-      margin-left:  ($gutter / -2);
+      margin-left: ($gutter / -2);
     }
   }
 }
@@ -79,7 +79,7 @@
     @include media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       padding-right: ($gutter / 2);
-      padding-left:  ($gutter / 2);
+      padding-left: ($gutter / 2);
     }
   }
 }
@@ -90,4 +90,8 @@
   // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
   // do not appear to require this.
   max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  margin-left: percentage($size / $columns);
 }

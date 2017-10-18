@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 /**
  * --------------------------------------------------------------------------
  * Boosted (v4.0.0-beta.1): o-priority-nav.js
@@ -5,7 +7,7 @@
  * --------------------------------------------------------------------------
  */
 
-const PriorityNav = (($) => {
+const PriorityNav = (() => {
 
 
   /**
@@ -83,7 +85,7 @@ const PriorityNav = (($) => {
     _initMenu() {
       let MenuLabel = this._config
 
-      if (MenuLabel === undefined) {
+      if (typeof MenuLabel === 'undefined') {
         MenuLabel = MenuLabelDefault
       }
 
@@ -218,6 +220,6 @@ const PriorityNav = (($) => {
 
   return PriorityNav
 
-})(jQuery)
+})($)
 
 export default PriorityNav

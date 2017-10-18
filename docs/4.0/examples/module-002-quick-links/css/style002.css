@@ -47,24 +47,24 @@ h2 {
 
 /* links page */
 
-.card-link {
+.o-card-link {
   border: 0;
 }
 
-.card-link .card-img {
+.o-card-link .card-img {
   text-align: left;
 }
 
-.card-link .card-img img {
+.o-card-link .card-img img {
   width: 25%;
 }
 
-.card-link .card-body {
+.o-card-link .card-body {
   padding: 1.25rem 0;
   text-align: left;
 }
 
-.card-link .card-title {
+.o-card-link .card-title {
   margin-bottom: 10px;
   align-self: flex-start;
 }

@@ -18,16 +18,14 @@
 @import "functions";
 @import "variables";
 @font-face {
-  font-family: "HelvNeueOrange";
+  font-family: HelvNeueOrange;
   font-style: normal;
   font-weight: 400;
-  src: url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"),
-  url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
+  src: url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
 }
 @font-face {
-  font-family: "HelvNeueOrange";
+  font-family: HelvNeueOrange;
   font-style: normal;
   font-weight: 700;
-  src: url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"),
-  url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
+  src: url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
 }

@@ -1,20 +1,19 @@
 .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   // boosted mod
-  // margin-bottom: $spacer;
+  // margin-bottom: $breadcrumb-margin-bottom;
   font-size: $breadcrumb-font-size;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   line-height: $breadcrumb-line-height;
   // end mod
   list-style: none;
   background-color: $breadcrumb-bg;
   @include border-radius($border-radius);
-  @include clearfix;
 }
 
 .breadcrumb-item {
-  float: left;
-
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item::before {
     display: inline-block; // Suppress underlining of the separator in modern browsers
@@ -38,6 +37,7 @@
   + .breadcrumb-item:hover::before {
     text-decoration: underline;
   }
+  // stylelint-disable-next-line no-duplicate-selectors
   + .breadcrumb-item:hover::before {
     text-decoration: none;
   }
