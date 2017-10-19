@@ -98,19 +98,19 @@
 - title: Boosted migration
 # end mod
 
-# - title: About
-#   pages:
-#     - title: History
+- title: About
+  pages:
+    - title: History
 # boosted mod
-#     - title: Boosted history
+    - title: Boosted history
 # end mod
-#     - title: Team
-#     - title: Brand
+    - title: Team
+    - title: Brand
 # boosted mod
-#     - title: Orange brand
+    - title: Orange brand
 # end mod
-#     - title: License
+    - title: License
 # boosted mod
-#     - title: Boosted license
+    - title: Boosted license
 # end mod
-#     - title: Translations
+    - title: Translations

@@ -25,20 +25,20 @@
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: $btn-focus-box-shadow;
+    box-shadow: $input-btn-focus-box-shadow;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: .65;
+    // opacity: .65; // Boosted mod don't play with opacity
     @include box-shadow(none);
   }
 
-  &:active,
-  &.active {
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active {
     background-image: none;
-    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    @include box-shadow($input-btn-focus-box-shadow, $btn-active-box-shadow);
   }
 }
 
@@ -53,18 +53,57 @@ fieldset[disabled] a.btn {
 // Alternate buttons
 //
 
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
+// boosted mod custom buttons
+// @mixin button-variant($background, $border, $hover-background, $hover-border, $active-background, $active-border, $disabled-background, $disabled-border, $disabled-color, $color) {
+.btn-primary,
+.btn-warning {
+  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
+  &.btn-inverse {
+    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
+  }
+}
+.btn-secondary,
+.btn-light {
+  @include button-variant(transparent, $black, $black, $black, theme-color("primary"), theme-color("primary"), transparent, $gray-500, $gray-500, $black);
+  &.btn-inverse {
+    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+  }
+}
+.btn-success {
+  @include button-variant(theme-color("success"), theme-color("success"), $black, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $black);
+  &.btn-inverse {
+    @include button-variant(theme-color("success"), theme-color("success"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+  }
+}
+.btn-info,
+.btn-dark {
+  @include button-variant($black, $black, $white, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $white);
+  &.btn-inverse {
+    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
+  }
+}
+.btn-danger {
+  @include button-variant(theme-color("danger"), theme-color("danger"), $black, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white);
+  &.btn-inverse {
+    @include button-variant(theme-color("danger"), theme-color("danger"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black);
   }
 }
 
+// Boosted mod custom outline buttons values
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @if $color == "light" {
       @include button-outline-variant($value, $gray-900);
     } @else {
-      @include button-outline-variant($value, $white);
+      @if $color == "warning" {
+        @include button-outline-variant(theme-color("primary"), $black);
+      } @else {
+        @if $color == "info" {
+          @include button-outline-variant(theme-color("secondary"), $black);
+        } @else {
+          @include button-outline-variant($value, $black);
+        }
+      }
     }
   }
 }
@@ -76,9 +115,15 @@ fieldset[disabled] a.btn {
 
 // Make a button look and behave like a link
 .btn-link {
-  font-weight: $font-weight-normal;
+  // font-weight: $font-weight-normal; // Boosted mod font-weight stay bold
   color: $link-color;
   background-color: transparent;
+
+  // Boosted mod
+  &.btn-inverse {
+    color: #fff;
+  }
+  // end mod
 
   @include hover {
     color: $link-hover-color;

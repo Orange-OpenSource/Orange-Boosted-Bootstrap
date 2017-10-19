@@ -1,46 +1,46 @@
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta): tab.js
+ * Bootstrap (v4.0.0-beta.2): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-
-var Tab = function ($) {
-
+var Tab = function () {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
-
   var NAME = 'tab';
-  var VERSION = '4.0.0-beta';
+  var VERSION = '4.0.0-beta.2';
   var DATA_KEY = 'bs.tab';
-  var EVENT_KEY = '.' + DATA_KEY;
+  var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var TRANSITION_DURATION = 150;
-  // boosted mod
+  var TRANSITION_DURATION = 150; // boosted mod
+
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+
   var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+
   var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
-  var REGEXP_KEYDOWN = new RegExp(ARROW_LEFT_KEYCODE + '|' + ARROW_UP_KEYCODE + '|' + ARROW_RIGHT_KEYCODE + '|' + ARROW_DOWN_KEYCODE);
-  // end mod
+
+  var REGEXP_KEYDOWN = new RegExp(ARROW_LEFT_KEYCODE + "|" + ARROW_UP_KEYCODE + "|" + ARROW_RIGHT_KEYCODE + "|" + ARROW_DOWN_KEYCODE); // end mod
 
   var Event = {
-    HIDE: 'hide' + EVENT_KEY,
-    HIDDEN: 'hidden' + EVENT_KEY,
-    SHOW: 'show' + EVENT_KEY,
-    SHOWN: 'shown' + EVENT_KEY,
-    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
-    KEYDOWN_DATA_API: 'keydown' + EVENT_KEY + DATA_API_KEY // boosted mod
-  };
+    HIDE: "hide" + EVENT_KEY,
+    HIDDEN: "hidden" + EVENT_KEY,
+    SHOW: "show" + EVENT_KEY,
+    SHOWN: "shown" + EVENT_KEY,
+    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY,
+    KEYDOWN_DATA_API: "keydown" + EVENT_KEY + DATA_API_KEY // boosted mod
 
+  };
   var ClassName = {
     DROPDOWN_MENU: 'dropdown-menu',
     ACTIVE: 'active',
@@ -48,56 +48,59 @@ var Tab = function ($) {
     FADE: 'fade',
     SHOW: 'show'
   };
-
   var Selector = {
     DROPDOWN: '.dropdown',
     NAV_LIST_GROUP: '.nav, .list-group',
     ACTIVE: '.active',
+    ACTIVE_UL: '> li > .active',
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-    ACTIVE_CHILD: '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active', // boosted mod
+    ACTIVE_CHILD: '> .nav-item > .active, > .active, > .dropdown > .dropdown-menu > .nav-item > .active, > .dropdown > .dropdown-menu > .active',
+    // boosted mod
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
 
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-  var Tab = function () {
+  var Tab =
+  /*#__PURE__*/
+  function () {
     function Tab(element) {
-      _classCallCheck(this, Tab);
-
       this._element = element;
-      this._addAccessibility(); // Boosted mod
-    }
 
-    // getters
+      this._addAccessibility(); // Boosted mod
+
+    } // getters
+
+
+    var _proto = Tab.prototype;
 
     // public
-
-    Tab.prototype.show = function show() {
+    _proto.show = function show() {
       var _this = this;
 
       if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName.ACTIVE) || $(this._element).hasClass(ClassName.DISABLED)) {
         return;
       }
 
-      var target = void 0;
-      var previous = void 0;
+      var target;
+      var previous;
       var listElement = $(this._element).closest(Selector.NAV_LIST_GROUP)[0];
       var selector = Util.getSelectorFromElement(this._element);
 
       if (listElement) {
-        previous = $.makeArray($(listElement).find(Selector.ACTIVE));
+        var itemSelector = listElement.nodeName === 'UL' ? Selector.ACTIVE_UL : Selector.ACTIVE;
+        previous = $.makeArray($(listElement).find(itemSelector));
         previous = previous[previous.length - 1];
       }
 
       var hideEvent = $.Event(Event.HIDE, {
         relatedTarget: this._element
       });
-
       var showEvent = $.Event(Event.SHOW, {
         relatedTarget: previous
       });
@@ -122,11 +125,9 @@ var Tab = function ($) {
         var hiddenEvent = $.Event(Event.HIDDEN, {
           relatedTarget: _this._element
         });
-
         var shownEvent = $.Event(Event.SHOWN, {
           relatedTarget: previous
         });
-
         $(previous).trigger(hiddenEvent);
         $(_this._element).trigger(shownEvent);
       };
@@ -138,24 +139,31 @@ var Tab = function ($) {
       }
     };
 
-    Tab.prototype.dispose = function dispose() {
+    _proto.dispose = function dispose() {
       $.removeData(this._element, DATA_KEY);
       this._element = null;
-    };
+    }; // private
 
-    // private
 
-    Tab.prototype._activate = function _activate(element, container, callback) {
+    _proto._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-      var active = $(container).find(Selector.ACTIVE)[0];
+      var activeElements;
+
+      if (container.nodeName === 'UL') {
+        activeElements = $(container).find(Selector.ACTIVE_UL);
+      } else {
+        activeElements = $(container).children(Selector.ACTIVE);
+      }
+
+      var active = activeElements[0];
       var isTransitioning = callback && Util.supportsTransitionEnd() && active && $(active).hasClass(ClassName.FADE);
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, isTransitioning, callback);
-      };
+      }; // Boosted mod
 
-      // Boosted mod
+
       $(container).find('.nav-link:not(.dropdown-toggle)').attr({
         tabIndex: '-1',
         'aria-selected': false
@@ -163,8 +171,7 @@ var Tab = function ($) {
       $(container).find('.tab-pane').attr({
         'aria-hidden': true,
         tabIndex: '-1'
-      });
-      // end mod
+      }); // end mod
 
       if (active && isTransitioning) {
         $(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
@@ -177,22 +184,27 @@ var Tab = function ($) {
       }
     };
 
-    Tab.prototype._transitionComplete = function _transitionComplete(element, active, isTransitioning, callback) {
+    _proto._transitionComplete = function _transitionComplete(element, active, isTransitioning, callback) {
       if (active) {
         $(active).removeClass(ClassName.ACTIVE);
-
         var dropdownChild = $(active.parentNode).find(Selector.DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
           $(dropdownChild).removeClass(ClassName.ACTIVE);
         }
 
-        active.setAttribute('aria-expanded', false);
+        if (active.getAttribute('role') === 'tab') {
+          active.setAttribute('aria-selected', false);
+        }
       }
 
       $(element).addClass(ClassName.ACTIVE);
-      element.setAttribute('aria-expanded', true);
-      // Boosted mod
+
+      if (element.getAttribute('role') === 'tab') {
+        element.setAttribute('aria-selected', true);
+      } // Boosted mod
+
+
       $(element).filter('.nav-link:not(.dropdown-toggle).active').attr({
         tabIndex: '0',
         'aria-selected': true
@@ -200,8 +212,7 @@ var Tab = function ($) {
       $(element).filter('.tab-pane.active').attr({
         'aria-hidden': false,
         tabIndex: '0'
-      });
-      // end mod
+      }); // end mod
 
       if (isTransitioning) {
         Util.reflow(element);
@@ -211,8 +222,8 @@ var Tab = function ($) {
       }
 
       if (element.parentNode && $(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
-
         var dropdownElement = $(element).closest(Selector.DROPDOWN)[0];
+
         if (dropdownElement) {
           $(dropdownElement).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);
         }
@@ -223,23 +234,19 @@ var Tab = function ($) {
       if (callback) {
         callback();
       }
-    };
-
-    // Boosted mod
+    }; // Boosted mod
 
 
-    Tab.prototype._addAccessibility = function _addAccessibility() {
+    _proto._addAccessibility = function _addAccessibility() {
       var $tab = $(this._element);
       var $tabpanel = $($tab.attr('href'));
       var $tablist = $tab.closest(Selector.NAV_LIST_GROUP);
       var tabId = $tab.attr('id') || Util.getUID(NAME);
-
       $tab.attr('id', tabId);
 
       if ($tabpanel) {
         $tab.attr('role', 'tab');
-        $tablist.attr('role', 'tablist');
-        // $li.attr('role', 'presentation')
+        $tablist.attr('role', 'tablist'); // $li.attr('role', 'presentation')
       }
 
       if ($tab.hasClass(ClassName.ACTIVE)) {
@@ -275,11 +282,8 @@ var Tab = function ($) {
           'aria-labelledby': tabId
         });
       }
-    };
-    // end mod
-
+    }; // end mod
     // static
-
     // Boosted mod
 
 
@@ -287,24 +291,27 @@ var Tab = function ($) {
       var $this = $(this);
       var Items = $this.closest('ul[role=tablist] ').find('[role=tab]:visible');
       var k = e.which || e.keyCode;
-
       var index = 0;
-
       index = Items.index(Items.filter(':focus'));
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
         index--;
       } // up & left
+
+
       if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
         index++;
       } // down & right
 
+
       if (index < 0) {
         index = Items.length - 1;
       }
+
       if (index === Items.length) {
         index = 0;
       }
+
       var nextTab = Items.eq(index);
 
       if (nextTab.attr('role') === 'tab') {
@@ -313,8 +320,8 @@ var Tab = function ($) {
 
       e.preventDefault();
       e.stopPropagation();
-    };
-    // end mod
+    }; // end mod
+
 
     Tab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -324,25 +331,26 @@ var Tab = function ($) {
         if (!data) {
           data = new Tab(this);
           $this.data(DATA_KEY, data);
-        }
+        } // Boosted mod
 
-        // Boosted mod
+
         if (/init/.test(config)) {
           return;
-        }
-        // end mod
+        } // end mod
+
 
         if (typeof config === 'string') {
-          if (data[config] === undefined) {
-            throw new Error('No method named "' + config + '"');
+          if (typeof data[config] === 'undefined') {
+            throw new Error("No method named \"" + config + "\"");
           }
+
           data[config]();
         }
       });
     };
 
     _createClass(Tab, null, [{
-      key: 'VERSION',
+      key: "VERSION",
       get: function get() {
         return VERSION;
       }
@@ -350,28 +358,30 @@ var Tab = function ($) {
 
     return Tab;
   }();
-
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     event.preventDefault();
+
     Tab._jQueryInterface.call($(this), 'show');
-  })
-  // Boosted mod
+  }) // Boosted mod
   .on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, function (event) {
     if (!REGEXP_KEYDOWN.test(event.which)) {
       return;
     }
+
     event.preventDefault();
+
     Tab._dataApiKeydownHandler.call($(this), event);
   }).on('DOMContentLoaded', function () {
     Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init');
-  });
-  // end mod
+  }); // end mod
+
   /**
    * ------------------------------------------------------------------------
    * jQuery
@@ -380,11 +390,12 @@ var Tab = function ($) {
 
   $.fn[NAME] = Tab._jQueryInterface;
   $.fn[NAME].Constructor = Tab;
+
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
     return Tab._jQueryInterface;
   };
 
   return Tab;
-}(jQuery);
+}($);
 //# sourceMappingURL=tab.js.map

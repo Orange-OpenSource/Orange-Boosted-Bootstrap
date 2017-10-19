@@ -90,7 +90,6 @@ select.form-control {
 // boosted mod labels are alltime centered
 label,
 .col-form-label,
-.form-control-label,
 .form-check-label {
   padding-top: calc(#{$input-btn-padding-y} + #{$input-btn-border-width});
   padding-bottom: calc(#{$input-btn-padding-y} + #{$input-btn-border-width});
@@ -319,11 +318,6 @@ select.form-control-lg {
 
     .input-group {
       width: auto;
-    }
-
-    .form-control-label {
-      margin-bottom: 0;
-      vertical-align: middle;
     }
 
     // Remove default margin on radios/checkboxes that were used for stacking, and

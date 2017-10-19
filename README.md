@@ -32,21 +32,24 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-beta.1/boosted-4.0.0-beta.1.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-beta.2/boosted-4.0.0-beta.2.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.1`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.1`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.1`
-- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta.1`
+- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.2`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.2`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.2`
+- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta.2`
 
 Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
-[![Bower](https://img.shields.io/bower/v/boosted.svg)](https://bower.io/search/?q=boosted)
-[![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 [![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4-dev.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
+
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
+[![CSS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
+[![JS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/js/boosted.min.js)
+[![Sauce Labs Test Status](https://saucelabs.com/browser-matrix/lausselloic.svg)](https://saucelabs.com/u/lausselloic)
 
 ## What's included
 
@@ -55,6 +58,10 @@ Within the download you'll find the following directories and files, logically g
 ```
 boosted/
 ├── css/
+│   ├── boosted.css
+│   ├── boosted.css.map
+│   ├── boosted.min.css
+│   ├── boosted.min.css.map
 │   ├── boosted-grid.css
 │   ├── boosted-grid.css.map
 │   ├── boosted-grid.min.css
@@ -66,19 +73,17 @@ boosted/
 │   ├── boosted-rtl.css
 │   ├── boosted-rtl.min.css
 │   ├── boosted-rtl.min.css.map
-|   ├── boosted.css
-│   ├── boosted.css.map
-│   ├── boosted.min.css
-│   ├── boosted.min.css.map
-|   ├── orangeHelvetica.css
+│   ├── orangeHelvetica.css
 │   ├── orangeHelvetica.css.map
 │   ├── orangeHelvetica.min.css
 │   ├── orangeHelvetica.min.css.map
-|   ├── orangeIcons.css
+│   ├── orangeIcons.css
 │   ├── orangeIcons.css.map
 │   ├── orangeIcons.min.css
 │   └── orangeIcons.min.css.map
 └── js/
+    ├── boosted.bundle.js
+    ├── boosted.bundle.min.js
     ├── boosted.js
     └── boosted.min.js
 ```
@@ -110,7 +115,7 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 3. From the root `/Orange-Boosted-Bootstrap` directory, run `npm run docs-serve` in the command line.
-4. Open <http://localhost:9001> in your browser, and voilà.
+4. Open `http://localhost:9001` in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 

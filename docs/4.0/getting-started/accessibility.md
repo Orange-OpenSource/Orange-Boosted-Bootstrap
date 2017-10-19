@@ -49,7 +49,7 @@ For visually hidden interactive controls, such as traditional "skip" links, `.sr
 - [The A11Y Project](http://a11yproject.com/)
 - [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)
-- [Colour Contrast Analyser (CCA)](https://www.paciellogroup.com/resources/contrastanalyser/)
+- [Colour Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 [comment]: # Boosted mod
 - ["aXe core" extension for identifying accessibility issues](https://github.com/dequelabs/axe-core/blob/master/doc/projects.md)

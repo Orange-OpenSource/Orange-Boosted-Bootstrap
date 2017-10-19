@@ -12,15 +12,6 @@
   border-style: none solid none none;
   border-width: 0 1px 0 0;
 }
-.skiplinks .skiplinks-section a:hover {
-  cursor: pointer;
-}
-.skiplinks .skiplinks-section a:hover,
-.skiplinks .skiplinks-section a:focus {
-  color: #f16e00;
-  background-color: #fff;
-  outline: 0 none;
-}
 .skiplinks .skiplinks-section.skiplinks-show {
   position: absolute;
   top: 20px;
@@ -41,7 +32,8 @@
 
 .skiplinks .skiplinks-section a:hover,
 .skiplinks .skiplinks-section a:focus {
-  color: #f50;
+  color: #f16e00;
+  background-color: #fff;
   outline: 0 none;
 }
 

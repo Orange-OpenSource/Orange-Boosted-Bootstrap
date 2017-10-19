@@ -4,6 +4,7 @@
   @include border-radius();
 }
 
+// stylelint-disable selector-max-class
 .page-item {
   // Boosted mod
   &.presentation {
@@ -26,8 +27,30 @@
         background-image: #{$pagination-icon-prev};
         background-repeat: no-repeat;
       }
+      @include hover-focus {
+        &::before {
+          background-image: #{$pagination-icon-prev-active};
+        }
+      }
+      &.has-label {
+        padding-right: 1.125rem;
+        padding-left: 2rem;
+      }
     }
   }
+
+  &.presentation + .page-item,
+  &:first-child,
+  &:last-child {
+    .page-link {
+      @include hover-focus {
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border-color;
+      }
+    }
+  }
+
   // End mod
   &:last-child {
     .page-link {
@@ -43,6 +66,15 @@
         content: "";
         background-image: #{$pagination-icon-next};
         background-repeat: no-repeat;
+      }
+      @include hover-focus {
+        &::before {
+          background-image: #{$pagination-icon-next-active};
+        }
+      }
+      &.has-label {
+        padding-right: 2rem;
+        padding-left: 1.125rem;
       }
       // End mod
     }
@@ -121,45 +153,6 @@
   }
   // end mod
 }
-// Boosted mod
-// stylelint-disable selector-max-class
-.page-item {
-  &.presentation + .page-item,
-  &:first-child,
-  &:last-child {
-    .page-link {
-      @include hover-focus {
-        color: $pagination-active-color;
-        background-color: $pagination-active-bg;
-        border-color: $pagination-active-border-color;
-      }
-    }
-  }
-  &.presentation + .page-item .page-link,
-  &:first-child .page-link {
-    @include hover-focus {
-      &::before {
-        background-image: #{$pagination-icon-prev-active};
-      }
-    }
-    &.has-label {
-      padding-right: 1.125rem;
-      padding-left: 2rem;
-    }
-  }
-  &:last-child .page-link {
-    @include hover-focus {
-      &::before {
-        background-image: #{$pagination-icon-next-active};
-      }
-    }
-    &.has-label {
-      padding-right: 2rem;
-      padding-left: 1.125rem;
-    }
-  }
-}
-// End mod
 
 //
 // Sizing

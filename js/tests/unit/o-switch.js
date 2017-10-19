@@ -37,7 +37,7 @@ $(function () {
     assert.expect(2)
     var oswitch = $('<div class="o-switch">' +
                     '<input class="checkbox sr-only" id="checkbox1" type="checkbox"/>' +
-                    '<div class="toggle form-control-label col-xs-3" aria-hidden="true"></div>' +
+                    '<div class="toggle col-form-label col-xs-3" aria-hidden="true"></div>' +
                   '</div>')
     var $oswitch = $(oswitch)
     var $toggle = $oswitch.find('.toggle')

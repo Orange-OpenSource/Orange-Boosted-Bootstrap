@@ -264,11 +264,11 @@ The `.form-group` class is the easiest way to add some structure to forms. Its o
 {% example html %}
 <form>
   <div class="form-group">
-    <label class="form-control-label" for="formGroupExampleInput">Example label</label>
+    <label class="col-form-label" for="formGroupExampleInput">Example label</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
   </div>
   <div class="form-group">
-    <label class="form-control-label" for="formGroupExampleInput2">Another label</label>
+    <label class="col-form-label" for="formGroupExampleInput2">Another label</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
   </div>
 </form>
@@ -314,36 +314,36 @@ More complex layouts can also be created with the grid system.
 <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4" class="col-form-label">Email</label>
+      <label for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4" class="col-form-label">Password</label>
+      <label for="inputPassword4">Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress" class="col-form-label">Address</label>
+    <label for="inputAddress">Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="form-group">
-    <label for="inputAddress2" class="col-form-label">Address 2</label>
+    <label for="inputAddress2">Address 2</label>
     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity" class="col-form-label">City</label>
+      <label for="inputCity">City</label>
       <input type="text" class="form-control" id="inputCity">
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState" class="col-form-label">State</label>
+      <label for="inputState">State</label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
         <option>...</option>
       </select>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip" class="col-form-label">Zip</label>
+      <label for="inputZip">Zip</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
@@ -365,22 +365,21 @@ Create horizontal forms with the grid by adding the `.row` class to form groups 
 Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls. For `<legend>` elements, you can use `.col-form-legend` to make them appear similar to regular `<label>` elements.
 
 {% example html %}
-<div class="container">
-  <form>
-    <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-      </div>
+<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-      </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
-    <fieldset class="form-group">
-      <div class="row">
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
       <legend class="col-form-legend col-sm-2">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
@@ -402,25 +401,51 @@ Be sure to add `.col-form-label` to your `<label>`s as well so they're verticall
           </label>
         </div>
       </div>
-      </div>
-    </fieldset>
-    <div class="form-group row">
-      <div class="col-sm-2">Checkbox</div>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> Check me out
-          </label>
-        </div>
+    </div>
+  </fieldset>
+  <div class="form-group row">
+    <div class="col-sm-2">Checkbox</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Check me out
+        </label>
       </div>
     </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
     </div>
-  </form>
-</div>
+  </div>
+</form>
+{% endexample %}
+
+##### Horizontal form label sizing
+
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+
+{% example html %}
+<form>
+  <div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+    </div>
+  </div>
+</form>
 {% endexample %}
 
 #### Column sizing
@@ -989,10 +1014,10 @@ Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` follow
 
 {% example html %}
 <div class="form-group row">
-  <label for="checkbox1" class="form-control-label col-md-3 col-8">Default</label>
+  <label for="checkbox1" class="col-form-label col-md-3 col-8">Default</label>
   <div class="o-switch">
     <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-    <label for="checkbox1" class="toggle form-control-label" aria-hidden="true">
+    <label for="checkbox1" class="toggle col-form-label" aria-hidden="true">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
     </label>
@@ -1006,10 +1031,10 @@ Default color is brand primary. Success color is also supported, use `.success` 
 
 {% example html %}
 <div class="form-group row">
-  <label for="checkbox3" class="form-control-label col-md-3 col-8">Success</label>
+  <label for="checkbox3" class="col-form-label col-md-3 col-8">Success</label>
   <div class="o-switch">
     <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
-    <label for="checkbox3" class="toggle form-control-label" aria-hidden="true">
+    <label for="checkbox3" class="toggle col-form-label" aria-hidden="true">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
     </label>
@@ -1023,10 +1048,10 @@ Finally use `.toggle-rounded` class on `.toggle` element to get rounded switch a
 
 {% example html %}
 <div class="form-group row">
-  <label for="checkbox4" class="form-control-label col-md-3 col-8">Rounded</label>
+  <label for="checkbox4" class="col-form-label col-md-3 col-8">Rounded</label>
   <div class="o-switch">
     <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-    <label for="checkbox4" class="toggle toggle-rounded form-control-label" aria-hidden="true" style="width: 78px;">
+    <label for="checkbox4" class="toggle toggle-rounded col-form-label" aria-hidden="true" style="width: 78px;">
       <span class="on">On</span>
       <span class="off">Off</span>
     </label>

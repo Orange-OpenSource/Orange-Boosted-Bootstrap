@@ -5,7 +5,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.1): o-megamenu.js
+ * Boosted (v4.0.0-beta.2): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ const MegaMenu = (() => {
    */
 
   const NAME = 'megamenu'
-  const VERSION = '4.0.0-beta.1'
+  const VERSION = '4.0.0-beta.2'
   const DATA_KEY = 'bs.megamenu'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
   const ARROW_LEFT_KEYCODE = 37 // KeyboardEvent.which value for left arrow key
@@ -365,6 +365,6 @@ const MegaMenu = (() => {
 
   return MegaMenu
 
-})(jQuery)
+})($)
 
 export default MegaMenu

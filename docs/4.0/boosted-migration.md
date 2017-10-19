@@ -35,7 +35,7 @@ Mega menu has been reworked based on the collapse and navbar components. See [he
 
 Dropped the `.horizontal-form`class. Each row of form is now contained in a `.form group` section with a `.row` class.
 
-Class `.control-label`is now `.form-control-label`.
+Class `.control-label`is now `.col-form-label`.
 
 [Orange switches](../components/forms/#orange-switches) update : add a class `.o-switch` to `.form-group` element when you want to use custom toggles
 

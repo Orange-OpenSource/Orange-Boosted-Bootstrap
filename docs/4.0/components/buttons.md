@@ -28,42 +28,17 @@ To get the inversed button behaviour, simply add `.btn-inverse` class to your `<
 
 {% example html %}
 <div style="background-color: black; padding: 2rem">
-    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-    <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+    {% for color in site.data.theme-colors %}
+    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
-    <!-- Secondary, outline button -->
-    <button type="button" class="btn btn-inverse btn-secondary">Secondary</button>
-
-    <!-- Indicates a successful or positive action -->
-    <button type="button" class="btn btn-inverse btn-success">Success</button>
-
-    <!-- Contextual button for informational alert messages -->
-    <button type="button" class="btn btn-inverse btn-info">Info</button>
-
-    <!-- Indicates caution should be taken with this action -->
-    <button type="button" class="btn btn-inverse btn-warning">Warning</button>
-
-    <!-- Indicates a dangerous or potentially negative action -->
-    <button type="button" class="btn btn-inverse btn-danger">Danger</button>
-
-    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
     <button type="button" class="btn btn-inverse btn-link">Link</button>
 </div>
 {% endexample %}
 
 {% example html %}
 <div style="background-color: #595959; padding: 2rem">
-    <button type="button" class="btn btn-inverse btn-primary">Primary</button>
-
-    <button type="button" class="btn btn-inverse btn-secondary">Secondary</button>
-
-    <button type="button" class="btn btn-inverse btn-success">Success</button>
-
-    <button type="button" class="btn btn-inverse btn-info">Info</button>
-
-    <button type="button" class="btn btn-inverse btn-warning">Warning</button>
-
-    <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+    {% for color in site.data.theme-colors %}
+    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
     <button type="button" class="btn btn-inverse btn-link">Link</button>
 </div>
@@ -75,17 +50,8 @@ The default styles can be used on secondary colors backgrounds, in this case rem
 
 {% example html %}
 <div style="background-color: #eee; padding: 2rem">
-    <button type="button" class="btn btn-primary">Primary</button>
-
-    <button type="button" class="btn btn-secondary">Secondary</button>
-
-    <button type="button" class="btn btn-success">Success</button>
-
-    <button type="button" class="btn btn-info">Info</button>
-
-    <button type="button" class="btn btn-warning">Warning</button>
-
-    <button type="button" class="btn btn-danger">Danger</button>
+    {% for color in site.data.theme-colors %}
+    <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
     <button type="button" class="btn btn-link">Link</button>
 </div>
@@ -226,4 +192,5 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 
 | Method | Description |
 | --- | --- |
-| `$().button('toggle')` |Toggles push state. Gives the button the appearance that it has been activated.  |
+| `$().button('toggle')` | Toggles push state. Gives the button the appearance that it has been activated. |
+| `$().button('dispose')` | Destroys an element's button. |

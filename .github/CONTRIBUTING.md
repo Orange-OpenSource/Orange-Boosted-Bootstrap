@@ -139,10 +139,10 @@ project (indentation, accurate comments, etc.) and any other requirements
 
 **Do not edit `boosted.css`, or `boosted.js`
 directly!** Those files are automatically generated. You should edit the
-source files in [`/bootstrap/scss/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/scss)
-and/or [`/bootstrap/js/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/js) instead.
+source files in [`/boosted/scss/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/scss)
+and/or [`/boosted/js/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/js) instead.
 
-Similarly, when contributing to Bootstrap's documentation, you should edit the
+Similarly, when contributing to Boosted's documentation, you should edit the
 documentation source files in
 [the `/boosted/docs/` directory of the `master` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/docs).
 **Do not edit the `gh-pages` branch.** That branch is generated from the
