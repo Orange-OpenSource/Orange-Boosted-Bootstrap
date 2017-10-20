@@ -3,13 +3,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
 <title>
-  {% if page.title %}
+  {%- if page.title -%}
     {{ page.title }} &middot; {{ site.title }}
-  {% else %}
+  {%- else -%}
     {{ site.title }} &middot; {{ site.description }}
-  {% endif %}
+  {%- endif -%}
 </title>
 
 <!-- Boosted mod remove social -->
@@ -29,17 +30,10 @@
 
 <!-- Documentation extras -->
 {% if page.layout == "docs" %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+<link href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" rel="stylesheet">
 {% endif %}
 <link href="{{ site.baseurl }}/assets/css/docs.min.css" rel="stylesheet">
 
-<!-- Favicons -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
-<link rel="icon" href="{{ site.baseurl }}/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
-<link rel="manifest" href="{{ site.baseurl }}/manifest.json">
-<link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#ff0000">
-<meta name="theme-color" content="#000000">
+{% include favicons.html %}
 
 <!-- Boosted mod remove tracking -->
