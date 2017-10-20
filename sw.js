@@ -156,7 +156,7 @@ workboxSW.precache([
   },
   {
     "url": "assets/js/docs.min.js",
-    "revision": "b9aea70ac60a022c227cb4a8c4aeb209"
+    "revision": "21a31ccc402e6b357c8316ec45ef442f"
   },
   {
     "url": "assets/js/ie-emulation-modes-warning.js",
@@ -372,7 +372,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/dropdowns/index.html",
-    "revision": "4d89e87d6914beafb62db6ef11d79485"
+    "revision": "0e5820207c711b661049028d63564536"
   },
   {
     "url": "docs/4.0/components/forms/index.html",
@@ -432,7 +432,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/popovers/index.html",
-    "revision": "b443a7cf59bb9f1a0aefaa2488327627"
+    "revision": "9826f0713918cf89a9ee3e7a5b3fc9d0"
   },
   {
     "url": "docs/4.0/components/priority-nav/index.html",
@@ -456,7 +456,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/tooltips/index.html",
-    "revision": "f2912f6945bacb771fc292e1d965fe3e"
+    "revision": "748f643855650c5d644f898d01d2d66c"
   },
   {
     "url": "docs/4.0/content/code/index.html",
