@@ -1,3 +1,58 @@
+<a name"4.0.0-beta.2"></a>
+### 4.0.0-beta.2 (2017-10-19)
+
+
+#### Bug Fixes
+
+* **build:** js ([200f98ca](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/200f98ca67cb205825eda020337728f99d4d87f5))
+* **component:**
+  * footer ([235a5ee6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/235a5ee6a04107414d4cd00ef6091f74b762ecdc))
+  * local navigation ([1d06e462](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1d06e462750463671274a4d681f819fde1bd19ea))
+  * footer ([d9b2e00f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d9b2e00ff2e96b44b4a0d0656079b04a99c9bccb))
+  * footer ([ca4b75f7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ca4b75f7212835b6e3269bc4ce07c46b771207a4))
+  * navbar ([f97c0c1f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f97c0c1f31dbccb643bf7af6fc1427ea4b29e857))
+  * navbar ([05f064e5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/05f064e5cb546b8a8bcb6615cb457dc42b9f87c8))
+  * navbar ([f5176c05](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f5176c05962fdb77696641c44cdfdfb830ca7edd))
+  * breadcrumbs ([a13d41b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a13d41b248f48b6d481e6b2adf5c539c6d468a7d))
+  * switch ([65736691](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6573669148e98129d1747088d89916efc14ebaa4))
+  * navbar ([d07b569c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d07b569c95993f62423de8c22a3b5f3ea67dc7db))
+  * navbar ([41cff817](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/41cff8174184a778366d8f7ce8c7049aacb49d7a))
+* **core:**
+  * variables ([07a0d157](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/07a0d157ec25d1d9a62fa90335c656b745cb7d9c))
+  * icon-font-path var overriding ([c1704188](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c17041887c9f4696ffee8e38478e766156a34513))
+* **doc:** forms ([5bd60089](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5bd60089b6be44ae8891f225085ebfb13e889575))
+* **docs:**
+  * boostwatch ([51fcbc23](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/51fcbc233cb44deda41cc41dc2b29bfc58abb51b))
+  * signin template ([9e615810](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9e61581023fe28c63cbd1839c9a513cff1f6a5ec))
+  * signin template ([a8551529](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a85515298f616d2aba957e37a2290bdd4e390146))
+
+
+#### Features
+
+* **doc:** update doc search path and add a link to V3 doc ([88decf34](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/88decf349eebfe7eb578f4c4545b4fdc90b04d00))
+
+<a name"4.0.0-beta.1"></a>
+### 4.0.0-beta.1 (2017-09-22)
+
+
+#### Bug Fixes
+
+* **component:**
+  * local navigation ([196354a6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/196354a6aead16482ac96aa181e1c5cb15776e50))
+  * alert ([e44abd3f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e44abd3ff60232a43d1ca989ffb41061c833373c))
+  * badges ([ddc15912](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ddc15912f6189723a57debf2b691d0b6533c1f01))
+  * badges ([a2ecddbb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a2ecddbb237943e45695950567c78d4fe0d5970d))
+  * navbar ([239570d6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/239570d63b7ff350fb005b806d0ecc7d008d6ccc))
+  * alert ([55bb18ba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/55bb18ba445519659f40368786074d352319b1f4))
+  * container-fluid width ([0661cfff](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0661cfff0f205e17f46c7bd511f95d1932dd900e))
+  * alert ([152dc6e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/152dc6e3fd2931b55b524367808d10ed61901115))
+* **docs:**
+  * docs layout ([f18393c4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f18393c43f71efb2961f081a48e9ef0593a44d40))
+  * docs layout ([d40862c8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d40862c8fc00584885e268094d5e6195cfe5e190))
+  * docs layout ([b4f7e11d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b4f7e11d1e9550362167b357c32428975626ba19))
+  * Documentation page ([4eb73e29](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4eb73e29feda9e9e3c1374fe16a745118a6e28f8))
+
+
 <a name"4.0.0-beta"></a>
 ### 4.0.0-beta (2017-08-11)
 

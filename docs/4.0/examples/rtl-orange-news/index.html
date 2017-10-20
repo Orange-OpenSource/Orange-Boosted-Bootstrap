@@ -8,13 +8,6 @@
     <link href="../../../../dist/css/orangeIcons.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../../dist/css/boosted-rtl.css" />
     <link href="css/example.css" rel="stylesheet">
-    <style>
-    @media (max-width : 768px) {
-      #accessibilitytoolbarGraphic, #accessibilitytoolbarGraphic * {
-        display :none ;
-      }
-    }
-    </style>
   </head>
   <body>
     <div class="skiplinks">
@@ -68,7 +61,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="../../../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Go to homepage" />
+            <img src="../../../../dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead" aria-controls="collapsing-navbarHead"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -177,15 +170,13 @@
 
     <main id="content">
       <section class="container">
-        <h1 id="hide-supra-trigger">News</h1>
+        <h1>News</h1>
       </section>
 
       <div class="o-nav-local">
-        <hr aria-hidden="true">
         <nav class="container">
-          <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#collapseExample" aria-haspopup="true">target</a>
-          <ul class="nav collapse" id="collapseExample">
-            <li class="nav-item"><a class="nav-link active" href="#">News home</a></li>
+          <ul class="nav">
+            <li class="nav-item active"><a class="nav-link" href="#">News home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">World</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Finance</a></li>
@@ -196,13 +187,12 @@
             <li class="nav-item"><a class="nav-link" href="#">Pictures</a></li>
           </ul>
         </nav>
-        <hr aria-hidden="true">
       </div>
 
       <section class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-8">
-            <h2 id="newsLeaderTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit<small>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</small></h2>
+            <h2 id="newsLeaderTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit<br><small>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</small></h2>
             <div id="newsLeader">
               <a title="Bored of lorem ipsum?" href="" target="_self" data-toggle="modal" data-target="#myModal">
                 <img alt="Bored of lorem ipsum?" src="images/8565182.jpg" />
@@ -471,22 +461,80 @@
         </div>
         <!-- fin de la row globale-->
       </section>
-      <hr>
-
     </main>
 
-    <footer id="footer" role="contentinfo">
-      <div class="container">
-        <p>
-          <span class="col-md-2">© Orange 2014</span>
-          <a class="col-md-2" href="#"><span>sitemap</span></a>
-          <a class="col-md-2" href="#"><span>terms & conditions</span></a>
-          <a class="col-md-2" href="#"><span>CSR</span></a>
-          <a class="col-md-2" href="#"><span>cookies</span></a>
-          <a class="col-md-2" href="#"><span>Foundation</span></a>
-        </p>
+    <footer class="o-footer" role="contentinfo">
+      <h1 class="sr-only">footer - site map & informations</h1>
+      <div class="o-footer-top">
+          <div class="container">
+              <ul class="nav">
+                  <li class="nav-item"><span class="nav-link">Follow us</span></li>
+              </ul>
+          </div>
       </div>
-    </footer>
+      <div class="o-footer-body">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-3 col-sm-6">
+                      <h2>Discover</h2>
+                      <ul class="nav flex-column">
+                          <li><a href="#">Unde omnis istea</a></li>
+                          <li><a href="#">Natus error sit</a></li>
+                          <li><a href="#">Voluptatem</a></li>
+                          <li><a href="#">Totam rem aperiam</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                      <h2>Shop</h2>
+                      <ul class="nav flex-column">
+                          <li><a href="#">Natus error sit</a></li>
+                          <li><a href="#">Unde omnis istea</a></li>
+                          <li><a href="#">Voluptatem</a></li>
+                          <li><a href="#">Doloremque</a></li>
+                          <li><a href="#">Totam rem aperiam</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                      <h2>Services</h2>
+                      <ul class="nav flex-column">
+                          <li><a href="#">Doloremque</a></li>
+                          <li><a href="#">Totam rem aperiam</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                      <h2>Support</h2>
+                      <ul class="nav flex-column">
+                          <li><a href="#">Doloremque</a></li>
+                          <li><a href="#">Unde omnis istea</a></li>
+                          <li><a href="#">Voluptatem</a></li>
+                          <li><a href="#">Totam rem aperiam</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <ul class="nav">
+                  <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="o-footer-bottom">
+          <div class="container">
+              <ul class="nav">
+                  <li class="nav-item"><span class="nav-link">© Orange 2017</span></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
 
     <!-- Bootstrap core JavaScript
         ================================================== -->

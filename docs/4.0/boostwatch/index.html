@@ -6,12 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
 
-<title>
-  
-    Boostwatch &middot; Boosted
-  
-</title>
+<title>Boostwatch &middot; Boosted</title>
 
 <!-- Boosted mod remove social -->
 <!-- Swiper -->
@@ -31,13 +28,15 @@
 <link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
+
 
 <!-- Boosted mod remove tracking -->
 
@@ -49,12 +48,9 @@
       </div>
     </a>
 
-    <!-- Boosted mod remove bd-navbar class-->
-<header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
+    <header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
   <nav class="container">
-    
-
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
       <!-- Boosted mod change brand -->
       <img src="/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
       <!-- end mod -->
@@ -152,7 +148,11 @@
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#custom-carousel">Custom carousel</a>
   </div>
+  <div class="bd-toc-item ">
+    <a class="bd-toc-link" href="#priorityNav">Priority Nav</a>
+  </div>
 </nav>
+
         </div>
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <h1 class="bd-title" id="content">Boostwatch</h1>
@@ -3998,31 +3998,25 @@
 
 <h2 id="local">Local navigation bar<a class="doc-link" href="../components/local-navigation/" title="go to local navigation documentation page"></a></h2>
 <div class="o-nav-local">
-  <hr aria-hidden="true">
   <nav class="container">
-    <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav1" aria-haspopup="true">Go to</a>
-    <ul class="nav collapse" id="localNav1">
+    <ul class="nav">
       <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
     </ul>
   </nav>
-  <hr aria-hidden="true">
 </div>
 
 <div data-example-id="">
   <div style="margin: 2rem 0; padding: 2rem 0;" class="bg-dark">
     <div class="o-nav-local inverse">
-      <hr aria-hidden="true">
       <nav class="container">
-        <a class="d-md-none nav-link active local-select" data-toggle="collapse" href="#localNav2" aria-haspopup="true">Go to</a>
-        <ul class="nav collapse" id="localNav2">
+        <ul class="nav">
           <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
         </ul>
       </nav>
-      <hr aria-hidden="true">
     </div>
   </div>
 </div>
@@ -4182,96 +4176,79 @@
   </div>
 </div>
 
-<h2 id="footer">Footer<a class="doc-link" href="../components/orange-footer/" title="go to footer documentation page"></a></h2>
 <footer class="o-footer" role="contentinfo">
-  <h1 class="sr-only">footer - site map & informations</h1>
-  <div class="container-fluid o-footer-top">
-    <div class="row">
-      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-        <ul>
-          <li>
-            <h2>Sed ut perspiciatis</h2></li>
-          <li><a href="#">Unde omnis istea</a></li>
-          <li><a href="#">Natus error sit</a></li>
-          <li><a href="#">Voluptatem</a></li>
-          <li><a href="#">Totam rem aperiam</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-        <ul>
-          <li>
-            <h2>Voluptatem accusantium</h2></li>
-          <li><a href="#">Natus error sit</a></li>
-          <li><a href="#">Unde omnis istea</a></li>
-          <li><a href="#">Voluptatem</a></li>
-          <li><a href="#">Doloremque</a></li>
-          <li><a href="#">Totam rem aperiam</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-        <ul>
-          <li>
-            <h2>Natus error sit</h2></li>
-          <li><a href="#">Doloremque</a></li>
-          <li><a href="#">Totam rem aperiam</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-        <ul>
-          <li>
-            <h2>Doloremque laudantium</h2></li>
-          <li><a href="#">Doloremque</a></li>
-          <li><a href="#">Unde omnis istea</a></li>
-          <li><a href="#">Voluptatem</a></li>
-          <li><a href="#">Totam rem aperiam</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-        <ul>
-          <li>
-            <h2>Totam rem aperiam</h2></li>
-          <li><a href="#">Totam rem aperiam</a></li>
-          <li><a href="#">Unde omnis istea</a></li>
-          <li><a href="#">Natus error sit</a></li>
-          <li><a href="#">Voluptatem</a></li>
-          <li><a href="#">Doloremque</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-12">
-        <ul>
-          <li>
-            <h2>Accusantium</h2></li>
-          <li><a href="#">Unde omnis istea</a></li>
-          <li><a href="#">Natus error sit</a></li>
-          <li><a href="#">Voluptatem</a></li>
-          <li><a href="#">Totam rem aperiam</a></li>
-        </ul>
-      </div>
+    <h1 class="sr-only">footer - site map & informations</h1>
+    <div class="o-footer-top">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="nav-item"><span class="nav-link">Follow us</span></li>
+            </ul>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <ul class="navbar-nav">
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#"><span class="icon-orange-location"></span>Locate a store</a></li>
-          <li><a href="#">Coverage map</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Child protection</a></li>
-        </ul>
-      </div>
+    <div class="o-footer-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h2>Discover</h2>
+                    <ul class="nav flex-column">
+                        <li><a href="#">Unde omnis istea</a></li>
+                        <li><a href="#">Natus error sit</a></li>
+                        <li><a href="#">Voluptatem</a></li>
+                        <li><a href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Shop</h2>
+                    <ul class="nav flex-column">
+                        <li><a href="#">Natus error sit</a></li>
+                        <li><a href="#">Unde omnis istea</a></li>
+                        <li><a href="#">Voluptatem</a></li>
+                        <li><a href="#">Doloremque</a></li>
+                        <li><a href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Services</h2>
+                    <ul class="nav flex-column">
+                        <li><a href="#">Doloremque</a></li>
+                        <li><a href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Support</h2>
+                    <ul class="nav flex-column">
+                        <li><a href="#">Doloremque</a></li>
+                        <li><a href="#">Unde omnis istea</a></li>
+                        <li><a href="#">Voluptatem</a></li>
+                        <li><a href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <div class="o-footer-bottom">
-    <ul>
-      <li>© Orange 2015</li>
-      <li><a href="#">Natus error sit</a></li>
-      <li><a href="#">Voluptatem</a></li>
-      <li><a href="#">Totam rem aperiam</a></li>
-      <li><a href="#">Unde omnis istea</a></li>
-      <li><a href="#">Natus error sit</a></li>
-      <li><a href="#">Voluptatem</a></li>
-    </ul>
-  </div>
+    <div class="o-footer-bottom">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="nav-item"><span class="nav-link">© Orange 2017</span></li>
+                <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
+            </ul>
+        </div>
+    </div>
 </footer>
+
 <h2 id="stepbar">Stepbar<a class="doc-link" href="../components/stepbar/" title="go to step bar documentation page"></a></h2>
 <p class="lead">Indicate the current step within a sequential navigation.</p>
 
@@ -4779,10 +4756,10 @@
 <h3>Switches</h3>
 <div class="container-fluid">
 <div class="form-group row">
-  <label for="checkbox1" class="form-control-label col-md-3 col-8" id="label-wifi-1">WiFi</label>
+  <label for="checkbox1" class="col-form-label col-md-3 col-8" id="label-wifi-1">WiFi</label>
   <div class="o-switch">
     <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked aria-labelledby="label-wifi-1 label-wifi-2" />
-    <label for="checkbox1" class="toggle form-control-label" id="label-wifi-2">
+    <label for="checkbox1" class="toggle col-form-label" id="label-wifi-2">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
     </label>
@@ -4790,11 +4767,11 @@
 </div>
 
 <div class="form-group row">
-  <label for="checkbox3" class="form-control-label col-md-3 col-8" id="label-bluetooth-1">Bluetooth</label>
+  <label for="checkbox3" class="col-form-label col-md-3 col-8" id="label-bluetooth-1">Bluetooth</label>
   <div class="o-switch">
     <input class="checkbox success sr-only" id="checkbox3" type="checkbox" aria-labelledby="label-bluetooth-1 label-bluetooth-2"
     />
-    <label for="checkbox3" class="toggle form-control-label" id="label-bluetooth-2">
+    <label for="checkbox3" class="toggle col-form-label" id="label-bluetooth-2">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
     </label>
@@ -4802,10 +4779,10 @@
 </div>
 
 <div class="form-group row">
-  <label for="checkbox2" class="form-control-label col-md-3 col-8" id="label-wifi-3">WiFi</label>
+  <label for="checkbox2" class="col-form-label col-md-3 col-8" id="label-wifi-3">WiFi</label>
   <div class="o-switch">
     <input class="checkbox sr-only" id="checkbox2" type="checkbox" aria-labelledby="label-wifi-3 label-wifi-4" />
-    <label for="checkbox2" class="toggle toggle-rounded form-control-label" id="label-wifi-4" style="width: 78px;">
+    <label for="checkbox2" class="toggle toggle-rounded col-form-label" id="label-wifi-4" style="width: 78px;">
       <span class="on">On</span>
       <span class="off">Off</span>
     </label>
@@ -4813,11 +4790,11 @@
 </div>
 
 <div class="form-group row">
-  <label for="checkbox4" class="form-control-label col-md-3 col-8" id="label-bluetooth-3">Bluetooth</label>
+  <label for="checkbox4" class="col-form-label col-md-3 col-8" id="label-bluetooth-3">Bluetooth</label>
   <div class="o-switch">
     <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked aria-labelledby="label-bluetooth-3 label-bluetooth-4"
     />
-    <label for="checkbox4" class="toggle toggle-rounded form-control-label" id="label-bluetooth-4" style="width: 126px;">
+    <label for="checkbox4" class="toggle toggle-rounded col-form-label" id="label-bluetooth-4" style="width: 126px;">
       <span class="on">Activé</span>
       <span class="off">Désactivé</span>
     </label>
@@ -4916,13 +4893,13 @@
             <fieldset class="col-12">
               <legend>Legend</legend>
               <div class="form-group row">
-                  <label for="inputEmail" class="col-lg-3 form-control-label">Email</label>
+                  <label for="inputEmail" class="col-lg-3 col-form-label">Email</label>
                   <div class="col-lg-9">
                       <input class="form-control" id="inputEmail" placeholder="Email" type="text">
                   </div>
               </div>
               <div class="form-group row">
-                  <label for="inputPassword" class="col-lg-3 form-control-label">Password</label>
+                  <label for="inputPassword" class="col-lg-3 col-form-label">Password</label>
                   <div class="col-lg-9">
                       <input class="form-control" id="inputPassword" placeholder="Password" type="password">
                       <div>
@@ -4956,14 +4933,14 @@
                   </div>
               </div>
               <div class="form-group row">
-                  <label for="textArea" class="col-lg-3 form-control-label">Textarea</label>
+                  <label for="textArea" class="col-lg-3 col-form-label">Textarea</label>
                   <div class="col-lg-9">
                       <textarea class="form-control" rows="3" id="textArea"></textarea>
                       <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
                   </div>
               </div>
               <div class="form-group row">
-                  <div class="col-lg-3 form-control-label">Orange Radios</div>
+                  <div class="col-lg-3 col-form-label">Orange Radios</div>
                   <div class="col-lg-9">
                       <div>
                         <label class="custom-control custom-radio">
@@ -4996,7 +4973,7 @@
                   </div>
               </div>
               <div class="form-group row">
-                  <label for="select" class="col-lg-3 form-control-label">Selects</label>
+                  <label for="select" class="col-lg-3 col-form-label">Selects</label>
                   <div class="col-lg-9">
                       <select class="form-control" id="select">
                       <option selected="selected">1</option>
@@ -5027,49 +5004,49 @@
   <div class="col-lg-4 ml-lg-auto">
       <form>
           <div class="form-group">
-              <label class="form-control-label" for="focusedInput">Focused input</label>
+              <label class="col-form-label" for="focusedInput">Focused input</label>
               <input class="form-control" id="focusedInput" value="This is focused..." type="text">
           </div>
 
           <div class="form-group">
-              <label class="form-control-label" for="disabledInput">Disabled input</label>
+              <label class="col-form-label" for="disabledInput">Disabled input</label>
               <input class="form-control" id="disabledInput" placeholder="Disabled input here..." disabled="disabled" type="text">
           </div>
 
           <div class="form-group has-warning">
-              <label class="form-control-label" for="inputWarning">Input warning</label>
+              <label class="col-form-label" for="inputWarning">Input warning</label>
               <input class="form-control" id="inputWarning" type="text">
           </div>
 
           <div class="form-group has-danger">
-              <label class="form-control-label" for="inputError1">Input error</label>
+              <label class="col-form-label" for="inputError1">Input error</label>
               <input class="form-control" id="inputError1" type="text">
               <div class="form-control-feedback">This is an error message</div>
           </div>
 
           <div class="form-group has-success">
-              <label class="form-control-label" for="inputSuccess">Input success</label>
+              <label class="col-form-label" for="inputSuccess">Input success</label>
               <input class="form-control" id="inputSuccess" type="text">
           </div>
 
           <div class="form-group">
-              <label class="form-control-label" for="inputLarge">Large input</label>
+              <label class="col-form-label" for="inputLarge">Large input</label>
               <input class="form-control form-control-lg" id="inputLarge" type="text">
           </div>
 
           <div class="form-group">
-              <label class="form-control-label" for="inputDefault">Default input</label>
+              <label class="col-form-label" for="inputDefault">Default input</label>
               <input class="form-control" id="inputDefault" type="text">
               <span class="form-control-message">This is a hint message</span>
           </div>
 
           <div class="form-group">
-              <label class="form-control-label" for="inputSmall">Small input</label>
+              <label class="col-form-label" for="inputSmall">Small input</label>
               <input class="form-control form-control-sm" id="inputSmall" type="text">
           </div>
 
           <div class="form-group">
-              <label class="form-control-label" for="inlineFormInputGroup">Input addons</label>
+              <label class="col-form-label" for="inlineFormInputGroup">Input addons</label>
               <div class="input-group">
               <span class="input-group-addon">$</span>
               <input class="form-control" type="text" title="Input addons field" id="inlineFormInputGroup">
@@ -5129,7 +5106,7 @@
     <ul class="nav nav-tabs">
       <li class="nav-item"><a class="nav-link active" href="#home" data-toggle="tab" aria-current="page">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#profile" data-toggle="tab">Profile</a></li>
-      <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+      <li class="nav-item"><a href="#" class="nav-link disabled">Disabled</a></li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
           Dropdown
@@ -5325,12 +5302,14 @@ Buttons + Back/Next labels
     <div>
         <h3>Badge<a class="doc-link" href="../components/badge/" title="go to badge documentation page"></a></h3>
         <div style="margin-bottom: 40px;">
-            <span class="badge badge-default">Default</span>
             <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-secondary">Secondary</span>
             <span class="badge badge-success">Success</span>
-            <span class="badge badge-warning">Warning</span>
             <span class="badge badge-danger">Danger</span>
+            <span class="badge badge-warning">Warning</span>
             <span class="badge badge-info">Info</span>
+            <span class="badge badge-light">Light</span>
+            <span class="badge badge-dark">Dark</span>
         </div>
     </div>
   </div>
@@ -5388,7 +5367,7 @@ Buttons + Back/Next labels
               <div class="card-body ">
                   <h4 class="card-title">Card title</h4>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary btn-inverse">Button</a>
+                  <a href="#" class="btn btn-primary">Button</a>
               </div>
           </div>
       </div>
@@ -5453,6 +5432,21 @@ Buttons + Back/Next labels
     <div class="swiper-button-next"></div>
 </div>
 
+<h2 id="priorityNav">Priority Nav<a class="doc-link" href="../components/priority-nav/" title="go to priority nav documentation page"></a></h2>
+<div class="o-nav-local">
+    <nav class="container-fluid">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Usage</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">References</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Organisation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Worldwilde</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
 
         </main>
       </div>
@@ -5480,13 +5474,12 @@ Buttons + Back/Next labels
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>
+  <script src="/assets/js/src/pwa.js"></script>
 <!-- Boosted mod -->
   <script src="/assets/js/src/application-boosted.js"></script>
 <!-- end mod -->
 
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 
 

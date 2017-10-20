@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>form</title>
+    <title>Form</title>
 
     <link href="../../../../dist/css/orangeHelvetica.css" rel="stylesheet">
     <link href="../../../../dist/css/orangeIcons.css" rel="stylesheet">
@@ -32,14 +32,14 @@
       <nav id="mainNav" class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="../../../../dist/img/ORANGE_LOGO_rgb.jpg" alt="Back to homepage" title="Back to homepage"/>
+        <img src="../../../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/>
       </a>
+      <a class="navbar-brand" href="#">Dashboard</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse justify-content-between collapse" id="orange-navbar-collapse">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">dashboard</a></li>
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">manage</a></li>
           <li class="nav-item"><a class="nav-link" href="#" title="open the news menu">parameters</a></li>
         </ul>
@@ -71,7 +71,7 @@
   </nav>
 </header>
 
-<main id="content" class="container">
+<main id="content" class="container" style="margin-bottom: 1000px;">
   <div class="row">
     <div class="col-md-8">
       <nav class="o-stepbar xs-numbers">
@@ -114,26 +114,26 @@
       <div class="col-sm-6">
         <form role="form" id="myForm">
           <div class="form-group row is-required">
-            <label for="inputName" class="col-sm-3 form-control-label">Name</label>
+            <label for="inputName" class="col-sm-3 col-form-label">Name</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" id="inputName" required>
             </div>
           </div>
           <div class="form-group row is-required">
-            <label for="inputEmail" class="col-sm-3 form-control-label">Email</label>
+            <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
             <div class="col-sm-9">
               <input type="email" class="form-control" id="inputEmail" placeholder="email@provider.com" required>
             </div>
           </div>
           <div class="form-group row is-required">
-            <label for="inputPassword" class="col-sm-3 form-control-label">Password</label>
+            <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
             <div class="col-sm-9">
               <input type="password" class="form-control" id="inputPassword" placeholder="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$">
               <span class="form-control-message">Minimum six characters with one lowercase, one uppercase and a number</span>
             </div>
           </div>
           <div class="form-group row is-required">
-            <label for="country" class="col-sm-3 form-control-label">Country</label>
+            <label for="country" class="col-sm-3 col-form-label">Country</label>
             <div class="col-sm-9">
               <select class="form-control" id="country" name="inputCountry" required>
                 <option value="" label="Please select"></option>
@@ -158,13 +158,13 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="inputComment" class="col-sm-3 form-control-label">Comment</label>
+            <label for="inputComment" class="col-sm-3 col-form-label">Comment</label>
             <div class="col-sm-9">
               <textarea class="form-control" rows="3" id="inputComment"></textarea>
             </div>
           </div>
           <div class="form-group row">
-            <label for="exampleInputFile" class="col-sm-3 form-control-label">Documentation</label>
+            <label for="exampleInputFile" class="col-sm-3 col-form-label">Documentation</label>
             <div class="col-sm-9">
               <input type="file" id="exampleInputFile">
               <p class="help-block">File max size : 100MB</p>
@@ -184,7 +184,7 @@
 
   <footer role="contentinfo">
     <div class="container-fluid ">
-      <p>
+      <p class="mb-0">
         <a href="#"><span>contact</span></a>
         <a href="#" class="float-md-right"><span>help</span></a>
       </p>

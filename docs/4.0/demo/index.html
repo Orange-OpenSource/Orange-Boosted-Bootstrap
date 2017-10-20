@@ -6,6 +6,7 @@
         <title>Boosted</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/dist/css/vendor/swiper.min.css" rel="stylesheet">
         <link href="../../../dist/css/orangeHelvetica.css" rel="stylesheet">
         <link href="../../../dist/css/orangeIcons.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../dist/css/boosted.css" />
@@ -36,6 +37,101 @@
                 <div class="o-tab-content" id="tab-3-content">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
             </div>
             <button type="button" class="btn btn-secondary" id="toggle-layout">Toggle layout</button>
+
+            <h2>Card links</h2>
+            <div class="card-deck">
+                <a href="#"class="card o-card-link" id="bill">
+                    <div class="card-img">
+                        <img class="" src="assets/bill.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">Gérer vos factures</div>
+                    </div>
+                </a>
+                <a href="#"class="card o-card-link" id="shop">
+                    <div class="card-img">
+                        <img class="" src="assets/shop.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">Suivre votre commande</div>
+                    </div>
+                </a>
+                <a href="#"class="card o-card-link" id="timer">
+                    <div class="card-img">
+                        <img class="" src="assets/timer.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">Accéder à votre suivi conso</div>
+                    </div>
+                </a>
+                <a href="#"class="card o-card-link" id="unlock">
+                    <div class="card-img">
+                        <img class="" src="assets/unlock.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">Désimlocker votre mobile</div>
+                    </div>
+                </a>
+            </div>
+
+            <h2>Custom carousel</h2>
+            <div class="swiper-container" style="width: 37.5rem;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide1">
+                        <div class="card">
+                            <div class="card-img">
+                                <img alt="first slide" src="assets/green.png">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Slide 1</div>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" id="slide2">
+                        <div class="card">
+                            <div class="card-img">
+                                <img alt="first slide" src="assets/blue.png">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Slide 2</div>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" id="slide3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img alt="first slide" src="assets/pink.png">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Slide 3</div>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <h2>Priority Nav</h2>
+            <div class="o-nav-local">
+                <nav class="container-fluid">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Usage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">References</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Organisation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Worldwilde</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
         </main>
 
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -45,6 +141,7 @@
         </script>
         <script src="../../../assets/js/vendor/popper.min.js"></script>
         <script src="../../../dist/js/boosted.js"></script>
+        <script src="/dist/js/vendor/swiper.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

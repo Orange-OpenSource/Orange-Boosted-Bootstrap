@@ -135,29 +135,7 @@
 #accordion {
   margin-top: 10px;
 }
-footer {
-  height: auto;
-  min-height: 54px;
-  margin: 10px auto 20px;
-  overflow: hidden;
-  background-color: #eee;
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #f3f3f3;
-}
-footer a, footer span {
-  color: inherit;
-  text-align: center;
-}
-#uci_link {
-  /*margin-top: 3.75rem !important;*/
-  /*color: #fff !important;
-  float: left;
-  line-height: 1;*/
-}
 
-.navbar.minimized #uci_link {
-  /*margin-top: 2.875rem !important;*/
-}
 
 .mega-menu #id-for-cdu-link a:hover,.mega-menu #id-for-cdu-link a:focus {
   color: #f16e00;
