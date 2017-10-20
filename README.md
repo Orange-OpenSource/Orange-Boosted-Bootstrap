@@ -32,12 +32,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.0.0-beta.2/boosted-4.0.0-beta.2.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.2.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.2`
 - Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.2`
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.2`
-- Install with [Bower](https://bower.io): `bower install boosted#v4.0.0-beta.2`
 
 Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
