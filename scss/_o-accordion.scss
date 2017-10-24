@@ -58,7 +58,7 @@
 @include media-breakpoint-down(sm) {
   .o-accordion .card {
     // border 1px for first child only
-    border-top: 2px;
+    border-top-width: 2px;
     border-bottom-width: 2px;
     // remove border for card other than the first one
     ~ .card {
