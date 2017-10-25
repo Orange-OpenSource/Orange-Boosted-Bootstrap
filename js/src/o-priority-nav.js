@@ -21,6 +21,7 @@ const PriorityNav = (() => {
   const DATA_KEY = 'bs.prioritynav'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
   const RESIZE_DURATION = 500
+  const TAB_KEYCODE  = 9
 
   const Event = {
     RESIZE: 'resize',
@@ -178,8 +179,10 @@ const PriorityNav = (() => {
         }, RESIZE_DURATION)
       })
 
-      this._$menu.find('.overflow-nav .dropdown-toggle').on(Event.FOCUS, (e) => {
-        $(e.target).dropdown('toggle')
+      this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', (e) => {
+        if (e.which === TAB_KEYCODE) {
+          $(e.target).dropdown('toggle')
+        }
       })
     }
 
