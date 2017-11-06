@@ -4,6 +4,28 @@ layout: home
 
 <main class="bd-masthead" id="content" role="main">
   <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <span class="bd-boosted-icon">Orange B<span class="text-primary">oo</span>sted with Bootstrap</span>
+        <p class="lead">Orange Boosted is a framework library accessible, ergonomic and Orange branded based on
+          <a href="https://github.com/twbs/bootstrap/tree/{{ site.bootstrap_current_version }}"
+            target="_blank">Bootstrap {{ site.bootstrap_current_version }}</a>.</p>
+        <p class="lead">
+            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction" class="btn btn-primary btn-lg">Get started</a>
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download" class="btn btn-secondary btn-lg">Download</a>
+        </p>
+        <p class="version">Currently v{{ site.current_version }}</p>
+        <a href="http://boosted.orange.com/docs/3.3/">Old documentation (3.3.X)</a>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/img/boosted logo 3D.png">
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- <main class="bd-masthead" id="content" role="main">
+  <div class="container">
     <span class="bd-boosted-icon">Orange B<span class="text-primary">oo</span>sted with Bootstrap</span>
     <p class="lead">Orange Boosted is a framework library accessible, ergonomic and Orange branded based on
       <a href="https://github.com/twbs/bootstrap/tree/{{ site.bootstrap_current_version }}"
@@ -16,9 +38,9 @@ layout: home
       <a href="http://boosted.orange.com/docs/3.3/">Old documentation (3.3.X)</a>
     </span>
   </div>
-</main>
+</main> -->
 
-<div class="bd-featurette">
+<!-- <div class="bd-featurette">
   <div class="container">
     <h2 class="bd-featurette-title">All the core components of Bootstrap accessible and Orange branded.</h2>
     <p class="lead">And also specific components only available in B<span class="text-primary">oo</span>sted.</p>
@@ -34,4 +56,97 @@ layout: home
       <li><a href="docs/{{ site.docs_version }}/components/orange-footer/">Footer</a></li>
     </ul>
   </div>
-</div>
+</div> -->
+
+<!-- <div class="masthead-followup row m-0 border border-white">
+    <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+      <h3>Installation</h3>
+      <p>Include Boosted's source Sass and JavaScript files via npm, Composer or Meteor. Package managed installs don't include documentation, but do include our build system and readme.</p>
+
+  {% highlight sh %}
+  npm install boosted@{{ site.current_version }}
+  {% endhighlight %}
+
+  {% highlight sh %}
+  gem install boosted -v {{ site.current_ruby_version }}
+  {% endhighlight %}
+
+      <a class="btn btn-secondary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download">Read installation docs</a>
+    </div>
+
+    <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+        <h3>Using Angular ?</h3>
+        <p>Yes, we do have an Angular version, and it's right here !</p>
+        <a href="http://ng-boosted.orange.com/" class="btn btn-secondary">Get ng-boosted</a>
+      </div>
+
+    <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+        <h3>Orange Templates</h3>
+        <p>
+          Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.
+        </p>
+        <img class="img-fluid mt-3 mx-auto" src="assets/img/templates.png" alt="Bootstrap Themes" width="1024" height="388">
+        <hr class="half-rule">
+        <a href="{{ site.themes }}" class="btn btn-secondary">Browse templates</a>
+      </div>
+  </div> -->
+
+  <div class="container">
+      <div class="card-grid-flex">
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Installation</h2>
+                  <p class="card-subtitle">Include Bootstrap's source Sass and JavaScript files via npm, Composer or Meteor. Package managed installs don't include documentation, but do include our build system and readme.</p>
+              </div>
+              <div class="card-footer">
+                      <a class="btn btn-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download">Read installation docs</a>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Migrating from Boosted 3.x to v4 ?</h2>
+                  <p class="card-subtitle">See migration guide for a quick overview of whats the main change.</p>
+              </div>
+              <div class="card-footer">
+                  <a href="{{ site.baseurl }}/docs/4.0/boosted-migration/" class="btn btn-primary">Migrate<span class="sr-only">about the document named "Environnement de développement web"</span></a>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Using Angular ?</h2>
+                  <p class="card-subtitle">Yes, we do have an Angular version, and it's right here !</p>
+              </div>
+              <div class="card-footer">
+                  <a href="http://ng-boosted.orange.com/" class="btn btn-primary">Get ng-boosted<span class="sr-only">about the document named "Environnement de développement web"</span></a>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Orange Templates</h2>
+                  <p class="card-subtitle">Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.</p>
+                  <img class="img-fluid mt-3 mx-auto" src="assets/img/templates.png" alt="Bootstrap Themes" width="1024" height="388">
+              </div>
+              <div class="card-footer">
+                      <a href="{{ site.themes }}" class="btn btn-primary">Browse templates</a>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Boosted: Whys and Whats</h2>
+                  <p class="card-subtitle"></p>
+              </div>
+              <div class="card-footer">
+                  <a href="" class="btn btn-primary">Read more</a>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">We are on Github</h2>
+                  <p class="card-subtitle">Browse github repository to see latest code version, release details, issues and...</p>
+              </div>
+              <div class="card-footer">
+                  <a href="" class="btn btn-primary">Github</a>
+              </div>
+          </div>
+      </div>
+  </div>

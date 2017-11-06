@@ -9,26 +9,13 @@
 
 .bd-masthead {
   padding: 2.5rem .625rem;
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   background-image: none;
   border: 0;
-  border-top: 2px solid $gray-900;
 
   .lead {
-    font-size: $h6-font-size;
-
-    a {
-      color: #fff;
-      text-decoration: underline;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: theme-color("primary");
-        text-decoration: none;
-      }
-    }
+    font-size: $h5-font-size;
 
     .btn {
       text-decoration: none;
@@ -37,12 +24,24 @@
 
   .bd-boosted-icon {
     font-family: $font-family-base;
-    font-size: $h1-font-size;
+    font-size: 3.125rem; // 50px
     font-weight: 500;
   }
 
   .version {
     margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.masthead-followup {
+  .bg-light {
+    background-color: #eee !important; // stylelint-disable-line declaration-no-important
   }
 }
 
@@ -237,39 +236,39 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
   }
 }
 
-// card links
-#bill .card-img,
-#shop .card-img,
-#timer .card-img,
-#unlock .card-img {
-  padding: 1.25rem;
+/* home cards */
 
-  img {
-    width: 50%;
+.card-grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  margin-left: -1.25rem;
+
+  .card {
+    display: flex;
+    flex: 0 1 calc(100% / 3 - 1.25rem);
+    flex-flow: column;
+    max-width: calc(100% / 3 - 1.25rem);
+    margin-bottom: 1.25rem;
+    margin-left: 1.25rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 .3125rem .625rem -.375rem #999;
   }
-}
 
-#bill .card-img {
-  background-color: #50be87;
-}
+  .card-footer {
+    padding-top: 0;
+    padding-bottom: 20px;
+    text-align: right;
+    border-top: 0;
+  }
 
-#shop .card-img {
-  background-color: #4bb4e6;
-}
+  .card-title {
+    margin-bottom: 1.25rem;
+  }
 
-#timer .card-img {
-  background-color: #ffb4e6;
-}
-
-#unlock .card-img {
-  background-color: #ffd200;
-}
-
-@include media-breakpoint-down(xs) {
-  #bill .card-img,
-  #shop .card-img,
-  #timer .card-img,
-  #unlock .card-img {
+  .card-subtitle {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
     img {
       width: auto;
       height: 2.5rem;
