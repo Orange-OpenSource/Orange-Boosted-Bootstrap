@@ -1,4 +1,15 @@
 // stylelint-disable selector-max-id
+#bd-main-nav {
+  .nav-item.dropdown {
+    align-self: flex-end;
+  }
+
+  .navbar-nav-svg {
+    display: inline-block;
+    width: 1.4rem;
+  }
+}
+
 .bd-home {
   background-color: #000;
 
@@ -258,7 +269,7 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
   .card-footer {
     padding-top: 0;
     padding-bottom: 20px;
-    text-align: right;
+    // text-align: right;  // sets card buttons to right
     border-top: 0;
   }
 
@@ -274,4 +285,10 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
       height: 2.5rem;
     }
   }
+}
+
+#angular-logo {
+  display: inherit;
+  width: 8rem;
+  margin: 0 auto;
 }
