@@ -49,7 +49,9 @@
                 <span class="icon-menu"></span>
             </button>
             <div class="container">
-                <a class="navbar-brand"><img src="images/logo-orange.jpg" alt="Back to homepage" title="Back to homepage" /></a>
+                <a class="navbar-brand">
+                  <img src="../../../img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" />
+                </a>
                 <ul class="nav navbar-nav collapse navbar-toggleable-xs" id="collapsing-navbar">
                     <li class="nav-item"><a class="nav-link" href="#" title="open discover menu">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" title="open shop menu">Shop</a></li>
@@ -90,10 +92,10 @@
     <div style="padding-top: 300px; margin-bottom: 2000px;" id="trigger">scroll me, when i'm gone supra bar disappears</div>
 
     <!-- JavaScript Includes -->
-    <script src="../vendor/jquery.min.js"></script>
+    <script src="../../../assets/js/vendor/jquery-slim.min.js"></script>
     <script src="../../dist/util.js"></script>
     <script src="../../dist/collapse.js"></script>
-    <script src="../../dist/navbar.js"></script>
+    <script src="../../dist/o-navbar.js"></script>
     <script>
         $(document).ready(function () {
             $('header').navbar({ sticky: true, trigger: '#trigger' });
