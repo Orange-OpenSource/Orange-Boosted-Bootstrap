@@ -55,6 +55,7 @@
 
     // Insert copy to clipboard button before .highlight
     $('.highlight').each(function () {
+      // Boosted mod set clipboard button to secondary
       var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard btn btn-sm btn-secondary" title="Copy to clipboard">Copy</button></div>'
       $(this).before(btnHtml)
       $('.btn-clipboard')
@@ -96,13 +97,10 @@
         .tooltip('_fixTitle')
     })
 
+    anchors.options = {
+      icon: '#'
+    }
+    anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
+    $('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5').wrapInner('<div></div>')
   })
-
 }(jQuery))
-
-;(function () {
-  'use strict'
-
-  anchors.options.placement = 'left'
-  anchors.add('.bd-content > h1, .bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
-}())

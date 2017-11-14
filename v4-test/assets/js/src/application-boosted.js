@@ -1,5 +1,4 @@
-!function ($) { // eslint-disable-line
-
+(function ($) {
   'use strict'
 
   $(function () {
@@ -14,9 +13,9 @@
       $('.mega-menu.panel').megamenu()
     })
   })
-}(jQuery); // eslint-disable-line
+}(jQuery));
 
-(function () { // eslint-disable-line
+(function () {
 
   'use strict'
 
@@ -90,4 +89,4 @@
       if (footerWatcher) { window.attachEvent('scroll', footerWatcher) }
     }
   }
-})()
+}())
