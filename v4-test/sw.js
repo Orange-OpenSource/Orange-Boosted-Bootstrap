@@ -220,7 +220,7 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/boosted-grid.min.css",
-    "revision": "15121cbadcd504223e425a0a31dcccbd"
+    "revision": "c8647ce8e596f9235b310e29251f9166"
   },
   {
     "url": "dist/css/boosted-reboot.css",
@@ -228,23 +228,23 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/boosted-reboot.min.css",
-    "revision": "64cd79774d99b1b1360d186b6563fc92"
+    "revision": "b4f04c476656658cc6a551c0475b2b22"
   },
   {
     "url": "dist/css/boosted-rtl.css",
-    "revision": "c5385f1f25e2d0f486cbf5da4bf0044a"
+    "revision": "1ad21a2a58b0039c3e6745ebc1802a43"
   },
   {
     "url": "dist/css/boosted-rtl.min.css",
-    "revision": "26398f4bed275e10186b0f786dac3ce5"
+    "revision": "0a03a97393de662eaab1ba18a29a7065"
   },
   {
     "url": "dist/css/boosted.css",
-    "revision": "f473fc205db0244967bf59fdba22f7da"
+    "revision": "42d2f23b586c2dc7ce4d9ebacb5f95f7"
   },
   {
     "url": "dist/css/boosted.min.css",
-    "revision": "a4fbe4978daea42d93dd33e8af685a3a"
+    "revision": "5aa878273068bc09c02ec29083496b1b"
   },
   {
     "url": "dist/css/o-rtl.css",
@@ -256,7 +256,7 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/orangeHelvetica.min.css",
-    "revision": "108e2240c9b0b916095f15f857697b6e"
+    "revision": "e75586ccf155285bbcb88fda3da7440d"
   },
   {
     "url": "dist/css/orangeIcons.css",
@@ -264,7 +264,7 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/orangeIcons.min.css",
-    "revision": "e90f396e414c92203e721c651a3b976e"
+    "revision": "a762689604b44d0605bae94d8f825a5d"
   },
   {
     "url": "dist/css/vendor/swiper.min.css",
@@ -276,19 +276,19 @@ workboxSW.precache([
   },
   {
     "url": "dist/js/boosted.bundle.js",
-    "revision": "3e40ed9cae1dff69838ea60483495882"
+    "revision": "bbbe5fdb28fdf2fc4553dc2052e2c2fc"
   },
   {
     "url": "dist/js/boosted.bundle.min.js",
-    "revision": "2954070dce1463e76472bda88dc2f67f"
+    "revision": "25385021d66fa7e187e75fc58ad708db"
   },
   {
     "url": "dist/js/boosted.js",
-    "revision": "89a764b4770d0efb7cb68003fbf8385f"
+    "revision": "f1be872361b8cf7e5b0268a9529125a5"
   },
   {
     "url": "dist/js/boosted.min.js",
-    "revision": "4f6188ff4f311e0681a20452dc7a6471"
+    "revision": "4350e5e3d02db759adbb0790bbb447a9"
   },
   {
     "url": "dist/js/vendor/jquery.tablesorter.js",

@@ -2597,12 +2597,6 @@ fieldset[disabled] a.btn {
   border-color: #000;
 }
 
-.btn-primary:focus, .btn-primary.focus,
-.btn-warning:focus,
-.btn-warning.focus {
-  box-shadow: 0 0 0 0.2rem rgba(241, 110, 0, 0.5);
-}
-
 .btn-primary.disabled, .btn-primary:disabled,
 .btn-warning.disabled,
 .btn-warning:disabled {
@@ -2634,12 +2628,6 @@ fieldset[disabled] a.btn {
   color: #000;
   background-color: #fff;
   border-color: #fff;
-}
-
-.btn-primary.btn-inverse:focus, .btn-primary.btn-inverse.focus,
-.btn-warning.btn-inverse:focus,
-.btn-warning.btn-inverse.focus {
-  box-shadow: 0 0 0 0.2rem rgba(241, 110, 0, 0.5);
 }
 
 .btn-primary.btn-inverse.disabled, .btn-primary.btn-inverse:disabled,
@@ -2675,12 +2663,6 @@ fieldset[disabled] a.btn {
   border-color: #000;
 }
 
-.btn-secondary:focus, .btn-secondary.focus,
-.btn-light:focus,
-.btn-light.focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
-}
-
 .btn-secondary.disabled, .btn-secondary:disabled,
 .btn-light.disabled,
 .btn-light:disabled {
@@ -2714,12 +2696,6 @@ fieldset[disabled] a.btn {
   border-color: #fff;
 }
 
-.btn-secondary.btn-inverse:focus, .btn-secondary.btn-inverse.focus,
-.btn-light.btn-inverse:focus,
-.btn-light.btn-inverse.focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
-}
-
 .btn-secondary.btn-inverse.disabled, .btn-secondary.btn-inverse:disabled,
 .btn-light.btn-inverse.disabled,
 .btn-light.btn-inverse:disabled {
@@ -2751,10 +2727,6 @@ fieldset[disabled] a.btn {
   border-color: #000;
 }
 
-.btn-success:focus, .btn-success.focus {
-  box-shadow: 0 0 0 0.2rem rgba(50, 200, 50, 0.5);
-}
-
 .btn-success.disabled, .btn-success:disabled {
   color: #fff;
   background-color: #ccc;
@@ -2778,10 +2750,6 @@ fieldset[disabled] a.btn {
   color: #000;
   background-color: #fff;
   border-color: #fff;
-}
-
-.btn-success.btn-inverse:focus, .btn-success.btn-inverse.focus {
-  box-shadow: 0 0 0 0.2rem rgba(50, 200, 50, 0.5);
 }
 
 .btn-success.btn-inverse.disabled, .btn-success.btn-inverse:disabled {
@@ -2809,12 +2777,6 @@ fieldset[disabled] a.btn {
   color: #000;
   background-color: #fff;
   border-color: #000;
-}
-
-.btn-info:focus, .btn-info.focus,
-.btn-dark:focus,
-.btn-dark.focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .btn-info.disabled, .btn-info:disabled,
@@ -2850,12 +2812,6 @@ fieldset[disabled] a.btn {
   border-color: #fff;
 }
 
-.btn-info.btn-inverse:focus, .btn-info.btn-inverse.focus,
-.btn-dark.btn-inverse:focus,
-.btn-dark.btn-inverse.focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
-}
-
 .btn-info.btn-inverse.disabled, .btn-info.btn-inverse:disabled,
 .btn-dark.btn-inverse.disabled,
 .btn-dark.btn-inverse:disabled {
@@ -2887,10 +2843,6 @@ fieldset[disabled] a.btn {
   border-color: #000;
 }
 
-.btn-danger:focus, .btn-danger.focus {
-  box-shadow: 0 0 0 0.2rem rgba(205, 60, 20, 0.5);
-}
-
 .btn-danger.disabled, .btn-danger:disabled {
   color: #fff;
   background-color: #ccc;
@@ -2914,10 +2866,6 @@ fieldset[disabled] a.btn {
   color: #000;
   background-color: #fff;
   border-color: #fff;
-}
-
-.btn-danger.btn-inverse:focus, .btn-danger.btn-inverse.focus {
-  box-shadow: 0 0 0 0.2rem rgba(205, 60, 20, 0.5);
 }
 
 .btn-danger.btn-inverse.disabled, .btn-danger.btn-inverse:disabled {
@@ -11645,7 +11593,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 @media (max-width: 767px) {
   .o-accordion .card {
-    border-top: 2px;
+    border-top-width: 2px;
     border-bottom-width: 2px;
   }
   .o-accordion .card ~ .card {

@@ -3875,6 +3875,7 @@ var PriorityNav = function () {
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
+  var TAB_KEYCODE = 9;
   var Event = {
     RESIZE: 'resize',
     FOCUS: 'focus'
@@ -4020,8 +4021,10 @@ var PriorityNav = function () {
         }, RESIZE_DURATION);
       });
 
-      this._$menu.find('.overflow-nav .dropdown-toggle').on(Event.FOCUS, function (e) {
-        $(e.target).dropdown('toggle');
+      this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', function (e) {
+        if (e.which === TAB_KEYCODE) {
+          $(e.target).dropdown('toggle');
+        }
       });
     }; // static
 
