@@ -15,7 +15,6 @@ layout: home
           <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download" class="btn btn-secondary btn-lg">Download</a>
         </p>
         <p class="version">Currently v{{ site.current_version }}</p>
-        <a href="http://boosted.orange.com/docs/3.3/">Old documentation (3.3.X)</a>
       </div>
       <div class="col-md-6">
         <img src="assets/img/boosted logo 3D.png">
@@ -24,65 +23,73 @@ layout: home
   </div>
 </main>
 
-<div class="container">
-    <div class="card-grid-flex">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">Migrating from Boosted 3.x to v4 ?</h2>
-                <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.</p>
-            </div>
-            <div class="card-footer">
-                <a href="{{ site.baseurl }}/docs/4.0/boosted-migration/" class="btn btn-primary">Migrate<span class="sr-only">about the document named "Environnement de développement web"</span></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">Using Angular ?</h2>
-                <p class="card-text">
-                    <svg version="1.1" id="angular-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-                <g>
-                    <polygon points="108,135.4 125,135.4 125,135.4 125,135.4 142,135.4 125,94.5 	"/>
-                    <path d="M125,30L125,30L125,30L31.9,63.2l14.2,123.1L125,230l0,0l0,0l78.9-43.7l14.2-123.1L125,30z M183.1,182.6h-21.7h0
-                        l-11.7-29.2H125h0h0h-24.7l-11.7,29.2h0H66.9h0L125,52.1l0,0l0,0l0,0l0,0L183.1,182.6L183.1,182.6z"/>
-                </g>
-                </svg>
-                </p>
-                <p class="card-subtitle">Yes, we do have an Angular version, and it's right here !</p>
-            </div>
-            <div class="card-footer">
-                <a href="http://ng-boosted.orange.com/" class="btn btn-primary">Get ng-boosted<span class="sr-only">about the document named "Environnement de développement web"</span></a>
+<div class="container" id="card-grid">
+    <div class="row">
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Migrating from Boosted 3.x to v4 ?</h2>
+                    <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ site.baseurl }}/docs/4.0/boosted-migration/" class="btn btn-info">Migrate<span class="sr-only">about the document named "Environnement de développement web"</span></a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">Only in Boosted !</h2>
-                <p class="card-subtitle">
-                    <ul class="o-square-list">
-                        <li><a href="docs/{{ site.docs_version }}/components/forms/#orange-switches">Orange switches and 3 way toggle</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/content/typography/#orange-list-with-bullet-points">Orange list with bullet points</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/components/orange-megamenu/">Main navigation with or without Mega menu</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/components/local-navigation">Local navigation</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/components/stepbar">Stepbar</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/components/collapse/#accordion-example">Accordions with indicator</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/content/tables/#orange-brand-tables">Orange brand tables</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/content/tables/#responsive-tables">Responsive table, display as cards onto tablets and mobile</a></li>
-                        <li><a href="docs/{{ site.docs_version }}/components/orange-footer/">Footer</a></li>
-                        </ul>
-                </p>
-            </div>
-            <div class="card-footer">
-                <a href="{{ site.baseurl }}/docs/4.0/boostwatch/" class="btn btn-primary">Boostwatch<span class="sr-only">go to boostwatch page</span></a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Using Angular ?</h2>
+                    <p class="card-text">
+                        <svg version="1.1" id="angular-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                        <polygon points="108,135.4 125,135.4 125,135.4 125,135.4 142,135.4 125,94.5 	"/>
+                        <path d="M125,30L125,30L125,30L31.9,63.2l14.2,123.1L125,230l0,0l0,0l78.9-43.7l14.2-123.1L125,30z M183.1,182.6h-21.7h0
+                            l-11.7-29.2H125h0h0h-24.7l-11.7,29.2h0H66.9h0L125,52.1l0,0l0,0l0,0l0,0L183.1,182.6L183.1,182.6z"/>
+                    </g>
+                    </svg>
+                    </p>
+                    <p class="card-subtitle">Yes, we do have an Angular version, and it's right here !</p>
+                </div>
+                <div class="card-footer">
+                    <a href="http://ng-boosted.orange.com/" class="btn btn-info">Get ng-boosted<span class="sr-only">about the document named "Environnement de développement web"</span></a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">Orange Templates</h2>
-                <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.</p>
-                <img class="img-fluid mt-3 mx-auto" src="assets/img/templates.png" alt="Bootstrap Themes" width="1024" height="388">
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Only in Boosted !</h2>
+                    <p class="card-subtitle">
+                        <ul class="o-square-list">
+                            <li><a href="docs/{{ site.docs_version }}/components/forms/#orange-switches">Orange switches and 3 way toggle</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/content/typography/#orange-list-with-bullet-points">Orange list with bullet points</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/components/orange-megamenu/">Main navigation with or without Mega menu</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/components/local-navigation">Local navigation</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/components/stepbar">Stepbar</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/components/collapse/#accordion-example">Accordions with indicator</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/content/tables/#orange-brand-tables">Orange brand tables</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/content/tables/#responsive-tables">Responsive table, display as cards onto tablets and mobile</a></li>
+                            <li><a href="docs/{{ site.docs_version }}/components/orange-footer/">Footer</a></li>
+                            </ul>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ site.baseurl }}/docs/4.0/boostwatch/" class="btn btn-info">Boostwatch<span class="sr-only">go to boostwatch page</span></a>
+                </div>
             </div>
-            <div class="card-footer">
-                    <a href="{{ site.themes }}" class="btn btn-primary">Browse templates</a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Orange Templates</h2>
+                    <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.</p>
+                    <img class="img-fluid mt-3 mx-auto" src="assets/img/templates.png" alt="Bootstrap Themes" width="1024" height="388">
+                </div>
+                <div class="card-footer">
+                        <a href="{{ site.themes }}" class="btn btn-info">Browse templates</a>
+                </div>
             </div>
         </div>
     </div>

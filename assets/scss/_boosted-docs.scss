@@ -31,6 +31,10 @@
     .btn {
       text-decoration: none;
     }
+
+    .btn + .btn {
+      margin-left: .625rem;
+    }
   }
 
   .bd-boosted-icon {
@@ -46,7 +50,7 @@
   img {
     display: block;
     width: 70%;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 }
 
@@ -262,8 +266,7 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
     max-width: calc(100% / 3 - 1.25rem);
     margin-bottom: 1.25rem;
     margin-left: 1.25rem;
-    border: 1px solid #ccc;
-    box-shadow: 0 .3125rem .625rem -.375rem #999;
+    // border-color: #ccc;
   }
 
   .card-footer {
@@ -284,6 +287,26 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
       width: auto;
       height: 2.5rem;
     }
+  }
+}
+
+#card-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-md-6.col-lg-4 {
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card-footer {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border: 0;
   }
 }
 
