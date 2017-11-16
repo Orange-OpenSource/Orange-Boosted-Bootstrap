@@ -57,6 +57,7 @@
   .o-scroll-up-text {
     display: inline-block;
     padding: (($o-scroll-up-height - 1.25) / 2) .625rem;
+    font-weight: $font-weight-bold;
     background-color: #fff;
     opacity: .8;
   }
@@ -74,5 +75,9 @@
       display: inline-block;
       float: none;
     }
+  }
+
+  @include hover-focus {
+    color: $primary;
   }
 }
