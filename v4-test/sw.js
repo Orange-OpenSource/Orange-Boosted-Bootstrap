@@ -92,7 +92,7 @@ workboxSW.precache([
   },
   {
     "url": "assets/img/favicons/manifest.json",
-    "revision": "775f22e82b8fcf892bc2d4e5a39414f3"
+    "revision": "515b0f6e969806f7925d737aabc961c9"
   },
   {
     "url": "assets/img/favicons/ms-icon-310x310.png",
@@ -300,203 +300,203 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/about/boosted-history/index.html",
-    "revision": "d27d26a27512bd8ab0a9496076c730bd"
+    "revision": "53dcfc48e34a9737ed6a2c8cbe197abf"
   },
   {
     "url": "docs/4.0/about/boosted-license/index.html",
-    "revision": "23e29583b02fa04b3f2b0a1bea6ba344"
+    "revision": "a3d2565439def11fde1888a7dfb72a53"
   },
   {
     "url": "docs/4.0/about/brand/index.html",
-    "revision": "e412b54d5d8dcdff8f9c44b05d2d0625"
+    "revision": "d619d7ca6736a27c27eea8f1f5dc2c01"
   },
   {
     "url": "docs/4.0/about/history/index.html",
-    "revision": "878729c57d53dd9057f91eb781be500a"
+    "revision": "bdf55169ec9c34601c66322858d5a973"
   },
   {
     "url": "docs/4.0/about/index.html",
-    "revision": "a196d61eb245f4523324b1aeb05ab9b2"
+    "revision": "2308e35ee8a8079780b691146a650445"
   },
   {
     "url": "docs/4.0/about/license/index.html",
-    "revision": "f3d0c4188fd655e81b209afb0a9be361"
+    "revision": "945a26d0f9f8de99d110bbd418772a6e"
   },
   {
     "url": "docs/4.0/about/orange-brand/index.html",
-    "revision": "e7ddf76489043236651f68d937c42658"
+    "revision": "b794ed2a3d603863df17e914e38b4e68"
   },
   {
     "url": "docs/4.0/about/team/index.html",
-    "revision": "8dd9cd40872000221c209b9f9e77ae39"
+    "revision": "0624431145c551cede0e7d00a5b8f923"
   },
   {
     "url": "docs/4.0/about/translations/index.html",
-    "revision": "aa4d6d5074de45df6fc45626ec08e581"
+    "revision": "57f95f377bd677ea8ff148f16b10ae8e"
   },
   {
     "url": "docs/4.0/boosted-migration/index.html",
-    "revision": "629cfbbe951e3f9bf931b6f79061940c"
+    "revision": "933e672724d8dfe5aa1d90d38f73ef87"
   },
   {
     "url": "docs/4.0/boostwatch/index.html",
-    "revision": "db503350ec04274c655c2b2751415dd1"
+    "revision": "3b90630147d27cf17ada2e434545767d"
   },
   {
     "url": "docs/4.0/browser-bugs/index.html",
-    "revision": "2f6b328453d7e3cdae9f3c68b9dd62e0"
+    "revision": "2e7b5aa69e0e382f2025f131f2c3a5e8"
   },
   {
     "url": "docs/4.0/components/alerts/index.html",
-    "revision": "8faa552a315481a15b71e2238d69aeb0"
+    "revision": "7bc8c8249306881bfd7f674070d95b40"
   },
   {
     "url": "docs/4.0/components/badge/index.html",
-    "revision": "25a45f4dec8892c2cb814242f7bff17a"
+    "revision": "47843f1f2de3aadf97d9b5c14afd55fd"
   },
   {
     "url": "docs/4.0/components/breadcrumb/index.html",
-    "revision": "42d99da622ebef88bc7eea5bae8f9780"
+    "revision": "e20d3117b8cbb624f9a220a243b18a1a"
   },
   {
     "url": "docs/4.0/components/button-group/index.html",
-    "revision": "2105007c2d9bb313dcae1a068c4ea8f1"
+    "revision": "aff72c00c9ddf87561d813d8ae8426cf"
   },
   {
     "url": "docs/4.0/components/buttons/index.html",
-    "revision": "5a230d2a60b1b2ecafe47d347d3b4649"
+    "revision": "d4c07665bdf7297d760a01b577ac0515"
   },
   {
     "url": "docs/4.0/components/card/index.html",
-    "revision": "ca024cb13496648c2bde87e856ba2e90"
+    "revision": "358d2f0522c6781e8b05cadd7b06e019"
   },
   {
     "url": "docs/4.0/components/carousel/index.html",
-    "revision": "d7b35fe707117f8a5b8fa3de7bfac8cf"
+    "revision": "39b98780b509fc247ee7928561a9a47f"
   },
   {
     "url": "docs/4.0/components/collapse/index.html",
-    "revision": "fecd5929f9f2586aeac34f014666acf8"
+    "revision": "c584542a30fc69a44b422f6e7ca78969"
   },
   {
     "url": "docs/4.0/components/custom-carousel/index.html",
-    "revision": "f0bd6a10e1959cfe5e21daa0ec2edea7"
+    "revision": "108a901b7cbc705911d6e6a1dcd8bfaa"
   },
   {
     "url": "docs/4.0/components/dropdowns/index.html",
-    "revision": "bbc2b1d262d251a155aaa3f19842939e"
+    "revision": "1b803cf5da68da5805b63ec2eff74723"
   },
   {
     "url": "docs/4.0/components/forms/index.html",
-    "revision": "8749d69cd4483cbf183b0224062b7643"
+    "revision": "b454ea9fe83ad4caeb70b5366d9e472c"
   },
   {
     "url": "docs/4.0/components/index.html",
-    "revision": "82a8ff98dfd5fd2baecf9444bb80b273"
+    "revision": "244b89514885c96c07ad41613015a707"
   },
   {
     "url": "docs/4.0/components/input-group/index.html",
-    "revision": "080a2d559914727e6a942766afb563e9"
+    "revision": "d8cefd8eb12554a1ad01f1e93b3897ba"
   },
   {
     "url": "docs/4.0/components/jumbotron/index.html",
-    "revision": "491872ae225a724622c43f782b4c08f8"
+    "revision": "235e2522f538df9d22fbf66d2c8c83c3"
   },
   {
     "url": "docs/4.0/components/list-group/index.html",
-    "revision": "7c120976d5accea06716c5e8b67bed2d"
+    "revision": "5fd18596358ef054b639ee01f2e4df91"
   },
   {
     "url": "docs/4.0/components/local-navigation/index.html",
-    "revision": "4b4b291895d7255252b5822a63aacc57"
+    "revision": "5a18b9a5c313f63cd5c4c99800eea171"
   },
   {
     "url": "docs/4.0/components/modal/index.html",
-    "revision": "c787de2f8ba96f7069fe98b0a26bb2ad"
+    "revision": "3f71a0be2895096101d3af27b2c2d983"
   },
   {
     "url": "docs/4.0/components/navbar-orange/index.html",
-    "revision": "6ec1c6e51bc281a6d7c57d54d7b47741"
+    "revision": "157efd3424aa2692723b37892c6526bb"
   },
   {
     "url": "docs/4.0/components/navbar/index.html",
-    "revision": "b427fa3c92d27d3850b1f1e2b1405237"
+    "revision": "fec575e270775808dff723fbb6550953"
   },
   {
     "url": "docs/4.0/components/navs/index.html",
-    "revision": "2dae42e1e660661269d3e96f5153fd4d"
+    "revision": "920c115a8258c7099e11911dd1e0bcf3"
   },
   {
     "url": "docs/4.0/components/orange-footer/index.html",
-    "revision": "4263b6236350f25e301c096cafefd759"
+    "revision": "7382d3d675471eeb5026191578a68524"
   },
   {
     "url": "docs/4.0/components/orange-megamenu/index.html",
-    "revision": "6b9d26b7e581a5abe52844b89c58b45b"
+    "revision": "ae8422910df1135a87ac14c98d188cca"
   },
   {
     "url": "docs/4.0/components/orange-popin/index.html",
-    "revision": "58451268860e351f009546acc446b7f0"
+    "revision": "73aa027151a9a303c7be80b2f74b7c85"
   },
   {
     "url": "docs/4.0/components/pagination/index.html",
-    "revision": "0cdd2899380064d5c5626bb2dd9483bb"
+    "revision": "b72668a025ec7c9397809511c9c6453c"
   },
   {
     "url": "docs/4.0/components/popovers/index.html",
-    "revision": "cd69e8ad978a2121aaddfb7cd1e15890"
+    "revision": "3c700fc5629c39ed36e86e1d3cdffb85"
   },
   {
     "url": "docs/4.0/components/priority-nav/index.html",
-    "revision": "8ae2090e70e43d5f324561fa65db1ff0"
+    "revision": "cd527252b54609b4e97d5857580351ff"
   },
   {
     "url": "docs/4.0/components/progress/index.html",
-    "revision": "f4f5cff02713649ea5ecc5ab180dfc04"
+    "revision": "9af6070ea6fdd47c7179064c38fe11cf"
   },
   {
     "url": "docs/4.0/components/scroll-up/index.html",
-    "revision": "d30097c573d075a52e9649cd9f969304"
+    "revision": "752a8060ce0011aef56c7d76bf4fcc99"
   },
   {
     "url": "docs/4.0/components/scrollspy/index.html",
-    "revision": "2e186e738eea4c2eeb4335aed4738fe2"
+    "revision": "6518d05e04eaa50d26b06c84f4dc669d"
   },
   {
     "url": "docs/4.0/components/stepbar/index.html",
-    "revision": "7b3f329e9ef311bf9bdc36bba9318e85"
+    "revision": "19dce3824907a1fc26bd04d96b24114e"
   },
   {
     "url": "docs/4.0/components/tooltips/index.html",
-    "revision": "6b9ec439c4de700a97d8cce2f13fce12"
+    "revision": "8cb63cf581434161b24f24108530a02b"
   },
   {
     "url": "docs/4.0/content/code/index.html",
-    "revision": "ad4c6c4941cc9b3654380b77c492ad8f"
+    "revision": "c6f04038eb9cde64c7af1a6138bf130c"
   },
   {
     "url": "docs/4.0/content/figures/index.html",
-    "revision": "85f34f3b9378c783bf9ceed5628d5532"
+    "revision": "9e1fc5de06c39b5be0c7f85f1d949c02"
   },
   {
     "url": "docs/4.0/content/images/index.html",
-    "revision": "a675ae24f31065d7a755be43b543da19"
+    "revision": "613cfc74065d3a46b74dffcfe7014081"
   },
   {
     "url": "docs/4.0/content/index.html",
-    "revision": "624a23e5ecaf85e7133311869d0f4622"
+    "revision": "2fbd4c479129a413c72c94eb47068572"
   },
   {
     "url": "docs/4.0/content/reboot/index.html",
-    "revision": "628f903b01d4dc46bf69db82a028d783"
+    "revision": "fad2dc7e279f320b1f485e29cda92556"
   },
   {
     "url": "docs/4.0/content/tables/index.html",
-    "revision": "c42655445731999821f211b77316f3b2"
+    "revision": "e46838379a719e901be10c9eac8529a5"
   },
   {
     "url": "docs/4.0/content/typography/index.html",
-    "revision": "cd1afdd9658cb28abec5e5b880014974"
+    "revision": "9ff88dd2e4b4aa9bf7baadab9638d1fb"
   },
   {
     "url": "docs/4.0/demo/assets/bill.png",
@@ -588,7 +588,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/index.html",
-    "revision": "6ecab9a1330c08b5afda8c41888930f8"
+    "revision": "66fc492307d5c2a4da7af0c1a7423016"
   },
   {
     "url": "docs/4.0/examples/jumbotron/index.html",
@@ -1400,171 +1400,171 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/extend/approach/index.html",
-    "revision": "a3e058d3b838ab23165f5be86ea0b390"
+    "revision": "0ff20145a48cb4d19b9bdc113b2f720c"
   },
   {
     "url": "docs/4.0/extend/icons/index.html",
-    "revision": "c922ff08711e43d3b46fdb159bf683a5"
+    "revision": "4977e63c6fe176a96e4f67f6451578e4"
   },
   {
     "url": "docs/4.0/extend/index.html",
-    "revision": "ff56975b285e6362692818c5f72e94a8"
+    "revision": "27c7c248b93731d6dc1706aca6898808"
   },
   {
     "url": "docs/4.0/getting-started/accessibility/index.html",
-    "revision": "e03bc5a758117cef5d95b183659522d2"
+    "revision": "f93285347ac1151238cc8dd2aa8debfe"
   },
   {
     "url": "docs/4.0/getting-started/best-practices/index.html",
-    "revision": "ad051b503f26ef54f00b1d33cd4586c8"
+    "revision": "f36f4991b4fa036ba75da383d1c12dc8"
   },
   {
     "url": "docs/4.0/getting-started/browsers-devices/index.html",
-    "revision": "5132b6194dc10be05fde1bfb3f33e2bb"
+    "revision": "6bb6bf75db0d3f725ea214db1a5c4f2d"
   },
   {
     "url": "docs/4.0/getting-started/build-tools/index.html",
-    "revision": "079f0a99355723e6f499497b7ad1802e"
+    "revision": "b5a569204d02bfbe933e70a005b4f999"
   },
   {
     "url": "docs/4.0/getting-started/contents/index.html",
-    "revision": "a81b491c9492bda120efa21d595e7584"
+    "revision": "51976b66eb516d1c56b8f92816624060"
   },
   {
     "url": "docs/4.0/getting-started/download/index.html",
-    "revision": "308dbafb6c88e528adb55c43a8ef1c16"
+    "revision": "2507cecc655ded3c69eb5c142512c02e"
   },
   {
     "url": "docs/4.0/getting-started/index.html",
-    "revision": "9476c2c3926033cbd153b7ec31ef3da6"
+    "revision": "81eedca62e0cc6f03cf35f43d5e389df"
   },
   {
     "url": "docs/4.0/getting-started/introduction/index.html",
-    "revision": "be381c5050b7e044f3b57e8cd6ffdf5b"
+    "revision": "6f29d957161d782433a91c6a11148e6b"
   },
   {
     "url": "docs/4.0/getting-started/javascript/index.html",
-    "revision": "e9ebba8a08c51bfd8cd064f0b3c7f42b"
+    "revision": "1a377347ea26e4382e472b326145b761"
   },
   {
     "url": "docs/4.0/getting-started/options/index.html",
-    "revision": "5064f1ddb161818e1c852045f40ae203"
+    "revision": "bbf7387e9a8584caf44ff32e33334ce7"
   },
   {
     "url": "docs/4.0/getting-started/theming/index.html",
-    "revision": "86a509b219dc0cbda7b84ede615fa27d"
+    "revision": "3040a06d09c675da16120e71b826356c"
   },
   {
     "url": "docs/4.0/getting-started/webpack/index.html",
-    "revision": "5358d6fb22d2519a62878e78c245ab35"
+    "revision": "24c0d52d24472adcf1711ad610a6b910"
   },
   {
     "url": "docs/4.0/index.html",
-    "revision": "9476c2c3926033cbd153b7ec31ef3da6"
+    "revision": "81eedca62e0cc6f03cf35f43d5e389df"
   },
   {
     "url": "docs/4.0/layout/grid/index.html",
-    "revision": "25b503a638bbb40b221e04e25d78d799"
+    "revision": "81732b821861c17fd34e6ff3ab12a5e9"
   },
   {
     "url": "docs/4.0/layout/index.html",
-    "revision": "d227ace777ac0630a26b171014660bd2"
+    "revision": "fb8ed7339eb19075435ee0a95a7bf34e"
   },
   {
     "url": "docs/4.0/layout/media-object/index.html",
-    "revision": "94d352271f71b528dce0c73084afca02"
+    "revision": "c0642f1dcecf604f9a79cab18c893218"
   },
   {
     "url": "docs/4.0/layout/overview/index.html",
-    "revision": "41f0cdb6a66700b9c14ea3974f6fd686"
+    "revision": "58ec303c04489a7ba63c474e4a6f59a6"
   },
   {
     "url": "docs/4.0/layout/utilities-for-layout/index.html",
-    "revision": "061bc3a0a8c77dfa16cda0525da37024"
+    "revision": "bbe757a5bfb2ebb1115a6c2103fa705d"
   },
   {
     "url": "docs/4.0/migration/index.html",
-    "revision": "430a1618fa6cf48a6179fbdb6a056583"
+    "revision": "507306a620e3070b0005425fa5b27883"
   },
   {
     "url": "docs/4.0/utilities/borders/index.html",
-    "revision": "bcf5e0bd33f4b9e7232fe12ab54dca60"
+    "revision": "6a437257a7e643ed7ef92c5d030ab3d4"
   },
   {
     "url": "docs/4.0/utilities/clearfix/index.html",
-    "revision": "b1943cd27a3232c87ad7e369e34d2b82"
+    "revision": "9cc6244df6baf555d17d735b18e9dc69"
   },
   {
     "url": "docs/4.0/utilities/close-icon/index.html",
-    "revision": "4d6fe9109ff69071acf26af6bd9dc18d"
+    "revision": "ff4a42754946a61a77e57eda925718ca"
   },
   {
     "url": "docs/4.0/utilities/colors/index.html",
-    "revision": "253cac46ee2ace611dddeaeb16d286b1"
+    "revision": "ce69d76de70426ce536881705684a7e8"
   },
   {
     "url": "docs/4.0/utilities/display/index.html",
-    "revision": "7365145109c292e5873b7392d04dc6ce"
+    "revision": "90da373635c81eb3e2e948d0e498bb3c"
   },
   {
     "url": "docs/4.0/utilities/embed/index.html",
-    "revision": "922c4c5d673c7833fc47ab0611c9246f"
+    "revision": "c3ce91b5052c6cf8cb32acd40b4ba865"
   },
   {
     "url": "docs/4.0/utilities/flex/index.html",
-    "revision": "6db08bd0d4309eb939ff432827880ee8"
+    "revision": "a908123d753edcda4bcd03e8faabc255"
   },
   {
     "url": "docs/4.0/utilities/float/index.html",
-    "revision": "2c8a214f5b7b98aabe6bc2eaa8c66df0"
+    "revision": "ab311e4edf7b31e3d5070224e5ed89e4"
   },
   {
     "url": "docs/4.0/utilities/image-replacement/index.html",
-    "revision": "08d35e6509331aae47834f15828f104f"
+    "revision": "90df2396c3089ace8a43793f49a96da4"
   },
   {
     "url": "docs/4.0/utilities/index.html",
-    "revision": "1d4e5d86c9e644b4763802abc5d44171"
+    "revision": "e6180f90bb6ed2232d955089837710a8"
   },
   {
     "url": "docs/4.0/utilities/position/index.html",
-    "revision": "98074d42857d8451bb69a5092a120cd8"
+    "revision": "5c9d2adf84ba0fdb3310cda5522699b5"
   },
   {
     "url": "docs/4.0/utilities/screenreaders/index.html",
-    "revision": "7c5e03660bce7d46f638185dec674be7"
+    "revision": "4b55b46e7ae8d0cc859639b395d8a85d"
   },
   {
     "url": "docs/4.0/utilities/sizing/index.html",
-    "revision": "216ec515883a75ef8bff9657532267fb"
+    "revision": "217571374a5bf2b03a956429a46cd5d0"
   },
   {
     "url": "docs/4.0/utilities/spacing/index.html",
-    "revision": "7fed70941f707ee9a1161c6ca2d7ba4c"
+    "revision": "45f8dcad5d150b481de8c16f47a7f38e"
   },
   {
     "url": "docs/4.0/utilities/text/index.html",
-    "revision": "c37caa94a93f62fe8884cc51c4470057"
+    "revision": "629f073bb1f0e24100c8d911ba1d9df9"
   },
   {
     "url": "docs/4.0/utilities/vertical-align/index.html",
-    "revision": "f58457756e910363741be2238c7da648"
+    "revision": "e9a34bf18bd108111b326130ea153f81"
   },
   {
     "url": "docs/4.0/utilities/visibility/index.html",
-    "revision": "c6e9870ba68c5294a2fc334e792eac2c"
+    "revision": "48731d379695e85476204a88154c934f"
   },
   {
     "url": "docs/index.html",
-    "revision": "9476c2c3926033cbd153b7ec31ef3da6"
+    "revision": "81eedca62e0cc6f03cf35f43d5e389df"
   },
   {
     "url": "examples/index.html",
-    "revision": "8851ee3d1b5b8fdce01df80dab067b4b"
+    "revision": "fad6be49dca5bce75328878d089d418a"
   },
   {
     "url": "index.html",
-    "revision": "b73a618763e392ae496d85f3e5734e34"
+    "revision": "2ebc66746a716905ca0aa9b118947e0d"
   },
   {
     "url": "sw.js",
