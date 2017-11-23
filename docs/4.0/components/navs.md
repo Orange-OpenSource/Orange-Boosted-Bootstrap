@@ -153,6 +153,23 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 </ul>
 {% endexample %}
 
+### Responsive Tabs
+
+Responsive tabs allows tab layout to be displayed as accordion in mobile if number of tabs exceeds 3. No configuration or javascript method call needed. Here is the markup.
+
+{% example html %}
+<div class="o-tab-container ">
+  <a class="o-tab-heading" href="#" id="tab1">Tab 1</a>
+  <div class="o-tab-content show" id="tab-1-content">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
+  <a class="o-tab-heading" href="#" id="tab2">Tab 2</a>
+  <div class="o-tab-content" id="tab-2-content">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
+  <a class="o-tab-heading" href="#" id="tab3">Tab 3</a>
+  <div class="o-tab-content" id="tab-3-content">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+  <a class="o-tab-heading" href="#" id="tab4">Tab 4</a>
+  <div class="o-tab-content" id="tab-4-content">Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+</div>
+{% endexample %}
+
 ### Pills
 
 Take that same HTML, but use `.nav-pills` instead:

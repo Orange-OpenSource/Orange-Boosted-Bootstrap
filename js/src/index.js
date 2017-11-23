@@ -7,6 +7,7 @@ import Dropdown from './dropdown'
 import MegaMenu from './o-megamenu'
 import Modal from './modal'
 import Navbar from './o-navbar'
+import Otab from './o-tab'
 import Popover from './popover'
 import PriorityNav from './o-priority-nav'
 import ScrollUp from './o-scroll-up'
@@ -49,6 +50,7 @@ export {
   MegaMenu,
   Modal,
   Navbar,
+  Otab,
   Popover,
   PriorityNav,
   ScrollUp,
