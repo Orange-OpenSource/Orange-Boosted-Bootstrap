@@ -23,7 +23,7 @@ const Otab = (() => {
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const DEFAULT_THRESHOLD   = 3
+  const DEFAULT_THRESHOLD   = 2
 
   const Event = {
     CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
