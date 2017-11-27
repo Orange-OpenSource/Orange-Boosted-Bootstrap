@@ -253,48 +253,15 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
 
 /* home cards */
 
-.card-grid-flex {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-  margin-left: -1.25rem;
-
-  .card {
-    display: flex;
-    flex: 0 1 calc(100% / 3 - 1.25rem);
-    flex-flow: column;
-    max-width: calc(100% / 3 - 1.25rem);
-    margin-bottom: 1.25rem;
-    margin-left: 1.25rem;
-    // border-color: #ccc;
-  }
-
-  .card-footer {
-    padding-top: 0;
-    padding-bottom: 20px;
-    // text-align: right;  // sets card buttons to right
-    border-top: 0;
-  }
-
-  .card-title {
-    margin-bottom: 1.25rem;
-  }
-
-  .card-subtitle {
-    margin-bottom: 1.25rem;
-    font-size: 1.125rem;
     img {
       width: auto;
       height: 2.5rem;
     }
-  }
-}
-
 #card-grid {
   display: flex;
   flex-wrap: wrap;
 
-  .col-md-6.col-lg-4,
+  // .col-md-6.col-lg-4,
   .col-md-6.col-lg-3 {
     display: flex;
     margin-bottom: 1.25rem;
@@ -315,4 +282,12 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
   display: inherit;
   width: 8rem;
   margin: 0 auto;
+}
+
+#migrate-card .card-text {
+  text-align: center;
+
+  img {
+    width: 50%;
+  }
 }
