@@ -85,10 +85,17 @@
 }
 
 .bd-search {
+  padding-left: 0;
+  margin-left: 3px;
+
   .form-control {
     height: auto;
     background-color: transparent;
   }
+}
+
+.bd-toc-link {
+  padding-left: .875rem;  // left align with orange logo
 }
 
 .o-footer {
