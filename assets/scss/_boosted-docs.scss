@@ -271,6 +271,15 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
     width: 100%;
   }
 
+  .picto-link {
+    display: block;
+    text-align: center;
+
+    img {
+      width: 50%;
+    }
+  }
+
   .card-footer {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -282,12 +291,4 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
   display: inherit;
   width: 8rem;
   margin: 0 auto;
-}
-
-#migrate-card .card-text {
-  text-align: center;
-
-  img {
-    width: 50%;
-  }
 }
