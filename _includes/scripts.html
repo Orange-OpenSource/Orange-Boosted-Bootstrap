@@ -62,11 +62,27 @@
 
     // If we need pagination
     pagination: '.swiper-pagination',
+    paginationClickable: true,
 
     // Navigation arrows
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-  })
+
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: false,
+
+    breakpoints: {
+        767: {
+            paginationClickable: false,
+            freeMode: true, // disable for centered mode
+            freeModeMomentumRatio: .5,
+            centeredSlides: false, // enable for centered mode
+            slideToClickedSlide: false // enable for centered mode
+        }
+    }
+})
 
   $('#collapsing-navbarHead').megamenu();
 
@@ -94,11 +110,27 @@
 
     // If we need pagination
     pagination: '.swiper-pagination',
+    paginationClickable: true,
 
     // Navigation arrows
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-  })
+
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: false,
+
+    breakpoints: {
+        767: {
+            paginationClickable: false,
+            freeMode: true, // disable for centered mode
+            freeModeMomentumRatio: .5,
+            centeredSlides: false, // enable for centered mode
+            slideToClickedSlide: false // enable for centered mode
+        }
+    }
+})
 </script>
 {% endif %}
 <script>

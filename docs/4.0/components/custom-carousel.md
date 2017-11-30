@@ -15,9 +15,39 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
 {% example html %}
 <div class="swiper-container" style="width: 37.5rem;">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img alt="Random first slide" src="https://dummyimage.com/600x400/cccccc/000000&text=slide+1"></div>
-        <div class="swiper-slide"><img alt="Random first slide" src="https://dummyimage.com/600x400/cccccc/000000&text=slide+2"></div>
-        <div class="swiper-slide"><img alt="Random first slide" src="https://dummyimage.com/600x400/cccccc/000000&text=slide+3"></div>
+        <div class="swiper-slide" id="slide1">
+            <div class="card">
+                <div class="card-img">
+                    <img alt="first slide" src="/assets/img/green.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Slide 1</div>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="slide2">
+            <div class="card">
+                <div class="card-img">
+                    <img alt="first slide" src="/assets/img/blue.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Slide 2</div>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="slide3">
+            <div class="card">
+                <div class="card-img">
+                    <img alt="first slide" src="/assets/img/pink.png">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Slide 3</div>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="swiper-pagination"></div>
 
@@ -49,20 +79,33 @@ Make sure to add vendor css and js files to your page to get the plugin working.
 Here is the recommended setup for accessible carousel.
 
 ```javascript
-var mySwiper = new Swiper ('#main-carousel', {
-// enable accessibility
-a11y: true,
-keyboardControl: true,
+var mySwiper = new Swiper('.swiper-container', {
+  // enable accessibility
+  a11y: true,
+  keyboardControl: true,
 
-// pagination dots
-pagination: '.swiper-pagination',
+  // If we need pagination
+  pagination: '.swiper-pagination',
+  paginationClickable: true,
 
-// navigation arrows
-nextButton: '.swiper-button-next',
-prevButton: '.swiper-button-prev',
+  // Navigation arrows
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
 
-// adapt height to each slide
-autoHeight: true
+  spaceBetween: 10,
+  slidesPerView: 'auto',
+  centeredSlides: false,
+  freeMode: false,
+
+  breakpoints: {
+    767: {
+      paginationClickable: false,
+      freeMode: true, // disable for centered mode
+      freeModeMomentumRatio: .5,
+      centeredSlides: false, // enable for centered mode
+      slideToClickedSlide: false // enable for centered mode
+    }
+  }
 })
 ```
 
