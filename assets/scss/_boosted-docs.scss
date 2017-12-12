@@ -236,3 +236,43 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
     background-image: $doc-link-arrow-hover;
   }
 }
+
+// card links
+#bill .card-img,
+#shop .card-img,
+#timer .card-img,
+#unlock .card-img {
+  padding: 1.25rem;
+
+  img {
+    width: 50%;
+  }
+}
+
+#bill .card-img {
+  background-color: #50be87;
+}
+
+#shop .card-img {
+  background-color: #4bb4e6;
+}
+
+#timer .card-img {
+  background-color: #ffb4e6;
+}
+
+#unlock .card-img {
+  background-color: #ffd200;
+}
+
+@include media-breakpoint-down(xs) {
+  #bill .card-img,
+  #shop .card-img,
+  #timer .card-img,
+  #unlock .card-img {
+    img {
+      width: auto;
+      height: 2.5rem;
+    }
+  }
+}
