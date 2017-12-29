@@ -11,13 +11,13 @@
   display: inline-block;
 }
 #header h1 {
-  color: #000;
   display: inline-block;
   margin-left: 20px;
+  color: #000;
   vertical-align: middle;
 }
 #header input{
-  height:35px;
+  height: 35px;
 }
 #localContainer{
   padding: 0;
@@ -27,14 +27,14 @@
   margin: 5px 0 10px;
 }
 #news-table {
-  margin-top : 10px;
+  margin-top: 10px;
 }
 #news-table th{
   color: #000;
 }
 .tab-content .tab-pane p{
-  margin-left: 10px;
   margin-top: 5px;
+  margin-left: 10px;
 }
 #PostAdminEditForm {
   margin-right: 10px;
@@ -43,21 +43,21 @@
 #radio-action label {
   margin-right: 15px;
 }
-footer div span{
+footer span{
   padding-right: 42px;
   margin-top: 10px;
 }
-footer div span:nth-child(8){
+footer span:nth-child(8){
   padding-right: 0;
 }
 footer {
-  background-color: #eee;
-  border-bottom: 1px solid #f3f3f3;
-  border-top: 1px solid #d6d6d6;
-  overflow: hidden;
-  min-height: 54px;
   height: auto;
+  min-height: 54px;
   margin: 10px auto 20px;
+  overflow: hidden;
+  background-color: #eee;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #f3f3f3;
 }
 footer a {
   color: inherit;
@@ -67,25 +67,26 @@ footer a {
   background-color: inherit;
 }
 .navbar-dark #id-for-cdu-link a{
-    color: #fff;
+  color: #fff;
 }
-.navbar-dark #id-for-cdu-link a:hover,.navbar-dark #id-for-cdu-link a:focus{
-    color: #f16e00;
+.navbar-dark #id-for-cdu-link a:hover,
+.navbar-dark #id-for-cdu-link a:focus{
+  color: #f16e00;
 }
 
 .svg-avatar::after {
-  left: -1.25rem;
   top: -2px;
+  left: -1.25rem;
 }
 
-.navbar .nav-link.svg-settings::after {
-  right: -1.25rem !important;
+.navbar .nav-link.sample-svg-settings::after {
+  right: -1.25rem;
 }
 
 @media (max-width: 767px) {
   .navbar .btn{
-    font-size: inherit;
-    padding: 6px 10px;
     height: auto;
+    padding: 6px 10px;
+    font-size: inherit;
   }
 }

@@ -87,10 +87,10 @@ main {
   padding-left: 5.25rem;
   font-size: 1rem;
   font-weight: 700;
-  background: url("../img/stars_sprite.png") no-repeat;
-  background-size: 5rem auto;
   line-height: 1;
   text-decoration: none;
+  background: url("../img/stars_sprite.png") no-repeat;
+  background-size: 5rem auto;
 }
 
 .rating.rated-5 {
@@ -107,9 +107,9 @@ main {
   padding-left: 2.5rem;
   margin: .625rem 0;
   font-weight: 700;
+  line-height: 1.875rem;
   background: url("../img/label_discount.png") no-repeat;
   background-size: 7.5rem auto;
-  line-height: 1.875rem;
 }
 
 /* pricing */
@@ -155,8 +155,8 @@ main {
   padding-left: .875rem;
   margin-bottom: .625rem;
   font-size: 1rem;
-  list-style-type: square;
   font-weight: 700;
+  list-style-type: square;
 }
 
 /* mobile view */

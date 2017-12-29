@@ -8,19 +8,19 @@
   float: left;
 }
 #app_name{
-  color: #999999;
+  color: #999;
   font-size: 1.1em;
   margin-left: 20px;
   text-shadow: none;
 }
 #app_name:hover, #app_name:focus {
-  color: #F16E00;
+  color: #f16e00;
 }
 .nav-shift{
   margin-left: 6%;
 }
 .orange{
-  color: #F16E00;
+  color: #f16e00;
   margin-left: 6px;
 }
 
@@ -32,7 +32,7 @@
   margin-bottom: 30px;
 }
 footer {
-  background-color: #333333;
+  background-color: #333;
   height: auto;
 }
 footer a {
@@ -43,7 +43,7 @@ footer a {
     color: #fff;
 }
 .navbar-dark #id-for-cdu-link a:hover,.navbar-dark #id-for-cdu-link a:focus{
-    color: #F16E00;
+    color: #f16e00;
 }
 
 .navbar-nav span[class*="icon-"] {

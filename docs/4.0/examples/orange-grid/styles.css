@@ -1,15 +1,15 @@
 .container{
- background-color: red; 
+  background-color: #ff0000; 
 }
 .row{
- background-color: blue; 
+  background-color: #0000ff; 
 }
 [class*="col-"]{
-  background-color: green;
+  background-color: #00ff00;
   min-height: 100px;
 }
 [class*="col-"] > div{ 
   background-color: #ddd; 
   min-height: 100px;
-  border: 1px solid red;
+  border: 1px solid #ff0000;
 }

@@ -6,58 +6,59 @@
   float: left;
 }
 #app_name{
-  font-size: 1.1em;
   margin-left: 20px;
+  font-size: 1.1em;
   text-shadow: none;
 }
-#app_name:hover, #app_name:focus {
-  color: #F16E00;
+#app_name:hover,
+#app_name:focus {
+  color: #f16e00;
 }
 .nav-shift{
   margin-left: 6%;
 }
 .orange{
-  color: #F16E00;
   margin-left: 6px;
+  color: #f16e00;
 }
 #content {
   margin: 10px 10px 0 10px;
 }
 #content .well{
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: #eee;
   background-image: none;
-  box-shadow: none;
+  border-color: #eee;
   border-radius: 0;
-  background-color: #EEEEEE;
-  border-color: #EEEEEE;
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
+  box-shadow: none;
 }
 #content .info-block {
-  background-color: #EEEEEE;
   color: inherit;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #eee;
 }
-.tab-content {
-  background-color: white;
-}
-.tab-pane, .tab-pane:active, .tab-pane:focus {
-  outline: 0 !important;
+.tab-pane,
+.tab-pane:active,
+.tab-pane:focus {
+  outline: 0;
 }
 .col .info-block{
-  margin-bottom: -99999px;
   padding-bottom: 99999px;
+  margin-bottom: -99999px;
 }
 .col-wrap{
   overflow: hidden;
 }
 .col-base{
-  margin-top: -15px;
   padding: 10px;
+  margin-top: -15px;
 }
 .tab-content {
   padding: 10px;
+  background-color: #fff;
 }
 .form-control:focus {
   background-color: white;
@@ -66,22 +67,22 @@
   margin-bottom: 10px;
 }
 .center{
-  text-align:center;
+  text-align: center;
 }
 table .alert-img{
   width: 20px;
 }
 .warning {
-  color: #F16E00;
+  color: #f16e00;
 }
 .ok {
-  color: #0DA520;
+  color: #0da520;
 }
 .error {
-  color : red;
+  color : #ff0000;
 }
 .info-block .sub-block{
-  background-color: #CCCCCC;
+  background-color: #ccc;
   padding: 10px 10px 1px;
   margin: 10px;
 }
@@ -96,7 +97,7 @@ footer a {
     color: #fff;
 }
 .navbar-dark #id-for-cdu-link a:hover,.navbar-dark #id-for-cdu-link a:focus{
-    color: #F16E00;
+    color: #f16e00;
 }
 
 .icon-international-globe {
