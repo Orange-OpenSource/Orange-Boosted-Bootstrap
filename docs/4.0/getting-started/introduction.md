@@ -4,9 +4,10 @@ title: Introduction
 description: Get started with Boosted using the Boosted source and a template starter page.
 group: getting-started
 redirect_from:
-  - /docs/4.0/getting-started/
-  - /docs/4.0/
   - /docs/
+  - /docs/4.0/
+  - /docs/4.0/getting-started/
+  - /docs/getting-started/
 toc: true
 ---
 
@@ -47,7 +48,6 @@ Be sure to have your pages set up with the latest design and development standar
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,16 +64,22 @@ Be sure to have your pages set up with the latest design and development standar
     <link rel="stylesheet" href="css/orangeHelvetica.css" />
     <!--
       Orange Icons
-      Copyright (C) 2016 Orange SA All rights reserved
+      Copyright (C) 2016 - 2017 Orange SA All rights reserved
       See NOTICE.txt for more informations.
     -->
     <link rel="stylesheet" href="css/orangeIcons.css" />
 
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="path/to/your/boosted.css">
+
+    <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
+
+    <main id="content" role="main">
+      My page content start here
+    </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Boosted JS. -->
@@ -117,13 +123,13 @@ For more straightforward sizing in CSS, we switch the global `box-sizing` value 
 
 On the rare occasion you need to override it, use something like the following:
 
-{% highlight scss %}
+{% highlight css %}
 .selector-for-some-widget {
   box-sizing: content-box;
 }
 {% endhighlight %}
 
-With the above snippet, nested elementsâ€”including generated content via `::before` and `::after`â€”will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
+With the above snippet, nested elements—including generated content via `::before` and `::after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 

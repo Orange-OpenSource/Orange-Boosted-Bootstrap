@@ -4,12 +4,12 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.2): collapse.js
+ * Bootstrap (v4.0.0-beta.3): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const Collapse = (() => {
+const Collapse = (($) => {
 
 
   /**
@@ -19,7 +19,7 @@ const Collapse = (() => {
    */
 
   const NAME                = 'collapse'
-  const VERSION             = '4.0.0-beta.2'
+  const VERSION             = '4.0.0-beta.3'
   const DATA_KEY            = 'bs.collapse'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
@@ -280,7 +280,10 @@ const Collapse = (() => {
     // private
 
     _getConfig(config) {
-      config = $.extend({}, Default, config)
+      config = {
+        ...Default,
+        ...config
+      }
       config.toggle = Boolean(config.toggle) // coerce string values
       Util.typeCheckConfig(NAME, config, DefaultType)
       return config
@@ -343,12 +346,11 @@ const Collapse = (() => {
       return this.each(function () {
         const $this   = $(this)
         let data      = $this.data(DATA_KEY)
-        const _config = $.extend(
-          {},
-          Default,
-          $this.data(),
-          typeof config === 'object' && config
-        )
+        const _config = {
+          ...Default,
+          ...$this.data(),
+          ...typeof config === 'object' && config
+        }
 
         if (!data && _config.toggle && /show|hide|init/.test(config)) { // Boosted mod
           _config.toggle = false

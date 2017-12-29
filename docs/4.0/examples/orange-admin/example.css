@@ -1,5 +1,5 @@
 .orange{
-  color: #F16E00;
+  color: #f16e00;
 }
 #img-home{
   vertical-align: inherit;
@@ -11,7 +11,7 @@
   display: inline-block;
 }
 #header h1 {
-  color: #000000;
+  color: #000;
   display: inline-block;
   margin-left: 20px;
   vertical-align: middle;
@@ -30,7 +30,7 @@
   margin-top : 10px;
 }
 #news-table th{
-  color: black;
+  color: #000;
 }
 .tab-content .tab-pane p{
   margin-left: 10px;
@@ -51,9 +51,9 @@ footer div span:nth-child(8){
   padding-right: 0;
 }
 footer {
-  background-color: #EEEEEE;
-  border-bottom: 1px solid #F3F3F3;
-  border-top: 1px solid #D6D6D6;
+  background-color: #eee;
+  border-bottom: 1px solid #f3f3f3;
+  border-top: 1px solid #d6d6d6;
   overflow: hidden;
   min-height: 54px;
   height: auto;
@@ -70,7 +70,7 @@ footer a {
     color: #fff;
 }
 .navbar-dark #id-for-cdu-link a:hover,.navbar-dark #id-for-cdu-link a:focus{
-    color: #F16E00;
+    color: #f16e00;
 }
 
 .svg-avatar::after {

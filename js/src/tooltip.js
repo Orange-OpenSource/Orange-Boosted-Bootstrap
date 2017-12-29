@@ -5,21 +5,12 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.2): tooltip.js
+ * Bootstrap (v4.0.0-beta.3): tooltip.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const Tooltip = (() => {
-
-  /**
-   * Check for Popper dependency
-   * Popper - https://popper.js.org
-   */
-  if (typeof Popper === 'undefined') {
-    throw new Error('Bootstrap tooltips require Popper.js (https://popper.js.org)')
-  }
-
+const Tooltip = (($) => {
 
   /**
    * ------------------------------------------------------------------------
@@ -28,7 +19,7 @@ const Tooltip = (() => {
    */
 
   const NAME                = 'tooltip'
-  const VERSION             = '4.0.0-beta.2'
+  const VERSION             = '4.0.0-beta.3'
   const DATA_KEY            = 'bs.tooltip'
   const EVENT_KEY           = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
@@ -47,7 +38,8 @@ const Tooltip = (() => {
     placement           : '(string|function)',
     offset              : '(number|string)',
     container           : '(string|element|boolean)',
-    fallbackPlacement   : '(string|array)'
+    fallbackPlacement   : '(string|array)',
+    boundary            : '(string|element)'
   }
 
   const AttachmentMap = {
@@ -71,7 +63,8 @@ const Tooltip = (() => {
     placement           : 'top',
     offset              : 0,
     container           : false,
-    fallbackPlacement   : 'flip'
+    fallbackPlacement   : 'flip',
+    boundary            : 'scrollParent'
   }
 
   const HoverState = {
@@ -120,6 +113,13 @@ const Tooltip = (() => {
   class Tooltip {
 
     constructor(element, config) {
+      /**
+       * Check for Popper dependency
+       * Popper - https://popper.js.org
+       */
+      if (typeof Popper === 'undefined') {
+        throw new Error('Bootstrap tooltips require Popper.js (https://popper.js.org)')
+      }
 
       // private
       this._isEnabled        = true
@@ -303,6 +303,9 @@ const Tooltip = (() => {
             },
             arrow: {
               element: Selector.ARROW
+            },
+            preventOverflow: {
+              boundariesElement: this.config.boundary
             }
           },
           onCreate: (data) => {
@@ -503,10 +506,11 @@ const Tooltip = (() => {
       })
 
       if (this.config.selector) {
-        this.config = $.extend({}, this.config, {
+        this.config = {
+          ...this.config,
           trigger  : 'manual',
           selector : ''
-        })
+        }
       } else {
         this._fixTitle()
       }
@@ -615,12 +619,11 @@ const Tooltip = (() => {
     }
 
     _getConfig(config) {
-      config = $.extend(
-        {},
-        this.constructor.Default,
-        $(this.element).data(),
-        config
-      )
+      config = {
+        ...this.constructor.Default,
+        ...$(this.element).data(),
+        ...config
+      }
 
       if (typeof config.delay === 'number') {
         config.delay = {

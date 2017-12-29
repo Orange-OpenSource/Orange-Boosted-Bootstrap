@@ -19,7 +19,7 @@ $gray-600: #999 !default; // gray-light
 $gray-700: #666 !default; // gray
 $gray-800: #595959 !default; // gray-obs
 $gray-900: #333 !default; // gray-dark
-$black:  #000 !default;
+$black:    #000 !default;
 
 $grays: () !default;
 $grays: map-merge((
@@ -87,6 +87,12 @@ $theme-colors: map-merge((
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
 
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// $yiq-contrasted-threshold: 150 !default; // Boosted mod, contrast value is fixed with Wcag
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $black !default;
+$yiq-text-light: $white !default;
 
 // Options
 //
@@ -242,7 +248,7 @@ $transition-collapse:         height .35s ease !default;
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      "HelvNeueOrange", "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
@@ -308,9 +314,11 @@ $dt-font-weight:              $font-weight-bold !default;
 $kbd-box-shadow:              none !default;
 $nested-kbd-font-weight:      $font-weight-bold !default;
 
-$list-inline-padding:         5px !default;
+$list-inline-padding:         .3125rem !default;
 
 $mark-bg:                     theme-color("primary") !default;
+
+$hr-margin-y:                 $spacer !default;
 
 
 // Tables
@@ -338,17 +346,17 @@ $table-dark-border-color:     $gray-500 !default;
 $table-dark-color:            $white !default;
 
 
-// Buttons
+
+// Buttons + Forms
 //
-// For each of Bootstrap's buttons, define text, background and border color.
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-padding-y:         .5rem !default;
 $input-btn-padding-x:         1.125rem !default;
-$input-padding-x:             .625rem !default; // Boosted mod input padding x is not the same as buttons padding-x!
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
-$input-btn-focus-color:       rgba(theme-color("primary"), .25) !default;
+//$input-btn-focus-color:       rgba(theme-color("primary"), .25) !default;
 $input-btn-focus-box-shadow:  none !default;
 
 $input-btn-padding-y-sm:      .375rem !default;
@@ -359,42 +367,66 @@ $input-btn-padding-y-lg:      .875rem !default;
 $input-btn-padding-x-lg:      1.25rem !default;
 $input-btn-line-height-lg:    1.5 !default;
 
+$input-btn-border-width:      $border-width !default;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               $input-btn-padding-x !default;
+$btn-line-height:             $input-btn-line-height !default;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+$btn-border-width:            $input-btn-border-width !default;
+
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              none !default;
+$btn-focus-width:             $input-btn-focus-width !default;
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       none !default;
 
 $btn-primary-color:           #fff !default;
 $btn-primary-bg:              theme-color("primary") !default;
 $btn-primary-border-color:    $btn-primary-bg !default;
-$btn-primary-hover-color:     $btn-primary-color !default;
-$btn-primary-hover-bg:        #000 !default;
-$btn-primary-active-color:    $btn-primary-color !default;
-$btn-primary-active-bg:       $btn-primary-bg !default;
+//$btn-primary-hover-color:     $btn-primary-color !default;
+//$btn-primary-hover-bg:        #000 !default;
+//$btn-primary-active-color:    $btn-primary-color !default;
+//$btn-primary-active-bg:       $btn-primary-bg !default;
 
-$btn-secondary-color:         #000 !default;
-$btn-secondary-bg:            transparent !default;
-$btn-secondary-border-color:  #ccc !default;
+//$btn-secondary-color:         #000 !default;
+//$btn-secondary-bg:            transparent !default;
+//$btn-secondary-border-color:  $gray-500 !default;
 
-$btn-info-color:              #fff !default;
+//$btn-info-color:              #fff !default;
 $btn-info-bg:                 #000 !default;
-$btn-info-border-color:       $btn-info-bg !default;
-$btn-info-hover-color:        #000 !default;
-$btn-info-hover-bg:           #fff !default;
+//$btn-info-border-color:       $btn-info-bg !default;
+//$btn-info-hover-color:        #000 !default;
+//$btn-info-hover-bg:           #fff !default;
 
-$btn-success-color:           #000 !default;
+//$btn-success-color:           #000 !default;
 $btn-success-bg:              theme-color("success") !default;
-$btn-success-border-color:    $btn-success-bg !default;
+//$btn-success-border-color:    $btn-success-bg !default;
 
-$btn-warning-color:           $btn-primary-color !default;
-$btn-warning-bg:              $btn-primary-bg !default;
-$btn-warning-border-color:    $btn-primary-border-color !default;
+//$btn-warning-color:           $btn-primary-color !default;
+//$btn-warning-bg:              $btn-primary-bg !default;
+//$btn-warning-border-color:    $btn-primary-border-color !default;
 
-$btn-danger-color:            #fff !default;
+//$btn-danger-color:            #fff !default;
 $btn-danger-bg:               theme-color("danger") !default;
-$btn-danger-border-color:     $btn-danger-bg !default;
+//$btn-danger-border-color:     $btn-danger-bg !default;
 
 $btn-link-disabled-color:     $gray-500 !default;
-$btn-link-disabled-black-bg-color: $gray-700 !default;
+//$btn-link-disabled-black-bg-color: $gray-700 !default;
 
 $btn-block-spacing-y:         .5rem !default;
 
@@ -408,12 +440,24 @@ $btn-transition:              all .2s ease-in-out !default;
 
 // Forms
 
+$input-padding-y:             $input-btn-padding-y !default;
+$input-padding-x:             .625rem !default; // Boosted mod input padding x is not the same as buttons padding-x!
+$input-line-height:           $input-btn-line-height !default;
+
+$input-padding-y-sm:          $input-btn-padding-y-sm !default;
+$input-padding-x-sm:          $input-btn-padding-x-sm !default;
+$input-line-height-sm:        $input-btn-line-height-sm !default;
+
+$input-padding-y-lg:          $input-btn-padding-y-lg !default;
+$input-padding-x-lg:          $input-btn-padding-x-lg !default;
+$input-line-height-lg:        $input-btn-line-height-lg !default;
+
 $input-bg:                    #fff !default;
 $input-disabled-bg:           $gray-300 !default;
 
 $input-color:                 #000 !default;
 $input-border-color:          $gray-500 !default;
-$input-btn-border-width:      $border-width !default; // For form controls and buttons
+$input-border-width:          $input-btn-border-width !default;
 $input-box-shadow:            none !default;
 
 $input-border-radius:         $border-radius !default;
@@ -423,30 +467,32 @@ $input-border-radius-sm:      $border-radius-sm !default;
 $input-focus-bg:              $input-bg !default;
 $input-focus-border-color:    $gray-600 !default;
 $input-focus-color:           $input-color !default;
+$input-focus-width:           $input-btn-focus-width !default;
+$input-focus-box-shadow:      $input-btn-focus-box-shadow !default;
 
 $input-placeholder-color:     $gray-700 !default;
 
-$input-height-border:         $input-btn-border-width * 2 !default !default;
+//$input-height-border:         $input-btn-border-width * 2 !default !default;
 
 $input-height-inner:          ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2) !default;
 $input-height:                2.25rem; //40px - 4px border used only for select components Boosted mod add 4px to the input height alpha.5 sub the border from the height
 
-$input-height-inner-sm:       ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
+//$input-height-inner-sm:       ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
 $input-height-sm:             (($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2)) !default;
 
-$input-height-inner-lg:       ($font-size-sm * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default;
+//$input-height-inner-lg:       ($font-size-sm * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default;
 $input-height-lg:             (($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2)) !default;
 
-$input-transition:            border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
+$input-transition:            border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 $form-text-margin-top:        ($spacer * .5) !default;
 
-$form-check-margin-bottom:    0 !default;
 $form-check-input-gutter:     1.25rem !default;
 $form-check-input-margin-y:   .25rem !default;
 $form-check-input-margin-x:   .25rem !default;
 
 $form-check-inline-margin-x:  .75rem !default;
+$form-check-inline-input-margin-x:      .3125rem !default;
 
 $form-group-margin-bottom:    $spacer !default;
 
@@ -455,16 +501,15 @@ $input-group-addon-bg:        $white !default;
 $input-group-addon-border-color: $input-border-color !default;
 
 $custom-control-gutter:       1.875rem !default;
-$custom-control-spacer-y:     0 !default;
 $custom-control-spacer-x:     $spacer !default;
 
 $custom-control-indicator-size:       1.25rem !default;
-$custom-control-indicator-bg:         #ddd !default;
+$custom-control-indicator-bg:         $gray-400 !default;
 $custom-control-indicator-bg-size:    50% 50% !default;
 $custom-control-indicator-box-shadow: none !default;
 
-$custom-control-indicator-disabled-bg:        #eee !default;
-$custom-control-description-disabled-color:   #767676 !default;
+$custom-control-indicator-disabled-bg:        $gray-300 !default;
+$custom-control-label-disabled-color:         #767676 !default;
 
 $custom-control-indicator-checked-color:      $white !default;
 $custom-control-indicator-checked-bg:         theme-color("primary") !default;
@@ -480,7 +525,7 @@ $custom-checkbox-indicator-border-radius:     $border-radius !default;
 $custom-checkbox-indicator-icon-checked:      url("data:image/svg+xml;charset=utf8, %3Csvg%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14%202l-8%208-3-3-2%202%205%205L16%204l-2-2z%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E") !default;
 
 $custom-checkbox-indicator-indeterminate-bg:  theme-color("primary") !default;
-$custom-checkbox-indicator-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
+//$custom-checkbox-indicator-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
 $custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E") !default;
 $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
 
@@ -497,7 +542,7 @@ $custom-select-disabled-color:     $gray-600 !default;
 $custom-select-bg:                 $white !default;
 $custom-select-disabled-bg:        $gray-300 !default;
 $custom-select-bg-size:            8px 10px !default; // In pixels because image dimensions
-$custom-select-indicator-color:    #333 !default;
+//$custom-select-indicator-color:    $gray-900 !default;
 $custom-select-indicator:          url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M0%200h14L7%207%200%200z%22%2F%3E%3C%2Fsvg%3E") !default;
 $custom-select-border-width:       $input-btn-border-width !default;
 $custom-select-border-color:       $input-border-color !default;
@@ -509,9 +554,13 @@ $custom-select-focus-box-shadow:   none !default;
 $custom-select-font-size-sm:       75% !default;
 $custom-select-height-sm:          $input-height-sm !default;
 
+$custom-select-font-size-lg:       125% !default;
+$custom-select-height-lg:          $input-height-lg !default;
+
 $custom-file-height:               2.5rem !default;
-$custom-file-width:                14rem !default;
-$custom-file-focus-box-shadow:     none !default;
+$custom-file-focus-border-color:   $input-focus-border-color !default;
+$custom-file-focus-box-shadow:     $input-btn-focus-box-shadow !default;
+
 
 $custom-file-padding-y:            1rem !default;
 $custom-file-padding-x:            .5rem !default;
@@ -523,19 +572,17 @@ $custom-file-border-color:         $input-border-color !default;
 $custom-file-border-radius:        $border-radius !default;
 $custom-file-box-shadow:           none !default;
 $custom-file-button-color:         $custom-file-color !default;
-$custom-file-button-bg:            #eee !default;
+$custom-file-button-bg:            $gray-300 !default;
 $custom-file-text: (
-  placeholder: (
-    en: "Choose file..."
-  ),
-  button-label: (
     en: "Browse"
-  )
 ) !default;
 
+
 // Form validation
-$form-feedback-valid-color:   theme-color("success") !default;
-$form-feedback-invalid-color: theme-color("danger") !default;
+$form-feedback-margin-top:         $form-text-margin-top !default;
+$form-feedback-font-size:          $small-font-size !default;
+$form-feedback-valid-color:        theme-color("success") !default;
+$form-feedback-invalid-color:      theme-color("danger") !default;
 
 // Form validation icons
 $form-icon-success-color: theme-color("success") !default;
@@ -556,6 +603,7 @@ $dropdown-padding-y:             0 !default;
 $dropdown-spacer:                -2px !default;
 $dropdown-bg:                    #fff !default;
 $dropdown-border-color:          #000 !default;
+$dropdown-border-radius:         $border-radius !default;
 $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            $gray-300 !default;
 $dropdown-box-shadow:            none !default;
@@ -617,8 +665,8 @@ $navbar-padding-x:                  $spacer !default;
 
 // Boosted mod
 // adapt navbar padding when mobile view
-$navbar-collapsed-padding-y:        ($spacer / 4) !default;
-$navbar-collapsed-padding-x:        0 !default;
+//$navbar-collapsed-padding-y:        ($spacer / 4) !default;
+//$navbar-collapsed-padding-x:        0 !default;
 $navbar-height:                     6.25rem !default;
 $navbar-brand-logo-height:          3.125rem !default;
 
@@ -629,8 +677,8 @@ $navbar-supra-height:               2.5rem !default;
 
 $navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
+//$nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
+//$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 $navbar-brand-padding-y:            0 !default;
 
 $navbar-toggler-padding-y:           .5rem !default;
@@ -710,7 +758,7 @@ $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) 
 $card-cap-bg:              #fff !default;
 $card-bg:                  #fff !default;
 
-$card-inverse-link-hover-color:    #fff !default;
+//$card-inverse-link-hover-color:    #fff !default;
 
 $card-img-overlay-padding: 1.25rem !default;
 
@@ -730,17 +778,17 @@ $tooltip-bg:                  $gray-400 !default;
 $tooltip-opacity:             .9 !default;
 $tooltip-padding-y:           $spacer !default;
 $tooltip-padding-x:           $spacer !default;
-$tooltip-margin:              5px !default;
+$tooltip-margin:              .3125rem !default;
 $tooltip-font-weight:         $font-weight-bold !default;
 
-$tooltip-arrow-width:         10px !default;
-$tooltip-arrow-height:        10px !default;
+$tooltip-arrow-width:         .625rem !default;
+$tooltip-arrow-height:        .625rem !default;
 $tooltip-arrow-color:         $tooltip-bg !default;
 
 
 // Popovers
 
-$popover-inner-padding:               1px !default;
+//$popover-inner-padding:               1px !default;
 $popover-bg:                          $gray-400 !default;
 $popover-max-width:                   276px !default;
 $popover-border-width:                $border-width !default;
@@ -748,17 +796,17 @@ $popover-border-color:                $gray-400 !default;
 $popover-box-shadow:                  none !default;
 $popover-font-weight:                 $font-weight-bold !default;
 
-$popover-header-bg:                    $popover-bg !default;
-$popover-header-color:                 $headings-color !default;
-$popover-header-padding-y:             10px !default;
-$popover-header-padding-x:             10px !default;
+$popover-header-bg:                   $popover-bg !default;
+$popover-header-color:                $headings-color !default;
+$popover-header-padding-y:            .625rem !default;
+$popover-header-padding-x:            .625rem !default;
 
-$popover-body-color:               $body-color !default;
-$popover-body-padding-y:           10px !default;
-$popover-body-padding-x:           10px !default;
+$popover-body-color:                  $body-color !default;
+$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-x:            $popover-header-padding-x !default;
 
-$popover-arrow-width:                 10px !default;
-$popover-arrow-height:                5px !default;
+$popover-arrow-width:                 .625rem !default;
+$popover-arrow-height:                .3125rem !default;
 $popover-arrow-color:                 $popover-bg !default;
 
 $popover-arrow-outer-color:           $popover-border-color !default;
@@ -766,19 +814,19 @@ $popover-arrow-outer-color:           $popover-border-color !default;
 
 // Badges
 
-$badge-default-color:         $white !default;
-$badge-primary-bg:            theme-color("primary") !default;
-$badge-primary-color:         $white !default;
-$badge-success-bg:            theme-color("success") !default;
-$badge-success-color:         $black !default;
-$badge-info-bg:               theme-color("info") !default;
-$badge-info-color:            $black !default;
-$badge-warning-bg:            theme-color("warning") !default;
-$badge-warning-color:         $black !default;
-$badge-danger-bg:             theme-color("danger") !default;
-$badge-danger-color:          $white !default;
+//$badge-default-color:         $white !default;
+//$badge-primary-bg:            theme-color("primary") !default;
+//$badge-primary-color:         $white !default;
+//$badge-success-bg:            theme-color("success") !default;
+//$badge-success-color:         $black !default;
+//$badge-info-bg:               theme-color("info") !default;
+//$badge-info-color:            $black !default;
+//$badge-warning-bg:            theme-color("warning") !default;
+//$badge-warning-color:         $black !default;
+//$badge-danger-bg:             theme-color("danger") !default;
+//$badge-danger-color:          $white !default;
 
-$badge-color:                 $black !default;
+//$badge-color:                 $black !default;
 $badge-font-size:             .875rem !default;
 $badge-font-weight:           $font-weight-bold !default;
 $badge-padding-y:             .1875rem !default;
@@ -793,26 +841,26 @@ $badge-pill-border-radius:    $border-radius !default;
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:         10px !default;
+$modal-inner-padding:         .625rem !default;
 
-$modal-dialog-margin:         10px !default;
-$modal-dialog-margin-y-sm-up: 30px !default;
+$modal-dialog-margin:         .625rem !default;
+$modal-dialog-margin-y-sm-up: 1.875rem !default;
 
 $modal-title-line-height:     $line-height-base !default;
 
-$modal-content-bg:               #fff !default;
-$modal-content-border-color:     #000 !default;
+$modal-content-bg:               $white !default;
+$modal-content-border-color:     $black !default;
 $modal-content-border-width:     $border-width !default;
 $modal-content-box-shadow-xs:    none !default;
 $modal-content-box-shadow-sm-up: none !default;
 
-$modal-backdrop-bg:           #333 !default;
+$modal-backdrop-bg:           $gray-900 !default;
 $modal-backdrop-opacity:      .5 !default;
 $modal-header-border-color:   #000 !default;
 $modal-footer-border-color:   $modal-header-border-color !default;
 $modal-header-border-width:   $modal-content-border-width !default;
 $modal-footer-border-width:   $modal-header-border-width !default;
-$modal-header-padding:         10px !default;
+$modal-header-padding:        .625rem !default;
 
 $modal-lg:                    700px !default;
 $modal-md:                    700px !default;
@@ -878,7 +926,6 @@ $thumbnail-border-width:      $border-width !default;
 $thumbnail-border-color:      #000 !default;
 $thumbnail-border-radius:     $border-radius !default;
 $thumbnail-box-shadow:        none !default;
-$thumbnail-transition:        all .2s ease-in-out !default;
 
 
 // Figures
@@ -934,12 +981,12 @@ $close-text-shadow:           0 1px 0 #fff !default;
 
 // Code
 
-$code-font-size:              90% !default;
-$code-padding-y:              .0625rem !default;
-$code-padding-x:              .0625rem !default;
+$code-font-size:              87.5% !default;
 $code-color:                  $gray-900 !default;
-$code-bg:                     $gray-200 !default;
 
+$kbd-padding-y:               .0625rem !default;
+$kbd-padding-x:               .0625rem !default;
+$kbd-font-size:               $code-font-size !default;
 $kbd-color:                   #000 !default;
 $kbd-bg:                      $gray-300 !default;
 
@@ -976,7 +1023,7 @@ $icon-font-path:          "../fonts/" !default;
 //
 $o-scroll-up-height: 2.5rem !default; //30px
 $o-scroll-up-width: $o-scroll-up-height !default; // 30px
-$o-scroll-up-font-size: 1.25rem !default; // 20px
+//$o-scroll-up-font-size: 1.25rem !default; // 20px
 
 // Navbar
 //
@@ -987,9 +1034,9 @@ $o-scroll-up-font-size: 1.25rem !default; // 20px
 //
 //
 
-$megamenu-border:                   1px solid $gray-900 !default;
-$megamenu-hover-color:              theme-color("primary") !default;
-$megamenu-position:                 fixed !default;
+//$megamenu-border:                   1px solid $gray-900 !default;
+//$megamenu-hover-color:              theme-color("primary") !default;
+//$megamenu-position:                 fixed !default;
 
 // Navs
 //
@@ -1003,17 +1050,17 @@ $nav-pills-focus-link-color: #fff !default;
 
 
 // Local navigation
-$nav-local-arrow-color: #fff !default;
+//$nav-local-arrow-color: #fff !default;
 $nav-local-arrow-width: 10px !default;
 $nav-local-border-color: $gray-500 !default;
 
-$nav-local-arrow-outer-width:           ($nav-local-arrow-width + 1) !default;
-$nav-local-arrow-outer-color:           $nav-local-border-color !default;
+//$nav-local-arrow-outer-width:           ($nav-local-arrow-width + 1) !default;
+//$nav-local-arrow-outer-color:           $nav-local-border-color !default;
 
 // Step process bar
 $o-stepbar-height: 2.5rem !default;
 $o-stepbar-arrow-width: 1rem !default;
-$o-stepbar-arrow-ratio: 3 / 8 !default;
+//$o-stepbar-arrow-ratio: 3 / 8 !default;
 
 $o-stepbar-mobile-padding-vertical: .3125rem !default;
 $o-stepbar-mobile-arrow-width: .75rem !default;

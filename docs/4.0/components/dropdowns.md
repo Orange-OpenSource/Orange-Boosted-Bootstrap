@@ -12,7 +12,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 
 Dropdowns are built on a third party library, [Popper.js](https://popper.js.org/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{ site.cdn.popper }}) before Boosted's JavaScript or use `boosted.bundle.min.js` / `boosted.bundle.js` which contains Popper.js.
 
-If you're building our JS from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
+If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
 
 ## Accessibility
 
@@ -387,9 +387,8 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 {% highlight html %}
 <!-- Default dropup button -->
 <div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary">Dropup</button>
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
+    Dropup
   </button>
   <div class="dropdown-menu">
     <!-- Dropdown menu links -->
@@ -409,6 +408,132 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
   </div>
 </div>
 {% endhighlight %}
+
+## Dropright variation
+
+Trigger dropdown menus at the right of the elements by adding `.dropright` to the parent element.
+
+<div class="bd-example">
+  <div class="btn-group dropright">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropright
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+
+  <div class="btn-group dropright">
+    <button type="button" class="btn btn-secondary">
+      Split dropright
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdright</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<!-- Default dropright button -->
+<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary">Dropright</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropright</span>
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+
+<!-- Split dropright button -->
+<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary">
+    Split dropright
+  </button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropright</span>
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+{% endhighlight %}
+
+## Dropleft variation
+
+Trigger dropdown menus at the left of the elements by adding `.dropleft` to the parent element.
+
+<div class="bd-example">
+  <div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropleft
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <div class="btn-group dropleft" role="group">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropleft</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary">
+      Split dropleft
+    </button>
+  </div>
+</div>
+
+{% highlight html %}
+<!-- Default dropleft button -->
+<div class="btn-group dropleft">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropleft
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+
+<!-- Split dropleft button -->
+<div class="btn-group">
+  <div class="btn-group dropleft" role="group">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropleft</span>
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary">
+    Split dropleft
+  </button>
+</div>
+{% endhighlight %}
+
 
 ## Menu items
 
@@ -438,7 +563,7 @@ By default, a dropdown menu is automatically positioned 100% from the top and al
 {% example html %}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    This dropdown's menu is right-aligned
+    Right-aligned menu
   </button>
   <div class="dropdown-menu dropdown-menu-right">
     <button class="dropdown-item" type="button">Action</button>
@@ -490,8 +615,8 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
       <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
     </div>
     <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input">
+      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+      <label class="form-check-label" for="dropdownCheck">
         Remember me
       </label>
     </div>
@@ -514,8 +639,8 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
     <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
   </div>
   <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
+    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+    <label class="form-check-label" for="dropdownCheck2">
       Remember me
     </label>
   </div>
@@ -576,7 +701,7 @@ Regardless of whether you call your dropdown via JavaScript or instead use the d
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`.
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">Name</th>
@@ -598,8 +723,16 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>true</td>
       <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.enabled">flip docs</a>.</td>
     </tr>
+    <tr>
+      <td>boundary</td>
+      <td>string | element</td>
+      <td>'scrollParent'</td>
+      <td>Overflow constraint boundary of the dropdown menu. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+    </tr>
   </tbody>
 </table>
+
+Note when `boundary` is set to any value other than `'scrollParent'`, the style `position: static` is applied to the `.dropdown` container.
 
 ### Methods
 

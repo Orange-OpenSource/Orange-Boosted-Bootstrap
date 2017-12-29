@@ -130,7 +130,7 @@
 
   &::after {
     padding-left: .375rem;
-    font-family: icon-orange !important; // stylelint-disable-line declaration-no-important
+    font-family: icon-orange, sans-serif !important; // stylelint-disable-line declaration-no-important
     font-size: inherit;
     color: theme-color("danger");
     vertical-align: bottom;

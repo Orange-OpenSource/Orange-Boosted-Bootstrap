@@ -4,12 +4,12 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.2): tab.js
+ * Bootstrap (v4.0.0-beta.3): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const Tab = (() => {
+const Tab = (($) => {
 
 
   /**
@@ -19,7 +19,7 @@ const Tab = (() => {
    */
 
   const NAME                = 'tab'
-  const VERSION             = '4.0.0-beta.2'
+  const VERSION             = '4.0.0-beta.3'
   const DATA_KEY            = 'bs.tab'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
@@ -176,7 +176,6 @@ const Tab = (() => {
       const complete = () => this._transitionComplete(
         element,
         active,
-        isTransitioning,
         callback
       )
 
@@ -195,19 +194,14 @@ const Tab = (() => {
         $(active)
           .one(Util.TRANSITION_END, complete)
           .emulateTransitionEnd(TRANSITION_DURATION)
-
       } else {
         complete()
       }
-
-      if (active) {
-        $(active).removeClass(ClassName.SHOW)
-      }
     }
 
-    _transitionComplete(element, active, isTransitioning, callback) {
+    _transitionComplete(element, active, callback) {
       if (active) {
-        $(active).removeClass(ClassName.ACTIVE)
+        $(active).removeClass(`${ClassName.SHOW} ${ClassName.ACTIVE}`)
 
         const dropdownChild = $(active.parentNode).find(
           Selector.DROPDOWN_ACTIVE_CHILD
@@ -237,12 +231,8 @@ const Tab = (() => {
       })
       // end mod
 
-      if (isTransitioning) {
         Util.reflow(element)
         $(element).addClass(ClassName.SHOW)
-      } else {
-        $(element).removeClass(ClassName.FADE)
-      }
 
       if (element.parentNode &&
           $(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
@@ -397,7 +387,7 @@ const Tab = (() => {
     .on('DOMContentLoaded', () => {
       Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
     })
-  // end mod
+    // end mod
   /**
    * ------------------------------------------------------------------------
    * jQuery

@@ -6,7 +6,6 @@
 }
 #header h1 {
   display: inline-block;
-  /*margin-left: 20px;*/
   color: #000;
   vertical-align: middle;
 }
@@ -157,7 +156,7 @@
 
 /* custom select */
 .select-theme-default.select-target {
-  width:100%
+  width: 100%;
 }
 
 .select-theme-default.select-content {

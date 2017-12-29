@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-Boosted's grid system uses a series of containers, rows, and columns to layout and align content. It's built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+Boosted's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
 
 **New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
 
@@ -56,7 +56,7 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
 We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution. 
 [comment]: # Boosted mod
 [comment]: # Orange grid custom BP values
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Viewport breakpoints</th>
@@ -195,9 +195,7 @@ For example, here are two grid layouts that apply to every device and viewport, 
 {% endexample %}
 </div>
 
-Equal-width columns can be broken into multiple lines, but there was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) that prevented this from working without an explicit `flex-basis` or `border`.
-
-Two workarounds have been documented in a [reduced test case outside Bootstrap](https://output.jsbin.com/micohor), though if the browser is up to date this shouldn't be necessary.
+Equal-width columns can be broken into multiple lines, but there was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) that prevented this from working without an explicit `flex-basis` or `border`. There are workarounds for older browser versions, but they shouldn't be necessary if you're up-to-date.
 
 <div class="bd-example-row">
 {% example html %}
@@ -524,7 +522,7 @@ If more than 12 columns are placed within a single row, each group of extra colu
 
 ### Column breaks
 
-Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not ever implementation method can account for this.
+Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this.
 
 <div class="bd-example-row">
 {% example html %}
@@ -636,7 +634,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 </div>
 
 <div class="row">
-  <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
+  <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
   <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
 </div>
 {% endexample %}
@@ -754,8 +752,6 @@ Mixins are used in conjunction with the grid variables to generate semantic CSS 
 
 // Get fancy by offsetting, or changing the sort order
 @include make-col-offset($size, $columns: $grid-columns);
-@include make-col-push($size, $columns: $grid-columns);
-@include make-col-pull($size, $columns: $grid-columns);
 {% endhighlight %}
 
 ### Example usage

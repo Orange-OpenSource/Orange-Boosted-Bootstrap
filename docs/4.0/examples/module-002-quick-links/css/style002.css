@@ -1,28 +1,29 @@
 /* general */
 
-html,body {
-    height:100%;
+html,
+body {
+  height: 100%;
 }
 
 h1,
 h2,
 h3 {
-  letter-spacing: -0.03em;
   margin-top: 1.25rem;
   margin-bottom: .625rem;
+  letter-spacing: -.03em;
 }
 
 /* page header */
 
 header {
-  overflow: hidden;
-  border-bottom: 1px solid black;
   padding: 1.25rem;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
 }
 
 header h1 {
-  margin: 0 0 0 1.25rem;
   float: left;
+  margin: 0 0 0 1.25rem;
 }
 
 header .btn {
@@ -30,15 +31,15 @@ header .btn {
 }
 
 header .btn.svg-arrow-previous {
-  margin-right: .375rem;
   padding-left: 40px;
+  margin-right: .375rem;
 }
 
 header .btn.svg-arrow-previous::after {
+  top: 10px;
+  left: 20px;
   width: 10px;
   height: 16px;
-  left: 20px;
-  top: 10px;
 }
 
 h2 {
@@ -66,8 +67,8 @@ h2 {
 }
 
 .o-card-link .card-title {
-  margin-bottom: 10px;
   align-self: flex-start;
+  margin-bottom: 10px;
 }
 
 main {
@@ -75,8 +76,8 @@ main {
 }
 
 .link-icon {
-  height: 3.75rem;
   width: auto;
+  height: 3.75rem;
 }
 
 .link-icon img {
@@ -84,10 +85,6 @@ main {
 }
 
 @media (max-width: 767px) {
-  /*h3 {
-    font-size: 2rem;
-  }*/
-
   .link-icon {
     height: 2.625rem;
   }

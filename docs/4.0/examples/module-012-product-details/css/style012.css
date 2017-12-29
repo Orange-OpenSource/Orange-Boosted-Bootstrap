@@ -1,26 +1,27 @@
 /* general */
 
-html,body {
-    height:100%;
+html,
+body {
+  height: 100%;
 }
 
 h1,
 h2,
 h3 {
-  letter-spacing: -0.03em;
+  letter-spacing: -.03em;
 }
 
 /* page header */
 
 header {
-  overflow: hidden;
-  border-bottom: 1px solid black;
   padding: 1.25rem;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
 }
 
 header h1 {
-  margin: 0 0 0 1.25rem;
   float: left;
+  margin: 0 0 0 1.25rem;
 }
 
 header .btn {
@@ -33,10 +34,10 @@ header .btn {
 }
 
 .btn.svg-arrow-previous::after {
-  height: .875rem;
-  width: .5625rem;
   top: .6875rem;
   left: .8125rem;
+  width: .5625rem;
+  height: .875rem;
 }
 
 /* shop page */
@@ -74,20 +75,20 @@ main {
 /* device data */
 
 .device-data h3 {
-  line-height: 1;
   min-height: 3rem;
   margin-top: 1.25rem;
   margin-bottom: .625rem;
+  line-height: 1;
 }
 
 /* rating */
 
 .rating {
-  background: url("../img/stars_sprite.png") no-repeat;
-  background-size: 5rem auto;
   padding-left: 5.25rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
+  background: url("../img/stars_sprite.png") no-repeat;
+  background-size: 5rem auto;
   line-height: 1;
   text-decoration: none;
 }
@@ -103,20 +104,20 @@ main {
 /* discount */
 
 .discount {
-  background: url('../img/label_discount.png') no-repeat;
-  background-size: 7.5rem auto;
-  font-weight: bold;
-  line-height: 1.875rem;
-  margin: .625rem 0;
   padding-left: 2.5rem;
+  margin: .625rem 0;
+  font-weight: 700;
+  background: url("../img/label_discount.png") no-repeat;
+  background-size: 7.5rem auto;
+  line-height: 1.875rem;
 }
 
 /* pricing */
 
 .pricing {
-  font-weight: bold;
-  line-height: 1;
   padding-top: 5.375rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .pricing.has-discount {
@@ -130,7 +131,7 @@ main {
 
 .pricing .currency-fcfa {
   font-size: .75rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .pricing .from {
@@ -143,32 +144,32 @@ main {
 }
 
 .pricing .price {
+  margin-bottom: .375rem;
   font-size: 1.5rem;
   line-height: 1;
   color: #f16e00;
-  margin-bottom: .375rem;
 }
 
 .pricing + ul {
-  list-style-type: square;
   min-height: 8.75rem;
   padding-left: .875rem;
   margin-bottom: .625rem;
   font-size: 1rem;
-  font-weight: bold;
+  list-style-type: square;
+  font-weight: 700;
 }
 
 /* mobile view */
 @media (max-width: 767px) {
   .col-sm-12 {
+    margin-bottom: 2.5rem;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 2.5rem;
   }
   .device-preview {
     float: left;
-    max-height: 12.5rem;
     width: 50%;
+    max-height: 12.5rem;
   }
 
   .device-data {
@@ -177,7 +178,7 @@ main {
   }
 
   .device-data h3{
-    margin-top:0;
+    margin-top: 0;
   }
 
   .device-data button {

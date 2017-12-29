@@ -19,10 +19,10 @@
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
-      box-shadow: $btn-box-shadow, 0 0 0 $input-btn-focus-width rgba($border, .5);
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
     } @else {
       // Boosted mod disable box-shadow
-      // box-shadow: 0 0 0 $input-btn-focus-width rgba($border, .5);
+      // box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
     }
   }
 
@@ -44,23 +44,25 @@
     }
     border-color: $active-border;
 
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: $btn-active-box-shadow, 0 0 0 $input-btn-focus-width rgba($border, .5);
-    } @else {
-      // Boosted mod disable shadow
-      // box-shadow: 0 0 0 $input-btn-focus-width rgba($border, .5);
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
+      } @else {
+        // Boosted mod disable shadow
+        // box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+      }
     }
   }
 }
 
-@mixin button-outline-variant($color, $color-hover: #fff) {
+@mixin button-outline-variant($color, $color-hover: #fff, $active-background: $color, $active-border: $color) {
   color: $color;
   background-color: transparent;
   background-image: none;
   border-color: $color;
 
-  @include hover {
+  &:hover {
     color: #fff; // Boosted mod
     background-color: #000; // Boosted mod
     border-color: #000 // Boosted mod
@@ -69,7 +71,7 @@
   // &:focus,
   // &.focus {
   // Boosted mod disable box-shadow
-  // box-shadow: 0 0 0 2px rgba($color, .5);
+  // box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
   // }
 
   &.disabled,
@@ -86,7 +88,7 @@
     border-color: #f16e00 // Boosted mod
     // Avoid using mixin so we can pass custom focus shadow properly
     // Boosted mod disable shadow
-    // box-shadow: 0 0 0 $input-btn-focus-width rgba($color, .5);
+    // box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
   }
 }
 
@@ -95,5 +97,10 @@
   padding: $padding-y $padding-x;
   font-size: $font-size;
   line-height: $line-height;
-  @include border-radius($border-radius);
+  // Manually declare to provide an override to the browser default
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  } @else {
+    border-radius: 0;
+  }
 }

@@ -8,7 +8,7 @@
   @supports (position: sticky) {
     position: sticky;
     top: 5rem; // boosted mod
-    max-height: calc(100vh - 5rem); // boosted mod
+    height: calc(100vh - 5rem); // boosted mod
     overflow-y: auto;
   }
   order: 2;

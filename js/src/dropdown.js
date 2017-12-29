@@ -5,20 +5,12 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.2): dropdown.js
+ * Bootstrap (v4.0.0-beta.3): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const Dropdown = (() => {
-
-  /**
-   * Check for Popper dependency
-   * Popper - https://popper.js.org
-   */
-  if (typeof Popper === 'undefined') {
-    throw new Error('Bootstrap dropdown require Popper.js (https://popper.js.org)')
-  }
+const Dropdown = (($) => {
 
   /**
    * ------------------------------------------------------------------------
@@ -27,7 +19,7 @@ const Dropdown = (() => {
    */
 
   const NAME                     = 'dropdown'
-  const VERSION                  = '4.0.0-beta.2'
+  const VERSION                  = '4.0.0-beta.3'
   const DATA_KEY                 = 'bs.dropdown'
   const EVENT_KEY                = `.${DATA_KEY}`
   const DATA_API_KEY             = '.data-api'
@@ -55,8 +47,11 @@ const Dropdown = (() => {
     DISABLED  : 'disabled',
     SHOW      : 'show',
     DROPUP    : 'dropup',
+    DROPRIGHT : 'dropright',
+    DROPLEFT  : 'dropleft',
     MENURIGHT : 'dropdown-menu-right',
-    MENULEFT  : 'dropdown-menu-left'
+    MENULEFT  : 'dropdown-menu-left',
+    POSITION_STATIC : 'position-static'
   }
 
   const Selector = {
@@ -75,17 +70,23 @@ const Dropdown = (() => {
     TOP       : 'top-start',
     TOPEND    : 'top-end',
     BOTTOM    : 'bottom-start',
-    BOTTOMEND : 'bottom-end'
+    BOTTOMEND : 'bottom-end',
+    RIGHT     : 'right-start',
+    RIGHTEND  : 'right-end',
+    LEFT      : 'left-start',
+    LEFTEND   : 'left-end'
   }
 
   const Default = {
     offset      : 0,
-    flip        : true
+    flip        : true,
+    boundary    : 'scrollParent'
   }
 
   const DefaultType = {
     offset      : '(number|string|function)',
-    flip        : 'boolean'
+    flip        : 'boolean',
+    boundary    : '(string|element)'
   }
 
 
@@ -150,14 +151,31 @@ const Dropdown = (() => {
         return
       }
 
-      let element = this._element
-      // for dropup with alignment we use the parent as popper container
-      if ($(parent).hasClass(ClassName.DROPUP)) {
-        if ($(this._menu).hasClass(ClassName.MENULEFT) || $(this._menu).hasClass(ClassName.MENURIGHT)) {
-          element = parent
+      // Disable totally Popper.js for Dropdown in Navbar
+      if (!this._inNavbar) {
+        /**
+         * Check for Popper dependency
+         * Popper - https://popper.js.org
+         */
+        if (typeof Popper === 'undefined') {
+          throw new Error('Bootstrap dropdown require Popper.js (https://popper.js.org)')
         }
+        let element = this._element
+        // for dropup with alignment we use the parent as popper container
+        if ($(parent).hasClass(ClassName.DROPUP)) {
+          if ($(this._menu).hasClass(ClassName.MENULEFT) || $(this._menu).hasClass(ClassName.MENURIGHT)) {
+            element = parent
+          }
+        }
+        // If boundary is not `scrollParent`, then set position to `static`
+        // to allow the menu to "escape" the scroll parent's boundaries
+        // https://github.com/twbs/bootstrap/issues/24251
+        if (this._config.boundary !== 'scrollParent') {
+          $(parent).addClass(ClassName.POSITION_STATIC)
+        }
+        this._popper = new Popper(element, this._menu, this._getPopperConfig())
       }
-      this._popper = new Popper(element, this._menu, this._getPopperConfig())
+
 
       // if this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
@@ -188,8 +206,8 @@ const Dropdown = (() => {
       this._menu = null
       if (this._popper !== null) {
         this._popper.destroy()
+        this._popper = null
       }
-      this._popper = null
     }
 
     update() {
@@ -210,12 +228,11 @@ const Dropdown = (() => {
     }
 
     _getConfig(config) {
-      config = $.extend(
-        {},
-        this.constructor.Default,
-        $(this._element).data(),
-        config
-      )
+      config = {
+        ...this.constructor.Default,
+        ...$(this._element).data(),
+        ...config
+      }
 
       Util.typeCheckConfig(
         NAME,
@@ -236,7 +253,7 @@ const Dropdown = (() => {
 
     _getPlacement() {
       const $parentDropdown = $(this._element).parent()
-      let placement = AttachmentMap.BOTTOM
+      let placement         = AttachmentMap.BOTTOM
 
       // Handle dropup
       if ($parentDropdown.hasClass(ClassName.DROPUP)) {
@@ -244,6 +261,10 @@ const Dropdown = (() => {
         if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
           placement = AttachmentMap.TOPEND
         }
+      } else if ($parentDropdown.hasClass(ClassName.DROPRIGHT)) {
+        placement = AttachmentMap.RIGHT
+      } else if ($parentDropdown.hasClass(ClassName.DROPLEFT)) {
+        placement = AttachmentMap.LEFT
       } else if ($(this._menu).hasClass(ClassName.MENURIGHT)) {
         placement = AttachmentMap.BOTTOMEND
       }
@@ -258,7 +279,10 @@ const Dropdown = (() => {
       const offsetConf = {}
       if (typeof this._config.offset === 'function') {
         offsetConf.fn = (data) => {
-          data.offsets = $.extend({}, data.offsets, this._config.offset(data.offsets) || {})
+          data.offsets = {
+            ...data.offsets,
+            ...this._config.offset(data.offsets) || {}
+          }
           return data
         }
       } else {
@@ -270,16 +294,13 @@ const Dropdown = (() => {
           offset : offsetConf,
           flip : {
             enabled : this._config.flip
+          },
+          preventOverflow : {
+            boundariesElement : this._config.boundary
           }
         }
       }
 
-      // Disable Popper.js for Dropdown in Navbar
-      if (this._inNavbar) {
-        popperConfig.modifiers.applyStyle = {
-          enabled: !this._inNavbar
-        }
-      }
       return popperConfig
     }
 
@@ -382,8 +403,17 @@ const Dropdown = (() => {
     }
 
     static _dataApiKeydownHandler(event) {
-      if (!REGEXP_KEYDOWN.test(event.which) || /button/i.test(event.target.tagName) && event.which === SPACE_KEYCODE ||
-         /input|textarea/i.test(event.target.tagName)) {
+      // If not input/textarea:
+      //  - And not a key in REGEXP_KEYDOWN => not a dropdown command
+      // If input/textarea:
+      //  - If space key => not a dropdown command
+      //  - If key is other than escape
+      //    - If key is not up or down => not a dropdown command
+      //    - If trigger inside the menu => not a dropdown command
+      if (/input|textarea/i.test(event.target.tagName) ?
+        event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE &&
+        (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE ||
+          $(event.target).closest(Selector.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
         return
       }
 

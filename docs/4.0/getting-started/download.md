@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Download
-description: Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, Bower, RubyGems, and more.
+description: Download Boosted to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
 group: getting-started
 toc: true
 ---
@@ -24,7 +24,7 @@ Compile Bootstrap with your own asset pipeline by downloading our source Sass, J
 - Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
 - [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
 
-Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup), they are included for developing Bootstrap and it's docs, but they're likely unsuitable for your own purposes.
+Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
 
 <a href="{{ site.download.source }}" class="btn btn-secondary">Download source</a>
 

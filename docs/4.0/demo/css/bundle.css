@@ -2,27 +2,27 @@
 .gauge {
   position: relative;
   display: inline-block;
-  text-align: center;
   margin-right: 1rem;
+  text-align: center;
 }
 
 .gauge .gauge-label {
-  padding: 10px 0;
-  font-weight: bold;
   display: block;
+  padding: 10px 0;
+  font-weight: 700;
 }
 
 .gauge .gauge-value {
   position: absolute;
   top: calc(50% - 4px);
   left: 50%;
+  font-weight: 700;
   transform: translateY(-50%) translateX(-50%);
-  font-weight: bold;
 }
 
 .gauge svg {
-  transform: rotate(-90deg);
   background-color: #fff;
+  transform: rotate(-90deg);
 }
 
 .gauge .progress-meter,

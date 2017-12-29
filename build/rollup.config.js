@@ -15,12 +15,13 @@ const plugins = [
     externalHelpersWhitelist: [ // include only required helpers
       'defineProperties',
       'createClass',
-      'inheritsLoose'
+      'inheritsLoose',
+      'extends'
     ]
   })
 ]
 const globals = {
-  jquery: '$',
+  jquery: 'jQuery', // ensure we use jQuery which is always available even in noConflict mode
   'popper.js': 'Popper'
 }
 
@@ -36,15 +37,21 @@ module.exports = {
   input: path.resolve(__dirname, '../js/src/index.js'),
   output: {
     file: path.resolve(__dirname, `../dist/js/${fileDest}`),
-    format: 'iife'
+    format: 'umd'
   },
   name: 'boosted',
-  external: external,
-  globals: globals,
-  plugins: plugins,
+  external,
+  globals,
+  plugins,
   banner: `/*!
-  * Boosted v${pkg.version} (${pkg.homepage})
-  * Copyright 2011-${year} ${pkg.author}
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-  */`
+   * Boosted v${pkg.version} (${pkg.homepage})
+   * Copyright 2014-${year} The Boosted Authors
+   * Copyright 2014-${year} Orange
+   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
+   * This a fork of Bootstrap : Initial license below
+   * Bootstrap v4.0.0-beta.3 (https://getbootstrap.com)
+   * Copyright 2011-2017 The Bootstrap Authors
+   * Copyright 2011-2017 Twitter, Inc.
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   */`
 }

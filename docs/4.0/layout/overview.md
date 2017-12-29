@@ -91,23 +91,26 @@ We occasionally use media queries that go in the other direction (the given scre
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 480px)
-@media (max-width: 479px) { ... }
+@media (max-width: 479.99px) { ... }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767px) { ... }
+@media (max-width: 767.99px) { ... }
 
 // Medium devices (tablets, less than 960px)
-@media (max-width: 959px) { ... }
+@media (max-width: 959.99px) { ... }
 
 // Large devices (desktops, less than 1220px)
-@media (max-width: 1219px) { ... }
+@media (max-width: 1219.99px) { ... }
 
 // Extra large devices (desktops, less than 1380px)
-@media (max-width: 1379px) { ... }
+@media (max-width: 1379.99px) { ... }
 
 // Extra extra large devices (large desktops)
 // No media query since the extra-extra-large breakpoint has no upper bound on its width
 {% endhighlight %}
+
+{% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
+{{ callout-include | markdownify }}
 
 Once again, these media queries are also available via Sass mixins:
 
@@ -123,19 +126,19 @@ There are also media queries and mixins for targeting a single segment of screen
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 480px)
-@media (max-width: 479px) { ... }
+@media (max-width: 479.99px) { ... }
 
 // Small devices (landscape phones, 480px and up)
-@media (min-width: 480px) and (max-width: 767px) { ... }
+@media (min-width: 480px) and (max-width: 767.99px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 959px) { ... }
+@media (min-width: 768px) and (max-width: 959.99px) { ... }
 
 // Large devices (desktops, 960px and up)
-@media (min-width: 960px) and (max-width: 1219px) { ... }
+@media (min-width: 960px) and (max-width: 1219.99px) { ... }
 
 // Extra large devices (desktops, 1220px and up)
-@media (min-width: 1220px) and (max-width: 1379px) { ... }
+@media (min-width: 1220px) and (max-width: 1379.99px) { ... }
 
 // Extra extra large devices (large desktops, 1380px and up)
 @media (min-width: 1380px) { ... }
@@ -157,7 +160,7 @@ Similarly, media queries may span multiple breakpoint widths:
 {% highlight scss %}
 // Example
 // Apply styles starting from medium devices (tablets, 768px and up) and  Large devices (desktops, 960px and up)
-@media (min-width: 768px) and (max-width: 959px) { ... }
+@media (min-width: 768px) and (max-width: 959.99px) { ... }
 {% endhighlight %}
 
 The Sass mixin for targeting the same screen size range would be:
@@ -170,7 +173,9 @@ The Sass mixin for targeting the same screen size range would be:
 
 Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
 
-We don't encourage customization of these values; should you change one, you likely need to change them all.
+These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
+
+We don't encourage customization of these individual values; should you change one, you likely need to change them all.
 
 ```scss
 $zindex-dropdown:          1000 !default;
@@ -182,4 +187,4 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 ```
 
-Background elements—like the backdrops that allow click-dismissing—tend to reside on a lower `z-index`s, while navigation and popovers utilize higher `z-index`s to ensure they overlay surrounding content.
+To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.

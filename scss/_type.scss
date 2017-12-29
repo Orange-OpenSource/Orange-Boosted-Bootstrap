@@ -64,8 +64,8 @@ h6, .h6 { font-size: $h6-font-size; }
 //
 
 hr {
-  margin-top: $spacer;
-  margin-bottom: $spacer;
+  margin-top: $hr-margin-y;
+  margin-bottom: $hr-margin-y;
   border: 0;
   border-top: $hr-border-width solid $hr-border-color;
 }

@@ -61,9 +61,9 @@
   $luminositeblanc: relativelum(1, 1, 1);
   // if luminosite doesn't fit with white color return black
   @if ((($luminositeblanc + .05) / ($luminositecouleur + .05)) < 4.5) {
-    @return #000;
+    @return $yiq-text-dark;
   } @else {
-    @return #fff;
+    @return $yiq-text-light;
   }
 }
 
@@ -81,7 +81,7 @@
   }
 }
 
-// Retreive color Sass maps
+// Retrieve color Sass maps
 @function color($key: "blue") {
   @return map-get($colors, $key);
 }

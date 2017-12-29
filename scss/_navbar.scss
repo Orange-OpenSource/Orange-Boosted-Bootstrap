@@ -178,6 +178,11 @@
     outline: 0;
   }
   // end mod
+
+  // Opinionated: add "hand" cursor to non-disabled .navbar-toggler elements
+  &:not([disabled]):not(.disabled) {
+    cursor: pointer;
+  }
 }
 
 // Keep as a separate element so folks can easily override it with another icon

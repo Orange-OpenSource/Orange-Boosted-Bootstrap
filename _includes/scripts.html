@@ -6,33 +6,34 @@
 
 <script src="{{ site.baseurl }}/assets/js/vendor/popper.min.js"></script>
 
-{% if site.github %}
+{%- if site.github -%}
   <script src="{{ site.baseurl }}/dist/js/boosted.min.js"></script>
-{% else %}
+{%- else -%}
   <script src="{{ site.baseurl }}/dist/js/boosted.js"></script>
-{% endif %}
+{%- endif -%}
 
 <!-- boosted mod -->
 <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="{{ site.baseurl }}/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
 <!-- end mod -->
 
-{% if site.github %}
+{%- if site.github -%}
   <script src="{{ site.baseurl }}/assets/js/docs.min.js"></script>
-{% else %}
+{%- else -%}
   <script src="{{ site.baseurl }}/assets/js/vendor/anchor.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/vendor/clipboard.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/vendor/holder.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/src/application.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/src/ie-emulation-modes-warning.js"></script>
 <!-- Boosted mod -->
   <script src="{{ site.baseurl }}/assets/js/src/application-boosted.js"></script>
 <!-- end mod -->
-{% endif %}
+{%- endif -%}
 
-<script src="{{ site.baseurl }}/assets/js/ie-emulation-modes-warning.js"></script>
 
-{% if page.layout == "docs" %}
-<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+
+{%- if page.layout == "docs" -%}
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
@@ -87,9 +88,9 @@
   $('#collapsing-navbarHead').megamenu();
 
 </script>
-{% endif %}
+{%- endif -%}
 
-{% if page.title == "Boostwatch" %}
+{%- if page.title == "Boostwatch" -%}
 <script src="{{ site.baseurl }}/dist/js/vendor/swiper.min.js"></script>
 <script>
   $(document).ready(function () {
@@ -132,7 +133,7 @@
     }
 })
 </script>
-{% endif %}
+{%- endif -%}
 <script>
 Holder.addTheme('gray', {
   bg: '#777',
