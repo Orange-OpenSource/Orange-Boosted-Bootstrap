@@ -359,7 +359,7 @@
           position: absolute;
           top: 100px;
           left: 0;
-          z-index: 2000;
+          z-index: $zindex-fixed;
           width: 100%;
           padding: 1rem 0;
           background-color: #000;
