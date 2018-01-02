@@ -16,7 +16,11 @@ h3 {
 /* page header */
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 1.25rem;
   overflow: hidden;
@@ -29,7 +33,11 @@ header h1 {
 }
 
 header .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -54,11 +62,18 @@ main {
 /* card row layout */
 
 .card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .card-row .o-card {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -69,13 +84,20 @@ main {
 @media (max-width: 767px) {
   .card-row {
     position: relative;
+    -ms-flex-align: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
   }
 
   .card-row .o-card {
+    -ms-flex-preferred-size: calc(50% - 1.25rem);
     flex-basis: calc(50% - 1.25rem);
+    -ms-flex-item-align: stretch;
     align-self: stretch;
     margin-bottom: 1.25rem;
     margin-left: 0;
@@ -92,6 +114,7 @@ main {
 
 @media (max-width: 479px) {
   .card-row .o-card {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     margin-left: 0;
   }

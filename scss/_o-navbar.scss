@@ -236,7 +236,7 @@
           .nav-item .nav-link[role="menuitem"]::before {
             float: right;
             margin-right: 1rem;
-            font-family: icon-orange;
+            font-family: icon-orange, sans-serif;
             font-size: $font-size-base;
             font-weight: $font-weight-normal;
             color: #fff;

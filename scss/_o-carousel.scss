@@ -42,7 +42,7 @@
   background-repeat: no-repeat;
 
   &::before {
-    font-family: icon-orange;
+    font-family: icon-orange, sans-serif;
   }
 }
 
@@ -96,7 +96,7 @@
 
 .swiper-button-prev::before,
 .swiper-button-next::before {
-  font-family: icon-orange;
+  font-family: icon-orange, sans-serif;
   font-size: 1.875rem;
   content: "\e93f";
 }

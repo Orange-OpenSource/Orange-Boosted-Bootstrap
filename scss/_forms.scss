@@ -221,9 +221,9 @@ select.form-control-lg {
   margin-left: -$form-check-input-gutter;
 
   &:disabled ~ .form-check-label {
-      color: $text-muted;
-    }
+    color: $text-muted;
   }
+}
 
 .form-check-label {
   margin-bottom: 0; // Override default `<label>` bottom margin

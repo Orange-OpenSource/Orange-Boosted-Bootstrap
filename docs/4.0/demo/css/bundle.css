@@ -17,11 +17,13 @@
   top: calc(50% - 4px);
   left: 50%;
   font-weight: 700;
+  -webkit-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
 }
 
 .gauge svg {
   background-color: #fff;
+  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
@@ -37,6 +39,7 @@
 .gauge .progress-value {
   stroke-dasharray: 339.292;
   stroke-dashoffset: 339.292;
+  -webkit-animation: progress 4s;
   animation: progress 4s;
 }
 
@@ -52,9 +55,16 @@
   stroke: #ffd200;
 }
 
+@-webkit-keyframes progress {
+  0% {
+    stroke-dashoffset: 339.292;
+  }
+}
+
 @keyframes progress {
   0% {
     stroke-dashoffset: 339.292;
   }
 }
 
+/*# sourceMappingURL=bundle.css.map */

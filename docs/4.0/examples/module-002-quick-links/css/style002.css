@@ -67,6 +67,7 @@ h2 {
 }
 
 .o-card-link .card-title {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   margin-bottom: 10px;
 }
