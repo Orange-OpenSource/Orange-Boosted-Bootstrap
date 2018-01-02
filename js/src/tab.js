@@ -231,8 +231,8 @@ const Tab = (($) => {
       })
       // end mod
 
-        Util.reflow(element)
-        $(element).addClass(ClassName.SHOW)
+      Util.reflow(element)
+      $(element).addClass(ClassName.SHOW)
 
       if (element.parentNode &&
           $(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
