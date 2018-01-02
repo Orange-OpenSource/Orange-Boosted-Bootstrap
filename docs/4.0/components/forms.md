@@ -974,7 +974,7 @@ $('.your-checkbox').prop('indeterminate', true)
 #### Radios
 
 {% example html %}
-<div class="custom-control custom-radio">
+<div class="custom-control custom-radio mb-2">
   <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
   <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
 </div>
@@ -1072,7 +1072,7 @@ Finally use `.toggle-rounded` class on `.toggle` element to get rounded switch a
 Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several btn-group toggles, make to have different `name` attribute for each group.
 
 {% example html %}
-<div class="o-switch btn-group" data-toggle="buttons" role="group">
+<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
     <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
   </label>
@@ -1090,7 +1090,7 @@ Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several
 Alternatively, use `.no-outline` class on `.btn-group` element to get the clear version.
 
 {% example html %}
-<div class="o-switch btn-group no-outline" data-toggle="buttons" role="group">
+<div class="o-switch btn-group btn-group-toggle no-outline" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
     <input type="radio" name="options2" id="option21" autocomplete="off" checked> 1
   </label>

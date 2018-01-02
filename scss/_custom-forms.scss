@@ -12,6 +12,7 @@
   display: block;
   min-height: (1rem * $line-height-base);
   padding-left: $custom-control-gutter;
+  margin-bottom: ($spacer / 2); // Boosted mod ensure that there's at least 10px
 }
 
 .custom-control-inline {
@@ -38,6 +39,10 @@
   &:active ~ .custom-control-label::before {
     color: $custom-control-indicator-active-color;
     background-color: $custom-control-indicator-active-bg;
+    // Boosted mod
+    // our custom control have a border
+    border-color: $custom-control-indicator-checked-border-color;
+    // end mod
     @include box-shadow($custom-control-indicator-active-box-shadow);
   }
 
@@ -47,6 +52,10 @@
 
       &::before {
         background-color: $custom-control-indicator-disabled-bg;
+        // Boosted mod
+        // our custom control have a border
+        border-color: $gray-500;
+        // end mod
       }
     }
   }
@@ -62,10 +71,6 @@
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    // Boosted mod
-    // put back top 0 because custom boosted is fat
-    top: 0;
-    // end mod
     left: 0;
     display: block;
     width: $custom-control-indicator-size;
@@ -74,6 +79,12 @@
     content: "";
     user-select: none;
     background-color: $custom-control-indicator-bg;
+    // Boosted mod
+    // our custom control have a border
+    border-color: $gray-700;
+    border-style: solid;
+    border-width: $input-btn-border-width;
+    // end mod
     @include box-shadow($custom-control-indicator-box-shadow);
   }
 
@@ -104,6 +115,10 @@
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
+      // Boosted mod
+      // our custom control have a border
+      border-color: $custom-control-indicator-checked-border-color;
+      // end mod
       @include gradient-bg($custom-control-indicator-checked-bg);
     }
     &::after {
@@ -113,6 +128,10 @@
 
   .custom-control-input:indeterminate ~ .custom-control-label {
     &::before {
+      // Boosted mod
+      // our custom control have a border
+      border-color: $custom-control-indicator-checked-border-color;
+      // end mod
       @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
@@ -133,6 +152,10 @@
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
+      // Boosted mod
+      // our custom control have a border
+      border-color: $custom-control-indicator-checked-border-color;
+      // end mod
       @include gradient-bg($custom-control-indicator-checked-bg);
     }
     &::after {

@@ -751,7 +751,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
             <th scope="col">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select all</span>
                 </label>
             </th>
@@ -766,7 +766,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 1</span>
                 </label>
             </th>
@@ -779,7 +779,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 2</span>
                 </label>
             </th>
@@ -792,7 +792,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 3</span>
                 </label>
             </th>
@@ -805,7 +805,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 4</span>
                 </label>
             </th>
@@ -818,7 +818,7 @@ Add `.has-checkbox` class to the `<table>` element to get correct spacing on the
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 5</span>
                 </label>
             </th>
@@ -842,7 +842,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
             <th scope="col">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select all</span>
                 </label>
             </th>
@@ -857,7 +857,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 1</span>
                 </label>
             </th>
@@ -874,7 +874,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 2</span>
                 </label>
             </th>
@@ -891,7 +891,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 3</span>
                 </label>
             </th>
@@ -906,7 +906,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 4</span>
                 </label>
             </th>
@@ -921,7 +921,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
             <th scope="row">
                 <label class="custom-control custom-checkbox">
                     <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-label"></span>
                     <span class="custom-control-description sr-only">select row 5</span>
                 </label>
             </th>

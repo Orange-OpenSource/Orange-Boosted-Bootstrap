@@ -342,7 +342,7 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: .625rem; // Boosted mod, default margin 10px
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

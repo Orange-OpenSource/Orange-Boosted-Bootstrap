@@ -4,34 +4,6 @@
 // stylelint-disable selector-no-qualifying-type
 // stylelint-disable selector-max-class
 
-.input-group {
-  > .input-group-addon,
-  > .form-control {
-    border-color: #000;
-  }
-
-  > .form-control {
-    &:focus {
-      border-color: theme-color("primary");
-    }
-  }
-}
-
-.has-success,
-.has-warning {
-  .input-group > .form-control {
-    // Feedback states
-    border-color: $black;
-  }
-}
-
-.has-error {
-  .input-group > .form-control {
-    // Feedback states
-    border-color: $white;
-  }
-}
-
 .form-group {
   input[type="radio"],
   input[type="checkbox"] {
@@ -176,6 +148,7 @@ select.form-control {
   }
 }
 
+/*
 // custom checkboxes
 
 .custom-control .custom-control-description {
@@ -186,47 +159,47 @@ select.form-control {
   display: inline-block;
 }
 
-.custom-control-indicator {
+.custom-control-label {
   top: auto;
   background-color: #fff;
   border: 2px solid $gray-700;
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-size: 1rem;
   border: 0;
 }
 
-.custom-checkbox .custom-control-input:active ~ .custom-control-indicator,
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:active ~ .custom-control-label,
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label {
   border: 0;
 }
 
-.custom-control-input:disabled ~ .custom-control-indicator,
-.custom-control-input:active:disabled ~ .custom-control-indicator {
+.custom-control-input:disabled ~ .custom-control-label,
+.custom-control-input:active:disabled ~ .custom-control-label {
   background-color: #fff;
   border: 2px solid $gray-500;
 }
 
-.custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-label {
   background-color: $gray-500;
   background-image: $custom-checkbox-indicator-icon-checked;
   border: 0;
 }
 
 .custom-radio {
-  .custom-control-input ~ .custom-control-indicator,
-  .custom-control-input:disabled ~ .custom-control-indicator {
+  .custom-control-input ~ .custom-control-label,
+  .custom-control-input:disabled ~ .custom-control-label {
     border-width: 2px;
   }
 
-  .custom-control-input:checked ~ .custom-control-indicator {
+  .custom-control-input:checked ~ .custom-control-label {
     background-color: #fff;
     background-image: none;
     border: 6px solid theme-color("primary");
   }
 
-  .custom-control-input:checked:disabled ~ .custom-control-indicator {
+  .custom-control-input:checked:disabled ~ .custom-control-label {
     border-color: $gray-500;
     border-width: 6px;
   }
@@ -240,7 +213,4 @@ select.form-control {
   background-position-x: right .625rem;
   background-size: .875rem;
 }
-
-.form-text {
-  color: $gray-700;
-}
+*/

@@ -16,32 +16,32 @@
               <div class="form-group row">
                   <label for="inputPassword" class="col-lg-3 col-form-label">Password</label>
                   <div class="col-lg-9">
-                      <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+                      <input class="form-control mb-3" id="inputPassword" placeholder="Password" type="password">
                       <div>
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Orange checkbox unchecked</span>
                         </label>
                       </div>
                       <div>
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" disabled>
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Orange checkbox unchecked disabled</span>
                         </label>
                       </div>
                       <div>
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" checked>
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Orange checkbox checked</span>
                         </label>
                       </div>
                       <div>
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" checked disabled>
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Orange checkbox checked disabled</span>
                         </label>
                       </div>
@@ -60,28 +60,28 @@
                       <div>
                         <label class="custom-control custom-radio">
                             <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Toggle this custom radio</span>
                         </label>
                       </div>
                       <div>
                         <label class="custom-control custom-radio">
                             <input id="radio2" name="radio" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Or toggle this other custom radio</span>
                         </label>
                       </div>
                       <div>
                         <label class="custom-control custom-radio">
                             <input id="radio3" name="radio-disabled" type="radio" class="custom-control-input" checked disabled>
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Orange radio checked disabled</span>
                         </label>
                       </div>
                       <div>
                         <label class="custom-control custom-radio">
                             <input id="radio4" name="radio-disabled" type="radio" class="custom-control-input" disabled>
-                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-label"></span>
                             <span class="custom-control-description">Orange radio unchecked disabled</span>
                         </label>
                       </div>
@@ -163,11 +163,13 @@
           <div class="form-group">
               <label class="col-form-label" for="inlineFormInputGroup">Input addons</label>
               <div class="input-group">
-              <span class="input-group-addon">$</span>
+                <div class="input-group-prepend">
+                  <div class="input-group-text">$</div>
+                </div>
               <input class="form-control" type="text" title="Input addons field" id="inlineFormInputGroup">
-              <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Button</button>
-              </span>
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="button">Button</button>
+              </div>
               </div>
           </div>
       </form>

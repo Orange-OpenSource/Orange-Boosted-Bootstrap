@@ -1,5 +1,12 @@
 // stylelint-disable selector-no-qualifying-type
 
+// Boosted mod
+// Orange brand, labels are always bold
+label {
+  font-weight: $font-weight-bold;
+}
+// end mod
+
 //
 // Textual form controls
 //
@@ -86,10 +93,7 @@ select.form-control {
 
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
-// boosted mod labels are alltime centered
-label,
-.col-form-label,
-.form-check-label {
+.col-form-label {
   padding-top: calc(#{$input-padding-y} + #{$input-border-width});
   padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});
   margin-bottom: 0; // Override the `<label>/<legend>` default
@@ -213,6 +217,7 @@ select.form-control-lg {
   position: relative;
   display: block;
   padding-left: $form-check-input-gutter;
+  margin-bottom: ($spacer / 2); // Boosted mod ensure that there's at least 10px
 }
 
 .form-check-input {
