@@ -26,13 +26,12 @@
 // BOOSTED MOD progress is half height on mobile
 @include media-breakpoint-down(md) {
   .progress {
-    display: block;
     width: 100%;
-    font-size: $font-size-sm;
+    height: ($progress-height / 2);
     line-height: ($progress-height / 2);
   }
   .progress-bar {
-    height: ($progress-height / 2);
+    font-size: $font-size-sm;
     line-height: ($progress-height / 2);
   }
 }
