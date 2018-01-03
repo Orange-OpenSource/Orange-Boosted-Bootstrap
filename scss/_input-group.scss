@@ -26,12 +26,9 @@
       z-index: 3;
     }
 
-    // Boosted mod
-    // with the 2px border, break the display on segmented buttons
-    // components/input-group/#segmented-buttons
-    // + .form-control {
-    //  margin-left: -$input-border-width;
-    // }
+    + .form-control {
+      margin-left: -$input-border-width;
+    }
   }
 
   .form-control,
@@ -73,20 +70,28 @@
     z-index: 2;
   }
 
-  // Boosted mod
-  // with the 2px border, break the display on segmented buttons
-  // components/input-group/#segmented-buttons
-  // .btn + .btn,
-  // .btn + .input-group-text,
-  // .input-group-text + .input-group-text,
-  // .input-group-text + .btn {
-  //   margin-left: -$input-border-width;
-  // }
+  .btn + .btn,
+  .btn + .input-group-text,
+  .input-group-text + .input-group-text,
+  .input-group-text + .btn {
+    margin-left: -$input-border-width;
+  }
 }
 
 .input-group-prepend { margin-right: -$input-border-width; }
 .input-group-append { margin-left: -$input-border-width; }
 
+// Boosted mod
+.input-group-prepend + .form-control {
+  border-left-color: transparent;
+}
+
+.form-control:focus + .input-group-append,
+.custom-select:focus + .input-group-append {
+  position: relative;
+  z-index: 5;
+}
+// End mod
 
 // Textual addons
 //
