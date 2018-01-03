@@ -76,7 +76,7 @@ According to the brand, Orange footer has black background and white text color.
             <div class="o-footer-bottom">
                 <div class="container-fluid">
                     <ul class="nav">
-                        <li class="nav-item"><span class="nav-link">© Orange 2017</span></li>
+                        <li class="nav-item"><span class="nav-link">© Orange 2018</span></li>
                         <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>

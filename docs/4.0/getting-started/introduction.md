@@ -64,7 +64,7 @@ Be sure to have your pages set up with the latest design and development standar
     <link rel="stylesheet" href="css/orangeHelvetica.css" />
     <!--
       Orange Icons
-      Copyright (C) 2016 - 2017 Orange SA All rights reserved
+      Copyright (C) 2016 - 2018 Orange SA All rights reserved
       See NOTICE.txt for more informations.
     -->
     <link rel="stylesheet" href="css/orangeIcons.css" />

@@ -13,7 +13,7 @@
     <projectUrl>http://boosted.orange.com</projectUrl>
     <iconUrl>http://boosted.orange.com/assets/img/favicons/apple-touch-icon.png</iconUrl>
     <licenseUrl>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/LICENSE</licenseUrl>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2017-2018</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="jQuery" version="[3.0.0,4)" />

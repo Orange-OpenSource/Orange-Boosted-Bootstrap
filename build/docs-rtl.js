@@ -3,10 +3,10 @@
 'use strict'
 
 /*!
- * Script to update version number references in the project.
- * Copyright 2017 The Bootstrap Authors
- * Copyright 2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Script to convert sample to rtl.
+ * Copyright 2017-2018 The Boosted Authors
+ * Copyright 2017-2018 Orange
+ * Licensed under MIT
  */
 
 var sh = require('shelljs')
