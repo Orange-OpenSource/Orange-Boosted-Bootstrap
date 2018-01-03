@@ -3,7 +3,7 @@ import Util from './util'
 
 /**
  * ------------------------------------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.2): otab.js
+ * Boosted (v4.0.0-beta.3): otab.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * ------------------------------------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ const Otab = (() => {
    */
 
   const NAME                = 'otab'
-  const VERSION             = '4.0.0-beta.2'
+  const VERSION             = '4.0.0-beta.3'
   const DATA_KEY            = 'bs.otab'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
