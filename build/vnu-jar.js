@@ -39,7 +39,13 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'The “time” input type is not supported in all browsers.*',
     // IE11 doesn't recognise <main> / give the element an implicit "main" landmark.
     // Explicit role="main" is redundant for other modern browsers, but still valid.
-    'The “main” role is unnecessary for element “main”.'
+    'The “main” role is unnecessary for element “main”.',
+    'The "banner" role is unnecessary for element "header".',
+    'The "contentinfo" role is unnecessary for element "footer".',
+    'The "navigation" role is unnecessary for element "nav".',
+    'The "form" role is unnecessary for element "form".'
+
+
   ].join('|')
 
   const args = [
