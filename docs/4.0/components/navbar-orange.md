@@ -78,7 +78,7 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
                 </a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a class="dropdown-item" href="#">FR</a></li>
                     <li><a class="dropdown-item" href="#">SP</a></li>
@@ -114,7 +114,7 @@ A supra bar should never be used on its own and always be included in header and
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-hasopoup="true" aria-expanded="false">EN</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
                         <li><a class="dropdown-item" href="#">FR</a></li>
                         <li><a class="dropdown-item" href="#">SP</a></li>

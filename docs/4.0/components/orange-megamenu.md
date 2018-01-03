@@ -104,7 +104,7 @@ Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing 
                         </ul>
                       </li>
                     </ul>
-                    <a data-toggle="collapse" href="#mega-level-1-collapse" aria-expanded="true" aria-controls="collapse-shop" title="close shop menu"><span class="svg-delete"></span></a>
+                    <a data-toggle="collapse" href="#mega-level-1-collapse" aria-expanded="true" aria-controls="mega-level-1-collapse" title="close shop menu"><span class="svg-delete"></span></a>
                   </div>
                 </div>
               </li>
