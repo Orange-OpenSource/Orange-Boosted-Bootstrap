@@ -42,7 +42,7 @@ redirect_from: "/examples/"
 <ul class="row bd-examples">
   <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/orange-brand-2015/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/brand_2015.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/brand_2015.png" alt="">
       <span class="h4">News Orange Brand</span>
     </a>
     <p>A single news page, Orange branded 2015.</p>
@@ -50,7 +50,7 @@ redirect_from: "/examples/"
 
   <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/orange-news/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_news.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_news.png" alt="">
       <span class="h4">News template</span>
     </a>
     <p>Main mega menu.</p>
@@ -58,7 +58,7 @@ redirect_from: "/examples/"
 
   <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/orange-dashboard/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_dashboard.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_dashboard.png" alt="">
       <span class="h4">Dashboard Orange branded</span>
     </a>
     <p>A simple Orange branded dashboard application.</p>
@@ -66,7 +66,7 @@ redirect_from: "/examples/"
 
   <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/orange-admin/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_admin.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_admin.png" alt="">
       <span class="h4">Administration mainpage</span>
     </a>
     <p>Administration for Orange applications example.</p>
@@ -74,7 +74,7 @@ redirect_from: "/examples/"
 
   <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/orange-admin/edit.html">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_admin.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_admin.png" alt="">
       <span class="h4">Administration edition page</span>
     </a>
     <p>Administration news edition for Orange applications example.</p>
@@ -82,7 +82,7 @@ redirect_from: "/examples/"
 
   <li class="col-6 col-md-4">
     <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/orange-form/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_form.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/screenshots/example_form.png" alt="">
       <span class="h4">Form</span>
     </a>
     <p>Complex form page with validation.</p>
