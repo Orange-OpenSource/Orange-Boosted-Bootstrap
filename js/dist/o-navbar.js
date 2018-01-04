@@ -4,7 +4,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.2): o-navbar.js
+ * Boosted (v4.0.0-beta.3): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ var Navbar = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'navbar';
-  var VERSION = '4.0.0-beta.2';
+  var VERSION = '4.0.0-beta.3';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var BREAKPOINT = 768;

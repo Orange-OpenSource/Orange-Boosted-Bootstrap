@@ -1,15 +1,28 @@
 /*!
  * Boosted Reboot v4.0.0-beta.3 (http://boosted.orange.com)
- * Copyright 2014-2017 The Boosted Authors
- * Copyright 2014-2017 Orange
+ * Copyright 2014-2018 The Boosted Authors
+ * Copyright 2014-2018 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
  * Bootstrap Reboot v4.0.0-beta.3 (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
+/*
+$custom-file-padding-y:            1rem !default;
+$custom-file-padding-x:            .5rem !default;
+$custom-file-line-height:          1.5 !default;
+$custom-file-color:                $gray-700 !default;
+$custom-file-bg:                   $white !default;
+$custom-file-border-width:         $border-width !default;
+$custom-file-border-color:         $input-border-color !default;
+$custom-file-border-radius:        $border-radius !default;
+$custom-file-box-shadow:           none !default;
+$custom-file-button-color:         $custom-file-color !default;
+$custom-file-button-bg:            $gray-300 !default;
+*/
 *,
 *::before,
 *::after {
@@ -67,6 +80,7 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
@@ -205,6 +219,7 @@ label,
 select,
 summary,
 textarea {
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -226,7 +241,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: .625rem;
 }
 
 button {
@@ -351,5 +366,4 @@ template {
 [hidden] {
   display: none !important;
 }
-
 /*# sourceMappingURL=boosted-reboot.css.map */

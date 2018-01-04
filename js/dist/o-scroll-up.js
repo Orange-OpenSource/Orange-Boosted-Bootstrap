@@ -4,7 +4,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.2): o-scroll-up.js
+ * Boosted (v4.0.0-beta.3): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ var ScrollUp = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'scrollup';
-  var VERSION = '4.0.0-beta.2';
+  var VERSION = '4.0.0-beta.3';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
