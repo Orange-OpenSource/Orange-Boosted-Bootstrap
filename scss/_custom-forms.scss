@@ -33,6 +33,7 @@
 
   &:focus ~ .custom-control-label::before {
     // the mixin is not used here to make sure there is feedback
+    outline: dotted 1px; // Boosted mod no box-shadow, replaced by outline
     box-shadow: $custom-control-indicator-focus-box-shadow;
   }
 
@@ -126,6 +127,12 @@
     }
   }
 
+  // Boosted mod
+  .custom-control-input:checked:focus ~ .custom-control-label::before {
+    outline-color: $black; // Boosted mod no box-shadow, replaced by outline
+  }
+  //end mod
+
   .custom-control-input:indeterminate ~ .custom-control-label {
     &::before {
       // Boosted mod
@@ -192,7 +199,7 @@
   &:focus {
     border-color: $custom-select-focus-border-color;
     outline: 0;
-    box-shadow: $custom-select-focus-box-shadow;
+    @include box-shadow($custom-select-focus-box-shadow); // Boosted mod include the box-shadow mixin
 
     &::-ms-value {
       // For visual consistency with other platforms/browsers,
@@ -260,12 +267,23 @@
 
   &:focus ~ .custom-file-control {
     border-color: $custom-file-focus-border-color;
-    box-shadow: $custom-file-focus-box-shadow;
+    @include box-shadow($custom-file-focus-box-shadow); // Boosted mod include the shadow
 
     &::before {
       border-color: $custom-file-focus-border-color;
     }
   }
+
+  // Boosted mod FIX
+  &:focus ~ .custom-file-label {
+    border-color: $custom-file-focus-border-color;
+    @include box-shadow($custom-file-focus-box-shadow); // Boosted mod include the shadow
+
+    &::before {
+      border-color: $custom-file-focus-border-color;
+    }
+  }
+  // End mod
 
   @each $lang, $value in $custom-file-text {
     &:lang(#{$lang}) ~ .custom-file-label::after {
@@ -273,6 +291,7 @@
     }
   }
 }
+
 
 .custom-file-label {
   position: absolute;
