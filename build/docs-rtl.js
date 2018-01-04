@@ -23,7 +23,7 @@ sh.exec('find docs/4.0/examples/ -mindepth 1 -maxdepth 1 -type d -name \'rtl-*\'
     console.log('Program stderr:', stderr)
 
 
-    sh.exec('find docs/4.0/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/boosted./boosted-rtl./gi\' {} ;', function (code, stdout, stderr) {
+    sh.exec('find docs/4.0/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/boosted\./boosted-rtl\./gi\' {} ;', function (code, stdout, stderr) {
       console.log('Exit code:', code)
       console.log('Program output:', stdout)
       console.log('Program stderr:', stderr)
