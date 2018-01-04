@@ -59,22 +59,22 @@ To create an icons library using icomoon, you must first <strong><a href="https:
 
 Go to the top left menu and select <code>manage projects</code>:
 
-![manage projects menu]({{ site.baseurl }}/assets/img/manage_projects.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/manage_projects.png" alt="manage projects menu">
 
 Then, select <code>import project</code> link and select the file <code>orange-icons.json</code>
 It will load all the Orange Icons into a new project
 
-![import project link]({{ site.baseurl }}/assets/img/import_projects.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/import_projects.png" alt="import project link">
                    
 You can now access to all the icons by clicking onto <code>Load</code>
      
-![Load project]({{ site.baseurl }}/assets/img/new_project.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/new_project.png" alt="Load project">
   
 ### Select your icons 
 
 You will find 2 sets : the 1st one contains all the Orange Frames and Popout, the 2nd one contains all the Solaris icons. 
    
-![Select mode activated]({{ site.baseurl }}/assets/img/select_mode.png)    
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/select_mode.png" alt="Select mode activated">
     
 By default there is no selected icon, you can make your selection for your own project.
 Check that you are in selection mode (3rd icon in the top bar, after <code>import icons</code> and <code>icon library</code>), when an icon is selected, its border becomes yellow.
@@ -84,7 +84,7 @@ If you need to add a specific icon which is no present into the selection provid
 <strong>Warning!</strong> Icons format recommendation<br>
 You need to import icons in SVG, within a square layout to preserve icons consistency ; if the layout is not a square, you will have some surprises.
 
-![Example of bad icon import]({{ site.baseurl }}/assets/img/warning_icon.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/warning_icon.png" alt="Example of bad icon import">
  
 ### Download and adapt your project font
 
@@ -93,13 +93,13 @@ Have you finished your shopping?
 Now you can create your font for your project.  
 Click onto <code>generate font</code> at the bottom right of the page.
 
-![Generate font link]({{ site.baseurl }}/assets/img/generate_font.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/generate_font.png" alt="Generate font link">
  
 Depending of the number of icons selected, it can take a little bit of time...
      
 Setting your font preferences
 
-![preference link]({{ site.baseurl }}/assets/img/preference.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/preference.png" alt="preference link">
 
 Now you have a <code>Download</code> button at the bottom right but <strong>WAIT!!!</strong> 
 We know, you want to download your font but first you need to make some change into <code>preferences</code> to name your font with a name dedicated to YOUR project. 
@@ -111,14 +111,14 @@ By default the font-family is named <code>orange-icons</code>, rename it for you
 You also can get Stylesheet variables for scss or less and if you want change the version. 
 And uncheck IE8 support if you rely on Boosted 4! 
 
-![Option window]({{ site.baseurl }}/assets/img/param_export.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/param_export.png" alt="Option window">
 
 Close the Preferences window, you’re now ready to download your font.
 
 
 The download is a zip file, <code>MYPROJECT-icons.zip</code>.
 
-![Zip contains]({{ site.baseurl }}/assets/img/arbo_zip.png)
+<img class="img-fluid" src="{{ site.baseurl }}/assets/img/arbo_zip.png" alt="Zip contains">
 
 Unzip it.
 The demo.html and demo-files folder offer a sample page displaying the icons - you don’t need them for your project.
