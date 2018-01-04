@@ -49,6 +49,12 @@
   }
 }
 
+// Boosted mod
+a.btn {
+  text-decoration: none; // Boosted mod remove underline for a.btn
+}
+// End mod
+
 // Future-proof disabling of clicks on `<a>` elements
 a.btn.disabled,
 fieldset[disabled] a.btn {
