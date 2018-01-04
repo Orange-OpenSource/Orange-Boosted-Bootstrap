@@ -9,7 +9,7 @@
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
-  @include hover {
+  @include hover-focus { // Boosted mod replace hover by hover focus cause we remove box-shadow
     color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
     border-color: $hover-border;
@@ -62,7 +62,8 @@
   background-image: none;
   border-color: $color;
 
-  &:hover {
+  &:hover,
+  &:focus { //Boosted mod focus has same as hover
     color: #fff; // Boosted mod
     background-color: #000; // Boosted mod
     border-color: #000 // Boosted mod
