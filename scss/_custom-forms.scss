@@ -72,6 +72,7 @@
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
+    top: 0; // boosted mod
     left: 0;
     display: block;
     width: $custom-control-indicator-size;
