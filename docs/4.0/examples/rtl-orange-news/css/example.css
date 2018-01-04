@@ -6,7 +6,6 @@
 }
 #header h1 {
   display: inline-block;
-  /*margin-left: 20px;*/
   color: #000;
   vertical-align: middle;
 }
@@ -39,7 +38,7 @@
 }
 #newsLeader .description p:first-child {
   margin-top: 5px;
-  font-weight: bold;
+  font-weight: 700;
   color: #666;
 }
 #comments h2 {
@@ -67,28 +66,28 @@
   list-style: none;
   cursor: pointer;
   border: 1px solid #ddd;
-  -webkit-box-shadow: 0 5px 10px -6px #999;
-          box-shadow: 0 5px 10px -6px #999;
+  box-shadow: 0 5px 10px -6px #999;
 }
 #comments ul li:hover {
   background-color: #f5f5f5;
 }
-#comments .commentsList li span.comments {
+.commentsList li span.comments {
   display: block;
   float: right;
   margin: 0 0 10px 10px;
 }
-#comments .commentsList li span.comments a {
+span.comments a {
   color: #f16e00;
   text-decoration: underline;
 }
-#comments .commentsList li a {
+.commentsList li a {
   color: #666;
 }
-#comments .commentsList li a:focus, #comments ul li a:hover {
+.commentsList li a:focus,
+#comments a:hover {
   text-decoration: inherit;
 }
-#comments .commentsList li a strong {
+.commentsList strong {
   display: block;
 }
 .orange {
@@ -104,16 +103,19 @@
   margin-top: 22px;
 }
 .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
-#mostRead a, #mostShared a {
+#mostRead a,
+#mostShared a {
   color: #444;
 }
-#mostRead > ul, #mostShared > ul {
+#mostRead > ul,
+#mostShared > ul {
   padding: 0;
   list-style-type: none;
 }
-#mostRead > ul li, #mostShared > ul li {
+#mostRead > ul li,
+#mostShared > ul li {
   padding-left: 30px;
   margin-bottom: 10px;
 }
@@ -125,11 +127,11 @@
 }
 
 .svg-arrow-next::after {
-  height: .875rem;
-  width: .5625rem;
   top: .25rem;
-  left: auto;
   right: -1rem;
+  left: auto;
+  width: .5625rem;
+  height: .875rem;
 }
 
 #accordion {
@@ -137,7 +139,8 @@
 }
 
 
-.mega-menu #id-for-cdu-link a:hover,.mega-menu #id-for-cdu-link a:focus {
+.mega-menu #id-for-cdu-link a:hover,
+.mega-menu #id-for-cdu-link a:focus {
   color: #f16e00;
 }
 
@@ -149,15 +152,9 @@
   }
 }
 
-@media (max-width: 543px) {
-  #id-li-for-cdu {
-    display: none !important;
-  }
-}
-
 /* custom select */
 .select-theme-default.select-target {
-  width:100%
+  width: 100%;
 }
 
 .select-theme-default.select-content {

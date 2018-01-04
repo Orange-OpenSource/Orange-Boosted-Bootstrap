@@ -1,7 +1,15 @@
-self.importScripts('/assets/js/vendor/workbox-sw.prod.v2.1.0.js')
+self.importScripts('/assets/js/vendor/workbox-sw.prod.v2.1.2.js')
 
 const workboxSW = new self.WorkboxSW()
 workboxSW.precache([
+  {
+    "url": "assets/brand/bootstrap-outline.svg",
+    "revision": "9537646a9202cb5dca44e9034c1b414b"
+  },
+  {
+    "url": "assets/brand/bootstrap-punchout.svg",
+    "revision": "372e344ac243c4fa7c6c8b8a2af0e5ff"
+  },
   {
     "url": "assets/brand/bootstrap-social-logo.png",
     "revision": "1e9e93d863b7811934889f9aac89c7de"
@@ -11,16 +19,36 @@ workboxSW.precache([
     "revision": "56be615bbca4502de5d55d721dae917f"
   },
   {
-    "url": "assets/brand/orange-space-position.jpg",
-    "revision": "2530ff179c2e2a17e39674dd0329ff9c"
+    "url": "assets/brand/bootstrap-solid.svg",
+    "revision": "ea931a5b98a97e8b8658d9f6d537329e"
   },
   {
     "url": "assets/css/docs.min.css",
-    "revision": "f2012e751e758057115400c37aae0875"
+    "revision": "32acff1bc71534e71547a6064e1abd78"
   },
   {
     "url": "assets/img/arbo_zip.png",
     "revision": "f630be720d6ee833ebbc59b724a93556"
+  },
+  {
+    "url": "assets/img/bill.png",
+    "revision": "ac10785c37e9a1d1df37075ad1dec17c"
+  },
+  {
+    "url": "assets/img/blue.png",
+    "revision": "8c055a53a00aa47f17d527e0c4fb2e27"
+  },
+  {
+    "url": "assets/img/boosted logo 3D.png",
+    "revision": "dc18291fe3d255c77a10c82338d677ab"
+  },
+  {
+    "url": "assets/img/boosted-migrate.png",
+    "revision": "5406590a3fec02744f75947771993333"
+  },
+  {
+    "url": "assets/img/boosted-only-components.png",
+    "revision": "f81c6faee33a39a5e6d6c7c884b6ce9f"
   },
   {
     "url": "assets/img/bootstrap-stack.png",
@@ -115,8 +143,16 @@ workboxSW.precache([
     "revision": "22cf8ead556c9f944a85a652f16b685c"
   },
   {
+    "url": "assets/img/favicons/safari-pinned-tab.svg",
+    "revision": "a1c98a0b7a19a3ba4c3101392f92497f"
+  },
+  {
     "url": "assets/img/generate_font.png",
     "revision": "d2abb63dde0424a7838ced8a240405e2"
+  },
+  {
+    "url": "assets/img/green.png",
+    "revision": "cc14b61ad187236ff3a742c68fe69b20"
   },
   {
     "url": "assets/img/import_projects.png",
@@ -135,12 +171,24 @@ workboxSW.precache([
     "revision": "b1eb455849f8c2366bc30a8f3d076b79"
   },
   {
+    "url": "assets/img/pink.png",
+    "revision": "fb002702b28ee61e2c6828132c748e5f"
+  },
+  {
     "url": "assets/img/preference.png",
     "revision": "cfc72e61349c4c4ce8bc660f169de97d"
   },
   {
     "url": "assets/img/select_mode.png",
     "revision": "342c3b2f20f2d23a8a98ffcca2288175"
+  },
+  {
+    "url": "assets/img/shop.png",
+    "revision": "792161716a14290b208db30a629f3f15"
+  },
+  {
+    "url": "assets/img/templates.png",
+    "revision": "9458873adea125092ef7eb68f66d6936"
   },
   {
     "url": "assets/img/thumb_blue.png",
@@ -151,20 +199,20 @@ workboxSW.precache([
     "revision": "cdb49b16f88fa5464ad19242ce3353ae"
   },
   {
+    "url": "assets/img/timer.png",
+    "revision": "23ffd9dc0e5ab2a697f29e76cd712ca4"
+  },
+  {
+    "url": "assets/img/unlock.png",
+    "revision": "e61d11b7b471415c6f89c220bdbdf778"
+  },
+  {
     "url": "assets/img/warning_icon.png",
     "revision": "ec58421625b123af0c7ccf9230cb3a31"
   },
   {
     "url": "assets/js/docs.min.js",
-    "revision": "21a31ccc402e6b357c8316ec45ef442f"
-  },
-  {
-    "url": "assets/js/ie-emulation-modes-warning.js",
-    "revision": "cc2d7790e3f75807d93de0cec949b346"
-  },
-  {
-    "url": "assets/js/ie10-viewport-bug-workaround.js",
-    "revision": "56e8a7b0282409fd020be51b4995a79c"
+    "revision": "d392885e9b2b691bb2ff1cdcfa683139"
   },
   {
     "url": "assets/js/src/application-boosted.js",
@@ -175,8 +223,12 @@ workboxSW.precache([
     "revision": "5f0e90ef7a987bd12a7f13d030b2a202"
   },
   {
+    "url": "assets/js/src/ie-emulation-modes-warning.js",
+    "revision": "cd93c9a569232ea30bb22244eebff1e0"
+  },
+  {
     "url": "assets/js/src/pwa.js",
-    "revision": "3aababbcbf5c4064697af1867e554b24"
+    "revision": "e707568440725d56f34b93b0bb2350a4"
   },
   {
     "url": "assets/js/vendor/anchor.min.js",
@@ -195,52 +247,56 @@ workboxSW.precache([
     "revision": "5f48fc77cac90c4778fa24ec9c57f37d"
   },
   {
-    "url": "assets/js/vendor/popper.min.js",
-    "revision": "6cd956453e307bfd2ce4bfb0648b9f7d"
+    "url": "assets/js/vendor/jquery.tablesorter.min.js",
+    "revision": "096f8307a0ada79a93a6a95f46022a5a"
   },
   {
-    "url": "assets/js/vendor/workbox-sw.prod.v2.1.0.js",
+    "url": "assets/js/vendor/popper.min.js",
+    "revision": "70d3fda195602fe8b75e0097eed74dde"
+  },
+  {
+    "url": "assets/js/vendor/workbox-sw.prod.v2.1.2.js",
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
     "url": "dist/css/boosted-grid.css",
-    "revision": "f3a25cd88805b8923894eefecffd4c00"
+    "revision": "d5f69e80079c21bacf4c7f331e15bcb1"
   },
   {
     "url": "dist/css/boosted-grid.min.css",
-    "revision": "c8647ce8e596f9235b310e29251f9166"
+    "revision": "20d0e7013c0c7fa743ffd7097c80702f"
   },
   {
     "url": "dist/css/boosted-reboot.css",
-    "revision": "08566d0f51414d6a8e4a25ff2b4c505f"
+    "revision": "627065c3450fcfe8850f565695bd162f"
   },
   {
     "url": "dist/css/boosted-reboot.min.css",
-    "revision": "b4f04c476656658cc6a551c0475b2b22"
+    "revision": "215b0a22a9a85a48e52f8e31650ed118"
   },
   {
     "url": "dist/css/boosted-rtl.css",
-    "revision": "c5385f1f25e2d0f486cbf5da4bf0044a"
+    "revision": "80bdec765ef59ed87fdba0bb994229cc"
   },
   {
     "url": "dist/css/boosted-rtl.min.css",
-    "revision": "e32f306085145558fb5407351995d516"
+    "revision": "f81e9c8820f5af2e5996c519f935249b"
   },
   {
     "url": "dist/css/boosted.css",
-    "revision": "f473fc205db0244967bf59fdba22f7da"
+    "revision": "27f8076e713b0fa74ee62e49c959e49a"
   },
   {
     "url": "dist/css/boosted.min.css",
-    "revision": "f2e0ede5c926371765bbd6462058e82f"
+    "revision": "08517ecd2c8747d47418b376d36d3c31"
   },
   {
     "url": "dist/css/o-rtl.css",
-    "revision": "2ba1e95621258baff4a0885d5e6ac939"
+    "revision": "9f6c9aa6514aa5785df3d1a7b00b89be"
   },
   {
     "url": "dist/css/orangeHelvetica.css",
-    "revision": "2d5cdd1a06a55128b6830467c72c9c70"
+    "revision": "1becdf2a477beee29c1919cf967310cb"
   },
   {
     "url": "dist/css/orangeHelvetica.min.css",
@@ -248,35 +304,47 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/orangeIcons.css",
-    "revision": "274aa2fc45ee0c7d7ddc9b05587194f8"
+    "revision": "cc6cf720ad34c6da214c622faa0f993c"
   },
   {
     "url": "dist/css/orangeIcons.min.css",
-    "revision": "a762689604b44d0605bae94d8f825a5d"
+    "revision": "fac8015e7745761b210140a54a6cb913"
   },
   {
     "url": "dist/css/vendor/swiper.min.css",
     "revision": "6af34d0737ad0ca608111771cf74cc79"
   },
   {
-    "url": "dist/img/ORANGE_LOGO_rgb.jpg",
-    "revision": "ca4c4a56fa60322f150f0f3a57547956"
+    "url": "dist/fonts/HelvNeue55_W1G.svg",
+    "revision": "ec80141aa0497e837989ae5650d2b2d7"
+  },
+  {
+    "url": "dist/fonts/HelvNeue75_W1G.svg",
+    "revision": "d49e6dec5d8996c24a282a1d4f3030b6"
+  },
+  {
+    "url": "dist/fonts/icon-orange.svg",
+    "revision": "1f69163afb64dca81826e210cd99ed4d"
+  },
+  {
+    "url": "dist/img/orange_logo.svg",
+    "revision": "086916e9e2d8f8c38d2ecfba359ab991"
   },
   {
     "url": "dist/js/boosted.bundle.js",
-    "revision": "3e40ed9cae1dff69838ea60483495882"
+    "revision": "0002b540367a663f6abda11972cd231f"
   },
   {
     "url": "dist/js/boosted.bundle.min.js",
-    "revision": "2954070dce1463e76472bda88dc2f67f"
+    "revision": "41a24049a205d29a0a374cd0c827a11c"
   },
   {
     "url": "dist/js/boosted.js",
-    "revision": "89a764b4770d0efb7cb68003fbf8385f"
+    "revision": "660cb97bfdcf87cc4b731cfb66ae2ed0"
   },
   {
     "url": "dist/js/boosted.min.js",
-    "revision": "4f6188ff4f311e0681a20452dc7a6471"
+    "revision": "7a7b7389d63d4ac00e9ea7c139cd78ab"
   },
   {
     "url": "dist/js/vendor/jquery.tablesorter.js",
@@ -288,243 +356,199 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/about/boosted-history/index.html",
-    "revision": "241a3f19f4a39214e059114e79a68ed0"
+    "revision": "6d6ce1c5183a411910203db74a11b565"
   },
   {
     "url": "docs/4.0/about/boosted-license/index.html",
-    "revision": "fc57b814f8ea032703753ad67e2f9803"
+    "revision": "c3f9a6e59273b450a6ad54cdf4f68669"
   },
   {
     "url": "docs/4.0/about/brand/index.html",
-    "revision": "6ed90d9fe7406e8aa4aeaee8c2f0266c"
-  },
-  {
-    "url": "docs/4.0/about/history/index.html",
-    "revision": "64099d7ee9e520d7f6975ed19d173947"
+    "revision": "9299bd7553978a8c88fbc77710f55df2"
   },
   {
     "url": "docs/4.0/about/index.html",
-    "revision": "a196d61eb245f4523324b1aeb05ab9b2"
+    "revision": "3f1b25297d1eac259e028e94c0ca18d8"
   },
   {
     "url": "docs/4.0/about/license/index.html",
-    "revision": "a94b8f010888fbc985389fe58b8e3e63"
+    "revision": "fd668f75fd6293a88dd7f971d3ff0cbe"
   },
   {
     "url": "docs/4.0/about/orange-brand/index.html",
-    "revision": "be9af1bf06eb9739ceb9402f688b17d2"
+    "revision": "585e6fc926b68417e85a9ea79357f869"
   },
   {
-    "url": "docs/4.0/about/team/index.html",
-    "revision": "34ef72862b2ddbbd1cd78e27f0a5ed38"
+    "url": "docs/4.0/about/overview/index.html",
+    "revision": "9e8cd9707f2ca912fa8ef9200dcfc628"
   },
   {
     "url": "docs/4.0/about/translations/index.html",
-    "revision": "ec91b58bb6e04309f1ec96d01ebc3f9e"
+    "revision": "4e01af8d9de1b3af59dba50a3768a7aa"
   },
   {
     "url": "docs/4.0/boosted-migration/index.html",
-    "revision": "b53e34ce58b15654f65c013cb441392a"
+    "revision": "aba102fc513dfc2147bfafa4e878bcb6"
   },
   {
     "url": "docs/4.0/boostwatch/index.html",
-    "revision": "bcd372e6d8b999e08691eb8bb6712884"
+    "revision": "244cdb2e1b53848fca229bfa9f2cefb5"
   },
   {
     "url": "docs/4.0/browser-bugs/index.html",
-    "revision": "cf9dcf7fcc934ad9dc53a713ecb7d4f2"
+    "revision": "cb8f1eb45568b7d9704111ee84abf630"
   },
   {
     "url": "docs/4.0/components/alerts/index.html",
-    "revision": "4169b00d297f9dcc4eb5c0f6351b2e2f"
+    "revision": "86838d32572ec219979ec25469dcb4d5"
   },
   {
     "url": "docs/4.0/components/badge/index.html",
-    "revision": "7031cbc1b2ed6d21dade3b4f89c42e1a"
+    "revision": "f2da693f0cb6e81372ee83952fe3ff96"
   },
   {
     "url": "docs/4.0/components/breadcrumb/index.html",
-    "revision": "2b23b7edb7b3715ab1b61ac97a85dd03"
+    "revision": "1727959059f718a9113d69f1f833361b"
   },
   {
     "url": "docs/4.0/components/button-group/index.html",
-    "revision": "a6b954707b3c54148da8860180eb03bc"
+    "revision": "fd2f908ff08a19b1dd06d08912d5d641"
   },
   {
     "url": "docs/4.0/components/buttons/index.html",
-    "revision": "0fdc4724a3306b94abcead33c23d7d84"
+    "revision": "2c2214f242b21a2d3a70d0ce310ae282"
   },
   {
     "url": "docs/4.0/components/card/index.html",
-    "revision": "a79f809329b57a4682cd82a8711763c7"
+    "revision": "a929433ef43b5040e97f003e3b76578f"
   },
   {
     "url": "docs/4.0/components/carousel/index.html",
-    "revision": "43401b50d97dc01b3c20ea0dacaf17d4"
+    "revision": "717b93d632d4dd98bf272b3834a435cb"
   },
   {
     "url": "docs/4.0/components/collapse/index.html",
-    "revision": "8682836601bbd904a786f00cd2986328"
+    "revision": "470eabd94d13f5b3d217faa0e9cf8a66"
   },
   {
     "url": "docs/4.0/components/custom-carousel/index.html",
-    "revision": "6602d5bafda6f416d4f011ddea2ae7c5"
+    "revision": "fbb109b780da1d610df8344f47bde4e3"
   },
   {
     "url": "docs/4.0/components/dropdowns/index.html",
-    "revision": "0e5820207c711b661049028d63564536"
+    "revision": "973e173c2f739e22b8c03ca35ff22a3f"
   },
   {
     "url": "docs/4.0/components/forms/index.html",
-    "revision": "2812668fe73cbf567e4228bbd058d1c2"
+    "revision": "ab03b9976c897df86320507db1eb914c"
   },
   {
     "url": "docs/4.0/components/index.html",
-    "revision": "82a8ff98dfd5fd2baecf9444bb80b273"
+    "revision": "94028bb2d075eba3153420db911d0481"
   },
   {
     "url": "docs/4.0/components/input-group/index.html",
-    "revision": "3b6eaa1a13f5995eab8b9616dee51350"
+    "revision": "af522c78b45a33dbf0c8d3d60c24a846"
   },
   {
     "url": "docs/4.0/components/jumbotron/index.html",
-    "revision": "632e939992c9f111e1c94011726cc60f"
+    "revision": "86948e4a09f76e9ef40c356aa0e39488"
   },
   {
     "url": "docs/4.0/components/list-group/index.html",
-    "revision": "8178225fe55fd73dbe982b1ee034e317"
+    "revision": "fcd60b4dcc4f4ecb8292a424432f57a9"
   },
   {
     "url": "docs/4.0/components/local-navigation/index.html",
-    "revision": "dd1e57e12cf87d48c6f9ff67cffd3f50"
+    "revision": "c41d683e449372d0b8831e668f01a902"
   },
   {
     "url": "docs/4.0/components/modal/index.html",
-    "revision": "7bb23cef65162d3274fb3ba9dcafc909"
+    "revision": "a665b9528e57e24e40fb3e498a1903ff"
   },
   {
     "url": "docs/4.0/components/navbar-orange/index.html",
-    "revision": "1b359e2b4651bf32e9544252a5801df7"
+    "revision": "82d513c63077725eb47ef81f3ff429ec"
   },
   {
     "url": "docs/4.0/components/navbar/index.html",
-    "revision": "81aaa20eb2db27f5bac56a5c9181f119"
+    "revision": "f4516c78b563b91dff37bc30953fec7e"
   },
   {
     "url": "docs/4.0/components/navs/index.html",
-    "revision": "bffe317d05e4ee82a7396899d839574c"
+    "revision": "0437d5f64a259e1954d4a619885eb0c2"
   },
   {
     "url": "docs/4.0/components/orange-footer/index.html",
-    "revision": "32aa26429fa3d190d2041c56ec7961c2"
+    "revision": "d2e3a3985a241e8113ad7c5cc326812f"
   },
   {
     "url": "docs/4.0/components/orange-megamenu/index.html",
-    "revision": "00c50fc783aeacf128f7c7adbe97757c"
+    "revision": "3a1b6f3fc15f865e8dc2b422f6b04872"
   },
   {
     "url": "docs/4.0/components/orange-popin/index.html",
-    "revision": "bc44b8b227f364a309a1f9ca38a5d02d"
+    "revision": "20b4fdd094901e96a564a9c7cd0b4959"
   },
   {
     "url": "docs/4.0/components/pagination/index.html",
-    "revision": "832c02f4e6963ab3928db428b64bad58"
+    "revision": "b6e97e6fb82cf97a72e1834a04b6495a"
   },
   {
     "url": "docs/4.0/components/popovers/index.html",
-    "revision": "9826f0713918cf89a9ee3e7a5b3fc9d0"
+    "revision": "81b2cc9734ac077729291c082998107c"
   },
   {
     "url": "docs/4.0/components/priority-nav/index.html",
-    "revision": "e8d51047fad703d7bfe67ca310f6968c"
+    "revision": "c0e53ef95ee95c6ad030871f34d1b7f7"
   },
   {
     "url": "docs/4.0/components/progress/index.html",
-    "revision": "b02cb0070af98070d5ff74eb6e3f2c41"
+    "revision": "9a8b907355b0b6095a62711bca3d61d7"
   },
   {
     "url": "docs/4.0/components/scroll-up/index.html",
-    "revision": "245c0c6530e9aefba63579a8a7300d60"
+    "revision": "77c2f3692111b837511144f85ae6261e"
   },
   {
     "url": "docs/4.0/components/scrollspy/index.html",
-    "revision": "6309a6cc14899203b662e656fb0c3ecc"
+    "revision": "7e29f1ed55a55a6021c7d4497d27d93f"
   },
   {
     "url": "docs/4.0/components/stepbar/index.html",
-    "revision": "7eb7461b3f6dd521ff66abbe08528222"
+    "revision": "c72afc1beaf8d4c48afa1481f6e9dd37"
   },
   {
     "url": "docs/4.0/components/tooltips/index.html",
-    "revision": "748f643855650c5d644f898d01d2d66c"
+    "revision": "87558b69774f7ca7a03fe8c492fd8ba0"
   },
   {
     "url": "docs/4.0/content/code/index.html",
-    "revision": "86dd321c6a51fcb070c1ee0560260a7c"
+    "revision": "0a62467373fafc56402bea67d463fbad"
   },
   {
     "url": "docs/4.0/content/figures/index.html",
-    "revision": "6882cec12efdb7b838877e68c4bcc3a4"
+    "revision": "3170f47f33d8e9a2f608598a55d5a608"
   },
   {
     "url": "docs/4.0/content/images/index.html",
-    "revision": "ca90da98fea99d4457e07e7c259dc4c0"
+    "revision": "14a5b492616e2662139cdd87c34ac6ed"
   },
   {
     "url": "docs/4.0/content/index.html",
-    "revision": "624a23e5ecaf85e7133311869d0f4622"
+    "revision": "14412c4adcfd295bdb9d3f5a3778f115"
   },
   {
     "url": "docs/4.0/content/reboot/index.html",
-    "revision": "f2986e352daf9521aea43f70555e5f35"
+    "revision": "56395d33b39bd5a3759fe276e2d59e10"
   },
   {
     "url": "docs/4.0/content/tables/index.html",
-    "revision": "c495508d74db98db6078523d61cedc8a"
+    "revision": "564f44f3c2d4460cb7edbc5061b1fd22"
   },
   {
     "url": "docs/4.0/content/typography/index.html",
-    "revision": "ff079c2d51fbf67c5835661bfd0e0e32"
-  },
-  {
-    "url": "docs/4.0/demo/assets/bill.png",
-    "revision": "ac10785c37e9a1d1df37075ad1dec17c"
-  },
-  {
-    "url": "docs/4.0/demo/assets/blue.png",
-    "revision": "8c055a53a00aa47f17d527e0c4fb2e27"
-  },
-  {
-    "url": "docs/4.0/demo/assets/green.png",
-    "revision": "cc14b61ad187236ff3a742c68fe69b20"
-  },
-  {
-    "url": "docs/4.0/demo/assets/pink.png",
-    "revision": "fb002702b28ee61e2c6828132c748e5f"
-  },
-  {
-    "url": "docs/4.0/demo/assets/shop.png",
-    "revision": "792161716a14290b208db30a629f3f15"
-  },
-  {
-    "url": "docs/4.0/demo/assets/timer.png",
-    "revision": "23ffd9dc0e5ab2a697f29e76cd712ca4"
-  },
-  {
-    "url": "docs/4.0/demo/assets/unlock.png",
-    "revision": "e61d11b7b471415c6f89c220bdbdf778"
-  },
-  {
-    "url": "docs/4.0/demo/css/bundle.css",
-    "revision": "33a67cb0a46e7dcb983ba7c551c1316b"
-  },
-  {
-    "url": "docs/4.0/demo/index.html",
-    "revision": "c7cc4d05852e85a03029f6c69a6d818e"
-  },
-  {
-    "url": "docs/4.0/demo/js/main.js",
-    "revision": "2d959974440753a2bddf96522754c2b1"
+    "revision": "7288b58c2c6fdb93b724c4cae778571c"
   },
   {
     "url": "docs/4.0/examples/album/album.css",
@@ -532,15 +556,15 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/album/index.html",
-    "revision": "63b7c2d799d4a887f954fecbdcf4be21"
+    "revision": "bb28d1fe39e62753497973c2a812b69c"
   },
   {
     "url": "docs/4.0/examples/blog/blog.css",
-    "revision": "bde1fb64506c01e3adce7f9c03432c0f"
+    "revision": "750f2ac42509b1d901295d087cac5ef6"
   },
   {
     "url": "docs/4.0/examples/blog/index.html",
-    "revision": "bb1ea564e7bd75655b0efb26cf941d25"
+    "revision": "4042ac64414aedcf6435d82f40624290"
   },
   {
     "url": "docs/4.0/examples/carousel/carousel.css",
@@ -548,27 +572,67 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/carousel/index.html",
-    "revision": "54328f16a0fc76c0d674b94b33664414"
+    "revision": "99b151f41e1ea0f882c07742851f5d6f"
   },
   {
     "url": "docs/4.0/examples/cover/cover.css",
-    "revision": "f79fbe1cfda97336136e5c7d20ca9540"
+    "revision": "1d0127b6309e72780dd3e87093a9d7e3"
   },
   {
     "url": "docs/4.0/examples/cover/index.html",
-    "revision": "1f74c8c94f3746095da693e83076cc21"
+    "revision": "5365e8d8b7862595ad2cfc5db006d019"
   },
   {
     "url": "docs/4.0/examples/dashboard/dashboard.css",
-    "revision": "3b0f0197e04f5e4209b0305d45624983"
+    "revision": "cea2ce48e209721ca537d8ffcad510b9"
   },
   {
     "url": "docs/4.0/examples/dashboard/index.html",
-    "revision": "deb7079482a10999391ffce56937373f"
+    "revision": "5ae82fe1d819044317ea7efea924d79c"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/bill.png",
+    "revision": "ac10785c37e9a1d1df37075ad1dec17c"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/blue.png",
+    "revision": "8c055a53a00aa47f17d527e0c4fb2e27"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/green.png",
+    "revision": "cc14b61ad187236ff3a742c68fe69b20"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/pink.png",
+    "revision": "fb002702b28ee61e2c6828132c748e5f"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/shop.png",
+    "revision": "792161716a14290b208db30a629f3f15"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/timer.png",
+    "revision": "23ffd9dc0e5ab2a697f29e76cd712ca4"
+  },
+  {
+    "url": "docs/4.0/examples/demo/assets/unlock.png",
+    "revision": "e61d11b7b471415c6f89c220bdbdf778"
+  },
+  {
+    "url": "docs/4.0/examples/demo/css/bundle.css",
+    "revision": "948aa2fa24b6b43662295d6069966871"
+  },
+  {
+    "url": "docs/4.0/examples/demo/index.html",
+    "revision": "48289566e7adf1b2c34fccc8dd41ebb6"
+  },
+  {
+    "url": "docs/4.0/examples/demo/js/main.js",
+    "revision": "570bde5177c94f2cd9861ccaaa5133dc"
   },
   {
     "url": "docs/4.0/examples/grid/grid.css",
-    "revision": "820f9163034b0e483d475dd916ca7c6b"
+    "revision": "4cd2e5cc5e19dc692d50ed6f077154ef"
   },
   {
     "url": "docs/4.0/examples/grid/index.html",
@@ -576,11 +640,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/index.html",
-    "revision": "e2741c8d1bacef2852aa359c3f12f94b"
+    "revision": "540bb0f6660da9abf5c940d375bf9686"
   },
   {
     "url": "docs/4.0/examples/jumbotron/index.html",
-    "revision": "1d6e2d861c5662cce611509477b7cc15"
+    "revision": "fbaac93d33e537054bfaa13a1b6f0717"
   },
   {
     "url": "docs/4.0/examples/jumbotron/jumbotron.css",
@@ -588,15 +652,15 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/justified-nav/index.html",
-    "revision": "7d85659491c38525d58ce3ae3a5a483c"
+    "revision": "ee1f0723945c6b9ca966c9d06e7325bf"
   },
   {
     "url": "docs/4.0/examples/justified-nav/justified-nav.css",
-    "revision": "34bf61c9b8f0e0b194fd1bcdd1172c0a"
+    "revision": "74b0be6ad3b421b43288545b9628253f"
   },
   {
     "url": "docs/4.0/examples/module-002-quick-links/css/style002.css",
-    "revision": "ab022e2a20392ce0ab3497a439656a50"
+    "revision": "fd3e4959b40b6cf566e23471ff029e7b"
   },
   {
     "url": "docs/4.0/examples/module-002-quick-links/img/icn_facebook_black.png",
@@ -620,27 +684,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/module-006-content-panel/css/style006.css",
-    "revision": "ae84f0233daabb8de410d1abc2948413"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/img/adaptation.jpg",
-    "revision": "0cd504c972bf72f2154850a506b9660f"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/img/connexion.jpg",
-    "revision": "17837fb64da5d82ce37cef77a808ce82"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/img/disponibilite.jpg",
-    "revision": "0d5c925c493e046cf374813319fd044a"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/img/simplicite.jpg",
-    "revision": "9f136430ee27ea14ca69af43d15aed77"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/img/vignette1.jpg",
-    "revision": "90fc0354d327b9dfc8e59baa8268f5d3"
+    "revision": "e271c5f3c5ebf3c1d545c20543cdcac7"
   },
   {
     "url": "docs/4.0/examples/module-006-content-panel/index.html",
@@ -648,7 +692,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/module-012-product-details/css/style012.css",
-    "revision": "077abc47d6b7f545390b5fbc2c797c8c"
+    "revision": "79e1b949c809293d2e25ccf94e1d050f"
   },
   {
     "url": "docs/4.0/examples/module-012-product-details/img/label_discount.png",
@@ -680,11 +724,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/navbar-bottom/index.html",
-    "revision": "fca26464da9efe910411703bdbcb1cc3"
+    "revision": "bd9fca5d883e960f821bc26fc2fb6fec"
   },
   {
     "url": "docs/4.0/examples/navbar-top-fixed/index.html",
-    "revision": "37ecdb3fa28d5fb0c00e7e694cb3d72e"
+    "revision": "12333076aa6a72dab821bbec7c67c5fb"
   },
   {
     "url": "docs/4.0/examples/navbar-top-fixed/navbar-top-fixed.css",
@@ -692,7 +736,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/navbar-top/index.html",
-    "revision": "a72b93a71e3c9f80c4880976c43103e1"
+    "revision": "d488d2c4e1c4b9de6f25b89699812759"
   },
   {
     "url": "docs/4.0/examples/navbar-top/navbar-top.css",
@@ -700,7 +744,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/navbars/index.html",
-    "revision": "abf8ff1b71666af7b70bacd967ac3ca6"
+    "revision": "0124db2b6e6139df77392b1f5c346868"
   },
   {
     "url": "docs/4.0/examples/navbars/navbar.css",
@@ -708,11 +752,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/offcanvas/index.html",
-    "revision": "550a1da60ee5201c8fcd24a5c4ad913d"
+    "revision": "cdcadc502dcd641b6c23201a4e1f2f5c"
   },
   {
     "url": "docs/4.0/examples/offcanvas/offcanvas.css",
-    "revision": "e58e81c43f4575cd7f3d2709fb96115c"
+    "revision": "77eca95a4f55dd917ba95db9ac28bac9"
   },
   {
     "url": "docs/4.0/examples/offcanvas/offcanvas.js",
@@ -720,11 +764,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-admin/edit.html",
-    "revision": "f968e9e66b7d70483d4e0113092ecb52"
+    "revision": "cdc7d293dcdb06034199c3b84a8529dd"
   },
   {
     "url": "docs/4.0/examples/orange-admin/example.css",
-    "revision": "fd5e6dbf623f8c90efa8e0979a7e44d0"
+    "revision": "8a43544b65e06b9408f16598477e0b07"
   },
   {
     "url": "docs/4.0/examples/orange-admin/images/logo-orange.png",
@@ -732,7 +776,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-admin/index.html",
-    "revision": "c55876d059e0c0ebb53373bbe9ba9f51"
+    "revision": "590f9cae68bfaf7b61c3ce8bcddf84a2"
   },
   {
     "url": "docs/4.0/examples/orange-brand-2015/images/discovery-frame-carousel-whitetext.png",
@@ -763,14 +807,6 @@ workboxSW.precache([
     "revision": "3978402625900ab1deca4e6474bd9c21"
   },
   {
-    "url": "docs/4.0/examples/orange-brand-2015/images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg",
-    "revision": "c6f4e52712e5e7633afed4e9ebd7c4e6"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/offset_LARGE_123305_chemisier_jaune.jpg",
-    "revision": "ff740092182243261d64a791f102fb82"
-  },
-  {
     "url": "docs/4.0/examples/orange-brand-2015/images/popular-services-1.png",
     "revision": "6cea6eeac842c10ea590cdacdd75b9ff"
   },
@@ -783,20 +819,16 @@ workboxSW.precache([
     "revision": "db1770e16c587889cf8d2fb17a1c12bf"
   },
   {
-    "url": "docs/4.0/examples/orange-brand-2015/images/une-nouvelle-marque_grid-full-width.jpg",
-    "revision": "d44a6f9a64f4fac3e781b4d43605bbd5"
-  },
-  {
     "url": "docs/4.0/examples/orange-brand-2015/index.html",
     "revision": "4381cc8bb8b387ccb038570fcdbd9420"
   },
   {
     "url": "docs/4.0/examples/orange-brand-2015/sample.css",
-    "revision": "da881b3490251e22b760b544775d3026"
+    "revision": "b0f19bce321284ca3cd1615222d9a09e"
   },
   {
     "url": "docs/4.0/examples/orange-dashboard/gabarit.css",
-    "revision": "ba1e582f4b7b35fb766f5427cc924b71"
+    "revision": "c4bd3d14aefa5295f333b21a3d717954"
   },
   {
     "url": "docs/4.0/examples/orange-dashboard/images/Cancel.png",
@@ -816,7 +848,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-dashboard/index.html",
-    "revision": "cca997a0aa6c8a5f96c66d5a009778c5"
+    "revision": "46390b994ea4bb3b3f0207c4c9cb890b"
   },
   {
     "url": "docs/4.0/examples/orange-form/form.js",
@@ -832,7 +864,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-form/styles.css",
-    "revision": "5d370cfd095615f96825aeddfa388e6a"
+    "revision": "a8b20e7f95048c66bc0d7cb0613a12ff"
   },
   {
     "url": "docs/4.0/examples/orange-grid/index-fluid.html",
@@ -844,23 +876,15 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-grid/styles.css",
-    "revision": "5643f7410c0a5e2882a71dc5183952d8"
+    "revision": "89b7506be0f04d9f94cebfe9c43ebcc8"
   },
   {
     "url": "docs/4.0/examples/orange-news/css/example.css",
-    "revision": "aba84d352aef4e28ad58c7be00537313"
-  },
-  {
-    "url": "docs/4.0/examples/orange-news/images/8565182.jpg",
-    "revision": "8cf9b4a7d758462fb9d73bfb9eef1893"
-  },
-  {
-    "url": "docs/4.0/examples/orange-news/images/logo-orange.jpg",
-    "revision": "ca4c4a56fa60322f150f0f3a57547956"
+    "revision": "4ca6c344281a6904c33130ea0a087348"
   },
   {
     "url": "docs/4.0/examples/orange-news/index.html",
-    "revision": "55806e7893a9b59b49ef1ccfb40e7962"
+    "revision": "0c48721780593157a5efb8b4679268b5"
   },
   {
     "url": "docs/4.0/examples/rtl-album/album.css",
@@ -868,15 +892,15 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-album/index.html",
-    "revision": "62d6c4957f38d06a06ea50c3871b93a9"
+    "revision": "882ddd9568c76d21d277b1f0869d0d05"
   },
   {
     "url": "docs/4.0/examples/rtl-blog/blog.css",
-    "revision": "bde1fb64506c01e3adce7f9c03432c0f"
+    "revision": "750f2ac42509b1d901295d087cac5ef6"
   },
   {
     "url": "docs/4.0/examples/rtl-blog/index.html",
-    "revision": "251a73b0a1e18732d4d8bfafc3452ae1"
+    "revision": "b873305cc42b12464707d4d79bd50f38"
   },
   {
     "url": "docs/4.0/examples/rtl-carousel/carousel.css",
@@ -884,27 +908,67 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-carousel/index.html",
-    "revision": "efb2eacf0dd4431f0def62449352fe48"
+    "revision": "f9ecf2a8d022a2547224d4c93ec6a114"
   },
   {
     "url": "docs/4.0/examples/rtl-cover/cover.css",
-    "revision": "f79fbe1cfda97336136e5c7d20ca9540"
+    "revision": "1d0127b6309e72780dd3e87093a9d7e3"
   },
   {
     "url": "docs/4.0/examples/rtl-cover/index.html",
-    "revision": "b30a49aa54eae3aedb3245c8bdb36b67"
+    "revision": "145fb81dfc1dedb52bf3b98063c99a30"
   },
   {
     "url": "docs/4.0/examples/rtl-dashboard/dashboard.css",
-    "revision": "3b0f0197e04f5e4209b0305d45624983"
+    "revision": "cea2ce48e209721ca537d8ffcad510b9"
   },
   {
     "url": "docs/4.0/examples/rtl-dashboard/index.html",
-    "revision": "02fbb759ef576b3b07c5eaeff68da891"
+    "revision": "558032f33abd2f3ba24c92fb3cc78b9f"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/bill.png",
+    "revision": "ac10785c37e9a1d1df37075ad1dec17c"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/blue.png",
+    "revision": "8c055a53a00aa47f17d527e0c4fb2e27"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/green.png",
+    "revision": "cc14b61ad187236ff3a742c68fe69b20"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/pink.png",
+    "revision": "fb002702b28ee61e2c6828132c748e5f"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/shop.png",
+    "revision": "792161716a14290b208db30a629f3f15"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/timer.png",
+    "revision": "23ffd9dc0e5ab2a697f29e76cd712ca4"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/assets/unlock.png",
+    "revision": "e61d11b7b471415c6f89c220bdbdf778"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/css/bundle.css",
+    "revision": "948aa2fa24b6b43662295d6069966871"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/index.html",
+    "revision": "1574a914e002550756601f85d6f8cbfe"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-demo/js/main.js",
+    "revision": "570bde5177c94f2cd9861ccaaa5133dc"
   },
   {
     "url": "docs/4.0/examples/rtl-grid/grid.css",
-    "revision": "820f9163034b0e483d475dd916ca7c6b"
+    "revision": "4cd2e5cc5e19dc692d50ed6f077154ef"
   },
   {
     "url": "docs/4.0/examples/rtl-grid/index.html",
@@ -912,7 +976,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-jumbotron/index.html",
-    "revision": "cad79392ac6c11f2f2762d0acc6f5899"
+    "revision": "308d542487ccbf7287db94c0062ff148"
   },
   {
     "url": "docs/4.0/examples/rtl-jumbotron/jumbotron.css",
@@ -920,15 +984,15 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-justified-nav/index.html",
-    "revision": "00ba2a7b2f36d5e54b1d08689a97cef8"
+    "revision": "a290d3678c6bd306ef02c82390e28d27"
   },
   {
     "url": "docs/4.0/examples/rtl-justified-nav/justified-nav.css",
-    "revision": "34bf61c9b8f0e0b194fd1bcdd1172c0a"
+    "revision": "74b0be6ad3b421b43288545b9628253f"
   },
   {
     "url": "docs/4.0/examples/rtl-module-002-quick-links/css/style002.css",
-    "revision": "ab022e2a20392ce0ab3497a439656a50"
+    "revision": "fd3e4959b40b6cf566e23471ff029e7b"
   },
   {
     "url": "docs/4.0/examples/rtl-module-002-quick-links/img/icn_facebook_black.png",
@@ -948,39 +1012,19 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-module-002-quick-links/index.html",
-    "revision": "fc01d96cb42ae4c650ecc571c7f4bdb4"
+    "revision": "8c18b8f37d3a086e5c3375c200559175"
   },
   {
     "url": "docs/4.0/examples/rtl-module-006-content-panel/css/style006.css",
-    "revision": "ae84f0233daabb8de410d1abc2948413"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/img/adaptation.jpg",
-    "revision": "0cd504c972bf72f2154850a506b9660f"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/img/connexion.jpg",
-    "revision": "17837fb64da5d82ce37cef77a808ce82"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/img/disponibilite.jpg",
-    "revision": "0d5c925c493e046cf374813319fd044a"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/img/simplicite.jpg",
-    "revision": "9f136430ee27ea14ca69af43d15aed77"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/img/vignette1.jpg",
-    "revision": "90fc0354d327b9dfc8e59baa8268f5d3"
+    "revision": "e271c5f3c5ebf3c1d545c20543cdcac7"
   },
   {
     "url": "docs/4.0/examples/rtl-module-006-content-panel/index.html",
-    "revision": "8aa6890a89b8dd87667d25db9e2414f2"
+    "revision": "f3d15ad3c41291e49dba023c54ecfe35"
   },
   {
     "url": "docs/4.0/examples/rtl-module-012-product-details/css/style012.css",
-    "revision": "077abc47d6b7f545390b5fbc2c797c8c"
+    "revision": "79e1b949c809293d2e25ccf94e1d050f"
   },
   {
     "url": "docs/4.0/examples/rtl-module-012-product-details/img/label_discount.png",
@@ -1000,7 +1044,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-module-012-product-details/index.html",
-    "revision": "e8029902eced76686c397310f5b7d957"
+    "revision": "4448f5132ff79aaadddb88c597694e75"
   },
   {
     "url": "docs/4.0/examples/rtl-narrow-jumbotron/index.html",
@@ -1012,11 +1056,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-navbar-bottom/index.html",
-    "revision": "9422a9a7b117cdb9f10a45953a445cf2"
+    "revision": "925e9dc14abf439d38bed1fe31081507"
   },
   {
     "url": "docs/4.0/examples/rtl-navbar-top-fixed/index.html",
-    "revision": "c004dc15eb143afc649951e164f413ff"
+    "revision": "bd4d6cbad11cda1493778dfd5440e95b"
   },
   {
     "url": "docs/4.0/examples/rtl-navbar-top-fixed/navbar-top-fixed.css",
@@ -1024,7 +1068,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-navbar-top/index.html",
-    "revision": "7140c4e641efb24e891d006edc71b9da"
+    "revision": "105d6583ac371177cb717148c4b7473e"
   },
   {
     "url": "docs/4.0/examples/rtl-navbar-top/navbar-top.css",
@@ -1032,7 +1076,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-navbars/index.html",
-    "revision": "79159cdc5b2981009141d1f8a04b28e8"
+    "revision": "dac1b07940cf8a5cf9f5d2a188073be5"
   },
   {
     "url": "docs/4.0/examples/rtl-navbars/navbar.css",
@@ -1040,11 +1084,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-offcanvas/index.html",
-    "revision": "d64947636fefe30678ba4182eb279aec"
+    "revision": "e65da22d167ce0efa7f9088fedaaadf7"
   },
   {
     "url": "docs/4.0/examples/rtl-offcanvas/offcanvas.css",
-    "revision": "e58e81c43f4575cd7f3d2709fb96115c"
+    "revision": "77eca95a4f55dd917ba95db9ac28bac9"
   },
   {
     "url": "docs/4.0/examples/rtl-offcanvas/offcanvas.js",
@@ -1052,11 +1096,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-orange-admin/edit.html",
-    "revision": "e32bde92671bbf170655c2a44ef52fbf"
+    "revision": "c076ba04c4ef7776b01a320b45f3d0a8"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-admin/example.css",
-    "revision": "fd5e6dbf623f8c90efa8e0979a7e44d0"
+    "revision": "8a43544b65e06b9408f16598477e0b07"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-admin/images/logo-orange.png",
@@ -1064,7 +1108,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-orange-admin/index.html",
-    "revision": "1c232a71a33496c2a0a55e9441a09441"
+    "revision": "230a3e42b514e33e8a780c0a40bf7083"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-brand-2015/images/discovery-frame-carousel-whitetext.png",
@@ -1095,14 +1139,6 @@ workboxSW.precache([
     "revision": "3978402625900ab1deca4e6474bd9c21"
   },
   {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg",
-    "revision": "c6f4e52712e5e7633afed4e9ebd7c4e6"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/offset_LARGE_123305_chemisier_jaune.jpg",
-    "revision": "ff740092182243261d64a791f102fb82"
-  },
-  {
     "url": "docs/4.0/examples/rtl-orange-brand-2015/images/popular-services-1.png",
     "revision": "6cea6eeac842c10ea590cdacdd75b9ff"
   },
@@ -1115,20 +1151,16 @@ workboxSW.precache([
     "revision": "db1770e16c587889cf8d2fb17a1c12bf"
   },
   {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/une-nouvelle-marque_grid-full-width.jpg",
-    "revision": "d44a6f9a64f4fac3e781b4d43605bbd5"
-  },
-  {
     "url": "docs/4.0/examples/rtl-orange-brand-2015/index.html",
-    "revision": "1f8a0de45eff01d64a970482e3653491"
+    "revision": "4e86c0e48958145d5901bd5e15c538ea"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-brand-2015/sample.css",
-    "revision": "da881b3490251e22b760b544775d3026"
+    "revision": "b0f19bce321284ca3cd1615222d9a09e"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-dashboard/gabarit.css",
-    "revision": "ba1e582f4b7b35fb766f5427cc924b71"
+    "revision": "c4bd3d14aefa5295f333b21a3d717954"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-dashboard/images/Cancel.png",
@@ -1148,7 +1180,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-orange-dashboard/index.html",
-    "revision": "af058c5db722de3f4c67a3bbf87bea53"
+    "revision": "8ae5061a059b7d093184b30f252617e1"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-form/form.js",
@@ -1160,39 +1192,31 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-orange-form/index.html",
-    "revision": "84e2201d30fd93053f248ae4bba1a392"
+    "revision": "5554ebfc712f6efc8e527b4f316f2f68"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-form/styles.css",
-    "revision": "5d370cfd095615f96825aeddfa388e6a"
+    "revision": "a8b20e7f95048c66bc0d7cb0613a12ff"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-grid/index-fluid.html",
-    "revision": "fe3bfda4dc2298f0e1e67d5e3c6b59fa"
+    "revision": "e35a6407172dc3006fbd3480c992436d"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-grid/index.html",
-    "revision": "d77722a80b245aab73b8193b06eaaf13"
+    "revision": "3aba2ac446200e909b439ba446729752"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-grid/styles.css",
-    "revision": "5643f7410c0a5e2882a71dc5183952d8"
+    "revision": "89b7506be0f04d9f94cebfe9c43ebcc8"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-news/css/example.css",
-    "revision": "aba84d352aef4e28ad58c7be00537313"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-news/images/8565182.jpg",
-    "revision": "8cf9b4a7d758462fb9d73bfb9eef1893"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-news/images/logo-orange.jpg",
-    "revision": "ca4c4a56fa60322f150f0f3a57547956"
+    "revision": "4ca6c344281a6904c33130ea0a087348"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-news/index.html",
-    "revision": "1faeac09c73d955e34ba317b35b550c8"
+    "revision": "111e5be62080b540088fd840be88a2c8"
   },
   {
     "url": "docs/4.0/examples/rtl-signin/index.html",
@@ -1204,7 +1228,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-starter-template/index.html",
-    "revision": "94edd643cac02fe687ad5aed5e276b4f"
+    "revision": "5ecd335e01d4bf692a8585e285ae629a"
   },
   {
     "url": "docs/4.0/examples/rtl-starter-template/starter-template.css",
@@ -1212,7 +1236,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-sticky-footer-navbar/index.html",
-    "revision": "a8b5caca668dbcf40464539fd2b363ba"
+    "revision": "045d1e3e8cce7aac83601cf942b68af3"
   },
   {
     "url": "docs/4.0/examples/rtl-sticky-footer-navbar/sticky-footer-navbar.css",
@@ -1228,7 +1252,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-tooltip-viewport/index.html",
-    "revision": "7481977c6b6e4cca9733185d8b2cabb2"
+    "revision": "a882ad25c39a73959b919954c5692cf9"
   },
   {
     "url": "docs/4.0/examples/rtl-tooltip-viewport/tooltip-viewport.css",
@@ -1239,60 +1263,40 @@ workboxSW.precache([
     "revision": "8b7dceb6d175f264b789114201387bfa"
   },
   {
-    "url": "docs/4.0/examples/screenshots/album.jpg",
-    "revision": "7fbc33c5cff248c05fd8534e70d27566"
+    "url": "docs/4.0/examples/screenshots/album.png",
+    "revision": "ffaf0fd56864daafaa2ea23a3f2a8a4c"
   },
   {
-    "url": "docs/4.0/examples/screenshots/blog.jpg",
-    "revision": "bb5a82f95cfaa6944e4cec7ce51ffe75"
+    "url": "docs/4.0/examples/screenshots/blog.png",
+    "revision": "db2571d976d8b910af2dd7fee0a97794"
   },
   {
-    "url": "docs/4.0/examples/screenshots/brand_2015.jpg",
-    "revision": "ddf09048a6db8d67ee9367641b5a1e87"
+    "url": "docs/4.0/examples/screenshots/carousel.png",
+    "revision": "3ef960de8ed9de239dbebf855d3e693e"
   },
   {
-    "url": "docs/4.0/examples/screenshots/carousel.jpg",
-    "revision": "9bd9546bb73cc86a9eca10614f2e203d"
+    "url": "docs/4.0/examples/screenshots/cover.png",
+    "revision": "f8234debe0727d830d378804fa6920ba"
   },
   {
-    "url": "docs/4.0/examples/screenshots/cover.jpg",
-    "revision": "138e24ab670607cea4820ce9138117a4"
+    "url": "docs/4.0/examples/screenshots/dashboard.png",
+    "revision": "564c98a3e0fb945b7cfa4941a9bfc072"
   },
   {
-    "url": "docs/4.0/examples/screenshots/dashboard.jpg",
-    "revision": "9e274c24ad8bc2af251c05242127f888"
+    "url": "docs/4.0/examples/screenshots/grid.png",
+    "revision": "a3501bda7dcdde8a731e60988375ff71"
   },
   {
-    "url": "docs/4.0/examples/screenshots/example_admin.jpg",
-    "revision": "5b7622026c7e026b17b98d95432d3fbd"
+    "url": "docs/4.0/examples/screenshots/jumbotron-narrow.png",
+    "revision": "da2fea942e2b79e889461234b2dce637"
   },
   {
-    "url": "docs/4.0/examples/screenshots/example_dashboard.jpg",
-    "revision": "14d9a730da2015063e95c49809dff74f"
+    "url": "docs/4.0/examples/screenshots/jumbotron.png",
+    "revision": "56e944951506af4971317a0e1d6a6b53"
   },
   {
-    "url": "docs/4.0/examples/screenshots/example_form.jpg",
-    "revision": "e375d427519ad7ddb5ca63f68abae854"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/example_news.jpg",
-    "revision": "8f4ef8fcda9ceaab3c0b8bf148b8965b"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/grid.jpg",
-    "revision": "87b1ec9c732764089b663e70b322aacc"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/jumbotron-narrow.jpg",
-    "revision": "3fd8cd34600ef35c28ea340fcddf93ab"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/jumbotron.jpg",
-    "revision": "1e386a2707772ee4a817c7c7e8148384"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/justified-nav.jpg",
-    "revision": "fa7607e4ce4999cb5c6f2400ced39e0e"
+    "url": "docs/4.0/examples/screenshots/justified-nav.png",
+    "revision": "4f24d1d5953e79423cbe0254adf1ab5e"
   },
   {
     "url": "docs/4.0/examples/screenshots/module-002-quick-links.png",
@@ -1307,40 +1311,40 @@ workboxSW.precache([
     "revision": "246bf20a1fbbae280c9c53adad871f7b"
   },
   {
-    "url": "docs/4.0/examples/screenshots/navbar-bottom.jpg",
-    "revision": "6451ab23846fa601afec5482b0cbe5bf"
+    "url": "docs/4.0/examples/screenshots/navbar-bottom.png",
+    "revision": "88f890990c2f75a00cec172d401aef10"
   },
   {
-    "url": "docs/4.0/examples/screenshots/navbar-fixed.jpg",
-    "revision": "3155b5dc785a0c2e0cf1001f8885413d"
+    "url": "docs/4.0/examples/screenshots/navbar-fixed.png",
+    "revision": "c3af88c33126f669f2006f9e2c629fa2"
   },
   {
-    "url": "docs/4.0/examples/screenshots/navbar-static.jpg",
-    "revision": "257e56185d1e3224a991a8415d986a78"
+    "url": "docs/4.0/examples/screenshots/navbar-static.png",
+    "revision": "a289e262bb99e84a494fad461082e8f3"
   },
   {
-    "url": "docs/4.0/examples/screenshots/navbar.jpg",
-    "revision": "930d758828b6408699120682a75d0c95"
+    "url": "docs/4.0/examples/screenshots/navbar.png",
+    "revision": "c93f7634deb8db461efd121fae384de7"
   },
   {
-    "url": "docs/4.0/examples/screenshots/offcanvas.jpg",
-    "revision": "1cff2df66254958a8dc822acc19e83a1"
+    "url": "docs/4.0/examples/screenshots/offcanvas.png",
+    "revision": "983be61f621aac2d19131df71a8ae309"
   },
   {
-    "url": "docs/4.0/examples/screenshots/sign-in.jpg",
-    "revision": "90bd7015c8c9bb29ea18639b4ecd9ddb"
+    "url": "docs/4.0/examples/screenshots/sign-in.png",
+    "revision": "11f97fb403f227e059e00c4afa6a12fd"
   },
   {
-    "url": "docs/4.0/examples/screenshots/starter-template.jpg",
-    "revision": "6366e1902f5592c27802c79105050397"
+    "url": "docs/4.0/examples/screenshots/starter-template.png",
+    "revision": "a12386401c848ad90d4e3627858e973d"
   },
   {
-    "url": "docs/4.0/examples/screenshots/sticky-footer-navbar.jpg",
-    "revision": "67ea49514cc3064a9a598d3ef112f77a"
+    "url": "docs/4.0/examples/screenshots/sticky-footer-navbar.png",
+    "revision": "3047deed467cfc70d9ab33b1ac75cda6"
   },
   {
-    "url": "docs/4.0/examples/screenshots/sticky-footer.jpg",
-    "revision": "c0565369de99b8e3e2be6dc1ec540c26"
+    "url": "docs/4.0/examples/screenshots/sticky-footer.png",
+    "revision": "525e473da6359f1db1c5c1769190c438"
   },
   {
     "url": "docs/4.0/examples/signin/index.html",
@@ -1352,7 +1356,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/starter-template/index.html",
-    "revision": "2130a9f8de83eb810c7238f2e94ff215"
+    "revision": "d0b814258927ae601a7d7d2ae7ad476d"
   },
   {
     "url": "docs/4.0/examples/starter-template/starter-template.css",
@@ -1360,7 +1364,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/sticky-footer-navbar/index.html",
-    "revision": "052bd2c3697593f0bbba4d8550c3e3c2"
+    "revision": "9a331d8558899477a7d7e72e9f0a360a"
   },
   {
     "url": "docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css",
@@ -1376,7 +1380,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/tooltip-viewport/index.html",
-    "revision": "fb171f59240f0cce0442698e92dba4fa"
+    "revision": "ea418fb433eb4f3b35907bd876340763"
   },
   {
     "url": "docs/4.0/examples/tooltip-viewport/tooltip-viewport.css",
@@ -1388,171 +1392,187 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/extend/approach/index.html",
-    "revision": "712099fa67acced87c8b7b8ba5e96ba0"
+    "revision": "5861923c5258cbc9db94b4620a25f61d"
   },
   {
     "url": "docs/4.0/extend/icons/index.html",
-    "revision": "93871c80dc779e14d9f1264fd6326cf6"
+    "revision": "4c185568063b727a250e2ae2b0bece7d"
   },
   {
     "url": "docs/4.0/extend/index.html",
-    "revision": "889761304949cd4957b410e6a82e8414"
+    "revision": "b4b2aed64a9377c12c50f2b03fdad56d"
   },
   {
     "url": "docs/4.0/getting-started/accessibility/index.html",
-    "revision": "f23dafc4738790d521b3036c9e9d943c"
+    "revision": "5e14846549e9370238415bd21e260048"
   },
   {
     "url": "docs/4.0/getting-started/best-practices/index.html",
-    "revision": "bc32afc0967825e8a58b1cd81138918a"
+    "revision": "ba261d67cd7f2d5af4e1872b8d91b09a"
   },
   {
     "url": "docs/4.0/getting-started/browsers-devices/index.html",
-    "revision": "f44b30058aee9a7fea9ae823220a4702"
+    "revision": "5441b3ad9deeb773c4e8a87c3c254cb0"
   },
   {
     "url": "docs/4.0/getting-started/build-tools/index.html",
-    "revision": "7def49aab8e9100913fa803783d86a62"
+    "revision": "563735a92d2c8de90acd68e3d7b2057f"
   },
   {
     "url": "docs/4.0/getting-started/contents/index.html",
-    "revision": "55ef55b3f89dec174c065d24a111bbed"
+    "revision": "2ed82103b280e0728175a263ade955ad"
   },
   {
     "url": "docs/4.0/getting-started/download/index.html",
-    "revision": "0fb6cc2ea2890a6dbdd46506d330c32e"
+    "revision": "bd404adfdd31b9ea8892eeb46eec21d3"
   },
   {
     "url": "docs/4.0/getting-started/index.html",
-    "revision": "9476c2c3926033cbd153b7ec31ef3da6"
+    "revision": "57e26c10c593d202f21562bbdbea29ba"
   },
   {
     "url": "docs/4.0/getting-started/introduction/index.html",
-    "revision": "0c98804ba085ecfc58c0a6832e5ef9d0"
+    "revision": "a5deb0ba596302e7f986e57c6a5281a2"
   },
   {
     "url": "docs/4.0/getting-started/javascript/index.html",
-    "revision": "928f3b4c0df48392684de2c8f3f3759c"
+    "revision": "6f1af65c716170fb9f570b9f9f9db999"
   },
   {
     "url": "docs/4.0/getting-started/options/index.html",
-    "revision": "5064f1ddb161818e1c852045f40ae203"
+    "revision": "8a739ddae58e1dcd3d0e9577ca28ba65"
   },
   {
     "url": "docs/4.0/getting-started/theming/index.html",
-    "revision": "7bd2ef66fe4f5429dcc48e37176000dc"
+    "revision": "21442b366928493afc0b2c529ab8591d"
   },
   {
     "url": "docs/4.0/getting-started/webpack/index.html",
-    "revision": "b30c428dc79e11e682e67e6b82248c48"
+    "revision": "df2d85d7ae1e55d1bbcb4462b3c59c06"
+  },
+  {
+    "url": "docs/4.0/history/index.html",
+    "revision": "3f1b25297d1eac259e028e94c0ca18d8"
   },
   {
     "url": "docs/4.0/index.html",
-    "revision": "9476c2c3926033cbd153b7ec31ef3da6"
+    "revision": "57e26c10c593d202f21562bbdbea29ba"
   },
   {
     "url": "docs/4.0/layout/grid/index.html",
-    "revision": "7648c87a0f0016bf54960e503a25fbe4"
+    "revision": "846c2056f1510855cdb914628218f443"
   },
   {
     "url": "docs/4.0/layout/index.html",
-    "revision": "d227ace777ac0630a26b171014660bd2"
+    "revision": "ae291800c54fe36284ccd51cf345753f"
   },
   {
     "url": "docs/4.0/layout/media-object/index.html",
-    "revision": "08b586d193540223d152cd5d8f0f80f4"
+    "revision": "5d6ca62e31bd3613a8986caa37a4ff03"
   },
   {
     "url": "docs/4.0/layout/overview/index.html",
-    "revision": "25b205957a81eb02c8adfde571b36742"
+    "revision": "dd3f840de89c378a9125f8383e88b129"
   },
   {
     "url": "docs/4.0/layout/utilities-for-layout/index.html",
-    "revision": "441ad0dcd9c82063b78d559feb8bcba5"
+    "revision": "59c0b4d0c47c913c44fe3cfe2e00ac12"
   },
   {
     "url": "docs/4.0/migration/index.html",
-    "revision": "a68cd1828d704ff8340b7adfd5d9350e"
+    "revision": "a8cf51b17b484ccd674b8e92cc341b74"
+  },
+  {
+    "url": "docs/4.0/team/index.html",
+    "revision": "3f1b25297d1eac259e028e94c0ca18d8"
   },
   {
     "url": "docs/4.0/utilities/borders/index.html",
-    "revision": "3530872ca9c032d6bea467cec30f76ea"
+    "revision": "dc4d31a63dffe992373da3b205c46c0c"
   },
   {
     "url": "docs/4.0/utilities/clearfix/index.html",
-    "revision": "3b996f08f2b3df9feddff059f39e75ce"
+    "revision": "a718a563d609174e29077137da9d11d4"
   },
   {
     "url": "docs/4.0/utilities/close-icon/index.html",
-    "revision": "a0f5e2086d0b0674c49928d668b56028"
+    "revision": "ea8ed56137f918a12df739ac9b2b30ce"
   },
   {
     "url": "docs/4.0/utilities/colors/index.html",
-    "revision": "cd102b7050662f21c7622e4055637748"
+    "revision": "3070f61921d2c2adc79be6801597ad33"
   },
   {
     "url": "docs/4.0/utilities/display/index.html",
-    "revision": "0e63569dc884d4064e430af03da8beab"
+    "revision": "7c5c09d55e1ffbd3ed4e76a42471cb4f"
   },
   {
     "url": "docs/4.0/utilities/embed/index.html",
-    "revision": "560b1c54d459b2296065f650e840110c"
+    "revision": "bc9de0ca5c328fbc25d09a742a23a52a"
   },
   {
     "url": "docs/4.0/utilities/flex/index.html",
-    "revision": "fee5b51cf3bae459bad6f7c62f41cce3"
+    "revision": "6c5952e29654ed7df779ffee4a555b52"
   },
   {
     "url": "docs/4.0/utilities/float/index.html",
-    "revision": "d67a3f61a4b2d32ae0e4c5eb8b79f653"
+    "revision": "455f0ec9941e95e42347f41890da0018"
   },
   {
     "url": "docs/4.0/utilities/image-replacement/index.html",
-    "revision": "bce4a2edc7d097bfdfe3016501b3f513"
+    "revision": "38e0332acaec8c6346c8f5ba23eb23fe"
   },
   {
     "url": "docs/4.0/utilities/index.html",
-    "revision": "1d4e5d86c9e644b4763802abc5d44171"
+    "revision": "9535669550592dc86dd2f013f633bd4d"
   },
   {
     "url": "docs/4.0/utilities/position/index.html",
-    "revision": "76052e39eb36d53f24baee8795ab5624"
+    "revision": "438f78bd8ae76242d1fbc50db176d8de"
   },
   {
     "url": "docs/4.0/utilities/screenreaders/index.html",
-    "revision": "51975f74602288f85410d91c6341f2d8"
+    "revision": "8a6d4530f069ae30c206af98e969f41d"
   },
   {
     "url": "docs/4.0/utilities/sizing/index.html",
-    "revision": "197a60f9b3c131829911eddeb5636a3a"
+    "revision": "6592c3f2e8f9f68371f9d084facdce76"
   },
   {
     "url": "docs/4.0/utilities/spacing/index.html",
-    "revision": "147ed3c414a533d7e17844cb9261a56b"
+    "revision": "88a444a2cf6cf4ca80201f7ed76776c0"
   },
   {
     "url": "docs/4.0/utilities/text/index.html",
-    "revision": "32b110b12e232275af2e1470b35c92e4"
+    "revision": "697112e2f1e6b53ae193a03aaf2eaed9"
   },
   {
     "url": "docs/4.0/utilities/vertical-align/index.html",
-    "revision": "9740a08b4e1a49b3b80a132dac7eca81"
+    "revision": "86d31a40f16f5b2a999b5c10f7336ba1"
   },
   {
     "url": "docs/4.0/utilities/visibility/index.html",
-    "revision": "3db662b04bb0e57dc7fbe0a274794d37"
+    "revision": "e84c05b2775717c9e14e595ad1ae424b"
+  },
+  {
+    "url": "docs/getting-started/index.html",
+    "revision": "57e26c10c593d202f21562bbdbea29ba"
   },
   {
     "url": "docs/index.html",
-    "revision": "9476c2c3926033cbd153b7ec31ef3da6"
+    "revision": "57e26c10c593d202f21562bbdbea29ba"
   },
   {
     "url": "examples/index.html",
-    "revision": "8851ee3d1b5b8fdce01df80dab067b4b"
+    "revision": "38a63ddbe36f754094dc45abf0174269"
   },
   {
     "url": "index.html",
-    "revision": "906e1c3142d5594a842e7939b6809070"
+    "revision": "2061370ea2dca8631556fe541a1d618f"
+  },
+  {
+    "url": "redirects.json",
+    "revision": "36bf77a9083ab9b4dfcffe235909f690"
   },
   {
     "url": "sw.js",

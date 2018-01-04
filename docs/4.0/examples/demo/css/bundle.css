@@ -1,0 +1,68 @@
+/* Gauges */
+.gauge {
+  position: relative;
+  display: inline-block;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.gauge .gauge-label {
+  display: block;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+.gauge .gauge-value {
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 50%;
+  font-weight: 700;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.gauge svg {
+  background-color: #fff;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.gauge .progress-meter,
+.gauge .progress-value {
+  fill: none;
+}
+
+.gauge .progress-meter {
+  stroke: #eee;
+}
+
+.gauge .progress-value {
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  -webkit-animation: progress 4s;
+  animation: progress 4s;
+}
+
+.gauge.green .progress-value {
+  stroke: #50be87;
+}
+
+.gauge.pink .progress-value {
+  stroke: #ffb4e6;
+}
+
+.gauge.yellow .progress-value {
+  stroke: #ffd200;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dashoffset: 339.292;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 339.292;
+  }
+}

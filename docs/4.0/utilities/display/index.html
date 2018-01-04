@@ -6,11 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Jekyll v3.6.0">
+<meta name="description" content="Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v3.6.2">
 
-<title>Display property &middot; Boosted</title>
+<title>Display property · Boosted</title>
 
-<!-- Boosted mod remove social -->
 <!-- Swiper -->
 <link href="/dist/css/vendor/swiper.min.css" rel="stylesheet">
 <!-- helvetica -->
@@ -25,7 +26,7 @@
 
 <!-- Documentation extras -->
 
-<link href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
 <link href="/assets/css/docs.min.css" rel="stylesheet">
 
@@ -40,6 +41,7 @@
 <meta name="theme-color" content="#000000">
 
 
+<!-- Boosted mod remove social -->
 <!-- Boosted mod remove tracking -->
 
   </head>
@@ -77,6 +79,25 @@
           </li>
           <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              v4.0
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+              <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+              <a class="dropdown-item" href="http://boosted.orange.com/v4-alpha">v4 Alpha 6.1</a>
+              <a class="dropdown-item" href="http://boosted.orange.com/v4-alpha5/">v4 Alpha 5</a>
+              <a class="dropdown-item" href="http://boosted.orange.com/docs/3.3/">v3.3.X</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
 </header>
@@ -87,10 +108,8 @@
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
           <form class="bd-search d-flex align-items-center">
   <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
-
-  </button>
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
 </form>
 
 <nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
@@ -101,58 +120,31 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/getting-started/introduction/">
               Introduction
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/download/">
               Download
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/contents/">
               Contents
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/browsers-devices/">
               Browsers & devices
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/javascript/">
               JavaScript
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/theming/">
               Theming
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/build-tools/">
               Build tools
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/webpack/">
               Webpack
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/accessibility/">
               Accessibility
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/layout/overview/">
         Layout
@@ -161,28 +153,16 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/layout/overview/">
               Overview
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/layout/grid/">
               Grid
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/layout/media-object/">
               Media object
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/layout/utilities-for-layout/">
               Utilities for layout
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/content/reboot/">
         Content
@@ -191,40 +171,22 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/content/reboot/">
               Reboot
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/typography/">
               Typography
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/code/">
               Code
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/images/">
               Images
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/tables/">
               Tables
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/figures/">
               Figures
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
         Components
@@ -233,184 +195,94 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/components/alerts/">
               Alerts
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/badge/">
               Badge
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/breadcrumb/">
               Breadcrumb
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/buttons/">
               Buttons
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/button-group/">
               Button group
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/card/">
               Card
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/carousel/">
               Carousel
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/custom-carousel/">
               Custom carousel
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/collapse/">
               Collapse
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/dropdowns/">
               Dropdowns
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/forms/">
               Forms
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/input-group/">
               Input group
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/jumbotron/">
               Jumbotron
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/list-group/">
               List group
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/modal/">
               Modal
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/orange-popin/">
               Orange popin
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/navs/">
               Navs
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/navbar/">
               Navbar
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/navbar-orange/">
               Navbar Orange
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/orange-megamenu/">
               Orange megamenu
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/local-navigation/">
               Local navigation
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/priority-nav/">
               Priority Nav
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/orange-footer/">
               Orange footer
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/pagination/">
               Pagination
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/popovers/">
               Popovers
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/progress/">
               Progress
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/scrollspy/">
               Scrollspy
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/scroll-up/">
               Scroll up
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/stepbar/">
               Stepbar
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/tooltips/">
               Tooltips
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/docs/4.0/utilities/borders/">
         Utilities
@@ -419,100 +291,52 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/utilities/borders/">
               Borders
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/clearfix/">
               Clearfix
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/close-icon/">
               Close icon
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/colors/">
               Colors
-            </a>
-
-            
-          </li><li class="active bd-sidenav-active">
+            </a></li><li class="active bd-sidenav-active">
             <a href="/docs/4.0/utilities/display/">
               Display
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/embed/">
               Embed
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/flex/">
               Flex
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/float/">
               Float
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/image-replacement/">
               Image replacement
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/position/">
               Position
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/screenreaders/">
               Screenreaders
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/sizing/">
               Sizing
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/spacing/">
               Spacing
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/text/">
               Text
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/vertical-align/">
               Vertical align
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/visibility/">
               Visibility
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
         Extend
@@ -521,10 +345,7 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               Icons
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
         Migration
@@ -538,59 +359,32 @@
 
       <ul class="nav bd-sidenav"></ul>
     </div><div class="bd-toc-item">
-      <a class="bd-toc-link" href="/docs/4.0/about/history/">
+      <a class="bd-toc-link" href="/docs/4.0/about/overview/">
         About
       </a>
 
       <ul class="nav bd-sidenav"><li>
-            <a href="/docs/4.0/about/history/">
-              History
-            </a>
-
-            
-          </li><li>
+            <a href="/docs/4.0/about/overview/">
+              Overview
+            </a></li><li>
             <a href="/docs/4.0/about/boosted-history/">
               Boosted history
-            </a>
-
-            
-          </li><li>
-            <a href="/docs/4.0/about/team/">
-              Team
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/brand/">
               Brand
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/orange-brand/">
               Orange brand
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/license/">
               License
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/boosted-license/">
               Boosted license
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/translations/">
               Translations
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div></nav>
 
       </div>
@@ -598,7 +392,9 @@
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#common-display-values">Common display values</a></li>
+<li class="toc-entry toc-h2"><a href="#how-it-works">How it works</a></li>
+<li class="toc-entry toc-h2"><a href="#notation">Notation</a></li>
+<li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
 <li class="toc-entry toc-h2"><a href="#hiding-elements">Hiding Elements</a></li>
 <li class="toc-entry toc-h2"><a href="#display-in-print">Display in print</a></li>
 </ul>
@@ -611,94 +407,52 @@
           <!-- BOOSTED MOD -->
           <!-- remove ads -->
           <!-- END MOD -->
-          <h2 id="common-display-values">Common <code class="highlighter-rouge">display</code> values</h2>
+          <h2 id="how-it-works">How it works</h2>
 
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code class="highlighter-rouge">display</code> property</a> accepts a handful of values and we support many of them with utility classes. We purposefully don’t provide every value as a utility, so here’s what we support:</p>
+<p>Change the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code class="highlighter-rouge">display</code> property</a> with our responsive display utility classes. We purposely support only a subset of all possible values for <code class="highlighter-rouge">display</code>. Classes can be combined for various effects as you need.</p>
 
-<ul>
-  <li><code class="highlighter-rouge">.d-none</code></li>
-  <li><code class="highlighter-rouge">.d-inline</code></li>
-  <li><code class="highlighter-rouge">.d-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-block</code></li>
-  <li><code class="highlighter-rouge">.d-table</code></li>
-  <li><code class="highlighter-rouge">.d-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-flex</code></li>
-  <li><code class="highlighter-rouge">.d-inline-flex</code></li>
-</ul>
+<h2 id="notation">Notation</h2>
 
-<p>Put them to use by applying any of the classes to an element of your choice. For example, here’s how you could use the inline, block, or inline-block utilities (the same applies to the other classes).</p>
+<p>Display utility classes that apply to all <a href="/docs/4.0/layout/overview/#responsive-breakpoints">breakpoints</a>, from <code class="highlighter-rouge">xs</code> to <code class="highlighter-rouge">xl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code class="highlighter-rouge">min-width: 0;</code> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
 
-<div class="bd-example">
-<div class="d-inline bg-success">d-inline</div>
-<div class="d-inline bg-success">d-inline</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline bg-success"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline bg-success"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<div class="bd-example">
-<span class="d-block bg-primary">d-block</span>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-block bg-primary"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/span&gt;</span></code></pre></div>
-
-<div class="bd-example">
-<div class="d-inline-block bg-warning">d-inline-block</div>
-<div class="d-inline-block bg-warning">d-inline-block</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-block bg-warning"</span><span class="nt">&gt;</span>d-inline-block<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-block bg-warning"</span><span class="nt">&gt;</span>d-inline-block<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<p>Responsive variations also exist for every single utility mentioned above.</p>
+<p>As such, the classes are named using the format:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">.d-none</code></li>
-  <li><code class="highlighter-rouge">.d-inline</code></li>
-  <li><code class="highlighter-rouge">.d-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-block</code></li>
-  <li><code class="highlighter-rouge">.d-table</code></li>
-  <li><code class="highlighter-rouge">.d-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-flex</code></li>
-  <li><code class="highlighter-rouge">.d-inline-flex</code></li>
-  <li><code class="highlighter-rouge">.d-sm-none</code></li>
-  <li><code class="highlighter-rouge">.d-sm-inline</code></li>
-  <li><code class="highlighter-rouge">.d-sm-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-sm-block</code></li>
-  <li><code class="highlighter-rouge">.d-sm-table</code></li>
-  <li><code class="highlighter-rouge">.d-sm-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-sm-flex</code></li>
-  <li><code class="highlighter-rouge">.d-sm-inline-flex</code></li>
-  <li><code class="highlighter-rouge">.d-md-none</code></li>
-  <li><code class="highlighter-rouge">.d-md-inline</code></li>
-  <li><code class="highlighter-rouge">.d-md-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-md-block</code></li>
-  <li><code class="highlighter-rouge">.d-md-table</code></li>
-  <li><code class="highlighter-rouge">.d-md-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-md-flex</code></li>
-  <li><code class="highlighter-rouge">.d-md-inline-flex</code></li>
-  <li><code class="highlighter-rouge">.d-lg-none</code></li>
-  <li><code class="highlighter-rouge">.d-lg-inline</code></li>
-  <li><code class="highlighter-rouge">.d-lg-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-lg-block</code></li>
-  <li><code class="highlighter-rouge">.d-lg-table</code></li>
-  <li><code class="highlighter-rouge">.d-lg-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-lg-flex</code></li>
-  <li><code class="highlighter-rouge">.d-lg-inline-flex</code></li>
-  <li><code class="highlighter-rouge">.d-xl-none</code></li>
-  <li><code class="highlighter-rouge">.d-xl-inline</code></li>
-  <li><code class="highlighter-rouge">.d-xl-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-xl-block</code></li>
-  <li><code class="highlighter-rouge">.d-xl-table</code></li>
-  <li><code class="highlighter-rouge">.d-xl-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-xl-flex</code></li>
-  <li><code class="highlighter-rouge">.d-xl-inline-flex</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-none</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-inline</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-inline-block</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-block</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-table</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-table-cell</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-flex</code></li>
-  <li><code class="highlighter-rouge">.d-xxl-inline-flex</code></li>
+  <li><code class="highlighter-rouge">.d-{value}</code> for <code class="highlighter-rouge">xs</code></li>
+  <li><code class="highlighter-rouge">.d-{breakpoint}-{value}</code> for <code class="highlighter-rouge">sm</code>, <code class="highlighter-rouge">md</code>, <code class="highlighter-rouge">lg</code>, and <code class="highlighter-rouge">xl</code>.</li>
 </ul>
+
+<p>Where <em>display</em> is one of:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">none</code></li>
+  <li><code class="highlighter-rouge">inline</code></li>
+  <li><code class="highlighter-rouge">inline-block</code></li>
+  <li><code class="highlighter-rouge">block</code></li>
+  <li><code class="highlighter-rouge">table</code></li>
+  <li><code class="highlighter-rouge">table-cell</code></li>
+  <li><code class="highlighter-rouge">table-row</code></li>
+  <li><code class="highlighter-rouge">flex</code></li>
+  <li><code class="highlighter-rouge">inline-flex</code></li>
+</ul>
+
+<p>The media queries effect screen widths with the given breakpoint <em>or larger</em>. For example, <code class="highlighter-rouge">.d-lg-none</code> sets <code class="highlighter-rouge">display: none;</code> on both <code class="highlighter-rouge">lg</code> and <code class="highlighter-rouge">xl</code> screens.</p>
+
+<h2 id="examples">Examples</h2>
+
+<div class="bd-example">
+<div class="d-inline p-2 bg-primary text-white">d-inline</div>
+<div class="d-inline p-2 bg-dark text-white">d-inline</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline p-2 bg-primary text-white"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline p-2 bg-dark text-white"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="bd-example">
+<span class="d-block p-2 bg-primary text-white">d-block</span>
+<span class="d-block p-2 bg-dark text-white">d-block</span>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-block p-2 bg-primary text-white"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-block p-2 bg-dark text-white"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/span&gt;</span></code></pre></div>
 
 <h2 id="hiding-elements">Hiding Elements</h2>
 
@@ -706,7 +460,7 @@
 
 <p>To hide elements simply use the <code class="highlighter-rouge">.d-none</code> class or one of the <code class="highlighter-rouge">.d-{sm,md,lg,xl}-none</code> classes for any responsive screen variation.</p>
 
-<p>To show an element only on a given interval of screen sizes you can combine one <code class="highlighter-rouge">.d-*-none</code> class with a <code class="highlighter-rouge">.d-*-*</code> class, for example <code class="highlighter-rouge">.d-none.d-md-block.d-xl-none</code> will hide the element for all screen sizes except on medium and large devices.</p>
+<p>To show an element only on a given interval of screen sizes you can combine one <code class="highlighter-rouge">.d-*-none</code> class with a <code class="highlighter-rouge">.d-*-*</code> class, for example <code class="highlighter-rouge">.d-none .d-md-block .d-xl-none</code> will hide the element for all screen sizes except on medium and large devices.</p>
 
 <table>
   <thead>
@@ -718,58 +472,65 @@
   <tbody>
     <tr>
       <td>Hidden on all</td>
-      <td><code class="highlighter-rouge">d-none</code></td>
+      <td><code class="highlighter-rouge">.d-none</code></td>
     </tr>
     <tr>
       <td>Hidden only on xs</td>
-      <td><code class="highlighter-rouge">d-none d-sm-block</code></td>
+      <td><code class="highlighter-rouge">.d-none .d-sm-block</code></td>
     </tr>
     <tr>
       <td>Hidden only on sm</td>
-      <td><code class="highlighter-rouge">d-sm-none d-md-block</code></td>
+      <td><code class="highlighter-rouge">.d-sm-none .d-md-block</code></td>
     </tr>
     <tr>
       <td>Hidden only on md</td>
-      <td><code class="highlighter-rouge">d-md-none d-lg-block</code></td>
+      <td><code class="highlighter-rouge">.d-md-none .d-lg-block</code></td>
     </tr>
     <tr>
       <td>Hidden only on lg</td>
-      <td><code class="highlighter-rouge">d-lg-none d-xl-block</code></td>
+      <td><code class="highlighter-rouge">.d-lg-none .d-xl-block</code></td>
     </tr>
     <tr>
       <td>Hidden only on xl</td>
-      <td><code class="highlighter-rouge">d-xl-none</code></td>
+      <td><code class="highlighter-rouge">.d-xl-none</code></td>
     </tr>
     <tr>
       <td>Visible on all</td>
-      <td><code class="highlighter-rouge">d-block</code></td>
+      <td><code class="highlighter-rouge">.d-block</code></td>
     </tr>
     <tr>
       <td>Visible only on xs</td>
-      <td><code class="highlighter-rouge">d-block d-sm-none</code></td>
+      <td><code class="highlighter-rouge">.d-block .d-sm-none</code></td>
     </tr>
     <tr>
       <td>Visible only on sm</td>
-      <td><code class="highlighter-rouge">d-none d-sm-block d-md-none</code></td>
+      <td><code class="highlighter-rouge">.d-none .d-sm-block .d-md-none</code></td>
     </tr>
     <tr>
       <td>Visible only on md</td>
-      <td><code class="highlighter-rouge">d-none d-md-block d-lg-none</code></td>
+      <td><code class="highlighter-rouge">.d-none .d-md-block .d-lg-none</code></td>
     </tr>
     <tr>
       <td>Visible only on lg</td>
-      <td><code class="highlighter-rouge">d-none d-lg-block d-xl-none</code></td>
+      <td><code class="highlighter-rouge">.d-none .d-lg-block .d-xl-none</code></td>
     </tr>
     <tr>
       <td>Visible only on xl</td>
-      <td><code class="highlighter-rouge">d-none d-xl-block</code></td>
+      <td><code class="highlighter-rouge">.d-none .d-xl-block</code></td>
     </tr>
   </tbody>
 </table>
 
+<div class="bd-example">
+<div class="d-lg-none">hide on screens wider than lg</div>
+<div class="d-none d-lg-block">hide on screens smaller than lg</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-lg-none"</span><span class="nt">&gt;</span>hide on screens wider than lg<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>hide on screens smaller than lg<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 <h2 id="display-in-print">Display in print</h2>
 
-<p>Change the <code class="highlighter-rouge">display</code> value of elements when printing with our print display utilities.</p>
+<p>Change the <code class="highlighter-rouge">display</code> value of elements when printing with our print display utility classes.</p>
 
 <table>
   <thead>
@@ -781,22 +542,34 @@
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">.d-print-block</code></td>
-      <td>Applies <code class="highlighter-rouge">display: block</code> to the element when printing</td>
+      <td>Applies <code class="highlighter-rouge">display: block;</code> to the element when printing</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">.d-print-inline</code></td>
-      <td>Applies <code class="highlighter-rouge">display: inline</code> to the element when printing</td>
+      <td>Applies <code class="highlighter-rouge">display: inline;</code> to the element when printing</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">.d-print-inline-block</code></td>
-      <td>Applies <code class="highlighter-rouge">display: inline-block</code> to the element when printing</td>
+      <td>Applies <code class="highlighter-rouge">display: inline-block;</code> to the element when printing</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">.d-print-none</code></td>
-      <td>Applies <code class="highlighter-rouge">display: none</code> to the element when printing</td>
+      <td>Applies <code class="highlighter-rouge">display: none;</code> to the element when printing</td>
     </tr>
   </tbody>
 </table>
+
+<p>The print and display classes can be combined.</p>
+
+<div class="bd-example">
+<div class="d-print-none">Screen Only (Hide on print only)</div>
+<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
+<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-print-none"</span><span class="nt">&gt;</span>Screen Only (Hide on print only)<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-print-block"</span><span class="nt">&gt;</span>Print Only (Hide on screen only)<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block d-print-block"</span><span class="nt">&gt;</span>Hide up to large on screen, but always show on print<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 
         </main>
       </div>
@@ -808,24 +581,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script>
-
-
-  <script src="/dist/js/boosted.min.js"></script>
-
-
-<!-- boosted mod -->
-<script src="/dist/js/vendor/jquery.tablesorter.js"></script>
-<!-- end mod -->
-
-
-  <script src="/assets/js/docs.min.js"></script>
-
-
-<script src="/assets/js/ie-emulation-modes-warning.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js" integrity="sha256-UD/M/6ixbHIPJ/hTwhb9IXbHG2nZSiB97b4BSSAVm6o=" crossorigin="anonymous"></script>
+<script>window.jQuery.tablesorter || document.write('<script src="/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
+<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
@@ -855,19 +614,31 @@
 
     // If we need pagination
     pagination: '.swiper-pagination',
+    paginationClickable: true,
 
     // Navigation arrows
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-  })
+
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: false,
+
+    breakpoints: {
+        767: {
+            paginationClickable: false,
+            freeMode: true, // disable for centered mode
+            freeModeMomentumRatio: .5,
+            centeredSlides: false, // enable for centered mode
+            slideToClickedSlide: false // enable for centered mode
+        }
+    }
+})
 
   $('#collapsing-navbarHead').megamenu();
 
-</script>
-
-
-
-<script>
+</script><script>
 Holder.addTheme('gray', {
   bg: '#777',
   fg: 'rgba(255,255,255,.75)',

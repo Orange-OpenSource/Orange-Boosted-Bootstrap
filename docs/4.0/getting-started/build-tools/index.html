@@ -6,11 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Jekyll v3.6.0">
+<meta name="description" content="Learn how to use Bootstrap’s included npm scripts to build our documentation, compile source code, run tests, and more.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v3.6.2">
 
-<title>Build tools &middot; Boosted</title>
+<title>Build tools · Boosted</title>
 
-<!-- Boosted mod remove social -->
 <!-- Swiper -->
 <link href="/dist/css/vendor/swiper.min.css" rel="stylesheet">
 <!-- helvetica -->
@@ -25,7 +26,7 @@
 
 <!-- Documentation extras -->
 
-<link href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
 <link href="/assets/css/docs.min.css" rel="stylesheet">
 
@@ -40,6 +41,7 @@
 <meta name="theme-color" content="#000000">
 
 
+<!-- Boosted mod remove social -->
 <!-- Boosted mod remove tracking -->
 
   </head>
@@ -77,6 +79,25 @@
           </li>
           <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              v4.0
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+              <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+              <a class="dropdown-item" href="http://boosted.orange.com/v4-alpha">v4 Alpha 6.1</a>
+              <a class="dropdown-item" href="http://boosted.orange.com/v4-alpha5/">v4 Alpha 5</a>
+              <a class="dropdown-item" href="http://boosted.orange.com/docs/3.3/">v3.3.X</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
 </header>
@@ -87,10 +108,8 @@
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
           <form class="bd-search d-flex align-items-center">
   <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
-
-  </button>
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
 </form>
 
 <nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item active">
@@ -101,58 +120,31 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/getting-started/introduction/">
               Introduction
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/download/">
               Download
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/contents/">
               Contents
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/browsers-devices/">
               Browsers & devices
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/javascript/">
               JavaScript
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/theming/">
               Theming
-            </a>
-
-            
-          </li><li class="active bd-sidenav-active">
+            </a></li><li class="active bd-sidenav-active">
             <a href="/docs/4.0/getting-started/build-tools/">
               Build tools
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/webpack/">
               Webpack
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/getting-started/accessibility/">
               Accessibility
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/layout/overview/">
         Layout
@@ -161,28 +153,16 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/layout/overview/">
               Overview
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/layout/grid/">
               Grid
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/layout/media-object/">
               Media object
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/layout/utilities-for-layout/">
               Utilities for layout
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/content/reboot/">
         Content
@@ -191,40 +171,22 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/content/reboot/">
               Reboot
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/typography/">
               Typography
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/code/">
               Code
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/images/">
               Images
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/tables/">
               Tables
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/content/figures/">
               Figures
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
         Components
@@ -233,184 +195,94 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/components/alerts/">
               Alerts
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/badge/">
               Badge
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/breadcrumb/">
               Breadcrumb
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/buttons/">
               Buttons
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/button-group/">
               Button group
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/card/">
               Card
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/carousel/">
               Carousel
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/custom-carousel/">
               Custom carousel
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/collapse/">
               Collapse
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/dropdowns/">
               Dropdowns
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/forms/">
               Forms
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/input-group/">
               Input group
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/jumbotron/">
               Jumbotron
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/list-group/">
               List group
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/modal/">
               Modal
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/orange-popin/">
               Orange popin
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/navs/">
               Navs
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/navbar/">
               Navbar
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/navbar-orange/">
               Navbar Orange
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/orange-megamenu/">
               Orange megamenu
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/local-navigation/">
               Local navigation
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/priority-nav/">
               Priority Nav
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/orange-footer/">
               Orange footer
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/pagination/">
               Pagination
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/popovers/">
               Popovers
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/progress/">
               Progress
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/scrollspy/">
               Scrollspy
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/scroll-up/">
               Scroll up
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/stepbar/">
               Stepbar
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/components/tooltips/">
               Tooltips
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/utilities/borders/">
         Utilities
@@ -419,100 +291,52 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/utilities/borders/">
               Borders
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/clearfix/">
               Clearfix
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/close-icon/">
               Close icon
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/colors/">
               Colors
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/display/">
               Display
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/embed/">
               Embed
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/flex/">
               Flex
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/float/">
               Float
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/image-replacement/">
               Image replacement
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/position/">
               Position
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/screenreaders/">
               Screenreaders
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/sizing/">
               Sizing
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/spacing/">
               Spacing
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/text/">
               Text
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/vertical-align/">
               Vertical align
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/utilities/visibility/">
               Visibility
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
         Extend
@@ -521,10 +345,7 @@
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               Icons
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
         Migration
@@ -538,59 +359,32 @@
 
       <ul class="nav bd-sidenav"></ul>
     </div><div class="bd-toc-item">
-      <a class="bd-toc-link" href="/docs/4.0/about/history/">
+      <a class="bd-toc-link" href="/docs/4.0/about/overview/">
         About
       </a>
 
       <ul class="nav bd-sidenav"><li>
-            <a href="/docs/4.0/about/history/">
-              History
-            </a>
-
-            
-          </li><li>
+            <a href="/docs/4.0/about/overview/">
+              Overview
+            </a></li><li>
             <a href="/docs/4.0/about/boosted-history/">
               Boosted history
-            </a>
-
-            
-          </li><li>
-            <a href="/docs/4.0/about/team/">
-              Team
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/brand/">
               Brand
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/orange-brand/">
               Orange brand
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/license/">
               License
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/boosted-license/">
               Boosted license
-            </a>
-
-            
-          </li><li>
+            </a></li><li>
             <a href="/docs/4.0/about/translations/">
               Translations
-            </a>
-
-            
-          </li></ul>
+            </a></li></ul>
     </div></nav>
 
       </div>
@@ -616,19 +410,19 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <h1 class="bd-title" id="content">Build tools</h1>
-          <p class="bd-lead">Learn how to use Bootstrap's included npm scripts to build our documentation, compile source code, run tests, and more.</p>
+          <p class="bd-lead">Learn how to use Bootstrap’s included npm scripts to build our documentation, compile source code, run tests, and more.</p>
           <!-- BOOSTED MOD -->
           <!-- remove ads -->
           <!-- END MOD -->
           <h2 id="tooling-setup">Tooling setup</h2>
 
-<p>Bootstrap uses <a href="https://docs.npmjs.com/misc/scripts">NPM scripts</a> for its build system. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.2/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
+<p>Bootstrap uses <a href="https://docs.npmjs.com/misc/scripts">NPM scripts</a> for its build system. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.3/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
 
 <p>To use our build system and run our documentation locally, you’ll need a copy of Bootstrap’s source files and Node. Follow these steps and you should be ready to rock:</p>
 
 <ol>
   <li><a href="https://nodejs.org/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
-  <li>Navigate to the root <code class="highlighter-rouge">/bootstrap</code> directory and run <code class="highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.2/package.json">package.json</a>.</li>
+  <li>Navigate to the root <code class="highlighter-rouge">/bootstrap</code> directory and run <code class="highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.3/package.json">package.json</a>.</li>
   <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>, install <a href="https://bundler.io/">Bundler</a> with <code class="highlighter-rouge">gem install bundler</code>, and finally run <code class="highlighter-rouge">bundle install</code>. This will install all Ruby dependencies, such as Jekyll and plugins.
     <ul>
       <li><strong>Windows users:</strong> Read <a href="https://jekyllrb.com/docs/windows/">this guide</a> to get Jekyll up and running without problems.</li>
@@ -640,7 +434,7 @@
 
 <h2 id="using-npm-scripts">Using NPM scripts</h2>
 
-<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.2/package.json">package.json</a> includes the following commands and tasks:</p>
+<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.3/package.json">package.json</a> includes the following commands and tasks:</p>
 
 <table>
   <thead>
@@ -671,7 +465,7 @@
 
 <p>Bootstrap uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
 
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.2/package.json">/package.json</a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.0.0-beta.3/package.json">/package.json</a> for details.</p>
 
 <h2 id="local-documentation">Local documentation</h2>
 
@@ -692,22 +486,22 @@
 
 <p>Go to the top left menu and select <code>manage projects</code>:</p>
 
-<p><img src="/assets/img/manage_projects.png" alt="manage projects menu" /></p>
+<p><img class="img-fluid" src="/assets/img/manage_projects.png" alt="manage projects menu" /></p>
 
 <p>Then, select <code>import project</code> link and select the file <code>orange-icons.json</code>
 It will load all the Orange Icons into a new project</p>
 
-<p><img src="/assets/img/import_projects.png" alt="import project link" /></p>
+<p><img class="img-fluid" src="/assets/img/import_projects.png" alt="import project link" /></p>
 
 <p>You can now access to all the icons by clicking onto <code>Load</code></p>
 
-<p><img src="/assets/img/new_project.png" alt="Load project" /></p>
+<p><img class="img-fluid" src="/assets/img/new_project.png" alt="Load project" /></p>
 
 <h3 id="select-your-icons">Select your icons</h3>
 
 <p>You will find 2 sets : the 1st one contains all the Orange Frames and Popout, the 2nd one contains all the Solaris icons.</p>
 
-<p><img src="/assets/img/select_mode.png" alt="Select mode activated" /></p>
+<p><img class="img-fluid" src="/assets/img/select_mode.png" alt="Select mode activated" /></p>
 
 <p>By default there is no selected icon, you can make your selection for your own project.
 Check that you are in selection mode (3rd icon in the top bar, after <code>import icons</code> and <code>icon library</code>), when an icon is selected, its border becomes yellow.</p>
@@ -717,7 +511,7 @@ Check that you are in selection mode (3rd icon in the top bar, after <code>impor
 <p><strong>Warning!</strong> Icons format recommendation<br />
 You need to import icons in SVG, within a square layout to preserve icons consistency ; if the layout is not a square, you will have some surprises.</p>
 
-<p><img src="/assets/img/warning_icon.png" alt="Example of bad icon import" /></p>
+<p><img class="img-fluid" src="/assets/img/warning_icon.png" alt="Example of bad icon import" /></p>
 
 <h3 id="download-and-adapt-your-project-font">Download and adapt your project font</h3>
 
@@ -726,13 +520,13 @@ You need to import icons in SVG, within a square layout to preserve icons consis
 <p>Now you can create your font for your project.<br />
 Click onto <code>generate font</code> at the bottom right of the page.</p>
 
-<p><img src="/assets/img/generate_font.png" alt="Generate font link" /></p>
+<p><img class="img-fluid" src="/assets/img/generate_font.png" alt="Generate font link" /></p>
 
 <p>Depending of the number of icons selected, it can take a little bit of time…</p>
 
 <p>Setting your font preferences</p>
 
-<p><img src="/assets/img/preference.png" alt="preference link" /></p>
+<p><img class="img-fluid" src="/assets/img/preference.png" alt="preference link" /></p>
 
 <p>Now you have a <code>Download</code> button at the bottom right but <strong>WAIT!!!</strong> 
 We know, you want to download your font but first you need to make some change into <code>preferences</code> to name your font with a name dedicated to YOUR project.</p>
@@ -743,13 +537,13 @@ We know, you want to download your font but first you need to make some change i
 You also can get Stylesheet variables for scss or less and if you want change the version. 
 And uncheck IE8 support if you rely on Boosted 4!</p>
 
-<p><img src="/assets/img/param_export.png" alt="Option window" /></p>
+<p><img class="img-fluid" src="/assets/img/param_export.png" alt="Option window" /></p>
 
 <p>Close the Preferences window, you’re now ready to download your font.</p>
 
 <p>The download is a zip file, <code>MYPROJECT-icons.zip</code>.</p>
 
-<p><img src="/assets/img/arbo_zip.png" alt="Zip contains" /></p>
+<p><img class="img-fluid" src="/assets/img/arbo_zip.png" alt="Zip contains" /></p>
 
 <p>Unzip it.
 The demo.html and demo-files folder offer a sample page displaying the icons - you don’t need them for your project.
@@ -776,24 +570,10 @@ And finally the “style.css” file contains all the css classes.</p>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script>
-
-
-  <script src="/dist/js/boosted.min.js"></script>
-
-
-<!-- boosted mod -->
-<script src="/dist/js/vendor/jquery.tablesorter.js"></script>
-<!-- end mod -->
-
-
-  <script src="/assets/js/docs.min.js"></script>
-
-
-<script src="/assets/js/ie-emulation-modes-warning.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js" integrity="sha256-UD/M/6ixbHIPJ/hTwhb9IXbHG2nZSiB97b4BSSAVm6o=" crossorigin="anonymous"></script>
+<script>window.jQuery.tablesorter || document.write('<script src="/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
+<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
@@ -823,19 +603,31 @@ And finally the “style.css” file contains all the css classes.</p>
 
     // If we need pagination
     pagination: '.swiper-pagination',
+    paginationClickable: true,
 
     // Navigation arrows
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-  })
+
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: false,
+
+    breakpoints: {
+        767: {
+            paginationClickable: false,
+            freeMode: true, // disable for centered mode
+            freeModeMomentumRatio: .5,
+            centeredSlides: false, // enable for centered mode
+            slideToClickedSlide: false // enable for centered mode
+        }
+    }
+})
 
   $('#collapsing-navbarHead').megamenu();
 
-</script>
-
-
-
-<script>
+</script><script>
 Holder.addTheme('gray', {
   bg: '#777',
   fg: 'rgba(255,255,255,.75)',

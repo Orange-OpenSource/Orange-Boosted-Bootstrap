@@ -91,7 +91,7 @@
               <li class="nav-item"><a class="nav-link active" href="#users" data-toggle="tab">Users</a></li>
               <li class="nav-item"><a class="nav-link" href="#devices" data-toggle="tab">Devices</a></li>
               <li class="nav-item"><a class="nav-link" href="#messages" data-toggle="tab">Messages</a></li>
-              <li class="nav-item hide-when-small"><a class="nav-link" href="#other" data-toggle="tab">Other</a></li>
+              <li class="nav-item d-sm-none d-md-flex"><a class="nav-link" href="#other" data-toggle="tab">Other</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="users">
@@ -156,7 +156,9 @@
               <div class="tab-pane" id="messages">
                 <form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
                   <div class="input-group">
-                    <span class="input-group-addon">@</span>
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
                     <input type="text" class="form-control" placeholder="regexp" title="Found a message by regexp">
                   </div>
                   <div class="center">
@@ -372,9 +374,9 @@
       window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted-rtl.specific components (below), or include individual files as needed -->
+    <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="../../../../dist/js/boosted-rtl.js"></script>
-    <script src="../../../../dist/js/vendor/jquery.tablesorter.js"></script>
+    <script src="../../../../assets/js/vendor/jquery.tablesorter.min.js"></script>
     <script>
       $(document).ready(function () {
         $("#myTable").tablesorter({
