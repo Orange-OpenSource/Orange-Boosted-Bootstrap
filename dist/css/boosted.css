@@ -11044,6 +11044,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     padding: 0;
     line-height: 1.25rem;
+    outline-offset: 1px;
   }
   .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
   .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
@@ -11260,6 +11261,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-md .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     padding: 0;
     line-height: 1.25rem;
+    outline-offset: 1px;
   }
   .navbar-expand-md .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
   .navbar-expand-md .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
@@ -11476,6 +11478,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     padding: 0;
     line-height: 1.25rem;
+    outline-offset: 1px;
   }
   .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
   .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
@@ -11692,6 +11695,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     padding: 0;
     line-height: 1.25rem;
+    outline-offset: 1px;
   }
   .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
   .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
@@ -11908,6 +11912,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
     padding: 0;
     line-height: 1.25rem;
+    outline-offset: 1px;
   }
   .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
   .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
@@ -12159,6 +12164,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 .navbar-expand .mega-menu-panel > .container > .navbar-nav .navbar-nav .nav-link {
   padding: 0;
   line-height: 1.25rem;
+  outline-offset: 1px;
 }
 
 .navbar-expand .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
