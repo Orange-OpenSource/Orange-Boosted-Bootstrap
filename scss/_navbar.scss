@@ -260,8 +260,8 @@
           }
 
           .nav-link {
-            padding-right: 0; // Boosted mod no padding on nav-links
-            padding-left: 0; // Boosted mod no padding on nav-links
+            padding-right: $navbar-nav-link-padding-x;
+            padding-left: $navbar-nav-link-padding-x;
           }
         }
 
