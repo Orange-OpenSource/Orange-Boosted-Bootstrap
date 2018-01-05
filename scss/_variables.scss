@@ -506,7 +506,7 @@ $custom-control-indicator-bg:         $white !default;
 $custom-control-indicator-bg-size:    1rem !default;
 $custom-control-indicator-box-shadow: none !default;
 
-$custom-control-indicator-disabled-bg:        $white !default;
+$custom-control-indicator-disabled-bg:        $gray-500 !default;
 $custom-control-label-disabled-color:         #767676 !default;
 
 $custom-control-indicator-checked-color:      $white !default;
@@ -529,7 +529,7 @@ $custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml;charset=u
 $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
 
 $custom-radio-indicator-border-radius:        50% !default;
-$custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-radio-indicator-icon-checked:         str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 $custom-select-padding-y:          .4375rem !default;
 $custom-select-padding-x:          .5rem !default;

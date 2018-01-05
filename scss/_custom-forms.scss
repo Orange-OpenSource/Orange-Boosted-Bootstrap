@@ -27,8 +27,16 @@
 
   &:checked ~ .custom-control-label::before {
     color: $custom-control-indicator-checked-color;
+    // our custom control have a border
+    border-color: $custom-control-indicator-checked-border-color;
+    // end mod
     @include gradient-bg($custom-control-indicator-checked-bg);
     @include box-shadow($custom-control-indicator-checked-box-shadow);
+    // Boosted mod move gradient to global settings, to change the color for disabled checked elements
+    &::before {
+      @include gradient-bg($custom-control-indicator-checked-bg);
+    }
+    // end mod
   }
 
   &:focus ~ .custom-control-label::before {
@@ -52,11 +60,16 @@
       color: $custom-control-label-disabled-color;
 
       &::before {
-        background-color: $custom-control-indicator-disabled-bg;
         // Boosted mod
         // our custom control have a border
         border-color: $gray-500;
         // end mod
+      }
+    }
+    // Boosted mod disable bg only for checked elements
+    &:checked ~ .custom-control-label {
+      &::before {
+        background-color: $custom-control-indicator-disabled-bg;
       }
     }
   }
@@ -116,13 +129,7 @@
   }
 
   .custom-control-input:checked ~ .custom-control-label {
-    &::before {
-      // Boosted mod
-      // our custom control have a border
-      border-color: $custom-control-indicator-checked-border-color;
-      // end mod
-      @include gradient-bg($custom-control-indicator-checked-bg);
-    }
+    // Boosted mod move ::before gradient to global definition
     &::after {
       background-image: $custom-checkbox-indicator-icon-checked;
     }
@@ -159,13 +166,7 @@
   }
 
   .custom-control-input:checked ~ .custom-control-label {
-    &::before {
-      // Boosted mod
-      // our custom control have a border
-      border-color: $custom-control-indicator-checked-border-color;
-      // end mod
-      @include gradient-bg($custom-control-indicator-checked-bg);
-    }
+    // Boosted mod move ::before gradient to global definition
     &::after {
       background-image: $custom-radio-indicator-icon-checked;
     }
@@ -184,6 +185,7 @@
   width: 100%;
   height: $input-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  font-weight: 700; // boosted mod set font-weight bold
   line-height: $custom-select-line-height;
   color: $custom-select-color;
   vertical-align: middle;
