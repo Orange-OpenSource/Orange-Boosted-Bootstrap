@@ -3864,7 +3864,7 @@ tbody.collapse.show {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='#fff'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .custom-select {
@@ -10319,72 +10319,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   top: 1.75;
 }
 
-/*
-// custom checkboxes
-
-.custom-control .custom-control-description {
-  font-weight: $font-weight-bold;
-}
-
-.form-group .custom-control {
-  display: inline-block;
-}
-
-.custom-control-label {
-  top: auto;
-  background-color: #fff;
-  border: 2px solid $gray-700;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label {
-  background-size: 1rem;
-  border: 0;
-}
-
-.custom-checkbox .custom-control-input:active ~ .custom-control-label,
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label {
-  border: 0;
-}
-
-.custom-control-input:disabled ~ .custom-control-label,
-.custom-control-input:active:disabled ~ .custom-control-label {
-  background-color: #fff;
-  border: 2px solid $gray-500;
-}
-
-.custom-checkbox .custom-control-input:checked:disabled ~ .custom-control-label {
-  background-color: $gray-500;
-  background-image: $custom-checkbox-indicator-icon-checked;
-  border: 0;
-}
-
-.custom-radio {
-  .custom-control-input ~ .custom-control-label,
-  .custom-control-input:disabled ~ .custom-control-label {
-    border-width: 2px;
-  }
-
-  .custom-control-input:checked ~ .custom-control-label {
-    background-color: #fff;
-    background-image: none;
-    border: 6px solid theme-color("primary");
-  }
-
-  .custom-control-input:checked:disabled ~ .custom-control-label {
-    border-color: $gray-500;
-    border-width: 6px;
-  }
-}
-
-// custom select
-
-.custom-select {
-  padding-right: 1.875rem;
-  font-weight: $font-weight-bold;
-  background-position-x: right .625rem;
-  background-size: .875rem;
-}
-*/
 .o-square-list {
   padding-right: 0;
   color: #f16e00;

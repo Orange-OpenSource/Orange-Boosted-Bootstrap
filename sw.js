@@ -24,7 +24,7 @@ workboxSW.precache([
   },
   {
     "url": "assets/css/docs.min.css",
-    "revision": "32acff1bc71534e71547a6064e1abd78"
+    "revision": "36ca20a50df9734d17ee54948b94317e"
   },
   {
     "url": "assets/img/arbo_zip.png",
@@ -276,19 +276,19 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/boosted-rtl.css",
-    "revision": "80bdec765ef59ed87fdba0bb994229cc"
+    "revision": "a79505ccd61edc337df1406a171bd448"
   },
   {
     "url": "dist/css/boosted-rtl.min.css",
-    "revision": "f81e9c8820f5af2e5996c519f935249b"
+    "revision": "7353e272ee5025982a9bf5c02abb8ec1"
   },
   {
     "url": "dist/css/boosted.css",
-    "revision": "27f8076e713b0fa74ee62e49c959e49a"
+    "revision": "750e400fc34ee773aedc76b1e0039fed"
   },
   {
     "url": "dist/css/boosted.min.css",
-    "revision": "08517ecd2c8747d47418b376d36d3c31"
+    "revision": "51b18741e2885ecb7716ebbab155a371"
   },
   {
     "url": "dist/css/o-rtl.css",
