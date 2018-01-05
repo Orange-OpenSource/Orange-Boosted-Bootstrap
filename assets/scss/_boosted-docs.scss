@@ -256,10 +256,6 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
 /* home cards */
 
 #card-grid {
-  display: flex;
-  flex-wrap: wrap;
-
-  // .col-md-6.col-lg-4,
   .col-md-6.col-lg-3 {
     display: flex;
     margin-bottom: 1.25rem;
@@ -272,10 +268,6 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
   .picto-link {
     display: block;
     text-align: center;
-
-    img {
-      width: 50%;
-    }
   }
 
   .card-footer {
@@ -283,12 +275,23 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
     padding-bottom: 1.25rem;
     border: 0;
   }
+
+  #migrate-card img {
+    width: 50%;
+  }
 }
 
 #angular-logo {
   display: inherit;
   width: 8rem;
   margin: 0 auto;
+}
+
+/* IE only fix */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #card-grid .picto-link {
+    height: 12.5rem;
+  }
 }
 
 // card links
