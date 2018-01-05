@@ -18,7 +18,7 @@
     <dependencies>
       <dependency id="jQuery" version="[3.0.0,4)" />
       <dependency id="popper.js" version="[1.12.9,2)" />
-      <dependency id="tablesorter.js" version="[2.29.0,2)" />
+      <dependency id="tablesorter.js" version="[2.25.0,3)" />
     </dependencies>
     <tags>css sass mobile-first responsive front-end framework web</tags>
   </metadata>

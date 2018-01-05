@@ -1,6 +1,6 @@
 # set env vars usually set by MyGet (enable for local testing)
-#$env:SourcesPath = '..'
-#$env:NuGet = "./nuget.exe" #https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+# $env:SourcesPath = '..'
+# $env:NuGet = "C:/Applications/nuget.exe" #https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 
 $nuget = $env:NuGet
 
