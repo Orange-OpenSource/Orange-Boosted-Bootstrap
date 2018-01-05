@@ -276,19 +276,19 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/boosted-rtl.css",
-    "revision": "a79505ccd61edc337df1406a171bd448"
+    "revision": "356a107a61f2943f7da951559f9ace39"
   },
   {
     "url": "dist/css/boosted-rtl.min.css",
-    "revision": "7353e272ee5025982a9bf5c02abb8ec1"
+    "revision": "26219fd8fa1cf5c80897cbdcf8cb57d0"
   },
   {
     "url": "dist/css/boosted.css",
-    "revision": "750e400fc34ee773aedc76b1e0039fed"
+    "revision": "0d42876529be686dcd422a819e3a3268"
   },
   {
     "url": "dist/css/boosted.min.css",
-    "revision": "51b18741e2885ecb7716ebbab155a371"
+    "revision": "659b424211e3fb4a9412142c116d9617"
   },
   {
     "url": "dist/css/o-rtl.css",
@@ -392,7 +392,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/boostwatch/index.html",
-    "revision": "244cdb2e1b53848fca229bfa9f2cefb5"
+    "revision": "674179229916f374b2266737881695c2"
   },
   {
     "url": "docs/4.0/browser-bugs/index.html",
