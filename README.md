@@ -32,11 +32,12 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.2.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.3.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.2`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.2`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.2`
+- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.3`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.3`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted -Pre` Sass: `Install-Package boosted.sass -Pre` (`-Pre` is only required until Boosted v4 has a stable release).
 
 Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -44,6 +45,7 @@ Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-start
 
 [![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4-dev.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
+[![NuGet](https://img.shields.io/nuget/vpre/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
 [![CSS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
@@ -87,7 +89,7 @@ boosted/
     └── boosted.min.js
 ```
 
-We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.
+We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
 
 
 ## Branch usage
@@ -182,5 +184,5 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 
 ## Copyright and license
 
-Initial code and documentation copyright 2011-2017 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
-Boosted code and documentation copyright 2015-2017 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/LICENSE).
+Initial code and documentation copyright 2011-2018 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
+Boosted code and documentation copyright 2015-2018 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/LICENSE).
