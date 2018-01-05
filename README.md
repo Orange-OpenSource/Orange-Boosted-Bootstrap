@@ -37,6 +37,7 @@ Several quick start options are available:
 - Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.3`
 - Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.3`
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted -Pre` Sass: `Install-Package boosted.sass -Pre` (`-Pre` is only required until Boosted v4 has a stable release).
 
 Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -44,6 +45,7 @@ Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-start
 
 [![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4-dev.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
+[![NuGet](https://img.shields.io/nuget/vpre/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
 [![CSS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
