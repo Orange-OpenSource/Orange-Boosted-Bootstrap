@@ -6,15 +6,16 @@
   margin-top: 2.5rem;
   background-color: #000;
 
-  * {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-bold;
-    color: #fff;
-  }
-
   .nav-link {
     padding: $nav-link-padding-y ($nav-link-padding-x * .5);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
     line-height: 1.25rem;
+
+    &:not(:hover),
+    &:not([href]) {
+      color: #fff;
+    }
   }
 
   .o-footer-top,
@@ -35,6 +36,14 @@
 
     h2 {
       margin-top: .625rem;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+      color: #fff;
+    }
+
+    .flex-column .nav-link {
+      padding: 0;
+      line-height: 1.25;
     }
   }
 
