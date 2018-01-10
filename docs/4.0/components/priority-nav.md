@@ -46,9 +46,3 @@ Used with no parameter, the label 'More' is used as default. For custom labeling
 {% highlight js %}
 $('.o-nav-local').prioritynav('Custom label');
 {% endhighlight %}
-
-You can also use an empty string if you want no text label:
-
-{% highlight js %}
-$('.o-nav-local').prioritynav('');
-{% endhighlight %}
