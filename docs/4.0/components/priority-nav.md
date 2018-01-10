@@ -1,18 +1,18 @@
 ---
 layout: docs
 title: Orange priority nav
-description: Add a "more" button when space for nav-items runs short
+description: Add a "more" button when space for navigation items runs short
 group: components
 toc: true
 ---
 
 ## Scope
 
-Priority nav plugin can be used on [local navigation]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/local-navigation), [nav tabs]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/#tabs) and [nav pills]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/#pills).
+The priority nav plugin can be used on [local navigation]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/local-navigation), [navigation tabs]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/#tabs) and [navigation pills]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/#pills).
 
 ## Usage
 
-The plugin is initialised via javascript.
+The plugin is initialised via Javascript.
 
 {% highlight js %}
 $('.o-nav-local').prioritynav();
@@ -20,7 +20,7 @@ $('.o-nav-local').prioritynav();
 
 ## Example
 
-Reduce the size of your browser to see overflowing nav items moved into a nice dropdown menu.
+Reduce the width of your browser to see overflowing navigation items moved into a nice dropdown menu.
 
 {% example html %}
 <div class="o-nav-local">
@@ -41,13 +41,13 @@ Reduce the size of your browser to see overflowing nav items moved into a nice d
 
 ## Options
 
-Use with no parameter the label 'More' is used as default. For custom labeling use the following :
+Used with no parameter, the label 'More' is used as default. For custom labeling use the following:
 
 {% highlight js %}
 $('.o-nav-local').prioritynav('Custom label');
 {% endhighlight %}
 
-You can as well use an empty string for no text label.
+You can also use an empty string if you want no text label:
 
 {% highlight js %}
 $('.o-nav-local').prioritynav('');
