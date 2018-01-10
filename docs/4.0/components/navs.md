@@ -156,7 +156,7 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 [comment]: # Boosted mod
 ### Responsive Tabs
 
-Responsive tabs allows tab layout to be displayed as accordion in mobile if number of tabs exceeds 2. No configuration or javascript method call needed. Here is the markup:
+Responsive tabs allow tab layouts to be displayed as accordions on a mobile browser if the number of tabs exceeds 2. No configuration or javascript method call needed. Here is the markup:
 
 {% example html %}
 <div class="o-tab-container ">
