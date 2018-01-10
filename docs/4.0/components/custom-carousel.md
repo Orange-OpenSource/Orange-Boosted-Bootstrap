@@ -58,7 +58,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
 
 ## Usage
 
-Make sure to add vendor css and js files to your page to get the plugin working.
+Make sure to add the vendor <abbr title="Cascading Stylesheet">CSS</abbr> and <abbr title="Javascript">JS</abbr> files to your page to get the plugin working.
 
 ```html
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ Make sure to add vendor css and js files to your page to get the plugin working.
 
 ## Configuration
 
-Here is the recommended setup for accessible carousel.
+Here is the recommended setup for an accessible carousel:
 
 ```javascript
 var mySwiper = new Swiper('.swiper-container', {
