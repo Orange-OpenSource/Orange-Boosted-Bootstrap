@@ -41,6 +41,13 @@
       color: #fff;
     }
 
+    p {
+      &,
+      a {
+        color: #fff;
+      }
+    }
+
     .flex-column .nav-link {
       padding: 0;
       line-height: 1.25;
