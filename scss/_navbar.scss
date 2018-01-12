@@ -21,7 +21,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x ($navbar-padding-y - .25rem); // boosted mod padding bottom = 25-4px
+  padding: $navbar-padding-y $navbar-padding-x;
   font-weight: $font-weight-bold; // Boosted mod
 
   // Because flex properties aren't inherited, we need to redeclare these first
@@ -32,6 +32,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding-right: 0; // boosted mod
+    padding-left: 0; // boosted mod
   }
 }
 
@@ -45,7 +47,7 @@
   align-self: flex-end; // boosted mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin-right: .625rem; // boosted mod
+  margin: .625rem; // boosted mod
   font-size: $navbar-brand-font-size;
   font-weight: $font-weight-bold; // boosted mod
   line-height: inherit;
@@ -53,10 +55,10 @@
 
   @include hover-focus {
     text-decoration: none;
+    outline-offset: .625rem; // boosted mod
   }
 
   // Boosted mod
-
   + .navbar-brand {
     margin-right: 0;
     margin-left: 1.25rem;
@@ -90,33 +92,87 @@
   margin-bottom: 0;
   list-style: none;
 
-  // boosted mod
   .nav-link {
-    padding: 0;
-    margin-left: 1.25rem;
-    white-space: nowrap;
-    @include focus {
-      outline: 1px dotted;
-      outline-offset: .625rem;
+    //Boosted mod
+    padding-top: .875rem;
+    padding-right: .625rem;
+    padding-bottom: .875rem;
+    padding-left: .625rem;
+    margin-top: 0;
+
+    &.active::before {
+      display: none;
     }
+
+    &.icon {
+      padding: .78125rem .625rem;
+      margin-top: 0;
+    }
+
+    &[class^="svg-"] {
+      margin: .625rem;
+    }
+
+    &[role="menuitem"]::before {
+      float: right;
+      margin-right: 1rem;
+      font-family: icon-orange, sans-serif;
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+      color: #fff;
+      content: "\e93e";
+    }
+
+    @include focus {
+      outline-offset: -1px;
+    }
+    // end mod
   }
 
   .dropdown-menu {
     position: static;
+    top: 2rem; // boosted mod
     float: none;
   }
 
-  .dropdown-toggle {
-    margin-left: 1.25rem;
+  // boosted mod
+  .nav-item {
+    margin-left: 0;
+    font-size: $h5-font-size;
+    border-top: 1px solid $gray-900;
+  }
 
-    @include focus {
-      outline: 1px dotted;
-      outline-offset: .5rem;
+  .dropdown {
+    padding: 0;
+
+    .dropdown-toggle,
+    .dropdown-item {
+      padding: .875rem 0 .875rem .625rem;
+    }
+
+    .dropdown-toggle::after {
+      float: right;
+      margin-top: .3125rem;
+      margin-right: .9375rem;
+    }
+
+    &.show .dropdown-toggle::after {
+      transform: rotateZ(180deg);
+    }
+
+    .dropdown-item {
+      color: #fff;
+      white-space: normal;
+      background-color: #000;
+      border-top: 1px solid $gray-900;
+
+      @include focus {
+        color: $primary;
+      }
     }
   }
   // end mod
 }
-
 
 // Navbar text
 //
@@ -127,7 +183,6 @@
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
 }
-
 
 // Responsive navbar
 //
@@ -144,6 +199,11 @@
   // properly vertically. Can be easily overridden with flex utilities.
   // align-items: center; // boosted mod
   align-self: flex-end; // boosted mod
+  // Boosted mod
+  .navbar-nav {
+    align-items: stretch;
+  }
+  // end mod
 }
 
 // Button for toggling the navbar when in its collapsed state
@@ -206,46 +266,42 @@
 
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
+        // Boosted mod
+        // > .container,
+        // > .container-fluid {
+        //   padding-right: 0;
+        //   padding-left: 0;
+        // }
         // boosted mod
-        padding: 0;
-        // end mod
-        .navbar-nav {
-          // boosted mod
-          .dropdown-toggle {
-            margin-left: 0;
-          }
-
-          margin-bottom: 0;
-          // end mod
-        }
-
-        > .container,
-        > .container-fluid {
-          padding-right: 0;
-          padding-left: 0;
-        }
-
-        // boosted mod
-        .justify-content-between {
-          width: 100%;
-        }
-        .navbar-brand {
-          min-height: 0;
-          margin: ($spacer / 2);
-        }
-        .navbar-collapse {
-          margin-bottom: 0;
-        }
-        .nav-link {
-          margin-left: 0;
-        }
-        // end mod
-
       }
 
       @include media-breakpoint-up($next) {
         flex-flow: row nowrap;
         justify-content: flex-start;
+        padding: $navbar-expanded-padding-y $navbar-expanded-padding-x 1.3125rem; // boosted mod
+
+        // Boosted mod
+        .navbar-brand {
+          margin: 0 .625rem 0 0;
+
+          img {
+            width: $navbar-brand-logo-expanded-height;
+            height: $navbar-brand-logo-expanded-height;
+          }
+        }
+
+        &.minimized {
+          padding-top: $navbar-expanded-minimized-padding-y;
+          padding-bottom: 1rem;
+
+          .navbar-brand {
+            img {
+              width: $navbar-brand-logo-minimized-height;
+              height: $navbar-brand-logo-minimized-height;
+            }
+          }
+        }
+        // end mod
 
         .navbar-nav {
           flex-direction: row;
@@ -259,9 +315,35 @@
             left: auto; // Reset the default from `.dropdown-menu`
           }
 
+          // Boosted mod
+          .dropdown-item {
+            color: $black;
+            background-color: $white;
+            border: 0;
+
+            &.active,
+            &:hover {
+              color: $white;
+              background-color: $black;
+            }
+          }
+
+          .nav-item {
+            font-size: $font-size-base;
+            border: 0;
+
+            &.dropdown {
+              align-self: flex-end;
+            }
+          }
+          // end mod
+
           .nav-link {
+            padding-top: 0; // boosted mod
             padding-right: $navbar-nav-link-padding-x;
+            padding-bottom: 0; // boosted mod
             padding-left: $navbar-nav-link-padding-x;
+            margin-left: 1.25rem; // boosted mod
           }
         }
 
@@ -269,6 +351,8 @@
         > .container,
         > .container-fluid {
           flex-wrap: nowrap;
+          padding-right: $grid-gutter-width / 2; // boosted mod
+          padding-left: $grid-gutter-width / 2; // boosted mod
         }
 
         .navbar-collapse {

@@ -29,7 +29,7 @@
     </div>
 
     <header role="banner">
-      <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+      <nav class="navbar navbar-dark bg-dark navbar-expand supra">
         <div class="container">
           <ul class="navbar-nav">
             <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
@@ -573,11 +573,9 @@
       $(document).ready(function () {
         $('header').navbar({ sticky: false, hideSupra: true });
         // default init
-        $('#collapsing-navbarHead').megamenu();
-        // active it to open mega menu on #test link
-        // $('#collapsing-navbarHead').on('shown.bs.collapse', function(){
-        //  $('#collapsing-navbarHead').megamenu('#test');
-        // })
+        if( window.innerWidth < 768 ) {
+          $('#collapsing-navbarHead').megamenu();
+        }
       });
     </script>
 

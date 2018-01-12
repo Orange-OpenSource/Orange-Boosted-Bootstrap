@@ -671,8 +671,11 @@ $nav-pills-link-active-bg:    $component-active-bg !default;
 
 // Navbar
 
-$navbar-padding-y:                  1.5625rem !default;
-$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  0 !default;
+$navbar-padding-x:                  0 !default;
+$navbar-expanded-padding-y:         1.5625rem !default;
+$navbar-expanded-padding-x:         $spacer !default;
+$navbar-expanded-minimized-padding-y: 1.25rem !default;
 
 // Boosted mod
 // adapt navbar padding when mobile view
@@ -680,14 +683,16 @@ $navbar-padding-x:                  $spacer !default;
 //$navbar-collapsed-padding-x:        0 !default;
 $navbar-nav-link-padding-x:         0 !default;
 $navbar-height:                     6.25rem !default;
-$navbar-brand-logo-height:          3.125rem !default;
+$navbar-brand-logo-height:          1.875rem !default;
+$navbar-brand-logo-expanded-height: 3.125rem !default;
+$navbar-brand-logo-minimized-height: 2.5rem !default;
 
-$navbar-height-minimized:           5rem !default;
-$navbar-height-sm:                  3.125rem !default;
+// $navbar-height-minimized:           5rem !default;
+// $navbar-height-sm:                  3.125rem !default;
 $navbar-supra-height:               2.5rem !default;
 // end mod
 
-$navbar-brand-font-size:            $font-size-base !default;
+$navbar-brand-font-size:            $font-size-sm !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 //$nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
 //$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
