@@ -85,6 +85,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "sass-math-pow": "^0.1.4",
     "swiper": "^3.4.1"
   },
   "peerDependencies": {
@@ -122,7 +123,6 @@
     "rollup-plugin-babel": "4.0.0-beta.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rtlcss": "^2.2.1",
-    "sass-math-pow": "^0.1.4",
     "shelljs": "^0.7.8",
     "shx": "^0.2.2",
     "sri-toolbox": "^0.2.0",
