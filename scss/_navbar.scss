@@ -55,7 +55,6 @@
 
   @include hover-focus {
     text-decoration: none;
-    outline-offset: .625rem; // boosted mod
   }
 
   // Boosted mod
@@ -124,7 +123,7 @@
     }
 
     @include focus {
-      outline-offset: -1px;
+      outline-offset: .625rem;
     }
     // end mod
   }
@@ -148,12 +147,6 @@
     .dropdown-toggle,
     .dropdown-item {
       padding: .875rem 0 .875rem .625rem;
-    }
-
-    .dropdown-toggle::after {
-      float: right;
-      margin-top: .3125rem;
-      margin-right: .9375rem;
     }
 
     &.show .dropdown-toggle::after {
