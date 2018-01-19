@@ -10,33 +10,24 @@
     }
     // end mod
     background-color: $background;
-  }
 
-  a.list-group-item-#{$state},
-  button.list-group-item-#{$state} {
-    // boosted mod
-    @if $state == "secondary" or $state == "dark"  {
-      color: $white;
-    } @else {
-      color: $color;
-    }
-    // end mod
-
-    @include hover-focus {
-      // boosted mod
-      @if $state == "secondary" or $state == "dark"  {
-        color: $white;
-      } @else {
-        color: $color;
+    &.list-group-item-action {
+      @include hover-focus {
+        // boosted mod
+        @if $state == "secondary" or $state == "dark"  {
+          color: $white;
+        } @else {
+          color: $color;
+        }
+        // end mod
+        background-color: darken($background, 5%);
       }
-      // end mod
-      background-color: darken($background, 5%);
-    }
 
-    &.active {
-      color: #fff;
-      background-color: $color;
-      border-color: $color;
+      &.active {
+        color: #fff;
+        background-color: $color;
+        border-color: $color;
+      }
     }
   }
 }

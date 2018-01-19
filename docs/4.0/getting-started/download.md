@@ -37,7 +37,7 @@ Pull in Boosted's **source files** into nearly any project with some of the most
 Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
 
 {% highlight sh %}
-npm install boosted@{{ site.current_version }}
+npm install boosted
 {% endhighlight %}
 
 `require('boosted')` will load all of Boosted's jQuery plugins onto the jQuery object. The `boosted` module itself does not export anything. You can manually load Boosted's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
@@ -55,4 +55,15 @@ You can also install and manage Bootstrap's Sass and JavaScript using [Composer]
 composer require orange-opensource/orange-boosted-bootstrap:{{ site.current_version }}
 {% endhighlight %}
 
+### NuGet
+
+If you develop in .NET, you can also install and manage Boosted's [CSS](https://www.nuget.org/packages/boosted/) or [Sass](https://www.nuget.org/packages/boosted.sass/) and JavaScript using [NuGet](https://www.nuget.org/):
+
+{% highlight powershell %}
+Install-Package boosted
+{% endhighlight %}
+
+{% highlight powershell %}
+Install-Package boosted.sass
+{% endhighlight %}
 

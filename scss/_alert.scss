@@ -49,9 +49,9 @@
   .alert-#{$color} {
     // Boosted mod adapt color with background, and keep initial brand color value for background
     @if ($color == "secondary" or $color == "danger" or $color == "dark") {
-      @include alert-variant(theme-color-level($color, 0), theme-color-level($color, 0), $white);
+      @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), $white);
     } @else {
-      @include alert-variant(theme-color-level($color, 0), theme-color-level($color, 0), $black);
+      @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), $black);
     }
     // end mod
   }

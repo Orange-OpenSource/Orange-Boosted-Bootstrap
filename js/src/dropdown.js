@@ -2,16 +2,14 @@ import $ from 'jquery'
 import Popper from 'popper.js'
 import Util from './util'
 
-
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.3): dropdown.js
+ * Bootstrap (v4.0.0): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 const Dropdown = (($) => {
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -19,7 +17,7 @@ const Dropdown = (($) => {
    */
 
   const NAME                     = 'dropdown'
-  const VERSION                  = '4.0.0-beta.3'
+  const VERSION                  = '4.0.0'
   const DATA_KEY                 = 'bs.dropdown'
   const EVENT_KEY                = `.${DATA_KEY}`
   const DATA_API_KEY             = '.data-api'
@@ -89,7 +87,6 @@ const Dropdown = (($) => {
     boundary    : '(string|element)'
   }
 
-
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -97,7 +94,6 @@ const Dropdown = (($) => {
    */
 
   class Dropdown {
-
     constructor(element, config) {
       this._element  = element
       this._popper   = null
@@ -109,8 +105,7 @@ const Dropdown = (($) => {
       this._addAccessibility() // Boosted mod
     }
 
-
-    // getters
+    // Getters
 
     static get VERSION() {
       return VERSION
@@ -124,7 +119,7 @@ const Dropdown = (($) => {
       return DefaultType
     }
 
-    // public
+    // Public
 
     toggle() {
       if (this._element.disabled || $(this._element).hasClass(ClassName.DISABLED)) {
@@ -158,10 +153,10 @@ const Dropdown = (($) => {
          * Popper - https://popper.js.org
          */
         if (typeof Popper === 'undefined') {
-          throw new Error('Bootstrap dropdown require Popper.js (https://popper.js.org)')
+          throw new TypeError('Bootstrap dropdown require Popper.js (https://popper.js.org)')
         }
         let element = this._element
-        // for dropup with alignment we use the parent as popper container
+        // For dropup with alignment we use the parent as popper container
         if ($(parent).hasClass(ClassName.DROPUP)) {
           if ($(this._menu).hasClass(ClassName.MENULEFT) || $(this._menu).hasClass(ClassName.MENURIGHT)) {
             element = parent
@@ -176,13 +171,12 @@ const Dropdown = (($) => {
         this._popper = new Popper(element, this._menu, this._getPopperConfig())
       }
 
-
-      // if this is a touch-enabled device we add extra
+      // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
       if ('ontouchstart' in document.documentElement &&
-         !$(parent).closest(Selector.NAVBAR_NAV).length) {
+         $(parent).closest(Selector.NAVBAR_NAV).length === 0) {
         $('body').children().on('mouseover', null, $.noop)
       }
 
@@ -217,7 +211,7 @@ const Dropdown = (($) => {
       }
     }
 
-    // private
+    // Private
 
     _addEventListeners() {
       $(this._element).on(Event.CLICK, (event) => {
@@ -304,7 +298,7 @@ const Dropdown = (($) => {
       return popperConfig
     }
 
-    // boosted mod
+    // Boosted mod
     _addAccessibility() {
       $(this._element).attr('aria-haspopup', true)
       // ensure that dropdown-menu have the role menu
@@ -314,7 +308,7 @@ const Dropdown = (($) => {
     }
     // end mod
 
-    // static
+    // Static
 
     static _jQueryInterface(config) {
       return this.each(function () {
@@ -334,7 +328,7 @@ const Dropdown = (($) => {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error(`No method named "${config}"`)
+            throw new TypeError(`No method named "${config}"`)
           }
           data[config]()
         }
@@ -365,8 +359,8 @@ const Dropdown = (($) => {
         }
 
         if (event && (event.type === 'click' &&
-            /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE)
-            && $.contains(parent, event.target)) {
+            /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) &&
+            $.contains(parent, event.target)) {
           continue
         }
 
@@ -376,7 +370,7 @@ const Dropdown = (($) => {
           continue
         }
 
-        // if this is a touch-enabled device we remove the extra
+        // If this is a touch-enabled device we remove the extra
         // empty mouseover listeners we added for iOS support
         if ('ontouchstart' in document.documentElement) {
           $('body').children().off('mouseover', null, $.noop)
@@ -411,8 +405,8 @@ const Dropdown = (($) => {
       //  - If key is other than escape
       //    - If key is not up or down => not a dropdown command
       //    - If trigger inside the menu => not a dropdown command
-      if (/input|textarea/i.test(event.target.tagName) ?
-        event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE &&
+      if (/input|textarea/i.test(event.target.tagName)
+        ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE &&
         (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE ||
           $(event.target).closest(Selector.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
         return
@@ -430,7 +424,6 @@ const Dropdown = (($) => {
 
       if (!isActive && (event.which !== ESCAPE_KEYCODE || event.which !== SPACE_KEYCODE) ||
            isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
-
         if (event.which === ESCAPE_KEYCODE) {
           const toggle = $(parent).find(Selector.DATA_TOGGLE)[0]
           $(toggle).trigger('focus')
@@ -442,17 +435,17 @@ const Dropdown = (($) => {
 
       const items = $(parent).find(Selector.VISIBLE_ITEMS).get()
 
-      if (!items.length) {
+      if (items.length === 0) {
         return
       }
 
       let index = items.indexOf(event.target)
 
-      if (event.which === ARROW_UP_KEYCODE && index > 0) { // up
+      if (event.which === ARROW_UP_KEYCODE && index > 0) { // Up
         index--
       }
 
-      if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) { // down
+      if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) { // Down
         index++
       }
 
@@ -462,9 +455,7 @@ const Dropdown = (($) => {
 
       items[index].focus()
     }
-
   }
-
 
   /**
    * ------------------------------------------------------------------------
@@ -505,7 +496,6 @@ const Dropdown = (($) => {
   }
 
   return Dropdown
-
 })($, Popper)
 
 export default Dropdown

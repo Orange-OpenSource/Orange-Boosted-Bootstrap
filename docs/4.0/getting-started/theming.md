@@ -42,6 +42,8 @@ your-project/
     └── scss
 {% endhighlight %}
 
+### Importing
+
 In your `custom.scss`, you'll import Boosted's source Sass files. You have two options: include all of Boosted, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
 
 {% highlight scss %}
@@ -68,7 +70,7 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "node_modules/boosted/scss/grid";
 {% endhighlight %}
 
-With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed.
+With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
 
 ### Variable defaults
 
@@ -93,7 +95,11 @@ Repeat as necessary for any variable in Boosted, including the global options be
 
 Boosted 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
 
-For example, to modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
+Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making _removing_ items from a map slightly more difficult.
+
+#### Modify map
+
+To modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
 
 {% highlight scss %}
 $theme-colors: (
@@ -102,6 +108,8 @@ $theme-colors: (
 );
 {% endhighlight %}
 
+#### Add to map
+
 To add a new color to `$theme-colors`, add the new key and value:
 
 {% highlight scss %}
@@ -109,6 +117,20 @@ $theme-colors: (
   "custom-color": #900
 );
 {% endhighlight %}
+
+#### Remove from map
+
+To remove colors from `$theme-colors`, or any other map, use `map-remove`:
+
+{% highlight scss %}
+$theme-colors: map-remove($theme-colors, "success", "info", "danger");
+{% endhighlight %}
+
+#### Required keys
+
+Boosted assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
+
+For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
 
 ### Functions
 
@@ -202,7 +224,7 @@ You can find and customize these variables for key global options in our `_varia
 | `$enable-shadows`           | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components.                          |
 | `$enable-gradients`         | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components.      |
 | `$enable-transitions`       | `true` (default) or `false`        | Enables predefined `transition`s on various components.                                |
-| `$enable-hover-media-query` | `true` or `false` (default)        | ...                                                                                    |
+| `$enable-hover-media-query` | `true` or `false` (default)        | **Deprecated** |
 | `$enable-grid-classes`      | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.).     |
 | `$enable-caret`             | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`.                                    |
 | `$enable-print-styles`      | `true` (default) or `false`        | Enables styles for optimizing printing.                                |
@@ -328,3 +350,72 @@ These Sass loops aren't limited to color maps, either. You can also generate res
 {% endhighlight %}
 
 Should you need to modify your `$grid-breakpoints`, your changes will apply to all the loops iterating over that map.
+
+## CSS variables
+
+Boosted 4 includes around two dozen [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) in it's compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's Inspector, a code sandbox, or general prototyping.
+
+### Available variables
+
+Here are the variables we include (note that the `:root` is required). They're located in our `_root.scss` file.
+
+{% highlight css %}
+:root {
+  --blue: #527edb;
+  --indigo: #6610f2;
+  --purple: #a885d8;
+  --pink: #ffb4e6;
+  --red: #cd3c14;
+  --orange: #f16e00;
+  --yellow: #fc0;
+  --green: #32c832;
+  --teal: #50be87;
+  --cyan: #4BB4E6;
+  --white: #fff;
+  --gray: #999;
+  --gray-dark: #595959;
+  --primary: #f16e00;
+  --secondary: #000;
+  --success: #32c832;
+  --info: #4BB4E6;
+  --warning: #fc0;
+  --danger: #cd3c14;
+  --light: #ddd;
+  --dark: #000;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 980px;
+  --breakpoint-xl: 1220px;
+  --breakpoint-xxl: 1380px;
+  --font-family-sans-serif: "HelvNeueOrange", "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+{% endhighlight %}
+
+### Examples
+
+CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
+
+{% highlight css %}
+body {
+  font: 1rem/1.5 var(--font-family-sans-serif);
+}
+a {
+  color: var(--blue);
+}
+{% endhighlight %}
+
+You can also use our breakpoint variables in your media queries:
+
+{% highlight css %}
+.content-secondary {
+  display: none;
+}
+
+@media (min-width(var(--breakpoint-sm))) {
+  .content-secondary {
+    display: block;
+  }
+}
+{% endhighlight %}

@@ -30,12 +30,12 @@
   &.disabled,
   &:disabled {
     color: $disabled-color; // Boosted mod
-    background-color: $disabled-background;
-    border-color: $disabled-border;
+    background-color: $disabled-background; // Boosted var disabled
+    border-color: $disabled-border; // Boosted var disabled
   }
 
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
     color: color-yiq($active-background);
     background-color: $active-background;
@@ -56,7 +56,7 @@
   }
 }
 
-@mixin button-outline-variant($color, $color-hover: #fff, $active-background: $color, $active-border: $color) {
+@mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
   background-color: transparent;
   background-image: none;
@@ -81,15 +81,21 @@
     background-color: transparent;
   }
 
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
     color: #000; // Boosted mod
     background-color: #f16e00; // Boosted mod
-    border-color: #f16e00 // Boosted mod
-    // Avoid using mixin so we can pass custom focus shadow properly
-    // Boosted mod disable shadow
-    // box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+    border-color: #f16e00; // Boosted mod
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
+      } @else {
+        // Boosted mod disable shadow
+        // box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+      }
+    }
   }
 }
 

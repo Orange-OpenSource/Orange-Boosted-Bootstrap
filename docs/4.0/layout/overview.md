@@ -91,19 +91,19 @@ We occasionally use media queries that go in the other direction (the given scre
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 480px)
-@media (max-width: 479.99px) { ... }
+@media (max-width: 479.98px) { ... }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.99px) { ... }
+@media (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, less than 960px)
-@media (max-width: 959.99px) { ... }
+@media (max-width: 959.98px) { ... }
 
 // Large devices (desktops, less than 1220px)
-@media (max-width: 1219.99px) { ... }
+@media (max-width: 1219.98px) { ... }
 
 // Extra large devices (desktops, less than 1380px)
-@media (max-width: 1379.99px) { ... }
+@media (max-width: 1379.98px) { ... }
 
 // Extra extra large devices (large desktops)
 // No media query since the extra-extra-large breakpoint has no upper bound on its width
@@ -126,19 +126,19 @@ There are also media queries and mixins for targeting a single segment of screen
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 480px)
-@media (max-width: 479.99px) { ... }
+@media (max-width: 479.98px) { ... }
 
 // Small devices (landscape phones, 480px and up)
-@media (min-width: 480px) and (max-width: 767.99px) { ... }
+@media (min-width: 480px) and (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 959.99px) { ... }
+@media (min-width: 768px) and (max-width: 959.98px) { ... }
 
 // Large devices (desktops, 960px and up)
-@media (min-width: 960px) and (max-width: 1219.99px) { ... }
+@media (min-width: 960px) and (max-width: 1219.98px) { ... }
 
 // Extra large devices (desktops, 1220px and up)
-@media (min-width: 1220px) and (max-width: 1379.99px) { ... }
+@media (min-width: 1220px) and (max-width: 1379.98px) { ... }
 
 // Extra extra large devices (large desktops, 1380px and up)
 @media (min-width: 1380px) { ... }
@@ -160,7 +160,7 @@ Similarly, media queries may span multiple breakpoint widths:
 {% highlight scss %}
 // Example
 // Apply styles starting from medium devices (tablets, 768px and up) and  Large devices (desktops, 960px and up)
-@media (min-width: 768px) and (max-width: 959.99px) { ... }
+@media (min-width: 768px) and (max-width: 959.98px) { ... }
 {% endhighlight %}
 
 The Sass mixin for targeting the same screen size range would be:
@@ -177,7 +177,7 @@ These higher values start at an arbitrary number, high and specific enough to id
 
 We don't encourage customization of these individual values; should you change one, you likely need to change them all.
 
-```scss
+{% highlight scss %}
 $zindex-dropdown:          1000 !default;
 $zindex-sticky:            1020 !default;
 $zindex-fixed:             1030 !default;
@@ -185,6 +185,6 @@ $zindex-modal-backdrop:    1040 !default;
 $zindex-modal:             1050 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
-```
+{% endhighlight %}
 
 To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.

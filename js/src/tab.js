@@ -1,17 +1,14 @@
 import $ from 'jquery'
 import Util from './util'
 
-
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.3): tab.js
+ * Bootstrap (v4.0.0): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 const Tab = (($) => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -19,7 +16,7 @@ const Tab = (($) => {
    */
 
   const NAME                = 'tab'
-  const VERSION             = '4.0.0-beta.3'
+  const VERSION             = '4.0.0'
   const DATA_KEY            = 'bs.tab'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
@@ -61,7 +58,6 @@ const Tab = (($) => {
     DROPDOWN_ACTIVE_CHILD : '> .dropdown-menu .active'
   }
 
-
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -69,21 +65,18 @@ const Tab = (($) => {
    */
 
   class Tab {
-
     constructor(element) {
       this._element = element
       this._addAccessibility()  // Boosted mod
     }
 
-
-    // getters
+    // Getters
 
     static get VERSION() {
       return VERSION
     }
 
-
-    // public
+    // Public
 
     show() {
       if (this._element.parentNode &&
@@ -157,8 +150,7 @@ const Tab = (($) => {
       this._element = null
     }
 
-
-    // private
+    // Private
 
     _activate(element, container, callback) {
       let activeElements
@@ -169,9 +161,9 @@ const Tab = (($) => {
       }
 
       const active          = activeElements[0]
-      const isTransitioning = callback
-        && Util.supportsTransitionEnd()
-        && (active && $(active).hasClass(ClassName.FADE))
+      const isTransitioning = callback &&
+        Util.supportsTransitionEnd() &&
+        (active && $(active).hasClass(ClassName.FADE))
 
       const complete = () => this._transitionComplete(
         element,
@@ -236,7 +228,6 @@ const Tab = (($) => {
 
       if (element.parentNode &&
           $(element.parentNode).hasClass(ClassName.DROPDOWN_MENU)) {
-
         const dropdownElement = $(element).closest(Selector.DROPDOWN)[0]
         if (dropdownElement) {
           $(dropdownElement).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE)
@@ -301,7 +292,7 @@ const Tab = (($) => {
     }
     // end mod
 
-    // static
+    // Static
 
     // Boosted mod
     static _dataApiKeydownHandler(e) {
@@ -355,15 +346,13 @@ const Tab = (($) => {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error(`No method named "${config}"`)
+            throw new TypeError(`No method named "${config}"`)
           }
           data[config]()
         }
       })
     }
-
   }
-
 
   /**
    * ------------------------------------------------------------------------
@@ -402,7 +391,6 @@ const Tab = (($) => {
   }
 
   return Tab
-
 })($)
 
 export default Tab

@@ -25,5 +25,6 @@
   <files>
     <file src="scss\**\*.scss" target="content\Content\boosted" />
     <file src="dist\js\boosted*.js" target="content\Scripts" />
+    <file src="dist\js\boosted*.js.map" target="content\Scripts" />
   </files>
 </package>
