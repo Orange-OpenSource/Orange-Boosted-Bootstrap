@@ -36,9 +36,9 @@ var PriorityNav = function () {
   };
   var MenuLabelDefault = 'More';
 
-  var MenuTemplate = function MenuTemplate(MenuLabel) {
+  function MenuTemplate(MenuLabel) {
     return "\n    <li class=\"overflow-nav nav-item dropdown\">\n        <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n        <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n    </li>\n  ";
-  };
+  }
   /**
    * ------------------------------------------------------------------------
    * Class Definition

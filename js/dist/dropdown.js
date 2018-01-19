@@ -6,7 +6,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.3): dropdown.js
+ * Bootstrap (v4.0.0): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ var Dropdown = function ($) {
    * ------------------------------------------------------------------------
    */
   var NAME = 'dropdown';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.dropdown';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -107,12 +107,12 @@ var Dropdown = function ($) {
 
       this._addAccessibility(); // Boosted mod
 
-    } // getters
+    } // Getters
 
 
     var _proto = Dropdown.prototype;
 
-    // public
+    // Public
     _proto.toggle = function toggle() {
       if (this._element.disabled || $(this._element).hasClass(ClassName.DISABLED)) {
         return;
@@ -145,10 +145,10 @@ var Dropdown = function ($) {
          * Popper - https://popper.js.org
          */
         if (typeof Popper === 'undefined') {
-          throw new Error('Bootstrap dropdown require Popper.js (https://popper.js.org)');
+          throw new TypeError('Bootstrap dropdown require Popper.js (https://popper.js.org)');
         }
 
-        var element = this._element; // for dropup with alignment we use the parent as popper container
+        var element = this._element; // For dropup with alignment we use the parent as popper container
 
         if ($(parent).hasClass(ClassName.DROPUP)) {
           if ($(this._menu).hasClass(ClassName.MENULEFT) || $(this._menu).hasClass(ClassName.MENURIGHT)) {
@@ -164,13 +164,13 @@ var Dropdown = function ($) {
         }
 
         this._popper = new Popper(element, this._menu, this._getPopperConfig());
-      } // if this is a touch-enabled device we add extra
+      } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchstart' in document.documentElement && !$(parent).closest(Selector.NAVBAR_NAV).length) {
+      if ('ontouchstart' in document.documentElement && $(parent).closest(Selector.NAVBAR_NAV).length === 0) {
         $('body').children().on('mouseover', null, $.noop);
       }
 
@@ -203,7 +203,7 @@ var Dropdown = function ($) {
       if (this._popper !== null) {
         this._popper.scheduleUpdate();
       }
-    }; // private
+    }; // Private
 
 
     _proto._addEventListeners = function _addEventListeners() {
@@ -285,7 +285,7 @@ var Dropdown = function ($) {
         }
       };
       return popperConfig;
-    }; // boosted mod
+    }; // Boosted mod
 
 
     _proto._addAccessibility = function _addAccessibility() {
@@ -295,7 +295,7 @@ var Dropdown = function ($) {
 
       $(this._element).parent().children(Selector.MENU).children('.dropdown-item').attr('role', 'menuitem');
     }; // end mod
-    // static
+    // Static
 
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {
@@ -317,7 +317,7 @@ var Dropdown = function ($) {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error("No method named \"" + config + "\"");
+            throw new TypeError("No method named \"" + config + "\"");
           }
 
           data[config]();
@@ -359,7 +359,7 @@ var Dropdown = function ($) {
 
         if (hideEvent.isDefaultPrevented()) {
           continue;
-        } // if this is a touch-enabled device we remove the extra
+        } // If this is a touch-enabled device we remove the extra
         // empty mouseover listeners we added for iOS support
 
 
@@ -420,19 +420,19 @@ var Dropdown = function ($) {
 
       var items = $(parent).find(Selector.VISIBLE_ITEMS).get();
 
-      if (!items.length) {
+      if (items.length === 0) {
         return;
       }
 
       var index = items.indexOf(event.target);
 
       if (event.which === ARROW_UP_KEYCODE && index > 0) {
-        // up
+        // Up
         index--;
       }
 
       if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) {
-        // down
+        // Down
         index++;
       }
 

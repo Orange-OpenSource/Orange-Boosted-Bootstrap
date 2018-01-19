@@ -40,12 +40,14 @@ const PriorityNav = (() => {
 
   const MenuLabelDefault = 'More'
 
-  const MenuTemplate = (MenuLabel) => `
+  function MenuTemplate(MenuLabel) {
+    return `
     <li class="overflow-nav nav-item dropdown">
         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
         <ul class="overflow-nav-list dropdown-menu dropdown-menu-right"></ul>
     </li>
   `
+  }
 
 
   /**

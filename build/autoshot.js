@@ -134,10 +134,16 @@ server.on('listening', () => {
   async.each(items, (item, callback) => {
     webshot(item.src, screenshotsBase + item.dest, (err) => {
       console.log(`url: ${item.src} in: ${screenshotsBase}${item.dest}`)
+      if (err) {
+        console.log(`oups something wen't wrong : ${err}`)
+      }
       callback()
     })
   }, (err) => {
     console.log('All done')
+    if (err) {
+      console.log(`but something wen't wrong : ${err}`)
+    }
     server.close()
   })
 })

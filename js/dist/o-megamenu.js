@@ -223,7 +223,6 @@ var MegaMenu = function () {
           break;
 
         default:
-          return;
       }
     };
 

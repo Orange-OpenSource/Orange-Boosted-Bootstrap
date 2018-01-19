@@ -6,7 +6,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.3): modal.js
+ * Bootstrap (v4.0.0): modal.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ var Modal = function ($) {
    * ------------------------------------------------------------------------
    */
   var NAME = 'modal';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.modal';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -89,12 +89,12 @@ var Modal = function ($) {
 
       this._addAria(); // end mod
 
-    } // getters
+    } // Getters
 
 
     var _proto = Modal.prototype;
 
-    // public
+    // Public
     _proto.toggle = function toggle(relatedTarget) {
       return this._isShown ? this.hide() : this.show(relatedTarget);
     };
@@ -207,7 +207,7 @@ var Modal = function ($) {
 
     _proto.handleUpdate = function handleUpdate() {
       this._adjustDialog();
-    }; // private
+    }; // Private
 
 
     _proto._getConfig = function _getConfig(config) {
@@ -222,7 +222,7 @@ var Modal = function ($) {
       var transition = Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.FADE);
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
-        // don't move modals dom position
+        // Don't move modal's DOM position
         document.body.appendChild(this._element);
       }
 
@@ -265,9 +265,9 @@ var Modal = function ($) {
     _proto._enforceFocus = function _enforceFocus() {
       var _this4 = this;
 
-      $(document).off(Event.FOCUSIN) // guard against infinite focus loop
+      $(document).off(Event.FOCUSIN) // Guard against infinite focus loop
       .on(Event.FOCUSIN, function (event) {
-        if (document !== event.target && _this4._element !== event.target && !$(_this4._element).has(event.target).length) {
+        if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
           _this4._element.focus();
         }
       });
@@ -530,7 +530,7 @@ var Modal = function ($) {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error("No method named \"" + config + "\"");
+            throw new TypeError("No method named \"" + config + "\"");
           }
 
           data[config](relatedTarget);
@@ -579,7 +579,7 @@ var Modal = function ($) {
 
     var $target = $(target).one(Event.SHOW, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
-        // only register focus restorer if modal will actually get shown
+        // Only register focus restorer if modal will actually get shown
         return;
       }
 
