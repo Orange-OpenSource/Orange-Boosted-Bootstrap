@@ -232,7 +232,7 @@ const Collapse = (($) => {
             const $elem = $(selector)
             if (!$elem.hasClass(ClassName.SHOW)) {
               $(trigger).addClass(ClassName.COLLAPSED)
-                   .attr('aria-expanded', false)
+                .attr('aria-expanded', false)
             }
           }
         }
@@ -394,13 +394,13 @@ const Collapse = (($) => {
     })
   })
   // Boosted mod
-  .on('DOMContentLoaded', () => {
-    $(Selector.DATA_TOGGLE).each(function () {
-      const target = Collapse._getTargetFromElement(this)
+    .on('DOMContentLoaded', () => {
+      $(Selector.DATA_TOGGLE).each(function () {
+        const target = Collapse._getTargetFromElement(this)
 
-      Collapse._jQueryInterface.call($(target), 'init')
+        Collapse._jQueryInterface.call($(target), 'init')
+      })
     })
-  })
   // end mod
 
   /**

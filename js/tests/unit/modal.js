@@ -702,5 +702,4 @@ $(function () {
     assert.strictEqual($modal.attr('aria-modal'), 'true', 'check state aria-modal true to role dialog elements')
     assert.strictEqual($modal.attr('role'), 'dialog', 'check role dialog element on modal')
   })
-
 })

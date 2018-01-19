@@ -30,8 +30,7 @@ $(function () {
     $el.boostedNavbar()
     try {
       $el.boostedNavbar('noMethod')
-    }
-    catch (err) {
+    } catch (err) {
       assert.strictEqual(err.message, 'No method named "noMethod"')
     }
   })
@@ -54,7 +53,9 @@ $(function () {
   QUnit.test('should be sticky if configured sticky', function (assert) {
     assert.expect(1)
     var $el = $('<div/>').css('position', 'static')
-    $el.boostedNavbar({ sticky: true })
+    $el.boostedNavbar({
+      sticky: true
+    })
     assert.ok($el.hasClass('fixed-header'))
     // assert.strictEqual($el.css('position'), 'fixed')
   })
@@ -63,7 +64,9 @@ $(function () {
     assert.expect(1)
     var $el = $('<div/>').css('position', 'static')
     $el.css('height', '140px')
-    $el.boostedNavbar({ sticky: true })
+    $el.boostedNavbar({
+      sticky: true
+    })
     var elHeight = $el.outerHeight()
     assert.strictEqual($(document.body).css('padding-top'), elHeight + 'px')
   })
@@ -74,5 +77,4 @@ $(function () {
     $el.boostedNavbar()
     assert.strictEqual($el.find('.nav-link[data-toggle]').attr('aria-haspopup'), 'true')
   })
-
 })

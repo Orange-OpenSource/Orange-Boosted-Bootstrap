@@ -112,7 +112,7 @@ $(function () {
 
     assert
       .ok($('.tooltip')
-      .is('.fade.bs-tooltip-bottom.show'), 'has correct classes applied')
+        .is('.fade.bs-tooltip-bottom.show'), 'has correct classes applied')
 
     $tooltip.bootstrapTooltip('hide')
 
@@ -761,21 +761,21 @@ $(function () {
     }
 
     var tests = [
-        ['mouseenter', 'mouseleave'],
+      ['mouseenter', 'mouseleave'],
 
-        ['focusin', 'focusout'],
+      ['focusin', 'focusout'],
 
-        ['click', 'click'],
+      ['click', 'click'],
 
-        ['mouseenter', 'focusin', 'focusout', 'mouseleave'],
-        ['mouseenter', 'focusin', 'mouseleave', 'focusout'],
+      ['mouseenter', 'focusin', 'focusout', 'mouseleave'],
+      ['mouseenter', 'focusin', 'mouseleave', 'focusout'],
 
-        ['focusin', 'mouseenter', 'mouseleave', 'focusout'],
-        ['focusin', 'mouseenter', 'focusout', 'mouseleave'],
+      ['focusin', 'mouseenter', 'mouseleave', 'focusout'],
+      ['focusin', 'mouseenter', 'focusout', 'mouseleave'],
 
-        ['click', 'focusin', 'mouseenter', 'focusout', 'mouseleave', 'click'],
-        ['mouseenter', 'click', 'focusin', 'focusout', 'mouseleave', 'click'],
-        ['mouseenter', 'focusin', 'click', 'click', 'mouseleave', 'focusout']
+      ['click', 'focusin', 'mouseenter', 'focusout', 'mouseleave', 'click'],
+      ['mouseenter', 'click', 'focusin', 'focusout', 'mouseleave', 'click'],
+      ['mouseenter', 'focusin', 'click', 'click', 'mouseleave', 'focusout']
     ]
 
     assert.ok(!showingTooltip())

@@ -11,8 +11,6 @@ import Util from './util'
  */
 
 const MegaMenu = (() => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -56,7 +54,6 @@ const MegaMenu = (() => {
    */
 
   class MegaMenu {
-
     constructor(element, config) {
       this._element = element
       this._config = config
@@ -208,7 +205,6 @@ const MegaMenu = (() => {
           $thisTarget.parent().next().find('>.nav-link').trigger('focus')
           break
         default:
-          return
       }
     }
 
@@ -364,7 +360,6 @@ const MegaMenu = (() => {
   }
 
   return MegaMenu
-
 })($)
 
 export default MegaMenu

@@ -518,7 +518,6 @@ const Modal = (($) => {
       if ($ModalDialog) {
         $ModalDialog.attr('role', 'document')
       }
-
     }
     // end mod
 

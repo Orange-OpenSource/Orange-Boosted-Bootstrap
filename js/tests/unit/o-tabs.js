@@ -30,8 +30,7 @@ $(function () {
     $el.bootstrapOtab()
     try {
       $el.bootstrapOtab('noMethod')
-    }
-    catch (err) {
+    } catch (err) {
       assert.strictEqual(err.message, 'No method named "noMethod"')
     }
   })

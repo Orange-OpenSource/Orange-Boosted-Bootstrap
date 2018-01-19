@@ -29,8 +29,7 @@ $(function () {
     var $el = $('<div class="mega-menu"/>')
     try {
       $el.boostedMegaMenu('noid')
-    }
-    catch (err) {
+    } catch (err) {
       assert.strictEqual(err.message, 'Selector "noid" is not supported')
     }
   })
@@ -40,8 +39,7 @@ $(function () {
     var $el = $('<div/>')
     try {
       $el.boostedMegaMenu()
-    }
-    catch (err) {
+    } catch (err) {
       assert.strictEqual(err.message, 'Element is not a mega menu')
     }
   })

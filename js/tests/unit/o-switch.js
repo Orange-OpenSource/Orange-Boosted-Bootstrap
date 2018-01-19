@@ -47,5 +47,4 @@ $(function () {
     $toggle.bootstrapSwitch('toggle')
     assert.ok($input.prop('checked'), 'input is checked')
   })
-
 })

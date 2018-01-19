@@ -8,8 +8,6 @@ import $ from 'jquery'
  */
 
 const PriorityNav = (() => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -57,7 +55,6 @@ const PriorityNav = (() => {
    */
 
   class PriorityNav {
-
     constructor(element, config) {
       this._element = element
       this._config = config
@@ -114,7 +111,6 @@ const PriorityNav = (() => {
         const pos = $elm.position()
 
         if (pos.top !== firstPos.top) {
-
           // If element is wrapped, add it to set
           $wrappedElements = $wrappedElements.add($elm)
 
@@ -127,7 +123,6 @@ const PriorityNav = (() => {
       })
 
       if ($wrappedElements.length) {
-
         // Clone set before altering
         const newSet = $wrappedElements.clone()
 
@@ -158,7 +153,6 @@ const PriorityNav = (() => {
 
       // hide menu from AT
       this._$menu.find('.overflow-nav').attr('aria-hidden', true)
-
     }
 
     _tearDown() {
@@ -222,7 +216,6 @@ const PriorityNav = (() => {
   }
 
   return PriorityNav
-
 })($)
 
 export default PriorityNav

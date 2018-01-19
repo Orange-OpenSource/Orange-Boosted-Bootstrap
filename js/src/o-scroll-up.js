@@ -8,8 +8,6 @@ import $ from 'jquery'
  */
 
 const ScrollUp = (() => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -54,7 +52,6 @@ const ScrollUp = (() => {
    */
 
   class ScrollUp {
-
     constructor(element) {
       this._element       = element
       this._scrollElement = window
@@ -123,8 +120,6 @@ const ScrollUp = (() => {
         }
       })
     }
-
-
   }
 
 
@@ -157,7 +152,6 @@ const ScrollUp = (() => {
   }
 
   return ScrollUp
-
 })($)
 
 export default ScrollUp

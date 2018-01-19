@@ -10,8 +10,6 @@ import Util from './util'
  */
 
 const Navbar = (() => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -47,7 +45,6 @@ const Navbar = (() => {
    */
 
   class Navbar {
-
     constructor(element, config) {
       this._element         = element
       this._supraBar        = $(element).find(Selector.SUPRA_BAR)
@@ -137,7 +134,6 @@ const Navbar = (() => {
         }
       })
     }
-
   }
 
   /**
@@ -154,7 +150,6 @@ const Navbar = (() => {
   }
 
   return Navbar
-
 })($)
 
 export default Navbar

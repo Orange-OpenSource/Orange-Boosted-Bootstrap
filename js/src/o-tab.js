@@ -9,8 +9,6 @@ import Util from './util'
  */
 
 const Otab = (() => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -48,7 +46,6 @@ const Otab = (() => {
    */
 
   class Otab {
-
     constructor(element) {
       this._element = element
       this._addAccessibility()
@@ -166,7 +163,6 @@ const Otab = (() => {
   }
 
   return Otab
-
 })($)
 
 export default Otab
