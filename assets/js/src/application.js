@@ -109,14 +109,14 @@
         indexName: 'boosted-orange',
         inputSelector: '#search-input',
         handleSelected: function (input, event, suggestion) {
-          var url = suggestion.url;
-          url = suggestion.isLvl1 ? url.split('#')[0]: url;
+          var url = suggestion.url
+          url = suggestion.isLvl1 ? url.split('#')[0] : url
           // If it's a title we remove the anchor so it does not jump.
-          window.location.href = url;
+          window.location.href = url
         },
         transformData: function (hits) {
           return hits.map(function (hit) {
-            hit.url = hit.url.replace('http://boosted.orange.com/4.0/', '{{ site.baseurl }}/');
+            hit.url = hit.url.replace('http://boosted.orange.com/4.0/', '{{ site.baseurl }}/')
             return hit
           })
         },
