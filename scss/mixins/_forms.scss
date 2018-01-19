@@ -20,8 +20,8 @@
     @if $enable-shadows {
       box-shadow: $input-box-shadow, $input-focus-box-shadow;
     } @else {
-    // Boosted mod, remove box shadow!
-    //  box-shadow: $input-focus-box-shadow;
+      // Boosted mod, remove box shadow!
+      //  box-shadow: $input-focus-box-shadow;
     }
   }
 }

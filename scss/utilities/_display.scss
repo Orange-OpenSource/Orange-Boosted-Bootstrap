@@ -25,7 +25,7 @@
 // Utilities for toggling `display` in print
 //
 
-  @media print {
+@media print {
   .d-print-none         { display: none !important; }
   .d-print-inline       { display: inline !important; }
   .d-print-inline-block { display: inline-block !important; }
