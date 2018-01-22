@@ -53,7 +53,7 @@
     </a>
 
     <header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
-  <nav class="container">
+  <nav class="container-fluid">
     <a class="navbar-brand" href="/" aria-label="Boosted">
       <!-- Boosted mod change brand -->
       <img src="/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
@@ -77,11 +77,10 @@
           <li class="nav-item">
             <a class="nav-link " href="/docs/4.0/boostwatch/">Boostwatch</a>
           </li>
-          <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           <li class="nav-item dropdown">
-            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               v4.0
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -338,11 +337,14 @@
               Visibility
             </a></li></ul>
     </div><div class="bd-toc-item">
-      <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
+      <a class="bd-toc-link" href="/docs/4.0/extend/approach/">
         Extend
       </a>
 
       <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
+            </a></li><li>
             <a href="/docs/4.0/extend/icons/">
               Icons
             </a></li></ul>
@@ -396,8 +398,16 @@
 <li class="toc-entry toc-h2"><a href="#sass">Sass</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#file-structure">File structure</a></li>
+<li class="toc-entry toc-h3"><a href="#importing">Importing</a></li>
 <li class="toc-entry toc-h3"><a href="#variable-defaults">Variable defaults</a></li>
-<li class="toc-entry toc-h3"><a href="#maps-and-loops">Maps and loops</a></li>
+<li class="toc-entry toc-h3"><a href="#maps-and-loops">Maps and loops</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#modify-map">Modify map</a></li>
+<li class="toc-entry toc-h4"><a href="#add-to-map">Add to map</a></li>
+<li class="toc-entry toc-h4"><a href="#remove-from-map">Remove from map</a></li>
+<li class="toc-entry toc-h4"><a href="#required-keys">Required keys</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#functions">Functions</a></li>
 <li class="toc-entry toc-h3"><a href="#color-contrast">Color contrast</a></li>
 </ul>
@@ -414,6 +424,12 @@
 <ul>
 <li class="toc-entry toc-h3"><a href="#modifiers">Modifiers</a></li>
 <li class="toc-entry toc-h3"><a href="#responsive">Responsive</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#css-variables">CSS variables</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#available-variables">Available variables</a></li>
+<li class="toc-entry toc-h3"><a href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -457,6 +473,8 @@
     ├── js
     └── scss</code></pre></figure>
 
+<h3 id="importing">Importing</h3>
+
 <p>In your <code class="highlighter-rouge">custom.scss</code>, you’ll import Boosted’s source Sass files. You have two options: include all of Boosted, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
@@ -479,7 +497,7 @@
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/code"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/grid"</span><span class="p">;</span></code></pre></figure>
 
-<p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code class="highlighter-rouge">custom.scss</code>. You can also start to add parts of Boosted under the <code class="highlighter-rouge">// Optional</code> section as needed.</p>
+<p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code class="highlighter-rouge">custom.scss</code>. You can also start to add parts of Boosted under the <code class="highlighter-rouge">// Optional</code> section as needed. We suggest using the full import stack from our <code class="highlighter-rouge">boosted.scss</code> file as your starting point.</p>
 
 <h3 id="variable-defaults">Variable defaults</h3>
 
@@ -502,18 +520,36 @@
 
 <p>Boosted 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the <code class="highlighter-rouge">!default</code> flag and can be overridden and extended.</p>
 
-<p>For example, to modify an existing color in our <code class="highlighter-rouge">$theme-colors</code> map, add the following to your custom Sass file:</p>
+<p>Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making <em>removing</em> items from a map slightly more difficult.</p>
+
+<h4 id="modify-map">Modify map</h4>
+
+<p>To modify an existing color in our <code class="highlighter-rouge">$theme-colors</code> map, add the following to your custom Sass file:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"primary"</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="o">,</span>
   <span class="s2">"danger"</span><span class="o">:</span> <span class="mh">#ff4136</span>
 <span class="p">);</span></code></pre></figure>
 
+<h4 id="add-to-map">Add to map</h4>
+
 <p>To add a new color to <code class="highlighter-rouge">$theme-colors</code>, add the new key and value:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"custom-color"</span><span class="o">:</span> <span class="mh">#900</span>
 <span class="p">);</span></code></pre></figure>
+
+<h4 id="remove-from-map">Remove from map</h4>
+
+<p>To remove colors from <code class="highlighter-rouge">$theme-colors</code>, or any other map, use <code class="highlighter-rouge">map-remove</code>:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"success"</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"danger"</span><span class="p">);</span></code></pre></figure>
+
+<h4 id="required-keys">Required keys</h4>
+
+<p>Boosted assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map’s key is being used.</p>
+
+<p>For example, we use the <code class="highlighter-rouge">primary</code>, <code class="highlighter-rouge">success</code>, and <code class="highlighter-rouge">danger</code> keys from <code class="highlighter-rouge">$theme-colors</code> for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you’ll need to modify the Sass code that makes use of those values.</p>
 
 <h3 id="functions">Functions</h3>
 
@@ -623,7 +659,7 @@
     <tr>
       <td><code class="highlighter-rouge">$enable-hover-media-query</code></td>
       <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
-      <td>…</td>
+      <td><strong>Deprecated</strong></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">$enable-grid-classes</code></td>
@@ -861,6 +897,70 @@
 
 <p>Should you need to modify your <code class="highlighter-rouge">$grid-breakpoints</code>, your changes will apply to all the loops iterating over that map.</p>
 
+<h2 id="css-variables">CSS variables</h2>
+
+<p>Boosted 4 includes around two dozen <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS custom properties (variables)</a> in it’s compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser’s Inspector, a code sandbox, or general prototyping.</p>
+
+<h3 id="available-variables">Available variables</h3>
+
+<p>Here are the variables we include (note that the <code class="highlighter-rouge">:root</code> is required). They’re located in our <code class="highlighter-rouge">_root.scss</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--blue</span><span class="p">:</span> <span class="m">#527edb</span><span class="p">;</span>
+  <span class="py">--indigo</span><span class="p">:</span> <span class="m">#6610f2</span><span class="p">;</span>
+  <span class="py">--purple</span><span class="p">:</span> <span class="m">#a885d8</span><span class="p">;</span>
+  <span class="py">--pink</span><span class="p">:</span> <span class="m">#ffb4e6</span><span class="p">;</span>
+  <span class="py">--red</span><span class="p">:</span> <span class="m">#cd3c14</span><span class="p">;</span>
+  <span class="py">--orange</span><span class="p">:</span> <span class="m">#f16e00</span><span class="p">;</span>
+  <span class="py">--yellow</span><span class="p">:</span> <span class="m">#fc0</span><span class="p">;</span>
+  <span class="py">--green</span><span class="p">:</span> <span class="m">#32c832</span><span class="p">;</span>
+  <span class="py">--teal</span><span class="p">:</span> <span class="m">#50be87</span><span class="p">;</span>
+  <span class="py">--cyan</span><span class="p">:</span> <span class="m">#4BB4E6</span><span class="p">;</span>
+  <span class="py">--white</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="py">--gray</span><span class="p">:</span> <span class="m">#999</span><span class="p">;</span>
+  <span class="py">--gray-dark</span><span class="p">:</span> <span class="m">#595959</span><span class="p">;</span>
+  <span class="py">--primary</span><span class="p">:</span> <span class="m">#f16e00</span><span class="p">;</span>
+  <span class="py">--secondary</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="py">--success</span><span class="p">:</span> <span class="m">#32c832</span><span class="p">;</span>
+  <span class="py">--info</span><span class="p">:</span> <span class="m">#4BB4E6</span><span class="p">;</span>
+  <span class="py">--warning</span><span class="p">:</span> <span class="m">#fc0</span><span class="p">;</span>
+  <span class="py">--danger</span><span class="p">:</span> <span class="m">#cd3c14</span><span class="p">;</span>
+  <span class="py">--light</span><span class="p">:</span> <span class="m">#ddd</span><span class="p">;</span>
+  <span class="py">--dark</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="py">--breakpoint-xs</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="py">--breakpoint-sm</span><span class="p">:</span> <span class="m">480px</span><span class="p">;</span>
+  <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+  <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">980px</span><span class="p">;</span>
+  <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">1220px</span><span class="p">;</span>
+  <span class="py">--breakpoint-xxl</span><span class="p">:</span> <span class="m">1380px</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="s1">"HelvNeueOrange"</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">;</span>
+  <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="examples">Examples</h3>
+
+<p>CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">1rem</span><span class="p">/</span><span class="m">1.5</span> <span class="n">var</span><span class="p">(</span><span class="n">--font-family-sans-serif</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--blue</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>You can also use our breakpoint variables in your media queries:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.content-secondary</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">)))</span> <span class="p">{</span>
+  <span class="nc">.content-secondary</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
         </main>
       </div>
     </div>    
@@ -871,44 +971,30 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js" integrity="sha256-UD/M/6ixbHIPJ/hTwhb9IXbHG2nZSiB97b4BSSAVm6o=" crossorigin="anonymous"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  docsearch({
-    apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
-    indexName: 'boosted-orange',
-    inputSelector: '#search-input',
-    handleSelected: function (input, event, suggestion) {
-      var url = suggestion.url;
-      url = suggestion.isLvl1 ? url.split('#')[0]: url;
-      // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url;
-    },
-    transformData: function (hits) {
-      return hits.map(function (hit) {
-        hit.url = hit.url.replace('http://boosted.orange.com/4.0/', '/');
-        return hit;
-      });
-    },
-    debug: false // Set debug to true if you want to inspect the dropdown
-  });
-</script>
-<script src="/dist/js/vendor/swiper.min.js"></script>
+<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="/dist/js/vendor/swiper.min.js"></script>
 <script>
   new Swiper('.swiper-container', {
     // enable accessibility
     a11y: true,
-    keyboardControl: true,
+    keyboard: {
+      enabled: true
+    },
 
     // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
 
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
     spaceBetween: 10,
     slidesPerView: 'auto',
@@ -929,14 +1015,6 @@
   $('#collapsing-navbarHead').megamenu();
 
 </script><script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
-</script>
-<script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();

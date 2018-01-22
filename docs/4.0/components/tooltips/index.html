@@ -53,7 +53,7 @@
     </a>
 
     <header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
-  <nav class="container">
+  <nav class="container-fluid">
     <a class="navbar-brand" href="/" aria-label="Boosted">
       <!-- Boosted mod change brand -->
       <img src="/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
@@ -77,11 +77,10 @@
           <li class="nav-item">
             <a class="nav-link " href="/docs/4.0/boostwatch/">Boostwatch</a>
           </li>
-          <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           <li class="nav-item dropdown">
-            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               v4.0
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -338,11 +337,14 @@
               Visibility
             </a></li></ul>
     </div><div class="bd-toc-item">
-      <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
+      <a class="bd-toc-link" href="/docs/4.0/extend/approach/">
         Extend
       </a>
 
       <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
+            </a></li><li>
             <a href="/docs/4.0/extend/icons/">
               Icons
             </a></li></ul>
@@ -398,6 +400,7 @@
 <li class="toc-entry toc-h2"><a href="#usage">Usage</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#markup">Markup</a></li>
+<li class="toc-entry toc-h3"><a href="#disabled-elements">Disabled elements</a></li>
 <li class="toc-entry toc-h3"><a href="#options">Options</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#data-attributes-for-individual-tooltips">Data attributes for individual tooltips</a></li>
@@ -512,6 +515,8 @@
 <h5 id="making-tooltips-work-for-keyboard-and-assistive-technology-users">Making tooltips work for keyboard and assistive technology users</h5>
 
 <p>You should only add tooltips to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as <code class="highlighter-rouge">&lt;span&gt;</code>s) can be made focusable by adding the <code class="highlighter-rouge">tabindex="0"</code> attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users. In addition, most assistive technologies currently do not announce the tooltip in this situation.</p>
+
+<p>Additionally, do not rely solely on <code class="highlighter-rouge">hover</code> as the trigger for your tooltip, as this will make your tooltips impossible to trigger for keyboard users.</p>
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- HTML to write --&gt;</span>
@@ -524,6 +529,22 @@
     Some tooltip text!
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="disabled-elements">Disabled elements</h3>
+
+<p>Elements with the <code class="highlighter-rouge">disabled</code> attribute aren’t interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you’ll want to trigger the tooltip from a wrapper <code class="highlighter-rouge">&lt;div&gt;</code> or <code class="highlighter-rouge">&lt;span&gt;</code>, ideally made keyboard-focusable using <code class="highlighter-rouge">tabindex="0"</code>, and override the <code class="highlighter-rouge">pointer-events</code> on the disabled element.</p>
+
+<div class="tooltip-demo">
+
+<div class="bd-example">
+<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled="">Disabled button</button>
+</span>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block"</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">title=</span><span class="s">"Disabled tooltip"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
 
 <h3 id="options">Options</h3>
 
@@ -596,7 +617,7 @@
         <p>Base HTML to use when creating the tooltip.</p>
         <p>The tooltip's <code>title</code> will be injected into the <code>.tooltip-inner</code>.</p>
         <p><code>.arrow</code> will become the tooltip's arrow.</p>
-        <p>The outermost wrapper element should have the <code>.tooltip</code> class.</p>
+        <p>The outermost wrapper element should have the <code>.tooltip</code> class and <code>role="tooltip"</code>.</p>
       </td>
     </tr>
     <tr>
@@ -612,7 +633,11 @@
       <td>trigger</td>
       <td>string</td>
       <td>'hover focus'</td>
-      <td>How tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space. `manual` cannot be combined with any other trigger.</td>
+      <td>
+        <p>How tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</p>
+        <p><code>'manual'</code> indicates that the tooltip will be triggered programmatically via the <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> and <code>.tooltip('toggle')</code> methods; this value cannot be combined with any other trigger.</p>
+        <p><code>'hover'</code> on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present.</p>
+      </td>
     </tr>
     <tr>
       <td>offset</td>
@@ -752,44 +777,30 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js" integrity="sha256-UD/M/6ixbHIPJ/hTwhb9IXbHG2nZSiB97b4BSSAVm6o=" crossorigin="anonymous"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  docsearch({
-    apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
-    indexName: 'boosted-orange',
-    inputSelector: '#search-input',
-    handleSelected: function (input, event, suggestion) {
-      var url = suggestion.url;
-      url = suggestion.isLvl1 ? url.split('#')[0]: url;
-      // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url;
-    },
-    transformData: function (hits) {
-      return hits.map(function (hit) {
-        hit.url = hit.url.replace('http://boosted.orange.com/4.0/', '/');
-        return hit;
-      });
-    },
-    debug: false // Set debug to true if you want to inspect the dropdown
-  });
-</script>
-<script src="/dist/js/vendor/swiper.min.js"></script>
+<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="/dist/js/vendor/swiper.min.js"></script>
 <script>
   new Swiper('.swiper-container', {
     // enable accessibility
     a11y: true,
-    keyboardControl: true,
+    keyboard: {
+      enabled: true
+    },
 
     // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
 
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
     spaceBetween: 10,
     slidesPerView: 'auto',
@@ -810,14 +821,6 @@
   $('#collapsing-navbarHead').megamenu();
 
 </script><script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
-</script>
-<script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();

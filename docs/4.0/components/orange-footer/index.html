@@ -53,7 +53,7 @@
     </a>
 
     <header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
-  <nav class="container">
+  <nav class="container-fluid">
     <a class="navbar-brand" href="/" aria-label="Boosted">
       <!-- Boosted mod change brand -->
       <img src="/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
@@ -77,11 +77,10 @@
           <li class="nav-item">
             <a class="nav-link " href="/docs/4.0/boostwatch/">Boostwatch</a>
           </li>
-          <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           <li class="nav-item dropdown">
-            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               v4.0
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -338,11 +337,14 @@
               Visibility
             </a></li></ul>
     </div><div class="bd-toc-item">
-      <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
+      <a class="bd-toc-link" href="/docs/4.0/extend/approach/">
         Extend
       </a>
 
       <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
+            </a></li><li>
             <a href="/docs/4.0/extend/icons/">
               Icons
             </a></li></ul>
@@ -418,150 +420,150 @@ Each footer part must use a <code class="highlighter-rouge">.container-fluid</co
 
 <div class="bd-example">
 <footer class="o-footer" role="contentinfo">
-            <h1 class="sr-only">footer - site map &amp; informations</h1>
-            <div class="o-footer-top">
-                <div class="container-fluid">
-                    <ul class="nav">
-                        <li class="nav-item"><span class="nav-link">Follow us</span></li>
+    <h1 class="sr-only">footer - site map &amp; informations</h1>
+    <div class="o-footer-top">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="nav-item"><span class="nav-link">Follow us</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="o-footer-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h2>Discover</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Shop</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Services</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h2>Support</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="o-footer-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <h2>Discover</h2>
-                            <ul class="nav flex-column">
-                                <li><a href="#">Unde omnis istea</a></li>
-                                <li><a href="#">Natus error sit</a></li>
-                                <li><a href="#">Voluptatem</a></li>
-                                <li><a href="#">Totam rem aperiam</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <h2>Shop</h2>
-                            <ul class="nav flex-column">
-                                <li><a href="#">Natus error sit</a></li>
-                                <li><a href="#">Unde omnis istea</a></li>
-                                <li><a href="#">Voluptatem</a></li>
-                                <li><a href="#">Doloremque</a></li>
-                                <li><a href="#">Totam rem aperiam</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <h2>Services</h2>
-                            <ul class="nav flex-column">
-                                <li><a href="#">Doloremque</a></li>
-                                <li><a href="#">Totam rem aperiam</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <h2>Support</h2>
-                            <ul class="nav flex-column">
-                                <li><a href="#">Doloremque</a></li>
-                                <li><a href="#">Unde omnis istea</a></li>
-                                <li><a href="#">Voluptatem</a></li>
-                                <li><a href="#">Totam rem aperiam</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="o-footer-bottom">
-                <div class="container-fluid">
-                    <ul class="nav">
-                        <li class="nav-item"><span class="nav-link">© Orange 2018</span></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="o-footer-bottom">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="nav-item"><span class="nav-link">© Orange 2018</span></li>
+                <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"o-footer"</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>footer - site map <span class="err">&amp;</span> informations<span class="nt">&lt;/h1&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-footer-top"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>Follow us<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>footer - site map <span class="err">&amp;</span> informations<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-footer-top"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>Follow us<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-footer-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h2&gt;</span>Discover<span class="nt">&lt;/h2&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Unde omnis istea<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Natus error sit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voluptatem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h2&gt;</span>Shop<span class="nt">&lt;/h2&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Natus error sit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Unde omnis istea<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voluptatem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Doloremque<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h2&gt;</span>Services<span class="nt">&lt;/h2&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Doloremque<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h2&gt;</span>Support<span class="nt">&lt;/h2&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Doloremque<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Unde omnis istea<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voluptatem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                     <span class="nt">&lt;/ul&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-footer-body"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;h2&gt;</span>Discover<span class="nt">&lt;/h2&gt;</span>
-                            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Unde omnis istea<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Natus error sit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voluptatem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                            <span class="nt">&lt;/ul&gt;</span>
-                        <span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;h2&gt;</span>Shop<span class="nt">&lt;/h2&gt;</span>
-                            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Natus error sit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Unde omnis istea<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voluptatem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Doloremque<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                            <span class="nt">&lt;/ul&gt;</span>
-                        <span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;h2&gt;</span>Services<span class="nt">&lt;/h2&gt;</span>
-                            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Doloremque<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                            <span class="nt">&lt;/ul&gt;</span>
-                        <span class="nt">&lt;/div&gt;</span>
-                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 col-sm-6"</span><span class="nt">&gt;</span>
-                            <span class="nt">&lt;h2&gt;</span>Support<span class="nt">&lt;/h2&gt;</span>
-                            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav flex-column"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Doloremque<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Unde omnis istea<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Voluptatem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Totam rem aperiam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                            <span class="nt">&lt;/ul&gt;</span>
-                        <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;/div&gt;</span>
-                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Contact us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Locate a store<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Coverage map<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Business<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Child protection<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                    <span class="nt">&lt;/ul&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-footer-bottom"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>© Orange 2018<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Jobs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Advertise<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Terms <span class="err">&amp;</span> Conditions<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Privacy<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Cookies<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Access for all<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Safety online<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                    <span class="nt">&lt;/ul&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/footer&gt;</span></code></pre></div>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Contact us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Locate a store<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Coverage map<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Business<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Child protection<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"o-footer-bottom"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>© Orange 2018<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Jobs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Advertise<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Terms <span class="err">&amp;</span> Conditions<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Privacy<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Cookies<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Access for all<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Safety online<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span></code></pre></div>
 
         </main>
       </div>
@@ -573,44 +575,30 @@ Each footer part must use a <code class="highlighter-rouge">.container-fluid</co
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js" integrity="sha256-UD/M/6ixbHIPJ/hTwhb9IXbHG2nZSiB97b4BSSAVm6o=" crossorigin="anonymous"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  docsearch({
-    apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
-    indexName: 'boosted-orange',
-    inputSelector: '#search-input',
-    handleSelected: function (input, event, suggestion) {
-      var url = suggestion.url;
-      url = suggestion.isLvl1 ? url.split('#')[0]: url;
-      // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url;
-    },
-    transformData: function (hits) {
-      return hits.map(function (hit) {
-        hit.url = hit.url.replace('http://boosted.orange.com/4.0/', '/');
-        return hit;
-      });
-    },
-    debug: false // Set debug to true if you want to inspect the dropdown
-  });
-</script>
-<script src="/dist/js/vendor/swiper.min.js"></script>
+<!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="/dist/js/vendor/swiper.min.js"></script>
 <script>
   new Swiper('.swiper-container', {
     // enable accessibility
     a11y: true,
-    keyboardControl: true,
+    keyboard: {
+      enabled: true
+    },
 
     // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
 
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
     spaceBetween: 10,
     slidesPerView: 'auto',
@@ -631,14 +619,6 @@ Each footer part must use a <code class="highlighter-rouge">.container-fluid</co
   $('#collapsing-navbarHead').megamenu();
 
 </script><script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
-</script>
-<script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();

@@ -2,13 +2,10 @@
   'use strict'
 
   $(function () {
-
     $('[href="#"]').click(function (e) {
       e.preventDefault()
     })
-
     $(document).ready(function () {
-
       // init megamenu demo
       $('.mega-menu.panel').megamenu()
     })
@@ -16,13 +13,14 @@
 }(jQuery));
 
 (function () {
-
   'use strict'
 
   function isElementInViewport(el, topOffset) {
     var rect = el.getBoundingClientRect()
 
-    if (!topOffset) { topOffset = 0 }
+    if (!topOffset) {
+      topOffset = 0
+    }
 
     return rect.bottom > topOffset &&
            rect.right > 0 &&
@@ -33,7 +31,6 @@
   function onSidebarVisibilityChange(el) {
     if (el) {
       return function () {
-
         var sidebar = document.getElementById('docsNavbarContent')
 
         if (isElementInViewport(el)) {
@@ -45,12 +42,14 @@
         }
       }
     }
+    return function () {
+      return true
+    }
   }
 
   function onFooterVisibilityChange(el, scrollTopElm, defaultPos) {
     if (el && window.innerWidth > 768) {
       return function () {
-
         var footerRect = el.getBoundingClientRect()
 
         if (isElementInViewport(el)) {
@@ -59,6 +58,9 @@
           scrollTopElm.style.bottom = defaultPos
         }
       }
+    }
+    return function () {
+      return true
     }
   }
 
@@ -83,10 +85,14 @@
       if (window.innerWidth > 768) {
         addEventListener('scroll', pageWatcher, false)
       }
-      if (footerWatcher) { addEventListener('scroll', footerWatcher, false) }
+      if (footerWatcher) {
+        addEventListener('scroll', footerWatcher, false)
+      }
     } else if (window.attachEvent) {
       window.attachEvent('onscroll', pageWatcher)
-      if (footerWatcher) { window.attachEvent('scroll', footerWatcher) }
+      if (footerWatcher) {
+        window.attachEvent('scroll', footerWatcher)
+      }
     }
   }
 }())

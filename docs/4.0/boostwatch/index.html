@@ -51,7 +51,7 @@
     </a>
 
     <header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
-  <nav class="container">
+  <nav class="container-fluid">
     <a class="navbar-brand" href="/" aria-label="Boosted">
       <!-- Boosted mod change brand -->
       <img src="/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
@@ -75,11 +75,10 @@
           <li class="nav-item">
             <a class="nav-link active" href="/docs/4.0/boostwatch/">Boostwatch</a>
           </li>
-          <li class="nav-item" id="id-li-for-cdu"></li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           <li class="nav-item dropdown">
-            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               v4.0
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -180,45 +179,45 @@
           <h2 id="accordion">Accordions<a class="doc-link" href="../components/collapse/#accordion-example" title="go to accordion documentation page"></a></h2>
 
 <h3>One at a time</h3>
-<div id="accordion-1" role="tablist" class="o-accordion">
+<div id="accordion-1" class="o-accordion">
   <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
+    <div class="card-header" id="headingOne">
       <h5>
-        <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
           Collapsible Group Item #1
         </a>
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" data-parent="#accordion-1" class="collapse show" aria-labelledby="headingOne">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
+    <div class="card-header" id="headingTwo">
       <h5>
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
           Collapsible Group Item #2
         </a>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+    <div id="collapseTwo" data-parent="#accordion-1" class="collapse" aria-labelledby="headingTwo">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingThree">
+    <div class="card-header" id="headingThree">
       <h5>
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
           Collapsible Group Item #3
         </a>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+    <div id="collapseThree" data-parent="#accordion-1" class="collapse" aria-labelledby="headingThree">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
@@ -227,45 +226,45 @@
 </div>
 
 <h3 id="accordion2">Multiple openable</h3>
-<div id="accordion-2" role="tablist"  aria-multiselectable="true" class="o-accordion">
+<div id="accordion-2"  aria-multiselectable="true" class="o-accordion">
   <div class="card multi">
-    <div class="card-header" role="tab" id="headingOne-1">
+    <div class="card-header" id="headingOne-1">
       <h5>
-        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+        <a data-toggle="collapse" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1" role="button">
           Collapsible Group Item #1
         </a>
       </h5>
     </div>
 
-    <div id="collapseOne-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne-1">
+    <div id="collapseOne-1" data-parent="#accordion-2" class="collapse show" aria-labelledby="headingOne-1">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
   <div class="card multi">
-    <div class="card-header" role="tab" id="headingTwo-1">
+    <div class="card-header" id="headingTwo-1">
       <h5>
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapseTwo-1" aria-expanded="false" aria-controls="collapseTwo-1">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo-1" aria-expanded="false" aria-controls="collapseTwo-1" role="button">
           Collapsible Group Item #2
         </a>
       </h5>
     </div>
-    <div id="collapseTwo-1" class="collapse" role="tabpanel" aria-labelledby="headingTwo-1">
+    <div id="collapseTwo-1" data-parent="#accordion-2" class="collapse" aria-labelledby="headingTwo-1">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
   <div class="card multi">
-    <div class="card-header" role="tab" id="headingThree-1">
+    <div class="card-header" id="headingThree-1">
       <h5>
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapseThree-1" aria-expanded="false" aria-controls="collapseThree-1">
+        <a class="collapsed" data-toggle="collapse" href="#collapseThree-1" aria-expanded="false" aria-controls="collapseThree-1" role="button">
           Collapsible Group Item #3
         </a>
       </h5>
     </div>
-    <div id="collapseThree-1" class="collapse" role="tabpanel" aria-labelledby="headingThree-1">
+    <div id="collapseThree-1" data-parent="#accordion-2" class="collapse" aria-labelledby="headingThree-1">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
@@ -671,36 +670,36 @@
                 <div class="col-md-3 col-sm-6">
                     <h2>Discover</h2>
                     <ul class="nav flex-column">
-                        <li><a href="#">Unde omnis istea</a></li>
-                        <li><a href="#">Natus error sit</a></li>
-                        <li><a href="#">Voluptatem</a></li>
-                        <li><a href="#">Totam rem aperiam</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2>Shop</h2>
                     <ul class="nav flex-column">
-                        <li><a href="#">Natus error sit</a></li>
-                        <li><a href="#">Unde omnis istea</a></li>
-                        <li><a href="#">Voluptatem</a></li>
-                        <li><a href="#">Doloremque</a></li>
-                        <li><a href="#">Totam rem aperiam</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2>Services</h2>
                     <ul class="nav flex-column">
-                        <li><a href="#">Doloremque</a></li>
-                        <li><a href="#">Totam rem aperiam</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2>Support</h2>
                     <ul class="nav flex-column">
-                        <li><a href="#">Doloremque</a></li>
-                        <li><a href="#">Unde omnis istea</a></li>
-                        <li><a href="#">Voluptatem</a></li>
-                        <li><a href="#">Totam rem aperiam</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                     </ul>
                 </div>
             </div>
@@ -1329,39 +1328,35 @@ Buttons + Back/Next labels
 <h2 id="progress">Progress bars<a class="doc-link" href="../components/progress/" title="go to progress documentation page"></a></h2>
 
 <h3 id="progress-basic">Basic</h3>
-<div class="bd-example" data-example-id="">
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 
 <h3 id="progress-alternatives">Contextual alternatives</h3>
-<div class="bd-example" data-example-id="">
-  <div class="progress">
-    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
+<div class="progress">
+  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 <h2 id="stepbar">Stepbar<a class="doc-link" href="../components/stepbar/" title="go to step bar documentation page"></a></h2>
@@ -1873,7 +1868,7 @@ Buttons + Back/Next labels
 <h3 id="complextable">Sortable table</h3>
 <div class="container-fluid">
   <div class="row">
-    <table id="myTable" class="table tablesorter">
+    <table id="myTable" class="table tablesorter table-responsive col-12">
       <caption>Calls received</caption>
       <thead class="cf">
         <tr>
@@ -2253,8 +2248,8 @@ Buttons + Back/Next labels
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js" integrity="sha256-UD/M/6ixbHIPJ/hTwhb9IXbHG2nZSiB97b4BSSAVm6o=" crossorigin="anonymous"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/boosted.min.js"></script><!-- boosted mod -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
 <!-- end mod --><script src="/assets/js/docs.min.js"></script><script src="/dist/js/vendor/swiper.min.js"></script>
 <script>
@@ -2272,15 +2267,23 @@ Buttons + Back/Next labels
   new Swiper('.swiper-container', {
     // enable accessibility
     a11y: true,
-    keyboardControl: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    },
 
     // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
 
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
     spaceBetween: 10,
     slidesPerView: 'auto',
@@ -2289,7 +2292,10 @@ Buttons + Back/Next labels
 
     breakpoints: {
         767: {
-            paginationClickable: false,
+            // If we need pagination
+            pagination: {
+              clickable: false
+            },
             freeMode: true, // disable for centered mode
             freeModeMomentumRatio: .5,
             centeredSlides: false, // enable for centered mode
@@ -2298,14 +2304,6 @@ Buttons + Back/Next labels
     }
 })
 </script><script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
-</script>
-<script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();

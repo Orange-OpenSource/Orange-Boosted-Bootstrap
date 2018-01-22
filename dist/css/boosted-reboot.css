@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v4.0.0-beta.3 (http://boosted.orange.com)
+ * Boosted Reboot v4.0.0 (http://boosted.orange.com)
  * Copyright 2014-2018 The Boosted Authors
  * Copyright 2014-2018 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Reboot v4.0.0-beta.3 (https://getbootstrap.com)
+ * Bootstrap Reboot v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -164,7 +164,7 @@ p a {
   text-decoration: underline;
 }
 
-p a:focus, p a:hover {
+p a:hover, p a:focus {
   text-decoration: underline;
 }
 
@@ -173,7 +173,7 @@ a:not([href]):not([tabindex]) {
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
   color: inherit;
   text-decoration: none;
 }
@@ -208,19 +208,6 @@ img {
 
 svg:not(:root) {
   overflow: hidden;
-}
-
-a,
-area,
-button,
-[role="button"],
-input:not([type="range"]),
-label,
-select,
-summary,
-textarea {
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
 }
 
 table {

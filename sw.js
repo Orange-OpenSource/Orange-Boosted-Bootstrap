@@ -24,7 +24,7 @@ workboxSW.precache([
   },
   {
     "url": "assets/css/docs.min.css",
-    "revision": "b2ecf45f44df92d8e4aef4d5a4c9f100"
+    "revision": "5a960eba569df4978e23799403954cd4"
   },
   {
     "url": "assets/img/arbo_zip.png",
@@ -212,23 +212,23 @@ workboxSW.precache([
   },
   {
     "url": "assets/js/docs.min.js",
-    "revision": "d392885e9b2b691bb2ff1cdcfa683139"
+    "revision": "c8274aaa4b2088a30a6c09d0730fb3e1"
   },
   {
     "url": "assets/js/src/application-boosted.js",
-    "revision": "a0c84c5f2b9eecfa8a1819253bb54c59"
+    "revision": "ac06d7a0b6cb70d2d412bc5bae7063f7"
   },
   {
     "url": "assets/js/src/application.js",
-    "revision": "5f0e90ef7a987bd12a7f13d030b2a202"
+    "revision": "5f0e3dc23af51b4434169756bbde1028"
   },
   {
     "url": "assets/js/src/ie-emulation-modes-warning.js",
-    "revision": "cd93c9a569232ea30bb22244eebff1e0"
+    "revision": "fe80ecce8d355bac77f7bd95639ad04a"
   },
   {
     "url": "assets/js/src/pwa.js",
-    "revision": "e707568440725d56f34b93b0bb2350a4"
+    "revision": "4de108c33799a18cec3362c52e333eff"
   },
   {
     "url": "assets/js/vendor/anchor.min.js",
@@ -248,7 +248,7 @@ workboxSW.precache([
   },
   {
     "url": "assets/js/vendor/jquery.tablesorter.min.js",
-    "revision": "096f8307a0ada79a93a6a95f46022a5a"
+    "revision": "8e0586b3eb8fbe9644dab492f85c6ed7"
   },
   {
     "url": "assets/js/vendor/popper.min.js",
@@ -260,35 +260,35 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/boosted-grid.css",
-    "revision": "d5f69e80079c21bacf4c7f331e15bcb1"
+    "revision": "237b9d6a3940c1a90defff1d88132a02"
   },
   {
     "url": "dist/css/boosted-grid.min.css",
-    "revision": "20d0e7013c0c7fa743ffd7097c80702f"
+    "revision": "c5a7de8a0abc8dc07d531b4db589ab3b"
   },
   {
     "url": "dist/css/boosted-reboot.css",
-    "revision": "627065c3450fcfe8850f565695bd162f"
+    "revision": "fba017ddcf91d79895f7c988e053d454"
   },
   {
     "url": "dist/css/boosted-reboot.min.css",
-    "revision": "215b0a22a9a85a48e52f8e31650ed118"
+    "revision": "5eb3057ea149a9228428be937bb5037f"
   },
   {
     "url": "dist/css/boosted-rtl.css",
-    "revision": "356a107a61f2943f7da951559f9ace39"
+    "revision": "54fa28ae5dc79ffd4244d73899d72765"
   },
   {
     "url": "dist/css/boosted-rtl.min.css",
-    "revision": "26219fd8fa1cf5c80897cbdcf8cb57d0"
+    "revision": "5196e6aa1f2d3ce2fc9ba16afa0e070f"
   },
   {
     "url": "dist/css/boosted.css",
-    "revision": "0d42876529be686dcd422a819e3a3268"
+    "revision": "aea27f21842b462a63718ae5298cc48e"
   },
   {
     "url": "dist/css/boosted.min.css",
-    "revision": "659b424211e3fb4a9412142c116d9617"
+    "revision": "88b60eb89bc10d240c98bb074183821d"
   },
   {
     "url": "dist/css/o-rtl.css",
@@ -304,15 +304,15 @@ workboxSW.precache([
   },
   {
     "url": "dist/css/orangeIcons.css",
-    "revision": "cc6cf720ad34c6da214c622faa0f993c"
+    "revision": "444f5ef59b319f85e3e213450d864719"
   },
   {
     "url": "dist/css/orangeIcons.min.css",
-    "revision": "fac8015e7745761b210140a54a6cb913"
+    "revision": "ebcb39c13ca304afb3b8920fc9465499"
   },
   {
     "url": "dist/css/vendor/swiper.min.css",
-    "revision": "6af34d0737ad0ca608111771cf74cc79"
+    "revision": "319f20c8f06461463f24bfc703551a18"
   },
   {
     "url": "dist/fonts/HelvNeue55_W1G.svg",
@@ -332,39 +332,35 @@ workboxSW.precache([
   },
   {
     "url": "dist/js/boosted.bundle.js",
-    "revision": "0002b540367a663f6abda11972cd231f"
+    "revision": "56d4c7543532e34874828424f4f7e75f"
   },
   {
     "url": "dist/js/boosted.bundle.min.js",
-    "revision": "41a24049a205d29a0a374cd0c827a11c"
+    "revision": "a89b43ba69b9edbf856f71b32b913138"
   },
   {
     "url": "dist/js/boosted.js",
-    "revision": "660cb97bfdcf87cc4b731cfb66ae2ed0"
+    "revision": "767321e8d58e85077179be3d648e89e7"
   },
   {
     "url": "dist/js/boosted.min.js",
-    "revision": "7a7b7389d63d4ac00e9ea7c139cd78ab"
-  },
-  {
-    "url": "dist/js/vendor/jquery.tablesorter.js",
-    "revision": "c92115b2aeec2061352d69f0c75e9a7f"
+    "revision": "e43d8739815f6db200f210cccdc380b6"
   },
   {
     "url": "dist/js/vendor/swiper.min.js",
-    "revision": "fb13ef3e875ca3497ede35d3774be9d3"
+    "revision": "536e7e8546e721c00136ee65fcf9ec53"
   },
   {
     "url": "docs/4.0/about/boosted-history/index.html",
-    "revision": "6d6ce1c5183a411910203db74a11b565"
+    "revision": "c0562d3bbe6067c9cb782f1f02de3173"
   },
   {
     "url": "docs/4.0/about/boosted-license/index.html",
-    "revision": "c3f9a6e59273b450a6ad54cdf4f68669"
+    "revision": "e37cdc4bd4e3995038f6d0a0d94e0cd6"
   },
   {
     "url": "docs/4.0/about/brand/index.html",
-    "revision": "9299bd7553978a8c88fbc77710f55df2"
+    "revision": "1ffe559bce8a85f87a9b84c74af67bbf"
   },
   {
     "url": "docs/4.0/about/index.html",
@@ -372,75 +368,75 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/about/license/index.html",
-    "revision": "fd668f75fd6293a88dd7f971d3ff0cbe"
+    "revision": "90a35aa21915093f0aafc7792e7253d4"
   },
   {
     "url": "docs/4.0/about/orange-brand/index.html",
-    "revision": "585e6fc926b68417e85a9ea79357f869"
+    "revision": "c4b2c2347239b09ff3f8cd0d825bc5ab"
   },
   {
     "url": "docs/4.0/about/overview/index.html",
-    "revision": "9e8cd9707f2ca912fa8ef9200dcfc628"
+    "revision": "d15d4e29adcb6cfa2b4b25943d95d82d"
   },
   {
     "url": "docs/4.0/about/translations/index.html",
-    "revision": "4e01af8d9de1b3af59dba50a3768a7aa"
+    "revision": "da03a221e932e5d480fa99c01c286dc4"
   },
   {
     "url": "docs/4.0/boosted-migration/index.html",
-    "revision": "aba102fc513dfc2147bfafa4e878bcb6"
+    "revision": "b821bf0ed63802add5db8fff7e970bf2"
   },
   {
     "url": "docs/4.0/boostwatch/index.html",
-    "revision": "674179229916f374b2266737881695c2"
+    "revision": "26937c6f7d060fc1246defbcfac37d37"
   },
   {
     "url": "docs/4.0/browser-bugs/index.html",
-    "revision": "cb8f1eb45568b7d9704111ee84abf630"
+    "revision": "1198ee3917b9aeb32387fda636150317"
   },
   {
     "url": "docs/4.0/components/alerts/index.html",
-    "revision": "86838d32572ec219979ec25469dcb4d5"
+    "revision": "04a15e1a8cd8fc3142d96128a4354cf8"
   },
   {
     "url": "docs/4.0/components/badge/index.html",
-    "revision": "f2da693f0cb6e81372ee83952fe3ff96"
+    "revision": "d019817964cdf62ec3740d5c1628e0c0"
   },
   {
     "url": "docs/4.0/components/breadcrumb/index.html",
-    "revision": "1727959059f718a9113d69f1f833361b"
+    "revision": "ec303bc182bac2a4851920f7c462e390"
   },
   {
     "url": "docs/4.0/components/button-group/index.html",
-    "revision": "fd2f908ff08a19b1dd06d08912d5d641"
+    "revision": "3a5e9f2f3fdbdcab70da010b3e7f0d8d"
   },
   {
     "url": "docs/4.0/components/buttons/index.html",
-    "revision": "2c2214f242b21a2d3a70d0ce310ae282"
+    "revision": "43416af08acedc0e99ed6c6c9603c0a1"
   },
   {
     "url": "docs/4.0/components/card/index.html",
-    "revision": "a929433ef43b5040e97f003e3b76578f"
+    "revision": "6d2b715f080ef52323a95c22bb67597f"
   },
   {
     "url": "docs/4.0/components/carousel/index.html",
-    "revision": "717b93d632d4dd98bf272b3834a435cb"
+    "revision": "55d748b3d052ec43835945592309a4e0"
   },
   {
     "url": "docs/4.0/components/collapse/index.html",
-    "revision": "470eabd94d13f5b3d217faa0e9cf8a66"
+    "revision": "05d01ce2654cec9654263f25669b9b17"
   },
   {
     "url": "docs/4.0/components/custom-carousel/index.html",
-    "revision": "fbb109b780da1d610df8344f47bde4e3"
+    "revision": "17370a05206d7b44381b91c86d46f5ed"
   },
   {
     "url": "docs/4.0/components/dropdowns/index.html",
-    "revision": "973e173c2f739e22b8c03ca35ff22a3f"
+    "revision": "45e329eeeae7a7db5904858d1372f1a4"
   },
   {
     "url": "docs/4.0/components/forms/index.html",
-    "revision": "ab03b9976c897df86320507db1eb914c"
+    "revision": "4a05ac5152060a421b99294efcce62ed"
   },
   {
     "url": "docs/4.0/components/index.html",
@@ -448,91 +444,91 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/input-group/index.html",
-    "revision": "af522c78b45a33dbf0c8d3d60c24a846"
+    "revision": "2fb6abe489ccd75116c6e6159650e89b"
   },
   {
     "url": "docs/4.0/components/jumbotron/index.html",
-    "revision": "86948e4a09f76e9ef40c356aa0e39488"
+    "revision": "b44aa790dfa78cbdf464a26eb65d4e96"
   },
   {
     "url": "docs/4.0/components/list-group/index.html",
-    "revision": "fcd60b4dcc4f4ecb8292a424432f57a9"
+    "revision": "877d6087b8b6789995a0117e1f8a146a"
   },
   {
     "url": "docs/4.0/components/local-navigation/index.html",
-    "revision": "c41d683e449372d0b8831e668f01a902"
+    "revision": "04ce40532a9f95982a296ba1dfe24dfe"
   },
   {
     "url": "docs/4.0/components/modal/index.html",
-    "revision": "a665b9528e57e24e40fb3e498a1903ff"
+    "revision": "0771567a95a556eb21138ea47999e19c"
   },
   {
     "url": "docs/4.0/components/navbar-orange/index.html",
-    "revision": "82d513c63077725eb47ef81f3ff429ec"
+    "revision": "f2aaae7b9899cdf34e5ab0ea87bae479"
   },
   {
     "url": "docs/4.0/components/navbar/index.html",
-    "revision": "f4516c78b563b91dff37bc30953fec7e"
+    "revision": "2b0f3d16aa0f3dcfb6892a58cebb517a"
   },
   {
     "url": "docs/4.0/components/navs/index.html",
-    "revision": "0437d5f64a259e1954d4a619885eb0c2"
+    "revision": "72bed607d57a137e23e90b7e70c743f6"
   },
   {
     "url": "docs/4.0/components/orange-footer/index.html",
-    "revision": "d2e3a3985a241e8113ad7c5cc326812f"
+    "revision": "d22842271cfc6f27f667c43ab7ad6fad"
   },
   {
     "url": "docs/4.0/components/orange-megamenu/index.html",
-    "revision": "3a1b6f3fc15f865e8dc2b422f6b04872"
+    "revision": "a4ee1d50358569cab86de478ce2de3a0"
   },
   {
     "url": "docs/4.0/components/orange-popin/index.html",
-    "revision": "20b4fdd094901e96a564a9c7cd0b4959"
+    "revision": "bc30074fa33e80035f745175c34fab1f"
   },
   {
     "url": "docs/4.0/components/pagination/index.html",
-    "revision": "b6e97e6fb82cf97a72e1834a04b6495a"
+    "revision": "3b9ab33f9d1b97ce6ab760621f91bb19"
   },
   {
     "url": "docs/4.0/components/popovers/index.html",
-    "revision": "81b2cc9734ac077729291c082998107c"
+    "revision": "e9de159f916a9e5c857ee920a5692ee4"
   },
   {
     "url": "docs/4.0/components/priority-nav/index.html",
-    "revision": "c0e53ef95ee95c6ad030871f34d1b7f7"
+    "revision": "5c7952823cf569ec1060dca54e54f1f1"
   },
   {
     "url": "docs/4.0/components/progress/index.html",
-    "revision": "9a8b907355b0b6095a62711bca3d61d7"
+    "revision": "0bb3a1c34dc4b142786a77698bc9478e"
   },
   {
     "url": "docs/4.0/components/scroll-up/index.html",
-    "revision": "77c2f3692111b837511144f85ae6261e"
+    "revision": "f06afb8d10198992640966e9a295388a"
   },
   {
     "url": "docs/4.0/components/scrollspy/index.html",
-    "revision": "7e29f1ed55a55a6021c7d4497d27d93f"
+    "revision": "9e292c5985304beb29f98c4b2df1049a"
   },
   {
     "url": "docs/4.0/components/stepbar/index.html",
-    "revision": "c72afc1beaf8d4c48afa1481f6e9dd37"
+    "revision": "2ab92431cd04bb174c2557c6f41e631c"
   },
   {
     "url": "docs/4.0/components/tooltips/index.html",
-    "revision": "87558b69774f7ca7a03fe8c492fd8ba0"
+    "revision": "8ab0a4a050e1bfa61e08c6ecaa3bb3f0"
   },
   {
     "url": "docs/4.0/content/code/index.html",
-    "revision": "0a62467373fafc56402bea67d463fbad"
+    "revision": "ec1f5d8fcb39c87e89bbe18d207332ae"
   },
   {
     "url": "docs/4.0/content/figures/index.html",
-    "revision": "3170f47f33d8e9a2f608598a55d5a608"
+    "revision": "567910d706ee3dc9b0ead1ff42968df0"
   },
   {
     "url": "docs/4.0/content/images/index.html",
-    "revision": "14a5b492616e2662139cdd87c34ac6ed"
+    "revision": "63e359a1c2cad74b5803467936bb5c57"
   },
   {
     "url": "docs/4.0/content/index.html",
@@ -540,31 +536,59 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/content/reboot/index.html",
-    "revision": "56395d33b39bd5a3759fe276e2d59e10"
+    "revision": "d270dabe6d7eaae8bd3f4e11d6106526"
   },
   {
     "url": "docs/4.0/content/tables/index.html",
-    "revision": "564f44f3c2d4460cb7edbc5061b1fd22"
+    "revision": "a0f9e6ee935dd679b5756b1b22007f37"
   },
   {
     "url": "docs/4.0/content/typography/index.html",
-    "revision": "7288b58c2c6fdb93b724c4cae778571c"
+    "revision": "5d3dbf99773c5c7d3997a34834ab1ffe"
+  },
+  {
+    "url": "docs/4.0/examples/administration-edition-page/example.css",
+    "revision": "8a43544b65e06b9408f16598477e0b07"
+  },
+  {
+    "url": "docs/4.0/examples/administration-edition-page/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/administration-edition-page/index.html",
+    "revision": "5e3e01429f08bb7ade5033cdcf622f10"
+  },
+  {
+    "url": "docs/4.0/examples/administration-mainpage/edit.html",
+    "revision": "5e3e01429f08bb7ade5033cdcf622f10"
+  },
+  {
+    "url": "docs/4.0/examples/administration-mainpage/example.css",
+    "revision": "8a43544b65e06b9408f16598477e0b07"
+  },
+  {
+    "url": "docs/4.0/examples/administration-mainpage/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/administration-mainpage/index.html",
+    "revision": "bc3db475875944886f4405f9ec638b63"
   },
   {
     "url": "docs/4.0/examples/album/album.css",
-    "revision": "c55364aec72e931ec6e447fef8d7d1fb"
+    "revision": "e8343131a0fefafe6ae0f37db6d10f3c"
   },
   {
     "url": "docs/4.0/examples/album/index.html",
-    "revision": "bb28d1fe39e62753497973c2a812b69c"
+    "revision": "cc82d3a9ec2814baa23ca31c23e0e943"
   },
   {
     "url": "docs/4.0/examples/blog/blog.css",
-    "revision": "750f2ac42509b1d901295d087cac5ef6"
+    "revision": "cb98d3e8033940a716641516d2cb857b"
   },
   {
     "url": "docs/4.0/examples/blog/index.html",
-    "revision": "4042ac64414aedcf6435d82f40624290"
+    "revision": "6226a24678950a6dc509b7700d2f5abf"
   },
   {
     "url": "docs/4.0/examples/carousel/carousel.css",
@@ -572,23 +596,63 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/carousel/index.html",
-    "revision": "99b151f41e1ea0f882c07742851f5d6f"
+    "revision": "ce61cd4e21cc38fa5dece2a89eee98f2"
+  },
+  {
+    "url": "docs/4.0/examples/checkout/form-validation.css",
+    "revision": "d13d35a0c04021ceacd8c153719860bc"
+  },
+  {
+    "url": "docs/4.0/examples/checkout/index.html",
+    "revision": "ed3b8f509d2f98468aaa29ed3684559b"
+  },
+  {
+    "url": "docs/4.0/examples/content-panel/css/style006.css",
+    "revision": "e271c5f3c5ebf3c1d545c20543cdcac7"
+  },
+  {
+    "url": "docs/4.0/examples/content-panel/index.html",
+    "revision": "6d22f7f4ff9b6b22c49e346afa58de01"
   },
   {
     "url": "docs/4.0/examples/cover/cover.css",
-    "revision": "1d0127b6309e72780dd3e87093a9d7e3"
+    "revision": "61f7cbbe930976e62264268abe51ebd3"
   },
   {
     "url": "docs/4.0/examples/cover/index.html",
-    "revision": "5365e8d8b7862595ad2cfc5db006d019"
+    "revision": "d266ba3fa12be277149c47566af07c91"
+  },
+  {
+    "url": "docs/4.0/examples/dashboard-orange-branded/gabarit.css",
+    "revision": "c4bd3d14aefa5295f333b21a3d717954"
+  },
+  {
+    "url": "docs/4.0/examples/dashboard-orange-branded/images/Cancel.png",
+    "revision": "1c07cf2e5ed7fee1e38a51a6d708d936"
+  },
+  {
+    "url": "docs/4.0/examples/dashboard-orange-branded/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/dashboard-orange-branded/images/Ok.png",
+    "revision": "42065eff02ab72c2e8a15e56db793fae"
+  },
+  {
+    "url": "docs/4.0/examples/dashboard-orange-branded/images/Warning.png",
+    "revision": "63ad763bb2a0e5cc63d54a9c1e578f6a"
+  },
+  {
+    "url": "docs/4.0/examples/dashboard-orange-branded/index.html",
+    "revision": "851ad4574d5d2b1edf6003b92a322f74"
   },
   {
     "url": "docs/4.0/examples/dashboard/dashboard.css",
-    "revision": "cea2ce48e209721ca537d8ffcad510b9"
+    "revision": "a04ae1b7ceba4aaeb3bc7fe3c72a6d40"
   },
   {
     "url": "docs/4.0/examples/dashboard/index.html",
-    "revision": "5ae82fe1d819044317ea7efea924d79c"
+    "revision": "c48eea4b3ee09340c7fca33a00ae431a"
   },
   {
     "url": "docs/4.0/examples/demo/assets/bill.png",
@@ -631,6 +695,14 @@ workboxSW.precache([
     "revision": "570bde5177c94f2cd9861ccaaa5133dc"
   },
   {
+    "url": "docs/4.0/examples/floating-labels/floating-labels.css",
+    "revision": "5a7fc5962d7981d2c5f9af28f785a0c5"
+  },
+  {
+    "url": "docs/4.0/examples/floating-labels/index.html",
+    "revision": "618c90e9674cbcc188038d9d39856040"
+  },
+  {
     "url": "docs/4.0/examples/grid/grid.css",
     "revision": "4cd2e5cc5e19dc692d50ed6f077154ef"
   },
@@ -640,106 +712,34 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/index.html",
-    "revision": "540bb0f6660da9abf5c940d375bf9686"
+    "revision": "fdb7500236d91e78440414e0e4cb5473"
   },
   {
     "url": "docs/4.0/examples/jumbotron/index.html",
-    "revision": "fbaac93d33e537054bfaa13a1b6f0717"
+    "revision": "790880d1ce23d92f0e95366e0b840a72"
   },
   {
     "url": "docs/4.0/examples/jumbotron/jumbotron.css",
     "revision": "0ef7edc6babea5a47645bda0c45368aa"
   },
   {
-    "url": "docs/4.0/examples/justified-nav/index.html",
-    "revision": "ee1f0723945c6b9ca966c9d06e7325bf"
-  },
-  {
-    "url": "docs/4.0/examples/justified-nav/justified-nav.css",
-    "revision": "74b0be6ad3b421b43288545b9628253f"
-  },
-  {
-    "url": "docs/4.0/examples/module-002-quick-links/css/style002.css",
-    "revision": "fd3e4959b40b6cf566e23471ff029e7b"
-  },
-  {
-    "url": "docs/4.0/examples/module-002-quick-links/img/icn_facebook_black.png",
-    "revision": "575d7dca6f29ec894c6c5afc92dfc94c"
-  },
-  {
-    "url": "docs/4.0/examples/module-002-quick-links/img/icn_messaging_black.png",
-    "revision": "92af4354304f8c9da5174262f06e3053"
-  },
-  {
-    "url": "docs/4.0/examples/module-002-quick-links/img/icn_music_black.png",
-    "revision": "0d83230a49789fa50be2adacb4740201"
-  },
-  {
-    "url": "docs/4.0/examples/module-002-quick-links/img/icn_top_black.png",
-    "revision": "2d4002b5095aace21c88e3699f109b7d"
-  },
-  {
-    "url": "docs/4.0/examples/module-002-quick-links/index.html",
-    "revision": "e17b13357c43e300237c03f478b08149"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/css/style006.css",
-    "revision": "e271c5f3c5ebf3c1d545c20543cdcac7"
-  },
-  {
-    "url": "docs/4.0/examples/module-006-content-panel/index.html",
-    "revision": "6d22f7f4ff9b6b22c49e346afa58de01"
-  },
-  {
-    "url": "docs/4.0/examples/module-012-product-details/css/style012.css",
-    "revision": "79e1b949c809293d2e25ccf94e1d050f"
-  },
-  {
-    "url": "docs/4.0/examples/module-012-product-details/img/label_discount.png",
-    "revision": "bdbf98c0e4356cf6b7ecc94a83d70eba"
-  },
-  {
-    "url": "docs/4.0/examples/module-012-product-details/img/picture_device_3.png",
-    "revision": "62ee70a0bea3b36c35e4eb4e27571c36"
-  },
-  {
-    "url": "docs/4.0/examples/module-012-product-details/img/picture_klif1.png",
-    "revision": "e09c5b52ff25065054ad28fb21f1cda2"
-  },
-  {
-    "url": "docs/4.0/examples/module-012-product-details/img/stars_sprite.png",
-    "revision": "5c6818cfde14e72e0617eac40d5472c4"
-  },
-  {
-    "url": "docs/4.0/examples/module-012-product-details/index.html",
-    "revision": "b6b923f8c965e6bb9e5b6565f92e100f"
-  },
-  {
-    "url": "docs/4.0/examples/narrow-jumbotron/index.html",
-    "revision": "8bbaa6ff15e64569ff7f64407779df4b"
-  },
-  {
-    "url": "docs/4.0/examples/narrow-jumbotron/narrow-jumbotron.css",
-    "revision": "4e5fb23757fb40f595167cd4e14447de"
-  },
-  {
     "url": "docs/4.0/examples/navbar-bottom/index.html",
-    "revision": "bd9fca5d883e960f821bc26fc2fb6fec"
+    "revision": "b69bb2cb6876c46f2457598de1f6bb32"
   },
   {
-    "url": "docs/4.0/examples/navbar-top-fixed/index.html",
+    "url": "docs/4.0/examples/navbar-fixed/index.html",
     "revision": "12333076aa6a72dab821bbec7c67c5fb"
   },
   {
-    "url": "docs/4.0/examples/navbar-top-fixed/navbar-top-fixed.css",
+    "url": "docs/4.0/examples/navbar-fixed/navbar-top-fixed.css",
     "revision": "3d46ddff119cfe2886a34b72aefd42a6"
   },
   {
-    "url": "docs/4.0/examples/navbar-top/index.html",
+    "url": "docs/4.0/examples/navbar-static/index.html",
     "revision": "d488d2c4e1c4b9de6f25b89699812759"
   },
   {
-    "url": "docs/4.0/examples/navbar-top/navbar-top.css",
+    "url": "docs/4.0/examples/navbar-static/navbar-top.css",
     "revision": "ae704085e05c4bc6a705b225b03a5aea"
   },
   {
@@ -751,104 +751,24 @@ workboxSW.precache([
     "revision": "f95ea8bb033949bba31b05925773e223"
   },
   {
+    "url": "docs/4.0/examples/news-template/css/example.css",
+    "revision": "4ca6c344281a6904c33130ea0a087348"
+  },
+  {
+    "url": "docs/4.0/examples/news-template/index.html",
+    "revision": "7e69dce5a4181744c2abcfce910e2529"
+  },
+  {
     "url": "docs/4.0/examples/offcanvas/index.html",
-    "revision": "cdcadc502dcd641b6c23201a4e1f2f5c"
+    "revision": "cc7881f858bb318405961bb068202252"
   },
   {
     "url": "docs/4.0/examples/offcanvas/offcanvas.css",
-    "revision": "77eca95a4f55dd917ba95db9ac28bac9"
+    "revision": "65b3d835fd0f90b00844adc8974be45b"
   },
   {
     "url": "docs/4.0/examples/offcanvas/offcanvas.js",
-    "revision": "fe67880b053d4a4a9f318db8e0e71fb2"
-  },
-  {
-    "url": "docs/4.0/examples/orange-admin/edit.html",
-    "revision": "cdc7d293dcdb06034199c3b84a8529dd"
-  },
-  {
-    "url": "docs/4.0/examples/orange-admin/example.css",
-    "revision": "8a43544b65e06b9408f16598477e0b07"
-  },
-  {
-    "url": "docs/4.0/examples/orange-admin/images/logo-orange.png",
-    "revision": "3978402625900ab1deca4e6474bd9c21"
-  },
-  {
-    "url": "docs/4.0/examples/orange-admin/index.html",
-    "revision": "590f9cae68bfaf7b61c3ce8bcddf84a2"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/discovery-frame-carousel-whitetext.png",
-    "revision": "4494834274bc03cf4242d5e656d502ac"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/discovery-frame-carousel.png",
-    "revision": "76d10a9e3f09fa11342512924555dc98"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/discovery-frame.png",
-    "revision": "bd95ffc357e9f5d6fa0c3386f42f3d5a"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/discovery-popout-2byslide.png",
-    "revision": "5a15cf11de5c329df0b890c20482753a"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/discovery-popout.png",
-    "revision": "0f3b8ff70a5b9c8e59ad1359ee5c75c1"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/Fun-frame_frame-carousel.png",
-    "revision": "c9b2c674634842cb76592f409b0a4960"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/logo-orange.png",
-    "revision": "3978402625900ab1deca4e6474bd9c21"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/popular-services-1.png",
-    "revision": "6cea6eeac842c10ea590cdacdd75b9ff"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/popular-services-2.png",
-    "revision": "13f95d6fb606d4933abb0099254ef5ca"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/images/popular-services-3.png",
-    "revision": "db1770e16c587889cf8d2fb17a1c12bf"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/index.html",
-    "revision": "4381cc8bb8b387ccb038570fcdbd9420"
-  },
-  {
-    "url": "docs/4.0/examples/orange-brand-2015/sample.css",
-    "revision": "b0f19bce321284ca3cd1615222d9a09e"
-  },
-  {
-    "url": "docs/4.0/examples/orange-dashboard/gabarit.css",
-    "revision": "c4bd3d14aefa5295f333b21a3d717954"
-  },
-  {
-    "url": "docs/4.0/examples/orange-dashboard/images/Cancel.png",
-    "revision": "1c07cf2e5ed7fee1e38a51a6d708d936"
-  },
-  {
-    "url": "docs/4.0/examples/orange-dashboard/images/logo-orange.png",
-    "revision": "3978402625900ab1deca4e6474bd9c21"
-  },
-  {
-    "url": "docs/4.0/examples/orange-dashboard/images/Ok.png",
-    "revision": "42065eff02ab72c2e8a15e56db793fae"
-  },
-  {
-    "url": "docs/4.0/examples/orange-dashboard/images/Warning.png",
-    "revision": "63ad763bb2a0e5cc63d54a9c1e578f6a"
-  },
-  {
-    "url": "docs/4.0/examples/orange-dashboard/index.html",
-    "revision": "46390b994ea4bb3b3f0207c4c9cb890b"
+    "revision": "5c0edf2d5a4d88ec65e801c0f58ef23a"
   },
   {
     "url": "docs/4.0/examples/orange-form/form.js",
@@ -860,7 +780,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-form/index.html",
-    "revision": "f14beffb75b3f79532e9d80ec930682a"
+    "revision": "c6d662c9c7a735c6c3b7ff355a96e38b"
   },
   {
     "url": "docs/4.0/examples/orange-form/styles.css",
@@ -868,39 +788,171 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/orange-grid/index-fluid.html",
-    "revision": "93e80b69a31a7238926f686e22b76aa1"
+    "revision": "c11790904e2ff7def50a6f313f894ad0"
   },
   {
     "url": "docs/4.0/examples/orange-grid/index.html",
-    "revision": "d93d6da1e3ca23c8b5e8b006c518736f"
+    "revision": "b8ac6ce60e369447d2fd3f6118706ecc"
   },
   {
     "url": "docs/4.0/examples/orange-grid/styles.css",
     "revision": "89b7506be0f04d9f94cebfe9c43ebcc8"
   },
   {
-    "url": "docs/4.0/examples/orange-news/css/example.css",
-    "revision": "4ca6c344281a6904c33130ea0a087348"
+    "url": "docs/4.0/examples/orange-homepage/images/discovery-frame-carousel-whitetext.png",
+    "revision": "4494834274bc03cf4242d5e656d502ac"
   },
   {
-    "url": "docs/4.0/examples/orange-news/index.html",
-    "revision": "0c48721780593157a5efb8b4679268b5"
+    "url": "docs/4.0/examples/orange-homepage/images/discovery-frame-carousel.png",
+    "revision": "76d10a9e3f09fa11342512924555dc98"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/discovery-frame.png",
+    "revision": "bd95ffc357e9f5d6fa0c3386f42f3d5a"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/discovery-popout-2byslide.png",
+    "revision": "5a15cf11de5c329df0b890c20482753a"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/discovery-popout.png",
+    "revision": "0f3b8ff70a5b9c8e59ad1359ee5c75c1"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/Fun-frame_frame-carousel.png",
+    "revision": "c9b2c674634842cb76592f409b0a4960"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/popular-services-1.png",
+    "revision": "6cea6eeac842c10ea590cdacdd75b9ff"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/popular-services-2.png",
+    "revision": "13f95d6fb606d4933abb0099254ef5ca"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/images/popular-services-3.png",
+    "revision": "db1770e16c587889cf8d2fb17a1c12bf"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/index.html",
+    "revision": "b563f58e4a753af0ccb253d618331248"
+  },
+  {
+    "url": "docs/4.0/examples/orange-homepage/sample.css",
+    "revision": "b0f19bce321284ca3cd1615222d9a09e"
+  },
+  {
+    "url": "docs/4.0/examples/pricing/index.html",
+    "revision": "1dffd9bf08502acf05af4a05a054b4bb"
+  },
+  {
+    "url": "docs/4.0/examples/pricing/pricing.css",
+    "revision": "1e170831b26afb7a6bcde4f0bc2cb29b"
+  },
+  {
+    "url": "docs/4.0/examples/product-details/css/style012.css",
+    "revision": "79e1b949c809293d2e25ccf94e1d050f"
+  },
+  {
+    "url": "docs/4.0/examples/product-details/img/label_discount.png",
+    "revision": "bdbf98c0e4356cf6b7ecc94a83d70eba"
+  },
+  {
+    "url": "docs/4.0/examples/product-details/img/picture_device_3.png",
+    "revision": "62ee70a0bea3b36c35e4eb4e27571c36"
+  },
+  {
+    "url": "docs/4.0/examples/product-details/img/picture_klif1.png",
+    "revision": "e09c5b52ff25065054ad28fb21f1cda2"
+  },
+  {
+    "url": "docs/4.0/examples/product-details/img/stars_sprite.png",
+    "revision": "5c6818cfde14e72e0617eac40d5472c4"
+  },
+  {
+    "url": "docs/4.0/examples/product-details/index.html",
+    "revision": "b6b923f8c965e6bb9e5b6565f92e100f"
+  },
+  {
+    "url": "docs/4.0/examples/product/index.html",
+    "revision": "b87f29a212a26618fc8490915eda4c91"
+  },
+  {
+    "url": "docs/4.0/examples/product/product.css",
+    "revision": "139ada632a48dc6b96a46a265a2cc60c"
+  },
+  {
+    "url": "docs/4.0/examples/quick-links/css/style002.css",
+    "revision": "fd3e4959b40b6cf566e23471ff029e7b"
+  },
+  {
+    "url": "docs/4.0/examples/quick-links/img/icn_facebook_black.png",
+    "revision": "575d7dca6f29ec894c6c5afc92dfc94c"
+  },
+  {
+    "url": "docs/4.0/examples/quick-links/img/icn_messaging_black.png",
+    "revision": "92af4354304f8c9da5174262f06e3053"
+  },
+  {
+    "url": "docs/4.0/examples/quick-links/img/icn_music_black.png",
+    "revision": "0d83230a49789fa50be2adacb4740201"
+  },
+  {
+    "url": "docs/4.0/examples/quick-links/img/icn_top_black.png",
+    "revision": "2d4002b5095aace21c88e3699f109b7d"
+  },
+  {
+    "url": "docs/4.0/examples/quick-links/index.html",
+    "revision": "e17b13357c43e300237c03f478b08149"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-edition-page/example.css",
+    "revision": "8a43544b65e06b9408f16598477e0b07"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-edition-page/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-edition-page/index.html",
+    "revision": "815a58d33341352810d89fa461e832de"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-mainpage/edit.html",
+    "revision": "815a58d33341352810d89fa461e832de"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-mainpage/example.css",
+    "revision": "8a43544b65e06b9408f16598477e0b07"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-mainpage/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-administration-mainpage/index.html",
+    "revision": "07b32b14f57f51562ade1f13fad52440"
   },
   {
     "url": "docs/4.0/examples/rtl-album/album.css",
-    "revision": "c55364aec72e931ec6e447fef8d7d1fb"
+    "revision": "e8343131a0fefafe6ae0f37db6d10f3c"
   },
   {
     "url": "docs/4.0/examples/rtl-album/index.html",
-    "revision": "882ddd9568c76d21d277b1f0869d0d05"
+    "revision": "654e252006d8f40bf121195d2b11ad00"
   },
   {
     "url": "docs/4.0/examples/rtl-blog/blog.css",
-    "revision": "750f2ac42509b1d901295d087cac5ef6"
+    "revision": "cb98d3e8033940a716641516d2cb857b"
   },
   {
     "url": "docs/4.0/examples/rtl-blog/index.html",
-    "revision": "b873305cc42b12464707d4d79bd50f38"
+    "revision": "57e2c9f8ef97ac931bf5f9adeac9cf9b"
   },
   {
     "url": "docs/4.0/examples/rtl-carousel/carousel.css",
@@ -908,23 +960,63 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-carousel/index.html",
-    "revision": "f9ecf2a8d022a2547224d4c93ec6a114"
+    "revision": "54b4323f329b76c41d9bf4b41986a80c"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-checkout/form-validation.css",
+    "revision": "d13d35a0c04021ceacd8c153719860bc"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-checkout/index.html",
+    "revision": "edc26c6aee60a2af90e0b3aac27c964b"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-content-panel/css/style006.css",
+    "revision": "e271c5f3c5ebf3c1d545c20543cdcac7"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-content-panel/index.html",
+    "revision": "f3d15ad3c41291e49dba023c54ecfe35"
   },
   {
     "url": "docs/4.0/examples/rtl-cover/cover.css",
-    "revision": "1d0127b6309e72780dd3e87093a9d7e3"
+    "revision": "61f7cbbe930976e62264268abe51ebd3"
   },
   {
     "url": "docs/4.0/examples/rtl-cover/index.html",
-    "revision": "145fb81dfc1dedb52bf3b98063c99a30"
+    "revision": "871ee7bab3d41fbfc33a25cf972c2e1f"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-dashboard-orange-branded/gabarit.css",
+    "revision": "c4bd3d14aefa5295f333b21a3d717954"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-dashboard-orange-branded/images/Cancel.png",
+    "revision": "1c07cf2e5ed7fee1e38a51a6d708d936"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-dashboard-orange-branded/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-dashboard-orange-branded/images/Ok.png",
+    "revision": "42065eff02ab72c2e8a15e56db793fae"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-dashboard-orange-branded/images/Warning.png",
+    "revision": "63ad763bb2a0e5cc63d54a9c1e578f6a"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-dashboard-orange-branded/index.html",
+    "revision": "bd199218522e63fd3421859b31d40148"
   },
   {
     "url": "docs/4.0/examples/rtl-dashboard/dashboard.css",
-    "revision": "cea2ce48e209721ca537d8ffcad510b9"
+    "revision": "a04ae1b7ceba4aaeb3bc7fe3c72a6d40"
   },
   {
     "url": "docs/4.0/examples/rtl-dashboard/index.html",
-    "revision": "558032f33abd2f3ba24c92fb3cc78b9f"
+    "revision": "ecb70eafcf4959ce311ec6a433d66a50"
   },
   {
     "url": "docs/4.0/examples/rtl-demo/assets/bill.png",
@@ -967,6 +1059,14 @@ workboxSW.precache([
     "revision": "570bde5177c94f2cd9861ccaaa5133dc"
   },
   {
+    "url": "docs/4.0/examples/rtl-floating-labels/floating-labels.css",
+    "revision": "5a7fc5962d7981d2c5f9af28f785a0c5"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-floating-labels/index.html",
+    "revision": "27977a3cc762a349d55c3d8dcab9f23b"
+  },
+  {
     "url": "docs/4.0/examples/rtl-grid/grid.css",
     "revision": "4cd2e5cc5e19dc692d50ed6f077154ef"
   },
@@ -976,102 +1076,30 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-jumbotron/index.html",
-    "revision": "308d542487ccbf7287db94c0062ff148"
+    "revision": "ea4fb25ee94fe10f40c4442038df5473"
   },
   {
     "url": "docs/4.0/examples/rtl-jumbotron/jumbotron.css",
     "revision": "0ef7edc6babea5a47645bda0c45368aa"
   },
   {
-    "url": "docs/4.0/examples/rtl-justified-nav/index.html",
-    "revision": "a290d3678c6bd306ef02c82390e28d27"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-justified-nav/justified-nav.css",
-    "revision": "74b0be6ad3b421b43288545b9628253f"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-002-quick-links/css/style002.css",
-    "revision": "fd3e4959b40b6cf566e23471ff029e7b"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-002-quick-links/img/icn_facebook_black.png",
-    "revision": "575d7dca6f29ec894c6c5afc92dfc94c"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-002-quick-links/img/icn_messaging_black.png",
-    "revision": "92af4354304f8c9da5174262f06e3053"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-002-quick-links/img/icn_music_black.png",
-    "revision": "0d83230a49789fa50be2adacb4740201"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-002-quick-links/img/icn_top_black.png",
-    "revision": "2d4002b5095aace21c88e3699f109b7d"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-002-quick-links/index.html",
-    "revision": "8c18b8f37d3a086e5c3375c200559175"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/css/style006.css",
-    "revision": "e271c5f3c5ebf3c1d545c20543cdcac7"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-006-content-panel/index.html",
-    "revision": "f3d15ad3c41291e49dba023c54ecfe35"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-012-product-details/css/style012.css",
-    "revision": "79e1b949c809293d2e25ccf94e1d050f"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-012-product-details/img/label_discount.png",
-    "revision": "bdbf98c0e4356cf6b7ecc94a83d70eba"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-012-product-details/img/picture_device_3.png",
-    "revision": "62ee70a0bea3b36c35e4eb4e27571c36"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-012-product-details/img/picture_klif1.png",
-    "revision": "e09c5b52ff25065054ad28fb21f1cda2"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-012-product-details/img/stars_sprite.png",
-    "revision": "5c6818cfde14e72e0617eac40d5472c4"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-module-012-product-details/index.html",
-    "revision": "4448f5132ff79aaadddb88c597694e75"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-narrow-jumbotron/index.html",
-    "revision": "8660812990dcc93a917e6c855c8f300f"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-narrow-jumbotron/narrow-jumbotron.css",
-    "revision": "4e5fb23757fb40f595167cd4e14447de"
-  },
-  {
     "url": "docs/4.0/examples/rtl-navbar-bottom/index.html",
-    "revision": "925e9dc14abf439d38bed1fe31081507"
+    "revision": "ba5c22c2d524ebffd46fdfaaa15ff643"
   },
   {
-    "url": "docs/4.0/examples/rtl-navbar-top-fixed/index.html",
+    "url": "docs/4.0/examples/rtl-navbar-fixed/index.html",
     "revision": "bd4d6cbad11cda1493778dfd5440e95b"
   },
   {
-    "url": "docs/4.0/examples/rtl-navbar-top-fixed/navbar-top-fixed.css",
+    "url": "docs/4.0/examples/rtl-navbar-fixed/navbar-top-fixed.css",
     "revision": "3d46ddff119cfe2886a34b72aefd42a6"
   },
   {
-    "url": "docs/4.0/examples/rtl-navbar-top/index.html",
+    "url": "docs/4.0/examples/rtl-navbar-static/index.html",
     "revision": "105d6583ac371177cb717148c4b7473e"
   },
   {
-    "url": "docs/4.0/examples/rtl-navbar-top/navbar-top.css",
+    "url": "docs/4.0/examples/rtl-navbar-static/navbar-top.css",
     "revision": "ae704085e05c4bc6a705b225b03a5aea"
   },
   {
@@ -1083,104 +1111,24 @@ workboxSW.precache([
     "revision": "f95ea8bb033949bba31b05925773e223"
   },
   {
+    "url": "docs/4.0/examples/rtl-news-template/css/example.css",
+    "revision": "4ca6c344281a6904c33130ea0a087348"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-news-template/index.html",
+    "revision": "c3a49c23e67b261d852c4b546272246a"
+  },
+  {
     "url": "docs/4.0/examples/rtl-offcanvas/index.html",
-    "revision": "e65da22d167ce0efa7f9088fedaaadf7"
+    "revision": "7836aa4dccba02aefc0d6bb5249ffe27"
   },
   {
     "url": "docs/4.0/examples/rtl-offcanvas/offcanvas.css",
-    "revision": "77eca95a4f55dd917ba95db9ac28bac9"
+    "revision": "65b3d835fd0f90b00844adc8974be45b"
   },
   {
     "url": "docs/4.0/examples/rtl-offcanvas/offcanvas.js",
-    "revision": "fe67880b053d4a4a9f318db8e0e71fb2"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-admin/edit.html",
-    "revision": "c076ba04c4ef7776b01a320b45f3d0a8"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-admin/example.css",
-    "revision": "8a43544b65e06b9408f16598477e0b07"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-admin/images/logo-orange.png",
-    "revision": "3978402625900ab1deca4e6474bd9c21"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-admin/index.html",
-    "revision": "230a3e42b514e33e8a780c0a40bf7083"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/discovery-frame-carousel-whitetext.png",
-    "revision": "4494834274bc03cf4242d5e656d502ac"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/discovery-frame-carousel.png",
-    "revision": "76d10a9e3f09fa11342512924555dc98"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/discovery-frame.png",
-    "revision": "bd95ffc357e9f5d6fa0c3386f42f3d5a"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/discovery-popout-2byslide.png",
-    "revision": "5a15cf11de5c329df0b890c20482753a"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/discovery-popout.png",
-    "revision": "0f3b8ff70a5b9c8e59ad1359ee5c75c1"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/Fun-frame_frame-carousel.png",
-    "revision": "c9b2c674634842cb76592f409b0a4960"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/logo-orange.png",
-    "revision": "3978402625900ab1deca4e6474bd9c21"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/popular-services-1.png",
-    "revision": "6cea6eeac842c10ea590cdacdd75b9ff"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/popular-services-2.png",
-    "revision": "13f95d6fb606d4933abb0099254ef5ca"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/images/popular-services-3.png",
-    "revision": "db1770e16c587889cf8d2fb17a1c12bf"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/index.html",
-    "revision": "4e86c0e48958145d5901bd5e15c538ea"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-brand-2015/sample.css",
-    "revision": "b0f19bce321284ca3cd1615222d9a09e"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-dashboard/gabarit.css",
-    "revision": "c4bd3d14aefa5295f333b21a3d717954"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-dashboard/images/Cancel.png",
-    "revision": "1c07cf2e5ed7fee1e38a51a6d708d936"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-dashboard/images/logo-orange.png",
-    "revision": "3978402625900ab1deca4e6474bd9c21"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-dashboard/images/Ok.png",
-    "revision": "42065eff02ab72c2e8a15e56db793fae"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-dashboard/images/Warning.png",
-    "revision": "63ad763bb2a0e5cc63d54a9c1e578f6a"
-  },
-  {
-    "url": "docs/4.0/examples/rtl-orange-dashboard/index.html",
-    "revision": "8ae5061a059b7d093184b30f252617e1"
+    "revision": "5c0edf2d5a4d88ec65e801c0f58ef23a"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-form/form.js",
@@ -1192,7 +1140,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-orange-form/index.html",
-    "revision": "5554ebfc712f6efc8e527b4f316f2f68"
+    "revision": "b3a33c87a9f3cd8c2c7f56f91821de8e"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-form/styles.css",
@@ -1200,31 +1148,135 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-orange-grid/index-fluid.html",
-    "revision": "e35a6407172dc3006fbd3480c992436d"
+    "revision": "915b49a4d2ebd1f2764c3fbefe6ed1fd"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-grid/index.html",
-    "revision": "3aba2ac446200e909b439ba446729752"
+    "revision": "96b034c0655ac73e73780f248c4a3430"
   },
   {
     "url": "docs/4.0/examples/rtl-orange-grid/styles.css",
     "revision": "89b7506be0f04d9f94cebfe9c43ebcc8"
   },
   {
-    "url": "docs/4.0/examples/rtl-orange-news/css/example.css",
-    "revision": "4ca6c344281a6904c33130ea0a087348"
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/discovery-frame-carousel-whitetext.png",
+    "revision": "4494834274bc03cf4242d5e656d502ac"
   },
   {
-    "url": "docs/4.0/examples/rtl-orange-news/index.html",
-    "revision": "111e5be62080b540088fd840be88a2c8"
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/discovery-frame-carousel.png",
+    "revision": "76d10a9e3f09fa11342512924555dc98"
   },
   {
-    "url": "docs/4.0/examples/rtl-signin/index.html",
-    "revision": "81fd47b98b1034f679c4fb67c0bd39e7"
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/discovery-frame.png",
+    "revision": "bd95ffc357e9f5d6fa0c3386f42f3d5a"
   },
   {
-    "url": "docs/4.0/examples/rtl-signin/signin.css",
-    "revision": "ba362ab7f11733548cdc4dc14df941a7"
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/discovery-popout-2byslide.png",
+    "revision": "5a15cf11de5c329df0b890c20482753a"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/discovery-popout.png",
+    "revision": "0f3b8ff70a5b9c8e59ad1359ee5c75c1"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/Fun-frame_frame-carousel.png",
+    "revision": "c9b2c674634842cb76592f409b0a4960"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/logo-orange.png",
+    "revision": "3978402625900ab1deca4e6474bd9c21"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/popular-services-1.png",
+    "revision": "6cea6eeac842c10ea590cdacdd75b9ff"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/popular-services-2.png",
+    "revision": "13f95d6fb606d4933abb0099254ef5ca"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/images/popular-services-3.png",
+    "revision": "db1770e16c587889cf8d2fb17a1c12bf"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/index.html",
+    "revision": "e620e75234687200b4f4d03826714468"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-orange-homepage/sample.css",
+    "revision": "b0f19bce321284ca3cd1615222d9a09e"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-pricing/index.html",
+    "revision": "a0cc985b2ea7d0c9a0b269c3aa77aaea"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-pricing/pricing.css",
+    "revision": "1e170831b26afb7a6bcde4f0bc2cb29b"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product-details/css/style012.css",
+    "revision": "79e1b949c809293d2e25ccf94e1d050f"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product-details/img/label_discount.png",
+    "revision": "bdbf98c0e4356cf6b7ecc94a83d70eba"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product-details/img/picture_device_3.png",
+    "revision": "62ee70a0bea3b36c35e4eb4e27571c36"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product-details/img/picture_klif1.png",
+    "revision": "e09c5b52ff25065054ad28fb21f1cda2"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product-details/img/stars_sprite.png",
+    "revision": "5c6818cfde14e72e0617eac40d5472c4"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product-details/index.html",
+    "revision": "4448f5132ff79aaadddb88c597694e75"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product/index.html",
+    "revision": "697bc6fd71c8592048df34e63f1baa9c"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-product/product.css",
+    "revision": "139ada632a48dc6b96a46a265a2cc60c"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-quick-links/css/style002.css",
+    "revision": "fd3e4959b40b6cf566e23471ff029e7b"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-quick-links/img/icn_facebook_black.png",
+    "revision": "575d7dca6f29ec894c6c5afc92dfc94c"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-quick-links/img/icn_messaging_black.png",
+    "revision": "92af4354304f8c9da5174262f06e3053"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-quick-links/img/icn_music_black.png",
+    "revision": "0d83230a49789fa50be2adacb4740201"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-quick-links/img/icn_top_black.png",
+    "revision": "2d4002b5095aace21c88e3699f109b7d"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-quick-links/index.html",
+    "revision": "8c18b8f37d3a086e5c3375c200559175"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-sign-in/index.html",
+    "revision": "cc6cdc57741d31da78f4111643cde40b"
+  },
+  {
+    "url": "docs/4.0/examples/rtl-sign-in/signin.css",
+    "revision": "9c798c2cdaef45f59a916c2051cbe197"
   },
   {
     "url": "docs/4.0/examples/rtl-starter-template/index.html",
@@ -1236,7 +1288,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-sticky-footer-navbar/index.html",
-    "revision": "045d1e3e8cce7aac83601cf942b68af3"
+    "revision": "480b3c3ab6cbedd1dbdac61119a7288c"
   },
   {
     "url": "docs/4.0/examples/rtl-sticky-footer-navbar/sticky-footer-navbar.css",
@@ -1244,7 +1296,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-sticky-footer/index.html",
-    "revision": "fe598a8fb787d2b100f0f0663e1bd630"
+    "revision": "939c854af7fd3a6f0e4c2feeeccdac5e"
   },
   {
     "url": "docs/4.0/examples/rtl-sticky-footer/sticky-footer.css",
@@ -1252,7 +1304,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/rtl-tooltip-viewport/index.html",
-    "revision": "a882ad25c39a73959b919954c5692cf9"
+    "revision": "c5e0bf538e3f475daf1a73fcf497a3c1"
   },
   {
     "url": "docs/4.0/examples/rtl-tooltip-viewport/tooltip-viewport.css",
@@ -1263,96 +1315,128 @@ workboxSW.precache([
     "revision": "8b7dceb6d175f264b789114201387bfa"
   },
   {
+    "url": "docs/4.0/examples/screenshots/administration-edition-page.png",
+    "revision": "63ae598c730eb1c6c991533a82ab4bbc"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/administration-mainpage.png",
+    "revision": "474c038576e57d38921125c3001fb22a"
+  },
+  {
     "url": "docs/4.0/examples/screenshots/album.png",
-    "revision": "ffaf0fd56864daafaa2ea23a3f2a8a4c"
+    "revision": "0df6fb8df1eb12ee597865519e213012"
   },
   {
     "url": "docs/4.0/examples/screenshots/blog.png",
-    "revision": "db2571d976d8b910af2dd7fee0a97794"
+    "revision": "017a1ea3e00d611371813a5014ba9d6d"
   },
   {
     "url": "docs/4.0/examples/screenshots/carousel.png",
-    "revision": "3ef960de8ed9de239dbebf855d3e693e"
+    "revision": "801e2c9ea624c45bf8ac0f55a8b5d2d5"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/checkout.png",
+    "revision": "13148de13c28790f8621b83fb6dd4e74"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/content-panel.png",
+    "revision": "c9818457223448438c5d5e8e03927121"
   },
   {
     "url": "docs/4.0/examples/screenshots/cover.png",
-    "revision": "f8234debe0727d830d378804fa6920ba"
+    "revision": "31993dd9d659f71cea403e798e0fbe31"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/dashboard-orange-branded.png",
+    "revision": "adceb4d139ae02b3fb36781bdf076a77"
   },
   {
     "url": "docs/4.0/examples/screenshots/dashboard.png",
-    "revision": "564c98a3e0fb945b7cfa4941a9bfc072"
+    "revision": "d62163e67c381a5dfa97c586d8ee4999"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/floating-labels.png",
+    "revision": "45d5c1f86246e7ba81dacc17fecf74b1"
   },
   {
     "url": "docs/4.0/examples/screenshots/grid.png",
-    "revision": "a3501bda7dcdde8a731e60988375ff71"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/jumbotron-narrow.png",
-    "revision": "da2fea942e2b79e889461234b2dce637"
+    "revision": "81a3ea4fad82e77080f7dc373aca8a08"
   },
   {
     "url": "docs/4.0/examples/screenshots/jumbotron.png",
-    "revision": "56e944951506af4971317a0e1d6a6b53"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/justified-nav.png",
-    "revision": "4f24d1d5953e79423cbe0254adf1ab5e"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/module-002-quick-links.png",
-    "revision": "0b9d6a79b6fa147124e59877b3109176"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/module-006-content-panels.png",
-    "revision": "1aa39ec7214be71f2461c7525a79349f"
-  },
-  {
-    "url": "docs/4.0/examples/screenshots/module-012-product-details.png",
-    "revision": "246bf20a1fbbae280c9c53adad871f7b"
+    "revision": "d63539577681c87e0dbab26396741cd3"
   },
   {
     "url": "docs/4.0/examples/screenshots/navbar-bottom.png",
-    "revision": "88f890990c2f75a00cec172d401aef10"
+    "revision": "b7cfcf7c25348ac5007d835a30e32ea0"
   },
   {
     "url": "docs/4.0/examples/screenshots/navbar-fixed.png",
-    "revision": "c3af88c33126f669f2006f9e2c629fa2"
+    "revision": "cdb073013a973d1e4786812a9c13cd38"
   },
   {
     "url": "docs/4.0/examples/screenshots/navbar-static.png",
-    "revision": "a289e262bb99e84a494fad461082e8f3"
+    "revision": "cf7f59e2c5c13f1f9a23f15e01cd4836"
   },
   {
-    "url": "docs/4.0/examples/screenshots/navbar.png",
-    "revision": "c93f7634deb8db461efd121fae384de7"
+    "url": "docs/4.0/examples/screenshots/navbars.png",
+    "revision": "b269d23436db6d602d6247d82130008b"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/news-template.png",
+    "revision": "3aa08b61314bc815c1069f2f7f567766"
   },
   {
     "url": "docs/4.0/examples/screenshots/offcanvas.png",
-    "revision": "983be61f621aac2d19131df71a8ae309"
+    "revision": "d01cf3f7d5d1b0a07732fff249b4102e"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/orange-form.png",
+    "revision": "643cbc72c98d03d8a4d920b09ca3806a"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/orange-homepage.png",
+    "revision": "e8b485b680df418d2b81611674bc244d"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/pricing.png",
+    "revision": "f73c4aa0b4652eac79bb612be65a606d"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/product-details.png",
+    "revision": "0dbc8600c6529be3230b6ed69823fe4a"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/product.png",
+    "revision": "cf8f4bd9ab76ef9156456f0df301802d"
+  },
+  {
+    "url": "docs/4.0/examples/screenshots/quick-links.png",
+    "revision": "db46ebdc2d348f8d276b035696085cbd"
   },
   {
     "url": "docs/4.0/examples/screenshots/sign-in.png",
-    "revision": "11f97fb403f227e059e00c4afa6a12fd"
+    "revision": "68e2c99063b6d5032fb1015df716ee10"
   },
   {
     "url": "docs/4.0/examples/screenshots/starter-template.png",
-    "revision": "a12386401c848ad90d4e3627858e973d"
+    "revision": "a4e0cb634e81143313ca4e45d21e3a40"
   },
   {
     "url": "docs/4.0/examples/screenshots/sticky-footer-navbar.png",
-    "revision": "3047deed467cfc70d9ab33b1ac75cda6"
+    "revision": "008086ea92971c932779a600d7d0d351"
   },
   {
     "url": "docs/4.0/examples/screenshots/sticky-footer.png",
-    "revision": "525e473da6359f1db1c5c1769190c438"
+    "revision": "a269aa921e9275967aeea559ad55e01e"
   },
   {
-    "url": "docs/4.0/examples/signin/index.html",
-    "revision": "4c4a591d1ddf2e70abad3fb078d0f1eb"
+    "url": "docs/4.0/examples/sign-in/index.html",
+    "revision": "cfeb74d22225e1b9eabb4a2d69565320"
   },
   {
-    "url": "docs/4.0/examples/signin/signin.css",
-    "revision": "ba362ab7f11733548cdc4dc14df941a7"
+    "url": "docs/4.0/examples/sign-in/signin.css",
+    "revision": "9c798c2cdaef45f59a916c2051cbe197"
   },
   {
     "url": "docs/4.0/examples/starter-template/index.html",
@@ -1364,7 +1448,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/sticky-footer-navbar/index.html",
-    "revision": "9a331d8558899477a7d7e72e9f0a360a"
+    "revision": "e6b4cf6eed9259dcf8815c512179117a"
   },
   {
     "url": "docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css",
@@ -1372,7 +1456,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/sticky-footer/index.html",
-    "revision": "3ec4aa3ecc0352fe457261cf76863347"
+    "revision": "928ebb21dad70de348fd6d69ef2b1af4"
   },
   {
     "url": "docs/4.0/examples/sticky-footer/sticky-footer.css",
@@ -1380,7 +1464,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/tooltip-viewport/index.html",
-    "revision": "ea418fb433eb4f3b35907bd876340763"
+    "revision": "1f34e94b27cd26c9c9529c86c38bec16"
   },
   {
     "url": "docs/4.0/examples/tooltip-viewport/tooltip-viewport.css",
@@ -1392,39 +1476,39 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/extend/approach/index.html",
-    "revision": "5861923c5258cbc9db94b4620a25f61d"
+    "revision": "390ca92c4aa442ad4ff749c172a85737"
   },
   {
     "url": "docs/4.0/extend/icons/index.html",
-    "revision": "4c185568063b727a250e2ae2b0bece7d"
+    "revision": "82f1e335c27bd1d5ae6ee2f9595bc268"
   },
   {
     "url": "docs/4.0/extend/index.html",
-    "revision": "b4b2aed64a9377c12c50f2b03fdad56d"
+    "revision": "8445c4c0338e40cebeaf6cdb58dfe6f7"
   },
   {
     "url": "docs/4.0/getting-started/accessibility/index.html",
-    "revision": "5e14846549e9370238415bd21e260048"
+    "revision": "a9aeec487074da3e28f45298236ce6e1"
   },
   {
     "url": "docs/4.0/getting-started/best-practices/index.html",
-    "revision": "ba261d67cd7f2d5af4e1872b8d91b09a"
+    "revision": "4c8f6dcfc8993a4855e52d2c3084a8c5"
   },
   {
     "url": "docs/4.0/getting-started/browsers-devices/index.html",
-    "revision": "5441b3ad9deeb773c4e8a87c3c254cb0"
+    "revision": "1b6c52552aae2809a512da652a9ac8c9"
   },
   {
     "url": "docs/4.0/getting-started/build-tools/index.html",
-    "revision": "563735a92d2c8de90acd68e3d7b2057f"
+    "revision": "de0bd9d09119b698b6027d7497308f75"
   },
   {
     "url": "docs/4.0/getting-started/contents/index.html",
-    "revision": "2ed82103b280e0728175a263ade955ad"
+    "revision": "0ee27fd816eb9dfafb016289af3cf930"
   },
   {
     "url": "docs/4.0/getting-started/download/index.html",
-    "revision": "bd404adfdd31b9ea8892eeb46eec21d3"
+    "revision": "bb044928a82f47aee3cf9fb96f1cb6aa"
   },
   {
     "url": "docs/4.0/getting-started/index.html",
@@ -1432,11 +1516,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/getting-started/introduction/index.html",
-    "revision": "a5deb0ba596302e7f986e57c6a5281a2"
+    "revision": "71e76b6aec8bbc83fe28fbe2b173363d"
   },
   {
     "url": "docs/4.0/getting-started/javascript/index.html",
-    "revision": "6f1af65c716170fb9f570b9f9f9db999"
+    "revision": "cfcdd75015d2ee8278a68fa4d5e78e7f"
   },
   {
     "url": "docs/4.0/getting-started/options/index.html",
@@ -1444,11 +1528,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/getting-started/theming/index.html",
-    "revision": "21442b366928493afc0b2c529ab8591d"
+    "revision": "9096505abdcc32a40048dc639548d3cd"
   },
   {
     "url": "docs/4.0/getting-started/webpack/index.html",
-    "revision": "df2d85d7ae1e55d1bbcb4462b3c59c06"
+    "revision": "b616a459ddf704fe13dbd64331d8d560"
   },
   {
     "url": "docs/4.0/history/index.html",
@@ -1460,7 +1544,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/layout/grid/index.html",
-    "revision": "846c2056f1510855cdb914628218f443"
+    "revision": "82e47f5cc4cb4935a1d22492cb8632d9"
   },
   {
     "url": "docs/4.0/layout/index.html",
@@ -1468,19 +1552,19 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/layout/media-object/index.html",
-    "revision": "5d6ca62e31bd3613a8986caa37a4ff03"
+    "revision": "8d3af35caeb9ccabff2b41934cbd2032"
   },
   {
     "url": "docs/4.0/layout/overview/index.html",
-    "revision": "dd3f840de89c378a9125f8383e88b129"
+    "revision": "016f0ec8aa502f6eb3932d0a905bb809"
   },
   {
     "url": "docs/4.0/layout/utilities-for-layout/index.html",
-    "revision": "59c0b4d0c47c913c44fe3cfe2e00ac12"
+    "revision": "d75110e51ef1f69936c9add73084807c"
   },
   {
     "url": "docs/4.0/migration/index.html",
-    "revision": "a8cf51b17b484ccd674b8e92cc341b74"
+    "revision": "e461fba11a938bc6a5acef03a30b6f45"
   },
   {
     "url": "docs/4.0/team/index.html",
@@ -1488,39 +1572,39 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/utilities/borders/index.html",
-    "revision": "dc4d31a63dffe992373da3b205c46c0c"
+    "revision": "3956a187ea71a6f6fdd21385900f510f"
   },
   {
     "url": "docs/4.0/utilities/clearfix/index.html",
-    "revision": "a718a563d609174e29077137da9d11d4"
+    "revision": "19d00520dd2cdd2d334c9a3e2fe0401d"
   },
   {
     "url": "docs/4.0/utilities/close-icon/index.html",
-    "revision": "ea8ed56137f918a12df739ac9b2b30ce"
+    "revision": "010391e71cec87ffa7fe9fd5490af82f"
   },
   {
     "url": "docs/4.0/utilities/colors/index.html",
-    "revision": "3070f61921d2c2adc79be6801597ad33"
+    "revision": "c953e00e0f609a8e7eafd27e92f1b47d"
   },
   {
     "url": "docs/4.0/utilities/display/index.html",
-    "revision": "7c5c09d55e1ffbd3ed4e76a42471cb4f"
+    "revision": "7c01c4f2939e92da2f86f1521ec67abd"
   },
   {
     "url": "docs/4.0/utilities/embed/index.html",
-    "revision": "bc9de0ca5c328fbc25d09a742a23a52a"
+    "revision": "e1ced67d3beef99c599ecffdaef09c4e"
   },
   {
     "url": "docs/4.0/utilities/flex/index.html",
-    "revision": "6c5952e29654ed7df779ffee4a555b52"
+    "revision": "50c8b867d30735fd64f1a8514ff59660"
   },
   {
     "url": "docs/4.0/utilities/float/index.html",
-    "revision": "455f0ec9941e95e42347f41890da0018"
+    "revision": "5651eced405191c842c349436bb8ab06"
   },
   {
     "url": "docs/4.0/utilities/image-replacement/index.html",
-    "revision": "38e0332acaec8c6346c8f5ba23eb23fe"
+    "revision": "358eae177f173cd45fd738d8c3f3abc8"
   },
   {
     "url": "docs/4.0/utilities/index.html",
@@ -1528,31 +1612,31 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/utilities/position/index.html",
-    "revision": "438f78bd8ae76242d1fbc50db176d8de"
+    "revision": "a4e15a084dd5b402e0764982ccaeb425"
   },
   {
     "url": "docs/4.0/utilities/screenreaders/index.html",
-    "revision": "8a6d4530f069ae30c206af98e969f41d"
+    "revision": "e1d0eac2b58a33806a082bf3eaa6e89f"
   },
   {
     "url": "docs/4.0/utilities/sizing/index.html",
-    "revision": "6592c3f2e8f9f68371f9d084facdce76"
+    "revision": "049de6b4061e9785a4547496fdfa0517"
   },
   {
     "url": "docs/4.0/utilities/spacing/index.html",
-    "revision": "88a444a2cf6cf4ca80201f7ed76776c0"
+    "revision": "963c5b688caa18185f7f91cb466a1b8b"
   },
   {
     "url": "docs/4.0/utilities/text/index.html",
-    "revision": "697112e2f1e6b53ae193a03aaf2eaed9"
+    "revision": "5f42933147389e4bb4c7d4d925589446"
   },
   {
     "url": "docs/4.0/utilities/vertical-align/index.html",
-    "revision": "86d31a40f16f5b2a999b5c10f7336ba1"
+    "revision": "0a89ff72ba2cf6330e04348940f38056"
   },
   {
     "url": "docs/4.0/utilities/visibility/index.html",
-    "revision": "e84c05b2775717c9e14e595ad1ae424b"
+    "revision": "fa06f092657dd03dde5ae08098241025"
   },
   {
     "url": "docs/getting-started/index.html",
@@ -1568,7 +1652,7 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "0f0d40f09911cce34702861ae795adb5"
+    "revision": "9af1e7269f4b3945b8ed4c67d7db48b6"
   },
   {
     "url": "redirects.json",
