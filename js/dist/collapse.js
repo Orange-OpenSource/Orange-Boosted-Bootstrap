@@ -49,7 +49,7 @@ var Collapse = function ($) {
     HEIGHT: 'height'
   };
   var Selector = {
-    ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing',
+    ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing, > .show, > .collapsing',
     // boosted mod
     DATA_TOGGLE: '[data-toggle="collapse"]'
     /**

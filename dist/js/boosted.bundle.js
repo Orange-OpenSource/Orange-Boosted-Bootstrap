@@ -1,5 +1,5 @@
 /*!
-  * Boosted v4.0.0-beta.3 (http://boosted.orange.com)
+  * Boosted v4.0.0 (http://boosted.orange.com)
   * Copyright 2014-2018 The Boosted Authors
   * Copyright 2014-2018 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
@@ -1078,7 +1078,7 @@ var Collapse = function ($$$1) {
     HEIGHT: 'height'
   };
   var Selector = {
-    ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing',
+    ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing, > .show, > .collapsing',
     // boosted mod
     DATA_TOGGLE: '[data-toggle="collapse"]'
     /**
@@ -1923,7 +1923,7 @@ var Dropdown = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.3): o-megamenu.js
+ * Boosted (v4.0.0): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -1935,7 +1935,7 @@ var MegaMenu = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'megamenu';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
@@ -2906,7 +2906,7 @@ var Modal = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.3): o-navbar.js
+ * Boosted (v4.0.0): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -2918,7 +2918,7 @@ var Navbar = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'navbar';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var BREAKPOINT = 768;
@@ -3057,7 +3057,7 @@ var Navbar = function () {
 
 /**
  * ------------------------------------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.3): otab.js
+ * Boosted (v4.0.0): otab.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * ------------------------------------------------------------------------------------------------------
  */
@@ -3069,7 +3069,7 @@ var Otab = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'otab';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -4077,7 +4077,7 @@ var Popover = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.3): o-priority-nav.js
+ * Boosted (v4.0.0): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4089,7 +4089,7 @@ var PriorityNav = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'prioritynav';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
@@ -4293,7 +4293,7 @@ var PriorityNav = function () {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0-beta.3): o-scroll-up.js
+ * Boosted (v4.0.0): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -4305,7 +4305,7 @@ var ScrollUp = function () {
    * ------------------------------------------------------------------------
    */
   var NAME = 'scrollup';
-  var VERSION = '4.0.0-beta.3';
+  var VERSION = '4.0.0';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
