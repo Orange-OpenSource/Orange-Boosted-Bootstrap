@@ -54,9 +54,9 @@ $(function () {
   QUnit.test('should show multiple collapsed elements', function (assert) {
     assert.expect(4)
     var done = assert.async()
-    var $target = $('<a role="button" data-toggle="collapse" class="collapsed" href=".multi"/>').appendTo('#qunit-fixture')
-    var $el = $('<div class="collapse multi"/>').appendTo('#qunit-fixture')
-    var $el2 = $('<div class="collapse multi"/>').appendTo('#qunit-fixture')
+    var $target = $('<a role="button" data-toggle="collapse" class="collapsed" href=".multi-collapse"/>').appendTo('#qunit-fixture')
+    var $el = $('<div class="collapse multi-collapse"/>').appendTo('#qunit-fixture')
+    var $el2 = $('<div class="collapse multi-collapse"/>').appendTo('#qunit-fixture')
     $el.one('shown.bs.collapse', function () {
       assert.ok($el.hasClass('show'), 'has class "show"')
       assert.ok(!/height/i.test($el.attr('style')), 'has height reset')
@@ -726,10 +726,10 @@ $(function () {
 
     var $trigger1 = $('<a role="button" data-toggle="collapse" href="#test1"/>').appendTo('#qunit-fixture')
     var $trigger2 = $('<a role="button" data-toggle="collapse" href="#test2"/>').appendTo('#qunit-fixture')
-    var $trigger3 = $('<a role="button" data-toggle="collapse" href=".multi"/>').appendTo('#qunit-fixture')
+    var $trigger3 = $('<a role="button" data-toggle="collapse" href=".multi-collapse"/>').appendTo('#qunit-fixture')
 
-    var $target1 = $('<div id="test1" class="multi"/>').appendTo('#qunit-fixture')
-    var $target2 = $('<div id="test2" class="multi"/>').appendTo('#qunit-fixture')
+    var $target1 = $('<div id="test1" class="multi-collapse"/>').appendTo('#qunit-fixture')
+    var $target2 = $('<div id="test2" class="multi-collapse"/>').appendTo('#qunit-fixture')
 
     $target2.one('shown.bs.collapse', function () {
       assert.ok(!$trigger1.hasClass('collapsed'), 'trigger1 does not have collapsed class')
@@ -758,10 +758,10 @@ $(function () {
 
     var $trigger1 = $('<a role="button" data-toggle="collapse" href="#test1"/>').appendTo('#qunit-fixture')
     var $trigger2 = $('<a role="button" data-toggle="collapse" href="#test2"/>').appendTo('#qunit-fixture')
-    var $trigger3 = $('<a role="button" data-toggle="collapse" href=".multi"/>').appendTo('#qunit-fixture')
+    var $trigger3 = $('<a role="button" data-toggle="collapse" href=".multi-collapse"/>').appendTo('#qunit-fixture')
 
-    var $target1 = $('<div id="test1" class="multi collapse"/>').appendTo('#qunit-fixture')
-    var $target2 = $('<div id="test2" class="multi collapse"/>').appendTo('#qunit-fixture')
+    var $target1 = $('<div id="test1" class="multi-collapse collapse"/>').appendTo('#qunit-fixture')
+    var $target2 = $('<div id="test2" class="multi-collapse collapse"/>').appendTo('#qunit-fixture')
 
     $target2.one('shown.bs.collapse', function () {
       assert.strictEqual($trigger1.attr('aria-expanded'), 'true', 'aria-expanded on trigger1 is "true"')

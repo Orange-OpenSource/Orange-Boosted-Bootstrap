@@ -54,7 +54,7 @@ const Collapse = (($) => {
   }
 
   const Selector = {
-    ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
+    ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing, > .show, > .collapsing', // boosted mod
     DATA_TOGGLE : '[data-toggle="collapse"]'
   }
 
