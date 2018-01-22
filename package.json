@@ -215,7 +215,8 @@
       "js/boosted": {
         "deps": [
           "jquery",
-          "popper.js"
+          "popper.js",
+          "tablesorter"
         ],
         "exports": "$"
       }
