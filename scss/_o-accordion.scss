@@ -28,10 +28,15 @@
       line-height: 1;
     }
 
-    a {
+    button,
+    [role="button"] {
       position: relative;
       display: block;
-      padding: 1.0625rem 2.125rem 1.0625rem 0;
+      width: 100%;
+      padding: 1rem 2.125rem 1rem 0;
+      line-height: 1.125rem;
+      text-align: left;
+      border: 0;
 
       &::after {
         position: absolute;
