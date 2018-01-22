@@ -616,14 +616,23 @@
     var mySwiper = new Swiper('#main-carousel', {
       // enable accessibility
       a11y: true,
-      keyboardControl: true,
-
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
+  
       // If we need pagination
-      pagination: '.swiper-pagination',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
 
       // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 
       autoHeight: true
     })
@@ -631,14 +640,23 @@
     var swiper2 = new Swiper('#discovery-carousel', {
       // enable accessibility
       a11y: true,
-      keyboardControl: true,
-
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
+  
       // If we need pagination
-      pagination: '.swiper-pagination',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
 
       // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 
       autoHeight: true
     })
