@@ -51,7 +51,7 @@
     "js-test-karma": "karma start js/tests/karma.conf.js",
     "js-test-karma-old": "cross-env USE_OLD_JQUERY=true npm run js-test-karma",
     "js-test-cloud": "ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd, :Logger => WEBrick::Log.new('/dev/null'), :AccessLog => []); trap('INT') { s.shutdown }; s.start\" & node build/saucelabs-unit-test.js",
-    "js-vendor": "shx mkdir -p dist/js/vendor && shx cp node_modules/swiper/dist/js/swiper.min.js dist/js/vendor/",
+    "js-vendor": "shx mkdir -p dist/js/vendor && shx cp node_modules/swiper/dist/js/swiper.min.js dist/js/vendor/ && shx cp node_modules/swiper/dist/js/swiper.min.js.map dist/js/vendor/",
     "docs": "npm-run-all --parallel css-docs js-docs --sequential docs-rtl docs-compile docs-lint",
     "docs-compile": "bundle exec jekyll build",
     "postdocs-compile": "npm run docs-workbox-precache",
