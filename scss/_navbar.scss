@@ -30,6 +30,7 @@
   > .container-fluid {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1; // booosted mod
     align-items: center;
     justify-content: space-between;
     padding-right: 0; // boosted mod
@@ -47,7 +48,7 @@
   align-self: flex-end; // boosted mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin: .625rem; // boosted mod
+  margin: .625rem .3125rem; // boosted mod
   font-size: $navbar-brand-font-size;
   font-weight: $font-weight-bold; // boosted mod
   line-height: inherit;
