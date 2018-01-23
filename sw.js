@@ -712,7 +712,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/examples/index.html",
-    "revision": "e1b2de41f04015c570d84ebaaf748b6c"
+    "revision": "4c527e0c59c517f28ce1e760d43bb4ff"
   },
   {
     "url": "docs/4.0/examples/jumbotron/index.html",
@@ -1652,7 +1652,7 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "aebf48ca44772150fa3fb78ef8590c43"
+    "revision": "ae849a39cb3ed3fd35dc93968739e7fe"
   },
   {
     "url": "redirects.json",
