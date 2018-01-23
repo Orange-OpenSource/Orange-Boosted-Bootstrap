@@ -12,14 +12,17 @@ We use a large block of connected links for our pagination, making links hard to
 
 In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`.
 
+[comment]: boosted mod
+Make sure to use class `.has-label` on previous and next links as shown in the example below to use chevron + label layout.
+
 {% example html %}
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li><!-- boosted mod -->
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link has-label" href="#">Next</a></li>
+    <li class="page-item"><a class="page-link has-label" href="#">Next</a></li><!-- boosted mod -->
   </ul>
 </nav>
 {% endexample %}
