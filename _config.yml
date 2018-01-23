@@ -99,7 +99,7 @@ social_logo_path: /assets/brand/bootstrap-social-logo.png
 # Custom variables
 current_version:      4.0.0
 current_ruby_version: 4.0.0
-bootstrap_current_version:  4.0.0
+bootstrap_current_version:  v4.0.0
 docs_version:     4.0
 repo:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:              "https://bootstrap-slack.herokuapp.com"

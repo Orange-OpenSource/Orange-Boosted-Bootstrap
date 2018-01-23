@@ -37,17 +37,17 @@ Several quick start options are available:
 - Install with [npm](https://www.npmjs.com): `npm install boosted`
 - Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0`
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted -Pre` Sass: `Install-Package boosted.sass -Pre` (`-Pre` is only required until Boosted v4 has a stable release).
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
 Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
-[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4.0.0.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
-[![NuGet](https://img.shields.io/nuget/vpre/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
+[![NuGet](https://img.shields.io/nuget/v/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
 
-[![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/v/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
 [![CSS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
 [![JS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/js/boosted.min.js)
 [![Sauce Labs Test Status](https://saucelabs.com/browser-matrix/lausselloic.svg)](https://saucelabs.com/u/lausselloic)
