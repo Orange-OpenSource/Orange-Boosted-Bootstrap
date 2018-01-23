@@ -119,7 +119,7 @@ Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card
 Simply add the `.multi` class on each panel to get multi openable accordions.
 
 {% example html %}
-<div id="accordion-2" role="tablist" aria-multiselectable="true" class="o-accordion">
+<div id="accordion-2" role="tablist" class="o-accordion">
   <div class="card multi">
     <div class="card-header" role="tab" id="headingOne-1">
       <h5 class="mb-0">
