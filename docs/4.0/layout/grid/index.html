@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>Grid system · Boosted</title>
 
@@ -1536,15 +1536,15 @@
 
 <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Creates a wrapper for a series of columns
-</span><span class="k">@include</span> <span class="nd">make-row</span><span class="p">(</span><span class="nv">$gutters</span><span class="o">:</span> <span class="nv">$grid-gutter-widths</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Creates a wrapper for a series of columns</span>
+<span class="k">@include</span> <span class="nd">make-row</span><span class="p">(</span><span class="nv">$gutters</span><span class="o">:</span> <span class="nv">$grid-gutter-widths</span><span class="p">);</span>
 
-<span class="c1">// Make the element grid-ready (applying everything but the width)
-</span><span class="k">@include</span> <span class="nd">make-col-ready</span><span class="p">(</span><span class="nv">$gutters</span><span class="o">:</span> <span class="nv">$grid-gutter-widths</span><span class="p">);</span>
+<span class="c1">// Make the element grid-ready (applying everything but the width)</span>
+<span class="k">@include</span> <span class="nd">make-col-ready</span><span class="p">(</span><span class="nv">$gutters</span><span class="o">:</span> <span class="nv">$grid-gutter-widths</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">make-col</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
 
-<span class="c1">// Get fancy by offsetting, or changing the sort order
-</span><span class="k">@include</span> <span class="nd">make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span></code></pre></figure>
+<span class="c1">// Get fancy by offsetting, or changing the sort order</span>
+<span class="k">@include</span> <span class="nd">make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="example-usage">Example usage</h3>
 

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>Theming Boosted · Boosted</title>
 
@@ -477,21 +477,21 @@
 
 <p>In your <code class="highlighter-rouge">custom.scss</code>, you’ll import Boosted’s source Sass files. You have two options: include all of Boosted, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-// Option A: Include all of Boosted
-</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option A: Include all of Boosted</span>
+
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/boosted"</span><span class="p">;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-// Option B: Include parts of Boosted
-</span>
-<span class="c1">// Required
-</span><span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/functions"</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option B: Include parts of Boosted</span>
+
+<span class="c1">// Required</span>
+<span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/functions"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/variables"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/mixins"</span><span class="p">;</span>
 
-<span class="c1">// Optional
-</span><span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/reboot"</span><span class="p">;</span>
+<span class="c1">// Optional</span>
+<span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/reboot"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/type"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/images"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/code"</span><span class="p">;</span>
@@ -507,12 +507,12 @@
 
 <p>Here’s an example that changes the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">color</code> for the <code class="highlighter-rouge">&lt;body&gt;</code> when importing and compiling Boosted via npm:</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides
-</span><span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides</span>
+<span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
 <span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span>
 
-<span class="c1">// Boosted and its default variables
-</span><span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/boosted"</span><span class="p">;</span></code></pre></figure>
+<span class="c1">// Boosted and its default variables</span>
+<span class="k">@import</span> <span class="s2">"node_modules/boosted/scss/boosted"</span><span class="p">;</span></code></pre></figure>
 
 <p>Repeat as necessary for any variable in Boosted, including the global options below.</p>
 
@@ -607,14 +607,14 @@
 <p>It can also be used for one-off contrast needs:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
-</span><span class="p">}</span></code></pre></figure>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>You can also specify a base color with our color map functions:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`
-</span><span class="p">}</span></code></pre></figure>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`</span>
+<span class="p">}</span></code></pre></figure>
 
 <h2 id="sass-options">Sass options</h2>
 
@@ -759,11 +759,11 @@
 
 <p>Here’s how you can use these in your Sass:</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// With variable
-</span><span class="nc">.alpha</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// With variable</span>
+<span class="nc">.alpha</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="c1">// From the Sass map with our `color()` function
-</span><span class="nc">.beta</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">"purple"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>
+<span class="c1">// From the Sass map with our `color()` function</span>
+<span class="nc">.beta</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">"purple"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>
 
 <p><a href="/docs/4.0/utilities/colors/">Color utility classes</a> are also available for setting <code class="highlighter-rouge">color</code> and <code class="highlighter-rouge">background-color</code>.</p>
 
@@ -869,15 +869,15 @@
 
 <p>Here are two examples of how we loop over the <code class="highlighter-rouge">$theme-colors</code> map to generate modifiers to the <code class="highlighter-rouge">.alert</code> component and all our <code class="highlighter-rouge">.bg-*</code> background utilities.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes
-</span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes</span>
+<span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
     <span class="k">@include</span> <span class="nd">alert-variant</span><span class="p">(</span><span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">-10</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">-9</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">6</span><span class="p">));</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="c1">// Generate `.bg-*` color utilities
-</span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+<span class="c1">// Generate `.bg-*` color utilities</span>
+<span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="k">@include</span> <span class="nd">bg-variant</span><span class="p">(</span><span class="s1">'.bg-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s1">'</span><span class="o">,</span> <span class="nv">$value</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 

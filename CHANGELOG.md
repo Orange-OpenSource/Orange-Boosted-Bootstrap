@@ -1,3 +1,28 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0-beta.3...v4.0.0) (2018-01-22)
+
+
+### Bug Fixes
+
+* **collapse:** fix collapse unit test and plugin ([da05e0e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/da05e0e))
+* **component:** footer ([19ab165](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/19ab165))
+* **component:** footer ([7b8b269](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7b8b269))
+* **component:** navbar ([8c8f18e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8c8f18e))
+* **component:** navbar ([35f4954](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/35f4954))
+* **component:** navbar ([3e5466c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3e5466c))
+* **component:** navbar ([2ecf012](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2ecf012))
+* **core:** functional color ([8102a70](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8102a70))
+* **docs:** code lint ([1650e82](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1650e82))
+* **docs:** custom components links ([86279a5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86279a5))
+* **docs:** footer ([5d6d629](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5d6d629))
+
+
+### Features
+
+* **build:** docs screenshots ([f5e9885](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f5e9885))
+
+
+
 <a name="4.0.0-beta.3"></a>
 # [4.0.0-beta.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2018-01-05)
 

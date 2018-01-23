@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Components and options for laying out your Boosted project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>Overview · Boosted</title>
 
@@ -445,23 +445,23 @@
 
 <p>Boosted primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 480px)
-// No media query since this is the default in Boosted
-</span>
-<span class="c1">// Small devices (landscape phones, 480px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">480px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 480px)</span>
+<span class="c1">// No media query since this is the default in Boosted</span>
 
-<span class="c1">// Medium devices (tablets, 768px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Small devices (landscape phones, 480px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">480px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Large devices (desktops, 980px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">980px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Medium devices (tablets, 768px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra large devices (large desktops, 1220px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1220px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Large devices (desktops, 980px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">980px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra extra large devices (large desktops, 1380px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1380px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<span class="c1">// Extra large devices (large desktops, 1220px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1220px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+
+<span class="c1">// Extra extra large devices (large desktops, 1380px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1380px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
 <p>Since we write our source CSS in Sass, all our media queries are available via Sass mixins:</p>
 
@@ -471,8 +471,8 @@
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">xxl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="c1">// Example usage:
-</span><span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// Example usage:</span>
+<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
   <span class="nc">.some-class</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
   <span class="p">}</span>
@@ -480,23 +480,23 @@
 
 <p>We occasionally use media queries that go in the other direction (the given screen size <em>or smaller</em>):</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 480px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">479</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 480px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">479</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Small devices (landscape phones, less than 768px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Small devices (landscape phones, less than 768px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Medium devices (tablets, less than 960px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">959</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Medium devices (tablets, less than 960px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">959</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Large devices (desktops, less than 1220px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1219</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Large devices (desktops, less than 1220px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1219</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra large devices (desktops, less than 1380px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1379</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Extra large devices (desktops, less than 1380px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1379</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra extra large devices (large desktops)
-</span><span class="o">//</span> <span class="nt">No</span> <span class="nt">media</span> <span class="nt">query</span> <span class="nt">since</span> <span class="nt">the</span> <span class="nt">extra-extra-large</span> <span class="nt">breakpoint</span> <span class="nt">has</span> <span class="nt">no</span> <span class="nt">upper</span> <span class="nt">bound</span> <span class="nt">on</span> <span class="nt">its</span> <span class="nt">width</span></code></pre></figure>
+<span class="c1">// Extra extra large devices (large desktops)</span>
+<span class="c1">// No media query since the extra-extra-large breakpoint has no upper bound on its width</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-info">
 <p>Note that since browsers do not currently support <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>, we work around the limitations of <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"><code class="highlighter-rouge">min-</code> and <code class="highlighter-rouge">max-</code> prefixes</a> and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.</p>
@@ -512,23 +512,23 @@
 
 <p>There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 480px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">479</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 480px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">479</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Small devices (landscape phones, 480px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">480px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Small devices (landscape phones, 480px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">480px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Medium devices (tablets, 768px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">959</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Medium devices (tablets, 768px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">959</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Large devices (desktops, 960px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">960px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1219</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Large devices (desktops, 960px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">960px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1219</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra large devices (desktops, 1220px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1220px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1379</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Extra large devices (desktops, 1220px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1220px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1379</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra extra large devices (large desktops, 1380px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1380px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<span class="c1">// Extra extra large devices (large desktops, 1380px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1380px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
 <p>These media queries are also available via Sass mixins:</p>
 
@@ -541,9 +541,9 @@
 
 <p>Similarly, media queries may span multiple breakpoint widths:</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Example
-// Apply styles starting from medium devices (tablets, 768px and up) and  Large devices (desktops, 960px and up)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">959</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Example</span>
+<span class="c1">// Apply styles starting from medium devices (tablets, 768px and up) and  Large devices (desktops, 960px and up)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">959</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
 <p>The Sass mixin for targeting the same screen size range would be:</p>
 
