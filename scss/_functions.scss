@@ -1,7 +1,7 @@
 // Bootstrap functions
 //
 // Utility mixins and functions for evalutating source code across our variables, maps, and mixins.
-@import "../node_modules/sass-math-pow/sass/math-pow";
+@import "node_modules/sass-math-pow/sass/math-pow";
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
 @mixin _assert-ascending($map, $map-name) {
