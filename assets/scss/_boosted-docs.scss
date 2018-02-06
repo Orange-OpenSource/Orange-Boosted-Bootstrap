@@ -52,7 +52,22 @@
   img {
     display: block;
     width: 70%;
-    // margin: 0 auto;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: .625rem;
+
+    .bd-boosted-icon {
+      font-size: 2.125rem // 34px;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    .col-md-6:first-child {
+      order: 1;
+    }
   }
 }
 
