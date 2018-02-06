@@ -56,12 +56,15 @@ const MegaMenu = (() => {
   class MegaMenu {
     constructor(element, config) {
       this._element = element
-      this._config = config
       this._$navLinks = $(this._element).find(Selector.NAV_LINK)
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
       this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL)
       this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE)
+      this._config = config
+      if (typeof this._config.noFocus === 'undefined') {
+        this._config.noFocus = false
+      }
       this._addEventListeners()
       this._addAriaAttributes(this._element)
       this.goTo = this._initPosition
@@ -81,7 +84,9 @@ const MegaMenu = (() => {
       this._$goForwardLinks.on('click', (event) => this._goForward(event))
       this._$goBackLinks.on('click', (event) => this._goBackward(event))
       this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
-      this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
+      if (!this._config.noFocus) {
+        this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
+      }
       this._$navLinkCollapses.on('click', (event) => this._handleCollapseToggle(event))
     }
 
@@ -173,8 +178,10 @@ const MegaMenu = (() => {
 
       // set focus on target link
       setTimeout(() =>  {
-        // set focus on target link
-        $target.trigger('focus')
+        if (!this._config.noFocus) {
+          // set focus on target link
+          $target.trigger('focus')
+        }
 
         $rootNav.removeClass(ClassName.TRANSITIONING)
       }, TIMEOUT)
@@ -328,6 +335,13 @@ const MegaMenu = (() => {
           throw new Error('Element is not a mega menu')
         }
 
+        if (!config) {
+          config = {}
+        } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
+          // param = true
+          throw new Error('disable-focus parameter must be boolean')
+        }
+
         let data       = $element.data(DATA_KEY)
 
         if (!data) {
@@ -335,12 +349,12 @@ const MegaMenu = (() => {
           $element.data(DATA_KEY, data)
         }
 
-        if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-            throw new Error(`Selector "${config}" is not supported`)
+        if (config.target) {
+          if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+            throw new Error(`Selector "${config.target}" is not supported`)
           }
 
-          data.goTo(config)
+          data.goTo(config.target)
         }
       })
     }
