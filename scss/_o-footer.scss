@@ -4,12 +4,14 @@
 
 .o-footer {
   margin-top: 2.5rem;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: #fff;
   background-color: #000;
 
   .nav-link {
     padding: $nav-link-padding-y ($nav-link-padding-x * .5);
     font-size: $font-size-sm;
-    font-weight: $font-weight-bold;
     line-height: 1.25rem;
 
     &:not(:hover),
@@ -37,7 +39,6 @@
     h2 {
       margin-top: .625rem;
       font-size: $font-size-sm;
-      font-weight: $font-weight-bold;
       color: #fff;
     }
 
