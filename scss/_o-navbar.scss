@@ -110,6 +110,7 @@
         &.minimized {
           .mega-menu .nav-link {
             padding-right: 0;
+            outline-offset: -1px;
 
             &[data-toggle="collapse"]::before {
               margin-top: .3125rem;
@@ -208,6 +209,7 @@
 
           > .container > .navbar-nav > .nav-item > .nav-link {
             padding: 0;
+            margin-right: .625rem;
             margin-bottom: 1rem;
             font-size: 1.25rem;
           }
