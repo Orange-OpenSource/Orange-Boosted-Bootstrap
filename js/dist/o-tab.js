@@ -4,18 +4,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * ------------------------------------------------------------------------------------------------------
- * Boosted (v4.0.0): otab.js
+ * Boosted (v4.0.1): otab.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * ------------------------------------------------------------------------------------------------------
  */
-var Otab = function () {
+var Otab = function ($) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'otab';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -116,7 +116,7 @@ var Otab = function () {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error("No method named \"" + config + "\"");
+            throw new TypeError("No method named \"" + config + "\"");
           }
 
           data[config]();

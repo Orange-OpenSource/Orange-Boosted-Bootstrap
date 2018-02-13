@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Boosted v4.0.0 (http://boosted.orange.com)
+ * Boosted v4.0.1 (http://boosted.orange.com)
  * Copyright 2014-2018 The Boosted Authors
  * Copyright 2014-2018 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
@@ -11095,6 +11095,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 @media (max-width: 479.98px) {
   .navbar-expand-sm .mega-menu .nav-link, .navbar-expand-sm.minimized .mega-menu .nav-link {
     padding-left: 0;
+    outline-offset: -1px;
   }
   .navbar-expand-sm .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-expand-sm.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
     margin-top: .3125rem;
@@ -11187,6 +11188,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav > .nav-item > .nav-link {
     padding: 0;
+    margin-left: .625rem;
     margin-bottom: 1rem;
     font-size: 1.25rem;
   }
@@ -11210,9 +11212,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
     margin-right: 0;
   }
-  .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav .nav-link {
-    color: #fff;
-  }
   .navbar-expand-sm .mega-menu-panel > .container > .navbar-nav .nav-link.back {
     display: none;
   }
@@ -11221,6 +11220,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 @media (max-width: 767.98px) {
   .navbar-expand-md .mega-menu .nav-link, .navbar-expand-md.minimized .mega-menu .nav-link {
     padding-left: 0;
+    outline-offset: -1px;
   }
   .navbar-expand-md .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-expand-md.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
     margin-top: .3125rem;
@@ -11313,6 +11313,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-expand-md .mega-menu-panel > .container > .navbar-nav > .nav-item > .nav-link {
     padding: 0;
+    margin-left: .625rem;
     margin-bottom: 1rem;
     font-size: 1.25rem;
   }
@@ -11336,9 +11337,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-md .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
     margin-right: 0;
   }
-  .navbar-expand-md .mega-menu-panel > .container > .navbar-nav .nav-link {
-    color: #fff;
-  }
   .navbar-expand-md .mega-menu-panel > .container > .navbar-nav .nav-link.back {
     display: none;
   }
@@ -11347,6 +11345,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 @media (max-width: 979.98px) {
   .navbar-expand-lg .mega-menu .nav-link, .navbar-expand-lg.minimized .mega-menu .nav-link {
     padding-left: 0;
+    outline-offset: -1px;
   }
   .navbar-expand-lg .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-expand-lg.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
     margin-top: .3125rem;
@@ -11439,6 +11438,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav > .nav-item > .nav-link {
     padding: 0;
+    margin-left: .625rem;
     margin-bottom: 1rem;
     font-size: 1.25rem;
   }
@@ -11462,9 +11462,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
     margin-right: 0;
   }
-  .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav .nav-link {
-    color: #fff;
-  }
   .navbar-expand-lg .mega-menu-panel > .container > .navbar-nav .nav-link.back {
     display: none;
   }
@@ -11473,6 +11470,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 @media (max-width: 1219.98px) {
   .navbar-expand-xl .mega-menu .nav-link, .navbar-expand-xl.minimized .mega-menu .nav-link {
     padding-left: 0;
+    outline-offset: -1px;
   }
   .navbar-expand-xl .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-expand-xl.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
     margin-top: .3125rem;
@@ -11565,6 +11563,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav > .nav-item > .nav-link {
     padding: 0;
+    margin-left: .625rem;
     margin-bottom: 1rem;
     font-size: 1.25rem;
   }
@@ -11588,9 +11587,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
     margin-right: 0;
   }
-  .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav .nav-link {
-    color: #fff;
-  }
   .navbar-expand-xl .mega-menu-panel > .container > .navbar-nav .nav-link.back {
     display: none;
   }
@@ -11599,6 +11595,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 @media (max-width: 1379.98px) {
   .navbar-expand-xxl .mega-menu .nav-link, .navbar-expand-xxl.minimized .mega-menu .nav-link {
     padding-left: 0;
+    outline-offset: -1px;
   }
   .navbar-expand-xxl .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-expand-xxl.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
     margin-top: .3125rem;
@@ -11691,6 +11688,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
   .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav > .nav-item > .nav-link {
     padding: 0;
+    margin-left: .625rem;
     margin-bottom: 1rem;
     font-size: 1.25rem;
   }
@@ -11714,9 +11712,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
     margin-right: 0;
   }
-  .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav .nav-link {
-    color: #fff;
-  }
   .navbar-expand-xxl .mega-menu-panel > .container > .navbar-nav .nav-link.back {
     display: none;
   }
@@ -11724,6 +11719,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 .navbar-expand .mega-menu .nav-link, .navbar-expand.minimized .mega-menu .nav-link {
   padding-left: 0;
+  outline-offset: -1px;
 }
 
 .navbar-expand .mega-menu .nav-link[data-toggle="collapse"]::before, .navbar-expand.minimized .mega-menu .nav-link[data-toggle="collapse"]::before {
@@ -11831,6 +11827,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 
 .navbar-expand .mega-menu-panel > .container > .navbar-nav > .nav-item > .nav-link {
   padding: 0;
+  margin-left: .625rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
@@ -11856,10 +11853,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 .navbar-expand .mega-menu-panel > .container > .navbar-nav .nav-item:first-child,
 .navbar-expand .mega-menu-panel > .container > .navbar-nav .nav-item + .nav-item {
   margin-right: 0;
-}
-
-.navbar-expand .mega-menu-panel > .container > .navbar-nav .nav-link {
-  color: #fff;
 }
 
 .navbar-expand .mega-menu-panel > .container > .navbar-nav .nav-link.back {
@@ -12862,13 +12855,15 @@ caption {
 
 .o-footer {
   margin-top: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
   background-color: #000;
 }
 
 .o-footer .nav-link {
   padding: 0.625rem 0.625rem;
   font-size: 0.875rem;
-  font-weight: 700;
   line-height: 1.25rem;
 }
 
@@ -12894,7 +12889,6 @@ caption {
 .o-footer .o-footer-body h2 {
   margin-top: .625rem;
   font-size: 0.875rem;
-  font-weight: 700;
   color: #fff;
 }
 

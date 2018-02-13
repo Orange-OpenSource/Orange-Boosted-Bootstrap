@@ -4,18 +4,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-priority-nav.js
+ * Boosted (v4.0.1): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-var PriorityNav = function () {
+var PriorityNav = function ($) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'prioritynav';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
@@ -185,7 +185,7 @@ var PriorityNav = function () {
 
         if (typeof config !== 'undefined' && config) {
           if (typeof config !== 'string') {
-            throw new Error('Priority nav label type must be string');
+            throw new TypeError('Priority nav label type must be string');
           }
         }
       });

@@ -6,18 +6,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-megamenu.js
+ * Boosted (v4.0.1): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-var MegaMenu = function () {
+var MegaMenu = function ($) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'megamenu';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
@@ -353,7 +353,7 @@ var MegaMenu = function () {
           config = {};
         } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
           // param = true
-          throw new Error('disable-focus parameter must be boolean');
+          throw new Error('no-focus parameter must be boolean');
         }
 
         var data = $element.data(DATA_KEY);
@@ -365,7 +365,7 @@ var MegaMenu = function () {
 
         if (config.target) {
           if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
-            throw new Error("Selector \"" + config.target + "\" is not supported");
+            throw new TypeError("Selector \"" + config.target + "\" is not supported");
           }
 
           data.goTo(config.target);
