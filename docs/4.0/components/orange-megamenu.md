@@ -134,7 +134,15 @@ Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing 
 Megamenu can be initialised to point to a specific menu item when main menu is opened. Call the init method with wanted item id.
 
 {% highlight js %}
-$('#collapsing-navbarHead').megamenu('#testLink');
+$('#collapsing-navbarHead').megamenu({ target: '#testLink' });
 {% endhighlight %}
+
+You might as well keep control on focus when page is loaded, thus disabling focus on targeted item.
+
+{% highlight js %}
+$('#collapsing-navbarHead').megamenu({ target: '#testLink', noFocus: true });
+{% endhighlight %}
+
+Default value for parameter `noFocus` is `false`.
 
 See a full implementation in the Orange News [example page](../../examples/orange-news/)
