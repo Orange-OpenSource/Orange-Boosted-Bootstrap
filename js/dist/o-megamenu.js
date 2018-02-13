@@ -60,12 +60,16 @@ var MegaMenu = function () {
   function () {
     function MegaMenu(element, config) {
       this._element = element;
-      this._config = config;
       this._$navLinks = $(this._element).find(Selector.NAV_LINK);
       this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
       this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
       this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
       this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE);
+      this._config = config;
+
+      if (typeof this._config.noFocus === 'undefined') {
+        this._config.noFocus = false;
+      }
 
       this._addEventListeners();
 
@@ -94,7 +98,9 @@ var MegaMenu = function () {
         return _this._manageKeyDown(event);
       });
 
-      this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      if (!this._config.noFocus) {
+        this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      }
 
       this._$navLinkCollapses.on('click', function (event) {
         return _this._handleCollapseToggle(event);
@@ -142,6 +148,8 @@ var MegaMenu = function () {
     };
 
     _proto._initPosition = function _initPosition(target) {
+      var _this2 = this;
+
       if (!$(target).length) {
         return;
       }
@@ -187,8 +195,11 @@ var MegaMenu = function () {
 
 
       setTimeout(function () {
-        // set focus on target link
-        $target.trigger('focus');
+        if (!_this2._config.noFocus) {
+          // set focus on target link
+          $target.trigger('focus');
+        }
+
         $rootNav.removeClass(ClassName.TRANSITIONING);
       }, TIMEOUT);
     };
@@ -338,6 +349,13 @@ var MegaMenu = function () {
           throw new Error('Element is not a mega menu');
         }
 
+        if (!config) {
+          config = {};
+        } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
+          // param = true
+          throw new Error('disable-focus parameter must be boolean');
+        }
+
         var data = $element.data(DATA_KEY);
 
         if (!data) {
@@ -345,12 +363,12 @@ var MegaMenu = function () {
           $element.data(DATA_KEY, data);
         }
 
-        if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-            throw new Error("Selector \"" + config + "\" is not supported");
+        if (config.target) {
+          if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+            throw new Error("Selector \"" + config.target + "\" is not supported");
           }
 
-          data.goTo(config);
+          data.goTo(config.target);
         }
       });
     };
