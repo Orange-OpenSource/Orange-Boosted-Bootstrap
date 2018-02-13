@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-priority-nav.js
+ * Boosted (v4.0.1): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ const PriorityNav = (($) => {
    */
 
   const NAME = 'prioritynav'
-  const VERSION = '4.0.0'
+  const VERSION = '4.0.1'
   const DATA_KEY = 'bs.prioritynav'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
   const RESIZE_DURATION = 500
