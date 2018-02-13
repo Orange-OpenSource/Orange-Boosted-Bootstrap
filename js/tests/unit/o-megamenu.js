@@ -24,13 +24,27 @@ $(function () {
     assert.strictEqual(typeof $.fn.megamenu, 'undefined', 'megamenu was set back to undefined (org value)')
   })
 
-  QUnit.test('should throw explicit error on wrong ID parameter', function (assert) {
+  QUnit.test('should throw explicit error on wrong ID target parameter', function (assert) {
     assert.expect(1)
     var $el = $('<div class="mega-menu"/>')
     try {
-      $el.boostedMegaMenu('noid')
+      $el.boostedMegaMenu({
+        target: 'noid'
+      })
     } catch (err) {
       assert.strictEqual(err.message, 'Selector "noid" is not supported')
+    }
+  })
+
+  QUnit.test('should throw explicit error on wrong type noFocus parameter', function (assert) {
+    assert.expect(1)
+    var $el = $('<div class="mega-menu"/>')
+    try {
+      $el.boostedMegaMenu({
+        noFocus: 'notboolean'
+      })
+    } catch (err) {
+      assert.strictEqual(err.message, 'no-focus parameter must be boolean')
     }
   })
 

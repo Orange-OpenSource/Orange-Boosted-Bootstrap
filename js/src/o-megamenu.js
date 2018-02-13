@@ -339,7 +339,7 @@ const MegaMenu = (() => {
           config = {}
         } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
           // param = true
-          throw new Error('disable-focus parameter must be boolean')
+          throw new Error('no-focus parameter must be boolean')
         }
 
         let data       = $element.data(DATA_KEY)
