@@ -9,7 +9,7 @@ import Util from './util'
  * --------------------------------------------------------------------------
  */
 
-const Navbar = (() => {
+const Navbar = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -128,7 +128,7 @@ const Navbar = (() => {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error(`No method named "${config}"`)
+            throw new TypeError(`No method named "${config}"`)
           }
           data[config]()
         }

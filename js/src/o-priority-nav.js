@@ -7,7 +7,7 @@ import $ from 'jquery'
  * --------------------------------------------------------------------------
  */
 
-const PriorityNav = (() => {
+const PriorityNav = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -197,7 +197,7 @@ const PriorityNav = (() => {
 
         if (typeof config !== 'undefined' && config) {
           if (typeof config !== 'string') {
-            throw new Error('Priority nav label type must be string')
+            throw new TypeError('Priority nav label type must be string')
           }
         }
       })

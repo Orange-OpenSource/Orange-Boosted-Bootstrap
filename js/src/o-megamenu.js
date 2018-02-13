@@ -10,7 +10,7 @@ import Util from './util'
  * --------------------------------------------------------------------------
  */
 
-const MegaMenu = (() => {
+const MegaMenu = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -351,7 +351,7 @@ const MegaMenu = (() => {
 
         if (config.target) {
           if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
-            throw new Error(`Selector "${config.target}" is not supported`)
+            throw new TypeError(`Selector "${config.target}" is not supported`)
           }
 
           data.goTo(config.target)

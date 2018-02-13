@@ -8,7 +8,7 @@ import Util from './util'
  * ------------------------------------------------------------------------------------------------------
  */
 
-const Otab = (() => {
+const Otab = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -126,7 +126,7 @@ const Otab = (() => {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error(`No method named "${config}"`)
+            throw new TypeError(`No method named "${config}"`)
           }
           data[config]()
         }
