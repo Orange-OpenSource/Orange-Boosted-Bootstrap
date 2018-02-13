@@ -1,3 +1,28 @@
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0...v4.0.1) (2018-02-13)
+
+
+### Bug Fixes
+
+* **component:** accordion ([efb20d5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/efb20d5))
+* **component:** footer ([ff9db92](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ff9db92))
+* **component:** megamenu ([88999f1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/88999f1))
+* **component:** megamenu ([7b532c4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7b532c4))
+* **component:** megamenu ([cf3c8c2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cf3c8c2))
+* **component:** megamenu ([e327a4c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e327a4c))
+* **docs:** logo rework ([d432feb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d432feb))
+* **docs:** mobile display ([26a15ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/26a15ce))
+* **docs:** pagination ([341d627](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/341d627))
+* **docs:** rtl ([66ae6f6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/66ae6f6))
+* **js:** fix boosted component error declaration ([422ebb2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/422ebb2))
+
+
+### Features
+
+* **component:** disable focus on init ([1574ec7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1574ec7))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0-beta.3...v4.0.0) (2018-01-22)
 
