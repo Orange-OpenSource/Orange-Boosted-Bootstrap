@@ -11900,7 +11900,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .o-accordion .card-header button,
-.o-accordion .card-header [role="button"] {
+.o-accordion .card-header a {
   position: relative;
   display: block;
   width: 100%;
@@ -11911,7 +11911,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .o-accordion .card-header button::after,
-.o-accordion .card-header [role="button"]::after {
+.o-accordion .card-header a::after {
   position: absolute;
   top: 1.3125rem;
   left: .625rem;
@@ -11922,7 +11922,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
 }
 
 .o-accordion .card-header button[aria-expanded="true"]::after,
-.o-accordion .card-header [role="button"][aria-expanded="true"]::after {
+.o-accordion .card-header a[aria-expanded="true"]::after {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
