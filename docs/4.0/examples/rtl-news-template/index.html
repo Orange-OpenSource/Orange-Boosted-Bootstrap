@@ -408,14 +408,14 @@
 
 
             <h2 class="h3">related stories</h2>
-            <div id="accordion" aria-multiselectable="true" class="o-accordion">
+            <div id="accordion" class="o-accordion">
               <div class="card">
                 <div class="card-header" id="headingOne">
-                  <h3 class="mb-0">
-                    <button class="btn btn-link w-100 text-left" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-controls="collapseOne"> Collapsible #1 </button>
-                  </h3>
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseOne" aria-controls="collapseOne" role="button"> Collapsible #1 </a>
+                  </h5>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                <div id="collapseOne" data-parent="#accordion" class="collapse show" aria-labelledby="headingOne">
                   <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
                     officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
                     wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
@@ -426,11 +426,11 @@
               </div>
               <div class="card">
                 <div class="card-header" id="headingTwo">
-                  <h3 class="mb-0">
-                    <button class="btn btn-link w-100 text-left" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseTwo"> Collapsible #2 </button>
-                  </h3>
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseTwo" aria-controls="collapseTwo" role="button"> Collapsible #2 </a>
+                  </h5>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                <div id="collapseTwo" data-parent="#accordion" class="collapse" aria-labelledby="headingTwo">
                   <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
                     officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
                     wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
@@ -441,11 +441,11 @@
               </div>
               <div class="card">
                 <div class="card-header" id="headingThree">
-                  <h3 class="mb-0">
-                    <button class="btn btn-link w-100 text-left" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseThree"> Collapsible #2 </button>
-                  </h3>
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapseThree" aria-controls="collapseThree" role="button"> Collapsible #2 </a>
+                  </h5>
                 </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                <div id="collapseThree" data-parent="#accordion" class="collapse" aria-labelledby="headingThree">
                   <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
                     officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
                     wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
@@ -464,50 +464,50 @@
     </main>
 
     <footer class="o-footer" role="contentinfo">
-      <h2 class="sr-only">footer - site map & informations</h2>
+      <h1 class="sr-only">footer - site map & informations</h1>
       <div class="o-footer-top">
-          <div class="container">
+          <div class="container-fluid">
               <ul class="nav">
                   <li class="nav-item"><span class="nav-link">Follow us</span></li>
               </ul>
           </div>
       </div>
       <div class="o-footer-body">
-          <div class="container">
+          <div class="container-fluid">
               <div class="row">
                   <div class="col-md-3 col-sm-6">
                       <h2>Discover</h2>
                       <ul class="nav flex-column">
-                          <li><a href="#">Unde omnis istea</a></li>
-                          <li><a href="#">Natus error sit</a></li>
-                          <li><a href="#">Voluptatem</a></li>
-                          <li><a href="#">Totam rem aperiam</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                       </ul>
                   </div>
                   <div class="col-md-3 col-sm-6">
                       <h2>Shop</h2>
                       <ul class="nav flex-column">
-                          <li><a href="#">Natus error sit</a></li>
-                          <li><a href="#">Unde omnis istea</a></li>
-                          <li><a href="#">Voluptatem</a></li>
-                          <li><a href="#">Doloremque</a></li>
-                          <li><a href="#">Totam rem aperiam</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                       </ul>
                   </div>
                   <div class="col-md-3 col-sm-6">
                       <h2>Services</h2>
                       <ul class="nav flex-column">
-                          <li><a href="#">Doloremque</a></li>
-                          <li><a href="#">Totam rem aperiam</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                       </ul>
                   </div>
                   <div class="col-md-3 col-sm-6">
                       <h2>Support</h2>
                       <ul class="nav flex-column">
-                          <li><a href="#">Doloremque</a></li>
-                          <li><a href="#">Unde omnis istea</a></li>
-                          <li><a href="#">Voluptatem</a></li>
-                          <li><a href="#">Totam rem aperiam</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                       </ul>
                   </div>
               </div>
@@ -521,7 +521,7 @@
           </div>
       </div>
       <div class="o-footer-bottom">
-          <div class="container">
+          <div class="container-fluid">
               <ul class="nav">
                   <li class="nav-item"><span class="nav-link">© Orange 2018</span></li>
                   <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>

@@ -143,6 +143,9 @@
             </a></li><li>
             <a href="/docs/4.0/getting-started/accessibility/">
               Accessibility
+            </a></li><li>
+            <a href="/docs/4.0/getting-started/rtl/">
+              Rtl
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/layout/overview/">
@@ -419,24 +422,26 @@
 
 <p>In addition, as pages likely have more than one such navigation section, it’s advisable to provide a descriptive <code class="highlighter-rouge">aria-label</code> for the <code class="highlighter-rouge">&lt;nav&gt;</code> to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be <code class="highlighter-rouge">aria-label="Search results pages"</code>.</p>
 
+<p>Make sure to use class <code class="highlighter-rouge">.has-label</code> on previous and next links as shown in the example below to use chevron + label layout.</p>
+
 <div class="bd-example">
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li><!-- boosted mod -->
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link has-label" href="#">Next</a></li>
+    <li class="page-item"><a class="page-link has-label" href="#">Next</a></li><!-- boosted mod -->
   </ul>
 </nav>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Page navigation example"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link has-label"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link has-label"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span><span class="c">&lt;!-- boosted mod --&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link has-label"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link has-label"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span><span class="c">&lt;!-- boosted mod --&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 

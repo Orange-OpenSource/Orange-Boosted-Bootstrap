@@ -1,5 +1,5 @@
 /*!
-  * Boosted v4.0.0 (http://boosted.orange.com)
+  * Boosted v4.0.1 (http://boosted.orange.com)
   * Copyright 2014-2018 The Boosted Authors
   * Copyright 2014-2018 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
@@ -1923,21 +1923,21 @@ var Dropdown = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-megamenu.js
+ * Boosted (v4.0.1): o-megamenu.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-var MegaMenu = function () {
+var MegaMenu = function ($$$1) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'megamenu';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.megamenu';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
@@ -1978,12 +1978,16 @@ var MegaMenu = function () {
   function () {
     function MegaMenu(element, config) {
       this._element = element;
+      this._$navLinks = $$$1(this._element).find(Selector.NAV_LINK);
+      this._$goForwardLinks = $$$1(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
+      this._$goBackLinks = $$$1(this._element).find(Selector.NAV_LINK_BACK);
+      this._$topCollapseMenus = $$$1(this._element).find(Selector.MEGAMENU_PANEL);
+      this._$navLinkCollapses = $$$1(this._element).find(Selector.NAV_LINK_COLLAPSE);
       this._config = config;
-      this._$navLinks = $(this._element).find(Selector.NAV_LINK);
-      this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK);
-      this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK);
-      this._$topCollapseMenus = $(this._element).find(Selector.MEGAMENU_PANEL);
-      this._$navLinkCollapses = $(this._element).find(Selector.NAV_LINK_COLLAPSE);
+
+      if (typeof this._config.noFocus === 'undefined') {
+        this._config.noFocus = false;
+      }
 
       this._addEventListeners();
 
@@ -2012,7 +2016,9 @@ var MegaMenu = function () {
         return _this._manageKeyDown(event);
       });
 
-      this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      if (!this._config.noFocus) {
+        this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
+      }
 
       this._$navLinkCollapses.on('click', function (event) {
         return _this._handleCollapseToggle(event);
@@ -2020,25 +2026,25 @@ var MegaMenu = function () {
     };
 
     _proto._addAriaAttributes = function _addAriaAttributes(element) {
-      var $subNavs = $(element).find('.nav-link + .navbar-nav');
-      $(element).attr('role', 'application');
-      $(element).find('> .navbar-nav').attr('role', 'menu');
-      $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
-      $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $(element).find(Selector.NAV_LINK_BACK).attr({
+      var $subNavs = $$$1(element).find('.nav-link + .navbar-nav');
+      $$$1(element).attr('role', 'application');
+      $$$1(element).find('> .navbar-nav').attr('role', 'menu');
+      $$$1(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
+      $$$1(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
+      $$$1(element).find(Selector.NAV_LINK_BACK).attr({
         'aria-hidden': true
       });
-      $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
+      $$$1(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
-        var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
-        var $thisNav = $(this);
+        var $thisNavToggler = $$$1(this).prev(Selector.NAV_LINK);
+        var $thisNav = $$$1(this);
         var $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK);
-        var $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK);
+        var $topMenu = $$$1(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK);
         var goBackLabel = "go back to " + $topMenu.text() + " menu";
 
         if (!$topMenu.length) {
-          goBackLabel = "go back to " + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + " menu";
+          goBackLabel = "go back to " + $$$1(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + " menu";
         }
 
         $thisNav.attr({
@@ -2060,16 +2066,18 @@ var MegaMenu = function () {
     };
 
     _proto._initPosition = function _initPosition(target) {
-      if (!$(target).length) {
+      var _this2 = this;
+
+      if (!$$$1(target).length) {
         return;
       }
 
-      var $target = $(target).first();
+      var $target = $$$1(target).first();
       var position = $target.parents().index(this._element);
-      var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
+      var rootPosition = $$$1('.mega-menu-panel .nav-link').first().parents().index($$$1('.mega-menu'));
       var translatePercentage = -(position - rootPosition) * PERCENTAGE / 2;
       var $thisNav = $target.closest(Selector.NAV_MENU);
-      var $rootNav = $(Selector.ROOT_NAV);
+      var $rootNav = $$$1(Selector.ROOT_NAV);
       $rootNav.addClass(ClassName.TRANSITIONING); // open collapse
 
       if ($target.attr('data-toggle') === 'collapse') {
@@ -2077,7 +2085,7 @@ var MegaMenu = function () {
 
         this._$topCollapseMenus.not($target.siblings(Selector.MEGAMENU_PANEL)).collapse('hide');
 
-        $(this._element).height('auto');
+        $$$1(this._element).height('auto');
         $rootNav.css('transform', 'translateX(0%)');
       } else {
         $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
@@ -2097,22 +2105,25 @@ var MegaMenu = function () {
 
         if (translatePercentage) {
           // adapt main collapse height to target height
-          $(this._element).height($thisNav.height());
+          $$$1(this._element).height($thisNav.height());
         } else {
-          $(this._element).height('auto');
+          $$$1(this._element).height('auto');
         }
       } // set focus on target link
 
 
       setTimeout(function () {
-        // set focus on target link
-        $target.trigger('focus');
+        if (!_this2._config.noFocus) {
+          // set focus on target link
+          $target.trigger('focus');
+        }
+
         $rootNav.removeClass(ClassName.TRANSITIONING);
       }, TIMEOUT);
     };
 
     _proto._manageKeyDown = function _manageKeyDown(event) {
-      var $thisTarget = $(event.target); // test key code
+      var $thisTarget = $$$1(event.target); // test key code
 
       if (/input|textarea/i.test(event.target.tagName)) {
         return;
@@ -2145,22 +2156,22 @@ var MegaMenu = function () {
     };
 
     _proto._collapseFocus = function _collapseFocus() {
-      $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
+      $$$1(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus');
     };
 
     _proto._handleCollapseToggle = function _handleCollapseToggle(e) {
-      var $this = $(e.target);
-      var $thisCollapse = $($this.attr('href'));
+      var $this = $$$1(e.target);
+      var $thisCollapse = $$$1($this.attr('href'));
 
       this._$topCollapseMenus.not($thisCollapse).collapse('hide');
     };
 
     _proto._goForward = function _goForward(e) {
       e.preventDefault();
-      var $this = $(e.target);
+      var $this = $$$1(e.target);
       var $thisNav = $this.closest(Selector.NAV_MENU);
       var $targetNav = $this.next(Selector.NAV_MENU);
-      var $rootNav = $(Selector.ROOT_NAV);
+      var $rootNav = $$$1(Selector.ROOT_NAV);
       var $thisNavToggler = $this;
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
@@ -2176,7 +2187,7 @@ var MegaMenu = function () {
 
       $targetNav.show(); // adapt main collapse height to target height
 
-      $(Selector.MEGAMENU).height($targetNav.height()); // make only visible elements focusable
+      $$$1(Selector.MEGAMENU).height($targetNav.height()); // make only visible elements focusable
 
       if (!currentTranslatePercentage) {
         $rootNav.find('>.nav-item .nav-link').attr({
@@ -2206,10 +2217,10 @@ var MegaMenu = function () {
 
     _proto._goBackward = function _goBackward(e) {
       e.preventDefault();
-      var $this = $(e.target);
+      var $this = $$$1(e.target);
       var $thisNav = $this.closest(Selector.NAV_MENU);
       var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
-      var $rootNav = $(Selector.ROOT_NAV);
+      var $rootNav = $$$1(Selector.ROOT_NAV);
       var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
@@ -2228,7 +2239,7 @@ var MegaMenu = function () {
 
       if (currentTranslatePercentage === -PERCENTAGE) {
         // reset main collapse height
-        $(Selector.MEGAMENU).css('height', 'auto');
+        $$$1(Selector.MEGAMENU).css('height', 'auto');
         $rootNav.find('>.nav-item .nav-link').attr({
           tabindex: 0,
           'aria-hidden': false
@@ -2250,10 +2261,17 @@ var MegaMenu = function () {
 
     MegaMenu._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $(this);
+        var $element = $$$1(this);
 
         if (!$element.is(Selector.MEGAMENU)) {
           throw new Error('Element is not a mega menu');
+        }
+
+        if (!config) {
+          config = {};
+        } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
+          // param = true
+          throw new Error('no-focus parameter must be boolean');
         }
 
         var data = $element.data(DATA_KEY);
@@ -2263,12 +2281,12 @@ var MegaMenu = function () {
           $element.data(DATA_KEY, data);
         }
 
-        if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string' || !/^[.#].*/.test(config)) {
-            throw new Error("Selector \"" + config + "\" is not supported");
+        if (config.target) {
+          if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+            throw new TypeError("Selector \"" + config.target + "\" is not supported");
           }
 
-          data.goTo(config);
+          data.goTo(config.target);
         }
       });
     };
@@ -2288,11 +2306,11 @@ var MegaMenu = function () {
    */
 
 
-  $.fn[NAME] = MegaMenu._jQueryInterface;
-  $.fn[NAME].Constructor = MegaMenu;
+  $$$1.fn[NAME] = MegaMenu._jQueryInterface;
+  $$$1.fn[NAME].Constructor = MegaMenu;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
     return MegaMenu._jQueryInterface;
   };
 
@@ -2906,21 +2924,21 @@ var Modal = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-navbar.js
+ * Boosted (v4.0.1): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-var Navbar = function () {
+var Navbar = function ($$$1) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'navbar';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.navbar';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
   var BREAKPOINT = 768;
   var Default = {
     sticky: false,
@@ -2948,40 +2966,40 @@ var Navbar = function () {
       var _this = this;
 
       this._element = element;
-      this._supraBar = $(element).find(Selector.SUPRA_BAR);
+      this._supraBar = $$$1(element).find(Selector.SUPRA_BAR);
       this._config = this._getConfig(config);
-      this._initialHeight = $(this._element).outerHeight();
-      this._initialSupraHeight = $(this._supraBar).outerHeight();
+      this._initialHeight = $$$1(this._element).outerHeight();
+      this._initialSupraHeight = $$$1(this._supraBar).outerHeight();
 
       this._addAria();
 
       if (this._config.sticky) {
-        $(this._element).addClass('fixed-header');
-        $(Selector.MEGAMENU_PANEL).addClass('sticky');
-        $(document.body).css('padding-top', this._initialHeight);
-        $(window).on('scroll', function () {
-          var Scroll = $(window).scrollTop();
+        $$$1(this._element).addClass('fixed-header');
+        $$$1(Selector.MEGAMENU_PANEL).addClass('sticky');
+        $$$1(document.body).css('padding-top', this._initialHeight);
+        $$$1(window).on('scroll', function () {
+          var Scroll = $$$1(window).scrollTop();
 
           if (Scroll > 0) {
-            $(_this._element).addClass('minimized');
+            $$$1(_this._element).addClass('minimized');
           } else {
-            $(_this._element).removeClass('minimized');
+            $$$1(_this._element).removeClass('minimized');
           }
         });
       }
 
       if (this._config.hideSupra) {
-        $(window).on('scroll', function () {
-          if ($(window).innerWidth() < BREAKPOINT) {
+        $$$1(window).on('scroll', function () {
+          if ($$$1(window).innerWidth() < BREAKPOINT) {
             return;
           }
 
-          var Scroll = $(window).scrollTop();
+          var Scroll = $$$1(window).scrollTop();
 
           if (Scroll > 0) {
-            $(Selector.SUPRA_BAR).hide();
+            $$$1(Selector.SUPRA_BAR).hide();
           } else {
-            $(Selector.SUPRA_BAR).show();
+            $$$1(Selector.SUPRA_BAR).show();
           }
         });
       }
@@ -2992,22 +3010,22 @@ var Navbar = function () {
 
     // private
     _proto._getConfig = function _getConfig(config) {
-      config = $.extend({}, Default, config);
+      config = $$$1.extend({}, Default, config);
       Util.typeCheckConfig(NAME, config, DefaultType);
       return config;
     };
 
     _proto._addAria = function _addAria() {
-      $(this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
+      $$$1(this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
     }; // static
 
 
     Navbar._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $(this);
+        var $this = $$$1(this);
         var data = $this.data(DATA_KEY);
 
-        var _config = $.extend({}, Default, $this.data(), typeof config === 'object' && config);
+        var _config = $$$1.extend({}, Default, $this.data(), typeof config === 'object' && config);
 
         if (!data) {
           data = new Navbar(this, _config);
@@ -3016,7 +3034,7 @@ var Navbar = function () {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error("No method named \"" + config + "\"");
+            throw new TypeError("No method named \"" + config + "\"");
           }
 
           data[config]();
@@ -3044,11 +3062,11 @@ var Navbar = function () {
    */
 
 
-  $.fn[NAME] = Navbar._jQueryInterface;
-  $.fn[NAME].Constructor = Navbar;
+  $$$1.fn[NAME] = Navbar._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Navbar;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
     return Navbar._jQueryInterface;
   };
 
@@ -3057,23 +3075,23 @@ var Navbar = function () {
 
 /**
  * ------------------------------------------------------------------------------------------------------
- * Boosted (v4.0.0): otab.js
+ * Boosted (v4.0.1): otab.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * ------------------------------------------------------------------------------------------------------
  */
 
-var Otab = function () {
+var Otab = function ($$$1) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'otab';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
   var DEFAULT_THRESHOLD = 2;
   var Event = {
     CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
@@ -3102,8 +3120,8 @@ var Otab = function () {
 
       this._addAccessibility();
 
-      if ($(this._element).parent().find(Selector.OTAB_HEADING).length > DEFAULT_THRESHOLD) {
-        $(this._element).parent().addClass(ClassName.ACCORDION_LAYOUT);
+      if ($$$1(this._element).parent().find(Selector.OTAB_HEADING).length > DEFAULT_THRESHOLD) {
+        $$$1(this._element).parent().addClass(ClassName.ACCORDION_LAYOUT);
       }
     } // getters
 
@@ -3112,7 +3130,7 @@ var Otab = function () {
 
     // public
     _proto.show = function show() {
-      var $element = $(this._element);
+      var $element = $$$1(this._element);
 
       if ($element.next().hasClass(ClassName.SHOW)) {
         return;
@@ -3130,7 +3148,7 @@ var Otab = function () {
 
 
     _proto._addAccessibility = function _addAccessibility() {
-      var $tab = $(this._element);
+      var $tab = $$$1(this._element);
       var $tabpanel = $tab.next();
       $tab.attr('id', Util.getUID(NAME));
       $tabpanel.attr('id', Util.getUID(NAME));
@@ -3154,7 +3172,7 @@ var Otab = function () {
 
     Otab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $(this);
+        var $this = $$$1(this);
         var data = $this.data(DATA_KEY);
 
         if (!data) {
@@ -3170,7 +3188,7 @@ var Otab = function () {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new Error("No method named \"" + config + "\"");
+            throw new TypeError("No method named \"" + config + "\"");
           }
 
           data[config]();
@@ -3193,12 +3211,12 @@ var Otab = function () {
    */
 
 
-  $(document).on('DOMContentLoaded', function () {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING), 'init');
+  $$$1(document).on('DOMContentLoaded', function () {
+    Otab._jQueryInterface.call($$$1(Selector.OTAB_HEADING), 'init');
   }).on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
     event.preventDefault();
 
-    Otab._jQueryInterface.call($(this), ClassName.SHOW);
+    Otab._jQueryInterface.call($$$1(this), ClassName.SHOW);
   });
   /**
    * ------------------------------------------------------------------------
@@ -3206,11 +3224,11 @@ var Otab = function () {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Otab._jQueryInterface;
-  $.fn[NAME].Constructor = Otab;
+  $$$1.fn[NAME] = Otab._jQueryInterface;
+  $$$1.fn[NAME].Constructor = Otab;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
     return Otab._jQueryInterface;
   };
 
@@ -4077,21 +4095,21 @@ var Popover = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-priority-nav.js
+ * Boosted (v4.0.1): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-var PriorityNav = function () {
+var PriorityNav = function ($$$1) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'prioritynav';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.prioritynav';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
   var RESIZE_DURATION = 500;
   var TAB_KEYCODE = 9;
   var Event = {
@@ -4127,10 +4145,10 @@ var PriorityNav = function () {
       this._element = element;
       this._config = config;
 
-      if ($(element).is('ul')) {
-        this._$menu = $(element);
+      if ($$$1(element).is('ul')) {
+        this._$menu = $$$1(element);
       } else {
-        this._$menu = $(element).find('ul').first();
+        this._$menu = $$$1(element).find('ul').first();
       }
 
       this._initMenu();
@@ -4164,12 +4182,12 @@ var PriorityNav = function () {
       var firstPos = this._$menu.find(Selector.FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
 
 
-      var $wrappedElements = $(); // Used to snag the previous menu item in addition to ones that have wrapped
+      var $wrappedElements = $$$1(); // Used to snag the previous menu item in addition to ones that have wrapped
 
       var first = true; // Loop through all the nav items...
 
       this._$allNavElements.each(function (i) {
-        var $elm = $(this); // ...in which to find wrapped elements
+        var $elm = $$$1(this); // ...in which to find wrapped elements
 
         var pos = $elm.position();
 
@@ -4201,7 +4219,7 @@ var PriorityNav = function () {
 
 
         if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-          var $item = $(this._element).find("." + ClassName.HIDE).first().prev();
+          var $item = $$$1(this._element).find("." + ClassName.HIDE).first().prev();
           var $itemDuplicate = $item.clone();
           $item.addClass(ClassName.HIDE);
           $item.find('.nav-link').attr('tabindex', -1);
@@ -4227,7 +4245,7 @@ var PriorityNav = function () {
     _proto._bindUIActions = function _bindUIActions() {
       var _this = this;
 
-      $(window).on(Event.RESIZE, function () {
+      $$$1(window).on(Event.RESIZE, function () {
         _this._$menu.addClass(ClassName.RESIZING);
 
         setTimeout(function () {
@@ -4241,7 +4259,7 @@ var PriorityNav = function () {
 
       this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', function (e) {
         if (e.which === TAB_KEYCODE) {
-          $(e.target).dropdown('toggle');
+          $$$1(e.target).dropdown('toggle');
         }
       });
     }; // static
@@ -4249,7 +4267,7 @@ var PriorityNav = function () {
 
     PriorityNav._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $(this);
+        var $element = $$$1(this);
         var data = $element.data(DATA_KEY);
 
         if (!data) {
@@ -4259,7 +4277,7 @@ var PriorityNav = function () {
 
         if (typeof config !== 'undefined' && config) {
           if (typeof config !== 'string') {
-            throw new Error('Priority nav label type must be string');
+            throw new TypeError('Priority nav label type must be string');
           }
         }
       });
@@ -4280,11 +4298,11 @@ var PriorityNav = function () {
    */
 
 
-  $.fn[NAME] = PriorityNav._jQueryInterface;
-  $.fn[NAME].Constructor = PriorityNav;
+  $$$1.fn[NAME] = PriorityNav._jQueryInterface;
+  $$$1.fn[NAME].Constructor = PriorityNav;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
     return PriorityNav._jQueryInterface;
   };
 
@@ -4293,23 +4311,23 @@ var PriorityNav = function () {
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.0.0): o-scroll-up.js
+ * Boosted (v4.0.1): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-var ScrollUp = function () {
+var ScrollUp = function ($$$1) {
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
   var NAME = 'scrollup';
-  var VERSION = '4.0.0';
+  var VERSION = '4.0.1';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
   var SCROLLANIMATE = 500;
   var Default = {
     offset: 10,
@@ -4340,8 +4358,8 @@ var ScrollUp = function () {
     function ScrollUp(element) {
       this._element = element;
       this._scrollElement = window;
-      $(window).on(Event.SCROLL, $.proxy(this._process, this));
-      $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this));
+      $$$1(window).on(Event.SCROLL, $$$1.proxy(this._process, this));
+      $$$1(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $$$1.proxy(this._backToTop, this));
 
       this._process();
     } // getters
@@ -4351,43 +4369,43 @@ var ScrollUp = function () {
 
     // public
     _proto.dispose = function dispose() {
-      $.removeData(this._element, DATA_KEY);
-      $(this._scrollElement).off(EVENT_KEY);
+      $$$1.removeData(this._element, DATA_KEY);
+      $$$1(this._scrollElement).off(EVENT_KEY);
       this._element = null;
       this._scrollElement = null;
     }; // private
 
 
     _proto._process = function _process() {
-      if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
-        $(Selector.SCROLL_TOP).show();
+      if ($$$1(this._scrollElement).scrollTop() > Number($$$1(this._scrollElement).height())) {
+        $$$1(Selector.SCROLL_TOP).show();
       } else {
-        $(Selector.SCROLL_TOP).hide();
+        $$$1(Selector.SCROLL_TOP).hide();
       }
     };
 
     _proto._clear = function _clear() {
-      $(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
+      $$$1(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
     };
 
     _proto._backToTop = function _backToTop() {
-      if (typeof $.animate === 'function') {
-        $('html, body').animate({
+      if (typeof $$$1.animate === 'function') {
+        $$$1('html, body').animate({
           scrollTop: 0
         }, SCROLLANIMATE);
       } else {
-        $('html, body').scrollTop(0);
+        $$$1('html, body').scrollTop(0);
       }
     }; // static
 
 
     ScrollUp._jQueryInterface = function _jQueryInterface() {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY);
+        var data = $$$1(this).data(DATA_KEY);
 
         if (!data) {
           data = new ScrollUp(this);
-          $(this).data(DATA_KEY, data);
+          $$$1(this).data(DATA_KEY, data);
         }
       });
     };
@@ -4412,11 +4430,11 @@ var ScrollUp = function () {
    */
 
 
-  $(window).on(Event.LOAD_DATA_API, function () {
-    var scrollUps = $.makeArray($(Selector.SCROLL_TOP));
+  $$$1(window).on(Event.LOAD_DATA_API, function () {
+    var scrollUps = $$$1.makeArray($$$1(Selector.SCROLL_TOP));
 
     for (var i = scrollUps.length; i--;) {
-      var $scrollup = $(scrollUps[i]);
+      var $scrollup = $$$1(scrollUps[i]);
 
       ScrollUp._jQueryInterface.call($scrollup, $scrollup.data());
     }
@@ -4427,11 +4445,11 @@ var ScrollUp = function () {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = ScrollUp._jQueryInterface;
-  $.fn[NAME].Constructor = ScrollUp;
+  $$$1.fn[NAME] = ScrollUp._jQueryInterface;
+  $$$1.fn[NAME].Constructor = ScrollUp;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $$$1.fn[NAME].noConflict = function () {
+    $$$1.fn[NAME] = JQUERY_NO_CONFLICT;
     return ScrollUp._jQueryInterface;
   };
 
@@ -5140,7 +5158,7 @@ var Tab = function ($$$1) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): index.js
+ * Bootstrap (v4.0.0): index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
