@@ -41,7 +41,7 @@
 
   &:focus ~ .custom-control-label::before {
     // the mixin is not used here to make sure there is feedback
-    outline: dotted 1px; // Boosted mod no box-shadow, replaced by outline
+    outline: dotted 1px $black; // Boosted mod no box-shadow, replaced by outline
     box-shadow: $custom-control-indicator-focus-box-shadow;
   }
 
