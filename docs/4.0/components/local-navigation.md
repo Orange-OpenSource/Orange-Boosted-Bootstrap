@@ -20,7 +20,7 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 <div class="o-nav-local">
     <nav class="container">
         <ul class="nav">
-            <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
         </ul>
@@ -37,7 +37,7 @@ Simply add `.inverse` class to your `.o-nav-local` container.
     <div class="o-nav-local inverse">
         <nav class="container">
             <ul class="nav">
-                <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
             </ul>

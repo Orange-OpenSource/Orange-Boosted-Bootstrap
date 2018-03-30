@@ -38,7 +38,7 @@
     line-height: 1;
   }
 
-  .nav-item.active > .nav-link {
+  .nav-link.active {
     color: theme-color("primary");
   }
 
