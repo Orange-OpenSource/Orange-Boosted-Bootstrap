@@ -29,5 +29,9 @@
     $('a').on('click', function (e) {
       e.preventDefault()
     })
+
+    $('#oneAtaTime details').on('click', function () {
+      $('#oneAtaTime details').not($(this)).removeAttr('open');
+  });
   })
 }())

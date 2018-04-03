@@ -72,39 +72,6 @@ legend.gauge-label {
   0% {
     stroke-dashoffset: 326.725; } }
 
-/* Toasts */
-#toast-container > div {
-  border-radius: 0;
-  font-weight: bold;
-  opacity: 1;
-  padding: 16px 20px;
-  box-shadow: none; }
-  #toast-container > div:hover {
-    box-shadow: none;
-    opacity: .8; }
-
-#toast-container > .toast-info {
-  background-image: none !important;
-  background-color: #527edb;
-  color: #000; }
-
-#toast-container > .toast-success {
-  background-image: none !important;
-  background-color: #32c832;
-  color: #000; }
-
-#toast-container > .toast-error {
-  background-image: none !important;
-  background-color: #cd3c14; }
-
-#toast-container > .toast-warning {
-  background-image: none !important;
-  background-color: #fc0;
-  color: #000; }
-
-#toast-container.toast-top-right {
-  top: 120px; }
-
 /* Custom css */
 h1 {
   margin-top: 20px; }
@@ -115,9 +82,140 @@ h2 {
 .o-footer h2 {
   margin-top: 0; }
 
+.resp-tooltip {
+  position: relative; }
+
+.resp-tooltip .collapse,
+.resp-tooltip .collapsing {
+  padding: 20px; }
+
+@media (min-device-width: 480px) {
+  .resp-tooltip a[data-toggle="collapse"]:hover + .collapse,
+  .resp-tooltip a[data-toggle="collapse"]:focus + .collapse,
+  .resp-tooltip a[data-toggle="collapse"]:hover + .collapsing,
+  .resp-tooltip a[data-toggle="collapse"]:focus + .collapsing {
+    display: inline-block;
+    position: absolute;
+    background-color: #ddd;
+    color: #000;
+    top: -25%;
+    font-weight: bold;
+    margin-left: 20px; } }
+
 @media (max-device-width: 479px) {
   #toast-container {
     top: auto !important;
     bottom: 0 !important; }
     #toast-container > div {
       width: 100%; } }
+
+/* Edge to edge container */
+/* fix card bg and border*/
+.card {
+  background-color: transparent;
+  border: 0; }
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden; }
+  .edge-container {
+    position: relative; }
+  .edge-container::before,
+  .edge-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12rem;
+    /* put something larger to get edge touching until 768px */
+    top: 0;
+    left: -12rem;
+    bottom: 0;
+    background-color: inherit; }
+  .edge-container::after {
+    left: auto;
+    right: -12rem; }
+  .edge-container .ecm-card {
+    padding-left: 0; } }
+
+/* Custom tooltip */
+.custom-tooltip .card-body {
+  font-weight: bold;
+  background: #ddd; }
+
+.custom-layout {
+  display: flex;
+  flex-wrap: wrap; }
+
+.custom-layout .form-control {
+  width: auto; }
+
+.tooltip-trigger {
+  margin-left: 10px;
+  margin-top: 6px; }
+
+.tooltip-content {
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #ddd;
+  font-weight: bold; }
+
+.o-rating:not(:checked) > label:hover,
+.o-rating:not(:checked) > label:hover ~ label {
+  color: #f16e00; }
+
+.boosted-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px; }
+  .boosted-grid.col3 > div {
+    grid-column: span 4; }
+  .boosted-grid :first-child {
+    background-color: pink; }
+  .boosted-grid :nth-child(2) {
+    background-color: purple; }
+  .boosted-grid :nth-child(3) {
+    background-color: yellowgreen; }
+
+.autogrid.has-gutter,
+.grid-3.has-gutter {
+  grid-column-gap: 20px; }
+
+/* Native accordions */
+details {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+  padding: 1px 0;
+  margin-bottom: -1px; }
+  details summary {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 13px 0;
+    position: relative; }
+    details summary:focus {
+      outline: 1px dotted #000; }
+    details summary::-webkit-details-marker {
+      display: none; }
+    details summary::after {
+      position: absolute;
+      top: 1.3125rem;
+      right: .625rem;
+      width: .875rem;
+      height: .4375rem;
+      content: "";
+      background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E"); }
+    details summary::before {
+      display: none; }
+  details p {
+    padding-right: 24px;
+    margin: 0; }
+
+details[open] {
+  padding-bottom: 20px; }
+  details[open] summary {
+    margin-bottom: 7px; }
+    details[open] summary::after {
+      transform: rotate(180deg); }
+
+details:last-child {
+  border-bottom: 1px solid #ccc; }
