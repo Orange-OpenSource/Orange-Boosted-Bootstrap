@@ -22,38 +22,41 @@
     <script src="../../assets/js/vendor/popper.min.js"></script>
 
     <!-- QUnit -->
-    <link rel="stylesheet" href="vendor/qunit.css" media="screen">
-    <script src="vendor/qunit.js"></script>
+    <link rel="stylesheet" href="../../node_modules/qunitjs/qunit/qunit.css" media="screen">
+    <script src="../../node_modules/qunitjs/qunit/qunit.js"></script>
+
+    <!-- Sinon -->
+    <script src="../../node_modules/sinon/pkg/sinon-no-sourcemaps.js"></script>
 
     <script>
       // Disable jQuery event aliases to ensure we don't accidentally use any of them
       [
-          'blur',
-          'focus',
-          'focusin',
-          'focusout',
-          'resize',
-          'scroll',
-          'click',
-          'dblclick',
-          'mousedown',
-          'mouseup',
-          'mousemove',
-          'mouseover',
-          'mouseout',
-          'mouseenter',
-          'mouseleave',
-          'change',
-          'select',
-          'submit',
-          'keydown',
-          'keypress',
-          'keyup',
+        'blur',
+        'focus',
+        'focusin',
+        'focusout',
+        'resize',
+        'scroll',
+        'click',
+        'dblclick',
+        'mousedown',
+        'mouseup',
+        'mousemove',
+        'mouseover',
+        'mouseout',
+        'mouseenter',
+        'mouseleave',
+        'change',
+        'select',
+        'submit',
+        'keydown',
+        'keypress',
+        'keyup',
         'contextmenu'
       ].forEach(function(eventAlias) {
-          $.fn[eventAlias] = function () {
-            throw new Error('Using the ".' + eventAlias + '()" method is not allowed, so that Bootstrap can be compatible with custom jQuery builds which exclude the "event aliases" module that defines said method. See https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#js')
-          }
+        $.fn[eventAlias] = function() {
+          throw new Error('Using the ".' + eventAlias + '()" method is not allowed, so that Bootstrap can be compatible with custom jQuery builds which exclude the "event aliases" module that defines said method. See https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#js')
+        }
       })
 
       // Require assert.expect in each test
@@ -63,7 +66,7 @@
       var log = []
       var testName
 
-      QUnit.done(function (testResults) {
+      QUnit.done(function(testResults) {
         var tests = []
         for (var i = 0; i < log.length; i++) {
           var details = log[i]
@@ -80,8 +83,8 @@
         window.global_test_results = testResults
       })
 
-      QUnit.testStart(function (testDetails) {
-        QUnit.log(function (details) {
+      QUnit.testStart(function(testDetails) {
+        QUnit.log(function(details) {
           if (!details.result) {
             details.name = testDetails.name
             log.push(details)
@@ -96,7 +99,7 @@
           $('#qunit-fixture').css({ top: 0, left: 0 })
         })
 
-        QUnit.done(function () {
+        QUnit.done(function() {
           $('#qunit-fixture').css({ top: '', left: '' })
         })
       }
@@ -121,7 +124,7 @@
 
     <!-- Unit Tests -->
     <script src="unit/alert.js"></script>
-    <script src="unit/button.js"></script>
+    <!-- <script src="unit/button.js"></script>
     <script src="unit/carousel.js"></script>
     <script src="unit/collapse.js"></script>
     <script src="unit/dropdown.js"></script>
@@ -134,7 +137,7 @@
     <script src="unit/o-navbar.js"></script>
     <script src="unit/o-megamenu.js"></script>
     <script src="unit/o-scroll-up.js"></script>
-    <script src="unit/util.js"></script>
+    <script src="unit/util.js"></script> -->
   </head>
   <body>
     <div id="qunit-container">
