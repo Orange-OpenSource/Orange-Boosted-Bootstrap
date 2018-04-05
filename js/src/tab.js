@@ -89,7 +89,7 @@ const Tab = (($) => {
       let target
       let previous
       const listElement = $(this._element).closest(Selector.NAV_LIST_GROUP)[0]
-      const selector    = Util.getSelectorFromElement(this._element)
+      const selector = Util.getSelectorFromElement(this._element)
 
       if (listElement) {
         const itemSelector = listElement.nodeName === 'UL' ? Selector.ACTIVE_UL : Selector.ACTIVE
@@ -160,7 +160,7 @@ const Tab = (($) => {
         activeElements = $(container).children(Selector.ACTIVE)
       }
 
-      const active          = activeElements[0]
+      const active = activeElements[0]
       const isTransitioning = callback &&
         Util.supportsTransitionEnd() &&
         (active && $(active).hasClass(ClassName.FADE))
@@ -331,7 +331,7 @@ const Tab = (($) => {
     static _jQueryInterface(config) {
       return this.each(function () {
         const $this = $(this)
-        let data    = $this.data(DATA_KEY)
+        let data = $this.data(DATA_KEY)
 
         if (!data) {
           data = new Tab(this)

@@ -120,10 +120,21 @@ $theme-colors: (
 
 #### Remove from map
 
-To remove colors from `$theme-colors`, or any other map, use `map-remove`:
+To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aware you must insert it between our requirements and options:
 
 {% highlight scss %}
-$theme-colors: map-remove($theme-colors, "success", "info", "danger");
+// Required
+@import "node_modules/boosted/scss/functions";
+@import "node_modules/boosted/scss/variables";
+@import "node_modules/boosted/scss/mixins";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+// Optional
+@import "node_modules/boosted/scss/root";
+@import "node_modules/boosted/scss/reboot";
+@import "node_modules/boosted/scss/type";
+...
 {% endhighlight %}
 
 #### Required keys
@@ -259,13 +270,14 @@ Here's how you can use these in your Sass:
 
 [Color utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) are also available for setting `color` and `background-color`.
 
-{% callout info %}
+{% capture callout %}
 In the future, we'll aim to provide Sass maps and variables for shades of each color as we've done with the grayscale colors below.
-{% endcallout %}
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
 
 ### Theme colors
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in our `scss/_variables.scss` file.
+We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted's `scss/_variables.scss` file.
 
 <div class="row">
   {% for color in site.data.theme-colors %}
@@ -287,7 +299,7 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
   </div>
 </div>
 
-Within `_variables.scss`, you'll find our color variables and Sass map. Here's an example of the `$colors` Sass map:
+Within `_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
 
 {% highlight scss %}
 $colors: (
@@ -406,16 +418,4 @@ a {
 }
 {% endhighlight %}
 
-You can also use our breakpoint variables in your media queries:
-
-{% highlight css %}
-.content-secondary {
-  display: none;
-}
-
-@media (min-width(var(--breakpoint-sm))) {
-  .content-secondary {
-    display: block;
-  }
-}
-{% endhighlight %}
+While we include breakpoints in our CSS variables, they unfortunately cannot be used in media queries. These remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec.](https://www.w3.org/TR/css-variables-1/#using-variables)

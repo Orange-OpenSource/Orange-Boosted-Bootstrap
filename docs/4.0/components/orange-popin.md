@@ -33,9 +33,9 @@ toc: true
     </div>
 </div>
 
-{% example html %}
- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
-    live demo
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  live demo
 </button>
 
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
@@ -62,7 +62,7 @@ toc: true
         </div>
     </div>
 </div>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ## Small popin
 

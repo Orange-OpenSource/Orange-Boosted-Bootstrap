@@ -26,10 +26,10 @@ Displays a link in the page with the arrow up icon.
 
 Adds a link in the page with the `o-scroll-up` and `static` class. 
 You can let the text `.o-scroll-up-text` display on all devices.
-{% example html %}
+{% capture example %}
 <a href="#" class="o-scroll-up static" title="back to top">
   <span class="o-scroll-up-text">Back to top</span>
   <span class="o-scroll-up-icon" aria-hidden="true"></span>
 </a>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 

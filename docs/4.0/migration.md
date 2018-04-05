@@ -80,7 +80,7 @@ Here are the big ticket items you'll want to be aware of when moving from v3 to 
 ### Global changes
 
 - **Flexbox is enabled by default.** In general this means a move away from floats and more across our components.
-- Switched from [Less](http://lesscss.org/) to [Sass](http://sass-lang.com/) for our source CSS files.
+- Switched from [Less](http://lesscss.org/) to [Sass](https://sass-lang.com/) for our source CSS files.
 - Switched from `px` to `rem` as our primary CSS unit, though pixels are still used for media queries and grid behavior as device viewports are not affected by type size.
 - Global font-size increased from `14px` to `16px`.
 - Revamped grid tiers to add a fifth option (addressing smaller devices at `576px` and below) and removed the `-xs` infix from those classes. Example: `.col-6.col-sm-4.col-md-3`.
@@ -132,7 +132,7 @@ New to Bootstrap 4 is the [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version 
 - Moved all `.text-` utilities to the `_utilities.scss` file.
 - Dropped `.page-header` as, aside from the border, all its styles can be applied via utilities.
 - `.dl-horizontal` has been dropped. Instead, use `.row` on `<dl>` and use grid column classes (or mixins) on its `<dt>` and `<dd>` children.
-- Custom `<blockquote>` styling has moved to classes—`.blockquote` and the `.blockquote-reverse` modifier.
+- Redesigned blockquotes, moving their styles from the `<blockquote>` element to a single class, `.blockquote`. Dropped the `.blockquote-reverse` modifier for text utilities.
 - `.list-inline` now requires that its children list items have the new `.list-inline-item` class applied to them.
 
 ### Images
@@ -144,7 +144,6 @@ New to Bootstrap 4 is the [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version 
 ### Tables
 
 - Nearly all instances of the `>` selector have been removed, meaning nested tables will now automatically inherit styles from their parents. This greatly simplifies our selectors and potential customizations.
-- Responsive tables no longer require a wrapping element. Instead, just put the `.table-responsive` right on the `<table>`.
 - Renamed `.table-condensed` to `.table-sm` for consistency.
 - Added a new `.table-inverse` option.
 - Added table header modifiers: `.thead-default` and `.thead-inverse`.
@@ -244,8 +243,8 @@ The navbar has been entirely rewritten in flexbox with improved support for alig
 
 ### Labels and badges
 
-- Renamed `.label` to `.badge` to disambiguate from the `<label>` element.
-- Dropped the `.badge` component as it was nearly identical to labels. Use the `.badge-pill` modifier together with the label component instead for that rounded look.
+- Consolidated `.label` and `.badge` to disambiguate from the `<label>` element and simplify related components.
+- Added `.badge-pill` as modifier for rounded "pill" look.
 - Badges are no longer floated automatically in list groups and other components. Utility classes are now required for that.
 - `.badge-default` has been dropped and `.badge-secondary` added to match component modifier classes used elsewhere.
 
@@ -313,7 +312,6 @@ Our documentation received an upgrade across the board as well. Here's the low d
   - `bugify.rb` is used to efficiently list out the entries on our [browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/) page.
   - `example.rb` is a custom fork of the default `highlight.rb` plugin, allowing for easier example-code handling.
   - `callout.rb` is a similar custom fork of that, but designed for our special docs callouts.
-  - `markdown-block.rb` is used to to render Markdown snippets within HTML elements like tables.
   - [jekyll-toc](https://github.com/toshimaru/jekyll-toc) is used to generate our table of contents.
 - All docs content has been rewritten in Markdown (instead of HTML) for easier editing.
 - Pages have been reorganized for simpler content and a more approachable hierarchy.

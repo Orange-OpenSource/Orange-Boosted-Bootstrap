@@ -22,7 +22,7 @@ $('.o-nav-local').prioritynav();
 
 Reduce the width of your browser to see overflowing navigation items moved into a nice dropdown menu.
 
-{% example html %}
+{% capture example %}
 <div class="o-nav-local">
     <nav class="container-fluid">
         <ul class="nav">
@@ -37,7 +37,7 @@ Reduce the width of your browser to see overflowing navigation items moved into 
         </ul>
     </nav>
 </div>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ## Options
 

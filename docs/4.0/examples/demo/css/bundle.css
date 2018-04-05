@@ -24,10 +24,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     font-size: 1.5rem;
     font-weight: bold; }
   .gauge svg {
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg); }
   .gauge .progress-meter,
   .gauge .progress-value {
@@ -37,6 +39,7 @@
   .gauge .progress-value {
     stroke-dasharray: 326.725;
     stroke-dashoffset: 326.725;
+    -webkit-animation: progress 4s;
     animation: progress 4s; }
   .gauge.inverse .gauge-value {
     color: #fff; }
@@ -67,6 +70,10 @@ legend.gauge-label {
   background-color: #000; }
   .dark-bg legend.gauge-label {
     color: #fff; }
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dashoffset: 326.725; } }
 
 @keyframes progress {
   0% {
@@ -143,7 +150,9 @@ h2 {
   background: #ddd; }
 
 .custom-layout {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .custom-layout .form-control {
@@ -215,6 +224,7 @@ details[open] {
   details[open] summary {
     margin-bottom: 7px; }
     details[open] summary::after {
+      -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
 
 details:last-child {

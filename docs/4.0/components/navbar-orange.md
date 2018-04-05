@@ -14,7 +14,7 @@ Orange navbar is based on the [navbar](../navbar) component. It adds some displa
 
 Orange navbar is the main navigation of project website. It should always be included in a `<header role="banner">` tag.
 
-{% example html %}
+{% capture example %}
 <header role="banner">
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
         <div class="container">
@@ -45,20 +45,20 @@ Orange navbar is the main navigation of project website. It should always be inc
         </div>
     </nav>
 </header>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 Using icons as links is possible, be sure to add the `.icon` class to the `.nav-link` element for proper alignement.
-{% callout warning %}
+{% capture callout %}
 #### Accessibility
 
 In addition to this `.active` class to show the current page in the navbar, you must use `aria-current="page"` state. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
-{% endcallout %}
+{% endcapture %}
 
 ## Supra bar
 
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
 
-{% example html %}
+{% capture example %}
 <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
     <div class="container">
         <ul class="navbar-nav">
@@ -87,13 +87,13 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
         </ul>
     </div>
 </nav>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 A supra bar should never be used on its own and always be included in header and with the regular navbar, which gives :
 
 ## Full example
 
-{% example html %}
+{% capture example %}
 <header role="banner" id="demo-navbar">
     <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
         <div class="container">
@@ -152,7 +152,7 @@ A supra bar should never be used on its own and always be included in header and
         </div>
     </nav>
 </header>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ## Options
 

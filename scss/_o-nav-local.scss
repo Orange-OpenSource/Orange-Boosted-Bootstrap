@@ -13,8 +13,8 @@
   }
 
   ul + ul {
-    margin-left: 1rem;
     flex-shrink: 0;
+    margin-left: 1rem;
   }
 
   .nav-item + .nav-item {

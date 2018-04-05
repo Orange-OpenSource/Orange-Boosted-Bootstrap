@@ -30,7 +30,7 @@ import Util from './util'
 
   const version = $.fn.jquery.split(' ')[0].split('.')
   const minMajor = 1
-  const ltMajor  = 2
+  const ltMajor = 2
   const minMinor = 9
   const minPatch = 1
   const maxMajor = 4

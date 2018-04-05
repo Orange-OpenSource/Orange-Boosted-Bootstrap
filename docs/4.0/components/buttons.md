@@ -11,51 +11,54 @@ toc: true
 
 Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
 <button type="button" class="btn btn-link">Link</button>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}
 
 [comment]: # Boosted mod
 ### Dark backgrounds
 
 To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
 
-{% example html %}
+{% capture example %}
 <div style="background-color: black; padding: 2rem">
     {% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
     <button type="button" class="btn btn-inverse btn-link">Link</button>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <div style="background-color: #595959; padding: 2rem">
     {% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
     <button type="button" class="btn btn-inverse btn-link">Link</button>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Light backgrounds
 
 The default styles can be used on secondary colors backgrounds, in this case remove the `.btn-inverse` class if any.
 
-{% example html %}
+{% capture example %}
 <div style="background-color: #eee; padding: 2rem">
     {% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
     <button type="button" class="btn btn-link">Link</button>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 [comment]: # end mod
 
@@ -65,61 +68,68 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
-{% example html %}
+{% capture example %}
 <a class="btn btn-primary" href="#" role="button">Link</a>
 <button class="btn btn-primary" type="submit">Button</button>
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
 <input class="btn btn-primary" type="reset" value="Reset">
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Outline buttons
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Sizes
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
 <button type="button" class="btn btn-secondary btn-lg">Large button</button>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
 <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Active state
 
 Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
-{% example html %}
+{% capture example %}
 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Disabled state
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 Disabled buttons using the `<a>` element behave a bit different:
 
@@ -127,16 +137,18 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
 - Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
 
-{% example html %}
-<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
-{% endexample %}
+{% capture example %}
+<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+{% endcapture %}
+{% include example.html content=example %}
 
-{% callout warning %}
+{% capture callout %}
 ##### Link functionality caveat
 
 The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
-{% endcallout %}
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
 
 ## Button plugin
 
@@ -146,11 +158,12 @@ Do more with buttons. Control button states or create groups of buttons for more
 
 Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to the `<button>`.
 
-{% example html %}
-<button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
+{% capture example %}
+<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
   Single toggle
 </button>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Checkbox and radio buttons
 
@@ -160,15 +173,16 @@ The checked state for these buttons is **only updated via `click` event** on the
 
 Note that pre-checked buttons require you to manually add the `.active` class to the input's `<label>`.
 
-{% example html %}
+{% capture example %}
 <div class="btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-secondary active">
     <input type="checkbox" checked autocomplete="off"> Checked
   </label>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-secondary active">
     <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
@@ -180,7 +194,8 @@ Note that pre-checked buttons require you to manually add the `.active` class to
     <input type="radio" name="options" id="option3" autocomplete="off"> Radio
   </label>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Methods
 

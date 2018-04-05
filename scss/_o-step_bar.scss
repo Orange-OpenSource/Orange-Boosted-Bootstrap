@@ -4,9 +4,9 @@
 // stylelint-disable selector-max-class
 
 // url encoded colors
-$arrow-black: "000000";
-$arrow-gray: "dddddd";
-$arrow-orange: "f16e00";
+$arrow-black: "000000" !default;
+$arrow-gray: "dddddd" !default;
+$arrow-orange: "f16e00" !default;
 
 // generate url encoded svg with color
 @function arrow-svg ($color) {

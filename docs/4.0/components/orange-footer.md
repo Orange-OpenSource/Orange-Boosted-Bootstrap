@@ -15,7 +15,7 @@ Use `.nav` for lists. Use `.flex-column` for column layout. Use appropriate `.co
 
 According to the brand, Orange footer has black background and white text color.
 
-{% example html %}
+{% capture example %}
 <footer class="o-footer" role="contentinfo">
     <h1 class="sr-only">footer - site map & informations</h1>
     <div class="o-footer-top">
@@ -88,4 +88,4 @@ According to the brand, Orange footer has black background and white text color.
         </div>
     </div>
 </footer>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}

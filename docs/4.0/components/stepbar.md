@@ -16,13 +16,13 @@ Be careful to choose short labels when using 5 steps process, otherwise label wi
 Fill a correct description on each `.stepbar-link` `title` attributes.
 Use `.done` and `.current` classes in correct order. There is only one `.current` item.
 
-{% callout warning %}
+{% capture callout %}
 ### Accessibility
 
 In addition to this `.current` class, you must use `aria-current="step"` state to represent the current step within the process. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's a step.
-{% endcallout %}
+{% endcapture %}
 
-{% example html %}
+{% capture example %}
 <nav class="o-stepbar">
     <ol>
         <li class="done stepbar-item">
@@ -57,7 +57,7 @@ In addition to this `.current` class, you must use `aria-current="step"` state t
         </li>
     </ol>
 </nav>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ## Mobile stepbar
 
@@ -67,7 +67,7 @@ For mobile view, two classes depending on what you wish to display.
 
 Use `.xs-numbers` class to display step numbers and current step label. You can have up to 4 steps. Further steps will collapse onto new line.
 
-{% example html %}
+{% capture example %}
 <nav class="o-stepbar xs-numbers">
     <ol>
         <li class="current stepbar-item">
@@ -96,13 +96,13 @@ Use `.xs-numbers` class to display step numbers and current step label. You can 
         </li>
     </ol>
 </nav>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ### with labels
 
 Use `.xs-labels` class to display step labels without number. You can have up to 3 steps. Further steps will collapse onto new line.
 
-{% example html %}
+{% capture example %}
 <nav class="o-stepbar xs-labels">
     <ol>
         <li class="current stepbar-item">
@@ -125,4 +125,4 @@ Use `.xs-labels` class to display step labels without number. You can have up to
         </li>
     </ol>
 </nav>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}

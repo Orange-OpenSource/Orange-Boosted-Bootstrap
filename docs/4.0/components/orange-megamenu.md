@@ -16,7 +16,7 @@ $('#collapsing-navbarHead').megamenu();
 
 Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing example :
 
-{% example html %}
+{% capture example %}
 <header role="banner">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
         <div class="container">
@@ -127,7 +127,7 @@ Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing 
         </div>
       </nav>
     </header>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ## Options
 

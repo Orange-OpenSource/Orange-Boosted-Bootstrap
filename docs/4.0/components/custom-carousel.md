@@ -12,7 +12,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
 
 ## Demo
 
-{% example html %}
+{% capture example %}
 <div class="swiper-container" style="width: 37.5rem;">
     <div class="swiper-wrapper">
         <div class="swiper-slide" id="slide1">
@@ -54,7 +54,8 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Usage
 

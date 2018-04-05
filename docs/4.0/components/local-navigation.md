@@ -10,13 +10,13 @@ toc: true
 
 Wrap your `<ul>` list in a `<nav>` tag within a `.container` block. Wrap the whole in a `.o-nav-local` block.
 
-{% callout warning %}
+{% capture callout %}
 #### Accessibility
 
 In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the local navigation. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
-{% endcallout %}
+{% endcapture %}
 
-{% example html %}
+{% capture example %}
 <div class="o-nav-local">
     <nav class="container">
         <ul class="nav">
@@ -26,13 +26,13 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
         </ul>
     </nav>
 </div>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
 
 ## Inverse local navigation
 
 Simply add `.inverse` class to your `.o-nav-local` container.
 
-{% example html %}
+{% capture example %}
 <div style="margin: 2rem 0; padding: 2rem 0;" class="bg-dark">
     <div class="o-nav-local inverse">
         <nav class="container">
@@ -44,4 +44,4 @@ Simply add `.inverse` class to your `.o-nav-local` container.
         </nav>
     </div>
 </div>
-{% endexample %}
+{% endcapture %} {% include example.html content=example %}
