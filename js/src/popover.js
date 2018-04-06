@@ -147,7 +147,7 @@ const Popover = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
         const _config = typeof config === 'object' ? config : null
 
         if (!data && /destroy|hide/.test(config)) {
@@ -175,9 +175,9 @@ const Popover = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Popover._jQueryInterface
+  $.fn[NAME] = Popover._jQueryInterface
   $.fn[NAME].Constructor = Popover
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Popover._jQueryInterface
   }

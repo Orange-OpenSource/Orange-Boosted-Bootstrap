@@ -24,7 +24,7 @@ module.exports = (config) => {
       'js/coverage/dist/util.js',
       'js/coverage/dist/tooltip.js',
       'js/coverage/dist/!(util|index|tooltip).js', // include all of our js/dist files except util.js, index.js and tooltip.js
-      'js/tests/unit/*.js'
+      'js/tests/unit/alert.js'
     ],
     reporters: ['dots', 'coverage-istanbul'],
     port: 9876,

@@ -81,12 +81,16 @@ var Dropdown = function ($) {
   var Default = {
     offset: 0,
     flip: true,
-    boundary: 'scrollParent'
+    boundary: 'scrollParent',
+    reference: 'toggle',
+    display: 'dynamic'
   };
   var DefaultType = {
     offset: '(number|string|function)',
     flip: 'boolean',
-    boundary: '(string|element)'
+    boundary: '(string|element)',
+    reference: '(string|element)',
+    display: 'string'
     /**
      * ------------------------------------------------------------------------
      * Class Definition

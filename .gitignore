@@ -45,6 +45,7 @@ twbsconfig.yml
 
 # Folders to ignore
 node_modules
+js/coverage
 _gh_pages
 .tmp
 .tmpdocs

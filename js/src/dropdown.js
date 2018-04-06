@@ -78,13 +78,17 @@ const Dropdown = (($) => {
   const Default = {
     offset      : 0,
     flip        : true,
-    boundary    : 'scrollParent'
+    boundary    : 'scrollParent',
+    reference   : 'toggle',
+    display     : 'dynamic'
   }
 
   const DefaultType = {
     offset      : '(number|string|function)',
     flip        : 'boolean',
-    boundary    : '(string|element)'
+    boundary    : '(string|element)',
+    reference   : '(string|element)',
+    display     : 'string'
   }
 
   /**
