@@ -19,7 +19,7 @@ module.exports = (config) => {
       jqueryFile,
       'assets/js/vendor/popper.min.js',
       'dist/js/boosted.js',
-      'js/tests/unit/alert.js'
+      'js/tests/unit/*.js'
     ],
     reporters: ['dots'],
     port: 9876,

@@ -923,7 +923,6 @@ $(function () {
     var done = assert.async()
     var $el = $('<a href="#" rel="tooltip" title="7"/>')
       .appendTo('#qunit-fixture')
-      .bootstrapTooltip('show')
       .on('shown.bs.tooltip', function () {
         var tooltip = $el.data('bs.tooltip')
         var $tooltip = $(tooltip.getTipElement())

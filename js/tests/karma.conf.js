@@ -4,7 +4,7 @@ const path = require('path')
 const jsCoveragePath = path.resolve(__dirname, '../coverage')
 
 module.exports = (config) => {
-  const jqueryFile = process.env.USE_OLD_JQUERY ? 'js/tests/vendor/jquery-1.9.1.min.js' : 'assets/js/vendor/jquery-slim.min.js'
+  const jqueryFile = process.env.USE_OLD_JQUERY ? 'https://code.jquery.com/jquery-1.9.1.min.js' : 'assets/js/vendor/jquery-slim.min.js'
 
   config.set({
     basePath: '../..',
@@ -24,7 +24,7 @@ module.exports = (config) => {
       'js/coverage/dist/util.js',
       'js/coverage/dist/tooltip.js',
       'js/coverage/dist/!(util|index|tooltip).js', // include all of our js/dist files except util.js, index.js and tooltip.js
-      'js/tests/unit/alert.js'
+      'js/tests/unit/*.js'
     ],
     reporters: ['dots', 'coverage-istanbul'],
     port: 9876,
