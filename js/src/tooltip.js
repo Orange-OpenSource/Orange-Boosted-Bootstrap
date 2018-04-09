@@ -16,12 +16,12 @@ const Tooltip = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'tooltip'
-  const VERSION             = '4.0.0'
-  const DATA_KEY            = 'bs.tooltip'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const CLASS_PREFIX        = 'bs-tooltip'
+  const NAME               = 'tooltip'
+  const VERSION            = '4.0.0'
+  const DATA_KEY           = 'bs.tooltip'
+  const EVENT_KEY          = `.${DATA_KEY}`
+  const JQUERY_NO_CONFLICT = $.fn[NAME]
+  const CLASS_PREFIX       = 'bs-tooltip'
   const BSCLS_PREFIX_REGEX = new RegExp(`(^|\\s)${CLASS_PREFIX}\\S+`, 'g')
 
   const DefaultType = {
@@ -118,10 +118,10 @@ const Tooltip = (($) => {
       }
 
       // private
-      this._isEnabled        = true
-      this._timeout          = 0
-      this._hoverState       = ''
-      this._activeTrigger    = {}
+      this._isEnabled     = true
+      this._timeout       = 0
+      this._hoverState    = ''
+      this._activeTrigger = {}
       this._popper        = null
 
       // Protected
@@ -304,7 +304,7 @@ const Tooltip = (($) => {
               this._handlePopperPlacementChange(data)
             }
           },
-          onUpdate : (data) => {
+          onUpdate: (data) => {
             this._handlePopperPlacementChange(data)
           }
         })
@@ -324,7 +324,7 @@ const Tooltip = (($) => {
             this._fixTransition()
           }
           const prevHoverState = this._hoverState
-          this._hoverState   = null
+          this._hoverState     = null
 
           $(this.element).trigger(this.constructor.Event.SHOWN)
 
@@ -348,7 +348,7 @@ const Tooltip = (($) => {
     hide(callback) {
       const tip       = this.getTipElement()
       const hideEvent = $.Event(this.constructor.Event.HIDE)
-      const complete  = () => {
+      const complete = () => {
         if (this._hoverState !== HoverState.SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip)
         }
@@ -497,8 +497,8 @@ const Tooltip = (($) => {
       if (this.config.selector) {
         this.config = {
           ...this.config,
-          trigger  : 'manual',
-          selector : ''
+          trigger: 'manual',
+          selector: ''
         }
       } else {
         this._fixTitle()
@@ -616,8 +616,8 @@ const Tooltip = (($) => {
 
       if (typeof config.delay === 'number') {
         config.delay = {
-          show : config.delay,
-          hide : config.delay
+          show: config.delay,
+          hide: config.delay
         }
       }
 
@@ -666,7 +666,7 @@ const Tooltip = (($) => {
     }
 
     _fixTransition() {
-      const tip                 = this.getTipElement()
+      const tip = this.getTipElement()
       const initConfigAnimation = this.config.animation
       if (tip.getAttribute('x-placement') !== null) {
         return
@@ -682,7 +682,7 @@ const Tooltip = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
         const _config = typeof config === 'object' && config
 
         if (!data && /dispose|hide/.test(config)) {
@@ -710,9 +710,9 @@ const Tooltip = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Tooltip._jQueryInterface
+  $.fn[NAME] = Tooltip._jQueryInterface
   $.fn[NAME].Constructor = Tooltip
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Tooltip._jQueryInterface
   }

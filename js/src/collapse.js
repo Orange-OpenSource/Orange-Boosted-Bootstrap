@@ -21,7 +21,6 @@ const Collapse = (($) => {
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const TRANSITION_DURATION = 600
 
   const Default = {
     toggle : true,
@@ -184,17 +183,13 @@ const Collapse = (($) => {
         $(this._element).trigger(Event.SHOWN)
       }
 
-      if (!Util.supportsTransitionEnd()) {
-        complete()
-        return
-      }
-
       const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1)
-      const scrollSize           = `scroll${capitalizedDimension}`
+      const scrollSize = `scroll${capitalizedDimension}`
+      const transitionDuration = Util.getTransitionDurationFromElement(this._element)
 
       $(this._element)
         .one(Util.TRANSITION_END, complete)
-        .emulateTransitionEnd(TRANSITION_DURATION)
+        .emulateTransitionEnd(transitionDuration)
 
       this._element.style[dimension] = `${this._element[scrollSize]}px`
     }
@@ -211,7 +206,7 @@ const Collapse = (($) => {
         return
       }
 
-      const dimension       = this._getDimension()
+      const dimension = this._getDimension()
 
       this._element.style[dimension] = `${this._element.getBoundingClientRect()[dimension]}px`
 
@@ -249,15 +244,11 @@ const Collapse = (($) => {
       }
 
       this._element.style[dimension] = ''
-
-      if (!Util.supportsTransitionEnd()) {
-        complete()
-        return
-      }
+      const transitionDuration = Util.getTransitionDurationFromElement(this._element)
 
       $(this._element)
         .one(Util.TRANSITION_END, complete)
-        .emulateTransitionEnd(TRANSITION_DURATION)
+        .emulateTransitionEnd(transitionDuration)
     }
 
     setTransitioning(isTransitioning) {
@@ -409,9 +400,9 @@ const Collapse = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Collapse._jQueryInterface
+  $.fn[NAME] = Collapse._jQueryInterface
   $.fn[NAME].Constructor = Collapse
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Collapse._jQueryInterface
   }

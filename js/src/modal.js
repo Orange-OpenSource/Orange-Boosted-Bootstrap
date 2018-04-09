@@ -15,13 +15,13 @@ const Modal = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME                         = 'modal'
-  const VERSION                      = '4.0.0'
-  const DATA_KEY                     = 'bs.modal'
-  const EVENT_KEY                    = `.${DATA_KEY}`
-  const DATA_API_KEY                 = '.data-api'
-  const JQUERY_NO_CONFLICT           = $.fn[NAME]
-  const ESCAPE_KEYCODE               = 27 // KeyboardEvent.which value for Escape (Esc) key
+  const NAME               = 'modal'
+  const VERSION            = '4.0.0'
+  const DATA_KEY           = 'bs.modal'
+  const EVENT_KEY          = `.${DATA_KEY}`
+  const DATA_API_KEY       = '.data-api'
+  const JQUERY_NO_CONFLICT = $.fn[NAME]
+  const ESCAPE_KEYCODE     = 27 // KeyboardEvent.which value for Escape (Esc) key
 
   const Default = {
     backdrop : true,
@@ -83,7 +83,6 @@ const Modal = (($) => {
       this._isShown             = false
       this._isBodyOverflowing   = false
       this._ignoreBackdropClick = false
-      this._originalBodyPadding = 0
       this._scrollbarWidth      = 0
 
       // Boosted mod
@@ -112,7 +111,7 @@ const Modal = (($) => {
         return
       }
 
-      if (Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.FADE)) {
+      if ($(this._element).hasClass(ClassName.FADE)) {
         this._isTransitioning = true
       }
 
@@ -523,7 +522,7 @@ const Modal = (($) => {
     }
     // end mod
 
-    // static
+    // Static
 
     static _jQueryInterface(config, relatedTarget) {
       return this.each(function () {

@@ -84,7 +84,6 @@ var Modal = function ($) {
       this._isShown = false;
       this._isBodyOverflowing = false;
       this._ignoreBackdropClick = false;
-      this._originalBodyPadding = 0;
       this._scrollbarWidth = 0; // Boosted mod
 
       this._addAria(); // end mod
@@ -106,7 +105,7 @@ var Modal = function ($) {
         return;
       }
 
-      if (Util.supportsTransitionEnd() && $(this._element).hasClass(ClassName.FADE)) {
+      if ($(this._element).hasClass(ClassName.FADE)) {
         this._isTransitioning = true;
       }
 
@@ -518,7 +517,7 @@ var Modal = function ($) {
         $ModalDialog.attr('role', 'document');
       }
     }; // end mod
-    // static
+    // Static
 
 
     Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {

@@ -87,17 +87,18 @@
      * Private TransitionEnd Helpers
      * ------------------------------------------------------------------------
      */
-    var transition = false;
-    var MAX_UID = 1000000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+    var TRANSITION_END = 'transitionend';
+    var MAX_UID = 1000000;
+    var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
     function toType(obj) {
-      return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
+      return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
     }
 
     function getSpecialTransitionEndEvent() {
       return {
-        bindType: transition.end,
-        delegateType: transition.end,
+        bindType: TRANSITION_END,
+        delegateType: TRANSITION_END,
         handle: function handle(event) {
           if ($$$1(event.target).is(this)) {
             return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
@@ -105,16 +106,6 @@
 
           return undefined; // eslint-disable-line no-undefined
         }
-      };
-    }
-
-    function transitionEndTest() {
-      if (typeof window !== 'undefined' && window.QUnit) {
-        return false;
-      }
-
-      return {
-        end: 'transitionend'
       };
     }
 
@@ -134,19 +125,8 @@
     }
 
     function setTransitionEndSupport() {
-      transition = transitionEndTest();
       $$$1.fn.emulateTransitionEnd = transitionEndEmulator;
-
-      if (Util.supportsTransitionEnd()) {
-        $$$1.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
-      }
-    }
-
-    function escapeId(selector) {
-      // We escape IDs in case of special selectors (selector = '#myId:something')
-      // $.escapeSelector does not exist in jQuery < 3
-      selector = typeof $$$1.escapeSelector === 'function' ? $$$1.escapeSelector(selector).substr(1) : selector.replace(/(:|\.|\[|\]|,|=|@)/g, '\\$1');
-      return selector;
+      $$$1.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
     }
     /**
      * --------------------------------------------------------------------------
@@ -170,11 +150,6 @@
 
         if (!selector || selector === '#') {
           selector = element.getAttribute('href') || '';
-        } // If it's an ID
-
-
-        if (selector.charAt(0) === '#') {
-          selector = escapeId(selector);
         }
 
         try {
@@ -184,14 +159,32 @@
           return null;
         }
       },
+      getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
+        if (!element) {
+          return 0;
+        } // Get transition-duration of the element
+
+
+        var transitionDuration = $$$1(element).css('transition-duration');
+        var floatTransitionDuration = parseFloat(transitionDuration); // Return 0 if element or transition duration is not found
+
+        if (!floatTransitionDuration) {
+          return 0;
+        } // If multiple durations are defined, take the first
+
+
+        transitionDuration = transitionDuration.split(',')[0];
+        return parseFloat(transitionDuration) * MILLISECONDS_MULTIPLIER;
+      },
       reflow: function reflow(element) {
         return element.offsetHeight;
       },
       triggerTransitionEnd: function triggerTransitionEnd(element) {
-        $$$1(element).trigger(transition.end);
+        $$$1(element).trigger(TRANSITION_END);
       },
+      // TODO: Remove in v5
       supportsTransitionEnd: function supportsTransitionEnd() {
-        return Boolean(transition);
+        return Boolean(TRANSITION_END);
       },
       isElement: function isElement(obj) {
         return (obj[0] || obj).nodeType;
@@ -233,7 +226,6 @@
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var TRANSITION_DURATION = 150;
     var Selector = {
       DISMISS: '[data-dismiss="alert"]'
     };
@@ -311,15 +303,16 @@
 
         $$$1(element).removeClass(ClassName.SHOW);
 
-        if (!Util.supportsTransitionEnd() || !$$$1(element).hasClass(ClassName.FADE)) {
+        if (!$$$1(element).hasClass(ClassName.FADE)) {
           this._destroyElement(element);
 
           return;
         }
 
+        var transitionDuration = Util.getTransitionDurationFromElement(element);
         $$$1(element).one(Util.TRANSITION_END, function (event) {
           return _this._destroyElement(element, event);
-        }).emulateTransitionEnd(TRANSITION_DURATION);
+        }).emulateTransitionEnd(transitionDuration);
       };
 
       _proto._destroyElement = function _destroyElement(element) {
@@ -570,7 +563,6 @@
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var TRANSITION_DURATION = 600;
     var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
     var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
@@ -679,7 +671,7 @@
           this._isPaused = true;
         }
 
-        if ($$$1(this._element).find(Selector.NEXT_PREV)[0] && Util.supportsTransitionEnd()) {
+        if ($$$1(this._element).find(Selector.NEXT_PREV)[0]) {
           Util.triggerTransitionEnd(this._element);
           this.cycle(true);
         }
@@ -918,11 +910,12 @@
           to: nextElementIndex
         });
 
-        if (Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.SLIDE)) {
+        if ($$$1(this._element).hasClass(ClassName.SLIDE)) {
           $$$1(nextElement).addClass(orderClassName);
           Util.reflow(nextElement);
           $$$1(activeElement).addClass(directionalClassName);
           $$$1(nextElement).addClass(directionalClassName);
+          var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
           $$$1(activeElement).one(Util.TRANSITION_END, function () {
             $$$1(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName.ACTIVE);
             $$$1(activeElement).removeClass(ClassName.ACTIVE + " " + orderClassName + " " + directionalClassName);
@@ -930,7 +923,7 @@
             setTimeout(function () {
               return $$$1(_this3._element).trigger(slidEvent);
             }, 0);
-          }).emulateTransitionEnd(TRANSITION_DURATION);
+          }).emulateTransitionEnd(transitionDuration);
         } else {
           $$$1(activeElement).removeClass(ClassName.ACTIVE);
           $$$1(nextElement).addClass(ClassName.ACTIVE);
@@ -1071,7 +1064,6 @@
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var TRANSITION_DURATION = 600;
     var Default = {
       toggle: true,
       parent: ''
@@ -1217,14 +1209,10 @@
           $$$1(_this._element).trigger(Event.SHOWN);
         };
 
-        if (!Util.supportsTransitionEnd()) {
-          complete();
-          return;
-        }
-
         var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
         var scrollSize = "scroll" + capitalizedDimension;
-        $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+        $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         this._element.style[dimension] = this._element[scrollSize] + "px";
       };
 
@@ -1275,13 +1263,8 @@
         };
 
         this._element.style[dimension] = '';
-
-        if (!Util.supportsTransitionEnd()) {
-          complete();
-          return;
-        }
-
-        $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+        $$$1(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       };
 
       _proto.setTransitioning = function setTransitioning(isTransitioning) {
@@ -1506,7 +1489,7 @@
       MENU_ITEMS: '.dropdown-menu .dropdown-item',
       FIRST_ITEM_IN_MENU: '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)',
       // end mod
-      VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
+      VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
     };
     var AttachmentMap = {
       TOP: 'top-start',
@@ -2435,7 +2418,6 @@
         this._isShown = false;
         this._isBodyOverflowing = false;
         this._ignoreBackdropClick = false;
-        this._originalBodyPadding = 0;
         this._scrollbarWidth = 0; // Boosted mod
 
         this._addAria(); // end mod
@@ -2457,7 +2439,7 @@
           return;
         }
 
-        if (Util.supportsTransitionEnd() && $$$1(this._element).hasClass(ClassName.FADE)) {
+        if ($$$1(this._element).hasClass(ClassName.FADE)) {
           this._isTransitioning = true;
         }
 
@@ -2869,7 +2851,7 @@
           $ModalDialog.attr('role', 'document');
         }
       }; // end mod
-      // static
+      // Static
 
 
       Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
@@ -3297,7 +3279,6 @@
     var DATA_KEY = 'bs.tooltip';
     var EVENT_KEY = "." + DATA_KEY;
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var TRANSITION_DURATION = 150;
     var CLASS_PREFIX = 'bs-tooltip';
     var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
     var DefaultType = {
@@ -3543,7 +3524,7 @@
           // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
           if ('ontouchstart' in document.documentElement) {
-            $$$1('body').children().on('mouseover', null, $$$1.noop);
+            $$$1(document.body).children().on('mouseover', null, $$$1.noop);
           }
 
           var complete = function complete() {
@@ -3560,8 +3541,9 @@
             }
           };
 
-          if (Util.supportsTransitionEnd() && $$$1(this.tip).hasClass(ClassName.FADE)) {
-            $$$1(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(Tooltip._TRANSITION_DURATION);
+          if ($$$1(this.tip).hasClass(ClassName.FADE)) {
+            var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
+            $$$1(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
           } else {
             complete();
           }
@@ -3604,15 +3586,16 @@
         // empty mouseover listeners we added for iOS support
 
         if ('ontouchstart' in document.documentElement) {
-          $$$1('body').children().off('mouseover', null, $$$1.noop);
+          $$$1(document.body).children().off('mouseover', null, $$$1.noop);
         }
 
         this._activeTrigger[Trigger.CLICK] = false;
         this._activeTrigger[Trigger.FOCUS] = false;
         this._activeTrigger[Trigger.HOVER] = false;
 
-        if (Util.supportsTransitionEnd() && $$$1(this.tip).hasClass(ClassName.FADE)) {
-          $$$1(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+        if ($$$1(this.tip).hasClass(ClassName.FADE)) {
+          var transitionDuration = Util.getTransitionDurationFromElement(tip);
+          $$$1(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
           complete();
         }
@@ -4837,8 +4820,7 @@
     var DATA_KEY = 'bs.tab';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
-    var TRANSITION_DURATION = 150; // boosted mod
+    var JQUERY_NO_CONFLICT = $$$1.fn[NAME]; // boosted mod
 
     var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
@@ -4975,7 +4957,7 @@
         }
 
         var active = activeElements[0];
-        var isTransitioning = callback && Util.supportsTransitionEnd() && active && $$$1(active).hasClass(ClassName.FADE);
+        var isTransitioning = callback && active && $$$1(active).hasClass(ClassName.FADE);
 
         var complete = function complete() {
           return _this2._transitionComplete(element, active, callback);
@@ -4992,7 +4974,8 @@
         }); // end mod
 
         if (active && isTransitioning) {
-          $$$1(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+          var transitionDuration = Util.getTransitionDurationFromElement(active);
+          $$$1(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
           complete();
         }

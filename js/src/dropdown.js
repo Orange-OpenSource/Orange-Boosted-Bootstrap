@@ -61,7 +61,7 @@ const Dropdown = (($) => {
     MENU_ITEMS : '.dropdown-menu .dropdown-item',
     FIRST_ITEM_IN_MENU : '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)',
     // end mod
-    VISIBLE_ITEMS : '.dropdown-menu .dropdown-item:not(.disabled)'
+    VISIBLE_ITEMS : '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
   }
 
   const AttachmentMap = {

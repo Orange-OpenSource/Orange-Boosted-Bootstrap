@@ -138,8 +138,8 @@ const ScrollSpy = (($) => {
           }
           return null
         })
-        .filter((item)  => item)
-        .sort((a, b)    => a[0] - b[0])
+        .filter((item) => item)
+        .sort((a, b) => a[0] - b[0])
         .forEach((item) => {
           this._offsets.push(item[0])
           this._targets.push(item[1])
@@ -244,7 +244,7 @@ const ScrollSpy = (($) => {
 
       let queries = this._selector.split(',')
       // eslint-disable-next-line arrow-body-style
-      queries     = queries.map((selector) => {
+      queries = queries.map((selector) => {
         return `${selector}[data-target="${target}"],` +
                `${selector}[href="${target}"]`
       })
@@ -277,7 +277,7 @@ const ScrollSpy = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
         const _config = typeof config === 'object' && config
 
         if (!data) {
@@ -316,9 +316,9 @@ const ScrollSpy = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = ScrollSpy._jQueryInterface
+  $.fn[NAME] = ScrollSpy._jQueryInterface
   $.fn[NAME].Constructor = ScrollSpy
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return ScrollSpy._jQueryInterface
   }

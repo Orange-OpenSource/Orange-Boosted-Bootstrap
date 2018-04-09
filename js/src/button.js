@@ -63,7 +63,7 @@ const Button = (($) => {
     toggle() {
       let triggerChangeEvent = true
       let addAriaPressed = true
-      const rootElement      = $(this._element).closest(
+      const rootElement = $(this._element).closest(
         Selector.DATA_TOGGLE
       )[0]
 
@@ -162,9 +162,9 @@ const Button = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Button._jQueryInterface
+  $.fn[NAME] = Button._jQueryInterface
   $.fn[NAME].Constructor = Button
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Button._jQueryInterface
   }

@@ -15,14 +15,14 @@ const Carousel = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'carousel'
+  const NAME                   = 'carousel'
   const VERSION                = '4.0.0'
-  const DATA_KEY            = 'bs.carousel'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const DATA_API_KEY        = '.data-api'
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
-  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
+  const DATA_KEY               = 'bs.carousel'
+  const EVENT_KEY              = `.${DATA_KEY}`
+  const DATA_API_KEY           = '.data-api'
+  const JQUERY_NO_CONFLICT     = $.fn[NAME]
+  const ARROW_LEFT_KEYCODE     = 37 // KeyboardEvent.which value for left arrow key
+  const ARROW_RIGHT_KEYCODE    = 39 // KeyboardEvent.which value for right arrow key
   const TOUCHEVENT_COMPAT_WAIT = 500 // Time for mouse compat events to fire after touch
 
   const Default = {
@@ -88,18 +88,18 @@ const Carousel = (($) => {
 
   class Carousel {
     constructor(element, config) {
-      this._items             = null
-      this._interval          = null
-      this._activeElement     = null
+      this._items              = null
+      this._interval           = null
+      this._activeElement      = null
 
-      this._isPaused          = false
-      this._isSliding         = false
+      this._isPaused           = false
+      this._isSliding          = false
 
-      this.touchTimeout       = null
+      this.touchTimeout        = null
 
-      this._config            = this._getConfig(config)
-      this._element           = $(element)[0]
-      this._indicatorsElement = $(this._element).find(Selector.INDICATORS)[0]
+      this._config             = this._getConfig(config)
+      this._element            = $(element)[0]
+      this._indicatorsElement  = $(this._element).find(Selector.INDICATORS)[0]
 
       this._addEventListeners()
     }
@@ -415,7 +415,7 @@ const Carousel = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
         let _config = {
           ...Default,
           ...$(this).data()
@@ -504,9 +504,9 @@ const Carousel = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Carousel._jQueryInterface
+  $.fn[NAME] = Carousel._jQueryInterface
   $.fn[NAME].Constructor = Carousel
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Carousel._jQueryInterface
   }

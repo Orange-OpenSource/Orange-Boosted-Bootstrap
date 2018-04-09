@@ -15,13 +15,12 @@ const Tab = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'tab'
-  const VERSION             = '4.0.0'
-  const DATA_KEY            = 'bs.tab'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const DATA_API_KEY        = '.data-api'
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const TRANSITION_DURATION = 150
+  const NAME               = 'tab'
+  const VERSION            = '4.0.0'
+  const DATA_KEY           = 'bs.tab'
+  const EVENT_KEY          = `.${DATA_KEY}`
+  const DATA_API_KEY       = '.data-api'
+  const JQUERY_NO_CONFLICT = $.fn[NAME]
   // boosted mod
   const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
   const ARROW_UP_KEYCODE    = 38 // KeyboardEvent.which value for up arrow key
@@ -162,7 +161,6 @@ const Tab = (($) => {
 
       const active = activeElements[0]
       const isTransitioning = callback &&
-        Util.supportsTransitionEnd() &&
         (active && $(active).hasClass(ClassName.FADE))
 
       const complete = () => this._transitionComplete(
@@ -183,9 +181,11 @@ const Tab = (($) => {
       // end mod
 
       if (active && isTransitioning) {
+        const transitionDuration = Util.getTransitionDurationFromElement(active)
+
         $(active)
           .one(Util.TRANSITION_END, complete)
-          .emulateTransitionEnd(TRANSITION_DURATION)
+          .emulateTransitionEnd(transitionDuration)
       } else {
         complete()
       }
@@ -383,9 +383,9 @@ const Tab = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Tab._jQueryInterface
+  $.fn[NAME] = Tab._jQueryInterface
   $.fn[NAME].Constructor = Tab
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Tab._jQueryInterface
   }
