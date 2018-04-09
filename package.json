@@ -90,7 +90,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "sass-math-pow": "^0.1.4",
+    "sass-math-pow": "0.1.4",
     "swiper": "^4.1.0"
   },
   "peerDependencies": {
@@ -217,7 +217,7 @@
     "registry": "npm",
     "main": "js/boosted",
     "directories": {
-      "lib": "dnist"
+      "lib": "dist"
     },
     "shim": {
       "js/boosted": {

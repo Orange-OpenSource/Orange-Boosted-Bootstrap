@@ -1,7 +1,7 @@
 $(function () {
   'use strict'
 
-  window.Util = typeof bootstrap !== 'undefined' ? bootstrap.Util : Util
+  window.Util = typeof boosted !== 'undefined' ? boosted.Util : Util
 
   QUnit.module('util')
 
