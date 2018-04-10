@@ -172,7 +172,6 @@ const Modal = (($) => {
       }
 
       this._isShown = false
-
       const transition = $(this._element).hasClass(ClassName.FADE)
 
       if (transition) {
@@ -188,6 +187,7 @@ const Modal = (($) => {
 
       $(this._element).off(Event.CLICK_DISMISS)
       $(this._dialog).off(Event.MOUSEDOWN_DISMISS)
+
 
       if (transition) {
         const transitionDuration  = Util.getTransitionDurationFromElement(this._element)

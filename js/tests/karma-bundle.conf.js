@@ -2,7 +2,7 @@
 /* eslint no-process-env: 0 */
 
 module.exports = (config) => {
-  const jqueryFile = process.env.USE_OLD_JQUERY ? 'https://code.jquery.com/jquery-1.9.1.min.js' : 'assets/js/vendor/jquery-slim.min.js'
+  const jqueryFile = process.env.USE_OLD_JQUERY ? 'js/tests/vendor/jquery-1.9.1.min.js' : 'assets/js/vendor/jquery-slim.min.js'
 
   config.set({
     basePath: '../..',

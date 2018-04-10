@@ -90,7 +90,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "sass-math-pow": "0.1.4",
+    "sass-math-pow": "^0.1.5",
     "swiper": "^4.2.2"
   },
   "peerDependencies": {
