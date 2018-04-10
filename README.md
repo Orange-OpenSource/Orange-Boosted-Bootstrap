@@ -114,9 +114,10 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 ### Running documentation locally
 
 1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/Orange-Boosted-Bootstrap` directory, run `npm run docs-serve` in the command line.
-4. Open `http://localhost:9001` in your browser, and voilà.
+2. Run `npm install` to install Node.js dependencies.
+3. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
+4. From the root `/Orange-Boosted-Bootstrap` directory, run `npm run docs-serve` in the command line.
+5. Open `http://localhost:9001` in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
@@ -143,12 +144,11 @@ Editor preferences are available in the [editor config](https://github.com/Orang
 Get updates on Bootstrap's development and chat with the project maintainers and community members.
 
 - Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com).
-- Join [the official Slack room](https://bootstrap-slack.herokuapp.com).
+- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
+- Join [the official Slack room](https://bootstrap-slack.herokuapp.com/).
 - Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
-
 
 
 ## Versioning

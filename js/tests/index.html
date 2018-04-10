@@ -14,7 +14,7 @@
 
         // If a version was specified, use that version from jQuery CDN
         if (jQueryVersion) {
-          path = 'vendor/jquery-' + jQueryVersion[1] + '.min.js'
+          path = 'https://code.jquery.com/jquery-' + jQueryVersion[1] + '.min.js'
         }
         document.write('<script src="' + path + '"><\/script>')
       }())
