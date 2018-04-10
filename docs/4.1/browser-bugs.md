@@ -16,25 +16,25 @@ See also:
 * [jQuery's browser bug workarounds](https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o)
 
 <table class="bd-browser-bugs table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Browser(s)</th>
-        <th>Summary of bug</th>
-        <th>Upstream bug(s)</th>
-        <th>Bootstrap issue(s)</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for bug in site.data.browser-bugs %}
-      <tr>
-        <td>{{ bug.browser }}</td>
+  <thead>
+    <tr>
+      <th>Browser(s)</th>
+      <th>Summary of bug</th>
+      <th>Upstream bug(s)</th>
+      <th>Bootstrap issue(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for bug in site.data.browser-bugs %}
+    <tr>
+      <td>{{ bug.browser }}</td>
       <td>{{ bug.summary | markdownify }}</td>
       <td>{% include bugify.html content=bug.upstream_bug %}</td>
       <td>{% include bugify.html content=bug.origin %}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 # Most wanted features
 
@@ -43,22 +43,22 @@ There are several features specified in Web standards which would allow us to ma
 We publicly list these "most wanted" feature requests here, in the hopes of expediting the process of getting them implemented.
 
 <table class="bd-browser-bugs table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Browser(s)</th>
-        <th>Summary of feature</th>
-        <th>Upstream issue(s)</th>
-        <th>Bootstrap issue(s)</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for feat in site.data.browser-features %}
-      <tr>
-        <td>{{ feat.browser }}</td>
+  <thead>
+    <tr>
+      <th>Browser(s)</th>
+      <th>Summary of feature</th>
+      <th>Upstream issue(s)</th>
+      <th>Bootstrap issue(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for feat in site.data.browser-features %}
+    <tr>
+      <td>{{ feat.browser }}</td>
       <td>{{ feat.summary | markdownify }}</td>
       <td>{% include bugify.html content=feat.upstream_bug %}</td>
       <td>{% include bugify.html content=feat.origin %}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>

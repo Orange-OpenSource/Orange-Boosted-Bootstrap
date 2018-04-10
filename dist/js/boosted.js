@@ -1946,7 +1946,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v4.0.1): o-megamenu.js
+   * Boosted (v4.1.0): o-megamenu.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1958,7 +1958,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'megamenu';
-    var VERSION = '4.0.1';
+    var VERSION = '4.1.0';
     var DATA_KEY = 'bs.megamenu';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
@@ -2950,7 +2950,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v4.0.1): o-navbar.js
+   * Boosted (v4.1.0): o-navbar.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2962,7 +2962,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'navbar';
-    var VERSION = '4.0.1';
+    var VERSION = '4.1.0';
     var DATA_KEY = 'bs.navbar';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var BREAKPOINT = 768;
@@ -3102,7 +3102,7 @@
 
   /**
    * ------------------------------------------------------------------------------------------------------
-   * Boosted (v4.0.1): otab.js
+   * Boosted (v4.1.0): otab.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
    * ------------------------------------------------------------------------------------------------------
    */
@@ -3114,7 +3114,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'otab';
-    var VERSION = '4.0.1';
+    var VERSION = '4.1.0';
     var DATA_KEY = 'bs.otab';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
@@ -4129,7 +4129,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v4.0.1): o-priority-nav.js
+   * Boosted (v4.1.0): o-priority-nav.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4141,7 +4141,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'prioritynav';
-    var VERSION = '4.0.1';
+    var VERSION = '4.1.0';
     var DATA_KEY = 'bs.prioritynav';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var RESIZE_DURATION = 500;
@@ -4346,7 +4346,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Boosted (v4.0.1): o-scroll-up.js
+   * Boosted (v4.1.0): o-scroll-up.js
    * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4358,7 +4358,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'scrollup';
-    var VERSION = '4.0.1';
+    var VERSION = '4.1.0';
     var DATA_KEY = 'bs.scrollup';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';

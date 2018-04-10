@@ -1,5 +1,5 @@
-<a name="4.0.1"></a>
-## [4.0.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0...v4.0.1) (2018-02-13)
+<a name="4.1.0"></a>
+## [4.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0...v4.1.0) (2018-02-13)
 
 
 ### Bug Fixes

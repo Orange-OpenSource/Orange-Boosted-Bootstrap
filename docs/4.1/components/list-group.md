@@ -138,8 +138,7 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {% endcapture %}
 {% include example.html content=example %}
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}
 
 ## With badges
 
@@ -199,7 +198,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our list group to create tabbable panes of local content.
+Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">

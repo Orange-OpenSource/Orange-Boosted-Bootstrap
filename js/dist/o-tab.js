@@ -4,7 +4,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * ------------------------------------------------------------------------------------------------------
- * Boosted (v4.0.1): otab.js
+ * Boosted (v4.1.0): otab.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * ------------------------------------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ var Otab = function ($) {
    * ------------------------------------------------------------------------
    */
   var NAME = 'otab';
-  var VERSION = '4.0.1';
+  var VERSION = '4.1.0';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
