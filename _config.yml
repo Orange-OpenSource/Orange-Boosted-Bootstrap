@@ -14,7 +14,7 @@ source:           .
 # end boosted mod
 destination:      ./_gh_pages
 host:           0.0.0.0
-port:             9001
+port:           9001
 # boosted mod
 baseurl:          ""
 url:              http://boosted.orange.com
@@ -86,23 +86,23 @@ grid:
     subdesc: Desktop (&ge;1380px) (target 1440 screen resolutions)
 # end boosted mod
 # Social
-title: Boosted
-description: Based on Bootstrap the most popular library.
-twitter: getbootstrap
-authors: "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+title:              Boosted
+description:        Based on Bootstrap the most popular library.
+twitter:            getbootstrap
+authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
 social_image_path:  /assets/brand/bootstrap-social.png
-social_logo_path: /assets/brand/bootstrap-social-logo.png
+social_logo_path:   /assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.0.1
-bootstrap_current_version:  v4.0.0
-docs_version:     4.0
-repo:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
-slack:              "https://bootstrap-slack.herokuapp.com"
-blog:               "https://blog.getbootstrap.com"
-expo:               "https://expo.getbootstrap.com"
-jobs:               "https://jobs.getbootstrap.com"
-themes:             "https://themes.getbootstrap.com"
+current_version:      4.1.0
+current_ruby_version: 4.1.0
+docs_version:         4.1
+repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
+slack:                "https://bootstrap-slack.herokuapp.com"
+blog:                 "https://blog.getbootstrap.com"
+expo:                 "https://expo.getbootstrap.com"
+jobs:                 "https://jobs.getbootstrap.com"
+themes:               "https://themes.getbootstrap.com"
 
 download:
   source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.1.zip"

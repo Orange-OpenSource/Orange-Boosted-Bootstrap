@@ -5,8 +5,8 @@ description: Get started with Boosted using the Boosted source and a template st
 group: getting-started
 redirect_from:
   - /docs/
-  - /docs/4.0/
-  - /docs/4.0/getting-started/
+  - /docs/4.1/
+  - /docs/4.1/getting-started/
   - /docs/getting-started/
 toc: true
 ---

@@ -3,7 +3,7 @@ layout: docs
 title: Overview
 description: Components and options for laying out your Boosted project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
 group: layout
-redirect_from: "/docs/4.0/layout/"
+redirect_from: "/docs/4.1/layout/"
 toc: true
 ---
 
@@ -109,8 +109,7 @@ We occasionally use media queries that go in the other direction (the given scre
 // No media query since the extra-extra-large breakpoint has no upper bound on its width
 {% endhighlight %}
 
-{% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-info-mediaqueries-breakpoints.md %}
 
 Once again, these media queries are also available via Sass mixins:
 

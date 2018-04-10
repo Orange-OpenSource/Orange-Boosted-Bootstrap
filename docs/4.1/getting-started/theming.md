@@ -4,7 +4,7 @@ title: Theming Boosted
 description: Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.
 group: getting-started
 toc: true
-redirect_from: "/docs/4.0/getting-started/options/"
+redirect_from: "/docs/4.1/getting-started/options/"
 ---
 
 ## Introduction
@@ -75,6 +75,8 @@ With that setup in place, you can begin to modify any of the Sass variables and 
 ### Variable defaults
 
 Every Sass variable in Boosted 4 includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Boosted's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Boosted.
+
+You will find the complete list of Boosted's variables in `scss/_variables.scss`.
 
 Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Boosted's Sass files.
 
@@ -418,4 +420,24 @@ a {
 }
 {% endhighlight %}
 
-While we include breakpoints in our CSS variables, they unfortunately cannot be used in media queries. These remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec.](https://www.w3.org/TR/css-variables-1/#using-variables)
+### Breakpoint variables
+
+While we originally included breakpoints in our CSS variables (e.g., `--breakpoint-md`), **these are not supported in media queries**, but they can still be used _within_ rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec.](https://www.w3.org/TR/css-variables-1/#using-variables)
+
+Here's an example of **what's not supported:**
+
+{% highlight css %}
+@media (min-width: var(--breakpoint-sm)) {
+  ...
+}
+{% endhighlight %}
+
+And here's an example of **what is supported:**
+
+{% highlight css %}
+@media (min-width: 768px) {
+  .custom-element {
+    color: var(--primary);
+  }
+}
+{% endhighlight %}
