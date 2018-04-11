@@ -7,9 +7,9 @@
 <script src="{{ site.baseurl }}/assets/js/vendor/popper.min.js"{% if site.github %} integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"{% endif %}></script>
 
 {%- if site.github -%}
-  <script src="{{ site.baseurl }}/dist/js/boosted.min.js"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/boosted.min.js"></script>
 {%- else -%}
-  <script src="{{ site.baseurl }}/dist/js/boosted.js"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/boosted.js"></script>
 {%- endif -%}
 
 {%- if page.layout == "docs" -%}
@@ -37,7 +37,7 @@
 
 
 {%- if page.layout == "docs" -%}
-<script src="{{ site.baseurl }}/dist/js/vendor/swiper.min.js"></script>
+<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/vendor/swiper.min.js"></script>
 <script>
   new Swiper('.swiper-container', {
     // enable accessibility
@@ -81,7 +81,7 @@
 {%- endif -%}
 
 {%- if page.title == "Boostwatch" -%}
-<script src="{{ site.baseurl }}/dist/js/vendor/swiper.min.js"></script>
+<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/vendor/swiper.min.js"></script>
 <script>
   $(document).ready(function () {
     $("#myTable").tablesorter({

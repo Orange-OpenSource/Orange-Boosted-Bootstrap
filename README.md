@@ -39,7 +39,7 @@ Several quick start options are available:
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.1.0`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
-Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](http://boosted.orange.com/docs/4.1/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
@@ -113,7 +113,7 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.1/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm install` to install Node.js dependencies.
 3. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 4. From the root `/Orange-Boosted-Bootstrap` directory, run `npm run docs-serve` in the command line.

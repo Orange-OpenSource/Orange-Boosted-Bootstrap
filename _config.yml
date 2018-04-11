@@ -26,6 +26,7 @@ exclude:
   - assets/scss/
   - build/
   - js/
+  - dist/
   - node_modules/
   - nuget/
   - scss/
