@@ -108,6 +108,9 @@
         apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
         indexName: 'boosted-orange',
         inputSelector: '#search-input',
+        algoliaOptions: {
+          facetFilters: ['version:4.1']
+        },
         handleSelected: function (input, event, suggestion) {
           var url = suggestion.url
           url = suggestion.isLvl1 ? url.split('#')[0] : url
