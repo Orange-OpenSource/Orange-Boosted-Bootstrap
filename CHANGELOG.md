@@ -1,5 +1,17 @@
 <a name="4.1.0"></a>
-## [4.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0...v4.1.0) (2018-02-13)
+# [4.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.1...v4.1.0) (2018-04-11)
+
+
+### Bug Fixes
+
+* **component:** accordion ([4b5cc41](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4b5cc41))
+* **component:** custom forms ([93f35f0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/93f35f0))
+* **component:** local navigation ([051948e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/051948e))
+
+
+
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.0...v4.0.1) (2018-02-13)
 
 
 ### Bug Fixes
