@@ -18,7 +18,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         <div class="swiper-slide" id="slide1">
             <div class="card">
                 <div class="card-img">
-                    <img alt="first slide" src="/assets/img/green.png">
+                    <img alt="first slide" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/green.png">
                 </div>
                 <div class="card-body">
                     <div class="card-title">Slide 1</div>
@@ -29,7 +29,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         <div class="swiper-slide" id="slide2">
             <div class="card">
                 <div class="card-img">
-                    <img alt="first slide" src="/assets/img/blue.png">
+                    <img alt="first slide" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/blue.png">
                 </div>
                 <div class="card-body">
                     <div class="card-title">Slide 2</div>
@@ -40,7 +40,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         <div class="swiper-slide" id="slide3">
             <div class="card">
                 <div class="card-img">
-                    <img alt="first slide" src="/assets/img/pink.png">
+                    <img alt="first slide" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/pink.png">
                 </div>
                 <div class="card-body">
                     <div class="card-title">Slide 3</div>

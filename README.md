@@ -109,7 +109,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://boosted.orange.com>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `_scripts.html` include.
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `application.js` in assets/js folder.
 
 ### Running documentation locally
 

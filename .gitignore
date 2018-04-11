@@ -46,6 +46,7 @@ twbsconfig.yml
 # Folders to ignore
 node_modules
 docs/4.1/dist
+docs/4.1/assets
 js/coverage
 _gh_pages
 .tmp

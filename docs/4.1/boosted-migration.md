@@ -1,7 +1,9 @@
 ---
 layout: docs
-title: Migrating to boosted v4
-group: migration
+title: Migrating to Boosted v4
+description: Boosted 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.
+group: boosted-migration
+toc: true
 ---
 
 In addition to booststrap migration [notes](../migration/), here is what to keep in mind while migrating from boosted v3 to v4.

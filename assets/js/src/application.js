@@ -105,8 +105,8 @@
     // Search
     if (window.docsearch) {
       window.docsearch({
-        apiKey: '48cb48b22351bc71ea5f12f4d1ede198',
-        indexName: 'bootstrap-v4',
+        apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
+        indexName: 'boosted-orange',
         inputSelector: '#search-input',
         handleSelected: function (input, event, suggestion) {
           var url = suggestion.url
@@ -119,7 +119,7 @@
             // When in production, return the result as is,
             // otherwise remove our url from it.
             var siteurl = document.getElementById('search-input').getAttribute('data-siteurl')
-            var urlRE = /^https?:\/\/getbootstrap\.com/
+            var urlRE = /^http?:\/\/boosted\.orange\.com/
 
             hit.url = siteurl.match(urlRE) ? hit.url : hit.url.replace(urlRE, '')
 

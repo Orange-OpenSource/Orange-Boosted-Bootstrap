@@ -979,7 +979,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
                 </label>
             </th>
             <td>
-                <img src="{{ site.baseurl }}/assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
+                <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
             </td>
             <td>Column content</td>
             <td>Column content</td>
@@ -994,7 +994,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
                 </label>
             </th>
             <td>
-                <img src="{{ site.baseurl }}/assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
+                <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
             </td>
             <td>Column content</td>
             <td>Column content</td>
