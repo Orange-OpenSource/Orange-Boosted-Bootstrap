@@ -56,7 +56,7 @@
     "js-test-cloud": "ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd, :Logger => WEBrick::Log.new('/dev/null'), :AccessLog => []); trap('INT') { s.shutdown }; s.start\" & node build/saucelabs-unit-test.js",
     "js-vendor": "shx mkdir -p dist/js/vendor && shx cp node_modules/swiper/dist/js/swiper.min.js dist/js/vendor/ && shx cp node_modules/swiper/dist/js/swiper.min.js.map dist/js/vendor/",
     "docs": "npm-run-all --parallel css-docs js-docs --sequential docs-compile docs-lint",
-    "docs-compile": "shx mkdir -p docs/4.1/dist && shx cp -r dist/* docs/4.1/dist/ && shx mkdir -p docs/4.1/assets && shx cp -r dist/* docs/4.1/assets/ && bundle exec jekyll build",
+    "docs-compile": "shx --silent rm -rf docs/4.1/dist && shx mkdir -p docs/4.1/dist && shx cp -r dist/* docs/4.1/dist/ && shx --silent rm -rf docs/4.1/assets && shx mkdir -p docs/4.1/assets && shx cp -r assets/* docs/4.1/assets/ && bundle exec jekyll build",
     "postdocs-compile": "npm run docs-workbox-precache",
     "docs-autoshot": "node build/autoshot.js",
     "docs-github": "shx echo \"github: true\" > twbsconfig.yml && npm run docs-compile -- --config _config.yml,twbsconfig.yml && shx rm ./twbsconfig.yml",
