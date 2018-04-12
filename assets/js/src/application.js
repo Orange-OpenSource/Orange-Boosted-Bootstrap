@@ -107,6 +107,9 @@
       window.docsearch({
         apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
         indexName: 'boosted-orange',
+        algoliaOptions:{
+          facetFilters:['version:4.0']
+        },
         inputSelector: '#search-input',
         handleSelected: function (input, event, suggestion) {
           var url = suggestion.url
