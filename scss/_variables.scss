@@ -585,23 +585,11 @@ $custom-range-thumb-box-shadow:       0 .1rem .25rem rgba($black, .1) !default;
 $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-btn-focus-box-shadow !default;
 $custom-range-thumb-active-bg:        lighten($component-active-bg, 35%) !default;
 
-$custom-file-height:               2.5rem !default;
-$custom-file-focus-border-color:   $input-focus-border-color !default;
-$custom-file-focus-box-shadow:     $input-btn-focus-box-shadow !default;
+$custom-file-height:                2.5rem !default;
+$custom-file-height-inner:          $input-height-inner !default;
+$custom-file-focus-border-color:    $input-focus-border-color !default;
+$custom-file-focus-box-shadow:      $input-btn-focus-box-shadow !default;
 
-/*
-$custom-file-padding-y:            1rem !default;
-$custom-file-padding-x:            .5rem !default;
-$custom-file-line-height:          1.5 !default;
-$custom-file-color:                $gray-700 !default;
-$custom-file-bg:                   $white !default;
-$custom-file-border-width:         $border-width !default;
-$custom-file-border-color:         $input-border-color !default;
-$custom-file-border-radius:        $border-radius !default;
-$custom-file-box-shadow:           none !default;
-$custom-file-button-color:         $custom-file-color !default;
-$custom-file-button-bg:            $gray-300 !default;
-*/
 $custom-file-padding-y:             $input-padding-y !default;
 $custom-file-padding-x:             $input-padding-x !default;
 $custom-file-line-height:           $input-line-height !default;
@@ -767,7 +755,7 @@ $pagination-bg:                        #fff !default;
 $pagination-border-width:              $border-width !default;
 $pagination-border-color:              transparent !default;
 $pagination-focus-box-shadow:          $input-btn-focus-box-shadow !default; // Boosted mod not used
-$pagination-focus-outline:          0 !default;
+$pagination-focus-outline:             0 !default;
 
 $pagination-hover-color:               $black !default;
 $pagination-hover-bg:                  $white !default;
@@ -1017,7 +1005,7 @@ $carousel-control-icon-width:                 20px !default;
 $carousel-control-prev-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
 $carousel-control-next-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
-$carousel-transition:           transform .6s ease !default;
+$carousel-transition:           transform .6s ease !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
 
 // Close

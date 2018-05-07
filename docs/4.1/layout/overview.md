@@ -52,7 +52,7 @@ Boosted primarily uses the following media query ranges—or breakpoints—in ou
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 480px)
-// No media query since this is the default in Boosted
+// No media query for `xs` since this is the default in Boosted
 
 // Small devices (landscape phones, 480px and up)
 @media (min-width: 480px) { ... }
@@ -73,15 +73,18 @@ Boosted primarily uses the following media query ranges—or breakpoints—in ou
 Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
 
 {% highlight scss %}
-@include media-breakpoint-up(xs) { ... }
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
 @include media-breakpoint-up(xxl) { ... }
-// Example usage:
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+.custom-class {
+  display: none;
+}
 @include media-breakpoint-up(sm) {
-  .some-class {
+  .custom-class {
     display: block;
   }
 }
@@ -119,6 +122,14 @@ Once again, these media queries are also available via Sass mixins:
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
 @include media-breakpoint-down(xl) { ... }
+// No media query necessary for xxl breakpoint as it has no upper bound on its width
+
+// Example: Style from medium breakpoint and down
+@include media-breakpoint-down(md) {
+  .custom-class {
+    display: block;
+  }
+}
 {% endhighlight %}
 
 There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.

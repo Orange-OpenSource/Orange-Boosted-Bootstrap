@@ -195,8 +195,8 @@
     "sort-vars": "error",
     "space-before-blocks": "error",
     "space-before-function-paren": ["error", {
-        "anonymous": "always",
-        "named": "never"
+      "anonymous": "always",
+      "named": "never"
     }],
     "space-in-parens": "error",
     "space-infix-ops": "error",
