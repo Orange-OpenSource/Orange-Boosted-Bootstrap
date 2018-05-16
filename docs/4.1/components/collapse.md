@@ -72,7 +72,7 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
 Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) component, you can extend the default collapse behavior to create an accordion.
 
 {% capture example %}
-<div id="accordionExample" class="o-accordion">
+<div id="accordionExample" class="accordion">
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
@@ -127,7 +127,7 @@ Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card
 Simply add the `.multi` class on each panel to get multi openable accordions.
 
 {% capture example %}
-<div id="accordionExample-2" role="tablist" class="o-accordion">
+<div id="accordionExample-2" role="tablist" class="accordion">
   <div class="card multi">
     <div class="card-header" role="tab" id="headingOne-1">
       <h5 class="mb-0">
