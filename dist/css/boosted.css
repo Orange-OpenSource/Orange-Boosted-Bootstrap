@@ -1,28 +1,15 @@
 @charset "UTF-8";
 /*!
- * Boosted v4.1.0 (http://boosted.orange.com)
+ * Boosted v4.1.1 (http://boosted.orange.com)
  * Copyright 2014-2018 The Boosted Authors
  * Copyright 2014-2018 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap v4.1.0 (https://getbootstrap.com)
+ * Bootstrap v4.1.1 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-/*
-$custom-file-padding-y:            1rem !default;
-$custom-file-padding-x:            .5rem !default;
-$custom-file-line-height:          1.5 !default;
-$custom-file-color:                $gray-700 !default;
-$custom-file-bg:                   $white !default;
-$custom-file-border-width:         $border-width !default;
-$custom-file-border-color:         $input-border-color !default;
-$custom-file-border-radius:        $border-radius !default;
-$custom-file-box-shadow:           none !default;
-$custom-file-button-color:         $custom-file-color !default;
-$custom-file-button-bg:            $gray-300 !default;
-*/
 :root {
   --blue: #527edb;
   --indigo: #6610f2;
@@ -67,14 +54,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @-ms-viewport {
   width: device-width;
 }
 
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -218,7 +205,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -551,13 +538,6 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #333;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
@@ -2637,6 +2617,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: block;
 }
 
+.was-validated .form-control-file:valid ~ .valid-feedback,
+.was-validated .form-control-file:valid ~ .valid-tooltip, .form-control-file.is-valid ~ .valid-feedback,
+.form-control-file.is-valid ~ .valid-tooltip {
+  display: block;
+}
+
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
   color: #32c832;
 }
@@ -2722,6 +2708,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .custom-select:invalid ~ .invalid-tooltip,
 .custom-select.is-invalid ~ .invalid-feedback,
 .custom-select.is-invalid ~ .invalid-tooltip {
+  display: block;
+}
+
+.was-validated .form-control-file:invalid ~ .invalid-feedback,
+.was-validated .form-control-file:invalid ~ .invalid-tooltip, .form-control-file.is-invalid ~ .invalid-feedback,
+.form-control-file.is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
@@ -3967,13 +3959,14 @@ input[type="button"].btn-block {
 }
 
 .custom-control-label {
+  position: relative;
   margin-bottom: 0;
 }
 
 .custom-control-label::before {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1.875rem;
   display: block;
   width: 1.25rem;
   height: 1.25rem;
@@ -3992,7 +3985,7 @@ input[type="button"].btn-block {
 .custom-control-label::after {
   position: absolute;
   top: 0rem;
-  left: 0;
+  left: -1.875rem;
   display: block;
   width: 1.25rem;
   height: 1.25rem;
@@ -4144,7 +4137,7 @@ input[type="button"].btn-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: calc(2.5rem - 2px * 2);
+  height: 2.25rem;
   padding: 0.5rem 0.625rem;
   line-height: 1.25;
   color: #000;
@@ -5330,24 +5323,76 @@ input[type="button"].btn-block {
   }
 }
 
-.accordion .card:not(:first-of-type):not(:last-of-type) {
-  border-bottom: 0;
-  border-radius: 0;
+.accordion {
+  /* boosted mod */
 }
 
-.accordion .card:not(:first-of-type) .card-header:first-child {
-  border-radius: 0;
+.accordion .card {
+  margin-bottom: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-.accordion .card:first-of-type {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.accordion .card ~ .card {
+  border-top: 0;
 }
 
-.accordion .card:last-of-type {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.accordion .card-header {
+  padding: 0;
+  background-color: #fff;
+  border: 0;
+}
+
+.accordion .card-header,
+.accordion .card-header h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.accordion .card-header button,
+.accordion .card-header a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1rem 2.125rem 1rem 0;
+  line-height: 1.125rem;
+  text-align: left;
+  border: 0;
+}
+
+.accordion .card-header button::after,
+.accordion .card-header a::after {
+  position: absolute;
+  top: 1.3125rem;
+  right: .625rem;
+  width: .875rem;
+  height: .4375rem;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.accordion .card-header button[aria-expanded="true"]::after,
+.accordion .card-header a[aria-expanded="true"]::after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.accordion .card-body {
+  padding: 0 1.5rem 0 0;
+  margin: 0 0 1.25rem 0;
+}
+
+@media (max-width: 767.98px) {
+  .accordion .card {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+  }
+  .accordion .card ~ .card {
+    border-top: 0;
+  }
 }
 
 .breadcrumb {
@@ -6795,6 +6840,7 @@ button.close {
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
+  cursor: pointer;
   background-color: rgba(241, 110, 0, 0.5);
 }
 
@@ -10236,6 +10282,19 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #eee !important;
   }
+  .table-dark {
+    color: inherit;
+  }
+  .table-dark th,
+  .table-dark td,
+  .table-dark thead th,
+  .table-dark tbody + tbody {
+    border-color: #ccc;
+  }
+  .table .thead-dark th {
+    color: inherit;
+    border-color: #ccc;
+  }
 }
 
 .card-deck .o-card-link {
@@ -11790,74 +11849,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm, .input-group-sm
   }
 }
 
-.o-accordion .card {
-  margin-bottom: 0;
-  border: 0;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-.o-accordion .card ~ .card {
-  border-top: 0;
-}
-
-.o-accordion .card-header {
-  padding: 0;
-  background-color: #fff;
-  border: 0;
-}
-
-.o-accordion .card-header,
-.o-accordion .card-header h5 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.o-accordion .card-header button,
-.o-accordion .card-header a {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 1rem 2.125rem 1rem 0;
-  line-height: 1.125rem;
-  text-align: left;
-  border: 0;
-}
-
-.o-accordion .card-header button::after,
-.o-accordion .card-header a::after {
-  position: absolute;
-  top: 1.3125rem;
-  right: .625rem;
-  width: .875rem;
-  height: .4375rem;
-  content: "";
-  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.o-accordion .card-header button[aria-expanded="true"]::after,
-.o-accordion .card-header a[aria-expanded="true"]::after {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.o-accordion .card-body {
-  padding: 0 1.5rem 0 0;
-  margin: 0 0 1.25rem 0;
-}
-
-@media (max-width: 767.98px) {
-  .o-accordion .card {
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-  }
-  .o-accordion .card ~ .card {
-    border-top: 0;
-  }
-}
-
 .table > thead > tr,
 .table > tbody > tr,
 .table > tfoot > tr {
@@ -13194,6 +13185,7 @@ div.active:focus {
 }
 
 a:focus {
+  color: #f16e00;
   outline: dotted 1px;
 }
 
