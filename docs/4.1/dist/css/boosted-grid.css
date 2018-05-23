@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v4.1.0 (http://boosted.orange.com)
+ * Boosted Grid v4.1.1 (http://boosted.orange.com)
  * Copyright 2014-2018 The Boosted Authors
  * Copyright 2014-2018 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Grid v4.1.0 (https://getbootstrap.com)
+ * Bootstrap Grid v4.1.1 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -24,19 +24,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
-$custom-file-padding-y:            1rem !default;
-$custom-file-padding-x:            .5rem !default;
-$custom-file-line-height:          1.5 !default;
-$custom-file-color:                $gray-700 !default;
-$custom-file-bg:                   $white !default;
-$custom-file-border-width:         $border-width !default;
-$custom-file-border-color:         $input-border-color !default;
-$custom-file-border-radius:        $border-radius !default;
-$custom-file-box-shadow:           none !default;
-$custom-file-button-color:         $custom-file-color !default;
-$custom-file-button-bg:            $gray-300 !default;
-*/
 .container {
   margin-right: auto;
   margin-left: auto;

@@ -3,4 +3,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: http://boosted.orange.com/sitemap.xml
+Sitemap: http://0.0.0.0:9001/sitemap.xml
