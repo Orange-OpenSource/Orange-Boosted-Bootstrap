@@ -66,6 +66,11 @@ module.exports = (config) => {
           lines: 80
         }
       }
+    },
+    client: {
+      qunit: {
+        showUI: true
+      }
     }
   })
 }
