@@ -1,6 +1,7 @@
 //
 // Base styles
 //
+// stylelint-disable declaration-no-important
 
 .alert {
   position: relative;
@@ -10,6 +11,32 @@
   @include border-radius($alert-border-radius);
 }
 
+@each $type, $value in $theme-boosted-size {
+  .alert-boosted-#{$type} {
+    padding: $value !important;
+    @include define-font-size($type);
+    color: #000 !important;
+    background-color: transparent !important;
+    border-style: solid;
+    .close{
+      padding-top: ($value - .2rem) !important;
+    }
+    border-width: $alert-border-size;
+  }
+}
+
+// boosted mod
+//remove border
+.alert-boosted-no-border{
+  border-style: none !important;
+}
+
+//end mode
+
+//dark color for span button
+.span-dark{
+  color: #000 !important;
+}
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
@@ -28,8 +55,7 @@
 
 .alert-dismissible {
   padding-right: $close-font-size + $alert-padding-x * 2;
-
-  // Adjust close link position
+  //Adjust close
   .close {
     position: absolute;
     top: 0;

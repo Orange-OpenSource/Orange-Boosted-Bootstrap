@@ -92,6 +92,13 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+$theme-boosted-size: () !default;
+$theme-boosted-size: (
+  "small": 0.30rem,
+  "medium": 0.60rem,
+  "large": 1.30rem
+);
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 
@@ -1055,6 +1062,9 @@ $alert-border-width:                0 !default;
 $alert-bg-level:                    0 !default;
 $alert-border-level:                0 !default;
 // $alert-color-level:                0 !default; // Not used by boosted
+//boosted mod
+$alert-border-size:                 .15rem !default;
+//end mod
 
 
 // Progress bars

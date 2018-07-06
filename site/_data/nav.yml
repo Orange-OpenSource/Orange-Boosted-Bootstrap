@@ -32,6 +32,9 @@
 - title: Components
   pages:
     - title: Alerts
+    # boosted mod"
+    - title: Alerts Custom
+    # end mod
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
