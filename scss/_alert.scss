@@ -19,7 +19,7 @@
     background-color: transparent !important;
     border-style: solid;
     .close{
-      padding-top: ($value - .2rem) !important;
+      padding: ($value - .2rem) $alert-padding-x !important;
     }
     border-width: $alert-border-size;
   }
