@@ -92,12 +92,22 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+//boosted mod
 $theme-boosted-size: () !default;
 $theme-boosted-size: (
   "small": 0.30rem,
   "medium": 0.60rem,
   "large": 1.30rem
 );
+
+$logo-boosted-size: () !default;
+$logo-boosted-size: (
+  "small": 1.0rem,
+  "medium":1.50rem,
+  "large": 2.0rem
+);
+
+// end mod
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;

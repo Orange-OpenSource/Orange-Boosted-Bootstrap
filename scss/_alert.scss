@@ -11,6 +11,7 @@
   @include border-radius($alert-border-radius);
 }
 
+// boosted mod
 @each $type, $value in $theme-boosted-size {
   .alert-boosted-#{$type} {
     padding: $value !important;
@@ -20,12 +21,58 @@
     border-style: solid;
     .close{
       padding: ($value - .2rem) $alert-padding-x !important;
+      text-shadow: none !important;
+      opacity: 1 !important;
     }
     border-width: $alert-border-size;
   }
 }
 
-// boosted mod
+@each $color, $value in $theme-colors {
+  @each $type, $val in $logo-boosted-size {
+    .alert-logo-#{$color}-#{$type} {
+      position: absolute;
+      @if ($type == "small") {
+        top: .3rem;
+      } @else if ($type == "medium") {
+        top: .5rem;
+      } @else {
+        top: 1rem;
+      }
+      left: 1.25rem;
+      @if ($type == "large") {
+        width: $val + .3rem;
+        height: $val;
+      } @else {
+        width: $val;
+        height: $val;
+      }
+      @include define-image($color);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.boosted-multiline {
+  @each $color, $value in $theme-colors {
+    .alert-logo-#{$color}-large{
+      top: 1.5rem !important;
+    }
+  }
+}
+
+.inverse{
+  background-color: #000;
+}
+
+.alert-inverse{
+  color: #fff !important;
+}
+
+.boosted-padding{
+  padding-left: 3.5rem;
+}
 //remove border
 .alert-boosted-no-border{
   border-style: none !important;
@@ -37,6 +84,11 @@
 .span-dark{
   color: #000 !important;
 }
+
+.span-dark-inverse{
+  color: #fff !important;
+}
+
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
