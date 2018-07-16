@@ -1,0 +1,117 @@
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Download
+    - title: Contents
+    - title: Browsers & devices
+    - title: JavaScript
+    - title: Theming
+    - title: Build tools
+    # - title: Best practices # TODO: Write this content
+    - title: Webpack
+    - title: Accessibility
+    - title: Rtl
+
+- title: Layout
+  pages:
+    - title: Overview
+    - title: Grid
+    - title: Media object
+    - title: Utilities for layout
+
+- title: Content
+  pages:
+    - title: Reboot
+    - title: Typography
+    - title: Code
+    - title: Images
+    - title: Tables
+    - title: Figures
+
+- title: Components
+  pages:
+    - title: Alerts
+    - title: Badge
+    - title: Breadcrumb
+    - title: Buttons
+    - title: Button group
+    - title: Card
+    - title: Carousel
+    # boosted mod
+    - title: Custom carousel
+    # end mod
+    - title: Collapse
+    - title: Dropdowns
+    - title: Forms
+    - title: Input group
+    - title: Jumbotron
+    - title: List group
+    - title: Modal
+    # boosted mod
+    - title: Orange popin
+    # end mod
+    - title: Navs
+    - title: Navbar
+    # boosted mod
+    - title: Navbar Orange
+    - title: Orange megamenu
+    - title: Local navigation
+    - title: Priority Nav
+    - title: Orange footer
+    # end mod
+    - title: Pagination
+    - title: Popovers
+    - title: Progress
+    - title: Scrollspy
+    # boosted mod
+    - title: Scroll up
+    - title: Stepbar
+    # end mod
+    - title: Tooltips
+
+- title: Utilities
+  pages:
+    - title: Borders
+    - title: Clearfix
+    - title: Close icon
+    - title: Colors
+    - title: Display
+    - title: Embed
+    - title: Flex
+    - title: Float
+    - title: Image replacement
+    - title: Position
+    - title: Screenreaders
+    - title: Shadows
+    - title: Sizing
+    - title: Spacing
+    - title: Text
+    - title: Vertical align
+    - title: Visibility
+
+- title: Extend
+  pages:
+    - title: Approach
+    - title: Icons
+
+- title: Migration
+
+# boosted mod
+- title: Boosted migration
+# end mod
+
+- title: About
+  pages:
+    - title: Overview
+# boosted mod
+    - title: Boosted history
+# end mod
+    - title: Brand
+# boosted mod
+    - title: Orange brand
+# end mod
+    - title: License
+# boosted mod
+    - title: Boosted license
+# end mod
+    - title: Translations
