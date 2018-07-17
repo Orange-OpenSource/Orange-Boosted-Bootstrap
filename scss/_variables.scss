@@ -8,8 +8,7 @@
 // Color system
 //
 
-// stylelint-disable
-$white:  #fff !default;
+$white:    #fff !default;
 $gray-100: #fafafa !default; // gray-lightest-o
 $gray-200: #f6f6f6 !default; // gray-lightest
 $gray-300: #eee !default; // gray-lighter
@@ -22,17 +21,22 @@ $gray-900: #333 !default; // gray-dark
 $black:    #000 !default;
 
 $grays: () !default;
-$grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $grays);
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
 
 $blue:    #527edb !default; // Boosted Functionnal
 $indigo:  #6610f2 !default;
@@ -43,24 +47,28 @@ $orange:  #f16e00 !default; // Boosted
 $yellow:  #fc0 !default; // Boosted Functionnal
 $green:   #32c832 !default; // Boosted Functionnal
 $teal:    #50be87 !default; // Boosted illustration color
-$cyan:    #4BB4E6 !default; // Boosted illustration color
+$cyan:    #4bb4e6 !default; // Boosted illustration color
 
 $colors: () !default;
-$colors: map-merge((
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-), $colors);
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
 
 $primary:       $orange !default;
 $secondary:     $black !default;
@@ -72,26 +80,29 @@ $light:         $gray-400 !default;
 $dark:          $black !default;
 
 $theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-), $theme-colors);
-// stylelint-enable
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
 
 // Set a specific jump point for requesting color jumps
-$theme-color-interval: 8% !default;
+$theme-color-interval:      8% !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 // $yiq-contrasted-threshold: 150 !default; // Boosted mod, contrast value is fixed with Wcag
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $black !default;
+$yiq-text-dark:  $black !default;
 $yiq-text-light: $white !default;
 
 // Options
@@ -103,7 +114,7 @@ $enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
+$enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
 
@@ -114,27 +125,34 @@ $enable-print-styles:       true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-// stylelint-disable
 $spacer:   1.25rem !default; // 20px
 $spacers: () !default;
-$spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3)
-), $spacers);
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
-$sizes: map-merge((
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%
-), $sizes);
-// stylelint-enable
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
 
 // Body
 //
@@ -450,6 +468,8 @@ $btn-transition:              all .2s ease-in-out !default;
 
 // Forms
 
+$label-margin-bottom:         .625rem !default;
+
 $input-padding-y:             $input-btn-padding-y !default;
 $input-padding-x:             .625rem !default; // Boosted mod input padding x is not the same as buttons padding-x!
 $input-line-height:           $input-btn-line-height !default;
@@ -511,6 +531,8 @@ $input-group-addon-color:        $input-color !default;
 $input-group-addon-bg:           $gray-300 !default;
 $input-group-addon-border-color: $input-border-color !default;
 
+$custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
 $custom-control-gutter:       1.875rem !default;
 $custom-control-spacer-x:     $spacer !default;
 
@@ -559,8 +581,9 @@ $custom-select-indicator:          url("data:image/svg+xml;charset=utf8,%3Csvg%2
 $custom-select-border-width:       $input-btn-border-width !default;
 $custom-select-border-color:       $input-border-color !default;
 $custom-select-border-radius:      $border-radius !default;
-
+$custom-select-box-shadow:         none !default;
 $custom-select-focus-border-color: $input-focus-border-color !default;
+$custom-select-focus-width:        $input-btn-focus-width !default;
 $custom-select-focus-box-shadow:   none !default;
 
 $custom-select-font-size-sm:       75% !default;
@@ -589,6 +612,7 @@ $custom-file-height:                2.5rem !default;
 $custom-file-height-inner:          $input-height-inner !default;
 $custom-file-focus-border-color:    $input-focus-border-color !default;
 $custom-file-focus-box-shadow:      $input-btn-focus-box-shadow !default;
+$custom-file-disabled-bg:           $input-disabled-bg !default;
 
 $custom-file-padding-y:             $input-padding-y !default;
 $custom-file-padding-x:             $input-padding-x !default;

@@ -10,7 +10,7 @@ toc: true
 
 Download ready-to-use compiled code for **Boosted v{{ site.current_version}}** to easily drop into your project, which includes:
 
-- Compiled and minified CSS bundles (see [CSS files comparison]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#comparison-of-css-files))
+- Compiled and minified CSS bundles (see [CSS files comparison]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#css-files))
 - Compiled and minified JavaScript plugins
 
 This doesn't include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).
@@ -51,7 +51,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org/):
 
-{% highlight bash %}
+{% highlight sh %}
 composer require orange-opensource/orange-boosted-bootstrap:{{ site.current_version }}
 {% endhighlight %}
 
@@ -66,4 +66,3 @@ Install-Package boosted
 {% highlight powershell %}
 Install-Package boosted.sass
 {% endhighlight %}
-

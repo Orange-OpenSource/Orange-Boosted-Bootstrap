@@ -1,6 +1,7 @@
 # Ignore docs files
 _gh_pages
 _site
+site/docs/4.1/dist/
 docs/4.0/examples/rtl-*
 
 # Ignore ruby files
@@ -45,12 +46,4 @@ twbsconfig.yml
 
 # Folders to ignore
 node_modules
-docs/4.1/dist
-docs/4.1/assets
 js/coverage
-_gh_pages
-.tmp
-.tmpdocs
-
-# Jenkins
-reports

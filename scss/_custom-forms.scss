@@ -217,12 +217,17 @@
   } @else {
     border-radius: 0;
   }
+  // @include box-shadow($custom-select-box-shadow); //boosted mod no box-shadow
   appearance: none;
 
   &:focus {
     border-color: $custom-select-focus-border-color;
     outline: 0;
-    box-shadow: $custom-select-focus-box-shadow;
+    @if $enable-shadows {
+      box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
+    } @else {
+      box-shadow: $custom-select-focus-box-shadow;
+    }
 
     &::-ms-value {
       // For visual consistency with other platforms/browsers,
@@ -288,25 +293,18 @@
   margin: 0;
   opacity: 0;
 
-  &:focus ~ .custom-file-control {
-    border-color: $custom-file-focus-border-color;
-    @include box-shadow($custom-file-focus-box-shadow); // Boosted mod include the shadow
-
-    &::before {
-      border-color: $custom-file-focus-border-color;
-    }
-  }
-
-  // Boosted mod FIX
   &:focus ~ .custom-file-label {
     border-color: $custom-file-focus-border-color;
     box-shadow: $custom-file-focus-box-shadow;
 
-    &::before {
+    &::after {
       border-color: $custom-file-focus-border-color;
     }
   }
-  // End mod
+
+  &:disabled ~ .custom-file-label {
+    background-color: $custom-file-disabled-bg;
+  }
 
   @each $lang, $value in $custom-file-text {
     &:lang(#{$lang}) ~ .custom-file-label::after {
@@ -314,7 +312,6 @@
     }
   }
 }
-
 
 .custom-file-label {
   position: absolute;
@@ -377,6 +374,7 @@
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
+    @include transition($custom-forms-transition);
     appearance: none;
 
     &:focus {
@@ -407,6 +405,7 @@
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
+    @include transition($custom-forms-transition);
     appearance: none;
 
     &:focus {
@@ -437,6 +436,7 @@
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
+    @include transition($custom-forms-transition);
     appearance: none;
 
     &:focus {
@@ -470,4 +470,10 @@
     background-color: $custom-range-track-bg;
     @include border-radius($custom-range-track-border-radius);
   }
+}
+
+.custom-control-label::before,
+.custom-file-label,
+.custom-select {
+  @include transition($custom-forms-transition);
 }

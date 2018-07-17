@@ -39,7 +39,7 @@
     // color: $gray-light; // boosted mod
 
     &:hover {
-      color: theme-color("primary");
+      color: theme-color("primary"); // boosted mod
       text-decoration: none;
     }
   }
@@ -52,7 +52,7 @@
 .bd-sidebar {
   order: 0;
   // background-color: transparent; // boosted mod
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid $gray-300; // boosted mod
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
@@ -61,11 +61,11 @@
       z-index: 1000;
       max-height: calc(100vh - 5rem); // boosted mod
     }
-    border-right: 1px solid $gray-300;
+    border-right: 1px solid $gray-300; // boosted mod
   }
 
   @include media-breakpoint-up(xl) {
-    max-width: 320px;
+    flex: 0 1 320px;
   }
 }
 
@@ -118,7 +118,7 @@
   // color: $gray-lightest; // boosted mod
 
   &:hover {
-    color: theme-color("primary");
+    color: theme-color("primary");// boosted mod
     text-decoration: none;
   }
 }
@@ -132,7 +132,7 @@
     }
 
     > .bd-toc-link {
-      color: theme-color("primary");
+      color: theme-color("primary"); // boosted mod
 
       &:hover {
         background-color: transparent;
@@ -150,11 +150,11 @@
   display: block;
   padding: .25rem 1.5rem;
   font-size: 90%;
-  color: $gray-700;
+  color: $gray-700;// boosted mod
 }
 
 .bd-sidebar .nav > li > a:hover {
-  color: theme-color("primary");
+  color: theme-color("primary");// boosted mod
   text-decoration: none;
   background-color: transparent;
 }
@@ -162,10 +162,10 @@
 .bd-sidebar .nav > .active > a,
 .bd-sidebar .nav > .active:hover > a {
   font-weight: 500;
-  color: #000;
+  color: #000;// boosted mod
   background-color: transparent;
 }
-
+// boosted mod
 .bd-links a,
 .bd-toc a {
   &:focus {

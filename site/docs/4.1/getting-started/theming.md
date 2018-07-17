@@ -50,24 +50,24 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // Custom.scss
 // Option A: Include all of Boosted
 
-@import "node_modules/boosted/scss/boosted";
+@import "../node_modules/bootstrap/scss/bootstrap";
 {% endhighlight %}
 
 {% highlight scss %}
 // Custom.scss
-// Option B: Include parts of Boosted
+// Option B: Include parts of Bootstrap
 
 // Required
-@import "node_modules/boosted/scss/functions";
-@import "node_modules/boosted/scss/variables";
-@import "node_modules/boosted/scss/mixins";
+@import "../node_modules/boosted/scss/functions";
+@import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/mixins";
 
 // Optional
-@import "node_modules/boosted/scss/reboot";
-@import "node_modules/boosted/scss/type";
-@import "node_modules/boosted/scss/images";
-@import "node_modules/boosted/scss/code";
-@import "node_modules/boosted/scss/grid";
+@import "../node_modules/boosted/scss/reboot";
+@import "../node_modules/boosted/scss/type";
+@import "../node_modules/boosted/scss/images";
+@import "../node_modules/boosted/scss/code";
+@import "../node_modules/boosted/scss/grid";
 {% endhighlight %}
 
 With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
@@ -88,7 +88,7 @@ $body-bg: #000;
 $body-color: #111;
 
 // Boosted and its default variables
-@import "node_modules/boosted/scss/boosted";
+@import "../node_modules/boosted/scss/boosted";
 {% endhighlight %}
 
 Repeat as necessary for any variable in Boosted, including the global options below.

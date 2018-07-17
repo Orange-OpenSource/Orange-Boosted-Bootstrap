@@ -10,7 +10,7 @@ toc: true
 
 Once downloaded, unzip the compressed folder and you'll see something like this:
 
-<!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too. -->
+<!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 
 {% highlight plaintext %}
 boosted/
@@ -40,12 +40,16 @@ boosted/
 │   └── orangeIcons.min.css.map
 └── js/
     ├── boosted.bundle.js
+    ├── boosted.bundle.js.map
     ├── boosted.bundle.min.js
+    ├── boosted.bundle.min.js.map
     ├── boosted.js
-    └── boosted.min.js
+    ├── boosted.js.map
+    ├── boosted.min.js
+    └── boosted.min.js.map
 {% endhighlight %}
 
-This is the most basic form of Boosted: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.
+This is the most basic form of Boosted: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.  Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
 
 ## CSS files
 
@@ -126,8 +130,8 @@ Similarly, we have options for including some or all of our compiled JavaScript.
   <tbody>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.js</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.min.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted.bundle.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted.bundle.min.js</code></div>
       </th>
       <td class="text-success">Included</td>
       <td class="bg-light text-muted">Not included</td>
@@ -135,8 +139,8 @@ Similarly, we have options for including some or all of our compiled JavaScript.
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap.js</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap.min.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted.min.js</code></div>
       </th>
       <td class="bg-light text-muted">Not included</td>
       <td class="bg-light text-muted">Not included</td>

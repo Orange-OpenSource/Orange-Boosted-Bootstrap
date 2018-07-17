@@ -8,9 +8,9 @@
   order: 1;
 
   // Hack the sticky header
-  > h2[id]:not(.card-title),
-  > h3[id]:not(.card-title),
-  > h4[id]:not(.card-title) {
+  > h2[id]:not(.card-title), // boosted mod
+  > h3[id]:not(.card-title), // boosted mod
+  > h4[id]:not(.card-title) { // boosted mod
     pointer-events: none;
 
     > div,

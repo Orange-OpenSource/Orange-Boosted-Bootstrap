@@ -10,7 +10,9 @@
     # - title: Best practices # TODO: Write this content
     - title: Webpack
     - title: Accessibility
+    # boosted mod    
     - title: Rtl
+    # end mod
 
 - title: Layout
   pages:

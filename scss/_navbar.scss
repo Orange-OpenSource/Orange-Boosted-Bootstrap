@@ -25,7 +25,7 @@
   font-weight: $font-weight-bold; // Boosted mod
 
   // Because flex properties aren't inherited, we need to redeclare these first
-  // few properities so that content nested within behave properly.
+  // few properties so that content nested within behave properly.
   > .container,
   > .container-fluid {
     display: flex;
@@ -178,13 +178,14 @@
   padding-bottom: $nav-link-padding-y;
 }
 
+
 // Responsive navbar
 //
 // Custom styles for responsive collapsing and toggling of navbar contents.
 // Powered by the collapse Bootstrap JavaScript plugin.
 
 // When collapsed, prevent the toggleable navbar contents from appearing in
-// the default flexbox row orienation. Requires the use of `flex-wrap: wrap`
+// the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
 .navbar-collapse {
   flex-basis: 100%;
@@ -206,7 +207,7 @@
   margin: ($spacer / 4) 0; // boosted mod
   font-size: $navbar-toggler-font-size;
   line-height: 1;
-  background: transparent; // remove default button style
+  background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
 
@@ -304,11 +305,6 @@
             position: absolute;
           }
 
-          .dropdown-menu-right {
-            right: 0;
-            left: auto; // Reset the default from `.dropdown-menu`
-          }
-
           // Boosted mod
           .dropdown-item {
             color: $black;
@@ -358,13 +354,6 @@
 
         .navbar-toggler {
           display: none;
-        }
-
-        .dropup {
-          .dropdown-menu {
-            top: auto;
-            bottom: 100%;
-          }
         }
       }
     }

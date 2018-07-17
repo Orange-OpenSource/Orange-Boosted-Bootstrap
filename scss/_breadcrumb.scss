@@ -16,7 +16,6 @@
 .breadcrumb-item {
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
-
     padding-left: $breadcrumb-item-padding;
 
     &::before {
@@ -28,7 +27,7 @@
       line-height: 1;
       // end mod
       color: $breadcrumb-divider-color;
-      content: "#{$breadcrumb-divider}";
+      content: $breadcrumb-divider;
     }
   }
 

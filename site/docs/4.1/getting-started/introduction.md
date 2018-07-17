@@ -27,7 +27,11 @@ Once you have [downloaded](../download/) boosted source files, copy-paste the st
 <link rel="stylesheet" href="path/to/your/boosted.css">
 {% endhighlight %}
 
-Add our optional JavaScript plugins, jQuery, and [Popper.js](https://github.com/FezVrasta/popper.js)) near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Popper.js first, as our JavaScript plugins depend on them. While we use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/) in our docs, the full version is also supported.
+### JS
+
+Many of our components require the use of JavaScript to function. Specifically, they require [jQuery](https://jquery.com), [Popper.js](https://popper.js.org/), and our own JavaScript plugins. Place the following `<script>`s near the end of your pages, right before the closing `</body>` tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
+
+We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), but the full version is also supported.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -38,7 +42,25 @@ Add our optional JavaScript plugins, jQuery, and [Popper.js](https://github.com/
 <script src="path/to/your/boosted.js"></script>
 {% endhighlight %}
 
-And that's it—you're on your way to a fully Boosted by Orange site. If you're at all unsure about the general page structure, keep reading for an example page template.
+Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+
+Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-bootstrap) section.
+
+<details>
+<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+{% capture markdown %}
+- Alerts for dismissing
+- Buttons for toggling states and checkbox/radio functionality
+- Carousel for all slide behaviors, controls, and indicators
+- Collapse for toggling visibility of content
+- Dropdowns for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
+- Modals for displaying, positioning, and scroll behavior
+- Navbar for extending our Collapse plugin to implement responsive behavior
+- Tooltips and popovers for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
+- Scrollspy for scroll behavior and navigation updates
+{% endcapture %}
+{{ markdown | markdownify }}
+</details>
 
 ## Starter template
 

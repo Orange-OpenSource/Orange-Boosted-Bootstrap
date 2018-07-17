@@ -195,7 +195,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown link
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -224,10 +224,10 @@ Place various form controls and components within a navbar with `.form-inline`.
 {% endcapture %}
 {% include example.html content=example %}
 
-Align the contents of your inline forms with utilities as needed.
+Immediate children elements in `.navbar` use flex layout and will default to `justify-content: between`. Use additional [flex utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) as needed to adjust this behavior.
 
 {% capture example %}
-<nav class="navbar navbar-dark bg-dark justify-content-between">
+<nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand">Navbar</a>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -334,7 +334,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
       </ul>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
@@ -362,7 +362,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
       </ul>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
@@ -575,7 +575,7 @@ Sometimes you want to use the collapse plugin to trigger hidden content elsewher
 <div class="pos-f-t">
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <h4 class="text-white">Collapsed content</h4>
+      <h5 class="text-white h4">Collapsed content</h5>
       <span class="text-muted">Toggleable via the navbar brand.</span>
     </div>
   </div>

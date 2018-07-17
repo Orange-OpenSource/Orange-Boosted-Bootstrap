@@ -16,7 +16,7 @@ If you're building our JavaScript from source, it [requires `util.js`]({{ site.b
 
 ## Accessibility
 
-The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/TR/wai-aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
+The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
 
 Boosted's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Boosted does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
 
@@ -436,7 +436,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropright` to th
       Split dropright
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdright</span>
+      <span class="sr-only">Toggle Dropright</span>
     </button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
@@ -536,7 +536,6 @@ Trigger dropdown menus at the left of the elements by adding `.dropleft` to the 
   </button>
 </div>
 {% endhighlight %}
-
 
 ## Menu items
 
@@ -828,7 +827,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>display</td>
       <td>string</td>
       <td>'dynamic'</td>
-      <td>By default, we use Popper.js for dynamic positioning. Disable this with `static`.</td>
+      <td>By default, we use Popper.js for dynamic positioning. Disable this with <code>static</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -846,6 +845,7 @@ Note when `boundary` is set to any value other than `'scrollParent'`, the style 
 ### Events
 
 All dropdown events are fired at the `.dropdown-menu`'s parent element and have a `relatedTarget` property, whose value is the toggling anchor element.
+`hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original event type is `click`) that contains an Event Object for the click event.
 
 | Event | Description |
 | --- | --- |
