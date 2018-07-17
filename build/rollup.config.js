@@ -9,7 +9,7 @@ const BUNDLE  = process.env.BUNDLE === 'true'
 const year    = new Date().getFullYear()
 
 let fileDest  = 'boosted.js'
-const external  = ['jquery', 'popper.js', 'tablesorter']
+const external = ['jquery', 'popper.js', 'tablesorter']
 const plugins = [
   babel({
     exclude: 'node_modules/**', // Only transpile our source code
