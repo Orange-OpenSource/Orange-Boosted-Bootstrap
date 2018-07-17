@@ -13,7 +13,7 @@
 
 // boosted mod
 @each $type, $value in $theme-boosted-size {
-  .alert-boosted-#{$type} {
+  .o-alert-#{$type} {
     padding: $value !important;
     @include define-font-size($type);
     color: #000 !important;
@@ -30,7 +30,7 @@
 
 @each $color, $value in $theme-colors {
   @each $type, $val in $logo-boosted-size {
-    .alert-logo-#{$color}-#{$type} {
+    .o-alert-logo-#{$color}-#{$type} {
       position: absolute;
       @if ($type == "small") {
         top: .3rem;
@@ -56,7 +56,7 @@
 
 .boosted-multiline {
   @each $color, $value in $theme-colors {
-    .alert-logo-#{$color}-large{
+    .o-alert-logo-#{$color}-large{
       top: 1.5rem !important;
     }
   }
@@ -70,11 +70,11 @@
   color: #fff !important;
 }
 
-.boosted-padding{
+.o-alert-padding{
   padding-left: 3.5rem;
 }
 //remove border
-.alert-boosted-no-border{
+.o-alert-no-border{
   border-style: none !important;
 }
 
