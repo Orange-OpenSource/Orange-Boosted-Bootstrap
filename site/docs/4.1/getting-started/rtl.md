@@ -10,10 +10,10 @@ Every release of Boosed ships with a dedicated right-to-left (RTL) version.
 
 ## Usage
 
-To get a RTL version of a boosted webpage you need two things :  
-1. Replace the regular `boosted.css` and `boosted.js` files  
+To get a RTL version of a boosted webpage you need only one thing :  
+1. Replace the regular `boosted.css` file  
 
-2. with their RTL counterpart `boosted-rtl.css` and `boosted-rtl.js`found in the distribution files.
+2. with the RTL counterpart `boosted-rtl.css` found in the distribution files.
    Add attribute `dir="rtl"` to your `<html>` tag.
 
 ## Start template
@@ -59,7 +59,7 @@ To get a RTL version of a boosted webpage you need two things :
     <!-- jQuery first, then Popper.js, then Boosted JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
-    <script src="path/to/your/boosted-rtl.js"></script>
+    <script src="path/to/your/boosted.js"></script>
   </body>
 </html>
 {% endhighlight %} 

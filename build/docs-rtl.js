@@ -22,17 +22,21 @@ sh.exec('find site/docs/4.1/examples/ -mindepth 1 -maxdepth 1 -type d -name \'rt
     console.log('Program output:', stdout)
     console.log('Program stderr:', stderr)
 
-
-    sh.exec('find site/docs/4.1/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/boosted\\./boosted-rtl\\./gi\' {} ;', (code, stdout, stderr) => {
+    sh.exec('find site/docs/4.1/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/boosted\\.css/boosted-rtl\\.css/gi\' {} ;', (code, stdout, stderr) => {
       console.log('Exit code:', code)
       console.log('Program output:', stdout)
       console.log('Program stderr:', stderr)
-
-
-      sh.exec('find site/docs/4.1/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' {} ;', (code, stdout, stderr) => {
+      
+      sh.exec('find site/docs/4.1/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/boosted\\.min\\.css/boosted-rtl\\.min\\.css/gi\' {} ;', (code, stdout, stderr) => {
         console.log('Exit code:', code)
         console.log('Program output:', stdout)
         console.log('Program stderr:', stderr)
+
+        sh.exec('find site/docs/4.1/examples/rtl-* -type f -name \'*.html\' -exec sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' {} ;', (code, stdout, stderr) => {
+          console.log('Exit code:', code)
+          console.log('Program output:', stdout)
+          console.log('Program stderr:', stderr)
+        })
       })
     })
   })
