@@ -191,4 +191,4 @@ Using javascript, simply declare your navbar component with the needed options.
 $('#demo-navbar').navbar({sticky: true, hideSupra: true});
 {% endhighlight %}
 
-See a full implementation in the Orange News [example page](../..//examples/orange-news/)
+See a full implementation in the Orange News [example page](../..//examples/news-template/)

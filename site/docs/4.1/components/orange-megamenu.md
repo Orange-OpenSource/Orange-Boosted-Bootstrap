@@ -145,4 +145,4 @@ $('#collapsing-navbarHead').megamenu({ target: '#testLink', noFocus: true });
 
 Default value for parameter `noFocus` is `false`.
 
-See a full implementation in the Orange News [example page](../../examples/orange-news/)
+See a full implementation in the Orange News [example page](../../examples/news-template/)
