@@ -62,7 +62,7 @@
     "js-test-cloud": "npm-run-all --parallel --race http-server saucelabs-test",
     "coveralls": "shx cat js/coverage/lcov.info | coveralls",
     "js-vendor": "shx mkdir -p dist/js/vendor && shx cp node_modules/swiper/dist/js/swiper.min.js dist/js/vendor/ && shx cp node_modules/swiper/dist/js/swiper.min.js.map dist/js/vendor/",
-    "docs": "npm-run-all --parallel css-docs js-docs --sequential docs-compile docs-lint",
+    "docs": "npm-run-all --parallel css-docs js-docs --sequential docs-compile docs-rtl docs-lint",
     "docs-compile": "bundle exec jekyll build",
     "postdocs-compile": "npm run docs-workbox-precache",
     "docs-autoshot": "node build/autoshot.js",
