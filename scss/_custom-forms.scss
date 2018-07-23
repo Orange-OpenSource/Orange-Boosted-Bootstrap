@@ -7,23 +7,6 @@
 //
 // Base class takes care of all the key behavioral aspects.
 
-//@media screen and (-ms-high-contrast: active) {
-//-ms-high-contrast-adjust: auto;
-//.custom-control-input {
-//&:checked ~ .custom-control-label::before {
-//background-color: rgb(228, 18, 18);
-//border: 5px solid rgb(228, 18, 18);
-//}
-//}
-//}
-
-//@media screen and (-ms-high-contrast: black-on-white) {
-//{ -ms-high-contrast-adjust: auto; }
-//}
-//@media screen and (-ms-high-contrast: white-on-black) {
-//{ -ms-high-contrast-adjust: auto; }
-//}
-
 .custom-control {
   position: relative;
   display: block;
