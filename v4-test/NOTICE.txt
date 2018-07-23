@@ -27,7 +27,7 @@ End of the parts list under Monotype Imaging Inc Copyright
 
 
 Parts list under Orange SA Copyright
-Copyright (C) 2016 - 2017 Orange SA All rights reserved
+Copyright (C) 2016 - 2018 Orange SA All rights reserved
 
 The following parts are proprietary information of Orange.
 You shall not use or display any trade names, trademarks, service marks, products names, illustrations or designs used within the software 
@@ -59,31 +59,31 @@ apple-touch-icon-57x57.png
 apple-touch-icon-60x60.png
 apple-touch-icon-72x72.png
 apple-touch-icon-76x76.png           
-docs/4.0/examples/module-002-quick-links/img/icn_facebook_black.png
-docs/4.0/examples/module-002-quick-links/img/icn_messaging_black.png
-docs/4.0/examples/module-002-quick-links/img/icn_music_black.png
-docs/4.0/examples/module-002-quick-links/img/icn_top_black.png  
-docs/4.0/examples/module-006-content-panel/img/adaptation.jpg
-docs/4.0/examples/module-006-content-panel/img/connexion.jpg
-docs/4.0/examples/module-006-content-panel/img/disponibilite.jpg
-docs/4.0/examples/module-006-content-panel/img/simplicite.jpg
-docs/4.0/examples/module-006-content-panel/img/vignette1.jpg
-docs/4.0/examples/module-012-product-details/img/label_discount.png
-docs/4.0/examples/module-012-product-details/img/picture_device_3.png
-docs/4.0/examples/module-012-product-details/img/picture_klif1.png
-docs/4.0/examples/module-012-product-details/img/stars_sprite.png        
-docs/4.0/examples/orange_brand_2015/images/discovery-frame.png
-docs/4.0/examples/orange_brand_2015/images/discovery-popout.png
-docs/4.0/examples/orange_brand_2015/images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg
-docs/4.0/examples/orange_brand_2015/images/popular-services-2.png
-docs/4.0/examples/orange_brand_2015/images/discovery-frame-carousel.png
-docs/4.0/examples/orange_brand_2015/images/discovery-popout-2byslide.png
-docs/4.0/examples/orange_brand_2015/images/offset_LARGE_123305_chemisier_jaune.jpg
-docs/4.0/examples/orange_brand_2015/images/popular-services-3.png
-docs/4.0/examples/orange_brand_2015/images/discovery-frame-carousel-whitetext.png
-docs/4.0/examples/orange_brand_2015/images/Fun-frame_frame-carousel.png
-docs/4.0/examples/orange_brand_2015/images/popular-services-1.png
-docs/4.0/examples/orange_brand_2015/images/une-nouvelle-marque_grid-full-width.jpg
+docs/4.1/examples/module-002-quick-links/img/icn_facebook_black.png
+docs/4.1/examples/module-002-quick-links/img/icn_messaging_black.png
+docs/4.1/examples/module-002-quick-links/img/icn_music_black.png
+docs/4.1/examples/module-002-quick-links/img/icn_top_black.png  
+docs/4.1/examples/module-006-content-panel/img/adaptation.jpg
+docs/4.1/examples/module-006-content-panel/img/connexion.jpg
+docs/4.1/examples/module-006-content-panel/img/disponibilite.jpg
+docs/4.1/examples/module-006-content-panel/img/simplicite.jpg
+docs/4.1/examples/module-006-content-panel/img/vignette1.jpg
+docs/4.1/examples/module-012-product-details/img/label_discount.png
+docs/4.1/examples/module-012-product-details/img/picture_device_3.png
+docs/4.1/examples/module-012-product-details/img/picture_klif1.png
+docs/4.1/examples/module-012-product-details/img/stars_sprite.png        
+docs/4.1/examples/orange_brand_2015/images/discovery-frame.png
+docs/4.1/examples/orange_brand_2015/images/discovery-popout.png
+docs/4.1/examples/orange_brand_2015/images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg
+docs/4.1/examples/orange_brand_2015/images/popular-services-2.png
+docs/4.1/examples/orange_brand_2015/images/discovery-frame-carousel.png
+docs/4.1/examples/orange_brand_2015/images/discovery-popout-2byslide.png
+docs/4.1/examples/orange_brand_2015/images/offset_LARGE_123305_chemisier_jaune.jpg
+docs/4.1/examples/orange_brand_2015/images/popular-services-3.png
+docs/4.1/examples/orange_brand_2015/images/discovery-frame-carousel-whitetext.png
+docs/4.1/examples/orange_brand_2015/images/Fun-frame_frame-carousel.png
+docs/4.1/examples/orange_brand_2015/images/popular-services-1.png
+docs/4.1/examples/orange_brand_2015/images/une-nouvelle-marque_grid-full-width.jpg
 End of the parts list under Orange SA Copyright
 
 
