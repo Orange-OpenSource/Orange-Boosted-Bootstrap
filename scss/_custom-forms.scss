@@ -202,7 +202,6 @@
 
   .custom-control-input:checked ~ .custom-control-label {
     // Boosted mod move ::before gradient to global definition
-    background: $primary;
     &::after {
       background-image: $custom-radio-indicator-icon-checked;
       //boosted mod
