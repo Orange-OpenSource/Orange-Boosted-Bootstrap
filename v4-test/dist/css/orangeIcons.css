@@ -1,8 +1,8 @@
 @font-face {
   font-family: icon-orange;
-  src: url("../fonts/icon-orange.woff2") format("woff2"), url("../fonts/icon-orange.woff") format("woff");
   font-style: normal;
   font-weight: 400;
+  src: url("../fonts/icon-orange.woff2") format("woff2"), url("../fonts/icon-orange.woff") format("woff");
 }
 
 .icon-checkbox-tick,
@@ -667,7 +667,7 @@
 .icon-popout-performance,
 .icon-popout-security,
 .icon-popout-teamwork {
-  font-family: icon-orange !important;
+  font-family: icon-orange, sans-serif !important;
   font-style: normal;
   font-variant: normal;
   line-height: 1;
