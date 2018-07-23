@@ -161,11 +161,19 @@
       // our custom control have a border
       border-color: $custom-control-indicator-checked-border-color;
       // end mod
+
       @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
-      background-image: $custom-checkbox-indicator-icon-indeterminate;
+      //Accessiblity issue DO NOT remove
+      //boosted mod
+      border: 3px solid $white;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      transform: scaleX(.5) translateY(-.5rem);
+      //end mod
     }
   }
 
