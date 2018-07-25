@@ -80,14 +80,14 @@
 // Build the custom controls out of pseudo-elements.
 
 .custom-control-label {
-  position: relative;
+  //position: relative; // boosted mod checkbox in table are misaligned
   margin-bottom: 0;
 
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: 0; // boosted mod
-    left: -$custom-control-gutter;
+    top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);
+    left: 0; // boosted mod checkbox in tables are misaligned
     display: block;
     width: $custom-control-indicator-size;
     height: $custom-control-indicator-size;
@@ -108,7 +108,7 @@
   &::after {
     position: absolute;
     top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);
-    left: -$custom-control-gutter;
+    left: 0; // boosted mod checkbox in tables are misaligned
     display: block;
     width: $custom-control-indicator-size;
     height: $custom-control-indicator-size;
