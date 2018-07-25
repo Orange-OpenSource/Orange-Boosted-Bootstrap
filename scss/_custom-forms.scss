@@ -10,7 +10,7 @@
 .custom-control {
   position: relative;
   display: block;
-  min-height: (1rem * $line-height-base);
+  min-height: ($font-size-base * $line-height-base);
   padding-left: $custom-control-gutter;
   margin-bottom: ($spacer / 2); // Boosted mod ensure that there's at least 10px
 }
@@ -27,7 +27,7 @@
 
   &:checked ~ .custom-control-label::before {
     color: $custom-control-indicator-checked-color;
-    // our custom control have a border
+    // Boosted mod our custom control have a border
     border-color: $custom-control-indicator-checked-border-color;
     // end mod
     @include gradient-bg($custom-control-indicator-checked-bg);
@@ -107,7 +107,7 @@
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: (($line-height-base - $custom-control-indicator-size) / 2);
+    top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);
     left: -$custom-control-gutter;
     display: block;
     width: $custom-control-indicator-size;
@@ -360,6 +360,12 @@
 
   &:focus {
     outline: none;
+
+    // Pseudo-elements must be split across multiple rulesets to have an affect.
+    // No box-shadow() mixin for focus accessibility.
+    &::-webkit-slider-thumb { box-shadow: $custom-range-thumb-focus-box-shadow; }
+    &::-moz-range-thumb     { box-shadow: $custom-range-thumb-focus-box-shadow; }
+    &::-ms-thumb            { box-shadow: $custom-range-thumb-focus-box-shadow; }
   }
 
   &::-moz-focus-outer {
@@ -369,18 +375,13 @@
   &::-webkit-slider-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
-    margin-top: -($custom-range-thumb-width * .25); // Webkit specific?
+    margin-top: (($custom-range-track-height - $custom-range-thumb-height) / 2); // Webkit specific
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
-
-    &:focus {
-      outline: none;
-      box-shadow: $custom-range-thumb-focus-box-shadow; // No mixin for focus accessibility
-    }
 
     &:active {
       @include gradient-bg($custom-range-thumb-active-bg);
@@ -408,11 +409,6 @@
     @include transition($custom-forms-transition);
     appearance: none;
 
-    &:focus {
-      outline: none;
-      box-shadow: $custom-range-thumb-focus-box-shadow; // No mixin for focus accessibility
-    }
-
     &:active {
       @include gradient-bg($custom-range-thumb-active-bg);
     }
@@ -432,17 +428,15 @@
   &::-ms-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
+    margin-top: 0; // Edge specific
+    margin-right: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
+    margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
-
-    &:focus {
-      outline: none;
-      box-shadow: $custom-range-thumb-focus-box-shadow; // No mixin for focus accessibility
-    }
 
     &:active {
       @include gradient-bg($custom-range-thumb-active-bg);

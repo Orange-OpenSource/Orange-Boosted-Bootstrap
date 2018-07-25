@@ -4,7 +4,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.1.2): o-navbar.js
+ * Boosted (v4.1.3): o-navbar.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ const Navbar = (($) => {
    */
 
   const NAME                = 'navbar'
-  const VERSION             = '4.1.2'
+  const VERSION             = '4.1.3'
   const DATA_KEY            = 'bs.navbar'
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
   const BREAKPOINT = 768
