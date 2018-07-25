@@ -477,19 +477,19 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "dist/css/boosted-rtl.css",
-    "revision": "add8d1abf403be646e1294460e6f86ce"
+    "revision": "82c8baba067f2107a7ec67d9d849e461"
   },
   {
     "url": "dist/css/boosted-rtl.min.css",
-    "revision": "f75ba39a8d028052c715c7e04e32702e"
+    "revision": "df212d5f0278dfa83efee0a5d645039e"
   },
   {
     "url": "dist/css/boosted.css",
-    "revision": "b7d7af4732890bdf55c3047872f32ff8"
+    "revision": "0b715386f96c4fb8a6e4b2b557b245bd"
   },
   {
     "url": "dist/css/boosted.min.css",
-    "revision": "c571052cbd0fb85f52e7ec59d4a17b0c"
+    "revision": "6257d7b344fabb9ddd8dcfd64b1483cc"
   },
   {
     "url": "dist/css/o-rtl.css",
