@@ -13,7 +13,7 @@ toc: true
 
 ## About Orange Brand
 
-All Boosted components are compliant with Orange Brand Guidelines. Some bootstrap features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks. Please note the entire bootstrap doc is preserved and enhancend when necessary with orange brand specifics, i.e. [navbar](../../components/navbar/) page contains unsupported features, check out [navbar orange](../../components/navbar-orange/) page to find out what to use.
+All Boosted components are compliant with Orange Brand Guidelines. Some Boosted features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks. Please note the entire Boosted doc is preserved and enhancend when necessary with orange brand specifics, i.e. [navbar](../../components/navbar/) page contains unsupported features, check out [navbar orange](../../components/navbar-orange/) page to find out what to use.
 
 ## Quick start
 
@@ -44,7 +44,7 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 
 Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
-Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-bootstrap) section.
+Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -116,11 +116,11 @@ That's all you need for overall page requirements. Visit the [Layout docs]({{ si
 
 ## Important globals
 
-Bootstrap employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+Boosted employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
 
 ### HTML5 doctype
 
-Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
+Boosted requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
 
 {% highlight html %}
 <!doctype html>
@@ -131,7 +131,7 @@ Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some fun
 
 ### Responsive meta tag
 
-Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
+Boosted is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
 
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -161,7 +161,7 @@ For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{
 
 ## Community
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Stay up to date on the development of Boosted and reach out to the community with these helpful resources.
 
 - Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
 - Read and subscribe to [The Official Bootstrap Blog]({{ site.blog }}).

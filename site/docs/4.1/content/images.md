@@ -8,7 +8,7 @@ toc: true
 
 ## Responsive images
 
-Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` and `height: auto;` are applied to the image so that it scales with the parent element.
+Images in Boosted are made responsive with `.img-fluid`. `max-width: 100%;` and `height: auto;` are applied to the image so that it scales with the parent element.
 
 <div class="bd-example">
   <img data-src="holder.js/100px250" class="img-fluid" alt="Generic responsive image">
@@ -21,7 +21,7 @@ Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` an
 {% capture callout %}
 ##### SVG images and IE 10
 
-In Internet Explorer 10, SVG images with `.img-fluid` are disproportionately sized. To fix this, add `width: 100% \9;` where necessary. This fix improperly sizes other image formats, so Bootstrap doesn't apply it automatically.
+In Internet Explorer 10, SVG images with `.img-fluid` are disproportionately sized. To fix this, add `width: 100% \9;` where necessary. This fix improperly sizes other image formats, so Boosted doesn't apply it automatically.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 

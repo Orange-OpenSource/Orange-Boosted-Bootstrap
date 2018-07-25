@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+description: Documentation and examples for using Boosted custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
 group: components
 toc: true
 ---
@@ -36,7 +36,7 @@ Put that all together, and you have the following examples.
 {% endcapture %}
 {% include example.html content=example %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
+Boosted provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
 
 {% capture example %}
 <div class="progress">

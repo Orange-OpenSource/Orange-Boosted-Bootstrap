@@ -51,7 +51,7 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 
 Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
 
-- Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
+- Be sure you've loaded the alert plugin, or the compiled Boosted JavaScript.
 - If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util). The compiled version includes this.
 - Add a dismiss button and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the `.close` button.
 - On the dismiss button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
@@ -101,7 +101,7 @@ Note that closing an alert will remove it from the DOM.
 
 ### Events
 
-Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+Boosted's alert plugin exposes a few events for hooking into alert functionality.
 
 | Event | Description |
 | --- | --- |

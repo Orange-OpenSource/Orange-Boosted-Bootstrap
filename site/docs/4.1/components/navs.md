@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Navs
-description: Documentation and examples for how to use Bootstrap's included navigation components.
+description: Documentation and examples for how to use Boosted's included navigation components.
 group: components
 toc: true
 ---
 
 ## Base nav
 
-Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+Navigation available in Boosted share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 

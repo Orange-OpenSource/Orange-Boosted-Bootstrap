@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navbar
-description: Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+description: Documentation and examples for Boosted's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 group: components
 toc: true
 ---
@@ -117,7 +117,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
     <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-top" alt="">
-    Bootstrap
+    Boosted
   </a>
 </nav>
 {% endcapture %}

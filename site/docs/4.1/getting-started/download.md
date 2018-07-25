@@ -19,7 +19,7 @@ This doesn't include documentation, source files, or any optional JavaScript dep
 
 ## Source files
 
-Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
+Compile Boosted with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
 
 - Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
 - [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
@@ -30,7 +30,7 @@ Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}
 
 ## Package managers
 
-Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
 
 ### npm
 
@@ -49,7 +49,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 ### Composer
 
-You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org/):
+You can also install and manage Boosted's Sass and JavaScript using [Composer](https://getcomposer.org/):
 
 {% highlight sh %}
 composer require orange-opensource/orange-boosted-bootstrap:{{ site.current_version }}

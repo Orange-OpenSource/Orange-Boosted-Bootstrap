@@ -50,9 +50,9 @@ Be aware of the limitations and [bugs around flexbox](https://github.com/philipw
 
 ## Grid options
 
-While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
+While Boosted uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
-See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+See how aspects of the Boosted grid system work across multiple devices with a handy table.
 
 We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution. 
 [comment]: # Boosted mod
@@ -309,7 +309,7 @@ Create equal-width columns that span multiple rows by inserting a `.w-100` where
 
 ## Responsive classes
 
-Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+Boosted's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
 
 ### All breakpoints
 
@@ -715,7 +715,7 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## Sass mixins
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+When using Boosted's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
 
 ### Variables
 

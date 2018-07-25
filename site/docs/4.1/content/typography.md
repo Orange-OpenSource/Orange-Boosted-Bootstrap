@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Typography
-description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
+description: Documentation and examples for Boosted typography, including global settings, headings, body text, lists, and more.
 group: content
 toc: true
 ---
 
 ## Global settings
 
-Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
+Boosted sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
 
 - Use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
@@ -101,7 +101,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 
 ### Customizing headings
 
-Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+Use the included utility classes to recreate the small secondary heading text from Boosted 3.
 
 <div class="bd-example">
   <span class="h3">
@@ -379,7 +379,7 @@ To convert arrow link to backward link, add `back` class to the link with class 
 
 ## Responsive typography
 
-*Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Bootstrap doesn't do this for you, but it's fairly easy to add if you need it.
+*Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Boosted doesn't do this for you, but it's fairly easy to add if you need it.
 
 Here's an example of it in practice. Choose whatever `font-size`s and media queries you wish.
 

@@ -1,18 +1,18 @@
 ---
 layout: docs
 title: Cards
-description: Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.
+description: Boosted's cards provide a flexible and extensible content container with multiple variants and options.
 group: components
 toc: true
 ---
 
 ## About
 
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Boosted 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
 
 ## Example
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no `margin` by default, so use [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) as needed.
+Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Boosted components. They have no `margin` by default, so use [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) as needed.
 
 Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
 
@@ -298,7 +298,7 @@ You can quickly change the text alignment of any card—in its entirety or speci
 
 ## Navigation
 
-Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/).
+Add some navigation to a card's header (or block) with Boosted's [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/).
 
 {% capture example %}
 <div class="card text-center">
@@ -448,7 +448,7 @@ You can also change the borders on the card header and footer as needed, and eve
 
 ## Card layout
 
-In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, **these layout options are not yet responsive**.
+In addition to styling the content within cards, Boosted includes a few options for laying out series of cards. For the time being, **these layout options are not yet responsive**.
 
 ### Card groups
 

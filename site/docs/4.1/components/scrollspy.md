@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Scrollspy
-description: Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
+description: Automatically update Boosted navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 group: components
 toc: true
 ---
@@ -11,7 +11,7 @@ toc: true
 Scrollspy has a few requirements to function properly:
 
 - If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
-- It must be used on a Bootstrap [nav component]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) or [list group]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/list-group/).
+- It must be used on a Boosted [nav component]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) or [list group]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/list-group/).
 - Scrollspy requires `position: relative;` on the element you're spying on, usually the `<body>`.
 - When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
 - Anchors (`<a>`) are required and must point to an element with that `id`.
@@ -228,7 +228,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 ### Via data attributes
 
-To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Bootstrap `.nav` component.
+To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Boosted `.nav` component.
 
 {% highlight css %}
 body {

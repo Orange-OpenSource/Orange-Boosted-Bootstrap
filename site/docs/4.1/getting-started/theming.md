@@ -50,12 +50,12 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // Custom.scss
 // Option A: Include all of Boosted
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/boosted/scss/boosted";
 {% endhighlight %}
 
 {% highlight scss %}
 // Custom.scss
-// Option B: Include parts of Bootstrap
+// Option B: Include parts of Boosted
 
 // Required
 @import "../node_modules/boosted/scss/functions";

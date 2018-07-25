@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
+description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.
 group: content
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be **opt-in**. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
 
-Using the most basic table markup, here's how `.table`-based tables look in Bootstrap. **All table styles are inherited in Bootstrap 4**, meaning any nested tables will be styled in the same manner as the parent.
+Using the most basic table markup, here's how `.table`-based tables look in Boosted. **All table styles are inherited in Boosted 4**, meaning any nested tables will be styled in the same manner as the parent.
 
 {% capture example %}
 <table class="table">
