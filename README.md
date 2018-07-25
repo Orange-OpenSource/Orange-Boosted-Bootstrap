@@ -43,7 +43,7 @@ Read the [Getting started page](http://boosted.orange.com/docs/4.1/getting-start
 
 ## Status
 
-[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4.1.1.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4.1.3.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 
 [![Packagist Prerelease](https://img.shields.io/packagist/v/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
