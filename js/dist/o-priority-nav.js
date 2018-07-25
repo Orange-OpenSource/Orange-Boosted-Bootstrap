@@ -4,7 +4,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.1.0): o-priority-nav.js
+ * Boosted (v4.1.3): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ var PriorityNav = function ($) {
    * ------------------------------------------------------------------------
    */
   var NAME = 'prioritynav';
-  var VERSION = '4.1.0';
+  var VERSION = '4.1.3';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
