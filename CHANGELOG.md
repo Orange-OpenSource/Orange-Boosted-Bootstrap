@@ -1,3 +1,14 @@
+<a name="4.1.3"></a>
+## [4.1.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.1.1...v4.1.3) (2018-07-25)
+
+
+### Bug Fixes
+
+* **build:** run docs instead of docs-compile on test task to ensure that css, js, and rtl templates are generated before testing ([5ae40ed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5ae40ed))
+* **forms:** fix custom checkbox appearance in tables. was broken in boosted 4.1.1 ([f9652eb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f9652eb))
+
+
+
 <a name="4.1.0"></a>
 # [4.1.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.0.1...v4.1.0) (2018-04-11)
 
