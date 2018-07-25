@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.1">
+<meta name="generator" content="Jekyll v3.8.3">
 
 <title>Grid system · Boosted</title>
 
@@ -18,7 +18,7 @@
 <link href="/docs/4.1/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
 <link href="/docs/4.1/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
+<!-- Boosted core CSS -->
 
   <link href="/docs/4.1/dist/css/boosted.min.css" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.1/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
@@ -397,7 +397,7 @@
             </a></li></ul>
     </div></nav>
 
-      </div>
+        </div>
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
@@ -465,7 +465,7 @@
           <!-- END MOD -->
           <h2 id="how-it-works">How it works</h2>
 
-<p>Boosted’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
+<p>Boosted’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
 
 <p><strong>New to or unfamiliar with flexbox?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">Read this CSS Tricks flexbox guide</a> for background, terminology, guidelines, and code snippets.</p>
 
@@ -519,13 +519,13 @@
   <li>You can use predefined grid classes (like <code class="highlighter-rouge">.col-4</code>) or <a href="#sass-mixins">Sass mixins</a> for more semantic markup.</li>
 </ul>
 
-<p>Be aware of the limitations and <a href="https://github.com/philipwalton/flexbugs">bugs around flexbox</a>, like the <a href="https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers">inability to use some HTML elements as flex containers</a>.</p>
+<p>Be aware of the limitations and <a href="https://github.com/philipwalton/flexbugs">bugs around flexbox</a>, like the <a href="https://github.com/philipwalton/flexbugs#flexbug-9">inability to use some HTML elements as flex containers</a>.</p>
 
 <h2 id="grid-options">Grid options</h2>
 
-<p>While Bootstrap uses <code class="highlighter-rouge">em</code>s or <code class="highlighter-rouge">rem</code>s for defining most sizes, <code class="highlighter-rouge">px</code>s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+<p>While Boosted uses <code class="highlighter-rouge">em</code>s or <code class="highlighter-rouge">rem</code>s for defining most sizes, <code class="highlighter-rouge">px</code>s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
 
-<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+<p>See how aspects of the Boosted grid system work across multiple devices with a handy table.</p>
 
 <p>We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution. 
 [comment]: # Boosted mod
@@ -700,7 +700,7 @@
 
 </div>
 
-<p>Equal-width columns can be broken into multiple lines, but there was a <a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">Safari flexbox bug</a> that prevented this from working without an explicit <code class="highlighter-rouge">flex-basis</code> or <code class="highlighter-rouge">border</code>. There are workarounds for older browser versions, but they shouldn’t be necessary if you’re up-to-date.</p>
+<p>Equal-width columns can be broken into multiple lines, but there was a <a href="https://github.com/philipwalton/flexbugs#flexbug-11">Safari flexbox bug</a> that prevented this from working without an explicit <code class="highlighter-rouge">flex-basis</code> or <code class="highlighter-rouge">border</code>. There are workarounds for older browser versions, but they shouldn’t be necessary if you’re up-to-date.</p>
 
 <div class="bd-example-row">
 
@@ -872,7 +872,7 @@
 
 <h2 id="responsive-classes">Responsive classes</h2>
 
-<p>Bootstrap’s grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
+<p>Boosted’s grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
 
 <h3 id="all-breakpoints">All breakpoints</h3>
 
@@ -907,7 +907,7 @@
 
 <h3 id="stacked-to-horizontal">Stacked to horizontal</h3>
 
-<p>Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, you can create a basic grid system that starts out stacked on extra small devices before becoming horizontal on desktop (medium) devices.</p>
+<p>Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<code class="highlighter-rouge">sm</code>).</p>
 
 <div class="bd-example-row">
 
@@ -1519,7 +1519,7 @@
 
 <h2 id="sass-mixins">Sass mixins</h2>
 
-<p>When using Bootstrap’s source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.</p>
+<p>When using Boosted’s source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.</p>
 
 <h3 id="variables">Variables</h3>
 
@@ -1673,13 +1673,13 @@
 
         </main>
       </div>
-    </div>    
+    </div>
 
     <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 <script src="/docs/4.1/assets/js/vendor/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="/docs/4.1/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>

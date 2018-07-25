@@ -6,9 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- end mod -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
+<meta name="description" content="Use Boosted’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.1">
+<meta name="generator" content="Jekyll v3.8.3">
 
 <title>Modal · Boosted</title>
 
@@ -18,7 +18,7 @@
 <link href="/docs/4.1/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
 <link href="/docs/4.1/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
+<!-- Boosted core CSS -->
 
   <link href="/docs/4.1/dist/css/boosted.min.css" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.1/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
@@ -397,7 +397,7 @@
             </a></li></ul>
     </div></nav>
 
-      </div>
+        </div>
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
@@ -444,21 +444,21 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <h1 class="bd-title" id="content">Modal</h1>
-          <p class="bd-lead">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+          <p class="bd-lead">Use Boosted’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
           <!-- BOOSTED MOD -->
           <!-- remove ads -->
           <!-- END MOD -->
           <h2 id="how-it-works">How it works</h2>
 
-<p>Before getting started with Bootstrap’s modal component, be sure to read the following as our menu options have recently changed.</p>
+<p>Before getting started with Boosted’s modal component, be sure to read the following as our menu options have recently changed.</p>
 
 <ul>
   <li>Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in the document and remove scroll from the <code class="highlighter-rouge">&lt;body&gt;</code> so that modal content scrolls instead.</li>
   <li>Clicking on the modal “backdrop” will automatically close the modal.</li>
-  <li>Bootstrap only supports one modal window at a time. Nested modals aren’t supported as we believe them to be poor user experiences.</li>
+  <li>Boosted only supports one modal window at a time. Nested modals aren’t supported as we believe them to be poor user experiences.</li>
   <li>Modals use <code class="highlighter-rouge">position: fixed</code>, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You’ll likely run into issues when nesting a <code class="highlighter-rouge">.modal</code> within another fixed element.</li>
   <li>Once again, due to <code class="highlighter-rouge">position: fixed</code>, there are some caveats with using modals on mobile devices. <a href="/docs/4.1/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile">See our browser support docs</a> for details.</li>
-  <li>Due to how HTML5 defines its semantics, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">the <code class="highlighter-rouge">autofocus</code> HTML attribute</a> has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:</li>
+  <li>Due to how HTML5 defines its semantics, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">the <code class="highlighter-rouge">autofocus</code> HTML attribute</a> has no effect in Boosted modals. To achieve the same effect, use some custom JavaScript:</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -744,7 +744,7 @@
 
 <h3 id="using-the-grid">Using the grid</h3>
 
-<p>Utilize the Bootstrap grid system within a modal by nesting <code class="highlighter-rouge">.container-fluid</code> within the <code class="highlighter-rouge">.modal-body</code>. Then, use the normal grid system classes as you would anywhere else.</p>
+<p>Utilize the Boosted grid system within a modal by nesting <code class="highlighter-rouge">.container-fluid</code> within the <code class="highlighter-rouge">.modal-body</code>. Then, use the normal grid system classes as you would anywhere else.</p>
 
 <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true" aria-modal="true">
   <div class="modal-dialog" role="document">
@@ -925,7 +925,7 @@
 
 <h3 id="embedding-youtube-videos">Embedding YouTube videos</h3>
 
-<p>Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
+<p>Embedding YouTube videos in modals requires additional JavaScript not in Boosted to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
 
 <h2 id="optional-sizes">Optional sizes</h2>
 
@@ -1096,7 +1096,7 @@
 
 <h3 id="events">Events</h3>
 
-<p>Bootstrap’s modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the <code class="highlighter-rouge">&lt;div class="modal"&gt;</code>).</p>
+<p>Boosted’s modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the <code class="highlighter-rouge">&lt;div class="modal"&gt;</code>).</p>
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -1132,13 +1132,13 @@
 
         </main>
       </div>
-    </div>    
+    </div>
 
     <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 <script src="/docs/4.1/assets/js/vendor/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="/docs/4.1/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>

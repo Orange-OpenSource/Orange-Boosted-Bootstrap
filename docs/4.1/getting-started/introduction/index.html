@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Get started with Boosted using the Boosted source and a template starter page.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.1">
+<meta name="generator" content="Jekyll v3.8.3">
 
 <title>Introduction · Boosted</title>
 
@@ -18,7 +18,7 @@
 <link href="/docs/4.1/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
 <link href="/docs/4.1/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
+<!-- Boosted core CSS -->
 
   <link href="/docs/4.1/dist/css/boosted.min.css" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.1/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
@@ -397,13 +397,17 @@
             </a></li></ul>
     </div></nav>
 
-      </div>
+        </div>
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#about-orange-brand">About Orange Brand</a></li>
-<li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a></li>
+<li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#js">JS</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#starter-template">Starter template</a></li>
 <li class="toc-entry toc-h2"><a href="#important-globals">Important globals</a>
 <ul>
@@ -426,7 +430,7 @@
           <!-- END MOD -->
           <h2 id="about-orange-brand">About Orange Brand</h2>
 
-<p>All Boosted components are compliant with Orange Brand Guidelines. Some bootstrap features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks. Please note the entire bootstrap doc is preserved and enhancend when necessary with orange brand specifics, i.e. <a href="../../components/navbar/">navbar</a> page contains unsupported features, check out <a href="../../components/navbar-orange/">navbar orange</a> page to find out what to use.</p>
+<p>All Boosted components are compliant with Orange Brand Guidelines. Some Boosted features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks. Please note the entire Boosted doc is preserved and enhancend when necessary with orange brand specifics, i.e. <a href="../../components/navbar/">navbar</a> page contains unsupported features, check out <a href="../../components/navbar-orange/">navbar orange</a> page to find out what to use.</p>
 
 <h2 id="quick-start">Quick start</h2>
 
@@ -438,7 +442,11 @@
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"path/to/your/orangeIcons.css"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"path/to/your/boosted.css"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<p>Add our optional JavaScript plugins, jQuery, and <a href="https://github.com/FezVrasta/popper.js">Popper.js</a>) near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag. Be sure to place jQuery and Popper.js first, as our JavaScript plugins depend on them. While we use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a> in our docs, the full version is also supported.</p>
+<h3 id="js">JS</h3>
+
+<p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a>, and our own JavaScript plugins. Place the following <code class="highlighter-rouge">&lt;script&gt;</code>s near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.</p>
+
+<p>We use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a>, but the full version is also supported.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="c">&lt;!-- if you need ajax or effects
@@ -447,7 +455,27 @@
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/your/boosted.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
-<p>And that’s it—you’re on your way to a fully Boosted by Orange site. If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+<p>Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+
+<p>Our <code class="highlighter-rouge">boosted.bundle.js</code> and <code class="highlighter-rouge">boosted.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a>, but not <a href="https://jquery.com/">jQuery</a>. For more information about what’s included in Boosted, please see our <a href="/docs/4.1/getting-started/contents/#precompiled-boosted">contents</a> section.</p>
+
+<details>
+<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+
+
+<ul>
+  <li>Alerts for dismissing</li>
+  <li>Buttons for toggling states and checkbox/radio functionality</li>
+  <li>Carousel for all slide behaviors, controls, and indicators</li>
+  <li>Collapse for toggling visibility of content</li>
+  <li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
+  <li>Modals for displaying, positioning, and scroll behavior</li>
+  <li>Navbar for extending our Collapse plugin to implement responsive behavior</li>
+  <li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
+  <li>Scrollspy for scroll behavior and navigation updates</li>
+</ul>
+
+</details>
 
 <h2 id="starter-template">Starter template</h2>
 
@@ -501,11 +529,11 @@
 
 <h2 id="important-globals">Important globals</h2>
 
-<p>Bootstrap employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let’s dive in.</p>
+<p>Boosted employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let’s dive in.</p>
 
 <h3 id="html5-doctype">HTML5 doctype</h3>
 
-<p>Bootstrap requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.</p>
+<p>Boosted requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
@@ -514,7 +542,7 @@
 
 <h3 id="responsive-meta-tag">Responsive meta tag</h3>
 
-<p>Bootstrap is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
+<p>Boosted is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span></code></pre></figure>
 
@@ -540,7 +568,7 @@
 
 <h2 id="community">Community</h2>
 
-<p>Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
+<p>Stay up to date on the development of Boosted and reach out to the community with these helpful resources.</p>
 
 <ul>
   <li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
@@ -555,13 +583,13 @@
 
         </main>
       </div>
-    </div>    
+    </div>
 
     <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 <script src="/docs/4.1/assets/js/vendor/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="/docs/4.1/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Toggle contextual overlays for displaying lists of links and more with the Boosted dropdown plugin.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.1">
+<meta name="generator" content="Jekyll v3.8.3">
 
 <title>Dropdowns · Boosted</title>
 
@@ -18,7 +18,7 @@
 <link href="/docs/4.1/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
 <link href="/docs/4.1/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
+<!-- Boosted core CSS -->
 
   <link href="/docs/4.1/dist/css/boosted.min.css" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.1/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
@@ -397,7 +397,7 @@
             </a></li></ul>
     </div></nav>
 
-      </div>
+        </div>
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
@@ -463,7 +463,7 @@
 
 <h2 id="accessibility">Accessibility</h2>
 
-<p>The <a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> standard defines an actual <a href="https://www.w3.org/TR/wai-aria/roles#menu"><code class="highlighter-rouge">role="menu"</code> widget</a>, but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.</p>
+<p>The <a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> standard defines an actual <a href="https://www.w3.org/WAI/PF/aria/roles#menu"><code class="highlighter-rouge">role="menu"</code> widget</a>, but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.</p>
 
 <p>Boosted’s dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Boosted does not expect (nor automatically add) any of the <code class="highlighter-rouge">role</code> and <code class="highlighter-rouge">aria-</code> attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.</p>
 
@@ -895,7 +895,7 @@
       Split dropright
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdright</span>
+      <span class="sr-only">Toggle Dropright</span>
     </button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
@@ -1384,7 +1384,7 @@
       <td>display</td>
       <td>string</td>
       <td>'dynamic'</td>
-      <td>By default, we use Popper.js for dynamic positioning. Disable this with `static`.</td>
+      <td>By default, we use Popper.js for dynamic positioning. Disable this with <code>static</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -1418,7 +1418,8 @@
 
 <h3 id="events">Events</h3>
 
-<p>All dropdown events are fired at the <code class="highlighter-rouge">.dropdown-menu</code>’s parent element and have a <code class="highlighter-rouge">relatedTarget</code> property, whose value is the toggling anchor element.</p>
+<p>All dropdown events are fired at the <code class="highlighter-rouge">.dropdown-menu</code>’s parent element and have a <code class="highlighter-rouge">relatedTarget</code> property, whose value is the toggling anchor element.
+<code class="highlighter-rouge">hide.bs.dropdown</code> and <code class="highlighter-rouge">hidden.bs.dropdown</code> events have a <code class="highlighter-rouge">clickEvent</code> property (only when the original event type is <code class="highlighter-rouge">click</code>) that contains an Event Object for the click event.</p>
 
 <table>
   <thead>
@@ -1454,13 +1455,13 @@
 
         </main>
       </div>
-    </div>    
+    </div>
 
     <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 <script src="/docs/4.1/assets/js/vendor/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="/docs/4.1/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>

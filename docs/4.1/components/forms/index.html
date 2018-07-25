@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.1">
+<meta name="generator" content="Jekyll v3.8.3">
 
 <title>Forms · Boosted</title>
 
@@ -18,7 +18,7 @@
 <link href="/docs/4.1/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
 <link href="/docs/4.1/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
+<!-- Boosted core CSS -->
 
   <link href="/docs/4.1/dist/css/boosted.min.css" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.1/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
@@ -397,7 +397,7 @@
             </a></li></ul>
     </div></nav>
 
-      </div>
+        </div>
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
@@ -406,14 +406,11 @@
 <li class="toc-entry toc-h2"><a href="#form-controls">Form controls</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#sizing">Sizing</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#range-inputs">Range Inputs</a>
-<ul>
 <li class="toc-entry toc-h3"><a href="#readonly">Readonly</a></li>
 <li class="toc-entry toc-h3"><a href="#readonly-plain-text">Readonly plain text</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#range-inputs">Range Inputs</a></li>
 <li class="toc-entry toc-h2"><a href="#checkboxes-and-radios">Checkboxes and radios</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#default-stacked">Default (stacked)</a></li>
@@ -493,11 +490,11 @@
           <!-- END MOD -->
           <h2 id="overview">Overview</h2>
 
-<p>Bootstrap’s form controls expand on <a href="/docs/4.1/content/reboot/#forms">our Rebooted form styles</a> with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.</p>
+<p>Boosted’s form controls expand on <a href="/docs/4.1/content/reboot/#forms">our Rebooted form styles</a> with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.</p>
 
 <p>Be sure to use an appropriate <code class="highlighter-rouge">type</code> attribute on all inputs (e.g., <code class="highlighter-rouge">email</code> for email address or <code class="highlighter-rouge">number</code> for numerical information) to take advantage of newer input controls like email verification, number selection, and more.</p>
 
-<p>Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</p>
+<p>Here’s a quick example to demonstrate Boosted’s form styles. Keep reading for documentation on required classes, form layout, and more.</p>
 
 <div class="bd-example">
 <form>
@@ -654,25 +651,6 @@
   <span class="nt">&lt;option&gt;</span>Small select<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span></code></pre></figure>
 
-<h2 id="range-inputs">Range Inputs</h2>
-
-<p>Set horizontally scrollable range inputs using <code class="highlighter-rouge">.form-control-range</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <label for="formControlRange">Example Range input</label>
-    <input type="range" class="form-control-range" id="formControlRange" />
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>Example Range input<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"form-control-range"</span> <span class="na">id=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
 <h3 id="readonly">Readonly</h3>
 
 <p>Add the <code class="highlighter-rouge">readonly</code> boolean attribute on an input to prevent modification of the input’s value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.</p>
@@ -742,6 +720,25 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary mb-2"</span><span class="nt">&gt;</span>Confirm identity<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
+<h2 id="range-inputs">Range Inputs</h2>
+
+<p>Set horizontally scrollable range inputs using <code class="highlighter-rouge">.form-control-range</code>.</p>
+
+<div class="bd-example">
+<form>
+  <div class="form-group">
+    <label for="formControlRange">Example Range input</label>
+    <input type="range" class="form-control-range" id="formControlRange" />
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>Example Range input<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"form-control-range"</span> <span class="na">id=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
 <h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
 
 <p>Default checkboxes and radios are improved upon with the help of <code class="highlighter-rouge">.form-check</code>, <strong>a single class for both input types that improves the layout and behavior of their HTML elements</strong>. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
@@ -794,7 +791,7 @@
     Second default radio
   </label>
 </div>
-<div class="form-check disabled">
+<div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled="" />
   <label class="form-check-label" for="exampleRadios3">
     Disabled radio
@@ -813,7 +810,7 @@
     Second default radio
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check disabled"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-check-input"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"exampleRadios"</span> <span class="na">id=</span><span class="s">"exampleRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-check-label"</span> <span class="na">for=</span><span class="s">"exampleRadios3"</span><span class="nt">&gt;</span>
     Disabled radio
@@ -899,7 +896,7 @@
 
 <h2 id="layout">Layout</h2>
 
-<p>Since Bootstrap applies <code class="highlighter-rouge">display: block</code> and <code class="highlighter-rouge">width: 100%</code> to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.</p>
+<p>Since Boosted applies <code class="highlighter-rouge">display: block</code> and <code class="highlighter-rouge">width: 100%</code> to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.</p>
 
 <h3 id="form-groups">Form groups</h3>
 
@@ -1408,7 +1405,7 @@
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
-      <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
       <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
         <option selected="">Choose...</option>
         <option value="1">One</option>
@@ -1417,7 +1414,7 @@
       </select>
     </div>
     <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox mr-sm-2">
+      <div class="custom-control custom-checkbox my-1 mr-sm-2">
         <input type="checkbox" class="custom-control-input" id="customControlAutosizing" />
         <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
       </div>
@@ -1431,7 +1428,7 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row align-items-center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto my-1"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mr-sm-2"</span> <span class="na">for=</span><span class="s">"inlineFormCustomSelect"</span><span class="nt">&gt;</span>Preference<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mr-sm-2 sr-only"</span> <span class="na">for=</span><span class="s">"inlineFormCustomSelect"</span><span class="nt">&gt;</span>Preference<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select mr-sm-2"</span> <span class="na">id=</span><span class="s">"inlineFormCustomSelect"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Choose...<span class="nt">&lt;/option&gt;</span>
         <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>One<span class="nt">&lt;/option&gt;</span>
@@ -1440,7 +1437,7 @@
       <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto my-1"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox mr-sm-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox my-1 mr-sm-2"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customControlAutosizing"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customControlAutosizing"</span><span class="nt">&gt;</span>Remember my preference<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -1457,7 +1454,7 @@
 
 <ul>
   <li>Controls are <code class="highlighter-rouge">display: flex</code>, collapsing any HTML white space and allowing you to provide alignment control with <a href="/docs/4.1/utilities/spacing/">spacing</a> and <a href="/docs/4.1/utilities/flex/">flexbox</a> utilities.</li>
-  <li>Controls and input groups receive <code class="highlighter-rouge">width: auto</code> to override the Bootstrap default <code class="highlighter-rouge">width: 100%</code>.</li>
+  <li>Controls and input groups receive <code class="highlighter-rouge">width: auto</code> to override the Boosted default <code class="highlighter-rouge">width: 100%</code>.</li>
   <li>Controls <strong>only appear inline in viewports that are at least 576px wide</strong> to account for narrow viewports on mobile devices.</li>
 </ul>
 
@@ -1660,7 +1657,7 @@
 <div class="bd-callout bd-callout-danger">
 <h4 id="cross-browser-compatibility">Cross-browser compatibility</h4>
 
-<p>While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don’t fully support the <code class="highlighter-rouge">disabled</code> attribute on a <code class="highlighter-rouge">&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
+<p>While Boosted will apply these styles in all browsers, Internet Explorer 11 and below don’t fully support the <code class="highlighter-rouge">disabled</code> attribute on a <code class="highlighter-rouge">&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
 </div>
 
 <h2 id="validation">Validation</h2>
@@ -1673,11 +1670,11 @@
 
 <h3 id="how-it-works">How it works</h3>
 
-<p>Here’s how form validation works with Bootstrap:</p>
+<p>Here’s how form validation works with Boosted:</p>
 
 <ul>
   <li>HTML form validation is applied via CSS’s two pseudo-classes, <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code>. It applies to <code class="highlighter-rouge">&lt;input&gt;</code>, <code class="highlighter-rouge">&lt;select&gt;</code>, and <code class="highlighter-rouge">&lt;textarea&gt;</code> elements.</li>
-  <li>Bootstrap scopes the <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code> styles to parent <code class="highlighter-rouge">.was-validated</code> class, usually applied to the <code class="highlighter-rouge">&lt;form&gt;</code>. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).</li>
+  <li>Boosted scopes the <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code> styles to parent <code class="highlighter-rouge">.was-validated</code> class, usually applied to the <code class="highlighter-rouge">&lt;form&gt;</code>. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).</li>
   <li>To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the <code class="highlighter-rouge">.was-validated</code> class from the <code class="highlighter-rouge">&lt;form&gt;</code> again after submission.</li>
   <li>As a fallback, <code class="highlighter-rouge">.is-invalid</code> and <code class="highlighter-rouge">.is-valid</code> classes may be used instead of the pseudo-classes for <a href="#server-side">server side validation</a>. They do not require a <code class="highlighter-rouge">.was-validated</code> parent class.</li>
   <li>Due to constraints in how CSS works, we cannot (at present) apply styles to a <code class="highlighter-rouge">&lt;label&gt;</code> that comes before a form control in the DOM without the help of custom JavaScript.</li>
@@ -1690,7 +1687,7 @@
 
 <h3 id="custom-styles">Custom styles</h3>
 
-<p>For custom Bootstrap form validation messages, you’ll need to add the <code class="highlighter-rouge">novalidate</code> boolean attribute to your <code class="highlighter-rouge">&lt;form&gt;</code>. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you.</p>
+<p>For custom Boosted form validation messages, you’ll need to add the <code class="highlighter-rouge">novalidate</code> boolean attribute to your <code class="highlighter-rouge">&lt;form&gt;</code>. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you.</p>
 
 <p>When attempting to submit, you’ll see the <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code> styles applied to your form controls.</p>
 
@@ -1766,7 +1763,7 @@
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    // Fetch all the forms we want to apply custom Boosted validation styles to
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
@@ -1853,7 +1850,7 @@
 <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="s1">'use strict'</span><span class="p">;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Fetch all the forms we want to apply custom Bootstrap validation styles to</span>
+    <span class="c1">// Fetch all the forms we want to apply custom Boosted validation styles to</span>
     <span class="kd">var</span> <span class="nx">forms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'needs-validation'</span><span class="p">);</span>
     <span class="c1">// Loop over them and prevent submission</span>
     <span class="kd">var</span> <span class="nx">validation</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">filter</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">forms</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">form</span><span class="p">)</span> <span class="p">{</span>
@@ -2541,7 +2538,7 @@
 
 <h3 id="select-menu">Select menu</h3>
 
-<p>Custom <code class="highlighter-rouge">&lt;select&gt;</code> menus need only a custom class, <code class="highlighter-rouge">.custom-select</code> to trigger the custom styles.</p>
+<p>Custom <code class="highlighter-rouge">&lt;select&gt;</code> menus need only a custom class, <code class="highlighter-rouge">.custom-select</code> to trigger the custom styles. Custom styles are limited to the <code class="highlighter-rouge">&lt;select&gt;</code>’s initial appearance and cannot modify the <code class="highlighter-rouge">&lt;option&gt;</code>s due to browser limitations.</p>
 
 <div class="bd-example">
 <select class="custom-select">
@@ -2695,13 +2692,13 @@
 
         </main>
       </div>
-    </div>    
+    </div>
 
     <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 <script src="/docs/4.1/assets/js/vendor/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="/docs/4.1/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Learn how to include Boosted in your project using Webpack 3.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.1">
+<meta name="generator" content="Jekyll v3.8.3">
 
 <title>Webpack · Boosted</title>
 
@@ -18,7 +18,7 @@
 <link href="/docs/4.1/dist/css/orangeHelvetica.css" rel="stylesheet">
 <!-- orangeIcons -->
 <link href="/docs/4.1/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
+<!-- Boosted core CSS -->
 
   <link href="/docs/4.1/dist/css/boosted.min.css" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.1/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
@@ -397,7 +397,7 @@
             </a></li></ul>
     </div></nav>
 
-      </div>
+        </div>
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
@@ -433,16 +433,12 @@
 <p>Alternatively, you may <strong>import plugins individually</strong> as needed:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'boosted/js/dist/util'</span><span class="p">;</span>
-<span class="k">import</span> <span class="s1">'boosted/js/dist/dropdown'</span><span class="p">;</span>
+<span class="k">import</span> <span class="s1">'boosted/js/dist/alert'</span><span class="p">;</span>
 <span class="p">...</span></code></pre></figure>
 
 <p>Boosted is dependent on <a href="https://jquery.com/">jQuery</a> and <a href="https://popper.js.org/">Popper</a>,
 these are defined as <code class="highlighter-rouge">peerDependencies</code>, this means that you will have to make sure to add both of them
 to your <code class="highlighter-rouge">package.json</code> using <code class="highlighter-rouge">npm install --save jquery popper.js</code>.</p>
-
-<div class="bd-callout bd-callout-warning">
-<p>Notice that if you chose to <strong>import plugins individually</strong>, you must also install <a href="https://github.com/webpack-contrib/exports-loader">exports-loader</a></p>
-</div>
 
 <h2 id="importing-styles">Importing Styles</h2>
 
@@ -450,7 +446,7 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
 
 <p>To enjoy the full potential of Boosted and customize it to your needs, use the source files as a part of your project’s bundling process.</p>
 
-<p>First, create your own <code class="highlighter-rouge">_custom.scss</code> and use it to override the <a href="/docs/4.1/getting-started/options/">built-in custom variables</a>. Then, use your main sass file to import your custom variables, followed by Boosted:</p>
+<p>First, create your own <code class="highlighter-rouge">_custom.scss</code> and use it to override the <a href="/docs/4.1/getting-started/options/">built-in custom variables</a>. Then, use your main Sass file to import your custom variables, followed by Boosted:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"custom"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"~boosted/scss/boosted"</span><span class="p">;</span></code></pre></figure>
@@ -482,11 +478,11 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
 
 <h3 id="importing-compiled-css">Importing Compiled CSS</h3>
 
-<p>Alternatively, you may use Boosted’s ready-to-use css by simply adding this line to your project’s entry point:</p>
+<p>Alternatively, you may use Boosted’s ready-to-use CSS by simply adding this line to your project’s entry point:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'boosted/dist/css/boosted.min.css'</span><span class="p">;</span></code></pre></figure>
 
-<p>In this case you may use your existing rule for <code class="highlighter-rouge">css</code> without any special modifications to webpack config except you don’t need <code class="highlighter-rouge">sass-loader</code> just <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> and <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
+<p>In this case you may use your existing rule for <code class="highlighter-rouge">css</code> without any special modifications to webpack config, except you don’t need <code class="highlighter-rouge">sass-loader</code> just <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> and <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="p">...</span>
   <span class="nx">module</span><span class="p">:</span> <span class="p">{</span>
@@ -502,13 +498,13 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
 
         </main>
       </div>
-    </div>    
+    </div>
 
     <!-- boosted mod -->
 <a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 <script src="/docs/4.1/assets/js/vendor/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="/docs/4.1/dist/js/boosted.min.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>

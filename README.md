@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://boosted.orange.com/">
-    <img src="http://boosted.orange.com/assets/brand/orange-space-position.jpg" width=72 height=72>
+    <img src="http://boosted.orange.com/site/docs/4.1/assets/brand/orange-space-position.jpg" width=72 height=72>
   </a>
 
   <h3 align="center">Orange Boosted with Bootstrap</h3>
@@ -32,22 +32,22 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.0.0-beta.3.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.1.3.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
-- Install with [npm](https://www.npmjs.com): `npm install boosted@4.0.0-beta.3`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.3`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.3`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted -Pre` Sass: `Install-Package boosted.sass -Pre` (`-Pre` is only required until Boosted v4 has a stable release).
+- Install with [npm](https://www.npmjs.com): `npm install boosted`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.1.3`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.1.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
-Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](http://boosted.orange.com/docs/4.1/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
-[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4-dev.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4.1.3.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
-[![NuGet](https://img.shields.io/nuget/vpre/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
 
-[![Packagist Prerelease](https://img.shields.io/packagist/vpre/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/v/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
+[![NuGet](https://img.shields.io/nuget/v/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
 [![CSS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
 [![JS gzip size](http://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/js/boosted.min.js)
 [![Sauce Labs Test Status](https://saucelabs.com/browser-matrix/lausselloic.svg)](https://saucelabs.com/u/lausselloic)
@@ -58,38 +58,43 @@ Within the download you'll find the following directories and files, logically g
 
 ```
 boosted/
-├── css/
-│   ├── boosted.css
-│   ├── boosted.css.map
-│   ├── boosted.min.css
-│   ├── boosted.min.css.map
-│   ├── boosted-grid.css
-│   ├── boosted-grid.css.map
-│   ├── boosted-grid.min.css
-│   ├── boosted-grid.min.css.map
-│   ├── boosted-reboot.css
-│   ├── boosted-reboot.css.map
-│   ├── boosted-reboot.min.css
-│   ├── boosted-reboot.min.css.map
-│   ├── boosted-rtl.css
-│   ├── boosted-rtl.min.css
-│   ├── boosted-rtl.min.css.map
-│   ├── orangeHelvetica.css
-│   ├── orangeHelvetica.css.map
-│   ├── orangeHelvetica.min.css
-│   ├── orangeHelvetica.min.css.map
-│   ├── orangeIcons.css
-│   ├── orangeIcons.css.map
-│   ├── orangeIcons.min.css
-│   └── orangeIcons.min.css.map
-└── js/
-    ├── boosted.bundle.js
-    ├── boosted.bundle.min.js
-    ├── boosted.js
-    └── boosted.min.js
+└── dist/
+    ├── css/
+    │   ├── boosted.css
+    │   ├── boosted.css.map
+    │   ├── boosted.min.css
+    │   ├── boosted.min.css.map
+    │   ├── boosted-grid.css
+    │   ├── boosted-grid.css.map
+    │   ├── boosted-grid.min.css
+    │   ├── boosted-grid.min.css.map
+    │   ├── boosted-reboot.css
+    │   ├── boosted-reboot.css.map
+    │   ├── boosted-reboot.min.css
+    │   ├── boosted-reboot.min.css.map
+    │   ├── boosted-rtl.css
+    │   ├── boosted-rtl.min.css
+    │   ├── boosted-rtl.min.css.map
+    │   ├── orangeHelvetica.css
+    │   ├── orangeHelvetica.css.map
+    │   ├── orangeHelvetica.min.css
+    │   ├── orangeHelvetica.min.css.map
+    │   ├── orangeIcons.css
+    │   ├── orangeIcons.css.map
+    │   ├── orangeIcons.min.css
+    │   └── orangeIcons.min.css.map
+    └── js/
+        ├── boosted.bundle.js
+        ├── boosted.bundle.js.map
+        ├── boosted.bundle.min.js
+        ├── boosted.bundle.min.js.map
+        ├── boosted.js
+        ├── boosted.js.map
+        ├── boosted.min.js
+        └── boosted.min.js.map
 ```
 
-We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
+We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
 
 
 ## Branch usage
@@ -107,22 +112,23 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://boosted.orange.com>. The docs may also be run locally.
+Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <http://boosted.orange.com>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `_scripts.html` include.
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/4.1/assets/js/src/search.js` file.
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/Orange-Boosted-Bootstrap` directory, run `npm run docs-serve` in the command line.
+1. Run through the [tooling setup](http://boosted.orange.com/docs/4.1/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+2. Run `npm install` to install Node.js dependencies.
+3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
 4. Open `http://localhost:9001` in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
 ### Documentation for previous releases
 
-Documentation for v3.x has been made available for the time being at <http://boosted.orange.com/docs/3.3/> while folks transition to Bootstrap 4.
+- For v3.3.x: <http://boosted.orange.com/docs/3.3/>
+- For v4.0.x: <http://boosted.orange.com/docs/4.0/>
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
@@ -134,7 +140,7 @@ Please read through our [contributing guidelines](https://github.com/Orange-Open
 
 Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org>.
 
 
 
@@ -143,12 +149,11 @@ Editor preferences are available in the [editor config](https://github.com/Orang
 Get updates on Bootstrap's development and chat with the project maintainers and community members.
 
 - Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com).
-- Join [the official Slack room](https://bootstrap-slack.herokuapp.com).
+- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
+- Join [the official Slack room](https://bootstrap-slack.herokuapp.com/).
 - Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
-
 
 
 ## Versioning
