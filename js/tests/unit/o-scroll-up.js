@@ -8,7 +8,7 @@ $(function () {
     assert.ok($(document.body).scrollup, 'ScrollUp method is defined')
   })
 
-  QUnit.module('button', {
+  QUnit.module('scrollup', {
     beforeEach: function () {
       // Run all tests in noConflict mode -- it's the only way to ensure that the plugin works in noConflict mode
       $.fn.bootstrapScrollup = $.fn.scrollup.noConflict()
@@ -16,6 +16,7 @@ $(function () {
     afterEach: function () {
       $.fn.scrollup = $.fn.bootstrapScrollup
       delete $.fn.bootstrapScrollup
+      $('#qunit-fixture').html('')
     }
   })
 

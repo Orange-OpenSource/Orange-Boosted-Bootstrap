@@ -16,6 +16,7 @@ $(function () {
     afterEach: function () {
       $.fn.navbar = $.fn.boostedNavbar
       delete $.fn.boostedNavbar
+      $('#qunit-fixture').html('')
     }
   })
 

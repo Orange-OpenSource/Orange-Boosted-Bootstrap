@@ -16,6 +16,7 @@ $(function () {
     afterEach: function () {
       $.fn.megamenu = $.fn.boostedMegaMenu
       delete $.fn.boostedMegaMenu
+      $('#qunit-fixture').html('')
     }
   })
 

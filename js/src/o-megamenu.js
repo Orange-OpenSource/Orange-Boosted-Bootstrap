@@ -329,24 +329,22 @@ const MegaMenu = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        const $element = $(this)
-
-        if (!$element.is(Selector.MEGAMENU)) {
-          throw new Error('Element is not a mega menu')
+        if (!$(this).is(Selector.MEGAMENU)) {
+          throw new TypeError('Element is not a mega menu')
         }
 
         if (!config) {
           config = {}
         } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
           // param = true
-          throw new Error('no-focus parameter must be boolean')
+          throw new TypeError('no-focus parameter must be boolean')
         }
 
-        let data       = $element.data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
 
         if (!data) {
           data = new MegaMenu(this, config)
-          $element.data(DATA_KEY, data)
+          $(this).data(DATA_KEY, data)
         }
 
         if (config.target) {

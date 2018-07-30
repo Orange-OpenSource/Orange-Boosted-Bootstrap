@@ -186,13 +186,11 @@ const PriorityNav = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        const $element = $(this)
-
-        let data       = $element.data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
 
         if (!data) {
           data = new PriorityNav(this, config)
-          $element.data(DATA_KEY, data)
+          $(this).data(DATA_KEY, data)
         }
 
         if (typeof config !== 'undefined' && config) {

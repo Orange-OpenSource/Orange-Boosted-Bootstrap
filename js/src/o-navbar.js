@@ -1,7 +1,6 @@
 import $ from 'jquery'
 import Util from './util'
 
-
 /**
  * --------------------------------------------------------------------------
  * Boosted (v4.1.3): o-navbar.js
@@ -16,10 +15,10 @@ const Navbar = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'navbar'
-  const VERSION             = '4.1.3'
-  const DATA_KEY            = 'bs.navbar'
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
+  const NAME               = 'navbar'
+  const VERSION            = '4.1.3'
+  const DATA_KEY           = 'bs.navbar'
+  const JQUERY_NO_CONFLICT = $.fn[NAME]
   const BREAKPOINT = 768
 
   const Default = {
@@ -47,7 +46,7 @@ const Navbar = (($) => {
   class Navbar {
     constructor(element, config) {
       this._element         = element
-      this._supraBar        = $(element).find(Selector.SUPRA_BAR)
+      this._supraBar        = element.querySelector(Selector.SUPRA_BAR)
       this._config          = this._getConfig(config)
       this._initialHeight = $(this._element).outerHeight()
       this._initialSupraHeight = $(this._supraBar).outerHeight()
@@ -112,18 +111,16 @@ const Navbar = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        const $this   = $(this)
-        let data    = $this.data(DATA_KEY)
-        const _config = $.extend(
-          {},
-          Default,
-          $this.data(),
-          typeof config === 'object' && config
-        )
+        let data = $(this).data(DATA_KEY)
+        const _config = {
+          ...Default,
+          ...$(this).data(),
+          ...typeof config === 'object' && config ? config : {}
+        }
 
         if (!data) {
           data = new Navbar(this, _config)
-          $this.data(DATA_KEY, data)
+          $(this).data(DATA_KEY, data)
         }
 
         if (typeof config === 'string') {
@@ -142,9 +139,9 @@ const Navbar = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Navbar._jQueryInterface
+  $.fn[NAME] = Navbar._jQueryInterface
   $.fn[NAME].Constructor = Navbar
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Navbar._jQueryInterface
   }
