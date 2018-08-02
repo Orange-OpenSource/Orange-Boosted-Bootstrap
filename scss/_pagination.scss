@@ -30,7 +30,7 @@
 
     // Boosted mod
     span {
-      color: #000;
+      color: $pagination-color;
     }
     // end mod
   }
@@ -43,7 +43,7 @@
 
   // Boosted mod
   span {
-    color: #fff;
+    color: $pagination-bg;
   }
   // end mod
 
@@ -63,7 +63,7 @@
     .page-link {
       margin-left: 0;
       @include border-left-radius($border-radius);
-      border-color: $black;
+      border-color: $pagination-hover-border-color;
       &::before {
         position: absolute;
         top: .6875rem;
@@ -103,7 +103,7 @@
     .page-link {
       @include border-right-radius($border-radius);
       // Boosted mod
-      border-color: $black;
+      border-color: $pagination-hover-border-color;
       &::before {
         position: absolute;
         top: .6875rem;
