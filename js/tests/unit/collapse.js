@@ -855,4 +855,38 @@ $(function () {
       assert.ok(false, 'collapse not created')
     }
   })
+
+  // Boosted mod
+  // add test for accordion multi
+  QUnit.test('should not close others if element has the class multi accordion multiple at a time mode', function (assert) {
+    assert.expect(4)
+    var done = assert.async()
+    $('<div id="accordion">' +
+        '<div class="item multi">' +
+        '<a id="linkTrigger" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></a>' +
+        '<div id="collapseOne" data-parent="#accordion" class="collapse" role="tabpanel" aria-labelledby="headingThree">' +
+        '</div>' +
+        '</div>' +
+        '<div class="item multi">' +
+        '<a id="linkTriggerTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></a>' +
+        '<div id="collapseTwo" data-parent="#accordion" class="collapse" role="tabpanel" aria-labelledby="headingTwo"></div>' +
+        '</div>' +
+        '</div>').appendTo('#qunit-fixture')
+    var $triggerMulti = $('#linkTrigger')
+    var $triggerTwoMulti = $('#linkTriggerTwo')
+    var $collapseOneMulti = $('#collapseOne')
+    var $collapseTwoMulti = $('#collapseTwo')
+
+    $collapseOneMulti.one('shown.bs.collapse', function () {
+      assert.ok($collapseOneMulti.hasClass('show'), '#collapseOne is shown')
+      assert.ok(!$collapseTwoMulti.hasClass('show'), '#collapseTwo is not shown')
+      $collapseTwoMulti.one('shown.bs.collapse', function () {
+        assert.ok($collapseOneMulti.hasClass('show'), '#collapseOne is shown')
+        assert.ok($collapseTwoMulti.hasClass('show'), '#collapseTwo is shown')
+        done()
+      })
+      $triggerTwoMulti.trigger($.Event('click'))
+    })
+    $triggerMulti.trigger($.Event('click'))
+  })
 })
