@@ -2,4 +2,5 @@
 **/dist/
 **/vendor/
 /_gh_pages/
-docs/4.1/examples/demo/**
+site/docs/4.1/examples/demo/**
+site/docs/4.1/examples/rtl-*/**
