@@ -161,7 +161,6 @@ const Collapse = (($) => {
         .addClass(ClassName.COLLAPSING)
 
       this._element.style[dimension] = 0
-      this._element.setAttribute('aria-expanded', true) // boosted mod
 
       if (this._triggerArray.length) {
         $(this._triggerArray)
@@ -217,8 +216,6 @@ const Collapse = (($) => {
         .addClass(ClassName.COLLAPSING)
         .removeClass(ClassName.COLLAPSE)
         .removeClass(ClassName.SHOW)
-
-      this._element.setAttribute('aria-expanded', false) // boosted mod
 
       const triggerArrayLength = this._triggerArray.length
       if (triggerArrayLength > 0) {
@@ -314,7 +311,6 @@ const Collapse = (($) => {
     _addAriaAndCollapsedClass(element, triggerArray) {
       if (element) {
         const isOpen = $(element).hasClass(ClassName.SHOW)
-        element.setAttribute('aria-expanded', isOpen) // boosted mod
 
         if (triggerArray.length) {
           $(triggerArray)
