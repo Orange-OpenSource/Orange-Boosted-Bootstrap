@@ -19,28 +19,7 @@ url:            http://boosted.orange.com
 # end boosted mod
 encoding:       UTF-8
 exclude:
-  - docs/4.1/assets/scss/  
-  - .git/
-  - .github/
-  - assets/scss/
-  - build/
-  - js/
-  - dist/
-  - assets/
-  - node_modules/
-  - nuget/
-  - scss/
-  - vendor/
-  - CODE_OF_CONDUCT.md
-  - composer.json
-  - Gemfile
-  - Gemfile.lock
-  - package.js
-  - package.json
-  - package-lock.json
-  - README.md
-  - sache.json
-  - twbsconfig.yml
+  - docs/4.1/assets/scss/
 
 plugins:
   - jekyll-redirect-from
