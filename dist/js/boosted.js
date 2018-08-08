@@ -1094,7 +1094,7 @@
       HEIGHT: 'height'
     };
     var Selector = {
-      ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing, * > .show, * > .collapsing',
+      ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing',
       // boosted mod
       DATA_TOGGLE: '[data-toggle="collapse"]'
       /**
@@ -1200,9 +1200,6 @@
         $$$1(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
         this._element.style[dimension] = 0;
 
-        this._element.setAttribute('aria-expanded', true); // boosted mod
-
-
         if (this._triggerArray.length) {
           $$$1(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
         }
@@ -1244,10 +1241,6 @@
         this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
         Util.reflow(this._element);
         $$$1(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
-
-        this._element.setAttribute('aria-expanded', false); // boosted mod
-
-
         var triggerArrayLength = this._triggerArray.length;
 
         if (triggerArrayLength > 0) {
@@ -1331,7 +1324,6 @@
       _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
         if (element) {
           var isOpen = $$$1(element).hasClass(ClassName.SHOW);
-          element.setAttribute('aria-expanded', isOpen); // boosted mod
 
           if (triggerArray.length) {
             $$$1(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
@@ -2301,24 +2293,22 @@
 
       MegaMenu._jQueryInterface = function _jQueryInterface(config) {
         return this.each(function () {
-          var $element = $$$1(this);
-
-          if (!$element.is(Selector.MEGAMENU)) {
-            throw new Error('Element is not a mega menu');
+          if (!$$$1(this).is(Selector.MEGAMENU)) {
+            throw new TypeError('Element is not a mega menu');
           }
 
           if (!config) {
             config = {};
           } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
             // param = true
-            throw new Error('no-focus parameter must be boolean');
+            throw new TypeError('no-focus parameter must be boolean');
           }
 
-          var data = $element.data(DATA_KEY);
+          var data = $$$1(this).data(DATA_KEY);
 
           if (!data) {
             data = new MegaMenu(this, config);
-            $element.data(DATA_KEY, data);
+            $$$1(this).data(DATA_KEY, data);
           }
 
           if (config.target) {
@@ -3002,7 +2992,7 @@
         var _this = this;
 
         this._element = element;
-        this._supraBar = $$$1(element).find(Selector.SUPRA_BAR);
+        this._supraBar = element.querySelector(Selector.SUPRA_BAR);
         this._config = this._getConfig(config);
         this._initialHeight = $$$1(this._element).outerHeight();
         this._initialSupraHeight = $$$1(this._supraBar).outerHeight();
@@ -3010,7 +3000,7 @@
         this._addAria();
 
         if (this._config.sticky) {
-          $$$1(this._element).addClass('fixed-header');
+          $$$1(this._element).addClass('o-navbar-fixed-header');
           $$$1(Selector.MEGAMENU_PANEL).addClass('sticky');
           $$$1(document.body).css('padding-top', this._initialHeight);
           $$$1(window).on('scroll', function () {
@@ -3058,14 +3048,13 @@
 
       Navbar._jQueryInterface = function _jQueryInterface(config) {
         return this.each(function () {
-          var $this = $$$1(this);
-          var data = $this.data(DATA_KEY);
+          var data = $$$1(this).data(DATA_KEY);
 
-          var _config = $$$1.extend({}, Default, $this.data(), typeof config === 'object' && config);
+          var _config = _objectSpread({}, Default, $$$1(this).data(), typeof config === 'object' && config ? config : {});
 
           if (!data) {
             data = new Navbar(this, _config);
-            $this.data(DATA_KEY, data);
+            $$$1(this).data(DATA_KEY, data);
           }
 
           if (typeof config === 'string') {
@@ -4314,12 +4303,11 @@
 
       PriorityNav._jQueryInterface = function _jQueryInterface(config) {
         return this.each(function () {
-          var $element = $$$1(this);
-          var data = $element.data(DATA_KEY);
+          var data = $$$1(this).data(DATA_KEY);
 
           if (!data) {
             data = new PriorityNav(this, config);
-            $element.data(DATA_KEY, data);
+            $$$1(this).data(DATA_KEY, data);
           }
 
           if (typeof config !== 'undefined' && config) {
