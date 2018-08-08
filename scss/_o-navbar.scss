@@ -6,7 +6,7 @@
 // stylelint-disable selector-max-compound-selectors
 // stylelint-disable selector-max-combinators
 
-.o-navbar-fixed-header {
+.navbar.fixed-header {
   position: fixed;
   top: 0;
   z-index: $zindex-fixed;

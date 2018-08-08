@@ -11010,7 +11010,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm {
   width: 100%;
 }
 
-.o-navbar-fixed-header {
+.navbar.fixed-header {
   position: fixed;
   top: 0;
   z-index: 1030;

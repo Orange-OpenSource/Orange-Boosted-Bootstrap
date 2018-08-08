@@ -109,7 +109,7 @@
         this._addAria();
 
         if (this._config.sticky) {
-          $$$1(this._element).addClass('o-navbar-fixed-header');
+          $$$1(this._element).addClass('fixed-header');
           $$$1(Selector.MEGAMENU_PANEL).addClass('sticky');
           $$$1(document.body).css('padding-top', this._initialHeight);
           $$$1(window).on('scroll', function () {
