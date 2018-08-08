@@ -102,7 +102,7 @@
       HEIGHT: 'height'
     };
     var Selector = {
-      ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing, * > .show, * > .collapsing',
+      ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing',
       // boosted mod
       DATA_TOGGLE: '[data-toggle="collapse"]'
       /**
@@ -208,9 +208,6 @@
         $$$1(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
         this._element.style[dimension] = 0;
 
-        this._element.setAttribute('aria-expanded', true); // boosted mod
-
-
         if (this._triggerArray.length) {
           $$$1(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
         }
@@ -252,10 +249,6 @@
         this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
         Util.reflow(this._element);
         $$$1(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
-
-        this._element.setAttribute('aria-expanded', false); // boosted mod
-
-
         var triggerArrayLength = this._triggerArray.length;
 
         if (triggerArrayLength > 0) {
@@ -339,7 +332,6 @@
       _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
         if (element) {
           var isOpen = $$$1(element).hasClass(ClassName.SHOW);
-          element.setAttribute('aria-expanded', isOpen); // boosted mod
 
           if (triggerArray.length) {
             $$$1(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
