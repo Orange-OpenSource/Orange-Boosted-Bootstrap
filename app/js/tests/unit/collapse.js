@@ -575,5 +575,4 @@ $(function () {
       })
       .bootstrapCollapse('show')
   })
-
 })

@@ -1,6 +1,9 @@
+/* stylelint-disable no-duplicate-selectors */
+
 //
 // Tooltips
 // --------------------------------------------------
+
 
 // Base class
 .tooltip {
@@ -10,22 +13,33 @@
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   .reset-text();
-  font-size: @font-size-base;
-  font-weight: bold;
+  font-size: @font-size-small;
 
   .opacity(0);
 
-  &.in     { .opacity(@tooltip-opacity); }
-  &.top    { margin-top:  -@tooltip-arrow-width; padding: @tooltip-arrow-width 0; }
-  &.right  { margin-left: @tooltip-arrow-width; padding: 0 @tooltip-arrow-width; }
-  &.bottom { margin-top:  @tooltip-arrow-width; padding: @tooltip-arrow-width 0; }
-  &.left   { margin-left: -@tooltip-arrow-width; padding: 0 @tooltip-arrow-width; }
+  &.in { .opacity(@tooltip-opacity); }
+  &.top {
+    padding: @tooltip-arrow-width 0;
+    margin-top: -3px;
+  }
+  &.right {
+    padding: 0 @tooltip-arrow-width;
+    margin-left: 3px;
+  }
+  &.bottom {
+    padding: @tooltip-arrow-width 0;
+    margin-top: 3px;
+  }
+  &.left {
+    padding: 0 @tooltip-arrow-width;
+    margin-left: -3px;
+  }
 }
 
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: @tooltip-max-width;
-  padding: 10px;
+  padding: 3px 8px;
   color: @tooltip-color;
   text-align: center;
   background-color: @tooltip-bg;
@@ -50,8 +64,8 @@
     border-top-color: @tooltip-arrow-color;
   }
   &.top-left .tooltip-arrow {
-    bottom: 0;
     right: @tooltip-arrow-width;
+    bottom: 0;
     margin-bottom: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-arrow-color;

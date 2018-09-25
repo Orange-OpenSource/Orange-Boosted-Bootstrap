@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: modal.js v3.3.7
+ * Bootstrap: modal.js v3.4.0
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -33,7 +33,7 @@
     }
   }
 
-  Modal.VERSION  = '3.3.7'
+  Modal.VERSION  = '3.4.0'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -45,19 +45,19 @@
   }
 
   // boosted mod
-  // MalgrÃ© les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "Ãªtre sur"
+  // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
   var $modals =  $('[data-toggle="modal"]');
   $modals.each(function() {
 
-    //modal = l'Ã©lement dÃ©clencheur de l'aperÃ§u de la popin
-    //modalPanel = la fenÃªtre modal Ã  proprement parler
+    //modal = l'élement déclencheur de l'aperçu de la popin
+    //modalPanel = la fenêtre modal à proprement parler
     var modal = $(this),
       modalPanel = modal.attr('data-target') ? $(modal.attr('data-target')) : $(modal.attr('href'));
 
     //On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
     modalPanel.attr({ 'role' : 'dialog'});//LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
 
-    //On ajoute le tags aria-labelledby uniquement si la popin Ã  un title et que celui-ci possÃ¨de un id
+    //On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
     var modalTitle = modalPanel.find('.modal-title');
     if(modalTitle){
       var modalTitleId = modalTitle.attr('id');
@@ -348,7 +348,10 @@
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+    var target  = $this.attr('data-target') ||
+      (href && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+
+    var $target = $(document).find(target)
     var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()

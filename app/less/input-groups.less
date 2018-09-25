@@ -1,3 +1,5 @@
+/* stylelint-disable selector-no-qualifying-type */
+
 //
 // Input groups
 // --------------------------------------------------
@@ -12,8 +14,8 @@
   // Undo padding and float of grid classes
   &[class*="col-"] {
     float: none;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
   .form-control {
@@ -82,7 +84,7 @@
   color: @input-color;
   text-align: center;
   background-color: @input-group-addon-bg;
-  border: 2px solid @input-group-addon-border-color;
+  border: 1px solid @input-group-addon-border-color;
   border-radius: @input-border-radius;
 
   // Sizing
