@@ -1,6 +1,6 @@
 /*!
  boosted - v3.3.3 - Orange Boosted with Boostrap
- Copyright 2015 - 2017 Orange SA, all right reserved
+ Copyright 2015 - 2018 Orange SA, all right reserved
 MIT Licensed 
 */
 
@@ -298,7 +298,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: tooltip.js v3.3.7
+ * Bootstrap: tooltip.js v3.4.0
  * http://getbootstrap.com/javascript/#tooltip
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
@@ -325,7 +325,7 @@ if (typeof jQuery === 'undefined') {
     this.init('tooltip', element, options)
   }
 
-  Tooltip.VERSION  = '3.3.7'
+  Tooltip.VERSION  = '3.4.0'
 
   Tooltip.TRANSITION_DURATION = 150
 
@@ -350,7 +350,7 @@ if (typeof jQuery === 'undefined') {
     this.type      = type
     this.$element  = $(element)
     this.options   = this.getOptions(options)
-    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
+    this.$viewport = this.options.viewport && $(document).find($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
     this.inState   = { click: false, hover: false, focus: false }
 
     if (this.$element[0] instanceof document.constructor && !this.options.selector) {
@@ -503,7 +503,7 @@ if (typeof jQuery === 'undefined') {
         .addClass(placement)
         .data('bs.' + this.type, this)
 
-      this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+      this.options.container ? $tip.appendTo($(document).find(this.options.container)) : $tip.insertAfter(this.$element)
       this.$element.trigger('inserted.bs.' + this.type)
 
       var pos          = this.getPosition()
@@ -617,9 +617,9 @@ if (typeof jQuery === 'undefined') {
     function complete() {
       if (that.hoverState != 'in') $tip.detach()
       if (that.$element) { // TODO: Check whether guarding this code with this `if` is really necessary.
-      that.$element
-        .removeAttr('aria-describedby')
-        .trigger('hidden.bs.' + that.type)
+        that.$element
+          .removeAttr('aria-describedby')
+          .trigger('hidden.bs.' + that.type)
       }
       callback && callback()
     }
@@ -1264,7 +1264,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: collapse.js v3.3.7
+ * Bootstrap: collapse.js v3.4.0
  * http://getbootstrap.com/javascript/#collapse
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -1295,7 +1295,7 @@ if (typeof jQuery === 'undefined') {
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION  = '3.3.7'
+  Collapse.VERSION  = '3.4.0'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -1330,7 +1330,7 @@ if (typeof jQuery === 'undefined') {
 		if(collparent){
 			collparent.attr({'role' : 'tablist'});
 
-			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
+			heading = collpanel.parent().children().first(); //On s�lectionne le heading (panel-heading)
 
 			if(collpanel.hasClass('in')){
 				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-expanded':'true'});
@@ -1346,7 +1346,7 @@ if (typeof jQuery === 'undefined') {
           collpanel.attr({ 'role':'tabpanel', 'tabindex':'-1', 'aria-labelledby':collid, 'aria-hidden':'true' });
         }
 
-				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
+				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (� ouvrir)
 				if(heading.hasClass('panel-heading') ){
           colltab.addClass('collapsed');
 				}
@@ -1465,7 +1465,7 @@ if (typeof jQuery === 'undefined') {
   }
 
   Collapse.prototype.getParent = function () {
-    return $(this.options.parent)
+    return $(document).find(this.options.parent)
       .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
       .each($.proxy(function (i, element) {
         var $element = $(element)
@@ -1492,7 +1492,7 @@ if (typeof jQuery === 'undefined') {
     var target = $trigger.attr('data-target')
       || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
 
-    return $(target)
+    return $(document).find(target)
   }
 
 
@@ -1568,7 +1568,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: carousel.js v3.3.7
+ * Bootstrap: carousel.js v3.4.0
  * http://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -1599,7 +1599,7 @@ if (typeof jQuery === 'undefined') {
       .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
   }
 
-  Carousel.VERSION  = '3.3.7'
+  Carousel.VERSION  = '3.4.0'
 
   Carousel.TRANSITION_DURATION = 600
 
@@ -1713,7 +1713,9 @@ if (typeof jQuery === 'undefined') {
     var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
     if ($.support.transition && this.$element.hasClass('slide')) {
       $next.addClass(type)
-      $next[0].offsetWidth // force reflow
+      if (typeof $next === 'object' && $next.length) {
+        $next[0].offsetWidth // force reflow
+      }
       $active.addClass(direction)
       $next.addClass(direction)
       $active
@@ -1775,10 +1777,17 @@ if (typeof jQuery === 'undefined') {
   // =================
 
   var clickHandler = function (e) {
-    var href
     var $this   = $(this)
-    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+    var href    = $this.attr('href')
+    if (href) {
+      href = href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+    }
+
+    var target  = $this.attr('data-target') || href
+    var $target = $(document).find(target)
+
     if (!$target.hasClass('carousel')) return
+
     var options = $.extend({}, $target.data(), $this.data())
     var slideIndex = $this.attr('data-slide-to')
     if (slideIndex) options.interval = false
@@ -1811,7 +1820,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: dropdown.js v3.3.7
+ * Bootstrap: dropdown.js v3.4.0
  * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -1831,14 +1840,13 @@ if (typeof jQuery === 'undefined') {
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
+  Dropdown.VERSION = '3.4.0'
   // boosted mod
   var menus = $(toggle).parent().find('ul').attr('role','menu'),
   lis = menus.find('li').attr('role','presentation')
 
   lis.find('a').attr({'tabIndex':'0'})
   // end mod
-
-  Dropdown.VERSION = '3.3.7'
 
   function getParent($this) {
     var selector = $this.attr('data-target')
@@ -1848,7 +1856,7 @@ if (typeof jQuery === 'undefined') {
       selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
-    var $parent = selector && $(selector)
+    var $parent = selector && $(document).find(selector)
 
     // boosted mod
     //looking for closest parent with .dropdown class
@@ -2060,7 +2068,7 @@ if (typeof jQuery === 'undefined') {
     
 })(jQuery);
 /* ========================================================================
- * Bootstrap: modal.js v3.3.7
+ * Bootstrap: modal.js v3.4.0
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -2094,7 +2102,7 @@ if (typeof jQuery === 'undefined') {
     }
   }
 
-  Modal.VERSION  = '3.3.7'
+  Modal.VERSION  = '3.4.0'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -2106,19 +2114,19 @@ if (typeof jQuery === 'undefined') {
   }
 
   // boosted mod
-  // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
+  // Malgr� les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "�tre sur"
   var $modals =  $('[data-toggle="modal"]');
   $modals.each(function() {
 
-    //modal = l'élement déclencheur de l'aperçu de la popin
-    //modalPanel = la fenêtre modal à proprement parler
+    //modal = l'�lement d�clencheur de l'aper�u de la popin
+    //modalPanel = la fen�tre modal � proprement parler
     var modal = $(this),
       modalPanel = modal.attr('data-target') ? $(modal.attr('data-target')) : $(modal.attr('href'));
 
     //On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
     modalPanel.attr({ 'role' : 'dialog'});//LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
 
-    //On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
+    //On ajoute le tags aria-labelledby uniquement si la popin � un title et que celui-ci poss�de un id
     var modalTitle = modalPanel.find('.modal-title');
     if(modalTitle){
       var modalTitleId = modalTitle.attr('id');
@@ -2409,7 +2417,10 @@ if (typeof jQuery === 'undefined') {
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+    var target  = $this.attr('data-target') ||
+      (href && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+
+    var $target = $(document).find(target)
     var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()
@@ -3500,7 +3511,7 @@ $(document).ready(function () {
 });
 
 /* ========================================================================
- * Bootstrap: tab.js v3.3.7
+ * Bootstrap: tab.js v3.4.0
  * http://getbootstrap.com/javascript/#tabs
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -3520,7 +3531,7 @@ $(document).ready(function () {
     // jscs:enable requireDollarBeforejQueryAssignment
   }
 
-  Tab.VERSION = '3.3.7'
+  Tab.VERSION = '3.4.0'
 
   Tab.TRANSITION_DURATION = 150
 
@@ -3623,7 +3634,7 @@ $(document).ready(function () {
 
     if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
 
-    var $target = $(selector)
+    var $target = $(document).find(selector)
 
     this.activate($this.closest('li'), $ul)
     this.activate($target, $target.parent(), function () {
@@ -3766,7 +3777,48 @@ $(document).ready(function () {
    }
   }
 
-// selectors  Courtesy: https://github.com/jquery/jquery-ui/blob/master/ui/core.js
+// selectors  Courtesy: https://github.com/jquery/jquery-ui/blob/master/ui/focusable.js and tabbable.js
+/*
+Copyright jQuery Foundation and other contributors, https://jquery.org/
+
+This software consists of voluntary contributions made by many
+individuals. For exact contribution history, see the revision history
+available at https://github.com/jquery/jquery-ui
+
+The following license applies to all parts of this software except as
+documented below:
+
+====
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+====
+
+Copyright and related rights for sample code are waived via CC0. Sample
+code is defined as all source code contained within the demos directory.
+
+CC0: http://creativecommons.org/publicdomain/zero/1.0/
+
+====
+*/
+
   var focusable = function ( element, isTabIndexNotNaN ) {
     var map, mapName, img,
     nodeName = element.nodeName.toLowerCase();
@@ -3814,36 +3866,36 @@ $(document).ready(function () {
     }
   });
 
-// Alert Extension
-// ===============================
-
-$('.alert').attr('role', 'alert')
-$('.close').removeAttr('aria-hidden').wrapInner('<span aria-hidden="true"></span>').append('<span class="sr-only">Close</span>')
-
   // Modal Extension
   // ===============================
 
-	$('.modal-dialog').attr( {'role' : 'document'})
+  $('.modal-dialog').attr( {'role' : 'document'})
     var modalhide =   $.fn.modal.Constructor.prototype.hide
     $.fn.modal.Constructor.prototype.hide = function(){
-       var modalOpener = this.$element.parent().find('[data-target="#' + this.$element.attr('id') + '"]')
        modalhide.apply(this, arguments)
-       modalOpener.focus()
        $(document).off('keydown.bs.modal')
     }
 
     var modalfocus =   $.fn.modal.Constructor.prototype.enforceFocus
     $.fn.modal.Constructor.prototype.enforceFocus = function(){
-      var focEls = this.$element.find(":tabbable")
-        , lastEl = focEls[focEls.length-1]
-      $(document).on('keydown.bs.modal', $.proxy(function (ev) {
-        if(!this.$element.has(ev.target).length && ev.shiftKey && ev.keyCode === 9) {  
-          lastEl.focus()
+      var $content = this.$element.find(".modal-content")
+      var focEls = $content.find(":tabbable")
+      , $lastEl = $(focEls[focEls.length-1])
+      , $firstEl = $(focEls[0])
+      $lastEl.on('keydown.bs.modal', $.proxy(function (ev) {
+        if(ev.keyCode === 9 && !(ev.shiftKey | ev.ctrlKey | ev.metaKey | ev.altKey)) { // TAB pressed
           ev.preventDefault();
+          $firstEl.focus();
         }
       }, this))
-
+      $firstEl.on('keydown.bs.modal', $.proxy(function (ev) {
+          if(ev.keyCode === 9 && ev.shiftKey) { // SHIFT-TAB pressed
+            ev.preventDefault();
+            $lastEl.focus();
+          }
+      }, this))
       modalfocus.apply(this, arguments)
-    }    
+    }
+
 
  })(jQuery);

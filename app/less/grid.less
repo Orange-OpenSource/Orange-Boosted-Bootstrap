@@ -8,16 +8,29 @@
 // Set the container width, and override it for fixed navbars in media queries.
 
 .container {
-  .container-fixed();
+
+  .container-fixed(@grid-gutter-xs-width);
+  max-width: @container-xs;
 
   @media (min-width: @screen-sm-min) {
-    width: @container-sm;
+    .container-fixed(@grid-gutter-sm-width);
+    max-width: @container-sm;
   }
   @media (min-width: @screen-md-min) {
-    width: @container-md;
+    .container-fixed(@grid-gutter-md-width);
+    max-width: @container-md;
   }
   @media (min-width: @screen-lg-min) {
-    width: @container-lg;
+    .container-fixed(@grid-gutter-lg-width);
+    max-width: @container-lg;
+  }
+  @media (min-width: @screen-xl-min) {
+    .container-fixed(@grid-gutter-xl-width);
+    max-width: @container-xl;
+  }
+  @media (min-width: @screen-xxl-min) {
+    .container-fixed(@grid-gutter-xxl-width);
+    max-width: @container-xxl;
   }
 }
 

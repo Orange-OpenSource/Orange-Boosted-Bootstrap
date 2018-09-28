@@ -1,9 +1,3 @@
-/*!
- boosted - v3.3.3 - Orange Boosted with Boostrap
- Copyright 2015 - 2017 Orange SA, all right reserved
-MIT Licensed 
-*/
-
 /*! Orange Boosted with Bootstrap
 
 
@@ -26,7 +20,6 @@ Don't use and distribute Helvetica font family if you're not explicitly authoriz
   font-family: 'HelvNeueOrange';
   font-style: normal;
   font-weight: 400;
-
   src: url('../fonts/HelvNeue55_W1G.eot');
   src: url('../fonts/HelvNeue55_W1G.eot?#iefix') format('embedded-opentype'), url('../fonts/HelvNeue55_W1G.woff2') format('woff2'), url('../fonts/HelvNeue55_W1G.woff') format('woff'), url('../fonts/HelvNeue55_W1G.ttf') format('truetype'), url('../fonts/HelvNeue55_W1G.svg') format('svg');
 }
@@ -34,7 +27,6 @@ Don't use and distribute Helvetica font family if you're not explicitly authoriz
   font-family: 'HelvNeueOrange';
   font-style: normal;
   font-weight: 700;
-
   src: url('../fonts/HelvNeue75_W1G.eot');
   src: url('../fonts/HelvNeue75_W1G.eot?#iefix') format('embedded-opentype'), url('../fonts/HelvNeue75_W1G.woff2') format('woff2'), url('../fonts/HelvNeue75_W1G.woff') format('woff'), url('../fonts/HelvNeue75_W1G.ttf') format('truetype'), url('../fonts/HelvNeue75_W1G.svg') format('svg');
 }
