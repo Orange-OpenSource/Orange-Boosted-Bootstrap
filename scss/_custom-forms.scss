@@ -126,13 +126,26 @@
 
 .custom-checkbox {
   .custom-control-label::before {
+    //Boosted Mod
+    border: 2px solid $primary;
+    // End Mod
     @include border-radius($custom-checkbox-indicator-border-radius);
   }
 
   .custom-control-input:checked ~ .custom-control-label {
     // Boosted mod move ::before gradient to global definition
     &::after {
-      background-image: $custom-checkbox-indicator-icon-checked;
+      //Boosted mod
+      top: .65ex;
+      left: -3.4ex;
+      width: 1.9ex;
+      height: .9ex;
+      //background-image: $custom-checkbox-indicator-icon-checked;
+      border: 3px solid $white;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      //End mod
     }
   }
 
@@ -148,11 +161,19 @@
       // our custom control have a border
       border-color: $custom-control-indicator-checked-border-color;
       // end mod
+
       @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
-      background-image: $custom-checkbox-indicator-icon-indeterminate;
+      //Accessiblity issue DO NOT remove
+      //boosted mod
+      border: 3px solid $white;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      transform: scaleX(.5) translateY(-.5rem);
+      //end mod
     }
   }
 
@@ -174,13 +195,19 @@
 
 .custom-radio {
   .custom-control-label::before {
+    //boosted mod
     border-radius: $custom-radio-indicator-border-radius;
+    //end mode
   }
 
   .custom-control-input:checked ~ .custom-control-label {
     // Boosted mod move ::before gradient to global definition
     &::after {
       background-image: $custom-radio-indicator-icon-checked;
+      //boosted mod
+      border: 5px solid $primary;
+      border-radius: 50%;
+      //end mod
     }
   }
 
