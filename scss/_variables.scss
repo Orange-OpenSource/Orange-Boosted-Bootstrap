@@ -94,7 +94,14 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+$logo-boosted-size: () !default;
+$logo-boosted-size: (
+  "small": 1rem,
+  "medium": 1.5rem,
+  "large": 2rem
+) !default;
 
+// stylelint-enable
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 
