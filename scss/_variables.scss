@@ -655,6 +655,16 @@ $form-icon-warning: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmln
 $form-icon-danger-color: theme-color("danger") !default;
 $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-icon-danger-color}' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"), "#", "%23") !default;
 
+
+//Boosted mod
+
+$form-control-input-large: 3.125rem !default;
+$form-control-font-size-large: 1.125rem !default;
+
+$form-control-input-extra-large: 3.75rem !default;
+$form-control-font-size-extra-large: 1.25rem !default;
+
+// end mod
 // Dropdowns
 //
 // Dropdown menu container and contents.
