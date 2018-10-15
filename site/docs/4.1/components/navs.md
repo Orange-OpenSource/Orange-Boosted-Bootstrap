@@ -63,7 +63,7 @@ Change the style of `.nav`s component with modifiers and utilities. Mix and matc
 
 ### Nav light
 
-A gray line is set under the items.
+A gray line is set under the items. An active item is underlining by an Orange line.
 
 {% capture example %}
 <ul class="nav o-nav-light">
