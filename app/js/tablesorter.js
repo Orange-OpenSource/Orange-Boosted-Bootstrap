@@ -529,7 +529,7 @@
                 // remove all header information
                 $headers.removeClass(css[0]).removeClass(css[1]);
                 // add aria-sort=none on all headers
-                $headers.attr({'aria-sort':'none'});
+                $headers.attr({ 'aria-sort':'none' });
 
                 var h = [];
                 $headers.each(function (offset) {
@@ -542,7 +542,7 @@
                 for (var i = 0; i < l; i++) {
                     h[list[i][0]].addClass(css[list[i][1]]);
                     //add aria-sort tag ascending or descending
-                    h[list[i][0]].attr({'aria-sort':ariaTags[list[i][1]]});
+                    h[list[i][0]].attr({ 'aria-sort':ariaTags[list[i][1]]});
                 }
             }
 
@@ -575,7 +575,7 @@
                     var sortTime = new Date();
                 }
 
-                var dynamicExp = "var sortWrapper = function(a,b) {",
+                var dynamicExp = "var sortWrapper = function (a,b) {",
                     l = sortList.length;
 
                 // TODO: inline functions.
@@ -583,12 +583,12 @@
 
                     var c = sortList[i][0];
                     var order = sortList[i][1];
-                    var s = (table.config.parsers[c].type == "text") ? ((order == 0) ? makeSortFunction("text", "asc", c) : makeSortFunction("text", "desc", c)) : ((order == 0) ? makeSortFunction("numeric", "asc", c) : makeSortFunction("numeric", "desc", c));
+                    var s = (table.config.parsers[c].type == "text") ? ((order == 0) ? makeSortfunction ("text", "asc", c) : makeSortfunction ("text", "desc", c)) : ((order == 0) ? makeSortfunction ("numeric", "asc", c) : makeSortfunction ("numeric", "desc", c));
                     var e = "e" + i;
 
                     dynamicExp += "var " + e + " = " + s; // + "(a[" + c + "],b[" + c
                     // + "]); ";
-                    dynamicExp += "if(" + e + ") { return " + e + "; } ";
+                    dynamicExp += "if (" + e + ") { return " + e + "; } ";
                     dynamicExp += "else { ";
 
                 }
@@ -619,7 +619,7 @@
                 return cache;
             };
 
-            function makeSortFunction(type, direction, index) {
+            function makeSortfunction (type, direction, index) {
                 var a = "a[" + index + "]",
                     b = "b[" + index + "]";
                 if (type == 'text' && direction == 'asc') {
@@ -712,7 +712,7 @@
                             // get current column sort order
                             this.order = this.count++ % 2;
                             // always sort on the locked order.
-                            if(this.lockedOrder) this.order = this.lockedOrder;
+                            if (this.lockedOrder) this.order = this.lockedOrder;
 
                             // user only wants to sort on one column
                             if (!e[config.sortMultiSortKey]) {

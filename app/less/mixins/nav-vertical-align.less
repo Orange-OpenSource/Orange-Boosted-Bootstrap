@@ -5,21 +5,21 @@
 // rewrite the Bootstrap mixin to align element at the bottom
 
 .navbar-vertical-align(@element-height){
-    margin-bottom: 0;
-    @media (max-width: @grid-float-breakpoint-max) {
-        margin-top: 0;
-    }
+  margin-bottom: 0;
+  @media (max-width: @grid-float-breakpoint-max) {
+    margin-top: 0;
+  }
 }
 .navbar-vertical-align(@element-height) when (ispixel(@element-height)) {
-    margin-top: ((@navbar-height - (@navbar-padding-vertical + ((unit(@element-height))/10))));
+  margin-top: ((@navbar-height - (@navbar-padding-vertical + ((unit(@element-height))/10))));
 }
 .navbar-vertical-align(@element-height) when not(get-unit(@element-height)) {
-    margin-top: ((@navbar-height - (@navbar-padding-vertical + ((unit(@element-height))/10))));
+  margin-top: ((@navbar-height - (@navbar-padding-vertical + ((unit(@element-height))/10))));
 }
 .navbar-vertical-align(@element-height) when not(ispixel(@element-height)) {
-    margin-top: ((@navbar-height - (@navbar-padding-vertical + @element-height)));
+  margin-top: ((@navbar-height - (@navbar-padding-vertical + @element-height)));
 }
 .navbar-toggle-vertical-align(@element-height) when not(ispixel(@element-height)) {
-    margin-top: ((@navbar-height - @element-height));
-    margin-bottom: @1rem;
+  margin-top: ((@navbar-height - @element-height));
+  margin-bottom: @1rem;
 }

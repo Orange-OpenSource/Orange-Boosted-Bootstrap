@@ -1,5 +1,5 @@
 // Include native bootstrap variables to get upgrade easily
-// @import "../../bower_components/bootstrap/less/variables.less";
+// @import "variables.less";
 //
 // Variables
 // --------------------------------------------------
@@ -9,19 +9,19 @@
 /////////////////////////////////////////////////////////////
 @brand-font-weight-bold: bold;
 @brand-font-weight-normal: normal;
-// Core color #000 / #FF7900
-// Core color #FFF / #F16E00
-//@brand-orange: #F16E00; // alternative Orange color for digital
-// secondary color #4BB4E6 #FFD200 #50BE87 #A885D8 #FFB4E6
+// Core color #000 / #ff7900
+// Core color #ffF / #f16e00
+//@brand-orange: #f16e00; // alternative Orange color for digital
+// secondary color #4bb4e6 #ffD200 #50be87 #A885D8 #ffB4E6
 // Greys #f6f6f6 #EEEEEE #DDDDDD #CCCCCC #999999 #666666 #444444 #333333 #232323
 //yellow blue green purple pink
-@brand-yellow: #FFD200; //black text
-@brand-blue: #4BB4E6; //black text
-@brand-green: #50BE87;//black text
-@brand-purple: #A885D8;//black text
-@brand-pink: #FFB4E6;//black text
+@brand-yellow: #ffd200; //black text
+@brand-blue: #4bb4e6; //black text
+@brand-green: #50be87;//black text
+@brand-purple: #a885d8;//black text
+@brand-pink: #ffb4e6;//black text
 
-@brand-orange: #F16E00;
+@brand-orange: #f16e00;
 //used to invert colors
 @brand-orange-white: #fff;
 @brand-orange-black: #000;
@@ -43,9 +43,9 @@
 @gray-footer:            @gray-base;
 
 @brand-primary: @brand-orange;
-@brand-success: #32C832;
-@brand-info: #527EDB;
-@brand-warning: #FFCC00;
+@brand-success: #32c832;
+@brand-info: #527edb;
+@brand-warning: #fc0;
 @brand-danger: #cd3c14;
 
 //== Scaffolding
@@ -68,11 +68,11 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 /// orange_sans75_bold for titles
-@font-family-titles: "HelvNeueOrange",Helvetica,Arial,sans-serif;
-@font-family-sans-serif: "HelvNeueOrange",Helvetica,Arial,sans-serif;
-@font-family-serif: "HelvNeueOrange", Helvetica, Georgia, "Times New Roman", Times, serif;
+@font-family-titles: "HelvNeueOrange",helvetica,arial,sans-serif;
+@font-family-sans-serif: "HelvNeueOrange",helvetica,arial,sans-serif;
+@font-family-serif: "HelvNeueOrange", helvetica, georgia, "Times New Roman", times, serif;
 /// Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-monospace: menlo, monaco, consolas, "Courier New", monospace;
 @font-family-base: @font-family-sans-serif;
 
 @html-font-size-base: 62.5%;
@@ -81,17 +81,17 @@
 @font-size-base: 1.4rem;
 @font-size-base-up: 1.6rem;
 /// For REM size
-@font-size-large: (ceil((@font-size-base * 1.4)*10)/10); // 2rem
-@font-size-small: (ceil((@font-size-base * 0.85)*10)/10); // 1.2rem
+@font-size-large: (ceil((@font-size-base * 1.4) * 10) / 10); // 2rem
+@font-size-small: (ceil((@font-size-base * .85) * 10) / 10); // 1.2rem
 
 @font-size-h1: 3.4rem;
-@font-size-h2: 3.0rem;
+@font-size-h2: 3rem;
 @font-size-h3: 2.4rem;
 @font-size-h4: 2rem;
 @font-size-h5: 1.8rem;
 @font-size-h6: 1.6rem;
 
-@font-size-h1-mobile: 2.0rem;
+@font-size-h1-mobile: 2rem;
 @font-size-h2-mobile: 1.8rem;
 @font-size-h3-mobile: 1.6rem;
 @font-size-h4-mobile: 1.4rem;
@@ -108,7 +108,7 @@
 @line-height-base:        1.428571429; // 20/14
 /// Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 /// For REM size
-@line-height-computed: (floor((@font-size-base * @line-height-base)*10)/10); // 2rem
+@line-height-computed: (floor((@font-size-base * @line-height-base) * 10) / 10); // 2rem
 
 /// By default, this inherits from the `<body>`.
 @headings-font-family: @font-family-titles;
@@ -134,14 +134,14 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 /// for REM size
-@padding-base-vertical: 0.8rem;//8px;
+@padding-base-vertical: .8rem;//8px;
 @padding-base-horizontal: 2rem;//20px;
 
 @padding-large-vertical: 1.2rem;//12px;
 @padding-large-horizontal: 2rem;//20px;
-@padding-small-vertical: 0.5rem;//5px;
+@padding-small-vertical: .5rem;//5px;
 @padding-small-horizontal: 1rem;//10px;
-@padding-xs-vertical: 0.1rem;//1px;
+@padding-xs-vertical: .1rem;//1px;
 // Fix by the brand, minimum space = 10px
 @padding-xs-horizontal: 1rem;//10px;
 
@@ -158,9 +158,9 @@
 
 /// for REM size
 /// Width of the `border` for generating carets that indicator dropdowns.
-@caret-width-base:          0.8rem;//8px;
+@caret-width-base:          .8rem;//8px;
 /// Carets increase slightly in size for larger components.
-@caret-width-large:         0.8rem;//8px;
+@caret-width-large:         .8rem;//8px;
 
 
 //== Tables
@@ -169,9 +169,9 @@
 
 /// Padding for `<th>`s and `<td>`s.
 /// for REM size
-@table-cell-padding: 0.9rem;//9px;
+@table-cell-padding: .9rem;//9px;
 /// Padding for cells in `.table-condensed`.
-@table-condensed-cell-padding:  0.5rem;//5px;
+@table-condensed-cell-padding:  .5rem;//5px;
 
 /// Default background color used for all tables.
 @table-bg: @brand-orange-white;
@@ -337,7 +337,7 @@
 /// Background for the dropdown menu.
 @dropdown-bg:                    @brand-orange-white;
 /// Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-border:                rgba(0, 0, 0, .15);
 /// Dropdown menu `border-color` for IE8.
 @dropdown-fallback-border:       @gray-base;
 
@@ -537,7 +537,7 @@
 
 //=== Shared nav styles
 // for REM size
-@nav-link-padding: 1rem 0.9rem 1rem 1rem;
+@nav-link-padding: 1rem .9rem 1rem 1rem;
 @nav-link-hover-bg: @gray-base;//@gray-lighter;
 @nav-disabled-link-color: @gray-dark;
 @nav-disabled-link-hover-color: @nav-disabled-link-color;
@@ -589,9 +589,9 @@
 @o-stepbar-mobile-arrow-height: 3rem;
 
 // url encoded colors
-@arrow-black: '000000';
-@arrow-gray: 'dddddd';
-@arrow-orange: 'f16e00';
+@arrow-black: "000000";
+@arrow-gray: "dddddd";
+@arrow-orange: "f16e00";
 
 //== Pagination
 //
@@ -627,7 +627,7 @@
 
 @pager-bg: @pagination-bg;
 @pager-border: @pagination-border;
-@pager-border-radius: 0px;
+@pager-border-radius: 0;
 @pager-hover-bg: @pagination-hover-bg;
 @pager-active-bg: @pagination-active-bg;
 @pager-active-color: @pagination-active-color;
@@ -647,8 +647,8 @@
 @jumbotron-bg:                   @brand-orange-white;
 @jumbotron-heading-color:        inherit;
 /// For REM size
-@jumbotron-font-size:            (ceil((@font-size-base * 1.5)*10)/10); //2.1rem
-@jumbotron-heading-font-size:    (ceil((@font-size-base * 4.5)*10)/10);
+@jumbotron-font-size:            (ceil((@font-size-base * 1.5) * 10) / 10); //2.1rem
+@jumbotron-heading-font-size:    (ceil((@font-size-base * 4.5) * 10) / 10);
 
 
 //== Form states and alerts
@@ -697,7 +697,7 @@
 /// Popover maximum width
 @popover-max-width:                   276px;
 /// Popover border color
-@popover-border-color:                rgba(221,221,221,.2);
+@popover-border-color:                rgba(221, 221, 221, .2);
 /// Popover fallback border color
 @popover-fallback-border-color:       @gray-light-plus;
 
@@ -755,14 +755,14 @@
 /// Background color of modal content area
 @modal-content-bg:                             @brand-orange-white;
 /// Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
+@modal-content-border-color:                   rgba(0, 0, 0, .2);
 /// Modal content border color for IE8
 @modal-content-fallback-border-color:          @gray-base;
 
 /// Modal backdrop background color
 @modal-backdrop-bg:           @gray-darker;
 /// Modal backdrop opacity
-@modal-backdrop-opacity:      0.5;
+@modal-backdrop-opacity:      .5;
 /// Modal header border color
 @modal-header-border-color:   @gray-base;
 /// Modal footer border color
@@ -1003,7 +1003,7 @@
 //
 //##
 
-@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+@carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6);
 
 @carousel-control-color:                      @gray-base;
 @carousel-control-width:                      3rem;
@@ -1039,7 +1039,6 @@
 @pre-color: @gray-darker;
 @pre-border-color: @gray-light;
 @pre-scrollable-max-height: 340px;
-
 
 
 //== Type

@@ -1,6 +1,6 @@
 /*!
- boosted - v3.3.3 - Orange Boosted with Boostrap
- Copyright 2015 - 2018 Orange SA, all right reserved
+ boosted - v3.4.0 - Orange Boosted with Boostrap
+ Copyright 2015 - 2019 Orange SA, all right reserved
 MIT Licensed 
 */
 
@@ -17,10 +17,10 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: transition.js v3.3.7
- * http://getbootstrap.com/javascript/#transitions
+ * Bootstrap: transition.js v3.4.0
+ * https://getbootstrap.com/docs/3.4/javascript/#transitions
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -28,7 +28,7 @@ if (typeof jQuery === 'undefined') {
 +function ($) {
   'use strict';
 
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // CSS TRANSITION SUPPORT (Shoutout: https://modernizr.com/)
   // ============================================================
 
   function transitionEnd() {
@@ -50,7 +50,7 @@ if (typeof jQuery === 'undefined') {
     return false // explicit for ie8 (  ._.)
   }
 
-  // http://blog.alexmaccaw.com/css-transitions
+  // https://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
     var $el = this
@@ -77,10 +77,10 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: alert.js v3.3.7
- * http://getbootstrap.com/javascript/#alerts
+ * Bootstrap: alert.js v3.4.0
+ * https://getbootstrap.com/docs/3.4/javascript/#alerts
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -96,7 +96,7 @@ if (typeof jQuery === 'undefined') {
     $(el).on('click', dismiss, this.close)
   }
 
-  Alert.VERSION = '3.3.7'
+  Alert.VERSION = '3.4.0'
 
   Alert.TRANSITION_DURATION = 150
 
@@ -109,7 +109,8 @@ if (typeof jQuery === 'undefined') {
       selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
-    var $parent = $(selector === '#' ? [] : selector)
+    selector    = selector === '#' ? [] : selector
+    var $parent = $(document).find(selector)
 
     if (e) e.preventDefault()
 
@@ -172,10 +173,10 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: button.js v3.3.7
- * http://getbootstrap.com/javascript/#buttons
+ * Bootstrap: button.js v3.4.0
+ * https://getbootstrap.com/docs/3.4/javascript/#buttons
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -192,7 +193,7 @@ if (typeof jQuery === 'undefined') {
     this.isLoading = false
   }
 
-  Button.VERSION  = '3.3.7'
+  Button.VERSION  = '3.4.0'
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
@@ -299,10 +300,10 @@ if (typeof jQuery === 'undefined') {
 
 /* ========================================================================
  * Bootstrap: tooltip.js v3.4.0
- * http://getbootstrap.com/javascript/#tooltip
+ * https://getbootstrap.com/docs/3.4/javascript/#tooltip
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -819,10 +820,10 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: popover.js v3.3.7
- * http://getbootstrap.com/javascript/#popovers
+ * Bootstrap: popover.js v3.4.0
+ * https://getbootstrap.com/docs/3.4/javascript/#popovers
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -839,7 +840,7 @@ if (typeof jQuery === 'undefined') {
 
   if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
-  Popover.VERSION  = '3.3.7'
+  Popover.VERSION  = '3.4.0'
 
   Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
     placement: 'right',
@@ -887,8 +888,8 @@ if (typeof jQuery === 'undefined') {
 
     return $e.attr('data-content')
       || (typeof o.content == 'function' ?
-            o.content.call($e[0]) :
-            o.content)
+        o.content.call($e[0]) :
+        o.content)
   }
 
   Popover.prototype.arrow = function () {
@@ -928,10 +929,10 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: scrollspy.js v3.3.7
- * http://getbootstrap.com/javascript/#scrollspy
+ * Bootstrap: scrollspy.js v3.4.0
+ * https://getbootstrap.com/docs/3.4/javascript/#scrollspy
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -957,7 +958,7 @@ if (typeof jQuery === 'undefined') {
     this.process()
   }
 
-  ScrollSpy.VERSION  = '3.3.7'
+  ScrollSpy.VERSION  = '3.4.0'
 
   ScrollSpy.DEFAULTS = {
     offset: 10
@@ -1101,10 +1102,10 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: affix.js v3.3.7
- * http://getbootstrap.com/javascript/#affix
+ * Bootstrap: affix.js v3.4.0
+ * https://getbootstrap.com/docs/3.4/javascript/#affix
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -1118,7 +1119,9 @@ if (typeof jQuery === 'undefined') {
   var Affix = function (element, options) {
     this.options = $.extend({}, Affix.DEFAULTS, options)
 
-    this.$target = $(this.options.target)
+    var target = this.options.target === Affix.DEFAULTS.target ? $(this.options.target) : $(document).find(this.options.target)
+
+    this.$target = target
       .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
       .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
 
@@ -1130,7 +1133,7 @@ if (typeof jQuery === 'undefined') {
     this.checkPosition()
   }
 
-  Affix.VERSION  = '3.3.7'
+  Affix.VERSION  = '3.4.0'
 
   Affix.RESET    = 'affix affix-top affix-bottom'
 
@@ -1265,9 +1268,9 @@ if (typeof jQuery === 'undefined') {
 
 /* ========================================================================
  * Bootstrap: collapse.js v3.4.0
- * http://getbootstrap.com/javascript/#collapse
+ * https://getbootstrap.com/docs/3.4/javascript/#collapse
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -1280,10 +1283,10 @@ if (typeof jQuery === 'undefined') {
   // ================================
 
   var Collapse = function (element, options) {
-    this.$element      = $(element)
-    this.options       = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
-                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.$element = $(element)
+    this.options = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+      '[data-toggle="collapse"][data-target="#' + element.id + '"]')
     this.transitioning = null
 
     if (this.options.parent) {
@@ -1295,7 +1298,7 @@ if (typeof jQuery === 'undefined') {
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION  = '3.4.0'
+  Collapse.VERSION = '3.4.0'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -1304,55 +1307,54 @@ if (typeof jQuery === 'undefined') {
   }
 
   // boosted mod
-  var uniqueId = function(prefix) {
-		return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1);
-	}
-
-  var $accordions =  $('[data-multipleAtATime="true"]');
-  if($accordions)
-  {
-      $accordions.each(function() {
-        $(this).attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
-      })
+  var uniqueId = function (prefix) {
+    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * 1000 + 1);
   }
 
-	var $colltabs =  $('[data-toggle="collapse"]:not(.navbar-toggle)');
-	$colltabs.attr({ 'role':'tab', 'aria-expanded':'false' });
-	$colltabs.each(function() {
-		var colltab = $(this),
-    collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
-		parent  = colltab.attr('data-parent'),
-		collparent = parent && $(parent),
-		collid = colltab.attr('id') || uniqueId('ui-collapse'),
-    heading = '';
+  var $accordions = $('[data-multipleAtATime="true"]');
+  if ($accordions) {
+    $accordions.each(function () {
+      $(this).attr({ role: 'tablist', 'aria-multiselectable': 'true' });
+    })
+  }
 
-		colltab.attr('id', collid);
-		if(collparent){
-			collparent.attr({'role' : 'tablist'});
+  var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
+  $colltabs.attr({ role: 'tab', 'aria-expanded': 'false' });
+  $colltabs.each(function () {
+    var $colltab = $(this)
+    var collpanel = $colltab.attr('data-target') ? $($colltab.attr('data-target')) : $($colltab.attr('href'))
+    var parent = $colltab.attr('data-parent')
+    var collparent = parent && $(parent)
+    var collid = $colltab.attr('id') || uniqueId('ui-collapse')
+    var heading = ''
 
-			heading = collpanel.parent().children().first(); //On s�lectionne le heading (panel-heading)
+    $colltab.attr('id', collid);
+    if (collparent) {
+      collparent.attr({ role: 'tablist' });
 
-			if(collpanel.hasClass('in')){
-				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-expanded':'true'});
+      heading = collpanel.parent().children().first(); // On s�lectionne le heading (panel-heading)
 
-				// don't change the attribute for menu panel specific case
-        if(!colltab.hasClass('navbar-toggle')) {
-            collpanel.attr({ 'role':'tabpanel', 'tabindex':'0', 'aria-labelledby':collid, 'aria-hidden':'false' });
-        }
-			} else {
-				colltab.attr({'aria-controls' : collpanel.attr('id')});
+      if (collpanel.hasClass('in')) {
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-expanded': 'true' });
+
         // don't change the attribute for menu panel specific case
-        if(!colltab.hasClass('navbar-toggle')) {
-          collpanel.attr({ 'role':'tabpanel', 'tabindex':'-1', 'aria-labelledby':collid, 'aria-hidden':'true' });
+        if (!$colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role: 'tabpanel', tabindex: '0', 'aria-labelledby': collid, 'aria-hidden': 'false' });
+        }
+      } else {
+        $colltab.attr({ 'aria-controls': collpanel.attr('id') });
+        // don't change the attribute for menu panel specific case
+        if (!$colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role: 'tabpanel', tabindex: '-1', 'aria-labelledby': collid, 'aria-hidden': 'true' });
         }
 
-				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (� ouvrir)
-				if(heading.hasClass('panel-heading') ){
-          colltab.addClass('collapsed');
-				}
-			}
-		}
-	})
+        // Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (� ouvrir)
+        if (heading.hasClass('panel-heading')) {
+          $colltab.addClass('collapsed');
+        }
+      }
+    }
+  })
   // end mod
 
   Collapse.prototype.dimension = function () {
@@ -1377,7 +1379,7 @@ if (typeof jQuery === 'undefined') {
 
     // boosted mod
     if (actives && actives.length && !$(this.options.parent).attr('data-multipleAtATime')) {
-    // end mod
+      // end mod
       Plugin.call(actives, 'hide')
       activesData || actives.data('bs.collapse', null)
     }
@@ -1391,7 +1393,7 @@ if (typeof jQuery === 'undefined') {
       // boosted mod
       .attr('aria-hidden', false)
       .attr('tabindex', 0)
-      // end mod
+    // end mod
 
     this.$trigger
       .removeClass('collapsed')
@@ -1436,7 +1438,7 @@ if (typeof jQuery === 'undefined') {
       .attr('aria-expanded', false)
       .attr('aria-hidden', true)
       .attr('tabindex', -1)
-      // end mod
+    // end mod
 
     this.$trigger
       .addClass('collapsed')
@@ -1455,7 +1457,7 @@ if (typeof jQuery === 'undefined') {
     if (!$.support.transition) return complete.call(this)
 
     this.$element
-      [dimension](0)
+    [dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
@@ -1501,8 +1503,8 @@ if (typeof jQuery === 'undefined') {
 
   function Plugin(option) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.collapse')
+      var $this = $(this)
+      var data = $this.data('bs.collapse')
       var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
@@ -1513,7 +1515,7 @@ if (typeof jQuery === 'undefined') {
 
   var old = $.fn.collapse
 
-  $.fn.collapse             = Plugin
+  $.fn.collapse = Plugin
   $.fn.collapse.Constructor = Collapse
 
 
@@ -1530,38 +1532,38 @@ if (typeof jQuery === 'undefined') {
   // =================
 
   $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-    var $this   = $(this)
+    var $this = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
 
     var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.collapse')
-    var option  = data ? 'toggle' : $this.data()
+    var data = $target.data('bs.collapse')
+    var option = data ? 'toggle' : $this.data()
 
     Plugin.call($target, option)
   })
   // boosted mod
   // local navigation
-  $('.o-nav-local .nav-local.collapse a').on('click', function() {
-      $(this).parent().parent().prev('.local-select').text($(this).text());
+  $('.o-nav-local .nav-local.collapse a').on('click', function () {
+    $(this).parent().parent().prev('.local-select').text($(this).text());
   });
 
-  $('.o-nav-local .nav-local.collapse').on('shown.bs.collapse', function(){
-      $(this).find('li:first-child a').focus();
+  $('.o-nav-local .nav-local.collapse').on('shown.bs.collapse', function () {
+    $(this).find('li:first-child a').focus();
   });
 
-  $('.o-nav-local .nav-local.collapse').on('hidden.bs.collapse', function(){
-      $(this).prev('.local-select').focus();
+  $('.o-nav-local .nav-local.collapse').on('hidden.bs.collapse', function () {
+    $(this).prev('.local-select').focus();
   });
 
-  $(document).ready(function(){
-      $('.o-nav-local .local-select').each(function() {
-        $(this).text($(this).next('.nav-local.collapse').find('li:first-child a').text());
-      });
+  $(document).ready(function () {
+    $('.o-nav-local .local-select').each(function () {
+      $(this).text($(this).next('.nav-local.collapse').find('li:first-child a').text());
+    });
   });
 
-  $(document).on('click', function(){
-      Plugin.call($('.o-nav-local .collapse.in'), 'hide');
+  $(document).on('click', function () {
+    Plugin.call($('.o-nav-local .collapse.in'), 'hide');
   });
   // end mod
 
@@ -1569,9 +1571,9 @@ if (typeof jQuery === 'undefined') {
 
 /* ========================================================================
  * Bootstrap: carousel.js v3.4.0
- * http://getbootstrap.com/javascript/#carousel
+ * https://getbootstrap.com/docs/3.4/javascript/#carousel
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -1821,9 +1823,9 @@ if (typeof jQuery === 'undefined') {
 
 /* ========================================================================
  * Bootstrap: dropdown.js v3.4.0
- * http://getbootstrap.com/javascript/#dropdowns
+ * https://getbootstrap.com/docs/3.4/javascript/#dropdowns
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -1835,17 +1837,17 @@ if (typeof jQuery === 'undefined') {
   // =========================
 
   var backdrop = '.dropdown-backdrop'
-  var toggle   = '[data-toggle="dropdown"]'
+  var toggle = '[data-toggle="dropdown"]'
   var Dropdown = function (element) {
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
   Dropdown.VERSION = '3.4.0'
   // boosted mod
-  var menus = $(toggle).parent().find('ul').attr('role','menu'),
-  lis = menus.find('li').attr('role','presentation')
+  var menus = $(toggle).parent().find('ul').attr('role', 'menu')
+  var lis = menus.find('li').attr('role', 'presentation')
 
-  lis.find('a').attr({'tabIndex':'0'})
+  lis.find('a').attr({ tabIndex: '0' })
   // end mod
 
   function getParent($this) {
@@ -1859,11 +1861,11 @@ if (typeof jQuery === 'undefined') {
     var $parent = selector && $(document).find(selector)
 
     // boosted mod
-    //looking for closest parent with .dropdown class
-    var dropdownParent = $(this).closest('.dropdown');
-    if(!dropdownParent.length){
-        //if not found just return parent as in most cases dropdown parent is immediate parent of dropdown toggle
-        dropdownParent = $this.parent();
+    // looking for closest parent with .dropdown class
+    var dropdownParent = $this.closest('.dropdown');
+    if (!dropdownParent.length) {
+      // if not found just return parent as in most cases dropdown parent is immediate parent of dropdown toggle
+      dropdownParent = $this.parent()
     }
     return $parent && $parent.length ? $parent : dropdownParent;
     // end mod
@@ -1873,8 +1875,8 @@ if (typeof jQuery === 'undefined') {
     if (e && e.which === 3) return
     $(backdrop).remove()
     $(toggle).each(function () {
-      var $this         = $(this)
-      var $parent       = getParent($this)
+      var $this = $(this)
+      var $parent = getParent($this)
       var relatedTarget = { relatedTarget: this }
 
       if (!$parent.hasClass('open')) return
@@ -1889,7 +1891,7 @@ if (typeof jQuery === 'undefined') {
       $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
 
       // boosted mod
-      //focus parent toggle element
+      // focus parent toggle element
       $(relatedTarget.relatedTarget).trigger('focus');
       // end mod
     })
@@ -1900,7 +1902,7 @@ if (typeof jQuery === 'undefined') {
 
     if ($this.is('.disabled, :disabled')) return
 
-    var $parent  = getParent($this)
+    var $parent = getParent($this)
     var isActive = $parent.hasClass('open')
 
     clearMenus()
@@ -1921,8 +1923,8 @@ if (typeof jQuery === 'undefined') {
 
       $this
         // boosted mod
-//        .trigger('focus')
-      // end mod
+        // .trigger('focus')
+        // end mod
         .attr('aria-expanded', 'true')
 
       $parent
@@ -1930,7 +1932,7 @@ if (typeof jQuery === 'undefined') {
         .trigger($.Event('shown.bs.dropdown', relatedTarget))
 
       // boosted mod
-      if($parent.find('.dropdown-menu li.active').length > 0) {
+      if ($parent.find('.dropdown-menu li.active').length > 0) {
         // focus active menu item
         $parent.find('.dropdown-menu li.active a').trigger('focus');
       } else {
@@ -1946,7 +1948,7 @@ if (typeof jQuery === 'undefined') {
 
   Dropdown.prototype.keydown = function (e) {
     // boosted mod
-    if (!/(37|38|39|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) {return}
+    if (!/(37|38|39|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) { return }
     // end mod
 
     var $this = $(this)
@@ -1956,13 +1958,13 @@ if (typeof jQuery === 'undefined') {
 
     if ($this.is('.disabled, :disabled')) return
 
-    var $parent  = getParent($this)
+    var $parent = getParent($this)
     var isActive = $parent.hasClass('open')
 
     if (!isActive && e.which != 27 || isActive && e.which == 27) {
-      if (e.which == 27) {$parent.find(toggle).trigger('focus')}
+      if (e.which == 27) { $parent.find(toggle).trigger('focus') }
       // boosted mod
-        return;
+      return;
       // end mod
     }
 
@@ -1974,15 +1976,15 @@ if (typeof jQuery === 'undefined') {
     var index = $items.index(e.target)
 
     /* boosted mod */
-    if ( (e.which == 37 || e.which == 38) && index > 0) {
+    if ((e.which == 37 || e.which == 38) && index > 0) {
       index--;                        // up & left
     }
-    if ( (e.which == 40 || e.which == 39) && index < $items.length - 1) {
+    if ((e.which == 40 || e.which == 39) && index < $items.length - 1) {
       index++;                        // down & down
     }
     /* end mod */
 
-    if (!~index) {index = 0}
+    if (!~index) { index = 0 }
 
     $items.eq(index).trigger('focus')
   }
@@ -1994,7 +1996,7 @@ if (typeof jQuery === 'undefined') {
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.dropdown')
+      var data = $this.data('bs.dropdown')
 
       if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
       if (typeof option == 'string') data[option].call($this)
@@ -2003,7 +2005,7 @@ if (typeof jQuery === 'undefined') {
 
   var old = $.fn.dropdown
 
-  $.fn.dropdown             = Plugin
+  $.fn.dropdown = Plugin
   $.fn.dropdown.Constructor = Dropdown
 
 
@@ -2028,50 +2030,52 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-(function($) {    
+(function ($) {
   'use strict';
-    var megamenuItems = '.mega-menu ul.navbar-nav > li > a';
-    
-    function uuid() {
-        return 'ui-'+ (Math.random().toString(16)+'000000000').substr(2,8);
-    }
-    
-    //arrow keys management
-    $(document).on('keydown', megamenuItems, function(e){
-        if (!/(37|38|39|40)/.test(e.which) ){ return; }
-        
-        e.preventDefault();
-        e.stopPropagation();
-        
-        var k = e.which || e.keyCode;
-        var index = $(megamenuItems).index(e.target);
-        
-        if( (k === 37 || k ===38) && index > 0){ index--; }  // up & left
-        if( (k === 39 || k ===40) && index < $(megamenuItems).length - 1){ index++; }  // down & right
 
-        $(megamenuItems).eq(index).trigger('focus');
-    });
-    
-    //WAI-ARIA
-    $('.mega-menu .dropdown-toggle').each(function(){
-        var dropdownToggleId = uuid();
-        var dropdownMenu = $(this).next('ul.dropdown-menu');
-        var dropdownMenuId = uuid();
-        
-        $(this).attr('id', dropdownToggleId);
-        $(dropdownMenu).attr('id', dropdownMenuId);
-        
-        $(this).attr('aria-owns', dropdownMenuId);
-        $(this).attr('aria-controls', dropdownMenuId);
-        $(dropdownMenu).attr('aria-labelledby', dropdownToggleId);
-    });
-    
+  var megamenuItems = '.mega-menu ul.navbar-nav > li > a';
+
+  function uuid() {
+    return 'ui-' + (Math.random().toString(16) + '000000000').substr(2, 8);
+  }
+
+  // arrow keys management
+  $(document).on('keydown', megamenuItems, function (e) {
+    if (!/(37|38|39|40)/.test(e.which)) { return; }
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    var k = e.which || e.keyCode;
+    var index = $(megamenuItems).index(e.target);
+
+    if ((k === 37 || k === 38) && index > 0) { index--; }  // up & left
+    if ((k === 39 || k === 40) && index < $(megamenuItems).length - 1) { index++; }  // down & right
+
+    $(megamenuItems).eq(index).trigger('focus');
+  });
+
+  // WAI-ARIA
+  $('.mega-menu .dropdown-toggle').each(function () {
+    var dropdownToggleId = uuid();
+    var dropdownMenu = $(this).next('ul.dropdown-menu');
+    var dropdownMenuId = uuid();
+
+    $(this).attr('id', dropdownToggleId);
+    $(dropdownMenu).attr('id', dropdownMenuId);
+
+    $(this).attr('aria-owns', dropdownMenuId);
+    $(this).attr('aria-controls', dropdownMenuId);
+    $(dropdownMenu).attr('aria-labelledby', dropdownToggleId);
+  });
+
 })(jQuery);
+
 /* ========================================================================
  * Bootstrap: modal.js v3.4.0
- * http://getbootstrap.com/javascript/#modals
+ * https://getbootstrap.com/docs/3.4/javascript/#modals
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -2083,15 +2087,16 @@ if (typeof jQuery === 'undefined') {
   // ======================
 
   var Modal = function (element, options) {
-    this.options             = options
-    this.$body               = $(document.body)
-    this.$element            = $(element)
-    this.$dialog             = this.$element.find('.modal-dialog')
-    this.$backdrop           = null
-    this.isShown             = null
-    this.originalBodyPad     = null
-    this.scrollbarWidth      = 0
+    this.options = options
+    this.$body = $(document.body)
+    this.$element = $(element)
+    this.$dialog = this.$element.find('.modal-dialog')
+    this.$backdrop = null
+    this.isShown = null
+    this.originalBodyPad = null
+    this.scrollbarWidth = 0
     this.ignoreBackdropClick = false
+    this.fixedContent = '.navbar-fixed-top, .navbar-fixed-bottom'
 
     if (this.options.remote) {
       this.$element
@@ -2102,7 +2107,7 @@ if (typeof jQuery === 'undefined') {
     }
   }
 
-  Modal.VERSION  = '3.4.0'
+  Modal.VERSION = '3.4.0'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -2116,27 +2121,27 @@ if (typeof jQuery === 'undefined') {
   // boosted mod
   // Malgr� les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "�tre sur"
   var $modals =  $('[data-toggle="modal"]');
-  $modals.each(function() {
+  $modals.each(function () {
 
-    //modal = l'�lement d�clencheur de l'aper�u de la popin
-    //modalPanel = la fen�tre modal � proprement parler
-    var modal = $(this),
-      modalPanel = modal.attr('data-target') ? $(modal.attr('data-target')) : $(modal.attr('href'));
+    // modal = l'�lement d�clencheur de l'aper�u de la popin
+    // modalPanel = la fen�tre modal � proprement parler
+    var $modal = $(this)
+    var modalPanel = $modal.attr('data-target') ? $($modal.attr('data-target')) : $($modal.attr('href'));
 
-    //On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
-    modalPanel.attr({ 'role' : 'dialog'});//LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
+    // On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
+    modalPanel.attr({ role : 'dialog' });// LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
 
-    //On ajoute le tags aria-labelledby uniquement si la popin � un title et que celui-ci poss�de un id
+    // On ajoute le tags aria-labelledby uniquement si la popin � un title et que celui-ci poss�de un id
     var modalTitle = modalPanel.find('.modal-title');
-    if(modalTitle){
+    if (modalTitle) {
       var modalTitleId = modalTitle.attr('id');
-      if(modalTitleId){
+      if (modalTitleId) {
         modalPanel.attr({ 'aria-labelledby' : modalTitleId });
       }
     }
   });
 
-  $('.modal-dialog').attr( {'role' : 'document'})
+  $('.modal-dialog').attr({ role : 'document' })
   // end mod
 
   Modal.prototype.toggle = function (_relatedTarget) {
@@ -2145,7 +2150,7 @@ if (typeof jQuery === 'undefined') {
 
   Modal.prototype.show = function (_relatedTarget) {
     var that = this
-    var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
+    var e = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
 
     this.$element.trigger(e)
 
@@ -2236,8 +2241,8 @@ if (typeof jQuery === 'undefined') {
       .off('focusin.bs.modal') // guard against infinite focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
         if (document !== e.target &&
-            this.$element[0] !== e.target &&
-            !this.$element.has(e.target).length) {
+          this.$element[0] !== e.target &&
+          !this.$element.has(e.target).length) {
           this.$element.trigger('focus')
         }
       }, this))
@@ -2339,7 +2344,7 @@ if (typeof jQuery === 'undefined') {
     var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight
 
     this.$element.css({
-      paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
+      paddingLeft: !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
       paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
     })
   }
@@ -2364,11 +2369,26 @@ if (typeof jQuery === 'undefined') {
   Modal.prototype.setScrollbar = function () {
     var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
     this.originalBodyPad = document.body.style.paddingRight || ''
-    if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+    var scrollbarWidth = this.scrollbarWidth
+    if (this.bodyIsOverflowing) {
+      this.$body.css('padding-right', bodyPad + scrollbarWidth)
+      $(this.fixedContent).each(function (index, element) {
+        var actualPadding = element.style.paddingRight
+        var calculatedPadding = $(element).css('padding-right')
+        $(element)
+          .data('padding-right', actualPadding)
+          .css('padding-right', parseFloat(calculatedPadding) + scrollbarWidth + 'px')
+      })
+    }
   }
 
   Modal.prototype.resetScrollbar = function () {
     this.$body.css('padding-right', this.originalBodyPad)
+    $(this.fixedContent).each(function (index, element) {
+      var padding = $(element).data('padding-right')
+      $(element).removeData('padding-right')
+      element.style.paddingRight = padding ? padding : ''
+    })
   }
 
   Modal.prototype.measureScrollbar = function () { // thx walsh
@@ -2386,8 +2406,8 @@ if (typeof jQuery === 'undefined') {
 
   function Plugin(option, _relatedTarget) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.modal')
+      var $this = $(this)
+      var data = $this.data('bs.modal')
       var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
@@ -2398,7 +2418,7 @@ if (typeof jQuery === 'undefined') {
 
   var old = $.fn.modal
 
-  $.fn.modal             = Plugin
+  $.fn.modal = Plugin
   $.fn.modal.Constructor = Modal
 
 
@@ -2415,13 +2435,13 @@ if (typeof jQuery === 'undefined') {
   // ==============
 
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
-    var $this   = $(this)
-    var href    = $this.attr('href')
-    var target  = $this.attr('data-target') ||
+    var $this = $(this)
+    var href = $this.attr('href')
+    var target = $this.attr('data-target') ||
       (href && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
 
     var $target = $(document).find(target)
-    var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+    var option = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()
 
@@ -2967,7 +2987,7 @@ if (typeof jQuery === 'undefined') {
                 // remove all header information
                 $headers.removeClass(css[0]).removeClass(css[1]);
                 // add aria-sort=none on all headers
-                $headers.attr({'aria-sort':'none'});
+                $headers.attr({ 'aria-sort':'none' });
 
                 var h = [];
                 $headers.each(function (offset) {
@@ -2980,7 +3000,7 @@ if (typeof jQuery === 'undefined') {
                 for (var i = 0; i < l; i++) {
                     h[list[i][0]].addClass(css[list[i][1]]);
                     //add aria-sort tag ascending or descending
-                    h[list[i][0]].attr({'aria-sort':ariaTags[list[i][1]]});
+                    h[list[i][0]].attr({ 'aria-sort':ariaTags[list[i][1]]});
                 }
             }
 
@@ -3013,7 +3033,7 @@ if (typeof jQuery === 'undefined') {
                     var sortTime = new Date();
                 }
 
-                var dynamicExp = "var sortWrapper = function(a,b) {",
+                var dynamicExp = "var sortWrapper = function (a,b) {",
                     l = sortList.length;
 
                 // TODO: inline functions.
@@ -3021,12 +3041,12 @@ if (typeof jQuery === 'undefined') {
 
                     var c = sortList[i][0];
                     var order = sortList[i][1];
-                    var s = (table.config.parsers[c].type == "text") ? ((order == 0) ? makeSortFunction("text", "asc", c) : makeSortFunction("text", "desc", c)) : ((order == 0) ? makeSortFunction("numeric", "asc", c) : makeSortFunction("numeric", "desc", c));
+                    var s = (table.config.parsers[c].type == "text") ? ((order == 0) ? makeSortfunction ("text", "asc", c) : makeSortfunction ("text", "desc", c)) : ((order == 0) ? makeSortfunction ("numeric", "asc", c) : makeSortfunction ("numeric", "desc", c));
                     var e = "e" + i;
 
                     dynamicExp += "var " + e + " = " + s; // + "(a[" + c + "],b[" + c
                     // + "]); ";
-                    dynamicExp += "if(" + e + ") { return " + e + "; } ";
+                    dynamicExp += "if (" + e + ") { return " + e + "; } ";
                     dynamicExp += "else { ";
 
                 }
@@ -3057,7 +3077,7 @@ if (typeof jQuery === 'undefined') {
                 return cache;
             };
 
-            function makeSortFunction(type, direction, index) {
+            function makeSortfunction (type, direction, index) {
                 var a = "a[" + index + "]",
                     b = "b[" + index + "]";
                 if (type == 'text' && direction == 'asc') {
@@ -3150,7 +3170,7 @@ if (typeof jQuery === 'undefined') {
                             // get current column sort order
                             this.order = this.count++ % 2;
                             // always sort on the locked order.
-                            if(this.lockedOrder) this.order = this.lockedOrder;
+                            if (this.lockedOrder) this.order = this.lockedOrder;
 
                             // user only wants to sort on one column
                             if (!e[config.sortMultiSortKey]) {
@@ -3460,32 +3480,32 @@ if (typeof jQuery === 'undefined') {
 // forms validation fall back for old navigators
 $(document).ready(function () {
   'use strict';
-  if(typeof validate == 'function')
-  {
-      $('form').validate({
-          errorPlacement: function (error, element) {
-              error.appendTo('label[for=' + $(element).attr('id') + ']');
-          },
-          errorElement: 'em'
-      });
-      // Duplicate Validation Message for Firefox
-      $('#sign-up input:not([type=submit]):not([type=file])[title]').each(function () {
-          var validationMessage = $(this).attr('title');
-          $(this).attr('x-moz-errormessage', validationMessage);
-      });
-      $('form').removeAttr('novalidate');
+
+  if (typeof validate == 'function') {
+    $('form').validate({
+      errorPlacement: function (error, element) {
+        error.appendTo('label[for=' + $(element).attr('id') + ']');
+      },
+      errorElement: 'em'
+    });
+    // Duplicate Validation Message for Firefox
+    $('#sign-up input:not([type=submit]):not([type=file])[title]').each(function () {
+      var validationMessage = $(this).attr('title');
+      $(this).attr('x-moz-errormessage', validationMessage);
+    });
+    $('form').removeAttr('novalidate');
   }
 
   // first init, set all class checked to checkboxes checked
-  $('.toggle .checkbox:checked').each(function(){
-    $(this).toggleClass('checked',true);
+  $('.toggle .checkbox:checked').each(function () {
+    $(this).toggleClass('checked', true);
   });
 
   // make toggle focusable
   // $('.checkbox-label').attr('tabindex','0');
 
   // Allow user to activate the checkbox-label with the space bar
-  /*$('.checkbox-label').on('keypress', function(e){
+  /*$('.checkbox-label').on('keypress', function (e) {
     // check the keycode for space?
     if (e.keyCode == 0 || e.keyCode == 32) {
       // if keycode is space => trigger a click to the input
@@ -3496,25 +3516,25 @@ $(document).ready(function () {
   });
   */
   // attach event onto all checkbox to update the display onclick
-  $('.toggle .checkbox').on('click', function() {
-    $(this).toggleClass('checked',$(this).prop('checked'));
+  $('.toggle .checkbox').on('click', function () {
+    $(this).toggleClass('checked', $(this).prop('checked'));
     // force IE8 repaint!
     $(this).parent().toggleClass('forceiepaint');
   });
   // add an event for IE8 active checkbox when clicking onto the label
-  $('.toggle .checkbox').parent().find('label').on('click', function(e) {
-    $('#'+$(this).attr('for')).trigger('click');
+  $('.toggle .checkbox').parent().find('label').on('click', function (e) {
+    $('#' + $(this).attr('for')).trigger('click');
     e.preventDefault()
     e.stopPropagation()
   });
-    
+
 });
 
 /* ========================================================================
  * Bootstrap: tab.js v3.4.0
- * http://getbootstrap.com/javascript/#tabs
+ * https://getbootstrap.com/docs/3.4/javascript/#tabs
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -3536,82 +3556,82 @@ $(document).ready(function () {
   Tab.TRANSITION_DURATION = 150
 
   // boosted mod
-  var uniqueId = function(prefix) {
-      return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1)
+  var uniqueId = function (prefix) {
+    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * 1000 + 1)
   }
 
-  var $tablist = $('.nav-tabs, .nav-pills'),
-        $lis = $tablist.children('li'),
-        $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
+  var $tablist = $('.nav-tabs, .nav-pills')
+  var $lis = $tablist.children('li')
+  var $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
 
-    $tablist.attr('role', 'tablist')
-    $lis.attr('role', 'presentation')
-    $tabs.attr('role', 'tab')
+  $tablist.attr('role', 'tablist')
+  $lis.attr('role', 'presentation')
+  $tabs.attr('role', 'tab')
 
-    $tabs.each(function() {
-      var tabpanel = $($(this).attr('href')),
-        tab = $(this),
-        tabid = tab.attr('id') || uniqueId('ui-tab')
+  $tabs.each(function () {
+    var tabpanel = $($(this).attr('href'))
+    var $tab = $(this)
+    var tabid = $tab.attr('id') || uniqueId('ui-tab')
 
-        tab.attr('id', tabid)
+    $tab.attr('id', tabid)
 
-      if(tab.parent().hasClass('active')) {
-        tab.attr( { 'tabIndex' : '0', 'aria-selected' : 'true', 'aria-controls': tab.attr('href').substr(1) } )
-        tabpanel.attr({ 'role' : 'tabpanel', 'tabIndex' : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
-      }else{
-        tab.attr( { 'tabIndex' : '-1', 'aria-selected' : 'false', 'aria-controls': tab.attr('href').substr(1) } )
-        tabpanel.attr( { 'role' : 'tabpanel', 'tabIndex' : '-1', 'aria-hidden' : 'true', 'aria-labelledby':tabid } )
-      }
-    })
+    if ($tab.parent().hasClass('active')) {
+      $tab.attr({ tabIndex: '0', 'aria-selected': 'true', 'aria-controls': $tab.attr('href').substr(1) })
+      tabpanel.attr({ role: 'tabpanel', tabIndex: '0', 'aria-hidden': 'false', 'aria-labelledby': tabid })
+    } else {
+      $tab.attr({ tabIndex: '-1', 'aria-selected': 'false', 'aria-controls': $tab.attr('href').substr(1) })
+      tabpanel.attr({ role: 'tabpanel', tabIndex: '-1', 'aria-hidden': 'true', 'aria-labelledby': tabid })
+    }
+  })
 
-    Tab.prototype.keydown = function (e) {
-      var $this = $(this),
-      $items,
-      $ul = $this.closest('ul[role=tablist] '),
-      index,
-      k = e.which || e.keyCode
+  Tab.prototype.keydown = function (e) {
+    var $this = $(this)
+    var $items
+    var $ul = $this.closest('ul[role=tablist] ')
+    var index
+    var k = e.which || e.keyCode
 
-      $this = $(this)
-      if (!/(37|38|39|40)/.test(k)) {
-        return
-      }
-
-      $items = $ul.find('[role=tab]:visible')
-      index = $items.index($items.filter(':focus'))
-
-      if (k == 38 || k == 37) {
-        index--                         // up & left
-      }
-      if (k == 39 || k == 40) {
-        index++                        // down & right
-      }
-
-
-      if(index < 0) {
-        index = $items.length -1
-      }
-      if(index == $items.length) {
-        index = 0
-      }
-
-      var nextTab = $items.eq(index)
-      if(nextTab.attr('role') ==='tab') {
-        nextTab.tab('show')      //Comment this line for dynamically loaded tabPabels, to save Ajax requests on arrow key navigation
-        .focus()
-      }
-      // nextTab.focus()
-
-      e.preventDefault()
-      e.stopPropagation()
+    $this = $(this)
+    if (!/(37|38|39|40)/.test(k)) {
+      return
     }
 
-    $(document).on('keydown.tab.data-api','[data-toggle="tab"], [data-toggle="pill"]' , Tab.prototype.keydown)
+    $items = $ul.find('[role=tab]:visible')
+    index = $items.index($items.filter(':focus'))
+
+    if (k == 38 || k == 37) {
+      index--                         // up & left
+    }
+    if (k == 39 || k == 40) {
+      index++                        // down & right
+    }
+
+
+    if (index < 0) {
+      index = $items.length - 1
+    }
+    if (index == $items.length) {
+      index = 0
+    }
+
+    var nextTab = $items.eq(index)
+    if (nextTab.attr('role') === 'tab') {
+      nextTab.tab('show')      // Comment this line for dynamically loaded tabPabels, to save Ajax requests on arrow key navigation
+        .focus()
+    }
+    // nextTab.focus()
+
+    e.preventDefault()
+    e.stopPropagation()
+  }
+
+  $(document).on('keydown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', Tab.prototype.keydown)
 
   // end mod
 
   Tab.prototype.show = function () {
-    var $this    = this.element
-    var $ul      = $this.closest('ul:not(.dropdown-menu)')
+    var $this = this.element
+    var $ul = $this.closest('ul:not(.dropdown-menu)')
     var selector = $this.data('target')
 
     if (!selector) {
@@ -3650,33 +3670,33 @@ $(document).ready(function () {
   }
 
   Tab.prototype.activate = function (element, container, callback) {
-    var $active    = container.find('> .active')
+    var $active = container.find('> .active')
     var transition = callback
       && $.support.transition
       && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
 
     // boosted mod
-    $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '-1','aria-selected' : false })
-      $active.filter('.tab-pane').attr({ 'aria-hidden' : true,'tabIndex' : '-1' })
+    $active.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex: '-1', 'aria-selected': false })
+    $active.filter('.tab-pane').attr({ 'aria-hidden': true, tabIndex: '-1' })
     // end mod
 
     function next() {
       $active
         .removeClass('active')
         .find('> .dropdown-menu > .active')
-          .removeClass('active')
+        .removeClass('active')
         .end()
         .find('[data-toggle="tab"]')
-          .attr('aria-expanded', false)
+        .attr('aria-expanded', false)
 
       element
         .addClass('active')
         .find('[data-toggle="tab"]')
-          .attr('aria-expanded', true)
+        .attr('aria-expanded', true)
 
       // boosted mod
-      element.find('[data-toggle=tab], [data-toggle=pill]').attr({ 'tabIndex' : '0','aria-selected' : true })
-      element.filter('.tab-pane').attr({ 'aria-hidden' : false,'tabIndex' : '0' })
+      element.find('[data-toggle=tab], [data-toggle=pill]').attr({ tabIndex: '0', 'aria-selected': true })
+      element.filter('.tab-pane').attr({ 'aria-hidden': false, tabIndex: '0' })
       // end mod
 
       if (transition) {
@@ -3689,10 +3709,10 @@ $(document).ready(function () {
       if (element.parent('.dropdown-menu').length) {
         element
           .closest('li.dropdown')
-            .addClass('active')
+          .addClass('active')
           .end()
           .find('[data-toggle="tab"]')
-            .attr('aria-expanded', true)
+          .attr('aria-expanded', true)
       }
 
       callback && callback()
@@ -3714,7 +3734,7 @@ $(document).ready(function () {
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.tab')
+      var data = $this.data('bs.tab')
 
       if (!data) $this.data('bs.tab', (data = new Tab(this)))
       if (typeof option == 'string') data[option]()
@@ -3723,7 +3743,7 @@ $(document).ready(function () {
 
   var old = $.fn.tab
 
-  $.fn.tab             = Plugin
+  $.fn.tab = Plugin
   $.fn.tab.Constructor = Tab
 
 

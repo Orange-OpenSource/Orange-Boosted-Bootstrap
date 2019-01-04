@@ -1,5 +1,6 @@
-// Orange buttons
+// stylelint-disable selector-max-class,selector-no-qualifying-type,property-no-vendor-prefix,unit-no-unknown,selector-max-compound-selectors
 //
+// Orange buttons
 //
 
 .orange-button-variant(@color, @background, @hover-color:@btn-primary-hover-color, @hover-background:@btn-primary-hover-bg, @active-color:@btn-primary-active-color, @active-background:@btn-primary-active-bg) {
@@ -7,8 +8,7 @@
   color: @color;
   background-color: @background;
   border-color: @background;
-//   .box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
-
+  //   .box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
   &:hover,
   &.hover,
   &:focus,
@@ -27,7 +27,6 @@
     border-color: @active-background;
     // Remove the gradient for the pressed/active state
     // .box-shadow(@btn-active-box-shadow);
-
     &:hover,
     &.hover,
     &:focus,
@@ -73,12 +72,11 @@
 
 .orange-button-outline-variant(@color) {
   color: @color;
-  background-image: none;
   background-color: transparent;
+  background-image: none;
   border-color: @color;
 
-//   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
-
+  //   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
   &:hover,
   &.hover,
   &:focus,
@@ -97,7 +95,6 @@
     border-color: @brand-orange;
     // Remove the gradient for the pressed/active state
     // @include box-shadow(@btn-active-box-shadow);
-
     &:hover,
     &.hover,
     &:focus,
@@ -148,8 +145,7 @@
   color: @color;
   background-color: @background;
   border-color: @background;
-//   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
-
+  //   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075));
   &:hover,
   &.hover,
   &:focus,
@@ -168,7 +164,6 @@
     border-color: @brand-orange;
     // Remove the gradient for the pressed/active state
     // @include box-shadow(@btn-active-box-shadow);
-
     &:hover,
     &.hover,
     &:focus,
@@ -219,9 +214,9 @@
     opacity: 1;
   }
   padding: @btn-padding;
-  border-width: 2px;
   font-size: @btn-font-size;
   line-height: @btn-line-height;
+  border-width: 2px;
 
   &.btn-sm,
   &.btn-xs {
@@ -250,7 +245,6 @@
     border-color: @brand-orange-black;
     // Remove the gradient for the pressed/active state
     // .box-shadow(@btn-active-box-shadow);
-
     &:hover,
     &.hover,
     &:focus,
@@ -380,7 +374,7 @@
         color: @btn-link-disabled-black-bg-color;
         background-color: @brand-orange-clear;
         border-color: @btn-link-disabled-black-bg-color;
-     }
+      }
 
       color: @btn-link-disabled-black-bg-color;
       background-color: @brand-orange-clear;
@@ -407,7 +401,6 @@
     border-color: @brand-orange-black;
     // Remove the gradient for the pressed/active state
     // @include box-shadow(@btn-active-box-shadow);
-
     &:hover,
     &.hover,
     &:focus,
@@ -544,32 +537,32 @@
   display: block;
   width: @checkbox-label-width;
   height: @checkbox-label-height;
+  padding: 0 @-6rem;
   margin: (@checkbox-toggle-padding-vertical / 2) 0;
+  cursor: pointer;
   background: @gray-dark;
   border: 2px solid @gray-dark;
-  cursor: pointer;
-  padding: 0 @-6rem;
 
   .on,
   .off {
     display: block;
-    font-weight: bold;
+    font-weight: 700;
     line-height: @checkbox-label-size;
     color: #fff;
     text-align: left;
   }
 
   .on {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    opacity: 0;
     display: none;
     text-align: left;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
   }
 
   .off {
+    text-align: right;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
-    text-align: right;
   }
 
   &:before {
@@ -585,10 +578,10 @@
   }
 
   &.rounded {
-    border-radius: @checkbox-label-size;
-    min-width: @6rem;
     width: auto;
+    min-width: @6rem;
     padding: 0 @1-4rem;
+    border-radius: @checkbox-label-size;
 
     .on,
     .off {
@@ -624,8 +617,8 @@
           opacity: 0;
         }
         &:before {
-          left: auto;
           right: 0;
+          left: auto;
         }
       }
     }
@@ -643,8 +636,8 @@
           opacity: 0;
         }
         &:before {
-          left: auto;
           right: 0;
+          left: auto;
         }
       }
     }
@@ -677,7 +670,7 @@
 
 // 3 way toggles
 
-.btn-group[data-toggle=buttons] {
+.btn-group[data-toggle="buttons"] {
   border: 2px solid #000;
 
   .btn {

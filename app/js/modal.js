@@ -1,8 +1,8 @@
 /* ========================================================================
  * Bootstrap: modal.js v3.4.0
- * http://getbootstrap.com/javascript/#modals
+ * https://getbootstrap.com/docs/3.4/javascript/#modals
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -14,15 +14,16 @@
   // ======================
 
   var Modal = function (element, options) {
-    this.options             = options
-    this.$body               = $(document.body)
-    this.$element            = $(element)
-    this.$dialog             = this.$element.find('.modal-dialog')
-    this.$backdrop           = null
-    this.isShown             = null
-    this.originalBodyPad     = null
-    this.scrollbarWidth      = 0
+    this.options = options
+    this.$body = $(document.body)
+    this.$element = $(element)
+    this.$dialog = this.$element.find('.modal-dialog')
+    this.$backdrop = null
+    this.isShown = null
+    this.originalBodyPad = null
+    this.scrollbarWidth = 0
     this.ignoreBackdropClick = false
+    this.fixedContent = '.navbar-fixed-top, .navbar-fixed-bottom'
 
     if (this.options.remote) {
       this.$element
@@ -33,7 +34,7 @@
     }
   }
 
-  Modal.VERSION  = '3.4.0'
+  Modal.VERSION = '3.4.0'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -45,29 +46,29 @@
   }
 
   // boosted mod
-  // Malgré les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "être sur"
+  // Malgrï¿½ les recommandation de Bootstrap, on fait en sorte d'ajouter les tags aria pour "ï¿½tre sur"
   var $modals =  $('[data-toggle="modal"]');
-  $modals.each(function() {
+  $modals.each(function () {
 
-    //modal = l'élement déclencheur de l'aperçu de la popin
-    //modalPanel = la fenêtre modal à proprement parler
-    var modal = $(this),
-      modalPanel = modal.attr('data-target') ? $(modal.attr('data-target')) : $(modal.attr('href'));
+    // modal = l'ï¿½lement dï¿½clencheur de l'aperï¿½u de la popin
+    // modalPanel = la fenï¿½tre modal ï¿½ proprement parler
+    var $modal = $(this)
+    var modalPanel = $modal.attr('data-target') ? $($modal.attr('data-target')) : $($modal.attr('href'));
 
-    //On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
-    modalPanel.attr({ 'role' : 'dialog'});//LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
+    // On ajoute les tags aria qui vont bien et on empeche le focus avec tabulation
+    modalPanel.attr({ role : 'dialog' });// LLA removed with BS 3.3.5, 'aria-hidden' : 'true', 'tabIndex' : '-1' });
 
-    //On ajoute le tags aria-labelledby uniquement si la popin à un title et que celui-ci possède un id
+    // On ajoute le tags aria-labelledby uniquement si la popin ï¿½ un title et que celui-ci possï¿½de un id
     var modalTitle = modalPanel.find('.modal-title');
-    if(modalTitle){
+    if (modalTitle) {
       var modalTitleId = modalTitle.attr('id');
-      if(modalTitleId){
+      if (modalTitleId) {
         modalPanel.attr({ 'aria-labelledby' : modalTitleId });
       }
     }
   });
 
-  $('.modal-dialog').attr( {'role' : 'document'})
+  $('.modal-dialog').attr({ role : 'document' })
   // end mod
 
   Modal.prototype.toggle = function (_relatedTarget) {
@@ -76,7 +77,7 @@
 
   Modal.prototype.show = function (_relatedTarget) {
     var that = this
-    var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
+    var e = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
 
     this.$element.trigger(e)
 
@@ -167,8 +168,8 @@
       .off('focusin.bs.modal') // guard against infinite focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
         if (document !== e.target &&
-            this.$element[0] !== e.target &&
-            !this.$element.has(e.target).length) {
+          this.$element[0] !== e.target &&
+          !this.$element.has(e.target).length) {
           this.$element.trigger('focus')
         }
       }, this))
@@ -270,7 +271,7 @@
     var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight
 
     this.$element.css({
-      paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
+      paddingLeft: !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
       paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
     })
   }
@@ -295,11 +296,26 @@
   Modal.prototype.setScrollbar = function () {
     var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
     this.originalBodyPad = document.body.style.paddingRight || ''
-    if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+    var scrollbarWidth = this.scrollbarWidth
+    if (this.bodyIsOverflowing) {
+      this.$body.css('padding-right', bodyPad + scrollbarWidth)
+      $(this.fixedContent).each(function (index, element) {
+        var actualPadding = element.style.paddingRight
+        var calculatedPadding = $(element).css('padding-right')
+        $(element)
+          .data('padding-right', actualPadding)
+          .css('padding-right', parseFloat(calculatedPadding) + scrollbarWidth + 'px')
+      })
+    }
   }
 
   Modal.prototype.resetScrollbar = function () {
     this.$body.css('padding-right', this.originalBodyPad)
+    $(this.fixedContent).each(function (index, element) {
+      var padding = $(element).data('padding-right')
+      $(element).removeData('padding-right')
+      element.style.paddingRight = padding ? padding : ''
+    })
   }
 
   Modal.prototype.measureScrollbar = function () { // thx walsh
@@ -317,8 +333,8 @@
 
   function Plugin(option, _relatedTarget) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.modal')
+      var $this = $(this)
+      var data = $this.data('bs.modal')
       var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
@@ -329,7 +345,7 @@
 
   var old = $.fn.modal
 
-  $.fn.modal             = Plugin
+  $.fn.modal = Plugin
   $.fn.modal.Constructor = Modal
 
 
@@ -346,13 +362,13 @@
   // ==============
 
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
-    var $this   = $(this)
-    var href    = $this.attr('href')
-    var target  = $this.attr('data-target') ||
+    var $this = $(this)
+    var href = $this.attr('href')
+    var target = $this.attr('data-target') ||
       (href && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
 
     var $target = $(document).find(target)
-    var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+    var option = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()
 

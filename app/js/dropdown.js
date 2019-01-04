@@ -1,8 +1,8 @@
 /* ========================================================================
  * Bootstrap: dropdown.js v3.4.0
- * http://getbootstrap.com/javascript/#dropdowns
+ * https://getbootstrap.com/docs/3.4/javascript/#dropdowns
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -14,17 +14,17 @@
   // =========================
 
   var backdrop = '.dropdown-backdrop'
-  var toggle   = '[data-toggle="dropdown"]'
+  var toggle = '[data-toggle="dropdown"]'
   var Dropdown = function (element) {
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
   Dropdown.VERSION = '3.4.0'
   // boosted mod
-  var menus = $(toggle).parent().find('ul').attr('role','menu'),
-  lis = menus.find('li').attr('role','presentation')
+  var menus = $(toggle).parent().find('ul').attr('role', 'menu')
+  var lis = menus.find('li').attr('role', 'presentation')
 
-  lis.find('a').attr({'tabIndex':'0'})
+  lis.find('a').attr({ tabIndex: '0' })
   // end mod
 
   function getParent($this) {
@@ -38,11 +38,11 @@
     var $parent = selector && $(document).find(selector)
 
     // boosted mod
-    //looking for closest parent with .dropdown class
-    var dropdownParent = $(this).closest('.dropdown');
-    if(!dropdownParent.length){
-        //if not found just return parent as in most cases dropdown parent is immediate parent of dropdown toggle
-        dropdownParent = $this.parent();
+    // looking for closest parent with .dropdown class
+    var dropdownParent = $this.closest('.dropdown');
+    if (!dropdownParent.length) {
+      // if not found just return parent as in most cases dropdown parent is immediate parent of dropdown toggle
+      dropdownParent = $this.parent()
     }
     return $parent && $parent.length ? $parent : dropdownParent;
     // end mod
@@ -52,8 +52,8 @@
     if (e && e.which === 3) return
     $(backdrop).remove()
     $(toggle).each(function () {
-      var $this         = $(this)
-      var $parent       = getParent($this)
+      var $this = $(this)
+      var $parent = getParent($this)
       var relatedTarget = { relatedTarget: this }
 
       if (!$parent.hasClass('open')) return
@@ -68,7 +68,7 @@
       $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
 
       // boosted mod
-      //focus parent toggle element
+      // focus parent toggle element
       $(relatedTarget.relatedTarget).trigger('focus');
       // end mod
     })
@@ -79,7 +79,7 @@
 
     if ($this.is('.disabled, :disabled')) return
 
-    var $parent  = getParent($this)
+    var $parent = getParent($this)
     var isActive = $parent.hasClass('open')
 
     clearMenus()
@@ -100,8 +100,8 @@
 
       $this
         // boosted mod
-//        .trigger('focus')
-      // end mod
+        // .trigger('focus')
+        // end mod
         .attr('aria-expanded', 'true')
 
       $parent
@@ -109,7 +109,7 @@
         .trigger($.Event('shown.bs.dropdown', relatedTarget))
 
       // boosted mod
-      if($parent.find('.dropdown-menu li.active').length > 0) {
+      if ($parent.find('.dropdown-menu li.active').length > 0) {
         // focus active menu item
         $parent.find('.dropdown-menu li.active a').trigger('focus');
       } else {
@@ -125,7 +125,7 @@
 
   Dropdown.prototype.keydown = function (e) {
     // boosted mod
-    if (!/(37|38|39|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) {return}
+    if (!/(37|38|39|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) { return }
     // end mod
 
     var $this = $(this)
@@ -135,13 +135,13 @@
 
     if ($this.is('.disabled, :disabled')) return
 
-    var $parent  = getParent($this)
+    var $parent = getParent($this)
     var isActive = $parent.hasClass('open')
 
     if (!isActive && e.which != 27 || isActive && e.which == 27) {
-      if (e.which == 27) {$parent.find(toggle).trigger('focus')}
+      if (e.which == 27) { $parent.find(toggle).trigger('focus') }
       // boosted mod
-        return;
+      return;
       // end mod
     }
 
@@ -153,15 +153,15 @@
     var index = $items.index(e.target)
 
     /* boosted mod */
-    if ( (e.which == 37 || e.which == 38) && index > 0) {
+    if ((e.which == 37 || e.which == 38) && index > 0) {
       index--;                        // up & left
     }
-    if ( (e.which == 40 || e.which == 39) && index < $items.length - 1) {
+    if ((e.which == 40 || e.which == 39) && index < $items.length - 1) {
       index++;                        // down & down
     }
     /* end mod */
 
-    if (!~index) {index = 0}
+    if (!~index) { index = 0 }
 
     $items.eq(index).trigger('focus')
   }
@@ -173,7 +173,7 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.dropdown')
+      var data = $this.data('bs.dropdown')
 
       if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
       if (typeof option == 'string') data[option].call($this)
@@ -182,7 +182,7 @@
 
   var old = $.fn.dropdown
 
-  $.fn.dropdown             = Plugin
+  $.fn.dropdown = Plugin
   $.fn.dropdown.Constructor = Dropdown
 
 

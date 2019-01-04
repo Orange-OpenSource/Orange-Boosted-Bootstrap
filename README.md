@@ -95,9 +95,62 @@ We provide compiled CSS and JS (`*.*`), as well as compiled and minified CSS and
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+
+Note that **feature requests must target [Bootstrap v4](https://github.com/twbs/bootstrap/tree/v4-dev),** because Bootstrap v3 is now in maintenance mode and is closed off to new features. This is so that we can focus our efforts on Bootstrap v4.
+
+
+## Documentation
+
+Boosted's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <http://boosted.orange.com/>. The docs may also be run locally.
+
+### Running documentation locally
+
+1. If necessary, [install Jekyll](https://jekyllrb.com/docs/installation/) and other Ruby dependencies with `bundle install`.
+   **Note for Windows users:** Read [this guide](https://jekyllrb.com/docs/installation/windows/) to get Jekyll up and running without problems.
+2. From the root `/boosted` directory, run `bundle exec jekyll serve` in the command line.
+4. Open `http://localhost:9001` in your browser, and voilà.
+
+Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
+
+## Contributing
+
+Please read through our [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/master/app/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
+
+**Boosted v3 is now closed off to new features.** It has gone into maintenance mode so that we can focus our efforts on [Boosted v4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev), the future of the framework. Pull requests which add new features (rather than fix bugs) should target [Bootstrap v4 (the `v4-dev` git branch)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev) instead.
+
+Editor preferences are available in the [editor config](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
+
+
+## Versioning
+
+For transparency into our release cycle and in striving to maintain backward compatibility, Boosted is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
+
+See [the Releases section of our GitHub project](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) for changelogs for each release version of Boosted.
+
+
+## Thanks
+
+<img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="490" height="106">
+
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+
+
+## Creators
+
+**Mark Otto**
+
+* <https://twitter.com/mdo>
+* <https://github.com/mdo>
+
+**Jacob Thornton**
+
+* <https://twitter.com/fat>
+* <https://github.com/fat>
 
 
 ## Copyright and license
 
-Code and documentation copyright 2015 Orange SA. Code released under [the MIT license](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/docs/LICENSE).
+Code and documentation copyright 2015-2018 Orange SA. Code released under [the MIT license](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/docs/LICENSE).

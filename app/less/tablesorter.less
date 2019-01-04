@@ -1,40 +1,43 @@
+// stylelint-disable selector-no-qualifying-type,selector-max-type
 //
 // Table //
 //
 table.tablesorter > thead > tr > th{
-	font-weight:bold;
-	padding-right:30px;
-	cursor: pointer;
+  padding-right: 30px;
+  font-weight: 700;
+  cursor: pointer;
 }
-table.tablesorter th, table.tablesorter td{
-	text-align:left;
+table.tablesorter th,
+table.tablesorter td{
+  text-align: left;
 }
 table.tablesorter th a{
-    color:@gray-base;
-	text-decoration:none;
+  color: @gray-base;
+  text-decoration: none;
 }
-table.tablesorter th a:hover, table.tablesorter th a:focus{
-	text-decoration:underline;
-	color:@brand-orange;
+table.tablesorter th a:hover,
+table.tablesorter th a:focus{
+  color: @brand-orange;
+  text-decoration: underline;
 }
-table.tablesorter th.header { 
-	background-repeat:no-repeat;
-	background-position:95% 50%;
-} 
+table.tablesorter th.header {
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
 table.tablesorter .header:hover,
-table.tablesorter .header:focus{ 
-  background-image: url('../images/triangle_sort.png'); 
+table.tablesorter .header:focus{
+  background-image: url("../images/triangle_sort.png");
 }
-table.tablesorter .headerSortDown { 
-  background-image: url('../images/triangle_down.png'); 
-} 
-table.tablesorter .headerSortUp { 
-  background-image: url('../images/triangle_up.png'); 
+table.tablesorter .headerSortDown {
+  background-image: url("../images/triangle_down.png");
+}
+table.tablesorter .headerSortUp {
+  background-image: url("../images/triangle_up.png");
 }
 table.tablesorter caption{
-	background-color: @brand-orange-white;
-	color: @gray-base;
-	padding: @padding-large-vertical 0;
+  padding: @padding-large-vertical 0;
   font-size: @font-size-h1;
-	font-weight: bold;
+  font-weight: 700;
+  color: @gray-base;
+  background-color: @brand-orange-white;
 }

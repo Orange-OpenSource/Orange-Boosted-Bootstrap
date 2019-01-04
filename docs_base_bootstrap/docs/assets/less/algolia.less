@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-attribute-quotes */
+// stylelint-disable declaration-no-important
 
 // Docsearch overrides
 //
@@ -18,16 +18,16 @@
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 8px 15px rgba(0, 0, 0, .175);
 
-    @media min-width(@screen-sm-min) {
+    @media (min-width: @screen-sm-min) {
       width: 175%;
     }
 
     // Caret
-    &::before {
+    &:before {
       display: none !important;
     }
 
-    [class^=ds-dataset-] {
+    [class^="ds-dataset-"] {
       padding: 0 !important;
       overflow: visible !important;
       background-color: transparent !important;
@@ -36,6 +36,10 @@
 
     .ds-suggestions {
       margin-top: 0 !important;
+    }
+
+    .ds-input {
+      box-shadow: none;
     }
   }
 
@@ -72,7 +76,7 @@
     padding: 0 !important;
 
     // Vertical divider between column header and content
-    &::before {
+    &:before {
       display: none !important;
     }
   }

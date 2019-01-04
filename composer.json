@@ -1,0 +1,41 @@
+{
+  "name": "orange-opensource/orange-boosted-bootstrap",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v3.4.0.",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "Orange"
+  ],
+  "homepage": "http://boosted.orange.com",
+  "authors": [
+    {
+      "name": "Mark Otto",
+      "email": "markdotto@gmail.com"
+    },
+    {
+      "name": "Jacob Thornton",
+      "email": "jacobthornton@gmail.com"
+    },
+    {
+      "name": "Yves Gatesoupe",
+      "email": "yves1.gatesoupe@orange.com"
+    },
+    {
+      "name": "Loïc Laussel",
+      "email": "loic.laussel@orange.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
+  },
+  "license": "MIT",
+  "replace": {
+    "orange-opensource/orange-boosted-bootstrap": "self.version"
+  }
+}

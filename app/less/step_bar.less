@@ -1,3 +1,4 @@
+// stylelint-disable selector-max-class
 //
 // Orange stepbar
 //
@@ -45,8 +46,8 @@
     position: relative;
     float: left;
     padding: @padding-large-vertical ( @padding-base-horizontal / 2 ) @padding-large-vertical ( @padding-base-horizontal + @o-stepbar-arrow-width);
-    font-weight: bold;
     font-size: @navbar-font-size;
+    font-weight: 700;
     line-height: @navbar-font-size;
     color: @brand-orange-black;
     white-space: nowrap;
@@ -96,7 +97,7 @@
   }
 }
 
-@media(max-width: @screen-sm-max) {
+@media (max-width: @screen-sm-max) {
   .o-stepbar {
     .stepbar-item {
       padding: @o-stepbar-mobile-padding-vertical ( @padding-base-horizontal / 2 ) @o-stepbar-mobile-padding-vertical ( @padding-base-horizontal + @o-stepbar-mobile-arrow-width);
@@ -107,7 +108,7 @@
     .stepbar-item.current:after,
     .stepbar-item.next:after {
       right: -11px;
-      width: 12px; /* for Edge support*/
+      width: 12px; /* for Edge support */
       height: 100%;
       background-size: 12px 100%;
     }
@@ -123,7 +124,7 @@
         width: 20%;
 
         &.current {
-            width: 60%;
+          width: 60%;
         }
       }
 
@@ -135,15 +136,15 @@
         width: 20%;
 
         &.current {
-            width: 40%;
+          width: 40%;
         }
       }
 
       .stepbar-item {
-        text-align: center;
         width: 20%;
-        padding-left: 12px;
         padding-right: 0;
+        padding-left: 12px;
+        text-align: center;
 
         &:first-child {
           padding-left: 0;
@@ -152,7 +153,7 @@
         &.current {
           width: 60%;
 
-         .step-number {
+          .step-number {
             display: none;
           }
         }

@@ -1,20 +1,20 @@
+// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // o-link-arrow
 // --------------------------------------------------
 
 
 .o-link-arrow {
-  text-decoration: none;  
-  font-weight: @brand-font-weight-bold;
   font-size: @navbar-font-size;
-  
+  font-weight: @brand-font-weight-bold;
+  text-decoration: none;
+
   &:after {
-    font-family: "boosted";
-    content: "\e902"; // Unicode space added since inline-block means non-collapsing white-space
-    // TODO put those values in variable-orange file
-    padding: @o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal;//@o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal;
+    padding: @o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal;
+    font-family: boosted;
+    font-size: @o-link-arrow-separator-size;
     color: @o-link-arrow-color;
-    font-size: @o-link-arrow-separator-size;    
+    content: "\e902"; // Unicode space added since inline-block means non-collapsing white-space
   }
   &:hover,
   &:focus {
@@ -26,16 +26,15 @@
   // previous link
   &.back {
     &:after {
-      content: ""; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0;
+      content: ""; // Unicode space added since inline-block means non-collapsing white-space
     }
     &:before {
-      font-family: "boosted";
-      content: "\e903"; // Unicode space added since inline-block means non-collapsing white-space
-      // TODO put those values in variable-orange file
-      padding: @o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal @o-link-arrow-separator-padding-vertical 0;//@o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal;
-      color: @o-link-arrow-color;
+      padding: @o-link-arrow-separator-padding-vertical @o-link-arrow-separator-padding-horizontal @o-link-arrow-separator-padding-vertical 0;
+      font-family: boosted;
       font-size: @o-link-arrow-separator-size;
+      color: @o-link-arrow-color;
+      content: "\e903"; // Unicode space added since inline-block means non-collapsing white-space
     }
     &:hover,
     &:focus {

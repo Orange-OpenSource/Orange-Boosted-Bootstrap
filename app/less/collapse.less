@@ -1,12 +1,13 @@
+// stylelint-disable selector-max-class,selector-max-compound-selectors,font-family-no-missing-generic-family-keyword
 //
 // Accordions //
 //
 .o-accordion
 {
-   .panel{
-    border-top:0;
-    border-left:0;
-    border-right:0;
+  .panel{
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
   }
 
   .panel-default {
@@ -16,7 +17,7 @@
       border-top: 1px solid #ccc;
     }
   }
-  
+
   // For mobile display emphase the border
   @media (max-width: @screen-sm-max) {
     .panel-default {
@@ -29,9 +30,9 @@
   }
 
   .panel-default > .panel-heading {
+    padding: 0;
     background-image: none;
     filter: none;
-    padding: 0;
     + .panel-collapse > .panel-body {
       border-top: 0;
     }
@@ -42,10 +43,10 @@
     }
 
     a:after{
-      font-family: "boosted";
-      font-size: 13px;
-      margin-right: 10px;
       float: right;
+      margin-right: 10px;
+      font-family: boosted;
+      font-size: 13px;
       content: "\e900";
     }
 

@@ -1,8 +1,8 @@
 /* ========================================================================
  * Bootstrap: collapse.js v3.4.0
- * http://getbootstrap.com/javascript/#collapse
+ * https://getbootstrap.com/docs/3.4/javascript/#collapse
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -15,10 +15,10 @@
   // ================================
 
   var Collapse = function (element, options) {
-    this.$element      = $(element)
-    this.options       = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
-                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.$element = $(element)
+    this.options = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+      '[data-toggle="collapse"][data-target="#' + element.id + '"]')
     this.transitioning = null
 
     if (this.options.parent) {
@@ -30,7 +30,7 @@
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION  = '3.4.0'
+  Collapse.VERSION = '3.4.0'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -39,55 +39,54 @@
   }
 
   // boosted mod
-  var uniqueId = function(prefix) {
-		return (prefix || 'ui-id') + '-' + Math.floor(Math.random()*1000+1);
-	}
-
-  var $accordions =  $('[data-multipleAtATime="true"]');
-  if($accordions)
-  {
-      $accordions.each(function() {
-        $(this).attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' });
-      })
+  var uniqueId = function (prefix) {
+    return (prefix || 'ui-id') + '-' + Math.floor(Math.random() * 1000 + 1);
   }
 
-	var $colltabs =  $('[data-toggle="collapse"]:not(.navbar-toggle)');
-	$colltabs.attr({ 'role':'tab', 'aria-expanded':'false' });
-	$colltabs.each(function() {
-		var colltab = $(this),
-    collpanel = colltab.attr('data-target') ? $(colltab.attr('data-target')) : $(colltab.attr('href')),
-		parent  = colltab.attr('data-parent'),
-		collparent = parent && $(parent),
-		collid = colltab.attr('id') || uniqueId('ui-collapse'),
-    heading = '';
+  var $accordions = $('[data-multipleAtATime="true"]');
+  if ($accordions) {
+    $accordions.each(function () {
+      $(this).attr({ role: 'tablist', 'aria-multiselectable': 'true' });
+    })
+  }
 
-		colltab.attr('id', collid);
-		if(collparent){
-			collparent.attr({'role' : 'tablist'});
+  var $colltabs = $('[data-toggle="collapse"]:not(.navbar-toggle)');
+  $colltabs.attr({ role: 'tab', 'aria-expanded': 'false' });
+  $colltabs.each(function () {
+    var $colltab = $(this)
+    var collpanel = $colltab.attr('data-target') ? $($colltab.attr('data-target')) : $($colltab.attr('href'))
+    var parent = $colltab.attr('data-parent')
+    var collparent = parent && $(parent)
+    var collid = $colltab.attr('id') || uniqueId('ui-collapse')
+    var heading = ''
 
-			heading = collpanel.parent().children().first(); //On sélectionne le heading (panel-heading)
+    $colltab.attr('id', collid);
+    if (collparent) {
+      collparent.attr({ role: 'tablist' });
 
-			if(collpanel.hasClass('in')){
-				colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-expanded':'true'});
+      heading = collpanel.parent().children().first(); // On sï¿½lectionne le heading (panel-heading)
 
-				// don't change the attribute for menu panel specific case
-        if(!colltab.hasClass('navbar-toggle')) {
-            collpanel.attr({ 'role':'tabpanel', 'tabindex':'0', 'aria-labelledby':collid, 'aria-hidden':'false' });
-        }
-			} else {
-				colltab.attr({'aria-controls' : collpanel.attr('id')});
+      if (collpanel.hasClass('in')) {
+        $colltab.attr({ 'aria-controls': collpanel.attr('id'), 'aria-expanded': 'true' });
+
         // don't change the attribute for menu panel specific case
-        if(!colltab.hasClass('navbar-toggle')) {
-          collpanel.attr({ 'role':'tabpanel', 'tabindex':'-1', 'aria-labelledby':collid, 'aria-hidden':'true' });
+        if (!$colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role: 'tabpanel', tabindex: '0', 'aria-labelledby': collid, 'aria-hidden': 'false' });
+        }
+      } else {
+        $colltab.attr({ 'aria-controls': collpanel.attr('id') });
+        // don't change the attribute for menu panel specific case
+        if (!$colltab.hasClass('navbar-toggle')) {
+          collpanel.attr({ role: 'tabpanel', tabindex: '-1', 'aria-labelledby': collid, 'aria-hidden': 'true' });
         }
 
-				//Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (à ouvrir)
-				if(heading.hasClass('panel-heading') ){
-          colltab.addClass('collapsed');
-				}
-			}
-		}
-	})
+        // Si on a bien le heading, on ajoute une classe sur le premier enfant du header pour ajouter le chevron droite (ï¿½ ouvrir)
+        if (heading.hasClass('panel-heading')) {
+          $colltab.addClass('collapsed');
+        }
+      }
+    }
+  })
   // end mod
 
   Collapse.prototype.dimension = function () {
@@ -112,7 +111,7 @@
 
     // boosted mod
     if (actives && actives.length && !$(this.options.parent).attr('data-multipleAtATime')) {
-    // end mod
+      // end mod
       Plugin.call(actives, 'hide')
       activesData || actives.data('bs.collapse', null)
     }
@@ -126,7 +125,7 @@
       // boosted mod
       .attr('aria-hidden', false)
       .attr('tabindex', 0)
-      // end mod
+    // end mod
 
     this.$trigger
       .removeClass('collapsed')
@@ -171,7 +170,7 @@
       .attr('aria-expanded', false)
       .attr('aria-hidden', true)
       .attr('tabindex', -1)
-      // end mod
+    // end mod
 
     this.$trigger
       .addClass('collapsed')
@@ -190,7 +189,7 @@
     if (!$.support.transition) return complete.call(this)
 
     this.$element
-      [dimension](0)
+    [dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
@@ -236,8 +235,8 @@
 
   function Plugin(option) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.collapse')
+      var $this = $(this)
+      var data = $this.data('bs.collapse')
       var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
@@ -248,7 +247,7 @@
 
   var old = $.fn.collapse
 
-  $.fn.collapse             = Plugin
+  $.fn.collapse = Plugin
   $.fn.collapse.Constructor = Collapse
 
 
@@ -265,38 +264,38 @@
   // =================
 
   $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-    var $this   = $(this)
+    var $this = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
 
     var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.collapse')
-    var option  = data ? 'toggle' : $this.data()
+    var data = $target.data('bs.collapse')
+    var option = data ? 'toggle' : $this.data()
 
     Plugin.call($target, option)
   })
   // boosted mod
   // local navigation
-  $('.o-nav-local .nav-local.collapse a').on('click', function() {
-      $(this).parent().parent().prev('.local-select').text($(this).text());
+  $('.o-nav-local .nav-local.collapse a').on('click', function () {
+    $(this).parent().parent().prev('.local-select').text($(this).text());
   });
 
-  $('.o-nav-local .nav-local.collapse').on('shown.bs.collapse', function(){
-      $(this).find('li:first-child a').focus();
+  $('.o-nav-local .nav-local.collapse').on('shown.bs.collapse', function () {
+    $(this).find('li:first-child a').focus();
   });
 
-  $('.o-nav-local .nav-local.collapse').on('hidden.bs.collapse', function(){
-      $(this).prev('.local-select').focus();
+  $('.o-nav-local .nav-local.collapse').on('hidden.bs.collapse', function () {
+    $(this).prev('.local-select').focus();
   });
 
-  $(document).ready(function(){
-      $('.o-nav-local .local-select').each(function() {
-        $(this).text($(this).next('.nav-local.collapse').find('li:first-child a').text());
-      });
+  $(document).ready(function () {
+    $('.o-nav-local .local-select').each(function () {
+      $(this).text($(this).next('.nav-local.collapse').find('li:first-child a').text());
+    });
   });
 
-  $(document).on('click', function(){
-      Plugin.call($('.o-nav-local .collapse.in'), 'hide');
+  $(document).on('click', function () {
+    Plugin.call($('.o-nav-local .collapse.in'), 'hide');
   });
   // end mod
 

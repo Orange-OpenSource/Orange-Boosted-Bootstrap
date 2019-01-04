@@ -1,15 +1,16 @@
-// Orange calendar
+// stylelint-disable selector-no-qualifying-type
 //
+// Orange calendar
 //
 
 .o-calendar {
-   margin: @padding-small-horizontal;
-   width: @calendar-width;
-   background-color: #fff;
+  width: @calendar-width;
+  margin: @padding-small-horizontal;
+  background-color: #fff;
 
   .month-wrap {
-    height: @calendar-day-width;
     position: relative;
+    height: @calendar-day-width;
 
     .btn-prev,
     .btn-next {
@@ -23,23 +24,23 @@
     }
 
     .btn-next {
-      left: auto;
       right: 0;
+      left: auto;
     }
 
     .month {
       padding-top: @padding-small-horizontal;
-      text-align: center;
-      font-weight: bold;
       font-size: @font-size-base-up;
+      font-weight: 700;
       line-height: @font-size-base-up;
+      text-align: center;
     }
   }
 
   .cal-table {
+    margin: 0 auto;
     font-size: @font-size-base-up;
     text-align: center;
-    margin: 0 auto;
 
     thead {
       font-size: @font-size-base;
@@ -59,7 +60,7 @@
     }
 
     td {
-      font-weight: bold;
+      font-weight: 700;
 
       &.today {
         background-color: #fff;
@@ -83,8 +84,8 @@
 
       &.empty,
       &.empty:hover {
-        background-color: #fff;
         color: @gray-light-plus;
+        background-color: #fff;
       }
 
       &.disabled {
@@ -93,8 +94,8 @@
 
         &:hover {
           color: @gray-dark;
-          background-color: @gray-lighter;
           cursor: not-allowed;
+          background-color: @gray-lighter;
         }
       }
     }

@@ -34,10 +34,15 @@ $(function () {
 
   QUnit.test('should show a collapsed element', function (assert) {
     assert.expect(2)
-    var $el = $('<div class="collapse"/>').bootstrapCollapse('show')
+    var done = assert.async()
 
-    assert.ok($el.hasClass('in'), 'has class "in"')
-    assert.ok(!/height/i.test($el.attr('style')), 'has height reset')
+    $('<div class="collapse"/>')
+      .on('shown.bs.collapse', function () {
+        assert.ok($(this).hasClass('in'), 'has class "in"')
+        assert.ok(!/height/i.test($(this).attr('style')), 'has height reset')
+        done()
+      })
+      .bootstrapCollapse('show')
   })
 
   QUnit.test('should hide a collapsed element', function (assert) {
@@ -352,11 +357,11 @@ $(function () {
         + '</div>'
     var $groups = $(accordionHTML).appendTo('#qunit-fixture').find('.panel')
 
-    var $target1 = $('<a role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
+    $('<a role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
 
     var $element1 = $('<div id="body1" aria-hidden="false" class="in"/>').appendTo($groups.eq(0))
 
-    var $target2 = $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
+    $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
 
     var $element2 = $('<div id="body2" aria-hidden="true"/>').appendTo($groups.eq(1))
 
@@ -385,11 +390,11 @@ $(function () {
         + '</div>'
     var $groups = $(accordionHTML).appendTo('#qunit-fixture').find('.panel')
 
-    var $target1 = $('<a role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
+    $('<a role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
 
     var $element1 = $('<div id="body1" tabindex="0" class="in"/>').appendTo($groups.eq(0))
 
-    var $target2 = $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
+    $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
 
     var $element2 = $('<div id="body2" tabindex="-1"/>').appendTo($groups.eq(1))
 
@@ -418,11 +423,11 @@ $(function () {
         + '</div>'
     var $groups = $(accordionHTML).appendTo('#qunit-fixture').find('.panel')
 
-    var $target1 = $('<a class="collapsed" role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
+    $('<a class="collapsed" role="button" data-toggle="collapse" href="#body1" data-parent="#accordion"/>').appendTo($groups.eq(0))
 
     $('<div id="body1"/>').appendTo($groups.eq(0))
 
-    var $target2 = $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
+    $('<a class="collapsed" data-toggle="collapse" role="button" href="#body2" data-parent="#accordion"/>').appendTo($groups.eq(1))
 
     $('<div id="body2"/>').appendTo($groups.eq(1))
 

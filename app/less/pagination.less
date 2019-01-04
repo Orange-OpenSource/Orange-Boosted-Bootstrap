@@ -1,207 +1,86 @@
 //
 // Pagination (multiple pages)
 // --------------------------------------------------
-
 .pagination {
-    display: inline-block;
-    list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin: @line-height-computed 0;
+  border-radius: @border-radius-base;
 
   > li {
-      float: left;
-      margin: 0;
-      + li{
-         margin-left: 10px;
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: @padding-base-vertical @padding-base-horizontal;
+      margin-left: -1px;
+      line-height: @line-height-base;
+      color: @pagination-color;
+      text-decoration: none;
+      background-color: @pagination-bg;
+      border: 1px solid @pagination-border;
+
+      &:hover,
+      &:focus {
+        z-index: 2;
+        color: @pagination-hover-color;
+        background-color: @pagination-hover-bg;
+        border-color: @pagination-hover-border;
       }
-      > a {
-          border: 2px solid @brand-orange-clear;
-          font-size: @navbar-font-size;
-          font-weight: @brand-font-weight-bold;
-          line-height: 1;
-          margin-left: 0;
-          padding: @navbar-padding-vertical 0;
-          width: @pagination-width;
-          text-align: center;
-        .icon-arrow-next,
-        .icon-arrow-previous {
-          font-size: @font-size-base;
-        }
-
-        .icon-arrow-next:before {
-          margin-left: 2px;
-        }
-        .icon-arrow-previous:before {
-          margin-right: 2px;
-        }
-
-          &:hover,
-          &:focus {
-              color: @brand-orange-black;
-              background-color: @brand-orange-clear;
-              border: 2px solid @brand-orange-black;
-          }
-
-          &:active:hover {
-            color: #fff;
-            background-color: @brand-orange;
-            border-color: @brand-orange;
-          }
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        .border-left-radius(@border-radius-base);
       }
-
-      &.bordered > a,
-      &.bordered > a {
-        border: 2px solid @brand-orange-black;
-        width: auto;
-        min-width: @pagination-width;
-
-        &:hover {
-          color: #fff;
-          background-color: #000;
-          border-color: #000;
-        }
-
-        &:active:hover {
-          color: #fff;
-          background-color: @brand-primary;
-          border-color: @brand-primary;
-        }
+    }
+    &:last-child {
+      > a,
+      > span {
+        .border-right-radius(@border-radius-base);
       }
+    }
+  }
 
-      &.active > a,
-      &.active > a:hover,
-      &.active > a:focus {
-          color: @brand-orange-white;
-      }
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: @pagination-active-color;
+      cursor: default;
+      background-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
+    }
+  }
 
-      &.disabled > a,
-      &.disabled > a:hover,
-      &.disabled > a:focus,
-      &.bordered.disabled > a,
-      &.bordered.disabled > a:hover,
-      &.bordered.disabled > a:focus {
-          border: 2px solid @gray-light;
-          color: @gray-light;
-          background-color: @brand-orange-clear;
-      }
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @pagination-disabled-color;
+      cursor: @cursor-disabled;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
+    }
   }
 }
 
-.pager {
-  display: inline-block;
+// Sizing
+// --------------------------------------------------
 
-  li {
-    float: left;
-    margin: 0;
+// Large
+.pagination-lg {
+  .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
 
-    + li{
-        margin-left: 10px;
-    }
-
-    > a {
-      position: relative;
-      border: 2px solid black;
-      font-size: @navbar-font-size;
-      font-weight: @brand-font-weight-bold;
-      line-height: 1;
-      margin-left: 0;
-      padding: @navbar-padding-vertical 0;
-      min-width: @pagination-width;
-      text-align: center;
-
-      .icon-arrow-previous,
-      .icon-arrow-next {
-        font-size: @font-size-base;
-      }
-
-      .icon-arrow-next:before {
-        margin-left: 2px;
-      }
-      .icon-arrow-previous:before {
-        margin-right: 2px;
-      }
-
-      &:focus {
-        color: #fff;
-        background-color: #000;
-        border-color: #000;
-      }
-
-      &:hover {
-        color: #fff;
-        background-color: #000;
-      }
-
-      &:active:hover {
-        color: #fff;
-        background-color: @brand-orange;
-        border-color: @brand-orange;
-      }
-    }
-
-    &.disabled > a,
-    &.disabled > a:hover,
-    &.disabled > a:focus,
-    &.disabled > a:active,
-    &.disabled > a:active:hover {
-      color: #ccc;
-      background-color: #fff;
-      border-color: #ccc;
-    }
-  }
-
-  .presentation{
-    padding: @navbar-padding-vertical 0;
-    font-size: @navbar-font-size;
-    font-weight: @brand-font-weight-bold;
-  }
-
-  .previous,
-  .next {
-    position: relative;
-
-    > a {
-      padding: @pagination-padding;
-
-       &:focus:before,
-       &:hover:before,
-       &:active:hover:before {
-        color: #fff;
-      }
-    }
-  }
-
-  .previous > a {
-    padding-left: @pagination-label-padding;
-  }
-
-  .previous > a:before {
-    font-family: "boosted";
-    content: "\e903";
-    position: absolute;
-    color: #000;
-    font-size: @font-size-base;
-    left: @pagination-arrow-padding;
-    top: @pagination-arrow-top;
-  }
-
-  .next > a {
-    padding-right: @pagination-label-padding;
-  }
-
-  .next > a:before {
-    font-family: "boosted";
-    content: "\e902";
-    position: absolute;
-    color: #000;
-    font-size: @font-size-base;
-    right: @pagination-arrow-padding;
-    top: @pagination-arrow-top;
-  }
-
-  .previous.disabled > a:before,
-  .next.disabled > a:before,
-  .previous.disabled > a:active:hover:before,
-  .next.disabled > a:active:hover:before
-   {
-    color: #ccc;
-  }
+// Small
+.pagination-sm {
+  .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }

@@ -1,11 +1,12 @@
-// Orange content panel
+// stylelint-disable unit-no-unknown
 //
+// Orange content panel
 //
 
 .o-panel {
-   position: relative;
-   height: @o-panel-height;
-   overflow: hidden;
+  position: relative;
+  height: @o-panel-height;
+  overflow: hidden;
 
   .panel-image {
     min-height: 100%;
@@ -20,17 +21,17 @@
   .panel-block {
     position: absolute;
     bottom: 0;
+    width: calc(100% - 2rem);
+    min-height: @o-panel-block-min-height;
     padding: @o-panel-block-padding;
     color: @brand-orange-white;
     background-color: @brand-orange-black;
-    min-height: @o-panel-block-min-height;
-    width: calc(100% - 2rem);
 
     .panel-link {
-      color: @brand-orange-white;
       font-size: @font-size-h5;
       font-weight: @brand-font-weight-bold;
       line-height: 1;
+      color: @brand-orange-white;
     }
   }
 
@@ -38,12 +39,12 @@
 
 @media (max-width: @screen-xs-max) {
   .o-panel {
-    margin-bottom: @1rem;
     height: @14-2rem;
+    margin-bottom: @1rem;
 
     .panel-block {
-      min-height: @6rem;
       width: calc(100% - 1rem);
+      min-height: @6rem;
     }
   }
 }
@@ -53,8 +54,8 @@
     margin-bottom: @o-panel-block-margin-bottom-xs;
 
     .panel-block {
-      min-height: @o-panel-block-min-height-xs;
       width: calc(100% - 1rem);
+      min-height: @o-panel-block-min-height-xs;
     }
   }
 }
@@ -64,8 +65,8 @@
     height: @o-panel-height-md;
 
     .panel-block {
-      min-height: @o-panel-block-min-height-xs;
       width: calc(100% - 2rem);
+      min-height: @o-panel-block-min-height-xs;
     }
   }
 }

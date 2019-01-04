@@ -1,6 +1,6 @@
 /*!
- boosted - v3.3.3 - Orange Boosted with Boostrap
- Copyright 2015 - 2018 Orange SA, all right reserved
+ boosted - v3.4.0 - Orange Boosted with Boostrap
+ Copyright 2015 - 2019 Orange SA, all right reserved
 MIT Licensed 
 */
 
@@ -10,12 +10,11 @@ MIT Licensed
         See NOTICE.txt for more informations
 */
 @font-face {
-  font-family: 'icon-orange';
+  font-family: icon-orange;
   font-style: normal;
-  font-weight: normal;
-
-  src: url('../fonts/icon-orange.eot?aaqub7');
-  src: url('../fonts/icon-orange.eot?aaqub7#iefix') format('embedded-opentype'), url('../fonts/icon-orange.ttf?aaqub7') format('truetype'), url('../fonts/icon-orange.woff?aaqub7') format('woff'), url('../fonts/icon-orange.svg?aaqub7#icon-orange') format('svg');
+  font-weight: 400;
+  src: url("../fonts/icon-orange.eot?aaqub7");
+  src: url("../fonts/icon-orange.eot?aaqub7#iefix") format("embedded-opentype"), url("../fonts/icon-orange.ttf?aaqub7") format("truetype"), url("../fonts/icon-orange.woff?aaqub7") format("woff"), url("../fonts/icon-orange.svg?aaqub7#icon-orange") format("svg");
 }
 .icon-checkbox_tick,
 .icon-2for1cinematicket,
@@ -679,12 +678,11 @@ MIT Licensed
 .icon-popout-performance,
 .icon-popout-security,
 .icon-popout-teamwork {
-  font-family: "icon-orange" !important;
+  font-family: icon-orange !important;
   font-style: normal;
   font-variant: normal;
-  line-height: .875;
+  line-height: 0.875;
   text-transform: none;
-
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

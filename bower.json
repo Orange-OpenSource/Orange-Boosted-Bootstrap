@@ -13,51 +13,27 @@
     "framework",
     "web"
   ],
-  "homepage": "http://orange-opensource.github.io/Orange-Boosted-Bootstrap",
+  "homepage": "http://boosted.orange.com/",
   "license": "MIT",
   "moduleType": "globals",
   "main": [
     "dist/css/bootstrap-orange2015.css",
-    "dist/css/boosted2015.css",
-    "dist/css/orangeHelvetica.css",
-    "dist/css/orangeIcons.css",
-    "dist/js/boosted.js",
-    "dist/fonts/glyphicons-halflings-regular.eot",
-    "dist/fonts/glyphicons-halflings-regular.svg",
-    "dist/fonts/glyphicons-halflings-regular.ttf",
-    "dist/fonts/glyphicons-halflings-regular.woff",
-    "dist/fonts/glyphicons-halflings-regular.woff2",
-    "dist/fonts/icon-orange.eot",
-    "dist/fonts/icon-orange.svg",
-    "dist/fonts/icon-orange.ttf",
-    "dist/fonts/icon-orange.woff",
-    "dist/fonts/boosted.eot",
-    "dist/fonts/boosted.svg",
-    "dist/fonts/boosted.ttf",
-    "dist/fonts/boosted.woff",
-    "dist/fonts/HelvNeue75_W1G.woff2",
-    "dist/fonts/HelvNeue75_W1G.woff",
-    "dist/fonts/HelvNeue75_W1G.ttf",
-    "dist/fonts/HelvNeue75_W1G.svg",
-    "dist/fonts/HelvNeue75_W1G.eot",
-    "dist/fonts/HelvNeue55_W1G.woff2",
-    "dist/fonts/HelvNeue55_W1G.woff",
-    "dist/fonts/HelvNeue55_W1G.ttf",
-    "dist/fonts/HelvNeue55_W1G.svg",
-    "dist/fonts/HelvNeue55_W1G.eot"
+    "dist/js/boosted.js"
   ],
   "ignore": [
     "/.*",
+    "composer.json",
+    "CONTRIBUTING.md",
     "*.zip"
   ],
   "devDependencies": {},
   "dependencies": {
-    "bootstrap": "3.3.7",
+    "jquery": "1.9.1 - 3",
     "bootstrapaccessibilityplugin": ">=1.0.3",
     "jquery-validation": "~1.13.1"
   },
   "author": {
     "name": "Orange SA"
   },
-  "version": "3.3.3"
+  "version": "3.4.0"
 }

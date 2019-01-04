@@ -1,0 +1,208 @@
+// stylelint-disable selector-no-qualifying-type,font-family-no-missing-generic-family-keyword
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+.pagination {
+  display: inline-block;
+  list-style: none;
+
+  > li {
+    float: left;
+    margin: 0;
+    + li{
+      margin-left: 10px;
+    }
+    > a {
+      width: @pagination-width;
+      padding: @navbar-padding-vertical 0;
+      margin-left: 0;
+      font-size: @navbar-font-size;
+      font-weight: @brand-font-weight-bold;
+      line-height: 1;
+      text-align: center;
+      border: 2px solid @brand-orange-clear;
+      .icon-arrow-next,
+      .icon-arrow-previous {
+        font-size: @font-size-base;
+      }
+
+      .icon-arrow-next:before {
+        margin-left: 2px;
+      }
+      .icon-arrow-previous:before {
+        margin-right: 2px;
+      }
+
+      &:hover,
+      &:focus {
+        color: @brand-orange-black;
+        background-color: @brand-orange-clear;
+        border: 2px solid @brand-orange-black;
+      }
+
+      &:active:hover {
+        color: #fff;
+        background-color: @brand-orange;
+        border-color: @brand-orange;
+      }
+    }
+
+    &.bordered > a,
+    &.bordered > a {
+      width: auto;
+      min-width: @pagination-width;
+      border: 2px solid @brand-orange-black;
+
+      &:hover {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+      }
+
+      &:active:hover {
+        color: #fff;
+        background-color: @brand-primary;
+        border-color: @brand-primary;
+      }
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      color: @brand-orange-white;
+    }
+
+    &.disabled > a,
+    &.disabled > a:hover,
+    &.disabled > a:focus,
+    &.bordered.disabled > a,
+    &.bordered.disabled > a:hover,
+    &.bordered.disabled > a:focus {
+      color: @gray-light;
+      background-color: @brand-orange-clear;
+      border: 2px solid @gray-light;
+    }
+  }
+}
+
+.pager {
+  display: inline-block;
+
+  li {
+    float: left;
+    margin: 0;
+
+    + li{
+      margin-left: 10px;
+    }
+
+    > a {
+      position: relative;
+      min-width: @pagination-width;
+      padding: @navbar-padding-vertical 0;
+      margin-left: 0;
+      font-size: @navbar-font-size;
+      font-weight: @brand-font-weight-bold;
+      line-height: 1;
+      text-align: center;
+      border: 2px solid @brand-orange-black;
+
+      .icon-arrow-previous,
+      .icon-arrow-next {
+        font-size: @font-size-base;
+      }
+
+      .icon-arrow-next:before {
+        margin-left: 2px;
+      }
+      .icon-arrow-previous:before {
+        margin-right: 2px;
+      }
+
+      &:focus {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: #000;
+      }
+
+      &:active:hover {
+        color: #fff;
+        background-color: @brand-orange;
+        border-color: @brand-orange;
+      }
+    }
+
+    &.disabled > a,
+    &.disabled > a:hover,
+    &.disabled > a:focus,
+    &.disabled > a:active,
+    &.disabled > a:active:hover {
+      color: #ccc;
+      background-color: #fff;
+      border-color: #ccc;
+    }
+  }
+
+  .presentation{
+    padding: @navbar-padding-vertical 0;
+    font-size: @navbar-font-size;
+    font-weight: @brand-font-weight-bold;
+  }
+
+  .previous,
+  .next {
+    position: relative;
+
+    > a {
+      padding: @pagination-padding;
+
+      &:focus:before,
+      &:hover:before,
+      &:active:hover:before {
+        color: #fff;
+      }
+    }
+  }
+
+  .previous > a {
+    padding-left: @pagination-label-padding;
+  }
+
+  .previous > a:before {
+    position: absolute;
+    top: @pagination-arrow-top;
+    left: @pagination-arrow-padding;
+    font-family: boosted;
+    font-size: @font-size-base;
+    color: #000;
+    content: "\e903";
+  }
+
+  .next > a {
+    padding-right: @pagination-label-padding;
+  }
+
+  .next > a:before {
+    position: absolute;
+    top: @pagination-arrow-top;
+    right: @pagination-arrow-padding;
+    font-family: boosted;
+    font-size: @font-size-base;
+    color: #000;
+    content: "\e902";
+  }
+
+  .previous.disabled > a:before,
+  .next.disabled > a:before,
+  .previous.disabled > a:active:hover:before,
+  .next.disabled > a:active:hover:before
+   {
+    color: #ccc;
+  }
+}
