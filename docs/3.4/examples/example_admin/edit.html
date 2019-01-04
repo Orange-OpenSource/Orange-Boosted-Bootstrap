@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Edit an entry</title>
+		    <link rel="stylesheet" href="../../dist/css/orangeHelvetica.css" />
+		    <link rel="stylesheet" href="../../dist/css/orangeIcons.css" />
+                                                                                   
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../../dist/css/bootstrap-orangeIE82015.css" />        
+        <link rel="stylesheet" href="../../dist/css/boostedIE82015.css">
+        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!--[if (gte IE 9) | (!IE)]><!--> 
+        <link rel="stylesheet" href="../../dist/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../dist/css/boosted2015.css">
+        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <!--<![endif]-->
+		<link href="example.css" rel="stylesheet">
+
+	</head>
+	<body role="document">
+
+		<div class="skiplinks" >
+			<div class="skiplinks_section axs_hide">
+				<ul>
+					<li id="cdu_skiplink">
+					</li>
+					<li>
+						<a href="#content" class="skiplinks_trigger">content</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<header role="banner">
+      <nav class="navbar navbar-inverse" role="navigation">
+  			<div class="container-fluid">
+  				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+  						<span class="sr-only">toggle navigation</span>
+  						<span class="icon-bar"></span>
+  						<span class="icon-bar"></span>
+  						<span class="icon-bar"></span>
+  					</button>
+  					<a class="navbar-brand" href="#"><span class="sr-only">Link to the homepage</span></a>
+  				</div>
+  
+  				<!-- Collect the nav links, forms, and other content for toggling -->
+  				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  					<ul class="nav navbar-nav">
+  						<li><a href="edit.html">edit news &nbsp;<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+  						<li><a href="#">preferences &nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+  					</ul>
+  					<ul class="nav navbar-nav navbar-right">
+  						<li>
+  							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+  								<span class="glyphicon glyphicon-user" aria-hidden="true"></span> &nbsp;hello <span class="orange">admin&nbsp;</span><b class="caret" aria-hidden="true"></b>
+  							</a>
+  							<ul class="dropdown-menu">
+  								<li><a href="#">logout</a></li>
+  								<li><a href="#">my portal</a></li>
+  							</ul>
+  						</li>
+  					</ul>
+  				</div><!-- /.navbar-collapse -->
+  			</div><!-- /.container -->
+  		</nav>
+    </header>
+
+    <main id="content" class="container" role="main">
+			<div class="row">
+				<div class="col-sm-6">
+					<a href="#">
+						<img src="../../dist/images/logo-orange.png" alt="Back to the homepage">
+					</a>
+					<h1>edit a news</h1>
+				</div>
+			</div>
+		
+			<div class="row">
+				<form action="/" id="PostAdminEditForm" method="post" accept-charset="utf-8" class="col-xs-12">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group required">
+								<label for="PostName">title: <span class="star">*</span></label>
+								<input name="data[Post][titre]" class="form-control" maxlength="255" type="text" id="PostName" required="required" aria-required="true" title="title is empty">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group required">
+								<label for="PostDate">date (<span id="date-format">mm/dd/yyyy</span>): <span class="star">*</span></label>
+								<input type="date" name="data[Post][date]" class="form-control" id="PostDate" required="required" aria-required="true" aria-describedby="date-format"  title="Enter a date  with dd/mm/yyyy format">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="PostCategoryId">category:</label>
+								<select name="data[Post][category_id]" class="form-control" id="PostCategoryId">
+									<option value="1">category #1</option>
+									<option value="2">category #2</option>
+									<option value="3">category #3</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="PostUser">autor: <span class="star">*</span></label>
+								<input name="data[Post][user]" class="form-control" maxlength="255" type="text" id="PostUser" required="required" aria-required="true" title="autor is empty">
+							</div>
+						</div>
+					</div>
+					<div class="form-group required">
+						<label for="PostContent">content:</label>
+						<textarea name="data[Post][contenue]" class="form-control" cols="30" rows="6" id="PostContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+					</div>
+					<div id="radio-action" class="form-inline" role="radiogroup" aria-required="true">
+						<input type="radio" class="required o-radio" required="required" name="action" value="saveDraft" id="draft" checked="checked">
+						<label for="draft">Save as a draft</label>
+						<input type="radio" class="required o-radio" required="required" name="action" value="onlineNow" id="now">
+						<label for="now">Online now!</label>
+					</div>
+					<div class="submit">
+						<input class="btn btn-primary" type="submit" value="Submit">
+					</div>
+				</form>  
+
+			 <hr class="col-xs-12">
+			</div><!-- fin de la row globale-->
+		</main><!--/.container-->
+
+
+		<footer role="contentinfo">
+			<div class="container">
+				<span>© Orange 2015</span>
+				<span id="id_for_cdu_link" class="pull-right"></span>
+			</div>
+		</footer>
+
+
+		<!-- Placed at the end of the document so the pages load faster -->
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQuery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+    <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
+    <script src="../../dist/js/boosted.js"></script>
+		<script type="text/javascript">
+			// Surcharge des valeurs du script de la toolbar
+			accessibilitytoolbar_custom={
+  			idSkipLinkIdLinkMode:"cdu_skiplink",
+  			cssSkipLinkClassName: "skiplinks_trigger",
+        idLinkModeContainer: "id_for_cdu_link",
+				callback:skiplinksAfterLoad
+			};
+
+			$(".skiplinks_trigger").focus(function(){
+				$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+			});
+			$(".skiplinks_trigger").blur(function(){
+				$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+			});  
+
+			function skiplinksAfterLoad(){
+				$(".skiplinks_trigger").focus(function(){
+					$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+				});
+				$(".skiplinks_trigger").blur(function(){
+					$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+				});  
+			}
+            
+                $('#PostDate').datepicker({
+                keyboardNavigation: false,
+                toggleActive: true
+                });
+		</script>
+
+		<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+
+	</body>
+</html>

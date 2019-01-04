@@ -1,0 +1,160 @@
+#header{
+	margin-top: 20px;
+}
+#header a{
+	display: inline-block;
+}
+h1 {
+	padding-top: 20px;
+}
+#header input{
+	height:35px;
+}
+#search{
+	margin-top: 2rem;
+}
+#search input {
+	padding: 0 10px;
+}
+#localNavigation{
+	margin-top: 5px;
+	padding-left: 0;
+	padding-right: 0;
+}
+#localNavigation nav{
+	margin-left: 0;
+	margin-right: 0;
+}
+#newsLeaderTitle small{
+	color:#666666;
+}
+#newsLeader .description p{
+	text-align: justify;
+}
+#newsLeader img{
+	max-width:100%;
+	height:auto;
+}
+#newsLeader .description p:first-child{
+	font-weight: bold;
+	color:#666666;
+	margin-top: 5px;
+}
+#comments h2{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CCCCCC
+}
+#comments .pagination {
+	margin:0;
+	float: right;
+}
+#comments .alert-danger{
+	background-color: #F2DEDE;
+	border-color: #EBCCD1;
+	background-image: none;
+	overflow: hidden;
+	padding: 10px;
+}
+#comments .commentsList{
+	padding-left: 0;
+}
+#comments .commentsList li{
+	border: 1px solid #DDDDDD;
+	box-shadow: 0 5px 10px -6px #999999;
+	margin-bottom: 20px;
+	padding: 15px;
+	color: #666666;
+	list-style: none;
+	cursor: pointer;
+}
+#comments ul li:hover{
+	background-color: #F5F5F5;
+}
+#comments .commentsList li span.comments {
+	display: block;
+	float: right;
+	margin: 0 0 10px 10px;
+}
+#comments .commentsList li span.comments a{
+	color: #F16E00;
+	text-decoration: underline;
+}
+#comments .commentsList li a {
+	color: #666;
+}
+#comments .commentsList li a:focus, #comments ul li a:hover{
+	text-decoration: inherit;
+}
+#comments .commentsList li a strong {
+	display: block;
+}
+.orange{
+	color: #F16E00;
+}
+.author{
+	margin-top: 5px;
+}
+#newsSupp{
+	clear: both;
+}
+#newsSupp p{
+	text-align: justify;
+	min-height: 180px;
+	overflow: hidden;
+}
+#newsSupp .news{
+	min-height: 310px;
+}
+#infos {
+	margin-top:22px;
+}
+.bold{
+	font-weight: bold;
+}
+#mostRead a, #mostShared a {
+	color: #444444;
+}
+#mostRead > ul, #mostShared > ul{
+	list-style-type: none;
+	padding: 0;
+}
+#mostRead > ul li, #mostShared > ul li{
+	margin-bottom: 10px;
+	padding-left: 30px;
+}
+#mostRead > ul li:nth-child(6){
+	margin-bottom:0;
+}
+#mostRead > ul li:nth-child(6) .glyphicon-chevron-right{
+	font-size: 12px;
+}
+#accordion{
+	margin-top: 10px;
+}
+footer {
+	background-color: #EEEEEE;
+	border-bottom: 1px solid #F3F3F3;
+	border-top: 1px solid #D6D6D6;
+	overflow: hidden;
+	min-height: 54px;
+	height: auto;
+	margin: 10px auto 20px;
+}
+footer a, footer span{
+	color: inherit;
+	text-align: center;
+}
+.mega-menu #id_for_cdu_link a{
+    color: #fff;
+}
+.mega-menu #id_for_cdu_link a:hover,.mega-menu #id_for_cdu_link a:focus{
+    color: #F16E00;
+}
+
+@media (max-width: 767px) {
+	.navbar .btn{
+		font-size: inherit;
+		padding: 6px 10px;
+		height: auto;
+	}
+}

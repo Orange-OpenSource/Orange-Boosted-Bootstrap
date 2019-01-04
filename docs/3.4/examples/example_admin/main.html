@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Admin - health news</title>
+		    <link rel="stylesheet" href="../../dist/css/orangeHelvetica.css" />
+		    <link rel="stylesheet" href="../../dist/css/orangeIcons.css" />
+                                                                                   
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../../dist/css/bootstrap-orangeIE82015.css" />        
+        <link rel="stylesheet" href="../../dist/css/boostedIE82015.css">
+        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!--[if (gte IE 9) | (!IE)]><!--> 
+        <link rel="stylesheet" href="../../dist/css/bootstrap-orange2015.css" />
+        <link rel="stylesheet" href="../../dist/css/boosted2015.css">
+        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <!--<![endif]-->
+		<link href="example.css" rel="stylesheet">
+		
+
+	</head>
+	<body role="document">
+		<div class="skiplinks" >
+			<div class="skiplinks_section axs_hide">
+				<ul>
+					<li id="cdu_skiplink">
+					</li>
+					<li>
+						<a href="#content" class="skiplinks_trigger">content</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<header role="banner">
+      <nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><span class="sr-only">Link to the homepage</span></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#" role="button">edit news &nbsp;<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+						<li><a href="#" role="button">preferences &nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span> &nbsp;hello <span class="orange">admin&nbsp;</span><b class="caret" aria-hidden="true"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">logout</a></li>
+								<li><a href="#">my portal</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+    </header>
+    
+    <div id="header" class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#">
+                    <img src="../../dist/images/logo-orange.png" alt="Back to the Homepage">
+                </a>
+                <h1>news administration</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="localContainer" class="container">
+			<nav id="localNavigation" class="navbar navbar-default nav-local" role="navigation">
+        <div class="container-fluid">
+  				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+  						<span class="sr-only">toggle navigation</span>
+  						<span class="icon-bar"></span>
+  					</button>
+  				</div>
+  
+  				<div class="collapse navbar-collapse local" id="bs-example-navbar-collapse-2">
+  					<ul class="nav navbar-nav local-nav">
+  						<li><a href="#">all</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">world</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">entertainment</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">finance</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">technology</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">weather</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">sport</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">video</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li><a href="#">pictures</a><div class='arrow' aria-hidden='true'></div></li>
+  						<li class="active"><a href="#">health</a><div class='arrow' aria-hidden='true'></div></li>
+  					</ul>
+  				</div><!-- /.navbar-collapse -->
+        </div>
+			</nav>       
+		</div><!-- /.container -->
+    
+		<main id="content" role="main" class="container">
+      <div class="row">
+        <div class="col-xs-12">        
+          <a href="edit.html" class="btn btn-primary">Add a news</a>
+        </div>          
+  			<table id="news-table" class="table table-striped tablesorter col-xs-12">
+  				<thead>
+  					<tr>
+  						<th scope="col"><a href="#">ID<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col"><a href="#">title<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col"><a href="#">date<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col"><a href="#">category<span class="sr-only"> sortable</span></a></th>
+  						<th scope="col">actions</th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr>
+  						<td>1</td>
+  						<td>Eat 5 fruits and vegetables a day</td>
+  						<td>07/07/2014 09:00</td>
+  						<td>Health</td>
+  						<td>
+  							<a href="edit.html" class="btn btn-primary">Edit</a>
+  							<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
+  						</td>
+  					</tr>
+  					<tr>
+  						<td>9</td>
+  						<td>Eat potatoes</td>
+  						<td>09/24/2014 10:00</td>
+  						<td>Health</td>
+  						<td>
+  							<a href="edit.html" class="btn btn-primary">Edit</a>
+  							<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
+  						</td>
+  					</tr>
+  					<tr>
+  						<td>10</td>
+  						<td>Chikungunya: protect yourself</td>
+  						<td>09/06/2014 09:00</td>
+  						<td>Health</td>
+  						<td>
+  							<a href="edit.html" class="btn btn-primary">Edit</a>
+  							<a href="#" class="btn btn-danger" target="_self" data-toggle="modal" data-target="#confirm-dialog">Delete</a>
+  						</td>
+  					</tr>
+  				</tbody>
+  			</table>
+  
+  			<!-- Nav tabs A-->
+  			<ul class="nav nav-tabs col-xs-12">
+  				<li class="active"><a href="#help" data-toggle="tab">Help</a></li>
+  				<li><a href="#faq" data-toggle="tab">FAQ</a></li>
+  			</ul>
+  			<div class="tab-content col-xs-12">
+  				<div class="tab-pane active" id="help">
+          From this view, you can edit or delete entry of your web site. You can also add an entry by clicking on "add an news" button.<br/>You can reorder column by clicking on them.<br/>Finaly, you can search an item by typing his title or his ID in the search field, at the top of the page.
+  				</div>
+  				<div class="tab-pane" id="faq">
+  					<ul>
+  						<li><a href="#">I can't delete an entry</a></li>
+  						<li><a href="#">I've got an error 500 when i try to edit an entry</a></li>
+  						<li><a href="#">Another question</a></li>
+  					</ul>
+  			</div>
+  		</div><!-- fin nav tabs A -->
+  		<hr class="col-xs-12">                             
+  	 </div>
+		</main><!--/.container-->       
+  
+		<!-- Modal -->
+		<div class="modal fade" id="confirm-dialog" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title h4" id="myModalLabel">Are you sure?</h2>
+					</div>
+					<div class="modal-body">
+						<p>If you delete this entry, all information will be permanently lost. Are you sure?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- fin modal -->
+
+
+	<footer role="contentinfo">
+		<div class="container">
+			<span>© Orange 2015</span>
+			<span id="id_for_cdu_link" class="pull-right"></span>
+		</div>
+	</footer>
+
+
+	<!-- Placed at the end of the document so the pages load faster -->
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQuery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+    <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
+    <script src="../../dist/js/boosted.js"></script>
+
+
+	<script>
+		$(document).ready(function() 
+											{ 
+												$("#news-table").tablesorter({ 
+													// pass the headers argument and assing a object 
+													headers: { 
+														// assign the secound column (we start counting zero) 
+														4: { 
+															// disable it by setting the property sorter to false 
+															sorter: false 
+														}
+													} 
+												}); 
+											} 
+										 );
+	</script>
+
+
+	<script type="text/javascript">
+		// Surcharge des valeurs du script de la toolbar
+		accessibilitytoolbar_custom={
+			idSkipLinkIdLinkMode:"cdu_skiplink",
+			cssSkipLinkClassName: "skiplinks_trigger",
+      idLinkModeContainer: "id_for_cdu_link",
+			callback:skiplinksAfterLoad
+		};
+
+		$(".skiplinks_trigger").focus(function(){
+			$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+		});
+		$(".skiplinks_trigger").blur(function(){
+			$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+		});  
+
+		function skiplinksAfterLoad(){
+			$(".skiplinks_trigger").focus(function(){
+				$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
+			});
+			$(".skiplinks_trigger").blur(function(){
+				$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
+			});  
+		}
+	</script>
+
+	<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+
+
+
+	<!--<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>-->
+	</body>
+</html>
