@@ -216,59 +216,7 @@
 </div>
 
 <div class="bs-docs-section clearfix">
-    		<style>
-
-			@media only screen and (max-width : 650px) {Z
-
-				#myTable .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-				#myTable * html .cf { zoom: 1; }
-				#myTable *:first-child+html .cf { zoom: 1; }
-				#myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
-				#myTable th,
-				#myTable td { margin: 0; vertical-align: top; }
-				#myTable th { text-align: left; }
-				#myTable table { display: block; position: relative; width: 100%; }
-				#myTable thead { display: block; float: left; }
-				#myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
-				#myTable thead tr { display: block; }
-				#myTable th { display: block; text-align: right; }
-				#myTable tbody tr { display: inline-block; vertical-align: top; }
-				#myTable td { display: block; min-height: 1.25em; text-align: left; }
-
-				/* sort out borders */
-				#myTable th { border-bottom: 0; border-left: 0; border-top: 1px solid #A6A6A6; }
-				#myTable td { border-right: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-bottom: 0; }
-				#myTable th:last-child,
-				#myTable td:last-child { border-bottom: 1px solid #babcbf; }
-
-			}
-
-			/* accessibility */
-			table.tablesorter > thead > tr > th[aria-sort="descending"]:after { 
-				content:"trié par ordre décroissant"; 
-				border: 0 none;
-				clip: rect(0px, 0px, 0px, 0px);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-
-			/* accessibility */
-			table.tablesorter > thead > tr > th[aria-sort="ascending"]:after { 
-				content:"trié par ordre croissant"; 
-				border: 0 none;
-				clip: rect(0px, 0px, 0px, 0px);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-		</style>
+			
   <h1 id="complextable" class="page-header">Table sorter</h1>
   <p class="lead">Table with sortable columns.</p>  
   <p>Add the <code>.tablesorter</code> class to the <code>table</code> tag will make the table headers sortable. For ergonomic reaseons, you need to initiate the table with a default sorted row by including the folowing script, you can also put a text just before the table to inform the user that headers are sortable. <a href='http://tablesorter.com/docs/' target='_blank'>More informations about tablesorter options (External link)</a></p>    
@@ -990,7 +938,7 @@
 
   <h2>Small popin variant</h2>
   <div class="bs-example bs-example-modal" data-example-id="static-modal">
-      <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1020,7 +968,7 @@
     Live demo
   </button>
 
-  <div class="modal modal-ssm fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+  <div class="modal modal-ssm fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
       <div class="modal-dialog modal-sm" role="document">
           <div class="modal-content">
               <div class="modal-header">
@@ -1031,7 +979,7 @@
                       <div class="card-icon">
                           <span class="icon-Warning_important"></span>
                       </div>
-                      <h3 id="myModalLabel4" class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+                      <h3 id="myModalLabel5" class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
                       <div class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
                   </div>
               </div>
@@ -3128,7 +3076,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 			</script>
 
 
-<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
+<script src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>
 <script>
 // Surcharge des valeurs du script de la toolbar
 			accessibilitytoolbar_custom={
