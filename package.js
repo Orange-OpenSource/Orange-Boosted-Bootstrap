@@ -1,9 +1,10 @@
 // package metadata file for Meteor.js
 
-/* eslint-env meteor */
+/* jshint strict:false */
+/* global Package:true */
 
 Package.describe({
-  name: 'Orange-OpenSource:Orange-Boosted-Bootstrap',  // https://atmospherejs.com/twbs/bootstrap
+  name: 'Orange-OpenSource:Orange-Boosted-Bootstrap',  // https://atmospherejs.com/Orange-OpenSource:Orange-Boosted-Bootstrap
   summary: 'Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v3.4.0.',
   version: '3.4.0',
   git: 'https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git'
