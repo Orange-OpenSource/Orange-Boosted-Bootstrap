@@ -1097,10 +1097,12 @@ module.exports = function (grunt) {
 
   // CSS distribution task.
   // Supported Compilers: sass (Ruby) and libsass.
+  /*
   (function (sassCompilerName) {
     require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
   })(process.env.TWBS_SASS || 'libsass');
   grunt.registerTask('sass-compile', ['sass:core']);
+  */
 
   grunt.registerTask('docs', [
     'clean:docs',
@@ -1141,28 +1143,34 @@ module.exports = function (grunt) {
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
   };
+  var isUndefOrNonZero = function (val) {
+    return typeof val === 'undefined' || val !== '0';
+  };
 
   // Test task.
   var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
-  if (runSubset('core') &&
-    // Skip core tests if this is a Savage build
-    process.env.TRAVIS_REPO_SLUG !== 'Orange-OpenSource/Orange-Boosted-Bootstrap') {
+  if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'stylelint:dist', 'test-js', 'docs']);
   }
   // Skip HTML validation if running a different subset of the test suite
-  if (runSubset('validate-html')) {
+  if (runSubset('validate-html') &&
+      // Skip HTML5 validator on Travis when [skip validator] is in the commit message
+      isUndefOrNonZero(process.env.TWBS_DO_VALIDATOR)) {
     testSubtasks.push('validate-html');
   }
   // Only run BrowserStack tests if there's a BrowserStack access key
   if (typeof process.env.BROWSER_STACK_USERNAME !== 'undefined' &&
-    // Skip BrowserStack if running a different subset of the test suite
-    runSubset('browserstack')) {
+      // Skip BrowserStack if running a different subset of the test suite
+      runSubset('browserstack') &&
+      // Skip BrowserStack on Travis when [skip browserstack] is in the commit message
+      isUndefOrNonZero(process.env.TWBS_DO_BROWSERSTACK)) {
     testSubtasks.push('exec:browserstack');
   }
 
   // Test task.
-  grunt.registerTask('test', ['dist-css', 'dist-js', 'stylelint:dist', 'test-js', 'docs']);
+  grunt.registerTask('testKarma', testSubtasks);
+  grunt.registerTask('test', ['dist-css', 'dist-js', 'stylelint:dist', 'test-js', 'docs', 'testKarma']);
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'exec:karma']);
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
