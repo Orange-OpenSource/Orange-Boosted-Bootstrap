@@ -6,7 +6,7 @@ var browserStack = process.env.BROWSER === 'true';
 
 module.exports = function (config) {
   var conf = {
-    basePath: '../',
+    basePath: '../app/',
     frameworks: ['qunit'],
     plugins: ['karma-qunit'],
     // list of files / patterns to load in the browser
