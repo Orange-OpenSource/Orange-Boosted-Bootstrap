@@ -1,0 +1,350 @@
+// stylelint-disable selector-max-id
+#bd-main-nav {
+  .nav-item.dropdown {
+    align-self: flex-end;
+  }
+
+  .navbar-nav-svg {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    vertical-align: text-top;
+  }
+}
+
+.bd-home {
+  background-color: #000;
+
+  .bd-featurette {
+    background-color: #fff;
+  }
+}
+
+.bd-masthead {
+  padding: 2.5rem .625rem;
+  color: #000;
+  background-color: #fff;
+  background-image: none;
+  border: 0;
+
+  .lead {
+    font-size: $h5-font-size;
+
+    .btn {
+      text-decoration: none;
+    }
+
+    .btn + .btn {
+      margin-left: .625rem;
+    }
+  }
+
+  .bd-boosted-icon {
+    font-family: $font-family-base;
+    font-size: 3.125rem; // 50px
+    font-weight: 500;
+  }
+
+  .version {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 70%;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: .625rem;
+
+    .bd-boosted-icon {
+      font-size: 2.125rem // 34px;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    .col-md-6:first-child {
+      order: 1;
+    }
+  }
+}
+
+.masthead-followup {
+  .bg-light {
+    background-color: #eee !important; // stylelint-disable-line declaration-no-important
+  }
+}
+
+.bd-pageheader {
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  border-top: 2px solid $gray-900;
+
+  h1 {
+    margin: 2.6875rem 0;
+    font-size: $h1-font-size;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    padding-bottom: 1.25rem;
+    font-size: $font-size-base;
+  }
+
+  @include media-breakpoint-down(xs) {
+    h1 {
+      margin: 1.25rem 0;
+      font-size: $h2-font-size;
+      font-weight: $font-weight-bold;
+      line-height: 1;
+      text-align: left;
+    }
+
+    p {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.bd-featurette {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  font-size: $font-size-base;
+}
+
+.bd-search {
+  padding-left: 0;
+  margin-left: 0;
+
+  .form-control {
+    height: auto;
+    background-color: transparent;
+  }
+}
+
+.bd-toc-link {
+  padding-left: .625rem;  // left align with orange logo
+}
+
+.o-footer {
+  margin-top: 0;
+
+  .o-footer-body {
+    padding: 1.25rem 0;
+    font-size: $font-size-base !important; // stylelint-disable-line declaration-no-important
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.bd-example-tabs .nav-tabs {
+  margin-bottom: 0;
+}
+
+// brand-warning
+#outline-buttons,
+#supported-content,
+#text,
+#color-schemes,
+#placement,
+#collapsible-content,
+#sizing {
+  &::before {
+    @include sr-only;
+    content: "warning, not brand compliant";
+  }
+
+  &::after {
+    padding-left: .375rem;
+    font-family: icon-orange, sans-serif !important; // stylelint-disable-line declaration-no-important
+    font-size: inherit;
+    color: theme-color("danger");
+    vertical-align: bottom;
+    content: "\e936";
+  }
+}
+
+
+//
+// Font icons
+//
+// Special styles for displaying the icons and their classes in the docs.
+.doc-fonticon {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+.doc-fonticon-list {
+  padding-left: 0;
+  font-size: 1.875rem;
+  list-style: none;
+}
+.doc-fonticon li {
+  float: left;
+  width: 25%;
+  height: 150px;
+  padding: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #fff;
+}
+
+.doc-fonticon .fonticon-class {
+  display: block;
+  font-size: $font-size-base;
+  text-align: center;
+  word-wrap: break-word; // Help out IE10+ with class names
+}
+.doc-fonticon li:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+@media (min-width: 768px) {
+  .doc-fonticon {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .doc-fonticon li {
+    width: 12.5%;
+  }
+}
+
+// boostwatch
+
+#docsNavbarContent {
+  @include media-breakpoint-up(md) {
+    @supports (position: sticky) {
+      max-height: calc(100vh - 5rem);
+    }
+  }
+}
+
+// buttons dipslay
+#buttons-default,
+#buttons-inverse {
+  padding-left: 1.25rem;
+
+  button {
+    margin-right: .625rem;
+  }
+}
+
+#buttons-inverse {
+  padding: 1.25rem;
+  color: #fff;
+  background-color: #000;
+}
+
+$doc-link-arrow: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221250%22%20height%3D%221250%22%3E%3Cpath%20d%3D%22M750%20261.875V386.25l-151.5.125c-83.375.125-152.75.375-154.125.5s-7.5.625-13.75%201.125c-30.375%202.375-70.875%2011.5-102.5%2023.25-56.875%2021.125-103%2051-147%2094.875C130.375%20557%2096.75%20614.625%2076.875%20685c-3.25%2011.875-9%2039.25-10.125%2049.125-.5%203.625-1%206.875-1.25%207.25-2.125%203.625-3.25%2067.125-1.5%2086.75%202.125%2024.25%207.875%2054.75%2014.75%2078.125%2016.875%2057.125%2043.75%20106%2084.25%20153.75%207.375%208.625%2036.625%2037%2046.125%2044.75l9.625%207.875.125-56.625c0-62%20.125-63.625%203.625-81.25%2013.875-69.875%2068-127.375%20136.375-144.75%2024.125-6.125%2024.75-6.25%20214-6.25H750v250l203.75-204.125c112-112.125%20205.75-206.875%20208.25-210.25%209-12.625%2013-22.25%2016-39.25%204.625-25.125-3-54.375-19.125-73.5-6-7.25-407.125-409.125-408.25-409.125-.375%200-.625%2056-.625%20124.375z%22%2F%3E%3C%2Fsvg%3E") !default;
+
+$doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221250%22%20height%3D%221250%22%3E%3Cpath%20d%3D%22M750%20261.875V386.25l-151.5.125c-83.375.125-152.75.375-154.125.5s-7.5.625-13.75%201.125c-30.375%202.375-70.875%2011.5-102.5%2023.25-56.875%2021.125-103%2051-147%2094.875C130.375%20557%2096.75%20614.625%2076.875%20685c-3.25%2011.875-9%2039.25-10.125%2049.125-.5%203.625-1%206.875-1.25%207.25-2.125%203.625-3.25%2067.125-1.5%2086.75%202.125%2024.25%207.875%2054.75%2014.75%2078.125%2016.875%2057.125%2043.75%20106%2084.25%20153.75%207.375%208.625%2036.625%2037%2046.125%2044.75l9.625%207.875.125-56.625c0-62%20.125-63.625%203.625-81.25%2013.875-69.875%2068-127.375%20136.375-144.75%2024.125-6.125%2024.75-6.25%20214-6.25H750v250l203.75-204.125c112-112.125%20205.75-206.875%20208.25-210.25%209-12.625%2013-22.25%2016-39.25%204.625-25.125-3-54.375-19.125-73.5-6-7.25-407.125-409.125-408.25-409.125-.375%200-.625%2056-.625%20124.375z%22%20fill%3D%22%23fe6100%22%2F%3E%3C%2Fsvg%3E") !default;
+
+.doc-link {
+  position: relative;
+  padding-right: 1.875rem;
+  margin-left: .625rem;
+  font-size: 1.5rem;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    content: "";
+    background-image: $doc-link-arrow;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:hover::after {
+    background-image: $doc-link-arrow-hover;
+  }
+}
+
+/* home cards */
+
+#card-grid {
+  .col-md-6.col-lg-3 {
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .picto-link {
+    display: block;
+    text-align: center;
+  }
+
+  .card-footer {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border: 0;
+  }
+
+  #migrate-card img {
+    width: 50%;
+  }
+}
+
+#angular-logo {
+  display: inherit;
+  width: 8rem;
+  margin: 0 auto;
+}
+
+/* IE only fix */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #card-grid .picto-link {
+    height: 12.5rem;
+  }
+}
+
+// card links
+#bill .card-img,
+#shop .card-img,
+#timer .card-img,
+#unlock .card-img {
+  padding: 1.25rem;
+
+  img {
+    width: 50%;
+  }
+}
+
+#bill .card-img {
+  background-color: #50be87;
+}
+
+#shop .card-img {
+  background-color: #4bb4e6;
+}
+
+#timer .card-img {
+  background-color: #ffb4e6;
+}
+
+#unlock .card-img {
+  background-color: #ffd200;
+}
+
+@include media-breakpoint-down(xs) {
+  #bill .card-img,
+  #shop .card-img,
+  #timer .card-img,
+  #unlock .card-img {
+    img {
+      width: auto;
+      height: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+// stylelint-disable declaration-no-important
+
+//
+// Right side table of contents
+//
+
+.bd-toc {
+  @supports (position: sticky) {
+    position: sticky;
+    top: 5rem; // boosted mod
+    height: calc(100vh - 5rem); // boosted mod
+    overflow-y: auto;
+  }
+  order: 2;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: .875rem;
+}
+
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #eee;
+
+  ul {
+    padding-left: 1rem;
+
+    ul {
+      display: none;
+    }
+  }
+}
+
+.toc-entry {
+  display: block;
+
+  a {
+    display: block;
+    padding: .125rem 1.5rem;
+    // color: $gray-light; // boosted mod
+
+    &:hover {
+      color: theme-color("primary"); // boosted mod
+      text-decoration: none;
+    }
+  }
+}
+
+//
+// Left side navigation
+//
+
+.bd-sidebar {
+  order: 0;
+  // background-color: transparent; // boosted mod
+  border-bottom: 1px solid $gray-300; // boosted mod
+
+  @include media-breakpoint-up(md) {
+    @supports (position: sticky) {
+      position: sticky;
+      top: 5rem; // boosted mod
+      z-index: 1000;
+      max-height: calc(100vh - 5rem); // boosted mod
+    }
+    border-right: 1px solid $gray-300; // boosted mod
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex: 0 1 320px;
+  }
+}
+
+.bd-links {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: $grid-gutter-width / -2; // boosted mod
+  margin-left: $grid-gutter-width / -2; // boosted mod
+
+  @include media-breakpoint-up(md) {
+    @supports (position: sticky) {
+      max-height: calc(100vh - 9.6rem); // boosted mod
+      overflow-y: auto;
+    }
+  }
+
+  // Override collapse behaviors
+  @include media-breakpoint-up(md) {
+    display: block !important;
+  }
+}
+
+.bd-search {
+  position: relative; // To contain the Algolia search
+  padding: 1rem $grid-gutter-width / 2; // boosted mod our col-12 has 10px paddings
+  margin-right: $grid-gutter-width / -2; // boosted mod
+  margin-left: $grid-gutter-width / -2; // boosted mod
+  border-bottom: 1px solid $gray-300;
+
+  // Boosted mod keep basic form-control style
+  //  .form-control:focus {
+  //    border-color: $bd-purple-bright;
+  //    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
+  //  }
+}
+
+.bd-search-docs-toggle {
+  line-height: 1;
+  color: $gray-900;
+}
+
+.bd-sidenav {
+  display: none;
+}
+
+.bd-toc-link {
+  display: block;
+  padding: .25rem 1.5rem;
+  font-weight: 500;
+  // color: $gray-lightest; // boosted mod
+
+  &:hover {
+    color: theme-color("primary");// boosted mod
+    text-decoration: none;
+  }
+}
+
+.bd-toc-item {
+  &.active {
+    margin-bottom: 1rem;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    > .bd-toc-link {
+      color: theme-color("primary"); // boosted mod
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    > .bd-sidenav {
+      display: block;
+    }
+  }
+}
+
+// All levels of nav
+.bd-sidebar .nav > li > a {
+  display: block;
+  padding: .25rem 1.5rem;
+  font-size: 90%;
+  color: $gray-700;// boosted mod
+}
+
+.bd-sidebar .nav > li > a:hover {
+  color: theme-color("primary");// boosted mod
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.bd-sidebar .nav > .active > a,
+.bd-sidebar .nav > .active:hover > a {
+  font-weight: 500;
+  color: #000;// boosted mod
+  background-color: transparent;
+}
+// boosted mod
+.bd-links a,
+.bd-toc a {
+  &:focus {
+    outline-offset: -1px;
+  }
+}
