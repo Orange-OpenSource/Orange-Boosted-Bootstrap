@@ -622,6 +622,8 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         options: {
+          bundleExec: true,
+          incremental: false,
           src: 'docs_generated/docs',
           dest: 'docs',
           config: 'docs_base_boosted/_config_bootstrap_for_boosted.yml'
