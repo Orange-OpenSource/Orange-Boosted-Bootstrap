@@ -1,5 +1,10 @@
 # [Orange Boosted with Bootstrap](http://boosted.orange.com/v3)
 
+![Bower version](https://img.shields.io/bower/v/boosted.svg)
+[![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
+[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/master.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=Vm9IWWw4SnB1aWQ5cnBienpyMUxDejJDNkNWVFZDWXdtMEo5QWtxYzVwQT0tLWxPLzh1UXVPUzFUSUxjVkhXT0xXcEE9PQ==--aeaa0af08254ec848cc3ed0959b9e4aa47509277)](https://www.browserstack.com/automate/public-build/Vm9IWWw4SnB1aWQ5cnBienpyMUxDejJDNkNWVFZDWXdtMEo5QWtxYzVwQT0tLWxPLzh1UXVPUzFUSUxjVkhXT0xXcEE9PQ==--aeaa0af08254ec848cc3ed0959b9e4aa47509277)
+
 Orange Boosted is a framework library accessible, ergonomic and Orange branded based on Bootstrap.
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/orgs/twbs/people) with the massive support and involvement of the community.
 
@@ -18,13 +23,17 @@ And also specific components only available in Boosted.
 [Footer](http://boosted.orange.com/v3/components/#footer)
 
 
-To get started, check out <getting-started/>!
+To get started, check out <http://boosted.orange.com/>!
 
 ## Table of contents
-
-- [Quick start](#quick-start)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Copyright and license](#copyright-and-license)
+* [Quick start](#quick-start)
+* [Bugs and feature requests](#bugs-and-feature-requests)
+* [Documentation](#documentation)
+* [Contributing](#contributing)
+* [Versioning](#versioning)
+* [Creators](#creators)
+* [Thanks](#thanks)
+* [Copyright and license](#copyright-and-license)
 
 ## Quick start
 
