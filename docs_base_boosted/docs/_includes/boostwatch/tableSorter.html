@@ -336,60 +336,6 @@
               </table>
             </div><!-- /example -->
 
-
-    		<style>
-
-			@media only screen and (max-width : 650px) {
-
-				#myTable .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-				#myTable * html .cf { zoom: 1; }
-				#myTable *:first-child+html .cf { zoom: 1; }
-				#myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
-				#myTable th,
-				#myTable td { margin: 0; vertical-align: top; }
-				#myTable th { text-align: left; }
-				#myTable table { display: block; position: relative; width: 100%; }
-				#myTable thead { display: block; float: left; }
-				#myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
-				#myTable thead tr { display: block; }
-				#myTable th { display: block; text-align: right; }
-				#myTable tbody tr { display: inline-block; vertical-align: top; }
-				#myTable td { display: block; min-height: 1.25em; text-align: left; }
-
-				/* sort out borders */
-				#myTable th { border-bottom: 0; border-left: 0; border-top: 1px solid #A6A6A6; }
-				#myTable td { border-right: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-bottom: 0; }
-				#myTable th:last-child,
-				#myTable td:last-child { border-bottom: 1px solid #babcbf; }
-
-			}
-
-			/* accessibility */
-			table.tablesorter > thead > tr > th[aria-sort="descending"]:after {
-				content:"trié par ordre décroissant";
-				border: 0 none;
-				clip: rect(0px, 0px, 0px, 0px);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-
-			/* accessibility */
-			table.tablesorter > thead > tr > th[aria-sort="ascending"]:after {
-				content:"trié par ordre croissant";
-				border: 0 none;
-				clip: rect(0px, 0px, 0px, 0px);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-		</style>
   <h2 id="complextable" class="page-header">Complex table</h2>
   <p class="lead">Table with sortable columns.</p>
   <div class="" data-example-id="">
