@@ -1,4 +1,4 @@
-# [Orange Boosted with Bootstrap](http://boosted.orange.com/v3)
+# [Orange Boosted with Bootstrap](https://boosted.orange.com/v3)
 
 ![Bower version](https://img.shields.io/bower/v/boosted.svg)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
@@ -10,20 +10,20 @@ Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and
 
 All the core components of Bootstrap accessible and Orange branded.
 And also specific components only available in Boosted.
-[Main navigation with or without Mega menu](http://boosted.orange.com/v3/components/#megamenu)
-[Local navigation](http://boosted.orange.com/v3/components/#local1)
-[Stepbar](http://boosted.orange.com/v3/components/#stepbar)
-[Orange link pagination](http://boosted.orange.com/v3/components/#orange-pagination)
-[Accordions with indicator](http://boosted.orange.com/v3/javascript/#collapse-example-accordion)
-[Complex table](http://boosted.orange.com/v3/javascript/#complextable)
-[Responsive table, display as cards onto tablets and mobile](http://boosted.orange.com/v3/css/#tables-responsive)
-[Popin (modal window)](http://boosted.orange.com/v3/javascript/#modals)
-[Orange branded checkboxes and radios](http://boosted.orange.com/v3/css/#orange-branded-checkboxes-and-radios)
-[Forms with new html5 elements and a Javascript validation](http://boosted.orange.com/v3//example_form/)
-[Footer](http://boosted.orange.com/v3/components/#footer)
+[Main navigation with or without Mega menu](https://boosted.orange.com/v3/components/#megamenu)
+[Local navigation](https://boosted.orange.com/v3/components/#local1)
+[Stepbar](https://boosted.orange.com/v3/components/#stepbar)
+[Orange link pagination](https://boosted.orange.com/v3/components/#orange-pagination)
+[Accordions with indicator](https://boosted.orange.com/v3/javascript/#collapse-example-accordion)
+[Complex table](https://boosted.orange.com/v3/javascript/#complextable)
+[Responsive table, display as cards onto tablets and mobile](https://boosted.orange.com/v3/css/#tables-responsive)
+[Popin (modal window)](https://boosted.orange.com/v3/javascript/#modals)
+[Orange branded checkboxes and radios](https://boosted.orange.com/v3/css/#orange-branded-checkboxes-and-radios)
+[Forms with new html5 elements and a Javascript validation](https://boosted.orange.com/v3//example_form/)
+[Footer](https://boosted.orange.com/v3/components/#footer)
 
 
-To get started, check out <http://boosted.orange.com/>!
+To get started, check out <https://boosted.orange.com/>!
 
 ## Table of contents
 * [Quick start](#quick-start)
@@ -39,12 +39,12 @@ To get started, check out <http://boosted.orange.com/>!
 
 Several quick start options are available:
 
-- [Download the latest release](http://boosted.orange.com/v3/getting-started/).
+- [Download the latest release](https://boosted.orange.com/v3/getting-started/).
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`.
 - Install with [Bower](http://bower.io): `bower install boosted`.
 - Install with [npm](https://www.npmjs.com): `npm install boosted`.
 
-Read the [Getting started page](http://boosted.orange.com/v3/getting-started/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/v3/getting-started/) for information on the framework contents, templates and examples, and more.
 
 ### What's included
 
@@ -111,7 +111,7 @@ Note that **feature requests must target [Bootstrap v4](https://github.com/twbs/
 
 ## Documentation
 
-Boosted's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <http://boosted.orange.com/>. The docs may also be run locally.
+Boosted's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
 ### Running documentation locally
 

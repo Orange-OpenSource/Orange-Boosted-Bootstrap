@@ -10,8 +10,8 @@
     <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
     <summary>Boosted framework in CSS. Includes fonts and JavaScript</summary>
     <language>en-us</language>
-    <projectUrl>http://boosted.orange.com</projectUrl>
-    <iconUrl>http://boosted.orange.com/assets/img/favicons/apple-touch-icon.png</iconUrl>
+    <projectUrl>https://boosted.orange.com</projectUrl>
+    <iconUrl>https://boosted.orange.com/assets/img/favicons/apple-touch-icon.png</iconUrl>
     <licenseUrl>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE</licenseUrl>
     <copyright>Copyright 2017-2019</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

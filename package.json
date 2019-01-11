@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "homepage": "http://boosted.orange.com",
+  "homepage": "https://boosted.orange.com",
   "author": "Orange SA",
   "scripts": {
     "sri": "node grunt/generate-sri.js",
