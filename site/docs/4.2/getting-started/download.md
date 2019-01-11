@@ -15,7 +15,7 @@ Download ready-to-use compiled code for **Boosted v{{ site.current_version}}** t
 
 This doesn't include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).
 
-<a href="{{ site.download.dist }}" class="btn btn-lg btn-secondary">Download Boosted</a>
+<a href="{{ site.download.dist }}" class="btn btn-lg btn-secondary"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download boosted'});">Download Boosted</a>
 
 ## Source files
 
@@ -26,7 +26,7 @@ Compile Boosted with your own asset pipeline by downloading our source Sass, Jav
 
 Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
 
-<a href="{{ site.download.source }}" class="btn btn-secondary">Download source</a>
+<a href="{{ site.download.source }}" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
 ## Package managers
 
@@ -46,6 +46,14 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 - `sass` - path to Boosted's main [Sass](http://sass-lang.com/) source file
 - `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
+
+### yarn
+
+Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/yarn):
+
+{% highlight sh %}
+yarn add boosted
+{% endhighlight %}
 
 ### Composer
 

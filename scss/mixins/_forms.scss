@@ -21,7 +21,7 @@
       box-shadow: $input-box-shadow, $input-focus-box-shadow;
     } @else {
       // Boosted mod, remove box shadow!
-      //  box-shadow: $input-focus-box-shadow;
+      // box-shadow: $input-focus-box-shadow;
     }
   }
 }
@@ -42,20 +42,67 @@
     z-index: 5;
     display: none;
     max-width: 100%; // Contain to parent when possible
-    padding: $tooltip-padding-y $tooltip-padding-x;
+    padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
     margin-top: .1rem;
-    font-size: $tooltip-font-size;
-    line-height: $line-height-base;
+    font-size: $form-feedback-tooltip-font-size;
+    line-height: $form-feedback-tooltip-line-height;
     color: color-yiq($color);
-    background-color: rgba($color, $tooltip-opacity);
-    @include border-radius($tooltip-border-radius);
+    background-color: rgba($color, $form-feedback-tooltip-opacity);
+    @include border-radius($form-feedback-tooltip-border-radius);
   }
 
-  .form-control,
+  .form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      border-color: $color;
+
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-repeat: no-repeat;
+        background-position: center right calc(#{$input-height-inner} / 4);
+        background-size: calc(#{$input-height-inner} / 2) calc(#{$input-height-inner} / 2);
+
+        // Boosted mod disable background image
+        // @if $state == "valid" {
+        //   background-image: $form-feedback-icon-valid;
+        // } @else {
+        //   background-image: $form-feedback-icon-invalid;
+        // }
+      }
+
+      &:focus {
+        border-color: $color;
+        // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  textarea.form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-position: top calc(#{$input-height-inner} / 4) right calc(#{$input-height-inner} / 4);
+      }
+    }
+  }
+
   .custom-select {
     .was-validated &:#{$state},
     &.is-#{$state} {
       border-color: $color;
+
+      @if $enable-validation-icons {
+        $form-feedback-icon: if($state == "valid", $form-feedback-icon-valid, $form-feedback-icon-invalid);
+        padding-right: $custom-select-feedback-icon-padding-right;
+        background: $custom-select-background, $form-feedback-icon no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+      }
 
       &:focus {
         border-color: $color;
@@ -68,6 +115,7 @@
       }
     }
   }
+
 
   .form-control-file {
     .was-validated &:#{$state},
@@ -100,7 +148,7 @@
         color: $color;
 
         &::before {
-          background-color: lighten($color, 25%);
+          border-color: $color;
         }
       }
 
@@ -111,15 +159,21 @@
 
       &:checked {
         ~ .custom-control-label::before {
+          border-color: lighten($color, 10%);
           @include gradient-bg(lighten($color, 10%));
         }
       }
-      // Boosted mod, remove box shadow!
-      // &:focus {
-      // ~ .custom-control-label::before {
-      // box-shadow: 0 0 0 1px $body-bg, 0 0 0 $input-focus-width rgba($color, .25);
-      //}
-      //}
+
+      &:focus {
+        // Boosted mod, remove box shadow!
+        // ~ .custom-control-label::before {
+        //  box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        // }
+
+        &:not(:checked) ~ .custom-control-label::before {
+          border-color: $color;
+        }
+      }
     }
   }
 
@@ -129,8 +183,6 @@
     &.is-#{$state} {
       ~ .custom-file-label {
         border-color: $color;
-
-        &::after { border-color: inherit; }
       }
 
       ~ .#{$state}-feedback,
@@ -138,12 +190,12 @@
         display: block;
       }
 
-      // Boosted mod, remove box shadow!
-      // &:focus {
-      // ~ .custom-file-label {
-      // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
-      // }
-      // }
+      &:focus {
+        ~ .custom-file-label {
+          border-color: $color;
+          // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
+        }
+      }
     }
   }
 }

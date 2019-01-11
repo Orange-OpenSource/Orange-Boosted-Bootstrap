@@ -12,6 +12,19 @@
   var inputElement = document.getElementById('search-input')
   var siteDocsVersion = inputElement.getAttribute('data-docs-version')
 
+  function getOrigin() {
+    var location = window.location
+    var origin = location.origin
+
+    if (!origin) {
+      var port = location.port ? ':' + location.port : ''
+
+      origin = location.protocol + '//' + location.hostname + port
+    }
+
+    return origin
+  }
+
   window.docsearch({
     apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
     indexName: 'boosted-orange',
@@ -19,20 +32,20 @@
     algoliaOptions: {
       facetFilters: ['version:' + siteDocsVersion]
     },
-    handleSelected: function (input, event, suggestion) {
-      var url = suggestion.url
-      url = suggestion.isLvl1 ? url.split('#')[0] : url
-      // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url
-    },
     transformData: function (hits) {
       return hits.map(function (hit) {
+        var siteurl = getOrigin()
+        var urlRE = /^https?:\/\/boosted\.orange\.com/
+
         // When in production, return the result as is,
         // otherwise remove our url from it.
-        var siteurl = inputElement.getAttribute('data-siteurl')
-        var urlRE = /^http?:\/\/boosted\.orange\.com/
-
         hit.url = siteurl.match(urlRE) ? hit.url : hit.url.replace(urlRE, '')
+
+        // Prevent jumping to first header
+        if (hit.anchor === 'content') {
+          hit.url = hit.url.replace(/#content$/, '')
+          hit.anchor = null
+        }
 
         return hit
       })

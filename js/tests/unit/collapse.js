@@ -856,6 +856,40 @@ $(function () {
     }
   })
 
+  QUnit.test('should find collapse children if they have collapse class too not only data-parent', function (assert) {
+    assert.expect(2)
+    var done = assert.async()
+
+    var html =
+    '<div class="my-collapse">' +
+    '  <div class="item">' +
+    '    <a data-toggle="collapse" href="#">Toggle item 1</a>' +
+    '    <div id="collapse1" class="collapse show">Lorem ipsum 1</div>' +
+    '  </div>' +
+    '  <div class="item">' +
+    '    <a id="triggerCollapse2" data-toggle="collapse" href="#">Toggle item 2</a>' +
+    '    <div id="collapse2" class="collapse">Lorem ipsum 2</div>' +
+    '  </div>' +
+    '</div>'
+
+    $(html).appendTo('#qunit-fixture')
+
+    var $parent = $('.my-collapse')
+    var $collapse2 = $('#collapse2')
+    $parent.find('.collapse').bootstrapCollapse({
+      parent: $parent,
+      toggle: false
+    })
+
+    $collapse2.on('shown.bs.collapse', function () {
+      assert.ok($collapse2.hasClass('show'))
+      assert.ok(!$('#collapse1').hasClass('show'))
+      done()
+    })
+
+    $collapse2.bootstrapCollapse('toggle')
+  })
+
   // Boosted mod
   // add test for accordion multi
   QUnit.test('should not close others if element has the class multi accordion multiple at a time mode', function (assert) {

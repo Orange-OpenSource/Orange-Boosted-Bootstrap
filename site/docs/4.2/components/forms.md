@@ -549,7 +549,7 @@ You can then remix that once again with size-specific column classes.
       </div>
     </div>
     <div class="col-auto my-1">
-      <div class="form-check">
+      <div class="form-check mb-0">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
           Remember me
@@ -579,7 +579,7 @@ And of course [custom form controls](#custom-forms) are supported.
       </select>
     </div>
     <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox my-1 mr-sm-2">
+      <div class="custom-control custom-checkbox mr-sm-2 mb-0">
         <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
         <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
       </div>
@@ -715,11 +715,13 @@ Add the `disabled` attribute to a `<fieldset>` to disable all the controls withi
         <option>Disabled select</option>
       </select>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-      <label class="form-check-label" for="disabledFieldsetCheck">
-        Can't check this
-      </label>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+        <label class="form-check-label" for="disabledFieldsetCheck">
+          Can't check this
+        </label>
+      </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
@@ -767,9 +769,9 @@ With that in mind, consider the following demos for our custom form validation s
 
 ### Custom styles
 
-For custom Boosted form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you.
+For custom Boosted form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
 
-When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
 
 {% capture example %}
 <form class="needs-validation" novalidate>
@@ -917,7 +919,7 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 
 ### Server side
 
-We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
 
 {% capture example %}
 <form>
@@ -990,10 +992,18 @@ We recommend using client side validation, but in case you require server side, 
 
 ### Supported elements
 
-Our example forms show native textual `<input>`s above, but form validation styles are available for our custom form controls, too.
+Our example forms show native textual `<input>`s above, but form validation styles are also available for `<textarea>`s and custom form controls.
 
 {% capture example %}
 <form class="was-validated">
+  <div class="mb-3">
+    <label for="validationTextarea">Textarea</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+    <div class="invalid-feedback">
+      Please enter a message in the textarea.
+    </div>
+  </div>
+
   <div class="custom-control custom-checkbox mb-3">
     <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
     <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
@@ -1097,7 +1107,7 @@ For even more customization and cross browser consistency, use our completely cu
 
 ### Checkboxes and radios
 
-Each checkbox and radio is wrapped in a `<div>` with a sibling `<span>` to create our custom control and a `<label>` for the accompanying text. Structurally, this is the same approach as our default `.form-check`.
+Each checkbox and radio `<input>` and `<label>` pairing is wrapped in a `<div>` to create our custom control. Structurally, this is the same approach as our default `.form-check`.
 
 We use the sibling selector (`~`) for all our `<input>` states—like `:checked`—to properly style our custom form indicator. When combined with the `.custom-control-label` class, we can also style the text for each item based on the `<input>`'s state.
 
@@ -1164,13 +1174,44 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 
 {% capture example %}
 <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
-  <label class="custom-control-label" for="customCheckDisabled">Check this custom checkbox</label>
+  <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+  <label class="custom-control-label" for="customCheckDisabled1">Check this custom checkbox</label>
 </div>
 
 <div class="custom-control custom-radio">
-  <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
-  <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
+  <input type="radio" name="radioDisabled" id="customRadioDisabled2" class="custom-control-input" disabled>
+  <label class="custom-control-label" for="customRadioDisabled2">Toggle this custom radio</label>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Switches
+
+A switch has the markup of a custom checkbox but uses the `.custom-switch` class to render a toggle switch. Switches also support the `disabled` attribute.
+
+{% capture example %}
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+  <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+[comment]: # Boosted mod
+Add the `.right` class to render a toggle switch with label text before.
+
+{% capture example %}
+<div class="custom-control custom-switch right w-75">
+  <input type="checkbox" class="custom-control-input" id="customSwitch3">
+  <label class="custom-control-label" for="customSwitch3">Toggle this switch element right aligned</label>
+</div>
+<div class="custom-control custom-switch right w-75">
+  <input type="checkbox" class="custom-control-input" disabled id="customSwitch4">
+  <label class="custom-control-label" for="customSwitch4">Disabled switch element right aligned</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -1181,6 +1222,13 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 Using checkbox as switch / toggle with styling
 
 Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` followed by a `.toggle` class.
+
+{% capture callout %}
+##### Deprecated
+
+As `custom-switch` component have been included into Boostrap, the `o-switch` component will be removed in the next major release
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <div class="form-group row">
@@ -1356,6 +1404,11 @@ By default, range inputs "snap" to integer values. To change this, you can speci
 
 ### File browser
 
+{% capture callout %}
+The recommended plugin to animate custom file input: [bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input), that's what we are using currently here in our docs.
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
+
 The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
 
 {% capture example %}
@@ -1368,7 +1421,7 @@ The file input is the most gnarly of the bunch and requires additional JavaScrip
 
 We hide the default file `<input>` via `opacity` and instead style the `<label>`. The button is generated and positioned with `::after`. Lastly, we declare a `width` and `height` on the `<input>` for proper spacing for surrounding content.
 
-#### Translating or customizing the strings
+#### Translating or customizing the strings with SCSS
 
 The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for translation of the "Browse" text into other languages. Override or add entries to the `$custom-file-text` Sass variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
 
@@ -1390,3 +1443,15 @@ Here's `lang(es)` in action on the custom file input for a Spanish translation:
 {% include example.html content=example %}
 
 You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
+
+#### Translating or customizing the strings with HTML
+
+Boosted also provides a way to translate the "Browse" text in HTML with the `data-browse` attribute which can be added to the custom input label (example in Dutch):
+
+{% capture example %}
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="customFileLangHTML">
+  <label class="custom-file-label" for="customFileLangHTML" data-browse="Bestand kiezen">Voeg je document toe</label>
+</div>
+{% endcapture %}
+{% include example.html content=example %}

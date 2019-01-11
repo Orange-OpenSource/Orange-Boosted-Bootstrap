@@ -20,6 +20,9 @@ Things to know when using the popover plugin:
 - Popovers for `.disabled` or `disabled` elements must be triggered on a wrapper element.
 - When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use `.text-nowrap` on your `<a>`s to avoid this behavior.
 - Popovers must be hidden before their corresponding elements have been removed from the DOM.
+- Popovers can be triggered thanks to an element inside a shadow DOM.
+
+{% include callout-info-prefersreducedmotion.md %}
 
 Keep reading to see how popovers work with some examples.
 
@@ -199,7 +202,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="https://jsbin.com/zopod/1/edit">an informative example</a>.</td>
+      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="https://codepen.io/Johann-S/pen/djJYPb">an informative example</a>.</td>
     </tr>
     <tr>
       <td>template</td>

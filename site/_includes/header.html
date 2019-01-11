@@ -15,27 +15,8 @@
   {%- endif -%}
 </title>
 
-<!-- Swiper -->
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/vendor/swiper.min.css" rel="stylesheet">
-<!-- helvetica -->
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeHelvetica.css" rel="stylesheet">
-<!-- orangeIcons -->
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Boosted core CSS -->
-{% if site.github %}
-  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/boosted.min.css" rel="stylesheet">
-{% else %}
-  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/boosted.css" rel="stylesheet">
-{% endif %}
-<!-- end mod -->
-
-<!-- Documentation extras -->
-{% if page.layout == "docs" %}
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-{% endif %}
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/docs.min.css" rel="stylesheet">
-
+{% include stylesheet.html %}
 {% include favicons.html %}
 
 <!-- Boosted mod remove social -->
-<!-- Boosted mod remove tracking -->
+{% include analytics.html %}
