@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://boosted.orange.com/">
-    <img src="http://boosted.orange.com/assets/brand/orange-space-position.jpg" width=72 height=72>
+  <a href="https://boosted.orange.com/">
+    <img src="https://boosted.orange.com/assets/brand/orange-space-position.jpg" width=72 height=72>
   </a>
 
   <h3 align="center">Orange Boosted with Bootstrap</h3>
@@ -8,7 +8,7 @@
   <p align="center">
     Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
     <br>
-    <a href="http://boosted.orange.com/"><strong>Visit Boosted</strong></a>
+    <a href="https://boosted.orange.com/"><strong>Visit Boosted</strong></a>
   </p>
 </p>
 
@@ -38,7 +38,7 @@ Several quick start options are available:
 - Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.0.0-beta.2`
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.0.0-beta.2`
 
-Read the [Getting started page](http://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
@@ -105,7 +105,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://boosted.orange.com>. The docs may also be run locally.
+Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <https://boosted.orange.com>. The docs may also be run locally.
 
 Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `_scripts.html` include.
 
@@ -120,7 +120,7 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
 
 ### Documentation for previous releases
 
-Documentation for v3.x has been made available for the time being at <http://boosted.orange.com/docs/3.3/> while folks transition to Bootstrap 4.
+Documentation for v3.x has been made available for the time being at <https://boosted.orange.com/docs/3.3/> while folks transition to Bootstrap 4.
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
@@ -178,7 +178,7 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 
 **Loïc Laussel**
 
-- <http://github.com/Lausselloic/>
+- <https://github.com/Lausselloic/>
 
 ## Copyright and license
 

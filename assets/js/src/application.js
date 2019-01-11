@@ -119,7 +119,7 @@
         },
         transformData: function (hits) {
           return hits.map(function (hit) {
-            hit.url = hit.url.replace('http://boosted.orange.com/4.0/', '{{ site.baseurl }}/')
+            hit.url = hit.url.replace('https://boosted.orange.com/4.0/', '{{ site.baseurl }}/')
             return hit
           })
         },

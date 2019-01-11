@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://boosted.orange.com)
+ * Bootstrap v4.0.0-alpha.2 (https://boosted.orange.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -292,8 +292,8 @@ $.fn[NAME] = Tab._jQueryInterface;$.fn[NAME].Constructor = Tab;$.fn[NAME].noConf
  * --------------------------------------------------------------------------
  */var Tooltip=(function($){ /**
    * Check for Tether dependency
-   * Tether - http://github.hubspot.com/tether/
-   */if(window.Tether === undefined){throw new Error('Bootstrap tooltips require Tether (http://github.hubspot.com/tether/)');} /**
+   * Tether - https://github.hubspot.com/tether/
+   */if(window.Tether === undefined){throw new Error('Bootstrap tooltips require Tether (https://github.hubspot.com/tether/)');} /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
