@@ -10,8 +10,8 @@
 .custom-control {
   position: relative;
   display: block;
-  min-height: ($font-size-base * $line-height-base);
-  padding-left: $custom-control-gutter;
+  min-height: $font-size-base * $line-height-base;
+  padding-left: $custom-control-gutter + $custom-control-indicator-size;
   margin-bottom: ($spacer / 2); // Boosted mod ensure that there's at least 10px
 }
 
@@ -45,13 +45,10 @@
     box-shadow: $custom-control-indicator-focus-box-shadow;
   }
 
-  &:active ~ .custom-control-label::before {
+  &:not(:disabled):active ~ .custom-control-label::before {
     color: $custom-control-indicator-active-color;
     background-color: $custom-control-indicator-active-bg;
-    // Boosted mod
-    // our custom control have a border
-    border-color: $custom-control-indicator-checked-border-color;
-    // end mod
+    border-color: $custom-control-indicator-active-border-color;
     @include box-shadow($custom-control-indicator-active-box-shadow);
   }
 
@@ -62,7 +59,7 @@
       &::before {
         // Boosted mod
         // our custom control have a border
-        border-color: $gray-500;
+        border-color: $custom-control-indicator-disabled-bg;
         // end mod
       }
     }
@@ -82,32 +79,27 @@
 .custom-control-label {
   //position: relative; // boosted mod checkbox in table are misaligned
   margin-bottom: 0;
+  vertical-align: top;
 
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
     left: 0; // boosted mod checkbox in tables are misaligned
     display: block;
     width: $custom-control-indicator-size;
     height: $custom-control-indicator-size;
     pointer-events: none;
     content: "";
-    user-select: none;
     background-color: $custom-control-indicator-bg;
-    // Boosted mod
-    // our custom control have a border
-    border-color: $gray-700;
-    border-style: solid;
-    border-width: $input-btn-border-width;
-    // end mod
+    border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
     @include box-shadow($custom-control-indicator-box-shadow);
   }
 
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
     left: 0; // boosted mod checkbox in tables are misaligned
     display: block;
     width: $custom-control-indicator-size;
@@ -126,20 +118,23 @@
 
 .custom-checkbox {
   .custom-control-label::before {
-    //Boosted Mod
-    border: 2px solid $primary;
-    // End Mod
     @include border-radius($custom-checkbox-indicator-border-radius);
   }
 
+  // Boosted Mod
+  .custom-control-input:not(:disabled):checked ~ .custom-control-label {
+    &::before {
+      border: 2px solid $primary;
+    }
+  }
+  // End Mod
   .custom-control-input:checked ~ .custom-control-label {
-    // Boosted mod move ::before gradient to global definition
     &::after {
       //Boosted mod
       top: .65ex;
-      left: -3.4ex;
-      width: 1.9ex;
-      height: .9ex;
+      left: .5ex;
+      width: 1.6ex;
+      height: .7ex;
       //background-image: $custom-checkbox-indicator-icon-checked;
       border: 3px solid $white;
       border-top: none;
@@ -157,11 +152,7 @@
 
   .custom-control-input:indeterminate ~ .custom-control-label {
     &::before {
-      // Boosted mod
-      // our custom control have a border
-      border-color: $custom-control-indicator-checked-border-color;
-      // end mod
-
+      border-color: $custom-checkbox-indicator-indeterminate-border-color;
       @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
@@ -195,18 +186,32 @@
 
 .custom-radio {
   .custom-control-label::before {
-    //boosted mod
     border-radius: $custom-radio-indicator-border-radius;
-    //end mode
   }
 
   .custom-control-input:checked ~ .custom-control-label {
     // Boosted mod move ::before gradient to global definition
-    &::after {
-      background-image: $custom-radio-indicator-icon-checked;
+    &::before {
       //boosted mod
-      border: 5px solid $primary;
-      border-radius: 50%;
+      background-color: $white;
+      border-color: $white;
+      //end mod
+    }
+
+    // Boosted mod move ::before gradient to global definition
+    &::after {
+      //boosted mod
+      border: 6px solid $primary;
+      border-radius: $custom-radio-indicator-border-radius;
+      //end mod
+    }
+  }
+
+  .custom-control-input:disabled:checked ~ .custom-control-label {
+    // Boosted mod move ::before gradient to global definition
+    &::after {
+      //boosted mod
+      border-color: $custom-control-indicator-disabled-bg;
       //end mod
     }
   }
@@ -221,6 +226,79 @@
 }
 
 
+// switches
+//
+// Tweak a few things for switches
+
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+
+  .custom-control-label {
+    padding-top: .3125rem; // Boosted mod vertical align fix for label
+    &::before {
+      left: 0; // boosted mod
+      width: $custom-switch-width;
+      height: $custom-switch-height; // boosted mod
+      pointer-events: all;
+      background-color: $custom-control-indicator-border-color; // boosted mod
+      background-image: str-replace(url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 1250 1250'%3E%3Cpath d='M343.625 211.5c-4.875 1.125-12 4.125-15.875 6.5-8.5 5.25-102 98.25-108.625 108-8.875 13.25-12.25 31.5-8.625 46.875C215 392.25 209.625 386.25 334.125 511l114 114-114 114.125c-113.375 113.375-114 114-118.5 123.625-5.375 11.75-6.875 18.75-6.25 30.625.5 12.125 4.375 23.375 11.375 33.5 4.125 5.875 100.25 101 105.5 104.375 13.75 8.875 33.25 11.875 48.875 7.625 17.625-4.75 14.875-2.25 136.375-123.625L625 801.875l114 114C848.875 1025.625 853.5 1030 862.25 1034.25c20.625 9.75 45.25 8.375 62.125-3.625 7.75-5.5 100.75-98.125 105.75-105.25 9.25-13.375 13.125-33.375 9.25-48.625-4.875-19.5.625-13.375-123.5-137.75l-114-114L915.75 510.875c80.75-80.75 114.875-115.75 117.25-120.125 11.5-21.125 10.25-46.75-3.125-66.375-3.875-5.75-98.625-100.625-104.25-104.5-11.125-7.5-24.5-11.25-37.875-10.5-11.875.5-21.125 3.375-30.25 9-4.5 2.875-46.125 43.625-119.625 117L625 448.125l-114-114C386.375 209.75 392.25 215 373 210.5c-10-2.25-17.625-2-29.375 1z' fill='#fff'/%3E%3C/svg%3E"), "#", "%23"); // boosted mod
+      background-repeat: no-repeat; // boosted mod
+      background-position: 1.975rem; // boosted mod
+      border-radius: $custom-switch-indicator-border-radius;
+    }
+
+    &::after {
+      top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width}); // boosted mod
+      left: $custom-control-indicator-border-width; // boosted mod
+      width: $custom-switch-indicator-width; // boosted mod
+      height: $custom-switch-indicator-height; // boosted mod
+      background-color: $custom-switch-indicator-bg-color; // boosted mod
+      border-radius: $custom-switch-indicator-border-radius;
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+    }
+  }
+  // boosted mod create a right aligned switch
+  &.right {
+    padding-right: $custom-switch-width + $custom-control-gutter;
+    padding-left: 0;
+    .custom-control-label {
+      &::before {
+        right: 0;
+        left: auto;
+      }
+
+      &::after {
+        right: calc(#{($custom-switch-width / 2)} + #{$custom-control-indicator-border-width});
+        left: auto;
+      }
+    }
+  }
+  // end mod
+  .custom-control-input:checked ~ .custom-control-label {
+    // boosted mod
+    &::before {
+      background-image: str-replace(url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M7.5 12.5L3.75 8.75l-2.5 2.5L7.5 17.5 20 5l-2.5-2.5-10 10z' fill='#fff'/%3E%3C/svg%3E"), "#", "%23");
+      background-repeat: no-repeat;
+      background-position: .25rem;
+    }
+    // end mod
+    &::after {
+      background-color: $custom-control-indicator-bg;
+      transform: translateX($custom-switch-width / 2); // boosted mod change the indicator size
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+    ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-disabled-bg; // boosted mod
+    }
+  }
+}
+
+
 // Select
 //
 // Replaces the browser default select with a custom one, mostly pulled from
@@ -232,12 +310,12 @@
   width: 100%;
   height: $custom-select-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
-  font-weight: 700; // boosted mod set font-weight bold
+  font-weight: $custom-select-font-weight;
   line-height: $custom-select-line-height;
   color: $custom-select-color;
   vertical-align: middle;
-  background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
-  background-size: $custom-select-bg-size;
+  background: $custom-select-background;
+  background-color: $custom-select-bg;
   border: $custom-select-border-width solid $custom-select-border-color;
   @if $enable-rounded {
     border-radius: $custom-select-border-radius;
@@ -287,15 +365,17 @@
 
 .custom-select-sm {
   height: $custom-select-height-sm;
-  padding-top: $custom-select-padding-y;
-  padding-bottom: $custom-select-padding-y;
+  padding-top: $custom-select-padding-y-sm;
+  padding-bottom: $custom-select-padding-y-sm;
+  padding-left: $custom-select-padding-x-sm;
   font-size: $custom-select-font-size-sm;
 }
 
 .custom-select-lg {
   height: $custom-select-height-lg;
-  padding-top: $custom-select-padding-y;
-  padding-bottom: $custom-select-padding-y;
+  padding-top: $custom-select-padding-y-lg;
+  padding-bottom: $custom-select-padding-y-lg;
+  padding-left: $custom-select-padding-x-lg;
   font-size: $custom-select-font-size-lg;
 }
 
@@ -323,10 +403,6 @@
   &:focus ~ .custom-file-label {
     border-color: $custom-file-focus-border-color;
     box-shadow: $custom-file-focus-box-shadow;
-
-    &::after {
-      border-color: $custom-file-focus-border-color;
-    }
   }
 
   &:disabled ~ .custom-file-label {
@@ -338,6 +414,10 @@
       content: $value;
     }
   }
+
+  ~ .custom-file-label[data-browse]::after {
+    content: attr(data-browse);
+  }
 }
 
 .custom-file-label {
@@ -348,6 +428,7 @@
   z-index: 1;
   height: $custom-file-height;
   padding: $custom-file-padding-y $custom-file-padding-x;
+  font-weight: $custom-file-font-weight;
   line-height: $custom-file-line-height;
   color: $custom-file-color;
   background-color: $custom-file-bg;
@@ -368,7 +449,7 @@
     color: $custom-file-button-color;
     content: "Browse";
     @include gradient-bg($custom-file-button-bg);
-    border-left: $custom-file-border-width solid $custom-file-border-color;
+    border-left: inherit;
     @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
   }
 }
@@ -381,14 +462,15 @@
 
 .custom-range {
   width: 100%;
-  padding-left: 0; // Firefox specific
+  height: calc(#{$custom-range-thumb-height} + #{$custom-range-thumb-focus-box-shadow-width * 2});
+  padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
 
   &:focus {
     outline: none;
 
-    // Pseudo-elements must be split across multiple rulesets to have an affect.
+    // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
     &::-webkit-slider-thumb { box-shadow: $custom-range-thumb-focus-box-shadow; }
     &::-moz-range-thumb     { box-shadow: $custom-range-thumb-focus-box-shadow; }
@@ -402,7 +484,7 @@
   &::-webkit-slider-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
-    margin-top: (($custom-range-track-height - $custom-range-thumb-height) / 2); // Webkit specific
+    margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
@@ -477,7 +559,7 @@
     cursor: $custom-range-track-cursor;
     background-color: transparent;
     border-color: transparent;
-    border-width: ($custom-range-thumb-height * .5);
+    border-width: $custom-range-thumb-height / 2;
     @include box-shadow($custom-range-track-box-shadow);
   }
 
@@ -490,6 +572,28 @@
     margin-right: 15px; // arbitrary?
     background-color: $custom-range-track-bg;
     @include border-radius($custom-range-track-border-radius);
+  }
+
+  &:disabled {
+    &::-webkit-slider-thumb {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
+
+    &::-webkit-slider-runnable-track {
+      cursor: default;
+    }
+
+    &::-moz-range-thumb {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
+
+    &::-moz-range-track {
+      cursor: default;
+    }
+
+    &::-ms-thumb {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
   }
 }
 

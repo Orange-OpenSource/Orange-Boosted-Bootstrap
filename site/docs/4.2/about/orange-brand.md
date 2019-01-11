@@ -4,7 +4,7 @@ title: Orange brand guidelines
 group: about
 ---
 
-Have a need for Boosted's brand resources? Great! We have a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA [Orange Brand Assets](http://brand.orange.com/).
+Have a need for Boosted's brand resources? Great! We have a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA [Orange Brand Assets](https://brand.orange.com/).
 
 ## Orange logo
 

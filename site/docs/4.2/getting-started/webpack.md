@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Webpack
-description: Learn how to include Boosted in your project using Webpack 3.
+description: Learn how to include Boosted in your project using Webpack.
 group: getting-started
 toc: true
 ---
@@ -36,7 +36,7 @@ to your `package.json` using `npm install --save jquery popper.js`.
 
 To enjoy the full potential of Boosted and customize it to your needs, use the source files as a part of your project's bundling process.
 
-First, create your own `_custom.scss` and use it to override the [built-in custom variables]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/options/). Then, use your main Sass file to import your custom variables, followed by Boosted:
+First, create your own `_custom.scss` and use it to override the [built-in custom variables]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/). Then, use your main Sass file to import your custom variables, followed by Boosted:
 
 {% highlight scss %}
 @import "custom";
@@ -46,28 +46,27 @@ First, create your own `_custom.scss` and use it to override the [built-in custo
 For Boosted to compile, make sure you install and use the required loaders: [sass-loader](https://github.com/webpack-contrib/sass-loader), [postcss-loader](https://github.com/postcss/postcss-loader) with [Autoprefixer](https://github.com/postcss/autoprefixer#webpack). With minimal setup, your webpack config should include this rule or similar:
 
 {% highlight js %}
-  ...
-  {
-    test: /\.(scss)$/,
-    use: [{
-      loader: 'style-loader', // inject CSS to page
-    }, {
-      loader: 'css-loader', // translates CSS into CommonJS modules
-    }, {
-      loader: 'postcss-loader', // Run post css actions
-      options: {
-        plugins: function () { // post css plugins, can be exported to postcss.config.js
-          return [
-            require('precss'),
-            require('autoprefixer')
-          ];
-        }
+...
+{
+  test: /\.(scss)$/,
+  use: [{
+    loader: 'style-loader', // inject CSS to page
+  }, {
+    loader: 'css-loader', // translates CSS into CommonJS modules
+  }, {
+    loader: 'postcss-loader', // Run postcss actions
+    options: {
+      plugins: function () { // postcss plugins, can be exported to postcss.config.js
+        return [
+          require('autoprefixer')
+        ];
       }
-    }, {
-      loader: 'sass-loader' // compiles Sass to CSS
-    }]
-  },
-  ...
+    }
+  }, {
+    loader: 'sass-loader' // compiles Sass to CSS
+  }]
+},
+...
 {% endhighlight %}
 
 ### Importing Compiled CSS
@@ -81,14 +80,14 @@ import 'boosted/dist/css/boosted.min.css';
 In this case you may use your existing rule for `css` without any special modifications to webpack config, except you don't need `sass-loader` just [style-loader](https://github.com/webpack-contrib/style-loader) and [css-loader](https://github.com/webpack-contrib/css-loader).
 
 {% highlight js %}
-  ...
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
-  }
-  ...
+...
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }
+  ]
+}
+...
 {% endhighlight %}

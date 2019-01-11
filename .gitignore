@@ -1,7 +1,7 @@
 # Ignore docs files
 _gh_pages
 _site
-site/docs/4.1/dist
+site/docs/**/dist
 docs/4.0/examples/rtl-*
 
 # Ignore ruby files
@@ -40,9 +40,8 @@ Thumbs.db
 .komodotools
 *.komodoproject
 
-# Jekyll metadata and extra config file for `github` script
+# Jekyll metadata
 docs/.jekyll-metadata
-twbsconfig.yml
 
 # Folders to ignore
 node_modules

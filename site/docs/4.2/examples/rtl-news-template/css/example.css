@@ -56,10 +56,10 @@
   background-image: none;
   border-color: #ebccd1;
 }
-#comments .commentsList {
+#comments .comments-list {
   padding-left: 0;
 }
-#comments .commentsList li {
+#comments .comments-list li {
   padding: 15px;
   margin-bottom: 20px;
   color: #666;
@@ -71,7 +71,7 @@
 #comments ul li:hover {
   background-color: #f5f5f5;
 }
-.commentsList li span.comments {
+.comments-list li span.comments {
   display: block;
   float: right;
   margin: 0 0 10px 10px;
@@ -80,14 +80,14 @@ span.comments a {
   color: #f16e00;
   text-decoration: underline;
 }
-.commentsList li a {
+.comments-list li a {
   color: #666;
 }
-.commentsList li a:focus,
+.comments-list li a:focus,
 #comments a:hover {
   text-decoration: inherit;
 }
-.commentsList strong {
+.comments-list strong {
   display: block;
 }
 .orange {

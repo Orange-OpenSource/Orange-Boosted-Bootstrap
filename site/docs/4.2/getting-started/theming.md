@@ -4,7 +4,6 @@ title: Theming Boosted
 description: Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.
 group: getting-started
 toc: true
-redirect_from: "/docs/4.1/getting-started/options/"
 ---
 
 ## Introduction
@@ -15,7 +14,7 @@ Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There
 
 ## Sass
 
-Utilize our source Sass files to take advantage of variables, maps, mixins, and more.
+Utilize our source Sass files to take advantage of variables, maps, mixins, and more. In our build we've increased the Sass rounding precision to 6 (by default it's 5) to prevent issues with browser rounding.
 
 ### File structure
 
@@ -126,16 +125,16 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 
 {% highlight scss %}
 // Required
-@import "node_modules/boosted/scss/functions";
-@import "node_modules/boosted/scss/variables";
-@import "node_modules/boosted/scss/mixins";
+@import "../node_modules/boosted/scss/functions";
+@import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/mixins";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
 // Optional
-@import "node_modules/boosted/scss/root";
-@import "node_modules/boosted/scss/reboot";
-@import "node_modules/boosted/scss/type";
+@import "../node_modules/boosted/scss/root";
+@import "../node_modules/boosted/scss/reboot";
+@import "../node_modules/boosted/scss/type";
 ...
 {% endhighlight %}
 
@@ -232,15 +231,17 @@ You can find and customize these variables for key global options in our `_varia
 
 | Variable                    | Values                             | Description                                                                            |
 | --------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `$spacer`                   | `1rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). |
-| `$enable-rounded`           | `true` (default) or `false`        | Enables predefined `border-radius` styles on various components.                       |
-| `$enable-shadows`           | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components.                          |
-| `$enable-gradients`         | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components.      |
-| `$enable-transitions`       | `true` (default) or `false`        | Enables predefined `transition`s on various components.                                |
+| `$spacer`                   | `1.25rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). |
+| `$enable-rounded`           | `true` or `false` (default)       | Enables predefined `border-radius` styles on various components. |
+| `$enable-shadows`           | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components. |
+| `$enable-gradients`         | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components. |
+| `$enable-transitions`       | `true` (default) or `false`        | Enables predefined `transition`s on various components. |
+| `$enable-prefers-reduced-motion-media-query`       | `true` (default) or `false`        | Enables the [`prefers-reduced-motion` media query]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/accessibility/#reduced-motion), which suppresses certain animations/transitions based on the users' browser/operating system preferences. |
 | `$enable-hover-media-query` | `true` or `false` (default)        | **Deprecated** |
-| `$enable-grid-classes`      | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.).     |
-| `$enable-caret`             | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`.                                    |
-| `$enable-print-styles`      | `true` (default) or `false`        | Enables styles for optimizing printing.                                |
+| `$enable-grid-classes`      | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.). |
+| `$enable-caret`             | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`. |
+| `$enable-print-styles`      | `true` (default) or `false`        | Enables styles for optimizing printing. |
+| `$enable-validation-icons`  | `true` (default) or `false`        | Enables `background-image` icons within textual inputs and some custom forms for validation states. |
 
 ## Color
 
@@ -422,7 +423,7 @@ a {
 
 ### Breakpoint variables
 
-While we originally included breakpoints in our CSS variables (e.g., `--breakpoint-md`), **these are not supported in media queries**, but they can still be used _within_ rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec.](https://www.w3.org/TR/css-variables-1/#using-variables)
+While we originally included breakpoints in our CSS variables (e.g., `--breakpoint-md`), **these are not supported in media queries**, but they can still be used _within_ rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec](https://www.w3.org/TR/css-variables-1/#using-variables).
 
 Here's an example of **what's not supported:**
 

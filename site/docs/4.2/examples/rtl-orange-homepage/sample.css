@@ -7,7 +7,7 @@
   left: 0;
   display: block;
   width: 45%;
-  padding: 1.7em 3.4em 3.4em 3.4em;
+  padding: 1.7em 3.4em 3.4em;
   color: #000;
   zoom: 1;
   background-color: #fff;
@@ -36,7 +36,7 @@
   text-decoration: none;
 }
 .discovery-module-carousel-pop-out .carousel-inner .carousel-item{
-  padding: 0 1.875rem 1.25rem 1.875rem;
+  padding: 0 1.875rem 1.25rem;
 }
 .black-background {
   color: #fff;

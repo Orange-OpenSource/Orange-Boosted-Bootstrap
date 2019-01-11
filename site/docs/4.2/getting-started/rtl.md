@@ -38,7 +38,7 @@ To get a RTL version of a boosted webpage you need only one thing :
     <link rel="stylesheet" href="css/orangeHelvetica.css" />
     <!--
       Orange Icons
-      Copyright (C) 2016 - 2018 Orange SA All rights reserved
+      Copyright (C) 2016 - 2019 Orange SA All rights reserved
       See NOTICE.txt for more informations.
     -->
     <link rel="stylesheet" href="css/orangeIcons.css" />
