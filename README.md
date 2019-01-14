@@ -52,7 +52,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/4.2/getting-star
 [![NuGet](https://img.shields.io/nuget/v/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
 [![CSS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/js/boosted.min.js)
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=TGxBTEN5dlFWTnU1TzFPUWNYb0IyTXV0SlNjOTRUcVQ4Vy9aMEptRytTQT0tLUpEaEJhdGdtUHFlMlhmZUR6aHZuYXc9PQ==--cab64b2cdcdd899e81600d69f5063437846441ff)]
 
 ## What's included
 
