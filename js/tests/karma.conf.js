@@ -95,9 +95,7 @@ if (bundle) {
   reporters.push('BrowserStack')
   files = files.concat([
     `site/docs/${pkg.version_short}/assets/js/vendor/jquery-slim.min.js`,
-    'js/dist/util.js',
-    'js/dist/tooltip.js',
-    'js/dist/!(util|index|tooltip).js' // include all of our js/dist files except util.js, index.js and tooltip.js
+    'dist/js/boosted.js'
   ])
 } else {
   frameworks.push('detectBrowsers')
