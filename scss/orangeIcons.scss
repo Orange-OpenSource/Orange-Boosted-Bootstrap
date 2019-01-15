@@ -2828,3 +2828,43 @@
 .svg-buy:active {
   @include svg-buy(theme-color("primary"));
 }
+
+.btn-mail {
+  @include btn-mail();
+}
+
+.btn-mail-inverse {
+  @include btn-mail-inverse();
+}
+
+.btn-lin {
+  @include btn-lin();
+}
+
+.btn-lin-inverse {
+  @include btn-lin-inverse();
+}
+
+.btn-gplus {
+  @include btn-gplus();
+}
+
+.btn-gplus-inverse {
+  @include btn-gplus-inverse();
+}
+
+.btn-tw {
+  @include btn-tw();
+}
+
+.btn-tw-inverse {
+  @include btn-tw-inverse();
+}
+
+.btn-fbk {
+  @include btn-fbk();
+}
+
+.btn-fbk-inverse {
+  @include btn-fbk-inverse();
+}
