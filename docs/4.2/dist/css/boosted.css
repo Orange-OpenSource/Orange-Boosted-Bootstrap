@@ -2420,15 +2420,15 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label-lg {
-  padding-top: calc(0.875rem + 2px);
-  padding-bottom: calc(0.875rem + 2px);
+  padding-top: calc(0.594rem + 2px);
+  padding-bottom: calc(0.594rem + 2px);
   font-size: 1.125rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
-  padding-top: calc(0.375rem + 2px);
-  padding-bottom: calc(0.375rem + 2px);
+  padding-top: calc(0.157rem + 2px);
+  padding-bottom: calc(0.157rem + 2px);
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -2452,15 +2452,15 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-sm {
-  height: 2.0625rem;
-  padding: 0.375rem 0.625rem;
+  height: 1.6265rem;
+  padding: 0.157rem 0.625rem;
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .form-control-lg {
-  height: 3.4375rem;
-  padding: 0.875rem 1.25rem;
+  height: 2.8755rem;
+  padding: 0.594rem 1.25rem;
   font-size: 1.125rem;
   line-height: 1.5;
 }
@@ -3414,18 +3414,115 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
+.btn-xlg {
+  padding: 0.8125rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0;
+}
+
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.875rem 1.25rem;
+  padding: 0.594rem 1.25rem;
   font-size: 1.125rem;
   line-height: 1.5;
   border-radius: 0;
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.375rem 0.625rem;
+  padding: 0.157rem 0.625rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0;
+}
+
+.btn-mail {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-mail:hover, .btn-mail:focus {
+  outline: none;
+}
+
+.btn-mail-inverse {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-mail-inverse:hover, .btn-mail-inverse:focus {
+  outline: none;
+}
+
+.btn-lin {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-lin:hover, .btn-lin:focus {
+  outline: none;
+}
+
+.btn-lin-inverse {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-lin-inverse:hover, .btn-lin-inverse:focus {
+  outline: none;
+}
+
+.btn-gplus {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-gplus:hover, .btn-gplus:focus {
+  outline: none;
+}
+
+.btn-gplus-inverse {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-gplus-inverse:hover, .btn-gplus-inverse:focus {
+  outline: none;
+}
+
+.btn-tw {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-tw:hover, .btn-tw:focus {
+  outline: none;
+}
+
+.btn-tw-inverse {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-tw-inverse:hover, .btn-tw-inverse:focus {
+  outline: none;
+}
+
+.btn-fbk {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-fbk:hover, .btn-fbk:focus {
+  outline: none;
+}
+
+.btn-fbk-inverse {
+  height: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.btn-fbk-inverse:hover, .btn-fbk-inverse:focus {
+  outline: none;
 }
 
 .btn-block {
@@ -3970,7 +4067,7 @@ input[type="button"].btn-block {
 
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
-  height: 3.4375rem;
+  height: 2.8755rem;
 }
 
 .input-group-lg > .form-control,
@@ -3979,14 +4076,14 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  padding: 0.875rem 1.25rem;
+  padding: 0.594rem 1.25rem;
   font-size: 1.125rem;
   line-height: 1.5;
 }
 
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
-  height: 2.0625rem;
+  height: 1.6265rem;
 }
 
 .input-group-sm > .form-control,
@@ -3995,7 +4092,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  padding: 0.375rem 0.625rem;
+  padding: 0.157rem 0.625rem;
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -4259,17 +4356,17 @@ input[type="button"].btn-block {
 }
 
 .custom-select-sm {
-  height: 2.0625rem;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
+  height: 1.6265rem;
+  padding-top: 0.157rem;
+  padding-bottom: 0.157rem;
   padding-left: 0.625rem;
   font-size: 0.875rem;
 }
 
 .custom-select-lg {
-  height: 3.4375rem;
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
+  height: 2.8755rem;
+  padding-top: 0.594rem;
+  padding-bottom: 0.594rem;
   padding-left: 1.25rem;
   font-size: 1.125rem;
 }
@@ -14109,7 +14206,8 @@ caption {
     display: none;
   }
   .swiper-container {
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
     /* used for displaying pagination outside of container */
   }
   .swiper-slide {
@@ -14122,7 +14220,7 @@ caption {
     position: static;
   }
   .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: -26px;
+    bottom: 0;
   }
   .swiper-pagination-bullet {
     width: 8px;
