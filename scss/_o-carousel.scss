@@ -173,7 +173,8 @@
   }
 
   .swiper-container {
-    overflow: visible; /* used for displaying pagination outside of container */
+    overflow-x: hidden;
+    overflow-y: visible;/* used for displaying pagination outside of container */
   }
 
   .swiper-slide {
@@ -194,7 +195,7 @@
   }
 
   .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: -26px;
+    bottom: 0;
   }
 
   .swiper-pagination-bullet {
