@@ -24,14 +24,14 @@
   @each $type, $val in $logo-boosted-size {
     .alert-icon-#{$color}-#{$type} {
       position: absolute;
-      @if ($type == "small") {
+      @if ($type == "sm") {
         top: .4375rem;
-      } @else if ($type == "medium") {
+      } @else if ($type == "md") {
         top: .625rem;
       } @else {
         top: .6875rem;
       }
-      @if ($type == "large") {
+      @if ($type == "lg") {
         width: $val + .3rem;
         height: $val;
       } @else {
