@@ -12,34 +12,25 @@
 }
 
 // boosted mod
-@each $type, $value in $theme-boosted-size {
-  .o-alert-#{$type} {
-    padding: $value !important;
-    @include define-font-size($type);
-    color: #000 !important;
-    background-color: transparent !important;
-    border-style: solid;
-    .close{
-      padding: ($value - .2rem) $alert-padding-x !important;
-      text-shadow: none !important;
-      opacity: 1 !important;
-    }
-    border-width: $alert-border-size;
-  }
+.alert-sm {
+  padding: $alert-padding-y-sm $alert-padding-x-sm;
+}
+
+.alert-lg {
+  padding: $alert-padding-y-lg $alert-padding-x-lg;
 }
 
 @each $color, $value in $theme-colors {
   @each $type, $val in $logo-boosted-size {
-    .o-alert-logo-#{$color}-#{$type} {
+    .alert-icon-#{$color}-#{$type} {
       position: absolute;
       @if ($type == "small") {
-        top: .3rem;
+        top: .4375rem;
       } @else if ($type == "medium") {
-        top: .5rem;
+        top: .625rem;
       } @else {
-        top: 1rem;
+        top: .6875rem;
       }
-      left: 1.25rem;
       @if ($type == "large") {
         width: $val + .3rem;
         height: $val;
@@ -53,41 +44,7 @@
     }
   }
 }
-
-.boosted-multiline {
-  @each $color, $value in $theme-colors {
-    .o-alert-logo-#{$color}-large{
-      top: 1.5rem !important;
-    }
-  }
-}
-
-.inverse{
-  background-color: #000;
-}
-
-.alert-inverse{
-  color: #fff !important;
-}
-
-.o-alert-padding{
-  padding-left: 3.5rem;
-}
-//remove border
-.o-alert-no-border{
-  border-style: none !important;
-}
-
 //end mode
-
-//dark color for span button
-.span-dark{
-  color: #000 !important;
-}
-
-.span-dark-inverse{
-  color: #fff !important;
-}
 
 // Headings for larger alerts
 .alert-heading {
