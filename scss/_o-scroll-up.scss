@@ -7,8 +7,7 @@
     &::before {
       font-family: icon-orange, sans-serif;
       font-size: 1.25rem;
-      line-height: 2;
-      text-align: center;
+      line-height: 1.8;
       content: "\e93f";
     }
     align-items: center;
@@ -16,11 +15,12 @@
     float: right;
     width: $o-scroll-up-width;
     height: $o-scroll-up-height;
-    color: #fff;
+    color: #000;
     text-align: center;
     text-decoration: none;
-    background-color: $gray-700;
-    opacity: .8;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 2px;
     transform: rotate(90deg)/*rtl:ignore*/;
   }
 
@@ -79,5 +79,15 @@
 
   @include hover-focus {
     color: $primary;
+    .o-scroll-up-icon {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  &:active .o-scroll-up-icon {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
   }
 }
