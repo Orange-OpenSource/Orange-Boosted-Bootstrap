@@ -122,21 +122,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-          <nav class="bd-links" id="docsNavbarContent">
+          <button class="btn btn-link bd-search-docs-toggle d-md-none p-0" type="button" data-toggle="collapse" data-target="#docsNavbarContent" aria-controls="docsNavbarContent" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false" role="img"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
+<nav class="collapse bd-links" id="docsNavbarContent">
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#accordion">Accordions</a>
-  </div>
-  <div class="bd-toc-item ">
-    <a class="bd-toc-link" href="#buttons">Buttons</a>
   </div>
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#bulletpoint">Bullet point</a>
   </div>
   <div class="bd-toc-item ">
-    <a class="bd-toc-link" href="#container">Containers</a>
+    <a class="bd-toc-link" href="#buttons">Buttons</a>
   </div>
   <div class="bd-toc-item ">
-    <a class="bd-toc-link" href="#custom-carousel">Custom carousel</a>
+    <a class="bd-toc-link" href="#custom-carousel">Carousel</a>
+  </div>
+  <div class="bd-toc-item ">
+    <a class="bd-toc-link" href="#container">Containers</a>
   </div>
   <div class="bd-toc-item ">
     <a class="bd-toc-link" href="#dialogs">Dialogs</a>
@@ -289,6 +291,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
+
+<h2 id="bulletpoint">Bullet point<a class="doc-link" href="../content/typography/#orange-list-with-bullet-points" title="go to bullet point documentation page"></a></h2>
+<div class="container-fluid">
+  <div class="row">
+    <ul class="o-square-list">
+      <li>
+        <span>first</span>
+        <ul>
+          <li>
+            <span>1.1</span>
+            <ul>
+              <li><span>1.1.1</span></li>
+              <li><span>1.1.2</span></li>
+            </ul>
+          </li>
+          <li>
+            <span>1.2</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>second</span>
+      </li>
+      <li>
+        <span>third</span>
+      </li>
+      <li>
+        <span>fourth</span>
+      </li>
+    </ul>
+  </div>
+</div><!-- /.container-fluid -->
 
 <!-- Buttons
 ================================================== -->
@@ -520,93 +554,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <button type="button" class="btn btn-secondary">Button</button>
 </div>
 
-<h2 id="bulletpoint">Bullet point<a class="doc-link" href="../content/typography/#orange-list-with-bullet-points" title="go to bullet point documentation page"></a></h2>
-<div class="container-fluid">
-  <div class="row">
-    <ul class="o-square-list">
-      <li>
-        <span>first</span>
-        <ul>
-          <li>
-            <span>1.1</span>
-            <ul>
-              <li><span>1.1.1</span></li>
-              <li><span>1.1.2</span></li>
-            </ul>
-          </li>
-          <li>
-            <span>1.2</span>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>second</span>
-      </li>
-      <li>
-        <span>third</span>
-      </li>
-      <li>
-        <span>fourth</span>
-      </li>
-    </ul>
-  </div>
-</div><!-- /.container-fluid -->
-
-<!-- Containers
-================================================== -->
-<h2 id="container">Containers</h2>
-<h3>Cards<a class="doc-link" href="../components/card/" title="go to card documentation page"></a></h3>
-<div class="container-fluid">
-  <div class="row">
-      <div class="col-md-4">
-          <div class="o-card card">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#999" width="100%" height="100%"/><text fill="#eee" dy=".3em" x="50%" y="50%">Image cap</text></svg>
-              <div class="card-body ">
-                  <h4 class="card-title">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Button</a>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-<h2>Card links</h2>
-<div class="card-deck">
-    <a href="#" class="card o-card-link" id="bill">
-        <div class="card-img">
-            <img src="/docs/4.2/assets/img/bill.png" alt="Card image cap">
-        </div>
-        <div class="card-body">
-            <div class="card-title">Gérer vos factures</div>
-        </div>
-    </a>
-    <a href="#" class="card o-card-link" id="shop">
-        <div class="card-img">
-            <img src="/docs/4.2/assets/img/shop.png" alt="Card image cap">
-        </div>
-        <div class="card-body">
-            <div class="card-title">Suivre votre commande</div>
-        </div>
-    </a>
-    <a href="#" class="card o-card-link" id="timer">
-        <div class="card-img">
-            <img src="/docs/4.2/assets/img/timer.png" alt="Card image cap">
-        </div>
-        <div class="card-body">
-            <div class="card-title">Accéder à votre suivi conso</div>
-        </div>
-    </a>
-    <a href="#" class="card o-card-link" id="unlock">
-        <div class="card-img">
-            <img src="/docs/4.2/assets/img/unlock.png" alt="Card image cap">
-        </div>
-        <div class="card-body">
-            <div class="card-title">Désimlocker votre mobile</div>
-        </div>
-    </a>
-</div>
-
 <h2>Custom carousel</h2>
 <div class="swiper-container" style="width: 37.5rem;">
     <div class="swiper-wrapper">
@@ -650,6 +597,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="swiper-button-next"></div>
 </div>
 
+<!-- Containers
+================================================== -->
+<h2 id="container">Containers</h2>
+<h3>Cards<a class="doc-link" href="../components/card/" title="go to card documentation page"></a></h3>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="o-card card">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#999" width="100%" height="100%"/><text fill="#eee" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+              <div class="card-body ">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<h3>Card links</h3>
+<div class="card-deck">
+    <a href="#" class="card o-card-link" id="bill">
+        <div class="card-img">
+            <img src="/docs/4.2/assets/img/bill.png" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <div class="card-title">Gérer vos factures</div>
+        </div>
+    </a>
+    <a href="#" class="card o-card-link" id="shop">
+        <div class="card-img">
+            <img src="/docs/4.2/assets/img/shop.png" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <div class="card-title">Suivre votre commande</div>
+        </div>
+    </a>
+    <a href="#" class="card o-card-link" id="timer">
+        <div class="card-img">
+            <img src="/docs/4.2/assets/img/timer.png" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <div class="card-title">Accéder à votre suivi conso</div>
+        </div>
+    </a>
+    <a href="#" class="card o-card-link" id="unlock">
+        <div class="card-img">
+            <img src="/docs/4.2/assets/img/unlock.png" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <div class="card-title">Désimlocker votre mobile</div>
+        </div>
+    </a>
+</div>
+
 <!-- Dialogs
 ================================================== -->
 <h2 id="dialogs">Dialogs</h2>
@@ -666,7 +668,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
     </div>
-    <h3>Tooltips<a class="doc-link" href="../components/tooltips/" title="go to tooltips documentation page"></a></h3>
+    <h3 class="mt-2">Tooltips<a class="doc-link" href="../components/tooltips/" title="go to tooltips documentation page"></a></h3>
     <div>
         <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
 
@@ -1254,7 +1256,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
   </div>
-  <div class="col-12">
+  <div class="col-12 mt-2">
     <h3 id="bs-nav-pills">Pills<a class="doc-link" href="../components/navs/#pills" title="go to pills documentation page"></a></h3>
     <ul class="nav nav-pills">
       <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
@@ -1271,7 +1273,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
   </div>
 </div>
-<div class="row">
+<div class="row mt-2">
   <div class="col-lg-6">
     <h3 id="bs-nav-breadcrumbs">Breadcrumbs<a class="doc-link" href="../components/breadcrumb/" title="go to breadcrumb documentation page"></a></h3>
     <div>
@@ -2270,7 +2272,7 @@ Buttons + Back/Next labels
   </div>
 </div>
 </div>
-
+  
         </main>
       </div>
     </div>
