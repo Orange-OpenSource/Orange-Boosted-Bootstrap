@@ -137,5 +137,11 @@
     }
 
     // Bootstrap specific changes end
+    // boosted mod try to fix print errors
+    // https://github.com/twbs/bootstrap/issues/26781
+    .row,
+    .form-row {
+      display: block !important;
+    }
   }
 }
