@@ -56,7 +56,11 @@ In addition to this `.active` class to show the current page in the navbar, you 
 
 ## Supra bar
 
-Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar delcaration.
+Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar declaration. 
+{% capture callout %}
+This navbar is visible only on desktop view.
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
