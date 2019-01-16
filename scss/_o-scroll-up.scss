@@ -21,7 +21,9 @@
     background-color: #fff;
     border-style: solid;
     border-width: 2px;
-    transform: rotate(90deg)/*rtl:ignore*/;
+    /*rtl:ignore*/
+    transform: rotate(90deg);
+    /*rtl:ignore*/
   }
 
   position: fixed;
