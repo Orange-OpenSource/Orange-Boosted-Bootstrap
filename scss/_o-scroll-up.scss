@@ -21,7 +21,7 @@
     text-decoration: none;
     background-color: $gray-700;
     opacity: .8;
-    transform: rotate(90deg);
+    transform: rotate(90deg)/*rtl:ignore*/;
   }
 
   position: fixed;
