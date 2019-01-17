@@ -39,18 +39,19 @@ The text must be inside a div tag with padding and margin **required** class (e.
 
 Available icons : 
 ```
-alert-icon-success-sm
-alert-icon-success-md
-alert-icon-success-lg
-alert-icon-info-sm
-alert-icon-info-md
-alert-icon-info-lg
-alert-icon-warning-sm
-alert-icon-warning-md
-alert-icon-warning-lg
 alert-icon-danger-sm
 alert-icon-danger-md
 alert-icon-danger-lg
+alert-icon-info-sm
+alert-icon-info-md
+alert-icon-info-lg
+alert-icon-success-sm
+alert-icon-success-md
+alert-icon-success-lg
+alert-icon-warning-sm
+alert-icon-warning-md
+alert-icon-warning-lg
+
 ```
 {% capture example %}
 <h3>Orange Alerts</h3>

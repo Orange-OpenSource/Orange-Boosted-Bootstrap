@@ -32,11 +32,29 @@
         top: .6875rem;
       }
       @if ($type == "lg") {
-        width: $val + .3rem;
-        height: $val;
-      } @else {
-        width: $val;
-        height: $val;
+        @if($color == "success" or $color == "info"){
+          width: $val;
+          height: $val; 
+        } @else if($color == "warning" or $color == "danger") {
+          width: $val + .3rem;
+          height: $val;
+        }
+      } @else if($type == "md") {
+        @if($color == "success" or $color == "info"){
+          width: $val;
+          height: $val; 
+        } @else if($color == "warning" or $color == "danger") {
+          width: $val + .2rem;
+          height: $val;
+        }
+      } @else if($type == "sm") {
+        @if($color == "success" or $color == "info"){
+          width: $val;
+          height: $val; 
+        } @else if($color == "warning" or $color == "danger") {
+          width: $val + .2rem;
+          height: $val;
+        }
       }
       @include define-image($color);
       background-repeat: no-repeat;
