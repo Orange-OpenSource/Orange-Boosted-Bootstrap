@@ -702,15 +702,17 @@ Add the `disabled` boolean attribute on an input to prevent user interactions an
 
 Add the `disabled` attribute to a `<fieldset>` to disable all the controls within.
 
+Add the `.disabled` class to the label for a disabled input.
+
 {% capture example %}
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
+      <label for="disabledTextInput" class="disabled">Disabled input</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <label for="disabledSelect" class="disabled">Disabled select menu</label>
       <select id="disabledSelect" class="form-control">
         <option>Disabled select</option>
       </select>

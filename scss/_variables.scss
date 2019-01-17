@@ -523,7 +523,7 @@ $label-margin-bottom:                   .625rem !default;
 $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       .625rem !default; // Boosted mod input padding x is not the same as buttons padding-x!
 $input-font-size:                       $input-btn-font-size !default;
-$input-font-weight:                     $font-weight-base !default;
+$input-font-weight:                     $font-weight-bold !default;
 $input-line-height:                     $input-btn-line-height !default;
 
 $input-padding-y-sm:                    $input-btn-padding-y-sm !default;
@@ -549,7 +549,7 @@ $input-border-radius-lg:                $border-radius-lg !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              $gray-600 !default;
+$input-focus-border-color:              $black !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
@@ -603,7 +603,7 @@ $custom-control-label-disabled-color:           #767676 !default;
 
 $custom-control-indicator-checked-color:        $white !default;
 $custom-control-indicator-checked-bg:           theme-color("primary") !default;
-$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default;
+$custom-control-indicator-checked-disabled-bg:  $gray-500 !default;
 $custom-control-indicator-checked-box-shadow:   none !default;
 $custom-control-indicator-checked-border-color: theme-color("primary") !default; // Boosted mod controls have border
 
@@ -676,14 +676,14 @@ $custom-range-track-width:          100% !default;
 $custom-range-track-height:         .5rem !default;
 $custom-range-track-cursor:         pointer !default;
 $custom-range-track-bg:             $gray-600 !default;
-$custom-range-track-border-radius:  1rem !default;
+$custom-range-track-border-radius:  0 !default;
 $custom-range-track-box-shadow:     inset 0 .25rem .25rem rgba($black, .1) !default;
 
 $custom-range-thumb-width:                   1rem !default;
 $custom-range-thumb-height:                  $custom-range-thumb-width !default;
 $custom-range-thumb-bg:                      $component-active-bg !default;
 $custom-range-thumb-border:                  0 !default;
-$custom-range-thumb-border-radius:           1rem !default;
+$custom-range-thumb-border-radius:           50% !default;
 $custom-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
 $custom-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg, 0 0 0 .125rem $black !default;
 $custom-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in IE/Edge

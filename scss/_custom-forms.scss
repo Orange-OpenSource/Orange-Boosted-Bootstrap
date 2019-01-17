@@ -486,7 +486,7 @@
     margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    @include border-radius($custom-range-thumb-border-radius);
+    border-radius: $custom-range-thumb-border-radius;
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
@@ -512,7 +512,7 @@
     height: $custom-range-thumb-height;
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    @include border-radius($custom-range-thumb-border-radius);
+    border-radius: $custom-range-thumb-border-radius;
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
@@ -541,7 +541,7 @@
     margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    @include border-radius($custom-range-thumb-border-radius);
+    border-radius: $custom-range-thumb-border-radius;
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
