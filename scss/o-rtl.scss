@@ -19,3 +19,8 @@
   transform: rotateY(180deg);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+
