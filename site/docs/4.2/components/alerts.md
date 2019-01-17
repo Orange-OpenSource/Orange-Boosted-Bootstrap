@@ -32,13 +32,29 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 {% endcapture %}
 {% include example.html content=example %}
 
-### Custom
+### Outline
 
 Outline alerts could be created for any length of text. 3 sizes available `.alert-sm`, md as default, `.alert-lg`. In addition of the use of the **required** alert classe (e.g., `.alert`), use (e.g., `.alert-sm`) for the size of the alert box. The logo **required** a contextual classe (e.g.,`.alert-icon-success-sm`).
 The text must be inside a div tag with padding and margin **required** class (e.g,`.pl-3 .ml-3`).
+
+Available icons : 
+```
+alert-icon-success-sm
+alert-icon-success-md
+alert-icon-success-lg
+alert-icon-info-sm
+alert-icon-info-md
+alert-icon-info-lg
+alert-icon-warning-sm
+alert-icon-warning-md
+alert-icon-warning-lg
+alert-icon-danger-sm
+alert-icon-danger-md
+alert-icon-danger-lg
+```
 {% capture example %}
 <h3>Orange Alerts</h3>
-    <!-- Custom Alerts
+    <!-- Outline Alerts
     ======================================= -->
     <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon-success-sm" aria-label="Success"></span>
@@ -47,6 +63,42 @@ The text must be inside a div tag with padding and margin **required** class (e.
         </div>
         <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
         <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert alert-sm border border-info alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-info-sm" aria-label="Info"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert alert-sm border border-warning alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-warning-sm" aria-label="Warning"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert alert-sm border border-danger alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-danger-sm" aria-label="Danger"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert border border-success alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-success-md" aria-label="Success"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
@@ -58,8 +110,53 @@ The text must be inside a div tag with padding and margin **required** class (e.
         <span class="text-dark" aria-hidden="true">&times;</span>
         </button>
     </div>
+    <div class="alert border border-warning alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-warning-md" aria-label="Warning"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border border-danger alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-danger-md" aria-label="Danger"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-success alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-success-lg" aria-label="Success"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-info alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-info-lg" aria-label="Info"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
     <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon-warning-lg" aria-label="Warning"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon-danger-lg" aria-label="Danger"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
