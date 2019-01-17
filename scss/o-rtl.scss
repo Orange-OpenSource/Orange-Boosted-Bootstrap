@@ -3,6 +3,7 @@
 //
 
 @import "mixins";
+@import "functions";
 
 // invert chevrons
 
@@ -19,6 +20,8 @@
   transform: rotateY(180deg);
 }
 
+.page-item:last-child .page-link::before,
+.page-item:first-child .page-link::before,
 .swiper-button-prev,
 .swiper-button-next {
   transform: rotate(180deg);
