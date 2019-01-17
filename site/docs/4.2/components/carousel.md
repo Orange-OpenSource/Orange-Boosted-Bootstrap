@@ -110,7 +110,8 @@ You can also add the indicators to the carousel, alongside the controls, too.
 
 ### With captions
 
-Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.<br>
+Add a link to a slider by using `a` html tag.
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -125,6 +126,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <a href="#" title="Example link #1">Example Link #1</a>
         </div>
       </div>
       <div class="carousel-item">
@@ -132,6 +134,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" title="Example link #2">Example Link #2</a>
         </div>
       </div>
       <div class="carousel-item">
@@ -139,6 +142,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <a href="#" title="Example link #3">Example Link #3</a>
         </div>
       </div>
     </div>
@@ -159,6 +163,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
   <div class="carousel-caption d-none d-md-block">
     <h5>...</h5>
     <p>...</p>
+    <a href="#" title="Empty link">...</a>
   </div>
 </div>
 {% endhighlight %}
