@@ -40,7 +40,7 @@
 
 @include media-breakpoint-down(xs) {
   .card.o-card-link {
-    flex-basis: calc(50% - 2rem);
+    flex-basis: auto;
     margin: 1rem;
   }
 
@@ -96,7 +96,7 @@
 
 @include media-breakpoint-only(sm) {
   .card.o-card-link {
-    flex-basis: calc(50% - 2rem);
+    flex-basis: auto;
     margin: 1rem;
   }
 }
