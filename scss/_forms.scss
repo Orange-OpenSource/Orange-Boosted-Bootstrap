@@ -154,13 +154,13 @@ select.form-control {
   @include border-radius($input-border-radius-sm);
 }
 
-/*.form-control-xlg {
+/* .form-control-xlg {
   height: $form-control-input-extra-large;
   padding: $input-padding-y-lg $input-padding-x-lg;
   font-size: $form-control-font-size-extra-large;
   line-height: $input-line-height-lg;
   @include border-radius($input-border-radius-lg);
-}*/
+} */
 
 .form-control-lg {
   height: $input-height-lg;
