@@ -21,12 +21,13 @@
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     z-index: 2;
     color: $pagination-hover-color;
     text-decoration: none;
     background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border-color;
+    border-color: $pagination-hover-border;
 
     // Boosted mod
     span {
@@ -95,6 +96,12 @@
         background-color: $pagination-active-bg;
         border-color: $pagination-active-border-color;
       }
+      &:active {
+        z-index: 1;
+        color: $pagination-active-color;
+        background-color: $pagination-active-item-bg;
+        border-color: $pagination-active-item-border-color;
+      }
     }
   }
 
@@ -132,6 +139,13 @@
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;
+  }
+
+  .page-link:active {
+    z-index: 1;
+    color: $pagination-active-color;
+    background-color: $pagination-active-item-bg;
+    border-color: $pagination-active-item-border-color;
   }
 
   // Boosted mod

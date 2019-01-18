@@ -883,11 +883,15 @@ $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            $black !default;
 $pagination-hover-bg:               $white !default;
+$pagination-hover-border:              $gray-500 !default;
 $pagination-hover-border-color:     $black !default;
 
 $pagination-active-color:           $white !default;
 $pagination-active-bg:              $black !default;
 $pagination-active-border-color:    $black !default;
+
+$pagination-active-item-bg:                 $orange !default;
+$pagination-active-item-border-color:       $orange !default;
 
 $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
