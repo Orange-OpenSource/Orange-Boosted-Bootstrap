@@ -18,7 +18,6 @@
   pages:
     - title: Overview
     - title: Grid
-    - title: Media object
     - title: Utilities for layout
 
 - title: Content
@@ -48,6 +47,7 @@
     - title: Input group
     - title: Jumbotron
     - title: List group
+    - title: Media object
     - title: Modal
     # boosted mod
     - title: Orange popin
@@ -67,8 +67,12 @@
     - title: Scrollspy
     # boosted mod
     - title: Scroll up
+    # end mod
+    - title: Spinners
+    # boosted mod
     - title: Stepbar
     # end mod
+    - title: Toasts
     - title: Tooltips
 
 - title: Utilities
@@ -82,6 +86,7 @@
     - title: Flex
     - title: Float
     - title: Image replacement
+    - title: Overflow
     - title: Position
     - title: Screenreaders
     - title: Shadows
@@ -105,6 +110,7 @@
 - title: About
   pages:
     - title: Overview
+    - title: Team
 # boosted mod
     - title: Boosted history
 # end mod

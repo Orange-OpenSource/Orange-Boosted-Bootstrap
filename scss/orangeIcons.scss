@@ -1,3 +1,4 @@
+// stylelint-disable selector-class-pattern
 //  Orange Boosted with Bootstrap
 //         Orange Icons
 //         Copyright (C) 2016 Orange SA All rights reserved
@@ -2740,17 +2741,7 @@
 .svg-settings::after,
 .svg-search::after,
 .svg-avatar::after,
-.svg-buy::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
+.svg-buy::after,
 .svg-success::after,
 .svg-warning::after,
 .svg-info::after,
@@ -2758,8 +2749,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 9.25rem;
-  height: 9.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   content: "";
   background-repeat: no-repeat;
   background-size: cover;

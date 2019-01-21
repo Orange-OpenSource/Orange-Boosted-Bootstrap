@@ -32,6 +32,10 @@
     color: $disabled-color; // Boosted mod
     background-color: $disabled-background; // Boosted var disabled
     border-color: $disabled-border; // Boosted var disabled
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -62,8 +66,7 @@
   background-image: none;
   border-color: $color;
 
-  &:hover,
-  &:focus { //Boosted mod focus has same as hover
+  @include hover-focus { //Boosted mod focus has same as hover
     color: #fff; // Boosted mod
     background-color: #000; // Boosted mod
     border-color: #000 // Boosted mod

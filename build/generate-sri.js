@@ -12,10 +12,12 @@
 
 'use strict'
 
+const crypto = require('crypto')
 const fs = require('fs')
 const path = require('path')
-const sriToolbox = require('sri-toolbox')
 const sh = require('shelljs')
+
+const pkg = require('../package.json')
 
 sh.config.fatal = true
 
@@ -26,19 +28,23 @@ const configFile = path.join(__dirname, '../_config.yml')
 // `configPropertyName` is the _config.yml variable's name of the file
 const files = [
   {
-    file: 'dist/css/bootstrap.min.css',
+    file: 'dist/css/boosted.min.css',
     configPropertyName: 'css_hash'
   },
   {
-    file: 'dist/js/bootstrap.min.js',
+    file: 'dist/js/boosted.min.js',
     configPropertyName: 'js_hash'
   },
   {
-    file: 'site/docs/4.1/assets/js/vendor/jquery-slim.min.js',
+    file: `site/docs/${pkg.version_short}/assets/js/vendor/jquery-slim.min.js`,
     configPropertyName: 'jquery_hash'
   },
   {
-    file: 'site/docs/4.1/assets/js/vendor/popper.min.js',
+    file: 'dist/js/boosted.bundle.min.js',
+    configPropertyName: 'js_bundle_hash'
+  },
+  {
+    file: 'node_modules/popper.js/dist/umd/popper.min.js',
     configPropertyName: 'popper_hash'
   }
 ]
@@ -49,9 +55,9 @@ files.forEach((file) => {
       throw err
     }
 
-    const integrity = sriToolbox.generate({
-      algorithms: ['sha384']
-    }, data)
+    const algo = 'sha384'
+    const hash = crypto.createHash(algo).update(data, 'utf8').digest('base64')
+    const integrity = `${algo}-${hash}`
 
     console.log(`${file.configPropertyName}: ${integrity}`)
 

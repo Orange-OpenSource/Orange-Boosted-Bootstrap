@@ -1,6 +1,7 @@
 //
 // Base styles
 //
+// stylelint-disable declaration-no-important
 
 .alert {
   position: relative;
@@ -9,6 +10,17 @@
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
 }
+
+// boosted mod
+.alert-sm {
+  padding: $alert-padding-y-sm $alert-padding-x-sm;
+}
+
+.alert-lg {
+  padding: $alert-padding-y-lg $alert-padding-x-lg;
+}
+
+//end mode
 
 // Headings for larger alerts
 .alert-heading {
@@ -27,9 +39,8 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: ($close-font-size + $alert-padding-x * 2);
-
-  // Adjust close link position
+  padding-right: $close-font-size + $alert-padding-x * 2;
+  //Adjust close
   .close {
     position: absolute;
     top: 0;

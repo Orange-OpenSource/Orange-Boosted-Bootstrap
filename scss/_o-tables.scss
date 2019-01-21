@@ -3,6 +3,7 @@
 //
 // stylelint-disable selector-no-qualifying-type
 // stylelint-disable selector-max-type
+// stylelint-disable selector-class-pattern
 
 // Change the table states color
 @mixin table-row-variant-border($state, $color) {
