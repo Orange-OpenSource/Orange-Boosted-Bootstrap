@@ -593,10 +593,6 @@ div#tarteaucitronServices {
     text-align: left;
 }
 
-#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList strong {
-    color: #000;
-}
-
 #tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesTitle {
     background: #000;
     margin-top: 31px;
