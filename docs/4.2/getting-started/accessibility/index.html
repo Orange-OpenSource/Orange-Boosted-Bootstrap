@@ -12,6 +12,8 @@
 
 <title>Accessibility · Boosted</title>
 
+<!-- tarteaucitron -->
+<link href="/docs/4.2/assets/css/tarteaucitronboosted.css" rel="stylesheet">
 <!-- Swiper -->
 <link href="/docs/4.2/dist/css/vendor/swiper.min.css" rel="stylesheet">
 <!-- helvetica -->
@@ -43,19 +45,39 @@
 
 
 <!-- Boosted mod remove social -->
-<script>dataLayer = [{
+<script src="/docs/4.2/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+	tarteaucitron.init({
+		"privacyUrl": "", /* Privacy policy url */
+
+		"hashtag": "#cookie-consent", /* Open the panel with this hashtag */
+		"cookieName": "cookie-consent", /* Cookie name */
+
+		"orientation": "bottom", /* Banner position (top - bottom) */
+		"showAlertSmall": true, /* Show the small banner on bottom right */
+		"cookieslist": true, /* Show the cookie list */
+
+		"adblocker": false, /* Show a Warning if an adblocker is detected */
+		"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+		"highPrivacy": false, /* Disable auto consent */
+		"handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
+
+		"removeCredit": false, /* Remove credit link */
+		"moreInfoLink": true, /* Show more info link */
+		"useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+
+		//"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+		"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+	});
+	tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+dataLayer = [{
 'site_name': 'accessibility-boosted',  
 'phase': 'prod',                     // dev, qa, prod
 'page_type': 'doc',            //  type de page, optionnel
 'page_title': document.title              // obligatoire pour pages dynamiques
 }];
-<!-- Google Tag Manager -->
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P6H78BQ');
-<!-- End Google Tag Manager -->
 </script>
 
   </head>

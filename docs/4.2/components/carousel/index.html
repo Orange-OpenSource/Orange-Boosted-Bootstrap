@@ -12,6 +12,8 @@
 
 <title>Carousel · Boosted</title>
 
+<!-- tarteaucitron -->
+<link href="/docs/4.2/assets/css/tarteaucitronboosted.css" rel="stylesheet">
 <!-- Swiper -->
 <link href="/docs/4.2/dist/css/vendor/swiper.min.css" rel="stylesheet">
 <!-- helvetica -->
@@ -43,19 +45,39 @@
 
 
 <!-- Boosted mod remove social -->
-<script>dataLayer = [{
+<script src="/docs/4.2/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+	tarteaucitron.init({
+		"privacyUrl": "", /* Privacy policy url */
+
+		"hashtag": "#cookie-consent", /* Open the panel with this hashtag */
+		"cookieName": "cookie-consent", /* Cookie name */
+
+		"orientation": "bottom", /* Banner position (top - bottom) */
+		"showAlertSmall": true, /* Show the small banner on bottom right */
+		"cookieslist": true, /* Show the cookie list */
+
+		"adblocker": false, /* Show a Warning if an adblocker is detected */
+		"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+		"highPrivacy": false, /* Disable auto consent */
+		"handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
+
+		"removeCredit": false, /* Remove credit link */
+		"moreInfoLink": true, /* Show more info link */
+		"useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+
+		//"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+		"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+	});
+	tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+dataLayer = [{
 'site_name': 'accessibility-boosted',  
 'phase': 'prod',                     // dev, qa, prod
 'page_type': 'doc',            //  type de page, optionnel
 'page_title': document.title              // obligatoire pour pages dynamiques
 }];
-<!-- Google Tag Manager -->
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P6H78BQ');
-<!-- End Google Tag Manager -->
 </script>
 
   </head>
@@ -718,7 +740,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <h3 id="with-captions">With captions</h3>
 
-<p>Add captions to your slides easily with the <code class="highlighter-rouge">.carousel-caption</code> element within any <code class="highlighter-rouge">.carousel-item</code>. They can be easily hidden on smaller viewports, as shown below, with optional <a href="/docs/4.2/utilities/display/">display utilities</a>. We hide them initially with <code class="highlighter-rouge">.d-none</code> and bring them back on medium-sized devices with <code class="highlighter-rouge">.d-md-block</code>.</p>
+<p>Add captions to your slides easily with the <code class="highlighter-rouge">.carousel-caption</code> element within any <code class="highlighter-rouge">.carousel-item</code>. They can be easily hidden on smaller viewports, as shown below, with optional <a href="/docs/4.2/utilities/display/">display utilities</a>. We hide them initially with <code class="highlighter-rouge">.d-none</code> and bring them back on medium-sized devices with <code class="highlighter-rouge">.d-md-block</code>.<br />
+Add a link to a slider by using <code class="highlighter-rouge">a</code> html tag.</p>
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -733,6 +756,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <a href="#" title="Example link #1">Example Link #1</a>
         </div>
       </div>
       <div class="carousel-item">
@@ -740,6 +764,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" title="Example link #2">Example Link #2</a>
         </div>
       </div>
       <div class="carousel-item">
@@ -747,6 +772,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <a href="#" title="Example link #3">Example Link #3</a>
         </div>
       </div>
     </div>
@@ -766,6 +792,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-caption d-none d-md-block"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h5&gt;</span>...<span class="nt">&lt;/h5&gt;</span>
     <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Empty link"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
