@@ -2717,6 +2717,10 @@
 .svg-warning-circle,
 .svg-menu,
 .svg-tick,
+.svg-success,
+.svg-warning,
+.svg-info,
+.svg-error,
 .svg-arrow-previous,
 .svg-arrow-next,
 .svg-settings,
@@ -2747,6 +2751,20 @@
   background-size: cover;
 }
 
+.svg-success::after,
+.svg-warning::after,
+.svg-info::after,
+.svg-error::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9.25rem;
+  height: 9.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .svg-delete {
   @include svg-delete("#fff");
 }
@@ -2769,6 +2787,22 @@
 
 .svg-tick {
   @include svg-tick(theme-color("success"));
+}
+
+.svg-success {
+  @include svg-success();
+}
+
+.svg-warning {
+  @include svg-warning();
+}
+
+.svg-error {
+  @include svg-error();
+}
+
+.svg-info {
+  @include svg-info();
 }
 
 .svg-arrow-previous {
