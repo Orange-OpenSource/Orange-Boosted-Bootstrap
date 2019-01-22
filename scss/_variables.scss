@@ -91,21 +91,15 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
-$logo-boosted-size: () !default;
-$logo-boosted-size: (
-  "small": 1rem,
-  "medium": 1.5rem,
-  "large": 2rem
-) !default;
 
 //boosted mod
 $logo-boosted-size: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $logo-boosted-size: map-merge(
   (
-    "sm": 8rem,
-    "md": 12rem,
-    "lg": 15rem
+    "sm": 1.3rem,
+    "md": 1.8rem,
+    "lg": 2.2rem
   ),
   $logo-boosted-size
 );

@@ -20,6 +20,49 @@
   padding: $alert-padding-y-lg $alert-padding-x-lg;
 }
 
+@each $color, $value in $theme-colors {
+  @each $type, $val in $logo-boosted-size {
+    .alert-icon-#{$color}-#{$type} {
+      position: absolute;
+      @if ($type == "sm") {
+        top: .3375rem;
+      } @else if ($type == "md") {
+        top: .625rem;
+      } @else {
+        top: .4875rem;
+      }
+      @if ($type == "lg") {
+        @if($color == "success" or $color == "info"){
+          width: $val;
+          height: $val; 
+        } @else if($color == "warning" or $color == "danger") {
+          width: $val;
+          height: $val;
+        }
+      } @else if($type == "md") {
+        @if($color == "success" or $color == "info"){
+          width: $val;
+          height: $val; 
+        } @else if($color == "warning" or $color == "danger") {
+          width: $val;
+          height: $val;
+        }
+      } @else if($type == "sm") {
+        @if($color == "success" or $color == "info"){
+          width: $val;
+          height: $val; 
+        } @else if($color == "warning" or $color == "danger") {
+          width: $val;
+          height: $val;
+        }
+      }
+      @include define-image($color);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 //end mode
 
 // Headings for larger alerts
