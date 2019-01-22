@@ -9,60 +9,40 @@
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
-}
-
-// boosted mod
-.alert-sm {
-  padding: $alert-padding-y-sm $alert-padding-x-sm;
-}
-
-.alert-lg {
-  padding: $alert-padding-y-lg $alert-padding-x-lg;
-}
-
-@each $color, $value in $theme-colors {
-  @each $type, $val in $logo-boosted-size {
-    .alert-icon-#{$color}-#{$type} {
-      position: absolute;
-      @if ($type == "sm") {
-        top: .3375rem;
-      } @else if ($type == "md") {
-        top: .625rem;
-      } @else {
-        top: .4875rem;
-      }
-      @if ($type == "lg") {
-        @if($color == "success" or $color == "info"){
-          width: $val;
-          height: $val; 
-        } @else if($color == "warning" or $color == "danger") {
-          width: $val;
-          height: $val;
-        }
-      } @else if($type == "md") {
-        @if($color == "success" or $color == "info"){
-          width: $val;
-          height: $val; 
-        } @else if($color == "warning" or $color == "danger") {
-          width: $val;
-          height: $val;
-        }
-      } @else if($type == "sm") {
-        @if($color == "success" or $color == "info"){
-          width: $val;
-          height: $val; 
-        } @else if($color == "warning" or $color == "danger") {
-          width: $val;
-          height: $val;
-        }
-      }
-      @include define-image($color);
+  .alert-icon {
+    position: absolute;
+    top: .625rem;
+    &::after {
+      width: alert-logo-size("md");
+      height: alert-logo-size("md");
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
 }
 
+// boosted mod
+.alert-sm {
+  padding: $alert-padding-y-sm $alert-padding-x-sm;
+  .alert-icon {
+    top: .4375rem;
+    &::after {
+      width: alert-logo-size("sm");
+      height: alert-logo-size("sm");
+    }
+  }
+}
+
+.alert-lg {
+  padding: $alert-padding-y-lg $alert-padding-x-lg;
+  .alert-icon {
+    top: .625rem;
+    &::after {
+      width: alert-logo-size("lg");
+      height: alert-logo-size("lg");
+    }
+  }
+}
 //end mode
 
 // Headings for larger alerts

@@ -34,23 +34,15 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 
 ### Outline
 
-Outline alerts could be created for any length of text. 3 sizes available `.alert-sm`, md as default, `.alert-lg`. In addition of the use of the **required** alert classe (e.g., `.alert`), use (e.g., `.alert-sm`) for the size of the alert box. The logo **required** a contextual classe (e.g.,`.alert-icon-success-sm`).
-The text must be inside a div tag with padding and margin **required** class (e.g,`.pl-3 .ml-3`).
+Outline alerts could be created for any length of text. 3 sizes available `.alert-sm`, md as default, `.alert-lg`. In addition of the use of the **required** alert classe `.alert`, mix the utilities class (e.g., `.border .border-success .bg-transparent`) to create outlined alerts. The logo **required** a contextual classe (e.g., `.alert-icon .svg-success`).
+The text must be inside a div tag with padding and margin **required** class (e.g, `.pl-3 .ml-3`). Add a **required** class (`.mt-2`) to the logo for multiline alerts.
 
 Available icons : 
 ```
-alert-icon-danger-sm
-alert-icon-danger-md
-alert-icon-danger-lg
-alert-icon-info-sm
-alert-icon-info-md
-alert-icon-info-lg
-alert-icon-success-sm
-alert-icon-success-md
-alert-icon-success-lg
-alert-icon-warning-sm
-alert-icon-warning-md
-alert-icon-warning-lg
+alert-icon svg-error
+alert-icon svg-info
+alert-icon svg-success
+alert-icon svg-warning
 
 ```
 {% capture example %}
@@ -58,7 +50,7 @@ alert-icon-warning-lg
     <!-- Outline Alerts
     ======================================= -->
     <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-success-sm" aria-label="Success"></span>
+        <span class="alert-icon svg-success" aria-label="Success"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -67,7 +59,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-sm border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-info-sm" aria-label="Info"></span>
+        <span class="alert-icon svg-info" aria-label="Info"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -76,7 +68,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-sm border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-warning-sm" aria-label="Warning"></span>
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -85,7 +77,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-sm border border-danger alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-danger-sm" aria-label="Danger"></span>
+        <span class="alert-icon svg-error" aria-label="Danger"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -94,7 +86,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-success-md" aria-label="Success"></span>
+        <span class="alert-icon svg-success" aria-label="Success"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -103,7 +95,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-info-md" aria-label="Info"></span>
+        <span class="alert-icon svg-info" aria-label="Info"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -112,7 +104,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-warning-md" aria-label="Warning"></span>
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -121,7 +113,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert border border-danger alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-danger-md" aria-label="Danger"></span>
+        <span class="alert-icon svg-error" aria-label="Danger"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -130,7 +122,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-lg border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-success-lg" aria-label="Success"></span>
+        <span class="alert-icon svg-success" aria-label="Success"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -139,7 +131,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-lg border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-info-lg" aria-label="Info"></span>
+        <span class="alert-icon svg-info" aria-label="Info"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -148,7 +140,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-warning-lg" aria-label="Warning"></span>
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -157,7 +149,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon-danger-lg" aria-label="Danger"></span>
+        <span class="alert-icon svg-error" aria-label="Danger"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -166,7 +158,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark" role="alert">
-        <span class="alert-icon-danger-lg mt-2" aria-label="Danger"></span>
+        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
         <div class="pl-5">
             <div class="font-weight-bold">Your changes have been saved.</div>
             <p class="mb-0">You may now log-in with the username you have chosen.</p>
@@ -176,7 +168,7 @@ alert-icon-warning-lg
         </button>
     </div>
     <div class="alert border-0 alert-sm bg-transparent px-0" role="alert">
-        <span class="alert-icon-success-sm" aria-label="Success"></span>
+        <span class="alert-icon svg-success" aria-label="Success"></span>
         <div class="ml-4 font-weight-bold">
             Your changes have been saved.
         </div>
@@ -185,7 +177,7 @@ alert-icon-warning-lg
         <!-- Custom Alerts
         ======================================= -->
         <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon-success-sm" aria-label="Success"></span>
+            <span class="alert-icon svg-success" aria-label="Success"></span>
             <div class="pl-4 font-weight-bold">
                 Your changes have been saved.
             </div>
@@ -194,7 +186,7 @@ alert-icon-warning-lg
             </button>
         </div>
         <div class="alert border border-info alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon-info-md" aria-label="Info"></span>
+            <span class="alert-icon svg-info" aria-label="Info"></span>
             <div class="pl-3 ml-3 font-weight-bold">
                 Your changes have been saved.
             </div>
@@ -203,7 +195,7 @@ alert-icon-warning-lg
             </button>
         </div>
         <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon-warning-lg" aria-label="Warning"></span>
+            <span class="alert-icon svg-warning" aria-label="Warning"></span>
             <div class="pl-5 font-weight-bold">
                 Your changes have been saved.
             </div>
@@ -212,7 +204,7 @@ alert-icon-warning-lg
             </button>
         </div>
         <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon-danger-lg mt-2" aria-label="Danger"></span>
+            <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
             <div class="pl-5 font-weight-bold">
                 <div class="font-weight-bold">Your changes have been saved.</div>
                 <p class="mb-0"><small>You may now log-in with the username you have chosen.</small></p>
@@ -222,7 +214,7 @@ alert-icon-warning-lg
             </button>
         </div>
         <div class="alert border-0 alert-sm bg-transparent px-0 text-white" role="alert">
-            <span class="alert-icon-success-sm" aria-label="Success"></span>
+            <span class="alert-icon svg-success" aria-label="Success"></span>
             <div class="ml-4 font-weight-bold">
                 Your changes have been saved.
             </div>

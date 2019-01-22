@@ -102,3 +102,7 @@
 
   @return mix($color-base, $color, $level * $theme-color-interval);
 }
+
+@function alert-logo-size($key: "md") {
+  @return map-get($alert-logo-sizes, $key);
+}

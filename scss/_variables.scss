@@ -93,15 +93,15 @@ $theme-colors: map-merge(
 );
 
 //boosted mod
-$logo-boosted-size: () !default;
+$alert-logo-sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$logo-boosted-size: map-merge(
+$alert-logo-sizes: map-merge(
   (
-    "sm": 1.3rem,
-    "md": 1.8rem,
-    "lg": 2.2rem
+    "sm": 1rem,
+    "md": 1.625rem,
+    "lg": 2rem
   ),
-  $logo-boosted-size
+  $alert-logo-sizes
 );
 
 // end mod
