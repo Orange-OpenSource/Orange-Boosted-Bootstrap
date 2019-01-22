@@ -47,7 +47,7 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 
 ### With controls
 
-Adding in the previous and next controls:
+Adding in the previous, next control and a pause/play button:
 
 {% capture example %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -70,6 +70,11 @@ Adding in the previous and next controls:
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  <div class="carousel-buttton">
+    <button id="pauseButton" type="button" class="btn btn-default btn-xs">
+      <span class="icon-Pause"></span>
+    </button>
+  </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}

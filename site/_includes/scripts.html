@@ -77,7 +77,23 @@
 
   $('#collapsing-navbarHead').megamenu();
 
+  // Boosted mod
+  // Carousel pause and play
+  $("button").click(function () {
+    if ($(this).attr("id") === "pauseButton") {
+      $('#carouselExampleControls').carousel('pause');
+      $(this).attr("id", "playButton");
+      $("span",this).toggleClass("icon-Play icon-Pause");
+    } else {
+      $('#carouselExampleControls').carousel('cycle');
+      $(this).attr("id", "pauseButton");
+      $("span",this).toggleClass("icon-Pause icon-Play");
+    }
+  });
+  // end mod
+
 </script>
+
 {%- endif -%}
 
 {%- if page.title == "Boostwatch" -%}
