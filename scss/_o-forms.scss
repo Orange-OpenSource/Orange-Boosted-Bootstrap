@@ -10,12 +10,48 @@
     width: auto;
   }
 
-  &.row {
-    .form-control-feedback {
-      padding-left: 0;
+  .invalid-feedback {
+    margin-top: .8125rem;
+    font-weight: $font-weight-bold;
+  }
+
+  &.top {
+    display: flex;
+    flex-direction: column;
+
+    .col-form-label {
+      margin-bottom: 0;
     }
 
-    &.has-danger.top {
+    .form-control {
+      order: 2;
+    }
+    .invalid-feedback {
+      order: 1;
+      margin-top: 0;
+      margin-bottom: .8125rem;
+      line-height: 1;
+    }
+  }
+
+  &.right {
+    display: flex;
+    flex-flow: row wrap;
+
+    label,
+    .col-form-label {
+      min-width: 100%;
+    }
+
+    .form-control-message,
+    .invalid-feedback {
+      max-width: 50%;
+      margin-left: .625rem;
+    }
+  }
+
+  &.row {
+    &.top {
       flex-direction: row;
 
       label,
@@ -28,25 +64,25 @@
         margin-top: 0;
       }
 
-      .form-control-feedback {
+      .invalid-feedback {
         order: 0;
       }
     }
 
-    &.has-danger.right {
+    &.right {
       label,
       .col-form-label {
         min-width: auto;
       }
 
-      .form-control-feedback {
+      .invalid-feedback {
         align-self: center;
         margin-top: 0;
       }
     }
   }
 
-  &.is-required .col-form-label::after {
+  &.is-required label::after {
     margin-left: 6px;
     font-weight: $font-weight-bold;
     color: theme-color("primary");
@@ -58,75 +94,7 @@
     outline: none;
     box-shadow: none;
   }
-
-  &.has-danger,
-  &.has-warning,
-  &.has-success {
-    .col-form-label {
-      color: #000;
-    }
-  }
-
-  .form-control-feedback {
-    margin-top: .625rem;
-    font-size: $font-size-sm;
-    font-weight: $font-weight-normal;
-    line-height: 1;
-  }
-
-  &.has-danger {
-    position: relative;
-
-    .form-control-feedback {
-      margin-top: .8125rem;
-      font-weight: $font-weight-bold;
-      color: theme-color("dark");
-    }
-
-    .form-control-danger {
-      background-image: none;
-    }
-
-    &.top {
-      display: flex;
-      flex-direction: column;
-
-      .col-form-label {
-        margin-bottom: 0;
-      }
-
-      .form-control {
-        order: 2;
-      }
-
-      .form-control-feedback {
-        order: 1;
-        margin-top: 0;
-        margin-bottom: .8125rem;
-      }
-    }
-
-    &.right {
-      display: flex;
-      flex-flow: row wrap;
-
-      label,
-      .col-form-label {
-        min-width: 100%;
-      }
-
-      .form-control-message,
-      .form-control-feedback {
-        margin-left: .625rem;
-      }
-    }
-  }
 }
-
-.form-control-boosted-padding{
-  padding-left: 1.3rem;
-}
-
 
 select.form-control {
   &:not([size]):not([multiple]) {
@@ -148,7 +116,7 @@ select.form-control {
 
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
-  ~ .form-control-feedback {
+  ~ .invalid-feedback {
     top: ($line-height-base + .5); // Height of the `label` and its margin
   }
 }
