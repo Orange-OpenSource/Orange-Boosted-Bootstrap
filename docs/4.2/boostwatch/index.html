@@ -52,7 +52,7 @@
 		"cookieName": "cookie-consent", /* Cookie name */
 
 		"orientation": "bottom", /* Banner position (top - bottom) */
-		"showAlertSmall": true, /* Show the small banner on bottom right */
+		"showAlertSmall": false, /* Show the small banner on bottom right */
 		"cookieslist": true, /* Show the cookie list */
 
 		"adblocker": false, /* Show a Warning if an adblocker is detected */
@@ -952,15 +952,15 @@ dataLayer = [{
           <input class="form-control" id="inputWarning" type="text">
         </div>
 
-        <div class="form-group has-danger">
+        <div class="form-group">
           <label class="col-form-label" for="inputError1">Input error</label>
-          <input class="form-control" id="inputError1" type="text">
-          <div class="form-control-feedback">This is an error message</div>
+              <input class="form-control is-invalid" id="inputError1" type="text">
+              <div class="invalid-feedback">This is an error message</div>
         </div>
 
-        <div class="form-group has-success">
+        <div class="form-group">
           <label class="col-form-label" for="inputSuccess">Input success</label>
-          <input class="form-control" id="inputSuccess" type="text">
+              <input class="form-control is-valid" id="inputSuccess" type="text">
         </div>
 
         <div class="form-group">
@@ -997,39 +997,39 @@ dataLayer = [{
 </div>
 
 <form>
-  <div class="form-group has-danger">
+  <div class="form-group is-required">
     <label for="exampleInputUser1">User name</label>
-    <input type="text" class="form-control form-control-danger" id="exampleInputUser1">
-    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser1">
+    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
   </div>
-  <div class="form-group has-danger top">
+  <div class="form-group top is-required">
     <label for="exampleInputUser2">User name</label>
-    <input type="text" class="form-control form-control-danger" id="exampleInputUser2">
-    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser2">
+    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
   </div>
-  <div class="form-group has-danger right">
+  <div class="form-group right is-required">
     <label for="exampleInputUser3">User name</label>
-    <input type="text" class="form-control form-control-danger" id="exampleInputUser3" style="width: 40%;">
-    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser3" style="width: 40%;">
+    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
   </div>
 </form>
 
 <form class="container-fluid">
-  <div class="form-group row has-danger">
+  <div class="form-group row is-required">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-    <input type="email" class="form-control col-sm-10" id="inputEmail3" placeholder="Email">
-    <div class="col-sm-10 ml-md-auto form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    <input type="email" class="form-control col-sm-10 is-invalid" id="inputEmail3" placeholder="Email">
+    <div class="col-sm-10 ml-md-auto invalid-feedback">Check the formatting of that and try again.</div>
   </div>
-  <div class="form-group row has-danger top">
+  <div class="form-group row top is-required">
     <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
-    <input type="email" class="form-control col-sm-10" id="inputEmail4" placeholder="Email">
+    <input type="email" class="form-control col-sm-10 is-invalid" id="inputEmail4" placeholder="Email">
     <div class="col-sm-2"></div>
-    <div class="col-sm-10 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    <div class="col-sm-10 invalid-feedback">Check the formatting of that and try again.</div>
   </div>
-  <div class="form-group row has-danger right">
+  <div class="form-group row right is-required">
     <label for="inputEmail5" class="col-sm-2 col-form-label">Email</label>
-    <input type="email" class="form-control col-sm-4" id="inputEmail5" placeholder="Email">
-    <div class="col-sm-4 form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    <input type="email" class="form-control col-sm-4 is-invalid" id="inputEmail5" placeholder="Email">
+    <div class="col-sm-4 invalid-feedback">Check the formatting of that and try again.</div>
   </div>
 </form>
 <!-- Indicators
@@ -1066,6 +1066,104 @@ dataLayer = [{
         </div>
     </div>
   </div>
+</div>
+<div>
+    <h3>Orange Alerts <a class="doc-link" href="../components/orange-alerts/" title="go to Orange Alerts for documentation page"></a></h3>
+    <!-- Orange Alerts
+    ======================================= -->
+    <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-info" aria-label="Info"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark" role="alert">
+        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
+        <div class="pl-5">
+            <div class="font-weight-bold">Your changes have been saved.</div>
+            <p class="mb-0">You may now log-in with the username you have chosen.</p>
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border-0 alert-sm bg-transparent px-0" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="ml-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+    </div>
+</div>
+<div class="bg-dark">
+    <!-- Orange Alerts
+    ======================================= -->
+    <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent text-white" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-white" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert border border-info alert-dismissible fade show bg-transparent text-white" role="alert">
+        <span class="alert-icon svg-info" aria-label="Info"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white" role="alert">
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white" role="alert">
+        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
+        <div class="pl-5 font-weight-bold">
+            <div class="font-weight-bold">Your changes have been saved.</div>
+            <p class="mb-0"><small>You may now log-in with the username you have chosen.</small></p>
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border-0 alert-sm bg-transparent px-0 text-white" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="ml-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
   <div class="row">
     <div>
         <h3>Badge<a class="doc-link" href="../components/badge/" title="go to badge documentation page"></a></h3>

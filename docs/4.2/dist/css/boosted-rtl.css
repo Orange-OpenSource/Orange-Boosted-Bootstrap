@@ -2544,7 +2544,7 @@ textarea.form-control {
   width: 100%;
   margin-top: 0.625rem;
   font-size: 80%;
-  color: #32c832;
+  font-weight: 700;
 }
 
 .valid-tooltip {
@@ -2563,10 +2563,6 @@ textarea.form-control {
 
 .was-validated .form-control:valid, .form-control.is-valid {
   border-color: #32c832;
-  padding-left: 2.25rem;
-  background-repeat: no-repeat;
-  background-position: center left calc(2.25rem / 4);
-  background-size: calc(2.25rem / 2) calc(2.25rem / 2);
 }
 
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
@@ -2576,7 +2572,23 @@ textarea.form-control {
 .was-validated .form-control:valid ~ .valid-feedback,
 .was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
 .form-control.is-valid ~ .valid-tooltip {
+  position: relative;
   display: block;
+  padding-right: 1.625rem;
+}
+
+.was-validated .form-control:valid ~ .valid-feedback::after,
+.was-validated .form-control:valid ~ .valid-tooltip::after, .form-control.is-valid ~ .valid-feedback::after,
+.form-control.is-valid ~ .valid-tooltip::after {
+  position: absolute;
+  top: -.1rem;
+  right: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250' viewBox='0 0 125 125' %3E%3Cpath d='M62.5 0C27.983 0 0 27.982 0 62.5 0 97.017 27.982 125 62.5 125c34.517 0 62.5-27.982 62.5-62.5C125 27.983 97.018 0 62.5 0' fill='%2332c832'/%3E%3Cpath d='M96.437 35.294c0-3.248-2.62-5.882-5.851-5.882a5.813 5.813 0 0 0-4.002 1.592v-.001L51.968 64.706 40.563 52.004l-.001.002a5.81 5.81 0 0 0-3.808-1.418 5.814 5.814 0 0 0-4.136 1.724l-2.341 2.352a5.881 5.881 0 0 0-1.714 4.16c0 1.39.481 2.667 1.284 3.674h-.001l18.723 23.53.002-.001a5.828 5.828 0 0 0 9.136 0v.001l37.447-47.059v-.001a5.88 5.88 0 0 0 1.283-3.674' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
@@ -2658,7 +2670,7 @@ textarea.form-control {
   width: 100%;
   margin-top: 0.625rem;
   font-size: 80%;
-  color: #cd3c14;
+  font-weight: 700;
 }
 
 .invalid-tooltip {
@@ -2677,10 +2689,6 @@ textarea.form-control {
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #cd3c14;
-  padding-left: 2.25rem;
-  background-repeat: no-repeat;
-  background-position: center left calc(2.25rem / 4);
-  background-size: calc(2.25rem / 2) calc(2.25rem / 2);
 }
 
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
@@ -2690,7 +2698,23 @@ textarea.form-control {
 .was-validated .form-control:invalid ~ .invalid-feedback,
 .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
 .form-control.is-invalid ~ .invalid-tooltip {
+  position: relative;
   display: block;
+  padding-right: 1.625rem;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback::after,
+.was-validated .form-control:invalid ~ .invalid-tooltip::after, .form-control.is-invalid ~ .invalid-feedback::after,
+.form-control.is-invalid ~ .invalid-tooltip::after {
+  position: absolute;
+  top: -.1rem;
+  right: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250' viewBox='0 0 140 125' %3E%3Cpath d='M138.426 101.502h.003L83.767 7.752C81.056 3.116 76.033 0 70.276 0 64.522 0 59.5 3.116 56.79 7.752h-.002l-54.525 93.52-.006.01-.129.22h.002c-1.35 2.313-2.129 5-2.129 7.873C0 118.004 6.994 125 15.617 125H124.94c8.623 0 15.616-6.996 15.616-15.625 0-2.873-.778-5.56-2.129-7.873' fill='%23cd3c14'/%3E%3Cpath d='M94.435 99.68a6.41 6.41 0 0 1-4.543 1.882 6.407 6.407 0 0 1-4.542-1.882L70.278 84.601 55.206 99.68a6.404 6.404 0 0 1-4.541 1.882 6.405 6.405 0 0 1-4.543-1.882 6.43 6.43 0 0 1 .001-9.089l15.07-15.079-14.535-14.54a6.426 6.426 0 1 1 9.086-9.09L70.28 66.423 84.815 51.88a6.423 6.423 0 0 1 9.083 0 6.43 6.43 0 0 1 0 9.09L79.363 75.512l15.072 15.08a6.429 6.429 0 0 1 0 9.088' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
@@ -2701,7 +2725,7 @@ textarea.form-control {
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #cd3c14;
   padding-left: 3.1875rem;
-  background: url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M0 0h14L7 7 0 0z'/%3e%3c/svg%3e") no-repeat left 0.5rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cd3c14' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3e") no-repeat center right 1.5rem/1.125rem 1.125rem;
+  background: url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M0 0h14L7 7 0 0z'/%3e%3c/svg%3e") no-repeat left 0.5rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cd3c14' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") no-repeat center right 1.5rem/1.125rem 1.125rem;
 }
 
 .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
@@ -6059,9 +6083,47 @@ a.badge-dark:hover, a.badge-dark:focus {
 
 .alert {
   position: relative;
-  padding: 1.25rem 1.25rem;
+  padding: 0.8125rem 1.25rem;
   margin-bottom: 1.25rem;
   border: 0 solid transparent;
+}
+
+.alert .alert-icon {
+  position: absolute;
+  top: .625rem;
+}
+
+.alert .alert-icon::after {
+  width: 1.625rem;
+  height: 1.625rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alert-sm {
+  padding: 0.3125rem 1.25rem;
+}
+
+.alert-sm .alert-icon {
+  top: .4375rem;
+}
+
+.alert-sm .alert-icon::after {
+  width: 1rem;
+  height: 1rem;
+}
+
+.alert-lg {
+  padding: 1rem 1.25rem;
+}
+
+.alert-lg .alert-icon {
+  top: .625rem;
+}
+
+.alert-lg .alert-icon::after {
+  width: 2rem;
+  height: 2rem;
 }
 
 .alert-heading {
@@ -6080,8 +6142,8 @@ a.badge-dark:hover, a.badge-dark:focus {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1.25rem 1.25rem;
-  line-height: 1.25rem;
+  padding: 0.8125rem 1.25rem;
+  line-height: 0.8125rem;
   color: inherit;
 }
 
@@ -6488,7 +6550,7 @@ a.badge-dark:hover, a.badge-dark:focus {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: 1;
 }
 
 .close:hover {
@@ -6501,7 +6563,7 @@ a.badge-dark:hover, a.badge-dark:focus {
 }
 
 .close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
-  opacity: .75;
+  opacity: 1;
 }
 
 button.close {
@@ -7420,23 +7482,23 @@ button.bg-dark:focus {
 }
 
 .border {
-  border: 2px solid #f6f6f6 !important;
+  border: 2px solid #000 !important;
 }
 
 .border-top {
-  border-top: 2px solid #f6f6f6 !important;
+  border-top: 2px solid #000 !important;
 }
 
 .border-right {
-  border-left: 2px solid #f6f6f6 !important;
+  border-left: 2px solid #000 !important;
 }
 
 .border-bottom {
-  border-bottom: 2px solid #f6f6f6 !important;
+  border-bottom: 2px solid #000 !important;
 }
 
 .border-left {
-  border-right: 2px solid #f6f6f6 !important;
+  border-right: 2px solid #000 !important;
 }
 
 .border-0 {
@@ -11675,44 +11737,87 @@ a.text-dark:hover, a.text-dark:focus {
   width: auto;
 }
 
-.form-group.row .form-control-feedback {
-  padding-right: 0;
+.form-group .invalid-feedback {
+  margin-top: .8125rem;
+  font-weight: 700;
 }
 
-.form-group.row.has-danger.top {
+.form-group.top {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.form-group.top .col-form-label {
+  margin-bottom: 0;
+}
+
+.form-group.top .form-control {
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.form-group.top .invalid-feedback {
+  -ms-flex-order: 1;
+  order: 1;
+  margin-top: 0;
+  margin-bottom: .8125rem;
+  line-height: 1;
+}
+
+.form-group.right {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.form-group.right label,
+.form-group.right .col-form-label {
+  min-width: 100%;
+}
+
+.form-group.right .form-control-message,
+.form-group.right .invalid-feedback {
+  max-width: 50%;
+  margin-right: .625rem;
+}
+
+.form-group.row.top {
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
-.form-group.row.has-danger.top label,
-.form-group.row.has-danger.top .col-form-label {
+.form-group.row.top label,
+.form-group.row.top .col-form-label {
   -ms-flex-order: 1;
   order: 1;
 }
 
-.form-group.row.has-danger.top .form-control {
+.form-group.row.top .form-control {
   -ms-flex-order: 2;
   order: 2;
   margin-top: 0;
 }
 
-.form-group.row.has-danger.top .form-control-feedback {
+.form-group.row.top .invalid-feedback {
   -ms-flex-order: 0;
   order: 0;
 }
 
-.form-group.row.has-danger.right label,
-.form-group.row.has-danger.right .col-form-label {
+.form-group.row.right label,
+.form-group.row.right .col-form-label {
   min-width: auto;
 }
 
-.form-group.row.has-danger.right .form-control-feedback {
+.form-group.row.right .invalid-feedback {
   -ms-flex-item-align: center;
   align-self: center;
   margin-top: 0;
 }
 
-.form-group.is-required .col-form-label::after {
+.form-group.is-required label::after {
   margin-right: 6px;
   font-weight: 700;
   color: #f16e00;
@@ -11722,71 +11827,6 @@ a.text-dark:hover, a.text-dark:focus {
 .form-group .form-control:invalid {
   outline: none;
   box-shadow: none;
-}
-
-.form-group.has-danger .col-form-label, .form-group.has-warning .col-form-label, .form-group.has-success .col-form-label {
-  color: #000;
-}
-
-.form-group .form-control-feedback {
-  margin-top: .625rem;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.form-group.has-danger {
-  position: relative;
-}
-
-.form-group.has-danger .form-control-feedback {
-  margin-top: .8125rem;
-  font-weight: 700;
-  color: #cd3c14;
-}
-
-.form-group.has-danger .form-control-danger {
-  background-image: none;
-}
-
-.form-group.has-danger.top {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.form-group.has-danger.top .col-form-label {
-  margin-bottom: 0;
-}
-
-.form-group.has-danger.top .form-control {
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-.form-group.has-danger.top .form-control-feedback {
-  -ms-flex-order: 1;
-  order: 1;
-  margin-top: 0;
-  margin-bottom: .8125rem;
-}
-
-.form-group.has-danger.right {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
-.form-group.has-danger.right label,
-.form-group.has-danger.right .col-form-label {
-  min-width: 100%;
-}
-
-.form-group.has-danger.right .form-control-message,
-.form-group.has-danger.right .form-control-feedback {
-  margin-right: .625rem;
 }
 
 select.form-control:not([size]):not([multiple]) {
@@ -11805,7 +11845,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm {
   padding-bottom: .1875rem;
 }
 
-.has-feedback label ~ .form-control-feedback {
+.has-feedback label ~ .invalid-feedback {
   top: 1.75;
 }
 
