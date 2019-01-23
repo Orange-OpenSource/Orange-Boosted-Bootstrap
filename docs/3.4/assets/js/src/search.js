@@ -42,7 +42,7 @@
         // When in production, return the result as is,
         // otherwise remove our url from it.
         var siteurl = getOrigin()
-        var urlRE = /^https?:\/\/boosted\.orange\.com/
+        var urlRE = /^http?:\/\/boosted\.orange\.com/
 
         hit.url = siteurl.match(urlRE) ? hit.url : hit.url.replace(urlRE, '')
 
