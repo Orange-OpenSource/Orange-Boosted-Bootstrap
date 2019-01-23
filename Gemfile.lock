@@ -58,6 +58,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
