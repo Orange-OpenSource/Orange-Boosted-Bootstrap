@@ -1,3 +1,8 @@
+<a name="3.4.0"></a>
+# [3.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v3.3.3...v3.4.0) (2019-01-23)
+
+
+
 <a name"3.3.3"></a>
 ### 3.3.3 (2017-03-23)
 
