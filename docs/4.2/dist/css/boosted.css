@@ -2580,13 +2580,18 @@ textarea.form-control {
 .was-validated .form-control:valid ~ .valid-feedback::after,
 .was-validated .form-control:valid ~ .valid-tooltip::after, .form-control.is-valid ~ .valid-feedback::after,
 .form-control.is-valid ~ .valid-tooltip::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250' viewBox='0 0 125 125' %3E%3Cpath d='M62.5 0C27.983 0 0 27.982 0 62.5 0 97.017 27.982 125 62.5 125c34.517 0 62.5-27.982 62.5-62.5C125 27.983 97.018 0 62.5 0' fill='%2332c832'/%3E%3Cpath d='M96.437 35.294c0-3.248-2.62-5.882-5.851-5.882a5.813 5.813 0 0 0-4.002 1.592v-.001L51.968 64.706 40.563 52.004l-.001.002a5.81 5.81 0 0 0-3.808-1.418 5.814 5.814 0 0 0-4.136 1.724l-2.341 2.352a5.881 5.881 0 0 0-1.714 4.16c0 1.39.481 2.667 1.284 3.674h-.001l18.723 23.53.002-.001a5.828 5.828 0 0 0 9.136 0v.001l37.447-47.059v-.001a5.88 5.88 0 0 0 1.283-3.674' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.was-validated .form-control:valid ~ .valid-feedback::after,
+.was-validated .form-control:valid ~ .valid-tooltip::after, .form-control.is-valid ~ .valid-feedback::after,
+.form-control.is-valid ~ .valid-tooltip::after {
   position: absolute;
   top: -.1rem;
   left: 0;
   width: 1.125rem;
   height: 1.125rem;
   content: "";
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250' viewBox='0 0 125 125' %3E%3Cpath d='M62.5 0C27.983 0 0 27.982 0 62.5 0 97.017 27.982 125 62.5 125c34.517 0 62.5-27.982 62.5-62.5C125 27.983 97.018 0 62.5 0' fill='%2332c832'/%3E%3Cpath d='M96.437 35.294c0-3.248-2.62-5.882-5.851-5.882a5.813 5.813 0 0 0-4.002 1.592v-.001L51.968 64.706 40.563 52.004l-.001.002a5.81 5.81 0 0 0-3.808-1.418 5.814 5.814 0 0 0-4.136 1.724l-2.341 2.352a5.881 5.881 0 0 0-1.714 4.16c0 1.39.481 2.667 1.284 3.674h-.001l18.723 23.53.002-.001a5.828 5.828 0 0 0 9.136 0v.001l37.447-47.059v-.001a5.88 5.88 0 0 0 1.283-3.674' fill='%23fff'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2706,13 +2711,18 @@ textarea.form-control {
 .was-validated .form-control:invalid ~ .invalid-feedback::after,
 .was-validated .form-control:invalid ~ .invalid-tooltip::after, .form-control.is-invalid ~ .invalid-feedback::after,
 .form-control.is-invalid ~ .invalid-tooltip::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250' viewBox='0 0 140 125' %3E%3Cpath d='M138.426 101.502h.003L83.767 7.752C81.056 3.116 76.033 0 70.276 0 64.522 0 59.5 3.116 56.79 7.752h-.002l-54.525 93.52-.006.01-.129.22h.002c-1.35 2.313-2.129 5-2.129 7.873C0 118.004 6.994 125 15.617 125H124.94c8.623 0 15.616-6.996 15.616-15.625 0-2.873-.778-5.56-2.129-7.873' fill='%23cd3c14'/%3E%3Cpath d='M94.435 99.68a6.41 6.41 0 0 1-4.543 1.882 6.407 6.407 0 0 1-4.542-1.882L70.278 84.601 55.206 99.68a6.404 6.404 0 0 1-4.541 1.882 6.405 6.405 0 0 1-4.543-1.882 6.43 6.43 0 0 1 .001-9.089l15.07-15.079-14.535-14.54a6.426 6.426 0 1 1 9.086-9.09L70.28 66.423 84.815 51.88a6.423 6.423 0 0 1 9.083 0 6.43 6.43 0 0 1 0 9.09L79.363 75.512l15.072 15.08a6.429 6.429 0 0 1 0 9.088' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback::after,
+.was-validated .form-control:invalid ~ .invalid-tooltip::after, .form-control.is-invalid ~ .invalid-feedback::after,
+.form-control.is-invalid ~ .invalid-tooltip::after {
   position: absolute;
   top: -.1rem;
   left: 0;
   width: 1.125rem;
   height: 1.125rem;
   content: "";
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1250' height='1250' viewBox='0 0 140 125' %3E%3Cpath d='M138.426 101.502h.003L83.767 7.752C81.056 3.116 76.033 0 70.276 0 64.522 0 59.5 3.116 56.79 7.752h-.002l-54.525 93.52-.006.01-.129.22h.002c-1.35 2.313-2.129 5-2.129 7.873C0 118.004 6.994 125 15.617 125H124.94c8.623 0 15.616-6.996 15.616-15.625 0-2.873-.778-5.56-2.129-7.873' fill='%23cd3c14'/%3E%3Cpath d='M94.435 99.68a6.41 6.41 0 0 1-4.543 1.882 6.407 6.407 0 0 1-4.542-1.882L70.278 84.601 55.206 99.68a6.404 6.404 0 0 1-4.541 1.882 6.405 6.405 0 0 1-4.543-1.882 6.43 6.43 0 0 1 .001-9.089l15.07-15.079-14.535-14.54a6.426 6.426 0 1 1 9.086-9.09L70.28 66.423 84.815 51.88a6.423 6.423 0 0 1 9.083 0 6.43 6.43 0 0 1 0 9.09L79.363 75.512l15.072 15.08a6.429 6.429 0 0 1 0 9.088' fill='%23fff'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: cover;
 }
