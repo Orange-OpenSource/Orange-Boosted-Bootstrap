@@ -1,3 +1,24 @@
+<a name="4.2.1"></a>
+## [4.2.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.1.3...v4.2.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **accordions:** collapse with option .multi doest work. elements selector was broken ([388abaa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/388abaa))
+* **alerts:** create outlined alerts with icons
+* **build:** fix css prefix docs task to apply on the good path ([98a2774](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/98a2774))
+* **collapse:** remove custom boosted aria-collapse attribute management from the plugin as it's manage in native by bootstrap now ([9913ad6]
+* **forms:** update input form border color and invalid/valid states. Rework toggle switch following custom-switch added by bootstrap
+* **pagination:** Update active and hover states and fix issue [#89](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/89) remove hard coded value for pagination and use variable instead ([1693b44](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1693b44))
+
+
+### Features
+
+* **buttons:** add new social network buttons, and create a new xlg button.
+* **umd:** update js build with umd to take into account boosted specific plugins ([f3b2b60](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f3b2b60))
+
+
+
 <a name="4.1.3"></a>
 ## [4.1.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.1.1...v4.1.3) (2018-07-25)
 
