@@ -2718,6 +2718,10 @@
 .svg-warning-circle,
 .svg-menu,
 .svg-tick,
+.svg-success,
+.svg-warning,
+.svg-info,
+.svg-error,
 .svg-arrow-previous,
 .svg-arrow-next,
 .svg-settings,
@@ -2737,7 +2741,11 @@
 .svg-settings::after,
 .svg-search::after,
 .svg-avatar::after,
-.svg-buy::after {
+.svg-buy::after,
+.svg-success::after,
+.svg-warning::after,
+.svg-info::after,
+.svg-error::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -2770,6 +2778,22 @@
 
 .svg-tick {
   @include svg-tick(theme-color("success"));
+}
+
+.svg-success {
+  @include svg-success();
+}
+
+.svg-warning {
+  @include svg-warning();
+}
+
+.svg-error {
+  @include svg-error();
+}
+
+.svg-info {
+  @include svg-info();
 }
 
 .svg-arrow-previous {

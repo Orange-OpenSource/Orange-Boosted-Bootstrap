@@ -80,7 +80,7 @@
     .form-control-feedback {
       margin-top: .8125rem;
       font-weight: $font-weight-bold;
-      color: theme-color("danger");
+      color: theme-color("dark");
     }
 
     .form-control-danger {
@@ -122,6 +122,11 @@
     }
   }
 }
+
+.form-control-boosted-padding{
+  padding-left: 1.3rem;
+}
+
 
 select.form-control {
   &:not([size]):not([multiple]) {

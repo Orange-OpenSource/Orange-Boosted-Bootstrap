@@ -1,6 +1,7 @@
 //
 // Base styles
 //
+// stylelint-disable declaration-no-important
 
 .alert {
   position: relative;
@@ -8,7 +9,41 @@
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
+  .alert-icon {
+    position: absolute;
+    top: .625rem;
+    &::after {
+      width: alert-logo-size("md");
+      height: alert-logo-size("md");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
+
+// boosted mod
+.alert-sm {
+  padding: $alert-padding-y-sm $alert-padding-x-sm;
+  .alert-icon {
+    top: .4375rem;
+    &::after {
+      width: alert-logo-size("sm");
+      height: alert-logo-size("sm");
+    }
+  }
+}
+
+.alert-lg {
+  padding: $alert-padding-y-lg $alert-padding-x-lg;
+  .alert-icon {
+    top: .625rem;
+    &::after {
+      width: alert-logo-size("lg");
+      height: alert-logo-size("lg");
+    }
+  }
+}
+//end mode
 
 // Headings for larger alerts
 .alert-heading {
@@ -28,8 +63,7 @@
 
 .alert-dismissible {
   padding-right: $close-font-size + $alert-padding-x * 2;
-
-  // Adjust close link position
+  //Adjust close
   .close {
     position: absolute;
     top: 0;
