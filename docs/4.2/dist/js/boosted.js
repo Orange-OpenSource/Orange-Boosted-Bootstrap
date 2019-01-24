@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.2.1 (https://boosted.orange.com)
+  * Boosted v4.2.2 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v4.2.1 (https://boosted.orange.com)
+  * Bootstrap v4.2.2 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -2078,7 +2078,7 @@
    */
 
   var NAME$5 = 'megamenu';
-  var VERSION$5 = '4.2.1';
+  var VERSION$5 = '4.2.2';
   var DATA_KEY$5 = 'bs.megamenu';
   var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
   var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
@@ -3068,7 +3068,7 @@
    */
 
   var NAME$7 = 'navbar';
-  var VERSION$7 = '4.2.1';
+  var VERSION$7 = '4.2.2';
   var DATA_KEY$7 = 'bs.navbar';
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var BREAKPOINT = 768;
@@ -3209,7 +3209,7 @@
    */
 
   var NAME$8 = 'otab';
-  var VERSION$8 = '4.2.1';
+  var VERSION$8 = '4.2.2';
   var DATA_KEY$8 = 'bs.otab';
   var EVENT_KEY$6 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -4225,7 +4225,7 @@
    */
 
   var NAME$b = 'prioritynav';
-  var VERSION$b = '4.2.1';
+  var VERSION$b = '4.2.2';
   var DATA_KEY$b = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT$b = $.fn[NAME$b];
   var RESIZE_DURATION = 500;
@@ -4431,7 +4431,7 @@
    */
 
   var NAME$c = 'scrollup';
-  var VERSION$c = '4.2.1';
+  var VERSION$c = '4.2.2';
   var DATA_KEY$c = 'bs.scrollup';
   var EVENT_KEY$9 = "." + DATA_KEY$c;
   var DATA_API_KEY$7 = '.data-api';
