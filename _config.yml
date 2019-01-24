@@ -74,7 +74,7 @@ social_image_path:  /docs/4.2/assets/brand/bootstrap-social.png
 social_logo_path:   /docs/4.2/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.2.1
+current_version:      4.2.2
 bootstrap_current_version:      v4.2.1
 current_ruby_version: 4.2.2
 docs_version:         4.2
@@ -85,8 +85,8 @@ expo:                 "https://expo.getbootstrap.com"
 themes:               "https://themes.getbootstrap.com"
 
 download:
-  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.2.1.zip"
-  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.2.1/boosted-4.2.1-dist.zip"
+  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.2.2.zip"
+  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.2.2/boosted-4.2.2-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

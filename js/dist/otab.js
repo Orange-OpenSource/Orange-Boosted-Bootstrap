@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.2.1 (https://boosted.orange.com)
+  * Boosted v4.2.2 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap otab.js v4.2.1 (https://boosted.orange.com)
+  * Bootstrap otab.js v4.2.2 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -40,7 +40,7 @@
    */
 
   var NAME = 'otab';
-  var VERSION = '4.2.1';
+  var VERSION = '4.2.2';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';

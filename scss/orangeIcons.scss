@@ -12,6 +12,7 @@
   font-family: icon-orange;
   font-style: normal;
   font-weight: $font-weight-normal;
+  font-display: swap;
   src: url("#{$icon-font-path}icon-orange.woff2") format("woff2"), url("#{$icon-font-path}icon-orange.woff") format("woff");
 }
 
