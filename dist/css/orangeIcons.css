@@ -2,7 +2,7 @@
   font-family: icon-orange;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
   src: url("../fonts/icon-orange.woff2") format("woff2"), url("../fonts/icon-orange.woff") format("woff");
 }
 
