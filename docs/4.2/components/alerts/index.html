@@ -543,6 +543,7 @@ dataLayer = [{
 <li class="toc-entry toc-h2"><a href="#examples">Examples</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#link-color">Link color</a></li>
+<li class="toc-entry toc-h3"><a href="#outline">Outline</a></li>
 <li class="toc-entry toc-h3"><a href="#additional-content">Additional content</a></li>
 <li class="toc-entry toc-h3"><a href="#dismissing">Dismissing</a></li>
 </ul>
@@ -681,6 +682,370 @@ dataLayer = [{
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-dark"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
   A simple dark alert with <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"alert-link"</span><span class="nt">&gt;</span>an example link<span class="nt">&lt;/a&gt;</span>. Give it a click if you like.
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="outline">Outline</h3>
+
+<p>Outline alerts could be created for any length of text. 3 sizes available <code class="highlighter-rouge">.alert-sm</code>, md as default, <code class="highlighter-rouge">.alert-lg</code>. In addition of the use of the <strong>required</strong> alert classe <code class="highlighter-rouge">.alert</code>, mix the utilities class (e.g., <code class="highlighter-rouge">.border .border-success .bg-transparent</code>) to create outlined alerts. The logo <strong>required</strong> a contextual classe (e.g., <code class="highlighter-rouge">.alert-icon .svg-success</code>).
+The text must be inside a div tag with padding and margin <strong>required</strong> class (e.g, <code class="highlighter-rouge">.pl-3 .ml-3</code>). Add a <strong>required</strong> class (<code class="highlighter-rouge">.mt-2</code>) to the logo for multiline alerts.</p>
+
+<p>Available icons :</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alert-icon svg-error
+alert-icon svg-info
+alert-icon svg-success
+alert-icon svg-warning
+
+</code></pre></div></div>
+<div class="bd-example">
+<h3>Orange Alerts</h3>
+    <!-- Outline Alerts
+    ======================================= -->
+    <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert alert-sm border border-info alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-info" aria-label="Info"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert alert-sm border border-warning alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert alert-sm border border-danger alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-error" aria-label="Danger"></span>
+        <div class="pl-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="alert border border-success alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-info" aria-label="Info"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border border-warning alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border border-danger alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-error" aria-label="Danger"></span>
+        <div class="pl-3 ml-3 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-success alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-info alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-info" aria-label="Info"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-warning" aria-label="Warning"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent" role="alert">
+        <span class="alert-icon svg-error" aria-label="Danger"></span>
+        <div class="pl-5 font-weight-bold">
+            Your changes have been saved.
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark" role="alert">
+        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
+        <div class="pl-5">
+            <div class="font-weight-bold">Your changes have been saved.</div>
+            <p class="mb-0">You may now log-in with the username you have chosen.</p>
+        </div>
+        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+        <span class="text-dark" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert border-0 alert-sm bg-transparent px-0" role="alert">
+        <span class="alert-icon svg-success" aria-label="Success"></span>
+        <div class="ml-4 font-weight-bold">
+            Your changes have been saved.
+        </div>
+    </div>
+    <div class="bg-dark">
+        <!-- Custom Alerts
+        ======================================= -->
+        <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent text-white" role="alert">
+            <span class="alert-icon svg-success" aria-label="Success"></span>
+            <div class="pl-4 font-weight-bold">
+                Your changes have been saved.
+            </div>
+            <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
+            <span class="text-white" aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="alert border border-info alert-dismissible fade show bg-transparent text-white" role="alert">
+            <span class="alert-icon svg-info" aria-label="Info"></span>
+            <div class="pl-3 ml-3 font-weight-bold">
+                Your changes have been saved.
+            </div>
+            <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
+            <span class="text-white" aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white" role="alert">
+            <span class="alert-icon svg-warning" aria-label="Warning"></span>
+            <div class="pl-5 font-weight-bold">
+                Your changes have been saved.
+            </div>
+            <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+            <span class="text-white" aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white" role="alert">
+            <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
+            <div class="pl-5 font-weight-bold">
+                <div class="font-weight-bold">Your changes have been saved.</div>
+                <p class="mb-0"><small>You may now log-in with the username you have chosen.</small></p>
+            </div>
+            <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
+            <span class="text-white" aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert border-0 alert-sm bg-transparent px-0 text-white" role="alert">
+            <span class="alert-icon svg-success" aria-label="Success"></span>
+            <div class="ml-4 font-weight-bold">
+                Your changes have been saved.
+            </div>
+        </div>
+    </div>
+
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Orange Alerts<span class="nt">&lt;/h3&gt;</span>
+    <span class="c">&lt;!-- Outline Alerts
+    ======================================= --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-sm border border-success alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-success"</span> <span class="na">aria-label=</span><span class="s">"Success"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-4 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close p-1 px-3 pb-2"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>×<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-sm border border-info alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-info"</span> <span class="na">aria-label=</span><span class="s">"Info"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-4 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close p-1 px-3 pb-2"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>×<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-sm border border-warning alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-warning"</span> <span class="na">aria-label=</span><span class="s">"Warning"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-4 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close p-1 px-3 pb-2"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>×<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-sm border border-danger alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-error"</span> <span class="na">aria-label=</span><span class="s">"Danger"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-4 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close p-1 px-3 pb-2"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>×<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border border-success alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-success"</span> <span class="na">aria-label=</span><span class="s">"Success"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-3 ml-3 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close pb-3"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border border-info alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-info"</span> <span class="na">aria-label=</span><span class="s">"Info"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-3 ml-3 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close pb-3"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border border-warning alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-warning"</span> <span class="na">aria-label=</span><span class="s">"Warning"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-3 ml-3 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close pb-3"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border border-danger alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-error"</span> <span class="na">aria-label=</span><span class="s">"Danger"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-3 ml-3 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close pb-3"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-success alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-success"</span> <span class="na">aria-label=</span><span class="s">"Success"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-info alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-info"</span> <span class="na">aria-label=</span><span class="s">"Info"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-warning alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-warning"</span> <span class="na">aria-label=</span><span class="s">"Warning"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-danger alert-dismissible fade show bg-transparent"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-error"</span> <span class="na">aria-label=</span><span class="s">"Danger"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-error mt-2"</span> <span class="na">aria-label=</span><span class="s">"Danger"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"font-weight-bold"</span><span class="nt">&gt;</span>Your changes have been saved.<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>You may now log-in with the username you have chosen.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border-0 alert-sm bg-transparent px-0"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-success"</span> <span class="na">aria-label=</span><span class="s">"Success"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ml-4 font-weight-bold"</span><span class="nt">&gt;</span>
+            Your changes have been saved.
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Custom Alerts
+        ======================================= --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-sm border border-success alert-dismissible fade show bg-transparent text-white"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-success"</span> <span class="na">aria-label=</span><span class="s">"Success"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-4 font-weight-bold"</span><span class="nt">&gt;</span>
+                Your changes have been saved.
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close p-1 px-3 pb-2"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-white"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>×<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border border-info alert-dismissible fade show bg-transparent text-white"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-info"</span> <span class="na">aria-label=</span><span class="s">"Info"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-3 ml-3 font-weight-bold"</span><span class="nt">&gt;</span>
+                Your changes have been saved.
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close pb-3"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-white"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-warning"</span> <span class="na">aria-label=</span><span class="s">"Warning"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5 font-weight-bold"</span><span class="nt">&gt;</span>
+                Your changes have been saved.
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-white"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-error mt-2"</span> <span class="na">aria-label=</span><span class="s">"Danger"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-5 font-weight-bold"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"font-weight-bold"</span><span class="nt">&gt;</span>Your changes have been saved.<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;&lt;small&gt;</span>You may now log-in with the username you have chosen.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close mt-1"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-white"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert border-0 alert-sm bg-transparent px-0 text-white"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"alert-icon svg-success"</span> <span class="na">aria-label=</span><span class="s">"Success"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ml-4 font-weight-bold"</span><span class="nt">&gt;</span>
+                Your changes have been saved.
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="additional-content">Additional content</h3>
 
