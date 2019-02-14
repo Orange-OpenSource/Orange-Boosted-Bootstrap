@@ -1,5 +1,5 @@
 # Ignore docs files
-docs
+docs/*
 _site
 .ruby-version
 

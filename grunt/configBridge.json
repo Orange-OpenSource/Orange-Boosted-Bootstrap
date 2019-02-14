@@ -11,15 +11,15 @@
       "../assets/js/src/customizer.js"
     ],
     "docsJs": [
-      "../assets/js/vendor/requestAnimationFrame-polyfill.js",
-      "../assets/js/vendor/base64.js",
-      "../assets/js/vendor/holder.min.js",
-      "../assets/js/vendor/clipboard.min.js",
-      "../assets/js/vendor/anchor.min.js",
-      "../assets/js/src/application.js",
-      "../assets/js/src/search.js",
-      "../assets/js/ie10-viewport-bug-workaround.js",
-      "../assets/js/ie-emulation-modes-warning.js"
+      "../docs_generated/docs/assets/js/vendor/requestAnimationFrame-polyfill.js",
+      "../docs_generated/docs/assets/js/vendor/base64.js",
+      "../docs_generated/docs/assets/js/vendor/holder.min.js",
+      "../docs_generated/docs/assets/js/vendor/clipboard.min.js",
+      "../docs_generated/docs/assets/js/vendor/anchor.min.js",
+      "../docs_generated/docs/assets/js/src/application.js",
+      "../docs_generated/docs/assets/js/src/search.js",
+      "../docs_generated/docs/assets/js/ie10-viewport-bug-workaround.js",
+      "../docs_generated/docs/assets/js/ie-emulation-modes-warning.js"
     ]
   },
   "config": {

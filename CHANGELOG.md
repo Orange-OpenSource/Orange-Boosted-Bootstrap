@@ -1,6 +1,9 @@
-<a name="3.4.0"></a>
-# [3.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v3.3.3...v3.4.0) (2019-01-23)
-
+<a name="3.4.1"></a>
+### 3.4.1 (2019-02-14)
+* Security: Fixed an XSS vulnerability (CVE-2019-8331) in our tooltip and popover plugins by implementing a new HTML sanitizer
+* Handle bad selectors (#) in data-target for Dropdowns
+* Clarified tooltip selector documentation
+* Added support for NuGet contentFiles
 
 
 <a name"3.3.3"></a>
