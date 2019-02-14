@@ -39,12 +39,12 @@ To get started, check out <https://boosted.orange.com/>!
 
 Several quick start options are available:
 
-- [Download the latest release](https://boosted.orange.com/v3/getting-started/).
+- [Download the latest release](https://boosted.orange.com/docs/3.4/getting-started/).
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`.
 - Install with [Bower](http://bower.io): `bower install boosted`.
-- Install with [npm](https://www.npmjs.com): `npm install boosted`.
+- Install with [npm](https://www.npmjs.com): `npm install boosted@3.4.1`.
 
-Read the [Getting started page](https://boosted.orange.com/v3/getting-started/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/3.4/getting-started/) for information on the framework contents, templates and examples, and more.
 
 ### What's included
 
