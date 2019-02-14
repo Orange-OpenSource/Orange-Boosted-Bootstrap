@@ -196,28 +196,32 @@
 
       // Handle rounded corners
       @if $enable-rounded {
-        &:first-child {
+        &:not(:last-child) {
           @include border-right-radius(0);
 
           .card-img-top,
           .card-header {
+            // stylelint-disable-next-line property-blacklist
             border-top-right-radius: 0;
           }
           .card-img-bottom,
           .card-footer {
+            // stylelint-disable-next-line property-blacklist
             border-bottom-right-radius: 0;
           }
         }
 
-        &:last-child {
+        &:not(:first-child) {
           @include border-left-radius(0);
 
           .card-img-top,
           .card-header {
+            // stylelint-disable-next-line property-blacklist
             border-top-left-radius: 0;
           }
           .card-img-bottom,
           .card-footer {
+            // stylelint-disable-next-line property-blacklist
             border-bottom-left-radius: 0;
           }
         }

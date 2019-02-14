@@ -5,7 +5,7 @@
     min-width: $pagination-min-width; // Boosted mod
     min-height: $pagination-min-width; // Boosted mod
     padding: $padding-y $padding-x;
-    font-size: $font-size;
+    @include font-size($font-size);
     line-height: $line-height;
   }
 

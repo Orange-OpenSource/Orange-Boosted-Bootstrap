@@ -19,7 +19,7 @@ url:            https://boosted.orange.com
 # end boosted mod
 encoding:       UTF-8
 exclude:
-  - docs/4.2/assets/scss/
+  - docs/4.3/assets/scss/
 
 plugins:
   - jekyll-redirect-from

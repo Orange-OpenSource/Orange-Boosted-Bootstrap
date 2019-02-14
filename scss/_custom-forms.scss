@@ -41,8 +41,15 @@
 
   &:focus ~ .custom-control-label::before {
     // the mixin is not used here to make sure there is feedback
-    outline: dotted 1px $black; // Boosted mod no box-shadow, replaced by outline
-    box-shadow: $custom-control-indicator-focus-box-shadow;
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $custom-control-indicator-focus-box-shadow;
+    }
+  }
+
+  &:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: $custom-control-indicator-focus-border-color;
   }
 
   &:not(:disabled):active ~ .custom-control-label::before {
@@ -185,6 +192,7 @@
 
 .custom-radio {
   .custom-control-label::before {
+    // stylelint-disable-next-line property-blacklist
     border-radius: $custom-radio-indicator-border-radius;
   }
 
@@ -358,7 +366,7 @@
 
   // Hides the default caret in IE11
   &::-ms-expand {
-    opacity: 0;
+    display: none;
   }
 }
 
@@ -367,7 +375,7 @@
   padding-top: $custom-select-padding-y-sm;
   padding-bottom: $custom-select-padding-y-sm;
   padding-left: $custom-select-padding-x-sm;
-  font-size: $custom-select-font-size-sm;
+  @include font-size($custom-select-font-size-sm);
 }
 
 .custom-select-lg {
@@ -375,7 +383,7 @@
   padding-top: $custom-select-padding-y-lg;
   padding-bottom: $custom-select-padding-y-lg;
   padding-left: $custom-select-padding-x-lg;
-  font-size: $custom-select-font-size-lg;
+  @include font-size($custom-select-font-size-lg);
 }
 
 
@@ -486,7 +494,7 @@
     margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    border-radius: $custom-range-thumb-border-radius;
+    @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
@@ -512,7 +520,7 @@
     height: $custom-range-thumb-height;
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    border-radius: $custom-range-thumb-border-radius;
+    @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
@@ -541,7 +549,7 @@
     margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    border-radius: $custom-range-thumb-border-radius;
+    @include border-radius($custom-range-thumb-border-radius);
     @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;

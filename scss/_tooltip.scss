@@ -7,7 +7,7 @@
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
-  font-size: $tooltip-font-size;
+  @include font-size($tooltip-font-size);
   // boosted mod
   font-weight: $tooltip-font-weight;
   // end mod

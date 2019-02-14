@@ -49,7 +49,7 @@
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin: .625rem .3125rem; // boosted mod
-  font-size: $navbar-brand-font-size;
+  @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // boosted mod
   line-height: inherit;
   white-space: nowrap;
@@ -205,7 +205,7 @@
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   margin: ($spacer / 4) 0; // boosted mod
-  font-size: $navbar-toggler-font-size;
+  @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
