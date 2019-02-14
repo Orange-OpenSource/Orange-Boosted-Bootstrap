@@ -1,8 +1,8 @@
 /* ========================================================================
- * Bootstrap: collapse.js v3.4.0
+ * Bootstrap: collapse.js v3.4.1
  * https://getbootstrap.com/docs/3.4/javascript/#collapse
  * ========================================================================
- * Copyright 2011-2018 Twitter, Inc.
+ * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -15,10 +15,10 @@
   // ================================
 
   var Collapse = function (element, options) {
-    this.$element = $(element)
-    this.options = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
-      '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
     this.transitioning = null
 
     if (this.options.parent) {
@@ -30,7 +30,7 @@
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION = '3.4.0'
+  Collapse.VERSION  = '3.4.1'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -189,7 +189,7 @@
     if (!$.support.transition) return complete.call(this)
 
     this.$element
-    [dimension](0)
+      [dimension](0)
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
@@ -235,8 +235,8 @@
 
   function Plugin(option) {
     return this.each(function () {
-      var $this = $(this)
-      var data = $this.data('bs.collapse')
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
       var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
@@ -247,7 +247,7 @@
 
   var old = $.fn.collapse
 
-  $.fn.collapse = Plugin
+  $.fn.collapse             = Plugin
   $.fn.collapse.Constructor = Collapse
 
 
@@ -264,13 +264,13 @@
   // =================
 
   $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
-    var $this = $(this)
+    var $this   = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
 
     var $target = getTargetFromTrigger($this)
-    var data = $target.data('bs.collapse')
-    var option = data ? 'toggle' : $this.data()
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
 
     Plugin.call($target, option)
   })

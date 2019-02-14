@@ -1,8 +1,8 @@
 /* ========================================================================
- * Bootstrap: tab.js v3.4.0
+ * Bootstrap: tab.js v3.4.1
  * https://getbootstrap.com/docs/3.4/javascript/#tabs
  * ========================================================================
- * Copyright 2011-2018 Twitter, Inc.
+ * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -19,7 +19,7 @@
     // jscs:enable requireDollarBeforejQueryAssignment
   }
 
-  Tab.VERSION = '3.4.0'
+  Tab.VERSION = '3.4.1'
 
   Tab.TRANSITION_DURATION = 150
 
@@ -98,8 +98,8 @@
   // end mod
 
   Tab.prototype.show = function () {
-    var $this = this.element
-    var $ul = $this.closest('ul:not(.dropdown-menu)')
+    var $this    = this.element
+    var $ul      = $this.closest('ul:not(.dropdown-menu)')
     var selector = $this.data('target')
 
     if (!selector) {
@@ -138,7 +138,7 @@
   }
 
   Tab.prototype.activate = function (element, container, callback) {
-    var $active = container.find('> .active')
+    var $active    = container.find('> .active')
     var transition = callback
       && $.support.transition
       && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
@@ -202,7 +202,7 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data = $this.data('bs.tab')
+      var data  = $this.data('bs.tab')
 
       if (!data) $this.data('bs.tab', (data = new Tab(this)))
       if (typeof option == 'string') data[option]()
@@ -211,7 +211,7 @@
 
   var old = $.fn.tab
 
-  $.fn.tab = Plugin
+  $.fn.tab             = Plugin
   $.fn.tab.Constructor = Tab
 
 

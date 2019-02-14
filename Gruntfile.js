@@ -98,6 +98,10 @@ module.exports = function (grunt) {
               serveStatic('.tmp'),
               serveStatic('docs'),
               connect().use(
+                '/docs/3.4',
+                serveStatic('docs')
+              ),
+              connect().use(
                 '/bower_components',
                 serveStatic('./bower_components')
               ),

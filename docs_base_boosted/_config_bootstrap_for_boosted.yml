@@ -20,16 +20,16 @@ plugins:
   - jekyll-sitemap
 
 # Custom vars
-current_version:  3.4.0
-boosted_version:  3.4.0
+current_version:  3.4.1
+boosted_version:  3.4.1
 docs_version:     3.4
 repo:             https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
 
 download:
-  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v3.4.0/boosted-v3.4.0.zip
-  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.4.0/boosted-v3.4.0-dist.zip
-  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.4.0.tar.gz
+  source:         https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v3.4.1/boosted-v3.4.1.zip
+  dist:           https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v3.4.1/boosted-v3.4.1-dist.zip
+  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.4.1.tar.gz
 
 blog:             https://blog.getbootstrap.com
 expo:             https://expo.getbootstrap.com
@@ -37,9 +37,9 @@ themes:           https://themes.getbootstrap.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css
-  css_hash:       "sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+"
-  css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css
-  css_theme_hash: "sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR"
-  js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js
-  js_hash:        "sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw"
+  css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css
+  css_hash:       "sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+  css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css
+  css_theme_hash: "sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+  js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js
+  js_hash:        "sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"

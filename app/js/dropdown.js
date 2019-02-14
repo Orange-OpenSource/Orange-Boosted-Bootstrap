@@ -1,8 +1,8 @@
 /* ========================================================================
- * Bootstrap: dropdown.js v3.4.0
+ * Bootstrap: dropdown.js v3.4.1
  * https://getbootstrap.com/docs/3.4/javascript/#dropdowns
  * ========================================================================
- * Copyright 2011-2018 Twitter, Inc.
+ * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -14,12 +14,12 @@
   // =========================
 
   var backdrop = '.dropdown-backdrop'
-  var toggle = '[data-toggle="dropdown"]'
+  var toggle   = '[data-toggle="dropdown"]'
   var Dropdown = function (element) {
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
-  Dropdown.VERSION = '3.4.0'
+  Dropdown.VERSION = '3.4.1'
   // boosted mod
   var menus = $(toggle).parent().find('ul').attr('role', 'menu')
   var lis = menus.find('li').attr('role', 'presentation')
@@ -35,7 +35,7 @@
       selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
-    var $parent = selector && $(document).find(selector)
+    var $parent = selector !== '#' ? $(document).find(selector) : null
 
     // boosted mod
     // looking for closest parent with .dropdown class
@@ -52,8 +52,8 @@
     if (e && e.which === 3) return
     $(backdrop).remove()
     $(toggle).each(function () {
-      var $this = $(this)
-      var $parent = getParent($this)
+      var $this         = $(this)
+      var $parent       = getParent($this)
       var relatedTarget = { relatedTarget: this }
 
       if (!$parent.hasClass('open')) return
@@ -79,7 +79,7 @@
 
     if ($this.is('.disabled, :disabled')) return
 
-    var $parent = getParent($this)
+    var $parent  = getParent($this)
     var isActive = $parent.hasClass('open')
 
     clearMenus()
@@ -135,7 +135,7 @@
 
     if ($this.is('.disabled, :disabled')) return
 
-    var $parent = getParent($this)
+    var $parent  = getParent($this)
     var isActive = $parent.hasClass('open')
 
     if (!isActive && e.which != 27 || isActive && e.which == 27) {
@@ -173,7 +173,7 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data = $this.data('bs.dropdown')
+      var data  = $this.data('bs.dropdown')
 
       if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
       if (typeof option == 'string') data[option].call($this)
@@ -182,7 +182,7 @@
 
   var old = $.fn.dropdown
 
-  $.fn.dropdown = Plugin
+  $.fn.dropdown             = Plugin
   $.fn.dropdown.Constructor = Dropdown
 
 
