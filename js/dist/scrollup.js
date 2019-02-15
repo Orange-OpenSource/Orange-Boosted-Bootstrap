@@ -1,18 +1,18 @@
 /*!
-  * Boosted v4.2.2 (https://boosted.orange.com)
+  * Boosted v4.3.0 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap scrollup.js v4.2.2 (https://boosted.orange.com)
+  * Bootstrap scrollup.js v4.3.0 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global.ScrollUp = factory(global.jQuery));
-}(this, (function ($) { 'use strict';
+  (global = global || self, global.ScrollUp = factory(global.jQuery));
+}(this, function ($) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
@@ -172,5 +172,5 @@
 
   return ScrollUp;
 
-})));
+}));
 //# sourceMappingURL=scrollup.js.map
