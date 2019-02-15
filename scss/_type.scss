@@ -23,12 +23,12 @@ h6, .h6 { @include font-size($h6-font-size); }
 // Boosted mod
 // reduce the size of titles for mobile display
 @include media-breakpoint-down(sm) {
-  h1, .h1 { @include font-size($h1-font-mobile); }
-  h2, .h2 { @include font-size($h2-font-mobile); }
-  h3, .h3 { @include font-size($h3-font-mobile); }
-  h4, .h4 { @include font-size($h4-font-mobile); }
-  h5, .h5 { @include font-size($h5-font-mobile); }
-  h6, .h6 { @include font-size($h6-font-mobile); }
+  h1, .h1 { @include font-size($h1-font-size-mobile); }
+  h2, .h2 { @include font-size($h2-font-size-mobile); }
+  h3, .h3 { @include font-size($h3-font-size-mobile); }
+  h4, .h4 { @include font-size($h4-font-size-mobile); }
+  h5, .h5 { @include font-size($h5-font-size-mobile); }
+  h6, .h6 { @include font-size($h6-font-size-mobile); }
 }
 // end mod
 .lead {

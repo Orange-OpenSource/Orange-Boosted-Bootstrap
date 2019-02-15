@@ -27,7 +27,7 @@
 }
 
 
-@mixin form-validation-state($state, $color) {
+@mixin form-validation-state($state, $color, $icon) {
   .#{$state}-feedback {
     display: none;
     width: 100%;
