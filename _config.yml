@@ -70,14 +70,14 @@ title:              Boosted
 description:        "Based on Bootstrap the most popular library."
 twitter:            getbootstrap
 authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
-social_image_path:  /docs/4.2/assets/brand/bootstrap-social.png
-social_logo_path:   /docs/4.2/assets/brand/bootstrap-social-logo.png
+social_image_path:  /docs/4.3/assets/brand/bootstrap-social.png
+social_logo_path:   /docs/4.3/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.2.2
-bootstrap_current_version:      v4.2.1
-current_ruby_version: 4.2.2
-docs_version:         4.2
+current_version:      4.3.0
+bootstrap_current_version:      v4.2.2
+current_ruby_version: 4.3.0
+docs_version:         4.3
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 blog:                 "https://blog.getbootstrap.com"
@@ -85,12 +85,12 @@ expo:                 "https://expo.getbootstrap.com"
 themes:               "https://themes.getbootstrap.com"
 
 download:
-  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.2.2.zip"
-  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.2.2/boosted-4.2.2-dist.zip"
+  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.3.0.zip"
+  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.3.0/boosted-4.3.0-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
   css_hash:         "sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
   js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
   js_hash:          "sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
