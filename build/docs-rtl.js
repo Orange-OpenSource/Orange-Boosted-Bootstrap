@@ -14,32 +14,32 @@ const os = require('os')
 
 if (os.platform === 'linux') {
   sh.exec('echo linux')
-  sh.exec('find site/docs/4.2/examples/ -mindepth 1 -maxdepth 1 -type d -name "rtl-*" -exec bash -c \'rm -rf site/docs/4.2/examples/$(basename "{}") ; rmdir site/docs/4.2/examples/$(basename "{}")\' \\;', (code, stdout, stderr) => {
+  sh.exec('find site/docs/4.3/examples/ -mindepth 1 -maxdepth 1 -type d -name "rtl-*" -exec bash -c \'rm -rf site/docs/4.3/examples/$(basename "{}") ; rmdir site/docs/4.3/examples/$(basename "{}")\' \\;', (code, stdout, stderr) => {
     console.log('Exit code:', code)
     console.log('Program output:', stdout)
     console.log('Program stderr:', stderr)
 
-    sh.exec('find site/docs/4.2/examples/ -mindepth 1 -maxdepth 1 -type d ! -name "screenshots" -exec bash -c \'mkdir -p site/docs/4.2/examples/rtl-$(basename "{}") ; cp -av "{}"/* site/docs/4.2/examples/rtl-$(basename "{}")/ ; rtlcss -e "-rtl.css" -d site/docs/4.2/examples/rtl-$(basename "{}")/\' \\;', (code, stdout, stderr) => {
+    sh.exec('find site/docs/4.3/examples/ -mindepth 1 -maxdepth 1 -type d ! -name "screenshots" -exec bash -c \'mkdir -p site/docs/4.3/examples/rtl-$(basename "{}") ; cp -av "{}"/* site/docs/4.3/examples/rtl-$(basename "{}")/ ; rtlcss -e "-rtl.css" -d site/docs/4.3/examples/rtl-$(basename "{}")/\' \\;', (code, stdout, stderr) => {
       console.log('Exit code:', code)
       console.log('Program output:', stdout)
       console.log('Program stderr:', stderr)
-      sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/\\.css/-rtl\\.css/gi\' {} \\;', (code, stdout, stderr) => {
+      sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/\\.css/-rtl\\.css/gi\' {} \\;', (code, stdout, stderr) => {
         console.log('Exit code:', code)
         console.log('Program output:', stdout)
         console.log('Program stderr:', stderr)
-        sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeIcons-rtl/orangeIcons/gi\' {} \\;', (code, stdout, stderr) => {
+        sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeIcons-rtl/orangeIcons/gi\' {} \\;', (code, stdout, stderr) => {
           console.log('Exit code:', code)
           console.log('Program output:', stdout)
           console.log('Program stderr:', stderr)
-          sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeHelvetica-rtl/orangeHelvetica/gi\' {} \\;', (code, stdout, stderr) => {
+          sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeHelvetica-rtl/orangeHelvetica/gi\' {} \\;', (code, stdout, stderr) => {
             console.log('Exit code:', code)
             console.log('Program output:', stdout)
             console.log('Program stderr:', stderr)
-            sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/swiper\\.min-rtl/swiper\\.min/gi\' {} \\;', (code, stdout, stderr) => {
+            sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/swiper\\.min-rtl/swiper\\.min/gi\' {} \\;', (code, stdout, stderr) => {
               console.log('Exit code:', code)
               console.log('Program output:', stdout)
               console.log('Program stderr:', stderr)
-              sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' {} \\;', (code, stdout, stderr) => {
+              sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' {} \\;', (code, stdout, stderr) => {
                 console.log('Exit code:', code)
                 console.log('Program output:', stdout)
                 console.log('Program stderr:', stderr)
@@ -52,32 +52,32 @@ if (os.platform === 'linux') {
   })
 } else {
   sh.exec('echo not linux')
-  sh.exec('find site/docs/4.2/examples/ -mindepth 1 -maxdepth 1 -type d -name "rtl-*" -exec bash -c \'rm -rf site/docs/4.2/examples/$(basename "{}") ; rmdir site/docs/4.2/examples/$(basename "{}")\' ;', (code, stdout, stderr) => {
+  sh.exec('find site/docs/4.3/examples/ -mindepth 1 -maxdepth 1 -type d -name "rtl-*" -exec bash -c \'rm -rf site/docs/4.3/examples/$(basename "{}") ; rmdir site/docs/4.3/examples/$(basename "{}")\' ;', (code, stdout, stderr) => {
     console.log('Exit code:', code)
     console.log('Program output:', stdout)
     console.log('Program stderr:', stderr)
 
-    sh.exec('find site/docs/4.2/examples/ -mindepth 1 -maxdepth 1 -type d ! -name "screenshots" -exec bash -c \'mkdir -p site/docs/4.2/examples/rtl-$(basename "{}") ; cp -av "{}"/* site/docs/4.2/examples/rtl-$(basename "{}")/ ; rtlcss -e "-rtl.css" -d site/docs/4.2/examples/rtl-$(basename "{}")/\' ;', (code, stdout, stderr) => {
+    sh.exec('find site/docs/4.3/examples/ -mindepth 1 -maxdepth 1 -type d ! -name "screenshots" -exec bash -c \'mkdir -p site/docs/4.3/examples/rtl-$(basename "{}") ; cp -av "{}"/* site/docs/4.3/examples/rtl-$(basename "{}")/ ; rtlcss -e "-rtl.css" -d site/docs/4.3/examples/rtl-$(basename "{}")/\' ;', (code, stdout, stderr) => {
       console.log('Exit code:', code)
       console.log('Program output:', stdout)
       console.log('Program stderr:', stderr)
-      sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/\\.css/-rtl\\.css/gi\' {} ;', (code, stdout, stderr) => {
+      sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/\\.css/-rtl\\.css/gi\' {} ;', (code, stdout, stderr) => {
         console.log('Exit code:', code)
         console.log('Program output:', stdout)
         console.log('Program stderr:', stderr)
-        sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeIcons-rtl/orangeIcons/gi\' {} ;', (code, stdout, stderr) => {
+        sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeIcons-rtl/orangeIcons/gi\' {} ;', (code, stdout, stderr) => {
           console.log('Exit code:', code)
           console.log('Program output:', stdout)
           console.log('Program stderr:', stderr)
-          sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeHelvetica-rtl/orangeHelvetica/gi\' {} ;', (code, stdout, stderr) => {
+          sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/orangeHelvetica-rtl/orangeHelvetica/gi\' {} ;', (code, stdout, stderr) => {
             console.log('Exit code:', code)
             console.log('Program output:', stdout)
             console.log('Program stderr:', stderr)
-            sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/swiper\\.min-rtl/swiper\\.min/gi\' {} ;', (code, stdout, stderr) => {
+            sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/swiper\\.min-rtl/swiper\\.min/gi\' {} ;', (code, stdout, stderr) => {
               console.log('Exit code:', code)
               console.log('Program output:', stdout)
               console.log('Program stderr:', stderr)
-              sh.exec('find site/docs/4.2/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' {} ;', (code, stdout, stderr) => {
+              sh.exec('find site/docs/4.3/examples/rtl-* -type f -name "*.html" -exec sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' {} ;', (code, stdout, stderr) => {
                 console.log('Exit code:', code)
                 console.log('Program output:', stdout)
                 console.log('Program stderr:', stderr)

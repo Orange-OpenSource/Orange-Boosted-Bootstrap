@@ -1,6 +1,6 @@
 {
   "name": "boosted",
-  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.2.1.",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.3.0.",
   "version": "4.3.0",
   "version_short": "4.3",
   "keywords": [
@@ -32,8 +32,8 @@
     "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/boosted.scss dist/css/boosted.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/boosted-grid.scss dist/css/boosted-grid.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/boosted-reboot.scss dist/css/boosted-reboot.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/o-rtl.scss dist/css/o-rtl.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/orangeHelvetica.scss dist/css/orangeHelvetica.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/orangeIcons.scss dist/css/orangeIcons.css && rtlcss dist/css/boosted.css dist/css/boosted-rtl.css && shx cat dist/css/o-rtl.css >> dist/css/boosted-rtl.css && npm run css-copy",
     "css-compile-docs": "cross-env-shell node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 site/docs/$npm_package_version_short/assets/scss/docs.scss site/docs/$npm_package_version_short/assets/css/docs.min.css",
     "css-lint": "npm-run-all --parallel css-lint-*",
-    "css-lint-main": "stylelint --syntax scss \"scss/**/*.scss\"",
-    "css-lint-docs": "stylelint --syntax scss \"site/docs/**/assets/scss/*.scss\" && stylelint \"site/docs/**/*.css\"",
+    "css-lint-main": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
+    "css-lint-docs": "stylelint \"site/docs/**/assets/scss/*.scss\" \"site/docs/**/*.css\" --cache --cache-location .cache/.stylelintcache",
     "css-lint-vars": "fusv scss/ site/docs/",
     "css-minify": "npm-run-all --parallel css-minify-*",
     "css-minify-main": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/boosted.min.css dist/css/boosted.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/boosted-grid.min.css dist/css/boosted-grid.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/boosted-reboot.min.css dist/css/boosted-reboot.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/boosted-rtl.min.css dist/css/boosted-rtl.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/orangeHelvetica.min.css dist/css/orangeHelvetica.css && cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/orangeIcons.min.css dist/css/orangeIcons.css",
@@ -46,7 +46,7 @@
     "img": "shx mkdir -p dist/img && shx cp -r img/* dist/img/ && cross-env-shell shx cp -r dist/img/ site/docs/$npm_package_version_short/dist/",
     "js": "npm-run-all js-compile js-minify js-copy",
     "js-copy": "cross-env-shell shx mkdir -p site/docs/$npm_package_version_short/dist/ && cross-env-shell shx cp -r dist/js/ site/docs/$npm_package_version_short/dist/",
-    "js-main": "npm-run-all js-lint js-compile-main js-minify-main js-vendor",
+    "js-main": "npm-run-all js-lint js-compile js-minify-main js-vendor",
     "js-docs": "npm-run-all js-lint-docs js-minify-docs",
     "js-compile": "npm-run-all --parallel js-compile-* --sequential js-copy",
     "js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
@@ -54,8 +54,8 @@
     "js-compile-plugins": "node build/build-plugins.js",
     "js-compile-plugins-coverage": "cross-env NODE_ENV=test node build/build-plugins.js",
     "js-lint": "npm-run-all --parallel js-lint-*",
-    "js-lint-main": "eslint js/src js/tests build/",
-    "js-lint-docs": "eslint site/",
+    "js-lint-main": "eslint --cache --cache-location .cache/.eslintcache js/src js/tests build/",
+    "js-lint-docs": "eslint --cache --cache-location .cache/.eslintcache site/",
     "js-minify": "npm-run-all --parallel js-minify-main js-minify-docs",
     "js-minify-main": "npm-run-all js-minify-standalone js-minify-bundle",
     "js-minify-standalone": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/boosted.js.map,includeSources,url=boosted.min.js.map\" --output dist/js/boosted.min.js dist/js/boosted.js",
@@ -68,7 +68,7 @@
     "js-test-karma-bundle-old": "cross-env BUNDLE=true USE_OLD_JQUERY=true npm run js-test-karma",
     "js-test-integration": "rollup --config js/tests/integration/rollup.bundle.js",
     "js-test-cloud": "cross-env BROWSER=true npm run js-test-karma",
-    "lint": "npm-run-all js-lint css-lint",
+    "lint": "npm-run-all --parallel js-lint css-lint",
     "coveralls": "shx cat js/coverage/lcov.info | coveralls",
     "js-vendor": "shx mkdir -p dist/js/vendor && shx cp node_modules/swiper/dist/js/swiper.min.js dist/js/vendor/ && shx cp node_modules/swiper/dist/js/swiper.min.js.map dist/js/vendor/",
     "docs": "npm-run-all css-docs js-docs docs-compile docs-rtl docs-lint",
@@ -108,8 +108,9 @@
   },
   "peerDependencies": {
     "jquery": "1.9.1 - 3",
-    "popper.js": "^1.14.6",
-    "tablesorter": "^2.29.4"
+    "popper.js": "^1.14.7",
+    "tablesorter": "^2.29.4",
+    "swiper": "^4.4.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -118,7 +119,7 @@
     "@babel/preset-env": "^7.3.1",
     "autoprefixer": "^9.4.7",
     "babel-eslint": "^10.0.1",
-    "babel-plugin-istanbul": "^5.1.0",
+    "babel-plugin-istanbul": "^5.1.1",
     "broken-link-checker": "^0.7.8",
     "bundlesize": "0.15.3",
     "clean-css-cli": "^4.2.1",
@@ -134,7 +135,7 @@
     "karma": "^3.1.4",
     "karma-browserstack-launcher": "^1.4.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage-istanbul-reporter": "^2.0.4",
+    "karma-coverage-istanbul-reporter": "^2.0.5",
     "karma-detect-browsers": "^2.3.3",
     "karma-firefox-launcher": "^1.1.0",
     "karma-qunit": "^2.1.0",
@@ -229,7 +230,7 @@
     "dependencies": {},
     "peerDependencies": {
       "jquery": "1.9.1 - 3",
-      "popper.js": "^1.14.6",
+      "popper.js": "^1.14.7",
       "tablesorter": "^2.29.4"
     }
   }
