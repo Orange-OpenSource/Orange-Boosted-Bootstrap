@@ -39,7 +39,7 @@
    */
 
   var NAME = 'button';
-  var VERSION = '4.2.1';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.button';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';

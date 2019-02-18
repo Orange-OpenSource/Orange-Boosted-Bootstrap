@@ -80,7 +80,7 @@
    */
 
   var NAME = 'popover';
-  var VERSION = '4.2.1';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.popover';
   var EVENT_KEY = "." + DATA_KEY;
   var JQUERY_NO_CONFLICT = $.fn[NAME];

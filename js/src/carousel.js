@@ -268,7 +268,9 @@ class Carousel {
         .on(Event.MOUSELEAVE, (event) => this.cycle(event))
     }
 
-    this._addTouchEventListeners()
+    if (this._config.touch) {
+      this._addTouchEventListeners()
+    }
   }
 
   _addTouchEventListeners() {
@@ -531,7 +533,7 @@ class Carousel {
           throw new TypeError(`No method named "${action}"`)
         }
         data[action]()
-      } else if (_config.interval) {
+      } else if (_config.interval && _config.ride) {
         data.pause()
         data.cycle()
       }

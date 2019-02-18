@@ -74,7 +74,7 @@
    */
 
   var NAME = 'carousel';
-  var VERSION = '4.2.1';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.carousel';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -314,7 +314,9 @@
         });
       }
 
-      this._addTouchEventListeners();
+      if (this._config.touch) {
+        this._addTouchEventListeners();
+      }
     };
 
     _proto._addTouchEventListeners = function _addTouchEventListeners() {
@@ -583,7 +585,7 @@
           }
 
           data[action]();
-        } else if (_config.interval) {
+        } else if (_config.interval && _config.ride) {
           data.pause();
           data.cycle();
         }

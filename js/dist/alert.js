@@ -40,7 +40,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.2.1';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
