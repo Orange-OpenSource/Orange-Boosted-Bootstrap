@@ -2,6 +2,8 @@
 **/dist/
 **/vendor/
 /_gh_pages/
+/js/coverage/
+/package.js
 **/docs/**/demo/*
 **/docs/**/rtl-*/**/
 **/docs/**/examples/orange-*

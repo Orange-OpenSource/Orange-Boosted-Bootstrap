@@ -40,9 +40,6 @@ Thumbs.db
 .komodotools
 *.komodoproject
 
-# Jekyll metadata
-docs/.jekyll-metadata
-
 # Folders to ignore
 node_modules
 js/coverage
