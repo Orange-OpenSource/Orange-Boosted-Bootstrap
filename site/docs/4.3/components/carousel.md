@@ -168,6 +168,8 @@ Add a link to a slider by using `a` html tag.
   </div>
 </div>
 {% endhighlight %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Crossfade
 
