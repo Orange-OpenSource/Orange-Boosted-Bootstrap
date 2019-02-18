@@ -62,8 +62,6 @@
 
 @mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
-  background-color: transparent;
-  background-image: none;
   border-color: $color;
 
   @include hover-focus { //Boosted mod focus has same as hover
@@ -90,6 +88,7 @@
     color: #000; // Boosted mod
     background-color: #f16e00; // Boosted mod
     border-color: #f16e00; // Boosted mod
+
     &:focus {
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows and $btn-active-box-shadow != none {
@@ -105,12 +104,8 @@
 // Button sizes
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
-  font-size: $font-size;
+  @include font-size($font-size);
   line-height: $line-height;
   // Manually declare to provide an override to the browser default
-  @if $enable-rounded {
-    border-radius: $border-radius;
-  } @else {
-    border-radius: 0;
-  }
+  @include border-radius($border-radius, 0);
 }

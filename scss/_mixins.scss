@@ -4,6 +4,10 @@
 
 // Vendor
 @import "vendor/rfs";
+
+// Deprecate
+@import "mixins/deprecate";
+
 // Utilities
 @import "mixins/breakpoints";
 @import "mixins/hover";

@@ -135,7 +135,7 @@ Fancy larger or smaller buttons? Add `.btn-xlg`, `.btn-lg` or `.btn-sm` for addi
 {% endcapture %}
 {% include example.html content=example %}
 
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
+Create block level buttons-those that span the full width of a parent-by adding `.btn-block`.
 
 {% capture example %}
 <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>

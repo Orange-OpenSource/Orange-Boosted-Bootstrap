@@ -317,6 +317,8 @@
   width: 100%;
   height: $custom-select-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  font-family: $custom-select-font-family;
+  @include font-size($custom-select-font-size);
   font-weight: $custom-select-font-weight;
   line-height: $custom-select-line-height;
   color: $custom-select-color;
@@ -324,11 +326,7 @@
   background: $custom-select-background;
   background-color: $custom-select-bg;
   border: $custom-select-border-width solid $custom-select-border-color;
-  @if $enable-rounded {
-    border-radius: $custom-select-border-radius;
-  } @else {
-    border-radius: 0;
-  }
+  @include border-radius($custom-select-border-radius, 0);
   // @include box-shadow($custom-select-box-shadow); //boosted mod no box-shadow
   appearance: none;
 
@@ -435,6 +433,7 @@
   z-index: 1;
   height: $custom-file-height;
   padding: $custom-file-padding-y $custom-file-padding-x;
+  font-family: $custom-file-font-family;
   font-weight: $custom-file-font-weight;
   line-height: $custom-file-line-height;
   color: $custom-file-color;

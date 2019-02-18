@@ -33,8 +33,8 @@
     width: 100%;
     margin-top: $form-feedback-margin-top;
     @include font-size($form-feedback-font-size);
-    font-weight: $font-weight-bold;
-    // color: $color;
+    font-weight: $font-weight-bold; // Boosted Mod
+    // color: $color; // Boosted Mod
   }
 
   .#{$state}-tooltip {
@@ -56,12 +56,20 @@
     .was-validated &:#{$state},
     &.is-#{$state} {
       border-color: $color;
-
+      
+      // Boosted Mod
+      // @if $enable-validation-icons {
+      //   padding-right: $input-height-inner;
+      //   background-image: $icon;
+      //   background-repeat: no-repeat;
+      //   background-position: center right $input-height-inner-quarter;
+      //   background-size: $input-height-inner-half $input-height-inner-half;
+      // }
       &:focus {
         border-color: $color;
         // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
       }
-
+      // Boosted Mod
       ~ .#{$state}-feedback,
       ~ .#{$state}-tooltip {
         @if $enable-validation-icons {
@@ -95,6 +103,7 @@
         display: block;
         padding-left: 1.625rem;
       }
+      // End Mod
     }
   }
 
