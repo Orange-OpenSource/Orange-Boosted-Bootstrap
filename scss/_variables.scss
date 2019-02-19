@@ -116,12 +116,13 @@ $yiq-contrasted-threshold:  4.5 !default;
 $yiq-text-dark:             $black !default;
 $yiq-text-light:            $white !default;
 
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -223,7 +224,7 @@ $grid-breakpoints: map-merge(
 );
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints);
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 
 // Grid containers
@@ -308,13 +309,13 @@ $embed-responsive-aspect-ratios: join(
   (
     (21 9),
     (16 9),
-    (3 4),
+    (4 3),
     (1 1),
   ),
   $embed-responsive-aspect-ratios
 );
 
-// Fonts
+// Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
@@ -325,9 +326,9 @@ $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.125) !default; // 18px
-$font-size-xlg:               ($font-size-base * 1.25) !default; // 20px
-$font-size-sm:                ($font-size-base * .875) !default; // 14px
+$font-size-lg:                $font-size-base * 1.125 !default; // 18px
+$font-size-xlg:               $font-size-base * 1.25 !default; // 20px
+$font-size-sm:                $font-size-base * .875 !default; // 14px
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -338,19 +339,19 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.25 !default; // 20px
 
-$h1-font-size:                ($font-size-base * 2.125) !default; // 34px
-$h2-font-size:                ($font-size-base * 1.875) !default; // 30px
-$h3-font-size:                ($font-size-base * 1.5) !default; // 24px
-$h4-font-size:                ($font-size-base * 1.25) !default; // 20px
-$h5-font-size:                ($font-size-base * 1.125) !default; // 18px
+$h1-font-size:                $font-size-base * 2.125 !default; // 34px
+$h2-font-size:                $font-size-base * 1.875 !default; // 30px
+$h3-font-size:                $font-size-base * 1.5 !default; // 24px
+$h4-font-size:                $font-size-base * 1.25 !default; // 20px
+$h5-font-size:                $font-size-base * 1.125 !default; // 18px
 $h6-font-size:                $font-size-base !default; // 16px
 
-$h1-font-size-mobile:         ($font-size-base * 1.25) !default; // 20px
-$h2-font-size-mobile:         ($font-size-base * 1.125) !default; // 18px
+$h1-font-size-mobile:         $font-size-base * 1.25 !default; // 20px
+$h2-font-size-mobile:         $font-size-base * 1.125 !default; // 18px
 $h3-font-size-mobile:         $font-size-base !default; // 16px
-$h4-font-size-mobile:         ($font-size-base * .875) !default; // 14px
-$h5-font-size-mobile:         ($font-size-base * .875) !default; // 14px
-$h6-font-size-mobile:         ($font-size-base * .875) !default; // 14px
+$h4-font-size-mobile:         $font-size-base * .875 !default; // 14px
+$h5-font-size-mobile:         $font-size-base * .875 !default; // 14px
+$h6-font-size-mobile:         $font-size-base * .875 !default; // 14px
 
 $headings-margin-bottom:      $spacer !default;
 $headings-font-family:        inherit !default;
@@ -369,7 +370,7 @@ $display3-weight:             700 !default;
 $display4-weight:             700 !default;
 $display-line-height:         $headings-line-height !default;
 
-$lead-font-size:              ($font-size-base * 1.25) !default;
+$lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
@@ -378,10 +379,10 @@ $text-muted:                  $gray-700 !default;
 
 $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        $font-size-base * 1.25 !default;
 
 $hr-border-color:             $gray-300 !default;
-$hr-border-width:             ($border-width / 2) !default;
+$hr-border-width:             $border-width / 2 !default;
 
 $mark-padding:                .2em !default;
 
@@ -411,7 +412,7 @@ $table-hover-color:           $table-color !default;
 $table-hover-bg:              $gray-300 !default; // #eee on white bg
 $table-active-bg:             $gray-400 !default;
 
-$table-border-width:          ($border-width / 2) !default; // 1px
+$table-border-width:          $border-width / 2 !default; // 1px
 $table-border-color:          $gray-500 !default;
 
 $table-head-bg:               $white !default;
@@ -457,9 +458,9 @@ $input-btn-padding-x-lg:      1.25rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    1.5 !default;
 
-$input-btn-padding-y-xlg:      .8125rem !default;
-$input-btn-padding-x-xlg:      1.25rem !default;
-$input-btn-line-height-xlg:    1.5 !default;
+$input-btn-padding-y-xlg:     .8125rem !default;
+$input-btn-padding-x-xlg:     1.25rem !default;
+$input-btn-line-height-xlg:   1.5 !default;
 
 $input-btn-border-width:      $border-width !default;
 
@@ -484,9 +485,9 @@ $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
-$btn-padding-y-xlg:            $input-btn-padding-y-xlg !default;
-$btn-padding-x-xlg:            $input-btn-padding-x-xlg !default;
-$btn-line-height-xlg:          $input-btn-line-height-xlg !default;
+$btn-padding-y-xlg:           $input-btn-padding-y-xlg !default;
+$btn-padding-x-xlg:           $input-btn-padding-x-xlg !default;
+$btn-line-height-xlg:         $input-btn-line-height-xlg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
@@ -497,38 +498,7 @@ $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       none !default;
 
-$btn-primary-color:           #fff !default;
-$btn-primary-bg:              theme-color("primary") !default;
-$btn-primary-border-color:    $btn-primary-bg !default;
-//$btn-primary-hover-color:     $btn-primary-color !default;
-//$btn-primary-hover-bg:        #000 !default;
-//$btn-primary-active-color:    $btn-primary-color !default;
-//$btn-primary-active-bg:       $btn-primary-bg !default;
-
-//$btn-secondary-color:         #000 !default;
-//$btn-secondary-bg:            transparent !default;
-//$btn-secondary-border-color:  $gray-500 !default;
-
-//$btn-info-color:              #fff !default;
-$btn-info-bg:                 theme-color("dark") !default;
-//$btn-info-border-color:       $btn-info-bg !default;
-//$btn-info-hover-color:        #000 !default;
-//$btn-info-hover-bg:           #fff !default;
-
-//$btn-success-color:           #000 !default;
-$btn-success-bg:              theme-color("success") !default;
-//$btn-success-border-color:    $btn-success-bg !default;
-
-//$btn-warning-color:           $btn-primary-color !default;
-//$btn-warning-bg:              $btn-primary-bg !default;
-//$btn-warning-border-color:    $btn-primary-border-color !default;
-
-//$btn-danger-color:            #fff !default;
-$btn-danger-bg:               theme-color("danger") !default;
-//$btn-danger-border-color:     $btn-danger-bg !default;
-
 $btn-link-disabled-color:     $gray-500 !default;
-//$btn-link-disabled-black-bg-color: $gray-700 !default;
 
 $btn-block-spacing-y:         .5rem !default;
 
@@ -596,7 +566,7 @@ $input-height-lg:                       calc(#{$input-height-inner-lg} + #{$inpu
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$form-text-margin-top:                  ($spacer * .5) !default;
+$form-text-margin-top:                  $spacer * .5 !default;
 
 $form-check-input-gutter:               1.25rem !default;
 $form-check-input-margin-y:             .3rem !default;
@@ -786,7 +756,7 @@ $zindex-o-scroll-up:                1080 !default; // Boosted mod
 
 // Navs
 
-$nav-link-padding-y:                ($spacer * .5) !default;
+$nav-link-padding-y:                $spacer * .5 !default;
 $nav-link-padding-x:                $spacer !default;
 $nav-link-disabled-color:           $gray-700 !default;
 $nav-link-disabled-hover-bg:        transparent !default;
@@ -819,18 +789,14 @@ $navbar-expanded-minimized-padding-y: 1.25rem !default;
 
 // Boosted mod
 // adapt navbar padding when mobile view
-//$navbar-collapsed-padding-y:        ($spacer / 4) !default;
-//$navbar-collapsed-padding-x:        0 !default;
-$navbar-nav-link-padding-x:         0 !default;
 $navbar-height:                     6.25rem !default;
 $navbar-brand-logo-height:          1.875rem !default;
 $navbar-brand-logo-expanded-height: 3.125rem !default;
 $navbar-brand-logo-minimized-height: 2.5rem !default;
-
-// $navbar-height-minimized:           5rem !default;
-// $navbar-height-sm:                  3.125rem !default;
 $navbar-supra-height:               2.5rem !default;
 // end mod
+
+$navbar-nav-link-padding-x:         0 !default;
 
 $navbar-brand-font-size:            $font-size-sm !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -1028,6 +994,7 @@ $popover-arrow-outer-color:         $popover-border-color !default;
 
 
 // Toasts
+
 $toast-max-width:                   350px !default;
 $toast-padding-x:                   .625rem !default;
 $toast-padding-y:                   .3125rem !default;
@@ -1053,7 +1020,7 @@ $badge-padding-x:                   .625rem !default;
 $badge-border-radius:               $border-radius !default;
 
 $badge-transition:                  $btn-transition !default;
-$badge-focus-width:                 $input-btn-focus-width !default;
+// $badge-focus-width:                 $input-btn-focus-width !default;
 $badge-pill-padding-x:              .625rem !default;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
@@ -1234,8 +1201,8 @@ $spinner-border-width-sm: .2em !default;
 
 $close-font-size:                   $font-size-base * 1.5 !default;
 $close-font-weight:                 $font-weight-bold !default;
-$close-color:                       #000 !default;
-$close-text-shadow:                 0 1px 0 #fff !default;
+$close-color:                       $black !default;
+$close-text-shadow:                 0 1px 0 $white !default;
 
 
 // Code

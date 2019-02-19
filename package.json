@@ -153,6 +153,7 @@
     "sinon": "^7.2.3",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.3.0",
+    "stylelint-scss": "^3.5.3",
     "uglify-js": "^3.4.9",
     "vnu-jar": "18.11.5"
   },
@@ -193,11 +194,11 @@
     },
     {
       "path": "./dist/js/boosted.bundle.js",
-      "maxSize": "30 kB"
+      "maxSize": "52 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "18 kB"
+      "maxSize": "25 kB"
     },
     {
       "path": "./dist/js/boosted.js",
