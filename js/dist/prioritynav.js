@@ -39,7 +39,7 @@
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.2.2';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;

@@ -42,7 +42,7 @@
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.2.2';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key

@@ -74,7 +74,7 @@
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.2.2';
+  var VERSION = '4.3.0';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var BREAKPOINT = 768;
