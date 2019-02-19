@@ -90,18 +90,22 @@ download:
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
-  css_hash:         "sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
-  js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
-  js_hash:          "sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
-  js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.bundle.min.js"
-  js_bundle_hash:   "sha384-VoPFvGr9GxhDT3n8vqqZ46twP5lgex+raTCfICQy73NLhN7ZqSfCtfSn4mLA2EFA"
+  css:              "https://cdn.jsdelivr.net/npm/boosted@4.3.0/dist/css/boosted.min.css"
+  css_hash:         "sha384-+B4D3wcmoe5BnTBWb0GblCvBQgUMq+pUkCfNii4R3dWBcv1BmfZVqSqlnMGuu7l6"
+  js:               "https://cdn.jsdelivr.net/npm/boosted@4.3.0/dist/js/boosted.min.js"
+  js_hash:          "sha384-Di1vTokP6O2vyJT23T+LZJsnhvaulxrf2UI8X1rMIJvhGow3F4GLne60Y5Nxeidr"
+  js_bundle:        "https://cdn.jsdelivr.net/npm/boosted@4.3.0/dist/js/boosted.bundle.min.js"
+  js_bundle_hash:   "sha384-PTPTBfJ3MgmMdr+z7h2p/Jyl1W0v7tz39Di7D/V9/Po3LXF5RQUh7B3zwdlz7YJx"
   jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
   jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
   popper_hash:      "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
   tablesorter:      "https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js"
   tablesorter_hash: "sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU="
+  css_swiper:       "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css"
+  css_swiper_hash:  "sha256-5l8WteQfd84Jq51ydHtcndbGRvgCVE3D0+s97yV4oms="
+  js_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"
+  js_swiper_hash:   "sha256-dl0WVCl8jXMBZfvnMeygnB0+bvqp5wBqqlZ8Wi95lLo="
 
 toc:
   min_level:        2

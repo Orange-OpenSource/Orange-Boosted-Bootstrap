@@ -8,7 +8,7 @@ const banner  = require('./banner.js')
 const BUNDLE  = process.env.BUNDLE === 'true'
 
 let fileDest  = 'boosted.js'
-const external = ['jquery', 'popper.js', 'tablesorter']
+const external = ['jquery', 'tablesorter', 'swiper', 'popper.js']
 const plugins = [
   babel({
     exclude: 'node_modules/**', // Only transpile our source code
@@ -23,8 +23,9 @@ const plugins = [
 ]
 const globals = {
   jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
-  'popper.js': 'Popper',
-  tablesorter: 'tablesorter'
+  tablesorter: 'tablesorter',
+  swiper: 'Swiper',
+  'popper.js': 'Popper'
 }
 
 if (BUNDLE) {
@@ -32,6 +33,14 @@ if (BUNDLE) {
   // Remove last entry in external array to bundle Popper
   external.pop()
   delete globals['popper.js']
+  plugins.push(resolve())
+  // Remove last entry in external array to bundle Swiper
+  external.pop()
+  delete globals.swiper
+  plugins.push(resolve())
+  // Remove last entry in external array to bundle tablesort
+  external.pop()
+  delete globals.tablesorter
   plugins.push(resolve())
 }
 

@@ -28,6 +28,24 @@ Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}
 
 <a href="{{ site.download.source }}" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
+## BoostedCDN
+
+Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.
+
+{% highlight html %}
+<link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+<script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+{% endhighlight %}
+
+If you're using our compiled JavaScript, don't forget to include CDN versions of jQuery and Popper.js before it.
+
+{% highlight html %}
+<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
+{% endhighlight %}
+
 ## Package managers
 
 Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
@@ -44,7 +62,7 @@ npm install boosted
 
 Boosted's `package.json` contains some additional metadata under the following keys:
 
-- `sass` - path to Boosted's main [Sass](http://sass-lang.com/) source file
+- `sass` - path to Boosted's main [Sass](https://sass-lang.com/) source file
 - `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
 
 ### yarn
