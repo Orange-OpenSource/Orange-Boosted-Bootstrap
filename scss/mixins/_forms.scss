@@ -56,7 +56,7 @@
     .was-validated &:#{$state},
     &.is-#{$state} {
       border-color: $color;
-      
+
       // Boosted Mod
       // @if $enable-validation-icons {
       //   padding-right: $input-height-inner;
