@@ -75,7 +75,7 @@ With that setup in place, you can begin to modify any of the Sass variables and 
 
 Every Sass variable in Boosted 4 includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Boosted's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Boosted.
 
-You will find the complete list of Boosted's variables in `scss/_variables.scss`.
+You will find the complete list of Boosted's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
 
 Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Boosted's Sass files.
 
@@ -227,21 +227,24 @@ You can also specify a base color with our color map functions:
 
 Customize Boosted 4 with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
 
-You can find and customize these variables for key global options in our `_variables.scss` file.
+You can find and customize these variables for key global options in Boosted's `scss/_variables.scss` file.
 
-| Variable                    | Values                             | Description                                                                            |
-| --------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `$spacer`                   | `1.25rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). |
-| `$enable-rounded`           | `true` or `false` (default)       | Enables predefined `border-radius` styles on various components. |
-| `$enable-shadows`           | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components. |
-| `$enable-gradients`         | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components. |
-| `$enable-transitions`       | `true` (default) or `false`        | Enables predefined `transition`s on various components. |
-| `$enable-prefers-reduced-motion-media-query`       | `true` (default) or `false`        | Enables the [`prefers-reduced-motion` media query]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/accessibility/#reduced-motion), which suppresses certain animations/transitions based on the users' browser/operating system preferences. |
-| `$enable-hover-media-query` | `true` or `false` (default)        | **Deprecated** |
-| `$enable-grid-classes`      | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.). |
-| `$enable-caret`             | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`. |
-| `$enable-print-styles`      | `true` (default) or `false`        | Enables styles for optimizing printing. |
-| `$enable-validation-icons`  | `true` (default) or `false`        | Enables `background-image` icons within textual inputs and some custom forms for validation states. |
+| Variable                                     | Values                                | Description                                                                            |
+| -------------------------------------------- | ----------------------------------    | -------------------------------------------------------------------------------------- |
+| `$spacer`                                    | `1.25rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). |
+| `$enable-rounded`                            | `true` or `false` (default)           | Enables predefined `border-radius` styles on various components. |
+| `$enable-shadows`                            | `true` or `false` (default)           | Enables predefined `box-shadow` styles on various components. |
+| `$enable-gradients`                          | `true` or `false` (default)           | Enables predefined gradients via `background-image` styles on various components. |
+| `$enable-transitions`                        | `true` (default) or `false`           | Enables predefined `transition`s on various components. |
+| `$enable-prefers-reduced-motion-media-query` | `true` (default) or `false`           | Enables the [`prefers-reduced-motion` media query]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/accessibility/#reduced-motion), which suppresses certain animations/transitions based on the users' browser/operating system preferences. |
+| `$enable-hover-media-query`                  | `true` or `false` (default)           | **Deprecated** |
+| `$enable-grid-classes`                       | `true` (default) or `false`           | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.). |
+| `$enable-caret`                              | `true` (default) or `false`           | Enables pseudo element caret on `.dropdown-toggle`. |
+| `$enable-pointer-cursor-for-buttons`         | `true` (default) or `false`           | Add "hand" cursor to non-disabled button elements. |
+| `$enable-print-styles`                       | `true` (default) or `false`           | Enables styles for optimizing printing. |
+| `$enable-responsive-font-sizes`              | `true` or `false` (default)           | Enables [responsive font sizes]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/#responsive-font-sizes). |
+| `$enable-validation-icons`                   | `true` (default) or `false`           | Enables `background-image` icons within textual inputs and some custom forms for validation states. |
+| `$enable-deprecation-messages`               | `true` or `false` (default)           | Set to `true` to show warnings when using any of the deprecated mixins and functions that are planned to be removed in `v5`. |
 
 ## Color
 
@@ -249,7 +252,7 @@ Many of Boosted's various components and utilities are built through a series of
 
 ### All colors
 
-All colors available in Boosted 4, are available as Sass variables and a Sass map in our `scss/_variables.scss` file. This will be expanded upon in subsequent minor releases to add additional shades, much like the [grayscale palette](#grays) we already include.
+All colors available in Boosted 4, are available as Sass variables and a Sass map in `scss/_variables.scss` file. This will be expanded upon in subsequent minor releases to add additional shades, much like the [grayscale palette](#grays) we already include.
 
 <div class="row">
   {% for color in site.data.colors %}
@@ -292,7 +295,7 @@ We use a subset of all colors to create a smaller color palette for generating c
 
 ### Grays
 
-An expansive set of gray variables and a Sass map in `scss/_variables.scss` for consistent shades of gray across your project.
+An expansive set of gray variables and a Sass map in `scss/_variables.scss` for consistent shades of gray across your project. Note that these are "cool grays", which tend towards a subtle blue tone, rather than neutral grays.
 
 <div class="row mb-3">
   <div class="col-md-4">
@@ -302,7 +305,7 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
   </div>
 </div>
 
-Within `_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
+Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
 
 {% highlight scss %}
 $colors: (

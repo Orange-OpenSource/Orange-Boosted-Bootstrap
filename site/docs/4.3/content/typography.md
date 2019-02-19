@@ -303,6 +303,13 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 {% endcapture %}
 {% include example.html content=example %}
 
+## Responsive font sizes
+
+Boosted v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Boosted.
+
+To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs).
+
+
 [comment]: # Boosted mod
 ### Orange list with bullet points
 

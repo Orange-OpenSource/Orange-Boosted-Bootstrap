@@ -125,6 +125,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
       <th scope="col">tableSorter</th>
+      <th scope="col">Swiper</th>
     </tr>
   </thead>
   <tbody>
@@ -135,12 +136,15 @@ Similarly, we have options for including some or all of our compiled JavaScript.
       </th>
       <td class="text-success">Included</td>
       <td class="bg-light text-muted">Not included</td>
+      <td class="text-success">Included</td>
+      <td class="text-success">Included</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">boosted.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.min.js</code></div>
       </th>
+      <td class="bg-light text-muted">Not included</td>
       <td class="bg-light text-muted">Not included</td>
       <td class="bg-light text-muted">Not included</td>
       <td class="bg-light text-muted">Not included</td>

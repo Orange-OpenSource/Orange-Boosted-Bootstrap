@@ -49,7 +49,7 @@ alert-icon svg-warning
 
 ```
 {% capture example %}
-<h3>Orange Alerts</h3>
+<h3>Outline Alerts</h3>
     <!-- Outline Alerts
     ======================================= -->
     <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
