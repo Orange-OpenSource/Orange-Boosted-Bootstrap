@@ -295,9 +295,9 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("dark") !default;
 
-$caret-width:                 .4375em !default;
-$caret-vertical-align:        $caret-width * .85 !default;
-$caret-spacing:               $caret-width * .85 !default;
+$caret-width:                 .4375rem !default;
+$caret-vertical-align:        $caret-width * .5 !default;
+$caret-spacing:               $caret-width !default;
 
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
