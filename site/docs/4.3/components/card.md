@@ -302,7 +302,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
 
 {% capture example %}
 <div class="card text-center">
-  <div class="card-header">
+  <div class="card-header bg-white">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -326,7 +326,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
 
 {% capture example %}
 <div class="card text-center">
-  <div class="card-header">
+  <div class="card-header bg-white">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -431,7 +431,11 @@ Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version
 {% for color in site.data.theme-colors %}
 <div class="card{% unless color.name == "light" %} text-white{% endunless %} bg-{{ color.name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
+  {% if color.name == "secondary" or color.name == "dark" or color.name == "danger" %}
+  <div class="card-body text-white">
+  {% else %}
   <div class="card-body">
+  {% endif %}
     <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
@@ -463,7 +467,7 @@ You can also change the borders on the card header and footer as needed, and eve
 
 {% capture example %}
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-header bg-transparent border-success text-dark">Header</div>
   <div class="card-body text-success">
     <h5 class="card-title">Success card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
