@@ -189,13 +189,13 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 Responsive tabs allow tab layouts to be displayed as accordions on a mobile browser if the number of tabs exceeds 2. No configuration or javascript method call needed. Here is the markup:
 
 {% capture example %}
-<div class="o-tab-container ">
-  <a class="o-tab-heading" href="#" id="tab1">Tab 1</a>
-  <div class="o-tab-content show" id="tab-1-content">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
-  <a class="o-tab-heading" href="#" id="tab2">Tab 2</a>
-  <div class="o-tab-content" id="tab-2-content">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
-  <a class="o-tab-heading" href="#" id="tab3">Tab 3</a>
-  <div class="o-tab-content" id="tab-3-content">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+<div class="o-tab-container" role="tablist">
+  <a class="o-tab-heading" href="#" id="tab1" role="tab">Tab 1</a>
+  <div class="o-tab-content show" id="tab-1-content" role="tabpanel">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
+  <a class="o-tab-heading" href="#" id="tab2" role="tab">Tab 2</a>
+  <div class="o-tab-content" id="tab-2-content" role="tabpanel">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
+  <a class="o-tab-heading" href="#" id="tab3" role="tab">Tab 3</a>
+  <div class="o-tab-content" id="tab-3-content" role="tabpanel">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
 </div>
 {% endcapture %} {% include example.html content=example %}
 [comment]: # End mod
