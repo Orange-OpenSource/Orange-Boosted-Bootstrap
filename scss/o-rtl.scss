@@ -23,7 +23,9 @@
 .page-item:last-child .page-link::before,
 .page-item:first-child .page-link::before,
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next,
+.doc-link::after,
+.breadcrumb-item + .breadcrumb-item::before,
+.o-link-arrow::after {
   transform: rotate(180deg);
 }
-
