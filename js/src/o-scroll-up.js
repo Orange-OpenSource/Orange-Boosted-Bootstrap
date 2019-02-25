@@ -57,7 +57,7 @@ class ScrollUp {
 
     $(window).on(Event.SCROLL, $.proxy(this._process, this))
     $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this))
-
+    $(this._element).addClass('is-fixed')
     this._process()
   }
 
