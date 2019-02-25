@@ -57,7 +57,7 @@ $(function () {
     $el.boostedNavbar({
       sticky: true
     })
-    assert.ok($el.hasClass('fixed-header'))
+    assert.ok($el.hasClass('fixed-top'))
     // assert.strictEqual($el.css('position'), 'fixed')
   })
 

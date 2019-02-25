@@ -7,13 +7,6 @@
 // stylelint-disable selector-max-combinators
 // stylelint-disable property-blacklist
 
-.navbar.fixed-header {
-  position: fixed;
-  top: 0;
-  z-index: $zindex-fixed;
-  width: 100%;
-}
-
 .navbar {
   .nav-link.icon {
     margin-top: 0;

@@ -53,7 +53,7 @@ class Navbar {
     this._addAria()
 
     if (this._config.sticky) {
-      $(this._element).addClass('fixed-header')
+      $(this._element).addClass('fixed-top')
       $(Selector.MEGAMENU_PANEL).addClass('sticky')
       $(document.body).css('padding-top', this._initialHeight)
 
