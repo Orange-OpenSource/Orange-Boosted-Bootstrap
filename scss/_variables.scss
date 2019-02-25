@@ -748,11 +748,11 @@ $form-validation-states: map-merge(
 $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
+$zindex-o-scroll-up:                1035 !default; // Boosted mod
 $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
-$zindex-o-scroll-up:                1080 !default; // Boosted mod
 
 // Navs
 
