@@ -131,10 +131,10 @@ class Modal {
     this._checkScrollbar()
     this._setScrollbar()
 
-    this._adjustDialog()
+    // this._adjustDialog() useless? see https://github.com/twbs/bootstrap/issues/28101
 
     this._setEscapeEvent()
-    this._setResizeEvent()
+    // this._setResizeEvent()
 
     $(this._element).on(
       Event.CLICK_DISMISS,
@@ -178,7 +178,7 @@ class Modal {
     }
 
     this._setEscapeEvent()
-    this._setResizeEvent()
+    // this._setResizeEvent()
 
     $(document).off(Event.FOCUSIN)
 
@@ -223,9 +223,10 @@ class Modal {
     this._scrollbarWidth      = null
   }
 
-  handleUpdate() {
-    this._adjustDialog()
-  }
+  // useless? see https://github.com/twbs/bootstrap/issues/28101
+  // handleUpdate() {
+  //  this._adjustDialog()
+  // }
 
   // Private
 
@@ -315,13 +316,14 @@ class Modal {
     }
   }
 
-  _setResizeEvent() {
-    if (this._isShown) {
-      $(window).on(Event.RESIZE, (event) => this.handleUpdate(event))
-    } else {
-      $(window).off(Event.RESIZE)
-    }
-  }
+  // useless? see https://github.com/twbs/bootstrap/issues/28101
+  // _setResizeEvent() {
+  //  if (this._isShown) {
+  //    $(window).on(Event.RESIZE, (event) => this.handleUpdate(event))
+  //  } else {
+  //    $(window).off(Event.RESIZE)
+  //  }
+  // }
 
   _hideModal() {
     this._element.style.display = 'none'
@@ -330,7 +332,7 @@ class Modal {
     this._isTransitioning = false
     this._showBackdrop(() => {
       $(document.body).removeClass(ClassName.OPEN)
-      this._resetAdjustments()
+      // this._resetAdjustments()
       this._resetScrollbar()
       $(this._element).trigger(Event.HIDDEN)
     })
@@ -420,24 +422,26 @@ class Modal {
   // the following methods are used to handle overflowing modals
   // todo (fat): these should probably be refactored out of modal.js
   // ----------------------------------------------------------------------
+  // useless? see https://github.com/twbs/bootstrap/issues/28101
+  // _adjustDialog() {
+  //   const isModalOverflowing =
+  //    this._element.scrollHeight > document.documentElement.clientHeight
+  //  if (!this._isBodyOverflowing && isModalOverflowing) {
+  // we never pass here even if modal is higher than body, and for sure it's useless
+  // this._element.style.paddingLeft = `${this._scrollbarWidth}px`
+  //  }
 
-  _adjustDialog() {
-    const isModalOverflowing =
-      this._element.scrollHeight > document.documentElement.clientHeight
+  //  if (this._isBodyOverflowing && !isModalOverflowing) {
+  // in case where it's the body that make an overflow there's no need to put a padding-right on the modal itself
+  // this._element.style.paddingRight = `${this._scrollbarWidth}px`
+  //  }
+  // }
 
-    if (!this._isBodyOverflowing && isModalOverflowing) {
-      this._element.style.paddingLeft = `${this._scrollbarWidth}px`
-    }
-
-    if (this._isBodyOverflowing && !isModalOverflowing) {
-      this._element.style.paddingRight = `${this._scrollbarWidth}px`
-    }
-  }
-
-  _resetAdjustments() {
-    this._element.style.paddingLeft = ''
-    this._element.style.paddingRight = ''
-  }
+  // useless? see https://github.com/twbs/bootstrap/issues/28101
+  // _resetAdjustments() {
+  //  this._element.style.paddingLeft = ''
+  //  this._element.style.paddingRight = ''
+  // }
 
   _checkScrollbar() {
     const rect = document.body.getBoundingClientRect()

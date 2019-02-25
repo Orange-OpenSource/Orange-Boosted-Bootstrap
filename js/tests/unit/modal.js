@@ -370,13 +370,13 @@ $(function () {
     $toggleBtn.trigger('click')
   })
 
-  QUnit.test('should adjust the inline padding of the modal when opening', function (assert) {
+  QUnit.test('should not adjust the inline padding of the modal when opening', function (assert) {
     assert.expect(1)
     var done = assert.async()
 
     $('<div id="modal-test"/>')
       .on('shown.bs.modal', function () {
-        var expectedPadding = $(this).getScrollbarWidth() + 'px'
+        var expectedPadding = '0px'
         var currentPadding = $(this).css('padding-right')
         assert.strictEqual(currentPadding, expectedPadding, 'modal padding should be adjusted while opening')
         done()
