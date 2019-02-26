@@ -64,8 +64,7 @@ const Selector = {
   MODAL_BODY     : '.modal-body',
   DATA_TOGGLE    : '[data-toggle="modal"]',
   DATA_DISMISS   : '[data-dismiss="modal"]',
-  FIXED_CONTENT  : '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-  STICKY_CONTENT : '.sticky-top'
+  FIXED_CONTENT  : '.fixed-top, .fixed-bottom, .is-fixed, .position-fixed'
 }
 
 /**
@@ -131,10 +130,7 @@ class Modal {
     this._checkScrollbar()
     this._setScrollbar()
 
-    // this._adjustDialog() useless? see https://github.com/twbs/bootstrap/issues/28101
-
     this._setEscapeEvent()
-    // this._setResizeEvent()
 
     $(this._element).on(
       Event.CLICK_DISMISS,
@@ -178,7 +174,6 @@ class Modal {
     }
 
     this._setEscapeEvent()
-    // this._setResizeEvent()
 
     $(document).off(Event.FOCUSIN)
 
@@ -222,11 +217,6 @@ class Modal {
     this._isTransitioning     = null
     this._scrollbarWidth      = null
   }
-
-  // useless? see https://github.com/twbs/bootstrap/issues/28101
-  // handleUpdate() {
-  //  this._adjustDialog()
-  // }
 
   // Private
 
@@ -316,15 +306,6 @@ class Modal {
     }
   }
 
-  // useless? see https://github.com/twbs/bootstrap/issues/28101
-  // _setResizeEvent() {
-  //  if (this._isShown) {
-  //    $(window).on(Event.RESIZE, (event) => this.handleUpdate(event))
-  //  } else {
-  //    $(window).off(Event.RESIZE)
-  //  }
-  // }
-
   _hideModal() {
     this._element.style.display = 'none'
     this._element.setAttribute('aria-hidden', true)
@@ -332,7 +313,6 @@ class Modal {
     this._isTransitioning = false
     this._showBackdrop(() => {
       $(document.body).removeClass(ClassName.OPEN)
-      // this._resetAdjustments()
       this._resetScrollbar()
       $(this._element).trigger(Event.HIDDEN)
     })
@@ -422,26 +402,6 @@ class Modal {
   // the following methods are used to handle overflowing modals
   // todo (fat): these should probably be refactored out of modal.js
   // ----------------------------------------------------------------------
-  // useless? see https://github.com/twbs/bootstrap/issues/28101
-  // _adjustDialog() {
-  //   const isModalOverflowing =
-  //    this._element.scrollHeight > document.documentElement.clientHeight
-  //  if (!this._isBodyOverflowing && isModalOverflowing) {
-  // we never pass here even if modal is higher than body, and for sure it's useless
-  // this._element.style.paddingLeft = `${this._scrollbarWidth}px`
-  //  }
-
-  //  if (this._isBodyOverflowing && !isModalOverflowing) {
-  // in case where it's the body that make an overflow there's no need to put a padding-right on the modal itself
-  // this._element.style.paddingRight = `${this._scrollbarWidth}px`
-  //  }
-  // }
-
-  // useless? see https://github.com/twbs/bootstrap/issues/28101
-  // _resetAdjustments() {
-  //  this._element.style.paddingLeft = ''
-  //  this._element.style.paddingRight = ''
-  // }
 
   _checkScrollbar() {
     const rect = document.body.getBoundingClientRect()
@@ -454,24 +414,14 @@ class Modal {
       // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
       //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
       const fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT))
-      const stickyContent = [].slice.call(document.querySelectorAll(Selector.STICKY_CONTENT))
 
       // Adjust fixed content padding
       $(fixedContent).each((index, element) => {
-        const actualPadding = element.style.paddingRight
-        const calculatedPadding = $(element).css('padding-right')
+        const actualRight = element.style.right
+        const calculatedRight = $(element).css('right')
         $(element)
-          .data('padding-right', actualPadding)
-          .css('padding-right', `${parseFloat(calculatedPadding) + this._scrollbarWidth}px`)
-      })
-
-      // Adjust sticky content margin
-      $(stickyContent).each((index, element) => {
-        const actualMargin = element.style.marginRight
-        const calculatedMargin = $(element).css('margin-right')
-        $(element)
-          .data('margin-right', actualMargin)
-          .css('margin-right', `${parseFloat(calculatedMargin) - this._scrollbarWidth}px`)
+          .data('right', actualRight)
+          .css('right', `${parseFloat(calculatedRight) + this._scrollbarWidth}px`)
       })
 
       // Adjust body padding
@@ -489,18 +439,9 @@ class Modal {
     // Restore fixed content padding
     const fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT))
     $(fixedContent).each((index, element) => {
-      const padding = $(element).data('padding-right')
-      $(element).removeData('padding-right')
-      element.style.paddingRight = padding ? padding : ''
-    })
-
-    // Restore sticky content
-    const elements = [].slice.call(document.querySelectorAll(`${Selector.STICKY_CONTENT}`))
-    $(elements).each((index, element) => {
-      const margin = $(element).data('margin-right')
-      if (typeof margin !== 'undefined') {
-        $(element).css('margin-right', margin).removeData('margin-right')
-      }
+      const right = $(element).data('right')
+      $(element).removeData('right')
+      element.style.right = right ? right : ''
     })
 
     // Restore body padding
