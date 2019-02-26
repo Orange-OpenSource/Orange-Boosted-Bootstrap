@@ -133,6 +133,7 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
 - For v3.4.0: <https://boosted.orange.com/docs/3.4/>
 - For v4.0.x: <https://boosted.orange.com/docs/4.0/>
 - For v4.1.x: <https://boosted.orange.com/docs/4.1/>
+- For v4.2.x: <https://boosted.orange.com/docs/4.2/>
 
 [Previous releases](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases) and their documentation are also available for download.
 
