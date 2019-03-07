@@ -124,7 +124,7 @@
 // 3 way toggles
 
 .o-switch.btn-group-toggle {
-  border: 2px solid #000;
+  border: 2px solid #ccc;
 
   .btn {
     width: 2.5rem;
@@ -138,19 +138,19 @@
 
     &:first-child {
       margin-left: -2px;
-      border-left-color: #000;
+      border-left-color: #ccc;
     }
 
     &:last-child {
       margin-right: -2px;
-      border-right-color: #000;
+      border-right-color: #ccc;
     }
 
     &.active {
       color: #fff;
-      background-color: #000;
-      border-right-color: #000;
-      border-left-color: #000;
+      background-color: $orange;
+      border-right-color: $orange;
+      border-left-color: $orange;
     }
 
     &.focus {
@@ -164,9 +164,9 @@
 
       &.active {
         color: #fff;
-        background-color: #000;
-        border-right-color: #000;
-        border-left-color: #000;
+        background-color: $orange;
+        border-right-color: $orange;
+        border-left-color: $orange;
       }
     }
   }
