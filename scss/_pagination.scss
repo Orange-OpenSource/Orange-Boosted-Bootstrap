@@ -93,8 +93,8 @@
     .page-link {
       @include hover-focus {
         color: $pagination-active-color;
-        background-color: $pagination-active-bg;
-        border-color: $pagination-active-border-color;
+        background-color: $pagination-active-item-bg;
+        border-color: $pagination-active-item-border-color;
       }
       &:active {
         z-index: 1;
