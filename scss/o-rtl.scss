@@ -58,8 +58,8 @@
 }
 
 .custom-switch.right .custom-control-label::before {
-  right: unset;
-  left: unset;
+  right: auto;
+  left: 0;
 }
 
 .custom-switch .custom-control-label::before {
