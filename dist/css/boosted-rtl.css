@@ -3611,13 +3611,13 @@ input[type="button"].btn-block {
 
 .dropdown-toggle::after {
   display: inline-block;
-  margin-right: 0.371875em;
-  vertical-align: 0.371875em;
+  margin-right: 0.4375rem;
+  vertical-align: 0.21875rem;
   content: "";
-  border-top: 0.4375em solid;
-  border-left: 0.4375em solid transparent;
+  border-top: 0.4375rem solid;
+  border-left: 0.4375rem solid transparent;
   border-bottom: 0;
-  border-right: 0.4375em solid transparent;
+  border-right: 0.4375rem solid transparent;
 }
 
 .dropdown-toggle:empty::after {
@@ -3717,13 +3717,13 @@ input[type="button"].btn-block {
 
 .dropup .dropdown-toggle::after {
   display: inline-block;
-  margin-right: 0.371875em;
-  vertical-align: 0.371875em;
+  margin-right: 0.4375rem;
+  vertical-align: 0.21875rem;
   content: "";
   border-top: 0;
-  border-left: 0.4375em solid transparent;
-  border-bottom: 0.4375em solid;
-  border-right: 0.4375em solid transparent;
+  border-left: 0.4375rem solid transparent;
+  border-bottom: 0.4375rem solid;
+  border-right: 0.4375rem solid transparent;
 }
 
 .dropup .dropdown-toggle:empty::after {
@@ -3740,13 +3740,13 @@ input[type="button"].btn-block {
 
 .dropright .dropdown-toggle::after {
   display: inline-block;
-  margin-right: 0.371875em;
-  vertical-align: 0.371875em;
+  margin-right: 0.4375rem;
+  vertical-align: 0.21875rem;
   content: "";
-  border-top: 0.4375em solid transparent;
+  border-top: 0.4375rem solid transparent;
   border-left: 0;
-  border-bottom: 0.4375em solid transparent;
-  border-right: 0.4375em solid;
+  border-bottom: 0.4375rem solid transparent;
+  border-right: 0.4375rem solid;
 }
 
 .dropright .dropdown-toggle:empty::after {
@@ -3767,8 +3767,8 @@ input[type="button"].btn-block {
 
 .dropleft .dropdown-toggle::after {
   display: inline-block;
-  margin-right: 0.371875em;
-  vertical-align: 0.371875em;
+  margin-right: 0.4375rem;
+  vertical-align: 0.21875rem;
   content: "";
 }
 
@@ -3778,12 +3778,12 @@ input[type="button"].btn-block {
 
 .dropleft .dropdown-toggle::before {
   display: inline-block;
-  margin-left: 0.371875em;
-  vertical-align: 0.371875em;
+  margin-left: 0.4375rem;
+  vertical-align: 0.21875rem;
   content: "";
-  border-top: 0.4375em solid transparent;
-  border-left: 0.4375em solid;
-  border-bottom: 0.4375em solid transparent;
+  border-top: 0.4375rem solid transparent;
+  border-left: 0.4375rem solid;
+  border-bottom: 0.4375rem solid transparent;
 }
 
 .dropleft .dropdown-toggle:empty::after {
@@ -5725,13 +5725,10 @@ input[type="button"].btn-block {
   background-color: #fff;
 }
 
-.breadcrumb-item + .breadcrumb-item {
-  padding-right: 0.625rem;
-}
-
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-left: 0.625rem;
+  padding-right: 0.625rem;
   font-family: icon-orange;
   font-size: 0.625rem;
   line-height: 1;
@@ -5830,8 +5827,8 @@ input[type="button"].btn-block {
 
 .page-item.presentation + .page-item .page-link:hover, .page-item.presentation + .page-item .page-link:focus, .page-item:first-child .page-link:hover, .page-item:first-child .page-link:focus, .page-item:last-child .page-link:hover, .page-item:last-child .page-link:focus {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #f16e00;
+  border-color: #f16e00;
 }
 
 .page-item.presentation + .page-item .page-link:active, .page-item:first-child .page-link:active, .page-item:last-child .page-link:active {
@@ -5868,8 +5865,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #f16e00;
+  border-color: #f16e00;
 }
 
 .page-item .page-link:active {
@@ -6089,8 +6086,8 @@ a.badge-dark:hover, a.badge-dark:focus {
 }
 
 .alert .alert-icon::after {
-  width: 1.625rem;
-  height: 1.625rem;
+  width: 1.76rem;
+  height: 1.76rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11769,7 +11766,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .o-switch.btn-group-toggle {
-  border: 2px solid #000;
+  border: 2px solid #ccc;
 }
 
 .o-switch.btn-group-toggle .btn {
@@ -11778,26 +11775,26 @@ a.text-dark:hover, a.text-dark:focus {
   padding-right: 0;
   margin: 0;
   border-top: 0;
-  border-left: 2px solid #fff;
+  border-left: 2px solid #ccc;
   border-bottom: 0;
-  border-right: 2px solid #fff;
+  border-right: 2px solid #ccc;
 }
 
 .o-switch.btn-group-toggle .btn:first-child {
   margin-right: -2px;
-  border-right-color: #000;
+  border-right-color: #ccc;
 }
 
 .o-switch.btn-group-toggle .btn:last-child {
   margin-left: -2px;
-  border-left-color: #000;
+  border-left-color: #ccc;
 }
 
 .o-switch.btn-group-toggle .btn.active {
   color: #fff;
-  background-color: #000;
-  border-left-color: #000;
-  border-right-color: #000;
+  background-color: #f16e00;
+  border-left-color: #f16e00;
+  border-right-color: #f16e00;
 }
 
 .o-switch.btn-group-toggle .btn.focus {
@@ -11812,9 +11809,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .o-switch.btn-group-toggle .btn:hover.active {
   color: #fff;
-  background-color: #000;
-  border-left-color: #000;
-  border-right-color: #000;
+  background-color: #f16e00;
+  border-left-color: #f16e00;
+  border-right-color: #f16e00;
 }
 
 .o-switch.btn-group-toggle.no-outline {
@@ -11822,6 +11819,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .o-switch.btn-group-toggle.no-outline .btn {
+  border: 2px solid transparent;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
 }
@@ -12053,6 +12051,7 @@ select.form-control:not([size]):not([multiple]).form-control-sm {
   font-weight: 700;
   line-height: 1.25;
   color: #000;
+  text-align: center;
   white-space: nowrap;
   list-style: none;
   background-color: #ddd;
@@ -12178,7 +12177,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm {
     width: 20%;
     padding-left: 0;
     padding-right: 0.75rem;
-    text-align: center;
   }
   .o-stepbar.xs-numbers .stepbar-item:first-child {
     padding-right: 0;
@@ -12258,13 +12256,6 @@ select.form-control:not([size]):not([multiple]).form-control-sm {
   top: 0;
   right: 100%;
   display: none;
-  width: 100%;
-}
-
-.navbar.fixed-header {
-  position: fixed;
-  top: 0;
-  z-index: 1030;
   width: 100%;
 }
 
@@ -14090,7 +14081,7 @@ caption {
   position: fixed;
   left: 0;
   bottom: 2.5rem;
-  z-index: 1080;
+  z-index: 1035;
   display: none;
   left: 1.25%;
   bottom: .25rem;
@@ -14483,8 +14474,50 @@ a:focus {
 .page-item:last-child .page-link::before,
 .page-item:first-child .page-link::before,
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next,
+.doc-link::after,
+.breadcrumb-item + .breadcrumb-item::before,
+.o-link-arrow::after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.accordion .card-header button::after,
+.accordion .card-header a::after {
+  right: 96%;
+}
+
+.alert .alert-icon::after,
+.alert-sm .alert-icon::after {
+  right: 2%;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  right: .2385rem;
+}
+
+.o-scroll-up .o-scroll-up-icon,
+.o-scroll-up {
+  right: 87%;
+}
+
+.o-stepbar .stepbar-item::after,
+.page-item:last-child .page-link::before,
+.o-stepbar .stepbar-item.current::after,
+.o-stepbar .stepbar-item.done::after {
+  right: unset;
+}
+
+.custom-switch.right .custom-control-label::before {
+  right: auto;
+  left: 0;
+}
+
+.custom-switch .custom-control-label::before {
+  background-position: .2rem;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-position: 2rem;
 }
 /*# sourceMappingURL=boosted-rtl.css.map */
