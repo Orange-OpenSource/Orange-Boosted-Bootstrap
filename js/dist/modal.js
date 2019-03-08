@@ -119,8 +119,7 @@
     MODAL_BODY: '.modal-body',
     DATA_TOGGLE: '[data-toggle="modal"]',
     DATA_DISMISS: '[data-dismiss="modal"]',
-    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-    STICKY_CONTENT: '.sticky-top'
+    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .position-fixed'
     /**
      * ------------------------------------------------------------------------
      * Class Definition
@@ -181,11 +180,7 @@
 
       this._setScrollbar();
 
-      this._adjustDialog();
-
       this._setEscapeEvent();
-
-      this._setResizeEvent();
 
       $(this._element).on(Event.CLICK_DISMISS, Selector.DATA_DISMISS, function (event) {
         return _this.hide(event);
@@ -230,8 +225,6 @@
 
       this._setEscapeEvent();
 
-      this._setResizeEvent();
-
       $(document).off(Event.FOCUSIN);
       $(this._element).removeClass(ClassName.SHOW);
       $(this._element).off(Event.CLICK_DISMISS);
@@ -268,10 +261,6 @@
       this._ignoreBackdropClick = null;
       this._isTransitioning = null;
       this._scrollbarWidth = null;
-    };
-
-    _proto.handleUpdate = function handleUpdate() {
-      this._adjustDialog();
     } // Private
     ;
 
@@ -361,20 +350,8 @@
       }
     };
 
-    _proto._setResizeEvent = function _setResizeEvent() {
-      var _this6 = this;
-
-      if (this._isShown) {
-        $(window).on(Event.RESIZE, function (event) {
-          return _this6.handleUpdate(event);
-        });
-      } else {
-        $(window).off(Event.RESIZE);
-      }
-    };
-
     _proto._hideModal = function _hideModal() {
-      var _this7 = this;
+      var _this6 = this;
 
       this._element.style.display = 'none';
 
@@ -387,11 +364,9 @@
       this._showBackdrop(function () {
         $(document.body).removeClass(ClassName.OPEN);
 
-        _this7._resetAdjustments();
+        _this6._resetScrollbar();
 
-        _this7._resetScrollbar();
-
-        $(_this7._element).trigger(Event.HIDDEN);
+        $(_this6._element).trigger(Event.HIDDEN);
       });
     };
 
@@ -403,7 +378,7 @@
     };
 
     _proto._showBackdrop = function _showBackdrop(callback) {
-      var _this8 = this;
+      var _this7 = this;
 
       var animate = $(this._element).hasClass(ClassName.FADE) ? ClassName.FADE : '';
 
@@ -417,8 +392,8 @@
 
         $(this._backdrop).appendTo(document.body);
         $(this._element).on(Event.CLICK_DISMISS, function (event) {
-          if (_this8._ignoreBackdropClick) {
-            _this8._ignoreBackdropClick = false;
+          if (_this7._ignoreBackdropClick) {
+            _this7._ignoreBackdropClick = false;
             return;
           }
 
@@ -426,10 +401,10 @@
             return;
           }
 
-          if (_this8._config.backdrop === 'static') {
-            _this8._element.focus();
+          if (_this7._config.backdrop === 'static') {
+            _this7._element.focus();
           } else {
-            _this8.hide();
+            _this7.hide();
           }
         });
 
@@ -454,7 +429,7 @@
         $(this._backdrop).removeClass(ClassName.SHOW);
 
         var callbackRemove = function callbackRemove() {
-          _this8._removeBackdrop();
+          _this7._removeBackdrop();
 
           if (callback) {
             callback();
@@ -477,23 +452,6 @@
     // ----------------------------------------------------------------------
     ;
 
-    _proto._adjustDialog = function _adjustDialog() {
-      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
-
-      if (!this._isBodyOverflowing && isModalOverflowing) {
-        this._element.style.paddingLeft = this._scrollbarWidth + "px";
-      }
-
-      if (this._isBodyOverflowing && !isModalOverflowing) {
-        this._element.style.paddingRight = this._scrollbarWidth + "px";
-      }
-    };
-
-    _proto._resetAdjustments = function _resetAdjustments() {
-      this._element.style.paddingLeft = '';
-      this._element.style.paddingRight = '';
-    };
-
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
       this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
@@ -501,24 +459,17 @@
     };
 
     _proto._setScrollbar = function _setScrollbar() {
-      var _this9 = this;
+      var _this8 = this;
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT));
-        var stickyContent = [].slice.call(document.querySelectorAll(Selector.STICKY_CONTENT)); // Adjust fixed content padding
+        var fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT)); // Adjust fixed content padding
 
         $(fixedContent).each(function (index, element) {
-          var actualPadding = element.style.paddingRight;
-          var calculatedPadding = $(element).css('padding-right');
-          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
-        }); // Adjust sticky content margin
-
-        $(stickyContent).each(function (index, element) {
-          var actualMargin = element.style.marginRight;
-          var calculatedMargin = $(element).css('margin-right');
-          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
+          var actualRight = element.style.right;
+          var calculatedRight = $(element).css('right');
+          $(element).data('right', actualRight).css('right', parseFloat(calculatedRight) + _this8._scrollbarWidth + "px");
         }); // Adjust body padding
 
         var actualPadding = document.body.style.paddingRight;
@@ -533,18 +484,9 @@
       // Restore fixed content padding
       var fixedContent = [].slice.call(document.querySelectorAll(Selector.FIXED_CONTENT));
       $(fixedContent).each(function (index, element) {
-        var padding = $(element).data('padding-right');
-        $(element).removeData('padding-right');
-        element.style.paddingRight = padding ? padding : '';
-      }); // Restore sticky content
-
-      var elements = [].slice.call(document.querySelectorAll("" + Selector.STICKY_CONTENT));
-      $(elements).each(function (index, element) {
-        var margin = $(element).data('margin-right');
-
-        if (typeof margin !== 'undefined') {
-          $(element).css('margin-right', margin).removeData('margin-right');
-        }
+        var right = $(element).data('right');
+        $(element).removeData('right');
+        element.style.right = right ? right : '';
       }); // Restore body padding
 
       var padding = $(document.body).data('padding-right');
@@ -634,7 +576,7 @@
 
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    var _this10 = this;
+    var _this9 = this;
 
     var target;
     var selector = Util.getSelectorFromElement(this);
@@ -656,8 +598,8 @@
       }
 
       $target.one(Event.HIDDEN, function () {
-        if ($(_this10).is(':visible')) {
-          _this10.focus();
+        if ($(_this9).is(':visible')) {
+          _this9.focus();
         }
       });
     });
