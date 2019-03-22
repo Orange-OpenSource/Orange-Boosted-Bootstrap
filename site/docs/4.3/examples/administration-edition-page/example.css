@@ -81,7 +81,7 @@ footer a {
 }
 
 .navbar .nav-link.sample-svg-settings::after {
-  right: -1.25rem;
+  right: -1.25rem !important;
 }
 
 @media (max-width: 767px) {
