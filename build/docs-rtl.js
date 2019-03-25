@@ -4,8 +4,8 @@
 
 /*!
  * Script to convert sample to rtl.
- * Copyright 2017-2018 The Boosted Authors
- * Copyright 2017-2018 Orange
+ * Copyright 2017-2019 The Boosted Authors
+ * Copyright 2017-2019 Orange
  * Licensed under MIT
  */
 
@@ -89,3 +89,20 @@ if (os.platform === 'linux') {
     })
   })
 }
+
+
+sh.exec('cp -av _gh_pages/docs/4.3/boostwatch/index.html _gh_pages/docs/4.3/boostwatch/rtl-index.html', (code, stdout, stderr) => {
+  console.log('Exit code:', code)
+  console.log('Program output:', stdout)
+  console.log('Program stderr:', stderr)
+  sh.exec('sed -i \'s/\\/boosted\\.css/\\/boosted-rtl\\.css/gi\' _gh_pages/docs/4.3/boostwatch/rtl-index.html', (code, stdout, stderr) => {
+    console.log('Exit code:', code)
+    console.log('Program output:', stdout)
+    console.log('Program stderr:', stderr)
+    sh.exec('sed -i \'s/html lang="en"/html lang="en" dir="rtl"/gi\' _gh_pages/docs/4.3/boostwatch/rtl-index.html', (code, stdout, stderr) => {
+      console.log('Exit code:', code)
+      console.log('Program output:', stdout)
+      console.log('Program stderr:', stderr)
+    })
+  })
+})
