@@ -54,8 +54,10 @@ While Boosted uses `em`s or `rem`s for defining most sizes, `px`s are used for g
 
 See how aspects of the Boosted grid system work across multiple devices with a handy table.
 
-We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution. 
+We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution.
+ 
 [comment]: # Boosted mod
+
 [comment]: # Orange grid custom BP values
 <table class="table table-bordered table-striped">
   <thead>

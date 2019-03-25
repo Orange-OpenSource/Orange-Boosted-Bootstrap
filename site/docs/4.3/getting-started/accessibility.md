@@ -55,6 +55,5 @@ Boosted includes support for the [`prefers-reduced-motion` media feature](https:
 - [Tenon.io Accessibility Checker](https://tenon.io/)
 - [Colour Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
-[comment]: # Boosted mod
 - ["aXe core" extension for identifying accessibility issues](https://github.com/dequelabs/axe-core/blob/master/doc/projects.md)
 - [Orange accessibility guidelines](http://a11y-guidelines.orange.com/home_EN/index.html)
