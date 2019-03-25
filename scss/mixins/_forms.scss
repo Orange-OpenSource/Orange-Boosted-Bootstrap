@@ -70,8 +70,7 @@
         // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
       }
       // Boosted Mod
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
+      ~ .#{$state}-feedback {
         @if $enable-validation-icons {
           @if $state == "valid" {
             @include svg-success();
@@ -102,6 +101,10 @@
         position: relative;
         display: block;
         padding-left: 1.625rem;
+      }
+
+      ~ .#{$state}-tooltip {
+        display: block;
       }
       // End Mod
     }

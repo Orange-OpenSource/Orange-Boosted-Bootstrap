@@ -7,6 +7,12 @@ label {
   &.disabled {
     color: $custom-control-label-disabled-color;
   }
+  &.is-required::after {
+    margin-left: 6px;
+    font-weight: $font-weight-bold;
+    color: theme-color("primary");
+    content: "*";
+  }
 }
 // end mod
 

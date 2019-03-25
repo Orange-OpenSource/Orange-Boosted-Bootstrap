@@ -373,7 +373,7 @@ $display-line-height:         $headings-line-height !default;
 $lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
 
-$small-font-size:             .875rem !default;
+$small-font-size:             .875rem !default; // 14px
 
 $text-muted:                  $gray-700 !default;
 
@@ -958,8 +958,8 @@ $tooltip-arrow-height:              .625rem !default;
 $tooltip-arrow-color:               $tooltip-bg !default;
 
 // Form tooltips must come after regular tooltips
-$form-feedback-tooltip-padding-y:     $tooltip-padding-y !default;
-$form-feedback-tooltip-padding-x:     $tooltip-padding-x !default;
+$form-feedback-tooltip-padding-y:     $tooltip-padding-y / 2 !default;
+$form-feedback-tooltip-padding-x:     $tooltip-padding-x / 2 !default;
 $form-feedback-tooltip-font-size:     $tooltip-font-size !default;
 $form-feedback-tooltip-line-height:   $line-height-base !default;
 $form-feedback-tooltip-opacity:       $tooltip-opacity !default;

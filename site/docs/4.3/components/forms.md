@@ -749,6 +749,8 @@ While Boosted will apply these styles in all browsers, Internet Explorer 11 and 
 
 Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
 
+Indicate that a field is required by adding the class `.is-required` on the associated label
+
 {% capture callout %}
 We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
 {% endcapture %}
@@ -779,21 +781,21 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationCustom01">First name</label>
+      <label for="validationCustom01" class="is-required">First name</label>
       <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustom02">Last name</label>
+      <label for="validationCustom02" class="is-required">Last name</label>
       <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername">Username</label>
+      <label for="validationCustomUsername" class="is-required">Username</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -807,21 +809,21 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustom03">City</label>
+      <label for="validationCustom03" class="is-required">City</label>
       <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom04">State</label>
+      <label for="validationCustom04" class="is-required">State</label>
       <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom05">Zip</label>
+      <label for="validationCustom05" class="is-required">Zip</label>
       <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
@@ -831,7 +833,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
+      <label class="form-check-label is-required" for="invalidCheck">
         Agree to terms and conditions
       </label>
       <div class="invalid-feedback">
@@ -875,15 +877,15 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationDefault01">First name</label>
+      <label for="validationDefault01" class="is-required">First name</label>
       <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationDefault02">Last name</label>
+      <label for="validationDefault02" class="is-required">Last name</label>
       <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationDefaultUsername">Username</label>
+      <label for="validationDefaultUsername" class="is-required">Username</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend2">@</span>
@@ -894,22 +896,22 @@ While these feedback styles cannot be styled with CSS, you can still customize t
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationDefault03">City</label>
+      <label for="validationDefault03" class="is-required">City</label>
       <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault04">State</label>
+      <label for="validationDefault04" class="is-required">State</label>
       <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault05">Zip</label>
+      <label for="validationDefault05" class="is-required">Zip</label>
       <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
     </div>
   </div>
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
+      <label class="form-check-label is-required" for="invalidCheck2">
         Agree to terms and conditions
       </label>
     </div>
@@ -927,21 +929,21 @@ We recommend using client-side validation, but in case you require server-side v
 <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationServer01">First name</label>
+      <label for="validationServer01" class="is-required">First name</label>
       <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationServer02">Last name</label>
+      <label for="validationServer02" class="is-required">Last name</label>
       <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationServerUsername">Username</label>
+      <label for="validationServerUsername" class="is-required">Username</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
@@ -955,21 +957,21 @@ We recommend using client-side validation, but in case you require server-side v
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer03">City</label>
+      <label for="validationServer03" class="is-required">City</label>
       <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer04">State</label>
+      <label for="validationServer04" class="is-required">State</label>
       <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer05">Zip</label>
+      <label for="validationServer05" class="is-required">Zip</label>
       <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
@@ -979,7 +981,7 @@ We recommend using client-side validation, but in case you require server-side v
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-      <label class="form-check-label" for="invalidCheck3">
+      <label class="form-check-label is-required" for="invalidCheck3">
         Agree to terms and conditions
       </label>
       <div class="invalid-feedback">
@@ -1005,7 +1007,7 @@ Validation styles are available for the following form controls and components:
 {% capture example %}
 <form class="was-validated">
   <div class="mb-3">
-    <label for="validationTextarea">Textarea</label>
+    <label for="validationTextarea" class="is-required">Textarea</label>
     <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
     <div class="invalid-feedback">
       Please enter a message in the textarea.
@@ -1055,21 +1057,21 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">First name</label>
+      <label for="validationTooltip01 is-required">First name</label>
       <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Last name</label>
+      <label for="validationTooltip02 is-required">Last name</label>
       <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">Username</label>
+      <label for="validationTooltipUsername is-required">Username</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
@@ -1083,21 +1085,21 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationTooltip03">City</label>
+      <label for="validationTooltip03 is-required">City</label>
       <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
       <div class="invalid-tooltip">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">State</label>
+      <label for="validationTooltip04 is-required">State</label>
       <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
       <div class="invalid-tooltip">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Zip</label>
+      <label for="validationTooltip05 is-required">Zip</label>
       <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
       <div class="invalid-tooltip">
         Please provide a valid zip.
