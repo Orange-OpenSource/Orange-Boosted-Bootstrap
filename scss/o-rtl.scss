@@ -30,23 +30,9 @@
   transform: rotate(180deg);
 }
 
-.accordion .card-header button::after,
-.accordion .card-header a::after {
-  right: 96%;
-}
-
 .alert .alert-icon::after,
 .alert-sm .alert-icon::after, {
   right: 2%;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  right: .2385rem;
-}
-
-.o-scroll-up .o-scroll-up-icon,
-.o-scroll-up {
-  right: 87%;
 }
 
 .o-stepbar .stepbar-item::after,
