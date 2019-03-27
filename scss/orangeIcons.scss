@@ -679,7 +679,7 @@
 .icon-popout-security,
 .icon-popout-teamwork {
   // use !important to prevent issues with browser extensions that change fonts //
-  font-family: icon-orange, sans-serif !important; // stylelint-disable-line declaration-no-important
+  font-family: icon-orange !important; // stylelint-disable-line declaration-no-important, font-family-no-missing-generic-family-keyword
   font-style: normal;
   font-variant: normal;
   line-height: 1;

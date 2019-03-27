@@ -1,3 +1,4 @@
+// stylelint-disable font-family-no-missing-generic-family-keyword
 // Contents
 //
 // Navbar
@@ -116,7 +117,7 @@
     &[role="menuitem"]::before {
       float: right;
       margin-right: 1rem;
-      font-family: icon-orange, sans-serif;
+      font-family: icon-orange;
       font-size: $font-size-base;
       font-weight: $font-weight-normal;
       color: #fff;

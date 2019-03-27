@@ -22,11 +22,13 @@
 
 .page-item:last-child .page-link::before,
 .page-item:first-child .page-link::before,
+.page-item.presentation + .page-item .page-link::before,
 .swiper-button-prev,
 .swiper-button-next,
 .doc-link::after,
 .breadcrumb-item + .breadcrumb-item::before,
-.o-link-arrow::after {
+.o-link-arrow::after,
+.o-link-arrow.back::before {
   transform: rotate(180deg);
 }
 
@@ -54,4 +56,8 @@
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   background-position: 2rem;
+}
+
+.o-link-arrow.back::before {
+  padding: 0 .625rem 0 0;
 }

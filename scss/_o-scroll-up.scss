@@ -1,3 +1,4 @@
+// stylelint-disable font-family-no-missing-generic-family-keyword
 // o-scroll-up
 //
 //
@@ -5,7 +6,7 @@
 .o-scroll-up {
   .o-scroll-up-icon {
     &::before {
-      font-family: icon-orange, sans-serif;
+      font-family: icon-orange;
       font-size: 1.25rem;
       line-height: 1.8;
       content: "\e93f";

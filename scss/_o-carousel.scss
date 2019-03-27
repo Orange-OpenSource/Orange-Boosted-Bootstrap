@@ -1,4 +1,4 @@
-// stylelint-disable property-blacklist
+// stylelint-disable property-blacklist, font-family-no-missing-generic-family-keyword
 //
 // Carousel
 // --------------------------------------------------
@@ -43,7 +43,7 @@
   background-repeat: no-repeat;
 
   &::before {
-    font-family: icon-orange, sans-serif;
+    font-family: icon-orange;
   }
 }
 
@@ -97,7 +97,7 @@
 
 .swiper-button-prev::before,
 .swiper-button-next::before {
-  font-family: icon-orange, sans-serif;
+  font-family: icon-orange;
   font-size: 1.875rem;
   content: "\e93f";
 }
