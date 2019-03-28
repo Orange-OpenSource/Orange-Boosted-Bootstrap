@@ -270,7 +270,7 @@ class Tooltip {
         ? this.config.placement.call(this, tip, this.element)
         : this.config.placement
 
-      const attachment = this._getAttachment(placement)
+      let attachment = this._getAttachment(placement)
       this.addAttachmentClass(attachment)
 
       const container = this._getContainer()
@@ -281,7 +281,14 @@ class Tooltip {
       }
 
       $(this.element).trigger(this.constructor.Event.INSERTED)
-
+      const dir = document.getElementsByTagName('html')[0].dir
+      if (dir === 'rtl') {
+        const hash = {
+          right: 'left',
+          left: 'right'
+        }
+        attachment = attachment.replace(/right|left/g, (matched) => hash[matched]);
+      }
       this._popper = new Popper(this.element, tip, {
         placement: attachment,
         modifiers: {
