@@ -64,7 +64,9 @@ To get a RTL version of a boosted webpage you need only one thing :
 </html>
 {% endhighlight %} 
 
+## Boostwatch rtl
 
+See Boostwatch page in rtl mode to see components in action. [Boostwatch rtl](../../boostwatch/rtl-index.html)
 
 ## Examples
 
