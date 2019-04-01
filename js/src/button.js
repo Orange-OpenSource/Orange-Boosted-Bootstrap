@@ -60,52 +60,30 @@ class Button {
   // Public
 
   toggle() {
-    let triggerChangeEvent = true
-    let addAriaPressed = true
     const rootElement = $(this._element).closest(
       Selector.DATA_TOGGLE
     )[0]
 
+    const input = this._element.querySelector(Selector.INPUT)
+
     if (rootElement) {
-      const input = this._element.querySelector(Selector.INPUT)
+      const activeElement = rootElement.querySelector(Selector.ACTIVE)
 
-      if (input) {
-        if (input.type === 'radio') {
-          if (input.checked &&
-            this._element.classList.contains(ClassName.ACTIVE)) {
-            triggerChangeEvent = false
-          } else {
-            const activeElement = rootElement.querySelector(Selector.ACTIVE)
-
-            if (activeElement) {
-              $(activeElement).removeClass(ClassName.ACTIVE)
-            }
-          }
-        }
-
-        if (triggerChangeEvent) {
-          if (input.hasAttribute('disabled') ||
-            rootElement.hasAttribute('disabled') ||
-            input.classList.contains('disabled') ||
-            rootElement.classList.contains('disabled')) {
-            return
-          }
-          input.checked = !this._element.classList.contains(ClassName.ACTIVE)
-          $(input).trigger('change')
-        }
-
-        input.focus()
-        addAriaPressed = false
+      if (activeElement) {
+        activeElement.classList.remove(ClassName.ACTIVE)
       }
     }
 
-    if (addAriaPressed) {
+    if (input) {
+      if (input.checked) {
+        this._element.classList.add(ClassName.ACTIVE)
+      } else {
+        this._element.classList.remove(ClassName.ACTIVE)
+      }
+    } else {
+      this._element.classList.toggle(ClassName.ACTIVE)
       this._element.setAttribute('aria-pressed',
-        !this._element.classList.contains(ClassName.ACTIVE))
-    }
-
-    if (triggerChangeEvent) {
-      $(this._element).toggleClass(ClassName.ACTIVE)
+        this._element.classList.contains(ClassName.ACTIVE))
     }
   }
 
@@ -140,8 +118,6 @@ class Button {
 
 $(document)
   .on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE_CARROT, (event) => {
-    event.preventDefault()
-
     let button = event.target
 
     if (!$(button).hasClass(ClassName.BUTTON)) {
@@ -152,7 +128,9 @@ $(document)
   })
   .on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, (event) => {
     const button = $(event.target).closest(Selector.BUTTON)[0]
-    $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
+    if (button) {
+      button.classList.add(ClassName.FOCUS)
+    }
   })
 
 /**
