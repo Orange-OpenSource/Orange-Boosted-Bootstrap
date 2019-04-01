@@ -146,7 +146,7 @@ $(function () {
   })
 
   QUnit.test('should only toggle selectable inputs', function (assert) {
-    assert.expect(6)
+    assert.expect(5)
     var groupHTML = '<div class="btn-group" data-toggle="buttons">' +
       '<label class="btn btn-primary active">' +
       '<input type="hidden" name="option1" id="option1-default" value="false">' +
