@@ -124,7 +124,7 @@
     }
   }
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     .o-tab-heading {
       flex-grow: 1;
       margin-left: 0;
