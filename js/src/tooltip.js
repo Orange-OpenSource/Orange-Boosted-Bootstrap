@@ -287,7 +287,7 @@ class Tooltip {
           right: 'left',
           left: 'right'
         }
-        attachment = attachment.replace(/right|left/g, (matched) => hash[matched]);
+        attachment = attachment.replace(/right|left/g, (matched) => hash[matched])
       }
       this._popper = new Popper(this.element, tip, {
         placement: attachment,
