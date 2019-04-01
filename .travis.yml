@@ -4,7 +4,6 @@ language: node_js
 git:
   depth: 3
 node_js:
-  - "6"
   - "8"
 before_install:
   - gem update --system
