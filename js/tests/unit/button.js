@@ -146,7 +146,7 @@ $(function () {
   })
 
   QUnit.test('should only toggle selectable inputs', function (assert) {
-    assert.expect(5)
+    assert.expect(6)
     var groupHTML = '<div class="btn-group" data-toggle="buttons">' +
       '<label class="btn btn-primary active">' +
       '<input type="hidden" name="option1" id="option1-default" value="false">' +
@@ -162,7 +162,7 @@ $(function () {
     assert.ok($btn.hasClass('active'), 'btn has active class')
     assert.ok($cb.prop('checked'), 'btn is checked')
     assert.ok(!$hidden.prop('checked'), 'hidden is not checked')
-    $btn.trigger('click')
+    $cb.trigger('click')
     assert.ok(!$hidden.prop('checked'), 'hidden is not checked') // should not be changed
     assert.ok(!$cb.prop('checked'), 'btn is not checked')
     // that assertion failed but works in real life don't know how to fix it at time
