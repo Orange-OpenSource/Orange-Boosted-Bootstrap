@@ -165,8 +165,7 @@ $(function () {
     $cb.trigger('click')
     assert.ok(!$hidden.prop('checked'), 'hidden is not checked') // should not be changed
     assert.ok(!$cb.prop('checked'), 'btn is not checked')
-    // that assertion failed but works in real life don't know how to fix it at time
-    // assert.ok(!$btn.hasClass('active'), 'btn does not have active class')
+    assert.ok(!$btn.hasClass('active'), 'btn does not have active class')
   })
 
   QUnit.test('should not add aria-pressed on labels for radio/checkbox inputs in a data-toggle="buttons" group', function (assert) {
