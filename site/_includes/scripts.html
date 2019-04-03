@@ -6,9 +6,9 @@
 
 <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/popper.min.js"{% if site.github %} integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"{% endif %}></script>
 {%- if jekyll.environment == "production" -%}
-  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/boosted.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/boosted.min.js" crossorigin="anonymous"></script>
 {%- else -%}
-  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/boosted.bundle.js"></script>
+  <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/boosted.js"></script>
 {%- endif -%}
 
 {%- if page.layout == "docs" -%}

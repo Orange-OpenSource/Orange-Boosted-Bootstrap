@@ -1,7 +1,7 @@
 {
   "name": "boosted",
-  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.3.0.",
-  "version": "4.3.0",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.3.1.",
+  "version": "4.3.1",
   "version_short": "4.3",
   "keywords": [
     "css",
@@ -117,7 +117,6 @@
     "autoprefixer": "^9.4.7",
     "babel-eslint": "^10.0.1",
     "babel-plugin-istanbul": "^5.1.1",
-    "broken-link-checker": "^0.7.8",
     "bundlesize": "0.15.3",
     "clean-css-cli": "^4.2.1",
     "coveralls": "^3.0.2",
@@ -129,13 +128,13 @@
     "http-server": "^0.11.1",
     "ip": "^1.1.5",
     "jquery": "^3.3.1",
-    "karma": "^3.1.4",
-    "karma-browserstack-launcher": "^1.4.0",
+    "karma": "^4.0.1",
+    "karma-browserstack-launcher": "^1.5.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.5",
     "karma-detect-browsers": "^2.3.3",
     "karma-firefox-launcher": "^1.1.0",
-    "karma-qunit": "^2.1.0",
+    "karma-qunit": "^3.0.0",
     "karma-sinon": "^1.0.5",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
@@ -158,7 +157,7 @@
     "vnu-jar": "18.11.5"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "files": [
     "dist/{css,js,img,fonts}/*",
@@ -194,19 +193,19 @@
     },
     {
       "path": "./dist/js/boosted.bundle.js",
-      "maxSize": "52 kB"
+      "maxSize": "53 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "25 kB"
+      "maxSize": "26 kB"
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "30 kB"
+      "maxSize": "31 kB"
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "18 kB"
+      "maxSize": "19 kB"
     }
   ],
   "jspm": {
