@@ -137,8 +137,8 @@
 }
 
 .swiper-pagination {
-  bottom: 50px !important;
-  position: absolute !important;
+  position: absolute !important; // stylelint-disable-line declaration-no-important
+  bottom: 50px !important; // stylelint-disable-line declaration-no-important
 }
 
 .swiper-slide {
