@@ -15,7 +15,7 @@
   }
 }
 
-.carousel-button,
+.carousel-buttton,
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
@@ -94,6 +94,10 @@
   cursor: pointer;
   background-image: none;
   background-size: 0;
+  &:focus {
+    outline: 2px dotted #000;
+    outline-offset: -1px;
+  }
 }
 
 .swiper-button-prev::before,
@@ -133,7 +137,8 @@
 }
 
 .swiper-pagination {
-  bottom: 6px;
+  bottom: 50px !important;
+  position: absolute !important;
 }
 
 .swiper-slide {
