@@ -97,7 +97,7 @@ fieldset:disabled a.btn {
     @include button-variant(theme-color("danger"), theme-color("danger"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black);
   }
 }
-
+// Boosted mod
 .btn-o-toggle {
   @include button-variant-custom($black, $gray-500);
   &.btn-inverse {
@@ -105,6 +105,7 @@ fieldset:disabled a.btn {
   }
 }
 
+//end mod
 // Boosted mod custom outline buttons values
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {

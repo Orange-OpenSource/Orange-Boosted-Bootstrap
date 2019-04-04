@@ -100,7 +100,7 @@
     }
   }
 }
-
+// Boosted mod
 @mixin button-variant-custom($color, $border-color) {
   color: $color;
   border-color: $border-color;
@@ -137,7 +137,7 @@
     }
   }
 }
-
+// end mod
 // Button sizes
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
