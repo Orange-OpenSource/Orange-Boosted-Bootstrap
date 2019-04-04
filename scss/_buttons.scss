@@ -101,7 +101,7 @@ fieldset:disabled a.btn {
 .btn-o-toggle {
   @include button-variant-custom($black, $gray-500);
   &.btn-inverse {
-    @include button-variant-custom($white, $gray-900)
+    @include button-variant-custom($white, $gray-900);
   }
 }
 
