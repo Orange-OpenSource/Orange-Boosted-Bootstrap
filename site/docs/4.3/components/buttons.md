@@ -207,7 +207,7 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 
 {% capture example %}
 <div class="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
+  <label class="btn btn-o-toggle active">
     <input type="checkbox" checked autocomplete="off"> Checked
   </label>
 </div>
@@ -216,13 +216,13 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 
 {% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
+  <label class="btn btn-o-toggle active">
     <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
   </label>
-  <label class="btn btn-secondary">
+  <label class="btn btn-o-toggle">
     <input type="radio" name="options" id="option2" autocomplete="off"> Radio
   </label>
-  <label class="btn btn-secondary">
+  <label class="btn btn-o-toggle">
     <input type="radio" name="options" id="option3" autocomplete="off"> Radio
   </label>
 </div>
