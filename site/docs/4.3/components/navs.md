@@ -61,28 +61,6 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 
 Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own.
 
-### Nav light
-
-A gray line is set under the items. An active item is underlining by an Orange line.
-
-{% capture example %}
-<ul class="nav o-nav-light">
-  <li class="nav-item">
-    <a class="nav-link o-active" href="#" aria-current="page">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
-{% endcapture %}
-{% include example.html content=example %}
-
 ### Horizontal alignment
 
 Change the horizontal alignment of your nav with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment). By default, navs are left-aligned, but you can easily change them to center or right aligned.
@@ -169,6 +147,28 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" href="#" aria-current="page">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Nav light
+
+A gray line is set under the items. An active item is underlined by an orange line.
+
+{% capture example %}
+<ul class="nav o-nav-light">
+  <li class="nav-item">
+    <a class="nav-link o-active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
