@@ -85,8 +85,8 @@
 
   // Swiper pause and play
   $(document).ready(function () {
-  var MySwiper = document.querySelector('.swiper-container').swiper;
   $(".swiper-button").click(function () {
+    var MySwiper = document.querySelector('.swiper-container').swiper;
     if ($(this).attr("id") === "pauseSwiperButton") {
       MySwiper.autoplay.stop();
       $(this).attr("id", "playSwiperButton");

@@ -15,7 +15,15 @@
   }
 }
 
-.carousel-buttton,
+.carouselButtton {
+  // Boosted mod
+  &:focus {
+    outline: 2px dotted $input-focus-border-color; 
+    outline-offset: -1px;
+  }
+  // end mod
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
@@ -28,10 +36,12 @@
   opacity: .8;
   transition: width .5s ease;
 
+  // Boosted mod
   &:focus {
-    outline: 2px dotted #000;
+    outline: 2px dotted $input-focus-border-color; 
     outline-offset: -1px;
   }
+  // end mod
 }
 
 .carousel-control-prev-icon,
@@ -84,6 +94,14 @@
 }
 
 // swiper
+.swiperButton {
+  //Boosted mod
+  &:focus {
+    outline: 2px dotted $input-focus-border-color; 
+    outline-offset: -1px;
+  }
+  // end mod
+}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -94,10 +112,12 @@
   cursor: pointer;
   background-image: none;
   background-size: 0;
+  //Boosted mod
   &:focus {
-    outline: 2px dotted #000;
+    outline: 2px dotted $input-focus-border-color; 
     outline-offset: -1px;
   }
+  // end mod
 }
 
 .swiper-button-prev::before,
@@ -136,10 +156,12 @@
   margin-bottom: 30px;
 }
 
+// Boosted mod
 .swiper-pagination {
   position: absolute !important; // stylelint-disable-line declaration-no-important
   bottom: 50px !important; // stylelint-disable-line declaration-no-important
 }
+// End mod
 
 .swiper-slide {
   .card {
