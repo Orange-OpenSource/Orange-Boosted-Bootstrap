@@ -98,6 +98,13 @@ fieldset:disabled a.btn {
   }
 }
 
+.btn-o-toggle {
+  @include button-variant-custom($black, $gray-500);
+  &.btn-inverse {
+    @include button-variant-custom($white, $gray-900)
+  }
+}
+
 // Boosted mod custom outline buttons values
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
