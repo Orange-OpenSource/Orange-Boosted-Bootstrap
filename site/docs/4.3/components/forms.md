@@ -1340,6 +1340,19 @@ Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several
 {% endcapture %}
 {% include example.html content=example %}
 
+#### with label
+
+Replace number by label.
+
+<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
+  <label class="btn btn-secondary doc-label">
+    <input type="radio" name="options3" id="option31" autocomplete="off" checked="">Day</label>
+  <label class="btn btn-secondary doc-label active">
+    <input type="radio" name="options3" id="option32" autocomplete="off">Week</label>
+  <label class="btn btn-secondary doc-label">
+    <input type="radio" name="options3" id="option33" autocomplete="off">Month</label>
+</div>
+
 #### without outline
 
 Alternatively, use `.no-outline` class on `.btn-group` element to get the clear version.
