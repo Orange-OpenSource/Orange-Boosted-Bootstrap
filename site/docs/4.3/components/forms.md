@@ -1366,7 +1366,7 @@ Alternatively, use `.no-outline` class on `.btn-group` element to get the clear 
     <input type="radio" name="options2" id="option22" autocomplete="off"> 2
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option33" autocomplete="off"> 3
+    <input type="radio" name="options2" id="option23" autocomplete="off"> 3
   </label>
 </div>
 {% endcapture %} {% include example.html content=example %}
