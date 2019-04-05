@@ -15,15 +15,6 @@
   }
 }
 
-// Boosted mod
-.carousel-button {
-  &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
-  }
-}
-// end mod
-
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
@@ -94,15 +85,6 @@
 }
 
 // swiper
-.swiper-button {
-  //Boosted mod
-  &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
-  }
-  // end mod
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   top: calc(50% - 10px);

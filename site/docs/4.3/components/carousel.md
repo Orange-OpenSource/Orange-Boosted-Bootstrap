@@ -71,8 +71,8 @@ Adding in the previous, next control and a pause/play button:
     <span class="sr-only">Next</span>
   </a>
   <div class="carouselButton">
-    <button id="pauseCarouselButton" type="button" class="btn btn-default btn-xs carousel-button" aria-label="Pause Carousel" title="Pause Carousel">
-      <span class="icon-Pause"></span>
+    <button id="pauseCarouselButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
+      <span class="icon-Pause" aria-hidden="true"></span>
     </button>
   </div>
 </div>

@@ -50,8 +50,8 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         </div>
     </div>
     <div class="swiperButton">
-        <button id="pauseSwiperButton" type="button" class="btn btn-default btn-xs swiper-button" aria-label="Pause Carousel" title="Pause Carousel">
-        <span class="icon-Pause"></span>
+        <button id="pauseSwiperButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
+        <span class="icon-Pause" aria-hidden="true"></span>
         </button>
     </div>
     <div class="swiper-pagination"></div>
