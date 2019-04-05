@@ -15,7 +15,7 @@
   }
 }
 
-.carouselButtton {
+.carousel-button {
   // Boosted mod
   &:focus {
     outline: 2px dotted $input-focus-border-color; 
@@ -94,7 +94,7 @@
 }
 
 // swiper
-.swiperButton {
+.swiper-button {
   //Boosted mod
   &:focus {
     outline: 2px dotted $input-focus-border-color; 
