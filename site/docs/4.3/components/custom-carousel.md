@@ -127,7 +127,7 @@ var mySwiper = new Swiper('.swiper-container', {
   }
 })
 ```
-Be aware that having a play/pause button implies having autoplay set to true in the configuration.<br>
+Be aware that having a play/pause button implies having autoplay set to true in the configuration.
 Find below an example for our custom button
 
 ```javascript
