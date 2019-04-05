@@ -15,14 +15,14 @@
   }
 }
 
+// Boosted mod
 .carousel-button {
-  // Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color; 
+    outline: 2px dotted $input-focus-border-color;
     outline-offset: -1px;
   }
-  // end mod
 }
+// end mod
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -97,7 +97,7 @@
 .swiper-button {
   //Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color; 
+    outline: 2px dotted $input-focus-border-color;
     outline-offset: -1px;
   }
   // end mod
@@ -114,7 +114,7 @@
   background-size: 0;
   //Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color; 
+    outline: 2px dotted $input-focus-border-color;
     outline-offset: -1px;
   }
   // end mod
