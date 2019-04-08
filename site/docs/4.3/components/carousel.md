@@ -71,7 +71,7 @@ Adding in the previous, next control and a pause/play button:
     <span class="sr-only">Next</span>
   </a>
   <div class="carouselButton">
-    <button id="pauseCarouselButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
+    <button id="carouselPlayButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
       <span class="icon-Pause" aria-hidden="true"></span>
     </button>
   </div>
@@ -83,19 +83,17 @@ Adding in the previous, next control and a pause/play button:
 This is the custom example used for the pause and play button.
 It is the recommended setup for an accessible carousel button.
 ```javascript
-  $("button").click(function () {
-    if ($(this).attr("id") === "pauseCarouselButton") {
+  $("#carouselPlayButton").click(function () {
+    if ($("span",this).hasClass("icon-Pause")) {
       $('#carouselExampleControls').carousel('pause');
-      $(this).attr("id", "playCarouselButton");
       $(this).attr("aria-label", "Play Carousel");
       $(this).attr("title", "Play Carousel");
-      $("span",this).toggleClass("icon-Play icon-Pause");
+      $("span",this).toggleClass("icon-Pause icon-Play");
     } else {
       $('#carouselExampleControls').carousel('cycle');
-      $(this).attr("id", "pauseCarouselButton");
       $(this).attr("aria-label", "Pause Carousel");
       $(this).attr("title", "Pause Carousel");
-      $("span",this).toggleClass("icon-Pause icon-Play");
+      $("span",this).toggleClass("icon-Play icon-Pause");
     }
   });
 ```

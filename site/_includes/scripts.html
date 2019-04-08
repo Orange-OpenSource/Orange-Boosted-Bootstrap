@@ -85,20 +85,18 @@
 
   // Swiper pause and play
   $(document).ready(function () {
-  $(".swiper-button").click(function () {
+  $("#swiperPlayButton").click(function () {
     var MySwiper = document.querySelector('.swiper-container').swiper;
-    if ($(this).attr("id") === "pauseSwiperButton") {
+    if ($("span",this).hasClass("icon-Pause")) {
       MySwiper.autoplay.stop();
-      $(this).attr("id", "playSwiperButton");
       $(this).attr("aria-label", "Play Carousel");
       $(this).attr("title", "Play Carousel");
-      $("span",this).toggleClass("icon-Play icon-Pause");
+      $("span",this).toggleClass("icon-Pause icon-Play");
     } else {
       MySwiper.autoplay.start();
-      $(this).attr("id", "pauseSwiperButton");
       $(this).attr("aria-label", "Pause Carousel");
       $(this).attr("title", "Pause Carousel");
-      $("span",this).toggleClass("icon-Pause icon-Play");
+      $("span",this).toggleClass("icon-Play icon-Pause");
     }
   });
 });
@@ -107,19 +105,17 @@
   // Boosted mod
   // Carousel pause and play
 $(document).ready(function () {
-  $(".carousel-button").click(function () {
-    if ($(this).attr("id") === "pauseCarouselButton") {
+  $("#carouselPlayButton").click(function () {
+    if ($("span",this).hasClass("icon-Pause")) {
       $('#carouselExampleControls').carousel('pause');
-      $(this).attr("id", "playCarouselButton");
       $(this).attr("aria-label", "Play Carousel");
       $(this).attr("title", "Play Carousel");
-      $("span",this).toggleClass("icon-Play icon-Pause");
+      $("span",this).toggleClass("icon-Pause icon-Play");
     } else {
       $('#carouselExampleControls').carousel('cycle');
-      $(this).attr("id", "pauseCarouselButton");
       $(this).attr("aria-label", "Pause Carousel");
       $(this).attr("title", "Pause Carousel");
-      $("span",this).toggleClass("icon-Pause icon-Play");
+      $("span",this).toggleClass("icon-Play icon-Pause");
     }
   });
 });
