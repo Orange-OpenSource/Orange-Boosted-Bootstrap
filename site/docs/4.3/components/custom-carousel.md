@@ -49,10 +49,14 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
             </div>
         </div>
     </div>
+    <div class="swiperButton">
+        <button id="swiperPlayButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
+        <span class="icon-Pause" aria-hidden="true"></span>
+        </button>
+    </div>
     <div class="swiper-pagination"></div>
-
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev" title="Previous"></div>
+    <div class="swiper-button-next" title="Next"></div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -81,6 +85,9 @@ Here is the recommended setup for an accessible carousel:
 
 ```javascript
 var mySwiper = new Swiper('.swiper-container', {
+    autoplay: {
+    delay: 3500,
+  },
   // enable accessibility
   a11y: true,
   keyboard: {
@@ -120,4 +127,22 @@ var mySwiper = new Swiper('.swiper-container', {
   }
 })
 ```
+Be aware that having a play/pause button implies having autoplay set to true in the configuration.
+Find below an example for our custom button
 
+```javascript
+  $("#swiperPlayButton").click(function () {
+    var MySwiper = document.querySelector('.swiper-container').swiper;
+    if ($("span",this).hasClass("icon-Pause")) {
+      MySwiper.autoplay.stop();
+      $(this).attr("aria-label", "Play Carousel");
+      $(this).attr("title", "Play Carousel");
+      $("span",this).toggleClass("icon-Pause icon-Play");
+    } else {
+      MySwiper.autoplay.start();
+      $(this).attr("aria-label", "Pause Carousel");
+      $(this).attr("title", "Pause Carousel");
+      $("span",this).toggleClass("icon-Play icon-Pause");
+    }
+  });
+```

@@ -43,6 +43,9 @@
 <!-- end mod -->
 <script>
   new Swiper('.swiper-container', {
+      autoplay: {
+      delay: 3500,
+    },
     // enable accessibility
     a11y: true,
     keyboard: {
@@ -80,7 +83,46 @@
 
   $('#collapsing-navbarHead').megamenu();
 
+  // Swiper pause and play
+  $(document).ready(function () {
+  $("#swiperPlayButton").click(function () {
+    var MySwiper = document.querySelector('.swiper-container').swiper;
+    if ($("span",this).hasClass("icon-Pause")) {
+      MySwiper.autoplay.stop();
+      $(this).attr("aria-label", "Play Carousel");
+      $(this).attr("title", "Play Carousel");
+      $("span",this).toggleClass("icon-Pause icon-Play");
+    } else {
+      MySwiper.autoplay.start();
+      $(this).attr("aria-label", "Pause Carousel");
+      $(this).attr("title", "Pause Carousel");
+      $("span",this).toggleClass("icon-Play icon-Pause");
+    }
+  });
+});
+  // end mod
+
+  // Boosted mod
+  // Carousel pause and play
+$(document).ready(function () {
+  $("#carouselPlayButton").click(function () {
+    if ($("span",this).hasClass("icon-Pause")) {
+      $('#carouselExampleControls').carousel('pause');
+      $(this).attr("aria-label", "Play Carousel");
+      $(this).attr("title", "Play Carousel");
+      $("span",this).toggleClass("icon-Pause icon-Play");
+    } else {
+      $('#carouselExampleControls').carousel('cycle');
+      $(this).attr("aria-label", "Pause Carousel");
+      $(this).attr("title", "Pause Carousel");
+      $("span",this).toggleClass("icon-Play icon-Pause");
+    }
+  });
+});
+  // end mod
+
 </script>
+
 {%- endif -%}
 
 {%- if page.title == "Boostwatch" -%}
@@ -138,7 +180,7 @@
             slideToClickedSlide: false // enable for centered mode
         }
     }
-})
+});
 </script>
 {%- endif -%}
 <script>
