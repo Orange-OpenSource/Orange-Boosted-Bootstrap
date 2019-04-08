@@ -113,7 +113,7 @@ Place any checkbox or radio option within an input group's addon instead of text
 <div class="input-group">
   <div class="input-group-prepend">
     <div class="input-group-text">
-      <input type="radio" aria-label="Radio button for following text input">
+      <input type="radio" aria-label="Radio button for following text input" autocomplete="off">
     </div>
   </div>
   <input type="text" class="form-control" aria-label="Text input with radio button">
