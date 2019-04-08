@@ -47,7 +47,7 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 
 ### With controls
 
-Adding in the previous and next controls:
+Adding in the previous, next control and a pause/play button:
 
 {% capture example %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -62,17 +62,41 @@ Adding in the previous and next controls:
       {% include icons/placeholder.svg width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" %}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" title="Previous">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" title="Next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  <div class="carouselButton">
+    <button id="carouselPlayButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
+      <span class="icon-Pause" aria-hidden="true"></span>
+    </button>
+  </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
+
+#### Configuration JS
+This is the custom example used for the pause and play button.
+It is the recommended setup for an accessible carousel button.
+```javascript
+  $("#carouselPlayButton").click(function () {
+    if ($("span",this).hasClass("icon-Pause")) {
+      $('#carouselExampleControls').carousel('pause');
+      $(this).attr("aria-label", "Play Carousel");
+      $(this).attr("title", "Play Carousel");
+      $("span",this).toggleClass("icon-Pause icon-Play");
+    } else {
+      $('#carouselExampleControls').carousel('cycle');
+      $(this).attr("aria-label", "Pause Carousel");
+      $(this).attr("title", "Pause Carousel");
+      $("span",this).toggleClass("icon-Play icon-Pause");
+    }
+  });
+```
 
 ### With indicators
 
@@ -96,11 +120,11 @@ You can also add the indicators to the carousel, alongside the controls, too.
       {% include icons/placeholder.svg width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" %}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" title="Previous">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" title="Next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -148,11 +172,11 @@ Add a link to a slider by using `a` html tag.
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" title="Previous">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" title="Next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -189,11 +213,11 @@ Add `.carousel-fade` to your carousel to animate slides with a fade transition i
       {% include icons/placeholder.svg width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" %}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev" title="Previous">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next" title="Next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -218,11 +242,11 @@ Add `data-interval=""` to a `.carousel-item` to change the amount of time to del
       {% include icons/placeholder.svg width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" %}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev" title="Previous">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next" title="Next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
