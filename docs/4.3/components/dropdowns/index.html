@@ -1689,8 +1689,7 @@ dataLayer = [{
 <script src="/docs/4.3/assets/js/vendor/popper.min.js"></script><script src="/docs/4.3/dist/js/boosted.min.js" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js" integrity="sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU=" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.3/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-<!-- end mod --><script src="/docs/4.3/assets/js/docs.min.js"></script>
-  <script src="/sw.js"></script><!-- boosted mod -->
+<!-- end mod --><script src="/docs/4.3/assets/js/docs.min.js"></script><!-- boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js" integrity="sha256-dl0WVCl8jXMBZfvnMeygnB0+bvqp5wBqqlZ8Wi95lLo=" crossorigin="anonymous"></script>
 <script>window.Swiper || document.write('<script src="/docs/4.3/assets/js/vendor/swiper.min.js"><\/script>')</script>
 <!-- end mod -->
@@ -1775,6 +1774,12 @@ $(document).ready(function () {
   // end mod
 
 </script><script>
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     $('.o-nav-local').prioritynav();
