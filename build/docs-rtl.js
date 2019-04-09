@@ -12,7 +12,7 @@
 const sh = require('shelljs')
 const os = require('os')
 
-if (os.platform === 'linux') {
+if (os.platform() === 'linux') {
   sh.exec('echo linux')
   sh.exec('find _gh_pages/docs/4.3/examples/ -mindepth 1 -maxdepth 1 -type d -name "rtl-*" -exec bash -c \'rm -rf _gh_pages/docs/4.3/examples/$(basename "{}") ; rmdir _gh_pages/docs/4.3/examples/$(basename "{}")\' \\;', (code, stdout, stderr) => {
     console.log('Exit code:', code)
