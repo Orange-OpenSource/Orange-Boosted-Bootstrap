@@ -111,7 +111,7 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/assets/css/docs.min.css",
-    "revision": "17edac8e7c3112b2a95ea36d2b3974be"
+    "revision": "58c8597a972d4d06bab5e2f1b026af6f"
   },
   {
     "url": "docs/4.3/assets/css/tarteaucitronboosted.css",
@@ -827,7 +827,7 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/dist/css/boosted-grid.min.css",
-    "revision": "73ea4617f080fe38dff17114bc6b1dea"
+    "revision": "220aeaf041a20be2b410808e6eab1178"
   },
   {
     "url": "docs/4.3/dist/css/boosted-reboot.css",
@@ -835,7 +835,7 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/dist/css/boosted-reboot.min.css",
-    "revision": "1c77d13c31bd0c579fac6b5c31400d74"
+    "revision": "5256a1c1bb00c8e6e0394f0527b4dc0b"
   },
   {
     "url": "docs/4.3/dist/css/boosted-rtl.css",
@@ -843,7 +843,7 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/dist/css/boosted-rtl.min.css",
-    "revision": "6f0524728b0eac444fd420938cfa9c6f"
+    "revision": "34db618b1bdd65f4d2e1879fa2efa449"
   },
   {
     "url": "docs/4.3/dist/css/boosted.css",
@@ -851,7 +851,7 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/dist/css/boosted.min.css",
-    "revision": "539916bbe29a4c84495d4e5349cbf319"
+    "revision": "e04fc423b08bbeabff0d3728b25f25cc"
   },
   {
     "url": "docs/4.3/dist/css/o-rtl.css",
@@ -863,7 +863,7 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/dist/css/orangeHelvetica.min.css",
-    "revision": "6bdc48c1dc1a1fcf8c97056561f52860"
+    "revision": "226c62cdc4d97412b7074b07a624802d"
   },
   {
     "url": "docs/4.3/dist/css/orangeIcons.css",
@@ -871,11 +871,11 @@ self.__precacheManifest = [
   },
   {
     "url": "docs/4.3/dist/css/orangeIcons.min.css",
-    "revision": "420473758d2d49bd456fa4880d3d9012"
+    "revision": "fd107d3f4e00d29362c9afcc7f2e5c75"
   },
   {
     "url": "docs/4.3/dist/css/vendor/swiper.min.css",
-    "revision": "df7509da4baecc2c59d1bde396d31333"
+    "revision": "7b7697ceb019167bb5433df23dec0205"
   },
   {
     "url": "docs/4.3/dist/fonts/HelvNeue55_W1G.svg",
@@ -936,10 +936,6 @@ self.__precacheManifest = [
   {
     "url": "docs/4.3/dist/js/boosted.min.js",
     "revision": "eed8f69f0e7e0ccaf1ac098ebb4b4406"
-  },
-  {
-    "url": "docs/4.3/dist/js/vendor/swiper.min.js",
-    "revision": "b1f64dfa2d087716f481fa44c2081015"
   },
   {
     "url": "docs/4.3/examples/administration-edition-page/example.css",
@@ -2079,7 +2075,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "a9ab624eb25ed8bc627cd820f775248c"
+    "revision": "8d15efc703ae04f33621321714daed6d"
   },
   {
     "url": "migration/index.html",
