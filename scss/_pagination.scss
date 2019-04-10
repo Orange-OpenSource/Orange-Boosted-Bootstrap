@@ -190,7 +190,7 @@
   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg, $pagination-min-width-lg);
   .page-item:first-child .page-link::before,
   .page-item:last-child .page-link::before {
-    top: 1rem;
+    top: 1.03125rem;
   }
 }
 
@@ -198,6 +198,6 @@
   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm, $pagination-min-width-sm);
   .page-item:first-child .page-link::before,
   .page-item:last-child .page-link::before {
-    top: auto;
+    top: .53125rem;
   }
 }
