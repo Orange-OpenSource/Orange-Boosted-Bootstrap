@@ -135,14 +135,12 @@
 }
 
 .swiper-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-// Boosted mod
 .swiper-pagination {
-  position: unset !important; // stylelint-disable-line declaration-no-important
+  bottom: 6px;
 }
-// End mod
 
 .swiper-slide {
   .card {
