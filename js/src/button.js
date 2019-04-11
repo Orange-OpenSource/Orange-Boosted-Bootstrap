@@ -129,7 +129,13 @@ $(document)
   .on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, (event) => {
     const button = $(event.target).closest(Selector.BUTTON)[0]
     if (button) {
-      button.classList.add(ClassName.FOCUS)
+      $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
+    }
+  })
+  .on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT > Selector.INPUT, (event) => {
+    const button = $(event.target).closest(Selector.BUTTON)[0]
+    if (button) {
+      $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
     }
   })
 

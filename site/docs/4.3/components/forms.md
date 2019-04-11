@@ -32,7 +32,26 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
+
+{% highlight html %}
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endhighlight %}
 
 ## Form controls
 
@@ -196,7 +215,22 @@ By default, any number of checkboxes and radios that are immediate sibling will 
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
+
+{% highlight html %}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
+  </label>
+</div>
+{% endhighlight %}
 
 {% capture example %}
 <div class="form-check">
@@ -218,8 +252,28 @@ By default, any number of checkboxes and radios that are immediate sibling will 
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
 
+{% highlight html %}
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <label class="form-check-label" for="exampleRadios3">
+    Disabled radio
+  </label>
+</div>
+{% endhighlight %}
 ### Inline
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
@@ -1164,7 +1218,14 @@ In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](h
   <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
+
+{% highlight html %}
+<div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+</div>
+{% endhighlight %}
 
 Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
@@ -1328,17 +1389,30 @@ Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several
 {% capture example %}
 <div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
+    <input type="radio" name="options" id="option1" checked> 1
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> 2
+    <input type="radio" name="options" id="option2"> 2
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3" autocomplete="off"> 3
+    <input type="radio" name="options" id="option3"> 3
   </label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
+
+#### with label
+
+Replace number by label.
+
+<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
+  <label class="btn btn-secondary doc-label">
+    <input type="radio" name="options3" id="option31" checked="">Day</label>
+  <label class="btn btn-secondary doc-label active">
+    <input type="radio" name="options3" id="option32">Week</label>
+  <label class="btn btn-secondary doc-label">
+    <input type="radio" name="options3" id="option33">Month</label>
+</div>
 
 #### without outline
 
@@ -1347,13 +1421,13 @@ Alternatively, use `.no-outline` class on `.btn-group` element to get the clear 
 {% capture example %}
 <div class="o-switch btn-group btn-group-toggle no-outline" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options2" id="option21" autocomplete="off" checked> 1
+    <input type="radio" name="options2" id="option21" checked> 1
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option22" autocomplete="off"> 2
+    <input type="radio" name="options2" id="option22"> 2
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option33" autocomplete="off"> 3
+    <input type="radio" name="options2" id="option23"> 3
   </label>
 </div>
 {% endcapture %} {% include example.html content=example %}
