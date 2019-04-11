@@ -124,33 +124,29 @@
 // 3 way toggles
 
 .o-switch.btn-group-toggle {
-  border: 2px solid #000;
+  display: inline-flex;
+  justify-content: flex-start;
+  border: 2px solid #ccc;
 
   .btn {
-    width: 2.5rem;
+    min-width: 2.5rem;
     padding-right: 0;
     padding-left: 0;
-    margin: 0;
-    border-top: 0;
-    border-right: 2px solid #fff;
-    border-bottom: 0;
-    border-left: 2px solid #fff;
+    margin: -2px 0;
+    border: 2px solid transparent;
 
     &:first-child {
       margin-left: -2px;
-      border-left-color: #000;
     }
 
     &:last-child {
       margin-right: -2px;
-      border-right-color: #000;
     }
 
     &.active {
       color: #fff;
       background-color: #000;
-      border-right-color: #000;
-      border-left-color: #000;
+      border-color: #000;
     }
 
     &.focus {
@@ -158,15 +154,20 @@
       outline-offset: -2px;
     }
 
+    &:active {
+      border-color: theme-color("primary");
+    }
+
     @include hover {
-      color: theme-color("primary");
-      background-color: #fff;
+      &:not(:active) {
+        color: theme-color("primary");
+        background-color: transparent;
+      }
 
       &.active {
         color: #fff;
         background-color: #000;
-        border-right-color: #000;
-        border-left-color: #000;
+        border-color: #000;
       }
     }
   }
@@ -194,9 +195,11 @@
       }
 
       @include hover {
-        color: #000;
-        background-color: #fff;
-        border-color: #000;
+        &:not(:active) {
+          color: #000;
+          background-color: #fff;
+          border-color: #ccc;
+        }
 
         &.active {
           color: theme-color("primary");

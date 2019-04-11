@@ -148,11 +148,11 @@ body_class: "bg-light"
         </div>
         <hr class="mb-4">
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="same-address">
+          <input type="checkbox" class="custom-control-input" id="same-address" autocomplete="off">
           <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
         </div>
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="save-info">
+          <input type="checkbox" class="custom-control-input" id="save-info" autocomplete="off">
           <label class="custom-control-label" for="save-info">Save this information for next time</label>
         </div>
         <hr class="mb-4">
@@ -161,15 +161,15 @@ body_class: "bg-light"
 
         <div class="d-block my-3">
           <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required autocomplete="off">
             <label class="custom-control-label" for="credit">Credit card</label>
           </div>
           <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required autocomplete="off">
             <label class="custom-control-label" for="debit">Debit card</label>
           </div>
           <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required autocomplete="off">
             <label class="custom-control-label" for="paypal">PayPal</label>
           </div>
         </div>
