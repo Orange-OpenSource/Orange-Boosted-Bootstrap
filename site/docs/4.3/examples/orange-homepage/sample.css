@@ -15,7 +15,7 @@
 }
 .discovery-module-one-pop-out {
   position: relative;
-  margin: 1.25rem;
+  margin: 1.25rem 0;
 }
 
 .discovery-module-one-pop-out .discovery-header-button,
@@ -29,7 +29,7 @@
   margin-top: 3.125rem;
 }
 .popular-services {
-  margin: 1.25rem;
+  margin: 1.25rem 0;
 }
 .popular-services-links{
   font-weight: 700;
