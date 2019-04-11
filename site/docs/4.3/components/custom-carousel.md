@@ -13,7 +13,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
 ## Demo
 
 {% capture example %}
-<div class="swiper-container" style="width: 37.5rem;">
+<div class="swiper-container mb-0">
     <div class="swiper-wrapper">
         <div class="swiper-slide" id="slide1">
             <div class="card">
@@ -50,14 +50,12 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         </div>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiperButton">
-        <button id="swiperPlayButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
-        <span class="icon-Pause" aria-hidden="true"></span>
-        </button>
-    </div>
     <div class="swiper-button-prev" title="Previous"></div>
     <div class="swiper-button-next" title="Next"></div>
 </div>
+<button id="swiperPlayButton" type="button" class="btn btn-info btn-xs mt-0" aria-label="Pause Carousel" title="Pause Carousel">
+<span class="icon-Pause" aria-hidden="true"></span>
+</button>
 {% endcapture %}
 {% include example.html content=example %}
 
