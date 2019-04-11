@@ -70,11 +70,9 @@ Adding in the previous, next control and a pause/play button:
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <div class="carouselButton">
-    <button id="carouselPlayButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
-      <span class="icon-Pause" aria-hidden="true"></span>
-    </button>
-  </div>
+  <button id="carouselPlayButton" type="button" class="btn btn-info btn-xs mt-4" aria-label="Pause Carousel" title="Pause Carousel">
+    <span class="icon-Pause" aria-hidden="true"></span>
+  </button>
 </div>
 {% endcapture %}
 {% include example.html content=example %}

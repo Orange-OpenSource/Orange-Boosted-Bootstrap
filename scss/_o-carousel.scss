@@ -138,12 +138,9 @@
   margin-bottom: 30px;
 }
 
-// Boosted mod
 .swiper-pagination {
-  position: absolute !important; // stylelint-disable-line declaration-no-important
-  bottom: 50px !important; // stylelint-disable-line declaration-no-important
+  bottom: 6px;
 }
-// End mod
 
 .swiper-slide {
   .card {
