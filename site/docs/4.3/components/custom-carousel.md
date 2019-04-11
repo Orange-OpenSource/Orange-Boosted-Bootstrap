@@ -49,12 +49,12 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
             </div>
         </div>
     </div>
+    <div class="swiper-pagination"></div>
     <div class="swiperButton">
         <button id="swiperPlayButton" type="button" class="btn btn-info btn-xs" aria-label="Pause Carousel" title="Pause Carousel">
         <span class="icon-Pause" aria-hidden="true"></span>
         </button>
     </div>
-    <div class="swiper-pagination"></div>
     <div class="swiper-button-prev" title="Previous"></div>
     <div class="swiper-button-next" title="Next"></div>
 </div>
