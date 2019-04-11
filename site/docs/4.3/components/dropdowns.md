@@ -717,7 +717,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
     </div>
     <div class="form-group">
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="dropdownCheck" autocomplete="off">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
         <label class="form-check-label" for="dropdownCheck">
           Remember me
         </label>
@@ -744,7 +744,7 @@ Put a form within a dropdown menu, or make it into a dropdown menu, and use [mar
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="dropdownCheck2" autocomplete="off">
+      <input type="checkbox" class="form-check-input" id="dropdownCheck2">
       <label class="form-check-label" for="dropdownCheck2">
         Remember me
       </label>

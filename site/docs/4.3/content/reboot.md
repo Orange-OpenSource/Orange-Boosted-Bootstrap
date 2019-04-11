@@ -245,15 +245,15 @@ These changes, and more, are demonstrated below.
 
     <p>
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked autocomplete="off">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
         Option one is this and that
       </label>
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" autocomplete="off">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
         Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
       </label>
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled autocomplete="off">
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
         Option three is disabled
       </label>
     </p>

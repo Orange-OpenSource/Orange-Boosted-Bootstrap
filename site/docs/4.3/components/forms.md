@@ -26,13 +26,32 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" autocomplete="off">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
+
+{% highlight html %}
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endhighlight %}
 
 ## Form controls
 
@@ -184,57 +203,92 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 
 {% capture example %}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" autocomplete="off">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
     Default checkbox
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled autocomplete="off">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
   <label class="form-check-label" for="defaultCheck2">
     Disabled checkbox
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
+
+{% highlight html %}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
+  </label>
+</div>
+{% endhighlight %}
 
 {% capture example %}
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked autocomplete="off">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
     Default radio
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" autocomplete="off">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
   <label class="form-check-label" for="exampleRadios2">
     Second default radio
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled autocomplete="off">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
   <label class="form-check-label" for="exampleRadios3">
     Disabled radio
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
 
+{% highlight html %}
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <label class="form-check-label" for="exampleRadios3">
+    Disabled radio
+  </label>
+</div>
+{% endhighlight %}
 ### Inline
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
 
 {% capture example %}
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" autocomplete="off">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" autocomplete="off">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled autocomplete="off">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
   <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
 </div>
 {% endcapture %}
@@ -242,15 +296,15 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 
 {% capture example %}
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" autocomplete="off">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
   <label class="form-check-label" for="inlineRadio1">1</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" autocomplete="off">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
   <label class="form-check-label" for="inlineRadio2">2</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled autocomplete="off">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
   <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
 {% endcapture %}
@@ -262,10 +316,10 @@ Add `.position-static` to inputs within `.form-check` that don't have any label 
 
 {% capture example %}
 <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." autocomplete="off">
+  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
 </div>
 <div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..." autocomplete="off">
+  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -369,7 +423,7 @@ More complex layouts can also be created with the grid system.
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck" autocomplete="off">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
@@ -405,19 +459,19 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked autocomplete="off">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
           <label class="form-check-label" for="gridRadios1">
             First radio
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" autocomplete="off">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
           <label class="form-check-label" for="gridRadios2">
             Second radio
           </label>
         </div>
         <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled autocomplete="off">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
           <label class="form-check-label" for="gridRadios3">
             Third disabled radio
           </label>
@@ -429,7 +483,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
     <div class="col-sm-2">Checkbox</div>
     <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" autocomplete="off">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
         <label class="form-check-label" for="gridCheck1">
           Example checkbox
         </label>
@@ -516,7 +570,7 @@ The example below uses a flexbox utility to vertically center the contents and c
     </div>
     <div class="col-auto">
       <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck" autocomplete="off">
+        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
         <label class="form-check-label" for="autoSizingCheck">
           Remember me
         </label>
@@ -550,7 +604,7 @@ You can then remix that once again with size-specific column classes.
     </div>
     <div class="col-auto my-1">
       <div class="form-check mb-0">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck2" autocomplete="off">
+        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
           Remember me
         </label>
@@ -580,7 +634,7 @@ And of course [custom form controls](#custom-forms) are supported.
     </div>
     <div class="col-auto my-1">
       <div class="custom-control custom-checkbox mr-sm-2">
-        <input type="checkbox" class="custom-control-input" id="customControlAutosizing" autocomplete="off">
+        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
         <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
       </div>
     </div>
@@ -616,7 +670,7 @@ You may need to manually address the width and alignment of individual form cont
   </div>
 
   <div class="form-check mb-2 mr-sm-2">
-    <input class="form-check-input" type="checkbox" id="inlineFormCheck" autocomplete="off">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
     <label class="form-check-label" for="inlineFormCheck">
       Remember me
     </label>
@@ -640,7 +694,7 @@ Custom form controls and selects are also supported.
   </select>
 
   <div class="custom-control custom-checkbox my-1 mr-sm-2">
-    <input type="checkbox" class="custom-control-input" id="customControlInline" autocomplete="off">
+    <input type="checkbox" class="custom-control-input" id="customControlInline">
     <label class="custom-control-label" for="customControlInline">Remember my preference</label>
   </div>
 
@@ -719,7 +773,7 @@ Add the `.disabled` class to the label for a disabled input.
     </div>
     <div class="form-group">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled autocomplete="off">
+        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
         <label class="form-check-label" for="disabledFieldsetCheck">
           Can't check this
         </label>
@@ -832,7 +886,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required autocomplete="off">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label is-required" for="invalidCheck">
         Agree to terms and conditions
       </label>
@@ -910,7 +964,7 @@ While these feedback styles cannot be styled with CSS, you can still customize t
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required autocomplete="off">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <label class="form-check-label is-required" for="invalidCheck2">
         Agree to terms and conditions
       </label>
@@ -980,7 +1034,7 @@ We recommend using client-side validation, but in case you require server-side v
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required autocomplete="off">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
       <label class="form-check-label is-required" for="invalidCheck3">
         Agree to terms and conditions
       </label>
@@ -1015,17 +1069,17 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="custom-control custom-checkbox mb-3">
-    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required autocomplete="off">
+    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
     <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
     <div class="invalid-feedback">Example invalid feedback text</div>
   </div>
 
   <div class="custom-control custom-radio">
-    <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required autocomplete="off">
+    <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
     <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
   </div>
   <div class="custom-control custom-radio mb-3">
-    <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required autocomplete="off">
+    <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
     <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
     <div class="invalid-feedback">More example invalid feedback text</div>
   </div>
@@ -1160,17 +1214,24 @@ In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](h
 
 {% capture example %}
 <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheck1" autocomplete="off">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
   <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html content=example hide_markup=true%}
+
+{% highlight html %}
+<div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+</div>
+{% endhighlight %}
 
 Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
 <div class="bd-example bd-example-indeterminate">
   <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="customCheck2" autocomplete="off">
+    <input type="checkbox" class="custom-control-input" id="customCheck2">
     <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
   </div>
 </div>
@@ -1185,11 +1246,11 @@ $('.your-checkbox').prop('indeterminate', true)
 
 {% capture example %}
 <div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" autocomplete="off">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
   <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
 </div>
 <div class="custom-control custom-radio">
-  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" autocomplete="off">
+  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
   <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
 </div>
 {% endcapture %}
@@ -1199,11 +1260,11 @@ $('.your-checkbox').prop('indeterminate', true)
 
 {% capture example %}
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" autocomplete="off">
+  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
   <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" autocomplete="off">
+  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
   <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
 </div>
 {% endcapture %}
@@ -1215,12 +1276,12 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 
 {% capture example %}
 <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled autocomplete="off">
+  <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
   <label class="custom-control-label" for="customCheckDisabled1">Check this custom checkbox</label>
 </div>
 
 <div class="custom-control custom-radio">
-  <input type="radio" name="radioDisabled" id="customRadioDisabled2" class="custom-control-input" disabled autocomplete="off">
+  <input type="radio" name="radioDisabled" id="customRadioDisabled2" class="custom-control-input" disabled>
   <label class="custom-control-label" for="customRadioDisabled2">Toggle this custom radio</label>
 </div>
 {% endcapture %}
@@ -1232,11 +1293,11 @@ A switch has the markup of a custom checkbox but uses the `.custom-switch` class
 
 {% capture example %}
 <div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" id="customSwitch1" autocomplete="off">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
   <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
 </div>
 <div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" disabled id="customSwitch2" autocomplete="off">
+  <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
   <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
 </div>
 {% endcapture %}
@@ -1247,11 +1308,11 @@ Add the `.right` class to render a toggle switch with label text before.
 
 {% capture example %}
 <div class="custom-control custom-switch right w-75">
-  <input type="checkbox" class="custom-control-input" id="customSwitch3" autocomplete="off">
+  <input type="checkbox" class="custom-control-input" id="customSwitch3">
   <label class="custom-control-label" for="customSwitch3">Toggle this switch element right aligned</label>
 </div>
 <div class="custom-control custom-switch right w-75">
-  <input type="checkbox" class="custom-control-input" disabled id="customSwitch4" autocomplete="off">
+  <input type="checkbox" class="custom-control-input" disabled id="customSwitch4">
   <label class="custom-control-label" for="customSwitch4">Disabled switch element right aligned</label>
 </div>
 {% endcapture %}
@@ -1275,7 +1336,7 @@ As `custom-switch` component have been included into Boostrap, the `o-switch` co
 <div class="form-group row">
   <label for="checkbox1" class="col-form-label col-md-3 col-8">Default</label>
   <div class="o-switch">
-    <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked autocomplete="off"/>
+    <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
     <label for="checkbox1" class="toggle col-form-label" aria-hidden="true">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
@@ -1293,7 +1354,7 @@ Default color is brand primary. Success color is also supported, use `.success` 
 <div class="form-group row">
   <label for="checkbox3" class="col-form-label col-md-3 col-8">Success</label>
   <div class="o-switch">
-    <input class="checkbox success sr-only" id="checkbox3" type="checkbox" autocomplete="off"/>
+    <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
     <label for="checkbox3" class="toggle col-form-label" aria-hidden="true">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
@@ -1311,7 +1372,7 @@ Finally use `.toggle-rounded` class on `.toggle` element to get rounded switch a
 <div class="form-group row">
   <label for="checkbox4" class="col-form-label col-md-3 col-8">Rounded</label>
   <div class="o-switch">
-    <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked autocomplete="off"/>
+    <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
     <label for="checkbox4" class="toggle toggle-rounded col-form-label" aria-hidden="true" style="width: 78px;">
       <span class="on">On</span>
       <span class="off">Off</span>
@@ -1328,13 +1389,13 @@ Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several
 {% capture example %}
 <div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
+    <input type="radio" name="options" id="option1" checked> 1
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> 2
+    <input type="radio" name="options" id="option2"> 2
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3" autocomplete="off"> 3
+    <input type="radio" name="options" id="option3"> 3
   </label>
 </div>
 {% endcapture %}
@@ -1346,11 +1407,11 @@ Replace number by label.
 
 <div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
   <label class="btn btn-secondary doc-label">
-    <input type="radio" name="options3" id="option31" autocomplete="off" checked="">Day</label>
+    <input type="radio" name="options3" id="option31" checked="">Day</label>
   <label class="btn btn-secondary doc-label active">
-    <input type="radio" name="options3" id="option32" autocomplete="off">Week</label>
+    <input type="radio" name="options3" id="option32">Week</label>
   <label class="btn btn-secondary doc-label">
-    <input type="radio" name="options3" id="option33" autocomplete="off">Month</label>
+    <input type="radio" name="options3" id="option33">Month</label>
 </div>
 
 #### without outline
@@ -1360,13 +1421,13 @@ Alternatively, use `.no-outline` class on `.btn-group` element to get the clear 
 {% capture example %}
 <div class="o-switch btn-group btn-group-toggle no-outline" data-toggle="buttons" role="group">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options2" id="option21" autocomplete="off" checked> 1
+    <input type="radio" name="options2" id="option21" checked> 1
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option22" autocomplete="off"> 2
+    <input type="radio" name="options2" id="option22"> 2
   </label>
   <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option23" autocomplete="off"> 3
+    <input type="radio" name="options2" id="option23"> 3
   </label>
 </div>
 {% endcapture %} {% include example.html content=example %}
