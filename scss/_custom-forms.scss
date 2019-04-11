@@ -248,6 +248,14 @@
 .custom-switch {
   padding-left: $custom-switch-width + $custom-control-gutter;
 
+  .custom-control-input {
+    @include focus {
+      ~ .custom-control-label::after {
+        outline: 1px dotted #fff;
+      }
+    }
+  }
+
   .custom-control-label {
     padding-top: .3125rem; // Boosted mod vertical align fix for label
     &::before {
