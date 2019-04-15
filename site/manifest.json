@@ -2,17 +2,24 @@
   "lang": "en",
   "dir": "ltr",
   "name": "Documentation de Boosted",
+  "description": "Orange Boosted is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.3.1",
   "short_name": "Boosted",
   "icons": [
     {
-      "src": "\/docs\/4.3\/assets\/img\/favicons\/android-chrome-192x192.png",
+      "src": "/docs/4.3/assets/img/favicons/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image\/png"
+      "type": "image/png"
+    },
+    {
+      "src": "/docs/4.3/assets/img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "theme_color": "#f16e00",
-  "background_color": "#f16e00",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "natural"
+  "orientation": "natural",
+  "scope": "/"
 }
