@@ -98,14 +98,14 @@ cdn:
   js_bundle_hash:   "sha384-PTPTBfJ3MgmMdr+z7h2p/Jyl1W0v7tz39Di7D/V9/Po3LXF5RQUh7B3zwdlz7YJx"
   jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
   jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  popper_hash:      "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  tablesorter:      "https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.4/js/jquery.tablesorter.min.js"
-  tablesorter_hash: "sha256-eMa5IMxi2DRTBbnBSoK/sTKxDkVo8uqM7jMgKFfMoiU="
-  css_swiper:       "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css"
-  css_swiper_hash:  "sha256-5l8WteQfd84Jq51ydHtcndbGRvgCVE3D0+s97yV4oms="
-  js_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"
-  js_swiper_hash:   "sha256-dl0WVCl8jXMBZfvnMeygnB0+bvqp5wBqqlZ8Wi95lLo="
+  css_swiper:       "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+  css_swiper_hash:  "sha384-K6LrEaceM4QP87RzJ7R4CDXcFN4cFW/A5Q7/fEp/92c2WV+woVw9S9zKDO23sNS+"
+  js_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
+  js_swiper_hash:   "sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"
+  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+  popper_hash:      "sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
+  tablesorter:      "https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"
+  tablesorter_hash: "sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu"
 
 toc:
   min_level:        2
