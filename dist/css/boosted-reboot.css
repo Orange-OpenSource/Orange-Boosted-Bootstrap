@@ -1,15 +1,28 @@
 /*!
- * Boosted Reboot v4.1.1 (https://boosted.orange.com)
+ * Boosted Reboot v4.0.1 (https://boosted.orange.com)
  * Copyright 2014-2018 The Boosted Authors
  * Copyright 2014-2018 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Reboot v4.1.1 (https://getbootstrap.com)
+ * Bootstrap Reboot v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+* Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
+/*
+$custom-file-padding-y:            1rem !default;
+$custom-file-padding-x:            .5rem !default;
+$custom-file-line-height:          1.5 !default;
+$custom-file-color:                $gray-700 !default;
+$custom-file-bg:                   $white !default;
+$custom-file-border-width:         $border-width !default;
+$custom-file-border-color:         $input-border-color !default;
+$custom-file-border-radius:        $border-radius !default;
+$custom-file-box-shadow:           none !default;
+$custom-file-button-color:         $custom-file-color !default;
+$custom-file-button-bg:            $gray-300 !default;
+*/
 *,
 *::before,
 *::after {
@@ -22,14 +35,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 @-ms-viewport {
   width: device-width;
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -173,7 +186,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
