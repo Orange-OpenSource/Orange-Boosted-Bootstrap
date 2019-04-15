@@ -4152,6 +4152,7 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
+  outline: dotted 1px #000;
   box-shadow: none;
 }
 
@@ -4258,6 +4259,10 @@ input[type="button"].btn-block {
 
 .custom-switch {
   padding-right: 4.375rem;
+}
+
+.custom-switch .custom-control-input:focus ~ .custom-control-label::after {
+  outline: 1px dotted #fff;
 }
 
 .custom-switch .custom-control-label {
@@ -5917,7 +5922,7 @@ input[type="button"].btn-block {
 
 .pagination-lg .page-item:first-child .page-link::before,
 .pagination-lg .page-item:last-child .page-link::before {
-  top: 1rem;
+  top: 1.03125rem;
 }
 
 .pagination-sm .page-link {
@@ -5930,7 +5935,7 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-item:first-child .page-link::before,
 .pagination-sm .page-item:last-child .page-link::before {
-  top: auto;
+  top: .53125rem;
 }
 
 .badge {
@@ -7313,7 +7318,7 @@ a.close.disabled {
 .carousel-control-next:focus {
   color: #000;
   text-decoration: none;
-  outline: 0;
+  outline: 2px dotted #000;
   opacity: 0.9;
 }
 
@@ -14261,7 +14266,7 @@ caption {
 
 .carousel-control-prev:focus,
 .carousel-control-next:focus {
-  outline: 1px dotted #000;
+  outline: 2px dotted #000;
   outline-offset: -1px;
 }
 
@@ -14326,6 +14331,12 @@ caption {
   cursor: pointer;
   background-image: none;
   background-size: 0;
+}
+
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: 2px dotted #000;
+  outline-offset: -1px;
 }
 
 .swiper-button-prev::before,
