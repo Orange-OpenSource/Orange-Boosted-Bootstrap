@@ -13,32 +13,20 @@
 
 .page-item:last-child .page-link::before,
 .page-item:first-child .page-link::before,
+.page-item.presentation + .page-item .page-link::before,
 .swiper-button-prev,
 .swiper-button-next,
 .doc-link::after,
 .breadcrumb-item + .breadcrumb-item::before,
-.o-link-arrow::after {
+.o-link-arrow::after,
+.o-link-arrow.back::before {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-
-.accordion .card-header button::after,
-.accordion .card-header a::after {
-  right: 96%;
 }
 
 .alert .alert-icon::after,
 .alert-sm .alert-icon::after {
   right: 2%;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  right: .2385rem;
-}
-
-.o-scroll-up .o-scroll-up-icon,
-.o-scroll-up {
-  right: 87%;
 }
 
 .o-stepbar .stepbar-item::after,
@@ -59,5 +47,14 @@
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   background-position: 2rem;
+}
+
+.o-link-arrow.back::before {
+  padding: 0 .625rem 0 0;
+}
+
+.popover {
+  right: auto;
+  left: 0;
 }
 /*# sourceMappingURL=o-rtl.css.map */

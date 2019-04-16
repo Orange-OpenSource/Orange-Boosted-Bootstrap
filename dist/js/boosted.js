@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.0 (https://boosted.orange.com)
+  * Boosted v4.3.1 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v4.3.0 (https://boosted.orange.com)
+  * Bootstrap v4.3.1 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -75,7 +75,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.0): util.js
+   * Bootstrap (v4.3.1): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -235,7 +235,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.3.0';
+  var VERSION = '4.3.1';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -400,7 +400,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.3.0';
+  var VERSION$1 = '4.3.1';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -440,46 +440,28 @@
 
     // Public
     _proto.toggle = function toggle() {
-      var triggerChangeEvent = true;
-      var addAriaPressed = true;
       var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
 
+      var input = this._element.querySelector(Selector$1.INPUT);
+
       if (rootElement) {
-        var input = this._element.querySelector(Selector$1.INPUT);
+        var activeElement = rootElement.querySelector(Selector$1.ACTIVE);
 
-        if (input) {
-          if (input.type === 'radio') {
-            if (input.checked && this._element.classList.contains(ClassName$1.ACTIVE)) {
-              triggerChangeEvent = false;
-            } else {
-              var activeElement = rootElement.querySelector(Selector$1.ACTIVE);
-
-              if (activeElement) {
-                $(activeElement).removeClass(ClassName$1.ACTIVE);
-              }
-            }
-          }
-
-          if (triggerChangeEvent) {
-            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
-              return;
-            }
-
-            input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
-            $(input).trigger('change');
-          }
-
-          input.focus();
-          addAriaPressed = false;
+        if (activeElement) {
+          activeElement.classList.remove(ClassName$1.ACTIVE);
         }
       }
 
-      if (addAriaPressed) {
-        this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
-      }
+      if (input) {
+        if (input.checked) {
+          this._element.classList.add(ClassName$1.ACTIVE);
+        } else {
+          this._element.classList.remove(ClassName$1.ACTIVE);
+        }
+      } else {
+        this._element.classList.toggle(ClassName$1.ACTIVE);
 
-      if (triggerChangeEvent) {
-        $(this._element).toggleClass(ClassName$1.ACTIVE);
+        this._element.setAttribute('aria-pressed', this._element.classList.contains(ClassName$1.ACTIVE));
       }
     };
 
@@ -521,7 +503,6 @@
 
 
   $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    event.preventDefault();
     var button = event.target;
 
     if (!$(button).hasClass(ClassName$1.BUTTON)) {
@@ -531,7 +512,16 @@
     Button._jQueryInterface.call($(button), 'toggle');
   }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector$1.BUTTON)[0];
-    $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+
+    if (button) {
+      $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+    }
+  }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT > Selector$1.INPUT, function (event) {
+    var button = $(event.target).closest(Selector$1.BUTTON)[0];
+
+    if (button) {
+      $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+    }
   });
   /**
    * ------------------------------------------------------------------------
@@ -554,7 +544,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.3.0';
+  var VERSION$2 = '4.3.1';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -1154,7 +1144,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.3.0';
+  var VERSION$3 = '4.3.1';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -1530,7 +1520,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.3.0';
+  var VERSION$4 = '4.3.1';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -2088,7 +2078,7 @@
    */
 
   var NAME$5 = 'megamenu';
-  var VERSION$5 = '4.3.0';
+  var VERSION$5 = '4.3.1';
   var DATA_KEY$5 = 'bs.megamenu';
   var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
   var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
@@ -2473,7 +2463,7 @@
    */
 
   var NAME$6 = 'modal';
-  var VERSION$6 = '4.3.0';
+  var VERSION$6 = '4.3.1';
   var DATA_KEY$6 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$6;
   var DATA_API_KEY$5 = '.data-api';
@@ -3026,7 +3016,7 @@
    */
 
   var NAME$7 = 'navbar';
-  var VERSION$7 = '4.3.0';
+  var VERSION$7 = '4.3.1';
   var DATA_KEY$7 = 'bs.navbar';
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var BREAKPOINT = 768;
@@ -3167,7 +3157,7 @@
    */
 
   var NAME$8 = 'otab';
-  var VERSION$8 = '4.2.2';
+  var VERSION$8 = '4.3.1';
   var DATA_KEY$8 = 'bs.otab';
   var EVENT_KEY$6 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -3314,18 +3304,140 @@
   };
 
   /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v4.3.1): tools/sanitizer.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  var uriAttrs = ['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'];
+  var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
+  var DefaultWhitelist = {
+    // Global attributes allowed on any supplied element below.
+    '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
+    a: ['target', 'href', 'title', 'rel'],
+    area: [],
+    b: [],
+    br: [],
+    col: [],
+    code: [],
+    div: [],
+    em: [],
+    hr: [],
+    h1: [],
+    h2: [],
+    h3: [],
+    h4: [],
+    h5: [],
+    h6: [],
+    i: [],
+    img: ['src', 'alt', 'title', 'width', 'height'],
+    li: [],
+    ol: [],
+    p: [],
+    pre: [],
+    s: [],
+    small: [],
+    span: [],
+    sub: [],
+    sup: [],
+    strong: [],
+    u: [],
+    ul: []
+    /**
+     * A pattern that recognizes a commonly useful subset of URLs that are safe.
+     *
+     * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+     */
+
+  };
+  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+  /**
+   * A pattern that matches safe data URLs. Only matches image, video and audio types.
+   *
+   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   */
+
+  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
+
+  function allowedAttribute(attr, allowedAttributeList) {
+    var attrName = attr.nodeName.toLowerCase();
+
+    if (allowedAttributeList.indexOf(attrName) !== -1) {
+      if (uriAttrs.indexOf(attrName) !== -1) {
+        return Boolean(attr.nodeValue.match(SAFE_URL_PATTERN) || attr.nodeValue.match(DATA_URL_PATTERN));
+      }
+
+      return true;
+    }
+
+    var regExp = allowedAttributeList.filter(function (attrRegex) {
+      return attrRegex instanceof RegExp;
+    }); // Check if a regular expression validates the attribute.
+
+    for (var i = 0, l = regExp.length; i < l; i++) {
+      if (attrName.match(regExp[i])) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  function sanitizeHtml(unsafeHtml, whiteList, sanitizeFn) {
+    if (unsafeHtml.length === 0) {
+      return unsafeHtml;
+    }
+
+    if (sanitizeFn && typeof sanitizeFn === 'function') {
+      return sanitizeFn(unsafeHtml);
+    }
+
+    var domParser = new window.DOMParser();
+    var createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
+    var whitelistKeys = Object.keys(whiteList);
+    var elements = [].slice.call(createdDocument.body.querySelectorAll('*'));
+
+    var _loop = function _loop(i, len) {
+      var el = elements[i];
+      var elName = el.nodeName.toLowerCase();
+
+      if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
+        el.parentNode.removeChild(el);
+        return "continue";
+      }
+
+      var attributeList = [].slice.call(el.attributes);
+      var whitelistedAttributes = [].concat(whiteList['*'] || [], whiteList[elName] || []);
+      attributeList.forEach(function (attr) {
+        if (!allowedAttribute(attr, whitelistedAttributes)) {
+          el.removeAttribute(attr.nodeName);
+        }
+      });
+    };
+
+    for (var i = 0, len = elements.length; i < len; i++) {
+      var _ret = _loop(i, len);
+
+      if (_ret === "continue") continue;
+    }
+
+    return createdDocument.body.innerHTML;
+  }
+
+  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
   var NAME$9 = 'tooltip';
-  var VERSION$9 = '4.3.0';
+  var VERSION$9 = '4.3.1';
   var DATA_KEY$9 = 'bs.tooltip';
   var EVENT_KEY$7 = "." + DATA_KEY$9;
   var JQUERY_NO_CONFLICT$9 = $.fn[NAME$9];
   var CLASS_PREFIX = 'bs-tooltip';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
   var DefaultType$5 = {
     animation: 'boolean',
     template: 'string',
@@ -3338,7 +3450,10 @@
     offset: '(number|string|function)',
     container: '(string|element|boolean)',
     fallbackPlacement: '(string|array)',
-    boundary: '(string|element)'
+    boundary: '(string|element)',
+    sanitize: 'boolean',
+    sanitizeFn: '(null|function)',
+    whiteList: 'object'
   };
   var AttachmentMap$1 = {
     AUTO: 'auto',
@@ -3359,7 +3474,10 @@
     offset: 0,
     container: false,
     fallbackPlacement: 'flip',
-    boundary: 'scrollParent'
+    boundary: 'scrollParent',
+    sanitize: true,
+    sanitizeFn: null,
+    whiteList: DefaultWhitelist
   };
   var HoverState = {
     SHOW: 'show',
@@ -3526,7 +3644,7 @@
           $(tip).addClass(ClassName$8.FADE);
         }
 
-        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
+        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement; // boosted mod fix rtl
 
         var attachment = this._getAttachment(placement);
 
@@ -3540,7 +3658,21 @@
           $(tip).appendTo(container);
         }
 
-        $(this.element).trigger(this.constructor.Event.INSERTED);
+        $(this.element).trigger(this.constructor.Event.INSERTED); // boosted mod fix rtl
+
+        var dir = document.getElementsByTagName('html')[0].dir;
+
+        if (dir === 'rtl') {
+          var hash = {
+            right: 'left',
+            left: 'right'
+          };
+          attachment = attachment.replace(/right|left/g, function (matched) {
+            return hash[matched];
+          });
+        } // end mod
+
+
         this._popper = new Popper(this.element, tip, {
           placement: attachment,
           modifiers: {
@@ -3676,19 +3808,27 @@
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
-      var html = this.config.html;
-
       if (typeof content === 'object' && (content.nodeType || content.jquery)) {
         // Content is a DOM node or a jQuery
-        if (html) {
+        if (this.config.html) {
           if (!$(content).parent().is($element)) {
             $element.empty().append(content);
           }
         } else {
           $element.text($(content).text());
         }
+
+        return;
+      }
+
+      if (this.config.html) {
+        if (this.config.sanitize) {
+          content = sanitizeHtml(content, this.config.whiteList, this.config.sanitizeFn);
+        }
+
+        $element.html(content);
       } else {
-        $element[html ? 'html' : 'text'](content);
+        $element.text(content);
       }
     };
 
@@ -3856,7 +3996,13 @@
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, this.constructor.Default, $(this.element).data(), typeof config === 'object' && config ? config : {});
+      var dataAttributes = $(this.element).data();
+      Object.keys(dataAttributes).forEach(function (dataAttr) {
+        if (DISALLOWED_ATTRIBUTES.indexOf(dataAttr) !== -1) {
+          delete dataAttributes[dataAttr];
+        }
+      });
+      config = _objectSpread({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -3874,6 +4020,11 @@
       }
 
       Util.typeCheckConfig(NAME$9, config, this.constructor.DefaultType);
+
+      if (config.sanitize) {
+        config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
+      }
+
       return config;
     };
 
@@ -4011,7 +4162,7 @@
    */
 
   var NAME$a = 'popover';
-  var VERSION$a = '4.3.0';
+  var VERSION$a = '4.3.1';
   var DATA_KEY$a = 'bs.popover';
   var EVENT_KEY$8 = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
@@ -4198,7 +4349,7 @@
    */
 
   var NAME$b = 'prioritynav';
-  var VERSION$b = '4.3.0';
+  var VERSION$b = '4.3.1';
   var DATA_KEY$b = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT$b = $.fn[NAME$b];
   var RESIZE_DURATION = 500;
@@ -4404,7 +4555,7 @@
    */
 
   var NAME$c = 'scrollup';
-  var VERSION$c = '4.3.0';
+  var VERSION$c = '4.3.1';
   var DATA_KEY$c = 'bs.scrollup';
   var EVENT_KEY$9 = "." + DATA_KEY$c;
   var DATA_API_KEY$7 = '.data-api';
@@ -4543,7 +4694,7 @@
    */
 
   var NAME$d = 'scrollspy';
-  var VERSION$d = '4.3.0';
+  var VERSION$d = '4.3.1';
   var DATA_KEY$d = 'bs.scrollspy';
   var EVENT_KEY$a = "." + DATA_KEY$d;
   var DATA_API_KEY$8 = '.data-api';
@@ -4850,7 +5001,7 @@
    */
 
   var NAME$e = 'tab';
-  var VERSION$e = '4.3.0';
+  var VERSION$e = '4.3.1';
   var DATA_KEY$e = 'bs.tab';
   var EVENT_KEY$b = "." + DATA_KEY$e;
   var DATA_API_KEY$9 = '.data-api';
@@ -5225,7 +5376,7 @@
    */
 
   var NAME$f = 'toast';
-  var VERSION$f = '4.3.0';
+  var VERSION$f = '4.3.1';
   var DATA_KEY$f = 'bs.toast';
   var EVENT_KEY$c = "." + DATA_KEY$f;
   var JQUERY_NO_CONFLICT$f = $.fn[NAME$f];
@@ -5435,7 +5586,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.0): index.js
+   * Bootstrap (v4.3.1): index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
