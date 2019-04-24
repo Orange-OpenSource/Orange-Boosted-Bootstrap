@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Boosted Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
+        <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../dist/css/boosted.css" />
+        <link rel="stylesheet" href="css/bundle.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <main class="container-fluid">
+            <h1>Work in progress</h1>
+
+            <h2>test new hide-accessibility solution</h2>
+            <div>
+                Testing solution from <a href="https://zellwk.com/blog/hide-content-accessibly/">Zell Liew Blog</a>
+            </div>
+            <div>       
+                <code>
+                .hide-accessibly {
+                    position: absolute !important; 
+                    opacity: 0; 
+                    pointer-events: none;
+                }
+                </code>
+            </div>
+            <div class="test">
+            <br>a big div to test body overflow<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <span class="hide-accessibly">Text for screen reader</span>
+            </div>
+
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+        </script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/boosted.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

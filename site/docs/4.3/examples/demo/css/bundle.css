@@ -301,4 +301,22 @@ details[open] summary::after {
 details:last-child {
   border-bottom: 1px solid #ccc;
 }
+
+.test {
+  width: 400px;
+  height: 50vh;
+  overflow: auto;
+  background-color: #4bb4e6;
+}
+
+.hide-accessibly {
+  position: absolute !important;
+  pointer-events: none;
+  opacity: 0;
+}
+.hide-accessibly-zindex {
+  position: absolute !important;
+  z-index: -999;
+  opacity: 0;
+}
 /* stylelint-enable */
