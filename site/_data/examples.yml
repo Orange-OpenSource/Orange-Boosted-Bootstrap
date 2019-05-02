@@ -1,12 +1,3 @@
-- category: Orange modules
-  description: "Orange brand atomic modules."
-  examples:
-    - name: "Product details"
-      description: "Layout for desktop and mobile shop."
-    - name: "Quick links"
-      description: "Icon, text and description links"
-    - name: "Content panel"
-      description: "Panel display sample"
 - category: Orange brand
   description: "Orange brand sample pages."
   examples:
