@@ -106,3 +106,7 @@
 @function alert-logo-size($key: "md") {
   @return map-get($alert-logo-sizes, $key);
 }
+
+@function o-navbar-count-size($key: "single") {
+  @return map-get($o-navbar-count-sizes, $key);
+}
