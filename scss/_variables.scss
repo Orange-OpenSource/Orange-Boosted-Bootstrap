@@ -93,7 +93,6 @@ $theme-colors: map-merge(
 );
 
 //boosted mod
-$o-navbar-count-sizes:() !default;
 $alert-logo-sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $alert-logo-sizes: map-merge(
@@ -105,6 +104,8 @@ $alert-logo-sizes: map-merge(
   $alert-logo-sizes
 );
 
+$o-navbar-count-sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
 $o-navbar-count-sizes: map-merge(
   (
     "single":1.25rem,
