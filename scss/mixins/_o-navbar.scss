@@ -1,0 +1,11 @@
+@mixin display($background, $border, $color) {
+  z-index: 1;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  background: #5779e5;
+  border-radius: 100%;
+}

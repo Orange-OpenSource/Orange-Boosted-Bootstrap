@@ -2807,7 +2807,7 @@
 
 .svg-arrow-previous:hover,
 .svg-arrow-previous:focus,
-.svg-arrow-previous:active, {
+.svg-arrow-previous:active {
   @include svg-arrow-previous("#fff");
 }
 
