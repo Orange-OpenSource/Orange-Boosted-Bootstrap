@@ -468,7 +468,7 @@
       }
     }
   }
-// Boosted mod
+  // Boosted mod
   @each $size, $value in $o-navbar-count-sizes {
     .display-#{$size} {
       left: .9rem;
