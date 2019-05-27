@@ -2728,6 +2728,8 @@
 .svg-settings,
 .svg-search,
 .svg-avatar,
+.svg-mail,
+.svg-person,
 .svg-buy {
   position: relative;
 }
@@ -2742,6 +2744,8 @@
 .svg-settings::after,
 .svg-search::after,
 .svg-avatar::after,
+.svg-mail::after,
+.svg-person::after,
 .svg-buy::after,
 .svg-success::after,
 .svg-warning::after,
@@ -2843,6 +2847,19 @@
 .svg-avatar:hover,
 .svg-avatar:active {
   @include svg-avatar(theme-color("primary"));
+}
+
+.svg-mail {
+  @include svg-mail("#000", "#fff");
+}
+
+.svg-mail:hover,
+.svg-mail:active {
+  @include svg-mail("#000",theme-color("primary"));
+}
+
+.svg-person {
+  @include svg-person();
 }
 
 .svg-buy {

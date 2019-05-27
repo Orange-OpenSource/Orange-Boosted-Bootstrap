@@ -471,21 +471,20 @@
 
   @each $size, $value in $o-navbar-count-sizes {
     .display-#{$size} {
+      display: inline-block;
       width: o-navbar-count-size($size);
       height: 1.25rem;
-      display: inline-block;
       left: .9rem;
-      background: $blue;
       line-height: o-navbar-count-size("single");
-      text-align: center;
+      background: $blue;
+      z-index: 1;
       color: $white;
+      text-align: center;
       @if($size == "single") {
         border-radius: 100%;
       } @else {
-        border-radius: 80%/100%;
+        border-radius: 80% / 100%;
       }
-      
-      z-index: 1;
     }
   }
 }
