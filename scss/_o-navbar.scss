@@ -247,6 +247,7 @@
     .input-group {
       .form-control,
       .input-group-append {
+        color: #fff !important; /* stylelint-disable-line declaration-no-important */
         background-color: #000 !important; /* stylelint-disable-line declaration-no-important */
         border: 2px solid $gray-800 !important; /* stylelint-disable-line declaration-no-important */
       }
