@@ -241,3 +241,28 @@
     align-self: center;
   }
 }
+
+.navbar-nav {
+  .nav-item {
+    .input-group {
+      .form-control, .input-group-append {
+        background-color: #000 !important;
+        border: 2px solid $gray-800 !important,
+      }
+      .form-control {
+        border-right: none !important;
+      }
+      .input-group-append {
+        border-left: none !important;
+        .nav-link.icon {
+          &[class*="svg-"],
+          &[class*="svg-"]::after {
+          width: 1.25rem !important;
+          height: 1.25rem !important;
+          margin:auto !important;
+        }
+        }
+      }
+    }
+  }
+}
