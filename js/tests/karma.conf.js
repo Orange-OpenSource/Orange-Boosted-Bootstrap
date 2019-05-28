@@ -42,7 +42,11 @@ const detectBrowsers = {
 const customLaunchers = {
   FirefoxHeadless: {
     base: 'Firefox',
-    flags: ['-headless']
+    flags: ['--headless']
+  },
+  ChromeHeadless: {
+    base: 'ChromeHeadless',
+    flags: ['--headless']
   }
 }
 
