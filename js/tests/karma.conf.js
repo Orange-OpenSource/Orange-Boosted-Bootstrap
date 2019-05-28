@@ -45,7 +45,7 @@ const customLaunchers = {
     flags: ['--headless']
   },
   ChromeHeadless: {
-    base: 'ChromeHeadless',
+    base: 'Chrome',
     flags: ['--headless']
   }
 }

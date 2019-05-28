@@ -100,42 +100,44 @@ This navbar is visible only on desktop view.
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.below` class in you navbar declaration.
 
 {% capture example %}
-<nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
-        <a href="#" class="navbar-title">Design</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2">
-            <ul class="navbar-nav"></ul>
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <a href="#" class="nav-link icon svg-search">
-                            <span class="sr-only">search bar</span>
-                        </a>
+<header role="banner" id="demo-navbar-below">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+            <a href="#" class="navbar-title">Design</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2">
+                <ul class="navbar-nav"></ul>
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <a href="#" class="nav-link icon svg-search">
+                                <span class="sr-only">search bar</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<nav class="navbar navbar-dark bg-dark navbar-expand-md below">
-    <div class="container">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" >Guidelines</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Libraries</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">How to's</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Case studies</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Articles</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md below">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" >Guidelines</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Libraries</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">How to's</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Case studies</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Articles</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 {% endcapture %} {% include example.html content=example %}
 
 A supra or below bar should never be used on its own and always be included in header and with the regular navbar.
