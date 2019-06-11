@@ -113,7 +113,7 @@ Another navigation can be added on top of orange navbar, it is called supar bar.
                 <ul class="navbar-nav">
                 <li class="nav-item">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username">
                         <div class="input-group-append">
                             <a href="#" class="nav-link icon svg-search">
                                 <span class="sr-only">search bar</span>
@@ -178,10 +178,10 @@ A supra or below bar should never be used on its own and always be included in h
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar6" aria-controls="collapsing-navbar6" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2">
+            <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar6">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
