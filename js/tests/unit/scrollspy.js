@@ -604,7 +604,7 @@ $(function () {
 
     var testElementIsActiveAfterScroll = function (element, target) {
       var deferred = $.Deferred()
-      var scrollHeight = Math.ceil($content.scrollTop() + $(target).position().top)
+      var scrollHeight = Math.ceil($content.scrollTop() + $(target).position().top + 1)
       $content.one('scroll', function () {
         assert.ok($(element).hasClass('active'), 'target:' + target + ', element: ' + element)
         deferred.resolve()
