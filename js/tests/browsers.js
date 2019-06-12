@@ -68,7 +68,7 @@ const browsers = {
   pixel2: {
     base: 'BrowserStack',
     os: 'android',
-    os_version: '8.0',
+    os_version: '8.1',
     device: 'Google Pixel 2',
     real_mobile: true
   }
