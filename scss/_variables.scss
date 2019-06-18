@@ -104,18 +104,6 @@ $alert-logo-sizes: map-merge(
   $alert-logo-sizes
 );
 
-$o-navbar-count-sizes: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$o-navbar-count-sizes: map-merge(
-  (
-    "single":1.25rem,
-    "double":1.875rem,
-    "tripple":2.1875rem
-  ),
-  $o-navbar-count-sizes
-);
-// end mod
-
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 

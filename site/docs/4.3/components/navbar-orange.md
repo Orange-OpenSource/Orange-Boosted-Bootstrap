@@ -57,7 +57,6 @@ In addition to this `.active` class to show the current page in the navbar, you 
 ## Supra bar
 
 Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar declaration.
-When using `sup` html tag for notification number, you have to use `display-single` class for a single number or `display-double` otherwise.
 {% capture callout %}
 This navbar is visible only on desktop view.
 {% endcapture %}
@@ -73,9 +72,9 @@ This navbar is visible only on desktop view.
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                    <a href="#" class="nav-link icon svg-buy">
+                <a href="#" class="nav-link icon svg-buy">
                     <span class="sr-only">basket</span>
-                    <sup class="display-single">5</sup>
+                    <sup class="badge badge-info rounded-pill px-1 border border-bottom-0 border-info">5</sup>
                 </a>
             </li>
             <li class="nav-item">
@@ -155,9 +154,9 @@ A supra or below bar should never be used on its own and always be included in h
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                        <a href="#" class="nav-link icon svg-buy">
+                    <a href="#" class="nav-link icon svg-buy">
                         <span class="sr-only">basket</span>
-                        <sup class="display-single">5</sup>
+                        <sup class="badge badge-info rounded-pill px-1 border border-bottom-0 border-info">5</sup>
                     </a>
                 </li>
                 <li class="nav-item">

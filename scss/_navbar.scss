@@ -468,23 +468,4 @@
       }
     }
   }
-  // Boosted mod
-  @each $size, $value in $o-navbar-count-sizes {
-    .display-#{$size} {
-      left: .9rem;
-      z-index: 1;
-      display: inline-block;
-      width: o-navbar-count-size($size);
-      height: 1.25rem;
-      line-height: o-navbar-count-size("single");
-      color: $white;
-      text-align: center;
-      background: $blue;
-      @if ($size == "single") {
-        border-radius: 100%;
-      } @else {
-        border-radius: 80% / 100%;
-      }
-    }
-  }
 }
