@@ -46,6 +46,7 @@ Change the border color using utilities built on our theme colors.
 {% for color in site.data.theme-colors %}
 <span class="border border-{{ color.name }}"></span>{% endfor %}
 <span class="border border-white"></span>
+<span class="border border-muted"></span>
 {% endcapture %}
 {% include example.html content=example %}
 </div>

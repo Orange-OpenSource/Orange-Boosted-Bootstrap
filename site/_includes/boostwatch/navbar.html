@@ -171,18 +171,13 @@
                 <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
             </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username">
-                        <div class="input-group-append">
-                            <a href="#" class="nav-link icon svg-search">
-                                <span class="sr-only">search bar</span>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <form class="form-inline" role="search">
+                <input type="search" class="form-control bg-dark border-right-0 border-muted" placeholder="Search" aria-label="Search">
+                <button class="btn btn-inverse btn-dark border-left-0 border-muted align-self-stretch d-flex pl-0 pr-4" type="submit">
+                  <span class="icon svg-search" aria-hidden="true"></span>
+                  <span class="sr-only">Search</span>
+                </button>
+            </form>
         </div>
     </div>
 </nav>

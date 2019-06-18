@@ -63,7 +63,7 @@ label {
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
   &[readonly] {
-    color: #666; // boosted mod
+    color: $text-muted; // boosted mod
     background-color: $input-disabled-bg;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
