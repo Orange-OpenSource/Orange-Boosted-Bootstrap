@@ -21,6 +21,12 @@
       width: 1.875rem;
       height: 1.875rem;
     }
+
+    .badge {
+      left: 50%;
+      z-index: 1;
+      font-size: .75rem;
+    }
   }
 
   .nav-link:not(.icon)[class*="svg-"]::after {
@@ -232,6 +238,17 @@
         }
       }
     }
+  }
+}
+
+.navbar-title {
+  &.h2 {
+    line-height: .925;
+  }
+
+  &.display-3,
+  &.display-4 {
+    line-height: 1;
   }
 }
 
