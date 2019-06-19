@@ -33,15 +33,14 @@
 }
 
 .alert .alert-icon::after,
-.alert-sm .alert-icon::after, {
+.alert-sm .alert-icon::after {
   right: 2%;
 }
 
 .o-stepbar .stepbar-item::after,
 .page-item:last-child .page-link::before,
 .o-stepbar .stepbar-item.current::after,
-.o-stepbar .stepbar-item.done::after
- {
+.o-stepbar .stepbar-item.done::after {
   right: unset;
 }
 
