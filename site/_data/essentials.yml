@@ -7,3 +7,5 @@
       description: "Icon, text and description links"
     - name: "Content panel"
       description: "Panel display sample"
+    - name: "Global headers"
+      description: "Header variants including multiple navbars"
