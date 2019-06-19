@@ -15,126 +15,103 @@
   <h1 class="ml-3 mb-0">Module 004 — Global headers</h1>
 </header>
 
-<main class="container">
-  <h2 id="navbar">Navbar</h2>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container">
-      <a class="navbar-brand" href="#"><img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu3">Dropdown</a>
-            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
-              <a href="#" role="menuitem" class="dropdown-item">Action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu4">Dropdown</a>
-            <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu4">
-              <a href="#" role="menuitem" class="dropdown-item">Action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <h3 class="mt-5">without logo</h3>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container">
-      <a class="navbar-brand" href="#"><span>Navbar brand</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu5">Dropdown</a>
-            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu5">
-              <a href="#" role="menuitem" class="dropdown-item">Action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="dropdownMenu6">Dropdown</a>
-            <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu6">
-              <a href="#" role="menuitem" class="dropdown-item">Action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Another action</a>
-              <a href="#" role="menuitem" class="dropdown-item">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" role="menuitem" class="dropdown-item">Separated link</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <h3 class="mt-5">Supra bar With Icons authenticated</h3>
+<main class="mb-5">
+  <div class="container">
+    <h2 id="suprabar">Supra bar</h2>
+    
+    <h3 class="mt-5">Supra bar standard</h3>
+  </div>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
     <div class="container">
       <ul class="navbar-nav">
-        <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
+        <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Personal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h3 class="mt-5">Supra bar with language options</h3>
+  </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Personal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="#" aria-label="English version">EN</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="Version française" lang="fr" hreflang="fr">FR</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h3 class="mt-5">Supra bar with icons</h3>
+  </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Personal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link icon svg-buy">
-            <span class="sr-only">Basket</span>
-            <sup class="badge badge-info rounded-pill px-1 border border-info">5</sup>
+          <a href="#" class="nav-link mx-3 icon svg-mail">
+            <span class="sr-only">Mail</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link icon svg-avatar">
-            <span class="sr-only">My account</span>
+          <a href="#" class="nav-link mx-3 icon svg-buy">
+            <span class="sr-only">Basket</span>
           </a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a class="dropdown-item" href="#" aria-label="Version française" lang="fr" hreflang=fr>FR</a></li>
-            <li><a class="dropdown-item" href="#" aria-label="Version en español" lang="es" hreflang="es">ES</a></li>
-          </ul>
+        <li class="nav-item">
+          <a href="#" class="nav-link mx-3 icon svg-avatar">
+            <span class="sr-only">My account</span>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
-  <h3 class="mt-5">Global header with additional icons authenticated</h3>
+  
+  <div class="container">
+    <h3 class="mt-5">Supra bar with icons authenticated</h3>
+  </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Personal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link mx-3 icon svg-mail">
+            <span class="sr-only">Mail</span>
+            <sup class="badge badge-info rounded-pill px-1 border border-info">25</sup>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link mx-3 icon svg-buy">
+            <span class="sr-only">Basket</span>
+            <sup class="badge badge-info rounded-pill px-1 border border-info">3</sup>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link mx-3 icon svg-avatar">
+            <span class="sr-only">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h2 id="navbar" class="mt-5">Navbar</h2>
+    
+    <h3 class="mt-5">Global header with additional icons</h3>
+  </div>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
@@ -145,8 +122,50 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-search">
+              <span class="sr-only">Search bar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-mail">
+              <span class="sr-only">Email</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-buy">
+              <span class="sr-only">Basket</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-avatar">
+              <span class="sr-only">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h3 class="mt-5">Global header with additional icons authenticated</h3>
+  </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar10" aria-controls="collapsing-navbar10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar10">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -175,7 +194,54 @@
       </div>
     </div>
   </nav>
-  <h3 class="mt-5">Global header with navigation and search box</h3>
+  
+  <div class="container">
+    <h3 class="mt-5">Global header minimised with additional icons authenticated</h3>
+  </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md minimized">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar7" aria-controls="collapsing-navbar7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar7">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-search">
+              <span class="sr-only">Search bar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-mail">
+              <span class="sr-only">Email</span>
+              <sup class="badge badge-info rounded-pill px-1 border border-info">25</sup>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-buy">
+              <span class="sr-only">Basket</span>
+              <sup class="badge badge-info rounded-pill px-1 border border-info">5</sup>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link mx-3 icon svg-person">
+              <span class="sr-only">My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h3 class="mt-5">Global header with navigation and search box</h3>
+  </div>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
@@ -186,9 +252,10 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
         </ul>
+        <!-- @todo Dark form -->
         <form class="form-inline" role="search">
           <input type="search" class="form-control bg-dark border-right-0 border-muted" placeholder="Search" aria-label="Search">
           <button class="btn btn-inverse btn-dark border-left-0 border-muted align-self-stretch d-flex pl-0 pr-4" type="submit">
@@ -199,18 +266,55 @@
       </div>
     </div>
   </nav>
-  <h3 class="mt-5">Global header with title, navigation below and icons</h3>
-  <header role="banner" id="demo-navbar">
+  
+  <div class="container">
+    <h3 class="mt-5">Global header with title, navigation and icons</h3>
+  </div>
+  <header>
     <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
-        <a href="#" class="navbar-title ml-2 pl-1">Design</a>
+        <a href="#" class="navbar-title  display-4 text-white mt-auto ml-2 pl-1">Design</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar6" aria-controls="collapsing-navbar6" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar6">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Guidelines</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Libraries</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">How to’s</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-search">
+                <span class="sr-only">Search bar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-avatar">
+                <span class="sr-only">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h3 class="mt-5">Global header with title, navigation below and icons</h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a href="#" class="navbar-title display-4 text-white mt-auto ml-2 pl-1">Design</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar5" aria-controls="collapsing-navbar5" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar5">
-          <ul class="navbar-nav"></ul>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a href="#" class="nav-link mx-3 icon svg-search">
                 <span class="sr-only">Search bar</span>
@@ -228,18 +332,171 @@
     <nav class="o-nav-local inverse">
       <div class="container">
         <ul class="nav">
-          <li class="nav-item"><a href="#" class="nav-link">Guidelines</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Libraries</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">How to's</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Case studies</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Articles</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Guidelines</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Libraries</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">How to's</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Case studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
         </ul>
       </div>
     </nav>
   </header>
-
-
+  
+  <div class="container">
+    <h3 class="mt-5">Global header with title on two lines, navigation and icons</h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a href="#" class="navbar-title h2 text-white mt-auto mb-0 ml-2 pl-1">Orange Labs<br>Prime Zone</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar8" aria-controls="collapsing-navbar8" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar8">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Partners</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-search">
+                <span class="sr-only">Search bar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-avatar">
+                <span class="sr-only">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h3 class="mt-5">OBS global header with navigation and icons</h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a href="#" class="navbar-title h5 text-white mt-auto mb-0">Business<br>Services</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar9" aria-controls="collapsing-navbar9" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar9">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Industries</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          </ul>
+          <ul class="navbar-nav ml-3">
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-search">
+                <span class="sr-only">Search bar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-avatar">
+                <span class="sr-only">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h3 class="mt-5">OBS global header with title, navigation below and icons</h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a href="#" class="navbar-title display-4 text-white mt-auto mb-0 ml-2 pl-1">Orange Business Services Flexible Engine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar11" aria-controls="collapsing-navbar11" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar11">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-search">
+                <span class="sr-only">Search bar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-avatar">
+                <span class="sr-only">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="o-nav-local inverse">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Industries</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h3 class="mt-5">OBS global header with title on two lines, navigation below and icons</h3>
+  </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a href="#" class="navbar-title h2 text-white mt-auto mb-0 ml-2 pl-1">Orange Business Services<br>Flexible Engine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar12">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-search">
+                <span class="sr-only">Search bar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link mx-3 icon svg-avatar">
+                <span class="sr-only">My account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="o-nav-local inverse">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Industries</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
 </main>
 
