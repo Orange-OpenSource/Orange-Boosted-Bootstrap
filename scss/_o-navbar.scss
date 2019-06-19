@@ -254,14 +254,3 @@
   font-size: 2.35rem;
   color: #fff;
 }
-
-.below {
-  border-top: 1px solid #333;
-  .container {
-    .navbar-nav {
-      a:first-child {
-        color: #fff !important; /* stylelint-disable-line declaration-no-important */
-      }
-    }
-  }
-}
