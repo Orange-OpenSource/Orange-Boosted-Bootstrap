@@ -127,7 +127,7 @@
     "hammer-simulator": "0.0.1",
     "http-server": "^0.11.1",
     "ip": "^1.1.5",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "karma": "^4.0.1",
     "karma-browserstack-launcher": "^1.5.0",
     "karma-chrome-launcher": "^2.2.0",
