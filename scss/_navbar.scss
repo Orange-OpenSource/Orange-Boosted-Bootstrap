@@ -268,6 +268,11 @@
         //   padding-right: 0;
         //   padding-left: 0;
         // }
+        .navbar-brand {
+          img {
+            margin-bottom: 0;
+          }
+        }
         // boosted mod
       }
 
@@ -287,14 +292,17 @@
         }
 
         &.minimized {
-          padding-top: $navbar-expanded-minimized-padding-y;
-          padding-bottom: 1rem;
+          padding-top: $navbar-expanded-minimized-padding-top;
+          padding-bottom: $navbar-expanded-minimized-padding-bottom;
 
           .navbar-brand {
             img {
               width: $navbar-brand-logo-minimized-height;
               height: $navbar-brand-logo-minimized-height;
             }
+          }
+          .navbar-nav {
+            margin-top: 0;
           }
         }
         // end mod
@@ -347,7 +355,7 @@
         }
 
         .navbar-collapse {
-          display: flex !important; // stylelint-disable-line declaration-no-important
+          display: flex; // Boosted mod remove important it's useless
 
           // Changes flex-bases to auto because of an IE10 bug
           flex-basis: auto;

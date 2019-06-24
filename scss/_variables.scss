@@ -785,14 +785,15 @@ $navbar-padding-y:                  0 !default;
 $navbar-padding-x:                  0 !default;
 $navbar-expanded-padding-y:         1.5625rem !default;
 $navbar-expanded-padding-x:         0 !default;
-$navbar-expanded-minimized-padding-y: 1.25rem !default;
+$navbar-expanded-minimized-padding-top: .9375rem !default;
+$navbar-expanded-minimized-padding-bottom: .6875rem !default;
 
 // Boosted mod
 // adapt navbar padding when mobile view
 // $navbar-height:                     6.25rem !default;
 $navbar-brand-logo-height:          1.875rem !default;
 $navbar-brand-logo-expanded-height: 3.125rem !default;
-$navbar-brand-logo-minimized-height: 2.5rem !default;
+$navbar-brand-logo-minimized-height: 1.875rem !default;
 $navbar-supra-height:               2.5rem !default;
 // end mod
 

@@ -20,6 +20,10 @@
     &[class*="svg-"]::after {
       width: 1.875rem;
       height: 1.875rem;
+      @include media-breakpoint-down(xs) {
+        width: 1.5625rem;
+        height: 1.5625rem;
+      }
     }
 
     .badge {
