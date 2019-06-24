@@ -804,18 +804,19 @@ $navbar-brand-font-size:            $font-size-sm !default;
 //$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 $navbar-brand-padding-y:            0 !default;
 
-$navbar-toggler-padding-y:          .5rem !default;
-$navbar-toggler-padding-x:          .5rem !default;
+$navbar-toggler-padding-y:          0 !default;
+$navbar-toggler-padding-x:          0 !default;
 $navbar-toggler-font-size:          $font-size-base !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
-$navbar-toggler-icon-size:          1.25rem !default;
+$navbar-toggler-border-width:       0 !default;
+$navbar-toggler-icon-size:          1.5625rem !default;
 
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           theme-color("primary") !default;
 $navbar-dark-active-color:          $navbar-dark-hover-color !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 1024 1024' width='20px' height='20px' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='#{$navbar-dark-color}' d='M106.906 754.176c-10.957-2.15-21.299-10.65-26.419-21.402-2.765-6.042-3.174-7.782-3.174-15.974 0-8.397 0.307-9.83 3.379-16.077 4.301-8.704 10.138-14.541 18.637-18.637l6.656-3.174h812.032l6.656 3.174c8.397 4.096 14.848 10.445 18.637 18.432 9.114 19.456 1.024 41.574-18.637 50.995l-6.656 3.174-403.456 0.102c-221.901 0.102-405.402-0.205-407.654-0.614zM105.37 497.766c-10.65-2.867-19.251-10.035-24.678-20.582-2.97-5.53-3.277-7.066-3.277-15.872-0.102-8.806 0.205-10.342 3.072-16.384 3.994-8.397 10.342-14.746 18.842-18.842l6.656-3.174h812.032l6.656 3.277c7.475 3.686 9.216 5.018 14.438 11.571 5.53 6.861 7.578 13.312 7.578 23.552 0 7.578-0.41 9.523-3.174 15.36-3.994 8.499-10.342 14.848-18.842 18.842l-6.656 3.174-403.968 0.205c-317.85 0.102-404.992-0.102-408.678-1.126zM104.96 241.766c-11.366-3.584-19.354-10.547-24.474-21.094-2.765-5.939-3.174-7.68-3.174-15.872s0.41-9.933 3.174-15.872c3.994-8.397 10.342-14.746 18.842-18.842l6.656-3.174h812.032l6.656 3.174c8.499 3.994 14.848 10.342 18.842 18.842 2.867 5.939 3.174 7.68 3.174 15.872s-0.307 9.933-3.174 15.872c-3.994 8.397-10.342 14.746-18.842 18.842l-6.656 3.174-404.48 0.205c-324.915 0.102-405.299-0.102-408.576-1.126z'/%3e%3c/svg%3e"), "#", "%23") !default;
-$navbar-dark-toggler-icon-hover-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 1024 1024' width='20px' height='20px' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='#000' d='M106.906 754.176c-10.957-2.15-21.299-10.65-26.419-21.402-2.765-6.042-3.174-7.782-3.174-15.974 0-8.397 0.307-9.83 3.379-16.077 4.301-8.704 10.138-14.541 18.637-18.637l6.656-3.174h812.032l6.656 3.174c8.397 4.096 14.848 10.445 18.637 18.432 9.114 19.456 1.024 41.574-18.637 50.995l-6.656 3.174-403.456 0.102c-221.901 0.102-405.402-0.205-407.654-0.614zM105.37 497.766c-10.65-2.867-19.251-10.035-24.678-20.582-2.97-5.53-3.277-7.066-3.277-15.872-0.102-8.806 0.205-10.342 3.072-16.384 3.994-8.397 10.342-14.746 18.842-18.842l6.656-3.174h812.032l6.656 3.277c7.475 3.686 9.216 5.018 14.438 11.571 5.53 6.861 7.578 13.312 7.578 23.552 0 7.578-0.41 9.523-3.174 15.36-3.994 8.499-10.342 14.848-18.842 18.842l-6.656 3.174-403.968 0.205c-317.85 0.102-404.992-0.102-408.678-1.126zM104.96 241.766c-11.366-3.584-19.354-10.547-24.474-21.094-2.765-5.939-3.174-7.68-3.174-15.872s0.41-9.933 3.174-15.872c3.994-8.397 10.342-14.746 18.842-18.842l6.656-3.174h812.032l6.656 3.174c8.499 3.994 14.848 10.342 18.842 18.842 2.867 5.939 3.174 7.68 3.174 15.872s-0.307 9.933-3.174 15.872c-3.994 8.397-10.342 14.746-18.842 18.842l-6.656 3.174-404.48 0.205c-324.915 0.102-405.299-0.102-408.576-1.126z'/%3e%3c/svg%3e"), "#", "%23") !default;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 25 25' width='25' height='25' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='#{$navbar-dark-color}' d='M2 19h21v-2H2v2zm0-6h21v-2H2v2zm0-6h21V5H2v2z'/%3e%3c/svg%3e"), "#", "%23") !default;
+$navbar-dark-toggler-icon-hover-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 25 25' width='25' height='25' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='#000' d='M2 19h21v-2H2v2zm0-6h21v-2H2v2zm0-6h21V5H2v2z'/%3e%3c/svg%3e"), "#", "%23") !default;
 
 $navbar-dark-toggler-border-color:  rgba(255, 255, 255, .1) !default;
 
