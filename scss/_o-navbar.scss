@@ -246,12 +246,9 @@
 }
 
 .navbar-title {
-  &.h2 {
-    line-height: .925;
-  }
-
   &.display-3,
-  &.display-4 {
+  &.display-4,
+  &.display-8 {
     line-height: 1;
   }
 }
