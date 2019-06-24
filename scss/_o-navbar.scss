@@ -258,4 +258,16 @@
   .navbar-brand + .navbar-brand {
     align-self: center;
   }
+
+  .navbar-title {
+    &.display-3,
+    &.display-4{
+      font-size: $display7-size;
+    }
+
+    &.display-5,
+    &.display-8 {
+      font-size: $display8-size;
+    }
+  }
 }
