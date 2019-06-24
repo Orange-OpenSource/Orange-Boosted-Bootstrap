@@ -44,7 +44,11 @@ Change the border color using utilities built on our theme colors.
 <div class="bd-example-border-utils">
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<span class="border border-{{ color.name }}"></span>{% endfor %}
+<span class="border border-{{ color.name }}"></span>
+{% endfor %}
+{% for color in site.data.grays %}
+<span class="border border-{{ color.name }}"></span>
+{% endfor %}
 <span class="border border-white"></span>
 {% endcapture %}
 {% include example.html content=example %}
