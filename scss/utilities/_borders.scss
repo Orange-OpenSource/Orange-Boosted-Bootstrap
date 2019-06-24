@@ -22,6 +22,14 @@
   }
 }
 
+// Boosted mod
+@each $color, $value in $grays {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+// End Boosted mod
+
 .border-white {
   border-color: $white !important;
 }
