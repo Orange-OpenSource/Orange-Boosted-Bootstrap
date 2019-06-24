@@ -122,14 +122,26 @@ Traditional heading elements are designed to work best in the meat of your page 
         <td><span class="display-1">Display 1</span></td>
       </tr>
       <tr>
-      <td><span class="display-2">Display 2</span></td>
+        <td><span class="display-2">Display 2</span></td>
       </tr>
       <tr>
-      <td><span class="display-3">Display 3</span></td>
+        <td><span class="display-3">Display 3</span></td>
       </tr>
       <tr>
-      <td><span class="display-4">Display 4</span></td>
+        <td><span class="display-4">Display 4</span></td>
       </tr>
+      <tr>
+        <td><span class="display-5">Display 5</span></td>
+      </tr>
+      <tr>
+        <td><span class="display-6">Display 6</span></td>
+      </tr>
+      <tr>
+        <td><span class="display-7">Display 7</span></td>
+      </tr>
+      <tr>
+        <td><span class="display-8">Display 8</span></td>
+       </tr>
     </tbody>
   </table>
 </div>
@@ -139,6 +151,10 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-2">Display 2</h1>
 <h1 class="display-3">Display 3</h1>
 <h1 class="display-4">Display 4</h1>
+<h1 class="display-5">Display 5</h1>
+<h1 class="display-6">Display 6</h1>
+<h1 class="display-7">Display 7</h1>
+<h1 class="display-8">Display 8</h1>
 {% endhighlight %}
 
 ## Lead

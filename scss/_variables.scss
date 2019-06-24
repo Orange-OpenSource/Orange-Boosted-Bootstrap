@@ -363,12 +363,21 @@ $display1-size:               3.75rem !default; // 60px
 $display2-size:               3.125rem !default; // 50px
 $display3-size:               2.5rem !default; // 40px
 $display4-size:               2.125rem !default; // 34px
+$display5-size:               1.875rem !default; // 30px
+$display6-size:               1.5rem !default; // 24px
+$display7-size:               1.25rem !default; // 20px
+$display8-size:               1.125rem !default; // 18px
 
 $display1-weight:             700 !default;
 $display2-weight:             700 !default;
 $display3-weight:             700 !default;
 $display4-weight:             700 !default;
+$display5-weight:             700 !default;
+$display6-weight:             700 !default;
+$display7-weight:             700 !default;
+$display8-weight:             700 !default;
 $display-line-height:         $headings-line-height !default;
+$display5-line-height:        .925 !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
