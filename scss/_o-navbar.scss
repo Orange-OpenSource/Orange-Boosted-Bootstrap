@@ -196,9 +196,10 @@
             margin-left: 0;
           }
 
-          .svg-delete {
-            width: 1.25rem;
-            height: 1.25rem;
+          .svg-delete,
+          .svg-delete::after {
+            width: 1.875rem;
+            height: 1.875rem;
           }
 
           > .container > .navbar-nav {
