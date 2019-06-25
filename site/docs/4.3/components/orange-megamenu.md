@@ -104,7 +104,10 @@ Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing 
                         </ul>
                       </li>
                     </ul>
-                    <a data-toggle="collapse" href="#mega-level-1-collapse" aria-expanded="true" aria-controls="mega-level-1-collapse" title="close shop menu"><span class="svg-delete"></span></a>
+                    <a data-toggle="collapse" href="#mega-level-1-collapse" aria-expanded="false" aria-controls="mega-menu3-collapse" title="Close shop menu" aria-label                <a data-toggle="collapse" href="#mega-menu3-collapse" aria-expanded="false" aria-controls="mega-level-1-collapse" title="Close shop menu">
+                      <span class="svg-delete" aria-hidden="true"></span>
+                      <span class="sr-only">Close shop menu</span>
+                    </a>
                   </div>
                 </div>
               </li>
@@ -117,7 +120,10 @@ Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing 
                         <a class="nav-link" href="">Test 1</a>
                       </li>
                     </ul>
-                    <a data-toggle="collapse" href="#mega-level-2-collapse" aria-expanded="false" aria-controls="mega-level-2-collapse" title="close discover menu"><span class="svg-delete"></span></a>
+                    <a data-toggle="collapse" href="#mega-level-2-collapse" aria-expanded="false" aria-controls="mega-level-2-collapse" title="Close discover menu">
+                      <span class="svg-delete" aria-hidden="true"></span>
+                      <span class="sr-only">Close discover menu</span>
+                    </a>
                   </div>
                 </div>
               </li>
