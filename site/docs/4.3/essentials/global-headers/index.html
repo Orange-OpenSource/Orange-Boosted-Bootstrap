@@ -20,28 +20,9 @@
       }
     }
     
-    @media (max-width: 767.98px) and (min-width: 480px) {
-      .collapse:not(.show) {
-        display: none;
-      }
-      .navbar-toggler-icon {
-        width: 1.875rem;
-        height: 1.875rem;
-      }
-      .navbar-expand-sm .navbar-collapse {
-        flex-basis: 100%;
-      }
-      .navbar-expand-sm .navbar-collapse.show {
-        display: initial;
-      }
-      .navbar-expand-sm .navbar-nav .nav-item {
-        font-size: 1.125rem;
-        border-top: 1px solid #333;
-      }
-      .navbar-expand-sm .navbar-nav .nav-link {
-        padding: .875rem .625rem;
-        margin-top: 0;
-        margin-left: 0;
+    @media (max-width: 767.98px) {
+      .mega-menu [class*="col"] {
+        position: static;
       }
     }
   </style>
@@ -152,15 +133,15 @@
     
     <h3 class="mt-5">Global header with additional icons</h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-fluid flex-sm-wrap flex-md-nowrap">
-      <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#">
+      <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
         <img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/>
       </a>
-      <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar3" aria-controls="collapsing-navbar3" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar3" aria-controls="collapsing-navbar3" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar3">
+      <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar3">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
           <li class="nav-item">
@@ -175,7 +156,7 @@
               </div>
               <div class="container">
                 <ul class="navbar-nav row">
-                  <li class="nav-item col-4 pr-lg-5">
+                  <li class="nav-item col-12 col-lg-4 pr-lg-5">
                     <a class="nav-link pb-3 border-bottom border-700" href="#">Devices</a>
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link back" href="#">Devices</a></li>
@@ -186,7 +167,7 @@
                       <li class="nav-item"><a class="nav-link" href="#">Coming soon</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item col-4 px-lg-5">
+                  <li class="nav-item col-12 col-lg-4 px-lg-5">
                     <a class="nav-link pb-3 border-bottom border-700" href="#">Plans</a>
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link back" href="#">Plans</a></li>
@@ -198,7 +179,7 @@
                       <li class="nav-item"><a class="nav-link" href="#">Data SIM</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item col-4 pl-lg-5">
+                  <li class="nav-item col-12 col-lg-4 pl-lg-5">
                     <a class="nav-link pb-3 border-bottom border-700" href="#">Offers</a>
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link back" href="#">Offers</a></li>
@@ -209,7 +190,7 @@
                       <li class="nav-item"><a class="nav-link" href="#">Customer Offers</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item col-4 pr-lg-5">
+                  <li class="nav-item col-12 col-lg-4 pr-lg-5">
                     <a class="nav-link pb-3 border-bottom border-700" href="#">Orange TV</a>
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link back" href="#">Orange TV</a></li>
@@ -219,7 +200,7 @@
                       <li class="nav-item"><a class="nav-link" href="#">Livebox</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item col-4 px-lg-5">
+                  <li class="nav-item col-12 col-lg-4 px-lg-5">
                     <a class="nav-link pb-3 border-bottom border-700" href="#">Broadband</a>
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link back" href="#">Broadband</a></li>
@@ -229,7 +210,7 @@
                       <li class="nav-item"><a class="nav-link" href="#">4G WiFi</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item col-4 pl-lg-5">
+                  <li class="nav-item col-12 col-lg-4 pl-lg-5">
                     <a class="nav-link pb-3 border-bottom border-700" href="#">Customers</a>
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link back" href="#">Customers</a></li>
@@ -247,7 +228,7 @@
           <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
         </ul>
       </div>
-      <ul class="navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto">
+      <ul class="navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto">
         <li class="nav-item border-0 px-1 px-sm-0">
           <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
             <span class="sr-only">Search bar</span>
@@ -276,15 +257,15 @@
     <h3 class="mt-5">Global header with additional icons authenticated</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#">
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
           <img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/>
         </a>
-        <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar10" aria-controls="collapsing-navbar10" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar10" aria-controls="collapsing-navbar10" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar10">
+        <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar10">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item">
@@ -297,9 +278,9 @@
                     <span class="sr-only">Close shop menu</span>
                   </a>
                 </div>
-                <div class="container d-flex">
-                  <ul class="navbar-nav col-10 row mt-0">
-                    <li class="nav-item col-4 pr-lg-3">
+                <div class="container d-lg-flex pl-1 pl-lg-0">
+                  <ul class="navbar-nav col-lg-10 row mt-0">
+                    <li class="nav-item col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Devices</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Devices</a></li>
@@ -310,7 +291,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Coming soon</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Plans</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Plans</a></li>
@@ -322,7 +303,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Data SIM</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Offers</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Offers</a></li>
@@ -333,7 +314,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Customer Offers</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Orange TV</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Orange TV</a></li>
@@ -343,7 +324,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Livebox</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Broadband</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Broadband</a></li>
@@ -353,7 +334,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">4G WiFi</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-4">
+                    <li class="nav-item col-lg-4 pr-lg-4">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Customers</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Customers</a></li>
@@ -364,7 +345,7 @@
                       </ul>
                     </li>
                   </ul>
-                  <a class="col-2 nav-link" href="#">
+                  <a class="d-none d-lg-flex col-lg-2 nav-link" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="220" height="420" class="bd-placeholder-img" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label=Promotion">
                       <title>Promotion</title>
                       <rect fill="#55595c" width="100%" height="100%"></rect>
@@ -378,7 +359,7 @@
             <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -410,19 +391,19 @@
     <h3 class="mt-5">Global header minimised with additional icons authenticated</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm minimized">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md minimized">
       <div class="container-fluid flex-sm-wrap flex-md-nowrap">
         <a class="navbar-brand" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
-        <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar7" aria-controls="collapsing-navbar7" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar7" aria-controls="collapsing-navbar7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar7">
+        <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar7">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item">
               <a class="nav-link collapsed" href="#mega-menu7-collapse" data-toggle="collapse">Shop</a>
               <div class="mega-menu-panel collapse" id="mega-menu7-collapse">
-                <div class="container d-flex flex-row py-2 pr-2 pl-0">
+                <div class="container d-lg-flex flex-row py-2 pr-2 pl-0">
                   <a class="nav-link" href="#">View all shop</a>
                   <a class="nav-link float-none m-0 ml-auto" data-toggle="collapse" href="#mega-menu7-collapse" aria-expanded="false" aria-controls="mega-menu7-collapse" title="Close shop menu">
                     <span class="svg-delete d-inline-block" aria-hidden="true"></span>
@@ -431,7 +412,7 @@
                 </div>
                 <div class="container">
                   <ul class="navbar-nav row mt-0">
-                    <li class="nav-item col-3 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-3 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Devices</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Devices</a></li>
@@ -442,7 +423,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Coming soon</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-3 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-3 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Plans</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Plans</a></li>
@@ -454,7 +435,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Data SIM</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-3 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-3 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Offers</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Offers</a></li>
@@ -465,7 +446,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Customer Offers</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-3">
+                    <li class="nav-item col-12 col-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Orange TV</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Orange TV</a></li>
@@ -475,7 +456,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Livebox</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-12">
+                    <li class="nav-item d-none d-lg-flex col-lg-12">
                       <a class="nav-link" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="180" class="bd-placeholder-img" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label=Promotion">
                           <title>Promotion</title>
@@ -492,7 +473,7 @@
             <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -524,13 +505,13 @@
     <h3 class="mt-5">Global header with navigation and search box</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
-        <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar4" aria-controls="collapsing-navbar4" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar4" aria-controls="collapsing-navbar4" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar4">
+        <div class="mega-menu navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar4">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item">
@@ -545,7 +526,7 @@
                 </div>
                 <div class="container">
                   <ul class="navbar-nav row mt-0">
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Devices</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Devices</a></li>
@@ -556,7 +537,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Coming soon</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Plans</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Plans</a></li>
@@ -568,7 +549,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Data SIM</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Offers</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Offers</a></li>
@@ -579,7 +560,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Customer Offers</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Orange TV</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Orange TV</a></li>
@@ -589,7 +570,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Livebox</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-3">
+                    <li class="nav-item col-12 col-lg-4 pr-lg-3">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Broadband</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Broadband</a></li>
@@ -599,7 +580,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">4G WiFi</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item col-4 pr-lg-4">
+                    <li class="nav-item col-12 col-lg-4 pr-lg-4">
                       <a class="nav-link pb-3 border-bottom border-700" href="#">Customers</a>
                       <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link back" href="#">Customers</a></li>
@@ -638,7 +619,7 @@
           </ul>
         </div>
         <!-- @todo Dark form -->
-        <form class="form-inline navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto" role="search">
+        <form class="form-inline navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto" role="search">
           <input type="search" class="form-control bg-dark border-right-0 border-muted" placeholder="Search" aria-label="Search">
           <button class="btn btn-inverse btn-dark border-left-0 border-muted align-self-stretch d-flex pl-0 pr-4" type="submit">
             <span class="icon svg-search" aria-hidden="true"></span>
@@ -653,14 +634,14 @@
     <h3 class="mt-5">Global header with title, navigation and icons</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
         <a href="#" class="navbar-title  display-4 text-white mt-2 mt-md-auto ml-2 pl-0 pl-md-1 mr-auto">Design</a>
-        <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar6" aria-controls="collapsing-navbar6" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar6" aria-controls="collapsing-navbar6" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar6">
+        <div class="navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar6">
           <ul class="navbar-nav flex-sm-column flex-md-row">
             <li class="nav-item"><a class="nav-link" href="#">Guidelines</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Libraries</a></li>
@@ -668,7 +649,7 @@
             <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -688,17 +669,17 @@
     <h3 class="mt-5">Global header with title, navigation below and icons</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap justify-content-start">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#">
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
           <img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage">
         </a>
         <a href="#" class="navbar-title display-4 text-white mt-2 mt-md-auto ml-2 pl-0 pl-md-1">Design</a>
-        <button class="navbar-toggler order-4 order-md-3 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3 collapsed" type="button"
+        <button class="navbar-toggler order-4 order-lg-3 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar5" aria-controls="collapsing-navbar5" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav flex-row order-3 order-md-4 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-3 order-lg-4 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -742,14 +723,14 @@
     <h3 class="mt-5">Global header with title on two lines, navigation and icons</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
         <a href="#" class="navbar-title display-5 text-white mt-md-auto ml-2 pl-0 pl-md-1 mr-auto">Orange Labs<br>Prime Zone</a>
-        <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar8" aria-controls="collapsing-navbar8" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar8" aria-controls="collapsing-navbar8" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar8">
+        <div class="navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar8">
           <ul class="navbar-nav flex-sm-column flex-md-row">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -758,7 +739,7 @@
             <li class="nav-item"><a class="nav-link" href="#">News</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -778,14 +759,14 @@
     <h3 class="mt-5">OBS global header with navigation and icons</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#"><img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
         <a href="#" class="navbar-title display-8 display-obs text-white mt-2 mt-md-auto mr-auto">Business<br>Services</a>
-        <button class="navbar-toggler order-2 order-md-1 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar9" aria-controls="collapsing-navbar9" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-2 order-lg-1 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar9" aria-controls="collapsing-navbar9" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse justify-content-between collapse order-3 order-md-2 mt-3 mt-lg-0" id="collapsing-navbar9">
+        <div class="navbar-collapse justify-content-between collapse order-3 order-lg-2 mt-3 mt-lg-0" id="collapsing-navbar9">
           <ul class="navbar-nav flex-sm-column flex-md-row">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -795,7 +776,7 @@
             <li class="nav-item"><a class="nav-link" href="#">News</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav flex-row order-1 order-md-3 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-1 order-lg-3 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -815,17 +796,17 @@
     <h3 class="mt-5">OBS global header with title, navigation below and icons</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap justify-content-start">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#">
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
           <img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage">
         </a>
         <a href="#" class="navbar-title display-5 text-white mt-md-auto ml-2 pl-0 pl-md-1">Orange Business Services <br class="d-md-none"/>Flexible Engine</a>
-        <button class="navbar-toggler order-4 order-md-3 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3 collapsed" type="button"
+        <button class="navbar-toggler order-4 order-lg-3 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar11" aria-controls="collapsing-navbar11" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav flex-row order-3 order-md-4 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-3 order-lg-4 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -856,17 +837,17 @@
     <h3 class="mt-5">OBS global header with title on two lines, navigation below and icons</h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container-fluid flex-sm-wrap justify-content-start">
-        <a class="navbar-brand my-1 py-1 my-sm-0 py-sm-0" href="#">
+        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
           <img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage">
         </a>
         <a href="#" class="navbar-title display-5 text-white mt-md-auto ml-2 pl-0 pl-md-1">Orange Business Services<br>Flexible Engine</a>
-        <button class="navbar-toggler order-4 order-md-3 d-sm-block d-md-none mb-sm-0 mt-sm-auto ml-2 ml-sm-3 collapsed" type="button"
+        <button class="navbar-toggler order-4 order-lg-3 d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav flex-row order-3 order-md-4 mb-sm-0 mb-auto ml-auto">
+        <ul class="navbar-nav flex-row order-3 order-lg-4 mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
             <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
               <span class="sr-only">Search bar</span>
@@ -914,7 +895,12 @@
 <script src="../../assets/js/vendor/popper.min.js"></script>
 <!-- Include all compiled plugins bootstrap and boosted specific components (below), or include individual files as needed -->
 <script src="../../dist/js/boosted.js"></script>
-<script>$('#collapsing-navbar3').megamenu();</script>
+<script>
+  $('#collapsing-navbar3').megamenu();
+  $('#collapsing-navbar4').megamenu();
+  $('#collapsing-navbar7').megamenu();
+  $('#collapsing-navbar10').megamenu();
+</script>
 </body>
 </html>
 
