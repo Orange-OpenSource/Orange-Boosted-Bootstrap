@@ -141,7 +141,7 @@ class MegaMenu {
     const rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
     const translatePercentage = -(position - rootPosition) * PERCENTAGE / 2
     const $thisNav = $target.closest(Selector.NAV_MENU)
-    const $rootNav = $(Selector.ROOT_NAV)
+    const $rootNav = $target.closest(Selector.ROOT_NAV)
 
     $rootNav.addClass(ClassName.TRANSITIONING)
 
@@ -230,7 +230,7 @@ class MegaMenu {
     const $this = $(e.target)
     const $thisNav = $this.closest(Selector.NAV_MENU)
     const $targetNav =  $this.next(Selector.NAV_MENU)
-    const $rootNav = $(Selector.ROOT_NAV)
+    const $rootNav = $this.closest(Selector.ROOT_NAV)
     const $thisNavToggler = $this
     const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
     const navWidth = $rootNav.width()
@@ -285,7 +285,7 @@ class MegaMenu {
     const $this = $(e.target)
     const $thisNav = $this.closest(Selector.NAV_MENU)
     const $targetNav = $thisNav.parent().closest(Selector.NAV_MENU)
-    const $rootNav = $(Selector.ROOT_NAV)
+    const $rootNav = $this.closest(Selector.ROOT_NAV)
     const $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED)
     const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
     const navWidth = $rootNav.width()
