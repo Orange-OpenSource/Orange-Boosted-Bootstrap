@@ -825,16 +825,12 @@ $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           theme-color("primary") !default;
 $navbar-dark-active-color:          $navbar-dark-hover-color !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 25 25' width='25' height='25' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='#{$navbar-dark-color}' d='M2 19h21v-2H2v2zm0-6h21v-2H2v2zm0-6h21V5H2v2z'/%3e%3c/svg%3e"), "#", "%23") !default;
-$navbar-dark-toggler-icon-hover-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 25 25' width='25' height='25' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='#000' d='M2 19h21v-2H2v2zm0-6h21v-2H2v2zm0-6h21V5H2v2z'/%3e%3c/svg%3e"), "#", "%23") !default;
-
 $navbar-dark-toggler-border-color:  rgba(255, 255, 255, .1) !default;
 
 $navbar-light-color:                $black !default;
 $navbar-light-hover-color:          $navbar-dark-hover-color !default;
 $navbar-light-active-color:         $navbar-dark-active-color !default;
 $navbar-light-disabled-color:       $navbar-dark-disabled-color !default;
-$navbar-light-toggler-icon-bg:      $navbar-dark-toggler-icon-bg !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 $navbar-light-brand-color:                $navbar-light-color !default;

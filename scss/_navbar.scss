@@ -209,25 +209,29 @@
   border: $navbar-toggler-border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
 
+  // Boosted mod
   @include hover-focus {
     text-decoration: none;
-    // Boosted mod
-    background-color: #fff;
-    .navbar-toggler-icon {
-      background-image: $navbar-dark-toggler-icon-hover-bg;
-    }
-    // end mod
-  }
-  // Boosted mod
-  &:active {
-    background-color: theme-color("primary");
 
     .navbar-toggler-icon {
-      background-image: $navbar-dark-toggler-icon-bg;
+      @include svg-menu($navbar-dark-hover-color);
     }
   }
 
-  &:focus {
+  .navbar &[aria-expanded="true"]:focus,
+  .navbar &[aria-expanded="true"]:hover,
+  .navbar &[aria-expanded="true"]:active {
+    .navbar-toggler-icon {
+      @include svg-delete($navbar-dark-hover-color);
+    }
+  }
+
+  @include focus {
+    outline-color: $navbar-dark-hover-color;
+    outline-offset: .625rem;
+  }
+
+  @include hover {
     outline: 0;
   }
   // end mod
@@ -241,13 +245,24 @@
 // Keep as a separate element so folks can easily override it with another icon
 // or image file as needed.
 .navbar-toggler-icon {
+  // Boosted mod
+  position: relative;
   display: inline-block;
   width: $navbar-toggler-icon-size; // Boosted mod create a var for the toggler size
   height: $navbar-toggler-icon-size; // Boosted mod create a var for the toggler size
   vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $navbar-toggler-icon-size;
+    height: $navbar-toggler-icon-size;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  // End Boosted mod
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -402,10 +417,14 @@
   .navbar-toggler {
     color: $navbar-light-color;
     border-color: $navbar-light-toggler-border-color;
+
+    &[aria-expanded="true"] .navbar-toggler-icon {
+      @include svg-delete($navbar-light-color);
+    }
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-icon-bg;
+    @include svg-menu($navbar-light-color);
   }
 
   .navbar-text {
@@ -454,10 +473,14 @@
   .navbar-toggler {
     color: $navbar-dark-color;
     border-color: $navbar-dark-toggler-border-color;
+
+    &[aria-expanded="true"] .navbar-toggler-icon {
+      @include svg-delete($navbar-dark-color);
+    }
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-dark-toggler-icon-bg;
+    @include svg-menu($navbar-dark-color);
   }
 
   .navbar-text {
