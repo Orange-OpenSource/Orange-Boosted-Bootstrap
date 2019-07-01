@@ -95,10 +95,7 @@
 
   .nav-link {
     //Boosted mod
-    padding-top: .875rem;
-    padding-right: .625rem;
-    padding-bottom: .875rem;
-    padding-left: .625rem;
+    padding: .875rem .625rem;
     margin-top: 0;
 
     &.active::before {
@@ -338,10 +335,7 @@
           // end mod
 
           .nav-link {
-            padding-top: 0; // boosted mod
-            padding-right: $navbar-nav-link-padding-x;
-            padding-bottom: 0; // boosted mod
-            padding-left: $navbar-nav-link-padding-x;
+            padding: 0 $navbar-nav-link-padding-x; // boosted mod
             margin-left: 1.25rem; // boosted mod
           }
         }
