@@ -296,6 +296,7 @@ class MegaMenu {
     }
 
     $rootNav.addClass(ClassName.TRANSITIONING)
+    $(Selector.MEGAMENU).css('height', 'auto')
 
     // make only visible elements focusable
     $targetNav.find(Selector.NAV_LINK).attr({
@@ -304,7 +305,6 @@ class MegaMenu {
     })
     if (currentTranslatePercentage === -PERCENTAGE) {
       // reset main collapse height
-      $(Selector.MEGAMENU).css('height', 'auto')
       $rootNav.find('>.nav-item .nav-link').attr({
         tabindex: 0,
         'aria-hidden': false
