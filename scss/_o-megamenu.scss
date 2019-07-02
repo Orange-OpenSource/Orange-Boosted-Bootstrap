@@ -5,23 +5,29 @@
 
 .mega-menu {
   overflow: hidden;
+
+  > .navbar-nav {
+    transition: transform .5s;
+    transform: translateX(0);
+  }
 }
 
-.mega-menu > .navbar-nav {
-  transition: transform .5s;
-  transform: translateX(0);
-}
+.mega-menu-panel {
+  .navbar-nav {
+    flex-direction: column;
 
-.mega-menu-panel > .navbar-nav,
-.mega-menu-panel > .container > .navbar-nav {
-  flex-direction: column;
-}
+    .navbar-nav {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      display: none;
+      width: 100%;
+    }
+  }
 
-.mega-menu-panel > .navbar-nav .navbar-nav,
-.mega-menu-panel > .container > .navbar-nav .navbar-nav {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  display: none;
-  width: 100%;
+  .container {
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+  }
 }
