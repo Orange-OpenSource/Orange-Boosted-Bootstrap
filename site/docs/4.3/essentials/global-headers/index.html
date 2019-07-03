@@ -24,6 +24,14 @@
       .mega-menu [class*="col"] {
         position: static;
       }
+      
+      #collapsing-navbar13 {
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        z-index: 1030;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -161,7 +169,7 @@
         </li>
       </ul>
       <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar3" aria-controls="collapsing-navbar3" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span aria-hidden="true" class="navbar-toggler-icon"></span>
       </button>
       <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar3">
         <ul class="navbar-nav">
@@ -278,6 +286,134 @@
   </nav>
   
   <div class="container">
+    <h3 id="a11y-suggestion" class="mt-5">Navbar, with some accessibility suggestions</h3>
+    
+    <h4 class="mt-5" id="web-glh-a11y-001">Replace burger with label</h4>
+  </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <div class="container-fluid flex-sm-wrap flex-md-nowrap">
+      <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <img src="/docs/4.3/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/>
+      </a>
+      <button class="navbar-toggler d-flex align-items-center d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar13" aria-controls="collapsing-navbar13" aria-expanded="false" aria-label="Toggle navigation">
+        <span aria-hidden="true" class="navbar-toggler-icon"></span>
+        <span aria-hidden="true" class="font-weight-bold pl-1">Menu</span>
+      </button>
+      <div class="mega-menu navbar-collapse justify-content-between collapse bg-dark" id="collapsing-navbar13">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#mega-menu13-collapse" data-toggle="collapse">Shop</a>
+            <div class="mega-menu-panel collapse" id="mega-menu13-collapse">
+              <div class="container py-2">
+                <div class="row">
+                  <a class="nav-link" href="#">View all shop</a>
+                  <a class="nav-link float-none m-0 ml-auto" data-toggle="collapse" href="#mega-menu13-collapse" aria-expanded="false" aria-controls="mega-menu13-collapse" title="Close shop menu">
+                    <span class="svg-delete d-inline-block" aria-hidden="true"></span>
+                    <span class="sr-only">Close shop menu</span>
+                  </a>
+                </div>
+              </div>
+              <div class="container">
+                <ul class="navbar-nav row">
+                  <li class="nav-item col-12 col-lg-4 pr-lg-5">
+                    <a class="nav-link pb-3" href="#">Devices</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Devices</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">iPhone 6</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Phones</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Tablets</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Coming soon</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col-12 col-lg-4 px-lg-5">
+                    <a class="nav-link pb-3" href="#">Plans</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Plans</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Pay monthly</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Pay as you go</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">top up Pay as you go</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">SIM only for phones</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Free SIM</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Data SIM</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col-12 col-lg-4 pl-lg-5">
+                    <a class="nav-link pb-3" href="#">Offers</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Offers</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Pay monthly offers</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Shared Plans</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Orange TV</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Broadband + mobile</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Customer Offers</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col-12 col-lg-4 pr-lg-5">
+                    <a class="nav-link pb-3" href="#">Orange TV</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Orange TV</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Mobiles</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Tablets</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Computers</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Livebox</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col-12 col-lg-4 px-lg-5">
+                    <a class="nav-link pb-3" href="#">Broadband</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Broadband</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Home broadband</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Orange TV</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Fibre</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">4G WiFi</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item col-12 col-lg-4 pl-lg-5">
+                    <a class="nav-link pb-3" href="#">Customers</a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link back" href="#">Customers</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Access your account</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Upgrading</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Exclusive Offers</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Topping up</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+        </ul>
+      </div>
+      <ul class="navbar-nav flex-row mb-md-0 mb-auto ml-auto">
+        <li class="nav-item border-0 px-1 px-sm-0">
+          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
+            <span class="sr-only">Search bar</span>
+          </a>
+        </li>
+        <li class="nav-item border-0 px-1 px-sm-0">
+          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+            <span class="sr-only">Email</span>
+          </a>
+        </li>
+        <li class="nav-item border-0 px-1 px-sm-0">
+          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+            <span class="sr-only">Basket</span>
+          </a>
+        </li>
+        <li class="nav-item border-0 px-1 px-sm-0">
+          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-avatar">
+            <span class="sr-only">My account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
     <h3 class="mt-5" id="web-glh-nic-004">Global header with additional icons authenticated</h3>
   </div>
   <header>
@@ -311,7 +447,7 @@
           </li>
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar10" aria-controls="collapsing-navbar10" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar10">
           <ul class="navbar-nav">
@@ -471,7 +607,7 @@
           </li>
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar7" aria-controls="collapsing-navbar7" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar7">
           <ul class="navbar-nav">
@@ -597,7 +733,7 @@
           </button>
         </form>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar4" aria-controls="collapsing-navbar4" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar4">
           <ul class="navbar-nav">
@@ -743,7 +879,7 @@
           </li>
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar6" aria-controls="collapsing-navbar6" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar6">
           <ul class="navbar-nav flex-sm-column flex-md-row">
@@ -793,7 +929,7 @@
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar5" aria-controls="collapsing-navbar5" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
@@ -858,7 +994,7 @@
           </li>
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar8" aria-controls="collapsing-navbar8" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar8">
           <ul class="navbar-nav flex-sm-column flex-md-row">
@@ -908,7 +1044,7 @@
           </li>
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar9" aria-controls="collapsing-navbar9" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar9">
           <ul class="navbar-nav flex-sm-column flex-md-row">
@@ -960,7 +1096,7 @@
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar11" aria-controls="collapsing-navbar11" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
@@ -1013,7 +1149,7 @@
         </ul>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
           <li class="nav-item border-0 px-1 px-sm-0">
@@ -1053,7 +1189,6 @@
       </div>
     </nav>
   </header>
-
 </main>
 
 <!-- Boosted core JavaScript
@@ -1064,10 +1199,7 @@
 <!-- Include all compiled plugins bootstrap and boosted specific components (below), or include individual files as needed -->
 <script src="../../dist/js/boosted.js"></script>
 <script>
-  $('#collapsing-navbar3').megamenu();
-  $('#collapsing-navbar4').megamenu();
-  $('#collapsing-navbar7').megamenu();
-  $('#collapsing-navbar10').megamenu();
+  $('#collapsing-navbar3,#collapsing-navbar4,#collapsing-navbar7,#collapsing-navbar10,#collapsing-navbar13').megamenu();
 </script>
 </body>
 </html>
