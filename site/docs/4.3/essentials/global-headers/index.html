@@ -14,6 +14,10 @@
       text-anchor: middle;
     }
     
+    #a11y-dropdown {
+      min-width: 14rem;
+    }
+    
     @media (max-width: 479.98px) {
       .navbar-title.display-obs {
         font-size: .75rem;
@@ -288,8 +292,64 @@
   <div class="container">
     <h3 id="a11y-suggestion" class="mt-5">Navbar, with some accessibility suggestions</h3>
     
-    <h4 class="mt-5" id="web-glh-a11y-001">Replace burger with label</h4>
+    <ul class="mt-5" id="web-glh-a11y-001">
+      <li>Replace burger with label.</li>
+      <li>Display skip links by default.</li>
+      <li>Add a contrast switcher control in an accessibility dropdown.</li>
+    </ul>
   </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#collapsing-navbar13">
+            <span class="sr-only">Skip to </span>
+            Navigation
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="sr-only">Skip to </span>
+            Search
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="sr-only">Skip to </span>
+            Main content
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Accessibility
+          </a>
+          <div class="dropdown-menu" id="a11y-dropdown">
+            <form class="p-2">
+              <div class="form-group row mb-0">
+                <label for="checkbox1" class="col-form-label col-8">Contrasts</label>
+                <div class="o-switch">
+                  <input class="checkbox sr-only" id="checkbox1" type="checkbox"/>
+                  <label for="checkbox1" class="toggle toggle-rounded px-1" aria-hidden="true">
+                    <span class="on icon-signal-5-5 font-weight-normal" role="presentation"><span class="sr-only">Higher</span></span>
+                    <span class="off icon-signal-4-5 font-weight-normal" role="presentation"><span class="sr-only">Standard</span></span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="dropdown-item" href="#">FR</a></li>
+            <li><a class="dropdown-item" href="#">SP</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <nav class="navbar navbar-dark bg-dark navbar-expand-md">
     <div class="container-fluid flex-sm-wrap flex-md-nowrap">
       <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
