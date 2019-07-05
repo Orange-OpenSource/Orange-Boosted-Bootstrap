@@ -26,7 +26,7 @@
   }
 
   .container {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       max-width: 100%;
     }
   }
