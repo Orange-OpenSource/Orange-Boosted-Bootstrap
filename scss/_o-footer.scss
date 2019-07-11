@@ -19,8 +19,8 @@
 .o-footer-top,
 .o-footer-body,
 .o-footer-bottom {
-  padding-top: map-get( $spacers, 2 );
-  padding-bottom: map-get( $spacers, 2 );
+  padding-top: map-get($spacers, 2);
+  padding-bottom: map-get($spacers, 2);
 }
 
 .o-footer-top {
@@ -29,11 +29,11 @@
 
 .o-footer-body {
   .row {
-    margin-bottom: map-get( $spacers, 2 );
+    margin-bottom: map-get($spacers, 2);
   }
 
   h2 {
-    margin-top: map-get( $spacers, 2 );
+    margin-top: map-get($spacers, 2);
     font-size: $font-size-base;
   }
 
@@ -45,10 +45,9 @@
   }
 
   .flex-column .nav-link {
-    padding: map-get( $spacers, 1 ) 0;
+    padding: map-get($spacers, 1) 0;
   }
 }
-
 
 .o-footer-bottom {
   border-top: 1px solid $gray-900;
