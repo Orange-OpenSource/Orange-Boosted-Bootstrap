@@ -171,90 +171,21 @@ fieldset:disabled a.btn {
 }
 
 // Social Media
-.btn-mail {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-mail-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-lin {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-lin-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-gplus {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-gplus-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-tw {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-tw-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-fbk {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
+.btn-mail,
+.btn-mail-inverse,
+.btn-lin,
+.btn-lin-inverse,
+.btn-gplus,
+.btn-gplus-inverse,
+.btn-tw,
+.btn-tw-inverse,
+.btn-fbk,
 .btn-fbk-inverse {
-  height: 2.5rem;
+  width: 2em;
+  height: 2em;
+  padding: 0;
   background-repeat: no-repeat;
+  border: 0;
   &:hover,
   &:focus {
     outline: none;
