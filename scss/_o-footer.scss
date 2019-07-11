@@ -4,10 +4,54 @@
 
 .o-footer {
   margin-top: 2.5rem;
-  font-size: $font-size-sm;
   font-weight: $font-weight-bold;
   color: #fff;
   background-color: #000;
+
+  .nav-link {
+    &:not(:hover),
+    &:not([href]) {
+      color: #fff;
+    }
+  }
+}
+
+.o-footer-top,
+.o-footer-body,
+.o-footer-bottom {
+  padding-top: map-get( $spacers, 2 );
+  padding-bottom: map-get( $spacers, 2 );
+}
+
+.o-footer-top {
+  border-bottom: 1px solid $gray-900;
+}
+
+.o-footer-body {
+  .row {
+    margin-bottom: map-get( $spacers, 2 );
+  }
+
+  h2 {
+    margin-top: map-get( $spacers, 2 );
+    font-size: $font-size-base;
+  }
+
+  p {
+    &,
+    a {
+      color: #fff;
+    }
+  }
+
+  .flex-column .nav-link {
+    padding: map-get( $spacers, 1 ) 0;
+  }
+}
+
+
+.o-footer-bottom {
+  border-top: 1px solid $gray-900;
 
   .nav-link {
     padding: $nav-link-padding-y ($nav-link-padding-x * .5);
@@ -18,44 +62,5 @@
     &:not([href]) {
       color: #fff;
     }
-  }
-
-  .o-footer-top,
-  .o-footer-body,
-  .o-footer-bottom {
-    padding-top: .625rem;
-    padding-bottom: .625rem;
-  }
-
-  .o-footer-top {
-    border-bottom: 1px solid $gray-900;
-  }
-
-  .o-footer-body {
-    .row {
-      margin-bottom: .625rem;
-    }
-
-    h2 {
-      margin-top: .625rem;
-      font-size: $font-size-sm;
-      color: #fff;
-    }
-
-    p {
-      &,
-      a {
-        color: #fff;
-      }
-    }
-
-    .flex-column .nav-link {
-      padding: 0;
-      line-height: 1.25;
-    }
-  }
-
-  .o-footer-bottom {
-    border-top: 1px solid $gray-900;
   }
 }
