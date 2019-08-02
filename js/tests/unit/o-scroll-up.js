@@ -32,4 +32,15 @@ $(function () {
     assert.ok($scrollup instanceof $, 'returns jquery collection')
     assert.strictEqual($scrollup[0], $el[0], 'collection contains element')
   })
+
+  QUnit.test('should throw explicit error on undefined method', function (assert) {
+    assert.expect(1)
+    var $el = $('<div/>').appendTo('#qunit-fixture')
+    $el.bootstrapScrollup()
+    try {
+      $el.bootstrapScrollup('noMethod')
+    } catch (err) {
+      assert.strictEqual(err.message, 'No method named "noMethod"')
+    }
+  })
 })
