@@ -66,11 +66,11 @@ In need of a social media button? Some helper classes are designed to be used wi
 
 {% capture example %}
 <div style="padding: 2rem">
-    <a class="btn btn-fbk" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-tw" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-gplus" href="#" aria-label="Google Plus"></a>
-    <a class="btn btn-lin" href="#" aria-label="Linkedin"></a>  
-    <a class="btn btn-mail" href="#" aria-label="Mail"></a>
+    <a class="btn btn-fbk btn-social" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-tw btn-social" href="#" aria-label="Twitter"></a> 
+    <a class="btn btn-gplus btn-social" href="#" aria-label="Google Plus"></a>
+    <a class="btn btn-lin btn-social" href="#" aria-label="Linkedin"></a>  
+    <a class="btn btn-mail btn-social" href="#" aria-label="Mail"></a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -78,11 +78,11 @@ In need of a social media button? Some helper classes are designed to be used wi
 
 {% capture example %}
 <div style="background-color: #000; padding: 2rem">
-    <a class="btn btn-fbk-inverse" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-tw-inverse" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-gplus-inverse" href="#" aria-label="Google Plus"></a>
-    <a class="btn btn-lin-inverse" href="#" aria-label="Linkedin"></a>  
-    <a class="btn btn-mail-inverse" href="#" aria-label="Mail"></a>
+    <a class="btn btn-fbk-inverse btn-social" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-tw-inverse btn-social" href="#" aria-label="Twitter"></a> 
+    <a class="btn btn-gplus-inverse btn-social" href="#" aria-label="Google Plus"></a>
+    <a class="btn btn-lin-inverse btn-social" href="#" aria-label="Linkedin"></a>  
+    <a class="btn btn-mail-inverse btn-social" href="#" aria-label="Mail"></a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}

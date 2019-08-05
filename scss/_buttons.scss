@@ -174,17 +174,10 @@ fieldset:disabled a.btn {
 }
 
 // Boosted mod for social links
-.btn-mail,
-.btn-mail-inverse,
-.btn-lin,
-.btn-lin-inverse,
-.btn-gplus,
-.btn-gplus-inverse,
-.btn-tw,
-.btn-tw-inverse,
-.btn-fbk,
-.btn-fbk-inverse {
-  height: 2.5rem;
+.btn-social {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0;
   background-repeat: no-repeat;
   &:hover,
   &:focus {
