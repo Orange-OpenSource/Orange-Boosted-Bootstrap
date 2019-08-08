@@ -40,6 +40,7 @@ Several quick start options are available:
 - Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted`
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
+- Use via [jsDelivr CDN](https://www.jsdelivr.com/package/npm/boosted)
 
 Read the [Getting started page](https://boosted.orange.com/docs/4.3/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
