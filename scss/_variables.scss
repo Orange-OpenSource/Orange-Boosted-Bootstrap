@@ -1022,7 +1022,9 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
 // Badges
 
-$badge-font-size:                   .875rem !default;
+$badge-font-size:                   $font-size-sm !default;
+$badge-font-size-lg:                $font-size-base !default;
+$badge-font-size-xlg:               $font-size-lg !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-padding-y:                   .1875rem !default;
 $badge-padding-x:                   .625rem !default;
