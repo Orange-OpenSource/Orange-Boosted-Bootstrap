@@ -41,7 +41,8 @@ $purple:  #a885d8 !default; // Boosted illustration color
 $pink:    #ffb4e6 !default; // Boosted illustration color
 $red:     #cd3c14 !default; // Boosted Functionnal
 $orange:  #f16e00 !default; // Boosted
-$yellow:  #fc0 !default; // Boosted Functionnal
+$digital: #ff7900 !default; // Boosted
+$yellow:  #fc0 !default;    // Boosted Functionnal
 $green:   #32c832 !default; // Boosted Functionnal
 $teal:    #50be87 !default; // Boosted illustration color
 $cyan:    #4bb4e6 !default; // Boosted illustration color
@@ -82,6 +83,7 @@ $theme-colors: map-merge(
   (
     "primary":    $primary,
     "secondary":  $secondary,
+    "digital":    $digital,
     "success":    $success,
     "info":       $info,
     "warning":    $warning,
