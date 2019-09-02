@@ -33,3 +33,25 @@ You can let the text `.o-scroll-up-text` display on all devices.
 </a>
 {% endcapture %} {% include example.html content=example %}
 
+## Options
+
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-target="#anchor"`.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Name</th>
+      <th style="width: 100px;">Type</th>
+      <th style="width: 50px;">Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>target</td>
+      <td>string</td>
+      <td>null</td>
+      <td>Allow you to specify a query selector of the custom top of the page. If it's set the go back to top action will scroll into the view to this anchor instead of positionning the offset top to 0</td>
+    </tr>
+  </tbody>
+</table>

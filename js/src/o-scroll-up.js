@@ -6,6 +6,7 @@
  */
 
 import $ from 'jquery'
+import Util from './util'
 
 /**
  * ------------------------------------------------------------------------
@@ -24,9 +25,11 @@ const SCROLLANIMATE      = 500
 
 
 const Default = {
-  offset : 10,
-  method : 'auto',
   target : ''
+}
+
+const DefaultType = {
+  target  : '(string|element)'
 }
 
 const Event = {
@@ -51,9 +54,10 @@ const Selector = {
  */
 
 class ScrollUp {
-  constructor(element) {
+  constructor(element, config) {
     this._element       = element
     this._scrollElement = window
+    this._config        = this._getConfig(config)
 
     $(window).on(Event.SCROLL, $.proxy(this._process, this))
     $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this))
@@ -72,6 +76,9 @@ class ScrollUp {
     return Default
   }
 
+  static get DefaultType() {
+    return DefaultType
+  }
 
   // public
 
@@ -85,6 +92,21 @@ class ScrollUp {
 
 
   // private
+  _getConfig(config) {
+    config = {
+      ...this.constructor.Default,
+      ...$(this._element).data(),
+      ...config
+    }
+
+    Util.typeCheckConfig(
+      NAME,
+      config,
+      this.constructor.DefaultType
+    )
+
+    return config
+  }
 
   _process() {
     if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
@@ -99,23 +121,38 @@ class ScrollUp {
   }
 
   _backToTop() {
-    if (typeof $.animate === 'function') {
+    // if target is defined scrollintoview
+    if (this._config.target) {
+      document.querySelector(this._config.target).scrollIntoView({
+        behavior: 'smooth'
+      })
+    } else if (typeof $.animate === 'function') {
       $('html, body').animate({
         scrollTop: 0
       }, SCROLLANIMATE)
     } else {
       $('html, body').scrollTop(0)
     }
+    // scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
 
   // static
 
-  static _jQueryInterface() {
+  static _jQueryInterface(config) {
     return this.each(function () {
       let data = $(this).data(DATA_KEY)
+      const _config = typeof config === 'object' ? config : null
+
       if (!data) {
-        data = new ScrollUp(this)
+        data = new ScrollUp(this, _config)
         $(this).data(DATA_KEY, data)
+      }
+
+      if (typeof config === 'string') {
+        if (typeof data[config] === 'undefined') {
+          throw new TypeError(`No method named "${config}"`)
+        }
+        data[config]()
       }
     })
   }
