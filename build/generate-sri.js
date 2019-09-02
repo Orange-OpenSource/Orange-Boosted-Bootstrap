@@ -32,6 +32,14 @@ const files = [
     configPropertyName: 'css_hash'
   },
   {
+    file: 'dist/css/orangeIcons.min.css',
+    configPropertyName: 'iconcss_hash'
+  },
+  {
+    file: 'dist/css/orangeHelvetica.min.css',
+    configPropertyName: 'helveticacss_hash'
+  },
+  {
     file: 'dist/js/boosted.min.js',
     configPropertyName: 'js_hash'
   },

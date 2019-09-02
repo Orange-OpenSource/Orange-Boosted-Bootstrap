@@ -22,13 +22,13 @@ Looking to quickly add Boosted to your project? Use BootstrapCDN, provided for f
 
 ### CSS
 
-Once you have [downloaded](../download/) boosted source files, copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS. You can also add orangeHelvetica and orangeIcons if needed, be careful both files are under copyright, see NOTICE.txt for more information.
+Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS. You can also add `orangeHelvetica` and `orangeIcons` if needed, be careful both files are under copyright, see NOTICE.txt for more information.
 
 {% highlight html %}
 <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
-<link rel="stylesheet" href="path/to/your/orangeHelvetica.css">
+<link rel="stylesheet" href="{{ site.cdn.helveticacss }}" integrity="{{ site.cdn.helveticacss_hash }}" crossorigin="anonymous">
 <!-- Copyright © 2016 Orange SA. All rights reserved -->
-<link rel="stylesheet" href="path/to/your/orangeIcons.css">
+<link rel="stylesheet" href="{{ site.cdn.iconcss }}" integrity="{{ site.cdn.iconcss_hash }}" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 

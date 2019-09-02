@@ -41,7 +41,7 @@ Several quick start options are available:
 - Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
-Read the [Getting started page](https://boosted.orange.com/docs/4.3/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/4.3/getting-started/introduction/) for information on the framework contents, CDN, templates and examples, and more.
 
 ## Status
 
@@ -53,6 +53,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/4.3/getting-star
 [![CSS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/js/boosted.min.js)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=TGxBTEN5dlFWTnU1TzFPUWNYb0IyTXV0SlNjOTRUcVQ4Vy9aMEptRytTQT0tLUpEaEJhdGdtUHFlMlhmZUR6aHZuYXc9PQ==--cab64b2cdcdd899e81600d69f5063437846441ff)
+[![](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
 ## What's included
 
