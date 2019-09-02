@@ -441,6 +441,8 @@
 
 // White links against a dark background
 .navbar-dark {
+  border-bottom: 1px solid $gray-700;
+
   .navbar-brand {
     color: $navbar-dark-brand-color;
 
