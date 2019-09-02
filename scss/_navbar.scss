@@ -138,6 +138,10 @@
     margin-left: 0;
     font-size: $h5-font-size;
     border-top: 1px solid $gray-900;
+
+    .nav-item:first-child {
+      border: 0;
+    }
   }
 
   .dropdown {
