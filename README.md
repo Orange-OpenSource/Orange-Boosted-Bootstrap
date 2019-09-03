@@ -204,23 +204,21 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 
 ## Thanks
 
-<p>
-    <a href="https://www.browserstack.com/" style="float:left">
-      <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" height="25" width="114" alt="Cross-browsers testing thanks to BrowserStack"/>
-    </a>
-    
-    Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
-</p>
+### Browserstack
 
-<br>
+<a href="https://www.browserstack.com/">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" height="25" width="114" alt="Cross-browsers testing thanks to BrowserStack"/>
+</a>
 
-<p>
-    <a href="https://www.netlify.com" style="float:left">
-      <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" height="51" width="114" alt="Deploys by Netlify"/>
-    </a>
-    
-    Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-releases at [Boosted](https://boosted.netlify.com) and auto-deploy pull requests.
-</p>
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+
+### Netlify
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" height="51" width="114" alt="Deploys by Netlify"/>
+</a>
+
+Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-releases at [Boosted](https://boosted.netlify.com) and auto-deploy pull requests.
 
 ## Copyright and license
 
