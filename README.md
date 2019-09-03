@@ -204,15 +204,12 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 
 ## Thanks
 
-### Browserstack
-
 <a href="https://www.browserstack.com/">
   <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" height="25" width="114" alt="Cross-browsers testing thanks to BrowserStack"/>
 </a>
 
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
-### Netlify
 
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" height="51" width="114" alt="Deploys by Netlify"/>
