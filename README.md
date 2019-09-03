@@ -197,16 +197,32 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 
 - <https://github.com/liyokuna>
 
+**Gaël Poupard**
+
+- <https://github.com/ffoodd>
+
 
 ## Thanks
 
-<a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="490" height="106">
-</a>
+<p>
+    <a href="https://www.browserstack.com/" style="float:left">
+      <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" height="25" width="114" alt="Cross-browsers testing thanks to BrowserStack"/>
+    </a>
+    
+    Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+</p>
 
-Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+<br>
+
+<p>
+    <a href="https://www.netlify.com" style="float:left">
+      <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" height="51" width="114" alt="Deploys by Netlify"/>
+    </a>
+    
+    Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-releases at [Boosted](https://boosted.netlify.com) and auto-deploy pull requests.
+</p>
 
 ## Copyright and license
-Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-releases at [Boosted](https://boosted.netlify.com).
+
 Initial code and documentation copyright 2011-2019 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
 Boosted code and documentation copyright 2015-2019 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/docs/LICENSE).
