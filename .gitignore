@@ -27,6 +27,7 @@ vendor/bundle
 .cache
 .DS_Store
 .idea
+.vscode
 .project
 .settings
 .tmproj
