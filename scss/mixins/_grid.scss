@@ -1,7 +1,7 @@
 /// Grid system
 //
 // Generate semantic grid columns with these mixins.
-// BOOSTED MOD : keep variable gutter width (removed from bootstrap)
+// Boosted mod : keep variable gutter width (removed from bootstrap)
 @mixin make-container($gutters: $grid-gutter-widths) {
   margin-right: auto;
   margin-left: auto;
@@ -11,11 +11,11 @@
       $gutter: map-get($gutters, $breakpoint);
       padding-right: $gutter / 2;
       padding-left: $gutter / 2;
-      // width: 100%; //Boosted mod our fluid is not 100% width
+      // width: 100%; // Boosted mod our fluid is not 100% width
     }
   }
 
-  // boosted mod
+  // Boosted mod
   @each $breakpoint, $container-margin in $container-fluid-margin-widths {
     @include media-breakpoint-up($breakpoint) {
       margin-right: $container-margin;
@@ -36,7 +36,7 @@
   @each $breakpoint, $container-max-width in $max-widths {
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       max-width: $container-max-width;
-      // boosted mod
+      // Boosted mod
       margin-right: auto;
       margin-left: auto;
       // end mod

@@ -291,7 +291,7 @@ Note that closing an alert will remove it from the DOM.
 | `$().alert('close')` | Closes an alert by removing it from the DOM. If the `.fade` and `.show` classes are present on the element, the alert will fade out before it is removed. |
 | `$().alert('dispose')` | Destroys an element's alert. |
 
-{% highlight js %}$(".alert").alert('close'){% endhighlight %}
+{% highlight js %}$('.alert').alert('close'){% endhighlight %}
 
 ### Events
 

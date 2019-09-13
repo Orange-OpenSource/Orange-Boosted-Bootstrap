@@ -11,13 +11,14 @@
   color: $body-color;
   text-align: center;
   vertical-align: middle;
+  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
-  @include hover {
+  @include hover() {
     color: $body-color;
     text-decoration: none;
   }
@@ -45,9 +46,9 @@
   }
 }
 
-// Boosted mod
+// Boosted mod remove underline for a.btn
 a.btn {
-  text-decoration: none; // Boosted mod remove underline for a.btn
+  text-decoration: none;
 }
 // End mod
 
@@ -129,11 +130,11 @@ fieldset:disabled a.btn {
 
   // Boosted mod
   &.btn-inverse {
-    color: #fff;
+    color: $white;
   }
   // end mod
 
-  @include hover {
+  @include hover() {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
@@ -158,9 +159,11 @@ fieldset:disabled a.btn {
 // Button Sizes
 //
 
+// Boosted mod
 .btn-xlg {
   @include button-size($btn-padding-y-xlg, $btn-padding-x-xlg, $font-size-xlg, $btn-line-height-xlg, $btn-border-radius-xlg);
 }
+// end mod
 
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
@@ -170,88 +173,16 @@ fieldset:disabled a.btn {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
-// Social Media
-.btn-mail {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-mail-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-lin {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-lin-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-gplus {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-gplus-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-tw {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-tw-inverse {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.btn-fbk {
-  height: 2.5rem;
-  background-repeat: no-repeat;
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
+// Boosted mod for social links
+.btn-mail,
+.btn-mail-inverse,
+.btn-lin,
+.btn-lin-inverse,
+.btn-gplus,
+.btn-gplus-inverse,
+.btn-tw,
+.btn-tw-inverse,
+.btn-fbk,
 .btn-fbk-inverse {
   height: 2.5rem;
   background-repeat: no-repeat;
@@ -260,6 +191,7 @@ fieldset:disabled a.btn {
     outline: none;
   }
 }
+// end mod
 
 //
 // Block button

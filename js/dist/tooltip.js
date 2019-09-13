@@ -1,11 +1,6 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap tooltip.js v4.3.1 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap tooltip.js v4.3.1 (https://getbootstrap.com/)
+  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -409,7 +404,7 @@
           $(tip).addClass(ClassName.FADE);
         }
 
-        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement; // boosted mod fix rtl
+        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
 
         var attachment = this._getAttachment(placement);
 
@@ -423,21 +418,7 @@
           $(tip).appendTo(container);
         }
 
-        $(this.element).trigger(this.constructor.Event.INSERTED); // boosted mod fix rtl
-
-        var dir = document.getElementsByTagName('html')[0].dir;
-
-        if (dir === 'rtl') {
-          var hash = {
-            right: 'left',
-            left: 'right'
-          };
-          attachment = attachment.replace(/right|left/g, function (matched) {
-            return hash[matched];
-          });
-        } // end mod
-
-
+        $(this.element).trigger(this.constructor.Event.INSERTED);
         this._popper = new Popper(this.element, tip, {
           placement: attachment,
           modifiers: {

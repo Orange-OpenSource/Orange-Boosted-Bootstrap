@@ -35,6 +35,9 @@
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
+  // Workaround for the image size bug in IE
+  // See: https://github.com/twbs/bootstrap/pull/28855
+  min-height: 1px;
   padding: $card-spacer-x;
   color: $card-color;
 }
@@ -53,7 +56,7 @@
 }
 
 .card-link {
-  @include hover {
+  @include hover() {
     text-decoration: none;
   }
 
@@ -69,9 +72,9 @@
 .card-header {
   padding: $card-spacer-y $card-spacer-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  font-weight: $font-weight-bold; // boosted mod
+  font-weight: $font-weight-bold; // Boosted mod
   color: $card-cap-color;
-  background-color: $black; // boosted mod
+  background-color: $black; // Boosted mod
   border-bottom: $card-border-width solid $card-border-color;
 
   &:first-child {
@@ -260,7 +263,7 @@
 //
 
 .accordion {
-  /* boosted mod */
+  // Boosted mod
 
   .card {
     margin-bottom: 0;
@@ -276,7 +279,7 @@
 
   .card-header {
     padding: 0;
-    background-color: #fff;
+    background-color: $white;
     border: 0;
 
     &,
@@ -307,7 +310,8 @@
         background-image: $accordion-arrow-icon;
       }
 
-      &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
+      // stylelint-disable-next-line selector-no-qualifying-type
+      &[aria-expanded="true"]::after {
         transform: rotate(180deg);
       }
     }
@@ -321,7 +325,7 @@
 // For mobile display emphase the border
 @include media-breakpoint-down(sm) {
   .accordion .card {
-    // border 1px for first child only
+    // border 2px for first child only
     border-top-width: 2px;
     border-bottom-width: 2px;
     // remove border for card other than the first one

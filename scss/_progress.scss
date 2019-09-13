@@ -27,7 +27,7 @@
   @include transition($progress-bar-transition);
 }
 
-// BOOSTED MOD progress is half height on mobile
+// Boosted mod : progress is half height on mobile
 @include media-breakpoint-down(md) {
   .progress {
     width: 100%;
@@ -40,6 +40,7 @@
   }
 }
 // end mod
+
 .progress-bar-striped {
   @include gradient-striped();
   background-size: $progress-height $progress-height;
@@ -49,8 +50,10 @@
   .progress-bar-animated {
     animation: progress-bar-stripes $progress-bar-animation-timing;
 
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
+    @if $enable-prefers-reduced-motion-media-query {
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
     }
   }
 }

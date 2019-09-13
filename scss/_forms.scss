@@ -47,7 +47,7 @@ label {
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus();
+  @include form-control-focus($ignore-warning: true);
 
   // Placeholder
   &::placeholder {
@@ -63,7 +63,7 @@ label {
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
   &[readonly] {
-    color: #666; // boosted mod
+    color: $gray-700; // Boosted mod
     background-color: $input-disabled-bg;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
@@ -127,9 +127,9 @@ select.form-control {
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding-top: $input-padding-y;
-  padding-bottom: $input-padding-y;
+  padding: $input-padding-y 0;
   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  @include font-size($input-font-size);
   line-height: $input-line-height;
   color: $input-plaintext-color;
   background-color: transparent;
@@ -220,7 +220,7 @@ textarea.form-control {
   position: relative;
   display: block;
   padding-left: $form-check-input-gutter;
-  margin-bottom: ($spacer / 2); // Boosted mod ensure that there's at least 10px
+  margin-bottom: $spacer / 2; // Boosted mod ensure that there's at least 10px
 }
 
 .form-check-input {
@@ -228,7 +228,9 @@ textarea.form-control {
   margin-top: $form-check-input-margin-y;
   margin-left: -$form-check-input-gutter;
 
-  &:disabled ~ .form-check-label {
+  // Use disabled attribute instead of :disabled pseudo-class
+  // Workaround for: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11295231
+  &[disabled] ~ .form-check-label {
     color: $text-muted;
   }
 }

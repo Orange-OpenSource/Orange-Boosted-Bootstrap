@@ -54,7 +54,7 @@ While Boosted uses `em`s or `rem`s for defining most sizes, `px`s are used for g
 
 See how aspects of the Boosted grid system work across multiple devices with a handy table.
 
-We have include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution.
+We include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution.
  
 [comment]: # Boosted mod
 
@@ -91,7 +91,7 @@ We have include a security margin for container fluid. The goal is to fit exactl
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Targetted resolution</th>
+      <th class="text-nowrap" scope="row">Breakpoint</th>
       <td>320px</td>
       <td>480px</td>
       <td>768px</td>
@@ -109,7 +109,7 @@ We have include a security margin for container fluid. The goal is to fit exactl
       <td>Large desktop</td>
     </tr>
     <tr>
-      <th scope="row">Container max-width (Design Area)</th>
+      <th class="text-nowrap" scope="row">Max container width</th>
       <td>302px</td>
       <td>458px</td>
       <td>724px</td>
@@ -207,17 +207,21 @@ For example, here are two grid layouts that apply to every device and viewport, 
 {% include example.html content=example %}
 </div>
 
-Equal-width columns can be broken into multiple lines, but there was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#flexbug-11) that prevented this from working without an explicit `flex-basis` or `border`. There are workarounds for older browser versions, but they shouldn't be necessary if you're up-to-date.
+### Equal-width multi-line
+
+Create equal-width columns that span multiple lines by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
+
+There was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#flexbug-11) that prevented this from working without an explicit `flex-basis` or `border`. There are workarounds for older browser versions, but they shouldn't be necessary if your target browsers don't fall into the buggy versions.
 
 <div class="bd-example-row">
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
     <div class="w-100"></div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
   </div>
 </div>
 {% endcapture %}
@@ -292,25 +296,6 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 {% include example.html content=example %}
 </div>
 
-### Equal-width multi-row
-
-Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
-
-<div class="bd-example-row">
-{% capture example %}
-<div class="container">
-  <div class="row">
-    <div class="col">col</div>
-    <div class="col">col</div>
-    <div class="w-100"></div>
-    <div class="col">col</div>
-    <div class="col">col</div>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-</div>
-
 ## Responsive classes
 
 Boosted's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
@@ -367,7 +352,7 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 <div class="container">
   <!-- Stack the columns on mobile by making one full-width and the other half-width -->
   <div class="row">
-    <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+    <div class="col-md-8">.col-md-8</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
   </div>
 
@@ -546,7 +531,7 @@ In practice, here's how it looks. Note you can continue to use this with all oth
 <div class="bd-example-row">
 {% capture example %}
 <div class="row no-gutters">
-  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-sm-6 col-md-8">.col-sm-6 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
 {% endcapture %}
@@ -622,14 +607,14 @@ Use `.order-` classes for controlling the **visual order** of your content. Thes
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      First, but unordered
+    <div class="col order-1">
+      First in DOM, no order applied
     </div>
     <div class="col order-12">
-      Second, but last
+      Second in DOM, with a larger order
     </div>
     <div class="col order-1">
-      Third, but first
+      Third in DOM, with an order of 1
     </div>
   </div>
 </div>
@@ -644,13 +629,13 @@ There are also responsive `.order-first` and `.order-last` classes that change t
 <div class="container">
   <div class="row">
     <div class="col order-last">
-      First, but last
+      First in DOM, ordered last
     </div>
     <div class="col">
-      Second, but unordered
+      Second in DOM, unordered
     </div>
     <div class="col order-first">
-      Third, but first
+      Third in DOM, ordered first
     </div>
   </div>
 </div>
@@ -784,7 +769,7 @@ $grid-breakpoints: (
   lg: 980px,
   // Extra large screen / wide desktop (target 1280 screen resolutions)
   xl: 1220px,
-  // Extra large screen / wide desktop (target 1440 screen resolutions)
+  // Extra large screen / wider desktop (target 1440 screen resolutions)
   xxl: 1380px
 );
 

@@ -2,7 +2,7 @@
 
 @mixin list-group-item-variant($state, $background, $color) {
   .list-group-item-#{$state} {
-    // boosted mod
+    // Boosted mod
     @if $state == "secondary" or $state == "dark"  {
       color: $white;
     } @else {
@@ -13,7 +13,7 @@
 
     &.list-group-item-action {
       @include hover-focus {
-        // boosted mod
+        // Boosted mod
         @if $state == "secondary" or $state == "dark"  {
           color: $white;
         } @else {

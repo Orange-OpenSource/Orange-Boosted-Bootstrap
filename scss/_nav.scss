@@ -1,7 +1,7 @@
 // Base class
 //
 // Kickstart any navigation component with a set of style resets. Works with
-// `<nav>`s or `<ul>`s.
+// `<nav>`s, `<ul>`s or `<ol>`s.
 
 .nav {
   display: flex;
@@ -19,7 +19,7 @@
   font-weight: $font-weight-bold;
   // end mod
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 
@@ -43,23 +43,21 @@
   }
 
   .nav-link {
-    // Boosted mod
-    // remove border from nav-link padding in tabs
+    // Boosted mod : remove border from nav-link padding in tabs
     padding: $nav-link-padding-y calc(#{$nav-link-padding-x} - #{$nav-tabs-border-width});
     line-height: 1rem;
     // end mod
     border: $nav-tabs-border-width solid transparent;
 
-    // Boosted mod
-    // Border bottom width to 0 for display
+    // Boosted mod : border bottom width to 0 for display
     border-bottom-width: 0;
     // end mod
 
     @include border-top-radius($nav-tabs-border-radius);
 
-    @include hover-focus {
-      color: $nav-tabs-link-hover-color; // boosted mod
-      background-color: $nav-tabs-link-hover-bg; // boosted mod
+    @include hover-focus() {
+      color: $nav-tabs-link-hover-color; // Boosted mod
+      background-color: $nav-tabs-link-hover-bg; // Boosted mod
       border-color: $nav-tabs-link-hover-border-color;
     }
 

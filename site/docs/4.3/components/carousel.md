@@ -180,17 +180,6 @@ Add a link to a slider by using `a` html tag.
     </a>
   </div>
 </div>
-
-{% highlight html %}
-<div class="carousel-item">
-  <img src="..." alt="...">
-  <div class="carousel-caption d-none d-md-block">
-    <h5>...</h5>
-    <p>...</p>
-    <a href="#" title="Empty link">...</a>
-  </div>
-</div>
-{% endhighlight %}
 {% endcapture %}
 {% include example.html content=example %}
 

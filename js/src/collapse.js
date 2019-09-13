@@ -352,12 +352,6 @@ class Collapse {
         $this.data(DATA_KEY, data)
       }
 
-      // Boosted mod
-      if (/init/.test(config)) {
-        return
-      }
-      // end mod
-
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)

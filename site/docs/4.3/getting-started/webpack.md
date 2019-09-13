@@ -26,8 +26,8 @@ import 'boosted/js/dist/alert';
 ...
 {% endhighlight %}
 
-Boosted is dependent on [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/),
-these are defined as `peerDependencies`, this means that you will have to make sure to add both of them
+Boosted depends on [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/),
+which are specified in the `peerDependencies` property; this means that you will have to make sure to add both of them
 to your `package.json` using `npm install --save jquery popper.js`.
 
 ## Importing Styles

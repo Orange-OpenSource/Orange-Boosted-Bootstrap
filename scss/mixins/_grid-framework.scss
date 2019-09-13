@@ -2,7 +2,7 @@
 //
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
-// BOOSTED MOD : keep variable gutter width (removed from bootstrap)
+// Boosted mod : keep variable gutter width (removed from bootstrap)
 
 @mixin make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
   // Common properties for all breakpoints

@@ -3,13 +3,13 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 // boosted mod add default color, disable-background and disabled-border and disabled-color option
-@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $disabled-background: $background, $disabled-border: border, $disabled-color: color-yiq($background), $color: color-yiq($background)) {
+@mixin button-varianoint sut($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $disabled-background: $background, $disabled-border: border, $disabled-color: color-yiq($background), $color: color-yiq($background)) {
   color: $color;
   @include gradient-bg($background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
-  @include hover-focus { // Boosted mod replace hover by hover focus cause we remove box-shadow
+  @include hover-focus() { // Boosted mod replace hover by hover focus cause we remove box-shadow
     color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
     border-color: $hover-border;
@@ -64,10 +64,11 @@
   color: $color;
   border-color: $color;
 
-  @include hover-focus { //Boosted mod focus has same as hover
-    color: #fff; // Boosted mod
-    background-color: #000; // Boosted mod
-    border-color: #000 // Boosted mod
+  //Boosted mod focus has same as hover
+  @include hover-focus() {
+    color: $white; // Boosted mod
+    background-color: $black; // Boosted mod
+    border-color: $black; // Boosted mod
   }
 
   // &:focus,
@@ -85,9 +86,9 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: #000; // Boosted mod
-    background-color: #f16e00; // Boosted mod
-    border-color: #f16e00; // Boosted mod
+    color: $black; // Boosted mod
+    background-color: $primary; // Boosted mod
+    border-color: $primary; // Boosted mod
 
     &:focus {
       // Avoid using mixin so we can pass custom focus shadow properly

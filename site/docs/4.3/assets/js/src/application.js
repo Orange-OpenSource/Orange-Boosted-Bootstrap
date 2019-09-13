@@ -60,7 +60,7 @@
 
     // Insert copy to clipboard button before .highlight
     $('figure.highlight, div.highlight').each(function () {
-      // Boosted mod set clipboard button to secondary
+      // Boosted mod : set clipboard button to secondary
       var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard btn btn-sm btn-secondary" title="Copy to clipboard">Copy</button></div>'
       $(this).before(btnHtml)
       $('.btn-clipboard')

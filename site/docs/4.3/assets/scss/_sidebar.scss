@@ -7,8 +7,8 @@
 .bd-toc {
   @supports (position: sticky) {
     position: sticky;
-    top: 5rem; // boosted mod
-    height: calc(100vh - 5rem); // boosted mod
+    top: 5rem; // Boosted mod
+    height: calc(100vh - 5rem); // Boosted mod
     overflow-y: auto;
   }
   order: 2;
@@ -32,10 +32,10 @@
   a {
     display: block;
     padding: .125rem 1.5rem;
-    // color: $gray-light; // boosted mod
+    // color: $gray-light; // Boosted mod
 
     &:hover {
-      color: theme-color("primary"); // boosted mod
+      color: theme-color("primary"); // Boosted mod
       text-decoration: none;
     }
   }
@@ -47,17 +47,17 @@
 
 .bd-sidebar {
   order: 0;
-  // background-color: transparent; // boosted mod
-  border-bottom: 1px solid $gray-300; // boosted mod
+  // background-color: transparent; // Boosted mod
+  border-bottom: 1px solid $gray-300; // Boosted mod
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       position: sticky;
-      top: 5rem; // boosted mod
+      top: 5rem; // Boosted mod
       z-index: 1000;
-      max-height: calc(100vh - 5rem); // boosted mod
+      max-height: calc(100vh - 5rem); // Boosted mod
     }
-    border-right: 1px solid $gray-300; // boosted mod
+    border-right: 1px solid $gray-300; // Boosted mod
   }
 
   @include media-breakpoint-up(xl) {
@@ -68,12 +68,12 @@
 .bd-links {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-right: $grid-gutter-width / -2; // boosted mod
-  margin-left: $grid-gutter-width / -2; // boosted mod
+  margin-right: $grid-gutter-width / -2; // Boosted mod
+  margin-left: $grid-gutter-width / -2; // Boosted mod
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 9.6rem); // boosted mod
+      max-height: calc(100vh - 9.6rem); // Boosted mod
       overflow-y: auto;
     }
   }
@@ -86,12 +86,12 @@
 
 .bd-search {
   position: relative; // To contain the Algolia search
-  padding: 1rem $grid-gutter-width / 2; // boosted mod our col-12 has 10px paddings
-  margin-right: $grid-gutter-width / -2; // boosted mod
-  margin-left: $grid-gutter-width / -2; // boosted mod
+  padding: 1rem $grid-gutter-width / 2; // Boosted mod our col-12 has 10px paddings
+  margin-right: $grid-gutter-width / -2; // Boosted mod
+  margin-left: $grid-gutter-width / -2; // Boosted mod
   border-bottom: 1px solid $gray-300;
 
-  // Boosted mod keep basic form-control style
+  // Boosted mod : keep basic form-control style
   //  .form-control:focus {
   //    border-color: $bd-purple-bright;
   //    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
@@ -111,10 +111,10 @@
   display: block;
   padding: .25rem 1.5rem;
   font-weight: 600;
-  // color: $gray-lightest; // boosted mod
+  // color: $gray-lightest; // Boosted mod
 
   &:hover {
-    color: theme-color("primary");// boosted mod
+    color: theme-color("primary");// Boosted mod
     text-decoration: none;
   }
 }
@@ -128,7 +128,7 @@
     }
 
     > .bd-toc-link {
-      color: theme-color("primary"); // boosted mod
+      color: theme-color("primary"); // Boosted mod
 
       &:hover {
         background-color: transparent;
@@ -146,11 +146,11 @@
   display: block;
   padding: .25rem 1.5rem;
   @include font-size(90%);
-  color: $gray-700;// boosted mod
+  color: $gray-700; // Boosted mod
 }
 
 .bd-sidebar .nav > li > a:hover {
-  color: theme-color("primary");// boosted mod
+  color: theme-color("primary"); // Boosted mod
   text-decoration: none;
   background-color: transparent;
 }
@@ -158,10 +158,11 @@
 .bd-sidebar .nav > .active > a,
 .bd-sidebar .nav > .active:hover > a {
   font-weight: 600;
-  color: #000;// boosted mod
+  color: $black; // Boosted mod
   background-color: transparent;
 }
-// boosted mod
+
+// Boosted mod
 .bd-links a,
 .bd-toc a {
   &:focus {

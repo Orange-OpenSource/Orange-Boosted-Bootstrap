@@ -16,7 +16,7 @@
   @include transition($badge-transition);
 
   @at-root a#{&} {
-    @include hover-focus {
+    @include hover-focus() {
       text-decoration: none;
     }
   }
@@ -56,11 +56,11 @@
 // Boosted mod
 .badge[href] {
   @include focus {
-    outline-color: #fff;
+    outline-color: $white;
     outline-offset: -1px;
 
     &.badge-light {
-      outline-color: #000;
+      outline-color: $black;
     }
   }
 }

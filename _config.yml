@@ -15,7 +15,7 @@ host:           "localhost"
 port:           9001
 baseurl:        ""
 # boosted mod
-url:            https://boosted.orange.com
+url:            "https://boosted.orange.com"
 # end boosted mod
 encoding:       UTF-8
 exclude:
@@ -65,6 +65,7 @@ grid:
     desc: Extra extra large devices
     subdesc: Desktop (&ge;1380px) (target 1440 screen resolutions)
 # end boosted mod
+
 # Social
 title:              Boosted
 description:        "Based on Bootstrap the most popular library."
@@ -75,11 +76,11 @@ social_logo_path:   /docs/4.3/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
 current_version:      4.3.1
-bootstrap_current_version:      v4.3.1
 current_ruby_version: 4.3.1
 docs_version:         4.3
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
+opencollective:       "https://opencollective.com/bootstrap"
 blog:                 "https://blog.getbootstrap.com"
 expo:                 "https://expo.getbootstrap.com"
 themes:               "https://themes.getbootstrap.com"

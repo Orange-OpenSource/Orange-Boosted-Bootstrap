@@ -27,7 +27,7 @@ const reporters = ['dots']
 const detectBrowsers = {
   usePhantomJS: false,
   postDetection(availableBrowser) {
-    if (typeof process.env.TRAVIS_JOB_ID !== 'undefined' || availableBrowser.includes('Chrome')) {
+    if (process.env.CI === true || availableBrowser.includes('Chrome')) {
       return ['ChromeHeadless']
     }
 
@@ -120,10 +120,10 @@ if (bundle) {
     thresholds: {
       emitWarning: false,
       global: {
-        statements: 83,
-        branches: 80,
-        functions: 80,
-        lines: 83
+        statements: 90,
+        branches: 86,
+        functions: 89,
+        lines: 90
       }
     }
   }

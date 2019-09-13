@@ -1,11 +1,6 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap collapse.js v4.3.1 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap collapse.js v4.3.1 (https://getbootstrap.com/)
+  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -105,8 +100,7 @@
     HEIGHT: 'height'
   };
   var Selector = {
-    ACTIVES: '*:not(.multi) > .show, *:not(.multi) > .collapsing',
-    // boosted mod
+    ACTIVES: '.show, .collapsing',
     DATA_TOGGLE: '[data-toggle="collapse"]'
     /**
      * ------------------------------------------------------------------------
@@ -357,21 +351,14 @@
 
         var _config = _objectSpread({}, Default, $this.data(), typeof config === 'object' && config ? config : {});
 
-        if (!data && _config.toggle && /show|hide|init/.test(config)) {
-          // Boosted mod
+        if (!data && _config.toggle && /show|hide/.test(config)) {
           _config.toggle = false;
         }
 
         if (!data) {
           data = new Collapse(this, _config);
           $this.data(DATA_KEY, data);
-        } // Boosted mod
-
-
-        if (/init/.test(config)) {
-          return;
-        } // end mod
-
+        }
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
@@ -420,15 +407,7 @@
 
       Collapse._jQueryInterface.call($target, config);
     });
-  }) // Boosted mod
-  .on('DOMContentLoaded', function () {
-    $(Selector.DATA_TOGGLE).each(function () {
-      var target = Collapse._getTargetFromElement(this);
-
-      Collapse._jQueryInterface.call($(target), 'init');
-    });
-  }); // end mod
-
+  });
   /**
    * ------------------------------------------------------------------------
    * jQuery

@@ -4,8 +4,6 @@
   @include border-radius();
 }
 
-// stylelint-disable selector-max-class
-
 .page-link {
   position: relative;
   display: block;
@@ -37,7 +35,7 @@
   }
 
   &:focus {
-    z-index: 2;
+    z-index: 3;
     outline: $pagination-focus-outline;
     box-shadow: $pagination-focus-box-shadow;
   }
@@ -75,7 +73,7 @@
         background-image: #{$pagination-icon-prev};
         background-repeat: no-repeat;
       }
-      @include hover-focus {
+      @include hover-focus() {
         &::before {
           background-image: #{$pagination-icon-prev-active};
         }
@@ -91,7 +89,7 @@
   &:first-child,
   &:last-child {
     .page-link {
-      @include hover-focus {
+      @include hover-focus() {
         color: $pagination-active-color;
         background-color: $pagination-active-bg;
         border-color: $pagination-active-border-color;
@@ -104,8 +102,8 @@
       }
     }
   }
-
   // End mod
+
   &:last-child {
     .page-link {
       @include border-right-radius($border-radius);
@@ -121,7 +119,7 @@
         background-image: #{$pagination-icon-next};
         background-repeat: no-repeat;
       }
-      @include hover-focus {
+      @include hover-focus() {
         &::before {
           background-image: #{$pagination-icon-next-active};
         }
@@ -135,7 +133,7 @@
   }
 
   &.active .page-link {
-    z-index: 1;
+    z-index: 3;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;

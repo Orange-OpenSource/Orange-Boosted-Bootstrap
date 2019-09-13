@@ -7,7 +7,8 @@
 .bd-content {
   order: 1;
 
-  // Hack the sticky header Boosted mod ignore card-title
+  // Hack the sticky header
+  // Boosted mod ignore card-title
   > h2[id]:not(.card-title),
   > h3[id]:not(.card-title),
   > h4[id]:not(.card-title) {
@@ -95,13 +96,14 @@
     margin-bottom: .25rem;
   }
 
-  @include media-breakpoint-up(lg) {
-    > ul,
-    > ol,
-    > p {
-      // max-width: 80%; // boosted mod
-    }
-  }
+  // Boosted mod
+  // @include media-breakpoint-up(lg) {
+  //  > ul,
+  //  > ol,
+  // > p {
+  //    /max-width: 80%;
+  //  }
+  // }
 }
 
 .bd-title {

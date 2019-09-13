@@ -10,7 +10,7 @@
 //
 // Example usage: change the default blue border and shadow to white for better
 // contrast against a dark gray background.
-@mixin form-control-focus() {
+@mixin form-control-focus($ignore-warning: false) {
   &:focus {
     color: $input-focus-color;
     background-color: $input-focus-bg;
@@ -24,8 +24,21 @@
       // box-shadow: $input-focus-box-shadow;
     }
   }
+  @include deprecate("The `form-control-focus()` mixin", "v4.3.2", "v5", $ignore-warning);
 }
 
+@mixin form-validation-state-selector($state) {
+  @if ($state == "valid" or $state == "invalid") {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      @content;
+    }
+  } @else {
+    &.is-#{$state} {
+      @content;
+    }
+  }
+}
 
 @mixin form-validation-state($state, $color, $icon) {
   .#{$state}-feedback {
@@ -53,23 +66,23 @@
   }
 
   .form-control {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       border-color: $color;
 
-      // Boosted Mod
+      // Boosted mod
       // @if $enable-validation-icons {
       //   padding-right: $input-height-inner;
-      //   background-image: $icon;
+      //   background-image: escape-svg($icon);
       //   background-repeat: no-repeat;
-      //   background-position: center right $input-height-inner-quarter;
+      //   background-position: right $input-height-inner-quarter center;
       //   background-size: $input-height-inner-half $input-height-inner-half;
       // }
+
       &:focus {
         border-color: $color;
-        // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
+        // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
       }
-      // Boosted Mod
+
       ~ .#{$state}-feedback {
         @if $enable-validation-icons {
           @if $state == "valid" {
@@ -102,18 +115,15 @@
         display: block;
         padding-left: 1.625rem;
       }
-
       ~ .#{$state}-tooltip {
         display: block;
       }
-      // End Mod
     }
   }
 
   // stylelint-disable-next-line selector-no-qualifying-type
   textarea.form-control {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       @if $enable-validation-icons {
         padding-right: $input-height-inner;
         background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
@@ -122,13 +132,12 @@
   }
 
   .custom-select {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       border-color: $color;
 
       @if $enable-validation-icons {
         padding-right: $custom-select-feedback-icon-padding-right;
-        background: $custom-select-background, $icon $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+        background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
       }
 
       &:focus {
@@ -145,8 +154,7 @@
 
 
   .form-control-file {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .#{$state}-feedback,
       ~ .#{$state}-tooltip {
         display: block;
@@ -155,8 +163,7 @@
   }
 
   .form-check-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .form-check-label {
         color: $color;
       }
@@ -169,8 +176,7 @@
   }
 
   .custom-control-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .custom-control-label {
         color: $color;
 
@@ -206,8 +212,7 @@
 
   // custom file
   .custom-file-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
+    @include form-validation-state-selector($state) {
       ~ .custom-file-label {
         border-color: $color;
       }

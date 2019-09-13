@@ -23,7 +23,7 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 All HTML headings, `<h1>` through `<h6>`, are available.
 
 <table>
-  <!-- BOOSTED MOD -->
+  <!-- Boosted mod -->
   <thead>
     <tr>
     <th scope="col">Heading</th>
@@ -31,49 +31,61 @@ All HTML headings, `<h1>` through `<h6>`, are available.
     <th scope="col">Mobile size</th>
     </tr>
   </thead>
-  <!-- END MOD -->    
+  <!-- end mod -->    
   <tbody>
     <tr>
-      <td>{{ "`<h1></h1>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 2.125rem (34px)</td>
-      <td class="type-info">Bold 1.25rem (20px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h1></h1>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 2.125rem (34px)</td>
+      <td>Bold 1.25rem (20px)</td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h2></h2>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.875rem (30px)</td>
-      <td class="type-info">Bold 1.125rem (18px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h2></h2>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.875rem (30px)</td>
+      <td>Bold 1.125rem (18px)</td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h3></h3>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.5rem (24px)</td>
-      <td class="type-info">Bold 1rem (16px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h3></h3>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.5rem (24px)</td>
+      <td>Bold 1rem (16px)</td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h4></h4>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.25rem (20px)</td>
-      <td class="type-info">Bold .875rem (14px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h4></h4>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.25rem (20px)</td>
+      <td>Bold .875rem (14px)</td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h5></h5>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.125rem (18px)</td>
-      <td class="type-info">Bold .875rem (14px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h5></h5>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.125rem (18px)</td>
+      <td>Bold .875rem (14px)</td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h6></h6>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1rem (16px)</td>
-      <td class="type-info">Bold .875rem (14px)</td>        
-      <!-- END MOD -->
+      <td>
+        {{ "`<h6></h6>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1rem (16px)</td>
+      <td>Bold .875rem (14px)</td>        
+      <!-- end mod -->
     </tr>
   </tbody>
 </table>

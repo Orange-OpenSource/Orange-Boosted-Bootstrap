@@ -107,9 +107,7 @@ The required markup for a tooltip is only a `data` attribute and `title` on the 
 {% capture callout %}
 ##### Making tooltips work for keyboard and assistive technology users
 
-You should only add tooltips to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as `<span>`s) can be made focusable by adding the `tabindex="0"` attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users. In addition, most assistive technologies currently do not announce the tooltip in this situation.
-
-Additionally, do not rely solely on `hover` as the trigger for your tooltip, as this will make your tooltips impossible to trigger for keyboard users.
+You should only add tooltips to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as `<span>`s) can be made focusable by adding the `tabindex="0"` attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce the tooltip in this situation. Additionally, do not rely solely on `hover` as the trigger for your tooltip, as this will make your tooltips impossible to trigger for keyboard users.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
@@ -277,6 +275,12 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>null | function</td>
       <td>null</td>
       <td>Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization.</td>
+    </tr>
+    <tr>
+      <td>popperConfig</td>
+      <td>null | object</td>
+      <td>null</td>
+      <td>To change Bootstrap's default Popper.js config, see <a href="https://popper.js.org/popper-documentation.html#Popper.Defaults">Popper.js's configuration</a></td>
     </tr>
   </tbody>
 </table>

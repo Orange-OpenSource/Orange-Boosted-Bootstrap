@@ -212,15 +212,7 @@ Note that pre-checked buttons require you to manually add the `.active` class to
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
-
-{% highlight html %}
-<div class="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="checkbox" checked> Checked
-  </label>
-</div>
-{% endhighlight %}
+{% include example.html content=example %}
 
 {% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -235,21 +227,8 @@ Note that pre-checked buttons require you to manually add the `.active` class to
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
+{% include example.html content=example %}
 
-{% highlight html %}
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" checked> Active
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2"> Radio
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3"> Radio
-  </label>
-</div>
-{% endhighlight %}
 ### Methods
 
 | Method | Description |
