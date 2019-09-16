@@ -3,7 +3,7 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 // boosted mod add default color, disable-background and disabled-border and disabled-color option
-@mixin button-varianoint sut($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $disabled-background: $background, $disabled-border: border, $disabled-color: color-yiq($background), $color: color-yiq($background)) {
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $disabled-background: $background, $disabled-border: border, $disabled-color: color-yiq($background), $color: color-yiq($background)) {
   color: $color;
   @include gradient-bg($background);
   border-color: $border;
