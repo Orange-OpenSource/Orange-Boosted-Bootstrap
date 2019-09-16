@@ -43,7 +43,7 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'The “contentinfo” role is unnecessary for element “footer”.',
     'The “navigation” role is unnecessary for element “nav”.',
     'The “form” role is unnecessary for element “form”.',
-    'Possible misuse of “aria-label”'
+    'Possible misuse of “aria-label”. (If you disagree with this warning, file an issue report or send e-mail to www-validator@w3.org.)'
   ].join('|')
 
   const args = [
