@@ -48,7 +48,7 @@
   .nav-link:not(.disabled) {
     &,
     &.dropdown-toggle {
-      @include focus {
+      @include focus() {
         outline-width: 1px;
         outline-style: dotted;
         outline-offset: -6px;
@@ -219,11 +219,11 @@
   }
 
   .nav-link {
-    @include active {
+    @include active() {
       background-color: $nav-pills-link-active-bg;
     }
 
-    @include hover {
+    @include hover() {
       color: $nav-pills-link-active-color;
       cursor: default;
       background-color: $nav-pills-link-active-bg;
@@ -233,7 +233,7 @@
       }
     }
 
-    @include focus {
+    @include focus() {
       color: $nav-pills-focus-link-color;
       background-color: $nav-pills-focus-link-bg;
       outline: none;
@@ -254,7 +254,7 @@
       margin: 0;
 
       .nav-link {
-        @include focus {
+        @include focus() {
           outline: 1px dotted #000;
           outline-offset: -2px;
         }

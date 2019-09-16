@@ -61,7 +61,7 @@
 
   .nav-link,
   .dropdown-toggle {
-    @include focus {
+    @include focus() {
       outline-offset: .5rem;
     }
 

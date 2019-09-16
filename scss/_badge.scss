@@ -55,7 +55,7 @@
 
 // Boosted mod
 .badge[href] {
-  @include focus {
+  @include focus() {
     outline-color: $white;
     outline-offset: -1px;
 

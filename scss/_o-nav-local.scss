@@ -27,7 +27,7 @@
 
   .nav .nav-link,
   .nav .dropdown-toggle {
-    @include focus {
+    @include focus() {
       outline: 1px dotted;
       outline-offset: -1px;
     }
@@ -53,7 +53,7 @@
     }
 
     .nav-link {
-      @include focus {
+      @include focus() {
         outline-offset: -2px;
       }
       display: block;
@@ -73,7 +73,7 @@
   border-bottom-color: $gray-900;
 
   .nav-link {
-    @include hover-focus {
+    @include hover-focus() {
       color: theme-color("primary");
     }
 
