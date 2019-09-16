@@ -154,7 +154,7 @@
 #collapsible-content,
 #sizing {
   &::before {
-    @include sr-only;
+    @include sr-only();
     content: "warning, not brand compliant";
   }
 
