@@ -120,10 +120,10 @@ if (bundle) {
     thresholds: {
       emitWarning: false,
       global: {
-        statements: 90,
-        branches: 86,
-        functions: 89,
-        lines: 90
+        statements: 84,
+        branches: 81,
+        functions: 81,
+        lines: 84
       }
     }
   }
