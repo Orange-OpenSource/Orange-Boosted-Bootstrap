@@ -196,7 +196,7 @@ a {
 
 // Boosted mod
 p a,
-main :not([class*="nav"]) > li a {
+main li a {
   text-decoration: underline;
 
   @include hover-focus() {

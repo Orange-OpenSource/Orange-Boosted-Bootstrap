@@ -128,6 +128,7 @@
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
+  text-decoration: none; // Boosted mod
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s

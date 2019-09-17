@@ -16,8 +16,10 @@
   // End mod
   line-height: $pagination-line-height;
   color: $pagination-color;
+  text-decoration: none; // Boosted mod
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
+
 
   &:hover,
   &:focus {
