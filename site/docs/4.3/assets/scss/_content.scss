@@ -43,9 +43,12 @@
       > tr {
         > th,
         > td {
-          padding: $table-cell-padding;
-          vertical-align: top;
+          padding: .625rem;
           border: 1px solid $table-border-color;
+
+          &.bg-light {
+            background-color: $gray-200;
+          }
 
           > p:last-child {
             margin-bottom: 0;
