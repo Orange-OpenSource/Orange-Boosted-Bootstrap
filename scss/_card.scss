@@ -264,16 +264,12 @@
 
 .accordion {
   // Boosted mod
-
   .card {
     margin-bottom: 0;
     border: 0;
-    // border 1px for first child only
-    border-top: 1px solid $gray-500;
-    border-bottom: 1px solid $gray-500;
-    // remove border for card other than the first one
-    ~ .card {
-      border-top: 0;
+    border-bottom: $border-width / 2 solid $gray-500;
+    &:first-child {
+      border-top: $border-width / 2 solid $gray-500;
     }
   }
 
@@ -319,18 +315,15 @@
 
   .card-body {
     padding: 0 1.5rem 0 0;
-    margin: 0 0 1.25rem;
+    margin: 0 0 $spacer;
   }
 }
 // For mobile display emphase the border
 @include media-breakpoint-down(sm) {
   .accordion .card {
-    // border 2px for first child only
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    // remove border for card other than the first one
-    ~ .card {
-      border-top: 0;
+    border-bottom-width: $border-width;
+    &:first-child {
+      border-top-width: $border-width;
     }
   }
 }
