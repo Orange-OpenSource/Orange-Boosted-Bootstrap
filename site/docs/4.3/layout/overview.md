@@ -9,18 +9,7 @@ toc: true
 
 ## Containers
 
-Containers are the most basic layout element in Boosted and are **required when using our default grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
-
-While containers *can* be nested, most layouts do not require a nested container.
-
-<div class="bd-example">
-  <div class="bd-example-container">
-    <div class="bd-example-container-header"></div>
-    <div class="bd-example-container-sidebar"></div>
-    <div class="bd-example-container-body"></div>
-  </div>
-</div>
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+Containers are the most basic layout element in Boosted and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
 Boosted comes with three different containers:
 
@@ -38,11 +27,11 @@ See them in action and compare them in our [Grid example]({{ site.baseurl }}/doc
       <th></th>
       <th>
         Extra small<br>
-        <span class="font-weight-normal">&lt;576px</span>
+        <span class="font-weight-normal">&lt;480px</span>
       </th>
       <th>
         Small<br>
-        <span class="font-weight-normal">&ge;576px</span>
+        <span class="font-weight-normal">&ge;480px</span>
       </th>
       <th>
         Medium<br>
@@ -50,38 +39,45 @@ See them in action and compare them in our [Grid example]({{ site.baseurl }}/doc
       </th>
       <th>
         Large<br>
-        <span class="font-weight-normal">&ge;992px</span>
+        <span class="font-weight-normal">&ge;980px</span>
       </th>
       <th>
         Extra large<br>
-        <span class="font-weight-normal">&ge;1200px</span>
+        <span class="font-weight-normal">&ge;1220px</span>
+      </th>
+      <th>
+        Extra Extra large<br>
+        <span class="font-weight-normal">&ge;1380px</span>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>.container</code></td>
-      <td class="text-muted">100%</td>
-      <td>540px</td>
-      <td>720px</td>
+      <td>312px</td>
+      <td>468px</td>
+      <td>744px</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-sm</code></td>
       <td class="text-muted">100%</td>
-      <td>540px</td>
-      <td>720px</td>
+      <td>468px</td>
+      <td>744px</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-md</code></td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
-      <td>720px</td>
+      <td>744px</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-lg</code></td>
@@ -89,7 +85,8 @@ See them in action and compare them in our [Grid example]({{ site.baseurl }}/doc
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td>960px</td>
-      <td>1140px</td>
+      <td>1200px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-xl</code></td>
@@ -97,10 +94,21 @@ See them in action and compare them in our [Grid example]({{ site.baseurl }}/doc
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
-      <td>1140px</td>
+      <td>1200px</td>
+      <td>1320px</td>
+    </tr>
+     <tr>
+      <td><code>.container-xxl</code></td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-fluid</code></td>
+      <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
@@ -132,13 +140,14 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 ### Responsive
 
-Responsive containers are new in Bootstrap v4.4. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, and `xl`.
+Responsive containers are new in Boosted v4.4. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl` and `xxl`.
 
 {% highlight html %}
 <div class="container-sm">100% wide until small breakpoint</div>
 <div class="container-md">100% wide until medium breakpoint</div>
 <div class="container-lg">100% wide until large breakpoint</div>
 <div class="container-xl">100% wide until extra large breakpoint</div>
+<div class="container-xxl">100% wide until extra extra large breakpoint</div>
 {% endhighlight %}
 
 ## Responsive breakpoints
@@ -278,7 +287,7 @@ The Sass mixin for targeting the same screen size range would be:
 
 ## Z-index
 
-Several Boosted components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+Several Boosted components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Boosted that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
 
 These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
 
