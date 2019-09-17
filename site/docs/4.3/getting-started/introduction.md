@@ -90,13 +90,13 @@ Be sure to have your pages set up with the latest design and development standar
       If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
-    <link rel="stylesheet" href="css/orangeHelvetica.css" />
+    <link rel="stylesheet" href="css/orangeHelvetica.min.css" />
     <!--
       Orange Icons
       Copyright (C) 2016 - 2019 Orange SA All rights reserved
       See NOTICE.txt for more informations.
     -->
-    <link rel="stylesheet" href="css/orangeIcons.css" />
+    <link rel="stylesheet" href="css/orangeIcons.min.css" />
 
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
