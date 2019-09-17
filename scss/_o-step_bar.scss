@@ -17,7 +17,7 @@ $arrow-orange: "f16e00" !default;
   &::after {
     position: absolute;
     top: 0;
-    right: -$o-stepbar-arrow-width;
+    right: -1rem;
     z-index: 500;
     display: block;
     width: $o-stepbar-arrow-width;
@@ -184,10 +184,7 @@ $arrow-orange: "f16e00" !default;
           width: 60%;
         }
 
-        &.current .step-number {
-          display: none;
-        }
-
+        &.current .step-number,
         &:not(.current) .step-title {
           display: none;
         }
