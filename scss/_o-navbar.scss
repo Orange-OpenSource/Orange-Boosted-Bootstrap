@@ -172,14 +172,15 @@
           z-index: $zindex-fixed;
           width: 100%;
           padding: 1rem 0;
-          background-color: #000;
-          border-top: 1px solid #333;
+          background-color: $black;
+          border-top: 1px solid $gray-900;
 
           a[data-toggle="collapse"] {
             display: block;
+            align-self: flex-end;
             float: right;
-            margin: 1.25rem;
-            color: #fff;
+            margin: $spacer $spacer $spacer auto;
+            color: $white;
           }
 
           .nav-link {
@@ -187,13 +188,16 @@
           }
 
           .svg-delete {
-            width: 1.25rem;
-            height: 1.25rem;
+            width: $spacer;
+            height: $spacer;
           }
 
           > .container > .navbar-nav {
             flex-direction: row;
+            flex-grow: 1;
             align-items: flex-start;
+            width: 100%;
+            padding: 0 map-get($spacers, 2);
           }
 
           > .container > .navbar-nav > .nav-item {
