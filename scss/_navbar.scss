@@ -58,7 +58,7 @@
   align-self: flex-end; // Boosted mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin: .625rem .3125rem; // Boosted mod
+  margin: map-get($spacers, 2) map-get($spacers, 4); // Boosted mod
   @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // Boosted mod
   line-height: inherit;
@@ -71,12 +71,12 @@
   // Boosted mod
   + .navbar-brand {
     margin-right: 0;
-    margin-left: 1.25rem;
+    margin-left: $spacer;
   }
 
   @include focus() {
     outline: 1px dotted $white;
-    outline-offset: .625rem;
+    outline-offset: map-get($spacers, 2);
   }
 
   img {
@@ -104,7 +104,7 @@
 
   .nav-link {
     // Boosted mod
-    padding: .875rem  .625rem;
+    padding: .875rem map-get($spacers, 2);
     margin-top: 0;
     text-decoration: none;
 
@@ -113,12 +113,12 @@
     }
 
     &.icon {
-      padding: .78125rem .625rem;
+      padding: .78125rem map-get($spacers, 2);
       margin-top: 0;
     }
 
     &[class^="svg-"] {
-      margin: .625rem;
+      margin: map-get($spacers, 2);
     }
 
     &[role="menuitem"]::before {
@@ -133,7 +133,7 @@
     }
 
     @include focus() {
-      outline-offset: .625rem;
+      outline-offset: map-get($spacers, 2);
     }
     // end mod
   }
@@ -156,7 +156,7 @@
 
     .dropdown-toggle,
     .dropdown-item {
-      padding: .875rem 0 .875rem .625rem;
+      padding: .875rem 0 .875rem map-get($spacers, 2);
     }
 
     &.show .dropdown-toggle::after {
@@ -213,7 +213,7 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  margin: ($spacer / 4) 0; // Boosted mod
+  margin: map-get($spacers, 1) 0; // Boosted mod
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
@@ -225,7 +225,7 @@
     // Boosted mod
     background-color: $white;
     .navbar-toggler-icon {
-      background-image: $navbar-dark-toggler-icon-hover-bg;
+      background-image: escape-svg($navbar-dark-toggler-icon-hover-bg);
     }
     // end mod
   }
@@ -234,7 +234,7 @@
     background-color: theme-color("primary");
 
     .navbar-toggler-icon {
-      background-image: $navbar-dark-toggler-icon-bg;
+      background-image: escape-svg($navbar-dark-toggler-icon-bg);
     }
   }
 
@@ -257,8 +257,7 @@
   height: $navbar-toggler-icon-size; // Boosted mod create a var for the toggler size
   vertical-align: middle;
   content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
+  background: no-repeat 50% 50% / 100% 100%;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -296,7 +295,7 @@
 
         // Boosted mod
         .navbar-brand {
-          margin: 0 .625rem 0 0;
+          margin: 0 map-get($spacers, 2) 0 0;
 
           img {
             width: $navbar-brand-logo-expanded-height;
@@ -350,7 +349,7 @@
           .nav-link {
             // Boosted mod
             padding: 0 $navbar-nav-link-padding-x;
-            margin-left: 1.25rem;
+            margin-left: $spacer;
             // end mode
           }
         }
