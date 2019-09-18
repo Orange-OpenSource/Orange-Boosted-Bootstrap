@@ -303,7 +303,7 @@
         width: .875rem;
         height: .4375rem;
         content: "";
-        background-image: $accordion-arrow-icon;
+        background-image: escape-svg($accordion-arrow-icon);
       }
 
       // stylelint-disable-next-line selector-no-qualifying-type
