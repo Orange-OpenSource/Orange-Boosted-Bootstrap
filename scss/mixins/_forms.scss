@@ -85,30 +85,20 @@
 
       ~ .#{$state}-feedback {
         @if $enable-validation-icons {
+          &::after {
+            position: absolute;
+            top: -.1rem;
+            left: 0;
+            width: 1.125rem;
+            height: 1.125rem;
+            content: "";
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
           @if $state == "valid" {
             @include svg-success();
-            &::after {
-              position: absolute;
-              top: -.1rem;
-              left: 0;
-              width: 1.125rem;
-              height: 1.125rem;
-              content: "";
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
           } @else {
             @include svg-error();
-            &::after {
-              position: absolute;
-              top: -.1rem;
-              left: 0;
-              width: 1.125rem;
-              height: 1.125rem;
-              content: "";
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
           }
         }
         position: relative;
