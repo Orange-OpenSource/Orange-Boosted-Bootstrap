@@ -2,17 +2,18 @@
 //
 //
 
-@import "mixins";
 @import "functions";
+@import "variables";
+@import "mixins";
 
 // invert chevrons
 
 .svg-arrow-previous {
-  @include svg-arrow-next("#000");
+  @include svg-arrow-next($black);
 }
 
 .svg-arrow-next {
-  @include svg-arrow-previous("#000");
+  @include svg-arrow-previous($black);
 }
 
 // rotate stepbar chevrons
@@ -33,15 +34,14 @@
 }
 
 .alert .alert-icon::after,
-.alert-sm .alert-icon::after, {
+.alert-sm .alert-icon::after {
   right: 2%;
 }
 
 .o-stepbar .stepbar-item::after,
 .page-item:last-child .page-link::before,
 .o-stepbar .stepbar-item.current::after,
-.o-stepbar .stepbar-item.done::after
- {
+.o-stepbar .stepbar-item.done::after {
   right: unset;
 }
 
