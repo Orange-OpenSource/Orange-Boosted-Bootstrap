@@ -117,8 +117,8 @@ $yiq-text-light:            $white !default;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
-  ("<","%3c"),
-  (">","%3e"),
+  ("<","<"),
+  (">",">"),
   ("#","%23"),
 ) !default;
 
@@ -897,12 +897,12 @@ $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $gray-500 !default;
 
-$pagination-icon-prev:              url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/%3e%3c/svg%3e") !default;
-$pagination-icon-prev-disabled:     url("data:image/svg+xml;charset=utf8, %3csvg viewBox='0 0 9 14' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z' fill='%23DDD'/%3e%3c/svg%3e") !default;
-$pagination-icon-prev-active:       url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z' fill='%23fff'/%3e%3c/svg%3e") !default;
-$pagination-icon-next:              url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z'/%3e%3c/svg%3e") !default;
-$pagination-icon-next-disabled:     url("data:image/svg+xml;charset=utf8, %3csvg viewBox='0 0 9 14' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z' fill='%23DDD'/%3e%3c/svg%3e") !default;
-$pagination-icon-next-active:       url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'%3e%3cpath d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z' fill='%23fff'/%3e%3c/svg%3e") !default;
+$pagination-icon-prev:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$pagination-icon-prev-disabled:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z' fill='#{$gray-400}'/></svg>") !default;
+$pagination-icon-prev-active:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z' fill='#{$white}'/></svg>") !default;
+$pagination-icon-next:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z'/></svg>") !default;
+$pagination-icon-next-disabled:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z' fill='#{$gray-400}'/></svg>") !default;
+$pagination-icon-next-active:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z' fill='#{$white}'/></svg>") !default;
 // Boosted mod
 $pagination-min-width:              2.5rem !default;
 $pagination-min-width-lg:           3.125rem !default;
@@ -1238,8 +1238,8 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 // Boosted mod
 // Accordions
 
-$accordion-arrow-icon: url("data:image/svg+xml;charset=utf8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'%3e%3cpath d='M7 7L0 0h14L7 7z'/%3e%3c/svg%3e") !default;
-$o-sortable-hover-icon: url("data:image/svg+xml;charset=utf8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'%3e%3cpath d='M 7%2C17 0%2C10 h 14 l -7%2C7 z'/%3e%3cpath d='M 7%2C0 14%2C7 0%2C7 7%2C0 z'/%3e%3c/svg%3e") !default;
+$accordion-arrow-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$o-sortable-hover-icon: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7%2C17 0%2C10 h 14 l -7%2C7 z'/><path d='M 7%2C0 14%2C7 0%2C7 7%2C0 z'/></svg>") !default;
 
 // arrow Links
 

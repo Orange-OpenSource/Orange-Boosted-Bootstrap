@@ -56,7 +56,7 @@
 .page-item {
   // Boosted mod
   &.presentation {
-    padding: .625rem 0;
+    padding: map-get($spacers, 2) 0;
     font-weight: $font-weight-bold;
   }
   &.presentation + .page-item,
@@ -72,12 +72,12 @@
         width: .5625rem;
         height: .875rem;
         content: "";
-        background-image: #{$pagination-icon-prev};
+        background-image: escape-svg($pagination-icon-prev);
         background-repeat: no-repeat;
       }
       @include hover-focus() {
         &::before {
-          background-image: #{$pagination-icon-prev-active};
+          background-image: escape-svg($pagination-icon-prev-active);
         }
       }
     }
@@ -118,12 +118,12 @@
         width: .5625rem;
         height: .875rem;
         content: "";
-        background-image: #{$pagination-icon-next};
+        background-image: escape-svg($pagination-icon-next);
         background-repeat: no-repeat;
       }
       @include hover-focus() {
         &::before {
-          background-image: #{$pagination-icon-next-active};
+          background-image: escape-svg($pagination-icon-next-active);
         }
       }
       &.has-label {
@@ -150,11 +150,11 @@
 
   // Boosted mod
   &.active:first-child .page-link::before {
-    background-image: #{$pagination-icon-prev-active};
+    background-image: escape-svg($pagination-icon-prev-active);
   }
 
   &.active:last-child .page-link::before {
-    background-image: #{$pagination-icon-next-active};
+    background-image: escape-svg($pagination-icon-next-active);
   }
   // end mod
 
@@ -169,15 +169,15 @@
 
   // Boosted mod
   &.disabled:first-child .page-link::before {
-    background-image: #{$pagination-icon-prev-disabled};
+    background-image: escape-svg($pagination-icon-prev-disabled);
   }
 
   &.disabled:last-child .page-link::before {
-    background-image: #{$pagination-icon-next-disabled};
+    background-image: escape-svg($pagination-icon-next-disabled);
   }
 
   + .page-item {
-    margin-left: .625rem;
+    margin-left: map-get($spacers, 2);
   }
   // End mod
 }
