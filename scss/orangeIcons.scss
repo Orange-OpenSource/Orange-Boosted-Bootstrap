@@ -6,6 +6,7 @@
 
 @import "functions";
 @import "variables";
+@import "mixins";
 @import "mixins/orangeIcons";
 
 @font-face {
@@ -2750,19 +2751,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: $spacer;
+  height: $spacer;
   content: "";
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .svg-delete {
-  @include svg-delete("#fff");
+  @include svg-delete($white);
 }
 
 .svg-checkbox-tick {
-  @include svg-checkbox-tick("#fff");
+  @include svg-checkbox-tick($white);
 }
 
 .svg-warning-circle {
@@ -2770,11 +2771,11 @@
 }
 
 .svg-menu {
-  @include svg-menu("#fff");
+  @include svg-menu($white);
 }
 
 .svg-menu:hover {
-  @include svg-menu("#000");
+  @include svg-menu($black);
 }
 
 .svg-tick {
@@ -2798,29 +2799,29 @@
 }
 
 .svg-arrow-previous {
-  @include svg-arrow-previous("#000");
+  @include svg-arrow-previous($black);
 }
 
 .svg-arrow-previous:hover,
 .svg-arrow-previous:focus,
-.svg-arrow-previous:active, {
-  @include svg-arrow-previous("#fff");
+.svg-arrow-previous:active {
+  @include svg-arrow-previous($white);
 }
 
 .svg-arrow-next {
-  @include svg-arrow-next("#000");
+  @include svg-arrow-next($black);
 }
 
 .svg-arrow-next.btn-primary {
-  @include svg-arrow-next("#fff");
+  @include svg-arrow-next($white);
 }
 
 .svg-arrow-next.btn-primary:active {
-  @include svg-arrow-next("#000");
+  @include svg-arrow-next($black);
 }
 
 .svg-settings {
-  @include svg-settings("#fff");
+  @include svg-settings($white);
 }
 
 .svg-settings:hover,
@@ -2829,7 +2830,7 @@
 }
 
 .svg-search {
-  @include svg-search("#fff");
+  @include svg-search($white);
 }
 
 .svg-search:hover {
@@ -2837,7 +2838,7 @@
 }
 
 .svg-avatar {
-  @include svg-avatar("#fff");
+  @include svg-avatar($white);
 }
 
 .svg-avatar:hover,
@@ -2846,7 +2847,7 @@
 }
 
 .svg-buy {
-  @include svg-buy("#fff");
+  @include svg-buy($white);
 }
 
 .svg-buy:hover,
