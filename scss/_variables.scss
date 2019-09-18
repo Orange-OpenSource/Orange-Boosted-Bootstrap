@@ -557,7 +557,7 @@ $input-height-lg:                       calc(#{$input-height-inner-lg} + #{$inpu
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$form-text-margin-top:                  $spacer * .5 !default;
+$form-text-margin-top:                  map-get($spacers, 2) !default;
 
 $form-check-input-gutter:               1.25rem !default;
 $form-check-input-margin-y:             .3rem !default;
@@ -755,7 +755,7 @@ $zindex-tooltip:                    1070 !default;
 
 // Navs
 
-$nav-link-padding-y:                $spacer * .5 !default;
+$nav-link-padding-y:                map-get($spacers, 2) !default;
 $nav-link-padding-x:                $spacer !default;
 $nav-link-disabled-color:           $gray-700 !default;
 $nav-link-disabled-hover-bg:        null !default;

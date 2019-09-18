@@ -10,7 +10,7 @@
 
   .modal-header {
     position: relative;
-    min-height: 1.25rem;
+    min-height: $spacer;
     padding: 0;
     margin-bottom: 2.5rem;
     border: 0;
@@ -19,17 +19,17 @@
       position: absolute;
       top: -.625rem;
       right: -.625rem;
-      padding: .625rem;
+      padding: $modal-inner-padding;
       background-color: transparent;
       border: 0;
 
 
       .close {
-        width: 1.25rem;
-        height: 1.25rem;
+        width: $spacer;
+        height: $spacer;
         margin: 0;
-        background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22852.063%22%20height%3D%22852.063%22%20viewBox%3D%220%200%20852.063%20852.063%22%3E%3Cpath%20id%3D%22closing_cross.svg%22%20data-name%3D%22closing%20cross.svg%22%20class%3D%22cls-1%22%20d%3D%22M.987%2057.125L57.125.987%20851.048%20794.91l-56.138%2056.138zM794.91.987l56.138%2056.138L57.125%20851.048.987%20794.91z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E");
-        background-size: 1.25rem;
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http=//www.w3.org/2000/svg' width='852.063' height='852.063' viewBox='0 0 852.063 852.063'><path d='M.987 57.125L57.125.987 851.048 794.91l-56.138 56.138zM794.91.987l56.138 56.138L57.125 851.048.987 794.91z' fill='#{$gray-700}'/></svg>"));
+        background-size: $spacer;
         opacity: 1;
       }
     }
@@ -54,7 +54,7 @@
     }
 
     .card-icon {
-      margin-right: 1.25rem;
+      margin-right: $spacer;
     }
 
     [class^="svg"],
@@ -84,7 +84,7 @@
     border: 0;
 
     .btn + .btn {
-      margin-left: 1.25rem;
+      margin-left: $spacer;
     }
   }
 }
@@ -92,7 +92,7 @@
 @include media-breakpoint-down(xs) {
   .modal {
     .modal-content {
-      padding: 1.25rem;
+      padding: $spacer;
     }
 
     .modal-header {
@@ -120,7 +120,7 @@
       }
 
       .card-body {
-        margin-top: 1.25rem;
+        margin-top: $spacer;
       }
     }
 
