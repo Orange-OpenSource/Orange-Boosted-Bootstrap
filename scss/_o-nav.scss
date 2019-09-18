@@ -1,7 +1,7 @@
 // Base nav
 .nav {
   .nav-item:first-child {
-    margin-left: - ($spacer * .5);
+    margin-left: - map-get($spacers, 2);
   }
 
   &.flex-column .nav-item:first-child {
@@ -20,8 +20,8 @@
   border-bottom: 1px solid $gray-600;
 }
 .o-active {
-  color: #f16e00;
-  border-bottom: 3px solid #f16e00;
+  color: $primary;
+  border-bottom: 3px solid $primary;
 }
 
 // End mod
@@ -79,11 +79,11 @@
     padding: .625rem 1.25rem;
     margin-left: .5rem;
     font-weight: $font-weight-bold;
-    color: #000;
+    color: $black;
     text-align: center;
-    background-color: #fff;
+    background-color: $white;
     border: 0;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid $black;
 
     &:first-child {
       margin-left: 0;
@@ -91,12 +91,12 @@
     }
 
     &[aria-expanded="false"] {
-      border-bottom: 2px solid #000;
+      border-bottom: 2px solid $black;
     }
 
     &[aria-expanded="true"] {
       padding-top: .5rem;
-      border: 2px solid #000;
+      border: 2px solid $black;
       border-bottom: 0;
     }
 
@@ -105,8 +105,8 @@
     }
 
     &:hover:not([aria-expanded="true"]) {
-      color: #fff;
-      background-color: #000;
+      color: $white;
+      background-color: $black;
     }
   }
 
@@ -115,9 +115,9 @@
     align-self: flex-end;
     order: 1;
     width: 100%;
-    padding: .625rem 1.25rem;
-    background-color: #fff;
-    box-shadow: 0 -2px 0 #000;
+    padding: map-get($spacers, 2) $spacer;
+    background-color: $white;
+    box-shadow: 0 -2px 0 $black;
 
     &.show {
       display: block;
@@ -131,12 +131,12 @@
       text-align: center;
 
       &[aria-expanded="false"] {
-        color: #fff;
-        background-color: #666;
+        color: $white;
+        background-color: $gray-700;
 
         &:active {
-          color: #fff;
-          background-color: #f16e00;
+          color: $white;
+          background-color: $primary;
         }
       }
     }
@@ -150,9 +150,9 @@
         padding: .9375rem 0;
         margin-left: 0;
         font-weight: $font-weight-bold;
-        color: #000;
+        color: $black;
         text-align: left;
-        background-color: #fff;
+        background-color: $white;
         border: 0;
 
         &:focus {
@@ -160,12 +160,12 @@
         }
 
         &:hover {
-          color: #f16e00;
-          background-color: #fff;
+          color: $primary;
+          background-color: $white;
         }
 
         &[aria-expanded="false"] {
-          border-bottom: 1px #ccc solid;
+          border-bottom: 1px $gray-500 solid;
         }
 
         &[aria-expanded="true"]::after {
@@ -174,7 +174,7 @@
 
         &:first-child {
           margin-left: 0;
-          border-top: 1px solid #ccc;
+          border-top: 1px solid $gray-500;
         }
 
         &::after {
@@ -184,13 +184,13 @@
           width: .875rem;
           height: .4375rem;
           content: "";
-          background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+          background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>"));
         }
       }
 
       .o-tab-content {
         padding-left: 0;
-        border-bottom: 1px #ccc solid;
+        border-bottom: 1px $gray-500 solid;
         box-shadow: none;
       }
     }
@@ -255,20 +255,20 @@
 
       .nav-link {
         @include focus() {
-          outline: 1px dotted #000;
+          outline: 1px dotted $black;
           outline-offset: -2px;
         }
         display: block;
-        padding: .625rem .625rem .625rem 1.25rem;
+        padding: map-get($spacers, 2) map-get($spacers, 2) map-get($spacers, 2) $spacer;
         margin: 0;
-        color: #000;
-        background: #fff;
+        color: $black;
+        background: $white;
         border: 0;
       }
 
       .nav-link:hover {
-        color: #fff;
-        background: #000;
+        color: $white;
+        background: $black;
       }
     }
   }
@@ -276,7 +276,7 @@
 
 .tab-content {
   padding: 1.125rem;
-  border-color: #000;
+  border-color: $black;
   border-style: solid;
   border-width: 0 2px 2px;
 
@@ -288,12 +288,6 @@
 .tab-content-clear {
   // padding: 1.125rem;
   border: 0;
-}
-
-// breadcrums
-
-.breadcrum {
-  line-height: 1;
 }
 
 // priority nav
@@ -330,5 +324,5 @@
 .o-nav-local .overflow-nav-list {
   margin-top: 1px;
   border: 0;
-  box-shadow: 0 .3125rem .625rem -.375rem #999;
+  box-shadow: 0 map-get($spacers, 1) map-get($spacers, 2) -.375rem $gray-600;
 }
