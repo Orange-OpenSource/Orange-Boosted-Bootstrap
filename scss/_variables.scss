@@ -1277,16 +1277,3 @@ $o-stepbar-arrow-width: $spacer !default;
 $o-stepbar-mobile-padding-vertical: .3125rem !default;
 $o-stepbar-mobile-arrow-width: .75rem !default;
 $o-stepbar-mobile-arrow-height: 1.875rem !default;
-
-// focus state mixin
-@mixin focus() {
-  &:focus {
-    @content;
-  }
-}
-
-@mixin active() {
-  &:active {
-    @content;
-  }
-}

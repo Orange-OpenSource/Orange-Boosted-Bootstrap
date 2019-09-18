@@ -13,6 +13,16 @@
   &:hover { @content; }
 }
 
+// Boosted mod
+@mixin focus() {
+  &:focus { @content; }
+}
+
+@mixin active() {
+  &:active { @content; }
+}
+// end mod
+
 @mixin hover-focus() {
   &:hover,
   &:focus {
