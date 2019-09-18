@@ -170,7 +170,7 @@
       border: 0;
 
       > th:not(:first-child) {
-        padding-left: .625rem;
+        padding-left: map-get($spacers, 2);
         border-bottom: 1px solid $table-border-color;
       }
 
@@ -198,9 +198,9 @@ caption {
   padding: .75rem 0;
   font-size: $h1-font-size;
   font-weight: $font-weight-bold;
-  color: #000;
+  color: $black;
   caption-side: top;
-  background-color: #fff;
+  background-color: $white;
 }
 
 // Style jquery tablesorter ext
@@ -214,8 +214,8 @@ caption {
     padding: .75rem 0;
     font-size: $h1-font-size;
     font-weight: $font-weight-bold;
-    color: #000;
-    background-color: #fff;
+    color: $black;
+    background-color: $white;
   }
 
   th {
@@ -231,25 +231,19 @@ caption {
       padding-right: 1.6875rem;
     }
 
-    &.tablesorter-headerDesc .tablesorter-header-inner span::after {
-      position: absolute;
-      top: 45%;
-      width: .875rem;
-      height: .4375rem;
-      margin-left: .625rem;
-      content: "";
-      background-image: $accordion-arrow-icon;
-      transform: rotate(180deg);
-    }
-
+    &.tablesorter-headerDesc .tablesorter-header-inner span::after,
     &.tablesorter-headerAsc .tablesorter-header-inner span::after {
       position: absolute;
       top: 45%;
       width: .875rem;
       height: .4375rem;
-      margin-left: .625rem;
+      margin-left: map-get($spacers, 2);
       content: "";
-      background-image: $accordion-arrow-icon;
+      background-image: escape-svg($accordion-arrow-icon);
+    }
+
+    &.tablesorter-headerDesc .tablesorter-header-inner span::after {
+      transform: rotate(180deg);
     }
 
     &.tablesorter-headerUnSorted {
@@ -259,14 +253,14 @@ caption {
         top: 31%;
         width: .875rem;
         height: 1.0625rem;
-        margin-left: .625rem;
+        margin-left: map-get($spacers, 2);
         content: "";
-        background-image: $o-sortable-hover-icon;
+        background-image: escape-svg($o-sortable-hover-icon);
       }
     }
 
     a {
-      color: #000;
+      color: $black;
       text-decoration: none;
 
       @include hover-focus() {
