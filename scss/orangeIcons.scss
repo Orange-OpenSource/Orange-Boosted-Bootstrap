@@ -2731,31 +2731,17 @@
 .svg-avatar,
 .svg-buy {
   position: relative;
-}
 
-.svg-delete::after,
-.svg-checkbox-tick::after,
-.svg-warning-circle::after,
-.svg-menu::after,
-.svg-tick::after,
-.svg-arrow-previous::after,
-.svg-arrow-next::after,
-.svg-settings::after,
-.svg-search::after,
-.svg-avatar::after,
-.svg-buy::after,
-.svg-success::after,
-.svg-warning::after,
-.svg-info::after,
-.svg-error::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: $spacer;
-  height: $spacer;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: cover;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $spacer;
+    height: $spacer;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .svg-delete {
@@ -2772,10 +2758,10 @@
 
 .svg-menu {
   @include svg-menu($white);
-}
 
-.svg-menu:hover {
-  @include svg-menu($black);
+  @include hover() {
+    @include svg-menu($black);
+  }
 }
 
 .svg-tick {
@@ -2800,12 +2786,10 @@
 
 .svg-arrow-previous {
   @include svg-arrow-previous($black);
-}
 
-.svg-arrow-previous:hover,
-.svg-arrow-previous:focus,
-.svg-arrow-previous:active {
-  @include svg-arrow-previous($white);
+  @include hover-focus-active() {
+    @include svg-arrow-previous($white);
+  }
 }
 
 .svg-arrow-next {
@@ -2814,45 +2798,50 @@
 
 .svg-arrow-next.btn-primary {
   @include svg-arrow-next($white);
-}
 
-.svg-arrow-next.btn-primary:active {
-  @include svg-arrow-next($black);
+  @include active() {
+    @include svg-arrow-next($black);
+  }
 }
 
 .svg-settings {
   @include svg-settings($white);
-}
 
-.svg-settings:hover,
-.svg-settings:focus {
-  @include svg-settings(theme-color("primary"));
+  @include hover-focus() {
+    @include svg-settings(theme-color("primary"));
+  }
 }
 
 .svg-search {
   @include svg-search($white);
-}
 
-.svg-search:hover {
-  @include svg-search(theme-color("primary"));
+  @include hover() {
+    @include svg-search(theme-color("primary"));
+  }
 }
 
 .svg-avatar {
   @include svg-avatar($white);
-}
 
-.svg-avatar:hover,
-.svg-avatar:active {
-  @include svg-avatar(theme-color("primary"));
+  @include hover() {
+    @include svg-avatar(theme-color("primary"));
+  }
+
+  @include active() {
+    @include svg-avatar(theme-color("primary"));
+  }
 }
 
 .svg-buy {
   @include svg-buy($white);
-}
 
-.svg-buy:hover,
-.svg-buy:active {
-  @include svg-buy(theme-color("primary"));
+  @include hover() {
+    @include svg-buy(theme-color("primary"));
+  }
+
+  @include active() {
+    @include svg-buy(theme-color("primary"));
+  }
 }
 
 .btn-mail {
