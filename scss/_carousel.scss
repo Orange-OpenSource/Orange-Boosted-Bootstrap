@@ -104,7 +104,7 @@
   @include hover-focus() {
     color: $carousel-control-color;
     text-decoration: none;
-    outline: 2px dotted $input-focus-border-color; //boosted mod
+    outline: 2px dotted $input-focus-border-color; // Boosted mod
     opacity: $carousel-control-hover-opacity;
   }
 }

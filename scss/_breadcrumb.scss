@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-  // boosted mod
+  // Boosted mod
   // margin-bottom: $breadcrumb-margin-bottom;
   font-size: $breadcrumb-font-size;
   font-weight: $font-weight-bold;
@@ -21,7 +21,7 @@
     &::before {
       display: inline-block; // Suppress underlining of the separator in modern browsers
       padding-right: $breadcrumb-item-padding;
-      // boosted mod
+      // Boosted mod
       font-family: $breadcrumb-font-family;
       font-size: $breadcrumb-divider-font-size;
       line-height: 1;

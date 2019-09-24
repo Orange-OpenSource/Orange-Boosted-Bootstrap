@@ -257,7 +257,7 @@
       width: $custom-switch-width;
       height: $custom-switch-height; // Boosted mod
       pointer-events: all;
-      background-color: $custom-control-indicator-border-color; // boosted mod
+      background-color: $custom-control-indicator-border-color; // Boosted mod
       background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 1250 1250'><path d='M343.625 211.5c-4.875 1.125-12 4.125-15.875 6.5-8.5 5.25-102 98.25-108.625 108-8.875 13.25-12.25 31.5-8.625 46.875C215 392.25 209.625 386.25 334.125 511l114 114-114 114.125c-113.375 113.375-114 114-118.5 123.625-5.375 11.75-6.875 18.75-6.25 30.625.5 12.125 4.375 23.375 11.375 33.5 4.125 5.875 100.25 101 105.5 104.375 13.75 8.875 33.25 11.875 48.875 7.625 17.625-4.75 14.875-2.25 136.375-123.625L625 801.875l114 114C848.875 1025.625 853.5 1030 862.25 1034.25c20.625 9.75 45.25 8.375 62.125-3.625 7.75-5.5 100.75-98.125 105.75-105.25 9.25-13.375 13.125-33.375 9.25-48.625-4.875-19.5.625-13.375-123.5-137.75l-114-114L915.75 510.875c80.75-80.75 114.875-115.75 117.25-120.125 11.5-21.125 10.25-46.75-3.125-66.375-3.875-5.75-98.625-100.625-104.25-104.5-11.125-7.5-24.5-11.25-37.875-10.5-11.875.5-21.125 3.375-30.25 9-4.5 2.875-46.125 43.625-119.625 117L625 448.125l-114-114C386.375 209.75 392.25 215 373 210.5c-10-2.25-17.625-2-29.375 1z' fill='#{$white}'/></svg>")); // Boosted mod
       background-repeat: no-repeat; // Boosted mod
       background-position: 1.975rem; // Boosted mod
@@ -266,7 +266,7 @@
     }
 
     &::after {
-      top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width}); // boosted mod
+      top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width}); // Boosted mod
       left: $custom-control-indicator-border-width; // Boosted mod
       width: $custom-switch-indicator-width; // Boosted mod
       height: $custom-switch-indicator-height; // Boosted mod
@@ -303,7 +303,7 @@
     // end mod
     &::after {
       background-color: $custom-control-indicator-bg;
-      transform: translateX($custom-switch-width / 2); // boosted mod change the indicator size
+      transform: translateX($custom-switch-width / 2); // Boosted mod : change the indicator size
     }
   }
 

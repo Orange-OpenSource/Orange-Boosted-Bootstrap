@@ -279,7 +279,7 @@ class Tooltip {
         ? this.config.placement.call(this, tip, this.element)
         : this.config.placement
 
-      // boosted mod let instead of const
+      // Boosted mod let instead of const
       let attachment = this._getAttachment(placement)
       this.addAttachmentClass(attachment)
 
@@ -292,7 +292,7 @@ class Tooltip {
 
       $(this.element).trigger(this.constructor.Event.INSERTED)
 
-      // boosted mod fix rtl
+      // Boosted mod fix rtl
       const dir = document.getElementsByTagName('html')[0].dir
       if (dir === 'rtl') {
         const hash = {

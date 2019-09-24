@@ -46,8 +46,8 @@
     width: 100%;
     margin-top: $form-feedback-margin-top;
     @include font-size($form-feedback-font-size);
-    font-weight: $font-weight-bold; // Boosted Mod
-    // color: $color; // Boosted Mod
+    font-weight: $font-weight-bold; // Boosted mod
+    // color: $color; // Boosted mod
   }
 
   .#{$state}-tooltip {

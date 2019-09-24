@@ -52,7 +52,7 @@ const Dimension = {
 }
 
 const Selector = {
-  ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
+  ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // Boosted mod
   DATA_TOGGLE : '[data-toggle="collapse"]'
 }
 
