@@ -79,7 +79,7 @@
       // }
 
       &:focus {
-        border-color: $color;
+        border-color: $input-focus-border-color;
         // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
       }
 
@@ -131,7 +131,7 @@
       }
 
       &:focus {
-        border-color: $color;
+        border-color: $input-focus-border-color;
         // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
       }
 
@@ -214,7 +214,7 @@
 
       &:focus {
         ~ .custom-file-label {
-          border-color: $color;
+          border-color: $input-focus-border-color;
           // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
         }
       }
