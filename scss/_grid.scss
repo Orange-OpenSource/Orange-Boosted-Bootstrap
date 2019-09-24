@@ -7,13 +7,12 @@
   .container {
     @include make-container();
     @include make-container-max-widths();
-    width: 100%;  // Boosted mod
   }
 
   // 100% wide container at all breakpoints
   .container-fluid {
     @include make-container();
-    width: auto; // Boosted mod
+    @include make-container-fluid-widths(); // Boosted mod : container-fluid aren't full width in Boosted
   }
 
   // Responsive containers that are 100% wide until a breakpoint

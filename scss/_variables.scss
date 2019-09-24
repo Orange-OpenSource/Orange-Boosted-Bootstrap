@@ -250,15 +250,8 @@ $container-fluid-margin-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           20px !default;
-$grid-gutter-widths: (
-  xs:                         10px,
-  sm:                         10px,
-  md:                         $grid-gutter-width,
-  lg:                         $grid-gutter-width,
-  xl:                         $grid-gutter-width,
-  xxl:                        $grid-gutter-width
-) !default;
+$grid-gutter-width:           $spacer !default;
+$grid-gutter-breakpoint:      "md" !default;
 
 // Components
 //
