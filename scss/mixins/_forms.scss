@@ -65,6 +65,13 @@
     @include border-radius($form-feedback-tooltip-border-radius);
   }
 
+  @include form-validation-state-selector($state) {
+    ~ .#{$state}-feedback,
+    ~ .#{$state}-tooltip {
+      display: block;
+    }
+  }
+
   .form-control {
     @include form-validation-state-selector($state) {
       border-color: $color;
@@ -134,21 +141,6 @@
         border-color: $input-focus-border-color;
         // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
       }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
-    }
-  }
-
-
-  .form-control-file {
-    @include form-validation-state-selector($state) {
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
     }
   }
 
@@ -173,11 +165,6 @@
         &::before {
           border-color: $color;
         }
-      }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
       }
 
       &:checked {
@@ -205,11 +192,6 @@
     @include form-validation-state-selector($state) {
       ~ .custom-file-label {
         border-color: $color;
-      }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
       }
 
       &:focus {
