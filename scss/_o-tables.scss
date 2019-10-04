@@ -1,276 +1,216 @@
 //
 // Tables
 //
-// stylelint-disable selector-no-qualifying-type
-// stylelint-disable selector-max-type
-// stylelint-disable selector-class-pattern
 
 // Change the table states color
 @mixin table-row-variant-border($state, $color) {
   // Exact selectors below required to override `.table-striped` and prevent
   // inheritance to nested tables.
-  .table > thead > tr,
-  .table > tbody > tr,
-  .table > tfoot > tr {
-    > td.#{$state},
-    > th.#{$state},
-    &.#{$state} > td,
-    &.#{$state} > th {
+  .table .#{$state} {
+    &,
+    td,
+    th {
       background-color: $color;
     }
   }
 
   // Hover states for `.table-hover`
   // Note: this is not available for cells or rows within `thead` or `tfoot`.
-  .table-hover > tbody > tr {
-    > td.#{$state}:hover,
-    > th.#{$state}:hover,
-    &.#{$state}:hover > td,
-    &:hover > .#{$state},
-    &.#{$state}:hover > th {
+  .table-hover tbody .#{$state} {
+    &:hover,
+    &:hover td,
+    &:hover th {
       background-color: darken($color, 5%);
     }
   }
 }
 
 .table {
-  // Cells
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      border-bottom: 1px solid $table-border-color;
+  tr {
+    border-bottom: $table-border-width solid $table-border-color;
+  }
 
-      > th,
-      > td {
-        font-size: $font-size-sm;
-        line-height: 1.25rem;
-        vertical-align: middle;
-        border: 0;
-      }
+  th,
+  td {
+    font-size: $font-size-sm;
+    line-height: $spacer;
+    vertical-align: middle;
+    border: 0;
 
-      > th:first-child,
-      > td:first-child {
-        padding-left: .625rem;
-      }
+    ~ * {
+      padding-left: 0;
+    }
+  }
 
-      [class^="icon-"],
-      [class*=" icon-"] {
-        font-size: 1.8125rem;
-      }
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: $o-table-icon-size;
+  }
 
-      [class^="svg-"] {
-        display: block;
-        width: 1.8125rem;
-        height: 1.8125rem;
-        margin: 0 auto;
-      }
+  [class^="svg-"] {
+    display: block;
+    width: $o-table-icon-size;
+    height: $o-table-icon-size;
+    margin: 0 auto;
 
-      [class^="svg-"]::after {
-        width: 1.8125rem;
-        height: 1.8125rem;
-      }
+    &::after {
+      width: inherit;
+      height: inherit;
     }
   }
 
   thead {
+    tr {
+      border-bottom-width: $table-border-width * 2;
+    }
 
-
-    > tr {
-      border-bottom-width: 2px;
-
-      > th {
-        font-size: $font-size-base;
-        font-weight: $font-weight-bold;
-      }
+    th {
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      vertical-align: middle;
     }
   }
 
-  tbody > th {
+  tbody th {
     font-weight: $font-weight-normal;
   }
 
   &.has-checkbox {
-    tr.selected {
-      > td,
-      > th {
-        background-color: $gray-400;
-      }
+    .selected * {
+      background-color: $gray-400;
     }
 
-    tr > th:first-child,
-    tr > td:first-child {
-      width: 1.25rem;
+    th:first-child,
+    td:first-child {
+      width: $spacer;
       padding-top: 0;
       padding-bottom: 0;
+    }
+
+    .custom-control {
+      margin-bottom: 0;
     }
   }
 
   &.has-icon {
-    tr > td,
-    tr > th {
+    td,
+    th {
       height: 3.1875rem;
       padding-top: .6875rem;
       vertical-align: middle;
 
-      span,
       img {
-        vertical-align: middle;
-      }
-
-      img {
-        width: 1.875rem;
-        height: 1.875rem;
-        margin-right: .625rem;
+        width: map-get($spacers, 4);
+        height: map-get($spacers, 4);
+        margin-right: map-get($spacers, 2);
       }
 
       [class^="icon-"] {
-        width: 1.875rem;
+        width: map-get($spacers, 4);
         margin-right: .375rem;
-        font-size: 1.8125rem;
+        font-size: $o-table-icon-size;
         line-height: 0;
-        vertical-align: middle;
-      }
-    }
-  }
-
-  // &.has-status {
-  //   thead th:not(:first-child),
-  //   tr > td {
-  //     text-align: center;
-  //   }
-  // }
-
-  &.table-reflow {
-    thead,
-    tbody {
-      > tr {
-        border: 0;
-      }
-
-      > tr > td {
-        line-height: 1.25rem;
-      }
-
-      > tr > th:first-child {
-        border-bottom: 2px solid $table-border-color;
-      }
-
-      > tr > th,
-      > tr > td {
-        border-bottom: 1px solid $table-border-color;
-      }
-
-      > tr > td:last-child {
-        border-right: 0;
-      }
-    }
-
-    thead > tr {
-      border: 0;
-
-      > th:not(:first-child) {
-        padding-left: map-get($spacers, 2);
-        border-bottom: 1px solid $table-border-color;
-      }
-
-      > th:last-child {
-        border-right: 0;
-      }
-    }
-
-    tbody {
-      > tr > th:first-child {
-        padding-left: 0;
+        vertical-align: inherit;
       }
     }
   }
 }
 
-@include table-row-variant-border(success, theme-color("success"));
-@include table-row-variant-border(info, theme-color("info"));
-@include table-row-variant-border(warning, theme-color("warning"));
-@include table-row-variant-border(danger, theme-color("danger"));
+.table-reflow {
+  tr {
+    border: 0;
+  }
 
-
-// force caption for tables
-caption {
-  padding: .75rem 0;
-  font-size: $h1-font-size;
-  font-weight: $font-weight-bold;
-  color: $black;
-  caption-side: top;
-  background-color: $white;
-}
-
-// Style jquery tablesorter ext
-// scss-lint:disable SelectorFormat
-//
-// Table sorter
-//
-
-.tablesorter {
-  caption {
-    padding: .75rem 0;
-    font-size: $h1-font-size;
-    font-weight: $font-weight-bold;
-    color: $black;
-    background-color: $white;
+  td {
+    line-height: $spacer;
+    border-bottom: $table-border-width solid $table-border-color;
   }
 
   th {
-    padding-right: 30px;
-    text-align: left;
+    border-bottom: $table-border-width * 2 solid $table-border-color;
+
+    ~ * {
+      border-bottom-width: $table-border-width;
+    }
+  }
+
+  td,
+  th {
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  thead th + * {
+    padding-left: map-get($spacers, 2);
+    border-bottom: $table-border-width solid $table-border-color;
+  }
+
+  tbody th:first-child {
+    padding-left: 0;
+  }
+}
+
+@each $color in success, info, warning, danger {
+  @include table-row-variant-border(#{$color}, theme-color(#{$color}));
+}
+
+
+//
+// Table sorter
+//
+// stylelint-disable selector-class-pattern
+
+.tablesorter {
+  th {
+    padding-right: map-get($spacers, 4);
     cursor: pointer;
 
-    &.header {
-      position: relative;
-    }
-
-    .tablesorter-header-inner span {
-      padding-right: 1.6875rem;
-    }
-
-    &.tablesorter-headerDesc .tablesorter-header-inner span::after,
-    &.tablesorter-headerAsc .tablesorter-header-inner span::after {
-      position: absolute;
-      top: 45%;
-      width: .875rem;
-      height: .4375rem;
-      margin-left: map-get($spacers, 2);
-      content: "";
-      background-image: escape-svg($accordion-arrow-icon);
-    }
-
-    &.tablesorter-headerDesc .tablesorter-header-inner span::after {
-      transform: rotate(180deg);
-    }
-
-    &.tablesorter-headerUnSorted {
-      .tablesorter-header-inner:hover span::after,
-      .tablesorter-header-inner:focus span::after {
-        position: absolute;
-        top: 31%;
-        width: .875rem;
-        height: 1.0625rem;
-        margin-left: map-get($spacers, 2);
-        content: "";
-        background-image: escape-svg($o-sortable-hover-icon);
-      }
-    }
-
     a {
-      color: $black;
-      text-decoration: none;
+      color: $link-color;
+      text-decoration: $link-decoration;
 
       @include hover-focus() {
-        color: theme-color("primary");
+        color: $link-hover-color;
         text-decoration: underline;
       }
     }
   }
+}
 
-  td {
-    text-align: left;
+.tablesorter-header {
+  position: relative;
+}
+
+.tablesorter-header-inner span {
+  padding-right: 1.6875rem;
+
+  &::after {
+    position: absolute;
+    top: 45%;
+    width: .875rem;
+    height: $caret-width;
+    margin-left: map-get($spacers, 2);
+    content: "";
+    background-image: escape-svg($accordion-arrow-icon);
+  }
+
+  [aria-sort="none"] &::after {
+    background: none;
+  }
+
+  .tablesorter-headerDesc &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.tablesorter-headerUnSorted .tablesorter-header-inner {
+  &:hover,
+  &:focus {
+    span::after {
+      top: 31%;
+      height: 1.0625rem;
+      background-image: escape-svg($o-sortable-hover-icon);
+    }
   }
 }

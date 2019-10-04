@@ -385,8 +385,8 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .625rem .625rem .625rem 0 !default; // 10px;
-$table-cell-padding-sm:       .3125rem .3125rem .3125rem 0 !default; // 5px;
+$table-cell-padding:          .625rem !default; // 10px;
+$table-cell-padding-sm:       .3125rem !default; // 5px;
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
@@ -411,7 +411,7 @@ $table-dark-color:            $white !default;
 
 $table-striped-order:         odd !default;
 
-$table-caption-color:         $text-muted !default;
+$table-caption-color:         $black !default;
 
 // Boosted mod
 // $table-bg-level:              -9 !default;
@@ -1233,7 +1233,7 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 // Accordions
 
 $accordion-arrow-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default;
-$o-sortable-hover-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7.17 0.10 h 14 l -7.7 z'/><path d='M 7.0 14.7 0.7 7.0 z'/></svg>") !default;
+$o-sortable-hover-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7,17 0,10 h 14 l -7,7 z'/><path d='M 7,0 14,7 0,7 7,0 z'/></svg>") !default;
 
 // arrow Links
 
@@ -1271,3 +1271,7 @@ $o-stepbar-arrow-width: $spacer !default;
 $o-stepbar-mobile-padding-vertical: .3125rem !default;
 $o-stepbar-mobile-arrow-width: .75rem !default;
 $o-stepbar-mobile-arrow-height: 1.875rem !default;
+
+// o-table
+$o-table-icon-size: 1.8125rem !default;
+$o-table-caption: .75rem !default;
