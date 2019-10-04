@@ -279,8 +279,8 @@ $component-active-color:      $white !default;
 $component-active-bg:         theme-color("dark") !default;
 
 $caret-width:                 .4375rem !default;
-$caret-vertical-align:        $caret-width * .5 !default;
-$caret-spacing:               $caret-width !default;
+$caret-vertical-align:        middle !default; // Boosted mod
+$caret-spacing:               map-get($spacers, 2) !default; // Boosted mod
 
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;

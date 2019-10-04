@@ -123,9 +123,9 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x $dropdown-item-padding-y $spacer; // Boosted mod
   clear: both;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-bold; // Boosted mod
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   text-decoration: none; // Boosted mod
