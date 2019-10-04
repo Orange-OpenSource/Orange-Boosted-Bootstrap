@@ -280,11 +280,15 @@ table {
 }
 
 caption {
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
+  // Boosted mod
+  padding: $o-table-caption 0;
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
   color: $table-caption-color;
   text-align: left;
-  caption-side: bottom;
+  caption-side: top;
+  background-color: $white;
+  // end mod
 }
 
 th {
