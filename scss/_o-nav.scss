@@ -14,14 +14,15 @@
   }
 }
 
-// Boosted ood
+// Boosted mod
 .o-nav-light {
   padding-left: inherit;
-  border-bottom: 1px solid $gray-600;
-}
-.o-active {
-  color: $primary;
-  border-bottom: 3px solid $primary;
+  border-bottom: $nav-tabs-border-width / 2 solid $gray-600;
+
+  .active {
+    color: $primary;
+    border-bottom: $nav-tabs-border-width * 1.5 solid;
+  }
 }
 // end mod
 
@@ -31,16 +32,13 @@
 
 .nav-tabs {
   .nav-item {
-    &:first-child {
-      margin-left: 0;
-    }
+    margin-left: 0;
+  }
 
-    + .nav-item {
+  // On mobile no margin between tabs
+  @include media-breakpoint-up(lg) {
+    .nav-item + .nav-item {
       margin-left: .5rem;
-      // On mobile no margin between tabs
-      @include media-breakpoint-down(md) {
-        margin-left: 0;
-      }
     }
   }
 
@@ -48,17 +46,8 @@
     &,
     &.dropdown-toggle {
       @include focus() {
-        outline-width: 1px;
-        outline-style: dotted;
+        outline: 1px dotted;
         outline-offset: -6px;
-      }
-    }
-
-    + .nav-link {
-      margin-left: .5rem;
-      // On mobile no margin between tabs
-      @include media-breakpoint-down(md) {
-        margin-left: 0;
       }
     }
   }
