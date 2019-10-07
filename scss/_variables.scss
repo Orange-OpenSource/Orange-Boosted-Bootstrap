@@ -939,7 +939,7 @@ $tooltip-max-width:                 200px !default;
 $tooltip-color:                     $black !default;
 $tooltip-bg:                        $gray-400 !default;
 $tooltip-border-radius:             $border-radius !default;
-$tooltip-opacity:                   .9 !default;
+$tooltip-opacity:                   1 !default; // Boosted mod
 $tooltip-padding-y:                 $spacer !default;
 $tooltip-padding-x:                 $spacer !default;
 $tooltip-margin:                    .3125rem !default;
