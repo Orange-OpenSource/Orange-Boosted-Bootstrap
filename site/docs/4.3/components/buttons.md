@@ -26,7 +26,7 @@ Boosted includes several predefined button styles, each serving its own semantic
 To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
 
 {% capture example %}
-<div style="background-color: black; padding: 2rem">
+<div class="bg-dark p-3">
     {% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
@@ -36,7 +36,7 @@ To get the inversed button behaviour, simply add `.btn-inverse` class to your `<
 {% include example.html content=example %}
 
 {% capture example %}
-<div style="background-color: #595959; padding: 2rem">
+<div class="p-3" style="background-color: #595959">
     {% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
@@ -50,7 +50,7 @@ To get the inversed button behaviour, simply add `.btn-inverse` class to your `<
 The default styles can be used on secondary colors backgrounds, in this case remove the `.btn-inverse` class if any.
 
 {% capture example %}
-<div style="background-color: #eee; padding: 2rem">
+<div class="bg-light p-3">
     {% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
@@ -65,7 +65,7 @@ In need of a social media button? Some helper classes are designed to be used wi
 `.btn-fbk`, `.btn-tw`, `.btn-gplus`, `.btn-lin`, `.btn-mail` are available for light and dark background.
 
 {% capture example %}
-<div style="padding: 2rem">
+<div class="p-3">
     <a class="btn btn-fbk btn-social" href="#" aria-label="Facebook"></a> 
     <a class="btn btn-tw btn-social" href="#" aria-label="Twitter"></a> 
     <a class="btn btn-gplus btn-social" href="#" aria-label="Google Plus"></a>
@@ -77,7 +77,7 @@ In need of a social media button? Some helper classes are designed to be used wi
 
 
 {% capture example %}
-<div style="background-color: #000; padding: 2rem">
+<div class="bg-dark p-3">
     <a class="btn btn-fbk-inverse btn-social" href="#" aria-label="Facebook"></a> 
     <a class="btn btn-tw-inverse btn-social" href="#" aria-label="Twitter"></a> 
     <a class="btn btn-gplus-inverse btn-social" href="#" aria-label="Google Plus"></a>
