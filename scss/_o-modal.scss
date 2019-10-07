@@ -14,25 +14,6 @@
     padding: 0;
     margin-bottom: 2.5rem;
     border: 0;
-
-    .btn {
-      position: absolute;
-      top: -.625rem;
-      right: -.625rem;
-      padding: $modal-inner-padding;
-      background-color: transparent;
-      border: 0;
-
-
-      .close {
-        width: $spacer;
-        height: $spacer;
-        margin: 0;
-        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http=//www.w3.org/2000/svg' width='852.063' height='852.063' viewBox='0 0 852.063 852.063'><path d='M.987 57.125L57.125.987 851.048 794.91l-56.138 56.138zM794.91.987l56.138 56.138L57.125 851.048.987 794.91z' fill='#{$gray-700}'/></svg>"));
-        background-size: $spacer;
-        opacity: 1;
-      }
-    }
   }
 
   .modal-body {

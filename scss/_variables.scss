@@ -1062,6 +1062,7 @@ $modal-sm:                          300px !default;
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              null !default;
 $modal-transition:                  transform .3s ease-out !default;
+$modal-close-icon:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 852.063 852.063'><path d='M.987 57.125L57.125.987 851.048 794.91l-56.138 56.138zM794.91.987l56.138 56.138L57.125 851.048.987 794.91z' fill='#{$gray-700}'/></svg>") !default; // Boosted mod
 
 
 // Alerts

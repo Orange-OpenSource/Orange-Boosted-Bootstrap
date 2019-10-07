@@ -140,11 +140,16 @@
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
   @include border-top-radius($modal-content-inner-border-radius);
 
+  // Boosted mod
   .close {
-    padding: $modal-header-padding;
+    width: $spacer;
+    height: $spacer;
+    padding: $spacer;
     // auto on the left force icon to the right even when there is no .modal-title
     margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+    background: escape-svg($modal-close-icon) no-repeat center / $spacer;
   }
+  // end mod
 }
 
 // Title text within header
