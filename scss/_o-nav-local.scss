@@ -28,8 +28,8 @@
   .nav .nav-link,
   .nav .dropdown-toggle {
     @include focus() {
-      outline: 1px dotted;
-      outline-offset: -1px;
+      outline: $border-width solid;
+      outline-offset: -#{$border-width};
     }
     display: inline-block;
     padding: 1rem ($nav-link-padding-x * .5) 1.125rem;
@@ -54,7 +54,7 @@
 
     .nav-link {
       @include focus() {
-        outline-offset: -2px;
+        outline-offset: -#{$border-width};
       }
       display: block;
       padding: .625rem .625rem .625rem 1.25rem;
@@ -78,11 +78,11 @@
     }
 
     &:focus {
-      outline-color: #fff;
+      outline-color: $white;
     }
 
-    color: #fff;
-    background-color: #000;
+    color: $white;
+    background-color: $black;
 
     &.active {
       color: theme-color("primary");

@@ -63,6 +63,8 @@
   font-weight: $font-weight-bold; // Boosted mod
   line-height: inherit;
   white-space: nowrap;
+  outline-offset: map-get($spacers, 4);
+  @include transition($transition-focus); // Boosted mod
 
   @include hover-focus() {
     text-decoration: none;
@@ -70,12 +72,11 @@
 
   // Boosted mod
   + .navbar-brand {
-    margin-right: 0;
-    margin-left: $spacer;
+    margin: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
   }
 
   @include focus() {
-    outline: 1px dotted $white;
+    outline: $border-width solid $white;
     outline-offset: map-get($spacers, 2);
   }
 
@@ -107,6 +108,8 @@
     padding: .875rem map-get($spacers, 2);
     margin-top: 0;
     text-decoration: none;
+    outline-offset: map-get($spacers, 4);
+    @include transition($transition-focus); // Boosted mod
 
     &.active::before {
       display: none;

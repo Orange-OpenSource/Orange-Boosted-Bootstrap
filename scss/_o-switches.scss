@@ -72,7 +72,7 @@
 .o-switch .checkbox {
   @include focus() {
     + .toggle::before {
-      outline: 1px dotted #fff;
+      outline: $border-width solid $white;
     }
   }
 
@@ -126,14 +126,15 @@
 .o-switch.btn-group-toggle {
   display: inline-flex;
   justify-content: flex-start;
-  border: 2px solid #ccc;
+  border: $border-width solid $gray-500;
 
   .btn {
     min-width: 2.5rem;
     padding-right: 0;
     padding-left: 0;
     margin: -2px 0;
-    border: 2px solid transparent;
+    border: $border-width solid transparent;
+    @include transition($transition-focus); // Boosted mod
 
     &:first-child {
       margin-left: -2px;
@@ -144,14 +145,14 @@
     }
 
     &.active {
-      color: #fff;
-      background-color: #000;
-      border-color: #000;
+      color: $white;
+      background-color: $black;
+      border-color: $black;
     }
 
     &.focus {
-      outline: 1px dotted #fff;
-      outline-offset: -2px;
+      outline: $border-width solid $white;
+      outline-offset: -#{$border-width};
     }
 
     &:active {
@@ -165,9 +166,9 @@
       }
 
       &.active {
-        color: #fff;
-        background-color: #000;
-        border-color: #000;
+        color: $white;
+        background-color: $black;
+        border-color: $black;
       }
     }
   }
@@ -176,8 +177,8 @@
     border-color: transparent;
 
     .btn {
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
+      border-top: $border-width solid transparent;
+      border-bottom: $border-width solid transparent;
 
       &:first-child {
         border-left-color: transparent;

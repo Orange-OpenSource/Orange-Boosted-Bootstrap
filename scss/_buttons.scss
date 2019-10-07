@@ -181,7 +181,7 @@ fieldset:disabled a.btn {
   background-repeat: no-repeat;
   &:hover,
   &:focus {
-    outline: none;
+    outline: 0;
   }
 }
 // end mod

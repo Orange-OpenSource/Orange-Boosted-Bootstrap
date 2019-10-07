@@ -46,8 +46,8 @@
     &,
     &.dropdown-toggle {
       @include focus() {
-        outline: 1px dotted;
-        outline-offset: -6px;
+        outline: $border-width solid;
+        outline-offset: -#{$border-width * 3};
       }
     }
   }
@@ -72,6 +72,7 @@
     background-color: $white;
     border: 0;
     border-bottom: 2px solid $black;
+    @include transition($transition-focus); // Boosted mod
 
     &:first-child {
       margin-left: 0;
@@ -89,7 +90,7 @@
     }
 
     &:focus {
-      outline-offset: -4px;
+      outline-offset: -#{$border-width * 2};
     }
 
     &:hover:not([aria-expanded="true"]) {
@@ -224,7 +225,7 @@
     @include focus() {
       color: $nav-pills-focus-link-color;
       background-color: $nav-pills-focus-link-bg;
-      outline: none;
+      outline: 0;
       &.disabled {
         color: $nav-link-disabled-color;
         background-color: $nav-link-disabled-hover-bg;
@@ -243,8 +244,8 @@
 
       .nav-link {
         @include focus() {
-          outline: 1px dotted $black;
-          outline-offset: -2px;
+          outline: $border-width solid $black;
+          outline-offset: -#{$border-width};
         }
         display: block;
         padding: map-get($spacers, 2) map-get($spacers, 2) map-get($spacers, 2) $spacer;
@@ -300,7 +301,7 @@
   .nav-link {
     border: 0;
     &:focus {
-      outline-offset: -2px;
+      outline-offset: -#{$border-width};
     }
   }
 

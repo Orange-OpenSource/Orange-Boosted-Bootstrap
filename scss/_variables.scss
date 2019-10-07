@@ -285,6 +285,8 @@ $caret-spacing:               map-get($spacers, 2) !default; // Boosted mod
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
+$transition-focus:            outline-offset .2s ease-in-out !default; // Boosted mod
+$transition-carousel:         width .5s ease, outline-offset .2s ease-in-out !default; // Boosted mod
 
 $embed-responsive-aspect-ratios: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default

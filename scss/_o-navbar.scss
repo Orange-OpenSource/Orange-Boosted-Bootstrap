@@ -61,6 +61,8 @@
 
   .nav-link,
   .dropdown-toggle {
+    @include transition($transition-focus); // Boosted mod
+
     @include focus() {
       outline-offset: .5rem;
     }
@@ -104,7 +106,7 @@
         &.minimized {
           .mega-menu .nav-link {
             padding-right: 0;
-            outline-offset: -1px;
+            outline-offset: -#{$border-width};
 
             &[data-toggle="collapse"]::before {
               margin-top: .3125rem;
@@ -222,7 +224,7 @@
           > .container > .navbar-nav .navbar-nav .nav-link {
             padding: 0;
             line-height: 1.25rem;
-            outline-offset: 1px;
+            outline-offset: $border-width;
           }
 
           > .container > .navbar-nav .nav-item:first-child,

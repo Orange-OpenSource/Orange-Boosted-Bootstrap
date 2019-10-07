@@ -42,7 +42,7 @@
 
   &:focus ~ .custom-control-label::before {
     // the mixin is not used here to make sure there is feedback
-    outline: dotted 1px $black; // Boosted mod no box-shadow, replaced by outline
+    outline: $border-width solid $black; // Boosted mod no box-shadow, replaced by outline
     @if $enable-shadows {
       box-shadow: $input-box-shadow, $input-focus-box-shadow;
     } @else {
@@ -244,7 +244,7 @@
   .custom-control-input {
     @include focus() {
       ~ .custom-control-label::after {
-        outline: 1px dotted $white;
+        outline: $border-width solid $white;
       }
     }
   }
@@ -487,7 +487,7 @@
   appearance: none;
 
   &:focus {
-    outline: none;
+    outline: 0;
 
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.

@@ -2,18 +2,20 @@
 //
 
 // back from accessibility plugin css
-div.active:focus {
-  outline: dotted 1px;
-}
-
-a:focus {
-  color: theme-color("primary");
-  outline: dotted 1px;
+a {
+  outline-offset: $border-width * 2;
+  @include transition($transition-focus);
+  &:focus {
+    color: theme-color("primary");
+    outline: $border-width solid;
+    outline-offset: $border-width;
+  }
 }
 
 .close:hover,
-.close:focus {
-  outline: dotted 1px;
+.close:focus,
+div.active:focus {
+  outline: $border-width solid;
 }
 
 //

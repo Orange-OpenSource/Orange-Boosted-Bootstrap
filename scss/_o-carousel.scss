@@ -1,4 +1,4 @@
-// stylelint-disable property-blacklist, font-family-no-missing-generic-family-keyword
+// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // Carousel
 // --------------------------------------------------
@@ -25,12 +25,12 @@
   text-shadow: none;
   background-color: transparent;
   opacity: .8;
-  transition: width .5s ease;
+  @include transition($transition-carousel);
 
   // Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
+    outline: $border-width solid $input-focus-border-color;
+    outline-offset: -#{$border-width};
   }
   // end mod
 }
@@ -72,15 +72,15 @@
     margin-right: .375rem;
     background-color: #000;
     border: 1px solid #fff;
-    border-radius: 50%;
+    @include border-radius(50%);
 
     &:hover {
       cursor: pointer;
     }
+  }
 
-    &.active {
-      background-color: theme-color("primary"); // stylelint-disable-line selector-no-qualifying-type
-    }
+  .active {
+    background-color: theme-color("primary");
   }
 }
 
@@ -94,10 +94,11 @@
   cursor: pointer;
   background-image: none;
   background-size: 0;
+  @include transition($transition-focus); // Boosted mod
   // Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
+    outline: $border-width solid $input-focus-border-color;
+    outline-offset: -#{$border-width};
   }
   // end mod
 }
@@ -186,11 +187,6 @@
 
   .swiper-slide {
     width: 80%;
-
-    // .card-link .card-body {
-    //   padding: 20px;
-    //   text-align: left;
-    // }
 
     .card-img img {
       height: auto;

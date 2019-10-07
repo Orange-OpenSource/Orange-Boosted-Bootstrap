@@ -321,7 +321,7 @@ button {
 //
 // Credit: https://github.com/suitcss/base/
 button:focus {
-  outline: 1px dotted;
+  outline: $border-width solid;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
@@ -452,7 +452,7 @@ progress {
   // `.form-control` class can properly style them. Note that this cannot simply
   // be added to `.form-control` as it's not specific enough. For details, see
   // https://github.com/twbs/bootstrap/issues/11586.
-  outline-offset: -2px; // 2. Correct the outline style in Safari.
+  outline-offset: -#{$border-width}; // 2. Correct the outline style in Safari.
   -webkit-appearance: none;
 }
 
