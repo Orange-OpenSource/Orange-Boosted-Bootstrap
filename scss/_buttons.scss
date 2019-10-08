@@ -127,8 +127,10 @@ fieldset:disabled a.btn {
 .btn-link {
   // font-weight: $font-weight-normal; // Boosted mod font-weight stay bold
   color: $link-color;
-
   // Boosted mod
+  outline-offset: $border-width * 2;
+  @include transition($transition-focus);
+
   &.btn-inverse {
     color: $white;
   }
@@ -141,8 +143,9 @@ fieldset:disabled a.btn {
 
   &:focus,
   &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
+    outline: $border-width solid; // Boosted mod
+    outline-offset: -#{$border-width}; // Boosted mod
+    box-shadow: $input-btn-focus-box-shadow;
   }
 
   &:disabled,
