@@ -8,7 +8,7 @@ const banner  = require('./banner.js')
 const BUNDLE  = process.env.BUNDLE === 'true'
 
 let fileDest  = 'boosted.js'
-const external = ['focus-visible', 'jquery', 'tablesorter', 'swiper', 'popper.js']
+const external = ['jquery', 'tablesorter', 'swiper', 'popper.js', 'focus-visible']
 const plugins = [
   babel({
     exclude: 'node_modules/**', // Only transpile our source code
@@ -22,11 +22,11 @@ const plugins = [
   })
 ]
 const globals = {
-  'focus-visible': 'focus-visible',
   jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
   tablesorter: 'tablesorter',
   swiper: 'Swiper',
-  'popper.js': 'Popper'
+  'popper.js': 'Popper',
+  'focus-visible': 'focus-visible'
 }
 
 if (BUNDLE) {
