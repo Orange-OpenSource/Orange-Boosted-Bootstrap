@@ -36,11 +36,6 @@
       outline: $border-width solid;
       outline-offset: -#{$border-width};
     }
-    &:hover,
-    &:active,
-    &:hover:focus {
-      outline: 0;
-    }
   }
 
   .nav-link.active {
@@ -84,11 +79,6 @@
     }
     &:focus {
       outline-color: $white;
-    }
-    &:hover,
-    &:active,
-    &:hover:focus {
-      outline: 0;
     }
     &.active {
       color: theme-color("primary");

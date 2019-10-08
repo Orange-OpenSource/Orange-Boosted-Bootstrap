@@ -113,6 +113,8 @@ cdn:
   popper_hash:       "sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
   tablesorter:       "https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"
   tablesorter_hash:  "sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu"
+  focusvisible:      "https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js"
+  focusvisible_hash: "sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI="
 
 toc:
   min_level:        2

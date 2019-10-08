@@ -80,12 +80,6 @@
     outline-offset: map-get($spacers, 2);
   }
 
-  &:hover,
-  &:active,
-  &:hover:focus {
-    outline: 0;
-  }
-
   img {
     flex-wrap: wrap;
     width: $navbar-brand-logo-height;
@@ -143,12 +137,6 @@
 
     &:focus {
       outline-offset: map-get($spacers, 2);
-    }
-
-    &:hover,
-    &:active,
-    &:hover:focus {
-      outline: 0;
     }
     // end mod
   }

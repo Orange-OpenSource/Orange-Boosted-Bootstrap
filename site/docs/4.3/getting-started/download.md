@@ -40,6 +40,7 @@ Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached v
 If you're using our compiled JavaScript, don't forget to include CDN versions of jQuery and Popper.js before it.
 
 {% highlight html %}
+<script src="{{ site.cdn.focusvisible }}" integrity="{{ site.cdn.focusvisible_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>

@@ -156,12 +156,6 @@
       outline-offset: -#{$border-width};
     }
 
-    &:hover,
-    &:active,
-    &:hover:focus {
-      outline: 0;
-    }
-
     &:active {
       border-color: theme-color("primary");
     }

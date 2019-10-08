@@ -122,6 +122,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
   <thead>
     <tr>
       <th scope="col">JS files</th>
+      <th scope="col">Focus-visible</th>
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
       <th scope="col">tableSorter</th>
@@ -135,6 +136,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">boosted.bundle.min.js</code></div>
       </th>
       <td class="text-success font-weight-bold">Included</td>
+      <td class="text-success font-weight-bold">Included</td>
       <td class="bg-light">Not included</td>
       <td class="text-success font-weight-bold">Included</td>
       <td class="text-success font-weight-bold">Included</td>
@@ -144,6 +146,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">boosted.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.min.js</code></div>
       </th>
+      <td class="bg-light">Not included</td>
       <td class="bg-light">Not included</td>
       <td class="bg-light">Not included</td>
       <td class="bg-light">Not included</td>

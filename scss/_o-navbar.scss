@@ -67,12 +67,6 @@
       outline-offset: .5rem;
     }
 
-    &:hover,
-    &:active,
-    &:hover:focus {
-      outline: 0;
-    }
-
     font-size: $font-size-sm;
     line-height: 1;
 

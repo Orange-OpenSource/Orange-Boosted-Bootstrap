@@ -49,11 +49,6 @@
         outline: $border-width solid;
         outline-offset: -#{$border-width * 3};
       }
-      &:hover,
-      &:active,
-      &:hover:focus {
-        outline: 0;
-      }
     }
   }
 }
@@ -96,12 +91,6 @@
 
     &:focus {
       outline-offset: -#{$border-width * 2};
-    }
-
-    &:hover,
-    &:active,
-    &:hover:focus {
-      outline: 0;
     }
 
     &:hover:not([aria-expanded="true"]) {
@@ -255,11 +244,6 @@
         &:focus {
           outline: $border-width solid $black;
           outline-offset: -#{$border-width};
-        }
-        &:hover,
-        &:active,
-        &:hover:focus {
-          outline: 0;
         }
         &:hover {
           color: $white;
