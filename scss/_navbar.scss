@@ -75,9 +75,14 @@
     margin: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
   }
 
-  @include focus() {
+  &:focus {
     outline: $border-width solid $white;
     outline-offset: map-get($spacers, 2);
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
   }
 
   img {
@@ -135,8 +140,13 @@
       content: "\e93e";
     }
 
-    @include focus() {
+    &:focus {
       outline-offset: map-get($spacers, 2);
+    }
+
+    &:hover,
+    &:active {
+      outline: 0;
     }
     // end mod
   }

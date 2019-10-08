@@ -27,15 +27,19 @@
 
   .nav .nav-link,
   .nav .dropdown-toggle {
-    @include focus() {
-      outline: $border-width solid;
-      outline-offset: -#{$border-width};
-    }
     display: inline-block;
     padding: 1rem ($nav-link-padding-x * .5) 1.125rem;
     font-size: $font-size-base;
     font-weight: $font-weight-bold;
     line-height: 1;
+    &:focus {
+      outline: $border-width solid;
+      outline-offset: -#{$border-width};
+    }
+    &:hover,
+    &:active {
+      outline: 0;
+    }
   }
 
   .nav-link.active {
@@ -53,37 +57,37 @@
     }
 
     .nav-link {
-      @include focus() {
+      display: block;
+      padding: map-get($spacers, 2) map-get($spacers, 2) map-get($spacers, 2) $spacer;
+      &:focus {
         outline-offset: -#{$border-width};
       }
-      display: block;
-      padding: .625rem .625rem .625rem 1.25rem;
-    }
-
-    .nav-link:hover {
-      color: #fff;
-      background: #000;
+      &:hover {
+        color: $white;
+        background: $black;
+      }
     }
   }
 }
 
 .o-nav-local.inverse {
-  background-color: #000;
+  background-color: $black;
   border-top-color: $gray-900;
   border-bottom-color: $gray-900;
 
   .nav-link {
+    color: $white;
+    background-color: $black;
     @include hover-focus() {
       color: theme-color("primary");
     }
-
     &:focus {
       outline-color: $white;
     }
-
-    color: $white;
-    background-color: $black;
-
+    &:hover,
+    &:active {
+      outline: 0;
+    }
     &.active {
       color: theme-color("primary");
     }

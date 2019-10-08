@@ -63,8 +63,13 @@
   .dropdown-toggle {
     @include transition($transition-focus); // Boosted mod
 
-    @include focus() {
+    &:focus {
       outline-offset: .5rem;
+    }
+
+    &:hover,
+    &:active {
+      outline: 0;
     }
 
     font-size: $font-size-sm;

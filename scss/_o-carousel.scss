@@ -32,6 +32,10 @@
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
   }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
   // end mod
 }
 
@@ -99,6 +103,10 @@
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
+  }
+  &:hover,
+  &:active {
+    outline: 0;
   }
   // end mod
 }

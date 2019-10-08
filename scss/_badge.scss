@@ -56,12 +56,16 @@
 // Boosted mod
 .badge[href] {
   @include transition($transition-focus); // Boosted mod
-  @include focus() {
+  &:focus {
     outline-color: $white;
     outline-offset: -#{$border-width};
 
     &.badge-light {
       outline-color: $black;
     }
+  }
+  &:hover,
+  &:active {
+    outline: 0;
   }
 }

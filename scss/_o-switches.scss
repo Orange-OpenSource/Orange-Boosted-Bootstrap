@@ -150,9 +150,15 @@
       border-color: $black;
     }
 
+    &:focus,
     &.focus {
       outline: $border-width solid $white;
       outline-offset: -#{$border-width};
+    }
+
+    &:hover,
+    &:active {
+      outline: 0;
     }
 
     &:active {
