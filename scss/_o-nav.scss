@@ -50,7 +50,8 @@
         outline-offset: -#{$border-width * 3};
       }
       &:hover,
-      &:active {
+      &:active,
+      &:hover:focus {
         outline: 0;
       }
     }
@@ -98,7 +99,8 @@
     }
 
     &:hover,
-    &:active {
+    &:active,
+    &:hover:focus {
       outline: 0;
     }
 
@@ -255,7 +257,8 @@
           outline-offset: -#{$border-width};
         }
         &:hover,
-        &:active {
+        &:active,
+        &:hover:focus {
           outline: 0;
         }
         &:hover {

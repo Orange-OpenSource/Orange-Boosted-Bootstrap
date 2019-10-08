@@ -81,7 +81,8 @@
   }
 
   &:hover,
-  &:active {
+  &:active,
+  &:hover:focus {
     outline: 0;
   }
 
@@ -145,7 +146,8 @@
     }
 
     &:hover,
-    &:active {
+    &:active,
+    &:hover:focus {
       outline: 0;
     }
     // end mod

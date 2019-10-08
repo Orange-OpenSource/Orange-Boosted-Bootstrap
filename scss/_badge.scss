@@ -65,7 +65,8 @@
     }
   }
   &:hover,
-  &:active {
+  &:active,
+  &:hover:focus {
     outline: 0;
   }
 }

@@ -33,7 +33,8 @@
     outline-offset: -#{$border-width};
   }
   &:hover,
-  &:active {
+  &:active,
+  &:hover:focus {
     outline: 0;
   }
   // end mod
@@ -98,14 +99,15 @@
   cursor: pointer;
   background-image: none;
   background-size: 0;
-  @include transition($transition-focus); // Boosted mod
   // Boosted mod
+  @include transition($transition-focus);
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
   }
   &:hover,
-  &:active {
+  &:active,
+  &:hover:focus {
     outline: 0;
   }
   // end mod

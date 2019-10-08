@@ -37,7 +37,8 @@
       outline-offset: -#{$border-width};
     }
     &:hover,
-    &:active {
+    &:active,
+    &:hover:focus {
       outline: 0;
     }
   }
@@ -85,7 +86,8 @@
       outline-color: $white;
     }
     &:hover,
-    &:active {
+    &:active,
+    &:hover:focus {
       outline: 0;
     }
     &.active {

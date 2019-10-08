@@ -11,7 +11,8 @@ a {
     outline-offset: $border-width;
   }
   &:hover,
-  &:active {
+  &:active,
+  &:hover:focus {
     outline: 0;
   }
 }
