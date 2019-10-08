@@ -11,7 +11,7 @@
   // Boosted mod
   .alert-icon {
     position: absolute;
-    top: .625rem;
+    top: map-get($spacers, 2);
     &::after {
       width: alert-logo-size("md");
       height: alert-logo-size("md");
@@ -37,7 +37,7 @@
 .alert-lg {
   padding: $alert-padding-y-lg $alert-padding-x-lg;
   .alert-icon {
-    top: .625rem;
+    top: map-get($spacers, 2);
     &::after {
       width: alert-logo-size("lg");
       height: alert-logo-size("lg");
@@ -68,12 +68,18 @@
   // Adjust close link position
   .close {
     position: absolute;
-    top: 0;
+    top: map-get($spacers, 2); // Boosted mod
     right: 0;
     padding: $alert-padding-y $alert-padding-x;
     line-height: $alert-padding-y; // Boosted mod
     color: inherit;
   }
+
+  // Boosted mod
+  &.alert-sm .close {
+    top: 0;
+  }
+  // end mod
 }
 
 

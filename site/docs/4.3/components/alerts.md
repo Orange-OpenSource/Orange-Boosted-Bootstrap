@@ -57,108 +57,84 @@ alert-icon svg-warning
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">×</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-sm border border-info alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-info" aria-label="Info"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">×</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-sm border border-warning alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-warning" aria-label="Warning"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">×</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-sm border border-danger alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-error" aria-label="Danger"></span>
         <div class="pl-4 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">×</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert border border-success alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-success" aria-label="Success"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-info" aria-label="Info"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert border border-warning alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-warning" aria-label="Warning"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert border border-danger alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-error" aria-label="Danger"></span>
         <div class="pl-3 ml-3 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-lg border border-success alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-success" aria-label="Success"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-lg border border-info alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-info" aria-label="Info"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-warning" aria-label="Warning"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent" role="alert">
         <span class="alert-icon svg-error" aria-label="Danger"></span>
         <div class="pl-5 font-weight-bold">
             Your changes have been saved.
         </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark" role="alert">
         <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
@@ -166,9 +142,7 @@ alert-icon svg-warning
             <div class="font-weight-bold">Your changes have been saved.</div>
             <p class="mb-0">You may now log-in with the username you have chosen.</p>
         </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="alert border-0 alert-sm bg-transparent px-0" role="alert">
         <span class="alert-icon svg-success" aria-label="Success"></span>
@@ -184,27 +158,21 @@ alert-icon svg-warning
             <div class="pl-4 font-weight-bold">
                 Your changes have been saved.
             </div>
-            <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-            <span class="text-white" aria-hidden="true">×</span>
-            </button>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
         </div>
         <div class="alert border border-info alert-dismissible fade show bg-transparent text-white" role="alert">
             <span class="alert-icon svg-info" aria-label="Info"></span>
             <div class="pl-3 ml-3 font-weight-bold">
                 Your changes have been saved.
             </div>
-            <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-            <span class="text-white" aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
         </div>
         <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white" role="alert">
             <span class="alert-icon svg-warning" aria-label="Warning"></span>
             <div class="pl-5 font-weight-bold">
                 Your changes have been saved.
             </div>
-            <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-            <span class="text-white" aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
         </div>
         <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white" role="alert">
             <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
@@ -212,9 +180,7 @@ alert-icon svg-warning
                 <div class="font-weight-bold">Your changes have been saved.</div>
                 <p class="mb-0"><small>You may now log-in with the username you have chosen.</small></p>
             </div>
-            <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-            <span class="text-white" aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
         </div>
         <div class="alert border-0 alert-sm bg-transparent px-0 text-white" role="alert">
             <span class="alert-icon svg-success" aria-label="Success"></span>
@@ -256,9 +222,7 @@ You can see this in action with a live demo:
 {% capture example %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -276,9 +240,7 @@ $('.alert').alert()
 Or with `data` attributes on a button **within the alert**, as demonstrated above:
 
 {% highlight html %}
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 {% endhighlight %}
 
 Note that closing an alert will remove it from the DOM.

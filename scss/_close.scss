@@ -1,23 +1,35 @@
 .close {
   float: right;
+  // Boosted mod
+  width: $spacer;
+  height: $spacer;
+  padding: $spacer;
+  // end mod
   @include font-size($close-font-size);
   font-weight: $close-font-weight;
   line-height: 1;
   color: $close-color;
   text-shadow: $close-text-shadow;
-  opacity: 1; // Boosted mod
+  // Boosted mod
+  background: escape-svg($close-icon) no-repeat center / $spacer;
+  opacity: 1;
+  .bg-dark & {
+    background-image: escape-svg($close-icon-dark);
+  }
 
   // Override <a>'s hover style
-  @include hover() {
-    color: $close-color;
-    text-decoration: none;
-  }
+  // @include hover() {
+  //   color: $black;
+  //   text-decoration: none;
+  // }
 
-  &:not(:disabled):not(.disabled) {
-    @include hover-focus() {
-      opacity: 1; // Boosted mod
+  @include hover-focus() {
+    outline: $border-width solid;
+    &:not(:disabled):not(.disabled) {
+      opacity: 1;
     }
   }
+  // end mod
 }
 
 // Additional properties for button version
@@ -27,8 +39,8 @@
 
 // stylelint-disable-next-line selector-no-qualifying-type
 button.close {
-  padding: 0;
-  background-color: transparent;
+  //padding: 0; // Boosted mod
+  //background-color: transparent; // Boosted mod
   border: 0;
   appearance: none;
 }

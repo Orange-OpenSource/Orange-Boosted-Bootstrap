@@ -1062,16 +1062,14 @@ $modal-sm:                          300px !default;
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              null !default;
 $modal-transition:                  transform .3s ease-out !default;
-$modal-close-icon:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 852.063 852.063'><path d='M.987 57.125L57.125.987 851.048 794.91l-56.138 56.138zM794.91.987l56.138 56.138L57.125 851.048.987 794.91z' fill='#{$gray-700}'/></svg>") !default; // Boosted mod
-
 
 // Alerts
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   .8125rem !default;
+$alert-padding-y:                   1rem !default; // Boosted mod
 $alert-padding-x:                   1.25rem !default;
-$alert-padding-y-sm:                .3125rem !default;
+$alert-padding-y-sm:                .375rem !default; // Boosted mod
 $alert-padding-x-sm:                $alert-padding-x !default;
 $alert-padding-y-lg:                1rem !default;
 $alert-padding-x-lg:                $alert-padding-x !default;
@@ -1202,7 +1200,9 @@ $spinner-border-width-sm: .2em !default;
 $close-font-size:                   $font-size-base * 1.5 !default;
 $close-font-weight:                 $font-weight-bold !default;
 $close-color:                       $black !default;
-$close-text-shadow:                 0 1px 0 $white !default;
+$close-text-shadow:                 null !default; // Boosted mod
+$close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M817.493,676.165a49.977,49.977,0,0,1,0,70.664l-70.664,70.664a49.977,49.977,0,0,1-70.664,0L499.5,640.828,322.835,817.493a49.977,49.977,0,0,1-70.664,0l-70.664-70.664a49.977,49.977,0,0,1,0-70.664L358.172,499.5,181.507,322.835a49.977,49.977,0,0,1,0-70.664l70.664-70.664a49.977,49.977,0,0,1,70.664,0L499.5,358.172,676.165,181.507a49.977,49.977,0,0,1,70.664,0l70.664,70.664a49.977,49.977,0,0,1,0,70.664L640.828,499.5Z'/></svg>") !default; // Boosted mod
+$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M817.493,676.165a49.977,49.977,0,0,1,0,70.664l-70.664,70.664a49.977,49.977,0,0,1-70.664,0L499.5,640.828,322.835,817.493a49.977,49.977,0,0,1-70.664,0l-70.664-70.664a49.977,49.977,0,0,1,0-70.664L358.172,499.5,181.507,322.835a49.977,49.977,0,0,1,0-70.664l70.664-70.664a49.977,49.977,0,0,1,70.664,0L499.5,358.172,676.165,181.507a49.977,49.977,0,0,1,70.664,0l70.664,70.664a49.977,49.977,0,0,1,0,70.664L640.828,499.5Z' fill='#{$white}'/></svg>") !default; // Boosted mod
 
 
 // Code
