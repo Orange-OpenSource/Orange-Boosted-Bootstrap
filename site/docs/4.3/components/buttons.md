@@ -61,29 +61,58 @@ The default styles can be used on secondary colors backgrounds, in this case rem
 
 ## Social buttons
 
-In need of a social media button? Some helper classes are designed to be used with the `.btn` element.
-`.btn-fbk`, `.btn-tw`, `.btn-gplus`, `.btn-lin`, `.btn-mail` are available for light and dark background.
+In need of a social media button? Some helper classes are designed to be used along with the `.btn` element, starting with the `.btn-social` variant.
+Here are available social media buttons:
+* `.btn-facebook`,
+* `.btn-twitter`,
+* `.btn-google`,
+* `.btn-linkedin`,
+* `.btn-instagram`,
+* `.btn-whatsapp`,
+* `.btn-youtube`,
+* `.btn-mail` .
+
+### Light background
 
 {% capture example %}
 <div class="p-3">
-    <a class="btn btn-fbk btn-social" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-tw btn-social" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-gplus btn-social" href="#" aria-label="Google Plus"></a>
-    <a class="btn btn-lin btn-social" href="#" aria-label="Linkedin"></a>  
-    <a class="btn btn-mail btn-social" href="#" aria-label="Mail"></a>
+    <a class="btn btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-social btn-twitter" href="#" aria-label="Twitter"></a> 
+    <a class="btn btn-social btn-google" href="#" aria-label="Google Plus"></a>
+    <a class="btn btn-social btn-linkedin" href="#" aria-label="Linkedin"></a>
+    <a class="btn btn-social btn-instagram" href="#" aria-label="Instagram"></a>
+    <a class="btn btn-social btn-whatsapp" href="#" aria-label="Whatsapp"></a>
+    <a class="btn btn-social btn-youtube" href="#" aria-label="YouTube"></a> 
+    <a class="btn btn-social btn-mail" href="#" aria-label="Mail"></a>
+</div> 
+{% endcapture %}
+{% include example.html content=example %}
+
+### Dark background
+
+{% capture example %}
+<div class="bg-dark p-3">
+    <a class="btn btn-inverse btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-inverse btn-social btn-twitter" href="#" aria-label="Twitter"></a> 
+    <a class="btn btn-inverse btn-social btn-google" href="#" aria-label="Google Plus"></a>
+    <a class="btn btn-inverse btn-social btn-linkedin" href="#" aria-label="Linkedin"></a>
+    <a class="btn btn-inverse btn-social btn-instagram" href="#" aria-label="Instagram"></a>
+    <a class="btn btn-inverse btn-social btn-whatsapp" href="#" aria-label="Whatsapp"></a>
+    <a class="btn btn-inverse btn-social btn-youtube" href="#" aria-label="YouTube"></a>   
+    <a class="btn btn-inverse btn-social btn-mail" href="#" aria-label="Mail"></a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
+### Sizes variant
 
 {% capture example %}
-<div class="bg-dark p-3">
-    <a class="btn btn-fbk-inverse btn-social" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-tw-inverse btn-social" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-gplus-inverse btn-social" href="#" aria-label="Google Plus"></a>
-    <a class="btn btn-lin-inverse btn-social" href="#" aria-label="Linkedin"></a>  
-    <a class="btn btn-mail-inverse btn-social" href="#" aria-label="Mail"></a>
-</div>
+<div class="p-3">
+    <a class="btn btn-sm btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-lg btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-xlg btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+</div> 
 {% endcapture %}
 {% include example.html content=example %}
 [comment]: # end mod
