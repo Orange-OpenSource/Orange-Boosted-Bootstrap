@@ -65,7 +65,6 @@ In need of a social media button? Some helper classes are designed to be used al
 Here are available social media buttons:
 * `.btn-facebook`,
 * `.btn-twitter`,
-* `.btn-google`,
 * `.btn-linkedin`,
 * `.btn-instagram`,
 * `.btn-whatsapp`,
@@ -78,7 +77,6 @@ Here are available social media buttons:
 <div class="p-3">
     <a class="btn btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
     <a class="btn btn-social btn-twitter" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-social btn-google" href="#" aria-label="Google Plus"></a>
     <a class="btn btn-social btn-linkedin" href="#" aria-label="Linkedin"></a>
     <a class="btn btn-social btn-instagram" href="#" aria-label="Instagram"></a>
     <a class="btn btn-social btn-whatsapp" href="#" aria-label="Whatsapp"></a>
@@ -94,7 +92,6 @@ Here are available social media buttons:
 <div class="bg-dark p-3">
     <a class="btn btn-inverse btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
     <a class="btn btn-inverse btn-social btn-twitter" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-inverse btn-social btn-google" href="#" aria-label="Google Plus"></a>
     <a class="btn btn-inverse btn-social btn-linkedin" href="#" aria-label="Linkedin"></a>
     <a class="btn btn-inverse btn-social btn-instagram" href="#" aria-label="Instagram"></a>
     <a class="btn btn-inverse btn-social btn-whatsapp" href="#" aria-label="Whatsapp"></a>
