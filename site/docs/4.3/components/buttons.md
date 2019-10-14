@@ -105,10 +105,10 @@ Here are available social media buttons:
 
 {% capture example %}
 <div class="p-3">
-    <a class="btn btn-sm btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-lg btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-xlg btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
+    <a class="btn btn-sm btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
+    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
+    <a class="btn btn-lg btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
+    <a class="btn btn-xlg btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
 </div> 
 {% endcapture %}
 {% include example.html content=example %}
