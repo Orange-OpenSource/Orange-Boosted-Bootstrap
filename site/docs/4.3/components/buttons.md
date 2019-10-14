@@ -75,13 +75,13 @@ Here are available social media buttons:
 
 {% capture example %}
 <div class="p-3">
-    <a class="btn btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-social btn-twitter" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-social btn-linkedin" href="#" aria-label="Linkedin"></a>
-    <a class="btn btn-social btn-instagram" href="#" aria-label="Instagram"></a>
-    <a class="btn btn-social btn-whatsapp" href="#" aria-label="Whatsapp"></a>
-    <a class="btn btn-social btn-youtube" href="#" aria-label="YouTube"></a> 
-    <a class="btn btn-social btn-mail" href="#" aria-label="Mail"></a>
+    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
+    <a class="btn btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
+    <a class="btn btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>
+    <a class="btn btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
+    <a class="btn btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a>
+    <a class="btn btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
 </div> 
 {% endcapture %}
 {% include example.html content=example %}
@@ -90,13 +90,13 @@ Here are available social media buttons:
 
 {% capture example %}
 <div class="bg-dark p-3">
-    <a class="btn btn-inverse btn-social btn-facebook" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-inverse btn-social btn-twitter" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-inverse btn-social btn-linkedin" href="#" aria-label="Linkedin"></a>
-    <a class="btn btn-inverse btn-social btn-instagram" href="#" aria-label="Instagram"></a>
-    <a class="btn btn-inverse btn-social btn-whatsapp" href="#" aria-label="Whatsapp"></a>
-    <a class="btn btn-inverse btn-social btn-youtube" href="#" aria-label="YouTube"></a>   
-    <a class="btn btn-inverse btn-social btn-mail" href="#" aria-label="Mail"></a>
+    <a class="btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
+    <a class="btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
+    <a class="btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>
+    <a class="btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
+    <a class="btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a>
+    <a class="btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
