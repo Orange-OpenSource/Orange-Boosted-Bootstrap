@@ -3,50 +3,51 @@
 //
 
 .o-footer {
-  margin-top: 2.5rem;
+  margin-top: map-get($spacers, 4);
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
-  color: #fff;
-  background-color: #000;
+  color: $white;
+  background-color: $black;
 
   .nav-link {
-    padding: $nav-link-padding-y ($nav-link-padding-x * .5);
     font-size: $font-size-sm;
-    line-height: 1.25rem;
 
     &:not(:hover),
-    &:not([href]) {
-      color: #fff;
+    &:not([href]),
+    &:not([href]):hover {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $orange-2;
     }
   }
 
   .o-footer-top,
   .o-footer-body,
   .o-footer-bottom {
-    padding-top: .625rem;
-    padding-bottom: .625rem;
+    padding-top: map-get($spacers, 2);
+    padding-bottom: map-get($spacers, 2);
   }
 
   .o-footer-top {
-    border-bottom: 1px solid $gray-900;
+    border-bottom: $border-width / 2 solid $gray-900;
   }
 
   .o-footer-body {
     .row {
-      margin-bottom: .625rem;
+      margin-bottom: map-get($spacers, 2);
     }
 
     h2 {
-      margin-top: .625rem;
+      margin-top: map-get($spacers, 2);
       font-size: $font-size-sm;
-      color: #fff;
     }
 
-    p {
-      &,
-      a {
-        color: #fff;
-      }
+    p,
+    p a {
+      color: $white;
     }
 
     .flex-column .nav-link {
@@ -56,6 +57,6 @@
   }
 
   .o-footer-bottom {
-    border-top: 1px solid $gray-900;
+    border-top: $border-width / 2 solid $gray-900;
   }
 }
