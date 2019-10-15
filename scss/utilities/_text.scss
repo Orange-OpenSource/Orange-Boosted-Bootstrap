@@ -48,6 +48,12 @@
   @include text-emphasis-variant(".text-#{$color}", $value, true);
 }
 
+// Boosted mod
+.bg-dark {
+  @include text-emphasis-variant(".text-primary", $orange-2, true);
+}
+// end mod
+
 .text-body { color: $body-color !important; }
 .text-muted { color: $text-muted !important; }
 
