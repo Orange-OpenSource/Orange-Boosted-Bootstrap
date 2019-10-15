@@ -65,8 +65,8 @@
 // Color contrast
 // Boosted mod to apply WCAG contrast algo
 @function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
-  @if ($color == #F16E00) {
-    @return #fff;
+  @if ($color == $primary) {
+    @return $light;
   }
   $r: red($color);
   $g: green($color);
