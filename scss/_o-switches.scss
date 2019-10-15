@@ -76,6 +76,10 @@
     }
   }
 
+  .js-focus-visible &:focus:not(.focus-visible) + .toggle::before {
+    outline: 0;
+  }
+
   &:checked {
     + .toggle {
       background: theme-color("primary");

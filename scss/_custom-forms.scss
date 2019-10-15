@@ -42,13 +42,19 @@
 
   &:focus ~ .custom-control-label::before {
     // the mixin is not used here to make sure there is feedback
-    outline: $border-width solid $black; // Boosted mod no box-shadow, replaced by outline
+    outline: $border-width solid $black; // Boosted mod: no box-shadow, replaced by outline
     @if $enable-shadows {
       box-shadow: $input-box-shadow, $input-focus-box-shadow;
     } @else {
       box-shadow: $custom-control-indicator-focus-box-shadow;
     }
   }
+
+  // Boosted mod
+  .js-focus-visible &:focus:not(.focus-visible) ~ .custom-control-label::before {
+    outline: 0;
+  }
+  // end mod
 
   //  &:focus:not(:checked) ~ .custom-control-label::before {
   //    border-color: $custom-control-indicator-focus-border-color;
@@ -164,6 +170,10 @@
   .custom-control-input:checked:focus ~ .custom-control-label::before {
     outline-color: $black; // Boosted mod no box-shadow, replaced by outline
   }
+
+  .js-focus-visible .custom-control-input:checked:focus:not(.focus-visible) ~ .custom-control-label::before {
+    outline: 0;
+  }
   //end mod
 
   .custom-control-input:indeterminate ~ .custom-control-label {
@@ -246,6 +256,10 @@
       ~ .custom-control-label::after {
         outline: $border-width solid $white;
       }
+    }
+
+    .js-focus-visible &:focus:not(.focus-visible) ~ .custom-control-label::after {
+      outline: 0;
     }
   }
   // end mod
