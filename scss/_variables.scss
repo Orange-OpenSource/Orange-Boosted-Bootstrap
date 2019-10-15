@@ -12,7 +12,7 @@ $gray-300: #eee !default; // gray-lighter
 $gray-400: #ddd !default; // gray-lighter-o
 $gray-500: #ccc !default; // gray-light-o
 $gray-600: #999 !default; // gray-light
-$gray-700: #666 !default; // gray
+$gray-700: #666 !default;     // gray
 $gray-800: #595959 !default; // gray-obs
 $gray-900: #333 !default; // gray-dark
 $black:    #000 !default;
@@ -35,28 +35,31 @@ $grays: map-merge(
 );
 
 
-$blue:    #527edb !default; // Boosted Functionnal
-$indigo:  #6610f2 !default;
-$purple:  #a885d8 !default; // Boosted illustration color
-$pink:    #ffb4e6 !default; // Boosted illustration color
-$red:     #cd3c14 !default; // Boosted Functionnal
-$orange:  #f16e00 !default; // Boosted
-$yellow:  #fc0 !default; // Boosted Functionnal
-$green:   #32c832 !default; // Boosted Functionnal
-$teal:    #50be87 !default; // Boosted illustration color
-$cyan:    #4bb4e6 !default; // Boosted illustration color
+$blue:     #527edb !default; // Boosted functional
+//$indigo: #6610f2 !default; // Boosted mod
+$purple:   #a885d8 !default; // Boosted supporting color
+$pink:     #ffb4e6 !default; // Boosted supporting color
+$red:      #cd3c14 !default; // Boosted functional
+$orange:   #f16e00 !default; // Boosted: to use on white (digital Orange 2)
+$yellow:   #fc0 !default;    // Boosted functional
+$green:    #32c832 !default; // Boosted functional
+$teal:     #50be87 !default; // Boosted supporting color
+$cyan:     #4bb4e6 !default; // Boosted supporting color
+$yellow-2: #ffd200 !default; // Boosted supporting color
+$orange-2: #ff7900 !default; // Boosted: to use on black (digital Orange 1)
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
     "blue":       $blue,
-    "indigo":     $indigo,
+    // "indigo":     $indigo, // Boosted mod
     "purple":     $purple,
     "pink":       $pink,
     "red":        $red,
     "orange":     $orange,
-    "yellow":     $yellow,
+    "orange-2":   $orange-2, // Boosted mod
+    "yellow":     $yellow-2,
     "green":      $green,
     "teal":       $teal,
     "cyan":       $cyan,
@@ -806,7 +809,7 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-icon-size:          1.25rem !default;
 
 $navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           theme-color("primary") !default;
+$navbar-dark-hover-color:           $orange-2 !default; // Boosted mod
 $navbar-dark-active-color:          $navbar-dark-hover-color !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
