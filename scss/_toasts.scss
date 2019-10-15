@@ -37,6 +37,12 @@
   background-color: $toast-header-background-color;
   background-clip: padding-box;
   border-bottom: $toast-border-width solid $toast-header-border-color;
+
+  // Boosted mod
+  .bg-dark & .close {
+    background-image: escape-svg($close-icon);
+  }
+  // end mod
 }
 
 .toast-body {

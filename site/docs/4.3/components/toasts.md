@@ -33,9 +33,11 @@ Toasts are as flexible as you need and have very little required markup. At a mi
     {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
     <strong class="mr-auto">Boosted</strong>
     <small>11 mins ago</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
+    <!-- Boosted mod -->
+    <button type="button" class="ml-2 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
     </button>
+    <!-- end mod -->
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -54,9 +56,11 @@ Toasts are slightly translucent, too, so they blend over whatever they might app
     {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted">11 mins ago</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
+    <!-- Boosted mod -->
+    <button type="button" class="ml-2 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
     </button>
+    <!-- end mod -->
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
@@ -75,9 +79,11 @@ When you have multiple toasts, we default to vertically stacking them in a reada
     {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted">just now</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
+    <!-- Boosted mod -->
+    <button type="button" class="ml-2 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
     </button>
+    <!-- end mod -->
   </div>
   <div class="toast-body">
     See? Just like this.
@@ -89,9 +95,11 @@ When you have multiple toasts, we default to vertically stacking them in a reada
     {% include icons/placeholder.svg width="20" height="20" background="#007aff" class="rounded mr-2" text=" " title=" " %}
     <strong class="mr-auto">Bootstrap</strong>
     <small class="text-muted">2 seconds ago</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
+    <!-- Boosted mod -->
+    <button type="button" class="ml-2 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
     </button>
+    <!-- end mod -->
   </div>
   <div class="toast-body">
     Heads up, toasts will stack automatically
@@ -111,9 +119,11 @@ Place toasts with custom CSS as you need them. The top right is often used for n
       {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
       <strong class="mr-auto">Boosted</strong>
       <small>11 mins ago</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+      <!-- Boosted mod -->
+      <button type="button" class="ml-2 close" data-dismiss="toast">
+          <span class="sr-only">Close</span>
       </button>
+      <!-- end mod -->
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -136,9 +146,11 @@ For systems that generate more notifications, consider using a wrapping element 
         {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
         <strong class="mr-auto">Boosted</strong>
         <small class="text-muted">just now</small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <!-- Boosted mod -->
+        <button type="button" class="ml-2 close" data-dismiss="toast">
+            <span class="sr-only">Close</span>
         </button>
+        <!-- end mod -->
       </div>
       <div class="toast-body">
         See? Just like this.
@@ -150,9 +162,11 @@ For systems that generate more notifications, consider using a wrapping element 
         {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
         <strong class="mr-auto">Boosted</strong>
         <small class="text-muted">2 seconds ago</small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <!-- Boosted mod -->
+        <button type="button" class="ml-2 close" data-dismiss="toast">
+            <span class="sr-only">Close</span>
         </button>
+        <!-- end mod -->
       </div>
       <div class="toast-body">
         Heads up, toasts will stack automatically
@@ -175,9 +189,11 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
       {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
       <strong class="mr-auto">Boosted</strong>
       <small>11 mins ago</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+      <!-- Boosted mod -->
+      <button type="button" class="ml-2 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
       </button>
+      <!-- end mod -->
     </div>
     <div class="toast-body">
       Hello, world! This is a toast message.
@@ -211,9 +227,11 @@ When using `autohide: false`, you must add a close button to allow users to dism
     {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
     <strong class="mr-auto">Boosted</strong>
     <small>11 mins ago</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
+    <!-- Boosted mod -->
+    <button type="button" class="ml-2 close" data-dismiss="toast">
+        <span class="sr-only">Close</span>
     </button>
+    <!-- end mod -->
   </div>
   <div class="toast-body">
     Hello, world! This is a toast message.
