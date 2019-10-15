@@ -90,7 +90,9 @@
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
     // Boosted mod adapt color with background, and keep initial brand color value for background
-    @if ($color == "secondary" or $color == "danger" or $color == "dark") {
+    @if ($color == "primary") {
+      @include alert-variant($orange-2, $orange-2, $black);
+    } @else if ($color == "secondary" or $color == "danger" or $color == "dark") {
       @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), $white);
     } @else {
       @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), $black);
