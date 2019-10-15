@@ -14,12 +14,33 @@
   background-color: $progress-bg;
   @include border-radius($progress-border-radius);
   @include box-shadow($progress-box-shadow);
+
+  // Boosted mod: using supporting colours for data display
+  // stylelint-disable declaration-no-important
+  .bg-success {
+    background-color: $teal !important;
+  }
+
+  .bg-info {
+    background-color: $cyan !important;
+  }
+
+  .bg-warning {
+    background-color: $yellow-2 !important;
+  }
+
+  .bg-danger {
+    background-color: $purple !important;
+  }
+  // stylelint-enable declaration-no-important
+  // end mod
 }
 
 .progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-weight: $font-weight-bold; // Boosted mod
   color: $progress-bar-color;
   text-align: center;
   white-space: nowrap;

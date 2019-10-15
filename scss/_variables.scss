@@ -1087,13 +1087,13 @@ $alert-border-level:                0 !default;
 
 // Progress bars
 
-$progress-height:                   $spacer !default;
+$progress-height:                   map-get($spacers, 4) !default; // Boosted mod
 $progress-font-size:                $font-size-base !default;
-$progress-bg:                       $gray-500 !default;
+$progress-bg:                       $gray-300 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-box-shadow:               null !default;
 $progress-bar-color:                $black !default;
-$progress-bar-bg:                   theme-color("primary") !default;
+$progress-bar-bg:                   $orange-2 !default; // Boosted mod
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 
