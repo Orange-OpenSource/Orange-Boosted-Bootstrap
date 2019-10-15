@@ -4,8 +4,8 @@
 
 .o-nav-local {
   margin-bottom: ($spacer * 2);
-  border-top: 1px solid $gray-500;
-  border-bottom: 1px solid $gray-500;
+  border-top: $border-width / 2 solid $gray-500;
+  border-bottom: $border-width / 2 solid $gray-500;
 
   > .container,
   > .container-fluid {
@@ -43,7 +43,7 @@
   }
 
   .dropdown-toggle.show {
-    color: #000;
+    color: $black;
   }
 
   .dropdown-menu {
@@ -75,13 +75,10 @@
     color: $white;
     background-color: $black;
     @include hover-focus() {
-      color: theme-color("primary");
-    }
-    &:focus {
-      outline-color: $white;
+      color: $orange-2;
     }
     &.active {
-      color: theme-color("primary");
+      color: $orange-2;
     }
   }
 }
