@@ -6,7 +6,7 @@
   $contrast: color-yiq($color); // Boosted mod: ensure contrast
   #{$parent} {
     color: $color !important;
-    background-color: $contrast !important; // Boosted mod: ensure contrast
+    background-color: $contrast; // Boosted mod: ensure contrast
   }
   @if $emphasized-link-hover-darken-percentage != 0 {
     a#{$parent} {

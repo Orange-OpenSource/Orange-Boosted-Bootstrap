@@ -5,7 +5,7 @@
 @mixin bg-variant($parent, $color, $ignore-warning: false) {
   $contrast: color-yiq($color); // Boosted mod: ensure contrast
   #{$parent} {
-    color: $contrast !important; // Boosted mod: ensure contrast
+    color: $contrast; // Boosted mod: ensure contrast
     background-color: $color !important;
   }
   a#{$parent},
