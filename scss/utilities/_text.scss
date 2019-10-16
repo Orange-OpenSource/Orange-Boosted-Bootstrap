@@ -49,7 +49,8 @@
 }
 
 // Boosted mod
-.bg-dark {
+.bg-dark,
+.table-dark {
   @include text-emphasis-variant(".text-primary", $orange-2, true);
 }
 // end mod
