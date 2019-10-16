@@ -351,3 +351,17 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
 .o-switch.btn-group-toggle .doc-label {
   min-width: 6.25rem;
 }
+
+.table-contrast td,
+.table-contrast tbody th {
+  font-weight: 700;
+}
+
+.table-contrast .aa-large-text,
+.table-contrast .aa-large-text * {
+  font-size: 1.25rem;
+}
+
+.table-contrast thead th {
+  font-size: 1.5rem;
+}

@@ -62,7 +62,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
 <div class="container">
     <div class="row">
         <div class="col-lg">
-            <table class="table">
+            <table class="table table-contrast">
                 <caption class="sr-only">Core colors contrasts</caption>
                 <thead>
                     <tr>
@@ -74,31 +74,31 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                 <tbody>
                     <tr class="table-dark">
                         <th scope="row" rowspan="3">#000</th>
-                        <td>#ff7900</td>
-                        <td>AAA</td>
+                        <td class="text-primary">#ff7900</td>
+                        <td class="text-primary">AAA</td>
                     </tr>
                     <tr class="table-dark">
                         <td class="pl-0">#fff</td>
                         <td>AAA</td>
                     </tr>
-                    <tr class="table-dark">
+                    <tr class="table-dark" style="color: #999">
                         <td class="pl-0">#999</td>
                         <td>AAA</td>
                     </tr>
-                    <tr>
+                    <tr class="aa-large-text">
                         <th scope="row" rowspan="3">#fff</th>
-                        <td>#f16e00</td>
-                        <td>AA Large text</td>
+                        <td class="text-primary">#f16e00</td>
+                        <td class="text-primary">AA Large text</td>
                     </tr>
                     <tr>
                         <td class="pl-0">#000</td>
                         <td>AAA</td>
                     </tr>
-                    <tr>
+                    <tr style="color: #666">
                         <td class="pl-0 align-top">#666</td>
                         <td>
                             AA<br>
-                            AAA Large text
+                            <span class="aa-large-text">AAA Large text</span>
                         </td>
                     </tr>
                     <tr style="background-color:#ff7900">
@@ -106,7 +106,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                         <td>#000</td>
                         <td>AAA</td>
                     </tr>
-                    <tr class="table-primary">
+                    <tr class="table-primary aa-large-text">
                         <th scope="row">#f16e00</th>
                         <td>#fff</td>
                         <td>AA Large text</td>
@@ -118,7 +118,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                     </tr>
                 </tbody>
             </table>
-            <table class="table">
+            <table class="table table-contrast">
                 <caption class="sr-only">Functional greys contrasts</caption>
                 <thead>
                     <tr>
@@ -138,7 +138,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                         <td class="align-top">#fff</td>
                         <td>
                             AA<br>
-                            AAA Large text
+                            <span class="aa-large-text">AAA Large text</span>
                          </td>
                     </tr>
                     <tr style="background-color:#999">
@@ -165,7 +165,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
             </table>
         </div>
         <div class="col-lg">
-            <table class="table">
+            <table class="table table-contrast">
                 <caption class="sr-only">Supporting colors contrasts</caption>
                 <thead>
                     <tr>
@@ -202,7 +202,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                    </tr>
                 </tbody>
             </table>
-            <table class="table">
+            <table class="table table-contrast">
                 <caption class="sr-only">Functional colors contrasts</caption>
                 <thead>
                     <tr>
@@ -222,10 +222,10 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                        <td class="align-top">#000</td>
                        <td>
                             AA<br>
-                            AAA Large text
+                            <span class="aa-large-text">AAA Large text</span>
                         </td>
                    </tr>
-                   <tr class="table-info" style="color: #fff">
+                   <tr class="table-info aa-large-text" style="color: #fff">
                        <td class="pl-0">#fff</td>
                        <td>AA Large text</td>
                    </tr>
@@ -236,14 +236,14 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                    </tr>
                    <tr class="table-danger">
                        <th scope="row" rowspan="2">#cd3c14</th>
-                       <td class="text-dark">#000</td>
-                       <td class="text-dark">AA Large text</td>
+                       <td class="aa-large-text text-dark">#000</td>
+                       <td class="aa-large-text text-dark">AA Large text</td>
                    </tr>
                    <tr class="table-danger">
                         <td class="pl-0 align-top">#fff</td>
                         <td>
                             AA<br>
-                            AAA Large text
+                            <span class="aa-large-text">AAA Large text</span>
                         </td>
                    </tr>
                 </tbody>
