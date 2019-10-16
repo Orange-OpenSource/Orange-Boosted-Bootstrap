@@ -25,7 +25,7 @@ toc: true
 Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` and `.text-muted` class has no additional link styling beyond underline.**
 
 [comment]: # Boosted mod
-Boosted also handle color variation on hover (lighten or darken) depending on contrast ratio.
+Boosted also handle color variation on hover (lighten or darken) **depending on contrast ratio**.
 
 {% capture example %}
 <!-- Boosted mod -->
@@ -56,18 +56,18 @@ Similar to the contextual text color classes, easily set the background of an el
 [comment]: # Boosted mod
 ## Ensuring contrasts
 
-Each of the text colours shown are combined with background colours from the Orange digital palette in order to meet WCAG accessibility standards for colour contrast.
+Each of the text colors shown are combined with background colors from the Orange digital palette in order to meet WCAG accessibility standards for color contrast.
 You should refer to those tables when using `.text-*` and `.bg-*` utilities to ensure sufficient contrasts.
 
 <div class="container">
     <div class="row">
         <div class="col-lg">
             <table class="table">
-                <caption class="sr-only">Core colours contrasts</caption>
+                <caption class="sr-only">Core colors contrasts</caption>
                 <thead>
                     <tr>
-                        <th scope="col">Core colours</th>
-                        <th scope="col">Text colour</th>
+                        <th scope="col">Core colors</th>
+                        <th scope="col">Text color</th>
                         <th scope="col">Pass level</th>
                     </tr>
                 </thead>
@@ -123,7 +123,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                 <thead>
                     <tr>
                         <th scope="col">Functional greys</th>
-                        <th scope="col">Text colour</th>
+                        <th scope="col">Text color</th>
                         <th scope="col">Pass level</th>
                     </tr>
                 </thead>
@@ -166,11 +166,11 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
         </div>
         <div class="col-lg">
             <table class="table">
-                <caption class="sr-only">Supporting colours contrasts</caption>
+                <caption class="sr-only">Supporting colors contrasts</caption>
                 <thead>
                     <tr>
-                        <th scope="col">Supporting colours</th>
-                        <th scope="col">Text colour</th>
+                        <th scope="col">Supporting colors</th>
+                        <th scope="col">Text color</th>
                         <th scope="col">Pass level</th>
                     </tr>
                 </thead>
@@ -203,11 +203,11 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                 </tbody>
             </table>
             <table class="table">
-                <caption class="sr-only">Functional colours contrasts</caption>
+                <caption class="sr-only">Functional colors contrasts</caption>
                 <thead>
                     <tr>
-                        <th scope="col">Functional colours</th>
-                        <th scope="col">Text colour</th>
+                        <th scope="col">Functional colors</th>
+                        <th scope="col">Text color</th>
                         <th scope="col">Pass level</th>
                     </tr>
                 </thead>
