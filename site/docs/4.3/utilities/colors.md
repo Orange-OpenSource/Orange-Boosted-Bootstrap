@@ -9,7 +9,7 @@ toc: true
 ## Color
 
 [comment]: # Boosted mod
-`.text-*` utilities are meant to modify text color, but also **set a `brackground-color` to ensure contrasts**. You may want to use `.bg-*` utilities to change  `background-color`. 
+`.text-*` utilities are meant to modify text color, but also **set a `background-color` to ensure contrasts**. You may want to use `.bg-*` utilities to change  `background-color`. 
 
 {% capture example %}
 <!-- Boosted mod -->
