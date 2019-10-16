@@ -236,8 +236,8 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                    </tr>
                    <tr class="table-danger">
                        <th scope="row" rowspan="2">#cd3c14</th>
-                       <td style="color: #000">#000</td>
-                       <td style="color: #000">AA Large text</td>
+                       <td class="text-dark">#000</td>
+                       <td class="text-dark">AA Large text</td>
                    </tr>
                    <tr class="table-danger">
                         <td class="pl-0 align-top">#fff</td>
