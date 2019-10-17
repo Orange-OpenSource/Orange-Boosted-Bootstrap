@@ -14,20 +14,25 @@
 // Orange Company had buy the right for used Helvetica onto digital applications.
 // Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc
 
+// Use local() Helvetica Neue when possible:
+// @see https://www.broken-links.com/2009/06/30/checking-for-installed-fonts-with-font-face-and-local/
+// @see https://www.adobe.com/content/dam/acom/en/devnet/font/pdfs/5090.FontNameList.pdf
 
 @import "functions";
 @import "variables";
+
 @font-face {
   font-family: HelvNeueOrange;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
+  src: local("Helvetica 55 Roman"), local("HelveticaNeue-Roman"), url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
 }
+
 @font-face {
   font-family: HelvNeueOrange;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
+  src: local("Helvetica 75 Bold"), local("HelveticaNeue-Bold"), url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
 }
