@@ -152,18 +152,22 @@
 #color-schemes,
 #placement,
 #collapsible-content,
-#sizing {
-  &::before {
+#sizing,
+#text-alignment {
+  display: flex;
+
+  &::after {
     @include sr-only();
     content: "warning, not brand compliant";
   }
 
-  &::after {
-    padding-left: .375rem;
-    font-family: icon-orange, sans-serif !important; // stylelint-disable-line declaration-no-important
-    font-size: inherit;
+  &::before {
+    display: inline-block;
+    height: auto;
+    padding-right: .375rem;
+    margin: 0;
+    font-family: icon-orange, sans-serif;
     color: theme-color("danger");
-    vertical-align: bottom;
     content: "\e936";
   }
 }
