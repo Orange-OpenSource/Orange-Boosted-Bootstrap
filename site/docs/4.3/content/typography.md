@@ -75,7 +75,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <!-- Boosted mod -->
       <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
       <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
-      <td>Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td rowspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
       <td>1.083 <small class="text-muted">(26px)</small></td>
       <td>-0.0375rem <small class="text-muted">(-0.6px)</small></td>
       <!-- end mod -->
@@ -87,7 +87,6 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <!-- Boosted mod -->
       <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
       <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
-      <td>Bold 1rem <small class="text-muted">(16px)</small></td>
       <td>1.1 <small class="text-muted">(22px)</small></td>
       <td>-0.025rem <small class="text-muted">(-0.4px)</small></td>
       <!-- end mod -->
