@@ -153,13 +153,9 @@
 #placement,
 #collapsible-content,
 #sizing,
-#text-alignment {
+#text-alignment,
+#responsive-font-sizes {
   display: flex;
-
-  &::after {
-    @include sr-only();
-    content: "warning, not brand compliant";
-  }
 
   &::before {
     display: inline-block;

@@ -7,58 +7,165 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: $headings-margin-bottom;
+  @include font-size($font-size-base); // Boosted mod
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
   color: $headings-color;
+  letter-spacing: $letter-spacing-base; // Boosted mod
 }
 
-h1, .h1 { @include font-size($h1-font-size); }
-h2, .h2 { @include font-size($h2-font-size); }
-h3, .h3 { @include font-size($h3-font-size); }
-h4, .h4 { @include font-size($h4-font-size); }
-h5, .h5 { @include font-size($h5-font-size); }
-h6, .h6 { @include font-size($h6-font-size); }
-
-// Boosted mod
-// reduce the size of titles for mobile display
-@include media-breakpoint-down(sm) {
-  h1, .h1 { @include font-size($h1-font-size-mobile); }
-  h2, .h2 { @include font-size($h2-font-size-mobile); }
-  h3, .h3 { @include font-size($h3-font-size-mobile); }
-  h4, .h4 { @include font-size($h4-font-size-mobile); }
-  h5, .h5 { @include font-size($h5-font-size-mobile); }
-  h6, .h6 { @include font-size($h6-font-size-mobile); }
+// Boosted mod: headings and displays together
+// Add letter-spacing and line-height
+// Reduce heading font-sizes for mobile
+// Mobile first, obviously
+[class*="display-"] {
+  font-weight: $display-weight;
 }
-// end mod
+
+.display-1 {
+  @include font-size($h2-font-size);
+  line-height: $h2-line-height;
+  letter-spacing: $h2-spacing;
+}
+
+.display-2 {
+  @include font-size($h3-font-size);
+  line-height: $h3-line-height;
+  letter-spacing: $h3-spacing;
+}
+
+h1, .h1,
+.display-3 {
+  @include font-size($h4-font-size);
+  line-height: $h4-line-height;
+  letter-spacing: $h4-spacing;
+}
+
+h2, .h2,
+.display-4 {
+  @include font-size($h5-font-size);
+  line-height: $h5-line-height;
+  letter-spacing: $h5-spacing;
+}
 
 .lead {
-  @include font-size($lead-font-size);
+  @include font-size($h6-font-size);
   font-weight: $lead-font-weight;
+  line-height: $h6-line-height;
+  letter-spacing: $h6-spacing;
 }
 
-// Type display classes
-.display-1 {
-  @include font-size($display1-size);
-  font-weight: $display1-weight;
-  line-height: $display-line-height;
-}
-.display-2 {
-  @include font-size($display2-size);
-  font-weight: $display2-weight;
-  line-height: $display-line-height;
-}
-.display-3 {
-  @include font-size($display3-size);
-  font-weight: $display3-weight;
-  line-height: $display-line-height;
-}
-.display-4 {
-  @include font-size($display4-size);
-  font-weight: $display4-weight;
-  line-height: $display-line-height;
+@include media-breakpoint-up(sm) {
+  .display-1 {
+    @include font-size($display2-size);
+    line-height: $display-line-height;
+    letter-spacing: $display2-spacing;
+  }
+
+  .display-2 {
+    @include font-size($display3-size);
+    line-height: $display-line-height;
+    letter-spacing: $display3-spacing;
+  }
+
+  .display-3 {
+    @include font-size($display4-size);
+    line-height: $display-line-height;
+    letter-spacing: $display4-spacing;
+  }
+
+  h1, .h1 {
+    @include font-size($h2-font-size);
+    line-height: $h2-line-height;
+    letter-spacing: $h2-spacing;
+  }
+
+  h2, .h2,
+  .display-4 {
+    @include font-size($h3-font-size);
+    line-height: $h3-line-height;
+    letter-spacing: $h3-spacing;
+  }
+
+  h3, .h3 {
+    @include font-size($h4-font-size);
+    line-height: $h4-line-height;
+    letter-spacing: $h4-spacing;
+  }
+
+  h4, .h4,
+  .lead {
+    @include font-size($h5-font-size);
+    line-height: $h5-line-height;
+    letter-spacing: $h5-spacing;
+  }
 }
 
+@include media-breakpoint-up(lg) {
+  .display-1 {
+    @include font-size($display1-size);
+    letter-spacing: $display1-spacing;
+  }
+
+  .display-2 {
+    @include font-size($display2-size);
+    letter-spacing: $display2-spacing;
+  }
+
+  .display-3 {
+    @include font-size($display3-size);
+    letter-spacing: $display3-spacing;
+  }
+
+  .display-4 {
+    @include font-size($display4-size);
+    letter-spacing: $display4-spacing;
+  }
+
+  h1, .h1 {
+    @include font-size($h1-font-size);
+    line-height: $h1-line-height;
+    letter-spacing: $h1-spacing;
+  }
+
+  h2, .h2 {
+    @include font-size($h2-font-size);
+    line-height: $h2-line-height;
+    letter-spacing: $h2-spacing;
+  }
+
+  h3, .h3 {
+    @include font-size($h3-font-size);
+    line-height: $h3-line-height;
+    letter-spacing: $h3-spacing;
+  }
+
+  h4, .h4 {
+    @include font-size($h4-font-size);
+    line-height: $h4-line-height;
+    letter-spacing: $h4-spacing;
+  }
+
+  h5, .h5 {
+    @include font-size($h5-font-size);
+    line-height: $h5-line-height;
+    letter-spacing: $h5-spacing;
+  }
+
+  h6, .h6 {
+    @include font-size($h6-font-size);
+    line-height: $h6-line-height;
+    letter-spacing: $h6-spacing;
+  }
+
+  .lead {
+    @include font-size($lead-font-size);
+    line-height: $lead-line-height;
+    letter-spacing: $lead-letter-spacing;
+  }
+}
+// end mod
 
 //
 // Horizontal rules

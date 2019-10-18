@@ -28,9 +28,18 @@ All HTML headings, `<h1>` through `<h6>`, are available.
   <!-- Boosted mod -->
   <thead>
     <tr>
-    <th scope="col">Heading</th>
-    <th scope="col">Computer size</th>
-    <th scope="col">Mobile size</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Desktop size</th>
+        <th scope="col">Tablet size</th>
+        <th scope="col">Mobile size</th>
+        <th scope="col">
+            Line height
+            <small class="text-muted">Desktop</small>
+        </th>
+        <th scope="col">
+            Letter spacing
+            <small class="text-muted">Desktop</small>
+        </th>
     </tr>
   </thead>
   <!-- end mod -->    
@@ -40,8 +49,11 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{ "`<h1></h1>`" | markdownify }}
       </td>
       <!-- Boosted mod -->
-      <td>Bold 2.125rem (34px)</td>
-      <td>Bold 1.25rem (20px)</td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>1 <small class="text-muted">(34px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
       <!-- end mod -->
     </tr>
     <tr>
@@ -49,8 +61,11 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{ "`<h2></h2>`" | markdownify }}
       </td>
       <!-- Boosted mod -->
-      <td>Bold 1.875rem (30px)</td>
-      <td>Bold 1.125rem (18px)</td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1.067 <small class="text-muted">(32px)</small></td>
+      <td>-0.05rem <small class="text-muted">(-0.8px)</small></td>
       <!-- end mod -->
     </tr>
     <tr>
@@ -58,8 +73,11 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{ "`<h3></h3>`" | markdownify }}
       </td>
       <!-- Boosted mod -->
-      <td>Bold 1.5rem (24px)</td>
-      <td>Bold 1rem (16px)</td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.083 <small class="text-muted">(26px)</small></td>
+      <td>-0.0375rem <small class="text-muted">(-0.6px)</small></td>
       <!-- end mod -->
     </tr>
     <tr>
@@ -67,8 +85,11 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{ "`<h4></h4>`" | markdownify }}
       </td>
       <!-- Boosted mod -->
-      <td>Bold 1.25rem (20px)</td>
-      <td>Bold .875rem (14px)</td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.1 <small class="text-muted">(22px)</small></td>
+      <td>-0.025rem <small class="text-muted">(-0.4px)</small></td>
       <!-- end mod -->
     </tr>
     <tr>
@@ -76,8 +97,10 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{ "`<h5></h5>`" | markdownify }}
       </td>
       <!-- Boosted mod -->
-      <td>Bold 1.125rem (18px)</td>
-      <td>Bold .875rem (14px)</td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td colspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.111 <small class="text-muted">(20px)</small></td>
+      <td>-0.0125rem <small class="text-muted">(-0.2px)</small></td>
       <!-- end mod -->
     </tr>
     <tr>
@@ -85,8 +108,9 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{ "`<h6></h6>`" | markdownify }}
       </td>
       <!-- Boosted mod -->
-      <td>Bold 1rem (16px)</td>
-      <td>Bold .875rem (14px)</td>        
+      <td colspan="3">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.125 <small class="text-muted">(18px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
       <!-- end mod -->
     </tr>
   </tbody>
@@ -127,8 +151,62 @@ Use the included utility classes to recreate the small secondary heading text fr
 
 ## Display headings
 
-Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default, but it's possible to enable [responsive font sizes](#responsive-font-sizes).
+Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.<!-- Keep in mind these headings are not responsive by default, but it's possible to enable [responsive font sizes](#responsive-font-sizes).-->
 
+[comment]: # Boosted mod
+<table>
+  <thead>
+    <tr>
+    <th scope="col">Display size</th>
+    <th scope="col">Desktop size</th>
+    <th scope="col">Tablet size</th>
+    <th scope="col">Mobile size</th>
+    <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+    </th>
+    <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display 1</td>
+      <td>Bold 3.75rem <small class="text-muted">(60px)</small></td>
+      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>1 <small class="text-muted">(60px)</small></td>
+      <td>-0.15rem <small class="text-muted">(-2.4px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 2</td>
+      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
+      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>1 <small class="text-muted">(50px)</small></td>
+      <td>-0.1rem <small class="text-muted">(-1.6px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 3</td>
+      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>1 <small class="text-muted">(40px)</small></td>
+      <td>-0.075rem <small class="text-muted">(-1.2px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 4</td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1 <small class="text-muted">(34px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
+    </tr>
+  </tbody>
+</table>
+    
 <div class="bd-example bd-example-type">
   <table class="table">
     <tbody>

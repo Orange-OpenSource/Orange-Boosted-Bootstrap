@@ -313,10 +313,12 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberatio
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
+// Boosted mod
+// Type scale & vertical rhythm completely revamped to match Orange Web Guidelines
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.125 !default; // 18px
-$font-size-xlg:               $font-size-base * 1.25 !default; // 20px
-$font-size-sm:                $font-size-base * .875 !default; // 14px
+$font-size-xlg:               $font-size-base * 1.25 !default;  // 20px
+$font-size-sm:                $font-size-base * .875 !default;  // 14px
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -326,48 +328,63 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.25 !default; // 20px
+$letter-spacing-base:         map-get($spacers, 2) / -100 !default; // -0.1px
 
-$h1-font-size:                $font-size-base * 2.125 !default; // 34px
-$h2-font-size:                $font-size-base * 1.875 !default; // 30px
-$h3-font-size:                $font-size-base * 1.5 !default; // 24px
-$h4-font-size:                $font-size-base * 1.25 !default; // 20px
-$h5-font-size:                $font-size-base * 1.125 !default; // 18px
-$h6-font-size:                $font-size-base !default; // 16px
-
-$h1-font-size-mobile:         $font-size-base * 1.25 !default; // 20px
-$h2-font-size-mobile:         $font-size-base * 1.125 !default; // 18px
-$h3-font-size-mobile:         $font-size-base !default; // 16px
-$h4-font-size-mobile:         $font-size-base * .875 !default; // 14px
-$h5-font-size-mobile:         $font-size-base * .875 !default; // 14px
-$h6-font-size-mobile:         $font-size-base * .875 !default; // 14px
+$h1-font-size:                $font-size-base * 2.125 !default;   // 34px
+$h2-font-size:                $font-size-base * 1.875 !default;   // 30px
+$h3-font-size:                $font-size-base * 1.5 !default;     // 24px
+$h4-font-size:                $font-size-xlg !default;            // 20px
+$h5-font-size:                $font-size-lg !default;             // 18px
+$h6-font-size:                $font-size-base !default;           // 16px
+$h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
+$h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
+$h3-spacing:                  $letter-spacing-base * 6 !default;  // -0.6px
+$h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
+$h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
+$h6-spacing:                  $letter-spacing-base !default;
+$h1-line-height:              1 !default;
+$h2-line-height:              1.067 !default; // calc(32 / 30)
+$h3-line-height:              1.083 !default; // calc(26 / 24)
+$h4-line-height:              1.1 !default;   // calc(22 / 20)
+$h5-line-height:              1.111 !default; // calc(20 / 18)
+$h6-line-height:              1.125 !default; // calc(18 / 16)
 
 $headings-margin-bottom:      $spacer !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        700 !default;
-$headings-line-height:        1.1 !default;
+$headings-line-height:        $h6-line-height !default;
 $headings-color:              null !default;
 
-$display1-size:               3.75rem !default; // 60px
-$display2-size:               3.125rem !default; // 50px
-$display3-size:               2.5rem !default; // 40px
-$display4-size:               2.125rem !default; // 34px
+$display1-size:               $font-size-xlg * 3 !default;   // 60px
+$display2-size:               $font-size-xlg * 2.5 !default; // 50px
+$display3-size:               $font-size-xlg * 2 !default;   // 40px
+$display4-size:               $h1-font-size !default;        // 34px
 
-$display1-weight:             700 !default;
-$display2-weight:             700 !default;
-$display3-weight:             700 !default;
-$display4-weight:             700 !default;
-$display-line-height:         $headings-line-height !default;
+$display1-spacing:            $letter-spacing-base * 24 !default; // -2.4px
+$display2-spacing:            $letter-spacing-base * 16 !default; // -1.6px
+$display3-spacing:            $letter-spacing-base * 12 !default; // -1.2px
+$display4-spacing:            $h1-spacing !default;               // -1px
+// end mod
 
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$display-weight:              700 !default;
+//$display1-weight:             700 !default; // Boosted mod
+//$display2-weight:             700 !default; // Boosted mod
+//$display3-weight:             700 !default; // Boosted mod
+//$display4-weight:             700 !default; // Boosted mod
+$display-line-height:         1 !default;
 
-$small-font-size:             .875rem !default; // 14px
+$lead-font-size:              $font-size-xlg !default; // Boosted mod
+$lead-font-weight:            400 !default; // Boosted mod
+$lead-line-height:            1.5 !default; // calc(30 / 20)
+$lead-letter-spacing:         -.015625rem !default; // Boosted mod
+
+$small-font-size:             $font-size-sm !default; // Boosted mod → 14px
 
 $text-muted:                  $gray-700 !default;
 
 $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
-$blockquote-font-size:        $font-size-base * 1.25 !default;
+$blockquote-font-size:        $font-size-xlg !default; // Boosted mod
 
 $hr-border-color:             $gray-300 !default;
 $hr-border-width:             $border-width / 2 !default;
