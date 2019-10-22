@@ -113,6 +113,10 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 
 All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`.
 
+[comment]: # Boosted mod
+Boosted uses `list-style-type: square` as a default, progressively enhanced with `::marker` to handle color.
+To get this style without depending on `::marker`'s support, you're encouraged to use [Orange square list]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/#orange-square-list) utility class — which relies on `::before` pseudo-element.  
+
 <div class="bd-example">
 {% capture markdown %}
 * Lorem ipsum dolor sit amet
