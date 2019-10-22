@@ -225,9 +225,9 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
                             <span class="aa-large-text">AAA Large text</span>
                         </td>
                    </tr>
-                   <tr class="table-info aa-large-text" style="color: #fff">
-                       <td class="pl-0">#fff</td>
-                       <td>AA Large text</td>
+                   <tr class="table-info aa-large-text">
+                       <td class="pl-0" style="color: #fff">#fff</td>
+                       <td style="color: #fff">AA Large text</td>
                    </tr>
                    <tr class="table-warning">
                        <th scope="row">#fc0</th>
