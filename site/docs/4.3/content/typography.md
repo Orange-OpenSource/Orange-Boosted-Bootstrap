@@ -11,7 +11,7 @@ toc: true
 Boosted sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
 
 [comment]: # Boosted mod
-- Use **Helvetica Neue** webfont, with Helveitca and Arial as preferred fallback.
+- Use **Helvetica Neue** (locally if available, webfont otherwise), with Helvetica and Arial as preferred fallback.
 - Then use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.

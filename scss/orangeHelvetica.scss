@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Helvetica 55 Roman"), local("HelveticaNeue-Roman"), url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
+  src: local("Helvetica 55 Roman"), local("HelveticaNeue"), url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
 }
 
 @font-face {
