@@ -215,9 +215,9 @@ $grid-breakpoints: (
   xs: 0,
   sm: 480px,
   md: 768px,
-  lg: 980px,
-  xl: 1220px,
-  xxl: 1380px
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -796,28 +796,27 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 
 // Navbar
 
-$navbar-padding-y:                  0 !default;
-$navbar-padding-x:                  0 !default;
-$navbar-expanded-padding-y:         1.5625rem !default;
-$navbar-expanded-padding-x:         0 !default;
-$navbar-expanded-minimized-padding-y: 1.25rem !default;
+$navbar-padding-y:                    .875rem !default;
+$navbar-padding-x:                    0 !default; // Boosted mod
+$navbar-expanded-padding-y:           1.5625rem !default;
+$navbar-expanded-padding-x:           0 !default;
+$navbar-expanded-minimized-padding-y: .875rem !default; // Boosted mod 14px
 
 // Boosted mod : adapt navbar padding when mobile view
 // $navbar-height:                     6.25rem !default;
-$navbar-brand-logo-height:          1.875rem !default;
-$navbar-brand-logo-expanded-height: 3.125rem !default;
-$navbar-brand-logo-minimized-height: 2.5rem !default;
-$navbar-supra-height:               2.5rem !default;
+$navbar-brand-logo-height:             1.875rem !default;
+$navbar-brand-logo-expanded-height:    3.125rem !default;
+$navbar-supra-height:                  2.5rem !default;
 // end mod
 
-$navbar-nav-link-padding-x:         0 !default;
+//$navbar-nav-link-padding-x:         0 !default;
 
-$navbar-brand-font-size:            $font-size-sm !default;
+$navbar-brand-font-size:            $font-size-base !default;
 // Boosted mod
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 // $nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
 // $navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$navbar-brand-padding-y:            0 !default;
+// $navbar-brand-padding-y:            0 !default;
 
 $navbar-toggler-padding-y:          .5rem !default;
 $navbar-toggler-padding-x:          .5rem !default;
@@ -834,16 +833,16 @@ $navbar-dark-toggler-icon-hover-bg: url("data:image/svg+xml,<svg xmlns='http://w
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
 $navbar-light-color:                $black !default;
-$navbar-light-hover-color:          $navbar-dark-hover-color !default;
-$navbar-light-active-color:         $navbar-dark-active-color !default;
-$navbar-light-disabled-color:       $navbar-dark-disabled-color !default;
+$navbar-light-hover-color:          $orange !default; // Boosted mod
+$navbar-light-active-color:         $navbar-light-hover-color !default; // Boosted mod
+$navbar-light-disabled-color:       $gray-700 !default; // Boosted mod
 $navbar-light-toggler-icon-bg:      $navbar-dark-toggler-icon-bg !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
-$navbar-light-brand-color:                $navbar-light-color !default;
-$navbar-light-brand-hover-color:          $navbar-light-active-color !default;
-$navbar-dark-brand-color:                 $navbar-dark-color !default;
-$navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
+$navbar-light-brand-color:          $navbar-light-color !default;
+$navbar-light-brand-hover-color:    $navbar-light-active-color !default;
+$navbar-dark-brand-color:           $navbar-dark-color !default;
+$navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 
 // Dropdowns

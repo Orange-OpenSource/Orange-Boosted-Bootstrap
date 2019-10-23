@@ -21,8 +21,12 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x;
+  padding: 0; // Boosted mod
   font-weight: $font-weight-bold; // Boosted mod
+
+  @include media-breakpoint-up(md) {
+    padding: $navbar-padding-y $navbar-padding-x;
+  }
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
@@ -54,16 +58,17 @@
 // Used for brand, project, or site names.
 
 .navbar-brand {
+  position: relative; // Boosted mod
   display: inline-block;
   align-self: flex-end; // Boosted mod
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin: map-get($spacers, 2) map-get($spacers, 4); // Boosted mod
+  padding: 0; // Boosted mod
+  margin: map-get($spacers, 1); // Boosted mod
   @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // Boosted mod
   line-height: inherit;
+  letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
-  outline-offset: map-get($spacers, 4);
+  outline-offset: $spacer; // Boosted mod
   @include transition($transition-focus); // Boosted mod
 
   @include hover-focus() {
@@ -77,14 +82,23 @@
 
   &:focus {
     outline: $border-width solid $white;
-    outline-offset: map-get($spacers, 2);
+    outline-offset: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: $navbar-brand-logo-height / 2;
+    left: $navbar-brand-logo-height / 2;
+    width: $navbar-brand-logo-expanded-height;
+    height: $navbar-brand-logo-expanded-height;
+    content: "";
+    transform: translate3d(-50%, -50%, 0);
   }
 
   img {
     flex-wrap: wrap;
     width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
-    margin-top: 0;
     margin-bottom: .25rem;
   }
   // end mod
@@ -105,23 +119,23 @@
 
   .nav-link {
     // Boosted mod
-    padding: .875rem map-get($spacers, 2);
-    margin-top: 0;
-    text-decoration: none;
-    outline-offset: map-get($spacers, 4);
-    @include transition($transition-focus); // Boosted mod
+    padding: $navbar-padding-y map-get($spacers, 2);
+    outline-offset: $spacer;
+    @include transition($transition-focus);
 
     &.active::before {
       display: none;
     }
 
-    &.icon {
+    &[class*="icon-"] {
       padding: .78125rem map-get($spacers, 2);
       margin-top: 0;
+      font-weight: $font-weight-normal;
     }
 
-    &[class^="svg-"] {
-      margin: map-get($spacers, 2);
+    &[class*="svg-"]::after {
+      width: $navbar-brand-logo-height;
+      height: $navbar-brand-logo-height;
     }
 
     &[role="menuitem"]::before {
@@ -136,7 +150,7 @@
     }
 
     &:focus {
-      outline-offset: map-get($spacers, 2);
+      outline-offset: 0;
     }
     // end mod
   }
@@ -159,7 +173,7 @@
 
     .dropdown-toggle,
     .dropdown-item {
-      padding: .875rem 0 .875rem map-get($spacers, 2);
+      padding: $navbar-padding-y 0 $navbar-padding-y map-get($spacers, 2);
     }
 
     &.show .dropdown-toggle::after {
@@ -227,6 +241,7 @@
     text-decoration: none;
     // Boosted mod
     background-color: $white;
+
     .navbar-toggler-icon {
       background-image: escape-svg($navbar-dark-toggler-icon-hover-bg);
     }
@@ -271,34 +286,16 @@
     $infix: breakpoint-infix($next, $grid-breakpoints);
 
     &#{$infix} {
-      @include media-breakpoint-down($breakpoint) {
-        // Boosted mod
-        // %container-navbar-expand-#{$breakpoint} {
-        //   padding-right: 0;
-        //   padding-left: 0;
-        // }
-
-        // > .container,
-        // > .container-fluid {
-        //   @extend %container-navbar-expand-#{$breakpoint};
-        // }
-
-        // @each $size, $container-max-width in $container-max-widths {
-        //   > .container#{breakpoint-infix($size, $container-max-widths)} {
-        //    @extend %container-navbar-expand-#{$breakpoint};
-        //  }
-        // }
-        // end mod
-      }
+      // Boosted mod: remove padding cancellation
 
       @include media-breakpoint-up($next) {
         flex-flow: row nowrap;
         justify-content: flex-start;
-        padding: $navbar-expanded-padding-y $navbar-expanded-padding-x 1.3125rem; // Boosted mod
+        padding: $navbar-expanded-padding-y $navbar-expanded-padding-x .4375rem; // Boosted mod
 
         // Boosted mod
         .navbar-brand {
-          margin: 0 map-get($spacers, 2) 0 0;
+          margin: 0 $spacer $navbar-padding-y 0;
 
           img {
             width: $navbar-brand-logo-expanded-height;
@@ -306,15 +303,28 @@
           }
         }
 
+        &:not(.minimized) .navbar-brand::before {
+          top: 0;
+          left: 0;
+          transform: none;
+        }
+
         &.minimized {
           padding-top: $navbar-expanded-minimized-padding-y;
-          padding-bottom: 1rem;
+          padding-bottom: $spacer / 10;
 
           .navbar-brand {
+            margin-bottom: .2rem;
+
             img {
-              width: $navbar-brand-logo-minimized-height;
-              height: $navbar-brand-logo-minimized-height;
+              width: $navbar-brand-logo-height;
+              height: $navbar-brand-logo-height;
+              margin-bottom: map-get($spacers, 2);
             }
+          }
+
+          .nav-link {
+            padding: map-get($spacers, 2);
           }
         }
         // end mod
@@ -348,13 +358,6 @@
             }
           }
           // end mod
-
-          .nav-link {
-            // Boosted mod
-            padding: 0 $navbar-nav-link-padding-x;
-            margin-left: $spacer;
-            // end mode
-          }
         }
 
         // For nesting containers, have to redeclare for alignment purposes
@@ -399,11 +402,16 @@
 .navbar-light {
   .navbar-brand {
     color: $navbar-light-brand-color;
+  }
 
+  // Boosted mod
+  // stylelint-disable-next-line selector-no-qualifying-type
+  a.navbar-brand {
     @include hover-focus() {
       color: $navbar-light-brand-hover-color;
     }
   }
+  // end mod
 
   .navbar-nav {
     .nav-link {
@@ -451,11 +459,16 @@
 .navbar-dark {
   .navbar-brand {
     color: $navbar-dark-brand-color;
+  }
 
+  // Boosted mod
+  // stylelint-disable-next-line selector-no-qualifying-type
+  a.navbar-brand {
     @include hover-focus() {
       color: $navbar-dark-brand-hover-color;
     }
   }
+  // end mod
 
   .navbar-nav {
     .nav-link {

@@ -29,7 +29,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 - `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
 - `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
 - `.form-inline` for any form controls and actions.
-- `.navbar-text` for adding vertically centered strings of text.
+- `.navbar-text` for adding **bottom aligned** <!-- Boosted mod --> strings of text.
 - `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
 
 Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
@@ -97,7 +97,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 
 <!-- As a heading -->
 <nav class="navbar navbar-dark bg-dark">
-  <span class="navbar-brand mb-0 h1">Navbar</span>
+  <h1 class="navbar-brand">Navbar</h1>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
@@ -106,9 +106,9 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 
 {% capture example %}
 <!-- Just an image -->
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Go back to homepage">
+    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage">
   </a>
 </nav>
 {% endcapture %}
@@ -116,10 +116,10 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 
 {% capture example %}
 <!-- Image and text -->
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-top" alt="">
-    Boosted
+    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Go to homepage">
+    <span class="h1 m-0">Boosted</span>
   </a>
 </nav>
 {% endcapture %}
@@ -160,7 +160,7 @@ Active states—with `.active`—to indicate the current page can be applied dir
 And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
 
 {% capture example %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -310,7 +310,7 @@ Mix and match with other components and utilities as needed.
 
 ## Color schemes
 
-Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
+Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors.<!-- Boosted mod Then, customize with `.bg-*` utilities. -->
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -336,40 +336,14 @@ Theming the navbar has never been easier thanks to the combination of theming cl
       </ul>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-inverse btn-outline btn-info my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
+  
+  <!-- Boosted mod -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -403,11 +377,9 @@ Theming the navbar has never been easier thanks to the combination of theming cl
   <!-- Navbar content -->
 </nav>
 
-<nav class="navbar navbar-dark bg-primary">
-  <!-- Navbar content -->
-</nav>
+<!-- Boosted mod -->
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light">
   <!-- Navbar content -->
 </nav>
 {% endhighlight %}
@@ -428,7 +400,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 When the container is within your navbar, its horizontal padding is removed at breakpoints lower than your specified `.navbar-expand{-sm|-md|-lg|-xl}` class. This ensures we're not doubling up on padding unnecessarily on lower viewports when your navbar is collapsed.
 
 {% capture example %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
     <a class="navbar-brand" href="#">Navbar</a>
   </div>
