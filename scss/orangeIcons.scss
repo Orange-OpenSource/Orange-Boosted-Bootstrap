@@ -2715,33 +2715,13 @@
 
 // Using svg
 
-.svg-delete,
-.svg-checkbox-tick,
-.svg-warning-circle,
-.svg-menu,
-.svg-tick,
-.svg-success,
-.svg-warning,
-.svg-info,
-.svg-error,
-.svg-arrow-previous,
-.svg-arrow-next,
-.svg-settings,
-.svg-search,
-.svg-avatar,
-.svg-buy {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $spacer;
-    height: $spacer;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+[class*="svg-"]::after {
+  display: block;
+  width: $spacer;
+  height: $spacer;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .svg-delete {
