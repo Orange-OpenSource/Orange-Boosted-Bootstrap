@@ -6,92 +6,35 @@
 // stylelint-disable selector-max-compound-selectors
 // stylelint-disable selector-max-combinators
 // stylelint-disable property-blacklist
-
-.navbar {
-  .nav-link.icon {
-    margin-top: 0;
-
-    span[class^="icon-"] {
-      font-size: 1.5rem;
-      font-weight: $font-weight-normal;
-    }
-
-    &[class*="svg-"],
-    &[class*="svg-"]::after {
-      width: 1.875rem;
-      height: 1.875rem;
-    }
-  }
-
-  .nav-link:not(.icon)[class*="svg-"]::after {
-    top: 0;
-    right: 0;
-    left: auto;
-  }
-}
-
 .navbar.supra {
-  @include media-breakpoint-down(xs) {
-    display: none;
-  }
-
-  height: $navbar-supra-height; // IE flex support
-  min-height: $navbar-supra-height;
+  display: none;
   padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid $gray-900;
 
-  > .container,
-  > .container .navbar-nav {
-    align-items: center;
-  }
-
-  .navbar-brand {
-    display: none;
+  @include media-breakpoint-up(md) {
+    display: flex;
   }
 
   .navbar-nav {
-    margin: 0;
-
-    > .nav-link:first-child,
-    .nav-item:first-child .nav-link {
-      margin-left: 0;
-    }
+    margin-top: 0;
   }
 
   .nav-link,
   .dropdown-toggle {
-    @include transition($transition-focus); // Boosted mod
-
-    &:focus {
-      outline-offset: .5rem;
-    }
-
+    padding-top: map-get($spacers, 2);
+    padding-bottom: map-get($spacers, 2);
     font-size: $font-size-sm;
     line-height: 1;
 
-    span[class^="icon-"] {
-      font-size: $h5-font-size;
-      font-weight: $font-weight-normal;
-    }
-  }
-
-  .nav-link.icon {
-    span[class^="icon-"] {
+    [class*="icon-"] {
       font-size: $h6-font-size;
-      font-weight: $font-weight-normal;
-    }
-
-    &[class*="svg-"],
-    &[class*="svg-"]::after {
-      width: 1.25rem;
-      height: 1.25rem;
     }
   }
 
-  .dropdown-menu {
-    right: 0;
-    left: auto;
+  .nav-link[class*="svg-"]::after {
+    width: $navbar-supra-height / 2;
+    height: $navbar-supra-height / 2;
   }
 }
 
