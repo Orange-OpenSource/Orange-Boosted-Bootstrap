@@ -1,5 +1,3 @@
-// stylelint-disable selector-no-qualifying-type
-
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
@@ -13,9 +11,11 @@
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
-    @include hover() {
-      z-index: 1;
-    }
+    // Boosted mod
+    // @include hover() {
+    //  z-index: 1;
+    //}
+
     &:focus,
     &:active,
     &.active {
@@ -152,12 +152,42 @@
   > .btn,
   > .btn-group > .btn {
     margin-bottom: 0; // Override default `<label>` value
+    border-color: $gray-500; // Boosted mod
 
-    input[type="radio"],
-    input[type="checkbox"] {
+    // Boosted mod: hover = focus, active ≠ .active
+    @include hover-focus() {
+      color: theme-color("primary");
+      background-color: $white;
+    }
+
+    @include active() {
+      color: $white;
+      background-color: theme-color("primary");
+    }
+
+    &.active {
+      background-color: $black !important; // stylelint-disable-line declaration-no-important
+      border-color: $black !important; // stylelint-disable-line declaration-no-important
+    }
+    // end mod
+
+    [type="radio"],
+    [type="checkbox"] {
       position: absolute;
       clip: rect(0, 0, 0, 0);
       pointer-events: none;
     }
   }
+
+  // Boosted mod: no border inside of .btn-group-toggle
+  > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn-group:not(:last-child) > .btn {
+    border-right: 0;
+  }
+
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) > .btn {
+    border-left: 0;
+  }
+  // end mod
 }
