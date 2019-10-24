@@ -14,7 +14,7 @@ Boosted sets basic global display, typography, and link styles. When more contro
 - Use **Helvetica Neue** (locally if available, webfont otherwise), with Helvetica and Arial as preferred fallback.
 - Then use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Use the `$font-family-base`, `$font-size-base`, `$line-height-base` and `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color` and apply link underlines only on `:hover`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
@@ -232,6 +232,52 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-4">Display 4</h1>
 {% endhighlight %}
 
+[comment]: # Boosted mod
+## Regular text
+
+Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight.
+
+<table>
+  <thead>
+    <tr>
+    <th scope="col">Font size</th>
+    <th scope="col">Desktop size</th>
+    <th scope="col">Tablet size</th>
+    <th scope="col">Mobile size</th>
+    <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+    </th>
+    <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lead</td>
+      <td>Regular 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Regular 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>Regular 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.5 <small class="text-muted">(30px)</small></td>
+      <td>-0.015625rem <small class="text-muted">(-0.25px)</small></td>
+    </tr>
+    <tr>
+      <td>Body copy</td>
+      <td colspan="3">Regular 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.5 <small class="text-muted">(24px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td colspan="3">Regular .875rem <small class="text-muted">(14px)</small></td>
+      <td>1.143 <small class="text-muted">(16px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Lead
 
 Make a paragraph stand out by adding `.lead`.
@@ -302,25 +348,7 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Alignment
-
-Use text utilities as needed to change the alignment of your blockquote.
-
-{% capture example %}
-<blockquote class="blockquote text-center">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<blockquote class="blockquote text-right">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: remove blockquotes' alignment part
 
 ## Lists
 

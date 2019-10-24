@@ -261,8 +261,8 @@ $grid-row-columns:            6 !default;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              (20 / 18) !default;
-$line-height-sm:              (20 / 14) !default;
+$line-height-lg:              calc(20 / 18) !default;
+$line-height-sm:              calc(16 / 14) !default;
 
 $border-width:                2px !default;
 $border-color:                theme-color("dark") !default;
@@ -343,11 +343,11 @@ $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
 $h1-line-height:              1 !default;
-$h2-line-height:              1.067 !default; // calc(32 / 30)
-$h3-line-height:              1.083 !default; // calc(26 / 24)
-$h4-line-height:              1.1 !default;   // calc(22 / 20)
-$h5-line-height:              1.111 !default; // calc(20 / 18)
-$h6-line-height:              1.125 !default; // calc(18 / 16)
+$h2-line-height:              calc(32 / 30) !default;
+$h3-line-height:              calc(26 / 24) !default;
+$h4-line-height:              calc(22 / 20) !default;
+$h5-line-height:              calc(20 / 18) !default;
+$h6-line-height:              calc(18 / 16) !default;
 
 $headings-margin-bottom:      $spacer !default;
 $headings-font-family:        null !default;
@@ -375,16 +375,19 @@ $display-line-height:         1 !default;
 
 $lead-font-size:              $font-size-xlg !default; // Boosted mod
 $lead-font-weight:            400 !default; // Boosted mod
-$lead-line-height:            1.5 !default; // calc(30 / 20)
+$lead-line-height:            calc(30 / 20) !default; // Boosted mod
 $lead-letter-spacing:         -.015625rem !default; // Boosted mod
 
 $small-font-size:             $font-size-sm !default; // Boosted mod → 14px
+$small-line-height:           $line-height-sm !default; // Boosted mod → 16px
 
 $text-muted:                  $gray-700 !default;
 
 $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-xlg !default; // Boosted mod
+$blockquote-line-height:      calc(30 / 20) !default; // Boosted mod
+$blockquote-letter-spacing:   -.015625rem !default; // Boosted mod
 
 $hr-border-color:             $gray-300 !default;
 $hr-border-width:             $border-width / 2 !default;
