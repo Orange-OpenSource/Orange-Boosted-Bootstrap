@@ -99,25 +99,7 @@ fieldset:disabled a.btn {
   }
 }
 
-// Boosted mod custom outline buttons values
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @if $color == "light" {
-      @include button-outline-variant($value, $gray-900);
-    } @else {
-      @if $color == "warning" {
-        @include button-outline-variant(theme-color("primary"), $black);
-      } @else {
-        @if $color == "info" {
-          @include button-outline-variant(theme-color("secondary"), $black);
-        } @else {
-          @include button-outline-variant($value, $black);
-        }
-      }
-    }
-  }
-}
-
+// Boosted mod: no .btn-outline-*
 
 //
 // Link buttons

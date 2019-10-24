@@ -13,7 +13,6 @@ Boosted includes several predefined button styles, each serving its own semantic
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
 <button type="button" class="btn btn-link">Link</button>
 {% endcapture %}
 {% include example.html content=example %}
@@ -26,35 +25,9 @@ Boosted includes several predefined button styles, each serving its own semantic
 To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
 
 {% capture example %}
-<div class="bg-dark p-3">
-    {% for color in site.data.theme-colors %}
+<div class="bg-dark p-3">{% for color in site.data.theme-colors %}
     <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
     <button type="button" class="btn btn-inverse btn-link">Link</button>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<div class="p-3" style="background-color: #595959">
-    {% for color in site.data.theme-colors %}
-    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
-    <button type="button" class="btn btn-inverse btn-link">Link</button>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### Light backgrounds
-
-The default styles can be used on secondary colors backgrounds, in this case remove the `.btn-inverse` class if any.
-
-{% capture example %}
-<div class="bg-light p-3">
-    {% for color in site.data.theme-colors %}
-    <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
-    <button type="button" class="btn btn-link">Link</button>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -62,16 +35,6 @@ The default styles can be used on secondary colors backgrounds, in this case rem
 ## Social buttons
 
 In need of a social media button? Some helper classes are designed to be used along with the `.btn` element, starting with the `.btn-social` variant.
-Here are available social media buttons:
-* `.btn-facebook`,
-* `.btn-twitter`,
-* `.btn-linkedin`,
-* `.btn-instagram`,
-* `.btn-whatsapp`,
-* `.btn-youtube`,
-* `.btn-mail` .
-
-### Light background
 
 {% capture example %}
 <div class="p-3">
@@ -86,33 +49,7 @@ Here are available social media buttons:
 {% endcapture %}
 {% include example.html content=example %}
 
-### Dark background
-
-{% capture example %}
-<div class="bg-dark p-3">
-    <a class="btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
-    <a class="btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
-    <a class="btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>
-    <a class="btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
-    <a class="btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a>
-    <a class="btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
-    <a class="btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### Sizes variant
-
-{% capture example %}
-<div class="p-3">
-    <a class="btn btn-sm btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
-    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
-    <a class="btn btn-lg btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
-    <a class="btn btn-xlg btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
-</div> 
-{% endcapture %}
-{% include example.html content=example %}
-[comment]: # end mod
+Social buttons are compatibles with [dark backgrounds variant](#dark-backgrounds) and [sizing utilities](#sizes).
 
 ## Button tags
 
@@ -129,15 +66,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 {% endcapture %}
 {% include example.html content=example %}
 
-## Outline buttons
-
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
-
-{% capture example %}
-{% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: no btn-outline-*
 
 ## Sizes
 
