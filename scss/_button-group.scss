@@ -62,8 +62,9 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: $btn-padding-x * .5;
+  padding-left: $btn-padding-x * .5;
+  border-color: $black;
 
   &::after,
   .dropup &::after,
@@ -74,18 +75,21 @@
   .dropleft &::before {
     margin-right: 0;
   }
+
+  .btn:active + & {
+    border-color: theme-color("primary");
+  }
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-right: $btn-padding-x-sm * .5;
+  padding-left: $btn-padding-x-sm * .5;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-right: $btn-padding-x-lg * .5;
+  padding-left: $btn-padding-x-lg * .5;
 }
-
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
@@ -96,6 +100,10 @@
   &.btn-link {
     @include box-shadow(none);
   }
+}
+
+.btn-group.show .btn {
+  border-color: theme-color("primary");
 }
 
 
