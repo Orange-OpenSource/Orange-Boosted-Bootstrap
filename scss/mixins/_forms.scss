@@ -103,9 +103,9 @@
             background-size: cover;
           }
           @if $state == "valid" {
-            @include svg-success();
+            @extend %svg-success;
           } @else {
-            @include svg-error();
+            @extend %svg-danger;
           }
         }
         position: relative;

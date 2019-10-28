@@ -2749,19 +2749,19 @@
 }
 
 .svg-success {
-  @include svg-success();
+  @extend %svg-success;
 }
 
 .svg-warning {
-  @include svg-warning();
+  @extend %svg-warning;
 }
 
 .svg-error {
-  @include svg-error();
+  @extend %svg-danger;
 }
 
 .svg-info {
-  @include svg-info();
+  @extend %svg-info;
 }
 
 .svg-arrow-previous {
