@@ -97,7 +97,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 
 <!-- As a heading -->
 <nav class="navbar navbar-dark bg-dark">
-  <h1 class="navbar-brand">Navbar</h1>
+  <h2 class="navbar-brand">Navbar</h2>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
