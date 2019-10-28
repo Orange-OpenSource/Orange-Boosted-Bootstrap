@@ -11,265 +11,88 @@ toc: true
 
 ## Examples
 
-Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
+Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
 
+[comment]: # Boosted mod: alerts always have icon
+Boosted also adds a dedicated icon for each contextual class, matching [functional colors in palette]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/#ensuring-contrasts):
+* `danger`,
+* `warning`,
+* `info`,
+* `success`.
+
+Icons are centered by default, but you may top align them using `.align-items-start` utility for multiple lines alerts.
+
+[comment]: # Boosted mod: filter to use only functional colors
 {% capture example %}
-{% for color in site.data.theme-colors %}
+{% assign colors = "success, info, warning, danger" %}
+{% for color in site.data.theme-colors %}{% if colors contains color.name %}
 <div class="alert alert-{{ color.name }}" role="alert">
-  A simple {{ color.name }} alert—check it out!
-</div>{% endfor %}
+  <p class="mb-0">A simple {{ color.name }} alert — check it out!</p>
+</div>{% endif %}{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-### Link color
+[comment]: # Boosted mod: links are perceivable globally
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+### Sizes
+
+Alerts come with a smaller variant: `.alert-sm`. It can be used inline with no borders, by adding `.border-0` and `.px-0` utilities.
 
 {% capture example %}
-{% for color in site.data.theme-colors %}
-<div class="alert alert-{{ color.name }}" role="alert">
-  A simple {{ color.name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>{% endfor %}
+<div class="alert alert-sm alert-info border-0 px-0" role="alert">
+    <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+</div>
+<div class="alert alert-info alert-sm" role="alert">
+  <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+</div>
+<div class="alert alert-info" role="alert">
+  <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Outline
-
-Outline alerts could be created for any length of text. 3 sizes available `.alert-sm`, md as default, `.alert-lg`. In addition of the use of the **required** alert classe `.alert`, mix the utilities class (e.g., `.border .border-success .bg-transparent`) to create outlined alerts. The logo **required** a contextual classe (e.g., `.alert-icon .svg-success`).
-The text must be inside a div tag with padding and margin **required** class (e.g, `.pl-3 .ml-3`). Add a **required** class (`.mt-2`) to the logo for multiline alerts.
-
-Available icons : 
-```
-alert-icon svg-error
-alert-icon svg-info
-alert-icon svg-success
-alert-icon svg-warning
-
-```
+### Dark background
+ 
 {% capture example %}
-<h3>Outline Alerts</h3>
-    <!-- Outline Alerts
-    ======================================= -->
-    <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="pl-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
+<div class="bg-dark p-3">
+    <div class="alert alert-sm alert-success border-0 px-0" role="alert">
+        <p class="mb-0">Your changes have been saved.</p>
     </div>
-    <div class="alert alert-sm border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-info" aria-label="Info"></span>
-        <div class="pl-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
+    <div class="alert alert-success" role="alert">
+        <p class="mb-0">Your changes have been saved.</p>
     </div>
-    <div class="alert alert-sm border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-warning" aria-label="Warning"></span>
-        <div class="pl-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-       <!-- Boosted mod -->
-       <button type="button" class="close" data-dismiss="alert">
-           <span class="sr-only">Close</span>
-       </button>
-       <!-- end mod -->
+    <div class="alert alert-info" role="alert">
+        <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
     </div>
-    <div class="alert alert-sm border border-danger alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-error" aria-label="Danger"></span>
-        <div class="pl-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
+    <div class="alert alert-warning" role="alert">
+        <p class="mb-0">Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
     </div>
-    <div class="alert border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="pl-3 ml-3 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
+    <div class="alert alert-danger align-items-start" role="alert">
+        <p class="mb-0">
+            There were some errors with your submission.
+            <span class="d-block font-weight-normal">You need to select your home country.</span>
+        </p>
     </div>
-    <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-info" aria-label="Info"></span>
-        <div class="pl-3 ml-3 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-warning" aria-label="Warning"></span>
-        <div class="pl-3 ml-3 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert border border-danger alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-error" aria-label="Danger"></span>
-        <div class="pl-3 ml-3 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert alert-lg border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="pl-5 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert alert-lg border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-info" aria-label="Info"></span>
-        <div class="pl-5 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-warning" aria-label="Warning"></span>
-        <div class="pl-5 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-error" aria-label="Danger"></span>
-        <div class="pl-5 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark" role="alert">
-        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
-        <div class="pl-5">
-            <div class="font-weight-bold">Your changes have been saved.</div>
-            <p class="mb-0">You may now log-in with the username you have chosen.</p>
-        </div>
-        <!-- Boosted mod -->
-        <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
-        </button>
-        <!-- end mod -->
-    </div>
-    <div class="alert border-0 alert-sm bg-transparent px-0" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="ml-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-    </div>
-    <div class="bg-dark">
-        <!-- Custom Alerts
-        ======================================= -->
-        <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon svg-success" aria-label="Success"></span>
-            <div class="pl-4 font-weight-bold">
-                Your changes have been saved.
-            </div>
-            <!-- Boosted mod -->
-            <button type="button" class="close" data-dismiss="alert">
-                <span class="sr-only">Close</span>
-            </button>
-            <!-- end mod -->
-        </div>
-        <div class="alert border border-info alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon svg-info" aria-label="Info"></span>
-            <div class="pl-3 ml-3 font-weight-bold">
-                Your changes have been saved.
-            </div>
-            <!-- Boosted mod -->
-            <button type="button" class="close" data-dismiss="alert">
-                <span class="sr-only">Close</span>
-            </button>
-            <!-- end mod -->
-        </div>
-        <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon svg-warning" aria-label="Warning"></span>
-            <div class="pl-5 font-weight-bold">
-                Your changes have been saved.
-            </div>
-            <!-- Boosted mod -->
-            <button type="button" class="close" data-dismiss="alert">
-                <span class="sr-only">Close</span>
-            </button>
-            <!-- end mod -->
-        </div>
-        <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white" role="alert">
-            <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
-            <div class="pl-5 font-weight-bold">
-                <div class="font-weight-bold">Your changes have been saved.</div>
-                <p class="mb-0"><small>You may now log-in with the username you have chosen.</small></p>
-            </div>
-            <!-- Boosted mod -->
-            <button type="button" class="close" data-dismiss="alert">
-                <span class="sr-only">Close</span>
-            </button>
-            <!-- end mod -->
-        </div>
-        <div class="alert border-0 alert-sm bg-transparent px-0 text-white" role="alert">
-            <span class="alert-icon svg-success" aria-label="Success"></span>
-            <div class="ml-4 font-weight-bold">
-                Your changes have been saved.
-            </div>
-        </div>
-    </div>
-
+</div>
 {% endcapture %} {% include example.html content=example %}
 
 ### Additional content
 
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
+[comment]: # Boosted mod
+As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment.
+
 {% capture example %}
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+<div class="alert alert-success align-items-start" role="alert">
+  <div>
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+      <hr>
+      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -288,13 +111,31 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 You can see this in action with a live demo:
 
 {% capture example %}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <!-- Boosted mod -->
+<div class="alert alert-success alert-sm alert-dismissible fade show" role="alert">
+  <p class="mb-0">Your changes have been saved.</p>
   <button type="button" class="close" data-dismiss="alert">
       <span class="sr-only">Close</span>
   </button>
-  <!-- end mod -->
+</div>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <p class="mb-0">
+      Holy guacamole!
+      <span class="d-block font-weight-normal">You should check in on some of those fields below.</span>
+  </p>
+  <button type="button" class="close" data-dismiss="alert">
+      <span class="sr-only">Close</span>
+  </button>
+</div>
+<div class="bg-dark p-3">
+    <div class="alert alert-lg alert-danger alert-dismissible fade show mb-0" role="alert">
+        <p class="mb-0">
+            Your changes have been saved.
+            <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
+        </p>
+        <button type="button" class="close" data-dismiss="alert">
+            <span class="sr-only">Close</span>
+        </button>
+    </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}

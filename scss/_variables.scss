@@ -1090,18 +1090,16 @@ $modal-transition:                  transform .3s ease-out !default;
 // Define alert colors, border radius, and padding.
 
 $alert-padding-y:                   1rem !default; // Boosted mod
-$alert-padding-x:                   1.25rem !default;
-$alert-padding-y-sm:                .375rem !default; // Boosted mod
+$alert-padding-x:                   $spacer !default; // Boosted mod
+$alert-padding-y-sm:                map-get($spacers, 2) !default; // Boosted mod
 $alert-padding-x-sm:                $alert-padding-x !default;
-$alert-padding-y-lg:                1rem !default;
-$alert-padding-x-lg:                $alert-padding-x !default;
 $alert-margin-bottom:               $spacer !default;
 $alert-border-radius:               $border-radius !default;
-$alert-link-font-weight:            $font-weight-bold !default;
-$alert-border-width:                0 !default;
+// $alert-link-font-weight:            $font-weight-normal !default; // Boosted mod
+$alert-border-width:                $border-width !default;
 
-$alert-bg-level:                    0 !default;
-$alert-border-level:                0 !default;
+// $alert-bg-level:                    0 !default; // Boosted mod
+// $alert-border-level:                0 !default; // Boosted mod
 // $alert-color-level:                 null !default; // Boosted mod
 
 // Progress bars
