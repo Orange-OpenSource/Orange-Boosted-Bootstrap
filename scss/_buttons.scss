@@ -110,6 +110,8 @@ fieldset:disabled a.btn {
   // font-weight: $font-weight-normal; // Boosted mod font-weight stay bold
   color: $link-color;
   // Boosted mod
+  // stylelint-disable-next-line declaration-no-important
+  border-color: transparent !important;
   outline-offset: $border-width * 2;
   @include transition($transition-focus);
 
