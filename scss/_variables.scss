@@ -875,8 +875,8 @@ $dropdown-link-active-bg:           $black !default;
 
 $dropdown-link-disabled-color:      $gray-700 !default;
 
-$dropdown-item-padding-y:           .625rem !default;
-$dropdown-item-padding-x:           .625rem !default;
+$dropdown-item-padding-y:           $spacer !default;
+$dropdown-item-padding-x:           $spacer !default;
 
 $dropdown-header-color:             $black !default;
 
