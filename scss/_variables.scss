@@ -875,15 +875,15 @@ $dropdown-link-active-bg:           $black !default;
 
 $dropdown-link-disabled-color:      $gray-700 !default;
 
-$dropdown-item-padding-y:           $spacer !default;
-$dropdown-item-padding-x:           $spacer !default;
+$dropdown-item-padding-y:           map-get($spacers, 2) !default;
+$dropdown-item-padding-x:           map-get($spacers, 2) !default;
 
 $dropdown-header-color:             $black !default;
 
 
 // Pagination
 
-$pagination-padding-y:              $spacer / 2 !default;
+$pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              .8rem !default;
 $pagination-padding-y-sm:           .375rem !default;
 $pagination-padding-x-sm:           .625rem !default;
