@@ -158,19 +158,27 @@
     border-color: $gray-500; // Boosted mod
 
     // Boosted mod: hover = focus, active ≠ .active
-    @include hover-focus() {
+    &:hover,
+    &:focus,
+    &.focus {
       color: theme-color("primary");
       background-color: $white;
     }
 
-    @include active() {
+    &:active {
       color: $white;
       background-color: theme-color("primary");
     }
 
-    &.active {
-      background-color: $black !important; // stylelint-disable-line declaration-no-important
-      border-color: $black !important; // stylelint-disable-line declaration-no-important
+    &:not(:disabled):not(.disabled).active {
+      background-color: $black;
+      border-color: $black;
+      // stylelint-disable-next-line selector-max-class
+      &:focus,
+      &.focus {
+        background-color: theme-color("primary");
+        border-color: theme-color("primary");
+      }
     }
     // end mod
 
