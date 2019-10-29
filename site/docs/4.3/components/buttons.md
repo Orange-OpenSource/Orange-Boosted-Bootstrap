@@ -86,13 +86,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Sizes
 
-Fancy larger or smaller buttons? Add `.btn-xlg`, `.btn-lg` or `.btn-sm` for additional sizes.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-xlg">Extra large button</button>
-<button type="button" class="btn btn-secondary btn-xlg">Extra large button</button>
-{% endcapture %}
-{% include example.html content=example %}
+Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {% capture example %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>

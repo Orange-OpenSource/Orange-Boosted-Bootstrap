@@ -200,16 +200,6 @@ fieldset:disabled a.btn {
 // Button Sizes
 //
 
-// Boosted mod
-.btn-xlg {
-  @include button-size($btn-padding-y-xlg, $btn-padding-x-xlg, $font-size-xlg, $btn-line-height-xlg, $btn-border-radius-xlg);
-  &.btn-info,
-  &.btn-icon-outline {
-    padding: $btn-padding-y-xlg;
-  }
-}
-// end mod
-
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
   // Boosted mod
