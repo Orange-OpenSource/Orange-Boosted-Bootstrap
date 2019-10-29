@@ -40,7 +40,7 @@
     margin-right: map-get($spacers, 3);
     content: "";
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
   // end mod
 }
