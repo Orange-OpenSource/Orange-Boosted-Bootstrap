@@ -210,13 +210,13 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 </div>
 <div class="bg-dark p-3">
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-dark btn-inverse active">
+      <label class="btn btn-secondary btn-inverse active">
         <input type="radio" name="options-dark" id="option4" autocomplete="off" checked> Active
       </label>
-      <label class="btn btn-dark btn-inverse">
+      <label class="btn btn-secondary btn-inverse">
         <input type="radio" name="options-dark" id="option5" autocomplete="off"> Radio
       </label>
-      <label class="btn btn-dark btn-inverse">
+      <label class="btn btn-secondary btn-inverse">
         <input type="radio" name="options-dark" id="option6" autocomplete="off"> Radio
       </label>
     </div>
