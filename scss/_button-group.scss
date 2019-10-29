@@ -162,7 +162,8 @@
     &:focus,
     &.focus {
       color: theme-color("primary");
-      background-color: $white;
+      background-color: transparent;
+      border-color: $gray-500;
     }
 
     &:active {
@@ -170,16 +171,29 @@
       background-color: theme-color("primary");
     }
 
+    // stylelint-disable selector-max-class
     &:not(:disabled):not(.disabled).active {
       background-color: $black;
       border-color: $black;
-      // stylelint-disable-next-line selector-max-class
       &:focus,
       &.focus {
         background-color: theme-color("primary");
         border-color: theme-color("primary");
       }
     }
+
+    &.btn-inverse:not(:disabled):not(.disabled).active {
+      color: $black;
+      background-color: $white;
+      border-color: $white;
+      &:focus,
+      &.focus {
+        color: $white;
+        background-color: $orange-2;
+        border-color: $orange-2;
+      }
+    }
+    // stylelint-enable selector-max-class
     // end mod
 
     [type="radio"],
