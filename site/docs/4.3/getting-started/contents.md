@@ -72,10 +72,10 @@ Boosted includes a handful of options for including some or all of our compiled 
         <div><code class="font-weight-normal text-nowrap">boosted.css</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.min.css</code></div>
       </th>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
       <td class="bg-light">Not included</td>
     </tr>
     <tr>
@@ -105,11 +105,11 @@ Boosted includes a handful of options for including some or all of our compiled 
         <div><code class="font-weight-normal text-nowrap">boosted-rtl.css</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted-rtl.min.css</code></div>
       </th>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
     </tr>
   </tbody>
 </table>
@@ -135,11 +135,11 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">boosted.bundle.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.bundle.min.js</code></div>
       </th>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
       <td class="bg-light">Not included</td>
-      <td class="text-success font-weight-bold">Included</td>
-      <td class="text-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
     </tr>
     <tr>
       <th scope="row">

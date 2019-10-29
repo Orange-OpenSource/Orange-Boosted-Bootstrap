@@ -50,19 +50,19 @@ Generally speaking, Boosted supports the latest versions of each major platform'
   <tbody>
     <tr>
       <th scope="row">Android</th>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success font-weight-bold">Android v5.0+ supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Android v5.0+ supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
     <tr>
       <th scope="row">iOS</th>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
     <tr>
       <th scope="row">Windows 10 Mobile</th>
@@ -70,7 +70,7 @@ Generally speaking, Boosted supports the latest versions of each major platform'
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
   </tbody>
 </table>
@@ -94,20 +94,20 @@ Similarly, the latest versions of most desktop browsers are supported.
   <tbody>
     <tr>
       <th scope="row">Mac</th>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
     <tr>
       <th scope="row">Windows</th>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported, IE10+</td>
-      <td class="text-success font-weight-bold">Supported</td>
-      <td class="text-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported, IE10+</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-danger font-weight-bold">Not supported</td>
     </tr>
   </tbody>
