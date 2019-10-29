@@ -11,6 +11,16 @@
   white-space: nowrap;
   border-color: $dropdown-border-color;
 
+  // Boosted mod
+  .bg-dark &:not(.dropdown-toggle-split) {
+    border-color: $gray-700;
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+  // end mod
+
   // Generate the caret automatically
   @include caret();
 }

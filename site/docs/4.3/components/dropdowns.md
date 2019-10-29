@@ -102,6 +102,38 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 </div>
 {% endhighlight %}
 
+[comment]: # Boosted mod
+### Dark background
+
+{% capture example %}
+<div class="btn-toolbar bg-dark p-3" role="toolbar">
+    <div class="btn-group">
+      <button class="btn btn-secondary btn-inverse dropdown-toggle" type="button" id="darkDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="darkDropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+    <div class="btn-group ml-2">
+      <button type="button" class="btn btn-secondary btn-inverse">Action</button>
+      <button type="button" class="btn btn-secondary btn-inverse dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </div>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 ## Sizing
 
 Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
