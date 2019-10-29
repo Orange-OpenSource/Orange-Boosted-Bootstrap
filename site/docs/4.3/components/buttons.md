@@ -146,6 +146,17 @@ Disabled buttons using the `<a>` element behave a bit different:
 {% endcapture %}
 {% include example.html content=example %}
 
+[comment]: # Boosted mod
+### Dark background
+
+{% capture example %}
+<div class="bg-dark p-3">
+    <button type="button" class="btn btn-primary btn-inverse btn-lg" disabled>Primary button</button>
+    <button type="button" class="btn btn-secondary btn-inverse btn-lg" disabled>Button</button>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 {% capture callout %}
 ##### Link functionality caveat
 
