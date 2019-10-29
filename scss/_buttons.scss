@@ -147,51 +147,11 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
-// Boosted mod: icon buttons
+// Boosted mod: icon buttons are squared
 .btn-icon {
   padding: $btn-padding-y;
   // stylelint-disable-next-line declaration-no-important
-  line-height: 1 !important; // Ensure .btn-icon is squared
-  color: $link-color;
-  outline-offset: $border-width * 2;
-  @include transition($transition-focus);
-
-  &.btn-inverse,
-  &.btn-inverse:hover {
-    color: $white;
-  }
-
-  &:hover {
-    color: $link-color;
-    border-color: $gray-500;
-  }
-
-  &:focus,
-  &.focus {
-    border-color: $gray-500;
-    outline: $border-width solid $gray-500;
-    outline-offset: -#{$border-width};
-    box-shadow: $input-btn-focus-box-shadow;
-  }
-
-  &:active,
-  &.active {
-    color: theme-color("primary");
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $gray-500;
-    pointer-events: none;
-  }
-}
-
-.btn-icon-outline {
-  @extend .btn-secondary;
-  padding: $btn-padding-y;
-  // stylelint-disable-next-line declaration-no-important
-  line-height: 1 !important; // Ensure .btn-icon is squared
-  border-color: $gray-500;
+  line-height: .875 !important; // Ensure .btn-icon is squared
 }
 // end mod
 
@@ -203,8 +163,7 @@ fieldset:disabled a.btn {
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
   // Boosted mod
-  &.btn-info,
-  &.btn-icon-outline {
+  &.btn-info {
     padding: $btn-padding-y-lg;
   }
   // end mod
@@ -213,8 +172,7 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   // Boosted mod
-  &.btn-info,
-  &.btn-icon-outline {
+  &.btn-info {
     padding: $btn-padding-y-sm;
   }
   // end mod
