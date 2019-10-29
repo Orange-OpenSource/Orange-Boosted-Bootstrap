@@ -46,12 +46,14 @@ In need of a social media button? Some helper classes are designed to be used al
 
 {% capture example %}
 <div class="p-3">
-    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a> 
     <a class="btn btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
-    <a class="btn btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>
+    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a>
     <a class="btn btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
-    <a class="btn btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a>
+    <a class="btn btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a> 
+    <a class="btn btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>    
     <a class="btn btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a> 
+    <a class="btn btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a> 
     <a class="btn btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
 </div> 
 {% endcapture %}
