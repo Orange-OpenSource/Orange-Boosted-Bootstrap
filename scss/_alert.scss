@@ -6,7 +6,6 @@
   position: relative;
   // Boosted mod
   display: flex;
-  align-items: center;
   // end mod
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
@@ -28,13 +27,17 @@
     }
   }
 
+  &:not(.alert-sm) > :first-child {
+    margin-top: map-get($spacers, 1);
+  }
+
   &::after {
     display: block;
     order: -1;
     width: alert-logo-size("md");
     min-width: alert-logo-size("md");
     height: alert-logo-size("md");
-    margin-right: map-get($spacers, 2);
+    margin-right: map-get($spacers, 3);
     content: "";
     background-repeat: no-repeat;
     background-size: cover;
@@ -59,7 +62,7 @@
   .close {
     align-self: flex-start;
     padding: $alert-padding-x;
-    margin: 0 -#{$alert-padding-x} 0 auto;
+    margin: -#{$alert-padding-x / 4} -#{$alert-padding-x} 0 auto;
     color: inherit;
   }
   // end mod
@@ -67,18 +70,20 @@
 
 // Boosted mod: small alerts
 .alert-sm {
-  padding: $alert-padding-y-sm $alert-padding-x-sm;
+  padding: $alert-padding-y-sm 0;
   font-size: $small-font-size;
   line-height: $small-line-height;
+  border: 0;
 
   &::after {
     width: alert-logo-size("sm");
     min-width: alert-logo-size("sm");
     height: alert-logo-size("sm");
+    margin-right: map-get($spacers, 2);
   }
 
   &.alert-dismissible .close {
-    margin: -#{$alert-padding-x / 2} -#{$alert-padding-x} -#{$alert-padding-x / 2} auto;
+    margin: -#{$alert-padding-x / 2} 0 -#{$alert-padding-x / 2} auto;
   }
 }
 //end mod

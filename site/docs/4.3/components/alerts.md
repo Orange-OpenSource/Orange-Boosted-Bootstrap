@@ -38,12 +38,9 @@ Icons are centered by default, but you may top align them using `.align-items-st
 
 ### Sizes
 
-Alerts come with a smaller variant: `.alert-sm`. It can be used inline with no borders, by adding `.border-0` and `.px-0` utilities.
+Alerts come with a smaller variant: `.alert-sm`.
 
 {% capture example %}
-<div class="alert alert-sm alert-info border-0 px-0" role="alert">
-    <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
-</div>
 <div class="alert alert-info alert-sm" role="alert">
   <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
 </div>
@@ -57,7 +54,7 @@ Alerts come with a smaller variant: `.alert-sm`. It can be used inline with no b
  
 {% capture example %}
 <div class="bg-dark p-3">
-    <div class="alert alert-sm alert-success border-0 px-0" role="alert">
+    <div class="alert alert-sm alert-success" role="alert">
         <p class="mb-0">Your changes have been saved.</p>
     </div>
     <div class="alert alert-success" role="alert">
@@ -69,7 +66,7 @@ Alerts come with a smaller variant: `.alert-sm`. It can be used inline with no b
     <div class="alert alert-warning" role="alert">
         <p class="mb-0">Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
     </div>
-    <div class="alert alert-danger align-items-start" role="alert">
+    <div class="alert alert-danger" role="alert">
         <p class="mb-0">
             There were some errors with your submission.
             <span class="d-block font-weight-normal">You need to select your home country.</span>
@@ -86,7 +83,7 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment.
 
 {% capture example %}
-<div class="alert alert-success align-items-start" role="alert">
+<div class="alert alert-success" role="alert">
   <div>
       <h4 class="alert-heading">Well done!</h4>
       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>

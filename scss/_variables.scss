@@ -1082,7 +1082,7 @@ $modal-transition:                  transform .3s ease-out !default;
 $alert-padding-y:                   1rem !default; // Boosted mod
 $alert-padding-x:                   $spacer !default; // Boosted mod
 $alert-padding-y-sm:                map-get($spacers, 2) !default; // Boosted mod
-$alert-padding-x-sm:                $alert-padding-x !default;
+// $alert-padding-x-sm:                $alert-padding-x !default; // Boosted mod
 $alert-margin-bottom:               $spacer !default;
 $alert-border-radius:               $border-radius !default;
 // $alert-link-font-weight:            $font-weight-normal !default; // Boosted mod
