@@ -76,7 +76,7 @@ fieldset:disabled a.btn {
 .btn-light {
   @include button-variant(transparent, $black, $black, $black, theme-color("primary"), theme-color("primary"), transparent, $gray-500, $gray-500, $black);
   &.btn-inverse {
-    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
   }
 }
 .btn-success {
@@ -89,7 +89,13 @@ fieldset:disabled a.btn {
 .btn-dark {
   @include button-variant($black, $black, $white, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $white);
   &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
+    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+  }
+}
+.btn-warning {
+  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
+  &.btn-inverse {
+    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
   }
 }
 .btn-danger {

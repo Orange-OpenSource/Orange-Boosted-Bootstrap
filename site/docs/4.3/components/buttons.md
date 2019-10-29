@@ -11,8 +11,8 @@ toc: true
 Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {% capture example %}
-{% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
+{% for color in site.data.theme-colors %}{% if color.name != 'light' and color.name != 'dark' %}
+<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endif %}{% endfor %}
 <button type="button" class="btn btn-link">Link</button>
 <button type="button" class="btn btn-icon">
     <span class="sr-only">Icon</span>
@@ -33,8 +33,8 @@ Boosted includes several predefined button styles, each serving its own semantic
 To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
 
 {% capture example %}
-<div class="bg-dark p-3">{% for color in site.data.theme-colors %}
-    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
+<div class="bg-dark p-3">{% for color in site.data.theme-colors %}{% if color.name != 'light' and color.name != 'dark' %}
+    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endif %}{% endfor %}
     <button type="button" class="btn btn-inverse btn-link">Link</button>
     <button type="button" class="btn btn-inverse btn-icon">
         <span class="sr-only">Icon</span>
@@ -196,6 +196,19 @@ Note that pre-checked buttons require you to manually add the `.active` class to
   <label class="btn btn-secondary">
     <input type="radio" name="options" id="option3" autocomplete="off"> Radio
   </label>
+</div>
+<div class="bg-dark p-3">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-dark btn-inverse active">
+        <input type="radio" name="options-dark" id="option4" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-dark btn-inverse">
+        <input type="radio" name="options-dark" id="option5" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-dark btn-inverse">
+        <input type="radio" name="options-dark" id="option6" autocomplete="off"> Radio
+      </label>
+    </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
