@@ -598,7 +598,7 @@ $custom-control-indicator-border-width: $input-border-width !default;
 $custom-control-label-color:            null !default;
 
 $custom-control-indicator-disabled-bg:          $gray-500 !default;
-$custom-control-label-disabled-color:           #767676 !default;
+$custom-control-label-disabled-color:           $gray-500 !default;
 
 $custom-control-indicator-checked-color:        $white !default;
 $custom-control-indicator-checked-bg:           theme-color("primary") !default;
@@ -645,7 +645,7 @@ $custom-select-indicator-padding:   1rem !default; // Extra padding to account f
 $custom-select-font-weight:         $input-font-weight !default;
 $custom-select-line-height:         $input-line-height !default;
 $custom-select-color:               $input-color !default;
-$custom-select-disabled-color:      $gray-600 !default;
+$custom-select-disabled-color:      $gray-500 !default;
 $custom-select-bg:                  $white !default;
 $custom-select-disabled-bg:         $gray-300 !default;
 $custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
@@ -766,7 +766,7 @@ $zindex-tooltip:                    1070 !default;
 
 $nav-link-padding-y:                map-get($spacers, 2) !default;
 $nav-link-padding-x:                $spacer !default;
-$nav-link-disabled-color:           $gray-700 !default;
+$nav-link-disabled-color:           $gray-500 !default;
 $nav-link-disabled-hover-bg:        null !default;
 
 $nav-tabs-border-color:             $black !default;
@@ -828,7 +828,7 @@ $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 $navbar-light-color:                $black !default;
 $navbar-light-hover-color:          $orange !default; // Boosted mod
 $navbar-light-active-color:         $navbar-light-hover-color !default; // Boosted mod
-$navbar-light-disabled-color:       $gray-700 !default; // Boosted mod
+$navbar-light-disabled-color:       $gray-500 !default; // Boosted mod
 $navbar-light-toggler-icon-bg:      $navbar-dark-toggler-icon-bg !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
@@ -863,7 +863,7 @@ $dropdown-link-hover-bg:            $black !default;
 $dropdown-link-active-color:        $white !default;
 $dropdown-link-active-bg:           $black !default;
 
-$dropdown-link-disabled-color:      $gray-700 !default;
+$dropdown-link-disabled-color:      $gray-500 !default;
 
 $dropdown-item-padding-y:           map-get($spacers, 2) !default;
 $dropdown-item-padding-x:           map-get($spacers, 2) !default;
