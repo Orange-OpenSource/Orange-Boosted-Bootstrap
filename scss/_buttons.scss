@@ -153,6 +153,38 @@ fieldset:disabled a.btn {
   // stylelint-disable-next-line declaration-no-important
   line-height: .875 !important; // Ensure .btn-icon is squared
 }
+
+// Boosted mod: social buttons
+@each $network in map-keys($o-networks) {
+  $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
+  $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
+  .btn-#{$network} {
+    &,
+    &.btn-inverse:active {
+      background-color: $white;
+      background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.btn-inverse {
+      background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
+      border-color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: icon-conf($network, "color");
+      border-color: icon-conf($network, "color");
+    }
+
+    &:active {
+      background-color: $black;
+      border-color: $black;
+    }
+  }
+}
 // end mod
 
 

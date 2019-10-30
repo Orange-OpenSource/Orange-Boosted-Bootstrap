@@ -2823,35 +2823,3 @@
     @include svg-buy(theme-color("primary"));
   }
 }
-
-@each $network in map-keys($o-networks) {
-  $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
-  $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
-  .btn-#{$network} {
-    &,
-    &.btn-inverse:active {
-      background-color: $white;
-      background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
-    }
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.btn-inverse {
-      background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
-      border-color: $white;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: icon-conf($network, "color");
-      border-color: icon-conf($network, "color");
-    }
-
-    &:active {
-      background-color: $black;
-      border-color: $black;
-    }
-  }
-}
-
