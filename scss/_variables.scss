@@ -106,6 +106,10 @@ $alert-logo-sizes: map-merge(
   ),
   $alert-logo-sizes
 );
+$chevron-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon-hover:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$primary}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+
 // end mod
 
 // Set a specific jump point for requesting color jumps
@@ -906,9 +910,8 @@ $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $gray-500 !default;
 
 // Boosted mod
-$chevron-icon:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $pagination-icon:                   $chevron-icon !default;
-$pagination-icon-hover:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$pagination-icon-hover:             $chevron-icon-hover !default;
 $pagination-icon-width:             .5625rem !default;
 $pagination-icon-height:            .875rem !default;
 // end mod
@@ -1247,9 +1250,11 @@ $o-sortable-hover-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 
 // arrow Links
 
-$o-link-arrow-padding-y: 0 !default;
-$o-link-arrow-padding-x: map-get($spacers, 2) !default;
-$o-link-arrow-size: map-get($spacers, 2) !default;
+$o-link-arrow-margin:     map-get($spacers, 2) !default;
+$o-link-arrow-icon:       $chevron-icon !default;
+$o-link-arrow-icon-hover: $chevron-icon-active !default;
+$o-link-arrow-height:     map-get($spacers, 2) !default;
+$o-link-arrow-width:      .4375rem !default;
 
 // Iconography
 //

@@ -8,28 +8,31 @@
   &::after,
   &::before {
     display: inline-block;
-    padding: $o-link-arrow-padding-y $o-link-arrow-padding-x;
-    // stylelint-disable-next-line declaration-no-important, font-family-no-missing-generic-family-keyword
-    font-family: icon-orange !important;
-    font-size: $o-link-arrow-size;
-    text-decoration: $link-hover-decoration;
-    speak: none;
-
-    // Better Font Rendering =========== //
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    width: $o-link-arrow-width;
+    height: $o-link-arrow-height;
+    vertical-align: middle;
+    background-image: escape-svg($o-link-arrow-icon);
+    background-repeat: no-repeat;
   }
 
   &:not(.back)::after {
-    content: "\e93e";
+    margin-left: $o-link-arrow-margin;
+    content: "";
+    transform: rotate(.5turn);
   }
 
   &.back::before {
-    content: "\e93f";
+    margin-right: $o-link-arrow-margin;
+    content: "";
   }
 
   &:hover,
   &:focus {
     text-decoration: underline;
+
+    &::after,
+    &::before {
+      background-image: escape-svg($o-link-arrow-icon-hover);
+    }
   }
 }
