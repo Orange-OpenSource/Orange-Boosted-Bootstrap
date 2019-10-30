@@ -1250,10 +1250,9 @@ $o-sortable-hover-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 
 // arrow Links
 
-$o-link-arrow-separator-padding-vertical: 0 !default;
-$o-link-arrow-separator-padding-horizontal: map-get($spacers, 2) !default;
-$o-link-arrow-color: $black !default;
-$o-link-arrow-separator-size: map-get($spacers, 2) !default;
+$o-link-arrow-padding-y: 0 !default;
+$o-link-arrow-padding-x: map-get($spacers, 2) !default;
+$o-link-arrow-size: map-get($spacers, 2) !default;
 
 // Iconography
 //

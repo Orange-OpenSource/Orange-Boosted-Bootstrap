@@ -1,48 +1,35 @@
-// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // o-link-arrow
-// --------------------------------------------------
+//
 
 .o-link-arrow {
-  font-size: $font-size-base;
   font-weight: $font-weight-bold;
-  text-decoration: none;
 
-  &::after {
+  &::after,
+  &::before {
     display: inline-block;
-    padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-    font-family: icon-orange;
-    font-size: $o-link-arrow-separator-size;
-    color: $o-link-arrow-color;
-    content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
+    padding: $o-link-arrow-padding-y $o-link-arrow-padding-x;
+    // stylelint-disable-next-line declaration-no-important, font-family-no-missing-generic-family-keyword
+    font-family: icon-orange !important;
+    font-size: $o-link-arrow-size;
+    text-decoration: $link-hover-decoration;
+    speak: none;
+
+    // Better Font Rendering =========== //
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  &:not(.back)::after {
+    content: "\e93e";
+  }
+
+  &.back::before {
+    content: "\e93f";
+  }
+
   &:hover,
   &:focus {
-    &::after {
-      color: $link-hover-color;
-      text-decoration: $link-hover-decoration;
-    }
-  }
-  // previous link
-  &.back {
-    &::after {
-      padding: 0;
-      content: ""; // Unicode space added since inline-block means non-collapsing white-space
-    }
-    &::before {
-      display: inline-block;
-      padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal $o-link-arrow-separator-padding-vertical 0;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-      font-family: icon-orange;
-      font-size: $o-link-arrow-separator-size;
-      color: $o-link-arrow-color;
-      content: "\e93f"; // Unicode space added since inline-block means non-collapsing white-space
-    }
-    &:hover,
-    &:focus {
-      &::before {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
-      }
-    }
+    text-decoration: underline;
   }
 }
