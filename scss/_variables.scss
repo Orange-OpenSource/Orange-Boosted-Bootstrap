@@ -906,7 +906,8 @@ $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $gray-500 !default;
 
 // Boosted mod
-$pagination-icon:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$pagination-icon:                   $chevron-icon !default;
 $pagination-icon-hover:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $pagination-icon-width:             .5625rem !default;
 $pagination-icon-height:            .875rem !default;
@@ -1152,11 +1153,11 @@ $breadcrumb-item-padding:           .625rem !default;
 $breadcrumb-margin-bottom:          1rem !default;
 
 $breadcrumb-bg:                     $white !default;
-$breadcrumb-divider-color:          $black !default;
-$breadcrumb-active-color:           theme-color("primary") !default;
-$breadcrumb-divider:                "\e93e" !default;
-$breadcrumb-font-family:            icon-orange !default;
-$breadcrumb-divider-font-size:      .625rem !default;
+//$breadcrumb-divider-color:          $black !default;
+//$breadcrumb-active-color:           theme-color("primary") !default;
+$breadcrumb-divider:                $chevron-icon !default;
+$breadcrumb-divider-height:         map-get($spacers, 2) !default;
+$breadcrumb-divider-width:          .4375rem !default;
 $breadcrumb-font-size:              $font-size-sm !default;
 $breadcrumb-line-height:            $line-height-sm !default;
 
