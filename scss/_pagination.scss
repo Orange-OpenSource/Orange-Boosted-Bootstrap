@@ -55,11 +55,6 @@
 }
 .page-item {
   // Boosted mod
-  &.presentation {
-    padding: map-get($spacers, 2) 0;
-    font-weight: $font-weight-bold;
-  }
-  &.presentation + .page-item,
   &:first-child {
     .page-link {
       margin-left: 0;
@@ -87,7 +82,6 @@
     }
   }
 
-  &.presentation + .page-item,
   &:first-child,
   &:last-child {
     .page-link {
