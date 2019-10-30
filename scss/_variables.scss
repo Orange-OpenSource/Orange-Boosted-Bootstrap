@@ -874,11 +874,11 @@ $dropdown-header-color:             $black !default;
 // Pagination
 
 $pagination-padding-y:              map-get($spacers, 2) !default;
-$pagination-padding-x:              .8rem !default;
-$pagination-padding-y-sm:           .375rem !default;
-$pagination-padding-x-sm:           .625rem !default;
-$pagination-padding-y-lg:           .875rem !default;
-$pagination-padding-x-lg:           1.125rem !default;
+$pagination-padding-x:              .875rem !default; // Boosted mod
+//$pagination-padding-y-sm:           .375rem !default; // Boosted mod: not used
+//$pagination-padding-x-sm:           .625rem !default; // Boosted mod: not used
+//$pagination-padding-y-lg:           .875rem !default; // Boosted mod: not used
+//$pagination-padding-x-lg:           1.125rem !default; // Boosted mod: not used
 $pagination-line-height:            1 !default;
 
 $pagination-color:                  $black !default;
@@ -886,13 +886,13 @@ $pagination-bg:                     $white !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-color:           transparent !default;
 
-$pagination-focus-box-shadow:       null !default; // Boosted mod not used
+$pagination-focus-box-shadow:       null !default; // Boosted mod: not used
 $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            $black !default;
 $pagination-hover-bg:               $white !default;
 $pagination-hover-border:           $gray-500 !default;
-$pagination-hover-border-color:     $black !default;
+//$pagination-hover-border-color:     $black !default; // Boosted mod: not used
 
 $pagination-active-color:           $white !default;
 $pagination-active-bg:              $black !default;
@@ -905,16 +905,12 @@ $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $gray-500 !default;
 
-$pagination-icon-prev:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$pagination-icon-prev-disabled:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z' fill='#{$gray-400}'/></svg>") !default;
-$pagination-icon-prev-active:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z' fill='#{$white}'/></svg>") !default;
-$pagination-icon-next:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z'/></svg>") !default;
-$pagination-icon-next-disabled:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z' fill='#{$gray-400}'/></svg>") !default;
-$pagination-icon-next-active:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M0 2l2-2 7 7-7 7-2-2 5-5-5-5z' fill='#{$white}'/></svg>") !default;
 // Boosted mod
-$pagination-min-width:              2.5rem !default;
-$pagination-min-width-lg:           3.125rem !default;
-$pagination-min-width-sm:           1.875rem !default;
+$pagination-icon:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$pagination-icon-hover:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$pagination-icon-width:             .5625rem !default;
+$pagination-icon-height:            .875rem !default;
+// end mod
 
 // Jumbotron
 

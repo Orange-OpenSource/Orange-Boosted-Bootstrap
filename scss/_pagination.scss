@@ -8,32 +8,23 @@
   position: relative;
   display: block;
   // Boosted mod
-  min-width: $pagination-min-width;
-  min-height: $pagination-min-width;
   padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: 0;
+  margin-left: map-get($spacers, 2);
   font-weight: $font-weight-bold;
   // End mod
   line-height: $pagination-line-height;
   color: $pagination-color;
-  text-decoration: none; // Boosted mod
+  text-decoration: $link-decoration; // Boosted mod
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
-
 
   &:hover,
   &:focus {
     z-index: 2;
     color: $pagination-hover-color;
-    text-decoration: none;
+    text-decoration: $link-hover-decoration; // Boosted mod
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border; // Boosted mod
-
-    // Boosted mod
-    span {
-      color: $pagination-color;
-    }
-    // end mod
   }
 
   &:focus {
@@ -43,96 +34,86 @@
   }
 
   // Boosted mod
-  span {
-    color: $pagination-bg;
-  }
-  // end mod
-
   // Opinionated: add "hand" cursor to non-disabled .page-link elements
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
-  }
+  // &:not(:disabled):not(.disabled) {
+  //  cursor: pointer;
+  // }
+  // end mod
 }
-.page-item {
-  // Boosted mod
-  &:first-child {
-    .page-link {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
-      border-color: $pagination-hover-border-color;
-      &::before {
-        position: absolute;
-        top: .6875rem;
-        left: .8125rem;
-        width: .5625rem;
-        height: .875rem;
-        content: "";
-        background-image: escape-svg($pagination-icon-prev);
-        background-repeat: no-repeat;
-      }
-      @include hover-focus() {
-        &::before {
-          background-image: escape-svg($pagination-icon-prev-active);
-        }
-      }
-    }
-    .has-label {
-      padding-right: 1.125rem;
-      padding-left: 2rem;
-    }
-  }
 
+.page-item {
+  // Boosted mod: chevrons icons
   &:first-child,
   &:last-child {
     .page-link {
-      @include hover-focus() {
-        color: $pagination-active-color;
-        background-color: $pagination-active-bg;
-        border-color: $pagination-active-border-color;
+      color: $pagination-color;
+      border-color: $pagination-color;
+
+      &:hover,
+      &:focus {
+        color: $pagination-hover-bg;
+        background-color: $pagination-hover-color;
       }
+
       &:active {
-        z-index: 1;
         color: $pagination-active-color;
         background-color: $pagination-active-item-bg;
         border-color: $pagination-active-item-border-color;
       }
     }
   }
-  // End mod
 
-  &:last-child {
-    .page-link {
-      @include border-right-radius($border-radius);
-      // Boosted mod
-      border-color: $pagination-hover-border-color;
-      &::before {
-        position: absolute;
-        top: .6875rem;
-        right: .8125rem;
-        width: .5625rem;
-        height: .875rem;
-        content: "";
-        background-image: escape-svg($pagination-icon-next);
-        background-repeat: no-repeat;
-      }
-      @include hover-focus() {
-        &::before {
-          background-image: escape-svg($pagination-icon-next-active);
-        }
-      }
-      &.has-label {
-        padding-right: 2rem;
-        padding-left: 1.125rem;
-      }
-      // End mod
+  &:first-child .page-link::before,
+  &:last-child .page-link::after {
+    display: inline-block;
+    width: $pagination-icon-width;
+    height: $pagination-icon-height;
+    vertical-align: middle;
+    content: "";
+    background-image: escape-svg($pagination-icon);
+    background-repeat: no-repeat;
+  }
+
+  &:first-child {
+    margin-left: 0;
+
+    .has-label::before {
+      margin-right: map-get($spacers, 2);
     }
   }
+
+  &:last-child {
+    .has-label::after {
+      margin-left: map-get($spacers, 2);
+    }
+
+    .page-link::after {
+      transform: rotate(.5turn);
+    }
+  }
+
+  &:first-child .page-link:hover::before,
+  &:first-child .page-link:focus::before,
+  &:first-child .page-link:active::before,
+  &:last-child .page-link:hover::after,
+  &:last-child .page-link:focus::after,
+  &:last-child .page-link:active::after {
+    background-image: escape-svg($pagination-icon-hover);
+  }
+  // End mod
 
   &.active .page-link {
     z-index: 3;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;
+
+    // Boosted mod: missing focus styles on active item
+    &:focus {
+      background-color: $pagination-active-item-bg;
+      border-color: $pagination-active-item-border-color;
+    }
+    // end mod
   }
 
   .page-link:active {
@@ -142,36 +123,19 @@
     border-color: $pagination-active-item-border-color;
   }
 
-  // Boosted mod
-  &.active:first-child .page-link::before {
-    background-image: escape-svg($pagination-icon-prev-active);
-  }
-
-  &.active:last-child .page-link::before {
-    background-image: escape-svg($pagination-icon-next-active);
-  }
-  // end mod
-
   &.disabled .page-link {
     color: $pagination-disabled-color;
     pointer-events: none;
     // Opinionated: remove the "hand" cursor set previously for .page-link
-    cursor: auto;
+    // cursor: auto; // Boosted mod
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
   }
 
   // Boosted mod
-  &.disabled:first-child .page-link::before {
-    background-image: escape-svg($pagination-icon-prev-disabled);
-  }
-
-  &.disabled:last-child .page-link::before {
-    background-image: escape-svg($pagination-icon-next-disabled);
-  }
-
-  + .page-item {
-    margin-left: map-get($spacers, 2);
+  &.disabled:first-child .page-link::before,
+  &.disabled:last-child .page-link::after {
+    opacity: .2;
   }
   // End mod
 }
@@ -179,19 +143,11 @@
 //
 // Sizing
 //
-// Boosted mod add a min size param
-.pagination-lg {
-  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg, $pagination-min-width-lg);
-  .page-item:first-child .page-link::before,
-  .page-item:last-child .page-link::before {
-    top: 1.03125rem;
-  }
-}
-
-.pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm, $pagination-min-width-sm);
-  .page-item:first-child .page-link::before,
-  .page-item:last-child .page-link::before {
-    top: .53125rem;
-  }
-}
+// Boosted mod: no sizing
+// .pagination-lg {
+//   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg, $pagination-min-width-lg);
+// }
+//
+// .pagination-sm {
+//   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm, $pagination-min-width-sm);
+// }
