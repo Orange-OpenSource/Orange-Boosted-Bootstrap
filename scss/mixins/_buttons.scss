@@ -42,16 +42,18 @@
       background-image: none; // Remove the gradient for the pressed/active state
     }
     border-color: $active-border;
+  }
 
+  // Boosted mod: ensure focus visibility on active state
+  &:not(:disabled):not(.disabled).active {
     &:focus,
     &.focus {
-      // Boosted mod: remove box-shadow
       color: color-yiq($hover-background);
       @include gradient-bg($hover-background);
       border-color: $hover-border;
-      // end mod
     }
   }
+  // end mod
 }
 
 // Boosted mod: button-outline not allowed by Orange brand's buttons stencil
