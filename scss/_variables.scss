@@ -755,7 +755,7 @@ $form-validation-states: map-merge(
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
-$zindex-stepbar:                    500 !default; // Boosted mod
+//$zindex-stepbar:                    500 !default; // Boosted mod
 $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
@@ -1282,10 +1282,7 @@ $nav-pills-focus-link-color: $white !default;
 
 // Step process bar
 $o-stepbar-height: 2.5rem !default;
-$o-stepbar-arrow-width: $spacer !default;
-$o-stepbar-mobile-padding-vertical: .3125rem !default;
-$o-stepbar-mobile-arrow-width: .75rem !default;
-$o-stepbar-mobile-arrow-height: 1.875rem !default;
+$o-stepbar-arrow-width: 1.0625rem !default;
 
 // o-table
 $o-table-icon-size: 1.8125rem !default;
