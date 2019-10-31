@@ -1264,8 +1264,17 @@ $icon-font-path:          "../fonts/" !default;
 // o-scroll-up
 //
 //
-$o-scroll-up-height: 2.5rem !default; //30px
-$o-scroll-up-width: $o-scroll-up-height !default; // 30px
+$o-scroll-up-size:       2.5rem !default; // 40px
+$o-scroll-up-icon:       $chevron-icon !default;
+$o-scroll-up-icon-hover: $chevron-icon-hover !default;
+$o-scroll-up-bottom: (
+  xs: .25rem,
+  sm: .375rem,
+  md: .75rem,
+  lg: 2rem,
+  xl: 2.5rem,
+  xxl: 3.75rem
+) !default;
 
 // Pills
 $nav-pills-focus-link-bg: theme-color("primary") !default;

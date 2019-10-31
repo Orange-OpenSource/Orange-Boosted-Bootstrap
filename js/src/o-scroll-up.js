@@ -61,7 +61,7 @@ class ScrollUp {
 
     $(window).on(Event.SCROLL, $.proxy(this._process, this))
     $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this))
-    $(this._element).addClass('is-fixed')
+    $(this._element).addClass('is-fixed d-none')
     this._process()
   }
 
@@ -109,11 +109,7 @@ class ScrollUp {
   }
 
   _process() {
-    if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
-      $(Selector.SCROLL_TOP).show()
-    } else {
-      $(Selector.SCROLL_TOP).hide()
-    }
+    $(Selector.SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()))
   }
 
   _clear() {
