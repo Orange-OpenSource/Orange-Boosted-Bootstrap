@@ -155,43 +155,5 @@
 }
 
 .tab-content-clear {
-  // padding: 1.125rem;
   border: 0;
-}
-
-// priority nav
-
-.overflow-nav {
-  display: none;
-}
-
-.o-nav-local.resizing {
-  overflow: hidden;
-}
-
-.hide {
-  display: none !important; // stylelint-disable-line declaration-no-important
-}
-
-.show-inline-block {
-  display: inline-block !important; // stylelint-disable-line declaration-no-important
-}
-
-.overflow-nav-list {
-  .nav-link {
-    border: 0;
-    &:focus {
-      outline-offset: -#{$border-width};
-    }
-  }
-
-  .nav-item:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.o-nav-local .overflow-nav-list {
-  margin-top: 1px;
-  border: 0;
-  box-shadow: 0 map-get($spacers, 1) map-get($spacers, 2) -.375rem $gray-600;
 }
