@@ -771,7 +771,7 @@ $zindex-tooltip:                    1070 !default;
 $nav-link-padding-y:                map-get($spacers, 2) !default;
 $nav-link-padding-x:                $spacer !default;
 $nav-link-disabled-color:           $gray-500 !default;
-$nav-link-disabled-hover-bg:        null !default;
+// $nav-link-disabled-hover-bg:        null !default; // Boosted mod
 
 $nav-tabs-border-color:             $black !default;
 $nav-tabs-border-width:             $border-width !default;
@@ -1275,10 +1275,6 @@ $o-scroll-up-bottom: (
   xl: 2.5rem,
   xxl: 3.75rem
 ) !default;
-
-// Pills
-$nav-pills-focus-link-bg: theme-color("primary") !default;
-$nav-pills-focus-link-color: $white !default;
 
 // Step process bar
 $o-stepbar-height: 2.5rem !default;

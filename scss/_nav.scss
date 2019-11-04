@@ -116,7 +116,20 @@
   .show > .nav-link {
     color: $nav-pills-link-active-color;
     background-color: $nav-pills-link-active-bg;
+
+    // Boosted mod: show focus!
+    &:focus {
+      outline: $border-width solid;
+      outline-offset: -#{$border-width * 3};
+    }
+    // end mod
   }
+
+  // Boosted mod
+  .nav-item + .nav-item {
+    margin-left: map-get($spacers, 1);
+  }
+  // end mod
 }
 
 
