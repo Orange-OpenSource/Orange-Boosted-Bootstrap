@@ -19,14 +19,16 @@ According to the brand, Orange footer has black background and white text color.
 <footer class="o-footer" role="contentinfo">
     <h1 class="sr-only">footer - site map & informations</h1>
     <div class="o-footer-top">
-        <div class="container-fluid">
-            <ul class="nav">
-                <li class="nav-item"><span class="nav-link">Follow us</span></li>
-            </ul>
+        <div class="container">
+            <div class="row mb-0">
+                <ul class="nav">
+                    <li class="nav-item"><span class="nav-link">Follow us</span></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="o-footer-body">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <h2>Discover</h2>
@@ -64,27 +66,31 @@ According to the brand, Orange footer has black background and white text color.
                     </ul>
                 </div>
             </div>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
-            </ul>
+            <div class="row mb-0">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Locate a store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Coverage map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Child protection</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="o-footer-bottom">
-        <div class="container-fluid">
-            <ul class="nav">
-                <li class="nav-item"><span class="nav-link">© Orange 2018-2019</span></li>
-                <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
-            </ul>
+        <div class="container">
+            <div class="row mb-0">
+                <ul class="nav">
+                    <li class="nav-item"><span class="nav-link">© Orange 2018-2019</span></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cookies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Access for all</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Safety online</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>

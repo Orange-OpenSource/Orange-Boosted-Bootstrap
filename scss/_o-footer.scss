@@ -10,6 +10,7 @@
   background-color: $black;
 
   .nav-link {
+    padding: $nav-link-padding-y;
     font-size: $font-size-sm;
 
     &:not(:hover),
