@@ -33,7 +33,7 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 
 In addition to the `.active` class, you must use `aria-selected="true"` state to represent the selected item within the list group. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the selected state of the element.
 {% endcapture %}
-
+{% include callout.html content=callout %}
 
 [comment]: # End mod
 

@@ -12,10 +12,11 @@ Use `<ul>` element with the `.o-nav-local` class, wrapped in a `<nav>` tag with 
 You also **need to choose a color scheme** by setting `.navbar-light` or `.navbar-dark` on your container `<nav>` element.
 
 {% capture callout %}
-#### Accessibility
+### Accessibility
 
 In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the local navigation. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
 {% endcapture %}
+{% include callout.html content=callout %}
 
 {% capture example %}
 <nav class="container navbar-light">

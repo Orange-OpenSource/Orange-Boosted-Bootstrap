@@ -37,10 +37,11 @@ Here's an example of all the sub-components included in a responsive light-theme
 [comment]: # Boosted mod
 
 {% capture callout %}
-#### Accessibility
+### Accessibility
 
 In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
 {% endcapture %}
+{% include callout.html content=callout %}
 
 [comment]: # End mod
 
