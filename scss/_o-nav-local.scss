@@ -7,7 +7,15 @@
   border-top: $border-width / 2 solid $gray-500;
   border-bottom: $border-width / 2 solid $gray-500;
 
-  .navbar-dark & {
+  .nav-link {
+    padding: .875rem $nav-link-padding-x;
+  }
+
+  .nav-item:first-child .nav-link {
+    padding-left: 0;
+  }
+
+  &.navbar-dark {
     border-color: $gray-900;
   }
 }
