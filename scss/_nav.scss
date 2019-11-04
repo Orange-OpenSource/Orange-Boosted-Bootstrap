@@ -52,15 +52,10 @@
   // end mod
 
   .nav-link {
-    // Boosted mod : remove border from nav-link padding in tabs
-    padding: $nav-link-padding-y calc(#{$nav-link-padding-x} - #{$nav-tabs-border-width});
-    line-height: 1rem;
-    // end mod
+    padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
     border: $nav-tabs-border-width solid transparent;
-
-    // Boosted mod : border bottom width to 0 for display
-    border-bottom-width: 0;
-    // end mod
+    border-bottom-width: 0; // Boosted mod
+    outline-offset: map-get($spacers, 2); // Boosted mod
 
     @include border-top-radius($nav-tabs-border-radius);
 
@@ -77,12 +72,9 @@
     }
 
     // Boosted mod: show focus!
-    &:not(.disabled) {
-      &:focus,
-      &.dropdown-toggle:focus {
-        outline: $border-width solid;
-        outline-offset: -#{$border-width * 3};
-      }
+    &:not(.disabled):focus {
+      outline: $nav-tabs-border-width solid $nav-tabs-link-hover-border-color;
+      outline-offset: -#{$nav-tabs-border-width};
     }
     // end mod
   }
