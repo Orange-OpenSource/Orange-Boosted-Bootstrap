@@ -10,33 +10,6 @@
 }
 // end mod
 
-//
-//    classic tab
-//
-
-.nav-tabs {
-  .nav-item:first-child {
-    margin-left: 0;
-  }
-
-  // On mobile no margin between tabs
-  @include media-breakpoint-up(lg) {
-    .nav-item + .nav-item {
-      margin-left: .5rem;
-    }
-  }
-
-  .nav-link:not(.disabled) {
-    &,
-    &.dropdown-toggle {
-      &:focus {
-        outline: $border-width solid;
-        outline-offset: -#{$border-width * 3};
-      }
-    }
-  }
-}
-
 // Responsive tabs
 //
 //

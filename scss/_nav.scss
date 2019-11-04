@@ -43,6 +43,14 @@
     margin-bottom: -$nav-tabs-border-width;
   }
 
+  // Boosted mod: margins between tabs on bigger screen
+  @include media-breakpoint-up(lg) {
+    .nav-item + .nav-item {
+      margin-left: .5rem;
+    }
+  }
+  // end mod
+
   .nav-link {
     // Boosted mod : remove border from nav-link padding in tabs
     padding: $nav-link-padding-y calc(#{$nav-link-padding-x} - #{$nav-tabs-border-width});
@@ -67,6 +75,16 @@
       background-color: transparent;
       border-color: transparent;
     }
+
+    // Boosted mod: show focus!
+    &:not(.disabled) {
+      &:focus,
+      &.dropdown-toggle:focus {
+        outline: $border-width solid;
+        outline-offset: -#{$border-width * 3};
+      }
+    }
+    // end mod
   }
 
   .nav-link.active,
