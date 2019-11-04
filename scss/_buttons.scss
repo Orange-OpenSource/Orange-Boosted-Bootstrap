@@ -173,6 +173,10 @@ fieldset:disabled a.btn {
       border-color: $white;
     }
 
+    &.btn-inverse {
+      background-color: $black;
+    }
+
     &:hover,
     &:focus {
       background-color: icon-conf($network, "color");

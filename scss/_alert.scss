@@ -62,7 +62,7 @@
   .close {
     align-self: flex-start;
     padding: $alert-padding-x;
-    margin: -#{$alert-padding-x / 4} -#{$alert-padding-x} 0 auto;
+    margin: -#{$alert-padding-x / 4} -#{$alert-padding-x} -#{$alert-padding-x / 4} auto;
     color: inherit;
   }
   // end mod
