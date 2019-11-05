@@ -83,7 +83,6 @@ Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card
         </button>
       </h2>
     </div>
-
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -124,6 +123,108 @@ Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card
 
 [comment]: # Boosted mod
 
+#### Sizes
+
+You may use [buttons' sizes utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#sizes) to increase or decrease accordion size.
+
+{% capture example %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="accordion" id="accordionExample-3">
+          <div class="card">
+            <div class="card-header" id="headingOne-3">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-sm" type="button" data-toggle="collapse" data-target="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+                  Collapsible Group Item #1
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne-3" class="collapse show" aria-labelledby="headingOne-3" data-parent="#accordionExample-3">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo-3">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-3" aria-expanded="false" aria-controls="collapseTwo-3">
+                  Collapsible Group Item #2
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo-3" class="collapse" aria-labelledby="headingTwo-3" data-parent="#accordionExample-3">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree-3">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-3" aria-expanded="false" aria-controls="collapseThree-3">
+                  Collapsible Group Item #3
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree-3" class="collapse" aria-labelledby="headingThree-3" data-parent="#accordionExample-3">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+    <div class="accordion" id="accordionExample-4">
+      <div class="card">
+        <div class="card-header" id="headingOne-4">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-lg" type="button" data-toggle="collapse" data-target="#collapseOne-4" aria-expanded="true" aria-controls="collapseOne-4">
+              Collapsible Group Item #1
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne-4" class="collapse show" aria-labelledby="headingOne-4" data-parent="#accordionExample-4">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo-4">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-4" aria-expanded="false" aria-controls="collapseTwo-4">
+              Collapsible Group Item #2
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo-4" class="collapse" aria-labelledby="headingTwo-4" data-parent="#accordionExample-4">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree-4">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-4" aria-expanded="false" aria-controls="collapseThree-4">
+              Collapsible Group Item #3
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree-4" class="collapse" aria-labelledby="headingThree-4" data-parent="#accordionExample-4">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 ### Multiple openable
 
 Simply add the `.multi` class on each panel to get multi openable accordions.
@@ -133,12 +234,11 @@ Simply add the `.multi` class on each panel to get multi openable accordions.
   <div class="card multi">
     <div class="card-header" role="tab" id="headingOne-1">
       <h5 class="mb-0">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne-1" role="button" aria-expanded="true" aria-controls="collapseOne-1">
+        <a data-toggle="collapse" data-parent="#accordionExample-2" href="#collapseOne-1" role="button" aria-expanded="true" aria-controls="collapseOne-1">
           Collapsible Group Item #1
         </a>
       </h5>
     </div>
-
     <div id="collapseOne-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne-1">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -148,7 +248,7 @@ Simply add the `.multi` class on each panel to get multi openable accordions.
   <div class="card multi">
     <div class="card-header" role="tab" id="headingTwo-1">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo-1" role="button" aria-expanded="false" aria-controls="collapseTwo-1">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionExample-2" href="#collapseTwo-1" role="button" aria-expanded="false" aria-controls="collapseTwo-1">
           Collapsible Group Item #2
         </a>
       </h5>
@@ -162,7 +262,7 @@ Simply add the `.multi` class on each panel to get multi openable accordions.
   <div class="card multi">
     <div class="card-header" role="tab" id="headingThree-1">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree-1" role="button" aria-expanded="false" aria-controls="collapseThree-1">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionExample-2" href="#collapseThree-1" role="button" aria-expanded="false" aria-controls="collapseThree-1">
           Collapsible Group Item #3
         </a>
       </h5>

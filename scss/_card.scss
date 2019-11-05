@@ -265,49 +265,70 @@
 .accordion {
   // Boosted mod
   .card {
-    margin-bottom: 0;
-    border: 0;
-    border-bottom: $border-width / 2 solid $gray-500;
+    position: static;
+    border-color: $gray-500;
+    border-width: 0 0 $border-width;
     &:first-child {
-      border-top: $border-width / 2 solid $gray-500;
+      border-width: $border-width 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      border-width: 0 0 $border-width / 2;
+      &:first-child {
+        border-width: $border-width / 2 0;
+      }
     }
   }
 
   .card-header {
     padding: 0;
-    background-color: $white;
+    background: none;
     border: 0;
-
-    &,
-    h5 {
-      margin: 0;
-      font-size: $font-size-base;
-      font-weight: $font-weight-bold;
-      line-height: 1;
-    }
 
     button,
     a {
-      position: relative;
-      display: block;
-      width: 100%;
-      padding: 1rem 2.125rem 1rem 0;
-      line-height: 1.125rem;
-      text-align: left;
+      display: flex;
+      width: calc(100% + (.875rem * 2));
+      padding: .875rem;
+      margin: 0 -.875rem;
       border: 0;
 
       &::after {
-        position: absolute;
-        top: 1.3125rem;
-        right: .625rem;
+        align-self: center;
         width: .875rem;
         height: .4375rem;
+        margin-left: auto;
         content: "";
         background-image: escape-svg($accordion-arrow-icon);
       }
 
-      // stylelint-disable-next-line selector-no-qualifying-type
-      &[aria-expanded="true"]::after {
+      &:hover::after,
+      &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
+        background-image: escape-svg($accordion-arrow-icon-active);
+      }
+
+      &:focus {
+        z-index: 2;
+        outline-offset: 0;
+      }
+    }
+
+    .btn-sm {
+      width: calc(100% + (.75rem * 2));
+      padding: .75rem;
+      margin: 0 -.75rem;
+    }
+
+    .btn-lg {
+      width: calc(100% + (#{map-get($spacers, 3)} * 2));
+      padding: map-get($spacers, 3);
+      margin: 0 -#{map-get($spacers, 3)};
+    }
+
+    [aria-expanded="true"] {
+      color: $primary;
+
+      &::after {
         transform: rotate(180deg);
       }
     }
@@ -316,14 +337,5 @@
   .card-body {
     padding: 0 1.5rem 0 0;
     margin: 0 0 $spacer;
-  }
-}
-// For mobile display emphase the border
-@include media-breakpoint-down(sm) {
-  .accordion .card {
-    border-bottom-width: $border-width;
-    &:first-child {
-      border-top-width: $border-width;
-    }
   }
 }
