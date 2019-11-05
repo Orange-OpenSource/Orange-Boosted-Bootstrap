@@ -162,14 +162,14 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 {% endcapture %}
 {% include example.html content=example %}
 
-### Nav light
+### Nav tabs light
 
-A gray line is set under the items. An active item is underlined by an orange line.
+Nav tabs light differs only visually, with a full width bottom border and a different active state.
 
 {% capture example %}
-<ul class="nav o-nav-light">
+<ul class="nav nav-tabs nav-tabs-light">
   <li class="nav-item">
-    <a class="nav-link o-active" href="#" aria-current="page">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>

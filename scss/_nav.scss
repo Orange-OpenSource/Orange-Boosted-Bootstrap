@@ -94,6 +94,35 @@
   }
 }
 
+// Boosted mod
+.nav-tabs-light {
+  padding-left: 0;
+  border-bottom: $nav-tabs-border-width / 2 solid $gray-600;
+
+  .nav-item {
+    margin-bottom: $nav-tabs-border-width / -2;
+  }
+
+  .nav-link  {
+    border-width: 0 0 $nav-tabs-border-width * 2;
+
+    @include hover-focus() {
+      color: $primary;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.active {
+      border-color: transparent transparent $primary;
+    }
+
+    &:not(.disabled):focus {
+      outline-color: currentColor;
+    }
+  }
+}
+// end mod
+
 
 //
 // Pills
