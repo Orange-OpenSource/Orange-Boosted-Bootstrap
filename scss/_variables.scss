@@ -511,7 +511,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, outline-offset .15s ease-in-out !default;
 
 
 // Forms
@@ -891,7 +891,7 @@ $pagination-border-width:           $border-width !default;
 $pagination-border-color:           transparent !default;
 
 $pagination-focus-box-shadow:       null !default; // Boosted mod: not used
-$pagination-focus-outline:          0 !default;
+$pagination-focus-outline:          $pagination-border-width solid $gray-500 !default; // Boosted mod
 
 $pagination-hover-color:            $black !default;
 $pagination-hover-bg:               $white !default;

@@ -11,7 +11,9 @@
   color: $close-color;
   text-shadow: $close-text-shadow;
   // Boosted mod
+  @include transition($transition-focus);
   background: escape-svg($close-icon) no-repeat center / $spacer;
+  outline-offset: map-get($spacers, 2);
   opacity: 1;
   .bg-dark & {
     background-image: escape-svg($close-icon-dark);
@@ -25,6 +27,7 @@
 
   @include hover-focus() {
     outline: $border-width solid;
+    outline-offset: 0;
     &:not(:disabled):not(.disabled) {
       opacity: 1;
     }

@@ -77,7 +77,7 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-secondary btn-inverse my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -221,7 +221,7 @@ Place various form controls and components within a navbar with `.form-inline`.
 <nav class="navbar navbar-dark">
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-secondary btn-inverse my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>
 {% endcapture %}
@@ -234,7 +234,7 @@ Immediate children elements in `.navbar` use flex layout and will default to `ju
   <a class="navbar-brand">Navbar</a>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-secondary btn-inverse my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>
 {% endcapture %}
@@ -261,7 +261,7 @@ Various buttons are supported as part of these navbar forms, too. This is also a
 {% capture example %}
 <nav class="navbar navbar-dark">
   <form class="form-inline">
-    <button class="btn btn-outline-success" type="button">Main button</button>
+    <button class="btn btn-secondary btn-inverse" type="button">Main button</button>
     <button class="btn btn-sm btn-secondary" type="button">Smaller button</button>
   </form>
 </nav>
@@ -475,7 +475,7 @@ With no `.navbar-brand` shown in lowest breakpoint:
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-secondary btn-inverse my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -505,7 +505,7 @@ With a brand name shown on the left and toggler on the right:
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-secondary btn-inverse my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -535,7 +535,7 @@ With a toggler on the left and brand name on the right:
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-secondary btn-inverse my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>

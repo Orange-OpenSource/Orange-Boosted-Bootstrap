@@ -7,7 +7,7 @@
   color: $color; // Boosted mod: allowing white on Orange…
   @include gradient-bg($background);
   border-color: $border;
-  // @include box-shadow($btn-box-shadow); // Boosted mod: disable box-shadow
+  @include box-shadow($btn-box-shadow);
 
   // Boosted mod: replace hover by hover+focus because we remove box-shadow
   &:hover,
@@ -16,6 +16,7 @@
     color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
     border-color: $hover-border;
+    outline-color: $hover-border;
   }
   // end mod
 
@@ -51,6 +52,7 @@
       color: color-yiq($hover-background);
       @include gradient-bg($hover-background);
       border-color: $hover-border;
+      outline-color: $hover-border;
     }
   }
   // end mod

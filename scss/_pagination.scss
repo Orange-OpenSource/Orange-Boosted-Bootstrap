@@ -17,6 +17,8 @@
   text-decoration: $link-decoration; // Boosted mod
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
+  @include transition($transition-focus); // Boosted mod
+  outline-offset: $border-width * 3; // Boosted mod
 
   &:hover,
   &:focus {
@@ -30,6 +32,7 @@
   &:focus {
     z-index: 3;
     outline: $pagination-focus-outline;
+    outline-offset: -#{$border-width};
     box-shadow: $pagination-focus-box-shadow;
   }
 
@@ -53,6 +56,7 @@
       &:focus {
         color: $pagination-hover-bg;
         background-color: $pagination-hover-color;
+        outline-color: $pagination-hover-color;
       }
 
       &:active {
@@ -112,6 +116,7 @@
     &:focus {
       background-color: $pagination-active-item-bg;
       border-color: $pagination-active-item-border-color;
+      outline-color: $pagination-active-item-border-color;
     }
     // end mod
   }
@@ -121,6 +126,7 @@
     color: $pagination-active-color;
     background-color: $pagination-active-item-bg;
     border-color: $pagination-active-item-border-color;
+    outline-color: $pagination-active-item-border-color;
   }
 
   &.disabled .page-link {

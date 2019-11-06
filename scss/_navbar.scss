@@ -62,7 +62,7 @@
   display: inline-block;
   align-self: flex-end; // Boosted mod
   padding: 0; // Boosted mod
-  margin: map-get($spacers, 1); // Boosted mod
+  margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem}; // Boosted mod
   @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // Boosted mod
   line-height: inherit;
@@ -99,7 +99,6 @@
     flex-wrap: wrap;
     width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
-    margin-bottom: .25rem;
   }
   // end mod
 }
@@ -150,7 +149,7 @@
     }
 
     &:focus {
-      outline-offset: 0;
+      outline-offset: -#{$border-width};
     }
     // end mod
   }
@@ -314,12 +313,11 @@
           padding-bottom: $spacer / 10;
 
           .navbar-brand {
-            margin-bottom: .2rem;
+            margin-bottom: #{map-get($spacers, 2) + .2rem};
 
             img {
               width: $navbar-brand-logo-height;
               height: $navbar-brand-logo-height;
-              margin-bottom: map-get($spacers, 2);
             }
           }
 

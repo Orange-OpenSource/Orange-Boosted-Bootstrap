@@ -240,6 +240,16 @@ a {
   color: $link-color;
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
+  // Boosted mod: back from accessibility plugin
+  outline-offset: $border-width * 2;
+  @include transition($transition-focus);
+
+  @include focus() {
+    color: theme-color("primary");
+    outline: $border-width solid;
+    outline-offset: -#{$border-width};
+  }
+  // end mod
 
   @include hover() {
     color: $link-hover-color;
@@ -252,8 +262,13 @@ p a,
 main li a {
   text-decoration: underline;
 
-  @include hover-focus() {
+  @include hover() {
     text-decoration: underline;
+  }
+
+  @include focus() {
+    text-decoration: underline;
+    outline-offset: $border-width;
   }
 }
 // End mod

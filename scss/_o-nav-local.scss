@@ -9,6 +9,10 @@
 
   .nav-link {
     padding: .875rem $nav-link-padding-x;
+
+    &:focus {
+      outline-offset: -#{$border-width};
+    }
   }
 
   .nav-item:first-child .nav-link {

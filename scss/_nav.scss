@@ -131,6 +131,10 @@
 .nav-pills {
   .nav-link {
     @include border-radius($nav-pills-border-radius);
+
+    &:focus {
+      outline-offset: -#{$border-width};
+    }
   }
 
   .nav-link.active,
@@ -140,8 +144,7 @@
 
     // Boosted mod: show focus!
     &:focus {
-      outline: $border-width solid;
-      outline-offset: -#{$border-width * 3};
+      outline: $border-width solid $nav-pills-link-active-bg;
     }
     // end mod
   }

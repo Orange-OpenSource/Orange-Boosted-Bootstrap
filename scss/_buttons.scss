@@ -17,6 +17,7 @@
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
+  outline-offset: $border-width * 2;
 
   @include hover() {
     color: $body-color;
@@ -25,7 +26,8 @@
 
   &:focus,
   &.focus {
-    outline: 0;
+    outline: $border-width solid; // Boosted mod
+    outline-offset: -#{$border-width}; // Boosted mod
     box-shadow: $btn-focus-box-shadow;
   }
 
@@ -118,8 +120,6 @@ fieldset:disabled a.btn {
   // Boosted mod
   // stylelint-disable-next-line declaration-no-important
   border-color: transparent !important;
-  outline-offset: $border-width * 2;
-  @include transition($transition-focus);
 
   &.btn-inverse {
     color: $white;
@@ -133,8 +133,6 @@ fieldset:disabled a.btn {
 
   &:focus,
   &.focus {
-    outline: $border-width solid; // Boosted mod
-    outline-offset: -#{$border-width}; // Boosted mod
     box-shadow: $input-btn-focus-box-shadow;
   }
 
@@ -171,6 +169,7 @@ fieldset:disabled a.btn {
     &.btn-inverse {
       background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
       border-color: $white;
+      outline-color: $white;
     }
 
     &.btn-inverse {
@@ -181,11 +180,13 @@ fieldset:disabled a.btn {
     &:focus {
       background-color: icon-conf($network, "color");
       border-color: icon-conf($network, "color");
+      outline-color: icon-conf($network, "color");
     }
 
     &:active {
       background-color: $black;
       border-color: $black;
+      outline-color: $black;
     }
   }
 }
