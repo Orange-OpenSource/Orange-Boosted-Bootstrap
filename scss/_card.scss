@@ -288,14 +288,14 @@
     button,
     a {
       display: flex;
-      width: calc(100% + (.875rem * 2));
-      padding: .875rem;
-      margin: 0 -.875rem;
+      width: calc(100% + (#{$card-accordion-spacer} * 2));
+      padding: $card-accordion-spacer;
+      margin: 0 -#{$card-accordion-spacer};
       border: 0;
 
       &::after {
         align-self: center;
-        width: .875rem;
+        width: $card-accordion-spacer;
         height: .4375rem;
         margin-left: auto;
         content: "";
@@ -314,9 +314,9 @@
     }
 
     .btn-sm {
-      width: calc(100% + (.75rem * 2));
-      padding: .75rem;
-      margin: 0 -.75rem;
+      width: calc(100% + (#{$card-spacer-y} * 2));
+      padding: $card-spacer-y;
+      margin: 0 -#{$card-spacer-y};
     }
 
     .btn-lg {
