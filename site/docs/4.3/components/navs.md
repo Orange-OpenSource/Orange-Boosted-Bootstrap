@@ -550,7 +550,7 @@ Responsive tabs allow tab layouts to be displayed as accordions on a mobile brow
 
 {% capture example %}
 <div class="o-tab-container" role="tablist">
-  <a class="o-tab-heading" href="#" id="tab1" role="tab">Tab 1</a>
+  <a class="o-tab-heading" href="#" id="tab1" role="tab" aria-expanded="true">Tab 1</a>
   <div class="o-tab-content show" id="tab-1-content" role="tabpanel">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
   <a class="o-tab-heading" href="#" id="tab2" role="tab">Tab 2</a>
   <div class="o-tab-content" id="tab-2-content" role="tabpanel">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>

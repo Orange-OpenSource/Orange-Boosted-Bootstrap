@@ -1,147 +1,119 @@
-// Responsive tabs
 //
+// Responsive tabs
 //
 
 .o-tab-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  padding: 0 $card-accordion-spacer;
+  border-bottom: $nav-tabs-border-width / 2 solid $gray-500;
+}
+
+.o-tab-content {
+  display: none;
+  padding: 0 1.5rem 0 0;
+  margin: 0 0 $spacer;
+
+  // @TODO use aria-hidden!
+  &.show {
+    display: block;
+  }
+}
+
+.o-tab-heading {
+  position: relative;
+  display: flex;
+  width: inherit;
+  padding: $card-accordion-spacer;
+  margin: inherit;
+  font-weight: $font-weight-bold;
+  border-top: $nav-tabs-border-width / 2 solid $gray-500;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    z-index: 2;
+    color: $nav-tabs-link-active-color;
+    outline: $nav-tabs-border-width solid $nav-tabs-link-hover-border-color;
+    outline-offset: 0;
+  }
+
+  &[aria-expanded="true"] {
+    color: $primary;
+    background-color: $nav-tabs-link-hover-color;
+    outline-color: currentColor;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .o-tab-container {
+    width: calc(100% + (#{$card-accordion-spacer} * 2));
+    margin: 0 -#{$card-accordion-spacer};
+  }
 
   .o-tab-heading {
-    position: relative;
-    display: inline-block;
-    padding: .625rem 1.25rem;
-    margin-left: .5rem;
-    font-weight: $font-weight-bold;
-    color: $black;
-    text-align: center;
-    background-color: $white;
+    &::after {
+      align-self: center;
+      width: $card-accordion-spacer;
+      height: .4375rem;
+      margin-left: auto;
+      content: "";
+      background-image: escape-svg($accordion-arrow-icon);
+    }
+
+    &:hover::after,
+    &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
+      background-image: escape-svg($accordion-arrow-icon-active);
+    }
+
+    &[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .o-tab-container {
+    flex-direction: row;
     border: 0;
-    border-bottom: 2px solid $black;
-    @include transition($transition-focus); // Boosted mod
-
-    &:first-child {
-      margin-left: 0;
-      border-top: 0;
-    }
-
-    &[aria-expanded="false"] {
-      border-bottom: 2px solid $black;
-    }
-
-    &[aria-expanded="true"] {
-      padding-top: .5rem;
-      border: 2px solid $black;
-      border-bottom: 0;
-    }
-
-    &:focus {
-      outline-offset: -#{$border-width * 2};
-    }
-
-    &:hover:not([aria-expanded="true"]) {
-      color: $white;
-      background-color: $black;
-    }
   }
 
   .o-tab-content {
-    display: none;
-    align-self: flex-end;
+    flex: 1 0 100%;
     order: 1;
-    width: 100%;
-    padding: map-get($spacers, 2) $spacer;
-    background-color: $white;
-    box-shadow: 0 -2px 0 $black;
-
-    &.show {
-      display: block;
-    }
+    padding: 1.125rem;
+    margin: 0;
+    border: $nav-tabs-border-width solid;
   }
 
-  @include media-breakpoint-down(sm) {
-    .o-tab-heading {
-      flex-grow: 1;
-      margin-left: 0;
-      text-align: center;
+  .o-tab-heading {
+    padding: $navbar-padding-y map-get($spacers, 4);
+    margin-bottom: -$nav-tabs-border-width;
+    font-weight: $font-weight-bold;
+    border: $nav-tabs-border-width solid transparent;
+    border-bottom-color: $nav-tabs-border-color;
 
-      &[aria-expanded="false"] {
-        color: $white;
-        background-color: $gray-700;
-
-        &:active {
-          color: $white;
-          background-color: $primary;
-        }
-      }
+    & ~ & {
+      margin-left: .5rem;
     }
 
-    &.accordion-layout {
-      display: block;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $nav-tabs-link-hover-color;
+      background-color: $nav-tabs-link-hover-bg;
+    }
 
-      .o-tab-heading {
-        position: relative;
-        display: block;
-        padding: .9375rem 0;
-        margin-left: 0;
-        font-weight: $font-weight-bold;
-        color: $black;
-        text-align: left;
-        background-color: $white;
-        border: 0;
+    &:focus {
+      outline-offset: -#{$nav-tabs-border-width};
+    }
 
-        &:focus {
-          outline-offset: 0;
-        }
-
-        &:hover {
-          color: $primary;
-          background-color: $white;
-        }
-
-        &[aria-expanded="false"] {
-          border-bottom: 1px $gray-500 solid;
-        }
-
-        &[aria-expanded="true"]::after {
-          transform: rotate(180deg);
-        }
-
-        &:first-child {
-          margin-left: 0;
-          border-top: 1px solid $gray-500;
-        }
-
-        &::after {
-          position: absolute;
-          top: 1.375rem;
-          right: .625rem;
-          width: .875rem;
-          height: .4375rem;
-          content: "";
-          background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>"));
-        }
-      }
-
-      .o-tab-content {
-        padding-left: 0;
-        border-bottom: 1px $gray-500 solid;
-        box-shadow: none;
-      }
+    &[aria-expanded="true"] {
+      color: $nav-tabs-link-hover-bg;
+      background-color: $nav-tabs-link-hover-color;
+      border-color: $nav-tabs-border-color $nav-tabs-border-color $white $nav-tabs-border-color;
     }
   }
-}
-
-.tab-content {
-  padding: 1.125rem;
-  border-color: $black;
-  border-style: solid;
-  border-width: 0 2px 2px;
-
-  .tab-pane p {
-    margin-bottom: 0;
-  }
-}
-
-.tab-content-clear {
-  border: 0;
 }

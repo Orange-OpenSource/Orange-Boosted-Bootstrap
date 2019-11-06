@@ -179,6 +179,12 @@
 // Hide tabbable panes to start, show them when `.active`
 
 .tab-content {
+  // Boosted mod
+  padding: 1.125rem;
+  border: $nav-tabs-border-width solid;
+  border-top: 0;
+  // end mod
+
   > .tab-pane {
     display: none;
   }
@@ -186,3 +192,9 @@
     display: block;
   }
 }
+
+// Boosted mod
+.tab-pane > :last-child {
+  margin-bottom: 0;
+}
+// end mod
