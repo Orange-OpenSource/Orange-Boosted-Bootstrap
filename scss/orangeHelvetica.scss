@@ -16,6 +16,7 @@
 
 // Use local() Helvetica Neue when possible:
 // @see https://www.broken-links.com/2009/06/30/checking-for-installed-fonts-with-font-face-and-local/
+// @note not using local("Helvetica 55 Roman") / local("Helvetica 75 Bold") since they're kinda broken on Windows
 // @see https://www.adobe.com/content/dam/acom/en/devnet/font/pdfs/5090.FontNameList.pdf
 
 @import "functions";
@@ -26,7 +27,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
+  src: local("HelveticaNeue"), url("#{$icon-font-path}HelvNeue55_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue55_W1G.woff") format("woff");
 }
 
 @font-face {
@@ -34,5 +35,5 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
+  src: local("HelveticaNeue-Bold"), url("#{$icon-font-path}HelvNeue75_W1G.woff2") format("woff2"), url("#{$icon-font-path}HelvNeue75_W1G.woff") format("woff");
 }
