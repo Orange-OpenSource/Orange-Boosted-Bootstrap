@@ -43,3 +43,27 @@
     }
   }
 }
+
+// Boosted mod: table states color
+@mixin table-row-variant-border($state, $color) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table .#{$state} {
+    &,
+    td,
+    th {
+      background-color: $color;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover tbody .#{$state} {
+    &:hover,
+    &:hover td,
+    &:hover th {
+      background-color: darken($color, 5%);
+    }
+  }
+}
+// end mod

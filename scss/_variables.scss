@@ -413,8 +413,9 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .625rem !default; // 10px;
-$table-cell-padding-sm:       .3125rem !default; // 5px;
+$table-cell-padding:          .71875rem !default; // 11.5px;
+$table-cell-padding-sm:       .375rem !default; // 6px;
+$table-cell-padding-lg:       .90625rem !default; // 14.5px;
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
@@ -1283,7 +1284,7 @@ $o-stepbar-height: 2.5rem !default;
 $o-stepbar-arrow-width: 1.0625rem !default;
 
 // o-table
-$o-table-icon-size: 1.8125rem !default;
+$o-table-icon-size: map-get($spacers, 4) !default;
 $o-table-caption: .75rem !default;
 
 // btn-social
