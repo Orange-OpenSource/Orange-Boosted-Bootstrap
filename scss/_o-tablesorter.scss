@@ -1,8 +1,4 @@
 //
-// Tables
-//
-
-//
 // Table sorter
 //
 // stylelint-disable selector-class-pattern
@@ -24,16 +20,12 @@
   }
 }
 
-.tablesorter-header {
-  position: relative;
-}
-
 .tablesorter-header-inner span {
-  padding-right: 1.6875rem;
+  display: flex;
 
   &::after {
-    position: absolute;
-    top: 45%;
+    display: inline-block;
+    align-self: center;
     width: .875rem;
     height: $caret-width;
     margin-left: map-get($spacers, 2);
@@ -50,11 +42,10 @@
   }
 }
 
-.tablesorter-headerUnSorted .tablesorter-header-inner {
+.tablesorter-headerUnSorted {
   &:hover,
   &:focus {
     span::after {
-      top: 31%;
       height: 1.0625rem;
       background-image: escape-svg($o-sortable-hover-icon);
     }
