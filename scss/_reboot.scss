@@ -44,7 +44,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 //    the `inherit` value on things like `<th>` elements.
 // 4. Prevent faux-bold/italic
 //    @link https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
-// 5. text-rendering
 
 body {
   margin: 0; // 1
@@ -57,8 +56,8 @@ body {
   text-align: left; // 3
   letter-spacing: $letter-spacing-base; // Boosted mod
   background-color: $body-bg; // 2
-  -webkit-font-smoothing: subpixel-antialiased; // Boosted mod // 5
-  text-rendering: optimizeSpeed; // Boosted mod // 5
+  -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
+  text-rendering: optimizeSpeed; // Boosted mo
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
