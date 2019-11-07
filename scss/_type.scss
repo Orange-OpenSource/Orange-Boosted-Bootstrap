@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5, h6,
   line-height: $headings-line-height;
   color: $headings-color;
   letter-spacing: $letter-spacing-base; // Boosted mod
+  -webkit-font-smoothing: antialiased; // Boosted mod
+  -moz-osx-font-smoothing: grayscale; // Boosted mod
+  text-rendering: optimizeLegibility; // Boosted mod
 }
 
 // Boosted mod: headings and displays together
@@ -21,6 +24,9 @@ h1, h2, h3, h4, h5, h6,
 // Mobile first, obviously
 [class*="display-"] {
   font-weight: $display-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .display-1 {
