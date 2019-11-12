@@ -268,7 +268,7 @@ $grid-row-columns:            6 !default;
 $line-height-lg:              calc(20 / 18) !default;
 $line-height-sm:              calc(16 / 14) !default;
 
-$border-width:                2px !default;
+$border-width:                .125rem !default;
 $border-color:                theme-color("dark") !default;
 
 $border-radius:               .25rem !default;
@@ -686,14 +686,14 @@ $custom-select-height-lg:           $input-height-lg !default;
 $custom-range-track-width:          100% !default;
 $custom-range-track-height:         .5rem !default;
 $custom-range-track-cursor:         pointer !default;
-$custom-range-track-bg:             $gray-600 !default;
+$custom-range-track-bg:             $gray-400 !default;
 $custom-range-track-border-radius:  null !default;
 $custom-range-track-box-shadow:     inset 0 .25rem .25rem rgba($black, .1) !default;
 
-$custom-range-thumb-width:                   1rem !default;
+$custom-range-thumb-width:                   .875rem !default;
 $custom-range-thumb-height:                  $custom-range-thumb-width !default;
-$custom-range-thumb-bg:                      $component-active-bg !default;
-$custom-range-thumb-border:                  0 !default;
+$custom-range-thumb-bg:                      $white !default;
+$custom-range-thumb-border:                  $border-width solid $black !default;
 $custom-range-thumb-border-radius:           50% !default;
 $custom-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
 $custom-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg, 0 0 0 .125rem $black !default;
