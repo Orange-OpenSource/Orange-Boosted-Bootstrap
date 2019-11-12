@@ -466,7 +466,7 @@ $input-btn-padding-x-sm:      .625rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      .594rem !default;
+$input-btn-padding-y-lg:      .8125rem !default;
 $input-btn-padding-x-lg:      1.25rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
@@ -597,13 +597,14 @@ $custom-control-indicator-bg:           $white !default;
 
 $custom-control-indicator-bg-size:      1rem !default;
 $custom-control-indicator-box-shadow:   null !default;
-$custom-control-indicator-border-color: $gray-700 !default;
+$custom-control-indicator-border-color: $gray-500 !default;
 $custom-control-indicator-border-width: $input-border-width !default;
 
 $custom-control-label-color:            null !default;
 
-$custom-control-indicator-disabled-bg:          $gray-500 !default;
-$custom-control-label-disabled-color:           $gray-500 !default;
+$custom-control-indicator-disabled-bg:          $gray-300 !default;
+$custom-control-indicator-disabled-checked-bg:  $gray-500 !default;
+$custom-control-label-disabled-color:           $text-muted !default;
 
 $custom-control-indicator-checked-color:        $white !default;
 $custom-control-indicator-checked-bg:           theme-color("primary") !default;
@@ -633,13 +634,14 @@ $custom-radio-indicator-border-radius:          50% !default;
 
 $custom-switch-width:                           $custom-control-indicator-size * 3 !default;
 $custom-switch-height:                          $custom-control-indicator-size * 1.5 !default;
-$custom-switch-indicator-border-radius:         null !default; // Boosted mod : not rounded
+// $custom-switch-indicator-border-radius:         null !default; // Boosted mod : not rounded
 // Boosted mod
 // $custom-switch-indicator-size:                  calc(#{$custom-control-indicator-size} - #{$custom-control-indicator-border-width * 4}) !default;
 $custom-switch-indicator-width:                 calc(#{$custom-switch-width} / 2 - #{$custom-control-indicator-border-width * 2}) !default;
 $custom-switch-indicator-height:                calc(#{$custom-switch-height} - #{$custom-control-indicator-border-width * 2}) !default;
 // end mod
 $custom-switch-indicator-bg-color:              $white !default;
+$custom-switch-indicator-border-color:          $black !default;
 
 $custom-select-padding-y:           .4375rem !default;
 $custom-select-padding-x:           .5rem !default;
@@ -653,9 +655,9 @@ $custom-select-color:               $input-color !default;
 $custom-select-disabled-color:      $gray-500 !default;
 $custom-select-bg:                  $white !default;
 $custom-select-disabled-bg:         $gray-300 !default;
-$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
-$custom-select-indicator-color:     null !default;
-$custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
+$custom-select-bg-size:             1rem 1.25rem !default; // Boosted mod: using SVG
+// $custom-select-indicator-color:     null !default; // Boosted mod
+$custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
 $custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: calc((1em + #{2 * $custom-select-padding-y}) * 3 / 4 + #{$custom-select-padding-x + $custom-select-indicator-padding}) !default;
@@ -1247,7 +1249,7 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 // Boosted mod
 // Accordions
 
-$accordion-arrow-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$accordion-arrow-icon:        $custom-select-indicator !default;
 $accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
 $o-sortable-hover-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7,17 0,10 h 14 l -7,7 z'/><path d='M 7,0 14,7 0,7 7,0 z'/></svg>") !default;
 

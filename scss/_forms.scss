@@ -4,9 +4,12 @@
 // Orange brand, labels are always bold
 label {
   font-weight: $font-weight-bold;
-  &.disabled {
+
+  &.disabled,
+  [disabled] & {
     color: $custom-control-label-disabled-color;
   }
+
   &.is-required::after {
     margin-left: 6px;
     font-weight: $font-weight-bold;
