@@ -960,11 +960,11 @@ $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   1 !default; // Boosted mod
 $tooltip-padding-y:                 $spacer !default;
 $tooltip-padding-x:                 $spacer !default;
-$tooltip-margin:                    map-get($spacers, 1) !default;
+$tooltip-margin:                    map-get($spacers, 1) !default; // Boosted mod
 $tooltip-font-weight:               $font-weight-bold !default;
 
-$tooltip-arrow-width:               .625rem !default;
-$tooltip-arrow-height:              .625rem !default;
+$tooltip-arrow-width:               map-get($spacers, 2) !default; // Boosted mod
+$tooltip-arrow-height:              map-get($spacers, 1) !default; // Boosted mod
 $tooltip-arrow-color:               $tooltip-bg !default;
 
 // Form tooltips must come after regular tooltips
