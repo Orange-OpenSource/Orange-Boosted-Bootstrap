@@ -402,7 +402,7 @@ $dt-font-weight:              $font-weight-bold !default;
 $kbd-box-shadow:              null !default;
 $nested-kbd-font-weight:      $font-weight-bold !default;
 
-$list-inline-padding:         .3125rem !default;
+$list-inline-padding:         map-get($spacers, 1) !default;
 
 $mark-bg:                     theme-color("primary") !default;
 
@@ -461,7 +461,7 @@ $input-btn-focus-width:       .125rem !default;
 // $input-btn-focus-color:       rgba(theme-color("primary"), .25) !default; // Boosted mod
 $input-btn-focus-box-shadow:  null !default;
 
-$input-btn-padding-y-sm:      .3125rem !default;
+$input-btn-padding-y-sm:      map-get($spacers, 1) !default;
 $input-btn-padding-x-sm:      .625rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
@@ -578,7 +578,7 @@ $form-check-input-margin-y:             .3rem !default;
 $form-check-input-margin-x:             .25rem !default;
 
 $form-check-inline-margin-x:            .75rem !default;
-$form-check-inline-input-margin-x:      .3125rem !default;
+$form-check-inline-input-margin-x:      map-get($spacers, 1) !default;
 
 $form-grid-gutter-width:                10px !default;
 $form-group-margin-bottom:              $spacer !default;
@@ -958,7 +958,7 @@ $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   1 !default; // Boosted mod
 $tooltip-padding-y:                 $spacer !default;
 $tooltip-padding-x:                 $spacer !default;
-$tooltip-margin:                    .3125rem !default;
+$tooltip-margin:                    map-get($spacers, 1) !default;
 $tooltip-font-weight:               $font-weight-bold !default;
 
 $tooltip-arrow-width:               .625rem !default;
@@ -996,7 +996,7 @@ $popover-body-padding-y:            $popover-header-padding-y !default;
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
 $popover-arrow-width:               .625rem !default;
-$popover-arrow-height:              .3125rem !default;
+$popover-arrow-height:              map-get($spacers, 1) !default;
 $popover-arrow-color:               $popover-bg !default;
 
 $popover-arrow-outer-color:         $popover-border-color !default;
@@ -1006,7 +1006,7 @@ $popover-arrow-outer-color:         $popover-border-color !default;
 
 $toast-max-width:                   350px !default;
 $toast-padding-x:                   .625rem !default;
-$toast-padding-y:                   .3125rem !default;
+$toast-padding-y:                   map-get($spacers, 1) !default;
 $toast-font-size:                   .875rem !default;
 $toast-color:                       null !default;
 $toast-background-color:            rgba($white, .85) !default;

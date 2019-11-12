@@ -18,7 +18,7 @@
     width: auto;
     min-width: 3.75rem;
     height: 1.875rem;
-    margin: .3125rem 0;
+    margin: map-get($spacers, 1) 0;
     background: $gray-700;
     border: 2px solid $gray-700;
 

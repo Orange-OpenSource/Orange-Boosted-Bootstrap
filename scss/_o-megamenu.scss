@@ -44,7 +44,7 @@
             outline-offset: -#{$border-width};
 
             &[data-toggle="collapse"]::before {
-              margin-top: .3125rem;
+              margin-top: map-get($spacers, 1);
               margin-right: .9375rem;
               content: "";
               border-top: .4375em solid;
