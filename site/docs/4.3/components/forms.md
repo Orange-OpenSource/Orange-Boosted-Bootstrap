@@ -1432,7 +1432,17 @@ As is the `size` attribute:
 
 ### Range
 
-Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
+[comment]: # Boosted mod
+Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers.
+
+{% capture callout %}
+#### Cross-browser compatibility
+
+Only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress — so Chrome and Safari won't show it.
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
+
+[comment]: # End mod
 
 {% capture example %}
 <label for="customRange1">Example range</label>
@@ -1455,6 +1465,17 @@ By default, range inputs "snap" to integer values. To change this, you can speci
 <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
 {% endcapture %}
 {% include example.html content=example %}
+
+[comment]: # Boosted mod
+#### Disabled state
+
+{% capture example %}
+<label for="customRange4">Example range</label>
+<input type="range" class="custom-range" id="customRange4" disabled>
+{% endcapture %}
+{% include example.html content=example %}
+
+[comment]: # End mod
 
 ### File browser
 

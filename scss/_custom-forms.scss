@@ -519,6 +519,7 @@
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
     margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
+    cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     // stylelint-disable-next-line property-blacklist
@@ -528,6 +529,7 @@
     appearance: none;
 
     &:active {
+      cursor: grabbing; // Boosted mod
       @include gradient-bg($custom-range-thumb-active-bg);
     }
   }
@@ -546,6 +548,7 @@
   &::-moz-range-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
+    cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     // stylelint-disable-next-line property-blacklist
@@ -555,6 +558,7 @@
     appearance: none;
 
     &:active {
+      cursor: grabbing; // Boosted mod
       @include gradient-bg($custom-range-thumb-active-bg);
     }
   }
@@ -570,12 +574,22 @@
     @include box-shadow($custom-range-track-box-shadow);
   }
 
+  // Boosted mod: the same as ::-ms-fill-lower
+  // @see https://developer.mozilla.org/fr/docs/Web/CSS/::-moz-range-progress
+  &::-moz-range-progress {
+    height: $custom-range-track-height;
+    background-color: $custom-range-track-progress-bg;
+    @include border-radius($custom-range-track-border-radius);
+  }
+  // end mod
+
   &::-ms-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
     margin-top: 0; // Edge specific
     margin-right: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
     margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
+    cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     // stylelint-disable-next-line property-blacklist
@@ -585,6 +599,7 @@
     appearance: none;
 
     &:active {
+      cursor: grabbing; // Boosted mod
       @include gradient-bg($custom-range-thumb-active-bg);
     }
   }
@@ -601,7 +616,7 @@
   }
 
   &::-ms-fill-lower {
-    background-color: $custom-range-track-bg;
+    background-color: $custom-range-track-progress-bg; // Boosted mod: show lower part
     @include border-radius($custom-range-track-border-radius);
   }
 
@@ -613,7 +628,8 @@
 
   &:disabled {
     &::-webkit-slider-thumb {
-      background-color: $custom-range-thumb-disabled-bg;
+      cursor: default; // Boosted mod
+      border-color: $custom-range-thumb-disabled-bg; // Boosted mod
     }
 
     &::-webkit-slider-runnable-track {
@@ -621,16 +637,30 @@
     }
 
     &::-moz-range-thumb {
-      background-color: $custom-range-thumb-disabled-bg;
+      cursor: default; // Boosted mod
+      border-color: $custom-range-thumb-disabled-bg; // Boosted mod
     }
 
     &::-moz-range-track {
       cursor: default;
     }
 
-    &::-ms-thumb {
+    // Boosted mod
+    &::-moz-range-progress {
       background-color: $custom-range-thumb-disabled-bg;
     }
+    // end mod
+
+    &::-ms-thumb {
+      cursor: default; // Boosted mod
+      border-color: $custom-range-thumb-disabled-bg; // Boosted mod
+    }
+
+    // Boosted mod
+    &::-ms-fill-lower {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
+    // end mod
   }
 }
 
