@@ -1436,7 +1436,7 @@ As is the `size` attribute:
 Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers.
 
 {% capture callout %}
-#### Cross-browser compatibility
+#### Progressive enchancement
 
 Only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress — so Chrome and Safari won't show it.
 {% endcapture %}
