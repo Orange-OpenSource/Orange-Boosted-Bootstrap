@@ -44,10 +44,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 //    the `inherit` value on things like `<th>` elements.
 // 4. Prevent faux-bold/italic
 //    @link https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
-// 5. Discretionary ligatures, included in Helvetica Neue Webfont
-//    @link https://helpx.adobe.com/fonts/using/open-type-syntax.html#dlig
-//    @link https://caniuse.com/#feat=font-variant-numeric
-//    @link https://caniuse.com/#feat=font-feature
 
 body {
   margin: 0; // 1
@@ -62,8 +58,6 @@ body {
   background-color: $body-bg; // 2
   -webkit-font-smoothing: subpixel-antialiased; // Boosted mod
   text-rendering: optimizeSpeed; // Boosted mod
-  font-feature-settings: "dlig"; // Boosted mod // 5
-  font-variant-ligatures: discretionary-ligatures; // Boosted mod // 5
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
@@ -358,7 +352,7 @@ svg {
 
 table {
   border-collapse: collapse; // Prevent double borders
-  font-feature-settings: "dlig", "tnum"; // Boosted mod // 1
+  font-feature-settings: "tnum"; // Boosted mod // 1
   font-variant-numeric: tabular-nums; // Boosted mod // 1
 }
 
