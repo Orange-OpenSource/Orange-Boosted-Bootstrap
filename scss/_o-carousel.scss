@@ -18,7 +18,7 @@
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
-  bottom: calc(50% - 1.875rem);
+  bottom: subtract(50%, 1.875rem);
   width: 3.75rem;
   height: 3.75rem;
   text-decoration: none;
@@ -87,7 +87,7 @@
 // swiper
 .swiper-button-prev,
 .swiper-button-next {
-  top: calc(50% - 10px);
+  top: subtract(50%, 10px);
   width: auto;
   height: auto;
   text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;

@@ -81,7 +81,7 @@
 
       &::after {
         position: absolute;
-        top: calc(50% - .5rem);
+        top: subtract(50%, .5rem);
         right: .25rem;
         width: 1rem;
         height: 1rem;

@@ -284,7 +284,7 @@
     button,
     a {
       display: flex;
-      width: calc(100% + (#{$card-accordion-spacer} * 2));
+      width: add(100%, $card-accordion-spacer * 2);
       padding: $card-accordion-spacer;
       margin: 0 -#{$card-accordion-spacer};
       border: 0;
@@ -310,13 +310,13 @@
     }
 
     .btn-sm {
-      width: calc(100% + (#{$card-spacer-y} * 2));
+      width: add(100%, $card-spacer-y * 2);
       padding: $card-spacer-y;
       margin: 0 -#{$card-spacer-y};
     }
 
     .btn-lg {
-      width: calc(100% + (#{map-get($spacers, 3)} * 2));
+      width: add(100%, map-get($spacers, 3) * 2);
       padding: map-get($spacers, 3);
       margin: 0 -#{map-get($spacers, 3)};
     }
