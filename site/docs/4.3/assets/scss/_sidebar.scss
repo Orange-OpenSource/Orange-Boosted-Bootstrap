@@ -8,7 +8,7 @@
   @supports (position: sticky) {
     position: sticky;
     top: 5rem; // Boosted mod
-    height: calc(100vh - 5rem); // Boosted mod
+    height: subtract(100vh, 5rem); // Boosted mod
     overflow-y: auto;
   }
   order: 2;
@@ -55,7 +55,7 @@
       position: sticky;
       top: 5rem; // Boosted mod
       z-index: 1000;
-      max-height: calc(100vh - 5rem); // Boosted mod
+      max-height: subtract(100vh, 5rem); // Boosted mod
     }
     border-right: 1px solid $gray-300; // Boosted mod
   }
@@ -73,7 +73,7 @@
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 9.6rem); // Boosted mod
+      max-height: subtract(100vh, 9.6rem); // Boosted mod
       overflow-y: auto;
     }
   }

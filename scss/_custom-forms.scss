@@ -98,6 +98,7 @@
   margin-bottom: 0;
   color: $custom-control-label-color;
   vertical-align: top;
+  cursor: $custom-control-cursor;
 
   // Background-color and (when enabled) gradient
   &::before {
@@ -392,6 +393,12 @@
   &::-ms-expand {
     display: none;
   }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $custom-select-color;
+  }
 }
 
 .custom-select-sm {
@@ -496,7 +503,7 @@
 
 .custom-range {
   width: 100%;
-  height: calc(#{$custom-range-thumb-height} + #{$custom-range-thumb-focus-box-shadow-width * 2});
+  height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;

@@ -265,8 +265,10 @@ $grid-row-columns:            6 !default;
 //
 // Define common padding and border radius sizes and more.
 
+// stylelint-disable function-blacklist
 $line-height-lg:              calc(20 / 18) !default;
 $line-height-sm:              calc(16 / 14) !default;
+// stylelint-enable function-blacklist
 
 $border-width:                .125rem !default;
 $border-color:                theme-color("dark") !default;
@@ -345,12 +347,14 @@ $h3-spacing:                  $letter-spacing-base * 6 !default;  // -0.6px
 $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
+// stylelint-disable function-blacklist
 $h1-line-height:              1 !default;
 $h2-line-height:              calc(32 / 30) !default;
 $h3-line-height:              calc(26 / 24) !default;
 $h4-line-height:              calc(22 / 20) !default;
 $h5-line-height:              calc(20 / 18) !default;
 $h6-line-height:              calc(18 / 16) !default;
+// stylelint-enable function-blacklist
 
 $headings-margin-bottom:      $spacer !default;
 $headings-font-family:        null !default;
@@ -378,6 +382,7 @@ $display-line-height:         1 !default;
 
 $lead-font-size:              $font-size-xlg !default; // Boosted mod
 $lead-font-weight:            400 !default; // Boosted mod
+// stylelint-disable-next-line function-blacklist
 $lead-line-height:            calc(30 / 20) !default; // Boosted mod
 $lead-letter-spacing:         -.015625rem !default; // Boosted mod
 
@@ -389,6 +394,7 @@ $text-muted:                  $gray-700 !default;
 $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-xlg !default; // Boosted mod
+// stylelint-disable-next-line function-blacklist
 $blockquote-line-height:      calc(30 / 20) !default; // Boosted mod
 $blockquote-letter-spacing:   -.015625rem !default; // Boosted mod
 
@@ -462,12 +468,12 @@ $input-btn-focus-width:       .125rem !default;
 $input-btn-focus-box-shadow:  null !default;
 
 $input-btn-padding-y-sm:      map-get($spacers, 1) !default;
-$input-btn-padding-x-sm:      .625rem !default;
+$input-btn-padding-x-sm:      map-get($spacers, 2) !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
 $input-btn-padding-y-lg:      .8125rem !default;
-$input-btn-padding-x-lg:      1.25rem !default;
+$input-btn-padding-x-lg:      $spacer !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
@@ -483,6 +489,7 @@ $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
+$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
@@ -517,10 +524,10 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 
 // Forms
 
-$label-margin-bottom:                   .625rem !default;
+$label-margin-bottom:                   map-get($spacers, 2) !default;
 
 $input-padding-y:                       $input-btn-padding-y !default;
-$input-padding-x:                       .625rem !default; // Boosted mod input padding x is not the same as buttons padding-x!
+$input-padding-x:                       map-get($spacers, 2) !default; // Boosted mod input padding x is not the same as buttons padding-x!
 $input-font-family:                     $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
 $input-font-weight:                     $font-weight-bold !default;
@@ -559,21 +566,21 @@ $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
 
-$input-height-inner:                    ($input-btn-font-size * $input-btn-line-height) + ($input-btn-padding-y * 2) !default;
-$input-height-inner-half:               calc(#{$input-line-height * .5em} + #{$input-padding-y}) !default;
-$input-height-inner-quarter:            calc(#{$input-line-height * .25em} + #{$input-padding-y / 2}) !default;
-$input-height-inner-sm:                 ($input-btn-font-size-sm * (16 / 14)) + ($input-btn-padding-y-sm * 2) !default; // Boosted mod
-$input-height-inner-lg:                 ($input-btn-font-size-lg * (20 / 18)) + ($input-btn-padding-y-lg * 2) !default; // Boosted mod
+$input-height-inner:                    add($input-btn-font-size * $input-btn-line-height, $input-btn-padding-y * 2) !default;
+$input-height-inner-half:               add($input-line-height * .5em, $input-padding-y) !default;
+$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y / 2) !default;
+$input-height-inner-sm:                 add($input-btn-font-size-sm * (16 / 14), $input-btn-padding-y-sm * 2) !default; // Boosted mod
+$input-height-inner-lg:                 add($input-btn-font-size-lg * (20 / 18), $input-btn-padding-y-lg * 2) !default; // Boosted mod
 
-$input-height:                          calc(#{$input-height-inner} + #{$input-height-border}) !default;
-$input-height-sm:                       calc(#{$input-height-inner-sm} + #{$input-height-border}) !default;
-$input-height-lg:                       calc(#{$input-height-inner-lg} + #{$input-height-border}) !default;
+$input-height:                          add($input-height-inner, $input-height-border) !default;
+$input-height-sm:                       add($input-height-inner-sm, $input-height-border) !default;
+$input-height-lg:                       add($input-height-inner-lg, $input-height-border) !default;
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 $form-text-margin-top:                  map-get($spacers, 2) !default;
 
-$form-check-input-gutter:               1.25rem !default;
+$form-check-input-gutter:               $spacer !default;
 $form-check-input-margin-y:             .3rem !default;
 $form-check-input-margin-x:             .25rem !default;
 
@@ -589,10 +596,11 @@ $input-group-addon-border-color:        $input-border-color !default;
 
 $custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$custom-control-gutter:                 .625rem !default;
+$custom-control-gutter:                 map-get($spacers, 2) !default;
 $custom-control-spacer-x:               $spacer !default;
+$custom-control-cursor:                 null !default;
 
-$custom-control-indicator-size:         1.25rem !default;
+$custom-control-indicator-size:         $spacer !default;
 $custom-control-indicator-bg:           $white !default;
 
 $custom-control-indicator-bg-size:      1rem !default;
@@ -632,13 +640,13 @@ $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicato
 $custom-radio-indicator-border-radius:          50% !default;
 //$custom-radio-indicator-icon-checked:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 
-$custom-switch-width:                           $custom-control-indicator-size * 3 !default;
-$custom-switch-height:                          $custom-control-indicator-size * 1.5 !default;
+$custom-switch-width:                           $custom-control-indicator-size * 3 !default; // Boosted mod
+$custom-switch-height:                          $custom-control-indicator-size * 1.5 !default; // Boosted mod
 // $custom-switch-indicator-border-radius:         null !default; // Boosted mod : not rounded
 // Boosted mod
-// $custom-switch-indicator-size:                  calc(#{$custom-control-indicator-size} - #{$custom-control-indicator-border-width * 4}) !default;
-$custom-switch-indicator-width:                 calc(#{$custom-switch-width} / 2 - #{$custom-control-indicator-border-width * 2}) !default;
-$custom-switch-indicator-height:                calc(#{$custom-switch-height} - #{$custom-control-indicator-border-width * 2}) !default;
+// $custom-switch-indicator-size:                  subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default;
+$custom-switch-indicator-width:                 subtract($custom-switch-width / 2, $custom-control-indicator-border-width * 2) !default;
+$custom-switch-indicator-height:                subtract($custom-switch-height, $custom-control-indicator-border-width * 2) !default;
 // end mod
 $custom-switch-indicator-bg-color:              $white !default;
 $custom-switch-indicator-border-color:          $black !default;
@@ -660,7 +668,7 @@ $custom-select-bg-size:             1rem 1.25rem !default; // Boosted mod: using
 $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
 $custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
-$custom-select-feedback-icon-padding-right: calc((1em + #{2 * $custom-select-padding-y}) * 3 / 4 + #{$custom-select-padding-x + $custom-select-indicator-padding}) !default;
+$custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-position:      center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
 
@@ -859,8 +867,8 @@ $dropdown-bg:                       $white !default;
 $dropdown-border-color:             $gray-500 !default;
 $dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
-$dropdown-inner-border-radius:      0 !default;
-$dropdown-divider-bg:               $gray-300 !default;
+$dropdown-inner-border-radius:      0 !default; // Boosted mod
+$dropdown-divider-bg:               $gray-300 !default; // Boosted mod
 $dropdown-divider-margin-y:         $nav-divider-margin-y !default;
 $dropdown-box-shadow:               null !default;
 
@@ -933,11 +941,12 @@ $card-spacer-y:                     .75rem !default;
 $card-spacer-x:                     1.25rem !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
-$card-border-color:                 $black !default;
-$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
-$card-cap-bg:                       $white !default;
-$card-cap-color:                    $white !default;
-$card-color:                        $black !default;
+$card-border-color:                 $black !default; // Boosted mod
+$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
+$card-cap-bg:                       $white !default; // Boosted mod
+$card-cap-color:                    null !default;
+$card-height:                       null !default;
+$card-color:                        null !default;
 $card-bg:                           $white !default;
 $card-accordion-spacer:             .875rem !default; // Boosted mod
 
@@ -985,9 +994,9 @@ $popover-max-width:                 276px !default;
 $popover-border-width:              $border-width !default;
 $popover-border-color:              $gray-400 !default;
 $popover-border-radius:             $border-radius-lg !default;
-$popover-inner-border-radius:       calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
-$popover-box-shadow:                null !default;
-$popover-font-weight:               $font-weight-bold !default;
+$popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
+$popover-box-shadow:                null !default; // Boosted mod
+$popover-font-weight:               $font-weight-bold !default; // Boosted mod
 
 $popover-header-bg:                 $popover-bg !default;
 $popover-header-color:              $headings-color !default;
@@ -1079,6 +1088,7 @@ $modal-sm:                          300px !default;
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              null !default;
 $modal-transition:                  transform .3s ease-out !default;
+$modal-scale-transform:             scale(1.02) !default;
 
 // Alerts
 //
@@ -1154,9 +1164,11 @@ $figure-caption-color:              $gray-900 !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              .625rem !default;
+$breadcrumb-font-size:              $font-size-sm !default;
+
+$breadcrumb-padding-y:              map-get($spacers, 2) !default;
 $breadcrumb-padding-x:              0 !default;
-$breadcrumb-item-padding:           .625rem !default;
+$breadcrumb-item-padding:           map-get($spacers, 2) !default;
 
 $breadcrumb-margin-bottom:          1rem !default;
 
@@ -1166,7 +1178,6 @@ $breadcrumb-bg:                     $white !default;
 $breadcrumb-divider:                $chevron-icon !default;
 $breadcrumb-divider-height:         map-get($spacers, 2) !default;
 $breadcrumb-divider-width:          .4375rem !default;
-$breadcrumb-font-size:              $font-size-sm !default;
 $breadcrumb-line-height:            $line-height-sm !default;
 
 $breadcrumb-border-radius:          $border-radius !default;

@@ -1,5 +1,7 @@
 name: Tests
 on: [push, pull_request]
+env:
+  CI: true
 
 jobs:
   run:
@@ -27,8 +29,11 @@ jobs:
         with:
           ruby-version: 2.4.x
 
+      - name: Disable gem docs
+        run: 'echo "gem: --no-document" > ~/.gemrc'
+
       - name: Set up Bundler
-        run: gem install bundler
+        run: gem install bundler -v "~> 1.17"
 
       - run: ruby --version
       - run: gem --version
@@ -68,3 +73,4 @@ jobs:
         if: matrix.node == 8 && github.repository == 'twbs/bootstrap' && github.event_name == 'push'
         env:
           COVERALLS_REPO_TOKEN: "${{ secrets.COVERALLS_REPO_TOKEN }}"
+          COVERALLS_GIT_BRANCH: "${{ github.ref }}"

@@ -5,7 +5,6 @@ site/docs/**/dist
 docs/4.0/examples/rtl-*
 
 # Hugo folders
-/site/static/**/dist/
 /resources/
 
 # Ignore ruby/bundler files

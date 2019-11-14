@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
+  @include font-size($breadcrumb-font-size);
   // Boosted mod
-  font-size: $breadcrumb-font-size;
   font-weight: $font-weight-bold;
   line-height: $breadcrumb-line-height;
   // end mod
