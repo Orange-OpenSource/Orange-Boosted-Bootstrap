@@ -215,7 +215,7 @@
 #docsNavbarContent {
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 5rem);
+      max-height: subtract(100vh, 5rem);
     }
   }
 }
