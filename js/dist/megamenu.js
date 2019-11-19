@@ -12,7 +12,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
   (global = global || self, global.MegaMenu = factory(global.jQuery, global.Util));
-}(this, function ($, Util) { 'use strict';
+}(this, (function ($, Util) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
@@ -72,13 +72,12 @@
     NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
     NAV_LINK_BACK: '.nav-link.back',
     NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var MegaMenu =
   /*#__PURE__*/
@@ -257,8 +256,6 @@
           // focus next nav link
           $thisTarget.parent().next().find('>.nav-link').trigger('focus');
           break;
-
-        default:
       }
     };
 
@@ -422,5 +419,5 @@
 
   return MegaMenu;
 
-}));
+})));
 //# sourceMappingURL=megamenu.js.map

@@ -47,7 +47,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/4.3/getting-star
 
 ## Status
 
-[![Build Status](https://img.shields.io/travis/Orange-OpenSource/Orange-Boosted-Bootstrap/v4.3.1.svg)](https://travis-ci.org/Orange-OpenSource/Orange-Boosted-Bootstrap)
+[![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/Tests/badge.svg)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?workflow=Tests)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/v/orange-opensource/orange-boosted-bootstrap.svg)](https://packagist.org/packages/orange-opensource/orange-boosted-bootstrap)
 [![NuGet](https://img.shields.io/nuget/v/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)

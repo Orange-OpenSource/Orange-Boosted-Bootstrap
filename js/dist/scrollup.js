@@ -9,12 +9,13 @@
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
-  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global = global || self, global.ScrollUp = factory(global.jQuery));
-}(this, function ($) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
+  typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
+  (global = global || self, global.ScrollUp = factory(global.jQuery, global.Util));
+}(this, (function ($, Util) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -32,6 +33,55 @@
     return Constructor;
   }
 
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
+  }
+
+  function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+      if (enumerableOnly) symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+      keys.push.apply(keys, symbols);
+    }
+
+    return keys;
+  }
+
+  function _objectSpread2(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i] != null ? arguments[i] : {};
+
+      if (i % 2) {
+        ownKeys(source, true).forEach(function (key) {
+          _defineProperty(target, key, source[key]);
+        });
+      } else if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(source).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
+
+    return target;
+  }
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -46,9 +96,10 @@
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var SCROLLANIMATE = 500;
   var Default = {
-    offset: 10,
-    method: 'auto',
     target: ''
+  };
+  var DefaultType = {
+    target: '(string|element)'
   };
   var Event = {
     SCROLL: "scroll" + EVENT_KEY,
@@ -60,23 +111,23 @@
   };
   var Selector = {
     SCROLL_TOP: '.o-scroll-up:not(.static)'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var ScrollUp =
   /*#__PURE__*/
   function () {
-    function ScrollUp(element) {
+    function ScrollUp(element, config) {
       this._element = element;
       this._scrollElement = window;
+      this._config = this._getConfig(config);
       $(window).on(Event.SCROLL, $.proxy(this._process, this));
       $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this));
-      $(this._element).addClass('is-fixed');
+      $(this._element).addClass('is-fixed d-none');
 
       this._process();
     } // getters
@@ -93,12 +144,14 @@
     } // private
     ;
 
+    _proto._getConfig = function _getConfig(config) {
+      config = _objectSpread2({}, this.constructor.Default, {}, $(this._element).data(), {}, config);
+      Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
+      return config;
+    };
+
     _proto._process = function _process() {
-      if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
-        $(Selector.SCROLL_TOP).show();
-      } else {
-        $(Selector.SCROLL_TOP).hide();
-      }
+      $(Selector.SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()));
     };
 
     _proto._clear = function _clear() {
@@ -106,23 +159,39 @@
     };
 
     _proto._backToTop = function _backToTop() {
-      if (typeof $.animate === 'function') {
+      // if target is defined scrollintoview
+      if (this._config.target) {
+        document.querySelector(this._config.target).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else if (typeof $.animate === 'function') {
         $('html, body').animate({
           scrollTop: 0
         }, SCROLLANIMATE);
       } else {
         $('html, body').scrollTop(0);
-      }
+      } // scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+
     } // static
     ;
 
-    ScrollUp._jQueryInterface = function _jQueryInterface() {
+    ScrollUp._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY);
 
+        var _config = typeof config === 'object' ? config : null;
+
         if (!data) {
-          data = new ScrollUp(this);
+          data = new ScrollUp(this, _config);
           $(this).data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
         }
       });
     };
@@ -136,6 +205,11 @@
       key: "Default",
       get: function get() {
         return Default;
+      }
+    }, {
+      key: "DefaultType",
+      get: function get() {
+        return DefaultType;
       }
     }]);
 
@@ -173,5 +247,5 @@
 
   return ScrollUp;
 
-}));
+})));
 //# sourceMappingURL=scrollup.js.map
