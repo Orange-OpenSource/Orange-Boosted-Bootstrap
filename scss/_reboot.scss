@@ -260,20 +260,21 @@ a {
 }
 
 // Boosted mod
+// stylelint-disable selector-max-type
 p a,
 main li a {
-  text-decoration: underline;
-
-  @include hover() {
+  &,
+  &:hover {
     text-decoration: underline;
   }
 
-  @include focus() {
+  &:focus {
     text-decoration: underline;
     outline-offset: $border-width;
   }
 }
-// End mod
+// stylelint-enable selector-max-type
+// end mod
 
 // And undo these styles for placeholder links/named anchors (without href)
 // which have not been made explicitly keyboard-focusable (without tabindex).
