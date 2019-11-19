@@ -4498,6 +4498,7 @@ input[type="button"].btn-block {
   margin-top: -0.25rem;
   background-color: #000;
   border: 0;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-appearance: none;
   appearance: none;
@@ -4505,6 +4506,7 @@ input[type="button"].btn-block {
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-webkit-slider-thumb {
+    -webkit-transition: none;
     transition: none;
   }
 }
@@ -4527,6 +4529,7 @@ input[type="button"].btn-block {
   height: 1rem;
   background-color: #000;
   border: 0;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
   appearance: none;
@@ -4534,6 +4537,7 @@ input[type="button"].btn-block {
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
+    -moz-transition: none;
     transition: none;
   }
 }
@@ -4559,12 +4563,14 @@ input[type="button"].btn-block {
   margin-right: 0.125rem;
   background-color: #000;
   border: 0;
+  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
+    -ms-transition: none;
     transition: none;
   }
 }
@@ -14112,7 +14118,7 @@ caption {
   border-style: solid;
   border-width: 2px;
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 .o-scroll-up .o-scroll-up-icon::before {
