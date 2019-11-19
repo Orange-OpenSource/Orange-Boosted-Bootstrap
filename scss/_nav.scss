@@ -1,7 +1,7 @@
 // Base class
 //
 // Kickstart any navigation component with a set of style resets. Works with
-// `<nav>`s or `<ul>`s.
+// `<nav>`s, `<ul>`s or `<ol>`s.
 
 .nav {
   display: flex;
@@ -17,9 +17,10 @@
 
   // Boosted mod
   font-weight: $font-weight-bold;
+  text-decoration: none;
   // end mod
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 
@@ -42,24 +43,25 @@
     margin-bottom: -$nav-tabs-border-width;
   }
 
-  .nav-link {
-    // Boosted mod
-    // remove border from nav-link padding in tabs
-    padding: $nav-link-padding-y calc(#{$nav-link-padding-x} - #{$nav-tabs-border-width});
-    line-height: 1rem;
-    // end mod
-    border: $nav-tabs-border-width solid transparent;
+  // Boosted mod: margins between tabs on bigger screen
+  @include media-breakpoint-up(lg) {
+    .nav-item + .nav-item {
+      margin-left: .5rem;
+    }
+  }
+  // end mod
 
-    // Boosted mod
-    // Border bottom width to 0 for display
-    border-bottom-width: 0;
-    // end mod
+  .nav-link {
+    padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
+    border: $nav-tabs-border-width solid transparent;
+    border-bottom-width: 0; // Boosted mod
+    outline-offset: map-get($spacers, 2); // Boosted mod
 
     @include border-top-radius($nav-tabs-border-radius);
 
-    @include hover-focus {
-      color: $nav-tabs-link-hover-color; // boosted mod
-      background-color: $nav-tabs-link-hover-bg; // boosted mod
+    @include hover-focus() {
+      color: $nav-tabs-link-hover-color; // Boosted mod
+      background-color: $nav-tabs-link-hover-bg; // Boosted mod
       border-color: $nav-tabs-link-hover-border-color;
     }
 
@@ -68,6 +70,13 @@
       background-color: transparent;
       border-color: transparent;
     }
+
+    // Boosted mod: show focus!
+    &:not(.disabled):focus {
+      outline: $nav-tabs-border-width solid $nav-tabs-link-hover-border-color;
+      outline-offset: -#{$nav-tabs-border-width};
+    }
+    // end mod
   }
 
   .nav-link.active,
@@ -85,6 +94,35 @@
   }
 }
 
+// Boosted mod
+.nav-tabs-light {
+  padding-left: 0;
+  border-bottom: $nav-tabs-border-width / 2 solid $gray-600;
+
+  .nav-item {
+    margin-bottom: $nav-tabs-border-width / -2;
+  }
+
+  .nav-link  {
+    border-width: 0 0 $nav-tabs-border-width * 2;
+
+    @include hover-focus() {
+      color: $primary;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.active {
+      border-color: transparent transparent $primary;
+    }
+
+    &:not(.disabled):focus {
+      outline-color: currentColor;
+    }
+  }
+}
+// end mod
+
 
 //
 // Pills
@@ -93,13 +131,29 @@
 .nav-pills {
   .nav-link {
     @include border-radius($nav-pills-border-radius);
+
+    &:focus {
+      outline-offset: -#{$border-width};
+    }
   }
 
   .nav-link.active,
   .show > .nav-link {
     color: $nav-pills-link-active-color;
     background-color: $nav-pills-link-active-bg;
+
+    // Boosted mod: show focus!
+    &:focus {
+      outline: $border-width solid $nav-pills-link-active-bg;
+    }
+    // end mod
   }
+
+  // Boosted mod
+  .nav-item + .nav-item {
+    margin-left: map-get($spacers, 1);
+  }
+  // end mod
 }
 
 
@@ -128,6 +182,12 @@
 // Hide tabbable panes to start, show them when `.active`
 
 .tab-content {
+  // Boosted mod
+  padding: 1.125rem;
+  border: $nav-tabs-border-width solid;
+  border-top: 0;
+  // end mod
+
   > .tab-pane {
     display: none;
   }
@@ -135,3 +195,9 @@
     display: block;
   }
 }
+
+// Boosted mod
+.tab-pane > :last-child {
+  margin-bottom: 0;
+}
+// end mod

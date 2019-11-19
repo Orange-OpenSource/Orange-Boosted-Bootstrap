@@ -16,7 +16,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% capture example %}
 <header role="banner">
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,12 +31,12 @@ Orange navbar is the main navigation of project website. It should always be inc
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link icon svg-buy">
+                        <a href="#" class="nav-link svg-buy">
                             <span class="sr-only">open basket</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link icon svg-search">
+                        <a href="#" class="nav-link svg-search">
                             <span class="sr-only">open search bar</span>
                         </a>
                     </li>
@@ -63,7 +63,7 @@ This navbar is visible only on desktop view.
 {% include callout.html content=callout type="warning" %}
 
 {% capture example %}
-<nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+<nav class="navbar navbar-dark navbar-expand-md supra">
     <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
@@ -72,12 +72,12 @@ This navbar is visible only on desktop view.
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                    <a href="#" class="nav-link icon svg-buy">
+                <a href="#" class="nav-link svg-buy">
                     <span class="sr-only">basket</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link icon svg-avatar">
+                <a href="#" class="nav-link svg-avatar">
                     <span class="sr-only">my account</span>
                 </a>
             </li>
@@ -99,7 +99,7 @@ A supra bar should never be used on its own and always be included in header and
 
 {% capture example %}
 <header role="banner" id="demo-navbar">
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md supra">
+    <nav class="navbar navbar-dark navbar-expand-md supra">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
@@ -127,7 +127,7 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">

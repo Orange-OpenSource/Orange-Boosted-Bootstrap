@@ -91,7 +91,7 @@
 
   // browser reset
   .form-control:invalid {
-    outline: none;
+    outline: 0;
     box-shadow: none;
   }
 }

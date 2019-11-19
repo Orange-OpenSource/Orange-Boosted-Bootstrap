@@ -49,7 +49,7 @@ boosted/
     └── boosted.min.js.map
 {% endhighlight %}
 
-This is the most basic form of Boosted: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools.  Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
+This is the most basic form of Boosted: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
 
 ## CSS files
 
@@ -69,47 +69,47 @@ Boosted includes a handful of options for including some or all of our compiled 
   <tbody>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">boosted.css</code></div>
-        <div><code class="text-nowrap">boosted.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted.min.css</code></div>
       </th>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-light">Not included</td>
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">boosted-grid.css</code></div>
-        <div><code class="text-nowrap">boosted-grid.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted-grid.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted-grid.min.css</code></div>
       </th>
-      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/">Only grid system</a></td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
-      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/">Only flex utilities</a></td>
-      <td class="bg-light text-muted">Not included</td>
+      <td><a class="text-primary font-weight-bold" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/">Only grid system</a></td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td><a class="text-primary font-weight-bold" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/">Only flex utilities</a></td>
+      <td class="bg-light">Not included</td>
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">boosted-reboot.css</code></div>
-        <div><code class="text-nowrap">boosted-reboot.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted-reboot.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted-reboot.min.css</code></div>
       </th>
-      <td class="bg-light text-muted">Not included</td>
-      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/">Only Reboot</a></td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td><a class="text-primary font-weight-bold" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/">Only Reboot</a></td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">boosted-rtl.css</code></div>
-        <div><code class="text-nowrap">boosted-rtl.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted-rtl.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">boosted-rtl.min.css</code></div>
       </th>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
     </tr>
   </tbody>
 </table>
@@ -122,6 +122,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
   <thead>
     <tr>
       <th scope="col">JS files</th>
+      <th scope="col">Focus-visible</th>
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
       <th scope="col">tableSorter</th>
@@ -134,20 +135,22 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">boosted.bundle.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.bundle.min.js</code></div>
       </th>
-      <td class="text-success">Included</td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-success font-weight-bold">Included</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">boosted.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.min.js</code></div>
       </th>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
     </tr>
   </tbody>
 </table>

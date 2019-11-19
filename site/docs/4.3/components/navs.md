@@ -44,6 +44,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 
 In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar (except for Tabs panels where `aria-selected` must be used). This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
 {% endcapture %}
+{% include callout.html content=callout %}
 
 [comment]: # End mod
 
@@ -161,14 +162,15 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 {% endcapture %}
 {% include example.html content=example %}
 
-### Nav light
+[comment]: # Boosted mod
+### Nav tabs light
 
-A gray line is set under the items. An active item is underlined by an orange line.
+Nav tabs light differs only visually, with a full width bottom border and a different active state.
 
 {% capture example %}
-<ul class="nav o-nav-light">
+<ul class="nav nav-tabs nav-tabs-light">
   <li class="nav-item">
-    <a class="nav-link o-active" href="#" aria-current="page">Active</a>
+    <a class="nav-link active" href="#" aria-current="page">Active</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Link</a>
@@ -183,21 +185,6 @@ A gray line is set under the items. An active item is underlined by an orange li
 {% endcapture %}
 {% include example.html content=example %}
 
-[comment]: # Boosted mod
-### Responsive Tabs
-
-Responsive tabs allow tab layouts to be displayed as accordions on a mobile browser if the number of tabs exceeds 2. No configuration or javascript method call needed. Here is the markup:
-
-{% capture example %}
-<div class="o-tab-container" role="tablist">
-  <a class="o-tab-heading" href="#" id="tab1" role="tab">Tab 1</a>
-  <div class="o-tab-content show" id="tab-1-content" role="tabpanel">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
-  <a class="o-tab-heading" href="#" id="tab2" role="tab">Tab 2</a>
-  <div class="o-tab-content" id="tab-2-content" role="tabpanel">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
-  <a class="o-tab-heading" href="#" id="tab3" role="tab">Tab 3</a>
-  <div class="o-tab-content" id="tab-3-content" role="tabpanel">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
-</div>
-{% endcapture %} {% include example.html content=example %}
 [comment]: # End mod
 
 ### Pills
@@ -497,7 +484,7 @@ The tabs plugin also works with pills.
     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
   </li>
 </ul>
-<div class="tab-content" id="pills-tabContent">
+<div class="tab-content border-0" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
@@ -517,7 +504,7 @@ And with vertical pills.
       </div>
     </div>
     <div class="col-9">
-      <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-content border-0" id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
           <p>Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</p>
         </div>
@@ -555,6 +542,24 @@ And with vertical pills.
   </div>
 </div>
 {% endhighlight %}
+
+[comment]: # Boosted mod
+### Responsive Tabs
+
+Responsive tabs allow tab layouts to be displayed as accordions on a mobile browser if the number of tabs exceeds 2. No configuration or javascript method call needed. Here is the markup:
+
+{% capture example %}
+<div class="o-tab-container" role="tablist">
+  <a class="o-tab-heading" href="#" id="tab1" role="tab" aria-expanded="true">Tab 1</a>
+  <div class="o-tab-content show" id="tab-1-content" role="tabpanel">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch</div>
+  <a class="o-tab-heading" href="#" id="tab2" role="tab">Tab 2</a>
+  <div class="o-tab-content" id="tab-2-content" role="tabpanel">Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
+  <a class="o-tab-heading" href="#" id="tab3" role="tab">Tab 3</a>
+  <div class="o-tab-content" id="tab-3-content" role="tabpanel">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+</div>
+{% endcapture %} {% include example.html content=example %}
+
+[comment]: # End mod
 
 ### Using data attributes
 

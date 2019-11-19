@@ -20,7 +20,7 @@ const DATA_KEY           = 'bs.tab'
 const EVENT_KEY          = `.${DATA_KEY}`
 const DATA_API_KEY       = '.data-api'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
-// boosted mod
+// Boosted mod
 const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
 const ARROW_UP_KEYCODE    = 38 // KeyboardEvent.which value for up arrow key
 const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
@@ -34,7 +34,7 @@ const Event = {
   SHOW           : `show${EVENT_KEY}`,
   SHOWN          : `shown${EVENT_KEY}`,
   CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`,
-  KEYDOWN_DATA_API : `keydown${EVENT_KEY}${DATA_API_KEY}` // boosted mod
+  KEYDOWN_DATA_API : `keydown${EVENT_KEY}${DATA_API_KEY}` // Boosted mod
 }
 
 const ClassName = {
@@ -64,7 +64,7 @@ const Selector = {
 class Tab {
   constructor(element) {
     this._element = element
-    this._addAccessibility()  // Boosted mod
+    this._addAccessibility() // Boosted mod
   }
 
   // Getters
@@ -336,12 +336,6 @@ class Tab {
         data = new Tab(this)
         $this.data(DATA_KEY, data)
       }
-
-      // Boosted mod
-      if (/init/.test(config)) {
-        return
-      }
-      // end mod
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {

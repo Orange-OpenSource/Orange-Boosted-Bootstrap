@@ -23,28 +23,37 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
 
 - The `box-sizing` is globally set on every element—including `*::before` and `*::after`, to `border-box`. This ensures that the declared width of element is never exceeded due to padding or border.
-  - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.
+- No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.
 - The `<body>` also sets a global `font-family`, `line-height`, and `text-align`. This is inherited later by some form elements to prevent font inconsistencies.
 - For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
 
 ## Native font stack
 
-The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Boosted 4 and replaced with a "native font stack" for optimum text rendering on every device and OS. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+[comment]: # Boosted mod
+As of Boosted 4, sans-serif font stack have been updated to use a "native font stack" as fallback for **Helvetica Neue**, for optimum text rendering on every device and OS. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 {% highlight sass %}
 $font-family-sans-serif:
+  // Webfont
+  HelvNeueOrange,
+  // Helvetica Neue
+  Helvetica Neue, 
+  // Websafe Fallbacks
+  Helvetica, Arial
   // Safari for macOS and iOS (San Francisco)
   -apple-system,
   // Chrome < 56 for macOS (San Francisco)
   BlinkMacSystemFont,
   // Windows
-  "Segoe UI",
+  Segoe UI,
   // Android
-  "Roboto",
-  // Basic web fallback
-  "Helvetica Neue", Arial, sans-serif,
+  Roboto,
+  // Ubuntu
+  Liberation Sans
+  // Generic
+  sans-serif,
   // Emoji fonts
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !default;
 {% endhighlight %}
 
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted. To switch the global `font-family`, update `$font-family-base` and recompile Boosted.
@@ -103,6 +112,10 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 ## Lists
 
 All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`.
+
+[comment]: # Boosted mod
+Boosted uses `list-style-type: square` as a default, progressively enhanced with `::marker` to handle color.
+To get this style without depending on `::marker`'s support, you're encouraged to use [Orange square list]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/#orange-square-list) utility class — which relies on `::before` pseudo-element.  
 
 <div class="bd-example">
 {% capture markdown %}

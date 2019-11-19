@@ -8,40 +8,38 @@ toc: true
 
 ## Default local navigation
 
-Wrap your `<ul>` list in a `<nav>` tag within a `.container` block. Wrap the whole in a `.o-nav-local` block.
+Use `<ul>` element with the `.container` (or `.container-fluid`) class, wrapped in a `<nav>` tag with `.o-nav-local` class.
+You also **need to choose a color scheme** by setting `.navbar-light` or `.navbar-dark` on your `<nav>` element.
 
 {% capture callout %}
-#### Accessibility
+### Accessibility
 
 In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the local navigation. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
 {% endcapture %}
+{% include callout.html content=callout %}
 
 {% capture example %}
-<div class="o-nav-local">
-    <nav class="container">
-        <ul class="nav">
+<nav class="o-nav-local navbar-light">
+    <ul class="container nav">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+    </ul>
+</nav>
+{% endcapture %} {% include example.html content=example %}
+
+## Dark background
+
+Simply switch `.navbar-light` to `.navbar-dark` class to your `.o-nav-local` parent `<nav>` container.
+
+{% capture example %}
+<div class="bg-dark pt-3 px-3 pb-1">
+    <nav class="o-nav-local navbar-dark">
+        <ul class="container nav">
             <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
         </ul>
     </nav>
-</div>
-{% endcapture %} {% include example.html content=example %}
-
-## Inverse local navigation
-
-Simply add `.inverse` class to your `.o-nav-local` container.
-
-{% capture example %}
-<div style="margin: 2rem 0; padding: 2rem 0;" class="bg-dark">
-    <div class="o-nav-local inverse">
-        <nav class="container">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
-            </ul>
-        </nav>
-    </div>
 </div>
 {% endcapture %} {% include example.html content=example %}

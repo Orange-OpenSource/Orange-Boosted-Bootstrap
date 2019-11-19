@@ -164,7 +164,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+    <button class="btn btn-secondary" type="button" id="button-addon1">Button</button>
   </div>
   <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 </div>
@@ -172,14 +172,14 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    <button class="btn btn-secondary" type="button" id="button-addon2">Button</button>
   </div>
 </div>
 
 <div class="input-group mb-3">
   <div class="input-group-prepend" id="button-addon3">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
-    <button class="btn btn-outline-secondary" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
   </div>
   <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons" aria-describedby="button-addon3">
 </div>
@@ -187,8 +187,8 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 <div class="input-group">
   <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
   <div class="input-group-append" id="button-addon4">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
-    <button class="btn btn-outline-secondary" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
   </div>
 </div>
 {% endcapture %}
@@ -199,7 +199,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -214,7 +214,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -232,8 +232,8 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button type="button" class="btn btn-outline-secondary">Action</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary">Action</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
@@ -250,8 +250,8 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
   <div class="input-group-append">
-    <button type="button" class="btn btn-outline-secondary">Action</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary">Action</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
@@ -299,7 +299,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
   </div>
   <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
     <option selected>Choose...</option>
@@ -317,7 +317,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
     <option value="3">Three</option>
   </select>
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
+    <button class="btn btn-secondary" type="button">Button</button>
   </div>
 </div>
 {% endcapture %}
@@ -348,7 +348,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+    <button class="btn btn-secondary" type="button" id="inputGroupFileAddon03">Button</button>
   </div>
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
@@ -362,7 +362,7 @@ Input groups include support for custom selects and custom file inputs. Browser 
     <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
   </div>
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+    <button class="btn btn-secondary" type="button" id="inputGroupFileAddon04">Button</button>
   </div>
 </div>
 {% endcapture %}

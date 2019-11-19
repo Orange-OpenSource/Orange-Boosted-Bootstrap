@@ -1,11 +1,6 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v4.3.1 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap dropdown.js v4.3.1 (https://getbootstrap.com/)
+  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -118,10 +113,6 @@
     FORM_CHILD: '.dropdown form',
     MENU: '.dropdown-menu',
     NAVBAR_NAV: '.navbar-nav',
-    // Boosted mod
-    MENU_ITEMS: '.dropdown-menu .dropdown-item',
-    FIRST_ITEM_IN_MENU: '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)',
-    // end mod
     VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
   };
   var AttachmentMap = {
@@ -166,9 +157,6 @@
       this._inNavbar = this._detectNavbar();
 
       this._addEventListeners();
-
-      this._addAccessibility(); // Boosted mod
-
     } // Getters
 
 
@@ -267,9 +255,7 @@
       }
 
       $(this._menu).toggleClass(ClassName.SHOW);
-      $(parent).toggleClass(ClassName.SHOW).trigger($.Event(Event.SHOWN, relatedTarget)); // Boosted mod
-
-      $(parent).find(Selector.FIRST_ITEM_IN_MENU).first().trigger('focus'); // end mod
+      $(parent).toggleClass(ClassName.SHOW).trigger($.Event(Event.SHOWN, relatedTarget));
     };
 
     _proto.hide = function hide() {
@@ -409,17 +395,7 @@
       }
 
       return popperConfig;
-    } // Boosted mod
-    ;
-
-    _proto._addAccessibility = function _addAccessibility() {
-      $(this._element).attr('aria-haspopup', true); // ensure that dropdown-menu have the role menu
-
-      $(this._element).parent().children(Selector.MENU).attr('role', 'menu'); // ensure that dropdown-itm's have the role menuitem
-
-      $(this._element).parent().children(Selector.MENU).children('.dropdown-item').attr('role', 'menuitem');
-    } // end mod
-    // Static
+    } // Static
     ;
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {
@@ -431,13 +407,7 @@
         if (!data) {
           data = new Dropdown(this, _config);
           $(this).data(DATA_KEY, data);
-        } // Boosted mod
-
-
-        if (/init/.test(config)) {
-          return;
-        } // end mod
-
+        }
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
@@ -604,12 +574,7 @@
     Dropdown._jQueryInterface.call($(this), 'toggle');
   }).on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function (e) {
     e.stopPropagation();
-  }) // Boosted mod
-  .on('DOMContentLoaded', function () {
-    // Instanciate every dropdown in the DOM
-    Dropdown._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init');
-  }); // end mod
-
+  });
   /**
    * ------------------------------------------------------------------------
    * jQuery

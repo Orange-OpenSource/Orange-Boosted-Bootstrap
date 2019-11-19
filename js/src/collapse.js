@@ -52,7 +52,7 @@ const Dimension = {
 }
 
 const Selector = {
-  ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
+  ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // Boosted mod
   DATA_TOGGLE : '[data-toggle="collapse"]'
 }
 
@@ -351,12 +351,6 @@ class Collapse {
         data = new Collapse(this, _config)
         $this.data(DATA_KEY, data)
       }
-
-      // Boosted mod
-      if (/init/.test(config)) {
-        return
-      }
-      // end mod
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {

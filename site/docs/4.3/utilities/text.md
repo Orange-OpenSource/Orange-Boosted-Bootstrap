@@ -10,8 +10,11 @@ toc: true
 
 Easily realign text to components with text alignment classes.
 
+[comment]: # Boosted mod
+However Orange Brand — thus Boosted — does not allow justifying text.
+
 {% capture example %}
-<p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+<p class="text-right">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -79,9 +82,11 @@ Prevent long strings of text from breaking your components' layout by using `.te
 
 Transform text in components with text capitalization classes.
 
+[comment]: # Boosted mod
+Orange Brand — thus Boosted — does not allow uppercase text blocks.
+
 {% capture example %}
 <p class="text-lowercase">Lowercased text.</p>
-<p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">CapiTaliZed text.</p>
 {% endcapture %}
 {% include example.html content=example %}
@@ -90,15 +95,14 @@ Note how `.text-capitalize` only changes the first letter of each word, leaving 
 
 ## Font weight and italics
 
-Quickly change the weight (boldness) of text or italicize text.
+Quickly change the weight (boldness) of text<!-- Boosted mod // or italicize text-->.
+
+[comment]: # Boosted mod
+Orange Brand — thus Boosted — does not allow italic styles, and light, lighter and bolder weights.
 
 {% capture example %}
 <p class="font-weight-bold">Bold text.</p>
-<p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
 <p class="font-weight-normal">Normal weight text.</p>
-<p class="font-weight-light">Light weight text.</p>
-<p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
-<p class="font-italic">Italic text.</p>
 {% endcapture %}
 {% include example.html content=example %}
 

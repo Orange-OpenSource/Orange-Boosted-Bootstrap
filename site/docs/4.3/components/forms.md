@@ -32,26 +32,7 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
-
-{% highlight html %}
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-{% endhighlight %}
+{% include example.html content=example %}
 
 ## Form controls
 
@@ -195,7 +176,7 @@ Default checkboxes and radios are improved upon with the help of `.form-check`, 
 
 Disabled checkboxes and radios are supported. The `disabled` attribute will apply a lighter color to help indicate the input's state.
 
-Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`.
+Checkboxes and radio buttons support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`.
 
 ### Default (stacked)
 
@@ -215,22 +196,7 @@ By default, any number of checkboxes and radios that are immediate sibling will 
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
-
-{% highlight html %}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-  <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
-  </label>
-</div>
-{% endhighlight %}
+{% include example.html content=example %}
 
 {% capture example %}
 <div class="form-check">
@@ -252,28 +218,8 @@ By default, any number of checkboxes and radios that are immediate sibling will 
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
+{% include example.html content=example %}
 
-{% highlight html %}
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Default radio
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Second default radio
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-  <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
-  </label>
-</div>
-{% endhighlight %}
 ### Inline
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
@@ -603,7 +549,7 @@ You can then remix that once again with size-specific column classes.
       </div>
     </div>
     <div class="col-auto my-1">
-      <div class="form-check mb-0">
+      <div class="form-check">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
           Remember me
@@ -762,11 +708,11 @@ Add the `.disabled` class to the label for a disabled input.
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput" class="disabled">Disabled input</label>
+      <label for="disabledTextInput">Disabled input</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
     </div>
     <div class="form-group">
-      <label for="disabledSelect" class="disabled">Disabled select menu</label>
+      <label for="disabledSelect">Disabled select menu</label>
       <select id="disabledSelect" class="form-control">
         <option>Disabled select</option>
       </select>
@@ -803,7 +749,7 @@ While Boosted will apply these styles in all browsers, Internet Explorer 11 and 
 
 Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
 
-Indicate that a field is required by adding the class `.is-required` on the associated label
+Indicate that a field is required by adding the class `.is-required` on the associated label.
 
 {% capture callout %}
 We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
@@ -1053,7 +999,7 @@ We recommend using client-side validation, but in case you require server-side v
 Validation styles are available for the following form controls and components:
 
 - `<input>`s and `<textarea>`s with `.form-control` (including up to one `.form-control` in input groups)
-- `<select>`s with `.form-select` or `.custom-select`
+- `<select>`s with `.form-control` or `.custom-select`
 - `.form-check`s
 - `.custom-checkbox`s and `.custom-radio`s
 - `.custom-file`
@@ -1218,14 +1164,7 @@ In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](h
   <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
 </div>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
-
-{% highlight html %}
-<div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-</div>
-{% endhighlight %}
+{% include example.html content=example %}
 
 Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
@@ -1493,7 +1432,17 @@ As is the `size` attribute:
 
 ### Range
 
-Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
+[comment]: # Boosted mod
+Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers.
+
+{% capture callout %}
+#### Progressive enchancement
+
+Only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress — so Chrome and Safari won't show it.
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
+
+[comment]: # End mod
 
 {% capture example %}
 <label for="customRange1">Example range</label>
@@ -1516,6 +1465,17 @@ By default, range inputs "snap" to integer values. To change this, you can speci
 <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
 {% endcapture %}
 {% include example.html content=example %}
+
+[comment]: # Boosted mod
+#### Disabled state
+
+{% capture example %}
+<label for="customRange4">Example range</label>
+<input type="range" class="custom-range" id="customRange4" disabled>
+{% endcapture %}
+{% include example.html content=example %}
+
+[comment]: # End mod
 
 ### File browser
 

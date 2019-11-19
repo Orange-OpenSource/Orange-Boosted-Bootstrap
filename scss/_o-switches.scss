@@ -1,5 +1,7 @@
 // Orange switches
 //
+// @note Deprecated since v4.2.1
+// @note To be removed in v5
 //
 // stylelint-disable selector-max-class
 // stylelint-disable property-blacklist
@@ -18,7 +20,7 @@
     width: auto;
     min-width: 3.75rem;
     height: 1.875rem;
-    margin: .3125rem 0;
+    margin: map-get($spacers, 1) 0;
     background: $gray-700;
     border: 2px solid $gray-700;
 
@@ -70,10 +72,14 @@
 }
 
 .o-switch .checkbox {
-  @include focus {
+  @include focus() {
     + .toggle::before {
-      outline: 1px dotted #fff;
+      outline: $border-width solid $white;
     }
+  }
+
+  .js-focus-visible &:focus:not(.focus-visible) + .toggle::before {
+    outline: 0;
   }
 
   &:checked {
@@ -126,14 +132,15 @@
 .o-switch.btn-group-toggle {
   display: inline-flex;
   justify-content: flex-start;
-  border: 2px solid #ccc;
+  border: $border-width solid $gray-500;
 
   .btn {
     min-width: 2.5rem;
     padding-right: 0;
     padding-left: 0;
     margin: -2px 0;
-    border: 2px solid transparent;
+    border: $border-width solid transparent;
+    @include transition($transition-focus); // Boosted mod
 
     &:first-child {
       margin-left: -2px;
@@ -144,30 +151,31 @@
     }
 
     &.active {
-      color: #fff;
-      background-color: #000;
-      border-color: #000;
+      color: $white;
+      background-color: $black;
+      border-color: $black;
     }
 
+    &:focus,
     &.focus {
-      outline: 1px dotted #fff;
-      outline-offset: -2px;
+      outline: $border-width solid $white;
+      outline-offset: -#{$border-width};
     }
 
     &:active {
       border-color: theme-color("primary");
     }
 
-    @include hover {
+    @include hover() {
       &:not(:active) {
         color: theme-color("primary");
         background-color: transparent;
       }
 
       &.active {
-        color: #fff;
-        background-color: #000;
-        border-color: #000;
+        color: $white;
+        background-color: $black;
+        border-color: $black;
       }
     }
   }
@@ -176,8 +184,8 @@
     border-color: transparent;
 
     .btn {
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
+      border-top: $border-width solid transparent;
+      border-bottom: $border-width solid transparent;
 
       &:first-child {
         border-left-color: transparent;
@@ -194,7 +202,7 @@
         outline-color: #000;
       }
 
-      @include hover {
+      @include hover() {
         &:not(:active) {
           color: #000;
           background-color: #fff;

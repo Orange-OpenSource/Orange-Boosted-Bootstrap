@@ -8,13 +8,13 @@ toc: true
 
 ## Usage
 
-The plugin is initialised via javascript. Make sure to target the element containinge the `.mega-menu` class.
+The plugin is initialised via javascript. Make sure to target the element containing the `.mega-menu` class.
 
 {% highlight js %}
 $('#collapsing-navbarHead').megamenu();
 {% endhighlight %}
 
-Html markup and espacially `<ul>` menu hierarchy must absolutely be as follwing example :
+Html markup and especially `<ul>` menu hierarchy must absolutely be as following example :
 
 {% capture example %}
 <header role="banner">

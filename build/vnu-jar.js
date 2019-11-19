@@ -42,7 +42,8 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'The “banner” role is unnecessary for element “header”.',
     'The “contentinfo” role is unnecessary for element “footer”.',
     'The “navigation” role is unnecessary for element “nav”.',
-    'The “form” role is unnecessary for element “form”.'
+    'The “form” role is unnecessary for element “form”.',
+    'Possible misuse of “aria-label”.*'
   ].join('|')
 
   const args = [

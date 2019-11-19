@@ -50,19 +50,19 @@ Generally speaking, Boosted supports the latest versions of each major platform'
   <tbody>
     <tr>
       <th scope="row">Android</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Android v5.0+ supported</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Android v5.0+ supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
     <tr>
       <th scope="row">iOS</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
     <tr>
       <th scope="row">Windows 10 Mobile</th>
@@ -70,7 +70,7 @@ Generally speaking, Boosted supports the latest versions of each major platform'
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
   </tbody>
 </table>
@@ -94,21 +94,21 @@ Similarly, the latest versions of most desktop browsers are supported.
   <tbody>
     <tr>
       <th scope="row">Mac</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
     </tr>
     <tr>
       <th scope="row">Windows</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported, IE10+</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-danger">Not supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported, IE10+</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="bg-success font-weight-bold">Supported</td>
+      <td class="text-danger font-weight-bold">Not supported</td>
     </tr>
   </tbody>
 </table>
@@ -135,7 +135,7 @@ As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture i
 
 ### Navbar Dropdowns
 
-The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile)).
+The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile)).
 
 ## Browser zooming
 

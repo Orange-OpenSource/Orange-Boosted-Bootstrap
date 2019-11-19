@@ -8,7 +8,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size($tooltip-font-size);
-  // boosted mod
+  // Boosted mod
   font-weight: $tooltip-font-weight;
   // end mod
   // Allow breaking very long words so they don't overflow the tooltip's bounds

@@ -1,4 +1,4 @@
-// stylelint-disable property-blacklist, font-family-no-missing-generic-family-keyword
+// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // Carousel
 // --------------------------------------------------
@@ -18,19 +18,19 @@
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
-  bottom: calc(50% - 1.875rem);
+  bottom: subtract(50%, 1.875rem);
   width: 3.75rem;
   height: 3.75rem;
   text-decoration: none;
   text-shadow: none;
   background-color: transparent;
   opacity: .8;
-  transition: width .5s ease;
+  @include transition($transition-carousel);
 
   // Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
+    outline: $border-width solid $input-focus-border-color;
+    outline-offset: -#{$border-width};
   }
   // end mod
 }
@@ -72,32 +72,33 @@
     margin-right: .375rem;
     background-color: #000;
     border: 1px solid #fff;
-    border-radius: 50%;
+    @include border-radius(50%);
 
     &:hover {
       cursor: pointer;
     }
+  }
 
-    &.active {
-      background-color: theme-color("primary"); // stylelint-disable-line selector-no-qualifying-type
-    }
+  .active {
+    background-color: theme-color("primary");
   }
 }
 
 // swiper
 .swiper-button-prev,
 .swiper-button-next {
-  top: calc(50% - 10px);
+  top: subtract(50%, 10px);
   width: auto;
   height: auto;
   text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   cursor: pointer;
   background-image: none;
   background-size: 0;
-  //Boosted mod
+  // Boosted mod
+  @include transition($transition-focus);
   &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
+    outline: $border-width solid $input-focus-border-color;
+    outline-offset: -#{$border-width};
   }
   // end mod
 }
@@ -186,11 +187,6 @@
 
   .swiper-slide {
     width: 80%;
-
-    // .card-link .card-body {
-    //   padding: 20px;
-    //   text-align: left;
-    // }
 
     .card-img img {
       height: auto;

@@ -4,15 +4,10 @@
     {% include header.html %}
   </head>
   <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-
+    {% include skippy.html %}
     {% include docs-navbar.html %}
 
-    <!-- BOOSTED MOD -->
+    <!-- Boosted mod -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
@@ -24,8 +19,9 @@
         </main>
       </div>
     </div>
-    <!-- END MOD -->
+    <!-- end mod -->
 
+    {% include footer.html %}
     {% include scripts.html %}
   </body>
 </html>

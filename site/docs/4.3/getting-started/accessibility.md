@@ -18,7 +18,7 @@ Boosted's styling and layout can be applied to a wide range of markup structures
 
 ### Interactive components
 
-Boosted's interactive components—such as modal dialogs, dropdown menus and custom tooltips—are designed to work for touch, mouse and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/intro/aria) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
+Boosted's interactive components—such as modal dialogs, dropdown menus and custom tooltips—are designed to work for touch, mouse and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
 
 Because Boosted's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
 
@@ -47,6 +47,11 @@ For visually hidden interactive controls, such as traditional "skip" links, `.sr
 
 Boosted includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled.
 
+[comment]: # Boosted mod
+### Focus visibility
+
+Boosted includes a [focus-visible polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+
 ## Additional resources
 
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
@@ -57,3 +62,4 @@ Boosted includes support for the [`prefers-reduced-motion` media feature](https:
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 - ["aXe core" extension for identifying accessibility issues](https://github.com/dequelabs/axe-core/blob/master/doc/projects.md)
 - [Orange accessibility guidelines](http://a11y-guidelines.orange.com/home_EN/index.html)
+- [MDN focus-visible documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)

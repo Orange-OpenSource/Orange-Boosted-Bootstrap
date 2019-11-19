@@ -1,11 +1,6 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
-  * This a fork of Bootstrap : Initial license below
-  * Bootstrap button.js v4.3.1 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap button.js v4.3.1 (https://getbootstrap.com/)
+  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -79,28 +74,46 @@
 
     // Public
     _proto.toggle = function toggle() {
+      var triggerChangeEvent = true;
+      var addAriaPressed = true;
       var rootElement = $(this._element).closest(Selector.DATA_TOGGLE)[0];
 
-      var input = this._element.querySelector(Selector.INPUT);
-
       if (rootElement) {
-        var activeElement = rootElement.querySelector(Selector.ACTIVE);
+        var input = this._element.querySelector(Selector.INPUT);
 
-        if (activeElement) {
-          activeElement.classList.remove(ClassName.ACTIVE);
+        if (input) {
+          if (input.type === 'radio') {
+            if (input.checked && this._element.classList.contains(ClassName.ACTIVE)) {
+              triggerChangeEvent = false;
+            } else {
+              var activeElement = rootElement.querySelector(Selector.ACTIVE);
+
+              if (activeElement) {
+                $(activeElement).removeClass(ClassName.ACTIVE);
+              }
+            }
+          }
+
+          if (triggerChangeEvent) {
+            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
+              return;
+            }
+
+            input.checked = !this._element.classList.contains(ClassName.ACTIVE);
+            $(input).trigger('change');
+          }
+
+          input.focus();
+          addAriaPressed = false;
         }
       }
 
-      if (input) {
-        if (input.checked) {
-          this._element.classList.add(ClassName.ACTIVE);
-        } else {
-          this._element.classList.remove(ClassName.ACTIVE);
-        }
-      } else {
-        this._element.classList.toggle(ClassName.ACTIVE);
+      if (addAriaPressed) {
+        this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName.ACTIVE));
+      }
 
-        this._element.setAttribute('aria-pressed', this._element.classList.contains(ClassName.ACTIVE));
+      if (triggerChangeEvent) {
+        $(this._element).toggleClass(ClassName.ACTIVE);
       }
     };
 
@@ -142,6 +155,7 @@
 
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
+    event.preventDefault();
     var button = event.target;
 
     if (!$(button).hasClass(ClassName.BUTTON)) {
@@ -151,16 +165,7 @@
     Button._jQueryInterface.call($(button), 'toggle');
   }).on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector.BUTTON)[0];
-
-    if (button) {
-      $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
-    }
-  }).on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT > Selector.INPUT, function (event) {
-    var button = $(event.target).closest(Selector.BUTTON)[0];
-
-    if (button) {
-      $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
-    }
+    $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
   });
   /**
    * ------------------------------------------------------------------------

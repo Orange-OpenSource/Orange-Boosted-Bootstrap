@@ -146,24 +146,20 @@
 }
 
 // brand-warning
-#outline-buttons,
-#supported-content,
 #text,
-#color-schemes,
 #placement,
 #collapsible-content,
-#sizing {
-  &::before {
-    @include sr-only;
-    content: "warning, not brand compliant";
-  }
+#text-alignment,
+#responsive-font-sizes {
+  display: flex;
 
-  &::after {
-    padding-left: .375rem;
-    font-family: icon-orange, sans-serif !important; // stylelint-disable-line declaration-no-important
-    font-size: inherit;
+  &::before {
+    display: inline-block;
+    height: auto;
+    padding-right: .375rem;
+    margin: 0;
+    font-family: icon-orange, sans-serif;
     color: theme-color("danger");
-    vertical-align: bottom;
     content: "\e936";
   }
 }
@@ -219,7 +215,7 @@
 #docsNavbarContent {
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 5rem);
+      max-height: subtract(100vh, 5rem);
     }
   }
 }
@@ -350,4 +346,18 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%2
 
 .o-switch.btn-group-toggle .doc-label {
   min-width: 6.25rem;
+}
+
+.table-contrast td,
+.table-contrast tbody th {
+  font-weight: 700;
+}
+
+.table-contrast .aa-large-text,
+.table-contrast .aa-large-text * {
+  font-size: 1.25rem;
+}
+
+.table-contrast thead th {
+  font-size: 1.5rem;
 }

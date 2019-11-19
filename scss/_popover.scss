@@ -9,7 +9,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size($popover-font-size);
-  // boosted mod
+  // Boosted mod
   font-weight: $popover-font-weight;
   // end mod
   // Allow breaking very long words so they don't overflow the popover's bounds
@@ -25,7 +25,7 @@
     display: block;
     width: $popover-arrow-width;
     height: $popover-arrow-height;
-    margin: 0 $border-radius-lg;
+    margin: 0 $popover-border-radius;
 
     &::before,
     &::after {
@@ -42,7 +42,7 @@
   margin-bottom: $popover-arrow-height;
 
   > .arrow {
-    bottom: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
       bottom: 0;
@@ -62,10 +62,10 @@
   margin-left: $popover-arrow-height;
 
   > .arrow {
-    left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    left: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       left: 0;
@@ -85,7 +85,7 @@
   margin-top: $popover-arrow-height;
 
   > .arrow {
-    top: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    top: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
       top: 0;
@@ -117,10 +117,10 @@
   margin-right: $popover-arrow-height;
 
   > .arrow {
-    right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       right: 0;
@@ -160,8 +160,7 @@
   color: $popover-header-color;
   background-color: $popover-header-bg;
   border-bottom: $popover-border-width solid darken($popover-header-bg, 5%);
-  $offset-border-width: calc(#{$border-radius-lg} - #{$popover-border-width});
-  @include border-top-radius($offset-border-width);
+  @include border-top-radius($popover-inner-border-radius);
 
   &:empty {
     display: none;

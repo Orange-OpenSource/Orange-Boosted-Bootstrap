@@ -1,48 +1,38 @@
-// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // o-link-arrow
-// --------------------------------------------------
+//
 
 .o-link-arrow {
-  font-size: $font-size-base;
   font-weight: $font-weight-bold;
-  text-decoration: none;
 
-  &::after {
+  &::after,
+  &::before {
     display: inline-block;
-    padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-    font-family: icon-orange;
-    font-size: $o-link-arrow-separator-size;
-    color: $o-link-arrow-color;
-    content: "\e93e"; // Unicode space added since inline-block means non-collapsing white-space
+    width: $o-link-arrow-width;
+    height: $o-link-arrow-height;
+    vertical-align: middle;
+    background-image: escape-svg($o-link-arrow-icon);
+    background-repeat: no-repeat;
   }
+
+  &:not(.back)::after {
+    margin-left: $o-link-arrow-margin;
+    content: "";
+    transform: rotate(.5turn);
+  }
+
+  &.back::before {
+    margin-right: $o-link-arrow-margin;
+    content: "";
+  }
+
   &:hover,
   &:focus {
-    &::after {
-      color: $link-hover-color;
-      text-decoration: $link-hover-decoration;
-    }
-  }
-  // previous link
-  &.back {
-    &::after {
-      padding: 0;
-      content: ""; // Unicode space added since inline-block means non-collapsing white-space
-    }
+    text-decoration: underline;
+
+    &::after,
     &::before {
-      display: inline-block;
-      padding: $o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal $o-link-arrow-separator-padding-vertical 0;//$o-link-arrow-separator-padding-vertical $o-link-arrow-separator-padding-horizontal;
-      font-family: icon-orange;
-      font-size: $o-link-arrow-separator-size;
-      color: $o-link-arrow-color;
-      content: "\e93f"; // Unicode space added since inline-block means non-collapsing white-space
-    }
-    &:hover,
-    &:focus {
-      &::before {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
-      }
+      background-image: escape-svg($o-link-arrow-icon-hover);
     }
   }
 }

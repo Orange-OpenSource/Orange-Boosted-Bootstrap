@@ -15,7 +15,7 @@ host:           "localhost"
 port:           9001
 baseurl:        ""
 # boosted mod
-url:            https://boosted.orange.com
+url:            "https://boosted.orange.com"
 # end boosted mod
 encoding:       UTF-8
 exclude:
@@ -65,6 +65,7 @@ grid:
     desc: Extra extra large devices
     subdesc: Desktop (&ge;1380px) (target 1440 screen resolutions)
 # end boosted mod
+
 # Social
 title:              Boosted
 description:        "Based on Bootstrap the most popular library."
@@ -75,14 +76,15 @@ social_logo_path:   /docs/4.3/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
 current_version:      4.3.1
-bootstrap_current_version:      v4.3.1
 current_ruby_version: 4.3.1
 docs_version:         4.3
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
+opencollective:       "https://opencollective.com/bootstrap"
 blog:                 "https://blog.getbootstrap.com"
 expo:                 "https://expo.getbootstrap.com"
 themes:               "https://themes.getbootstrap.com"
+icons:                "https://icons.getbootstrap.com"
 
 download:
   source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.3.1.zip"
@@ -102,6 +104,8 @@ cdn:
   js_bundle_hash:    "sha384-xbvihzha8ShwGdBgk4dOni196Hl/AYymEmzTM9YYAvfcy/buOrVsVi9OPeIMcbyO"
   jquery:            "https://code.jquery.com/jquery-3.4.1.slim.min.js"
   jquery_hash:       "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  jquery_full:       "https://code.jquery.com/jquery-3.4.1.min.js"
+  jquery_full_hash:  "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   css_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
   css_swiper_hash:   "sha384-K6LrEaceM4QP87RzJ7R4CDXcFN4cFW/A5Q7/fEp/92c2WV+woVw9S9zKDO23sNS+"
   js_swiper:         "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
@@ -110,6 +114,8 @@ cdn:
   popper_hash:       "sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
   tablesorter:       "https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"
   tablesorter_hash:  "sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu"
+  focusvisible:      "https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js"
+  focusvisible_hash: "sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI="
 
 toc:
   min_level:        2

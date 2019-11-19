@@ -195,7 +195,7 @@ Additional functions could be added in the future or your own custom Sass to cre
 
 ### Color contrast
 
-One additional function we include in Boosted is the color contrast function, `color-yiq`. It utilizes the [YIQ color space](https://en.wikipedia.org/wiki/YIQ) to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
+An additional function we include in Boosted is the color contrast function, `color-yiq`. It utilizes the [YIQ color space](https://en.wikipedia.org/wiki/YIQ) to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
 
 For example, to generate color swatches from our `$theme-colors` map:
 
@@ -220,6 +220,48 @@ You can also specify a base color with our color map functions:
 {% highlight scss %}
 .custom-element {
   color: color-yiq(theme-color("dark")); // returns `color: #fff`
+}
+{% endhighlight %}
+
+## Escape SVG
+
+We use the `escape-svg` function to escape the `<`, `>` and `#` characters for SVG background images. These characters need to be escaped to properly render the background images in IE.
+
+## Add and Subtract functions
+
+We use the `add` and `subtract` functions to wrap the CSS `calc` function. The primary purpose of these functions is to avoid errors when a "unitless" `0` value is passed into a `calc` expression. Expressions like `calc(10px - 0)` will return an error in all browsers, despite being mathematically correct.
+
+Example where the calc is valid:
+
+{% highlight scss %}
+$border-radius: .25rem;
+$border-width: 1px;
+
+.element {
+  // Output calc(.25rem - 1px) is valid
+  border-radius: calc($border-radius - $border-width);
+}
+
+.element {
+  // Output the same calc(.25rem - 1px) as above
+  border-radius: subtract($border-radius, $border-width);
+}
+{% endhighlight %}
+
+Example where the calc is invalid:
+
+{% highlight scss %}
+$border-radius: .25rem;
+$border-width: 0;
+
+.element {
+  // Output calc(.25rem - 0) is invalid
+  border-radius: calc($border-radius - $border-width);
+}
+
+.element {
+  // Output .25rem
+  border-radius: subtract($border-radius, $border-width);
 }
 {% endhighlight %}
 
@@ -288,7 +330,7 @@ We use a subset of all colors to create a smaller color palette for generating c
 <div class="row">
   {% for color in site.data.theme-colors %}
     <div class="col-md-4">
-      <div class="p-3 mb-3 swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
+      <div class="p-3 mb-3 bg-{{ color.name }} {% if color.name == "light" or color.name == "warning" %}text-dark{% else %}text-white{% endif %}">{{ color.name | capitalize }}</div>
     </div>
   {% endfor %}
 </div>
@@ -371,7 +413,7 @@ Should you need to modify your `$grid-breakpoints`, your changes will apply to a
 
 ## CSS variables
 
-Boosted 4 includes around two dozen [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) in it's compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's Inspector, a code sandbox, or general prototyping.
+Boosted 4 includes around two dozen [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's Inspector, a code sandbox, or general prototyping.
 
 ### Available variables
 

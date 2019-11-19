@@ -11,10 +11,13 @@ toc: true
 Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {% capture example %}
-{% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
+{% for color in site.data.theme-colors %}{% if color.name != 'light' and color.name != 'dark' %}
+<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endif %}{% endfor %}
 <button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-secondary btn-icon">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -26,67 +29,41 @@ Boosted includes several predefined button styles, each serving its own semantic
 To get the inversed button behaviour, simply add `.btn-inverse` class to your `<button>` or `<a>` tag.
 
 {% capture example %}
-<div style="background-color: black; padding: 2rem">
-    {% for color in site.data.theme-colors %}
-    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
+<div class="bg-dark p-3">{% for color in site.data.theme-colors %}{% if color.name != 'light' and color.name != 'dark' %}
+    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endif %}{% endfor %}
     <button type="button" class="btn btn-inverse btn-link">Link</button>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<div style="background-color: #595959; padding: 2rem">
-    {% for color in site.data.theme-colors %}
-    <button type="button" class="btn btn-inverse btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
-    <button type="button" class="btn btn-inverse btn-link">Link</button>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### Light backgrounds
-
-The default styles can be used on secondary colors backgrounds, in this case remove the `.btn-inverse` class if any.
-
-{% capture example %}
-<div style="background-color: #eee; padding: 2rem">
-    {% for color in site.data.theme-colors %}
-    <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-
-    <button type="button" class="btn btn-link">Link</button>
+    <button type="button" class="btn btn-inverse btn-secondary btn-icon">
+        <span class="sr-only">Icon</span>
+        <span class="icon icon-settings" aria-hidden="true"></span>
+    </button>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
 ## Social buttons
 
-In need of a social media button? Some helper classes are designed to be used with the `.btn` element.
-`.btn-fbk`, `.btn-tw`, `.btn-gplus`, `.btn-lin`, `.btn-mail` are available for light and dark background.
+In need of a social media button? Some helper classes are designed to be used along with the `.btn` element, starting with the `.btn-social` variant.
 
 {% capture example %}
-<div style="padding: 2rem">
-    <a class="btn btn-fbk" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-tw" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-gplus" href="#" aria-label="Google Plus"></a>
-    <a class="btn btn-lin" href="#" aria-label="Linkedin"></a>  
-    <a class="btn btn-mail" href="#" aria-label="Mail"></a>
-</div>
+<div class="p-3">
+    <a class="btn btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
+    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a>
+    <a class="btn btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
+    <a class="btn btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a> 
+    <a class="btn btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>    
+    <a class="btn btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a> 
+    <a class="btn btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a> 
+    <a class="btn btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
+</div> 
 {% endcapture %}
 {% include example.html content=example %}
 
+Social buttons are compatibles with [dark backgrounds variant](#dark-backgrounds) and [sizing utilities](#sizes).
 
-{% capture example %}
-<div style="background-color: #000; padding: 2rem">
-    <a class="btn btn-fbk-inverse" href="#" aria-label="Facebook"></a> 
-    <a class="btn btn-tw-inverse" href="#" aria-label="Twitter"></a> 
-    <a class="btn btn-gplus-inverse" href="#" aria-label="Google Plus"></a>
-    <a class="btn btn-lin-inverse" href="#" aria-label="Linkedin"></a>  
-    <a class="btn btn-mail-inverse" href="#" aria-label="Mail"></a>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-[comment]: # end mod
+## Disable text wrapping
+
+If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
 ## Button tags
 
@@ -103,25 +80,11 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 {% endcapture %}
 {% include example.html content=example %}
 
-## Outline buttons
-
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
-
-{% capture example %}
-{% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: no btn-outline-*
 
 ## Sizes
 
-Fancy larger or smaller buttons? Add `.btn-xlg`, `.btn-lg` or `.btn-sm` for additional sizes.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-xlg">Extra large button</button>
-<button type="button" class="btn btn-secondary btn-xlg">Extra large button</button>
-{% endcapture %}
-{% include example.html content=example %}
+Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {% capture example %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
@@ -175,6 +138,17 @@ Disabled buttons using the `<a>` element behave a bit different:
 {% endcapture %}
 {% include example.html content=example %}
 
+[comment]: # Boosted mod
+### Dark background
+
+{% capture example %}
+<div class="bg-dark p-3">
+    <button type="button" class="btn btn-primary btn-inverse btn-lg" disabled>Primary button</button>
+    <button type="button" class="btn btn-secondary btn-inverse btn-lg" disabled>Button</button>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 {% capture callout %}
 ##### Link functionality caveat
 
@@ -212,15 +186,7 @@ Note that pre-checked buttons require you to manually add the `.active` class to
   </label>
 </div>
 {% endcapture %}
-{% include example.html content=example hide_markup=true%}
-
-{% highlight html %}
-<div class="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="checkbox" checked> Checked
-  </label>
-</div>
-{% endhighlight %}
+{% include example.html content=example %}
 
 {% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -234,22 +200,22 @@ Note that pre-checked buttons require you to manually add the `.active` class to
     <input type="radio" name="options" id="option3" autocomplete="off"> Radio
   </label>
 </div>
-{% endcapture %}
-{% include example.html content=example hide_markup=true%}
-
-{% highlight html %}
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" checked> Active
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2"> Radio
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3"> Radio
-  </label>
+<div class="bg-dark p-3">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary btn-inverse active">
+        <input type="radio" name="options-dark" id="option4" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-secondary btn-inverse">
+        <input type="radio" name="options-dark" id="option5" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary btn-inverse">
+        <input type="radio" name="options-dark" id="option6" autocomplete="off"> Radio
+      </label>
+    </div>
 </div>
-{% endhighlight %}
+{% endcapture %}
+{% include example.html content=example %}
+
 ### Methods
 
 | Method | Description |

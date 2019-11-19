@@ -435,7 +435,10 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Small table
+[comment]: # Boosted mod
+## Sizes
+
+### Small table
 
 Add `.table-sm` to make tables more compact by cutting cell padding in half.
 
@@ -472,8 +475,12 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 {% endcapture %}
 {% include example.html content=example %}
 
+### Large table
+
+Add `.table-lg` to make tables more compact by cutting cell padding in half.
+
 {% capture example %}
-<table class="table table-sm table-dark">
+<table class="table table-lg">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -504,6 +511,8 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 </table>
 {% endcapture %}
 {% include example.html content=example %}
+
+[comment]: # end mod
 
 ## Contextual classes
 
@@ -832,105 +841,13 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
 
 [comment]: # Boosted mod
 
-## Orange brand tables
+## Rich content tables
 
-### Checkbox tables
-
-Add `.has-checkbox` class to the `<table>` element to get correct spacing on the first column.
+Boosted tables may contain **icons, thumbnails and checkboxes**. To ensure proper layout, avoid using [sizes variants]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/tables/#sizes) in that case: rows' height should automatically match `.table-lg` ones. 
+Also, **when using checkboxes in the first column**, add `.has-checkbox` class to the `<table>` element to get correct spacing on the first column.
 
 {% capture example %}
 <table class="table table-hover has-checkbox">
-    <thead>
-        <tr>
-            <th scope="col">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select all</span>
-                </label>
-            </th>
-            <th scope="col">Status</th>
-            <th scope="col">Column heading</th>
-            <th scope="col">Column heading</th>
-            <th scope="col">Column heading</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 1</span>
-                </label>
-            </th>
-            <td>ok</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="selected">
-            <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 2</span>
-                </label>
-            </th>
-            <td>ok</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="selected">
-            <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 3</span>
-                </label>
-            </th>
-            <td>ok</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 4</span>
-                </label>
-            </th>
-            <td>ok</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 5</span>
-                </label>
-            </th>
-            <td>ok</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        </tbody>
-    </table>
-{% endcapture %} {% include example.html content=example %}
-
-### Thumbnail and icons tables
-
-In addition use `.has-icon` to specify the table is using icons and / or thumbnails to get correct row height.
-
-{% capture example %}
-<table class="table table-hover has-checkbox has-icon">
     <thead>
         <tr>
             <th scope="col">
@@ -956,7 +873,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
                 </label>
             </th>
             <td>
-                <span class="icon-folder-document"></span>
+                <span class="icon-folder-document" aria-hidden="true"></span>
                 <span class="sr-only">folder</span>
                 <span>Finance</span>
             </td>
@@ -973,7 +890,7 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
                 </label>
             </th>
             <td>
-                <span class="icon-unknown-file"></span>
+                <span class="icon-unknown-file" aria-hidden="true"></span>
                 <span class="sr-only">file</span>
                 <span>File</span>
             </td>
@@ -1020,19 +937,19 @@ In addition use `.has-icon` to specify the table is using icons and / or thumbna
                 </label>
             </th>
             <td>
-                <span class="icon-info" style="color: #527EDB;"></span>
+                <span class="icon-info" aria-hidden="true"></span>
                 <span class="sr-only">info</span>
             </td>
             <td>
-                <span class="svg-tick"></span>
+                <span class="svg-tick" aria-hidden="true"></span>
                 <span class="sr-only">checked</span>
             </td>
             <td>
-                <span class="svg-tick"></span>
+                <span class="svg-tick" aria-hidden="true"></span>
                 <span class="sr-only">checked</span>
             </td>
             <td>
-                <span class="svg-tick"></span>
+                <span class="svg-tick" aria-hidden="true"></span>
                 <span class="sr-only">checked</span>
             </td>
         </tr>

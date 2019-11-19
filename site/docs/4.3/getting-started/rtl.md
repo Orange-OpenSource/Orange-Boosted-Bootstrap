@@ -35,16 +35,16 @@ To get a RTL version of a boosted webpage you need only one thing :
       If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
-    <link rel="stylesheet" href="css/orangeHelvetica.css" />
+    <link rel="stylesheet" href="css/orangeHelvetica.min.css" />
     <!--
       Orange Icons
       Copyright (C) 2016 - 2019 Orange SA All rights reserved
       See NOTICE.txt for more informations.
     -->
-    <link rel="stylesheet" href="css/orangeIcons.css" />
+    <link rel="stylesheet" href="css/orangeIcons.min.css" />
 
     <!-- Boosted CSS -->
-    <link rel="stylesheet" href="path/to/your/boosted-rtl.css">
+    <link rel="stylesheet" href="css/boosted-rtl.min.css">
 
     <title>Hello, world!</title>
   </head>
@@ -59,7 +59,9 @@ To get a RTL version of a boosted webpage you need only one thing :
     <!-- jQuery first, then Popper.js, then Boosted JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
-    <script src="path/to/your/boosted.js"></script>
+    <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
+    <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
+    <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
   </body>
 </html>
 {% endhighlight %} 

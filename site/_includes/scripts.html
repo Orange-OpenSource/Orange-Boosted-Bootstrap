@@ -1,6 +1,11 @@
-<!-- boosted mod -->
-<a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
+<!-- Boosted mod -->
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
 <!-- end mod -->
+<script src="{{ site.cdn.focusvisible }}" integrity="{{ site.cdn.focusvisible_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
@@ -15,12 +20,12 @@
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 {%- endif -%}
 
-<!-- boosted mod -->
+<!-- Boosted mod -->
 <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
 <script>window.jQuery.tablesorter || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
 <!-- end mod -->
 
-{%- if jekyll.environment == "production" -%}
+{%- if jekyll.environment == "production" or jekyll.environment == "netlify" -%}
   <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/docs.min.js"></script>
 {%- else -%}
   <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/anchor.min.js"></script>
@@ -29,164 +34,151 @@
   <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/src/application.js"></script>
   <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/src/search.js"></script>
   <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/src/ie-emulation-modes-warning.js"></script>
-<!-- Boosted mod -->
+  <!-- Boosted mod -->
   <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/src/application-boosted.js"></script>
-<!-- end mod -->
+  <!-- end mod -->
 {%- endif -%}
 
 
 
 {%- if page.layout == "docs" -%}
-<!-- boosted mod -->
-<script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
-<script>window.Swiper || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/swiper.min.js"><\/script>')</script>
-<!-- end mod -->
-<script>
-  new Swiper('.swiper-container', {
-      autoplay: {
-      delay: 3500,
-    },
-    // enable accessibility
-    a11y: true,
-    keyboard: {
-      enabled: true
-    },
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    spaceBetween: 10,
-    slidesPerView: 'auto',
-    centeredSlides: false,
-    freeMode: false,
-
-    breakpoints: {
-        767: {
-            paginationClickable: false,
-            freeMode: true, // disable for centered mode
-            freeModeMomentumRatio: .5,
-            centeredSlides: false, // enable for centered mode
-            slideToClickedSlide: false // enable for centered mode
+  <!-- Boosted mod -->
+  <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
+  <script>window.Swiper || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/swiper.min.js"><\/script>')</script>
+  <script>
+    new Swiper('.swiper-container', {
+        autoplay: {
+        delay: 3500,
+      },
+      // enable accessibility
+      a11y: true,
+      keyboard: {
+        enabled: true
+      },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      freeMode: false,
+      breakpoints: {
+          767: {
+              paginationClickable: false,
+              freeMode: true, // disable for centered mode
+              freeModeMomentumRatio: .5,
+              centeredSlides: false, // enable for centered mode
+              slideToClickedSlide: false // enable for centered mode
+          }
+      }
+    });
+  
+    $('#collapsing-navbarHead').megamenu();
+  
+    // Swiper pause and play
+    $(document).ready(function () {
+      $("#swiperPlayButton").click(function () {
+        var MySwiper = document.querySelector('.swiper-container').swiper;
+        if ($("span",this).hasClass("icon-Pause")) {
+          MySwiper.autoplay.stop();
+          $(this).attr("aria-label", "Play Carousel");
+          $(this).attr("title", "Play Carousel");
+          $("span",this).toggleClass("icon-Pause icon-Play");
+        } else {
+          MySwiper.autoplay.start();
+          $(this).attr("aria-label", "Pause Carousel");
+          $(this).attr("title", "Pause Carousel");
+          $("span",this).toggleClass("icon-Play icon-Pause");
         }
-    }
-})
+      });
+    });
 
-  $('#collapsing-navbarHead').megamenu();
-
-  // Swiper pause and play
-  $(document).ready(function () {
-  $("#swiperPlayButton").click(function () {
-    var MySwiper = document.querySelector('.swiper-container').swiper;
-    if ($("span",this).hasClass("icon-Pause")) {
-      MySwiper.autoplay.stop();
-      $(this).attr("aria-label", "Play Carousel");
-      $(this).attr("title", "Play Carousel");
-      $("span",this).toggleClass("icon-Pause icon-Play");
-    } else {
-      MySwiper.autoplay.start();
-      $(this).attr("aria-label", "Pause Carousel");
-      $(this).attr("title", "Pause Carousel");
-      $("span",this).toggleClass("icon-Play icon-Pause");
-    }
-  });
-});
-  // end mod
-
-  // Boosted mod
-  // Carousel pause and play
-$(document).ready(function () {
-  $("#carouselPlayButton").click(function () {
-    if ($("span",this).hasClass("icon-Pause")) {
-      $('#carouselExampleControls').carousel('pause');
-      $(this).attr("aria-label", "Play Carousel");
-      $(this).attr("title", "Play Carousel");
-      $("span",this).toggleClass("icon-Pause icon-Play");
-    } else {
-      $('#carouselExampleControls').carousel('cycle');
-      $(this).attr("aria-label", "Pause Carousel");
-      $(this).attr("title", "Pause Carousel");
-      $("span",this).toggleClass("icon-Play icon-Pause");
-    }
-  });
-});
-  // end mod
-
-</script>
-
+    // Carousel pause and play
+    $(document).ready(function () {
+      $("#carouselPlayButton").click(function () {
+        if ($("span",this).hasClass("icon-Pause")) {
+          $('#carouselExampleControls').carousel('pause');
+          $(this).attr("aria-label", "Play Carousel");
+          $(this).attr("title", "Play Carousel");
+          $("span",this).toggleClass("icon-Pause icon-Play");
+        } else {
+          $('#carouselExampleControls').carousel('cycle');
+          $(this).attr("aria-label", "Pause Carousel");
+          $(this).attr("title", "Pause Carousel");
+          $("span",this).toggleClass("icon-Play icon-Pause");
+        }
+      });
+    });
+  </script>
+  <!-- end mod -->
 {%- endif -%}
 
 {%- if page.title == "Boostwatch" -%}
-<!-- boosted mod -->
-<script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
-<script>window.swiper || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/swiper.min.js"><\/script>')</script>
-<!-- end mod -->
-<script>
-  $(document).ready(function () {
-    $("#myTable").tablesorter({
-      sortList: [[4, 1]],
-      // manipulate the template string after is it created
-      onRenderTemplate : function(i, t){
-        // put a span arround the text
-        return '<span>' + t + '</span>';
-      }
-    });
-  });
-
-  new Swiper('.swiper-container', {
-    // enable accessibility
-    a11y: true,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false
-    },
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    spaceBetween: 10,
-    slidesPerView: 'auto',
-    centeredSlides: false,
-    freeMode: false,
-
-    breakpoints: {
-        767: {
-            // If we need pagination
-            pagination: {
-              clickable: false
-            },
-            freeMode: true, // disable for centered mode
-            freeModeMomentumRatio: .5,
-            centeredSlides: false, // enable for centered mode
-            slideToClickedSlide: false // enable for centered mode
+  <!-- Boosted mod -->
+  <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
+  <script>window.swiper || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/swiper.min.js"><\/script>')</script>
+  <script>
+    $(document).ready(function () {
+      $("#myTable").tablesorter({
+        sortList: [[4, 1]],
+        // manipulate the template string after is it created
+        onRenderTemplate : function(i, t){
+          // put a span arround the text
+          return '<span>' + t + '</span>';
         }
-    }
-});
-</script>
+      });
+    });
+  
+    new Swiper('.swiper-container', {
+      // enable accessibility
+      a11y: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      freeMode: false,
+      breakpoints: {
+          767: {
+              // If we need pagination
+              pagination: {
+                clickable: false
+              },
+              freeMode: true, // disable for centered mode
+              freeModeMomentumRatio: .5,
+              centeredSlides: false, // enable for centered mode
+              slideToClickedSlide: false // enable for centered mode
+          }
+        }
+    });
+  </script>
+  <!-- end mod -->
 {%- endif -%}
-<script>
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-    $('.o-nav-local').prioritynav();
-    $('#docs-navbar').navbar({sticky: true});
-  })
-</script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+      $('.o-nav-local').prioritynav();
+      $('#docs-navbar').navbar({sticky: true});
+    });
+  </script>

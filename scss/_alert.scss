@@ -1,49 +1,49 @@
 //
 // Base styles
 //
-// stylelint-disable declaration-no-important
 
 .alert {
   position: relative;
+  // Boosted mod
+  display: flex;
+  // end mod
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
+  font-weight: $font-weight-bold; // Boosted mod
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
-  .alert-icon {
-    position: absolute;
-    top: .625rem;
-    &::after {
-      width: alert-logo-size("md");
-      height: alert-logo-size("md");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-}
 
-// boosted mod
-.alert-sm {
-  padding: $alert-padding-y-sm $alert-padding-x-sm;
-  .alert-icon {
-    top: .4375rem;
-    &::after {
-      width: alert-logo-size("sm");
-      height: alert-logo-size("sm");
-    }
-  }
-}
+  // Boosted mod
+  a {
+    color: inherit;
+    text-decoration: underline; // Boosted mod: links are perceivable globally
 
-.alert-lg {
-  padding: $alert-padding-y-lg $alert-padding-x-lg;
-  .alert-icon {
-    top: .625rem;
-    &::after {
-      width: alert-logo-size("lg");
-      height: alert-logo-size("lg");
+    &:hover {
+      color: theme-color("primary");
+
+      .bg-dark & {
+        color: $orange-2;
+      }
     }
   }
+
+  &:not(.alert-sm) > :first-child {
+    margin-top: map-get($spacers, 1);
+  }
+
+  &::after {
+    display: block;
+    order: -1;
+    width: alert-logo-size("md");
+    min-width: alert-logo-size("md");
+    height: alert-logo-size("md");
+    margin-right: map-get($spacers, 3);
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  // end mod
 }
-//end mode
 
 // Headings for larger alerts
 .alert-heading {
@@ -51,43 +51,53 @@
   color: inherit;
 }
 
-// Provide class for links that match alerts
-.alert-link {
-  font-weight: $alert-link-font-weight;
-}
-
+// Boosted mod: links are perceivable globally
 
 // Dismissible alerts
 //
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: $close-font-size + $alert-padding-x * 2;
-
-  // Adjust close link position
+  // Boosted mod: simpler close button alignment
   .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: $alert-padding-y $alert-padding-x;
-    line-height: $alert-padding-y;  // boosted mod
+    align-self: flex-start;
+    padding: $alert-padding-x;
+    margin: -#{$alert-padding-x / 4} -#{$alert-padding-x} -#{$alert-padding-x / 4} auto;
     color: inherit;
   }
+  // end mod
 }
+
+// Boosted mod: small alerts
+.alert-sm {
+  padding: $alert-padding-y-sm 0;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  border: 0;
+
+  &::after {
+    width: alert-logo-size("sm");
+    min-width: alert-logo-size("sm");
+    height: alert-logo-size("sm");
+    margin-right: map-get($spacers, 2);
+  }
+
+  &.alert-dismissible .close {
+    margin: -#{$alert-padding-x / 2} 0 -#{$alert-padding-x / 2} auto;
+  }
+}
+//end mod
 
 
 // Alternate styles
 //
 // Generate contextual modifier classes for colorizing the alert.
 
-@each $color, $value in $theme-colors {
+// Boosted mod: restrict alerts to functional colors
+@each $color in success, info, warning, danger {
   .alert-#{$color} {
-    // Boosted mod adapt color with background, and keep initial brand color value for background
-    @if ($color == "secondary" or $color == "danger" or $color == "dark") {
-      @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), $white);
-    } @else {
-      @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), $black);
-    }
-    // end mod
+    border-color: theme-color($color); // Boosted mod: only change border-color
+    @extend %svg-#{$color}; // Boosted mod: add an icon per level
   }
 }
+// end mod

@@ -10,9 +10,11 @@ toc: true
 
 Boosted sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
 
-- Use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
+[comment]: # Boosted mod
+- Use **Helvetica Neue** (locally if available, webfont otherwise), with Helvetica and Arial as preferred fallback.
+- Then use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Use the `$font-family-base`, `$font-size-base`, `$line-height-base` and `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color` and apply link underlines only on `:hover`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
@@ -23,57 +25,92 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 All HTML headings, `<h1>` through `<h6>`, are available.
 
 <table>
-  <!-- BOOSTED MOD -->
+  <!-- Boosted mod -->
   <thead>
     <tr>
-    <th scope="col">Heading</th>
-    <th scope="col">Computer size</th>
-    <th scope="col">Mobile size</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Desktop size</th>
+        <th scope="col">Tablet size</th>
+        <th scope="col">Mobile size</th>
+        <th scope="col">
+            Line height
+            <small class="text-muted">Desktop</small>
+        </th>
+        <th scope="col">
+            Letter spacing
+            <small class="text-muted">Desktop</small>
+        </th>
     </tr>
   </thead>
-  <!-- END MOD -->    
+  <!-- end mod -->    
   <tbody>
     <tr>
-      <td>{{ "`<h1></h1>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 2.125rem (34px)</td>
-      <td class="type-info">Bold 1.25rem (20px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h1></h1>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>1 <small class="text-muted">(34px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h2></h2>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.875rem (30px)</td>
-      <td class="type-info">Bold 1.125rem (18px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h2></h2>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1.067 <small class="text-muted">(32px)</small></td>
+      <td>-0.05rem <small class="text-muted">(-0.8px)</small></td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h3></h3>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.5rem (24px)</td>
-      <td class="type-info">Bold 1rem (16px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h3></h3>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td rowspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.083 <small class="text-muted">(26px)</small></td>
+      <td>-0.0375rem <small class="text-muted">(-0.6px)</small></td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h4></h4>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.25rem (20px)</td>
-      <td class="type-info">Bold .875rem (14px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h4></h4>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1.1 <small class="text-muted">(22px)</small></td>
+      <td>-0.025rem <small class="text-muted">(-0.4px)</small></td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h5></h5>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1.125rem (18px)</td>
-      <td class="type-info">Bold .875rem (14px)</td>
-      <!-- END MOD -->
+      <td>
+        {{ "`<h5></h5>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td colspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.111 <small class="text-muted">(20px)</small></td>
+      <td>-0.0125rem <small class="text-muted">(-0.2px)</small></td>
+      <!-- end mod -->
     </tr>
     <tr>
-      <td>{{ "`<h6></h6>`" | markdownify }}</td>
-      <!-- BOOSTED MOD -->
-      <td class="type-info">Bold 1rem (16px)</td>
-      <td class="type-info">Bold .875rem (14px)</td>        
-      <!-- END MOD -->
+      <td>
+        {{ "`<h6></h6>`" | markdownify }}
+      </td>
+      <!-- Boosted mod -->
+      <td colspan="3">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.125 <small class="text-muted">(18px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+      <!-- end mod -->
     </tr>
   </tbody>
 </table>
@@ -113,8 +150,62 @@ Use the included utility classes to recreate the small secondary heading text fr
 
 ## Display headings
 
-Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default, but it's possible to enable [responsive font sizes](#responsive-font-sizes).
+Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.<!-- Keep in mind these headings are not responsive by default, but it's possible to enable [responsive font sizes](#responsive-font-sizes).-->
 
+[comment]: # Boosted mod
+<table>
+  <thead>
+    <tr>
+    <th scope="col">Display size</th>
+    <th scope="col">Desktop size</th>
+    <th scope="col">Tablet size</th>
+    <th scope="col">Mobile size</th>
+    <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+    </th>
+    <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display 1</td>
+      <td>Bold 3.75rem <small class="text-muted">(60px)</small></td>
+      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>1 <small class="text-muted">(60px)</small></td>
+      <td>-0.15rem <small class="text-muted">(-2.4px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 2</td>
+      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
+      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>1 <small class="text-muted">(50px)</small></td>
+      <td>-0.1rem <small class="text-muted">(-1.6px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 3</td>
+      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>1 <small class="text-muted">(40px)</small></td>
+      <td>-0.075rem <small class="text-muted">(-1.2px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 4</td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1 <small class="text-muted">(34px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
+    </tr>
+  </tbody>
+</table>
+    
 <div class="bd-example bd-example-type">
   <table class="table">
     <tbody>
@@ -140,6 +231,52 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-3">Display 3</h1>
 <h1 class="display-4">Display 4</h1>
 {% endhighlight %}
+
+[comment]: # Boosted mod
+## Regular text
+
+Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight.
+
+<table>
+  <thead>
+    <tr>
+    <th scope="col">Font size</th>
+    <th scope="col">Desktop size</th>
+    <th scope="col">Tablet size</th>
+    <th scope="col">Mobile size</th>
+    <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+    </th>
+    <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lead</td>
+      <td>Regular 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Regular 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>Regular 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.5 <small class="text-muted">(30px)</small></td>
+      <td>-0.015625rem <small class="text-muted">(-0.25px)</small></td>
+    </tr>
+    <tr>
+      <td>Body copy</td>
+      <td colspan="3">Regular 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.5 <small class="text-muted">(24px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td colspan="3">Regular .875rem <small class="text-muted">(14px)</small></td>
+      <td>1.143 <small class="text-muted">(16px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Lead
 
@@ -211,25 +348,7 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Alignment
-
-Use text utilities as needed to change the alignment of your blockquote.
-
-{% capture example %}
-<blockquote class="blockquote text-center">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<blockquote class="blockquote text-right">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: remove blockquotes' alignment part
 
 ## Lists
 
@@ -303,46 +422,35 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 {% endcapture %}
 {% include example.html content=example %}
 
+[comment]: # Boosted mod
+### Orange square list
+
+You may add `o-square-list` class to the root element of a list (`<ul>`) to get Orange square list style. Maximum elements depth is 3.
+
+{% capture example %}
+<ul class="o-square-list">
+    <li>First
+        <ul>
+            <li>1.1
+                <ul>
+                    <li>1.1.1</li>
+                    <li>1.1.2</li>
+                </ul>
+            </li>
+            <li>1.2</li>
+        </ul>
+    </li>
+    <li>Second</li>
+    <li>Third</li>
+    <li>Fourth</li>
+</ul>
+{% endcapture %} {% include example.html content=example %}
+
 ## Responsive font sizes
 
 Boosted v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Boosted.
 
-To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs).
-
-
-[comment]: # Boosted mod
-### Orange list with bullet points
-
-Simply add `o-square-list` class to the root element of a list (`<ul>`). Maximum elements depth is 3.
-
-{% capture example %}
-<ul class="o-square-list">
-    <li>
-        <span>first</span>
-        <ul>
-            <li>
-                <span>1.1</span>
-                <ul>
-                    <li><span>1.1.1</span></li>
-                    <li><span>1.1.2</span></li>
-                </ul>
-            </li>
-            <li>
-                <span>1.2</span>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <span>second</span>
-    </li>
-    <li>
-        <span>third</span>
-    </li>
-    <li>
-        <span>fourth</span>
-    </li>
-</ul>
-{% endcapture %} {% include example.html content=example %}
+To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/v8.0.4).
 
 ## Links
 

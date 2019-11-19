@@ -1,14 +1,17 @@
 // Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+// Boosted mod explicitly import sass-math-pow for compatibility with various sass compilers
 @import "node_modules/sass-math-pow/sass/math-pow";
+
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
 @mixin _assert-ascending($map, $map-name) {
   $prev-key: null;
   $prev-num: null;
   @each $key, $num in $map {
-    @if $prev-num == null or unit($num) == "%" {
+    @if $prev-num == null or unit($num) == "%" or unit($prev-num) == "%" {
       // Do nothing
     } @else if not comparable($prev-num, $num) {
       @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
@@ -48,10 +51,22 @@
   @return $string;
 }
 
+// See https://codepen.io/kevinweber/pen/dXWoRw
+@function escape-svg($string) {
+  @if str-index($string, "data:image/svg+xml") {
+    @each $char, $encoded in $escaped-characters {
+      $string: str-replace($string, $char, $encoded);
+    }
+  }
+
+  @return $string;
+}
+
 // Color contrast
+// Boosted mod to apply WCAG contrast algo
 @function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
-  @if ($color == #F16E00) {
-    @return #fff;
+  @if ($color == $primary) {
+    @return $light;
   }
   $r: red($color);
   $g: green($color);
@@ -67,7 +82,7 @@
   }
 }
 
-// apply Wcag contrast algo : http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+// Apply WCAG contrast algo : https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
 // Convert from HTMLCS JS algo
 @function relativelum($r, $g, $b) {
   @return ((transform($r) * .2126) + (transform($g) * .7152) + (transform($b) * .0722));
@@ -80,6 +95,7 @@
     @return poly-pow((($x + .055) / 1.055), 2.4);
   }
 }
+// end mod
 
 // Retrieve color Sass maps
 @function color($key: "blue") {
@@ -103,6 +119,49 @@
   @return mix($color-base, $color, $level * $theme-color-interval);
 }
 
+// Return valid calc
+@function add($value1, $value2, $return-calc: true) {
+  @if $value1 == null {
+    @return $value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 + $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} + #{$value2}), #{$value1} + #{$value2});
+}
+
+@function subtract($value1, $value2, $return-calc: true) {
+  @if $value1 == null and $value2 == null {
+    @return null;
+  }
+
+  @if $value1 == null {
+    @return -$value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 - $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} - #{$value2}), #{$value1} - #{$value2});
+}
+
+// Boosted mod
 @function alert-logo-size($key: "md") {
   @return map-get($alert-logo-sizes, $key);
 }
+
+@function icon-conf($network, $key) {
+  @return map-get(map-get($o-networks, $network), $key);
+}
+// end mod
