@@ -579,7 +579,7 @@ And of course [custom form controls](#custom-forms) are supported.
       </select>
     </div>
     <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox mr-sm-2">
+      <div class="custom-control custom-checkbox mr-sm-2 mt-md-2">
         <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
         <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
       </div>
