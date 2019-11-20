@@ -1301,6 +1301,9 @@ $o-stepbar-arrow-width: 1.0625rem !default;
 $o-table-icon-size: map-get($spacers, 4) !default;
 $o-table-caption: .75rem !default;
 
+// o-switches
+$o-switches-size: 1.625rem !default;
+
 // btn-social
 // ensure your fill attribute's value is '#boosted#', as it's replaced by black or white depending on button's state and variant
 $o-networks: (
