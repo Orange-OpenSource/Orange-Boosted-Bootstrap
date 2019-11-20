@@ -35,7 +35,7 @@ const browsers = {
     os: 'Windows',
     os_version: '10',
     browser: 'IE',
-    browser_version: '11.0'
+    browser_version: 'latest'
   },
   chromeWin10: {
     base: 'BrowserStack',
@@ -51,12 +51,12 @@ const browsers = {
     browser: 'Firefox',
     browser_version: 'latest'
   },
-  ie10Win8: {
+  EsrWin10: {
     base: 'BrowserStack',
     os: 'Windows',
-    os_version: '8',
-    browser: 'IE',
-    browser_version: '10.0'
+    os_version: '10',
+    browser: 'Firefox',
+    browser_version: '68'
   },
   iphoneX: {
     base: 'BrowserStack',
