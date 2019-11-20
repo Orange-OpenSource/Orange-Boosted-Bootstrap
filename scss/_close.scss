@@ -20,22 +20,18 @@
     background-image: escape-svg($close-icon-dark);
   }
 
-  // Override <a>'s hover style
-  // @include hover() {
-  //   color: $black;
-  //   text-decoration: none;
-  // }
-
-  @include hover-focus() {
+  &:hover,
+  &:focus {
     outline: $border-width solid;
+    outline-offset: 0;
 
     &:not(:disabled):not(.disabled) {
       opacity: 1;
     }
   }
 
-  @include focus() {
-    outline-offset: 0;
+  &:hover {
+    @include transition(none);
   }
   // end mod
 }
