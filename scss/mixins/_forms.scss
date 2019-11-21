@@ -70,7 +70,7 @@
   @include form-validation-state-selector($state) {
     ~ .#{$state}-feedback,
     ~ .#{$state}-tooltip {
-      display: block;
+      display: flex; // Boosted mod
     }
   }
 
@@ -94,29 +94,24 @@
 
       ~ .#{$state}-feedback {
         @if $enable-validation-icons {
-          &::after {
-            position: absolute;
-            top: -.1rem;
-            left: 0;
-            width: 1.125rem;
-            height: 1.125rem;
+          &::before {
+            display: inline-block;
+            width: $form-feedback-icon-size;
+            height: $form-feedback-icon-size;
+            margin-right: map-get($spacers, 1);
             content: "";
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: $form-feedback-icon-size;
           }
+
           @if $state == "valid" {
             @extend %svg-success;
           } @else {
             @extend %svg-danger;
           }
         }
-        position: relative;
-        display: block;
-        padding-left: 1.625rem;
       }
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
+      // end mod
     }
   }
 
