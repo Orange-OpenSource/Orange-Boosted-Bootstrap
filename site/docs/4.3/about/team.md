@@ -19,3 +19,11 @@ Boosted is maintained by a small group of invaluable core contributors, with the
 </div>
 
 Get involved with Boosted development by [opening an issue]({{ site.repo }}/issues/new) or submitting a pull request. Read our [contributing guidelines]({{ site.repo }}/blob/v{{ site.current_version }}/.github/CONTRIBUTING.md) for information on how we develop.
+
+{% capture callout %}
+## Bootstrap team
+
+Boosted is based on [Bootstrap](https://getbootstrap.com/) — maintained by [its founding team and a small group of invaluable core contributors](https://getbootstrap.com/docs/4.3/about/team/), with the massive support and involvement of their community, **including some proud Boosted maintainers and contributors**.
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
+

@@ -1,10 +1,12 @@
 ---
 layout: docs
 title: Orange brand guidelines
+description: Have a need for Boosted's brand resources? We have a few guidelines we follow, and in turn ask you to follow as well.
 group: about
+toc: true
 ---
 
-Have a need for Boosted's brand resources? Great! We have a few guidelines we follow, and in turn ask you to follow as well. These guidelines were published by Orange SA [Orange Brand Assets](https://brand.orange.com/guidelines/logo/).
+These guidelines were published by Orange SA [Orange Brand Assets](https://brand.orange.com/guidelines/logo/).
 
 ## Orange logo
 
@@ -119,3 +121,12 @@ Apply the Small logo correctly by avoiding the following:
 3. Never use the trademark symbol.
 4. Never change the size of the line - it allows optimal readbility in small sizes and represents the name “Orange” from the Master logo.
 5. Never change the colourways of the Small logo.
+
+<hr>
+
+{% capture callout %}
+## Bootstrap brand guidelines
+
+Boosted is based on [Bootstrap](https://getbootstrap.com/), which has [its own logo and brand usage guidelines](https://getbootstrap.com/docs/4.3/about/brand/).
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
