@@ -669,7 +669,7 @@ $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://w
 $custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
-$custom-select-feedback-icon-position:      center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
+$custom-select-feedback-icon-position:      center right map-get($spacers, 4) !default;
 $custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
 
 $custom-select-border-width:        $input-border-width !default;
