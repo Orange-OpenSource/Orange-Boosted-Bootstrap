@@ -56,56 +56,6 @@
 }
 // End mod
 
-.bd-masthead {
-  color: #000;
-  background-color: #fff;
-  background-image: none;
-  border: 0;
-
-  .lead {
-    font-size: $h5-font-size;
-
-    .btn {
-      text-decoration: none;
-    }
-
-    .btn + .btn {
-      margin-left: .625rem;
-    }
-  }
-
-  .bd-boosted-icon {
-    font-family: $font-family-base;
-    font-size: 3.125rem; // 50px
-    font-weight: 500;
-  }
-
-  .version {
-    margin-bottom: 0;
-  }
-
-  img {
-    display: block;
-    width: 70%;
-  }
-
-  @include media-breakpoint-down(xs) {
-    padding: .625rem;
-
-    .bd-boosted-icon {
-      font-size: 2.125rem // 34px;
-    }
-
-    img {
-      margin: 0 auto;
-    }
-
-    .col-md-6:first-child {
-      order: 1;
-    }
-  }
-}
-
 .masthead-followup {
   .bg-light {
     background-color: #eee !important; // stylelint-disable-line declaration-no-important

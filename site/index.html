@@ -2,23 +2,23 @@
 layout: home
 ---
 
-<main class="bd-masthead" id="content" role="main">
+<main class="bd-masthead px-2 px-md-0 py-5" id="content" role="main">
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-6 mx-auto col-md-6 order-md-2">
+      <div class="col-6 order-1 order-md-0 mx-auto col-md-6 order-md-2">
         <div id="boosted" class="d-flex align-items-end justify-content-center text-white bg-dark my-3 mx-auto mt-sm-0 mb-sm-5 ml-md-5" role="presentation">
           <span class="d-inline-flex mb-3 display-0">B<span class="text-primary">oo</span>sted</span>
         </div>
       </div>
       <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-        <h1 class="mb-3 bd-boosted-icon">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
-        <p class="lead">
+        <h1 class="mb-3 display-2 font-weight-normal">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
+        <p class="h5 font-weight-normal">
           Orange Boosted is a framework library accessible, ergonomic and Orange branded based on
           <a href="https://github.com/twbs/bootstrap/tree/{{ site.bootstrap_current_version }}" target="_blank" rel="noopener">Bootstrap {{ site.bootstrap_current_version }}</a>.
         </p>
         <p class="lead mb-4">
           <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/" class="btn btn-secondary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/" class="btn btn-secondary btn-lg ml-2" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>
         </p>
         <p class="text-muted mb-0">
           Currently v{{ site.current_version }}
