@@ -8,7 +8,9 @@
 
 .dropdown-toggle {
   padding: $btn-padding-y;
+  color: $dropdown-color;
   white-space: nowrap;
+  background-color: $dropdown-bg;
   border-color: $dropdown-border-color;
 
   // Boosted mod
