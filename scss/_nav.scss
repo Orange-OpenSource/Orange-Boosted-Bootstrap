@@ -53,6 +53,7 @@
 
   .nav-link {
     padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
+    background: none; // Boosted mod
     border: $nav-tabs-border-width solid transparent;
     border-bottom-width: 0; // Boosted mod
     outline-offset: map-get($spacers, 2); // Boosted mod
