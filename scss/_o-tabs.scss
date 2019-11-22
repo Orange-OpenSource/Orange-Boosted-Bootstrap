@@ -60,7 +60,7 @@
       height: .4375rem;
       margin-left: auto;
       content: "";
-      background-image: escape-svg($accordion-arrow-icon);
+      background: escape-svg($accordion-arrow-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
     }
 
     &:hover::after,

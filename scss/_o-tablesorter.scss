@@ -30,7 +30,7 @@
     height: $caret-width;
     margin-left: map-get($spacers, 2);
     content: "";
-    background-image: escape-svg($accordion-arrow-icon);
+    background: escape-svg($accordion-arrow-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
   }
 
   [aria-sort="none"] &::after {
@@ -47,7 +47,7 @@
   &:focus {
     span::after {
       height: 1.0625rem;
-      background-image: escape-svg($o-sortable-hover-icon);
+      background: escape-svg($o-sortable-hover-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
     }
   }
 }
