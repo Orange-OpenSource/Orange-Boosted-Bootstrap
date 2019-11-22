@@ -161,14 +161,14 @@ fieldset:disabled a.btn {
     &,
     &.btn-inverse:active {
       background-color: $white;
-      background-image: escape-svg(url("data:image/svg+xml;charset=utf-8,#{$icon}"));
+      background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
     }
 
     &:hover,
     &:focus,
     &:active,
     &.btn-inverse {
-      background-image: escape-svg(url("data:image/svg+xml;charset=utf-8,#{$icon-inverse}"));
+      background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
       border-color: $white;
       outline-color: $white;
     }

@@ -86,7 +86,7 @@
         width: 1rem;
         height: 1rem;
         content: "";
-        background-image: escape-svg(url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 24'><path d='M3 0L0 3l9 9-9 9 3 3 12-12' fill='#{$gray-600}'/></svg>"));
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 24'><path d='M3 0L0 3l9 9-9 9 3 3 12-12' fill='#{$gray-600}'/></svg>"));
         background-repeat: no-repeat;
       }
     }
