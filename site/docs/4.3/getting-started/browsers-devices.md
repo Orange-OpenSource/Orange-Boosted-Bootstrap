@@ -8,7 +8,7 @@ toc: true
 
 ## Supported browsers
 
-Boosted supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 10-11 / Microsoft Edge**.
+Boosted supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 11 / Microsoft Edge**.
 
 Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Boosted should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
 
@@ -20,14 +20,7 @@ You can find our supported range of browsers and their versions [in our `.browse
 >= 1%
 last 1 major version
 not dead
-Chrome >= 45
-Firefox >= 38
-Edge >= 12
-Explorer >= 10
-iOS >= 9
-Safari >= 9
-Android >= 4.4
-Opera >= 30
+Firefox ESR
 ```
 
 We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.
@@ -121,7 +114,7 @@ For a list of some of the browser bugs that Boosted has to grapple with, see our
 
 ## Internet Explorer
 
-Internet Explorer 10+ is supported; IE9 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in IE10, or require prefixed properties for full functionality. Visit [Can I use...](https://caniuse.com/) for details on browser support of CSS3 and HTML5 features. **If you require IE8-9 support, use Boosted 3.**
+Internet Explorer 11+ is supported; IE10 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in IE11, or require prefixed properties for full functionality. Visit [Can I use...](https://caniuse.com/) for details on browser support of CSS3 and HTML5 features. **If you require IE8-10 support, use Boosted 3.**
 
 ## Modals and dropdowns on mobile
 
