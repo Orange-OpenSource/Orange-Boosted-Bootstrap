@@ -7,7 +7,7 @@ layout: default
     <h1 class="bd-title mt-0">{{ page.title | smartify }}</h1>
     <p class="bd-lead">{{ page.description | smartify }}</p>
     {%- if page.title == "Examples" -%}
-    <a href="{{ site.download.source }}" class="btn btn-lg btn-bd-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
+    <a href="{{ site.download.source }}" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
     {%- endif -%}
   </div>
   <!-- Boosted mod : remove ads -->
