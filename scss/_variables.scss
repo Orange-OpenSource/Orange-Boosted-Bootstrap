@@ -944,8 +944,8 @@ $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 $black !default; // Boosted mod
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
-$card-cap-bg:                       $white !default; // Boosted mod
-$card-cap-color:                    null !default;
+$card-cap-bg:                       $black !default; // Boosted mod
+$card-cap-color:                    $white !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
