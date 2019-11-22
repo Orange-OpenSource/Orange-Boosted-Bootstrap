@@ -138,10 +138,17 @@
     border-width: .2rem;
   }
 
-  + .highlight {
+  + .highlight,
+  + .bd-clipboard + .highlight {
     margin-top: 0;
     border-top: 0; // Boosted mod
   }
+
+  // Boosted mod
+  + .bd-clipboard {
+    transform: translateY(-.2rem);
+  }
+  // end mod
 
   + p {
     margin-top: 2rem;

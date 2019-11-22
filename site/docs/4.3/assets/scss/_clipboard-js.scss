@@ -6,12 +6,6 @@
   position: relative;
   // display: none; // Boosted mod
   float: right;
-  transform: translateY(-.2rem);
-
-  + .highlight {
-    margin-top: 0;
-    border-top: 0; // Boosted mod
-  }
 
   // Boosted mod
   // @include media-breakpoint-up(md) {
