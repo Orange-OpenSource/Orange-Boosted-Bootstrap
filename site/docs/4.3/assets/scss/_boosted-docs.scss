@@ -124,42 +124,26 @@ $doc-link-arrow-hover: url("data:image/svg+xml;<svg xmlns='http://www.w3.org/200
 }
 
 // card links
-#bill .card-img,
-#shop .card-img,
-#timer .card-img,
-#unlock .card-img {
-  padding: 1.25rem;
-
-  img {
-    width: 50%;
-  }
-}
-
 #bill .card-img {
-  background-color: #50be87;
+  background-color: $teal;
 }
 
 #shop .card-img {
-  background-color: #4bb4e6;
+  background-color: $cyan;
 }
 
 #timer .card-img {
-  background-color: #ffb4e6;
+  background-color: $pink;
 }
 
 #unlock .card-img {
-  background-color: #ffd200;
+  background-color: $yellow-2;
 }
 
 @include media-breakpoint-down(xs) {
-  #bill .card-img,
-  #shop .card-img,
-  #timer .card-img,
-  #unlock .card-img {
-    img {
-      width: auto;
-      height: 2.5rem;
-    }
+  #cards-example img {
+    width: auto !important; // stylelint-disable-line declaration-no-important
+    height: 2.5rem;
   }
 }
 
