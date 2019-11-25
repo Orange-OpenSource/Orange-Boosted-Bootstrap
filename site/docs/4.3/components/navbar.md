@@ -39,9 +39,16 @@ Here's an example of all the sub-components included in a responsive light-theme
 {% capture callout %}
 ### Accessibility
 
+#### Multiple navigations
+
+The nav component should either have an `aria-label` or `aria-labelledy` attribute when there is more than one `nav` in the page. [Full Orange's navbar is a good example]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar-orange/#full-example), adding the [Supra bar]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar-orange/#supra-bar) above the main navigation. 
+If there's only one, you can leave as-is.
+
+#### Current page
+
 In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
 {% endcapture %}
-{% include callout.html content=callout %}
+{% include callout.html content=callout type='warning' %}
 
 [comment]: # End mod
 
