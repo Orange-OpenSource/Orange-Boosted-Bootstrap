@@ -149,8 +149,11 @@ $('.alert').alert()
 
 Or with `data` attributes on a button **within the alert**, as demonstrated above:
 
+[comment]: # Boosted mod: using visually hidden text instead of aria-label
 {% highlight html %}
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+<button type="button" class="close" data-dismiss="alert">
+    <span class="sr-only">Close</span>
+</button>
 {% endhighlight %}
 
 Note that closing an alert will remove it from the DOM.
