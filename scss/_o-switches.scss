@@ -2,15 +2,8 @@
 //
 // @note Deprecated since v4.2.1
 // @note To be removed in v5
-//
-// stylelint-disable property-blacklist
 
 .o-switch {
-  .toggle,
-  .toggle::before {
-    transition: .4s;
-  }
-
   .toggle {
     position: relative;
     display: block;
@@ -20,6 +13,8 @@
     margin: map-get($spacers, 1) 0;
     background: $gray-700;
     border: $border-width solid $gray-700;
+    outline-offset: $border-width * 2;
+    @include transition($transition-focus);
 
     &::before {
       position: absolute;
@@ -37,7 +32,6 @@
     line-height: $o-switches-size;
     color: $white;
     opacity: 0;
-    transition: inherit;
 
     &::after {
       position: absolute;
@@ -61,15 +55,20 @@
 
   .toggle-rounded,
   .toggle-rounded::before {
-    border-radius: $o-switches-size;
+    @include border-radius($o-switches-size, $o-switches-size);
   }
 
   .checkbox {
-    &:focus + .toggle::before {
-      outline: $border-width solid $white;
+    &:focus + .toggle {
+      outline: $border-width solid $gray-700;
+      outline-offset: -$border-width;
     }
 
-    .js-focus-visible &:focus:not(.focus-visible) + .toggle::before {
+    &:focus:checked + .toggle {
+      outline-color: theme-color("primary");
+    }
+
+    .js-focus-visible &:focus:not(.focus-visible) + .toggle {
       outline: 0;
     }
 
@@ -101,6 +100,10 @@
     .on {
       color: color-yiq(theme-color("success"));
     }
+  }
+
+  .success:focus:checked + .toggle {
+    outline-color: theme-color("success");
   }
 
   .form-group & .toggle {
@@ -151,8 +154,6 @@
       }
 
       &:hover {
-        transition: none;
-
         &:not(:active) {
           color: theme-color("primary");
           background-color: transparent;
