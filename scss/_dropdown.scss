@@ -21,8 +21,12 @@
     border-color: $gray-700;
 
     &:hover {
-      border-color: $white;
+      border-color: $dropdown-link-hover-color;
     }
+  }
+
+  .btn-group & {
+    border-color: $dropdown-color;
   }
   // end mod
 
