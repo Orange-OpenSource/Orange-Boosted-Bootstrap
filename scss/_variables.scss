@@ -1019,17 +1019,17 @@ $popover-arrow-outer-color:         $popover-border-color !default;
 // Toasts
 
 $toast-max-width:                   350px !default;
-$toast-padding-x:                   .625rem !default;
+$toast-padding-x:                   map-get($spacers, 2) !default; // Boosted mod
 $toast-padding-y:                   map-get($spacers, 1) !default;
 $toast-font-size:                   .875rem !default;
-$toast-color:                       null !default;
+$toast-color:                       $black !default; // Boosted mod
 $toast-background-color:            rgba($white, .85) !default;
 $toast-border-width:                1px !default;
 $toast-border-color:                rgba(0, 0, 0, .1) !default;
 $toast-border-radius:               null !default;
 $toast-box-shadow:                  null !default;
 
-$toast-header-color:                $gray-600 !default;
+$toast-header-color:                $gray-700 !default;
 $toast-header-background-color:     rgba($white, .85) !default;
 $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
