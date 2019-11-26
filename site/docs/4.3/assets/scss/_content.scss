@@ -72,7 +72,12 @@
 
 .bd-content-title {
   display: flex;
+  align-items: baseline;
   pointer-events: auto;
+
+  > code {
+    padding: 0 map-get($spacers, 1);
+  }
 }
 
 //
