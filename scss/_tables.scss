@@ -19,10 +19,6 @@
     font-size: $font-size-sm;
     line-height: $line-height-sm;
     vertical-align: top;
-
-    &:not(:first-child) {
-      padding-left: 0;
-    }
   }
 
   thead {
