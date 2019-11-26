@@ -7,7 +7,7 @@
 }
 
 .dropdown-toggle {
-  padding: $btn-padding-y;
+  padding: $dropdown-padding-x $dropdown-padding-y;
   color: $dropdown-color;
   white-space: nowrap;
   background-color: $dropdown-bg;
@@ -43,7 +43,7 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y 0;
+  padding: 0;
   margin: $dropdown-spacer 0 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
