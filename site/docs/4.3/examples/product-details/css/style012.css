@@ -24,20 +24,15 @@ header h1 {
   margin: 0 0 0 1.25rem;
 }
 
-header .btn {
-  float: left;
-}
-
 .btn.svg-arrow-previous {
-  padding-left: 2rem;
+  float: left;
   transition: none;
 }
 
 .btn.svg-arrow-previous::after {
-  top: .6875rem;
-  left: .8125rem;
   width: .5625rem;
   height: .875rem;
+  margin-right: .375rem;
 }
 
 /* shop page */

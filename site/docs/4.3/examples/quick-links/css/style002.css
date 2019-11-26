@@ -26,20 +26,15 @@ header h1 {
   margin: 0 0 0 1.25rem;
 }
 
-header .btn {
+.btn.svg-arrow-previous {
   float: left;
+  transition: none;
 }
 
-header .btn.svg-arrow-previous {
-  padding-left: 40px;
-  margin-right: .375rem;
-}
-
-header .btn.svg-arrow-previous::after {
-  top: 10px;
-  left: 20px;
+.btn.svg-arrow-previous::after {
   width: 10px;
   height: 16px;
+  margin-right: .375rem;
 }
 
 h2 {
@@ -67,7 +62,6 @@ h2 {
 }
 
 .o-card-link .card-title {
-  -ms-flex-item-align: start;
   align-self: flex-start;
   margin-bottom: 10px;
 }

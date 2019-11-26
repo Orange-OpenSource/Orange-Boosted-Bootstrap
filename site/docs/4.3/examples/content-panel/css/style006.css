@@ -16,9 +16,7 @@ h3 {
 /* page header */
 
 header {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
   align-items: center;
   padding: 1.25rem;
   overflow: hidden;
@@ -30,23 +28,15 @@ header h1 {
   margin: 0 0 0 1.25rem;
 }
 
-header .btn {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
+.btn.svg-arrow-previous {
+  float: left;
+  transition: none;
 }
 
-header .btn.svg-arrow-previous {
-  padding-left: 40px;
-  margin-right: .375rem;
-}
-
-header .btn.svg-arrow-previous::after {
-  top: 10px;
-  left: 20px;
+.btn.svg-arrow-previous::after {
   width: 10px;
   height: 16px;
+  margin-right: .375rem;
 }
 
 /* links page */
@@ -58,14 +48,11 @@ main {
 /* card row layout */
 
 .card-row {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .card-row .o-card {
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -77,7 +64,6 @@ main {
   .card-row {
     position: relative;
     -ms-flex-align: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-pack: center;
     align-items: center;
@@ -85,9 +71,7 @@ main {
   }
 
   .card-row .o-card {
-    -ms-flex-preferred-size: calc(50% - 1.25rem);
     flex-basis: calc(50% - 1.25rem);
-    -ms-flex-item-align: stretch;
     align-self: stretch;
     margin-bottom: 1.25rem;
     margin-left: 0;
@@ -104,7 +88,6 @@ main {
 
 @media (max-width: 479px) {
   .card-row .o-card {
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     margin-left: 0;
   }
