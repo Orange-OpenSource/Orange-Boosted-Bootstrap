@@ -25,7 +25,7 @@
     }
   }
 
-  .btn-group & {
+  .btn-group &:not(.btn-inverse) {
     border-color: $dropdown-color;
   }
   // end mod
