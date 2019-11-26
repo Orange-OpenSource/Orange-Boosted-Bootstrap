@@ -2,18 +2,8 @@
 //
 // @note Deprecated since v4.2.1
 // @note To be removed in v5
-//
-// stylelint-disable selector-max-class
-// stylelint-disable property-blacklist
 
 .o-switch {
-  .toggle,
-  .toggle::before,
-  .toggle .on,
-  .toggle .off {
-    transition: .4s;
-  }
-
   .toggle {
     position: relative;
     display: block;
@@ -22,68 +12,67 @@
     height: 1.875rem;
     margin: map-get($spacers, 1) 0;
     background: $gray-700;
-    border: 2px solid $gray-700;
-
-    &.toggle-rounded,
-    &.toggle-rounded::before {
-      border-radius: 1.625rem;
-    }
-
-    .on,
-    .off {
-      display: none;
-      font-weight: $font-weight-bold;
-      line-height: 1.625rem;
-      color: #fff;
-      text-align: left;
-      cursor: default;
-      opacity: 0;
-    }
-
-    .on.svg-checkbox-tick::after {
-      top: .1875rem;
-      left: -.125rem;
-    }
-
-    .off {
-      display: block;
-      text-align: right;
-      opacity: 1;
-
-      &.svg-delete::after {
-        top: .1875rem;
-        right: -.125rem;
-        left: auto;
-      }
-    }
+    border: $border-width solid $gray-700;
+    outline-offset: $border-width * 2;
+    @include transition($transition-focus);
 
     &::before {
       position: absolute;
-      top: 0;
       left: 0;
-      z-index: 1;
-      display: block;
-      width: 1.625rem;
-      height: 1.625rem;
+      width: $o-switches-size;
+      height: $o-switches-size;
       content: "";
-      background: #fff;
-    }
-  }
-}
-
-.o-switch .checkbox {
-  @include focus() {
-    + .toggle::before {
-      outline: $border-width solid $white;
+      background: $white;
     }
   }
 
-  .js-focus-visible &:focus:not(.focus-visible) + .toggle::before {
-    outline: 0;
+  .on,
+  .off {
+    display: none;
+    line-height: $o-switches-size;
+    color: $white;
+    opacity: 0;
+
+    &::after {
+      position: absolute;
+      top: .1875rem;
+    }
   }
 
-  &:checked {
-    + .toggle {
+  .off {
+    display: block;
+    text-align: right;
+    opacity: 1;
+  }
+
+  .on::after {
+    left: .25rem;
+  }
+
+  .off::after {
+    right: .25rem;
+  }
+
+  .toggle-rounded,
+  .toggle-rounded::before {
+    @include border-radius($o-switches-size, $o-switches-size);
+  }
+
+  .checkbox {
+    &:focus + .toggle {
+      outline: $border-width solid $gray-700;
+      outline-offset: -$border-width;
+    }
+
+    &:focus:checked + .toggle {
+      outline-color: theme-color("primary");
+    }
+
+    .js-focus-visible &:focus:not(.focus-visible) + .toggle {
+      outline: 0;
+    }
+
+    &:checked + .toggle {
       background: theme-color("primary");
       border-color: theme-color("primary");
 
@@ -91,6 +80,7 @@
         display: block;
         opacity: 1;
       }
+
       .off {
         display: none;
         opacity: 0;
@@ -103,73 +93,47 @@
     }
   }
 
-  &.success:checked {
-    + .toggle {
-      background: theme-color("success");
-      border-color: theme-color("success");
+  .success:checked + .toggle {
+    background: theme-color("success");
+    border-color: theme-color("success");
 
-      .on {
-        color: #000;
-      }
-
-      .on.icon-checkbox-tick {
-        color: #fff;
-      }
+    .on {
+      color: color-yiq(theme-color("success"));
     }
   }
-}
 
-.form-group.row .o-switch .col-form-label.toggle {
-  padding: 0 .375rem;
+  .success:focus:checked + .toggle {
+    outline-color: theme-color("success");
+  }
 
-  &.toggle-rounded {
+  .form-group & .toggle {
+    padding: 0 .375rem;
+  }
+
+  .form-group & .toggle-rounded {
     padding: 0 .875rem;
   }
-}
 
-// 3 way toggles
+  // 3 way toggles
+  &.btn-group-toggle {
+    display: inline-flex;
+    justify-content: flex-start;
+    border: $border-width solid $gray-500;
 
-.o-switch.btn-group-toggle {
-  display: inline-flex;
-  justify-content: flex-start;
-  border: $border-width solid $gray-500;
+    .btn {
+      min-width: 2.5rem;
+      padding-right: 0;
+      padding-left: 0;
+      margin: -$border-width 0;
+      border: $border-width solid transparent;
+      @include transition($transition-focus); // Boosted mod
 
-  .btn {
-    min-width: 2.5rem;
-    padding-right: 0;
-    padding-left: 0;
-    margin: -2px 0;
-    border: $border-width solid transparent;
-    @include transition($transition-focus); // Boosted mod
+      &:first-child {
+        margin-left: -$border-width;
+      }
 
-    &:first-child {
-      margin-left: -2px;
-    }
-
-    &:last-child {
-      margin-right: -2px;
-    }
-
-    &.active {
-      color: $white;
-      background-color: $black;
-      border-color: $black;
-    }
-
-    &:focus,
-    &.focus {
-      outline: $border-width solid $white;
-      outline-offset: -#{$border-width};
-    }
-
-    &:active {
-      border-color: theme-color("primary");
-    }
-
-    @include hover() {
-      &:not(:active) {
-        color: theme-color("primary");
-        background-color: transparent;
+      &:last-child {
+        margin-right: -$border-width;
       }
 
       &.active {
@@ -177,45 +141,31 @@
         background-color: $black;
         border-color: $black;
       }
-    }
-  }
 
-  &.no-outline {
-    border-color: transparent;
-
-    .btn {
-      border-top: $border-width solid transparent;
-      border-bottom: $border-width solid transparent;
-
-      &:first-child {
-        border-left-color: transparent;
+      &:focus,
+      &.focus {
+        // stylelint-disable-next-line declaration-no-important
+        outline: $border-width solid theme-color("primary") !important;
+        outline-offset: -$border-width;
       }
 
-      &:last-child {
-        border-right-color: transparent;
+      &:active {
+        border-color: theme-color("primary");
       }
 
-      &.active {
-        color: theme-color("primary");
-        background-color: #fff;
-        border-color: transparent;
-        outline-color: #000;
-      }
-
-      @include hover() {
+      &:hover {
         &:not(:active) {
-          color: #000;
-          background-color: #fff;
-          border-color: #ccc;
+          color: theme-color("primary");
+          background-color: transparent;
         }
 
         &.active {
-          color: theme-color("primary");
-          background-color: #fff;
-          border-color: transparent;
-          outline-color: #000;
+          color: $white;
+          background-color: $black;
+          border-color: $black;
         }
       }
     }
   }
 }
+

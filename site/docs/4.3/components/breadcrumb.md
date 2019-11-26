@@ -8,14 +8,14 @@ group: components
 ## Example
 
 {% capture example %}
-<nav>
+<nav role="navigation">
   <p class="sr-only">You are here:</p>
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page">Home</li>
   </ol>
 </nav>
 
-<nav>
+<nav role="navigation">
   <p class="sr-only">You are here:</p>
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -23,7 +23,7 @@ group: components
   </ol>
 </nav>
 
-<nav>
+<nav role="navigation">
   <p class="sr-only">You are here:</p>
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>

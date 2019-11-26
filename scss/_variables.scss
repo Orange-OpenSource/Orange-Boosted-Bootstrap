@@ -124,8 +124,8 @@ $yiq-text-light:            $white !default;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
-  ("<","<"),
-  (">",">"),
+  ("<","%3c"),
+  (">","%3e"),
   ("#","%23"),
 ) !default;
 
@@ -669,7 +669,7 @@ $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://w
 $custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
-$custom-select-feedback-icon-position:      center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
+$custom-select-feedback-icon-position:      center right map-get($spacers, 4) !default;
 $custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
 
 $custom-select-border-width:        $input-border-width !default;
@@ -741,6 +741,7 @@ $form-feedback-font-size:           $small-font-size !default;
 $form-feedback-valid-color:         theme-color("success") !default;
 $form-feedback-invalid-color:       theme-color("danger") !default;
 
+$form-feedback-icon-size:           1.125rem !default;
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
 $form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
@@ -943,8 +944,8 @@ $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 $black !default; // Boosted mod
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
-$card-cap-bg:                       $white !default; // Boosted mod
-$card-cap-color:                    null !default;
+$card-cap-bg:                       $black !default; // Boosted mod
+$card-cap-color:                    $white !default; // Boosted mod
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
@@ -1261,6 +1262,7 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 // Boosted mod
 // Accordions
 
+$accordion-arrow-size:        $custom-select-bg-size !default;
 $accordion-arrow-icon:        $custom-select-indicator !default;
 $accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
 $o-sortable-hover-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7,17 0,10 h 14 l -7,7 z'/><path d='M 7,0 14,7 0,7 7,0 z'/></svg>") !default;
@@ -1300,6 +1302,9 @@ $o-stepbar-arrow-width: 1.0625rem !default;
 // o-table
 $o-table-icon-size: map-get($spacers, 4) !default;
 $o-table-caption: .75rem !default;
+
+// o-switches
+$o-switches-size: 1.625rem !default;
 
 // btn-social
 // ensure your fill attribute's value is '#boosted#', as it's replaced by black or white depending on button's state and variant

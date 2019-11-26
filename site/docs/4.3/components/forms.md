@@ -579,7 +579,7 @@ And of course [custom form controls](#custom-forms) are supported.
       </select>
     </div>
     <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox mr-sm-2">
+      <div class="custom-control custom-checkbox mr-sm-2 mt-md-2">
         <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
         <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
       </div>
@@ -1293,7 +1293,7 @@ Default color is brand primary. Success color is also supported, use `.success` 
 <div class="form-group row">
   <label for="checkbox3" class="col-form-label col-md-3 col-8">Success</label>
   <div class="o-switch">
-    <input class="checkbox success sr-only" id="checkbox3" type="checkbox"/>
+    <input class="checkbox success sr-only" id="checkbox3" type="checkbox" checked/>
     <label for="checkbox3" class="toggle col-form-label" aria-hidden="true">
       <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
       <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
@@ -1352,24 +1352,6 @@ Replace number by label.
   <label class="btn btn-secondary doc-label">
     <input type="radio" name="options3" id="option33">Month</label>
 </div>
-
-#### without outline
-
-Alternatively, use `.no-outline` class on `.btn-group` element to get the clear version.
-
-{% capture example %}
-<div class="o-switch btn-group btn-group-toggle no-outline" data-toggle="buttons" role="group">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options2" id="option21" checked> 1
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option22"> 2
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options2" id="option23"> 3
-  </label>
-</div>
-{% endcapture %} {% include example.html content=example %}
 
 [comment]: # end mod
 

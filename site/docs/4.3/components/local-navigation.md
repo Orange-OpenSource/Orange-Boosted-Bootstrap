@@ -19,7 +19,7 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 {% include callout.html content=callout %}
 
 {% capture example %}
-<nav class="o-nav-local navbar-light">
+<nav role="navigation" class="o-nav-local navbar-light">
     <ul class="container nav">
         <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
@@ -34,7 +34,7 @@ Simply switch `.navbar-light` to `.navbar-dark` class to your `.o-nav-local` par
 
 {% capture example %}
 <div class="bg-dark pt-3 px-3 pb-1">
-    <nav class="o-nav-local navbar-dark">
+    <nav role="navigation" class="o-nav-local navbar-dark">
         <ul class="container nav">
             <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>

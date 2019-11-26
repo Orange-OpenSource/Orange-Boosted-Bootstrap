@@ -4,31 +4,12 @@
 
 .bd-clipboard {
   position: relative;
-  display: none;
+  // display: none; // Boosted mod
   float: right;
 
-  + .highlight {
-    margin-top: 0;
-  }
-
-  @include media-breakpoint-up(md) {
-    display: block;
-  }
-}
-
-// Boosted mod : remove btn-clipboard style
-.btn-clipboard {
-  position: absolute;
-  top: .5rem;
-  right: .5rem;
-  z-index: 10;
-  display: block;
-  cursor: pointer;
-  background: $white;
-}
-
-@media (min-width: 768px) {
-  .bd-clipboard {
-    display: block;
-  }
+  // Boosted mod
+  // @include media-breakpoint-up(md) {
+  //  display: block;
+  // }
+  // end mod
 }

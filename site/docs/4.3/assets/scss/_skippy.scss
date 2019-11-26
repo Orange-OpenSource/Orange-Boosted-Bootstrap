@@ -4,7 +4,6 @@
   color: $white;
   text-align: center;
   background-color: $bd-purple;
-  outline: 0;
 
   @include hover() {
     color: $white;
@@ -13,5 +12,5 @@
 
 .skippy-text {
   padding: .5em;
-  outline: 1px dotted;
+  // outline: 1px dotted; // Boosted mod
 }

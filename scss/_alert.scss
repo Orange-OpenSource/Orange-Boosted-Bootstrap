@@ -31,7 +31,7 @@
     margin-top: map-get($spacers, 1);
   }
 
-  &::after {
+  &::before {
     display: block;
     order: -1;
     width: alert-logo-size("md");
@@ -75,7 +75,7 @@
   line-height: $small-line-height;
   border: 0;
 
-  &::after {
+  &::before {
     width: alert-logo-size("sm");
     min-width: alert-logo-size("sm");
     height: alert-logo-size("sm");

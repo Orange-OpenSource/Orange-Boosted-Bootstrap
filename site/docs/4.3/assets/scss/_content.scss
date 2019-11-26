@@ -36,26 +36,32 @@
       }
     }
 
+    // Boosted mod
     // Cells
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th,
-        > td {
-          padding: .625rem;
-          border: 1px solid $table-border-color;
+    //> thead,
+    //> tbody,
+    //> tfoot {
+    //  > tr {
+    //    > th,
+    //    > td {
+    //      padding: .625rem;
+    //      border: 1px solid $table-border-color;
+    //
+    //      &.bg-light {
+    //        background-color: $gray-200;
+    //      }
+    //
+    //      > p:last-child {
+    //        margin-bottom: 0;
+    //      }
+    //    }
+    //  }
+    //}
 
-          &.bg-light {
-            background-color: $gray-200;
-          }
-
-          > p:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
+    .bg-light {
+      background-color: $gray-200;
     }
+    // end mod
 
     // Prevent breaking of code (e.g., Grunt tasks list)
     td:first-child > code {
@@ -65,7 +71,7 @@
 }
 
 .bd-content-title {
-  display: block;
+  display: flex;
   pointer-events: auto;
 }
 

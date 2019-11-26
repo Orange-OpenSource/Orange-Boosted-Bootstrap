@@ -49,7 +49,7 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 [comment]: # End mod
 
 {% capture example %}
-<nav class="nav">
+<nav role="navigation" class="nav">
   <a class="nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
@@ -131,7 +131,7 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 As always, vertical navigation is possible without `<ul>`s, too.
 
 {% capture example %}
-<nav class="nav flex-column">
+<nav role="navigation" class="nav flex-column">
   <a class="nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link" href="#">Link</a>
@@ -234,7 +234,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 When using a `<nav>`-based navigation, be sure to include `.nav-item` on the anchors.
 
 {% capture example %}
-<nav class="nav nav-pills nav-fill">
+<nav role="navigation" class="nav nav-pills nav-fill">
   <a class="nav-item nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-item nav-link" href="#">Much longer nav link</a>
   <a class="nav-item nav-link" href="#">Link</a>
@@ -266,7 +266,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
 Similar to the `.nav-fill` example using a `<nav>`-based navigation, be sure to include `.nav-item` on the anchors.
 
 {% capture example %}
-<nav class="nav nav-pills nav-justified">
+<nav role="navigation" class="nav nav-pills nav-justified">
   <a class="nav-item nav-link active" href="#" aria-current="page">Active</a>
   <a class="nav-item nav-link" href="#">Much longer nav link</a>
   <a class="nav-item nav-link" href="#">Link</a>
@@ -280,7 +280,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation, be sure to 
 If you need responsive nav variations, consider using a series of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 {% capture example %}
-<nav class="nav nav-pills flex-column flex-sm-row">
+<nav role="navigation" class="nav nav-pills flex-column flex-sm-row">
   <a class="flex-sm-fill text-sm-center nav-link active" href="#" aria-current="page">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
@@ -410,7 +410,7 @@ Note that dynamic tabbed interfaces should <em>not</em> contain dropdown menus, 
 To help fit your needs, this works with `<ul>`-based markup, as shown above, or with any arbitrary "roll your own" markup. Note that if you're using `<nav>`, you shouldn't add `role="tablist"` directly to it, as this would override the element's native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple `<div>`) and wrap the `<nav>` around it.
 
 <div class="bd-example bd-example-tabs">
-  <nav>
+  <nav role="navigation">
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
       <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
@@ -431,7 +431,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 </div>
 
 {% highlight html %}
-<nav>
+<nav role="navigation">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>

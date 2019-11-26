@@ -8,11 +8,16 @@
 
 .dropdown-toggle {
   padding: $btn-padding-y;
+  color: $dropdown-color;
   white-space: nowrap;
+  background-color: $dropdown-bg;
   border-color: $dropdown-border-color;
 
   // Boosted mod
-  .bg-dark &:not(.dropdown-toggle-split) {
+  .bg-dark &:not(.dropdown-toggle-split),
+  .navbar-dark &:not(.dropdown-toggle-split) {
+    color: $dropdown-bg;
+    background-color: $dropdown-color;
     border-color: $gray-700;
 
     &:hover {

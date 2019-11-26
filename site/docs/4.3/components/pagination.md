@@ -16,7 +16,7 @@ In addition, as pages likely have more than one such navigation section, it's ad
 Make sure to use class `.has-label` on previous and next links as shown in the example below to use chevron + label layout.
 
 {% capture example %}
-<nav aria-label="Page navigation example">
+<nav role="navigation" aria-label="Pagination example">
   <ul class="pagination">
     <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li><!-- boosted mod -->
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -33,7 +33,7 @@ Make sure to use class `.has-label` on previous and next links as shown in the e
 Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes.
 
 {% capture example %}
-<nav aria-label="Page navigation example">
+<nav role="navigation" aria-label="Pagination example with icons">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
@@ -60,7 +60,7 @@ Pagination links are customizable for different circumstances. Use `.disabled` f
 While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
 
 {% capture example %}
-<nav aria-label="...">
+<nav role="navigation" aria-label="Pagination example with disabled item">
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -81,7 +81,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 You can optionally swap out active or disabled anchors for `<span>`, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.
 
 {% capture example %}
-<nav aria-label="...">
+<nav role="navigation" aria-label="Pagination example with active span item">
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -117,7 +117,7 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 Change the alignment of pagination components with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
 
 {% capture example %}
-<nav aria-label="Page navigation example">
+<nav role="navigation" aria-label="Pagination example, centered">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
       <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -134,7 +134,7 @@ Change the alignment of pagination components with [flexbox utilities]({{ site.b
 {% include example.html content=example %}
 
 {% capture example %}
-<nav aria-label="Page navigation example">
+<nav role="navigation" aria-label="Pagination example, end aligned">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
       <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>

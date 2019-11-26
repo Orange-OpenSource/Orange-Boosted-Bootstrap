@@ -1,78 +1,132 @@
 ---
 layout: docs
-title: Brand guidelines
-description: Documentation and examples for Bootstrap's logo and brand usage guidelines.
+title: Orange brand guidelines
+description: Have a need for Boosted's brand resources? We have a few guidelines we follow, and in turn ask you to follow as well.
 group: about
 toc: true
 ---
 
-Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were inspired by MailChimp's [Brand Assets](https://mailchimp.com/about/brand-assets/).
+These guidelines were published by Orange SA [Orange Brand Assets](https://brand.orange.com/guidelines/logo/).
 
-## Mark and logo
+## Orange logo
 
-Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Bootstrap**). It should always appear in San Francisco Display Semibold. **Do not use the Twitter bird** in association with Bootstrap.
+The Orange logo is the strongest association people have with the brand, so we have to use it correctly.
 
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <img class="svg" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-outline.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-</div>
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <span class="h1">Bootstrap</span>
-  </div>
-  <div class="bd-brand-item inverse">
-    <span class="h1">Bootstrap</span>
-  </div>
-</div>
+Our logo is made up of the orange block, the logotype and the TM sign. When using the Orange logo never try to recreate it. Instead, download our original logo artwork and make sure you follow our top rules:
 
-## Download mark
+* The Master logo is a bespoke design — always use original artwork.
+* The Master logo sits on the grid and (in most cases) is positioned in one of the corners.
+* The Small logo is used for minimum size work and has animated behaviours.
 
-Download the Bootstrap mark in one of three styles, each available as an SVG file. Right click, Save as.
+To find out how you can use our mark to make yours, read the [core guideline](https://brand.orange.com/guidelines/logo/).
 
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <img class="svg" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-outline.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-punchout.svg" alt="Bootstrap" width="144" height="144">
-  </div>
+### Master artwork
+
+<div class="row mb-5">
+    <div class="col-lg-2 d-flex align-items-center justify-content-center">
+        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-1a.png" alt="Master Orange logo" width="50">
+    </div>
+    <div class="col-lg-10">
+        <p>The basic elements of the Master logo are <strong>the square and the word mark <mark>Orange™</mark></strong>.</p>
+        <p>Together they make up the Master logo, a trademark that is legally registered and protected.</p>
+        <p>These elements must never be altered in any way and the Master logo must always be applied using original artwork. The word mark never appears outside of the square. Always write our brand name with a leading cap (Orange) in all other cases. To protect its integrity, the Master logo may not be altered, distorted or animated in any way.</p>
+    </div>
 </div>
 
-## Name
+### Clear space
 
-The project and framework should always be referred to as **Bootstrap**. No Twitter before it, no capital _s_, and no abbreviations except for one, a capital **B**.
-
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <span class="h3">Bootstrap</span>
-    <strong class="text-success">Right</strong>
-  </div>
-  <div class="bd-brand-item">
-    <span class="h3 text-muted">BootStrap</span>
-    <strong class="text-warning">Wrong</strong>
-  </div>
-  <div class="bd-brand-item">
-    <span class="h3 text-muted">Twitter Bootstrap</span>
-    <strong class="text-warning">Wrong</strong>
-  </div>
+<div class="row mb-5">
+    <div class="col-lg-2 d-flex align-items-center justify-content-center">
+        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-3a.png" alt="Orange logo space" width="150">
+    </div>
+    <div class="col-lg-10">
+        <p>The Master logo should always have <strong>clear space around</strong> it to protect it from other graphic elements and help it stand out.</p>
+        <p>Always aim to set the clear space to <code>0.5×</code>. Where the space is limited (e.g. web) or when you need maximum visibility (e.g. perimeter boards), set your clear space to <code>0.25×</code> instead.</p>
+        <p>To maintain clarity and legibility, we have set <strong>minimum sizes</strong> for the Master logo.</p>
+    </div>
 </div>
 
-## Colors
 
-Our docs and branding use a handful of primary colors to differentiate what *is* Bootstrap from what *is in* Bootstrap. In other words, if it's purple, it's representative of Bootstrap.
+#### Minimum sizes
 
-<div class="bd-brand">
-  <div class="color-swatches">
-    <div class="color-swatch bd-purple"></div>
-    <div class="color-swatch bd-purple-light"></div>
-    <div class="color-swatch bd-purple-lighter"></div>
-    <div class="color-swatch bd-gray"></div>
-  </div>
+<table class="mb-5">
+  <thead>
+    <tr>
+      <td colspan="2" class="border-0"></td>
+      <th scope="col" colspan="2" id="digital">Digital</th>
+    </tr>
+    <tr>
+      <th scope="row">Media</th>
+      <th scope="col" id="print">Print</th>
+      <th scope="col" id="mobile">Mobile</th>
+      <th scope="col" id="desktop">Tablet & desktop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" id="size">
+        Size
+        <small class="text-muted">(×)</small>
+      </th>
+      <td headers="print size">10mm</td>
+      <td headers="digital mobile size">30px</td>
+      <td headers="digital desktop size">50px</td>
+    </tr>
+    <tr>
+      <th scope="row" id="clear">
+        Preferred clear space
+        <small class="text-muted">(0.5×)</small>
+      </th>
+      <td headers="print clear">5mm</td>
+      <td headers="digital mobile clear">15px</td>
+      <td headers="digital desktop clear">25px</td>
+    </tr>
+    <tr>
+      <th scope="row" id="small">
+        Small clear space
+        <small class="text-muted">(0.25×)</small>
+      </th>
+      <td headers="print small">2.5mm</td>
+      <td headers="digital mobile small">7.5px</td>
+      <td headers="digital desktop small">12.5px</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Small logo
+
+<div class="row">
+    <div class="col-lg-2 d-flex align-items-center justify-content-center">
+        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-4b.png" alt="Small Orange logo" width="100">
+    </div>
+    <div class="col-lg-10">
+        <p>The Small logo is used for minimum size work <strong>when the Master logo is no longer clearly visible</strong>.</p>
+        <ul>
+            <li>The Small logo is used when the size of the Master logo appears less than <code>50px</code> on desktops or tablet screens, <code>30px</code> on mobile screens and <code>10mm</code> in printed media or product branding.</li>
+            <li>The clear space area around the Small logo is equal to <code>0.25×</code>.</li>
+            <li>The basic elements of the Small logo are the square and a line with solid white fill. Together they make up the Small logo.</li>
+            <li>The Small logo follows the same colourways as the Master logo.</li>
+        </ul>
+    </div>
 </div>
+
+These elements must never be altered in any way and must always be applied using original artwork.
+It’s possible to animate the Small logo; however this process is strictly managed by the Global brand team.
+Apply the Small logo correctly by avoiding the following:
+
+
+1. Never change the colour of the line, even in animation.
+2. The line always has a solid, white fill. It is never transparent.
+3. Never use the trademark symbol.
+4. Never change the size of the line - it allows optimal readbility in small sizes and represents the name “Orange” from the Master logo.
+5. Never change the colourways of the Small logo.
+
+<hr>
+
+{% capture callout %}
+## Bootstrap brand guidelines
+
+Boosted is based on [Bootstrap](https://getbootstrap.com/), which has [its own logo and brand usage guidelines](https://getbootstrap.com/docs/4.3/about/brand/).
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
