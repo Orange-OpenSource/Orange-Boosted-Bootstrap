@@ -24,7 +24,7 @@ Reduce the width of your browser to see overflowing navigation items moved into 
 
 {% capture example %}
 <div class="o-nav-local">
-    <nav class="container">
+    <nav role="navigation" class="container">
         <ul class="nav">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>

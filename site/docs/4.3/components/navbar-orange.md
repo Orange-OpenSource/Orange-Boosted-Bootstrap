@@ -16,7 +16,7 @@ Orange navbar is the main navigation of project website. It should always be inc
 
 {% capture example %}
 <header role="banner">
-    <nav class="navbar navbar-dark navbar-expand-md">
+    <nav role="navigation" class="navbar navbar-dark navbar-expand-md">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar" aria-controls="collapsing-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,7 @@ This navbar is visible only on desktop view.
 {% include callout.html content=callout type="warning" %}
 
 {% capture example %}
-<nav class="navbar navbar-dark navbar-expand-md supra">
+<nav role="navigation" class="navbar navbar-dark navbar-expand-md supra">
     <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
@@ -99,7 +99,7 @@ A supra bar should never be used on its own and always be included in header and
 
 {% capture example %}
 <header role="banner" id="demo-navbar">
-    <nav class="navbar navbar-dark navbar-expand-md supra" aria-label="Complementary navigation">
+    <nav role="navigation" class="navbar navbar-dark navbar-expand-md supra" aria-label="Complementary navigation">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
@@ -127,7 +127,7 @@ A supra bar should never be used on its own and always be included in header and
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-dark navbar-expand-md" aria-label="Main navigation">
+    <nav role="navigation" class="navbar navbar-dark navbar-expand-md" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2" aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
