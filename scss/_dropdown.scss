@@ -8,6 +8,7 @@
 
 .dropdown-toggle {
   padding: $dropdown-padding-x $dropdown-padding-y;
+  line-height: 1;
   color: $dropdown-color;
   white-space: nowrap;
   background-color: $dropdown-bg;
@@ -98,9 +99,6 @@
 
   .dropdown-toggle {
     @include caret(right);
-    &::after {
-      vertical-align: 0;
-    }
   }
 }
 
