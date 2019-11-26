@@ -62,7 +62,7 @@ This `font-family` is applied to the `<body>` and automatically inherited global
 
 All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: 1.25rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Heading</th>
@@ -175,7 +175,7 @@ The `<pre>` element is reset to remove its `margin-top` and use `rem` units for 
 Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/tables/).
 
 <div class="bd-example">
-  <table>
+  <table class="table">
     <caption>
       This is an example table, and this is its caption to describe the contents.
     </caption>

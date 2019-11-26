@@ -24,7 +24,7 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
-<table>
+<table class="table">
   <!-- Boosted mod -->
   <thead>
     <tr>
@@ -153,7 +153,7 @@ Use the included utility classes to recreate the small secondary heading text fr
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.<!-- Keep in mind these headings are not responsive by default, but it's possible to enable [responsive font sizes](#responsive-font-sizes).-->
 
 [comment]: # Boosted mod
-<table>
+<table class="table">
   <thead>
     <tr>
     <th scope="col">Display size</th>
@@ -237,7 +237,7 @@ Traditional heading elements are designed to work best in the meat of your page 
 
 Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight.
 
-<table>
+<table class="table">
   <thead>
     <tr>
     <th scope="col">Font size</th>
