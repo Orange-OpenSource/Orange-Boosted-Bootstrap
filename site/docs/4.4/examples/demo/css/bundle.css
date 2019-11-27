@@ -37,11 +37,9 @@
   left: 50%;
   font-size: 1.5rem;
   font-weight: 700;
-  -webkit-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
 }
 .gauge svg {
-  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 .gauge .progress-meter,
@@ -200,9 +198,7 @@ h2 {
 }
 
 .custom-layout {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -294,7 +290,6 @@ details[open] summary {
   margin-bottom: 7px;
 }
 details[open] summary::after {
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
