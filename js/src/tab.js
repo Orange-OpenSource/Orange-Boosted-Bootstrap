@@ -367,7 +367,7 @@ $(document)
     Tab._dataApiKeydownHandler.call($(this), event)
   })
   .on('DOMContentLoaded', () => {
-    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
+    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE))
   })
   // end mod
 /**

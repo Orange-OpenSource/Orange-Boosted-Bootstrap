@@ -390,7 +390,7 @@ $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     $(Selector.DATA_TOGGLE).each(function () {
       const target = Collapse._getTargetFromElement(this)
 
-      Collapse._jQueryInterface.call($(target), 'init')
+      Collapse._jQueryInterface.call($(target))
     })
   })
 // end mod

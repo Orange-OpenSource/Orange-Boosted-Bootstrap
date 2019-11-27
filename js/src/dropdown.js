@@ -551,7 +551,7 @@ $(document)
   // Boosted mod
   .on('DOMContentLoaded', () => {
     // Instanciate every dropdown in the DOM
-    Dropdown._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
+    Dropdown._jQueryInterface.call($(Selector.DATA_TOGGLE))
   })
   // end mod
 

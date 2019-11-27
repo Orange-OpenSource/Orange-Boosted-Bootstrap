@@ -135,7 +135,7 @@ class Otab {
 
 $(document)
   .on('DOMContentLoaded', () => {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING), 'init')
+    Otab._jQueryInterface.call($(Selector.OTAB_HEADING))
   })
   .on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
     event.preventDefault()
