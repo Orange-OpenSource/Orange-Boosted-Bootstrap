@@ -19,7 +19,7 @@ url:            "https://boosted.orange.com"
 # end boosted mod
 encoding:       UTF-8
 exclude:
-  - docs/4.3/assets/scss/
+  - docs/4.4/assets/scss/
 
 plugins:
   - jekyll-redirect-from
@@ -71,13 +71,13 @@ title:              Boosted
 description:        "Based on Bootstrap the most popular library."
 twitter:            getbootstrap
 authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
-social_image_path:  /docs/4.3/assets/brand/bootstrap-social.png
-social_logo_path:   /docs/4.3/assets/brand/bootstrap-social-logo.png
+social_image_path:  /docs/4.4/assets/brand/bootstrap-social.png
+social_logo_path:   /docs/4.4/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.3.1
-current_ruby_version: 4.3.1
-docs_version:         4.3
+current_version:      4.4.0
+current_ruby_version: 4.4.0
+docs_version:         4.4
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 opencollective:       "https://opencollective.com/bootstrap"
@@ -87,8 +87,8 @@ themes:               "https://themes.getbootstrap.com"
 icons:                "https://icons.getbootstrap.com"
 
 download:
-  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.3.1.zip"
-  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.3.1/boosted-4.3.1-dist.zip"
+  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.4.0.zip"
+  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.4.0/boosted-4.4.0-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
@@ -100,7 +100,7 @@ cdn:
   helveticacss_hash: "sha384-e8MwV9etVvzgFAywWdlyEtXAdRYElY+BlimyrAcXkDiyJXy4oIZZqrV/ST605uwF"
   js:                "https://cdn.jsdelivr.net/npm/boosted/dist/js/boosted.min.js"
   js_hash:           "sha384-mtmGDb9qalJeocSwW+VFsFUaXKMIItvPRHgGn87RVnoYZz/8D42oMV65Qse6yJt5"
-  js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.3.1/dist/js/boosted.bundle.min.js"
+  js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.4.0/dist/js/boosted.bundle.min.js"
   js_bundle_hash:    "sha384-xbvihzha8ShwGdBgk4dOni196Hl/AYymEmzTM9YYAvfcy/buOrVsVi9OPeIMcbyO"
   jquery:            "https://code.jquery.com/jquery-3.4.1.slim.min.js"
   jquery_hash:       "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

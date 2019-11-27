@@ -127,6 +127,6 @@ Apply the Small logo correctly by avoiding the following:
 {% capture callout %}
 ## Bootstrap brand guidelines
 
-Boosted is based on [Bootstrap](https://getbootstrap.com/), which has [its own logo and brand usage guidelines](https://getbootstrap.com/docs/4.3/about/brand/).
+Boosted is based on [Bootstrap](https://getbootstrap.com/), which has [its own logo and brand usage guidelines](https://getbootstrap.com/docs/4.4/about/brand/).
 {% endcapture %}
 {% include callout.html content=callout type="info" %}

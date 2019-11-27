@@ -5,8 +5,8 @@ description: Get started with Boosted, the world's most popular framework for bu
 group: getting-started
 redirect_from:
   - "/docs/"
-  - "/docs/4.3/"
-  - "/docs/4.3/getting-started/"
+  - "/docs/4.4/"
+  - "/docs/4.4/getting-started/"
   - "/docs/getting-started/"
   - "/getting-started/"
 toc: true
