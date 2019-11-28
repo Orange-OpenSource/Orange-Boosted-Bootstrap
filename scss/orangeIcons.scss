@@ -2714,9 +2714,12 @@
 }
 
 // Using svg
+[class*="svg-"] {
+  line-height: 1;
+}
 
 [class*="svg-"]::after {
-  display: block;
+  display: inline-block;
   width: $spacer;
   height: $spacer;
   content: "";
