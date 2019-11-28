@@ -1,98 +1,11 @@
-/* general */
-
-html,
-body {
-  height: 100%;
-}
-
-h1,
-h2,
-h3 {
-  margin-top: 1.25rem;
-  margin-bottom: .625rem;
-  letter-spacing: -.03em;
-}
-
 /* page header */
 
-header {
-  display: flex;
-  align-items: center;
-  padding: 1.25rem;
-  overflow: hidden;
-  border-bottom: 1px solid #000;
-}
-
-header h1 {
-  float: left;
-  margin: 0 0 0 1.25rem;
-}
-
 .btn.svg-arrow-previous {
-  float: left;
   transition: none;
 }
 
 .btn.svg-arrow-previous::after {
-  width: 10px;
-  height: 16px;
+  width: .5625rem;
+  height: .875rem;
   margin-right: .375rem;
-}
-
-/* links page */
-
-main {
-  margin-bottom: 6.25rem;
-}
-
-/* card row layout */
-
-.card-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.card-row .o-card {
-  flex-grow: 1;
-}
-
-.card-row .o-card + .o-card {
-  margin-left: 1.25rem;
-}
-
-@media (max-width: 767px) {
-  .card-row {
-    position: relative;
-    -ms-flex-align: center;
-    flex-wrap: wrap;
-    -ms-flex-pack: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card-row .o-card {
-    flex-basis: calc(50% - 1.25rem);
-    align-self: stretch;
-    margin-bottom: 1.25rem;
-    margin-left: 0;
-  }
-
-  .card-row .o-card + .o-card {
-    margin-left: 0;
-  }
-
-  .card-row .o-card:nth-child(even) {
-    margin-left: 1.25rem;
-  }
-}
-
-@media (max-width: 479px) {
-  .card-row .o-card {
-    flex-basis: 100%;
-    margin-left: 0;
-  }
-
-  .card-row .o-card:nth-child(even) {
-    margin-left: 0;
-  }
 }
