@@ -2739,7 +2739,11 @@
 .svg-menu {
   @include svg-menu($white);
 
-  @include hover() {
+  &:hover,
+  &:focus,
+  &:active,
+  :hover > &,
+  :focus > & {
     @include svg-menu($black);
   }
 }
@@ -2787,7 +2791,11 @@
 .svg-settings {
   @include svg-settings($white);
 
-  @include hover-focus() {
+  &:hover,
+  &:focus,
+  &:active,
+  :hover > &,
+  :focus > & {
     @include svg-settings(theme-color("primary"));
   }
 }
@@ -2795,7 +2803,11 @@
 .svg-search {
   @include svg-search($white);
 
-  @include hover() {
+  &:hover,
+  &:focus,
+  &:active,
+  :hover > &,
+  :focus > & {
     @include svg-search(theme-color("primary"));
   }
 }
@@ -2803,11 +2815,11 @@
 .svg-avatar {
   @include svg-avatar($white);
 
-  @include hover() {
-    @include svg-avatar(theme-color("primary"));
-  }
-
-  @include active() {
+  &:hover,
+  &:focus,
+  &:active,
+  :hover > &,
+  :focus > & {
     @include svg-avatar(theme-color("primary"));
   }
 }
@@ -2815,11 +2827,11 @@
 .svg-buy {
   @include svg-buy($white);
 
-  @include hover() {
-    @include svg-buy(theme-color("primary"));
-  }
-
-  @include active() {
+  &:hover,
+  &:focus,
+  &:active,
+  :hover > &,
+  :focus > & {
     @include svg-buy(theme-color("primary"));
   }
 }
