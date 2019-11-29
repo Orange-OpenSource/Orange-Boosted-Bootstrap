@@ -4,21 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form</title>
-    <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
-    <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../dist/css/boosted.css" />
+    <link href="../../dist/css/orangeHelvetica.min.css" rel="stylesheet">
+    <link href="../../dist/css/orangeIcons.min.css" rel="stylesheet">
+    <link href="../../dist/css/boosted.min.css" rel="stylesheet"/>
+    <link href="example.css" rel="stylesheet">
   </head>
   <body>
-    <div class="skiplinks" >
-      <div class="skiplinks-section sr-only">
-        <ul>
-          <li><a href="#mainNav" class="skiplinks-trigger">main navigation</a></li>
-          <li><a href="#content" class="skiplinks-trigger">content</a></li>
-        </ul>
-      </div>
-    </div>
+    <a href="#mainNav" class="skippy sr-only sr-only-focusable">
+      <span class="skippy-text">Skip to main navigation</span>
+    </a>
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+      <span class="skippy-text">Skip to content</span>
+    </a>
 
-  <header role="banner">
+     <header role="banner">
       <nav role="navigation" id="mainNav" class="navbar navbar-dark bg-dark navbar-expand-md" aria-label="Main navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -80,7 +79,7 @@
       </li>
     </ol>
   </nav>
-  
+
   <main role="main" id="content" class="container my-5">
     <div class="row">
         <div class="col-sm-6">
@@ -138,7 +137,7 @@
         </div>
       </div>
     </main><!--/.container-->
-  
+
     <footer role="contentinfo" class="o-footer">
       <div class="o-footer-bottom">
         <div class="container">
@@ -151,7 +150,7 @@
         </div>
       </div>
     </footer>
-  
+
     <!-- Boosted core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
@@ -159,9 +158,9 @@
       <script src="../../assets/js/vendor/popper.min.js"></script>
       <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
       <script src="../../dist/js/boosted.js"></script>
-  
+
     <script src="form.js"></script>
-  
+
     <script>
       // Surcharge des valeurs du script de la toolbar
       accessibilitytoolbar_custom={
@@ -171,15 +170,15 @@
         cssSkipLinkClassName: "skiplinks-trigger",
         callback:skiplinksAfterLoad
       };
-  
-  
+
+
       $(".skiplinks-trigger").focus(function(){
         $(".skiplinks-section").addClass("skiplinks-show").removeClass("sr-only")
       });
       $(".skiplinks-trigger").blur(function(){
         $(".skiplinks-section").removeClass("skiplinks-show").addClass("sr-only")
       });
-  
+
       function skiplinksAfterLoad(){
         $(".skiplinks-trigger").focus(function(){
           $(".skiplinks-section").addClass("skiplinks-show").removeClass("sr-only")
@@ -188,7 +187,7 @@
           $(".skiplinks-section").removeClass("skiplinks-show").addClass("sr-only")
         });
       }
-  
+
     </script>
   </body>
 </html>
