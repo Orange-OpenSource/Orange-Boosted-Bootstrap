@@ -4,69 +4,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>news home</title>
-    <link href="../../dist/css/orangeHelvetica.css" rel="stylesheet">
-    <link href="../../dist/css/orangeIcons.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../dist/css/boosted.css" />
-    <link href="css/example.css" rel="stylesheet">
+    <link href="../../dist/css/orangeHelvetica.min.css" rel="stylesheet">
+    <link href="../../dist/css/orangeIcons.min.css" rel="stylesheet">
+    <link href="../../dist/css/boosted.min.css" rel="stylesheet"/>
+    <link href="example.css" rel="stylesheet">
   </head>
   <body>
-    <div class="skiplinks">
-      <div class="skiplinks-section sr-only">
-        <ul>
-          <li id="cdu-skiplink">
-          </li>
-          <li>
-            <a href="#main-nav" class="skiplinks-trigger">main navigation</a>
-          </li>
-          <li>
-            <a href="#content" class="skiplinks-trigger">content</a>
-          </li>
-          <li>
-            <a href="#footer" class="skiplinks-trigger">footer</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <a href="#main-nav" class="skippy sr-only sr-only-focusable">
+      <span class="skippy-text">Skip to main navigation</span>
+    </a>
+    <a href="#content" class="skippy sr-only sr-only-focusable">
+      <span class="skippy-text">Skip to main content</span>
+    </a>
+    <a href="#footer" class="skippy sr-only sr-only-focusable">
+      <span class="skippy-text">Skip to footer</span>
+    </a>
 
     <header role="banner">
-      <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand supra">
-        <div class="container-fluid">
+      <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand supra" aria-label="Complementary navigation">
+        <div class="container">
           <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link active">Personal</a></li>
+            <li class="nav-item"><a href="#" class="nav-link pl-0">Personal</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a href="#" class="nav-link icon svg-buy">
-                <span class="sr-only">basket</span>
+                <span class="sr-only">Basket</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link icon svg-avatar">
-                <span class="sr-only">my account</span>
+                <span class="sr-only">My account</span>
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle d-flex flex-nowrap align-items-center" href="#" data-toggle="dropdown" role="button">EN</a>
+              <button type="button" class="btn btn-link btn-inverse nav-link dropdown-toggle d-flex flex-nowrap align-items-center" data-toggle="dropdown">Language</button>
               <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a class="dropdown-item" href="#">FR</a></li>
-                <li><a class="dropdown-item" href="#">SP</a></li>
+                <li><a class="dropdown-item" href="#" lang="fr" hreflang="fr">Français</a></li>
+                <li><a class="dropdown-item" href="#" lang="es" hreflang="es">Español</a></li>
               </ul>
             </li>
           </ul>
         </div>
       </nav>
 
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+        <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
+            <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead" aria-controls="collapsing-navbarHead"
-            aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="mega-menu navbar-collapse collapse" id="collapsing-navbarHead">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -169,12 +161,12 @@
     </header>
 
     <main role="main" id="content">
-      <section class="container-fluid">
+      <div class="container mt-3">
         <h1>News</h1>
-      </section>
+      </div>
 
       <div class="o-nav-local">
-        <nav role="navigation" class="container-fluid">
+        <nav role="navigation" class="container" aria-label="News categories navigation">
           <ul class="nav">
             <li class="nav-item active"><a class="nav-link" href="#">News home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">World</a></li>
@@ -189,115 +181,74 @@
         </nav>
       </div>
 
-      <section class="container-fluid">
+      <section class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-8">
-            <h2 id="newsLeaderTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit<br><small>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</small></h2>
-            <div id="newsLeader">
-              <a title="Bored of lorem ipsum?" href="" target="_self" data-toggle="modal" data-target="#myModal">
-                <img alt="Bored of lorem ipsum?" src="images/8565182.jpg" />
-              </a>
-
-              <!-- Modal -->
-              <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;<span class="sr-only">fermer la fenêtre</span></button>
-                      <h2 class="modal-title h4" id="myModalLabel">Modal title</h2>
-                    </div>
-                    <div class="modal-body">
-                      <div class="jumbotron">
-                        <h3 class="h1">Jumbotron heading</h3>
-                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
-                          tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p>
-                          <a class="btn btn-lg btn-success" href="#">Sign up today</a>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- fin modal -->
-
-              <div class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec augue tempor, vestibulum nulla eget, lobortis
-                  sem. Duis nulla libero, tristique id nisi eget, dictum facilisis arcu. Duis eu felis lacinia, vestibulum est
-                  in, molestie nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  Mauris ultrices id justo et pulvinar. Suspendisse potenti. Sed et nisl non lorem ultrices ullamcorper sit amet
-                  eu nisl.</p>
-                <p>Proin lacinia blandit nunc. Ut at metus dictum, faucibus dolor et, bibendum libero. In quis lacinia risus, vitae
-                  elementum nisl. Etiam nec tincidunt purus. Aenean malesuada aliquam mauris vitae pellentesque. Maecenas a tortor
-                  volutpat, sagittis ipsum quis, volutpat lacus. Proin sit amet leo in lorem malesuada porttitor ut quis dolor.
-                  Vestibulum ante lectus, elementum a nibh at, rhoncus semper enim. Nam nec ligula erat. Donec tincidunt elit
-                  sit amet lacus consequat, in luctus ipsum ornare. Ut pulvinar congue viverra. Sed ipsum sem, fringilla in orci
-                  sit amet, eleifend vestibulum est. Nunc tempor, purus vitae porttitor scelerisque, ante ipsum pellentesque
-                  turpis, non volutpat dolor metus id sapien. Proin laoreet bibendum semper. Integer vehicula rhoncus faucibus.
-                  Nulla in urna condimentum massa ultrices luctus at vitae lacus.</p>
-              </div>
-            </div>
-
-
+            <h2 id="newsLeaderTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+            <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img alt="Bored of lorem ipsum?" src="./images/8565182.jpg" class="img-fluid my-3" width="740" height="380" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec augue tempor, vestibulum nulla eget, lobortis
+              sem. Duis nulla libero, tristique id nisi eget, dictum facilisis arcu. Duis eu felis lacinia, vestibulum est
+              in, molestie nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+              Mauris ultrices id justo et pulvinar. Suspendisse potenti. Sed et nisl non lorem ultrices ullamcorper sit amet
+              eu nisl.</p>
+            <p>Proin lacinia blandit nunc. Ut at metus dictum, faucibus dolor et, bibendum libero. In quis lacinia risus, vitae
+              elementum nisl. Etiam nec tincidunt purus. Aenean malesuada aliquam mauris vitae pellentesque. Maecenas a tortor
+              volutpat, sagittis ipsum quis, volutpat lacus. Proin sit amet leo in lorem malesuada porttitor ut quis dolor.
+              Vestibulum ante lectus, elementum a nibh at, rhoncus semper enim. Nam nec ligula erat. Donec tincidunt elit
+              sit amet lacus consequat, in luctus ipsum ornare. Ut pulvinar congue viverra. Sed ipsum sem, fringilla in orci
+              sit amet, eleifend vestibulum est. Nunc tempor, purus vitae porttitor scelerisque, ante ipsum pellentesque
+              turpis, non volutpat dolor metus id sapien. Proin laoreet bibendum semper. Integer vehicula rhoncus faucibus.
+              Nulla in urna condimentum massa ultrices luctus at vitae lacus.</p>
 
             <div id="comments">
-              <h3 class="h2">comments</h3>
-              <ul class="comments-list">
-                <li class="outline">
-                  <span class="comments">
-                      <a href="#" title="see all comments about the comment of truc" target="_self">0 commentaire</a>
-                    </span>
-                  <a class="content" title="see all the comment of truc" href="#" target="_self">
-                    <strong>Lorem!!!</strong> Duis faucibus justo sit amet placerat porttitor. Suspendisse adipiscing tincidunt
-                    laoreet. Pellentesque fermentum bibendum diam, eget accumsan nisi faucibus sit amet. In scelerisque sodales
-                    massa vel ultrices. Duis eget metus vel est accumsan varius hendrerit ut libero. Mauris quis viverra nisl.
-                    Etiam nunc mauris, egestas ut fermentum eget, ornare nec purus. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at auctor enim, in auctor risus.
-                    Curabitur quis adipiscing velit. ...
-                    <span class="icon-accessibility-vision orange" aria-hidden="true"></span>
-                  </a>
-                  <p class="author">
-                    De <span class="orange">truc</span> - 17 June 2014 13:37
-                  </p>
+              <h3 class="h2 mt-5">Comments</h3>
+              <ul class="list-unstyled">
+                <li class="card mb-3">
+                  <div class="card-body">
+                    <h4 class="card-title">Lorem!!!</h4>
+                    <p class="card-text">
+                      Duis faucibus justo sit amet placerat porttitor. Suspendisse adipiscing tincidunt
+                      laoreet. Pellentesque fermentum bibendum diam, eget accumsan nisi faucibus sit amet. In scelerisque sodales
+                      massa vel ultrices. Duis eget metus vel est accumsan varius hendrerit ut libero. Mauris quis viverra nisl.
+                      Etiam nunc mauris, egestas ut fermentum eget, ornare nec purus. Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at auctor enim, in auctor risus. Curabitur quis adipiscing velit.
+                    </p>
+                    <a href="#" class="card-link">0 comment</a>
+                  </div>
+                  <p class="card-footer text-muted mb-0">De <span class="text-primary">Truc</span> — 17 June 2014 13:37</p>
                 </li>
-                <li class="outline">
-                  <span class="comments">
-                      <a href="#" title="see all comments about the comment of geohisto" target="_self">1 commentaire</a>
-                    </span>
-                  <a class="content" title="see all the comment of geohisto" href="#" target="_self">
-                    <strong>Ipsum</strong> In ut libero a nisl hendrerit commodo. Vivamus sit amet libero eget tellus scelerisque
-                    tincidunt. Nullam et magna tellus. Ut fringilla congue mauris, ut vestibulum neque luctus a. Vestibulum volutpat
-                    placerat tincidunt. Nam fermentum arcu vel felis faucibus, id dapibus lectus ornare. Nunc sed libero nisi.
-                    Ut auctor sem sed tristique cursus.
-                    <span class="icon-accessibility-vision orange" aria-hidden="true"></span>
-                  </a>
-                  <p class="author">
-                    De <span class="orange">geohisto</span> - 16 June 2014 19:22
-                  </p>
+                <li class="card mb-3">
+                  <div class="card-body">
+                    <h4 class="card-title">Ipsum</h4>
+                    <p class="card-text">
+                      In ut libero a nisl hendrerit commodo. Vivamus sit amet libero eget tellus scelerisque
+                      tincidunt. Nullam et magna tellus. Ut fringilla congue mauris, ut vestibulum neque luctus a. Vestibulum volutpat
+                      placerat tincidunt. Nam fermentum arcu vel felis faucibus, id dapibus lectus ornare. Nunc sed libero nisi.
+                      Ut auctor sem sed tristique cursus.
+                    </p>
+                    <a href="#" class="card-link">1 comment</a>
+                  </div>
+                  <p class="card-footer text-muted mb-0">De <span class="text-primary">Geohisto</span> — 16 June 2014 19:22</p>
                 </li>
-                <li class="outline">
-                  <span class="comments">
-                      <a href="#" title="see all comments about the comment of machin" target="_self">3 commentaires</a>
-                    </span>
-                  <a class="content" title="see all the comment of machin" href="#" target="_self">
-                    <strong>another comment</strong> Donec auctor felis vitae elit tempus ultrices at vitae lorem. Phasellus
-                    luctus nibh urna, sed pellentesque arcu fringilla nec. Sed elementum nisl orci, quis tincidunt leo semper
-                    eu. In tincidunt iaculis elit eget hendrerit. Fusce ut molestie dolor, ac lobortis est. Aenean consequat,
-                    tortor ac pellentesque dapibus, quam ipsum suscipit est, at sodales lorem diam in nisi. Vivamus in enim dignissim,
-                    posuere ligula eu, mattis libero. Nulla sagittis varius urna, a cursus urna feugiat ac. Vivamus porttitor
-                    luctus nisi vitae pretium. Suspendisse lacinia metus nisi, nec ornare arcu tincidunt eu...
-                    <span class="icon-accessibility-vision orange" aria-hidden="true"></span>
-                  </a>
-                  <p class="author">
-                    De <span class="orange">machin</span> - 16 June 2014 7:44
-                  </p>
+                <li class="card mb-3">
+                  <div class="card-body">
+                    <h4 class="card-title">Another comment</h4>
+                    <p class="card-text">
+                      Donec auctor felis vitae elit tempus ultrices at vitae lorem. Phasellus
+                      luctus nibh urna, sed pellentesque arcu fringilla nec. Sed elementum nisl orci, quis tincidunt leo semper
+                      eu. In tincidunt iaculis elit eget hendrerit. Fusce ut molestie dolor, ac lobortis est. Aenean consequat,
+                      tortor ac pellentesque dapibus, quam ipsum suscipit est, at sodales lorem diam in nisi. Vivamus in enim dignissim,
+                      posuere ligula eu, mattis libero. Nulla sagittis varius urna, a cursus urna feugiat ac.
+                      Vivamus porttitor luctus nisi vitae pretium. Suspendisse lacinia metus nisi, nec ornare arcu tincidunt eu…
+                    </p>
+                    <a href="#" class="card-link">3 comments</a>
+                  </div>
+                  <p class="card-footer text-muted mb-0">De <span class="text-primary">Machin</span> — 16 June 2014 7:44</p>
                 </li>
               </ul>
-              <div>
-                <ul class="pagination">
+              <div class="d-flex">
+                <ul class="pagination ml-auto">
                   <li class="page-item">
                     <a class="page-link disabled" href="#" tabindex="-1" aria-disabled="true">
                       <span class="sr-only">Previous</span>
@@ -466,14 +417,14 @@
     <footer class="o-footer" role="contentinfo">
       <h2 class="sr-only">footer - site map & informations</h2>
       <div class="o-footer-top">
-          <div class="container-fluid">
+          <div class="container">
               <ul class="nav">
                   <li class="nav-item"><span class="nav-link">Follow us</span></li>
               </ul>
           </div>
       </div>
       <div class="o-footer-body">
-          <div class="container-fluid">
+          <div class="container">
               <div class="row">
                   <div class="col-md-3 col-sm-6">
                       <h2>Discover</h2>
@@ -521,7 +472,7 @@
           </div>
       </div>
       <div class="o-footer-bottom">
-          <div class="container-fluid">
+          <div class="container">
               <ul class="nav">
                   <li class="nav-item"><span class="nav-link">© Orange 2018-2019</span></li>
                   <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
@@ -534,52 +485,13 @@
               </ul>
           </div>
       </div>
-  </footer>
+    </footer>
 
-    <!-- Boosted core JavaScript
-        ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-      crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
-    </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/boosted.js"></script>
-
-    <script>
-      // Surcharge des valeurs du script de la toolbar
-      accessibilitytoolbar_custom = {
-        idLinkModeContainer: "id-li-for-cdu",
-        cssLinkModeClassName: "nav-item-cdu"
-      };
-
-      $(".skiplinks-trigger").focus(function () {
-        $(".skiplinks-section").addClass("skiplinks-show").removeClass("sr-only")
-      });
-      $(".skiplinks-trigger").blur(function () {
-        $(".skiplinks-section").removeClass("skiplinks-show").addClass("sr-only")
-      });
-
-      function skiplinksAfterLoad() {
-        $(".skiplinks-trigger").focus(function () {
-          $(".skiplinks-section").addClass("skiplinks-show").removeClass("sr-only")
-        });
-        $(".skiplinks-trigger").blur(function () {
-          $(".skiplinks-section").removeClass("skiplinks-show").addClass("sr-only")
-        });
-      }
-
-      $(document).ready(function () {
-        $('header').navbar({ sticky: false, hideSupra: true });
-        // default init
-        //if( window.innerWidth < 768 ) {
-          $('#collapsing-navbarHead').megamenu();
-        //}
-      });
-    </script>
-
-    <!-- <script type="text/javascript" src="http://confort-plus.orange.com/js/toolbar-min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" integrity="sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
+    <script src="/docs/4.4/dist/js/boosted.min.js"></script>
   </body>
 </html>
 
