@@ -845,24 +845,3 @@ Card columns can also be extended and customized with some additional code. Show
   }
 }
 {% endhighlight %}
-
-[comment]: # Boosted mod
-## Card block link
-
-Card layout fully clickable on desktop, turns into block link with right arrow on mobile.
-
-{% capture example %}
-<div class="row">
-  <div class="col-md-4">
-    <a href="#" class="card o-card-link">
-        <div class="card-img">
-            {% include icons/placeholder.svg width="100%" height="100" class="card-img-top" text="Image cap" %}
-        </div>
-        <div class="card-body">
-            <div class="card-title">Lorem ispum</div>
-        </div>
-    </a>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
