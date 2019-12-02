@@ -208,24 +208,24 @@
     <script src="/docs/4.4/dist/js/boosted.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
     <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-    <script>
-      $(document).ready(function() {
-              $("#news-table").tablesorter({
-                  // pass the headers argument and assing a object
-                  headers: {
-                      // assign the secound column (we start counting zero)
-                      4: {
-                          // disable it by setting the property sorter to false
-                          sorter: false
-                      }
-                  },
-                  // manipulate the template string after is it created
-                  onRenderTemplate : function(i, t){
-                    // put a span arround the text
-                    return '<span>' + t + '</span>';
-                  }
-              });
-          });
-    </script>
+    <script>$(document).ready(function() {
+      $('.o-nav-local').prioritynav();
+
+      $("#news-table").tablesorter({
+        // pass the headers argument and assing a object
+        headers: {
+          // assign the secound column (we start counting zero)
+          4: {
+            // disable it by setting the property sorter to false
+            sorter: false
+          }
+        },
+        // manipulate the template string after is it created
+        onRenderTemplate : function(i, t){
+          // put a span arround the text
+          return '<span>' + t + '</span>';
+        }
+      });
+    });</script>
   </body>
 </html>
