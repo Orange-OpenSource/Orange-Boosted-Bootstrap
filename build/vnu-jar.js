@@ -41,6 +41,7 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'This document appears to be written in .*',
     'The “banner” role is unnecessary for element “header”.',
     'The “contentinfo” role is unnecessary for element “footer”.',
+    'The “complementary” role is unnecessary for element “aside”.',
     'The “navigation” role is unnecessary for element “nav”.',
     'The “form” role is unnecessary for element “form”.',
     'Possible misuse of “aria-label”.*'
