@@ -21,7 +21,7 @@ Html markup and especially `<ul>` menu hierarchy must absolutely be as following
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" />
+            <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbarHead" aria-controls="collapsing-navbarHead"
             aria-expanded="false" aria-label="Toggle navigation">

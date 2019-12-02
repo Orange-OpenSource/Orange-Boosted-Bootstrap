@@ -116,7 +116,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Just an image -->
 <nav role="navigation" class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage">
+    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50">
   </a>
 </nav>
 {% endcapture %}
@@ -126,7 +126,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Image and text -->
 <nav role="navigation" class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Go to homepage">
+    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
     <span class="h1 m-0">Boosted</span>
   </a>
 </nav>
