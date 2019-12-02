@@ -17,12 +17,21 @@ According to the brand, Orange footer has black background and white text color.
 
 {% capture example %}
 <footer class="o-footer" role="contentinfo">
-    <h1 class="sr-only">footer - site map & informations</h1>
+    <h1 class="sr-only">Site map & informations</h1>
     <div class="o-footer-top">
         <div class="container">
             <div class="row mb-0">
-                <ul class="nav">
-                    <li class="nav-item"><span class="nav-link">Follow us</span></li>
+                <ul class="nav align-items-center">
+                  <li class="nav-item"><span class="nav-link">Follow us:</span></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+                  <li class="nav-item"> <a class="nav-link btn btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a></li>
                 </ul>
             </div>
         </div>
