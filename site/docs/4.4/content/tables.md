@@ -907,7 +907,10 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
                 </label>
             </th>
             <td>
-                <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/thumb_yellow.png" alt="thumb_yellow.png"><span>Img 1</span>
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="#ffd200"/>
+                </svg>
+                <span>Image 1</span>
             </td>
             <td>Column content</td>
             <td>Column content</td>
@@ -922,7 +925,10 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
                 </label>
             </th>
             <td>
-                <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/thumb_blue.png" alt="thumb_blue.png"><span>Img 2</span>
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="#4bb4e6"/>
+                </svg>
+                <span>Image 2</span>
             </td>
             <td>Column content</td>
             <td>Column content</td>
