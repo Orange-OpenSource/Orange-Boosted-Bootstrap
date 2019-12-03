@@ -18,7 +18,10 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         <div class="swiper-slide" id="slide1">
             <div class="card">
                 <div class="card-img">
-                    <img alt="first slide" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/green.png">
+                    <svg class="img-fluid h5" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                      <rect width="100%" height="100%" fill="#3ebd87"/>
+                      <text x="50%" y="50%" fill="#000" dy=".3em" dominant-baseline="middle" text-anchor="middle">First slide</text>
+                    </svg>
                 </div>
                 <div class="card-body">
                     <div class="card-title">Slide 1</div>
@@ -29,7 +32,10 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         <div class="swiper-slide" id="slide2">
             <div class="card">
                 <div class="card-img">
-                    <img alt="first slide" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/blue.png">
+                    <svg class="img-fluid h5" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                      <rect width="100%" height="100%" fill="#4bb4e6"/>
+                      <text x="50%" y="50%" fill="#000" dy=".3em" dominant-baseline="middle" text-anchor="middle">Second slide</text>
+                    </svg>
                 </div>
                 <div class="card-body">
                     <div class="card-title">Slide 2</div>
@@ -40,7 +46,10 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
         <div class="swiper-slide" id="slide3">
             <div class="card">
                 <div class="card-img">
-                    <img alt="first slide" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/pink.png">
+                    <svg class="img-fluid h5" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                      <rect width="100%" height="100%" fill="#ffb4e6"/>
+                      <text x="50%" y="50%" fill="#000" dy=".3em" dominant-baseline="middle" text-anchor="middle">Third slide</text>
+                    </svg>
                 </div>
                 <div class="card-body">
                     <div class="card-title">Slide 3</div>
