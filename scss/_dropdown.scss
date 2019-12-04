@@ -7,7 +7,8 @@
 }
 
 .dropdown-toggle {
-  padding: $btn-padding-y;
+  padding: $dropdown-padding-x $dropdown-padding-y;
+  line-height: 1;
   color: $dropdown-color;
   white-space: nowrap;
   background-color: $dropdown-bg;
@@ -21,8 +22,12 @@
     border-color: $gray-700;
 
     &:hover {
-      border-color: $white;
+      border-color: $dropdown-link-hover-color;
     }
+  }
+
+  .btn-group &:not(.btn-inverse) {
+    border-color: $dropdown-color;
   }
   // end mod
 
@@ -39,7 +44,7 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y 0;
+  padding: 0;
   margin: $dropdown-spacer 0 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
@@ -94,9 +99,6 @@
 
   .dropdown-toggle {
     @include caret(right);
-    &::after {
-      vertical-align: 0;
-    }
   }
 }
 

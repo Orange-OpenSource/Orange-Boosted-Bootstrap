@@ -90,23 +90,19 @@
   top: subtract(50%, 10px);
   width: auto;
   height: auto;
-  text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   cursor: pointer;
-  background-image: none;
-  background-size: 0;
-  // Boosted mod
+  background: none;
   @include transition($transition-focus);
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
   }
-  // end mod
 }
 
 .swiper-button-prev::before,
 .swiper-button-next::before {
   font-family: icon-orange;
-  font-size: 1.875rem;
+  font-size: $h2-font-size;
   content: "\e93f";
 }
 
@@ -116,8 +112,8 @@
 
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-  width: .625rem;
-  height: .625rem;
+  width: map-get($spacers, 2);
+  height: map-get($spacers, 2);
   border: 0;
 }
 
@@ -126,17 +122,17 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: #f16e00;
+  background: theme-color("primary");
 }
 
 .swiper-container {
   width: 100% !important; // stylelint-disable-line declaration-no-important
-  margin-bottom: 30px;
+  margin-bottom: map-get($spacers, 4);
   overflow: hidden;
 }
 
 .swiper-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: map-get($spacers, 4);
 }
 
 .swiper-pagination {
@@ -153,7 +149,9 @@
 
     img {
       width: 100%;
-      height: 40vh;
+      height: auto;
+      max-height: 40vh;
+      object-fit: cover;
     }
   }
 
@@ -164,9 +162,9 @@
 
   .card-body {
     position: absolute;
-    bottom: 20px;
-    left: 40px;
-    background-color: #fff;
+    bottom: $spacer;
+    left: $spacer * 2;
+    background-color: $white;
 
     p {
       margin: 0;
@@ -202,8 +200,8 @@
   }
 
   .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: .5rem;
+    height: .5rem;
     border: 0;
   }
 }

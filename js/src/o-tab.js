@@ -1,6 +1,6 @@
 /**
  * ------------------------------------------------------------------------------------------------------
- * Boosted (v4.3.1): otab.js
+ * Boosted (v4.4.0): otab.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * ------------------------------------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ import Util from './util'
  */
 
 const NAME                = 'otab'
-const VERSION             = '4.3.1'
+const VERSION             = '4.4.0'
 const DATA_KEY            = 'bs.otab'
 const EVENT_KEY           = `.${DATA_KEY}`
 const DATA_API_KEY        = '.data-api'
@@ -135,7 +135,7 @@ class Otab {
 
 $(document)
   .on('DOMContentLoaded', () => {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING), 'init')
+    Otab._jQueryInterface.call($(Selector.OTAB_HEADING))
   })
   .on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
     event.preventDefault()

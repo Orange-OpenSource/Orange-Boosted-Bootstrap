@@ -1,0 +1,299 @@
+/* stylelint-disable declaration-no-important,color-named */
+
+/* Tabs light */
+.nav-tabs {
+  border-color: #ccc;
+}
+.nav-tabs .nav-link {
+  border: 0;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:active,
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link:active:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 4px solid #f16e00;
+}
+.nav-tabs .nav-link:hover {
+  color: #000;
+  background-color: #fff;
+  border-bottom: 4px solid #666;
+}
+
+/* Gauges */
+.gauge {
+  position: relative;
+  text-align: center;
+}
+.gauge .gauge-label {
+  display: block;
+  padding: 10px 0;
+  font-weight: 700;
+}
+.gauge .gauge-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transform: translateY(-50%) translateX(-50%);
+}
+.gauge svg {
+  transform: rotate(-90deg);
+}
+.gauge .progress-meter,
+.gauge .progress-value {
+  fill: none;
+}
+.gauge .progress-meter {
+  stroke: #eee;
+}
+.gauge .progress-value {
+  stroke-dasharray: 326.725;
+  stroke-dashoffset: 326.725;
+  -webkit-animation: progress 4s;
+  animation: progress 4s;
+}
+.gauge.inverse .gauge-value {
+  color: #fff;
+}
+.gauge.inverse .progress-meter {
+  stroke: #333;
+}
+.gauge.green .progress-value {
+  stroke: #50be87;
+}
+.gauge.pink .progress-value {
+  stroke: #ffb4e6;
+}
+.gauge.yellow .progress-value {
+  stroke: #ffd200;
+}
+
+legend.gauge-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* for demonstration, not part of gauge component */
+.light-bg,
+.dark-bg {
+  display: inline-block;
+  padding: 10px;
+}
+
+.light-bg {
+  margin-right: 20px;
+}
+
+.dark-bg {
+  background-color: #000;
+}
+.dark-bg legend.gauge-label {
+  color: #fff;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dashoffset: 326.725;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 326.725;
+  }
+}
+
+/* Custom css */
+h1 {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.o-footer h2 {
+  margin-top: 0;
+}
+
+.resp-tooltip {
+  position: relative;
+}
+
+.resp-tooltip .collapse,
+.resp-tooltip .collapsing {
+  padding: 20px;
+}
+
+@media (min-device-width: 480px) {
+  .resp-tooltip a[data-toggle="collapse"]:hover + .collapse,
+  .resp-tooltip a[data-toggle="collapse"]:focus + .collapse,
+  .resp-tooltip a[data-toggle="collapse"]:hover + .collapsing,
+  .resp-tooltip a[data-toggle="collapse"]:focus + .collapsing {
+    position: absolute;
+    top: -25%;
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #000;
+    background-color: #ddd;
+  }
+}
+
+@media (max-device-width: 479px) {
+  #toast-container {
+    top: auto !important;
+    bottom: 0 !important;
+  }
+  #toast-container > div {
+    width: 100%;
+  }
+}
+
+/* Edge to edge container */
+
+/* fix card bg and border */
+.card {
+  background-color: transparent;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .edge-container {
+    position: relative;
+  }
+  .edge-container::before,
+  .edge-container::after {
+    position: absolute;
+
+    /* put something larger to get edge touching until 768px */
+    top: 0;
+    bottom: 0;
+    left: -12rem;
+    display: block;
+    width: 12rem;
+    content: "";
+    background-color: inherit;
+  }
+  .edge-container::after {
+    right: -12rem;
+    left: auto;
+  }
+  .edge-container .ecm-card {
+    padding-left: 0;
+  }
+}
+
+/* Custom tooltip */
+.custom-tooltip .card-body {
+  font-weight: 700;
+  background: #ddd;
+}
+
+.custom-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.custom-layout .form-control {
+  width: auto;
+}
+
+.tooltip-trigger {
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.tooltip-content {
+  padding: 10px 0;
+  margin-top: 10px;
+  font-weight: 700;
+  background-color: #ddd;
+}
+
+.o-rating:not(:checked) > label:hover,
+.o-rating:not(:checked) > label:hover ~ label {
+  color: #f16e00;
+}
+
+.boosted-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+}
+.boosted-grid.col3 > div {
+  grid-column: span 4;
+}
+.boosted-grid :first-child {
+  background-color: pink;
+}
+.boosted-grid :nth-child(2) {
+  background-color: purple;
+}
+.boosted-grid :nth-child(3) {
+  background-color: yellowgreen;
+}
+
+.autogrid.has-gutter,
+.grid-3.has-gutter {
+  grid-column-gap: 20px;
+}
+
+/* Native accordions */
+details {
+  padding: 1px 0;
+  margin-bottom: -1px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+}
+details summary {
+  position: relative;
+  display: block;
+  padding: 13px 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+details summary:focus {
+  outline: 1px dotted #000;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::after {
+  position: absolute;
+  top: 1.3125rem;
+  right: .625rem;
+  width: .875rem;
+  height: .4375rem;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2014%207%22%3E%3Cpath%20d%3D%22M7%207L0%200h14L7%207z%22%2F%3E%3C%2Fsvg%3E");
+}
+details summary::before {
+  display: none;
+}
+details p {
+  padding-right: 24px;
+  margin: 0;
+}
+
+details[open] {
+  padding-bottom: 20px;
+}
+details[open] summary {
+  margin-bottom: 7px;
+}
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details:last-child {
+  border-bottom: 1px solid #ccc;
+}
+/* stylelint-enable */

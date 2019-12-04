@@ -67,3 +67,10 @@ jobs:
       - name: Run Link Checker
         run: npm run check-broken-links
         if: matrix.node == 8
+
+      - name: Run Coveralls
+        uses: coverallsapp/github-action@master
+        if: matrix.node == 8 && github.event_name == 'push'
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          path-to-lcov: "./js/coverage/lcov.info"

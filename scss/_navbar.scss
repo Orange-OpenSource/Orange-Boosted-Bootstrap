@@ -65,7 +65,7 @@
   margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem}; // Boosted mod
   @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // Boosted mod
-  line-height: inherit;
+  line-height: .75; // Boosted mod
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
   outline-offset: $spacer; // Boosted mod
@@ -78,6 +78,10 @@
   // Boosted mod
   + .navbar-brand {
     margin: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
+  }
+
+  .h1 {
+    line-height: inherit;
   }
 
   &:focus {

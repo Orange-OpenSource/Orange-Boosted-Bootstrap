@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.3.1): dropdown.js
+ * Bootstrap (v4.4.1): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16,7 +16,7 @@ import Util from './util'
  */
 
 const NAME                     = 'dropdown'
-const VERSION                  = '4.3.1'
+const VERSION                  = '4.4.1'
 const DATA_KEY                 = 'bs.dropdown'
 const EVENT_KEY                = `.${DATA_KEY}`
 const DATA_API_KEY             = '.data-api'
@@ -551,7 +551,7 @@ $(document)
   // Boosted mod
   .on('DOMContentLoaded', () => {
     // Instanciate every dropdown in the DOM
-    Dropdown._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
+    Dropdown._jQueryInterface.call($(Selector.DATA_TOGGLE))
   })
   // end mod
 

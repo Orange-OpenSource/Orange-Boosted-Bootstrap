@@ -663,7 +663,7 @@ $custom-select-color:               $input-color !default;
 $custom-select-disabled-color:      $gray-500 !default;
 $custom-select-bg:                  $white !default;
 $custom-select-disabled-bg:         $gray-300 !default;
-$custom-select-bg-size:             1rem 1.25rem !default; // Boosted mod: using SVG
+$custom-select-bg-size:             1rem $spacer !default; // Boosted mod: using SVG
 // $custom-select-indicator-color:     null !default; // Boosted mod
 $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
 $custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
@@ -832,7 +832,7 @@ $navbar-toggler-padding-y:          .5rem !default;
 $navbar-toggler-padding-x:          .5rem !default;
 $navbar-toggler-font-size:          $font-size-base !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
-$navbar-toggler-icon-size:          1.25rem !default;
+$navbar-toggler-icon-size:          $spacer !default; // Boosted mod
 
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $orange-2 !default; // Boosted mod
@@ -860,7 +860,8 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // Dropdown menu container and contents.
 
 $dropdown-min-width:                10rem !default;
-$dropdown-padding-y:                0 !default;
+$dropdown-padding-y:                $spacer !default; // Boosted mod
+$dropdown-padding-x:                map-get($spacers, 2) !default; // Boosted mod
 $dropdown-spacer:                   -2px !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
@@ -939,7 +940,7 @@ $jumbotron-bg:                      $white !default;
 // Cards
 
 $card-spacer-y:                     .75rem !default;
-$card-spacer-x:                     1.25rem !default;
+$card-spacer-x:                     $spacer !default; // Boosted mod
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 $black !default; // Boosted mod
@@ -951,13 +952,13 @@ $card-color:                        null !default;
 $card-bg:                           $white !default;
 $card-accordion-spacer:             .875rem !default; // Boosted mod
 
-$card-img-overlay-padding:          1.25rem !default;
+$card-img-overlay-padding:          $spacer !default; // Boosted mod
 
 $card-group-margin:                 $grid-gutter-width / 2 !default;
 $card-deck-margin:                  $spacer * 2 !default;
 
 $card-columns-count:                3 !default;
-$card-columns-gap:                  1.25rem !default;
+$card-columns-gap:                  $spacer !default; // Boosted mod
 $card-columns-margin:               $spacer * 2 !default;
 
 
@@ -1001,14 +1002,14 @@ $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 
 $popover-header-bg:                 $popover-bg !default;
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          .625rem !default;
-$popover-header-padding-x:          .625rem !default;
+$popover-header-padding-y:          map-get($spacers, 2) !default; // Boosted mod
+$popover-header-padding-x:          map-get($spacers, 2) !default; // Boosted mod
 
 $popover-body-color:                $body-color !default;
 $popover-body-padding-y:            $popover-header-padding-y !default;
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
-$popover-arrow-width:               .625rem !default;
+$popover-arrow-width:               map-get($spacers, 2) !default; // Boosted mod
 $popover-arrow-height:              map-get($spacers, 1) !default;
 $popover-arrow-color:               $popover-bg !default;
 
@@ -1018,17 +1019,17 @@ $popover-arrow-outer-color:         $popover-border-color !default;
 // Toasts
 
 $toast-max-width:                   350px !default;
-$toast-padding-x:                   .625rem !default;
+$toast-padding-x:                   map-get($spacers, 2) !default; // Boosted mod
 $toast-padding-y:                   map-get($spacers, 1) !default;
 $toast-font-size:                   .875rem !default;
-$toast-color:                       null !default;
+$toast-color:                       $black !default; // Boosted mod
 $toast-background-color:            rgba($white, .85) !default;
 $toast-border-width:                1px !default;
 $toast-border-color:                rgba(0, 0, 0, .1) !default;
 $toast-border-radius:               null !default;
 $toast-box-shadow:                  null !default;
 
-$toast-header-color:                $gray-600 !default;
+$toast-header-color:                $gray-700 !default;
 $toast-header-background-color:     rgba($white, .85) !default;
 $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
@@ -1038,12 +1039,12 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 $badge-font-size:                   .875rem !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-padding-y:                   .1875rem !default;
-$badge-padding-x:                   .625rem !default;
+$badge-padding-x:                   map-get($spacers, 2) !default; // Boosted mod
 $badge-border-radius:               $border-radius !default;
 
 $badge-transition:                  $btn-transition !default;
 $badge-focus-width:                 null !default;
-$badge-pill-padding-x:              .625rem !default;
+$badge-pill-padding-x:              map-get($spacers, 2) !default; // Boosted mod
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
 $badge-pill-border-radius:          $border-radius !default;
@@ -1052,12 +1053,12 @@ $badge-pill-border-radius:          $border-radius !default;
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:               .625rem !default;
+$modal-inner-padding:               map-get($spacers, 2) !default; // Boosted mod
 
 // Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
 $modal-footer-margin-between:       .5rem !default;
 
-$modal-dialog-margin:               .625rem !default;
+$modal-dialog-margin:               map-get($spacers, 2) !default; // Boosted mod
 $modal-dialog-margin-y-sm-up:       1.875rem !default;
 
 $modal-title-line-height:           $line-height-base !default;
@@ -1077,8 +1078,8 @@ $modal-header-border-color:         $black !default;
 $modal-footer-border-color:         $modal-header-border-color !default;
 $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
-$modal-header-padding-y:            .625rem !default;
-$modal-header-padding-x:            .625rem !default;
+$modal-header-padding-y:            map-get($spacers, 2) !default; // Boosted mod
+$modal-header-padding-x:            map-get($spacers, 2) !default; // Boosted mod
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-xl:                          700px !default;
@@ -1129,8 +1130,8 @@ $list-group-border-color:           $black !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         .625rem !default;
-$list-group-item-padding-x:         .625rem !default;
+$list-group-item-padding-y:         map-get($spacers, 2) !default; // Boosted mod
+$list-group-item-padding-x:         map-get($spacers, 2) !default; // Boosted mod
 
 $list-group-hover-bg:               $gray-200 !default;
 $list-group-active-color:           $component-active-color !default;
@@ -1149,7 +1150,7 @@ $list-group-action-active-bg:       $gray-300 !default;
 
 // Image thumbnails
 
-$thumbnail-padding:                 .625rem !default;
+$thumbnail-padding:                 map-get($spacers, 2) !default; // Boosted mod
 $thumbnail-bg:                      $body-bg !default;
 $thumbnail-border-width:            $border-width !default;
 $thumbnail-border-color:            $black !default;
@@ -1237,8 +1238,8 @@ $close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://w
 $code-font-size:                    87.5% !default;
 $code-color:                        $gray-900 !default;
 
-$kbd-padding-y:                     .0625rem !default;
-$kbd-padding-x:                     .0625rem !default;
+$kbd-padding-y:                     map-get($spacers, 2) / 10 !default; // Boosted mod
+$kbd-padding-x:                     map-get($spacers, 2) / 10 !default; // Boosted mod
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         $black !default;
 $kbd-bg:                            $gray-300 !default;
@@ -1265,7 +1266,11 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 $accordion-arrow-size:        $custom-select-bg-size !default;
 $accordion-arrow-icon:        $custom-select-indicator !default;
 $accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
+
+// Tablesorter
 $o-sortable-hover-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7,17 0,10 h 14 l -7,7 z'/><path d='M 7,0 14,7 0,7 7,0 z'/></svg>") !default;
+$o-sortable-icon-size:        map-get($spacers, 2) .875rem !default;
+$o-sortable-icon-position:    right .125rem center !default;
 
 // arrow Links
 

@@ -20,7 +20,7 @@
       // end mod
     }
   }
-  @include deprecate("The `bg-variant` mixin", "v4.3.2", "v5", $ignore-warning);
+  @include deprecate("The `bg-variant` mixin", "v4.4.0", "v5", $ignore-warning);
 }
 
 @mixin bg-gradient-variant($parent, $color) {

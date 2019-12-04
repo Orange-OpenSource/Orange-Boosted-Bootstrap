@@ -30,11 +30,11 @@
     height: $caret-width;
     margin-left: map-get($spacers, 2);
     content: "";
-    background: escape-svg($accordion-arrow-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
+    background: escape-svg($accordion-arrow-icon) no-repeat $o-sortable-icon-position / $o-sortable-icon-size;
   }
 
   [aria-sort="none"] &::after {
-    background: none;
+    background-image: none;
   }
 
   .tablesorter-headerDesc &::after {
@@ -47,7 +47,7 @@
   &:focus {
     span::after {
       height: 1.0625rem;
-      background: escape-svg($o-sortable-hover-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
+      background-image: escape-svg($o-sortable-hover-icon);
     }
   }
 }

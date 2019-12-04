@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.3.1): tab.js
+ * Bootstrap (v4.4.1): tab.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ import Util from './util'
  */
 
 const NAME               = 'tab'
-const VERSION            = '4.3.1'
+const VERSION            = '4.4.1'
 const DATA_KEY           = 'bs.tab'
 const EVENT_KEY          = `.${DATA_KEY}`
 const DATA_API_KEY       = '.data-api'
@@ -367,7 +367,7 @@ $(document)
     Tab._dataApiKeydownHandler.call($(this), event)
   })
   .on('DOMContentLoaded', () => {
-    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init')
+    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE))
   })
   // end mod
 /**
