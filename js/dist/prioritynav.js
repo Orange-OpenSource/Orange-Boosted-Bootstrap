@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
+  * Boosted v4.4.0 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap prioritynav.js v4.3.1 (https://boosted.orange.com)
+  * Bootstrap prioritynav.js v4.4.0 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -12,7 +12,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
   (global = global || self, global.PriorityNav = factory(global.jQuery));
-}(this, function ($) { 'use strict';
+}(this, (function ($) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
@@ -39,7 +39,7 @@
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.3.1';
+  var VERSION = '4.4.0';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
@@ -51,7 +51,7 @@
   var ClassName = {
     PRIORITY: 'priority',
     HIDE: 'sr-only',
-    RESIZING: 'resizing'
+    RESIZING: 'resizing overflow-hidden'
   };
   var Selector = {
     NAV_ELEMENTS: 'li:not(\'.overflow-nav\')',
@@ -61,7 +61,7 @@
   var MenuLabelDefault = 'More';
 
   function MenuTemplate(MenuLabel) {
-    return "\n  <li class=\"overflow-nav nav-item dropdown\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
+    return "\n  <li class=\"overflow-nav nav-item dropdown d-none\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
   }
   /**
    * ------------------------------------------------------------------------
@@ -144,7 +144,7 @@
         this._$menu.find('.overflow-nav-list').append(newSet); // Show new menu
 
 
-        this._$menu.find('.overflow-nav').addClass('show-inline-block'); // Make overflow visible again so dropdown can be seen.
+        this._$menu.find('.overflow-nav').removeClass('d-none').addClass('d-inline-block'); // Make overflow visible again so dropdown can be seen.
 
 
         this._$menu.find('.o-nav-local').css('overflow', 'visible'); // Check if menu doesn't overflow after process
@@ -167,7 +167,7 @@
     _proto._tearDown = function _tearDown() {
       this._$menu.find('.overflow-nav-list').empty();
 
-      this._$menu.find('.overflow-nav').removeClass('show-inline-block');
+      this._$menu.find('.overflow-nav').removeClass('d-inline-block').addClass('d-none');
 
       this._$allNavElements.removeClass(ClassName.HIDE);
 
@@ -240,5 +240,5 @@
 
   return PriorityNav;
 
-}));
+})));
 //# sourceMappingURL=prioritynav.js.map

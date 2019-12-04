@@ -4,89 +4,22 @@
 
 .o-nav-local {
   margin-bottom: ($spacer * 2);
-  border-top: 1px solid $gray-500;
-  border-bottom: 1px solid $gray-500;
-
-  > .container,
-  > .container-fluid {
-    display: flex;
-  }
-
-  ul + ul {
-    flex-shrink: 0;
-    margin-left: 1rem;
-  }
-
-  .nav-item + .nav-item {
-    margin-left: 1rem;
-  }
-
-  .nav.flex-column .nav-item {
-    margin-left: 0;
-  }
-
-  .nav .nav-link,
-  .nav .dropdown-toggle {
-    @include focus {
-      outline: 1px dotted;
-      outline-offset: -1px;
-    }
-    display: inline-block;
-    padding: 1rem ($nav-link-padding-x * .5) 1.125rem;
-    font-size: $font-size-base;
-    font-weight: $font-weight-bold;
-    line-height: 1;
-  }
-
-  .nav-link.active {
-    color: theme-color("primary");
-  }
-
-  .dropdown-toggle.show {
-    color: #000;
-  }
-
-  .dropdown-menu {
-    .nav-item,
-    .nav-item + .nav-item {
-      margin: 0;
-    }
-
-    .nav-link {
-      @include focus {
-        outline-offset: -2px;
-      }
-      display: block;
-      padding: .625rem .625rem .625rem 1.25rem;
-    }
-
-    .nav-link:hover {
-      color: #fff;
-      background: #000;
-    }
-  }
-}
-
-.o-nav-local.inverse {
-  background-color: #000;
-  border-top-color: $gray-900;
-  border-bottom-color: $gray-900;
+  border-top: $border-width / 2 solid $gray-500;
+  border-bottom: $border-width / 2 solid $gray-500;
 
   .nav-link {
-    @include hover-focus {
-      color: theme-color("primary");
-    }
+    padding: .875rem $nav-link-padding-x;
 
     &:focus {
-      outline-color: #fff;
-    }
-
-    color: #fff;
-    background-color: #000;
-
-    &.active {
-      color: theme-color("primary");
+      outline-offset: -#{$border-width};
     }
   }
-}
 
+  .nav > .nav-item:first-child .nav-link {
+    padding-left: 0;
+  }
+
+  &.navbar-dark {
+    border-color: $gray-900;
+  }
+}

@@ -3,151 +3,28 @@
 //
 
 .o-footer {
-  margin-top: 2.5rem;
+  margin-top: map-get($spacers, 4);
+  font-size: $font-size-sm;
   font-weight: $font-weight-bold;
-  color: #fff;
-  background-color: #000;
-
-  h2 {
-    @include font-size($h6-font-size);
-  }
-
-  .nav-item:first-child {
-    margin: 0;
-  }
+  color: $white;
+  background-color: $black;
 
   .nav-link {
-    &:not(:hover),
-    &:not([href]) {
-      color: #fff;
-    }
-  }
-
-  [type="email"] {
-    margin-right: map-get($spacers, 1);
-    background-color: inherit;
-    border-color: $gray-700;
-
-    + [type="submit"] {
-      margin-left: map-get($spacers, 2);
-    }
-  }
-}
-
-.o-footer-top {
-  border-bottom: 1px solid $gray-900;
-
-  .nav-item {
-    margin-left: map-get($spacers, 2);
-
-    &:first-child {
-      margin-right: map-get($spacers, 2);
-
-      .nav-link {
-        padding-top: 0;
-        padding-left: 0;
-      }
-    }
-  }
-
-  [role="presentation"] {
-    display: flex;
-    width: 100%;
-
-    + .nav-item {
-      margin-left: 0;
-    }
-  }
-}
-
-.o-footer-body {
-  h2 {
-    margin: 0;
-
-    > span {
-      display: none;
-    }
-
-    .icon-arrow-down {
-      margin-left: auto;
-    }
-  }
-
-  p,
-  p a {
-    color: #fff;
-  }
-
-  [data-toggle="collapse"] {
-    position: relative;
-    display: flex;
-    width: 100%;
-    padding: map-get($spacers, 3);
-    line-height: 1.125rem;
-    text-align: left;
-    border-bottom: 1px solid $gray-900;
-
-    &[aria-expanded="true"] .icon { // stylelint-disable-line selector-no-qualifying-type
-      transform: rotate(180deg);
-    }
-  }
-
-  .row > :last-child [data-toggle="collapse"] {
-    border: 0;
-  }
-
-  .nav {
-    flex-flow: column nowrap;
-  }
-}
-
-.o-footer-bottom {
-  border-top: 1px solid $gray-900;
-}
-
-@include media-breakpoint-down(sm) {
-  .o-footer {
-    .container {
-      max-width: 100vw;
-      padding: 0;
-    }
-
-    h2 {
-      @include font-size($h6-font-size-mobile);
-    }
-  }
-
-  .o-footer-top {
-    .container {
-      padding: map-get($spacers, 3);
-    }
-  }
-
-  .o-footer-body {
-    .nav-link {
-      padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4);
-      margin-left: map-get($spacers, 1);
-    }
-  }
-
-  .o-footer-bottom {
-    .nav {
-      flex-direction: column;
-    }
-
-    .nav-link {
-      padding: map-get($spacers, 3);
-    }
-  }
-}
-
-@include media-breakpoint-only(md) {
-  .o-footer {
+    padding: $nav-link-padding-y;
     font-size: $font-size-sm;
-  }
-}
 
-@include media-breakpoint-up(md) {
+    &:not(:hover),
+    &:not([href]),
+    &:not([href]):hover {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $orange-2;
+    }
+  }
+
   .o-footer-top,
   .o-footer-body,
   .o-footer-bottom {
@@ -156,57 +33,31 @@
   }
 
   .o-footer-top {
-    .container {
-      padding: map-get($spacers, 3) map-get($spacers, 2);
-    }
-
-    .nav-item:first-child .nav-link {
-      padding-top: map-get($spacers, 2);
-    }
-
-    [role="presentation"] {
-      display: none;
-
-      + .nav-item {
-        margin-left: map-get($spacers, 2);
-      }
-    }
+    border-bottom: $border-width / 2 solid $gray-900;
   }
 
   .o-footer-body {
-    .container {
-      margin: map-get($spacers, 2) auto map-get($spacers, 3);
+    .row {
+      margin-bottom: map-get($spacers, 2);
     }
 
     h2 {
-      margin: map-get($spacers, 1) 0 map-get($spacers, 3);
-
-      > span {
-        display: inline;
-      }
+      margin-top: map-get($spacers, 2);
+      font-size: $font-size-sm;
     }
 
-    [data-toggle="collapse"] {
-      display: none;
+    p,
+    p a {
+      color: $white;
     }
 
-    .nav {
-      display: flex;
-    }
-
-    .nav-link {
-      padding: map-get($spacers, 1) 0;
+    .flex-column .nav-link {
+      padding: 0;
+      line-height: 1.25;
     }
   }
 
   .o-footer-bottom {
-    .container {
-      margin: map-get($spacers, 3) auto;
-    }
-
-    .nav-item:first-child .nav-link {
-      padding-left: 0;
-    }
+    border-top: $border-width / 2 solid $gray-900;
   }
 }
-

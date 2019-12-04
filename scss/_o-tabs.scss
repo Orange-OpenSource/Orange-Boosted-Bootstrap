@@ -1,0 +1,119 @@
+//
+// Responsive tabs
+//
+
+.o-tab-container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 $card-accordion-spacer;
+  border-bottom: $nav-tabs-border-width / 2 solid $gray-500;
+}
+
+.o-tab-content {
+  display: none;
+  padding: 0 1.5rem 0 0;
+  margin: 0 0 $spacer;
+
+  // @TODO use aria-hidden!
+  &.show {
+    display: block;
+  }
+}
+
+.o-tab-heading {
+  position: relative;
+  display: flex;
+  width: inherit;
+  padding: $card-accordion-spacer;
+  margin: inherit;
+  font-weight: $font-weight-bold;
+  border-top: $nav-tabs-border-width / 2 solid $gray-500;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    z-index: 2;
+    color: $nav-tabs-link-active-color;
+    outline: $nav-tabs-border-width solid $nav-tabs-link-hover-border-color;
+    outline-offset: 0;
+  }
+
+  &[aria-expanded="true"] {
+    color: $primary;
+    background-color: $nav-tabs-link-hover-color;
+    outline-color: currentColor;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .o-tab-container {
+    width: add(100%, $card-accordion-spacer * 2);
+    margin: 0 -#{$card-accordion-spacer};
+  }
+
+  .o-tab-heading {
+    &::after {
+      align-self: center;
+      width: $card-accordion-spacer;
+      height: .4375rem;
+      margin-left: auto;
+      content: "";
+      background: escape-svg($accordion-arrow-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
+    }
+
+    &:hover::after,
+    &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
+      background-image: escape-svg($accordion-arrow-icon-active);
+    }
+
+    &[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .o-tab-container {
+    flex-direction: row;
+    border: 0;
+  }
+
+  .o-tab-content {
+    flex: 1 0 100%;
+    order: 1;
+    padding: 1.125rem;
+    margin: 0;
+    border: $nav-tabs-border-width solid;
+  }
+
+  .o-tab-heading {
+    padding: $navbar-padding-y map-get($spacers, 4);
+    margin-bottom: -$nav-tabs-border-width;
+    font-weight: $font-weight-bold;
+    border: $nav-tabs-border-width solid transparent;
+    border-bottom-color: $nav-tabs-border-color;
+
+    & ~ & {
+      margin-left: .5rem;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $nav-tabs-link-hover-color;
+      background-color: $nav-tabs-link-hover-bg;
+    }
+
+    &:focus {
+      outline-offset: -#{$nav-tabs-border-width};
+    }
+
+    &[aria-expanded="true"] {
+      color: $nav-tabs-link-hover-bg;
+      background-color: $nav-tabs-link-hover-color;
+      border-color: $nav-tabs-border-color $nav-tabs-border-color $white $nav-tabs-border-color;
+    }
+  }
+}

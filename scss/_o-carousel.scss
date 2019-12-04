@@ -1,4 +1,4 @@
-// stylelint-disable property-blacklist, font-family-no-missing-generic-family-keyword
+// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // Carousel
 // --------------------------------------------------
@@ -18,19 +18,19 @@
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
-  bottom: calc(50% - 1.875rem);
+  bottom: subtract(50%, 1.875rem);
   width: 3.75rem;
   height: 3.75rem;
   text-decoration: none;
   text-shadow: none;
   background-color: transparent;
   opacity: .8;
-  transition: width .5s ease;
+  @include transition($transition-carousel);
 
   // Boosted mod
   &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
+    outline: $border-width solid $input-focus-border-color;
+    outline-offset: -#{$border-width};
   }
   // end mod
 }
@@ -72,40 +72,37 @@
     margin-right: .375rem;
     background-color: #000;
     border: 1px solid #fff;
-    border-radius: 50%;
+    @include border-radius(50%);
 
     &:hover {
       cursor: pointer;
     }
+  }
 
-    &.active {
-      background-color: theme-color("primary"); // stylelint-disable-line selector-no-qualifying-type
-    }
+  .active {
+    background-color: theme-color("primary");
   }
 }
 
 // swiper
 .swiper-button-prev,
 .swiper-button-next {
-  top: calc(50% - 10px);
+  top: subtract(50%, 10px);
   width: auto;
   height: auto;
-  text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   cursor: pointer;
-  background-image: none;
-  background-size: 0;
-  //Boosted mod
+  background: none;
+  @include transition($transition-focus);
   &:focus {
-    outline: 2px dotted $input-focus-border-color;
-    outline-offset: -1px;
+    outline: $border-width solid $input-focus-border-color;
+    outline-offset: -#{$border-width};
   }
-  // end mod
 }
 
 .swiper-button-prev::before,
 .swiper-button-next::before {
   font-family: icon-orange;
-  font-size: 1.875rem;
+  font-size: $h2-font-size;
   content: "\e93f";
 }
 
@@ -115,8 +112,8 @@
 
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-  width: .625rem;
-  height: .625rem;
+  width: map-get($spacers, 2);
+  height: map-get($spacers, 2);
   border: 0;
 }
 
@@ -125,17 +122,17 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: #f16e00;
+  background: theme-color("primary");
 }
 
 .swiper-container {
   width: 100% !important; // stylelint-disable-line declaration-no-important
-  margin-bottom: 30px;
+  margin-bottom: map-get($spacers, 4);
   overflow: hidden;
 }
 
 .swiper-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: map-get($spacers, 4);
 }
 
 .swiper-pagination {
@@ -152,7 +149,9 @@
 
     img {
       width: 100%;
-      height: 40vh;
+      height: auto;
+      max-height: 40vh;
+      object-fit: cover;
     }
   }
 
@@ -163,9 +162,9 @@
 
   .card-body {
     position: absolute;
-    bottom: 20px;
-    left: 40px;
-    background-color: #fff;
+    bottom: $spacer;
+    left: $spacer * 2;
+    background-color: $white;
 
     p {
       margin: 0;
@@ -187,11 +186,6 @@
   .swiper-slide {
     width: 80%;
 
-    // .card-link .card-body {
-    //   padding: 20px;
-    //   text-align: left;
-    // }
-
     .card-img img {
       height: auto;
     }
@@ -206,8 +200,8 @@
   }
 
   .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: .5rem;
+    height: .5rem;
     border: 0;
   }
 }

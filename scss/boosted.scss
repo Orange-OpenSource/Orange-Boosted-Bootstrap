@@ -1,10 +1,10 @@
 /*!
- * Boosted v4.3.1 (https://boosted.orange.com)
+ * Boosted v4.4.0 (https://boosted.orange.com)
  * Copyright 2014-2019 The Boosted Authors
  * Copyright 2014-2019 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap v4.3.1 (https://getbootstrap.com)
+ * Bootstrap v4.4.0 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -48,24 +48,21 @@
 @import "utilities";
 @import "print";
 
-// boosted mod
-@import "o-card";
+// Boosted mod
 @import "o-switches";
 @import "o-forms";
-@import "o-bullet_points";
-@import "o-step_bar";
+@import "o-square-list";
+@import "o-step-bar";
 @import "o-link-arrow";
 @import "o-megamenu";
 @import "o-navbar";
-@import "o-tables";
+@import "o-tablesorter";
 @import "o-modal";
-@import "o-nav";
+@import "o-tabs";
 @import "o-nav-local";
 @import "o-skiplinks";
 @import "o-footer";
-@import "o-responsive_table";
+@import "o-responsive-table";
 @import "o-scroll-up";
-@import "o-dropdown";
 @import "o-carousel";
-@import "orange-css";
 // end mod

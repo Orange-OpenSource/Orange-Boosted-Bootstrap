@@ -7,10 +7,32 @@
 }
 
 .dropdown-toggle {
+  padding: $dropdown-padding-x $dropdown-padding-y;
+  line-height: 1;
+  color: $dropdown-color;
   white-space: nowrap;
+  background-color: $dropdown-bg;
+  border-color: $dropdown-border-color;
+
+  // Boosted mod
+  .bg-dark &:not(.dropdown-toggle-split),
+  .navbar-dark &:not(.dropdown-toggle-split) {
+    color: $dropdown-bg;
+    background-color: $dropdown-color;
+    border-color: $gray-700;
+
+    &:hover {
+      border-color: $dropdown-link-hover-color;
+    }
+  }
+
+  .btn-group &:not(.btn-inverse) {
+    border-color: $dropdown-color;
+  }
+  // end mod
 
   // Generate the caret automatically
-  @include caret;
+  @include caret();
 }
 
 // The dropdown menu
@@ -22,7 +44,7 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y 0;
+  padding: 0;
   margin: $dropdown-spacer 0 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
@@ -77,9 +99,6 @@
 
   .dropdown-toggle {
     @include caret(right);
-    &::after {
-      vertical-align: 0;
-    }
   }
 }
 
@@ -114,7 +133,7 @@
 
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
-  @include nav-divider($dropdown-divider-bg, $dropdown-divider-margin-y);
+  @include nav-divider($dropdown-divider-bg, $dropdown-divider-margin-y, true);
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -123,11 +142,12 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x $dropdown-item-padding-y $spacer; // Boosted mod
   clear: both;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-bold; // Boosted mod
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
+  text-decoration: none; // Boosted mod
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
@@ -144,7 +164,7 @@
     }
   }
 
-  @include hover-focus {
+  @include hover-focus() {
     color: $dropdown-link-hover-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-hover-bg);
@@ -176,7 +196,7 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: $dropdown-padding-y $dropdown-item-padding-x;
+  padding: $spacer;
   margin-bottom: 0; // for use with heading elements
   @include font-size($font-size-sm);
   color: $dropdown-header-color;

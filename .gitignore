@@ -1,14 +1,16 @@
 # Ignore docs files
-_gh_pages
-_site
+/_gh_pages/
+/site/.jekyll-metadata
 site/docs/**/dist
 docs/4.0/examples/rtl-*
 
-# Ignore ruby files
-.ruby-version
-.bundle
-vendor/cache
-vendor/bundle
+# Hugo folders
+/resources/
+
+# Ignore ruby/bundler files
+/.bundle/
+/vendor/
+/.ruby-version
 
 # Numerous always-ignore extensions
 *.diff
@@ -20,6 +22,7 @@ vendor/bundle
 *.swp
 *.vi
 *.zip
+*.tgz
 *~
 
 # OS or Editor folders
@@ -37,10 +40,13 @@ vendor/bundle
 nbproject
 Thumbs.db
 
+# For proper npm login
+.npmrc
+
 # Komodo
 .komodotools
 *.komodoproject
 
 # Folders to ignore
-node_modules
-js/coverage
+/js/coverage/
+/node_modules/

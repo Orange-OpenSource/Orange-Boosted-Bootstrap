@@ -1,148 +1,135 @@
 <!-- Indicators
 ================================================== -->
-<h2 id="indicators">Indicators<a class="doc-link" href="../components/alerts/" title="go to alerts documentation page"></a></h2>
-<div class="container-fluid">
+<h2 id="indicators">Indicators<a class="doc-link d-inline-flex align-items-center ml-2" href="../components/alerts/" title="go to alerts documentation page"></a></h2>
+<div class="container">
   <div class="row">
     <div class="col-lg-12">
-        <h3>Alerts</h3>
-        <div class="alert alert-dismissable alert-warning">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <h4>Warning!</h4>
-            <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+        <h3 class="mt-5">Alerts</h3>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <div>
+            <h4 class="alert-heading">Warning!</h4>
+            <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#">vel scelerisque nisl consectetur et</a>.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div>
+          <button type="button" class="close" data-dismiss="alert">
+            <span class="sr-only">Close</span>
+          </button>
         </div>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-4">
-        <div class="alert alert-dismissable alert-danger">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <div>
+          <h4 class="alert-heading">Oh snap!</h4>
+          <p class="mb-0"><a href="#">Change a few things up</a> and try submitting again.</p>
         </div>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
     </div>
     <div class="col-lg-4">
-        <div class="alert alert-dismissable alert-success">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <div>
+          <h4 class="alert-heading">Well done!</h4>
+          <p class="mb-0">You successfully read <a href="#">this important alert message</a>.</p>
         </div>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
     </div>
     <div class="col-lg-4">
-        <div class="alert alert-dismissable alert-info">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+      <div class="alert alert-info alert-dismissible" role="alert">
+        <div>
+          <h4 class="alert-heading">Heads up!</h4>
+          <p class="mb-0">This alert is <a href="#">not super important</a>.</p>
         </div>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
-<div>
-    <h3>Orange Alerts <a class="doc-link" href="../components/alerts/" title="go to Alerts documentation page"></a></h3>
-    <!-- Orange Alerts
-    ======================================= -->
-    <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="pl-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">×</span>
+<div class="container">
+    <h3 class="d-flex mt-5">Orange Alerts <a class="doc-link d-inline-flex align-items-center ml-2" href="../components/alerts/" title="go to Alerts documentation page"></a></h3>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <p class="mb-0">Your changes have been saved.</p>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
         </button>
     </div>
-    <div class="alert border border-info alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-info" aria-label="Info"></span>
-        <div class="pl-3 ml-3 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <p class="mb-0">Your changes have been saved.</p>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
         </button>
     </div>
-    <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent" role="alert">
-        <span class="alert-icon svg-warning" aria-label="Warning"></span>
-        <div class="pl-5 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <p class="mb-0">Your changes have been saved.</p>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
         </button>
     </div>
-    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-dark" role="alert">
-        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
-        <div class="pl-5">
-            <div class="font-weight-bold">Your changes have been saved.</div>
-            <p class="mb-0">You may now log-in with the username you have chosen.</p>
-        </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-dark" aria-hidden="true">&times;</span>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <p class="mb-0">
+          Your changes have been saved.
+          <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
+        </p>
+        <button type="button" class="close" data-dismiss="alert">
+          <span class="sr-only">Close</span>
         </button>
     </div>
-    <div class="alert border-0 alert-sm bg-transparent px-0" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="ml-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
+    <div class="alert alert-sm alert-success" role="alert">
+      <p class="mb-0">Your changes have been saved.</p>
     </div>
 </div>
-<div class="bg-dark">
-    <!-- Orange Alerts
-    ======================================= -->
-    <div class="alert alert-sm border border-success alert-dismissible fade show bg-transparent text-white" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="pl-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <button type="button" class="close p-1 px-3 pb-2" data-dismiss="alert" aria-label="Close">
-        <span class="text-white" aria-hidden="true">×</span>
-        </button>
+<div class="bg-dark p-3 mb-5">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <p class="mb-0">Your changes have been saved.</p>
+      <button type="button" class="close" data-dismiss="alert">
+        <span class="sr-only">Close</span>
+      </button>
     </div>
-    <div class="alert border border-info alert-dismissible fade show bg-transparent text-white" role="alert">
-        <span class="alert-icon svg-info" aria-label="Info"></span>
-        <div class="pl-3 ml-3 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <button type="button" class="close pb-3" data-dismiss="alert" aria-label="Close">
-        <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <p class="mb-0">Your changes have been saved.</p>
+      <button type="button" class="close" data-dismiss="alert">
+        <span class="sr-only">Close</span>
+      </button>
     </div>
-    <div class="alert alert-lg border border-warning alert-dismissible fade show bg-transparent text-white" role="alert">
-        <span class="alert-icon svg-warning" aria-label="Warning"></span>
-        <div class="pl-5 font-weight-bold">
-            Your changes have been saved.
-        </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <p class="mb-0">Your changes have been saved.</p>
+      <button type="button" class="close" data-dismiss="alert">
+        <span class="sr-only">Close</span>
+      </button>
     </div>
-    <div class="alert alert-lg border border-danger alert-dismissible fade show bg-transparent text-white" role="alert">
-        <span class="alert-icon svg-error mt-2" aria-label="Danger"></span>
-        <div class="pl-5 font-weight-bold">
-            <div class="font-weight-bold">Your changes have been saved.</div>
-            <p class="mb-0"><small>You may now log-in with the username you have chosen.</small></p>
-        </div>
-        <button type="button" class="close mt-1" data-dismiss="alert" aria-label="Close">
-        <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <p class="mb-0">
+        Your changes have been saved.
+        <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
+      </p>
+      <button type="button" class="close" data-dismiss="alert">
+        <span class="sr-only">Close</span>
+      </button>
     </div>
-    <div class="alert border-0 alert-sm bg-transparent px-0 text-white" role="alert">
-        <span class="alert-icon svg-success" aria-label="Success"></span>
-        <div class="ml-4 font-weight-bold">
-            Your changes have been saved.
-        </div>
+    <div class="alert alert-sm alert-success" role="alert">
+      <p class="mb-0">Your changes have been saved.</p>
     </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div>
-        <h3>Badge<a class="doc-link" href="../components/badge/" title="go to badge documentation page"></a></h3>
-        <div style="margin-bottom: 40px;">
-            <span class="badge badge-primary">Primary</span>
-            <span class="badge badge-secondary">Secondary</span>
-            <span class="badge badge-success">Success</span>
-            <span class="badge badge-danger">Danger</span>
-            <span class="badge badge-warning">Warning</span>
-            <span class="badge badge-info">Info</span>
-            <span class="badge badge-light">Light</span>
-            <span class="badge badge-dark">Dark</span>
-        </div>
-    </div>
+<div class="container">
+  <h3 class="d-flex mt-5">Badge<a class="doc-link d-inline-flex align-items-center ml-2" href="../components/badge/" title="go to badge documentation page"></a></h3>
+  <div class="mb-5">
+      <span class="badge badge-primary">Primary</span>
+      <span class="badge badge-secondary">Secondary</span>
+      <span class="badge badge-success">Success</span>
+      <span class="badge badge-danger">Danger</span>
+      <span class="badge badge-warning">Warning</span>
+      <span class="badge badge-info">Info</span>
+      <span class="badge badge-light">Light</span>
+      <span class="badge badge-dark">Dark</span>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<h2 id="modal">Modal window<a class="doc-link" href="../components/modal/" title="go to modal window documentation page"></a></h2>
+<h2 id="modal">Modal window<a class="doc-link d-inline-flex align-items-center ml-2" href="../components/modal/" title="go to modal window documentation page"></a></h2>
 <p class="lead">Modal window or popin.</p>
 <div data-example-id="">
   <!-- Button trigger modal -->
@@ -11,7 +11,11 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn" data-dismiss="modal" aria-label="close"><span class="close"></span></button>
+              <!-- Boosted mod -->
+              <button type="button" class="close" data-dismiss="modal">
+                <span class="sr-only">Close</span>
+              </button>
+              <!-- end mod -->
             </div>
             <div class="modal-body">
                 <div class="card">

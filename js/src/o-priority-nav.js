@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.3.1): o-priority-nav.js
+ * Boosted (v4.4.0): o-priority-nav.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME = 'prioritynav'
-const VERSION = '4.3.1'
+const VERSION = '4.4.0'
 const DATA_KEY = 'bs.prioritynav'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 const RESIZE_DURATION = 500
@@ -28,7 +28,7 @@ const Event = {
 const ClassName = {
   PRIORITY: 'priority',
   HIDE: 'sr-only',
-  RESIZING: 'resizing'
+  RESIZING: 'resizing overflow-hidden'
 }
 
 const Selector = {
@@ -41,7 +41,7 @@ const MenuLabelDefault = 'More'
 
 function MenuTemplate(MenuLabel) {
   return `
-  <li class="overflow-nav nav-item dropdown">
+  <li class="overflow-nav nav-item dropdown d-none">
       <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
       <ul class="overflow-nav-list dropdown-menu dropdown-menu-right"></ul>
   </li>
@@ -135,7 +135,7 @@ class PriorityNav {
       this._$menu.find('.overflow-nav-list').append(newSet)
 
       // Show new menu
-      this._$menu.find('.overflow-nav').addClass('show-inline-block')
+      this._$menu.find('.overflow-nav').removeClass('d-none').addClass('d-inline-block')
 
       // Make overflow visible again so dropdown can be seen.
       this._$menu.find('.o-nav-local').css('overflow', 'visible')
@@ -158,7 +158,7 @@ class PriorityNav {
 
   _tearDown() {
     this._$menu.find('.overflow-nav-list').empty()
-    this._$menu.find('.overflow-nav').removeClass('show-inline-block')
+    this._$menu.find('.overflow-nav').removeClass('d-inline-block').addClass('d-none')
     this._$allNavElements.removeClass(ClassName.HIDE)
     this._$allNavElements.find('.nav-link').attr('tabindex', 0)
   }

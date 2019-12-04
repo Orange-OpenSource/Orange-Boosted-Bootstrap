@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
+  * Boosted v4.4.0 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tab.js v4.3.1 (https://boosted.orange.com)
+  * Bootstrap tab.js v4.4.0 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -12,7 +12,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
   (global = global || self, global.Tab = factory(global.jQuery, global.Util));
-}(this, function ($, Util) { 'use strict';
+}(this, (function ($, Util) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
@@ -40,11 +40,11 @@
    */
 
   var NAME = 'tab';
-  var VERSION = '4.3.1';
+  var VERSION = '4.4.1';
   var DATA_KEY = 'bs.tab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME]; // boosted mod
+  var JQUERY_NO_CONFLICT = $.fn[NAME]; // Boosted mod
 
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
@@ -62,7 +62,7 @@
     SHOW: "show" + EVENT_KEY,
     SHOWN: "shown" + EVENT_KEY,
     CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY,
-    KEYDOWN_DATA_API: "keydown" + EVENT_KEY + DATA_API_KEY // boosted mod
+    KEYDOWN_DATA_API: "keydown" + EVENT_KEY + DATA_API_KEY // Boosted mod
 
   };
   var ClassName = {
@@ -80,13 +80,12 @@
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Tab =
   /*#__PURE__*/
@@ -343,13 +342,7 @@
         if (!data) {
           data = new Tab(this);
           $this.data(DATA_KEY, data);
-        } // Boosted mod
-
-
-        if (/init/.test(config)) {
-          return;
-        } // end mod
-
+        }
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
@@ -391,7 +384,7 @@
 
     Tab._dataApiKeydownHandler.call($(this), event);
   }).on('DOMContentLoaded', function () {
-    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE), 'init');
+    Tab._jQueryInterface.call($(Selector.DATA_TOGGLE));
   }); // end mod
 
   /**
@@ -410,5 +403,5 @@
 
   return Tab;
 
-}));
+})));
 //# sourceMappingURL=tab.js.map

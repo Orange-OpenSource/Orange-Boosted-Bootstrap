@@ -10,21 +10,25 @@
   font-weight: $btn-font-weight;
   color: $body-color;
   text-align: center;
+  white-space: $btn-white-space;
   vertical-align: middle;
+  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
+  outline-offset: $border-width * 2;
 
-  @include hover {
+  @include hover() {
     color: $body-color;
     text-decoration: none;
   }
 
   &:focus,
   &.focus {
-    outline: 0;
+    outline: $border-width solid; // Boosted mod
+    outline-offset: -#{$border-width}; // Boosted mod
     box-shadow: $btn-focus-box-shadow;
   }
 
@@ -45,9 +49,9 @@
   }
 }
 
-// Boosted mod
+// Boosted mod remove underline for a.btn
 a.btn {
-  text-decoration: none; // Boosted mod remove underline for a.btn
+  text-decoration: none;
 }
 // End mod
 
@@ -62,7 +66,7 @@ fieldset:disabled a.btn {
 // Alternate buttons
 //
 
-// boosted mod custom buttons
+// Boosted mod : custom buttons
 // @mixin button-variant($background, $border, $hover-background, $hover-border, $active-background, $active-border, $disabled-background, $disabled-border, $disabled-color, $color) {
 .btn-primary,
 .btn-warning {
@@ -75,7 +79,7 @@ fieldset:disabled a.btn {
 .btn-light {
   @include button-variant(transparent, $black, $black, $black, theme-color("primary"), theme-color("primary"), transparent, $gray-500, $gray-500, $black);
   &.btn-inverse {
-    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
   }
 }
 .btn-success {
@@ -88,7 +92,13 @@ fieldset:disabled a.btn {
 .btn-dark {
   @include button-variant($black, $black, $white, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $white);
   &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
+    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+  }
+}
+.btn-warning {
+  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
+  &.btn-inverse {
+    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
   }
 }
 .btn-danger {
@@ -98,25 +108,7 @@ fieldset:disabled a.btn {
   }
 }
 
-// Boosted mod custom outline buttons values
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @if $color == "light" {
-      @include button-outline-variant($value, $gray-900);
-    } @else {
-      @if $color == "warning" {
-        @include button-outline-variant(theme-color("primary"), $black);
-      } @else {
-        @if $color == "info" {
-          @include button-outline-variant(theme-color("secondary"), $black);
-        } @else {
-          @include button-outline-variant($value, $black);
-        }
-      }
-    }
-  }
-}
-
+// Boosted mod: no .btn-outline-*
 
 //
 // Link buttons
@@ -126,22 +118,23 @@ fieldset:disabled a.btn {
 .btn-link {
   // font-weight: $font-weight-normal; // Boosted mod font-weight stay bold
   color: $link-color;
-
   // Boosted mod
+  // stylelint-disable-next-line declaration-no-important
+  border-color: transparent !important;
+
   &.btn-inverse {
-    color: #fff;
+    color: $white;
   }
   // end mod
 
-  @include hover {
+  @include hover() {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 
   &:focus,
   &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
+    box-shadow: $input-btn-focus-box-shadow;
   }
 
   &:disabled,
@@ -153,44 +146,96 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
+// Boosted mod: icon buttons are squared
+.btn-icon {
+  padding: $btn-padding-y;
+  // stylelint-disable-next-line declaration-no-important
+  line-height: .875 !important; // Ensure .btn-icon is squared
+}
+
+// Boosted mod: social buttons
+@each $network in map-keys($o-networks) {
+  $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
+  $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
+  .btn-#{$network} {
+    &,
+    &.btn-inverse:active {
+      background-color: $white;
+      background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.btn-inverse {
+      background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
+      border-color: $white;
+      outline-color: $white;
+    }
+
+    &.btn-inverse {
+      background-color: $black;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: icon-conf($network, "color");
+      border-color: icon-conf($network, "color");
+      outline-color: icon-conf($network, "color");
+    }
+
+    &:active {
+      background-color: $black;
+      border-color: $black;
+      outline-color: $black;
+    }
+  }
+}
+// end mod
+
 
 //
 // Button Sizes
 //
 
-.btn-xlg {
-  @include button-size($btn-padding-y-xlg, $btn-padding-x-xlg, $font-size-xlg, $btn-line-height-xlg, $btn-border-radius-xlg);
-}
-
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  // Boosted mod
+  &.btn-info {
+    padding: $btn-padding-y-lg;
+  }
+  // end mod
 }
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  // Boosted mod
+  &.btn-info {
+    padding: $btn-padding-y-sm;
+  }
+  // end mod
 }
 
-// Social Media
-.btn-mail,
-.btn-mail-inverse,
-.btn-lin,
-.btn-lin-inverse,
-.btn-gplus,
-.btn-gplus-inverse,
-.btn-tw,
-.btn-tw-inverse,
-.btn-fbk,
-.btn-fbk-inverse {
+// Boosted mod: social buttons
+.btn-social {
   width: 2em;
   height: 2em;
   padding: 0;
   background-repeat: no-repeat;
-  border: 0;
+  background-position: center;
+  background-size: 1em;
+  border: $border-width solid $black;
+  // stylelint-disable-next-line property-blacklist
+  border-radius: 50%;
+  // stylelint-disable-next-line property-blacklist
+  transition: none;
+
   &:hover,
   &:focus {
-    outline: none;
+    outline: 0;
   }
 }
+// end mod
 
 //
 // Block button

@@ -7,12 +7,12 @@
       description: "Main mega menu."
     - name: "Dashboard Orange branded"
       description: "A simple Orange branded dashboard application."
-    - name: "Administration mainpage"
+    - name: "Orange form"
+      description: "Complex form page with validation."
+    - name: "Administration main page"
       description: "Administration for Orange applications example."
     - name: "Administration edition page"
       description: "Administration news edition for Orange applications example."
-    - name: "Orange form"
-      description: "Complex form page with validation."
 
 - category: Custom components
   description: "Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."

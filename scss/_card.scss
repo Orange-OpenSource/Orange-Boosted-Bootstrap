@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: $card-height;
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
@@ -35,6 +36,9 @@
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
+  // Workaround for the image size bug in IE
+  // See: https://github.com/twbs/bootstrap/pull/28855
+  min-height: 1px;
   padding: $card-spacer-x;
   color: $card-color;
 }
@@ -53,7 +57,7 @@
 }
 
 .card-link {
-  @include hover {
+  @include hover() {
     text-decoration: none;
   }
 
@@ -69,9 +73,9 @@
 .card-header {
   padding: $card-spacer-y $card-spacer-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  font-weight: $font-weight-bold; // boosted mod
+  font-weight: $font-weight-bold; // Boosted mod
   color: $card-cap-color;
-  background-color: $black; // boosted mod
+  background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
 
   &:first-child {
@@ -87,7 +91,7 @@
 
 .card-footer {
   padding: $card-spacer-y $card-spacer-x;
-  background-color: $card-cap-bg;
+  background-color: $card-cap-color; // Boosted mod
   border-top: $card-border-width solid $card-border-color;
 
   &:last-child {
@@ -122,19 +126,20 @@
   padding: $card-img-overlay-padding;
 }
 
-.card-img {
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-radius($card-inner-border-radius);
 }
 
-// Card image caps
+.card-img,
 .card-img-top {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   @include border-top-radius($card-inner-border-radius);
 }
 
+.card-img,
 .card-img-bottom {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   @include border-bottom-radius($card-inner-border-radius);
 }
 
@@ -142,23 +147,19 @@
 // Card deck
 
 .card-deck {
-  display: flex;
-  flex-direction: column;
-
   .card {
     margin-bottom: $card-deck-margin;
   }
 
   @include media-breakpoint-up(sm) {
+    display: flex;
     flex-flow: row wrap;
     margin-right: -$card-deck-margin;
     margin-left: -$card-deck-margin;
 
     .card {
-      display: flex;
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
-      flex-direction: column;
       margin-right: $card-deck-margin;
       margin-bottom: 0; // Override the default
       margin-left: $card-deck-margin;
@@ -172,9 +173,6 @@
 //
 
 .card-group {
-  display: flex;
-  flex-direction: column;
-
   // The child selector allows nested `.card` within `.card-group`
   // to display properly.
   > .card {
@@ -182,6 +180,7 @@
   }
 
   @include media-breakpoint-up(sm) {
+    display: flex;
     flex-flow: row wrap;
     // The child selector allows nested `.card` within `.card-group`
     // to display properly.
@@ -260,54 +259,73 @@
 //
 
 .accordion {
-  /* boosted mod */
-
+  // Boosted mod
   .card {
-    margin-bottom: 0;
-    border: 0;
-    // border 1px for first child only
-    border-top: 1px solid $gray-500;
-    border-bottom: 1px solid $gray-500;
-    // remove border for card other than the first one
-    ~ .card {
-      border-top: 0;
+    position: static;
+    border-color: $gray-500;
+    border-width: 0 0 $border-width;
+    &:first-child {
+      border-width: $border-width 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      border-width: 0 0 $border-width / 2;
+      &:first-child {
+        border-width: $border-width / 2 0;
+      }
     }
   }
 
   .card-header {
     padding: 0;
-    background-color: #fff;
+    background: none;
     border: 0;
-
-    &,
-    h5 {
-      margin: 0;
-      font-size: $font-size-base;
-      font-weight: $font-weight-bold;
-      line-height: 1;
-    }
 
     button,
     a {
-      position: relative;
-      display: block;
-      width: 100%;
-      padding: 1rem 2.125rem 1rem 0;
-      line-height: 1.125rem;
-      text-align: left;
+      display: flex;
+      width: add(100%, $card-accordion-spacer * 2);
+      padding: $card-accordion-spacer;
+      margin: 0 -#{$card-accordion-spacer};
       border: 0;
 
       &::after {
-        position: absolute;
-        top: 1.3125rem;
-        right: .625rem;
-        width: .875rem;
+        display: block;
+        align-self: center;
+        width: $card-accordion-spacer;
         height: .4375rem;
+        margin-left: auto;
         content: "";
-        background-image: $accordion-arrow-icon;
+        background: escape-svg($accordion-arrow-icon) no-repeat 50% / $accordion-arrow-size;
       }
 
+      &:hover::after,
       &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
+        background-image: escape-svg($accordion-arrow-icon-active);
+      }
+
+      &:focus {
+        z-index: 2;
+        outline-offset: 0;
+      }
+    }
+
+    .btn-sm {
+      width: add(100%, $card-spacer-y * 2);
+      padding: $card-spacer-y;
+      margin: 0 -#{$card-spacer-y};
+    }
+
+    .btn-lg {
+      width: add(100%, map-get($spacers, 3) * 2);
+      padding: map-get($spacers, 3);
+      margin: 0 -#{map-get($spacers, 3)};
+    }
+
+    [aria-expanded="true"] {
+      color: $primary;
+
+      &::after {
         transform: rotate(180deg);
       }
     }
@@ -315,18 +333,6 @@
 
   .card-body {
     padding: 0 1.5rem 0 0;
-    margin: 0 0 1.25rem;
-  }
-}
-// For mobile display emphase the border
-@include media-breakpoint-down(sm) {
-  .accordion .card {
-    // border 1px for first child only
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    // remove border for card other than the first one
-    ~ .card {
-      border-top: 0;
-    }
+    margin: 0 0 $spacer;
   }
 }

@@ -14,20 +14,42 @@
   background-color: $progress-bg;
   @include border-radius($progress-border-radius);
   @include box-shadow($progress-box-shadow);
+
+  // Boosted mod: using supporting colours for data display
+  // stylelint-disable declaration-no-important
+  .bg-success {
+    background-color: $teal !important;
+  }
+
+  .bg-info {
+    background-color: $cyan !important;
+  }
+
+  .bg-warning {
+    background-color: $yellow-2 !important;
+  }
+
+  .bg-danger {
+    background-color: $purple !important;
+  }
+  // stylelint-enable declaration-no-important
+  // end mod
 }
 
 .progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  font-weight: $font-weight-bold; // Boosted mod
   color: $progress-bar-color;
-  text-align: center;
+  text-indent: map-get($spacers, 2); // Boosted mod
   white-space: nowrap;
   background-color: $progress-bar-bg;
   @include transition($progress-bar-transition);
 }
 
-// BOOSTED MOD progress is half height on mobile
+// Boosted mod : progress is half height on mobile
 @include media-breakpoint-down(md) {
   .progress {
     width: 100%;
@@ -40,6 +62,7 @@
   }
 }
 // end mod
+
 .progress-bar-striped {
   @include gradient-striped();
   background-size: $progress-height $progress-height;
@@ -49,8 +72,10 @@
   .progress-bar-animated {
     animation: progress-bar-stripes $progress-bar-animation-timing;
 
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
+    @if $enable-prefers-reduced-motion-media-query {
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
     }
   }
 }

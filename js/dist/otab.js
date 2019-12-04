@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
+  * Boosted v4.4.0 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap otab.js v4.3.1 (https://boosted.orange.com)
+  * Bootstrap otab.js v4.4.0 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -12,7 +12,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
   (global = global || self, global.Otab = factory(global.jQuery, global.Util));
-}(this, function ($, Util) { 'use strict';
+}(this, (function ($, Util) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
@@ -40,7 +40,7 @@
    */
 
   var NAME = 'otab';
-  var VERSION = '4.3.1';
+  var VERSION = '4.4.0';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -57,13 +57,12 @@
   var Selector = {
     OTAB_HEADING: '.o-tab-heading',
     OTAB_CONTENT: '.o-tab-content'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Otab =
   /*#__PURE__*/
@@ -131,13 +130,7 @@
         if (!data) {
           data = new Otab(this);
           $this.data(DATA_KEY, data);
-        } // Boosted mod
-
-
-        if (/init/.test(config)) {
-          return;
-        } // end mod
-
+        }
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
@@ -166,7 +159,7 @@
 
 
   $(document).on('DOMContentLoaded', function () {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING), 'init');
+    Otab._jQueryInterface.call($(Selector.OTAB_HEADING));
   }).on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
     event.preventDefault();
 
@@ -188,5 +181,5 @@
 
   return Otab;
 
-}));
+})));
 //# sourceMappingURL=otab.js.map

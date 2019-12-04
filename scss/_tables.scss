@@ -8,17 +8,60 @@
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
+  // Boosted mod
+  tr {
+    border-bottom: $table-border-width solid $table-border-color;
+  }
+
   th,
   td {
     padding: $table-cell-padding;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
     vertical-align: top;
-    border-top: $table-border-width solid $table-border-color;
   }
 
-  thead th {
-    vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  thead {
+    tr {
+      border-bottom-width: $table-border-width * 2;
+    }
+
+    th {
+      font-size: $font-size-base;
+      border-bottom-width: 2 * $table-border-width;
+    }
   }
+
+  tbody th {
+    font-weight: $font-weight-normal;
+  }
+
+  img,
+  svg,
+  [class^="svg-"],
+  [class^="icon-"],
+  [class*=" icon-"] {
+    display: inline-block;
+    width: $o-table-icon-size;
+    height: $o-table-icon-size;
+    margin: -#{$spacer / 10} map-get($spacers, 2) -#{$spacer / 10} 0;
+    font-size: $o-table-icon-size;
+  }
+
+  [class^="svg-"]::after {
+    width: inherit;
+    height: inherit;
+  }
+
+  .selected * {
+    background-color: $gray-400;
+  }
+
+  .custom-control {
+    margin-top: .1875rem;
+    margin-bottom: .1875rem;
+  }
+  // end mod
 
   tbody + tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
@@ -37,6 +80,16 @@
   }
 }
 
+// Boosted mod
+.table-lg {
+  th,
+  td {
+    padding: $table-cell-padding-lg;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+}
+// end mod
 
 // Border versions
 //
@@ -84,7 +137,7 @@
 
 .table-hover {
   tbody tr {
-    @include hover {
+    @include hover() {
       color: $table-hover-color;
       background-color: $table-hover-bg;
     }
@@ -103,6 +156,11 @@
 
 @include table-row-variant(active, $table-active-bg);
 
+// Boosted mod
+@each $color in success, info, warning, danger {
+  @include table-row-variant-border(#{$color}, theme-color(#{$color}));
+}
+// end mod
 
 // Dark styles
 //
@@ -142,14 +200,14 @@
   }
 
   &.table-striped {
-    tbody tr:nth-of-type(odd) {
+    tbody tr:nth-of-type(#{$table-striped-order}) {
       background-color: $table-dark-accent-bg;
     }
   }
 
   &.table-hover {
     tbody tr {
-      @include hover {
+      @include hover() {
         color: $table-dark-hover-color;
         background-color: $table-dark-hover-bg;
       }
@@ -183,3 +241,15 @@
     }
   }
 }
+
+// Boosted mod
+.has-checkbox {
+  tr * {
+    vertical-align: middle;
+  }
+
+  tr > :first-child {
+    width: $spacer;
+  }
+}
+// end mod

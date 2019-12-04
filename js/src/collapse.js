@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.3.1): collapse.js
+ * Bootstrap (v4.4.1): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ import Util from './util'
  */
 
 const NAME                = 'collapse'
-const VERSION             = '4.3.1'
+const VERSION             = '4.4.1'
 const DATA_KEY            = 'bs.collapse'
 const EVENT_KEY           = `.${DATA_KEY}`
 const DATA_API_KEY        = '.data-api'
@@ -52,7 +52,7 @@ const Dimension = {
 }
 
 const Selector = {
-  ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // boosted mod
+  ACTIVES     : '*:not(.multi) > .show, *:not(.multi) > .collapsing', // Boosted mod
   DATA_TOGGLE : '[data-toggle="collapse"]'
 }
 
@@ -352,13 +352,7 @@ class Collapse {
         $this.data(DATA_KEY, data)
       }
 
-      // Boosted mod
-      if (/init/.test(config)) {
-        return
-      }
-      // end mod
-
-      if (typeof config === 'string') {
+      if (typeof config === 'string' && config !== 'init') { // Boosted mod
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
         }

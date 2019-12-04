@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Boosted (v4.3.1): o-scroll-up.js
+ * Boosted (v4.4.0): o-scroll-up.js
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -15,7 +15,7 @@ import Util from './util'
  */
 
 const NAME               = 'scrollup'
-const VERSION            = '4.3.1'
+const VERSION            = '4.4.0'
 const DATA_KEY           = 'bs.scrollup'
 const EVENT_KEY          = `.${DATA_KEY}`
 const DATA_API_KEY       = '.data-api'
@@ -61,7 +61,7 @@ class ScrollUp {
 
     $(window).on(Event.SCROLL, $.proxy(this._process, this))
     $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this))
-    $(this._element).addClass('is-fixed')
+    $(this._element).addClass('is-fixed d-none')
     this._process()
   }
 
@@ -109,11 +109,7 @@ class ScrollUp {
   }
 
   _process() {
-    if ($(this._scrollElement).scrollTop() > Number($(this._scrollElement).height())) {
-      $(Selector.SCROLL_TOP).show()
-    } else {
-      $(Selector.SCROLL_TOP).hide()
-    }
+    $(Selector.SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()))
   }
 
   _clear() {
