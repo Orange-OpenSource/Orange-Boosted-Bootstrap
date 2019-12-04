@@ -39,6 +39,9 @@ docs/4.0/examples/rtl-*
 nbproject
 Thumbs.db
 
+# For proper npm login
+.npmrc
+
 # Komodo
 .komodotools
 *.komodoproject
