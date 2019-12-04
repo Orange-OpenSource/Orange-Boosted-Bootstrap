@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com)
+  * Boosted v4.4.0 (https://boosted.orange.com)
   * Copyright 2014-2019 The Boosted Authors
   * Copyright 2014-2019 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap otab.js v4.3.1 (https://boosted.orange.com)
+  * Bootstrap otab.js v4.4.0 (https://boosted.orange.com)
   * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -40,7 +40,7 @@
    */
 
   var NAME = 'otab';
-  var VERSION = '4.3.1';
+  var VERSION = '4.4.0';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -159,7 +159,7 @@
 
 
   $(document).on('DOMContentLoaded', function () {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING), 'init');
+    Otab._jQueryInterface.call($(Selector.OTAB_HEADING));
   }).on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
     event.preventDefault();
 
