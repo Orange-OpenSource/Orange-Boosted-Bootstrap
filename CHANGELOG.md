@@ -1,5 +1,5 @@
 <a name="4.4.0"></a>
-## [4.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.3.1...v4.1.0) (2019-11-28)
+## [4.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.3.1...v4.4.0) (2019-12-04)
 
 ### Bootstrap's v4.4.0 — v4.4.1
 
