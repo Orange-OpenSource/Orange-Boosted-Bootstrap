@@ -22,6 +22,7 @@ docs/4.0/examples/rtl-*
 *.swp
 *.vi
 *.zip
+*.tgz
 *~
 
 # OS or Editor folders
