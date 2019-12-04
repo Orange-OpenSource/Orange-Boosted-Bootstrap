@@ -1,0 +1,58 @@
+.svg-arrow-previous::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 24'%3e%3cpath d='M3 0L0 3l9 9-9 9 3 3 12-12' fill='%23000'/%3e%3c/svg%3e");
+}
+
+.svg-arrow-next::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 24'%3e%3cpath d='M15 3l-3-3L0 12l12 12 3-3-9-9' fill='%23000'/%3e%3c/svg%3e");
+}
+
+.stepbar-item::after {
+  transform: rotateY(180deg);
+}
+
+.page-item:last-child .page-link::before,
+.page-item:first-child .page-link::before,
+.page-item.presentation + .page-item .page-link::before,
+.swiper-button-prev,
+.swiper-button-next,
+.doc-link::after,
+.breadcrumb-item + .breadcrumb-item::before,
+.o-link-arrow::after,
+.o-link-arrow.back::before {
+  transform: rotate(180deg);
+}
+
+.alert .alert-icon::after,
+.alert-sm .alert-icon::after {
+  right: 2%;
+}
+
+.o-stepbar .stepbar-item::after,
+.page-item:last-child .page-link::before,
+.o-stepbar .stepbar-item.current::after,
+.o-stepbar .stepbar-item.done::after {
+  right: unset;
+}
+
+.custom-switch.right .custom-control-label::before {
+  right: auto;
+  left: 0;
+}
+
+.custom-switch .custom-control-label::before {
+  background-position: .2rem;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-position: 2rem;
+}
+
+.o-link-arrow.back::before {
+  padding: 0 .625rem 0 0;
+}
+
+.popover {
+  right: auto;
+  left: 0;
+}
+/*# sourceMappingURL=o-rtl.css.map */

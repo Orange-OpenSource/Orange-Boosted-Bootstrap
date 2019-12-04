@@ -1,0 +1,17 @@
+.skippy {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+
+.skippy:hover {
+  color: #fff;
+}
+
+.skippy-text {
+  padding: .5em;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1vcmFuZ2UtZm9ybSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixhQUFhO0VBQ2IsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQix1QkFBdUI7Q0FDeEI7O0FBRUQ7RUFDRSxZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxjQUFjO0NBQ2YiLCJmaWxlIjoicnRsLW9yYW5nZS1mb3JtIiwic291cmNlc0NvbnRlbnQiOlsiLnNraXBweSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwYWRkaW5nOiAxZW07XG4gIGNvbG9yOiAjZmZmO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG59XG5cbi5za2lwcHk6aG92ZXIge1xuICBjb2xvcjogI2ZmZjtcbn1cblxuLnNraXBweS10ZXh0IHtcbiAgcGFkZGluZzogLjVlbTtcbn1cbiJdfQ== */

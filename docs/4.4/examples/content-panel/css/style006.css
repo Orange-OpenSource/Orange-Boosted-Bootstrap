@@ -1,0 +1,11 @@
+/* page header */
+
+.btn.svg-arrow-previous {
+  transition: none;
+}
+
+.btn.svg-arrow-previous::after {
+  width: .5625rem;
+  height: .875rem;
+  margin-right: .375rem;
+}

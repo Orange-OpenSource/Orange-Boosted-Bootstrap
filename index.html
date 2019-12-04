@@ -1,300 +1,305 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-<!-- Boosted mod -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- end mod -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Based on Bootstrap the most popular library.">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.8.5">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Based on Bootstrap the most popular library.">
+  <meta name="author" content="Mark Otto, Jacob Thornton, Bootstrap and Boosted contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  
+  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="4.4">
+  
+  <title>Boosted · Based on Bootstrap the most popular library.</title>
+  
+  <link rel="canonical" href="https://boosted.orange.com/">
+  
+  <!-- tarteaucitron -->
+  <link href="/docs/4.4/assets/css/tarteaucitronboosted.css" rel="stylesheet">
+  <!-- Swiper -->
+  <link href="/docs/4.4/assets/css/vendor/swiper.min.css" rel="stylesheet">
+  <!-- Helvetica -->
+  <link href="/docs/4.4/dist/css/orangeHelvetica.css" rel="stylesheet">
+  <!-- orangeIcons -->
+  <link href="/docs/4.4/dist/css/orangeIcons.css" rel="stylesheet">
+  <!-- Boosted core CSS -->
+  <link href="/docs/4.4/dist/css/boosted.min.css" rel="stylesheet">
+  <!-- end mod --><!-- Documentation extras -->
+  
+  
+  <link href="/docs/4.4/assets/css/docs.min.css" rel="stylesheet">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#000000">
+  
+  <!-- Boosted mod remove social -->
+  <script src="/docs/4.4/assets/js/vendor/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "", /* Privacy policy url */
+      
+      "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
+      "cookieName": "cookie-consent", /* Cookie name */
+      
+      "orientation": "bottom", /* Banner position (top - bottom) */
+      "showAlertSmall": false, /* Show the small banner on bottom right */
+      "cookieslist": true, /* Show the cookie list */
+      
+      "adblocker": false, /* Show a Warning if an adblocker is detected */
+      "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+      "highPrivacy": false, /* Disable auto consent */
+      "handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
+      
+      "removeCredit": false, /* Remove credit link */
+      "moreInfoLink": true, /* Show more info link */
+      "useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+      
+      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+      
+      "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+    });
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+    dataLayer = [{
+      'site_name': 'accessibility-boosted',
+      'phase': 'prod',               // dev, qa, prod
+      'page_type': 'doc',            // type de page, optionnel
+      'page_title': document.title   // obligatoire pour pages dynamiques
+    }];
+  </script>
 
-<meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="4.3">
 
-<title>Boosted · Based on Bootstrap the most popular library.</title>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<link rel="canonical" href="https://boosted.orange.com/">
-
-<!-- tarteaucitron -->
-<link href="/docs/4.3/assets/css/tarteaucitronboosted.css" rel="stylesheet">
-<!-- Swiper -->
-<link href="/docs/4.3/assets/css/vendor/swiper.min.css" rel="stylesheet">
-<!-- helvetica -->
-<link href="/docs/4.3/dist/css/orangeHelvetica.css" rel="stylesheet">
-<!-- orangeIcons -->
-<link href="/docs/4.3/dist/css/orangeIcons.css" rel="stylesheet">
-<!-- Boosted core CSS -->
-  <link href="/docs/4.3/dist/css/boosted.min.css" rel="stylesheet">
-<!-- end mod --><!-- Documentation extras -->
-
-
-<link href="/docs/4.3/assets/css/docs.min.css" rel="stylesheet">
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.3/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.3/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#000000">
-
-
-<!-- Boosted mod remove social -->
-<script src="/docs/4.3/assets/js/vendor/tarteaucitron.js"></script>
-<script>
-	tarteaucitron.init({
-		"privacyUrl": "", /* Privacy policy url */
-
-		"hashtag": "#cookie-consent", /* Open the panel with this hashtag */
-		"cookieName": "cookie-consent", /* Cookie name */
-
-		"orientation": "bottom", /* Banner position (top - bottom) */
-		"showAlertSmall": false, /* Show the small banner on bottom right */
-		"cookieslist": true, /* Show the cookie list */
-
-		"adblocker": false, /* Show a Warning if an adblocker is detected */
-		"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
-		"highPrivacy": false, /* Disable auto consent */
-		"handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
-
-		"removeCredit": false, /* Remove credit link */
-		"moreInfoLink": true, /* Show more info link */
-		"useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
-
-		//"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
-
-		"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
-	});
-	tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
-  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
-dataLayer = [{
-'site_name': 'accessibility-boosted',  
-'phase': 'prod',                     // dev, qa, prod
-'page_type': 'doc',            //  type de page, optionnel
-'page_title': document.title              // obligatoire pour pages dynamiques
-}];
-</script>
-
-  </head>
-  <body>
-     <!-- Google Tag Manager (noscript) -->
- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
- height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
- <!-- End Google Tag Manager (noscript) -->
-
-    <a class="skippy sr-only sr-only-focusable" href="#content">
+<a class="skippy sr-only sr-only-focusable" href="#content">
   <span class="skippy-text">Skip to main content</span>
 </a>
 
 
-    <header class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
-  <nav class="container-fluid"><div class="navbar-brand">
-      <!-- Boosted mod change brand -->
-      <img src="/docs/4.3/dist/img/orange_logo.svg" alt=""/>
-      <!-- end mod -->
-    </div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation"><div class="navbar-brand">
+    <!-- Boosted mod change brand -->
+    <img src="/docs/4.4/dist/img/orange_logo.svg" alt="" width="50" height="50"/>
+    <!-- end mod -->
+  </div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
     <!-- Boosted mod remove analytics, blog, expo and add boostwatch and confort plus -->
     <div class="collapse navbar-collapse" id="bd-main-nav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="/docs/4.3/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="/docs/4.3/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="/docs/4.3/boostwatch/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              v4.3
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.3/">Latest (4.3.x)</a>
-              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
-              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
-              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://boosted.orange.com/v4-alpha">v4 Alpha 6.1</a>
-              <a class="dropdown-item" href="https://boosted.orange.com/v4-alpha5/">v4 Alpha 5</a>
-              <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
-              <a class="dropdown-item" href="https://boosted.orange.com/docs/3.3/">v3.3.3</a>
-            </div>
-          </li>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/4.4/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/4.4/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/4.4/boostwatch/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v4.4
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/docs/4.4/">Latest (4.4.0)</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://boosted.orange.com/v4-alpha">v4 Alpha 6.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/v4-alpha5/">v4 Alpha 5</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/3.3/">v3.3.3</a>
+          </div>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
+
+<main class="bd-masthead px-2 px-md-0 py-5" id="content" role="main">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-6 order-1 order-md-0 mx-auto col-md-6 order-md-2">
+        <div id="boosted" class="d-flex align-items-end justify-content-center text-white bg-dark my-3 mx-auto mt-sm-0 mb-sm-5 ml-md-5" role="presentation">
+          <span class="d-inline-flex mb-3 display-0">B<span class="text-primary">oo</span>sted</span>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h1 class="mb-3 display-2 font-weight-normal">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
+        <p class="h5 font-weight-normal">
+          Orange Boosted is a framework library accessible, ergonomic and Orange branded based on
+          <a href="https://github.com/twbs/bootstrap/tree/" target="_blank" rel="noopener">Bootstrap </a>.
+        </p>
+        <p class="lead mb-4">
+          <a href="/docs/4.4/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>
+          <a href="/docs/4.4/getting-started/download/" class="btn btn-secondary btn-lg ml-2" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>
+        </p>
+        <p class="text-muted mb-0">
+          Currently v4.4.0
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+<section class="container-fluid" id="card-grid">
+  <div class="card-deck mb-5">
+    <div class="card mx-2">
+      <div class="card-body">
+        <h2 class="card-title">Only in Boosted!</h2>
+        <p class="card-subtitle">We have a few custom made components to suit your extra needs, discover them on the Boostwatch page!</p>
+      </div>
+      <a class="card-body m-auto" href="/docs/4.4/about/boosted-history/" aria-hidden="true" tabindex="-1">
+        <img class="img-fluid" src="/docs/4.4/assets/img/boosted-only-components.png" alt="" width="253" height="180">
+      </a>
+      <div class="card-footer py-3 border-0">
+        <a href="/docs/4.4/about/boosted-history/" class="btn btn-info">
+          Discover
+          <span class="sr-only"> Boosted components sample</span>
+        </a>
+      </div>
+    </div>
+    <div class="card mx-2">
+      <div class="card-body">
+        <h2 class="card-title">Orange Templates</h2>
+        <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.</p>
+      </div>
+      <a class="card-body m-auto" href="/docs/4.4/examples/#orange-brand" aria-hidden="true" tabindex="-1">
+        <img class="img-fluid" src="/docs/4.4/assets/img/templates.png" alt="" width="250" height="156">
+      </a>
+      <div class="card-footer py-3 border-0">
+        <a href="/docs/4.4/examples/#orange-brand" class="btn btn-info">Browse templates</a>
+      </div>
+    </div>
+    <div class="card mx-2">
+      <div class="card-body">
+        <h2 class="card-title">Using Angular?</h2>
+        <p class="card-subtitle">We do have an Angular version, and it's right here!</p>
+      </div>
+      <a class="card-body m-auto" href="https://ng-boosted.orange.com/" aria-hidden="true" tabindex="-1">
+        <svg id="angular-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="128" height="128">
+          <path d="M108 135h34l-17-40z"/>
+          <path d="M125 30L32 63l14 123 79 44 79-44 14-123-93-33zm58 153h-22l-11-30h-50l-11 30H67l58-131 58 131z"/>
+        </svg>
+      </a>
+      <div class="card-footer py-3 border-0">
+        <a href="https://ng-boosted.orange.com/" class="btn btn-info">Get ng-boosted</a>
+      </div>
+    </div>
+    <div class="card mx-2" id="migrate-card">
+      <div class="card-body">
+        <h2 class="card-title">Migrating from Boosted 3?</h2>
+        <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.</p>
+      </div>
+      <a class="card-body m-auto" href="/docs/4.4/boosted-migration/" aria-hidden="true" tabindex="-1">
+        <img class="img-fluid" src="/docs/4.4/assets/img/boosted-migrate.svg" alt="" width="100" height="125">
+        <!-- Illustration by Pundimon / CC BY: https://thenounproject.com/pundimon/uploads/?i=1210168 -->
+      </a>
+      <div class="card-footer py-3 border-0">
+        <a href="/docs/4.4/boosted-migration/" class="btn btn-info">
+          Migrate
+          <span class="sr-only"> from version 3 to version 4</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="o-footer mt-0" role="contentinfo">
+  <h1 class="sr-only">Site map & informations</h1>
+  <div class="o-footer-body py-3 px-0">
+    <div class="container-fluid">
+      <p class="m-0">This documentation is an adaptation made by Orange</p>
+      <p class="m-0">Original version designed and built with all the love in the world by
+        <a href="https://twitter.com/mdo" target="_blank" rel="noopener">@mdo</a> and
+        <a href="https://twitter.com/fat" target="_blank" rel="noopener">@fat</a>. Maintained by the
+        <a href="https://github.com/orgs/twbs/people">core team</a> with the help of
+        <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.
+      </p>
+      <p class="m-0">Orange modified code licensed
+        <a rel="license noopener" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed
+        <a rel="license noopener" href="https://github.com/twbs/bootstrap/blob//LICENSE" target="_blank">MIT</a>, docs
+        <a rel="license noopener" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+      </p>
+    </div>
+  </div>
+  <div class="o-footer-bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            <span class="nav-link">Currently v4.4.0</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/docs/4.4/examples/">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/twbs/bootstrap/tree//">Original Bootstrap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://boosted.netlify.com">Pre-release on Netlify</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-0" href="https://www.netlify.com">
+              <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
             </a>
           </li>
         </ul>
       </div>
-    </nav>
-</header>
-
-
-    <main class="bd-masthead" id="content" role="main">  
-  <div class="container-fluid">    
-    <div class="row align-items-center">      
-      <div class="col-md-6">        
-        <span class="bd-boosted-icon">Orange B<span class="text-primary">oo</span>sted with Bootstrap</span>        
-        <p class="lead">Orange Boosted is a framework library accessible, ergonomic and Orange branded based on           
-          <a href="https://github.com/twbs/bootstrap/tree/v4.3.1" target="_blank" rel="noopener">Bootstrap v4.3.1</a>.
-        </p>        
-        <p class="lead">          
-          <a href="/docs/4.3/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>          
-          <a href="/docs/4.3/getting-started/download/" class="btn btn-secondary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>        
-        </p>        
-        <p class="version">Currently v4.3.1
-        </p>      
-      </div>      
-      <div class="col-md-6">        
-        <img src="/docs/4.3/assets/img/boosted_logo_3D.png" alt="">      
-      </div>    
-    </div>  
-  </div>
-</main>
-<section class="container-fluid" id="card-grid">    
-  <div class="row">        
-    <div class="col-md-6 col-lg-3">            
-      <div class="card">                
-        <div class="card-body">                    
-          <h2 class="card-title">Only in Boosted !</h2>                    
-          <p class="card-subtitle">We have a few custom made components to suit your extra needs, discover them on the Boostwatch page !
-          </p>                    
-          <a class="picto-link" href="/docs/4.3/about/boosted-history/">                      
-            <img class="img-fluid mt-3 mx-auto" src="/docs/4.3/assets/img/boosted-only-components.png" alt="Boosted component samples">                    </a>                
-        </div>                
-        <div class="card-footer">                    
-          <a href="/docs/4.3/about/boosted-history/" class="btn btn-info">Discover
-            <span class="sr-only"> go to boostwatch page
-            </span></a>                
-        </div>            
-      </div>        
-    </div>        
-    <div class="col-md-6 col-lg-3">            
-      <div class="card">                
-        <div class="card-body">                    
-          <h2 class="card-title">Orange Templates</h2>                    
-          <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.
-          </p>                    
-          <a class="picto-link" href="/docs/4.3/examples/#orange-brand">                      
-            <img class="img-fluid mt-3 mx-auto" src="/docs/4.3/assets/img/templates.png" alt="Boosted Themes">                    </a>                
-        </div>                
-        <div class="card-footer">                  
-          <a href="/docs/4.3/examples/#orange-brand" class="btn btn-info">Browse templates</a>                
-        </div>            
-      </div>        
-    </div>        
-    <div class="col-md-6 col-lg-3">            
-      <div class="card">                
-        <div class="card-body">                    
-          <h2 class="card-title">Using Angular ?</h2>                    
-          <p class="card-subtitle">Yes, we do have an Angular version, and it's right here !
-          </p>                    
-          <a class="picto-link" href="https://ng-boosted.orange.com/" title="Get ng-boosted">                      
-            <svg class="mt-3" version="1.1" id="angular-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"                       viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">                          
-              <g>                              
-                <polygon points="108,135.4 125,135.4 125,135.4 125,135.4 142,135.4 125,94.5"/>                              
-                <path d="M125,30L125,30L125,30L31.9,63.2l14.2,123.1L125,230l0,0l0,0l78.9-43.7l14.2-123.1L125,30z M183.1,182.6h-21.7h0 l-11.7-29.2H125h0h0h-24.7l-11.7,29.2h0H66.9h0L125,52.1l0,0l0,0l0,0l0,0L183.1,182.6L183.1,182.6z"/>                          
-              </g>                      
-            </svg>                    </a>                
-        </div>                
-        <div class="card-footer">                    
-          <a href="https://ng-boosted.orange.com/" class="btn btn-info">Get ng-boosted</a>                
-        </div>            
-      </div>        
-    </div>        
-    <div class="col-md-6 col-lg-3">            
-      <div class="card" id="migrate-card">                
-        <div class="card-body">                    
-          <h2 class="card-title">Migrating from Boosted 3 to v4 ?</h2>                    
-          <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.
-          </p>                    
-          <a class="picto-link" href="/docs/4.3/boosted-migration/">                        
-            <img class="img-fluid mt-3 mx-auto" src="/docs/4.3/assets/img/boosted-migrate.png" alt="Migrate boosted">                        
-            <!-- Illustration by Pundimon / CC BY -->
-          </a>                
-        </div>                
-        <div class="card-footer">                  
-          <a href="/docs/4.3/boosted-migration/" class="btn btn-info">Migrate
-            <span class="sr-only"> from old version
-            </span></a>                
-        </div>            
-      </div>        
-    </div>    
-  </div>
-</section>
-
-    <footer class="o-footer" role="contentinfo">  
-  <h1 class="sr-only">footer - site map & informations</h1>  
-  <div class="o-footer-body">      
-    <div class="container-fluid">        
-      <p>This documentation is an adaptation made by Orange
-      </p>        
-      <p>Original version designed and built with all the love in the world by 
-        <a href="https://twitter.com/mdo" target="_blank" rel="noopener">@mdo</a> and 
-        <a href="https://twitter.com/fat" target="_blank" rel="noopener">@fat</a>. Maintained by the 
-        <a href="https://github.com/orgs/twbs/people">core team</a> with the help of 
-        <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.
-      </p>        
-      <p>Orange modified code licensed           
-        <a rel="license noopener" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, Original code licensed           
-        <a rel="license noopener" href="https://github.com/twbs/bootstrap/blob/v4.3.1/LICENSE" target="_blank">MIT</a>, docs 
-        <a rel="license noopener" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.         
-      </p>      
-    </div>    
-  </div>    
-  <div class="o-footer-bottom">      
-    <div class="container-fluid">        
-      <ul class="nav">          
-        <li class="nav-item">
-          <span class="nav-link">Currently v4.3.1
-          </span>
-        </li>          
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">GitHub</a>
-        </li>          
-        <li class="nav-item">
-          <a class="nav-link" href="/docs/4.3/examples/">Examples</a>
-        </li>          
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/twbs/bootstrap/tree/v4.3.1/">Original Bootstrap</a>
-        </li>          
-        <li class="nav-item">
-          <a class="nav-link" href="https://boosted.netlify.com">Pre-release on Netlify</a>
-        </li>        
-      </ul>      
-    </div>  
+    </div>
   </div>
 </footer>
-    <!-- boosted mod -->
-<a href="#" class="o-scroll-up" title="back to top"><span class="o-scroll-up-text d-none d-sm-inline-block">Back to top</span><span class="o-scroll-up-icon" aria-hidden="true"></span></a>
-<!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/docs/4.3/assets/js/vendor/popper.min.js"></script><script src="/docs/4.3/dist/js/boosted.min.js" crossorigin="anonymous"></script><!-- boosted mod -->
+<!-- Boosted mod -->
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+<!-- end mod -->
+<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" integrity="sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.4/assets/js/vendor/popper.min.js"></script><script src="/docs/4.4/dist/js/boosted.min.js" crossorigin="anonymous"></script><!-- Boosted mod -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
-<script>window.jQuery.tablesorter || document.write('<script src="/docs/4.3/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-<!-- end mod --><script src="/docs/4.3/assets/js/docs.min.js"></script><script>
+<script>window.jQuery.tablesorter || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
+<!-- end mod --><script src="/docs/4.4/assets/js/docs.min.js"></script><script>
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
     $('.o-nav-local').prioritynav();
     $('#docs-navbar').navbar({sticky: true});
-  })
+  });
 </script>
 
-  </body>
+</body>
 </html>

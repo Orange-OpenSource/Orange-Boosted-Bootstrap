@@ -1,0 +1,21 @@
+.svg-settings::after {
+  width: 1rem;
+  height: 1rem;
+  background-size: 1rem;
+}
+
+.skippy {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+
+.skippy:hover {
+  color: #fff;
+}
+
+.skippy-text {
+  padding: .5em;
+}

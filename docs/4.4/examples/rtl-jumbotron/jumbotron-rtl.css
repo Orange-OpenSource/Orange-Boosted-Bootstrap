@@ -1,0 +1,6 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1qdW1ib3Ryb24iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsMEVBQTBFO0FBQzFFO0VBQ0Usb0JBQW9CO0NBQ3JCIiwiZmlsZSI6InJ0bC1qdW1ib3Ryb24iLCJzb3VyY2VzQ29udGVudCI6WyIvKiBNb3ZlIGRvd24gY29udGVudCBiZWNhdXNlIHdlIGhhdmUgYSBmaXhlZCBuYXZiYXIgdGhhdCBpcyAzLjVyZW0gdGFsbCAqL1xuYm9keSB7XG4gIHBhZGRpbmctdG9wOiAzLjVyZW07XG59XG4iXX0= */
