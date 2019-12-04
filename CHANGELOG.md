@@ -31,8 +31,11 @@ Alongwith some refactors, things could have move or be removed, but this shall b
     * `o-nav-light` → `nav-tabs-light`
 * **classes dropped**: 
     * `.btn-outline-*` and `.btn-xlg`
-    * `font-weight-*` and `.text-uppercase`
-* **Browser support updated**, dropping IE10.
+    * `font-weight-*` 
+    * `.text-uppercase`
+    * `.text-justify`
+    * `.pagination-lg` and `.pagination-sm`
+* **Browser support updated**, mainly dropping IE10.
 
 There might be more, but I did my best to log everything above.
 
