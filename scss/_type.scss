@@ -107,31 +107,6 @@ h2, .h2,
     letter-spacing: $h5-spacing;
   }
 }
-// Boosted mod
-.display-5 {
-  @include font-size($display5-size);
-  font-weight: $display5-weight;
-  line-height: $display5-line-height;
-}
-
-.display-6 {
-  @include font-size($display6-size);
-  font-weight: $display6-weight;
-  line-height: $display-line-height;
-}
-
-.display-7 {
-  @include font-size($display7-size);
-  font-weight: $display7-weight;
-  line-height: $display-line-height;
-}
-
-.display-8 {
-  @include font-size($display8-size);
-  font-weight: $display8-weight;
-  line-height: $display-line-height;
-}
-// End Boosted mod
 
 @include media-breakpoint-up(lg) {
   .display-1 {
