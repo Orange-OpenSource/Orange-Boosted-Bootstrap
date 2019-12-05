@@ -2838,3 +2838,19 @@
     @include svg-buy(theme-color("primary"));
   }
 }
+
+.svg-mail {
+  @include svg-mail($white);
+
+  &:hover,
+  &:focus,
+  &:active,
+  :hover > &,
+  :focus > & {
+    @include svg-mail(theme-color("primary"));
+  }
+}
+
+.svg-person {
+  @include svg-person();
+}
