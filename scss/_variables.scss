@@ -816,7 +816,8 @@ $navbar-expanded-minimized-padding-y: $navbar-padding-y !default; // Boosted mod
 // $navbar-height:                     6.25rem !default;
 $navbar-brand-logo-height:             map-get($spacers, 4) !default;
 $navbar-brand-logo-expanded-height:    3.125rem !default;
-$navbar-supra-height:                  2.5rem !default;
+$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
+$navbar-supra-icon-size:               1.5625rem !default;
 // end mod
 
 //$navbar-nav-link-padding-x:         0 !default;
