@@ -147,31 +147,31 @@
       </a>
     </h3>
   </div>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container flex-sm-wrap flex-md-nowrap">
-      <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#">
         <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
       </a>
       <ul class="navbar-nav d-lg-none flex-row mb-md-0 mb-auto ml-auto">
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+        <li class="nav-item">
+          <button type="button" class="nav-link btn btn-link icon svg-search"
                   data-toggle="collapse" data-target="#search-1"
                   aria-expanded="false" aria-controls="search-1">
             <span class="sr-only">Search bar</span>
           </button>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-mail">
             <span class="sr-only">Email</span>
           </a>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-buy">
             <span class="sr-only">Basket</span>
           </a>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-avatar">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-avatar">
             <span class="sr-only">My account</span>
           </a>
         </li>
@@ -179,7 +179,7 @@
       <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar3" aria-controls="collapsing-navbar3" aria-expanded="false" aria-label="Toggle navigation">
         <span aria-hidden="true" class="navbar-toggler-icon"></span>
       </button>
-      <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar3">
+      <div class="mega-menu navbar-collapse collapse" id="collapsing-navbar3">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
           <li class="nav-item">
@@ -268,26 +268,26 @@
           <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
         </ul>
       </div>
-      <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+      <ul class="navbar-nav d-none d-lg-flex">
+        <li class="nav-item">
+          <button type="button" class="nav-link btn btn-link icon svg-search"
                   data-toggle="collapse" data-target="#search-1"
                   aria-expanded="false" aria-controls="search-1">
             <span class="sr-only">Search bar</span>
           </button>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-mail">
             <span class="sr-only">Email</span>
           </a>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-buy">
             <span class="sr-only">Basket</span>
           </a>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-avatar">
             <span class="sr-only">My account</span>
           </a>
         </li>
@@ -296,11 +296,8 @@
   </nav>
   <div class="collapse bg-dark" id="search-1">
     <form class="container d-flex py-3" role="search">
-      <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-      <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-        <span class="icon svg-search" aria-hidden="true"></span>
-        <span class="sr-only">Search</span>
-      </button>
+      <input type="search" class="form-control form-control-lg" placeholder="Search" aria-label="Search">
+      <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
     </form>
   </div>
 
@@ -343,9 +340,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Accessibility
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accessibility</a>
           <div class="dropdown-menu" id="a11y-dropdown">
             <form class="p-2">
               <div class="form-group row mb-0">
@@ -371,17 +366,17 @@
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <div class="container flex-nowrap">
-      <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#">
         <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
       </a>
       <button class="navbar-toggler d-flex align-items-center d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar13" aria-controls="collapsing-navbar13" aria-expanded="false" aria-label="Toggle navigation">
         <span aria-hidden="true" class="navbar-toggler-icon"></span>
         <span aria-hidden="true" class="font-weight-bold pl-1">Menu</span>
       </button>
-      <div class="mega-menu navbar-collapse justify-content-between collapse bg-dark" id="collapsing-navbar13">
-        <ul class="navbar-nav container">
+      <div class="mega-menu navbar-collapse collapse bg-dark" id="collapsing-navbar13">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
           <li class="nav-item">
             <a class="nav-link collapsed" href="#mega-menu13-collapse" data-toggle="collapse">Shop</a>
@@ -469,26 +464,26 @@
           <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
         </ul>
       </div>
-      <ul class="navbar-nav flex-row mb-md-0 mb-auto ml-auto">
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button type="button" class="nav-link btn btn-link icon svg-search"
                   data-toggle="collapse" data-target="#search-2"
                   aria-expanded="false" aria-controls="search-2">
             <span class="sr-only">Search bar</span>
           </button>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-mail">
             <span class="sr-only">Email</span>
           </a>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-buy">
             <span class="sr-only">Basket</span>
           </a>
         </li>
-        <li class="nav-item border-0 px-1 px-sm-0">
-          <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+        <li class="nav-item">
+          <a href="#" class="nav-link icon svg-avatar">
             <span class="sr-only">My account</span>
           </a>
         </li>
@@ -497,11 +492,8 @@
   </nav>
   <div class="collapse bg-dark" id="search-2">
     <form class="container d-flex py-3" role="search">
-      <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-      <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-        <span class="icon svg-search" aria-hidden="true"></span>
-        <span class="sr-only">Search</span>
-      </button>
+      <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+      <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
     </form>
   </div>
 
@@ -515,33 +507,33 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
         </a>
         <ul class="navbar-nav d-lg-none flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-3"
                     aria-expanded="false" aria-controls="search-3">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-mail">
               <span class="sr-only">Email</span>
               <sup class="badge badge-lg badge-info rounded-pill">25</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-buy">
               <span class="sr-only">Basket</span>
               <sup class="badge badge-lg badge-info rounded-pill">5</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-person">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-person">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -549,7 +541,7 @@
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar10" aria-controls="collapsing-navbar10" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
-        <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar10">
+        <div class="mega-menu navbar-collapse collapse" id="collapsing-navbar10">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item">
@@ -646,27 +638,27 @@
           </ul>
         </div>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-3"
                     aria-expanded="false" aria-controls="search-3">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-mail">
                 <span class="sr-only">Email</span>
                 <sup class="badge badge-lg badge-info rounded-pill">25</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-buy">
                 <span class="sr-only">Basket</span>
                 <sup class="badge badge-lg badge-info rounded-pill">5</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-person">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-person">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -675,11 +667,8 @@
     </nav>
     <div class="collapse bg-dark" id="search-3">
       <form class="container d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-          <span class="icon svg-search" aria-hidden="true"></span>
-          <span class="sr-only">Search</span>
-        </button>
+        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
       </form>
     </div>
   </header>
@@ -700,27 +689,25 @@
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
         </a>
         <ul class="navbar-nav d-lg-none flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-4"
                     aria-expanded="false" aria-controls="search-4">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-mail">
               <span class="sr-only">Email</span>
-              <sup class="badge badge-lg badge-info rounded-pill">25</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-buy">
               <span class="sr-only">Basket</span>
-              <sup class="badge badge-lg badge-info rounded-pill">5</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-person">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-person">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -728,7 +715,7 @@
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar7" aria-controls="collapsing-navbar7" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
-        <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar7">
+        <div class="mega-menu navbar-collapse collapse" id="collapsing-navbar7">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item">
@@ -806,28 +793,26 @@
             <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+        <ul class="navbar-nav d-none d-lg-flex">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-4"
                     aria-expanded="false" aria-controls="search-4">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-mail">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-mail">
                 <span class="sr-only">Email</span>
-                <sup class="badge badge-lg badge-info rounded-pill">25</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-buy">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-buy">
                 <span class="sr-only">Basket</span>
-                <sup class="badge badge-lg badge-info rounded-pill">5</sup>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-person">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-person">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -836,11 +821,8 @@
     </nav>
     <div class="collapse bg-dark" id="search-4">
       <form class="container d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-          <span class="icon svg-search" aria-hidden="true"></span>
-          <span class="sr-only">Search</span>
-        </button>
+        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
       </form>
     </div>
   </header>
@@ -855,15 +837,15 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
         </a>
         <!-- @todo Dark form -->
-        <form class="form-inline navbar-nav d-none d-md-flex d-lg-none flex-row mb-md-0 mb-auto ml-auto" role="search">
-          <input type="search" class="form-control bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-          <button class="btn btn-inverse btn-dark border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
+        <form class="form-inline d-none d-md-flex d-lg-none" role="search">
+          <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+          <button class="btn btn-inverse btn-dark" type="submit">
             <span class="icon svg-search" aria-hidden="true"></span>
             <span class="sr-only">Search</span>
           </button>
@@ -871,7 +853,7 @@
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar4" aria-controls="collapsing-navbar4" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
-        <div class="mega-menu navbar-collapse justify-content-between collapse" id="collapsing-navbar4">
+        <div class="mega-menu navbar-collapse collapse" id="collapsing-navbar4">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item">
@@ -981,9 +963,9 @@
           </ul>
         </div>
         <!-- @todo Dark form -->
-        <form class="form-inline navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto" role="search">
-          <input type="search" class="form-control bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-          <button class="btn btn-inverse btn-dark border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
+        <form class="form-inline d-none d-lg-flex" role="search">
+          <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+          <button class="btn btn-inverse btn-secondary btn-icon" type="submit">
             <span class="icon svg-search" aria-hidden="true"></span>
             <span class="sr-only">Search</span>
           </button>
@@ -1002,22 +984,22 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
+          <span class="display-4">Design</span>
         </a>
-        <a href="#" class="navbar-title  display-4 text-white mt-2 mt-md-auto ml-2 pl-0 pl-md-1 mr-auto">Design</a>
         <ul class="navbar-nav d-lg-none flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-6"
                     aria-expanded="false" aria-controls="search-6">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1034,15 +1016,15 @@
           </ul>
         </div>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-6"
                     aria-expanded="false" aria-controls="search-6">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1051,11 +1033,8 @@
     </nav>
     <div class="collapse bg-dark" id="search-6">
       <form class="container d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-          <span class="icon svg-search" aria-hidden="true"></span>
-          <span class="sr-only">Search</span>
-        </button>
+        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
       </form>
     </div>
   </header>
@@ -1070,22 +1049,22 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-      <div class="container flex-sm-wrap justify-content-start">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
+      <div class="container flex-sm-wrap">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
+          <span class="display-4">Design</span>
         </a>
-        <a href="#" class="navbar-title display-4 text-white mt-2 mt-md-auto ml-2 pl-0 pl-md-1">Design</a>
-        <ul class="navbar-nav flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-7"
                     aria-expanded="false" aria-controls="search-7">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1094,12 +1073,15 @@
           data-toggle="collapse" data-target="#collapsing-navbar5" aria-controls="collapsing-navbar5" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
-        <hr class="w-100 mb-2 d-none d-md-block border-700"/>
-        <div class="navbar-collapse justify-content-between collapse"
-          id="collapsing-navbar5">
-          <ul class="navbar-nav flex-sm-column flex-md-row mt-1">
+      </div>
+    </nav>
+    <div class="navbar navbar-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
+      <hr class="w-100 m-0 d-none d-md-block border-700"/>
+      <div class="container border-bottom">
+        <div class="navbar-collapse collapse" id="collapsing-navbar5">
+          <ul class="navbar-nav flex-sm-column flex-md-row">
             <li class="nav-item">
-              <a class="nav-link ml-0" href="#">Guidelines</a>
+              <a class="nav-link pl-0" href="#">Guidelines</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Libraries</a>
@@ -1119,14 +1101,11 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
     <div class="collapse bg-dark" id="search-7">
       <form class="container d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-          <span class="icon svg-search" aria-hidden="true"></span>
-          <span class="sr-only">Search</span>
-        </button>
+        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
       </form>
     </div>
   </header>
@@ -1141,22 +1120,22 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
+          <span class="h3" id="orange-labs">Orange Labs<br>Prime Zone</span>
         </a>
-        <a href="#" class="navbar-title display-5 text-white mt-md-auto ml-2 pl-0 pl-md-1 mr-auto">Orange Labs<br>Prime Zone</a>
-        <ul class="navbar-nav d-lg-none flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+        <ul class="navbar-nav d-lg-none">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-8"
                     aria-expanded="false" aria-controls="search-8">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1164,7 +1143,7 @@
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3" type="button" data-toggle="collapse" data-target="#collapsing-navbar8" aria-controls="collapsing-navbar8" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar8">
+        <div class="navbar-collapse collapse" id="collapsing-navbar8">
           <ul class="navbar-nav flex-sm-column flex-md-row">
             <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -1173,16 +1152,16 @@
             <li class="nav-item"><a class="nav-link" href="#">News</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+        <ul class="navbar-nav d-none d-lg-flex">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-8"
                     aria-expanded="false" aria-controls="search-8">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1191,11 +1170,8 @@
     </nav>
     <div class="collapse bg-dark" id="search-8">
       <form class="container d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-          <span class="icon svg-search" aria-hidden="true"></span>
-          <span class="sr-only">Search</span>
-        </button>
+        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
       </form>
     </div>
   </header>
@@ -1210,22 +1186,22 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap flex-md-nowrap">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
+          <span class="h6 ml-2">Business<br>Services</span>
         </a>
-        <a href="#" class="navbar-title display-8 display-obs text-white mt-md-auto mr-auto">Business<br>Services</a>
         <ul class="navbar-nav d-lg-none flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-9"
                     aria-expanded="false" aria-controls="search-9">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1244,15 +1220,15 @@
           </ul>
         </div>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <button type="button" class="nav-link btn btn-link mx-sm-3 mx-2 p-0 icon svg-search"
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link icon svg-search"
                     data-toggle="collapse" data-target="#search-9"
                     aria-expanded="false" aria-controls="search-9">
               <span class="sr-only">Search bar</span>
             </button>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1261,11 +1237,8 @@
     </nav>
     <div class="collapse bg-dark" id="search-9">
       <form class="container d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark border-right-0 border-700" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-dark btn-xlg border-left-0 border-700 align-self-stretch d-flex pl-0 pr-4" type="submit">
-          <span class="icon svg-search" aria-hidden="true"></span>
-          <span class="sr-only">Search</span>
-        </button>
+        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
+        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
       </form>
     </div>
   </header>
@@ -1280,24 +1253,24 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap justify-content-start">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
+          <span class="h1">Orange Business Services <br class="d-md-none"/>Flexible Engine</span>
         </a>
-        <a href="#" class="navbar-title display-5 text-white mt-md-auto ml-md-2 pl-0 pl-md-1">Orange Business Services <br class="d-md-none"/>Flexible Engine</a>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar11" aria-controls="collapsing-navbar11" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-search">
               <span class="sr-only">Search bar</span>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>
@@ -1349,24 +1322,24 @@
     </h3>
   </div>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" role="navigation">
       <div class="container flex-sm-wrap justify-content-start">
-        <a class="navbar-brand my-2 py-1 my-md-0 py-sm-0" href="#">
+        <a class="navbar-brand" href="#">
           <img src="../../dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
+          <span class="h2">Orange Business Services<br>Flexible Engine</span>
         </a>
-        <a href="#" class="navbar-title display-5 text-white mt-md-auto ml-md-2 pl-0 pl-md-1">Orange Business Services<br>Flexible Engine</a>
         <button class="navbar-toggler d-sm-block d-md-none mb-md-0 mt-md-auto ml-auto ml-md-3 collapsed" type="button"
           data-toggle="collapse" data-target="#collapsing-navbar12" aria-controls="collapsing-navbar12" aria-expanded="false" aria-label="Toggle navigation">
           <span aria-hidden="true" class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav d-none d-lg-flex flex-row mb-md-0 mb-auto ml-auto">
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link mx-sm-3 mx-2 p-0 icon svg-search">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-search">
               <span class="sr-only">Search bar</span>
             </a>
           </li>
-          <li class="nav-item border-0 px-1 px-sm-0">
-            <a href="#" class="nav-link ml-sm-3 ml-2 p-0 icon svg-avatar">
+          <li class="nav-item">
+            <a href="#" class="nav-link icon svg-avatar">
               <span class="sr-only">My account</span>
             </a>
           </li>

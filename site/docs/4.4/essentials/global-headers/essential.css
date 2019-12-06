@@ -1,3 +1,13 @@
+.btn.svg-arrow-previous {
+  transition: none;
+}
+
+.btn.svg-arrow-previous::after {
+  width: .5625rem;
+  height: .875rem;
+  margin-right: .375rem;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -5,6 +15,10 @@
 
 [id="a11y-dropdown"] {
   min-width: 14rem;
+}
+
+[id="orange-labs"] {
+  line-height: 1;
 }
 
 @media (max-width: 479.98px) {
