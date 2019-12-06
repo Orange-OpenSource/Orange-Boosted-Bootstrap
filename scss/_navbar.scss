@@ -59,7 +59,8 @@
 
 .navbar-brand {
   position: relative; // Boosted mod
-  display: inline-block;
+  display: inline-flex; // Boosted mod
+  align-items: flex-end; // Boosted mod
   align-self: flex-end; // Boosted mod
   padding: 0; // Boosted mod
   margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem}; // Boosted mod
@@ -80,8 +81,9 @@
     margin: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
   }
 
-  .h1 {
-    line-height: inherit;
+  .h1,
+  [class*="display-"] {
+    line-height: $navbar-expanded-padding-y;
   }
 
   &:focus {
@@ -100,9 +102,12 @@
   }
 
   img {
-    flex-wrap: wrap;
     width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
+
+    + * {
+      margin: 0 $spacer 0 $navbar-expanded-padding-y;
+    }
   }
   // end mod
 }
@@ -120,8 +125,9 @@
   margin-bottom: 0;
   list-style: none;
 
+  // Boosted mod
   .nav-link {
-    // Boosted mod
+    position: relative;
     padding: $navbar-padding-y map-get($spacers, 2);
     outline-offset: $spacer;
     @include transition($transition-focus);
@@ -130,10 +136,8 @@
       display: none;
     }
 
-    &[class*="icon-"] {
-      padding: .78125rem map-get($spacers, 2);
-      margin-top: 0;
-      font-weight: $font-weight-normal;
+    &.icon {
+      padding: map-get($spacers, 2) $spacer;
     }
 
     &[class*="svg-"]::after {
@@ -145,9 +149,7 @@
       float: right;
       margin-right: 1rem;
       // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
-      font-family: icon-orange;
-      font-size: $font-size-base;
-      font-weight: $font-weight-normal;
+      font: $font-weight-normal $font-size-base icon-orange;
       color: $white;
       content: "\e93e";
     }
@@ -155,8 +157,23 @@
     &:focus {
       outline-offset: -#{$border-width};
     }
-    // end mod
   }
+
+  .btn-link {
+    border: 0;
+  }
+
+  &.ml-auto .nav-item:last-child .nav-link,
+  &:last-child .nav-item:last-child .nav-link {
+    padding-right: 0;
+  }
+
+  .badge {
+    position: absolute;
+    top: map-get($spacers, 2);
+    right: map-get($spacers, 2);
+  }
+  // end mod
 
   .dropdown-menu {
     position: static;
@@ -173,25 +190,30 @@
 
   .dropdown {
     padding: 0;
+  }
 
-    .dropdown-toggle,
-    .dropdown-item {
-      padding: $navbar-padding-y 0 $navbar-padding-y map-get($spacers, 2);
+  .dropdown-toggle {
+    padding: $navbar-padding-y 0 $navbar-padding-y map-get($spacers, 2);
+    margin-right: map-get($spacers, 2);
+
+    &::after {
+      margin-left: map-get($spacers, 1);
     }
+  }
 
-    &.show .dropdown-toggle::after {
-      transform: rotateZ(180deg);
-    }
+  .show .dropdown-toggle::after {
+    transform: rotateZ(180deg);
+  }
 
-    .dropdown-item {
-      color: $white;
-      white-space: normal;
-      background-color: $black;
-      border-top: 1px solid $gray-900;
+  .dropdown-item {
+    padding: $navbar-padding-y 0 $navbar-padding-y map-get($spacers, 2);
+    color: $white;
+    white-space: normal;
+    background-color: $black;
+    border-top: 1px solid $gray-900;
 
-      @include focus() {
-        color: $primary;
-      }
+    @include focus() {
+      color: $primary;
     }
   }
   // end mod
@@ -314,10 +336,10 @@
 
         &.minimized {
           padding-top: $navbar-expanded-minimized-padding-y;
-          padding-bottom: $spacer / 10;
+          padding-bottom: .1875rem;
 
           .navbar-brand {
-            margin-bottom: #{map-get($spacers, 2) + .2rem};
+            margin-bottom: .8125rem;
 
             img {
               width: $navbar-brand-logo-height;
@@ -327,6 +349,10 @@
 
           .nav-link {
             padding: map-get($spacers, 2);
+
+            &[class*="svg-"] {
+              padding: 0 $spacer;
+            }
           }
         }
         // end mod
