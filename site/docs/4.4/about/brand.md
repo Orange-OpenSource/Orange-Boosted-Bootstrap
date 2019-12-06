@@ -49,7 +49,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 
 #### Minimum sizes
 
-<table class="mb-5">
+<table class="table mb-5">
   <thead>
     <tr>
       <td colspan="2" class="border-0"></td>
