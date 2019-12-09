@@ -82,8 +82,8 @@
   }
 
   // stylelint-disable selector-list-comma-newline-after
+  h1,
   [class*="display-"],
-  h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: $navbar-expanded-padding-y;
   }
