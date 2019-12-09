@@ -60,7 +60,7 @@
 .navbar-brand {
   position: relative; // Boosted mod
   display: inline-flex; // Boosted mod
-  align-items: flex-end; // Boosted mod
+  align-items: baseline; // Boosted mod
   align-self: flex-end; // Boosted mod
   padding: 0; // Boosted mod
   margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem}; // Boosted mod
@@ -81,10 +81,13 @@
     margin: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
   }
 
-  .h1,
-  [class*="display-"] {
+  // stylelint-disable selector-list-comma-newline-after
+  [class*="display-"],
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: $navbar-expanded-padding-y;
   }
+  // stylelint-enable selector-list-comma-newline-after
 
   &:focus {
     outline: $border-width solid $white;
@@ -163,7 +166,6 @@
     border: 0;
   }
 
-  &.ml-auto .nav-item:last-child .nav-link,
   &:last-child .nav-item:last-child .nav-link {
     padding-right: 0;
   }
