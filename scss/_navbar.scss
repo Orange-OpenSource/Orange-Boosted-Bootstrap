@@ -63,7 +63,7 @@
   align-items: baseline; // Boosted mod
   align-self: flex-end; // Boosted mod
   padding: 0; // Boosted mod
-  margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem}; // Boosted mod
+  margin: map-get($spacers, 1); // Boosted mod
   @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // Boosted mod
   line-height: .75; // Boosted mod
@@ -71,6 +71,12 @@
   white-space: nowrap;
   outline-offset: $spacer; // Boosted mod
   @include transition($transition-focus); // Boosted mod
+
+  // Boosted mod
+  @include media-breakpoint-up(sm) {
+    margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem};
+  }
+  // end mod
 
   @include hover-focus() {
     text-decoration: none;
@@ -109,7 +115,11 @@
     height: $navbar-brand-logo-height;
 
     + * {
-      margin: 0 $spacer 0 $navbar-expanded-padding-y;
+      margin: 0 $spacer 0 .9375rem;
+
+      @include media-breakpoint-up(sm) {
+        margin-left: $navbar-expanded-padding-y;
+      }
     }
   }
   // end mod
@@ -131,22 +141,35 @@
   // Boosted mod
   .nav-link {
     position: relative;
-    padding: $navbar-padding-y map-get($spacers, 2);
+    padding: map-get($spacers, 2);
     outline-offset: $spacer;
     @include transition($transition-focus);
+
+    @include media-breakpoint-up(sm) {
+      padding: $navbar-padding-y map-get($spacers, 2);
+    }
 
     &.active::before {
       display: none;
     }
 
     &.icon {
-      padding: $navbar-padding-y $spacer;
+      padding: map-get($spacers, 2) .9375rem;
       border-top: $border-width solid transparent;
+
+      @include media-breakpoint-up(sm) {
+        padding: $navbar-padding-y $spacer;
+      }
     }
 
     &[class*="svg-"]::after {
-      width: $navbar-brand-logo-height;
-      height: $navbar-brand-logo-height;
+      width: $navbar-supra-icon-size;
+      height: $navbar-supra-icon-size;
+
+      @include media-breakpoint-up(sm) {
+        width: $navbar-brand-logo-height;
+        height: $navbar-brand-logo-height;
+      }
     }
 
     &[role="menuitem"]::before {
@@ -174,8 +197,13 @@
 
   .badge {
     position: absolute;
-    top: map-get($spacers, 2);
-    right: map-get($spacers, 2);
+    top: map-get($spacers, 1);
+    right: 0;
+
+    @include media-breakpoint-up(sm) {
+      top: map-get($spacers, 2);
+      right: map-get($spacers, 2);
+    }
   }
   // end mod
 
@@ -259,12 +287,18 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  margin: map-get($spacers, 1) 0 0; // Boosted mod
+  margin: map-get($spacers, 1) / 2 0 map-get($spacers, 1) / 2 .3125rem;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
+
+  // Boosted mod
+  @include media-breakpoint-up(sm) {
+    margin: map-get($spacers, 1) 0 0;
+  }
+  // end mod
 
   @include hover-focus() {
     color: $navbar-dark-color; // Boosted mod
@@ -277,6 +311,7 @@
     }
     // end mod
   }
+
   // Boosted mod
   &:active {
     background-color: $orange-2;
@@ -301,11 +336,18 @@
 // or image file as needed.
 .navbar-toggler-icon {
   display: inline-block;
-  width: $navbar-toggler-icon-size; // Boosted mod create a var for the toggler size
-  height: $navbar-toggler-icon-size; // Boosted mod create a var for the toggler size
+  width: $navbar-supra-icon-size; // Boosted mod: create a var for the toggler size
+  height: $navbar-supra-icon-size; // Boosted mod: create a var for the toggler size
   vertical-align: middle;
   content: "";
   background: no-repeat 50% 50% / 100% 100%;
+
+  // Boosted mod
+  @include media-breakpoint-up(sm) {
+    width: $navbar-toggler-icon-size;
+    height: $navbar-toggler-icon-size;
+  }
+  // end mod
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
