@@ -140,7 +140,8 @@
     }
 
     &.icon {
-      padding: map-get($spacers, 2) $spacer;
+      padding: $navbar-padding-y $spacer;
+      border-top: $border-width solid transparent;
     }
 
     &[class*="svg-"]::after {
@@ -162,7 +163,8 @@
     }
   }
 
-  .btn-link {
+  .btn-link,
+  &.flex-row .nav-item {
     border: 0;
   }
 
@@ -257,7 +259,7 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  margin: map-get($spacers, 1) 0; // Boosted mod
+  margin: map-get($spacers, 1) 0 0; // Boosted mod
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
@@ -265,10 +267,11 @@
   @include border-radius($navbar-toggler-border-radius);
 
   @include hover-focus() {
+    color: $navbar-dark-color; // Boosted mod
     text-decoration: none;
-    // Boosted mod
-    background-color: $white;
+    background-color: $navbar-light-color; // Boosted mod
 
+    // Boosted mod
     .navbar-toggler-icon {
       background-image: escape-svg($navbar-dark-toggler-icon-hover-bg);
     }
@@ -276,7 +279,7 @@
   }
   // Boosted mod
   &:active {
-    background-color: theme-color("primary");
+    background-color: $orange-2;
 
     .navbar-toggler-icon {
       background-image: escape-svg($navbar-dark-toggler-icon-bg);
@@ -314,13 +317,9 @@
 
     &#{$infix} {
       // Boosted mod: remove padding cancellation
+      @include media-breakpoint-up($breakpoint) {
+        padding: $navbar-expanded-padding-y $navbar-expanded-padding-x .4375rem;
 
-      @include media-breakpoint-up($next) {
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        padding: $navbar-expanded-padding-y $navbar-expanded-padding-x .4375rem; // Boosted mod
-
-        // Boosted mod
         .navbar-brand {
           margin: 0 $spacer 1.125rem 0;
 
@@ -352,12 +351,23 @@
           .nav-link {
             padding: map-get($spacers, 2);
 
-            &[class*="svg-"] {
-              padding: 0 $spacer;
+            &.icon {
+              padding: 0 $spacer .5rem;
             }
           }
+
+          .navbar-toggler {
+            padding: map-get($spacers, 1);
+            margin-top: -#{map-get($spacers, 2)};
+            border-width: $border-width / 2;
+          }
+          // end mod
         }
-        // end mod
+      }
+
+      @include media-breakpoint-up($next) {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
 
         .navbar-nav {
           flex-direction: row;
@@ -466,7 +476,13 @@
 
   .navbar-toggler {
     color: $navbar-light-color;
+    background-color: $navbar-dark-color;
     border-color: $navbar-light-toggler-border-color;
+
+    @include hover-focus() {
+      color: $navbar-dark-color;
+      background-color: $navbar-light-color;
+    }
   }
 
   .navbar-toggler-icon {
@@ -528,7 +544,13 @@
 
   .navbar-toggler {
     color: $navbar-dark-color;
+    background-color: $navbar-light-color;
     border-color: $navbar-dark-toggler-border-color;
+
+    @include hover-focus() {
+      color: $navbar-light-color;
+      background-color: $navbar-dark-color;
+    }
   }
 
   .navbar-toggler-icon {
