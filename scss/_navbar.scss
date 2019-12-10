@@ -153,15 +153,6 @@
       display: none;
     }
 
-    &.icon {
-      padding: map-get($spacers, 2) .9375rem;
-      border-top: $border-width solid transparent;
-
-      @include media-breakpoint-up(sm) {
-        padding: $navbar-padding-y $spacer;
-      }
-    }
-
     &[class*="svg-"]::after {
       width: $navbar-supra-icon-size;
       height: $navbar-supra-icon-size;
@@ -183,6 +174,15 @@
 
     &:focus {
       outline-offset: -#{$border-width};
+    }
+  }
+
+  .nav-icon {
+    padding: map-get($spacers, 2) .9375rem;
+    border-top: $border-width solid transparent;
+
+    @include media-breakpoint-up(sm) {
+      padding: $navbar-padding-y $spacer;
     }
   }
 
@@ -392,10 +392,10 @@
 
           .nav-link {
             padding: map-get($spacers, 2);
+          }
 
-            &.icon {
-              padding: 0 $spacer .5rem;
-            }
+          .nav-icon {
+            padding: 0 $spacer .5rem;
           }
 
           .navbar-toggler {

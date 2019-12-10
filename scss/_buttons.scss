@@ -157,7 +157,7 @@ fieldset:disabled a.btn {
     line-height: .75;
   }
 
-  .icon::before {
+  [class*="icon-"]::before {
     font-size: $font-size-xlg;
   }
 }
