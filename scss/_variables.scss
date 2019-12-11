@@ -1230,12 +1230,13 @@ $spinner-border-width-sm: .2em !default;
 
 // Close
 
-$close-font-size:                   $font-size-base * 1.5 !default;
-$close-font-weight:                 $font-weight-bold !default;
-$close-color:                       $black !default;
+//$close-font-size:                   $font-size-base * 1.5 !default; // Boosted mod
+//$close-font-weight:                 $font-weight-bold !default; // Boosted mod
+//$close-color:                       $black !default; // Boosted mod
 $close-text-shadow:                 null !default; // Boosted mod
-$close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M817.493,676.165a49.977,49.977,0,0,1,0,70.664l-70.664,70.664a49.977,49.977,0,0,1-70.664,0L499.5,640.828,322.835,817.493a49.977,49.977,0,0,1-70.664,0l-70.664-70.664a49.977,49.977,0,0,1,0-70.664L358.172,499.5,181.507,322.835a49.977,49.977,0,0,1,0-70.664l70.664-70.664a49.977,49.977,0,0,1,70.664,0L499.5,358.172,676.165,181.507a49.977,49.977,0,0,1,70.664,0l70.664,70.664a49.977,49.977,0,0,1,0,70.664L640.828,499.5Z'/></svg>") !default; // Boosted mod
-$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'><path d='M817.493,676.165a49.977,49.977,0,0,1,0,70.664l-70.664,70.664a49.977,49.977,0,0,1-70.664,0L499.5,640.828,322.835,817.493a49.977,49.977,0,0,1-70.664,0l-70.664-70.664a49.977,49.977,0,0,1,0-70.664L358.172,499.5,181.507,322.835a49.977,49.977,0,0,1,0-70.664l70.664-70.664a49.977,49.977,0,0,1,70.664,0L499.5,358.172,676.165,181.507a49.977,49.977,0,0,1,70.664,0l70.664,70.664a49.977,49.977,0,0,1,0,70.664L640.828,499.5Z' fill='#{$white}'/></svg>") !default; // Boosted mod
+$close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 
 
 // Code
