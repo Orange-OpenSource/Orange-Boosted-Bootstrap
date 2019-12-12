@@ -839,15 +839,14 @@ $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $orange-2 !default; // Boosted mod
 $navbar-dark-active-color:          $navbar-dark-hover-color !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-dark-toggler-icon-hover-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-dark-toggler-border-color:  null !default;
+$navbar-dark-toggler-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
+// $navbar-dark-toggler-border-color:  null !default; // Boosted mod
 
 $navbar-light-color:                $black !default;
 $navbar-light-hover-color:          $orange !default; // Boosted mod
 $navbar-light-active-color:         $navbar-light-hover-color !default; // Boosted mod
 $navbar-light-disabled-color:       $gray-500 !default; // Boosted mod
-$navbar-light-toggler-icon-bg:      $navbar-dark-toggler-icon-bg !default;
+$navbar-light-toggler-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
 $navbar-light-toggler-border-color: null !default;
 
 $navbar-light-brand-color:          $navbar-light-color !default;
@@ -855,6 +854,7 @@ $navbar-light-brand-hover-color:    $navbar-light-active-color !default;
 $navbar-dark-brand-color:           $navbar-dark-color !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
+$navbar-toggler-icon-hover:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
 
 // Dropdowns
 //

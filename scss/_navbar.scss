@@ -163,15 +163,6 @@
       }
     }
 
-    &[role="menuitem"]::before {
-      float: right;
-      margin-right: 1rem;
-      // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
-      font: $font-weight-normal $font-size-base icon-orange;
-      color: $white;
-      content: "\e93e";
-    }
-
     &:focus {
       outline-offset: -#{$border-width};
     }
@@ -298,31 +289,29 @@
   @include media-breakpoint-up(sm) {
     margin: map-get($spacers, 1) 0 0;
   }
-  // end mod
 
   @include hover-focus() {
     color: $navbar-dark-color; // Boosted mod
     text-decoration: none;
-    background-color: $navbar-light-color; // Boosted mod
-
-    // Boosted mod
-    .navbar-toggler-icon {
-      background-image: escape-svg($navbar-dark-toggler-icon-hover-bg);
-    }
-    // end mod
   }
 
-  // Boosted mod
-  &:active {
-    background-color: $orange-2;
-
-    .navbar-toggler-icon {
-      background-image: escape-svg($navbar-dark-toggler-icon-bg);
-    }
+  &:hover .navbar-toggler-icon,
+  &:focus .navbar-toggler-icon,
+  &:active .navbar-toggler-icon {
+    background-image: escape-svg($navbar-toggler-icon-hover);
   }
 
   &:focus {
     outline: 0;
+  }
+
+  // Boosted mod: close icon when opened
+  .navbar &[aria-expanded="true"] {
+    &:hover .navbar-toggler-icon,
+    &:focus .navbar-toggler-icon,
+    &:active .navbar-toggler-icon {
+      background-image: escape-svg($close-icon-hover);
+    }
   }
   // end mod
 
@@ -518,17 +507,23 @@
 
   .navbar-toggler {
     color: $navbar-light-color;
-    background-color: $navbar-dark-color;
     border-color: $navbar-light-toggler-border-color;
+    // Boosted mod: remove background
 
     @include hover-focus() {
-      color: $navbar-dark-color;
-      background-color: $navbar-light-color;
+      color: $navbar-light-hover-color;
+      // Boosted mod: remove background
     }
+
+    // Boosted mod: close icon when opened
+    &[aria-expanded="true"] .navbar-toggler-icon {
+      background-image: escape-svg($close-icon);
+    }
+    // end mod
   }
 
   .navbar-toggler-icon {
-    background-image: escape-svg($navbar-light-toggler-icon-bg);
+    background-image: escape-svg($navbar-light-toggler-icon);
   }
 
   .navbar-text {
@@ -587,16 +582,22 @@
   .navbar-toggler {
     color: $navbar-dark-color;
     background-color: $navbar-light-color;
-    border-color: $navbar-dark-toggler-border-color;
+    // Boosted mod: remove background
 
     @include hover-focus() {
-      color: $navbar-light-color;
-      background-color: $navbar-dark-color;
+      color: $navbar-dark-hover-color;
+      // Boosted mod: remove background
     }
+
+    // Boosted mod: close icon when opened
+    &[aria-expanded="true"] .navbar-toggler-icon {
+      background-image: escape-svg($close-icon-dark);
+    }
+    // end mod
   }
 
   .navbar-toggler-icon {
-    background-image: escape-svg($navbar-dark-toggler-icon-bg);
+    background-image: escape-svg($navbar-dark-toggler-icon);
   }
 
   .navbar-text {
