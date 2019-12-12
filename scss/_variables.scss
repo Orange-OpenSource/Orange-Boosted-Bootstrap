@@ -813,7 +813,7 @@ $navbar-expanded-padding-x:           0 !default;
 $navbar-expanded-minimized-padding-y: $navbar-padding-y !default; // Boosted mod
 
 // Boosted mod : adapt navbar padding when mobile view
-// $navbar-height:                     6.25rem !default;
+$navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             map-get($spacers, 4) !default;
 $navbar-brand-logo-expanded-height:    3.125rem !default;
 $navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
@@ -1278,8 +1278,15 @@ $o-sortable-hover-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.
 $o-sortable-icon-size:        map-get($spacers, 2) .875rem !default;
 $o-sortable-icon-position:    right .125rem center !default;
 
-// arrow Links
+// Megamenu
+$o-megamenu-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$o-megamenu-icon-active:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$orange-2}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$o-megamenu-icon-size:        $accordion-arrow-size !default;
+$o-megamenu-arrow-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$white}' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>") !default;
+$o-megamenu-arrow-icon-hover: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$primary}' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>") !default;
+$o-megamenu-arrow-size:       $navbar-padding-y !default;
 
+// Arrow Links
 $o-link-arrow-margin:     map-get($spacers, 2) !default;
 $o-link-arrow-icon:       $chevron-icon !default;
 $o-link-arrow-icon-hover: $chevron-icon-active !default;

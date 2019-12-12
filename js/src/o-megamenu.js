@@ -104,12 +104,6 @@ class MegaMenu {
       const $thisNavToggler = $(this).prev(Selector.NAV_LINK)
       const $thisNav = $(this)
       const $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK)
-      const $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK)
-      let goBackLabel = `go back to ${$topMenu.text()} menu`
-
-      if (!$topMenu.length) {
-        goBackLabel = `go back to ${$(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text()} menu`
-      }
 
       $thisNav.attr({
         id: navId,
@@ -123,8 +117,7 @@ class MegaMenu {
       })
       $thisNavBackLink.attr({
         role: 'menuitem',
-        'aria-controls': navId,
-        'aria-label': goBackLabel
+        'aria-controls': navId
       })
     })
   }
