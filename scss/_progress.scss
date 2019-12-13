@@ -71,11 +71,5 @@
 @if $enable-transitions {
   .progress-bar-animated {
     animation: progress-bar-stripes $progress-bar-animation-timing;
-
-    @if $enable-prefers-reduced-motion-media-query {
-      @media (prefers-reduced-motion: reduce) {
-        animation: none;
-      }
-    }
   }
 }
