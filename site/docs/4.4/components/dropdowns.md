@@ -462,7 +462,7 @@ Add `.active` to items in the dropdown to **style them as active**.
 [comment]: # Boosted mod
 
 {% capture callout %}
-#### Accessibility
+#### Accessible state
 
 In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders and screen magnifiers…) that can support it by informing the user about the current element.
 {% endcapture %}
