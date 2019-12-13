@@ -108,7 +108,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
           </div>
         </div>
       </nav>
-    </header>
+</header>
 {% endcapture %}
 {% include example.html content=example %}
 
