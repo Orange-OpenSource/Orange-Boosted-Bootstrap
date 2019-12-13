@@ -23,6 +23,10 @@
         width: 100%;
       }
 
+      .mega-menu-panel {
+        will-change: height;
+      }
+
       @include media-breakpoint-down($breakpoint) {
         .mega-menu {
           overflow: hidden;
@@ -33,6 +37,7 @@
 
           > .navbar-nav {
             transform: translateX(0);
+            will-change: transform;
             @include transition(transform .5s);
           }
 
