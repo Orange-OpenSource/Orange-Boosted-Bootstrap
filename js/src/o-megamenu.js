@@ -96,7 +96,7 @@ class MegaMenu {
     $(element).find('> .navbar-nav').attr('role', 'menu')
     $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu')
     $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem')
-    $(element).find(Selector.NAV_LINK_BACK).attr({'aria-hidden': true})
+    $(element).find(Selector.NAV_LINK_BACK).attr('aria-hidden', 'true')
     $(element).find(Selector.NAV_ITEM).attr('role', 'presentation')
 
     $subNavs.each(function () {
