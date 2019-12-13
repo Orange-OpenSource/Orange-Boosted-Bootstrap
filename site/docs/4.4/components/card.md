@@ -381,7 +381,7 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
 {% capture example %}
-<div class="card bg-dark text-white">
+<div class="card bg-dark">
   {% include icons/placeholder.svg width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Card image" %}
   <div class="card-img-overlay">
     <h5 class="card-title">Card title</h5>
@@ -429,13 +429,9 @@ Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<div class="card{% unless color.name == "light" %} text-white{% endunless %} bg-{{ color.name }} mb-3" style="max-width: 18rem;">
+<div class="card bg-{{ color.name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
-  {% if color.name == "secondary" or color.name == "dark" or color.name == "danger" %}
-  <div class="card-body text-white">
-  {% else %}
   <div class="card-body">
-  {% endif %}
     <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
@@ -792,10 +788,10 @@ Cards can be organized into [Masonry](https://masonry.desandro.com/)-like column
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card bg-primary text-white text-center p-3">
+  <div class="card bg-primary text-center p-3">
     <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-      <footer class="blockquote-footer text-white">
+      <footer class="blockquote-footer bg-primary">
         <small>
           Someone famous in <cite title="Source Title">Source Title</cite>
         </small>
