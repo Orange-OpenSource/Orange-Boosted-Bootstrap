@@ -183,7 +183,7 @@
       var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
       var translatePercentage = -(position - rootPosition) * PERCENTAGE / 2;
       var $thisNav = $target.closest(Selector.NAV_MENU);
-      var $rootNav = $(Selector.ROOT_NAV);
+      var $rootNav = $target.closest(Selector.ROOT_NAV);
       $rootNav.addClass(ClassName.TRANSITIONING); // open collapse
 
       if ($target.attr('data-toggle') === 'collapse') {
@@ -275,7 +275,7 @@
       var $this = $(e.target);
       var $thisNav = $this.closest(Selector.NAV_MENU);
       var $targetNav = $this.next(Selector.NAV_MENU);
-      var $rootNav = $(Selector.ROOT_NAV);
+      var $rootNav = $this.closest(Selector.ROOT_NAV);
       var $thisNavToggler = $this;
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
@@ -324,7 +324,7 @@
       var $this = $(e.target);
       var $thisNav = $this.closest(Selector.NAV_MENU);
       var $targetNav = $thisNav.parent().closest(Selector.NAV_MENU);
-      var $rootNav = $(Selector.ROOT_NAV);
+      var $rootNav = $this.closest(Selector.ROOT_NAV);
       var $targetNavToggler = $targetNav.find(Selector.NAV_LINK_EXPANDED);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
@@ -334,7 +334,8 @@
         return false;
       }
 
-      $rootNav.addClass(ClassName.TRANSITIONING); // make only visible elements focusable
+      $rootNav.addClass(ClassName.TRANSITIONING);
+      $(Selector.MEGAMENU).css('height', 'auto'); // make only visible elements focusable
 
       $targetNav.find(Selector.NAV_LINK).attr({
         tabindex: 0,
@@ -343,7 +344,6 @@
 
       if (currentTranslatePercentage === -PERCENTAGE) {
         // reset main collapse height
-        $(Selector.MEGAMENU).css('height', 'auto');
         $rootNav.find('>.nav-item .nav-link').attr({
           tabindex: 0,
           'aria-hidden': false

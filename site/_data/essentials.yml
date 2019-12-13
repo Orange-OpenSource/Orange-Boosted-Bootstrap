@@ -1,0 +1,13 @@
+- category: Orange modules
+  description: "Orange brand atomic modules."
+  essentials:
+    - name: "Product details"
+      description: "Layout for desktop and mobile shop."
+    - name: "Quick links"
+      description: "Icon, text and description links"
+    - name: "Content panel"
+      description: "Panel display sample"
+    - name: "Global headers"
+      description: "Header variants including multiple navbars"
+    - name: "Footer"
+      description: "Footer variants including multiple navbars"

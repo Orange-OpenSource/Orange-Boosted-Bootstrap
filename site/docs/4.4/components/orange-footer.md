@@ -17,7 +17,7 @@ According to the brand, Orange footer has black background and white text color.
 
 {% capture example %}
 <footer class="o-footer" role="contentinfo">
-    <h1 class="sr-only">Site map & informations</h1>
+    <h2 class="sr-only">Site map & informations</h2>
     <div class="o-footer-top">
         <div class="container">
             <div class="row mb-0">
@@ -40,7 +40,7 @@ According to the brand, Orange footer has black background and white text color.
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <h2>Discover</h2>
+                    <h3>Discover</h3>
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
@@ -49,7 +49,7 @@ According to the brand, Orange footer has black background and white text color.
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h2>Shop</h2>
+                    <h3>Shop</h3>
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
@@ -59,14 +59,14 @@ According to the brand, Orange footer has black background and white text color.
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h2>Services</h2>
+                    <h3>Services</h3>
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h2>Support</h2>
+                    <h3>Support</h3>
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>

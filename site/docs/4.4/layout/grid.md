@@ -77,15 +77,15 @@ We include a security margin for container fluid. The goal is to fit exactly the
       </th>
       <th class="text-center">
         Large<br>
-        <small>&ge;980px</small>
+        <small>&ge;1024px</small>
       </th>
       <th class="text-center">
         Extra large<br>
-        <small>&ge;1220px</small>
+        <small>&ge;1280px</small>
       </th>
       <th class="text-center">
         Extra extra large<br>
-        <small>&ge;1380px</small>
+        <small>&ge;1280px</small>
       </th>
     </tr>
   </thead>
@@ -856,11 +856,11 @@ $grid-breakpoints: (
   // Medium screen / tablet
   md: 768px,
   // Large screen / desktop (target 1024 screen resolutions)
-  lg: 980px,
+  lg: 1024px,
   // Extra large screen / wide desktop (target 1280 screen resolutions)
-  xl: 1220px,
+  xl: 1280px,
   // Extra large screen / wider desktop (target 1440 screen resolutions)
-  xxl: 1380px
+  xxl: 1440px
 );
 
 $container-max-widths: (

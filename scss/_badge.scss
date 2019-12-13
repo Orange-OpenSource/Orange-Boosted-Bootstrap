@@ -50,6 +50,13 @@
 @each $color, $value in $theme-colors {
   .badge-#{$color} {
     @include badge-variant($value);
+
+    @if $color == "info" {
+      &.badge-lg,
+      &.badge-xlg {
+        color: $white;
+      }
+    }
   }
 }
 
@@ -64,4 +71,14 @@
       outline-color: $black;
     }
   }
+}
+
+.badge-xlg {
+  @include font-size($badge-font-size-xlg);
+  padding: $badge-padding-y-lg $badge-padding-x-lg;
+}
+
+.badge-lg {
+  @include font-size($badge-font-size-lg);
+  padding: $badge-padding-y-lg $badge-padding-x-lg;
 }

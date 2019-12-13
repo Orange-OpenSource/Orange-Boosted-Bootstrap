@@ -1,33 +1,39 @@
 .close {
   float: right;
   // Boosted mod
-  width: $spacer;
-  height: $spacer;
-  padding: $spacer;
-  // end mod
-  @include font-size($close-font-size);
-  font-weight: $close-font-weight;
-  line-height: 1;
-  color: $close-color;
-  text-shadow: $close-text-shadow;
-  // Boosted mod
+  width: map-get($spacers, 4);
+  height: map-get($spacers, 4);
+  padding: 0;
+  margin-right: map-get($spacers, 2);
+  // @include font-size($close-font-size);
+  // font-weight: $close-font-weight;
+  // line-height: 1;
+  // color: $close-color;
+  // text-shadow: $close-text-shadow;
   @include transition($transition-focus);
-  background: escape-svg($close-icon) no-repeat center / $spacer;
+  background: escape-svg($close-icon) no-repeat center / map-get($spacers, 4);
+  border: 0;
   outline-offset: map-get($spacers, 2);
   opacity: 1;
+  appearance: none;
 
-  .bg-dark & {
+  .bg-dark &,
+  .navbar-dark & {
     background-image: escape-svg($close-icon-dark);
   }
 
   &:hover,
   &:focus {
-    outline: $border-width solid;
-    outline-offset: 0;
+    background-image: escape-svg($close-icon-hover);
 
     &:not(:disabled):not(.disabled) {
       opacity: 1;
     }
+  }
+
+  &:focus {
+    outline: $border-width solid;
+    outline-offset: 0;
   }
 
   &:hover {
@@ -41,13 +47,13 @@
 // If you want the anchor version, it requires `href="#"`.
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
-// stylelint-disable-next-line selector-no-qualifying-type
-button.close {
-  //padding: 0; // Boosted mod
-  //background-color: transparent; // Boosted mod
-  border: 0;
-  appearance: none;
-}
+// Boosted mod: included above ↑
+// button.close {
+//   padding: 0;
+//   background-color: transparent;
+// border: 0;
+// appearance: none;
+// }
 
 // Future-proof disabling of clicks on `<a>` elements
 

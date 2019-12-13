@@ -14,7 +14,7 @@
 
 .rating {
   padding-left: 5.25rem;
-  background: url("../img/stars_sprite.png") no-repeat 0 / 5rem auto;
+  background: url("img/stars_sprite.png") no-repeat 0 / 5rem auto;
 }
 
 .rating.rated-5 {

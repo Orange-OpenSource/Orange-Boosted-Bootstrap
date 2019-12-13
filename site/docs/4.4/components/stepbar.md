@@ -16,7 +16,7 @@ Be careful to choose short labels when using multiple steps process, otherwise l
 Use `.current` class to define current step, alongwith with `aria-current="step"`.
 
 {% capture example %}
-<nav role="navigation" class="o-stepbar">
+<nav role="navigation" class="o-stepbar" aria-label="Checkout process">
     <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
     <ol>
         <li class="stepbar-item">

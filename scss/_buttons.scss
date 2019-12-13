@@ -151,6 +151,15 @@ fieldset:disabled a.btn {
   padding: $btn-padding-y;
   // stylelint-disable-next-line declaration-no-important
   line-height: .875 !important; // Ensure .btn-icon is squared
+
+  [class*="svg-"] {
+    display: block;
+    line-height: .75;
+  }
+
+  [class*="icon-"]::before {
+    font-size: $font-size-xlg;
+  }
 }
 
 // Boosted mod: social buttons

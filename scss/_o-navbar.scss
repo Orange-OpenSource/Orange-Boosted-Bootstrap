@@ -2,7 +2,7 @@
 // Orange Supra navbar
 //
 
-.navbar.supra {
+.supra {
   display: none;
   padding-top: 0;
   padding-bottom: 0;
@@ -13,13 +13,12 @@
   }
 
   .navbar-nav {
-    margin-top: 0;
+    margin: 0 -#{map-get($spacers, 1)};
   }
 
   .nav-link,
   .dropdown-toggle {
-    padding-top: map-get($spacers, 2);
-    padding-bottom: map-get($spacers, 2);
+    padding: #{map-get($spacers, 2) + $navbar-supra-padding-y} map-get($spacers, 1);
     font-size: $font-size-sm;
     line-height: 1;
 
@@ -28,9 +27,22 @@
     }
   }
 
-  .nav-link[class*="svg-"]::after {
-    width: $navbar-supra-height / 2;
-    height: $navbar-supra-height / 2;
+  .nav-link[class*="svg-"] {
+    padding: $spacer / 5 map-get($spacers, 2);
+
+    &::after {
+      width: $navbar-supra-icon-size;
+      height: $navbar-supra-icon-size;
+    }
+  }
+
+  .nav-item + * > .nav-icon {
+    margin-left: map-get($spacers, 2);
+  }
+
+  .badge {
+    top: 0;
+    right: -#{map-get($spacers, 1)};
   }
 }
 
