@@ -459,10 +459,20 @@ You can also create non-interactive dropdown items with `.dropdown-item-text`. F
 
 Add `.active` to items in the dropdown to **style them as active**.
 
+[comment]: # Boosted mod
+
+{% capture callout %}
+#### Accessibility
+
+In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders and screen magnifiers…) that can support it by informing the user about the current element.
+{% endcapture %}
+{% include callout.html content=callout %}
+
+
 {% capture example %}
 <div class="dropdown-menu">
   <a class="dropdown-item" href="#">Regular link</a>
-  <a class="dropdown-item active" href="#">Active link</a>
+  <a class="dropdown-item active" aria-current="page" href="#">Active link</a>
   <a class="dropdown-item" href="#">Another link</a>
 </div>
 {% endcapture %}
