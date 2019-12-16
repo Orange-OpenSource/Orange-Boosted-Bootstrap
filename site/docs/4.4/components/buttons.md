@@ -98,13 +98,7 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 {% endcapture %}
 {% include example.html content=example %}
 
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: no btn-block
 
 ## Active state
 
