@@ -8,9 +8,5 @@
     }
   }
 
-  @if $enable-prefers-reduced-motion-media-query {
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-  }
+  // Boosted mod: prevent duplication by managing reduced-motion globally
 }
