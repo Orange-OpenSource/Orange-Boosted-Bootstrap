@@ -210,7 +210,7 @@ fieldset:disabled a.btn {
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
   // Boosted mod
-  &.btn-info {
+  &.btn-icon {
     padding: $btn-padding-y-lg;
   }
   // end mod
@@ -219,7 +219,7 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   // Boosted mod
-  &.btn-info {
+  &.btn-icon {
     padding: $btn-padding-y-sm;
   }
   // end mod
