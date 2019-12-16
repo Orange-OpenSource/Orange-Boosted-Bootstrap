@@ -86,15 +86,20 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
+[comment]: # Boosted mod: include medium size, to please Orange brand
+**Medium button** is the standard button size.
+
 {% capture example %}
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary">Medium button</button>
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary">Medium button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html content=example %}
 
