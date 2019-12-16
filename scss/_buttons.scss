@@ -163,6 +163,21 @@ fieldset:disabled a.btn {
 }
 
 // Boosted mod: social buttons
+.btn-social {
+  width: $btn-social-size;
+  height: $btn-social-size;
+  padding: 0;
+  background: transparent no-repeat center / $btn-social-icon-size;
+  border: $border-width solid $black;
+  @include border-radius(50%, 50%);
+  @include transition(none);
+
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+}
+
 @each $network in map-keys($o-networks) {
   $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
   $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
@@ -225,26 +240,6 @@ fieldset:disabled a.btn {
   // end mod
 }
 
-// Boosted mod: social buttons
-.btn-social {
-  width: 2em;
-  height: 2em;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1em;
-  border: $border-width solid $black;
-  // stylelint-disable-next-line property-blacklist
-  border-radius: 50%;
-  // stylelint-disable-next-line property-blacklist
-  transition: none;
-
-  &:hover,
-  &:focus {
-    outline: 0;
-  }
-}
-// end mod
 
 //
 // Block button

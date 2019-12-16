@@ -521,6 +521,9 @@ $btn-border-radius-sm:        $border-radius-sm !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, outline-offset .15s ease-in-out !default;
 
+// Boosted mod: social buttons
+$btn-social-size:             $spacer * 2 !default;
+$btn-social-icon-size:        $spacer !default;
 
 // Forms
 
@@ -1301,7 +1304,7 @@ $icon-font-path:          "../fonts/" !default;
 // o-scroll-up
 //
 //
-$o-scroll-up-size:       2.5rem !default; // 40px
+$o-scroll-up-size:       $spacer * 2 !default; // 40px
 $o-scroll-up-icon:       $chevron-icon !default;
 $o-scroll-up-icon-hover: $chevron-icon-hover !default;
 $o-scroll-up-bottom: (
@@ -1314,15 +1317,15 @@ $o-scroll-up-bottom: (
 ) !default;
 
 // Step process bar
-$o-stepbar-height: 2.5rem !default;
+$o-stepbar-height:      $spacer * 2 !default;
 $o-stepbar-arrow-width: 1.0625rem !default;
 
 // o-table
-$o-table-icon-size: map-get($spacers, 4) !default;
-$o-table-caption: .75rem !default;
+$o-table-icon-size:     map-get($spacers, 4) !default;
+$o-table-caption:       .75rem !default;
 
 // o-switches
-$o-switches-size: 1.625rem !default;
+$o-switches-size:       1.625rem !default;
 
 // btn-social
 // ensure your fill attribute's value is '#boosted#', as it's replaced by black or white depending on button's state and variant
