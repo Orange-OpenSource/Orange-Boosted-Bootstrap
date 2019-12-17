@@ -157,7 +157,14 @@
     margin-bottom: 0; // Override default `<label>` value
     border-color: $gray-500; // Boosted mod
 
-    // Boosted mod: hover = focus, active ≠ .active
+    [type="radio"],
+    [type="checkbox"] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      pointer-events: none;
+    }
+
+    // Boosted mod: hover = focus, active ≠ .active, focus ≠ focus-visible
     &:hover,
     &:focus,
     &.focus {
@@ -176,51 +183,32 @@
       background-color: $black;
       border-color: $black;
       outline-color: $black;
-      &:focus,
-      &.focus {
-        background-color: theme-color("primary");
-        border-color: theme-color("primary");
-        outline-color: theme-color("primary");
-      }
     }
 
-    &:not(:disabled):not(.disabled).active,
-    .bg-dark &:not(:disabled):not(.disabled).active {
-      &:focus,
-      &.focus {
-        color: $white;
-        background-color: theme-color("primary");
-        border-color: theme-color("primary");
-        outline-color: theme-color("primary");
-      }
-    }
-    // stylelint-enable selector-max-class
-    // end mod
-
-    [type="radio"],
-    [type="checkbox"] {
-      position: absolute;
-      clip: rect(0, 0, 0, 0);
-      pointer-events: none;
-    }
-
-    // Boosted mod: dark background
     @at-root .bg-dark #{&} {
       border-color: $gray-700;
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &.focus {
         color: $orange-2;
       }
 
-      // stylelint-disable selector-max-class
       &:not(:disabled):not(.disabled).active {
         color: $black;
         background-color: $white;
         border-color: $white;
         outline-color: $white;
       }
-      // stylelint-enable selector-max-class
     }
+
+    &:not(:disabled):not(.disabled).active.focus-visible {
+      color: $white;
+      background-color: theme-color("primary");
+      border-color: theme-color("primary");
+      outline-color: theme-color("primary");
+    }
+    // stylelint-enable selector-max-class
     // end mod
   }
 
