@@ -157,6 +157,10 @@
     margin-bottom: 0; // Override default `<label>` value
     border-color: $gray-500; // Boosted mod
 
+    .bg-dark & {
+      border-color: $gray-700; // Boosted mod
+    }
+
     // Boosted mod: hover = focus, active ≠ .active
     &:hover,
     &:focus,
