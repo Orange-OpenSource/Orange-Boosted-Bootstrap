@@ -72,7 +72,8 @@ body {
 // Boosted mod
 // Using the :focus-visible polyfill to hide outline defensively
 // See https://github.com/WICG/focus-visible
-.js-focus-visible :focus:not(.focus-visible) {
+.js-focus-visible :focus:not(.focus-visible),
+.js-focus-visible .focus:not(.focus-visible) {
   outline: 0 !important;
 }
 // end mod

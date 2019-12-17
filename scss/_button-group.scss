@@ -157,10 +157,6 @@
     margin-bottom: 0; // Override default `<label>` value
     border-color: $gray-500; // Boosted mod
 
-    .bg-dark & {
-      border-color: $gray-700; // Boosted mod
-    }
-
     // Boosted mod: hover = focus, active ≠ .active
     &:hover,
     &:focus,
@@ -179,22 +175,23 @@
     &:not(:disabled):not(.disabled).active {
       background-color: $black;
       border-color: $black;
+      outline-color: $black;
       &:focus,
       &.focus {
         background-color: theme-color("primary");
         border-color: theme-color("primary");
+        outline-color: theme-color("primary");
       }
     }
 
-    &.btn-inverse:not(:disabled):not(.disabled).active {
-      color: $black;
-      background-color: $white;
-      border-color: $white;
+    &:not(:disabled):not(.disabled).active,
+    .bg-dark &:not(:disabled):not(.disabled).active {
       &:focus,
       &.focus {
         color: $white;
-        background-color: $orange-2;
-        border-color: $orange-2;
+        background-color: theme-color("primary");
+        border-color: theme-color("primary");
+        outline-color: theme-color("primary");
       }
     }
     // stylelint-enable selector-max-class
@@ -206,6 +203,25 @@
       clip: rect(0, 0, 0, 0);
       pointer-events: none;
     }
+
+    // Boosted mod: dark background
+    @at-root .bg-dark #{&} {
+      border-color: $gray-700;
+
+      &:hover {
+        color: $orange-2;
+      }
+
+      // stylelint-disable selector-max-class
+      &:not(:disabled):not(.disabled).active {
+        color: $black;
+        background-color: $white;
+        border-color: $white;
+        outline-color: $white;
+      }
+      // stylelint-enable selector-max-class
+    }
+    // end mod
   }
 
   // Boosted mod: no border inside of .btn-group-toggle
