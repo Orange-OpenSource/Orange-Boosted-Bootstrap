@@ -27,11 +27,7 @@
     }
   }
 
-  &:not(.alert-sm) > :first-child {
-    margin-top: map-get($spacers, 1);
-  }
-
-  &::before {
+  .alert-icon::before {
     display: block;
     order: -1;
     width: alert-logo-size("md");
@@ -41,6 +37,10 @@
     content: "";
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  &:not(.alert-sm) .alert-icon + * {
+    margin-top: map-get($spacers, 1);
   }
   // end mod
 }
@@ -75,7 +75,7 @@
   line-height: $small-line-height;
   border: 0;
 
-  &::before {
+  .alert-icon::before {
     width: alert-logo-size("sm");
     min-width: alert-logo-size("sm");
     height: alert-logo-size("sm");
@@ -97,7 +97,10 @@
 @each $color in success, info, warning, danger {
   .alert-#{$color} {
     border-color: theme-color($color); // Boosted mod: only change border-color
-    @extend %svg-#{$color}; // Boosted mod: add an icon per level
+
+    .alert-icon {
+      @extend %svg-#{$color}; // Boosted mod: add an icon per level
+    }
   }
 }
 // end mod
