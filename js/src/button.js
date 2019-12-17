@@ -169,9 +169,11 @@ $(document)
   .on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, (event) => {
     const button = $(event.target).closest(Selector.BUTTON)[0]
     $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
+    // Boosted mod: check if children has focus-visible and delegate it to button
     if ($(event.target).hasClass(ClassName.FOCUS_VISIBLE)) {
       $(button).toggleClass(ClassName.FOCUS_VISIBLE)
     }
+    // end mod
   })
 
 $(window).on(Event.LOAD_DATA_API, () => {
