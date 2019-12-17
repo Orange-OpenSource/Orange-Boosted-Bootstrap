@@ -178,7 +178,7 @@ The checked state for these buttons is **only updated via `click` event** on the
 
 Note that pre-checked buttons require you to manually add the `.active` class to the input's `<label>`.
 
-[comment] # Boosted mod: do not show checkbox toggle example
+[comment]: # Boosted mod: do not show checkbox toggle example
 
 {% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
