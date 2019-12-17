@@ -23,7 +23,8 @@ const JQUERY_NO_CONFLICT  = $.fn[NAME]
 const ClassName = {
   ACTIVE : 'active',
   BUTTON : 'btn',
-  FOCUS  : 'focus'
+  FOCUS  : 'focus',
+  FOCUS_VISIBLE : 'focus-visible'
 }
 
 const Selector = {
@@ -168,12 +169,19 @@ $(document)
   .on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, (event) => {
     const button = $(event.target).closest(Selector.BUTTON)[0]
     $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
+    // Boosted mod: check if children has focus-visible and delegate it to button
+    if ($(event.target).hasClass(ClassName.FOCUS_VISIBLE)) {
+      $(button).addClass(ClassName.FOCUS_VISIBLE)
+    } else {
+      $(button).removeClass(ClassName.FOCUS_VISIBLE)
+    }
+    // end mod
   })
 
 $(window).on(Event.LOAD_DATA_API, () => {
   // ensure correct active class is set to match the controls' actual values/states
 
-  // find all checkboxes/readio buttons inside data-toggle groups
+  // find all checkboxes/radio buttons inside data-toggle groups
   let buttons = [].slice.call(document.querySelectorAll(Selector.DATA_TOGGLES_BUTTONS))
   for (let i = 0, len = buttons.length; i < len; i++) {
     const button = buttons[i]

@@ -157,7 +157,14 @@
     margin-bottom: 0; // Override default `<label>` value
     border-color: $gray-500; // Boosted mod
 
-    // Boosted mod: hover = focus, active ≠ .active
+    [type="radio"],
+    [type="checkbox"] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      pointer-events: none;
+    }
+
+    // Boosted mod: hover = focus, active ≠ .active, focus ≠ focus-visible
     &:hover,
     &:focus,
     &.focus {
@@ -175,33 +182,34 @@
     &:not(:disabled):not(.disabled).active {
       background-color: $black;
       border-color: $black;
+      outline-color: $black;
+    }
+
+    @at-root .bg-dark #{&} {
+      border-color: $gray-700;
+
+      &:hover,
       &:focus,
       &.focus {
-        background-color: theme-color("primary");
-        border-color: theme-color("primary");
+        color: $orange-2;
+      }
+
+      &:not(:disabled):not(.disabled).active {
+        color: $black;
+        background-color: $white;
+        border-color: $white;
+        outline-color: $white;
       }
     }
 
-    &.btn-inverse:not(:disabled):not(.disabled).active {
-      color: $black;
-      background-color: $white;
-      border-color: $white;
-      &:focus,
-      &.focus {
-        color: $white;
-        background-color: $orange-2;
-        border-color: $orange-2;
-      }
+    &:not(:disabled):not(.disabled).active.focus-visible {
+      color: $white;
+      background-color: theme-color("primary");
+      border-color: theme-color("primary");
+      outline-color: theme-color("primary");
     }
     // stylelint-enable selector-max-class
     // end mod
-
-    [type="radio"],
-    [type="checkbox"] {
-      position: absolute;
-      clip: rect(0, 0, 0, 0);
-      pointer-events: none;
-    }
   }
 
   // Boosted mod: no border inside of .btn-group-toggle

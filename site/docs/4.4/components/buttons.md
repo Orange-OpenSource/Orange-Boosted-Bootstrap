@@ -86,25 +86,24 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
+[comment]: # Boosted mod: include medium size, to please Orange brand
+**Medium button** is the standard button size.
+
 {% capture example %}
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary">Medium button</button>
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+{% capture example %}
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary">Medium button</button>
 <button type="button" class="btn btn-secondary btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html content=example %}
 
-{% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
-{% endcapture %}
-{% include example.html content=example %}
-
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: no btn-block
 
 ## Active state
 
@@ -179,14 +178,7 @@ The checked state for these buttons is **only updated via `click` event** on the
 
 Note that pre-checked buttons require you to manually add the `.active` class to the input's `<label>`.
 
-{% capture example %}
-<div class="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="checkbox" checked autocomplete="off"> Checked
-  </label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: do not show checkbox toggle example
 
 {% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
