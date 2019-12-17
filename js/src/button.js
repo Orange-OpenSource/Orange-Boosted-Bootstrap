@@ -24,7 +24,7 @@ const ClassName = {
   ACTIVE : 'active',
   BUTTON : 'btn',
   FOCUS  : 'focus',
-  FOCUS_VISIBLE : 'focus-FOCUS_VISIBLE'
+  FOCUS_VISIBLE : 'focus-visible'
 }
 
 const Selector = {
@@ -171,7 +171,9 @@ $(document)
     $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
     // Boosted mod: check if children has focus-visible and delegate it to button
     if ($(event.target).hasClass(ClassName.FOCUS_VISIBLE)) {
-      $(button).toggleClass(ClassName.FOCUS_VISIBLE)
+      $(button).addClass(ClassName.FOCUS_VISIBLE)
+    } else {
+      $(button).removeClass(ClassName.FOCUS_VISIBLE)
     }
     // end mod
   })
