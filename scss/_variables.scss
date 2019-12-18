@@ -101,8 +101,7 @@ $alert-logo-sizes: () !default;
 $alert-logo-sizes: map-merge(
   (
     "sm": 1rem,
-    "md": 1.76rem,
-    "lg": 2rem
+    "md": 1.5rem
   ),
   $alert-logo-sizes
 );

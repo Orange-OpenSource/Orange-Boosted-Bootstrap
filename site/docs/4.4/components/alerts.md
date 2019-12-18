@@ -28,7 +28,7 @@ Icons are centered by default, but you may top align them using `.align-items-st
 {% for color in site.data.theme-colors %}{% if colors contains color.name %}
 <div class="alert alert-{{ color.name }}" role="alert">
   <span class="alert-icon"><span class="sr-only">{{ color.name | capitalize }}</span></span>
-  <p class="mb-0">A simple {{ color.name }} alert — check it out!</p>
+  <p>A simple {{ color.name }} alert — check it out!</p>
 </div>{% endif %}{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
@@ -44,11 +44,11 @@ Alerts come with a smaller variant: `.alert-sm`.
 {% capture example %}
 <div class="alert alert-info alert-sm" role="alert">
   <span class="alert-icon"><span class="sr-only">Info</span></span>
-  <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+  <p>You have new updates available. <a href="#">View updates</a></p>
 </div>
 <div class="alert alert-info" role="alert">
   <span class="alert-icon"><span class="sr-only">Info</span></span>
-  <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+  <p>You have new updates available. <a href="#">View updates</a></p>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -59,23 +59,23 @@ Alerts come with a smaller variant: `.alert-sm`.
 <div class="bg-dark p-3">
     <div class="alert alert-sm alert-success" role="alert">
         <span class="alert-icon"><span class="sr-only">Success</span></span>
-        <p class="mb-0">Your changes have been saved.</p>
+        <p>Your changes have been saved.</p>
     </div>
     <div class="alert alert-success" role="alert">
         <span class="alert-icon"><span class="sr-only">Success</span></span>
-        <p class="mb-0">Your changes have been saved.</p>
+        <p>Your changes have been saved.</p>
     </div>
     <div class="alert alert-info" role="alert">
         <span class="alert-icon"><span class="sr-only">Info</span></span>
-        <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+        <p>You have new updates available. <a href="#">View updates</a></p>
     </div>
     <div class="alert alert-warning" role="alert">
         <span class="alert-icon"><span class="sr-only">Warning</span></span>
-        <p class="mb-0">Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
+        <p>Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
     </div>
     <div class="alert alert-danger" role="alert">
         <span class="alert-icon"><span class="sr-only">Danger</span></span>
-        <p class="mb-0">
+        <p>
             There were some errors with your submission.
             <span class="d-block font-weight-normal">You need to select your home country.</span>
         </p>
@@ -97,7 +97,7 @@ As of Boosted, it's recommended to wrap your additional content in a `<div>` to 
       <h4 class="alert-heading">Well done!</h4>
       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
       <hr>
-      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
   </div>
 </div>
 {% endcapture %}
@@ -119,14 +119,14 @@ You can see this in action with a live demo:
 {% capture example %}
 <div class="alert alert-success alert-sm alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="sr-only">Success</span></span>
-  <p class="mb-0">Your changes have been saved.</p>
+  <p>Your changes have been saved.</p>
   <button type="button" class="close" data-dismiss="alert">
       <span class="sr-only">Close confirmation message</span>
   </button>
 </div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
-  <p class="mb-0">
+  <p>
       Holy guacamole!
       <span class="d-block font-weight-normal">You should check in on some of those fields below.</span>
   </p>
@@ -137,7 +137,7 @@ You can see this in action with a live demo:
 <div class="bg-dark p-3">
     <div class="alert alert-lg alert-danger alert-dismissible fade show mb-0" role="alert">
         <span class="alert-icon"><span class="sr-only">Danger</span></span>
-        <p class="mb-0">
+        <p>
             Your changes have been saved.
             <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
         </p>

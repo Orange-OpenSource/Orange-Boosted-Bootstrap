@@ -40,7 +40,7 @@
   }
 
   &:not(.alert-sm) .alert-icon + * {
-    margin-top: map-get($spacers, 1);
+    margin: $spacer / 10 0;
   }
   // end mod
 }
