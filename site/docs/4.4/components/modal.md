@@ -41,7 +41,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
           <h5 class="modal-title">Modal title</h5>
           <!-- Boosted mod: using visually hidden text instead of aria-label -->
           <button type="button" class="close" data-dismiss="modal">
-            <span class="sr-only">Close</span>
+            <span class="sr-only">Close static modal demo</span>
           </button>
         </div>
         <div class="modal-body">
@@ -64,7 +64,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
         <h5 class="modal-title">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close static modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -90,7 +90,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
         <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close live modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -106,14 +106,14 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive">
-    Launch demo modal
+    Launch modal demo
   </button>
 </div>
 
 {% highlight html %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  Launch modal demo
 </button>
 
 <!-- Modal -->
@@ -124,7 +124,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close live modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -150,7 +150,7 @@ When backdrop is set to static, the modal will not close when clicking outside i
         <h5 class="modal-title" id="staticBackdropLiveLabel">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close static backdrop modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -184,7 +184,7 @@ When backdrop is set to static, the modal will not close when clicking outside i
         <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close static backdrop modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -211,7 +211,7 @@ When modals become too long for the user's viewport or device, they scroll indep
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close long content modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -244,14 +244,14 @@ When modals become too long for the user's viewport or device, they scroll indep
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
+    Launch modal demo
   </button>
 </div>
 
 {% highlight html %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
+  Launch modal demo
 </button>
 
 <!-- Modal -->
@@ -262,7 +262,7 @@ When modals become too long for the user's viewport or device, they scroll indep
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close long content modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -286,7 +286,7 @@ You can also create a scrollable modal that allows scroll the modal body by addi
         <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close scrollable modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -319,14 +319,14 @@ You can also create a scrollable modal that allows scroll the modal body by addi
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-    Launch demo modal
+    Launch modal demo
   </button>
 </div>
 
 {% highlight html %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-  Launch demo modal
+  Launch modal demo
 </button>
 
 <!-- Modal -->
@@ -337,7 +337,7 @@ You can also create a scrollable modal that allows scroll the modal body by addi
         <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close scrollable modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -363,7 +363,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
         <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close centered modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -384,7 +384,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
         <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close centered scrollable modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -414,7 +414,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 {% highlight html %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
+  Launch modal demo
 </button>
 
 <!-- Modal -->
@@ -425,7 +425,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
         <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close centered modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -451,7 +451,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
         <h5 class="modal-title" id="exampleModalPopoversLabel">Modal title</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close modal with popovers demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -471,7 +471,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPopovers">
-    Launch demo modal
+    Launch modal demo
   </button>
 </div>
 
@@ -496,7 +496,7 @@ Utilize the Boosted grid system within a modal by nesting `.container-fluid` wit
         <h5 class="modal-title" id="gridModalLabel">Grids in modals</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close grid modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -537,7 +537,7 @@ Utilize the Boosted grid system within a modal by nesting `.container-fluid` wit
 
 <div class="bd-example">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal">
-  Launch demo modal
+  Launch modal demo
 </button>
 </div>
 
@@ -590,7 +590,7 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
         <h5 class="modal-title" id="exampleModalLabel">New message</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close form inside modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -741,7 +741,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
         <h5 class="modal-title h4" id="myExtraLargeModalLabel">Extra large modal</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close big modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -758,7 +758,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
         <h5 class="modal-title h4" id="myLargeModalLabel">Large modal</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close large modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -775,7 +775,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
         <h5 class="modal-title h4" id="mySmallModalLabel">Small modal</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close</span>
+          <span class="sr-only">Close small modal demo</span>
         </button>
       </div>
       <div class="modal-body">

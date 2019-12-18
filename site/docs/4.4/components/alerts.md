@@ -121,7 +121,7 @@ You can see this in action with a live demo:
   <span class="alert-icon"><span class="sr-only">Success</span></span>
   <p class="mb-0">Your changes have been saved.</p>
   <button type="button" class="close" data-dismiss="alert">
-      <span class="sr-only">Close</span>
+      <span class="sr-only">Close confirmation message</span>
   </button>
 </div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -131,7 +131,7 @@ You can see this in action with a live demo:
       <span class="d-block font-weight-normal">You should check in on some of those fields below.</span>
   </p>
   <button type="button" class="close" data-dismiss="alert">
-      <span class="sr-only">Close</span>
+      <span class="sr-only">Close warning message</span>
   </button>
 </div>
 <div class="bg-dark p-3">
@@ -142,7 +142,7 @@ You can see this in action with a live demo:
             <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
         </p>
         <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
+            <span class="sr-only">Close alert message</span>
         </button>
     </div>
 </div>
@@ -164,7 +164,7 @@ Or with `data` attributes on a button **within the alert**, as demonstrated abov
 [comment]: # Boosted mod: using visually hidden text instead of aria-label
 {% highlight html %}
 <button type="button" class="close" data-dismiss="alert">
-    <span class="sr-only">Close</span>
+    <span class="sr-only">Close confirmation message</span>
 </button>
 {% endhighlight %}
 
