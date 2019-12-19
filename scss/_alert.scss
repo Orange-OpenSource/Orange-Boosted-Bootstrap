@@ -79,7 +79,7 @@
     width: alert-logo-size("sm");
     min-width: alert-logo-size("sm");
     height: alert-logo-size("sm");
-    margin-right: map-get($spacers, 2);
+    margin-right: alert-logo-size("sm") / 2;
   }
 
   &.alert-dismissible .close {
