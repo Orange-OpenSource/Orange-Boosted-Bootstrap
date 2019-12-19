@@ -1098,7 +1098,7 @@ $modal-scale-transform:             scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 $alert-padding-y:                   1rem !default; // Boosted mod
-$alert-padding-x:                   $spacer !default; // Boosted mod
+$alert-padding-x:                   .75rem !default; // Boosted mod
 $alert-padding-y-sm:                map-get($spacers, 2) !default; // Boosted mod
 // $alert-padding-x-sm:                $alert-padding-x !default; // Boosted mod
 $alert-margin-bottom:               $spacer !default;
