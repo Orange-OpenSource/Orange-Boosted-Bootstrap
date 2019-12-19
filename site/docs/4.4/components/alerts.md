@@ -88,12 +88,13 @@ Alerts come with a smaller variant: `.alert-sm`.
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
 [comment]: #Boosted mod
-As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment.
+As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment — and, for headings, to always use the `.alert-heading` class.
 
 {% capture example %}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="sr-only">Success</span></span>
   <div>
+      <h4 class="alert-heading">Well done!</h4>
       <p>Aww yeah, you successfully read this important alert message.</p>
       <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
       <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>

@@ -55,8 +55,16 @@
 
 // Headings for larger alerts
 .alert-heading {
+  // Boosted mod: make headings look like paragraphs
+  margin: 0;
+  font-size: inherit;
+  // end mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
+
+  + p {
+    font-weight: $font-weight-normal;
+  }
 }
 
 // Boosted mod: links are perceivable globally
