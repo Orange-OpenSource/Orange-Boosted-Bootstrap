@@ -34,8 +34,18 @@
   p + p {
     font-weight: $font-weight-normal;
   }
+  // end mod
+}
 
-  .alert-icon::before {
+// Boosted mod
+.alert-icon {
+  margin: -#{map-get($spacers, 1) / 5} 0;
+
+  + * {
+    margin: $alert-icon-margin-y 0;
+  }
+
+  &::before {
     display: block;
     order: -1;
     width: $alert-logo-size;
@@ -46,12 +56,8 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
-
-  &:not(.alert-sm) .alert-icon + * {
-    margin: $spacer / 10 0;
-  }
-  // end mod
 }
+// end mod
 
 // Headings for larger alerts
 .alert-heading {
@@ -109,11 +115,15 @@
   line-height: $small-line-height;
   border: 0;
 
-  .alert-icon::before {
-    width: $alert-logo-size-sm;
-    min-width: $alert-logo-size-sm;
-    height: $alert-logo-size-sm;
-    margin-right: $alert-logo-size-sm / 2;
+  .alert-icon {
+    margin: $alert-icon-margin-y 0;
+
+    &::before {
+      width: $alert-logo-size-sm;
+      min-width: $alert-logo-size-sm;
+      height: $alert-logo-size-sm;
+      margin-right: $alert-logo-size-sm / 2;
+    }
   }
 
   &.alert-dismissible .close {
