@@ -157,10 +157,6 @@
 }
 
 // Boosted mod
-@function alert-logo-size($key: "md") {
-  @return map-get($alert-logo-sizes, $key);
-}
-
 @function icon-conf($network, $key) {
   @return map-get(map-get($o-networks, $network), $key);
 }

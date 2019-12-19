@@ -30,10 +30,10 @@
   .alert-icon::before {
     display: block;
     order: -1;
-    width: alert-logo-size("md");
-    min-width: alert-logo-size("md");
-    height: alert-logo-size("md");
-    margin-right: map-get($spacers, 3);
+    width: $alert-logo-size;
+    min-width: $alert-logo-size;
+    height: $alert-logo-size;
+    margin-right: $alert-logo-size;
     content: "";
     background-repeat: no-repeat;
     background-size: contain;
@@ -76,10 +76,10 @@
   border: 0;
 
   .alert-icon::before {
-    width: alert-logo-size("sm");
-    min-width: alert-logo-size("sm");
-    height: alert-logo-size("sm");
-    margin-right: alert-logo-size("sm") / 2;
+    width: $alert-logo-size-sm;
+    min-width: $alert-logo-size-sm;
+    height: $alert-logo-size-sm;
+    margin-right: $alert-logo-size-sm / 2;
   }
 
   &.alert-dismissible .close {
