@@ -9,9 +9,41 @@
   }
 }
 
+@each $color, $value in $theme-colors {
+  .swatch-#{$color} {
+    @if ($color == $primary) {
+      color: $white;
+    } @else {
+      color: color-yiq($value);
+    }
+    background-color: #{$value};
+  }
+}
+
+
 @each $color, $value in $grays {
   .swatch-#{$color} {
     color: color-yiq($value);
     background-color: #{$value};
+  }
+}
+
+.color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 .25rem;
+  text-align: center;
+  @include border-radius();
+
+  @include media-breakpoint-up(md) {
+    flex-basis: 6rem;
+    width: 6rem;
+    height: 6rem;
   }
 }

@@ -1,0 +1,78 @@
+- category: Core colours
+  name: "Core colours"
+  colours:
+    - name: White
+      class: white
+      hex: "#fff"
+    - name: Black
+      class: dark
+      hex: "#000"
+    - name: Digital Orange 1
+      class: orange-2
+      hex: "#ff7900"
+    - name: Digital Orange 2
+      class: primary
+      hex: "#f16e00"
+- category: Functionnal colours
+  name: "Functionnal colours"
+  colours:
+    - name: Green
+      class: success
+      hex: "#32c832"
+    - name: Blue
+      class: info
+      hex: "#527edb"
+    - name: Yellow
+      class: warning
+      hex: "#fc0"
+    - name: Red
+      class: danger
+      hex: "#cd3c14"
+- category: Supporting colours
+  name: "Supporting colours"
+  colours:
+    - name: Blue
+      class: cyan
+      hex: "#4bb4e6"
+    - name: Yellow
+      class: yellow
+      hex: "#ffd200"
+    - name: Green
+      class: teal
+      hex: "#50be87"
+    - name: Purple
+      class: purple
+      hex: "#a885d8"
+    - name: Pink
+      class: pink
+      hex: "#ffb4e6"
+- category: Greys
+  name: "Greys"
+  colours:
+    - name: 100
+      class: 100
+      hex: "#fafafa"
+    - name: 200
+      class: 200
+      hex: "#f6f6f6"
+    - name: 300
+      class: 300
+      hex: "#eee"
+    - name: 400
+      class: 400
+      hex: "#ddd"
+    - name: 500
+      class: 500
+      hex: "#ccc"
+    - name: 600
+      class: 600
+      hex: "#999"
+    - name: 700
+      class: 700
+      hex: "#666"
+    - name: 800
+      class: 800
+      hex: "#595959"
+    - name: 900
+      class: 900
+      hex: "#333"

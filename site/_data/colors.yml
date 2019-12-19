@@ -17,7 +17,7 @@
 - name: cyan
   hex: "#527edb"
 - name: white
-  hex: "#fff" 
+  hex: "#fff"
 - name: orange-2
   hex: "#ff7900"
 - name: gray
