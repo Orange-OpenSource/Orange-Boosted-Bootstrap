@@ -254,12 +254,7 @@ You should refer to those tables when using `.text-*` and `.bg-*` utilities to e
 
 [comment]: # end mod
 
-## Background gradient
-
-When `$enable-gradients` is set to `true` (default is `false`), you can use `.bg-gradient-` utility classes. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more.
-
-{% for color in site.data.theme-colors %}
-- `.bg-gradient-{{ color.name }}`{% endfor %}
+[comment]: # Boosted mod: no gradient
 
 {% capture callout %}
 #### Dealing with specificity
