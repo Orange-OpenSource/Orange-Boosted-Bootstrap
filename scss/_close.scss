@@ -20,20 +20,21 @@
   .bg-dark &,
   .navbar-dark & {
     background-image: escape-svg($close-icon-dark);
+
+    &:hover,
+    &:focus {
+      outline-color: $gray-500;
+    }
   }
 
   &:hover,
   &:focus {
-    background-image: escape-svg($close-icon-hover);
+    outline: $border-width solid $gray-700;
+    outline-offset: -#{$border-width};
 
     &:not(:disabled):not(.disabled) {
       opacity: 1;
     }
-  }
-
-  &:focus {
-    outline: $border-width solid;
-    outline-offset: 0;
   }
 
   &:hover {
