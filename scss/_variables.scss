@@ -96,16 +96,9 @@ $theme-colors: map-merge(
 );
 
 // Boosted mod
-$alert-logo-sizes: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$alert-logo-sizes: map-merge(
-  (
-    "sm": 1rem,
-    "md": 1.76rem,
-    "lg": 2rem
-  ),
-  $alert-logo-sizes
-);
+$alert-logo-size:     1.5rem !default;
+$alert-logo-size-sm:  1rem !default;
+
 $chevron-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $chevron-icon-hover:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $chevron-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$primary}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
@@ -1112,6 +1105,7 @@ $alert-margin-bottom:               $spacer !default;
 $alert-border-radius:               $border-radius !default;
 // $alert-link-font-weight:            $font-weight-normal !default; // Boosted mod
 $alert-border-width:                $border-width !default;
+$alert-close-icon-size:             .875rem !default;
 
 // $alert-bg-level:                    0 !default; // Boosted mod
 // $alert-border-level:                0 !default; // Boosted mod
@@ -1240,6 +1234,9 @@ $close-text-shadow:                 null !default; // Boosted mod
 $close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 $close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 $close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$close-icon-stroke:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$close-icon-stroke-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+// $close-icon-stroke-hover:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' stroke='#{$primary}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 
 
 // Code

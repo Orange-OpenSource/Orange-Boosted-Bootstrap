@@ -20,14 +20,13 @@ Boosted also adds a dedicated icon for each contextual class, matching [function
 * `info`,
 * `success`.
 
-Icons are centered by default, but you may top align them using `.align-items-start` utility for multiple lines alerts.
-
 [comment]: # Boosted mod: filter to use only functional colors
 {% capture example %}
 {% assign colors = "success, info, warning, danger" %}
 {% for color in site.data.theme-colors %}{% if colors contains color.name %}
 <div class="alert alert-{{ color.name }}" role="alert">
-  <p class="mb-0">A simple {{ color.name }} alert — check it out!</p>
+  <span class="alert-icon"><span class="sr-only">{{ color.name | capitalize }}</span></span>
+  <p>A simple {{ color.name }} alert — check it out!</p>
 </div>{% endif %}{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
@@ -42,10 +41,12 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 {% capture example %}
 <div class="alert alert-info alert-sm" role="alert">
-  <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+  <span class="alert-icon"><span class="sr-only">Info</span></span>
+  <p>You have new updates available. <a href="#">View updates</a></p>
 </div>
 <div class="alert alert-info" role="alert">
-  <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+  <span class="alert-icon"><span class="sr-only">Info</span></span>
+  <p>You have new updates available. <a href="#">View updates</a></p>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -55,22 +56,27 @@ Alerts come with a smaller variant: `.alert-sm`.
 {% capture example %}
 <div class="bg-dark p-3">
     <div class="alert alert-sm alert-success" role="alert">
-        <p class="mb-0">Your changes have been saved.</p>
+        <span class="alert-icon"><span class="sr-only">Success</span></span>
+        <p>Your changes have been saved.</p>
     </div>
     <div class="alert alert-success" role="alert">
-        <p class="mb-0">Your changes have been saved.</p>
+        <span class="alert-icon"><span class="sr-only">Success</span></span>
+        <p>Your changes have been saved.</p>
     </div>
     <div class="alert alert-info" role="alert">
-        <p class="mb-0">You have new updates available. <a href="#">View updates</a></p>
+        <span class="alert-icon"><span class="sr-only">Info</span></span>
+        <p>You have new updates available. <a href="#">View updates</a></p>
     </div>
     <div class="alert alert-warning" role="alert">
-        <p class="mb-0">Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
+        <span class="alert-icon"><span class="sr-only">Warning</span></span>
+        <p>Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
     </div>
     <div class="alert alert-danger" role="alert">
-        <p class="mb-0">
-            There were some errors with your submission.
-            <span class="d-block font-weight-normal">You need to select your home country.</span>
-        </p>
+        <span class="alert-icon"><span class="sr-only">Danger</span></span>
+        <div>
+            <p>There were some errors with your submission.</p>
+            <p>You need to select your home country.</p>
+        </div>
     </div>
 </div>
 {% endcapture %} {% include example.html content=example %}
@@ -79,16 +85,17 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
-[comment]: # Boosted mod
-As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment.
+[comment]: #Boosted mod
+As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment — and, for headings, to always use the `.alert-heading` class.
 
 {% capture example %}
 <div class="alert alert-success" role="alert">
+  <span class="alert-icon"><span class="sr-only">Success</span></span>
   <div>
       <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-      <hr>
-      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      <p>Aww yeah, you successfully read this important alert message.</p>
+      <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+      <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
   </div>
 </div>
 {% endcapture %}
@@ -108,29 +115,22 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 You can see this in action with a live demo:
 
 {% capture example %}
-<div class="alert alert-success alert-sm alert-dismissible fade show" role="alert">
-  <p class="mb-0">Your changes have been saved.</p>
-  <button type="button" class="close" data-dismiss="alert">
-      <span class="sr-only">Close</span>
-  </button>
-</div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <p class="mb-0">
-      Holy guacamole!
-      <span class="d-block font-weight-normal">You should check in on some of those fields below.</span>
-  </p>
+  <span class="alert-icon"><span class="sr-only">Warning</span></span>
+  <p>Holy guacamole!</p>
   <button type="button" class="close" data-dismiss="alert">
-      <span class="sr-only">Close</span>
+      <span class="sr-only">Close warning message</span>
   </button>
 </div>
 <div class="bg-dark p-3">
     <div class="alert alert-lg alert-danger alert-dismissible fade show mb-0" role="alert">
-        <p class="mb-0">
-            Your changes have been saved.
-            <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
-        </p>
+        <span class="alert-icon"><span class="sr-only">Danger</span></span>
+        <div>
+            <p>Your changes have been saved.</p>
+            <p>You may now log-in with the username you have chosen.</p>
+        </div>
         <button type="button" class="close" data-dismiss="alert">
-            <span class="sr-only">Close</span>
+            <span class="sr-only">Close alert message</span>
         </button>
     </div>
 </div>
@@ -152,7 +152,7 @@ Or with `data` attributes on a button **within the alert**, as demonstrated abov
 [comment]: # Boosted mod: using visually hidden text instead of aria-label
 {% highlight html %}
 <button type="button" class="close" data-dismiss="alert">
-    <span class="sr-only">Close</span>
+    <span class="sr-only">Close confirmation message</span>
 </button>
 {% endhighlight %}
 
