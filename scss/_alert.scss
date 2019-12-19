@@ -27,6 +27,14 @@
     }
   }
 
+  * p {
+    margin: 0;
+  }
+
+  p + p {
+    font-weight: $font-weight-normal;
+  }
+
   .alert-icon::before {
     display: block;
     order: -1;

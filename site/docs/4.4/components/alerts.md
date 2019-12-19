@@ -75,10 +75,10 @@ Alerts come with a smaller variant: `.alert-sm`.
     </div>
     <div class="alert alert-danger" role="alert">
         <span class="alert-icon"><span class="sr-only">Danger</span></span>
-        <p>
-            There were some errors with your submission.
-            <span class="d-block font-weight-normal">You need to select your home country.</span>
-        </p>
+        <div>
+            <p>There were some errors with your submission.</p>
+            <p>You need to select your home country.</p>
+        </div>
     </div>
 </div>
 {% endcapture %} {% include example.html content=example %}
@@ -87,16 +87,15 @@ Alerts come with a smaller variant: `.alert-sm`.
 
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
-[comment]: # Boosted mod
+[comment]: #Boosted mod
 As of Boosted, it's recommended to wrap your additional content in a `<div>` to ensure proper alignment.
 
 {% capture example %}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="sr-only">Success</span></span>
   <div>
-      <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-      <hr>
+      <p>Aww yeah, you successfully read this important alert message.</p>
+      <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
       <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
   </div>
 </div>
@@ -126,10 +125,10 @@ You can see this in action with a live demo:
 </div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
-  <p>
-      Holy guacamole!
-      <span class="d-block font-weight-normal">You should check in on some of those fields below.</span>
-  </p>
+  <div>
+      <p>Holy guacamole!</p>
+      <p>You should check in on some of those fields below.</p>
+  </div>
   <button type="button" class="close" data-dismiss="alert">
       <span class="sr-only">Close warning message</span>
   </button>
@@ -137,10 +136,10 @@ You can see this in action with a live demo:
 <div class="bg-dark p-3">
     <div class="alert alert-lg alert-danger alert-dismissible fade show mb-0" role="alert">
         <span class="alert-icon"><span class="sr-only">Danger</span></span>
-        <p>
-            Your changes have been saved.
-            <span class="d-block font-weight-normal">You may now log-in with the username you have chosen.</span>
-        </p>
+        <div>
+            <p>Your changes have been saved.</p>
+            <p>You may now log-in with the username you have chosen.</p>
+        </div>
         <button type="button" class="close" data-dismiss="alert">
             <span class="sr-only">Close alert message</span>
         </button>
