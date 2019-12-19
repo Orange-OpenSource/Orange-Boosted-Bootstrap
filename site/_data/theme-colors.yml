@@ -1,7 +1,7 @@
 - name: primary
   hex: "#f16e00"
 - name: secondary
-  hex: "#999"
+  hex: "#000"
 - name: success
   hex: "#32c832"
 - name: danger
@@ -11,6 +11,4 @@
 - name: info
   hex: "#527edb"
 - name: light
-  hex: "#fafafa"
-- name: dark
-  hex: "#333"
+  hex: "#ddd"

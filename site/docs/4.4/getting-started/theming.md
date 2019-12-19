@@ -300,7 +300,7 @@ All colors available in Boosted 4, are available as Sass variables and a Sass ma
   {% for color in site.data.colors %}
     {% unless color.name == "white" or color.name == "gray" or color.name == "gray-dark" %}
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
+        <div class="p-3 mb-3 font-weight-bold swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
     </div>
     {% endunless %}
   {% endfor %}
@@ -330,7 +330,7 @@ We use a subset of all colors to create a smaller color palette for generating c
 <div class="row">
   {% for color in site.data.theme-colors %}
     <div class="col-md-4">
-      <div class="p-3 mb-3 bg-{{ color.name }} {% if color.name == "light" or color.name == "warning" %}text-dark{% else %}text-white{% endif %}">{{ color.name | capitalize }}</div>
+      <div class="p-3 mb-3 font-weight-bold bg-{{ color.name }}">{{ color.name | capitalize }}</div>
     </div>
   {% endfor %}
 </div>
@@ -342,7 +342,7 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
 <div class="row mb-3">
   <div class="col-md-4">
     {% for color in site.data.grays %}
-      <div class="p-3 swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
+      <div class="p-3 font-weight-bold swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
     {% endfor %}
   </div>
 </div>
