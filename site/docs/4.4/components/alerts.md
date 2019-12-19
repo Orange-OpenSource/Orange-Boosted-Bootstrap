@@ -20,8 +20,6 @@ Boosted also adds a dedicated icon for each contextual class, matching [function
 * `info`,
 * `success`.
 
-Icons are centered by default, but you may top align them using `.align-items-start` utility for multiple lines alerts.
-
 [comment]: # Boosted mod: filter to use only functional colors
 {% capture example %}
 {% assign colors = "success, info, warning, danger" %}
