@@ -115,13 +115,6 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 You can see this in action with a live demo:
 
 {% capture example %}
-<div class="alert alert-success alert-sm alert-dismissible fade show" role="alert">
-  <span class="alert-icon"><span class="sr-only">Success</span></span>
-  <p>Your changes have been saved.</p>
-  <button type="button" class="close" data-dismiss="alert">
-      <span class="sr-only">Close confirmation message</span>
-  </button>
-</div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
   <p>Holy guacamole!</p>
