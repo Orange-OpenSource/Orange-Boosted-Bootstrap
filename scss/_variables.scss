@@ -1098,13 +1098,14 @@ $modal-scale-transform:             scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 $alert-padding-y:                   1rem !default; // Boosted mod
-$alert-padding-x:                   .75rem !default; // Boosted mod
+$alert-padding-x:                   $spacer !default; // Boosted mod
 $alert-padding-y-sm:                map-get($spacers, 2) !default; // Boosted mod
 // $alert-padding-x-sm:                $alert-padding-x !default; // Boosted mod
 $alert-margin-bottom:               $spacer !default;
 $alert-border-radius:               $border-radius !default;
 // $alert-link-font-weight:            $font-weight-normal !default; // Boosted mod
 $alert-border-width:                $border-width !default;
+$alert-close-icon-size:             .875rem !default;
 
 // $alert-bg-level:                    0 !default; // Boosted mod
 // $alert-border-level:                0 !default; // Boosted mod
@@ -1233,6 +1234,9 @@ $close-text-shadow:                 null !default; // Boosted mod
 $close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 $close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 $close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$close-icon-stroke:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$close-icon-stroke-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+// $close-icon-stroke-hover:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' stroke='#{$primary}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 
 
 // Code

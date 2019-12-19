@@ -126,10 +126,7 @@ You can see this in action with a live demo:
 </div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
-  <div>
-      <p>Holy guacamole!</p>
-      <p>You should check in on some of those fields below.</p>
-  </div>
+  <p>Holy guacamole!</p>
   <button type="button" class="close" data-dismiss="alert">
       <span class="sr-only">Close warning message</span>
   </button>
