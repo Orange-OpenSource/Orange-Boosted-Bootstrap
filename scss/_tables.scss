@@ -109,22 +109,8 @@
 }
 
 
-// Table backgrounds
-//
-// Exact selectors below required to override `.table-striped` and prevent
-// inheritance to nested tables.
+// Boosted mod: no Table backgrounds
 
-@each $color, $value in $theme-colors {
-  @include table-row-variant($color, theme-color-level($color, 0)); // Boosted mod let color as is
-}
-
-@include table-row-variant(active, $table-active-bg);
-
-// Boosted mod
-@each $color in success, info, warning, danger {
-  @include table-row-variant-border(#{$color}, theme-color(#{$color}));
-}
-// end mod
 
 // Dark styles
 //
@@ -159,15 +145,7 @@
     border-color: $table-dark-border-color;
   }
 
-  &.table-bordered {
-    border: 0;
-  }
-
-  &.table-striped {
-    tbody tr:nth-of-type(#{$table-striped-order}) {
-      background-color: $table-dark-accent-bg;
-    }
-  }
+  // Boosted mod: no bordered / borderless / zebra tables
 
   &.table-hover {
     tbody tr {
@@ -197,10 +175,7 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 
-        // Prevent double border on horizontal scroll due to use of `display: block;`
-        > .table-bordered {
-          border: 0;
-        }
+        // Boosted mod: no bordered tables
       }
     }
   }

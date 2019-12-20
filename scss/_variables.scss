@@ -427,10 +427,10 @@ $table-cell-padding-lg:       .90625rem !default; // 14.5px;
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
-// $table-accent-bg:             $gray-200 !default; // Boosted mod: no Zebra-striping
+// $table-accent-bg:             $gray-200 !default;$table-striped-order
 $table-hover-color:           $table-color !default;
 $table-hover-bg:              $gray-300 !default; // Boosted mod : #eee on white bg
-$table-active-bg:             $gray-400 !default;
+// $table-active-bg:             $gray-400 !default; // Boosted mod
 
 $table-border-width:          $border-width / 2 !default; // Boosted mod :  1px
 $table-border-color:          $gray-500 !default;
@@ -440,13 +440,13 @@ $table-head-color:            $black !default;
 
 $table-dark-color:            $white !default;
 $table-dark-bg:               $black !default;
-$table-dark-accent-bg:        $gray-900 !default;
+// $table-dark-accent-bg:        $gray-900 !default; // Boosted mod
 $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         $gray-700 !default;
 $table-dark-border-color:     $gray-500 !default;
 $table-dark-color:            $white !default;
 
-$table-striped-order:         odd !default;
+// $table-striped-order:         odd !default;$table-striped-order
 
 $table-caption-color:         $black !default;
 
