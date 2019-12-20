@@ -11,7 +11,7 @@ toc: true
 ## Accessibility
 
 When using `.text-*` and `.bg-*` utilities, **contrasts are locked to ensure they're sufficient** by defining `color` and `background-color` altogether.
-Please refer to [accessibility's color contrast section]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/accessibility/#color-contrast) to have a full preview of Boosted colour palette's contrast ratios. 
+Please refer to [accessibility's color contrast section]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/accessibility/#color-contrast) to have a full preview of Boosted color palette's contrast ratios. 
 
 [comment]: # end mod
 

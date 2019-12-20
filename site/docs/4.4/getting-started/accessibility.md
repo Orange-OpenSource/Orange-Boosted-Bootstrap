@@ -25,7 +25,7 @@ Because Boosted's components are purposely designed to be fairly generic, author
 ### Color contrast
 
 [comment]: # Boosted mod
-Some colors that currently make up [Boosted's default palette]({{ site.baseurl }}/docs/{{ site.docs_version }}/about/brand/#colour-palette) —used throughout the framework for things such as button variations, alert variations, form validation indicators— may lead to *insufficient* color contrast.
+Some colors that currently make up [Boosted's default palette]({{ site.baseurl }}/docs/{{ site.docs_version }}/about/brand/#color-palette) —used throughout the framework for things such as button variations, alert variations, form validation indicators— may lead to *insufficient* color contrast.
 
 #### Ensuring contrasts
 

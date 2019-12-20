@@ -1,6 +1,6 @@
-- category: Core colours
-  name: "Core colours"
-  colours:
+- category: Core colors
+  name: "Core colors"
+  colors:
     - name: White
       class: white
       hex: "#fff"
@@ -13,9 +13,9 @@
     - name: Digital Orange 2
       class: primary
       hex: "#f16e00"
-- category: Functionnal colours
-  name: "Functionnal colours"
-  colours:
+- category: Functionnal colors
+  name: "Functionnal colors"
+  colors:
     - name: Green
       class: success
       hex: "#32c832"
@@ -28,9 +28,9 @@
     - name: Red
       class: danger
       hex: "#cd3c14"
-- category: Supporting colours
-  name: "Supporting colours"
-  colours:
+- category: Supporting colors
+  name: "Supporting colors"
+  colors:
     - name: Blue
       class: cyan
       hex: "#4bb4e6"
@@ -48,7 +48,7 @@
       hex: "#ffb4e6"
 - category: Greys
   name: "Greys"
-  colours:
+  colors:
     - name: 100
       class: 100
       hex: "#fafafa"
