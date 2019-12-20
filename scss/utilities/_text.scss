@@ -45,10 +45,17 @@
 
 // Contextual colors
 
-.text-white { color: $white !important; }
+.text-white {
+  color: $white !important;
+  background-color: $black !important;
+}
 
 @each $color, $value in $theme-colors {
-  @include text-emphasis-variant(".text-#{$color}", $value, true);
+  // Boosted mod: disallow functionnal colors for text
+  @if ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
+    @include text-emphasis-variant(".text-#{$color}", $value, true);
+  }
+  // end mod
 }
 
 // Boosted mod

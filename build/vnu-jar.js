@@ -44,6 +44,7 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'The “complementary” role is unnecessary for element “aside”.',
     'The “navigation” role is unnecessary for element “nav”.',
     'The “form” role is unnecessary for element “form”.',
+    'The “figure” role is unnecessary for element “figure”.',
     'Possible misuse of “aria-label”.*'
   ].join('|')
 

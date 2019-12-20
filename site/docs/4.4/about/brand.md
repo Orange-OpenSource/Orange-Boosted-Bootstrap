@@ -116,11 +116,41 @@ It’s possible to animate the Small logo; however this process is strictly mana
 Apply the Small logo correctly by avoiding the following:
 
 
-1. Never change the colour of the line, even in animation.
+1. Never change the color of the line, even in animation.
 2. The line always has a solid, white fill. It is never transparent.
 3. Never use the trademark symbol.
 4. Never change the size of the line - it allows optimal readbility in small sizes and represents the name “Orange” from the Master logo.
 5. Never change the colourways of the Small logo.
+
+
+
+## Color palette
+
+This is Orange Web UI color palette, as specified in Orange Web UI Kits.
+Please refer to the [accessibility's color contrast section]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/accessibility/#color-contrast) before trying using this, in order to ensure sufficient contrasts,
+and prefer using [`.text-*` and `.bg-*` utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to set colors, since they lock `color` and `background-color` altogether to ensure sufficient contrasts.
+<div class="my-5">
+  {% for category in site.data.brand-colors %}
+    <div class="row my-3">
+      <h3 class="h4 col col-md-4 col-lg-2 mb-0">{{ category.name }}</h3>
+      <div class="col col-md-8 col-lg-10 row row-cols-2 row-cols-md-4 row-cols-lg-6">
+        {% for color in category.colors %}
+          <figure class="col" role="figure" aria-label="{{ color.name | capitalize }}">
+           <svg width="100%" height="6rem" role="img" aria-label="{{ color.name | capitalize }}">
+             <rect fill="{{ color.hex }}" width="100%" height="100%"/>
+           </svg>
+           <figcaption class="py-1">
+             <strong>{{ color.name | capitalize }}</strong>
+             <br/>
+             <code>{{ color.hex }}</code>
+           </figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    </div>
+    <hr/>
+  {% endfor %}
+</div>
 
 <hr>
 

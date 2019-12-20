@@ -330,7 +330,7 @@ We use a subset of all colors to create a smaller color palette for generating c
 <div class="row">
   {% for color in site.data.theme-colors %}
     <div class="col-md-4">
-      <div class="p-3 mb-3 bg-{{ color.name }} {% if color.name == "light" or color.name == "warning" %}text-dark{% else %}text-white{% endif %}">{{ color.name | capitalize }}</div>
+      <div class="p-3 mb-3 font-weight-bold bg-{{ color.name }}">{{ color.name | capitalize }}</div>
     </div>
   {% endfor %}
 </div>
@@ -342,7 +342,7 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
 <div class="row mb-3">
   <div class="col-md-4">
     {% for color in site.data.grays %}
-      <div class="p-3 swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
+      <div class="p-3 font-weight-bold swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
     {% endfor %}
   </div>
 </div>
@@ -422,22 +422,22 @@ Here are the variables we include (note that the `:root` is required). They're l
 {% highlight css %}
 :root {
   --blue: #527edb;
-  --indigo: #6610f2;
   --purple: #a885d8;
   --pink: #ffb4e6;
   --red: #cd3c14;
   --orange: #f16e00;
-  --yellow: #fc0;
+  --orange-2: #ff7900;
+  --yellow: #ffd200;
   --green: #32c832;
   --teal: #50be87;
-  --cyan: #4BB4E6;
+  --cyan: #4bb4e6;
   --white: #fff;
   --gray: #999;
   --gray-dark: #595959;
   --primary: #f16e00;
   --secondary: #000;
   --success: #32c832;
-  --info: #4BB4E6;
+  --info: #527edb;
   --warning: #fc0;
   --danger: #cd3c14;
   --light: #ddd;
@@ -445,11 +445,11 @@ Here are the variables we include (note that the `:root` is required). They're l
   --breakpoint-xs: 0;
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 980px;
-  --breakpoint-xl: 1220px;
-  --breakpoint-xxl: 1380px;
-  --font-family-sans-serif: "HelvNeueOrange", "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+  --font-family-sans-serif: HelvNeueOrange, Helvetica Neue, Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 {% endhighlight %}
 
