@@ -1,19 +1,20 @@
 ---
 layout: docs
-title: Stepbar
-description: Step process bar used for multiple steps forms process
+title: Stepped process
+description: Stepped process bar used for multiple steps forms process
 group: components
 toc: true
 ---
 
-## Default stepbar
+## How to use
 
 Use a `nav` element with `.o-stepbar` class, containing an ordered list `<ol>`  with `.stepbar-item` class on list items.
-
 
 Be careful to choose short labels when using multiple steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title` attribute of the `.stepbar-link`.
 
 Use `.current` class to define current step, alongwith with `aria-current="step"`.
+
+## Example
 
 {% capture example %}
 <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
