@@ -91,34 +91,7 @@
 }
 // end mod
 
-// Border versions
-//
-// Add or remove borders all around the table and between all the columns.
-
-.table-bordered {
-  border: $table-border-width solid $table-border-color;
-
-  th,
-  td {
-    border: $table-border-width solid $table-border-color;
-  }
-
-  thead {
-    th,
-    td {
-      border-bottom-width: 2 * $table-border-width;
-    }
-  }
-}
-
-.table-borderless {
-  th,
-  td,
-  thead th,
-  tbody + tbody {
-    border: 0;
-  }
-}
+// Boosted mod: no bordered neither borderless tables
 
 // Boosted mod: no Zebra-striping
 
