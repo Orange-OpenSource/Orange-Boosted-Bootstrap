@@ -50,10 +50,16 @@ Similar to the contextual text color classes, easily set the background of an el
 
 {% capture example %}
 <!-- Boosted mod -->
-{% for color in site.data.theme-colors %}
-<div class="p-3 mb-2 bg-{{ color.name }}">.bg-{{ color.name }}</div>{% endfor %}
-<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
-<div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+<div class="p-3 mb-2 bg-primary">.bg-primary</div>
+<div class="p-3 mb-2 bg-secondary">.bg-secondary</div>
+<div class="p-3 mb-2 bg-success">.bg-success or .bg-teal</div>
+<div class="p-3 mb-2 bg-danger">.bg-danger or .bg-pink</div>
+<div class="p-3 mb-2 bg-warning">.bg-warning or .bg-yellow</div>
+<div class="p-3 mb-2 bg-info">.bg-info or .bg-cyan</div>
+<div class="p-3 mb-2 bg-purple">.bg-purple</div>
+<div class="p-3 mb-2 bg-light">.bg-light</div>
+<div class="p-3 mb-2 bg-white">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent">.bg-transparent</div>
 <!-- end mod -->
 {% endcapture %}
 {% include example.html content=example %}
