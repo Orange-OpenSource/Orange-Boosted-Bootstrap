@@ -11,11 +11,6 @@
 @each $color, $value in $supporting-colors {
   @include bg-variant(".bg-#{$color}", $value);
 }
-
-.bg-teal   { @extend .bg-success; }
-.bg-cyan   { @extend .bg-info; }
-.bg-yellow { @extend .bg-warning; }
-.bg-pink   { @extend .bg-danger; }
 // end mod
 
 @if $enable-gradients {

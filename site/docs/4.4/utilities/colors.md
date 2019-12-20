@@ -52,10 +52,10 @@ Similar to the contextual text color classes, easily set the background of an el
 <!-- Boosted mod -->
 <div class="p-3 mb-2 bg-primary">.bg-primary</div>
 <div class="p-3 mb-2 bg-secondary">.bg-secondary</div>
-<div class="p-3 mb-2 bg-success">.bg-success or .bg-teal</div>
-<div class="p-3 mb-2 bg-danger">.bg-danger or .bg-pink</div>
-<div class="p-3 mb-2 bg-warning">.bg-warning or .bg-yellow</div>
-<div class="p-3 mb-2 bg-info">.bg-info or .bg-cyan</div>
+<div class="p-3 mb-2 bg-success">.bg-success</div>
+<div class="p-3 mb-2 bg-danger">.bg-danger</div>
+<div class="p-3 mb-2 bg-warning">.bg-warning</div>
+<div class="p-3 mb-2 bg-info">.bg-info</div>
 <div class="p-3 mb-2 bg-purple">.bg-purple</div>
 <div class="p-3 mb-2 bg-light">.bg-light</div>
 <div class="p-3 mb-2 bg-white">.bg-white</div>
