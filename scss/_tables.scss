@@ -120,16 +120,7 @@
   }
 }
 
-// Zebra-striping
-//
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
-
-.table-striped {
-  tbody tr:nth-of-type(#{$table-striped-order}) {
-    background-color: $table-accent-bg;
-  }
-}
-
+// Boosted mod: no Zebra-striping
 
 // Hover effect
 //

@@ -427,7 +427,7 @@ $table-cell-padding-lg:       .90625rem !default; // 14.5px;
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
-$table-accent-bg:             $gray-200 !default;
+// $table-accent-bg:             $gray-200 !default; // Boosted mod: no Zebra-striping
 $table-hover-color:           $table-color !default;
 $table-hover-bg:              $gray-300 !default; // Boosted mod : #eee on white bg
 $table-active-bg:             $gray-400 !default;
