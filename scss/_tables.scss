@@ -69,17 +69,9 @@
   th,
   td {
     padding: $table-cell-padding-sm;
+    line-height: $table-cell-line-height-sm;
   }
 }
-
-// Boosted mod
-.table-lg {
-  th,
-  td {
-    padding: $table-cell-padding-lg;
-  }
-}
-// end mod
 
 // Boosted mod: no bordered neither borderless tables
 
