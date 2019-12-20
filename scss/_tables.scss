@@ -16,20 +16,12 @@
   th,
   td {
     padding: $table-cell-padding;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+    line-height: $table-cell-line-height;
     vertical-align: top;
   }
 
-  thead {
-    tr {
-      border-bottom-width: $table-border-width * 2;
-    }
-
-    th {
-      font-size: $font-size-base;
-      border-bottom-width: 2 * $table-border-width;
-    }
+  thead tr {
+    border-bottom-width: $table-border-width * 2;
   }
 
   tbody th {
@@ -85,8 +77,6 @@
   th,
   td {
     padding: $table-cell-padding-lg;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
   }
 }
 // end mod
@@ -139,11 +129,12 @@
   color: $table-dark-color;
   background-color: $table-dark-bg;
 
-  th,
-  td,
-  thead th {
+  // Boosted mod: only table rows have borders
+  tr,
+  th {
     border-color: $table-dark-border-color;
   }
+  // end mod
 
   // Boosted mod: no bordered / borderless / zebra tables
 

@@ -421,9 +421,12 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .71875rem !default; // 11.5px;
+$table-cell-padding:          .5rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
 $table-cell-padding-sm:       .375rem !default; // 6px;
 $table-cell-padding-lg:       .90625rem !default; // 14.5px;
+// stylelint-disable function-blacklist
+$table-cell-line-height:      calc(21 / 16) !default; // Boosted mod
+// stylelint-enable function-blacklist
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
@@ -442,9 +445,8 @@ $table-dark-color:            $white !default;
 $table-dark-bg:               $black !default;
 // $table-dark-accent-bg:        $gray-900 !default; // Boosted mod
 $table-dark-hover-color:      $table-dark-color !default;
-$table-dark-hover-bg:         $gray-700 !default;
-$table-dark-border-color:     $gray-500 !default;
-$table-dark-color:            $white !default;
+$table-dark-hover-bg:         $gray-900 !default;
+$table-dark-border-color:     $gray-700 !default;
 
 // $table-striped-order:         odd !default;$table-striped-order
 
