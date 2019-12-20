@@ -292,23 +292,18 @@ You can find and customize these variables for key global options in Boosted's `
 
 Many of Boosted's various components and utilities are built through a series of colors defined in a Sass map. This map can be looped over in Sass to quickly generate a series of rulesets.
 
-### Brand colors
+### All colors
 
 All colors available in Boosted 4, are available as Sass variables and a Sass map in `scss/_variables.scss` file. This will be expanded upon in subsequent minor releases to add additional shades, much like the [grayscale palette](#grays) we already include.
 
-<div class="my-5">
-    {% for category in site.data.brand-colors %}
-        <div class="row my-3">
-            <h4 class="col col-md-4 col-lg-2 mb-0">{{ category.name }}</h4>
-            <div class="color-swatches col col-md-8 col-lg-10">
-              {% for color in category.colours %}
-                  <div class="color-swatch swatch-{{ color.class }}">
-                    <strong class="m-auto">{{ color.name | capitalize }}</strong>
-                  </div>
-              {% endfor %}
-            </div>
-        </div>
-    {% endfor %}
+<div class="row">
+  {% for color in site.data.colors %}
+    {% unless color.name == "white" or color.name == "gray" or color.name == "gray-dark" %}
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
+    </div>
+    {% endunless %}
+  {% endfor %}
 </div>
 
 Here's how you can use these in your Sass:
