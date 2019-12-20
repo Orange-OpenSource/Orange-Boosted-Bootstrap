@@ -21,30 +21,27 @@ Please refer to [accessibility's color contrast section]({{ site.baseurl }}/docs
 `.text-*` utilities are meant to modify text color, but also **set a `background-color` to ensure contrasts**.
 
 {% capture example %}
-<!-- Boosted mod -->
-{% for color in site.data.theme-colors %}
-<p class="text-{{ color.name }}">.text-{{ color.name }}</p>{% endfor %}
+{% for color in site.data.theme-colors %}{% unless color.name == "success" or color.name == "warning" or color.name == "danger" or color.name == "info" %}
+<p class="text-{{ color.name }}">.text-{{ color.name }}</p>{% endunless %}{% endfor %}
 <p class="text-body">.text-body</p>
 <p class="text-muted">.text-muted</p>
-<p class="text-white bg-dark">.text-white</p>
-<!-- end mod -->
+<p class="text-white">.text-white</p>
 {% endcapture %}
 {% include example.html content=example %}
 
 Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` and `.text-muted` class has no additional link styling beyond underline.**
 
-[comment]: # Boosted mod
 Boosted also handle color variation on hover (lighten or darken) **depending on contrast ratio**.
 
 {% capture example %}
-<!-- Boosted mod -->
-{% for color in site.data.theme-colors %}
-<p><a href="#" class="text-{{ color.name }}">{{ color.name | capitalize }} link</a></p>{% endfor %}
+{% for color in site.data.theme-colors %}{% unless color.name == "success" or color.name == "warning" or color.name == "danger" or color.name == "info" %}
+<p><a href="#" class="text-{{ color.name }}">{{ color.name | capitalize }} link</a></p>{% endunless %}{% endfor %}
 <p><a href="#" class="text-muted">Muted link</a></p>
-<p><a href="#" class="text-white bg-dark">White link</a></p>
-<!-- end mod -->
+<p><a href="#" class="text-white">White link</a></p>
 {% endcapture %}
 {% include example.html content=example %}
+
+[comment]: # end mod
 
 ## Background color
 
