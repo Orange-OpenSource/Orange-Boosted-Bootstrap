@@ -16,20 +16,12 @@
   th,
   td {
     padding: $table-cell-padding;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+    line-height: $table-cell-line-height;
     vertical-align: top;
   }
 
-  thead {
-    tr {
-      border-bottom-width: $table-border-width * 2;
-    }
-
-    th {
-      font-size: $font-size-base;
-      border-bottom-width: 2 * $table-border-width;
-    }
+  thead tr {
+    border-bottom-width: $table-border-width * 2;
   }
 
   tbody th {
@@ -77,59 +69,13 @@
   th,
   td {
     padding: $table-cell-padding-sm;
+    line-height: $table-cell-line-height-sm;
   }
 }
 
-// Boosted mod
-.table-lg {
-  th,
-  td {
-    padding: $table-cell-padding-lg;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-  }
-}
-// end mod
+// Boosted mod: no bordered neither borderless tables
 
-// Border versions
-//
-// Add or remove borders all around the table and between all the columns.
-
-.table-bordered {
-  border: $table-border-width solid $table-border-color;
-
-  th,
-  td {
-    border: $table-border-width solid $table-border-color;
-  }
-
-  thead {
-    th,
-    td {
-      border-bottom-width: 2 * $table-border-width;
-    }
-  }
-}
-
-.table-borderless {
-  th,
-  td,
-  thead th,
-  tbody + tbody {
-    border: 0;
-  }
-}
-
-// Zebra-striping
-//
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
-
-.table-striped {
-  tbody tr:nth-of-type(#{$table-striped-order}) {
-    background-color: $table-accent-bg;
-  }
-}
-
+// Boosted mod: no Zebra-striping
 
 // Hover effect
 //
@@ -145,22 +91,8 @@
 }
 
 
-// Table backgrounds
-//
-// Exact selectors below required to override `.table-striped` and prevent
-// inheritance to nested tables.
+// Boosted mod: no Table backgrounds
 
-@each $color, $value in $theme-colors {
-  @include table-row-variant($color, theme-color-level($color, 0)); // Boosted mod let color as is
-}
-
-@include table-row-variant(active, $table-active-bg);
-
-// Boosted mod
-@each $color in success, info, warning, danger {
-  @include table-row-variant-border(#{$color}, theme-color(#{$color}));
-}
-// end mod
 
 // Dark styles
 //
@@ -189,21 +121,14 @@
   color: $table-dark-color;
   background-color: $table-dark-bg;
 
-  th,
-  td,
-  thead th {
+  // Boosted mod: only table rows have borders
+  tr,
+  th {
     border-color: $table-dark-border-color;
   }
+  // end mod
 
-  &.table-bordered {
-    border: 0;
-  }
-
-  &.table-striped {
-    tbody tr:nth-of-type(#{$table-striped-order}) {
-      background-color: $table-dark-accent-bg;
-    }
-  }
+  // Boosted mod: no bordered / borderless / zebra tables
 
   &.table-hover {
     tbody tr {
@@ -233,10 +158,7 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 
-        // Prevent double border on horizontal scroll due to use of `display: block;`
-        > .table-bordered {
-          border: 0;
-        }
+        // Boosted mod: no bordered tables
       }
     }
   }
