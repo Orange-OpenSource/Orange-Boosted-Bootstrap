@@ -421,10 +421,9 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .75rem map-get($spacers, 2) .875rem !default; // Boosted mod
-$table-cell-padding-sm:       .5rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
+$table-cell-padding:          .5625rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
 // stylelint-disable function-blacklist
-$table-cell-line-height:      calc(22 / 16) !default; // Boosted mod
+$table-cell-line-height:      calc(30 / 16) !default; // Boosted mod
 $table-cell-line-height-sm:   calc(20 / 16) !default; // Boosted mod
 // stylelint-enable function-blacklist
 

@@ -36,7 +36,7 @@
     display: inline-block;
     width: $o-table-icon-size;
     height: $o-table-icon-size;
-    margin: -#{$spacer / 10} map-get($spacers, 2) -#{$spacer / 10} 0;
+    margin: -#{$spacer / 5} map-get($spacers, 2) -#{$spacer / 5} 0;
     font-size: $o-table-icon-size;
   }
 
@@ -50,8 +50,8 @@
   }
 
   .custom-control {
-    margin-top: .1875rem;
-    margin-bottom: .1875rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   // end mod
 
@@ -68,7 +68,6 @@
 .table-sm {
   th,
   td {
-    padding: $table-cell-padding-sm;
     line-height: $table-cell-line-height-sm;
   }
 }
