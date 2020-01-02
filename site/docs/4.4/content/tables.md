@@ -411,11 +411,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
     <thead>
         <tr>
             <th scope="col">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select all</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck">
+                    <span class="custom-control-description sr-only">Select all</span>
+                  </label>
+                 </div>
             </th>
             <th scope="col">Name</th>
             <th scope="col">Column heading</th>
@@ -426,11 +427,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
     <tbody>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 1</span>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" autocomplete="off">
+                <label class="custom-control-label" for="customCheck1">
+                  <span class="custom-control-description sr-only">Select row 1</span>
                 </label>
+               </div>
             </th>
             <td>
                 <span class="icon-folder-document" aria-hidden="true"></span>
@@ -443,11 +445,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 2</span>
-                </label>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck2">
+                    <span class="custom-control-description sr-only">Select row 2</span>
+                  </label>
+              </div>
             </th>
             <td>
                 <span class="icon-unknown-file" aria-hidden="true"></span>
@@ -460,11 +463,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr class="selected">
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 3</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck3">
+                    <span class="custom-control-description sr-only">Select row 3</span>
+                  </label>
+                </div>
             </th>
             <td>
                 <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
@@ -478,11 +482,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 4</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck4">
+                    <span class="custom-control-description sr-only">Select row 4</span>
+                  </label>
+                </div>
             </th>
             <td>
                 <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
@@ -496,11 +501,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 5</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck5" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck5">
+                    <span class="custom-control-description sr-only">Select row 5</span>
+                  </label>
+                 </div>
             </th>
             <td>
                 <span class="icon-info" aria-hidden="true"></span>

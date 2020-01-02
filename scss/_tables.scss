@@ -36,8 +36,9 @@
     display: inline-block;
     width: $o-table-icon-size;
     height: $o-table-icon-size;
-    margin: -#{$spacer / 5} map-get($spacers, 2) -#{$spacer / 5} 0;
+    margin: -#{map-get($spacers, 2)} map-get($spacers, 2) -.375rem 0;
     font-size: $o-table-icon-size;
+    vertical-align: middle;
   }
 
   [class^="svg-"]::after {
@@ -50,8 +51,10 @@
   }
 
   .custom-control {
-    margin-top: 0;
-    margin-bottom: 0;
+    display: inline-block;
+    margin: -.25rem 0 0;
+    line-height: 1;
+    vertical-align: middle;
   }
   // end mod
 
@@ -143,13 +146,7 @@
 }
 
 // Boosted mod
-.has-checkbox {
-  tr * {
-    vertical-align: middle;
-  }
-
-  tr > :first-child {
-    width: $spacer;
-  }
+.has-checkbox tr > :first-child {
+  width: $spacer;
 }
 // end mod
