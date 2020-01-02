@@ -82,74 +82,7 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 {% endcapture %}
 {% include example.html content=example %}
 
-## Table head options
-
-Similar to tables and dark tables, use the modifier classes `.thead-light` or `.thead-dark` to make `<thead>`s appear light or dark gray.
-
-{% capture example %}
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: no Table head options
 
 [comment]: # Boosted mod: no Striped rows
 
@@ -478,11 +411,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
     <thead>
         <tr>
             <th scope="col">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select all</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck">
+                    <span class="custom-control-description sr-only">Select all</span>
+                  </label>
+                 </div>
             </th>
             <th scope="col">Name</th>
             <th scope="col">Column heading</th>
@@ -493,11 +427,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
     <tbody>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 1</span>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" autocomplete="off">
+                <label class="custom-control-label" for="customCheck1">
+                  <span class="custom-control-description sr-only">Select row 1</span>
                 </label>
+               </div>
             </th>
             <td>
                 <span class="icon-folder-document" aria-hidden="true"></span>
@@ -510,11 +445,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 2</span>
-                </label>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck2">
+                    <span class="custom-control-description sr-only">Select row 2</span>
+                  </label>
+              </div>
             </th>
             <td>
                 <span class="icon-unknown-file" aria-hidden="true"></span>
@@ -527,11 +463,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr class="selected">
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" checked>
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 3</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck3">
+                    <span class="custom-control-description sr-only">Select row 3</span>
+                  </label>
+                </div>
             </th>
             <td>
                 <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
@@ -545,11 +482,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 4</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck4">
+                    <span class="custom-control-description sr-only">Select row 4</span>
+                  </label>
+                </div>
             </th>
             <td>
                 <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
@@ -563,11 +501,12 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 5</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck5" autocomplete="off">
+                  <label class="custom-control-label" for="customCheck5">
+                    <span class="custom-control-description sr-only">Select row 5</span>
+                  </label>
+                 </div>
             </th>
             <td>
                 <span class="icon-info" aria-hidden="true"></span>
@@ -586,8 +525,76 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
                 <span class="sr-only">checked</span>
             </td>
         </tr>
-        </tbody>
-    </table>
+    </tbody>
+</table>
+{% endcapture %} {% include example.html content=example %}
+
+### Sortable tables
+
+[Boosted bundle includes TableSorter]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#js-files), a jQuery plugin to make data tables sortable.
+
+Then initialize tableSorter by targetting an element, and passing some options. 
+Please refer to [TableSorter documentation](https://mottie.github.io/tablesorter/docs/) for more options.
+
+{% highlight js %}
+$(document).ready(function () {
+  $("#sortable").tablesorter({
+    sortList: [[4, 1]],
+    onRenderTemplate : function(i, t){
+      return '<span>' + t + '</span>';
+    }
+  });
+});
+{% endhighlight %}
+
+{% capture example %}
+<table id="sortable" class="table tablesorter">
+  <caption>Calls received</caption>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Number</th>
+      <th scope="col">Place called</th>
+      <th scope="col">Call class</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>08/10/12</td>
+      <td>447765896321</td>
+      <td>BT Freefone</td>
+      <td>talk</td>
+      <td>0:05:40</td>
+      <td>0.214</td>
+    </tr>
+    <tr>
+      <td>09/10/12</td>
+      <td>447765896321</td>
+      <td>BT Freefone</td>
+      <td>talk</td>
+      <td>0:19:09</td>
+      <td>0.158</td>
+    </tr>
+    <tr>
+      <td>10/10/12</td>
+      <td>447765896322</td>
+      <td>Free</td>
+      <td>talk</td>
+      <td>0:10:06</td>
+      <td>0.089</td>
+    </tr>
+    <tr>
+      <td>11/10/12</td>
+      <td>447765896324</td>
+      <td>Orange</td>
+      <td>SMS</td>
+      <td>-</td>
+      <td>0.10</td>
+    </tr>
+  </tbody>
+</table>
 {% endcapture %} {% include example.html content=example %}
 
 [comment]: # end mod

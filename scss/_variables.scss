@@ -421,11 +421,10 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .75rem map-get($spacers, 2) .875 !default; // Boosted mod
-$table-cell-padding-sm:       .5rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
+$table-cell-padding:          .5625rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
 // stylelint-disable function-blacklist
-$table-cell-line-height:      calc(23 / 16) !default; // Boosted mod
-$table-cell-line-height-sm:   calc(21 / 16) !default; // Boosted mod
+$table-cell-line-height:      calc(30 / 16) !default; // Boosted mod
+$table-cell-line-height-sm:   calc(20 / 16) !default; // Boosted mod
 // stylelint-enable function-blacklist
 
 $table-color:                 $body-color !default;
@@ -438,8 +437,8 @@ $table-hover-bg:              $gray-300 !default; // Boosted mod : #eee on white
 $table-border-width:          $border-width / 2 !default; // Boosted mod :  1px
 $table-border-color:          $gray-500 !default;
 
-$table-head-bg:               $white !default;
-$table-head-color:            $black !default;
+// $table-head-bg:               $white !default; // Boosted mod
+// $table-head-color:            $black !default; // Boosted mod
 
 $table-dark-color:            $white !default;
 $table-dark-bg:               $black !default;

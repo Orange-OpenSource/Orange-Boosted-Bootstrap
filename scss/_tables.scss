@@ -36,8 +36,9 @@
     display: inline-block;
     width: $o-table-icon-size;
     height: $o-table-icon-size;
-    margin: -#{$spacer / 10} map-get($spacers, 2) -#{$spacer / 10} 0;
+    margin: -#{map-get($spacers, 2)} map-get($spacers, 2) -.375rem 0;
     font-size: $o-table-icon-size;
+    vertical-align: middle;
   }
 
   [class^="svg-"]::after {
@@ -50,8 +51,10 @@
   }
 
   .custom-control {
-    margin-top: .1875rem;
-    margin-bottom: .1875rem;
+    display: inline-block;
+    margin: -.25rem 0 0;
+    line-height: 1;
+    vertical-align: middle;
   }
   // end mod
 
@@ -68,7 +71,6 @@
 .table-sm {
   th,
   td {
-    padding: $table-cell-padding-sm;
     line-height: $table-cell-line-height-sm;
   }
 }
@@ -93,29 +95,8 @@
 
 // Boosted mod: no Table backgrounds
 
+// Boosted mod: no thead backgrounds' variant
 
-// Dark styles
-//
-// Same table markup, but inverted color scheme: dark background and light text.
-
-// stylelint-disable-next-line no-duplicate-selectors
-.table {
-  .thead-dark {
-    th {
-      color: $table-dark-color;
-      background-color: $table-dark-bg;
-      border-color: $table-dark-border-color;
-    }
-  }
-
-  .thead-light {
-    th {
-      color: $table-head-color;
-      background-color: $table-head-bg;
-      border-color: $table-border-color;
-    }
-  }
-}
 
 .table-dark {
   color: $table-dark-color;
@@ -165,13 +146,7 @@
 }
 
 // Boosted mod
-.has-checkbox {
-  tr * {
-    vertical-align: middle;
-  }
-
-  tr > :first-child {
-    width: $spacer;
-  }
+.has-checkbox tr > :first-child {
+  width: $spacer;
 }
 // end mod
