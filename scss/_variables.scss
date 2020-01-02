@@ -438,8 +438,8 @@ $table-hover-bg:              $gray-300 !default; // Boosted mod : #eee on white
 $table-border-width:          $border-width / 2 !default; // Boosted mod :  1px
 $table-border-color:          $gray-500 !default;
 
-$table-head-bg:               $white !default;
-$table-head-color:            $black !default;
+// $table-head-bg:               $white !default; // Boosted mod
+// $table-head-color:            $black !default; // Boosted mod
 
 $table-dark-color:            $white !default;
 $table-dark-bg:               $black !default;
