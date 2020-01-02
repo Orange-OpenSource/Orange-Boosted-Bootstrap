@@ -39,9 +39,11 @@
   <!-- end mod -->
 {%- endif -%}
 
+{%- if page.layout == "docs" and page.title == "Orange megamenu" -%}
+  <script>$('#megamenu').megamenu();</script>
+{%- endif -%}
 
-
-{%- if page.layout == "docs" -%}
+{%- if page.layout == "docs" and page.title == "Custom carousel" -%}
   <!-- Boosted mod -->
   <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
   <script>window.Swiper || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/swiper.min.js"><\/script>')</script>
@@ -80,8 +82,6 @@
           }
       }
     });
-
-    $('#megamenu').megamenu();
 
     // Swiper pause and play
     $(document).ready(function () {
