@@ -525,8 +525,76 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
                 <span class="sr-only">checked</span>
             </td>
         </tr>
-        </tbody>
-    </table>
+    </tbody>
+</table>
+{% endcapture %} {% include example.html content=example %}
+
+### Sortable tables
+
+[Boosted bundle includes TableSorter]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/##js-files), a jQuery plugin to make data tables sortable.
+
+Then initialize tableSorter by targetting an element, and passing some options. 
+Please refer to [TableSorter documentation](https://mottie.github.io/tablesorter/docs/) for more options.
+
+{% highlight js %}
+$(document).ready(function () {
+  $("#sortable").tablesorter({
+    sortList: [[4, 1]],
+    onRenderTemplate : function(i, t){
+      return '<span>' + t + '</span>';
+    }
+  });
+});
+{% endhighlight %}
+
+{% capture example %}
+<table id="sortable" class="table tablesorter">
+  <caption>Calls received</caption>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Number</th>
+      <th scope="col">Place called</th>
+      <th scope="col">Call class</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>08/10/12</td>
+      <td>447765896321</td>
+      <td>BT Freefone</td>
+      <td>talk</td>
+      <td>0:05:40</td>
+      <td>0.214</td>
+    </tr>
+    <tr>
+      <td>09/10/12</td>
+      <td>447765896321</td>
+      <td>BT Freefone</td>
+      <td>talk</td>
+      <td>0:19:09</td>
+      <td>0.158</td>
+    </tr>
+    <tr>
+      <td>10/10/12</td>
+      <td>447765896322</td>
+      <td>Free</td>
+      <td>talk</td>
+      <td>0:10:06</td>
+      <td>0.089</td>
+    </tr>
+    <tr>
+      <td>11/10/12</td>
+      <td>447765896324</td>
+      <td>Orange</td>
+      <td>SMS</td>
+      <td>-</td>
+      <td>0.10</td>
+    </tr>
+  </tbody>
+</table>
 {% endcapture %} {% include example.html content=example %}
 
 [comment]: # end mod

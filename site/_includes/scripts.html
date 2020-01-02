@@ -131,7 +131,7 @@
         sortList: [[4, 1]],
         // manipulate the template string after is it created
         onRenderTemplate : function(i, t){
-          // put a span arround the text
+          // put a span around the text
           return '<span>' + t + '</span>';
         }
       });
@@ -175,10 +175,25 @@
   </script>
   <!-- end mod -->
 {%- endif -%}
+
+{%- if page.layout == "docs" and page.title == "Tables" -%}
   <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-      $('.o-nav-local').prioritynav();
-      $('#docs-navbar').navbar({sticky: true});
+    $(document).ready(function () {
+      $("#sortable").tablesorter({
+        sortList: [[4, 1]],
+        onRenderTemplate : function(i, t){
+          return '<span>' + t + '</span>';
+        }
+      });
     });
   </script>
+{%- endif -%}
+
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
+  });
+</script>
