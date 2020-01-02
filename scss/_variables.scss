@@ -424,8 +424,8 @@ $hr-margin-y:                 $spacer !default;
 $table-cell-padding:          .75rem map-get($spacers, 2) .875rem !default; // Boosted mod
 $table-cell-padding-sm:       .5rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
 // stylelint-disable function-blacklist
-$table-cell-line-height:      calc(23 / 16) !default; // Boosted mod
-$table-cell-line-height-sm:   calc(21 / 16) !default; // Boosted mod
+$table-cell-line-height:      calc(22 / 16) !default; // Boosted mod
+$table-cell-line-height-sm:   calc(20 / 16) !default; // Boosted mod
 // stylelint-enable function-blacklist
 
 $table-color:                 $body-color !default;
