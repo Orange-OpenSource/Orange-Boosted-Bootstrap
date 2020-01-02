@@ -531,7 +531,7 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
 
 ### Sortable tables
 
-[Boosted bundle includes TableSorter]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/##js-files), a jQuery plugin to make data tables sortable.
+[Boosted bundle includes TableSorter]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#js-files), a jQuery plugin to make data tables sortable.
 
 Then initialize tableSorter by targetting an element, and passing some options. 
 Please refer to [TableSorter documentation](https://mottie.github.io/tablesorter/docs/) for more options.
