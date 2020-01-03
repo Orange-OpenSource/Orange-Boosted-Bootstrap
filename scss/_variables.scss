@@ -131,6 +131,15 @@ $escaped-characters: (
   ("#","%23"),
 ) !default;
 
+// Boosted mod: PR in BS v5  → https://github.com/twbs/bootstrap/pull/29870
+// Selectors which are isolated in the transition mixin to prevent invalid selector stack
+$pseudo-vendor-prefixes: (
+  "::-webkit-",
+  "::-moz-",
+  "::-ms-"
+) !default;
+// end mod
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
