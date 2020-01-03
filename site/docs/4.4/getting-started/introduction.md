@@ -51,7 +51,7 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 
 Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
-Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), and all of `boosted.js`, `boosted.min.js`,`boosted.bundle.js` and `boosted.bundle.min.js` include [focus-visible's Polyfill](https://github.com/WICG/focus-visible) — but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
+Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), and all of `boosted.js`, `boosted.min.js`, `boosted.bundle.js` and `boosted.bundle.min.js` include [focus-visible's Polyfill](https://github.com/WICG/focus-visible) — but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -68,6 +68,17 @@ Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://pop
 {% endcapture %}
 {{ markdown | markdownify }}
 </details>
+
+{% capture callout %}
+#### Required script
+
+Boosted includes a [focus-visible polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+However, if you don't need or want to use Boosted's JavaScript files, you'll still need to use focus-visible.
+{% highlight html %}
+<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" integrity="sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=" crossorigin="anonymous"></script>
+{% endhighlight %}
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
 
 ## Starter template
 
