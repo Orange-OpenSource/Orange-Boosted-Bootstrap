@@ -28,11 +28,12 @@ Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}
 
 <a href="{{ site.download.source }}" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
-## BoostedCDN
+## Boosted CDN
 
 Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.
 
 {% highlight html %}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
@@ -40,12 +41,21 @@ Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached v
 If you're using our compiled JavaScript, don't forget to include CDN versions of jQuery and Popper.js before it.
 
 {% highlight html %}
-<script src="{{ site.cdn.focusvisible }}" integrity="{{ site.cdn.focusvisible_hash }}" crossorigin="anonymous"></script>
+<!-- In your <head> -->
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<!-- Just before </body> -->
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
+
+{% capture callout %}
+### Ressource Hints
+Make sure to use [`preconnect` ressource hint](https://www.w3.org/TR/resource-hints/#preconnect) where appropriate (**only** when given URL **will** be used).
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
 
 ## Package managers
 
