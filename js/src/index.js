@@ -15,6 +15,7 @@ import Tab from './tab'
 import Toast from './toast'
 import Tooltip from './tooltip'
 import Util from './util'
+// eslint-disable-next-line sort-imports
 import '../../node_modules/focus-visible/dist/focus-visible.js'
 
 /**
