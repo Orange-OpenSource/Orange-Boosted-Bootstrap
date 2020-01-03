@@ -91,8 +91,13 @@ Be sure to have your pages set up with the latest design and development standar
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hello, world!</title>
 
+    <!-- Preconnect to CDNs: remove if not needed -->
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    
     <!--
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
@@ -101,6 +106,8 @@ Be sure to have your pages set up with the latest design and development standar
       If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
+    <link rel="preload" href="fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/orangeHelvetica.min.css" />
     <!--
       Orange Icons
@@ -111,8 +118,6 @@ Be sure to have your pages set up with the latest design and development standar
 
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -178,6 +183,25 @@ Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box
 ### Reboot
 
 For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+
+### Ressource Hints
+
+[Ressource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
+It should be used for critical resources only.
+
+#### `preload` fonts
+
+{% highlight html %}
+<link rel="preload" href="fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+{% endhighlight %}
+
+#### `preconnect` to CDNs
+
+{% highlight html %}
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+{% endhighlight %}
 
 ## Community
 
