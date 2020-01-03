@@ -138,8 +138,8 @@ Similarly, we have options for including some or all of our compiled JavaScript.
       <td class="bg-success font-weight-bold">Included</td>
       <td class="bg-success font-weight-bold">Included</td>
       <td class="bg-light">Not included</td>
-      <td class="bg-success font-weight-bold">Included</td>
-      <td class="bg-success font-weight-bold">Included</td>
+      <td class="bg-light">Not included</td>
+      <td class="bg-light">Not included</td>
     </tr>
     <tr>
       <th scope="row">
