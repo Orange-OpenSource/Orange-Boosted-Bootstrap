@@ -43,7 +43,6 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 <!-- if you need ajax or effects
 <script src="{{ site.cdn.jquery_full }}" integrity="{{ site.cdn.jquery_full_hash }}" crossorigin="anonymous"></script>
 -->
-<script src="{{ site.cdn.focusvisible }}" integrity="{{ site.cdn.focusvisible_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
@@ -52,7 +51,7 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 
 Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
-Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/) and [focus-visible's Polyfill](https://github.com/WICG/focus-visible), but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
+Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), and all of `boosted.js`, `boosted.min.js`,`boosted.bundle.js` and `boosted.bundle.min.js` include [focus-visible's Polyfill](https://github.com/WICG/focus-visible) — but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -113,7 +112,6 @@ Be sure to have your pages set up with the latest design and development standar
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Boosted JS. -->
-    <script src="{{ site.cdn.focusvisible }}" integrity="{{ site.cdn.focusvisible_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
