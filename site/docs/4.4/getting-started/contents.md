@@ -146,7 +146,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">boosted.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.min.js</code></div>
       </th>
-      <td class="bg-light">Not included</td>
+      <td class="bg-success font-weight-bold">Included</td>
       <td class="bg-light">Not included</td>
       <td class="bg-light">Not included</td>
       <td class="bg-light">Not included</td>
