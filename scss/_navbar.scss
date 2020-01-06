@@ -444,6 +444,10 @@
         .nav-link.active::before {
           bottom: -.4375rem;
         }
+
+        &.minimized .nav-link.active::before {
+          bottom: -.1875rem;
+        }
         // end mod
 
         .navbar-nav {
