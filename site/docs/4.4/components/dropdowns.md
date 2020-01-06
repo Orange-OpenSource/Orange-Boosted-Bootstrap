@@ -464,7 +464,7 @@ Add `.active` to items in the dropdown to **style them as active**.
 {% capture callout %}
 #### Accessible state
 
-In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders and screen magnifiers…) that can support it by informing the user about the current element.
+In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders, screen magnifiers…) that support it by informing the user about the current element.
 {% endcapture %}
 {% include callout.html content=callout %}
 

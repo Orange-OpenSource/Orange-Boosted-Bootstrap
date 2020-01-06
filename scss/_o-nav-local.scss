@@ -8,15 +8,32 @@
   border-bottom: $border-width / 2 solid $gray-500;
 
   .nav-link {
+    position: relative;
     padding: .875rem $nav-link-padding-x;
 
     &:focus {
       outline-offset: -#{$border-width};
     }
+
+    &.active::after {
+      position: absolute;
+      right: $nav-link-padding-x;
+      bottom: -#{map-get($spacers, 2) / 10};
+      left: $nav-link-padding-x;
+      height: $border-width * 2;
+      content: "";
+      background-color: currentColor;
+    }
   }
 
-  .nav > .nav-item:first-child .nav-link {
-    padding-left: 0;
+  .nav > .nav-item:first-child {
+    .nav-link {
+      padding-left: 0;
+    }
+
+    .active::after {
+      left: 0;
+    }
   }
 
   &.navbar-dark {

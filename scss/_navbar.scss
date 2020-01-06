@@ -50,6 +50,20 @@
       @extend %container-flex-properties;
     }
   }
+
+  // Boosted mod
+  &.p-0,
+  &.py-0,
+  &.pb-0 {
+    .nav-link.active::after {
+      bottom: -#{$border-width};
+    }
+  }
+
+  .nav-link.active.pl-0::after {
+    left: 0;
+  }
+  // end mod
 }
 
 
@@ -150,10 +164,6 @@
       padding: $navbar-padding-y map-get($spacers, 2);
     }
 
-    &.active::before {
-      display: none;
-    }
-
     &[class*="svg-"]::after {
       width: $navbar-supra-icon-size;
       height: $navbar-supra-icon-size;
@@ -166,6 +176,16 @@
 
     &:focus {
       outline-offset: -#{$border-width};
+    }
+
+    &.active::after {
+      position: absolute;
+      right: map-get($spacers, 2);
+      bottom: $navbar-padding-y;
+      left: map-get($spacers, 2);
+      height: $border-width * 2;
+      content: "";
+      background-color: currentColor;
     }
   }
 
@@ -352,6 +372,10 @@
       @include media-breakpoint-up($breakpoint) {
         padding: $navbar-expanded-padding-y $navbar-expanded-padding-x .4375rem;
 
+        .nav-link.active::after {
+          bottom: -.4375rem;
+        }
+
         .navbar-brand {
           margin: 0 $spacer 1.125rem 0;
 
@@ -370,6 +394,10 @@
         &.minimized {
           padding-top: $navbar-expanded-minimized-padding-y;
           padding-bottom: .1875rem;
+
+          .nav-link.active::after {
+            bottom: -.1875rem;
+          }
 
           .navbar-brand {
             margin-bottom: .8125rem;

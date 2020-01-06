@@ -42,7 +42,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 {% capture callout %}
 #### Accessibility
 
-In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar (except for Tabs panels where `aria-selected` must be used). This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
+In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar — except for tabpanels where `aria-selected` must be used. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
 {% endcapture %}
 {% include callout.html content=callout %}
 
