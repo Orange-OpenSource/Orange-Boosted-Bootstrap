@@ -506,16 +506,30 @@
   height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding
   background-color: transparent;
+  outline-offset: $border-width * 4; // Boosted mod
   appearance: none;
+  @include transition($transition-focus);
 
   &:focus {
-    outline: 0;
+    // Boosted mod: better focus visibility
+    outline: $custom-range-thumb-border;
+    outline-offset: $border-width;
+    // end mod
 
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb { box-shadow: $custom-range-thumb-focus-box-shadow; }
-    &::-moz-range-thumb     { box-shadow: $custom-range-thumb-focus-box-shadow; }
-    &::-ms-thumb            { box-shadow: $custom-range-thumb-focus-box-shadow; }
+    &::-webkit-slider-thumb {
+      border-color: $custom-range-track-progress-bg;
+      box-shadow: $custom-range-thumb-focus-box-shadow;
+    }
+    &::-moz-range-thumb {
+      border-color: $custom-range-track-progress-bg;
+      box-shadow: $custom-range-thumb-focus-box-shadow;
+    }
+    &::-ms-thumb {
+      border-color: $custom-range-track-progress-bg;
+      box-shadow: $custom-range-thumb-focus-box-shadow;
+    }
   }
 
   &::-moz-focus-outer {
@@ -529,15 +543,14 @@
     cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    // stylelint-disable-next-line property-blacklist
-    border-radius: $custom-range-thumb-border-radius; // Boosted mod: always rounded
+    @include border-radius($custom-range-thumb-border-radius, $custom-range-thumb-border-radius); // Boosted mod: always rounded
     @include box-shadow($custom-range-thumb-box-shadow);
-    @include transition($custom-forms-transition);
+    // @include transition($custom-forms-transition); // Boosted mod
     appearance: none;
 
     &:active {
       cursor: grabbing; // Boosted mod
-      @include gradient-bg($custom-range-thumb-active-bg);
+      // @include gradient-bg($custom-range-thumb-active-bg); // Boosted mod
     }
   }
 
@@ -558,15 +571,14 @@
     cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    // stylelint-disable-next-line property-blacklist
-    border-radius: $custom-range-thumb-border-radius; // Boosted mod: always rounded
+    @include border-radius($custom-range-thumb-border-radius, $custom-range-thumb-border-radius); // Boosted mod: always rounded
     @include box-shadow($custom-range-thumb-box-shadow);
-    @include transition($custom-forms-transition);
+    // @include transition($custom-forms-transition); // Boosted mod
     appearance: none;
 
     &:active {
       cursor: grabbing; // Boosted mod
-      @include gradient-bg($custom-range-thumb-active-bg);
+      // @include gradient-bg($custom-range-thumb-active-bg); // Boosted mod
     }
   }
 
@@ -599,15 +611,14 @@
     cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
-    // stylelint-disable-next-line property-blacklist
-    border-radius: $custom-range-thumb-border-radius; // Boosted mod: always rounded
+    @include border-radius($custom-range-thumb-border-radius, $custom-range-thumb-border-radius); // Boosted mod: always rounded
     @include box-shadow($custom-range-thumb-box-shadow);
-    @include transition($custom-forms-transition);
+    // @include transition($custom-forms-transition); // Boosted mod
     appearance: none;
 
     &:active {
       cursor: grabbing; // Boosted mod
-      @include gradient-bg($custom-range-thumb-active-bg);
+      // @include gradient-bg($custom-range-thumb-active-bg); // Boosted mod
     }
   }
 
