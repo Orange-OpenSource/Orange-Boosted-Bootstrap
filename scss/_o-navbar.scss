@@ -45,10 +45,3 @@
     right: -#{map-get($spacers, 1)};
   }
 }
-
-@include media-breakpoint-down(sm) {
-  .navbar-brand,
-  .navbar-brand + .navbar-brand {
-    align-self: center;
-  }
-}

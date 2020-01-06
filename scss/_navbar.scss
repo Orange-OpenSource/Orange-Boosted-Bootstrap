@@ -61,7 +61,7 @@
   position: relative; // Boosted mod
   display: inline-flex; // Boosted mod
   align-items: baseline; // Boosted mod
-  align-self: flex-end; // Boosted mod
+  align-self: center; // Boosted mod
   padding: 0; // Boosted mod
   margin: map-get($spacers, 1); // Boosted mod
   @include font-size($navbar-brand-font-size);
@@ -74,6 +74,7 @@
 
   // Boosted mod
   @include media-breakpoint-up(sm) {
+    align-self: flex-end;
     margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem};
   }
   // end mod
