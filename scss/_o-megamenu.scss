@@ -78,6 +78,7 @@
             &:hover::after,
             &:focus::after,
             &:active::after,
+            &.active::after,
             &[aria-expanded="true"]::after {
               background-image: escape-svg($o-megamenu-icon-active);
             }
@@ -96,7 +97,8 @@
           .back:active::before,
           [aria-haspopup]:hover::after,
           [aria-haspopup]:focus::after,
-          [aria-haspopup]:active::after {
+          [aria-haspopup]:active::after,
+          [aria-haspopup].active::after {
             background-image: escape-svg($o-megamenu-arrow-icon-hover);
           }
 
