@@ -20,19 +20,19 @@
     <div class="collapse navbar-collapse" id="bd-main-nav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
+            <a class="nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" aria-label="Boosted" {% if page.layout == "home" %}aria-current="page"{% endif %} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+            <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" {% if page.layout == "docs" %}aria-current="page"{% endif %} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.title == "Essentials" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/essentials/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
+            <a class="nav-link {% if page.title == "Essentials" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/essentials/" {% if page.layout == "Essentials" %}aria-current="page"{% endif %} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+            <a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/" {% if page.layout == "Examples" %}aria-current="page"{% endif %} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boostwatch/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+            <a class="nav-link {% if page.title == "Boostwatch" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boostwatch/" {% if page.layout == "Boostwatch" %}aria-current="page"{% endif %} onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
           </li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
