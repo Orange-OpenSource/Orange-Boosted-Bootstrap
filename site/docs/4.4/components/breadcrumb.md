@@ -11,7 +11,7 @@ group: components
 <nav role="navigation" aria-labelledby="breadcrumb-intro">
   <p class="sr-only" id="breadcrumb-intro">You are here:</p>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+    <li class="breadcrumb-item active" aria-current="location">Home</li>
   </ol>
 </nav>
 
@@ -19,7 +19,7 @@ group: components
   <p class="sr-only" id="breadcrumb-intro-2">You are here:</p>
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item active" aria-current="location">Library</li>
   </ol>
 </nav>
 
@@ -28,7 +28,7 @@ group: components
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item active" aria-current="location">Data</li>
   </ol>
 </nav>
 {% endcapture %}
@@ -55,6 +55,6 @@ $breadcrumb-divider: none;
 ## Accessibility
 
 Since breadcrumbs provide a navigation, it's a good idea to add **a meaningful label** such as `<p class="sr-only" id="breadcrumb-title">You are here:</p>` to describe the type of navigation provided in the `<nav aria-labelledby="breadcrumb-title">` element 
-— please notice the `id` attribute on `<p>`, then referenced in `aria-labelledby` on `<nav>` — as well as applying an `aria-current="page"` to the last item of the set to **indicate the current page**.
+— please notice the `id` attribute on `<p>`, then referenced in `aria-labelledby` on `<nav>` — as well as applying an `aria-current="location"` to the last item of the set to **indicate the current page**.
 
 For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
