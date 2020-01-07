@@ -2,8 +2,25 @@
 // Mega menu
 //
 
-.mega-menu-panel [role="menu"] {
-  flex-direction: column;
+.mega-menu-panel {
+  [role="menu"] {
+    flex-direction: column;
+  }
+
+  .nav-link.active {
+    text-decoration: underline;
+    // stylelint-disable-next-line property-no-unknown
+    text-decoration-thickness: $border-width;
+    text-underline-offset: $border-width * 2;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.mega-menu .nav-link[aria-expanded="true"] {
+  color: $navbar-dark-hover-color;
 }
 
 .nav-heading {
@@ -58,13 +75,9 @@
             }
           }
 
-          [aria-expanded="true"] {
-            color: $navbar-dark-hover-color;
-
-            &::after {
-              background-image: escape-svg($o-megamenu-arrow-icon-hover);
-              transform: rotateZ(180deg);
-            }
+          [aria-expanded="true"]::after {
+            background-image: escape-svg($o-megamenu-arrow-icon-hover);
+            transform: rotateZ(180deg);
           }
 
           [data-toggle="collapse"] {
@@ -172,7 +185,7 @@
           }
 
           [role="menu"] .nav-link {
-            padding: map-get($spacers, 1) 0;
+            padding: map-get($spacers, 1) map-get($spacers, 5) map-get($spacers, 1) 0;
           }
 
           .back {

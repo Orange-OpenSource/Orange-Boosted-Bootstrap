@@ -47,7 +47,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                           <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
                           <li class="nav-item"><span class="nav-heading text-primary">Mobile</span></li>
                           <li class="nav-item"><a class="nav-link" href="#">Phones</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Plans</a></li>
+                          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Plans</a></li>
                           <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
                         </ul>
                       </li>
