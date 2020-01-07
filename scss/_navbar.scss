@@ -23,6 +23,7 @@
   justify-content: space-between; // space out brand from logo
   padding: 0; // Boosted mod
   font-weight: $font-weight-bold; // Boosted mod
+  @include transition($navbar-transition); // Boosted mod
 
   @include media-breakpoint-up(md) {
     padding: $navbar-padding-y $navbar-padding-x;
@@ -86,7 +87,7 @@
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
   outline-offset: $spacer; // Boosted mod
-  @include transition($transition-focus); // Boosted mod
+  @include transition($transition-focus, $navbar-brand-transition); // Boosted mod
 
   // Boosted mod
   @include media-breakpoint-up(sm) {
@@ -130,6 +131,7 @@
   img {
     width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
+    @include transition($navbar-brand-logo-transition);
 
     + * {
       margin: 0 $spacer 0 .9375rem;
@@ -160,7 +162,7 @@
     position: relative;
     padding: map-get($spacers, 2) map-get($spacers, 1);
     outline-offset: $spacer;
-    @include transition($transition-focus);
+    @include transition($transition-focus, $navbar-transition);
 
     &[class*="svg-"]::after {
       width: $navbar-supra-icon-size;
@@ -179,6 +181,7 @@
       height: $border-width * 2;
       content: "";
       background-color: currentColor;
+      @include transition($navbar-active-transition);
     }
   }
 
