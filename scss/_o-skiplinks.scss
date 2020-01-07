@@ -1,56 +1,15 @@
 .skiplinks {
-  z-index: 99999;
-}
-.skiplinks .skiplinks-section li {
-  float: left;
-}
-.skiplinks .skiplinks-section a {
-  display: block;
-  padding: 10px;
-  font-weight: $font-weight-bold;
-  border-color: #999;
-  border-style: none solid none none;
-  border-width: 0 1px 0 0;
-}
-.skiplinks .skiplinks-section.skiplinks-show {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  z-index: 10000000;
-  width: auto;
-  height: auto;
-  margin-left: -175px;
-  overflow: hidden;
-  background: none repeat scroll 0 0 $gray-500;
-  border: 2px solid #000;
-  @include border-radius(0);
-  box-shadow: 2px 2px 1634px 1604px rgba(0, 0, 0, .3);
-}
-.skiplinks .skiplinks-section a:hover {
-  cursor: pointer;
-}
+  position: fixed;
+  z-index: $zindex-skiplinks;
 
-.skiplinks .skiplinks-section a:hover,
-.skiplinks .skiplinks-section a:focus {
-  color: #f16e00;
-  background-color: #fff;
-  outline: 0;
-}
+  a {
+    outline-offset: $border-width * 6;
+  }
 
-.skiplinks a,
-.skiplinks ul,
-.skiplinks li,
-.skiplinks div {
-  float: none;
-  padding: 0;
-  margin: 0;
-  font-size: .95em;
-  font-weight: $font-weight-normal;
-  line-height: normal;
-  color: #000;
-  text-decoration: none;
-  text-shadow: none;
-  list-style: none;
-  background: none repeat scroll 0 0 transparent;
-  border: 0 none;
+  a:focus {
+    font-weight: $font-weight-bold;
+    color: $orange-2;
+    background-color: $black;
+    outline-offset: $border-width * 2;
+  }
 }

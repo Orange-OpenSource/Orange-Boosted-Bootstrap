@@ -27,6 +27,12 @@
     }
   }
 
+  .nav-link.active::before {
+    right: map-get($spacers, 1);
+    bottom: -#{map-get($spacers, 2) / 10};
+    left: map-get($spacers, 1);
+  }
+
   .nav-link[class*="svg-"] {
     padding: $spacer / 5 map-get($spacers, 2);
 
@@ -43,12 +49,5 @@
   .badge {
     top: 0;
     right: -#{map-get($spacers, 1)};
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .navbar-brand,
-  .navbar-brand + .navbar-brand {
-    align-self: center;
   }
 }

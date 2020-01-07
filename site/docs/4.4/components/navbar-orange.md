@@ -24,10 +24,10 @@ Orange navbar is the main navigation of project website. It should always be inc
             </button>
             <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#" aria-current="page">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -48,15 +48,17 @@ Orange navbar is the main navigation of project website. It should always be inc
 {% endcapture %} {% include example.html content=example %}
 
 Using icons as links is possible, be sure to add the `.icon` class to the `.nav-link` element for proper alignement.
+
 {% capture callout %}
 #### Accessibility
 
-In addition to this `.active` class to show the current page in the navbar, you must use `aria-current="page"` state. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
-{% endcapture %}
+In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders, screen magnifiers…) that support it by informing the user about the current element.
+{% endcapture %} {% include callout.html content=callout type='warning' %}
 
 ## Supra bar
 
-Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar declaration. 
+Another navigation can be added on top of orange navbar, it is called supar bar. Simply add the `.supra` class in you navbar declaration.
+ 
 {% capture callout %}
 This navbar is visible only on desktop view.
 {% endcapture %}
@@ -66,9 +68,9 @@ This navbar is visible only on desktop view.
 <nav role="navigation" class="navbar navbar-dark navbar-expand-md supra">
     <div class="container">
         <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Personal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Follow us</a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -102,9 +104,9 @@ A supra bar should never be used on its own and always be included in header and
     <nav role="navigation" class="navbar navbar-dark navbar-expand-md supra" aria-label="Complementary navigation">
         <div class="container">
             <ul class="navbar-nav">
-                <li class="nav-item active"><a href="#" class="nav-link" aria-current="page">Personal</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Follow us</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Personal</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Follow us</a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -137,8 +139,8 @@ A supra bar should never be used on its own and always be included in header and
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">My Orange</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">

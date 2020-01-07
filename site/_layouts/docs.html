@@ -16,7 +16,7 @@
         </div>
 
         {% if page.toc %}
-          <nav role="navigation" class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+          <nav role="navigation" class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
             {{ content | toc_only }}
           </nav>
         {% endif %}

@@ -101,9 +101,12 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 
 [comment]: # Boosted mod
 
+{% capture callout %}
 ### Accessibility
 
-In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the pagination's pages. This is to ensure a better accessibility to assistive technologies (such as screenreaders and screen magnifiers…) that can support it by warning the user of the current element position and type, here it's the current page.
+In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the pagination. This is to ensure a better accessibility to assistive technologies (such as screenreaders, screen magnifiers…) that support it by informing the user about the current element.
+{% endcapture %}
+{% include callout.html content=callout type='warning' %}
 
 [comment]: # End mod
 

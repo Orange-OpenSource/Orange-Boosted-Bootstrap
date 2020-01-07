@@ -46,7 +46,7 @@ If there's only one, you can leave as-is.
 
 #### Current page
 
-In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the navbar. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
+In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders, screen magnifiers…) that support it by informing the user about the current element.
 {% endcapture %}
 {% include callout.html content=callout type='warning' %}
 
@@ -61,8 +61,9 @@ In addition to the `.active` class, you must use `aria-current="page"` state to 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -147,8 +148,9 @@ Active states—with `.active`—to indicate the current page can be applied dir
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -195,8 +197,9 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -298,8 +301,9 @@ Mix and match with other components and utilities as needed.
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -328,8 +332,9 @@ Theming the navbar has never been easier thanks to the combination of theming cl
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <!-- Boosted mod: active class on link -->
+          <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
@@ -357,8 +362,9 @@ Theming the navbar has never been easier thanks to the combination of theming cl
     </button>
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <!-- Boosted mod: active class on link -->
+          <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
@@ -468,8 +474,9 @@ With no `.navbar-brand` shown in lowest breakpoint:
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#">Hidden brand</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -498,8 +505,9 @@ With a brand name shown on the left and toggler on the right:
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#" aria-current="page">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -528,8 +536,9 @@ With a toggler on the left and brand name on the right:
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <!-- Boosted mod: active class on link -->
+        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>

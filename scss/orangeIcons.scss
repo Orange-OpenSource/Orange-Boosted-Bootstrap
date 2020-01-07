@@ -2797,9 +2797,10 @@
   &:hover,
   &:focus,
   &:active,
+  &.active,
   :hover > &,
   :focus > & {
-    @include svg-settings(theme-color("primary"));
+    @include svg-settings($orange-2);
   }
 }
 
@@ -2809,9 +2810,10 @@
   &:hover,
   &:focus,
   &:active,
+  &.active,
   :hover > &,
   :focus > & {
-    @include svg-search(theme-color("primary"));
+    @include svg-search($orange-2);
   }
 }
 
@@ -2821,9 +2823,10 @@
   &:hover,
   &:focus,
   &:active,
+  &.active,
   :hover > &,
   :focus > & {
-    @include svg-avatar(theme-color("primary"));
+    @include svg-avatar($orange-2);
   }
 }
 
@@ -2833,9 +2836,10 @@
   &:hover,
   &:focus,
   &:active,
+  &.active,
   :hover > &,
   :focus > & {
-    @include svg-buy(theme-color("primary"));
+    @include svg-buy($orange-2);
   }
 }
 
@@ -2845,9 +2849,10 @@
   &:hover,
   &:focus,
   &:active,
+  &.active,
   :hover > &,
   :focus > & {
-    @include svg-mail(theme-color("primary"));
+    @include svg-mail($orange-2);
   }
 }
 

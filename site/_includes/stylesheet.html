@@ -2,24 +2,28 @@
 <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/tarteaucitronboosted.css" rel="stylesheet">
 <!-- Swiper -->
 <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/vendor/swiper.min.css" rel="stylesheet">
-<!-- Helvetica -->
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeHelvetica.css" rel="stylesheet">
-<!-- orangeIcons -->
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeIcons.css" rel="stylesheet">
 <!-- Boosted core CSS -->
 {%- if jekyll.environment == "production" %}
+  <!-- Helvetica -->
+  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeHelvetica.min.css" rel="stylesheet">
+  <!-- orangeIcons -->
+  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeIcons.min.css" rel="stylesheet">
   <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/boosted.min.css" rel="stylesheet">
 {% else %}
+  <!-- Helvetica -->
+  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeHelvetica.css" rel="stylesheet">
+  <!-- orangeIcons -->
+  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/orangeIcons.css" rel="stylesheet">
   <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/boosted.css" rel="stylesheet">
 {% endif -%}
 <!-- end mod -->
 
 {%- if page.layout == "docs" or page.layout != "examples" -%}
-<!-- Documentation extras -->
-{% if page.layout == "docs" %}
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-{% endif %}
-{% if page.layout != "examples" %}
-<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/docs.min.css" rel="stylesheet">
-{% endif %}
+  <!-- Documentation extras -->
+  {% if page.layout == "docs" %}
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  {% endif %}
+  {% if page.layout != "examples" %}
+  <link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/docs.min.css" rel="stylesheet">
+  {% endif %}
 {%- endif -%}

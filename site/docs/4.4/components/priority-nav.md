@@ -23,20 +23,18 @@ $('.o-nav-local').prioritynav();
 Reduce the width of your browser to see overflowing navigation items moved into a nice dropdown menu.
 
 {% capture example %}
-<div class="o-nav-local">
-    <nav role="navigation" class="container">
-        <ul class="nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Usage</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">References</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Organisation</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Worldwilde</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-        </ul>
-    </nav>
-</div>
+<nav role="navigation" class="o-nav-local navbar-light">
+    <ul class="container nav">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Usage</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">References</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Organisation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Worldwilde</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+    </ul>
+</nav>
 {% endcapture %} {% include example.html content=example %}
 
 ## Options

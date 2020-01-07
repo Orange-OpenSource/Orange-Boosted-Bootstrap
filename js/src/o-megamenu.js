@@ -29,7 +29,8 @@ const PERCENTAGE = 100 // Width slide proportion
 const SPLITLENGHT = 4
 
 const ClassName = {
-  TRANSITIONING: 'transitioning'
+  TRANSITIONING: 'transitioning',
+  ACTIVE: 'active'
 }
 
 const Selector = {
@@ -42,7 +43,8 @@ const Selector = {
   NAV_LINK : '.nav-link',
   NAV_LINK_COLLAPSE : '.nav-link[data-toggle=collapse]',
   NAV_LINK_BACK : '.nav-link.back',
-  NAV_LINK_EXPANDED : '.nav-link[aria-expanded=true]'
+  NAV_LINK_EXPANDED : '.nav-link[aria-expanded=true]',
+  CURRENT: '.nav-link[aria-current="page"]'
 }
 
 
@@ -90,7 +92,8 @@ class MegaMenu {
   }
 
   _addAriaAttributes(element) {
-    const $subNavs = $(element).find('.nav-link + .navbar-nav')
+    const $subNavs = $(element).find(Selector.MEGAMENU_NAV)
+    const $parents = $(element).find(Selector.CURRENT).parents(Selector.NAV_ITEM)
 
     $(element).attr('role', 'application')
     $(element).find('> .navbar-nav').attr('role', 'menu')
@@ -98,6 +101,10 @@ class MegaMenu {
     $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem')
     $(element).find(Selector.NAV_LINK_BACK).attr('aria-hidden', 'true')
     $(element).find(Selector.NAV_ITEM).attr('role', 'presentation')
+
+    $parents.each(function () {
+      $(this).find(Selector.NAV_LINK).first().attr('aria-current', 'true')
+    })
 
     $subNavs.each(function () {
       const navId = Util.getUID(NAME)
@@ -135,15 +142,18 @@ class MegaMenu {
     const $rootNav = $target.closest(Selector.ROOT_NAV)
 
     $rootNav.addClass(ClassName.TRANSITIONING)
+    this._$navLinkCollapses.removeClass(ClassName.ACTIVE)
 
     // open collapse
     if ($target.attr('data-toggle') === 'collapse') {
       $target.siblings(Selector.MEGAMENU_PANEL).collapse('show')
+      $target.addClass(ClassName.ACTIVE)
       this._$topCollapseMenus.not($target.siblings(Selector.MEGAMENU_PANEL)).collapse('hide')
       $(this._element).height('auto')
       $rootNav.css('transform', 'translateX(0%)')
     } else {
       $target.closest(Selector.MEGAMENU_PANEL).collapse('show')
+      $target.closest(Selector.NAV_LINK_COLLAPSE).addClass(ClassName.ACTIVE)
       this._$topCollapseMenus.not($target.closest(Selector.MEGAMENU_PANEL)).collapse('hide')
 
       // show menu and hide other
@@ -213,7 +223,9 @@ class MegaMenu {
     const $this = $(e.target)
     const $thisCollapse = $($this.attr('href'))
 
-    this._$topCollapseMenus.not($thisCollapse).collapse('hide')
+    $this.addClass(ClassName.ACTIVE)
+    this._$navLinkCollapses.not($this).removeClass(ClassName.ACTIVE)
+    this._$topCollapseMenus.not($thisCollapse).removeClass(ClassName.ACTIVE).collapse('hide')
   }
 
   _goForward(e) {

@@ -249,16 +249,16 @@ class ScrollSpy {
     const $link = $([].slice.call(document.querySelectorAll(queries.join(','))))
 
     if ($link.hasClass(ClassName.DROPDOWN_ITEM)) {
-      $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE)
-      $link.addClass(ClassName.ACTIVE)
+      $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE).attr('aria-current', 'true')
+      $link.addClass(ClassName.ACTIVE).attr('aria-current', 'page')
     } else {
       // Set triggered link as active
-      $link.addClass(ClassName.ACTIVE)
+      $link.addClass(ClassName.ACTIVE).attr('aria-current', 'page')
       // Set triggered links parents as active
       // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-      $link.parents(Selector.NAV_LIST_GROUP).prev(`${Selector.NAV_LINKS}, ${Selector.LIST_ITEMS}`).addClass(ClassName.ACTIVE)
+      $link.parents(Selector.NAV_LIST_GROUP).prev(`${Selector.NAV_LINKS}, ${Selector.LIST_ITEMS}`).addClass(ClassName.ACTIVE).attr('aria-current', 'true')
       // Handle special case when .nav-link is inside .nav-item
-      $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_ITEMS).children(Selector.NAV_LINKS).addClass(ClassName.ACTIVE)
+      $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_ITEMS).children(Selector.NAV_LINKS).addClass(ClassName.ACTIVE).attr('aria-current', 'true')
     }
 
     $(this._scrollElement).trigger(Event.ACTIVATE, {
@@ -269,7 +269,10 @@ class ScrollSpy {
   _clear() {
     [].slice.call(document.querySelectorAll(this._selector))
       .filter((node) => node.classList.contains(ClassName.ACTIVE))
-      .forEach((node) => node.classList.remove(ClassName.ACTIVE))
+      .forEach((node) => {
+        node.classList.remove(ClassName.ACTIVE)
+        node.removeAttribute('aria-current')
+      })
   }
 
   // Static

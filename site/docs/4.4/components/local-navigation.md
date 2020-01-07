@@ -14,7 +14,7 @@ You also **need to choose a color scheme** by setting `.navbar-light` or `.navba
 {% capture callout %}
 ### Accessibility
 
-In addition to the `.active` class, you must use `aria-current="page"` state to represent the current location within the local navigation. This is to ensure a better accessibility to assistive technologies (as screenreaders , screen magnifiers...) that can support it by warning the user of the current element position and type, here it's the current page.
+In addition to the `.active` class, you must use `aria-current="page"` attribute to represent the current item within the navigation group. This is to ensure a better accessibility to assistive technologies (such as screenreaders, screen magnifiers…) that support it by informing the user about the current element.
 {% endcapture %}
 {% include callout.html content=callout %}
 

@@ -107,7 +107,6 @@ class Dropdown {
     this._inNavbar = this._detectNavbar()
 
     this._addEventListeners()
-    this._addAccessibility() // Boosted mod
   }
 
   // Getters
@@ -363,16 +362,6 @@ class Dropdown {
       ...this._config.popperConfig
     }
   }
-
-  // Boosted mod
-  _addAccessibility() {
-    $(this._element).attr('aria-haspopup', true)
-    // ensure that dropdown-menu have the role menu
-    $(this._element).parent().children(Selector.MENU).attr('role', 'menu')
-    // ensure that dropdown-itm's have the role menuitem
-    $(this._element).parent().children(Selector.MENU).children('.dropdown-item').attr('role', 'menuitem')
-  }
-  // end mod
 
   // Static
 

@@ -23,6 +23,7 @@
   justify-content: space-between; // space out brand from logo
   padding: 0; // Boosted mod
   font-weight: $font-weight-bold; // Boosted mod
+  @include transition($navbar-transition); // Boosted mod
 
   @include media-breakpoint-up(md) {
     padding: $navbar-padding-y $navbar-padding-x;
@@ -50,6 +51,22 @@
       @extend %container-flex-properties;
     }
   }
+
+  // Boosted mod
+  @include media-breakpoint-up(md) {
+    &.p-0,
+    &.py-0,
+    &.pb-0 {
+      .nav-link.active::before {
+        bottom: -#{$border-width};
+      }
+    }
+  }
+
+  .nav-link.active.pl-0::before {
+    left: 0;
+  }
+  // end mod
 }
 
 
@@ -61,7 +78,7 @@
   position: relative; // Boosted mod
   display: inline-flex; // Boosted mod
   align-items: baseline; // Boosted mod
-  align-self: flex-end; // Boosted mod
+  align-self: center; // Boosted mod
   padding: 0; // Boosted mod
   margin: map-get($spacers, 1); // Boosted mod
   @include font-size($navbar-brand-font-size);
@@ -70,10 +87,11 @@
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
   outline-offset: $spacer; // Boosted mod
-  @include transition($transition-focus); // Boosted mod
+  @include transition($transition-focus, $navbar-brand-transition); // Boosted mod
 
   // Boosted mod
   @include media-breakpoint-up(sm) {
+    align-self: flex-end;
     margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem};
   }
   // end mod
@@ -113,6 +131,7 @@
   img {
     width: $navbar-brand-logo-height;
     height: $navbar-brand-logo-height;
+    @include transition($navbar-brand-logo-transition);
 
     + * {
       margin: 0 $spacer 0 .9375rem;
@@ -141,40 +160,34 @@
   // Boosted mod
   .nav-link {
     position: relative;
-    padding: map-get($spacers, 2);
+    padding: map-get($spacers, 2) map-get($spacers, 1);
     outline-offset: $spacer;
-    @include transition($transition-focus);
-
-    @include media-breakpoint-up(sm) {
-      padding: $navbar-padding-y map-get($spacers, 2);
-    }
-
-    &.active::before {
-      display: none;
-    }
+    @include transition($transition-focus, $navbar-transition);
 
     &[class*="svg-"]::after {
       width: $navbar-supra-icon-size;
       height: $navbar-supra-icon-size;
-
-      @include media-breakpoint-up(sm) {
-        width: $navbar-brand-logo-height;
-        height: $navbar-brand-logo-height;
-      }
     }
 
     &:focus {
       outline-offset: -#{$border-width};
+    }
+
+    &.active::before {
+      position: absolute;
+      right: map-get($spacers, 1);
+      bottom: 0;
+      left: map-get($spacers, 1);
+      height: $border-width * 2;
+      content: "";
+      background-color: currentColor;
+      @include transition($navbar-active-transition);
     }
   }
 
   .nav-icon {
     padding: map-get($spacers, 2) .9375rem;
     border-top: $border-width solid transparent;
-
-    @include media-breakpoint-up(sm) {
-      padding: $navbar-padding-y $spacer;
-    }
   }
 
   .btn-link,
@@ -190,8 +203,28 @@
     position: absolute;
     top: map-get($spacers, 1);
     right: 0;
+  }
 
-    @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(sm) {
+    .nav-link {
+      padding: $navbar-padding-y map-get($spacers, 2);
+
+      &[class*="svg-"]::after {
+        width: $navbar-brand-logo-height;
+        height: $navbar-brand-logo-height;
+      }
+
+      &.active::before {
+        right: map-get($spacers, 2);
+        left: map-get($spacers, 2);
+      }
+    }
+
+    .nav-icon {
+      padding: $navbar-padding-y $spacer;
+    }
+
+    .badge {
       top: map-get($spacers, 2);
       right: map-get($spacers, 2);
     }
@@ -351,8 +384,14 @@
       @include media-breakpoint-up($breakpoint) {
         padding: $navbar-expanded-padding-y $navbar-expanded-padding-x .4375rem;
 
+        .nav-link.active::before {
+          right: map-get($spacers, 2);
+          bottom: 0;
+          left: map-get($spacers, 2);
+        }
+
         .navbar-brand {
-          margin: 0 $spacer 1.125rem 0;
+          margin: 0 $spacer 1.125rem map-get($spacers, 2);
 
           img {
             width: $navbar-brand-logo-expanded-height;
@@ -369,6 +408,10 @@
         &.minimized {
           padding-top: $navbar-expanded-minimized-padding-y;
           padding-bottom: .1875rem;
+
+          .nav-link.active::before {
+            bottom: 0;
+          }
 
           .navbar-brand {
             margin-bottom: .8125rem;
@@ -399,6 +442,16 @@
       @include media-breakpoint-up($next) {
         flex-flow: row nowrap;
         justify-content: flex-start;
+
+        // Boosted mod
+        .nav-link.active::before {
+          bottom: -.4375rem;
+        }
+
+        &.minimized .nav-link.active::before {
+          bottom: -.1875rem;
+        }
+        // end mod
 
         .navbar-nav {
           flex-direction: row;
@@ -485,6 +538,11 @@
   // end mod
 
   // Boosted mod: remove the need for .navbar-nav wrapper
+  .nav-item,
+  .dropdown-item {
+    border-color: $gray-500;
+  }
+
   .nav-link {
     color: $navbar-light-color;
 

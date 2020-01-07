@@ -792,6 +792,7 @@ $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
+$zindex-skiplinks:                  1080 !default;
 
 
 // Navs
@@ -827,12 +828,19 @@ $navbar-expanded-padding-y:           1.5625rem !default;
 $navbar-expanded-padding-x:           0 !default;
 $navbar-expanded-minimized-padding-y: $navbar-padding-y !default; // Boosted mod
 
+
 // Boosted mod : adapt navbar padding when mobile view
 $navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             map-get($spacers, 4) !default;
 $navbar-brand-logo-expanded-height:    3.125rem !default;
 $navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
 $navbar-supra-icon-size:               1.5625rem !default;
+$navbar-transition-duration:           .2s !default;
+$navbar-transition-timing-function:    ease-in-out !default;
+$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 // end mod
 
 //$navbar-nav-link-padding-x:         0 !default;

@@ -16,7 +16,7 @@ Scrollspy has a few requirements to function properly:
 - When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
 - Anchors (`<a>`) are required and must point to an element with that `id`.
 
-When successfully implemented, your nav or list group will update accordingly, moving the `.active` class from one item to the next based on their associated targets.
+When successfully implemented, your nav or list group will update accordingly, moving the `.active` class and `aria-current` attribute from one item to the next based on their associated targets.
 
 ## Example in navbar
 
