@@ -68,11 +68,11 @@ grid:
 
 # Social
 title:              Boosted
-description:        "Based on Bootstrap the most popular library."
-twitter:            getbootstrap
-authors:            "Mark Otto, Jacob Thornton, Bootstrap and Boosted contributors"
-social_image_path:  /docs/4.4/assets/brand/orange_logo.jpg
-social_logo_path:   /docs/4.4/assets/brand/orange_logo_social.jpg
+description:        "Orange HTML, CSS and JS library — based on Bootstrap, the most popular library."
+twitter:            orange
+authors:            "Orange and Boosted contributors"
+social_image_path:  /docs/4.4/assets/brand/orange-social.png
+social_logo_path:   /docs/4.4/assets/brand/orange-logo.png
 
 # Custom variables
 current_version:      4.4.0
