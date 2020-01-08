@@ -143,9 +143,11 @@
 
   .form-check-input {
     @include form-validation-state-selector($state) {
-      ~ .form-check-label {
-        color: $color;
-      }
+      // Boosted mod: label color doesn't change
+      // ~ .form-check-label {
+      //  color: $color;
+      // }
+      // end mod
 
       ~ .#{$state}-feedback,
       ~ .#{$state}-tooltip {
@@ -159,10 +161,10 @@
   .custom-control-input {
     @include form-validation-state-selector($state) {
       ~ .custom-control-label {
-        color: $color;
+        // color: $color; // Boosted mod: label color doesn't change
 
         &::before {
-          color: inherit !important;
+          color: $color !important;
           border-color: currentColor !important;
           @include transition(none);
         }
