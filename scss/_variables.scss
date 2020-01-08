@@ -401,6 +401,7 @@ $small-font-size:             $font-size-sm !default; // Boosted mod → 14px
 $small-line-height:           $line-height-sm !default; // Boosted mod → 16px
 
 $text-muted:                  $gray-700 !default;
+$text-muted-dark:             $gray-600 !default; // Boosted mod: ensure contrast on dark background
 
 $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
