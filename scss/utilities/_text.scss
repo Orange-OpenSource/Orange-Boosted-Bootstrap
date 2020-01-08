@@ -45,10 +45,12 @@
 
 // Contextual colors
 
+// Boosted mod: ensure contrast
 .text-white {
   color: $white !important;
   background-color: $black !important;
 }
+// end mod
 
 @each $color, $value in $theme-colors {
   // Boosted mod: disallow functionnal colors for text
@@ -58,16 +60,33 @@
   // end mod
 }
 
-// Boosted mod
+// Boosted mod: ensure contrast
+.text-body {
+  color: $body-color !important;
+  background-color: $body-bg !important;
+}
+
+.text-muted {
+  color: $text-muted !important;
+  background-color: $white !important;
+}
+
 .bg-dark,
 .table-dark,
 .navbar-dark {
   @include text-emphasis-variant(".text-primary", $orange-2, true);
+
+  .text-body {
+    color: $body-bg !important;
+    background-color: $body-color !important;
+  }
+
+  .text-muted {
+    color: $text-muted-dark !important;
+    background-color: $black !important;
+  }
 }
 // end mod
-
-.text-body { color: $body-color !important; }
-.text-muted { color: $text-muted !important; }
 
 //.text-black-50 { color: rgba($black, .5) !important; } // Boosted mod
 //.text-white-50 { color: rgba($white, .5) !important; } // Boosted mod
