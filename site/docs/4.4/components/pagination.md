@@ -17,13 +17,12 @@ Make sure to use class `.has-label` on previous and next links as shown in the e
 
 {% capture example %}
 <nav role="navigation" aria-label="Pagination example">
+  <!-- boosted mod -->
   <ul class="pagination">
-    <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li><!-- boosted mod -->
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link has-label" href="#">Next</a></li><!-- boosted mod -->
+    <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link has-label" href="#">Next</a></li>
   </ul>
+  <!-- end mod -->
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
@@ -36,7 +35,7 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 <nav role="navigation" aria-label="Pagination example with icons">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
+      <a class="page-link" href="#" title="Previous">
         <span class="sr-only">Previous</span>
       </a>
     </li>
@@ -44,7 +43,7 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
+      <a class="page-link" href="#" title="Next">
         <span class="sr-only">Next</span>
       </a>
     </li>
@@ -63,7 +62,9 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 <nav role="navigation" aria-label="Pagination example with disabled item">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true" title="Previous">
+        <span class="sr-only">Previous</span>
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -71,7 +72,9 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link has-label" href="#">Next</a>
+      <a class="page-link" href="#" title="Next">
+        <span class="sr-only">Next</span>
+      </a>
     </li>
   </ul>
 </nav>
@@ -84,7 +87,9 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 <nav role="navigation" aria-label="Pagination example with active span item">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" title="Previous">
+        <span class="sr-only">Previous</span>
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -92,7 +97,9 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link has-label" href="#">Next</a>
+      <a class="page-link" href="#" title="Next">
+        <span class="sr-only">Next</span>
+      </a>
     </li>
   </ul>
 </nav>
@@ -120,13 +127,17 @@ Change the alignment of pagination components with [flexbox utilities]({{ site.b
 <nav role="navigation" aria-label="Pagination example, centered">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" title="Previous">
+        <span class="sr-only">Previous</span>
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link has-label" href="#">Next</a>
+      <a class="page-link" href="#" title="Next">
+        <span class="sr-only">Next</span>
+      </a>
     </li>
   </ul>
 </nav>
@@ -137,13 +148,17 @@ Change the alignment of pagination components with [flexbox utilities]({{ site.b
 <nav role="navigation" aria-label="Pagination example, end aligned">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
-      <a class="page-link has-label" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" title="Previous">
+        <span class="sr-only">Previous</span>
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link has-label" href="#">Next</a>
+      <a class="page-link" href="#" title="Next">
+        <span class="sr-only">Next</span>
+      </a>
     </li>
   </ul>
 </nav>
