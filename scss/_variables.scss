@@ -917,7 +917,13 @@ $dropdown-header-color:             $black !default;
 // Pagination
 
 $pagination-padding-y:              map-get($spacers, 2) !default;
-$pagination-padding-x:              .875rem !default; // Boosted mod
+$pagination-padding-x:              0 !default; // Boosted mod
+$pagination-padding-start:          .875rem !default; // Boosted mod
+$pagination-padding-end:            1.125rem !default; // Boosted mod
+$pagination-first-item-padding:     $pagination-padding-y $pagination-padding-end $pagination-padding-y $pagination-padding-start !default; // Boosted mod
+$pagination-last-item-padding:      $pagination-padding-y $pagination-padding-start $pagination-padding-y $pagination-padding-end !default; // Boosted mod
+$pagination-icon-margin:            .375rem !default; // Boosted mod
+$pagination-item-size:              $spacer * 2 !default; // Boosted mod
 //$pagination-padding-y-sm:           .375rem !default; // Boosted mod: not used
 //$pagination-padding-x-sm:           .625rem !default; // Boosted mod: not used
 //$pagination-padding-y-lg:           .875rem !default; // Boosted mod: not used
@@ -952,7 +958,8 @@ $pagination-disabled-border-color:  $gray-500 !default;
 $pagination-icon:                   $chevron-icon !default;
 $pagination-icon-hover:             $chevron-icon-hover !default;
 $pagination-icon-width:             .5625rem !default;
-$pagination-icon-height:            .875rem !default;
+$pagination-icon-height:            .9375rem !default;
+$pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
 // end mod
 
 // Jumbotron
