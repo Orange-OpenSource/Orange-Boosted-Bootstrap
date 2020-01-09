@@ -88,11 +88,12 @@ For file inputs, swap the `.form-control` for `.form-control-file`.
 
 ### Sizing
 
-Set heights using classes like `.form-control-lg`.
+Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 {% capture example %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
 <input class="form-control" type="text" placeholder="Default input">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -102,6 +103,9 @@ Set heights using classes like `.form-control-lg`.
 </select>
 <select class="form-control">
   <option>Default select</option>
+</select>
+<select class="form-control form-control-sm">
+  <option>Small select</option>
 </select>
 {% endcapture %}
 {% include example.html content=example %}
@@ -443,10 +447,16 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 ##### Horizontal form label sizing
 
-Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
 {% capture example %}
 <form>
+  <div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+    </div>
+  </div>
   <div class="form-group row">
     <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
@@ -1371,7 +1381,14 @@ Custom `<select>` menus need only a custom class, `.custom-select` to trigger th
 You may also choose from small and large custom selects to match our similarly sized text inputs.
 
 {% capture example %}
-<select class="custom-select custom-select-lg">
+<select class="custom-select custom-select-lg mb-3">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+
+<select class="custom-select custom-select-sm">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
