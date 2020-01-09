@@ -120,12 +120,14 @@ select.form-control {
   line-height: $input-line-height-lg;
 }
 
-.col-form-label-sm {
-  padding-top: add($input-padding-y-sm, $input-border-width);
-  padding-bottom: add($input-padding-y-sm, $input-border-width);
-  @include font-size($input-font-size-sm);
-  line-height: $input-line-height-sm;
-}
+// Boosted mod: not used
+//.col-form-label-sm {
+//  padding-top: add($input-padding-y-sm, $input-border-width);
+//  padding-bottom: add($input-padding-y-sm, $input-border-width);
+//  @include font-size($input-font-size-sm);
+//  line-height: $input-line-height-sm;
+//}
+// end mod
 
 
 // Readonly controls as plain text
@@ -145,7 +147,7 @@ select.form-control {
   border: solid transparent;
   border-width: $input-border-width 0;
 
-  &.form-control-sm,
+  // &.form-control-sm, // Boosted mod: not used
   &.form-control-lg {
     padding-right: 0;
     padding-left: 0;
@@ -160,13 +162,15 @@ select.form-control {
 //
 // Repeated in `_input_group.scss` to avoid Sass extend issues.
 
-.form-control-sm {
-  height: $input-height-sm;
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  @include font-size($input-font-size-sm);
-  line-height: $input-line-height-sm;
-  @include border-radius($input-border-radius-sm);
-}
+// Boosted mod: not used
+//.form-control-sm {
+//  height: $input-height-sm;
+//  padding: $input-padding-y-sm $input-padding-x-sm;
+//  @include font-size($input-font-size-sm);
+//  line-height: $input-line-height-sm;
+//  @include border-radius($input-border-radius-sm);
+//}
+// end mod
 
 .form-control-lg {
   height: $input-height-lg;
