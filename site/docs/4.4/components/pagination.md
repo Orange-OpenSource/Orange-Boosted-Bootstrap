@@ -29,7 +29,8 @@ Make sure to use class `.has-label` on previous and next links as shown in the e
 
 ## Working with icons
 
-Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes.
+[comment]: boosted mod
+Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with **visually hidden text** and a `title` attribute.
 
 {% capture example %}
 <nav role="navigation" aria-label="Pagination example with icons">
@@ -39,9 +40,6 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
         <span class="sr-only">Previous</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#" title="Next">
         <span class="sr-only">Next</span>
