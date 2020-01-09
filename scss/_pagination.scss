@@ -5,11 +5,14 @@
 }
 
 .page-link {
-  position: relative;
-  display: block;
   // Boosted mod
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: $pagination-item-size;
+  height: $pagination-item-size;
   padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: map-get($spacers, 2);
+  margin-left: .5rem;
   font-weight: $font-weight-bold;
   // End mod
   line-height: $pagination-line-height;
@@ -72,27 +75,34 @@
     display: inline-block;
     width: $pagination-icon-width;
     height: $pagination-icon-height;
-    vertical-align: middle;
+    margin: $pagination-border-width / 2 -.15625rem 0;
     content: "";
-    background-image: escape-svg($pagination-icon);
-    background-repeat: no-repeat;
+    background: $pagination-icon-background;
   }
 
   &:first-child {
     margin-left: 0;
 
+    .page-link {
+      padding: $pagination-first-item-padding;
+    }
+
     .has-label::before {
-      margin-right: map-get($spacers, 2);
+      margin: $pagination-border-width / 2 $pagination-icon-margin 0 0;
     }
   }
 
   &:last-child {
-    .has-label::after {
-      margin-left: map-get($spacers, 2);
+    .page-link {
+      padding: $pagination-last-item-padding;
+
+      &::after {
+        transform: rotate(.5turn);
+      }
     }
 
-    .page-link::after {
-      transform: rotate(.5turn);
+    .has-label::after {
+      margin: $pagination-border-width / 2 0 0 $pagination-icon-margin;
     }
   }
 
