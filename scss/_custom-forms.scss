@@ -401,15 +401,13 @@
   }
 }
 
-// Boosted mod: not used
-//.custom-select-sm {
-//  height: $custom-select-height-sm;
-//  padding-top: $custom-select-padding-y-sm;
-//  padding-bottom: $custom-select-padding-y-sm;
-//  padding-left: $custom-select-padding-x-sm;
-//  @include font-size($custom-select-font-size-sm);
-//}
-// end mod
+.custom-select-sm {
+  height: $custom-select-height-sm;
+  padding-top: $custom-select-padding-y-sm;
+  padding-bottom: $custom-select-padding-y-sm;
+  padding-left: $custom-select-padding-x-sm;
+  @include font-size($custom-select-font-size-sm);
+}
 
 .custom-select-lg {
   height: $custom-select-height-lg;
