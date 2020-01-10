@@ -514,9 +514,10 @@
   }
 
   &::-webkit-slider-thumb {
+    box-sizing: content-box; // Boosted mod
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
-    margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
+    margin-top: #{add(-$custom-range-thumb-height / 2, 1px)}; // Webkit specific // Boosted mod
     cursor: grab; // Boosted mod
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
