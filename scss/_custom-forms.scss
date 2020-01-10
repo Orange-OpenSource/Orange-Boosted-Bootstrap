@@ -141,30 +141,14 @@
   // Boosted mod
   .custom-control-input:not(:disabled):checked ~ .custom-control-label {
     &::before {
-      border: 2px solid $primary;
+      border: $border-width solid $primary;
     }
   }
   // end mod
+
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      // Boosted mod: using borders instead of background for WHCM
-
-      /* rtl:begin:ignore */
-      top: .4rem;
-
-      /* rtl:end:ignore */
-      left: .2585rem;
-
-      /* rtl:begin:ignore */
-      width: .8272rem;
-      height: .3619rem;
-      border: 3px solid $white;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg);
-
-      /* rtl:end:ignore */
-      // end mod
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
   }
 
@@ -185,11 +169,9 @@
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
-      // Boosted mod using borders instead of background for WHCM
-      border: 0;
-      border-bottom: 3px solid $white;
-      transform: scaleX(.5) translateY(-.5rem);
-      // end mod
+      background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
+      background-size: map-get($spacers, 2) $border-width * 1.5;
+      transform: translateY($border-width / 4);
     }
   }
 
