@@ -2732,7 +2732,7 @@
 }
 
 .svg-checkbox-tick {
-  @include svg-checkbox-tick($white);
+  @include svg-checkbox-tick();
 }
 
 .svg-warning-circle {

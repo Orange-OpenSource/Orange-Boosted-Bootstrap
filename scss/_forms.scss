@@ -11,7 +11,7 @@ label {
   }
 
   &.is-required::after {
-    margin-left: 6px;
+    margin-left: $label-margin-bottom;
     font-weight: $font-weight-bold;
     color: theme-color("primary");
     content: "*";
@@ -27,7 +27,7 @@ label {
   display: block;
   width: 100%;
   height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // Boosted mod
   font-family: $input-font-family;
   @include font-size($input-font-size);
   font-weight: $input-font-weight;
