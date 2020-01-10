@@ -11,7 +11,7 @@
   // color: $close-color;
   // text-shadow: $close-text-shadow;
   @include transition($transition-focus);
-  background: escape-svg($close-icon) no-repeat center / map-get($spacers, 4);
+  background: escape-svg($close-icon) no-repeat 50% / #{map-get($spacers, 4)};
   border: 0;
   outline-offset: map-get($spacers, 2);
   opacity: 1;
