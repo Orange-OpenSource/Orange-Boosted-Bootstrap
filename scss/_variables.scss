@@ -668,7 +668,7 @@ $custom-switch-indicator-bg-color:              $white !default;
 $custom-switch-indicator-border-color:          $black !default;
 
 $custom-select-padding-y:           .4375rem !default;
-$custom-select-padding-x:           .5rem !default;
+$custom-select-padding-x:           map-get($spacers, 2) !default;
 $custom-select-font-family:         $input-font-family !default;
 $custom-select-font-size:           $input-font-size !default;
 $custom-select-height:              $input-height !default;
@@ -679,10 +679,10 @@ $custom-select-color:               $input-color !default;
 $custom-select-disabled-color:      $gray-500 !default;
 $custom-select-bg:                  $white !default;
 $custom-select-disabled-bg:         $gray-300 !default;
-$custom-select-bg-size:             1rem $spacer !default; // Boosted mod: using SVG
+$custom-select-bg-size:             .875rem 1rem !default; // Boosted mod: using SVG
 // $custom-select-indicator-color:     null !default; // Boosted mod
 $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
-$custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+$custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x top add(50%, 1px) / #{$custom-select-bg-size} !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-position:      center right map-get($spacers, 4) !default;
