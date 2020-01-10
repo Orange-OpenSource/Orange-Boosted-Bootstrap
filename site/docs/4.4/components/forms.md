@@ -1276,18 +1276,19 @@ Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` follow
 {% capture callout %}
 ##### Deprecated
 
-As `custom-switch` component have been included into Boostrap, the `o-switch` component will be removed in the next major release
+As `custom-switch` component have been included into Bootstrap, the `o-switch` component will be removed in the next major release.
+The `.toggle-rounded` variant should be avoided, but still works in v4.
 {% endcapture %}
-{% include callout.html content=callout type="warning" %}
+{% include callout.html content=callout type="danger" %}
 
 {% capture example %}
 <div class="form-group row">
   <label for="checkbox1" class="col-form-label col-md-3 col-8">Default</label>
   <div class="o-switch">
     <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-    <label for="checkbox1" class="toggle col-form-label" aria-hidden="true">
-      <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
-      <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
+    <label for="checkbox1" class="toggle col-form-label">
+      <span class="on svg-checkbox-tick"><span class="sr-only">on</span></span>
+      <span class="off svg-delete"><span class="sr-only">off</span></span>
     </label>
   </div>
 </div>
@@ -1303,27 +1304,9 @@ Default color is brand primary. Success color is also supported, use `.success` 
   <label for="checkbox3" class="col-form-label col-md-3 col-8">Success</label>
   <div class="o-switch">
     <input class="checkbox success sr-only" id="checkbox3" type="checkbox" checked/>
-    <label for="checkbox3" class="toggle col-form-label" aria-hidden="true">
-      <span class="on svg-checkbox-tick" role="presentation"><span class="sr-only">on</span></span>
-      <span class="off svg-delete" role="presentation"><span class="sr-only">off</span></span>
-    </label>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-#### Rounded
-
-Finally use `.toggle-rounded` class on `.toggle` element to get rounded switch alternate version. Make sure to set `.toggle` element width to fix the lenghtiest status label.
-
-{% capture example %}
-<div class="form-group row">
-  <label for="checkbox4" class="col-form-label col-md-3 col-8">Rounded</label>
-  <div class="o-switch">
-    <input class="checkbox success sr-only" id="checkbox4" type="checkbox" checked/>
-    <label for="checkbox4" class="toggle toggle-rounded col-form-label" aria-hidden="true" style="width: 78px;">
-      <span class="on">On</span>
-      <span class="off">Off</span>
+    <label for="checkbox3" class="toggle col-form-label">
+      <span class="on svg-checkbox-tick"><span class="sr-only">on</span></span>
+      <span class="off svg-delete"><span class="sr-only">off</span></span>
     </label>
   </div>
 </div>

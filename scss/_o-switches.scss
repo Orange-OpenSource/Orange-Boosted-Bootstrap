@@ -36,6 +36,8 @@
     &::after {
       position: absolute;
       top: .1875rem;
+      background-position: 50%;
+      background-size: $custom-control-indicator-bg-size;
     }
   }
 
