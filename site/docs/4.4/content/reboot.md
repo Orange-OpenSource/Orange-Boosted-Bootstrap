@@ -49,11 +49,11 @@ $font-family-sans-serif:
   // Android
   Roboto,
   // Ubuntu
-  Liberation Sans
+  Liberation Sans,
   // Generic
   sans-serif,
   // Emoji fonts
-  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !default;
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 {% endhighlight %}
 
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted. To switch the global `font-family`, update `$font-family-base` and recompile Boosted.
