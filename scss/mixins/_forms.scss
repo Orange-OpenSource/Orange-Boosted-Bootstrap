@@ -60,7 +60,6 @@
         margin-right: map-get($spacers, 1);
         content: "";
         background-repeat: no-repeat;
-        background-size: $form-feedback-icon-size;
       }
 
       @if $state == "valid" {
