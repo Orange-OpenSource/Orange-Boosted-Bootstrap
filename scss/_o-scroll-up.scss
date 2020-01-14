@@ -29,7 +29,9 @@
     content: "";
     background: $white escape-svg($o-scroll-up-icon) no-repeat center / 50% 50%;
     border: $border-width solid $black;
-    transform: rotate(.25turn);
+
+    /* rtl:ignore */
+    transform: rotate(90deg);
   }
 
   &:hover::after,
