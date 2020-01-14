@@ -30,7 +30,9 @@
       content: "";
       background-image: escape-svg($breadcrumb-divider);
       background-repeat: no-repeat;
-      transform: rotate(.5turn);
+
+      /* rtl:remove */
+      transform: rotate(180deg);
       // end mod
     }
   }
