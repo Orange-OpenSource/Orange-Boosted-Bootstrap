@@ -18,7 +18,9 @@
   &:not(.back)::after {
     margin-left: $o-link-arrow-margin;
     content: "";
-    transform: rotate(.5turn);
+
+    /* rtl:remove */
+    transform: rotate(180deg);
   }
 
   &.back::before {
