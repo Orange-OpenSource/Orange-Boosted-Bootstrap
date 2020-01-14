@@ -97,7 +97,8 @@
       padding: $pagination-last-item-padding;
 
       &::after {
-        transform: rotate(.5turn);
+        /* rtl:remove */
+        transform: rotate(180deg);
       }
     }
 
