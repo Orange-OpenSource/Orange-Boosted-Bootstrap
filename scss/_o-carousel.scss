@@ -91,8 +91,9 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  background: none;
+  background: none !important; // stylelint-disable-line declaration-no-important
   @include transition($transition-focus);
+
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
