@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.4.0 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
+  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Copyright 2014-2020 The Boosted Authors
+  * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap megamenu.js v4.4.0 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap megamenu.js v4.4.1 (https://boosted.orange.com)
+  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -42,7 +42,7 @@
    */
 
   var NAME = 'megamenu';
-  var VERSION = '4.4.0';
+  var VERSION = '4.4.1';
   var DATA_KEY = 'bs.megamenu';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
@@ -59,7 +59,8 @@
 
   var SPLITLENGHT = 4;
   var ClassName = {
-    TRANSITIONING: 'transitioning'
+    TRANSITIONING: 'transitioning',
+    ACTIVE: 'active'
   };
   var Selector = {
     MEGAMENU: '.mega-menu',
@@ -71,7 +72,8 @@
     NAV_LINK: '.nav-link',
     NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
     NAV_LINK_BACK: '.nav-link.back',
-    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
+    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]',
+    CURRENT: '.nav-link[aria-current="page"]'
   };
   /**
    * ------------------------------------------------------------------------
@@ -132,27 +134,22 @@
     };
 
     _proto._addAriaAttributes = function _addAriaAttributes(element) {
-      var $subNavs = $(element).find('.nav-link + .navbar-nav');
+      var $subNavs = $(element).find(Selector.MEGAMENU_NAV);
+      var $parents = $(element).find(Selector.CURRENT).parents(Selector.NAV_ITEM);
       $(element).attr('role', 'application');
       $(element).find('> .navbar-nav').attr('role', 'menu');
       $(element).find(Selector.MEGAMENU_PANEL).attr('role', 'menu');
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $(element).find(Selector.NAV_LINK_BACK).attr({
-        'aria-hidden': true
-      });
+      $(element).find(Selector.NAV_LINK_BACK).attr('aria-hidden', 'true');
       $(element).find(Selector.NAV_ITEM).attr('role', 'presentation');
+      $parents.each(function () {
+        $(this).find(Selector.NAV_LINK).first().attr('aria-current', 'true');
+      });
       $subNavs.each(function () {
         var navId = Util.getUID(NAME);
         var $thisNavToggler = $(this).prev(Selector.NAV_LINK);
         var $thisNav = $(this);
         var $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK);
-        var $topMenu = $(this).closest(Selector.NAV_MENU).parent().closest(Selector.NAV_MENU).prev(Selector.NAV_LINK);
-        var goBackLabel = "go back to " + $topMenu.text() + " menu";
-
-        if (!$topMenu.length) {
-          goBackLabel = "go back to " + $(this).closest(Selector.MEGAMENU_PANEL).prev(Selector.NAV_LINK).text() + " menu";
-        }
-
         $thisNav.attr({
           id: navId,
           role: 'menu'
@@ -165,8 +162,7 @@
         });
         $thisNavBackLink.attr({
           role: 'menuitem',
-          'aria-controls': navId,
-          'aria-label': goBackLabel
+          'aria-controls': navId
         });
       });
     };
@@ -184,10 +180,14 @@
       var translatePercentage = -(position - rootPosition) * PERCENTAGE / 2;
       var $thisNav = $target.closest(Selector.NAV_MENU);
       var $rootNav = $target.closest(Selector.ROOT_NAV);
-      $rootNav.addClass(ClassName.TRANSITIONING); // open collapse
+      $rootNav.addClass(ClassName.TRANSITIONING);
+
+      this._$navLinkCollapses.removeClass(ClassName.ACTIVE); // open collapse
+
 
       if ($target.attr('data-toggle') === 'collapse') {
         $target.siblings(Selector.MEGAMENU_PANEL).collapse('show');
+        $target.addClass(ClassName.ACTIVE);
 
         this._$topCollapseMenus.not($target.siblings(Selector.MEGAMENU_PANEL)).collapse('hide');
 
@@ -195,6 +195,7 @@
         $rootNav.css('transform', 'translateX(0%)');
       } else {
         $target.closest(Selector.MEGAMENU_PANEL).collapse('show');
+        $target.closest(Selector.NAV_LINK_COLLAPSE).addClass(ClassName.ACTIVE);
 
         this._$topCollapseMenus.not($target.closest(Selector.MEGAMENU_PANEL)).collapse('hide'); // show menu and hide other
 
@@ -266,8 +267,11 @@
     _proto._handleCollapseToggle = function _handleCollapseToggle(e) {
       var $this = $(e.target);
       var $thisCollapse = $($this.attr('href'));
+      $this.addClass(ClassName.ACTIVE);
 
-      this._$topCollapseMenus.not($thisCollapse).collapse('hide');
+      this._$navLinkCollapses.not($this).removeClass(ClassName.ACTIVE);
+
+      this._$topCollapseMenus.not($thisCollapse).removeClass(ClassName.ACTIVE).collapse('hide');
     };
 
     _proto._goForward = function _goForward(e) {
@@ -334,8 +338,9 @@
         return false;
       }
 
-      $rootNav.addClass(ClassName.TRANSITIONING);
-      $(Selector.MEGAMENU).css('height', 'auto'); // make only visible elements focusable
+      $rootNav.addClass(ClassName.TRANSITIONING); // reset main collapse height
+
+      $(Selector.MEGAMENU).height('auto'); // make only visible elements focusable
 
       $targetNav.find(Selector.NAV_LINK).attr({
         tabindex: 0,
@@ -343,7 +348,6 @@
       });
 
       if (currentTranslatePercentage === -PERCENTAGE) {
-        // reset main collapse height
         $rootNav.find('>.nav-item .nav-link').attr({
           tabindex: 0,
           'aria-hidden': false
