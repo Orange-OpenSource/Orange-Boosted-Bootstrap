@@ -3,238 +3,234 @@
 <h2 id="forms">Forms
   <a class="doc-link d-inline-flex align-items-center ml-2" href="../components/forms/" title="go to form documentation page"></a>
 </h2>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-6">
-      <form class="form-horizontal container-fluid">
-        <fieldset class="col-12">
-          <legend>Legend</legend>
-          <div class="form-group row">
-            <label for="inputEmail" class="col-lg-3 col-form-label">Email</label>
-            <div class="col-lg-9">
-              <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+
+<div class="row">
+  <div class="col-lg-6">
+    <form>
+      <fieldset>
+        <legend>Left aligned labels</legend>
+        <div class="form-group row">
+          <label for="inputEmail" class="col-lg-3 col-form-label">Email</label>
+          <div class="col-lg-9">
+            <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword" class="col-lg-3 col-form-label">Password</label>
+          <div class="col-lg-9">
+            <input class="form-control mb-3" id="inputPassword" placeholder="Password" type="password">
+            <div>
+              <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" autocomplete="off">
+                <span class="custom-control-label">Orange checkbox unchecked</span>
+              </label>
+            </div>
+            <div>
+              <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" disabled autocomplete="off">
+                <span class="custom-control-label">Orange checkbox unchecked disabled</span>
+              </label>
+            </div>
+            <div>
+              <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" checked autocomplete="off">
+                <span class="custom-control-label">Orange checkbox checked</span>
+              </label>
+            </div>
+            <div>
+              <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" checked disabled autocomplete="off">
+                <span class="custom-control-label">Orange checkbox checked disabled</span>
+              </label>
             </div>
           </div>
-          <div class="form-group row">
-            <label for="inputPassword" class="col-lg-3 col-form-label">Password</label>
-            <div class="col-lg-9">
-              <input class="form-control mb-3" id="inputPassword" placeholder="Password" type="password">
-              <div>
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" autocomplete="off">
-                  <span class="custom-control-label">Orange checkbox unchecked</span>
-                </label>
-              </div>
-              <div>
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" disabled autocomplete="off">
-                  <span class="custom-control-label">Orange checkbox unchecked disabled</span>
-                </label>
-              </div>
-              <div>
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" checked autocomplete="off">
-                  <span class="custom-control-label">Orange checkbox checked</span>
-                </label>
-              </div>
-              <div>
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" checked disabled autocomplete="off">
-                  <span class="custom-control-label">Orange checkbox checked disabled</span>
-                </label>
-              </div>
+        </div>
+        <div class="form-group row">
+          <label for="textArea" class="col-lg-3 col-form-label">Textarea</label>
+          <div class="col-lg-9">
+            <textarea class="form-control" rows="3" id="textArea" aria-labelledby="textAreaHint"></textarea>
+            <small class="form-text text-muted" id="textAreaHint">A longer block of help text that breaks onto a new line and may extend beyond one line.</small>
+          </div>
+        </div>
+        <fieldset class="form-group row">
+          <legend class="float-left col-lg-3 col-form-label font-weight-bold">Orange Radios</legend>
+          <div class="col-lg-9 mt-2">
+            <div>
+              <label class="custom-control custom-radio">
+                <input id="radio1" name="radio" type="radio" class="custom-control-input" checked autocomplete="off">
+                <span class="custom-control-label">Toggle this custom radio</span>
+              </label>
+            </div>
+            <div>
+              <label class="custom-control custom-radio">
+                <input id="radio2" name="radio" type="radio" class="custom-control-input" autocomplete="off">
+                <span class="custom-control-label">Or toggle this other custom radio</span>
+              </label>
+            </div>
+            <div>
+              <label class="custom-control custom-radio">
+                <input id="radio3" name="radio" type="radio" class="custom-control-input" checked disabled autocomplete="off">
+                <span class="custom-control-label">Orange radio checked disabled</span>
+              </label>
+            </div>
+            <div>
+              <label class="custom-control custom-radio">
+                <input id="radio4" name="radio" type="radio" class="custom-control-input" disabled autocomplete="off">
+                <span class="custom-control-label">Orange radio unchecked disabled</span>
+              </label>
             </div>
           </div>
-          <div class="form-group row">
-            <label for="textArea" class="col-lg-3 col-form-label">Textarea</label>
-            <div class="col-lg-9">
-              <textarea class="form-control" rows="3" id="textArea"></textarea>
-              <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="col-lg-3 col-form-label">Orange Radios</div>
-            <div class="col-lg-9">
-              <div>
-                <label class="custom-control custom-radio">
-                  <input id="radio1" name="radio" type="radio" class="custom-control-input" checked autocomplete="off">
-                  <span class="custom-control-label">Toggle this custom radio</span>
-                </label>
-              </div>
-              <div>
-                <label class="custom-control custom-radio">
-                  <input id="radio2" name="radio" type="radio" class="custom-control-input" autocomplete="off">
-                  <span class="custom-control-label">Or toggle this other custom radio</span>
-                </label>
-              </div>
-              <div>
-                <label class="custom-control custom-radio">
-                  <input id="radio3" name="radio-disabled" type="radio" class="custom-control-input" checked disabled autocomplete="off">
-                  <span class="custom-control-label">Orange radio checked disabled</span>
-                </label>
-              </div>
-              <div>
-                <label class="custom-control custom-radio">
-                  <input id="radio4" name="radio-disabled" type="radio" class="custom-control-input" disabled autocomplete="off">
-                  <span class="custom-control-label">Orange radio unchecked disabled</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="custom-control custom-switch right col-md-5 col-8 ml-2">
+        </fieldset>
+        <div class="row">
+          <div class="offset-lg-3">
+            <div class="custom-control custom-switch ml-2">
               <input type="checkbox" class="custom-control-input" id="checkbox11" autocomplete="off">
               <label class="custom-control-label col-form-label" for="checkbox11">WiFi</label>
             </div>
           </div>
-          <div class="row">
-            <div class="custom-control custom-switch right col-md-5 col-8 ml-2">
+        </div>
+        <div class="form-group row">
+          <div class="offset-lg-3">
+            <div class="custom-control custom-switch ml-2">
               <input type="checkbox" class="custom-control-input" id="checkbox31" checked autocomplete="off">
               <label class="custom-control-label" for="checkbox31">Bluetooth</label>
             </div>
           </div>
-          <div class="form-group row">
-            <label for="select" class="col-lg-3 col-form-label">Selects</label>
-            <div class="col-lg-9">
-              <select class="form-control" id="select">
-                <option selected="selected">1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <br>
-              <select multiple="multiple" class="form-control" title="Multiselect sample">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+        </div>
+        <div class="form-group row">
+          <label for="select" class="col-lg-3 col-form-label">Selects</label>
+          <div class="col-lg-9">
+            <select class="form-control" id="select">
+              <option selected="selected">1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <select multiple="multiple" class="form-control" title="Multiselect sample">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="selectcusto" class="col-lg-3 col-form-label">Custom</label>
+          <div class="col-lg-9">
+            <select class="custom-select" id="selectcusto">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="customFile" class="col-lg-3 col-form-label">Browser</label>
+          <div class="col-lg-9">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile">Choose file</label>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="selectcusto" class="col-lg-3 col-form-label">Custom</label>
-            <div class="col-lg-9">
-              <select class="custom-select" id="selectcusto">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="customFile" class="col-lg-3 col-form-label">Browser</label>
-            <div class="col-lg-9">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-              </div>
+        </div>
+      </div>
+        <div class="form-group row">
+          <label for="customRange1" class="col-lg-3 col-form-label">Example range</label>
+          <input type="range" class="custom-range col-lg-9 mt-2" id="customRange1">
+        </div>
+        <div class="form-group row">
+          <div class="ml-lg-auto">
+            <button class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
-          <div class="form-group row">
-            <label for="customRange1">Example range</label>
-            <input type="range" class="custom-range" id="customRange1">
-          </div>
-          <div class="form-group row">
-            <div class="ml-lg-auto">
-              <button class="btn btn-secondary">Cancel</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-    <div class="col-lg-4 ml-lg-auto">
-      <form>
-        <div class="form-group">
-          <label class="col-form-label disabled" for="disabledInput">Disabled input</label>
-          <input class="form-control" id="disabledInput" placeholder="Disabled input here..." disabled="disabled" type="text">
-        </div>
-
-        <div class="form-group has-warning">
-          <label class="col-form-label" for="inputWarning">Input warning</label>
-          <input class="form-control" id="inputWarning" type="text">
-        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-lg-6 pl-lg-3">
+    <form>
+      <fieldset>
+        <legend>Top aligned labels</legend>
 
         <div class="form-group">
-          <label class="col-form-label" for="inputError1">Input error</label>
-              <input class="form-control is-invalid" id="inputError1" type="text">
-              <div class="invalid-feedback">This is an error message</div>
+          <label class="disabled" for="disabledInput">Disabled input</label>
+          <input class="form-control" id="disabledInput" placeholder="Disabled input here…" disabled="disabled" type="text">
         </div>
-
         <div class="form-group">
-          <label class="col-form-label" for="inputSuccess">Input success</label>
-              <input class="form-control is-valid" id="inputSuccess" type="text">
+          <label for="inputError1">Input error</label>
+          <input class="form-control is-invalid" id="inputError1" aria-describedby="inputError1Feedback" type="text">
+        <div class="invalid-feedback" id="inputError1Feedback">This is an error message.</div>
         </div>
-
         <div class="form-group">
-          <label class="col-form-label" for="inputLarge">Large input</label>
+          <label for="inputSuccess">Input success</label>
+          <input class="form-control is-valid" id="inputSuccess" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputLarge">Large input</label>
           <input class="form-control form-control-lg" id="inputLarge" type="text">
         </div>
-
         <div class="form-group">
-          <label class="col-form-label" for="inputDefault">Default input</label>
-          <input class="form-control" id="inputDefault" type="text">
-          <span class="form-control-message">This is a hint message</span>
+          <label for="inputDefault">Default input</label>
+          <input class="form-control" id="inputDefault" aria-describedby="inputDefaultHint" type="text">
+          <small class="form-text text-muted" id="inputDefaultHint">This is a hint message.</small>
         </div>
-
         <div class="form-group">
-          <label class="col-form-label" for="inputSmall">Small input</label>
+          <label for="inputSmall">Small input</label>
           <input class="form-control form-control-sm" id="inputSmall" type="text">
         </div>
-
         <div class="form-group">
-          <label class="col-form-label" for="inlineFormInputGroup">Input addons</label>
+          <label for="inlineFormInputGroup">Input addons</label>
           <div class="input-group">
             <div class="input-group-prepend">
-              <div class="input-group-text">$</div>
+              <div class="input-group-text" id="input-prefix">$</div>
             </div>
-            <input class="form-control" type="text" title="Input addons field" id="inlineFormInputGroup">
+            <input class="form-control" type="text" id="inlineFormInputGroup" aria-describedby="input-prefix">
             <div class="input-group-append">
               <button class="btn btn-secondary" type="button">Button</button>
             </div>
           </div>
         </div>
-      </form>
-    </div>
+      </fieldset>
+    </form>
   </div>
 </div>
 
 <form>
   <div class="form-group">
     <label for="exampleInputUser1" class="is-required">User name</label>
-    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser1">
-    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser1" aria-describedby="exampleInputUser1Feedback">
+    <div class="invalid-feedback" id="exampleInputUser1Feedback">Sorry, that username's taken. Try another?</div>
   </div>
   <div class="form-group top">
     <label for="exampleInputUser2" class="is-required">User name</label>
-    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser2">
-    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser2" aria-describedby="exampleInputUser2Feedback">
+    <div class="invalid-feedback" id="exampleInputUser2Feedback">Sorry, that username's taken. Try another?</div>
   </div>
   <div class="form-group right">
     <label for="exampleInputUser3" class="is-required">User name</label>
-    <input type="text" class="form-control form-control-danger is-invalid" id="exampleInputUser3" style="width: 40%;">
-    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+    <input type="text" class="form-control form-control-danger is-invalid w-50" id="exampleInputUser3" aria-describedby="exampleInputUser3Feedback">
+    <div class="invalid-feedback" id="exampleInputUser3Feedback">Sorry, that username's taken. Try another?</div>
   </div>
 </form>
 
 <form class="container-fluid">
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label is-required">Email</label>
-    <input type="email" class="form-control col-sm-10 is-invalid" id="inputEmail3" placeholder="Email">
-    <div class="col-sm-10 ml-md-auto invalid-feedback">Check the formatting of that and try again.</div>
+    <input type="email" class="form-control col-sm-10 is-invalid" id="inputEmail3" aria-describedby="inputEmail3Feedback" placeholder="Email">
+    <div class="col-sm-10 ml-md-auto invalid-feedback" id="inputEmail3Feedback">Check the formatting of that and try again.</div>
   </div>
   <div class="form-group row top">
     <label for="inputEmail4" class="col-sm-2 col-form-label is-required">Email</label>
-    <input type="email" class="form-control col-sm-10 is-invalid" id="inputEmail4" placeholder="Email">
+    <input type="email" class="form-control col-sm-10 is-invalid" id="inputEmail4" aria-describedby="inputEmail4Feedback" placeholder="Email">
     <div class="col-sm-2"></div>
-    <div class="col-sm-10 invalid-feedback">Check the formatting of that and try again.</div>
+    <div class="col-sm-10 invalid-feedback" id="inputEmail4Feedback">Check the formatting of that and try again.</div>
   </div>
   <div class="form-group row right">
     <label for="inputEmail5" class="col-sm-2 col-form-label is-required">Email</label>
-    <input type="email" class="form-control col-sm-4 is-invalid" id="inputEmail5" placeholder="Email">
-    <div class="col-sm-4 invalid-feedback">Check the formatting of that and try again.</div>
+    <input type="email" class="form-control col-sm-4 is-invalid" id="inputEmail5" aria-describedby="inputEmail5Feedback" placeholder="Email">
+    <div class="col-sm-4 invalid-feedback" id="inputEmail5Feedback">Check the formatting of that and try again.</div>
   </div>
 </form>
