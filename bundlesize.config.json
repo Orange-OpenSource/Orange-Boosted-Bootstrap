@@ -1,59 +1,59 @@
 {
   "files": [
     {
-      "path": "./dist/css/bootstrap-grid.css",
+      "path": "./dist/css/boosted-grid.css",
       "maxSize": "6.5 kB"
     },
     {
-      "path": "./dist/css/bootstrap-grid.min.css",
+      "path": "./dist/css/boosted-grid.min.css",
       "maxSize": "6 kB"
     },
     {
-      "path": "./dist/css/bootstrap-reboot.css",
+      "path": "./dist/css/boosted-reboot.css",
       "maxSize": "2 kB"
     },
     {
-      "path": "./dist/css/bootstrap-reboot.min.css",
+      "path": "./dist/css/boosted-reboot.min.css",
       "maxSize": "2 kB"
     },
     {
-      "path": "./dist/css/bootstrap-utilities.css",
+      "path": "./dist/css/boosted-utilities.css",
       "maxSize": "8 kB"
     },
     {
-      "path": "./dist/css/bootstrap-utilities.min.css",
+      "path": "./dist/css/boosted-utilities.min.css",
       "maxSize": "7 kB"
     },
     {
-      "path": "./dist/css/bootstrap.css",
+      "path": "./dist/css/boosted.css",
       "maxSize": "25 kB"
     },
     {
-      "path": "./dist/css/bootstrap.min.css",
+      "path": "./dist/css/boosted.min.css",
       "maxSize": "23 kB"
     },
     {
-      "path": "./dist/js/bootstrap.bundle.js",
+      "path": "./dist/js/boosted.bundle.js",
       "maxSize": "51 kB"
     },
     {
-      "path": "./dist/js/bootstrap.bundle.min.js",
+      "path": "./dist/js/boosted.bundle.min.js",
       "maxSize": "24 kB"
     },
     {
-      "path": "./dist/js/bootstrap.esm.js",
+      "path": "./dist/js/boosted.esm.js",
       "maxSize": "28 kB"
     },
     {
-      "path": "./dist/js/bootstrap.esm.min.js",
+      "path": "./dist/js/boosted.esm.min.js",
       "maxSize": "19 kB"
     },
     {
-      "path": "./dist/js/bootstrap.js",
+      "path": "./dist/js/boosted.js",
       "maxSize": "29 kB"
     },
     {
-      "path": "./dist/js/bootstrap.min.js",
+      "path": "./dist/js/boosted.min.js",
       "maxSize": "17.5 kB"
     }
   ]

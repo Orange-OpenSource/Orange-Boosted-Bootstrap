@@ -1,4 +1,4 @@
-# Contributing to Bootstrap
+# Contributing to Boosted
 
 Looking to contribute something to Bootstrap? **Here's how you can help.**
 
@@ -13,7 +13,7 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/twbs/bootstrap/issues) is
+The [issue tracker](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues) is
 the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests)
 and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
@@ -48,7 +48,7 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
 
-For a complete look at our labels, see the [project labels page](https://github.com/twbs/bootstrap/labels).
+For a complete look at our labels, see the [project labels page](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/labels).
 
 
 ## Bug reports
@@ -132,16 +132,16 @@ Please adhere to the [coding guidelines](#code-guidelines) used throughout the
 project (indentation, accurate comments, etc.) and any other requirements
 (such as test coverage).
 
-**Do not edit `bootstrap.css`, or `bootstrap.js`
+**Do not edit `boosted.css`, or `boosted.js`
 directly!** Those files are automatically generated. You should edit the
-source files in [`/bootstrap/scss/`](https://github.com/twbs/bootstrap/tree/master/scss)
-and/or [`/bootstrap/js/src/`](https://github.com/twbs/bootstrap/tree/master/js/src) instead.
+source files in [`/boosted/scss/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/master/scss)
+and/or [`/boosted/js/src/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/master/js/src) instead.
 
-Similarly, when contributing to Bootstrap's documentation, you should edit the
+Similarly, when contributing to Boosted's documentation, you should edit the
 documentation source files in
-[the `/bootstrap/site/content/docs/` directory of the `master` branch](https://github.com/twbs/bootstrap/tree/master/site/content/docs).
+[the `/boosted/site/content/docs/` directory of the `master` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/master/site/content/docs).
 **Do not edit the `gh-pages` branch.** That branch is generated from the
-documentation source files and is managed separately by the Bootstrap Core Team.
+documentation source files and is managed separately by the Boosted Core Team.
 
 Adhering to the following process is the best way to get your work
 included in the project:
@@ -151,11 +151,11 @@ included in the project:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/bootstrap.git
+   git clone https://github.com/<your-username>/Orange-Boosted-Bootstrap.git
    # Navigate to the newly cloned directory
-   cd bootstrap
+   cd Orange-Boosted-Bootstrap
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/twbs/bootstrap.git
+   git remote add upstream https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:

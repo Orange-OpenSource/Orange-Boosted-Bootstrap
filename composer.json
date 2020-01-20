@@ -1,6 +1,6 @@
 {
-  "name": "twbs/bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "orange-opensource/orange-boosted-bootstrap",
+  "description": "Orange Boosted with Bootstrap is an Orange branded, accessible and ergonomic framework library, based on Bootstrap.",
   "keywords": [
     "css",
     "js",
@@ -9,9 +9,11 @@
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "bootstrap",
+    "Orange"
   ],
-  "homepage": "https://getbootstrap.com/",
+  "homepage": "https://boosted.orange.com/",
   "authors": [
     {
       "name": "Mark Otto",
@@ -20,13 +22,21 @@
     {
       "name": "Jacob Thornton",
       "email": "jacobthornton@gmail.com"
+    },
+    {
+      "name": "Loïc Laussel",
+      "email": "loic.laussel@orange.com"
+    },
+    {
+      "name": "Gaël Poupard",
+      "email": "gael.poupard@orange.com"
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
   "license": "MIT",
   "replace": {
-    "twitter/bootstrap": "self.version"
+    "orange-opensource/orange-boosted-bootstrap": "self.version"
   }
 }

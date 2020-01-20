@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "boosted",
+  "description": "Orange Boosted with Bootstrap is an Orange branded, accessible and ergonomic framework library, based on Bootstrap.",
   "version": "4.3.1",
   "version_short": "4.3",
   "keywords": [
@@ -10,12 +10,14 @@
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "bootstrap",
+    "Orange"
   ],
-  "homepage": "https://getbootstrap.com/",
-  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "homepage": "https://boosted.orange.com/",
+  "author": "The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)",
   "contributors": [
-    "Twitter, Inc."
+    "Orange SA"
   ],
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
@@ -70,22 +72,18 @@
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js-lint js-compile\"",
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\""
   },
-  "style": "dist/css/bootstrap.css",
-  "sass": "scss/bootstrap.scss",
-  "main": "dist/js/bootstrap.js",
-  "module": "dist/js/bootstrap.esm.js",
+  "style": "dist/css/boosted.css",
+  "sass": "scss/boosted.scss",
+  "main": "dist/js/boosted.js",
+  "module": "dist/js/boosted.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap.git"
+    "url": "git+https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues"
   },
   "license": "MIT",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/bootstrap"
-  },
   "dependencies": {},
   "peerDependencies": {
     "popper.js": "^1.16.0"
@@ -148,12 +146,12 @@
   },
   "jspm": {
     "registry": "npm",
-    "main": "js/bootstrap",
+    "main": "js/boosted",
     "directories": {
       "lib": "dist"
     },
     "shim": {
-      "js/bootstrap": {
+      "js/boosted": {
         "deps": [
           "popper.js"
         ]

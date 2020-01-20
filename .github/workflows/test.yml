@@ -49,7 +49,7 @@ jobs:
 
       - name: Run BrowserStack tests
         run: npm run js-test-cloud
-        if: matrix.node == 10 && github.repository == 'twbs/bootstrap' && github.event_name == 'push'
+        if: matrix.node == 10 && github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap' && github.event_name == 'push'
         env:
           BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSER_STACK_ACCESS_KEY }}"
           BROWSER_STACK_USERNAME: "${{ secrets.BROWSER_STACK_USERNAME }}"

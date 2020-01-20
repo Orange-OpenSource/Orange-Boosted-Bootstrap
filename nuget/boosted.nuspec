@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>boosted</id>
+    <version>4.3.1</version>
+    <title>Boosted CSS</title>
+    <authors>The Boosted Authors, Orange SA</authors>
+    <owners>Orange SA</owners>
+    <description>Orange Boosted with Bootstrap is an Orange branded, accessible and ergonomic framework library, based on Bootstrap.</description>
+    <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
+    <summary>Boosted framework in CSS. Includes fonts and JavaScript</summary>
+    <language>en-us</language>
+    <projectUrl>https://boosted.orange.com/</projectUrl>
+    <iconUrl>https://boosted.orange.com/docs/4.3/assets/img/favicons/apple-touch-icon.png</iconUrl>
+    <license type="file">LICENSE.txt</license>
+    <copyright>Copyright 2017-2020</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="popper.js" version="[1.16.0,2)" />
+    </dependencies>
+    <tags>css mobile-first responsive front-end framework web bootstrap</tags>
+  </metadata>
+  <files>
+    <file src="LICENSE.txt" target="" />
+
+    <file src="dist\css\*.*" target="content\Content" />
+    <file src="dist\js\boosted*.js" target="content\Scripts" />
+    <file src="dist\js\boosted*.js.map" target="content\Scripts" />
+
+    <file src="dist\css\*.*" target="contentFiles\Content" />
+    <file src="dist\js\boosted*.js" target="contentFiles\Scripts" />
+    <file src="dist\js\boosted*.js.map" target="contentFiles\Scripts" />
+  </files>
+</package>
