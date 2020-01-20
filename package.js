@@ -1,17 +1,16 @@
 // package metadata file for Meteor.js
 
 Package.describe({
-  name: 'Orange-OpenSource:Orange-Boosted-Bootstrap',  // https://atmospherejs.com/Orange-OpenSource:Orange-Boosted-Bootstrap
-  summary: 'Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.4.0.',
-  version: '4.4.0',
-  git: 'https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git'
+  name: 'twbs:bootstrap', // https://atmospherejs.com/twbs/bootstrap
+  summary: 'The most popular front-end framework for developing responsive, mobile first projects on the web.',
+  version: '4.3.1',
+  git: 'https://github.com/twbs/bootstrap.git'
 });
 
 Package.onUse(function (api) {
   api.versionsFrom('METEOR@1.0');
-  api.use('jquery', 'client');
   api.addFiles([
-    'dist/css/boosted.css',
-    'dist/js/boosted.js'
+    'dist/css/bootstrap.css',
+    'dist/js/bootstrap.js'
   ], 'client');
 });

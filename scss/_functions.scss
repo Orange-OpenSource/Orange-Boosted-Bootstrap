@@ -2,9 +2,6 @@
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
-// Boosted mod explicitly import sass-math-pow for compatibility with various sass compilers
-@import "node_modules/sass-math-pow/sass/math-pow";
-
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
 @mixin _assert-ascending($map, $map-name) {
@@ -31,6 +28,29 @@
   @if $first-value != 0 {
     @warn "First breakpoint in #{$map-name} must start at 0, but starts at #{$first-value}.";
   }
+}
+
+// Internal Bootstrap function to turn maps into its negative variant.
+// It prefixes the keys with `n` and makes the value negative.
+@function negativify-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    @if $key != 0 {
+      $result: map-merge($result, ("n" + $key: (-$value)));
+    }
+  }
+  @return $result;
+}
+
+// Get multiple keys from a sass map
+@function map-get-multiple($map, $values) {
+  $result: ();
+  @each $key, $value in $map {
+    @if (index($values, $key) != null) {
+      $result: map-merge($result, ($key: $value));
+    }
+  }
+  @return $result;
 }
 
 // Replace `$search` with `$replace` in `$string`
@@ -68,60 +88,30 @@
 }
 
 // Color contrast
-// Boosted mod to apply WCAG contrast algo
 @function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
-  @if ($color == $primary) {
-    @return $light;
-  }
   $r: red($color);
   $g: green($color);
   $b: blue($color);
-  // get the relative lum for each color
-  $luminositecouleur: relativelum($r / 255, $g / 255, $b / 255);
-  $luminositeblanc: relativelum(1, 1, 1);
-  // if luminosite doesn't fit with white color return black
-  @if ((($luminositeblanc + .05) / ($luminositecouleur + .05)) < $yiq-contrasted-threshold) {
-    @return $dark;
-  } @else {
-    @return $light;
-  }
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @return if($yiq >= $yiq-contrasted-threshold, $dark, $light);
 }
 
-// Apply WCAG contrast algo : https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
-// Convert from HTMLCS JS algo
-@function relativelum($r, $g, $b) {
-  @return ((transform($r) * .2126) + (transform($g) * .7152) + (transform($b) * .0722));
-}
-
-@function transform($x) {
-  @if ($x <= .03928) {
-    @return $x / 12.92;
-  } @else {
-    @return poly-pow((($x + .055) / 1.055), 2.4);
-  }
-}
-// end mod
-
-// Retrieve color Sass maps
-@function color($key: "blue") {
-  @return map-get($colors, $key);
-}
-
-@function theme-color($key: "primary") {
-  @return map-get($theme-colors, $key);
-}
-
-@function gray($key: "100") {
-  @return map-get($grays, $key);
-}
-
-// Request a theme color level
-@function theme-color-level($color-name: "primary", $level: 0) {
-  $color: theme-color($color-name);
+// Request a color level
+@function color-level($color: $primary, $level: 0) {
   $color-base: if($level > 0, $black, $white);
   $level: abs($level);
 
   @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+@function tint-color($color, $level) {
+  @return mix(white, $color, $level * $theme-color-interval);
+}
+
+@function shade-color($color, $level) {
+  @return mix(black, $color, $level * $theme-color-interval);
 }
 
 // Return valid calc
@@ -160,9 +150,3 @@
 
   @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + unquote(" - ") + $value2);
 }
-
-// Boosted mod
-@function icon-conf($network, $key) {
-  @return map-get(map-get($o-networks, $network), $key);
-}
-// end mod

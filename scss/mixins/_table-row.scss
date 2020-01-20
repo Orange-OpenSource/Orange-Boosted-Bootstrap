@@ -1,14 +1,12 @@
 // Tables
 
 @mixin table-row-variant($state, $background, $border: null) {
-  $contrast: color-yiq($background); // Boosted mod: ensure contrast
   // Exact selectors below required to override `.table-striped` and prevent
   // inheritance to nested tables.
   .table-#{$state} {
     &,
     > th,
     > td {
-      color: $contrast; // Boosted mod: ensure contrast
       background-color: $background;
     }
 
@@ -25,22 +23,17 @@
   // Hover states for `.table-hover`
   // Note: this is not available for cells or rows within `thead` or `tfoot`.
   .table-hover {
+    $hover-background: darken($background, 5%);
+
     .table-#{$state} {
-      @include hover() {
-        // Boosted mod: ensure contrast
-        @if $contrast == $white {
-          background-color: darken($background, 5%);
-        } @else {
-          background-color: lighten($background, 5%);
-        }
+      &:hover {
+        background-color: $hover-background;
 
         > td,
         > th {
-          background-color: inherit;
+          background-color: $hover-background;
         }
-        // end mod
       }
     }
   }
 }
-

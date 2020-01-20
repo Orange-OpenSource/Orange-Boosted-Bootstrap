@@ -39,16 +39,16 @@
   // Workaround for the image size bug in IE
   // See: https://github.com/twbs/bootstrap/pull/28855
   min-height: 1px;
-  padding: $card-spacer-x;
+  padding: $card-spacer-y $card-spacer-x;
   color: $card-color;
 }
 
 .card-title {
-  margin-bottom: $card-spacer-y;
+  margin-bottom: $card-title-spacer-y;
 }
 
 .card-subtitle {
-  margin-top: -$card-spacer-y / 2;
+  margin-top: -$card-title-spacer-y / 2;
   margin-bottom: 0;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .card-link {
-  @include hover() {
+  &:hover {
     text-decoration: none;
   }
 
@@ -71,9 +71,8 @@
 //
 
 .card-header {
-  padding: $card-spacer-y $card-spacer-x;
+  padding: $card-cap-padding-y $card-cap-padding-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  font-weight: $font-weight-bold; // Boosted mod
   color: $card-cap-color;
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
@@ -90,8 +89,8 @@
 }
 
 .card-footer {
-  padding: $card-spacer-y $card-spacer-x;
-  background-color: $card-cap-color; // Boosted mod
+  padding: $card-cap-padding-y $card-cap-padding-x;
+  background-color: $card-cap-bg;
   border-top: $card-border-width solid $card-border-color;
 
   &:last-child {
@@ -105,15 +104,22 @@
 //
 
 .card-header-tabs {
-  margin-right: -$card-spacer-x / 2;
-  margin-bottom: -$card-spacer-y;
-  margin-left: -$card-spacer-x / 2;
+  margin-right: -$card-cap-padding-x / 2;
+  margin-bottom: -$card-cap-padding-y;
+  margin-left: -$card-cap-padding-x / 2;
   border-bottom: 0;
+
+  @if $nav-tabs-link-active-bg != $card-bg {
+    .nav-link.active {
+      background-color: $card-bg;
+      border-bottom-color: $card-bg;
+    }
+  }
 }
 
 .card-header-pills {
-  margin-right: -$card-spacer-x / 2;
-  margin-left: -$card-spacer-x / 2;
+  margin-right: -$card-cap-padding-x / 2;
+  margin-left: -$card-cap-padding-x / 2;
 }
 
 // Card image
@@ -232,107 +238,25 @@
 
 
 //
-// Columns
-//
-
-.card-columns {
-  .card {
-    margin-bottom: $card-columns-margin;
-  }
-
-  @include media-breakpoint-up(sm) {
-    column-count: $card-columns-count;
-    column-gap: $card-columns-gap;
-    orphans: 1;
-    widows: 1;
-
-    .card {
-      display: inline-block; // Don't let them vertically span multiple columns
-      width: 100%; // Don't let their width change
-    }
-  }
-}
-
-
-//
 // Accordion
 //
 
 .accordion {
-  // Boosted mod
-  .card {
-    position: static;
-    border-color: $gray-500;
-    border-width: 0 0 $border-width;
-    &:first-child {
-      border-width: $border-width 0;
+  > .card {
+    overflow: hidden;
+
+    &:not(:last-of-type) {
+      border-bottom: 0;
+      @include border-bottom-radius(0);
     }
 
-    @include media-breakpoint-up(md) {
-      border-width: 0 0 $border-width / 2;
-      &:first-child {
-        border-width: $border-width / 2 0;
-      }
-    }
-  }
-
-  .card-header {
-    padding: 0;
-    background: none;
-    border: 0;
-
-    button,
-    a {
-      display: flex;
-      width: add(100%, $card-accordion-spacer * 2);
-      padding: $card-accordion-spacer;
-      margin: 0 -#{$card-accordion-spacer};
-      border: 0;
-
-      &::after {
-        display: block;
-        align-self: center;
-        width: $card-accordion-spacer;
-        height: .4375rem;
-        margin-left: auto;
-        content: "";
-        background: escape-svg($accordion-arrow-icon) no-repeat 50% / $accordion-arrow-size;
-      }
-
-      &:hover::after,
-      &[aria-expanded="true"]::after { // stylelint-disable-line selector-no-qualifying-type
-        background-image: escape-svg($accordion-arrow-icon-active);
-      }
-
-      &:focus {
-        z-index: 2;
-        outline-offset: 0;
-      }
+    &:not(:first-of-type) {
+      @include border-top-radius(0);
     }
 
-    .btn-sm {
-      width: add(100%, $card-spacer-y * 2);
-      padding: $card-spacer-y;
-      margin: 0 -#{$card-spacer-y};
+    > .card-header {
+      @include border-radius(0);
+      margin-bottom: -$card-border-width;
     }
-
-    .btn-lg {
-      width: add(100%, map-get($spacers, 3) * 2);
-      padding: map-get($spacers, 3);
-      margin: 0 -#{map-get($spacers, 3)};
-    }
-
-    [aria-expanded="true"] {
-      color: $primary;
-
-      &::after {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  .card-body {
-    padding: 0 1.5rem 0 0;
-    margin: 0 0 $spacer;
   }
 }

@@ -1,3 +1,3 @@
-*.js    @ffoodd
-*.css   @ffoodd
-*.scss  @ffoodd
+*.js    @twbs/js-review
+*.css   @twbs/css-review
+*.scss  @twbs/css-review

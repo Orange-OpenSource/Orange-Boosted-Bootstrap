@@ -1,25 +1,25 @@
 /* eslint-env node */
-/* eslint no-process-env: 0 */
-
 const path = require('path')
 const ip = require('ip')
+const babel = require('rollup-plugin-babel')
+const istanbul = require('rollup-plugin-istanbul')
+const resolve = require('@rollup/plugin-node-resolve')
+
 const {
   browsers,
   browsersKeys
 } = require('./browsers')
 
-const jqueryFile = process.env.USE_OLD_JQUERY ? 'https://code.jquery.com/jquery-1.9.1.min.js' : 'node_modules/jquery/dist/jquery.slim.min.js'
-const bundle = process.env.BUNDLE === 'true'
-const browserStack = process.env.BROWSER === 'true'
-
+const { env } = process
+const browserStack = env.BROWSER === 'true'
+const debug = env.DEBUG === 'true'
 const frameworks = [
-  'qunit',
-  'sinon'
+  'jasmine'
 ]
 
 const plugins = [
-  'karma-qunit',
-  'karma-sinon'
+  'karma-jasmine',
+  'karma-rollup-preprocessor'
 ]
 
 const reporters = ['dots']
@@ -27,12 +27,12 @@ const reporters = ['dots']
 const detectBrowsers = {
   usePhantomJS: false,
   postDetection(availableBrowser) {
-    if (process.env.CI === true || availableBrowser.includes('Chrome')) {
-      return ['ChromeHeadless']
+    if (env.CI === true || availableBrowser.includes('Chrome')) {
+      return debug ? ['Chrome'] : ['ChromeHeadless']
     }
 
     if (availableBrowser.includes('Firefox')) {
-      return ['FirefoxHeadless']
+      return debug ? ['Firefox'] : ['FirefoxHeadless']
     }
 
     throw new Error('Please install Firefox or Chrome')
@@ -46,11 +46,6 @@ const customLaunchers = {
   }
 }
 
-let files = [
-  'node_modules/popper.js/dist/umd/popper.min.js',
-  'node_modules/hammer-simulator/index.js'
-]
-
 const conf = {
   basePath: '../..',
   port: 9876,
@@ -59,44 +54,58 @@ const conf = {
   singleRun: true,
   concurrency: Infinity,
   client: {
-    qunit: {
-      showUI: true
+    clearContext: false
+  },
+  files: [
+    'node_modules/hammer-simulator/index.js',
+    { pattern: 'js/tests/unit/**/*.spec.js', watched: !browserStack }
+  ],
+  preprocessors: {
+    'js/tests/unit/**/*.spec.js': ['rollup']
+  },
+  rollupPreprocessor: {
+    plugins: [
+      istanbul({
+        exclude: ['js/tests/unit/**/*.spec.js', 'js/tests/helpers/**/*.js']
+      }),
+      babel({
+        // Only transpile our source code
+        exclude: 'node_modules/**',
+        // Include only required helpers
+        externalHelpersWhitelist: [
+          'defineProperties',
+          'createClass',
+          'inheritsLoose',
+          'defineProperty',
+          'objectSpread2'
+        ],
+        plugins: [
+          '@babel/plugin-proposal-object-rest-spread'
+        ]
+      }),
+      resolve()
+    ],
+    output: {
+      format: 'iife',
+      name: 'bootstrapTest',
+      sourcemap: 'inline'
     }
   }
 }
 
-if (bundle) {
-  frameworks.push('detectBrowsers')
-  plugins.push(
-    'karma-chrome-launcher',
-    'karma-firefox-launcher',
-    'karma-detect-browsers'
-  )
-  conf.customLaunchers = customLaunchers
-  conf.detectBrowsers = detectBrowsers
-  files = files.concat([
-    jqueryFile,
-    'dist/js/boosted.js'
-  ])
-} else if (browserStack) {
+if (browserStack) {
   conf.hostname = ip.address()
   conf.browserStack = {
-    username: process.env.BROWSER_STACK_USERNAME,
-    accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
-    build: `boosted-${new Date().toISOString()}`,
-    project: 'Boosted',
+    username: env.BROWSER_STACK_USERNAME,
+    accessKey: env.BROWSER_STACK_ACCESS_KEY,
+    build: `bootstrap-${new Date().toISOString()}`,
+    project: 'Bootstrap',
     retryLimit: 2
   }
-  plugins.push('karma-browserstack-launcher')
+  plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')
   conf.customLaunchers = browsers
   conf.browsers = browsersKeys
-  reporters.push('BrowserStack')
-  files = files.concat([
-    'node_modules/jquery/dist/jquery.slim.min.js',
-    'js/dist/util.js',
-    'js/dist/tooltip.js',
-    'js/dist/!(util|index|tooltip).js' // include all of our js/dist files except util.js, index.js and tooltip.js
-  ])
+  reporters.push('BrowserStack', 'kjhtml')
 } else {
   frameworks.push('detectBrowsers')
   plugins.push(
@@ -105,12 +114,6 @@ if (bundle) {
     'karma-detect-browsers',
     'karma-coverage-istanbul-reporter'
   )
-  files = files.concat([
-    jqueryFile,
-    'js/coverage/dist/util.js',
-    'js/coverage/dist/tooltip.js',
-    'js/coverage/dist/!(util|index|tooltip).js' // include all of our js/dist files except util.js, index.js and tooltip.js
-  ])
   reporters.push('coverage-istanbul')
   conf.customLaunchers = customLaunchers
   conf.detectBrowsers = detectBrowsers
@@ -120,23 +123,38 @@ if (bundle) {
     thresholds: {
       emitWarning: false,
       global: {
-        statements: 84,
-        branches: 81,
-        functions: 81,
-        lines: 84
+        statements: 90,
+        branches: 90,
+        functions: 90,
+        lines: 90
+      },
+      each: {
+        overrides: {
+          'js/src/dom/polyfill.js': {
+            statements: 39,
+            lines: 37,
+            branches: 19,
+            functions: 50
+          }
+        }
       }
     }
   }
-}
 
-files.push('js/tests/unit/*.js')
+  if (debug) {
+    conf.hostname = ip.address()
+    plugins.push('karma-jasmine-html-reporter')
+    reporters.push('kjhtml')
+    conf.singleRun = false
+    conf.autoWatch = true
+  }
+}
 
 conf.frameworks = frameworks
 conf.plugins = plugins
 conf.reporters = reporters
-conf.files = files
 
-module.exports = (karmaConfig) => {
+module.exports = karmaConfig => {
   // possible values: karmaConfig.LOG_DISABLE || karmaConfig.LOG_ERROR || karmaConfig.LOG_WARN || karmaConfig.LOG_INFO || karmaConfig.LOG_DEBUG
   conf.logLevel = karmaConfig.LOG_ERROR || karmaConfig.LOG_WARN
   karmaConfig.set(conf)

@@ -145,12 +145,11 @@
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
   @include border-top-radius($modal-content-inner-border-radius);
 
-  // Boosted mod
   .close {
+    padding: $modal-header-padding;
     // auto on the left force icon to the right even when there is no .modal-title
     margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
   }
-  // end mod
 }
 
 // Title text within header
@@ -182,7 +181,6 @@
   // Place margin between footer elements
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
-  // stylelint-disable-next-line selector-max-universal
   > * {
     margin: $modal-footer-margin-between / 2;
   }

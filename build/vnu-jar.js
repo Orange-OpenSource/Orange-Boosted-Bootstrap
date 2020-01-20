@@ -18,7 +18,7 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     return
   }
 
-  const is32bitJava = !stderr.match(/64-Bit/)
+  const is32bitJava = !/64-Bit/.test(stderr)
 
   // vnu-jar accepts multiple ignores joined with a `|`.
   // Also note that the ignores are regular expressions.
@@ -33,19 +33,14 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     // Content → Reboot uses various date/time inputs as a visual example.
     // Documentation does not rely on them being usable.
     'The “date” input type is not supported in all browsers.*',
+    'The “week” input type is not supported in all browsers.*',
+    'The “month” input type is not supported in all browsers.*',
+    'The “color” input type is not supported in all browsers.*',
+    'The “datetime-local” input type is not supported in all browsers.*',
     'The “time” input type is not supported in all browsers.*',
-    // IE11 doesn't recognise <main> / give the element an implicit "main" landmark.
+    // IE11 doesn't recognize <main> / give the element an implicit "main" landmark.
     // Explicit role="main" is redundant for other modern browsers, but still valid.
-    'The “main” role is unnecessary for element “main”.',
-    // For some reason, the validator thinks the dashboard example is written in Danish
-    'This document appears to be written in .*',
-    'The “banner” role is unnecessary for element “header”.',
-    'The “contentinfo” role is unnecessary for element “footer”.',
-    'The “complementary” role is unnecessary for element “aside”.',
-    'The “navigation” role is unnecessary for element “nav”.',
-    'The “form” role is unnecessary for element “form”.',
-    'The “figure” role is unnecessary for element “figure”.',
-    'Possible misuse of “aria-label”.*'
+    'The “main” role is unnecessary for element “main”.'
   ].join('|')
 
   const args = [
@@ -53,6 +48,8 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     vnu,
     '--asciiquotes',
     '--skip-non-html',
+    // Ignore the language code warnings
+    '--no-langdetect',
     '--Werror',
     `--filterpattern "${ignores}"`,
     '_gh_pages/',

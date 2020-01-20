@@ -8,19 +8,16 @@
 // Deprecate
 @import "mixins/deprecate";
 
-// Utilities
+// Helpers
 @import "mixins/breakpoints";
-@import "mixins/hover";
 @import "mixins/image";
-@import "mixins/badge";
 @import "mixins/resize";
 @import "mixins/screen-reader";
-@import "mixins/size";
 @import "mixins/reset-text";
-@import "mixins/text-emphasis";
-@import "mixins/text-hide";
 @import "mixins/text-truncate";
-@import "mixins/visibility";
+
+// Utilities
+@import "mixins/utilities";
 
 // Components
 @import "mixins/alert";
@@ -29,7 +26,6 @@
 @import "mixins/pagination";
 @import "mixins/lists";
 @import "mixins/list-group";
-@import "mixins/nav-divider";
 @import "mixins/forms";
 @import "mixins/table-row";
 
@@ -44,8 +40,3 @@
 @import "mixins/clearfix";
 @import "mixins/grid-framework";
 @import "mixins/grid";
-@import "mixins/float";
-
-// Boosted mod
-@import "mixins/orange-icons";
-// End mod

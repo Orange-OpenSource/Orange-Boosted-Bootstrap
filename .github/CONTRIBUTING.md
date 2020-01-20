@@ -1,6 +1,6 @@
-# Contributing to Boosted
+# Contributing to Bootstrap
 
-Looking to contribute something to Boosted? **Here's how you can help.**
+Looking to contribute something to Bootstrap? **Here's how you can help.**
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -13,7 +13,7 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues) is
+The [issue tracker](https://github.com/twbs/bootstrap/issues) is
 the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests)
 and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
@@ -48,7 +48,7 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
 
-For a complete look at our labels, see the [project labels page](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/labels).
+For a complete look at our labels, see the [project labels page](https://github.com/twbs/bootstrap/labels).
 
 
 ## Bug reports
@@ -100,7 +100,6 @@ Example:
 ### Reporting upstream browser bugs
 
 Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Bootstrap per se.
-When feasible, we aim to report such upstream bugs to the relevant browser vendor(s), and then list them on our [Wall of Browser Bugs](https://getbootstrap.com/browser-bugs/) and [document them in MDN](https://developer.mozilla.org/en-US/docs/Web).
 
 | Vendor(s)     | Browser(s)                   | Rendering engine | Bug reporting website(s)                                                              | Notes                                                    |
 | ------------- | ---------------------------- | ---------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -133,14 +132,14 @@ Please adhere to the [coding guidelines](#code-guidelines) used throughout the
 project (indentation, accurate comments, etc.) and any other requirements
 (such as test coverage).
 
-**Do not edit `boosted.css`, or `boosted.js`
+**Do not edit `bootstrap.css`, or `bootstrap.js`
 directly!** Those files are automatically generated. You should edit the
-source files in [`/boosted/scss/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/scss)
-and/or [`/boosted/js/`](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/js) instead.
+source files in [`/bootstrap/scss/`](https://github.com/twbs/bootstrap/tree/master/scss)
+and/or [`/bootstrap/js/src/`](https://github.com/twbs/bootstrap/tree/master/js/src) instead.
 
-Similarly, when contributing to Boosted's documentation, you should edit the
+Similarly, when contributing to Bootstrap's documentation, you should edit the
 documentation source files in
-[the `/boosted/docs/` directory of the `master` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/docs).
+[the `/bootstrap/site/content/docs/` directory of the `master` branch](https://github.com/twbs/bootstrap/tree/master/site/content/docs).
 **Do not edit the `gh-pages` branch.** That branch is generated from the
 documentation source files and is managed separately by the Bootstrap Core Team.
 
@@ -156,7 +155,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd bootstrap
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git
+   git remote add upstream https://github.com/twbs/bootstrap.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
@@ -195,9 +194,9 @@ included in the project:
     with a clear title and description against the `master` branch.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to
-license your work under the terms of the [MIT License](LICENSE) (if it
+license your work under the terms of the [MIT License](../LICENSE) (if it
 includes code changes) and under the terms of the
-[Creative Commons Attribution 3.0 Unported License](docs/LICENSE)
+[Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/)
 (if it includes documentation changes).
 
 
@@ -224,7 +223,6 @@ includes code changes) and under the terms of the
 - 2 spaces (no tabs)
 - strict mode
 - "Attractive"
-- Don't use [jQuery event alias convenience methods](https://github.com/jquery/jquery/blob/master/src/event/alias.js) (such as `$().focus()`). Instead, use [`$().trigger(eventType, ...)`](https://api.jquery.com/trigger/) or [`$().on(eventType, ...)`](https://api.jquery.com/on/), depending on whether you're firing an event or listening for an event. (For example, `$().trigger('focus')` or `$().on('focus', function (event) { /* handle focus event */ })`) We do this to be compatible with custom builds of jQuery where the event aliases module has been excluded.
 
 ### Checking coding style
 
