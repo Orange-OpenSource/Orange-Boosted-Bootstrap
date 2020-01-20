@@ -13,8 +13,8 @@ const browsers = {
     base: 'BrowserStack',
     os: 'OS X',
     os_version: 'High Sierra',
-    browser: 'Chrome',
-    browser_version: 'latest'
+    browser : 'Chrome',
+    browser_version : 'latest'
   },
   firefoxMac: {
     base: 'BrowserStack',
@@ -35,7 +35,7 @@ const browsers = {
     os: 'Windows',
     os_version: '10',
     browser: 'IE',
-    browser_version: '11.0'
+    browser_version: 'latest'
   },
   chromeWin10: {
     base: 'BrowserStack',
@@ -50,6 +50,13 @@ const browsers = {
     os_version: '10',
     browser: 'Firefox',
     browser_version: 'latest'
+  },
+  EsrWin10: {
+    base: 'BrowserStack',
+    os: 'Windows',
+    os_version: '10',
+    browser: 'Firefox',
+    browser_version: '68'
   },
   iphoneX: {
     base: 'BrowserStack',

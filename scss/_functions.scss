@@ -1,4 +1,4 @@
-// Bootstrap functions
+// Boosted functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
@@ -30,7 +30,7 @@
   }
 }
 
-// Internal Bootstrap function to turn maps into its negative variant.
+// Internal Boosted function to turn maps into its negative variant.
 // It prefixes the keys with `n` and makes the value negative.
 @function negativify-map($map) {
   $result: ();
