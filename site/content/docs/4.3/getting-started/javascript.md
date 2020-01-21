@@ -1,24 +1,24 @@
 ---
 layout: docs
 title: JavaScript
-description: Bring Bootstrap to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
+description: Bring Boosted to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
 group: getting-started
 toc: true
 ---
 
 ## Individual or compiled
 
-Plugins can be included individually (using Bootstrap's individual `js/dist/*.js`), or all at once using `bootstrap.js` or the minified `bootstrap.min.js` (don't include both).
+Plugins can be included individually (using Boosted's individual `js/dist/*.js`), or all at once using `boosted.js` or the minified `boosted.min.js` (don't include both).
 
 If you use a bundler (Webpack, Rollup...), you can use `/js/dist/*.js` files which are UMD ready.
 
-## Using Bootstrap as a module
+## Using Boosted as a module
 
-We provide a version of Bootstrap built as `ESM` (`bootstrap.esm.js` and `bootstrap.esm.min.js`) which allows you to use Bootstrap as a module in your browser, if your [targeted browsers support it](https://caniuse.com/#feat=es6-module).
+We provide a version of Boosted built as `ESM` (`boosted.esm.js` and `boosted.esm.min.js`) which allows you to use Boosted as a module in your browser, if your [targeted browsers support it](https://caniuse.com/#feat=es6-module).
 
 {{< highlight html >}}
 <script type="module">
-  import { Toast } from 'bootstrap.esm.min.js'
+  import { Toast } from 'boosted.esm.min.js'
 
   Array.from(document.querySelectorAll('.toast'))
     .forEach(toastNode => new Toast(toastNode))
@@ -39,11 +39,11 @@ Our dropdowns, popovers and tooltips also depend on [Popper.js](https://popper.j
 
 ## Still want to use jQuery? It's possible!
 
-Bootstrap 5 is designed to be used without jQuery, but it's still possible to use our components with jQuery. **If Bootstrap detects `jQuery` in the `window` object** it'll add all of our components in jQuery's plugin system; this means you'll be able to do `$('[data-toggle="tooltip"]').tooltip()` to enable tooltips. The same goes for our other components.
+Boosted 5 is designed to be used without jQuery, but it's still possible to use our components with jQuery. **If Boosted detects `jQuery` in the `window` object** it'll add all of our components in jQuery's plugin system; this means you'll be able to do `$('[data-toggle="tooltip"]').tooltip()` to enable tooltips. The same goes for our other components.
 
 ## Data attributes
 
-Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+Nearly all Boosted plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
 
 {{< callout warning >}}
 ## Selectors
@@ -54,7 +54,7 @@ If you use special selectors, for example: `collapse:Example` be sure to escape 
 
 ## Events
 
-Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
+Boosted provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
 
 All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
 
@@ -71,7 +71,7 @@ myModal.addEventListener('show.bs.modal', function (e) {
 {{< callout warning >}}
 ## jQuery events
 
-Bootstrap will detect jQuery if `jQuery` is present in the `window` object and there is no `data-no-jquery` attribute set on `<body>`. If jQuery is found, Bootstrap will emit events thanks to jQuery's event system. So if you want to listen to Bootstrap's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
+Boosted will detect jQuery if `jQuery` is present in the `window` object and there is no `data-no-jquery` attribute set on `<body>`. If jQuery is found, Boosted will emit events thanks to jQuery's event system. So if you want to listen to Boosted's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
 
 {{< highlight js >}}
 $('#myTab a').on('shown.bs.tab', function () {
@@ -87,11 +87,11 @@ All constructors accept an optional options object or nothing (which initiates a
 {{< highlight js >}}
 var myModalEl = document.getElementById('myModal')
 
-var modal = new bootstrap.Modal(myModalEl) // initialized with defaults
-var modal = new bootstrap.Modal(myModalEl, { keyboard: false }) // initialized with no keyboard
+var modal = new boosted.Modal(myModalEl) // initialized with defaults
+var modal = new boosted.Modal(myModalEl, { keyboard: false }) // initialized with no keyboard
 {{< /highlight >}}
 
-If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. In order to retrieve it directly from an element, do this: `bootstrap.Popover.getInstance(myPopoverEl)`.
+If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. In order to retrieve it directly from an element, do this: `boosted.Popover.getInstance(myPopoverEl)`.
 
 ### Asynchronous functions and transitions
 
@@ -111,7 +111,7 @@ In addition a method call on a **transitioning component will be ignored**.
 
 {{< highlight js >}}
 var myCarouselEl = document.getElementById('myCarousel')
-var carousel = bootstrap.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
+var carousel = boosted.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
 
 myCarouselEl.addEventListener('slid.bs.carousel', function (e) {
   carousel.to('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
@@ -127,34 +127,34 @@ You can change the default settings for a plugin by modifying the plugin's `Cons
 
 {{< highlight js >}}
 // changes default for the modal plugin's `keyboard` option to false
-bootstrap.Modal.Default.keyboard = false
+boosted.Modal.Default.keyboard = false
 {{< /highlight >}}
 
 ## No conflict (only if you use jQuery)
 
-Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
+Sometimes it is necessary to use Boosted plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
 
 {{< highlight js >}}
-var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
+var boostedButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+$.fn.boostedBtn = boostedButton // give $().boostedBtn the Boosted functionality
 {{< /highlight >}}
 
 ## Version numbers
 
-The version of each of Bootstrap's plugins can be accessed via the `VERSION` property of the plugin's constructor. For example, for the tooltip plugin:
+The version of each of Boosted's plugins can be accessed via the `VERSION` property of the plugin's constructor. For example, for the tooltip plugin:
 
 {{< highlight js >}}
-bootstrap.Tooltip.VERSION // => "{{< param current_version >}}"
+boosted.Tooltip.VERSION // => "{{< param current_version >}}"
 {{< /highlight >}}
 
 ## No special fallbacks when JavaScript is disabled
 
-Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
+Boosted's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
 
 {{< callout warning >}}
 ##### Third-party libraries
 
-**Bootstrap does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
+**Boosted does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
 {{< /callout >}}
 
 ## Sanitizer
@@ -203,7 +203,7 @@ var DefaultWhitelist = {
 If you want to add new values to this default `whiteList` you can do the following:
 
 {{< highlight js >}}
-var myDefaultWhiteList = bootstrap.Tooltip.Default.whiteList
+var myDefaultWhiteList = boosted.Tooltip.Default.whiteList
 
 // To allow table elements
 myDefaultWhiteList.table = []
@@ -221,7 +221,7 @@ If you want to bypass our sanitizer because you prefer to use a dedicated librar
 
 {{< highlight js >}}
 var yourTooltipEl = document.getElementById('yourTooltip')
-var tooltip = new bootstrap.Tooltip(yourTooltipEl, {
+var tooltip = new boosted.Tooltip(yourTooltipEl, {
   sanitizeFn: function (content) {
     return DOMPurify.sanitize(content)
   }

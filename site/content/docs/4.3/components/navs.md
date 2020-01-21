@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Navs
-description: Documentation and examples for how to use Bootstrap's included navigation components.
+description: Documentation and examples for how to use Boosted's included navigation components.
 group: components
 toc: true
 ---
 
 ## Base nav
 
-Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+Navigation available in Boosted share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 
@@ -303,7 +303,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
+Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
 
 Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality and current state to users of assistive technologies (such as screen readers).
 
@@ -526,7 +526,7 @@ Enable tabbable tabs via JavaScript (each tab needs to be activated individually
 {{< highlight js >}}
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new bootstrap.Tab(triggerEl)
+  var tabTrigger = new boosted.Tab(triggerEl)
 
   triggerEl.addEventListener('click', function (e) {
     e.preventDefault()
@@ -539,10 +539,10 @@ You can activate individual tabs in several ways:
 
 {{< highlight js >}}
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+boosted.Tab.getInstance(triggerEl).show() // Select tab by name
 
 var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+boosted.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 {{< /highlight >}}
 
 ### Fade effect
@@ -593,7 +593,7 @@ Activates a tab element and content container. Tab should have either a `data-ta
 
 <script>
   var firstTabEl = document.querySelector('#myTab li:last-child a')
-  var firstTab = new bootstrap.Tab(firstTabEl)
+  var firstTab = new boosted.Tab(firstTabEl)
 
   firstTab.show()
 </script>
@@ -605,7 +605,7 @@ Selects the given tab and shows its associated pane. Any other tab that was prev
 
 {{< highlight js >}}
   var someTabTriggerEl = document.querySelector('#someTabTrigger')
-  var tab = new bootstrap.Tab(someTabTriggerEl)
+  var tab = new boosted.Tab(someTabTriggerEl)
 
   tab.show()
 {{< /highlight >}}
@@ -620,7 +620,7 @@ Destroys an element's tab.
 
 {{< highlight js >}}
 var triggerEl = document.querySelector('#trigger')
-var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
+var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
 {{< /highlight >}}
 
 ### Events

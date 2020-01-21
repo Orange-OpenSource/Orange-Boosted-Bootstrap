@@ -8,13 +8,13 @@ toc: true
 
 ## Forms
 
-Every group of form fields should reside in a `<form>` element. Bootstrap provides no default styling for the `<form>` element, but there are some powerful browser features that are provided by default.
+Every group of form fields should reside in a `<form>` element. Boosted provides no default styling for the `<form>` element, but there are some powerful browser features that are provided by default.
 
 - New to browser forms? Consider reviewing [the MDN form docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) for an overview and complete list of available attributes.
 - `<button>`s within a `<form>` default to `type="submit"`, so strive to be specific and always include a `type`.
 - You can disable every form element within a form with the `disabled` attribute on the `<form>`.
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Since Boosted applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
 
 ## Utilities
 
@@ -322,7 +322,7 @@ You can then remix that once again with size-specific column classes.
 Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.
 
 - Controls are `display: flex`, collapsing any HTML white space and allowing you to provide alignment control with [spacing]({{< docsref "/utilities/spacing" >}}) and [flexbox]({{< docsref "/utilities/flex" >}}) utilities.
-- Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
+- Controls and input groups receive `width: auto` to override the Boosted default `width: 100%`.
 - Controls **only appear inline in viewports that are at least 576px wide** to account for narrow viewports on mobile devices.
 
 You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{< docsref "/utilities/spacing" >}}) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.

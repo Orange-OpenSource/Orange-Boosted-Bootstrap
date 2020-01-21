@@ -200,7 +200,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 ## Checkboxes and radios
 
-Place Bootstrap's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
 {{< example >}}
 <ul class="list-group">
@@ -257,7 +257,7 @@ And if you want `<label>`s as the `.list-group-item` for large hit areas, you ca
 
 ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
+Use the tab JavaScript plugin—include it individually or through the compiled `boosted.js` file—to extend our list group to create tabbable panes of local content.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
@@ -340,7 +340,7 @@ Enable tabbable list item via JavaScript (each list item needs to be activated i
 {{< highlight js >}}
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new bootstrap.Tab(triggerEl)
+  var tabTrigger = new boosted.Tab(triggerEl)
 
   triggerEl.addEventListener('click', function (e) {
     e.preventDefault()
@@ -353,10 +353,10 @@ You can activate individual list item in several ways:
 
 {{< highlight js >}}
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+boosted.Tab.getInstance(triggerEl).show() // Select tab by name
 
 var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+boosted.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 {{< /highlight >}}
 
 ### Fade effect
@@ -395,7 +395,7 @@ Activates a list item element and content container. Tab should have either a `d
 
 <script>
   var firstTabEl = document.querySelector('#myTab a:last-child')
-  var firstTab = new bootstrap.Tab(firstTabEl)
+  var firstTab = new boosted.Tab(firstTabEl)
 
   firstTab.show()
 </script>
@@ -407,7 +407,7 @@ Selects the given list item and shows its associated pane. Any other list item t
 
 {{< highlight js >}}
   var someListItemEl = document.querySelector('#someListItem')
-  var tab = new bootstrap.Tab(someListItemEl)
+  var tab = new boosted.Tab(someListItemEl)
 
   tab.show()
 {{< /highlight >}}
@@ -422,7 +422,7 @@ Destroys an element's tab.
 
 {{< highlight js >}}
 var triggerEl = document.querySelector('#trigger')
-var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
+var tab = boosted.Tab.getInstance(triggerEl) // Returns a Boosted tab instance
 {{< /highlight >}}
 
 ### Events

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltips
-description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.
+description: Documentation and examples for adding custom Boosted tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.
 group: components
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 Things to know when using the tooltip plugin:
 
-- Tooltips rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for tooltips to work!
+- Tooltips rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before boosted.js or use `boosted.bundle.min.js` / `boosted.bundle.js` which contains Popper.js in order for tooltips to work!
 - Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
 - Tooltips with zero-length titles are never displayed.
 - Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
@@ -33,7 +33,7 @@ One way to initialize all tooltips on a page would be to select them by their `d
 {{< highlight js >}}
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+  return new boosted.Tooltip(tooltipTriggerEl)
 })
 {{< /highlight >}}
 
@@ -89,7 +89,7 @@ Trigger the tooltip via JavaScript:
 
 {{< highlight js >}}
 var exampleEl = document.getElementById('example')
-var tooltip = new bootstrap.Tooltip(exampleEl, options)
+var tooltip = new boosted.Tooltip(exampleEl, options)
 {{< /highlight >}}
 
 {{< callout warning >}}
@@ -99,7 +99,7 @@ Tooltip position attempts to automatically change when a parent container has `o
 
 {{< highlight js >}}
 var exampleEl = document.getElementById('example')
-var tooltip = new bootstrap.Tooltip(exampleEl, {
+var tooltip = new boosted.Tooltip(exampleEl, {
   boundary: 'window'
 })
 {{< /highlight >}}
@@ -282,7 +282,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>To change Bootstrap's default Popper.js config, see <a href="https://popper.js.org/popper-documentation.html#Popper.Defaults">Popper.js's configuration</a></td>
+      <td>To change Boosted's default Popper.js config, see <a href="https://popper.js.org/popper-documentation.html#Popper.Defaults">Popper.js's configuration</a></td>
     </tr>
   </tbody>
 </table>
@@ -382,7 +382,7 @@ Updates the position of an element's tooltip.
 
 {{< highlight js >}}
 var myTooltipEl = document.getElementById('myTooltip')
-var tooltip = new bootstrap.Tooltip(myTooltipEl)
+var tooltip = new boosted.Tooltip(myTooltipEl)
 
 myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
   // do something...

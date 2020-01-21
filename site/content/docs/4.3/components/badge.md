@@ -40,7 +40,7 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 
 ## Background colors
 
-Use our background utility classes to quickly change the appearance of a badge. Please note that when using Bootstrap's default `.bg-light`, you'll likely need a text color utility like `.text-dark` for proper styling. This is because background utilities do not set anything but `background-color`.
+Use our background utility classes to quickly change the appearance of a badge. Please note that when using Boosted's default `.bg-light`, you'll likely need a text color utility like `.text-dark` for proper styling. This is because background utilities do not set anything but `background-color`.
 
 {{< example >}}
 {{< badge.inline >}}

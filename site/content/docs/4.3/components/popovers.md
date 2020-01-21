@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Popovers
-description: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+description: Documentation and examples for adding Boosted popovers, like those found in iOS, to any element on your site.
 group: components
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 Things to know when using the popover plugin:
 
-- Popovers rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for popovers to work!
+- Popovers rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before boosted.js or use `boosted.bundle.min.js` / `boosted.bundle.js` which contains Popper.js in order for popovers to work!
 - Popovers require the [tooltip plugin]({{< docsref "/components/tooltips" >}}) as a dependency.
 - Popovers are opt-in for performance reasons, so **you must initialize them yourself**.
 - Zero-length `title` and `content` values will never show a popover.
@@ -34,7 +34,7 @@ One way to initialize all popovers on a page would be to select them by their `d
 {{< highlight js >}}
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
+  return new boosted.Popover(popoverTriggerEl)
 })
 {{< /highlight >}}
 
@@ -43,7 +43,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead.
 
 {{< highlight js >}}
-var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+var popover = new boosted.Popover(document.querySelector('.example-popover'), {
   container: 'body'
 })
 {{< /highlight >}}
@@ -109,7 +109,7 @@ For proper cross-browser and cross-platform behavior, you must use the `<a>` tag
 {{< /example >}}
 
 {{< highlight js >}}
-var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+var popover = new boosted.Popover(document.querySelector('.popover-dismiss'), {
   trigger: 'focus'
 })
 {{< /highlight >}}
@@ -132,7 +132,7 @@ Enable popovers via JavaScript:
 
 {{< highlight js >}}
 var exampleEl = document.getElementById('example')
-var popover = new bootstrap.Popover(exampleEl, options)
+var popover = new boosted.Popover(exampleEl, options)
 {{< /highlight >}}
 
 {{< callout warning >}}
@@ -285,7 +285,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>To change Bootstrap's default Popper.js config, see <a href="https://popper.js.org/popper-documentation.html#Popper.Defaults">Popper.js's configuration</a></td>
+      <td>To change Boosted's default Popper.js config, see <a href="https://popper.js.org/popper-documentation.html#Popper.Defaults">Popper.js's configuration</a></td>
     </tr>
   </tbody>
 </table>
@@ -357,7 +357,7 @@ Updates the position of an element's popover.
 
 {{< highlight js >}}
 var exampleTriggerEl = document.getElementById('example')
-var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Returns a Bootstrap popover instance
+var popover = boosted.Popover.getInstance(exampleTriggerEl) // Returns a Boosted popover instance
 {{< /highlight >}}
 
 ### Events

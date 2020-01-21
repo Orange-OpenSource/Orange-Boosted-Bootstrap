@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Scrollspy
-description: Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
+description: Automatically update Boosted navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 group: components
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 Scrollspy has a few requirements to function properly:
 
-- It must be used on a Bootstrap [nav component]({{< docsref "/components/navs" >}}) or [list group]({{< docsref "/components/list-group" >}}).
+- It must be used on a Boosted [nav component]({{< docsref "/components/navs" >}}) or [list group]({{< docsref "/components/list-group" >}}).
 - Scrollspy requires `position: relative;` on the element you're spying on, usually the `<body>`.
 - When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
 - Anchors (`<a>`) are required and must point to an element with that `id`.
@@ -227,7 +227,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 ### Via data attributes
 
-To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Bootstrap `.nav` component.
+To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Boosted `.nav` component.
 
 {{< highlight css >}}
 body {
@@ -252,7 +252,7 @@ body {
 After adding `position: relative;` in your CSS, call the scrollspy via JavaScript:
 
 {{< highlight js >}}
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+var scrollSpy = new boosted.ScrollSpy(document.body, {
   target: '#navbar-example'
 })
 {{< /highlight >}}
@@ -278,7 +278,7 @@ When using scrollspy in conjunction with adding or removing of elements from the
 {{< highlight js >}}
 var dataSpyList = [].slice.call(document.querySelectorAll('[data-spy="scroll"]'))
 dataSpyList.forEach(function (dataSpyEl) {
-  bootstrap.ScrollSpy.getInstance(dataSpyEl)
+  boosted.ScrollSpy.getInstance(dataSpyEl)
     .refresh()
 })
 {{< /highlight >}}
@@ -293,7 +293,7 @@ Destroys an element's scrollspy.
 
 {{< highlight js >}}
 var scrollSpyContentEl = document.getElementById('content')
-var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
+var scrollSpy = boosted.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Boosted scrollspy instance
 {{< /highlight >}}
 
 ### Options

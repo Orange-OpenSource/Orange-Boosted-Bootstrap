@@ -14,13 +14,13 @@
         <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
         {{ if eq .Title "Examples" }}
-        <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">Download source code</a>
+        <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-bd-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
         {{ end }}
         {{ partial "ads" . }}
       </div>
     </header>
 
-    <main class="bd-content py-5" id="content" role="main">
+    <main class="bd-content py-5" id="content">
       <div class="container">
         {{ .Content }}
       </div>

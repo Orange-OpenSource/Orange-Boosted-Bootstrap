@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Spacing
-description: Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.
+description: Boosted includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.
 group: utilities
 toc: true
 ---
@@ -68,7 +68,7 @@ Here are some representative examples of these classes:
 
 ### Horizontal centering
 
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+Additionally, Boosted also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
@@ -94,7 +94,7 @@ The syntax is nearly the same as the default, positive margin utilities, but wit
 }
 {{< /highlight >}}
 
-Here's an example of customizing the Bootstrap grid at the medium (`md`) breakpoint and above. We've increased the `.col` padding with `.px-md-5` and then counteracted that with `.mx-md-n5` on the parent `.row`.
+Here's an example of customizing the Boosted grid at the medium (`md`) breakpoint and above. We've increased the `.col` padding with `.px-md-5` and then counteracted that with `.mx-md-n5` on the parent `.row`.
 
 {{< example >}}
 <div class="row mx-md-n5">

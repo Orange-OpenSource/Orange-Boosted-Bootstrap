@@ -221,7 +221,7 @@ Call carousel manually with:
 
 {{< highlight js >}}
 var myCarousel = document.querySelector('#myCarousel')
-var carousel = new bootstrap.Carousel(myCarousel)
+var carousel = new boosted.Carousel(myCarousel)
 {{< /highlight >}}
 
 ### Options
@@ -288,7 +288,7 @@ You can create a carousel instance with the carousel constructor, for example, t
 
 {{< highlight js >}}
 var myCarousel = document.querySelector('#myCarousel')
-var carousel = new bootstrap.Carousel(myCarousel, {
+var carousel = new boosted.Carousel(myCarousel, {
   interval: 2000,
   wrap: false
 })
@@ -335,7 +335,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 
 ### Events
 
-Bootstrap's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
+Boosted's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
 
 - `direction`: The direction in which the carousel is sliding (either `"left"` or `"right"`).
 - `relatedTarget`: The DOM element that is being slid into place as the active item.

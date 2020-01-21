@@ -57,7 +57,7 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 
 Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
 
-- Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
+- Be sure you've loaded the alert plugin, or the compiled Boosted JavaScript.
 - Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
 - On the close button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
 - To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
@@ -82,7 +82,7 @@ Enable dismissal of an alert via JavaScript:
 {{< highlight js >}}
 var alertList = document.querySelectorAll('.alert')
 alertList.forEach(function (alert) {
-  new bootstrap.Alert(alert)
+  new boosted.Alert(alert)
 })
 {{< /highlight >}}
 
@@ -102,7 +102,7 @@ You can create an alert instance with the alert constructor, for example:
 
 {{< highlight js >}}
 var myAlert = document.getElementById('myAlert')
-var bsAlert = new bootstrap.Alert(myAlert)
+var bsAlert = new boosted.Alert(myAlert)
 {{< /highlight >}}
 
 This makes an alert listen for click events on descendant elements which have the `data-dismiss="alert"` attribute. (Not necessary when using the data-api's auto-initialization.)
@@ -136,7 +136,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>getInstance</code>
       </td>
       <td>
-        Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: <code>bootstrap.Alert.getInstance(alert)</code>
+        Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: <code>boosted.Alert.getInstance(alert)</code>
       </td>
     </tr>
   </tbody>
@@ -144,13 +144,13 @@ This makes an alert listen for click events on descendant elements which have th
 
 {{< highlight js >}}
 var alertNode = document.querySelector('.alert')
-var alert = bootstrap.Alert.getInstance(alertNode)
+var alert = boosted.Alert.getInstance(alertNode)
 alert.close()
 {{< /highlight >}}
 
 ### Events
 
-Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+Boosted's alert plugin exposes a few events for hooking into alert functionality.
 
 <table class="table">
   <thead>

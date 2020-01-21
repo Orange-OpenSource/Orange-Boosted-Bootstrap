@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Migrating to v5
-description: Track and review changes to the Bootstrap source files, documentation, and components to help you migrate from v4 to v5.
+description: Track and review changes to the Boosted source files, documentation, and components to help you migrate from v4 to v5.
 group: migration
 aliases: "/migration/"
 toc: true
@@ -9,7 +9,7 @@ toc: true
 
 ## Browser support
 
-See the browser and devices page for details on what is currently supported in Bootstrap 5. Since v4, here's what's changed to our browser support:
+See the browser and devices page for details on what is currently supported in Boosted 5. Since v4, here's what's changed to our browser support:
 
 - Dropped support for Internet Explorer NN
 - Dropped support for Firefox NN - MM
@@ -22,7 +22,7 @@ See the browser and devices page for details on what is currently supported in B
 
 Changes to our source Sass files and compiled CSS.
 
-- Removed `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active` mixins. Use regular CSS syntax for these moving forward. [See #28267](https://github.com/twbs/bootstrap/pull/28267).
+- Removed `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active` mixins. Use regular CSS syntax for these moving forward. [See #28267](https://github.com/twbs/boosted/pull/28267).
 - Remove previously deprecated mixins
   - `float()`
   - `form-control-mixin()`

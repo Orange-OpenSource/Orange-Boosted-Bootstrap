@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Overview
-description: Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, and responsive utility classes.
+description: Components and options for laying out your Boosted project, including wrapping containers, a powerful grid system, and responsive utility classes.
 group: layout
 aliases: "/docs/4.3/layout/"
 toc: true
@@ -9,9 +9,9 @@ toc: true
 
 ## Containers
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+Containers are the most basic layout element in Boosted and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
-Bootstrap comes with three different containers:
+Boosted comes with three different containers:
 
 - `.container`, which sets a `max-width` at each responsive breakpoint
 - `.container-fluid`, which is `width: 100%` at all breakpoints
@@ -121,7 +121,7 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 ### Responsive
 
-Responsive containers are new in Bootstrap v4.4. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, and `xl`.
+Responsive containers are new in Boosted v4.4. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, and `xl`.
 
 {{< highlight html >}}
 <div class="container-sm">100% wide until small breakpoint</div>
@@ -132,13 +132,13 @@ Responsive containers are new in Bootstrap v4.4. They allow you to specify a cla
 
 ## Responsive breakpoints
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+Since Boosted is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+Boosted primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 {{< highlight scss >}}
 // Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+// No media query for `xs` since this is the default in Boosted
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }
@@ -258,7 +258,7 @@ The Sass mixin for targeting the same screen size range would be:
 
 ## Z-index
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+Several Boosted components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Boosted that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
 
 These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
 

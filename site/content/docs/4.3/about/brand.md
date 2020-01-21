@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Brand guidelines
-description: Documentation and examples for Bootstrap's logo and brand usage guidelines.
+description: Documentation and examples for Boosted's logo and brand usage guidelines.
 group: about
 toc: true
 ---
