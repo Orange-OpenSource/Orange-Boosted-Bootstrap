@@ -1,4 +1,9 @@
-<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/tarteaucitron.js"></script>
+{{- $tarteJS := resources.Get "js/vendor/tarteaucitron.js" -}}
+{{- if (eq (getenv "HUGO_ENV") "production") -}}
+  {{- $tarteJS = $tarteJS | resources.Minify -}}
+{{- end }}
+{{- $secureTarteJS := $tarteJS | resources.Fingerprint "sha384" }}
+<script src="{{ $tarteJS.Permalink | relURL }}" integrity="{{ $secureTarteJS.Data.Integrity }}" crossorigin="anonymous"></script>
 <script>
   tarteaucitron.init({
     "privacyUrl": "", /* Privacy policy url */
