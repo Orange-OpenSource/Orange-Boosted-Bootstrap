@@ -2,7 +2,7 @@
 
 Package.describe({
   name: 'Orange-OpenSource:Orange-Boosted-Bootstrap', // https://atmospherejs.com/Orange-OpenSource/Orange-Boosted-Bootstrap
-  summary: 'Orange Boosted with Bootstrap is an Orange branded, accessible and ergonomic framework library, based on Bootstrap.',
+  summary: 'Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.',
   version: '4.3.1',
   git: 'https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git'
 });

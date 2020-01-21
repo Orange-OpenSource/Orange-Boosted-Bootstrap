@@ -6,7 +6,7 @@
     <title>Boosted Sass</title>
     <authors>The Boosted Authors, Orange SA</authors>
     <owners>Orange SA</owners>
-    <description>Orange Boosted with Bootstrap is an Orange branded, accessible and ergonomic framework library, based on Bootstrap.</description>
+    <description>Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.</description>
     <releaseNotes>https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases</releaseNotes>
     <summary>Boosted framework in Sass. Includes fonts and JavaScript</summary>
     <language>en-us</language>
