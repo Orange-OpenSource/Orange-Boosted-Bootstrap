@@ -26,8 +26,8 @@
   }
 
   window.docsearch({
-    apiKey: '5990ad008512000bba2cf951ccf0332f',
-    indexName: 'bootstrap',
+    apiKey: 'a2fb9f18ccc85658e152aeb2dd350860',
+    indexName: 'boosted-orange',
     inputSelector: '#search-input',
     algoliaOptions: {
       facetFilters: ['version:' + siteDocsVersion]
@@ -35,7 +35,7 @@
     transformData: function (hits) {
       return hits.map(function (hit) {
         var currentUrl = getOrigin()
-        var liveUrl = 'https://getbootstrap.com'
+        var liveUrl = 'https://boosted.orange.com'
 
         // When in production, return the result as is,
         // otherwise remove our url from it.
