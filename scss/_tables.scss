@@ -41,46 +41,11 @@
   }
 }
 
+// Boosted mod: no .table-bordered
 
-// Border versions
-//
-// Add or remove borders all around the table and between all the columns.
+// Boosted mod: no .table-borderless
 
-.table-bordered {
-  border: $table-border-width solid $table-border-color;
-
-  th,
-  td {
-    border: $table-border-width solid $table-border-color;
-  }
-
-  thead {
-    th,
-    td {
-      border-bottom-width: 2 * $table-border-width;
-    }
-  }
-}
-
-.table-borderless {
-  th,
-  td,
-  thead th,
-  tbody + tbody {
-    border: 0;
-  }
-}
-
-// Zebra-striping
-//
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
-
-.table-striped {
-  tbody tr:nth-of-type(#{$table-striped-order}) {
-    background-color: $table-accent-bg;
-  }
-}
-
+// Boosted mod: no .table-striped
 
 // Hover effect
 //
@@ -96,40 +61,9 @@
 }
 
 
-// Table backgrounds
-//
-// Exact selectors below required to override `.table-striped` and prevent
-// inheritance to nested tables.
+// Boosted mod: no table-row-variants
 
-@each $color, $value in $theme-colors {
-  @include table-row-variant($color, color-level($value, $table-bg-level), color-level($value, $table-border-level));
-}
-
-@include table-row-variant(active, $table-active-bg);
-
-
-// Dark styles
-//
-// Same table markup, but inverted color scheme: dark background and light text.
-
-// stylelint-disable-next-line no-duplicate-selectors
-.table {
-  .thead-dark {
-    th {
-      color: $table-dark-color;
-      background-color: $table-dark-bg;
-      border-color: $table-dark-border-color;
-    }
-  }
-
-  .thead-light {
-    th {
-      color: $table-head-color;
-      background-color: $table-head-bg;
-      border-color: $table-border-color;
-    }
-  }
-}
+// Boosted mod: no .thead-light  nor .thead-dark
 
 .table-dark {
   color: $table-dark-color;
@@ -141,15 +75,9 @@
     border-color: $table-dark-border-color;
   }
 
-  &.table-bordered {
-    border: 0;
-  }
+  // Boosted mod: no .table-bordered
 
-  &.table-striped {
-    tbody tr:nth-of-type(#{$table-striped-order}) {
-      background-color: $table-dark-accent-bg;
-    }
-  }
+  // Boosted mod: no .table-striped
 
   &.table-hover {
     tbody tr {
@@ -179,10 +107,7 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 
-        // Prevent double border on horizontal scroll due to use of `display: block;`
-        > .table-bordered {
-          border: 0;
-        }
+        // Boosted mod: no .table-bordered
       }
     }
   }
