@@ -202,32 +202,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 Place Boosted's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
-{{< example >}}
-<ul class="list-group">
-  <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
-    Cras justo odio
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
-    Dapibus ac facilisis in
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
-    Morbi leo risus
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
-    Porta ac consectetur ac
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
-    Vestibulum at eros
-  </li>
-</ul>
-{{< /example >}}
-
-And if you want `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
+However, we recommend to use `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
 
 {{< example >}}
 <div class="list-group">
