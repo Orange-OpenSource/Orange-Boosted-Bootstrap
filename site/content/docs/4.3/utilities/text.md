@@ -69,10 +69,7 @@ Quickly change the weight (boldness) of text or italicize text.
 
 {{< example >}}
 <p class="font-weight-bold">Bold text.</p>
-<p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
 <p class="font-weight-normal">Normal weight text.</p>
-<p class="font-weight-light">Light weight text.</p>
-<p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
 <p class="font-italic">Italic text.</p>
 <p class="font-normal">Text without font style</p>
 {{< /example >}}

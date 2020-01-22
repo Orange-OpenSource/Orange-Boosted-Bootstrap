@@ -361,11 +361,8 @@ $utilities: map-merge(
     "font-weight": (
       property: font-weight,
       values: (
-        light: $font-weight-light,
-        lighter: $font-weight-lighter,
         normal: $font-weight-normal,
-        bold: $font-weight-bold,
-        bolder: $font-weight-bolder
+        bold: $font-weight-bold
       )
     ),
     "text-transform": (
