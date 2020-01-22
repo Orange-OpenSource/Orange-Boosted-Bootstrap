@@ -21,3 +21,9 @@ Boosted is maintained by the founding team and a small group of invaluable core 
 {{< /team.inline >}}
 
 Get involved with Boosted development by [opening an issue]({{< param repo >}}/issues/new) or submitting a pull request. Read our [contributing guidelines]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how we develop.
+
+{{< callout info >}}
+## Bootstrap team
+
+Boosted is based on [Bootstrap](https://getbootstrap.com) —&nbsp;maintained by [its founding team and a small group of invaluable core contributors](https://getbootstrap.com/docs/4.4/about/team/), with the massive support and involvement of their community, **including some proud Boosted maintainers and contributors**.
+{{< /callout >}}
