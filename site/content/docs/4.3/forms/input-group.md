@@ -45,9 +45,9 @@ Place one add-on or button on either side of an input. You may also place one on
 
 <div class="input-group">
   <div class="input-group-prepend">
-    <span class="input-group-text">With textarea</span>
+    <label for="textarea" class="input-group-text">With textarea</label>
   </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
+  <textarea class="form-control" id="textarea"></textarea>
 </div>
 {{< /example >}}
 

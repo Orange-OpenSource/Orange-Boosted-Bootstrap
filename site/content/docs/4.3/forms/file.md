@@ -16,7 +16,7 @@ The file input is the most gnarly of the bunch and requires additional JavaScrip
 <div class="form-file">
   <input type="file" class="form-file-input" id="customFile">
   <label class="form-file-label" for="customFile">
-    <span class="form-file-text">Choose file...</span>
+    <span class="form-file-text">Choose file…</span>
     <span class="form-file-button">Browse</span>
   </label>
 </div>
@@ -28,7 +28,7 @@ Add the `disabled` attribute to the `<input>` and the custom markup will be upda
 <div class="form-file">
   <input type="file" class="form-file-input" id="customFileDisabled" disabled>
   <label class="form-file-label" for="customFileDisabled">
-    <span class="form-file-text">Choose file...</span>
+    <span class="form-file-text">Choose file…</span>
     <span class="form-file-button">Browse</span>
   </label>
 </div>

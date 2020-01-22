@@ -26,9 +26,20 @@ toc: true
 Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 {{< example >}}
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-<input class="form-control" type="text" placeholder="Default input">
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+<form>
+  <div class="mb-3">
+    <label for="form-control-lg">Large input</label>
+    <input class="form-control form-control-lg" type="text" id="form-control-lg" placeholder=".form-control-lg">
+  </div>
+  <div class="mb-3">
+    <label for="form-control">Default input</label>
+    <input class="form-control" type="text" id="form-control" placeholder="Default input">
+  </div>
+  <div class="mb-3">
+    <label for="form-control-sm">Small input</label>
+    <input class="form-control form-control-sm" type="text" id="form-control-sm" placeholder=".form-control-sm">
+  </div>
+</form>
 {{< /example >}}
 
 ## Readonly
@@ -36,7 +47,10 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+<form>
+  <label for="form-control-readonly">Readonly input</label>
+  <input class="form-control" type="text" id="form-control-readonly" placeholder="Readonly input here…" readonly>
+</form>
 {{< /example >}}
 
 ## Readonly plain text

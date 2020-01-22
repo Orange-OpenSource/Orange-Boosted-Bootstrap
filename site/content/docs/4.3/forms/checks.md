@@ -195,17 +195,3 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
   <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
 {{< /example >}}
-
-## Without labels
-
-Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
-
-{{< example >}}
-<div>
-  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-</div>
-
-<div>
-  <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
-</div>
-{{< /example >}}

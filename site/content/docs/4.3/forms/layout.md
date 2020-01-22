@@ -43,10 +43,12 @@ More complex forms can be built using our grid classes. Use these for form layou
 <form>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <label for="first-name">First name</label>
+      <input type="text" class="form-control" id="first-name" placeholder="First name">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <label for="last-name">Last name</label>
+      <input type="text" class="form-control" id="last-name" placeholder="Last name">
     </div>
   </div>
 </form>
@@ -60,10 +62,12 @@ You may also swap `.row` for `.form-row`, a variation of our standard grid row t
 <form>
   <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <label for="first-name-2">First name</label>
+      <input type="text" class="form-control" id="first-name-2" placeholder="First name">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <label for="last-name-2">Last name</label>
+      <input type="text" class="form-control" id="last-name-2" placeholder="Last name">
     </div>
   </div>
 </form>
@@ -99,8 +103,8 @@ More complex layouts can also be created with the grid system.
     <div class="mb-3 col-md-4">
       <label for="inputState">State</label>
       <select id="inputState" class="form-select">
-        <option selected>Choose...</option>
-        <option>...</option>
+        <option selected>Choose…</option>
+        <option>…</option>
       </select>
     </div>
     <div class="mb-3 col-md-2">
@@ -219,13 +223,16 @@ As shown in the previous examples, our grid system allows you to place any numbe
 <form>
   <div class="form-row">
     <div class="col-7">
-      <input type="text" class="form-control" placeholder="City">
+      <label for="input-city">City</label>
+      <input type="text" class="form-control" id="input-city" placeholder="City">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="State">
+      <label for="input-state">State</label>
+      <input type="text" class="form-control" id="input-state" placeholder="State">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
+      <label for="input-zip">Zip</label>
+      <input type="text" class="form-control" id="input-zip" placeholder="Zip">
     </div>
   </div>
 </form>
@@ -254,7 +261,7 @@ The example below uses a flexbox utility to vertically center the contents and c
     <div class="col-auto">
       <label class="sr-only" for="autoSizingSelect">Preference</label>
       <select class="form-select mb-2" id="autoSizingSelect">
-        <option selected>Choose...</option>
+        <option selected>Choose…</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
@@ -296,7 +303,7 @@ You can then remix that once again with size-specific column classes.
     <div class="col-sm-3 my-1">
       <label class="sr-only" for="specificSizeSelect">Preference</label>
       <select class="form-select" id="specificSizeSelect">
-        <option selected>Choose...</option>
+        <option selected>Choose…</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
@@ -342,7 +349,7 @@ You may need to manually address the width and alignment of individual form cont
 
   <label class="sr-only" for="inlineFormSelectPref">Preference</label>
   <select class="form-select mb-2 mr-sm-2" id="inlineFormSelectPref">
-    <option selected>Choose...</option>
+    <option selected>Choose…</option>
     <option value="1">One</option>
     <option value="2">Two</option>
     <option value="3">Three</option>
