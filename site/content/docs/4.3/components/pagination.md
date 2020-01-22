@@ -95,40 +95,6 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 </nav>
 {{< /example >}}
 
-## Sizing
-
-Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes.
-
-{{< example >}}
-<nav aria-label="...">
-  <ul class="pagination pagination-lg">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">
-        1
-        <span class="sr-only">(current)</span>
-      </span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-  </ul>
-</nav>
-{{< /example >}}
-
-{{< example >}}
-<nav aria-label="...">
-  <ul class="pagination pagination-sm">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">
-        1
-        <span class="sr-only">(current)</span>
-      </span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-  </ul>
-</nav>
-{{< /example >}}
-
 ## Alignment
 
 Change the alignment of pagination components with [flexbox utilities]({{< docsref "/utilities/flex" >}}).
