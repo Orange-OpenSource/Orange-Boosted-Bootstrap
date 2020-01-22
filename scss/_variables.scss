@@ -481,31 +481,31 @@ $table-cell-vertical-align:   top !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
-$table-accent-bg:             rgba($black, .05) !default;
+//$table-accent-bg:             rgba($black, .05) !default; // Boosted mod: forbidden by Orange Brand
 $table-hover-color:           $table-color !default;
 $table-hover-bg:              rgba($black, .075) !default;
-$table-active-bg:             $table-hover-bg !default;
+//$table-active-bg:             $table-hover-bg !default; // Boosted mod: forbidden by Orange Brand
 
 $table-border-width:          $border-width !default;
 $table-border-color:          $border-color !default;
 
-$table-head-bg:               $gray-200 !default;
-$table-head-color:            $gray-700 !default;
+//$table-head-bg:               $gray-200 !default; // Boosted mod: forbidden by Orange Brand
+//$table-head-color:            $gray-700 !default; // Boosted mod: forbidden by Orange Brand
 $table-head-border-color:     $gray-700 !default;
 
 $table-dark-color:            $white !default;
 $table-dark-bg:               $gray-800 !default;
-$table-dark-accent-bg:        rgba($white, .05) !default;
+//$table-dark-accent-bg:        rgba($white, .05) !default; // Boosted mod: forbidden by Orange Brand
 $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         rgba($white, .075) !default;
 $table-dark-border-color:     lighten($table-dark-bg, 7.5%) !default;
 
-$table-striped-order:         odd !default;
+//$table-striped-order:         odd !default; // Boosted mod: forbidden by Orange Brand
 
 $table-caption-color:         $text-muted !default;
 
-$table-bg-level:              -9 !default;
-$table-border-level:          -6 !default;
+//$table-bg-level:              -9 !default; // Boosted mod: forbidden by Orange Brand
+//$table-border-level:          -6 !default; // Boosted mod: forbidden by Orange Brand
 
 
 // Buttons + Forms
@@ -909,10 +909,10 @@ $dropdown-header-color:             $gray-600 !default;
 
 $pagination-padding-y:              .375rem !default;
 $pagination-padding-x:              .75rem !default;
-$pagination-padding-y-sm:           .25rem !default;
-$pagination-padding-x-sm:           .5rem !default;
-$pagination-padding-y-lg:           .75rem !default;
-$pagination-padding-x-lg:           1.5rem !default;
+//$pagination-padding-y-sm:           .25rem !default; // Boosted mod: forbidden by Orange Brand
+//$pagination-padding-x-sm:           .5rem !default; // Boosted mod: forbidden by Orange Brand
+//$pagination-padding-y-lg:           .75rem !default; // Boosted mod: forbidden by Orange Brand
+//$pagination-padding-x-lg:           1.5rem !default; // Boosted mod: forbidden by Orange Brand
 
 $pagination-color:                  $link-color !default;
 $pagination-bg:                     $white !default;
