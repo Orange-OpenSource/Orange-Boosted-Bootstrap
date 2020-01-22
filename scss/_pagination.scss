@@ -45,4 +45,12 @@
   }
 }
 
+
+//
+// Sizing
+//
+@include pagination-size($pagination-padding-y, $pagination-padding-x, null, $pagination-border-radius);
+
 // Boosted mod: no pagination sizes
+// @todo refactor pagination-size to remove mixin
+
