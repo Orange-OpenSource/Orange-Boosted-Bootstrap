@@ -342,7 +342,7 @@ $rounded-pill:                50rem !default;
 
 $box-shadow-sm:               null !default; // Boosted mod: forbidden by Orange Brand
 $box-shadow:                  null !default; // Boosted mod: forbidden by Orange Brand
-$box-shadow-lg:               null !default; // Boosted mod: forbidden by Orange Brand
+//$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default; // Boosted mod: forbidden by Orange Brand
 $box-shadow-inset:            null !default; // Boosted mod: forbidden by Orange Brand
 
 $component-active-color:      $white !default;
