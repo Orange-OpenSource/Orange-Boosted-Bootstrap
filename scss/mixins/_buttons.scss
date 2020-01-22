@@ -70,50 +70,7 @@
   }
 }
 
-@mixin button-outline-variant(
-  $color,
-  $color-hover: color-yiq($color),
-  $active-background: $color,
-  $active-border: $color,
-  $active-color: color-yiq($active-background)
-) {
-  color: $color;
-  border-color: $color;
-
-  &:hover {
-    color: $color-hover;
-    background-color: $active-background;
-    border-color: $active-border;
-  }
-
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
-  }
-
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
-    color: $active-color;
-    background-color: $active-background;
-    border-color: $active-border;
-
-    &:focus {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows and $btn-active-box-shadow != none {
-        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
-      } @else {
-        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
-      }
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $color;
-    background-color: transparent;
-  }
-}
+// Boosted mod: no .btn-outline
 
 // Button sizes
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
