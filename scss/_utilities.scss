@@ -434,7 +434,7 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
-        null: $border-radius,
+        circle: 50%,
         pill: $rounded-pill
       )
     ),

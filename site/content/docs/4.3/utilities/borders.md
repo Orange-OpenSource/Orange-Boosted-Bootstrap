@@ -48,6 +48,6 @@ Change the border color using utilities built on our theme colors.
 Add classes to an element to easily round its corners.
 
 {{< example >}}
-{{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Example rounded image" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}

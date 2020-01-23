@@ -334,7 +334,7 @@ $container-padding-x: $grid-gutter-width / 2 !default;
 $border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               50% !default;
+$border-radius:               null !default;
 $border-radius-lg:            null !default; // Boosted mod: forbidden by Orange Brand
 $border-radius-sm:            null !default; // Boosted mod: forbidden by Orange Brand
 
