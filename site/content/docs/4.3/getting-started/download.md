@@ -15,7 +15,7 @@ Download ready-to-use compiled code for **Boosted v{{< param current_version >}}
 
 This doesn't include documentation, source files, or any optional JavaScript dependencies like Popper.js.
 
-<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download</a>
+<a href="{{< param "download.dist" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download</a>
 
 ## Source files
 
@@ -26,7 +26,7 @@ Compile Boosted with your own asset pipeline by downloading our source Sass, Jav
 
 Should you require [build tools]({{< docsref "/getting-started/build-tools#tooling-setup" >}}), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
 
-<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+<a href="{{< param "download.source" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
 ## Boosted CDN
 
