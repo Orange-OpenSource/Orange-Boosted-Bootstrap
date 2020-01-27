@@ -9,8 +9,11 @@
     position: relative;
     flex: 1 1 auto;
 
-    // Boosted mod: remove hover { z-index }
-
+    // Bring the hover, focused, and "active" buttons to the front to overlay
+    // the borders properly
+    @include hover() {
+      z-index: 1;
+    }
     &:focus,
     &:active,
     &.active {
@@ -37,16 +40,7 @@
     margin-left: -$btn-border-width;
   }
 
-  // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    @include border-right-radius(0);
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
-    @include border-left-radius(0);
-  }
+  // Boosted mod: no rounded corners to reset
 }
 
 // Sizing
@@ -62,9 +56,15 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .5;
-  padding-left: $btn-padding-x * .5;
+  padding-right: $input-btn-padding-y; // Boosted mod
+  padding-left: $input-btn-padding-y; // Boosted mod
   border-color: $black;
+
+  // Boosted mod
+  :not(.dropleft) > &::after {
+    transform: translateY(-$border-width);
+  }
+  // end mod
 
   &::after,
   .dropup &::after,
@@ -91,16 +91,7 @@
   padding-left: $btn-padding-x-lg * .5;
 }
 
-// The clickable button for toggling the menu
-// Set the same inset shadow as the :active state
-.btn-group.show .dropdown-toggle {
-  @include box-shadow($btn-active-box-shadow);
-
-  // Show no shadow for `.btn-link` since it has no other button styles.
-  &.btn-link {
-    @include box-shadow(none);
-  }
-}
+// Boosted mod: no box-shadow at all
 
 .btn-group.show .btn {
   border-color: theme-color("primary");
@@ -126,16 +117,7 @@
     margin-top: -$btn-border-width;
   }
 
-  // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    @include border-bottom-radius(0);
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
-    @include border-top-radius(0);
-  }
+  // Boosted mod: no border-radius to reset
 }
 
 
