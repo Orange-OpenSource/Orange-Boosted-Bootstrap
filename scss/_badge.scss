@@ -9,17 +9,11 @@
   @include font-size($badge-font-size);
   font-weight: $badge-font-weight;
   line-height: 1;
+  color: $badge-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   @include border-radius($badge-border-radius);
-  @include transition($badge-transition);
-
-  @at-root a#{&} {
-    @include hover-focus() {
-      text-decoration: none;
-    }
-  }
 
   // Empty badges collapse automatically
   &:empty {
@@ -31,54 +25,4 @@
 .btn .badge {
   position: relative;
   top: -1px;
-}
-
-// Pill badges
-//
-// Make them extra rounded with a modifier to replace v3's badges.
-
-.badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
-  @include border-radius($badge-pill-border-radius);
-}
-
-// Colors
-//
-// Contextual variations (linked badges get darker on :hover).
-
-@each $color, $value in $theme-colors {
-  .badge-#{$color} {
-    @include badge-variant($value);
-
-    @if $color == "info" {
-      &.badge-lg,
-      &.badge-xlg {
-        color: $white;
-      }
-    }
-  }
-}
-
-// Boosted mod
-.badge[href] {
-  @include transition($transition-focus); // Boosted mod
-  &:focus {
-    outline-color: $white;
-    outline-offset: -#{$border-width};
-
-    &.badge-light {
-      outline-color: $black;
-    }
-  }
-}
-
-.badge-xlg {
-  @include font-size($badge-font-size-xlg);
-  padding: $badge-padding-y-lg $badge-padding-x-lg;
-}
-
-.badge-lg {
-  @include font-size($badge-font-size-lg);
-  padding: $badge-padding-y-lg $badge-padding-x-lg;
 }

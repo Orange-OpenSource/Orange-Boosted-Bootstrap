@@ -1,23 +1,29 @@
 /*!
- * Boosted v4.4.0 (https://boosted.orange.com)
- * Copyright 2014-2019 The Boosted Authors
- * Copyright 2014-2019 Orange
- * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
- * This a fork of Bootstrap : Initial license below
- * Bootstrap v4.4.0 (https://getbootstrap.com)
+ * Boosted v4.3.1 (https://boosted.orange.com/)
+ * Copyright 2014-2020 The Boosted Authors
+ * Copyright 2014-2020 Orange SA
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
+ * This a fork of Bootstrap: Initial license below
+ * Bootstrap v4.3.1 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+// Configuration
+
 @import "functions";
 @import "variables";
 @import "mixins";
+@import "utilities";
+
+
+// Layout & components
+
 @import "root";
 @import "reboot";
 @import "type";
 @import "images";
-@import "code";
 @import "grid";
 @import "tables";
 @import "forms";
@@ -25,18 +31,14 @@
 @import "transitions";
 @import "dropdown";
 @import "button-group";
-@import "input-group";
-@import "custom-forms";
 @import "nav";
 @import "navbar";
 @import "card";
 @import "breadcrumb";
 @import "pagination";
 @import "badge";
-@import "jumbotron";
 @import "alert";
 @import "progress";
-@import "media";
 @import "list-group";
 @import "close";
 @import "toasts";
@@ -45,24 +47,13 @@
 @import "popover";
 @import "carousel";
 @import "spinners";
-@import "utilities";
-@import "print";
 
-// Boosted mod
-@import "o-switches";
-@import "o-forms";
-@import "o-square-list";
-@import "o-step-bar";
-@import "o-link-arrow";
-@import "o-megamenu";
-@import "o-navbar";
-@import "o-tablesorter";
-@import "o-modal";
-@import "o-tabs";
-@import "o-nav-local";
-@import "o-skiplinks";
-@import "o-footer";
-@import "o-responsive-table";
-@import "o-scroll-up";
-@import "o-carousel";
-// end mod
+
+// Helpers
+
+@import "helpers";
+
+
+// Utilities
+
+@import "utilities/api";

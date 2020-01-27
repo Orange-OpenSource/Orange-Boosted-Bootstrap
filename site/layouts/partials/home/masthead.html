@@ -1,0 +1,29 @@
+<main class="bd-masthead mb-5 border-bottom" id="content" role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto col-md-4 order-md-2 col-lg-5">
+        <div id="boosted" class="d-flex align-items-end justify-content-center text-white bg-dark my-3 mx-auto mt-sm-0 mb-sm-5 ml-md-5" role="presentation">
+          <span class="d-inline-flex mb-3 display-0">B<span class="text-primary">oo</span>sted</span>
+        </div>
+      </div>
+      <div class="col-md-8 order-md-1 col-lg-6 text-center text-md-left">
+        <h1 class="mb-3">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
+        <p class="lead lead-lg">
+          Orange Boosted is a Bootstrap based, Orange branded accessible and ergonomic components library.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row">
+          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-primary w-100 mb-3 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Get started</a>
+          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-lg btn-outline-secondary w-100 mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ .Site.Params.current_version }}');">Download</a>
+        </div>
+        <hr class="half-rule">
+        <p class="text-muted mb-0">
+          Currently <strong>v{{ .Site.Params.current_version }}</strong>
+          <span class="px-1">&middot;</span>
+          <a href="/docs/versions/" class="text-muted">Previous releases</a>
+        </p>
+      </div>
+    </div>
+    {{ partial "ads.html" . }}
+  </div>
+</main>

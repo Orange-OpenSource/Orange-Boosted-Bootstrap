@@ -2,20 +2,18 @@
 
 @mixin list-group-item-variant($state, $background, $color) {
   .list-group-item-#{$state} {
-    // Boosted mod: ensure contrast
-    $contrast: color-yiq($background);
-    color: $contrast;
-    // end mod
+    color: $color;
     background-color: $background;
 
     &.list-group-item-action {
-      @include hover-focus() {
-        color: $contrast; // Boosted mod: ensure contrast
+      &:hover,
+      &:focus {
+        color: $color;
         background-color: darken($background, 5%);
       }
 
       &.active {
-        color: $contrast; // Boosted mod: ensure contrast
+        color: $white;
         background-color: $color;
         border-color: $color;
       }

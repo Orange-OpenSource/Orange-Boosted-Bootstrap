@@ -17,27 +17,17 @@ const fs = require('fs')
 const path = require('path')
 const sh = require('shelljs')
 
-const pkg = require('../package.json')
-
 sh.config.fatal = true
 
-const configFile = path.join(__dirname, '../_config.yml')
+const configFile = path.join(__dirname, '../config.yml')
 
 // Array of objects which holds the files to generate SRI hashes for.
 // `file` is the path from the root folder
-// `configPropertyName` is the _config.yml variable's name of the file
+// `configPropertyName` is the config.yml variable's name of the file
 const files = [
   {
     file: 'dist/css/boosted.min.css',
     configPropertyName: 'css_hash'
-  },
-  {
-    file: 'dist/css/orangeIcons.min.css',
-    configPropertyName: 'iconcss_hash'
-  },
-  {
-    file: 'dist/css/orangeHelvetica.min.css',
-    configPropertyName: 'helveticacss_hash'
   },
   {
     file: 'dist/js/boosted.min.js',
@@ -48,16 +38,12 @@ const files = [
     configPropertyName: 'js_bundle_hash'
   },
   {
-    file: `site/docs/${pkg.version_short}/assets/js/vendor/jquery-slim.min.js`,
-    configPropertyName: 'jquery_hash'
-  },
-  {
     file: 'node_modules/popper.js/dist/umd/popper.min.js',
     configPropertyName: 'popper_hash'
   }
 ]
 
-files.forEach((file) => {
+files.forEach(file => {
   fs.readFile(file.file, 'utf8', (err, data) => {
     if (err) {
       throw err

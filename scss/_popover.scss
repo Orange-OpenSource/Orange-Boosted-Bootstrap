@@ -9,9 +9,6 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size($popover-font-size);
-  // Boosted mod
-  font-weight: $popover-font-weight;
-  // end mod
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: $popover-bg;
@@ -20,7 +17,7 @@
   @include border-radius($popover-border-radius);
   @include box-shadow($popover-box-shadow);
 
-  .arrow {
+  .popover-arrow {
     position: absolute;
     display: block;
     width: $popover-arrow-width;
@@ -41,7 +38,7 @@
 .bs-popover-top {
   margin-bottom: $popover-arrow-height;
 
-  > .arrow {
+  > .popover-arrow {
     bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
@@ -61,7 +58,7 @@
 .bs-popover-right {
   margin-left: $popover-arrow-height;
 
-  > .arrow {
+  > .popover-arrow {
     left: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
@@ -84,7 +81,7 @@
 .bs-popover-bottom {
   margin-top: $popover-arrow-height;
 
-  > .arrow {
+  > .popover-arrow {
     top: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
@@ -116,7 +113,7 @@
 .bs-popover-left {
   margin-right: $popover-arrow-height;
 
-  > .arrow {
+  > .popover-arrow {
     right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;

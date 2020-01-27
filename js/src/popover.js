@@ -1,11 +1,13 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.4.1): popover.js
+ * Bootstrap (v4.3.1): popover.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-import $ from 'jquery'
+import { getjQuery } from './util/index'
+import Data from './dom/data'
+import SelectorEngine from './dom/selector-engine'
 import Tooltip from './tooltip'
 
 /**
@@ -14,51 +16,50 @@ import Tooltip from './tooltip'
  * ------------------------------------------------------------------------
  */
 
-const NAME                = 'popover'
-const VERSION             = '4.4.1'
-const DATA_KEY            = 'bs.popover'
-const EVENT_KEY           = `.${DATA_KEY}`
-const JQUERY_NO_CONFLICT  = $.fn[NAME]
-const CLASS_PREFIX        = 'bs-popover'
-const BSCLS_PREFIX_REGEX  = new RegExp(`(^|\\s)${CLASS_PREFIX}\\S+`, 'g')
+const NAME = 'popover'
+const VERSION = '4.3.1'
+const DATA_KEY = 'bs.popover'
+const EVENT_KEY = `.${DATA_KEY}`
+const CLASS_PREFIX = 'bs-popover'
+const BSCLS_PREFIX_REGEX = new RegExp(`(^|\\s)${CLASS_PREFIX}\\S+`, 'g')
 
 const Default = {
   ...Tooltip.Default,
-  placement : 'right',
-  trigger   : 'click',
-  content   : '',
-  template  : '<div class="popover" role="tooltip">' +
-              '<div class="arrow"></div>' +
+  placement: 'right',
+  trigger: 'click',
+  content: '',
+  template: '<div class="popover" role="tooltip">' +
+              '<div class="popover-arrow"></div>' +
               '<h3 class="popover-header"></h3>' +
               '<div class="popover-body"></div></div>'
 }
 
 const DefaultType = {
   ...Tooltip.DefaultType,
-  content : '(string|element|function)'
+  content: '(string|element|function)'
 }
 
 const ClassName = {
-  FADE : 'fade',
-  SHOW : 'show'
+  FADE: 'fade',
+  SHOW: 'show'
 }
 
 const Selector = {
-  TITLE   : '.popover-header',
-  CONTENT : '.popover-body'
+  TITLE: '.popover-header',
+  CONTENT: '.popover-body'
 }
 
 const Event = {
-  HIDE       : `hide${EVENT_KEY}`,
-  HIDDEN     : `hidden${EVENT_KEY}`,
-  SHOW       : `show${EVENT_KEY}`,
-  SHOWN      : `shown${EVENT_KEY}`,
-  INSERTED   : `inserted${EVENT_KEY}`,
-  CLICK      : `click${EVENT_KEY}`,
-  FOCUSIN    : `focusin${EVENT_KEY}`,
-  FOCUSOUT   : `focusout${EVENT_KEY}`,
-  MOUSEENTER : `mouseenter${EVENT_KEY}`,
-  MOUSELEAVE : `mouseleave${EVENT_KEY}`
+  HIDE: `hide${EVENT_KEY}`,
+  HIDDEN: `hidden${EVENT_KEY}`,
+  SHOW: `show${EVENT_KEY}`,
+  SHOWN: `shown${EVENT_KEY}`,
+  INSERTED: `inserted${EVENT_KEY}`,
+  CLICK: `click${EVENT_KEY}`,
+  FOCUSIN: `focusin${EVENT_KEY}`,
+  FOCUSOUT: `focusout${EVENT_KEY}`,
+  MOUSEENTER: `mouseenter${EVENT_KEY}`,
+  MOUSELEAVE: `mouseleave${EVENT_KEY}`
 }
 
 /**
@@ -104,27 +105,24 @@ class Popover extends Tooltip {
     return this.getTitle() || this._getContent()
   }
 
-  addAttachmentClass(attachment) {
-    $(this.getTipElement()).addClass(`${CLASS_PREFIX}-${attachment}`)
-  }
-
-  getTipElement() {
-    this.tip = this.tip || $(this.config.template)[0]
-    return this.tip
-  }
-
   setContent() {
-    const $tip = $(this.getTipElement())
+    const tip = this.getTipElement()
 
-    // We use append for html objects to maintain js events
-    this.setElementContent($tip.find(Selector.TITLE), this.getTitle())
+    // we use append for html objects to maintain js events
+    this.setElementContent(SelectorEngine.findOne(Selector.TITLE, tip), this.getTitle())
     let content = this._getContent()
     if (typeof content === 'function') {
       content = content.call(this.element)
     }
-    this.setElementContent($tip.find(Selector.CONTENT), content)
 
-    $tip.removeClass(`${ClassName.FADE} ${ClassName.SHOW}`)
+    this.setElementContent(SelectorEngine.findOne(Selector.CONTENT, tip), content)
+
+    tip.classList.remove(ClassName.FADE)
+    tip.classList.remove(ClassName.SHOW)
+  }
+
+  _addAttachmentClass(attachment) {
+    this.getTipElement().classList.add(`${CLASS_PREFIX}-${attachment}`)
   }
 
   // Private
@@ -135,18 +133,19 @@ class Popover extends Tooltip {
   }
 
   _cleanTipClass() {
-    const $tip = $(this.getTipElement())
-    const tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX)
+    const tip = this.getTipElement()
+    const tabClass = tip.getAttribute('class').match(BSCLS_PREFIX_REGEX)
     if (tabClass !== null && tabClass.length > 0) {
-      $tip.removeClass(tabClass.join(''))
+      tabClass.map(token => token.trim())
+        .forEach(tClass => tip.classList.remove(tClass))
     }
   }
 
   // Static
 
-  static _jQueryInterface(config) {
+  static jQueryInterface(config) {
     return this.each(function () {
-      let data = $(this).data(DATA_KEY)
+      let data = Data.getData(this, DATA_KEY)
       const _config = typeof config === 'object' ? config : null
 
       if (!data && /dispose|hide/.test(config)) {
@@ -155,30 +154,40 @@ class Popover extends Tooltip {
 
       if (!data) {
         data = new Popover(this, _config)
-        $(this).data(DATA_KEY, data)
+        Data.setData(this, DATA_KEY, data)
       }
 
       if (typeof config === 'string') {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
         }
+
         data[config]()
       }
     })
   }
+
+  static getInstance(element) {
+    return Data.getData(element, DATA_KEY)
+  }
 }
+
+const $ = getjQuery()
 
 /**
  * ------------------------------------------------------------------------
  * jQuery
  * ------------------------------------------------------------------------
  */
-
-$.fn[NAME] = Popover._jQueryInterface
-$.fn[NAME].Constructor = Popover
-$.fn[NAME].noConflict = () => {
-  $.fn[NAME] = JQUERY_NO_CONFLICT
-  return Popover._jQueryInterface
+/* istanbul ignore if */
+if ($) {
+  const JQUERY_NO_CONFLICT = $.fn[NAME]
+  $.fn[NAME] = Popover.jQueryInterface
+  $.fn[NAME].Constructor = Popover
+  $.fn[NAME].noConflict = () => {
+    $.fn[NAME] = JQUERY_NO_CONFLICT
+    return Popover.jQueryInterface
+  }
 }
 
 export default Popover

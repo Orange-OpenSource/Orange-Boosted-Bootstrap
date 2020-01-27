@@ -1,5 +1,3 @@
-// stylelint-disable selector-no-qualifying-type
-
 //
 // Base styles
 //
@@ -8,6 +6,7 @@
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
   color: $body-color;
   text-align: center;
   white-space: $btn-white-space;
@@ -16,49 +15,36 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
   @include transition($btn-transition);
-  outline-offset: $border-width * 2;
 
-  @include hover() {
+  &:hover {
     color: $body-color;
     text-decoration: none;
   }
 
   &:focus,
   &.focus {
-    outline: $border-width solid; // Boosted mod
-    outline-offset: -#{$border-width}; // Boosted mod
+    outline: 0;
     box-shadow: $btn-focus-box-shadow;
   }
 
-  // Disabled comes first so active can properly restyle
-  &.disabled,
-  &:disabled {
-    opacity: $btn-disabled-opacity;
-    @include box-shadow(none);
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
+  &:active,
+  &.active {
     @include box-shadow($btn-active-box-shadow);
 
     &:focus {
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
-}
 
-// Boosted mod remove underline for a.btn
-a.btn {
-  text-decoration: none;
-}
-// End mod
-
-// Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled,
-fieldset:disabled a.btn {
-  pointer-events: none;
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & { // stylelint-disable-line selector-no-qualifying-type
+    pointer-events: none;
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
 }
 
 
@@ -66,49 +52,13 @@ fieldset:disabled a.btn {
 // Alternate buttons
 //
 
-// Boosted mod : custom buttons
-// @mixin button-variant($background, $border, $hover-background, $hover-border, $active-background, $active-border, $disabled-background, $disabled-border, $disabled-color, $color) {
-.btn-primary,
-.btn-warning {
-  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
-  &.btn-inverse {
-    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
-  }
-}
-.btn-secondary,
-.btn-light {
-  @include button-variant(transparent, $black, $black, $black, theme-color("primary"), theme-color("primary"), transparent, $gray-500, $gray-500, $black);
-  &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
-  }
-}
-.btn-success {
-  @include button-variant(theme-color("success"), theme-color("success"), $black, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $black);
-  &.btn-inverse {
-    @include button-variant(theme-color("success"), theme-color("success"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
-  }
-}
-.btn-info,
-.btn-dark {
-  @include button-variant($black, $black, $white, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $white);
-  &.btn-inverse {
-    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
-  }
-}
-.btn-warning {
-  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
-  &.btn-inverse {
-    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
-  }
-}
-.btn-danger {
-  @include button-variant(theme-color("danger"), theme-color("danger"), $black, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white);
-  &.btn-inverse {
-    @include button-variant(theme-color("danger"), theme-color("danger"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black);
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
   }
 }
 
-// Boosted mod: no .btn-outline-*
+// Boosted mod: no .btn-outline
 
 //
 // Link buttons
@@ -116,106 +66,28 @@ fieldset:disabled a.btn {
 
 // Make a button look and behave like a link
 .btn-link {
-  // font-weight: $font-weight-normal; // Boosted mod font-weight stay bold
-  color: $link-color;
-  // Boosted mod
-  // stylelint-disable-next-line declaration-no-important
-  border-color: transparent !important;
+  font-weight: $font-weight-normal;
+  color: $btn-link-color;
+  text-decoration: $link-decoration;
 
-  &.btn-inverse {
-    color: $white;
-  }
-  // end mod
-
-  @include hover() {
-    color: $link-hover-color;
+  &:hover {
+    color: $btn-link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 
   &:focus,
   &.focus {
-    box-shadow: $input-btn-focus-box-shadow;
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
   }
 
   &:disabled,
   &.disabled {
     color: $btn-link-disabled-color;
-    pointer-events: none;
   }
 
   // No need for an active state here
 }
-
-// Boosted mod: icon buttons are squared
-.btn-icon {
-  padding: $btn-padding-y;
-  // stylelint-disable-next-line declaration-no-important
-  line-height: .875 !important; // Ensure .btn-icon is squared
-
-  [class*="svg-"] {
-    display: block;
-    line-height: .75;
-  }
-
-  [class*="icon-"]::before {
-    font-size: $font-size-xlg;
-  }
-}
-
-// Boosted mod: social buttons
-.btn-social {
-  width: $btn-social-size;
-  height: $btn-social-size;
-  padding: 0;
-  background: transparent no-repeat center / $btn-social-icon-size;
-  border: $border-width solid $black;
-  @include border-radius(50%, 50%);
-  @include transition(none);
-
-  &:hover,
-  &:focus {
-    outline: 0;
-  }
-}
-
-@each $network in map-keys($o-networks) {
-  $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
-  $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
-  .btn-#{$network} {
-    &,
-    &.btn-inverse:active {
-      background-color: $white;
-      background-image: escape-svg(url("data:image/svg+xml,#{$icon}"));
-    }
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.btn-inverse {
-      background-image: escape-svg(url("data:image/svg+xml,#{$icon-inverse}"));
-      border-color: $white;
-      outline-color: $white;
-    }
-
-    &.btn-inverse {
-      background-color: $black;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: icon-conf($network, "color");
-      border-color: icon-conf($network, "color");
-      outline-color: icon-conf($network, "color");
-    }
-
-    &:active {
-      background-color: $black;
-      border-color: $black;
-      outline-color: $black;
-    }
-  }
-}
-// end mod
 
 
 //
@@ -223,21 +95,11 @@ fieldset:disabled a.btn {
 //
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
-  // Boosted mod
-  &.btn-icon {
-    padding: $btn-padding-y-lg;
-  }
-  // end mod
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-  // Boosted mod
-  &.btn-icon {
-    padding: $btn-padding-y-sm;
-  }
-  // end mod
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }
 
 
@@ -252,14 +114,5 @@ fieldset:disabled a.btn {
   // Vertically space out multiple block buttons
   + .btn-block {
     margin-top: $btn-block-spacing-y;
-  }
-}
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
   }
 }

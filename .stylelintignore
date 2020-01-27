@@ -2,6 +2,4 @@
 **/dist/
 **/vendor/
 /_gh_pages/
-site/docs/4.4/examples/demo/**
-site/docs/4.4/examples/rtl-*/**
-site/docs/4.4/assets/css/tarteaucitronboosted.css
+/js/coverage/

@@ -1,4 +1,3 @@
-// Do not forget to update getting-started/theming.md!
 :root {
   // Custom variable values only support SassScript inside `#{}`.
   @each $color, $value in $colors {
@@ -7,10 +6,6 @@
 
   @each $color, $value in $theme-colors {
     --#{$color}: #{$value};
-  }
-
-  @each $bp, $value in $grid-breakpoints {
-    --breakpoint-#{$bp}: #{$value};
   }
 
   // Use `inspect` for lists so that quoted items keep the quotes.

@@ -1,169 +1,56 @@
 .pagination {
   display: flex;
   @include list-unstyled();
-  @include border-radius();
 }
 
 .page-link {
-  // Boosted mod
-  // position: relative;
-  display: flex;
-  justify-content: center;
-  min-width: $pagination-item-size;
-  height: $pagination-item-size;
-  padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: .5rem;
-  font-weight: $font-weight-bold;
-  // End mod
-  line-height: $pagination-line-height;
+  position: relative;
+  display: block;
   color: $pagination-color;
-  text-decoration: $link-decoration; // Boosted mod
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
-  @include transition($transition-focus); // Boosted mod
-  outline-offset: $border-width * 3; // Boosted mod
 
-  &:hover,
-  &:focus {
+  &:hover {
     z-index: 2;
     color: $pagination-hover-color;
-    text-decoration: $link-hover-decoration; // Boosted mod
+    text-decoration: none;
     background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border; // Boosted mod
+    border-color: $pagination-hover-border-color;
   }
 
   &:focus {
     z-index: 3;
     outline: $pagination-focus-outline;
-    outline-offset: -#{$border-width};
     box-shadow: $pagination-focus-box-shadow;
   }
-
-  // Boosted mod
-  // Opinionated: add "hand" cursor to non-disabled .page-link elements
-  // &:not(:disabled):not(.disabled) {
-  //  cursor: pointer;
-  // }
-  // end mod
 }
 
 .page-item {
-  // Boosted mod: chevrons icons
-  &:first-child,
-  &:last-child {
-    .page-link {
-      color: $pagination-color;
-      border-color: $pagination-color;
-
-      &:hover,
-      &:focus {
-        color: $pagination-hover-bg;
-        background-color: $pagination-hover-color;
-        outline-color: $pagination-hover-color;
-      }
-
-      &:active {
-        color: $pagination-active-color;
-        background-color: $pagination-active-item-bg;
-        border-color: $pagination-active-item-border-color;
-      }
-    }
+  &:not(:first-child) .page-link {
+    margin-left: $pagination-margin-left;
   }
-
-  &:first-child .page-link::before,
-  &:last-child .page-link::after {
-    display: inline-block;
-    width: $pagination-icon-width;
-    height: $pagination-icon-height;
-    margin: $pagination-border-width / 2 -.15625rem 0;
-    content: "";
-    background: $pagination-icon-background;
-  }
-
-  &:first-child {
-    margin-left: 0;
-
-    .page-link {
-      padding: $pagination-first-item-padding;
-    }
-
-    .has-label::before {
-      margin: $pagination-border-width / 2 $pagination-icon-margin 0 0;
-    }
-  }
-
-  &:last-child {
-    .page-link {
-      padding: $pagination-last-item-padding;
-
-      &::after {
-        transform: rotate(.5turn);
-      }
-    }
-
-    .has-label::after {
-      margin: $pagination-border-width / 2 0 0 $pagination-icon-margin;
-    }
-  }
-
-  &:first-child .page-link:hover::before,
-  &:first-child .page-link:focus::before,
-  &:first-child .page-link:active::before,
-  &:last-child .page-link:hover::after,
-  &:last-child .page-link:focus::after,
-  &:last-child .page-link:active::after {
-    background-image: escape-svg($pagination-icon-hover);
-  }
-  // End mod
 
   &.active .page-link {
     z-index: 3;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;
-
-    // Boosted mod: missing focus styles on active item
-    &:focus {
-      background-color: $pagination-active-item-bg;
-      border-color: $pagination-active-item-border-color;
-      outline-color: $pagination-active-item-border-color;
-    }
-    // end mod
-  }
-
-  .page-link:active {
-    z-index: 1;
-    color: $pagination-active-color;
-    background-color: $pagination-active-item-bg;
-    border-color: $pagination-active-item-border-color;
-    outline-color: $pagination-active-item-border-color;
   }
 
   &.disabled .page-link {
     color: $pagination-disabled-color;
     pointer-events: none;
-    // Opinionated: remove the "hand" cursor set previously for .page-link
-    // cursor: auto; // Boosted mod
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
   }
-
-  // Boosted mod
-  &.disabled:first-child .page-link::before,
-  &.disabled:last-child .page-link::after {
-    opacity: .2;
-  }
-  // End mod
 }
+
 
 //
 // Sizing
 //
-// Boosted mod: no sizing
-// .pagination-lg {
-//   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg, $pagination-min-width-lg);
-// }
-//
-// .pagination-sm {
-//   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm, $pagination-min-width-sm);
-// }
+@include pagination-size($pagination-padding-y, $pagination-padding-x, null, $pagination-border-radius);
+
+// Boosted mod: no pagination sizes
+// @todo refactor pagination-size to remove mixin
+

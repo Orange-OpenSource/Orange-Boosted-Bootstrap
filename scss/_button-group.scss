@@ -1,3 +1,5 @@
+// stylelint-disable selector-no-qualifying-type
+
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
@@ -9,8 +11,9 @@
     position: relative;
     flex: 1 1 auto;
 
-    // Boosted mod: remove hover { z-index }
-
+    // Bring the hover, focused, and "active" buttons to the front to overlay
+    // the borders properly
+    &:hover,
     &:focus,
     &:active,
     &.active {
@@ -62,9 +65,8 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .5;
-  padding-left: $btn-padding-x * .5;
-  border-color: $black;
+  padding-right: $btn-padding-x * .75;
+  padding-left: $btn-padding-x * .75;
 
   &::after,
   .dropup &::after,
@@ -75,21 +77,18 @@
   .dropleft &::before {
     margin-right: 0;
   }
-
-  .btn:active + & {
-    border-color: theme-color("primary");
-  }
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .5;
-  padding-left: $btn-padding-x-sm * .5;
+  padding-right: $btn-padding-x-sm * .75;
+  padding-left: $btn-padding-x-sm * .75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .5;
-  padding-left: $btn-padding-x-lg * .5;
+  padding-right: $btn-padding-x-lg * .75;
+  padding-left: $btn-padding-x-lg * .75;
 }
+
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
@@ -100,10 +99,6 @@
   &.btn-link {
     @include box-shadow(none);
   }
-}
-
-.btn-group.show .btn {
-  border-color: theme-color("primary");
 }
 
 
@@ -155,72 +150,12 @@
   > .btn,
   > .btn-group > .btn {
     margin-bottom: 0; // Override default `<label>` value
-    border-color: $gray-500; // Boosted mod
 
-    [type="radio"],
-    [type="checkbox"] {
+    input[type="radio"],
+    input[type="checkbox"] {
       position: absolute;
       clip: rect(0, 0, 0, 0);
       pointer-events: none;
     }
-
-    // Boosted mod: hover = focus, active ≠ .active, focus ≠ focus-visible
-    &:hover,
-    &:focus,
-    &.focus {
-      color: theme-color("primary");
-      background-color: transparent;
-      border-color: $gray-500;
-    }
-
-    &:active {
-      color: $white;
-      background-color: theme-color("primary");
-    }
-
-    // stylelint-disable selector-max-class
-    &:not(:disabled):not(.disabled).active {
-      background-color: $black;
-      border-color: $black;
-      outline-color: $black;
-    }
-
-    @at-root .bg-dark #{&} {
-      border-color: $gray-700;
-
-      &:hover,
-      &:focus,
-      &.focus {
-        color: $orange-2;
-      }
-
-      &:not(:disabled):not(.disabled).active {
-        color: $black;
-        background-color: $white;
-        border-color: $white;
-        outline-color: $white;
-      }
-    }
-
-    &:not(:disabled):not(.disabled).active.focus-visible {
-      color: $white;
-      background-color: theme-color("primary");
-      border-color: theme-color("primary");
-      outline-color: theme-color("primary");
-    }
-    // stylelint-enable selector-max-class
-    // end mod
   }
-
-  // Boosted mod: no border inside of .btn-group-toggle
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    border-right: 0;
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
-    border-left: 0;
-  }
-  // end mod
 }

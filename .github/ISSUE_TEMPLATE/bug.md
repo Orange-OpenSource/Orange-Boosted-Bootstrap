@@ -2,7 +2,7 @@ Before opening:
 
 - [Search for duplicate or closed issues](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues?utf8=%E2%9C%93&q=is%3Aissue)
 - [Validate](https://html5.validator.nu/) and [lint](https://github.com/twbs/bootlint#in-the-browser) any HTML to avoid common problems
-- Read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/CONTRIBUTING.md)
+- Read the [contributing guidelines](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/.github/CONTRIBUTING.md)
 
 Bug reports must include:
 

@@ -1,0 +1,76 @@
+languageCode:           "en"
+title:                  "Boosted"
+baseURL:                "https://boosted.orange.com"
+enableInlineShortcodes: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+
+blackfriday:
+  fractions:            false
+
+publishDir:             "_gh_pages"
+
+module:
+  mounts:
+    - source:           dist
+      target:           static/docs/4.3/dist
+    - source:           site/assets
+      target:           assets
+    - source:           site/content
+      target:           content
+    - source:           site/data
+      target:           data
+    - source:           site/layouts
+      target:           layouts
+    - source:           site/static
+      target:           static
+    - source:           site/static/docs/4.3/assets/img/favicons/apple-touch-icon.png
+      target:           static/apple-touch-icon.png
+    - source:           site/static/docs/4.3/assets/img/favicons/favicon.ico
+      target:           static/favicon.ico
+
+params:
+  description:          "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.."
+  authors:              "Orange and Boosted contributors"
+  social_image_path:    /docs/4.3/assets/brand/orange-social.png
+  social_logo_path:     /docs/4.3/assets/brand/orange-social-logo.png
+
+  current_version:      "4.3.1"
+  current_ruby_version: "4.3.1"
+  rfs_version:          "9.0.2"
+  docs_version:         "4.3"
+  repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
+  twitter:              "orange"
+  slack:                "https://bootstrap-slack.herokuapp.com/"
+  opencollective:       "https://opencollective.com/bootstrap"
+  blog:                 "https://blog.getbootstrap.com/"
+  expo:                 "https://expo.getbootstrap.com/"
+  themes:               "https://themes.getbootstrap.com/"
+  icons:                "https://icons.getbootstrap.com/"
+
+  download:
+    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.3.1.zip"
+    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.3.1/boosted-4.3.1-dist.zip"
+
+  cdn:
+    # See https://www.srihash.org for info on how to generate the hashes
+    css:              "https://cdn.jsdelivr.net/npm/boosted@4.3.1/dist/css/boosted.min.css"
+    css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    js:               "https://cdn.jsdelivr.net/npm/boosted@4.3.1/dist/js/boosted.min.js"
+    js_hash:          "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    js_bundle:        "https://cdn.jsdelivr.net/npm/boosted@4.3.1/dist/js/boosted.bundle.min.js"
+    js_bundle_hash:   "sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    popper_hash:      "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
