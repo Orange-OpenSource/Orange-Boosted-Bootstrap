@@ -182,6 +182,14 @@ fieldset:disabled a.btn {
   $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
   $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
   .btn-#{$network} {
+    @if map-has-key(map-get($o-networks, $network), "size") {
+      background-size: icon-conf($network, "size");
+    }
+
+    @if map-has-key(map-get($o-networks, $network), "position") {
+      background-position: icon-conf($network, "position");
+    }
+
     &,
     &.btn-inverse:active {
       background-color: $white;
