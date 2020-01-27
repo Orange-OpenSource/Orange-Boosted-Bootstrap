@@ -920,10 +920,12 @@ $dropdown-header-color:             $black !default;
 
 $pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              0 !default; // Boosted mod
-$pagination-padding-start:          .875rem !default; // Boosted mod
+$pagination-padding-start:          .75rem !default; // Boosted mod
 $pagination-padding-end:            1.125rem !default; // Boosted mod
-$pagination-first-item-padding:     $pagination-padding-y $pagination-padding-end $pagination-padding-y $pagination-padding-start !default; // Boosted mod
-$pagination-last-item-padding:      $pagination-padding-y $pagination-padding-start $pagination-padding-y $pagination-padding-end !default; // Boosted mod
+$pagination-first-right-padding:    $pagination-padding-end !default; // Boosted mod
+$pagination-last-left-padding:      $pagination-padding-end !default; // Boosted mod
+$pagination-first-left-padding:     $pagination-padding-start !default; // Boosted mod
+$pagination-last-right-padding:     $pagination-padding-start !default; // Boosted mod
 $pagination-icon-margin:            .375rem !default; // Boosted mod
 $pagination-item-size:              $spacer * 2 !default; // Boosted mod
 //$pagination-padding-y-sm:           .375rem !default; // Boosted mod: not used
