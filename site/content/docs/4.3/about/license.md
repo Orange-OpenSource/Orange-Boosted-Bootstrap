@@ -9,20 +9,18 @@ group: about
 
 Boosted is released under the MIT license and is copyright {{< year >}} Orange SA for additions to native Bootstrap, which is released under MIT license and copyright {{< year >}} Twitter.
 
-Boiled down to smaller chunks, it can be described with the following conditions.
-
-### It requires you to:
+## It requires you to:
 
 * Keep the license and copyright notice included in Boosted and Bootstrap's CSS and JavaScript files when you use them in your works
 
-### It permits you to:
+## It permits you to:
 
 - Freely download and use Boosted or Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes
 - Use Boosted or Bootstrap in packages or distributions that you create
 - Modify the source code
 - Grant a sublicense to modify and distribute Boosted or Bootstrap to third parties not included in the license
 
-### It forbids you to:
+## It forbids you to:
 
 - Hold the authors and license owners liable for damages as Boosted and Bootstrap are provided without warranty
 - Hold the creators or copyright holders of Boosted or Bootstrap liable
@@ -30,7 +28,7 @@ Boiled down to smaller chunks, it can be described with the following conditions
 - Use any marks owned by Orange SA or Twitter in any way that might state or imply that Orange SA or Twitter endorses your distribution
 - Use any marks owned by Orange SA or Twitter in any way that might state or imply that you created the Orange SA or Twitter software in question
 
-### It does not require you to:
+## It does not require you to:
 
 - Include the source of Boosted nor Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
 - Submit changes that you make to Boosted or Bootstrap back to their respective project (though such feedback is encouraged)
