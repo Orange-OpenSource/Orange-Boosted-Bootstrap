@@ -24,19 +24,19 @@ Boosted also adds a dedicated icon for each contextual class, matching [function
 {% capture example %}
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="sr-only">Success</span></span>
-  <p>A simple success alert — check it out!</p>
+  <p>Success notification text goes here.</p>
 </div>
 <div class="alert alert-info" role="alert">
   <span class="alert-icon"><span class="sr-only">Info</span></span>
-  <p>A simple info alert — check it out!</p>
+  <p>Information notification text goes here.</p>
 </div>
 <div class="alert alert-warning" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
-  <p>A simple warning alert — check it out!</p>
+  <p>Warning notification text goes here.</p>
 </div>
 <div class="alert alert-danger" role="alert">
   <span class="alert-icon"><span class="sr-only">Danger</span></span>
-  <p>A simple danger alert — check it out!</p>
+  <p>Error notification text goes here.</p>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -52,19 +52,19 @@ Alerts come with a smaller variant: `.alert-sm`.
 {% capture example %}
 <div class="alert alert-success alert-sm" role="alert">
   <span class="alert-icon"><span class="sr-only">Success</span></span>
-  <p>A simple success alert — check it out!</p>
+  <p>Success notification text goes here.</p>
 </div>
 <div class="alert alert-info alert-sm" role="alert">
   <span class="alert-icon"><span class="sr-only">Info</span></span>
-  <p>A simple info alert — check it out!</p>
+  <p>Information notification text goes here.</p>
 </div>
 <div class="alert alert-warning alert-sm" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
-  <p>A simple warning alert — check it out!</p>
+  <p>Warning notification text goes here.</p>
 </div>
 <div class="alert alert-danger alert-sm" role="alert">
   <span class="alert-icon"><span class="sr-only">Danger</span></span>
-  <p>A simple danger alert — check it out!</p>
+  <p>Error notification text goes here.</p>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -75,22 +75,19 @@ Alerts come with a smaller variant: `.alert-sm`.
 <div class="bg-dark p-3">
     <div class="alert alert-success" role="alert">
         <span class="alert-icon"><span class="sr-only">Success</span></span>
-        <p>Your changes have been saved.</p>
+        <p>Success notification text goes here. <a href="#">Action</a></p>
     </div>
     <div class="alert alert-info" role="alert">
         <span class="alert-icon"><span class="sr-only">Info</span></span>
-        <p>You have new updates available. <a href="#">View updates</a></p>
+        <p>Information notification text goes here. <a href="#">Action</a></p>
     </div>
     <div class="alert alert-warning" role="alert">
         <span class="alert-icon"><span class="sr-only">Warning</span></span>
-        <p>Your subscription expires in two weeks. <a href="#">Update subscription</a></p>
+        <p>Warning notification text goes here. <a href="#">Action</a></p>
     </div>
     <div class="alert alert-danger" role="alert">
         <span class="alert-icon"><span class="sr-only">Danger</span></span>
-        <div>
-            <p>There were some errors with your submission.</p>
-            <p>You need to select your home country.</p>
-        </div>
+        <p>Error notification text goes here. <a href="#">Action</a></p>
     </div>
 </div>
 {% endcapture %} {% include example.html content=example %}
@@ -106,10 +103,15 @@ As of Boosted, it's recommended to wrap your additional content in a `<div>` to 
 <div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="sr-only">Success</span></span>
   <div>
-      <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully read this important alert message.</p>
-      <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-      <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      <h4 class="alert-heading">Success notification text goes here.</h4>
+      <p>Description text goes here.</p>
+  </div>
+</div>
+<div class="alert alert-info" role="alert">
+  <span class="alert-icon"><span class="sr-only">Info</span></span>
+  <div>
+      <h4 class="alert-heading">Information notification text goes here. <a href="#">Action</a></h4>
+      <p>Description text goes here.</p>
   </div>
 </div>
 {% endcapture %}
@@ -131,7 +133,7 @@ You can see this in action with a live demo:
 {% capture example %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="sr-only">Warning</span></span>
-  <p>Holy guacamole!</p>
+  <p>Warning notification text goes here.</p>
   <button type="button" class="close" data-dismiss="alert">
       <span class="sr-only">Close warning message</span>
   </button>
@@ -140,8 +142,8 @@ You can see this in action with a live demo:
     <div class="alert alert-lg alert-danger alert-dismissible fade show mb-0" role="alert">
         <span class="alert-icon"><span class="sr-only">Danger</span></span>
         <div>
-            <p>Your changes have been saved.</p>
-            <p>You may now log-in with the username you have chosen.</p>
+            <h4 class="alert-heading">Error notification text goes here.</h4>
+            <p>Description text goes here.</p>
         </div>
         <button type="button" class="close" data-dismiss="alert">
             <span class="sr-only">Close alert message</span>
