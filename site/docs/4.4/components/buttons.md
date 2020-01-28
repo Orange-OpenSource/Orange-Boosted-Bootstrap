@@ -65,6 +65,17 @@ In need of a social media button? Some helper classes are designed to be used al
     <a class="btn btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a> 
     <a class="btn btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a> 
     <a class="btn btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
+</div>
+<div class="bg-dark p-3">
+    <a class="btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
+    <a class="btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a>
+    <a class="btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
+    <a class="btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a> 
+    <a class="btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>    
+    <a class="btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-inverse btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a> 
+    <a class="btn btn-inverse btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a> 
+    <a class="btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
 </div> 
 {% endcapture %}
 {% include example.html content=example %}
@@ -103,6 +114,11 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
 <button type="button" class="btn btn-primary">Medium button</button>
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
+<div class="bg-dark p-3 mt-3">
+  <button type="button" class="btn btn-primary btn-inverse btn-sm">Small button</button>
+  <button type="button" class="btn btn-primary btn-inverse">Medium button</button>
+  <button type="button" class="btn btn-primary btn-inverse btn-lg">Large button</button>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -110,6 +126,11 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 <button type="button" class="btn btn-secondary">Medium button</button>
 <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<div class="bg-dark p-3 mt-3">
+  <button type="button" class="btn btn-secondary btn-inverse btn-sm">Small button</button>
+  <button type="button" class="btn btn-secondary btn-inverse">Medium button</button>
+  <button type="button" class="btn btn-secondary btn-inverse btn-lg">Large button</button>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -122,6 +143,10 @@ Buttons will appear pressed (with a darker background, darker border, and inset 
 {% capture example %}
 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
+<div class="bg-dark p-3 mt-3">
+  <a href="#" class="btn btn-primary btn-inverse btn-lg active" role="button" aria-pressed="true">Primary link</a>
+  <a href="#" class="btn btn-secondary btn-inverse btn-lg active" role="button" aria-pressed="true">Link</a>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -132,6 +157,10 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 {% capture example %}
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+<div class="bg-dark p-3 mt-3">
+    <button type="button" class="btn btn-primary btn-inverse btn-lg" disabled>Primary button</button>
+    <button type="button" class="btn btn-secondary btn-inverse btn-lg" disabled>Button</button>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -144,17 +173,6 @@ Disabled buttons using the `<a>` element behave a bit different:
 {% capture example %}
 <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
 <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
-{% endcapture %}
-{% include example.html content=example %}
-
-[comment]: # Boosted mod
-### Dark background
-
-{% capture example %}
-<div class="bg-dark p-3">
-    <button type="button" class="btn btn-primary btn-inverse btn-lg" disabled>Primary button</button>
-    <button type="button" class="btn btn-secondary btn-inverse btn-lg" disabled>Button</button>
-</div>
 {% endcapture %}
 {% include example.html content=example %}
 
