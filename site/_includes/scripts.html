@@ -183,6 +183,10 @@
           return '<span>' + t + '</span>';
         }
       });
+
+      $(".has-checkbox").on("click", "[type='checkbox']", function(e) {
+        $(this).parents("tr").toggleClass("selected");
+      });
     });
   </script>
   <!-- end mod -->
