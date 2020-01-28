@@ -157,6 +157,8 @@ fieldset:disabled a.btn {
 
 // Boosted mod: icon buttons are squared
 .btn-icon {
+  justify-content: center;
+  min-width: $btn-icon-size;
   padding: $btn-padding-y;
   // stylelint-disable-next-line declaration-no-important
   line-height: .875 !important; // Ensure .btn-icon is squared
@@ -164,10 +166,10 @@ fieldset:disabled a.btn {
 
 // Boosted mod: social buttons
 .btn-social {
-  width: $btn-social-size;
-  height: $btn-social-size;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
   padding: 0;
-  background: transparent no-repeat center / $btn-social-icon-size;
+  background: transparent no-repeat center / $btn-social-bg-size;
   border: $border-width solid $black;
   @include border-radius(50%, 50%);
   @include transition(none);

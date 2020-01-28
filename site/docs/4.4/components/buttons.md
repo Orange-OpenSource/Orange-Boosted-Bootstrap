@@ -218,6 +218,52 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 {% endcapture %}
 {% include example.html content=example %}
 
+[comment]: # Boosted mod: icons-only example
+
+#### Toggle buttons with icon
+
+{% capture example %}
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary btn-icon active">
+    <input type="radio" name="options-icons" id="option7" autocomplete="off" checked>
+    <span class="sr-only">Active</span>
+    <span class="icon icon-calendar-day" aria-hidden="true"></span>
+  </label>
+  <label class="btn btn-secondary btn-icon">
+    <input type="radio" name="options-icons" id="option8" autocomplete="off">
+    <span class="sr-only">Radio</span>
+    <span class="icon icon-calendar-week" aria-hidden="true"></span>
+  </label>
+  <label class="btn btn-secondary btn-icon">
+    <input type="radio" name="options-icons" id="option9" autocomplete="off">
+    <span class="sr-only">Radio</span>
+    <span class="icon icon-calendar-month" aria-hidden="true"></span>
+  </label>
+</div>
+<div class="bg-dark p-3">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary btn-inverse btn-icon active">
+        <input type="radio" name="options-dark-icons" id="option10" autocomplete="off" checked>
+        <span class="sr-only">Active</span>
+        <span class="icon icon-calendar-day" aria-hidden="true"></span>
+      </label>
+      <label class="btn btn-secondary btn-inverse btn-icon">
+        <input type="radio" name="options-dark-icons" id="option11" autocomplete="off">
+        <span class="sr-only">Radio</span>
+        <span class="icon icon-calendar-week" aria-hidden="true"></span>
+      </label>
+      <label class="btn btn-secondary btn-inverse btn-icon">
+        <input type="radio" name="options-dark-icons" id="option12" autocomplete="off">
+        <span class="sr-only">Radio</span>
+        <span class="icon icon-calendar-month" aria-hidden="true"></span>
+      </label>
+    </div>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+[comment]: # end mod
+
 ### Methods
 
 | Method | Description |

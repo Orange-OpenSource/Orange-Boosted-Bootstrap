@@ -536,9 +536,9 @@ $btn-border-radius-sm:        $border-radius-sm !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, outline-offset .15s ease-in-out !default;
 
-// Boosted mod: social buttons
-$btn-social-size:             $spacer * 2 !default;
-$btn-social-icon-size:        $spacer !default;
+// Boosted mod: icon + social buttons
+$btn-icon-size:             $spacer * 2 !default;
+$btn-social-bg-size:        $spacer !default;
 
 // Forms
 
