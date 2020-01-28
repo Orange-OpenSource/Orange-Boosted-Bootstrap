@@ -18,6 +18,11 @@ Boosted includes several predefined button styles, each serving its own semantic
     <span class="sr-only">Icon</span>
     <span class="icon icon-settings" aria-hidden="true"></span>
 </button>
+<br>{% for color in site.data.theme-colors %}{% if color.name != 'light' and color.name != 'dark' %}
+<button type="button" class="btn btn-{{ color.name }}">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    {{ color.name | capitalize }}
+</button>{% endif %}{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -36,6 +41,11 @@ To get the inversed button behaviour, simply add `.btn-inverse` class to your `<
         <span class="sr-only">Icon</span>
         <span class="icon icon-settings" aria-hidden="true"></span>
     </button>
+    <br><br>{% for color in site.data.theme-colors %}{% if color.name != 'light' and color.name != 'dark' %}
+    <button type="button" class="btn btn-inverse btn-{{ color.name }}">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        {{ color.name | capitalize }}
+    </button>{% endif %}{% endfor %}
 </div>
 {% endcapture %}
 {% include example.html content=example %}
