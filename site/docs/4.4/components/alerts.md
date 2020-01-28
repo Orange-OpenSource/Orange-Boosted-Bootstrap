@@ -15,19 +15,29 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 
 [comment]: # Boosted mod: alerts always have icon
 Boosted also adds a dedicated icon for each contextual class, matching [functional colors in palette]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/#ensuring-contrasts):
-* `danger`,
-* `warning`,
+* `success`,
 * `info`,
-* `success`.
+* `warning`,
+* `danger`.
 
 [comment]: # Boosted mod: filter to use only functional colors
 {% capture example %}
-{% assign colors = "success, info, warning, danger" %}
-{% for color in site.data.theme-colors %}{% if colors contains color.name %}
-<div class="alert alert-{{ color.name }}" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ color.name | capitalize }}</span></span>
-  <p>A simple {{ color.name }} alert — check it out!</p>
-</div>{% endif %}{% endfor %}
+<div class="alert alert-success" role="alert">
+  <span class="alert-icon"><span class="sr-only">Success</span></span>
+  <p>A simple success alert — check it out!</p>
+</div>
+<div class="alert alert-info" role="alert">
+  <span class="alert-icon"><span class="sr-only">Info</span></span>
+  <p>A simple info alert — check it out!</p>
+</div>
+<div class="alert alert-warning" role="alert">
+  <span class="alert-icon"><span class="sr-only">Warning</span></span>
+  <p>A simple warning alert — check it out!</p>
+</div>
+<div class="alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="sr-only">Danger</span></span>
+  <p>A simple danger alert — check it out!</p>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -40,13 +50,21 @@ Boosted also adds a dedicated icon for each contextual class, matching [function
 Alerts come with a smaller variant: `.alert-sm`.
 
 {% capture example %}
+<div class="alert alert-success alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Success</span></span>
+  <p>A simple success alert — check it out!</p>
+</div>
 <div class="alert alert-info alert-sm" role="alert">
   <span class="alert-icon"><span class="sr-only">Info</span></span>
-  <p>You have new updates available. <a href="#">View updates</a></p>
+  <p>A simple info alert — check it out!</p>
 </div>
-<div class="alert alert-info" role="alert">
-  <span class="alert-icon"><span class="sr-only">Info</span></span>
-  <p>You have new updates available. <a href="#">View updates</a></p>
+<div class="alert alert-warning alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Warning</span></span>
+  <p>A simple warning alert — check it out!</p>
+</div>
+<div class="alert alert-danger alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Danger</span></span>
+  <p>A simple danger alert — check it out!</p>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -55,10 +73,6 @@ Alerts come with a smaller variant: `.alert-sm`.
  
 {% capture example %}
 <div class="bg-dark p-3">
-    <div class="alert alert-sm alert-success" role="alert">
-        <span class="alert-icon"><span class="sr-only">Success</span></span>
-        <p>Your changes have been saved.</p>
-    </div>
     <div class="alert alert-success" role="alert">
         <span class="alert-icon"><span class="sr-only">Success</span></span>
         <p>Your changes have been saved.</p>
