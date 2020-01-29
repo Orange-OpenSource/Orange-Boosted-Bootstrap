@@ -1109,10 +1109,6 @@ Add the `.right` class to render a toggle switch with label text before.
 [comment]: # Boosted mod
 ### Orange Switches
 
-Using checkbox as switch / toggle with styling
-
-Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` followed by a `.toggle` class.
-
 {% capture callout %}
 ##### Deprecated
 
@@ -1120,70 +1116,6 @@ As `custom-switch` component have been included into Bootstrap, the `o-switch` c
 The `.toggle-rounded` variant should be avoided, but still works in v4.
 {% endcapture %}
 {% include callout.html content=callout type="danger" %}
-
-{% capture example %}
-<div class="form-group row">
-  <label for="checkbox1" class="col-form-label col-md-3 col-8">Default</label>
-  <div class="o-switch">
-    <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-    <label for="checkbox1" class="toggle col-form-label">
-      <span class="on svg-checkbox-tick"><span class="sr-only">on</span></span>
-      <span class="off svg-delete"><span class="sr-only">off</span></span>
-    </label>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-#### Success
-
-Default color is brand primary. Success color is also supported, use `.success` class on input tag
-
-{% capture example %}
-<div class="form-group row">
-  <label for="checkbox3" class="col-form-label col-md-3 col-8">Success</label>
-  <div class="o-switch">
-    <input class="checkbox success sr-only" id="checkbox3" type="checkbox" checked/>
-    <label for="checkbox3" class="toggle col-form-label">
-      <span class="on svg-checkbox-tick"><span class="sr-only">on</span></span>
-      <span class="off svg-delete"><span class="sr-only">off</span></span>
-    </label>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### The 3 way toggle
-
-Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several btn-group toggles, make to have different `name` attribute for each group.
-
-{% capture example %}
-<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" checked> 1
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2"> 2
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3"> 3
-  </label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-#### with label
-
-Replace number by label.
-
-<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
-  <label class="btn btn-secondary doc-label">
-    <input type="radio" name="options3" id="option31" checked="">Day</label>
-  <label class="btn btn-secondary doc-label active">
-    <input type="radio" name="options3" id="option32">Week</label>
-  <label class="btn btn-secondary doc-label">
-    <input type="radio" name="options3" id="option33">Month</label>
-</div>
 
 [comment]: # end mod
 
