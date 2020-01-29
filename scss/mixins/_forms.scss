@@ -55,6 +55,7 @@
     @if $enable-validation-icons {
       &::before {
         display: inline-block;
+        align-self: center;
         width: $form-feedback-icon-size;
         height: $form-feedback-icon-size;
         margin-right: map-get($spacers, 1);
