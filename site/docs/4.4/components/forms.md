@@ -78,25 +78,33 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
 
 ### Sizing
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+Set heights using classes like `.form-control-lg`.
 
 {% capture example %}
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-<input class="form-control" type="text" placeholder="Default input">
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+<div class="form-group">
+  <label for="exampleLargeInput">Large form control</label>
+  <input class="form-control form-control-lg" type="text" id="exampleLargeInput" placeholder=".form-control-lg">
+</div>
+<div class="form-group">
+  <label for="exampleDefaultInput">Default form control</label>
+  <input class="form-control" type="text" id="exampleDefaultInput" placeholder="Default input">
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
-<select class="custom-select form-control-lg">
-  <option>Large select</option>
-</select>
-<select class="custom-select">
-  <option>Default select</option>
-</select>
-<select class="custom-select form-control-sm">
-  <option>Small select</option>
-</select>
+<div class="form-group">
+  <label for="exampleLargeSelect">Large select size</label>
+  <select class="custom-select custom-select-lg mb-2" id="exampleLargeSelect">
+    <option>Large select</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="exampleDefaultSelect">Default select size</label>
+  <select class="custom-select" id="exampleDefaultSelect">
+    <option>Default select</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -331,16 +339,10 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 ##### Horizontal form label sizing
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
 
 {% capture example %}
 <form>
-  <div class="form-group row">
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
-    </div>
-  </div>
   <div class="form-group row">
     <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
@@ -1190,55 +1192,60 @@ Replace number by label.
 Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
 
 {% capture example %}
-<select class="custom-select">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customSelect">Custom select</label>
+  <select class="custom-select" id="customSelect">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+You may also choose large custom selects to match our similarly sized text inputs.
 
 {% capture example %}
-<select class="custom-select custom-select-lg mb-3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-
-<select class="custom-select custom-select-sm">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customLargeSelect">Large custom select</label>
+  <select class="custom-select custom-select-lg mb-3" id="customLargeSelect">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 The `multiple` attribute is also supported:
 
 {% capture example %}
-<select class="custom-select" multiple>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customMultipleSelect">Multiple custom select</label>
+  <select class="custom-select" id="customMultipleSelect" multiple>
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 As is the `size` attribute:
 
 {% capture example %}
-<select class="custom-select" size="3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customSizeSelect">Sized custom select</label>
+  <select class="custom-select" size="3" id="customSizeSelect">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
