@@ -1041,12 +1041,18 @@ $popover-font-weight:               $font-weight-bold !default; // Boosted mod
 
 $popover-header-bg:                 $popover-bg !default;
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          map-get($spacers, 2) !default; // Boosted mod
-$popover-header-padding-x:          map-get($spacers, 2) !default; // Boosted mod
+// Boosted mod: same padding everywhere
+$popover-header-padding:            map-get($spacers, 2) !default;
+//$popover-header-padding-y:          map-get($spacers, 2) !default;
+//$popover-header-padding-x:          map-get($spacers, 2) !default;
+// end mod
 
 $popover-body-color:                $body-color !default;
-$popover-body-padding-y:            $popover-header-padding-y !default;
-$popover-body-padding-x:            $popover-header-padding-x !default;
+// Boosted mod: same padding everywhere
+$popover-body-padding:              $popover-header-padding !default;
+//$popover-body-padding-y:            $popover-header-padding-y !default;
+//$popover-body-padding-x:            $popover-header-padding-x !default;
+// end mod
 
 $popover-arrow-width:               map-get($spacers, 2) !default; // Boosted mod
 $popover-arrow-height:              map-get($spacers, 1) !default;
