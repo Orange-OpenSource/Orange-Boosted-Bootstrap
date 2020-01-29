@@ -52,7 +52,7 @@ label {
   // Remove select outline from select box in FF
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $input-color;
+    // text-shadow: 0 0 0 $input-color; // Boosted mod: no text-shadow!
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
