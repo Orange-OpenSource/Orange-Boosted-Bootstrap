@@ -6,13 +6,13 @@ label {
   [disabled] & {
     color: $custom-control-label-disabled-color;
   }
+}
 
-  &.is-required::after {
-    margin-left: $label-margin-bottom;
-    font-weight: $font-weight-bold;
-    color: theme-color("primary");
-    content: "*";
-  }
+.is-required::after {
+  margin-left: $label-margin-bottom;
+  font-weight: $font-weight-bold;
+  color: theme-color("primary");
+  content: "*";
 }
 // end mod
 
