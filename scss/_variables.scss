@@ -1006,8 +1006,11 @@ $tooltip-color:                     $black !default;
 $tooltip-bg:                        $gray-400 !default;
 $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   1 !default; // Boosted mod
-$tooltip-padding-y:                 $spacer !default;
-$tooltip-padding-x:                 $spacer !default;
+// Boosted mod: same padding everywhere
+$tooltip-padding:                   map-get($spacers, 2) !default;
+// $tooltip-padding-y:              $spacer !default;
+// $tooltip-padding-x:              $spacer !default;
+// end mod
 $tooltip-margin:                    map-get($spacers, 1) !default; // Boosted mod
 $tooltip-font-weight:               $font-weight-bold !default;
 
@@ -1016,8 +1019,8 @@ $tooltip-arrow-height:              map-get($spacers, 1) !default; // Boosted mo
 $tooltip-arrow-color:               $tooltip-bg !default;
 
 // Form tooltips must come after regular tooltips
-$form-feedback-tooltip-padding-y:     $tooltip-padding-y / 2 !default;
-$form-feedback-tooltip-padding-x:     $tooltip-padding-x / 2 !default;
+$form-feedback-tooltip-padding-y:     $tooltip-padding !default; // Boosted mod
+$form-feedback-tooltip-padding-x:     $tooltip-padding !default; // Boosted mod
 $form-feedback-tooltip-font-size:     $tooltip-font-size !default;
 $form-feedback-tooltip-line-height:   $line-height-base !default;
 $form-feedback-tooltip-opacity:       $tooltip-opacity !default;
