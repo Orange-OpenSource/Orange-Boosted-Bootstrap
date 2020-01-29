@@ -184,8 +184,33 @@
         }
       });
 
-      $(".has-checkbox").on("click", "[type='checkbox']", function(e) {
+      determinate = function () {
+        $state = $(".has-checkbox").find("tbody [type='checkbox']:checked");
+
+        if ($state.length) {
+          $(".has-checkbox thead [type='checkbox']").prop("indeterminate", true);
+        } else {
+          $(".has-checkbox thead [type='checkbox']").prop("indeterminate", false);
+        }
+      };
+
+      determinate();
+
+      $(".has-checkbox").on("click", "tbody [type='checkbox']", function() {
         $(this).parents("tr").toggleClass("selected");
+        determinate();
+      });
+
+      $(".has-checkbox").on("click", "thead [type='checkbox']", function() {
+        $checked = $(this).prop("checked");
+        $(this).prop("indeterminate", false);
+        $(this).parents("table").find("tbody [type='checkbox']").prop("checked", $checked);
+
+        if ($checked) {
+          $(this).parents("table").find("tr").addClass("selected");
+        } else {
+          $(this).parents("table").find("tr").removeClass("selected");
+        }
       });
     });
   </script>
