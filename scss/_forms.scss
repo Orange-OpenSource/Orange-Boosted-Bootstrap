@@ -1,10 +1,7 @@
 // stylelint-disable selector-no-qualifying-type
 
 // Boosted mod
-// Orange brand, labels are always bold
 label {
-  font-weight: $font-weight-bold;
-
   &.disabled,
   [disabled] & {
     color: $custom-control-label-disabled-color;
