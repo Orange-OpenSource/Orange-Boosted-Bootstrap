@@ -1,21 +1,18 @@
 // stylelint-disable selector-no-qualifying-type
 
 // Boosted mod
-// Orange brand, labels are always bold
 label {
-  font-weight: $font-weight-bold;
-
   &.disabled,
   [disabled] & {
     color: $custom-control-label-disabled-color;
   }
+}
 
-  &.is-required::after {
-    margin-left: $label-margin-bottom;
-    font-weight: $font-weight-bold;
-    color: theme-color("primary");
-    content: "*";
-  }
+.is-required::after {
+  margin-left: $label-margin-bottom;
+  font-weight: $font-weight-bold;
+  color: theme-color("primary");
+  content: "*";
 }
 // end mod
 
@@ -52,7 +49,7 @@ label {
   // Remove select outline from select box in FF
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $input-color;
+    // text-shadow: 0 0 0 $input-color; // Boosted mod: no text-shadow!
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.

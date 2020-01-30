@@ -23,13 +23,13 @@
 
     &:hover,
     &:focus {
-      outline-color: $gray-500;
+      outline-color: $gray-700;
     }
   }
 
   &:hover,
   &:focus {
-    outline: $border-width solid $gray-700;
+    outline: $border-width solid $gray-500;
     outline-offset: -#{$border-width};
 
     &:not(:disabled):not(.disabled) {

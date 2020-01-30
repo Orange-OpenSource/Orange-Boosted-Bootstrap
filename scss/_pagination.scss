@@ -40,6 +40,10 @@
   }
 
   // Boosted mod
+  &.has-label {
+    padding-top: subtract($pagination-padding-y, 1px);
+    padding-bottom: add($pagination-padding-y, 1px);
+  }
   // Opinionated: add "hand" cursor to non-disabled .page-link elements
   // &:not(:disabled):not(.disabled) {
   //  cursor: pointer;
@@ -75,7 +79,7 @@
     display: inline-block;
     width: $pagination-icon-width;
     height: $pagination-icon-height;
-    margin: $pagination-border-width / 2 -.15625rem 0;
+    margin-top: $pagination-border-width / 2;
     content: "";
     background: $pagination-icon-background;
   }
@@ -84,7 +88,12 @@
     margin-left: 0;
 
     .page-link {
-      padding: $pagination-first-item-padding;
+      padding-right: $pagination-first-right-padding;
+      padding-left: $pagination-first-left-padding;
+
+      &::before {
+        margin-right: $border-width * -1.5;
+      }
     }
 
     .has-label::before {
@@ -94,9 +103,12 @@
 
   &:last-child {
     .page-link {
-      padding: $pagination-last-item-padding;
+      padding-right: $pagination-last-right-padding;
+      padding-left: $pagination-last-left-padding;
 
       &::after {
+        margin-left: $border-width * -1.5;
+
         /* rtl:remove */
         transform: rotate(180deg);
       }

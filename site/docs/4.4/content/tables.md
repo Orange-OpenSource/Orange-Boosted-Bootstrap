@@ -464,7 +464,7 @@ Also, **when using checkboxes in the first column**, add `.has-checkbox` class t
         <tr class="selected">
             <th scope="row">
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3" autocomplete="off">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3" autocomplete="off" checked>
                   <label class="custom-control-label" for="customCheck3">
                     <span class="custom-control-description sr-only">Select row 3</span>
                   </label>
