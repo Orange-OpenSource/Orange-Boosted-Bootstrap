@@ -41,6 +41,21 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Run accessibility tests
+        run: npm run docs-accessibility
+        if: matrix.node == 12
+
+      - name: Generate HTML accessibility results
+        run: npm run docs-pa11y-html
+        if: matrix.node == 12 && failure()
+
+      - name: Upload accessibility results
+        uses: actions/upload-artifact@v1
+        if: matrix.node == 12 && failure()
+        with:
+          name: pa11y-ci-results
+          path: .pa11y/
+
       - name: Run bundlesize
         run: npm run bundlesize
         if: matrix.node == 10
