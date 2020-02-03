@@ -93,7 +93,7 @@ download:
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:               "https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/css/boosted.min.css"
-  css_hash:          "sha384-oCnRyZHbRtzxuMBaVzMzcZkNqBRSaORhvB7wHJ2ezUJzT6rhhpctjTmx7vwAFGom"
+  css_hash:          "sha384-9uatxaJnVAGjcNW3rG2ClxAVrq1BHfzFpDlg+SUyVSCIxm7E/9tF9BWJmrfY04Xf"
   iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/css/orangeIcons.min.css"
   iconcss_hash:      "sha384-Zd5WIT6PZ7YtONlsULMAoLWo0iJi5GPix2LFrMhPQjMYjBA0FhvsKInWdLKM+9nW"
   helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/css/orangeHelvetica.min.css"
