@@ -3,7 +3,7 @@
   "level": "error",
   "concurrency": 4,
   "defaults": {
-    "wait": 5000,
+    "wait": 3000,
     "runners": [
       "axe"
     ],
