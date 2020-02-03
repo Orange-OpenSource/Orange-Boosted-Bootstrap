@@ -1,9 +1,10 @@
 {
   "standard": "WCAG2AA",
-  "level": "none",
+  "level": "error",
   "concurrency": 4,
   "defaults": {
     "wait": 3000,
+    "threshold": 500,
     "runners": [
       "axe"
     ],
