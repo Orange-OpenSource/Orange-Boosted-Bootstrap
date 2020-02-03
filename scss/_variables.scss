@@ -1329,7 +1329,8 @@ $accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.
 // Tablesorter
 $o-sortable-hover-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7,17 0,10 h 14 l -7,7 z'/><path d='M 7,0 14,7 0,7 7,0 z'/></svg>") !default;
 $o-sortable-icon-size:        map-get($spacers, 2) .875rem !default;
-$o-sortable-icon-position:    right .125rem center !default;
+$o-sortable-icon-position:    right center !default;
+$o-sortable-icon-height:      .375rem !default;
 
 // Megamenu
 $o-megamenu-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
