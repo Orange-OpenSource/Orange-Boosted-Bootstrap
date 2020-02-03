@@ -69,6 +69,14 @@ jobs:
           BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSER_STACK_ACCESS_KEY }}"
           BROWSER_STACK_USERNAME: "${{ secrets.BROWSER_STACK_USERNAME }}"
 
+      - name: Percy Test
+        uses: percy/snapshot-action@v0.1.0
+        if: matrix.node == 12
+        with:
+          build-directory: "_gh_pages/"
+        env:
+          PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
+
       - name: Run Coveralls
         uses: coverallsapp/github-action@master
         if: matrix.node == 10
