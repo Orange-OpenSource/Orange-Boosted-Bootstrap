@@ -1,0 +1,3 @@
+{
+  "text": "$GITHUB_REPOSITORY → $GITHUB_EVENT_NAME : $GITHUB_REF :poop:"
+}
