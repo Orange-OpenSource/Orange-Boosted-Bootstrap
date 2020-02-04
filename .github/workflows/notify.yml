@@ -11,7 +11,7 @@ jobs:
       - name: Mattermost
         run: |
           echo "{\"text\":\"testing github action :tada:\"}" > mattermost.json
-        uses: mattermost/action-mattermost-notify@1.0.0
+      - uses: mattermost/action-mattermost-notify@1.0.0
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           MATTERMOST_USERNAME: "GitHub Release"
