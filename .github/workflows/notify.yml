@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Mattermost
         run: |
-          echo "{\"text\":\"$GITHUB_REPOSITORY → $GITHUB_EVENT_NAME : $GITHUB_REF  // GITHUB_ACTOR :poop:\"}" > mattermost.json
+          echo "{\"text\":\"$GITHUB_REPOSITORY → $GITHUB_EVENT_NAME : $GITHUB_REF  // $GITHUB_ACTOR :poop:\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@1.0.0
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
