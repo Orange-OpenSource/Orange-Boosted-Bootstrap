@@ -73,8 +73,8 @@ jobs:
         uses: percy/snapshot-action@v0.1.0
         if: matrix.node == 12
         with:
-          build-directory: "_gh_pages/"
-          flags: "--snapshot-files '/index.html'"
+          build-directory: "_gh_pages"
+          flags: "--snapshot-files /index.html"
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
 
