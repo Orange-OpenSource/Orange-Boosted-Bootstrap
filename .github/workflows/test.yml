@@ -1,5 +1,13 @@
 name: Tests
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
+    branches:
+      - v5-dev
 env:
   CI: true
 
