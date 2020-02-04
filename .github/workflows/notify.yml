@@ -1,0 +1,18 @@
+name: Bots
+on:
+  push:
+    branches:
+      - chore/tooling
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mattermost
+        run: |
+          echo "{\"text\":\"testing github action :tada:\"}" > mattermost.json
+        uses: mattermost/action-mattermost-notify@1.0.0
+        env:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          MATTERMOST_USERNAME: "GitHub Release"
+          MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
