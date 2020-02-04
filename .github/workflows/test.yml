@@ -74,6 +74,7 @@ jobs:
         if: matrix.node == 12
         with:
           build-directory: "_gh_pages/"
+          flags: "--snapshot-files /index.html"
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
 
