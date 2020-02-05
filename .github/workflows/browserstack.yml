@@ -1,5 +1,8 @@
 name: BrowserStack
-on: [push]
+on:
+  push:
+    paths:
+      - 'js/**'
 env:
   CI: true
   NODE: 10.x
