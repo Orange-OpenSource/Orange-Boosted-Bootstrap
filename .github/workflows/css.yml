@@ -1,6 +1,5 @@
 name: CSS
 on:
-  push:
   pull_request:
     paths:
       - 'scss/**'

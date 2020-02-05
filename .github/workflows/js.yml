@@ -1,6 +1,5 @@
 name: JS Tests
 on:
-  push:
   pull_request:
     paths:
       - 'js/**'

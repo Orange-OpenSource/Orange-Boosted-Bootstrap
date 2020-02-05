@@ -1,6 +1,6 @@
 name: BrowserStack
 on:
-  push:
+  pull_request:
     paths:
       - 'js/**'
 env:

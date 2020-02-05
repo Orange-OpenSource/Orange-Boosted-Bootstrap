@@ -1,6 +1,5 @@
 name: CSS (Dart Sass)
 on:
-  push:
   pull_request:
     paths:
       - 'scss/**'
