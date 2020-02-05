@@ -1,5 +1,6 @@
 name: Optimize
 on:
+  push:
   pull_request:
     paths:
       - '**.jpg'
