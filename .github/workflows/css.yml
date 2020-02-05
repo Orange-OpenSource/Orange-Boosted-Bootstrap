@@ -1,8 +1,15 @@
 name: CSS
 on:
+  push:
+    paths:
+      - 'scss/**'
+    branches:
+      - v5-dev
   pull_request:
     paths:
       - 'scss/**'
+    branches:
+      - v5-dev
 env:
   CI: true
   NODE: 10.x

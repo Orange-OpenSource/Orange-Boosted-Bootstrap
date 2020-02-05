@@ -1,8 +1,15 @@
 name: JS Tests
 on:
+  push:
+    paths:
+      - 'js/**'
+    branches:
+      - v5-dev
   pull_request:
     paths:
       - 'js/**'
+    branches:
+      - v5-dev
 env:
   CI: true
 

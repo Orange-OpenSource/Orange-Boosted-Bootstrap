@@ -1,5 +1,19 @@
 name: Docs
-on: pull_request
+on:
+  push:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
+    branches:
+      - v5-dev
+  pull_request:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
+    branches:
+      - v5-dev
 env:
   CI: true
   NODE: 10.x

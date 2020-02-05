@@ -1,5 +1,11 @@
 name: Tests
 on:
+  push:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+    branches:
+      - v5-dev
   pull_request:
     paths:
       - 'js/**'
