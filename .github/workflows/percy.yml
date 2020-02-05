@@ -46,10 +46,10 @@ jobs:
         run: npm run docs-build
 
       - name: Percy Test
-          uses: percy/snapshot-action@v0.1.0
-          with:
-            build-directory: "_gh_pages/"
-            flags: "--snapshot-files ./*.html"
-            verbose: true
-          env:
-            PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
+        uses: percy/snapshot-action@v0.1.0
+        with:
+          build-directory: "_gh_pages/"
+          flags: "--snapshot-files ./*.html"
+          verbose: true
+        env:
+          PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
