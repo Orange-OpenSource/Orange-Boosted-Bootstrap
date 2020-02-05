@@ -73,10 +73,3 @@ jobs:
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
-
-      - name: Run Coveralls
-        uses: coverallsapp/github-action@master
-        if: matrix.node == 10
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-          path-to-lcov: "./js/coverage/lcov.info"
