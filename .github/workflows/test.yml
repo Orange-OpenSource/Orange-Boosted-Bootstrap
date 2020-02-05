@@ -70,13 +70,6 @@ jobs:
         env:
           BUNDLESIZE_GITHUB_TOKEN: "${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}"
 
-      - name: Run BrowserStack tests
-        run: npm run js-test-cloud
-        if: matrix.node == 10 && github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap' && github.event_name == 'push'
-        env:
-          BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSER_STACK_ACCESS_KEY }}"
-          BROWSER_STACK_USERNAME: "${{ secrets.BROWSER_STACK_USERNAME }}"
-
       - name: Percy Test
         uses: percy/snapshot-action@v0.1.0
         if: matrix.node == 12
