@@ -9,7 +9,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: cat "./mattermost.json" > mattermost.json
       - uses: mattermost/action-mattermost-notify@1.0.0
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
