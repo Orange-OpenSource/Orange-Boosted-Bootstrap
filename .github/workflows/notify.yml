@@ -1,6 +1,8 @@
 name: Bots
 on:
   pull_request:
+    types:
+        closed
     branches:
       - v5-dev
   release:
@@ -22,6 +24,7 @@ jobs:
           echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just merged [#${{ github.event.pull_request.number }}](${{ github.event.pull_request._links.html }}) in `v5-dev` — [View diff →](${{ github.event.pull_request._links.html }}/files)\"}" > mattermost.json
 
       - uses: mattermost/action-mattermost-notify@1.0.0
+        if: github.event_name == 'release' || github.event.pull_request.merged == true
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           MATTERMOST_USERNAME: "Boosted Release"
