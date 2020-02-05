@@ -8,13 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Mattermost
+      - name: Clone repository
+        uses: actions/checkout@v2
         with:
-            message: "./mattermost.json"
+          message: "./mattermost.json"
         run: |
           echo ${{ message }} > mattermost.json
+
+      - name: Mattermost
       - uses: mattermost/action-mattermost-notify@1.0.0
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
