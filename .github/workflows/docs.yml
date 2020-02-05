@@ -32,8 +32,5 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Compile dist
-        run: npm run dist
-
       - name: Test docs
         run: npm run docs
