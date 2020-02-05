@@ -1,0 +1,60 @@
+name: JS Tests
+on:
+  push:
+    paths:
+      - 'js/**'
+    branches:
+      - v5-dev
+  pull_request:
+    paths:
+      - 'js/**'
+    branches:
+      - v5-dev
+env:
+  CI: true
+
+jobs:
+  run:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [10, 12]
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Set Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - run: node --version
+      - run: npm --version
+
+      - name: Set up npm cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/js.yml') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/js.yml') }}
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Run dist
+        run: npm run js
+
+      - name: Run JS tests
+        run: npm run js-test
+
+      - name: Run Coveralls
+        uses: coverallsapp/github-action@master
+        if: matrix.node == 10
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          path-to-lcov: "./js/coverage/lcov.info"

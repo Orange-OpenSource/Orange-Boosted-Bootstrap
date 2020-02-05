@@ -1,0 +1,67 @@
+name: Tests
+on:
+  push:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
+    branches:
+      - v5-dev
+  pull_request:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
+    branches:
+      - v5-dev
+env:
+  CI: true
+  NODE: 10.x
+
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Set Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: "${{ env.NODE }}"
+
+      - run: node --version
+      - run: npm --version
+
+      - name: Set up npm cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/pa11y.yml') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/pa11y.yml') }}
+            ${{ runner.OS }}-node-v${{ matrix.node }}-
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Compile dist
+        run: npm run dist
+
+      - name: Build docs
+        run: npm run docs-build
+
+      - name: Run accessibility tests
+        run: npm run docs-accessibility
+
+      - name: Generate HTML accessibility results
+        run: npm run docs-pa11y-html
+        if: failure()
+
+      - name: Upload accessibility results
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: pa11y-ci-results
+          path: .pa11y/
