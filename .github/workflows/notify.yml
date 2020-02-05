@@ -14,12 +14,12 @@ jobs:
       - name: Mattermost message for release
         if: github.event_name == 'release'
         run: |
-          echo "{\"text\": \"## Boosted ${{ github.event.release.tag_name }} :tada:\n[![${{ github.actor }}](https://github.com/${{ github.actor }}.png)](https://github.com/${{ github.actor }}/) released this on ${{ github.event.release.published_at }}\n[Changelog](${{ github.event.release.html_url }}) — [Download (zip)](${{ github.event.release.zipball_url }})\"}" > mattermost.json
+          echo "{\"text\": \"## Boosted ${{ github.event.release.tag_name }} :tada:\n[![${{ github.actor }}](https://github.com/${{ github.actor }}.png)](https://github.com/${{ github.actor }}/) released this on ${{ github.event.release.published_at }}\n***\n[Changelog](${{ github.event.release.html_url }}) — [Download (zip)](${{ github.event.release.zipball_url }})\"}" > mattermost.json
 
       - name: Mattermost message for push
         if: github.event_name == 'push'
         run: |
-          echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png)](https://github.com/${{ github.actor }}/) just pushed on ${{ github.ref }}\n[View diff](${{ github.event.push.compare }})\"}" > mattermost.json
+          echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =32) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just pushed on ${{ github.ref }}\n[View diff →](${{ github.event.push.compare }})\"}" > mattermost.json
 
       - uses: mattermost/action-mattermost-notify@1.0.0
         env:
