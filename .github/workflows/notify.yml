@@ -19,7 +19,7 @@ jobs:
       - name: Mattermost message for push
         if: github.event_name == 'push'
         run: |
-          echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =32) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just pushed on ${{ github.ref }}\n[View diff →](${{ github.event.push.compare }})\"}" > mattermost.json
+          echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just pushed on ${{ github.ref }} — [View diff →](${{ github.event.push.compare }})\"}" > mattermost.json
 
       - uses: mattermost/action-mattermost-notify@1.0.0
         env:
