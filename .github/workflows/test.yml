@@ -64,12 +64,6 @@ jobs:
           name: pa11y-ci-results
           path: .pa11y/
 
-      - name: Run bundlesize
-        run: npm run bundlesize
-        if: matrix.node == 10
-        env:
-          BUNDLESIZE_GITHUB_TOKEN: "${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}"
-
       - name: Percy Test
         uses: percy/snapshot-action@v0.1.0
         if: matrix.node == 12
