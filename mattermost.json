@@ -1,0 +1,26 @@
+{
+  "attachment": [
+    {
+      "fallback": "Boosted ${{ github.ref }} released :tada:",
+      "color": "#f16e00",
+      "author_name": "${{ github.actor }}",
+      "author_icon": "https://github.com/${{ github.actor }}.png",
+      "author_link": "https://github.com/${{ github.actor }}/",
+      "title": "Boosted ${{ github.ref }} :tada:",
+      "title_link": "https://github.com/${{ github.repository }}/releases/tag/${{ github.ref }}",
+      "text": "Check out this **brand** new shiny release! :tada:",
+      "fields": [
+        {
+          "short": true,
+          "title": "What's new?",
+          "value": "[Read the full changelog](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref }})"
+        },
+        {
+          "short": true,
+          "title": "Download",
+          "value": "[Source code (zip)](https://github.com/${{ github.repository }}/archive/${{ github.ref }}.zip)"
+        }
+      ]
+    }
+  ]
+}
