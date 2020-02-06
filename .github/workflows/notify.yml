@@ -1,6 +1,8 @@
 name: Bots
 on:
   pull_request:
+    types:
+      - closed
     branches:
       - v5-dev
   release:
@@ -11,11 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Mattermost message for pull request
-        if: github.event_name == 'pull_request'
-        run: |
-          echo "${{ github.event.pull_request.number }} : ${{ github.event.pull_request.html_url }}"
-
       - name: Mattermost message for release
         if: github.event_name == 'release'
         run: |
@@ -24,7 +21,7 @@ jobs:
       - name: Mattermost message for merged pull request
         if: github.event_name == 'pull_request' && github.event.pull_request.merged
         run: |
-          echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just merged [#${{ github.event.pull_request.number }}](${{ github.event.pull_request.pull_request.html }}) in **v5-dev** — [View diff →](${{ github.event.pull_request.pull_request.html }}/files)\"}" > mattermost.json
+          echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just merged [#${{ github.event.pull_request.number }}](${{ github.event.pull_request.html_url }}) in **v5-dev** — [View diff →](${{ github.event.pull_request.html_url }}/files)\"}" > mattermost.json
 
       - uses: mattermost/action-mattermost-notify@1.0.0
         if: github.event_name == 'release' || github.event.pull_request.merged
