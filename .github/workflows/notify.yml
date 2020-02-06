@@ -19,9 +19,7 @@ jobs:
       - name: Github Event Payload
         if: github.event_name == 'push'
         run: |
-          echo $EVENT
-        env:
-          EVENT: $GITHUB_EVENT_PATH
+          echo $GITHUB_EVENT_PATH.id
 
       - name: Mattermost message for release
         if: github.event_name == 'release'
