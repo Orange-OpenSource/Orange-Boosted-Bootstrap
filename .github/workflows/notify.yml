@@ -1,8 +1,6 @@
 name: Bots
 on:
   pull_request:
-    types:
-      - closed
     branches:
       - v5-dev
   release:
@@ -13,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Mattermost message for pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "${{ github.event.pull_request.number }} : ${{ github.event.pull_request.html }}"
+
       - name: Mattermost message for release
         if: github.event_name == 'release'
         run: |
