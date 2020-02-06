@@ -103,6 +103,9 @@ This version fixes a few bugs and add tons of small improvements to better fit O
 * **social buttons**: adjust icon size & position for linkedin, pinterest & email ([4d0d1dd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/4d0d1dd0619c97dbd8ce2a8af89dfafd549ec9f4))
 * **split buttons**: dropdown-toggle-split size+alignment ([51ed9e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/51ed9e39fc61b5d8a9feea9ec9c85dde76859fe5))
 * **split buttons**: finally managed to implement the custom not-full-height border to match the brand… ([1589cd4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/1589cd4eafde6cd4c427003bb4acec260a9c8a16))
+* **dropdowns**: caret placement for both dropdowns & split buttons ([d18f280](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/d18f280279f495dd24ebd685afb0747ad80d9bcb))
+* **dropdowns**: .show caret's colors ([9b2c36d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/9b2c36d270308cf4428fba97514341c904ca0cfb))
+* **collapse**: accordion sizes matching the brand ([6d6df39](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/6d6df396293b467417ebc7ed27609a7a3e949d9c))
 </details>
 <details>
 <summary>Close button</summary>
@@ -217,6 +220,7 @@ This version fixes a few bugs and add tons of small improvements to better fit O
 * **gitignore**: ignore .tgz when using npm pack ([1cdbca5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1cdbca5bf2a614b608a165da7ccf1f7f84fd4d89))
 * **JS:** disable ESlint sort-imports for focus-visible bundling ([6c4ed28](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c4ed28eefe312d5c1770d8b531b593acc82b8fe))
 * **Bundlesize**: slightly increase boosted.css limit ([215e209](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/215e2098f5a720cf4149461db877be0be107e488))
+* **workflow**: add Mattermost + Calibre actions ([0de4169](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0de4169869e77e0d8e4bc34d42996dd7e677b223))
 
 ### Documentation
 
@@ -227,6 +231,7 @@ A new section called "Essentials" is added to show various headers and footers i
 <summary>Essentials</summary>
 
 * **docs:** megamenu example was wrong ([8fa582e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8fa582e630eb4cf0b874922bba36b3579d5dfa36))
+* **docs**: remove weird examples for input-groups, where prepended/appended things could be confused with label ([46e4273](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/46e427323ef30c0ad0f5f7bae10dd9fec17ced80))
 * **header:** add global headers module in Essentials ([f0d0357](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f0d0357c08af0bac6116e867e461a1c946168607))
 * **essentials:** border color utility ([f841c9c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f841c9c3fe3e0d2e87c5fcbbf34f281e930e1b4c))
 * **essentials:** fix hr html linting errors ([27272ca](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/27272caa0383624468abc69809fa00e5e2319363))
