@@ -63,7 +63,7 @@
   // Boosted mod
   :not(.dropleft) > & {
     &::after {
-      transform: translateY(-$border-width);
+      transform: none;
     }
 
     &:not(:hover):not(:focus):not(:active) {

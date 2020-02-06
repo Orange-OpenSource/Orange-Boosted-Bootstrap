@@ -26,6 +26,14 @@
     }
   }
 
+  &.btn-lg {
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+  }
+
+  &.btn-sm {
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
   .btn-group &:not(.btn-inverse) {
     border-color: $dropdown-color;
   }
