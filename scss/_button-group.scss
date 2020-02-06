@@ -116,6 +116,13 @@
   .btn:active + & {
     border-color: theme-color("primary");
   }
+
+  .btn-group.show:not(.dropleft) > &:not(:focus):not(:active) {
+    &::before {
+      color: theme-color("primary");
+      background-color: theme-color("primary");
+    }
+  }
 }
 
 .btn-sm + .dropdown-toggle-split {
