@@ -8,9 +8,6 @@ on:
   release:
     types:
       - published
-  push:
-    branches:
-      - chore/prepare-4.4.1
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,10 +31,10 @@ jobs:
           MATTERMOST_USERNAME: "Boosted Release"
           MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
 
-      - name: Notify slack
+      - name: Notify slack for release
         uses: pullreminders/slack-action@master
-        if: github.event_name == 'push'
+        if: github.event_name == 'release'
         with:
-          args: '{\"channel\":\"CTDKAU5CZ\",\"text\":\"Release ${{ github.event.pusher }} // ${{ github.event.push.pusher }} :tada:\n<${{ github.event.push.compare }}|Changelog> — <${{ github.event.compare }}|Download (zip)>\"}'
+          args: '{\"channel\":\"GKHT1PV7X\",\"text\":\"Release ${{ github.event.release.tag_name }} :tada:\n<${{ github.event.release.html_url }}|Changelog> — <${{ github.event.release.zipball_url }}|Download (zip)>\"}'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
