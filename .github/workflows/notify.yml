@@ -38,6 +38,6 @@ jobs:
         uses: pullreminders/slack-action@master
         if: github.event_name == 'push'
         with:
-          args: '{\"channel\":\"CTDKAU5CZ\",\"text\":\"Release ${{ github.event.release.tag_name }} :tada:\n<${{ github.event.release.html_url }}|Changelog> — <${{ github.event.release.zipball_url }}|Download (zip)>\"}'
+          args: '{\"channel\":\"CTDKAU5CZ\",\"text\":\"Release ${{ github.event.pull_request.number }} :tada:\n<${{ github.event.pull_request.html_url }}|Changelog> — <${{ github.event.pull_request.html_url }}|Download (zip)>\"}'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
