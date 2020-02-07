@@ -35,20 +35,9 @@ jobs:
           MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
 
       - name: Notify slack
-        run: |
-          set -eu
-
-          if [[ -z "$SLACK_BOT_TOKEN" ]]; then
-            echo "Missing SLACK_BOT_TOKEN secret."
-            exit 1
-          fi
-
-          curl -X POST \
-               -H "Content-type: application/json" \
-               -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
-               -d $SLACK_BOT_MESSAGE \
-               https://slack.com/api/chat.postMessage
+        uses: pullreminders/slack-action@master
         if: github.event_name == 'push'
+        with:
+          args: '{\"channel\":\"CTDKAU5CZ\",\"text\":\"Release ${{ github.event.pusher }} // ${{ github.event.push.pusher }} :tada:\n<${{ github.event.push.compare }}|Changelog> — <${{ github.event.compare }}|Download (zip)>\"}'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_BOT_MESSAGE: "{\"channel\":\"CTDKAU5CZ\",\"text\":\"Release ${{ github.event.pull_request.number }} :tada:\n<https://github.com/${{ github.actor }}/|Changelog> // <https://github.com/${{ github.actor }}/|Download (zip)>\"}"
