@@ -27,6 +27,11 @@
     }
   }
 
+  .dropdown-toggle::after {
+    border-width: $border-width * 2.5;
+    transform: none;
+  }
+
   .nav-link.active::before {
     right: map-get($spacers, 1);
     bottom: -#{map-get($spacers, 2) / 10};
