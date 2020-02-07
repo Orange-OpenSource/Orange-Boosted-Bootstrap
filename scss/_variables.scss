@@ -837,6 +837,7 @@ $navbar-height:                        6.25rem !default;
 $navbar-brand-logo-height:             map-get($spacers, 4) !default;
 $navbar-brand-logo-expanded-height:    3.125rem !default;
 $navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
+$navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
 $navbar-supra-icon-size:               1.5625rem !default;
 $navbar-transition-duration:           .2s !default;
 $navbar-transition-timing-function:    ease-in-out !default;

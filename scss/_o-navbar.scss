@@ -13,12 +13,12 @@
   }
 
   .navbar-nav {
-    margin: 0 -#{map-get($spacers, 1)};
+    margin: 0 -#{$navbar-supra-padding-x};
   }
 
   .nav-link,
   .dropdown-toggle {
-    padding: .75rem map-get($spacers, 1) #{map-get($spacers, 2) + $navbar-supra-padding-y};
+    padding: .75rem $navbar-supra-padding-x #{map-get($spacers, 2) + $navbar-supra-padding-y};
     font-size: $font-size-sm;
     line-height: 1;
 
@@ -33,9 +33,9 @@
   }
 
   .nav-link.active::before {
-    right: map-get($spacers, 1);
+    right: $navbar-supra-padding-x;
     bottom: -#{map-get($spacers, 2) / 10};
-    left: map-get($spacers, 1);
+    left: $navbar-supra-padding-x;
   }
 
   .nav-link[class*="svg-"] {
