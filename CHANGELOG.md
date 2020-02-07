@@ -2,6 +2,12 @@
 
 This version fixes a few bugs and add tons of small improvements to better fit Orange Brand Digital Guidelines.
 
+### From Bootstrap (unreleased)
+
+* Allow percentages in container widths ([0d08c74 in Bootstrap](https://github.com/twbs/bootstrap/commit/0d08c74d2fbb5e0a0b1991b5a51d7988f9e6952e)) 
+* Escape brackets in `escape-svg()` ([35d5cbf in Bootstrap](https://github.com/twbs/bootstrap/commit/35d5cbf4fda4bfad4c244840824774bb94629212))
+* Fix disabled `.btn` cursor ([fbf294a in Bootstrap](https://github.com/twbs/bootstrap/commit/fbf294a605e36a4cf9c66f0c4637f13ded18f727))
+
 ### Bug Fixes
 
 <details>
