@@ -12,7 +12,6 @@
   text-align: center;
   white-space: $btn-white-space;
   vertical-align: middle;
-  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
@@ -39,7 +38,11 @@
     // @include box-shadow(none); // Boosted mod
   }
 
-  // Boosted mod: no box-shadow at all
+  &:not(:disabled):not(.disabled) {
+    cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+
+    // Boosted mod: no box-shadow at all
+  }
 
   // Boosted mod
   [class*="svg-"],
