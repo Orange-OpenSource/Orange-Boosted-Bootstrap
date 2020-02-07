@@ -46,9 +46,9 @@ jobs:
           curl -X POST \
                -H "Content-type: application/json" \
                -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
-               -d $SLACK_BOT_MESSAGE \
+               -d "$SLACK_BOT_MESSAGE" \
                https://slack.com/api/chat.postMessage
         if: github.event_name == 'push'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_BOT_MESSAGE: '{"channel":"CTDKAU5CZ","text":"Release ${{ github.event.pull_request.number }} :tada:\n<${{ github.event.push.compare }}|Changelog> — <${{ github.event.push.compare }}|Download (zip)>"}'
+          SLACK_BOT_MESSAGE: '{"channel":"CTDKAU5CZ","text":"Release ${{ github.event.pull_request.number }} :tada:\n<${{ github.event.push.compare }}|Changelog> - <${{ github.event.push.compare }}|Download (zip)>"}'
