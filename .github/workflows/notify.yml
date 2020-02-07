@@ -8,6 +8,9 @@ on:
   release:
     types:
       - published
+  push:
+    branches:
+      - chore/prepare-4.4.1
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,9 +26,18 @@ jobs:
         run: |
           echo "{\"text\": \"[![${{ github.actor }}](https://github.com/${{ github.actor }}.png =10) **${{ github.actor }}**](https://github.com/${{ github.actor }}/) just merged [#${{ github.event.pull_request.number }}](${{ github.event.pull_request.html_url }}) in **v5-dev** — [View diff →](${{ github.event.pull_request.html_url }}/files)\"}" > mattermost.json
 
-      - uses: mattermost/action-mattermost-notify@1.0.0
+      - name: Notify Mattermost
+        uses: mattermost/action-mattermost-notify@1.0.0
         if: github.event_name == 'release' || github.event.pull_request.merged
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
           MATTERMOST_USERNAME: "Boosted Release"
           MATTERMOST_ICON: "https://github.com/Orange-OpenSource.png"
+
+      - name: Notify slack
+        uses: pullreminders/slack-action@master
+        if: github.event_name == 'push'
+        with:
+          args: '{\"channel\":\"CTP4KEWRJ\",\"text\":\"Hello world\"}'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
