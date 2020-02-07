@@ -38,6 +38,6 @@ jobs:
         uses: pullreminders/slack-action@master
         if: github.event_name == 'push'
         with:
-          args: '{\"channel\":\"CTP4KEWRJ\",\"text\":\"Hello world :tada:\"}'
+          args: '{\"channel\":\"CTP4KEWRJ\",\"text\":\"Hello world\"}'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
