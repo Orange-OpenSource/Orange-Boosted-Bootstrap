@@ -18,7 +18,7 @@
 
   .nav-link,
   .dropdown-toggle {
-    padding: #{map-get($spacers, 2) + $navbar-supra-padding-y} map-get($spacers, 1);
+    padding: .75rem map-get($spacers, 1) #{map-get($spacers, 2) + $navbar-supra-padding-y};
     font-size: $font-size-sm;
     line-height: 1;
 
