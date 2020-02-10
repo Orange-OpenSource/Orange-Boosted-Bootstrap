@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.">
-<meta name="author" content="Mark Otto, Jacob Thornton, Bootstrap and Boosted contributors">
+<meta name="author" content="Orange and Boosted contributors">
 <meta name="generator" content="Jekyll v3.8.6">
 
 <meta name="docsearch:language" content="en">
@@ -14,23 +14,33 @@
 
 <link rel="canonical" href="https://boosted.orange.com/docs/4.4/content/tables/">
 
+<!-- Boosted mod -->
+<link rel="preload" href="/docs/4.4/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/4.4/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<!-- end mod -->
+
 <!-- tarteaucitron -->
 <link href="/docs/4.4/assets/css/tarteaucitronboosted.css" rel="stylesheet">
 <!-- Swiper -->
 <link href="/docs/4.4/assets/css/vendor/swiper.min.css" rel="stylesheet">
-<!-- Helvetica -->
-<link href="/docs/4.4/dist/css/orangeHelvetica.css" rel="stylesheet">
-<!-- orangeIcons -->
-<link href="/docs/4.4/dist/css/orangeIcons.css" rel="stylesheet">
 <!-- Boosted core CSS -->
-  <link href="/docs/4.4/dist/css/boosted.min.css" rel="stylesheet">
+  <!-- Helvetica -->
+  <link href="/docs/4.4/dist/css/orangeHelvetica.css" rel="stylesheet">
+  <!-- orangeIcons -->
+  <link href="/docs/4.4/dist/css/orangeIcons.css" rel="stylesheet">
+  <link href="/docs/4.4/dist/css/boosted.css" rel="stylesheet">
 <!-- end mod --><!-- Documentation extras -->
-
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-
-
-<link href="/docs/4.4/assets/css/docs.min.css" rel="stylesheet">
-
+  
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  
+  
+  <link href="/docs/4.4/assets/css/docs.min.css" rel="stylesheet">
+  
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -41,7 +51,25 @@
 <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#000000">
 
-<!-- Boosted mod remove social -->
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Tables">
+<meta name="twitter:description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/4.4/assets/brand/orange-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/4.4/content/tables/">
+<meta property="og:title" content="Tables">
+<meta property="og:description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://boosted.orange.com/docs/4.4/assets/brand/orange-social.png">
+<meta property="og:image:secure_url" content="https://boosted.orange.com/docs/4.4/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
 <script src="/docs/4.4/assets/js/vendor/tarteaucitron.js"></script>
 <script>
 	tarteaucitron.init({
@@ -85,15 +113,15 @@
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <!-- End Google Tag Manager (noscript) -->
 
-    <a class="skippy sr-only sr-only-focusable" href="#content">
-  <span class="skippy-text">Skip to main content</span>
-</a>
+    <div class="skiplinks container-fluid">
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable" href="#search-form">Skip to search form</a>
+    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
 
 
     <header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
-  <nav role="navigation" class="container-fluid"><a class="navbar-brand" href="/" aria-label="Boosted">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation"><a class="navbar-brand" href="/" aria-label="Boosted">
       <!-- Boosted mod change brand -->
-      <img src="/docs/4.4/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage"/>
+      <img src="/docs/4.4/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
       <!-- end mod -->
     </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -102,16 +130,19 @@
     <div class="collapse navbar-collapse" id="bd-main-nav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
+            <a class="nav-link " href="/" aria-label="Boosted"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/docs/4.4/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+            <a class="nav-link active" href="/docs/4.4/getting-started/introduction/" aria-current="page" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="/docs/4.4/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+            <a class="nav-link " href="/docs/4.4/essentials/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="/docs/4.4/boostwatch/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+            <a class="nav-link " href="/docs/4.4/examples/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/docs/4.4/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
           </li>
         </ul>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -120,7 +151,7 @@
               v4.4
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.4/">Latest (4.4.0)</a>
+              <a class="dropdown-item active" href="/docs/4.4/">Latest (4.4.1)</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
@@ -135,7 +166,7 @@
 
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+              <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false" width="23" height="23"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
             </a>
           </li>
         </ul>
@@ -147,12 +178,12 @@
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
         <div class="col-md-3 col-xl-2 bd-sidebar">
-          <form role="search" class="bd-search d-flex align-items-center pl-0 ml-0">
+          <form role="search" class="bd-search d-flex align-items-center pl-0 ml-0" id="search-form">
   <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.4">
   <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg></button>
 </form>
 
-<nav role="navigation" class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><div class="bd-toc-item">
+<nav role="navigation" class="collapse bd-links" id="bd-docs-nav" aria-label="Documentation navigation"><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.4/getting-started/introduction/">
         Getting started
       </a>
@@ -217,7 +248,7 @@
             </a>
           </li></ul>
     </div><div class="bd-toc-item active">
-      <a class="bd-toc-link" href="/docs/4.4/content/reboot/">
+      <a class="bd-toc-link" href="/docs/4.4/content/reboot/" aria-current="true">
         Content
       </a>
 
@@ -238,7 +269,7 @@
               Images
             </a>
           </li><li class="active bd-sidenav-active">
-            <a href="/docs/4.4/content/tables/">
+            <a href="/docs/4.4/content/tables/" aria-current="page">
               Tables
             </a>
           </li><li>
@@ -535,21 +566,15 @@
         </div>
 
         
-          <nav role="navigation" class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+          <nav role="navigation" class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
-<li class="toc-entry toc-h2"><a href="#table-head-options">Table head options</a></li>
-<li class="toc-entry toc-h2"><a href="#striped-rows">Striped rows</a></li>
-<li class="toc-entry toc-h2"><a href="#bordered-table">Bordered table</a></li>
-<li class="toc-entry toc-h2"><a href="#borderless-table">Borderless table</a></li>
 <li class="toc-entry toc-h2"><a href="#hoverable-rows">Hoverable rows</a></li>
 <li class="toc-entry toc-h2"><a href="#sizes">Sizes</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#small-table">Small table</a></li>
-<li class="toc-entry toc-h3"><a href="#large-table">Large table</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#contextual-classes">Contextual classes</a></li>
 <li class="toc-entry toc-h2"><a href="#captions">Captions</a></li>
 <li class="toc-entry toc-h2"><a href="#responsive-tables">Responsive tables</a>
 <ul>
@@ -557,7 +582,11 @@
 <li class="toc-entry toc-h3"><a href="#breakpoint-specific">Breakpoint specific</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#rich-content-tables">Rich content tables</a></li>
+<li class="toc-entry toc-h2"><a href="#rich-content-tables">Rich content tables</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sortable-tables">Sortable tables</a></li>
+</ul>
+</li>
 </ul>
           </nav>
         
@@ -695,519 +724,6 @@
       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<h2 id="table-head-options">Table head options</h2>
-
-<p>Similar to tables and dark tables, use the modifier classes <code class="highlighter-rouge">.thead-light</code> or <code class="highlighter-rouge">.thead-dark</code> to make <code class="highlighter-rouge">&lt;thead&gt;</code>s appear light or dark gray.</p>
-
-<div class="bd-example">
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-dark"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-light"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<h2 id="striped-rows">Striped rows</h2>
-
-<p>Use <code class="highlighter-rouge">.table-striped</code> to add zebra-striping to any table row within the <code class="highlighter-rouge">&lt;tbody&gt;</code>.</p>
-
-<div class="bd-example">
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<div class="bd-example">
-<table class="table table-striped table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<h2 id="bordered-table">Bordered table</h2>
-
-<p>Add <code class="highlighter-rouge">.table-bordered</code> for borders on all sides of the table and cells.</p>
-
-<div class="bd-example">
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Larry the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<div class="bd-example">
-<table class="table table-bordered table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered table-dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Larry the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<h2 id="borderless-table">Borderless table</h2>
-
-<p>Add <code class="highlighter-rouge">.table-borderless</code> for a table without borders.</p>
-
-<div class="bd-example">
-<table class="table table-borderless">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-borderless"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Larry the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<p><code class="highlighter-rouge">.table-borderless</code> can also be used on dark tables.</p>
-
-<div class="bd-example">
-<table class="table table-borderless table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-borderless table-dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Larry the Bird<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
@@ -1405,250 +921,6 @@
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<h3 id="large-table">Large table</h3>
-
-<p>Add <code class="highlighter-rouge">.table-lg</code> to make tables more compact by cutting cell padding in half.</p>
-
-<div class="bd-example">
-<table class="table table-lg">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>Larry the Bird<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
-
-<h2 id="contextual-classes">Contextual classes</h2>
-
-<p>Use contextual classes to color table rows or individual cells.</p>
-
-<div class="bd-example">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Class</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="table-active">
-        <th scope="row">Active</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">Default</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-
-      
-      <tr class="table-primary">
-        <th scope="row">Primary</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-secondary">
-        <th scope="row">Secondary</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-success">
-        <th scope="row">Success</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-danger">
-        <th scope="row">Danger</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-warning">
-        <th scope="row">Warning</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-info">
-        <th scope="row">Info</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-light">
-        <th scope="row">Light</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="table-dark">
-        <th scope="row">Dark</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- On rows --&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-secondary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-light"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-dark"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-
-<span class="c">&lt;!-- On cells (`td` or `th`) --&gt;</span>
-<span class="nt">&lt;tr&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-secondary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-light"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-dark"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-<span class="nt">&lt;/tr&gt;</span></code></pre></figure>
-
-<p>Regular table background variants are not available with the dark table, however, you may use <a href="/docs/4.4/utilities/colors/">text or background utilities</a> to achieve similar styles.</p>
-
-<div class="bd-example">
-  <table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="bg-primary">
-        <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-success">
-        <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-info">
-        <th scope="row">5</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-warning">
-        <th scope="row">7</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-danger">
-        <th scope="row">9</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- On rows --&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"bg-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-
-<span class="c">&lt;!-- On cells (`td` or `th`) --&gt;</span>
-<span class="nt">&lt;tr&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"bg-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-<span class="nt">&lt;/tr&gt;</span></code></pre></figure>
-
-<div class="bd-callout bd-callout-warning">
-<h5 id="conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</h5>
-
-<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code class="highlighter-rouge">.sr-only</code> class.</p>
-</div>
 
 <p>Create responsive tables by wrapping any <code class="highlighter-rouge">.table</code> with <code class="highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code>, making the table scroll horizontally at each <code class="highlighter-rouge">max-width</code> breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.</p>
 
@@ -2125,11 +1397,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
     <thead>
         <tr>
             <th scope="col">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" />
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select all</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" autocomplete="off" />
+                  <label class="custom-control-label" for="customCheck">
+                    <span class="custom-control-description sr-only">Select all</span>
+                  </label>
+                 </div>
             </th>
             <th scope="col">Name</th>
             <th scope="col">Column heading</th>
@@ -2140,11 +1413,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
     <tbody>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" />
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 1</span>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" autocomplete="off" />
+                <label class="custom-control-label" for="customCheck1">
+                  <span class="custom-control-description sr-only">Select row 1</span>
                 </label>
+               </div>
             </th>
             <td>
                 <span class="icon-folder-document" aria-hidden="true"></span>
@@ -2157,11 +1431,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" />
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 2</span>
-                </label>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2" autocomplete="off" />
+                  <label class="custom-control-label" for="customCheck2">
+                    <span class="custom-control-description sr-only">Select row 2</span>
+                  </label>
+              </div>
             </th>
             <td>
                 <span class="icon-unknown-file" aria-hidden="true"></span>
@@ -2174,11 +1449,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         </tr>
         <tr class="selected">
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" checked="" />
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 3</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3" autocomplete="off" checked="" />
+                  <label class="custom-control-label" for="customCheck3">
+                    <span class="custom-control-description sr-only">Select row 3</span>
+                  </label>
+                </div>
             </th>
             <td>
                 <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
@@ -2192,11 +1468,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" />
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 4</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4" autocomplete="off" />
+                  <label class="custom-control-label" for="customCheck4">
+                    <span class="custom-control-description sr-only">Select row 4</span>
+                  </label>
+                </div>
             </th>
             <td>
                 <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
@@ -2210,11 +1487,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         </tr>
         <tr>
             <th scope="row">
-                <label class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" />
-                    <span class="custom-control-label"></span>
-                    <span class="custom-control-description sr-only">select row 5</span>
-                </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck5" autocomplete="off" />
+                  <label class="custom-control-label" for="customCheck5">
+                    <span class="custom-control-description sr-only">Select row 5</span>
+                  </label>
+                 </div>
             </th>
             <td>
                 <span class="icon-info" aria-hidden="true"></span>
@@ -2233,18 +1511,19 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
                 <span class="sr-only">checked</span>
             </td>
         </tr>
-        </tbody>
-    </table>
+    </tbody>
+</table>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover has-checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-label"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>select all<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>Select all<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;/label&gt;</span>
+                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column heading<span class="nt">&lt;/th&gt;</span>
@@ -2255,11 +1534,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
     <span class="nt">&lt;tbody&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-label"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>select row 1<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck1"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck1"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>Select row 1<span class="nt">&lt;/span&gt;</span>
                 <span class="nt">&lt;/label&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;td&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-folder-document"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -2272,11 +1552,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         <span class="nt">&lt;/tr&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-label"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>select row 2<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;/label&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck2"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck2"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>Select row 2<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;/label&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;td&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-unknown-file"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -2289,11 +1570,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         <span class="nt">&lt;/tr&gt;</span>
         <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"selected"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-label"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>select row 3<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck3"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck3"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>Select row 3<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;td&gt;</span>
                 <span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">preserveAspectRatio=</span><span class="s">"xMidYMid slice"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;</span>
@@ -2307,11 +1589,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         <span class="nt">&lt;/tr&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-label"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>select row 4<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck4"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck4"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>Select row 4<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;td&gt;</span>
                 <span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">preserveAspectRatio=</span><span class="s">"xMidYMid slice"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;</span>
@@ -2325,11 +1608,12 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
         <span class="nt">&lt;/tr&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-label"</span><span class="nt">&gt;&lt;/span&gt;</span>
-                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>select row 5<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck5"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck5"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description sr-only"</span><span class="nt">&gt;</span>Select row 5<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;/label&gt;</span>
+                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/th&gt;</span>
             <span class="nt">&lt;td&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-info"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -2348,8 +1632,121 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>checked<span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+    <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h3 id="sortable-tables">Sortable tables</h3>
+
+<p><a href="/docs/4.4/getting-started/contents/#js-files">Boosted bundle includes TableSorter</a>, a jQuery plugin to make data tables sortable.</p>
+
+<p>Then initialize tableSorter by targetting an element, and passing some options. 
+Please refer to <a href="https://mottie.github.io/tablesorter/docs/">TableSorter documentation</a> for more options.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#sortable</span><span class="dl">"</span><span class="p">).</span><span class="nx">tablesorter</span><span class="p">({</span>
+    <span class="na">sortList</span><span class="p">:</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span>
+    <span class="na">onRenderTemplate</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">t</span><span class="p">){</span>
+      <span class="k">return</span> <span class="dl">'</span><span class="s1">&lt;span&gt;</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">t</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&lt;/span&gt;</span><span class="dl">'</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
+<div class="bd-example">
+<table id="sortable" class="table tablesorter">
+  <caption>Calls received</caption>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Number</th>
+      <th scope="col">Place called</th>
+      <th scope="col">Call class</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>08/10/12</td>
+      <td>447765896321</td>
+      <td>BT Freefone</td>
+      <td>talk</td>
+      <td>0:05:40</td>
+      <td>0.214</td>
+    </tr>
+    <tr>
+      <td>09/10/12</td>
+      <td>447765896321</td>
+      <td>BT Freefone</td>
+      <td>talk</td>
+      <td>0:19:09</td>
+      <td>0.158</td>
+    </tr>
+    <tr>
+      <td>10/10/12</td>
+      <td>447765896322</td>
+      <td>Free</td>
+      <td>talk</td>
+      <td>0:10:06</td>
+      <td>0.089</td>
+    </tr>
+    <tr>
+      <td>11/10/12</td>
+      <td>447765896324</td>
+      <td>Orange</td>
+      <td>SMS</td>
+      <td>-</td>
+      <td>0.10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"sortable"</span> <span class="na">class=</span><span class="s">"table tablesorter"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Calls received<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Date<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Number<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Place called<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Call class<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Duration<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Cost<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>08/10/12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>447765896321<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>BT Freefone<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>talk<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0:05:40<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0.214<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>09/10/12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>447765896321<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>BT Freefone<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>talk<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0:19:09<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0.158<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10/10/12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>447765896322<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Free<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>talk<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0:10:06<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0.089<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11/10/12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>447765896324<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Orange<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>SMS<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>-<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>0.10<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
 
         </main>
@@ -2363,96 +1760,64 @@ Also, <strong>when using checkboxes in the first column</strong>, add <code clas
   </a>
 </nav>
 <!-- end mod -->
-<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" integrity="sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-
-<script src="/docs/4.4/assets/js/vendor/popper.min.js"></script><script src="/docs/4.4/dist/js/boosted.min.js" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><!-- Boosted mod -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
-<script>window.jQuery.tablesorter || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
-<!-- end mod --><script src="/docs/4.4/assets/js/docs.min.js"></script><!-- Boosted mod -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js" integrity="sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG" crossorigin="anonymous"></script>
-  <script>window.Swiper || document.write('<script src="/docs/4.4/assets/js/vendor/swiper.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/boosted.bundle.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.4/assets/js/vendor/anchor.min.js"></script>
+  <script src="/docs/4.4/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/docs/4.4/assets/js/vendor/bs-custom-file-input.min.js"></script>
+  <script src="/docs/4.4/assets/js/src/application.js"></script>
+  <script src="/docs/4.4/assets/js/src/search.js"></script>
+  <script src="/docs/4.4/assets/js/src/ie-emulation-modes-warning.js"></script>
+  <!-- Boosted mod -->
+  <script src="/docs/4.4/assets/js/src/application-boosted.js"></script>
+  <!-- end mod --><!-- Boosted mod -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+  <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
   <script>
-    new Swiper('.swiper-container', {
-        autoplay: {
-        delay: 3500,
-      },
-      // enable accessibility
-      a11y: true,
-      keyboard: {
-        enabled: true
-      },
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      spaceBetween: 10,
-      slidesPerView: 'auto',
-      centeredSlides: false,
-      freeMode: false,
-      breakpoints: {
-          767: {
-              paginationClickable: false,
-              freeMode: true, // disable for centered mode
-              freeModeMomentumRatio: .5,
-              centeredSlides: false, // enable for centered mode
-              slideToClickedSlide: false // enable for centered mode
-          }
-      }
-    });
-
-    $('#collapsing-navbarHead').megamenu();
-
-    // Swiper pause and play
     $(document).ready(function () {
-      $("#swiperPlayButton").click(function () {
-        var MySwiper = document.querySelector('.swiper-container').swiper;
-        if ($("span",this).hasClass("icon-Pause")) {
-          MySwiper.autoplay.stop();
-          $(this).attr("aria-label", "Play Carousel");
-          $(this).attr("title", "Play Carousel");
-          $("span",this).toggleClass("icon-Pause icon-Play");
-        } else {
-          MySwiper.autoplay.start();
-          $(this).attr("aria-label", "Pause Carousel");
-          $(this).attr("title", "Pause Carousel");
-          $("span",this).toggleClass("icon-Play icon-Pause");
+      $("#sortable").tablesorter({
+        sortList: [[4, 1]],
+        onRenderTemplate : function(i, t){
+          return '<span>' + t + '</span>';
         }
       });
-    });
 
-    // Carousel pause and play
-    $(document).ready(function () {
-      $("#carouselPlayButton").click(function () {
-        if ($("span",this).hasClass("icon-Pause")) {
-          $('#carouselExampleControls').carousel('pause');
-          $(this).attr("aria-label", "Play Carousel");
-          $(this).attr("title", "Play Carousel");
-          $("span",this).toggleClass("icon-Pause icon-Play");
+      determinate = function () {
+        $state = $(".has-checkbox").find("tbody [type='checkbox']:checked");
+
+        if ($state.length) {
+          $(".has-checkbox thead [type='checkbox']").prop("indeterminate", true);
         } else {
-          $('#carouselExampleControls').carousel('cycle');
-          $(this).attr("aria-label", "Pause Carousel");
-          $(this).attr("title", "Pause Carousel");
-          $("span",this).toggleClass("icon-Play icon-Pause");
+          $(".has-checkbox thead [type='checkbox']").prop("indeterminate", false);
+        }
+      };
+
+      determinate();
+
+      $(".has-checkbox").on("click", "tbody [type='checkbox']", function() {
+        $(this).parents("tr").toggleClass("selected");
+        determinate();
+      });
+
+      $(".has-checkbox").on("click", "thead [type='checkbox']", function() {
+        $checked = $(this).prop("checked");
+        $(this).prop("indeterminate", false);
+        $(this).parents("table").find("tbody [type='checkbox']").prop("checked", $checked);
+
+        if ($checked) {
+          $(this).parents("table").find("tr").addClass("selected");
+        } else {
+          $(this).parents("table").find("tr").removeClass("selected");
         }
       });
     });
   </script>
   <!-- end mod --><script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-      $('.o-nav-local').prioritynav();
-      $('#docs-navbar').navbar({sticky: true});
-    });
-  </script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
+  });
+</script>
 
   </body>
 </html>

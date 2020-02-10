@@ -4,18 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form</title>
+    <link rel="preload" href="../../dist/fonts/HelvNeue55_W1G.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../dist/fonts/HelvNeue75_W1G.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
     <link href="../../dist/css/orangeHelvetica.min.css" rel="stylesheet">
     <link href="../../dist/css/orangeIcons.min.css" rel="stylesheet">
     <link href="../../dist/css/boosted-rtl.min.css" rel="stylesheet"/>
     <link href="example.css" rel="stylesheet">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
   </head>
-  <body>
-    <a href="#mainNav" class="skippy sr-only sr-only-focusable">
-      <span class="skippy-text">Skip to main navigation</span>
-    </a>
-    <a href="#content" class="skippy sr-only sr-only-focusable">
-      <span class="skippy-text">Skip to content</span>
-    </a>
+<body>
+  <div class="skiplinks container-fluid">
+    <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to content</a>
+  </div>
 
   <header role="banner">
     <nav role="navigation" id="mainNav" class="navbar navbar-dark bg-dark navbar-expand-md" aria-label="Main navigation">
@@ -62,7 +66,7 @@
     </div>
   </header>
 
-  <nav role="navigation" class="o-stepbar" aria-label="Registration steps navigation">
+  <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
     <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
     <ol>
       <li class="stepbar-item">
@@ -154,11 +158,9 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" integrity="sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
-    <script src="/docs/4.4/dist/js/boosted.min.js"></script>
+    <script src="/docs/4.4/dist/js/boosted.bundle.min.js"></script>
     <script src="form.js"></script>
   </body>
 </html>

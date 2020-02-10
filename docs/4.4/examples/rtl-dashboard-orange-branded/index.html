@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>my dashboard</title>
+    <title>Dashboard</title>
+    <link rel="preload" href="../../dist/fonts/HelvNeue55_W1G.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../dist/fonts/HelvNeue75_W1G.woff2"
+          as="font" type="font/woff2" crossorigin="anonymous">
     <link href="../../dist/css/orangeHelvetica.min.css" rel="stylesheet">
     <link href="../../dist/css/orangeIcons.min.css" rel="stylesheet">
     <link href="../../dist/css/boosted-rtl.min.css" rel="stylesheet"/>
     <link href="gabarit.css" rel="stylesheet">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
   </head>
   <body>
-    <a href="#search" class="skippy sr-only sr-only-focusable">
-      <span class="skippy-text">Skip to search</span>
-    </a>
-    <a href="#alerts" class="skippy sr-only sr-only-focusable">
-      <span class="skippy-text">Skip to my alerts</span>
-    </a>
-    <a href="#sysInfo" class="skippy sr-only sr-only-focusable">
-      <span class="skippy-text">Skip to system informations</span>
-    </a>
+    <div class="skiplinks container-fluid">
+      <a href="#search" class="sr-only sr-only-focusable">Skip to search</a>
+      <a href="#alerts" class="sr-only sr-only-focusable">Skip to my alerts</a>
+      <a href="#sysInfo" class="sr-only sr-only-focusable">Skip to system informations</a>
+    </div>
 
     <header role="banner">
       <nav role="navigation" id="mainNav" class="navbar navbar-dark bg-dark navbar-expand-md" aria-label="Main navigation">
@@ -161,28 +163,28 @@
             </thead>
             <tbody>
               <tr>
-                <td class="alert alert-danger border-0 mb-0"><span class="sr-only">Failure</span></td>
+                <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
                 <td class="align-middle">08/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
                 <td class="align-middle">BT</td>
                 <td class="align-middle">0:05:40</td>
               </tr>
               <tr>
-                <td class="alert alert-success border-0 mb-0"><span class="sr-only">Success</span></td>
+                <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
                 <td class="align-middle">09/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
                 <td class="align-middle">Warn</td>
                 <td class="align-middle">0:19:09</td>
               </tr>
               <tr>
-                <td class="alert alert-warning border-0 mb-0"><span class="sr-only">Warning</span></td>
+                <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
                 <td class="align-middle">10/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
                 <td class="align-middle">MMK</td>
                 <td class="align-middle">0:10:06</td>
               </tr>
               <tr>
-                <td class="alert alert-success border-0 mb-0"><span class="sr-only">Success</span></td>
+                <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
                 <td class="align-middle">11/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
                 <td class="align-middle">YYI</td>
@@ -209,21 +211,21 @@
               </thead>
               <tbody>
               <tr>
-                <td class="alert alert-danger border-0 mb-0"><span class="sr-only">Failure</span></td>
+                <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
                 <td class="align-middle">08/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
                 <td class="align-middle">BT</td>
                 <td class="align-middle">0:05:40</td>
               </tr>
               <tr>
-                <td class="alert alert-warning border-0 mb-0"><span class="sr-only">Warning</span></td>
+                <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
                 <td class="align-middle">10/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
                 <td class="align-middle">MMK</td>
                 <td class="align-middle">0:10:06</td>
               </tr>
               <tr>
-                <td class="alert alert-success border-0 mb-0"><span class="sr-only">Success</span></td>
+                <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
                 <td class="align-middle">11/10/12</td>
                 <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
                 <td class="align-middle">YYI</td>
@@ -246,21 +248,21 @@
             </thead>
             <tbody>
             <tr>
-              <td class="alert alert-danger border-0 mb-0"><span class="sr-only">Failure</span></td>
+              <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
               <td class="align-middle">08/10/12</td>
               <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
               <td class="align-middle">BT</td>
               <td class="align-middle">0:05:40</td>
             </tr>
             <tr>
-              <td class="alert alert-success border-0 mb-0"><span class="sr-only">Success</span></td>
+              <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
               <td class="align-middle">09/10/12</td>
               <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
               <td class="align-middle">Warn</td>
               <td class="align-middle">0:19:09</td>
             </tr>
             <tr>
-              <td class="alert alert-warning border-0 mb-0"><span class="sr-only">Warning</span></td>
+              <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
               <td class="align-middle">10/10/12</td>
               <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
               <td class="align-middle">MMK</td>
@@ -283,21 +285,21 @@
             </thead>
             <tbody>
             <tr>
-              <td class="alert alert-danger border-0 mb-0"><span class="sr-only">Failure</span></td>
+              <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
               <td class="align-middle">08/10/12</td>
               <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
               <td class="align-middle">BT</td>
               <td class="align-middle">0:05:40</td>
             </tr>
             <tr>
-              <td class="alert alert-success border-0 mb-0"><span class="sr-only">Success</span></td>
+              <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
               <td class="align-middle">09/10/12</td>
               <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
               <td class="align-middle">Warn</td>
               <td class="align-middle">0:19:09</td>
             </tr>
             <tr>
-              <td class="alert alert-success border-0 mb-0"><span class="sr-only">Success</span></td>
+              <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
               <td class="align-middle">11/10/12</td>
               <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
               <td class="align-middle">YYI</td>
@@ -323,11 +325,9 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" integrity="sha256-sz9/xSAM6mrw3l6hJWDgc7nEbzUeO5e8CXwYoECOEKI=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
-    <script src="/docs/4.4/dist/js/boosted.min.js"></script>
+    <script src="/docs/4.4/dist/js/boosted.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
     <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
     <script>

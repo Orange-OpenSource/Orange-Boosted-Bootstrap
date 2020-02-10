@@ -1,3 +1,285 @@
+<a name="4.4.1"></a>
+## [4.4.1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.4.0...v4.4.1) (2020-01-15)
+
+This version fixes a few bugs and add tons of small improvements to better fit Orange Brand Digital Guidelines.
+
+### From Bootstrap (unreleased)
+
+* Allow percentages in container widths ([0d08c74 in Bootstrap](https://github.com/twbs/bootstrap/commit/0d08c74d2fbb5e0a0b1991b5a51d7988f9e6952e)) 
+* Escape brackets in `escape-svg()` ([35d5cbf in Bootstrap](https://github.com/twbs/bootstrap/commit/35d5cbf4fda4bfad4c244840824774bb94629212))
+* Fix disabled `.btn` cursor ([fbf294a in Bootstrap](https://github.com/twbs/bootstrap/commit/fbf294a605e36a4cf9c66f0c4637f13ded18f727))
+
+### Bug Fixes
+
+<details>
+<summary>Forms</summary>
+
+* **forms:** feedback icons on IE11 ([1351de1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1351de195478273f02f8b469d812c7b5e39ea6a8))
+* **forms:** remove label color change depending on status for [#249](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/249) ([f4a1b8d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f4a1b8d36a44663da675db05e021f23f7a07721f))
+* **custom range:** obvious focus styles to fix [#250](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/250) ([0bc63c0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0bc63c0f711861d8f7ba797bfab25ff7962a942b))
+* **forms**: default check inputs alignment ([b2acac6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/b2acac69a7c822486916bf6e879db4db6efda1f3))
+* **forms**: remove text-shadow on :moz-focusring ([ca6c08f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/ca6c08f4df9b1f75f74cb4e4969d1ee9e99cc358))
+</details>
+<details>
+<summary>Buttons</summary>
+
+* **button-group:** ensure parents get .focus-visible class alongwith .focus one ([0535720](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/053572043305d1dee9356e47afec6ca2cb216e3a))
+* **button-group:** remove .focus-visible on blur & focusout ([19038b9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/19038b9d1c1a98b5a6bd185b3784e32f491682b4))
+* **buttons:** .btn-{size} variants were incorrectingly squared on .btn-info instead of .btn-icon" ([cc9847f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cc9847f0fa711d919a446e95045fcb39ce6302f6))
+* **dropdown:** remove ARIA menu pattern to close [#204](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/204) ([d45b6d1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d45b6d103e018b0f9cd795380d910483514f0d9c))
+</details>
+<details>
+<summary>Navbars</summary>
+
+* **navbar:** current item alignment when minimized ([9bd53fb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9bd53fbe8f6156d0f2fdd91aca14ee645f8ff0ee))
+* **navbar:** h2 → h6 unecessary in .navbar-brand ([190e1ef](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/190e1efbf561c092fae81b27b88793d465509491))
+* **navbar:** simpler alignmnet for right-end navbar ([cd2434b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cd2434baec40728f6311ff353cc1ef0063d7ebda))
+* **supra:** update supra bar breakpoint for hidding on tablet (768px) ([2b961b4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2b961b4c4da671c30a419b7332ba1025f768e520))
+</details>
+<details>
+<summary>Megamenu</summary>
+
+* **megamenu:** cannot match design & have a predictable focus order… ([8e004b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8e004b26b3ca80fb5817e5bd350df46672ef8c59))
+* **megamenu:** ensure height is removed when going backward ([e3aea5e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e3aea5e2ece7a97f76ff915f140c0be7a126cf21))
+* **megamenu:** linter error on .attr() ([3f3e8cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f3e8cfcb8ba3cc18a4c427d1ad3f31350f13db0))
+* **megamenu:** allow multiple megamenus in the same page bny using $.closest()… ([066ebc0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/066ebc0132c934c36432e76faebd41669179f370))
+</details>
+<details>
+<summary>Tables</summary>
+
+* **tables:** more precise line-heights ([553cb10](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/553cb10704fb327b17375120e3a0f9a77bd764ca))
+* **tables:** use the correct pattern for custom checkboxes in tables ([520baf9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/520baf9a37713af0e20b9544d00e9d97e14133d9))
+* **tables:** vertical spacings were wrong ([02c7b9a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/02c7b9a20bd515a84ad8f8f66f2ba2028691c237))
+* **tables** missing unit in table-cell-padding ([acaf48a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/acaf48ae70a2ffb2596ddddd82f7837daaf5fef0))
+</details>
+<details>
+<summary>Miscellaneous</summary>
+
+* **alerts:** dismissible alerts height ([a86753e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a86753e10eba4da6b37e12b4fc73982441045368))
+* **badges:** missing variables after merging… ([f03a086](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f03a0869df0e912f0016e6438c7624db49126f49))
+* **bg utilities:** remove useless aliases ([d002cb3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d002cb30baf9f25adb3ba8c9031009e2869b0639))
+* **breadcrumb:** arrow alignment after last merge ([60419cc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/60419cc895e5c4c1fa12826daad042f5ff876413))
+* **build:** exclude essentials folder from postcss.config ([b96c605](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b96c60527cb7d2d621632b69384bf694a2233396))
+* **carousel:** remove width & height attributes from inlined SVGs" ([3f2196b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3f2196b84bcc05d3ee10f7b31372ad0c9015600c))
+* **color:** ensure .text-primary in .navbar-dark uses digital orange 2 ([21db919](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/21db9192fb308f065bab35258237198f68e1f435))
+* **icons:** missing space in str-replace function ([d3928f0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d3928f01a071bc018d0251c812a47320984fc2e9))
+* **icons:** use Digital Orange 2 for icons meant to be used on a dark background ([63227dc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/63227dc3169f64368c7427c1793979783c1dcc9a))
+* **o-footer:** linting errors ([dbedc08](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dbedc084acc9d77a18d6c2fc2a888e4be082217b))
+* **pagination:** do not use numeroted links when prev/next show labels (?) ([d40d167](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d40d167a55211bab7f91a70faaba9961b9f79413))
+* **o-modal**: diplicated selector ([009557c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/009557c36448725dce5f609e8625d74ebf82d471))
+</details>
+
+### Features
+
+<details>
+<summary>Alerts</summary>
+
+* **alerts:** additionnal content example now uses the multilines version ([bb4e806](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bb4e8067dd318ab745737c8e4ef45700262437b2))
+* **alerts:** adjust default alert size ([bd866da](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bd866da9a3d2303f46857937dc85735dcc3145fe))
+* **alerts:** ensure alert level is accessible by using visually hidden text for [#248](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/248) ([0e6d5f6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0e6d5f617fa2a0d4502479c82c59ba03d52257af))
+* **alerts:** ensure headings and additionnal contents match UI Kit ([3eadc6d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3eadc6d8949a977a4795034708ee42eca5ec2d16))
+* **alerts:** icon sizes and alignment ([a36c058](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a36c058060a14f74884251aa1850960f7f9ad1c8))
+* **alerts:** new variant for close icon in alerts ([1da0abe](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1da0abe2f6cd345436eaca3f862b6e57548459c4))
+* **alerts:** reduce spacing around icon in alert-sm ([cd7bd6c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cd7bd6c804e7c92d21bd7ef29332c1d2c223f9db))
+* **alerts:** warning icon changed to circle ([4fd768b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4fd768b6eca5f742e01b9e117c78805fbcd07ec0))
+* **alerts:**  improve icon sizes handling([b8b2a4b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/b8b2a4b1bb734642a323a33c93948c456f1c959e))
+</details>
+<details>
+<summary>Badges</summary>
+
+* **badge:** add sizes variants to badges and include a white info version when badge is large enough ([859cc5e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/859cc5e1ef1c54c97da986bdb14772f7af28db38))
+* **badge:** improve sizes variants' spacings ([33b52e6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/33b52e6b4bb7cea997a0fc36e2739e15f8a12434))
+</details>
+<details>
+<summary>Breadcrumbs</summary>
+
+* **breadcrumbs:** improved RTL support ([6d69515](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6d695153b8b0f464104b7454fc0b9f8ca48022b8))
+* **breadcrumbs:** use aria-current=location instead of page ([da743b5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/da743b5541e9eb9f54f3bdd209e5b025c1addca9))
+</details>
+<details>
+<summary>Buttons</summary>
+
+* **button-group:** border color on dark background ([08b10b3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/08b10b354c130da968e70b7d2b779d305fd16bc3))
+* **button-group:** missing states for border color on dark background ([fb182dc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fb182dc4a03006c597d9a7c5207901116318b92c))
+* **buttons:** ensure proper sizing for .btn-icon ([47f2a48](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/47f2a48694b326b9b97bc32b1dadb66929df6d3b))
+* **buttons:** improve social buttons to reduce filesize and allow size to vary ([c091a92](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c091a92d3baa5996e7a2bf3414438aaf27454758))
+* **buttons:** move labels 1px up ↑ ([5635182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/56351827d234b240cacc39a2c6a771dc9a2cac29))
+* **buttons:** social buttons brand alignment (size, spâcing, icon size) ([51e841e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/51e841e3564d994fab8307ef1ea7ba950edb710e))
+* **buttons**: with icons ([3a18fbf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/3a18fbfabc7359f0a678bfb728b5b11c0a912a68))
+* **buttons**: toggle buttons with icons ([b902f21](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/b902f211dd94c5b4a7e3873466e697c026652d51))
+* **social buttons**: adjust icon size & position for linkedin, pinterest & email ([4d0d1dd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/4d0d1dd0619c97dbd8ce2a8af89dfafd549ec9f4))
+* **split buttons**: dropdown-toggle-split size+alignment ([51ed9e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/51ed9e39fc61b5d8a9feea9ec9c85dde76859fe5))
+* **split buttons**: finally managed to implement the custom not-full-height border to match the brand… ([1589cd4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/1589cd4eafde6cd4c427003bb4acec260a9c8a16))
+* **dropdowns**: caret placement for both dropdowns & split buttons ([d18f280](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/d18f280279f495dd24ebd685afb0747ad80d9bcb))
+* **dropdowns**: .show caret's colors ([9b2c36d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/9b2c36d270308cf4428fba97514341c904ca0cfb))
+* **collapse**: accordion sizes matching the brand ([6d6df39](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/6d6df396293b467417ebc7ed27609a7a3e949d9c))
+</details>
+<details>
+<summary>Close button</summary>
+
+* **close button:** use Zeplin's defined cross for close button ([332f4f3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/332f4f3f140a907c6d790bae28082633856f500d))
+* **close icon:** get outline back on :hover ([7deafac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7deafac190193cafbfb428486fd0b9c40b87ad8a))
+* **close-icon:** add context to close button label where appropriate to close [#248](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/248) ([c38e93a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c38e93a7843acf0363b9501d2b5d5e3a5a96b33d))
+* **close-icon**: switch outline-color on hover/focus ([e269c00](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/e269c0056c030ef764cb7c149c68a3b0b0d49cfd))
+</details>
+<details>
+<summary>Forms</summary>
+
+* **forms:** convey status using icon in feedback message to stop relying on color only, for [#249](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/249) ([95e6f6c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/95e6f6ccbba11452c2aa3fd41198c038337f12d0))
+* **forms:** custom select arrow sizing+position ([3ac4187](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3ac418711687e165cbd58a889812a0f8362f4e6e))
+* **forms:** custom switch icons sizing+alignment ([a2a2ffe](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a2a2ffe4cb7b581d12b6b37347fce1366b202bf8))
+* **forms:** get background-image back for custom checkboxes ([edfdded](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/edfddedc06bdc6fdc53b089d6262c43d9e127d82))
+* **forms:** get rid of form-*-sm things, forbidden by the brand ([8d41b61](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8d41b61caebd4e619f65cc3d1d7486595d95d343))
+* **forms:** improve custom range on Chrome ([0b145f2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0b145f26802f501992ffe0e3349510661eb750ca))
+* **forms:** labels positionning ([5be3b52](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5be3b52fbb560e1dcdaa91c357291e88082c4294))
+* **forms:** remove info icon from invalid custom select ([a4c82db](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a4c82dbf52d8e0b36799d04c375644df1f783082))
+* **labels**:  apply bold in reboot rather than in forms to prevent duplicated selector ([9215084](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/9215084d455697cb7567487fb553f80083dd5385))
+* **forms**: decrease feedback icon size ([d44abe3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/d44abe313d4754101fcfb4c385bd8cd3dba895af))
+* **forms**: allow .is-required class ot be used on any HTML tag ([2b3531c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/2b3531c8f18557f0268a2f71a3d1ed47179503a7))
+* **input-group**: update styles according to Brand suggestion [24a69ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/24a69ce064117c97fa69b267d7d7438b929b4b17)
+* **forms**: dissociate (in)valid states styling [3ee1dd5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/3ee1dd5c01feec5f5137033650280dbc27da788f)
+</details>
+<details>
+<summary>Megamenu</summary>
+
+* **megamenu:** adjust spacings and sizes to match design ([8d3b5a6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8d3b5a6ffcfb106582b1ba9a995b32da133db1f4))
+* **megamenu:** improve links style in mega-menu-panel ([b9d1d14](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b9d1d14d3a35cae75f858314a7ba4b4c4bd8b910))
+* **megamenu:** improve perf by using will-change where possible ([0ce1ed9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0ce1ed92c56e52712b1b5428925a8886809dda95))
+* **megamenu:** revamp megamenu to both align with latest brand guidelines –— close [#228](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/228) — and to fix [#247](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/247) ([554468e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/554468ec1bc85ea58dfcc25a4491c9e1c4a5a3ad))
+* **megamenu:** use aria-current + CSS to indicate current item and its active parents, related to [#254](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/254) and [#252](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/252) ([eb863ba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eb863bae830205870c9ff1fcaf7de2852620140e))
+</details>
+<details>
+<summary>Navbar</summary>
+
+* **navbar:** add a gray bottom border on navbar dark ([5634c92](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5634c928d37a0547f1936ba0e2287e7d8e8d32a6))
+* **navbar:** adjust line-height for display-* in navbar-title ([8431b57](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8431b57bade9ef29fe237399d7718d762c9c8863))
+* **navbar:** current item's border alignment after [#252](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/252) ([7620f43](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7620f431a557241aff7fa02541db964e29be5a52))
+* **navbar:** do not show current item with color only anymore to close [#252](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/252) ([7dbd842](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dbd842a4165921cde4bac0acd7e6ec30967142d))
+* **navbar:** improve .navbar-toggler & .minimized versions ([f89b44f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f89b44f039cf23dcf2b3098fd643e3157b256de0))
+* **navbar:** improve alignments and sizings ([a2e4841](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a2e4841a21d471689e74deeef1340b56b44db9ee))
+* **navbar:** improve small screen navbars ([b20bc27](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b20bc279112bf01b8f66c77aee3f82783561b1a2))
+* **navbar:** new navbar-toggler-icon(s) to switch from burger to cross ([3690c4f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3690c4f9c0718468524371f5f5bad98e3f22c315))
+* **navbar:** update navbar minimized size to 60px, reduce logo to 30x30 ([821912c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/821912c7f41b4ea3df5d190648ea031e508b0dac))
+* **navbar:** use .nav-icon instead of .icon in navbar ([7f4298c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7f4298ca4a2bb5cea93eaefd290803e0ec705b05))
+* **navbar:** use close icon when collapsible menu is open ([1fa2dd5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1fa2dd51f1771bb4648ac67b345b7f21ac32c2fd))
+* **navbar:** use digital orange in navbars ([f20de5b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f20de5b48b2fe70942e210d37f1d3f5d0aeb306f))
+* **navbar:** use transitions between standard and minimized navbar ([fad4ae4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fad4ae43b7bbdcbd3b90563fe9cb891f4e66cb30))
+* **navbar:** remove left margin on navbar-brand ([5db69c4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/5db69c4d6346410f01e90ee3d07a94ea634b99b2))
+* **navbar:** move icons 2px up to match the brand ([d018996](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/d01899688318363aafb93fc00e81e18a448d1333))
+* **o-navbar:** handle navbar-title's line-heights ([aa76516](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/aa76516be7cf3af069705dfddb77f92d3d35c846))
+* **toggler:** update toggler icon according to the brand, remove border and icon is bigger ([e333908](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e33390828703f3b123aad58e34a296368778e2a0))
+* **skiplinks:** improve skiplinks pattern, making it simpler for [#254](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/254) ([d4f4083](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d4f40833c6a913cf924e8f9819e7ac3661bef893))
+* **supra bar:** adjust spacings and sizes to match latest design kit ([48f35ac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/48f35ac9f45f44e2ce289a8b26fb2d3b74fd6f09))
+* **supra bar:** ensure 40px height to match the brand ([a0bb045](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/a0bb0452a1a5a9f240f28aa52ecf09b8fab5b587))
+* **supra bar:** dropdown arrows are smaller ([0e8ec4b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0e8ec4bfc32989bd72f953ad176b4bb0677bbd41))
+* **supra bar:** increase spacing between nav items ([0d6d0b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0d6d0b237d4a301437c2b55c84a62284e6e90d57))
+* **supra bar:** increase spacing between dropdowns and nav-icons ([bbaaaab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/bbaaaab82add927c869a5b9ee48097ee4dc59e69))
+</details>
+<details>
+<summary>Tables</summary>
+
+* **tables:** remove .thead-{dark|light} variants ([dcd2bbd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dcd2bbde14dca3bf4b731f99f1dffe20aab2df42))
+* **tables:** remove bordered+borderless tables ([5c06087](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5c0608706605b6c088a656b1c62c0c96536b5533))
+* **tables:** remove contextual classes for tables ([3158486](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3158486d0df4dc7a0ad6a998e1b3b5514f1b96b1))
+* **tables:** remove striped rows tables ([38767c2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/38767c24335e1a36269612cd94087cddc42ed00d))
+* **tables:** removed .table-lg and adjust default+sm sizes ([ce13796](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ce13796063f4b9693dbf7f7af46aed2ac88cacf2))
+* **tables:** simplify tables CSS and adjust sizings ([1b3e641](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1b3e64141a91542958b55deec5df73b7814c2844))
+* **tablesorter**: sort icons alignment [700c3ad](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/700c3adaccb8f32dcdf4d5e13fc78eff4b6a364e)
+</details>
+<details>
+<summary>Pagination</summary>
+
+* **pagination:** adjust spacings and sizes ([86d0969](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/86d096942cf4a3be8d3bb93130cbc27120d1a466))
+* **pagination:** improved RTL support ([f8256af](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f8256af472afc61533d8abe54757d7099892fd0d))
+* **pagination**: improve alignment to better match the brand ([7c495c3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/7c495c3bf13067c268eb08525704b52f3c3304cb))
+</details>
+<details>
+<summary>Colors & icons</summary>
+
+* **colors:** improve .text-body & .text-muted utilities to ensure proper contrasts, to close [#274](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/274) ([0d62c74](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0d62c74281bfbe40a653a1721315c7b136254207))
+* **colors:** remove .text-{success|info|warning|danger} utilities ([1ecdbe0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1ecdbe01bde815aaebce34ba802cc779e2f9ce55))
+* **icons:** add Mail + Person SVG icons ([175d154](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/175d154e3ba8d821133adecc932df94df455db3d))
+* **orange icons:** get mail+person icons back and improve them thanks to escape-svg() ([6f0e617](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6f0e617cd218a57fcf1c1c3fa646f4c4f8b86a36))
+* **utilities:** add border-color utilities, looping through grays ([bcd4b62](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bcd4b623ed90475df9cd035da836d939deb62482))
+* **utilities:** amend documentation for border-colors, including grays ([5639866](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5639866711040d7d6e37e5d3f14605c84f93618e))
+* add digital orange to follow brand requirements ([cafc3b6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/cafc3b630edfb54f63fe439e9cfa4237d7f1b1b4))
+* **bg-utilities:** .bg-{success|warning|danger|info} now uses supporting colours instead of functionnal ones ([f2b11dd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f2b11dda4c6272c02fa6e327655e21b1c58c9a0d))
+</details>
+<details>
+<summary>Footer</summary>
+
+* **footer:** use h2+h3 in footer instead of h1+h2 ([0cb93ad](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0cb93adff6233b4c9d251bd424909bee8f4ea043))
+* **o-footer:** reduce specificity & use variables ([fa69dac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fa69dac2fb502aa6d51d0dbd46025ff4e951587a))
+* **o-footer:** specifying component nistead of overusing ulitilies ([9fe08a3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9fe08a3a4d8295305f06d891d9721f8ff2d5a6a7))
+</details>
+<details>
+<summary>Miscellaneous: transitions accessibility, RTL mode…</summary>
+
+* **o-carousel:** improved RTL support ([ce7a586](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ce7a586949ffadab109a42975a1138ceb51c83d2))
+* **o-link-arrow:** improved RTL support ([67d60b6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/67d60b61465d441c8f7de4cf7ea63b59e21181c7))
+* **o-scroll-up:** improved RTL support ([a74a9c1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a74a9c12a10cafc238ab0140913ed2b4bc5755b6))
+* **RTL:** improve RTL overrides — resetting line-heights, improving RTLCSS usage by using comments instead of overrides… ([9f539e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9f539e3276891cb5a514ede4a3b4c2c07c66a839))
+* **o-switches:** o-switch icons sizing+alignment+docs ([7ce21b9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7ce21b9cb490044639b53183cfd9dbe06f904818))
+* **progress:** ensure animation is used only if -transitions is true ([0f9541b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0f9541b1325e962a82419ab813b1b55cad2a464d))
+* **reboot:** remove block display on _new_ HTML5 elements, targetted IE10 ([aefcc36](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/aefcc36c284ce2b3c9e6cff0377cd3755f1499f7))
+* **reduced motion:** use a placeholder for fine tuning transition disabling instead of locking it globally ([4683631](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4683631d7b9a6405569afde96f75e9bc466d22c7))
+* **scrollspy:** add aria-current to element and its parents to close [#253](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/253) ([8250659](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/82506598db5ffb241f4799ebe657d9b4dbe936fc))
+* **transition:** reduce motion globally instead of duplicating single declaration block, to close [#255](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/255) ([e6f7814](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e6f7814e0cd0c1e4819dc2fac1c9803e070316f4))
+</details>
+
+### Core
+
+* **gitignore**: ignore .npmrc file from Git to allow proper npm login ([9141759](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9141759600de5b3d004537e5870934ccd13ee63d))
+* **gitignore**: ignore .tgz when using npm pack ([1cdbca5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1cdbca5bf2a614b608a165da7ccf1f7f84fd4d89))
+* **JS:** disable ESlint sort-imports for focus-visible bundling ([6c4ed28](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c4ed28eefe312d5c1770d8b531b593acc82b8fe))
+* **Bundlesize**: slightly increase boosted.css limit ([215e209](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/215e2098f5a720cf4149461db877be0be107e488))
+* **workflow**: add Mattermost + Calibre actions ([0de4169](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0de4169869e77e0d8e4bc34d42996dd7e677b223))
+* **workflow**: add Slack action (multiple commits…)
+
+### Documentation
+
+Documentation and website itself have been significantly improved and updated (mostly improving accessibility, and dropping some variants here and there — forbidden by Orange Brand).
+A new section called "Essentials" is added to show various headers and footers implementations.
+
+<details>
+<summary>Essentials</summary>
+
+* **docs:** megamenu example was wrong ([8fa582e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8fa582e630eb4cf0b874922bba36b3579d5dfa36))
+* **docs**: remove weird examples for input-groups, where prepended/appended things could be confused with label ([46e4273](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/46e427323ef30c0ad0f5f7bae10dd9fec17ced80))
+* **header:** add global headers module in Essentials ([f0d0357](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f0d0357c08af0bac6116e867e461a1c946168607))
+* **essentials:** border color utility ([f841c9c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f841c9c3fe3e0d2e87c5fcbbf34f281e930e1b4c))
+* **essentials:** fix hr html linting errors ([27272ca](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/27272caa0383624468abc69809fa00e5e2319363))
+* **essentials:** fix unquoted error ([0657ba1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0657ba1b873d675eb5a1c6f5015e08bc6d68f67c))
+* **essentials:** hide service links in megamenu on mobile ([1a60fda](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1a60fdae8a699726b03c43cd634362fa855c90b5))
+* **essentials:** use local src for Logo in global header logo ([7265114](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/726511408210ace32560ceb306081a253fac6ebc))
+* **essentials:** add anchor links to headers ([9b44b55](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9b44b5553c714955ee74a1aeade02717577eaa57))
+* **essentials:** add footer's screenshot for essentials index page ([d264634](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d26463408c853b4efa594b1c274c1a36deffd3f0))
+* **essentials:** add global headers screenshots + optimize other screenshots ([dc92c3d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dc92c3d0af8d6c217bf7fd38f3d20cf0bb798d75))
+* **essentials:** add IDs on each header example ([e3726e7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e3726e74c63dcd8cb6cabab6f4700ffc1cc89110))
+* **essentials:** add standards collapsible searchforms ([a825d22](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a825d2264b4c096e17d3e8cf6de3f5ecf7cb5d16))
+* **essentials:** adjust spacings in supra bar ([a8eeaaa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a8eeaaaa537cabcb6b441ce9db02d4bce6e864c2))
+* **essentials:** done with global headers example, except dark search form ([f048972](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f048972946621f5632f5532a4adb9f1156d516a8))
+* **essentials:** done with megamenus → needs to check responsive, though ([bbd7f8a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bbd7f8a1e49731be3973e7c0d70f4a7e15e5f5ca))
+* **essentials:** duplicate additional menus to match design and keep things accessible ([73dae46](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/73dae468a0e156dac5a89e98674716af32087428))
+* **essentials:** first footer component on destkop ([9803e2d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9803e2d15dd3dc4c312e9a67dd1ac206509febad))
+* **essentials:** first megamenu example fully working, including svg-delete update ([1582922](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/15829221fa0a66e7456a1e213a9fde0a438c3174))
+* **essentials:** footers done ([b4af9de](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b4af9dea5f7a4339a801836d824b39acecfed6e3))
+* **essentials:** global headers on mobile ([af56176](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/af56176b19702e4b9a2446c5a5de2f63e5fe0c57))
+* **essentials:** improve a11y suggestions for megamenu ([fec8ba0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fec8ba02c749fde6292da0cc0af825e645b54fbd))
+* **essentials:** improve global headers' screenshot for essentials index page ([70463ee](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/70463ee79e9a0245c400f27cf397a432e649fa1d))
+* **essentials:** increase spacing between nav and collapsible-nav ([9dfb698](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9dfb6983f615c7eb5bdd7a571140fdc4af86a7e9))
+* **essentials:** make supra-nav fluid-width ([61d48b7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/61d48b7ec263cbf879fb49b5c0a9defd392910e5))
+* **essentials:** megamenu for mobile / tablet ([8ef646e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8ef646e68de7553c3bf11bf1ed37aacecc5b3336))
+* **essentials:** megamenu suggestion using burger+label ([02474ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/02474ce62574bff7bebb7fafa2fe50346919d2cf))
+* **essentials:** missing global headers updates from last week… ([2d51df9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2d51df91fc2f1f845135cb5fd56ded26f261cdbe))
+* **essentials:** move orange module to a new dedicated space named essentials ([c42ba8c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c42ba8c850d5b2fd06607cfc8cff92f1b0ed4c7f))
+* **essentials:** rework headers on different screen size ([4b39ac3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4b39ac34bae7542c0623ac0800463c9abf5c77c3))
+* **essentials:** up with footers N°2 & 6 ([7dddb42](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7dddb42498fff51361a461cf752180a1f082067a))
+* **essentials:** use container & improve RWD ([5d68fcf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5d68fcf35d50cdfc245f3e62a164cea75da4bc8f))
+* **essentials:** use fluid containers for global headers ([438aa5f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/438aa5fc8162e7f5ca848d07fed2cec71b2c7309))
+* **essentials:** using megamenu in first global header example ([07b47cf](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/07b47cfea1c02fccff1bf477ec2fecad8f56b7df))
+</details>
+
 <a name="4.4.0"></a>
 ## [4.4.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.3.1...v4.4.0) (2019-12-04)
 
