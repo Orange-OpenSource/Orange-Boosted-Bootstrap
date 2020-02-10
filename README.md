@@ -183,10 +183,6 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 
 - <https://github.com/Lausselloic/>
 
-**Lionel Mukuna Ciowela**
-
-- <https://github.com/liyokuna>
-
 **Gaël Poupard**
 
 - <https://github.com/ffoodd>
