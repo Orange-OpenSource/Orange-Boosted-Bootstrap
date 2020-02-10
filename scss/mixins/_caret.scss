@@ -28,16 +28,19 @@
 @mixin caret($direction: down) {
   @if $enable-caret {
     &::after {
-      display: inline-block;
+      display: inline-flex; // Boosted mod
+      align-self: $caret-alignment; // Boosted mod
       margin-left: $caret-spacing;
-      vertical-align: $caret-vertical-align;
       content: "";
       @if $direction == down {
         @include caret-down();
+        transform: translateY($border-width / 2); // Boosted mod
       } @else if $direction == up {
         @include caret-up();
+        transform: none; // Boosted mod
       } @else if $direction == right {
         @include caret-right();
+        transform: none; // Boosted mod
       }
     }
 
@@ -47,9 +50,9 @@
       }
 
       &::before {
-        display: inline-block;
+        display: inline-flex; // Boosted mod
+        align-self: $caret-alignment; // Boosted mod
         margin-right: $caret-spacing;
-        vertical-align: $caret-vertical-align;
         content: "";
         @include caret-left();
       }

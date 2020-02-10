@@ -43,34 +43,43 @@
 }
 
 @mixin form-validation-state($state, $color, $icon) {
-  .#{$state}-feedback {
-    display: none;
-    width: 100%;
-    margin-top: $form-feedback-margin-top;
-    @include font-size($form-feedback-font-size);
-    font-weight: $font-weight-bold; // Boosted mod
-    // color: $color; // Boosted mod
+  // Boosted mod: valid ≠ invalid
+  @if $state == "valid" {
+    .#{$state}-feedback {
+      @extend .sr-only;
+    }
 
-    // Boosted mod: status should not rely on color only
     @if $enable-validation-icons {
-      &::before {
-        display: inline-block;
-        width: $form-feedback-icon-size;
-        height: $form-feedback-icon-size;
-        margin-right: map-get($spacers, 1);
-        content: "";
-        background-repeat: no-repeat;
-        background-size: $form-feedback-icon-size;
-      }
-
-      @if $state == "valid" {
-        @extend %svg-success;
-      } @else {
-        @extend %svg-danger;
+      .form-control {
+        @include form-validation-state-selector($state) {
+          background: escape-svg($icon) no-repeat right map-get($spacers, 2) center / $spacer;
+        }
       }
     }
-    // end mod
+  } @else {
+    .#{$state}-feedback {
+      display: none;
+      width: 100%;
+      margin-top: $form-feedback-margin-top;
+      @include font-size($form-feedback-font-size);
+      font-weight: $font-weight-bold; // Boosted mod
+      // color: $color; // Boosted mod
+
+      // Boosted mod: status should not rely on color only
+      @if $enable-validation-icons {
+        &::before {
+          display: inline-block;
+          align-self: center;
+          width: $form-feedback-icon-size;
+          height: $form-feedback-icon-size;
+          margin-right: map-get($spacers, 1);
+          content: "";
+          background: escape-svg($form-feedback-icon-invalid) no-repeat;
+        }
+      }
+    }
   }
+  // end mod
 
   .#{$state}-tooltip {
     position: absolute;
@@ -87,33 +96,35 @@
     @include border-radius($form-feedback-tooltip-border-radius);
   }
 
-  @include form-validation-state-selector($state) {
-    ~ .#{$state}-feedback,
-    ~ .#{$state}-tooltip {
-      display: flex; // Boosted mod
-    }
-  }
-
-  .form-control {
+  // Boosted mod
+  @if $state != "valid" {
     @include form-validation-state-selector($state) {
-      border-color: $color;
-
-      // Boosted mod
-      // @if $enable-validation-icons {
-      //   padding-right: $input-height-inner;
-      //   background-image: escape-svg($icon);
-      //   background-repeat: no-repeat;
-      //   background-position: right $input-height-inner-quarter center;
-      //   background-size: $input-height-inner-half $input-height-inner-half;
-      // }
-
-      &:focus {
-        border-color: $input-focus-border-color;
-        // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: flex; // Boosted mod
       }
-      // end mod
+    }
+
+    .form-control {
+      @include form-validation-state-selector($state) {
+        border-color: $color;
+
+        // @if $enable-validation-icons {
+        //   padding-right: $input-height-inner;
+        //   background-image: escape-svg($icon);
+        //   background-repeat: no-repeat;
+        //   background-position: right $input-height-inner-quarter center;
+        //   background-size: $input-height-inner-half $input-height-inner-half;
+        // }
+
+        &:focus {
+          border-color: $input-focus-border-color;
+          // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
+        }
+      }
     }
   }
+  // end mod
 
   // stylelint-disable-next-line selector-no-qualifying-type
   textarea.form-control {
@@ -127,17 +138,25 @@
 
   .custom-select {
     @include form-validation-state-selector($state) {
-      border-color: $color;
+      // Boosted mod
+      @if $state != "valid" {
+        border-color: $color;
+      }
+      // end mod
 
       @if $enable-validation-icons {
         padding-right: $custom-select-feedback-icon-padding-right;
         // background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size; // Boosted mod
       }
 
-      &:focus {
-        border-color: $input-focus-border-color;
-        // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
+      // Boosted mod
+      @if $state != "valid" {
+        &:focus {
+          border-color: $input-focus-border-color;
+          // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
+        }
       }
+      // end mod
     }
   }
 
@@ -200,16 +219,20 @@
   // custom file
   .custom-file-input {
     @include form-validation-state-selector($state) {
-      ~ .custom-file-label {
-        border-color: $color;
-      }
-
-      &:focus {
+      // Boosted mod
+      @if $state != "valid" {
         ~ .custom-file-label {
-          border-color: $input-focus-border-color;
-          // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
+          border-color: $color;
+        }
+
+        &:focus {
+          ~ .custom-file-label {
+            border-color: $input-focus-border-color;
+            // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
+          }
         }
       }
+      // end mod
     }
   }
 }

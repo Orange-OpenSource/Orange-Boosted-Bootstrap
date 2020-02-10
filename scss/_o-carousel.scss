@@ -9,10 +9,8 @@
   margin-bottom: 1.875rem;
 }
 
-.carousel .carousel-item {
-  img {
-    width: 100%;
-  }
+.carousel .carousel-item img {
+  width: 100%;
 }
 
 .carousel-control-prev,
@@ -39,9 +37,7 @@
 .carousel-control-next-icon {
   margin-top: -1.125rem;
   font-size: 1.875rem;
-  color: #000;
-  text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-  background-image: none;
+  color: $black;
   background-repeat: no-repeat;
 
   &::before {
@@ -67,11 +63,11 @@
 
   li {
     flex-grow: 0;
-    width: .625rem;
-    height: .625rem;
+    width: map-get($spacers, 2);
+    height: map-get($spacers, 2);
     margin-right: .375rem;
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: $black;
+    border: $border-width / 2 solid $white;
     @include border-radius(50%);
 
     &:hover {
@@ -91,8 +87,9 @@
   width: auto;
   height: auto;
   cursor: pointer;
-  background: none;
+  background: none !important; // stylelint-disable-line declaration-no-important
   @include transition($transition-focus);
+
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};

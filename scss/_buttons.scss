@@ -5,20 +5,19 @@
 //
 
 .btn {
-  display: inline-block;
+  display: inline-flex; // Boosted mod
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   color: $body-color;
   text-align: center;
   white-space: $btn-white-space;
   vertical-align: middle;
-  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
-  outline-offset: $border-width * 2;
+  outline-offset: $border-width * 2; // Boosted mod
 
   @include hover() {
     color: $body-color;
@@ -36,17 +35,33 @@
   &.disabled,
   &:disabled {
     opacity: $btn-disabled-opacity;
-    @include box-shadow(none);
+    // @include box-shadow(none); // Boosted mod
   }
 
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    @include box-shadow($btn-active-box-shadow);
+  &:not(:disabled):not(.disabled) {
+    cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
 
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    // Boosted mod: no box-shadow at all
+  }
+
+  // Boosted mod
+  [class*="svg-"],
+  [class*="icon-"] {
+    display: inline-block;
+  }
+
+  &:not(.btn-icon) {
+    [class*="svg-"],
+    [class*="icon-"] {
+      margin-right: $border-width * 3;
+      transform: translateY($border-width / 2);
     }
   }
+
+  [class*="icon-"]::before {
+    font-size: $font-size-xlg;
+  }
+  // end mod
 }
 
 // Boosted mod remove underline for a.btn
@@ -132,10 +147,7 @@ fieldset:disabled a.btn {
     text-decoration: $link-hover-decoration;
   }
 
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-focus-box-shadow;
-  }
+  // Boosted mod: no box-shadow at all
 
   &:disabled,
   &.disabled {
@@ -148,26 +160,19 @@ fieldset:disabled a.btn {
 
 // Boosted mod: icon buttons are squared
 .btn-icon {
+  justify-content: center;
+  min-width: $btn-icon-size;
   padding: $btn-padding-y;
   // stylelint-disable-next-line declaration-no-important
   line-height: .875 !important; // Ensure .btn-icon is squared
-
-  [class*="svg-"] {
-    display: block;
-    line-height: .75;
-  }
-
-  [class*="icon-"]::before {
-    font-size: $font-size-xlg;
-  }
 }
 
 // Boosted mod: social buttons
 .btn-social {
-  width: $btn-social-size;
-  height: $btn-social-size;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
   padding: 0;
-  background: transparent no-repeat center / $btn-social-icon-size;
+  background: transparent no-repeat center / $btn-social-bg-size;
   border: $border-width solid $black;
   @include border-radius(50%, 50%);
   @include transition(none);
@@ -182,6 +187,14 @@ fieldset:disabled a.btn {
   $icon: str-replace(icon-conf($network, "icon"), "#boosted#", $black);
   $icon-inverse: str-replace(icon-conf($network, "icon"), "#boosted#", $white);
   .btn-#{$network} {
+    @if map-has-key(map-get($o-networks, $network), "size") {
+      background-size: icon-conf($network, "size");
+    }
+
+    @if map-has-key(map-get($o-networks, $network), "position") {
+      background-position: icon-conf($network, "position");
+    }
+
     &,
     &.btn-inverse:active {
       background-color: $white;

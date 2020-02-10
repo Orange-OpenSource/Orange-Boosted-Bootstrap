@@ -39,6 +39,7 @@
 
 // Boosted mod
 .alert-icon {
+  width: 3rem;
   margin: -#{map-get($spacers, 1) / 5} 0;
 
   + * {
@@ -48,13 +49,11 @@
   &::before {
     display: block;
     order: -1;
-    width: $alert-logo-size;
-    min-width: $alert-logo-size;
+    min-width: map-get($spacers, 4);
     height: $alert-logo-size;
     margin-right: $alert-logo-size;
     content: "";
     background-repeat: no-repeat;
-    background-size: contain;
   }
 }
 // end mod
@@ -116,10 +115,10 @@
   border: 0;
 
   .alert-icon {
+    width: 1.5rem;
     margin: $alert-icon-margin-y 0;
 
     &::before {
-      width: $alert-logo-size-sm;
       min-width: $alert-logo-size-sm;
       height: $alert-logo-size-sm;
       margin-right: $alert-logo-size-sm / 2;

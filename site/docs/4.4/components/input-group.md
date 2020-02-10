@@ -25,14 +25,6 @@ Place one add-on or button on either side of an input. You may also place one on
   </div>
 </div>
 
-<label for="basic-url">Your vanity URL</label>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-  </div>
-  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-</div>
-
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text">$</span>
@@ -41,13 +33,6 @@ Place one add-on or button on either side of an input. You may also place one on
   <div class="input-group-append">
     <span class="input-group-text">.00</span>
   </div>
-</div>
-
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text">With textarea</span>
-  </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
 </div>
 {% endcapture %}
 {% include example.html content=example %}

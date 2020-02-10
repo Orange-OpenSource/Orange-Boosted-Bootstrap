@@ -36,11 +36,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.4.0.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.4.1.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com): `npm install boosted`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.4.0`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.4.0`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.4.1`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.4.1`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
 Read the [Getting started page](https://boosted.orange.com/docs/4.4/getting-started/introduction/) for information on the framework contents, CDN, templates and examples, and more.
@@ -55,7 +55,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/4.4/getting-star
 [![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=dev)
 [![CSS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/orange-opensource/orange-boosted-bootstrap/v4-dev/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/orange-opensource/orange-boosted-bootstrap/tree/v4-dev/dist/js/boosted.min.js)
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=TGxBTEN5dlFWTnU1TzFPUWNYb0IyTXV0SlNjOTRUcVQ4Vy9aMEptRytTQT0tLUpEaEJhdGdtUHFlMlhmZUR6aHZuYXc9PQ==--cab64b2cdcdd899e81600d69f5063437846441ff)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)](https://automate.browserstack.com/public-build/eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)
 [![](https://data.jsdelivr.com/v1/package/npm/boosted/badge)](https://www.jsdelivr.com/package/npm/boosted)
 
 ## What's included

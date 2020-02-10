@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.4.0 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
+  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Copyright 2014-2020 The Boosted Authors
+  * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap dropdown.js v4.4.0 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap dropdown.js v4.4.1 (https://boosted.orange.com)
+  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -182,9 +182,6 @@
       this._inNavbar = this._detectNavbar();
 
       this._addEventListeners();
-
-      this._addAccessibility(); // Boosted mod
-
     } // Getters
 
 
@@ -419,17 +416,7 @@
       }
 
       return _objectSpread2({}, popperConfig, {}, this._config.popperConfig);
-    } // Boosted mod
-    ;
-
-    _proto._addAccessibility = function _addAccessibility() {
-      $(this._element).attr('aria-haspopup', true); // ensure that dropdown-menu have the role menu
-
-      $(this._element).parent().children(Selector.MENU).attr('role', 'menu'); // ensure that dropdown-itm's have the role menuitem
-
-      $(this._element).parent().children(Selector.MENU).children('.dropdown-item').attr('role', 'menuitem');
-    } // end mod
-    // Static
+    } // Static
     ;
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {

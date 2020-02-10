@@ -25,9 +25,9 @@ Here's a quick example to demonstrate Boosted's form styles. Keep reading for do
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="exampleCheck1">
+    <label class="custom-control-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -48,7 +48,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="custom-select" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -58,7 +58,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
+    <select multiple class="custom-select" id="exampleFormControlSelect2">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -74,39 +74,37 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
 {% endcapture %}
 {% include example.html content=example %}
 
-For file inputs, swap the `.form-control` for `.form-control-file`.
-
-{% capture example %}
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: do not show default file input
 
 ### Sizing
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+Set heights using classes like `.form-control-lg`.
 
 {% capture example %}
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-<input class="form-control" type="text" placeholder="Default input">
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+<div class="form-group">
+  <label for="exampleLargeInput">Large form control</label>
+  <input class="form-control form-control-lg" type="text" id="exampleLargeInput" placeholder=".form-control-lg">
+</div>
+<div class="form-group">
+  <label for="exampleDefaultInput">Default form control</label>
+  <input class="form-control" type="text" id="exampleDefaultInput" placeholder="Default input">
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
-<select class="form-control form-control-lg">
-  <option>Large select</option>
-</select>
-<select class="form-control">
-  <option>Default select</option>
-</select>
-<select class="form-control form-control-sm">
-  <option>Small select</option>
-</select>
+<div class="form-group">
+  <label for="exampleLargeSelect">Large select size</label>
+  <select class="custom-select custom-select-lg mb-2" id="exampleLargeSelect">
+    <option>Large select</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="exampleDefaultSelect">Default select size</label>
+  <select class="custom-select" id="exampleDefaultSelect">
+    <option>Default select</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -156,119 +154,9 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {% endcapture %}
 {% include example.html content=example %}
 
-## Range Inputs
+[comment]: # Boosted mod: do not show default range input
 
-Set horizontally scrollable range inputs using `.form-control-range`.
-
-{% capture example %}
-<form>
-  <div class="form-group">
-    <label for="formControlRange">Example Range input</label>
-    <input type="range" class="form-control-range" id="formControlRange">
-  </div>
-</form>
-{% endcapture %}
-{% include example.html content=example %}
-
-## Checkboxes and radios
-
-Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
-
-Disabled checkboxes and radios are supported. The `disabled` attribute will apply a lighter color to help indicate the input's state.
-
-Checkboxes and radio buttons support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`.
-
-### Default (stacked)
-
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
-
-{% capture example %}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-  <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
-  </label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Default radio
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Second default radio
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-  <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
-  </label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### Inline
-
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
-
-{% capture example %}
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">1</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">2</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">1</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">2</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### Without labels
-
-Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
-
-{% capture example %}
-<div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-</div>
-<div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-</div>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: do not show default checkbox/radio input
 
 ## Layout
 
@@ -299,11 +187,13 @@ More complex forms can be built using our grid classes. Use these for form layou
 {% capture example %}
 <form>
   <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+    <div class="col form-group">
+      <label for="gridExampleFirstName">First name</label>
+      <input type="text" class="form-control" id="gridExampleFirstName" placeholder="First name">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+    <div class="col form-group">
+      <label for="gridExampleLastName">Last name</label>
+      <input type="text" class="form-control" id="gridExampleLastName" placeholder="Last name">
     </div>
   </div>
 </form>
@@ -317,11 +207,13 @@ You may also swap `.row` for `.form-row`, a variation of our standard grid row t
 {% capture example %}
 <form>
   <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+    <div class="col form-group">
+       <label for="rowExampleFirstName">First name</label>
+      <input type="text" class="form-control" id="rowExampleFirstName" placeholder="First name">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+    <div class="col form-group">
+      <label for="rowExampleLastName">Last name</label>
+      <input type="text" class="form-control" id="rowExampleLastName" placeholder="Last name">
     </div>
   </div>
 </form>
@@ -357,7 +249,7 @@ More complex layouts can also be created with the grid system.
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
+      <select id="inputState" class="custom-select">
         <option selected>Choose...</option>
         <option>...</option>
       </select>
@@ -368,9 +260,9 @@ More complex layouts can also be created with the grid system.
     </div>
   </div>
   <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="gridCheck">
+      <label class="custom-control-label" for="gridCheck">
         Check me out
       </label>
     </div>
@@ -404,21 +296,21 @@ At times, you maybe need to use margin or padding utilities to create that perfe
     <div class="row">
       <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
       <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="custom-control-label" for="gridRadios1">
             First radio
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="custom-control-label" for="gridRadios2">
             Second radio
           </label>
         </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-          <label class="form-check-label" for="gridRadios3">
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <label class="custom-control-label" for="gridRadios3">
             Third disabled radio
           </label>
         </div>
@@ -428,9 +320,9 @@ At times, you maybe need to use margin or padding utilities to create that perfe
   <div class="form-group row">
     <div class="col-sm-2">Checkbox</div>
     <div class="col-sm-10">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1">
-        <label class="form-check-label" for="gridCheck1">
+      <div class="custom-control custom-checkbox">
+        <input class="custom-control-input" type="checkbox" id="gridCheck1">
+        <label class="custom-control-label" for="gridCheck1">
           Example checkbox
         </label>
       </div>
@@ -447,16 +339,10 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 ##### Horizontal form label sizing
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Be sure to use `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg`.
 
 {% capture example %}
 <form>
-  <div class="form-group row">
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
-    </div>
-  </div>
   <div class="form-group row">
     <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
@@ -480,14 +366,17 @@ As shown in the previous examples, our grid system allows you to place any numbe
 {% capture example %}
 <form>
   <div class="form-row">
-    <div class="col-7">
-      <input type="text" class="form-control" placeholder="City">
+    <div class="col-7 form-group">
+      <label for="sizeCityInput">City</label>
+      <input type="text" class="form-control" placeholder="City" id="sizeCityInput">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="State">
+    <div class="col form-group">
+      <label for="sizeStateInput">State</label>
+      <input type="text" class="form-control" placeholder="State" id="sizeStateInput">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
+    <div class="col form-group">
+      <label for="sizeZipInput">Zip</label>
+      <input type="text" class="form-control" placeholder="Zip" id="sizeZipInput">
     </div>
   </div>
 </form>
@@ -515,9 +404,9 @@ The example below uses a flexbox utility to vertically center the contents and c
       </div>
     </div>
     <div class="col-auto">
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-        <label class="form-check-label" for="autoSizingCheck">
+      <div class="custom-control custom-checkbox mb-2">
+        <input class="custom-control-input" type="checkbox" id="autoSizingCheck">
+        <label class="custom-control-label" for="autoSizingCheck">
           Remember me
         </label>
       </div>
@@ -549,9 +438,9 @@ You can then remix that once again with size-specific column classes.
       </div>
     </div>
     <div class="col-auto my-1">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-        <label class="form-check-label" for="autoSizingCheck2">
+      <div class="custom-control custom-checkbox mb-2">
+        <input class="custom-control-input" type="checkbox" id="autoSizingCheck2">
+        <label class="custom-control-label" for="autoSizingCheck2">
           Remember me
         </label>
       </div>
@@ -564,33 +453,7 @@ You can then remix that once again with size-specific column classes.
 {% endcapture %}
 {% include example.html content=example %}
 
-And of course [custom form controls](#custom-forms) are supported.
-
-{% capture example %}
-<form>
-  <div class="form-row align-items-center">
-    <div class="col-auto my-1">
-      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </div>
-    <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox mr-sm-2 mt-md-2">
-        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-      </div>
-    </div>
-    <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: not needed since we only expose custom-forms everywhere…
 
 ### Inline forms
 
@@ -606,7 +469,6 @@ You may need to manually address the width and alignment of individual form cont
 <form class="form-inline">
   <label class="sr-only" for="inlineFormInputName2">Name</label>
   <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
-
   <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
   <div class="input-group mb-2 mr-sm-2">
     <div class="input-group-prepend">
@@ -614,40 +476,18 @@ You may need to manually address the width and alignment of individual form cont
     </div>
     <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
   </div>
-
-  <div class="form-check mb-2 mr-sm-2">
-    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-    <label class="form-check-label" for="inlineFormCheck">
+  <div class="custom-control custom-checkbox mb-2 mr-sm-2">
+    <input class="custom-control-input" type="checkbox" id="inlineFormCheck">
+    <label class="custom-control-label" for="inlineFormCheck">
       Remember me
     </label>
   </div>
-
   <button type="submit" class="btn btn-primary mb-2">Submit</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-Custom form controls and selects are also supported.
-
-{% capture example %}
-<form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-
-  <div class="custom-control custom-checkbox my-1 mr-sm-2">
-    <input type="checkbox" class="custom-control-input" id="customControlInline">
-    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
-  </div>
-
-  <button type="submit" class="btn btn-primary my-1">Submit</button>
-</form>
-{% endcapture %}
-{% include example.html content=example %}
+[comment]: # Boosted mod: not needed since we only expose custom-forms everywhere…
 
 {% capture callout %}
 ##### Alternatives to hidden labels
@@ -713,14 +553,14 @@ Add the `.disabled` class to the label for a disabled input.
     </div>
     <div class="form-group">
       <label for="disabledSelect">Disabled select menu</label>
-      <select id="disabledSelect" class="form-control">
+      <select id="disabledSelect" class="custom-select">
         <option>Disabled select</option>
       </select>
     </div>
     <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-        <label class="form-check-label" for="disabledFieldsetCheck">
+      <div class="custom-control custom-checkbox">
+        <input class="custom-control-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+        <label class="custom-control-label" for="disabledFieldsetCheck">
           Can't check this
         </label>
       </div>
@@ -749,7 +589,7 @@ While Boosted will apply these styles in all browsers, Internet Explorer 11 and 
 
 Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
 
-Indicate that a field is required by adding the class `.is-required` on the associated label.
+Indicate that a field is **required** by adding the class `.is-required` on the associated label, and adding a `<span class="sr-only"> (required)</span>` visually hidden text inside label itself.
 
 {% capture callout %}
 We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
@@ -781,21 +621,21 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationCustom01" class="is-required">First name</label>
+      <label for="validationCustom01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom01" aria-describedby="validationCustom01Feedback" placeholder="First name" value="Mark" required>
       <div class="valid-feedback" id="validationCustom01Feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustom02" class="is-required">Last name</label>
+      <label for="validationCustom02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02Feedback" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback" id="validationCustom02Feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername" class="is-required">Username</label>
+      <label for="validationCustomUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -809,21 +649,21 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustom03" class="is-required">City</label>
+      <label for="validationCustom03" class="is-required">City<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom03" aria-describedby="validationCustom03Feedback" placeholder="City" required>
       <div class="invalid-feedback" id="validationCustom03Feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom04" class="is-required">State</label>
+      <label for="validationCustom04" class="is-required">State<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom04" aria-describedby="validationCustom04Feedback" placeholder="State" required>
       <div class="invalid-feedback" id="validationCustom04Feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom05" class="is-required">Zip</label>
+      <label for="validationCustom05" class="is-required">Zip<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom05" aria-describedby="validationCustom05Feedback" placeholder="Zip" required>
       <div class="invalid-feedback" id="validationCustom05Feedback">
         Please provide a valid zip.
@@ -831,10 +671,11 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     </div>
   </div>
   <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" aria-describedby="invalidCheckFeedback" required>
-      <label class="form-check-label is-required" for="invalidCheck">
-        Agree to terms and conditions
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" value="" id="invalidCheck" aria-describedby="invalidCheckFeedback" required>
+      <label class="custom-control-label" for="invalidCheck">
+        Agree to terms and conditions<span class="is-required"></span>
+        <span class="sr-only"> (required)</span>
       </label>
       <div class="invalid-feedback" id="invalidCheckFeedback">
         You must agree before submitting.
@@ -877,15 +718,15 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationDefault01" class="is-required">First name</label>
+      <label for="validationDefault01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationDefault02" class="is-required">Last name</label>
+      <label for="validationDefault02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationDefaultUsername" class="is-required">Username</label>
+      <label for="validationDefaultUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend2">@</span>
@@ -896,23 +737,24 @@ While these feedback styles cannot be styled with CSS, you can still customize t
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationDefault03" class="is-required">City</label>
+      <label for="validationDefault03" class="is-required">City<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault04" class="is-required">State</label>
+      <label for="validationDefault04" class="is-required">State<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault05" class="is-required">Zip</label>
+      <label for="validationDefault05" class="is-required">Zip<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
     </div>
   </div>
   <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label is-required" for="invalidCheck2">
-        Agree to terms and conditions
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="custom-control-label" for="invalidCheck2">
+        Agree to terms and conditions<span class="is-required"></span>
+        <span class="sr-only"> (required)</span>
       </label>
     </div>
   </div>
@@ -929,21 +771,21 @@ We recommend using client-side validation, but in case you require server-side v
 <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationServer01" class="is-required">First name</label>
+      <label for="validationServer01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-valid" id="validationServer01" aria-describedby="validationServer01Feedback" placeholder="First name" value="Mark" required>
       <div class="valid-feedback" id="validationServer01Feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationServer02" class="is-required">Last name</label>
+      <label for="validationServer02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-valid" id="validationServer02" aria-describedby="validationServer02Feedback" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback" id="validationServer02Feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationServerUsername" class="is-required">Username</label>
+      <label for="validationServerUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
@@ -957,21 +799,21 @@ We recommend using client-side validation, but in case you require server-side v
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer03" class="is-required">City</label>
+      <label for="validationServer03" class="is-required">City<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" placeholder="City" required>
       <div class="invalid-feedback" id="validationServer03Feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer04" class="is-required">State</label>
+      <label for="validationServer04" class="is-required">State<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" placeholder="State" required>
       <div class="invalid-feedback" id="validationServer04Feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer05" class="is-required">Zip</label>
+      <label for="validationServer05" class="is-required">Zip<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" placeholder="Zip" required>
       <div class="invalid-feedback" id="validationServer05Feedback">
         Please provide a valid zip.
@@ -979,10 +821,11 @@ We recommend using client-side validation, but in case you require server-side v
     </div>
   </div>
   <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-      <label class="form-check-label is-required" for="invalidCheck3">
-        Agree to terms and conditions
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="custom-control-label" for="invalidCheck3">
+        Agree to terms and conditions<span class="is-required"></span>
+        <span class="sr-only"> (required)</span>
       </label>
       <div class="invalid-feedback" id="invalidCheck3Feedback">
         You must agree before submitting.
@@ -1007,7 +850,7 @@ Validation styles are available for the following form controls and components:
 {% capture example %}
 <form class="was-validated">
   <div class="mb-3">
-    <label for="validationTextarea" class="is-required">Textarea</label>
+    <label for="validationTextarea" class="is-required">Textarea<span class="sr-only"> (required)</span></label>
     <textarea class="form-control is-invalid" id="validationTextarea" aria-describedby="validationTextareaFeedback" placeholder="Required example textarea" required></textarea>
     <div class="invalid-feedback" id="validationTextareaFeedback">
       Please enter a message in the textarea.
@@ -1016,7 +859,7 @@ Validation styles are available for the following form controls and components:
 
   <div class="custom-control custom-checkbox mb-3">
     <input type="checkbox" class="custom-control-input" id="customControlValidation1" aria-describedby="customControlValidation1Feedback" required>
-    <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+    <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox<span class="sr-only"> (required)</span></label>
     <div class="invalid-feedback" id="customControlValidation1Feedback">
       Example invalid feedback text
     </div>
@@ -1024,18 +867,18 @@ Validation styles are available for the following form controls and components:
 
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input" id="customControlValidation2" aria-describedby="customControlValidation3Feedback" name="radio-stacked" required>
-    <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+    <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio<span class="sr-only"> (required)</span></label>
   </div>
   <div class="custom-control custom-radio mb-3">
     <input type="radio" class="custom-control-input" id="customControlValidation3" aria-describedby="customControlValidation3Feedback" name="radio-stacked" required>
-    <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
+    <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio<span class="sr-only"> (required)</span></label>
     <div class="invalid-feedback" id="customControlValidation3Feedback">
       More example invalid feedback text
     </div>
   </div>
 
   <div class="form-group">
-    <label for="customSelectValidation">Custom select example</label>
+    <label for="customSelectValidation">Custom select example<span class="sr-only"> (required)</span></label>
     <select class="custom-select" id="customSelectValidation" aria-describedby="customSelectValidationFeedback" required>
       <option value="">Open this select menu</option>
       <option value="1">One</option>
@@ -1049,7 +892,7 @@ Validation styles are available for the following form controls and components:
 
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="validatedCustomFile" aria-describedby="customFileValidationFeedback" required>
-    <label class="custom-file-label" for="validatedCustomFile">Choose file…</label>
+    <label class="custom-file-label" for="validatedCustomFile">Choose file…<span class="sr-only"> (required)</span></label>
     <div class="invalid-feedback" id="customFileValidationFeedback">
       Example invalid custom file feedback
     </div>
@@ -1066,21 +909,21 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip01" class="is-required">First name</label>
+      <label for="validationTooltip01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02" class="is-required">Last name</label>
+      <label for="validationTooltip02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername" class="is-required">Username</label>
+      <label for="validationTooltipUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
@@ -1094,21 +937,21 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationTooltip03" class="is-required">City</label>
+      <label for="validationTooltip03" class="is-required">City<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
       <div class="invalid-tooltip">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip04" class="is-required">State</label>
+      <label for="validationTooltip04" class="is-required">State<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
       <div class="invalid-tooltip">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip05" class="is-required">Zip</label>
+      <label for="validationTooltip05" class="is-required">Zip<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
       <div class="invalid-tooltip">
         Please provide a valid zip.
@@ -1163,7 +1006,7 @@ We use the sibling selector (`~`) for all our `<input>` states—like `:checked`
 
 We hide the default `<input>` with `opacity` and use the `.custom-control-label` to build a new custom form indicator in its place with `::before` and `::after`. Unfortunately we can't build a custom one from just the `<input>` because CSS's `content` doesn't work on that element.
 
-In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://github.com/iconic/open-iconic). This provides us the best control for styling and positioning across browsers and devices.
+In the checked states, we use **base64 embedded SVG icons**. This provides us the best control for styling and positioning across browsers and devices.
 
 #### Checkboxes
 
@@ -1269,10 +1112,6 @@ Add the `.right` class to render a toggle switch with label text before.
 [comment]: # Boosted mod
 ### Orange Switches
 
-Using checkbox as switch / toggle with styling
-
-Wrap a label / checkbox input pattern into `.form-group` with `.o-switch` followed by a `.toggle` class.
-
 {% capture callout %}
 ##### Deprecated
 
@@ -1281,70 +1120,6 @@ The `.toggle-rounded` variant should be avoided, but still works in v4.
 {% endcapture %}
 {% include callout.html content=callout type="danger" %}
 
-{% capture example %}
-<div class="form-group row">
-  <label for="checkbox1" class="col-form-label col-md-3 col-8">Default</label>
-  <div class="o-switch">
-    <input class="checkbox sr-only" id="checkbox1" type="checkbox" checked/>
-    <label for="checkbox1" class="toggle col-form-label">
-      <span class="on svg-checkbox-tick"><span class="sr-only">on</span></span>
-      <span class="off svg-delete"><span class="sr-only">off</span></span>
-    </label>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-#### Success
-
-Default color is brand primary. Success color is also supported, use `.success` class on input tag
-
-{% capture example %}
-<div class="form-group row">
-  <label for="checkbox3" class="col-form-label col-md-3 col-8">Success</label>
-  <div class="o-switch">
-    <input class="checkbox success sr-only" id="checkbox3" type="checkbox" checked/>
-    <label for="checkbox3" class="toggle col-form-label">
-      <span class="on svg-checkbox-tick"><span class="sr-only">on</span></span>
-      <span class="off svg-delete"><span class="sr-only">off</span></span>
-    </label>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-### The 3 way toggle
-
-Wrap 3 radio type inputs into a `.btn-group .o-switch` element. If using several btn-group toggles, make to have different `name` attribute for each group.
-
-{% capture example %}
-<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" checked> 1
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2"> 2
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3"> 3
-  </label>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-#### with label
-
-Replace number by label.
-
-<div class="o-switch btn-group btn-group-toggle" data-toggle="buttons" role="group">
-  <label class="btn btn-secondary doc-label">
-    <input type="radio" name="options3" id="option31" checked="">Day</label>
-  <label class="btn btn-secondary doc-label active">
-    <input type="radio" name="options3" id="option32">Week</label>
-  <label class="btn btn-secondary doc-label">
-    <input type="radio" name="options3" id="option33">Month</label>
-</div>
-
 [comment]: # end mod
 
 ### Select menu
@@ -1352,55 +1127,60 @@ Replace number by label.
 Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
 
 {% capture example %}
-<select class="custom-select">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customSelect">Custom select</label>
+  <select class="custom-select" id="customSelect">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+You may also choose large custom selects to match our similarly sized text inputs.
 
 {% capture example %}
-<select class="custom-select custom-select-lg mb-3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-
-<select class="custom-select custom-select-sm">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customLargeSelect">Large custom select</label>
+  <select class="custom-select custom-select-lg mb-3" id="customLargeSelect">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 The `multiple` attribute is also supported:
 
 {% capture example %}
-<select class="custom-select" multiple>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customMultipleSelect">Multiple custom select</label>
+  <select class="custom-select" id="customMultipleSelect" multiple>
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 As is the `size` attribute:
 
 {% capture example %}
-<select class="custom-select" size="3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+<div class="form-group">
+  <label for="customSizeSelect">Sized custom select</label>
+  <select class="custom-select" size="3" id="customSizeSelect">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 

@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.4.0 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
+  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Copyright 2014-2020 The Boosted Authors
+  * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap button.js v4.4.0 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap button.js v4.4.1 (https://boosted.orange.com)
+  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -47,7 +47,8 @@
   var ClassName = {
     ACTIVE: 'active',
     BUTTON: 'btn',
-    FOCUS: 'focus'
+    FOCUS: 'focus',
+    FOCUS_VISIBLE: 'focus-visible'
   };
   var Selector = {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
@@ -188,11 +189,18 @@
     }
   }).on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector.BUTTON)[0];
-    $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
+    $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type)); // Boosted mod: check if children has focus-visible and delegate it to button
+
+    if ($(event.target).hasClass(ClassName.FOCUS_VISIBLE)) {
+      $(button).addClass(ClassName.FOCUS_VISIBLE);
+    } else {
+      $(button).removeClass(ClassName.FOCUS_VISIBLE);
+    } // end mod
+
   });
   $(window).on(Event.LOAD_DATA_API, function () {
     // ensure correct active class is set to match the controls' actual values/states
-    // find all checkboxes/readio buttons inside data-toggle groups
+    // find all checkboxes/radio buttons inside data-toggle groups
     var buttons = [].slice.call(document.querySelectorAll(Selector.DATA_TOGGLES_BUTTONS));
 
     for (var i = 0, len = buttons.length; i < len; i++) {

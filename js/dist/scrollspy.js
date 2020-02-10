@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.4.0 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
+  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Copyright 2014-2020 The Boosted Authors
+  * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap scrollspy.js v4.4.0 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap scrollspy.js v4.4.1 (https://boosted.orange.com)
+  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -296,16 +296,16 @@
       var $link = $([].slice.call(document.querySelectorAll(queries.join(','))));
 
       if ($link.hasClass(ClassName.DROPDOWN_ITEM)) {
-        $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);
-        $link.addClass(ClassName.ACTIVE);
+        $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE).attr('aria-current', 'true');
+        $link.addClass(ClassName.ACTIVE).attr('aria-current', 'page');
       } else {
         // Set triggered link as active
-        $link.addClass(ClassName.ACTIVE); // Set triggered links parents as active
+        $link.addClass(ClassName.ACTIVE).attr('aria-current', 'page'); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_LINKS + ", " + Selector.LIST_ITEMS).addClass(ClassName.ACTIVE); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_LINKS + ", " + Selector.LIST_ITEMS).addClass(ClassName.ACTIVE).attr('aria-current', 'true'); // Handle special case when .nav-link is inside .nav-item
 
-        $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_ITEMS).children(Selector.NAV_LINKS).addClass(ClassName.ACTIVE);
+        $link.parents(Selector.NAV_LIST_GROUP).prev(Selector.NAV_ITEMS).children(Selector.NAV_LINKS).addClass(ClassName.ACTIVE).attr('aria-current', 'true');
       }
 
       $(this._scrollElement).trigger(Event.ACTIVATE, {
@@ -317,7 +317,8 @@
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
         return node.classList.contains(ClassName.ACTIVE);
       }).forEach(function (node) {
-        return node.classList.remove(ClassName.ACTIVE);
+        node.classList.remove(ClassName.ACTIVE);
+        node.removeAttribute('aria-current');
       });
     } // Static
     ;

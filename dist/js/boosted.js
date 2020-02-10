@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.4.0 (https://boosted.orange.com)
-  * Copyright 2014-2019 The Boosted Authors
-  * Copyright 2014-2019 Orange
+  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Copyright 2014-2020 The Boosted Authors
+  * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v4.4.0 (https://boosted.orange.com)
-  * Copyright 2011-2019 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap v4.4.1 (https://boosted.orange.com)
+  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -439,7 +439,8 @@
   var ClassName$1 = {
     ACTIVE: 'active',
     BUTTON: 'btn',
-    FOCUS: 'focus'
+    FOCUS: 'focus',
+    FOCUS_VISIBLE: 'focus-visible'
   };
   var Selector$1 = {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
@@ -580,11 +581,18 @@
     }
   }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector$1.BUTTON)[0];
-    $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+    $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type)); // Boosted mod: check if children has focus-visible and delegate it to button
+
+    if ($(event.target).hasClass(ClassName$1.FOCUS_VISIBLE)) {
+      $(button).addClass(ClassName$1.FOCUS_VISIBLE);
+    } else {
+      $(button).removeClass(ClassName$1.FOCUS_VISIBLE);
+    } // end mod
+
   });
   $(window).on(Event$1.LOAD_DATA_API, function () {
     // ensure correct active class is set to match the controls' actual values/states
-    // find all checkboxes/readio buttons inside data-toggle groups
+    // find all checkboxes/radio buttons inside data-toggle groups
     var buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLES_BUTTONS));
 
     for (var i = 0, len = buttons.length; i < len; i++) {
@@ -1692,9 +1700,6 @@
       this._inNavbar = this._detectNavbar();
 
       this._addEventListeners();
-
-      this._addAccessibility(); // Boosted mod
-
     } // Getters
 
 
@@ -1929,17 +1934,7 @@
       }
 
       return _objectSpread2({}, popperConfig, {}, this._config.popperConfig);
-    } // Boosted mod
-    ;
-
-    _proto._addAccessibility = function _addAccessibility() {
-      $(this._element).attr('aria-haspopup', true); // ensure that dropdown-menu have the role menu
-
-      $(this._element).parent().children(Selector$4.MENU).attr('role', 'menu'); // ensure that dropdown-itm's have the role menuitem
-
-      $(this._element).parent().children(Selector$4.MENU).children('.dropdown-item').attr('role', 'menuitem');
-    } // end mod
-    // Static
+    } // Static
     ;
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {
@@ -2158,7 +2153,7 @@
    */
 
   var NAME$5 = 'megamenu';
-  var VERSION$5 = '4.4.0';
+  var VERSION$5 = '4.4.1';
   var DATA_KEY$5 = 'bs.megamenu';
   var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
   var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
@@ -2175,7 +2170,8 @@
 
   var SPLITLENGHT = 4;
   var ClassName$5 = {
-    TRANSITIONING: 'transitioning'
+    TRANSITIONING: 'transitioning',
+    ACTIVE: 'active'
   };
   var Selector$5 = {
     MEGAMENU: '.mega-menu',
@@ -2187,7 +2183,8 @@
     NAV_LINK: '.nav-link',
     NAV_LINK_COLLAPSE: '.nav-link[data-toggle=collapse]',
     NAV_LINK_BACK: '.nav-link.back',
-    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]'
+    NAV_LINK_EXPANDED: '.nav-link[aria-expanded=true]',
+    CURRENT: '.nav-link[aria-current="page"]'
   };
   /**
    * ------------------------------------------------------------------------
@@ -2248,27 +2245,22 @@
     };
 
     _proto._addAriaAttributes = function _addAriaAttributes(element) {
-      var $subNavs = $(element).find('.nav-link + .navbar-nav');
+      var $subNavs = $(element).find(Selector$5.MEGAMENU_NAV);
+      var $parents = $(element).find(Selector$5.CURRENT).parents(Selector$5.NAV_ITEM);
       $(element).attr('role', 'application');
       $(element).find('> .navbar-nav').attr('role', 'menu');
       $(element).find(Selector$5.MEGAMENU_PANEL).attr('role', 'menu');
       $(element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $(element).find(Selector$5.NAV_LINK_BACK).attr({
-        'aria-hidden': true
-      });
+      $(element).find(Selector$5.NAV_LINK_BACK).attr('aria-hidden', 'true');
       $(element).find(Selector$5.NAV_ITEM).attr('role', 'presentation');
+      $parents.each(function () {
+        $(this).find(Selector$5.NAV_LINK).first().attr('aria-current', 'true');
+      });
       $subNavs.each(function () {
         var navId = Util.getUID(NAME$5);
         var $thisNavToggler = $(this).prev(Selector$5.NAV_LINK);
         var $thisNav = $(this);
         var $thisNavBackLink = $thisNav.find(Selector$5.NAV_LINK_BACK);
-        var $topMenu = $(this).closest(Selector$5.NAV_MENU).parent().closest(Selector$5.NAV_MENU).prev(Selector$5.NAV_LINK);
-        var goBackLabel = "go back to " + $topMenu.text() + " menu";
-
-        if (!$topMenu.length) {
-          goBackLabel = "go back to " + $(this).closest(Selector$5.MEGAMENU_PANEL).prev(Selector$5.NAV_LINK).text() + " menu";
-        }
-
         $thisNav.attr({
           id: navId,
           role: 'menu'
@@ -2281,8 +2273,7 @@
         });
         $thisNavBackLink.attr({
           role: 'menuitem',
-          'aria-controls': navId,
-          'aria-label': goBackLabel
+          'aria-controls': navId
         });
       });
     };
@@ -2299,11 +2290,15 @@
       var rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'));
       var translatePercentage = -(position - rootPosition) * PERCENTAGE / 2;
       var $thisNav = $target.closest(Selector$5.NAV_MENU);
-      var $rootNav = $(Selector$5.ROOT_NAV);
-      $rootNav.addClass(ClassName$5.TRANSITIONING); // open collapse
+      var $rootNav = $target.closest(Selector$5.ROOT_NAV);
+      $rootNav.addClass(ClassName$5.TRANSITIONING);
+
+      this._$navLinkCollapses.removeClass(ClassName$5.ACTIVE); // open collapse
+
 
       if ($target.attr('data-toggle') === 'collapse') {
         $target.siblings(Selector$5.MEGAMENU_PANEL).collapse('show');
+        $target.addClass(ClassName$5.ACTIVE);
 
         this._$topCollapseMenus.not($target.siblings(Selector$5.MEGAMENU_PANEL)).collapse('hide');
 
@@ -2311,6 +2306,7 @@
         $rootNav.css('transform', 'translateX(0%)');
       } else {
         $target.closest(Selector$5.MEGAMENU_PANEL).collapse('show');
+        $target.closest(Selector$5.NAV_LINK_COLLAPSE).addClass(ClassName$5.ACTIVE);
 
         this._$topCollapseMenus.not($target.closest(Selector$5.MEGAMENU_PANEL)).collapse('hide'); // show menu and hide other
 
@@ -2382,8 +2378,11 @@
     _proto._handleCollapseToggle = function _handleCollapseToggle(e) {
       var $this = $(e.target);
       var $thisCollapse = $($this.attr('href'));
+      $this.addClass(ClassName$5.ACTIVE);
 
-      this._$topCollapseMenus.not($thisCollapse).collapse('hide');
+      this._$navLinkCollapses.not($this).removeClass(ClassName$5.ACTIVE);
+
+      this._$topCollapseMenus.not($thisCollapse).removeClass(ClassName$5.ACTIVE).collapse('hide');
     };
 
     _proto._goForward = function _goForward(e) {
@@ -2391,7 +2390,7 @@
       var $this = $(e.target);
       var $thisNav = $this.closest(Selector$5.NAV_MENU);
       var $targetNav = $this.next(Selector$5.NAV_MENU);
-      var $rootNav = $(Selector$5.ROOT_NAV);
+      var $rootNav = $this.closest(Selector$5.ROOT_NAV);
       var $thisNavToggler = $this;
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
@@ -2440,7 +2439,7 @@
       var $this = $(e.target);
       var $thisNav = $this.closest(Selector$5.NAV_MENU);
       var $targetNav = $thisNav.parent().closest(Selector$5.NAV_MENU);
-      var $rootNav = $(Selector$5.ROOT_NAV);
+      var $rootNav = $this.closest(Selector$5.ROOT_NAV);
       var $targetNavToggler = $targetNav.find(Selector$5.NAV_LINK_EXPANDED);
       var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
       var navWidth = $rootNav.width();
@@ -2450,7 +2449,9 @@
         return false;
       }
 
-      $rootNav.addClass(ClassName$5.TRANSITIONING); // make only visible elements focusable
+      $rootNav.addClass(ClassName$5.TRANSITIONING); // reset main collapse height
+
+      $(Selector$5.MEGAMENU).height('auto'); // make only visible elements focusable
 
       $targetNav.find(Selector$5.NAV_LINK).attr({
         tabindex: 0,
@@ -2458,8 +2459,6 @@
       });
 
       if (currentTranslatePercentage === -PERCENTAGE) {
-        // reset main collapse height
-        $(Selector$5.MEGAMENU).css('height', 'auto');
         $rootNav.find('>.nav-item .nav-link').attr({
           tabindex: 0,
           'aria-hidden': false
@@ -3171,7 +3170,7 @@
    */
 
   var NAME$7 = 'navbar';
-  var VERSION$7 = '4.4.0';
+  var VERSION$7 = '4.4.1';
   var DATA_KEY$7 = 'bs.navbar';
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var BREAKPOINT = 768;
@@ -3311,7 +3310,7 @@
    */
 
   var NAME$8 = 'otab';
-  var VERSION$8 = '4.4.0';
+  var VERSION$8 = '4.4.1';
   var DATA_KEY$8 = 'bs.otab';
   var EVENT_KEY$6 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -4502,7 +4501,7 @@
    */
 
   var NAME$b = 'prioritynav';
-  var VERSION$b = '4.4.0';
+  var VERSION$b = '4.4.1';
   var DATA_KEY$b = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT$b = $.fn[NAME$b];
   var RESIZE_DURATION = 500;
@@ -4708,7 +4707,7 @@
    */
 
   var NAME$c = 'scrollup';
-  var VERSION$c = '4.4.0';
+  var VERSION$c = '4.4.1';
   var DATA_KEY$c = 'bs.scrollup';
   var EVENT_KEY$9 = "." + DATA_KEY$c;
   var DATA_API_KEY$7 = '.data-api';
@@ -5078,16 +5077,16 @@
       var $link = $([].slice.call(document.querySelectorAll(queries.join(','))));
 
       if ($link.hasClass(ClassName$c.DROPDOWN_ITEM)) {
-        $link.closest(Selector$d.DROPDOWN).find(Selector$d.DROPDOWN_TOGGLE).addClass(ClassName$c.ACTIVE);
-        $link.addClass(ClassName$c.ACTIVE);
+        $link.closest(Selector$d.DROPDOWN).find(Selector$d.DROPDOWN_TOGGLE).addClass(ClassName$c.ACTIVE).attr('aria-current', 'true');
+        $link.addClass(ClassName$c.ACTIVE).attr('aria-current', 'page');
       } else {
         // Set triggered link as active
-        $link.addClass(ClassName$c.ACTIVE); // Set triggered links parents as active
+        $link.addClass(ClassName$c.ACTIVE).attr('aria-current', 'page'); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(Selector$d.NAV_LIST_GROUP).prev(Selector$d.NAV_LINKS + ", " + Selector$d.LIST_ITEMS).addClass(ClassName$c.ACTIVE); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(Selector$d.NAV_LIST_GROUP).prev(Selector$d.NAV_LINKS + ", " + Selector$d.LIST_ITEMS).addClass(ClassName$c.ACTIVE).attr('aria-current', 'true'); // Handle special case when .nav-link is inside .nav-item
 
-        $link.parents(Selector$d.NAV_LIST_GROUP).prev(Selector$d.NAV_ITEMS).children(Selector$d.NAV_LINKS).addClass(ClassName$c.ACTIVE);
+        $link.parents(Selector$d.NAV_LIST_GROUP).prev(Selector$d.NAV_ITEMS).children(Selector$d.NAV_LINKS).addClass(ClassName$c.ACTIVE).attr('aria-current', 'true');
       }
 
       $(this._scrollElement).trigger(Event$b.ACTIVATE, {
@@ -5099,7 +5098,8 @@
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
         return node.classList.contains(ClassName$c.ACTIVE);
       }).forEach(function (node) {
-        return node.classList.remove(ClassName$c.ACTIVE);
+        node.classList.remove(ClassName$c.ACTIVE);
+        node.removeAttribute('aria-current');
       });
     } // Static
     ;
@@ -5757,6 +5757,318 @@
     $.fn[NAME$f] = JQUERY_NO_CONFLICT$f;
     return Toast._jQueryInterface;
   };
+
+  (function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (factory());
+  }(undefined, (function () {
+    /**
+     * Applies the :focus-visible polyfill at the given scope.
+     * A scope in this case is either the top-level Document or a Shadow Root.
+     *
+     * @param {(Document|ShadowRoot)} scope
+     * @see https://github.com/WICG/focus-visible
+     */
+    function applyFocusVisiblePolyfill(scope) {
+      var hadKeyboardEvent = true;
+      var hadFocusVisibleRecently = false;
+      var hadFocusVisibleRecentlyTimeout = null;
+
+      var inputTypesWhitelist = {
+        text: true,
+        search: true,
+        url: true,
+        tel: true,
+        email: true,
+        password: true,
+        number: true,
+        date: true,
+        month: true,
+        week: true,
+        time: true,
+        datetime: true,
+        'datetime-local': true
+      };
+
+      /**
+       * Helper function for legacy browsers and iframes which sometimes focus
+       * elements like document, body, and non-interactive SVG.
+       * @param {Element} el
+       */
+      function isValidFocusTarget(el) {
+        if (
+          el &&
+          el !== document &&
+          el.nodeName !== 'HTML' &&
+          el.nodeName !== 'BODY' &&
+          'classList' in el &&
+          'contains' in el.classList
+        ) {
+          return true;
+        }
+        return false;
+      }
+
+      /**
+       * Computes whether the given element should automatically trigger the
+       * `focus-visible` class being added, i.e. whether it should always match
+       * `:focus-visible` when focused.
+       * @param {Element} el
+       * @return {boolean}
+       */
+      function focusTriggersKeyboardModality(el) {
+        var type = el.type;
+        var tagName = el.tagName;
+
+        if (tagName == 'INPUT' && inputTypesWhitelist[type] && !el.readOnly) {
+          return true;
+        }
+
+        if (tagName == 'TEXTAREA' && !el.readOnly) {
+          return true;
+        }
+
+        if (el.isContentEditable) {
+          return true;
+        }
+
+        return false;
+      }
+
+      /**
+       * Add the `focus-visible` class to the given element if it was not added by
+       * the author.
+       * @param {Element} el
+       */
+      function addFocusVisibleClass(el) {
+        if (el.classList.contains('focus-visible')) {
+          return;
+        }
+        el.classList.add('focus-visible');
+        el.setAttribute('data-focus-visible-added', '');
+      }
+
+      /**
+       * Remove the `focus-visible` class from the given element if it was not
+       * originally added by the author.
+       * @param {Element} el
+       */
+      function removeFocusVisibleClass(el) {
+        if (!el.hasAttribute('data-focus-visible-added')) {
+          return;
+        }
+        el.classList.remove('focus-visible');
+        el.removeAttribute('data-focus-visible-added');
+      }
+
+      /**
+       * If the most recent user interaction was via the keyboard;
+       * and the key press did not include a meta, alt/option, or control key;
+       * then the modality is keyboard. Otherwise, the modality is not keyboard.
+       * Apply `focus-visible` to any current active element and keep track
+       * of our keyboard modality state with `hadKeyboardEvent`.
+       * @param {KeyboardEvent} e
+       */
+      function onKeyDown(e) {
+        if (e.metaKey || e.altKey || e.ctrlKey) {
+          return;
+        }
+
+        if (isValidFocusTarget(scope.activeElement)) {
+          addFocusVisibleClass(scope.activeElement);
+        }
+
+        hadKeyboardEvent = true;
+      }
+
+      /**
+       * If at any point a user clicks with a pointing device, ensure that we change
+       * the modality away from keyboard.
+       * This avoids the situation where a user presses a key on an already focused
+       * element, and then clicks on a different element, focusing it with a
+       * pointing device, while we still think we're in keyboard modality.
+       * @param {Event} e
+       */
+      function onPointerDown(e) {
+        hadKeyboardEvent = false;
+      }
+
+      /**
+       * On `focus`, add the `focus-visible` class to the target if:
+       * - the target received focus as a result of keyboard navigation, or
+       * - the event target is an element that will likely require interaction
+       *   via the keyboard (e.g. a text box)
+       * @param {Event} e
+       */
+      function onFocus(e) {
+        // Prevent IE from focusing the document or HTML element.
+        if (!isValidFocusTarget(e.target)) {
+          return;
+        }
+
+        if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {
+          addFocusVisibleClass(e.target);
+        }
+      }
+
+      /**
+       * On `blur`, remove the `focus-visible` class from the target.
+       * @param {Event} e
+       */
+      function onBlur(e) {
+        if (!isValidFocusTarget(e.target)) {
+          return;
+        }
+
+        if (
+          e.target.classList.contains('focus-visible') ||
+          e.target.hasAttribute('data-focus-visible-added')
+        ) {
+          // To detect a tab/window switch, we look for a blur event followed
+          // rapidly by a visibility change.
+          // If we don't see a visibility change within 100ms, it's probably a
+          // regular focus change.
+          hadFocusVisibleRecently = true;
+          window.clearTimeout(hadFocusVisibleRecentlyTimeout);
+          hadFocusVisibleRecentlyTimeout = window.setTimeout(function() {
+            hadFocusVisibleRecently = false;
+            window.clearTimeout(hadFocusVisibleRecentlyTimeout);
+          }, 100);
+          removeFocusVisibleClass(e.target);
+        }
+      }
+
+      /**
+       * If the user changes tabs, keep track of whether or not the previously
+       * focused element had .focus-visible.
+       * @param {Event} e
+       */
+      function onVisibilityChange(e) {
+        if (document.visibilityState == 'hidden') {
+          // If the tab becomes active again, the browser will handle calling focus
+          // on the element (Safari actually calls it twice).
+          // If this tab change caused a blur on an element with focus-visible,
+          // re-apply the class when the user switches back to the tab.
+          if (hadFocusVisibleRecently) {
+            hadKeyboardEvent = true;
+          }
+          addInitialPointerMoveListeners();
+        }
+      }
+
+      /**
+       * Add a group of listeners to detect usage of any pointing devices.
+       * These listeners will be added when the polyfill first loads, and anytime
+       * the window is blurred, so that they are active when the window regains
+       * focus.
+       */
+      function addInitialPointerMoveListeners() {
+        document.addEventListener('mousemove', onInitialPointerMove);
+        document.addEventListener('mousedown', onInitialPointerMove);
+        document.addEventListener('mouseup', onInitialPointerMove);
+        document.addEventListener('pointermove', onInitialPointerMove);
+        document.addEventListener('pointerdown', onInitialPointerMove);
+        document.addEventListener('pointerup', onInitialPointerMove);
+        document.addEventListener('touchmove', onInitialPointerMove);
+        document.addEventListener('touchstart', onInitialPointerMove);
+        document.addEventListener('touchend', onInitialPointerMove);
+      }
+
+      function removeInitialPointerMoveListeners() {
+        document.removeEventListener('mousemove', onInitialPointerMove);
+        document.removeEventListener('mousedown', onInitialPointerMove);
+        document.removeEventListener('mouseup', onInitialPointerMove);
+        document.removeEventListener('pointermove', onInitialPointerMove);
+        document.removeEventListener('pointerdown', onInitialPointerMove);
+        document.removeEventListener('pointerup', onInitialPointerMove);
+        document.removeEventListener('touchmove', onInitialPointerMove);
+        document.removeEventListener('touchstart', onInitialPointerMove);
+        document.removeEventListener('touchend', onInitialPointerMove);
+      }
+
+      /**
+       * When the polfyill first loads, assume the user is in keyboard modality.
+       * If any event is received from a pointing device (e.g. mouse, pointer,
+       * touch), turn off keyboard modality.
+       * This accounts for situations where focus enters the page from the URL bar.
+       * @param {Event} e
+       */
+      function onInitialPointerMove(e) {
+        // Work around a Safari quirk that fires a mousemove on <html> whenever the
+        // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
+        if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
+          return;
+        }
+
+        hadKeyboardEvent = false;
+        removeInitialPointerMoveListeners();
+      }
+
+      // For some kinds of state, we are interested in changes at the global scope
+      // only. For example, global pointer input, global key presses and global
+      // visibility change should affect the state at every scope:
+      document.addEventListener('keydown', onKeyDown, true);
+      document.addEventListener('mousedown', onPointerDown, true);
+      document.addEventListener('pointerdown', onPointerDown, true);
+      document.addEventListener('touchstart', onPointerDown, true);
+      document.addEventListener('visibilitychange', onVisibilityChange, true);
+
+      addInitialPointerMoveListeners();
+
+      // For focus and blur, we specifically care about state changes in the local
+      // scope. This is because focus / blur events that originate from within a
+      // shadow root are not re-dispatched from the host element if it was already
+      // the active element in its own scope:
+      scope.addEventListener('focus', onFocus, true);
+      scope.addEventListener('blur', onBlur, true);
+
+      // We detect that a node is a ShadowRoot by ensuring that it is a
+      // DocumentFragment and also has a host property. This check covers native
+      // implementation and polyfill implementation transparently. If we only cared
+      // about the native implementation, we could just check if the scope was
+      // an instance of a ShadowRoot.
+      if (scope.nodeType === Node.DOCUMENT_FRAGMENT_NODE && scope.host) {
+        // Since a ShadowRoot is a special kind of DocumentFragment, it does not
+        // have a root element to add a class to. So, we add this attribute to the
+        // host element instead:
+        scope.host.setAttribute('data-js-focus-visible', '');
+      } else if (scope.nodeType === Node.DOCUMENT_NODE) {
+        document.documentElement.classList.add('js-focus-visible');
+      }
+    }
+
+    // It is important to wrap all references to global window and document in
+    // these checks to support server-side rendering use cases
+    // @see https://github.com/WICG/focus-visible/issues/199
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      // Make the polyfill helper globally available. This can be used as a signal
+      // to interested libraries that wish to coordinate with the polyfill for e.g.,
+      // applying the polyfill to a shadow root:
+      window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill;
+
+      // Notify interested libraries of the polyfill's presence, in case the
+      // polyfill was loaded lazily:
+      var event;
+
+      try {
+        event = new CustomEvent('focus-visible-polyfill-ready');
+      } catch (error) {
+        // IE11 does not support using CustomEvent as a constructor directly:
+        event = document.createEvent('CustomEvent');
+        event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});
+      }
+
+      window.dispatchEvent(event);
+    }
+
+    if (typeof document !== 'undefined') {
+      // Apply the polyfill to the global document, so that no JavaScript
+      // coordination is required to use the polyfill in the top-level document:
+      applyFocusVisiblePolyfill(document);
+    }
+
+  })));
 
   exports.Alert = Alert;
   exports.Button = Button;

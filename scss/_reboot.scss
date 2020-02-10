@@ -381,6 +381,7 @@ label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
   margin-bottom: $label-margin-bottom;
+  font-weight: $font-weight-bold; // Boosted mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

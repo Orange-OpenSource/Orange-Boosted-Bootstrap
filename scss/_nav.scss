@@ -12,13 +12,10 @@
 }
 
 .nav-link {
-  display: block;
+  display: flex; // Boosted mod
   padding: $nav-link-padding-y $nav-link-padding-x;
-
-  // Boosted mod
-  font-weight: $font-weight-bold;
-  text-decoration: none;
-  // end mod
+  font-weight: $font-weight-bold; // Boosted mod
+  text-decoration: none; // Boosted mod
 
   @include hover-focus() {
     text-decoration: none;

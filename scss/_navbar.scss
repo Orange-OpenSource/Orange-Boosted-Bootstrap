@@ -92,7 +92,7 @@
   // Boosted mod
   @include media-breakpoint-up(sm) {
     align-self: flex-end;
-    margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem};
+    margin: map-get($spacers, 1)  map-get($spacers, 1) #{map-get($spacers, 1) + .25rem} 0;
   }
   // end mod
 
@@ -221,7 +221,7 @@
     }
 
     .nav-icon {
-      padding: $navbar-padding-y $spacer;
+      padding: .75rem $spacer 1rem;
     }
 
     .badge {
@@ -391,7 +391,7 @@
         }
 
         .navbar-brand {
-          margin: 0 $spacer 1.125rem map-get($spacers, 2);
+          margin: 0 $spacer 1.125rem 0;
 
           img {
             width: $navbar-brand-logo-expanded-height;

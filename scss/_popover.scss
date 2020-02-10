@@ -154,7 +154,7 @@
 
 // Offset the popover to account for the popover arrow
 .popover-header {
-  padding: $popover-header-padding-y $popover-header-padding-x;
+  padding: $popover-header-padding; // Boosted mod
   margin-bottom: 0; // Reset the default from Reboot
   @include font-size($font-size-base);
   color: $popover-header-color;
@@ -168,6 +168,6 @@
 }
 
 .popover-body {
-  padding: $popover-body-padding-y $popover-body-padding-x;
+  padding: $popover-body-padding; // Boosted mod
   color: $popover-body-color;
 }

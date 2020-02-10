@@ -26,9 +26,9 @@
   &::after {
     display: inline-block;
     align-self: center;
-    width: .875rem;
-    height: $caret-width;
-    margin-left: map-get($spacers, 2);
+    width: map-get($spacers, 2);
+    height: $o-sortable-icon-height;
+    margin-left: $o-sortable-icon-height;
     content: "";
     background: escape-svg($accordion-arrow-icon) no-repeat $o-sortable-icon-position / $o-sortable-icon-size;
   }
