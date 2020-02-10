@@ -163,10 +163,16 @@ This version fixes a few bugs and add tons of small improvements to better fit O
 * **navbar:** use close icon when collapsible menu is open ([1fa2dd5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1fa2dd51f1771bb4648ac67b345b7f21ac32c2fd))
 * **navbar:** use digital orange in navbars ([f20de5b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f20de5b48b2fe70942e210d37f1d3f5d0aeb306f))
 * **navbar:** use transitions between standard and minimized navbar ([fad4ae4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fad4ae43b7bbdcbd3b90563fe9cb891f4e66cb30))
+* **navbar:** remove left margin on navbar-brand ([5db69c4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/5db69c4d6346410f01e90ee3d07a94ea634b99b2))
+* **navbar:** move icons 2px up to match the brand ([d018996](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/d01899688318363aafb93fc00e81e18a448d1333))
 * **o-navbar:** handle navbar-title's line-heights ([aa76516](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/aa76516be7cf3af069705dfddb77f92d3d35c846))
 * **toggler:** update toggler icon according to the brand, remove border and icon is bigger ([e333908](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e33390828703f3b123aad58e34a296368778e2a0))
-* **supra navbar:** adjust spacings and sizes to match latest design kit ([48f35ac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/48f35ac9f45f44e2ce289a8b26fb2d3b74fd6f09))
 * **skiplinks:** improve skiplinks pattern, making it simpler for [#254](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/254) ([d4f4083](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d4f40833c6a913cf924e8f9819e7ac3661bef893))
+* **supra bar:** adjust spacings and sizes to match latest design kit ([48f35ac](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/48f35ac9f45f44e2ce289a8b26fb2d3b74fd6f09))
+* **supra bar:** ensure 40px height to match the brand ([a0bb045](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/a0bb0452a1a5a9f240f28aa52ecf09b8fab5b587))
+* **supra bar:** dropdown arrows are smaller ([0e8ec4b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0e8ec4bfc32989bd72f953ad176b4bb0677bbd41))
+* **supra bar:** increase spacing between nav items ([0d6d0b2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0d6d0b237d4a301437c2b55c84a62284e6e90d57))
+* **supra bar:** increase spacing between dropdowns and nav-icons ([bbaaaab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/bbaaaab82add927c869a5b9ee48097ee4dc59e69))
 </details>
 <details>
 <summary>Tables</summary>
@@ -227,6 +233,7 @@ This version fixes a few bugs and add tons of small improvements to better fit O
 * **JS:** disable ESlint sort-imports for focus-visible bundling ([6c4ed28](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6c4ed28eefe312d5c1770d8b531b593acc82b8fe))
 * **Bundlesize**: slightly increase boosted.css limit ([215e209](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/301/commits/215e2098f5a720cf4149461db877be0be107e488))
 * **workflow**: add Mattermost + Calibre actions ([0de4169](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/285/commits/0de4169869e77e0d8e4bc34d42996dd7e677b223))
+* **workflow**: add Slack action (multiple commits…)
 
 ### Documentation
 
