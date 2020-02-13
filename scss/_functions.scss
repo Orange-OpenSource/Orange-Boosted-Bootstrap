@@ -2,8 +2,10 @@
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
+// Boosted mod
 // Vendors
 @import "vendor/pow";
+// end mod
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
@@ -91,6 +93,7 @@
 }
 
 // Color contrast
+// Boosted mod
 @function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
   @if ($color == $primary) {
     @return $light;
