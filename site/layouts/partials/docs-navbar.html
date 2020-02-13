@@ -1,19 +1,19 @@
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar px-0">
-  <div class="container-xl flex-wrap flex-md-nowrap py-0 px-3">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Boosted">
+<header class="navbar navbar-expand navbar-dark bd-navbar">
+  <div class="container-xl flex-wrap flex-md-nowrap">
+    <a class="navbar-brand mr-2" href="/" aria-label="Boosted">
       <img src="/docs/{{ .Site.Params.docs_version }}/assets/img/orange_logo.svg" width="50" height="50" alt="Back to homepage" title="Go to homepage" />
     </a>
 
     <div class="navbar-nav-scroll order-3 order-md-0 d-flex justify-content-center justify-content-md-start">
       <ul class="navbar-nav bd-navbar-nav flex-row">
         <li class="nav-item">
-          <a class="nav-link{{ if .IsHome }} active{{ end }}" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+          <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ if eq .Page.Layout "docs" }} active{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+          <a class="nav-link{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ if eq .Page.Title "Examples" }} active{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+          <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
         </li>
       </ul>
     </div>

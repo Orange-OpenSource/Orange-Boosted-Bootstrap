@@ -290,7 +290,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" aria-current="true" href="#">Active</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
