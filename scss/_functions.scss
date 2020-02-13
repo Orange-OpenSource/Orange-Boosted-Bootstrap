@@ -2,6 +2,9 @@
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
+// Vendors
+@import "vendor/pow";
+
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
 @mixin _assert-ascending($map, $map-name) {
@@ -89,14 +92,33 @@
 
 // Color contrast
 @function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
+  @if ($color == $primary) {
+    @return $light;
+  }
   $r: red($color);
   $g: green($color);
   $b: blue($color);
-
-  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-
-  @return if($yiq >= $yiq-contrasted-threshold, $dark, $light);
+  // get the relative lum for each color
+  $luminancecolor: relativelum($r / 255, $g / 255, $b / 255);
+  $luminancewhite: relativelum(1, 1, 1);
+  // if luminance doesn't fit with white, return black
+  @return if((($luminancewhite + .05) / ($luminancecolor + .05)) < $yiq-contrasted-threshold, $dark, $light);
 }
+
+// Apply WCAG contrast algo
+// See https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+@function relativelum($r, $g, $b) {
+  @return ((transform($r) * .2126) + (transform($g) * .7152) + (transform($b) * .0722));
+}
+
+@function transform($x) {
+  @if ($x <= .03928) {
+    @return $x / 12.92;
+  } @else {
+    @return math-pow-polyfill((($x + .055) / 1.055), 2.4);
+  }
+}
+// end mod
 
 // Request a color level
 @function color-level($color: $primary, $level: 0) {
