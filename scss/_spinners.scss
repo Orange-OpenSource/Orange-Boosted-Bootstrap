@@ -16,6 +16,12 @@
   // stylelint-disable-next-line property-blacklist
   border-radius: 50%;
   animation: spinner-border .75s linear infinite;
+
+  // Boosted mod: override .text-light black background
+  &.text-light {
+    background-color: transparent;
+  }
+  // end mod
 }
 
 .spinner-border-sm {
@@ -42,7 +48,8 @@
   width: $spinner-width;
   height: $spinner-height;
   vertical-align: text-bottom;
-  background-color: currentColor;
+  // stylelint-disable-next-line declaration-no-important
+  background-color: currentColor !important; // Boosted mod: ensure .text-* backgrounds don't override this
   // stylelint-disable-next-line property-blacklist
   border-radius: 50%;
   opacity: 0;
@@ -53,3 +60,15 @@
   width: $spinner-width-sm;
   height: $spinner-height-sm;
 }
+
+// Boosted mod: Color variants
+[class*="spinner-"] {
+  @each $color, $value in $theme-colors {
+    @if ($value != $primary) and ($value != $secondary) and ($value != $dark) and ($value != $light) {
+      &.text-#{$color} {
+        color: $value;
+      }
+    }
+  }
+}
+// end mod
