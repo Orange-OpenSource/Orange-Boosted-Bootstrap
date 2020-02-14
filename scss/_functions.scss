@@ -92,6 +92,11 @@
 // Based on @ysds implementation
 // See https://github.com/twbs/bootstrap/pull/30168
 @function color-yiq($background, $foreground-dark: $yiq-text-dark, $foreground-light: $yiq-text-light) {
+  // Boosted mod: Orange is not the new Black
+  @if ($background == $primary) {
+    @return $foreground-light;
+  }
+  // end mod
   $l1: luminance($background);
   $l2: luminance(opaque($background, $foreground-light));
 
