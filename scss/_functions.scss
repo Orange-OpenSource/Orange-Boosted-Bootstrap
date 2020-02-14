@@ -2,9 +2,6 @@
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
-// Boosted mod explicitly import sass-math-pow for compatibility with various sass compilers
-@import "node_modules/sass-math-pow/sass/math-pow";
-
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
 @mixin _assert-ascending($map, $map-name) {
@@ -67,40 +64,46 @@
   @return $string;
 }
 
+
 // Color contrast
-// Boosted mod to apply WCAG contrast algo
-@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
-  @if ($color == $primary) {
-    @return $light;
+// Based on @ysds implementation
+// See https://github.com/twbs/bootstrap/pull/30168
+@function color-yiq($background, $foreground-dark: $yiq-text-dark, $foreground-light: $yiq-text-light) {
+  // Boosted mod: Orange is not the new Black
+  @if ($background == $primary) {
+    @return $foreground-light;
   }
-  $r: red($color);
-  $g: green($color);
-  $b: blue($color);
-  // get the relative lum for each color
-  $luminositecouleur: relativelum($r / 255, $g / 255, $b / 255);
-  $luminositeblanc: relativelum(1, 1, 1);
-  // if luminosite doesn't fit with white color return black
-  @if ((($luminositeblanc + .05) / ($luminositecouleur + .05)) < $yiq-contrasted-threshold) {
-    @return $dark;
-  } @else {
-    @return $light;
-  }
+  // end mod
+  $l1: luminance($background);
+  $l2: luminance(opaque($background, $foreground-light));
+
+  $contrast: if($l1 > $l2, ($l1 + .05) / ($l2 + .05), ($l2 + .05) / ($l1 + .05));
+
+  @return if($contrast < $yiq-contrasted-threshold, $foreground-dark, $foreground-light);
 }
 
-// Apply WCAG contrast algo : https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
-// Convert from HTMLCS JS algo
-@function relativelum($r, $g, $b) {
-  @return ((transform($r) * .2126) + (transform($g) * .7152) + (transform($b) * .0722));
+// Return WCAG2.0 relative luminance
+// See https://www.w3.org/WAI/GL/wiki/Relative_luminance
+@function luminance($color) {
+  $rgb: (
+    "r": red($color),
+    "g": green($color),
+    "b": blue($color)
+  );
+
+  @each $name, $value in $rgb {
+    $value: if($value / 255 < .03928, $value / 255 / 12.92, nth($luminance-list, $value + 1));
+    $rgb: map-merge($rgb, ($name: $value));
+  }
+
+  @return (map-get($rgb, "r") * .2126) + (map-get($rgb, "g") * .7152) + (map-get($rgb, "b") * .0722);
 }
 
-@function transform($x) {
-  @if ($x <= .03928) {
-    @return $x / 12.92;
-  } @else {
-    @return poly-pow((($x + .055) / 1.055), 2.4);
-  }
+// Return opaque color
+// opaque(#fff, rgba(0, 0, 0, .5)) => #808080
+@function opaque($background, $foreground) {
+  @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100);
 }
-// end mod
 
 // Retrieve color Sass maps
 @function color($key: "blue") {
