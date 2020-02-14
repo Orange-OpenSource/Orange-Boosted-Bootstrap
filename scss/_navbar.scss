@@ -197,6 +197,12 @@
 
   &:last-child .nav-item:last-child .nav-link {
     padding-right: 0;
+
+    // Boosted mod
+    &::before {
+      right: 0;
+    }
+    // end mod
   }
 
   .badge {
