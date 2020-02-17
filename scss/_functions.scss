@@ -66,7 +66,6 @@
 
 
 // Color contrast
-// Based on @ysds implementation
 // See https://github.com/twbs/bootstrap/pull/30168
 @function color-yiq($background, $foreground-dark: $yiq-text-dark, $foreground-light: $yiq-text-light) {
   // Boosted mod: Orange is not the new Black
@@ -84,6 +83,7 @@
 
 // Return WCAG2.0 relative luminance
 // See https://www.w3.org/WAI/GL/wiki/Relative_luminance
+// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
 @function luminance($color) {
   $rgb: (
     "r": red($color),
