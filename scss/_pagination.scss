@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  flex-wrap: wrap; // Boosted mod
   @include list-unstyled();
   @include border-radius();
 }
