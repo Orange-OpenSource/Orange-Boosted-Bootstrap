@@ -30,7 +30,10 @@ html {
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
-// Boosted mod: already removed as IE10 support has been dropped
+// Boosted mod: already removed as IE10 support has been dropped, keeping only main for IE 11
+main {
+  display: block;
+}
 
 // Body
 //
