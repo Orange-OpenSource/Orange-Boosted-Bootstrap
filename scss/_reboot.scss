@@ -576,15 +576,3 @@ template {
 [hidden] {
   display: none !important;
 }
-
-// Boosted mod: PR in BS v5  → https://github.com/twbs/bootstrap/pull/29870
-// Placeholder used to reset transitions, when user prefers reduced motion
-@if $enable-prefers-reduced-motion-media-query {
-  @media (prefers-reduced-motion: reduce) {
-    %no-transition {
-      // stylelint-disable-next-line property-blacklist
-      transition-duration: .01ms !important;
-    }
-  }
-}
-// end mod
