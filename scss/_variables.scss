@@ -910,7 +910,7 @@ $dropdown-item-padding-y:           map-get($spacers, 2) !default;
 $dropdown-item-padding-x:           map-get($spacers, 2) !default;
 
 $dropdown-header-color:             $black !default;
-
+$dropdown-header-padding:           $dropdown-padding-y !default; // Boosted mod
 
 // Pagination
 

@@ -26,6 +26,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-toc
 
+redirect_from:
+  json: false
+
 # boosted mod
 grid:
   xs:

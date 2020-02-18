@@ -11,7 +11,7 @@
     <summary>Boosted framework in SCSS. Includes fonts and JavaScript</summary>
     <language>en-us</language>
     <projectUrl>https://boosted.orange.com</projectUrl>
-    <iconUrl>https://boosted.orange.com/docs/4.4/assets/img/favicons/apple-touch-icon.png</iconUrl>
+    <icon>boosted.png</icon>
     <license type="file">LICENSE.txt</license>
     <copyright>Copyright 2017-2019</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -28,9 +28,9 @@
     <file src="dist\js\boosted*.js" target="content\Scripts" />
     <file src="dist\js\boosted*.js.map" target="content\Scripts" />
 
-    <file src="scss\**\*.scss" target="contentFiles\Content\boosted" />
-    <file src="dist\js\boosted*.js" target="contentFiles\Scripts" />
-    <file src="dist\js\boosted*.js.map" target="contentFiles\Scripts" />
+    <file src="scss\**\*.scss" target="contentFiles\any\any\wwwroot\scss" />
+    <file src="dist\js\boosted*.js" target="contentFiles\any\any\wwwroot\js" />
+    <file src="dist\js\boosted*.js.map" target="contentFiles\any\any\wwwroot\js" />
 
   </files>
 </package>

@@ -9,7 +9,7 @@
 
     @if $enable-prefers-reduced-motion-media-query {
       @media (prefers-reduced-motion: reduce) {
-        transition-duration: .01ms;
+        transition: none;
       }
     }
   }
