@@ -204,7 +204,7 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: $spacer;
+  padding: $dropdown-header-padding;
   margin-bottom: 0; // for use with heading elements
   @include font-size($font-size-sm);
   color: $dropdown-header-color;

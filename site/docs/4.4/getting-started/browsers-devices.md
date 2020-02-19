@@ -90,7 +90,7 @@ Similarly, the latest versions of most desktop browsers are supported.
       <td class="bg-success font-weight-bold">Supported</td>
       <td class="bg-success font-weight-bold">Supported</td>
       <td class="text-muted">N/A</td>
-      <td class="text-muted">N/A</td>
+      <td class="bg-success font-weight-bold">Supported</td>
       <td class="bg-success font-weight-bold">Supported</td>
       <td class="bg-success font-weight-bold">Supported</td>
     </tr>

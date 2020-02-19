@@ -51,7 +51,7 @@
   }
 
   // Boosted mod
-  .js-focus-visible &:focus:not(.focus-visible) ~ .custom-control-label::before {
+  .js-focus-visible &:focus:not([data-focus-visible-added]) ~ .custom-control-label::before {
     outline: 0;
   }
   // end mod
@@ -157,7 +157,7 @@
     outline-color: $black;
   }
 
-  .js-focus-visible .custom-control-input:checked:focus:not(.focus-visible) ~ .custom-control-label::before {
+  .js-focus-visible .custom-control-input:checked:focus:not([data-focus-visible-added]) ~ .custom-control-label::before {
     outline: 0;
   }
   //end mod
@@ -242,7 +242,7 @@
       }
     }
 
-    .js-focus-visible &:focus:not(.focus-visible) ~ .custom-control-label::after {
+    .js-focus-visible &:focus:not([data-focus-visible-added]) ~ .custom-control-label::after {
       outline: 0;
     }
   }

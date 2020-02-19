@@ -30,7 +30,10 @@ html {
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
-// Boosted mod: already removed as IE10 support has been dropped
+// Boosted mod: already removed as IE10 support has been dropped, keeping only main for IE 11
+main {
+  display: block;
+}
 
 // Body
 //
@@ -72,8 +75,8 @@ body {
 // Boosted mod
 // Using the :focus-visible polyfill to hide outline defensively
 // See https://github.com/WICG/focus-visible
-.js-focus-visible :focus:not(.focus-visible),
-.js-focus-visible .focus:not(.focus-visible) {
+.js-focus-visible :focus:not([data-focus-visible-added]),
+.js-focus-visible .focus:not([data-focus-visible-added]) {
   outline: 0 !important;
 }
 // end mod
@@ -573,15 +576,3 @@ template {
 [hidden] {
   display: none !important;
 }
-
-// Boosted mod: PR in BS v5  → https://github.com/twbs/bootstrap/pull/29870
-// Placeholder used to reset transitions, when user prefers reduced motion
-@if $enable-prefers-reduced-motion-media-query {
-  @media (prefers-reduced-motion: reduce) {
-    %no-transition {
-      // stylelint-disable-next-line property-blacklist
-      transition-duration: .01ms !important;
-    }
-  }
-}
-// end mod

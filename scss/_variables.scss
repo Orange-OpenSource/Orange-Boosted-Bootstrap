@@ -117,7 +117,8 @@ $chevron-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $yiq-contrasted-threshold:  4.5 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
@@ -136,15 +137,6 @@ $escaped-characters: (
   ("(","%28"),
   (")","%29"),
 ) !default;
-
-// Boosted mod: PR in BS v5  → https://github.com/twbs/bootstrap/pull/29870
-// Selectors which are isolated in the transition mixin to prevent invalid selector stack
-$pseudo-vendor-prefixes: (
-  "::-webkit-",
-  "::-moz-",
-  "::-ms-"
-) !default;
-// end mod
 
 // Options
 //
@@ -919,7 +911,7 @@ $dropdown-item-padding-y:           map-get($spacers, 2) !default;
 $dropdown-item-padding-x:           map-get($spacers, 2) !default;
 
 $dropdown-header-color:             $black !default;
-
+$dropdown-header-padding:           $dropdown-padding-y !default; // Boosted mod
 
 // Pagination
 

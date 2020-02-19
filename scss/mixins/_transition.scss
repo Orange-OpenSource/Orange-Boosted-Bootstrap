@@ -6,24 +6,11 @@
     } @else {
       transition: $transition;
     }
-  }
 
-  // Boosted mod: PR in BS v5  → https://github.com/twbs/bootstrap/pull/29870
-  @if $enable-prefers-reduced-motion-media-query {
-    $isolate: false;
-    @each $selector in $pseudo-vendor-prefixes {
-      @if str-index(quote(#{&}), $selector) {
-        $isolate: true;
-      }
-    }
-
-    @if $isolate {
+    @if $enable-prefers-reduced-motion-media-query {
       @media (prefers-reduced-motion: reduce) {
-        transition-duration: .01ms;
+        transition: none;
       }
-    } @else {
-      @extend %no-transition;
     }
   }
-  // end mod
 }

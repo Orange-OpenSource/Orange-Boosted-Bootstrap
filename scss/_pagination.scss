@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  flex-wrap: wrap; // Boosted mod
   @include list-unstyled();
   @include border-radius();
 }
@@ -165,6 +166,39 @@
   &.disabled:first-child .page-link::before,
   &.disabled:last-child .page-link::after {
     opacity: .2;
+  }
+
+  // Ensure we only display 6 items:
+  // - the first three items
+  // - the last three items
+  // - including the .active one (so maybe not the third last item)
+  @include media-breakpoint-down(sm) {
+    display: none;
+
+    &.active,
+    &:nth-child(-n+3),
+    &:nth-last-child(-n+3) {
+      display: list-item;
+    }
+
+    &.active:not(:nth-child(-n+3)):not(:nth-last-child(-n+3)) ~ &:nth-last-child(3) {
+      display: none;
+    }
+  }
+
+  // The same than above, but for 8 items
+  @include media-breakpoint-between(sm, md) {
+    display: none;
+
+    &.active,
+    &:nth-child(-n+4),
+    &:nth-last-child(-n+4) {
+      display: list-item;
+    }
+
+    &.active:not(:nth-child(-n+4)):not(:nth-last-child(-n+4)) + &:nth-last-child(4) {
+      display: none;
+    }
   }
   // End mod
 }
