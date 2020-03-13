@@ -62,7 +62,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
     <div class="swiper-button-prev" title="Previous"></div>
     <div class="swiper-button-next" title="Next"></div>
 </div>
-<button id="swiperPlayButton" type="button" class="btn btn-info btn-xs mt-0" aria-label="Pause Carousel" title="Pause Carousel">
+<button id="swiperPlayButton" type="button" class="btn btn-info btn-icon btn-xs mt-0" aria-label="Pause Carousel" title="Pause Carousel">
 <span class="icon-Pause" aria-hidden="true"></span>
 </button>
 {% endcapture %}
