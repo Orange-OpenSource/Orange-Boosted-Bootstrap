@@ -104,9 +104,18 @@
   @include hover-focus() {
     color: $carousel-control-color;
     text-decoration: none;
-    outline: $border-width solid $input-focus-border-color; // Boosted mod
     opacity: $carousel-control-hover-opacity;
   }
+
+  // Boosted mod
+  @include focus() {
+    outline: $border-width solid $input-focus-border-color;
+  }
+
+  .js-focus-visible &:focus:not([data-focus-visible-added]) {
+    outline: 0;
+  }
+  // end mod
 }
 .carousel-control-prev {
   left: 0;

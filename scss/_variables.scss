@@ -303,7 +303,7 @@ $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 $transition-focus:            outline-offset .2s ease-in-out !default; // Boosted mod
-$transition-carousel:         width .5s ease, outline-offset .2s ease-in-out !default; // Boosted mod
+
 
 $embed-responsive-aspect-ratios: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -1243,7 +1243,7 @@ $carousel-control-color:             $black !default;
 $carousel-control-width:             map-get($spacers, 4) !default; // Boosted mod
 $carousel-control-opacity:           .5 !default;
 $carousel-control-hover-opacity:     .9 !default;
-$carousel-control-transition:        opacity .15s ease !default;
+$carousel-control-transition:        opacity .15s ease, outline-offset .2s ease-in-out !default; // Boosted mod
 
 $carousel-indicator-width:           map-get($spacers, 4) !default; // Boosted mod
 $carousel-indicator-height:          3px !default;
