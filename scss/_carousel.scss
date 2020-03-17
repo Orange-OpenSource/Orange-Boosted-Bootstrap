@@ -129,6 +129,12 @@
     background-image: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
   }
 }
+// Boosted mod
+.carousel-control-pause {
+  position: relative;
+  z-index: 2;
+}
+// end mod
 
 // Icons for within
 .carousel-control-prev-icon,

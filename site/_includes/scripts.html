@@ -93,25 +93,31 @@
         }
       });
     });
-
-    // Carousel pause and play
-    $(document).ready(function () {
-      $("#carouselPlayButton").click(function () {
-        if ($("span",this).hasClass("icon-Pause")) {
-          $('#carouselExampleControls').carousel('pause');
-          $(this).attr("aria-label", "Play Carousel");
-          $(this).attr("title", "Play Carousel");
-          $("span",this).toggleClass("icon-Pause icon-Play");
-        } else {
-          $('#carouselExampleControls').carousel('cycle');
-          $(this).attr("aria-label", "Pause Carousel");
-          $(this).attr("title", "Pause Carousel");
-          $("span",this).toggleClass("icon-Play icon-Pause");
-        }
-      });
-    });
   </script>
   <!-- end mod -->
+{%- endif -%}
+
+{%- if page.layout == "docs" and page.title == "Carousel" -%}
+<!-- Boosted mod -->
+<script>
+  // Carousel pause and play
+  $(document).ready(function () {
+    $("#carouselPlayButton").click(function () {
+      if ($("span",this).hasClass("icon-Pause")) {
+        $('#carouselExampleControls').carousel('pause');
+        $(this).attr("aria-label", "Play Carousel");
+        $(this).attr("title", "Play Carousel");
+        $("span",this).toggleClass("icon-Pause icon-Play");
+      } else {
+        $('#carouselExampleControls').carousel('cycle');
+        $(this).attr("aria-label", "Pause Carousel");
+        $(this).attr("title", "Pause Carousel");
+        $("span",this).toggleClass("icon-Play icon-Pause");
+      }
+    });
+  });
+</script>
+<!-- end mod -->
 {%- endif -%}
 
 {%- if page.title == "Boostwatch" -%}
