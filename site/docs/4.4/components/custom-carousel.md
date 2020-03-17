@@ -13,7 +13,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
 ## Demo
 
 {% capture example %}
-<div class="swiper-container mb-0">
+<div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide" id="slide1">
             <div class="card">
