@@ -3,30 +3,25 @@
 // Carousel
 // --------------------------------------------------
 
+.swiper-button-prev {
+  @extend .carousel-control-prev;
+  @extend .carousel-control-prev-icon;
+}
+
+.swiper-button-next {
+  @extend .carousel-control-next;
+  @extend .carousel-control-next-icon;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   top: subtract(50%, 10px);
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  background: none !important; // stylelint-disable-line declaration-no-important
   @include transition($transition-focus);
 
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
   }
-}
-
-.swiper-button-prev::before,
-.swiper-button-next::before {
-  font-family: icon-orange;
-  font-size: $h2-font-size;
-  content: "\e93f";
-}
-
-.swiper-button-next::before {
-  content: "\e93e";
 }
 
 .swiper-pagination-bullet,
