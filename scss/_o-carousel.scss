@@ -45,12 +45,8 @@
   overflow: hidden;
 }
 
-.swiper-wrapper {
-  margin-bottom: map-get($spacers, 4);
-}
-
 .swiper-pagination {
-  bottom: 6px;
+  bottom: 0;
 }
 
 .swiper-slide {
@@ -69,20 +65,8 @@
     }
   }
 
-  .card-title {
-    margin: 0;
-    font-weight: $font-weight-bold;
-  }
-
   .card-body {
-    position: absolute;
-    bottom: $spacer;
-    left: $spacer * 2;
-    background-color: $white;
-
-    p {
-      margin: 0;
-    }
+    @extend .carousel-caption;
   }
 }
 
