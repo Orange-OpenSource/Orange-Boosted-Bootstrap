@@ -3,108 +3,25 @@
 // Carousel
 // --------------------------------------------------
 
-// native boostrap
-
-.carousel {
-  margin-bottom: 1.875rem;
+.swiper-button-prev {
+  @extend .carousel-control-prev;
+  @extend .carousel-control-prev-icon;
 }
 
-.carousel .carousel-item img {
-  width: 100%;
+.swiper-button-next {
+  @extend .carousel-control-next;
+  @extend .carousel-control-next-icon;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  top: auto;
-  bottom: subtract(50%, 1.875rem);
-  width: 3.75rem;
-  height: 3.75rem;
-  text-decoration: none;
-  text-shadow: none;
-  background-color: transparent;
-  opacity: .8;
-  @include transition($transition-carousel);
-
-  // Boosted mod
-  &:focus {
-    outline: $border-width solid $input-focus-border-color;
-    outline-offset: -#{$border-width};
-  }
-  // end mod
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  margin-top: -1.125rem;
-  font-size: 1.875rem;
-  color: $black;
-  background-repeat: no-repeat;
-
-  &::before {
-    font-family: icon-orange;
-  }
-}
-
-.carousel-control-prev-icon::before {
-  content: "\e93f";
-}
-
-.carousel-control-next-icon::before {
-  content: "\e93e";
-}
-
-.carousel-indicators {
-  bottom: 0;
-  align-items: center;
-
-  &:hover {
-    cursor: default;
-  }
-
-  li {
-    flex-grow: 0;
-    width: map-get($spacers, 2);
-    height: map-get($spacers, 2);
-    margin-right: .375rem;
-    background-color: $black;
-    border: $border-width / 2 solid $white;
-    @include border-radius(50%);
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .active {
-    background-color: theme-color("primary");
-  }
-}
-
-// swiper
 .swiper-button-prev,
 .swiper-button-next {
   top: subtract(50%, 10px);
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  background: none !important; // stylelint-disable-line declaration-no-important
   @include transition($transition-focus);
 
   &:focus {
     outline: $border-width solid $input-focus-border-color;
     outline-offset: -#{$border-width};
   }
-}
-
-.swiper-button-prev::before,
-.swiper-button-next::before {
-  font-family: icon-orange;
-  font-size: $h2-font-size;
-  content: "\e93f";
-}
-
-.swiper-button-next::before {
-  content: "\e93e";
 }
 
 .swiper-pagination-bullet,
@@ -128,12 +45,8 @@
   overflow: hidden;
 }
 
-.swiper-wrapper {
-  margin-bottom: map-get($spacers, 4);
-}
-
 .swiper-pagination {
-  bottom: 6px;
+  bottom: 0;
 }
 
 .swiper-slide {
@@ -152,20 +65,8 @@
     }
   }
 
-  .card-title {
-    margin: 0;
-    font-weight: $font-weight-bold;
-  }
-
   .card-body {
-    position: absolute;
-    bottom: $spacer;
-    left: $spacer * 2;
-    background-color: $white;
-
-    p {
-      margin: 0;
-    }
+    @extend .carousel-caption;
   }
 }
 
