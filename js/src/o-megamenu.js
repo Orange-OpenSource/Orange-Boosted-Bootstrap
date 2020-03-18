@@ -69,8 +69,12 @@ class MegaMenu {
   constructor(element, config) {
     this._element = element
     this._$parentNavbarClasses = $(this._element).parents(Selector.PARENT).attr('class')
-    this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH
-    this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2)
+    if (typeof this._$parentNavbarClasses !== 'undefined') {
+      this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH
+      this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2)
+    } else {
+      this._$breakpoint = 'md'
+    }
     this._$navLinks = $(this._element).find(Selector.NAV_LINK)
     this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
     this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
@@ -85,6 +89,13 @@ class MegaMenu {
       this._addAriaAttributes(this._element)
     }
     this.goTo = this._initPosition
+
+    window.addEventListener('orientationchange', function () {
+      this._addEventListeners()
+      if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
+        this._addAriaAttributes(this._element)
+      }
+    })
   }
 
   // getters
