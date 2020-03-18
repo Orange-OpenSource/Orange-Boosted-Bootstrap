@@ -27,6 +27,16 @@ const ARROW_DOWN_KEYCODE = 40 // KeyboardEvent.which value for down arrow key
 const TIMEOUT = 1000 // Timeout befor focusing first element
 const PERCENTAGE = 100 // Width slide proportion
 const SPLITLENGHT = 4
+const CLASSLENGTH = 'navbar-expand-'.length
+
+const BreakPoints = {
+  xs: 0,
+  sm: 480,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  xxl: 1440
+}
 
 const ClassName = {
   TRANSITIONING: 'transitioning',
@@ -34,17 +44,18 @@ const ClassName = {
 }
 
 const Selector = {
-  MEGAMENU    : '.mega-menu',
-  ROOT_NAV : '.mega-menu > .navbar-nav',
-  MEGAMENU_PANEL : '.mega-menu-panel',
-  MEGAMENU_NAV : '.nav-link + .navbar-nav',
-  NAV_MENU : '.navbar-nav',
-  NAV_ITEM : '.nav-item',
-  NAV_LINK : '.nav-link',
+  MEGAMENU          : '.mega-menu',
+  PARENT            : '.navbar',
+  ROOT_NAV          : '.mega-menu > .navbar-nav',
+  MEGAMENU_PANEL    : '.mega-menu-panel',
+  MEGAMENU_NAV      : '.nav-link + .navbar-nav',
+  NAV_MENU          : '.navbar-nav',
+  NAV_ITEM          : '.nav-item',
+  NAV_LINK          : '.nav-link',
   NAV_LINK_COLLAPSE : '.nav-link[data-toggle=collapse]',
-  NAV_LINK_BACK : '.nav-link.back',
+  NAV_LINK_BACK     : '.nav-link.back',
   NAV_LINK_EXPANDED : '.nav-link[aria-expanded=true]',
-  CURRENT: '.nav-link[aria-current="page"]'
+  CURRENT           : '.nav-link[aria-current="page"]'
 }
 
 
@@ -57,6 +68,9 @@ const Selector = {
 class MegaMenu {
   constructor(element, config) {
     this._element = element
+    this._$parentNavbarClasses = $(this._element).parents(Selector.PARENT).attr('class')
+    this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH
+    this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2)
     this._$navLinks = $(this._element).find(Selector.NAV_LINK)
     this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
     this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
@@ -67,7 +81,9 @@ class MegaMenu {
       this._config.noFocus = false
     }
     this._addEventListeners()
-    this._addAriaAttributes(this._element)
+    if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
+      this._addAriaAttributes(this._element)
+    }
     this.goTo = this._initPosition
   }
 
@@ -82,9 +98,11 @@ class MegaMenu {
   // private
 
   _addEventListeners() {
-    this._$goForwardLinks.on('click', (event) => this._goForward(event))
-    this._$goBackLinks.on('click', (event) => this._goBackward(event))
-    this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
+    if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
+      this._$goForwardLinks.on('click', (event) => this._goForward(event))
+      this._$goBackLinks.on('click', (event) => this._goBackward(event))
+      this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
+    }
     if (!this._config.noFocus) {
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
     }

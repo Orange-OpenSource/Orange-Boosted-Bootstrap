@@ -3,7 +3,7 @@
 //
 
 .mega-menu-panel {
-  [role="menu"] {
+  .navbar-nav .navbar-nav {
     flex-direction: column;
   }
 
@@ -178,13 +178,14 @@
             padding: 1rem 0;
           }
 
-          [aria-haspopup] {
+          > .container#{$upfix} + .container#{$upfix} .nav-link:not(:only-child) {
             padding: 0 0 map-get($spacers, 2);
             margin: 0 map-get($spacers, 5) map-get($spacers, 2) 0;
             border-bottom: $border-width / 2 solid $gray-700;
           }
 
-          [role="menu"] .nav-link {
+          // stylelint-disable-next-line selector-max-class,selector-max-compound-selectors
+          .navbar-nav .navbar-nav .nav-link {
             padding: map-get($spacers, 1) map-get($spacers, 5) map-get($spacers, 1) 0;
           }
 
