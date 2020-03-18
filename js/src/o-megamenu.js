@@ -223,7 +223,7 @@ class MegaMenu {
     const $this = $(e.target)
     const $thisCollapse = $($this.attr('href'))
 
-    $this.addClass(ClassName.ACTIVE)
+    $this.toggleClass(ClassName.ACTIVE)
     this._$navLinkCollapses.not($this).removeClass(ClassName.ACTIVE)
     this._$topCollapseMenus.not($thisCollapse).removeClass(ClassName.ACTIVE).collapse('hide')
   }
