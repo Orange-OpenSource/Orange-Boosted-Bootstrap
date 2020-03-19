@@ -75,6 +75,7 @@ class MegaMenu {
     } else {
       this._$breakpoint = 'md'
     }
+    this._$mediaQuery = window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`)
     this._$navLinks = $(this._element).find(Selector.NAV_LINK)
     this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
     this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
@@ -85,19 +86,16 @@ class MegaMenu {
       this._config.noFocus = false
     }
     this._addEventListeners()
-    if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
-      this._addAriaAttributes(this._element)
+    if (this._$mediaQuery.matches) {
+      this._setupMegaMenu()
     }
     this.goTo = this._initPosition
 
-    window.addEventListener('orientationchange', () => {
-      this._addEventListeners()
-      if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
-        this._addAriaAttributes(this._element)
+    this._$mediaQuery.addListener((event) => {
+      if (event.matches) {
+        this._setupMegaMenu()
       } else {
-        this._removeAriaAttributes(this._element)
-        $(this._element).find(Selector.NAV_MENU).first().css('transform', 'none')
-        $(this._element).height('auto')
+        this._unsetMegaMenu()
       }
     })
   }
@@ -111,17 +109,23 @@ class MegaMenu {
   // public
 
   // private
+  _setupMegaMenu() {
+    this._addAriaAttributes(this._element)
+    this._$goForwardLinks.on('click', (event) => this._goForward(event))
+    this._$goBackLinks.on('click', (event) => this._goBackward(event))
+    this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
+  }
+
+  _unsetMegaMenu() {
+    this._removeAriaAttributes(this._element)
+    $(this._element).find(Selector.NAV_MENU).first().css('transform', 'none')
+    $(this._element).height('auto')
+    this._$goForwardLinks.off('click', (event) => this._goForward(event))
+    this._$goBackLinks.off('click', (event) => this._goBackward(event))
+    this._$navLinks.off('keydown', (event) => this._manageKeyDown(event))
+  }
 
   _addEventListeners() {
-    if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
-      this._$goForwardLinks.on('click', (event) => this._goForward(event))
-      this._$goBackLinks.on('click', (event) => this._goBackward(event))
-      this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
-    } else {
-      this._$goForwardLinks.off('click', (event) => this._goForward(event))
-      this._$goBackLinks.off('click', (event) => this._goBackward(event))
-      this._$navLinks.off('keydown', (event) => this._manageKeyDown(event))
-    }
     if (!this._config.noFocus) {
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
     }
