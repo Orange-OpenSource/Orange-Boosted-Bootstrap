@@ -119,6 +119,7 @@ class MegaMenu {
   _unsetMegaMenu() {
     this._removeAriaAttributes(this._element)
     $(this._element).find(Selector.NAV_MENU).first().css('transform', 'none')
+    $(this._element).find(Selector.NAV_MENU).show()
     $(this._element).height('auto')
     this._$goForwardLinks.off('click', (event) => this._goForward(event))
     this._$goBackLinks.off('click', (event) => this._goBackward(event))
