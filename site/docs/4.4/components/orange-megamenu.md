@@ -31,7 +31,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
           <div class="mega-menu navbar-collapse collapse" id="megamenu">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link collapsed" href="#mega-level-1-collapse" data-toggle="collapse">Shop</a>
+                <a class="nav-link" href="#mega-level-1-collapse" data-toggle="collapse">Shop</a>
                 <div class="mega-menu-panel collapse" id="mega-level-1-collapse">
                   <div class="container-lg">
                     <a class="nav-link all" href="#">View all shop</a>
@@ -47,7 +47,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                           <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
                           <li class="nav-item"><span class="nav-heading text-primary">Mobile</span></li>
                           <li class="nav-item"><a class="nav-link" href="#">Phones</a></li>
-                          <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Plans</a></li>
+                          <li class="nav-item"><a class="nav-link active" href="#">Plans</a></li>
                           <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
                         </ul>
                       </li>
@@ -86,7 +86,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link collapsed" href="#mega-level-2-collapse" data-toggle="collapse">Discover</a>
+                <a class="nav-link" href="#mega-level-2-collapse" data-toggle="collapse">Discover</a>
                 <div class="mega-menu-panel collapse" id="mega-level-2-collapse">
                   <div class="container-lg">
                     <a class="nav-link all" href="#">View all discoveries</a>
@@ -103,7 +103,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                   </div>
                 </div>
               </li>
-              <li class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse">My Orange</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">My Orange</a></li>
             </ul>
           </div>
         </div>
