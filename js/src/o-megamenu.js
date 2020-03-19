@@ -90,10 +90,14 @@ class MegaMenu {
     }
     this.goTo = this._initPosition
 
-    window.addEventListener('orientationchange', function () {
+    window.addEventListener('orientationchange', () => {
       this._addEventListeners()
       if (window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`).matches) {
         this._addAriaAttributes(this._element)
+      } else {
+        this._removeAriaAttributes(this._element)
+        $(this._element).find(Selector.NAV_MENU).first().css('transform', 'none')
+        $(this._element).height('auto')
       }
     })
   }
@@ -113,6 +117,10 @@ class MegaMenu {
       this._$goForwardLinks.on('click', (event) => this._goForward(event))
       this._$goBackLinks.on('click', (event) => this._goBackward(event))
       this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
+    } else {
+      this._$goForwardLinks.off('click', (event) => this._goForward(event))
+      this._$goBackLinks.off('click', (event) => this._goBackward(event))
+      this._$navLinks.off('keydown', (event) => this._manageKeyDown(event))
     }
     if (!this._config.noFocus) {
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
@@ -154,6 +162,35 @@ class MegaMenu {
       $thisNavBackLink.attr({
         role: 'menuitem',
         'aria-controls': navId
+      })
+    })
+  }
+
+  _removeAriaAttributes(element) {
+    const $subNavs = $(element).find(Selector.MEGAMENU_NAV)
+
+    $(element).attr('role', null)
+    $(element).find('> .navbar-nav').attr('role', null)
+    $(element).find(Selector.MEGAMENU_PANEL).attr('role', null)
+    $(element).find('.nav-link[data-toggle=collapse]').attr('role', null)
+    $(element).find(Selector.NAV_LINK_BACK).attr('aria-hidden', null)
+    $(element).find(Selector.NAV_ITEM).attr('role', null)
+
+    $subNavs.each(function () {
+      const $thisNavToggler = $(this).prev(Selector.NAV_LINK)
+      const $thisNav = $(this)
+      const $thisNavBackLink = $thisNav.find(Selector.NAV_LINK_BACK)
+
+      $thisNav.attr('role', null)
+      $thisNavToggler.attr({
+        role: null,
+        'aria-controls': null,
+        'aria-expanded': null,
+        'aria-haspopup': null
+      })
+      $thisNavBackLink.attr({
+        role: null,
+        'aria-controls': null
       })
     })
   }
