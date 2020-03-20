@@ -55,12 +55,13 @@
 
   .o-tab-heading {
     &::after {
+      display: block;
       align-self: center;
       width: $card-accordion-spacer;
       height: .4375rem;
-      margin-left: auto;
+      margin: 0 map-get($spacers, 2) 0 auto;
       content: "";
-      background: escape-svg($accordion-arrow-icon) no-repeat right $custom-select-padding-x center / $custom-select-bg-size;
+      background: escape-svg($accordion-arrow-icon)  no-repeat 50% / $accordion-arrow-size;
     }
 
     &:hover::after,
