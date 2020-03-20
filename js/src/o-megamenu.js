@@ -87,15 +87,18 @@ class MegaMenu {
     }
     this._addEventListeners()
     if (this._$mediaQuery.matches) {
-      this._setupMegaMenu()
+      this._addAriaAttributes(this._element)
     }
     this.goTo = this._initPosition
 
-    this._$mediaQuery.addListener((event) => {
-      if (event.matches) {
-        this._setupMegaMenu()
+    window.addEventListener('resize', () => {
+      if (this._$mediaQuery.matches) {
+        this._addAriaAttributes(this._element)
       } else {
-        this._unsetMegaMenu()
+        this._removeAriaAttributes(this._element)
+        $(this._element).find(Selector.NAV_MENU).first().attr('style', null)
+        $(this._element).find(Selector.NAV_MENU).show()
+        $(this._element).height('auto')
       }
     })
   }
@@ -109,24 +112,11 @@ class MegaMenu {
   // public
 
   // private
-  _setupMegaMenu() {
-    this._addAriaAttributes(this._element)
+
+  _addEventListeners() {
     this._$goForwardLinks.on('click', (event) => this._goForward(event))
     this._$goBackLinks.on('click', (event) => this._goBackward(event))
     this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
-  }
-
-  _unsetMegaMenu() {
-    this._removeAriaAttributes(this._element)
-    $(this._element).find(Selector.NAV_MENU).first().css('transform', 'none')
-    $(this._element).find(Selector.NAV_MENU).show()
-    $(this._element).height('auto')
-    this._$goForwardLinks.off('click', (event) => this._goForward(event))
-    this._$goBackLinks.off('click', (event) => this._goBackward(event))
-    this._$navLinks.off('keydown', (event) => this._manageKeyDown(event))
-  }
-
-  _addEventListeners() {
     if (!this._config.noFocus) {
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
     }
@@ -178,8 +168,12 @@ class MegaMenu {
     $(element).find('> .navbar-nav').attr('role', null)
     $(element).find(Selector.MEGAMENU_PANEL).attr('role', null)
     $(element).find('.nav-link[data-toggle=collapse]').attr('role', null)
-    $(element).find(Selector.NAV_LINK_BACK).attr('aria-hidden', null)
+    $(element).find(Selector.NAV_LINK).attr({
+      'aria-hidden': null,
+      tabindex: null
+    })
     $(element).find(Selector.NAV_ITEM).attr('role', null)
+    $(element).find(Selector.NAV_MENU).attr('style', null)
 
     $subNavs.each(function () {
       const $thisNavToggler = $(this).prev(Selector.NAV_LINK)
@@ -227,23 +221,25 @@ class MegaMenu {
       $target.closest(Selector.NAV_LINK_COLLAPSE).addClass(ClassName.ACTIVE)
       this._$topCollapseMenus.not($target.closest(Selector.MEGAMENU_PANEL)).collapse('hide')
 
-      // show menu and hide other
-      $target.parents(Selector.NAV_MENU).show()
+      if (this._$mediaQuery.matches) {
+        // show menu and hide other
+        $target.parents(Selector.NAV_MENU).show()
 
-      // set aria on parent links
-      $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
-        tabindex: -1,
-        'aria-hidden': true,
-        'aria-expanded': true
-      })
+        // set aria on parent links
+        $target.parents(Selector.NAV_ITEM).find('> .nav-link').not($target).attr({
+          tabindex: -1,
+          'aria-hidden': true,
+          'aria-expanded': true
+        })
 
-      // translate to pos
-      $rootNav.css('transform', `translateX(${translatePercentage}%)`)
-      if (translatePercentage) {
-        // adapt main collapse height to target height
-        $(this._element).height($thisNav.height())
-      } else {
-        $(this._element).height('auto')
+        // translate to pos
+        $rootNav.css('transform', `translateX(${translatePercentage}%)`)
+        if (translatePercentage) {
+          // adapt main collapse height to target height
+          $(this._element).height($thisNav.height())
+        } else {
+          $(this._element).height('auto')
+        }
       }
     }
 
@@ -300,10 +296,14 @@ class MegaMenu {
   }
 
   _goForward(e) {
+    if (!this._$mediaQuery.matches) {
+      return false
+    }
+
     e.preventDefault()
     const $this = $(e.target)
     const $thisNav = $this.closest(Selector.NAV_MENU)
-    const $targetNav =  $this.next(Selector.NAV_MENU)
+    const $targetNav = $this.next(Selector.NAV_MENU)
     const $rootNav = $this.closest(Selector.ROOT_NAV)
     const $thisNavToggler = $this
     const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
@@ -354,6 +354,10 @@ class MegaMenu {
   }
 
   _goBackward(e) {
+    if (!this._$mediaQuery.matches) {
+      return false
+    }
+
     e.preventDefault()
 
     const $this = $(e.target)
