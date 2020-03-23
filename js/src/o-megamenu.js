@@ -70,8 +70,9 @@ class MegaMenu {
     this._parent = $(this._element).parents(Selector.PARENT)
     this._$parentNavbarClasses = this._parent.attr('class')
     // default if no class navbar-expand-* navbar is always mobile
-    this._$mediaQuery = window.matchMedia('(max-width: 0px)')
-    if (typeof this._$parentNavbarClasses !== 'undefined') {
+    this._$mediaQuery = window.matchMedia('(min-width: 0px)')
+    // eslint-disable-next-line no-magic-numbers
+    if (typeof this._$parentNavbarClasses !== 'undefined' && this._$parentNavbarClasses.indexOf('navbar-expand-') !== -1) {
       if (this._parent.hasClass('navbar-expand-xxl')) {
         this._$breakpoint = 'xxl'
       } else {
