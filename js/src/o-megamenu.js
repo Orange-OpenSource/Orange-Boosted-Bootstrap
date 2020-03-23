@@ -30,7 +30,6 @@ const SPLITLENGHT = 4
 const CLASSLENGTH = 'navbar-expand-'.length
 
 const BreakPoints = {
-  xs: 0,
   sm: 480,
   md: 768,
   lg: 1024,
@@ -68,14 +67,19 @@ const Selector = {
 class MegaMenu {
   constructor(element, config) {
     this._element = element
-    this._$parentNavbarClasses = $(this._element).parents(Selector.PARENT).attr('class')
+    this._parent = $(this._element).parents(Selector.PARENT)
+    this._$parentNavbarClasses = this._parent.attr('class')
+    // default if no class navbar-expand-* navbar is always mobile
+    this._$mediaQuery = window.matchMedia('(max-width: 0px)')
     if (typeof this._$parentNavbarClasses !== 'undefined') {
-      this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH
-      this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2)
-    } else {
-      this._$breakpoint = 'md'
+      if (this._parent.hasClass('navbar-expand-xxl')) {
+        this._$breakpoint = 'xxl'
+      } else {
+        this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH
+        this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2)
+      }
+      this._$mediaQuery = window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`)
     }
-    this._$mediaQuery = window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`)
     this._$navLinks = $(this._element).find(Selector.NAV_LINK)
     this._$goForwardLinks = $(this._element).find(Selector.MEGAMENU_NAV).prev(Selector.NAV_LINK)
     this._$goBackLinks = $(this._element).find(Selector.NAV_LINK_BACK)
