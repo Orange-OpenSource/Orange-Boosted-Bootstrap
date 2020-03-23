@@ -46,6 +46,12 @@
 
           .container#{$upfix} {
             max-width: 100%;
+
+            // @bugfix flex items are overlapping
+            // @affected IE11
+            > .navbar-nav {
+              display: block;
+            }
           }
 
           > .navbar-nav {
