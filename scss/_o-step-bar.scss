@@ -46,7 +46,6 @@
   margin: auto;
   overflow: hidden;
   color: $white;
-  text-decoration: none;
   white-space: nowrap;
   outline-offset: map-get($spacers, 3);
 
@@ -58,6 +57,10 @@
   &:focus,
   &:active {
     color: $white;
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 
   &:focus {

@@ -261,8 +261,7 @@ a {
 
 // Boosted mod
 // stylelint-disable selector-max-type
-p a,
-main li a {
+main a:not([class]) {
   &,
   &:hover {
     text-decoration: underline;
