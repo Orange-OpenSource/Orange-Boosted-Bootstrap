@@ -125,6 +125,7 @@ class MegaMenu {
     if (!this._config.noFocus) {
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
     }
+    $(this._element).on('hidden.bs.collapse', (event) => this._handleCollapseToggle(event))
     this._$navLinkCollapses.on('click', (event) => this._handleCollapseToggle(event))
   }
 
@@ -291,22 +292,33 @@ class MegaMenu {
     $(this).find(Selector.NAV_LINK).not(Selector.NAV_LINK_BACK).first().trigger('focus')
   }
 
-  _handleCollapseToggle(e) {
-    const $this = $(e.target)
+  _handleCollapseToggle(event) {
+    const $this = $(event.target)
     const $thisCollapse = $($this.attr('href'))
 
-    $this.toggleClass(ClassName.ACTIVE)
+    if ($this.is($(this._element))) {
+      $this.children(Selector.NAV_MENU).css('transform', 'translateX(0%)')
+      $this.height('auto')
+      $this.find(Selector.NAV_LINK_EXPANDED).attr({
+        'aria-expanded': false,
+        'aria-hidden': null,
+        tabindex: null
+      })
+      $this.find(Selector.NAV_LINK_EXPANDED).next(Selector.NAV_MENU).hide()
+    } else {
+      $this.toggleClass(ClassName.ACTIVE)
+    }
     this._$navLinkCollapses.not($this).removeClass(ClassName.ACTIVE)
     this._$topCollapseMenus.not($thisCollapse).removeClass(ClassName.ACTIVE).collapse('hide')
   }
 
-  _goForward(e) {
+  _goForward(event) {
     if (!this._$mediaQuery.matches) {
       return false
     }
 
-    e.preventDefault()
-    const $this = $(e.target)
+    event.preventDefault()
+    const $this = $(event.target)
     const $thisNav = $this.closest(Selector.NAV_MENU)
     const $targetNav = $this.next(Selector.NAV_MENU)
     const $rootNav = $this.closest(Selector.ROOT_NAV)
@@ -358,14 +370,14 @@ class MegaMenu {
     return true
   }
 
-  _goBackward(e) {
+  _goBackward(event) {
     if (!this._$mediaQuery.matches) {
       return false
     }
 
-    e.preventDefault()
+    event.preventDefault()
 
-    const $this = $(e.target)
+    const $this = $(event.target)
     const $thisNav = $this.closest(Selector.NAV_MENU)
     const $targetNav = $thisNav.parent().closest(Selector.NAV_MENU)
     const $rootNav = $this.closest(Selector.ROOT_NAV)
