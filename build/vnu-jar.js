@@ -39,13 +39,17 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'The “main” role is unnecessary for element “main”.',
     // For some reason, the validator thinks the dashboard example is written in Danish
     'This document appears to be written in .*',
+    // Redundant ARIA landmarks role
     'The “banner” role is unnecessary for element “header”.',
     'The “contentinfo” role is unnecessary for element “footer”.',
     'The “complementary” role is unnecessary for element “aside”.',
     'The “navigation” role is unnecessary for element “nav”.',
     'The “form” role is unnecessary for element “form”.',
     'The “figure” role is unnecessary for element “figure”.',
-    'Possible misuse of “aria-label”.*'
+    // ARIA attributes in Boosted examples
+    'Possible misuse of “aria-label”.*',
+    'Attribute “aria-required” not allowed on element “input” at this point.',
+    'Attribute “pattern” is only allowed when the input type is.*'
   ].join('|')
 
   const args = [
