@@ -21,7 +21,8 @@ const plugins = [
       'createClass',
       'inheritsLoose',
       'defineProperty',
-      'objectSpread2'
+      'objectSpread2',
+      'createSuper' // Boosted mod
     ]
   })
 ]

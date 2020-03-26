@@ -2,7 +2,7 @@
 
 const path    = require('path')
 const babel   = require('rollup-plugin-babel')
-const resolve = require('rollup-plugin-node-resolve')
+const resolve = require('@rollup/plugin-node-resolve')
 const banner  = require('./banner.js')
 
 const BUNDLE  = process.env.BUNDLE === 'true'
@@ -17,7 +17,8 @@ const plugins = [
       'createClass',
       'inheritsLoose',
       'defineProperty',
-      'objectSpread2'
+      'objectSpread2',
+      'createSuper' // Boosted mod
     ]
   })
 ]

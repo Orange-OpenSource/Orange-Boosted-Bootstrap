@@ -15,7 +15,7 @@
   display: flex; // Boosted mod
   padding: $nav-link-padding-y $nav-link-padding-x;
   font-weight: $font-weight-bold; // Boosted mod
-  text-decoration: none; // Boosted mod
+  text-decoration: if($link-decoration == none, null, none);
 
   @include hover-focus() {
     text-decoration: none;
