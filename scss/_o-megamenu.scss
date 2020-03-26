@@ -2,7 +2,117 @@
 // Mega menu
 //
 
+.nav-heading {
+  display: none;
+}
+
+.mega-menu {
+  overflow: hidden;
+
+  [class*="container"] > .navbar-nav {
+    // @bugfix flex items are overlapping
+    // @affected IE11
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  > .navbar-nav {
+    transform: translateX(0);
+    will-change: transform;
+    @include transition(transform .5s);
+  }
+
+  .nav-item {
+    position: relative;
+    padding: 0;
+
+    .nav-item {
+      position: static;
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    padding: $navbar-padding-y 0;
+    font-size: $font-size-base;
+
+    &::after {
+      display: block;
+      align-self: center;
+      margin-left: auto;
+    }
+
+    &[aria-expanded="true"] {
+      color: $navbar-dark-hover-color;
+    }
+  }
+
+  [aria-expanded="true"]::after {
+    background-image: escape-svg($o-megamenu-arrow-icon-hover);
+    transform: rotateZ(180deg);
+  }
+
+  [data-toggle="collapse"] {
+    &::after {
+      width: 1rem;
+      height: .4375rem;
+      content: "";
+      background: escape-svg($o-megamenu-icon) no-repeat 50% / $o-megamenu-icon-size;
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after,
+    &.active::after,
+    &[aria-expanded="true"]::after {
+      background-image: escape-svg($o-megamenu-icon-active);
+    }
+
+    &.active {
+      position: static;
+
+      &::before {
+        right: 0;
+        bottom: $border-width / -2;
+        left: 0;
+        z-index: 1;
+        height: $border-width / 2;
+      }
+    }
+  }
+
+  .back::before,
+  [aria-haspopup]::after {
+    width: $o-megamenu-arrow-size;
+    height: $o-megamenu-arrow-size;
+    content: "";
+    background: escape-svg($o-megamenu-arrow-icon) no-repeat 50% / 100%;
+  }
+
+  .back:hover::before,
+  .back:focus::before,
+  .back:active::before,
+  [aria-haspopup]:hover::after,
+  [aria-haspopup]:focus::after,
+  [aria-haspopup]:active::after,
+  [aria-haspopup].active::after {
+    background-image: escape-svg($o-megamenu-arrow-icon-hover);
+  }
+
+  .back::before {
+    display: block;
+    align-self: center;
+    margin: 0 map-get($spacers, 1) 0 -#{$spacer};
+    transform: rotateZ(-180deg);
+  }
+}
+
 .mega-menu-panel {
+  &[role="menu"] [class*="container"] {
+    max-width: 100%;
+  }
+
   .navbar-nav .navbar-nav {
     flex-direction: column;
   }
@@ -17,15 +127,42 @@
       display: none;
     }
   }
+
+  [data-toggle="collapse"] {
+    display: none;
+  }
+
+  .nav-heading {
+    display: flex;
+    padding: $navbar-padding-y 0  $navbar-padding-y $spacer;
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+    letter-spacing: $h4-spacing;
+  }
+
+  [role="menu"] {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    width: 100%;
+    @include transition(none);
+
+    .nav-link {
+      padding-left: map-get($spacers, 3);
+    }
+
+    .nav-item:nth-child(2) {
+      border: 0;
+    }
+  }
+
+  .all {
+    flex: 1;
+    border-top: $border-width / 2 solid $gray-900;
+  }
 }
 
-.mega-menu .nav-link[aria-expanded="true"] {
-  color: $navbar-dark-hover-color;
-}
-
-.nav-heading {
-  display: none;
-}
 
 .navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -35,150 +172,43 @@
     $upfix: breakpoint-infix($upper, $grid-breakpoints);
 
     &#{$infix} {
-      .mega-menu .container#{$upfix} > .navbar-nav {
-        flex-wrap: wrap;
-        width: 100%;
-      }
-
-      @include media-breakpoint-down($breakpoint) {
+      @include media-breakpoint-up($next) {
         .mega-menu {
-          overflow: hidden;
-
-          .container#{$upfix} {
-            max-width: 100%;
-
-            // @bugfix flex items are overlapping
-            // @affected IE11
-            > .navbar-nav {
-              display: block;
-            }
-          }
-
-          > .navbar-nav {
-            transform: translateX(0);
-            will-change: transform;
-            @include transition(transform .5s);
-          }
-
-          .nav-item {
-            position: relative;
-            padding: 0;
-
-            .nav-item {
-              position: static;
-            }
-          }
-
-          .nav-link {
-            display: flex;
-            padding: $navbar-padding-y 0;
-            font-size: $font-size-base;
-
-            &::after {
-              display: block;
-              align-self: center;
-              margin-left: auto;
-            }
-          }
-
-          [aria-expanded="true"]::after {
-            background-image: escape-svg($o-megamenu-arrow-icon-hover);
-            transform: rotateZ(180deg);
-          }
+          overflow: visible;
 
           [data-toggle="collapse"] {
-            &::after {
-              width: 1rem;
-              height: .4375rem;
-              content: "";
-              background: escape-svg($o-megamenu-icon) no-repeat 50% / $o-megamenu-icon-size;
-            }
+            display: flex;
 
-            &:hover::after,
-            &:focus::after,
-            &:active::after,
-            &.active::after,
-            &[aria-expanded="true"]::after {
-              background-image: escape-svg($o-megamenu-icon-active);
+            &::after {
+              display: none;
             }
 
             &.active {
-              position: static;
+              position: relative;
 
               &::before {
-                right: 0;
-                bottom: $border-width / -2;
-                left: 0;
-                z-index: 1;
-                height: $border-width / 2;
+                right: map-get($spacers, 2);
+                bottom: 0;
+                left: map-get($spacers, 2);
+                height: $border-width * 2;
               }
             }
           }
 
-          .back::before,
-          [aria-haspopup]::after {
-            width: $o-megamenu-arrow-size;
-            height: $o-megamenu-arrow-size;
-            content: "";
-            background: escape-svg($o-megamenu-arrow-icon) no-repeat 50% / 100%;
+          > .navbar-nav {
+            transform: none;
+            will-change: auto;
           }
 
-          .back:hover::before,
-          .back:focus::before,
-          .back:active::before,
-          [aria-haspopup]:hover::after,
-          [aria-haspopup]:focus::after,
-          [aria-haspopup]:active::after,
-          [aria-haspopup].active::after {
-            background-image: escape-svg($o-megamenu-arrow-icon-hover);
+          .nav-link {
+            padding: $navbar-padding-y map-get($spacers, 2);
           }
 
-          .back::before {
-            display: block;
-            align-self: center;
-            margin: 0 map-get($spacers, 1) 0 -#{$spacer};
-            transform: rotateZ(-180deg);
+          .nav-item {
+            position: static;
           }
         }
 
-        .mega-menu-panel {
-          [data-toggle="collapse"] {
-            display: none;
-          }
-
-          .nav-heading {
-            display: flex;
-            padding: $navbar-padding-y 0  $navbar-padding-y $spacer;
-            font-size: $h4-font-size;
-            line-height: $h4-line-height;
-            letter-spacing: $h4-spacing;
-          }
-
-          [role="menu"] {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            display: none;
-            width: 100%;
-            @include transition(none);
-
-            .nav-link {
-              padding-left: map-get($spacers, 3);
-            }
-
-            .nav-item:nth-child(2) {
-              border: 0;
-            }
-          }
-
-          .all {
-            flex: 1;
-            border-top: $border-width / 2 solid $gray-900;
-          }
-        }
-      }
-
-      @include media-breakpoint-up($next) {
         .mega-menu-panel {
           position: absolute;
           top: $navbar-height;
@@ -189,6 +219,7 @@
           background-color: $black;
 
           .container#{$upfix} > .navbar-nav {
+            display: flex;
             padding: 0 map-get($spacers, 2);
           }
 
@@ -207,8 +238,13 @@
             padding: map-get($spacers, 1) map-get($spacers, 5) map-get($spacers, 1) 0;
           }
 
-          .back {
+          .back,
+          .nav-heading {
             display: none;
+          }
+
+          .all {
+            border: 0;
           }
         }
 
