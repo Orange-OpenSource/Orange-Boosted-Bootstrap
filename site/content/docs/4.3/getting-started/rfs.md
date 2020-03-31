@@ -66,8 +66,8 @@ In this example, we use one of Boosted's built-in [responsive breakpoint mixins]
 ```scss
 .selector {
   @include media-breakpoint-down(lg) {
-     padding: rfs-fluid-value(2rem);
-     font-size: rfs-fluid-value(1.125rem);
+    padding: rfs-fluid-value(2rem);
+    font-size: rfs-fluid-value(1.125rem);
   }
 }
 ```
