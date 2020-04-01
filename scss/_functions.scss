@@ -99,7 +99,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
   @if ($background == $primary) {
     @return $color-contrast-light;
   }
-  // end mod
+  // End mod
   $l1: luminance($background);
   $l2: luminance(opaque($background, $color-contrast-light));
 
