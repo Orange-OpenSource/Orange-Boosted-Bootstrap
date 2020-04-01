@@ -30,13 +30,6 @@ const browsers = {
     browser: 'Edge',
     browser_version: 'latest'
   },
-  ie11Win10: {
-    base: 'BrowserStack',
-    os: 'Windows',
-    os_version: '10',
-    browser: 'IE',
-    browser_version: 'latest'
-  },
   chromeWin10: {
     base: 'BrowserStack',
     os: 'Windows',
