@@ -223,7 +223,7 @@ $escaped-characters: (
 // Boosted mod
 $chevron-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $chevron-icon-hover:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$chevron-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$primary}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+//$chevron-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$primary}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 // End mod
 
 // Options
@@ -356,7 +356,6 @@ $rounded-pill:                50rem !default;
 
 $box-shadow:                  null !default;
 $box-shadow-sm:               null !default;
-$box-shadow-lg:               null !default;
 $box-shadow-inset:            null !default;
 
 $component-active-color:      $white !default;
@@ -369,7 +368,7 @@ $caret-spacing:               map-get($spacers, 2) !default;
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
-$transition-focus:            null !default;
+//$transition-focus:            null !default;
 
 $embed-responsive-aspect-ratios: (
   "21by9": (
@@ -411,11 +410,8 @@ $font-size-sm:                $font-size-base * .875 !default;  // 14px
 $font-size-lg:                $font-size-base * 1.125 !default; // 18px
 $font-size-xlg:               $font-size-base * 1.25 !default;  // 20px
 
-$font-weight-lighter:         null !default;
-$font-weight-light:           null !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          null !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -477,7 +473,7 @@ $small-font-size:             .875em !default;
 $sub-sup-font-size:           .75em !default;
 
 $text-muted:                  $gray-700 !default;
-$text-muted-dark:             $gray-600 !default;
+//$text-muted-dark:             $gray-600 !default; // Boosted mod
 
 $initialism-font-size:        $small-font-size !default;
 
@@ -523,32 +519,21 @@ $table-cell-vertical-align:   top !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
-$table-accent-bg:             null !default;
 $table-hover-color:           $table-color !default;
 $table-hover-bg:              $gray-300 !default;
-$table-active-bg:             null !default;
 
 $table-border-width:          $border-width / 2 !default;
 $table-border-color:          $gray-500 !default;
 
-$table-head-bg:               null !default;
-$table-head-color:            null !default;
-$table-head-border-color:     $gray-700 !default;
-
 $table-dark-color:            $white !default;
 $table-dark-bg:               $black !default;
-$table-dark-accent-bg:        null !default;
 $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         $gray-900 !default;
 $table-dark-border-color:     $gray-700 !default;
 
-$table-striped-order:         null !default;
-
 $table-caption-color:         $black !default;
 $table-caption-padding:       .75rem !default; // Boosted mod
 
-$table-bg-level:              null !default;
-$table-border-level:          null !default;
 
 // Buttons + Forms
 //
@@ -560,8 +545,9 @@ $input-btn-font-family:       $font-family-sans-serif !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
-$input-btn-focus-width:       .125rem !default;
-$input-btn-focus-box-shadow:  null !default;
+$input-btn-focus-width:         .125rem !default;
+$input-btn-focus-color-opacity: 1 !default;
+$input-btn-focus-box-shadow:    null !default;
 
 $input-btn-padding-y-sm:      map-get($spacers, 1) !default;
 $input-btn-padding-x-sm:      map-get($spacers, 2) !default;
@@ -597,8 +583,10 @@ $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              null !default;
+$btn-focus-width:             null !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        1 !default;
+$btn-active-box-shadow:       null !default;
 
 $btn-link-color:              $link-color !default;
 $btn-link-hover-color:        $link-hover-color !default;
@@ -612,6 +600,7 @@ $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
+
 
 // Forms
 
@@ -694,7 +683,7 @@ $form-check-input-checked-bg-repeat:      no-repeat !default;
 $form-check-input-checked-bg-position:    center center !default;
 $form-check-input-checked-bg-size:        1em !default;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$form-check-input-checked-color}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
-$form-check-radio-checked-bg-image:       null !default;
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          $component-active-color !default;
 $form-check-input-indeterminate-bg-color:       $component-active-bg !default;
@@ -706,8 +695,8 @@ $form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xml
 
 $form-switch-color:               rgba(0, 0, 0, .25) !default;
 $form-switch-width:               map-get($spacers, 5) !default;
-$form-switch-height:              $form-switch-width / 2 !default;
-$form-switch-padding-left:        add($form-switch-width, .5em) !default;
+// $form-switch-height:              $form-switch-width / 2 !default; // Boosted mod
+$form-switch-padding-left:        $form-switch-width + .5rem !default;
 $form-switch-bg-image:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
 $form-switch-bg-size:             contain !default;
 $form-switch-border-radius:       null !default;
@@ -727,6 +716,7 @@ $form-check-inline-margin-right:        1rem !default;
 
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-300 !default;
+$input-group-addon-border-color:        null !default;
 
 
 $form-select-padding-y:             map-get($spacers, 2) - ($border-width / 2) !default;
@@ -744,7 +734,6 @@ $form-select-disabled-bg:           $gray-300 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x center !default;
 $form-select-bg-size:               map-get($spacers, 2) !default; // In pixels because image dimensions
-$form-select-indicator-color:       null !default;
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default;
 
 $form-select-feedback-icon-padding-right: add(1em * .75, (2 * $form-select-padding-y * .75) + $form-select-padding-x + $form-select-indicator-padding) !default;
@@ -757,7 +746,6 @@ $form-select-border-radius:       $border-radius !default;
 $form-select-box-shadow:          $box-shadow-inset !default;
 
 $form-select-focus-border-color:  $input-focus-border-color !default;
-$form-select-focus-width:         null !default;
 $form-select-focus-box-shadow:    null !default;
 
 $form-select-padding-y-sm:        $input-padding-y-sm !default;
@@ -851,12 +839,12 @@ $form-validation-states: (
 $zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
-$zindex-o-scroll-up:                1035 !default;
+//$zindex-o-scroll-up:                1035 !default; // Boosted mod
 $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
-$zindex-skiplinks:                  1075 !default;
+//$zindex-skiplinks:                  1075 !default; // Boosted mod
 
 
 // Navs
@@ -886,24 +874,22 @@ $navbar-padding-x:                  null !default;
 $navbar-nav-link-padding-x:         null !default;
 
 // Boosted mod : adapt navbar padding when mobile view
-$navbar-height:                        6.25rem !default;
-$navbar-brand-logo-height:             map-get($spacers, 4) !default;
-$navbar-brand-logo-expanded-height:    3.125rem !default;
-$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
-$navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
-$navbar-supra-icon-size:               1.5625rem !default;
-$navbar-transition-duration:           .2s !default;
-$navbar-transition-timing-function:    ease-in-out !default;
-$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+//$navbar-height:                        6.25rem !default;
+//$navbar-brand-logo-height:             map-get($spacers, 4) !default;
+//$navbar-brand-logo-expanded-height:    3.125rem !default;
+//$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
+//$navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
+//$navbar-supra-icon-size:               1.5625rem !default;
+//$navbar-transition-duration:           .2s !default;
+//$navbar-transition-timing-function:    ease-in-out !default;
+//$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function !default;
+//$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function !default;
+//$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
+//$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 // end mod
 
 $navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   null !default;
-$navbar-brand-height:               null !default;
 $navbar-brand-padding-y:            null !default;
 $navbar-brand-margin-right:         1rem !default;
 
@@ -940,7 +926,7 @@ $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
 
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-y:                $spacer !default;
-$dropdown-padding-x:                map-get($spacers, 2) !default;
+//$dropdown-padding-x:                map-get($spacers, 2) !default; // Boosted mod
 $dropdown-spacer:                   $border-width * -1 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
@@ -973,19 +959,15 @@ $dropdown-header-padding:           $dropdown-padding-y !default;
 
 $pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              0 !default;
-$pagination-padding-y-sm:           null !default;
-$pagination-padding-x-sm:           null !default;
-$pagination-padding-y-lg:           null !default;
-$pagination-padding-x-lg:           null !default;
 // Boosted mod
-$pagination-padding-start:          .75rem !default;
-$pagination-padding-end:            1.125rem !default;
-$pagination-first-right-padding:    $pagination-padding-end !default;
-$pagination-last-left-padding:      $pagination-padding-end !default;
-$pagination-first-left-padding:     $pagination-padding-start !default;
-$pagination-last-right-padding:     $pagination-padding-start !default;
-$pagination-icon-margin:            .375rem !default;
-$pagination-item-size:              $spacer * 2 !default;
+//$pagination-padding-start:          .75rem !default;
+//$pagination-padding-end:            1.125rem !default;
+//$pagination-first-right-padding:    $pagination-padding-end !default;
+//$pagination-last-left-padding:      $pagination-padding-end !default;
+//$pagination-first-left-padding:     $pagination-padding-start !default;
+//$pagination-last-right-padding:     $pagination-padding-start !default;
+//$pagination-icon-margin:            .375rem !default;
+//$pagination-item-size:              $spacer * 2 !default;
 // End mod
 
 $pagination-color:                  $link-color !default;
@@ -1007,8 +989,8 @@ $pagination-active-bg:              $black !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
 // Boosted mod
-$pagination-active-item-bg:           $orange !default;
-$pagination-active-item-border-color: $pagination-active-item-bg !default;
+//$pagination-active-item-bg:           $orange !default;
+//$pagination-active-item-border-color: $pagination-active-item-bg !default;
 // End mod
 
 $pagination-disabled-color:         $gray-500 !default;
@@ -1016,12 +998,12 @@ $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
 
 // Boosted mod
-$pagination-icon:                   $chevron-icon !default;
-$pagination-icon-hover:             $chevron-icon-hover !default;
-$pagination-icon-width:             .5625rem !default;
-$pagination-icon-height:            .9375rem !default;
-$pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
-// end mod
+//$pagination-icon:                   $chevron-icon !default;
+//$pagination-icon-hover:             $chevron-icon-hover !default;
+//$pagination-icon-width:             .5625rem !default;
+//$pagination-icon-height:            .9375rem !default;
+//$pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
+// End mod
 
 // Cards
 
@@ -1039,7 +1021,7 @@ $card-cap-color:                    $white !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
-$card-accordion-spacer:             .875rem !default; // Boosted mod
+//$card-accordion-spacer:             .875rem !default; // Boosted mod
 
 $card-img-overlay-padding:          $spacer !default;
 
@@ -1049,7 +1031,7 @@ $card-group-margin:                 $grid-gutter-width / 2 !default;
 // Tooltips
 
 $tooltip-font-size:                 $font-size-sm !default;
-$tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
+//$tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
 $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     $black !default;
 $tooltip-bg:                        $gray-400 !default;
@@ -1075,7 +1057,7 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 // Popovers
 
 $popover-font-size:                 $font-size-sm !default;
-$popover-font-weight:               $font-weight-bold !default; // Boosted mod
+//$popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        $gray-400 !default;
 $popover-max-width:                 17.25rem !default;
 $popover-border-width:              $border-width !default;
@@ -1121,21 +1103,21 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 // Badges
 
 $badge-font-size:                   $font-size-sm !default;
-$badge-font-size-lg:                $font-size-base !default; // Boosted mod
-$badge-font-size-xlg:               $font-size-lg !default; // Boosted mod
+//$badge-font-size-lg:                $font-size-base !default; // Boosted mod
+//$badge-font-size-xlg:               $font-size-lg !default; // Boosted mod
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   map-get($spacers, 4) / 10 !default;
 $badge-padding-x:                   map-get($spacers, 2) !default;
-$badge-padding-y-lg:                map-get($spacers, 3) / 10 !default; // Boosted mod
-$badge-padding-x-lg:                $badge-padding-x / 2 !default; // Boosted mod
+//$badge-padding-y-lg:                map-get($spacers, 3) / 10 !default; // Boosted mod
+//$badge-padding-x-lg:                $badge-padding-x / 2 !default; // Boosted mod
 $badge-border-radius:               $border-radius !default;
 
 
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:               map-get($spacers, 2)  !default;
+$modal-inner-padding:               map-get($spacers, 2) !default;
 
 // Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
 $modal-footer-margin-between:       .5rem !default;
@@ -1181,22 +1163,22 @@ $modal-scale-transform:             scale(1.02) !default;
 
 $alert-padding-y:                   1rem !default;
 $alert-padding-x:                   $spacer !default;
-$alert-padding-y-sm:                map-get($spacers, 2) !default; // Boosted mod
+//$alert-padding-y-sm:                map-get($spacers, 2) !default; // Boosted mod
 $alert-margin-bottom:               $spacer !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            null !default;
 $alert-border-width:                $border-width !default;
 
 // Boosted mod
-$alert-logo-size:                   add(map-get($spacers, 4), $border-width) !default;
-$alert-logo-size-sm:                subtract($spacer, 1px) !default;
-$alert-close-icon-size:             .875rem !default;
-$alert-icon-margin-y:               $spacer / 10 !default;
+//$alert-logo-size:                   add(map-get($spacers, 4), $border-width) !default;
+//$alert-logo-size-sm:                subtract($spacer, 1px) !default;
+//$alert-close-icon-size:             .875rem !default;
+//$alert-icon-margin-y:               $spacer / 10 !default;
 // End mod
 
-$alert-bg-level:                    null !default;
-$alert-border-level:                null !default;
-$alert-color-level:                 null !default;
+$alert-bg-level:                    0 !default;
+$alert-border-level:                0 !default;
+$alert-color-level:                 0 !default;
 
 
 // Progress bars
@@ -1271,9 +1253,9 @@ $breadcrumb-divider-color:          null !default;
 $breadcrumb-active-color:           null !default;
 $breadcrumb-divider:                $chevron-icon !default;
 // Boosted mod
-$breadcrumb-divider-height:         map-get($spacers, 2) !default;
-$breadcrumb-divider-width:          subtract(map-get($spacers, 2), 1px) !default;
-$breadcrumb-line-height:            $line-height-sm !default;
+//$breadcrumb-divider-height:         map-get($spacers, 2) !default;
+//$breadcrumb-divider-width:          subtract(map-get($spacers, 2), 1px) !default;
+//$breadcrumb-line-height:            $line-height-sm !default;
 // End mod
 
 $breadcrumb-border-radius:          $border-radius !default;
@@ -1296,7 +1278,7 @@ $carousel-indicator-active-bg:       $primary !default;
 $carousel-indicator-active-opacity:  1 !default;
 $carousel-indicator-transition:      opacity .6s ease !default;
 
-$carousel-caption-width:             null !default;
+$carousel-caption-width:             70% !default;
 $carousel-caption-color:             $black !default;
 $carousel-caption-padding-y:         $spacer !default;
 $carousel-caption-spacer:            $spacer !default;
@@ -1324,17 +1306,17 @@ $spinner-border-width-sm: .2em !default;
 
 // Close
 
-$close-font-size:                   null !default;
+$close-font-size:                   $font-size-base * 1.5 !default;
 $close-font-weight:                 null !default;
-$close-color:                       null !default;
+$close-color:                       $black !default;
 $close-text-shadow:                 null !default;
 // Boosted mod
-$close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-$close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-$close-icon-stroke:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-$close-icon-stroke-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-$close-icon-stroke-hover:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' stroke='#{$primary}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+//$close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+//$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+//$close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+//$close-icon-stroke:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+//$close-icon-stroke-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+//$close-icon-stroke-hover:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' stroke='#{$primary}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 // End mod
 
 
