@@ -10,9 +10,10 @@ toc: true
 
 Boosted sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
-- Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
+- Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
+- Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Use the `$font-family-base`, `$font-size-base`, `$line-height-base` adn `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color` and apply link underlines only on `:hover`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
@@ -22,11 +23,22 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
+<!-- Boosted mod -->
 <table class="table">
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Example</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Desktop size</th>
+      <th scope="col">Tablet size</th>
+      <th scope="col">Mobile size</th>
+      <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+      </th>
+      <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -34,40 +46,61 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <td>
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
-      <td><span class="h1">h1. Boosted heading</span></td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>1 <small class="text-muted">(34px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h2></h2>`{{< /markdown >}}
       </td>
-      <td><span class="h2">h2. Boosted heading</span></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1.067 <small class="text-muted">(32px)</small></td>
+      <td>-0.05rem <small class="text-muted">(-0.8px)</small></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
-      <td><span class="h3">h3. Boosted heading</span></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td rowspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.083 <small class="text-muted">(26px)</small></td>
+      <td>-0.0375rem <small class="text-muted">(-0.6px)</small></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h4></h4>`{{< /markdown >}}
       </td>
-      <td><span class="h4">h4. Boosted heading</span></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1.1 <small class="text-muted">(22px)</small></td>
+      <td>-0.025rem <small class="text-muted">(-0.4px)</small></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h5></h5>`{{< /markdown >}}
       </td>
-      <td><span class="h5">h5. Boosted heading</span></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td colspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.111 <small class="text-muted">(20px)</small></td>
+      <td>-0.0125rem <small class="text-muted">(-0.2px)</small></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h6></h6>`{{< /markdown >}}
       </td>
-      <td><span class="h6">h6. Boosted heading</span></td>
+      <td colspan="3">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.125 <small class="text-muted">(18px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
     </tr>
   </tbody>
 </table>
+<!-- End mod -->
 
 {{< highlight html >}}
 <h1>h1. Boosted heading</h1>
@@ -104,19 +137,114 @@ Use the included utility classes to recreate the small secondary heading text fr
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
-<div class="bd-example">
-  <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
-  <div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
-  <div class="display-3 pb-3 mb-3 border-bottom">Display 3</div>
-  <div class="display-4">Display 4</div>
-</div>
+<!-- Boosted mod -->
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col">Display size</th>
+    <th scope="col">Desktop size</th>
+    <th scope="col">Tablet size</th>
+    <th scope="col">Mobile size</th>
+    <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+    </th>
+    <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display 1</td>
+      <td>Bold 3.75rem <small class="text-muted">(60px)</small></td>
+      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
+      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
+      <td>1 <small class="text-muted">(60px)</small></td>
+      <td>-0.15rem <small class="text-muted">(-2.4px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 2</td>
+      <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
+      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>1 <small class="text-muted">(50px)</small></td>
+      <td>-0.1rem <small class="text-muted">(-1.6px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 3</td>
+      <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>1 <small class="text-muted">(40px)</small></td>
+      <td>-0.075rem <small class="text-muted">(-1.2px)</small></td>
+    </tr>
+    <tr>
+      <td>Display 4</td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>1 <small class="text-muted">(34px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
+    </tr>
+  </tbody>
+</table>
+<!-- End mod -->
 
-{{< highlight html >}}
+{{< example >}}
 <h1 class="display-1">Display 1</h1>
 <h1 class="display-2">Display 2</h1>
 <h1 class="display-3">Display 3</h1>
 <h1 class="display-4">Display 4</h1>
-{{< /highlight >}}
+{{< /example >}}
+
+<!-- Boosted mod -->
+## Regular text
+
+Since only [headings](#headings), [display headings](#display-headings) and `strong` text are meant to use **Bold** in main content, other contents should use regular font-weight.
+
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col">Font size</th>
+    <th scope="col">Desktop size</th>
+    <th scope="col">Tablet size</th>
+    <th scope="col">Mobile size</th>
+    <th scope="col">
+        Line height
+        <small class="text-muted">Desktop</small>
+    </th>
+    <th scope="col">
+        Letter spacing
+        <small class="text-muted">Desktop</small>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lead</td>
+      <td>Regular 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Regular 1.125rem <small class="text-muted">(18px)</small></td>
+      <td>Regular 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.5 <small class="text-muted">(30px)</small></td>
+      <td>-0.015625rem <small class="text-muted">(-0.25px)</small></td>
+    </tr>
+    <tr>
+      <td>Body copy</td>
+      <td colspan="3">Regular 1rem <small class="text-muted">(16px)</small></td>
+      <td>1.5 <small class="text-muted">(24px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td colspan="3">Regular .875rem <small class="text-muted">(14px)</small></td>
+      <td>1.143 <small class="text-muted">(16px)</small></td>
+      <td>-0.00625rem <small class="text-muted">(-0.1px)</small></td>
+    </tr>
+  </tbody>
+</table>
+<!-- End mod -->
 
 ## Lead
 

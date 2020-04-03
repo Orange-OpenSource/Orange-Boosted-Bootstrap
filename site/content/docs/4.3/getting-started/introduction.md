@@ -18,7 +18,11 @@ Looking to quickly add Boosted to your project? Use BoostedCDN, provided for fre
 
 Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
 
+Boosted also provides Helvetica Neue fonts, **limited to Orange brand usage**: [see `NOTICE.txt` for more information about Helvetica Neue license]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
+
 {{< highlight html >}}
+<!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+<link rel="stylesheet" href="{{< param "cdn.helvetica" >}}" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
 <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 {{< /highlight >}}
 
@@ -50,6 +54,22 @@ Be sure to have your pages set up with the latest design and development standar
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Preconnect to CDN: remove if not needed -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+
+    <!--
+      Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
+      Patent and Trademark Office and may be registered in certain other jurisdictions.
+      Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+      Orange Company had buy the right for used Helvetica onto digital applications.
+      If you are not autorized to used it, don't include the orangeHelvetica.css
+      See NOTICE.txt for more informations.
+    -->
+    <link rel="preload" href="dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link rel="stylesheet" href="{{< param "cdn.helvetica" >}}" integrity="{{< param "cdn.helvetica_hash" >}}" crossorigin="anonymous">
 
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
@@ -109,6 +129,25 @@ On the rare occasion you need to override it, use something like the following:
 With the above snippet, nested elements—including generated content via `::before` and `::after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
+
+
+### Ressource Hints
+
+[Ressource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
+It should be used for critical resources only.
+
+#### `preload` fonts
+
+{{< highlight html >}}
+<link rel="preload" href="dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+{{< /highlight >}}
+
+#### `preconnect` to CDNs
+
+{{< highlight html >}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+{{< /highlight >}}
 
 ### Reboot
 
