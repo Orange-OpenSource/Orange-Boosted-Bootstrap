@@ -9,19 +9,31 @@
   vertical-align: $table-cell-vertical-align;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
-  th,
-  td {
-    padding: $table-cell-padding;
+  // Boosted mod
+  // = Only rows have border
+  // = Set line-height everywhere
+  tr {
     border-bottom: $table-border-width solid $table-border-color;
   }
 
-  tbody {
-    vertical-align: inherit;
+  th,
+  td {
+    padding: $table-cell-padding;
+    line-height: $table-cell-line-height;
+    vertical-align: top;
   }
 
-  thead th {
-    vertical-align: bottom;
-    border-bottom-color: $table-head-border-color;
+  thead tr {
+    border-bottom-width: $table-border-width * 2;
+  }
+
+  tbody th {
+    font-weight: $font-weight-normal;
+  }
+  // End mod
+
+  tbody {
+    vertical-align: inherit;
   }
 
   tbody + tbody {
@@ -44,7 +56,7 @@
 .table-sm {
   th,
   td {
-    padding: $table-cell-padding-sm;
+    line-height: $table-cell-line-height-sm; // Boosted mod
   }
 }
 
@@ -76,11 +88,12 @@
   color: $table-dark-color;
   background-color: $table-dark-bg;
 
-  th,
-  td,
-  thead th {
+  // Boosted mod: only table rows have borders
+  tr,
+  th {
     border-color: $table-dark-border-color;
   }
+  // End mod
 
   // Boosted mod: no .table-bordered
 
