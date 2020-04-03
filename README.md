@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/4.3/assets/brand/orange_logo.svg" alt="Bootstrap logo" width="72" height="72">
+    <img src="https://boosted.orange.com/docs/4.3/assets/brand/orange-logo.svg" alt="Boosted" width="72" height="72">
   </a>
 </p>
 

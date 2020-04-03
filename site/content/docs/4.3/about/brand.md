@@ -25,7 +25,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 
 <div class="row mb-5">
     <div class="col-lg-2 d-flex align-items-center justify-content-center">
-        <img src="/docs/{{< param docs_version >}}/assets/brand/orange_logo.svg" alt="Master Orange logo" width="50" height="50" loading="lazy">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="Master Orange logo" width="50" height="50" loading="lazy">
     </div>
     <div class="col-lg-10">
         <p>The basic elements of the Master logo are <strong>the square and the word mark <mark>Orange™</mark></strong>.</p>
