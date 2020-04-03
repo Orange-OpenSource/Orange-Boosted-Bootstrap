@@ -33,6 +33,7 @@ Should you require [build tools]({{< docsref "/getting-started/build-tools#tooli
 Skip the download with [jsDelivr](https://cdn.jsdelivr.net/) to deliver cached version of Boosted's compiled CSS and JS to your project.
 
 {{< highlight html >}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 {{< /highlight >}}

@@ -1,5 +1,5 @@
 {{- $tarteJS := resources.Get "js/vendor/tarteaucitron.js" -}}
-{{- if (eq (getenv "HUGO_ENV") "production") -}}
+{{ if eq hugo.Environment "production" -}}
 {{- $tarteJS = $tarteJS | resources.Minify -}}
 {{- end }}
 {{- $secureTarteJS := $tarteJS | resources.Fingerprint "sha384" }}

@@ -28,29 +28,33 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
 - For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
 
 ## Native font stack
-
+<!-- Boosted mod -->
 The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Boosted 4 and replaced with a "native font stack" for optimum text rendering on every device and OS. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 {{< highlight scss >}}
 $font-family-sans-serif:
+  // Webfont
+  HelvNeueOrange,
+  // Helvetica Neue
+  Helvetica Neue,
+  // Websafe Fallbacks
+  Helvetica, Arial
   // Safari for macOS and iOS (San Francisco)
   -apple-system,
   // Chrome < 56 for macOS (San Francisco)
   BlinkMacSystemFont,
   // Windows
-  "Segoe UI",
+  Segoe UI,
   // Android
   Roboto,
-  // Basic web fallback
-  "Helvetica Neue", Arial,
-  // Linux
-  "Noto Sans",
+  // Ubuntu
+  Liberation Sans,
   // Sans serif fallback
   sans-serif,
   // Emoji fonts
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 {{< /highlight >}}
-
+<!-- End mod -->
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout Boosted. To switch the global `font-family`, update `$font-family-base` and recompile Boosted.
 
 ## Headings and paragraphs
