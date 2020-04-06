@@ -611,7 +611,7 @@ Modals have three optional sizes, available via modifier classes to be placed on
     <tr>
       <td>Extra large</td>
       <td><code>.modal-xl</code></td>
-      <td><code>1140px</code></td>
+      <td><code>1280px</code></td>
     </tr>
   </tbody>
 </table>
@@ -696,7 +696,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
     </tr>
     <tr>
       <td><code>.modal-fullscreen-sm-down</code></td>
-      <td><code>Below 576px</code></td>
+      <td><code>Below 480px</code></td>
     </tr>
     <tr>
       <td><code>.modal-fullscreen-md-down</code></td>
@@ -704,11 +704,11 @@ Another override is the option to pop up a modal that covers the user viewport, 
     </tr>
     <tr>
       <td><code>.modal-fullscreen-lg-down</code></td>
-      <td><code>Below 992px</code></td>
+      <td><code>Below 1024px</code></td>
     </tr>
     <tr>
       <td><code>.modal-fullscreen-xl-down</code></td>
-      <td><code>Below 1200px</code></td>
+      <td><code>Below 1280px</code></td>
     </tr>
   </tbody>
 </table>

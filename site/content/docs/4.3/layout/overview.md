@@ -24,61 +24,69 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 <table class="table text-left">
   <thead>
     <tr>
-      <th></th>
-      <th>
+      <td></td>
+      <th scope="col">
         Extra small<br>
-        <span class="font-weight-normal">&lt;576px</span>
+        <span class="font-weight-normal">&lt;480px</span>
       </th>
-      <th>
+      <th scope="col">
         Small<br>
-        <span class="font-weight-normal">&ge;576px</span>
+        <span class="font-weight-normal">&ge;480px</span>
       </th>
-      <th>
+      <th scope="col">
         Medium<br>
         <span class="font-weight-normal">&ge;768px</span>
       </th>
-      <th>
+      <th scope="col">
         Large<br>
-        <span class="font-weight-normal">&ge;992px</span>
+        <span class="font-weight-normal">&ge;1024px</span>
       </th>
-      <th>
+      <th scope="col">
         Extra large<br>
-        <span class="font-weight-normal">&ge;1200px</span>
+        <span class="font-weight-normal">&ge;1280px</span>
+      </th>
+      <th scope="col">
+        Extra Extra large<br>
+        <span class="font-weight-normal">&ge;1440px</span>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>.container</code></td>
-      <td class="text-muted">100%</td>
-      <td>540px</td>
-      <td>720px</td>
-      <td>960px</td>
-      <td>1140px</td>
+      <td>312px</td>
+      <td>468px</td>
+      <td>744px</td>
+      <td>1024px</td>
+      <td>1280px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-sm</code></td>
       <td class="text-muted">100%</td>
-      <td>540px</td>
-      <td>720px</td>
-      <td>960px</td>
-      <td>1140px</td>
+      <td>468px</td>
+      <td>744px</td>
+      <td>1024px</td>
+      <td>1280px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-md</code></td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
-      <td>720px</td>
-      <td>960px</td>
-      <td>1140px</td>
+      <td>744px</td>
+      <td>1024px</td>
+      <td>1280px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-lg</code></td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
-      <td>960px</td>
-      <td>1140px</td>
+      <td>1024px</td>
+      <td>1280px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-xl</code></td>
@@ -86,10 +94,21 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
-      <td>1140px</td>
+      <td>1280px</td>
+      <td>1320px</td>
+    </tr>
+    <tr>
+      <td><code>.container-xxl</code></td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <td><code>.container-fluid</code></td>
+      <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
       <td class="text-muted">100%</td>
@@ -128,6 +147,7 @@ Responsive containers are new in Boosted v4.4. They allow you to specify a class
 <div class="container-md">100% wide until medium breakpoint</div>
 <div class="container-lg">100% wide until large breakpoint</div>
 <div class="container-xl">100% wide until extra large breakpoint</div>
+<div class="container-xxl">100% wide until extra extra large breakpoint</div>
 {{< /highlight >}}
 
 ## Responsive breakpoints
@@ -137,20 +157,23 @@ Since Boosted is developed to be mobile first, we use a handful of [media querie
 Boosted primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 {{< highlight scss >}}
-// Extra small devices (portrait phones, less than 576px)
+// Extra small devices (portrait phones, less than 480px)
 // No media query for `xs` since this is the default in Boosted
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+// Small devices (landscape phones, 480px and up)
+@media (min-width: 480px) { ... }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { ... }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+// Large devices (desktops, 1024px and up)
+@media (min-width: 1024px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+// Extra large devices (large desktops, 1280px and up)
+@media (min-width: 1280px) { ... }
+
+// Extra extra large devices (large desktops, 1440px and up)
+@media (min-width: 1440px) { ... }
 {{< /highlight >}}
 
 Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
@@ -161,6 +184,7 @@ Since we write our source CSS in Sass, all our media queries are available via S
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
 
 // Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
 .custom-class {
@@ -176,19 +200,22 @@ Since we write our source CSS in Sass, all our media queries are available via S
 We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
 
 {{< highlight scss >}}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
+// Extra small devices (portrait phones, less than 480px)
+@media (max-width: 479.98px) { ... }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
+// Medium devices (tablets, less than 1024px)
+@media (max-width: 1023.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
+// Large devices (desktops, less than 1280px)
+@media (max-width: 1279.98px) { ... }
 
-// Extra large devices (large desktops)
+// Extra large devices (desktops, less than 1440px)
+@media (max-width: 1439.98px) { ... }
+
+// Extra extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
 {{< /highlight >}}
 
@@ -203,6 +230,7 @@ Once again, these media queries are also available via Sass mixins:
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
+@include media-breakpoint-down(xl) { ... }
 // No media query necessary for xl breakpoint as it has no upper bound on its width
 
 // Example: Style from medium breakpoint and down
@@ -216,20 +244,23 @@ Once again, these media queries are also available via Sass mixins:
 There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
 
 {{< highlight scss >}}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
+// Extra small devices (portrait phones, less than 480px)
+@media (max-width: 479.98px) { ... }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
+// Small devices (landscape phones, 480px and up)
+@media (min-width: 480px) and (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
+@media (min-width: 768px) and (max-width: 1023.98px) { ... }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+// Large devices (desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+// Extra large devices (large desktops, 1280px and up)
+@media (min-width: 1280px) and (max-width: 1439.98px) { ... }
+
+// Extra extra large devices (large desktops, 1440px and up)
+@media (min-width: 1440px) { ... }
 {{< /highlight >}}
 
 These media queries are also available via Sass mixins:
@@ -240,6 +271,7 @@ These media queries are also available via Sass mixins:
 @include media-breakpoint-only(md) { ... }
 @include media-breakpoint-only(lg) { ... }
 @include media-breakpoint-only(xl) { ... }
+@include media-breakpoint-only(xxl) { ... }
 {{< /highlight >}}
 
 Similarly, media queries may span multiple breakpoint widths:
@@ -247,7 +279,7 @@ Similarly, media queries may span multiple breakpoint widths:
 {{< highlight scss >}}
 // Example
 // Apply styles starting from medium devices and up to extra large devices
-@media (min-width: 768px) and (max-width: 1199.98px) { ... }
+@media (min-width: 768px) and (max-width: 1279.98px) { ... }
 {{< /highlight >}}
 
 The Sass mixin for targeting the same screen size range would be:

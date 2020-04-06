@@ -30,7 +30,11 @@ boosted/
 │   ├── boosted.css
 │   ├── boosted.css.map
 │   ├── boosted.min.css
-│   └── boosted.min.css.map
+│   ├── boosted.min.css.map
+│   ├── orange-helvetica.css
+│   ├── orange-helvetica.css.map
+│   ├── orange-helvetica.min.css
+│   └── orange-helvetica.min.css.map
 └── js/
     ├── boosted.bundle.js
     ├── boosted.bundle.js.map
@@ -143,6 +147,8 @@ The Boosted source code download includes the precompiled CSS and JavaScript ass
 boosted/
 ├── dist/
 │   ├── css/
+│   ├── fonts/
+│   ├── img/
 │   └── js/
 ├── site/
 │   └──content/

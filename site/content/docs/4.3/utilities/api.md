@@ -125,7 +125,7 @@ Output:
 .opacity-100 {
   opacity: 1;
 }
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .opacity-sm-0 {
     opacity: 0;
   }
@@ -153,7 +153,7 @@ Output:
     opacity: 1;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .opacity-lg-0 {
     opacity: 0;
   }
@@ -167,7 +167,7 @@ Output:
     opacity: 1;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .opacity-xl-0 {
     opacity: 0;
   }
