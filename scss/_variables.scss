@@ -1146,10 +1146,10 @@ $modal-header-padding-y:            map-get($spacers, 2) !default;
 $modal-header-padding-x:            map-get($spacers, 2) !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
-$modal-sm:                          map-get($spacers, 4) * 10 !default;
-$modal-md:                          43.75rem !default;
-$modal-lg:                          $modal-md !default;
-$modal-xl:                          $modal-md !default;
+$modal-sm:                          300px !default;
+$modal-md:                          500px !default;
+$modal-lg:                          800px !default;
+$modal-xl:                          1140px !default;
 
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              null !default;
