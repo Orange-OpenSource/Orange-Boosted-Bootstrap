@@ -369,16 +369,13 @@ $utilities: map-merge(
     "color": (
       property: color,
       class: text,
-      values: map-merge(
-        $theme-colors,
-        (
-          "white": $white,
-          "body": $body-color,
-          "muted": $text-muted,
-          "black-50": rgba($black, .5),
-          "white-50": rgba($white, .5),
-          "reset": inherit,
-        )
+      values: (
+        "primary": $primary,
+        "light": $light,
+        "white": $white,
+        "body": $body-color,
+        "muted": $text-muted,
+        "reset": inherit,
       )
     ),
     "line-height": (
@@ -395,9 +392,12 @@ $utilities: map-merge(
       property: background-color,
       class: bg,
       values: map-merge(
-        $theme-colors,
+        $supporting-colors,
         (
+          "primary": $primary,
+          "secondary": $secondary,
           "body": $body-bg,
+          "light": $light,
           "white": $white,
           "transparent": transparent
         )
