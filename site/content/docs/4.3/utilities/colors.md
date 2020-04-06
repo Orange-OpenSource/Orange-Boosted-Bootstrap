@@ -10,18 +10,16 @@ toc: true
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
 
+<!-- Boosted mod -->
 {{< example >}}
-{{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<p class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">.text-{{ .name }}</p>
-{{- end -}}
-{{< /colors.inline >}}
+<p class="text-primary">.text-primary</p>
+<p class="text-secondary">.text-secondary</p>
+<p class="text-light">.text-light</p>
 <p class="text-body">.text-body</p>
 <p class="text-muted">.text-muted</p>
 <p class="text-white bg-dark">.text-white</p>
-<p class="text-black-50">.text-black-50</p>
-<p class="text-white-50 bg-dark">.text-white-50</p>
 {{< /example >}}
+<!-- End mod -->
 
 ## Background color
 
@@ -30,24 +28,12 @@ Similar to the contextual text color classes, easily set the background of an el
 {{< example >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="p-3 mb-2 bg-{{ .name }} {{ if or (eq .name "light") (eq .name "warning") }}text-dark{{ else }}text-white{{ end }}">.bg-{{ .name }}</div>
+<div class="p-3 mb-2 bg-{{ .name }}">.bg-{{ .name }}</div>
 {{- end -}}
 {{< /colors.inline >}}
-<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
-<div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+<div class="p-3 mb-2 bg-white">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent">.bg-transparent</div>
 {{< /example >}}
-
-## Background gradient
-
-When `$enable-gradients` is set to `true` (default is `false`), you can use `.bg-gradient-` utility classes. [Learn about our Sass options]({{< docsref "/getting-started/theming#sass-options" >}}) to enable these classes and more.
-
-{{< markdown >}}
-{{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-- `.bg-gradient-{{ .name }}`
-{{- end -}}
-{{< /colors.inline >}}
-{{< /markdown >}}
 
 {{< callout info >}}
 #### Dealing with specificity
