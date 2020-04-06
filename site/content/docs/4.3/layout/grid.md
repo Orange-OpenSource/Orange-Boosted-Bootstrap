@@ -39,7 +39,7 @@ Breaking it down, here's how it works:
 - Column classes indicate the number of columns you'd like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use `.col-4`.
 - Column `width`s are set in percentages, so they're always fluid and sized relative to their parent element.
 - Columns have horizontal `padding` to create the gutters between individual columns, however, you can remove the `margin` from rows and `padding` from columns with `.g-0` on the `.row`.
-- To make the grid responsive, there are five grid breakpoints, one for each [responsive breakpoint]({{< docsref "/layout/overview#responsive-breakpoints" >}}): all breakpoints (extra small), small, medium, large, and extra large.
+- To make the grid responsive, there are five grid breakpoints, one for each [responsive breakpoint]({{< docsref "/layout/overview#responsive-breakpoints" >}}): all breakpoints (extra small), small, medium, large, extra large and extra extra large.
 - Grid breakpoints are based on minimum width media queries, meaning **they apply to that one breakpoint and all those above it** (e.g., `.col-sm-4` applies to small, medium, large, and extra large devices, but not the first `xs` breakpoint).
 - You can use predefined grid classes (like `.col-4`) or [Sass mixins](#sass-mixins) for more semantic markup.
 - The horizontal gutter width can be changed with `.gx-*` classes like `.gx-2` (smaller horizontal gutters) or `.gx-xl-4` (larger horizontal gutters on viewports larger than the `xl` breakpoint).
@@ -58,14 +58,14 @@ See how aspects of the Boosted grid system work across multiple devices with a h
 <table class="table">
   <thead>
     <tr>
-      <th scope="col"></th>
+      <td></td>
       <th scope="col">
         Extra small<br>
-        <span class="font-weight-normal">&lt;576px</span>
+        <span class="font-weight-normal">&lt;480px</span>
       </th>
       <th scope="col">
         Small<br>
-        <span class="font-weight-normal">&ge;576px</span>
+        <span class="font-weight-normal">&ge;480px</span>
       </th>
       <th scope="col">
         Medium<br>
@@ -73,22 +73,27 @@ See how aspects of the Boosted grid system work across multiple devices with a h
       </th>
       <th scope="col">
         Large<br>
-        <span class="font-weight-normal">&ge;992px</span>
+        <span class="font-weight-normal">&ge;1024px</span>
       </th>
       <th scope="col">
         Extra large<br>
-        <span class="font-weight-normal">&ge;1200px</span>
+        <span class="font-weight-normal">&ge;1280px</span>
+      </th>
+      <th scope="col">
+        Extra extra large<br>
+        <span class="font-weight-normal">&ge;1440px</span>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th class="text-nowrap" scope="row">Container <code class="font-weight-normal">max-width</code></th>
-      <td>None (auto)</td>
-      <td>540px</td>
-      <td>720px</td>
-      <td>960px</td>
-      <td>1140px</td>
+      <td>320px</td>
+      <td>480px</td>
+      <td>768px</td>
+      <td>1024px</td>
+      <td>1280px</td>
+      <td>1440px</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Class prefix</th>
@@ -97,22 +102,23 @@ See how aspects of the Boosted grid system work across multiple devices with a h
       <td><code>.col-md-</code></td>
       <td><code>.col-lg-</code></td>
       <td><code>.col-xl-</code></td>
+      <td><code>.col-xxl-</code></td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row"># of columns</th>
-      <td colspan="5">12</td>
+      <td colspan="6">12</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="5">1.5rem (.75rem on each side of a column)</td>
+      <td colspan="6">1.5rem (.75rem on each side of a column)</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="5">Yes</td>
+      <td colspan="6">Yes</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Column ordering</th>
-      <td colspan="5">Yes</td>
+      <td colspan="6">Yes</td>
     </tr>
   </tbody>
 </table>
@@ -849,20 +855,20 @@ $grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
   // Small screen / phone
-  sm: 576px,
+  sm: 480px,
   // Medium screen / tablet
   md: 768px,
   // Large screen / desktop
-  lg: 992px,
+  lg: 1024px,
   // Extra large screen / wide desktop
-  xl: 1200px
+  xl: 1280px
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
 );
 {{< /highlight >}}
 
@@ -957,8 +963,8 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 420px,
-  md: 720px,
-  lg: 960px
+  md: 768px,
+  lg: 1024px
 );
 {{< /highlight >}}
 

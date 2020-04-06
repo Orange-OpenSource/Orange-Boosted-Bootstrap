@@ -31,7 +31,7 @@ The `rfs()` mixin has shorthands for `font-size`, `margin`, `margin-top`, `margi
   font-size: calc(1.525rem + 3.3vw);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .title {
     font-size: 4rem;
   }
@@ -73,7 +73,7 @@ In this example, we use one of Boosted's built-in [responsive breakpoint mixins]
 ```
 
 ```css
-@media (max-width: 991.98px) {
+@media (max-width: 1023.98px) {
   .selector {
     padding: calc(1.325rem + 0.9vw);
     font-size: 1.125rem; /* 1.125rem is small enough, so RFS won't rescale this */

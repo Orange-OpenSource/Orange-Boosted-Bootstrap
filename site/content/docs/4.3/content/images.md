@@ -14,13 +14,7 @@ Images in Boosted are made responsive with `.img-fluid`. This applies `max-width
 {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}
 {{< /example >}}
 
-## Image thumbnails
-
-In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}}), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
-
-{{< example >}}
-{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" >}}
-{{< /example >}}
+<!-- Boosted mod: no rounded thumbnails -->
 
 ## Aligning images
 
