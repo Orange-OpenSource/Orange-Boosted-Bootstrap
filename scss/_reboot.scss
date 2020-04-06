@@ -255,6 +255,10 @@ strong {
 
 small {
   @include font-size($small-font-size);
+  // Boosted mod
+  font-weight: $font-weight-normal;
+  line-height: $line-height-sm;
+  // End mod
 }
 
 
