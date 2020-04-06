@@ -20,7 +20,6 @@
   td {
     padding: $table-cell-padding;
     line-height: $table-cell-line-height;
-    vertical-align: top;
   }
 
   thead tr {
@@ -46,7 +45,7 @@
 // Change placement of captions with a class
 //
 
-.caption-top { caption-side: top; }
+.caption-bottom { caption-side: bottom; } // Boosted mod
 
 
 //

@@ -266,11 +266,11 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
   </tbody>
 </table>
 {{< /example >}}
-
-You can also put the `<caption>` on the top of the table with `.caption-top`.
+<!-- Boosted mod: default caption-side is top -->
+You can also put the `<caption>` on the bottom of the table with `.caption-bottom`.
 
 {{< example >}}
-<table class="table caption-top">
+<table class="table caption-bottom">
   <caption>List of users</caption>
   <thead>
     <tr>
