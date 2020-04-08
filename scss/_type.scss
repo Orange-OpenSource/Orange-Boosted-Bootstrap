@@ -31,10 +31,7 @@
 // = Add letter-spacing and line-height
 // = Reduce heading font-sizes for mobile (mobile first, obviously)
 [class*="display-"] {
-  font-weight: $display-weight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  @extend %heading;
 }
 
 .display-1 {
@@ -71,21 +68,24 @@ h2,
 }
 
 @include media-breakpoint-up(sm) {
+  .display-1,
+  .display-2,
+  .display-3 {
+    line-height: $display-line-height;
+  }
+
   .display-1 {
     @include font-size($display2-size);
-    line-height: $display-line-height;
     letter-spacing: $display2-spacing;
   }
 
   .display-2 {
     @include font-size($display3-size);
-    line-height: $display-line-height;
     letter-spacing: $display3-spacing;
   }
 
   .display-3 {
     @include font-size($display4-size);
-    line-height: $display-line-height;
     letter-spacing: $display4-spacing;
   }
 
