@@ -51,10 +51,13 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 #### Minimum sizes
 
 <table class="table mb-5">
+  <col>
+  <col>
+  <colgroup span="2">
   <thead>
     <tr>
       <td colspan="2" class="border-0"></td>
-      <th scope="col" colspan="2" id="digital">Digital</th>
+      <th scope="colgroup" colspan="2" id="digital">Digital</th>
     </tr>
     <tr>
       <th scope="row">Media</th>
@@ -69,27 +72,27 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
         Size
         <small class="text-muted">(×)</small>
       </th>
-      <td headers="print size">10mm</td>
-      <td headers="digital mobile size">30px</td>
-      <td headers="digital desktop size">50px</td>
+      <td>10mm</td>
+      <td>30px</td>
+      <td>50px</td>
     </tr>
     <tr>
       <th scope="row" id="clear">
         Preferred clear space
         <small class="text-muted">(0.5×)</small>
       </th>
-      <td headers="print clear">5mm</td>
-      <td headers="digital mobile clear">15px</td>
-      <td headers="digital desktop clear">25px</td>
+      <td>5mm</td>
+      <td>15px</td>
+      <td>25px</td>
     </tr>
     <tr>
       <th scope="row" id="small">
         Small clear space
         <small class="text-muted">(0.25×)</small>
       </th>
-      <td headers="print small">2.5mm</td>
-      <td headers="digital mobile small">7.5px</td>
-      <td headers="digital desktop small">12.5px</td>
+      <td>2.5mm</td>
+      <td>7.5px</td>
+      <td>12.5px</td>
     </tr>
   </tbody>
 </table>
