@@ -51,3 +51,13 @@ Add classes to an element to easily round its corners.
 {{< placeholder width="75" height="75" class="rounded-circle" title="Example rounded image" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
+
+<!-- Boosted mod -->
+## Border-width
+
+Switch to `1px` wide border by using `border-width` utility.
+
+{{< example class="bd-example-border-utils" >}}
+<span class="border border-sm"></span>
+{{< /example >}}
+<!-- End mod -->
