@@ -399,7 +399,7 @@ $utilities: map-merge(
         1: 1,
         sm: $line-height-sm,
         base: $line-height-base,
-        lg: $line-height-lg,
+        lg: $table-cell-line-height,
       )
     ),
     "background-color": (
