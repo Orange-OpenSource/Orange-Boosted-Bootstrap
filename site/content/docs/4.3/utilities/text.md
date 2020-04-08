@@ -64,12 +64,11 @@ Note how `.text-capitalize` only changes the first letter of each word, leaving 
 
 ## Font weight and italics
 
-Quickly change the weight (boldness) of text or italicize text.
+Quickly change the weight (boldness) of text.
 
 {{< example >}}
 <p class="font-weight-bold">Bold text.</p>
 <p class="font-weight-normal">Normal weight text.</p>
-<p class="font-italic">Italic text.</p>
 <p class="font-normal">Text without font style</p>
 {{< /example >}}
 
