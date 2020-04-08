@@ -13,7 +13,7 @@ Boosted sets basic global display, typography, and link styles. When more contro
 - Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
 - Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
 - For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, `$line-height-base` adn `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
+- Use the `$font-family-base`, `$font-size-base`, `$line-height-base` and `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color` and apply link underlines only on `:hover`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
