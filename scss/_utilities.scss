@@ -399,10 +399,13 @@ $utilities: map-merge(
       property: background-color,
       class: bg,
       values: map-merge(
-        $supporting-colors,
+        $theme-colors,
         (
-          "primary": $primary,
-          "secondary": $secondary,
+          "success": $green-2,
+          "info": $blue-2,
+          "warning": $yellow-2,
+          "danger": $pink,
+          "purple": $purple,
           "body": $body-bg,
           "light": $light,
           "white": $white,
