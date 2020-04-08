@@ -43,9 +43,9 @@
         @each $property in $properties {
           #{$property}: $value if($enable-important-utilities, !important, null);
           // Boosted mod
-          @if "background-color" == $property and "transparent" != $value {
+          @if "background-color" == $property and "transparent" != inspect($value) {
             color: color-contrast($value);
-          } @else if "color" == $property and "inherit" != $value {
+          } @else if "color" == $property and "inherit" != inspect($value) {
             background-color: color-contrast($value);
           }
           // End mod
