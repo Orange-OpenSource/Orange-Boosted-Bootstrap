@@ -408,7 +408,7 @@ $font-weight-base:            $font-weight-normal !default;
 // stylelint-disable function-blacklist
 $line-height-base:            1.5 !default;
 $line-height-sm:              calc(16 / 14) !default;
-$line-height-lg:              calc(20 / 18) !default;
+$line-height-lg:              calc(30 / 16) !default;
 // stylelint-enable function-blacklist
 $letter-spacing-base:         map-get($spacers, 2) / -100 !default; // -0.1px
 
@@ -500,7 +500,7 @@ $mark-bg:                     $primary !default;
 $table-cell-padding:          .5625rem map-get($spacers, 2) map-get($spacers, 2) !default;
 
 // stylelint-disable function-blacklist
-$table-cell-line-height:      calc(30 / 16) !default;
+$table-cell-line-height:      $line-height-lg !default;
 $table-cell-line-height-sm:   calc(20 / 16) !default;
 // stylelint-enable function-blacklist
 
