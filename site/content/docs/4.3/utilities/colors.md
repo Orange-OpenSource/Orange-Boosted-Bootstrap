@@ -31,7 +31,8 @@ Similar to the contextual text color classes, easily set the background of an el
 <div class="p-3 mb-2 bg-{{ .name }}">.bg-{{ .name }}</div>
 {{- end -}}
 {{< /colors.inline >}}
-<div class="p-3 mb-2 bg-white">.bg-white</div>
+<div class="p-3 mb-2 bg-purple">.bg-purple</div>
+<div class="p-3 mb-2 bg-white">.bg-white or .bg-body</div>
 <div class="p-3 mb-2 bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
