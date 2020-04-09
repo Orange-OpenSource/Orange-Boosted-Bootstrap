@@ -134,6 +134,7 @@ fieldset:disabled a.btn {
 .btn-link {
   // font-weight: $font-weight-normal; // Boosted mod font-weight stay bold
   color: $link-color;
+  text-decoration: $link-decoration;
   // Boosted mod
   // stylelint-disable-next-line declaration-no-important
   border-color: transparent !important;
@@ -148,7 +149,10 @@ fieldset:disabled a.btn {
     text-decoration: $link-hover-decoration;
   }
 
-  // Boosted mod: no box-shadow at all
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+  }
 
   &:disabled,
   &.disabled {

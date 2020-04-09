@@ -81,6 +81,7 @@ social_logo_path:   /docs/4.4/assets/brand/orange-logo.png
 current_version:      4.4.1
 current_ruby_version: 4.4.1
 docs_version:         4.4
+github_org:           "https://github.com/Orange-OpenSource"
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 opencollective:       "https://opencollective.com/bootstrap"
