@@ -69,6 +69,7 @@
       @if $enable-validation-icons {
         &::before {
           display: inline-block;
+          flex-shrink: 0;
           align-self: center;
           width: $form-feedback-icon-size;
           height: $form-feedback-icon-size;
