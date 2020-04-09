@@ -34,7 +34,7 @@ Toasts are as flexible as you need and have very little required markup. At a mi
     <strong class="mr-auto">Boosted</strong>
     <small>11 mins ago</small>
     <!-- Boosted mod -->
-    <button type="button" class="ml-2 close" data-dismiss="toast">
+    <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
     </button>
     <!-- end mod -->
@@ -57,7 +57,7 @@ Toasts are slightly translucent, too, so they blend over whatever they might app
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted-dark">11 mins ago</small>
     <!-- Boosted mod -->
-    <button type="button" class="ml-2 close" data-dismiss="toast">
+    <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
     </button>
     <!-- end mod -->
@@ -80,7 +80,7 @@ When you have multiple toasts, we default to vertically stacking them in a reada
     <strong class="mr-auto">Boosted</strong>
     <small class="text-muted">just now</small>
     <!-- Boosted mod -->
-    <button type="button" class="ml-2 close" data-dismiss="toast">
+    <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
     </button>
     <!-- end mod -->
@@ -96,7 +96,7 @@ When you have multiple toasts, we default to vertically stacking them in a reada
     <strong class="mr-auto">Bootstrap</strong>
     <small class="text-muted">2 seconds ago</small>
     <!-- Boosted mod -->
-    <button type="button" class="ml-2 close" data-dismiss="toast">
+    <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
     </button>
     <!-- end mod -->
@@ -120,7 +120,7 @@ Place toasts with custom CSS as you need them. The top right is often used for n
       <strong class="mr-auto">Boosted</strong>
       <small>11 mins ago</small>
       <!-- Boosted mod -->
-      <button type="button" class="ml-2 close" data-dismiss="toast">
+      <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
           <span class="sr-only">Close</span>
       </button>
       <!-- end mod -->
@@ -147,7 +147,7 @@ For systems that generate more notifications, consider using a wrapping element 
         <strong class="mr-auto">Boosted</strong>
         <small class="text-muted-dark">just now</small>
         <!-- Boosted mod -->
-        <button type="button" class="ml-2 close" data-dismiss="toast">
+        <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
             <span class="sr-only">Close</span>
         </button>
         <!-- end mod -->
@@ -163,7 +163,7 @@ For systems that generate more notifications, consider using a wrapping element 
         <strong class="mr-auto">Boosted</strong>
         <small class="text-muted-dark">2 seconds ago</small>
         <!-- Boosted mod -->
-        <button type="button" class="ml-2 close" data-dismiss="toast">
+        <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
             <span class="sr-only">Close</span>
         </button>
         <!-- end mod -->
@@ -190,7 +190,7 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
       <strong class="mr-auto">Boosted</strong>
       <small>11 mins ago</small>
       <!-- Boosted mod -->
-      <button type="button" class="ml-2 close" data-dismiss="toast">
+      <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
       </button>
       <!-- end mod -->
@@ -228,7 +228,7 @@ When using `autohide: false`, you must add a close button to allow users to dism
     <strong class="mr-auto">Boosted</strong>
     <small>11 mins ago</small>
     <!-- Boosted mod -->
-    <button type="button" class="ml-2 close" data-dismiss="toast">
+    <button type="button" class="ml-2 mr-0 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
     </button>
     <!-- end mod -->
