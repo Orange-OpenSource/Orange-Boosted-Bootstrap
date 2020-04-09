@@ -55,7 +55,7 @@ Toasts are slightly translucent, too, so they blend over whatever they might app
   <div class="toast-header">
     {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
     <strong class="mr-auto">Boosted</strong>
-    <small class="text-muted">11 mins ago</small>
+    <small class="text-muted-dark">11 mins ago</small>
     <!-- Boosted mod -->
     <button type="button" class="ml-2 close" data-dismiss="toast">
         <span class="sr-only">Close</span>
@@ -145,7 +145,7 @@ For systems that generate more notifications, consider using a wrapping element 
       <div class="toast-header">
         {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
         <strong class="mr-auto">Boosted</strong>
-        <small class="text-muted">just now</small>
+        <small class="text-muted-dark">just now</small>
         <!-- Boosted mod -->
         <button type="button" class="ml-2 close" data-dismiss="toast">
             <span class="sr-only">Close</span>
@@ -161,7 +161,7 @@ For systems that generate more notifications, consider using a wrapping element 
       <div class="toast-header">
         {% include icons/placeholder.svg width="20" height="20" background="#f16e00" class="rounded mr-2" text=" " title=" " %}
         <strong class="mr-auto">Boosted</strong>
-        <small class="text-muted">2 seconds ago</small>
+        <small class="text-muted-dark">2 seconds ago</small>
         <!-- Boosted mod -->
         <button type="button" class="ml-2 close" data-dismiss="toast">
             <span class="sr-only">Close</span>
