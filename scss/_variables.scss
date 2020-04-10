@@ -1227,7 +1227,7 @@ $figure-caption-color:              $gray-900 !default;
 
 $breadcrumb-font-size:              $font-size-sm !default;
 
-$breadcrumb-padding-y:              map-get($spacers, 2) !default;
+$breadcrumb-padding-y:              .5rem !default;
 $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         map-get($spacers, 2) !default;
 
@@ -1236,12 +1236,7 @@ $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default;
 $breadcrumb-active-color:           null !default;
-$breadcrumb-divider:                $chevron-icon !default;
-// Boosted mod
-//$breadcrumb-divider-height:         map-get($spacers, 2) !default;
-//$breadcrumb-divider-width:          subtract(map-get($spacers, 2), 1px) !default;
-//$breadcrumb-line-height:            $line-height-sm !default;
-// End mod
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='M-.4 12l2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
 
 $breadcrumb-border-radius:          $border-radius !default;
 
