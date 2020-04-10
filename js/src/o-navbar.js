@@ -30,10 +30,8 @@ const DefaultType = {
   trigger : 'string'
 }
 
-const Selector = {
-  SUPRA_BAR : '.navbar.supra',
-  MEGAMENU_PANEL : '.mega-menu.panel'
-}
+const SELECTOR_SUPRA_BAR      = '.navbar.supra'
+const SELECTOR_MEGAMENU_PANEL = '.mega-menu.panel'
 
 
 /**
@@ -45,7 +43,7 @@ const Selector = {
 class Navbar {
   constructor(element, config) {
     this._element         = element
-    this._supraBar        = element.querySelector(Selector.SUPRA_BAR)
+    this._supraBar        = element.querySelector(SELECTOR_SUPRA_BAR)
     this._config          = this._getConfig(config)
     this._initialHeight = $(this._element).outerHeight()
     this._initialSupraHeight = $(this._supraBar).outerHeight()
@@ -54,7 +52,7 @@ class Navbar {
 
     if (this._config.sticky) {
       $(this._element).addClass('fixed-top')
-      $(Selector.MEGAMENU_PANEL).addClass('sticky')
+      $(SELECTOR_MEGAMENU_PANEL).addClass('sticky')
       $(document.body).css('padding-top', this._initialHeight)
 
       $(window).on('scroll', () => {
@@ -76,9 +74,9 @@ class Navbar {
         const Scroll = $(window).scrollTop()
 
         if (Scroll > 0) {
-          $(Selector.SUPRA_BAR).hide()
+          $(SELECTOR_SUPRA_BAR).hide()
         } else {
-          $(Selector.SUPRA_BAR).show()
+          $(SELECTOR_SUPRA_BAR).show()
         }
       })
     }

@@ -22,20 +22,13 @@ const DATA_API_KEY        = '.data-api'
 const JQUERY_NO_CONFLICT  = $.fn[NAME]
 const DEFAULT_THRESHOLD   = 2
 
-const Event = {
-  CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
-}
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const ClassName = {
-  ACTIVE        : 'active',
-  SHOW          : 'show',
-  ACCORDION_LAYOUT: 'accordion-layout'
-}
+const CLASS_NAME_SHOW             = 'show'
+const CLASS_NAME_ACCORDION_LAYOUT = 'accordion-layout'
 
-const Selector = {
-  OTAB_HEADING: '.o-tab-heading',
-  OTAB_CONTENT: '.o-tab-content'
-}
+const SELECTOR_OTAB_HEADING = '.o-tab-heading'
+const SELECTOR_OTAB_CONTENT = '.o-tab-content'
 
 
 /**
@@ -49,8 +42,8 @@ class Otab {
     this._element = element
     this._addAccessibility()
 
-    if ($(this._element).parent().find(Selector.OTAB_HEADING).length > DEFAULT_THRESHOLD) {
-      $(this._element).parent().addClass(ClassName.ACCORDION_LAYOUT)
+    if ($(this._element).parent().find(SELECTOR_OTAB_HEADING).length > DEFAULT_THRESHOLD) {
+      $(this._element).parent().addClass(CLASS_NAME_ACCORDION_LAYOUT)
     }
   }
 
@@ -66,16 +59,16 @@ class Otab {
   show() {
     const $element = $(this._element)
 
-    if ($element.next().hasClass(ClassName.SHOW)) {
+    if ($element.next().hasClass(CLASS_NAME_SHOW)) {
       return
     }
 
     // from parent remove all tab-content show classes
-    $element.parent().find(Selector.OTAB_CONTENT).removeClass(ClassName.SHOW)
+    $element.parent().find(SELECTOR_OTAB_CONTENT).removeClass(CLASS_NAME_SHOW)
     // remove all aria-expanded=true
     $element.parent().find('[aria-expanded="true"]').attr('aria-expanded', false)
     // add show class to next tab-content
-    $element.next().addClass(ClassName.SHOW)
+    $element.next().addClass(CLASS_NAME_SHOW)
     // add aria-expanded=true to element
     $element.attr('aria-expanded', true)
   }
@@ -98,7 +91,7 @@ class Otab {
       tabindex: 0
     })
 
-    if ($tabpanel.hasClass(ClassName.SHOW)) {
+    if ($tabpanel.hasClass(CLASS_NAME_SHOW)) {
       $tab.attr('aria-expanded', true)
     } else {
       $tab.attr('aria-expanded', false)
@@ -135,11 +128,11 @@ class Otab {
 
 $(document)
   .on('DOMContentLoaded', () => {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING))
+    Otab._jQueryInterface.call($(SELECTOR_OTAB_HEADING))
   })
-  .on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
+  .on(EVENT_CLICK_DATA_API, SELECTOR_OTAB_HEADING, function (event) {
     event.preventDefault()
-    Otab._jQueryInterface.call($(this), ClassName.SHOW)
+    Otab._jQueryInterface.call($(this), CLASS_NAME_SHOW)
   })
 
 /**

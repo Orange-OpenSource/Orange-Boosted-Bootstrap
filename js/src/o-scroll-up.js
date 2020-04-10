@@ -25,26 +25,18 @@ const SCROLLANIMATE      = 500
 
 
 const Default = {
-  target : ''
+  target: ''
 }
 
 const DefaultType = {
-  target  : '(string|element)'
+  target: '(string|element)'
 }
 
-const Event = {
-  SCROLL        : `scroll${EVENT_KEY}`,
-  CLICK_SCROLL  : `click${EVENT_KEY}`,
-  LOAD_DATA_API : `load${EVENT_KEY}${DATA_API_KEY}`
-}
+const EVENT_SCROLL        = `scroll${EVENT_KEY}`
+const EVENT_CLICK_SCROLL  = `click${EVENT_KEY}`
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
-const ClassName = {
-  SCROLL_TOP    : 'o-scroll-up'
-}
-
-const Selector = {
-  SCROLL_TOP : '.o-scroll-up:not(.static)'
-}
+const SELECTOR_SCROLL_TOP = '.o-scroll-up:not(.static)'
 
 
 /**
@@ -59,8 +51,8 @@ class ScrollUp {
     this._scrollElement = window
     this._config        = this._getConfig(config)
 
-    $(window).on(Event.SCROLL, $.proxy(this._process, this))
-    $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this))
+    $(window).on(EVENT_SCROLL, $.proxy(this._process, this))
+    $(SELECTOR_SCROLL_TOP).on(EVENT_CLICK_SCROLL, $.proxy(this._backToTop, this))
     $(this._element).addClass('is-fixed d-none')
     this._process()
   }
@@ -109,11 +101,7 @@ class ScrollUp {
   }
 
   _process() {
-    $(Selector.SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()))
-  }
-
-  _clear() {
-    $(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE)
+    $(SELECTOR_SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()))
   }
 
   _backToTop() {
@@ -129,7 +117,6 @@ class ScrollUp {
     } else {
       $('html, body').scrollTop(0)
     }
-    // scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
 
   // static
@@ -161,8 +148,8 @@ class ScrollUp {
  * ------------------------------------------------------------------------
  */
 
-$(window).on(Event.LOAD_DATA_API, () => {
-  const scrollUps = $.makeArray($(Selector.SCROLL_TOP))
+$(window).on(EVENT_LOAD_DATA_API, () => {
+  const scrollUps = $.makeArray($(SELECTOR_SCROLL_TOP))
   for (let i = scrollUps.length; i--;) {
     const $scrollup = $(scrollUps[i])
     ScrollUp._jQueryInterface.call($scrollup, $scrollup.data())

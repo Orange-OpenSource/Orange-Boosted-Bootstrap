@@ -20,22 +20,13 @@ const JQUERY_NO_CONFLICT = $.fn[NAME]
 const RESIZE_DURATION = 500
 const TAB_KEYCODE  = 9
 
-const Event = {
-  RESIZE: 'resize',
-  FOCUS: 'focus'
-}
+const EVENT_RESIZE = 'resize'
 
-const ClassName = {
-  PRIORITY: 'priority',
-  HIDE: 'sr-only',
-  RESIZING: 'resizing overflow-hidden'
-}
+const CLASS_NAME_HIDE     = 'sr-only'
+const CLASS_NAME_RESIZING = 'resizing overflow-hidden'
 
-const Selector = {
-  NAV_ELEMENTS: 'li:not(\'.overflow-nav\')',
-  FIRST_ELEMENT: 'li:first',
-  PRIORITY_ELEMENT: '.priority'
-}
+const SELECTOR_NAV_ELEMENTS     = 'li:not(\'.overflow-nav\')'
+const SELECTOR_FIRST_ELEMENT    = 'li:first'
 
 const MenuLabelDefault = 'More'
 
@@ -66,7 +57,7 @@ class PriorityNav {
       this._$menu = $(element).find('ul').first()
     }
     this._initMenu()
-    this._$allNavElements = this._$menu.find(Selector.NAV_ELEMENTS)
+    this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS)
     this._bindUIActions()
     this._setupMenu()
   }
@@ -96,7 +87,7 @@ class PriorityNav {
     const $allNavElements = this._$allNavElements
 
     // Checking top position of first item (sometimes changes)
-    const firstPos = this._$menu.find(Selector.FIRST_ELEMENT).position()
+    const firstPos = this._$menu.find(SELECTOR_FIRST_ELEMENT).position()
 
     // Empty collection in which to put menu items to move
     let $wrappedElements = $()
@@ -128,7 +119,7 @@ class PriorityNav {
       const newSet = $wrappedElements.clone()
 
       // Hide ones that we're moving
-      $wrappedElements.addClass(ClassName.HIDE)
+      $wrappedElements.addClass(CLASS_NAME_HIDE)
       $wrappedElements.find('.nav-link').attr('tabindex', -1)
 
       // Add wrapped elements to dropdown
@@ -142,10 +133,10 @@ class PriorityNav {
 
       // Check if menu doesn't overflow after process
       if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-        const $item = $(this._element).find(`.${ClassName.HIDE}`).first().prev()
+        const $item = $(this._element).find(`.${CLASS_NAME_HIDE}`).first().prev()
         const $itemDuplicate = $item.clone()
 
-        $item.addClass(ClassName.HIDE)
+        $item.addClass(CLASS_NAME_HIDE)
         $item.find('.nav-link').attr('tabindex', -1)
 
         this._$menu.find('.overflow-nav-list').prepend($itemDuplicate)
@@ -159,18 +150,18 @@ class PriorityNav {
   _tearDown() {
     this._$menu.find('.overflow-nav-list').empty()
     this._$menu.find('.overflow-nav').removeClass('d-inline-block').addClass('d-none')
-    this._$allNavElements.removeClass(ClassName.HIDE)
+    this._$allNavElements.removeClass(CLASS_NAME_HIDE)
     this._$allNavElements.find('.nav-link').attr('tabindex', 0)
   }
 
   _bindUIActions() {
-    $(window).on(Event.RESIZE, () => {
-      this._$menu.addClass(ClassName.RESIZING)
+    $(window).on(EVENT_RESIZE, () => {
+      this._$menu.addClass(CLASS_NAME_RESIZING)
 
       setTimeout(() => {
         this._tearDown()
         this._setupMenu()
-        this._$menu.removeClass(ClassName.RESIZING)
+        this._$menu.removeClass(CLASS_NAME_RESIZING)
       }, RESIZE_DURATION)
     })
 
