@@ -11,6 +11,7 @@
   line-height: 1;
   color: $badge-color;
   text-align: center;
+  letter-spacing: initial; // Boosted mod
   white-space: nowrap;
   vertical-align: baseline;
   @include border-radius($badge-border-radius);

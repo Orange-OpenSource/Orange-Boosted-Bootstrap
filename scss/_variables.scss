@@ -1091,15 +1091,11 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
 // Badges
 
-$badge-font-size:                   $font-size-sm !default;
-//$badge-font-size-lg:                $font-size-base !default; // Boosted mod
-//$badge-font-size-xlg:               $font-size-lg !default; // Boosted mod
+$badge-font-size:                   .75em !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
-$badge-padding-y:                   map-get($spacers, 4) / 10 !default;
-$badge-padding-x:                   map-get($spacers, 2) !default;
-//$badge-padding-y-lg:                map-get($spacers, 3) / 10 !default; // Boosted mod
-//$badge-padding-x-lg:                $badge-padding-x / 2 !default; // Boosted mod
+$badge-padding-y:                   .25em !default;
+$badge-padding-x:                   .5em !default;
 $badge-border-radius:               $border-radius !default;
 
 
