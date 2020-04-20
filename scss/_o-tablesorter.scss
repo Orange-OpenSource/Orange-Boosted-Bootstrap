@@ -37,7 +37,7 @@
     background-image: none;
   }
 
-  .tablesorter-headerDesc &::after {
+  .tablesorter-headerAsc &::after {
     transform: rotate(180deg);
   }
 }
