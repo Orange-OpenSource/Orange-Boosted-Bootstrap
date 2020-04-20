@@ -26,15 +26,19 @@ Use the border spinners for a lightweight loading indicator.
 
 The border spinner uses `currentColor` for its `border-color`, meaning you can customize the color with [text color utilities][color]. You can use any of our text color utilities on the standard spinner.
 
+<!-- Boosted mod -->
 {{< example >}}
-{{< spinner.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="spinner-border text-{{ .name }}" role="status">
+<div class="spinner-border text-primary" role="status">
   <span class="sr-only">Loading...</span>
 </div>
-{{- end -}}
-{{< /spinner.inline >}}
+<div class="spinner-border text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-border text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
 {{< /example >}}
+<!-- End mod -->
 
 {{< callout info >}}
 **Why not use `border-color` utilities?** Each border spinner specifies a `transparent` border for at least one side, so `.border-{color}` utilities would override that.
@@ -52,15 +56,19 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 
 Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in blue, along with the supported variants.
 
+<!-- Boosted mod -->
 {{< example >}}
-{{< spinner.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="spinner-grow text-{{ .name }}" role="status">
+<div class="spinner-grow text-primary" role="status">
   <span class="sr-only">Loading...</span>
 </div>
-{{- end -}}
-{{< /spinner.inline >}}
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
 {{< /example >}}
+<!-- End mod -->
 
 ## Alignment
 

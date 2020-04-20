@@ -42,7 +42,8 @@
   width: $spinner-width;
   height: $spinner-height;
   vertical-align: text-bottom;
-  background-color: currentColor;
+  // stylelint-disable-next-line declaration-no-important
+  background-color: currentColor !important; // Boosted mod: ensure .text-* background won't override this
   // stylelint-disable-next-line property-blacklist
   border-radius: 50%;
   opacity: 0;
