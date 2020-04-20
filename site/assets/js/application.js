@@ -10,7 +10,7 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-/* global ClipboardJS: false, anchors: false, bootstrap: false, bsCustomFileInput: false */
+/* global ClipboardJS: false, anchors: false, boosted: false, bsCustomFileInput: false */
 
 (function () {
   'use strict'
