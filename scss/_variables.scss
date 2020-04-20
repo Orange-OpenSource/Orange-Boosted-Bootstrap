@@ -1020,7 +1020,7 @@ $card-group-margin:                 $grid-gutter-width / 2 !default;
 // Tooltips
 
 $tooltip-font-size:                 $font-size-sm !default;
-//$tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
+$tooltip-font-weight:               $font-weight-bold !default; // Boosted mod
 $tooltip-max-width:                 $spacer * 10 !default;
 $tooltip-color:                     $black !default;
 $tooltip-bg:                        $gray-400 !default;
