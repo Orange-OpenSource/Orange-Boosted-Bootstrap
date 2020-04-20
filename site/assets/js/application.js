@@ -18,19 +18,19 @@
   // Tooltip and popover demos
   document.querySelectorAll('.tooltip-demo')
     .forEach(function (tooltip) {
-      new bootstrap.Tooltip(tooltip, {
+      new boosted.Tooltip(tooltip, {
         selector: '[data-toggle="tooltip"]'
       })
     })
 
   document.querySelectorAll('[data-toggle="popover"]')
     .forEach(function (popover) {
-      new bootstrap.Popover(popover)
+      new boosted.Popover(popover)
     })
 
   document.querySelectorAll('.toast')
     .forEach(function (toastNode) {
-      var toast = new bootstrap.Toast(toastNode, {
+      var toast = new boosted.Toast(toastNode, {
         autohide: false
       })
 
@@ -40,12 +40,12 @@
   // Demos within modals
   document.querySelectorAll('.tooltip-test')
     .forEach(function (tooltip) {
-      new bootstrap.Tooltip(tooltip)
+      new boosted.Tooltip(tooltip)
     })
 
   document.querySelectorAll('.popover-test')
     .forEach(function (popover) {
-      new bootstrap.Popover(popover)
+      new boosted.Popover(popover)
     })
 
   // Indeterminate checkbox example
@@ -98,7 +98,7 @@
 
   document.querySelectorAll('.btn-clipboard')
     .forEach(function (btn) {
-      var tooltipBtn = new bootstrap.Tooltip(btn)
+      var tooltipBtn = new boosted.Tooltip(btn)
 
       btn.addEventListener('mouseleave', function () {
         // Explicitly hide tooltip, since after clicking it remains
@@ -115,7 +115,7 @@
   })
 
   clipboard.on('success', function (e) {
-    var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
+    var tooltipBtn = boosted.Tooltip.getInstance(e.trigger)
 
     e.trigger.setAttribute('data-original-title', 'Copied!')
     tooltipBtn.show()
@@ -127,7 +127,7 @@
   clipboard.on('error', function (e) {
     var modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
-    var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
+    var tooltipBtn = boosted.Tooltip.getInstance(e.trigger)
 
     e.trigger.setAttribute('data-original-title', fallbackMsg)
     tooltipBtn.show()
