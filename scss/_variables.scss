@@ -338,7 +338,7 @@ $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-bolder:          $font-weight-bold !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.25 !default; // 20px
