@@ -20,8 +20,9 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  font-weight: $font-weight-bold; // Boosted mod
   color: $progress-bar-color;
-  text-align: center;
+  text-indent: map-get($spacers, 2); // Boosted mod
   white-space: nowrap;
   background-color: $progress-bar-bg;
   @include transition($progress-bar-transition);
