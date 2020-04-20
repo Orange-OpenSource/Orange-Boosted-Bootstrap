@@ -103,6 +103,7 @@ Orange Brand — thus Boosted — does not allow italic styles, and light, light
 {% capture example %}
 <p class="font-weight-bold">Bold text.</p>
 <p class="font-weight-normal">Normal weight text.</p>
+<p class="font-italic">Bold text, too.</p>
 {% endcapture %}
 {% include example.html content=example %}
 
