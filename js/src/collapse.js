@@ -337,7 +337,7 @@ class Collapse {
         ...typeof config === 'object' && config ? config : {}
       }
 
-      if (!data && _config.toggle && /show|hide|init/.test(config)) { // Boosted mod
+      if (!data && _config.toggle && typeof config === 'string' && /show|hide|init/.test(config)) { // Boosted mod
         _config.toggle = false
       }
 
