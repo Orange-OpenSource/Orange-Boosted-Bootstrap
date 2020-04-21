@@ -1046,7 +1046,7 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 // Popovers
 
 $popover-font-size:                 $font-size-sm !default;
-//$popover-font-weight:               $font-weight-bold !default; // Boosted mod
+$popover-font-weight:               $font-weight-bold !default; // Boosted mod
 $popover-bg:                        $gray-400 !default;
 $popover-max-width:                 17.25rem !default;
 $popover-border-width:              $border-width !default;
