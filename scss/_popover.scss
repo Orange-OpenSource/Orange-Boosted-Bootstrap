@@ -9,6 +9,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size($popover-font-size);
+  font-weight: $popover-font-weight; // Boosted mod
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: $popover-bg;
@@ -155,6 +156,7 @@
   margin-bottom: 0; // Reset the default from Reboot
   @include font-size($font-size-base);
   color: $popover-header-color;
+  letter-spacing: unset; // Boosted mod
   background-color: $popover-header-bg;
   border-bottom: $popover-border-width solid darken($popover-header-bg, 5%);
   @include border-top-radius($popover-inner-border-radius);
