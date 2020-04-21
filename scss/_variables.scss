@@ -949,21 +949,21 @@ $dropdown-header-padding:           $dropdown-padding-y !default;
 $pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              0 !default;
 // Boosted mod
-//$pagination-padding-start:          .75rem !default;
-//$pagination-padding-end:            1.125rem !default;
-//$pagination-first-right-padding:    $pagination-padding-end !default;
-//$pagination-last-left-padding:      $pagination-padding-end !default;
-//$pagination-first-left-padding:     $pagination-padding-start !default;
-//$pagination-last-right-padding:     $pagination-padding-start !default;
-//$pagination-icon-margin:            .375rem !default;
-//$pagination-item-size:              $spacer * 2 !default;
+$pagination-padding-start:          .75rem !default;
+$pagination-padding-end:            1.125rem !default;
+$pagination-first-right-padding:    $pagination-padding-end !default;
+$pagination-last-left-padding:      $pagination-padding-end !default;
+$pagination-first-left-padding:     $pagination-padding-start !default;
+$pagination-last-right-padding:     $pagination-padding-start !default;
+$pagination-icon-margin:            .375rem !default;
+$pagination-item-size:              $spacer * 2 !default;
 // End mod
 
 $pagination-color:                  $link-color !default;
 $pagination-bg:                     $white !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-radius:          null !default;
-$pagination-margin-left:            -$pagination-border-width !default;
+$pagination-margin-left:            map-get($spacers, 2) !default;
 $pagination-border-color:           transparent !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
@@ -978,8 +978,8 @@ $pagination-active-bg:              $black !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
 // Boosted mod
-//$pagination-active-item-bg:           $orange !default;
-//$pagination-active-item-border-color: $pagination-active-item-bg !default;
+$pagination-active-item-bg:           $orange !default;
+$pagination-active-item-border-color: $pagination-active-item-bg !default;
 // End mod
 
 $pagination-disabled-color:         $gray-500 !default;
@@ -987,11 +987,11 @@ $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
 
 // Boosted mod
-//$pagination-icon:                   $chevron-icon !default;
-//$pagination-icon-hover:             $chevron-icon-hover !default;
-//$pagination-icon-width:             .5625rem !default;
-//$pagination-icon-height:            .9375rem !default;
-//$pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
+$pagination-icon:                   $chevron-icon !default;
+$pagination-icon-hover:             $chevron-icon-hover !default;
+$pagination-icon-width:             .5625rem !default;
+$pagination-icon-height:            .9375rem !default;
+$pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
 // End mod
 
 // Cards
