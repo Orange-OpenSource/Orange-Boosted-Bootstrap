@@ -27,3 +27,18 @@
     }
   }
 }
+
+// Boosted mod
+// Ensure we only display `n` items:
+// - the first `n/2` items
+// - the last `n/2` items
+// - including the .active one (so maybe not the `n/2`th last item)
+@mixin pagination-max-items($pagination-max-items) {
+  display: none;
+
+  &.active,
+  &:nth-child(-n+#{$pagination-max-items / 2}),
+  &:nth-last-child(-n+#{$pagination-max-items / 2}) {
+    display: list-item;
+  }
+}

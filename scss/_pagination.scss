@@ -1,6 +1,6 @@
 .pagination {
   display: flex;
-  flex-wrap: wrap; // Boosted mod
+  flex-wrap: if($pagination-margin-left == (-$pagination-border-width), null, wrap); // Boosted mod
   @include list-unstyled();
 }
 
@@ -64,12 +64,25 @@
     pointer-events: none;
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
+
+    &::before {
+      opacity: .2; // Boosted mod
+    }
   }
 
   // Boosted mod
   &:first-child .page-link,
   &:last-child .page-link {
     border-color: currentColor;
+
+    &::before {
+      display: inline-block;
+      width: $pagination-icon-width;
+      height: $pagination-icon-height;
+      margin-top: $pagination-border-width / 2;
+      content: "";
+      background: $pagination-icon-background;
+    }
 
     &:hover,
     &:focus {
@@ -83,94 +96,50 @@
       background-color: $pagination-active-item-bg;
       border-color: $pagination-active-item-border-color;
     }
-  }
 
-  &:first-child .page-link::before,
-  &:last-child .page-link::after {
-    display: inline-block;
-    width: $pagination-icon-width;
-    height: $pagination-icon-height;
-    margin-top: $pagination-border-width / 2;
-    content: "";
-    background: $pagination-icon-background;
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      background-image: escape-svg($pagination-icon-hover);
+    }
+
+    &.has-label {
+      padding: $pagination-padding-y $pagination-padding-end;
+    }
   }
 
   &:first-child {
-    .page-link {
-      padding-right: $pagination-first-right-padding;
-      padding-left: $pagination-first-left-padding;
-
-      &::before {
-        margin-right: $border-width * -1.5;
-      }
+    .page-link::before {
+      margin-left: -$pagination-icon-margin;
     }
 
     .has-label::before {
-      margin: $pagination-border-width / 2 $pagination-icon-margin 0 0;
+      margin: $pagination-border-width / 2 $pagination-icon-margin * 2 0 $pagination-icon-margin * -2;
     }
   }
 
   &:last-child {
-    .page-link {
-      padding-right: $pagination-last-right-padding;
-      padding-left: $pagination-last-left-padding;
-
-      &::after {
-        margin-left: $border-width * -1.5;
-        transform: rotate(180deg);
-      }
+    .page-link::before {
+      order: 1;
+      margin-right: -$pagination-icon-margin;
+      transform: rotate(180deg);
     }
 
-    .has-label::after {
-      margin: $pagination-border-width / 2 0 0 $pagination-icon-margin;
+    .has-label::before {
+      margin: $pagination-border-width / 2 $pagination-icon-margin * -2 0 $pagination-icon-margin * 2;
     }
   }
 
-  &:first-child .page-link:hover::before,
-  &:first-child .page-link:focus::before,
-  &:first-child .page-link:active::before,
-  &:last-child .page-link:hover::after,
-  &:last-child .page-link:focus::after,
-  &:last-child .page-link:active::after {
-    background-image: escape-svg($pagination-icon-hover);
-  }
-
-  &.disabled:first-child .page-link::before,
-  &.disabled:last-child .page-link::after {
-    opacity: .2;
-  }
-
-  // Ensure we only display 6 items:
-  // - the first three items
-  // - the last three items
-  // - including the .active one (so maybe not the third last item)
   @include media-breakpoint-down(sm) {
-    display: none;
-
-    &.active,
-    &:nth-child(-n+3),
-    &:nth-last-child(-n+3) {
-      display: list-item;
-    }
-
-    &.active:not(:nth-child(-n+3)):not(:nth-last-child(-n+3)) ~ &:nth-last-child(3) {
-      display: none;
-    }
+    @include pagination-max-items(4);
   }
 
-  // The same than above, but for 8 items
   @include media-breakpoint-between(sm, md) {
-    display: none;
+    @include pagination-max-items(6);
+  }
 
-    &.active,
-    &:nth-child(-n+4),
-    &:nth-last-child(-n+4) {
-      display: list-item;
-    }
-
-    &.active:not(:nth-child(-n+4)):not(:nth-last-child(-n+4)) + &:nth-last-child(4) {
-      display: none;
-    }
+  @include media-breakpoint-between(md, lg) {
+    @include pagination-max-items(8);
   }
   // End mod
 }
