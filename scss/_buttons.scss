@@ -3,7 +3,7 @@
 //
 
 .btn {
-  display: inline-block;
+  display: inline-flex; // Boosted mod
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
@@ -53,10 +53,28 @@
 // Alternate buttons
 //
 
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-  }
+// Boosted mod: inconsistent theming ¯\_(ツ)_/¯
+.btn-primary,
+.btn-warning {
+  @include button-variant($primary, $primary, $white, $active-background: $white, $active-border: $black, $active-color: $black);
+}
+
+.btn-light,
+.btn-secondary {
+  @include button-variant($white, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+}
+
+.btn-success {
+  @include button-variant($success, $success, $black);
+}
+
+.btn-info,
+.btn-dark {
+  @include button-variant($black, $black, $white, $white, $black, $black);
+}
+
+.btn-danger {
+  @include button-variant($danger, $danger, $white);
 }
 
 // Boosted mod: no .btn-outline
@@ -67,9 +85,10 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  font-weight: $font-weight-normal;
   color: $btn-link-color;
   text-decoration: $link-decoration;
+  // stylelint-disable-next-line declaration-no-important
+  border-color: transparent !important; // Boosted mod
 
   &:hover {
     color: $btn-link-hover-color;
@@ -95,11 +114,11 @@
 //
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg);
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm);
 }
 
 

@@ -2,17 +2,20 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-
+// Boosted mod: add disable-background, disabled-border and disabled-color option
 @mixin button-variant(
   $background,
   $border,
   $color: color-contrast($background),
-  $hover-background: darken($background, 7.5%),
-  $hover-border: darken($border, 10%),
+  $hover-background: $black,
+  $hover-border: $black,
   $hover-color: color-contrast($hover-background),
-  $active-background: darken($background, 10%),
-  $active-border: darken($border, 12.5%),
-  $active-color: color-contrast($active-background)
+  $active-background: $primary,
+  $active-border: $primary,
+  $active-color: color-contrast($active-background),
+  $disabled-background: $gray-500,
+  $disabled-border: $gray-500,
+  $disabled-color: $white
 ) {
   color: $color;
   @include gradient-bg($background);
@@ -59,20 +62,21 @@
 
   &:disabled,
   &.disabled {
-    color: $color;
-    background-color: $background;
+    color: $disabled-color;
+    background-color: $disabled-background;
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
-    border-color: $border;
+    border-color: $disabled-border;
   }
 }
 
 // Boosted mod: no .btn-outline
 
 // Button sizes
-@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
-  padding: $padding-y $padding-x;
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius, $line-height: null) {
+  padding: subtract($padding-y, 1px) $padding-x add($padding-y, 1px);
   @include font-size($font-size);
+  line-height: $line-height;
   // Manually declare to provide an override to the browser default
   @include border-radius($border-radius, 0);
 }
