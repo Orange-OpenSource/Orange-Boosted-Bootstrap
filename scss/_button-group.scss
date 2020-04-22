@@ -43,12 +43,12 @@
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn-group:not(:last-child) > .btn {
-    @include border-right-radius(0);
+    @include border-right-radius(null); // Boosted mod: no rounded corners to reset
   }
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) > .btn {
-    @include border-left-radius(0);
+    @include border-left-radius(null); // Boosted mod: no rounded corners to reset
   }
 }
 
@@ -97,7 +97,7 @@
 
   // Show no shadow for `.btn-link` since it has no other button styles.
   &.btn-link {
-    @include box-shadow(none);
+    @include box-shadow(null); // Boosted mod: no box-shadow to unset
   }
 }
 
@@ -124,12 +124,12 @@
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn-group:not(:last-child) > .btn {
-    @include border-bottom-radius(0);
+    @include border-bottom-radius(null); // Boosted mod: no rounded corners to reset
   }
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) > .btn {
-    @include border-top-radius(0);
+    @include border-top-radius(null); // Boosted mod: no rounded corners to reset
   }
 }
 
@@ -149,6 +149,31 @@
 .btn-group-toggle {
   > .btn,
   > .btn-group > .btn {
+    border-color: $gray-500; // Boosted mod
+
+    // Boosted mod: hover = focus, active ≠ .active, focus ≠ focus-visible
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $primary;
+      background-color: transparent;
+      border-color: $gray-500;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &.active {
+      color: $white;
+      background-color: $black;
+      border-color: $black;
+      outline-color: $black;
+    }
+    // End mod
+
     input[type="radio"],
     input[type="checkbox"] {
       position: absolute;
@@ -156,4 +181,21 @@
       pointer-events: none;
     }
   }
+
+  // Boosted mod: no border inside of .btn-group-toggle
+  > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn-group:not(:last-child) > .btn {
+    border-right: 0;
+  }
+
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) > .btn {
+    border-left: 0;
+  }
+
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
+    margin-left: 0;
+  }
+  // End mod
 }
