@@ -528,7 +528,7 @@ $table-caption-padding:       .75rem !default; // Boosted mod
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .5rem !default;
+$input-btn-padding-y:         .375rem !default;
 $input-btn-padding-x:         1.125rem !default;
 $input-btn-font-family:       $font-family-sans-serif !default;
 $input-btn-font-size:         $font-size-base !default;
@@ -563,10 +563,12 @@ $btn-white-space:             null !default; // Set to `nowrap` to prevent text 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
 $btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-line-height-sm:          $line-height-sm !default; // Boosted mod
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
+$btn-line-height-lg:          $h5-line-height !default; // Boosted mod
 
 $btn-border-width:            $input-btn-border-width !default;
 
