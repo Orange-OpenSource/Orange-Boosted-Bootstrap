@@ -949,13 +949,8 @@ $dropdown-header-padding:           $dropdown-padding-y !default;
 $pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              0 !default;
 // Boosted mod
-$pagination-padding-start:          .75rem !default;
 $pagination-padding-end:            1.125rem !default;
-$pagination-first-right-padding:    $pagination-padding-end !default;
-$pagination-last-left-padding:      $pagination-padding-end !default;
-$pagination-first-left-padding:     $pagination-padding-start !default;
-$pagination-last-right-padding:     $pagination-padding-start !default;
-$pagination-icon-margin:            .375rem !default;
+$pagination-icon-margin:            .1875rem !default;
 $pagination-item-size:              $spacer * 2 !default;
 // End mod
 
