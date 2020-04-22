@@ -64,13 +64,13 @@
   align-items: center;
   padding: $input-padding-y $input-padding-x;
   @include font-size($input-font-size); // Match inputs
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-bold; // Boosted mod
   line-height: $input-line-height;
   color: $input-group-addon-color;
   text-align: center;
   white-space: nowrap;
   background-color: $input-group-addon-bg;
-  border: $input-border-width solid $input-group-addon-border-color;
+  border: if($input-group-addon-border-color != null, $input-border-width solid $input-group-addon-border-color, null);
   @include border-radius($input-border-radius);
 }
 
