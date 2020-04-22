@@ -27,6 +27,12 @@
   &.hide {
     display: none;
   }
+
+  // Boosted mod
+  .close {
+    font-size: $font-size-sm;
+  }
+  // End mod
 }
 
 .toast-header {
