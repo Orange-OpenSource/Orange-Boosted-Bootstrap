@@ -14,30 +14,54 @@ toc: true
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
 
 {{< example >}}
-{{< alerts.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="alert alert-{{ .name }}" role="alert">
-  A simple {{ .name }} alert—check it out!
-</div>{{- end -}}
-{{< /alerts.inline >}}
+<div class="alert alert-success" role="alert">
+  <span class="alert-icon"><span class="sr-only">Success</span></span>
+  <p>Success notification text goes here.</p>
+</div>
+<div class="alert alert-info" role="alert">
+  <span class="alert-icon"><span class="sr-only">Info</span></span>
+  <p>Information notification text goes here.</p>
+</div>
+<div class="alert alert-warning" role="alert">
+  <span class="alert-icon"><span class="sr-only">Warning</span></span>
+  <p>Warning notification text goes here.</p>
+</div>
+<div class="alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="sr-only">Error</span></span>
+  <p>Error notification text goes here.</p>
+</div>
 {{< /example >}}
 
 {{< callout info >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-### Link color
+<!-- Boosted mod: no Link color -->
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+<!-- Boosted mod: small alerts -->
+### Sizes
+
+Alerts come with a smaller variant: `.alert-sm`.
 
 {{< example >}}
-{{< alerts.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="alert alert-{{ .name }}" role="alert">
-  A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>{{ end -}}
-{{< /alerts.inline >}}
+<div class="alert alert-success alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Success</span></span>
+  <p>Success notification text goes here.</p>
+</div>
+<div class="alert alert-info alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Info</span></span>
+  <p>Information notification text goes here.</p>
+</div>
+<div class="alert alert-warning alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Warning</span></span>
+  <p>Warning notification text goes here.</p>
+</div>
+<div class="alert alert-danger alert-sm" role="alert">
+  <span class="alert-icon"><span class="sr-only">Error</span></span>
+  <p>Error notification text goes here.</p>
+</div>
 {{< /example >}}
+<!-- End mod -->
 
 ### Additional content
 
@@ -45,10 +69,11 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <span class="alert-icon"><span class="sr-only">Success</span></span>
+  <div>
+    <h4 class="alert-heading">Success notification text goes here.</h4>
+    <p>Description text goes here.</p>
+  </div>
 </div>
 {{< /example >}}
 
@@ -66,7 +91,8 @@ You can see this in action with a live demo:
 
 {{< example >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <span class="alert-icon"><span class="sr-only">Warning</span></span>
+  <p>Warning notification text goes here.</p>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 </div>
 {{< /example >}}

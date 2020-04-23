@@ -4,14 +4,21 @@
 
 .alert {
   position: relative;
+  display: flex; // Boosted mod
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
+  font-weight: $font-weight-bold; // Boosted mod
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
 }
 
 // Headings for larger alerts
 .alert-heading {
+  // Boosted mod: ensure headings look like paragraphs
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  // End mod
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
 }
@@ -27,25 +34,85 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: $close-font-size + $alert-padding-x * 2;
-
-  // Adjust close link position
+  // Boosted mod: simpler alignment thanks to flexbox
   .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: $alert-padding-y $alert-padding-x;
-    color: inherit;
-  }
-}
+    padding: $alert-padding-x;
+    margin: -.5rem -.75rem -.5rem auto;
+    background-size: $alert-close-icon-size;
 
+    &,
+    &:hover,
+    &:focus {
+      background-image: escape-svg($close-icon-stroke);
+    }
+  }
+  // End mod
+}
 
 // Alternate styles
 //
 // Generate contextual modifier classes for colorizing the alert.
 
-@each $color, $value in $theme-colors {
+//
+// Boosted mod
+//
+
+// Only border changes — and we add an icon
+@each $color, $value in $alert-colors {
   .alert-#{$color} {
-    @include alert-variant(color-level($value, $alert-bg-level), color-level($value, $alert-border-level), color-level($value, $alert-color-level));
+    border-color: $value;
+
+    .alert-icon::before {
+      background-image: map-get($alert-icons, $color);
+    }
   }
 }
+
+// Additional content
+.alert * p {
+  margin: 0;
+}
+
+.alert-heading ~ p {
+  font-weight: $font-weight-normal;
+}
+
+// Icons
+.alert-icon {
+  width: $alert-icon-size;
+  margin: -#{$alert-icon-margin-y / 2} 0;
+
+  + * {
+    margin: $alert-icon-margin-y 0;
+  }
+
+  &::before {
+    display: block;
+    order: -1;
+    height: $alert-logo-size;
+    content: "";
+    background-repeat: no-repeat;
+  }
+}
+
+// Small alerts
+.alert-sm {
+  padding: $alert-padding-sm 0;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  border: 0;
+
+  .alert-icon {
+    width: $alert-icon-size / 2;
+    margin: $alert-icon-margin-y 0;
+
+    &::before {
+      height: $alert-logo-size-sm;
+    }
+  }
+
+  &.alert-dismissible .close {
+    margin: -#{$alert-padding-sm} 0 -#{$alert-padding-sm} auto;
+  }
+}
+// End mod
