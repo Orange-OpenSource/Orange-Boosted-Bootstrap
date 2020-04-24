@@ -70,6 +70,7 @@
 .card-header {
   padding: $card-cap-padding-y $card-cap-padding-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  font-weight: $font-weight-bold; // Boosted mod
   color: $card-cap-color;
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
@@ -87,7 +88,8 @@
 
 .card-footer {
   padding: $card-cap-padding-y $card-cap-padding-x;
-  background-color: $card-cap-bg;
+  color: $card-cap-bg; // Boosted mod
+  background-color: $card-cap-color; // Boosted mod
   border-top: $card-border-width solid $card-border-color;
 
   &:last-child {
