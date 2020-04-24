@@ -36,13 +36,25 @@
 .nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
+  // Boosted mod: margins between tabs on bigger screen
+  @include media-breakpoint-up(lg) {
+    .nav-item + .nav-item {
+      margin-left: $nav-link-padding-y;
+    }
+  }
+  // End mod
+
   .nav-link {
+    padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
     margin-bottom: -$nav-tabs-border-width;
     border: $nav-tabs-border-width solid transparent;
+    border-bottom-width: 0; // Boosted mod
     @include border-top-radius($nav-tabs-border-radius);
 
     &:hover,
     &:focus {
+      color: color-contrast($nav-tabs-link-hover-border-color); // Boosted mod
+      background-color: $nav-tabs-link-hover-border-color; // Boosted mod
       border-color: $nav-tabs-link-hover-border-color;
     }
 
