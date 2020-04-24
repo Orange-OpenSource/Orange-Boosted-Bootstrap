@@ -533,7 +533,7 @@ $table-caption-padding:       .75rem !default; // Boosted mod
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-y:         .5rem !default;
 $input-btn-padding-x:         1.125rem !default;
 $input-btn-font-family:       $font-family-sans-serif !default;
 $input-btn-font-size:         $font-size-base !default;
@@ -989,8 +989,8 @@ $pagination-disabled-border-color:  $pagination-disabled-color !default;
 // Boosted mod
 $pagination-icon:                   $chevron-icon !default;
 $pagination-icon-hover:             $chevron-icon-hover !default;
-$pagination-icon-width:             .5625rem !default;
-$pagination-icon-height:            .9375rem !default;
+$pagination-icon-width:             add(.5rem, 1px) !default;
+$pagination-icon-height:            subtract(1rem, 1px) !default;
 $pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
 // End mod
 
@@ -1004,13 +1004,12 @@ $card-border-radius:                $border-radius !default;
 $card-border-color:                 $black !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                .75rem !default;
-$card-cap-padding-x:                1.25rem !default;
+$card-cap-padding-x:                $spacer !default;
 $card-cap-bg:                       $black !default;
 $card-cap-color:                    $white !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
-//$card-accordion-spacer:             .875rem !default; // Boosted mod
 
 $card-img-overlay-padding:          $spacer !default;
 
@@ -1315,3 +1314,14 @@ $kbd-color:                         $black !default;
 $kbd-bg:                            $gray-300 !default;
 
 $pre-color:                         $gray-900 !default;
+
+//
+// Boosted mod
+//
+
+// Accordions
+$accordion-spacer:            .875rem !default;
+$accordion-spacer-sm:         map-get($spacers, 2) !default;
+$accordion-arrow-size:        .875rem 1rem !default;
+$accordion-arrow-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
