@@ -287,7 +287,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
 
 {{< example >}}
 <div class="card text-center">
-  <div class="card-header">
+  <div class="card-header bg-white">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
         <a class="nav-link active" aria-current="true" href="#">Active</a>
@@ -310,7 +310,7 @@ Add some navigation to a card's header (or block) with Boosted's [nav components
 
 {{< example >}}
 <div class="card text-center">
-  <div class="card-header">
+  <div class="card-header bg-white">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
@@ -409,7 +409,7 @@ Use [text and background utilities]({{< docsref "/utilities/colors" >}}) to chan
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="card{{ if not (or (eq .name "light") (eq .name "warning")) }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
+<div class="card bg-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h5 class="card-title">{{ .name | title }} card title</h5>
@@ -433,7 +433,7 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="card border-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
-  <div class="card-body{{ if not (eq .name "light") }} text-{{ .name }}{{ end }}">
+  <div class="card-body{{ if (eq .name "primary") }} text-{{ .name }}{{ end }}">
     <h5 class="card-title">{{ .name | title }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
@@ -448,7 +448,7 @@ You can also change the borders on the card header and footer as needed, and eve
 
 {{< example >}}
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-header bg-transparent border-success text-body">Header</div>
   <div class="card-body text-success">
     <h5 class="card-title">Success card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
