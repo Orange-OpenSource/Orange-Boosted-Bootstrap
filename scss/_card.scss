@@ -217,7 +217,14 @@
 
 .accordion {
   > .card {
-    overflow: hidden;
+    // Boosted mod
+    border-color: $gray-500;
+    border-width: $border-width 0;
+
+    @include media-breakpoint-up(md) {
+      border-width: $border-width / 2 0;
+    }
+    // End mod
 
     &:not(:last-of-type) {
       border-bottom: 0;
@@ -228,9 +235,72 @@
       @include border-top-radius(0);
     }
 
+    // Boosted mod
     > .card-header {
       @include border-radius(0);
-      margin-bottom: -$card-border-width;
+      padding: 0;
+      background-color: $card-cap-color;
+      border: 0;
+
+      .btn {
+        width: add(100%, $accordion-spacer * 2);
+        padding: $card-cap-padding-y;
+        margin: 0 -#{$accordion-spacer};
+        @include font-size($h3-font-size);
+        line-height: $h3-line-height;
+        text-decoration: if($link-decoration == none, null, none);
+        letter-spacing: $h3-spacing;
+        border: 0;
+
+        &:not(.collapsed) {
+          color: $primary;
+
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &::after {
+          align-self: center;
+          width: $accordion-spacer;
+          height: $accordion-spacer / 2;
+          margin: 0 map-get($spacers, 2) 0 auto;
+          content: "";
+          background: escape-svg($accordion-arrow-icon) no-repeat 50% / $accordion-arrow-size;
+        }
+
+        &:hover::after,
+        &:not(.collapsed)::after {
+          // @todo drop this in favor of `mask-image` & `background-color` (#370)
+          background-image: escape-svg($accordion-arrow-icon-active);
+        }
+
+        &:focus {
+          z-index: 2;
+          outline-offset: 0;
+        }
+      }
+
+      .btn-sm {
+        padding-top: $accordion-spacer-sm;
+        padding-bottom: $accordion-spacer-sm;
+        @include font-size($h5-font-size);
+        line-height: $h5-line-height;
+        letter-spacing: $h5-spacing;
+      }
+
+      .btn-lg {
+        padding-top: $accordion-spacer;
+        padding-bottom: $accordion-spacer;
+        @include font-size($h2-font-size);
+        line-height: $h2-line-height;
+        letter-spacing: $h2-spacing;
+      }
     }
+
+    .card-body {
+      padding: 0 $spacer $spacer 0;
+    }
+    // End mod
   }
 }
