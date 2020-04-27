@@ -252,27 +252,15 @@
         letter-spacing: $h3-spacing;
         border: 0;
 
+        // Generate the caret automatically
+        @include caret($accordion: true);
+
         &:not(.collapsed) {
           color: $primary;
 
           &::after {
             transform: rotate(180deg);
           }
-        }
-
-        &::after {
-          align-self: center;
-          width: $accordion-spacer;
-          height: $accordion-spacer / 2;
-          margin: 0 map-get($spacers, 2) 0 auto;
-          content: "";
-          background: escape-svg($accordion-arrow-icon) no-repeat 50% / $accordion-arrow-size;
-        }
-
-        &:hover::after,
-        &:not(.collapsed)::after {
-          // @todo drop this in favor of `mask-image` & `background-color` (#370)
-          background-image: escape-svg($accordion-arrow-icon-active);
         }
 
         &:focus {

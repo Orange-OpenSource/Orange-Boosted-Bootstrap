@@ -25,15 +25,22 @@
   border-bottom: $caret-width solid transparent;
 }
 
-@mixin caret($direction: down) {
+@mixin caret($direction: down, $accordion: false) {
   @if $enable-caret {
     &::after {
       display: inline-block;
-      margin-left: $caret-spacing;
-      vertical-align: $caret-vertical-align;
+      // Boosted mod: flexbox FTW!
+      align-self: $caret-vertical-align;
+      @if ($accordion == false) {
+        margin-left: $caret-spacing;
+      } @else {
+        margin: 0 $caret-spacing 0 auto;
+      }
+      // End mod
       content: "";
       @if $direction == down {
         @include caret-down();
+        transform: translateY($border-width / 2); // Boosted mod
       } @else if $direction == up {
         @include caret-up();
       } @else if $direction == right {
