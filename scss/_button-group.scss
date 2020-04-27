@@ -65,8 +65,49 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: subtract($dropdown-padding-x, $border-width);
+  padding-left: subtract($dropdown-padding-x, $border-width);
+  border-color: $black;
+
+  // Boosted mod
+  &:not(:hover):not(:focus):not(:active) {
+    border-left-color: transparent;
+  }
+
+  &:not(:focus):not(:active)::before {
+    position: absolute;
+    top: -$border-width;
+    bottom: -$border-width;
+    left: -$border-width;
+    width: $border-width;
+    color: $black;
+    content: "";
+    background:
+      linear-gradient(
+        currentColor $border-width,
+        transparent $border-width,
+        transparent $border-width * 2.5,
+        currentColor $border-width * 2.5,
+        currentColor subtract(100%, $border-width * 2.5),
+        transparent subtract(100%, $border-width * 2.5),
+        transparent subtract(100%, $border-width),
+        currentColor subtract(100%, $border-width)
+      );
+  }
+
+  .btn:active + & {
+    border-color: $primary;
+  }
+
+  .btn-group.show > &:not(:focus):not(:active)::before {
+    color: $primary;
+    background-color: currentColor;
+  }
+
+  .dropleft > &:not(:hover):not(:focus):not(:active) {
+    border-left-color: $black;
+  }
+  // end mod
 
   &::after,
   .dropup &::after,
@@ -80,13 +121,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-right: $btn-padding-x-sm * .5; // Boosted mod
+  padding-left: $btn-padding-x-sm * .5; // Boosted mod
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-right: $btn-padding-x-lg * .5; // Boosted mod
+  padding-left: $btn-padding-x-lg * .5; // Boosted mod
 }
 
 

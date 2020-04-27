@@ -54,9 +54,13 @@
       }
 
       &::before {
+        // stylelint-disable-next-line declaration-no-important
+        position: static !important; // Boosted mod: prevent custom split buttons to interfere
         display: inline-block;
+        align-self: $caret-vertical-align; // Boosted mod: flexbox FTW!
         margin-right: $caret-spacing;
-        vertical-align: $caret-vertical-align;
+        // stylelint-disable-next-line declaration-no-important
+        color: unset !important; // Boosted mod: prevent custom split buttons to interfere
         content: "";
         @include caret-left();
       }
