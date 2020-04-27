@@ -7,7 +7,12 @@
 }
 
 .dropdown-toggle {
+  padding-right: $dropdown-padding-x;
+  padding-left: $dropdown-padding-x;
+  color: $dropdown-color;
   white-space: nowrap;
+  background-color: $dropdown-bg;
+  border-color: $dropdown-border-color;
 
   // Generate the caret automatically
   @include caret();
@@ -76,9 +81,6 @@
 
   .dropdown-toggle {
     @include caret(right);
-    &::after {
-      vertical-align: 0;
-    }
   }
 }
 
@@ -93,9 +95,6 @@
 
   .dropdown-toggle {
     @include caret(left);
-    &::before {
-      vertical-align: 0;
-    }
   }
 }
 
@@ -116,7 +115,7 @@
   height: 0;
   margin: $dropdown-divider-margin-y 0;
   overflow: hidden;
-  border-top: 1px solid $dropdown-divider-bg;
+  border-top: $border-width solid $dropdown-divider-bg; // Boosted mod
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -127,7 +126,7 @@
   width: 100%; // For `<button>`s
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   clear: both;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-bold; // Boosted mod
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
