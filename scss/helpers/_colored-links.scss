@@ -1,23 +1,13 @@
-@each $color, $value in $theme-colors {
-  // Boosted mod: restrict to primary and light and ensure contrast
-  @if ($value == $primary) or ($value == $light) {
-    $contrast: color-contrast($value);
+@each $color, $value in ("primary": $primary, "light": $light) { // Boosted mod: restrict to primary and light
+  .link-#{$color} {
+    color: $value;
+    background-color: color-contrast($value); // Boosted mod: ensure contrast
 
-    .link-#{$color} {
-      color: $value;
-      background-color: $contrast;
-
-      @if $emphasized-link-hover-darken-percentage != 0 {
-        &:hover,
-        &:focus {
-          @if $contrast == $white {
-            color: darken($value, $emphasized-link-hover-darken-percentage);
-          } @else {
-            color: lighten($value, $emphasized-link-hover-darken-percentage);
-          }
-        }
+    @if $emphasized-link-hover-darken-percentage != 0 {
+      &:hover,
+      &:focus {
+        color: if(color-contrast($value) == $white, darken($value, $emphasized-link-hover-darken-percentage), lighten($value, $emphasized-link-hover-darken-percentage)); // Boosted mod
       }
     }
   }
-  // End mod
 }
