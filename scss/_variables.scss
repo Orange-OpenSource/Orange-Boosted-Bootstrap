@@ -458,8 +458,7 @@ $display-line-height:         $h1-line-height !default;
 
 $lead-font-size:              $font-size-xlg !default;
 $lead-font-weight:            400 !default;
-// stylelint-disable-next-line function-blacklist
-$lead-line-height:            calc(30 / 20) !default;
+$lead-line-height:            1.5 !default;
 $lead-letter-spacing:         $letter-spacing-base * .25 !default;
 
 $small-font-size:             .875em !default;
@@ -475,7 +474,7 @@ $blockquote-small-color:      $gray-700 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-xlg !default;
 // stylelint-disable-next-line function-blacklist
-$blockquote-line-height:      calc(30 / 20) !default;
+$blockquote-line-height:      1.5 !default;
 $blockquote-letter-spacing:   $letter-spacing-base * .25 !default;
 
 $hr-margin-y:                 $spacer !default;
