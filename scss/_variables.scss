@@ -86,6 +86,16 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark
 ) !default;
+
+$background-colors: map-merge(
+  $theme-colors,
+  (
+    "success": $green-2,
+    "info": $blue-2,
+    "warning": $yellow-2,
+    "danger": $purple
+  )
+) !default;
 // fusv-enable
 
 // Set a specific jump point for requesting color jumps

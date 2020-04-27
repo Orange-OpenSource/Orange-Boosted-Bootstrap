@@ -412,15 +412,10 @@ $utilities: map-merge(
       property: background-color,
       class: bg,
       values: map-merge(
-        $theme-colors,
+        $background-colors,
         (
-          "success": $green-2,
-          "info": $blue-2,
-          "warning": $yellow-2,
-          "danger": $purple,
           "pink": $pink,
           "body": $body-bg,
-          "light": $light,
           "white": $white,
           "transparent": transparent
         )
