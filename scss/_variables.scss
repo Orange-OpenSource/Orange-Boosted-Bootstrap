@@ -356,7 +356,7 @@ $box-shadow-inset:            null !default;
 $component-active-color:      $white !default;
 $component-active-bg:         $primary !default;
 
-$caret-width:                 subtract(map-get($spacers, 2), 1px) !default;
+$caret-width:                 add(map-get($spacers, 1), $border-width) !default;
 $caret-vertical-align:        center !default;
 $caret-spacing:               map-get($spacers, 2) !default;
 
@@ -1322,6 +1322,3 @@ $pre-color:                         $gray-900 !default;
 // Accordions
 $accordion-spacer:            .875rem !default;
 $accordion-spacer-sm:         map-get($spacers, 2) !default;
-$accordion-arrow-size:        .875rem 1rem !default;
-$accordion-arrow-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default;
-$accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
