@@ -13,6 +13,7 @@
 
 .carousel {
   position: relative;
+  margin-bottom: $carousel-margin-bottom; // Boosted mod
 }
 
 .carousel.pointer-event {
@@ -110,11 +111,11 @@
   }
 }
 .carousel-control-prev {
-  left: 0;
+  left: $carousel-control-offset; // Boosted mod
   background-image: if($enable-gradients, linear-gradient(90deg, rgba($black, .25), rgba($black, .001)), null);
 }
 .carousel-control-next {
-  right: 0;
+  right: $carousel-control-offset; // Boosted mod
   background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
 }
 
@@ -124,15 +125,10 @@
   display: inline-block;
   width: $carousel-control-icon-width;
   height: $carousel-control-icon-width;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 100% 100%;
-}
-.carousel-control-prev-icon {
-  background-image: escape-svg($carousel-control-prev-icon-bg);
+  background: escape-svg($carousel-control-prev-icon-bg) no-repeat 50% / #{$carousel-control-icon-size $carousel-control-icon-size}; // Boosted mod
 }
 .carousel-control-next-icon {
-  background-image: escape-svg($carousel-control-next-icon-bg);
+  transform: rotate(180deg); // Boosted mod
 }
 
 
@@ -144,7 +140,7 @@
 .carousel-indicators {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -$carousel-margin-bottom;
   left: 0;
   z-index: 2;
   display: flex;
@@ -164,16 +160,18 @@
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
-    background-color: $carousel-indicator-active-bg;
+    background-color: $carousel-control-color; // Boosted mod
     background-clip: padding-box;
     // Use transparent borders to increase the hit area by 10px on top and bottom.
     border-top: $carousel-indicator-hit-area-height solid transparent;
     border-bottom: $carousel-indicator-hit-area-height solid transparent;
     opacity: $carousel-indicator-opacity;
     @include transition($carousel-indicator-transition);
+    @include border-radius(50%, 50%); // Boosted mod
   }
 
   .active {
+    background-color: $carousel-indicator-active-bg; // Boosted mod
     opacity: $carousel-indicator-active-opacity;
   }
 }
@@ -185,11 +183,9 @@
 
 .carousel-caption {
   position: absolute;
-  right: (100% - $carousel-caption-width) / 2;
   bottom: $carousel-caption-spacer;
-  left: (100% - $carousel-caption-width) / 2;
-  padding-top: $carousel-caption-padding-y;
-  padding-bottom: $carousel-caption-padding-y;
+  left: map-get($spacers, 5);
+  padding: $carousel-caption-padding-y; // Boosted mod
   color: $carousel-caption-color;
-  text-align: center;
+  background-color: color-contrast($carousel-caption-color); // Boosted mod
 }

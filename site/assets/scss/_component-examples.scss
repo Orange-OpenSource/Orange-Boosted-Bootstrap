@@ -111,7 +111,7 @@
     display: block;
   }
 
-  > :last-child {
+  > :last-child:not(.carousel) { // Boosted mod
     margin-bottom: 0;
   }
 
