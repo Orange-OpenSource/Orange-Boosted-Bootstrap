@@ -28,12 +28,13 @@
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: $list-group-action-hover-color;
     text-decoration: none;
-    background-color: $list-group-hover-bg;
+    // Boosted mod: no background change
   }
 
   &:active {
-    color: $list-group-action-active-color;
-    background-color: $list-group-action-active-bg;
+    color: $list-group-active-color; // Boosted mod
+    background-color: $list-group-active-bg; // Boosted mod
+    border-color: $list-group-active-border-color; // Boosted mod
   }
 }
 
@@ -155,6 +156,8 @@
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
-@each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, color-level($value, $list-group-item-bg-level), color-level($value, $list-group-item-color-level));
+// Boosted mod: supporting colours only + ensure contrasts
+@each $color, $value in $background-colors {
+  @include list-group-item-variant($color, $value, color-contrast($value));
 }
+// End mod
