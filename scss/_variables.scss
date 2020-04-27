@@ -1246,30 +1246,31 @@ $breadcrumb-border-radius:          $border-radius !default;
 
 // Carousel
 
+$carousel-margin-bottom:             map-get($spacers, 5) !default; // Boosted mod
 $carousel-control-color:             $black !default;
 $carousel-control-width:             map-get($spacers, 4) !default;
-$carousel-control-opacity:           .5 !default;
-$carousel-control-hover-opacity:     .9 !default;
-$carousel-control-transition:        opacity .15s ease, outline-offset .2s ease-in-out !default;
+$carousel-control-opacity:           null !default;
+$carousel-control-hover-opacity:     null !default;
+$carousel-control-transition:        outline-offset .2s ease-in-out !default;
+$carousel-control-offset:            map-get($spacers, 2) !default; // Boosted mod
 
 $carousel-indicator-width:           map-get($spacers, 2) !default;
 $carousel-indicator-height:          map-get($spacers, 2) !default;
 $carousel-indicator-hit-area-height: null !default;
 $carousel-indicator-spacer:          3px !default;
-$carousel-indicator-opacity:         .5 !default;
+$carousel-indicator-opacity:         null !default;
 $carousel-indicator-active-bg:       $primary !default;
-$carousel-indicator-active-opacity:  1 !default;
-$carousel-indicator-transition:      opacity .6s ease !default;
+$carousel-indicator-active-opacity:  null !default;
+$carousel-indicator-transition:      null !default;
 
-$carousel-caption-width:             70% !default;
 $carousel-caption-color:             $black !default;
 $carousel-caption-padding-y:         $spacer !default;
-$carousel-caption-spacer:            $spacer !default;
+$carousel-caption-spacer:            0 !default;
 
 $carousel-control-icon-width:        2.375rem !default;
+$carousel-control-icon-size:         map-get($spacers, 4) !default; // Boosted mod
 
 $carousel-control-prev-icon-bg:      $chevron-icon !default;
-$carousel-control-next-icon-bg:      $chevron-icon !default;
 
 $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
