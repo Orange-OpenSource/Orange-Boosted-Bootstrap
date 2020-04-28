@@ -12,8 +12,9 @@
 }
 
 .nav-link {
-  display: block;
+  display: flex; // Boosted mod
   padding: $nav-link-padding-y $nav-link-padding-x;
+  font-weight: $font-weight-bold; // Boosted mod
   text-decoration: if($link-decoration == none, null, none);
 
   &:hover,
@@ -34,7 +35,8 @@
 //
 
 .nav-tabs {
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  --bs-tabs-spacing: #{$nav-tabs-border-width};
+  border-bottom: var(--bs-tabs-spacing) solid $nav-tabs-border-color;
 
   // Boosted mod: margins between tabs on bigger screen
   @include media-breakpoint-up(lg) {
@@ -46,8 +48,10 @@
 
   .nav-link {
     padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
-    margin-bottom: -$nav-tabs-border-width;
-    border: $nav-tabs-border-width solid transparent;
+    // stylelint-disable-next-line function-blacklist
+    margin-bottom: calc(var(--bs-tabs-spacing) * -1);
+    background: none; // Boosted mod: prevent dropdown background to interfere
+    border: var(--bs-tabs-spacing) solid transparent;
     border-bottom-width: 0; // Boosted mod
     @include border-top-radius($nav-tabs-border-radius);
 
@@ -74,12 +78,35 @@
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    margin-top: -$nav-tabs-border-width;
+    // stylelint-disable-next-line function-blacklist
+    margin-top: calc(var(--bs-tabs-spacing) * -1);
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-top-radius(0);
   }
 }
 
+// Boosted mod
+.nav-tabs-light {
+  --bs-tabs-spacing: #{$nav-tabs-border-width / 2};
+  border-color: $gray-600;
+
+  .nav-link {
+    // stylelint-disable-next-line function-blacklist
+    border-width: 0 0 calc(var(--bs-tabs-spacing) * 4);
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      background: none;
+      border-color: transparent;
+    }
+
+    &.active {
+      border-bottom-color: $primary;
+    }
+  }
+}
+// End mod
 
 //
 // Pills
@@ -95,6 +122,12 @@
     color: $nav-pills-link-active-color;
     background-color: $nav-pills-link-active-bg;
   }
+
+  // Boosted mod
+  .nav-item + .nav-item {
+    margin-left: $nav-link-padding-y / 2;
+  }
+  // End mod
 }
 
 
@@ -123,6 +156,12 @@
 // Hide tabbable panes to start, show them when `.active`
 
 .tab-content {
+  // Boosted mod
+  padding: subtract($spacer, $nav-tabs-border-width);
+  border: $nav-tabs-border-width solid;
+  border-top: 0;
+  // End mod
+
   > .tab-pane {
     display: none;
   }
