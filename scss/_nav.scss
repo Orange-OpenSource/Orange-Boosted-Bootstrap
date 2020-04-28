@@ -47,7 +47,7 @@
   // End mod
 
   .nav-link {
-    padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
+    padding: subtract(1rem, $nav-tabs-border-width) map-get($spacers, 4); // Boosted mod
     // stylelint-disable-next-line function-blacklist
     margin-bottom: calc(var(--bs-tabs-spacing) * -1);
     background: none; // Boosted mod: prevent dropdown background to interfere
