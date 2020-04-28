@@ -716,7 +716,7 @@ $form-text-margin-top:                  map-get($spacers, 2) !default;
 
 $form-check-inline-margin-right:        1rem !default;
 
-$input-group-addon-color:               $input-color !default;
+$input-group-addon-color:               null !default;
 $input-group-addon-bg:                  null !default;
 $input-group-addon-border-color:        null !default;
 
@@ -868,30 +868,33 @@ $nav-pills-link-active-bg:          $black !default;
 
 // Navbar
 
-$navbar-padding-y:                  .875rem !default;
+$navbar-padding-y:                  add($spacer, map-get($spacers, 1)) !default;
 $navbar-padding-x:                  null !default;
+$navbar-padding-bottom:             add(map-get($spacers, 1), $border-width) !default; // Boosted mod
 
-$navbar-nav-link-padding-x:         null !default;
+$navbar-nav-link-padding-x:         $nav-link-padding-x / 2 !default;
 
-// Boosted mod : adapt navbar padding when mobile view
+// Boosted mod: Orange master logo & minimizing behaviour
+$navbar-icon-size:                     map-get($spacers, 4) !default;
 //$navbar-height:                        6.25rem !default;
-//$navbar-brand-logo-height:             map-get($spacers, 4) !default;
-//$navbar-brand-logo-expanded-height:    3.125rem !default;
+$navbar-brand-logo-height:             add(map-get($spacers, 4), $spacer) !default;
+$navbar-brand-hit-area-offset:         add(map-get($spacers, 1), map-get($spacers, 2)) !default;
+$navbar-brand-logo-minimized-height:   map-get($spacers, 4) !default;
+$navbar-brand-name-margin:             0 $spacer 0 add(map-get($spacers, 2), map-get($spacers, 1)) !default;
 //$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
 //$navbar-supra-padding-x:               map-get($spacers, 1) * 1.5 !default;
-//$navbar-supra-icon-size:               1.5625rem !default;
-//$navbar-transition-duration:           .2s !default;
-//$navbar-transition-timing-function:    ease-in-out !default;
-//$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function !default;
-//$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function !default;
-//$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
-//$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
-// end mod
+$navbar-transition-duration:           .2s !default;
+$navbar-transition-timing-function:    ease-in-out !default;
+$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
+// End mod
 
 $navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $navbar-brand-padding-y:            null !default;
-$navbar-brand-margin-right:         1rem !default;
+$navbar-brand-margin-right:         map-get($spacers, 1) !default;
 
 $navbar-toggler-padding-y:          .5rem !default;
 $navbar-toggler-padding-x:          .5rem !default;
@@ -902,22 +905,14 @@ $navbar-toggler-transition:         null !default;
 
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $orange-2 !default;
-$navbar-dark-active-color:          $white !default;
+$navbar-dark-active-color:          $orange-2 !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-dark-toggler-border-color:  null !default;
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-icon-hover-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
+$navbar-dark-toggler-border-color:  transparent !default;
 
-$navbar-light-color:                $black !default;
-$navbar-light-hover-color:          $orange !default;
-$navbar-light-active-color:         $orange !default;
-$navbar-light-disabled-color:       $gray-500 !default;
-$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-border-color: null !default;
-
-$navbar-light-brand-color:                $navbar-light-active-color !default;
-$navbar-light-brand-hover-color:          $navbar-light-active-color !default;
-$navbar-dark-brand-color:                 $navbar-dark-active-color !default;
-$navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
+$navbar-dark-brand-color:           $navbar-dark-color !default;
+$navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 
 // Dropdowns
@@ -1295,8 +1290,8 @@ $close-color:                       $black !default;
 // Boosted mod
 $close-icon-size:                   1em !default;
 $close-icon:                        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-//$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-//$close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $close-icon-stroke:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 //$close-icon-stroke-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 //$close-icon-stroke-hover:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' stroke='#{$primary}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
