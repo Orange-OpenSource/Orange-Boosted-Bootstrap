@@ -15,7 +15,9 @@
   display: flex; // Boosted mod
   padding: $nav-link-padding-y $nav-link-padding-x;
   font-weight: $font-weight-bold; // Boosted mod
+  color: $navbar-dark-brand-color; // Boosted mod: should work with every `.bg-*`
   text-decoration: if($link-decoration == none, null, none);
+  background: none; // Boosted mod: Prevent dropdown's background to interfere
 
   &:hover,
   &:focus {
