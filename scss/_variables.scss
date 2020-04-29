@@ -862,8 +862,8 @@ $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default;
 
 $nav-pills-border-radius:           $border-radius !default;
-$nav-pills-link-active-color:       $component-active-color !default;
-$nav-pills-link-active-bg:          $black !default;
+$nav-pills-link-active-color:       $white !default;
+$nav-pills-link-active-bg:          $primary !default;
 
 
 // Navbar
@@ -911,7 +911,7 @@ $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://w
 $navbar-dark-toggler-icon-hover-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
 $navbar-dark-toggler-border-color:  transparent !default;
 
-$navbar-dark-brand-color:           $navbar-dark-color !default;
+$navbar-dark-brand-color:           inherit !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 

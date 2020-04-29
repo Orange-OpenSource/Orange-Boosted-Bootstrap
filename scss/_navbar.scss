@@ -139,7 +139,6 @@
     position: relative;
     padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x / 4;
     color: $navbar-dark-color;
-    background: none; // Prevent dropdown's background to interfere
     outline-offset: $spacer;
     @include transition($navbar-transition);
 

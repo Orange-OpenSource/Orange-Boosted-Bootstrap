@@ -22,8 +22,10 @@ When successfully implemented, your nav or list group will update accordingly, m
 Scroll the area below the navbar and watch the active class change. The dropdown items will be highlighted as well.
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <nav id="navbar-example2" class="navbar px-3">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+    </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link" href="#fat">@fat</a>
@@ -59,8 +61,10 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 </div>
 
 {{< highlight html >}}
-<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav id="navbar-example2" class="navbar px-3">
+  <a class="navbar-brand" href="#">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+  </a>
   <ul class="nav nav-pills">
     <li class="nav-item">
       <a class="nav-link" href="#fat">@fat</a>
@@ -99,9 +103,11 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 
 <div class="bd-example">
   <div class="row">
-    <div class="col-4">
-      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <div class="col-4 col-lg-2">
+      <nav id="navbar-example3" class="navbar flex-column">
+        <a class="navbar-brand align-self-start" href="#">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+        </a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#item-1">Item 1</a>
           <nav class="nav nav-pills flex-column">
@@ -117,7 +123,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
         </nav>
       </nav>
     </div>
-    <div class="col-8">
+    <div class="col-8 col-lg-10">
       <div data-spy="scroll" data-target="#navbar-example3" data-offset="0" class="scrollspy-example-2">
         <h4 id="item-1">Item 1</h4>
         <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
@@ -139,8 +145,10 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 </div>
 
 {{< highlight html >}}
-<nav id="navbar-example3" class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav id="navbar-example3" class="navbar">
+  <a class="navbar-brand align-self-start" href="#">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+  </a>
   <nav class="nav nav-pills flex-column">
     <a class="nav-link" href="#item-1">Item 1</a>
     <nav class="nav nav-pills flex-column">
