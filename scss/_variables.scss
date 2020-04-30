@@ -31,21 +31,21 @@ $grays: (
 ) !default;
 
 // Boosted mod
-// Core colors
+//// Core colors
 $orange:   #f16e00 !default;
 $orange-2: #ff7900 !default;
-// Functional colors
+//// Functional colors
 $green:    #32c832 !default;
 $blue:     #527edb !default;
 $yellow:   #fc0 !default;
 $red:      #cd3c14 !default;
-// Supporting colors
+//// Supporting colors
 $blue-2:   #4bb4e6 !default;
 $yellow-2: #ffd200 !default;
 $green-2:  #50be87 !default;
 $purple:   #a885d8 !default;
 $pink:     #ffb4e6 !default;
-// Aliasing Bootstrap variables, just in case
+//// Aliasing Bootstrap variables, just in case
 $indigo:   $purple !default;
 $teal:     $green-2 !default;
 $cyan:     $blue-2 !default;
@@ -228,7 +228,6 @@ $success-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000
 $info-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm0 14.7a11 11 0 110 22 11 11 0 010-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 100 30 15 15 0 000-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
 $danger-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0015.6 125H125a15.6 15.6 0 0013.5-23.5L83.8 7.8A15.6 15.6 0 0070.3 0zm19.2 50a6.4 6.4 0 014.4 1.9 6.4 6.4 0 010 9L79.4 75.6l15 15a6.4 6.4 0 010 9.2 6.4 6.4 0 01-4.5 1.9 6.4 6.4 0 01-4.6-2l-15-15-15 15a6.4 6.4 0 01-4.6 2 6.4 6.4 0 01-4.6-2 6.4 6.4 0 010-9l15-15L46.8 61a6.4 6.4 0 119-9.1l14.6 14.5L84.8 52a6.4 6.4 0 014.7-1.9z'/></svg>") !default;
-
 // End mod
 
 // Options
@@ -399,13 +398,13 @@ $embed-responsive-aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      HelvNeueOrange, Helvetica Neue, Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default; // Boosted mod
+$font-family-sans-serif:      HelvNeueOrange, Helvetica Neue, Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 // Boosted mod
-// Type scale & vertical rhythm completely revamped to match Orange Web Guidelines
+//// Type scale & vertical rhythm completely revamped to match Orange Web Guidelines
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
@@ -941,11 +940,6 @@ $dropdown-header-padding:           $spacer map-get($spacers, 2) !default;
 
 $pagination-padding-y:              map-get($spacers, 2) !default;
 $pagination-padding-x:              0 !default;
-// Boosted mod
-$pagination-padding-end:            1.125rem !default;
-$pagination-icon-margin:            .1875rem !default;
-$pagination-item-size:              $spacer * 2 !default;
-// End mod
 
 $pagination-color:                  $link-color !default;
 $pagination-bg:                     $white !default;
@@ -965,18 +959,18 @@ $pagination-active-color:           $component-active-color !default;
 $pagination-active-bg:              $black !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
-// Boosted mod
-$pagination-active-item-bg:           $orange !default;
-$pagination-active-item-border-color: $pagination-active-item-bg !default;
-// End mod
-
 $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
 
 // Boosted mod
+$pagination-padding-end:            1.125rem !default;
+$pagination-item-size:              $spacer * 2 !default;
+$pagination-active-item-bg:           $orange !default;
+$pagination-active-item-border-color: $pagination-active-item-bg !default;
 $pagination-icon:                   $chevron-icon !default;
 $pagination-icon-hover:             $chevron-icon-hover !default;
+$pagination-icon-margin:            .1875rem !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
 $pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
@@ -1274,8 +1268,6 @@ $close-icon:                        url("data:image/svg+xml,<svg xmlns='http://w
 $close-icon-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $close-icon-hover:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $close-icon-stroke:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-//$close-icon-stroke-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
-//$close-icon-stroke-hover:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' stroke='#{$primary}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 // End mod
 
 
@@ -1296,6 +1288,6 @@ $pre-color:                         $gray-900 !default;
 // Boosted mod
 //
 
-// Accordions
+//// Accordions
 $accordion-spacer:            .875rem !default;
 $accordion-spacer-sm:         map-get($spacers, 2) !default;

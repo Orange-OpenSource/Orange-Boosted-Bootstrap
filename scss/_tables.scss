@@ -10,8 +10,8 @@
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
   // Boosted mod
-  // = Only rows have border
-  // = Set line-height everywhere
+  //// Only rows have border
+  //// Set line-height everywhere
   tr {
     border-bottom: $table-border-width solid $table-border-color;
   }

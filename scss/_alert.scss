@@ -57,7 +57,7 @@
 // Boosted mod
 //
 
-// Only border changes — and we add an icon
+//// Only border changes — and we add an icon
 @each $color, $value in $alert-colors {
   .alert-#{$color} {
     border-color: $value;
@@ -68,7 +68,7 @@
   }
 }
 
-// Additional content
+//// Additional content
 .alert * p {
   margin: 0;
 }
@@ -77,7 +77,7 @@
   font-weight: $font-weight-normal;
 }
 
-// Icons
+//// Icons
 .alert-icon {
   width: $alert-icon-size;
   margin: -#{$alert-icon-margin-y / 2} 0;
@@ -95,7 +95,7 @@
   }
 }
 
-// Small alerts
+//// Small alerts
 .alert-sm {
   padding: $alert-padding-sm 0;
   font-size: $font-size-sm;
