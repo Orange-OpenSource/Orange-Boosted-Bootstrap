@@ -33,6 +33,7 @@
   z-index: 1;
   display: flex;
   height: 100%;
+  background-color: $input-disabled-bg; // Boosted mod
   border-color: $form-file-border-color;
   @include border-radius($form-file-border-radius);
   @include box-shadow($form-file-box-shadow);
@@ -41,7 +42,7 @@
 .form-file-text {
   display: block;
   flex-grow: 1;
-  padding: $form-file-padding-y $form-file-padding-x;
+  padding: subtract($form-file-padding-y, 1px) $form-file-padding-x add($form-file-padding-y, 1px); // Boosted mod
   overflow: hidden;
   font-family: $form-file-font-family;
   font-weight: $form-file-font-weight;
@@ -59,7 +60,7 @@
 .form-file-button {
   display: block;
   flex-shrink: 0;
-  padding: $form-file-padding-y $form-file-padding-x;
+  padding: subtract($form-file-padding-y, 1px) $form-file-padding-x add($form-file-padding-y, 1px); // Boosted mod
   margin-left: -$form-file-border-width;
   line-height: $form-file-line-height;
   color: $form-file-button-color;
@@ -70,15 +71,7 @@
   @include border-right-radius(inherit);
 }
 
-.form-file-sm {
-  height: $form-file-height-sm;
-  @include font-size($form-file-font-size-sm);
-
-  .form-file-text,
-  .form-file-button {
-    padding: $form-file-padding-y-sm $form-file-padding-x-sm;
-  }
-}
+// Boosted mod: no .form-file-sm
 
 .form-file-lg {
   height: $form-file-height-lg;

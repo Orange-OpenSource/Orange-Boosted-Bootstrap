@@ -52,20 +52,13 @@ We hide the default file `<input>` via `opacity` and instead style the `<label>`
 
 ## Sizing
 
-You may also choose from small and large file inputs to match our similarly sized text inputs.
+You may also use large file inputs to match our similarly sized text inputs.
 
+<!-- Boosted mod: no .form-file-sm -->
 {{< example >}}
-<div class="form-file form-file-lg mb-3">
+<div class="form-file form-file-lg">
   <input type="file" class="form-file-input" id="customFileLg">
   <label class="form-file-label" for="customFileLg">
-    <span class="form-file-text">Choose file...</span>
-    <span class="form-file-button">Browse</span>
-  </label>
-</div>
-
-<div class="form-file form-file-sm">
-  <input type="file" class="form-file-input" id="customFileSm">
-  <label class="form-file-label" for="customFileSm">
     <span class="form-file-text">Choose file...</span>
     <span class="form-file-button">Browse</span>
   </label>

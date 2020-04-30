@@ -34,21 +34,21 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">First name</label>
+    <label for="validationCustom01" class="form-label is-required">First name</label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Last name</label>
+    <label for="validationCustom02" class="form-label is-required">Last name</label>
     <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">Username</label>
+    <label for="validationCustomUsername" class="form-label is-required">Username</label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
@@ -58,14 +58,14 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">City</label>
+    <label for="validationCustom03" class="form-label is-required">City</label>
     <input type="text" class="form-control" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom04" class="form-label">State</label>
+    <label for="validationCustom04" class="form-label is-required">State</label>
     <select class="form-select" id="validationCustom04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
@@ -75,7 +75,7 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Zip</label>
+    <label for="validationCustom05" class="form-label is-required">Zip</label>
     <input type="text" class="form-control" id="validationCustom05" required>
     <div class="invalid-feedback">
       Please provide a valid zip.
@@ -130,33 +130,33 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationDefault01" class="form-label">First name</label>
+    <label for="validationDefault01" class="form-label is-required">First name</label>
     <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
   </div>
   <div class="col-md-4">
-    <label for="validationDefault02" class="form-label">Last name</label>
+    <label for="validationDefault02" class="form-label is-required">Last name</label>
     <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
   </div>
   <div class="col-md-4">
-    <label for="validationDefaultUsername" class="form-label">Username</label>
+    <label for="validationDefaultUsername" class="form-label is-required">Username</label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend2">@</span>
-      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationDefault03" class="form-label">City</label>
+    <label for="validationDefault03" class="form-label is-required">City</label>
     <input type="text" class="form-control" id="validationDefault03" required>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">State</label>
+    <label for="validationDefault04" class="form-label is-required">State</label>
     <select class="form-select" id="validationDefault04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
     </select>
   </div>
   <div class="col-md-3">
-    <label for="validationDefault05" class="form-label">Zip</label>
+    <label for="validationDefault05" class="form-label is-required">Zip</label>
     <input type="text" class="form-control" id="validationDefault05" required>
   </div>
   <div class="col-12">
@@ -180,21 +180,21 @@ We recommend using client-side validation, but in case you require server-side v
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationServer01" class="form-label">First name</label>
+    <label for="validationServer01" class="form-label is-required">First name</label>
     <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServer02" class="form-label">Last name</label>
+    <label for="validationServer02" class="form-label is-required">Last name</label>
     <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServerUsername" class="form-label">Username</label>
+    <label for="validationServerUsername" class="form-label is-required">Username</label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
       <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
@@ -204,14 +204,14 @@ We recommend using client-side validation, but in case you require server-side v
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationServer03" class="form-label">City</label>
+    <label for="validationServer03" class="form-label is-required">City</label>
     <input type="text" class="form-control is-invalid" id="validationServer03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer04" class="form-label">State</label>
+    <label for="validationServer04" class="form-label is-required">State</label>
     <select class="form-select is-invalid" id="validationServer04" required>
       <option selected disabled value="">Choose...</option>
       <option>...</option>
@@ -221,7 +221,7 @@ We recommend using client-side validation, but in case you require server-side v
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer05" class="form-label">Zip</label>
+    <label for="validationServer05" class="form-label is-required">Zip</label>
     <input type="text" class="form-control is-invalid" id="validationServer05" required>
     <div class="invalid-feedback">
       Please provide a valid zip.
@@ -256,7 +256,7 @@ Validation styles are available for the following form controls and components:
 {{< example >}}
 <form class="was-validated">
   <div class="mb-3">
-    <label for="validationTextarea" class="form-label">Textarea</label>
+    <label for="validationTextarea" class="form-label is-required">Textarea</label>
     <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
     <div class="invalid-feedback">
       Please enter a message in the textarea.
@@ -304,65 +304,7 @@ Validation styles are available for the following form controls and components:
 </form>
 {{< /example >}}
 
-## Tooltips
-
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
-
-{{< example >}}
-<form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4 position-relative">
-    <label for="validationTooltip01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-    <div class="valid-tooltip">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4 position-relative">
-    <label for="validationTooltip02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-    <div class="valid-tooltip">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4 position-relative">
-    <label for="validationTooltipUsername" class="form-label">Username</label>
-    <div class="input-group">
-      <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-      <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-      <div class="invalid-tooltip">
-        Please choose a unique and valid username.
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 position-relative">
-    <label for="validationTooltip03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationTooltip03" required>
-    <div class="invalid-tooltip">
-      Please provide a valid city.
-    </div>
-  </div>
-  <div class="col-md-3 position-relative">
-    <label for="validationTooltip04" class="form-label">State</label>
-    <select class="form-select" id="validationTooltip04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
-    <div class="invalid-tooltip">
-      Please select a valid state.
-    </div>
-  </div>
-  <div class="col-md-3 position-relative">
-    <label for="validationTooltip05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationTooltip05" required>
-    <div class="invalid-tooltip">
-      Please provide a valid zip.
-    </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
-</form>
-{{< /example >}}
+<!-- Boosted mod: no Form tooltips -->
 
 ## Customizing
 

@@ -10,6 +10,18 @@
   color: $form-label-color;
 }
 
+// Boosted mod: states for labels
+.is-disabled {
+  color: $input-disabled-color;
+}
+
+.is-required::after {
+  margin-left: $form-label-margin-bottom;
+  color: $primary;
+  content: "*";
+}
+// End mod
+
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
 .col-form-label {
@@ -29,8 +41,4 @@
   @include font-size($input-font-size-lg);
 }
 
-.col-form-label-sm {
-  padding-top: add($input-padding-y-sm, $input-border-width);
-  padding-bottom: add($input-padding-y-sm, $input-border-width);
-  @include font-size($input-font-size-sm);
-}
+// Boosted mod: no .col-form-label-sm

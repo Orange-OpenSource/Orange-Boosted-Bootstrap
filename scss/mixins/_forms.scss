@@ -14,119 +14,115 @@
 }
 
 @mixin form-validation-state($state, $color, $icon) {
-  .#{$state}-feedback {
-    display: none;
-    width: 100%;
-    margin-top: $form-feedback-margin-top;
-    @include font-size($form-feedback-font-size);
-    color: $color;
-  }
-
-  .#{$state}-tooltip {
-    position: absolute;
-    top: 100%;
-    z-index: 5;
-    display: none;
-    max-width: 100%; // Contain to parent when possible
-    padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
-    margin-top: .1rem;
-    @include font-size($form-feedback-tooltip-font-size);
-    line-height: $form-feedback-tooltip-line-height;
-    color: color-contrast($color);
-    background-color: rgba($color, $form-feedback-tooltip-opacity);
-    @include border-radius($form-feedback-tooltip-border-radius);
-  }
-
-  @include form-validation-state-selector($state) {
-    ~ .#{$state}-feedback,
-    ~ .#{$state}-tooltip {
-      display: block;
+  // Boosted mod: valid ≠ invalid
+  @if $state == "valid" {
+    .#{$state}-feedback {
+      display: none;
+      @extend .sr-only; // Boosted mod: Do not visually display .valid-feedback
     }
-  }
 
-  .form-control {
-    @include form-validation-state-selector($state) {
-      border-color: $color;
+    @if $enable-validation-icons {
+      .form-control {
+        @include form-validation-state-selector($state) {
+          background: escape-svg($icon) no-repeat right map-get($spacers, 2) center / $spacer;
+        }
+      }
+    }
+  } @else {
+    .#{$state}-feedback {
+      display: none;
+      width: 100%;
+      margin-top: $form-feedback-margin-top;
+      @include font-size($form-feedback-font-size);
+      font-weight: $font-weight-bold; // Boosted mod
 
+      // Boosted mod: status should not rely on color only
       @if $enable-validation-icons {
-        padding-right: $input-height-inner;
-        background-image: escape-svg($icon);
-        background-repeat: no-repeat;
-        background-position: right $input-height-inner-quarter center;
-        background-size: $input-height-inner-half $input-height-inner-half;
+        &::before {
+          flex-shrink: 0;
+          align-self: center;
+          width: $form-feedback-icon-size;
+          height: $form-feedback-icon-size;
+          margin-right: map-get($spacers, 1);
+          content: "";
+          background: escape-svg($form-feedback-icon-invalid) no-repeat;
+        }
       }
+    }
 
-      &:focus {
+    // Boosted mod: no .#{$state}-tooltip
+
+    @include form-validation-state-selector($state) {
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: flex; // Boosted mod
+      }
+    }
+
+    .form-control {
+      @include form-validation-state-selector($state) {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, $input-btn-focus-color-opacity);
+
+        // Boosted mod: validation icon in .*-feedback
+
+        // Boosted mod: no box-shadow
+        &:focus {
+          border-color: $color;
+        }
       }
     }
-  }
 
-  // stylelint-disable-next-line selector-no-qualifying-type
-  textarea.form-control {
-    @include form-validation-state-selector($state) {
-      @if $enable-validation-icons {
-        padding-right: $input-height-inner;
-        background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
-      }
-    }
-  }
+    // Boosted mod: no icon in background for textarea
 
-  .form-select {
-    @include form-validation-state-selector($state) {
-      border-color: $color;
-
-      @if $enable-validation-icons {
-        padding-right: $form-select-feedback-icon-padding-right;
-        background-image: escape-svg($form-select-indicator), escape-svg($icon);
-        background-position: $form-select-bg-position, $form-select-feedback-icon-position;
-        background-size: $form-select-bg-size, $form-select-feedback-icon-size;
-      }
-
-      &:focus {
+    .form-select {
+      @include form-validation-state-selector($state) {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+
+        // Boosted mod: no icon in background
+
+        // Boosted mod: no box-shadow
+        &:focus {
+          border-color: $color;
+        }
       }
     }
-  }
 
-  .form-check-input {
-    @include form-validation-state-selector($state) {
-      border-color: $color;
-
-      &:checked {
-        @include gradient-bg(lighten($color, 10%), escape-svg($form-check-input-checked-bg-image));
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
-      }
-
-      ~ .form-check-label {
-        color: $color;
-      }
-    }
-  }
-  .form-check-inline .form-check-input {
-    ~ .#{$state}-feedback {
-      margin-left: .5em;
-    }
-  }
-
-  // custom file
-  .form-file-input {
-    @include form-validation-state-selector($state) {
-      ~ .form-file-label {
+    .form-check-input {
+      @include form-validation-state-selector($state) {
         border-color: $color;
-      }
 
-      &:focus {
+        // Boosted mod: flat background
+        &:checked,
+        &:active {
+          background-color: $color;
+        }
+
+        // Boosted mod: no box-shadow
+
+        // Boosted mod: label's color doesn't change
+      }
+    }
+    .form-check-inline .form-check-input {
+      ~ .#{$state}-feedback {
+        margin-left: .5em;
+      }
+    }
+
+    // custom file
+    .form-file-input {
+      @include form-validation-state-selector($state) {
         ~ .form-file-label {
           border-color: $color;
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+
+        &:focus {
+          ~ .form-file-label {
+            border-color: $color;
+            // Boosted mod: no box-shadow
+          }
         }
       }
     }
   }
+  // End mod
 }

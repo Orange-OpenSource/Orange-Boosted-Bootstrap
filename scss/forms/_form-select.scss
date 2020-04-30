@@ -7,7 +7,7 @@
   display: block;
   width: 100%;
   height: $form-select-height;
-  padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
+  padding: subtract($form-select-padding-y, 1px) ($form-select-padding-x + $form-select-indicator-padding) add($form-select-padding-y, 1px) $form-select-padding-x; // Boosted mod
   font-family: $form-select-font-family;
   @include font-size($form-select-font-size);
   font-weight: $form-select-font-weight;
@@ -64,13 +64,7 @@
   }
 }
 
-.form-select-sm {
-  height: $form-select-height-sm;
-  padding-top: $form-select-padding-y-sm;
-  padding-bottom: $form-select-padding-y-sm;
-  padding-left: $form-select-padding-x-sm;
-  @include font-size($form-select-font-size-sm);
-}
+// Boosted mod: no .form-select-sm
 
 .form-select-lg {
   height: $form-select-height-lg;
