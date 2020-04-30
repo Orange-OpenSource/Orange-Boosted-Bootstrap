@@ -42,7 +42,7 @@
       .#{$property-class + $infix + $property-class-modifier} {
         @each $property in $properties {
           #{$property}: $value if($enable-important-utilities, !important, null);
-          // Boosted mod
+          // Boosted mod: ensure contrasts in color utilities
           @if "background-color" == $property and "transparent" != inspect($value) {
             color: color-contrast($value);
           } @else if "color" == $property and "inherit" != inspect($value) {
