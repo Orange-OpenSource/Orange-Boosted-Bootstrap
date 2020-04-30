@@ -462,6 +462,7 @@ textarea {
   @include font-size(inherit);
   line-height: inherit;
   letter-spacing: inherit; // Boosted mod
+  box-shadow: none; // Boosted mod: prevent native validation styles to apply
 }
 
 // Show the overflow in Edge

@@ -86,6 +86,7 @@
 
 .input-group-lg > .form-select {
   height: $input-height-lg;
+  padding-right: $form-select-padding-x + $form-select-indicator-padding; // Boosted mod: dedupe selector, since no .input-group-sm
 }
 
 .input-group-lg > .form-control,
@@ -97,27 +98,7 @@
   @include border-radius($input-border-radius-lg);
 }
 
-.input-group-sm > .form-control {
-  min-height: $input-height-sm;
-}
-
-.input-group-sm > .form-select {
-  height: $input-height-sm;
-}
-
-.input-group-sm > .form-control,
-.input-group-sm > .form-select,
-.input-group-sm > .input-group-text,
-.input-group-sm > .btn {
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  @include font-size($input-font-size-sm);
-  @include border-radius($input-border-radius-sm);
-}
-
-.input-group-lg > .form-select,
-.input-group-sm > .form-select {
-  padding-right: $form-select-padding-x + $form-select-indicator-padding;
-}
+// Boosted mod: no .input-group-sm
 
 
 // Rounded corners

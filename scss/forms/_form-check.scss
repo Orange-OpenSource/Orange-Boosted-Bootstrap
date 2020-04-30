@@ -29,17 +29,19 @@
   }
 
   &[type="radio"] {
-    @include border-radius($form-check-radio-border-radius);
-  }
-
-  &:active {
-    filter: $form-check-input-active-filter;
+    border-radius: $form-check-radio-border-radius; // stylelint-disable-line property-blacklist
   }
 
   &:focus {
     border-color: $form-check-input-focus-border;
     outline: 0;
     box-shadow: $form-check-input-focus-box-shadow;
+  }
+
+  &:active {
+    background-color: $form-check-input-active-bg-color; // Boosted mod
+    filter: $form-check-input-active-filter;
+    border-color: $form-check-input-active-bg-color; // Boosted mod
   }
 
   &:checked {
@@ -61,9 +63,10 @@
     &[type="radio"] {
       @if $enable-gradients {
         background-image: escape-svg($form-check-radio-checked-bg-image), linear-gradient(180deg, lighten($form-check-input-checked-bg-color, 10%), $form-check-input-checked-bg-color);
-        background-size: $form-check-input-checked-bg-size, auto;
+        background-size: 1em, auto; // Boosted mod
       } @else {
         background-image: escape-svg($form-check-radio-checked-bg-image);
+        background-size: 1em; // Boosted mod
       }
     }
   }
@@ -84,8 +87,14 @@
 
   &:disabled {
     pointer-events: none;
-    filter: none;
-    opacity: .5;
+    background-color: $input-disabled-bg; // Boosted mod
+
+    // Boosted mod
+    &:checked {
+      background-color: $input-border-color;
+      border-color: $input-border-color;
+    }
+    // End mod
   }
 
   // Use disabled attribute in addition of :disabled pseudo-class
@@ -93,7 +102,16 @@
   &[disabled],
   &:disabled {
     ~ .form-check-label {
-      opacity: .5;
+      color: $input-disabled-color; // Boosted mod
+    }
+  }
+
+  // Boosted mod: required symbol
+  &:required {
+    ~ .form-check-label::after {
+      margin-left: $form-label-margin-bottom;
+      color: $primary;
+      content: "*";
     }
   }
 }
@@ -108,36 +126,63 @@
 //
 
 .form-switch {
+  min-height: $form-switch-width / 2; // Boosted mod
   padding-left: $form-switch-padding-left;
 
   .form-check-input {
     width: $form-switch-width;
+    height: $form-switch-width / 2; // Boosted mod
     margin-left: $form-switch-padding-left * -1;
-    background-image: escape-svg($form-switch-bg-image);
+    background-color: $black; // Boosted mod
+    background-image: escape-svg($form-switch-bg-image), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: $form-switch-bg-size; // Get a 1px separation
+    background-position: right .5rem top 50%, 0 0; // Boosted mod
+    background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
+    border-color: $black; // Boosted mod
     @include border-radius($form-switch-border-radius);
     color-adjust: exact; // Keep themed appearance for print
-    // Todo: Figure out how to tackle these, with or without mixin?
-    // transition: $form-switch-transition;
-    // transition-property: $form-switch-transition-property;
-
-    &:focus {
-      background-image: escape-svg($form-switch-focus-bg-image);
-    }
+    // Boosted mod: adding a square alongside icon, and using transition
+    transition: $form-switch-transition; // stylelint-disable-line property-blacklist
 
     &:checked {
-      background-position: $form-switch-checked-bg-position;
+      background-color: $primary;
+      border-color: $primary;
 
       @if $enable-gradients {
-        background-image: escape-svg($form-switch-checked-bg-image), linear-gradient(180deg, $form-check-input-checked-bg-color, lighten($form-check-input-checked-bg-color, 10%));
-        background-size: $form-switch-bg-size, auto;
+        background-image: escape-svg($form-switch-checked-bg-image), linear-gradient(180deg, $form-check-input-checked-bg-color, lighten($form-check-input-checked-bg-color, 10%)), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
+        background-position: $form-switch-checked-bg-position, 100%, 100% 0;
+        background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size;
       } @else {
-        background-image: escape-svg($form-switch-checked-bg-image);
+        background-image: escape-svg($form-switch-checked-bg-image), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
+        background-position: $form-switch-checked-bg-position, 100% 0;
+        background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size;
+      }
+
+      &:active,
+      &:focus {
+        outline-color: $primary;
       }
     }
+
+    &:focus {
+      outline: 0; // @TODO: custom focus
+    }
+
+    &:active {
+      background-color: $form-check-input-active-bg-color;
+      border-color: $form-check-input-active-bg-color;
+    }
+
+    &:disabled {
+      background-color: $input-border-color;
+      border-color: $input-border-color;
+    }
   }
+
+  .form-check-label {
+    padding-top: map-get($spacers, 1);
+  }
+  // End mod
 }
 
 .form-check-inline {

@@ -101,15 +101,18 @@ Add the `disabled` attribute to a `<fieldset>` to disable all the controls withi
 
 By default, browsers will treat all native form controls (`<input>`, `<select>`, and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes `<a ... class="btn btn-*">` elements, these will only be given a style of `pointer-events: none`.
 
+<!-- Boosted mod: states for labels -->
+Use the `.is-disabled` class on `label` to make it appear lighter too.
+
 {{< example >}}
 <form>
   <fieldset disabled aria-label="Disabled fieldset example">
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">Disabled input</label>
+      <label for="disabledTextInput" class="form-label is-disabled">Disabled input</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
     </div>
     <div class="mb-3">
-      <label for="disabledSelect" class="form-label">Disabled select menu</label>
+      <label for="disabledSelect" class="form-label is-disabled">Disabled select menu</label>
       <select id="disabledSelect" class="form-select">
         <option>Disabled select</option>
       </select>
@@ -120,6 +123,35 @@ By default, browsers will treat all native form controls (`<input>`, `<select>`,
         <label class="form-check-label" for="disabledFieldsetCheck">
           Can't check this
         </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+{{< /example >}}
+
+<!-- Boosted mod: states for labels -->
+## Required field
+
+Use the `.is-required` class on `label` to add a `*` symbol after it.
+
+{{< example >}}
+<form>
+  <fieldset>
+    <div class="mb-3">
+      <label for="requiredTextInput" class="form-label is-required">Required input</label>
+      <input type="text" id="requiredTextInput" class="form-control" placeholder="Required input" required>
+    </div>
+    <div class="mb-3">
+      <label for="requiredSelect" class="form-label is-required">Required select menu</label>
+      <select id="requiredSelect" class="form-select" required>
+        <option>Required select</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="requiredFieldsetCheck" required>
+        <label class="form-check-label" for="requiredFieldsetCheck">Must check this</label>
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
