@@ -227,7 +227,7 @@
     }
 
     .nav-icon {
-      padding: .75rem $spacer 1rem;
+      padding: .125rem $spacer 1rem;
     }
 
     .badge {
@@ -255,7 +255,7 @@
   }
 
   .dropdown-toggle {
-    padding: $navbar-padding-y 0 $navbar-padding-y map-get($spacers, 2);
+    padding: 1rem 0 1rem map-get($spacers, 2);
     margin-right: map-get($spacers, 2);
 
     &::after {
