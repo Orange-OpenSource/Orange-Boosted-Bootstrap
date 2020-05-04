@@ -61,25 +61,6 @@
   margin-bottom: 0;
 }
 
-// brand-warning
-#text,
-#placement,
-#collapsible-content,
-#text-alignment,
-#responsive-font-sizes {
-  display: flex;
-
-  &::before {
-    display: inline-block;
-    height: auto;
-    padding-right: .375rem;
-    margin: 0;
-    font-family: icon-orange, sans-serif;
-    color: theme-color("danger");
-    content: "\e936";
-  }
-}
-
 // boostwatch
 
 #docsNavbarContent {
