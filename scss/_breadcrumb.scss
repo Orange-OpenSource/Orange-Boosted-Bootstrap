@@ -16,6 +16,10 @@
 .breadcrumb-item {
   display: flex;
 
+  a {
+    text-decoration: underline;
+  }
+
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
     padding-left: $breadcrumb-item-padding;
