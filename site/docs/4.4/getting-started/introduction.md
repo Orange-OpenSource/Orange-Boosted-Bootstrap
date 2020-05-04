@@ -12,10 +12,6 @@ redirect_from:
 toc: true
 ---
 
-## About Orange Brand
-
-All Boosted components are compliant with Orange Brand Guidelines. Some Boosted features may not support the brand guidelines, partially or entirely. They are tagged in this documentation with the following <span class="sr-only">warning, not brand compliant</span><span class="icon-anti-spam" style="color: #dc3c14; font-size: 2rem" aria-hidden="true"></span>, use them at your own risks. Please note the entire Boosted doc is preserved and enhancend when necessary with orange brand specifics, i.e. [navbar](../../components/navbar/) page contains unsupported features, check out [navbar orange](../../components/navbar-orange/) page to find out what to use.
-
 ## Quick start
 
 Looking to quickly add Boosted to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/).
