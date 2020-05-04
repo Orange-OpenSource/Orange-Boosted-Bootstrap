@@ -620,30 +620,18 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 {% capture example %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationCustom01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom01" aria-describedby="validationCustom01Feedback" placeholder="First name" value="Mark" required>
       <div class="valid-feedback" id="validationCustom01Feedback">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationCustom02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02Feedback" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback" id="validationCustom02Feedback">
         Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend validationCustomUsernameFeedback" required>
-        <div class="invalid-feedback" id="validationCustomUsernameFeedback">
-          Please choose a username.
-        </div>
       </div>
     </div>
   </div>
@@ -717,22 +705,13 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 {% capture example %}
 <form>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationDefault01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationDefault02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefaultUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend2">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
-      </div>
     </div>
   </div>
   <div class="form-row">
@@ -770,30 +749,18 @@ We recommend using client-side validation, but in case you require server-side v
 {% capture example %}
 <form>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationServer01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-valid" id="validationServer01" aria-describedby="validationServer01Feedback" placeholder="First name" value="Mark" required>
       <div class="valid-feedback" id="validationServer01Feedback">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationServer02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-valid" id="validationServer02" aria-describedby="validationServer02Feedback" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback" id="validationServer02Feedback">
         Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationServerUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend3">@</span>
-        </div>
-        <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-        <div class="invalid-feedback" id="validationServerUsernameFeedback">
-          Please choose a username.
-        </div>
       </div>
     </div>
   </div>
@@ -841,11 +808,17 @@ We recommend using client-side validation, but in case you require server-side v
 
 Validation styles are available for the following form controls and components:
 
-- `<input>`s and `<textarea>`s with `.form-control` (including up to one `.form-control` in input groups)
+- `<input>`s and `<textarea>`s with `.form-control`
 - `<select>`s with `.form-control` or `.custom-select`
 - `.form-check`s
 - `.custom-checkbox`s and `.custom-radio`s
 - `.custom-file`
+
+{% capture callout %}
+##### Input group validations
+Input groups have difficulty with validation styles unfortunately. Our recommendation is to place feedback messages as sibling elements of the `.input-group` that has `.is-{valid|invalid}`. Placing feedback messages within input groups breaks the `border-radius`. [See this comment for workaround.](https://github.com/twbs/bootstrap/issues/25110#issuecomment-586565165)
+{% endcapture %}
+{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <form class="was-validated">
@@ -877,10 +850,10 @@ Validation styles are available for the following form controls and components:
     </div>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <label for="customSelectValidation">Custom select example<span class="sr-only"> (required)</span></label>
     <select class="custom-select" id="customSelectValidation" aria-describedby="customSelectValidationFeedback" required>
-      <option value="">Open this select menu</option>
+      <option value="">Choose...</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -890,12 +863,54 @@ Validation styles are available for the following form controls and components:
     </div>
   </div>
 
-  <div class="custom-file">
+  <div class="custom-file mb-3">
     <input type="file" class="custom-file-input" id="validatedCustomFile" aria-describedby="customFileValidationFeedback" required>
     <label class="custom-file-label" for="validatedCustomFile">Choose file…<span class="sr-only"> (required)</span></label>
     <div class="invalid-feedback" id="customFileValidationFeedback">
       Example invalid custom file feedback
     </div>
+  </div>
+  
+  <div class="mb-3">
+    <div class="input-group is-invalid">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="validatedInputGroupPrepend">@</span>
+      </div>
+      <input type="text" class="form-control is-invalid" aria-describedby="validatedInputGroupPrepend" required>
+    </div>
+    <div class="invalid-feedback">
+      Example invalid input group feedback
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="input-group is-invalid">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="validatedInputGroupSelect">Options</label>
+      </div>
+      <select class="custom-select" id="validatedInputGroupSelect" required>
+        <option value="">Choose...</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="invalid-feedback">
+      Example invalid input group feedback
+    </div>
+  </div>
+
+  <div class="input-group is-invalid">
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile" required>
+      <label class="custom-file-label" for="validatedInputGroupCustomFile">Choose file...</label>
+    </div>
+    <div class="input-group-append">
+       <button class="btn btn-outline-secondary" type="button">Button</button>
+    </div>
+  </div>
+  <div class="invalid-feedback">
+    Example invalid input group feedback
   </div>
 </form>
 {% endcapture %}
@@ -908,30 +923,18 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 {% capture example %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationTooltip01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationTooltip02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
       <div class="valid-tooltip">
         Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername" class="is-required">Username<span class="sr-only"> (required)</span></label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
-        <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-        </div>
       </div>
     </div>
   </div>

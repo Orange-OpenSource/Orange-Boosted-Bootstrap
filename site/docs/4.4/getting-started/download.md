@@ -28,6 +28,13 @@ Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}
 
 <a href="{{ site.download.source }}" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
+## Examples
+
+If you want to download and examine our [examples]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/), you can grab the already built examples:
+
+<a href="{{ site.download.dist_examples }}" class="btn btn-secondary" onclick="ataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples'});">Download Examples</a>
+
+
 ## Boosted CDN
 
 Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.

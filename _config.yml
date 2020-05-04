@@ -93,7 +93,7 @@ icons:                "https://icons.getbootstrap.com"
 download:
   source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.4.1.zip"
   dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.4.1/boosted-4.4.1-dist.zip"
-
+  dist_examples:    "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.4.1/boosted-4.4.1-examples.zip"
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:               "https://cdn.jsdelivr.net/npm/boosted@4.4.1/dist/css/boosted.min.css"

@@ -15,7 +15,6 @@
   border: 0;
   outline-offset: map-get($spacers, 2);
   opacity: 1;
-  appearance: none;
 
   .bg-dark &,
   .navbar-dark & {
@@ -52,8 +51,7 @@
 // button.close {
 //   padding: 0;
 //   background-color: transparent;
-// border: 0;
-// appearance: none;
+//   border: 0;
 // }
 
 // Future-proof disabling of clicks on `<a>` elements
