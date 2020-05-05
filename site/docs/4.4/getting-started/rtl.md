@@ -1,20 +1,17 @@
 ---
 layout: docs
-title: Rtl
-description: Using Boosted for Right-to-left website presentation
+title: RTL
+description: Using Boosted for right-to-left website presentation
 group: getting-started
 toc: true
 ---
 
-Every release of Boosed ships with a dedicated right-to-left (RTL) version.
+Every release of Boosted ships with a dedicated right-to-left (RTL) version.
 
 ## Usage
 
-To get a RTL version of a boosted webpage you need only one thing :  
-1. Replace the regular `boosted.css` file  
-
-2. with the RTL counterpart `boosted-rtl.css` found in the distribution files.
-   Add attribute `dir="rtl"` to your `<html>` tag.
+To get a RTL version of a boosted webpage you only need to replace the regular `boosted.css` file with the RTL counterpart `boosted-rtl.css`.
+Also please ensure to add attribute `dir="rtl"` to your `<html>` tag.
 
 ## Start template
 
@@ -25,8 +22,12 @@ To get a RTL version of a boosted webpage you need only one thing :
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hello, world!</title>
 
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    
     <!--
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
@@ -35,6 +36,8 @@ To get a RTL version of a boosted webpage you need only one thing :
       If you are not autorized to used it, don't include the orangeHelvetica.css
       See NOTICE.txt for more informations.
     -->
+    <link rel="preload" href="fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/orangeHelvetica.min.css" />
     <!--
       Orange Icons
@@ -45,8 +48,6 @@ To get a RTL version of a boosted webpage you need only one thing :
 
     <!-- Boosted CSS -->
     <link rel="stylesheet" href="css/boosted-rtl.min.css">
-
-    <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -66,10 +67,10 @@ To get a RTL version of a boosted webpage you need only one thing :
 </html>
 {% endhighlight %} 
 
-## Boostwatch rtl
+## Boostwatch RTL
 
-See Boostwatch page in rtl mode to see components in action. [Boostwatch rtl](../../boostwatch/rtl-index.html)
+See [Boostwatch page in RTL mode]({{ site.baseurl }}/docs/{{ site.docs_version }}/boostwatch/rtl-index.html) to see components in action.
 
 ## Examples
 
-Every example from the [Examples page](../../examples/) has his RTL counterpat. Just prefix the page url with `rtl-*` like in this example : [examples/rtl-news-template/](../../examples/rtl-news-template/)
+Every example from the [Examples page]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) has its RTL counterpart. Just prefix the page url with `rtl-*` like in this example: [examples/rtl-news-template/]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/rtl-news-template/)
