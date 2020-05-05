@@ -1,21 +1,22 @@
-// stylelint-disable font-family-no-missing-generic-family-keyword
 //
 // Carousel
-// --------------------------------------------------
+//
 
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
   @extend .carousel-control-prev;
   @extend .carousel-control-prev-icon;
 }
 
-.swiper-button-next {
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
   @extend .carousel-control-next;
   @extend .carousel-control-next-icon;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  top: subtract(50%, 10px);
+  top: subtract(50%, 10px) !important; // stylelint-disable-line declaration-no-important
   @include transition($transition-focus);
 
   &:focus {
