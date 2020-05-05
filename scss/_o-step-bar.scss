@@ -41,8 +41,8 @@
 }
 
 .stepbar-link {
-  flex: 1;
-  max-width: 1ch;
+  flex: 1 0 1.25ch;
+  max-width: 1.25ch;
   margin: auto;
   overflow: hidden;
   color: $white;
