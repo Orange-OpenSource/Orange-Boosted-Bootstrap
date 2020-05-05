@@ -118,6 +118,7 @@
   // end mod
 }
 .carousel-control-prev {
+  right: auto; // Boosted mod: RTL
   left: map-get($spacers, 2); // Boosted mod
   @if $enable-gradients {
     background-image: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
@@ -125,6 +126,7 @@
 }
 .carousel-control-next {
   right: map-get($spacers, 2); // Boosted mod
+  left: auto; // Boosted mod: RTL
   @if $enable-gradients {
     background-image: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
   }
@@ -149,7 +151,7 @@
 }
 .carousel-control-next-icon {
   background-image: escape-svg($carousel-control-next-icon-bg);
-  transform: rotate(180deg); // Boosted mod
+  transform: rotate(180deg); // Boosted mod: RTL
 }
 
 

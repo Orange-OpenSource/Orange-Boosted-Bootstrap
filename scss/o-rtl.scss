@@ -25,10 +25,15 @@
 }
 
 .page-item:first-child .page-link::before,
-.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next,
 .swiper-button-next,
 .doc-link::after {
   transform: rotate(180deg);
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-prev {
+  transform: none;
 }
 
 .o-link-arrow.back::before {
