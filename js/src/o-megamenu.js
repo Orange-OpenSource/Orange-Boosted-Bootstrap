@@ -8,7 +8,7 @@
 import $ from 'jquery'
 import Util from './util'
 
-/* eslint no-magic-numbers: ["error", { "ignore": [1,2] }] */
+/* eslint no-magic-numbers: ["error", { "ignore": [-100,-1,1,2,100] }] */
 
 /**
  * ------------------------------------------------------------------------
@@ -24,8 +24,7 @@ const ARROW_LEFT_KEYCODE = 37 // KeyboardEvent.which value for left arrow key
 const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
 const ARROW_UP_KEYCODE = 38 // KeyboardEvent.which value for up arrow key
 const ARROW_DOWN_KEYCODE = 40 // KeyboardEvent.which value for down arrow key
-const TIMEOUT = 1000 // Timeout befor focusing first element
-const PERCENTAGE = 100 // Width slide proportion
+const TIMEOUT = 1000 // Timeout before focusing first element
 const SPLITLENGHT = 4
 const CLASSLENGTH = 'navbar-expand-'.length
 
@@ -67,7 +66,7 @@ class MegaMenu {
     this._$parentNavbarClasses = this._parent.attr('class')
     // default if no class navbar-expand-* navbar is always mobile
     this._$mediaQuery = window.matchMedia('(min-width: 0px)')
-    // eslint-disable-next-line no-magic-numbers
+    this._$isRTL = document.dir === 'rtl' ? -1 : 1
     if (typeof this._$parentNavbarClasses !== 'undefined' && this._$parentNavbarClasses.indexOf('navbar-expand-') !== -1) {
       if (this._parent.hasClass('navbar-expand-xxl')) {
         this._$breakpoint = 'xxl'
@@ -204,7 +203,8 @@ class MegaMenu {
     const $target = $(target).first()
     const position = $target.parents().index(this._element)
     const rootPosition = $('.mega-menu-panel .nav-link').first().parents().index($('.mega-menu'))
-    const translatePercentage = -(position - rootPosition) * PERCENTAGE / 2
+    // @TODO WTF RTL?
+    const translatePercentage = -(position - rootPosition) * 100 / 2
     const $thisNav = $target.closest(SELECTOR_NAV_MENU)
     const $rootNav = $target.closest(SELECTOR_ROOT_NAV)
 
@@ -235,7 +235,7 @@ class MegaMenu {
         })
 
         // translate to pos
-        $rootNav.css('transform', `translateX(${translatePercentage}%)`)
+        $rootNav.css('transform', `translateX(${translatePercentage * this._$isRTL}%)`)
         if (translatePercentage) {
           // adapt main collapse height to target height
           $(this._element).height($thisNav.height())
@@ -321,7 +321,8 @@ class MegaMenu {
     const $thisNavToggler = $this
     const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
     const navWidth = $rootNav.width()
-    const currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth
+    // @TODO WTF RTL?
+    const currentTranslatePercentage = 100 * currentTranslatePos / navWidth
 
     if (!$this.next(SELECTOR_NAV_MENU).length || $rootNav.hasClass(CLASS_NAME_TRANSITIONING)) {
       return false
@@ -355,7 +356,10 @@ class MegaMenu {
     })
 
     // translate menu
-    $rootNav.css('transform', `translateX(${currentTranslatePercentage - PERCENTAGE}%)`)
+    // @TODO WTF RTL?
+    // eslint-disable-next-line no-console
+    console.log(currentTranslatePercentage)
+    $rootNav.css('transform', `translateX(${currentTranslatePercentage - 100 * this._$isRTL}%)`)
 
     // focus on target nav first item
     $rootNav.one('transitionend', () => {
@@ -380,7 +384,8 @@ class MegaMenu {
     const $targetNavToggler = $targetNav.find(SELECTOR_NAV_LINK_EXPANDED)
     const currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10)
     const navWidth = $rootNav.width()
-    const currentTranslatePercentage = PERCENTAGE * currentTranslatePos / navWidth
+    // @TODO WTF RTL?
+    const currentTranslatePercentage = 100 * currentTranslatePos / navWidth
 
     if (!currentTranslatePercentage || $rootNav.hasClass(CLASS_NAME_TRANSITIONING)) {
       return false
@@ -395,7 +400,8 @@ class MegaMenu {
       tabindex: 0,
       'aria-hidden': false
     })
-    if (currentTranslatePercentage === -PERCENTAGE) {
+    // @TODO WTF RTL?
+    if (currentTranslatePercentage === -100) {
       $rootNav.find('>.nav-item .nav-link').attr({
         tabindex: 0,
         'aria-hidden': false
@@ -403,7 +409,8 @@ class MegaMenu {
     }
 
     // translate menu
-    $rootNav.css('transform', `translateX(${currentTranslatePercentage + PERCENTAGE}%)`)
+    // @TODO WTF RTL?
+    $rootNav.css('transform', `translateX(${currentTranslatePercentage + 100 * this._$isRTL}%)`)
 
     // focus on target nav first item
     $rootNav.one('transitionend', () => {

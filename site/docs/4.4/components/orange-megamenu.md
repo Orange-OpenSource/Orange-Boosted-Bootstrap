@@ -46,7 +46,16 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                         <ul class="navbar-nav">
                           <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
                           <li class="nav-item"><span class="nav-heading text-primary">Mobile</span></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Phones</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Phones</a>
+                            <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                              <li class="nav-item"><span class="nav-heading text-primary">Phone</span></li>
+                              <li class="nav-item"><a class="nav-link" href="#">iPhone</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">FairPhone</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Samsung</a></li>
+                            </ul>
+                          </li>
                           <li class="nav-item"><a class="nav-link active" href="#">Plans</a></li>
                           <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
                         </ul>
