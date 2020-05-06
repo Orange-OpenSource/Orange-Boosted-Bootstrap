@@ -40,5 +40,11 @@
       "path": "./dist/js/boosted.min.js",
       "maxSize": "20.5 kB"
     }
-  ]
+  ],
+  "ci": {
+    "trackBranches": [
+      "v5-dev",
+      "v4-dev"
+    ]
+  }
 }
