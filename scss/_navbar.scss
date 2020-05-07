@@ -23,8 +23,6 @@
   // Boosted mod
   padding: $navbar-padding-x; // default: null
   font-weight: $font-weight-bold;
-  color: $navbar-dark-color;
-  background: color-contrast($navbar-dark-color);
   @include transition($navbar-transition);
   // End mod
 
@@ -72,7 +70,6 @@
   font-weight: $font-weight-bold;
   line-height: .75;
   // End mod
-  color: $navbar-dark-brand-color; // Boosted mod: .navbar-dark as a default
   text-decoration: if($link-decoration == none, null, none);
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
@@ -80,7 +77,6 @@
 
   &:hover,
   &:focus {
-    color: $navbar-dark-brand-hover-color; // Boosted mod: .navbar-dark as a default
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
@@ -138,18 +134,8 @@
   .nav-link {
     position: relative;
     padding: add($nav-link-padding-y, $border-width * 2) $nav-link-padding-x / 4;
-    color: $navbar-dark-color;
     outline-offset: $spacer;
     @include transition($navbar-transition);
-
-    &:hover,
-    &:focus {
-      color: $navbar-dark-hover-color;
-    }
-
-    &.disabled {
-      color: $navbar-dark-disabled-color;
-    }
 
     &.active::before {
       position: absolute;
@@ -172,13 +158,6 @@
   }
   // End mod
 
-  .show > .nav-link,
-  .active > .nav-link,
-  .nav-link.show,
-  .nav-link.active {
-    color: $navbar-dark-active-color; // Boosted mod: .navbar-dark as a default
-  }
-
   .dropdown-menu {
     position: static;
   }
@@ -192,12 +171,6 @@
 .navbar-text {
   padding-top: add($nav-link-padding-y, $border-width * 2);
   padding-bottom: add($nav-link-padding-y, $border-width * 2);
-
-  a,
-  a:hover,
-  a:focus {
-    color: $navbar-dark-active-color; // Boosted mod: .navbar-dark as a default
-  }
 }
 
 
@@ -222,9 +195,8 @@
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
-  color: $navbar-dark-color; // Boosted mod: .navbar-dark as a default
   background-color: transparent; // remove default button style
-  border: $border-width solid $navbar-dark-toggler-border-color; // remove default button style
+  border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
   @include transition($navbar-toggler-transition);
 
@@ -242,14 +214,10 @@
   &:hover .navbar-toggler-icon,
   &:focus .navbar-toggler-icon,
   &:active .navbar-toggler-icon {
-    background-image: escape-svg($navbar-dark-toggler-icon-hover-bg);
+    background-image: escape-svg($navbar-toggler-icon-hover-bg);
   }
 
-  &[aria-expanded="true"] .navbar-toggler-icon {
-    background-image: escape-svg($close-icon-dark);
-  }
-
-  &[aria-expanded="true"] {
+  .navbar &[aria-expanded="true"] {
     &:hover .navbar-toggler-icon,
     &:focus .navbar-toggler-icon,
     &:active .navbar-toggler-icon {
@@ -266,7 +234,9 @@
   width: $navbar-icon-size;
   height: $navbar-icon-size;
   vertical-align: middle;
-  background: escape-svg($navbar-dark-toggler-icon-bg) no-repeat center / 100%; // Boosted mod: .navbar-dark as a default
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -337,4 +307,132 @@
   }
 }
 
-// Boosted mod: no .navbar-light nor .navbar-dark
+
+// Navbar themes
+//
+// Styles for switching between navbars with light or dark background.
+
+// Dark links against a light background
+.navbar-light {
+  .navbar-brand {
+    color: $navbar-light-brand-color;
+
+    &:hover,
+    &:focus {
+      color: $navbar-light-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    // Boosted mod
+    .nav-item,
+    .dropdown-item {
+      border-color: $gray-500;
+    }
+    // End mod
+
+    .nav-link {
+      color: $navbar-light-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-light-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
+
+    // Boosted mod: close icon when opened
+    &[aria-expanded="true"] .navbar-toggler-icon {
+      background-image: escape-svg($close-icon);
+    }
+    // End mod
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+
+    a,
+    a:hover,
+    a:focus {
+      color: $navbar-light-active-color;
+    }
+  }
+}
+
+// White links against a dark background
+.navbar-dark {
+  .navbar-brand {
+    color: $navbar-dark-brand-color;
+
+    &:hover,
+    &:focus {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-dark-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+
+    // Boosted mod: close icon when opened
+    &[aria-expanded="true"] .navbar-toggler-icon {
+      background-image: escape-svg($close-icon-dark);
+    }
+    // End mod
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-dark-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-dark-color;
+
+    a,
+    a:hover,
+    a:focus {
+      color: $navbar-dark-active-color;
+    }
+  }
+}

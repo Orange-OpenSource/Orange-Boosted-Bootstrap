@@ -10,7 +10,7 @@ toc: true
 
 Here's what you need to know before getting started with the navbar:
 
-- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl}` for responsive collapsing.
+- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl}` for responsive collapsing and [color scheme](#color-schemes) classes.
 - Navbars and their contents are fluid by default. Change the [container](#containers) to limit their horizontal width in different ways.
 - Use our [spacing]({{< docsref "/utilities/spacing" >}}) and [flex]({{< docsref "/utilities/flex" >}}) utility classes for controlling spacing and alignment within navbars.
 - Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
@@ -37,7 +37,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -85,7 +85,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 
 {{< example >}}
 <!-- As a link -->
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -95,7 +95,7 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 </nav>
 
 <!-- As a heading -->
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <span class="navbar-brand">
         <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -116,7 +116,7 @@ Active states—with `.active`—to indicate the current page can be applied dir
 Please note that you should also add the `aria-current` attribute on the `.nav-link` itself.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -147,7 +147,7 @@ Please note that you should also add the `aria-current` attribute on the `.nav-l
 And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -170,7 +170,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
 You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -210,7 +210,7 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 Place various form controls and components within a navbar:
 
 {{< example >}}
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <form class="d-flex">
       <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
@@ -223,7 +223,7 @@ Place various form controls and components within a navbar:
 Immediate children elements in `.navbar` use flex layout and will default to `justify-content: space-between`. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
 
 {{< example >}}
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -239,7 +239,7 @@ Immediate children elements in `.navbar` use flex layout and will default to `ju
 Input groups work, too. If your navbar is an entire form, or mostly form, you can use the `<form>` element as the container and save some HTML. Applies to the option above and below this copy.
 
 {{< example >}}
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid">
     <div class="input-group">
       <span class="input-group-text" id="basic-addon1">@</span>
@@ -252,7 +252,7 @@ Input groups work, too. If your navbar is an entire form, or mostly form, you ca
 Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.
 
 {{< example >}}
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid justify-content-start">
     <button class="btn btn-primary mr-2" type="button">Main button</button>
     <button class="btn btn-sm btn-primary" type="button">Smaller button</button>
@@ -265,7 +265,7 @@ Various buttons are supported as part of these navbar forms, too. This is also a
 Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text.
 
 {{< example >}}
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <span class="navbar-text">
       Navbar text with an inline element
@@ -277,7 +277,7 @@ Navbars may contain bits of text with the help of `.navbar-text`. This class adj
 Mix and match with other components and utilities as needed.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -305,7 +305,83 @@ Mix and match with other components and utilities as needed.
 </nav>
 {{< /example >}}
 
-<!-- Boosted mod: no color scheme -->
+## Color schemes
+
+Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
+
+<div class="bd-example">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-light" aria-controls="navbar-light" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-light">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-light" aria-controls="navbar-light" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-light">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+{{< highlight html >}}
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar navbar-light bg-white">
+  <!-- Navbar content -->
+</nav>
+{{< /highlight >}}
 
 ## Containers
 
@@ -313,7 +389,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 
 {{< example >}}
 <div class="container">
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -326,7 +402,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 Use any of the responsive containers to change how wide the content in your navbar.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-md">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -342,7 +418,7 @@ Use our [position utilities]({{< docsref "/utilities/position" >}}) to place nav
 Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully supported in every browser](https://caniuse.com/#feat=css-sticky)**.
 
 {{< example >}}
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -353,7 +429,7 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar fixed-top">
+<nav class="navbar fixed-top navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -364,7 +440,7 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar fixed-bottom">
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -375,7 +451,7 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar sticky-top">
+<nav class="navbar sticky-top navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
@@ -404,7 +480,7 @@ Sometimes you want to use the collapse plugin to trigger hidden content elsewher
     <span class="text-muted">Toggleable via the navbar brand.</span>
   </div>
 </div>
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
