@@ -11,19 +11,15 @@ const path    = require('path')
 const rollup  = require('rollup')
 const babel   = require('rollup-plugin-babel')
 const banner  = require('./banner.js')
+const babelHelpers = require('./babel-helpers.js')
 
 const TEST    = process.env.NODE_ENV === 'test'
 const plugins = [
   babel({
-    exclude: 'node_modules/**', // Only transpile our source code
-    externalHelpersWhitelist: [ // Include only required helpers
-      'defineProperties',
-      'createClass',
-      'createSuper',
-      'inheritsLoose',
-      'defineProperty',
-      'objectSpread2'
-    ]
+    // Only transpile our source code
+    exclude: 'node_modules/**',
+    // Include only required helpers
+    externalHelpersWhitelist: babelHelpers
   })
 ]
 const bsPlugins = {
@@ -47,7 +43,7 @@ const bsPlugins = {
 }
 const rootPath = TEST ? '../js/coverage/dist/' : '../js/dist/'
 
-function build(plugin) {
+const build = async (plugin) => {
   console.log(`Building ${plugin} plugin...`)
 
   const external = ['jquery', 'popper.js']
@@ -69,23 +65,32 @@ function build(plugin) {
   }
 
   const pluginFilename = `${plugin.toLowerCase()}.js`
-
-  rollup.rollup({
+  const bundle = await rollup.rollup({
     input: bsPlugins[plugin],
     plugins,
     external
-  }).then((bundle) => {
-    bundle.write({
-      banner: banner(pluginFilename),
-      format: 'umd',
-      name: plugin,
-      sourcemap: true,
-      globals,
-      file: path.resolve(__dirname, `${rootPath}${pluginFilename}`)
-    })
-      .then(() => console.log(`Building ${plugin} plugin... Done!`))
-      .catch((err) => console.error(`${plugin}: ${err}`))
   })
+
+  await bundle.write({
+    banner: banner(pluginFilename),
+    format: 'umd',
+    name: plugin,
+    sourcemap: true,
+    globals,
+    file: path.resolve(__dirname, `${rootPath}${pluginFilename}`)
+  })
+
+  console.log(`Building ${plugin} plugin... Done!`)
 }
 
-Object.keys(bsPlugins).forEach((plugin) => build(plugin))
+const main = async () => {
+  try {
+    await Promise.all(Object.keys(bsPlugins).map((plugin) => build(plugin)))
+  } catch (error) {
+    console.error(error)
+
+    process.exit(1)
+  }
+}
+
+main()

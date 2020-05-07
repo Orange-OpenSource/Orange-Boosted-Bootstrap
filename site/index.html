@@ -13,8 +13,9 @@ layout: home
       <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
         <h1 class="mb-3 display-2 font-weight-normal">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
         <p class="h5 font-weight-normal">
-          Orange Boosted is a framework library accessible, ergonomic and Orange branded based on
-          <a href="https://github.com/twbs/bootstrap/tree/{{ site.bootstrap_current_version }}" target="_blank" rel="noopener">Bootstrap {{ site.bootstrap_current_version }}</a>.
+          Boosted is Orange’s HTML, CSS and JS library — based on
+          <a href="https://github.com/twbs/bootstrap/tree/{{ site.bootstrap_current_version }}" target="_blank" rel="noopener">Bootstrap {{ site.current_version }}</a>,
+          the world’s most popular front-end open source toolkit.
         </p>
         <p class="lead mb-4">
           <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>
@@ -28,63 +29,71 @@ layout: home
   </div>
 </main>
 <section class="container-fluid" id="card-grid">
-  <div class="card-deck mb-5">
-    <div class="card mx-2">
-      <div class="card-body">
-        <h2 class="card-title">Only in Boosted!</h2>
-        <p class="card-subtitle">We have a few custom made components to suit your extra needs, discover them on the Boostwatch page!</p>
-      </div>
-      <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/boosted-history/" aria-hidden="true" tabindex="-1">
-        <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/boosted-only-components.png" alt="" width="253" height="180">
-      </a>
-      <div class="card-footer py-3 border-0">
-        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/boosted-history/" class="btn btn-info">
-          Discover
-          <span class="sr-only"> Boosted components sample</span>
+  <div class="row mb-5">
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Only in Boosted!</h2>
+          <p class="card-subtitle">We have a few custom made components to suit your extra needs, discover them on the Boostwatch page!</p>
+        </div>
+        <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/boosted-history/" aria-hidden="true" tabindex="-1">
+          <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/boosted-only-components.png" alt="" width="253" height="180">
         </a>
+        <div class="card-footer py-3 border-0">
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/boosted-history/" class="btn btn-info">
+            Discover
+            <span class="sr-only"> Boosted components sample</span>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="card mx-2">
-      <div class="card-body">
-        <h2 class="card-title">Orange Templates</h2>
-        <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.</p>
-      </div>
-      <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/#orange-brand" aria-hidden="true" tabindex="-1">
-        <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/templates.png" alt="" width="250" height="156">
-      </a>
-      <div class="card-footer py-3 border-0">
-        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/#orange-brand" class="btn btn-info">Browse templates</a>
-      </div>
-    </div>
-    <div class="card mx-2">
-      <div class="card-body">
-        <h2 class="card-title">Using Angular?</h2>
-        <p class="card-subtitle">We do have an Angular version, and it's right here!</p>
-      </div>
-      <a class="card-body m-auto" href="https://ng-boosted.orange.com/" aria-hidden="true" tabindex="-1">
-        <svg id="angular-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="128" height="128">
-          <path d="M108 135h34l-17-40z"/>
-          <path d="M125 30L32 63l14 123 79 44 79-44 14-123-93-33zm58 153h-22l-11-30h-50l-11 30H67l58-131 58 131z"/>
-        </svg>
-      </a>
-      <div class="card-footer py-3 border-0">
-        <a href="https://ng-boosted.orange.com/" class="btn btn-info">Get ng-boosted</a>
-      </div>
-    </div>
-    <div class="card mx-2" id="migrate-card">
-      <div class="card-body">
-        <h2 class="card-title">Migrating from Boosted 3?</h2>
-        <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.</p>
-      </div>
-      <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boosted-migration/" aria-hidden="true" tabindex="-1">
-        <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/boosted-migrate.svg" alt="" width="100" height="125">
-        <!-- Illustration by Pundimon / CC BY: https://thenounproject.com/pundimon/uploads/?i=1210168 -->
-      </a>
-      <div class="card-footer py-3 border-0">
-        <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boosted-migration/" class="btn btn-info">
-          Migrate
-          <span class="sr-only"> from version 3 to version 4</span>
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Orange Templates</h2>
+          <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.</p>
+        </div>
+        <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/#orange-brand" aria-hidden="true" tabindex="-1">
+          <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/templates.png" alt="" width="250" height="156">
         </a>
+        <div class="card-footer py-3 border-0">
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/#orange-brand" class="btn btn-info">Browse templates</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Using Angular?</h2>
+          <p class="card-subtitle">We do have an Angular version, and it's right here!</p>
+        </div>
+        <a class="card-body m-auto" href="https://ng-boosted.orange.com/" aria-hidden="true" tabindex="-1">
+          <svg id="angular-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="128" height="128">
+            <path d="M108 135h34l-17-40z"/>
+            <path d="M125 30L32 63l14 123 79 44 79-44 14-123-93-33zm58 153h-22l-11-30h-50l-11 30H67l58-131 58 131z"/>
+          </svg>
+        </a>
+        <div class="card-footer py-3 border-0">
+          <a href="https://ng-boosted.orange.com/" class="btn btn-info">Get ng-boosted</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-3" id="migrate-card">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Migrating from Boosted 3?</h2>
+          <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.</p>
+        </div>
+        <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boosted-migration/" aria-hidden="true" tabindex="-1">
+          <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/boosted-migrate.svg" alt="" width="100" height="125">
+          <!-- Illustration by Pundimon / CC BY: https://thenounproject.com/pundimon/uploads/?i=1210168 -->
+        </a>
+        <div class="card-footer py-3 border-0">
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boosted-migration/" class="btn btn-info">
+            Migrate
+            <span class="sr-only"> from version 3 to version 4</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -37,27 +37,6 @@
     }
 
     // Boosted mod
-    // Cells
-    //> thead,
-    //> tbody,
-    //> tfoot {
-    //  > tr {
-    //    > th,
-    //    > td {
-    //      padding: .625rem;
-    //      border: 1px solid $table-border-color;
-    //
-    //      &.bg-light {
-    //        background-color: $gray-200;
-    //      }
-    //
-    //      > p:last-child {
-    //        margin-bottom: 0;
-    //      }
-    //    }
-    //  }
-    //}
-
     .bg-light {
       background-color: $gray-200;
     }
@@ -109,15 +88,6 @@
   > ol li {
     margin-bottom: .25rem;
   }
-
-  // Boosted mod
-  // @include media-breakpoint-up(lg) {
-  //  > ul,
-  //  > ol,
-  // > p {
-  //    /max-width: 80%;
-  //  }
-  // }
 }
 
 .bd-title {
@@ -136,3 +106,7 @@
 
 .bd-text-purple { color: $bd-purple; }
 .bd-text-purple-bright { color: $bd-purple-bright; }
+
+.bd-bg-purple-bright {
+  background-color: $bd-purple-bright;
+}
