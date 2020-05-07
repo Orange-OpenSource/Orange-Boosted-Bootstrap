@@ -10,7 +10,7 @@ Boosted is maintained by a small group of invaluable core contributors, with the
 <div class="list-group mb-3">
   {% for member in site.data.core-team %}
     <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/{{ member.user }}">
-      <img src="https://github.com/{{ member.user }}.png" alt="@{{ member.user }}" width="32" height="32" class="rounded mr-2">
+      <img src="https://github.com/{{ member.user }}.png" alt="@{{ member.user }}" width="32" height="32" class="rounded mr-2" loading="lazy">
       <span>
         <strong>{{ member.name }}</strong> @{{ member.user }}
       </span>
