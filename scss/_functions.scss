@@ -69,18 +69,38 @@
 
 // Color contrast
 // See https://github.com/twbs/bootstrap/pull/30168
-@function color-yiq($background, $foreground-dark: $yiq-text-dark, $foreground-light: $yiq-text-light) {
+// See https://github.com/twbs/bootstrap/pull/30468
+@function color-yiq($background, $color-contrast-dark: $yiq-text-dark, $color-contrast-light: $yiq-text-light, $min-contrast-ratio: $yiq-contrasted-threshold) {
+  $foregrounds: $color-contrast-light, $color-contrast-dark, $white, $black;
+  $max-ratio: 0;
+  $max-ratio-color: null;
+
   // Boosted mod: Orange is not the new Black
   @if ($background == $primary) {
-    @return $foreground-light;
+    @return $color-contrast-light;
   }
-  // end mod
+  // End mod
+
+  @each $color in $foregrounds {
+    $contrast-ratio: contrast-ratio($background, $color);
+    @if $contrast-ratio > $min-contrast-ratio {
+      @return $color;
+    } @else if $contrast-ratio > $max-ratio {
+      $max-ratio: $contrast-ratio;
+      $max-ratio-color: $color;
+    }
+  }
+
+  @warn "Found no color leading to #{$min-contrast-ratio}:1 contrast ratio against #{$background}…";
+
+  @return $max-ratio-color;
+}
+
+@function contrast-ratio($background, $foreground: $color-contrast-light) {
   $l1: luminance($background);
-  $l2: luminance(opaque($background, $foreground-light));
+  $l2: luminance(opaque($background, $foreground));
 
-  $contrast: if($l1 > $l2, ($l1 + .05) / ($l2 + .05), ($l2 + .05) / ($l1 + .05));
-
-  @return if($contrast < $yiq-contrasted-threshold, $foreground-dark, $foreground-light);
+  @return if($l1 > $l2, ($l1 + .05) / ($l2 + .05), ($l2 + .05) / ($l1 + .05));
 }
 
 // Return WCAG2.0 relative luminance
