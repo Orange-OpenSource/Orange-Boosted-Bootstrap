@@ -293,6 +293,7 @@
       margin: 0 -#{$card-accordion-spacer};
       @include font-size($h3-font-size);
       line-height: $h3-line-height;
+      text-decoration: none;
       letter-spacing: $h3-spacing;
       border: 0;
 
