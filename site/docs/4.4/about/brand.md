@@ -24,7 +24,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 
 <div class="row mb-5">
     <div class="col-lg-2 d-flex align-items-center justify-content-center">
-        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/orange_logo.svg" alt="Master Orange logo" width="50" height="50">
+        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/orange_logo.svg" alt="Master Orange logo" width="50" height="50" loading="lazy"/>
     </div>
     <div class="col-lg-10">
         <p>The basic elements of the Master logo are <strong>the square and the word mark <mark>Orange™</mark></strong>.</p>
@@ -37,7 +37,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 
 <div class="row mb-5">
     <div class="col-lg-2 d-flex align-items-center justify-content-center">
-        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-3a.png" alt="Orange logo space" width="150">
+        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-3a.png" alt="Orange logo space" width="150" loading="lazy"/>
     </div>
     <div class="col-lg-10">
         <p>The Master logo should always have <strong>clear space around</strong> it to protect it from other graphic elements and help it stand out.</p>
@@ -98,7 +98,7 @@ To find out how you can use our mark to make yours, read the [core guideline](ht
 
 <div class="row">
     <div class="col-lg-2 d-flex align-items-center justify-content-center">
-        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-4b.png" alt="Small Orange logo" width="100">
+        <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/logo-rule-4b.png" alt="Small Orange logo" width="100" loading="lazy"/>
     </div>
     <div class="col-lg-10">
         <p>The Small logo is used for minimum size work <strong>when the Master logo is no longer clearly visible</strong>.</p>
