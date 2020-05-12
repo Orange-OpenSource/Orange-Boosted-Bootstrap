@@ -145,7 +145,7 @@ Use the `.is-required` class on `label` to add a `*` symbol after it.
     <div class="mb-3">
       <label for="requiredSelect" class="form-label is-required">Required select menu</label>
       <select id="requiredSelect" class="form-select" required>
-        <option>Required select</option>
+        <option value="">Required select</option>
       </select>
     </div>
     <div class="mb-3">

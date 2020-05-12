@@ -318,7 +318,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-light" aria-controls="navbar-light" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar-light">
+      <div class="collapse navbar-collapse" id="navbar-dark">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
