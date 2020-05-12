@@ -18,6 +18,10 @@
   &.show {
     display: block;
   }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .o-tab-heading {
