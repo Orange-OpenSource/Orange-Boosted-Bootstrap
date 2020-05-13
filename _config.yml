@@ -19,7 +19,7 @@ url:            "https://boosted.orange.com"
 # end boosted mod
 encoding:       UTF-8
 exclude:
-  - docs/4.4/assets/scss/
+  - docs/4.5/assets/scss/
 
 plugins:
   - jekyll-redirect-from
@@ -74,13 +74,13 @@ title:              Boosted
 description:        "Orange HTML, CSS and JS library — based on Bootstrap, the most popular library."
 twitter:            orange
 authors:            "Orange and Boosted contributors"
-social_image_path:  /docs/4.4/assets/brand/orange-social.png
-social_logo_path:   /docs/4.4/assets/brand/orange-logo.png
+social_image_path:  /docs/4.5/assets/brand/orange-social.png
+social_logo_path:   /docs/4.5/assets/brand/orange-logo.png
 
 # Custom variables
 current_version:      4.5.0
 current_ruby_version: 4.5.0
-docs_version:         4.4
+docs_version:         4.5
 github_org:           "https://github.com/Orange-OpenSource"
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
@@ -106,8 +106,8 @@ cdn:
   js_hash:           "sha384-R024d8eLkqTtaLUSJ9MrQ9ay65hb/spmrvV7W1B2MuguSjYsCx3KVKjdjc9zUbPb"
   js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/js/boosted.bundle.min.js"
   js_bundle_hash:    "sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu"
-  jquery:           "https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  jquery_hash:      "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  jquery:            "https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  jquery_hash:       "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
   css_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
   css_swiper_hash:   "sha384-K6LrEaceM4QP87RzJ7R4CDXcFN4cFW/A5Q7/fEp/92c2WV+woVw9S9zKDO23sNS+"
   js_swiper:         "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
