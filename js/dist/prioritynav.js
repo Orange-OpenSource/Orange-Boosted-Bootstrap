@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Boosted v4.5.0 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap prioritynav.js v4.4.1 (https://boosted.orange.com)
+  * Bootstrap prioritynav.js v4.5.0 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -14,7 +14,7 @@
   (global = global || self, global.PriorityNav = factory(global.jQuery));
 }(this, (function ($) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -39,25 +39,16 @@
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.4.1';
+  var VERSION = '4.5.0';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var RESIZE_DURATION = 500;
   var TAB_KEYCODE = 9;
-  var Event = {
-    RESIZE: 'resize',
-    FOCUS: 'focus'
-  };
-  var ClassName = {
-    PRIORITY: 'priority',
-    HIDE: 'sr-only',
-    RESIZING: 'resizing overflow-hidden'
-  };
-  var Selector = {
-    NAV_ELEMENTS: 'li:not(\'.overflow-nav\')',
-    FIRST_ELEMENT: 'li:first',
-    PRIORITY_ELEMENT: '.priority'
-  };
+  var EVENT_RESIZE = 'resize';
+  var CLASS_NAME_HIDE = 'sr-only';
+  var CLASS_NAME_RESIZING = 'resizing overflow-hidden';
+  var SELECTOR_NAV_ELEMENTS = 'li:not(\'.overflow-nav\')';
+  var SELECTOR_FIRST_ELEMENT = 'li:first';
   var MenuLabelDefault = 'More';
 
   function MenuTemplate(MenuLabel) {
@@ -70,9 +61,7 @@
    */
 
 
-  var PriorityNav =
-  /*#__PURE__*/
-  function () {
+  var PriorityNav = /*#__PURE__*/function () {
     function PriorityNav(element, config) {
       this._element = element;
       this._config = config;
@@ -85,7 +74,7 @@
 
       this._initMenu();
 
-      this._$allNavElements = this._$menu.find(Selector.NAV_ELEMENTS);
+      this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS);
 
       this._bindUIActions();
 
@@ -111,7 +100,7 @@
     _proto._setupMenu = function _setupMenu() {
       var $allNavElements = this._$allNavElements; // Checking top position of first item (sometimes changes)
 
-      var firstPos = this._$menu.find(Selector.FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
+      var firstPos = this._$menu.find(SELECTOR_FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
 
 
       var $wrappedElements = $(); // Used to snag the previous menu item in addition to ones that have wrapped
@@ -138,7 +127,7 @@
         // Clone set before altering
         var newSet = $wrappedElements.clone(); // Hide ones that we're moving
 
-        $wrappedElements.addClass(ClassName.HIDE);
+        $wrappedElements.addClass(CLASS_NAME_HIDE);
         $wrappedElements.find('.nav-link').attr('tabindex', -1); // Add wrapped elements to dropdown
 
         this._$menu.find('.overflow-nav-list').append(newSet); // Show new menu
@@ -151,9 +140,9 @@
 
 
         if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-          var $item = $(this._element).find("." + ClassName.HIDE).first().prev();
+          var $item = $(this._element).find("." + CLASS_NAME_HIDE).first().prev();
           var $itemDuplicate = $item.clone();
-          $item.addClass(ClassName.HIDE);
+          $item.addClass(CLASS_NAME_HIDE);
           $item.find('.nav-link').attr('tabindex', -1);
 
           this._$menu.find('.overflow-nav-list').prepend($itemDuplicate);
@@ -169,7 +158,7 @@
 
       this._$menu.find('.overflow-nav').removeClass('d-inline-block').addClass('d-none');
 
-      this._$allNavElements.removeClass(ClassName.HIDE);
+      this._$allNavElements.removeClass(CLASS_NAME_HIDE);
 
       this._$allNavElements.find('.nav-link').attr('tabindex', 0);
     };
@@ -177,15 +166,15 @@
     _proto._bindUIActions = function _bindUIActions() {
       var _this = this;
 
-      $(window).on(Event.RESIZE, function () {
-        _this._$menu.addClass(ClassName.RESIZING);
+      $(window).on(EVENT_RESIZE, function () {
+        _this._$menu.addClass(CLASS_NAME_RESIZING);
 
         setTimeout(function () {
           _this._tearDown();
 
           _this._setupMenu();
 
-          _this._$menu.removeClass(ClassName.RESIZING);
+          _this._$menu.removeClass(CLASS_NAME_RESIZING);
         }, RESIZE_DURATION);
       });
 

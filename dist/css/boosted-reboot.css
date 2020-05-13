@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v4.4.1 (https://boosted.orange.com)
+ * Boosted Reboot v4.5.0 (https://boosted.orange.com)
  * Copyright 2014-2019 The Boosted Authors
  * Copyright 2014-2019 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Reboot v4.4.1 (https://getbootstrap.com)
+ * Bootstrap Reboot v4.5.0 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -21,6 +21,10 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+main {
+  display: block;
 }
 
 body {
@@ -42,8 +46,8 @@ body {
   outline: 0 !important;
 }
 
-.js-focus-visible :focus:not(.focus-visible),
-.js-focus-visible .focus:not(.focus-visible) {
+.js-focus-visible :focus:not([data-focus-visible-added]),
+.js-focus-visible .focus:not([data-focus-visible-added]) {
   outline: 0 !important;
 }
 
@@ -138,8 +142,9 @@ blockquote {
 }
 
 b,
+em,
 strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 small {
@@ -170,6 +175,12 @@ a {
   transition: outline-offset 0.2s ease-in-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}
+
 a:focus {
   color: #f16e00;
   outline: 0.125rem solid;
@@ -181,14 +192,11 @@ a:hover {
   text-decoration: none;
 }
 
-p a, p a:hover,
-main li a,
-main li a:hover {
+main a:not([class]), main a:not([class]):hover {
   text-decoration: underline;
 }
 
-p a:focus,
-main li a:focus {
+main a:not([class]):focus {
   text-decoration: underline;
   outline-offset: 0.125rem;
 }
@@ -215,6 +223,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
+  -ms-overflow-style: scrollbar;
 }
 
 figure {
@@ -288,6 +297,10 @@ select {
   text-transform: none;
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
 select {
   word-wrap: normal;
 }
@@ -318,13 +331,6 @@ input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
-}
-
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  -webkit-appearance: listbox;
 }
 
 textarea {
@@ -389,11 +395,5 @@ template {
 
 [hidden] {
   display: none !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  a {
-    transition-duration: .01ms !important;
-  }
 }
 /*# sourceMappingURL=boosted-reboot.css.map */

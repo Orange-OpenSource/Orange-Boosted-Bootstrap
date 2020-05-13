@@ -7,7 +7,7 @@ group: utilities
 
 [comment]: #Boosted mod: using visually hidden text instead of aria-label
 
-**Be sure to include helpful text for screen readers**, including some context — as we've done using [`.sr-only` utility]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/screen-readers/), or, as a last resort, as [Bootstrap does with `aria-label`](https://getbootstrap.com/docs/4.4/utilities/close-icon/).
+**Be sure to include helpful text for screen readers**, including some context — as we've done using [`.sr-only` utility]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/screen-readers/), or, as a last resort, as [Bootstrap does with `aria-label`](https://getbootstrap.com/docs/{{ site.docs_version }}/utilities/close-icon/).
 
 
 {% capture example %}
