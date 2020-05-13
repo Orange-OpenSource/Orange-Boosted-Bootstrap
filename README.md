@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/4.4/assets/brand/orange_logo.svg" alt="Orange Boosted with Bootstrap" width="50" height="50">
+    <img src="https://boosted.orange.com/docs/4.5/assets/brand/orange_logo.svg" alt="Orange Boosted with Bootstrap" width="50" height="50">
   </a>
 </p>
 
@@ -36,14 +36,14 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.4.0.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.5.0.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com): `npm install boosted`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.4.0`
-- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.4.0`
+- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add boosted@4.5.0`
+- Install with [Composer](https://getcomposer.org): `composer require orange-opensource/orange-boosted-bootstrap:4.5.0`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`.
 
-Read the [Getting started page](https://boosted.orange.com/docs/4.4/getting-started/introduction/) for information on the framework contents, CDN, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/4.5/getting-started/introduction/) for information on the framework contents, CDN, templates and examples, and more.
 
 ## Status
 
@@ -112,11 +112,11 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 Boosted documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/4.4/assets/js/src/search.js` file.
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/4.5/assets/js/src/search.js` file.
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://boosted.orange.com/docs/4.4/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+1. Run through the [tooling setup](https://boosted.orange.com/docs/4.5/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm install` to install Node.js dependencies.
 3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
 4. Open `http://localhost:9001` in your browser, and voilà.

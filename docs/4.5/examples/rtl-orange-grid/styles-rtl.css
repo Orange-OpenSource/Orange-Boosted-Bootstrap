@@ -1,0 +1,13 @@
+[class*="col-"],
+[class*="col-"] > div {
+  min-height: calc((100vh - 12 * .625rem) / 6);
+  background-color: rgba(75, 180, 230, .5);
+}
+
+[class*="col-"] > div {
+  margin: .625rem 0;
+  line-height: calc((100vh - 12 * .625rem) / 6);
+  text-align: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ0bC1vcmFuZ2UtZ3JpZCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7RUFFRSw2Q0FBNkM7RUFDN0MseUNBQXlDO0NBQzFDOztBQUVEO0VBQ0Usa0JBQWtCO0VBQ2xCLDhDQUE4QztFQUM5QyxtQkFBbUI7Q0FDcEIiLCJmaWxlIjoicnRsLW9yYW5nZS1ncmlkIiwic291cmNlc0NvbnRlbnQiOlsiW2NsYXNzKj1cImNvbC1cIl0sXG5bY2xhc3MqPVwiY29sLVwiXSA+IGRpdiB7XG4gIG1pbi1oZWlnaHQ6IGNhbGMoKDEwMHZoIC0gMTIgKiAuNjI1cmVtKSAvIDYpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDc1LCAxODAsIDIzMCwgLjUpO1xufVxuXG5bY2xhc3MqPVwiY29sLVwiXSA+IGRpdiB7XG4gIG1hcmdpbjogLjYyNXJlbSAwO1xuICBsaW5lLWhlaWdodDogY2FsYygoMTAwdmggLSAxMiAqIC42MjVyZW0pIC8gNik7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdfQ== */

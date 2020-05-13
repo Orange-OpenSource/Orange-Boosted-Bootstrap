@@ -1,0 +1,78 @@
+.btn.svg-arrow-previous {
+  transition: none;
+}
+
+.btn.svg-arrow-previous::after {
+  width: .5625rem;
+  height: .875rem;
+  margin-right: .375rem;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+/* stylelint-disable selector-max-id */
+#a11y-dropdown {
+  min-width: 14rem;
+}
+
+#design,
+#design-2 {
+  font-size: 1.25rem;
+  line-height: .625;
+  letter-spacing: -.0125rem;
+}
+
+#obs-fe,
+#obs-fe-2,
+#orange-labs {
+  font-size: 1.125rem;
+  line-height: .86;
+  letter-spacing: -.0125rem;
+}
+
+#obs {
+  display: block;
+  font-size: .75rem;
+  line-height: 1;
+  letter-spacing: -.0125rem;
+}
+
+@media screen and (min-width: 480px) {
+  #design,
+  #design-2 {
+    font-size: 2.125rem;
+    line-height: .625;
+    letter-spacing: -.05rem;
+  }
+
+  #obs-fe,
+  #obs-fe-2,
+  #orange-labs {
+    font-size: 1.8125rem;
+    line-height: .86;
+    letter-spacing: -.05rem;
+  }
+
+  #obs {
+    display: block;
+    font-size: 1.125rem;
+    line-height: .75;
+    letter-spacing: -.0125rem;
+  }
+
+  #obs::first-line {
+    line-height: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #obs-fe-2 {
+    font-size: 2.125rem;
+    line-height: .7;
+    letter-spacing: -.0625rem;
+  }
+}
+/* stylelint-enable selector-max-id */

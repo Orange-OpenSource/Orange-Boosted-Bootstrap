@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Use Boosted’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.">
+<meta name="author" content="Orange and Boosted contributors">
+<meta name="generator" content="Jekyll v4.0.1">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.5">
+
+<title>Buttons · Boosted v4.5</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/4.5/components/buttons/">
+
+<!-- Boosted mod -->
+<link rel="preload" href="/docs/4.5/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/4.5/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<!-- end mod -->
+
+<!-- tarteaucitron -->
+<link href="/docs/4.5/assets/css/tarteaucitronboosted.css" rel="stylesheet">
+<!-- Swiper -->
+<link href="/docs/4.5/assets/css/vendor/swiper.min.css" rel="stylesheet">
+<!-- Boosted core CSS -->
+  <!-- Helvetica -->
+  <link href="/docs/4.5/dist/css/orangeHelvetica.min.css" rel="stylesheet">
+  <!-- orangeIcons -->
+  <link href="/docs/4.5/dist/css/orangeIcons.min.css" rel="stylesheet">
+  <link href="/docs/4.5/dist/css/boosted.min.css" rel="stylesheet">
+<!-- end mod --><!-- Documentation extras -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+  
+  
+  <link href="/docs/4.5/assets/css/docs.min.css" rel="stylesheet">
+  
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Buttons">
+<meta name="twitter:description" content="Use Boosted’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/4.5/assets/brand/orange-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/4.5/components/buttons/">
+<meta property="og:title" content="Buttons">
+<meta property="og:description" content="Use Boosted’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://boosted.orange.com/docs/4.5/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script src="/docs/4.5/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+	tarteaucitron.init({
+		"privacyUrl": "", /* Privacy policy url */
+
+		"hashtag": "#cookie-consent", /* Open the panel with this hashtag */
+		"cookieName": "cookie-consent", /* Cookie name */
+
+		"orientation": "bottom", /* Banner position (top - bottom) */
+		"showAlertSmall": false, /* Show the small banner on bottom right */
+		"cookieslist": true, /* Show the cookie list */
+
+		"adblocker": false, /* Show a Warning if an adblocker is detected */
+		"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+		"highPrivacy": false, /* Disable auto consent */
+		"handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
+
+		"removeCredit": false, /* Remove credit link */
+		"moreInfoLink": true, /* Show more info link */
+		"useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+
+		//"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+		"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+	});
+	tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+  dataLayer = [{
+    'site_name': 'accessibility-boosted',
+    'phase': 'prod',               // dev, qa, prod
+    'page_type': 'doc',            // type de page, optionnel
+    'page_title': document.title   // obligatoire pour pages dynamiques
+  }];
+</script>
+
+
+  </head>
+  <body>
+     <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+    <div class="skiplinks container-fluid">
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable" href="#search-form">Skip to search form</a>
+    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+
+
+    <header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation"><a class="navbar-brand" href="/" aria-label="Boosted">
+      <!-- Boosted mod change brand -->
+      <img src="/docs/4.5/dist/img/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
+      <!-- end mod -->
+    </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Boosted mod remove analytics, blog, expo and add boostwatch and confort plus -->
+    <div class="collapse navbar-collapse" id="bd-main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="/" aria-label="Boosted"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">B<span class="text-primary">oo</span>sted</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/docs/4.5/getting-started/introduction/" aria-current="page" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/docs/4.5/essentials/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/docs/4.5/examples/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/docs/4.5/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              v4.5
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.0)</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://boosted.orange.com/v4-alpha">v4 Alpha 6.1</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/v4-alpha5/">v4 Alpha 5</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false" width="23" height="23"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center pl-0 ml-0" id="search-form">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.5">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg></button>
+</form>
+
+<nav role="navigation" class="collapse bd-links" id="bd-docs-nav" aria-label="Documentation navigation"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/getting-started/introduction/">
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/getting-started/introduction/">
+              Introduction
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/download/">
+              Download
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/contents/">
+              Contents
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/browsers-devices/">
+              Browsers & devices
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/javascript/">
+              JavaScript
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/theming/">
+              Theming
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/build-tools/">
+              Build tools
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/webpack/">
+              Webpack
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/accessibility/">
+              Accessibility
+            </a>
+          </li><li>
+            <a href="/docs/4.5/getting-started/rtl/">
+              RTL
+            </a>
+          </li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/layout/overview/">
+        Layout
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/layout/overview/">
+              Overview
+            </a>
+          </li><li>
+            <a href="/docs/4.5/layout/grid/">
+              Grid
+            </a>
+          </li><li>
+            <a href="/docs/4.5/layout/utilities-for-layout/">
+              Utilities for layout
+            </a>
+          </li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/content/reboot/">
+        Content
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/content/reboot/">
+              Reboot
+            </a>
+          </li><li>
+            <a href="/docs/4.5/content/typography/">
+              Typography
+            </a>
+          </li><li>
+            <a href="/docs/4.5/content/code/">
+              Code
+            </a>
+          </li><li>
+            <a href="/docs/4.5/content/images/">
+              Images
+            </a>
+          </li><li>
+            <a href="/docs/4.5/content/tables/">
+              Tables
+            </a>
+          </li><li>
+            <a href="/docs/4.5/content/figures/">
+              Figures
+            </a>
+          </li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/docs/4.5/components/alerts/" aria-current="true">
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/components/alerts/">
+              Alerts
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/badge/">
+              Badge
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/breadcrumb/">
+              Breadcrumb
+            </a>
+          </li><li class="active bd-sidenav-active">
+            <a href="/docs/4.5/components/buttons/" aria-current="page">
+              Buttons
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/button-group/">
+              Button group
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/card/">
+              Card
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/carousel/">
+              Carousel
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/custom-carousel/">
+              Custom carousel
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/collapse/">
+              Collapse
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/dropdowns/">
+              Dropdowns
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/forms/">
+              Forms
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/input-group/">
+              Input group
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/jumbotron/">
+              Jumbotron
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/list-group/">
+              List group
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/media-object/">
+              Media object
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/modal/">
+              Modal
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/orange-popin/">
+              Orange popin
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/navs/">
+              Navs
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/navbar/">
+              Navbar
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/navbar-orange/">
+              Navbar Orange
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/orange-megamenu/">
+              Orange megamenu
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/local-navigation/">
+              Local navigation
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/priority-nav/">
+              Priority Nav
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/orange-footer/">
+              Orange footer
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/pagination/">
+              Pagination
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/popovers/">
+              Popovers
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/progress/">
+              Progress
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/scrollspy/">
+              Scrollspy
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/scroll-up/">
+              Scroll up
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/spinners/">
+              Spinners
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/stepbar/">
+              Stepbar
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/toasts/">
+              Toasts
+            </a>
+          </li><li>
+            <a href="/docs/4.5/components/tooltips/">
+              Tooltips
+            </a>
+          </li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/utilities/borders/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/utilities/borders/">
+              Borders
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/clearfix/">
+              Clearfix
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/close-icon/">
+              Close icon
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/colors/">
+              Colors
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/display/">
+              Display
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/embed/">
+              Embed
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/flex/">
+              Flex
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/float/">
+              Float
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/image-replacement/">
+              Image replacement
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/interactions/">
+              Interactions
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/overflow/">
+              Overflow
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/position/">
+              Position
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/screen-readers/">
+              Screen readers
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/shadows/">
+              Shadows
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/sizing/">
+              Sizing
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/spacing/">
+              Spacing
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/stretched-link/">
+              Stretched link
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/text/">
+              Text
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/vertical-align/">
+              Vertical align
+            </a>
+          </li><li>
+            <a href="/docs/4.5/utilities/visibility/">
+              Visibility
+            </a>
+          </li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/extend/approach/">
+        Extend
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/extend/approach/">
+              Approach
+            </a>
+          </li><li>
+            <a href="/docs/4.5/extend/icons/">
+              Icons
+            </a>
+          </li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/migration/">
+        Migration
+      </a>
+
+      <ul class="nav bd-sidenav"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/boosted-migration/">
+        Boosted migration
+      </a>
+
+      <ul class="nav bd-sidenav"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.5/about/overview/">
+        About
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.5/about/overview/">
+              Overview
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/team/">
+              Team
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/boosted-history/">
+              Boosted history
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/brand/">
+              Brand
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/license/">
+              License
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/boosted-license/">
+              Boosted license
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/translations/">
+              Translations
+            </a>
+          </li><li>
+            <a href="/docs/4.5/about/cookies/">
+              Cookies
+            </a>
+          </li></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <nav role="navigation" class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#examples">Examples</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dark-backgrounds">Dark backgrounds</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#social-buttons">Social buttons</a></li>
+<li class="toc-entry toc-h2"><a href="#disable-text-wrapping">Disable text wrapping</a></li>
+<li class="toc-entry toc-h2"><a href="#button-tags">Button tags</a></li>
+<li class="toc-entry toc-h2"><a href="#sizes">Sizes</a></li>
+<li class="toc-entry toc-h2"><a href="#active-state">Active state</a></li>
+<li class="toc-entry toc-h2"><a href="#disabled-state">Disabled state</a></li>
+<li class="toc-entry toc-h2"><a href="#button-plugin">Button plugin</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#toggle-states">Toggle states</a></li>
+<li class="toc-entry toc-h3"><a href="#checkbox-and-radio-buttons">Checkbox and radio buttons</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#toggle-buttons-with-icon">Toggle buttons with icon</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Buttons</h1>
+          <p class="bd-lead">Use Boosted’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+          <!-- Boosted mod : remove ads -->
+          <h2 id="examples">Examples</h2>
+
+<p>Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.</p>
+
+<div class="bd-example">
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-secondary btn-icon">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<br />
+<button type="button" class="btn btn-primary">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    Primary
+</button>
+<button type="button" class="btn btn-secondary">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    Secondary
+</button>
+<button type="button" class="btn btn-success">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    Success
+</button>
+<button type="button" class="btn btn-danger">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    Danger
+</button>
+<button type="button" class="btn btn-warning">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    Warning
+</button>
+<button type="button" class="btn btn-info">
+    <span class="icon icon-settings" aria-hidden="true"></span>
+    Info
+</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Primary
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Secondary
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Success
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Danger
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Warning
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Info
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<div class="bd-callout bd-callout-warning">
+<h5 id="conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</h5>
+
+<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code class="highlighter-rouge">.sr-only</code> class.</p>
+</div>
+
+<h3 id="dark-backgrounds">Dark backgrounds</h3>
+
+<p>To get the inversed button behaviour, simply add <code class="highlighter-rouge">.btn-inverse</code> class to your <code class="highlighter-rouge">&lt;button&gt;</code> or <code class="highlighter-rouge">&lt;a&gt;</code> tag.</p>
+
+<div class="bd-example">
+<div class="bg-dark p-3">
+    <button type="button" class="btn btn-inverse btn-primary">Primary</button>
+    <button type="button" class="btn btn-inverse btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-inverse btn-success">Success</button>
+    <button type="button" class="btn btn-inverse btn-danger">Danger</button>
+    <button type="button" class="btn btn-inverse btn-warning">Warning</button>
+    <button type="button" class="btn btn-inverse btn-info">Info</button>
+    <button type="button" class="btn btn-inverse btn-link">Link</button>
+    <button type="button" class="btn btn-inverse btn-secondary btn-icon">
+        <span class="sr-only">Icon</span>
+        <span class="icon icon-settings" aria-hidden="true"></span>
+    </button>
+    <br /><br />
+    <button type="button" class="btn btn-inverse btn-primary">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        Primary
+    </button>
+    <button type="button" class="btn btn-inverse btn-secondary">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        Secondary
+    </button>
+    <button type="button" class="btn btn-inverse btn-success">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        Success
+    </button>
+    <button type="button" class="btn btn-inverse btn-danger">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        Danger
+    </button>
+    <button type="button" class="btn btn-inverse btn-warning">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        Warning
+    </button>
+    <button type="button" class="btn btn-inverse btn-info">
+        <span class="icon icon-settings" aria-hidden="true"></span>
+        Info
+    </button>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-secondary btn-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-primary"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Primary
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-secondary"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Secondary
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-success"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Success
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-danger"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Danger
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-warning"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Warning
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-info"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Info
+    <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="social-buttons">Social buttons</h2>
+
+<p>In need of a social media button? Some helper classes are designed to be used along with the <code class="highlighter-rouge">.btn</code> element, starting with the <code class="highlighter-rouge">.btn-social</code> variant.</p>
+
+<div class="bd-example">
+<div class="p-3">
+    <a class="btn btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
+    <a class="btn btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a>
+    <a class="btn btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
+    <a class="btn btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a> 
+    <a class="btn btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>    
+    <a class="btn btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a> 
+    <a class="btn btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a> 
+    <a class="btn btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
+</div>
+<div class="bg-dark p-3">
+    <a class="btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a> 
+    <a class="btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a>
+    <a class="btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a>
+    <a class="btn btn-inverse btn-social btn-whatsapp" href="#"><span class="sr-only">Whatsapp</span></a> 
+    <a class="btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a>    
+    <a class="btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a> 
+    <a class="btn btn-inverse btn-social btn-snapchat" href="#"><span class="sr-only">Snapchat</span></a> 
+    <a class="btn btn-inverse btn-social btn-pinterest" href="#"><span class="sr-only">Pinterest</span></a> 
+    <a class="btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a>
+</div> 
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-twitter"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-facebook"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Facebook<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-instagram"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Instagram<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-whatsapp"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Whatsapp<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-linkedin"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Linkedin<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>    
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-youtube"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>YouTube<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-snapchat"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Snapchat<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-pinterest"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Pinterest<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-social btn-mail"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Mail<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-twitter"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-facebook"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Facebook<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-instagram"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Instagram<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-whatsapp"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Whatsapp<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-linkedin"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Linkedin<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>    
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-youtube"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>YouTube<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-snapchat"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Snapchat<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-pinterest"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Pinterest<span class="nt">&lt;/span&gt;&lt;/a&gt;</span> 
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-inverse btn-social btn-mail"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Mail<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span> </code></pre></figure>
+
+<p>Social buttons are compatibles with <a href="#dark-backgrounds">dark backgrounds variant</a> and <a href="#sizes">sizing utilities</a>.</p>
+
+<h2 id="disable-text-wrapping">Disable text wrapping</h2>
+
+<p>If you don’t want the button text to wrap, you can add the <code class="highlighter-rouge">.text-nowrap</code> class to the button. In Sass, you can set <code class="highlighter-rouge">$btn-white-space: nowrap</code> to disable text wrapping for each button.</p>
+
+<h2 id="button-tags">Button tags</h2>
+
+<p>The <code class="highlighter-rouge">.btn</code> classes are designed to be used with the <code class="highlighter-rouge">&lt;button&gt;</code> element. However, you can also use these classes on <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
+
+<p>When using button classes on <code class="highlighter-rouge">&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code class="highlighter-rouge">role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
+
+<div class="bd-example">
+<a class="btn btn-primary" href="#" role="button">Link</a>
+<button class="btn btn-primary" type="submit">Button</button>
+<input class="btn btn-primary" type="button" value="Input" />
+<input class="btn btn-primary" type="submit" value="Submit" />
+<input class="btn btn-primary" type="reset" value="Reset" />
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h2 id="sizes">Sizes</h2>
+
+<p>Fancy larger or smaller buttons? Add <code class="highlighter-rouge">.btn-lg</code> or <code class="highlighter-rouge">.btn-sm</code> for additional sizes.</p>
+
+<p><strong>Medium button</strong> is the standard button size.</p>
+
+<div class="bd-example">
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary">Medium button</button>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<div class="bg-dark p-3 mt-3">
+  <button type="button" class="btn btn-primary btn-inverse btn-sm">Small button</button>
+  <button type="button" class="btn btn-primary btn-inverse">Medium button</button>
+  <button type="button" class="btn btn-primary btn-inverse btn-lg">Large button</button>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Medium button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3 mt-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-inverse btn-sm"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-inverse"</span><span class="nt">&gt;</span>Medium button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-inverse btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary">Medium button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<div class="bg-dark p-3 mt-3">
+  <button type="button" class="btn btn-secondary btn-inverse btn-sm">Small button</button>
+  <button type="button" class="btn btn-secondary btn-inverse">Medium button</button>
+  <button type="button" class="btn btn-secondary btn-inverse btn-lg">Large button</button>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Medium button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3 mt-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-sm"</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse"</span><span class="nt">&gt;</span>Medium button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="active-state">Active state</h2>
+
+<p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code class="highlighter-rouge">&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code class="highlighter-rouge">.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.</p>
+
+<div class="bd-example">
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
+<div class="bg-dark p-3 mt-3">
+  <a href="#" class="btn btn-primary btn-inverse btn-lg active" role="button" aria-pressed="true">Primary link</a>
+  <a href="#" class="btn btn-secondary btn-inverse btn-lg active" role="button" aria-pressed="true">Link</a>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"true"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3 mt-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-inverse btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"true"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="disabled-state">Disabled state</h2>
+
+<p>Make buttons look inactive by adding the <code class="highlighter-rouge">disabled</code> boolean attribute to any <code class="highlighter-rouge">&lt;button&gt;</code> element.</p>
+
+<div class="bd-example">
+<button type="button" class="btn btn-lg btn-primary" disabled="">Primary button</button>
+<button type="button" class="btn btn-secondary btn-lg" disabled="">Button</button>
+<div class="bg-dark p-3 mt-3">
+    <button type="button" class="btn btn-primary btn-inverse btn-lg" disabled="">Primary button</button>
+    <button type="button" class="btn btn-secondary btn-inverse btn-lg" disabled="">Button</button>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3 mt-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-inverse btn-lg"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-lg"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Disabled buttons using the <code class="highlighter-rouge">&lt;a&gt;</code> element behave a bit different:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;a&gt;</code>s don’t support the <code class="highlighter-rouge">disabled</code> attribute, so you must add the <code class="highlighter-rouge">.disabled</code> class to make it visually appear disabled.</li>
+  <li>Some future-friendly styles are included to disable all <code class="highlighter-rouge">pointer-events</code> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
+  <li>Disabled buttons should include the <code class="highlighter-rouge">aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
+</ul>
+
+<div class="bd-example">
+<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg disabled"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<div class="bd-callout bd-callout-warning">
+<h5 id="link-functionality-caveat">Link functionality caveat</h5>
+
+<p>The <code class="highlighter-rouge">.disabled</code> class uses <code class="highlighter-rouge">pointer-events: none</code> to try to disable the link functionality of <code class="highlighter-rouge">&lt;a&gt;</code>s, but that CSS property is not yet standardized. In addition, even in browsers that do support <code class="highlighter-rouge">pointer-events: none</code>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <code class="highlighter-rouge">tabindex="-1"</code> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
+</div>
+
+<h2 id="button-plugin">Button plugin</h2>
+
+<p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
+
+<h3 id="toggle-states">Toggle states</h3>
+
+<p>Add <code class="highlighter-rouge">data-toggle="button"</code> to toggle a button’s <code class="highlighter-rouge">active</code> state. If you’re pre-toggling a button, you must manually add the <code class="highlighter-rouge">.active</code> class <strong>and</strong> <code class="highlighter-rouge">aria-pressed="true"</code> to the <code class="highlighter-rouge">&lt;button&gt;</code>.</p>
+
+<div class="bd-example">
+<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+  Single toggle
+</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  Single toggle
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h3 id="checkbox-and-radio-buttons">Checkbox and radio buttons</h3>
+
+<p>Boosted’s <code class="highlighter-rouge">.button</code> styles can be applied to other elements, such as <code class="highlighter-rouge">&lt;label&gt;</code>s, to provide checkbox or radio style button toggling. Add <code class="highlighter-rouge">data-toggle="buttons"</code> to a <code class="highlighter-rouge">.btn-group</code> containing those modified buttons to enable their toggling behavior via JavaScript and add <code class="highlighter-rouge">.btn-group-toggle</code> to style the <code class="highlighter-rouge">&lt;input&gt;</code>s within your buttons. <strong>Note that you can create single input-powered buttons or groups of them.</strong></p>
+
+<p>The checked state for these buttons is <strong>only updated via <code class="highlighter-rouge">click</code> event</strong> on the button. If you use another method to update the input—e.g., with <code class="highlighter-rouge">&lt;input type="reset"&gt;</code> or by manually applying the input’s <code class="highlighter-rouge">checked</code> property—you’ll need to toggle <code class="highlighter-rouge">.active</code> on the <code class="highlighter-rouge">&lt;label&gt;</code> manually.</p>
+
+<p>Note that pre-checked buttons require you to manually add the <code class="highlighter-rouge">.active</code> class to the input’s <code class="highlighter-rouge">&lt;label&gt;</code>.</p>
+
+<div class="bd-example">
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked="" /> Active
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off" /> Radio
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option3" autocomplete="off" /> Radio
+  </label>
+</div>
+<div class="bg-dark p-3">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary btn-inverse active">
+        <input type="radio" name="options-dark" id="option4" autocomplete="off" checked="" /> Active
+      </label>
+      <label class="btn btn-secondary btn-inverse">
+        <input type="radio" name="options-dark" id="option5" autocomplete="off" /> Radio
+      </label>
+      <label class="btn btn-secondary btn-inverse">
+        <input type="radio" name="options-dark" id="option6" autocomplete="off" /> Radio
+      </label>
+    </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-toggle"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"option1"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span> Active
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"option2"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Radio
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"option3"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Radio
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-toggle"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-dark"</span> <span class="na">id=</span><span class="s">"option4"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span> Active
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-dark"</span> <span class="na">id=</span><span class="s">"option5"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Radio
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-dark"</span> <span class="na">id=</span><span class="s">"option6"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span> Radio
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="toggle-buttons-with-icon">Toggle buttons with icon</h4>
+
+<div class="bd-example">
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary btn-icon active">
+    <input type="radio" name="options-icons" id="option7" autocomplete="off" checked="" />
+    <span class="sr-only">Active</span>
+    <span class="icon icon-calendar-day" aria-hidden="true"></span>
+  </label>
+  <label class="btn btn-secondary btn-icon">
+    <input type="radio" name="options-icons" id="option8" autocomplete="off" />
+    <span class="sr-only">Radio</span>
+    <span class="icon icon-calendar-week" aria-hidden="true"></span>
+  </label>
+  <label class="btn btn-secondary btn-icon">
+    <input type="radio" name="options-icons" id="option9" autocomplete="off" />
+    <span class="sr-only">Radio</span>
+    <span class="icon icon-calendar-month" aria-hidden="true"></span>
+  </label>
+</div>
+<div class="bg-dark p-3">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary btn-inverse btn-icon active">
+        <input type="radio" name="options-dark-icons" id="option10" autocomplete="off" checked="" />
+        <span class="sr-only">Active</span>
+        <span class="icon icon-calendar-day" aria-hidden="true"></span>
+      </label>
+      <label class="btn btn-secondary btn-inverse btn-icon">
+        <input type="radio" name="options-dark-icons" id="option11" autocomplete="off" />
+        <span class="sr-only">Radio</span>
+        <span class="icon icon-calendar-week" aria-hidden="true"></span>
+      </label>
+      <label class="btn btn-secondary btn-inverse btn-icon">
+        <input type="radio" name="options-dark-icons" id="option12" autocomplete="off" />
+        <span class="sr-only">Radio</span>
+        <span class="icon icon-calendar-month" aria-hidden="true"></span>
+      </label>
+    </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-toggle"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-icons"</span> <span class="na">id=</span><span class="s">"option7"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar-day"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-icons"</span> <span class="na">id=</span><span class="s">"option8"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar-week"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-icons"</span> <span class="na">id=</span><span class="s">"option9"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar-month"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group btn-group-toggle"</span> <span class="na">data-toggle=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-icon active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-dark-icons"</span> <span class="na">id=</span><span class="s">"option10"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar-day"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-dark-icons"</span> <span class="na">id=</span><span class="s">"option11"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar-week"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"options-dark-icons"</span> <span class="na">id=</span><span class="s">"option12"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar-month"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="methods">Methods</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$().button('toggle')</code></td>
+      <td>Toggles push state. Gives the button the appearance that it has been activated.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$().button('dispose')</code></td>
+      <td>Destroys an element’s button.</td>
+    </tr>
+  </tbody>
+</table>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Boosted mod -->
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+<!-- end mod -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.o-nav-local').prioritynav();
+    $('#docs-navbar').navbar({sticky: true});
+  });
+</script>
+
+  </body>
+</html>
