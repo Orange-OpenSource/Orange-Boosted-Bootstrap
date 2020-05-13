@@ -63,7 +63,6 @@ $(function () {
 
     Util.typeCheckConfig(namePlugin, config, defaultType)
 
-    // eslint-disable-next-line
     config.toggle = undefined
 
     Util.typeCheckConfig(namePlugin, config, defaultType)
@@ -157,9 +156,9 @@ $(function () {
       mode: 'open'
     })
 
-    assert.equal(shadowRoot, Util.findShadowRoot(shadowRoot))
+    assert.strictEqual(shadowRoot, Util.findShadowRoot(shadowRoot))
     shadowRoot.innerHTML = '<button>Shadow Button</button>'
-    assert.equal(shadowRoot, Util.findShadowRoot(shadowRoot.firstChild))
+    assert.strictEqual(shadowRoot, Util.findShadowRoot(shadowRoot.firstChild))
   })
 
   QUnit.test('Util.findShadowRoot should return null when attachShadow is not available', function (assert) {
@@ -167,7 +166,7 @@ $(function () {
 
     var $div = $('<div id="test"></div>').appendTo($('#qunit-fixture'))
     if (!document.documentElement.attachShadow) {
-      assert.equal(null, Util.findShadowRoot($div[0]))
+      assert.strictEqual(null, Util.findShadowRoot($div[0]))
     } else {
       var sandbox = sinon.createSandbox()
 
@@ -176,7 +175,7 @@ $(function () {
         return $div
       })
 
-      assert.equal(null, Util.findShadowRoot($div[0]))
+      assert.strictEqual(null, Util.findShadowRoot($div[0]))
       sandbox.restore()
     }
   })

@@ -191,9 +191,7 @@ class ScrollSpy {
   _process() {
     const scrollTop    = this._getScrollTop() + this._config.offset
     const scrollHeight = this._getScrollHeight()
-    const maxScroll    = this._config.offset +
-      scrollHeight -
-      this._getOffsetHeight()
+    const maxScroll    = this._config.offset + scrollHeight - this._getOffsetHeight()
 
     if (this._scrollHeight !== scrollHeight) {
       this.refresh()
@@ -238,16 +236,28 @@ class ScrollSpy {
     const $link = $([].slice.call(document.querySelectorAll(queries.join(','))))
 
     if ($link.hasClass(CLASS_NAME_DROPDOWN_ITEM)) {
-      $link.closest(SELECTOR_DROPDOWN).find(SELECTOR_DROPDOWN_TOGGLE).addClass(CLASS_NAME_ACTIVE).attr('aria-current', 'true')
-      $link.addClass(CLASS_NAME_ACTIVE).attr('aria-current', 'page')
+      $link.closest(SELECTOR_DROPDOWN)
+        .find(SELECTOR_DROPDOWN_TOGGLE)
+        .addClass(CLASS_NAME_ACTIVE)
+        .attr('aria-current', 'true')
+      $link.addClass(CLASS_NAME_ACTIVE)
+        .attr('aria-current', 'page')
     } else {
       // Set triggered link as active
-      $link.addClass(CLASS_NAME_ACTIVE).attr('aria-current', 'page')
+      $link.addClass(CLASS_NAME_ACTIVE)
+        .attr('aria-current', 'page')
       // Set triggered links parents as active
       // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-      $link.parents(SELECTOR_NAV_LIST_GROUP).prev(`${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`).addClass(CLASS_NAME_ACTIVE).attr('aria-current', 'true')
+      $link.parents(SELECTOR_NAV_LIST_GROUP)
+        .prev(`${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`)
+        .addClass(CLASS_NAME_ACTIVE)
+        .attr('aria-current', 'true')
       // Handle special case when .nav-link is inside .nav-item
-      $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE).attr('aria-current', 'true')
+      $link.parents(SELECTOR_NAV_LIST_GROUP)
+        .prev(SELECTOR_NAV_ITEMS)
+        .children(SELECTOR_NAV_LINKS)
+        .addClass(CLASS_NAME_ACTIVE)
+        .attr('aria-current', 'true')
     }
 
     $(this._scrollElement).trigger(EVENT_ACTIVATE, {
