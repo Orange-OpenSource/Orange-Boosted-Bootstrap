@@ -530,16 +530,8 @@ class Tooltip {
           : this.constructor.Event.FOCUSOUT
 
         $(this.element)
-          .on(
-            eventIn,
-            this.config.selector,
-            (event) => this._enter(event)
-          )
-          .on(
-            eventOut,
-            this.config.selector,
-            (event) => this._leave(event)
-          )
+          .on(eventIn, this.config.selector, (event) => this._enter(event))
+          .on(eventOut, this.config.selector, (event) => this._leave(event))
       }
     })
 
@@ -549,10 +541,7 @@ class Tooltip {
       }
     }
 
-    $(this.element).closest('.modal').on(
-      'hide.bs.modal',
-      this._hideModalHandler
-    )
+    $(this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler)
 
     if (this.config.selector) {
       this.config = {
@@ -732,8 +721,7 @@ class Tooltip {
   }
 
   _handlePopperPlacementChange(popperData) {
-    const popperInstance = popperData.instance
-    this.tip = popperInstance.popper
+    this.tip = popperData.instance.popper
     this._cleanTipClass()
     this.addAttachmentClass(this._getAttachment(popperData.placement))
   }

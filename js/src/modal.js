@@ -183,7 +183,6 @@ class Modal {
     $(this._element).off(EVENT_CLICK_DISMISS)
     $(this._dialog).off(EVENT_MOUSEDOWN_DISMISS)
 
-
     if (transition) {
       const transitionDuration  = Util.getTransitionDurationFromElement(this._element)
 
@@ -460,7 +459,7 @@ class Modal {
 
   _checkScrollbar() {
     const rect = document.body.getBoundingClientRect()
-    this._isBodyOverflowing = rect.left + rect.right < window.innerWidth
+    this._isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth
     this._scrollbarWidth = this._getScrollbarWidth()
   }
 

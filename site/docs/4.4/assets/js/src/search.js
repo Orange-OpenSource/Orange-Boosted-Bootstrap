@@ -39,7 +39,6 @@
 
         // When in production, return the result as is,
         // otherwise remove our url from it.
-        // eslint-disable-next-line no-negated-condition
         hit.url = currentUrl.lastIndexOf(liveUrl, 0) === 0
           // On production, return the result as is
           ? hit.url
