@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Boosted v4.5.0 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap scrollup.js v4.4.1 (https://boosted.orange.com)
+  * Bootstrap scrollup.js v4.5.0 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -14,8 +14,8 @@
   (global = global || self, global.ScrollUp = factory(global.jQuery, global.Util));
 }(this, (function ($, Util) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -89,7 +89,7 @@
    */
 
   var NAME = 'scrollup';
-  var VERSION = '4.4.1';
+  var VERSION = '4.5.0';
   var DATA_KEY = 'bs.scrollup';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -101,32 +101,23 @@
   var DefaultType = {
     target: '(string|element)'
   };
-  var Event = {
-    SCROLL: "scroll" + EVENT_KEY,
-    CLICK_SCROLL: "click" + EVENT_KEY,
-    LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
-  };
-  var ClassName = {
-    SCROLL_TOP: 'o-scroll-up'
-  };
-  var Selector = {
-    SCROLL_TOP: '.o-scroll-up:not(.static)'
-  };
+  var EVENT_SCROLL = "scroll" + EVENT_KEY;
+  var EVENT_CLICK_SCROLL = "click" + EVENT_KEY;
+  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY + DATA_API_KEY;
+  var SELECTOR_SCROLL_TOP = '.o-scroll-up:not(.static)';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var ScrollUp =
-  /*#__PURE__*/
-  function () {
+  var ScrollUp = /*#__PURE__*/function () {
     function ScrollUp(element, config) {
       this._element = element;
       this._scrollElement = window;
       this._config = this._getConfig(config);
-      $(window).on(Event.SCROLL, $.proxy(this._process, this));
-      $(Selector.SCROLL_TOP).on(Event.CLICK_SCROLL, $.proxy(this._backToTop, this));
+      $(window).on(EVENT_SCROLL, $.proxy(this._process, this));
+      $(SELECTOR_SCROLL_TOP).on(EVENT_CLICK_SCROLL, $.proxy(this._backToTop, this));
       $(this._element).addClass('is-fixed d-none');
 
       this._process();
@@ -145,17 +136,13 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, this.constructor.Default, {}, $(this._element).data(), {}, config);
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, this.constructor.Default), $(this._element).data()), config);
       Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
       return config;
     };
 
     _proto._process = function _process() {
-      $(Selector.SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()));
-    };
-
-    _proto._clear = function _clear() {
-      $(this._selector).filter(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
+      $(SELECTOR_SCROLL_TOP).toggleClass('d-none', $(this._scrollElement).scrollTop() < Number($(this._scrollElement).height()));
     };
 
     _proto._backToTop = function _backToTop() {
@@ -170,8 +157,7 @@
         }, SCROLLANIMATE);
       } else {
         $('html, body').scrollTop(0);
-      } // scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-
+      }
     } // static
     ;
 
@@ -222,8 +208,8 @@
    */
 
 
-  $(window).on(Event.LOAD_DATA_API, function () {
-    var scrollUps = $.makeArray($(Selector.SCROLL_TOP));
+  $(window).on(EVENT_LOAD_DATA_API, function () {
+    var scrollUps = $.makeArray($(SELECTOR_SCROLL_TOP));
 
     for (var i = scrollUps.length; i--;) {
       var $scrollup = $(scrollUps[i]);

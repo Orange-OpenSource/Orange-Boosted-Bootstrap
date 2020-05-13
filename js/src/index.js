@@ -20,7 +20,7 @@ import '../../node_modules/focus-visible/dist/focus-visible.js'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.4.1): index.js
+ * Bootstrap (v4.5.0): index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */

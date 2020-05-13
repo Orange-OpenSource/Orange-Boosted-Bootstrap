@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Boosted v4.5.0 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap navbar.js v4.4.1 (https://boosted.orange.com)
+  * Bootstrap navbar.js v4.5.0 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -14,8 +14,8 @@
   (global = global || self, global.Navbar = factory(global.jQuery, global.Util));
 }(this, (function ($, Util) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -89,7 +89,7 @@
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.4.1';
+  var VERSION = '4.5.0';
   var DATA_KEY = 'bs.navbar';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var BREAKPOINT = 768;
@@ -101,24 +101,20 @@
     sticky: 'boolean',
     trigger: 'string'
   };
-  var Selector = {
-    SUPRA_BAR: '.navbar.supra',
-    MEGAMENU_PANEL: '.mega-menu.panel'
-  };
+  var SELECTOR_SUPRA_BAR = '.navbar.supra';
+  var SELECTOR_MEGAMENU_PANEL = '.mega-menu.panel';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Navbar =
-  /*#__PURE__*/
-  function () {
+  var Navbar = /*#__PURE__*/function () {
     function Navbar(element, config) {
       var _this = this;
 
       this._element = element;
-      this._supraBar = element.querySelector(Selector.SUPRA_BAR);
+      this._supraBar = element.querySelector(SELECTOR_SUPRA_BAR);
       this._config = this._getConfig(config);
       this._initialHeight = $(this._element).outerHeight();
       this._initialSupraHeight = $(this._supraBar).outerHeight();
@@ -127,7 +123,7 @@
 
       if (this._config.sticky) {
         $(this._element).addClass('fixed-top');
-        $(Selector.MEGAMENU_PANEL).addClass('sticky');
+        $(SELECTOR_MEGAMENU_PANEL).addClass('sticky');
         $(document.body).css('padding-top', this._initialHeight);
         $(window).on('scroll', function () {
           var Scroll = $(window).scrollTop();
@@ -149,9 +145,9 @@
           var Scroll = $(window).scrollTop();
 
           if (Scroll > 0) {
-            $(Selector.SUPRA_BAR).hide();
+            $(SELECTOR_SUPRA_BAR).hide();
           } else {
-            $(Selector.SUPRA_BAR).show();
+            $(SELECTOR_SUPRA_BAR).show();
           }
         });
       }
@@ -176,7 +172,7 @@
       return this.each(function () {
         var data = $(this).data(DATA_KEY);
 
-        var _config = _objectSpread2({}, Default, {}, $(this).data(), {}, typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default), $(this).data()), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Navbar(this, _config);

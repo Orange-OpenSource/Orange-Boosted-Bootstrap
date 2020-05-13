@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.4.1 (https://boosted.orange.com)
+  * Boosted v4.5.0 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap otab.js v4.4.1 (https://boosted.orange.com)
+  * Bootstrap otab.js v4.5.0 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -14,8 +14,8 @@
   (global = global || self, global.Otab = factory(global.jQuery, global.Util));
 }(this, (function ($, Util) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -40,40 +40,31 @@
    */
 
   var NAME = 'otab';
-  var VERSION = '4.4.1';
+  var VERSION = '4.5.0';
   var DATA_KEY = 'bs.otab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var DEFAULT_THRESHOLD = 2;
-  var Event = {
-    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-  };
-  var ClassName = {
-    ACTIVE: 'active',
-    SHOW: 'show',
-    ACCORDION_LAYOUT: 'accordion-layout'
-  };
-  var Selector = {
-    OTAB_HEADING: '.o-tab-heading',
-    OTAB_CONTENT: '.o-tab-content'
-  };
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var CLASS_NAME_SHOW = 'show';
+  var CLASS_NAME_ACCORDION_LAYOUT = 'accordion-layout';
+  var SELECTOR_OTAB_HEADING = '.o-tab-heading';
+  var SELECTOR_OTAB_CONTENT = '.o-tab-content';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Otab =
-  /*#__PURE__*/
-  function () {
+  var Otab = /*#__PURE__*/function () {
     function Otab(element) {
       this._element = element;
 
       this._addAccessibility();
 
-      if ($(this._element).parent().find(Selector.OTAB_HEADING).length > DEFAULT_THRESHOLD) {
-        $(this._element).parent().addClass(ClassName.ACCORDION_LAYOUT);
+      if ($(this._element).parent().find(SELECTOR_OTAB_HEADING).length > DEFAULT_THRESHOLD) {
+        $(this._element).parent().addClass(CLASS_NAME_ACCORDION_LAYOUT);
       }
     } // getters
 
@@ -84,16 +75,16 @@
     _proto.show = function show() {
       var $element = $(this._element);
 
-      if ($element.next().hasClass(ClassName.SHOW)) {
+      if ($element.next().hasClass(CLASS_NAME_SHOW)) {
         return;
       } // from parent remove all tab-content show classes
 
 
-      $element.parent().find(Selector.OTAB_CONTENT).removeClass(ClassName.SHOW); // remove all aria-expanded=true
+      $element.parent().find(SELECTOR_OTAB_CONTENT).removeClass(CLASS_NAME_SHOW); // remove all aria-expanded=true
 
       $element.parent().find('[aria-expanded="true"]').attr('aria-expanded', false); // add show class to next tab-content
 
-      $element.next().addClass(ClassName.SHOW); // add aria-expanded=true to element
+      $element.next().addClass(CLASS_NAME_SHOW); // add aria-expanded=true to element
 
       $element.attr('aria-expanded', true);
     } // private
@@ -114,7 +105,7 @@
         tabindex: 0
       });
 
-      if ($tabpanel.hasClass(ClassName.SHOW)) {
+      if ($tabpanel.hasClass(CLASS_NAME_SHOW)) {
         $tab.attr('aria-expanded', true);
       } else {
         $tab.attr('aria-expanded', false);
@@ -159,11 +150,11 @@
 
 
   $(document).on('DOMContentLoaded', function () {
-    Otab._jQueryInterface.call($(Selector.OTAB_HEADING));
-  }).on(Event.CLICK_DATA_API, Selector.OTAB_HEADING, function (event) {
+    Otab._jQueryInterface.call($(SELECTOR_OTAB_HEADING));
+  }).on(EVENT_CLICK_DATA_API, SELECTOR_OTAB_HEADING, function (event) {
     event.preventDefault();
 
-    Otab._jQueryInterface.call($(this), ClassName.SHOW);
+    Otab._jQueryInterface.call($(this), CLASS_NAME_SHOW);
   });
   /**
    * ------------------------------------------------------------------------
