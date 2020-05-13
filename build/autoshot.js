@@ -9,7 +9,7 @@ const serveStatic = require('serve-static')
 const serve = serveStatic('./_gh_pages')
 const host = 'localhost'
 const port = 9001
-const screenshotsBase = './docs/4.4/examples/screenshots/'
+const screenshotsBase = './docs/4.5/examples/screenshots/'
 
 const options = {
   screenSize: {
@@ -24,130 +24,130 @@ const options = {
 }
 
 const items = [{
-  src: `http://${host}:${port}/docs/4.4/examples/album/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/album/index.html`,
   dest: 'album.png'
 }, {
-  src: `http://${host}:${port}/docs/4.4/examples/blog/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/blog/index.html`,
   dest: 'blog.png'
 }, {
-  src: `http://${host}:${port}/docs/4.4/examples/carousel/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/carousel/index.html`,
   dest: 'carousel.png'
 }, {
-  src: `http://${host}:${port}/docs/4.4/examples/checkout/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/checkout/index.html`,
   dest: 'checkout.png'
 }, {
-  src: `http://${host}:${port}/docs/4.4/examples/cover/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/cover/index.html`,
   dest: 'cover.png'
 }, {
-  src: `http://${host}:${port}/docs/4.4/examples/dashboard/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/dashboard/index.html`,
   dest: 'dashboard.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/floating-labels/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/floating-labels/index.html`,
   dest: 'floating-labels.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/grid/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/grid/index.html`,
   dest: 'grid.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/jumbotron/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/jumbotron/index.html`,
   dest: 'jumbotron.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/narrow-jumbotron/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/narrow-jumbotron/index.html`,
   dest: 'narrow-jumbotron.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/quick-links/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/quick-links/index.html`,
   dest: 'quick-links.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/content-panel/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/content-panel/index.html`,
   dest: 'content-panel.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/product-details/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/product-details/index.html`,
   dest: 'product-details.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/navbars/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/navbars/index.html`,
   dest: 'navbars.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/navbar-fixed/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/navbar-fixed/index.html`,
   dest: 'navbar-fixed.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/navbar-static/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/navbar-static/index.html`,
   dest: 'navbar-static.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/navbar-bottom/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/navbar-bottom/index.html`,
   dest: 'navbar-bottom.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/navbar-top/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/navbar-top/index.html`,
   dest: 'navbar-top.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/navbar-top-fixed/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/navbar-top-fixed/index.html`,
   dest: 'navbar-top-fixed.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/offcanvas/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/offcanvas/index.html`,
   dest: 'offcanvas.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/sign-in/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/sign-in/index.html`,
   dest: 'sign-in.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/pricing/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/pricing/index.html`,
   dest: 'pricing.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/product/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/product/index.html`,
   dest: 'product.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/starter-template/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/starter-template/index.html`,
   dest: 'starter-template.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/sticky-footer/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/sticky-footer/index.html`,
   dest: 'sticky-footer.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/sticky-footer-navbar/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/sticky-footer-navbar/index.html`,
   dest: 'sticky-footer-navbar.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/tooltip-viewport/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/tooltip-viewport/index.html`,
   dest: 'tooltip-viewport.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/administration-mainpage/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/administration-mainpage/index.html`,
   dest: 'administration-mainpage.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/administration-edition-page/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/administration-edition-page/index.html`,
   dest: 'administration-edition-page.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/dashboard-orange-branded/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/dashboard-orange-branded/index.html`,
   dest: 'dashboard-orange-branded.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/orange-form/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/orange-form/index.html`,
   dest: 'orange-form.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/news-template/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/news-template/index.html`,
   dest: 'news-template.png'
 },
 {
-  src: `http://${host}:${port}/docs/4.4/examples/orange-homepage/index.html`,
+  src: `http://${host}:${port}/docs/4.5/examples/orange-homepage/index.html`,
   dest: 'orange-homepage.png'
 }
 ]
