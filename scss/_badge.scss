@@ -5,7 +5,7 @@
 
 .badge {
   display: inline-block;
-  padding: $badge-padding-y $badge-padding-x;
+  padding: subtract($badge-padding-y, 1px) $badge-padding-x add($badge-padding-y, 1px); // Boosted mod
   @include font-size($badge-font-size);
   font-weight: $badge-font-weight;
   line-height: 1;
@@ -24,6 +24,6 @@
 
 // Quick fix for badges in buttons
 .btn .badge {
-  position: relative;
-  top: -1px;
+  padding: $badge-padding-y $badge-padding-x; // Boosted mod
+  margin-left: map-get($spacers, 1); // Boosted mod
 }
