@@ -4,6 +4,7 @@
 
 .btn {
   display: inline-flex; // Boosted mod
+  align-items: center; // Boosted mod: for .badge proper alignment
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
