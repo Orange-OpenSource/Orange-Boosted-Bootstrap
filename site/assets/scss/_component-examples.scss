@@ -111,9 +111,15 @@
     display: block;
   }
 
-  > :last-child:not(.carousel) { // Boosted mod
+  > :last-child {
     margin-bottom: 0;
   }
+
+  // Boosted mod
+  > .carousel:last-child {
+    margin-bottom: $carousel-margin-bottom;
+  }
+  // End mod
 
   // Images
   > svg + svg,
