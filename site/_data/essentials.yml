@@ -11,3 +11,5 @@
       description: "Header variants including multiple navbars"
     - name: "Footer"
       description: "Footer variants including multiple navbars"
+    - name: "Hero banner"
+      description: "Hero promotional banner with dark full bleed image"
