@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.3.1): collapse.js
+ * Bootstrap (v5.0.0-alpha1): collapse.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -28,7 +28,7 @@ import SelectorEngine from './dom/selector-engine'
  */
 
 const NAME = 'collapse'
-const VERSION = '4.3.1'
+const VERSION = '5.0.0-alpha1'
 const DATA_KEY = 'bs.collapse'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
@@ -192,8 +192,7 @@ class Collapse {
 
     const complete = () => {
       this._element.classList.remove(CLASS_NAME_COLLAPSING)
-      this._element.classList.add(CLASS_NAME_COLLAPSE)
-      this._element.classList.add(CLASS_NAME_SHOW)
+      this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW)
 
       this._element.style[dimension] = ''
 
@@ -230,8 +229,7 @@ class Collapse {
     reflow(this._element)
 
     this._element.classList.add(CLASS_NAME_COLLAPSING)
-    this._element.classList.remove(CLASS_NAME_COLLAPSE)
-    this._element.classList.remove(CLASS_NAME_SHOW)
+    this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW)
 
     const triggerArrayLength = this._triggerArray.length
     if (triggerArrayLength > 0) {
@@ -348,7 +346,7 @@ class Collapse {
       ...typeof config === 'object' && config ? config : {}
     }
 
-    if (!data && _config.toggle && /show|hide/.test(config)) {
+    if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
       _config.toggle = false
     }
 

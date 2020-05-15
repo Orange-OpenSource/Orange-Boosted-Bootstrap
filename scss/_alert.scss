@@ -49,15 +49,14 @@
   // End mod
 }
 
-// Alternate styles
-//
-// Generate contextual modifier classes for colorizing the alert.
-
 //
 // Boosted mod
 //
 
 //// Only border changes — and we add an icon
+
+// scss-docs-start alert-modifiers
+// Generate contextual modifier classes for colorizing the alert.
 @each $color, $value in $alert-colors {
   .alert-#{$color} {
     border-color: $value;
@@ -67,6 +66,7 @@
     }
   }
 }
+// scss-docs-end alert-modifiers
 
 //// Additional content
 .alert * p {

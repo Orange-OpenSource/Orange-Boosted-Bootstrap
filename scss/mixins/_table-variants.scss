@@ -1,0 +1,18 @@
+// scss-docs-start table-variant
+@mixin table-variant($state, $background) {
+  .table-#{$state} {
+    $color: color-contrast(opaque($body-bg, $background));
+    $hover-bg: mix($color, $background, percentage($table-hover-bg-factor));
+    $active-bg: mix($color, $background, percentage($table-active-bg-factor));
+
+    --bs-table-bg: #{$background};
+    --bs-table-active-bg: #{$active-bg};
+    --bs-table-active-color: #{color-contrast($active-bg)};
+    --bs-table-hover-bg: #{$hover-bg};
+    --bs-table-hover-color: #{color-contrast($hover-bg)};
+    --bs-table-border-color: #{mix($color, $background, percentage($table-border-factor))};
+
+    color: $color;
+  }
+}
+// scss-docs-end table-variant

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/4.3/assets/brand/orange-logo.svg" alt="Boosted" width="72" height="72">
+    <img src="https://boosted.orange.com/docs/4.5/assets/brand/orange-logo.svg" alt="Boosted" width="72" height="72">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://boosted.orange.com/docs/4.3/"><strong>Visit Boosted</strong></a>
+  <a href="https://boosted.orange.com/docs/4.5/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=bug.md">Report bug</a>
@@ -37,19 +37,19 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.3.1.zip)
+- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.5.0.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted`
-- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@4.3.1`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:4.3.1`
+- Install with [yarn](https://yarnpkg.com/): `yarn add boosted@4.5.0`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:4.5.0`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
-Read the [Getting started page](https://boosted.orange.com/docs/4.3/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://boosted.orange.com/docs/4.5/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 
 ## Status
 
-[![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/Tests/badge.svg)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?workflow=Tests)
+[![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/Tests/badge.svg?branch=v5-dev)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3ATests+branch%3Av5-dev)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)

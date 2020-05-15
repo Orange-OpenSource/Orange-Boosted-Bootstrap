@@ -18,6 +18,7 @@
   color: $navbar-dark-brand-color; // Boosted mod: should work with every `.bg-*`
   text-decoration: if($link-decoration == none, null, none);
   background: none; // Boosted mod: Prevent dropdown's background to interfere
+  @include transition($nav-link-transition);
 
   &:hover,
   &:focus {

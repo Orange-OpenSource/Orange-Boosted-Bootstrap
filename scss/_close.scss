@@ -7,7 +7,6 @@
   background: escape-svg($close-icon) no-repeat 50% / #{$close-icon-size};
   border: 0;
   outline-offset: map-get($spacers, 2);
-  appearance: none;
   // End mod
 
   // Override <a>'s hover style

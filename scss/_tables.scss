@@ -3,40 +3,54 @@
 //
 
 .table {
+  --bs-table-bg: #{$table-bg};
+  --bs-table-accent-bg: transparent;
+  --bs-table-active-color: #{$table-active-color};
+  --bs-table-active-bg: #{$table-active-bg};
+  --bs-table-hover-color: #{$table-hover-color};
+  --bs-table-hover-bg: #{$table-hover-bg};
+  --bs-table-border-color: #{$table-border-color}; // Boosted mod
   width: 100%;
   margin-bottom: $spacer;
   color: $table-color;
   vertical-align: $table-cell-vertical-align;
-  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
   // Boosted mod
   //// Only rows have border
   //// Set line-height everywhere
   tr {
-    border-bottom: $table-border-width solid $table-border-color;
+    border-bottom: $table-border-width solid var(--bs-table-border-color);
   }
 
-  th,
-  td {
-    padding: $table-cell-padding;
-    line-height: $table-cell-line-height;
+  // Target th & td
+  // We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
+  // We use the universal selectors here to simplify the selector (else we would need 6 different selectors).
+  // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
+  // stylelint-disable-next-line selector-max-universal
+  > :not(caption) > * > * {
+    padding: $table-cell-padding-y $table-cell-padding-x $table-cell-padding-x;
+    line-height: $table-cell-line-height; // Boosted mod
+    background-color: var(--bs-table-bg);
+    background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
   }
 
-  thead tr {
+  > thead > tr {
     border-bottom-width: $table-border-width * 2;
   }
 
-  tbody th {
+  > tbody > th {
     font-weight: $font-weight-normal;
   }
   // End mod
 
-  tbody {
+  > tbody {
     vertical-align: inherit;
   }
 
-  tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
+  // Highlight border color between thead, tbody and tfoot.
+  // stylelint-disable-next-line selector-max-universal
+  > :not(:last-child) > :last-child > * {
+    border-bottom-color: $table-group-seperator-color;
   }
 }
 
@@ -45,7 +59,9 @@
 // Change placement of captions with a class
 //
 
-.caption-bottom { caption-side: bottom; } // Boosted mod
+.caption-bottom {
+  caption-side: bottom; // Boosted mod
+}
 
 
 //
@@ -53,8 +69,8 @@
 //
 
 .table-sm {
-  th,
-  td {
+  // stylelint-disable-next-line selector-max-universal
+  > :not(caption) > * > * {
     line-height: $table-cell-line-height-sm; // Boosted mod
   }
 }
@@ -65,47 +81,34 @@
 
 // Boosted mod: no .table-striped
 
+// Active table
+//
+// The `.table-active` class can be added to highlight rows or cells
+
+.table-active {
+  --bs-table-accent-bg: var(--bs-table-active-bg);
+  color: var(--bs-table-active-color);
+}
+
 // Hover effect
 //
 // Placed here since it has to come after the potential zebra striping
 
 .table-hover {
-  tbody tr {
-    &:hover {
-      color: $table-hover-color;
-      background-color: $table-hover-bg;
-    }
+  > tbody > tr:hover {
+    --bs-table-accent-bg: var(--bs-table-hover-bg);
+    color: var(--bs-table-hover-color);
   }
 }
 
 
 // Boosted mod: no table-row-variants
 
-// Boosted mod: no .thead-light  nor .thead-dark
+// Table variants set the table cell backgrounds, border colors
+// and the colors of the striped, hovered & active tables
 
-.table-dark {
-  color: $table-dark-color;
-  background-color: $table-dark-bg;
-
-  // Boosted mod: only table rows have borders
-  tr,
-  th {
-    border-color: $table-dark-border-color;
-  }
-  // End mod
-
-  // Boosted mod: no .table-bordered
-
-  // Boosted mod: no .table-striped
-
-  &.table-hover {
-    tbody tr {
-      &:hover {
-        color: $table-dark-hover-color;
-        background-color: $table-dark-hover-bg;
-      }
-    }
-  }
+@each $color, $value in $table-variants {
+  @include table-variant($color, $value);
 }
 
 
