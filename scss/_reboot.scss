@@ -319,13 +319,15 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family-monospace;
+  font-family: var(--bs-font-monospace);
   @include font-size(1em); // Correct the odd `em` font sizing in all browsers.
 }
 
 // 1. Remove browser default top margin
 // 2. Reset browser default of `1em` to use `rem`s
 // 3. Don't allow content to break outside
+// 4. Disable auto-hiding scrollbar in legacy Edge to avoid overlap,
+//    making it impossible to interact with the content
 
 pre {
   display: block;
@@ -334,6 +336,7 @@ pre {
   overflow: auto; // 3
   @include font-size($code-font-size);
   color: $pre-color;
+  -ms-overflow-style: scrollbar; // 4
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -403,8 +406,8 @@ table {
 }
 
 caption {
-  padding-top: $table-caption-padding;
-  padding-bottom: $table-caption-padding;
+  padding-top: $table-caption-padding-y;
+  padding-bottom: $table-caption-padding-y;
   @include font-size($h1-font-size);    // Boosted mod
   font-weight: $font-weight-bold;       // Boosted mod
   color: $table-caption-color;
@@ -421,6 +424,17 @@ caption {
 th {
   text-align: inherit; // 1
   text-align: -webkit-match-parent; // 2
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
 }
 
 
@@ -504,7 +518,7 @@ button,
 [type="submit"] {
   -webkit-appearance: button; // 2
 
-  @if $enable-pointer-cursor-for-buttons {
+  @if $enable-button-pointers {
     &:not(:disabled) {
       cursor: pointer; // 3
     }
@@ -613,6 +627,11 @@ output {
   display: inline-block;
 }
 
+// Remove border from iframe
+
+iframe {
+  border: 0;
+}
 
 // Summary
 //

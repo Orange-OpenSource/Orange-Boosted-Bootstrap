@@ -20,16 +20,21 @@
   margin-top: ($line-height-base - $form-check-input-width) / 2; // line-height minus check height
   vertical-align: top;
   background-color: $form-check-input-bg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   border: $form-check-input-border;
   appearance: none;
   color-adjust: exact; // Keep themed appearance for print
+  @include transition($form-check-transition);
 
   &[type="checkbox"] {
     @include border-radius($form-check-input-border-radius);
   }
 
   &[type="radio"] {
-    border-radius: $form-check-radio-border-radius; // stylelint-disable-line property-blacklist
+    // stylelint-disable-next-line property-blacklist
+    border-radius: $form-check-radio-border-radius;
   }
 
   &:focus {
@@ -46,15 +51,12 @@
 
   &:checked {
     background-color: $form-check-input-checked-bg-color;
-    background-repeat: $form-check-input-checked-bg-repeat;
-    background-position: $form-check-input-checked-bg-position;
-    background-size: $form-check-input-checked-bg-size;
+    background-size: add(map-get($spacers, 2), map-get($spacers, 1)); // Boosted mod
     border-color: $form-check-input-checked-border-color;
 
     &[type="checkbox"] {
       @if $enable-gradients {
         background-image: escape-svg($form-check-input-checked-bg-image), linear-gradient(180deg, lighten($form-check-input-checked-bg-color, 10%), $form-check-input-checked-bg-color);
-        background-size: $form-check-input-checked-bg-size, auto;
       } @else {
         background-image: escape-svg($form-check-input-checked-bg-image);
       }
@@ -73,16 +75,13 @@
 
   &[type="checkbox"]:indeterminate {
     background-color: $form-check-input-indeterminate-bg-color;
-    background-repeat: $form-check-input-indeterminate-bg-repeat;
-    background-position: $form-check-input-indeterminate-bg-position;
+    border-color: $form-check-input-indeterminate-border-color;
+
     @if $enable-gradients {
       background-image: escape-svg($form-check-input-indeterminate-bg-image), linear-gradient(180deg, lighten($form-check-input-checked-bg-color, 10%), $form-check-input-checked-bg-color);
-      background-size: $form-check-input-checked-bg-size, auto;
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
-      background-size: $form-check-input-indeterminate-bg-size;
     }
-    border-color: $form-check-input-indeterminate-border-color;
   }
 
   &:disabled {
@@ -135,14 +134,10 @@
     margin-left: $form-switch-padding-left * -1;
     background-color: $black; // Boosted mod
     background-image: escape-svg($form-switch-bg-image), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
-    background-repeat: no-repeat;
     background-position: right .5rem top 50%, 0 0; // Boosted mod
     background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
     border-color: $black; // Boosted mod
     @include border-radius($form-switch-border-radius);
-    color-adjust: exact; // Keep themed appearance for print
-    // Boosted mod: adding a square alongside icon, and using transition
-    transition: $form-switch-transition; // stylelint-disable-line property-blacklist
 
     &:checked {
       background-color: $primary;
