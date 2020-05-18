@@ -92,7 +92,6 @@
       @include form-validation-state-selector($state) {
         border-color: $color;
 
-        // Boosted mod: flat background
         &:checked,
         &:active {
           background-color: $color;

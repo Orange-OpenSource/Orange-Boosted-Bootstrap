@@ -123,7 +123,7 @@
   .nav-link.active,
   .show > .nav-link {
     color: $nav-pills-link-active-color;
-    background-color: $nav-pills-link-active-bg;
+    @include gradient-bg($nav-pills-link-active-bg);
   }
 
   // Boosted mod
