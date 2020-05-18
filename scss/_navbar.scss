@@ -285,6 +285,12 @@
           align-self: flex-end;
           margin: 0 $spacer subtract($spacer, $border-width) 0;
 
+          &::before {
+            top: 0;
+            left: 0;
+            transform: none;
+          }
+
           img {
             width: $navbar-brand-logo-height;
             height: $navbar-brand-logo-height;
