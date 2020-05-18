@@ -6,14 +6,12 @@ exclude-labels:
 categories:
   - title: '🚀 Features'
     labels:
-      - 'new-feature'
       - 'feature'
       - 'enhancement'
       - 'component'
   - title: '🐛 Bug fixes'
     labels:
       - 'fix'
-      - 'bugfix'
       - 'bug'
   - title: '🎨 CSS'
     labels:
@@ -29,8 +27,6 @@ categories:
       - 'accessibility'
   - title: '🧰🧰🧰🧰 Misc'
     labels:
-      - 'build'
-      - 'meta'
       - 'chore'
       - 'merge'
   - title: '📦 Dependencies'
