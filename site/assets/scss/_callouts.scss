@@ -3,11 +3,11 @@
 //
 
 .bd-callout {
-  padding: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid $gray-200;
-  border-left-width: .25rem;
+  padding: $spacer; // Boosted mod
+  margin-top: $spacer; // Boosted mod
+  margin-bottom: $spacer; // Boosted mod
+  background-color: $gray-200; // Boosted mod
+  border-left: $spacer / 2 solid $gray-200; // Boosted mod
   @include border-radius();
 
   h4 {
@@ -29,7 +29,8 @@
 
 // Variations
 @mixin bs-callout-variant($color) {
-  border-left-color: $color;
+  background-color: tint-color($color, 11); // Boosted mod
+  border-left-color: $color; // Boosted mod
 
   h4 { color: $color; }
 }

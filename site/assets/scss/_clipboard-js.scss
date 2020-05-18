@@ -18,19 +18,7 @@
 
 .btn-clipboard {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  right: 0;
   z-index: 10;
-  display: block;
-  padding: .25rem .5rem;
-  @include font-size(.75em);
-  color: $gray-800;
-  background-color: transparent;
-  border: 0;
   @include border-radius();
-
-  &:hover {
-    color: $white;
-    background-color: $primary;
-  }
 }

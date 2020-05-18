@@ -3,10 +3,10 @@
 .bd-toc {
   @include media-breakpoint-up(lg) {
     position: sticky;
-    top: 5rem;
+    top: $offset-top; // Boosted mod
     right: 0;
     z-index: 2;
-    height: subtract(100vh, 7rem);
+    height: $sidebar-height; // Boosted mod
     overflow-y: auto;
   }
 

@@ -4,15 +4,14 @@
 
 .bd-footer {
   @include font-size(.875rem);
-  color: #63707c;
+  font-weight: 700;
 
   a {
-    font-weight: 600;
-    color: $gray-700;
+    color: $white;
 
     &:hover,
     &:focus {
-      color: $link-color;
+      color: $link-hover-color;
     }
   }
 
@@ -23,7 +22,7 @@
 
 .bd-footer-links {
   padding-left: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 
   li {
     display: inline-block;

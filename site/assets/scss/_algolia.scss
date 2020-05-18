@@ -6,8 +6,8 @@
 
 .ds-dropdown-menu {
   width: 100%;
-  padding: $dropdown-padding-y 0;
-  margin: $dropdown-spacer 0 0;
+  padding: $spacer / 2 0; // Boosted mod
+  margin: $border-width 0 0; // Boosted mod
   @include font-size(.875rem);
   background-color: $dropdown-bg;
   border: $dropdown-border-width solid $dropdown-border-color;
@@ -21,7 +21,7 @@
 
 .algolia-docsearch-suggestion--category-header {
   padding: .125rem 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: $bd-purple-bright;
 
   // stylelint-disable-next-line selector-class-pattern
@@ -65,7 +65,7 @@
 
 .algolia-docsearch-suggestion--title {
   display: inline;
-  font-weight: 500;
+  font-weight: 400;
   color: $gray-800;
 }
 

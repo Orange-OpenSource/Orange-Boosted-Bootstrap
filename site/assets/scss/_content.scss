@@ -8,7 +8,7 @@
   // Offset for the sticky header
   > [id] {
     @include media-breakpoint-up(md) {
-      scroll-margin-top: 4rem;
+      scroll-margin-top: $offset-top; // Boosted mod
     }
   }
 
@@ -34,10 +34,6 @@
     @include media-breakpoint-down(md) {
       display: block;
       overflow-x: auto;
-
-      &.table-bordered {
-        border: 0;
-      }
     }
 
     th,
@@ -64,9 +60,5 @@
 
 .bd-lead {
   @include font-size(1.5rem);
-  font-weight: 300;
-}
-
-.bd-text-purple-bright {
-  color: $bd-purple-bright;
+  font-weight: 400;
 }

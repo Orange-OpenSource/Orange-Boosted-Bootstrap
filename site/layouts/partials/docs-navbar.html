@@ -1,11 +1,15 @@
-<header class="navbar navbar-expand navbar-dark bd-navbar">
-  <nav class="container-xl flex-wrap flex-md-nowrap" aria-label="Main navigation">
-    <a class="navbar-brand mr-2" href="/" aria-label="Boosted">
+<header class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="container-xl" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
       <img src="/docs/{{ .Site.Params.docs_version }}/assets/img/orange-logo.svg" width="50" height="50" alt="Back to homepage" title="Go to homepage" />
     </a>
 
-    <div class="navbar-nav-scroll order-3 order-md-0 d-flex justify-content-center justify-content-md-start">
-      <ul class="navbar-nav bd-navbar-nav flex-row">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-navbar" aria-controls="bd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="bd-navbar" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
         </li>
@@ -16,16 +20,17 @@
           <a class="nav-link{{ if eq .Page.Title "Examples" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
         </li>
       </ul>
+
+      <ul class="navbar-nav d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
+            {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "20" "height" "20") }}
+          </a>
+        </li>
+        <li class="nav-item align-self-center">
+          <a class="btn btn-primary ml-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Download</a>
+        </li>
+      </ul>
     </div>
-
-    <ul class="navbar-nav ml-sm-auto">
-      <li class="nav-item">
-        <a class="nav-link px-1 mx-1 py-3 my-n2" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
-          {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
-        </a>
-      </li>
-    </ul>
-
-    <a class="btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Download</a>
   </nav>
 </header>
