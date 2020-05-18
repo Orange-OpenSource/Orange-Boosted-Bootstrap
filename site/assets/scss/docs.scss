@@ -30,10 +30,8 @@
 
 // Load docs components
 @import "variables";
-@import "navbar";
 @import "subnav";
 @import "masthead";
-//@import "ads"; // Boosted mod: no ads
 @import "content";
 @import "skippy";
 @import "sidebar";
@@ -41,9 +39,7 @@
 @import "toc";
 @import "footer";
 @import "component-examples";
-//@import "buttons"; // Boosted mod: use Boosted buttons…
 @import "callouts";
-//@import "brand"; // Boosted mod: unused
 @import "colors";
 @import "clipboard-js";
 @import "placeholder-img";

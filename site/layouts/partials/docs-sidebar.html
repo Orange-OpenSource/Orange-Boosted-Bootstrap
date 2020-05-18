@@ -33,9 +33,8 @@
     </li>
   {{- end }}
 
-    <li class="my-3 mx-4 border-light border-top border-sm"></li>
-    <li{{ if eq $page_slug "migration" }} class="active"{{ end }}>
-      <a href="/docs/{{ $.Site.Params.docs_version }}/migration/">
+    <li class="border-light border-top border-sm my-3{{ if eq $page_slug "migration" }} active{{ end }}">
+      <a href="/docs/{{ $.Site.Params.docs_version }}/migration/" class="py-2 ml-2 pl-1">
         Migration
       </a>
     </li>

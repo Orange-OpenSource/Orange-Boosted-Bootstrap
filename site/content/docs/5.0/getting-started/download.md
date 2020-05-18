@@ -32,7 +32,7 @@ Should you require [build tools]({{< docsref "/getting-started/build-tools#tooli
 
 If you want to download and examine our [examples]({{< docsref "/examples" >}}), you can grab the already built examples:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples source'});">Download Examples</a>
+<a href="{{< param "download.dist_examples" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples source'});">Download Examples</a>
 
 ## Boosted CDN
 

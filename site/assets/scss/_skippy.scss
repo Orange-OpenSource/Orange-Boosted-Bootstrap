@@ -2,12 +2,9 @@
   position: fixed;
   top: .5rem;
   left: .5rem;
-  z-index: $zindex-fixed;
+  z-index: $zindex-fixed + 1;
   padding: .5rem;
-  color: $white;
-  background-color: $bd-purple;
-
-  &:hover {
-    color: $white;
-  }
+  font-weight: 700;
+  color: $primary;
+  background-color: $black;
 }

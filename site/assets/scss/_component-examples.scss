@@ -10,8 +10,8 @@
     > [class^="col-"] {
       padding-top: .75rem;
       padding-bottom: .75rem;
-      background-color: rgba(39, 41, 43, .03);
-      border: 1px solid rgba(39, 41, 43, .1);
+      background-color: tint-color($info, 11); // Boosted mod
+      border: 1px solid tint-color($info, 6); // Boosted mod
     }
   }
 
@@ -22,12 +22,12 @@
 
 .bd-example-row-flex-cols .row {
   min-height: 10rem;
-  background-color: rgba(255, 0, 0, .1);
+  background-color: tint-color($info, 11); // Boosted mod
 }
 
 .bd-highlight {
-  background-color: rgba($bd-purple, .15);
-  border: 1px solid rgba($bd-purple, .15);
+  background-color: tint-color($info, 11); // Boosted mod
+  border: 1px solid tint-color($info, 6); // Boosted mod
 }
 
 // Grid mixins
@@ -230,14 +230,11 @@
 //
 
 .highlight {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: $gray-100;
+  padding: $spacer; // Boosted mod
+  margin-bottom: $spacer; // Boosted mod
+  background-color: $white; // Boosted mod
+  border: $border-width solid $gray-300;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-
-  @include media-breakpoint-up(sm) {
-    padding: 1rem 1.5rem;
-  }
 
   pre {
     padding: 0;
@@ -249,8 +246,17 @@
 
   pre code {
     @include font-size(inherit);
-    color: $gray-900; // Effectively the base text color
+    color: $gray-800; // Effectively the base text color
+    @include transition(color .15s ease-in);
   }
+
+  // Boosted mod
+  pre .language-sh { color: $gray-900; }
+
+  &:hover .language-html {
+    color: $black;
+  }
+  // End mod
 }
 
 .bd-content .highlight {
