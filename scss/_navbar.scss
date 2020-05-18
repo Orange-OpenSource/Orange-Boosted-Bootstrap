@@ -25,6 +25,7 @@
   font-weight: $font-weight-bold;
   @include transition($navbar-transition);
   // End mod
+  @include gradient-bg();
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.

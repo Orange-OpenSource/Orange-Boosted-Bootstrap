@@ -36,6 +36,8 @@ Similar to the contextual text color classes, easily set the background of an el
 <div class="p-3 mb-2 bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
+<!-- Boosted mod: no background gradient -->
+
 {{< callout info >}}
 #### Dealing with specificity
 
