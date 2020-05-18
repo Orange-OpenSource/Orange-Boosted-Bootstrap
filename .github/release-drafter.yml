@@ -27,15 +27,16 @@ categories:
   - title: '🌎 Accessibility'
     labels:
       - 'accessibility'
-  - title: '🧰 Misc'
+  - title: '🧰🧰🧰🧰 Misc'
     labels:
       - 'build'
       - 'meta'
       - 'chore'
+      - 'merge'
   - title: '📦 Dependencies'
     labels:
       - 'dependencies'
-  - title: '🟧 Brand'
+  - title: '📙 Orange Brand'
     labels:
       - 'brand'
 change-template: '- #$NUMBER: $TITLE'
