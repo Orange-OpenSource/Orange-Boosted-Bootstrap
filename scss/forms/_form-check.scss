@@ -79,8 +79,12 @@
 
     @if $enable-gradients {
       background-image: escape-svg($form-check-input-indeterminate-bg-image), linear-gradient(180deg, lighten($form-check-input-checked-bg-color, 10%), $form-check-input-checked-bg-color);
+      background-position: 50% add(50%, $border-width / 4), center; // Boosted mod
+      background-size: map-get($spacers, 2) $border-width * 1.5, auto; // Boosted mod
     } @else {
       background-image: escape-svg($form-check-input-indeterminate-bg-image);
+      background-position: 50% add(50%, $border-width / 4); // Boosted mod
+      background-size: map-get($spacers, 2) $border-width * 1.5; // Boosted mod
     }
   }
 
@@ -134,7 +138,7 @@
     margin-left: $form-switch-padding-left * -1;
     background-color: $black; // Boosted mod
     background-image: escape-svg($form-switch-bg-image), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
-    background-position: right .5rem top 50%, 0 0; // Boosted mod
+    background-position: $form-switch-bg-position, 0 0; // Boosted mod
     background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
     border-color: $black; // Boosted mod
     @include border-radius($form-switch-border-radius);

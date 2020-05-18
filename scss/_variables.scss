@@ -716,6 +716,7 @@ $form-switch-width:               $spacer * 3 !default;
 $form-switch-padding-left:        $form-switch-width + .5rem !default;
 // Boosted mod
 $form-switch-bg-image:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$form-switch-bg-position:         right .5rem top 50% !default;
 $form-switch-bg-size:             .75rem !default;
 $form-switch-bg-square-size:      add(1rem, $spacer / 2) !default;
 // End mod
@@ -723,7 +724,7 @@ $form-switch-border-radius:       null !default;
 
 $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default;
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default;
-$form-switch-checked-bg-position: .5rem 50% !default;
+$form-switch-checked-bg-position: $border-width * 3 50% !default;
 
 $form-check-inline-margin-right:        1rem !default;
 
