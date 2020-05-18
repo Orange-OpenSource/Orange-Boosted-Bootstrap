@@ -1,5 +1,7 @@
 name-template: 'v$NEXT_MAJOR_VERSION'
 tag-template: 'v$NEXT_MAJOR_VERSION'
+branches:
+  - 'v5-dev'
 prerelease: true
 exclude-labels:
   - 'skip-changelog'
