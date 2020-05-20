@@ -39,7 +39,6 @@
 
   &:focus {
     border-color: $form-check-input-focus-border;
-    outline: 0;
     box-shadow: $form-check-input-focus-box-shadow;
   }
 
@@ -166,7 +165,7 @@
     }
 
     &:focus {
-      outline: 0; // @TODO: custom focus
+      // @TODO: custom focus
     }
 
     &:active {
