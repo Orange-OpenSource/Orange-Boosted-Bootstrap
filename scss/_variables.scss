@@ -370,6 +370,9 @@ $border-radius:               null !default;
 $border-radius-sm:            null !default;
 $border-radius-lg:            null !default;
 
+$outline-width:               $border-width !default;  // Boosted mod
+$outline-offset:              $outline-width !default; // Boosted mod
+
 $rounded-pill:                50rem !default;
 
 $box-shadow:                  null !default;
@@ -386,7 +389,7 @@ $caret-spacing:               $spacer / 2 !default;
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
-//$transition-focus:            null !default;
+$transition-focus:            outline-offset .2s ease-in-out !default; // Boosted mod
 
 // scss-docs-start embed-responsive-aspect-ratios
 $embed-responsive-aspect-ratios: (
