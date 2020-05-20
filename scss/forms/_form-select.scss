@@ -26,7 +26,6 @@
 
   &:focus {
     border-color: $form-select-focus-border-color;
-    outline: 0;
     @if $enable-shadows {
       @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
     } @else {
