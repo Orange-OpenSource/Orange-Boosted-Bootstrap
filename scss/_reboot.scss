@@ -70,11 +70,18 @@ body {
   outline: 0 !important;
 }
 
-// Boosted mod
-// Using the :focus-visible polyfill to hide outline defensively
+// Boosted mod: focus state
+//
+// 1. Default focus state
+// 2. Using the :focus-visible polyfill to hide outline defensively
 // See https://github.com/WICG/focus-visible
+
+:focus {
+  outline: $outline-width solid; // 1
+}
+
 .js-focus-visible :focus:not([data-focus-visible-added]),
-.js-focus-visible .focus:not([data-focus-visible-added]) {
+.js-focus-visible .focus:not([data-focus-visible-added]) { // 2
   outline: 0 !important;
 }
 // End mod
@@ -207,13 +214,14 @@ ul {
 
 // Future-proof markers' color
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
+// stylelint-disable selector-max-type
 li::marker {
   color: $primary;
   vertical-align: middle;
 }
 
 li li::marker { color: $gray-600; }
-// stylelint-disable-next-line selector-max-type
+
 li li li::marker { color: $gray-500; }
 
 // Bullet-proof markers' color
@@ -225,8 +233,9 @@ li::before {
 }
 
 li li::before { color: $gray-600; }
-// stylelint-disable-next-line selector-max-type
+
 li li li::before { color: $gray-500; }
+// stylelint-enable selector-max-type
 // End mod
 
 dt {
@@ -253,6 +262,7 @@ blockquote {
 // Add the correct font weight in Chrome, Edge, and Safari
 
 b,
+em, // Boosted mod
 strong {
   font-weight: $font-weight-bold; // Boosted mod: ensure 700
 }
@@ -301,6 +311,15 @@ sup { top: -.5em; }
 a {
   color: $link-color;
   text-decoration: $link-decoration;
+  // Boosted mod
+  outline-offset: $outline-offset * 4;
+  @include transition($transition-focus);
+
+  &:focus {
+    color: $link-hover-color;
+    outline-offset: $outline-offset;
+  }
+  // End mod
 
   &:hover {
     color: $link-hover-color;
@@ -606,7 +625,7 @@ legend {
 //    https://github.com/twbs/bootstrap/issues/11586.
 
 [type="search"] {
-  outline-offset: -2px; // 1
+  outline-offset: -#{$outline-offset}; // 1 // Boosted mod
   -webkit-appearance: textfield; // 2
 }
 
