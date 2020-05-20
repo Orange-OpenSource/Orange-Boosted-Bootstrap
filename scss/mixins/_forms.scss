@@ -67,9 +67,8 @@
         // Boosted mod: validation icon in .*-feedback
 
         // Boosted mod: no box-shadow
-        &:focus {
-          border-color: $color;
-        }
+
+        // Boosted mod: focus styles don't match validation state
       }
     }
 
@@ -82,9 +81,8 @@
         // Boosted mod: no icon in background
 
         // Boosted mod: no box-shadow
-        &:focus {
-          border-color: $color;
-        }
+
+        // Boosted mod: focus styles don't match validation state
       }
     }
 
@@ -117,7 +115,8 @@
 
         &:focus {
           ~ .form-file-label {
-            border-color: $color;
+            // Boosted mod: focus styles don't match validation state
+
             // Boosted mod: no box-shadow
           }
         }

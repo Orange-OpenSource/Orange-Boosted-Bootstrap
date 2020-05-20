@@ -129,7 +129,7 @@
 
 .form-switch {
   // Boosted mod
-  --o-switch-gradient: linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
+  --o-switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
   min-height: $form-switch-width / 2;
   padding-left: $form-switch-padding-left;
 
