@@ -129,18 +129,20 @@
 //
 
 .form-switch {
-  min-height: $form-switch-width / 2; // Boosted mod
+  // Boosted mod
+  --o-switch-gradient: linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
+  min-height: $form-switch-width / 2;
   padding-left: $form-switch-padding-left;
 
   .form-check-input {
     width: $form-switch-width;
-    height: $form-switch-width / 2; // Boosted mod
+    height: $form-switch-width / 2;
     margin-left: $form-switch-padding-left * -1;
-    background-color: $black; // Boosted mod
-    background-image: escape-svg($form-switch-bg-image), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
-    background-position: $form-switch-bg-position, 0 0; // Boosted mod
+    background-color: $black;
+    background-image: escape-svg($form-switch-bg-image), var(--o-switch-gradient);
+    background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
-    border-color: $black; // Boosted mod
+    border-color: $black;
     @include border-radius($form-switch-border-radius);
 
     &:checked {
@@ -148,11 +150,11 @@
       border-color: $primary;
 
       @if $enable-gradients {
-        background-image: escape-svg($form-switch-checked-bg-image), linear-gradient(180deg, $form-check-input-checked-bg-color, lighten($form-check-input-checked-bg-color, 10%)), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
+        background-image: escape-svg($form-switch-checked-bg-image), var(--bs-gradient), var(--o-switch-gradient);
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
         background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size;
       } @else {
-        background-image: escape-svg($form-switch-checked-bg-image), linear-gradient(to right, $white $form-switch-bg-square-size, transparent);
+        background-image: escape-svg($form-switch-checked-bg-image), var(--o-switch-gradient);
         background-position: $form-switch-checked-bg-position, 100% 0;
         background-size: $form-switch-checked-bg-size, $form-switch-bg-square-size;
       }
