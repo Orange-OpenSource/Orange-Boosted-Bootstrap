@@ -201,22 +201,22 @@
       border-color: $gray-500;
     }
 
-    // stylelint-disable selector-max-class
+    // stylelint-disable selector-max-class, declaration-no-important
     &:active,
     &.active.focus {
       color: $white;
       background-color: $primary;
       border-color: $primary;
-      outline-color: $primary;
+      outline: $btn-border-width solid $primary !important;
     }
-    // stylelint-enable selector-max-class
 
     &.active {
       color: $white;
       background-color: $black;
       border-color: $black;
-      outline-color: $black;
+      outline-color: $black !important;
     }
+    // stylelint-enable selector-max-class, declaration-no-important
     // End mod
 
     input[type="radio"],
