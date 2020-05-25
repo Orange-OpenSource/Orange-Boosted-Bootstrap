@@ -388,14 +388,8 @@ $utilities: map-merge(
         "light": $light,
         "white": $white,
         "body": $body-color,
+        "muted": $gray-700,
         "reset": inherit,
-      )
-    ),
-    "muted": (
-      property: opacity,
-      class: text,
-      values: (
-        "muted": .6
       )
     ),
     "line-height": (
