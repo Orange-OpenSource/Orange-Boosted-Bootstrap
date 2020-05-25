@@ -1,10 +1,18 @@
 .anchorjs-link {
+  // stylelint-disable-next-line declaration-no-important
+  padding: 0 map-get($spacers, 1) !important; // Boosted mod
   font-weight: 400;
   color: rgba($link-color, .5);
-  @include transition(color .15s ease-in-out);
+  @include transition(color .15s ease-in-out, $transition-focus); // Boosted mod
 
   &:hover {
     color: $link-color;
     text-decoration: none;
   }
+
+  // Boosted mod
+  &:focus {
+    outline-offset: 0;
+  }
+  // End mod
 }

@@ -253,7 +253,8 @@
   // Boosted mod
   pre .language-sh { color: $gray-900; }
 
-  &:hover .language-html {
+  pre:hover .language-html,
+  pre:focus .language-html {
     color: $black;
   }
   // End mod
