@@ -386,10 +386,12 @@ $caret-width:                 add($spacer / 4, $border-width) !default;
 $caret-vertical-align:        center !default;
 $caret-spacing:               $spacer / 2 !default;
 
-$transition-base:             all .2s ease-in-out !default;
-$transition-fade:             opacity .15s linear !default;
-$transition-collapse:         height .35s ease !default;
-$transition-focus:            outline-offset .2s ease-in-out !default; // Boosted mod
+$transition-duration: .2s !default; // Boosted mod
+$transition-timing:   ease-in-out !default; // Boosted mod
+$transition-base:     all $transition-duration $transition-timing !default;
+$transition-fade:     opacity $transition-timing linear !default;
+$transition-collapse: height .35s ease !default;
+$transition-focus:    outline-offset $transition-duration $transition-timing !default; // Boosted mod
 
 // scss-docs-start embed-responsive-aspect-ratios
 $embed-responsive-aspect-ratios: (
@@ -627,7 +629,7 @@ $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
+$btn-transition:              color $transition-duration $transition-timing, background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing, $transition-focus !default;
 
 
 // Forms
@@ -688,7 +690,7 @@ $input-height:                          add($input-line-height * 1em, add($input
 // Boosted mod: no input-sm
 $input-height-lg:                       add($input-line-height * (20 / 18) * 1em, add($input-padding-y-lg * 2, $input-height-border, false)) !default;
 
-$input-transition:                      border-color .15s ease-in-out !default;
+$input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 
 $form-check-input-width:                  1.25em !default;
@@ -697,7 +699,7 @@ $form-check-padding-left:                 $form-check-input-width + .5em !defaul
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
-$form-check-transition:                   background-color .15s ease-in-out, background-position .15s ease-in-out, border-color .15s ease-in-out !default;
+$form-check-transition:                   background-color $transition-duration $transition-timing, background-position $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default;
 
 $form-check-input-active-filter:          null !default;
 $form-check-input-active-bg-color:        $component-active-bg !default; // Boosted mod
@@ -706,7 +708,7 @@ $form-check-input-bg:                     $body-bg !default;
 $form-check-input-border:                 $border-width solid $input-border-color !default;
 $form-check-input-border-radius:          null !default;
 $form-check-radio-border-radius:          50% !default;
-$form-check-input-focus-border:           $input-focus-border-color !default;
+$form-check-input-focus-border:           null !default;
 $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
@@ -794,7 +796,7 @@ $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For f
 $form-range-thumb-active-bg:               null !default;
 $form-range-thumb-active-border:           $component-active-bg !default; // Boosted mod
 $form-range-thumb-disabled-bg:             $gray-500 !default;
-$form-range-thumb-transition:              background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$form-range-thumb-transition:              background-color $transition-duration $transition-timing, border-color $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing !default;
 
 $form-file-height:                $input-height !default;
 $form-file-focus-border-color:    $input-focus-border-color !default;
@@ -901,10 +903,10 @@ $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
 $navbar-brand-name-margin:             0 $spacer 0 add($spacer / 2, $spacer / 4) !default;
 //$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
 //$navbar-supra-padding-x:               $spacer / 4 * 1.5 !default;
-$navbar-transition-duration:           .2s !default;
-$navbar-transition-timing-function:    ease-in-out !default;
-$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function !default;
-$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function !default;
+$navbar-transition-duration:           $transition-duration !default;
+$navbar-transition-timing-function:    $transition-timing !default;
+$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
 // End mod
@@ -919,7 +921,7 @@ $navbar-toggler-padding-x:          .5rem !default;
 $navbar-toggler-font-size:          $font-size-base !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        null !default;
-$navbar-toggler-transition:         null !default;
+$navbar-toggler-transition:         $transition-focus !default;
 
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $orange-2 !default;
@@ -990,7 +992,8 @@ $pagination-margin-left:            $spacer / 2 !default;
 $pagination-border-color:           transparent !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
-$pagination-focus-outline:          $pagination-border-width solid $gray-500 !default;
+$pagination-focus-color:            $primary !default; // Boosted mod
+$pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
 
 $pagination-hover-color:            $black !default;
 $pagination-hover-bg:               $white !default;
@@ -1259,7 +1262,7 @@ $carousel-control-color:             $black !default;
 $carousel-control-width:             $spacer * 1.5 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
-$carousel-control-transition:        outline-offset .2s ease-in-out !default;
+$carousel-control-transition:        $transition-focus !default;
 $carousel-control-offset:            $spacer / 2 !default; // Boosted mod
 
 $carousel-indicator-width:           $spacer / 2 !default;
@@ -1281,7 +1284,7 @@ $carousel-control-icon-size:         $spacer * 1.5 !default; // Boosted mod
 $carousel-control-prev-icon-bg:      $chevron-icon !default;
 
 $carousel-transition-duration:       .6s !default;
-$carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+$carousel-transition:                transform $carousel-transition-duration $transition-timing !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
 
 // Spinners

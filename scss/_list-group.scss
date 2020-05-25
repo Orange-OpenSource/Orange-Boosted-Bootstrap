@@ -22,6 +22,8 @@
   width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: $list-group-action-color;
   text-align: inherit; // For `<button>`s (anchors inherit)
+  outline-offset: $spacer; // Boosted mod
+  @include transition($transition-focus); // Boosted mod
 
   // Hover state
   &:hover,
@@ -29,6 +31,8 @@
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: $list-group-action-hover-color;
     text-decoration: none;
+    outline-color: $list-group-action-color; // Boosted mod
+    outline-offset: $list-group-border-width; // Boosted mod
     // Boosted mod: no background change
   }
 

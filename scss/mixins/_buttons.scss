@@ -33,6 +33,7 @@
     color: $hover-color;
     @include gradient-bg($hover-background);
     border-color: $hover-border;
+    outline-color: $hover-border; // Boosted mod
     @if $enable-shadows {
       @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
     } @else {
@@ -49,6 +50,7 @@
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     border-color: $active-border;
+    outline-color: $active-border; // Boosted mod
 
     &:focus {
       @if $enable-shadows {

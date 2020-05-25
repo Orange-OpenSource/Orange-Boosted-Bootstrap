@@ -63,6 +63,9 @@
       color: color-contrast($nav-tabs-link-hover-border-color); // Boosted mod
       background-color: $nav-tabs-link-hover-border-color; // Boosted mod
       border-color: $nav-tabs-link-hover-border-color;
+      outline-color: $nav-tabs-link-hover-border-color; // Boosted mod
+      // stylelint-disable-next-line function-blacklist
+      outline-offset: var(--bs-tabs-spacing); // Boosted mod
     }
 
     &.disabled {
@@ -77,6 +80,7 @@
     color: $nav-tabs-link-active-color;
     background-color: $nav-tabs-link-active-bg;
     border-color: $nav-tabs-link-active-border-color;
+    outline-color: $nav-tabs-link-active-border-color; // Boosted mod
   }
 
   .dropdown-menu {
@@ -102,6 +106,7 @@
       color: $primary;
       background: none;
       border-color: transparent;
+      outline-color: currentColor;
     }
 
     &.active {
@@ -123,6 +128,7 @@
   .nav-link.active,
   .show > .nav-link {
     color: $nav-pills-link-active-color;
+    outline-color: $nav-pills-link-active-bg; // Boosted mod
     @include gradient-bg($nav-pills-link-active-bg);
   }
 
