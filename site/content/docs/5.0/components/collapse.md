@@ -127,7 +127,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
 
 {{< example >}}
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-5">
         <div class="accordion" id="accordionExample-3">
           <div class="card">
             <div class="card-header" id="headingOne-3">
@@ -139,7 +139,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
             </div>
             <div id="collapseOne-3" class="collapse show" aria-labelledby="headingOne-3" data-parent="#accordionExample-3">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
             </div>
             <div id="collapseTwo-3" class="collapse" aria-labelledby="headingTwo-3" data-parent="#accordionExample-3">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
               </div>
             </div>
           </div>
@@ -167,13 +167,13 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
             </div>
             <div id="collapseThree-3" class="collapse" aria-labelledby="headingThree-3" data-parent="#accordionExample-3">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
               </div>
             </div>
           </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-7">
     <div class="accordion" id="accordionExample-4">
       <div class="card">
         <div class="card-header" id="headingOne-4">
