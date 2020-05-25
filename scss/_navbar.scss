@@ -136,6 +136,10 @@
     outline-offset: $spacer;
     @include transition($navbar-transition);
 
+    &:focus {
+      outline-offset: 0;
+    }
+
     &.active::before {
       position: absolute;
       right: $nav-link-padding-y / 2;
@@ -196,6 +200,7 @@
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
+  outline-offset: $spacer; // Boosted mod
   @include border-radius($navbar-toggler-border-radius);
   @include transition($navbar-toggler-transition);
 
@@ -205,6 +210,7 @@
 
   &:focus {
     text-decoration: none;
+    outline-offset: -$border-width; // Boosted mod
     box-shadow: 0 0 0 $navbar-toggler-focus-width;
   }
 

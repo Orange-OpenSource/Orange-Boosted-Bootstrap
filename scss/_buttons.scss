@@ -17,6 +17,7 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
+  outline-offset: map-get($spacers, 1); // Boosted mod
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -27,6 +28,7 @@
 
   &:focus,
   &.focus {
+    outline-offset: $btn-border-width; // Boosted mod
     box-shadow: $btn-focus-box-shadow;
   }
 

@@ -21,6 +21,12 @@
     outline-offset: -#{$border-width};
   }
 
+  // Boosted mod
+  &:focus {
+    @include transition($transition-focus);
+  }
+  // End mod
+
   &:disabled,
   &.disabled {
     pointer-events: none;

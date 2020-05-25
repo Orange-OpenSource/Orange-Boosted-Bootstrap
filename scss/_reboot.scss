@@ -309,6 +309,7 @@ sup { top: -.5em; }
 // Links
 
 a {
+  display: inline-block; // Boosted mod: To make `outline` wrap multiple lines
   color: $link-color;
   text-decoration: $link-decoration;
   // Boosted mod
@@ -483,14 +484,7 @@ button {
   border-radius: 0;
 }
 
-// Work around a Firefox bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-// Credit https://github.com/suitcss/base/
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
+// Boosted mod: we customized focus, no need to restore defaults
 
 // 1. Remove the margin in Firefox and Safari
 

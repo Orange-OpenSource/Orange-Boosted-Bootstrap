@@ -248,6 +248,7 @@
       border: 0;
 
       .btn {
+        position: relative;
         width: add(100%, $accordion-spacer * 2);
         padding: $card-cap-padding-y;
         margin: 0 -#{$accordion-spacer};

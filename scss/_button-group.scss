@@ -201,11 +201,15 @@
       border-color: $gray-500;
     }
 
-    &:active {
+    // stylelint-disable selector-max-class
+    &:active,
+    &.active.focus {
       color: $white;
       background-color: $primary;
       border-color: $primary;
+      outline-color: $primary;
     }
+    // stylelint-enable selector-max-class
 
     &.active {
       color: $white;
