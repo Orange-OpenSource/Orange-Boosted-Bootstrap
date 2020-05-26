@@ -14,7 +14,7 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< theme-colors.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
     <div class="col-md-4">
-      <div class="p-3 mb-3 bg-{{ .name }}">{{ .name | title }}</div>
+      <div class="p-3 mb-3 font-weight-bold bg-{{ .name }}">{{ .name | title }}</div>
     </div>
   {{ end -}}
   {{< /theme-colors.inline >}}
@@ -35,7 +35,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
   {{- range $color := $.Site.Data.colors }}
-    {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
+    {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark")) (not (eq $color.name "indigo"))) }}
     <div class="col-md-4 mb-3">
       <div class="p-3 mb-2 position-relative swatch-{{ $color.name }}">
         <strong class="d-block">${{ $color.name }}</strong>
@@ -60,6 +60,14 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-3">
+    <div class="p-3 mb-2 bd-orange-2">
+      <strong class="d-block">$orange-2</strong>
+      #ff7900
+    </div>
+    <div class="p-3 mb-2 bd-yellow-2">
+      <strong class="d-block">$yellow-2</strong>
+      #fc0
+    </div>
     <div class="p-3 mb-2 bd-black text-white">
       <strong class="d-block">$black</strong>
       #000
