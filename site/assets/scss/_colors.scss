@@ -154,3 +154,60 @@
 
 .bd-white { color: color-contrast($white); background-color: $white; }
 .bd-black { color: color-contrast($black); background-color: $black; }
+
+// Boosted mod
+.bd-orange-2 { color: color-contrast($orange-2); background-color: $orange-2; }
+.bd-yellow-2 { color: color-contrast($yellow-2); background-color: $yellow-2; }
+
+@function wcag-level($contrast-ratio) {
+  $level: "FAIL";
+
+  @if $contrast-ratio > 3 {
+    $level: "AA Large text";
+  }
+
+  @if $contrast-ratio > 4.5 {
+    $level: "AA";
+  }
+
+  @if $contrast-ratio > 7 {
+    $level: "AAA";
+  }
+
+  @return $level;
+}
+
+@each $color, $value in map-merge($colors, map-merge($grays, ("yellow-2": $yellow-2, "orange-2": $orange-2, "black": $black))) {
+  .a11y-swatch-#{$color} {
+    color: color-contrast($value);
+    background-color: #{$value};
+
+    &::after {
+      $against-white: contrast-ratio($value, $white);
+      $against-black: contrast-ratio($value, $black);
+      position: absolute;
+      top: 1.5rem;
+      right: 1rem;
+      padding-left: 1rem;
+      font-size: .75rem;
+      line-height: 1.35;
+      white-space: pre;
+      content:
+        wcag-level($against-white) "\A"
+        wcag-level($against-black);
+      background-color: $value;
+      background-image:
+        linear-gradient(
+          to bottom,
+          transparent .25rem,
+          $white .25rem .75rem,
+          transparent .75rem 1.25rem,
+          $black 1.25rem 1.75rem,
+          transparent 1.75rem 2.25rem
+        );
+      background-repeat: no-repeat;
+      background-size: .5rem 100%;
+    }
+  }
+}
+// End mod
