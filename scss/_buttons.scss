@@ -28,8 +28,13 @@
 
   &:focus,
   &.focus {
-    outline-offset: $btn-border-width; // Boosted mod
-    box-shadow: $btn-focus-box-shadow;
+    // Boosted mod
+    outline-offset: $btn-border-width;
+
+    &[data-focus-visible-added] {
+      box-shadow: $btn-focus-box-shadow;
+    }
+    // End mod
   }
 
   &:active,
