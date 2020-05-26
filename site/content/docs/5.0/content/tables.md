@@ -16,7 +16,8 @@ Using the most basic table markup, here's how `.table`-based tables look in Boos
 
 ## Variants
 
-Use contextual classes to color tables, table rows or individual cells.
+<!-- Boosted mod: only .table-dark is allowed -->
+Use contextual class to color tables, table rows or individual cells.
 
 <div class="bd-example">
   <table class="table">
@@ -33,38 +34,25 @@ Use contextual classes to color tables, table rows or individual cells.
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      {{< table.inline >}}
-      {{- range (index $.Site.Data "theme-colors") }}
-        <tr class="table-{{ .name }}">
-          <th scope="row">{{ .name | title }}</th>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      {{- end -}}
-      {{< /table.inline >}}
+    <tr class="table-dark">
+      <th scope="row">Dark</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
     </tbody>
   </table>
 </div>
 
 {{< highlight html >}}
-<!-- On tables -->{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<table class="table-{{ .name }}">...</table>
-{{- end -}}
-{{< /table.inline >}}
+<!-- On tables -->
+<table class="table-dark">...</table>
 
-<!-- On rows -->{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<tr class="table-{{ .name }}">...</tr>
-{{- end -}}
-{{< /table.inline >}}
+<!-- On rows -->
+<tr class="table-dark">...</tr>
 
 <!-- On cells (`td` or `th`) -->
-<tr>{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-  <td class="table-{{ .name }}">...</td>
-{{- end -}}
-{{< /table.inline >}}
+<tr>
+  <td class="table-dark">...</td>
 </tr>
 {{< /highlight >}}
 
