@@ -247,6 +247,10 @@ For visually hidden interactive controls, such as traditional "skip" links, use 
 
 Boosted includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled.
 
+### Focus visibility
+
+Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+
 ## Additional resources
 
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
@@ -256,3 +260,4 @@ Boosted includes support for the [`prefers-reduced-motion` media feature](https:
 - [Color Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Orange accessibility guidelines](http://a11y-guidelines.orange.com/)
+- [`:focus-visible` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
