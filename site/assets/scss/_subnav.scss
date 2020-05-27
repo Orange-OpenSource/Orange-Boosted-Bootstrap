@@ -20,8 +20,6 @@
 }
 
 .bd-search {
-  position: relative; // To contain the Algolia search
-
   @include media-breakpoint-down(sm) {
     width: 100%;
   }

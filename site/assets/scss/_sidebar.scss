@@ -15,12 +15,9 @@
   }
 
   a {
-    display: inline-flex;
-    align-items: center;
     padding: .1875rem $sidebar-link-padding-x; // Boosted mod
     margin-top: .125rem;
     text-decoration: if($link-decoration == none, null, none);
-    @include border-radius(.25rem);
 
     // Indent if there's no submenu
     &:only-child {
@@ -60,7 +57,6 @@
     // Adjust font size and font weights in submenu
     + ul {
       @include font-size(.875rem);
-      font-weight: 400;
     }
   }
 
