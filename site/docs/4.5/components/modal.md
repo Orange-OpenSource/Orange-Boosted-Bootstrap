@@ -504,6 +504,62 @@ Utilize the Boosted grid system within a modal by nesting `.container-fluid` wit
 </div>
 {% endhighlight %}
 
+[comment]: # Boosted mod
+### Orange Popin
+
+Orange popin is an example content layout.
+
+<div class="modal fade" id="orangePopin" tabindex="-1" role="dialog" aria-labelledby="orangePopinLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span class="sr-only">Close Orange popin demo</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex">
+                <div class="mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 125" width="40" height="40" role="img" aria-label="Information">
+                    <path fill="#6177d7" d="M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm0 14.7a11 11 0 110 22 11 11 0 010-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z"/>
+                  </svg>
+                </div>
+                <div class="flex-grow-1">
+                   <h5 id="orangePopinLabel" class="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bd-example">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orangePopin">
+  Launch Orange popin demo
+</button>
+</div>
+
+{% highlight html %}
+<div class="modal-body">
+    <div class="card">
+        <div class="card-icon">
+            <span class="svg-warning-circle"></span>
+        </div>
+        <div class="card-body">
+            <h5 id="orangePopinLabel" class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+            <div class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
+        </div>
+    </div>
+</div>
+{% endhighlight %}
+
+[comment]: # End mod
+
 ### Varying modal content
 
 Have a bunch of buttons that all trigger the same modal with slightly different contents? Use `event.relatedTarget` and [HTML `data-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (possibly [via jQuery](https://api.jquery.com/data/)) to vary the contents of the modal depending on which button was clicked.
