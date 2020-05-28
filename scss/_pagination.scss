@@ -36,7 +36,7 @@
   &:focus {
     z-index: 3;
     outline: $pagination-focus-outline;
-    outline-offset: -#{$border-width};
+    outline-offset: 0;
     box-shadow: $pagination-focus-box-shadow;
   }
 
