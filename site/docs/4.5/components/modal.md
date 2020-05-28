@@ -643,9 +643,10 @@ Be sure to add `role="dialog"` and `aria-labelledby="..."`, referencing the moda
 
 Embedding YouTube videos in modals requires additional JavaScript not in Boosted to automatically stop playback and more. [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) for more information.
 
-## Optional sizes
+## Optional size
 
-Modals have three optional sizes, available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
+[comment]: # Boosted mod: only one size
+Modals have one optional size, available via modifier classes to be placed on a `.modal-dialog`. This size kicks in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -664,17 +665,7 @@ Modals have three optional sizes, available via modifier classes to be placed on
     <tr>
       <td>Default</td>
       <td class="text-muted">None</td>
-      <td><code>500px</code></td>
-    </tr>
-    <tr>
-      <td>Large</td>
-      <td><code>.modal-lg</code></td>
-      <td><code>800px</code></td>
-    </tr>
-    <tr>
-      <td>Extra large</td>
-      <td><code>.modal-xl</code></td>
-      <td><code>1140px</code></td>
+      <td><code>700px</code></td>
     </tr>
   </tbody>
 </table>
@@ -682,42 +673,23 @@ Modals have three optional sizes, available via modifier classes to be placed on
 Our default modal without modifier class constitutes the "medium" size modal.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalXl">Extra large modal</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLg">Large modal</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLg">Default modal</button>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalSm">Small modal</button>
 </div>
 
 {% highlight html %}
-<div class="modal-dialog modal-xl">...</div>
-<div class="modal-dialog modal-lg">...</div>
+<div class="modal-dialog">...</div>
 <div class="modal-dialog modal-sm">...</div>
 {% endhighlight %}
-
-<div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="exampleModalXlLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalXlLabel">Extra large modal</h5>
-        <!-- Boosted mod: using visually hidden text instead of aria-label -->
-        <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close big modal demo</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="modal fade" id="exampleModalLg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLgLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalLgLabel">Large modal</h5>
+        <h5 class="modal-title h4" id="exampleModalLgLabel">Default modal</h5>
         <!-- Boosted mod: using visually hidden text instead of aria-label -->
         <button type="button" class="close" data-dismiss="modal">
-          <span class="sr-only">Close large modal demo</span>
+          <span class="sr-only">Close default modal demo</span>
         </button>
       </div>
       <div class="modal-body">
@@ -743,6 +715,8 @@ Our default modal without modifier class constitutes the "medium" size modal.
     </div>
   </div>
 </div>
+
+[comment]: # end mod
 
 ## Usage
 
