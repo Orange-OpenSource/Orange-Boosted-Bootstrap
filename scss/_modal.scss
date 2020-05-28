@@ -206,7 +206,7 @@
 }
 
 // Scale up the modal
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: $modal-md;
@@ -237,13 +237,4 @@
   .modal-sm { max-width: $modal-sm; }
 }
 
-@include media-breakpoint-up(lg) {
-  .modal-lg,
-  .modal-xl {
-    max-width: $modal-lg;
-  }
-}
-
-@include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
-}
+// Boosted mod: only one size above sm
