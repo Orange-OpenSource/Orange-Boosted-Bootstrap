@@ -27,6 +27,7 @@
     &::before {
       display: inline-block; // Suppress underlining of the separator in modern browsers
       // Boosted mod
+      flex-shrink: 0;
       align-self: center;
       width: $breadcrumb-divider-width;
       height: $breadcrumb-divider-height;
