@@ -16,7 +16,6 @@ Boosted can be used for all responsive web projects for Orange group; other deve
 
 Orange Boosted ships with custom accessible components to suit specific needs:
 
-* [Orange popin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/orange-popin/)  
 * [Orange navbar]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar-orange/)  
 * [Orange Megamenu]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/orange-megamenu/)  
 * [Orange footer]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/orange-footer/)  

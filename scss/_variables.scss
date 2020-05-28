@@ -1100,9 +1100,10 @@ $badge-pill-border-radius:          $border-radius !default;
 
 // Padding applied to the modal body
 $modal-inner-padding:               map-get($spacers, 2) !default; // Boosted mod
+$modal-inner-margin:                map-get($spacers, 4) !default; // Boosted mod
 
 // Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
-$modal-footer-margin-between:       .5rem !default;
+$modal-footer-margin-between:       map-get($spacers, 2) !default;
 
 $modal-dialog-margin:               map-get($spacers, 2) !default; // Boosted mod
 $modal-dialog-margin-y-sm-up:       map-get($spacers, 4) !default; // Boosted mod
@@ -1111,8 +1112,6 @@ $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               $black !default;
 $modal-content-bg:                  $white !default;
-$modal-content-border-color:        $black !default;
-$modal-content-border-width:        $border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
 $modal-content-inner-border-radius: null !default;
 $modal-content-box-shadow-xs:       null !default;
@@ -1120,13 +1119,9 @@ $modal-content-box-shadow-sm-up:    null !default;
 
 $modal-backdrop-bg:                 $gray-900 !default;
 $modal-backdrop-opacity:            .5 !default;
-$modal-header-border-color:         $black !default;
-$modal-footer-border-color:         $modal-header-border-color !default;
-$modal-header-border-width:         $modal-content-border-width !default;
-$modal-footer-border-width:         $modal-header-border-width !default;
-$modal-header-padding-y:            map-get($spacers, 2) !default; // Boosted mod
-$modal-header-padding-x:            map-get($spacers, 2) !default; // Boosted mod
-$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+$modal-header-padding-y:            .125rem !default; // Boosted mod
+$modal-header-padding-x:            .25rem !default; // Boosted mod
+$modal-header-padding:              null !default; // Keep this for backwards compatibility
 
 $modal-xl:                          700px !default;
 $modal-lg:                          700px !default;
