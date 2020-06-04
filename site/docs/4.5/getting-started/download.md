@@ -45,7 +45,7 @@ Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached v
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-If you're using our compiled JavaScript, don't forget to include CDN versions of jQuery and Popper.js before it.
+If you're using our compiled JavaScript, don't forget to include jQuery and Popper.js, via a CDN preferably, before our JS.
 
 {% highlight html %}
 <!-- In your <head> -->
