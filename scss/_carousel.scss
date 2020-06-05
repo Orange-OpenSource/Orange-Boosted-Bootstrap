@@ -34,6 +34,11 @@
   margin-right: -100%;
   backface-visibility: hidden;
   @include transition($carousel-transition);
+
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .carousel-item.active,
