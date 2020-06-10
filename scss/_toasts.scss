@@ -32,11 +32,15 @@
 .toast-header {
   display: flex;
   align-items: center;
-  padding: $toast-padding-y $toast-padding-x;
+  padding: $toast-padding-y $toast-padding-x / 2 $toast-padding-y $toast-padding-x;
   color: $toast-header-color;
   background-color: $toast-header-background-color;
   background-clip: padding-box;
   border-bottom: $toast-border-width solid $toast-header-border-color;
+
+  .close {
+    background-size: 50%;
+  }
 
   // Boosted mod
   .bg-dark & .close {
