@@ -84,6 +84,7 @@
   @include font-size($navbar-brand-font-size);
   font-weight: $font-weight-bold; // Boosted mod
   line-height: .75; // Boosted mod
+  text-decoration: if($link-decoration == none, null, none);
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
   outline-offset: $spacer; // Boosted mod
@@ -97,7 +98,7 @@
   // end mod
 
   @include hover-focus() {
-    text-decoration: none;
+    text-decoration: if($link-hover-decoration == none, null, none); // Boosted mod
   }
 
   // Boosted mod

@@ -450,18 +450,10 @@ You may add `o-square-list` class to the root element of a list (`<ul>`) to get 
 
 ## Links
 
-By default, links are black, and not underlined
+By default, links are black and underlined.
 
 {% capture example %}
 <a href="#">This is a sample default link</a>
-{% endcapture %} {% include example.html content=example %}
-
-### Underlined
-
-A link into a `p` tag become underlined, to be clearly identified.
-
-{% capture example %}
-<p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
 {% endcapture %} {% include example.html content=example %}
 
 ### With arrow

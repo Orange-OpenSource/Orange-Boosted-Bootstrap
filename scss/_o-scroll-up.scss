@@ -12,7 +12,12 @@
   align-items: center;
   padding-left: map-get($spacers, 2);
   font-weight: $font-weight-bold;
+  text-decoration: if($link-decoration == none, null, none);
   background-color: rgba($white, .8);
+
+  &:hover {
+    text-decoration: if($link-hover-decoration == none, null, none);
+  }
 
   @each $breakpoint, $container-margin in $container-fluid-margin-widths {
     @include media-breakpoint-up($breakpoint) {

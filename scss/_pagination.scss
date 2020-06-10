@@ -28,7 +28,7 @@
   &:focus {
     z-index: 2;
     color: $pagination-hover-color;
-    text-decoration: $link-hover-decoration; // Boosted mod
+    text-decoration: if($link-hover-decoration == none, null, none); // Boosted mod
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border; // Boosted mod
   }
