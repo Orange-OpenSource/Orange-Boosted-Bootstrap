@@ -46,6 +46,7 @@
   margin: auto;
   overflow: hidden;
   color: $white;
+  text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
   outline-offset: map-get($spacers, 3);
 
@@ -60,7 +61,7 @@
   }
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: if($link-hover-decoration == underline, null, underline);
   }
 
   &:focus {
