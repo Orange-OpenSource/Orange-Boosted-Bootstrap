@@ -16,6 +16,8 @@
   @include transition($badge-transition);
 
   @at-root a#{&} {
+    text-decoration: if($link-decoration == none, null, none); // Boosted mod: links are perceivable globally
+
     @include hover-focus() {
       text-decoration: none;
     }

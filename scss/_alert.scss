@@ -16,7 +16,7 @@
   // Boosted mod
   a {
     color: inherit;
-    text-decoration: underline; // Boosted mod: links are perceivable globally
+    text-decoration: if($link-decoration == underline, null, underline); // Boosted mod: links are perceivable globally
 
     &:hover {
       color: theme-color("primary");

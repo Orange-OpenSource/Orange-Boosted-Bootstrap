@@ -17,7 +17,7 @@
   display: flex;
 
   a {
-    text-decoration: underline;
+    text-decoration: if($link-decoration == underline, null, underline); // Boosted mod: links are perceivable globally
   }
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
