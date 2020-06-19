@@ -95,9 +95,9 @@ Be sure to have your pages set up with the latest design and development standar
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange Company had buy the right for used Helvetica onto digital applications.
-      If you are not autorized to used it, don't include the orangeHelvetica.css
-      See NOTICE.txt for more informations.
+      Orange Company had bought the right for used Helvetica onto digital applications.
+      If you are not authorized to used it, don't include the orangeHelvetica.css.
+      See NOTICE.txt for more information.
     -->
     <link rel="preload" href="fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -105,7 +105,7 @@ Be sure to have your pages set up with the latest design and development standar
     <!--
       Orange Icons
       Copyright (C) 2016 - 2019 Orange SA All rights reserved
-      See NOTICE.txt for more informations.
+      See NOTICE.txt for more information.
     -->
     <link rel="stylesheet" href="css/orangeIcons.min.css" />
 
