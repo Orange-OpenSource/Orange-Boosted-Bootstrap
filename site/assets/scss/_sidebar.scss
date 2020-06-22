@@ -58,13 +58,15 @@
     + ul {
       @include font-size(.875rem);
     }
-  }
 
-  // Boosted mod
-  a ~ * a {
-    color: $gray-700;
+    // Boosted mod
+    ~ * a {
+      // stylelint-disable-next-line declaration-no-important
+      margin-left: $spacer / 2 !important;
+      color: $gray-700;
+    }
+    // End mod
   }
-  // End mod
 
   .active {
     font-weight: 700;
