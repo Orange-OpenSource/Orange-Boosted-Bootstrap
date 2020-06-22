@@ -1693,11 +1693,6 @@ main {
   opacity: 1;
 }
 
-.form-control:-ms-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-
 .form-control::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;

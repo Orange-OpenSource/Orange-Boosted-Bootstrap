@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com/)
+  * Boosted v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2015-2020 The Boosted Authors
   * Copyright 2015-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap polyfill.js v4.3.1 (https://boosted.orange.com/)
+  * Bootstrap polyfill.js v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): util/index.js
+   * Bootstrap (v5.0.0-alpha1): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -30,65 +30,18 @@
 
   var getUID = function getUID(prefix) {
     do {
-      prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+      prefix += Math.floor(Math.random() * MAX_UID);
     } while (document.getElementById(prefix));
 
     return prefix;
   };
 
   /* istanbul ignore file */
-  var _Element$prototype = Element.prototype;
-      exports.matches = _Element$prototype.matches;
-      exports.closest = _Element$prototype.closest;
   exports.find = Element.prototype.querySelectorAll;
-  exports.findOne = Element.prototype.querySelector;
-
-  exports.createCustomEvent = function createCustomEvent(eventName, params) {
-    var cEvent = new CustomEvent(eventName, params);
-    return cEvent;
-  };
-
-  if (typeof window.CustomEvent !== 'function') {
-    exports.createCustomEvent = function createCustomEvent(eventName, params) {
-      params = params || {
-        bubbles: false,
-        cancelable: false,
-        detail: null
-      };
-      var evt = document.createEvent('CustomEvent');
-      evt.initCustomEvent(eventName, params.bubbles, params.cancelable, params.detail);
-      return evt;
-    };
-  }
-
-  var workingDefaultPrevented = function () {
-    var e = document.createEvent('CustomEvent');
-    e.initEvent('Bootstrap', true, true);
-    e.preventDefault();
-    return e.defaultPrevented;
-  }();
-
-  if (!workingDefaultPrevented) {
-    var origPreventDefault = Event.prototype.preventDefault;
-
-    Event.prototype.preventDefault = function () {
-      if (!this.cancelable) {
-        return;
-      }
-
-      origPreventDefault.call(this);
-      Object.defineProperty(this, 'defaultPrevented', {
-        get: function get() {
-          return true;
-        },
-        configurable: true
-      });
-    };
-  } // MSEdge resets defaultPrevented flag upon dispatchEvent call if at least one listener is attached
-
+  exports.findOne = Element.prototype.querySelector; // MSEdge resets defaultPrevented flag upon dispatchEvent call if at least one listener is attached
 
   var defaultPreventedPreservedOnDispatch = function () {
-    var e = exports.createCustomEvent('Bootstrap', {
+    var e = new CustomEvent('Bootstrap', {
       cancelable: true
     });
     var element = document.createElement('div');
@@ -99,26 +52,6 @@
     element.dispatchEvent(e);
     return e.defaultPrevented;
   }();
-
-  if (!exports.matches) {
-    exports.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-  }
-
-  if (!exports.closest) {
-    exports.closest = function closest(selector) {
-      var element = this;
-
-      do {
-        if (exports.matches.call(element, selector)) {
-          return element;
-        }
-
-        element = element.parentElement || element.parentNode;
-      } while (element !== null && element.nodeType === 1);
-
-      return null;
-    };
-  }
 
   var scopeSelectorRegex = /:scope\b/;
 
