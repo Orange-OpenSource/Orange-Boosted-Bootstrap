@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.3.1 (https://boosted.orange.com/)
+  * Boosted v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2015-2020 The Boosted Authors
   * Copyright 2015-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap modal.js v4.3.1 (https://boosted.orange.com/)
+  * Bootstrap modal.js v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -14,79 +14,14 @@
   (global = global || self, global.Modal = factory(global.Data, global.EventHandler, global.Manipulator, global.SelectorEngine));
 }(this, (function (Data, EventHandler, Manipulator, SelectorEngine) { 'use strict';
 
-  Data = Data && Data.hasOwnProperty('default') ? Data['default'] : Data;
-  EventHandler = EventHandler && EventHandler.hasOwnProperty('default') ? EventHandler['default'] : EventHandler;
-  Manipulator = Manipulator && Manipulator.hasOwnProperty('default') ? Manipulator['default'] : Manipulator;
-  SelectorEngine = SelectorEngine && SelectorEngine.hasOwnProperty('default') ? SelectorEngine['default'] : SelectorEngine;
-
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-  }
-
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-      }
-    }
-
-    return target;
-  }
+  Data = Data && Object.prototype.hasOwnProperty.call(Data, 'default') ? Data['default'] : Data;
+  EventHandler = EventHandler && Object.prototype.hasOwnProperty.call(EventHandler, 'default') ? EventHandler['default'] : EventHandler;
+  Manipulator = Manipulator && Object.prototype.hasOwnProperty.call(Manipulator, 'default') ? Manipulator['default'] : Manipulator;
+  SelectorEngine = SelectorEngine && Object.prototype.hasOwnProperty.call(SelectorEngine, 'default') ? SelectorEngine['default'] : SelectorEngine;
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): util/index.js
+   * Bootstrap (v5.0.0-alpha1): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -94,6 +29,10 @@
   var TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   var toType = function toType(obj) {
+    if (obj === null || obj === undefined) {
+      return "" + obj;
+    }
+
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
   };
 
@@ -137,9 +76,7 @@
   };
 
   var triggerTransitionEnd = function triggerTransitionEnd(element) {
-    var evt = document.createEvent('HTMLEvents');
-    evt.initEvent(TRANSITION_END, true, true);
-    element.dispatchEvent(evt);
+    element.dispatchEvent(new Event(TRANSITION_END));
   };
 
   var isElement = function isElement(obj) {
@@ -176,14 +113,6 @@
     });
   };
 
-  var makeArray = function makeArray(nodeList) {
-    if (!nodeList) {
-      return [];
-    }
-
-    return [].slice.call(nodeList);
-  };
-
   var isVisible = function isVisible(element) {
     if (!element) {
       return false;
@@ -213,6 +142,15 @@
     return null;
   };
 
+  function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -220,12 +158,11 @@
    */
 
   var NAME = 'modal';
-  var VERSION = '4.3.1';
+  var VERSION = '5.0.0-alpha1';
   var DATA_KEY = 'bs.modal';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
-
+  var ESCAPE_KEY = 'Escape';
   var Default = {
     backdrop: true,
     keyboard: true,
@@ -238,50 +175,41 @@
     focus: 'boolean',
     show: 'boolean'
   };
-  var Event = {
-    HIDE: "hide" + EVENT_KEY,
-    HIDE_PREVENTED: "hidePrevented" + EVENT_KEY,
-    HIDDEN: "hidden" + EVENT_KEY,
-    SHOW: "show" + EVENT_KEY,
-    SHOWN: "shown" + EVENT_KEY,
-    FOCUSIN: "focusin" + EVENT_KEY,
-    RESIZE: "resize" + EVENT_KEY,
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY,
-    KEYDOWN_DISMISS: "keydown.dismiss" + EVENT_KEY,
-    MOUSEUP_DISMISS: "mouseup.dismiss" + EVENT_KEY,
-    MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY,
-    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-  };
-  var ClassName = {
-    SCROLLABLE: 'modal-dialog-scrollable',
-    SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-    BACKDROP: 'modal-backdrop',
-    OPEN: 'modal-open',
-    FADE: 'fade',
-    SHOW: 'show',
-    STATIC: 'modal-static'
-  };
-  var Selector = {
-    DIALOG: '.modal-dialog',
-    MODAL_BODY: '.modal-body',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
-    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-    STICKY_CONTENT: '.sticky-top'
-  };
+  var EVENT_HIDE = "hide" + EVENT_KEY;
+  var EVENT_HIDE_PREVENTED = "hidePrevented" + EVENT_KEY;
+  var EVENT_HIDDEN = "hidden" + EVENT_KEY;
+  var EVENT_SHOW = "show" + EVENT_KEY;
+  var EVENT_SHOWN = "shown" + EVENT_KEY;
+  var EVENT_FOCUSIN = "focusin" + EVENT_KEY;
+  var EVENT_RESIZE = "resize" + EVENT_KEY;
+  var EVENT_CLICK_DISMISS = "click.dismiss" + EVENT_KEY;
+  var EVENT_KEYDOWN_DISMISS = "keydown.dismiss" + EVENT_KEY;
+  var EVENT_MOUSEUP_DISMISS = "mouseup.dismiss" + EVENT_KEY;
+  var EVENT_MOUSEDOWN_DISMISS = "mousedown.dismiss" + EVENT_KEY;
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
+  var CLASS_NAME_BACKDROP = 'modal-backdrop';
+  var CLASS_NAME_OPEN = 'modal-open';
+  var CLASS_NAME_FADE = 'fade';
+  var CLASS_NAME_SHOW = 'show';
+  var CLASS_NAME_STATIC = 'modal-static';
+  var SELECTOR_DIALOG = '.modal-dialog';
+  var SELECTOR_MODAL_BODY = '.modal-body';
+  var SELECTOR_DATA_TOGGLE = '[data-toggle="modal"]';
+  var SELECTOR_DATA_DISMISS = '[data-dismiss="modal"]';
+  var SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
+  var SELECTOR_STICKY_CONTENT = '.sticky-top';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Modal =
-  /*#__PURE__*/
-  function () {
+  var Modal = /*#__PURE__*/function () {
     function Modal(element, config) {
       this._config = this._getConfig(config);
       this._element = element;
-      this._dialog = SelectorEngine.findOne(Selector.DIALOG, element);
+      this._dialog = SelectorEngine.findOne(SELECTOR_DIALOG, element);
       this._backdrop = null;
       this._isShown = false;
       this._isBodyOverflowing = false;
@@ -306,11 +234,11 @@
         return;
       }
 
-      if (this._element.classList.contains(ClassName.FADE)) {
+      if (this._element.classList.contains(CLASS_NAME_FADE)) {
         this._isTransitioning = true;
       }
 
-      var showEvent = EventHandler.trigger(this._element, Event.SHOW, {
+      var showEvent = EventHandler.trigger(this._element, EVENT_SHOW, {
         relatedTarget: relatedTarget
       });
 
@@ -330,11 +258,11 @@
 
       this._setResizeEvent();
 
-      EventHandler.on(this._element, Event.CLICK_DISMISS, Selector.DATA_DISMISS, function (event) {
+      EventHandler.on(this._element, EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, function (event) {
         return _this.hide(event);
       });
-      EventHandler.on(this._dialog, Event.MOUSEDOWN_DISMISS, function () {
-        EventHandler.one(_this._element, Event.MOUSEUP_DISMISS, function (event) {
+      EventHandler.on(this._dialog, EVENT_MOUSEDOWN_DISMISS, function () {
+        EventHandler.one(_this._element, EVENT_MOUSEUP_DISMISS, function (event) {
           if (event.target === _this._element) {
             _this._ignoreBackdropClick = true;
           }
@@ -357,7 +285,7 @@
         return;
       }
 
-      var hideEvent = EventHandler.trigger(this._element, Event.HIDE);
+      var hideEvent = EventHandler.trigger(this._element, EVENT_HIDE);
 
       if (hideEvent.defaultPrevented) {
         return;
@@ -365,7 +293,7 @@
 
       this._isShown = false;
 
-      var transition = this._element.classList.contains(ClassName.FADE);
+      var transition = this._element.classList.contains(CLASS_NAME_FADE);
 
       if (transition) {
         this._isTransitioning = true;
@@ -375,12 +303,12 @@
 
       this._setResizeEvent();
 
-      EventHandler.off(document, Event.FOCUSIN);
+      EventHandler.off(document, EVENT_FOCUSIN);
 
-      this._element.classList.remove(ClassName.SHOW);
+      this._element.classList.remove(CLASS_NAME_SHOW);
 
-      EventHandler.off(this._element, Event.CLICK_DISMISS);
-      EventHandler.off(this._dialog, Event.MOUSEDOWN_DISMISS);
+      EventHandler.off(this._element, EVENT_CLICK_DISMISS);
+      EventHandler.off(this._dialog, EVENT_MOUSEDOWN_DISMISS);
 
       if (transition) {
         var transitionDuration = getTransitionDurationFromElement(this._element);
@@ -398,12 +326,12 @@
         return EventHandler.off(htmlElement, EVENT_KEY);
       });
       /**
-       * `document` has 2 events `Event.FOCUSIN` and `Event.CLICK_DATA_API`
+       * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
        * Do not move `document` in `htmlElements` array
-       * It will remove `Event.CLICK_DATA_API` event that should remain
+       * It will remove `EVENT_CLICK_DATA_API` event that should remain
        */
 
-      EventHandler.off(document, Event.FOCUSIN);
+      EventHandler.off(document, EVENT_FOCUSIN);
       Data.removeData(this._element, DATA_KEY);
       this._config = null;
       this._element = null;
@@ -422,7 +350,7 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default, {}, config);
+      config = _objectSpread(_objectSpread({}, Default), config);
       typeCheckConfig(NAME, config, DefaultType);
       return config;
     };
@@ -430,9 +358,9 @@
     _proto._showElement = function _showElement(relatedTarget) {
       var _this3 = this;
 
-      var transition = this._element.classList.contains(ClassName.FADE);
+      var transition = this._element.classList.contains(CLASS_NAME_FADE);
 
-      var modalBody = SelectorEngine.findOne(Selector.MODAL_BODY, this._dialog);
+      var modalBody = SelectorEngine.findOne(SELECTOR_MODAL_BODY, this._dialog);
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
@@ -445,17 +373,19 @@
 
       this._element.setAttribute('aria-modal', true);
 
-      if (this._dialog.classList.contains(ClassName.SCROLLABLE) && modalBody) {
+      this._element.setAttribute('role', 'dialog');
+
+      this._element.scrollTop = 0;
+
+      if (modalBody) {
         modalBody.scrollTop = 0;
-      } else {
-        this._element.scrollTop = 0;
       }
 
       if (transition) {
         reflow(this._element);
       }
 
-      this._element.classList.add(ClassName.SHOW);
+      this._element.classList.add(CLASS_NAME_SHOW);
 
       if (this._config.focus) {
         this._enforceFocus();
@@ -467,7 +397,7 @@
         }
 
         _this3._isTransitioning = false;
-        EventHandler.trigger(_this3._element, Event.SHOWN, {
+        EventHandler.trigger(_this3._element, EVENT_SHOWN, {
           relatedTarget: relatedTarget
         });
       };
@@ -484,9 +414,9 @@
     _proto._enforceFocus = function _enforceFocus() {
       var _this4 = this;
 
-      EventHandler.off(document, Event.FOCUSIN); // guard against infinite focus loop
+      EventHandler.off(document, EVENT_FOCUSIN); // guard against infinite focus loop
 
-      EventHandler.on(document, Event.FOCUSIN, function (event) {
+      EventHandler.on(document, EVENT_FOCUSIN, function (event) {
         if (document !== event.target && _this4._element !== event.target && !_this4._element.contains(event.target)) {
           _this4._element.focus();
         }
@@ -497,17 +427,17 @@
       var _this5 = this;
 
       if (this._isShown) {
-        EventHandler.on(this._element, Event.KEYDOWN_DISMISS, function (event) {
-          if (_this5._config.keyboard && event.which === ESCAPE_KEYCODE) {
+        EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, function (event) {
+          if (_this5._config.keyboard && event.key === ESCAPE_KEY) {
             event.preventDefault();
 
             _this5.hide();
-          } else if (!_this5._config.keyboard && event.which === ESCAPE_KEYCODE) {
+          } else if (!_this5._config.keyboard && event.key === ESCAPE_KEY) {
             _this5._triggerBackdropTransition();
           }
         });
       } else {
-        EventHandler.off(this._element, Event.KEYDOWN_DISMISS);
+        EventHandler.off(this._element, EVENT_KEYDOWN_DISMISS);
       }
     };
 
@@ -515,11 +445,11 @@
       var _this6 = this;
 
       if (this._isShown) {
-        EventHandler.on(window, Event.RESIZE, function () {
+        EventHandler.on(window, EVENT_RESIZE, function () {
           return _this6._adjustDialog();
         });
       } else {
-        EventHandler.off(window, Event.RESIZE);
+        EventHandler.off(window, EVENT_RESIZE);
       }
     };
 
@@ -532,16 +462,18 @@
 
       this._element.removeAttribute('aria-modal');
 
+      this._element.removeAttribute('role');
+
       this._isTransitioning = false;
 
       this._showBackdrop(function () {
-        document.body.classList.remove(ClassName.OPEN);
+        document.body.classList.remove(CLASS_NAME_OPEN);
 
         _this7._resetAdjustments();
 
         _this7._resetScrollbar();
 
-        EventHandler.trigger(_this7._element, Event.HIDDEN);
+        EventHandler.trigger(_this7._element, EVENT_HIDDEN);
       });
     };
 
@@ -554,18 +486,18 @@
     _proto._showBackdrop = function _showBackdrop(callback) {
       var _this8 = this;
 
-      var animate = this._element.classList.contains(ClassName.FADE) ? ClassName.FADE : '';
+      var animate = this._element.classList.contains(CLASS_NAME_FADE) ? CLASS_NAME_FADE : '';
 
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
-        this._backdrop.className = ClassName.BACKDROP;
+        this._backdrop.className = CLASS_NAME_BACKDROP;
 
         if (animate) {
           this._backdrop.classList.add(animate);
         }
 
         document.body.appendChild(this._backdrop);
-        EventHandler.on(this._element, Event.CLICK_DISMISS, function (event) {
+        EventHandler.on(this._element, EVENT_CLICK_DISMISS, function (event) {
           if (_this8._ignoreBackdropClick) {
             _this8._ignoreBackdropClick = false;
             return;
@@ -582,7 +514,7 @@
           reflow(this._backdrop);
         }
 
-        this._backdrop.classList.add(ClassName.SHOW);
+        this._backdrop.classList.add(CLASS_NAME_SHOW);
 
         if (!animate) {
           callback();
@@ -593,7 +525,7 @@
         EventHandler.one(this._backdrop, TRANSITION_END, callback);
         emulateTransitionEnd(this._backdrop, backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
-        this._backdrop.classList.remove(ClassName.SHOW);
+        this._backdrop.classList.remove(CLASS_NAME_SHOW);
 
         var callbackRemove = function callbackRemove() {
           _this8._removeBackdrop();
@@ -601,7 +533,7 @@
           callback();
         };
 
-        if (this._element.classList.contains(ClassName.FADE)) {
+        if (this._element.classList.contains(CLASS_NAME_FADE)) {
           var _backdropTransitionDuration = getTransitionDurationFromElement(this._backdrop);
 
           EventHandler.one(this._backdrop, TRANSITION_END, callbackRemove);
@@ -618,17 +550,17 @@
       var _this9 = this;
 
       if (this._config.backdrop === 'static') {
-        var hideEvent = EventHandler.trigger(this._element, Event.HIDE_PREVENTED);
+        var hideEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
 
         if (hideEvent.defaultPrevented) {
           return;
         }
 
-        this._element.classList.add(ClassName.STATIC);
+        this._element.classList.add(CLASS_NAME_STATIC);
 
         var modalTransitionDuration = getTransitionDurationFromElement(this._element);
         EventHandler.one(this._element, TRANSITION_END, function () {
-          _this9._element.classList.remove(ClassName.STATIC);
+          _this9._element.classList.remove(CLASS_NAME_STATIC);
         });
         emulateTransitionEnd(this._element, modalTransitionDuration);
 
@@ -660,7 +592,7 @@
 
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+      this._isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth;
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 
@@ -671,14 +603,14 @@
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
         // Adjust fixed content padding
-        makeArray(SelectorEngine.find(Selector.FIXED_CONTENT)).forEach(function (element) {
+        SelectorEngine.find(SELECTOR_FIXED_CONTENT).forEach(function (element) {
           var actualPadding = element.style.paddingRight;
           var calculatedPadding = window.getComputedStyle(element)['padding-right'];
           Manipulator.setDataAttribute(element, 'padding-right', actualPadding);
           element.style.paddingRight = parseFloat(calculatedPadding) + _this10._scrollbarWidth + "px";
         }); // Adjust sticky content margin
 
-        makeArray(SelectorEngine.find(Selector.STICKY_CONTENT)).forEach(function (element) {
+        SelectorEngine.find(SELECTOR_STICKY_CONTENT).forEach(function (element) {
           var actualMargin = element.style.marginRight;
           var calculatedMargin = window.getComputedStyle(element)['margin-right'];
           Manipulator.setDataAttribute(element, 'margin-right', actualMargin);
@@ -691,12 +623,12 @@
         document.body.style.paddingRight = parseFloat(calculatedPadding) + this._scrollbarWidth + "px";
       }
 
-      document.body.classList.add(ClassName.OPEN);
+      document.body.classList.add(CLASS_NAME_OPEN);
     };
 
     _proto._resetScrollbar = function _resetScrollbar() {
       // Restore fixed content padding
-      makeArray(SelectorEngine.find(Selector.FIXED_CONTENT)).forEach(function (element) {
+      SelectorEngine.find(SELECTOR_FIXED_CONTENT).forEach(function (element) {
         var padding = Manipulator.getDataAttribute(element, 'padding-right');
 
         if (typeof padding !== 'undefined') {
@@ -705,7 +637,7 @@
         }
       }); // Restore sticky content and navbar-toggler margin
 
-      makeArray(SelectorEngine.find("" + Selector.STICKY_CONTENT)).forEach(function (element) {
+      SelectorEngine.find("" + SELECTOR_STICKY_CONTENT).forEach(function (element) {
         var margin = Manipulator.getDataAttribute(element, 'margin-right');
 
         if (typeof margin !== 'undefined') {
@@ -727,7 +659,7 @@
     _proto._getScrollbarWidth = function _getScrollbarWidth() {
       // thx d.walsh
       var scrollDiv = document.createElement('div');
-      scrollDiv.className = ClassName.SCROLLBAR_MEASURER;
+      scrollDiv.className = CLASS_NAME_SCROLLBAR_MEASURER;
       document.body.appendChild(scrollDiv);
       var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
@@ -739,7 +671,7 @@
       return this.each(function () {
         var data = Data.getData(this, DATA_KEY);
 
-        var _config = _objectSpread2({}, Default, {}, Manipulator.getDataAttributes(this), {}, typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread(_objectSpread(_objectSpread({}, Default), Manipulator.getDataAttributes(this)), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
@@ -782,7 +714,7 @@
    */
 
 
-  EventHandler.on(document, Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     var _this11 = this;
 
     var target = getElementFromSelector(this);
@@ -791,13 +723,13 @@
       event.preventDefault();
     }
 
-    EventHandler.one(target, Event.SHOW, function (showEvent) {
+    EventHandler.one(target, EVENT_SHOW, function (showEvent) {
       if (showEvent.defaultPrevented) {
         // only register focus restorer if modal will actually get shown
         return;
       }
 
-      EventHandler.one(target, Event.HIDDEN, function () {
+      EventHandler.one(target, EVENT_HIDDEN, function () {
         if (isVisible(_this11)) {
           _this11.focus();
         }
@@ -806,7 +738,7 @@
     var data = Data.getData(target, DATA_KEY);
 
     if (!data) {
-      var config = _objectSpread2({}, Manipulator.getDataAttributes(target), {}, Manipulator.getDataAttributes(this));
+      var config = _objectSpread(_objectSpread({}, Manipulator.getDataAttributes(target)), Manipulator.getDataAttributes(this));
 
       data = new Modal(target, config);
     }
