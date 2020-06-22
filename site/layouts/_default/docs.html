@@ -48,5 +48,9 @@
 
     {{ partial "footer" . }}
     {{ partial "scripts" . }}
+
+    {{ range .Page.Params.extra_js -}}
+      <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
+    {{- end -}}
   </body>
 </html>
