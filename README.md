@@ -49,7 +49,7 @@ Read the [Getting started page](https://boosted.orange.com/docs/4.5/getting-star
 
 ## Status
 
-[![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/Tests/badge.svg?branch=v5-dev)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3ATests+branch%3Av5-dev)
+[![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/JS%20Tests/badge.svg?branch=v5-dev)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av5-dev)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
 [![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)

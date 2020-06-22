@@ -421,8 +421,10 @@ $embed-responsive-aspect-ratios: (
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      HelvNeueOrange, Helvetica Neue, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
-$font-family-base:            var(--bs-font-sans-serif) !default;
 // stylelint-enable value-keyword-case
+$font-family-base:            var(--bs-font-sans-serif) !default;
+$font-family-code:            var(--bs-font-monospace) !default;
+
 
 // Boosted mod
 //// Type scale & vertical rhythm completely revamped to match Orange Web Guidelines
