@@ -79,6 +79,7 @@ social_logo_path:   /docs/4.5/assets/brand/orange-logo.png
 
 # Custom variables
 current_version:      4.5.0
+bootstrap_current_version:      v4.5.0
 current_ruby_version: 4.5.0
 docs_version:         4.5
 github_org:           "https://github.com/Orange-OpenSource"
