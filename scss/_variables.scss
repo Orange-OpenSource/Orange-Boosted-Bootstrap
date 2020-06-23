@@ -534,7 +534,13 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 
 // Boosted mod: icon + social buttons
 $btn-icon-size:             $spacer * 2 !default;
+$btn-icon-size-sm:          map-get($spacers, 4) !default;
+$btn-icon-size-lg:          3.125rem !default;
+$btn-icon-padding-sm:       .375rem !default;
+$btn-icon-padding-lg:       .6875rem !default;
 $btn-social-bg-size:        $spacer !default;
+// End mod
+
 
 // Forms
 
