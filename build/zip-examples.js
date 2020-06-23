@@ -16,7 +16,7 @@ const {
   version, version_short: versionShort
 } = require('../package.json')
 
-const folderName = `bootstrap-${version}-examples`
+const folderName = `boosted-${version}-examples`
 
 sh.config.fatal = true
 
@@ -38,7 +38,7 @@ sh.cp('-Rf', `_gh_pages/docs/${versionShort}/dist/`, `${folderName}/assets/`)
 // also copy the two brand images we use in the examples
 sh.cp('-f', [
   `_gh_pages/docs/${versionShort}/assets/brand/bootstrap-outline.svg`,
-  `_gh_pages/docs/${versionShort}/assets/brand/bootstrap-solid.svg`
+  `_gh_pages/docs/${versionShort}/assets/brand/orange_logo.svg`
 ], `${folderName}/assets/brand/`)
 sh.rm(`${folderName}/index.html`)
 
