@@ -1181,8 +1181,8 @@ $list-group-border-color:           $black !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         map-get($spacers, 2) !default; // Boosted mod
-$list-group-item-padding-x:         map-get($spacers, 2) !default; // Boosted mod
+$list-group-item-padding-y:         .875rem !default; // Boosted mod
+$list-group-item-padding-x:         $spacer !default; // Boosted mod
 
 $list-group-hover-bg:               $gray-200 !default;
 $list-group-active-color:           $component-active-color !default;
