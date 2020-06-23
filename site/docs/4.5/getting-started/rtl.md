@@ -11,9 +11,13 @@ Every release of Boosted ships with a dedicated right-to-left (RTL) version.
 ## Usage
 
 To get a RTL version of a boosted webpage you only need to replace the regular `boosted.css` file with the RTL counterpart `boosted-rtl.css`.
-Also please ensure to add attribute `dir="rtl"` to your `<html>` tag.
+Please ensure to add `dir="rtl"` attribute to your `<html>` tag.
 
-## Start template
+### Helvetica Neue
+
+Boosted RTL uses the Arabic version of Helvetica Neue in lieu of the PanEuropean Helvetica Neue. It also covers the Basic Latin alphabet. 
+
+## Starter template
 
 {% highlight html %}
 <!doctype html>
@@ -36,8 +40,8 @@ Also please ensure to add attribute `dir="rtl"` to your `<html>` tag.
       If you are not authorized to used it, don't include the orangeHelvetica.css.
       See NOTICE.txt for more information.
     -->
-    <link rel="preload" href="fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/HelveticaNeueW20-55Roman.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/HelveticaNeueW20-75Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/orangeHelvetica.min.css" />
     <!--
       Orange Icons
