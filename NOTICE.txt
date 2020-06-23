@@ -13,14 +13,22 @@
 Orange has purchased the right to use Helvetica in its websites and mobile applications.
 Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc
 Parts list under Monotype Imaging Inc Copyright
+fonts/HelvNeue55_W1G.woff
 fonts/HelvNeue55_W1G.woff2
 fonts/HelvNeue75_W1G.woff
-fonts/HelvNeue55_W1G.woff
 fonts/HelvNeue75_W1G.woff2
+fonts/HelveticaNeueW20-55Roman.woff
+fonts/HelveticaNeueW20-55Roman.woff2
+fonts/HelveticaNeueW20-75Bold.woff
+fonts/HelveticaNeueW20-75Bold.woff2
+dist/fonts/HelvNeue55_W1G.woff
 dist/fonts/HelvNeue55_W1G.woff2
 dist/fonts/HelvNeue75_W1G.woff
-dist/fonts/HelvNeue55_W1G.woff
 dist/fonts/HelvNeue75_W1G.woff2
+dist/fonts/HelveticaNeueW20-55Roman.woff
+dist/fonts/HelveticaNeueW20-55Roman.woff2
+dist/fonts/HelveticaNeueW20-75Bold.woff
+dist/fonts/HelveticaNeueW20-75Bold.woff2
 End of the parts list under Monotype Imaging Inc Copyright
 
 
