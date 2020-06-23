@@ -32,7 +32,7 @@ Also please ensure to add attribute `dir="rtl"` to your `<html>` tag.
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange Company had bought the right for used Helvetica onto digital applications.
+      Orange has purchased the right to use Helvetica in its websites and mobile applications.
       If you are not authorized to used it, don't include the orangeHelvetica.css.
       See NOTICE.txt for more information.
     -->
