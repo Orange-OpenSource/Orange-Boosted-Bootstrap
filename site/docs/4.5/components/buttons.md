@@ -134,6 +134,36 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 {% endcapture %}
 {% include example.html content=example %}
 
+{% capture example %}
+<button type="button" class="btn btn-secondary btn-icon btn-sm">
+  <span class="sr-only">Icon</span>
+  <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-secondary btn-icon">
+  <span class="sr-only">Icon</span>
+  <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-secondary btn-icon btn-lg">
+  <span class="sr-only">Icon</span>
+  <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<div class="bg-dark p-3 mt-3">
+  <button type="button" class="btn btn-secondary btn-icon btn-inverse btn-sm">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+  <button type="button" class="btn btn-secondary btn-icon btn-inverse">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+  <button type="button" class="btn btn-secondary btn-icon btn-inverse btn-lg">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 [comment]: # Boosted mod: no btn-block
 
 ## Active state

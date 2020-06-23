@@ -6,6 +6,7 @@
 
 .btn {
   display: inline-flex; // Boosted mod
+  align-items: center; // Boosted mod
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   color: $body-color;
@@ -55,7 +56,6 @@
     [class*="svg-"],
     [class*="icon-"] {
       margin-right: $border-width * 3;
-      transform: translateY($border-width / 2);
     }
   }
 
@@ -238,7 +238,17 @@ fieldset:disabled a.btn {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
   // Boosted mod
   &.btn-icon {
-    padding: $btn-padding-y-lg;
+    min-width: $btn-icon-size-lg;
+    padding: $btn-icon-padding-lg;
+  }
+
+  [class*="icon-"]::before {
+    font-size: $h3-font-size;
+  }
+
+  &:not(.btn-icon) [class*="icon-"] {
+    margin-top: $border-width * -1;
+    margin-bottom: $border-width * -1;
   }
   // end mod
 }
@@ -247,7 +257,12 @@ fieldset:disabled a.btn {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   // Boosted mod
   &.btn-icon {
-    padding: $btn-padding-y-sm;
+    min-width: $btn-icon-size-sm;
+    padding: $btn-icon-padding-sm;
+  }
+
+  [class*="icon-"]::before {
+    font-size: $font-size-sm;
   }
   // end mod
 }
