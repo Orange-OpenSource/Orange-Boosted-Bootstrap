@@ -4,16 +4,17 @@
 
 @if $enable-grid-classes {
   // Single container class with breakpoint max-widths
-  .container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
-
+  .container,
   // 100% wide container at all breakpoints
   .container-fluid {
     @include make-container();
-    @include make-container-fluid-widths(); // Boosted mod : container-fluid aren't full width in Boosted
   }
+
+  // Boosted mod : container-fluid aren't full width in Boosted
+  .container-fluid {
+    @include make-container-fluid-widths();
+  }
+  // End mod
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {

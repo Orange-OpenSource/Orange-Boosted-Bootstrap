@@ -45,10 +45,6 @@ body {
   transition: all .1s ease-in-out;
 }
 
-.form-label-group input::-webkit-input-placeholder {
-  color: transparent;
-}
-
 .form-label-group input:-ms-input-placeholder {
   color: transparent;
 }
@@ -65,9 +61,33 @@ body {
   color: transparent;
 }
 
+.form-label-group input:not(:-ms-input-placeholder) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:-moz-placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+}
+
 .form-label-group input:not(:placeholder-shown) {
   padding-top: 1.25rem;
   padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:-ms-input-placeholder) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
+}
+
+.form-label-group input:not(:-moz-placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
 }
 
 .form-label-group input:not(:placeholder-shown) ~ label {
@@ -84,17 +104,6 @@ body {
     display: none;
   }
   .form-label-group input::-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-/* Fallback for IE
--------------------------------------------------- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .form-label-group > label {
-    display: none;
-  }
-  .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
 }
