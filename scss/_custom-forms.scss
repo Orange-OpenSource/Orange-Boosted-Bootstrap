@@ -76,15 +76,15 @@
 
       &::before {
         // Boosted mod: our custom control have a border
-        background-color: $custom-control-indicator-disabled-bg;
         border-color: $custom-control-indicator-disabled-checked-bg;
+        @include gradient-bg($custom-control-indicator-disabled-bg);
         // end mod
       }
     }
     // Boosted mod: disable bg only for checked elements
     &:checked ~ .custom-control-label {
       &::before {
-        background-color: $custom-control-indicator-disabled-checked-bg;
+        @include gradient-bg($custom-control-indicator-disabled-checked-bg);
       }
     }
   }
@@ -177,15 +177,6 @@
   }
 
   // Boosted mod disable state manage globally
-  // .custom-control-input:disabled {
-  //  &:checked ~ .custom-control-label::before {
-  //    background-color: $custom-control-indicator-checked-disabled-bg;
-  //  }
-  //  &:indeterminate ~ .custom-control-label::before {
-  //    background-color: $custom-control-indicator-checked-disabled-bg;
-  //  }
-  //}
-  // end mod
 }
 
 // Radios
@@ -219,12 +210,6 @@
   //end mod
 
   // Boosted mod disable state manage globally
-  // .custom-control-input:disabled {
-  //   &:checked ~ .custom-control-label::before {
-  //     background-color: $custom-control-indicator-checked-disabled-bg;
-  //   }
-  // }
-  // end mod
 }
 
 
@@ -306,7 +291,7 @@
   .custom-control-input:disabled {
     ~ .custom-control-label::before,
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-disabled-checked-bg; // Boosted mod
+      @include gradient-bg($custom-control-indicator-disabled-checked-bg); // Boosted mod
     }
   }
 }
