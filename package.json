@@ -66,7 +66,7 @@
     "js-test-integration": "rollup --config js/tests/integration/rollup.bundle.js",
     "js-test-cloud": "cross-env BROWSER=true npm run js-test-karma",
     "lint": "npm-run-all --parallel js-lint css-lint lockfile-lint",
-    "docs": "npm-run-all css-docs js-docs docs-build docs-lint",
+    "docs": "npm-run-all img fonts css-docs js-docs docs-build docs-lint",
     "docs-build": "bundle exec jekyll build && npm run docs-rtl",
     "docs-compile": "npm run docs-build",
     "docs-production": "cross-env JEKYLL_ENV=production npm run docs-build",
