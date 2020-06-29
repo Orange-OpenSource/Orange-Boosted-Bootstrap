@@ -1213,8 +1213,8 @@ $list-group-border-color:           $black !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         $spacer / 2 !default;
-$list-group-item-padding-x:         $spacer / 2 !default;
+$list-group-item-padding-y:         .875rem !default;
+$list-group-item-padding-x:         $spacer !default;
 
 $list-group-active-color:           $white !default;
 $list-group-active-bg:              $black !default;

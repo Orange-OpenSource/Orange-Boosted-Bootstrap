@@ -10,7 +10,7 @@
 </license>
 <copyright><![CDATA[Copyright © 2014 Monotype Imaging Inc. All rights reserved.]]></copyright>
 <trademark><![CDATA[Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S. Patent and Trademark Office and may be registered in certain other jurisdictions.]]></trademark>
-Orange Company had buy the right for used Helvetica onto digital applications.
+Orange has purchased the right to use Helvetica in its websites and mobile applications.
 Don't use and distribute Helvetica font family if you're not explicitly authorized by Monotype Imaging Inc
 Parts list under Monotype Imaging Inc Copyright
 fonts/HelvNeue55_W1G.woff2
