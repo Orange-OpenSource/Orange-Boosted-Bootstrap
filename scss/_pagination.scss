@@ -108,7 +108,8 @@
     }
 
     &.has-label {
-      padding: $pagination-padding-y $pagination-padding-end;
+      padding-right: $pagination-padding-end;
+      padding-left: $pagination-padding-end;
     }
   }
 
