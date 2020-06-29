@@ -2,6 +2,7 @@
 /_gh_pages/
 /site/docs/**/dist/
 /site/static/**/dist/
+/site/.jekyll-cache
 
 # Ignore ruby/bundler files
 /.bundle/
