@@ -28,8 +28,8 @@
     border-color: $hover-border;
   }
 
-  &:focus,
-  &.focus {
+  .btn-check:focus + &,
+  &:focus {
     color: $hover-color;
     @include gradient-bg($hover-background);
     border-color: $hover-border;
@@ -37,6 +37,8 @@
     // Boosted mod: buttons share the same `box-shadow` on `:focus`
   }
 
+  .btn-check:checked + &,
+  .btn-check:active + &,
   &:active,
   &.active,
   .show > &.dropdown-toggle {

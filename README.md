@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://boosted.orange.com/">
-    <img src="https://boosted.orange.com/docs/4.5/assets/brand/orange_logo.svg" alt="Boosted" width="50" height="50">
+    <img src="https://v5-dev--boosted.netlify.app/docs/5.0/assets/brand/orange_logo.svg" alt="Boosted" width="50" height="50">
   </a>
 </p>
 
@@ -9,13 +9,18 @@
 <p align="center">
   Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://boosted.orange.com/docs/4.5/"><strong>Visit Boosted</strong></a>
+  <a href="https://v5-dev--boosted.netlify.app/docs/5.0/"><strong>Visit Boosted</strong></a>
   <br>
   <br>
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=bug.md">Report bug</a>
   ·
   <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/new?template=feature.md&labels=feature">Request feature</a>
 </p>
+
+
+## Bootstrap 4
+
+Our default branch is for development of our upcoming Bootstrap 5 release. Head to the [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Bootstrap 4.
 
 
 ## Table of contents
@@ -40,21 +45,21 @@ Several quick start options are available:
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@next`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@next`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:4.5.0`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
-Read the [Getting started page](https://boosted.orange.com/docs/4.5/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://v5-dev--boosted.netlify.app/docs/5.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 
 ## Status
 
 [![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/JS%20Tests/badge.svg?branch=v5-dev)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av5-dev)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
-[![npm version](https://img.shields.io/npm/v/boosted.svg)](https://www.npmjs.com/package/boosted)
+[![npm version](https://img.shields.io/npm/v/boosted)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)
-[![NuGet](https://img.shields.io/nuget/vpre/boosted.svg)](https://www.nuget.org/packages/boosted/absoluteLatest)
-[![peerDependencies Status](https://img.shields.io/david/peer/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=dev)
+[![NuGet](https://img.shields.io/nuget/vpre/boosted)](https://www.nuget.org/packages/boosted/absoluteLatest)
+[![peerDependencies Status](https://img.shields.io/david/peer/Orange-OpenSource/Orange-Boosted-Bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=peer)
+[![devDependency Status](https://img.shields.io/david/dev/Orange-OpenSource/Orange-Boosted-Bootstrap)](https://david-dm.org/Orange-OpenSource/Orange-Boosted-Bootstrap?type=dev)
 [![CSS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/master/dist/css/boosted.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v5-dev/dist/css/boosted.min.css)
 [![JS gzip size](https://img.badgesize.io/Orange-OpenSource/Orange-Boosted-Bootstrap/master/dist/js/boosted.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v5-dev/dist/js/boosted.min.js)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)](https://automate.browserstack.com/public-build/eTYyVGI5REFJZmt4M1hTWjFZOEoxVnR0RElhRm1iTk02ckJUWUpYeGFhQT0tLVRhK0F5L29MNU8wWERHa1pRK2hlaXc9PQ==--a5ee40063cbc3aae870f80421b1f9997b9e2f314%)
@@ -184,7 +189,7 @@ Thanks to [Netlify](https://www.netlify.com/), we are able to deploy pre-release
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2020 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Code and documentation copyright 2011-2020 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
 Boosted code and documentation copyright 2015-2020 the [Boosted Authors](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors) and [Orange SA.](https://orange.com) Code released under the [MIT License](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/docs/LICENSE).
 

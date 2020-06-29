@@ -2,8 +2,7 @@
   // The position and z-index are needed for the dropdown to stay on top of the content
   position: relative;
   z-index: $zindex-sticky;
-  background-color: rgba($white, .75);
-  backdrop-filter: blur(1rem);
+  background-color: rgba($white, .95);
   border-bottom: $border-width solid $gray-300; // Boosted mod
 
   [aria-current] { // Boosted mod
@@ -20,7 +19,7 @@
 }
 
 .bd-search {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     width: 100%;
   }
 }

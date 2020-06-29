@@ -59,7 +59,7 @@ Pull in Boosted's **source files** into nearly any project with some of the most
 Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
 
 {{< highlight sh >}}
-npm install boosted
+npm install boosted@next
 {{< /highlight >}}
 
 `const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted's plugins onto a `boosted` object.
@@ -75,7 +75,7 @@ Boosted's `package.json` contains some additional metadata under the following k
 Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
 
 {{< highlight sh >}}
-yarn add boosted
+yarn add boosted@next
 {{< /highlight >}}
 
 ### Composer

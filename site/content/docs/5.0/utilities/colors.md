@@ -10,6 +10,16 @@ toc: true
 
 When using `.text-*` and `.bg-*` utilities, **contrasts are locked to ensure they meet [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)**, by defining `color` and `background-color` altogether. Please refer to [accessibility’s "Color contrast" section]({{< docsref "/getting-started/accessibility" >}}#color-contrast) to have a full preview of Boosted color palette’s reached WCAG level.
 
+{{< callout info >}}
+### Dealing with specificity
+
+Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
+{{< /callout >}}
+
+{{< callout info >}}
+{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
+
 ## Color
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
@@ -41,13 +51,3 @@ Similar to the contextual text color classes, easily set the background of an el
 {{< /example >}}
 
 <!-- Boosted mod: no background gradient -->
-
-{{< callout info >}}
-#### Dealing with specificity
-
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
-{{< /callout >}}
-
-{{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{< /callout >}}
