@@ -5,8 +5,9 @@
     </div>
     <h2 class="display-4">Installation</h2>
     <p class="lead lead-lg mw-md-75 mx-auto">
-      Include Boosted’s source Sass and JavaScript files via npm, Composer, or Meteor. Package managed installs don’t include documentation, but do include our build system and readme.
+      Include Boosted’s source Sass and JavaScript files via npm, Composer, or Meteor.
     </p>
+    <p>Package managed installs don’t include documentation or our full build scripts. You can also <a href="https://github.com/twbs/bootstrap-npm-starter">use our npm template repo</a> to quickly generate a Bootstrap project via npm.</p>
     <a class="btn btn-lg btn-success mb-4" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Read installation docs</a>
     <div class="text-left mx-md-5 px-md-5">
       {{ highlight "npm install boosted" "sh" "" }}
@@ -25,12 +26,12 @@
     </p>
     <a class="btn btn-lg btn-danger mb-4" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">Explore the docs</a>
     <div class="text-left mx-md-5 px-md-5">
-      <h3 class="h5">CSS only</h3>
-      {{ highlight (printf (`<link rel="stylesheet" href="%s" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
-      <h3 class="h5">JS and Popper.js</h3>
-      {{ highlight (printf (`<script src="%s" integrity=%q crossorigin="anonymous"></script>
-  <script src="%s" integrity=%q crossorigin="anonymous"></script>
-  `) .Site.Params.cdn.popper (.Site.Params.cdn.popper_hash | safeHTMLAttr) .Site.Params.cdn.js (.Site.Params.cdn.js_hash | safeHTMLAttr)) "html" "" }}
+      {{ highlight (printf (`<!-- CSS only -->
+<link rel="stylesheet" href="%s" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
+      {{ highlight (printf (`<!-- JavaScript and dependencies -->
+<script src="%s" integrity=%q crossorigin="anonymous"></script>
+<script src="%s" integrity=%q crossorigin="anonymous"></script>
+      `) .Site.Params.cdn.popper (.Site.Params.cdn.popper_hash | safeHTMLAttr) .Site.Params.cdn.js (.Site.Params.cdn.js_hash | safeHTMLAttr)) "html" "" }}
     </div>
   </div>
 </div>

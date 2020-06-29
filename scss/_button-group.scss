@@ -10,15 +10,17 @@
   > .btn {
     position: relative;
     flex: 1 1 auto;
+  }
 
-    // Bring the hover, focused, and "active" buttons to the front to overlay
-    // the borders properly
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      z-index: 1;
-    }
+  // Bring the hover, focused, and "active" buttons to the front to overlay
+  // the borders properly
+  > .btn-check:checked + .btn,
+  > .btn-check:focus + .btn,
+  > .btn:hover,
+  > .btn:focus,
+  > .btn:active,
+  > .btn.active {
+    z-index: 1;
   }
 }
 
@@ -46,7 +48,12 @@
     @include border-right-radius(null); // Boosted mod: no rounded corners to reset
   }
 
-  > .btn:not(:first-child),
+  // The left radius should be 0 if the button is:
+  // - the "third or more" child
+  // - the second child and the previous element isn't `.btn-check` (making it the first child visually)
+  // - part of a btn-group which isn't the first child
+  > .btn:nth-child(n + 3),
+  > :not(.btn-check) + .btn,
   > .btn-group:not(:first-child) > .btn {
     @include border-left-radius(null); // Boosted mod: no rounded corners to reset
   }
@@ -172,75 +179,4 @@
   > .btn-group:not(:first-child) > .btn {
     @include border-top-radius(null); // Boosted mod: no rounded corners to reset
   }
-}
-
-
-// Checkbox and radio options
-//
-// In order to support the browser's form validation feedback, powered by the
-// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
-// `display: none;` or `visibility: hidden;` as that also hides the popover.
-// Simply visually hiding the inputs via `opacity` would leave them clickable in
-// certain cases which is prevented by using `clip` and `pointer-events`.
-// This way, we ensure a DOM element is visible to position the popover from.
-//
-// See https://github.com/twbs/bootstrap/pull/12794 and
-// https://github.com/twbs/bootstrap/pull/14559 for more information.
-
-.btn-group-toggle {
-  > .btn,
-  > .btn-group > .btn {
-    border-color: $gray-500; // Boosted mod
-
-    // Boosted mod: hover = focus, active ≠ .active, focus ≠ focus-visible
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $primary;
-      background-color: transparent;
-      border-color: $gray-500;
-    }
-
-    // stylelint-disable selector-max-class, declaration-no-important
-    &:active,
-    &.active.focus {
-      color: $white;
-      background-color: $primary;
-      border-color: $primary;
-      outline: $btn-border-width solid $primary !important;
-    }
-
-    &.active {
-      color: $white;
-      background-color: $black;
-      border-color: $black;
-      outline-color: $black !important;
-    }
-    // stylelint-enable selector-max-class, declaration-no-important
-    // End mod
-
-    input[type="radio"],
-    input[type="checkbox"] {
-      position: absolute;
-      clip: rect(0, 0, 0, 0);
-      pointer-events: none;
-    }
-  }
-
-  // Boosted mod: no border inside of .btn-group-toggle
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    border-right: 0;
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
-    border-left: 0;
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
-    margin-left: 0;
-  }
-  // End mod
 }

@@ -2,7 +2,6 @@ name: CSS (Dart Sass)
 on:
   push:
     paths:
-      - 'js/**'
       - 'scss/**'
     branches:
       - v5-dev
@@ -13,7 +12,7 @@ on:
       - v5-dev
 env:
   CI: true
-  NODE: 10.x
+  NODE: 12.x
 
 jobs:
   css:
@@ -28,18 +27,8 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - run: node --version
-      - run: npm --version
-
-      - name: Set up npm cache
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/dart-sass.yml') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/dart-sass.yml') }}
-
       - name: Build CSS with Dart Sass
         run: |
-          npx --ignore-existing sass --style expanded --source-map --embed-sources --no-error-css scss/:dist-sass/css/
+          npx --package sass@latest sass --version
+          npx --package sass@latest sass --style expanded --source-map --embed-sources --no-error-css scss/:dist-sass/css/
           ls -Al dist-sass/css

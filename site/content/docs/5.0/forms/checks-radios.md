@@ -1,8 +1,9 @@
 ---
 layout: docs
-title: Checks
+title: Checks and radios
 description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
 group: forms
+aliases: "/docs/5.0/forms/checks/"
 toc: true
 ---
 
@@ -195,3 +196,40 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
   <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
 {{< /example >}}
+
+<!-- Boosted mod: dont' promote "without label" -->
+
+## Toggle buttons
+
+### Checkbox toggle buttons
+
+Boosted's `.btn` styles can be applied to `<label>`s, to provide checkbox style button toggling. Add an input with a `.btn-check` class as previous sibling to toggle the input state.
+
+{{< example >}}
+<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+<label class="btn btn-primary" for="btn-check">Single toggle</label>
+{{< /example >}}
+
+{{< example >}}
+<input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+<label class="btn btn-primary" for="btn-check-2">Checked</label>
+{{< /example >}}
+
+### Radio toggle buttons
+
+Toggle buttons can be grouped in a [button group]({{< docsref "/components/button-group" >}}) if needed.
+
+{{< example >}}
+<div class="btn-group">
+  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+  <label class="btn btn-secondary" for="option1">Checked</label>
+
+  <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+  <label class="btn btn-secondary" for="option2">Radio</label>
+
+  <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+  <label class="btn btn-secondary" for="option3">Radio</label>
+</div>
+{{< /example >}}
+
+<!-- Boosted mod: no .btn-outline-* -->
