@@ -73,3 +73,11 @@
     color: $black;
   }
 }
+
+// Boosted mod
+.bd-guidelines {
+  @include media-breakpoint-up(md) {
+    top: subtract($offset-top, 2rem);
+  }
+}
+// End mod
