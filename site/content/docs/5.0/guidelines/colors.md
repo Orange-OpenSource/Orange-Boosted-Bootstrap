@@ -1,7 +1,7 @@
 ---
 layout: guidelines
 title: Colors
-description: This design kit contains the essential UI elements for designing, prototyping and building Orange products and services on the web.
+description: Orange is a black, white and orange brand. In digital, orange is used as a highlight or focus color. Core colors should always dominate.
 group: guidelines
 subgroup: Core elements
 toc: true

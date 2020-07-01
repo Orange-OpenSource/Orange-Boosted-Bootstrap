@@ -50,6 +50,13 @@
       white-space: nowrap;
     }
   }
+
+  // Boosted mod
+  > .table-typography .bs-text-standard {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+  // End mod
 }
 
 .bd-title {
