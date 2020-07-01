@@ -510,7 +510,7 @@ $blockquote-letter-spacing:   $letter-spacing-base * .25 !default; // Boosted mo
 $hr-margin-y:                 $spacer !default;
 $hr-color:                    inherit !default;
 $hr-height:                   $border-width !default;
-$hr-opacity:                  .25 !default;
+$hr-opacity:                  null !default;
 
 $legend-margin-bottom:        $spacer / 4 !default;
 $legend-font-size:            $font-size-xlg !default;

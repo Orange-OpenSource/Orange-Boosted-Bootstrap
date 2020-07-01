@@ -72,7 +72,7 @@ $utilities: map-merge(
         (
           "white": $white,
           "light": $gray-500,
-          "gray": $gray-700
+          "dark": $gray-700
         )
       )
     ),
@@ -386,7 +386,7 @@ $utilities: map-merge(
       class: text,
       values: (
         "primary": $primary,
-        "light": $light,
+        "light": $gray-500,
         "white": $white,
         "body": $body-color,
         "muted": $gray-700,
