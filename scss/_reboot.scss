@@ -364,6 +364,7 @@ pre {
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
   @include font-size($code-font-size);
+  line-height: $pre-line-height; // Boosted mod
   color: $pre-color;
   -ms-overflow-style: scrollbar; // 4
 

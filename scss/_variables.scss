@@ -419,7 +419,7 @@ $embed-responsive-aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      HelvNeueOrange, Helvetica Neue, Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
+$font-family-sans-serif:      HelvNeueOrange, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--bs-font-sans-serif) !default;
@@ -443,7 +443,7 @@ $font-weight-bold:            700 !default;
 $font-weight-base:            $font-weight-normal !default;
 
 // stylelint-disable function-blacklist
-$line-height-base:            1.25 !default;
+$line-height-base:            calc(18 / 16) !default;
 $line-height-sm:              calc(16 / 14) !default;
 $line-height-lg:              calc(30 / 16) !default;
 // stylelint-enable function-blacklist
@@ -457,7 +457,8 @@ $h5-font-size:                $font-size-lg !default;             // 18px
 $h6-font-size:                $font-size-base !default;           // 16px
 $h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
 $h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
-$h3-spacing:                  $letter-spacing-base * 6 !default;  // -0.6px
+$mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
+$h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
 $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
@@ -467,7 +468,7 @@ $h2-line-height:              calc(32 / 30) !default;
 $h3-line-height:              calc(26 / 24) !default;
 $h4-line-height:              calc(22 / 20) !default;
 $h5-line-height:              calc(20 / 18) !default;
-$h6-line-height:              calc(18 / 16) !default;
+$h6-line-height:              $line-height-base !default;
 // stylelint-enable function-blacklist
 
 $headings-margin-bottom:      $spacer !default;
@@ -482,9 +483,9 @@ $display1-size:               $font-size-xlg * 3 !default;        // 60px
 $display2-size:               $font-size-xlg * 2.5 !default;      // 50px
 $display3-size:               $font-size-xlg * 2 !default;        // 40px
 $display4-size:               $h1-font-size !default;             // 34px
-$display1-spacing:            $letter-spacing-base * 24 !default; // -2.4px
+$display1-spacing:            $letter-spacing-base * 20 !default; // -2px
 $display2-spacing:            $letter-spacing-base * 16 !default; // -1.6px
-$display3-spacing:            $letter-spacing-base * 12 !default; // -1.2px
+$display3-spacing:            $h1-spacing !default;               // -1px
 $display4-spacing:            $h1-spacing !default;               // -1px
 $display-line-height:         $h1-line-height !default;
 // scss-docs-end display-headings
@@ -492,9 +493,9 @@ $display-line-height:         $h1-line-height !default;
 $lead-font-size:              $font-size-xlg !default;
 $lead-font-weight:            400 !default;
 $lead-line-height:            1.5 !default;
-$lead-letter-spacing:         $letter-spacing-base * .25 !default;
+$lead-letter-spacing:         $letter-spacing-base * 2.5 !default;
 
-$small-font-size:             .875em !default;
+$small-font-size:             .875rem !default;
 
 $sub-sup-font-size:           .75em !default;
 
@@ -533,12 +534,13 @@ $mark-bg:                     $primary !default;
 
 // stylelint-disable function-blacklist
 // scss-docs-start table-variables
-$table-cell-padding-y:      add(.5rem, 1px) !default;
+$table-cell-padding-y:      .875rem !default;
 $table-cell-padding-x:      $spacer / 2 !default;
-$table-cell-line-height:    $line-height-lg !default; // Boosted mod
-$table-cell-line-height-sm: calc(20 / 16) !default;  // Boosted mod
+$table-cell-padding-y-sm:   .5625rem !default;
+$table-cell-padding-x-sm:   $table-cell-padding-x !default;
 
 $table-cell-vertical-align:   top !default;
+$table-line-height:           1.25 !default; // Boosted mod
 
 $table-color:                 $body-color !default;
 $table-bg:                    $body-bg !default;
@@ -576,7 +578,7 @@ $input-btn-padding-y:         .5rem !default;
 $input-btn-padding-x:         1.125rem !default;
 $input-btn-font-family:       inherit !default;
 $input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       $line-height-base !default;
+$input-btn-line-height:       1.25 !default;
 
 $input-btn-focus-width:         .125rem !default;
 $input-btn-focus-box-shadow:    null !default;
@@ -698,7 +700,7 @@ $input-transition:                      border-color $transition-duration $trans
 
 
 $form-check-input-width:                  1.25em !default;
-$form-check-min-height:                   $font-size-base * $line-height-base !default;
+$form-check-min-height:                   $font-size-base * $input-btn-line-height !default;
 $form-check-padding-left:                 $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-color:                  null !default;
@@ -1328,6 +1330,7 @@ $kbd-color:                         $black !default;
 $kbd-bg:                            $gray-300 !default;
 
 $pre-color:                         $gray-900 !default;
+$pre-line-height:                   1.25 !default;
 
 //
 // Boosted mod
