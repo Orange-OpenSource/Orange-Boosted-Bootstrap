@@ -13,21 +13,6 @@
     - name: Orange 2
       class: orange
       hex: "#f16e00"
-- category: Functionnal colors
-  name: "Functionnal colors"
-  colors:
-    - name: Green
-      class: green
-      hex: "#32c832"
-    - name: Blue
-      class: blue
-      hex: "#527edb"
-    - name: Yellow
-      class: yellow
-      hex: "#fc0"
-    - name: Red
-      class: red
-      hex: "#cd3c14"
 - category: Supporting colors
   name: "Supporting colors"
   colors:
@@ -46,15 +31,30 @@
     - name: Pink
       class: pink
       hex: "#ffb4e6"
-- category: Grays
-  name: "Grays"
+- category: OBS Grey
+  name: "OBS Grey"
   colors:
-    - name: 100
-      class: 100
-      hex: "#fafafa"
-    - name: 200
-      class: 200
-      hex: "#f6f6f6"
+    - name: 800
+      class: 800
+      hex: "#595959"
+- category: Functionnal colors
+  name: "Functionnal colors"
+  colors:
+    - name: Green
+      class: green
+      hex: "#32c832"
+    - name: Blue
+      class: blue
+      hex: "#527edb"
+    - name: Yellow
+      class: yellow
+      hex: "#fc0"
+    - name: Red
+      class: red
+      hex: "#cd3c14"
+- category: Greys
+  name: "Greys"
+  colors:
     - name: 300
       class: 300
       hex: "#eee"
@@ -70,9 +70,6 @@
     - name: 700
       class: 700
       hex: "#666"
-    - name: 800
-      class: 800
-      hex: "#595959"
     - name: 900
       class: 900
       hex: "#333"
