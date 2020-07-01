@@ -28,8 +28,8 @@
   // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y $table-cell-padding-x $table-cell-padding-x;
-    line-height: $table-cell-line-height; // Boosted mod
+    padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px); // Boosted mod
+    line-height: $table-line-height; // Boosted mod
     background-color: var(--bs-table-bg);
     background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
   }
@@ -70,7 +70,7 @@
 .table-sm {
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    line-height: $table-cell-line-height-sm; // Boosted mod
+    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm add($table-cell-padding-y-sm, 1px); // Boosted mod
   }
 }
 
