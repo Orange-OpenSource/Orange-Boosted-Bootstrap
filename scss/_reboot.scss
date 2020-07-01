@@ -96,7 +96,7 @@ body {
 hr {
   margin: $hr-margin-y 0;
   color: $hr-color; // 1
-  background-color: currentColor;
+  background-color: currentColor !important; // Boosted mod: ensure .text-* utilities can't override this
   border: 0;
   opacity: $hr-opacity;
 }
