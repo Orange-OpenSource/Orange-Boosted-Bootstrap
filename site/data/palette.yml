@@ -41,16 +41,16 @@
   name: "Functionnal colors"
   colors:
     - name: Green
-      class: green
+      class: success
       hex: "#32c832"
     - name: Blue
-      class: blue
+      class: info
       hex: "#527edb"
     - name: Yellow
-      class: yellow
+      class: warning
       hex: "#fc0"
     - name: Red
-      class: red
+      class: danger
       hex: "#cd3c14"
 - category: Greys
   name: "Greys"

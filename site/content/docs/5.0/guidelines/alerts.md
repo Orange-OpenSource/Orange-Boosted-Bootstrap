@@ -6,3 +6,19 @@ group: guidelines
 subgroup: Components
 toc: true
 ---
+
+## Success
+
+{{< alert success >}}
+
+## Information
+
+{{< alert info >}}
+
+## Warning
+
+{{< alert warning >}}
+
+## Error
+
+{{< alert danger >}}
