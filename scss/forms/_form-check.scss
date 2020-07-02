@@ -194,4 +194,69 @@
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
+
+  // Boosted mod: custom styles for .btn-check
+  // @note almost the same structure than the button-variant() mixin
+  // @note meant to override whatever .btn-* variant is used
+  + .btn {
+    color: $black;
+    @include gradient-bg($white);
+    border-color: $gray-500;
+    @include box-shadow($btn-box-shadow);
+
+    &:not(:first-of-type) {
+      border-left: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-right: 0;
+    }
+  }
+
+  &:hover + .btn,
+  + .btn:hover {
+    color: $primary;
+    background-color: $white;
+    border-color: $gray-500;
+  }
+
+  .btn-group & + .btn:hover {
+    z-index: 0;
+  }
+
+  &[data-focus-visible-added] + .btn {
+    outline: $outline-width solid;
+    outline-offset: $outline-width;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  &:checked + .btn {
+    color: $white;
+    background-color: $black;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $black;
+    outline-color: $black;
+  }
+
+  &:active + .btn,
+  + .btn:active,
+  + .btn.active {
+    color: $white;
+    background-color: $primary;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $primary;
+    outline-color: $primary;
+  }
+
+  &:disabled + .btn,
+  &.disabled + .btn {
+    color: $gray-500;
+    background-color: $white;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $gray-500;
+  }
+  // End mod
 }
