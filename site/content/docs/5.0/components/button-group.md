@@ -36,15 +36,7 @@ These classes can also be added to groups of links, as an alternative to the [`.
 </div>
 {{< /example >}}
 
-## Outlined styles
-
-{{< example >}}
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-secondary">Left</button>
-  <button type="button" class="btn btn-outline-secondary">Middle</button>
-  <button type="button" class="btn btn-outline-secondary">Right</button>
-</div>
-{{< /example >}}
+<!-- Boosted mod: no outline styles -->
 
 ## Button toolbar
 
