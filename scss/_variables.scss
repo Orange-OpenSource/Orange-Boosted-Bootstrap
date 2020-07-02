@@ -350,13 +350,14 @@ $container-max-widths: (
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           $spacer !default;
+$grid-gutter-breakpoint:      "md" !default; // Boosted mod: gutter depends on breakpoint
 $grid-row-columns:            6 !default;
 
 $gutters: $spacers !default;
 
 // Container padding
 
-$container-padding-x: 1rem !default;
+$container-padding-x: $grid-gutter-width / 2 !default;
 
 
 // Components

@@ -1,9 +1,16 @@
 // Container mixins
 
 @mixin make-container($padding-x: $container-padding-x) {
+  --o-padding-x: #{$padding-x / 2}; // Boosted mod: gutter depends on breakpoint
   width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
+  padding-right: var(--o-padding-x); // Boosted mod: gutter depends on breakpoint
+  padding-left: var(--o-padding-x); // Boosted mod: gutter depends on breakpoint
   margin-right: auto;
   margin-left: auto;
+
+  // Boosted mod: gutter depends on breakpoint
+  @include media-breakpoint-up($grid-gutter-breakpoint) {
+    --o-padding-x: $padding-x;
+  }
+  // End mod
 }
