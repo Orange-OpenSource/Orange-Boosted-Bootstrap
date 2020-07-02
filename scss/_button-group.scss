@@ -102,8 +102,18 @@
       );
   }
 
-  .btn:active + & {
+  .btn:active + &,
+  .btn.active + & {
     border-color: $primary;
+  }
+
+  .btn:disabled + &,
+  .btn.disabled + & {
+    border-color: $gray-500;
+
+    &::before {
+      color: $gray-500;
+    }
   }
 
   .btn-group.show > &:not(:focus):not(:active)::before {
