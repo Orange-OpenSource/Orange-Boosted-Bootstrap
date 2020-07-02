@@ -26,7 +26,7 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  .btn-check:focus + &,
+  // Boosted mod: custom styles for .btn-check
   &:focus {
     // Boosted mod
     outline-offset: $btn-border-width;
@@ -37,8 +37,7 @@
     // End mod
   }
 
-  .btn-check:checked + &,
-  .btn-check:active + &,
+  // Boosted mod: custom styles for .btn-check
   &:active,
   &.active {
     @include box-shadow($btn-active-box-shadow);
