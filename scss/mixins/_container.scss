@@ -10,7 +10,7 @@
 
   // Boosted mod: gutter depends on breakpoint
   @include media-breakpoint-up($grid-gutter-breakpoint) {
-    --o-padding-x: $padding-x;
+    --o-padding-x: #{$padding-x};
   }
   // End mod
 }
