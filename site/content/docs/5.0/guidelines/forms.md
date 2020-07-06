@@ -32,7 +32,7 @@ toc: true
 
 ## Text field standard
 
-<div class="row gy-3">
+<div class="row gy-3" id="web-for-tf1-001">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">Default</h3>
   </div>
@@ -83,7 +83,7 @@ toc: true
 
 ## Text field multiline
 
-<div class="row gy-3">
+<div class="row gy-3" id="web-for-tf1-002">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">Default</h3>
   </div>
@@ -97,7 +97,7 @@ toc: true
 
 ## Select
 
-<div class="row gy-3">
+<div class="row gy-3" id="web-for-ddl-001">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">With label</h3>
   </div>
@@ -130,20 +130,25 @@ toc: true
 
 ## Date
 
-Incoming in [issue #223](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/223).
+{{< callout info >}}
+This feature will be delivered with [#223]({{< param repo >}}/issues/223).
+{{< /callout >}}
 
 ## Time
 
-Incoming in [issue #223](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/223).
+{{< callout info >}}
+This feature will be delivered with [#223]({{< param repo >}}/issues/223).
+{{< /callout >}}
 
 ## Quantity selector
 
-Incoming in [issue #113](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/113).
-
+{{< callout info >}}
+This feature will be delivered with [#113]({{< param repo >}}/issues/113).
+{{< /callout >}}
 
 ## Checkbox
 
-<div class="form-check mb-2">
+<div class="form-check mb-2" id="web-for-cbx-001">
   <input class="form-check-input" type="checkbox" value="1" id="form-checkbox">
   <label class="form-check-label" for="form-checkbox">Unchecked</label>
 </div>
@@ -162,7 +167,7 @@ Incoming in [issue #113](https://github.com/Orange-OpenSource/Orange-Boosted-Boo
 
 ## Radio button
 
-<div class="form-check mb-2">
+<div class="form-check mb-2" id="web-for-rbt-001">
   <input class="form-check-input" type="radio" name="demo" value="1" id="form-radio">
   <label class="form-check-label" for="form-radio">Unchecked</label>
 </div>
@@ -182,7 +187,7 @@ Incoming in [issue #113](https://github.com/Orange-OpenSource/Orange-Boosted-Boo
 
 ## Toggle switch
 
-<div class="form-check form-switch mb-3">
+<div class="form-check form-switch mb-3" id="web-for-tsw-001">
   <input class="form-check-input" type="checkbox" id="form-switch">
   <label class="form-check-label" for="form-switch">Default switch checkbox input</label>
 </div>
@@ -201,7 +206,7 @@ Incoming in [issue #113](https://github.com/Orange-OpenSource/Orange-Boosted-Boo
 
 ## Tooltip
 
-<div class="row row-cols-12 row-cols-md-2 row-cols-lg-4 gy-3 pt-3 tooltip-demo">
+<div class="row row-cols-12 row-cols-md-2 row-cols-lg-4 gy-3 pt-3 tooltip-demo" id="web-for-ttp-001">
   <div class="col mt-0">
     <h3 class="h6 d-inline-block align-middle m-0">Tooltip on top</h3>
     <button type="button" class="btn btn-link p-0" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.">
@@ -238,7 +243,7 @@ Incoming in [issue #113](https://github.com/Orange-OpenSource/Orange-Boosted-Boo
 
 ## Slider
 
-<div class="mb-3">
+<div class="mb-3" id="web-for-sld-001">
   <label for="form-slider" class="form-label">Slider</label>
   <input type="range" class="form-range" min="0" max="5" step="0.5" id="form-slider">
 </div>
@@ -249,17 +254,25 @@ Incoming in [issue #113](https://github.com/Orange-OpenSource/Orange-Boosted-Boo
 
 <h3 class="h6">Slider with value</h3>
 
-Incoming in [issue #116](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/116).
+{{< callout info >}}
+This feature will be delivered with [#116]({{< param repo >}}/issues/116).
+{{< /callout >}}
 
 <h3 class="h6">Slider with units</h3>
 
-Incoming in [issue #116](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/116).
+{{< callout info >}}
+This feature will be delivered with [#116]({{< param repo >}}/issues/116).
+{{< /callout >}}
 
 <h3 class="h6">Range slider with values</h3>
 
-Incoming in [issue #116](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/116).
+{{< callout info >}}
+This feature will be delivered with [#116]({{< param repo >}}/issues/116).
+{{< /callout >}}
 
 <h3 class="h6">Range slider with units</h3>
 
-Incoming in [issue #116](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/116).
+{{< callout info >}}
+This feature will be delivered with [#116]({{< param repo >}}/issues/116).
+{{< /callout >}}
 
