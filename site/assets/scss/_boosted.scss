@@ -37,4 +37,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+#orange-logo ~ .row .embed-responsive-item .figure-caption {
+  bottom: -#{$spacer};
+}
+
+#orange-business-services-logo ~ .row .embed-responsive-item img {
+  margin-bottom: .25rem;
+}
 // End mod

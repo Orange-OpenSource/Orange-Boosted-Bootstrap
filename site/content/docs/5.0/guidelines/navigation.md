@@ -14,19 +14,21 @@ toc: true
     <h3 class="h6">Default</h3>
   </div>
   <div class="col-4">
-    <a href="#links" class="font-weight-bold">Text link</a>
+    <a href="#links" class="font-weight-bold" id="web-nav-lnk-003">Text link</a>
   </div>
-  <div class="col-4">
-    <h4 class="h6 m-0">With chevrons</h4>
+  <div class="col-6">
+    <h4 class="h6 m-0" id="web-nav-lnk-005">With chevrons</h4>
 
-  Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
+  {{< callout info >}}
+  This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+  {{< /callout >}}
   </div>
 </div>
 
 ## Tabs
 
 <div class="mb-5">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" id="web-nav-tab-001">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#tabs">Label</a>
     </li>
@@ -45,7 +47,7 @@ toc: true
 ## Tabs light
 
 <div class="mb-5">
-  <ul class="nav nav-tabs nav-tabs-light">
+  <ul class="nav nav-tabs nav-tabs-light" id="web-nav-tab-002">
     <li class="nav-item">
       <a class="nav-link active" href="#tabs-light" aria-current="page">Label</a>
     </li>
@@ -63,7 +65,7 @@ toc: true
 
 ## Pagination
 
-<nav aria-label="Page navigation example">
+<nav aria-label="Page navigation example" id="web-nav-pag-001">
   <ul class="pagination">
     <li class="page-item disabled"><a class="page-link" href="#pagination" tabindex="-1" aria-disabled="true" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#pagination">1</a></li>
@@ -83,7 +85,7 @@ toc: true
 ## Accordion
 
 <div class="row gy-3 row-cols-1 row-cols-lg-3">
-  <div class="col">
+  <div class="col" id="web-nav-acc-001">
     <h3 class="h6">Small</h3>
     <div class="accordion" id="accordionExample-3">
       <div class="card">
@@ -124,7 +126,7 @@ toc: true
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col" id="web-nav-acc-002">
     <h3 class="h6">Medium</h3>
     <div class="accordion" id="accordionExample">
       <div class="card">
@@ -165,7 +167,7 @@ toc: true
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col" id="web-nav-acc-003">
     <h3 class="h6">Large</h3>
     <div class="accordion" id="accordionExample-4">
       <div class="card">
@@ -210,4 +212,6 @@ toc: true
 
 ## Stepped process
 
-Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
+{{< callout info >}}
+This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+{{< /callout >}}

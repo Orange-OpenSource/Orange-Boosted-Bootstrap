@@ -24,28 +24,29 @@ toc: true
   </div>
 </div>
 
+
 ## Styles
 
 <div class="row row-cols-3 row-cols-lg-6 gy-3 mt-4">
-  <div class="col-12 col-lg-3">
+  <div class="col-12 col-lg-2">
     <h3 class="h6">Default</h3>
   </div>
   <div class="col">
-    <button type="button" class="btn btn-secondary">Button</button>
+    <button type="button" class="btn btn-secondary" id="web-btn-sol-001">Button</button>
   </div>
   <div class="col">
-    <button type="button" class="btn btn-info">Button</button>
+    <button type="button" class="btn btn-info" id="web-btn-sfl-001">Button</button>
   </div>
   <div class="col">
-    <button type="button" class="btn btn-primary">Button</button>
+    <button type="button" class="btn btn-primary" id="web-btn-imp-001">Button</button>
   </div>
   <div class="col">
-    <button type="button" class="btn btn-success">Button</button>
+    <button type="button" class="btn btn-success" id="web-btn-pos-001">Button</button>
   </div>
   <div class="col">
-    <button type="button" class="btn btn-danger">Button</button>
+    <button type="button" class="btn btn-danger" id="web-btn-neg-001">Button</button>
   </div>
-  <div class="col-12 col-lg-3">
+  <div class="col-12 col-lg-2">
     <h3 class="h6">Pressed</h3>
   </div>
   <div class="col">
@@ -63,7 +64,7 @@ toc: true
   <div class="col">
     <button type="button" class="btn btn-danger active">Button</button>
   </div>
-  <div class="col-12 col-lg-3">
+  <div class="col-12 col-lg-2">
     <h3 class="h6">Disabled</h3>
   </div>
   <div class="col">
@@ -85,7 +86,9 @@ toc: true
 
 ## Icon buttons
 
-Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
+{{< callout info >}}
+This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+{{< /callout >}}
 
 ## Toggle Buttons
 
@@ -94,7 +97,7 @@ Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-B
     <h3 class="h6">Selected</h3>
   </div>
   <div class="col-12 col-lg-4">
-    <div class="btn-group">
+    <div class="btn-group" id="web-btn-tog-001">
       <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
       <label class="btn" for="option1">Day</label>
       <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
@@ -105,13 +108,16 @@ Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-B
   </div>
   <div class="col-12 col-lg-3">
     <h4 class="h6 m-0">With icons</h4>
-
-  Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
   </div>
   <div class="col-12 col-lg-3">
     <h4 class="h6 m-0">With icons, borderless</h4>
+  </div>
+  <div class="col-12 col-lg-6 offset-lg-6 my-0">
+    <div class="bd-callout bd-callout-info my-0">
 
-  Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
+  This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+
+  </div>
   </div>
   <div class="col-12 col-lg-2">
     <h3 class="h6">Disabled</h3>
@@ -128,13 +134,16 @@ Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-B
   </div>
   <div class="col-12 col-lg-3">
     <h4 class="h6 m-0">With icons</h4>
-
-  Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
   </div>
   <div class="col-12 col-lg-3">
     <h4 class="h6 m-0">With icons, borderless</h4>
+  </div>
+  <div class="col-12 col-lg-6 offset-lg-6 my-0">
+    <div class="bd-callout bd-callout-info my-0">
 
-  Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/182).
+  This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+
+  </div>
   </div>
 </div>
 
@@ -145,7 +154,7 @@ Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-B
     <h3 class="h6">Default</h3>
   </div>
   <div class="col-9">
-    <div class="btn-group">
+    <div class="btn-group" id="web-btn-spt-001">
       <button type="button" class="btn btn-secondary">Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
         <span class="sr-only">Toggle Dropdown</span>
@@ -200,34 +209,38 @@ Incoming with [issue #182](https://github.com/Orange-OpenSource/Orange-Boosted-B
 ## Pagination
 
 <div class="row row-cols-1 row-cols-lg-2">
-<div class="col">
+  <div class="col">
 
   ### With labels
 
-  <nav aria-label="Page navigation example">
+  <nav aria-label="Page navigation example" id="web-btn-pag-001">
     <ul class="pagination">
       <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li>
       <li class="page-item"><a class="page-link has-label" href="#">Next</a></li>
     </ul>
   </nav>
-</div>
-<div class="col">
+  </div>
+  <div class="col">
 
   ### With icons
 
-  <nav aria-label="Page navigation example with icons">
+  <nav aria-label="Page navigation example with icons" id="web-btn-pag-002">
     <ul class="pagination">
       <li class="page-item"><a class="page-link" href="#" aria-label="Previous"></a></li>
       <li class="page-item"><a class="page-link" href="#" aria-label="Next"></a></li>
     </ul>
   </nav>
-</div>
+  </div>
 </div>
 
 ## Back top top
 
-Incoming with [issue #290](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/290).
+{{< callout info >}}
+This feature will be delivered with [#290]({{< param repo >}}/issues/290).
+{{< /callout >}}
 
 ## Social buttons
 
-Incoming with [issue #290](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/290).
+{{< callout info >}}
+This feature will be delivered with [#290]({{< param repo >}}/issues/290).
+{{< /callout >}}
