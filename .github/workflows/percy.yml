@@ -51,7 +51,7 @@ jobs:
         uses: percy/snapshot-action@v0.1.0
         with:
           build-directory: "_gh_pages/"
-          flags: "--snapshot-files ./*.html"
+          flags: "--snapshot-files ./docs/5.0/guidelines/**/*.html"
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
