@@ -12,6 +12,10 @@
   & + & {
     background-color: tint-color($indigo, 10);
   }
+
+  & + & + & {
+    background-color: tint-color($yellow, 10);
+  }
 }
 
 .home-icon {
