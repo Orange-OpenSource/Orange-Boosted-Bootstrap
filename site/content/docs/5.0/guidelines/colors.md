@@ -7,6 +7,8 @@ subgroup: Core elements
 toc: true
 ---
 
+Color palette is used throughout Boosted in multiple ways, either in components or as [utilities for both `background-color` and `color`]({{< docsref "/utilities/colors" >}}).
+
 ## Core colors
 
 {{< palette.inline >}}
@@ -21,6 +23,8 @@ toc: true
         <strong>{{ $color.name }}</strong>
         <br/>
         <code>{{ $color.hex }}</code>
+        <hr class="my-2 bg-transparent border-top {{ if eq $color.class "secondary" "primary" }}border-{{ $color.class }}"{{ else }}" style="border-color:{{ $color.hex }} !important"{{ end }}/>
+        <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
   {{ end -}}
@@ -42,6 +46,8 @@ toc: true
         <strong>{{ $color.name }}</strong>
         <br/>
         <code>{{ $color.hex }}</code>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
   {{ end -}}
@@ -49,10 +55,10 @@ toc: true
 {{ end -}}
 {{< /palette.inline >}}
 
-## OBS Grey
+## OBS Gray
 
 {{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "OBS Grey" }}
+{{- range where $.Site.Data.palette "category" "OBS Gray" }}
 <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
@@ -63,6 +69,8 @@ toc: true
         <strong>{{ $color.name }}</strong>
         <br/>
         <code>{{ $color.hex }}</code>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
   {{ end -}}
@@ -84,6 +92,8 @@ toc: true
         <strong>{{ $color.name }}</strong>
         <br/>
         <code>{{ $color.hex }}</code>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
   {{ end -}}
@@ -91,10 +101,10 @@ toc: true
 {{ end -}}
 {{< /palette.inline >}}
 
-## Greys
+## Grays
 
 {{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "Greys" }}
+{{- range where $.Site.Data.palette "category" "Grays" }}
 <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
@@ -105,6 +115,8 @@ toc: true
         <strong>{{ $color.name }}</strong>
         <br/>
         <code>{{ $color.hex }}</code>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <var>{{- $color.variable -}}</var>
       </figcaption>
     </figure>
   {{ end -}}

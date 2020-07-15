@@ -4,72 +4,92 @@
     - name: White
       class: white
       hex: "#fff"
+      variable: $white
     - name: Black
       class: black
       hex: "#000"
+      variable: $secondary
     - name: Orange 1
       class: orange-2
       hex: "#ff7900"
+      variable: $orange-2
     - name: Orange 2
       class: orange
       hex: "#f16e00"
+      variable: $primary
 - category: Supporting colors
   name: "Supporting colors"
   colors:
     - name: Blue
       class: cyan
       hex: "#4bb4e6"
+      variable: $cyan
     - name: Yellow
       class: yellow-2
       hex: "#ffd200"
+      variable: $yellow-2
     - name: Green
       class: teal
       hex: "#50be87"
+      variable: $teal
     - name: Purple
       class: purple
       hex: "#a885d8"
+      variable: $purple
     - name: Pink
       class: pink
       hex: "#ffb4e6"
-- category: OBS Grey
-  name: "OBS Grey"
+      variable: $pink
+- category: OBS Gray
+  name: "OBS Gray"
   colors:
     - name: 800
       class: 800
       hex: "#595959"
+      variable: $gray-800
 - category: Functionnal colors
   name: "Functionnal colors"
   colors:
     - name: Green
-      class: success
+      class: green
       hex: "#32c832"
+      variable: $success
     - name: Blue
-      class: info
+      class: blue
       hex: "#527edb"
+      variable: $info
     - name: Yellow
-      class: warning
+      class: yellow
       hex: "#fc0"
+      variable: $warning
     - name: Red
-      class: danger
+      class: red
       hex: "#cd3c14"
-- category: Greys
-  name: "Greys"
+      variable: $danger
+- category: Grays
+  name: "Grays"
   colors:
     - name: 300
       class: 300
       hex: "#eee"
+      variable: $gray-300
     - name: 400
       class: 400
       hex: "#ddd"
+      variable: $gray-400
     - name: 500
       class: 500
       hex: "#ccc"
+      variable: $gray-500
     - name: 600
       class: 600
       hex: "#999"
+      variable: $gray-600
     - name: 700
       class: 700
       hex: "#666"
+      variable: $gray-700
     - name: 900
       class: 900
       hex: "#333"
+      variable: $gray-900

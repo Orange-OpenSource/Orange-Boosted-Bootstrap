@@ -7,6 +7,8 @@ subgroup: Core elements
 toc: true
 ---
 
+Lines styles are used in some components, and through [`border` utilities]({{< docsref "/utilities/borders" >}}).
+
 ## Outline
 
 <div class="row gy-3 row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
@@ -35,5 +37,11 @@ toc: true
 <div class="border-top border-light my-3"></div>
 <div class="border-top border-light border-sm my-3"></div>
 <div class="border-top border-dark my-3"></div>
-<div class="border-top border-dark border-sm my-3"></div>
+<div class="border-top border-dark border-sm mt-3 mb-4"></div>
 
+
+{{< callout >}}
+### Using `<hr>`
+
+Please note that if you want to achieve dividers by using the `<hr>` element, you'll need to add `.bg-transparent` utility to unset its `background`.
+{{< /callout >}}

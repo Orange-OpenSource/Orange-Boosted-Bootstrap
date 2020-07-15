@@ -23,12 +23,13 @@ subgroup: Core elements
         <span class="display-1 text-primary">Page title 1</span>
       </td>
       <td rowspan="2" class="align-middle">
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 60px</li>
-          <li><strong>Line-height</strong>: 60px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -2px</li>
-        </ul>
+        {{< highlight css >}}
+.display-1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.125rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -47,12 +48,13 @@ subgroup: Core elements
         <span class="display-2 text-primary">Page title 2</span>
       </td>
       <td rowspan="2" class="align-middle">
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 50px</li>
-          <li><strong>Line-height</strong>: 50px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -1.6px</li>
-        </ul>
+        {{< highlight css >}}
+.display-2 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.1rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -71,12 +73,13 @@ subgroup: Core elements
         <span class="display-3 text-primary">Section title 1</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 40px</li>
-          <li><strong>Line-height</strong>: 40px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -1px</li>
-        </ul>
+        {{< highlight css >}}
+.display-3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -87,12 +90,13 @@ subgroup: Core elements
         <span class="display-4 text-primary">Section title 2</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 34px</li>
-          <li><strong>Line-height</strong>: 34px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -1px</li>
-        </ul>
+        {{< highlight css >}}
+h1, .display-4 {
+  font-size: 2.125rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.0625rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -103,12 +107,13 @@ subgroup: Core elements
         <span class="h2 text-primary">Subtitle 1</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 30px</li>
-          <li><strong>Line-height</strong>: 32px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.8px</li>
-        </ul>
+        {{< highlight css >}}
+h2, .h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: calc(32/30);
+  letter-spacing: -.05rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -119,12 +124,13 @@ subgroup: Core elements
         <span class="h3 text-primary">Subtitle 2</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 24px</li>
-          <li><strong>Line-height</strong>: 26px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.5px</li>
-        </ul>
+        {{< highlight css >}}
+h3, .h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: calc(26/24);
+  letter-spacing: -.03125rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -138,12 +144,13 @@ subgroup: Core elements
         <span class="h4 text-muted">Body 1</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 20px</li>
-          <li><strong>Line-height</strong>: 22px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.4px</li>
-        </ul>
+        {{< highlight css >}}
+h4, .h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: calc(22/20);
+  letter-spacing: -.025rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -157,12 +164,13 @@ subgroup: Core elements
         <span class="lead text-muted">Body 2</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 20px</li>
-          <li><strong>Line-height</strong>: 30px</li>
-          <li><strong>Weight</strong>: Roman</li>
-          <li><strong>Letter-spacing</strong>: -.25px</li>
-        </ul>
+{{< highlight css >}}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -.015625rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -176,12 +184,13 @@ subgroup: Core elements
         <span class="h5 text-muted">Body 3</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 18px</li>
-          <li><strong>Line-height</strong>: 20px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.2px</li>
-        </ul>
+{{< highlight css >}}
+h5, .h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: calc(20/18);
+  letter-spacing: -.0125rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -195,12 +204,13 @@ subgroup: Core elements
         <span class="h6 font-weight-normal text-muted">Body 4</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 18px</li>
-          <li><strong>Line-height</strong>: 27px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.2px</li>
-        </ul>
+{{< highlight css >}}
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: calc(18/16);
+  letter-spacing: -.00625rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -214,12 +224,13 @@ subgroup: Core elements
         <span class="font-weight-bold text-muted bs-text-standard">Standard</span>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 16px</li>
-          <li><strong>Line-height</strong>: 18px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.1px</li>
-        </ul>
+{{< highlight css >}}
+h6, .h6, strong {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: calc(18/16);
+  letter-spacing: -.00625rem;
+ }{{< /highlight >}}
       </td>
     </tr>
     <tr>
@@ -233,12 +244,13 @@ subgroup: Core elements
         <small class="font-weight-bold text-muted">Small</small>
       </td>
       <td>
-        <ul class="mb-0 pl-0">
-          <li><strong>Size</strong>: 14px</li>
-          <li><strong>Line-height</strong>: 16px</li>
-          <li><strong>Weight</strong>: Bold</li>
-          <li><strong>Letter-spacing</strong>: -.1px</li>
-        </ul>
+{{< highlight css >}}
+small, .small {
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: calc(16/14);
+  letter-spacing: -.00625rem;
+ }{{< /highlight >}}
       </td>
     </tr>
   </tbody>

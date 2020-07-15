@@ -1,0 +1,38 @@
+{{- /*
+  Usage: `svg-docs file="img/orange-logo.svg"`
+
+    Prints SVG content.
+
+    Optional parameters:
+    file: SVG file path - default: `img/orange-logo.svg`
+*/ -}}
+
+{{- $file := .Get "file"| default "img/orange-logo.svg" -}}
+{{- $svg := readFile $file -}}
+
+{{- if eq $file "img/orange-logo.svg" -}}
+  {{- /* Line feed */ -}}
+  {{- $svg = replace $svg ">" ">\n" -}}
+  {{- $svg = replace $svg "{" " {\n" -}}
+  {{- $svg = replace $svg "}}" "\n\t}\n}" -}}
+  {{- $svg = replace $svg "}@" "}\n@" -}}
+  {{- $svg = replace $svg "}<" "}\n<" -}}
+
+  {{- /* Indentation */ -}}
+  {{- $svg = replace $svg "<path" "\t<path" -}}
+  {{- $svg = replace $svg "<defs" "\t<defs" -}}
+  {{- $svg = replace $svg "</defs" "\t</defs" -}}
+  {{- $svg = replace $svg "<style" "\t\t<style" -}}
+  {{- $svg = replace $svg "</style" "\t\t</style" -}}
+  {{- $svg = replace $svg "@" "\t\t\t@" -}}
+  {{- $svg = replace $svg "#b" "\t\t\t\t#b" -}}
+  {{- $svg = replace $svg "#c" "\t\t\t\t#c" -}}
+  {{- $svg = replace $svg "display" "\t\t\t\t\tdisplay" -}}
+  {{- $svg = replace $svg "}" "\t\t\t}" -}}
+
+  {{- /* Content */ -}}
+  {{- $svg = replace $svg ":none" ": none" -}}
+  {{- $svg = replace $svg "none" "none;" -}}
+{{- end -}}
+
+{{- highlight $svg "html" "" -}}
