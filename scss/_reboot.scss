@@ -343,6 +343,7 @@ a:not([href]):not([class]) {
 
 // Code
 
+var, // Boosted mod
 pre,
 code,
 kbd,
@@ -375,8 +376,10 @@ pre {
   }
 }
 
+var, // Boosted mod
 code {
   @include font-size($code-font-size);
+  font-style: normal; // Boosted mod: <var> is italic in all browsers
   color: $code-color;
   word-wrap: break-word;
 
