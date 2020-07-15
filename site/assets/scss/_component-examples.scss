@@ -238,6 +238,7 @@
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
+    tab-size: 4; // Boosted mod
     background-color: transparent;
     border: 0;
   }
@@ -254,6 +255,10 @@
   pre:hover .language-html,
   pre:focus .language-html {
     color: $black;
+  }
+
+  .table-typography & {
+    margin-bottom: 0;
   }
   // End mod
 }

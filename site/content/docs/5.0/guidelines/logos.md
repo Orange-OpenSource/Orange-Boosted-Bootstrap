@@ -31,6 +31,12 @@ toc: true
   </div>
 </div>
 
+### Responsive SVG
+
+Boosted uses —and recommends to use— **a single SVG file for both logos**, since it's lightweight and easily made responsive. Here is the unminified SVG content:
+
+{{< svg-docs >}}
+
 ## Orange Business Services logo
 
 <div class="row row-cols-md-2 gy-5 pt-2 mb-5">
