@@ -66,6 +66,22 @@ We only set a `height` value on the `.progress`, so if you change that value the
 </div>
 {{< /example >}}
 
+<!-- Boosted mod -->
+
+### Sizes
+
+Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
+
+{{< example >}}
+<div class="progress progress-xs">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress progress-sm">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+{{< /example >}}
+<!-- End mod -->
+
 ## Backgrounds
 
 Use background utility classes to change the appearance of individual progress bars.

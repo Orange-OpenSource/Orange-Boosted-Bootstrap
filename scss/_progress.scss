@@ -15,6 +15,16 @@
   @include box-shadow($progress-box-shadow);
 }
 
+// Boosted mod
+.progress-xs {
+  height: $progress-height-xs;
+}
+
+.progress-sm {
+  height: $progress-height-sm;
+}
+// End mod
+
 .progress-bar {
   display: flex;
   flex-direction: column;
