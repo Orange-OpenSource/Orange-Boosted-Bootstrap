@@ -191,7 +191,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <div class="card-footer text-muted">
+  <div class="card-footer">
     2 days ago
   </div>
 </div>
@@ -376,7 +376,7 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
 {{< example >}}
-<div class="card bg-dark text-white">
+<div class="card">
   {{< placeholder width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Card image" >}}
   <div class="card-img-overlay">
     <h5 class="card-title">Card title</h5>
@@ -422,7 +422,7 @@ Use [text and background utilities]({{< docsref "/utilities/colors" >}}) to chan
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="card bg-{{ .name }} mb-3" style="max-width: 18rem;">
+<div class="card bg-{{ .name }} border-secondary mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h5 class="card-title">{{ .name | title }} card title</h5>
@@ -451,7 +451,16 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
-{{- end -}}
+{{- end }}
+<!-- Boosted mod -->
+<div class="card border-0 mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Borderless card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<!-- End mod -->
 {{< /card.inline >}}
 {{< /example >}}
 
@@ -518,7 +527,7 @@ When using card groups with footers, their content will automatically line up.
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
@@ -528,7 +537,7 @@ When using card groups with footers, their content will automatically line up.
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
@@ -538,7 +547,7 @@ When using card groups with footers, their content will automatically line up.
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
 </div>
@@ -687,7 +696,7 @@ Just like with card groups, card footers will automatically line up.
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small>Last updated 3 mins ago</small>
       </div>
     </div>
   </div>
@@ -699,7 +708,7 @@ Just like with card groups, card footers will automatically line up.
         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small>Last updated 3 mins ago</small>
       </div>
     </div>
   </div>
@@ -711,7 +720,7 @@ Just like with card groups, card footers will automatically line up.
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small>Last updated 3 mins ago</small>
       </div>
     </div>
   </div>
