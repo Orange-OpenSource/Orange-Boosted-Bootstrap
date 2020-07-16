@@ -8,6 +8,7 @@
     {{ partial "skippy" . }}
 
     {{ partial "docs-navbar" . }}
+    {{ partial "guidelines-subnav" . }}
 
     <div class="container-xxl my-4 bd-layout">
       <div class="bd-sidebar">
@@ -27,7 +28,7 @@
         </div>
       {{ end }}
 
-      <main class="bd-content {{ if eq .Title "Typography" }}bd-typography{{ end }} order-1 pl-lg-4">
+      <main class="bd-content bd-guidelines {{ if eq .Title "Typography" }}bd-typography{{ else if eq .Title "Alerts" }}bd-alerts{{ end }} order-1 pl-lg-4">
         {{ if .Page.Params.sections }}
           <div class="row g-3">
             {{ range .Page.Params.sections }}

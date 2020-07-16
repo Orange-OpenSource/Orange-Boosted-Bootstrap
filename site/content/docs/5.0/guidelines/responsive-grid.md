@@ -6,14 +6,16 @@ group: guidelines
 subgroup: Responsive grids
 ---
 
+Boosted grid is heavily documented: [breakpoints]({{< docsref "/layout/breakpoints" >}}), [containers]({{< docsref "/layout/containers" >}}), [columns]({{< docsref "/layout/columns" >}}) and [gutters]({{< docsref "/layout/gutters" >}}).
+
 <div>
-  <table class="table table-responsive caption-bottom">
-    <caption>Responsive grid</caption>
+  <table class="table table-responsive">
+    <caption>Responsive grid details</caption>
     <thead>
       <tr>
         <th scope="col">Breakpoints</th>
         <th scope="col">Devices</th>
-        <th scope="col">Grid width</th>
+        <th scope="col">Grid width </th>
         <th scope="col">Columns</th>
         <th scope="col">Column width</th>
         <th scope="col">Gutter width</th>

@@ -21,8 +21,11 @@
 - title: Modules
   pages:
     - title: Global headers
-    - title: Footers
+    - title: Global menu
+    - title: Global search
     - title: Local headers
+    - title: Footers
+    - title: Cards
 
 - title: Stickers
   pages:

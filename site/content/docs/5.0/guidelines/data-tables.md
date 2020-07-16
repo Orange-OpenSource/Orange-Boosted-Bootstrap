@@ -9,10 +9,10 @@ toc: true
 
 ## Standard table
 
-[Documentation]({{< docsref "/content/tables" >}})
+[Documentation]({{< docsref "/content/tables" >}})&nbsp;—&nbsp;{{< anchor web-tbl-std-001 >}}
 
 <div>
-  <table class="table table-sm table-responsive" id="web-tbl-std-001">
+  <table class="table table-sm table-responsive">
     <caption class="h4">Standard table with column headers</caption>
     <thead>
       <tr>
@@ -77,16 +77,10 @@ toc: true
 
 ## Row selection
 
-{{< callout info >}}
-### Selection feature
-
-The selection behaviour isn't implemented yet. This feature will be delivered with [#116]({{< param repo >}}/issues/116).
-{{< /callout >}}
-
-[Documentation]({{< docsref "/content/tables" >}}/#active-tables)
+[Documentation]({{< docsref "/content/tables" >}}#active-tables)&nbsp;—&nbsp;{{< anchor web-tbl-std-002 >}}
 
 <div>
-  <table class="table table-sm table-hover table-responsive" id="web-tbl-std-002">
+  <table class="table table-sm table-hover table-responsive">
     <caption class="h4">Standard table with column headers and row selection</caption>
     <thead>
       <tr>
@@ -221,10 +215,19 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
   </table>
 </div>
 
+
+{{< callout info >}}
+### Selection feature
+
+The selection behaviour isn't implemented yet. This feature will be delivered with [#116]({{< param repo >}}/issues/116).
+{{< /callout >}}
+
 ## With icons or thumbnails
 
+[Documentation]({{< docsref "/content/tables" >}})&nbsp;—&nbsp;{{< anchor web-tbl-std-003 >}}
+
 <div>
-  <table class="table table-sm table-hover table-responsive align-middle" id="web-tbl-std-003">
+  <table class="table table-sm table-hover table-responsive align-middle">
     <caption class="h4">Standard table with column headers, row selection and icons or thumbnails</caption>
     <thead>
       <tr>
@@ -409,8 +412,10 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
 
 ## With column headers and icons
 
+[Documentation]({{< docsref "/content/tables" >}})&nbsp;—&nbsp;{{< anchor web-tbl-std-005 >}}
+
 <div>
-  <table class="table table-responsive align-middle" id="web-tbl-std-005">
+  <table class="table table-responsive align-middle">
     <caption class="h4">Standard table with column headers and icons</caption>
     <thead>
       <tr>

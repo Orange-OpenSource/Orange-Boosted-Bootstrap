@@ -52,9 +52,13 @@
   }
 
   // Boosted mod
-  > .table-typography .bs-text-standard {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
+  > .table-typography {
+    white-space: nowrap;
+
+    .bs-text-standard {
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+    }
   }
   // End mod
 }

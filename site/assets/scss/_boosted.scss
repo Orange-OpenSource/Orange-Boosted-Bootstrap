@@ -1,5 +1,9 @@
 body {
-  padding-top: $spacer * 5;
+  padding-top: $spacer * 3;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $spacer * 5;
+  }
 }
 
 // Boosted mod: use HTML+CSS for Boosted 3D logo
@@ -39,10 +43,67 @@ body {
 }
 
 #orange-logo ~ .row .embed-responsive-item .figure-caption {
-  bottom: -#{$spacer};
+  bottom: -#{$spacer * 1.5};
+
+  @include media-breakpoint-up(lg) {
+    bottom: -#{$spacer};
+  }
 }
 
 #orange-business-services-logo ~ .row .embed-responsive-item img {
-  margin-bottom: .25rem;
+  margin-bottom: $spacer / 10;
+}
+
+// stylelint-disable selector-max-type, selector-no-qualifying-type
+.bd-alerts > h2 ~ p,
+.bd-guidelines > h2 + p,
+.bd-guidelines > h3 + p,
+#with-labels + p,
+#with-icons + p {
+  display: flex;
+  align-items: center;
+  padding: 0 0 $spacer / 2;
+  margin: $spacer / -2 0 $spacer * 1.5;
+  border-bottom: $border-width / 2 solid tint-color($info, 8);
+
+  > a[href]:first-of-type {
+    display: flex;
+    align-items: center;
+    font-weight: $font-weight-bold;
+    color: $documentation-link-color;
+
+    &::before {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      content: "";
+      background-image: escape-svg($documentation-link-bg-image);
+      background-size: 1em;
+    }
+
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+  }
+}
+// stylelint-enable selector-max-type, selector-no-qualifying-type
+
+.ui-kit-id {
+  @include font-size($small-font-size);
+  font-weight: $font-weight-bold;
+  color: $documentation-link-color;
+  text-transform: uppercase;
+
+  &::before {
+    padding-right: $spacer / 8;
+    content: "#";
+  }
+
+  &,
+  &:hover {
+    color: $documentation-link-color;
+    text-decoration: none;
+  }
 }
 // End mod

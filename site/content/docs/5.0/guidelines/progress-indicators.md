@@ -9,36 +9,36 @@ toc: true
 
 ## Spinners
 
-[Documentation]({{< docsref "/components/spinners" >}})
+[Documentation]({{< docsref "/components/spinners" >}})&nbsp;—&nbsp;{{< anchor web-prg-spn-001 >}}
 
-<div class="row row-cols-4 gy-3">
+<div class="row row-cols-3 row-cols-md-4 gy-3">
   <div class="col">
     <div class="spinner-border spinner-border-lg text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <div class="col">
+  <div class="col text-center text-md-left">
     <div class="spinner-border text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <div class="col">
+  <div class="col text-center text-md-left">
     <div class="spinner-border spinner-border-sm text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <div class="w-100"></div>
+  <div class="w-100 d-none d-md-block"></div>
   <div class="col">
     <div class="spinner-border spinner-border-lg text-secondary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <div class="col">
+  <div class="col text-center text-md-left">
     <div class="spinner-border text-secondary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <div class="col">
+  <div class="col text-center text-md-left">
     <div class="spinner-border spinner-border-sm text-secondary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
@@ -47,7 +47,7 @@ toc: true
 
 ## Progress bars
 
-[Documentation]({{< docsref "/components/progress" >}})
+[Documentation]({{< docsref "/components/progress" >}})&nbsp;—&nbsp;{{< anchor web-prg-pbr-001 >}}
 
 <div class="progress mb-3">
   <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>

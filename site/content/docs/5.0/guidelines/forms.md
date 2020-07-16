@@ -9,7 +9,7 @@ toc: true
 
 ## Text field sizes
 
-[Documentation]({{< docsref "/forms/form-control" >}}/#sizing)
+[Documentation]({{< docsref "/forms/form-control" >}}#sizing)
 
 <div class="row gy-3">
   <div class="col-12 col-sm-4 col-lg-2">
@@ -34,9 +34,9 @@ toc: true
 
 ## Text field standard
 
-[Documentation]({{< docsref "/forms/overview" >}})
+[Documentation]({{< docsref "/forms/overview" >}})&nbsp;—&nbsp;{{< anchor web-for-tf1-001 >}}
 
-<div class="row gy-3" id="web-for-tf1-001">
+<div class="row gy-3">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">Default</h3>
   </div>
@@ -87,7 +87,9 @@ toc: true
 
 ## Text field multiline
 
-<div class="row gy-3" id="web-for-tf1-002">
+[Documentation]({{< docsref "/forms/form-control" >}})&nbsp;—&nbsp;{{< anchor web-for-tf1-002 >}}
+
+<div class="row gy-3">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">Default</h3>
   </div>
@@ -101,9 +103,9 @@ toc: true
 
 ## Select
 
-[Documentation]({{< docsref "/forms/select" >}})
+[Documentation]({{< docsref "/forms/select" >}})&nbsp;—&nbsp;{{< anchor web-for-ddl-001 >}}
 
-<div class="row gy-3" id="web-for-ddl-001">
+<div class="row gy-3">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">With label</h3>
   </div>
@@ -154,9 +156,9 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Checkbox
 
-[Documentation]({{< docsref "/forms/checks-radios" >}}/#checks)
+[Documentation]({{< docsref "/forms/checks-radios" >}}#checks)&nbsp;—&nbsp;{{< anchor web-for-cbx-001 >}}
 
-<div class="form-check mb-2" id="web-for-cbx-001">
+<div class="form-check mb-2">
   <input class="form-check-input" type="checkbox" value="1" id="form-checkbox">
   <label class="form-check-label" for="form-checkbox">Unchecked</label>
 </div>
@@ -175,9 +177,9 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Radio button
 
-[Documentation]({{< docsref "/forms/checks-radios" >}}/#radios)
+[Documentation]({{< docsref "/forms/checks-radios" >}}#radios)&nbsp;—&nbsp;{{< anchor web-for-rbt-001 >}}
 
-<div class="form-check mb-2" id="web-for-rbt-001">
+<div class="form-check mb-2">
   <input class="form-check-input" type="radio" name="demo" value="1" id="form-radio">
   <label class="form-check-label" for="form-radio">Unchecked</label>
 </div>
@@ -197,9 +199,9 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Toggle switch
 
-[Documentation]({{< docsref "/forms/checks-radios" >}}/#switches)
+[Documentation]({{< docsref "/forms/checks-radios" >}}#switches)&nbsp;—&nbsp;{{< anchor web-for-tsw-001 >}}
 
-<div class="form-check form-switch mb-3" id="web-for-tsw-001">
+<div class="form-check form-switch mb-3">
   <input class="form-check-input" type="checkbox" id="form-switch">
   <label class="form-check-label" for="form-switch">Default switch checkbox input</label>
 </div>
@@ -218,9 +220,9 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Tooltip
 
-[Documentation]({{< docsref "/components/tooltips" >}})
+[Documentation]({{< docsref "/components/tooltips" >}})&nbsp;—&nbsp;{{< anchor web-for-ttp-001 >}}
 
-<div class="row row-cols-12 row-cols-md-2 row-cols-lg-4 gy-3 pt-3 tooltip-demo" id="web-for-ttp-001">
+<div class="row row-cols-12 row-cols-md-2 row-cols-lg-4 gy-3 pt-3 tooltip-demo">
   <div class="col mt-0">
     <h3 class="h6 d-inline-block align-middle m-0">Tooltip on top</h3>
     <button type="button" class="btn btn-link p-0" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.">
@@ -257,9 +259,9 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Slider
 
-[Documentation]({{< docsref "/forms/range" >}})
+[Documentation]({{< docsref "/forms/range" >}})&nbsp;—&nbsp;{{< anchor web-for-sld-001 >}}
 
-<div class="mb-3" id="web-for-sld-001">
+<div class="mb-3">
   <label for="form-slider" class="form-label">Slider</label>
   <input type="range" class="form-range" min="0" max="5" step="0.5" id="form-slider">
 </div>
