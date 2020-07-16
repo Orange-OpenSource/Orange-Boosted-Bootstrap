@@ -1034,7 +1034,7 @@ $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer / 2 !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
-$card-border-color:                 $black !default;
+$card-border-color:                 $gray-500 !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y / 2 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
@@ -1048,6 +1048,9 @@ $card-img-overlay-padding:          $spacer !default;
 
 $card-group-margin:                 $grid-gutter-width / 2 !default;
 
+// Boosted mod
+$card-footer-color:                 $gray-700 !default;
+// End mod
 
 // Tooltips
 
@@ -1218,7 +1221,7 @@ $progress-height-xs:                $spacer / 4 !default;
 
 $list-group-color:                  null !default;
 $list-group-bg:                     $white !default;
-$list-group-border-color:           $black !default;
+$list-group-border-color:           $gray-500 !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
