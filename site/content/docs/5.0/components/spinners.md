@@ -34,9 +34,6 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 <div class="spinner-border text-secondary" role="status">
   <span class="sr-only">Loading...</span>
 </div>
-<div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
 {{< /example >}}
 <!-- End mod -->
 
@@ -62,9 +59,6 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
   <span class="sr-only">Loading...</span>
 </div>
 <div class="spinner-grow text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-grow text-light" role="status">
   <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
@@ -129,6 +123,10 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 
 Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that can quickly be used within other components.
 
+<!-- Boosted mod: -sm & -lg -->
+
+### Small
+
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
   <span class="sr-only">Loading...</span>
@@ -138,16 +136,18 @@ Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that c
 </div>
 {{< /example >}}
 
-Or, use custom CSS or inline styles to change the dimensions as needed.
+### Large
 
 {{< example >}}
-<div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+<div class="spinner-border spinner-border-lg" role="status">
   <span class="sr-only">Loading...</span>
 </div>
-<div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+<div class="spinner-grow spinner-grow-lg" role="status">
   <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
+
+<!-- End mod -->
 
 ## Buttons
 

@@ -1296,15 +1296,20 @@ $carousel-transition:                transform $carousel-transition-duration $tr
 
 // Spinners
 
-$spinner-width:           2rem !default;
+$spinner-width:           $spacer * 2 !default;
 $spinner-height:          $spinner-width !default;
-$spinner-border-width:    .25em !default;
+$spinner-border-width:    $border-width * 3 !default;
 $spinner-animation-speed: .75s !default;
 
-$spinner-width-sm:        1rem !default;
+$spinner-width-sm:        $spacer !default;
 $spinner-height-sm:       $spinner-width-sm !default;
-$spinner-border-width-sm: .2em !default;
+$spinner-border-width-sm: $border-width * 2 !default;
 
+// Boosted mod
+$spinner-width-lg:        $spacer * 4 !default;
+$spinner-height-lg:       $spinner-width-lg !default;
+$spinner-border-width-lg: $border-width * 4 !default;
+// End mod
 
 // Close
 
