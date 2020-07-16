@@ -16,7 +16,7 @@ toc: true
   <div class="col">
     <div class="embed-responsive embed-responsive-1by1">
     <figure class="figure embed-responsive-item d-flex bg-dark">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img m-auto" width="220" height="220" alt="Orange" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img img-fluid m-auto" width="220" height="220" alt="Orange" loading="lazy">
       <figcaption class="figure-caption font-weight-bold text-body position-absolute">Master logo</figcaption>
     </figure>
     </div>
@@ -33,19 +33,21 @@ toc: true
 
 ### Responsive SVG
 
+<hr class="d-none"><!-- Boosted mod: to prevent following paragraphs to be styled like docs links -->
+
 Boosted uses —and recommends to use— **a single SVG file for both logos**, since it's lightweight and easily made responsive. Here is the unminified SVG content:
 
 {{< svg-docs >}}
 
 ## Orange Business Services logo
 
-<div class="row row-cols-md-2 gy-5 pt-2 mb-5">
+<div class="row row-cols-1 row-cols-md-2 gy-5 pt-2 mb-5">
   <div class="col">
     <div class="embed-responsive embed-responsive-16by9">
       <figure class="figure embed-responsive-item d-flex bg-dark">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
-          <span class="h5 ml-2 mb-0 align-self-end">
+          <span class="h5 ml-2 mb-0 align-self-end"``>
             <span class="sr-only">Orange </span>
             Business<br>Services
           </span>
@@ -97,3 +99,27 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
     </div>
   </div>
 </div>
+
+### Using semantic markup
+
+<hr class="d-none"><!-- Boosted mod: to prevent following paragraphs to be styled like docs links -->
+
+Boosted [flex]({{< docsref "/utilities/flex" >}}) and [spacing]({{< docsref "/utilities/spacing" >}}) utilities allows to use semantic markup to implement Orange Business Services' logo.
+
+{{< example show_preview="false" >}}
+<div class="d-inline-flex align-items-baseline">
+  <img id="obs" src="orange-logo.svg" width="50" height="50" alt="" loading="lazy">
+  <span class="h5 ml-2 mb-0 align-self-end">
+    <span class="sr-only">Orange </span>
+    Business<br>Services
+  </span>
+</div>
+{{< /example >}}
+
+A single CSS property is required for proper alignment:
+
+{{< example show_preview="false" lang="scss" >}}
+#obs {
+  margin-bottom: $spacer / 10;
+}
+{{< /example >}}

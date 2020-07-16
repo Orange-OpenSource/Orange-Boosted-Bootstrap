@@ -27,15 +27,12 @@ toc: true
 
 ## Tabs
 
-[Documentation]({{< docsref "/components/navs" >}}/#tabs)
+[Documentation]({{< docsref "/components/navs" >}}#tabs)&nbsp;—&nbsp;{{< anchor web-nav-tab-001 >}}
 
 <div class="mb-5">
-  <ul class="nav nav-tabs" id="web-nav-tab-001">
+  <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#tabs">Label</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#tabs">Label</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#tabs">Label</a>
@@ -48,15 +45,12 @@ toc: true
 
 ## Tabs light
 
-[Documentation]({{< docsref "/components/navs" >}}/#tabs-light)
+[Documentation]({{< docsref "/components/navs" >}}#tabs-light)&nbsp;—&nbsp;{{< anchor web-nav-tab-002 >}}
 
 <div class="mb-5">
-  <ul class="nav nav-tabs nav-tabs-light" id="web-nav-tab-002">
+  <ul class="nav nav-tabs nav-tabs-light">
     <li class="nav-item">
       <a class="nav-link active" href="#tabs-light" aria-current="page">Label</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#tabs-light">Label</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#tabs-light">Label</a>
@@ -69,9 +63,9 @@ toc: true
 
 ## Pagination
 
-[Documentation]({{< docsref "/components/pagination" >}})
+[Documentation]({{< docsref "/components/pagination" >}})&nbsp;—&nbsp;{{< anchor web-nav-pag-001 >}}
 
-<nav aria-label="Page navigation example" id="web-nav-pag-001">
+<nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item disabled"><a class="page-link" href="#pagination" tabindex="-1" aria-disabled="true" aria-label="Previous"></a></li>
     <li class="page-item"><a class="page-link" href="#pagination">1</a></li>
@@ -90,11 +84,10 @@ toc: true
 
 ## Accordion
 
-[Documentation]({{< docsref "/components/navs" >}}/#tabs)
-
+[Documentation]({{< docsref "/components/navs" >}}#tabs)
 <div class="row gy-3 row-cols-1 row-cols-lg-3">
-  <div class="col" id="web-nav-acc-001">
-    <h3 class="h6">Small</h3>
+  <div class="col">
+    <h3 class="h6">Small — {{< anchor web-nav-acc-001 >}}</h3>
     <div class="accordion" id="accordionExample-3">
       <div class="card">
         <div class="card-header" id="headingOne-3">
@@ -134,8 +127,8 @@ toc: true
       </div>
     </div>
   </div>
-  <div class="col" id="web-nav-acc-002">
-    <h3 class="h6">Medium</h3>
+  <div class="col">
+    <h3 class="h6">Medium — {{< anchor web-nav-acc-002 >}}</h3>
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -175,8 +168,8 @@ toc: true
       </div>
     </div>
   </div>
-  <div class="col" id="web-nav-acc-003">
-    <h3 class="h6">Large</h3>
+  <div class="col">
+    <h3 class="h6">Large — {{< anchor web-nav-acc-003 >}}</h3>
     <div class="accordion" id="accordionExample-4">
       <div class="card">
         <div class="card-header" id="headingOne-4">
