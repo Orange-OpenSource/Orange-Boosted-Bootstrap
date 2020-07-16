@@ -24,6 +24,14 @@
   border-width: $spinner-border-width-sm;
 }
 
+// Boosted mod
+.spinner-border-lg {
+  width: $spinner-width-lg;
+  height: $spinner-height-lg;
+  border-width: $spinner-border-width-lg;
+}
+// End mod
+
 //
 // Growing circle
 //
@@ -55,3 +63,10 @@
   width: $spinner-width-sm;
   height: $spinner-height-sm;
 }
+
+// Boosted mod
+.spinner-grow-lg {
+  width: $spinner-width-lg;
+  height: $spinner-height-lg;
+}
+// End mod
