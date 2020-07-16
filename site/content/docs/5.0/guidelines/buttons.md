@@ -1,13 +1,16 @@
 ---
 layout: guidelines
 title: Buttons
-description: This design kit contains the essential UI elements for designing, prototyping and building Orange products and services on the web.
+description: Boosted includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
 group: guidelines
 subgroup: Components
 toc: true
 ---
 
+
 ## Sizes
+
+[Documentation]({{< docsref "/components/buttons" >}}/#sizes)
 
 <div class="row row-cols-lg-3 align-items-center">
   <div class="col">
@@ -26,6 +29,8 @@ toc: true
 
 
 ## Styles
+
+[Documentation]({{< docsref "/components/buttons" >}}/#examples)
 
 <div class="row row-cols-3 row-cols-lg-6 gy-3 mt-4">
   <div class="col-12 col-lg-2">
@@ -92,6 +97,8 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
 
 ## Toggle Buttons
 
+[Documentation]({{< docsref "/forms/checks-radios" >}}/#radio-toggle-buttons)
+
 <div class="row gy-3 mt-4">
   <div class="col-12 col-lg-2">
     <h3 class="h6">Selected</h3>
@@ -148,6 +155,8 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
 </div>
 
 ## Split buttons
+
+[Documentation]({{< docsref "/components/dropdowns" >}}/#split-button)
 
 <div class="row gy-3 mt-4">
   <div class="col-3">
@@ -213,6 +222,8 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
 
   ### With labels
 
+  [Documentation]({{< docsref "/components/pagination" >}}/#overview)
+
   <nav aria-label="Page navigation example" id="web-btn-pag-001">
     <ul class="pagination">
       <li class="page-item"><a class="page-link has-label" href="#">Previous</a></li>
@@ -223,6 +234,8 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
   <div class="col">
 
   ### With icons
+
+  [Documentation]({{< docsref "/components/pagination" >}}/#working-with-icons)
 
   <nav aria-label="Page navigation example with icons" id="web-btn-pag-002">
     <ul class="pagination">

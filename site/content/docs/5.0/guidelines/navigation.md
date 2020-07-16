@@ -1,7 +1,7 @@
 ---
 layout: guidelines
 title: Navigation
-description: This design kit contains the essential UI elements for designing, prototyping and building Orange products and services on the web.
+description: Navigation available in Boosted share general markup and styles, from standard links to full featured navbars.
 group: guidelines
 subgroup: Components
 toc: true
@@ -27,6 +27,8 @@ toc: true
 
 ## Tabs
 
+[Documentation]({{< docsref "/components/navs" >}}/#tabs)
+
 <div class="mb-5">
   <ul class="nav nav-tabs" id="web-nav-tab-001">
     <li class="nav-item">
@@ -45,6 +47,8 @@ toc: true
 </div>
 
 ## Tabs light
+
+[Documentation]({{< docsref "/components/navs" >}}/#tabs-light)
 
 <div class="mb-5">
   <ul class="nav nav-tabs nav-tabs-light" id="web-nav-tab-002">
@@ -65,6 +69,8 @@ toc: true
 
 ## Pagination
 
+[Documentation]({{< docsref "/components/pagination" >}})
+
 <nav aria-label="Page navigation example" id="web-nav-pag-001">
   <ul class="pagination">
     <li class="page-item disabled"><a class="page-link" href="#pagination" tabindex="-1" aria-disabled="true" aria-label="Previous"></a></li>
@@ -83,6 +89,8 @@ toc: true
 </nav>
 
 ## Accordion
+
+[Documentation]({{< docsref "/components/navs" >}}/#tabs)
 
 <div class="row gy-3 row-cols-1 row-cols-lg-3">
   <div class="col" id="web-nav-acc-001">

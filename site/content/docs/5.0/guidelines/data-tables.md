@@ -1,13 +1,15 @@
 ---
 layout: guidelines
-title: Forms
-description: This design kit contains the essential UI elements for designing, prototyping and building Orange products and services on the web.
+title: Data tables
+description: Documentation and examples for opt-in styling of tables with Boosted.
 group: guidelines
 subgroup: Components
 toc: true
 ---
 
 ## Standard table
+
+[Documentation]({{< docsref "/content/tables" >}})
 
 <div>
   <table class="table table-sm table-responsive" id="web-tbl-std-001">
@@ -80,6 +82,8 @@ toc: true
 
 The selection behaviour isn't implemented yet. This feature will be delivered with [#116]({{< param repo >}}/issues/116).
 {{< /callout >}}
+
+[Documentation]({{< docsref "/content/tables" >}}/#active-tables)
 
 <div>
   <table class="table table-sm table-hover table-responsive" id="web-tbl-std-002">
