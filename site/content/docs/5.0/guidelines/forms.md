@@ -1,13 +1,15 @@
 ---
 layout: guidelines
 title: Forms
-description: This design kit contains the essential UI elements for designing, prototyping and building Orange products and services on the web.
+description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
 group: guidelines
 subgroup: Components
 toc: true
 ---
 
 ## Text field sizes
+
+[Documentation]({{< docsref "/forms/form-control" >}}/#sizing)
 
 <div class="row gy-3">
   <div class="col-12 col-sm-4 col-lg-2">
@@ -31,6 +33,8 @@ toc: true
 </div>
 
 ## Text field standard
+
+[Documentation]({{< docsref "/forms/overview" >}})
 
 <div class="row gy-3" id="web-for-tf1-001">
   <div class="col-12 col-sm-4 col-lg-2">
@@ -97,6 +101,8 @@ toc: true
 
 ## Select
 
+[Documentation]({{< docsref "/forms/select" >}})
+
 <div class="row gy-3" id="web-for-ddl-001">
   <div class="col-12 col-sm-4 col-lg-2">
     <h3 class="h6">With label</h3>
@@ -148,6 +154,8 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Checkbox
 
+[Documentation]({{< docsref "/forms/checks-radios" >}}/#checks)
+
 <div class="form-check mb-2" id="web-for-cbx-001">
   <input class="form-check-input" type="checkbox" value="1" id="form-checkbox">
   <label class="form-check-label" for="form-checkbox">Unchecked</label>
@@ -166,6 +174,8 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 </div>
 
 ## Radio button
+
+[Documentation]({{< docsref "/forms/checks-radios" >}}/#radios)
 
 <div class="form-check mb-2" id="web-for-rbt-001">
   <input class="form-check-input" type="radio" name="demo" value="1" id="form-radio">
@@ -187,6 +197,8 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 
 ## Toggle switch
 
+[Documentation]({{< docsref "/forms/checks-radios" >}}/#switches)
+
 <div class="form-check form-switch mb-3" id="web-for-tsw-001">
   <input class="form-check-input" type="checkbox" id="form-switch">
   <label class="form-check-label" for="form-switch">Default switch checkbox input</label>
@@ -205,6 +217,8 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 </div>
 
 ## Tooltip
+
+[Documentation]({{< docsref "/components/tooltips" >}})
 
 <div class="row row-cols-12 row-cols-md-2 row-cols-lg-4 gy-3 pt-3 tooltip-demo" id="web-for-ttp-001">
   <div class="col mt-0">
@@ -242,6 +256,8 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
 </div>
 
 ## Slider
+
+[Documentation]({{< docsref "/forms/range" >}})
 
 <div class="mb-3" id="web-for-sld-001">
   <label for="form-slider" class="form-label">Slider</label>
