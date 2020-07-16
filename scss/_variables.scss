@@ -1209,6 +1209,10 @@ $progress-bar-bg:                   $primary !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 
+// Boosted mod
+$progress-height-sm:                $spacer / 2 !default;
+$progress-height-xs:                $spacer / 4 !default;
+// End mod
 
 // List group
 
