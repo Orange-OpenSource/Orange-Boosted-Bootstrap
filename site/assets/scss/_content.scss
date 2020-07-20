@@ -4,7 +4,7 @@
 
 .bd-content {
   // Offset for the sticky header
-  > [id] {
+  :target {
     @include media-breakpoint-up(md) {
       scroll-margin-top: $offset-top; // Boosted mod
     }

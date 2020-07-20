@@ -11,7 +11,7 @@ $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 $sidebar-collapse-icon: $breadcrumb-divider; // Boosted mod
 
 // Boosted mod
-$offset-top: add(10rem, $border-width);
+$offset-top: add(10rem, $spacer / 2);
 $sidebar-height: subtract(100vh, add($offset-top, 2rem));
 $sidebar-link-padding-x: .5rem;
 $sidebar-collapse-icon-size: $sidebar-link-padding-x;
