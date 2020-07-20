@@ -30,6 +30,14 @@
   border-width: $spinner-border-width-sm;
 }
 
+// Boosted mod
+.spinner-border-lg {
+  width: $spinner-width-lg;
+  height: $spinner-height-lg;
+  border-width: $spinner-border-width-lg;
+}
+// End mod
+
 //
 // Growing circle
 //
@@ -62,14 +70,9 @@
   height: $spinner-height-sm;
 }
 
-// Boosted mod: Color variants
-[class*="spinner-"] {
-  @each $color, $value in $theme-colors {
-    @if ($value != $primary) and ($value != $secondary) and ($value != $dark) and ($value != $light) {
-      &.text-#{$color} {
-        color: $value;
-      }
-    }
-  }
+// Boosted mod
+.spinner-grow-lg {
+  width: $spinner-width-lg;
+  height: $spinner-height-lg;
 }
-// end mod
+// End mod
