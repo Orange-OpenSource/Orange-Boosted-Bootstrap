@@ -56,19 +56,24 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Height
+[comment]: # Boosted mod: sizes variants
 
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
+### Sizes
+
+Boosted also provides size variants for progress bar: simply add `.progress-xs` or `.progress-sm`.
 
 {% capture example %}
-<div class="progress" style="height: 1px;">
+<div class="progress progress-xs">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress" style="height: 20px;">
+<div class="progress progress-sm">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
+
+[comment]: # End mod
+
 
 ## Backgrounds
 
