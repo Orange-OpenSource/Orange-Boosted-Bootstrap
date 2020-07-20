@@ -52,11 +52,12 @@
 
 .card-title {
   margin-bottom: $card-title-spacer-y;
-}
 
-// Boosted mod: prevent unwanted margin when nothing follows…
-.card-title:only-child {
-  margin-bottom: 0;
+  // Boosted mod: prevent unwanted margin when nothing follows…
+  &:only-child {
+    margin-bottom: 0;
+  }
+  // End mod
 }
 
 .card-subtitle {
