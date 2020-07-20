@@ -316,7 +316,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      HelvNeueOrange#{"/*rtl:insert:Arabic*/"}, Helvetica Neue, Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
+$font-family-sans-serif:      HelvNeueOrange#{"/*rtl:insert:Arabic*/"}, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -335,7 +335,7 @@ $font-weight-bold:            700 !default;
 $font-weight-bolder:          $font-weight-bold !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.25 !default; // 20px
+$line-height-base:            1.125 !default; // 20px
 $letter-spacing-base:         map-get($spacers, 2) / -100 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
@@ -346,7 +346,8 @@ $h5-font-size:                $font-size-lg !default;             // 18px
 $h6-font-size:                $font-size-base !default;           // 16px
 $h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
 $h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
-$h3-spacing:                  $letter-spacing-base * 6 !default;  // -0.6px
+$mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
+$h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
 $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
@@ -356,7 +357,7 @@ $h2-line-height:              calc(32 / 30) !default;
 $h3-line-height:              calc(26 / 24) !default;
 $h4-line-height:              calc(22 / 20) !default;
 $h5-line-height:              calc(20 / 18) !default;
-$h6-line-height:              calc(18 / 16) !default;
+$h6-line-height:              $line-height-base !default;
 // stylelint-enable function-blacklist
 
 $headings-margin-bottom:      $spacer !default;
@@ -370,9 +371,9 @@ $display2-size:               $font-size-xlg * 2.5 !default; // 50px
 $display3-size:               $font-size-xlg * 2 !default;   // 40px
 $display4-size:               $h1-font-size !default;        // 34px
 
-$display1-spacing:            $letter-spacing-base * 24 !default; // -2.4px
+$display1-spacing:            $letter-spacing-base * 20 !default; // -2px
 $display2-spacing:            $letter-spacing-base * 16 !default; // -1.6px
-$display3-spacing:            $letter-spacing-base * 12 !default; // -1.2px
+$display3-spacing:            $h1-spacing !default;               // -1px
 $display4-spacing:            $h1-spacing !default;               // -1px
 // end mod
 
@@ -387,7 +388,7 @@ $lead-font-size:              $font-size-xlg !default; // Boosted mod
 $lead-font-weight:            400 !default; // Boosted mod
 // stylelint-disable-next-line function-blacklist
 $lead-line-height:            calc(30 / 20) !default; // Boosted mod
-$lead-letter-spacing:         -.015625rem !default; // Boosted mod
+$lead-letter-spacing:         $letter-spacing-base * 2.5 !default; // Boosted mod
 
 $small-font-size:             $font-size-sm !default; // Boosted mod → 14px
 $small-line-height:           $line-height-sm !default; // Boosted mod → 16px
@@ -423,11 +424,12 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .5625rem map-get($spacers, 2) map-get($spacers, 2) !default; // Boosted mod
-// stylelint-disable function-blacklist
-$table-cell-line-height:      calc(30 / 16) !default; // Boosted mod
-$table-cell-line-height-sm:   calc(20 / 16) !default; // Boosted mod
-// stylelint-enable function-blacklist
+$table-cell-padding-y:        .875rem !default;
+$table-cell-padding-x:        $spacer / 2 !default;
+$table-cell-padding-y-sm:     subtract($spacer / 2, $border-width / 2) !default;
+$table-cell-padding-x-sm:     $table-cell-padding-x !default;
+
+$table-cell-line-height:      1.25 !default; // Boosted mod
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
@@ -1304,6 +1306,7 @@ $kbd-color:                         $black !default;
 $kbd-bg:                            $gray-300 !default;
 
 $pre-color:                         $gray-900 !default;
+$pre-line-height:                   1.25 !default; // Boosted mods
 $pre-scrollable-max-height:         340px !default;
 
 
