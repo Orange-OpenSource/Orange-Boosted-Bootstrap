@@ -65,7 +65,7 @@ Boosted grid is heavily documented: [breakpoints]({{< docsref "/layout/breakpoin
         <td><code>1180px</code></td>
         <td>12</td>
         <td><code>80px</code></td>
-        <td><code>10px</code></td>
+        <td><code>20px</code></td>
         <td><code>10px</code></td>
       </tr>
       <tr>
