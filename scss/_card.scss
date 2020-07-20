@@ -270,7 +270,7 @@
         @include caret($accordion: true);
 
         &:not(.collapsed) {
-          color: $primary;
+          color: $orange-2;
 
           &::after {
             transform: rotate(180deg);

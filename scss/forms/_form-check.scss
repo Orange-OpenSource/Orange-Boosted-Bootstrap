@@ -95,6 +95,22 @@
     &:checked {
       background-color: $input-border-color;
       border-color: $input-border-color;
+
+      &[type="checkbox"] {
+        @if $enable-gradients {
+          background-image: escape-svg($form-check-input-disabled-bg-image), var(--bs-gradient);
+        } @else {
+          background-image: escape-svg($form-check-input-disabled-bg-image);
+        }
+      }
+
+      &[type="radio"] {
+        @if $enable-gradients {
+          background-image: escape-svg($form-check-radio-disabled-bg-image), var(--bs-gradient);
+        } @else {
+          background-image: escape-svg($form-check-radio-disabled-bg-image);
+        }
+      }
     }
     // End mod
   }
@@ -112,7 +128,7 @@
   &:required {
     ~ .form-check-label::after {
       margin-left: $form-label-margin-bottom;
-      color: $primary;
+      color: $orange-2;
       content: "*";
     }
   }
@@ -142,7 +158,9 @@
     background-position: $form-switch-bg-position, 0 0;
     background-size: $form-switch-bg-size, $form-switch-bg-square-size; // Get a 1px separation
     border-color: $black;
+    outline-offset: $spacer; // Boosted mod
     @include border-radius($form-switch-border-radius);
+    @include transition($transition-focus); // Boosted mod
 
     &:checked {
       background-color: $primary;
@@ -165,7 +183,7 @@
     }
 
     &:focus {
-      // @TODO: custom focus
+      outline-offset: $outline-width / 2;
     }
 
     &:active {
@@ -176,6 +194,16 @@
     &:disabled {
       background-color: $input-border-color;
       border-color: $input-border-color;
+
+      // Boosted mod
+      &:checked {
+        @if $enable-gradients {
+          background-image: escape-svg($form-switch-disabled-bg-image), var(--bs-gradient), var(--o-switch-gradient);
+        } @else {
+          background-image: escape-svg($form-switch-disabled-bg-image), var(--o-switch-gradient);
+        }
+      }
+      // End mod
     }
   }
 

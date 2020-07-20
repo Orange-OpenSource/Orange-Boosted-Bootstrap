@@ -64,7 +64,7 @@
 // Boosted mod: inconsistent theming ¯\_(ツ)_/¯
 .btn-primary,
 .btn-warning {
-  @include button-variant($primary, $primary, $white, $active-background: $white, $active-border: $black, $active-color: $black);
+  @include button-variant($primary, $primary, $black, $active-background: $white, $active-border: $black, $active-color: $black);
 }
 
 .btn-light,

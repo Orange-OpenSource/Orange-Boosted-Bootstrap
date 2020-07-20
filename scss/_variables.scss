@@ -32,8 +32,8 @@ $grays: (
 
 // Boosted mod
 //// Core colors
-$orange:   #f16e00 !default;
-$orange-2: #ff7900 !default;
+$orange:   #ff7900 !default;
+$orange-2: #f16e00 !default;
 //// Functional colors
 $green:    #32c832 !default;
 $blue:     #527edb !default;
@@ -291,7 +291,7 @@ $body-text-align:           null !default;
 
 $link-color:                              $black !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        $primary !default;
+$link-hover-color:                        $orange-2 !default;
 $link-hover-decoration:                   null !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -380,7 +380,7 @@ $box-shadow:                  null !default;
 $box-shadow-sm:               null !default;
 $box-shadow-inset:            null !default;
 
-$component-active-color:      $white !default;
+$component-active-color:      $black !default;
 $component-active-bg:         $primary !default;
 
 $caret-width:                 add($spacer / 4, $border-width) !default;
@@ -722,10 +722,12 @@ $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$form-check-input-checked-color}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
+$form-check-input-disabled-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{color-contrast($form-check-input-checked-color)}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default; // Boosted mod
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-radio-disabled-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{color-contrast($form-check-input-checked-color)}'/></svg>") !default;
 
-$form-check-input-indeterminate-color:          $component-active-color !default;
-$form-check-input-indeterminate-bg-color:       $black !default;
+$form-check-input-indeterminate-color:          color-contrast($component-active-color) !default;
+$form-check-input-indeterminate-bg-color:       $component-active-color !default;
 $form-check-input-indeterminate-border-color:   $form-check-input-indeterminate-bg-color !default;
 $form-check-input-indeterminate-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'><path fill='#{$form-check-input-indeterminate-color}' d='M0 0h10v3H0z'/></svg>") !default;
 
@@ -740,6 +742,7 @@ $form-switch-bg-square-size:      add(1rem, $spacer / 2) !default;
 $form-switch-border-radius:       null !default;
 
 $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default;
+$form-switch-disabled-bg-image:   $form-check-input-disabled-bg-image !default; // Boosted mod
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default;
 $form-switch-checked-bg-position: $border-width * 3 50% !default;
 
@@ -889,8 +892,8 @@ $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $nav-tabs-link-active-color !default;
 
 $nav-pills-border-radius:           $border-radius !default;
-$nav-pills-link-active-color:       $white !default;
-$nav-pills-link-active-bg:          $primary !default;
+$nav-pills-link-active-color:       $component-active-color !default;
+$nav-pills-link-active-bg:          $component-active-bg !default;
 
 
 // Navbar
@@ -931,21 +934,21 @@ $navbar-toggler-focus-width:        null !default;
 $navbar-toggler-transition:         $transition-focus !default;
 
 $navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $orange-2 !default;
-$navbar-dark-active-color:          $orange-2 !default;
+$navbar-dark-hover-color:           $primary !default;
+$navbar-dark-active-color:          $primary !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  transparent !default;
 
 $navbar-light-color:                $black !default;
-$navbar-light-hover-color:          $orange !default;
-$navbar-light-active-color:         $orange !default;
+$navbar-light-hover-color:          $orange-2 !default;
+$navbar-light-active-color:         $orange-2 !default;
 $navbar-light-disabled-color:       $gray-500 !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: null !default;
 
-$navbar-light-brand-color:                $navbar-light-active-color !default;
-$navbar-light-brand-hover-color:          $navbar-light-active-color !default;
+$navbar-light-brand-color:          $navbar-light-active-color !default;
+$navbar-light-brand-hover-color:    $navbar-light-active-color !default;
 $navbar-dark-brand-color:           inherit !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
@@ -1006,7 +1009,7 @@ $pagination-hover-color:            $black !default;
 $pagination-hover-bg:               $white !default;
 $pagination-hover-border-color:     $gray-500 !default;
 
-$pagination-active-color:           $component-active-color !default;
+$pagination-active-color:           $white !default;
 $pagination-active-bg:              $black !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 

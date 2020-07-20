@@ -103,14 +103,14 @@
 
     &:hover,
     &:focus {
-      color: $primary;
+      color: $orange-2;
       background: none;
       border-color: transparent;
       outline-color: currentColor;
     }
 
     &.active {
-      border-bottom-color: $primary;
+      border-bottom-color: $orange-2;
     }
   }
 }
