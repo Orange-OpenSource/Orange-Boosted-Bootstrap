@@ -57,6 +57,7 @@
     margin-right: $alert-logo-size;
     content: "";
     background-repeat: no-repeat;
+    background-size: $alert-logo-size;
   }
 }
 // end mod
@@ -125,6 +126,7 @@
       min-width: $alert-logo-size-sm;
       height: $alert-logo-size-sm;
       margin-right: $alert-logo-size-sm / 2;
+      background-size: $alert-logo-size-sm;
     }
   }
 
