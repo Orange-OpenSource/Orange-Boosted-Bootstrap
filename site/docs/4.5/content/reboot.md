@@ -39,15 +39,7 @@ $font-family-sans-serif:
   // Helvetica Neue
   Helvetica Neue, 
   // Websafe Fallbacks
-  Helvetica, Arial
-  // Safari for macOS and iOS (San Francisco)
-  -apple-system,
-  // Chrome < 56 for macOS (San Francisco)
-  BlinkMacSystemFont,
-  // Windows
-  Segoe UI,
-  // Android
-  Roboto,
+  Helvetica, Arial,
   // Ubuntu
   Liberation Sans,
   // Generic
