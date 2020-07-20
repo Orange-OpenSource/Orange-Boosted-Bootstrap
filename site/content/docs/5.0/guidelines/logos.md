@@ -47,7 +47,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
       <figure class="figure embed-responsive-item d-flex bg-dark">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
-          <span class="h5 ml-2 mb-0 align-self-end"``>
+          <span class="h5 ml-2 mb-0 align-self-end">
             <span class="sr-only">Orange </span>
             Business<br>Services
           </span>
