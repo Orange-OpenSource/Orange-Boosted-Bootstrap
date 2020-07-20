@@ -47,8 +47,8 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
       <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.875rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.25rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
       <td>1 <small class="text-muted">(34px)</small></td>
       <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
     </tr>
@@ -67,10 +67,10 @@ All HTML headings, `<h1>` through `<h6>`, are available.
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
       <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
-      <td>Bold 1.25rem <small class="text-muted">(18px)</small></td>
+      <td>Bold 1.125rem <small class="text-muted">(18px)</small></td>
       <td rowspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
       <td>1.083 <small class="text-muted">(26px)</small></td>
-      <td>-0.0375rem <small class="text-muted">(-0.5px)</small></td>
+      <td>-0.03125rem <small class="text-muted">(-0.5px)</small></td>
     </tr>
     <tr>
       <td>
@@ -162,7 +162,7 @@ Traditional heading elements are designed to work best in the meat of your page 
       <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
       <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
       <td>1 <small class="text-muted">(60px)</small></td>
-      <td>-0.15rem <small class="text-muted">(-2px)</small></td>
+      <td>-0.125rem <small class="text-muted">(-2px)</small></td>
     </tr>
     <tr>
       <td>Display 2</td>
@@ -176,9 +176,9 @@ Traditional heading elements are designed to work best in the meat of your page 
       <td>Display 3</td>
       <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
       <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.25rem <small class="text-muted">(24px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
       <td>1 <small class="text-muted">(40px)</small></td>
-      <td>-0.075rem <small class="text-muted">(-1px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
     </tr>
     <tr>
       <td>Display 4</td>
