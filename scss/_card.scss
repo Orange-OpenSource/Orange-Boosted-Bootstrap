@@ -40,6 +40,12 @@
   > .list-group + .card-footer {
     border-top: 0;
   }
+
+  // Boosted mod
+  > .list-group + .card-footer {
+    padding-top: $card-spacer-y / 2;
+  }
+  // End mod
 }
 
 .card-body {
@@ -55,6 +61,12 @@
 
 .card-title {
   margin-bottom: $card-spacer-y;
+
+  // Boosted mod: prevent unwanted margin when nothing follows…
+  &:only-child {
+    margin-bottom: 0;
+  }
+  // End mod
 }
 
 .card-subtitle {
@@ -86,7 +98,7 @@
   font-weight: $font-weight-bold; // Boosted mod
   color: $card-cap-color;
   background-color: $card-cap-bg;
-  border-bottom: $card-border-width solid $card-border-color;
+  border-bottom: $card-border-width solid $card-cap-bg; // Boosted mod
 
   &:first-child {
     @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
@@ -94,10 +106,12 @@
 }
 
 .card-footer {
-  padding: $card-spacer-y $card-spacer-x;
-  color: $card-cap-bg; // Boosted mod
-  background-color: $card-cap-color; // Boosted mod
-  border-top: $card-border-width solid $card-border-color;
+  // Boosted mod
+  padding: 0 $card-spacer-x $card-spacer-y / 2;
+  font-weight: $font-weight-bold;
+  color: $card-footer-color;
+  background-color: $card-cap-color;
+  // End mod
 
   &:last-child {
     @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
