@@ -10,7 +10,7 @@ toc: true
 
 Boosted "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
 
-For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="sr-only">Loading...</span>`.
+For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
 
 ## Border spinner
 
@@ -18,7 +18,7 @@ Use the border spinners for a lightweight loading indicator.
 
 {{< example >}}
 <div class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 
@@ -29,10 +29,10 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 <!-- Boosted mod -->
 {{< example >}}
 <div class="spinner-border text-primary" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 <div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 <!-- End mod -->
@@ -47,7 +47,7 @@ If you don't fancy a border spinner, switch to the grow spinner. While it doesn'
 
 {{< example >}}
 <div class="spinner-grow" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 
@@ -56,10 +56,10 @@ Once again, this spinner is built with `currentColor`, so you can easily change 
 <!-- Boosted mod -->
 {{< example >}}
 <div class="spinner-grow text-primary" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 <div class="spinner-grow text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 <!-- End mod -->
@@ -74,7 +74,7 @@ Use [margin utilities][margin] like `.m-5` for easy spacing.
 
 {{< example >}}
 <div class="spinner-border m-5" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 
@@ -87,7 +87,7 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 {{< example >}}
 <div class="d-flex justify-content-center">
   <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
+    <span class="visually-hidden">Loading...</span>
   </div>
 </div>
 {{< /example >}}
@@ -104,7 +104,7 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 {{< example >}}
 <div class="clearfix">
   <div class="spinner-border float-right" role="status">
-    <span class="sr-only">Loading...</span>
+    <span class="visually-hidden">Loading...</span>
   </div>
 </div>
 {{< /example >}}
@@ -114,7 +114,7 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 {{< example >}}
 <div class="text-center">
   <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
+    <span class="visually-hidden">Loading...</span>
   </div>
 </div>
 {{< /example >}}
@@ -129,10 +129,10 @@ Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that c
 
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 <div class="spinner-grow spinner-grow-sm" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 
@@ -140,10 +140,10 @@ Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that c
 
 {{< example >}}
 <div class="spinner-border spinner-border-lg" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 <div class="spinner-grow spinner-grow-lg" role="status">
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </div>
 {{< /example >}}
 
@@ -156,7 +156,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -167,7 +167,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  <span class="sr-only">Loading...</span>
+  <span class="visually-hidden">Loading...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>

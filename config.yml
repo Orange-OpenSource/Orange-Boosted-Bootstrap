@@ -50,9 +50,10 @@ params:
   current_version:      "5.0.0-alpha1"
   current_ruby_version: "5.0.0-alpha1"
   docs_version:         "5.0"
-  rfs_version:          "9.0.2"
+  rfs_version:          "9.0.3"
   repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:              "orange"
+  icons:                "https://icons.getbootstrap.com/"
 
   download:
     source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha1.zip"
@@ -69,5 +70,5 @@ params:
     js_hash:          "sha384-28sMzIF3Evp+sqaADb7K1o+UUdiIY/tg6RLLRUdpVTRZka/4TJNTBe+PkyVEdRKN"
     js_bundle:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha1/dist/js/boosted.bundle.min.js"
     js_bundle_hash:   "sha384-TAzOy09wyq4BX1UWDu/jDPTLg0fTR7vc6kXzyyvabyuRDtXfChWTShIJGHCmUKTE"
-    popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     popper_hash:      "sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"

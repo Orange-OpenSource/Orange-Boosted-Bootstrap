@@ -18,7 +18,7 @@
   @if $state == "valid" {
     .#{$state}-feedback {
       display: none;
-      @extend .sr-only; // Boosted mod: Do not visually display .valid-feedback
+      @extend .visually-hidden; // Boosted mod: Do not visually display .valid-feedback
     }
 
     @if $enable-validation-icons {

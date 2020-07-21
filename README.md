@@ -41,7 +41,7 @@ Our default branch is for development of our upcoming Bootstrap 5 release. Head 
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha1.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha1.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@next`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@next`
