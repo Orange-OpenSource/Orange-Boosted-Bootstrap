@@ -172,7 +172,7 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
     <div class="btn-group">
       <button type="button" class="btn btn-secondary">Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -190,7 +190,7 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
     <div class="btn-group">
       <button type="button" class="btn btn-secondary active">Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -208,7 +208,7 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
     <div class="btn-group">
       <button type="button" class="btn btn-secondary" disabled>Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false" disabled>
-        <span class="sr-only">Toggle Dropdown</span>
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>

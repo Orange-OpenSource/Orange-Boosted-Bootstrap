@@ -88,7 +88,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck">
             <label class="form-check-label" for="customCheck">
-              <span class="custom-control-description sr-only">Select all</span>
+              <span class="custom-control-description visually-hidden">Select all</span>
             </label>
           </div>
         </th>
@@ -104,7 +104,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck1">
             <label class="form-check-label" for="customCheck1">
-                <span class="custom-control-description sr-only">Select first row</span>
+                <span class="custom-control-description visually-hidden">Select first row</span>
             </label>
           </div>
         </td>
@@ -118,7 +118,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck2">
             <label class="form-check-label" for="customCheck2">
-                <span class="custom-control-description sr-only">Select second row</span>
+                <span class="custom-control-description visually-hidden">Select second row</span>
             </label>
           </div>
         </td>
@@ -132,7 +132,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck3" checked>
             <label class="form-check-label" for="customCheck3">
-                <span class="custom-control-description sr-only">Select third row</span>
+                <span class="custom-control-description visually-hidden">Select third row</span>
             </label>
           </div>
         </td>
@@ -146,7 +146,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck4" checked>
             <label class="form-check-label" for="customCheck4">
-                <span class="custom-control-description sr-only">Select fourth row</span>
+                <span class="custom-control-description visually-hidden">Select fourth row</span>
             </label>
           </div>
         </td>
@@ -160,7 +160,7 @@ toc: true
             <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck5">
             <label class="form-check-label" for="customCheck5">
-                <span class="custom-control-description sr-only">Select fifth row</span>
+                <span class="custom-control-description visually-hidden">Select fifth row</span>
             </label>
           </div>
         </td>
@@ -174,7 +174,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck6">
             <label class="form-check-label" for="customCheck6">
-                <span class="custom-control-description sr-only">Select sixth row</span>
+                <span class="custom-control-description visually-hidden">Select sixth row</span>
             </label>
           </div>
         </td>
@@ -188,7 +188,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck7">
             <label class="form-check-label" for="customCheck7">
-                <span class="custom-control-description sr-only">Select seventh row</span>
+                <span class="custom-control-description visually-hidden">Select seventh row</span>
             </label>
           </div>
         </td>
@@ -202,7 +202,7 @@ toc: true
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck8">
             <label class="form-check-label" for="customCheck8">
-                <span class="custom-control-description sr-only">Select eighth row</span>
+                <span class="custom-control-description visually-hidden">Select eighth row</span>
             </label>
           </div>
         </td>
@@ -235,7 +235,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck9">
             <label class="form-check-label" for="customCheck9">
-              <span class="custom-control-description sr-only">Select all</span>
+              <span class="custom-control-description visually-hidden">Select all</span>
             </label>
           </div>
         </th>
@@ -251,7 +251,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck10">
             <label class="form-check-label" for="customCheck10">
-              <span class="custom-control-description sr-only">Select first row</span>
+              <span class="custom-control-description visually-hidden">Select first row</span>
             </label>
           </div>
         </td>
@@ -271,7 +271,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck11">
             <label class="form-check-label" for="customCheck11">
-              <span class="custom-control-description sr-only">Select second row</span>
+              <span class="custom-control-description visually-hidden">Select second row</span>
             </label>
           </div>
         </td>
@@ -291,7 +291,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck12" checked>
             <label class="form-check-label" for="customCheck12">
-              <span class="custom-control-description sr-only">Select third row</span>
+              <span class="custom-control-description visually-hidden">Select third row</span>
             </label>
           </div>
         </td>
@@ -311,7 +311,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck13" checked>
             <label class="form-check-label" for="customCheck13">
-              <span class="custom-control-description sr-only">Select fourth row</span>
+              <span class="custom-control-description visually-hidden">Select fourth row</span>
             </label>
           </div>
         </td>
@@ -331,7 +331,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
             <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck14">
             <label class="form-check-label" for="customCheck14">
-              <span class="custom-control-description sr-only">Select fifth row</span>
+              <span class="custom-control-description visually-hidden">Select fifth row</span>
             </label>
           </div>
         </td>
@@ -351,7 +351,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck15">
             <label class="form-check-label" for="customCheck15">
-              <span class="custom-control-description sr-only">Select sixth row</span>
+              <span class="custom-control-description visually-hidden">Select sixth row</span>
             </label>
           </div>
         </td>
@@ -371,7 +371,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck16">
             <label class="form-check-label" for="customCheck16">
-              <span class="custom-control-description sr-only">Select seventh row</span>
+              <span class="custom-control-description visually-hidden">Select seventh row</span>
             </label>
           </div>
         </td>
@@ -391,7 +391,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           <div class="form-check mb-0">
             <input class="form-check-input" type="checkbox" id="customCheck17">
             <label class="form-check-label" for="customCheck17">
-              <span class="custom-control-description sr-only">Select eighth row</span>
+              <span class="custom-control-description visually-hidden">Select eighth row</span>
             </label>
           </div>
         </td>

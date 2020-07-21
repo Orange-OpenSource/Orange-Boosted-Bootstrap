@@ -15,12 +15,12 @@ where type is one of info (default), danger, warning, success
 </p>
 
 <div class="alert alert-{{ $css_class }} alert-dismissible fade show" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ humanize $css_class }}</span></span>
+  <span class="alert-icon"><span class="visually-hidden">{{ humanize $css_class }}</span></span>
   <p>{{ humanize $css_class }} notification text goes here.</p>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 </div>
 <div class="alert alert-{{ $css_class }} alert-dismissible fade show" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ humanize $css_class }}</span></span>
+  <span class="alert-icon"><span class="visually-hidden">{{ humanize $css_class }}</span></span>
   <p>{{ humanize $css_class }} notification text goes here. <a href="#">Action</a></p>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 </div>
@@ -31,7 +31,7 @@ where type is one of info (default), danger, warning, success
 </p>
 
 <div class="alert alert-{{ $css_class }} alert-dismissible fade show" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ humanize $css_class }}</span></span>
+  <span class="alert-icon"><span class="visually-hidden">{{ humanize $css_class }}</span></span>
   <div>
     <h4 class="alert-heading">{{ humanize $css_class }} notification text goes here.</h4>
     <p>Description text goes here.</p>
@@ -39,7 +39,7 @@ where type is one of info (default), danger, warning, success
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 </div>
 <div class="alert alert-{{ $css_class }} alert-dismissible fade show" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ humanize $css_class }}</span></span>
+  <span class="alert-icon"><span class="visually-hidden">{{ humanize $css_class }}</span></span>
   <div>
     <h4 class="alert-heading">{{ humanize $css_class }} notification text goes here. <a href="#">Action</a></h4>
     <p>Description text goes here.</p>
@@ -53,10 +53,10 @@ where type is one of info (default), danger, warning, success
 </p>
 
 <div class="alert alert-{{ $css_class }} alert-sm" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ humanize $css_class }}</span></span>
+  <span class="alert-icon"><span class="visually-hidden">{{ humanize $css_class }}</span></span>
   <p>{{ humanize $css_class }} notification text goes here.</p>
 </div>
 <div class="alert alert-{{ $css_class }} alert-sm" role="alert">
-  <span class="alert-icon"><span class="sr-only">{{ humanize $css_class }}</span></span>
+  <span class="alert-icon"><span class="visually-hidden">{{ humanize $css_class }}</span></span>
   <p>{{ humanize $css_class }} notification text goes here. <a href="#">Action</a></p>
 </div>
