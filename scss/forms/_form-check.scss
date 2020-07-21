@@ -243,7 +243,7 @@
 
   &:hover + .btn,
   + .btn:hover {
-    color: $primary;
+    color: $orange-2;
     background-color: $white;
     border-color: $gray-500;
   }
@@ -270,7 +270,7 @@
   &:active + .btn,
   + .btn:active,
   + .btn.active {
-    color: $white;
+    color: color-contrast($primary);
     background-color: $primary;
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
