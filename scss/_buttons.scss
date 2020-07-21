@@ -64,16 +64,16 @@
 // Boosted mod: inconsistent theming ¯\_(ツ)_/¯
 .btn-primary,
 .btn-warning {
-  @include button-variant($primary, $primary, $black, $active-background: $white, $active-border: $black, $active-color: $black);
+  @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
 }
 
 .btn-light,
 .btn-secondary {
-  @include button-variant($white, $black, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
+  @include button-variant($white, $black, $disabled-background: $white, $disabled-border: $gray-500, $disabled-color: $gray-500);
 }
 
 .btn-success {
-  @include button-variant($success, $success, $black);
+  @include button-variant($success, $success);
 }
 
 .btn-info,
@@ -82,7 +82,7 @@
 }
 
 .btn-danger {
-  @include button-variant($danger, $danger, $white);
+  @include button-variant($danger, $danger);
 }
 
 // Boosted mod: no .btn-outline
