@@ -7,10 +7,6 @@
     "threshold": 500,
     "runners": [
       "axe"
-    ],
-    "hideElements": ".bd-search, [class*=-success], [class*=-info], [class*=-light]",
-    "ignore": [
-      "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18"
     ]
   }
 }
