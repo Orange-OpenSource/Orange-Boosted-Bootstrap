@@ -38,7 +38,7 @@
       &:hover,
       &:focus,
       &:not(.collapsed) {
-        color: $primary;
+        color: $orange-2;
 
         &::before {
           // @note Using `filter` to color inlined SVG
