@@ -14,33 +14,33 @@ toc: true
 <div class="row row-cols-3 row-cols-md-4 gy-3">
   <div class="col">
     <div class="spinner-border spinner-border-lg text-primary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
   <div class="col text-center text-md-left">
     <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
   <div class="col text-center text-md-left">
     <div class="spinner-border spinner-border-sm text-primary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
   <div class="w-100 d-none d-md-block"></div>
   <div class="col">
     <div class="spinner-border spinner-border-lg text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
   <div class="col text-center text-md-left">
     <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
   <div class="col text-center text-md-left">
     <div class="spinner-border spinner-border-sm text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
 </div>
