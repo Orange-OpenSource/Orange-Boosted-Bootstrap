@@ -35,10 +35,10 @@
   }
 
   &:active {
-    color: $pagination-active-color;
+    color: color-contrast($pagination-active-item-bg);
     background-color: $pagination-active-item-bg;
-    border-color: $pagination-active-item-border-color;
-    outline-color: $pagination-active-item-border-color; // Boosted mod
+    border-color: $pagination-active-item-border;
+    outline-color: $pagination-active-item-border; // Boosted mod
   }
 
   // Boosted mod
@@ -93,17 +93,20 @@
       background-color: $pagination-hover-color;
       border-color: $pagination-hover-color;
       outline-color: $pagination-hover-color; // Boosted mod
+
+      &::before {
+        background-image: escape-svg($pagination-icon-hover);
+      }
     }
 
     &:active {
       color: color-contrast($pagination-active-item-bg);
       background-color: $pagination-active-item-bg;
-      border-color: $pagination-active-item-border-color;
-    }
+      border-color: $pagination-active-item-border;
 
-    &:hover::before,
-    &:focus::before {
-      background-image: escape-svg($pagination-icon-hover);
+      &::before {
+        background-image: escape-svg($pagination-icon);
+      }
     }
 
     &.has-label {
