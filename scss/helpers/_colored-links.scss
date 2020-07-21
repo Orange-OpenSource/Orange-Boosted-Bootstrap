@@ -1,4 +1,4 @@
-@each $color, $value in ("primary": $primary, "light": $light) { // Boosted mod: restrict to primary and light
+@each $color, $value in ("primary": $orange-2, "light": $light) { // Boosted mod: restrict to primary and light
   .link-#{$color} {
     color: $value;
     background-color: color-contrast($value); // Boosted mod: ensure contrast
