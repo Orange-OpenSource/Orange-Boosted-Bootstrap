@@ -62,7 +62,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   <div class="col-md-4 mb-3">
     <div class="p-3 mb-2 bd-orange-2">
       <strong class="d-block">$orange-2</strong>
-      #ff7900
+      #f16e00
     </div>
     <div class="p-3 mb-2 bd-yellow-2">
       <strong class="d-block">$yellow-2</strong>
