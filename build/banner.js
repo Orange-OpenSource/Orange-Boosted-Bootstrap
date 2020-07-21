@@ -8,7 +8,7 @@ function getBanner(pluginFilename) {
   * Boosted v${pkg.version} (${pkg.homepage})
   * Copyright 2015-${year} The Boosted Authors
   * Copyright 2015-${year} Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
   * Bootstrap${pluginFilename ? ` ${pluginFilename}` : ''} v${pkg.version} (${pkg.homepage})
   * Copyright 2011-${year} ${pkg.author}
