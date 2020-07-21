@@ -880,6 +880,10 @@ $zindex-tooltip:                    1070 !default;
 
 $nav-link-padding-y:                $spacer / 2 !default;
 $nav-link-padding-x:                $spacer !default;
+$nav-link-font-size:                null !default;
+$nav-link-font-weight:              $font-weight-bold !default;
+$nav-link-color:                    inherit !default;
+$nav-link-hover-color:              null !default;
 $nav-link-transition:               null !default;
 $nav-link-disabled-color:           $gray-500 !default;
 

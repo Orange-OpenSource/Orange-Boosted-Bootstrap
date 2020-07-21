@@ -54,10 +54,11 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/mixins";
 
 // Optional
+@import "../node_modules/boosted/scss/root";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
 @import "../node_modules/boosted/scss/images";
-@import "../node_modules/boosted/scss/code";
+@import "../node_modules/boosted/scss/containers";
 @import "../node_modules/boosted/scss/grid";
 {{< /highlight >}}
 
