@@ -10,13 +10,13 @@
       hex: "#000"
       variable: $secondary
     - name: Orange 1
-      class: orange-2
-      hex: "#ff7900"
-      variable: $orange-2
-    - name: Orange 2
       class: orange
-      hex: "#f16e00"
+      hex: "#ff7900"
       variable: $primary
+    - name: Orange 2
+      class: orange-2
+      hex: "#f16e00"
+      variable: $orange-2
 - category: Supporting colors
   name: "Supporting colors"
   colors:
