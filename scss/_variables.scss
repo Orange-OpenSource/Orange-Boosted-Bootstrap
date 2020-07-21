@@ -1020,8 +1020,8 @@ $pagination-disabled-border-color:  $pagination-disabled-color !default;
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
 $pagination-item-size:              $spacer * 2 !default;
-$pagination-active-item-bg:           $orange !default;
-$pagination-active-item-border-color: $pagination-active-item-bg !default;
+$pagination-active-item-bg:         $primary !default;
+$pagination-active-item-border:     $pagination-active-item-bg !default;
 $pagination-icon:                   $chevron-icon !default;
 $pagination-icon-hover:             $chevron-icon-hover !default;
 $pagination-icon-margin:            .1875rem !default;
