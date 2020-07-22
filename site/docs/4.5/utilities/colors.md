@@ -15,6 +15,15 @@ Please refer to [accessibility's color contrast section]({{ site.baseurl }}/docs
 
 [comment]: # end mod
 
+{% capture callout %}
+#### Dealing with specificity
+
+Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
+{% endcapture %}
+{% include callout.html content=callout type="info" %}
+
+{% include callout-warning-color-assistive-technologies.md %}
+
 ## Color
 
 [comment]: # Boosted mod
@@ -65,12 +74,3 @@ Similar to the contextual text color classes, easily set the background of an el
 {% include example.html content=example %}
 
 [comment]: # Boosted mod: no gradient
-
-{% capture callout %}
-#### Dealing with specificity
-
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
-{% endcapture %}
-{% include callout.html content=callout type="info" %}
-
-{% include callout-warning-color-assistive-technologies.md %}

@@ -279,6 +279,8 @@
 //
 
 .accordion {
+  overflow-anchor: none;
+
   // Boosted mod
   .card {
     position: static;

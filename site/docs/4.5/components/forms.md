@@ -574,7 +574,9 @@ Add the `.disabled` class to the label for a disabled input.
 {% capture callout %}
 ##### Caveat with anchors
 
-By default, browsers will treat all native form controls (`<input>`, `<select>` and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes `<a ... class="btn btn-*">` elements, these will only be given a style of `pointer-events: none`. As noted in the section about [disabled state for buttons]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state) (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Internet Explorer 10, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.
+Browsers treat all native form controls (`<input>`, `<select>`, and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them.
+
+However, if your form also includes custom button-like elements such as `<a ... class="btn btn-*">`, these will only be given a style of `pointer-events: none`. As noted in the section about [disabled state for buttons]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state) (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Internet Explorer 10. The anchor-based controls will also still be focusable and operable using the keyboard. You must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
@@ -592,7 +594,7 @@ Provide valuable, actionable feedback to your users with HTML5 form validationâ€
 Indicate that a field is **required** by adding the class `.is-required` on the associated label, and adding a `<span class="sr-only"> (required)</span>` visually hidden text inside label itself.
 
 {% capture callout %}
-We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
+We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we'd recommend either using the server-side option or the default browser validation method.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
@@ -746,20 +748,22 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 
 We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
 
+For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby`. This attribute allows more than one `id` to be referenced, in case the field already points to additional form text.
+
 {% capture example %}
 <form>
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationServer01" class="is-required">First name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-valid" id="validationServer01" aria-describedby="validationServer01Feedback" placeholder="First name" value="Mark" required>
-      <div class="valid-feedback" id="validationServer01Feedback">
+      <div id="validationServer01Feedback" class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationServer02" class="is-required">Last name<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-valid" id="validationServer02" aria-describedby="validationServer02Feedback" placeholder="Last name" value="Otto" required>
-      <div class="valid-feedback" id="validationServer02Feedback">
+      <div id="validationServer02Feedback" class="valid-feedback">
         Looks good!
       </div>
     </div>
@@ -768,21 +772,24 @@ We recommend using client-side validation, but in case you require server-side v
     <div class="col-md-6 mb-3">
       <label for="validationServer03" class="is-required">City<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" placeholder="City" required>
-      <div class="invalid-feedback" id="validationServer03Feedback">
+      <div id="validationServer03Feedback" class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer04" class="is-required">State<span class="sr-only"> (required)</span></label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" placeholder="State" required>
-      <div class="invalid-feedback" id="validationServer04Feedback">
+      <select class="custom-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div id="validationServer04Feedback" class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer05" class="is-required">Zip<span class="sr-only"> (required)</span></label>
       <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" placeholder="Zip" required>
-      <div class="invalid-feedback" id="validationServer05Feedback">
+      <div id="validationServer05Feedback" class="invalid-feedback">
         Please provide a valid zip.
       </div>
     </div>
@@ -794,7 +801,7 @@ We recommend using client-side validation, but in case you require server-side v
         Agree to terms and conditions<span class="is-required"></span>
         <span class="sr-only"> (required)</span>
       </label>
-      <div class="invalid-feedback" id="invalidCheck3Feedback">
+      <div id="invalidCheck3Feedback" class="invalid-feedback">
         You must agree before submitting.
       </div>
     </div>
