@@ -68,7 +68,7 @@
       }
 
       &:active {
-        color: $pagination-active-color;
+        color: color-yiq($pagination-active-item-bg);
         background-color: $pagination-active-item-bg;
         border-color: $pagination-active-item-border-color;
       }
@@ -122,11 +122,14 @@
 
   &:first-child .page-link:hover::before,
   &:first-child .page-link:focus::before,
-  &:first-child .page-link:active::before,
   &:last-child .page-link:hover::after,
-  &:last-child .page-link:focus::after,
-  &:last-child .page-link:active::after {
+  &:last-child .page-link:focus::after {
     background-image: escape-svg($pagination-icon-hover);
+  }
+
+  &:first-child .page-link:active::before,
+  &:last-child .page-link:active::after {
+    background-image: escape-svg($pagination-icon);
   }
   // End mod
 
@@ -147,7 +150,7 @@
 
   .page-link:active {
     z-index: 1;
-    color: $pagination-active-color;
+    color: color-yiq($pagination-active-item-bg);
     background-color: $pagination-active-item-bg;
     border-color: $pagination-active-item-border-color;
     outline-color: $pagination-active-item-border-color;

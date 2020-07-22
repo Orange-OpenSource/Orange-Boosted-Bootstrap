@@ -164,7 +164,7 @@ ul {
 // Future-proof markers' color
 // @see https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 li::marker {
-  color: theme-color("primary");
+  color: $orange-2;
   vertical-align: middle;
 }
 
@@ -182,7 +182,7 @@ li li li::marker {
 // @note To remove when ::marker support is OK
 // @see https://caniuse.com/#search=%3A%3Amarker
 li::before {
-  color: theme-color("primary");
+  color: $orange-2;
   vertical-align: text-top;
 }
 

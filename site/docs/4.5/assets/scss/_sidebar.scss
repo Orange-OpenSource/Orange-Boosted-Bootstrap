@@ -35,7 +35,7 @@
     // color: $gray-light; // Boosted mod
 
     &:hover {
-      color: theme-color("primary"); // Boosted mod
+      color: $orange-2; // Boosted mod
       text-decoration: none;
     }
   }
@@ -114,7 +114,7 @@
   // color: $gray-lightest; // Boosted mod
 
   &:hover {
-    color: theme-color("primary");// Boosted mod
+    color: $orange-2;// Boosted mod
     text-decoration: none;
   }
 }
@@ -128,7 +128,7 @@
     }
 
     > .bd-toc-link {
-      color: theme-color("primary"); // Boosted mod
+      color: $orange-2; // Boosted mod
 
       &:hover {
         background-color: transparent;
@@ -151,7 +151,7 @@
 }
 
 .bd-sidebar .nav > li > a:hover {
-  color: theme-color("primary"); // Boosted mod
+  color: $orange-2; // Boosted mod
   text-decoration: none;
   background-color: transparent;
 }

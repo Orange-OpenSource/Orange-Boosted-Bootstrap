@@ -46,7 +46,7 @@
   }
 
   &:active::after {
-    background: $primary escape-svg($o-scroll-up-icon-hover) no-repeat center / 50% 50%;
+    background: $primary escape-svg($o-scroll-up-icon) no-repeat center / 50% 50%;
     border-color: $primary;
   }
 

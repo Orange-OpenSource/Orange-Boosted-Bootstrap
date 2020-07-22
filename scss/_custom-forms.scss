@@ -192,8 +192,8 @@
   // Boosted mod move ::before gradient to global definition
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
-      background-color: $white;
-      border-color: $white;
+      background-color: $black;
+      border-color: $black;
     }
 
     &::after {
@@ -291,7 +291,10 @@
   .custom-control-input:disabled {
     ~ .custom-control-label::before,
     &:checked ~ .custom-control-label::before {
-      @include gradient-bg($custom-control-indicator-disabled-checked-bg); // Boosted mod
+      // Boosted mod
+      @include gradient-bg($custom-control-indicator-disabled-checked-bg);
+      background-image: escape-svg($custom-checkbox-indicator-icon-disabled);
+      // End mod
     }
   }
 }

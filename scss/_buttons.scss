@@ -77,44 +77,37 @@ fieldset:disabled a.btn {
 //
 
 // Boosted mod : custom buttons
-// @mixin button-variant($background, $border, $hover-background, $hover-border, $active-background, $active-border, $disabled-background, $disabled-border, $disabled-color, $color) {
 .btn-primary,
 .btn-warning {
-  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
+  @include button-variant(theme-color("primary"), theme-color("primary"), $active-background: $white, $active-border: $black);
   &.btn-inverse {
-    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
+    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black);
   }
 }
 .btn-secondary,
 .btn-light {
-  @include button-variant(transparent, $black, $black, $black, theme-color("primary"), theme-color("primary"), transparent, $gray-500, $gray-500, $black);
+  @include button-variant($white, $black, $disabled-background: $white, $disabled-color: $gray-500);
   &.btn-inverse {
-    @include button-variant(transparent, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700, $white);
+    @include button-variant($black, $white, $white, $white, theme-color("primary"), theme-color("primary"), transparent, $gray-700, $gray-700);
   }
 }
 .btn-success {
-  @include button-variant(theme-color("success"), theme-color("success"), $black, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $black);
+  @include button-variant(theme-color("success"), theme-color("success"));
   &.btn-inverse {
-    @include button-variant(theme-color("success"), theme-color("success"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
+    @include button-variant(theme-color("success"), theme-color("success"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black);
   }
 }
 .btn-info,
 .btn-dark {
-  @include button-variant($black, $black, $white, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white, $white);
+  @include button-variant(theme-color("dark"), theme-color("dark"), $white, $black);
   &.btn-inverse {
-    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black, $black);
-  }
-}
-.btn-warning {
-  @include button-variant(theme-color("primary"), theme-color("primary"), $black, $black, $white, $black, $gray-500, $gray-500, $white, $white);
-  &.btn-inverse {
-    @include button-variant(theme-color("primary"), theme-color("primary"), $white, $white, $black, $white, $gray-700, $gray-700, $black, $white);
+    @include button-variant($white, $white, $black, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black);
   }
 }
 .btn-danger {
-  @include button-variant(theme-color("danger"), theme-color("danger"), $black, $black, theme-color("primary"), theme-color("primary"), $gray-500, $gray-500, $white);
+  @include button-variant(theme-color("danger"), theme-color("danger"));
   &.btn-inverse {
-    @include button-variant(theme-color("danger"), theme-color("danger"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700, $black);
+    @include button-variant(theme-color("danger"), theme-color("danger"), $white, $white, theme-color("primary"), theme-color("primary"), $gray-700, $gray-700);
   }
 }
 
