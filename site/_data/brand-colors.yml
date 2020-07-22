@@ -8,10 +8,10 @@
       class: dark
       hex: "#000"
     - name: Digital Orange 1
-      class: orange-2
+      class: primary
       hex: "#ff7900"
     - name: Digital Orange 2
-      class: primary
+      class: orange-2
       hex: "#f16e00"
 - category: Functionnal colors
   name: "Functionnal colors"

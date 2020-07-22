@@ -39,19 +39,19 @@ $blue:     #527edb !default; // Boosted functional
 $purple:   #a885d8 !default; // Boosted supporting color
 $pink:     #ffb4e6 !default; // Boosted supporting color
 $red:      #cd3c14 !default; // Boosted functional
-$orange:   #f16e00 !default; // Boosted: to use on white (digital Orange 2)
+$orange:   #ff7900 !default; // Boosted: to use on black (digital Orange 1)
 $yellow:   #fc0 !default;    // Boosted functional
 $green:    #32c832 !default; // Boosted functional
 $teal:     #50be87 !default; // Boosted supporting color
 $cyan:     #4bb4e6 !default; // Boosted supporting color
 $yellow-2: #ffd200 !default; // Boosted supporting color
-$orange-2: #ff7900 !default; // Boosted: to use on black (digital Orange 1)
+$orange-2: #f16e00 !default; // Boosted: to use on white (digital Orange 2)
 
 $colors: () !default;
 $colors: map-merge(
   (
     "blue":       $blue,
-    // "indigo":     $indigo, // Boosted mod
+    "indigo":     $purple, // Boosted mod
     "purple":     $purple,
     "pink":       $pink,
     "red":        $red,
@@ -202,7 +202,7 @@ $body-color:                $black !default;
 
 $link-color:                              theme-color("dark") !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        theme-color("primary") !default;
+$link-hover-color:                        $orange-2 !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -630,7 +630,7 @@ $custom-control-indicator-disabled-bg:          $gray-300 !default;
 $custom-control-indicator-disabled-checked-bg:  $gray-500 !default;
 $custom-control-label-disabled-color:           $text-muted !default;
 
-$custom-control-indicator-checked-color:        $white !default;
+$custom-control-indicator-checked-color:        $black !default; // Boosted mod
 $custom-control-indicator-checked-bg:           theme-color("primary") !default;
 $custom-control-indicator-checked-box-shadow:   null !default;
 $custom-control-indicator-checked-border-color: theme-color("primary") !default; // Boosted mod controls have border
@@ -638,13 +638,14 @@ $custom-control-indicator-checked-border-color: theme-color("primary") !default;
 $custom-control-indicator-focus-box-shadow:     null !default;
 $custom-control-indicator-focus-border-color:   null !default;
 
-$custom-control-indicator-active-color:         $white !default;
+$custom-control-indicator-active-color:         $black !default; // Boosted mod
 $custom-control-indicator-active-bg:            theme-color("primary") !default;
 $custom-control-indicator-active-box-shadow:    null !default;
 $custom-control-indicator-active-border-color:  $custom-control-indicator-active-bg !default;
 
 $custom-checkbox-indicator-border-radius:       $border-radius !default;
 $custom-checkbox-indicator-icon-checked:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$custom-control-indicator-checked-color}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default; // Boosted mod
+$custom-checkbox-indicator-icon-disabled:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$white}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default; // Boosted mod
 
 $custom-checkbox-indicator-indeterminate-bg:           $component-active-bg !default;
 $custom-checkbox-indicator-indeterminate-color:        $white !default; // Boosted mod
@@ -812,8 +813,8 @@ $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $black !default;
 
 $nav-pills-border-radius:           $border-radius !default;
-$nav-pills-link-active-color:       $component-active-color !default;
-$nav-pills-link-active-bg:          $component-active-bg !default;
+$nav-pills-link-active-color:       $component-active-bg !default;
+$nav-pills-link-active-bg:          $primary !default;
 
 $nav-divider-color:                 $gray-200 !default;
 $nav-divider-margin-y:              $spacer / 2 !default;
@@ -859,14 +860,14 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-icon-size:          map-get($spacers, 4) !default; // Boosted mod
 
 $navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $orange-2 !default; // Boosted mod
+$navbar-dark-hover-color:           $primary !default; // Boosted mod
 $navbar-dark-active-color:          $navbar-dark-hover-color !default;
 $navbar-dark-disabled-color:        $gray-400 !default;
 $navbar-dark-toggler-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
 // $navbar-dark-toggler-border-color:  null !default; // Boosted mod
 
 $navbar-light-color:                $black !default;
-$navbar-light-hover-color:          $orange !default; // Boosted mod
+$navbar-light-hover-color:          $orange-2 !default; // Boosted mod
 $navbar-light-active-color:         $navbar-light-hover-color !default; // Boosted mod
 $navbar-light-disabled-color:       $gray-500 !default; // Boosted mod
 $navbar-light-toggler-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
@@ -948,8 +949,8 @@ $pagination-active-color:           $white !default;
 $pagination-active-bg:              $black !default;
 $pagination-active-border-color:    $black !default;
 
-$pagination-active-item-bg:                 $orange !default;
-$pagination-active-item-border-color:       $orange !default;
+$pagination-active-item-bg:                 $primary !default;
+$pagination-active-item-border-color:       $primary !default;
 
 $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
@@ -1163,7 +1164,7 @@ $progress-bg:                       $gray-300 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-box-shadow:               null !default;
 $progress-bar-color:                $black !default;
-$progress-bar-bg:                   $orange-2 !default; // Boosted mod
+$progress-bar-bg:                   $primary !default; // Boosted mod
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 
@@ -1306,7 +1307,7 @@ $kbd-color:                         $black !default;
 $kbd-bg:                            $gray-300 !default;
 
 $pre-color:                         $gray-900 !default;
-$pre-line-height:                   1.25 !default; // Boosted mods
+$pre-line-height:                   1.25 !default; // Boosted mod
 $pre-scrollable-max-height:         340px !default;
 
 
@@ -1328,7 +1329,7 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
 $accordion-arrow-size:        $custom-select-bg-size !default;
 $accordion-arrow-icon:        $custom-select-indicator !default;
-$accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$accordion-arrow-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$orange-2}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
 
 // Tablesorter
 $o-sortable-hover-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'><path d='M 7,17 0,10 h 14 l -7,7 z'/><path d='M 7,0 14,7 0,7 7,0 z'/></svg>") !default;
@@ -1338,7 +1339,7 @@ $o-sortable-icon-height:      .375rem !default;
 
 // Megamenu
 $o-megamenu-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$white}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
-$o-megamenu-icon-active:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$orange-2}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
+$o-megamenu-icon-active:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$primary}' d='M7 7L0 0h14L7 7z'/></svg>") !default;
 $o-megamenu-icon-size:        $accordion-arrow-size !default;
 $o-megamenu-arrow-icon:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$white}' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>") !default;
 $o-megamenu-arrow-icon-hover: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$primary}' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>") !default;

@@ -7,7 +7,7 @@
 - name: red
   hex: "#cd3c14"
 - name: orange
-  hex: "#f16e00"
+  hex: "#ff7900"
 - name: yellow
   hex: "#ffd200"
 - name: green
@@ -19,7 +19,7 @@
 - name: white
   hex: "#fff"
 - name: orange-2
-  hex: "#ff7900"
+  hex: "#f16e00"
 - name: gray
   hex: "#666"
 - name: gray-dark

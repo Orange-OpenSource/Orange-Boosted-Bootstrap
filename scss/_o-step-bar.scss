@@ -26,6 +26,15 @@
 .current {
   background-color: $primary;
 
+  .stepbar-link {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+    }
+  }
+
   ~ .stepbar-item {
     background-color: $gray-400;
 

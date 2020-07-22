@@ -85,7 +85,7 @@
   &.is-required label::after {
     margin-left: 6px;
     font-weight: $font-weight-bold;
-    color: theme-color("primary");
+    color: $orange-2;
     content: "*";
   }
 

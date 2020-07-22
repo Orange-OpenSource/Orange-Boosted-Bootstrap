@@ -75,12 +75,6 @@
   $max-ratio: 0;
   $max-ratio-color: null;
 
-  // Boosted mod: Orange is not the new Black
-  @if ($background == $primary) {
-    @return $color-contrast-light;
-  }
-  // End mod
-
   @each $color in $foregrounds {
     $contrast-ratio: contrast-ratio($background, $color);
     @if $contrast-ratio > $min-contrast-ratio {

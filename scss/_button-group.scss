@@ -33,7 +33,7 @@
   }
 }
 
-.btn-group {
+.btn-group:not(.btn-group-toggle) { // Boosted mod: borders are removed in .btn-group-toggle
   // Prevent double borders when buttons are next to each other
   > .btn:not(:first-child):not(.btn-icon),
   > .btn-group:not(:first-child) {
@@ -194,18 +194,19 @@
     &:hover,
     &:focus,
     &.focus {
-      color: theme-color("primary");
-      background-color: transparent;
+      color: $orange-2;
+      background-color: $white;
       border-color: $gray-500;
     }
 
     &:active {
-      color: $white;
+      color: $black;
       background-color: theme-color("primary");
     }
 
     // stylelint-disable selector-max-class
     &:not(:disabled):not(.disabled).active {
+      color: $white;
       background-color: $black;
       border-color: $black;
       outline-color: $black;
@@ -217,7 +218,9 @@
       &:hover,
       &:focus,
       &.focus {
-        color: $orange-2;
+        color: $primary;
+        background-color: $black;
+        border-color: $gray-700;
       }
 
       &:not(:disabled):not(.disabled).active {
@@ -229,7 +232,7 @@
     }
 
     &:not(:disabled):not(.disabled).active.focus-visible {
-      color: $white;
+      color: $black;
       background-color: theme-color("primary");
       border-color: theme-color("primary");
       outline-color: theme-color("primary");

@@ -54,13 +54,23 @@
 
 @each $color, $value in $theme-colors {
   // Boosted mod: disallow functionnal colors for text
-  @if ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
+  @if ($value != $primary) and ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
     @include text-emphasis-variant(".text-#{$color}", $value, true);
   }
   // end mod
 }
 
 // Boosted mod: ensure contrast
+.text-primary {
+  color: $orange-2 !important;
+
+  a#{&} {
+    @include hover-focus() {
+      color: darken($orange-2, $emphasized-link-hover-darken-percentage) !important;
+    }
+  }
+}
+
 .text-body {
   color: $body-color !important;
   background-color: $body-bg !important;
@@ -74,7 +84,7 @@
 .bg-dark,
 .table-dark,
 .navbar-dark {
-  @include text-emphasis-variant(".text-primary", $orange-2, true);
+  @include text-emphasis-variant(".text-primary", $primary, true);
 
   .text-body {
     color: $body-bg !important;

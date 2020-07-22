@@ -2,9 +2,11 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-// Boosted mod : add default color, disable-background, disabled-border and disabled-color option
-@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $disabled-background: $background, $disabled-border: $border, $disabled-color: color-yiq($background), $color: color-yiq($background)) {
-  color: $color; // Boosted mod: allowing white on Orange…
+// Boosted mod:
+// 1. add default color, disable-background, disabled-border and disabled-color option
+// 2. use branded default values
+@mixin button-variant($background, $border, $hover-background: $black, $hover-border: $black, $active-background: $primary, $active-border: $primary, $disabled-background: $gray-500, $disabled-border: $gray-500, $disabled-color: $white) {
+  color: color-yiq($background);
   @include gradient-bg($background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
