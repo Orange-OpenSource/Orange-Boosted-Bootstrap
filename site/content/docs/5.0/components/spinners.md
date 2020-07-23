@@ -12,7 +12,7 @@ Boosted "spinners" can be used to show the loading state in your projects. They'
 
 For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
 
-## Border spinner
+## Example
 
 Use the border spinners for a lightweight loading indicator.
 
@@ -41,28 +41,7 @@ The border spinner uses `currentColor` for its `border-color`, meaning you can c
 **Why not use `border-color` utilities?** Each border spinner specifies a `transparent` border for at least one side, so `.border-{color}` utilities would override that.
 {{< /callout >}}
 
-## Growing spinner
-
-If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
-
-{{< example >}}
-<div class="spinner-grow" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{< /example >}}
-
-Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in blue, along with the supported variants.
-
-<!-- Boosted mod -->
-{{< example >}}
-<div class="spinner-grow text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-<div class="spinner-grow text-secondary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{< /example >}}
-<!-- End mod -->
+<!-- Boosted: no Growing spinner -->
 
 ## Alignment
 
@@ -121,32 +100,19 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 
 ## Size
 
-Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that can quickly be used within other components.
-
 <!-- Boosted mod: -sm & -lg -->
 
-### Small
+Add `.spinner-border-sm` or `.spinner-border-lg` to make a smaller spinner that can quickly be used within other components.
+
 
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-<div class="spinner-grow spinner-grow-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-{{< /example >}}
-
-### Large
-
-{{< example >}}
 <div class="spinner-border spinner-border-lg" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-<div class="spinner-grow spinner-grow-lg" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
 {{< /example >}}
-
 <!-- End mod -->
 
 ## Buttons
@@ -164,17 +130,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 </button>
 {{< /example >}}
 
-{{< example >}}
-<button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
-</button>
-<button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  Loading...
-</button>
-{{< /example >}}
-
+<!-- Boosted: no Growing spinner -->
 
 [color]:   {{< docsref "/utilities/colors" >}}
 [display]: {{< docsref "/utilities/display" >}}
