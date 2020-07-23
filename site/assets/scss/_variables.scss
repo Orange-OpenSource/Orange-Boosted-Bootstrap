@@ -8,12 +8,11 @@ $bd-info:          $info;
 $bd-warning:       $warning;
 $bd-danger:        $danger;
 $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
-$sidebar-collapse-icon: $breadcrumb-divider; // Boosted mod
 
 // Boosted mod
 $offset-top: add(10rem, $spacer / 2);
 $sidebar-height: subtract(100vh, add($offset-top, 2rem));
-$sidebar-link-padding-x: .5rem;
-$sidebar-collapse-icon-size: $sidebar-link-padding-x;
+$sidebar-base-padding: $spacer / 2;
+$sidebar-link-padding: $sidebar-base-padding $sidebar-base-padding add($sidebar-base-padding, $border-width);
 $documentation-link-color: shade-color($info, 2);
 $documentation-link-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$documentation-link-color}' fill-rule='evenodd' d='M9.26 25a1.77 1.77 0 01-1.76-1.76V6.76A1.77 1.77 0 019.26 5h12.36v2.35h1.17V25M20.44 6.18H9.26a.59.59 0 00-.58.58.59.59 0 00.58.6h1.18V15l1.77-1.76L13.97 15V7.35h6.47z'/></svg>");

@@ -15,56 +15,53 @@
   }
 
   a {
-    padding: .1875rem $sidebar-link-padding-x; // Boosted mod
+    padding: $sidebar-link-padding; // Boosted mod
     margin-top: .125rem;
     text-decoration: if($link-decoration == none, null, none);
 
+    // Boosted mod
     // Indent if there's no submenu
     &:only-child {
-      margin-left: $spacer; // Boosted mod
+      padding-left: $spacer;
+    }
+
+    &:hover,
+    &:focus {
+      color: $black;
+      background-color: $gray-400;
     }
 
     // Add chevron if there's a submenu
     &:not(:only-child) {
-      &::before {
-        line-height: 0; // Align in the middle
-        content: escape-svg($sidebar-collapse-icon);
-        @include transition(transform .35s ease);
-        transform: translate3d(-$sidebar-collapse-icon-size, 0, 0); // Boosted mod
-        transform-origin: $sidebar-collapse-icon-size 50%;
+      @include caret($accordion: true);
+
+      &::after {
+        // stylelint-disable-next-line function-blacklist
+        transform: scale(calc(6 / 7));
       }
 
-      // Boosted mod
-      &:hover,
-      &:focus,
       &:not(.collapsed) {
         color: $orange-2;
 
-        &::before {
-          // @note Using `filter` to color inlined SVG
-          // @author Barrett Sonntag
-          // @see https://codepen.io/sosuke/pen/Pjoqqp
-          filter: invert(42%) sepia(63%) saturate(1332%) hue-rotate(1deg) brightness(99%) contrast(103%);
+        &:hover,
+        &:focus {
+          color: $black;
+        }
+
+        &::after {
+          // stylelint-disable-next-line function-blacklist
+          transform: scale(calc(6 / 7)) rotate(180deg);
         }
       }
-
-      &:not(.collapsed)::before {
-        transform: translate3d(subtract($spacer / -2, $border-width), $spacer / 4, 0) rotate(90deg);
-      }
-      // End mod
     }
 
-    // Boosted mod
     ~ * a {
-      // stylelint-disable-next-line declaration-no-important
-      margin-left: $spacer / 2 !important;
-      color: $gray-700;
+      padding-left: $spacer * 1.5;
     }
-    // End mod
   }
 
   .active {
-    font-weight: 700;
-    color: $black;
+    color: $orange-2;
   }
+  // End mod
 }

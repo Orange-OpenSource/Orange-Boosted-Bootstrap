@@ -1,6 +1,6 @@
 // stylelint-disable selector-max-type
 
-.bd-toc {
+.bd-toc-nav { // Boosted mod
   @include media-breakpoint-up(lg) {
     position: sticky;
     top: $offset-top; // Boosted mod
