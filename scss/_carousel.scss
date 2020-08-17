@@ -123,7 +123,9 @@
   // end mod
 }
 .carousel-control-prev {
-  right: auto; // Boosted mod: RTL
+  /* rtl:raw:
+  right: auto;
+   */
   left: map-get($spacers, 2); // Boosted mod
   @if $enable-gradients {
     background-image: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
@@ -131,7 +133,10 @@
 }
 .carousel-control-next {
   right: map-get($spacers, 2); // Boosted mod
-  left: auto; // Boosted mod: RTL
+
+  /* rtl:raw:
+  left: auto;
+   */
   @if $enable-gradients {
     background-image: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
   }
@@ -149,16 +154,16 @@
   display: inline-block;
   width: $spacer; // Boosted mod
   height: $carousel-control-icon-width;
-  background: no-repeat 50% / 100% 100%;
-}
-.carousel-control-prev-icon {
-  background-image: escape-svg($carousel-control-prev-icon-bg);
-}
-.carousel-control-next-icon {
-  background-image: escape-svg($carousel-control-next-icon-bg);
-  transform: rotate(180deg); // Boosted mod: RTL
+  // stylelint-disable-next-line declaration-no-important
+  background: escape-svg($carousel-control-prev-icon-bg) no-repeat 50% / 100% 100% !important; // Boosted mod
 }
 
+/* rtl:begin:remove */
+.carousel-control-next-icon {
+  transform: rotate(180deg);
+}
+
+/* rtl:end:remove */
 
 // Optional indicator pips
 //

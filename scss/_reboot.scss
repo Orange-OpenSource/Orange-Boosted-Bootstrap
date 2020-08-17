@@ -22,6 +22,15 @@
   box-sizing: border-box; // 1
 }
 
+// Reset letter-spacing on RTL
+// @see https://www.rtlstyling.com/posts/rtl-styling/#1.-letter-spacing
+
+/* rtl:raw:
+* {
+  letter-spacing: 0 !important;
+}
+*/
+
 html {
   font-family: sans-serif; // 2
   line-height: 1.15; // 3

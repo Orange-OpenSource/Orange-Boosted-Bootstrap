@@ -93,7 +93,7 @@
       content: "";
       background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$black}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
       background-size: $o-stepbar-arrow-width $o-stepbar-height;
-      transform: translateX($o-stepbar-arrow-width);
+      transform: translateX($o-stepbar-arrow-width)/* rtl:insert:rotateY(180deg) */;
     }
 
     &:last-child::after {

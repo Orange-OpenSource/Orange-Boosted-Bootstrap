@@ -26,6 +26,10 @@
   &.back::before {
     margin-right: $o-link-arrow-margin;
     content: "";
+
+    /* rtl:raw:
+    transform: rotate(180deg);
+    */
   }
 
   &:hover,

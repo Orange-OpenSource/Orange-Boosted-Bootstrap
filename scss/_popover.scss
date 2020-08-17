@@ -1,7 +1,11 @@
 .popover {
   position: absolute;
   top: 0;
-  left: 0;
+
+  /* rtl:raw:
+  right: auto;
+  */
+  left: 0; /* rtl: ignore */
   z-index: $zindex-popover;
   display: block;
   max-width: $popover-max-width;

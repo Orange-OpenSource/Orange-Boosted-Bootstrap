@@ -86,6 +86,10 @@ $doc-link-arrow-hover: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://w
   &:hover::after {
     background-image: escape-svg($doc-link-arrow-hover);
   }
+
+  [dir="rtl"] &::after {
+    transform: scaleX(-1);
+  }
 }
 
 /* IE only fix */
