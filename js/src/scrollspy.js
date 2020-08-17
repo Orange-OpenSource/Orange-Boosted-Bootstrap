@@ -241,11 +241,11 @@ class ScrollSpy {
         .addClass(CLASS_NAME_ACTIVE)
         .attr('aria-current', 'true')
       $link.addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'page')
+        .attr('aria-current', 'location')
     } else {
       // Set triggered link as active
       $link.addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'page')
+        .attr('aria-current', 'location')
       // Set triggered links parents as active
       // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
       $link.parents(SELECTOR_NAV_LIST_GROUP)
