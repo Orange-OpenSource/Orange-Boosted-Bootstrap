@@ -94,6 +94,10 @@
 
       &::before {
         margin-right: $border-width * -1.5;
+
+        /* rtl:raw:
+       transform: rotate(180deg);
+       */
       }
     }
 

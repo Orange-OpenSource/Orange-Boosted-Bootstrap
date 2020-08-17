@@ -1258,7 +1258,7 @@ $carousel-caption-color:             $black !default;
 $carousel-control-icon-width:        2.375rem !default; // Boosted mod
 
 $carousel-control-prev-icon-bg:      $chevron-icon !default; // Boosted mod
-$carousel-control-next-icon-bg:      $chevron-icon !default; // Boosted mod
+//$carousel-control-next-icon-bg:      $chevron-icon !default; // Boosted mod
 
 $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)

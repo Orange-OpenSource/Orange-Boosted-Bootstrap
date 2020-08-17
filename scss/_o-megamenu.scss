@@ -90,6 +90,16 @@
     background: escape-svg($o-megamenu-arrow-icon) no-repeat 50% / 100%;
   }
 
+  /* rtl:raw:
+  .back::before {
+    transform: none;
+  }
+
+  [aria-haspopup]::after {
+    transform: rotate(180deg);
+  }
+  */
+
   .back:hover::before,
   .back:focus::before,
   .back:active::before,
