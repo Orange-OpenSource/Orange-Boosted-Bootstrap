@@ -9,25 +9,6 @@
   margin-left: auto;
 }
 
-// For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
-  @each $breakpoint, $container-max-width in $max-widths {
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      max-width: $container-max-width;
-    }
-  }
-}
-
-// Boosted mod : fluid containers aren't full width → include margins
-@mixin make-container-fluid-widths() {
-  @each $breakpoint, $container-margin in $container-fluid-margin-widths {
-    @include media-breakpoint-up($breakpoint) {
-      max-width: #{100% - ($container-margin * 2)};
-    }
-  }
-}
-// end mod
-
 // Boosted mod : gutter depends on breakpoint
 @mixin make-gutters($gutter: $grid-gutter-width, $property: padding, $breakpoint: $grid-gutter-breakpoint) {
   #{$property}-right: #{$gutter / 4};
@@ -42,10 +23,29 @@
 
 @mixin make-row($gutter: $grid-gutter-width) {
   display: flex;
-  flex: 1 0 100%;
   flex-wrap: wrap;
   @include make-gutters(-$gutter, margin); // Boosted mod : gutter depends on breakpoint
 }
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+  @include deprecate("The `make-container-max-widths` mixin", "v4.5.2", "v5");
+}
+
+// Boosted mod : fluid containers aren't full width → include margins
+@mixin make-container-fluid-widths() {
+  @each $breakpoint, $container-margin in $container-fluid-margin-widths {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: #{100% - ($container-margin * 2)};
+    }
+  }
+}
+// End mod
 
 @mixin make-col-ready($gutter: $grid-gutter-width) {
   position: relative;
