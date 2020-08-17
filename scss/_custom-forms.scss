@@ -139,18 +139,16 @@
     @include border-radius($custom-checkbox-indicator-border-radius);
   }
 
-  // Boosted mod
-  .custom-control-input:not(:disabled):checked ~ .custom-control-label {
-    &::before {
-      border: $border-width solid $primary;
-    }
-  }
-  // end mod
-
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
       background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
+
+    // Boosted mod
+    &::before {
+      border: $border-width solid $primary;
+    }
+    // End mod
   }
 
   // Boosted mod:no box-shadow, replaced by outline
@@ -176,7 +174,19 @@
     }
   }
 
-  // Boosted mod disable state manage globally
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label {
+      // Boosted mod
+      &::before {
+        border-color: $custom-control-indicator-disabled-checked-bg;
+      }
+
+      &::after {
+        background-image: escape-svg($custom-checkbox-indicator-icon-disabled);
+      }
+      // End mod
+    }
+  }
 }
 
 // Radios
