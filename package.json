@@ -1,7 +1,7 @@
 {
   "name": "boosted",
-  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.5.0.",
-  "version": "4.5.0",
+  "description": "Orange Boosted with Bootstrap is a framework library accessible, ergonomic and Orange branded based on Bootstrap v4.5.2.",
+  "version": "4.5.2",
   "version_short": "4.5",
   "keywords": [
     "css",
@@ -106,11 +106,11 @@
   "license": "MIT",
   "dependencies": {},
   "peerDependencies": {
-    "focus-visible": "^5.0.2",
+    "focus-visible": "^5.1.0",
     "jquery": "1.9.1 - 3",
     "popper.js": "^1.16.1",
-    "tablesorter": "^2.31.1",
-    "swiper": "^4.5.0"
+    "tablesorter": "^2.31.3",
+    "swiper": "^4.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -155,7 +155,7 @@
     "sinon": "^7.5.0",
     "stylelint": "^13.6.1",
     "stylelint-config-twbs-bootstrap": "^2.0.3",
-    "swiper": "^4.5.0",
+    "swiper": "^4.5.1",
     "tablesorter": "^2.31.3",
     "terser": "^4.8.0",
     "vnu-jar": "20.6.30"
@@ -187,11 +187,11 @@
     },
     "dependencies": {},
     "peerDependencies": {
-      "focus-visible": "^5.0.2",
+      "focus-visible": "^5.1.0",
       "jquery": "1.9.1 - 3",
       "popper.js": "^1.16.1",
-      "tablesorter": "^2.31.1",
-      "swiper": "^4.5.0"
+      "tablesorter": "^2.31.3",
+      "swiper": "^4.5.1"
     }
   }
 }
