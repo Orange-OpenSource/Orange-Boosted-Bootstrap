@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Get started with Boosted, the world’s most popular framework for building responsive, mobile-first sites, with BoostedCDN and a template starter page. Fork of Bootstrap">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.5">
@@ -112,9 +112,11 @@
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <!-- End Google Tag Manager (noscript) -->
 
-    <div class="skiplinks container-fluid">
-  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable" href="#search-form">Skip to search form</a>
-    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+      <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+</div>
 
 
     <header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
@@ -150,7 +152,8 @@
               v4.5
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.0)</a>
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.2)</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
@@ -343,10 +346,6 @@
           </li><li>
             <a href="/docs/4.5/components/modal/">
               Modal
-            </a>
-          </li><li>
-            <a href="/docs/4.5/components/orange-popin/">
-              Orange popin
             </a>
           </li><li>
             <a href="/docs/4.5/components/navs/">
@@ -597,7 +596,10 @@
         
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Introduction</h1>
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/docs/4.5/getting-started/introduction.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Introduction</h1>
+          </div>
           <p class="bd-lead">Get started with Boosted, the world’s most popular framework for building responsive, mobile-first sites, with BoostedCDN and a template starter page. Fork of Bootstrap</p>
           <!-- Boosted mod : remove ads -->
           <h2 id="quick-start">Quick start</h2>
@@ -606,29 +608,29 @@
 
 <h3 id="css">CSS</h3>
 
-<p>Copy-paste the stylesheet <code class="highlighter-rouge">&lt;link&gt;</code> into your <code class="highlighter-rouge">&lt;head&gt;</code> before all other stylesheets to load our CSS. You can also add <code class="highlighter-rouge">orangeHelvetica</code> and <code class="highlighter-rouge">orangeIcons</code> if needed, be careful both files are under copyright, see NOTICE.txt for more information.</p>
+<p>Copy-paste the stylesheet <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> into your <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> before all other stylesheets to load our CSS. You can also add <code class="language-plaintext highlighter-rouge">orangeHelvetica</code> and <code class="language-plaintext highlighter-rouge">orangeIcons</code> if needed, be careful both files are under copyright, see NOTICE.txt for more information.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/orangeHelvetica.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-e8MwV9etVvzgFAywWdlyEtXAdRYElY+BlimyrAcXkDiyJXy4oIZZqrV/ST605uwF"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/orangeHelvetica.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- Copyright © 2016 Orange SA. All rights reserved --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/orangeIcons.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-Zd5WIT6PZ7YtONlsULMAoLWo0iJi5GPix2LFrMhPQjMYjBA0FhvsKInWdLKM+9nW"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/boosted.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-QYLV+ojryK3B49TCQMGtvBTwDYQmQzzuiw3Ajw+9I4GkTu6bV3bl/YNUv/0IY5hg"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/orangeIcons.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-R6GN9ea/4pryAfJqIKDPT52rqJuxaMkZndUr7tl6YQmESyczsGyDgIbpuXvebpF5"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <h3 id="js">JS</h3>
 
-<p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com/">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a>, and our own JavaScript plugins. Place the following <code class="highlighter-rouge">&lt;script&gt;</code>s near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.</p>
+<p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com/">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a>, and our own JavaScript plugins. Place the following <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>s near the end of your pages, right before the closing <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.</p>
 
 <p>We use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a>, but the full version is also supported.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/js/boosted.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-R024d8eLkqTtaLUSJ9MrQ9ay65hb/spmrvV7W1B2MuguSjYsCx3KVKjdjc9zUbPb"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.2/js/swiper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <p>Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
 
-<p>Our <code class="highlighter-rouge">boosted.bundle.js</code> and <code class="highlighter-rouge">boosted.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a>, and all of <code class="highlighter-rouge">boosted.js</code>, <code class="highlighter-rouge">boosted.min.js</code>, <code class="highlighter-rouge">boosted.bundle.js</code> and <code class="highlighter-rouge">boosted.bundle.min.js</code> include <a href="https://github.com/WICG/focus-visible">focus-visible’s Polyfill</a> — but not <a href="https://jquery.com/">jQuery</a>. For more information about what’s included in Boosted, please see our <a href="/docs/4.5/getting-started/contents/#precompiled-boosted">contents</a> section.</p>
+<p>Our <code class="language-plaintext highlighter-rouge">boosted.bundle.js</code> and <code class="language-plaintext highlighter-rouge">boosted.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a>, and all of <code class="language-plaintext highlighter-rouge">boosted.js</code>, <code class="language-plaintext highlighter-rouge">boosted.min.js</code>, <code class="language-plaintext highlighter-rouge">boosted.bundle.js</code> and <code class="language-plaintext highlighter-rouge">boosted.bundle.min.js</code> include <a href="https://github.com/WICG/focus-visible">focus-visible’s Polyfill</a> — but not <a href="https://jquery.com/">jQuery</a>. For more information about what’s included in Boosted, please see our <a href="/docs/4.5/getting-started/contents/#precompiled-boosted">contents</a> section.</p>
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -642,6 +644,7 @@
   <li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
   <li>Modals for displaying, positioning, and scroll behavior</li>
   <li>Navbar for extending our Collapse plugin to implement responsive behavior</li>
+  <li>Toasts for displaying and dismissing</li>
   <li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
   <li>Scrollspy for scroll behavior and navigation updates</li>
 </ul>
@@ -679,9 +682,9 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
       Neue Helvetica is a trademark of Monotype Imaging Inc. registered in the U.S.
       Patent and Trademark Office and may be registered in certain other jurisdictions.
       Copyright © 2014 Monotype Imaging Inc. All rights reserved.
-      Orange Company had buy the right for used Helvetica onto digital applications.
-      If you are not autorized to used it, don't include the orangeHelvetica.css
-      See NOTICE.txt for more informations.
+      Orange has purchased the right to use Helvetica in its websites and mobile applications.
+      If you are not authorized to used it, don't include the orangeHelvetica.css.
+      See NOTICE.txt for more information.
     --&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preload"</span> <span class="na">href=</span><span class="s">"fonts/HelvNeue55_W1G.woff2"</span> <span class="na">as=</span><span class="s">"font"</span> <span class="na">type=</span><span class="s">"font/woff2"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preload"</span> <span class="na">href=</span><span class="s">"fonts/HelvNeue75_W1G.woff2"</span> <span class="na">as=</span><span class="s">"font"</span> <span class="na">type=</span><span class="s">"font/woff2"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
@@ -689,12 +692,12 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
     <span class="c">&lt;!--
       Orange Icons
       Copyright (C) 2016 - 2019 Orange SA All rights reserved
-      See NOTICE.txt for more informations.
+      See NOTICE.txt for more information.
     --&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/orangeIcons.min.css"</span> <span class="nt">/&gt;</span>
 
     <span class="c">&lt;!-- Boosted CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/boosted.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-QYLV+ojryK3B49TCQMGtvBTwDYQmQzzuiw3Ajw+9I4GkTu6bV3bl/YNUv/0IY5hg"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
@@ -705,11 +708,11 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
 
     <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
     <span class="c">&lt;!-- jQuery first, then Popper.js, then Boosted JS. --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/js/boosted.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-R024d8eLkqTtaLUSJ9MrQ9ay65hb/spmrvV7W1B2MuguSjYsCx3KVKjdjc9zUbPb"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.2/js/swiper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
@@ -730,7 +733,7 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
 
 <h3 id="responsive-meta-tag">Responsive meta tag</h3>
 
-<p>Boosted is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
+<p>Boosted is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span></code></pre></figure>
 
@@ -738,7 +741,7 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
 
 <h3 id="box-sizing">Box-sizing</h3>
 
-<p>For more straightforward sizing in CSS, we switch the global <code class="highlighter-rouge">box-sizing</code> value from <code class="highlighter-rouge">content-box</code> to <code class="highlighter-rouge">border-box</code>. This ensures <code class="highlighter-rouge">padding</code> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
+<p>For more straightforward sizing in CSS, we switch the global <code class="language-plaintext highlighter-rouge">box-sizing</code> value from <code class="language-plaintext highlighter-rouge">content-box</code> to <code class="language-plaintext highlighter-rouge">border-box</code>. This ensures <code class="language-plaintext highlighter-rouge">padding</code> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
 
 <p>On the rare occasion you need to override it, use something like the following:</p>
 
@@ -746,7 +749,7 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
   <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>With the above snippet, nested elements—including generated content via <code class="highlighter-rouge">::before</code> and <code class="highlighter-rouge">::after</code>—will all inherit the specified <code class="highlighter-rouge">box-sizing</code> for that <code class="highlighter-rouge">.selector-for-some-widget</code>.</p>
+<p>With the above snippet, nested elements—including generated content via <code class="language-plaintext highlighter-rouge">::before</code> and <code class="language-plaintext highlighter-rouge">::after</code>—will all inherit the specified <code class="language-plaintext highlighter-rouge">box-sizing</code> for that <code class="language-plaintext highlighter-rouge">.selector-for-some-widget</code>.</p>
 
 <p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
 
@@ -759,11 +762,11 @@ However, if you don’t need or want to use Boosted’s JavaScript files, you’
 <p><a href="https://www.w3.org/TR/resource-hints/">Ressource hints</a> are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and <strong>only to hint resources you’ll really be using soon</strong>.
 It should be used for critical resources only.</p>
 
-<h4 id="preload-fonts"><code class="highlighter-rouge">preload</code> fonts</h4>
+<h4 id="preload-fonts"><code class="language-plaintext highlighter-rouge">preload</code> fonts</h4>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preload"</span> <span class="na">href=</span><span class="s">"../../../../fonts/HelvNeue75_W1G.woff2"</span> <span class="na">as=</span><span class="s">"font"</span> <span class="na">type=</span><span class="s">"font/woff2"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<h4 id="preconnect-to-cdns"><code class="highlighter-rouge">preconnect</code> to CDNs</h4>
+<h4 id="preconnect-to-cdns"><code class="language-plaintext highlighter-rouge">preconnect</code> to CDNs</h4>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preconnect"</span> <span class="na">href=</span><span class="s">"https://code.jquery.com"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preconnect"</span> <span class="na">href=</span><span class="s">"https://cdnjs.cloudflare.com"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
@@ -777,9 +780,9 @@ It should be used for critical resources only.</p>
   <li>Follow <a href="https://twitter.com/orange">@getbootstrap on Twitter</a>.</li>
   <li>Read and subscribe to <a href="https://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
   <li>Join <a href="https://bootstrap-slack.herokuapp.com/">the official Slack room</a>.</li>
-  <li>Chat with fellow Bootstrappers in IRC. On the <code class="highlighter-rouge">irc.freenode.net</code> server, in the <code class="highlighter-rouge">##bootstrap</code> channel.</li>
-  <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-4"><code class="highlighter-rouge">bootstrap-4</code></a>).</li>
-  <li>Developers should use the keyword <code class="highlighter-rouge">bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/search?q=keywords:bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
+  <li>Chat with fellow Bootstrappers in IRC. On the <code class="language-plaintext highlighter-rouge">irc.freenode.net</code> server, in the <code class="language-plaintext highlighter-rouge">##bootstrap</code> channel.</li>
+  <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-4"><code class="language-plaintext highlighter-rouge">bootstrap-4</code></a>).</li>
+  <li>Developers should use the keyword <code class="language-plaintext highlighter-rouge">bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/search?q=keywords:bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
 </ul>
 
 <p>You can also follow <a href="https://twitter.com/orange">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
@@ -795,8 +798,8 @@ It should be used for critical resources only.</p>
   </a>
 </nav>
 <!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.o-nav-local').prioritynav();

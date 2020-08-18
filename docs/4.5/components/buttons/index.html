@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Use Boosted’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.5">
@@ -112,9 +112,11 @@
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <!-- End Google Tag Manager (noscript) -->
 
-    <div class="skiplinks container-fluid">
-  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable" href="#search-form">Skip to search form</a>
-    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+      <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+</div>
 
 
     <header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
@@ -150,7 +152,8 @@
               v4.5
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.0)</a>
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.2)</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
@@ -343,10 +346,6 @@
           </li><li>
             <a href="/docs/4.5/components/modal/">
               Modal
-            </a>
-          </li><li>
-            <a href="/docs/4.5/components/orange-popin/">
-              Orange popin
             </a>
           </li><li>
             <a href="/docs/4.5/components/navs/">
@@ -597,7 +596,10 @@
         
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Buttons</h1>
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/docs/4.5/components/buttons.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Buttons</h1>
+          </div>
           <p class="bd-lead">Use Boosted’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
           <!-- Boosted mod : remove ads -->
           <h2 id="examples">Examples</h2>
@@ -683,12 +685,12 @@
 <div class="bd-callout bd-callout-warning">
 <h5 id="conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</h5>
 
-<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code class="highlighter-rouge">.sr-only</code> class.</p>
+<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code class="language-plaintext highlighter-rouge">.sr-only</code> class.</p>
 </div>
 
 <h3 id="dark-backgrounds">Dark backgrounds</h3>
 
-<p>To get the inversed button behaviour, simply add <code class="highlighter-rouge">.btn-inverse</code> class to your <code class="highlighter-rouge">&lt;button&gt;</code> or <code class="highlighter-rouge">&lt;a&gt;</code> tag.</p>
+<p>To get the inversed button behaviour, simply add <code class="language-plaintext highlighter-rouge">.btn-inverse</code> class to your <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> tag.</p>
 
 <div class="bd-example">
 <div class="bg-dark p-3">
@@ -771,7 +773,7 @@
 
 <h2 id="social-buttons">Social buttons</h2>
 
-<p>In need of a social media button? Some helper classes are designed to be used along with the <code class="highlighter-rouge">.btn</code> element, starting with the <code class="highlighter-rouge">.btn-social</code> variant.</p>
+<p>In need of a social media button? Some helper classes are designed to be used along with the <code class="language-plaintext highlighter-rouge">.btn</code> element, starting with the <code class="language-plaintext highlighter-rouge">.btn-social</code> variant.</p>
 
 <div class="bd-example">
 <div class="p-3">
@@ -824,13 +826,13 @@
 
 <h2 id="disable-text-wrapping">Disable text wrapping</h2>
 
-<p>If you don’t want the button text to wrap, you can add the <code class="highlighter-rouge">.text-nowrap</code> class to the button. In Sass, you can set <code class="highlighter-rouge">$btn-white-space: nowrap</code> to disable text wrapping for each button.</p>
+<p>If you don’t want the button text to wrap, you can add the <code class="language-plaintext highlighter-rouge">.text-nowrap</code> class to the button. In Sass, you can set <code class="language-plaintext highlighter-rouge">$btn-white-space: nowrap</code> to disable text wrapping for each button.</p>
 
 <h2 id="button-tags">Button tags</h2>
 
-<p>The <code class="highlighter-rouge">.btn</code> classes are designed to be used with the <code class="highlighter-rouge">&lt;button&gt;</code> element. However, you can also use these classes on <code class="highlighter-rouge">&lt;a&gt;</code> or <code class="highlighter-rouge">&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
+<p>The <code class="language-plaintext highlighter-rouge">.btn</code> classes are designed to be used with the <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> element. However, you can also use these classes on <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
 
-<p>When using button classes on <code class="highlighter-rouge">&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code class="highlighter-rouge">role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
+<p>When using button classes on <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code class="language-plaintext highlighter-rouge">role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
 
 <div class="bd-example">
 <a class="btn btn-primary" href="#" role="button">Link</a>
@@ -847,7 +849,7 @@
 
 <h2 id="sizes">Sizes</h2>
 
-<p>Fancy larger or smaller buttons? Add <code class="highlighter-rouge">.btn-lg</code> or <code class="highlighter-rouge">.btn-sm</code> for additional sizes.</p>
+<p>Fancy larger or smaller buttons? Add <code class="language-plaintext highlighter-rouge">.btn-lg</code> or <code class="language-plaintext highlighter-rouge">.btn-sm</code> for additional sizes.</p>
 
 <p><strong>Medium button</strong> is the standard button size.</p>
 
@@ -889,9 +891,64 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<div class="bd-example">
+<button type="button" class="btn btn-secondary btn-icon btn-sm">
+  <span class="sr-only">Icon</span>
+  <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-secondary btn-icon">
+  <span class="sr-only">Icon</span>
+  <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-secondary btn-icon btn-lg">
+  <span class="sr-only">Icon</span>
+  <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+<div class="bg-dark p-3 mt-3">
+  <button type="button" class="btn btn-secondary btn-icon btn-inverse btn-sm">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+  <button type="button" class="btn btn-secondary btn-icon btn-inverse">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+  <button type="button" class="btn btn-secondary btn-icon btn-inverse btn-lg">
+    <span class="sr-only">Icon</span>
+    <span class="icon icon-settings" aria-hidden="true"></span>
+</button>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon btn-sm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon btn-lg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark p-3 mt-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon btn-inverse btn-sm"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon btn-inverse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-icon btn-inverse btn-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Icon<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
 <h2 id="active-state">Active state</h2>
 
-<p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code class="highlighter-rouge">&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code class="highlighter-rouge">.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.</p>
+<p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code class="language-plaintext highlighter-rouge">.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.</p>
 
 <div class="bd-example">
 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
@@ -910,7 +967,7 @@
 
 <h2 id="disabled-state">Disabled state</h2>
 
-<p>Make buttons look inactive by adding the <code class="highlighter-rouge">disabled</code> boolean attribute to any <code class="highlighter-rouge">&lt;button&gt;</code> element.</p>
+<p>Make buttons look inactive by adding the <code class="language-plaintext highlighter-rouge">disabled</code> boolean attribute to any <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> element.</p>
 
 <div class="bd-example">
 <button type="button" class="btn btn-lg btn-primary" disabled="">Primary button</button>
@@ -927,12 +984,12 @@
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-inverse btn-lg"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Disabled buttons using the <code class="highlighter-rouge">&lt;a&gt;</code> element behave a bit different:</p>
+<p>Disabled buttons using the <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> element behave a bit different:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">&lt;a&gt;</code>s don’t support the <code class="highlighter-rouge">disabled</code> attribute, so you must add the <code class="highlighter-rouge">.disabled</code> class to make it visually appear disabled.</li>
-  <li>Some future-friendly styles are included to disable all <code class="highlighter-rouge">pointer-events</code> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
-  <li>Disabled buttons should include the <code class="highlighter-rouge">aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>s don’t support the <code class="language-plaintext highlighter-rouge">disabled</code> attribute, so you must add the <code class="language-plaintext highlighter-rouge">.disabled</code> class to make it visually appear disabled.</li>
+  <li>Some future-friendly styles are included to disable all <code class="language-plaintext highlighter-rouge">pointer-events</code> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
+  <li>Disabled buttons should include the <code class="language-plaintext highlighter-rouge">aria-disabled="true"</code> attribute to indicate the state of the element to assistive technologies.</li>
 </ul>
 
 <div class="bd-example">
@@ -945,7 +1002,7 @@
 <div class="bd-callout bd-callout-warning">
 <h5 id="link-functionality-caveat">Link functionality caveat</h5>
 
-<p>The <code class="highlighter-rouge">.disabled</code> class uses <code class="highlighter-rouge">pointer-events: none</code> to try to disable the link functionality of <code class="highlighter-rouge">&lt;a&gt;</code>s, but that CSS property is not yet standardized. In addition, even in browsers that do support <code class="highlighter-rouge">pointer-events: none</code>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <code class="highlighter-rouge">tabindex="-1"</code> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
+<p>The <code class="language-plaintext highlighter-rouge">.disabled</code> class uses <code class="language-plaintext highlighter-rouge">pointer-events: none</code> to try to disable the link functionality of <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>s, but that CSS property is not yet standardized. In addition, even in browsers that do support <code class="language-plaintext highlighter-rouge">pointer-events: none</code>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <code class="language-plaintext highlighter-rouge">tabindex="-1"</code> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
 </div>
 
 <h2 id="button-plugin">Button plugin</h2>
@@ -954,7 +1011,7 @@
 
 <h3 id="toggle-states">Toggle states</h3>
 
-<p>Add <code class="highlighter-rouge">data-toggle="button"</code> to toggle a button’s <code class="highlighter-rouge">active</code> state. If you’re pre-toggling a button, you must manually add the <code class="highlighter-rouge">.active</code> class <strong>and</strong> <code class="highlighter-rouge">aria-pressed="true"</code> to the <code class="highlighter-rouge">&lt;button&gt;</code>.</p>
+<p>Add <code class="language-plaintext highlighter-rouge">data-toggle="button"</code> to toggle a button’s <code class="language-plaintext highlighter-rouge">active</code> state. If you’re pre-toggling a button, you must manually add the <code class="language-plaintext highlighter-rouge">.active</code> class <strong>and</strong> <code class="language-plaintext highlighter-rouge">aria-pressed="true"</code> to the <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>.</p>
 
 <div class="bd-example">
 <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
@@ -967,11 +1024,11 @@
 
 <h3 id="checkbox-and-radio-buttons">Checkbox and radio buttons</h3>
 
-<p>Boosted’s <code class="highlighter-rouge">.button</code> styles can be applied to other elements, such as <code class="highlighter-rouge">&lt;label&gt;</code>s, to provide checkbox or radio style button toggling. Add <code class="highlighter-rouge">data-toggle="buttons"</code> to a <code class="highlighter-rouge">.btn-group</code> containing those modified buttons to enable their toggling behavior via JavaScript and add <code class="highlighter-rouge">.btn-group-toggle</code> to style the <code class="highlighter-rouge">&lt;input&gt;</code>s within your buttons. <strong>Note that you can create single input-powered buttons or groups of them.</strong></p>
+<p>Boosted’s <code class="language-plaintext highlighter-rouge">.button</code> styles can be applied to other elements, such as <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>s, to provide checkbox or radio style button toggling. Add <code class="language-plaintext highlighter-rouge">data-toggle="buttons"</code> to a <code class="language-plaintext highlighter-rouge">.btn-group</code> containing those modified buttons to enable their toggling behavior via JavaScript and add <code class="language-plaintext highlighter-rouge">.btn-group-toggle</code> to style the <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>s within your buttons. <strong>Note that you can create single input-powered buttons or groups of them.</strong></p>
 
-<p>The checked state for these buttons is <strong>only updated via <code class="highlighter-rouge">click</code> event</strong> on the button. If you use another method to update the input—e.g., with <code class="highlighter-rouge">&lt;input type="reset"&gt;</code> or by manually applying the input’s <code class="highlighter-rouge">checked</code> property—you’ll need to toggle <code class="highlighter-rouge">.active</code> on the <code class="highlighter-rouge">&lt;label&gt;</code> manually.</p>
+<p>The checked state for these buttons is <strong>only updated via <code class="language-plaintext highlighter-rouge">click</code> event</strong> on the button. If you use another method to update the input—e.g., with <code class="language-plaintext highlighter-rouge">&lt;input type="reset"&gt;</code> or by manually applying the input’s <code class="language-plaintext highlighter-rouge">checked</code> property—you’ll need to toggle <code class="language-plaintext highlighter-rouge">.active</code> on the <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> manually.</p>
 
-<p>Note that pre-checked buttons require you to manually add the <code class="highlighter-rouge">.active</code> class to the input’s <code class="highlighter-rouge">&lt;label&gt;</code>.</p>
+<p>Note that pre-checked buttons require you to manually add the <code class="language-plaintext highlighter-rouge">.active</code> class to the input’s <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>.</p>
 
 <div class="bd-example">
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1112,11 +1169,11 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">$().button('toggle')</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$().button('toggle')</code></td>
       <td>Toggles push state. Gives the button the appearance that it has been activated.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">$().button('dispose')</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$().button('dispose')</code></td>
       <td>Destroys an element’s button.</td>
     </tr>
   </tbody>
@@ -1133,8 +1190,8 @@
   </a>
 </nav>
 <!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.o-nav-local').prioritynav();

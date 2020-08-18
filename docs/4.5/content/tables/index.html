@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.5">
@@ -112,9 +112,11 @@
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <!-- End Google Tag Manager (noscript) -->
 
-    <div class="skiplinks container-fluid">
-  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable" href="#search-form">Skip to search form</a>
-    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+      <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+</div>
 
 
     <header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
@@ -150,7 +152,8 @@
               v4.5
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.0)</a>
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.2)</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
@@ -343,10 +346,6 @@
           </li><li>
             <a href="/docs/4.5/components/modal/">
               Modal
-            </a>
-          </li><li>
-            <a href="/docs/4.5/components/orange-popin/">
-              Orange popin
             </a>
           </li><li>
             <a href="/docs/4.5/components/navs/">
@@ -594,14 +593,17 @@
         
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Tables</h1>
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/docs/4.5/content/tables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Tables</h1>
+          </div>
           <p class="bd-lead">Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Boosted.</p>
           <!-- Boosted mod : remove ads -->
           <h2 id="examples">Examples</h2>
 
-<p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be <strong>opt-in</strong>. Just add the base class <code class="highlighter-rouge">.table</code> to any <code class="highlighter-rouge">&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes.</p>
+<p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be <strong>opt-in</strong>. Just add the base class <code class="language-plaintext highlighter-rouge">.table</code> to any <code class="language-plaintext highlighter-rouge">&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes.</p>
 
-<p>Using the most basic table markup, here’s how <code class="highlighter-rouge">.table</code>-based tables look in Boosted. <strong>All table styles are inherited in Boosted 4</strong>, meaning any nested tables will be styled in the same manner as the parent.</p>
+<p>Using the most basic table markup, here’s how <code class="language-plaintext highlighter-rouge">.table</code>-based tables look in Boosted. <strong>All table styles are inherited in Boosted 4</strong>, meaning any nested tables will be styled in the same manner as the parent.</p>
 
 <div class="bd-example">
 <table class="table">
@@ -666,7 +668,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
-<p>You can also invert the colors—with light text on dark backgrounds—with <code class="highlighter-rouge">.table-dark</code>.</p>
+<p>You can also invert the colors—with light text on dark backgrounds—with <code class="language-plaintext highlighter-rouge">.table-dark</code>.</p>
 
 <div class="bd-example">
 <table class="table table-dark">
@@ -733,7 +735,7 @@
 
 <h2 id="hoverable-rows">Hoverable rows</h2>
 
-<p>Add <code class="highlighter-rouge">.table-hover</code> to enable a hover state on table rows within a <code class="highlighter-rouge">&lt;tbody&gt;</code>.</p>
+<p>Add <code class="language-plaintext highlighter-rouge">.table-hover</code> to enable a hover state on table rows within a <code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code>.</p>
 
 <div class="bd-example">
 <table class="table table-hover">
@@ -861,7 +863,7 @@
 
 <h3 id="small-table">Small table</h3>
 
-<p>Add <code class="highlighter-rouge">.table-sm</code> to make tables more compact by cutting cell padding in half.</p>
+<p>Add <code class="language-plaintext highlighter-rouge">.table-sm</code> to make tables more compact by cutting cell padding in half.</p>
 
 <div class="bd-example">
 <table class="table table-sm">
@@ -924,15 +926,15 @@
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
-<p>Create responsive tables by wrapping any <code class="highlighter-rouge">.table</code> with <code class="highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code>, making the table scroll horizontally at each <code class="highlighter-rouge">max-width</code> breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.</p>
+<p>Create responsive tables by wrapping any <code class="language-plaintext highlighter-rouge">.table</code> with <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code>, making the table scroll horizontally at each <code class="language-plaintext highlighter-rouge">max-width</code> breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.</p>
 
 <div class="bd-callout bd-callout-info">
-<p>Note that since browsers do not currently support <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>, we work around the limitations of <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"><code class="highlighter-rouge">min-</code> and <code class="highlighter-rouge">max-</code> prefixes</a> and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.</p>
+<p>Note that since browsers do not currently support <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>, we work around the limitations of <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"><code class="language-plaintext highlighter-rouge">min-</code> and <code class="language-plaintext highlighter-rouge">max-</code> prefixes</a> and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision for these comparisons.</p>
 </div>
 
 <h2 id="captions">Captions</h2>
 
-<p>A <code class="highlighter-rouge">&lt;caption&gt;</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.</p>
+<p>A <code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.</p>
 
 <div class="bd-example">
 <table class="table">
@@ -1001,17 +1003,17 @@
 
 <h2 id="responsive-tables">Responsive tables</h2>
 
-<p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code class="highlighter-rouge">.table</code> with <code class="highlighter-rouge">.table-responsive</code>. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code class="highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code>.</p>
+<p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code class="language-plaintext highlighter-rouge">.table</code> with <code class="language-plaintext highlighter-rouge">.table-responsive</code>. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code>.</p>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="vertical-clippingtruncation">Vertical clipping/truncation</h5>
 
-<p>Responsive tables make use of <code class="highlighter-rouge">overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
+<p>Responsive tables make use of <code class="language-plaintext highlighter-rouge">overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
 </div>
 
 <h3 id="always-responsive">Always responsive</h3>
 
-<p>Across every breakpoint, use <code class="highlighter-rouge">.table-responsive</code> for horizontally scrolling tables.</p>
+<p>Across every breakpoint, use <code class="language-plaintext highlighter-rouge">.table-responsive</code> for horizontally scrolling tables.</p>
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -1080,7 +1082,7 @@
 
 <h3 id="breakpoint-specific">Breakpoint specific</h3>
 
-<p>Use <code class="highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.</p>
 
 <p><strong>These tables may appear broken until their responsive styles apply at specific viewport widths.</strong></p>
 
@@ -1391,8 +1393,8 @@
 
 <h2 id="rich-content-tables">Rich content tables</h2>
 
-<p>Boosted tables may contain <strong>icons, thumbnails and checkboxes</strong>. To ensure proper layout, avoid using <a href="/docs/4.5/content/tables/#sizes">sizes variants</a> in that case: rows’ height should automatically match <code class="highlighter-rouge">.table-lg</code> ones. 
-Also, <strong>when using checkboxes in the first column</strong>, add <code class="highlighter-rouge">.has-checkbox</code> class to the <code class="highlighter-rouge">&lt;table&gt;</code> element to get correct spacing on the first column.</p>
+<p>Boosted tables may contain <strong>icons, thumbnails and checkboxes</strong>. To ensure proper layout, avoid using <a href="/docs/4.5/content/tables/#sizes">sizes variants</a> in that case: rows’ height should automatically match <code class="language-plaintext highlighter-rouge">.table-lg</code> ones. 
+Also, <strong>when using checkboxes in the first column</strong>, add <code class="language-plaintext highlighter-rouge">.has-checkbox</code> class to the <code class="language-plaintext highlighter-rouge">&lt;table&gt;</code> element to get correct spacing on the first column.</p>
 
 <div class="bd-example">
 <table class="table table-hover has-checkbox">
@@ -1762,8 +1764,8 @@ Please refer to <a href="https://mottie.github.io/tablesorter/docs/">TableSorter
   </a>
 </nav>
 <!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><!-- Boosted mod -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><!-- Boosted mod -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
   <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
   <script>

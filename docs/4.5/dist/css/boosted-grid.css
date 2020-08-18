@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v4.5.0 (https://boosted.orange.com)
+ * Boosted Grid v4.5.2 (https://boosted.orange.com)
  * Copyright 2014-2019 The Boosted Authors
  * Copyright 2014-2019 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Grid v4.5.0 (https://getbootstrap.com)
+ * Bootstrap Grid v4.5.2 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -20,94 +20,107 @@ html {
   box-sizing: inherit;
 }
 
-.container {
+.container,
+.container-fluid,
+.container-xs,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
   width: 100%;
   padding-right: 0.3125rem;
   padding-left: 0.3125rem;
   margin-right: auto;
   margin-left: auto;
-  max-width: 312px;
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container,
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     padding-right: 0.625rem;
     padding-left: 0.625rem;
   }
 }
 
-@media (min-width: 480px) {
-  .container {
-    max-width: 468px;
-  }
-}
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 744px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-.container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-  width: 100%;
-  padding-right: 0.3125rem;
-  padding-left: 0.3125rem;
-  margin-right: auto;
-  margin-left: auto;
+.container-fluid,
+.container-xs,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
   max-width: 97.5%;
 }
 
-@media (min-width: 768px) {
-  .container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-  }
-}
-
 @media (min-width: 480px) {
-  .container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 97.5%;
   }
 }
 
 @media (min-width: 768px) {
-  .container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 96.875%;
   }
 }
 
 @media (min-width: 1024px) {
-  .container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 93.75%;
   }
 }
 
 @media (min-width: 1280px) {
-  .container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 93.75%;
   }
 }
 
 @media (min-width: 1440px) {
-  .container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 91.66666%;
   }
 }
@@ -200,7 +213,6 @@ html {
 .col {
   flex-basis: 0;
   flex-grow: 1;
-  min-width: 0;
   max-width: 100%;
 }
 
@@ -408,7 +420,6 @@ html {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
   .row-cols-sm-1 > * {
@@ -575,7 +586,6 @@ html {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
   .row-cols-md-1 > * {
@@ -742,7 +752,6 @@ html {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
   .row-cols-lg-1 > * {
@@ -909,7 +918,6 @@ html {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
   .row-cols-xl-1 > * {
@@ -1076,7 +1084,6 @@ html {
   .col-xxl {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
   .row-cols-xxl-1 > * {

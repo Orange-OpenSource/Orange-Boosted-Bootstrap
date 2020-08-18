@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Toggle floats on any element, across any breakpoint, using our responsive float utilities.">
 <meta name="author" content="Orange and Boosted contributors">
-<meta name="generator" content="Jekyll v4.0.1">
+<meta name="generator" content="Jekyll v4.1.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="4.5">
@@ -112,9 +112,11 @@
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <!-- End Google Tag Manager (noscript) -->
 
-    <div class="skiplinks container-fluid">
-  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable" href="#search-form">Skip to search form</a>
-    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a><a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+      <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a></div>
+</div>
 
 
     <header role="banner" class="navbar navbar-dark bg-dark navbar-expand-md" id="docs-navbar">
@@ -150,7 +152,8 @@
               v4.5
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.0)</a>
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.2)</a>
+              <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
@@ -343,10 +346,6 @@
           </li><li>
             <a href="/docs/4.5/components/modal/">
               Modal
-            </a>
-          </li><li>
-            <a href="/docs/4.5/components/orange-popin/">
-              Orange popin
             </a>
           </li><li>
             <a href="/docs/4.5/components/navs/">
@@ -579,12 +578,15 @@
         
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Float</h1>
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/docs/4.5/utilities/float.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Float</h1>
+          </div>
           <p class="bd-lead">Toggle floats on any element, across any breakpoint, using our responsive float utilities.</p>
           <!-- Boosted mod : remove ads -->
           <h2 id="overview">Overview</h2>
 
-<p>These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">CSS <code class="highlighter-rouge">float</code> property</a>. <code class="highlighter-rouge">!important</code> is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.</p>
+<p>These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">CSS <code class="language-plaintext highlighter-rouge">float</code> property</a>. <code class="language-plaintext highlighter-rouge">!important</code> is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.</p>
 
 <h2 id="classes">Classes</h2>
 
@@ -615,7 +617,7 @@
 
 <h2 id="responsive">Responsive</h2>
 
-<p>Responsive variations also exist for each <code class="highlighter-rouge">float</code> value.</p>
+<p>Responsive variations also exist for each <code class="language-plaintext highlighter-rouge">float</code> value.</p>
 
 <div class="bd-example">
 <div class="float-sm-left">Float left on viewports sized SM (small) or wider</div><br />
@@ -631,24 +633,24 @@
 <p>Here are all the support classes;</p>
 
 <ul>
-  <li><code class="highlighter-rouge">.float-left</code></li>
-  <li><code class="highlighter-rouge">.float-right</code></li>
-  <li><code class="highlighter-rouge">.float-none</code></li>
-  <li><code class="highlighter-rouge">.float-sm-left</code></li>
-  <li><code class="highlighter-rouge">.float-sm-right</code></li>
-  <li><code class="highlighter-rouge">.float-sm-none</code></li>
-  <li><code class="highlighter-rouge">.float-md-left</code></li>
-  <li><code class="highlighter-rouge">.float-md-right</code></li>
-  <li><code class="highlighter-rouge">.float-md-none</code></li>
-  <li><code class="highlighter-rouge">.float-lg-left</code></li>
-  <li><code class="highlighter-rouge">.float-lg-right</code></li>
-  <li><code class="highlighter-rouge">.float-lg-none</code></li>
-  <li><code class="highlighter-rouge">.float-xl-left</code></li>
-  <li><code class="highlighter-rouge">.float-xl-right</code></li>
-  <li><code class="highlighter-rouge">.float-xl-none</code></li>
-  <li><code class="highlighter-rouge">.float-xxl-left</code></li>
-  <li><code class="highlighter-rouge">.float-xxl-right</code></li>
-  <li><code class="highlighter-rouge">.float-xxl-none</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-none</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-sm-left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-sm-right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-sm-none</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-md-left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-md-right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-md-none</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-lg-left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-lg-right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-lg-none</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-xl-left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-xl-right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-xl-none</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-xxl-left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-xxl-right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.float-xxl-none</code></li>
 </ul>
 
         </main>
@@ -662,8 +664,8 @@
   </a>
 </nav>
 <!-- end mod -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.o-nav-local').prioritynav();
