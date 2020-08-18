@@ -1,3 +1,4 @@
+<a name="4.5.2"></a>
 ## [4.5.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.0...v4.5.2) (2020-08-18)
 
 ### Bootstrap
@@ -47,7 +48,7 @@
 * **docs:** some English typos ([0d917a4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0d917a442991c2514f15a30562906a29b2887fb3))
 
 
-
+<a name="4.5.0"></a>
 ## [4.5.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.4.1...v4.5.0) (2020-05-13)
 
 ### [Bootstrap 4.5.0](https://github.com/twbs/bootstrap/releases/tag/v4.5.0)
