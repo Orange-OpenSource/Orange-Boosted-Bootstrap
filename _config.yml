@@ -78,9 +78,9 @@ social_image_path:  /docs/4.5/assets/brand/orange-social.png
 social_logo_path:   /docs/4.5/assets/brand/orange-logo.png
 
 # Custom variables
-current_version:      4.5.0
-bootstrap_current_version:      v4.5.0
-current_ruby_version: 4.5.0
+current_version:      4.5.2
+bootstrap_current_version: v4.5.2
+current_ruby_version: 4.5.2
 docs_version:         4.5
 github_org:           "https://github.com/Orange-OpenSource"
 repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
@@ -92,26 +92,26 @@ themes:               "https://themes.getbootstrap.com"
 icons:                "https://icons.getbootstrap.com"
 
 download:
-  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.5.0.zip"
-  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.5.0/boosted-4.5.0-dist.zip"
-  dist_examples:    "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.5.0/boosted-4.5.0-examples.zip"
+  source:           "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.5.2.zip"
+  dist:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.5.2/boosted-4.5.2-dist.zip"
+  dist_examples:    "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.5.2/boosted-4.5.2-examples.zip"
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:               "https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/boosted.min.css"
-  css_hash:          "sha384-QYLV+ojryK3B49TCQMGtvBTwDYQmQzzuiw3Ajw+9I4GkTu6bV3bl/YNUv/0IY5hg"
-  iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/orangeIcons.min.css"
-  iconcss_hash:      "sha384-Zd5WIT6PZ7YtONlsULMAoLWo0iJi5GPix2LFrMhPQjMYjBA0FhvsKInWdLKM+9nW"
-  helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/css/orangeHelvetica.min.css"
-  helveticacss_hash: "sha384-e8MwV9etVvzgFAywWdlyEtXAdRYElY+BlimyrAcXkDiyJXy4oIZZqrV/ST605uwF"
-  js:                "https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/js/boosted.min.js"
-  js_hash:           "sha384-R024d8eLkqTtaLUSJ9MrQ9ay65hb/spmrvV7W1B2MuguSjYsCx3KVKjdjc9zUbPb"
-  js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.5.0/dist/js/boosted.bundle.min.js"
-  js_bundle_hash:    "sha384-IUePqiflwgg4nedJxSABHpzjVdYp30ckKYriqRfUtA6fRwxFCL/KJyMERRc3Kouu"
+  css:               "https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/boosted.min.css"
+  css_hash:          "sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC"
+  iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/orangeIcons.min.css"
+  iconcss_hash:      "sha384-R6GN9ea/4pryAfJqIKDPT52rqJuxaMkZndUr7tl6YQmESyczsGyDgIbpuXvebpF5"
+  helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/css/orangeHelvetica.min.css"
+  helveticacss_hash: "sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK"
+  js:                "https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js"
+  js_hash:           "sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm"
+  js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.bundle.min.js"
+  js_bundle_hash:    "sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy"
   jquery:            "https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  jquery_hash:       "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  css_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+  jquery_hash:       "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  css_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.2/css/swiper.min.css"
   css_swiper_hash:   "sha384-K6LrEaceM4QP87RzJ7R4CDXcFN4cFW/A5Q7/fEp/92c2WV+woVw9S9zKDO23sNS+"
-  js_swiper:         "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
+  js_swiper:         "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.2/js/swiper.min.js"
   js_swiper_hash:    "sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"
   popper:            "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"
   popper_hash:       "sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
