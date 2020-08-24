@@ -4,12 +4,14 @@ on:
     paths:
       - 'js/**'
       - 'scss/**'
+      - 'site/content/docs/**/guidelines'
     branches:
       - v5-dev
   pull_request:
     paths:
       - 'js/**'
       - 'scss/**'
+      - 'site/content/docs/**/guidelines'
     branches:
       - v5-dev
 env:

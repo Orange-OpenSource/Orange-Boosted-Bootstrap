@@ -4,9 +4,9 @@
   "concurrency": 4,
   "defaults": {
     "wait": 3000,
-    "threshold": 500,
     "runners": [
       "axe"
-    ]
+    ],
+    "hideElements": ".bd-search, .active, [aria-current], pre *"
   }
 }
