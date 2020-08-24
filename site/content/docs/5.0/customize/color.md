@@ -60,12 +60,12 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   {{< /theme-colors.inline >}}
 
   <div class="col-md-4 mb-3">
-    <div class="p-3 mb-2 bd-orange-2">
-      <strong class="d-block">$orange-2</strong>
+    <div class="p-3 mb-2 bd-accessible-orange">
+      <strong class="d-block">$accessible-orange</strong>
       #f16e00
     </div>
-    <div class="p-3 mb-2 bd-yellow-2">
-      <strong class="d-block">$yellow-2</strong>
+    <div class="p-3 mb-2 bd-supporting-yellow">
+      <strong class="d-block">$supporting-yellow</strong>
       #fc0
     </div>
     <div class="p-3 mb-2 bd-black text-white">
@@ -78,6 +78,24 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
     </div>
   </div>
 </div>
+
+<!-- Boosted mod -->
+### Orange's colors
+
+Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
+Boosted core uses Bootstrap's naming for maintenance ease, but <strong>you're encouraged to use Orange color tokens when it comes to custom code</strong>.
+
+<div class="row row-cols-1 row-cols-lg-2 mt-3">
+    <div class="col">
+        <h4>Orange color tokens</h4>
+        {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
+    </div>
+    <div class="col">
+        <h4>Bootstrap core variables</h4>
+        {{< scss-docs name="bootstrap-colors" file="scss/_variables.scss" >}}
+    </div>
+</div>
+<!-- End mod -->
 
 ### Notes on Sass
 

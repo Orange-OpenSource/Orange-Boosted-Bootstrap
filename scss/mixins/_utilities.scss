@@ -45,7 +45,7 @@
           // Boosted mod: ensure contrasts in color utilities
           @if "background-color" == $property and "transparent" != inspect($value) and $primary != $value {
             color: color-contrast($value);
-          } @else if "color" == $property and "inherit" != inspect($value) and $orange-2 != $value {
+          } @else if "color" == $property and "inherit" != inspect($value) and $accessible-orange != $value {
             background-color: color-contrast($value);
           }
           // End mod

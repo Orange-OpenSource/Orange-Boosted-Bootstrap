@@ -9,37 +9,37 @@
       class: black
       hex: "#000"
       variable: $secondary
-    - name: Orange 1
+    - name: Accessible orange
       class: orange
-      hex: "#ff7900"
-      variable: $primary
-    - name: Orange 2
-      class: orange-2
       hex: "#f16e00"
-      variable: $orange-2
+      variable: $accessible-orange
+    - name: Brand orange
+      class: orange-2
+      hex: "#ff7900"
+      variable: $brand-orange
 - category: Supporting colors
   name: "Supporting colors"
   colors:
     - name: Blue
       class: cyan
       hex: "#4bb4e6"
-      variable: $cyan
+      variable: $supporting-blue
     - name: Yellow
       class: yellow-2
       hex: "#ffd200"
-      variable: $yellow-2
+      variable: $supporting-yellow
     - name: Green
       class: teal
       hex: "#50be87"
-      variable: $teal
+      variable: $supporting-green
     - name: Purple
       class: purple
       hex: "#a885d8"
-      variable: $purple
+      variable: $supporting-purple
     - name: Pink
       class: pink
       hex: "#ffb4e6"
-      variable: $pink
+      variable: $supporting-pink
 - category: OBS Gray
   name: "OBS Gray"
   colors:
@@ -47,25 +47,25 @@
       class: 800
       hex: "#595959"
       variable: $gray-800
-- category: Functionnal colors
-  name: "Functionnal colors"
+- category: Functional colors
+  name: "Functional colors"
   colors:
     - name: Green
       class: green
       hex: "#32c832"
-      variable: $success
+      variable: $functional-green
     - name: Blue
       class: blue
       hex: "#527edb"
-      variable: $info
+      variable: $functional-blue
     - name: Yellow
       class: yellow
       hex: "#fc0"
-      variable: $warning
+      variable: $functional-yellow
     - name: Red
       class: red
       hex: "#cd3c14"
-      variable: $danger
+      variable: $functional-red
 - category: Grays
   name: "Grays"
   colors:
