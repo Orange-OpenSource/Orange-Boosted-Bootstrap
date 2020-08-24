@@ -46,7 +46,7 @@ jobs:
       - name: Compile dist
         run: npm run dist
 
-      - name: Build docs
+      - name: Test docs
         run: npm run docs-build
 
       - name: Run accessibility tests
@@ -57,7 +57,7 @@ jobs:
         if: failure()
 
       - name: Upload accessibility results
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: pa11y-ci-results

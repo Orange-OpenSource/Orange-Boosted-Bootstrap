@@ -11,6 +11,8 @@ Alerts are available in [four styles]({{< docsref "/components/alerts" >}}#examp
 
 ## Success
 
+<i><button></button></i>
+
 {{< alert success >}}
 
 ## Information
