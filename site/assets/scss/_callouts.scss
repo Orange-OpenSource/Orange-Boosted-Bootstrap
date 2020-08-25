@@ -32,7 +32,7 @@
   background-color: tint-color($color, 11); // Boosted mod
   border-left-color: $color; // Boosted mod
 
-  h4 { color: $color; }
+  h4 { color: shade-color($color, 2); }
 }
 
 .bd-callout-info { @include bs-callout-variant($bd-info); }

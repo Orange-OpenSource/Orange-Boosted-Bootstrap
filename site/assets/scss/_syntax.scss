@@ -27,7 +27,7 @@
 /* GenericStrong */ .chroma .gs { font-weight: 700; } /* NEW */
 /* GenericTraceback */ .chroma .gt { color: tint-color($success, 2); }
 /* GenericSubheading */ .chroma .gu { color: shade-color($success, 2); }
-/* LiteralNumberIntegerLong */ .chroma .il { color: shade-color($primary, 3); }
+/* LiteralNumberIntegerLong */ .chroma .il { color: shade-color($primary, 4); }
 /* Keyword */ .chroma .k { color: shade-color($cyan, 4); }
 /* KeywordConstant */ .chroma .kc { color: shade-color($cyan, 4); }
 /* KeywordDeclaration */ .chroma .kd { color: shade-color($cyan, 4); }
@@ -35,12 +35,12 @@
 /* KeywordPseudo */ .chroma .kp { color: shade-color($cyan, 4); }
 /* KeywordReserved */ .chroma .kr { color: shade-color($cyan, 4); }
 /* KeywordType */ .chroma .kt { color: shade-color($teal, 4); }
-/* LiteralNumber */ .chroma .m { color: shade-color($primary, 3); }
-/* LiteralNumberFloat */ .chroma .mf { color: shade-color($primary, 3); }
+/* LiteralNumber */ .chroma .m { color: shade-color($primary, 4); }
+/* LiteralNumberFloat */ .chroma .mf { color: shade-color($primary, 4); }
 /* LiteralNumberBin */ .chroma .mb { color: shade-color($teal, 4); } /* NEW */
-/* LiteralNumberHex */ .chroma .mh { color: shade-color($primary, 3); }
-/* LiteralNumberInteger */ .chroma .mi { color: shade-color($primary, 3); }
-/* LiteralNumberOct */ .chroma .mo { color: shade-color($primary, 3); }
+/* LiteralNumberHex */ .chroma .mh { color: shade-color($primary, 4); }
+/* LiteralNumberInteger */ .chroma .mi { color: shade-color($primary, 4); }
+/* LiteralNumberOct */ .chroma .mo { color: shade-color($primary, 4); }
 /* NameAttribute */ .chroma .na { color: shade-color($success, 4); }
 /* NameBuiltin */ .chroma .nb { color: shade-color($teal, 4); }
 /* NameClass */ .chroma .nc { color: shade-color($success, 4); }
@@ -56,18 +56,18 @@
 /* Operator */ .chroma .o { color: $gray-800; }
 /* OperatorWord */ .chroma .ow { color: $black; }
 /* LiteralString */ .chroma .s { color: shade-color($cyan, 4); }
-/* LiteralStringSingle */ .chroma .s1 { color: shade-color($primary, 3); }
-/* LiteralStringDouble */ .chroma .s2 { color: shade-color($primary, 3); }
+/* LiteralStringSingle */ .chroma .s1 { color: shade-color($primary, 4); }
+/* LiteralStringDouble */ .chroma .s2 { color: shade-color($primary, 4); }
 /* LiteralStringAffix */ .chroma .sa { color: shade-color($cyan, 4); } /* NEW */
-/* LiteralStringBacktick */ .chroma .sb { color: shade-color($primary, 3); }
-/* LiteralStringChar */ .chroma .sc { color: shade-color($primary, 3); }
-/* LiteralStringDoc */ .chroma .sd { font-style: italic; color: shade-color($primary, 3); }
-/* LiteralStringEscape */ .chroma .se { color: shade-color($primary, 3); }
-/* LiteralStringHeredoc */ .chroma .sh { color: shade-color($primary, 3); }
+/* LiteralStringBacktick */ .chroma .sb { color: shade-color($primary, 4); }
+/* LiteralStringChar */ .chroma .sc { color: shade-color($primary, 4); }
+/* LiteralStringDoc */ .chroma .sd { font-style: italic; color: shade-color($primary, 4); }
+/* LiteralStringEscape */ .chroma .se { color: shade-color($primary, 4); }
+/* LiteralStringHeredoc */ .chroma .sh { color: shade-color($primary, 4); }
 /* LiteralStringInterpol */ .chroma .si { color: shade-color($danger, 4); }
 /* LiteralStringRegex */ .chroma .sr { color: shade-color($teal, 4); }
 /* LiteralStringSymbol */ .chroma .ss { color: shade-color($warning, 4); }
-/* LiteralStringOther */ .chroma .sx { color: shade-color($primary, 3); }
+/* LiteralStringOther */ .chroma .sx { color: shade-color($primary, 4); }
 /* TextWhitespace */ .chroma .w { color: $gray-500; }
 
 .chroma {
