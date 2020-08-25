@@ -25,31 +25,10 @@ Because Boosted's components are purposely designed to be fairly generic, author
 ### Color contrast
 
 <!-- Boosted mod -->
-Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—should lead to sufficient color contrast (above the recommended [WCAG 2.1 color contrast ratio of 4.5:1](https://www.w3.org/TR/UNDERSTANDING-WCAG21/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)).
+Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
-#### Ensuring contrasts
-
-Each of the text colors shown are combined with background colors from the Orange digital palette in order to meet [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
-**Please note that contrasts are locked when using [`.text-*` and `.bg-*` utilities]({{< docsref "/utilities/colors" >}})**, to ensure sufficient contrasts.
-
-As shown below, we’ve added reached WCAG level to each of the palette colors—one for against white, and one for against black.
-
-{{< palette.inline >}}
-{{- range $category := $.Site.Data.palette }}
-  <h5 class="h4 col-12">{{ $category.name }}</h5>
-  <div class="row font-monospace">
-    {{- range $color := $category.colors }}
-    <div class="col-md-4 mb-2">
-      <div class="p-3 mb-2 position-relative a11y-swatch-{{ $color.class }}{{ if (eq $color.class "white") }} border{{ end }}">
-        <strong class="d-block">{{ $color.name }}</strong>
-        {{ $color.hex }}
-      </div>
-    </div>
-    {{ end -}}
-  </div>
-{{ end -}}
-{{< /palette.inline >}}
-<!-- End mod -->
+Unlike Bootstrap, in Boosted **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*` and `.bg-*` utilities]({{< docsref "/utilities/colors" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
+<!-- end mod -->
 
 ### Visually hidden content
 

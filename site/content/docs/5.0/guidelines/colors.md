@@ -78,10 +78,10 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 {{ end -}}
 {{< /palette.inline >}}
 
-## Functionnal colors
+## Functional colors
 
 {{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "Functionnal colors" }}
+{{- range where $.Site.Data.palette "category" "Functional colors" }}
 <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
@@ -123,3 +123,21 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 </div>
 {{ end -}}
 {{< /palette.inline >}}
+
+## Usage
+
+<div class="row row-cols-1 row-cols-lg-2">
+    <p class="col-lg-12">
+        Boosted sets an additional layer to use Orange Brand's color tokens names—defined first and mapped to Bootstrap core variables.
+        Boosted core uses Bootstrap's naming for maintenance ease, but <strong>you're encouraged to use Orange color tokens when it comes to custom code</strong>.
+    </p>
+    <div class="col">
+        <h4>Orange color tokens</h4>
+        {{< scss-docs name="brand-colors" file="scss/_variables.scss" >}}
+    </div>
+    <div class="col">
+        <h4>Bootstrap core variables</h4>
+        {{< scss-docs name="bootstrap-colors" file="scss/_variables.scss" >}}
+    </div>
+</div>
+

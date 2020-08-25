@@ -216,7 +216,7 @@ ul {
 // See https://developer.mozilla.org/fr/docs/Web/CSS/::marker
 // stylelint-disable selector-max-type
 li::marker {
-  color: $orange-2;
+  color: $accessible-orange;
   vertical-align: middle;
 }
 
@@ -228,7 +228,7 @@ li li li::marker { color: $gray-500; }
 // @todo To remove when ::marker support is OK
 // See https://caniuse.com/#search=%3A%3Amarker
 li::before {
-  color: $orange-2;
+  color: $accessible-orange;
   vertical-align: text-top;
 }
 

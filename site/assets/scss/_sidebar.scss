@@ -41,7 +41,7 @@
       }
 
       &:not(.collapsed) {
-        color: $orange-2;
+        color: $accessible-orange;
 
         &:hover,
         &:focus {
@@ -61,7 +61,7 @@
   }
 
   .active {
-    color: $orange-2;
+    color: $accessible-orange;
   }
   // End mod
 }

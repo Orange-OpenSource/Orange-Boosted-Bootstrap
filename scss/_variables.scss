@@ -29,27 +29,40 @@ $grays: (
   "800": $gray-800,
   "900": $gray-900
 ) !default;
+// fusv-enable
 
+// scss-docs-start brand-colors
 // Boosted mod
 //// Core colors
-$orange:   #ff7900 !default;
-$orange-2: #f16e00 !default;
+$accessible-orange: #f16e00 !default;
+$brand-orange:      #ff7900 !default;
 //// Functional colors
-$green:    #32c832 !default;
-$blue:     #527edb !default;
-$yellow:   #fc0 !default;
-$red:      #cd3c14 !default;
+$functional-green:  #32c832 !default;
+$functional-blue:   #527edb !default;
+$functional-yellow: #fc0 !default;
+$functional-red:    #cd3c14 !default;
 //// Supporting colors
-$blue-2:   #4bb4e6 !default;
-$yellow-2: #ffd200 !default;
-$green-2:  #50be87 !default;
-$purple:   #a885d8 !default;
-$pink:     #ffb4e6 !default;
-//// Aliasing Bootstrap variables, just in case
-$indigo:   $purple !default;
-$teal:     $green-2 !default;
-$cyan:     $blue-2 !default;
+$supporting-blue:   #4bb4e6 !default;
+$supporting-yellow: #ffd200 !default;
+$supporting-green:  #50be87 !default;
+$supporting-purple: #a885d8 !default;
+$supporting-pink:   #ffb4e6 !default;
+// scss-docs-end brand-colors
 // End mod
+
+
+// scss-docs-start bootstrap-colors
+$blue:    $functional-blue !default;
+$indigo:  $supporting-purple !default;
+$purple:  $supporting-purple !default;
+$pink:    $supporting-pink !default;
+$red:     $functional-red !default;
+$orange:  $brand-orange !default;
+$yellow:  $functional-yellow !default;
+$green:   $functional-green !default;
+$teal:    $supporting-green !default;
+$cyan:    $supporting-blue !default;
+// scss-docs-end bootstrap-colors
 
 // scss-docs-start colors-map
 $colors: (
@@ -91,16 +104,17 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
+// Boosted mod
 $background-colors: map-merge(
   $theme-colors,
   (
-    "success": $green-2,
-    "info": $blue-2,
-    "warning": $yellow-2,
+    "success": $supporting-green,
+    "info": $supporting-blue,
+    "warning": $supporting-yellow,
     "danger": $purple
   )
 ) !default;
-// fusv-enable
+// End mod
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
@@ -291,7 +305,7 @@ $body-text-align:           null !default;
 
 $link-color:                              $black !default;
 $link-decoration:                         underline !default;
-$link-hover-color:                        $orange-2 !default;
+$link-hover-color:                        $accessible-orange !default;
 $link-hover-decoration:                   null !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -945,8 +959,8 @@ $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://w
 $navbar-dark-toggler-border-color:  transparent !default;
 
 $navbar-light-color:                $black !default;
-$navbar-light-hover-color:          $orange-2 !default;
-$navbar-light-active-color:         $orange-2 !default;
+$navbar-light-hover-color:          $accessible-orange !default;
+$navbar-light-active-color:         $accessible-orange !default;
 $navbar-light-disabled-color:       $gray-500 !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: null !default;
