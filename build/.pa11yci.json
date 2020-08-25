@@ -7,6 +7,9 @@
     "runners": [
       "axe"
     ],
-    "hideElements": ".bd-search, .active, [aria-current], pre *"
+    "hideElements": ".bd-search, .active, [aria-current], [disabled], .modal, #TableOfContents, .bd-example nav",
+    "ignore": [
+      "heading-order"
+    ]
   }
 }
