@@ -1,6 +1,7 @@
 .pagination {
   display: flex;
   flex-wrap: if($pagination-margin-left == (-$pagination-border-width), null, wrap); // Boosted mod
+  margin: $pagination-margin-y 0; // boosted mod
   @include list-unstyled();
 }
 
