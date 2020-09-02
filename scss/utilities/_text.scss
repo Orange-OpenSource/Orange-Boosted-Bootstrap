@@ -48,7 +48,7 @@
 // Boosted mod: ensure contrast
 .text-white {
   color: $white !important;
-  background-color: $black !important;
+  background-color: $black;
 }
 // end mod
 
@@ -73,12 +73,12 @@
 
 .text-body {
   color: $body-color !important;
-  background-color: $body-bg !important;
+  background-color: $body-bg;
 }
 
 .text-muted {
   color: $text-muted !important;
-  background-color: $white !important;
+  background-color: $white;
 }
 
 .bg-dark,
@@ -88,12 +88,12 @@
 
   .text-body {
     color: $body-bg !important;
-    background-color: $body-color !important;
+    background-color: $body-color;
   }
 
   .text-muted {
     color: $text-muted-dark !important;
-    background-color: $black !important;
+    background-color: $black;
   }
 }
 // end mod
