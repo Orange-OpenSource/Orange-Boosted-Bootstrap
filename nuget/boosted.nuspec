@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>boosted</id>
-    <version>4.4.1</version>
+    <version>4.5.2</version>
     <title>Boosted CSS</title>
     <authors>The Boosted Authors, Orange, The Bootstrap Authors, Twitter Inc.</authors>
     <owners>Orange</owners>
@@ -13,18 +13,19 @@
     <projectUrl>https://boosted.orange.com</projectUrl>
     <icon>boosted.png</icon>
     <license type="file">LICENSE.txt</license>
-    <copyright>Copyright 2017-2019</copyright>
+    <copyright>Copyright 2017-2020</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <repository type="git" url="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git" branch="v4-dev" commit="1d6a593107c8dce82ee997bf6c573941328a0d6d" />
     <dependencies>
       <dependency id="jQuery" version="[3.0.0,4)" />
-      <dependency id="popper.js" version="[1.14.0,2)" />
-      <dependency id="tablesorter.js" version="[2.25.0,3)" />
+      <dependency id="popper.js" version="[1.16.1,2)" />
+      <dependency id="Tablesorter.Mottie" version="[2.31.3,3)" />
     </dependencies>
     <tags>css mobile-first responsive front-end framework web</tags>
   </metadata>
   <files>
     <file src="LICENSE.txt" target="" />
-
+    <file src="nuget\boosted.png" target="" />
     <file src="dist\css\*.*" target="content\Content" />
     <file src="dist\js\boosted*.js" target="content\Scripts" />
     <file src="dist\js\boosted*.js.map" target="content\Scripts" />
