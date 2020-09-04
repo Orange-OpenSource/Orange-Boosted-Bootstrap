@@ -1,3 +1,54 @@
+<a name="4.5.2"></a>
+## [4.5.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.0...v4.5.2) (2020-08-18)
+
+### Bootstrap
+
+* [Bootstrap 4.5.1](https://github.com/twbs/bootstrap/releases/tag/v4.5.1)
+* [Bootstrap 4.5.2](https://github.com/twbs/bootstrap/releases/tag/v4.5.2)
+
+### Boosted
+
+#### Refactor
+
+* **RTL:** drop `o-rtl.scss` to prefer using RTLCSS directives, and fix carousel arrows ([8316284](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/457/commits/8316284bd89663a7dc3cc37af7e07ccd38a723a0))
+
+#### Bug Fixes
+
+* **alerts:** lock icon size ([29113f1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/29113f1986b123f371f8abfe9f62fe04e96f6e22))
+* **breadcrumb:** ensure separator won't shrink when multiline breadcrumbs, to fix [#394](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/394) ([89aa094](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/89aa09444dfd77314e066c73c846eec43e39a200))
+* **buttons:** disabled danger button color was missing ([89cf6ed](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/89cf6edc1552d1f6c0db2ce7f48a5bb1610921c3))
+* **buttons:** ensure focus-visible is used on toggle buttons ([aaa8e87](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/aaa8e87ba27d9017007856b1fed7a8e91d03980e))
+* **buttons:** sizes for .btn-icon ([d9bc92a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d9bc92af00d5370697a29ba3f04458a8f3296edc))
+* **carousel:** ensure img are 100% wide ([68731b8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/68731b8e78ae2c431b11d0c904e22ff20094ba4c))
+* **color:** better matching light color ([8c59509](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8c595099d38af6c58f534be2996e33dce6f563cc))
+* **dropdown:** use only `padding` to handle height ([3d6878e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3d6878e6dc93b532f97383973120bac98b424d7e))
+* **links:** harmonize links underline over the codebase ([74fdd28](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/74fdd28c426dd3ed0df87f9db86647bbf64780ab))
+* **list-group:** increase spacings to ease list-group alignment ([85262af](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/85262affaa5d4a940968d5b4bbdff8440362ad70))
+* **modal:** align sizes with breakpoints ([9170a2e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9170a2eca76483f8fb86bef5be7b45f55e06574f))
+* **pagination:** ensure contrasts for focus state to fix [#397](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/397) ([d9c6fc0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d9c6fc003afa06d9a9aa7a61fd52ef26d99fafdf))
+* **scrollspy:** `aria-current` set to `location` instead of `page` to fix [#455](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/455) ([add2084](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/add2084b0d1868d17648a2bbe64d36b79c26bb06))
+* **toasts:** smaller close button ([eae416b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eae416b2508068a5b5566cfd1ff94bbbdcba4d9f))
+* **tooltips:** ensure content is left-aligned ([170189e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/170189e9fc0c3c3ff81686f7222ffc55ae89e9d7))
+
+#### Features
+
+* **cards:** Orange branded :tada: ([13c6cbc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/13c6cbcef95d98f0bc6dd2898a482ab90cbc58cd))
+* **progress:** Orange branded :tada: ([206b983](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/206b9837c14eee74c37960924e4fc6aeb2835e6f))
+* **spinners:** Orange branded :tada: ([aa7bbb5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/aa7bbb5f29590fab5f75426c3a8a5090aa708f3f))
+* **colors:** use `#ff7900` as primary color & drop `color-contrast()` bypass for Orange :heart: ([57d07be](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/57d07befd6abb18e1b9ddd1d4ce0074432b877da)), closes [#ff7900](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/ff7900)
+* **fonts:** using Helvetica Neue Arabic :tada: ([6cc2d72](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6cc2d72e3beb974723d17dc0ff72fa124a2649f4))
+* **logo:** drop useless `id` ([9df650c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9df650c4eb6fbc5e15fc4e834da5ff025847d426))
+* **logo:** improve logo again, closes [#438](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/438) ([d6f3a77](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d6f3a773d9f092bd27dc68d61b02ef273bcc190a))
+* **modal:** drop `.o-modal` overrides to fix [#391](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/391) ([dfff6e6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dfff6e66593be4b60541dc7e66867fc5a94064d4))
+* **reboot:** handle `<var>` styles in reboot ([1460d1d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1460d1d302d8ddf58c98e8c9a7cc84c7dc64aa39))
+
+#### Docs
+
+* **docs:** fix sample page jQuery SRI ([08ba13f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/08ba13fe6087f8254c7bc29c3fa19c69c566bb1d))
+* **docs:** some English typos ([0d917a4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0d917a442991c2514f15a30562906a29b2887fb3))
+
+
+<a name="4.5.0"></a>
 ## [4.5.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.4.1...v4.5.0) (2020-05-13)
 
 ### [Bootstrap 4.5.0](https://github.com/twbs/bootstrap/releases/tag/v4.5.0)

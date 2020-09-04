@@ -1,6 +1,8 @@
 // Inline code
+var, // Boosted mod
 code {
   @include font-size($code-font-size);
+  font-style: normal; // Boosted mod: <var> is italic in all browsers
   color: $code-color;
   word-wrap: break-word;
 
@@ -31,6 +33,7 @@ kbd {
 pre {
   display: block;
   @include font-size($code-font-size);
+  line-height: $pre-line-height; // Boosted mod
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags

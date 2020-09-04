@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.5.0): scrollspy.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap (v4.5.2): scrollspy.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
@@ -15,7 +15,7 @@ import Util from './util'
  */
 
 const NAME               = 'scrollspy'
-const VERSION            = '4.5.0'
+const VERSION            = '4.5.2'
 const DATA_KEY           = 'bs.scrollspy'
 const EVENT_KEY          = `.${DATA_KEY}`
 const DATA_API_KEY       = '.data-api'
@@ -241,11 +241,11 @@ class ScrollSpy {
         .addClass(CLASS_NAME_ACTIVE)
         .attr('aria-current', 'true')
       $link.addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'page')
+        .attr('aria-current', 'location')
     } else {
       // Set triggered link as active
       $link.addClass(CLASS_NAME_ACTIVE)
-        .attr('aria-current', 'page')
+        .attr('aria-current', 'location')
       // Set triggered links parents as active
       // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
       $link.parents(SELECTOR_NAV_LIST_GROUP)

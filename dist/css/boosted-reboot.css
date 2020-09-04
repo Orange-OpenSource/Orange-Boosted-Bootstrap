@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v4.5.0 (https://boosted.orange.com)
+ * Boosted Reboot v4.5.2 (https://boosted.orange.com)
  * Copyright 2014-2019 The Boosted Authors
  * Copyright 2014-2019 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Reboot v4.5.0 (https://getbootstrap.com)
+ * Bootstrap Reboot v4.5.2 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+/* rtl:raw:
+* {
+  letter-spacing: 0 !important;
+}
+*/
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -29,11 +34,11 @@ main {
 
 body {
   margin: 0;
-  font-family: HelvNeueOrange, Helvetica Neue, Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: HelvNeueOrange/*rtl:insert:Arabic*/, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-synthesis: none;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.125;
   color: #000;
   text-align: left;
   letter-spacing: -0.00625rem;
@@ -169,7 +174,7 @@ sup {
 
 a {
   color: #000;
-  text-decoration: none;
+  text-decoration: underline;
   background-color: transparent;
   outline-offset: 0.25rem;
   transition: outline-offset 0.2s ease-in-out;
@@ -182,35 +187,27 @@ a {
 }
 
 a:focus {
-  color: #f16e00;
+  color: #ff7900;
   outline: 0.125rem solid;
   outline-offset: -0.125rem;
 }
 
 a:hover {
   color: #f16e00;
-  text-decoration: none;
-}
-
-main a:not([class]), main a:not([class]):hover {
   text-decoration: underline;
 }
 
-main a:not([class]):focus {
-  text-decoration: underline;
-  outline-offset: 0.125rem;
-}
-
-a:not([href]):not([tabindex]) {
+a:not([href]):not([class]) {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):not([tabindex]):hover {
+a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
 
+var,
 pre,
 code,
 kbd,

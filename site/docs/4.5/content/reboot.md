@@ -39,15 +39,7 @@ $font-family-sans-serif:
   // Helvetica Neue
   Helvetica Neue, 
   // Websafe Fallbacks
-  Helvetica, Arial
-  // Safari for macOS and iOS (San Francisco)
-  -apple-system,
-  // Chrome < 56 for macOS (San Francisco)
-  BlinkMacSystemFont,
-  // Windows
-  Segoe UI,
-  // Android
-  Roboto,
+  Helvetica, Arial,
   // Ubuntu
   Liberation Sans,
   // Generic
@@ -312,7 +304,7 @@ These changes, and more, are demonstrated below.
 Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
 
 {% capture example %}
-<span role="button">Non-button element button</span>
+<span role="button" tabindex="0">Non-button element button</span>
 {% endcapture %}
 {% include example.html content=example %}
 

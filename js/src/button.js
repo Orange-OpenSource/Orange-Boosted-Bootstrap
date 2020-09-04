@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.5.0): button.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap (v4.5.2): button.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
@@ -14,7 +14,7 @@ import $ from 'jquery'
  */
 
 const NAME                = 'button'
-const VERSION             = '4.5.0'
+const VERSION             = '4.5.2'
 const DATA_KEY            = 'bs.button'
 const EVENT_KEY           = `.${DATA_KEY}`
 const DATA_API_KEY        = '.data-api'
@@ -23,8 +23,6 @@ const JQUERY_NO_CONFLICT  = $.fn[NAME]
 const CLASS_NAME_ACTIVE = 'active'
 const CLASS_NAME_BUTTON = 'btn'
 const CLASS_NAME_FOCUS  = 'focus'
-const CLASS_NAME_FOCUS_VISIBLE = 'focus-visible' // Boosted mod
-
 
 const SELECTOR_DATA_TOGGLE_CARROT   = '[data-toggle^="button"]'
 const SELECTOR_DATA_TOGGLES         = '[data-toggle="buttons"]'
@@ -39,6 +37,21 @@ const EVENT_FOCUS_BLUR_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY} ` +
                                   `blur${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_LOAD_DATA_API       = `load${EVENT_KEY}${DATA_API_KEY}`
 
+// Boosted mod
+const CLASS_NAME_FOCUS_VISIBLE = 'focus-visible'
+const DATA_FOCUS_VISIBLE       = 'data-focus-visible-added'
+const MUTATION_OBSERVER        = new MutationObserver((mutationsList) => {
+  mutationsList.forEach((mutation) => {
+    const button = mutation.target.parentNode
+    button.classList.toggle(CLASS_NAME_FOCUS_VISIBLE)
+    if (mutation.oldValue === null) {
+      button.setAttribute(DATA_FOCUS_VISIBLE, '')
+    } else {
+      button.removeAttribute(DATA_FOCUS_VISIBLE)
+    }
+  })
+})
+// end mod
 
 /**
  * ------------------------------------------------------------------------
@@ -156,20 +169,21 @@ $(document)
         return
       }
 
-      if (initialButton.tagName === 'LABEL' && inputBtn && inputBtn.type === 'checkbox') {
-        event.preventDefault() // work around event sent to label and input
+      if (initialButton.tagName !== 'LABEL' || inputBtn && inputBtn.type !== 'checkbox') {
+        Button._jQueryInterface.call($(button), 'toggle')
       }
-      Button._jQueryInterface.call($(button), 'toggle')
     }
   })
   .on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, (event) => {
     const button = $(event.target).closest(SELECTOR_BUTTON)[0]
     $(button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type))
-    // Boosted mod: check if children has focus-visible and delegate it to button
-    if ($(event.target).hasClass(CLASS_NAME_FOCUS_VISIBLE)) {
-      $(button).addClass(CLASS_NAME_FOCUS_VISIBLE)
-    } else {
-      $(button).removeClass(CLASS_NAME_FOCUS_VISIBLE)
+    // Boosted mod
+    const input = button.querySelector(SELECTOR_INPUT)
+    if (input.type === 'checkbox' || input.type === 'radio') {
+      MUTATION_OBSERVER.observe(input, {
+        attributes: true,
+        attributeFilter: [DATA_FOCUS_VISIBLE]
+      })
     }
     // end mod
   })

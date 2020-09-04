@@ -1,0 +1,43 @@
+name-template: 'v$NEXT_MAJOR_VERSION'
+tag-template: 'v$NEXT_MAJOR_VERSION'
+branches:
+  - 'v5-dev'
+prerelease: true
+exclude-labels:
+  - 'skip-changelog'
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+      - 'component'
+  - title: '🐛 Bug fixes'
+    labels:
+      - 'fix'
+      - 'bug'
+  - title: '🎨 CSS'
+    labels:
+      - 'css'
+  - title: '☕️ JavaScript'
+    labels:
+      - 'js'
+  - title: '📖 Docs'
+    labels:
+      - 'docs'
+  - title: '🌎 Accessibility'
+    labels:
+      - 'accessibility'
+  - title: '🧰🧰🧰🧰 Misc'
+    labels:
+      - 'chore'
+      - 'merge'
+  - title: '📦 Dependencies'
+    labels:
+      - 'dependencies'
+  - title: '📙 Orange Brand'
+    labels:
+      - 'brand'
+change-template: '- #$NUMBER: $TITLE'
+template: |
+  ## Changes
+  $CHANGES

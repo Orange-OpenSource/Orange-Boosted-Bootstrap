@@ -1,87 +1,29 @@
 /*!
-  * Boosted v4.5.0 (https://boosted.orange.com)
+  * Boosted v4.5.2 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap navbar.js v4.5.0 (https://boosted.orange.com)
+  * Bootstrap navbar.js v4.5.2 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
   typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
-  (global = global || self, global.Navbar = factory(global.jQuery, global.Util));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Navbar = factory(global.jQuery, global.Util));
 }(this, (function ($, Util) { 'use strict';
 
-  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
-  Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+  var $__default = /*#__PURE__*/_interopDefaultLegacy($);
+  var Util__default = /*#__PURE__*/_interopDefaultLegacy(Util);
 
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-  }
+  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-    return obj;
-  }
-
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-      }
-    }
-
-    return target;
-  }
-
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -89,9 +31,9 @@
    */
 
   var NAME = 'navbar';
-  var VERSION = '4.5.0';
+  var VERSION = '4.5.2';
   var DATA_KEY = 'bs.navbar';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
   var BREAKPOINT = 768;
   var Default = {
     sticky: false,
@@ -116,38 +58,38 @@
       this._element = element;
       this._supraBar = element.querySelector(SELECTOR_SUPRA_BAR);
       this._config = this._getConfig(config);
-      this._initialHeight = $(this._element).outerHeight();
-      this._initialSupraHeight = $(this._supraBar).outerHeight();
+      this._initialHeight = $__default['default'](this._element).outerHeight();
+      this._initialSupraHeight = $__default['default'](this._supraBar).outerHeight();
 
       this._addAria();
 
       if (this._config.sticky) {
-        $(this._element).addClass('fixed-top');
-        $(SELECTOR_MEGAMENU_PANEL).addClass('sticky');
-        $(document.body).css('padding-top', this._initialHeight);
-        $(window).on('scroll', function () {
-          var Scroll = $(window).scrollTop();
+        $__default['default'](this._element).addClass('fixed-top');
+        $__default['default'](SELECTOR_MEGAMENU_PANEL).addClass('sticky');
+        $__default['default'](document.body).css('padding-top', this._initialHeight);
+        $__default['default'](window).on('scroll', function () {
+          var Scroll = $__default['default'](window).scrollTop();
 
           if (Scroll > 0) {
-            $(_this._element).addClass('minimized');
+            $__default['default'](_this._element).addClass('minimized');
           } else {
-            $(_this._element).removeClass('minimized');
+            $__default['default'](_this._element).removeClass('minimized');
           }
         });
       }
 
       if (this._config.hideSupra) {
-        $(window).on('scroll', function () {
-          if ($(window).innerWidth() < BREAKPOINT) {
+        $__default['default'](window).on('scroll', function () {
+          if ($__default['default'](window).innerWidth() < BREAKPOINT) {
             return;
           }
 
-          var Scroll = $(window).scrollTop();
+          var Scroll = $__default['default'](window).scrollTop();
 
           if (Scroll > 0) {
-            $(SELECTOR_SUPRA_BAR).hide();
+            $__default['default'](SELECTOR_SUPRA_BAR).hide();
           } else {
-            $(SELECTOR_SUPRA_BAR).show();
+            $__default['default'](SELECTOR_SUPRA_BAR).show();
           }
         });
       }
@@ -158,25 +100,25 @@
 
     // private
     _proto._getConfig = function _getConfig(config) {
-      config = $.extend({}, Default, config);
-      Util.typeCheckConfig(NAME, config, DefaultType);
+      config = $__default['default'].extend({}, Default, config);
+      Util__default['default'].typeCheckConfig(NAME, config, DefaultType);
       return config;
     };
 
     _proto._addAria = function _addAria() {
-      $(this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
+      $__default['default'](this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
     } // static
     ;
 
     Navbar._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY);
+        var data = $__default['default'](this).data(DATA_KEY);
 
-        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default), $(this).data()), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Navbar(this, _config);
-          $(this).data(DATA_KEY, data);
+          $__default['default'](this).data(DATA_KEY, data);
         }
 
         if (typeof config === 'string') {
@@ -210,11 +152,11 @@
    */
 
 
-  $.fn[NAME] = Navbar._jQueryInterface;
-  $.fn[NAME].Constructor = Navbar;
+  $__default['default'].fn[NAME] = Navbar._jQueryInterface;
+  $__default['default'].fn[NAME].Constructor = Navbar;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default['default'].fn[NAME].noConflict = function () {
+    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
     return Navbar._jQueryInterface;
   };
 

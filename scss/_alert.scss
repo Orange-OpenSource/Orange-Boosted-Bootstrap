@@ -16,7 +16,7 @@
   // Boosted mod
   a {
     color: inherit;
-    text-decoration: underline; // Boosted mod: links are perceivable globally
+    text-decoration: if($link-decoration == underline, null, underline); // Boosted mod: links are perceivable globally
 
     &:hover {
       color: theme-color("primary");
@@ -57,6 +57,7 @@
     margin-right: $alert-logo-size;
     content: "";
     background-repeat: no-repeat;
+    background-size: $alert-logo-size;
   }
 }
 // end mod
@@ -125,6 +126,7 @@
       min-width: $alert-logo-size-sm;
       height: $alert-logo-size-sm;
       margin-right: $alert-logo-size-sm / 2;
+      background-size: $alert-logo-size-sm;
     }
   }
 

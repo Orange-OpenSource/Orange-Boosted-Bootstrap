@@ -9,6 +9,7 @@
 
 .custom-control {
   position: relative;
+  z-index: 1;
   display: block;
   min-height: $font-size-base * $line-height-base;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
@@ -75,15 +76,15 @@
 
       &::before {
         // Boosted mod: our custom control have a border
-        background-color: $custom-control-indicator-disabled-bg;
         border-color: $custom-control-indicator-disabled-checked-bg;
+        @include gradient-bg($custom-control-indicator-disabled-bg);
         // end mod
       }
     }
     // Boosted mod: disable bg only for checked elements
     &:checked ~ .custom-control-label {
       &::before {
-        background-color: $custom-control-indicator-disabled-checked-bg;
+        @include gradient-bg($custom-control-indicator-disabled-checked-bg);
       }
     }
   }
@@ -138,18 +139,16 @@
     @include border-radius($custom-checkbox-indicator-border-radius);
   }
 
-  // Boosted mod
-  .custom-control-input:not(:disabled):checked ~ .custom-control-label {
-    &::before {
-      border: $border-width solid $primary;
-    }
-  }
-  // end mod
-
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
       background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
+
+    // Boosted mod
+    &::before {
+      border: $border-width solid $primary;
+    }
+    // End mod
   }
 
   // Boosted mod:no box-shadow, replaced by outline
@@ -175,16 +174,19 @@
     }
   }
 
-  // Boosted mod disable state manage globally
-  // .custom-control-input:disabled {
-  //  &:checked ~ .custom-control-label::before {
-  //    background-color: $custom-control-indicator-checked-disabled-bg;
-  //  }
-  //  &:indeterminate ~ .custom-control-label::before {
-  //    background-color: $custom-control-indicator-checked-disabled-bg;
-  //  }
-  //}
-  // end mod
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label {
+      // Boosted mod
+      &::before {
+        border-color: $custom-control-indicator-disabled-checked-bg;
+      }
+
+      &::after {
+        background-image: escape-svg($custom-checkbox-indicator-icon-disabled);
+      }
+      // End mod
+    }
+  }
 }
 
 // Radios
@@ -200,8 +202,8 @@
   // Boosted mod move ::before gradient to global definition
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
-      background-color: $white;
-      border-color: $white;
+      background-color: $black;
+      border-color: $black;
     }
 
     &::after {
@@ -218,12 +220,6 @@
   //end mod
 
   // Boosted mod disable state manage globally
-  // .custom-control-input:disabled {
-  //   &:checked ~ .custom-control-label::before {
-  //     background-color: $custom-control-indicator-checked-disabled-bg;
-  //   }
-  // }
-  // end mod
 }
 
 
@@ -305,7 +301,10 @@
   .custom-control-input:disabled {
     ~ .custom-control-label::before,
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-disabled-checked-bg; // Boosted mod
+      // Boosted mod
+      @include gradient-bg($custom-control-indicator-disabled-checked-bg);
+      background-image: escape-svg($custom-checkbox-indicator-icon-disabled);
+      // End mod
     }
   }
 }

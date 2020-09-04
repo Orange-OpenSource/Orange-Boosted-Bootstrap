@@ -105,13 +105,13 @@
     border-width: 0 0 $nav-tabs-border-width * 2;
 
     @include hover-focus() {
-      color: $primary;
+      color: $orange-2;
       background-color: transparent;
       border-color: transparent;
     }
 
     &.active {
-      border-color: transparent transparent $primary;
+      border-color: transparent transparent $orange-2;
     }
 
     &:not(.disabled):focus {
@@ -137,7 +137,8 @@
 
   .nav-link.active,
   .show > .nav-link {
-    color: $nav-pills-link-active-color;
+    // stylelint-disable-next-line declaration-no-important
+    color: $nav-pills-link-active-color !important; // Boosted mod: prevent conflict with .navbar-dark
     background-color: $nav-pills-link-active-bg;
 
     // Boosted mod: show focus!
@@ -160,6 +161,7 @@
 //
 
 .nav-fill {
+  > .nav-link,
   .nav-item {
     flex: 1 1 auto;
     text-align: center;
@@ -167,6 +169,7 @@
 }
 
 .nav-justified {
+  > .nav-link,
   .nav-item {
     flex-basis: 0;
     flex-grow: 1;

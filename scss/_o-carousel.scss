@@ -2,14 +2,16 @@
 // Carousel
 //
 
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
+.swiper-button-prev {
   @extend .carousel-control-prev;
   @extend .carousel-control-prev-icon;
+
+  /* rtl:raw:
+  transform: rotate(180deg);
+  */
 }
 
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
+.swiper-button-next {
   @extend .carousel-control-next;
   @extend .carousel-control-next-icon;
 }

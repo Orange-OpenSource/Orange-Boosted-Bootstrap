@@ -35,7 +35,7 @@
     // color: $gray-light; // Boosted mod
 
     &:hover {
-      color: theme-color("primary"); // Boosted mod
+      color: $orange-2; // Boosted mod
       text-decoration: none;
     }
   }
@@ -114,7 +114,7 @@
   // color: $gray-lightest; // Boosted mod
 
   &:hover {
-    color: theme-color("primary");// Boosted mod
+    color: $orange-2;// Boosted mod
     text-decoration: none;
   }
 }
@@ -128,7 +128,7 @@
     }
 
     > .bd-toc-link {
-      color: theme-color("primary"); // Boosted mod
+      color: $orange-2; // Boosted mod
 
       &:hover {
         background-color: transparent;
@@ -147,10 +147,11 @@
   padding: .25rem 1.5rem;
   @include font-size(90%);
   color: $gray-700; // Boosted mod
+  text-decoration: if($link-decoration == none, null, none); // Boosted mod
 }
 
 .bd-sidebar .nav > li > a:hover {
-  color: theme-color("primary"); // Boosted mod
+  color: $orange-2; // Boosted mod
   text-decoration: none;
   background-color: transparent;
 }
@@ -165,6 +166,8 @@
 // Boosted mod
 .bd-links a,
 .bd-toc a {
+  text-decoration: if($link-decoration == none, null, none); // Boosted mod
+
   &:focus {
     outline-offset: -1px;
   }

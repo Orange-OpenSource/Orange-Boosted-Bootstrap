@@ -48,42 +48,52 @@
 // Boosted mod: ensure contrast
 .text-white {
   color: $white !important;
-  background-color: $black !important;
+  background-color: $black;
 }
 // end mod
 
 @each $color, $value in $theme-colors {
   // Boosted mod: disallow functionnal colors for text
-  @if ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
+  @if ($value != $primary) and ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
     @include text-emphasis-variant(".text-#{$color}", $value, true);
   }
   // end mod
 }
 
 // Boosted mod: ensure contrast
+.text-primary {
+  color: $orange-2 !important;
+
+  a#{&} {
+    @include hover-focus() {
+      color: darken($orange-2, $emphasized-link-hover-darken-percentage) !important;
+    }
+  }
+}
+
 .text-body {
   color: $body-color !important;
-  background-color: $body-bg !important;
+  background-color: $body-bg;
 }
 
 .text-muted {
   color: $text-muted !important;
-  background-color: $white !important;
+  background-color: $white;
 }
 
 .bg-dark,
 .table-dark,
 .navbar-dark {
-  @include text-emphasis-variant(".text-primary", $orange-2, true);
+  @include text-emphasis-variant(".text-primary", $primary, true);
 
   .text-body {
     color: $body-bg !important;
-    background-color: $body-color !important;
+    background-color: $body-color;
   }
 
   .text-muted {
     color: $text-muted-dark !important;
-    background-color: $black !important;
+    background-color: $black;
   }
 }
 // end mod
@@ -100,7 +110,8 @@
 .text-decoration-none { text-decoration: none !important; }
 
 .text-break {
-  word-wrap: break-word !important;
+  word-break: break-word !important; // IE & < Edge 18
+  overflow-wrap: break-word !important;
 }
 
 // Reset

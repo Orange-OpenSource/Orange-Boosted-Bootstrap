@@ -109,12 +109,13 @@
   display: flex;
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+  padding: $modal-inner-margin; // Boosted mod
   // counteract the pointer-events: none; in the .modal-dialog
   color: $modal-content-color;
   pointer-events: auto;
   background-color: $modal-content-bg;
   background-clip: padding-box;
-  border: $modal-content-border-width solid $modal-content-border-color;
+  // Boosted mod: no border
   @include border-radius($modal-content-border-radius);
   @include box-shadow($modal-content-box-shadow-xs);
   // Remove focus outline from opened modal
@@ -143,15 +144,14 @@
   align-items: flex-start; // so the close btn always stays on the upper right corner
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
-  border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  margin-bottom: $modal-inner-margin; // Boosted mod
+  // Boosted mod: no border
   @include border-top-radius($modal-content-inner-border-radius);
 
-  // Boosted mod
   .close {
     // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-x) auto;
   }
-  // end mod
 }
 
 // Title text within header
@@ -167,7 +167,7 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: $modal-inner-padding;
+  // Boosted mod: no padding
 }
 
 // Footer (for actions)
@@ -176,16 +176,22 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding - $modal-footer-margin-between / 2;
-  border-top: $modal-footer-border-width solid $modal-footer-border-color;
+  // Boosted mod: no padding
+  margin-top: $modal-inner-margin; // Boosted mod
+  // Boosted mod: no border
   @include border-bottom-radius($modal-content-inner-border-radius);
 
   // Place margin between footer elements
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
-  // stylelint-disable-next-line selector-max-universal
   > * {
-    margin: $modal-footer-margin-between / 2;
+    margin: 0 $modal-footer-margin-between;
+
+    // Boosted mod
+    &:last-child {
+      margin-right: 0;
+    }
+    // End mod
   }
 }
 
@@ -199,7 +205,7 @@
 }
 
 // Scale up the modal
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: $modal-md;
@@ -230,13 +236,4 @@
   .modal-sm { max-width: $modal-sm; }
 }
 
-@include media-breakpoint-up(lg) {
-  .modal-lg,
-  .modal-xl {
-    max-width: $modal-lg;
-  }
-}
-
-@include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
-}
+// Boosted mod: only one size above sm

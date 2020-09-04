@@ -1,37 +1,26 @@
 /*!
-  * Boosted v4.5.0 (https://boosted.orange.com)
+  * Boosted v4.5.2 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap prioritynav.js v4.5.0 (https://boosted.orange.com)
+  * Bootstrap prioritynav.js v4.5.2 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
-  (global = global || self, global.PriorityNav = factory(global.jQuery));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.PriorityNav = factory(global.jQuery));
 }(this, (function ($) { 'use strict';
 
-  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
+  var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-  }
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -39,9 +28,9 @@
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.5.0';
+  var VERSION = '4.5.2';
   var DATA_KEY = 'bs.prioritynav';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
   var RESIZE_DURATION = 500;
   var TAB_KEYCODE = 9;
   var EVENT_RESIZE = 'resize';
@@ -66,10 +55,10 @@
       this._element = element;
       this._config = config;
 
-      if ($(element).is('ul')) {
-        this._$menu = $(element);
+      if ($__default['default'](element).is('ul')) {
+        this._$menu = $__default['default'](element);
       } else {
-        this._$menu = $(element).find('ul').first();
+        this._$menu = $__default['default'](element).find('ul').first();
       }
 
       this._initMenu();
@@ -103,12 +92,12 @@
       var firstPos = this._$menu.find(SELECTOR_FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
 
 
-      var $wrappedElements = $(); // Used to snag the previous menu item in addition to ones that have wrapped
+      var $wrappedElements = $__default['default'](); // Used to snag the previous menu item in addition to ones that have wrapped
 
       var first = true; // Loop through all the nav items...
 
       this._$allNavElements.each(function (i) {
-        var $elm = $(this); // ...in which to find wrapped elements
+        var $elm = $__default['default'](this); // ...in which to find wrapped elements
 
         var pos = $elm.position();
 
@@ -140,7 +129,7 @@
 
 
         if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-          var $item = $(this._element).find("." + CLASS_NAME_HIDE).first().prev();
+          var $item = $__default['default'](this._element).find("." + CLASS_NAME_HIDE).first().prev();
           var $itemDuplicate = $item.clone();
           $item.addClass(CLASS_NAME_HIDE);
           $item.find('.nav-link').attr('tabindex', -1);
@@ -166,7 +155,7 @@
     _proto._bindUIActions = function _bindUIActions() {
       var _this = this;
 
-      $(window).on(EVENT_RESIZE, function () {
+      $__default['default'](window).on(EVENT_RESIZE, function () {
         _this._$menu.addClass(CLASS_NAME_RESIZING);
 
         setTimeout(function () {
@@ -180,7 +169,7 @@
 
       this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', function (e) {
         if (e.which === TAB_KEYCODE) {
-          $(e.target).dropdown('toggle');
+          $__default['default'](e.target).dropdown('toggle');
         }
       });
     } // static
@@ -188,11 +177,11 @@
 
     PriorityNav._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY);
+        var data = $__default['default'](this).data(DATA_KEY);
 
         if (!data) {
           data = new PriorityNav(this, config);
-          $(this).data(DATA_KEY, data);
+          $__default['default'](this).data(DATA_KEY, data);
         }
 
         if (typeof config !== 'undefined' && config) {
@@ -219,11 +208,11 @@
    */
 
 
-  $.fn[NAME] = PriorityNav._jQueryInterface;
-  $.fn[NAME].Constructor = PriorityNav;
+  $__default['default'].fn[NAME] = PriorityNav._jQueryInterface;
+  $__default['default'].fn[NAME].Constructor = PriorityNav;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default['default'].fn[NAME].noConflict = function () {
+    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
     return PriorityNav._jQueryInterface;
   };
 

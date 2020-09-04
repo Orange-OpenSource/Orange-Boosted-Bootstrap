@@ -50,8 +50,8 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       </td>
       <!-- Boosted mod -->
       <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
-      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
       <td>1 <small class="text-muted">(34px)</small></td>
       <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
       <!-- end mod -->
@@ -75,9 +75,9 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <!-- Boosted mod -->
       <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
       <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
-      <td rowspan="2">Bold 1rem <small class="text-muted">(16px)</small></td>
+      <td rowspan="2">Bold 1.125rem <small class="text-muted">(18px)</small></td>
       <td>1.083 <small class="text-muted">(26px)</small></td>
-      <td>-0.0375rem <small class="text-muted">(-0.6px)</small></td>
+      <td>-0.0375rem <small class="text-muted">(-0.5px)</small></td>
       <!-- end mod -->
     </tr>
     <tr>
@@ -177,7 +177,7 @@ Traditional heading elements are designed to work best in the meat of your page 
       <td>Bold 3.125rem <small class="text-muted">(50px)</small></td>
       <td>Bold 1.875rem <small class="text-muted">(30px)</small></td>
       <td>1 <small class="text-muted">(60px)</small></td>
-      <td>-0.15rem <small class="text-muted">(-2.4px)</small></td>
+      <td>-0.125rem <small class="text-muted">(-2px)</small></td>
     </tr>
     <tr>
       <td>Display 2</td>
@@ -191,9 +191,9 @@ Traditional heading elements are designed to work best in the meat of your page 
       <td>Display 3</td>
       <td>Bold 2.5rem <small class="text-muted">(40px)</small></td>
       <td>Bold 2.125rem <small class="text-muted">(34px)</small></td>
-      <td>Bold 1.25rem <small class="text-muted">(20px)</small></td>
+      <td>Bold 1.5rem <small class="text-muted">(24px)</small></td>
       <td>1 <small class="text-muted">(40px)</small></td>
-      <td>-0.075rem <small class="text-muted">(-1.2px)</small></td>
+      <td>-0.0625rem <small class="text-muted">(-1px)</small></td>
     </tr>
     <tr>
       <td>Display 4</td>
@@ -450,18 +450,10 @@ You may add `o-square-list` class to the root element of a list (`<ul>`) to get 
 
 ## Links
 
-By default, links are black, and not underlined
+By default, links are black and underlined.
 
 {% capture example %}
 <a href="#">This is a sample default link</a>
-{% endcapture %} {% include example.html content=example %}
-
-### Underlined
-
-A link into a `p` tag become underlined, to be clearly identified.
-
-{% capture example %}
-<p>Some text in a paragraph, and so <a href="#">the link are underline</a></p>
 {% endcapture %} {% include example.html content=example %}
 
 ### With arrow

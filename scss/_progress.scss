@@ -15,27 +15,17 @@
   background-color: $progress-bg;
   @include border-radius($progress-border-radius);
   @include box-shadow($progress-box-shadow);
-
-  // Boosted mod: using supporting colours for data display
-  // stylelint-disable declaration-no-important
-  .bg-success {
-    background-color: $teal !important;
-  }
-
-  .bg-info {
-    background-color: $cyan !important;
-  }
-
-  .bg-warning {
-    background-color: $yellow-2 !important;
-  }
-
-  .bg-danger {
-    background-color: $purple !important;
-  }
-  // stylelint-enable declaration-no-important
-  // end mod
 }
+
+// Boosted mod
+.progress-xs {
+  height: $progress-height-xs;
+}
+
+.progress-sm {
+  height: $progress-height-sm;
+}
+// End mod
 
 .progress-bar {
   display: flex;
@@ -49,20 +39,6 @@
   background-color: $progress-bar-bg;
   @include transition($progress-bar-transition);
 }
-
-// Boosted mod : progress is half height on mobile
-@include media-breakpoint-down(md) {
-  .progress {
-    width: 100%;
-    height: ($progress-height / 2);
-    line-height: ($progress-height / 2);
-  }
-  .progress-bar {
-    font-size: $font-size-sm;
-    line-height: ($progress-height / 2);
-  }
-}
-// end mod
 
 .progress-bar-striped {
   @include gradient-striped();

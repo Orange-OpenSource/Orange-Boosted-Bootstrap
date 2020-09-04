@@ -16,6 +16,8 @@
   @include transition($badge-transition);
 
   @at-root a#{&} {
+    text-decoration: if($link-decoration == none, null, none); // Boosted mod: links are perceivable globally
+
     @include hover-focus() {
       text-decoration: none;
     }
@@ -49,19 +51,22 @@
 // Contextual variations (linked badges get darker on :hover).
 
 @each $color, $value in $theme-colors {
-  .badge-#{$color} {
-    @include badge-variant($value);
-
-    @if $color == "info" {
-      &.badge-lg,
-      &.badge-xlg {
-        color: $white;
-      }
+  // Boosted mod: disallow functionnal colors for background
+  @if ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
+    .badge-#{$color} {
+      @include badge-variant($value);
     }
   }
 }
 
-// Boosted mod
+// Boosted mod: supporting colour as background
+@each $color, $value in $supporting-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+// Boosted mod: focus visibility
 .badge[href] {
   @include transition($transition-focus); // Boosted mod
   &:focus {
@@ -74,6 +79,7 @@
   }
 }
 
+// Boosted mod: sizes variant
 .badge-xlg {
   @include font-size($badge-font-size-xlg);
   padding: $badge-padding-y-lg $badge-padding-x-lg;

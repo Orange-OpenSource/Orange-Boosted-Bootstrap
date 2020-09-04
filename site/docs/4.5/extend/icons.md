@@ -5,6 +5,8 @@ description: Guidance and suggestions for using external icon libraries with Boo
 group: extend
 ---
 
+[comment]: #Boosted mod: do not mention Bootstrap icons
+
 Boosted doesn't include an icon library by default, but we have a handful of recommendations for you to choose from. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
 ## Preferred

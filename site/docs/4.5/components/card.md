@@ -107,6 +107,20 @@ Create lists of content in a card with a flush list group.
 {% endcapture %}
 {% include example.html content=example %}
 
+{% capture example %}
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-footer">
+    Card footer
+  </div>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 ### Kitchen sink
 
 Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
@@ -188,7 +202,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-  <div class="card-footer text-muted">
+  <div class="card-footer">
     2 days ago
   </div>
 </div>
@@ -327,9 +341,28 @@ Cards include a few options for working with images. Choose from appending "imag
 
 Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card.
 
-{% capture example %}
+<div class="bd-example">
+  <div class="card mb-3">
+    {% include icons/placeholder.svg width="100%" height="180" class="card-img-top" text="Image cap" %}
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    {% include icons/placeholder.svg width="100%" height="180" class="card-img-bottom" text="Image cap" %}
+  </div>
+</div>
+
+{% highlight html %}
 <div class="card mb-3">
-  {% include icons/placeholder.svg width="100%" height="180" class="card-img-top" text="Image cap" %}
+  <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -342,10 +375,9 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
-  {% include icons/placeholder.svg width="100%" height="180" class="card-img-bottom" text="Image cap" %}
+  <img src="..." class="card-img-bottom" alt="...">
 </div>
-{% endcapture %}
-{% include example.html content=example %}
+{% endhighlight %}
 
 ### Image overlays
 
@@ -353,11 +385,11 @@ Turn an image into a card background and overlay your card's text. Depending on 
 
 {% capture example %}
 <div class="card bg-dark">
-  {% include icons/placeholder.svg width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Card image" %}
+  {% include icons/placeholder.svg width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Card image" background="#000" color="#666" %}
   <div class="card-img-overlay">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+    <p class="card-text text-muted">Last updated 3 mins ago</p>
   </div>
 </div>
 {% endcapture %}
@@ -400,13 +432,22 @@ Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<div class="card bg-{{ color.name }} mb-3" style="max-width: 18rem;">
+<div class="card bg-{{ color.name }} border-secondary mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>{% endfor %}
+<!-- Boosted mod -->
+<div class="card border-0 mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Borderless card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<!-- End mod -->
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -493,7 +534,7 @@ When using card groups with footers, their content will automatically line up.
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
@@ -503,7 +544,7 @@ When using card groups with footers, their content will automatically line up.
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
@@ -513,7 +554,7 @@ When using card groups with footers, their content will automatically line up.
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
 </div>
@@ -565,7 +606,7 @@ Just like with card groups, card footers in decks will automatically line up.
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
@@ -575,7 +616,7 @@ Just like with card groups, card footers in decks will automatically line up.
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
@@ -585,7 +626,7 @@ Just like with card groups, card footers in decks will automatically line up.
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </div>
   </div>
 </div>

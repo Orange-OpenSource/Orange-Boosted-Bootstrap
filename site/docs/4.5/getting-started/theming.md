@@ -84,7 +84,7 @@ Here's an example that changes the `background-color` and `color` for the `<body
 {% highlight scss %}
 // Your variable overrides
 $body-bg: #000;
-$body-color: #111;
+$body-color: #000;
 
 // Boosted and its default variables
 @import "../node_modules/boosted/scss/boosted";
@@ -195,7 +195,7 @@ Additional functions could be added in the future or your own custom Sass to cre
 
 #### Color contrast
 
-An additional function we include in Bootstrap is the color contrast function, `color-yiq`. It utilizes the [WCAG 2.0 algorithm](https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) in a `sRGB` colorspace to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
+An additional function we include in Bootstrap is the color contrast function, `color-yiq`. It utilizes the [WCAG 2.0 algorithm](https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) in a `sRGB` colorspace to automatically return a light (`#fff`) or dark (`#000`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
 
 For example, to generate color swatches from our `$theme-colors` map:
 
@@ -432,8 +432,8 @@ Here are the variables we include (note that the `:root` is required). They're l
   --purple: #a885d8;
   --pink: #ffb4e6;
   --red: #cd3c14;
-  --orange: #f16e00;
-  --orange-2: #ff7900;
+  --orange: #ff7900;
+  --orange-2: #f16e00;
   --yellow: #ffd200;
   --green: #32c832;
   --teal: #50be87;
@@ -455,7 +455,7 @@ Here are the variables we include (note that the `:root` is required). They're l
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-xxl: 1440px;
-  --font-family-sans-serif: HelvNeueOrange, Helvetica Neue, Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-family-sans-serif: HelvNeueOrange, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 {% endhighlight %}

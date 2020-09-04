@@ -15,7 +15,7 @@
 
   th,
   td {
-    padding: $table-cell-padding;
+    padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px); // Boosted mod
     line-height: $table-cell-line-height;
     vertical-align: top;
   }
@@ -71,7 +71,7 @@
 .table-sm {
   th,
   td {
-    line-height: $table-cell-line-height-sm;
+    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm add($table-cell-padding-y-sm, 1px); // Boosted mod
   }
 }
 

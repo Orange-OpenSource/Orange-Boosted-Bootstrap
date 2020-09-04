@@ -2,7 +2,7 @@
 //  Orange Boosted with Bootstrap
 //         Orange Icons
 //         Copyright (C) 2016 Orange SA All rights reserved
-//         See NOTICE.txt for more informations
+//         See NOTICE.txt for more information
 
 @import "functions";
 @import "variables";
@@ -2771,6 +2771,14 @@
   @extend %svg-info;
 }
 
+/* rtl:begin:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "previous-next",
+    "search"  : "previous",
+    "replace" : "next"
+  } ]
+} */
 .svg-arrow-previous {
   @include svg-arrow-previous($black);
 
@@ -2782,6 +2790,8 @@
 .svg-arrow-next {
   @include svg-arrow-next($black);
 }
+
+/* rtl:end:options */
 
 .svg-arrow-next.btn-primary {
   @include svg-arrow-next($white);

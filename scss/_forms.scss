@@ -11,7 +11,7 @@ label {
 .is-required::after {
   margin-left: $label-margin-bottom;
   font-weight: $font-weight-bold;
-  color: theme-color("primary");
+  color: $orange-2;
   content: "*";
 }
 // end mod
