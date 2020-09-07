@@ -8,7 +8,8 @@ toc: true
 
 ## Example
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.
+[comment]: # Boosted mod: no `em`…
+Unlike Bootstrap's ones, Boosted badges do not scale to match the size of the immediate parent element—we're using `rem` units.
 
 {% capture example %}
 <h1>Example heading <span class="badge badge-secondary">New</span></h1>
