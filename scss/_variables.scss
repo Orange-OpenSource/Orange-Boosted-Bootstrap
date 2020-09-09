@@ -109,9 +109,9 @@ $background-colors: map-merge(
   $theme-colors,
   (
     "success": $supporting-green,
-    "info": $supporting-blue,
+    "info":    $supporting-blue,
     "warning": $supporting-yellow,
-    "danger": $purple
+    "danger":  $purple
   )
 ) !default;
 // End mod
