@@ -56,11 +56,14 @@
     }
 
     ~ * a {
-      padding-left: $spacer * 1.5;
+      padding: $sidebar-base-padding $sidebar-base-padding $sidebar-base-padding $spacer * 1.5;
+      font-size: $small-font-size;
+      font-weight: 400;
     }
   }
 
   .active {
+    font-weight: 700;
     color: $accessible-orange;
   }
   // End mod
