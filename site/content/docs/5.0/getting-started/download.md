@@ -50,6 +50,11 @@ If you're using our compiled JavaScript, don't forget to include Popper.js, via 
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
 {{< /highlight >}}
 
+{{< callout warning >}}
+### Ressource Hints
+Make sure to use [`preconnect` ressource hint](https://www.w3.org/TR/resource-hints/#preconnect) where appropriate (**only** when given URL **will** be used).
+{{< /callout >}}
+
 ## Package managers
 
 Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
