@@ -43,6 +43,16 @@ Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://pop
 
 {{< partial "getting-started/components-requiring-javascript" >}}
 
+{{< callout warning >}}
+#### Required script
+
+Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+However, if you don't need or want to use Boosted's JavaScript files, you'll still need to use the polyfill.
+{{< highlight html >}}
+<script src="{{< param "cdn.focus_visible" >}}" integrity="{{< param "cdn.focus_visible_hash" >}}" crossorigin="anonymous"></script>
+{{< /highlight >}}
+{{< /callout >}}
+
 ## Starter template
 
 Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
