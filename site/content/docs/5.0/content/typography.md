@@ -276,7 +276,7 @@ Styling for common inline HTML5 elements.
 <p><u>This line of text will render as underlined</u></p>
 <p><small>This line of text is meant to be treated as fine print.</small></p>
 <p><strong>This line rendered as bold text.</strong></p>
-<p><em>This line rendered as italicized text.</em></p>
+<p><em>This line rendered as bold text too,</em> but would natively be italicized.</p>
 {{< /example >}}
 
 Beware that those tags should be used for semantic purpose:
