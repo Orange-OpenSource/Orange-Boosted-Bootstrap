@@ -14,7 +14,8 @@
     margin-bottom: .25rem;
   }
 
-  p:last-child {
+  p:last-child,
+  .highlight:last-child {
     margin-bottom: 0;
   }
 
@@ -31,8 +32,6 @@
 @mixin bs-callout-variant($color) {
   background-color: tint-color($color, 11); // Boosted mod
   border-left-color: $color; // Boosted mod
-
-  h4 { color: shade-color($color, 2); }
 }
 
 .bd-callout-info { @include bs-callout-variant($bd-info); }
