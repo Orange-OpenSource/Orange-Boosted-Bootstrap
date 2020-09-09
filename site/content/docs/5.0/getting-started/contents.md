@@ -118,6 +118,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
   <thead>
     <tr>
       <th scope="col">JS files</th>
+      <th scope="col">`:focus-visible` polyfill</th>
       <th scope="col">Popper</th>
     </tr>
   </thead>
@@ -128,12 +129,14 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">boosted.bundle.min.js</code></div>
       </th>
       <td>Included</td>
+      <td>Included</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">boosted.js</code></div>
         <div><code class="font-weight-normal text-nowrap">boosted.min.js</code></div>
       </th>
+      <td>Included</td>
       <td class="text-muted">&mdash;</td>
     </tr>
   </tbody>
