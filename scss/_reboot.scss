@@ -504,6 +504,7 @@ legend {
   padding: 0;
   margin-bottom: .5rem;
   @include font-size(1.5rem);
+  font-weight: $font-weight-bold; // Boosted mod
   line-height: inherit;
   color: inherit; // 2
   white-space: normal; // 1
