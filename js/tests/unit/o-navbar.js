@@ -31,8 +31,8 @@ $(function () {
     $el.boostedNavbar()
     try {
       $el.boostedNavbar('noMethod')
-    } catch (err) {
-      assert.strictEqual(err.message, 'No method named "noMethod"')
+    } catch (error) {
+      assert.strictEqual(error.message, 'No method named "noMethod"')
     }
   })
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable max-nested-callbacks */
+
 'use strict'
 
 /*!
@@ -89,7 +91,6 @@ if (os.platform() === 'linux') {
     })
   })
 }
-
 
 sh.exec('cp -av _gh_pages/docs/4.5/boostwatch/index.html _gh_pages/docs/4.5/boostwatch/rtl-index.html', (code, stdout, stderr) => {
   console.log('Exit code:', code)

@@ -14,25 +14,24 @@ import Util from './util'
  * ------------------------------------------------------------------------
  */
 
-const NAME               = 'navbar'
-const VERSION            = '4.5.2'
-const DATA_KEY           = 'bs.navbar'
+const NAME = 'navbar'
+const VERSION = '4.5.2'
+const DATA_KEY = 'bs.navbar'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 const BREAKPOINT = 768
 
 const Default = {
-  sticky : false,
-  trigger : ''
+  sticky: false,
+  trigger: ''
 }
 
 const DefaultType = {
-  sticky : 'boolean',
-  trigger : 'string'
+  sticky: 'boolean',
+  trigger: 'string'
 }
 
-const SELECTOR_SUPRA_BAR      = '.navbar.supra'
+const SELECTOR_SUPRA_BAR = '.navbar.supra'
 const SELECTOR_MEGAMENU_PANEL = '.mega-menu.panel'
-
 
 /**
  * ------------------------------------------------------------------------
@@ -42,9 +41,9 @@ const SELECTOR_MEGAMENU_PANEL = '.mega-menu.panel'
 
 class Navbar {
   constructor(element, config) {
-    this._element         = element
-    this._supraBar        = element.querySelector(SELECTOR_SUPRA_BAR)
-    this._config          = this._getConfig(config)
+    this._element = element
+    this._supraBar = element.querySelector(SELECTOR_SUPRA_BAR)
+    this._config = this._getConfig(config)
     this._initialHeight = $(this._element).outerHeight()
     this._initialSupraHeight = $(this._supraBar).outerHeight()
 
@@ -124,6 +123,7 @@ class Navbar {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
         }
+
         data[config]()
       }
     })

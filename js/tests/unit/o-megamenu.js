@@ -32,8 +32,8 @@ $(function () {
       $el.boostedMegaMenu({
         target: 'noid'
       })
-    } catch (err) {
-      assert.strictEqual(err.message, 'Selector "noid" is not supported')
+    } catch (error) {
+      assert.strictEqual(error.message, 'Selector "noid" is not supported')
     }
   })
 
@@ -44,8 +44,8 @@ $(function () {
       $el.boostedMegaMenu({
         noFocus: 'notboolean'
       })
-    } catch (err) {
-      assert.strictEqual(err.message, 'no-focus parameter must be boolean')
+    } catch (error) {
+      assert.strictEqual(error.message, 'no-focus parameter must be boolean')
     }
   })
 
@@ -54,8 +54,8 @@ $(function () {
     var $el = $('<div/>')
     try {
       $el.boostedMegaMenu()
-    } catch (err) {
-      assert.strictEqual(err.message, 'Element is not a mega menu')
+    } catch (error) {
+      assert.strictEqual(error.message, 'Element is not a mega menu')
     }
   })
 

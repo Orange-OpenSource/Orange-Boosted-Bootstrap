@@ -14,22 +14,21 @@ import Util from './util'
  * ------------------------------------------------------------------------
  */
 
-const NAME                = 'otab'
-const VERSION             = '4.5.2'
-const DATA_KEY            = 'bs.otab'
-const EVENT_KEY           = `.${DATA_KEY}`
-const DATA_API_KEY        = '.data-api'
-const JQUERY_NO_CONFLICT  = $.fn[NAME]
-const DEFAULT_THRESHOLD   = 2
+const NAME = 'otab'
+const VERSION = '4.5.2'
+const DATA_KEY = 'bs.otab'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
+const DEFAULT_THRESHOLD = 2
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_NAME_SHOW             = 'show'
+const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_ACCORDION_LAYOUT = 'accordion-layout'
 
 const SELECTOR_OTAB_HEADING = '.o-tab-heading'
 const SELECTOR_OTAB_CONTENT = '.o-tab-content'
-
 
 /**
  * ------------------------------------------------------------------------
@@ -47,13 +46,11 @@ class Otab {
     }
   }
 
-
   // getters
 
   static get VERSION() {
     return VERSION
   }
-
 
   // public
   show() {
@@ -74,6 +71,7 @@ class Otab {
   }
 
   // private
+
   _addAccessibility() {
     const $tab = $(this._element)
     const $tabpanel = $tab.next()
@@ -103,7 +101,7 @@ class Otab {
   static _jQueryInterface(config) {
     return this.each(function () {
       const $this = $(this)
-      let data    = $this.data(DATA_KEY)
+      let data = $this.data(DATA_KEY)
 
       if (!data) {
         data = new Otab(this)
@@ -114,6 +112,7 @@ class Otab {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
         }
+
         data[config]()
       }
     })
@@ -141,9 +140,9 @@ $(document)
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME]             = Otab._jQueryInterface
+$.fn[NAME] = Otab._jQueryInterface
 $.fn[NAME].Constructor = Otab
-$.fn[NAME].noConflict  = () => {
+$.fn[NAME].noConflict = () => {
   $.fn[NAME] = JQUERY_NO_CONFLICT
   return Otab._jQueryInterface
 }
