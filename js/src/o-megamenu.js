@@ -37,21 +37,20 @@ const BreakPoints = {
 }
 
 const CLASS_NAME_TRANSITIONING = 'transitioning'
-const CLASS_NAME_ACTIVE        = 'active'
+const CLASS_NAME_ACTIVE = 'active'
 
-const SELECTOR_MEGAMENU          = '.mega-menu'
-const SELECTOR_PARENT            = '.navbar'
-const SELECTOR_ROOT_NAV          = '.mega-menu > .navbar-nav'
-const SELECTOR_MEGAMENU_PANEL    = '.mega-menu-panel'
-const SELECTOR_MEGAMENU_NAV      = '.nav-link + .navbar-nav'
-const SELECTOR_NAV_MENU          = '.navbar-nav'
-const SELECTOR_NAV_ITEM          = '.nav-item'
-const SELECTOR_NAV_LINK          = '.nav-link'
+const SELECTOR_MEGAMENU = '.mega-menu'
+const SELECTOR_PARENT = '.navbar'
+const SELECTOR_ROOT_NAV = '.mega-menu > .navbar-nav'
+const SELECTOR_MEGAMENU_PANEL = '.mega-menu-panel'
+const SELECTOR_MEGAMENU_NAV = '.nav-link + .navbar-nav'
+const SELECTOR_NAV_MENU = '.navbar-nav'
+const SELECTOR_NAV_ITEM = '.nav-item'
+const SELECTOR_NAV_LINK = '.nav-link'
 const SELECTOR_NAV_LINK_COLLAPSE = '.nav-link[data-toggle=collapse]'
-const SELECTOR_NAV_LINK_BACK     = '.nav-link.back'
+const SELECTOR_NAV_LINK_BACK = '.nav-link.back'
 const SELECTOR_NAV_LINK_EXPANDED = '.nav-link[aria-expanded=true]'
-const SELECTOR_CURRENT           = '.nav-link[aria-current="page"]'
-
+const SELECTOR_CURRENT = '.nav-link[aria-current="page"]'
 
 /**
  * ------------------------------------------------------------------------
@@ -74,8 +73,10 @@ class MegaMenu {
         this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH
         this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2)
       }
+
       this._$mediaQuery = window.matchMedia(`(max-width: ${BreakPoints[this._$breakpoint]}px)`)
     }
+
     this._$navLinks = $(this._element).find(SELECTOR_NAV_LINK)
     this._$goForwardLinks = $(this._element).find(SELECTOR_MEGAMENU_NAV).prev(SELECTOR_NAV_LINK)
     this._$goBackLinks = $(this._element).find(SELECTOR_NAV_LINK_BACK)
@@ -85,10 +86,12 @@ class MegaMenu {
     if (typeof this._config.noFocus === 'undefined') {
       this._config.noFocus = false
     }
+
     this._addEventListeners()
     if (this._$mediaQuery.matches) {
       this._addAriaAttributes(this._element)
     }
+
     this.goTo = this._initPosition
 
     window.addEventListener('resize', () => {
@@ -114,14 +117,15 @@ class MegaMenu {
   // private
 
   _addEventListeners() {
-    this._$goForwardLinks.on('click', (event) => this._goForward(event))
-    this._$goBackLinks.on('click', (event) => this._goBackward(event))
-    this._$navLinks.on('keydown', (event) => this._manageKeyDown(event))
+    this._$goForwardLinks.on('click', event => this._goForward(event))
+    this._$goBackLinks.on('click', event => this._goBackward(event))
+    this._$navLinks.on('keydown', event => this._manageKeyDown(event))
     if (!this._config.noFocus) {
       this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus)
     }
-    $(this._element).on('hidden.bs.collapse', (event) => this._handleCollapseToggle(event))
-    this._$navLinkCollapses.on('click', (event) => this._handleCollapseToggle(event))
+
+    $(this._element).on('hidden.bs.collapse', event => this._handleCollapseToggle(event))
+    this._$navLinkCollapses.on('click', event => this._handleCollapseToggle(event))
   }
 
   _addAriaAttributes(element) {
@@ -246,7 +250,7 @@ class MegaMenu {
     }
 
     // set focus on target link
-    setTimeout(() =>  {
+    setTimeout(() => {
       if (!this._config.noFocus) {
         // set focus on target link
         $target.trigger('focus')
@@ -304,6 +308,7 @@ class MegaMenu {
     } else {
       $this.toggleClass(CLASS_NAME_ACTIVE)
     }
+
     this._$navLinkCollapses.not($this).removeClass(CLASS_NAME_ACTIVE)
     this._$topCollapseMenus.not($thisCollapse).removeClass(CLASS_NAME_ACTIVE).collapse('hide')
   }
@@ -346,6 +351,7 @@ class MegaMenu {
         'aria-hidden': true
       })
     }
+
     $thisNav.find(SELECTOR_NAV_LINK).attr({
       tabindex: -1,
       'aria-hidden': true
@@ -357,8 +363,6 @@ class MegaMenu {
 
     // translate menu
     // @TODO WTF RTL?
-    // eslint-disable-next-line no-console
-    console.log(currentTranslatePercentage)
     $rootNav.css('transform', `translateX(${currentTranslatePercentage - 100 * this._$isRTL}%)`)
 
     // focus on target nav first item
@@ -445,7 +449,7 @@ class MegaMenu {
       }
 
       if (config.target) {
-        if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+        if (typeof config.target !== 'string' || !/^[#.].*/.test(config.target)) {
           throw new TypeError(`Selector "${config.target}" is not supported`)
         }
 
@@ -461,9 +465,9 @@ class MegaMenu {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME]             = MegaMenu._jQueryInterface
+$.fn[NAME] = MegaMenu._jQueryInterface
 $.fn[NAME].Constructor = MegaMenu
-$.fn[NAME].noConflict  = () => {
+$.fn[NAME].noConflict = () => {
   $.fn[NAME] = JQUERY_NO_CONFLICT
   return MegaMenu._jQueryInterface
 }

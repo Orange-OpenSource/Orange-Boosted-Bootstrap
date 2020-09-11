@@ -18,15 +18,15 @@ const VERSION = '4.5.2'
 const DATA_KEY = 'bs.prioritynav'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 const RESIZE_DURATION = 500
-const TAB_KEYCODE  = 9
+const TAB_KEYCODE = 9
 
 const EVENT_RESIZE = 'resize'
 
-const CLASS_NAME_HIDE     = 'sr-only'
+const CLASS_NAME_HIDE = 'sr-only'
 const CLASS_NAME_RESIZING = 'resizing overflow-hidden'
 
-const SELECTOR_NAV_ELEMENTS     = 'li:not(\'.overflow-nav\')'
-const SELECTOR_FIRST_ELEMENT    = 'li:first'
+const SELECTOR_NAV_ELEMENTS = 'li:not(\'.overflow-nav\')'
+const SELECTOR_FIRST_ELEMENT = 'li:first'
 
 const MenuLabelDefault = 'More'
 
@@ -38,7 +38,6 @@ function MenuTemplate(MenuLabel) {
   </li>
 `
 }
-
 
 /**
  * ------------------------------------------------------------------------
@@ -56,6 +55,7 @@ class PriorityNav {
     } else {
       this._$menu = $(element).find('ul').first()
     }
+
     this._initMenu()
     this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS)
     this._bindUIActions()
@@ -165,7 +165,7 @@ class PriorityNav {
       }, RESIZE_DURATION)
     })
 
-    this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', (e) => {
+    this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', e => {
       if (e.which === TAB_KEYCODE) {
         $(e.target).dropdown('toggle')
       }
@@ -198,9 +198,9 @@ class PriorityNav {
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME]             = PriorityNav._jQueryInterface
+$.fn[NAME] = PriorityNav._jQueryInterface
 $.fn[NAME].Constructor = PriorityNav
-$.fn[NAME].noConflict  = () => {
+$.fn[NAME].noConflict = () => {
   $.fn[NAME] = JQUERY_NO_CONFLICT
   return PriorityNav._jQueryInterface
 }

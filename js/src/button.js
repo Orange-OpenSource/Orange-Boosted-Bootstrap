@@ -13,35 +13,35 @@ import $ from 'jquery'
  * ------------------------------------------------------------------------
  */
 
-const NAME                = 'button'
-const VERSION             = '4.5.2'
-const DATA_KEY            = 'bs.button'
-const EVENT_KEY           = `.${DATA_KEY}`
-const DATA_API_KEY        = '.data-api'
-const JQUERY_NO_CONFLICT  = $.fn[NAME]
+const NAME = 'button'
+const VERSION = '4.5.2'
+const DATA_KEY = 'bs.button'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
+const JQUERY_NO_CONFLICT = $.fn[NAME]
 
 const CLASS_NAME_ACTIVE = 'active'
 const CLASS_NAME_BUTTON = 'btn'
-const CLASS_NAME_FOCUS  = 'focus'
+const CLASS_NAME_FOCUS = 'focus'
 
-const SELECTOR_DATA_TOGGLE_CARROT   = '[data-toggle^="button"]'
-const SELECTOR_DATA_TOGGLES         = '[data-toggle="buttons"]'
-const SELECTOR_DATA_TOGGLE          = '[data-toggle="button"]'
+const SELECTOR_DATA_TOGGLE_CARROT = '[data-toggle^="button"]'
+const SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]'
+const SELECTOR_DATA_TOGGLE = '[data-toggle="button"]'
 const SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn'
-const SELECTOR_INPUT                = 'input:not([type="hidden"])'
-const SELECTOR_ACTIVE               = '.active'
-const SELECTOR_BUTTON               = '.btn'
+const SELECTOR_INPUT = 'input:not([type="hidden"])'
+const SELECTOR_ACTIVE = '.active'
+const SELECTOR_BUTTON = '.btn'
 
-const EVENT_CLICK_DATA_API      = `click${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_FOCUS_BLUR_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY} ` +
                                   `blur${EVENT_KEY}${DATA_API_KEY}`
-const EVENT_LOAD_DATA_API       = `load${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
 // Boosted mod
 const CLASS_NAME_FOCUS_VISIBLE = 'focus-visible'
-const DATA_FOCUS_VISIBLE       = 'data-focus-visible-added'
-const MUTATION_OBSERVER        = new MutationObserver((mutationsList) => {
-  mutationsList.forEach((mutation) => {
+const DATA_FOCUS_VISIBLE = 'data-focus-visible-added'
+const MUTATION_OBSERVER = new MutationObserver(mutationsList => {
+  mutationsList.forEach(mutation => {
     const button = mutation.target.parentNode
     button.classList.toggle(CLASS_NAME_FOCUS_VISIBLE)
     if (mutation.oldValue === null) {
@@ -51,7 +51,7 @@ const MUTATION_OBSERVER        = new MutationObserver((mutationsList) => {
     }
   })
 })
-// end mod
+// End mod
 
 /**
  * ------------------------------------------------------------------------
@@ -81,18 +81,15 @@ class Button {
 
     if (rootElement) {
       const input = this._element.querySelector(SELECTOR_INPUT)
+      const activeElement = rootElement.querySelector(SELECTOR_ACTIVE)
 
       if (input) {
         if (input.type === 'radio') {
           if (input.checked &&
             this._element.classList.contains(CLASS_NAME_ACTIVE)) {
             triggerChangeEvent = false
-          } else {
-            const activeElement = rootElement.querySelector(SELECTOR_ACTIVE)
-
-            if (activeElement) {
-              $(activeElement).removeClass(CLASS_NAME_ACTIVE)
-            }
+          } else if (activeElement) {
+            $(activeElement).removeClass(CLASS_NAME_ACTIVE)
           }
         }
 
@@ -101,6 +98,7 @@ class Button {
           if (input.type === 'checkbox' || input.type === 'radio') {
             input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE)
           }
+
           $(input).trigger('change')
         }
 
@@ -151,7 +149,7 @@ class Button {
  */
 
 $(document)
-  .on(EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, (event) => {
+  .on(EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, event => {
     let button = event.target
     const initialButton = button
 
@@ -174,7 +172,7 @@ $(document)
       }
     }
   })
-  .on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, (event) => {
+  .on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, event => {
     const button = $(event.target).closest(SELECTOR_BUTTON)[0]
     $(button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type))
     // Boosted mod

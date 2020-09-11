@@ -10,7 +10,7 @@
       $('.mega-menu.panel').megamenu()
     })
   })
-}(jQuery));
+})(jQuery);
 
 (function () {
   'use strict'
@@ -42,6 +42,7 @@
         }
       }
     }
+
     return function () {
       return true
     }
@@ -59,12 +60,13 @@
         }
       }
     }
+
     return function () {
       return true
     }
   }
 
-  window.onload = function () {
+  window.addEventListener('load', function () {
     var pageHeader = document.getElementById('page_header')
     var pageWatcher = onSidebarVisibilityChange(pageHeader)
     var findScrollTopElm = document.getElementsByClassName('scroll-top')
@@ -83,10 +85,11 @@
 
     if (window.addEventListener) {
       if (window.innerWidth > 768) {
-        addEventListener('scroll', pageWatcher, false)
+        window.addEventListener('scroll', pageWatcher, false)
       }
+
       if (footerWatcher) {
-        addEventListener('scroll', footerWatcher, false)
+        window.addEventListener('scroll', footerWatcher, false)
       }
     } else if (window.attachEvent) {
       window.attachEvent('onscroll', pageWatcher)
@@ -94,5 +97,5 @@
         window.attachEvent('scroll', footerWatcher)
       }
     }
-  }
-}())
+  })
+})()

@@ -14,15 +14,14 @@ import Util from './util'
  * ------------------------------------------------------------------------
  */
 
-const NAME               = 'scrollup'
-const VERSION            = '4.5.2'
-const DATA_KEY           = 'bs.scrollup'
-const EVENT_KEY          = `.${DATA_KEY}`
-const DATA_API_KEY       = '.data-api'
+const NAME = 'scrollup'
+const VERSION = '4.5.2'
+const DATA_KEY = 'bs.scrollup'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
 const JQUERY_NO_CONFLICT = $.fn[NAME]
 
-const SCROLLANIMATE      = 500
-
+const SCROLLANIMATE = 500
 
 const Default = {
   target: ''
@@ -32,12 +31,11 @@ const DefaultType = {
   target: '(string|element)'
 }
 
-const EVENT_SCROLL        = `scroll${EVENT_KEY}`
-const EVENT_CLICK_SCROLL  = `click${EVENT_KEY}`
+const EVENT_SCROLL = `scroll${EVENT_KEY}`
+const EVENT_CLICK_SCROLL = `click${EVENT_KEY}`
 const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_SCROLL_TOP = '.o-scroll-up:not(.static)'
-
 
 /**
  * ------------------------------------------------------------------------
@@ -47,16 +45,15 @@ const SELECTOR_SCROLL_TOP = '.o-scroll-up:not(.static)'
 
 class ScrollUp {
   constructor(element, config) {
-    this._element       = element
+    this._element = element
     this._scrollElement = window
-    this._config        = this._getConfig(config)
+    this._config = this._getConfig(config)
 
     $(window).on(EVENT_SCROLL, $.proxy(this._process, this))
     $(SELECTOR_SCROLL_TOP).on(EVENT_CLICK_SCROLL, $.proxy(this._backToTop, this))
     $(this._element).addClass('is-fixed d-none')
     this._process()
   }
-
 
   // getters
 
@@ -78,12 +75,12 @@ class ScrollUp {
     $.removeData(this._element, DATA_KEY)
     $(this._scrollElement).off(EVENT_KEY)
 
-    this._element       = null
+    this._element = null
     this._scrollElement = null
   }
 
-
   // private
+
   _getConfig(config) {
     config = {
       ...this.constructor.Default,
@@ -135,12 +132,12 @@ class ScrollUp {
         if (typeof data[config] === 'undefined') {
           throw new TypeError(`No method named "${config}"`)
         }
+
         data[config]()
       }
     })
   }
 }
-
 
 /**
  * ------------------------------------------------------------------------
@@ -156,16 +153,15 @@ $(window).on(EVENT_LOAD_DATA_API, () => {
   }
 })
 
-
 /**
  * ------------------------------------------------------------------------
  * jQuery
  * ------------------------------------------------------------------------
  */
 
-$.fn[NAME]             = ScrollUp._jQueryInterface
+$.fn[NAME] = ScrollUp._jQueryInterface
 $.fn[NAME].Constructor = ScrollUp
-$.fn[NAME].noConflict  = () => {
+$.fn[NAME].noConflict = () => {
   $.fn[NAME] = JQUERY_NO_CONFLICT
   return ScrollUp._jQueryInterface
 }

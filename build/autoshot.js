@@ -20,25 +20,30 @@ const options = {
     width: 1024,
     height: 768
   },
-  renderDelay:3600
+  renderDelay: 3600
 }
 
 const items = [{
   src: `http://${host}:${port}/docs/4.5/examples/album/index.html`,
   dest: 'album.png'
-}, {
+},
+{
   src: `http://${host}:${port}/docs/4.5/examples/blog/index.html`,
   dest: 'blog.png'
-}, {
+},
+{
   src: `http://${host}:${port}/docs/4.5/examples/carousel/index.html`,
   dest: 'carousel.png'
-}, {
+},
+{
   src: `http://${host}:${port}/docs/4.5/examples/checkout/index.html`,
   dest: 'checkout.png'
-}, {
+},
+{
   src: `http://${host}:${port}/docs/4.5/examples/cover/index.html`,
   dest: 'cover.png'
-}, {
+},
+{
   src: `http://${host}:${port}/docs/4.5/examples/dashboard/index.html`,
   dest: 'dashboard.png'
 },
@@ -149,8 +154,7 @@ const items = [{
 {
   src: `http://${host}:${port}/docs/4.5/examples/orange-homepage/index.html`,
   dest: 'orange-homepage.png'
-}
-]
+}]
 
 const server = http.createServer((req, res) => {
   const done = finalhandler(req, res)
@@ -163,18 +167,20 @@ server.on('listening', () => {
   console.log(`docs served on ${host}:${port}, let's take some pictures`)
 
   async.each(items, (item, callback) => {
-    webshot(item.src, screenshotsBase + item.dest, options, (err) => {
+    webshot(item.src, screenshotsBase + item.dest, options, error => {
       console.log(`url: ${item.src} in: ${screenshotsBase}${item.dest}`)
-      if (err) {
-        console.log(`oups something wen't wrong : ${err}`)
+      if (error) {
+        console.log(`oups something wen't wrong : ${error}`)
       }
+
       callback()
     })
-  }, (err) => {
+  }, error => {
     console.log('All done')
-    if (err) {
-      console.log(`but something wen't wrong : ${err}`)
+    if (error) {
+      console.log(`but something wen't wrong : ${error}`)
     }
+
     server.close()
   })
 })
