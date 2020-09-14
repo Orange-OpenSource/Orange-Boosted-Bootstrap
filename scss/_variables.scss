@@ -530,7 +530,7 @@ $hr-opacity:                  null !default;
 
 $legend-margin-bottom:        $spacer / 4 !default;
 $legend-font-size:            $font-size-xlg !default;
-$legend-font-weight:          null !default;
+$legend-font-weight:          $font-weight-bold !default;
 
 $mark-padding:                .2em !default;
 
@@ -664,7 +664,7 @@ $form-text-color:                       null !default;
 $form-label-margin-bottom:              .375rem !default;
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
-$form-label-font-weight:                null !default;
+$form-label-font-weight:                $font-weight-bold !default;
 $form-label-color:                      null !default;
 
 $input-padding-y:                       $input-btn-padding-y !default;
