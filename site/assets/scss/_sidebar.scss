@@ -56,7 +56,7 @@
     }
 
     ~ * a {
-      padding: $sidebar-base-padding $sidebar-base-padding $sidebar-base-padding $spacer * 1.5;
+      padding: $sidebar-base-padding / 2 $sidebar-base-padding $sidebar-base-padding / 2 $spacer * 1.5;
       font-size: $small-font-size;
       font-weight: 400;
     }

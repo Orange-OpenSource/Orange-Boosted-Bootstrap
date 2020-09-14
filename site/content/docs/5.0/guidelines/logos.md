@@ -58,7 +58,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
   </div>
   <div class="col">
     <div class="embed-responsive embed-responsive-16by9">
-      <figure class="figure embed-responsive-item d-flex border border-sm">
+      <figure class="figure embed-responsive-item d-flex border border-1">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
           <span class="h5 ml-2 mb-0 align-self-end">
@@ -86,7 +86,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
   </div>
   <div class="col">
     <div class="embed-responsive embed-responsive-16by9">
-      <figure class="figure embed-responsive-item d-flex border border-sm">
+      <figure class="figure embed-responsive-item d-flex border border-1">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <span class="h5 mr-2 mb-0 align-self-end text-right">
             <span class="visually-hidden">Orange </span>

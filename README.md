@@ -45,7 +45,7 @@ Several quick start options are available:
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@next`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@next`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0-alpha1`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
 Read the [Getting started page](https://v5-dev--boosted.netlify.app/docs/5.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.

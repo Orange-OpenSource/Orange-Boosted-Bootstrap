@@ -112,7 +112,7 @@ Boosted's source Sass files include three maps to help you quickly and easily lo
 - `$colors` lists all our available base (`500`) colors
 - `$theme-colors` lists all semantically named theme colors (shown below)
 - `$background-colors` overrides `$theme-colors` specifically for usage in `.bg-*` utilities
-- `$grays` lists all tins and shades of gray
+- `$grays` lists all tints and shades of gray
 
 Within `scss/_variables.scss`, you'll find Boosted's color variables and Sass map. Here's an example of the `$colors` Sass map:
 

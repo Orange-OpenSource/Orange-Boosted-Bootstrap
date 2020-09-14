@@ -29,11 +29,14 @@
 }
 
 // Variations
-@mixin bs-callout-variant($color) {
-  background-color: tint-color($color, 11); // Boosted mod
-  border-left-color: $color; // Boosted mod
+.bd-callout-info {
+  border-left-color: $bd-info;
 }
 
-.bd-callout-info { @include bs-callout-variant($bd-info); }
-.bd-callout-warning { @include bs-callout-variant($bd-warning); }
-.bd-callout-danger { @include bs-callout-variant($bd-danger); }
+.bd-callout-warning {
+  border-left-color: $bd-warning;
+}
+
+.bd-callout-danger {
+  border-left-color: $bd-danger;
+}

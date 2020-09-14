@@ -2,12 +2,12 @@
  * Boosted Reboot v5.0.0-alpha1 (https://boosted.orange.com/)
  * Copyright 2014-2020 The Boosted Authors
  * Copyright 2014-2020 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap Reboot v5.0.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 *,
@@ -22,7 +22,7 @@ body {
   font-synthesis: none;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: calc(18 / 16);
   color: #000;
   letter-spacing: -0.00625rem;
   background-color: #fff;
@@ -48,9 +48,8 @@ body {
 hr {
   margin: 1.25rem 0;
   color: inherit;
-  background-color: currentColor;
+  background-color: currentColor !important;
   border: 0;
-  opacity: 0.25;
 }
 
 hr:not([size]) {
@@ -174,14 +173,14 @@ strong {
 }
 
 small {
-  font-size: 0.875em;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: calc(16 / 14);
 }
 
 mark {
   padding: 0.2em;
-  background-color: #f16e00;
+  background-color: #ff7900;
 }
 
 sub,
@@ -201,7 +200,6 @@ sup {
 }
 
 a {
-  display: inline-block;
   color: #000;
   text-decoration: underline;
   outline-offset: 0.5rem;
@@ -228,6 +226,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
+var,
 pre,
 code,
 kbd,
@@ -242,6 +241,7 @@ pre {
   margin-bottom: 1rem;
   overflow: auto;
   font-size: 0.875em;
+  line-height: 1.25;
   color: #333;
   -ms-overflow-style: scrollbar;
 }
@@ -252,13 +252,16 @@ pre code {
   word-break: normal;
 }
 
+var,
 code {
   font-size: 0.875em;
-  color: #333;
+  font-style: normal;
+  color: #666;
   word-wrap: break-word;
 }
 
-a > code {
+a > var, a >
+code {
   color: inherit;
 }
 
@@ -352,6 +355,10 @@ select {
   text-transform: none;
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
 select {
   word-wrap: normal;
 }
@@ -396,6 +403,7 @@ legend {
   padding: 0;
   margin-bottom: 0.3125rem;
   font-size: 1.25rem;
+  font-weight: 700;
   line-height: inherit;
   white-space: normal;
 }

@@ -229,6 +229,8 @@
 //
 
 .accordion {
+  overflow-anchor: none;
+
   > .card {
     // Boosted mod
     border-color: $gray-500;
@@ -251,7 +253,6 @@
     // Boosted mod
     > .card-header {
       @include border-radius(0);
-      padding: 0;
       background-color: $card-cap-color;
       border: 0;
 
