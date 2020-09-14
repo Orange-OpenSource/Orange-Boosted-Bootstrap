@@ -478,7 +478,7 @@ th {
 
 label {
   display: inline-block; // 1
-  font-weight: $font-weight-bold; // Boosted mod
+  font-weight: $form-label-font-weight; // Boosted mod
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
