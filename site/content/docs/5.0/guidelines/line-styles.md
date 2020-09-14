@@ -35,9 +35,9 @@ Lines styles are used in some components, and through [`border` utilities]({{< d
 </div>
 <div class="border-top border-dark my-3"></div>
 <div class="border-top border-light my-3"></div>
-<div class="border-top border-light border-sm my-3"></div>
+<div class="border-top border-light border-1 my-3"></div>
 <div class="border-top border-dark my-3"></div>
-<div class="border-top border-dark border-sm mt-3 mb-4"></div>
+<div class="border-top border-dark border-1 mt-3 mb-4"></div>
 
 
 {{< callout >}}

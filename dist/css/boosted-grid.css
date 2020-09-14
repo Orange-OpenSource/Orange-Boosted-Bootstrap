@@ -2,12 +2,12 @@
  * Boosted Grid v5.0.0-alpha1 (https://boosted.orange.com/)
  * Copyright 2014-2020 The Boosted Authors
  * Copyright 2014-2020 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap Grid v5.0.0-alpha1 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 html {
   box-sizing: border-box;
@@ -19,51 +19,33 @@ html {
   box-sizing: inherit;
 }
 
-.container {
+.container,
+.container-fluid,
+.container-xs,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --o-padding-x: 0.3125rem;
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: var(--o-padding-x);
+  padding-left: var(--o-padding-x);
   margin-right: auto;
   margin-left: auto;
-  max-width: 312px;
-}
-
-@media (min-width: 480px) {
-  .container {
-    max-width: 468px;
-  }
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 744px;
+  .container,
+  .container-fluid,
+  .container-xs,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    --o-padding-x: 0.625rem;
   }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-.container-fluid, .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-  width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .container {
@@ -101,14 +83,19 @@ html {
 }
 
 .row {
-  --bs-gutter-x: 1.25rem;
+  --bs-gutter-x: 0.625rem;
   --bs-gutter-y: 0;
   display: flex;
-  flex: 1 0 100%;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+@media (min-width: 768px) {
+  .row {
+    --bs-gutter-x: 1.25rem;
+  }
 }
 
 .row > * {
@@ -1178,10 +1165,6 @@ html {
   }
 }
 
-.d-none {
-  display: none !important;
-}
-
 .d-inline {
   display: inline !important;
 }
@@ -1212,6 +1195,10 @@ html {
 
 .d-inline-flex {
   display: inline-flex !important;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .flex-fill {
@@ -1757,9 +1744,6 @@ html {
 }
 
 @media (min-width: 480px) {
-  .d-sm-none {
-    display: none !important;
-  }
   .d-sm-inline {
     display: inline !important;
   }
@@ -1783,6 +1767,9 @@ html {
   }
   .d-sm-inline-flex {
     display: inline-flex !important;
+  }
+  .d-sm-none {
+    display: none !important;
   }
   .flex-sm-fill {
     flex: 1 1 auto !important;
@@ -2200,9 +2187,6 @@ html {
 }
 
 @media (min-width: 768px) {
-  .d-md-none {
-    display: none !important;
-  }
   .d-md-inline {
     display: inline !important;
   }
@@ -2226,6 +2210,9 @@ html {
   }
   .d-md-inline-flex {
     display: inline-flex !important;
+  }
+  .d-md-none {
+    display: none !important;
   }
   .flex-md-fill {
     flex: 1 1 auto !important;
@@ -2643,9 +2630,6 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .d-lg-none {
-    display: none !important;
-  }
   .d-lg-inline {
     display: inline !important;
   }
@@ -2669,6 +2653,9 @@ html {
   }
   .d-lg-inline-flex {
     display: inline-flex !important;
+  }
+  .d-lg-none {
+    display: none !important;
   }
   .flex-lg-fill {
     flex: 1 1 auto !important;
@@ -3086,9 +3073,6 @@ html {
 }
 
 @media (min-width: 1280px) {
-  .d-xl-none {
-    display: none !important;
-  }
   .d-xl-inline {
     display: inline !important;
   }
@@ -3112,6 +3096,9 @@ html {
   }
   .d-xl-inline-flex {
     display: inline-flex !important;
+  }
+  .d-xl-none {
+    display: none !important;
   }
   .flex-xl-fill {
     flex: 1 1 auto !important;
@@ -3529,9 +3516,6 @@ html {
 }
 
 @media (min-width: 1440px) {
-  .d-xxl-none {
-    display: none !important;
-  }
   .d-xxl-inline {
     display: inline !important;
   }
@@ -3555,6 +3539,9 @@ html {
   }
   .d-xxl-inline-flex {
     display: inline-flex !important;
+  }
+  .d-xxl-none {
+    display: none !important;
   }
   .flex-xxl-fill {
     flex: 1 1 auto !important;
@@ -3972,9 +3959,6 @@ html {
 }
 
 @media print {
-  .d-print-none {
-    display: none !important;
-  }
   .d-print-inline {
     display: inline !important;
   }
@@ -3998,6 +3982,9 @@ html {
   }
   .d-print-inline-flex {
     display: inline-flex !important;
+  }
+  .d-print-none {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=boosted-grid.css.map */

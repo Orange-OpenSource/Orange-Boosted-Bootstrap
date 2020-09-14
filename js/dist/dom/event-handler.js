@@ -2,22 +2,22 @@
   * Boosted v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2015-2020 The Boosted Authors
   * Copyright 2015-2020 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
   * Bootstrap event-handler.js v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./polyfill.js')) :
   typeof define === 'function' && define.amd ? define(['./polyfill.js'], factory) :
-  (global = global || self, global.EventHandler = factory(global.Polyfill));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.EventHandler = factory(global.Polyfill));
 }(this, (function (polyfill_js) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.0.0-alpha1): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -35,7 +35,7 @@
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.0.0-alpha1): dom/event-handler.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
   /**
@@ -75,6 +75,8 @@
 
   function bootstrapHandler(element, fn) {
     return function handler(event) {
+      event.delegateTarget = element;
+
       if (handler.oneOff) {
         EventHandler.off(element, event.type, fn);
       }
@@ -90,6 +92,8 @@
       for (var target = event.target; target && target !== this; target = target.parentNode) {
         for (var i = domElements.length; i--;) {
           if (domElements[i] === target) {
+            event.delegateTarget = target;
+
             if (handler.oneOff) {
               EventHandler.off(element, event.type, fn);
             }
@@ -274,7 +278,7 @@
           bubbles: bubbles,
           cancelable: true
         });
-      } // merge custom informations in our event
+      } // merge custom information in our event
 
 
       if (typeof args !== 'undefined') {

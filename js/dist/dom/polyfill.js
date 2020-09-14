@@ -2,22 +2,22 @@
   * Boosted v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2015-2020 The Boosted Authors
   * Copyright 2015-2020 Orange
-  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
   * Bootstrap polyfill.js v5.0.0-alpha1 (https://boosted.orange.com/)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = global || self, factory(global.Polyfill = {}));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Polyfill = {}));
 }(this, (function (exports) { 'use strict';
 
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.0.0-alpha1): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
   var MAX_UID = 1000000;

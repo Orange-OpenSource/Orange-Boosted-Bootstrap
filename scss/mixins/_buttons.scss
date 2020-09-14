@@ -2,20 +2,20 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-// Boosted mod: add disable-background, disabled-border and disabled-color option
+
 @mixin button-variant(
   $background,
   $border,
   $color: color-contrast($background),
-  $hover-background: $black,
-  $hover-border: $black,
+  $hover-background: $black, // Boosted mod
+  $hover-border: $black, // Boosted mod
   $hover-color: color-contrast($hover-background),
-  $active-background: $primary,
-  $active-border: $primary,
+  $active-background: $primary, // Boosted mod
+  $active-border: $primary, // Boosted mod
   $active-color: color-contrast($active-background),
-  $disabled-background: $gray-500,
-  $disabled-border: $gray-500,
-  $disabled-color: $white
+  $disabled-background: $gray-500, // Boosted mod
+  $disabled-border: $gray-500, // Boosted mod
+  $disabled-color: $white // Boosted mod
 ) {
   color: $color;
   @include gradient-bg($background);

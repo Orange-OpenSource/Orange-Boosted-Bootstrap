@@ -384,6 +384,11 @@ $border-color:                $black !default;
 $border-radius:               null !default;
 $border-radius-sm:            null !default;
 $border-radius-lg:            null !default;
+$border-widths: (
+  0: 0,
+  1: $border-width / 2,
+  2: $border-width
+) !default;
 
 $outline-width:               $border-width !default;  // Boosted mod
 $outline-offset:              $outline-width !default; // Boosted mod
@@ -714,7 +719,7 @@ $input-height-lg:                       add($input-line-height * (20 / 18) * 1em
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 
-$form-check-input-width:                  1.25em !default;
+$form-check-input-width:                  1em !default;
 $form-check-min-height:                   $font-size-base * $input-btn-line-height !default;
 $form-check-padding-left:                 $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
@@ -1021,7 +1026,8 @@ $pagination-margin-left:            $spacer / 2 !default;
 $pagination-border-color:           transparent !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
-$pagination-focus-color:            $black !default; // Boosted mod
+$pagination-focus-color:            $link-color !default;
+$pagination-focus-bg:               null !default;
 $pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
 
 $pagination-hover-color:            $black !default;
@@ -1035,6 +1041,8 @@ $pagination-active-border-color:    $pagination-active-bg !default;
 $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
+
+$pagination-transition:             color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
@@ -1145,8 +1153,8 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 $badge-font-size:                   .75em !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
-$badge-padding-y:                   .25em !default;
-$badge-padding-x:                   .5em !default;
+$badge-padding-y:                   .35em !default;
+$badge-padding-x:                   .65em !default;
 $badge-border-radius:               $border-radius !default;
 
 

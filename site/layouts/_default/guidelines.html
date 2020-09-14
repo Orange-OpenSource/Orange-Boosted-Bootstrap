@@ -11,40 +11,42 @@
     {{ partial "guidelines-subnav" . }}
 
     <div class="container-xxl bd-layout">
-      <div class="bd-sidebar py-4 border-right border-light border-sm">
+      <aside class="bd-sidebar py-4 border-right border-light border-1">
         {{ partial "guidelines-sidebar" . }}
-      </div>
+      </aside>
 
-      {{ if (eq .Page.Params.toc true) }}
-        <aside class="bd-toc py-4 border-left border-light border-sm">
-          <div class="bd-toc-nav">
-            <strong class="d-block h6 my-2 pl-xl-3 pb-2 border-bottom border-light border-sm">On this page</strong>
-            <div class="pl-xl-3">{{ .TableOfContents }}</div>
-          </div>
-        </aside>
-      {{ end }}
-
-      <main class="bd-content bd-guidelines pb-4 {{ if eq .Title "Typography" }}bd-typography{{ else if eq .Title "Alerts" }}bd-alerts{{ end }} order-1 pl-lg-4">
-        <div class="bd-intro pt-2">
+      <main class="bd-main bd-guidelines order-1 {{ if eq .Title "Typography" }}bd-typography{{ else if eq .Title "Alerts" }}bd-alerts{{ end }} order-1 pl-lg-4">
+        <div class="bd-intro pt-md-4 pl-lg-4">
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
           <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
           {{ partial "ads" . }}
         </div>
 
-        {{ if .Page.Params.sections }}
-          <div class="row g-3">
-            {{ range .Page.Params.sections }}
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                <strong class="d-block h5 mb-0">{{ .title }}</strong>
-                <span class="text-secondary">{{ .description }}</span>
-              </a>
-            </div>
-            {{ end }}
+        {{ if (eq .Page.Params.toc true) }}
+        <div class="bd-toc py-4 border-left border-light border-1">
+          <div class="bd-toc-nav">
+            <strong class="d-block h6 my-2 pl-xl-3 pb-2 border-bottom border-light border-1">On this page</strong>
+            <div class="pl-xl-3">{{ .TableOfContents }}</div>
           </div>
+        </div>
         {{ end }}
 
-        {{ .Content }}
+      <div class="bd-content pl-lg-4">
+        {{ if .Page.Params.sections }}
+            <div class="row g-3">
+              {{ range .Page.Params.sections }}
+              <div class="col-md-6">
+                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
+                  <strong class="d-block h5 mb-0">{{ .title }}</strong>
+                  <span class="text-secondary">{{ .description }}</span>
+                </a>
+              </div>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{ .Content }}
+        </div>
       </main>
     </div>
 

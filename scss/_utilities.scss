@@ -23,7 +23,7 @@ $utilities: map-merge(
       print: true,
       property: display,
       class: d,
-      values: none inline inline-block block table table-row table-cell flex inline-flex
+      values: inline inline-block block table table-row table-cell flex inline-flex none
     ),
     "position": (
       property: position,
@@ -79,9 +79,7 @@ $utilities: map-merge(
     "border-width": (
       property: border-width,
       class: border,
-      values: (
-        "sm": $border-width / 2
-      )
+      values: $border-widths
     ),
     // Sizing utilities
     "width": (

@@ -2,12 +2,12 @@
  * Boosted Utilities v5.0.0-alpha1 (https://boosted.orange.com/)
  * Copyright 2014-2020 The Boosted Authors
  * Copyright 2014-2020 Orange SA
- * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
  * Bootstrap Utilities v5.0.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 .align-baseline {
   vertical-align: baseline !important;
@@ -53,10 +53,6 @@
   overflow: hidden !important;
 }
 
-.d-none {
-  display: none !important;
-}
-
 .d-inline {
   display: inline !important;
 }
@@ -87,6 +83,10 @@
 
 .d-inline-flex {
   display: inline-flex !important;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .position-static {
@@ -151,7 +151,7 @@
 }
 
 .border-primary {
-  border-color: #f16e00 !important;
+  border-color: #ff7900 !important;
 }
 
 .border-secondary {
@@ -179,19 +179,23 @@
 }
 
 .border-dark {
-  border-color: #000 !important;
+  border-color: #666 !important;
 }
 
 .border-white {
   border-color: #fff !important;
 }
 
-.border-gray {
-  border-color: #666 !important;
+.border-0 {
+  border-width: 0 !important;
 }
 
-.border-sm {
+.border-1 {
   border-width: 0.0625rem !important;
+}
+
+.border-2 {
+  border-width: 0.125rem !important;
 }
 
 .w-25 {
@@ -850,11 +854,10 @@
 
 .text-primary {
   color: #f16e00 !important;
-  background-color: #fff;
 }
 
 .text-light {
-  color: #ddd !important;
+  color: #ccc !important;
   background-color: #000;
 }
 
@@ -886,7 +889,7 @@
 }
 
 .lh-base {
-  line-height: 1.25 !important;
+  line-height: calc(18 / 16) !important;
 }
 
 .lh-lg {
@@ -894,8 +897,8 @@
 }
 
 .bg-primary {
-  background-color: #f16e00 !important;
-  color: #fff;
+  background-color: #ff7900 !important;
+  color: #000;
 }
 
 .bg-secondary {
@@ -924,7 +927,7 @@
 }
 
 .bg-light {
-  background-color: #ddd !important;
+  background-color: #ccc !important;
   color: #000;
 }
 
@@ -1048,9 +1051,6 @@
   .float-sm-none {
     float: none !important;
   }
-  .d-sm-none {
-    display: none !important;
-  }
   .d-sm-inline {
     display: inline !important;
   }
@@ -1074,6 +1074,9 @@
   }
   .d-sm-inline-flex {
     display: inline-flex !important;
+  }
+  .d-sm-none {
+    display: none !important;
   }
   .flex-sm-fill {
     flex: 1 1 auto !important;
@@ -1524,9 +1527,6 @@
   .float-md-none {
     float: none !important;
   }
-  .d-md-none {
-    display: none !important;
-  }
   .d-md-inline {
     display: inline !important;
   }
@@ -1550,6 +1550,9 @@
   }
   .d-md-inline-flex {
     display: inline-flex !important;
+  }
+  .d-md-none {
+    display: none !important;
   }
   .flex-md-fill {
     flex: 1 1 auto !important;
@@ -2000,9 +2003,6 @@
   .float-lg-none {
     float: none !important;
   }
-  .d-lg-none {
-    display: none !important;
-  }
   .d-lg-inline {
     display: inline !important;
   }
@@ -2026,6 +2026,9 @@
   }
   .d-lg-inline-flex {
     display: inline-flex !important;
+  }
+  .d-lg-none {
+    display: none !important;
   }
   .flex-lg-fill {
     flex: 1 1 auto !important;
@@ -2476,9 +2479,6 @@
   .float-xl-none {
     float: none !important;
   }
-  .d-xl-none {
-    display: none !important;
-  }
   .d-xl-inline {
     display: inline !important;
   }
@@ -2502,6 +2502,9 @@
   }
   .d-xl-inline-flex {
     display: inline-flex !important;
+  }
+  .d-xl-none {
+    display: none !important;
   }
   .flex-xl-fill {
     flex: 1 1 auto !important;
@@ -2952,9 +2955,6 @@
   .float-xxl-none {
     float: none !important;
   }
-  .d-xxl-none {
-    display: none !important;
-  }
   .d-xxl-inline {
     display: inline !important;
   }
@@ -2978,6 +2978,9 @@
   }
   .d-xxl-inline-flex {
     display: inline-flex !important;
+  }
+  .d-xxl-none {
+    display: none !important;
   }
   .flex-xxl-fill {
     flex: 1 1 auto !important;
@@ -3419,9 +3422,6 @@
 }
 
 @media print {
-  .d-print-none {
-    display: none !important;
-  }
   .d-print-inline {
     display: inline !important;
   }
@@ -3445,6 +3445,9 @@
   }
   .d-print-inline-flex {
     display: inline-flex !important;
+  }
+  .d-print-none {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=boosted-utilities.css.map */

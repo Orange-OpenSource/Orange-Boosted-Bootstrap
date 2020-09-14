@@ -1852,7 +1852,6 @@ main {
 }
 
 .form-check-input:active {
-  -webkit-filter: brightness(90%);
   filter: brightness(90%);
 }
 
@@ -1889,7 +1888,6 @@ main {
 
 .form-check-input:disabled {
   pointer-events: none;
-  -webkit-filter: none;
   filter: none;
   opacity: .5;
 }
