@@ -36,7 +36,35 @@
       }
     }
 
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        border-bottom: $table-border-width solid $table-border-color; // Boosted mod
+
+        > th,
+        > td {
+          padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px); // Boosted mod
+          line-height: $table-cell-line-height; // Boosted mod
+          vertical-align: top;
+
+          > p:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
     // Boosted mod
+    thead > tr {
+      border-bottom-width: $table-border-width * 2;
+    }
+
+    tbody > th {
+      font-weight: $font-weight-normal;
+    }
+
     .bg-light {
       background-color: $gray-200;
     }
