@@ -54,10 +54,10 @@ body {
   margin-bottom: $spacer / 10;
 }
 
-// stylelint-disable selector-max-type, selector-no-qualifying-type
-.bd-alerts > h2 ~ p,
-.bd-guidelines > h2 + p,
-.bd-guidelines > h3 + p,
+// stylelint-disable
+.bd-alerts .bd-content > h2 ~ p,
+.bd-guidelines .bd-content > h2 + p,
+.bd-guidelines .bd-content > h3 + p,
 #with-labels + p,
 #with-icons + p {
   display: flex;
@@ -87,7 +87,7 @@ body {
     }
   }
 }
-// stylelint-enable selector-max-type, selector-no-qualifying-type
+// stylelint-enable
 
 .ui-kit-id {
   @include font-size($small-font-size);

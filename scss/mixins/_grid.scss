@@ -2,8 +2,8 @@
 //
 // Generate semantic grid columns with these mixins.
 
-@mixin make-row($gutter: $grid-gutter-width) {
-  --bs-gutter-x: #{$gutter / 2}; // Boosted mod: gutter depends on breakpoint
+@mixin make-row($gutter: $grid-gutter-width, $gutter-sm: ($gutter / 2)) {
+  --bs-gutter-x: #{$gutter-sm}; // Boosted mod: gutter depends on breakpoint
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,7 @@
 // numberof columns. Supports wrapping to new lines, but does not do a Masonry
 // style grid.
 @mixin row-cols($count) {
-  & > * {
+  > * {
     flex: 0 0 auto;
     width: 100% / $count;
   }
