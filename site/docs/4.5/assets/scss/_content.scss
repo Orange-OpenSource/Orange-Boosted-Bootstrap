@@ -35,6 +35,26 @@
         border: 0;
       }
     }
+    
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        border: 1px solid $table-border-color;
+
+        > th,
+        > td {
+          padding: $table-cell-padding;
+          line-height: 1.25;
+          vertical-align: top;
+
+          > p:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
 
     // Boosted mod
     .bg-light {
