@@ -12,10 +12,15 @@ Scrollspy has a few requirements to function properly:
 
 - It must be used on a Boosted [nav component]({{< docsref "/components/navs" >}}) or [list group]({{< docsref "/components/list-group" >}}).
 - Scrollspy requires `position: relative;` on the element you're spying on, usually the `<body>`.
-- When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied—alongside a `tabindex="0"` to ensure keyboard access.
 - Anchors (`<a>`) are required and must point to an element with that `id`.
 
 When successfully implemented, your nav or list group will update accordingly, moving the `.active` class from one item to the next based on their associated targets.
+
+{{< callout >}}
+### Scrollable containers and keyboard access
+
+If you're making a scrollable container (other than the `<body>`), be sure to have a `height` set and `overflow-y: scroll;` applied to it—alongside a `tabindex="0"` to ensure keyboard access.
+{{< /callout >}}
 
 ## Example in navbar
 
