@@ -991,11 +991,11 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 $card-img-overlay-padding:          $spacer !default; // Boosted mod
 
 $card-group-margin:                 $grid-gutter-width / 2 !default;
-$card-deck-margin:                  $spacer * 2 !default;
+$card-deck-margin:                  map-get($spacers, 4) !default;
 
 $card-columns-count:                3 !default;
 $card-columns-gap:                  $spacer !default; // Boosted mod
-$card-columns-margin:               $spacer * 2 !default;
+$card-columns-margin:               map-get($spacers, 4) !default;
 
 
 // Tooltips
