@@ -262,10 +262,10 @@
     &::after {
       margin-left: map-get($spacers, 1);
     }
-  }
 
-  .show .dropdown-toggle::after {
-    transform: rotateZ(180deg);
+    &[aria-expanded="true"]::after {
+      transform: rotateZ(180deg);
+    }
   }
 
   .dropdown-item {
