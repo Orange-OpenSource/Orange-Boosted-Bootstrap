@@ -312,7 +312,7 @@ class Dropdown {
       offset.fn = data => {
         data.offsets = {
           ...data.offsets,
-          ...this._config.offset(data.offsets, this._element) || {}
+          ...(this._config.offset(data.offsets, this._element) || {})
         }
 
         return data
@@ -473,7 +473,7 @@ class Dropdown {
     event.preventDefault()
     event.stopPropagation()
 
-    if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
+    if (!isActive || (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
       if (event.which === ESCAPE_KEYCODE) {
         $(parent.querySelector(SELECTOR_DATA_TOGGLE)).trigger('focus')
       }
