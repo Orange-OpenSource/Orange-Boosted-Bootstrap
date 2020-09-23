@@ -108,16 +108,14 @@
 .modal-header {
   display: flex;
   flex-shrink: 0;
-  align-items: flex-start; // so the close btn always stays on the upper right corner
+  align-items: center;
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
   border-bottom: if($modal-header-border-color == null, null, $modal-header-border-width solid $modal-header-border-color); // Boosted mod
   @include border-top-radius($modal-content-inner-border-radius);
 
-  .close {
-    padding: $modal-header-padding;
-    // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+  .btn-close {
+    margin: ($btn-close-padding-y * -1) ($btn-close-padding-x * -1) ($btn-close-padding-y * -1) auto; // Boosted mod
   }
 }
 

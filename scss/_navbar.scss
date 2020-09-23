@@ -225,7 +225,7 @@
     &:hover .navbar-toggler-icon,
     &:focus .navbar-toggler-icon,
     &:active .navbar-toggler-icon {
-      background-image: escape-svg($close-icon-hover);
+      background-image: escape-svg($btn-close-bg);
     }
   }
   // End mod
@@ -367,7 +367,7 @@
 
     // Boosted mod: close icon when opened
     &[aria-expanded="true"] .navbar-toggler-icon {
-      background-image: escape-svg($close-icon);
+      background-image: escape-svg($btn-close-bg);
     }
     // End mod
   }
@@ -424,7 +424,7 @@
 
     // Boosted mod: close icon when opened
     &[aria-expanded="true"] .navbar-toggler-icon {
-      background-image: escape-svg($close-icon-dark);
+      background-image: escape-svg($btn-close-bg);
     }
     // End mod
   }
