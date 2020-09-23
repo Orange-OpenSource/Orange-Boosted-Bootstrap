@@ -34,19 +34,17 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
-  // Boosted mod: simpler alignment thanks to flexbox
-  .close {
-    padding: $alert-padding-x;
-    margin: -.5rem -.75rem -.5rem auto;
-    background-size: $alert-close-icon-size;
+  padding-right: $alert-dismissible-padding-r;
 
-    &,
-    &:hover,
-    &:focus {
-      background-image: escape-svg($close-icon-stroke);
-    }
+  // Adjust close link position
+  .btn-close {
+    position: absolute;
+    top: map-get($spacers, 1); // Boosted mod
+    right: map-get($spacers, 1); // Boosted mod
+    padding: $btn-close-padding-y-sm $btn-close-padding-x-sm; // Boosted mod
+    font-size: $btn-close-size-sm; // Boosted mod
+    background-image: escape-svg($btn-close-bg-stroke); // Boosted mod
   }
-  // End mod
 }
 
 //
@@ -113,8 +111,10 @@
     }
   }
 
-  &.alert-dismissible .close {
-    margin: -#{$alert-padding-sm} 0 -#{$alert-padding-sm} auto;
+  .btn-close {
+    top: $btn-close-padding-y-sm / 2;
+    right: $btn-close-padding-x-sm / 2;
+    padding: $btn-close-padding-y $btn-close-padding-x;
   }
 }
 // End mod

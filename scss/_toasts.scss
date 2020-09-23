@@ -25,12 +25,6 @@
   &.hide {
     display: none;
   }
-
-  // Boosted mod
-  .close {
-    font-size: $font-size-sm;
-  }
-  // End mod
 }
 
 .toast-header {
@@ -42,6 +36,13 @@
   background-clip: padding-box;
   border-bottom: $toast-border-width solid $toast-header-border-color;
   @include border-top-radius(subtract($toast-border-radius, $toast-border-width));
+
+  .btn-close {
+    padding: $btn-close-padding-y / 2 $btn-close-padding-x / 2; // Boosted mod
+    margin-right: $toast-padding-x / -2;
+    margin-left: $toast-padding-x;
+    font-size: $btn-close-size-sm; // Boosted mod
+  }
 }
 
 .toast-body {

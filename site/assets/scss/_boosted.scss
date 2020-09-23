@@ -7,7 +7,10 @@ body {
   }
 }
 
-// Boosted mod: use HTML+CSS for Boosted 3D logo
+//
+// Boosted logo
+//
+// use HTML+CSS for Boosted 3D logo
 // 1. Everything is em based, so we only play with font-size for RWD
 #boosted {
   width: 26em;
@@ -42,7 +45,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-#orange-logo ~ .row .embed-responsive-item .figure-caption {
+//
+// Design Guidelines
+//
+#orange-logo ~ .row .ratio .figure-caption {
   bottom: -#{$spacer * 1.5};
 
   @include media-breakpoint-up(lg) {
@@ -50,7 +56,7 @@ body {
   }
 }
 
-#orange-business-services-logo ~ .row .embed-responsive-item img {
+#orange-business-services-logo ~ .row .ratio img {
   margin-bottom: $spacer / 10;
 }
 
