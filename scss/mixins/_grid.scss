@@ -10,13 +10,13 @@
 }
 
 // Boosted mod : gutter depends on breakpoint
-@mixin make-gutters($gutter: $grid-gutter-width, $property: padding, $breakpoint: $grid-gutter-breakpoint) {
-  #{$property}-right: #{$gutter / 4};
-  #{$property}-left: #{$gutter / 4};
+@mixin make-gutters($gutter: $grid-gutter-width / 2, $property: padding, $breakpoint: $grid-gutter-breakpoint, $gutter-sm: $grid-gutter-width / 4) {
+  #{$property}-right: #{$gutter-sm};
+  #{$property}-left: #{$gutter-sm};
 
   @include media-breakpoint-up($breakpoint) {
-    #{$property}-right: #{$gutter / 2};
-    #{$property}-left: #{$gutter / 2};
+    #{$property}-right: #{$gutter};
+    #{$property}-left: #{$gutter};
   }
 }
 // end mod

@@ -11,6 +11,7 @@
       "border-bottom-left-radius",
       "transition"
     ],
-    "function-blacklist": ["calc"]
+    "function-blacklist": ["calc"],
+    "scss/selector-no-redundant-nesting-selector": null
   }
 }
