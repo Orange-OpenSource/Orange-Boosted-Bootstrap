@@ -27,11 +27,14 @@ While we haven't tried these out, they do look promising and provide multiple fo
 - [Dripicons](http://demo.amitjakhu.com/dripicons/)
 - [Ikons](http://ikons.piotrkwiatkowski.co.uk/)
 - [Icons8](https://icons8.com/)
+- [icofont](https://icofont.com/)
+- [CoreUI Icons](https://icons.coreui.io/)
 
 [comment]: # Boosted mod
 
-## Howto create an icons library using icomoon
-To create an icons library using icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong> and download the <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/orange-icons.json">config file orange-icons.json</a>.
+## How to create an icons library using Icomoon
+
+To create an icons library using Icomoon, you must first <strong><a href="https://icomoon.io/app/#/select">open the website icomoon into your browser</a></strong> and download the <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/orange-icons.json">config file orange-icons.json</a>.
 
 ### Create your own project
 
