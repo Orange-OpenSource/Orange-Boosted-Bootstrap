@@ -546,15 +546,17 @@ Orange popin is an example content layout.
 
 {% highlight html %}
 <div class="modal-body">
-    <div class="card">
-        <div class="card-icon">
-            <span class="svg-warning-circle"></span>
-        </div>
-        <div class="card-body">
-            <h5 id="orangePopinLabel" class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
-            <div class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-        </div>
+  <div class="d-flex">
+    <div class="mr-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 125" width="40" height="40" role="img" aria-label="Information">
+        <path fill="#6177d7" d="M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm0 14.7a11 11 0 110 22 11 11 0 010-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z"/>
+      </svg>
     </div>
+    <div class="flex-grow-1">
+       <h5 id="orangePopinLabel" class="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+    </div>
+  </div>
 </div>
 {% endhighlight %}
 
