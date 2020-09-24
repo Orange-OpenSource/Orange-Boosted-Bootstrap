@@ -15,7 +15,7 @@
   display: flex;
   flex: 1;
   padding: map-get($spacers, 2);
-  margin-right: map-get($spacers, 1);
+  margin-right: $o-stepbar-margin-r;
   font-weight: $font-weight-bold;
   text-align: center;
   list-style: none;

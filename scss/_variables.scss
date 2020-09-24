@@ -1376,6 +1376,7 @@ $o-scroll-up-bottom: (
 // Step process bar
 $o-stepbar-height:      $spacer * 2 !default;
 $o-stepbar-arrow-width: 1.0625rem !default;
+$o-stepbar-margin-r:    $border-width !default;
 
 // o-table
 $o-table-icon-size:     map-get($spacers, 4) !default;
