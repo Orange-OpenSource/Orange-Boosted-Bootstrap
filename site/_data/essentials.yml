@@ -9,5 +9,3 @@
       description: "Panel display sample"
     - name: "Global headers"
       description: "Header variants including multiple navbars"
-    - name: "Footer"
-      description: "Footer variants including multiple navbars"
