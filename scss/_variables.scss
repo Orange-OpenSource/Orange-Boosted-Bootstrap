@@ -291,7 +291,7 @@ $component-active-color:      $white !default;
 $component-active-bg:         theme-color("dark") !default;
 
 $caret-width:                 .4375rem !default;
-$caret-alignment:                 center !default; // Boosted mod
+$caret-alignment:             center !default; // Boosted mod
 $caret-spacing:               map-get($spacers, 2) !default; // Boosted mod
 
 $transition-base:             all .2s ease-in-out !default;
@@ -335,7 +335,7 @@ $font-weight-bold:            700 !default;
 $font-weight-bolder:          $font-weight-bold !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.125 !default; // 20px
+$line-height-base:            1.125 !default; // 18px
 $letter-spacing-base:         map-get($spacers, 2) / -100 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
@@ -433,12 +433,12 @@ $table-cell-line-height:      1.25 !default; // Boosted mod
 
 $table-color:                 $body-color !default;
 $table-bg:                    $white !default;
-// $table-accent-bg:             $gray-200 !default;$table-striped-order
+// $table-accent-bg:             $gray-200 !default;
 $table-hover-color:           $table-color !default;
-$table-hover-bg:              $gray-300 !default; // Boosted mod : #eee on white bg
+$table-hover-bg:              $gray-300 !default; // Boosted mod: #eee on white bg
 // $table-active-bg:             $gray-400 !default; // Boosted mod
 
-$table-border-width:          $border-width / 2 !default; // Boosted mod :  1px
+$table-border-width:          $border-width / 2 !default; // Boosted mod: 1px
 $table-border-color:          $gray-500 !default;
 
 // $table-head-bg:               $white !default; // Boosted mod
@@ -451,7 +451,7 @@ $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         $gray-900 !default;
 $table-dark-border-color:     $gray-700 !default;
 
-// $table-striped-order:         odd !default;$table-striped-order
+// $table-striped-order:         odd !default;
 
 $table-caption-color:         $black !default;
 
