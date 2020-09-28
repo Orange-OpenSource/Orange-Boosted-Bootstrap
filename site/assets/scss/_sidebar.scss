@@ -51,7 +51,7 @@
       @include caret($accordion: true);
 
       &::after {
-        // stylelint-disable-next-line function-blacklist
+        // stylelint-disable-next-line function-disallowed-list
         transform: scale(calc(6 / 7));
       }
 
@@ -64,7 +64,7 @@
         }
 
         &::after {
-          // stylelint-disable-next-line function-blacklist
+          // stylelint-disable-next-line function-disallowed-list
           transform: scale(calc(6 / 7)) rotate(180deg);
         }
       }

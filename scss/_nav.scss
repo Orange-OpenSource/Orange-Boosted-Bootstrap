@@ -53,7 +53,7 @@
 
   .nav-link {
     padding: subtract(1rem, $nav-tabs-border-width) map-get($spacers, 4); // Boosted mod
-    // stylelint-disable-next-line function-blacklist
+    // stylelint-disable-next-line function-disallowed-list
     margin-bottom: calc(var(--bs-tabs-spacing) * -1);
     background: none; // Boosted mod: prevent dropdown background to interfere
     border: var(--bs-tabs-spacing) solid transparent;
@@ -66,7 +66,7 @@
       background-color: $nav-tabs-link-hover-border-color; // Boosted mod
       border-color: $nav-tabs-link-hover-border-color;
       outline-color: $nav-tabs-link-hover-border-color; // Boosted mod
-      // stylelint-disable-next-line function-blacklist
+      // stylelint-disable-next-line function-disallowed-list
       outline-offset: var(--bs-tabs-spacing); // Boosted mod
     }
 
@@ -87,7 +87,7 @@
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    // stylelint-disable-next-line function-blacklist
+    // stylelint-disable-next-line function-disallowed-list
     margin-top: calc(var(--bs-tabs-spacing) * -1);
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-top-radius(0);
@@ -100,7 +100,7 @@
   border-color: $gray-600;
 
   .nav-link {
-    // stylelint-disable-next-line function-blacklist
+    // stylelint-disable-next-line function-disallowed-list
     border-width: 0 0 calc(var(--bs-tabs-spacing) * 4);
 
     &:hover,

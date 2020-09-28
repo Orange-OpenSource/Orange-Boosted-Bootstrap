@@ -426,7 +426,7 @@ $transition-fade:     opacity $transition-timing linear !default;
 $transition-collapse: height .35s ease !default;
 $transition-focus:    outline-offset $transition-duration $transition-timing !default; // Boosted mod
 
-// stylelint-disable function-blacklist
+// stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
 $aspect-ratios: (
   "1x1": 100%,
@@ -435,7 +435,7 @@ $aspect-ratios: (
   "21x9": calc(9 / 21 * 100%)
 ) !default;
 // scss-docs-end aspect-ratios
-// stylelint-enable function-blacklist
+// stylelint-enable function-disallowed-list
 
 // Typography
 //
@@ -465,11 +465,11 @@ $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-// stylelint-disable function-blacklist
+// stylelint-disable function-disallowed-list
 $line-height-base:            calc(18 / 16) !default;
 $line-height-sm:              calc(16 / 14) !default;
 $line-height-lg:              calc(30 / 16) !default;
-// stylelint-enable function-blacklist
+// stylelint-enable function-disallowed-list
 $letter-spacing-base:         $spacer / -200 !default; // -0.1px
 
 $h1-font-size:                $font-size-base * 2.125 !default;   // 34px
@@ -485,14 +485,14 @@ $h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
 $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
-// stylelint-disable function-blacklist
+// stylelint-disable function-disallowed-list
 $h1-line-height:              1 !default;
 $h2-line-height:              calc(32 / 30) !default;
 $h3-line-height:              calc(26 / 24) !default;
 $h4-line-height:              calc(22 / 20) !default;
 $h5-line-height:              calc(20 / 18) !default;
 $h6-line-height:              $line-height-base !default;
-// stylelint-enable function-blacklist
+// stylelint-enable function-disallowed-list
 
 $headings-margin-bottom:      $spacer !default;
 $headings-font-family:        null !default;
@@ -557,7 +557,7 @@ $mark-bg:                     $primary !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-// stylelint-disable function-blacklist
+// stylelint-disable function-disallowed-list
 // scss-docs-start table-variables
 $table-cell-padding-y:      .875rem !default;
 $table-cell-padding-x:      $spacer / 2 !default;
@@ -593,7 +593,7 @@ $table-variants: (
   "dark": $dark
 ) !default;
 // scss-docs-end table-variables
-// stylelint-enable function-blacklist
+// stylelint-enable function-disallowed-list
 
 // Buttons + Forms
 //
