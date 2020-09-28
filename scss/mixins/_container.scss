@@ -1,7 +1,7 @@
 // Container mixins
 
 @mixin make-container($gutter: $container-padding-x) {
-  --bs-padding-x: calc(#{$gutter} / 2); // stylelint-disable-line function-blacklist
+  --bs-padding-x: calc(#{$gutter} / 2); // stylelint-disable-line function-disallowed-list
   width: 100%;
   padding-right: var(--bs-padding-x); // Boosted mod
   padding-left: var(--bs-padding-x); // Boosted mod
