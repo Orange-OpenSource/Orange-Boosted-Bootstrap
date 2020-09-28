@@ -1,6 +1,6 @@
 // stylelint-disable selector-max-id
 body {
-  padding-top: $spacer * 3;
+  padding-top: $spacer * 2.5;
 
   @include media-breakpoint-up(lg) {
     padding-top: $spacer * 5;

@@ -1,6 +1,10 @@
 // stylelint-disable selector-max-type
 
 .bd-toc { // Boosted mod
+  @include media-breakpoint-down(lg) {
+    border: 0 !important; // stylelint-disable declaration-no-important
+  }
+
   @include media-breakpoint-up(lg) {
     position: sticky;
     top: $offset-top; // Boosted mod
