@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduction
-description: Get started with Boosted, the world's most popular framework for building responsive, mobile-first sites, with BoostedCDN and a template starter page. Fork of Bootstrap
+description: Get started with Boosted, a Bootstrap fork — the world's most popular framework for building responsive, mobile-first sites, with Boosted CDN and a template starter page.
 group: getting-started
 redirect_from:
   - "/docs/"
@@ -14,7 +14,7 @@ toc: true
 
 ## Quick start
 
-Looking to quickly add Boosted to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/).
+Looking to quickly add Boosted to your project? Use Boosted CDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/).
 
 ### CSS
 
@@ -30,9 +30,22 @@ Copy-paste the stylesheet `<link>` into your `<head>` before all other styleshee
 
 ### JS
 
-Many of our components require the use of JavaScript to function. Specifically, they require [jQuery](https://jquery.com/), [Popper.js](https://popper.js.org/), and our own JavaScript plugins. Place the following `<script>`s near the end of your pages, right before the closing `</body>` tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
+Many of our components require the use of JavaScript to function. Specifically, they require [jQuery](https://jquery.com/), [Popper.js](https://popper.js.org/), and our own JavaScript plugins. We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), but the full version is also supported.
 
-We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), but the full version is also supported.
+Place **one of the following `<script>`s** near the end of your pages, right before the closing `</body>` tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
+
+#### Bundle
+
+Include everything you need in one script with our bundle. Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
+
+{% highlight html %}
+<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.js_bundle }}" integrity="{{ site.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+{% endhighlight %}
+
+#### Separate
+
+If you decide to go with the separate scripts solution, Popper.js must come first, and then our JavaScript plugins.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -42,9 +55,9 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+#### Components
 
-Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), and all of `boosted.js`, `boosted.min.js`, `boosted.bundle.js` and `boosted.bundle.min.js` include [focus-visible's Polyfill](https://github.com/WICG/focus-visible) — but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
+Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're unsure about the general page structure, keep reading for an example page template.
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -116,17 +129,23 @@ Be sure to have your pages set up with the latest design and development standar
   <body>
     <h1>Hello, world!</h1>
 
-    <main id="content" role="main">
+    <main id="content">
       My page content start here
     </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Boosted JS. -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Boosted Bundle (includes Popper) -->
+    <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+    <script src="{{ site.cdn.js_bundle }}" integrity="{{ site.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Boosted JS
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
 {% endhighlight %}
@@ -197,7 +216,7 @@ It should be used for critical resources only.
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 {% endhighlight %}
 
-## Community
+## Bootstrap Community
 
 Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
 

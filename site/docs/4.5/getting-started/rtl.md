@@ -56,17 +56,23 @@ Boosted RTL uses the Arabic version of Helvetica Neue in lieu of the PanEuropean
   <body>
     <h1>Hello, world!</h1>
 
-    <main id="content" role="main">
+    <main id="content">
       My page content start here
     </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Boosted JS. -->
+    <!-- Optional JavaScript; choose one of the two! -->
+    
+    <!-- Option 1: jQuery and Boosted Bundle (includes Popper) -->
+    <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+    <script src="{{ site.cdn.js_bundle }}" integrity="{{ site.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Boosted JS
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.tablesorter }}" integrity="{{ site.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js_swiper }}" integrity="{{ site.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
 {% endhighlight %} 
