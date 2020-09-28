@@ -10,7 +10,7 @@ $bd-danger:        $danger;
 $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 
 // Boosted mod
-$offset-top: add(10rem, $spacer / 2);
+$offset-top: add(10rem, $border-width / 2);
 $sidebar-height: subtract(100vh, add($offset-top, 2rem));
 $sidebar-base-padding: $spacer / 2;
 $sidebar-link-padding: $sidebar-base-padding $sidebar-base-padding add($sidebar-base-padding, $border-width);
