@@ -1,3 +1,42 @@
+# [5.0.0-alpha2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha1...v5.0.0-alpha2) (2020-09-30)
+
+
+### Bug Fixes
+
+* **alerts:** ensure icon is properly sized ([d10ed1a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d10ed1acc8757179c7603fc10b4c6b6b02c92b8e))
+* **cards:** `.card-footer`'s bottom padding ([7054f27](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7054f273cf5d74f5a36771dca9152cb1f15a8100))
+* **color:** better matching light color ([02f4e25](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/02f4e253a96e6db870a8c1ee81aa8c683ef86e38))
+* **grid:** gutters change above `lg` breakpoint to match the brand ([9113a8d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/9113a8d7c1eb50e78378b847a8279c47a00f8854))
+* **grid:** missing interpolation ([62ea99b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/62ea99b50bca5d32238797a9a32f7f7fc4c69c96))
+* **reboot:** ensure `legend` are bold ([45e8d4d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/45e8d4dd96e49ccc79692a7f8d9ff3ae3c9f2f10))
+* **reboot:** links with `inline-block` display cannot break when they need to ([4ac2c39](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4ac2c39ff654f163f2c94c0019647eb68e719a78))
+* **spinners:** drop growing spinners ([1831f13](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1831f134da48dc9ac459c0e888877e66d164ab59))
+* **split buttons:** missing `.active` & `:disabled` states ([3a68f31](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3a68f31b5d89d6716a1c51925e60698c6be90ef4))
+* **tooltips:** ensure content is left-aligned ([b255cdc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b255cdc8a2085a7fb5cc616ef2a724d0bcc385f1))
+* **typography:** cleaner font-stack, and better matching typographic scale ([4694e07](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/4694e073536359344ce113f98a0f3c2e70012de4))
+* **utilities:** better matching with the brand for some color values ([5e82914](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5e82914adec03435a59e3ff2cffb16999dffed1d))
+* **utilities:** drop color exception in color utilities ([acfc5e9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/acfc5e93480db4a469b2640db8b4df3c933ec085))
+
+
+### Features
+
+* **pagination:** add default vertical margins to pagination ([c37b86f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c37b86f2691b2c8c84c6c66bcb5e6113332a2225))
+* **reboot:** handle `<var>` styles in reboot ([ba62352](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ba623525e3be6d4867b8ad6c145e5b2801a5ea02))
+* **reboot:** use `#666` for code element ([26a1aae](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/26a1aae14f15465527b034b5c8693053a2052052))
+
+* **colors:** final adjustments for accessible orange handling ([7c5e781](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7c5e781ecf277ac2956f22859878b9789c3e4eb5))
+* **colors:** use `#ff7900` as primary color & drop `color-contrast()` bypass for Orange :heart: ([fece01e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fece01e9ca5e2c85ee5b75c6bfc418be91b51549)), closes [#ff7900](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/ff7900)
+* **colors:** use Orange Base UI color names as design tokens ([142c851](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/142c851168eae23cc9e2712cfe10f5e0afe7f185))
+* **logo:** drop useless `id` ([c8dd405](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c8dd405065f4ebe5529fdd19b77fb57b7a619b63))
+* **logo:** improve size and markup again ([63323c8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/63323c879208d46600f0d532f5d58d5e33910281))
+
+* **progress:** Orange branded :tada: ([36ceacd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/36ceacd77cd5308eb2958c46f75355a54d4bad9c))
+* **cards:** Orange branded :tada: ([fde26b4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/fde26b46503c86a75529e4832e80115eab2094fa))
+* **spinners:** Orange branded :tada: ([ed72efe](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ed72efea2b5441e6b4c04d554a916502bcb305c2))
+* **.btn-check:** ensure to match the brand :tada: ([d3438ab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d3438ab97e22a626399c6b047cc01423e19061bf))
+
+
+
 # [5.0.0-alpha1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.4.0...v5.0.0-alpha1) (2020-06-22)
 
 

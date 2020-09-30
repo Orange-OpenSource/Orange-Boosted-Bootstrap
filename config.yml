@@ -63,13 +63,13 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:              "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/css/boosted.min.css"
-    css_hash:         "sha384-5wpqz7ZbSeK4v6y1Z7tEKm/ZOpXKggf4gvGDcCgMMsYA8HxkL4mmV2UKvGv5fzlM"
+    css_hash:         "sha384-7BuBwxbLw5x8O1jfEEtlFq9lbqBmi9a/aWzSSob0V3Xw2xYd4a3fCo127pVNDFhw"
     helvetica:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/css/orange-helvetica.min.css"
     helvetica_hash:   "sha384-2W6Ddgejs+ZLUHWL9OWpfdx8K+DR+e1Muc2B220lXZmOgfxlJhYwD4YAC3AY5Kdx"
     js:               "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/js/boosted.min.js"
-    js_hash:          "sha384-28sMzIF3Evp+sqaADb7K1o+UUdiIY/tg6RLLRUdpVTRZka/4TJNTBe+PkyVEdRKN"
+    js_hash:          "sha384-iYvIA3HSz3VXfbm3CMy7/wYkwMUlze27pLneihLNYupgo34fYfCQvdmxY6M537KQ"
     js_bundle:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:   "sha384-TAzOy09wyq4BX1UWDu/jDPTLg0fTR7vc6kXzyyvabyuRDtXfChWTShIJGHCmUKTE"
+    js_bundle_hash:   "sha384-ybSeRKGPCQRfq+levub6c6zk3i5iWrJrFVI0Eumz5ply5psc1trveLjsqXDCUNfW"
     popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     popper_hash:      "sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
     focus_visible:      "https://cdn.jsdelivr.net/npm/focus-visible@5.1.0/dist/focus-visible.min.js"

@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.0.0-alpha1 (https://boosted.orange.com/)
+  * Boosted v5.0.0-alpha2 (https://boosted.orange.com/)
   * Copyright 2015-2020 The Boosted Authors
   * Copyright 2015-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap modal.js v5.0.0-alpha1 (https://boosted.orange.com/)
+  * Bootstrap modal.js v5.0.0-alpha2 (https://boosted.orange.com/)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -23,7 +23,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-alpha1): util/index.js
+   * Bootstrap (v5.0.0-alpha2): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -156,7 +156,7 @@
    */
 
   var NAME = 'modal';
-  var VERSION = '5.0.0-alpha1';
+  var VERSION = '5.0.0-alpha2';
   var DATA_KEY = 'bs.modal';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';

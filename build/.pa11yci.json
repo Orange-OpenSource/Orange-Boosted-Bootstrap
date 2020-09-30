@@ -7,7 +7,7 @@
     "runners": [
       "axe"
     ],
-    "hideElements": ".bd-search, .active, [aria-current], [disabled], .modal, #TableOfContents, .bd-example nav",
+    "hideElements": ".bd-search, .active, [aria-current], [disabled], .modal, #TableOfContents, .bd-example nav, .text-primary, .chroma, .accordion > .card > .card-header .btn:not(.collapsed)",
     "ignore": [
       "heading-order"
     ]
