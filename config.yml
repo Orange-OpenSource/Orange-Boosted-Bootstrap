@@ -47,7 +47,7 @@ params:
   social_image_path:    /docs/5.0/assets/brand/orange-social.png
   social_logo_path:     /docs/5.0/assets/brand/orange-social-logo.png
 
-  current_version:      "5.0.0-alpha1"
+  current_version:      "5.0.0-alpha2"
   current_ruby_version: "5.0.0.alpha1"
   docs_version:         "5.0"
   rfs_version:          "9.0.3"
@@ -56,19 +56,19 @@ params:
   icons:                "https://icons.getbootstrap.com/"
 
   download:
-    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha1.zip"
-    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-alpha1/boosted-5.0.0-alpha1-dist.zip"
-    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-alpha1/boosted-5.0.0-alpha1-examples.zip"
+    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha2.zip"
+    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-alpha2/boosted-5.0.0-alpha2-dist.zip"
+    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-alpha2/boosted-5.0.0-alpha2-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:              "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha1/dist/css/boosted.min.css"
+    css:              "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/css/boosted.min.css"
     css_hash:         "sha384-5wpqz7ZbSeK4v6y1Z7tEKm/ZOpXKggf4gvGDcCgMMsYA8HxkL4mmV2UKvGv5fzlM"
-    helvetica:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha1/dist/css/orange-helvetica.min.css"
+    helvetica:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/css/orange-helvetica.min.css"
     helvetica_hash:   "sha384-2W6Ddgejs+ZLUHWL9OWpfdx8K+DR+e1Muc2B220lXZmOgfxlJhYwD4YAC3AY5Kdx"
-    js:               "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha1/dist/js/boosted.min.js"
+    js:               "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/js/boosted.min.js"
     js_hash:          "sha384-28sMzIF3Evp+sqaADb7K1o+UUdiIY/tg6RLLRUdpVTRZka/4TJNTBe+PkyVEdRKN"
-    js_bundle:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha1/dist/js/boosted.bundle.min.js"
+    js_bundle:        "https://cdn.jsdelivr.net/npm/boosted@5.0.0-alpha2/dist/js/boosted.bundle.min.js"
     js_bundle_hash:   "sha384-TAzOy09wyq4BX1UWDu/jDPTLg0fTR7vc6kXzyyvabyuRDtXfChWTShIJGHCmUKTE"
     popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     popper_hash:      "sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
