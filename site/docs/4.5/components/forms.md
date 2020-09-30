@@ -438,7 +438,7 @@ You can then remix that once again with size-specific column classes.
       </div>
     </div>
     <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox mb-2">
+      <div class="custom-control custom-checkbox mb-0">
         <input class="custom-control-input" type="checkbox" id="autoSizingCheck2">
         <label class="custom-control-label" for="autoSizingCheck2">
           Remember me
