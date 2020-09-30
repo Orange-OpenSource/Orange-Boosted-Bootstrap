@@ -1,3 +1,4 @@
+<a name="5.0.0-alpha2"></a>
 # [5.0.0-alpha2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha1...v5.0.0-alpha2) (2020-09-30)
 
 
@@ -36,7 +37,7 @@
 * **.btn-check:** ensure to match the brand :tada: ([d3438ab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d3438ab97e22a626399c6b047cc01423e19061bf))
 
 
-
+<a name="5.0.0-alpha1"></a>
 # [5.0.0-alpha1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.4.0...v5.0.0-alpha1) (2020-06-22)
 
 
