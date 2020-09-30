@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v5.0.0-alpha1 (https://boosted.orange.com/)
+ * Boosted Grid v5.0.0-alpha2 (https://boosted.orange.com/)
  * Copyright 2014-2020 The Boosted Authors
  * Copyright 2014-2020 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Grid v5.0.0-alpha1 (https://getbootstrap.com)
+ * Bootstrap Grid v5.0.0-alpha2 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -27,10 +27,10 @@ html {
 .container-lg,
 .container-xl,
 .container-xxl {
-  --o-padding-x: 0.3125rem;
+  --bs-padding-x: calc(0.625rem / 2);
   width: 100%;
-  padding-right: var(--o-padding-x);
-  padding-left: var(--o-padding-x);
+  padding-right: var(--bs-padding-x);
+  padding-left: var(--bs-padding-x);
   margin-right: auto;
   margin-left: auto;
 }
@@ -44,7 +44,7 @@ html {
   .container-lg,
   .container-xl,
   .container-xxl {
-    --o-padding-x: 0.625rem;
+    --bs-padding-x: 0.625rem;
   }
 }
 

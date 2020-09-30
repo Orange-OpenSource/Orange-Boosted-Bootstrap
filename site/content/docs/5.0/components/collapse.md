@@ -78,7 +78,7 @@ Using the [card]({{< docsref "/components/card" >}}) component, you can extend t
   <div class="card">
     <div class="card-header p-0" id="headingOne">
       <h2 class="mb-0">
-        <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Collapsible Group Item #1
         </button>
       </h2>
@@ -92,7 +92,7 @@ Using the [card]({{< docsref "/components/card" >}}) component, you can extend t
   <div class="card">
     <div class="card-header p-0" id="headingTwo">
       <h2 class="mb-0">
-        <button class="btn btn-light collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Collapsible Group Item #2
         </button>
       </h2>
@@ -106,7 +106,7 @@ Using the [card]({{< docsref "/components/card" >}}) component, you can extend t
   <div class="card">
     <div class="card-header p-0" id="headingThree">
       <h2 class="mb-0">
-        <button class="btn btn-light collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Collapsible Group Item #3
         </button>
       </h2>
@@ -131,7 +131,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
           <div class="card">
             <div class="card-header p-0" id="headingOne-3">
               <h2 class="mb-0">
-                <button class="btn btn-light btn-sm" type="button" data-toggle="collapse" data-target="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+                <button class="btn btn-link btn-sm" type="button" data-toggle="collapse" data-target="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
                   Collapsible Group Item #1
                 </button>
               </h2>
@@ -145,7 +145,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
           <div class="card">
             <div class="card-header p-0" id="headingTwo-3">
               <h2 class="mb-0">
-                <button class="btn btn-light btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-3" aria-expanded="false" aria-controls="collapseTwo-3">
+                <button class="btn btn-link btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-3" aria-expanded="false" aria-controls="collapseTwo-3">
                   Collapsible Group Item #2
                 </button>
               </h2>
@@ -159,7 +159,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
           <div class="card">
             <div class="card-header p-0" id="headingThree-3">
               <h2 class="mb-0">
-                <button class="btn btn-light btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-3" aria-expanded="false" aria-controls="collapseThree-3">
+                <button class="btn btn-link btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-3" aria-expanded="false" aria-controls="collapseThree-3">
                   Collapsible Group Item #3
                 </button>
               </h2>
@@ -177,7 +177,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
       <div class="card">
         <div class="card-header p-0" id="headingOne-4">
           <h2 class="mb-0">
-            <button class="btn btn-light btn-lg" type="button" data-toggle="collapse" data-target="#collapseOne-4" aria-expanded="true" aria-controls="collapseOne-4">
+            <button class="btn btn-link btn-lg" type="button" data-toggle="collapse" data-target="#collapseOne-4" aria-expanded="true" aria-controls="collapseOne-4">
               Collapsible Group Item #1
             </button>
           </h2>
@@ -191,7 +191,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
       <div class="card">
         <div class="card-header p-0" id="headingTwo-4">
           <h2 class="mb-0">
-            <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-4" aria-expanded="false" aria-controls="collapseTwo-4">
+            <button class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-4" aria-expanded="false" aria-controls="collapseTwo-4">
               Collapsible Group Item #2
             </button>
           </h2>
@@ -205,7 +205,7 @@ You may use [buttons' sizes utilities]({{< docsref "/components/buttons" >}}#siz
       <div class="card">
         <div class="card-header p-0" id="headingThree-4">
           <h2 class="mb-0">
-            <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-4" aria-expanded="false" aria-controls="collapseThree-4">
+            <button class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree-4" aria-expanded="false" aria-controls="collapseThree-4">
               Collapsible Group Item #3
             </button>
           </h2>
