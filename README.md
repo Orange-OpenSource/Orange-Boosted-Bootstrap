@@ -5,7 +5,6 @@
 </p>
 
 <h3 align="center">Orange Boosted with Bootstrap</h3>
-
 <p align="center">
     Boosted is a fork of Bootstrap. Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
     <br>
@@ -188,7 +187,7 @@ See [the Releases section of our GitHub project](https://github.com/Orange-OpenS
 - <https://github.com/ffoodd>
 
 
-## Thanks
+## Thanks.. Happy Coding
 
 <a href="https://www.browserstack.com/">
   <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" height="25" width="114" alt="Cross-browsers testing thanks to BrowserStack"/>
