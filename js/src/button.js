@@ -62,6 +62,7 @@ const MUTATION_OBSERVER = new MutationObserver(mutationsList => {
 class Button {
   constructor(element) {
     this._element = element
+    this.shouldAvoidTriggerChange = false
   }
 
   // Getters
@@ -96,7 +97,9 @@ class Button {
             input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE)
           }
 
-          $(input).trigger('change')
+          if (!this.shouldAvoidTriggerChange) {
+            $(input).trigger('change')
+          }
         }
 
         input.focus()
@@ -122,7 +125,7 @@ class Button {
 
   // Static
 
-  static _jQueryInterface(config) {
+  static _jQueryInterface(config, avoidTriggerChange) {
     return this.each(function () {
       const $element = $(this)
       let data = $element.data(DATA_KEY)
@@ -131,6 +134,8 @@ class Button {
         data = new Button(this)
         $element.data(DATA_KEY, data)
       }
+
+      data.shouldAvoidTriggerChange = avoidTriggerChange
 
       if (config === 'toggle') {
         data[config]()
@@ -164,8 +169,8 @@ $(document)
         return
       }
 
-      if (initialButton.tagName !== 'LABEL' || inputBtn && inputBtn.type !== 'checkbox') {
-        Button._jQueryInterface.call($(button), 'toggle')
+      if (initialButton.tagName === 'INPUT' || button.tagName !== 'LABEL') {
+        Button._jQueryInterface.call($(button), 'toggle', initialButton.tagName === 'INPUT')
       }
     }
   })

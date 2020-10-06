@@ -3,7 +3,10 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
-    "property-blacklist": [
+    "function-disallowed-list": [
+      "calc"
+    ],
+    "property-disallowed-list": [
       "border-radius",
       "border-top-left-radius",
       "border-top-right-radius",
@@ -11,7 +14,6 @@
       "border-bottom-left-radius",
       "transition"
     ],
-    "function-blacklist": ["calc"],
     "scss/selector-no-redundant-nesting-selector": null
   }
 }

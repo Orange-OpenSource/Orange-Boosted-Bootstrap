@@ -44,7 +44,7 @@
 
   + * {
     // @note: should be flex-basis but IE11 doesn't handle calc() in flex…
-    // stylelint-disable-next-line function-blacklist
+    // stylelint-disable-next-line function-disallowed-list
     max-width: calc(100% - (3rem + #{$alert-padding-x * 2} + #{$alert-close-icon-size}));
     margin: $alert-icon-margin-y 0;
   }
