@@ -366,10 +366,14 @@ caption {
   // end mod
 }
 
+// 1. Removes font-weight bold by inheriting
+// 2. Matches default `<td>` alignment by inheriting `text-align`.
+// 3. Fix alignment for Safari
+
 th {
-  // Matches default `<td>` alignment by inheriting from the `<body>`, or the
-  // closest parent with a set `text-align`.
-  text-align: inherit;
+  font-weight: $table-th-font-weight; // 1
+  text-align: inherit; // 2
+  text-align: -webkit-match-parent; // 3
 }
 
 
@@ -388,7 +392,7 @@ label {
 //
 // Details at https://github.com/twbs/bootstrap/issues/24093
 button {
-  // stylelint-disable-next-line property-blacklist
+  // stylelint-disable-next-line property-disallowed-list
   border-radius: 0;
 }
 

@@ -13,7 +13,7 @@
   vertical-align: text-bottom;
   border: $spinner-border-width solid currentColor;
   border-right-color: transparent;
-  // stylelint-disable-next-line property-blacklist
+  // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
   animation: spinner-border .75s linear infinite;
 
@@ -59,7 +59,7 @@
   vertical-align: text-bottom;
   // stylelint-disable-next-line declaration-no-important
   background-color: currentColor !important; // Boosted mod: ensure .text-* backgrounds don't override this
-  // stylelint-disable-next-line property-blacklist
+  // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
   opacity: 0;
   animation: spinner-grow .75s linear infinite;

@@ -129,7 +129,6 @@
 
   .nav-link.active {
     text-decoration: underline;
-    // stylelint-disable-next-line property-no-unknown
     text-decoration-thickness: $border-width;
     text-underline-offset: $border-width * 2;
 

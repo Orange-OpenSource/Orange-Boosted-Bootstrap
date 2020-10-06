@@ -40,6 +40,9 @@ docs/4.0/examples/rtl-*
 *.sublime-workspace
 nbproject
 Thumbs.db
+/.vscode/
+# Local Netlify folder
+.netlify
 
 # For proper npm login
 .npmrc
