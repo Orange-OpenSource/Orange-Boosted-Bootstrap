@@ -44,12 +44,12 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                       <li class="nav-item col col-md-4">
                         <a class="nav-link" href="#">Mobile</a>
                         <ul class="navbar-nav">
-                          <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                          <li class="nav-item"><a class="nav-link back" href="#">Previous</a></li>
                           <li class="nav-item"><span class="nav-heading text-primary">Mobile</span></li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">Phones</a>
                             <ul class="navbar-nav">
-                              <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                              <li class="nav-item"><a class="nav-link back" href="#">Previous</a></li>
                               <li class="nav-item"><span class="nav-heading text-primary">Phone</span></li>
                               <li class="nav-item"><a class="nav-link" href="#">iPhone</a></li>
                               <li class="nav-item"><a class="nav-link" href="#">FairPhone</a></li>
@@ -63,7 +63,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                       <li class="nav-item col col-md-4">
                         <a class="nav-link" href="#">Internet</a>
                         <ul class="navbar-nav">
-                          <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                          <li class="nav-item"><a class="nav-link back" href="#">Previous</a></li>
                           <li class="nav-item"><span class="nav-heading text-primary">Internet</span></li>
                           <li class="nav-item"><a class="nav-link" href="#">Pay monthly offers</a></li>
                           <li class="nav-item"><a class="nav-link" href="#">Shared plans</a></li>
@@ -73,7 +73,7 @@ HTML markup and especially `<ul>` menu structure must follow this example:
                       <li class="nav-item col col-md-4">
                         <a class="nav-link" href="#">Link 3</a>
                         <ul class="navbar-nav">
-                          <li class="nav-item"><a class="nav-link back" href="#">Back</a></li>
+                          <li class="nav-item"><a class="nav-link back" href="#">Previous</a></li>
                           <li class="nav-item"><span class="nav-heading text-primary">Link 3</span></li>
                           <li class="nav-item"><a class="nav-link" href="#">Item 1</a></li>
                           <li class="nav-item"><a class="nav-link" href="#">Item 2</a></li>
