@@ -38,6 +38,10 @@
 
       /* rtl:remove */
       transform: rotate(180deg);
+
+      .bg-dark & {
+        background-image: escape-svg($breadcrumb-divider-dark);
+      }
       // end mod
     }
   }
