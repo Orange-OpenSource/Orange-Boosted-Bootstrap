@@ -48,6 +48,10 @@
     }
   }
 
+  .close {
+    margin-right: 0;
+  }
+
   [aria-expanded="true"]::after {
     background-image: escape-svg($o-megamenu-arrow-icon-hover);
     transform: rotateZ(180deg);
@@ -238,7 +242,7 @@
 
           > .container#{$upfix} + .container#{$upfix} .nav-link:not(:only-child) {
             padding: 0 0 map-get($spacers, 2);
-            margin: 0 map-get($spacers, 5) map-get($spacers, 2) 0;
+            margin: 0 map-get($spacers, 3) map-get($spacers, 2) 0;
             border-bottom: $border-width / 2 solid $gray-700;
           }
 
