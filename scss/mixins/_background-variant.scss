@@ -7,6 +7,12 @@
   #{$parent} {
     color: $contrast !important; // Boosted mod: ensure contrast
     background-color: $color !important;
+
+    @if $contrast != $black {
+      a {
+        color: $contrast;
+      }
+    }
   }
   a#{$parent},
   button#{$parent} {
