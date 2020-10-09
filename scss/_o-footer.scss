@@ -4,60 +4,47 @@
 
 .o-footer {
   margin-top: map-get($spacers, 4);
-  font-size: $font-size-sm;
-  font-weight: $font-weight-bold;
-  color: $white;
   background-color: $black;
 
-  .nav-link {
-    padding: $nav-link-padding-y;
-    font-size: $font-size-sm;
+  * {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    color: $white;
+    letter-spacing: $letter-spacing-base;
+  }
 
-    &:not(:hover),
-    &:not([href]),
-    &:not([href]):hover {
-      color: $white;
-    }
+  > * ~ :not(:last-child) {
+    border-bottom: $border-width / 2 solid $gray-900;
+  }
+
+  .nav-link {
+    align-items: center;
+    padding: $nav-link-padding-y / 2 $nav-link-padding-x $nav-link-padding-y / 2 0;
 
     &:hover,
     &:focus {
       color: $orange-2;
     }
-  }
 
-  .o-footer-top,
-  .o-footer-body,
-  .o-footer-bottom {
-    padding-top: map-get($spacers, 2);
-    padding-bottom: map-get($spacers, 2);
-  }
-
-  .o-footer-top {
-    border-bottom: $border-width / 2 solid $gray-900;
-  }
-
-  .o-footer-body {
-    .row {
-      margin-bottom: map-get($spacers, 2);
-    }
-
-    h3 {
-      margin-top: map-get($spacers, 2);
-      font-size: $font-size-sm;
-    }
-
-    p,
-    p a {
-      color: $white;
-    }
-
-    .flex-column .nav-link {
-      padding: 0;
-      line-height: 1.25;
+    [class*="icon-"] {
+      margin-right: map-get($spacers, 1);
+      font-size: $h2-font-size;
     }
   }
+}
 
-  .o-footer-bottom {
-    border-top: $border-width / 2 solid $gray-900;
+.o-footer-top,
+.o-footer-body {
+  padding-top: map-get($spacers, 4);
+  padding-bottom: map-get($spacers, 4);
+}
+
+.o-footer-bottom {
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 3);
+
+  * {
+    font-size: $font-size-sm;
   }
 }
