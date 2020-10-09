@@ -107,7 +107,7 @@
 
 .card-footer {
   // Boosted mod
-  padding: 0 $card-spacer-x $card-spacer-y / 2;
+  padding: 0 $card-spacer-x $card-spacer-y * 2;
   font-weight: $font-weight-bold;
   color: $card-footer-color;
   background-color: $card-cap-color;
