@@ -34,12 +34,8 @@ in whole or part of, in any medium, except as required for reasonable and custom
 and reproducing the content of the NOTICE and DOCUMENTATION files.
 Any use or displaying shall constitute an infringement under intellectual property laws of France and international conventions.
 
-fonts/icon-orange.woff
-fonts/icon-orange.woff2
-dist/fonts/icon-orange.woff
-dist/fonts/icon-orange.woff2
-img/orange_logo.svg
-dist/img/orange_logo.svg
+img/orange-logo.svg
+dist/img/orange-logo.svg
 site/favicon.ico
 site/docs/**/assets/img/favicons/favicon.ico
 site/docs/**/assets/img/favicons/favicon-16x16.png
@@ -49,43 +45,17 @@ site/docs/**/assets/img/favicons/android-chrome-512x512.png
 site/docs/**/assets/img/favicons/mstile-150x150.png
 site/docs/**/assets/img/favicons/safari-pinned-tab.svg
 site/docs/**/assets/img/favicons/apple-touch-icon.png
-site/docs/**/assets/img/favicons/apple-touch-icon-114x114.png
-site/docs/**/assets/img/favicons/apple-touch-icon-120x120.png
-site/docs/**/assets/img/favicons/apple-touch-icon-144x144.png
-site/docs/**/assets/img/favicons/apple-touch-icon-152x152.png
-site/docs/**/assets/img/favicons/apple-touch-icon-180x180.png
-site/docs/**/assets/img/favicons/apple-touch-icon-57x57.png
-site/docs/**/assets/img/favicons/apple-touch-icon-60x60.png
-site/docs/**/assets/img/favicons/apple-touch-icon-72x72.png
-site/docs/**/assets/img/favicons/apple-touch-icon-76x76.png
-site/docs/**/assets/brand/logo-rule-1a.png
+site/docs/**/assets/img/favicons/mstile-70x70.png
+site/docs/**/assets/img/favicons/mstile-144x144.png
+site/docs/**/assets/img/favicons/mstile-150x150.png
+site/docs/**/assets/img/favicons/mstile-310x150.png
+site/docs/**/assets/img/favicons/mstile-310x310.png
 site/docs/**/assets/brand/logo-rule-3a.png
 site/docs/**/assets/brand/logo-rule-4b.png
-site/docs/**/examples/module-002-quick-links/img/icn_facebook_black.png
-site/docs/**/examples/module-002-quick-links/img/icn_messaging_black.png
-site/docs/**/examples/module-002-quick-links/img/icn_music_black.png
-site/docs/**/examples/module-002-quick-links/img/icn_top_black.png
-site/docs/**/examples/module-006-content-panel/img/adaptation.jpg
-site/docs/**/examples/module-006-content-panel/img/connexion.jpg
-site/docs/**/examples/module-006-content-panel/img/disponibilite.jpg
-site/docs/**/examples/module-006-content-panel/img/simplicite.jpg
-site/docs/**/examples/module-006-content-panel/img/vignette1.jpg
-site/docs/**/examples/module-012-product-details/img/label_discount.png
-site/docs/**/examples/module-012-product-details/img/picture_device_3.png
-site/docs/**/examples/module-012-product-details/img/picture_klif1.png
-site/docs/**/examples/module-012-product-details/img/stars_sprite.png
-site/docs/**/examples/orange_brand_2015/images/discovery-frame.png
-site/docs/**/examples/orange_brand_2015/images/discovery-popout.png
-site/docs/**/examples/orange_brand_2015/images/offset_LARGE_118551_Parties_foncees_du_bleu_de_travail_en_jaune.jpg
-site/docs/**/examples/orange_brand_2015/images/popular-services-2.png
-site/docs/**/examples/orange_brand_2015/images/discovery-frame-carousel.png
-site/docs/**/examples/orange_brand_2015/images/discovery-popout-2byslide.png
-site/docs/**/examples/orange_brand_2015/images/offset_LARGE_123305_chemisier_jaune.jpg
-site/docs/**/examples/orange_brand_2015/images/popular-services-3.png
-site/docs/**/examples/orange_brand_2015/images/discovery-frame-carousel-whitetext.png
-site/docs/**/examples/orange_brand_2015/images/Fun-frame_frame-carousel.png
-site/docs/**/examples/orange_brand_2015/images/popular-services-1.png
-site/docs/**/examples/orange_brand_2015/images/une-nouvelle-marque_grid-full-width.jpg
+site/docs/**/assets/brand/orange-logo.svg
+site/docs/**/assets/brand/orange-social.svg
+site/docs/**/assets/brand/orange-social.png
+
 End of the parts list under Orange SA Copyright
 
 
