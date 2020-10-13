@@ -85,6 +85,8 @@
 .alert-dismissible {
   // Boosted mod: simpler close button alignment
   .close {
+    position: relative;
+    z-index: 2; // To allow .stretched-link beyond our close button
     align-self: flex-start;
     width: $alert-close-icon-size;
     height: $alert-close-icon-size;
