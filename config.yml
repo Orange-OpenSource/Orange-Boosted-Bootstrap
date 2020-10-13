@@ -53,7 +53,7 @@ params:
   rfs_version:          "9.0.3"
   repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:              "orange"
-  icons:                "https://icons.getbootstrap.com/"
+  icons:                "https://design.orange.com/icons-libraries/"
 
   download:
     source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha2.zip"

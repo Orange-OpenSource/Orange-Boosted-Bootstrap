@@ -1,40 +1,18 @@
 ---
 layout: docs
 title: Icons
-description: Guidance and suggestions for using external icon libraries with Boosted.
+description: Guidance and suggestions for using Solaris icon libraries with Boosted.
 group: extend
 ---
 
-While Boosted doesn't include an icon set by default, we do have our own comprehensive icon library called Bootstrap Icons. Feel free to use them or any other icon set in your project. We've included details for Bootstrap Icons and other preferred icon sets below.
+While Boosted doesn't include an icon set by default, Orange does have its own comprehensive icon library called Solaris.
 
 While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
-## Bootstrap Icons
+## Solaris
 
-Bootstrap Icons is a growing library of SVG icons that are designed by [@mdo](https://github.com/mdo) and maintained by [the Bootstrap Team](https://github.com/orgs/twbs/people). The beginnings of this icon set come from Bootstrap's very own components—our forms, carousels, and more. Boosted has very few icon needs out of the box, so we didn't need much. However, once we got going, we couldn't stop making more.
+Solaris is a growing library of SVG icons that are designed by [Orange's Global Design Language Team](https://design.orange.com/).
 
-Oh, and did we mention they're completely open source? Licensed under MIT, just like Bootstrap, our icon set is available to everyone.
+They are not open-source though and should only be used for Orange branded projects. Please refer to our [`NOTICE.txt` file for legal informations]({{< param repo >}}/blob/v{{< param current_version >}}/NOTICE.txt).
 
-[Learn more about Bootstrap Icons]({{< param icons >}}), including how to install them and recommended usage.
-
-## Alternatives
-
-We've tested and used these icon sets ourselves as preferred alternatives to Bootstrap Icons.
-
-{{< markdown >}}
-{{< icons.inline >}}
-{{- $type := .Get "type" | default "preferred" -}}
-
-{{- range (index .Site.Data.icons $type) }}
-- [{{ .name }}]({{ .website }})
-{{- end }}
-{{< /icons.inline >}}
-{{< /markdown >}}
-
-## More options
-
-While we haven't tried these out ourselves, they do look promising and provide multiple formats, including SVG.
-
-{{< markdown >}}
-{{< icons.inline type="more" />}}
-{{< /markdown >}}
+[Learn more about Solaris]({{< param icons >}}) (requires an `@orange.com` email to sign-up).
