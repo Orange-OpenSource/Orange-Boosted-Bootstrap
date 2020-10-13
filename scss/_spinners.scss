@@ -30,6 +30,14 @@
   height: $spinner-height-lg;
   border-width: $spinner-border-width-lg;
 }
+
+@if $enable-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    .spinner-border {
+      animation-duration: $spinner-animation-speed * 2;
+    }
+  }
+}
 // End mod
 
 // Boosted mod: no .spinner-grow
