@@ -213,10 +213,6 @@
             will-change: auto;
           }
 
-          .nav-link {
-            padding: $navbar-padding-y map-get($spacers, 2);
-          }
-
           .nav-item {
             position: static;
           }
@@ -263,6 +259,10 @@
 
         &.minimized .mega-menu-panel {
           top: 3.75rem;
+        }
+
+        &:not(.minimized) .nav-link {
+          padding: $navbar-padding-y map-get($spacers, 2);
         }
       }
     }
