@@ -298,10 +298,10 @@
 
     Collapse._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $__default['default'](this);
-        var data = $this.data(DATA_KEY);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY);
 
-        var _config = _extends({}, Default, $this.data(), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default, $element.data(), typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && typeof config === 'string' && /show|hide|init/.test(config)) {
           // Boosted mod
@@ -310,7 +310,7 @@
 
         if (!data) {
           data = new Collapse(this, _config);
-          $this.data(DATA_KEY, data);
+          $element.data(DATA_KEY, data);
         }
 
         if (typeof config === 'string' && config !== 'init') {

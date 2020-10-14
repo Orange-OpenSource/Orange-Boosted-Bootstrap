@@ -238,7 +238,7 @@
         var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
         $__default['default'](this._element).trigger(hideEventPrevented);
 
-        if (hideEventPrevented.defaultPrevented) {
+        if (hideEventPrevented.isDefaultPrevented()) {
           return;
         }
 

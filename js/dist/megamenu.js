@@ -389,9 +389,7 @@
         'aria-hidden': false
       }); // translate menu
       // @TODO WTF RTL?
-      // eslint-disable-next-line no-console
 
-      console.log(currentTranslatePercentage);
       $rootNav.css('transform', "translateX(" + (currentTranslatePercentage - 100 * this._$isRTL) + "%)"); // focus on target nav first item
 
       $rootNav.one('transitionend', function () {
@@ -473,7 +471,7 @@
         }
 
         if (config.target) {
-          if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+          if (typeof config.target !== 'string' || !/^[#.].*/.test(config.target)) {
             throw new TypeError("Selector \"" + config.target + "\" is not supported");
           }
 

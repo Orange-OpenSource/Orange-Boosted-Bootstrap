@@ -795,7 +795,8 @@
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY);
 
         var _config = typeof config === 'object' && config;
 
@@ -805,7 +806,7 @@
 
         if (!data) {
           data = new Tooltip(this, _config);
-          $__default['default'](this).data(DATA_KEY, data);
+          $element.data(DATA_KEY, data);
         }
 
         if (typeof config === 'string') {

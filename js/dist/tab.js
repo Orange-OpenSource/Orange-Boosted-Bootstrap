@@ -238,7 +238,7 @@
 
       if ($tabpanel) {
         $tab.attr('role', 'tab');
-        $tablist.attr('role', 'tablist'); // $li.attr('role', 'presentation')
+        $tablist.attr('role', 'tablist');
       }
 
       if ($tab.hasClass(CLASS_NAME_ACTIVE)) {
@@ -248,7 +248,7 @@
         });
 
         if ($tab.attr('href')) {
-          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+          $tab.attr('aria-controls', $tab.attr('href').slice(1));
         }
 
         $tabpanel.attr({
@@ -264,7 +264,7 @@
         });
 
         if ($tab.attr('href')) {
-          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+          $tab.attr('aria-controls', $tab.attr('href').slice(1));
         }
 
         $tabpanel.attr({
@@ -288,13 +288,11 @@
 
       if (k === ARROW_UP_KEYCODE || k === ARROW_LEFT_KEYCODE) {
         index--;
-      } // up & left
-
+      }
 
       if (k === ARROW_RIGHT_KEYCODE || k === ARROW_DOWN_KEYCODE) {
         index++;
-      } // down & right
-
+      }
 
       if (index < 0) {
         index = Items.length - 1;
