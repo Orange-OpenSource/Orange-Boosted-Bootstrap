@@ -7,13 +7,13 @@
 }
 
 .dropdown-toggle {
-  padding: $dropdown-padding-x $dropdown-padding-y;
+  // Boosted mod
+  padding: $dropdown-padding-y $dropdown-padding-x;
   color: $dropdown-color;
   white-space: nowrap;
   background-color: $dropdown-bg;
   border-color: $dropdown-border-color;
 
-  // Boosted mod
   .bg-dark &:not(.dropdown-toggle-split),
   .navbar-dark &:not(.dropdown-toggle-split) {
     color: $dropdown-bg;
@@ -149,7 +149,7 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x $dropdown-item-padding-y $spacer; // Boosted mod
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   clear: both;
   font-weight: $font-weight-bold; // Boosted mod
   color: $dropdown-link-color;
