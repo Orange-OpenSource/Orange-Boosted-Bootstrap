@@ -398,7 +398,7 @@
         }
 
         .navbar-brand {
-          margin: 0 $spacer 1.125rem 0;
+          margin: $spacer / 10 $spacer 1rem 0;
 
           img {
             width: $navbar-brand-logo-expanded-height;
@@ -421,6 +421,7 @@
           }
 
           .navbar-brand {
+            margin-top: 0;
             margin-bottom: .8125rem;
 
             img {
