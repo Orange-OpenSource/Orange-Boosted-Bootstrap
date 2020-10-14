@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.5.2 (https://boosted.orange.com)
+  * Boosted v4.5.3 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v4.5.2 (https://boosted.orange.com)
+  * Bootstrap v4.5.3 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -60,7 +60,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.2): util.js
+   * Bootstrap (v4.5.3): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -241,7 +241,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.5.2';
+  var VERSION = '4.5.3';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -397,7 +397,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.5.2';
+  var VERSION$1 = '4.5.3';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -616,7 +616,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.5.2';
+  var VERSION$2 = '4.5.3';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -1203,7 +1203,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.5.2';
+  var VERSION$3 = '4.5.3';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -4177,7 +4177,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.5.2';
+  var VERSION$4 = '4.5.3';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -4702,7 +4702,7 @@
    */
 
   var NAME$5 = 'megamenu';
-  var VERSION$5 = '4.5.2';
+  var VERSION$5 = '4.5.3';
   var DATA_KEY$5 = 'bs.megamenu';
   var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
   var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
@@ -5184,7 +5184,7 @@
    */
 
   var NAME$6 = 'modal';
-  var VERSION$6 = '4.5.2';
+  var VERSION$6 = '4.5.3';
   var DATA_KEY$6 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$6;
   var DATA_API_KEY$5 = '.data-api';
@@ -5828,7 +5828,7 @@
    */
 
   var NAME$7 = 'navbar';
-  var VERSION$7 = '4.5.2';
+  var VERSION$7 = '4.5.3';
   var DATA_KEY$7 = 'bs.navbar';
   var JQUERY_NO_CONFLICT$7 = $__default['default'].fn[NAME$7];
   var BREAKPOINT = 768;
@@ -5964,7 +5964,7 @@
    */
 
   var NAME$8 = 'otab';
-  var VERSION$8 = '4.5.2';
+  var VERSION$8 = '4.5.3';
   var DATA_KEY$8 = 'bs.otab';
   var EVENT_KEY$6 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -6096,7 +6096,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.2): tools/sanitizer.js
+   * Bootstrap (v4.5.3): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6222,7 +6222,7 @@
    */
 
   var NAME$9 = 'tooltip';
-  var VERSION$9 = '4.5.2';
+  var VERSION$9 = '4.5.3';
   var DATA_KEY$9 = 'bs.tooltip';
   var EVENT_KEY$7 = "." + DATA_KEY$9;
   var JQUERY_NO_CONFLICT$9 = $__default['default'].fn[NAME$9];
@@ -6948,7 +6948,7 @@
    */
 
   var NAME$a = 'popover';
-  var VERSION$a = '4.5.2';
+  var VERSION$a = '4.5.3';
   var DATA_KEY$a = 'bs.popover';
   var EVENT_KEY$8 = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $__default['default'].fn[NAME$a];
@@ -7128,7 +7128,7 @@
    */
 
   var NAME$b = 'prioritynav';
-  var VERSION$b = '4.5.2';
+  var VERSION$b = '4.5.3';
   var DATA_KEY$b = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT$b = $__default['default'].fn[NAME$b];
   var RESIZE_DURATION = 500;
@@ -7323,7 +7323,7 @@
    */
 
   var NAME$c = 'scrollup';
-  var VERSION$c = '4.5.2';
+  var VERSION$c = '4.5.3';
   var DATA_KEY$c = 'bs.scrollup';
   var EVENT_KEY$9 = "." + DATA_KEY$c;
   var DATA_API_KEY$7 = '.data-api';
@@ -7472,7 +7472,7 @@
    */
 
   var NAME$d = 'scrollspy';
-  var VERSION$d = '4.5.2';
+  var VERSION$d = '4.5.3';
   var DATA_KEY$d = 'bs.scrollspy';
   var EVENT_KEY$a = "." + DATA_KEY$d;
   var DATA_API_KEY$8 = '.data-api';
@@ -7765,7 +7765,7 @@
    */
 
   var NAME$e = 'tab';
-  var VERSION$e = '4.5.2';
+  var VERSION$e = '4.5.3';
   var DATA_KEY$e = 'bs.tab';
   var EVENT_KEY$b = "." + DATA_KEY$e;
   var DATA_API_KEY$9 = '.data-api';
@@ -8125,7 +8125,7 @@
    */
 
   var NAME$f = 'toast';
-  var VERSION$f = '4.5.2';
+  var VERSION$f = '4.5.3';
   var DATA_KEY$f = 'bs.toast';
   var EVENT_KEY$c = "." + DATA_KEY$f;
   var JQUERY_NO_CONFLICT$f = $__default['default'].fn[NAME$f];

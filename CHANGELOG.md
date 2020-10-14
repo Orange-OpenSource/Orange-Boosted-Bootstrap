@@ -1,10 +1,10 @@
-<a name="4.5.2"></a>
-## [4.5.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.0...v4.5.2) (2020-08-18)
+<a name="4.5.3"></a>
+## [4.5.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.0...v4.5.3) (2020-08-18)
 
 ### Bootstrap
 
 * [Bootstrap 4.5.1](https://github.com/twbs/bootstrap/releases/tag/v4.5.1)
-* [Bootstrap 4.5.2](https://github.com/twbs/bootstrap/releases/tag/v4.5.2)
+* [Bootstrap 4.5.3](https://github.com/twbs/bootstrap/releases/tag/v4.5.3)
 
 ### Boosted
 
