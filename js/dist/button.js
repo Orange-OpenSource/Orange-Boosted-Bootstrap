@@ -60,7 +60,7 @@
         button.removeAttribute(DATA_FOCUS_VISIBLE);
       }
     });
-  }); // end mod
+  }); // End mod
 
   /**
    * ------------------------------------------------------------------------
@@ -86,16 +86,14 @@
       if (rootElement) {
         var input = this._element.querySelector(SELECTOR_INPUT);
 
+        var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
+
         if (input) {
           if (input.type === 'radio') {
             if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
               triggerChangeEvent = false;
-            } else {
-              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
-
-              if (activeElement) {
-                $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
-              }
+            } else if (activeElement) {
+              $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
             }
           }
 
@@ -105,7 +103,9 @@
               input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
             }
 
-            $__default['default'](input).trigger('change');
+            if (!this.shouldAvoidTriggerChange) {
+              $__default['default'](input).trigger('change');
+            }
           }
 
           input.focus();
@@ -130,14 +130,17 @@
     } // Static
     ;
 
-    Button._jQueryInterface = function _jQueryInterface(config) {
+    Button._jQueryInterface = function _jQueryInterface(config, avoidTriggerChange) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY);
 
         if (!data) {
           data = new Button(this);
-          $__default['default'](this).data(DATA_KEY, data);
+          $element.data(DATA_KEY, data);
         }
+
+        data.shouldAvoidTriggerChange = avoidTriggerChange;
 
         if (config === 'toggle') {
           data[config]();
@@ -180,8 +183,8 @@
         return;
       }
 
-      if (initialButton.tagName !== 'LABEL' || inputBtn && inputBtn.type !== 'checkbox') {
-        Button._jQueryInterface.call($__default['default'](button), 'toggle');
+      if (initialButton.tagName === 'INPUT' || button.tagName !== 'LABEL') {
+        Button._jQueryInterface.call($__default['default'](button), 'toggle', initialButton.tagName === 'INPUT');
       }
     }
   }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {

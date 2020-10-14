@@ -98,15 +98,15 @@ download:
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:               "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css"
-  css_hash:          "sha384-j8BgukP8/Cao3CDMrwvCOSDGFQr7Yr3LGW9PUWByAoJuSwmgppSVBjC8rOSubbeC"
+  css_hash:          "sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS"
   iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/orangeIcons.min.css"
   iconcss_hash:      "sha384-R6GN9ea/4pryAfJqIKDPT52rqJuxaMkZndUr7tl6YQmESyczsGyDgIbpuXvebpF5"
   helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/orangeHelvetica.min.css"
   helveticacss_hash: "sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK"
   js:                "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js"
-  js_hash:           "sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm"
+  js_hash:           "sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj"
   js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.bundle.min.js"
-  js_bundle_hash:    "sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy"
+  js_bundle_hash:    "sha384-hQFBUEXKv1tPjGNFpCctXthNheXFWEyT+cKHsR5+8VYwGoe2L0SIaDNXDpE1LlTK"
   jquery:            "https://code.jquery.com/jquery-3.5.1.slim.min.js"
   jquery_hash:       "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
   css_swiper:        "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.3/css/swiper.min.css"

@@ -255,6 +255,7 @@ caption {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -349,6 +350,7 @@ legend {
   padding: 0;
   margin-bottom: .5rem;
   font-size: 1.5rem;
+  font-weight: 700;
   line-height: inherit;
   color: inherit;
   white-space: normal;

@@ -127,7 +127,6 @@
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
       do {
-        // eslint-disable-next-line no-bitwise
         prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
@@ -143,7 +142,7 @@
 
       try {
         return document.querySelector(selector) ? selector : null;
-      } catch (err) {
+      } catch (_) {
         return null;
       }
     },
@@ -173,7 +172,6 @@
     triggerTransitionEnd: function triggerTransitionEnd(element) {
       $__default['default'](element).trigger(TRANSITION_END);
     },
-    // TODO: Remove in v5
     supportsTransitionEnd: function supportsTransitionEnd() {
       return Boolean(TRANSITION_END);
     },
@@ -430,7 +428,7 @@
         button.removeAttribute(DATA_FOCUS_VISIBLE);
       }
     });
-  }); // end mod
+  }); // End mod
 
   /**
    * ------------------------------------------------------------------------
@@ -441,6 +439,7 @@
   var Button = /*#__PURE__*/function () {
     function Button(element) {
       this._element = element;
+      this.shouldAvoidTriggerChange = false;
     } // Getters
 
 
@@ -455,16 +454,14 @@
       if (rootElement) {
         var input = this._element.querySelector(SELECTOR_INPUT);
 
+        var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
+
         if (input) {
           if (input.type === 'radio') {
             if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
               triggerChangeEvent = false;
-            } else {
-              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
-
-              if (activeElement) {
-                $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
-              }
+            } else if (activeElement) {
+              $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
             }
           }
 
@@ -474,7 +471,9 @@
               input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
             }
 
-            $__default['default'](input).trigger('change');
+            if (!this.shouldAvoidTriggerChange) {
+              $__default['default'](input).trigger('change');
+            }
           }
 
           input.focus();
@@ -499,14 +498,17 @@
     } // Static
     ;
 
-    Button._jQueryInterface = function _jQueryInterface(config) {
+    Button._jQueryInterface = function _jQueryInterface(config, avoidTriggerChange) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$1);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY$1);
 
         if (!data) {
           data = new Button(this);
-          $__default['default'](this).data(DATA_KEY$1, data);
+          $element.data(DATA_KEY$1, data);
         }
+
+        data.shouldAvoidTriggerChange = avoidTriggerChange;
 
         if (config === 'toggle') {
           data[config]();
@@ -549,8 +551,8 @@
         return;
       }
 
-      if (initialButton.tagName !== 'LABEL' || inputBtn && inputBtn.type !== 'checkbox') {
-        Button._jQueryInterface.call($__default['default'](button), 'toggle');
+      if (initialButton.tagName === 'INPUT' || button.tagName !== 'LABEL') {
+        Button._jQueryInterface.call($__default['default'](button), 'toggle', initialButton.tagName === 'INPUT');
       }
     }
   }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
@@ -718,9 +720,10 @@
     };
 
     _proto.nextWhenVisible = function nextWhenVisible() {
-      // Don't call next when the page isn't visible
+      var $element = $__default['default'](this._element); // Don't call next when the page isn't visible
       // or the carousel or its parent isn't visible
-      if (!document.hidden && $__default['default'](this._element).is(':visible') && $__default['default'](this._element).css('visibility') !== 'hidden') {
+
+      if (!document.hidden && $element.is(':visible') && $element.css('visibility') !== 'hidden') {
         this.next();
       }
     };
@@ -1471,10 +1474,10 @@
 
     Collapse._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $__default['default'](this);
-        var data = $this.data(DATA_KEY$3);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY$3);
 
-        var _config = _extends({}, Default$1, $this.data(), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default$1, $element.data(), typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && typeof config === 'string' && /show|hide|init/.test(config)) {
           // Boosted mod
@@ -1483,7 +1486,7 @@
 
         if (!data) {
           data = new Collapse(this, _config);
-          $this.data(DATA_KEY$3, data);
+          $element.data(DATA_KEY$3, data);
         }
 
         if (typeof config === 'string' && config !== 'init') {
@@ -1991,7 +1994,7 @@
       event.preventDefault();
       event.stopPropagation();
 
-      if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
+      if (!isActive || event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE) {
         if (event.which === ESCAPE_KEYCODE) {
           $__default['default'](parent.querySelector(SELECTOR_DATA_TOGGLE$2)).trigger('focus');
         }
@@ -2447,9 +2450,7 @@
         'aria-hidden': false
       }); // translate menu
       // @TODO WTF RTL?
-      // eslint-disable-next-line no-console
 
-      console.log(currentTranslatePercentage);
       $rootNav.css('transform', "translateX(" + (currentTranslatePercentage - 100 * this._$isRTL) + "%)"); // focus on target nav first item
 
       $rootNav.one('transitionend', function () {
@@ -2531,7 +2532,7 @@
         }
 
         if (config.target) {
-          if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+          if (typeof config.target !== 'string' || !/^[#.].*/.test(config.target)) {
             throw new TypeError("Selector \"" + config.target + "\" is not supported");
           }
 
@@ -2778,7 +2779,7 @@
         var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
         $__default['default'](this._element).trigger(hideEventPrevented);
 
-        if (hideEventPrevented.defaultPrevented) {
+        if (hideEventPrevented.isDefaultPrevented()) {
           return;
         }
 
@@ -4251,7 +4252,8 @@
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$9);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY$9);
 
         var _config = typeof config === 'object' && config;
 
@@ -4261,7 +4263,7 @@
 
         if (!data) {
           data = new Tooltip(this, _config);
-          $__default['default'](this).data(DATA_KEY$9, data);
+          $element.data(DATA_KEY$9, data);
         }
 
         if (typeof config === 'string') {
@@ -5361,7 +5363,7 @@
 
       if ($tabpanel) {
         $tab.attr('role', 'tab');
-        $tablist.attr('role', 'tablist'); // $li.attr('role', 'presentation')
+        $tablist.attr('role', 'tablist');
       }
 
       if ($tab.hasClass(CLASS_NAME_ACTIVE$4)) {
@@ -5371,7 +5373,7 @@
         });
 
         if ($tab.attr('href')) {
-          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+          $tab.attr('aria-controls', $tab.attr('href').slice(1));
         }
 
         $tabpanel.attr({
@@ -5387,7 +5389,7 @@
         });
 
         if ($tab.attr('href')) {
-          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+          $tab.attr('aria-controls', $tab.attr('href').slice(1));
         }
 
         $tabpanel.attr({
@@ -5411,13 +5413,11 @@
 
       if (k === ARROW_UP_KEYCODE$2 || k === ARROW_LEFT_KEYCODE$2) {
         index--;
-      } // up & left
-
+      }
 
       if (k === ARROW_RIGHT_KEYCODE$2 || k === ARROW_DOWN_KEYCODE$2) {
         index++;
-      } // down & right
-
+      }
 
       if (index < 0) {
         index = Items.length - 1;

@@ -1,10 +1,59 @@
 <a name="4.5.3"></a>
-## [4.5.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.0...v4.5.3) (2020-08-18)
+## [4.5.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.2...v4.5.3) (2020-10-14)
+
+### Bootstrap 4.5.3
+
+* [Bootstrap 4.5.3](https://github.com/twbs/bootstrap/releases/tag/v4.5.3)
+
+### Boosted
+
+#### Refactors
+
+- **grid**: `make-gutters()` mixin now has a fourth argument to workaround a new stylelint rule ([#488 (diff)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/488/files#diff-22b47a742226a96b3355c42389db3028))
+
+#### Brand
+
+- **megamenu**: drop `margin-right` for close button ([95636efd](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/509/commits/95636efd5279f12d71811436d171f1084e8c111f))
+- **colors**: ensure links get contrast color in background utilities ([568a0e8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/509/commits/568a0e85181422619b5ece8107f31ea517a25000)) **(!)**
+- **breadcrumb**: background-colored example, introducing dark-variant for separator ([94fcde1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/509/commits/94fcde128d9ce52f1d9bfef750117784ed765604))
+- **o-footer**: adjust spacings and sizing to get closer to the UI Kit (#509)
+- **buttons**: drop `transition`s, mostly to ensure split button doesn't feels weird on hover ([d7c0d18](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/509/commits/d7c0d1844ad78c768df2e6f05f0bafd702b30d0e)) **(!)**
+- **o-link-arrow**: drop underline on default state ([f58256e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/509/commits/f58256ea3e66bd0509df331d636aad5d0947110b))
+- **cards**: adjust spacings to get closer to the UI Kit (#509)
+- **navbar**:  ensure height is correct, even with minimised megamenu ([5eaf602f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/515/commits/5eaf602f48d21a71c297720143bee832b98011f2))
+- **dropdown**: too much horizontal spacing ([970fe32](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/515/commits/970fe32f4d71d977bd681e4b16126edb9dab1180))
+
+#### Bug fixes
+
+- **cards**: ensure cards groups' margins stick to spacers (#484)
+- **reboot**: ensure `legend`s are bold (#477)
+- **badges**: middle aligned (#471)
+- **badges**: use supporting colours for `background`s (#466)
+- **text utilities**: drop `!important` to match `text-emphasis-variant()` (#465)
+- **pagination**: add default vertical margins (#467)
+- **dropdown**: ensure to rely on dropdown state to rotate caret (#487)
+- **buttons & inputs**: fix inacurrate `line-height` since latest type scale changes (#495)
+- **o-stepbar**: smaller margin between stepbar items (#497)
+- **RTL**: ensure value directives are used and RTLCSS runs after CSS compilation ([b8d17ff](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/515/commits/b8d17ff47b4ef15b1d06a9ea9f0c46de187c02e3))
+
+#### Docs
+
+- **tables**: revamp classless tables in docs theming (#483)
+- **badges**: drop the `em` part since Boosted uses `rem` (#471)
+- **contrasts table**: update content (#461)
+- **o-footer**: ensure to use inversed social buttons in o-footer (#493)
+- **modal**: update Orange popin old example (#492)
+- **megamenu**: improved examples and wording (#509)
+- **boostwatch**: fix a few examples ([4d86d51](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/515/commits/4d86d51241295a349d76f193e568824a2576ee68))
+
+
+<a name="4.5.2"></a>
+## [4.5.2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.0...v4.5.2) (2020-08-18)
 
 ### Bootstrap
 
 * [Bootstrap 4.5.1](https://github.com/twbs/bootstrap/releases/tag/v4.5.1)
-* [Bootstrap 4.5.3](https://github.com/twbs/bootstrap/releases/tag/v4.5.3)
+* [Bootstrap 4.5.2](https://github.com/twbs/bootstrap/releases/tag/v4.5.2)
 
 ### Boosted
 

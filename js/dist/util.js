@@ -131,7 +131,6 @@
     triggerTransitionEnd: function triggerTransitionEnd(element) {
       $__default['default'](element).trigger(TRANSITION_END);
     },
-    // TODO: Remove in v5
     supportsTransitionEnd: function supportsTransitionEnd() {
       return Boolean(TRANSITION_END);
     },
