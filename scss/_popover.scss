@@ -5,7 +5,9 @@
   /* rtl:raw:
   right: auto;
   */
-  left: 0; /* rtl: ignore */
+
+  /* rtl:ignore */
+  left: 0;
   z-index: $zindex-popover;
   display: block;
   max-width: $popover-max-width;
