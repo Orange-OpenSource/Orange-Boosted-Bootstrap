@@ -1,6 +1,17 @@
-/*eslint-disable */
 $(document).ready(function () {
   'use strict'
+
+  function validateInput(evt) {
+    var $el = $(evt.target)
+
+    if (!evt.target.validity.valid) {
+      if (evt.target.validity.valueMissing) {
+        $el.parent().removeClass('has-success has-danger').addClass('has-warning')
+      } else {
+        $el.parent().removeClass('has-success has-warning').addClass('has-danger')
+      }
+    }
+  }
 
   $('#mainNav').navbar({ sticky: true })
 
@@ -25,17 +36,3 @@ $(document).ready(function () {
   })
 })
 
-function validateInput(evt) {
-  'use strict'
-
-  var $el = $(evt.target)
-
-  if (!evt.target.validity.valid) {
-    if (evt.target.validity.valueMissing) {
-      $el.parent().removeClass('has-success has-danger').addClass('has-warning')
-    } else {
-      $el.parent().removeClass('has-success has-warning').addClass('has-danger')
-    }
-  }
-}
-/*eslint-enable */

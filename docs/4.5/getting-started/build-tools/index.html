@@ -152,7 +152,7 @@
               v4.5
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.2)</a>
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.3)</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
@@ -580,20 +580,21 @@
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/docs/4.5/getting-started/build-tools.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/docs/4.5/getting-started/build-tools.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
             <h1 class="bd-title" id="content">Build tools</h1>
           </div>
           <p class="bd-lead">Learn how to use Boosted’s included npm scripts to build our documentation, compile source code, run tests, and more.</p>
           <!-- Boosted mod : remove ads -->
           <h2 id="tooling-setup">Tooling setup</h2>
 
-<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts">npm scripts</a> for its build system. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.2/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
+<p>Boosted uses <a href="https://docs.npmjs.com/misc/scripts">npm scripts</a> for its build system. Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.3/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
 
 <p>To use our build system and run our documentation locally, you’ll need a copy of Boosted’s source files and Node. Follow these steps and you should be ready to rock:</p>
 
 <ol>
   <li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
-  <li>Navigate to the root <code class="language-plaintext highlighter-rouge">/boosted</code> directory and run <code class="language-plaintext highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.2/package.json">package.json</a>.</li>
+  <li>Either <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.5.3.zip">download Boosted’s sources</a> or fork <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted’s repository</a>.</li>
+  <li>Navigate to the root <code class="language-plaintext highlighter-rouge">/boosted</code> directory and run <code class="language-plaintext highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.3/package.json">package.json</a>.</li>
   <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>, install <a href="https://bundler.io/">Bundler</a> with <code class="language-plaintext highlighter-rouge">gem install bundler</code>, and finally run <code class="language-plaintext highlighter-rouge">bundle install</code>. This will install all Ruby dependencies, such as Jekyll and plugins.
     <ul>
       <li><strong>Windows users:</strong> Read <a href="https://jekyllrb.com/docs/windows/">this guide</a> to get Jekyll up and running without problems.</li>
@@ -605,7 +606,7 @@
 
 <h2 id="using-npm-scripts">Using npm scripts</h2>
 
-<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.2/package.json">package.json</a> includes the following commands and tasks:</p>
+<p>Our <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.3/package.json">package.json</a> includes the following commands and tasks:</p>
 
 <table>
   <thead>
@@ -636,7 +637,7 @@
 
 <p>Boosted uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
 
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.2/.browserslistrc">.browserslistrc</a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.5.3/.browserslistrc">.browserslistrc</a> for details.</p>
 
 <h2 id="local-documentation">Local documentation</h2>
 
@@ -667,7 +668,7 @@
 </nav>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-hQFBUEXKv1tPjGNFpCctXthNheXFWEyT+cKHsR5+8VYwGoe2L0SIaDNXDpE1LlTK" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.o-nav-local').prioritynav();

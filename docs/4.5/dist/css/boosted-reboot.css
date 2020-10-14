@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v4.5.2 (https://boosted.orange.com)
+ * Boosted Reboot v4.5.3 (https://boosted.orange.com)
  * Copyright 2014-2019 The Boosted Authors
  * Copyright 2014-2019 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Reboot v4.5.2 (https://getbootstrap.com)
+ * Bootstrap Reboot v4.5.3 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -255,6 +255,7 @@ caption {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -349,6 +350,7 @@ legend {
   padding: 0;
   margin-bottom: .5rem;
   font-size: 1.5rem;
+  font-weight: 700;
   line-height: inherit;
   color: inherit;
   white-space: normal;

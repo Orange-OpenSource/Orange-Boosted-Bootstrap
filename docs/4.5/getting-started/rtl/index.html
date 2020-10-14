@@ -152,7 +152,7 @@
               v4.5
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.2)</a>
+              <a class="dropdown-item active" href="/docs/4.5/">Latest (4.5.3)</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
               <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
@@ -583,7 +583,7 @@
 
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/docs/4.5/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/docs/4.5/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
             <h1 class="bd-title" id="content">RTL</h1>
           </div>
           <p class="bd-lead">Using Boosted for right-to-left website presentation</p>
@@ -637,17 +637,23 @@ Please ensure to add <code class="language-plaintext highlighter-rouge">dir="rtl
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
 
-    <span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>
       My page content start here
     <span class="nt">&lt;/main&gt;</span>
 
-    <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
-    <span class="c">&lt;!-- jQuery first, then Popper.js, then Boosted JS. --&gt;</span>
+    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
+    
+    <span class="c">&lt;!-- Option 1: jQuery and Boosted Bundle (includes Popper) --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.2/js/swiper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.2/dist/js/boosted.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-Ochdn7tEptQMWvKZ+UJHlK48cRq+lpQfD+cvNHas5cOG62XdpPFzZDjO303+fISm"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.bundle.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-hQFBUEXKv1tPjGNFpCctXthNheXFWEyT+cKHsR5+8VYwGoe2L0SIaDNXDpE1LlTK"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+    <span class="c">&lt;!-- Option 2: jQuery, Popper.js, and Boosted JS
+    &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.3/js/swiper.min.js" integrity="sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js" integrity="sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj" crossorigin="anonymous"&gt;&lt;/script&gt;
+    --&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
@@ -671,7 +677,7 @@ Please ensure to add <code class="language-plaintext highlighter-rouge">dir="rtl
 </nav>
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-DICVRDUcQdgTrFZYJyLmZPjGcJ1hBJ9JWUqxVnOsB4MnSkOPDgErlmYU8digJTpy" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-hQFBUEXKv1tPjGNFpCctXthNheXFWEyT+cKHsR5+8VYwGoe2L0SIaDNXDpE1LlTK" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.o-nav-local').prioritynav();

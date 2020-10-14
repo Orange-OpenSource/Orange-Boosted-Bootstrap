@@ -1,10 +1,10 @@
 /*!
-  * Boosted v4.5.2 (https://boosted.orange.com)
+  * Boosted v4.5.3 (https://boosted.orange.com)
   * Copyright 2014-2020 The Boosted Authors
   * Copyright 2014-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v4.5.2 (https://boosted.orange.com)
+  * Bootstrap v4.5.3 (https://boosted.orange.com)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -61,7 +61,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.2): util.js
+   * Bootstrap (v4.5.3): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -127,7 +127,6 @@
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
       do {
-        // eslint-disable-next-line no-bitwise
         prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
@@ -143,7 +142,7 @@
 
       try {
         return document.querySelector(selector) ? selector : null;
-      } catch (err) {
+      } catch (_) {
         return null;
       }
     },
@@ -173,7 +172,6 @@
     triggerTransitionEnd: function triggerTransitionEnd(element) {
       $__default['default'](element).trigger(TRANSITION_END);
     },
-    // TODO: Remove in v5
     supportsTransitionEnd: function supportsTransitionEnd() {
       return Boolean(TRANSITION_END);
     },
@@ -242,7 +240,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.5.2';
+  var VERSION = '4.5.3';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -398,7 +396,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.5.2';
+  var VERSION$1 = '4.5.3';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -430,7 +428,7 @@
         button.removeAttribute(DATA_FOCUS_VISIBLE);
       }
     });
-  }); // end mod
+  }); // End mod
 
   /**
    * ------------------------------------------------------------------------
@@ -441,6 +439,7 @@
   var Button = /*#__PURE__*/function () {
     function Button(element) {
       this._element = element;
+      this.shouldAvoidTriggerChange = false;
     } // Getters
 
 
@@ -455,16 +454,14 @@
       if (rootElement) {
         var input = this._element.querySelector(SELECTOR_INPUT);
 
+        var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
+
         if (input) {
           if (input.type === 'radio') {
             if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
               triggerChangeEvent = false;
-            } else {
-              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
-
-              if (activeElement) {
-                $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
-              }
+            } else if (activeElement) {
+              $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
             }
           }
 
@@ -474,7 +471,9 @@
               input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
             }
 
-            $__default['default'](input).trigger('change');
+            if (!this.shouldAvoidTriggerChange) {
+              $__default['default'](input).trigger('change');
+            }
           }
 
           input.focus();
@@ -499,14 +498,17 @@
     } // Static
     ;
 
-    Button._jQueryInterface = function _jQueryInterface(config) {
+    Button._jQueryInterface = function _jQueryInterface(config, avoidTriggerChange) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$1);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY$1);
 
         if (!data) {
           data = new Button(this);
-          $__default['default'](this).data(DATA_KEY$1, data);
+          $element.data(DATA_KEY$1, data);
         }
+
+        data.shouldAvoidTriggerChange = avoidTriggerChange;
 
         if (config === 'toggle') {
           data[config]();
@@ -549,8 +551,8 @@
         return;
       }
 
-      if (initialButton.tagName !== 'LABEL' || inputBtn && inputBtn.type !== 'checkbox') {
-        Button._jQueryInterface.call($__default['default'](button), 'toggle');
+      if (initialButton.tagName === 'INPUT' || button.tagName !== 'LABEL') {
+        Button._jQueryInterface.call($__default['default'](button), 'toggle', initialButton.tagName === 'INPUT');
       }
     }
   }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
@@ -617,7 +619,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.5.2';
+  var VERSION$2 = '4.5.3';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -718,9 +720,10 @@
     };
 
     _proto.nextWhenVisible = function nextWhenVisible() {
-      // Don't call next when the page isn't visible
+      var $element = $__default['default'](this._element); // Don't call next when the page isn't visible
       // or the carousel or its parent isn't visible
-      if (!document.hidden && $__default['default'](this._element).is(':visible') && $__default['default'](this._element).css('visibility') !== 'hidden') {
+
+      if (!document.hidden && $element.is(':visible') && $element.css('visibility') !== 'hidden') {
         this.next();
       }
     };
@@ -1204,7 +1207,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.5.2';
+  var VERSION$3 = '4.5.3';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -1471,10 +1474,10 @@
 
     Collapse._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $__default['default'](this);
-        var data = $this.data(DATA_KEY$3);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY$3);
 
-        var _config = _extends({}, Default$1, $this.data(), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default$1, $element.data(), typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && typeof config === 'string' && /show|hide|init/.test(config)) {
           // Boosted mod
@@ -1483,7 +1486,7 @@
 
         if (!data) {
           data = new Collapse(this, _config);
-          $this.data(DATA_KEY$3, data);
+          $element.data(DATA_KEY$3, data);
         }
 
         if (typeof config === 'string' && config !== 'init') {
@@ -1564,7 +1567,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.5.2';
+  var VERSION$4 = '4.5.3';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -1991,7 +1994,7 @@
       event.preventDefault();
       event.stopPropagation();
 
-      if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
+      if (!isActive || event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE) {
         if (event.which === ESCAPE_KEYCODE) {
           $__default['default'](parent.querySelector(SELECTOR_DATA_TOGGLE$2)).trigger('focus');
         }
@@ -2089,7 +2092,7 @@
    */
 
   var NAME$5 = 'megamenu';
-  var VERSION$5 = '4.5.2';
+  var VERSION$5 = '4.5.3';
   var DATA_KEY$5 = 'bs.megamenu';
   var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
   var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
@@ -2447,9 +2450,7 @@
         'aria-hidden': false
       }); // translate menu
       // @TODO WTF RTL?
-      // eslint-disable-next-line no-console
 
-      console.log(currentTranslatePercentage);
       $rootNav.css('transform', "translateX(" + (currentTranslatePercentage - 100 * this._$isRTL) + "%)"); // focus on target nav first item
 
       $rootNav.one('transitionend', function () {
@@ -2531,7 +2532,7 @@
         }
 
         if (config.target) {
-          if (typeof config.target !== 'string' || !/^[.#].*/.test(config.target)) {
+          if (typeof config.target !== 'string' || !/^[#.].*/.test(config.target)) {
             throw new TypeError("Selector \"" + config.target + "\" is not supported");
           }
 
@@ -2571,7 +2572,7 @@
    */
 
   var NAME$6 = 'modal';
-  var VERSION$6 = '4.5.2';
+  var VERSION$6 = '4.5.3';
   var DATA_KEY$6 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$6;
   var DATA_API_KEY$5 = '.data-api';
@@ -2778,7 +2779,7 @@
         var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
         $__default['default'](this._element).trigger(hideEventPrevented);
 
-        if (hideEventPrevented.defaultPrevented) {
+        if (hideEventPrevented.isDefaultPrevented()) {
           return;
         }
 
@@ -3215,7 +3216,7 @@
    */
 
   var NAME$7 = 'navbar';
-  var VERSION$7 = '4.5.2';
+  var VERSION$7 = '4.5.3';
   var DATA_KEY$7 = 'bs.navbar';
   var JQUERY_NO_CONFLICT$7 = $__default['default'].fn[NAME$7];
   var BREAKPOINT = 768;
@@ -3351,7 +3352,7 @@
    */
 
   var NAME$8 = 'otab';
-  var VERSION$8 = '4.5.2';
+  var VERSION$8 = '4.5.3';
   var DATA_KEY$8 = 'bs.otab';
   var EVENT_KEY$6 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -3483,7 +3484,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.2): tools/sanitizer.js
+   * Bootstrap (v4.5.3): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3609,7 +3610,7 @@
    */
 
   var NAME$9 = 'tooltip';
-  var VERSION$9 = '4.5.2';
+  var VERSION$9 = '4.5.3';
   var DATA_KEY$9 = 'bs.tooltip';
   var EVENT_KEY$7 = "." + DATA_KEY$9;
   var JQUERY_NO_CONFLICT$9 = $__default['default'].fn[NAME$9];
@@ -4251,7 +4252,8 @@
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$9);
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY$9);
 
         var _config = typeof config === 'object' && config;
 
@@ -4261,7 +4263,7 @@
 
         if (!data) {
           data = new Tooltip(this, _config);
-          $__default['default'](this).data(DATA_KEY$9, data);
+          $element.data(DATA_KEY$9, data);
         }
 
         if (typeof config === 'string') {
@@ -4335,7 +4337,7 @@
    */
 
   var NAME$a = 'popover';
-  var VERSION$a = '4.5.2';
+  var VERSION$a = '4.5.3';
   var DATA_KEY$a = 'bs.popover';
   var EVENT_KEY$8 = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $__default['default'].fn[NAME$a];
@@ -4515,7 +4517,7 @@
    */
 
   var NAME$b = 'prioritynav';
-  var VERSION$b = '4.5.2';
+  var VERSION$b = '4.5.3';
   var DATA_KEY$b = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT$b = $__default['default'].fn[NAME$b];
   var RESIZE_DURATION = 500;
@@ -4710,7 +4712,7 @@
    */
 
   var NAME$c = 'scrollup';
-  var VERSION$c = '4.5.2';
+  var VERSION$c = '4.5.3';
   var DATA_KEY$c = 'bs.scrollup';
   var EVENT_KEY$9 = "." + DATA_KEY$c;
   var DATA_API_KEY$7 = '.data-api';
@@ -4859,7 +4861,7 @@
    */
 
   var NAME$d = 'scrollspy';
-  var VERSION$d = '4.5.2';
+  var VERSION$d = '4.5.3';
   var DATA_KEY$d = 'bs.scrollspy';
   var EVENT_KEY$a = "." + DATA_KEY$d;
   var DATA_API_KEY$8 = '.data-api';
@@ -5152,7 +5154,7 @@
    */
 
   var NAME$e = 'tab';
-  var VERSION$e = '4.5.2';
+  var VERSION$e = '4.5.3';
   var DATA_KEY$e = 'bs.tab';
   var EVENT_KEY$b = "." + DATA_KEY$e;
   var DATA_API_KEY$9 = '.data-api';
@@ -5361,7 +5363,7 @@
 
       if ($tabpanel) {
         $tab.attr('role', 'tab');
-        $tablist.attr('role', 'tablist'); // $li.attr('role', 'presentation')
+        $tablist.attr('role', 'tablist');
       }
 
       if ($tab.hasClass(CLASS_NAME_ACTIVE$4)) {
@@ -5371,7 +5373,7 @@
         });
 
         if ($tab.attr('href')) {
-          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+          $tab.attr('aria-controls', $tab.attr('href').slice(1));
         }
 
         $tabpanel.attr({
@@ -5387,7 +5389,7 @@
         });
 
         if ($tab.attr('href')) {
-          $tab.attr('aria-controls', $tab.attr('href').substr(1));
+          $tab.attr('aria-controls', $tab.attr('href').slice(1));
         }
 
         $tabpanel.attr({
@@ -5411,13 +5413,11 @@
 
       if (k === ARROW_UP_KEYCODE$2 || k === ARROW_LEFT_KEYCODE$2) {
         index--;
-      } // up & left
-
+      }
 
       if (k === ARROW_RIGHT_KEYCODE$2 || k === ARROW_DOWN_KEYCODE$2) {
         index++;
-      } // down & right
-
+      }
 
       if (index < 0) {
         index = Items.length - 1;
@@ -5512,7 +5512,7 @@
    */
 
   var NAME$f = 'toast';
-  var VERSION$f = '4.5.2';
+  var VERSION$f = '4.5.3';
   var DATA_KEY$f = 'bs.toast';
   var EVENT_KEY$c = "." + DATA_KEY$f;
   var JQUERY_NO_CONFLICT$f = $__default['default'].fn[NAME$f];
