@@ -884,8 +884,8 @@ $navbar-toggler-icon-hover:         url("data:image/svg+xml,<svg xmlns='http://w
 // Dropdown menu container and contents.
 
 $dropdown-min-width:                10rem !default;
-$dropdown-padding-y:                $spacer !default; // Boosted mod
-$dropdown-padding-x:                .5rem !default; // Boosted mod
+$dropdown-padding-y:                .5rem !default; // Boosted mod
+$dropdown-padding-x:                $spacer / 2 !default; // Boosted mod
 $dropdown-spacer:                   -2px !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
