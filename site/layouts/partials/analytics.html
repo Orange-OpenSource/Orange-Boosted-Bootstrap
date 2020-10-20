@@ -3,39 +3,4 @@
 {{- $tarteJS = $tarteJS | resources.Minify -}}
 {{- end }}
 {{- $secureTarteJS := $tarteJS | resources.Fingerprint "sha384" }}
-<script src="{{ $tarteJS.Permalink | relURL }}" {{ printf "integrity=%q" $secureTarteJS.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
-<script>
-  if (typeof tarteaucitron !== undefined) {
-    tarteaucitron.init({
-      "privacyUrl": "", /* Privacy policy url */
-
-      "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
-      "cookieName": "cookie-consent", /* Cookie name */
-
-      "orientation": "bottom", /* Banner position (top - bottom) */
-      "showAlertSmall": false, /* Show the small banner on bottom right */
-      "cookieslist": true, /* Show the cookie list */
-
-      "adblocker": false, /* Show a Warning if an adblocker is detected */
-      "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
-      "highPrivacy": false, /* Disable auto consent */
-      "handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
-
-      "removeCredit": false, /* Remove credit link */
-      "moreInfoLink": true, /* Show more info link */
-      "useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
-
-      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
-
-      "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
-    });
-    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
-    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
-    dataLayer = [{
-      'site_name': 'accessibility-boosted',
-      'phase': 'prod',               // dev, qa, prod
-      'page_type': 'doc',            // type de page, optionnel
-      'page_title': document.title   // obligatoire pour pages dynamiques
-    }];
-  }
-</script>
+<script src="{{ $tarteJS.Permalink | absURL }}" {{ printf "integrity=%q" $secureTarteJS.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
