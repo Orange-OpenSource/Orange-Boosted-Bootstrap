@@ -1,15 +1,9 @@
 name: Lint
 on:
   push:
-    paths:
-      - 'js/**'
-      - 'scss/**'
     branches:
       - v5-dev
   pull_request:
-    paths:
-      - 'js/**'
-      - 'scss/**'
     branches:
       - v5-dev
 env:
