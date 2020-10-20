@@ -54,6 +54,7 @@ params:
   repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:              "orange"
   icons:                "https://design.orange.com/icons-libraries/"
+  bootstrap:            "https://v5.getbootstrap.com"
 
   download:
     source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha2.zip"
