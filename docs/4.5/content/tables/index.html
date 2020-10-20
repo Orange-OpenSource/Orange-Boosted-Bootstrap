@@ -21,7 +21,6 @@
       as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
 <!-- end mod -->
 
 <!-- tarteaucitron -->
@@ -71,37 +70,39 @@
 
 <script src="/docs/4.5/assets/js/vendor/tarteaucitron.js"></script>
 <script>
-	tarteaucitron.init({
-		"privacyUrl": "", /* Privacy policy url */
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      "privacyUrl": "", /* Privacy policy url */
 
-		"hashtag": "#cookie-consent", /* Open the panel with this hashtag */
-		"cookieName": "cookie-consent", /* Cookie name */
+      "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
+      "cookieName": "cookie-consent", /* Cookie name */
 
-		"orientation": "bottom", /* Banner position (top - bottom) */
-		"showAlertSmall": false, /* Show the small banner on bottom right */
-		"cookieslist": true, /* Show the cookie list */
+      "orientation": "bottom", /* Banner position (top - bottom) */
+      "showAlertSmall": false, /* Show the small banner on bottom right */
+      "cookieslist": true, /* Show the cookie list */
 
-		"adblocker": false, /* Show a Warning if an adblocker is detected */
-		"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
-		"highPrivacy": false, /* Disable auto consent */
-		"handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
+      "adblocker": false, /* Show a Warning if an adblocker is detected */
+      "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+      "highPrivacy": false, /* Disable auto consent */
+      "handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
 
-		"removeCredit": false, /* Remove credit link */
-		"moreInfoLink": true, /* Show more info link */
-		"useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+      "removeCredit": false, /* Remove credit link */
+      "moreInfoLink": true, /* Show more info link */
+      "useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
 
-		//"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
 
-		"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
-	});
-	tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
-  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
-  dataLayer = [{
-    'site_name': 'accessibility-boosted',
-    'phase': 'prod',               // dev, qa, prod
-    'page_type': 'doc',            // type de page, optionnel
-    'page_title': document.title   // obligatoire pour pages dynamiques
-  }];
+      "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+    });
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+    dataLayer = [{
+      'site_name': 'accessibility-boosted',
+      'phase': 'prod',               // dev, qa, prod
+      'page_type': 'doc',            // type de page, optionnel
+      'page_title': document.title   // obligatoire pour pages dynamiques
+    }];
+  }
 </script>
 
 
@@ -1766,7 +1767,7 @@ Please refer to <a href="https://mottie.github.io/tablesorter/docs/">TableSorter
 <!-- end mod -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/boosted.bundle.min.js" integrity="sha384-hQFBUEXKv1tPjGNFpCctXthNheXFWEyT+cKHsR5+8VYwGoe2L0SIaDNXDpE1LlTK" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" integrity="sha384-8uEk67aWSZHvjtAX9hf2AB+KzYcssy31vRRTi9oP81zHtyIj7PQGAykGbQpB1L2J" crossorigin="anonymous"></script><script src="/docs/4.5/assets/js/docs.min.js"></script><!-- Boosted mod -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tablesorter@2.31.3/dist/js/jquery.tablesorter.min.js" integrity="sha384-+PEWXCk8F17zxsQsEjkuHjUN4yFMHv03eKxKLrqwDql8FJQM0NeSvHRZFVLfXyn7" crossorigin="anonymous"></script>
   <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
   <script>
     $(document).ready(function () {

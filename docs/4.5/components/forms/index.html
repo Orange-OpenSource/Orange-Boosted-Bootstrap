@@ -21,7 +21,6 @@
       as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
 <!-- end mod -->
 
 <!-- tarteaucitron -->
@@ -71,37 +70,39 @@
 
 <script src="/docs/4.5/assets/js/vendor/tarteaucitron.js"></script>
 <script>
-	tarteaucitron.init({
-		"privacyUrl": "", /* Privacy policy url */
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      "privacyUrl": "", /* Privacy policy url */
 
-		"hashtag": "#cookie-consent", /* Open the panel with this hashtag */
-		"cookieName": "cookie-consent", /* Cookie name */
+      "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
+      "cookieName": "cookie-consent", /* Cookie name */
 
-		"orientation": "bottom", /* Banner position (top - bottom) */
-		"showAlertSmall": false, /* Show the small banner on bottom right */
-		"cookieslist": true, /* Show the cookie list */
+      "orientation": "bottom", /* Banner position (top - bottom) */
+      "showAlertSmall": false, /* Show the small banner on bottom right */
+      "cookieslist": true, /* Show the cookie list */
 
-		"adblocker": false, /* Show a Warning if an adblocker is detected */
-		"AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
-		"highPrivacy": false, /* Disable auto consent */
-		"handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
+      "adblocker": false, /* Show a Warning if an adblocker is detected */
+      "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+      "highPrivacy": false, /* Disable auto consent */
+      "handleBrowserDNTRequest": true, /* If Do Not Track == 1, disallow all */
 
-		"removeCredit": false, /* Remove credit link */
-		"moreInfoLink": true, /* Show more info link */
-		"useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+      "removeCredit": false, /* Remove credit link */
+      "moreInfoLink": true, /* Show more info link */
+      "useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
 
-		//"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
 
-		"readmoreLink": "/cookiespolicy" /* Change the default readmore link */
-	});
-	tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
-  (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
-  dataLayer = [{
-    'site_name': 'accessibility-boosted',
-    'phase': 'prod',               // dev, qa, prod
-    'page_type': 'doc',            // type de page, optionnel
-    'page_title': document.title   // obligatoire pour pages dynamiques
-  }];
+      "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+    });
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+    dataLayer = [{
+      'site_name': 'accessibility-boosted',
+      'phase': 'prod',               // dev, qa, prod
+      'page_type': 'doc',            // type de page, optionnel
+      'page_title': document.title   // obligatoire pour pages dynamiques
+    }];
+  }
 </script>
 
 
@@ -1108,8 +1109,7 @@
     </div>
   </fieldset>
   <div class="form-group row">
-    <div class="col-sm-2">Checkbox</div>
-    <div class="col-sm-10">
+    <div class="col-sm-10 offset-sm-2">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" type="checkbox" id="gridCheck1" />
         <label class="custom-control-label" for="gridCheck1">
@@ -1164,8 +1164,7 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10 offset-sm-2"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"gridCheck1"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"gridCheck1"</span><span class="nt">&gt;</span>
