@@ -30,6 +30,7 @@
   padding: $card-accordion-spacer;
   margin: inherit;
   font-weight: $font-weight-bold;
+  text-decoration: if($link-decoration == none, null, none);
   border-top: $nav-tabs-border-width / 2 solid $gray-500;
 
   &:hover {
