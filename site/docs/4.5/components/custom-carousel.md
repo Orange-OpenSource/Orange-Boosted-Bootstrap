@@ -20,7 +20,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
                 <div class="card-img">
                     <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                       <rect width="100%" height="100%" fill="#3ebd87"/>
-                      <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle">First slide</text>
+                      <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle" class="font-weight-bold">First slide</text>
                     </svg>
                 </div>
                 <div class="card-body">
@@ -34,7 +34,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
                 <div class="card-img">
                     <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                       <rect width="100%" height="100%" fill="#4bb4e6"/>
-                      <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle">Second slide</text>
+                      <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle" class="font-weight-bold">Second slide</text>
                     </svg>
                 </div>
                 <div class="card-body">
@@ -48,7 +48,7 @@ This carousel is based on the [swiper](http://idangero.us/swiper/) plugin. It pr
                 <div class="card-img">
                     <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                       <rect width="100%" height="100%" fill="#ffb4e6"/>
-                      <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle">Third slide</text>
+                      <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle" class="font-weight-bold">Third slide</text>
                     </svg>
                 </div>
                 <div class="card-body">
