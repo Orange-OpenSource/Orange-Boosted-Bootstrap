@@ -25,5 +25,5 @@ Get involved with Boosted development by [opening an issue]({{< param repo >}}/i
 {{< callout info >}}
 ## Bootstrap team
 
-Boosted is based on [Bootstrap](https://getbootstrap.com) —&nbsp;maintained by [its founding team and a small group of invaluable core contributors](https://getbootstrap.com/docs/4.4/about/team/), with the massive support and involvement of their community, **including some proud Boosted maintainers and contributors**.
+Boosted is based on [Bootstrap]({{ .Site.Params.bootstrap }}) —&nbsp;maintained by [its founding team and a small group of invaluable core contributors]({{ .Site.Params.bootstrap }}/docs/{{< param current_version >}}/about/team/), with the massive support and involvement of their community, **including some proud Boosted maintainers and contributors**.
 {{< /callout >}}
