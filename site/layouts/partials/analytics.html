@@ -3,7 +3,7 @@
 {{- $tarteJS = $tarteJS | resources.Minify -}}
 {{- end }}
 {{- $secureTarteJS := $tarteJS | resources.Fingerprint "sha384" }}
-<script src="{{ $tarteJS.Permalink | relURL }}" integrity="{{ $secureTarteJS.Data.Integrity }}" crossorigin="anonymous"></script>
+<script src="{{ $tarteJS.Permalink | relURL }}" {{ printf "integrity=%q" $secureTarteJS.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
 <script>
   tarteaucitron.init({
     "privacyUrl": "", /* Privacy policy url */
