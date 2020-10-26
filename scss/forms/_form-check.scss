@@ -29,7 +29,7 @@
   @include transition($form-check-transition);
 
   &[type="checkbox"] {
-    @include border-radius($form-check-input-border-radius);
+    @include border-radius($form-check-input-border-radius, $form-check-input-border-radius); // Boosted mod
   }
 
   &[type="radio"] {
