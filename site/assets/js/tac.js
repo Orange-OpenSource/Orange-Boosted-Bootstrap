@@ -66,7 +66,7 @@ if (typeof tarteaucitron !== 'undefined') {
     showIcon: false,
     handleBrowserDNTRequest: true,
     useExternalCss: true,
-    readmoreLink: '/docs/{{ .Site.Params.docs_version }}/about/cookies/',
+    readmoreLink: '/docs/5.0/about/cookies/',
     mandatory: false
   })
 
