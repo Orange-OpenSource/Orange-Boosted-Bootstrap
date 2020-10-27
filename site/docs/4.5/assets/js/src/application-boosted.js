@@ -106,7 +106,7 @@
     tarteaucitron.init({
       hashtag: '#cookie-consent', /* Open the panel with this hashtag */
       cookieName: 'cookie-consent', /* Cookie name */
-      bodyPosition: 'top',
+      showAlertSmall: false,
       orientation: 'bottom', /* Banner position (top - bottom) */
       cookieslist: true, /* Show the cookie list */
       highPrivacy: false, /* Disable auto consent */
