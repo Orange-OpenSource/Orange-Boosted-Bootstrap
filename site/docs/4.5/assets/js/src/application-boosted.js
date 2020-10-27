@@ -1,3 +1,6 @@
+/* eslint no-undef: 0 */
+/* eslint camelcase: 0 */
+
 (function ($) {
   'use strict'
 
@@ -98,4 +101,26 @@
       }
     }
   })
+
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      hashtag: '#cookie-consent', /* Open the panel with this hashtag */
+      cookieName: 'cookie-consent', /* Cookie name */
+      bodyPosition: 'top',
+      orientation: 'bottom', /* Banner position (top - bottom) */
+      cookieslist: true, /* Show the cookie list */
+      highPrivacy: false, /* Disable auto consent */
+      handleBrowserDNTRequest: true, /* If Do Not Track == 1, disallow all */
+      useExternalCss: true, /* If false, the tarteaucitron.css file will be loaded */
+      readmoreLink: '/docs/{{ site.docs_version }}/about/cookies/' /* Change the default readmore link */
+    })
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+    dataLayer = [{
+      site_name: 'accessibility-boosted',
+      phase: 'prod', // dev, qa, prod
+      page_type: 'doc', // type de page, optionnel
+      page_title: document.title // obligatoire pour pages dynamiques
+    }]
+  }
 })()
