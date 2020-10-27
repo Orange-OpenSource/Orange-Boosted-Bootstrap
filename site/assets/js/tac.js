@@ -52,6 +52,11 @@
     var toggle = document.createRange().createContextualFragment('<div class="form-check form-switch my-2 my-lg-0"><input class="form-check-input ml-0" type="checkbox" id="googletagmanagerAllowed" aria-describedby="tacCLgoogletagmanager" onchange="' + choiceEvent + '"><label class="form-check-label visually-hidden" for="googletagmanagerAllowed">Google Tag Manager</label></div>')
     ask.innerHTML = ''
     ask.append(toggle)
+
+    var link = document.querySelector('[href="/docs/5.0/about/cookies/"]')
+    link.removeAttribute('target')
+    link.removeAttribute('rel')
+    link.removeAttribute('title')
   }, { once: true })
 })()
 
@@ -66,7 +71,7 @@ if (typeof tarteaucitron !== 'undefined') {
     showIcon: false,
     handleBrowserDNTRequest: true,
     useExternalCss: true,
-    readmoreLink: '/docs/{{ .Site.Params.docs_version }}/about/cookies/',
+    readmoreLink: '/docs/5.0/about/cookies/',
     mandatory: false
   })
 
