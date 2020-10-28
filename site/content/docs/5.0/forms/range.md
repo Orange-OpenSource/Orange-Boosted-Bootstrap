@@ -14,7 +14,7 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 ### Progressive enchancement
 
 Only Edge Legacy and Firefox support “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
-{{> /callout >}}
+{{< /callout >}}
 
 {{< example >}}
 <label for="customRange1" class="form-label">Example range</label>
