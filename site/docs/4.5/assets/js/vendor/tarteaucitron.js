@@ -270,8 +270,8 @@ var tarteaucitron = {
                 });
 
                 // Step 3: prepare the html
-                html += '<div id="tarteaucitronPremium"></div>';
-                html += '<button id="tarteaucitronBack" onclick="tarteaucitron.userInterface.closePanel();" aria-label="' + tarteaucitron.lang.close + '"></button>';
+                //html += '<div id="tarteaucitronPremium"></div>';
+                html += '<button id="tarteaucitronBack" onclick="tarteaucitron.userInterface.closePanel();"><span class="sr-only">' + tarteaucitron.lang.close + '</span>></button>';
                 html += '<div id="tarteaucitron" role="dialog" aria-labelledby="dialogTitle">';
                 html += '   <button id="tarteaucitronClosePanel" onclick="tarteaucitron.userInterface.closePanel();">';
                 html += '       ' + tarteaucitron.lang.close;
@@ -524,7 +524,7 @@ var tarteaucitron = {
             html +=         service.name;
             html += '       </label>';
             html += '   </div>';
-            html += '   <div class="tarteaucitronName">';     
+            html += '   <div class="tarteaucitronName">';
             html += '       <span id="tacCL' + service.key + '" class="tarteaucitronListCookies"></span><br/>';
             if (tarteaucitron.parameters.moreInfoLink == true) {
                 html += '       <a href="https://opt-out.ferank.eu/service/' + service.key + '/" target="_blank" rel="noopener" title="'+ tarteaucitron.lang.cookieDetail + ' ' + service.name + ' ' + tarteaucitron.lang.ourSite + ' ' + tarteaucitron.lang.newWindow +'">';
@@ -699,7 +699,7 @@ var tarteaucitron = {
                 if(!document.getElementById(key + 'Allowed').checked) {
                   document.getElementById(key + 'Allowed').setAttribute('checked','checked');
                   document.getElementById(key + 'Allowed').checked=true;
-                }                
+                }
                 document.getElementById(key + 'Line').classList.add('tarteaucitronIsAllowed');
                 document.getElementById(key + 'Line').classList.remove('tarteaucitronIsDenied');
             } else if (status === false) {
