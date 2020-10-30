@@ -66,21 +66,16 @@
 }
 
 .bd-links {
+  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-right: $grid-gutter-width / -2; // Boosted mod
-  margin-left: $grid-gutter-width / -2; // Boosted mod
+  border-top: 1px solid rgba(0, 0, 0, .05);
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       max-height: subtract(100vh, 9.6rem); // Boosted mod
       overflow-y: auto;
     }
-  }
-
-  // Override collapse behaviors
-  @include media-breakpoint-up(md) {
-    display: block !important;
   }
 }
 

@@ -35,9 +35,9 @@ If you want to download and examine our [examples]({{ site.baseurl }}/docs/{{ si
 <a href="{{ site.download.dist_examples }}" class="btn btn-secondary" onclick="ataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples'});">Download Examples</a>
 
 
-## Boosted CDN
+## jsDelivr
 
-Skip the download with [jsdelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.
+Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.
 
 {% highlight html %}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
