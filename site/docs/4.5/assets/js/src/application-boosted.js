@@ -1,3 +1,6 @@
+/* eslint no-undef: 0 */
+/* eslint camelcase: 0 */
+
 (function ($) {
   'use strict'
 
@@ -98,4 +101,26 @@
       }
     }
   })
+
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      hashtag: '#cookie-consent',
+      cookieName: 'cookie-consent',
+      showAlertSmall: false,
+      orientation: 'bottom',
+      cookieslist: true,
+      highPrivacy: false,
+      handleBrowserDNTRequest: true,
+      useExternalCss: true
+    })
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+    // eslint-disable-next-line no-unused-vars
+    var dataLayer = [{
+      site_name: 'accessibility-boosted',
+      phase: 'prod',
+      page_type: 'doc',
+      page_title: document.title
+    }]
+  }
 })()
