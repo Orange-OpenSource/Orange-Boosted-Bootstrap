@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduction
-description: Get started with Boosted, a Bootstrap fork — the world's most popular framework for building responsive, mobile-first sites, with Boosted CDN and a template starter page.
+description: Get started with Boosted, a Bootstrap fork — the world's most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.
 group: getting-started
 redirect_from:
   - "/docs/"
@@ -14,7 +14,7 @@ toc: true
 
 ## Quick start
 
-Looking to quickly add Boosted to your project? Use Boosted CDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/).
+Looking to quickly add Boosted to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the downloads page]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/).
 
 ### CSS
 

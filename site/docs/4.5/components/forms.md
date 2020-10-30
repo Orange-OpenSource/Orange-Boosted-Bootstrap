@@ -292,9 +292,8 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
   </div>
-  <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+  <fieldset class="form-group row">
+      <legend class="col-form-label col-sm-2 float-sm-left pt-0">Radios</legend>
       <div class="col-sm-10">
         <div class="custom-control custom-radio">
           <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -315,7 +314,6 @@ At times, you maybe need to use margin or padding utilities to create that perfe
           </label>
         </div>
       </div>
-    </div>
   </fieldset>
   <div class="form-group row">
     <div class="col-sm-10 offset-sm-2">
@@ -546,6 +544,7 @@ Add the `.disabled` class to the label for a disabled input.
 {% capture example %}
 <form>
   <fieldset disabled>
+    <legend>Disabled fieldset example</legend>
     <div class="form-group">
       <label for="disabledTextInput">Disabled input</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
@@ -606,7 +605,7 @@ Here's how form validation works with Boosted:
 - To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the `.was-validated` class from the `<form>` again after submission.
 - As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for [server side validation](#server-side). They do not require a `.was-validated` parent class.
 - Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
+- All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
 - Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
 - You may provide custom validity messages with `setCustomValidity` in JavaScript.
 
@@ -1054,11 +1053,11 @@ $('.your-checkbox').prop('indeterminate', true)
 
 {% capture example %}
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+  <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input">
   <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+  <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
   <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
 </div>
 {% endcapture %}

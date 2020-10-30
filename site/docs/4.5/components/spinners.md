@@ -12,6 +12,8 @@ Boosted "spinners" can be used to show the loading state in your projects. They'
 
 For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="sr-only">Loading...</span>`.
 
+{% include callout-info-prefersreducedmotion.md %}
+
 ## Border spinner
 
 Use the border spinners for a lightweight loading indicator.

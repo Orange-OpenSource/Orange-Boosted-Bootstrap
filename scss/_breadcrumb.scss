@@ -14,8 +14,6 @@
 }
 
 .breadcrumb-item {
-  display: flex;
-
   a {
     text-decoration: if($link-decoration == underline, null, underline); // Boosted mod: links are perceivable globally
   }
@@ -25,10 +23,8 @@
     padding-left: $breadcrumb-item-padding;
 
     &::before {
-      display: inline-block; // Suppress underlining of the separator in modern browsers
+      float: left; // Suppress underlining of the separator in modern browsers
       // Boosted mod
-      flex-shrink: 0;
-      align-self: center;
       width: $breadcrumb-divider-width;
       height: $breadcrumb-divider-height;
       margin-right: map-get($spacers, 2);

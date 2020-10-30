@@ -246,7 +246,7 @@ For visually hidden interactive controls, such as traditional "skip" links, `.sr
 
 ### Reduced motion
 
-Boosted includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled.
+Boosted includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
 
 [comment]: # Boosted mod
 ### Focus visibility

@@ -76,3 +76,12 @@
   height: $spinner-height-lg;
 }
 // End mod
+
+@if $enable-prefers-reduced-motion-media-query {
+  @media (prefers-reduced-motion: reduce) {
+    .spinner-border,
+    .spinner-grow {
+      animation-duration: 1.5s;
+    }
+  }
+}
