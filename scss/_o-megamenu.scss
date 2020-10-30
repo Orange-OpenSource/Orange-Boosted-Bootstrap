@@ -24,12 +24,8 @@
   }
 
   .nav-item {
-    position: relative;
+    position: static;
     padding: 0;
-
-    .nav-item {
-      position: static;
-    }
   }
 
   .nav-link {
@@ -211,10 +207,6 @@
           > .navbar-nav {
             transform: none;
             will-change: auto;
-          }
-
-          .nav-item {
-            position: static;
           }
         }
 
