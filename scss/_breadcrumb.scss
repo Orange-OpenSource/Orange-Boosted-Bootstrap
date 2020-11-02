@@ -24,21 +24,18 @@
 
     &::before {
       float: left; // Suppress underlining of the separator in modern browsers
-      // Boosted mod
-      width: $breadcrumb-divider-width;
-      height: $breadcrumb-divider-height;
-      margin-right: map-get($spacers, 2);
-      content: "";
-      background-image: escape-svg($breadcrumb-divider);
-      background-repeat: no-repeat;
+      padding-left: map-get($spacers, 2); // Boosted mod: RTL
+      color: $breadcrumb-divider-color;
+      content: escape-svg($breadcrumb-divider);
 
       /* rtl:remove */
-      transform: rotate(180deg);
+      transform: rotate(180deg); // Boosted mod
 
+      // Boosted mod
       .bg-dark & {
-        background-image: escape-svg($breadcrumb-divider-dark);
+        content: escape-svg($breadcrumb-divider-dark);
       }
-      // end mod
+      // End mod
     }
   }
 

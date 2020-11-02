@@ -1227,15 +1227,15 @@ $breadcrumb-item-padding:           map-get($spacers, 2) !default;
 $breadcrumb-margin-bottom:          1rem !default;
 
 $breadcrumb-bg:                     $white !default;
-//$breadcrumb-divider-color:          $black !default;
+$breadcrumb-divider-color:          null !default;
 //$breadcrumb-active-color:           theme-color("primary") !default;
-$breadcrumb-divider:                $chevron-icon !default;
-$breadcrumb-divider-height:         map-get($spacers, 2) !default;
-$breadcrumb-divider-width:          .4375rem !default;
+$breadcrumb-divider-height:         10 !default;
+$breadcrumb-divider-width:          7 !default;
+$breadcrumb-divider:                str-replace($chevron-icon, "viewBox='0 0 9 14'", "width='#{$breadcrumb-divider-width}' height='#{$breadcrumb-divider-height}' viewBox='0 0 9 14'") !default;
 $breadcrumb-line-height:            $line-height-sm !default;
 
 $breadcrumb-border-radius:          $border-radius !default;
-$breadcrumb-divider-dark:           $chevron-icon-hover !default; // Boosted mod
+$breadcrumb-divider-dark:           str-replace($chevron-icon-hover, "viewBox='0 0 9 14'", "width='#{$breadcrumb-divider-width}' height='#{$breadcrumb-divider-height}' viewBox='0 0 9 14'") !default; // Boosted mod
 
 // Carousel
 
