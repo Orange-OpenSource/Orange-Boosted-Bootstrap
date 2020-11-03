@@ -154,14 +154,6 @@ We include a security margin for container fluid. The goal is to fit exactly the
       <td><code>.col-xxl-</code></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row"># of columns</th>
-      <td colspan="6">12</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="6">30px (15px on each side of a column)</td>
-    </tr>
-    <tr>
       <th class="text-nowrap" scope="row">Nestable</th>
       <td colspan="6">Yes</td>
     </tr>
