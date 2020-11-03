@@ -34,22 +34,22 @@ If you want to download and examine our [examples]({{< docsref "/examples" >}}),
 
 <a href="{{< param "download.dist_examples" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download examples source'});">Download Examples</a>
 
-## Boosted CDN
+## CDN via jsDelivr
 
-Skip the download with [jsDelivr](https://cdn.jsdelivr.net/) to deliver cached version of Boosted's compiled CSS and JS to your project.
+Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Boosted's compiled CSS and JS to your project.
 
-{{< highlight html >}}
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-<link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+```html
+<link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
+<link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
-{{< /highlight >}}
+```
 
 If you're using our compiled JavaScript and prefer to include Popper.js separately, add Popper.js before our JS, via a CDN preferably.
 
-{{< highlight html >}}
+```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
-{{< /highlight >}}
+```
 
 {{< callout warning >}}
 ### Ressource Hints
@@ -64,9 +64,9 @@ Pull in Boosted's **source files** into nearly any project with some of the most
 
 Install Boosted in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/boosted):
 
-{{< highlight sh >}}
+```sh
 npm install boosted@next
-{{< /highlight >}}
+```
 
 `const boosted = require('boosted')` or `import boosted from 'boosted'` will load all of Boosted's plugins onto a `boosted` object.
 The `boosted` module itself exports all of our plugins. You can manually load Boosted's plugins individually by loading the `/js/dist/*.js` files under the package's top-level directory.
@@ -80,26 +80,26 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
 
-{{< highlight sh >}}
+```sh
 yarn add boosted@next
-{{< /highlight >}}
+```
 
 ### Composer
 
 You can also install and manage Boosted's Sass and JavaScript using [Composer](https://getcomposer.org/):
 
-{{< highlight sh >}}
+```sh
 composer require orange-opensource/orange-boosted-bootstrap:{{< param current_version >}}
-{{< /highlight >}}
+```
 
 ### NuGet
 
 If you develop in .NET, you can also install and manage Boosted's [CSS](https://www.nuget.org/packages/boosted/) or [Sass](https://www.nuget.org/packages/boosted.sass/) and JavaScript using [NuGet](https://www.nuget.org/):
 
-{{< highlight powershell >}}
+```powershell
 Install-Package boosted
-{{< /highlight >}}
+```
 
-{{< highlight powershell >}}
+```powershell
 Install-Package boosted.sass
-{{< /highlight >}}
+```

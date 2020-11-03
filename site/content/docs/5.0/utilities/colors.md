@@ -42,12 +42,12 @@ Similar to the contextual text color classes, easily set the background of an el
 {{< example >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="p-3 mb-2 font-weight-bold bg-{{ .name }}">.bg-{{ .name }}</div>
+<div class="p-3 mb-2 fw-bold bg-{{ .name }}">.bg-{{ .name }}</div>
 {{- end -}}
 {{< /colors.inline >}}
-<div class="p-3 mb-2 font-weight-bold bg-pink">.bg-pink</div>
-<div class="p-3 mb-2 font-weight-bold bg-white">.bg-white or .bg-body</div>
-<div class="p-3 mb-2 font-weight-bold bg-transparent">.bg-transparent</div>
+<div class="p-3 mb-2 fw-bold bg-pink">.bg-pink</div>
+<div class="p-3 mb-2 fw-bold bg-white">.bg-white or .bg-body</div>
+<div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
 
 <!-- Boosted mod: no background gradient -->

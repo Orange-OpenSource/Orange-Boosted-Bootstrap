@@ -11,7 +11,6 @@
   font-size: $btn-close-size; // Boosted mod
   color: $btn-close-color;
   background: transparent escape-svg($btn-close-bg) no-repeat center center / $btn-close-width auto; // include transparent for button elements
-  background-clip: content-box;
   border: 0; // for button elements
   outline-offset: map-get($spacers, 2);
   @include border-radius();

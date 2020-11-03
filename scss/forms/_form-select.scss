@@ -6,7 +6,6 @@
 .form-select {
   display: block;
   width: 100%;
-  height: $form-select-height;
   padding: subtract($form-select-padding-y, 1px) ($form-select-padding-x + $form-select-indicator-padding) add($form-select-padding-y, 1px) $form-select-padding-x; // Boosted mod
   font-family: $form-select-font-family;
   @include font-size($form-select-font-size);
@@ -46,7 +45,6 @@
 
   &[multiple],
   &[size]:not([size="1"]) {
-    height: auto;
     padding-right: $form-select-padding-x;
     background-image: none;
   }
@@ -67,7 +65,6 @@
 // Boosted mod: no .form-select-sm
 
 .form-select-lg {
-  height: $form-select-height-lg;
   padding-top: $form-select-padding-y-lg;
   padding-bottom: $form-select-padding-y-lg;
   padding-left: $form-select-padding-x-lg;

@@ -1,16 +1,16 @@
 // Container mixins
 
 @mixin make-container($gutter: $container-padding-x) {
-  --bs-padding-x: calc(#{$gutter} / 2); // stylelint-disable-line function-disallowed-list
+  --#{$variable-prefix}padding-x: calc(#{$gutter} / 2); // stylelint-disable-line function-disallowed-list
   width: 100%;
-  padding-right: var(--bs-padding-x); // Boosted mod
-  padding-left: var(--bs-padding-x); // Boosted mod
+  padding-right: var(--#{$variable-prefix}padding-x); // Boosted mod
+  padding-left: var(--#{$variable-prefix}padding-x); // Boosted mod
   margin-right: auto;
   margin-left: auto;
 
   // Boosted mod: gutter depends on breakpoint
   @include media-breakpoint-up($grid-gutter-breakpoint) {
-    --bs-padding-x: #{$gutter};
+    --#{$variable-prefix}padding-x: #{$gutter};
   }
   // End mod
 }

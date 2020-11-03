@@ -9,7 +9,7 @@
       &:hover,
       &:focus {
         color: $color;
-        background-color: if($color == $white, darken($background, 10%), lighten($background, 10%)); // Boosted mod
+        background-color: if($color == $white, shade-color($background, 10%), tint-color($background, 10%)); // Boosted mod
       }
 
       // Boosted mod: no variant for active state

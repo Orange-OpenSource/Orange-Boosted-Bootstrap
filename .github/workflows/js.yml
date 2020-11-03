@@ -5,6 +5,8 @@ on:
       - 'js/**'
     branches:
       - v5-dev
+    branches-ignore:
+      - "dependabot/**"
   pull_request:
     paths:
       - 'js/**'
@@ -21,13 +23,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [10, 12]
+        node: [10, 12, 14]
 
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
 
-      - name: Set Node.js version
+      - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
@@ -52,7 +54,7 @@ jobs:
 
       - name: Run Coveralls
         uses: coverallsapp/github-action@master
-        if: matrix.node == 12
+        if: matrix.node == 14
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           path-to-lcov: "./js/coverage/lcov.info"

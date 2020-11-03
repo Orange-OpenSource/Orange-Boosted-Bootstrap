@@ -18,5 +18,5 @@
 
 {{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
 
-<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
+<link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
 {{- end }}

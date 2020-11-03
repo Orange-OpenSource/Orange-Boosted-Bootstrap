@@ -249,12 +249,12 @@ To add accordion-like group management to a collapsible area, add the data attri
 
 Enable manually with:
 
-{{< highlight js >}}
+```js
 var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
 var collapseList = collapseElementList.map(function (collapseEl) {
   return new boosted.Collapse(collapseEl)
 })
-{{< /highlight >}}
+```
 
 ### Options
 
@@ -295,12 +295,12 @@ Activates your content as a collapsible element. Accepts an optional options `ob
 
 You can create a collapse instance with the constructor, for example:
 
-{{< highlight js >}}
+```js
 var myCollapse = document.getElementById('myCollapse')
 var bsCollapse = new boosted.Collapse(myCollapse, {
   toggle: false
 })
-{{< /highlight >}}
+```
 
 <table class="table">
   <thead>
@@ -324,7 +324,7 @@ var bsCollapse = new boosted.Collapse(myCollapse, {
     </tr>
     <tr>
       <td><code>dispose</code></td>
-      <td>Destroys an element's collapse.</td>
+      <td>Destroys an element's collapse. (Removes stored data on the DOM element)</td>
     </tr>
     <tr>
       <td><code>getInstance</code></td>
@@ -364,9 +364,9 @@ Boosted's collapse class exposes a few events for hooking into collapse function
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myCollapsible = document.getElementById('myCollapsible')
 myCollapsible.addEventListener('hidden.bs.collapse', function () {
   // do something...
 })
-{{< /highlight >}}
+```

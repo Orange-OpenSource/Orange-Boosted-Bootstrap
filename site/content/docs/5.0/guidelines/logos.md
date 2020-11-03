@@ -17,7 +17,7 @@ toc: true
     <div class="ratio ratio-1x1">
     <figure class="figure d-flex bg-dark">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img img-fluid m-auto" width="220" height="220" alt="Orange" loading="lazy">
-      <figcaption class="figure-caption font-weight-bold text-body position-absolute">Master logo</figcaption>
+      <figcaption class="figure-caption fw-bold text-body position-absolute">Master logo</figcaption>
     </figure>
     </div>
   </div>
@@ -25,7 +25,7 @@ toc: true
     <div class="ratio ratio-1x1">
     <figure class="figure d-flex bg-dark">
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" class="figure-img m-auto" width="30" height="30" alt="Orange" loading="lazy">
-      <figcaption class="figure-caption font-weight-bold text-body position-absolute">Small logo</figcaption>
+      <figcaption class="figure-caption fw-bold text-body position-absolute">Small logo</figcaption>
     </figure>
     </div>
   </div>
@@ -52,7 +52,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
             Business<br>Services
           </span>
         </div>
-        <figcaption class="figure-caption font-weight-bold text-body position-absolute">OBS logo left-aligned with white descriptor</figcaption>
+        <figcaption class="figure-caption fw-bold text-body position-absolute">OBS logo left-aligned with white descriptor</figcaption>
       </figure>
     </div>
   </div>
@@ -66,7 +66,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
             Business<br>Services
           </span>
         </div>
-        <figcaption class="figure-caption font-weight-bold text-body position-absolute">OBS logo left-aligned with black descriptor</figcaption>
+        <figcaption class="figure-caption fw-bold text-body position-absolute">OBS logo left-aligned with black descriptor</figcaption>
       </figure>
     </div>
   </div>
@@ -80,7 +80,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
           </span>
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
         </div>
-        <figcaption class="figure-caption font-weight-bold text-body position-absolute">OBS logo left-aligned with white descriptor</figcaption>
+        <figcaption class="figure-caption fw-bold text-body position-absolute">OBS logo left-aligned with white descriptor</figcaption>
       </figure>
     </div>
   </div>
@@ -94,7 +94,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
           </span>
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
         </div>
-        <figcaption class="figure-caption font-weight-bold text-body position-absolute">OBS logo left-aligned with black descriptor</figcaption>
+        <figcaption class="figure-caption fw-bold text-body position-absolute">OBS logo left-aligned with black descriptor</figcaption>
       </figure>
     </div>
   </div>

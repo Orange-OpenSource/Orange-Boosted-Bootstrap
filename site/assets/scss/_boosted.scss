@@ -70,7 +70,7 @@ body {
   align-items: center;
   padding: 0 0 $spacer / 2;
   margin: $spacer / -2 0 $spacer * 1.5;
-  border-bottom: $border-width / 2 solid tint-color($info, 8);
+  border-bottom: $border-width / 2 solid tint-color($info, 80%);
 
   > a[href]:first-of-type {
     display: flex;

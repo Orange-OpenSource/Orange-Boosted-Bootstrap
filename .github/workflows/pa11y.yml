@@ -16,7 +16,7 @@ on:
       - v5-dev
 env:
   CI: true
-  NODE: 12.x
+  NODE: 14.x
 
 jobs:
   pa11y:
@@ -26,7 +26,7 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v2
 
-      - name: Set Node.js version
+      - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "${{ env.NODE }}"

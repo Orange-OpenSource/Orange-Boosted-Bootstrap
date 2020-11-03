@@ -14,7 +14,7 @@ toc: true
     <h3 class="h6">Default</h3>
   </div>
   <div class="col-4">
-    <a href="#links" class="font-weight-bold" id="web-nav-lnk-003">Text link</a>
+    <a href="#links" class="fw-bold" id="web-nav-lnk-003">Text link</a>
   </div>
   <div class="col-6">
     <h4 class="h6 m-0" id="web-nav-lnk-005">With chevrons</h4>
@@ -27,7 +27,7 @@ toc: true
 
 ## Tabs
 
-[Documentation]({{< docsref "/components/navs" >}}#tabs)&nbsp;—&nbsp;{{< anchor web-nav-tab-001 >}}
+[Documentation]({{< docsref "/components/navs-tabs" >}}#tabs)&nbsp;—&nbsp;{{< anchor web-nav-tab-001 >}}
 
 <div class="mb-5">
   <ul class="nav nav-tabs">
@@ -45,7 +45,7 @@ toc: true
 
 ## Tabs light
 
-[Documentation]({{< docsref "/components/navs" >}}#tabs-light)&nbsp;—&nbsp;{{< anchor web-nav-tab-002 >}}
+[Documentation]({{< docsref "/components/navs-tabs" >}}#tabs-light)&nbsp;—&nbsp;{{< anchor web-nav-tab-002 >}}
 
 <div class="mb-5">
   <ul class="nav nav-tabs nav-tabs-light">
@@ -84,7 +84,7 @@ toc: true
 
 ## Accordion
 
-[Documentation]({{< docsref "/components/navs" >}}#tabs)
+[Documentation]({{< docsref "/components/navs-tabs" >}}#tabs)
 <div class="row gy-3 row-cols-1 row-cols-lg-3">
   <div class="col">
     <h3 class="h6">Small — {{< anchor web-nav-acc-001 >}}</h3>
