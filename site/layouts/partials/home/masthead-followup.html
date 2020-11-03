@@ -28,9 +28,9 @@
         <div class="home-icon bg-danger rounded-circle d-flex mb-3">
           {{ partial "icons/download.svg" (dict "width" "48" "height" "48" "class" "m-auto") }}
         </div>
-        <h2 class="display-2">Boosted CDN</h2>
-        <p class="lead lead-lg"><a href="https://www.jsdelivr.com/">jsDelivr</a>
-          When you only need to include Boosted’s compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/">jsDelivr</a> CDN.
+        <h2 class="display-2">jsDelivr</h2>
+        <p class="lead lead-lg">
+          When you only need to include Boosted’s compiled CSS or JS, you can use <a href="https://www.jsdelivr.com/">jsDelivr</a>.
         </p>
         <p>
           See it in action with our simple <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#starter-template">starter template</a>, or <a href="/docs/{{ .Site.Params.docs_version }}/examples/">browse the examples</a> to jumpstart your next project. You can also choose to include Popper.js and our JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">separately</a>.
@@ -41,7 +41,7 @@
       <div class="col-md-7 pl-md-5">
         <div class="mx-md-5 px-md-5">
 {{ highlight (printf (`<!-- CSS only -->
-<link rel="stylesheet" href="%s" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
+<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
 {{ highlight (printf (`<!-- JavaScript Bundle with Popper.js -->
 <script src="%s" integrity=%q crossorigin="anonymous"></script>`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
         </div>

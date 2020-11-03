@@ -3,13 +3,13 @@
 //
 
 .table {
-  --bs-table-bg: #{$table-bg};
-  --bs-table-accent-bg: transparent;
-  --bs-table-active-color: #{$table-active-color};
-  --bs-table-active-bg: #{$table-active-bg};
-  --bs-table-hover-color: #{$table-hover-color};
-  --bs-table-hover-bg: #{$table-hover-bg};
-  --bs-table-border-color: #{$table-border-color}; // Boosted mod
+  --#{$variable-prefix}table-bg: #{$table-bg};
+  --#{$variable-prefix}table-accent-bg: transparent;
+  --#{$variable-prefix}table-active-color: #{$table-active-color};
+  --#{$variable-prefix}table-active-bg: #{$table-active-bg};
+  --#{$variable-prefix}table-hover-color: #{$table-hover-color};
+  --#{$variable-prefix}table-hover-bg: #{$table-hover-bg};
+  --#{$variable-prefix}table-border-color: #{$table-border-color}; // Boosted mod
   width: 100%;
   margin-bottom: $spacer;
   color: $table-color;
@@ -19,7 +19,7 @@
   //// Only rows have border
   //// Set line-height everywhere
   tr {
-    border-bottom: $table-border-width solid var(--bs-table-border-color);
+    border-bottom: $table-border-width solid var(--#{$variable-prefix}table-border-color);
   }
 
   // Target th & td
@@ -30,8 +30,8 @@
   > :not(caption) > * > * {
     padding: $table-cell-padding-y $table-cell-padding-x add($table-cell-padding-y, 1px); // Boosted mod
     line-height: $table-line-height; // Boosted mod
-    background-color: var(--bs-table-bg);
-    background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
+    background-color: var(--#{$variable-prefix}table-bg);
+    background-image: linear-gradient(var(--#{$variable-prefix}table-accent-bg), var(--#{$variable-prefix}table-accent-bg));
   }
 
   > thead > tr {
@@ -85,8 +85,8 @@
 // The `.table-active` class can be added to highlight rows or cells
 
 .table-active {
-  --bs-table-accent-bg: var(--bs-table-active-bg);
-  color: var(--bs-table-active-color);
+  --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-active-bg);
+  color: var(--#{$variable-prefix}table-active-color);
 }
 
 // Hover effect
@@ -95,8 +95,8 @@
 
 .table-hover {
   > tbody > tr:hover {
-    --bs-table-accent-bg: var(--bs-table-hover-bg);
-    color: var(--bs-table-hover-color);
+    --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-hover-bg);
+    color: var(--#{$variable-prefix}table-hover-color);
   }
 }
 

@@ -8,7 +8,7 @@ toc: true
 
 ## Tooling setup
 
-Boosted uses [npm scripts](https://docs.npmjs.com/misc/scripts) for its build system. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes convenient methods for working with the framework, including compiling code, running tests, and more.
+Boosted uses [npm scripts](https://docs.npmjs.com/misc/scripts/) for its build system. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes convenient methods for working with the framework, including compiling code, running tests, and more.
 
 To use our build system and run our documentation locally, you'll need a copy of Boosted's source files and Node. Follow these steps and you should be ready to rock:
 

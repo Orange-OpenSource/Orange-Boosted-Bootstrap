@@ -7,14 +7,14 @@
 }
 
 .bd-followup {
-  background-color: tint-color($teal, 11);
+  background-color: tint-color($teal, 92%);
 
   & + & {
-    background-color: tint-color($indigo, 10);
+    background-color: tint-color($indigo, 90%);
   }
 
   & + & + & {
-    background-color: tint-color($yellow, 10);
+    background-color: tint-color($yellow, 90%);
   }
 }
 

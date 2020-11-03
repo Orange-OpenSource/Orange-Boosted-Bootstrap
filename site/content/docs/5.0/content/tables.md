@@ -106,7 +106,7 @@ Highlight a table row or cell by adding a `.table-active` class.
   </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table">
   <thead>
     ...
@@ -125,7 +125,7 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <table class="table table-dark">
@@ -159,7 +159,7 @@ Highlight a table row or cell by adding a `.table-active` class.
   </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-dark">
   <thead>
     ...
@@ -178,7 +178,7 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 ## How do the variants and accented tables work?
 
@@ -241,7 +241,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-sm table-dark">
   <div class="table-responsive">
     <table class="table align-middle">
@@ -267,7 +267,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
     </table>
   </div>
 </table>
-{{< /highlight >}}
+```
 
 ## Nesting
 
@@ -330,7 +330,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-sm">
   <thead>
     ...
@@ -347,7 +347,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
     ...
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 ## How nesting works
 
@@ -505,13 +505,13 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
   </div>
 {{< /example >}}
 
-{{< highlight html >}}
+```html
 <div class="table-responsive">
   <table class="table">
     ...
   </table>
 </div>
-{{< /highlight >}}
+```
 
 ### Breakpoint specific
 

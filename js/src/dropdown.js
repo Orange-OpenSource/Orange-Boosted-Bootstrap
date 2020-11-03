@@ -7,6 +7,7 @@
 
 import {
   getjQuery,
+  onDOMContentLoaded,
   getElementFromSelector,
   isElement,
   isVisible,
@@ -197,8 +198,8 @@ class Dropdown {
     this._element.focus()
     this._element.setAttribute('aria-expanded', true)
 
-    Manipulator.toggleClass(this._menu, CLASS_NAME_SHOW)
-    Manipulator.toggleClass(this._element, CLASS_NAME_SHOW)
+    this._menu.classList.toggle(CLASS_NAME_SHOW)
+    this._element.classList.toggle(CLASS_NAME_SHOW)
     EventHandler.trigger(parent, EVENT_SHOWN, relatedTarget)
   }
 
@@ -222,8 +223,8 @@ class Dropdown {
       this._popper.destroy()
     }
 
-    Manipulator.toggleClass(this._menu, CLASS_NAME_SHOW)
-    Manipulator.toggleClass(this._element, CLASS_NAME_SHOW)
+    this._menu.classList.toggle(CLASS_NAME_SHOW)
+    this._element.classList.toggle(CLASS_NAME_SHOW)
     EventHandler.trigger(parent, EVENT_HIDDEN, relatedTarget)
   }
 
@@ -512,23 +513,25 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
 })
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_FORM_CHILD, e => e.stopPropagation())
 
-const $ = getjQuery()
-
 /**
  * ------------------------------------------------------------------------
  * jQuery
  * ------------------------------------------------------------------------
- * add .dropdown to jQuery only if jQuery is present
+ * add .Dropdown to jQuery only if jQuery is present
  */
-/* istanbul ignore if */
-if ($) {
-  const JQUERY_NO_CONFLICT = $.fn[NAME]
-  $.fn[NAME] = Dropdown.jQueryInterface
-  $.fn[NAME].Constructor = Dropdown
-  $.fn[NAME].noConflict = () => {
-    $.fn[NAME] = JQUERY_NO_CONFLICT
-    return Dropdown.jQueryInterface
+
+onDOMContentLoaded(() => {
+  const $ = getjQuery()
+  /* istanbul ignore if */
+  if ($) {
+    const JQUERY_NO_CONFLICT = $.fn[NAME]
+    $.fn[NAME] = Dropdown.jQueryInterface
+    $.fn[NAME].Constructor = Dropdown
+    $.fn[NAME].noConflict = () => {
+      $.fn[NAME] = JQUERY_NO_CONFLICT
+      return Dropdown.jQueryInterface
+    }
   }
-}
+})
 
 export default Dropdown

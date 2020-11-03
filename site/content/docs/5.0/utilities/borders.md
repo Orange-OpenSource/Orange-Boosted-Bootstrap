@@ -43,7 +43,7 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-white"></span>
 {{< /example >}}
 
-### Border-width
+## Border-width
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>

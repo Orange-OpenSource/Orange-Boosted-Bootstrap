@@ -427,7 +427,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
     </thead>
     <tbody>
       <tr>
-        <th scope="row" class="font-weight-normal">Cell text</th>
+        <th scope="row" class="fw-normal">Cell text</th>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" aria-labelledby="check1-1">
             <title id="check1-1">Yes</title>
@@ -448,7 +448,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
         </td>
       </tr>
       <tr>
-        <th scope="row" class="font-weight-normal">Cell text</th>
+        <th scope="row" class="fw-normal">Cell text</th>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" aria-labelledby="check2-1">
             <title id="check2-1">Yes</title>
@@ -469,7 +469,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
         </td>
       </tr>
       <tr>
-        <th scope="row" class="font-weight-normal">Cell text</th>
+        <th scope="row" class="fw-normal">Cell text</th>
         <td></td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" aria-labelledby="check3-1">
@@ -485,7 +485,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
         </td>
       </tr>
       <tr>
-        <th scope="row" class="font-weight-normal">Cell text</th>
+        <th scope="row" class="fw-normal">Cell text</th>
         <td></td>
         <td>
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" aria-labelledby="check4-1">
@@ -501,7 +501,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
         </td>
       </tr>
       <tr>
-        <th scope="row" class="font-weight-normal">Cell text</th>
+        <th scope="row" class="fw-normal">Cell text</th>
         <td></td>
         <td></td>
         <td>
@@ -512,7 +512,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
         </td>
       </tr>
       <tr>
-        <th scope="row" class="font-weight-normal">Cell text</th>
+        <th scope="row" class="fw-normal">Cell text</th>
         <td></td>
         <td></td>
         <td>

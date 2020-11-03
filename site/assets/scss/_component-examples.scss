@@ -288,6 +288,7 @@
     margin-top: 0; // Boosted mod
     margin-bottom: 0; // Boosted mod
     tab-size: 4; // Boosted mod
+    white-space: pre;
     background-color: transparent;
     border: 0;
   }
@@ -295,6 +296,7 @@
   pre code {
     @include font-size(inherit);
     color: $gray-800; // Effectively the base text color
+    word-wrap: normal;
     @include transition(color .15s ease-in);
   }
 

@@ -13,7 +13,7 @@ Boosted typography styles are heavily documented, including their **responsive b
   <thead>
     <tr>
       <th scope="col" colspan="3">Examples</th>
-      <th scope="col">Metrics <span class="text-muted font-weight-normal">(desktop)</span></th>
+      <th scope="col">Metrics <span class="text-muted fw-normal">(desktop)</span></th>
     </tr>
   </thead>
   <tbody class="align-bottom">
@@ -197,13 +197,13 @@ h5, .h5 {
     </tr>
     <tr>
       <td>
-        <span class="h6 font-weight-normal">Body 4</span>
+        <span class="h6 fw-normal">Body 4</span>
       </td>
       <td>
-        <span class="h6 font-weight-normal text-primary">Body 4</span>
+        <span class="h6 fw-normal text-primary">Body 4</span>
       </td>
       <td>
-        <span class="h6 font-weight-normal text-muted">Body 4</span>
+        <span class="h6 fw-normal text-muted">Body 4</span>
       </td>
       <td>
 {{< highlight css >}}
@@ -217,13 +217,13 @@ body {
     </tr>
     <tr>
       <td>
-        <span class="font-weight-bold bs-text-standard">Standard</span>
+        <span class="fw-bold bs-text-standard">Standard</span>
       </td>
       <td>
-        <span class="font-weight-bold text-primary bs-text-standard">Standard</span>
+        <span class="fw-bold text-primary bs-text-standard">Standard</span>
       </td>
       <td>
-        <span class="font-weight-bold text-muted bs-text-standard">Standard</span>
+        <span class="fw-bold text-muted bs-text-standard">Standard</span>
       </td>
       <td>
 {{< highlight css >}}
@@ -237,13 +237,13 @@ h6, .h6, strong {
     </tr>
     <tr>
       <td>
-        <small class="font-weight-bold">Small</small>
+        <small class="fw-bold">Small</small>
       </td>
       <td>
-        <small class="font-weight-bold text-primary">Small</small>
+        <small class="fw-bold text-primary">Small</small>
       </td>
       <td>
-        <small class="font-weight-bold text-muted">Small</small>
+        <small class="fw-bold text-muted">Small</small>
       </td>
       <td>
 {{< highlight css >}}

@@ -50,12 +50,11 @@
 
   &:checked {
     background-color: $form-check-input-checked-bg-color;
-    background-size: add(map-get($spacers, 2), map-get($spacers, 1)); // Boosted mod
     border-color: $form-check-input-checked-border-color;
 
     &[type="checkbox"] {
       @if $enable-gradients {
-        background-image: escape-svg($form-check-input-checked-bg-image), var(--bs-gradient);
+        background-image: escape-svg($form-check-input-checked-bg-image), var(--#{$variable-prefix}gradient);
       } @else {
         background-image: escape-svg($form-check-input-checked-bg-image);
       }
@@ -63,11 +62,9 @@
 
     &[type="radio"] {
       @if $enable-gradients {
-        background-image: escape-svg($form-check-radio-checked-bg-image), var(--bs-gradient);
-        background-size: 1em, auto; // Boosted mod
+        background-image: escape-svg($form-check-radio-checked-bg-image), var(--#{$variable-prefix}gradient);
       } @else {
         background-image: escape-svg($form-check-radio-checked-bg-image);
-        background-size: 1em; // Boosted mod
       }
     }
   }
@@ -77,7 +74,7 @@
     border-color: $form-check-input-indeterminate-border-color;
 
     @if $enable-gradients {
-      background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--bs-gradient);
+      background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$variable-prefix}gradient);
       background-position: 50% add(50%, $border-width / 4), center; // Boosted mod
       background-size: map-get($spacers, 2) $border-width * 1.5, auto; // Boosted mod
     } @else {
@@ -90,6 +87,8 @@
   &:disabled {
     pointer-events: none;
     background-color: $input-disabled-bg; // Boosted mod
+    filter: none;
+    opacity: $form-check-input-disabled-opacity;
 
     // Boosted mod
     &:checked {
@@ -98,7 +97,7 @@
 
       &[type="checkbox"] {
         @if $enable-gradients {
-          background-image: escape-svg($form-check-input-disabled-bg-image), var(--bs-gradient);
+          background-image: escape-svg($form-check-input-disabled-bg-image), var(--#{$variable-prefix}gradient);
         } @else {
           background-image: escape-svg($form-check-input-disabled-bg-image);
         }
@@ -106,7 +105,7 @@
 
       &[type="radio"] {
         @if $enable-gradients {
-          background-image: escape-svg($form-check-radio-disabled-bg-image), var(--bs-gradient);
+          background-image: escape-svg($form-check-radio-disabled-bg-image), var(--#{$variable-prefix}gradient);
         } @else {
           background-image: escape-svg($form-check-radio-disabled-bg-image);
         }
@@ -121,6 +120,7 @@
   &:disabled {
     ~ .form-check-label {
       color: $input-disabled-color; // Boosted mod
+      opacity: $form-check-label-disabled-opacity;
     }
   }
 
@@ -167,7 +167,7 @@
       border-color: $primary;
 
       @if $enable-gradients {
-        background-image: escape-svg($form-switch-checked-bg-image), var(--bs-gradient), var(--o-switch-gradient);
+        background-image: escape-svg($form-switch-checked-bg-image), var(--#{$variable-prefix}gradient), var(--o-switch-gradient);
         background-position: $form-switch-checked-bg-position, 100%, 100% 0;
         background-size: $form-switch-checked-bg-size, auto, $form-switch-bg-square-size;
       } @else {
@@ -198,7 +198,7 @@
       // Boosted mod
       &:checked {
         @if $enable-gradients {
-          background-image: escape-svg($form-switch-disabled-bg-image), var(--bs-gradient), var(--o-switch-gradient);
+          background-image: escape-svg($form-switch-disabled-bg-image), var(--#{$variable-prefix}gradient), var(--o-switch-gradient);
         } @else {
           background-image: escape-svg($form-switch-disabled-bg-image), var(--o-switch-gradient);
         }
@@ -252,19 +252,23 @@
     z-index: 0;
   }
 
-  &[data-focus-visible-added] + .btn {
-    outline: $outline-width solid;
-    outline-offset: $outline-width;
-    box-shadow: $btn-focus-box-shadow;
+  &[data-focus-visible-added] {
+    + .btn {
+      outline: $outline-width solid;
+      outline-offset: $outline-width;
+      box-shadow: $btn-focus-box-shadow;
+    }
   }
 
-  &:checked + .btn {
-    color: $white;
-    background-color: $black;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $black;
-    outline-color: $black;
+  &:checked {
+    + .btn {
+      color: $white;
+      background-color: $black;
+      // Remove CSS gradients if they're enabled
+      background-image: if($enable-gradients, none, null);
+      border-color: $black;
+      outline-color: $black;
+    }
   }
 
   &:active + .btn,
@@ -277,14 +281,19 @@
     border-color: $primary;
     outline-color: $primary;
   }
-
-  &:disabled + .btn,
-  &.disabled + .btn {
-    color: $gray-500;
-    background-color: $white;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $gray-500;
-  }
   // End mod
+
+  &[disabled],
+  &:disabled {
+    + .btn {
+      color: $gray-500; // Boosted mod
+      pointer-events: none;
+      background-color: $white; // Boosted mod
+      // Remove CSS gradients if they're enabled
+      background-image: if($enable-gradients, none, null); // Boosted mod
+      filter: none;
+      border-color: $gray-500; // Boosted mod
+      opacity: $form-check-btn-check-disabled-opacity;
+    }
+  }
 }

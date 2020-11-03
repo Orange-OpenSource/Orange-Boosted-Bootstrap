@@ -12,7 +12,7 @@ Boosted sets basic global display, typography, and link styles. When more contro
 
 - Use **Helvetica Neue**, with Helvetica and Arial as preferred fallback.
 - Then a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
-- For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
+- For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
 - Use the `$font-family-base`, `$font-size-base`, `$line-height-base` and `$letter-spacing-base` attributes as our typographic base applied to the `<body>`.
 - Set the global link color via `$link-color` and apply link underlines only on `:hover`.
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
@@ -102,14 +102,14 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 </table>
 <!-- End mod -->
 
-{{< highlight html >}}
+```html
 <h1>h1. Boosted heading</h1>
 <h2>h2. Boosted heading</h2>
 <h3>h3. Boosted heading</h3>
 <h4>h4. Boosted heading</h4>
 <h5>h5. Boosted heading</h5>
 <h6>h6. Boosted heading</h6>
-{{< /highlight >}}
+```
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 

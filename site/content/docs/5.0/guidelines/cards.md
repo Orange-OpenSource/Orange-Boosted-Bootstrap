@@ -83,7 +83,7 @@ Card sizes only rely on `width` for now, as explained in [cards documentation]({
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body bg-dark text-white">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@ Card sizes only rely on `width` for now, as explained in [cards documentation]({
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body bg-dark text-white">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
       <div class="card-footer bg-dark text-light">
         <p class="card-text">Meta data</p>
@@ -111,7 +111,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body bg-dark text-white">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
       <div class="card-footer bg-dark text-white pt-2">
         <a class="btn btn-dark border-white">Button</a>
@@ -149,7 +149,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
       <div class="card-footer">
         <p class="card-text">Meta data</p>
@@ -175,7 +175,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
       <div class="card-footer pt-2">
         <a class="btn btn-secondary">Button</a>
@@ -213,7 +213,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body px-0">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
     </div>
   </div>
@@ -222,7 +222,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body px-0">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
       <div class="card-footer px-0">
         <p class="card-text">Meta data</p>
@@ -239,7 +239,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
       <div class="card-body px-0">
         <h5 class="card-title">Title</h5>
-        <p class="card-text font-weight-bold">Caption</p>
+        <p class="card-text fw-bold">Caption</p>
       </div>
       <div class="card-footer px-0 pt-2">
         <a class="btn btn-secondary">Button</a>

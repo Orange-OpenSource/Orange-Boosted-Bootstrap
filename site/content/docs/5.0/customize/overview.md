@@ -27,7 +27,7 @@ There are multiple ways to customize Boosted. Your best path can depend on your 
 Our two preferred methods are:
 
 1. Using Boosted [via package manager]({{< docsref "/getting-started/download#package-managers" >}}) so you can use and extend our source files.
-2. Using Boosted's compiled distribution files or the [CDN]({{< docsref "/getting-started/download#boosted-cdn" >}}) so you can add onto or override Boosted's styles.
+2. Using Boosted's compiled distribution files or [jsDelivr]({{< docsref "/getting-started/download#cdn-via-jsdelivr" >}}) so you can add onto or override Boosted's styles.
 
 While we cannot go into details here on how to use every package manager, we can give some guidance on [using Boosted with your own Sass compiler]({{< docsref "/customize/sass" >}}).
 

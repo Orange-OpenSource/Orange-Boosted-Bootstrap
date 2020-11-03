@@ -117,10 +117,10 @@ Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-to
 
 You can create a button instance with the button constructor, for example:
 
-{{< highlight js >}}
+```js
 var button = document.getElementById('myButton')
 var bsButton = new boosted.Button(button)
-{{< /highlight >}}
+```
 
 <table class="table">
   <thead>
@@ -143,7 +143,7 @@ var bsButton = new boosted.Button(button)
         <code>dispose</code>
       </td>
       <td>
-        Destroys an element's button.
+        Destroys an element's button. (Removes stored data on the DOM element)
       </td>
     </tr>
   </tbody>
@@ -151,10 +151,10 @@ var bsButton = new boosted.Button(button)
 
 For example, to toggle all buttons
 
-{{< highlight js >}}
+```js
 var buttons = document.querySelectorAll('.btn')
 buttons.forEach(function (button) {
   var button = new boosted.Button(button)
   button.toggle()
 })
-{{< /highlight >}}
+```

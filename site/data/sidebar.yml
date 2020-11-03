@@ -45,7 +45,6 @@
     - title: Form control
     - title: Select
     - title: Checks & radios
-    - title: File
     - title: Range
     - title: Input group
     - title: Layout
@@ -65,7 +64,7 @@
     - title: Dropdowns
     - title: List group
     - title: Modal
-    - title: Navs
+    - title: Navs & tabs
     - title: Navbar
     - title: Pagination
     - title: Popovers

@@ -16,7 +16,7 @@ $utilities: map-merge(
     ),
     "overflow": (
       property: overflow,
-      values: auto hidden,
+      values: auto hidden visible scroll,
     ),
     "display": (
       responsive: true,
@@ -24,6 +24,16 @@ $utilities: map-merge(
       property: display,
       class: d,
       values: inline inline-block block table table-row table-cell flex inline-flex none
+    ),
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      values: (
+        null: $box-shadow,
+        sm: $box-shadow-sm,
+        lg: $box-shadow-lg,
+        none: none,
+      )
     ),
     "position": (
       property: position,
@@ -384,11 +394,21 @@ $utilities: map-merge(
       values: $spacers
     ),
     // Text
+    "font-size": (
+      property: font-size,
+      class: fs,
+      values: $font-sizes
+    ),
+    // Boosted mod: no font-style
     "font-weight": (
       property: font-weight,
+      class: fw,
       values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
         normal: $font-weight-normal,
-        bold: $font-weight-bold
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder
       )
     ),
     "text-transform": (
@@ -440,7 +460,7 @@ $utilities: map-merge(
     "gradient": (
       property: background-image,
       class: bg,
-      values: (gradient: var(--bs-gradient))
+      values: (gradient: var(--#{$variable-prefix}gradient))
     ),
     "white-space": (
       property: white-space,
@@ -454,11 +474,6 @@ $utilities: map-merge(
       property: text-decoration,
       values: none underline line-through
     ),
-    "font-style": (
-      property: font-style,
-      class: font,
-      values: italic normal
-    ),
     "word-wrap": (
       property: word-wrap word-break,
       class: text,
@@ -467,7 +482,7 @@ $utilities: map-merge(
     "font-family": (
       property: font-family,
       class: font,
-      values: (monospace: var(--bs-font-monospace))
+      values: (monospace: var(--#{$variable-prefix}font-monospace))
     ),
     "user-select": (
       property: user-select,
@@ -482,9 +497,34 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
         circle: 50%,
-        pill: $rounded-pill
+        pill: $border-radius-pill
       )
+    ),
+    "rounded-top": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: (null: $border-radius)
+    ),
+    "rounded-right": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-right,
+      values: (null: $border-radius)
+    ),
+    "rounded-bottom": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: (null: $border-radius)
+    ),
+    "rounded-left": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-left,
+      values: (null: $border-radius)
     ),
     "visibility": (
       property: visibility,

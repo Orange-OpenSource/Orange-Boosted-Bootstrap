@@ -105,23 +105,6 @@
         margin-left: .5em;
       }
     }
-
-    // custom file
-    .form-file-input {
-      @include form-validation-state-selector($state) {
-        ~ .form-file-label {
-          border-color: $color;
-        }
-
-        &:focus {
-          ~ .form-file-label {
-            // Boosted mod: focus styles don't match validation state
-
-            // Boosted mod: no box-shadow
-          }
-        }
-      }
-    }
   }
   // End mod
 }
