@@ -19,5 +19,5 @@ Please refer to our **Design guidelines** to learn about:
 {{< callout info >}}
 ## Bootstrap brand guidelines
 
-Boosted is based on [Bootstrap]({{ .Site.Params.bootstrap }}), which has [its own logo and brand usage guidelines]({{ .Site.Params.bootstrap }}/docs/{{< param current_version >}}/about/brand/).
+Boosted is based on [Bootstrap]({{< param bootstrap >}}), which has [its own logo and brand usage guidelines]({{< param bootstrap >}}/docs/{{< param current_version >}}/about/brand/).
 {{< /callout >}}
