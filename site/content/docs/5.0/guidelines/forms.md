@@ -188,11 +188,11 @@ This feature will be delivered with [#113]({{< param repo >}}/issues/113).
   <label class="form-check-label" for="form-radio-2">Checked</label>
 </div>
 <div class="form-check mb-2">
-  <input class="form-check-input" type="radio" name="demo" value="3" id="form-radio-3" disabled>
+  <input class="form-check-input" type="radio" name="demo-disabled" value="3" id="form-radio-3" disabled>
   <label class="form-check-label" for="form-radio-3">Disabled</label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="demo" value="4" id="form-radio-4" disabled checked>
+  <input class="form-check-input" type="radio" name="demo-disabled" value="4" id="form-radio-4" disabled checked>
   <label class="form-check-label" for="form-radio-4">Disabled checked</label>
 </div>
 

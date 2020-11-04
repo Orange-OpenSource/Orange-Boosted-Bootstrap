@@ -8,5 +8,5 @@ toc: true
 ---
 
 {{< callout info >}}
-The feature will be delivered with [#440]({{< param repo >}}/issues/440).
+The feature will be delivered with [#522]({{< param repo >}}/issues/522).
 {{< /callout >}}

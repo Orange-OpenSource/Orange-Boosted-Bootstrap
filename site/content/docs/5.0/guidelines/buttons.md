@@ -98,7 +98,7 @@ toc: true
 ## Icon buttons
 
 {{< callout info >}}
-This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+This feature will be delivered with [#521]({{< param repo >}}/issues/521).
 {{< /callout >}}
 
 ## Toggle Buttons
@@ -252,14 +252,14 @@ This feature will be delivered with [#182]({{< param repo >}}/issues/182).
   </div>
 </div>
 
-## Back top top
+## Back to top
 
 {{< callout info >}}
-This feature will be delivered with [#290]({{< param repo >}}/issues/290).
+This feature will be delivered with [#523]({{< param repo >}}/issues/523).
 {{< /callout >}}
 
 ## Social buttons
 
 {{< callout info >}}
-This feature will be delivered with [#290]({{< param repo >}}/issues/290).
+This feature will be delivered with [#521]({{< param repo >}}/issues/521).
 {{< /callout >}}
