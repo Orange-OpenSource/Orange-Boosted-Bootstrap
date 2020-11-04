@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - v5-dev
-    branches-ignore:
-      - "dependabot/**"
   pull_request:
     branches:
       - v5-dev
