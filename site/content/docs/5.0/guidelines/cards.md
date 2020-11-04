@@ -102,7 +102,7 @@ Card sizes only rely on `width` for now, as explained in [cards documentation]({
   </div>
   <div class="col">
 {{< callout info >}}
-The feature will be delivered with [#290]({{< param repo >}}/issues/290).
+The feature will be delivered with [#521]({{< param repo >}}/issues/521).
 {{< /callout >}}
   </div>
   <div class="col">
@@ -167,7 +167,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
   </div>
   <div class="col">
 {{< callout info >}}
-The feature will be delivered with [#290]({{< param repo >}}/issues/290).
+The feature will be delivered with [#521]({{< param repo >}}/issues/521).
 {{< /callout >}}
   </div>
   <div class="col">
@@ -192,7 +192,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
   <div class="col">
     <div class="card border-0 p-0">
       {{< placeholder width="100%" height="150" class="card-img-top" text="Image cap" >}}
-      <div class="card-body">
+      <div class="card-body px-0">
         <h5 class="card-title">Title</h5>
       </div>
     </div>
@@ -231,7 +231,7 @@ The feature will be delivered with [#290]({{< param repo >}}/issues/290).
   </div>
   <div class="col">
 {{< callout info >}}
-The feature will be delivered with [#290]({{< param repo >}}/issues/290).
+The feature will be delivered with [#521]({{< param repo >}}/issues/521).
 {{< /callout >}}
   </div>
   <div class="col">

@@ -20,7 +20,7 @@ toc: true
     <h4 class="h6 m-0" id="web-nav-lnk-005">With chevrons</h4>
 
   {{< callout info >}}
-  This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+  This feature will be delivered with [#520]({{< param repo >}}/issues/520).
   {{< /callout >}}
   </div>
 </div>
@@ -214,5 +214,5 @@ toc: true
 ## Stepped process
 
 {{< callout info >}}
-This feature will be delivered with [#182]({{< param repo >}}/issues/182).
+This feature will be delivered with [#524]({{< param repo >}}/issues/524).
 {{< /callout >}}
