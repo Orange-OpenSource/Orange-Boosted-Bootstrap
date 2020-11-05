@@ -30,7 +30,7 @@ const SELECTOR_FIRST_ELEMENT = 'li:first'
 
 const MenuLabelDefault = 'More'
 
-function MenuTemplate(MenuLabel) {
+function menuTemplate(MenuLabel) {
   return `
   <li class="overflow-nav nav-item dropdown d-none">
       <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true">${MenuLabel}</a>
@@ -80,7 +80,7 @@ class PriorityNav {
     }
 
     // add menu template
-    this._$menu.append(MenuTemplate(MenuLabel))
+    this._$menu.append(menuTemplate(MenuLabel))
   }
 
   _setupMenu() {
