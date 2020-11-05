@@ -4,7 +4,6 @@
 /_gh_pages/
 /js/coverage/
 /site/sw.js
-/package.js
 **/docs/**/demo/*
 **/docs/**/rtl-*/**/
 **/docs/**/examples/orange-*
