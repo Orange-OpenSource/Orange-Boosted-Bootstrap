@@ -24,17 +24,17 @@ For instance, assuming you're using your own JavaScript bundler like Webpack or 
 ```js
 // Import just what we need
 
-// import 'bootstrap/js/dist/alert';
-// import 'bootstrap/js/dist/button';
-// import 'bootstrap/js/dist/carousel';
-// import 'bootstrap/js/dist/collapse';
-// import 'bootstrap/js/dist/dropdown';
-import 'bootstrap/js/dist/modal';
-// import 'bootstrap/js/dist/popover';
-// import 'bootstrap/js/dist/scrollspy';
-// import 'bootstrap/js/dist/tab';
-// import 'bootstrap/js/dist/toast';
-// import 'bootstrap/js/dist/tooltip';
+// import 'boosted/js/dist/alert';
+// import 'boosted/js/dist/button';
+// import 'boosted/js/dist/carousel';
+// import 'boosted/js/dist/collapse';
+// import 'boosted/js/dist/dropdown';
+import 'boosted/js/dist/modal';
+// import 'boosted/js/dist/popover';
+// import 'boosted/js/dist/scrollspy';
+// import 'boosted/js/dist/tab';
+// import 'boosted/js/dist/toast';
+// import 'boosted/js/dist/tooltip';
 ```
 
 This way, you're not including any JavaScript you don't intend to use for components like buttons, carousels, and tooltips. If you're importing dropdowns, tooltips or popovers, be sure to list the Popper.js dependency in your `package.json` file.
@@ -42,10 +42,10 @@ This way, you're not including any JavaScript you don't intend to use for compon
 {{< callout info >}}
 ### Default Exports
 
-Files in `bootstrap/js/dist` use the **default export**, so if you want to use one of them you have to do the following:
+Files in `boosted/js/dist` use the **default export**, so if you want to use one of them you have to do the following:
 
 ```js
-import Modal from 'bootstrap/js/dist/modal'
+import Modal from 'boosted/js/dist/modal'
 
 const modal = new Modal(document.getElementById('myModal'))
 ```
@@ -61,8 +61,8 @@ _Help wanted with this section, please consider opening a PR. Thanks!_
 
 While we don't have a prebuilt example for using [PurgeCSS](https://github.com/FullHuman/purgecss) with Boosted, there are some helpful articles and walkthroughs that the community has written. Here are some options:
 
-- <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772>
-- <https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/>
+- <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-boosted-using-purgecss-88395a2c5772>
+- <https://lukelowrey.com/automatically-removeunused-css-from-boosted-or-other-frameworks/>
 
 Lastly, this [CSS Tricks article on unused CSS](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) shows how to use PurgeCSS and other similar tools.
 

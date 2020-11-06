@@ -32,7 +32,7 @@ Many of our components require the use of JavaScript to function. Specifically, 
 
 #### Bundle
 
-Include everything you need in one script with our bundle. Our `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https://popper.js.org/). For more information about what's included in Bootstrap, please see our [contents]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) section.
+Include everything you need in one script with our bundle. Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/). For more information about what's included in Boosted, please see our [contents]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) section.
 
 ```html
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
