@@ -5,8 +5,6 @@ on:
       - 'js/**'
     branches:
       - v5-dev
-    branches-ignore:
-      - "dependabot/**"
   pull_request:
     paths:
       - 'js/**'
