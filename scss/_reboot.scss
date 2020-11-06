@@ -360,8 +360,6 @@ samp {
 // 1. Remove browser default top margin
 // 2. Reset browser default of `1em` to use `rem`s
 // 3. Don't allow content to break outside
-// 4. Disable auto-hiding scrollbar in legacy Edge to avoid overlap,
-//    making it impossible to interact with the content
 
 pre {
   display: block;
@@ -371,7 +369,6 @@ pre {
   @include font-size($code-font-size);
   line-height: $pre-line-height; // Boosted mod
   color: $pre-color;
-  -ms-overflow-style: scrollbar; // 4
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -511,13 +508,6 @@ textarea {
   box-shadow: none; // Boosted mod: prevent native validation styles to apply
 }
 
-// Show the overflow in Edge
-
-button,
-input {
-  overflow: visible;
-}
-
 // Remove the inheritance of text transform in Firefox
 
 button,
@@ -593,8 +583,7 @@ fieldset {
 
 // 1. By using `float: left`, the legend will behave like a block element.
 //    This way the border of a fieldset wraps around the legend if present.
-// 2. Correct the text wrapping in Edge.
-// 3. Fix wrapping bug.
+// 2. Fix wrapping bug.
 //    See https://github.com/twbs/bootstrap/issues/29712
 
 legend {
@@ -605,10 +594,9 @@ legend {
   @include font-size($legend-font-size);
   font-weight: $legend-font-weight;
   line-height: inherit;
-  white-space: normal; // 2
 
   + * {
-    clear: left; // 3
+    clear: left; // 2
   }
 }
 

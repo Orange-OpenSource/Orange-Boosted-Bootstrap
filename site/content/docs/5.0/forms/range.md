@@ -13,7 +13,7 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 {{< callout warning >}}
 ### Progressive enchancement
 
-Only Edge Legacy and Firefox support “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
+Only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress — so Edge, Chrome and Safari won’t show it, and [it's perfectly fine](https://alistapart.com/article/understandingprogressiveenhancement/).
 {{< /callout >}}
 
 {{< example >}}
