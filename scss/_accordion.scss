@@ -6,57 +6,52 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: add(100%, $accordion-button-padding-x * 2);
   padding: $accordion-button-padding-y $accordion-button-padding-x;
-  @include font-size($font-size-base);
+  margin: 0 -#{$accordion-button-padding-x}; // Boosted mod
+  @include font-size($accordion-button-font-size); // Boosted mod
+  font-weight: $accordion-button-font-weight; // Boosted mod
+  line-height: $accordion-button-line-height; // Boosted mod
   color: $accordion-button-color;
+  text-decoration: if($link-decoration == none, null, none); // Boosted mod
+  letter-spacing: $accordion-button-letter-spacing; // Boosted mod
   background-color: $accordion-button-bg;
-  border: $accordion-border-width solid $accordion-border-color;
+  border: 0; // Boosted mod: borders are set on .accordion-header
   @include border-radius(0);
   overflow-anchor: none;
   @include transition($accordion-transition);
 
-  &.collapsed {
-    border-bottom-width: 0;
-  }
+  // Boosted mod: borders are set on .accordion-header
 
   &:not(.collapsed) {
     color: $accordion-button-active-color;
     background-color: $accordion-button-active-bg;
 
     &::after {
-      background-image: escape-svg($accordion-button-active-icon);
+      // Boosted mod: use caret
       transform: $accordion-icon-transform;
     }
   }
 
   // Accordion icon
-  &::after {
-    flex-shrink: 0;
-    width: $accordion-icon-width;
-    height: $accordion-icon-width;
-    margin-left: auto;
-    content: "";
-    background-image: escape-svg($accordion-button-icon);
-    background-repeat: no-repeat;
-    background-size: $accordion-icon-width;
-    @include transition($accordion-icon-transition);
-  }
+  @include caret($accordion: true); // Boosted mod: use caret
 
   &:hover {
     z-index: 2;
+    color: $accordion-button-active-color; // Boosted mod
   }
 
   &:focus {
     z-index: 3;
-    border-color: $accordion-button-focus-border-color;
-    outline: 0;
-    box-shadow: $accordion-button-focus-box-shadow;
+    color: $accordion-button-active-color; // Boosted mod
+    outline-offset: -$accordion-border-width; // Boosted mod
   }
 }
 
 .accordion-header {
   margin-bottom: 0;
+  border: $accordion-border-width solid $accordion-border-color; // Boosted mod
+  border-width: $accordion-border-width 0 0; // Boosted mod
 }
 
 .accordion-item {
@@ -67,59 +62,48 @@
   }
 
   &:last-of-type {
+    border-bottom: $accordion-border-width solid $accordion-border-color; // Boosted mod: borders are set on .accordion-header
+
     .accordion-button {
       // Only set a border-radius on the last item if the accordion is collapsed
       &.collapsed {
-        border-bottom-width: $accordion-border-width;
+        // Boosted mod: borders are set on .accordion-header
         @include border-bottom-radius($accordion-border-radius);
       }
     }
 
     .accordion-collapse {
-      border-bottom-width: $accordion-border-width;
+      // Boosted mod: borders are set on .accordion-header
       @include border-bottom-radius($accordion-border-radius);
     }
   }
 }
 
-.accordion-collapse {
-  border: solid $accordion-border-color;
-  border-width: 0 $accordion-border-width;
-}
+// Boosted mod: no borders for .accordion-collapse
 
 .accordion-body {
-  padding: $accordion-body-padding-y $accordion-body-padding-x;
+  padding: 0 $accordion-body-padding-x $accordion-body-padding-y 0; // Boosted mod
 }
 
 
-// Flush accordion items
+// Boosted mod: no .accordion-flush
+
 //
-// Remove borders and border-radius to keep accordion items edge-to-edge.
+// Boosted mod: accordion sizes
+//
 
-.accordion-flush {
+.accordion-sm {
   .accordion-button {
-    border-right: 0;
-    border-left: 0;
-    @include border-radius(0);
+    @include font-size($accordion-button-font-size-sm);
+    line-height: $accordion-button-line-height-sm;
+    letter-spacing: $accordion-button-letter-spacing-sm;
   }
+}
 
-  .accordion-collapse {
-    border-width: 0;
-  }
-
-  .accordion-item {
-    &:first-of-type {
-      .accordion-button {
-        border-top-width: 0;
-        @include border-top-radius(0);
-      }
-    }
-
-    &:last-of-type {
-      .accordion-button.collapsed {
-        border-bottom-width: 0;
-        @include border-bottom-radius(0);
-      }
-    }
+.accordion-lg {
+  .accordion-button {
+    @include font-size($accordion-button-font-size-lg);
+    line-height: $accordion-button-line-height-lg;
+    letter-spacing: $accordion-button-letter-spacing-lg;
   }
 }

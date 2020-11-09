@@ -84,127 +84,127 @@ toc: true
 
 ## Accordion
 
-[Documentation]({{< docsref "/components/navs-tabs" >}}#tabs)
+[Documentation]({{< docsref "/components/accordion" >}})
 <div class="row gy-3 row-cols-1 row-cols-lg-3">
   <div class="col">
     <h3 class="h6">Small — {{< anchor web-nav-acc-001 >}}</h3>
-    <div class="accordion" id="accordionExample-3">
-      <div class="card">
-        <div class="card-header" id="headingOne-3">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseOne-3" aria-expanded="false" aria-controls="collapseOne-3">Title</button>
-          </h2>
+    <div class="accordion accordion-sm" id="accordionExampleSmall">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOneSmall">
+              <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOneSmall" aria-expanded="false" aria-controls="collapseOneSmall">
+                Title
+              </button>
+            </h2>
+            <div id="collapseOneSmall" class="accordion-collapse collapse" aria-labelledby="headingOneSmall" data-parent="#accordionExampleSmall">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwoSmall">
+              <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoSmall" aria-expanded="false" aria-controls="collapseTwoSmall">
+                Title
+              </button>
+            </h2>
+            <div id="collapseTwoSmall" class="accordion-collapse collapse" aria-labelledby="headingTwoSmall" data-parent="#accordionExampleSmall">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThreeSmall">
+              <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
+                Title
+              </button>
+            </h2>
+            <div id="collapseThreeSmall" class="accordion-collapse collapse show" aria-labelledby="headingThreeSmall" data-parent="#accordionExampleSmall">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="collapseOne-3" class="collapse" aria-labelledby="headingOne-3" data-parent="#accordionExample-3">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo-3">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-sm collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-3" aria-expanded="false" aria-controls="collapseTwo-3">Title</button>
-          </h2>
-        </div>
-        <div id="collapseTwo-3" class="collapse" aria-labelledby="headingTwo-3" data-parent="#accordionExample-3">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingThree-3">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-sm" type="button" data-toggle="collapse" data-target="#collapseThree-3" aria-expanded="true" aria-controls="collapseThree-3">Title</button>
-          </h2>
-        </div>
-        <div id="collapseThree-3" class="collapse show" aria-labelledby="headingThree-3" data-parent="#accordionExample-3">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="col">
     <h3 class="h6">Medium — {{< anchor web-nav-acc-002 >}}</h3>
     <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Title</button>
-          </h2>
-        </div>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Title</button>
-          </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </p>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Title
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Title</button>
-          </h2>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Title
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
-        <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+            Title
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="col">
     <h3 class="h6">Large — {{< anchor web-nav-acc-003 >}}</h3>
-    <div class="accordion" id="accordionExample-4">
-      <div class="card">
-        <div class="card-header" id="headingOne-4">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseOne-4" aria-expanded="false" aria-controls="collapseOne-4">Title</button>
+    <div class="accordion accordion-lg" id="accordionExampleLarge">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOneLarge">
+          <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOneLarge" aria-expanded="false" aria-controls="collapseOneLarge">
+            Title
+          </button>
         </h2>
-      </div>
-      <div id="collapseOne-4" class="collapse" aria-labelledby="headingOne-4" data-parent="#accordionExample-4">
-        <p class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </p>
-      </div>
-    </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo-4">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo-4" aria-expanded="false" aria-controls="collapseTwo-4">Title</button>
-          </h2>
-        </div>
-        <div id="collapseTwo-4" class="collapse" aria-labelledby="headingTwo-4" data-parent="#accordionExample-4">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </p>
+        <div id="collapseOneLarge" class="accordion-collapse collapse" aria-labelledby="headingOneLarge" data-parent="#accordionExampleLarge">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="headingThree-4">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-lg" type="button" data-toggle="collapse" data-target="#collapseThree-4" aria-expanded="true" aria-controls="collapseThree-4">Title</button>
-          </h2>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwoLarge">
+          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoLarge" aria-expanded="false" aria-controls="collapseTwoLarge">
+            Title
+          </button>
+        </h2>
+        <div id="collapseTwoLarge" class="accordion-collapse collapse" aria-labelledby="headingTwoLarge" data-parent="#accordionExampleLarge">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
-        <div id="collapseThree-4" class="collapse show" aria-labelledby="headingThree-4" data-parent="#accordionExample-4">
-          <p class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </p>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThreeLarge">
+          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeLarge" aria-expanded="true" aria-controls="collapseThreeLarge">
+            Title
+          </button>
+        </h2>
+        <div id="collapseThreeLarge" class="accordion-collapse collapse show" aria-labelledby="headingThreeLarge" data-parent="#accordionExampleLarge">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
         </div>
       </div>
     </div>
