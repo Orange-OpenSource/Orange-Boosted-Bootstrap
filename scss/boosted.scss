@@ -12,7 +12,6 @@
 
 // scss-docs-start import-stack
 // Configuration
-
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -20,7 +19,6 @@
 
 
 // Layout & components
-
 @import "root";
 @import "reboot";
 @import "type";
@@ -36,6 +34,7 @@
 @import "nav";
 @import "navbar";
 @import "card";
+@import "accordion";
 @import "breadcrumb";
 @import "pagination";
 @import "badge";
@@ -52,12 +51,10 @@
 
 
 // Helpers
-
 @import "helpers";
 
 
 // Utilities
-
 @import "utilities/api";
 
 // Boosted
