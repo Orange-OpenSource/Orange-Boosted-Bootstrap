@@ -66,7 +66,6 @@
       background-color: $nav-tabs-link-hover-border-color; // Boosted mod
       border-color: $nav-tabs-link-hover-border-color;
       outline-color: $nav-tabs-link-hover-border-color; // Boosted mod
-      // stylelint-disable-next-line function-disallowed-list
       outline-offset: var(--#{$variable-prefix}tabs-spacing); // Boosted mod
     }
 
