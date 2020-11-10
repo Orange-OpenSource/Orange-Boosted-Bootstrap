@@ -32,7 +32,7 @@ Many of our components require the use of JavaScript to function. Specifically, 
 
 #### Bundle
 
-Include everything you need in one script with our bundle. Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/). For more information about what's included in Boosted, please see our [contents]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) section.
+Include every Boosted JavaScript plugin and dependency with one of our two bundles. Both `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers. For more information about what's included in Boosted, please see our [contents]({{< docsref "/getting-started/contents#precompiled-boosted" >}}) section.
 
 ```html
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
@@ -40,7 +40,7 @@ Include everything you need in one script with our bundle. Our `boosted.bundle.j
 
 #### Separate
 
-If you decide to go with the separate scripts solution, Popper.js must come first, and then our JavaScript plugins.
+If you decide to go with the separate scripts solution, Popper.js must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
 
 ```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
