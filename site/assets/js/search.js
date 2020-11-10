@@ -5,11 +5,12 @@
 (function () {
   'use strict'
 
-  if (!window.docsearch) {
+  var inputElement = document.getElementById('search-input')
+
+  if (!window.docsearch || !inputElement) {
     return
   }
 
-  var inputElement = document.getElementById('search-input')
   var siteDocsVersion = inputElement.getAttribute('data-docs-version')
 
   document.addEventListener('keydown', function (event) {
@@ -42,7 +43,7 @@
     transformData: function (hits) {
       return hits.map(function (hit) {
         var currentUrl = getOrigin()
-        var liveUrl = 'https://boosted.orange.com/'
+        var liveUrl = 'https://v5-dev--boosted.netlify.app/'
 
         hit.url = currentUrl.lastIndexOf(liveUrl, 0) === 0 ?
           // On production, return the result as is
