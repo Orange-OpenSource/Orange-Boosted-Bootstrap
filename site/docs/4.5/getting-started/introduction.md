@@ -36,7 +36,7 @@ Place **one of the following `<script>`s** near the end of your pages, right bef
 
 #### Bundle
 
-Include everything you need in one script with our bundle. Our `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/). For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
+Include every Boosted JavaScript plugin with one of our two bundles. Both `boosted.bundle.js` and `boosted.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers, but not [jQuery](https://jquery.com/). Include jQuery first, then a Boosted JavaScript bundle. For more information about what's included in Boosted, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-boosted) section.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -45,7 +45,7 @@ Include everything you need in one script with our bundle. Our `boosted.bundle.j
 
 #### Separate
 
-If you decide to go with the separate scripts solution, Popper.js must come first, and then our JavaScript plugins.
+If you decide to go with the separate scripts solution, Popper.js must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@ If you decide to go with the separate scripts solution, Popper.js must come firs
 
 #### Components
 
-Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're unsure about the general page structure, keep reading for an example page template.
+Curious which components explicitly require jQuery, our JavaScript, and Popper.js? Click the show components link below. If you're unsure about the page structure, keep reading for an example page template.
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
