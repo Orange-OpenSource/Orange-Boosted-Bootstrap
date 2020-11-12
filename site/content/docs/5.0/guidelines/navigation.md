@@ -91,7 +91,7 @@ toc: true
     <div class="accordion accordion-sm" id="accordionExampleSmall">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOneSmall">
-              <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOneSmall" aria-expanded="false" aria-controls="collapseOneSmall">
+              <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseOneSmall" aria-expanded="false" aria-controls="collapseOneSmall">
                 Title
               </button>
             </h2>
@@ -115,7 +115,7 @@ toc: true
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingThreeSmall">
-              <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
+              <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
                 Title
               </button>
             </h2>
@@ -132,7 +132,7 @@ toc: true
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
             Title
           </button>
         </h2>
@@ -156,7 +156,7 @@ toc: true
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
             Title
           </button>
         </h2>
@@ -173,7 +173,7 @@ toc: true
     <div class="accordion accordion-lg" id="accordionExampleLarge">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOneLarge">
-          <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOneLarge" aria-expanded="false" aria-controls="collapseOneLarge">
+          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseOneLarge" aria-expanded="false" aria-controls="collapseOneLarge">
             Title
           </button>
         </h2>
@@ -197,7 +197,7 @@ toc: true
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThreeLarge">
-          <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeLarge" aria-expanded="true" aria-controls="collapseThreeLarge">
+          <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseThreeLarge" aria-expanded="true" aria-controls="collapseThreeLarge">
             Title
           </button>
         </h2>
