@@ -21,7 +21,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-alpha2): util/index.js
+   * Bootstrap (v5.0.0-alpha3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -37,6 +37,14 @@
     return null;
   };
 
+  var onDOMContentLoaded = function onDOMContentLoaded(callback) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', callback);
+    } else {
+      callback();
+    }
+  };
+
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -47,7 +55,7 @@
    */
 
   var NAME = 'button';
-  var VERSION = '5.0.0-alpha2';
+  var VERSION = '5.0.0-alpha3';
   var DATA_KEY = 'bs.button';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -126,26 +134,28 @@
 
     data.toggle();
   });
-  var $ = getjQuery();
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
-   * add .button to jQuery only if jQuery is present
+   * add .Button to jQuery only if jQuery is present
    */
 
-  /* istanbul ignore if */
+  onDOMContentLoaded(function () {
+    var $ = getjQuery();
+    /* istanbul ignore if */
 
-  if ($) {
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    $.fn[NAME] = Button.jQueryInterface;
-    $.fn[NAME].Constructor = Button;
+    if ($) {
+      var JQUERY_NO_CONFLICT = $.fn[NAME];
+      $.fn[NAME] = Button.jQueryInterface;
+      $.fn[NAME].Constructor = Button;
 
-    $.fn[NAME].noConflict = function () {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Button.jQueryInterface;
-    };
-  }
+      $.fn[NAME].noConflict = function () {
+        $.fn[NAME] = JQUERY_NO_CONFLICT;
+        return Button.jQueryInterface;
+      };
+    }
+  });
 
   return Button;
 

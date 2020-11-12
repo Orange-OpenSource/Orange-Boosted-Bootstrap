@@ -34,7 +34,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-alpha2): dom/event-handler.js
+   * Bootstrap (v5.0.0-alpha3): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -44,7 +44,6 @@
    * ------------------------------------------------------------------------
    */
 
-  var $ = getjQuery();
   var namespaceRegex = /[^.]*(?=\..*)\.|.*/;
   var stripNameRegex = /\..*/;
   var stripUidRegex = /::\d+$/;
@@ -253,6 +252,7 @@
         return null;
       }
 
+      var $ = getjQuery();
       var typeEvent = event.replace(stripNameRegex, '');
       var inNamespace = event !== typeEvent;
       var isNative = nativeEvents.indexOf(typeEvent) > -1;
@@ -293,14 +293,6 @@
 
       if (defaultPrevented) {
         evt.preventDefault();
-
-        if (!polyfill_js.defaultPreventedPreservedOnDispatch) {
-          Object.defineProperty(evt, 'defaultPrevented', {
-            get: function get() {
-              return true;
-            }
-          });
-        }
       }
 
       if (nativeDispatch) {
