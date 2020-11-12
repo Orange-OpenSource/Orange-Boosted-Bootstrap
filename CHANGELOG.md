@@ -1,8 +1,29 @@
+<a name="5.0.0-alpha3"></a>
+# [5.0.0-alpha3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha2...v5.0.0-alpha3) (2020-11-12)
+
+
+## Bug Fixes
+
+* **forms:** ensure .form-check-input is squared in Chromium-based browsers ([010c909](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/010c9097fc7026532e4086cb28738027a32954fb))
+
+
+## Features
+
+* **accordion:** Orange branded :tada: ([69a97d9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/69a97d9d580eb488ed4c889d2bc03e5407591bd1))
+
+
+## Docs
+
+* **icons:** drop content to only mention Solaris ([90af24b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/90af24b212ddd2291d88cba43e2c47797df578d4))
+* **analytics:** massive refactor of our Tarteaucitron implementation ([#531](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/531), [#532](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/532), [#534](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/534), [#535](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/535))
+* **skip links:** use a `nav` tag with `aria-label` ([3ea50d0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3ea50d0528d49076dc623e7d20c57f4d0aa0e353))
+
+
 <a name="5.0.0-alpha2"></a>
 # [5.0.0-alpha2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha1...v5.0.0-alpha2) (2020-09-30)
 
 
-### Bug Fixes
+## Bug Fixes
 
 * **alerts:** ensure icon is properly sized ([d10ed1a](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d10ed1acc8757179c7603fc10b4c6b6b02c92b8e))
 * **cards:** `.card-footer`'s bottom padding ([7054f27](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7054f273cf5d74f5a36771dca9152cb1f15a8100))
@@ -19,7 +40,7 @@
 * **utilities:** drop color exception in color utilities ([acfc5e9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/acfc5e93480db4a469b2640db8b4df3c933ec085))
 
 
-### Features
+## Features
 
 * **pagination:** add default vertical margins to pagination ([c37b86f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c37b86f2691b2c8c84c6c66bcb5e6113332a2225))
 * **reboot:** handle `<var>` styles in reboot ([ba62352](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ba623525e3be6d4867b8ad6c145e5b2801a5ea02))

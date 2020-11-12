@@ -42,7 +42,7 @@ toc: true
 - Added `.d-grid` to display utilities
 - Added new `gap` utilities (`.gap`) for CSS Grid layouts
 
-## v5.0.0-alpha2
+## v5.0.0-alpha3
 
 ### Sass
 
