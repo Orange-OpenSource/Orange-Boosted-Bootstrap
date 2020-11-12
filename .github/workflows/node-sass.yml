@@ -6,12 +6,13 @@ on:
       - 'scss/**'
     branches:
       - v5-dev
+      - "!dependabot/**"
   pull_request:
     paths:
       - 'scss/**'
     branches:
       - v5-dev
-
+      - "!dependabot/**"
 env:
   CI: true
   NODE: 14.x

@@ -5,11 +5,13 @@ on:
       - 'js/**'
     branches:
       - v5-dev
+      - "!dependabot/**"
   pull_request:
     paths:
       - 'js/**'
     branches:
       - v5-dev
+      - "!dependabot/**"
 env:
   CI: true
   NODE: 14.x
