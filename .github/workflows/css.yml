@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - v5-dev
+      - "!dependabot/**"
   pull_request:
     branches:
       - v5-dev
+      - "!dependabot/**"
 env:
   CI: true
   NODE: 14.x
