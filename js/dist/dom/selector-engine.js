@@ -38,14 +38,14 @@
         element = document.documentElement;
       }
 
-      return (_ref = []).concat.apply(_ref, polyfill_js.find.call(element, selector));
+      return (_ref = []).concat.apply(_ref, Element.prototype.querySelectorAll.call(element, selector));
     },
     findOne: function findOne(selector, element) {
       if (element === void 0) {
         element = document.documentElement;
       }
 
-      return polyfill_js.findOne.call(element, selector);
+      return Element.prototype.querySelector.call(element, selector);
     },
     children: function children(element, selector) {
       var _ref2;
