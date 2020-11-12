@@ -5,7 +5,6 @@
   font-display: swap;
   src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2");
 }
-
 @font-face {
   font-family: HelvNeueOrange;
   font-style: normal;
@@ -13,4 +12,5 @@
   font-display: swap;
   src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2");
 }
+
 /*# sourceMappingURL=orange-helvetica.css.map */
