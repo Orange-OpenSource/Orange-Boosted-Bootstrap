@@ -155,7 +155,7 @@
     "rtlcss": "^2.4.0",
     "shelljs": "^0.8.4",
     "shx": "^0.3.3",
-    "sinon": "^7.5.0",
+    "sinon": "^9.2.1",
     "stylelint": "^13.7.2",
     "stylelint-config-twbs-bootstrap": "^2.1.0",
     "swiper": "^4.5.1",
