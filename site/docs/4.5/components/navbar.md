@@ -322,6 +322,13 @@ Mix and match with other components and utilities as needed.
 
 Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors.<!-- Boosted mod Then, customize with `.bg-*` utilities. -->
 
+{% capture callout %}
+### Deprecation notice
+
+`.navbar-light` will be absent in the next major release (v5).
+{% endcapture %}
+{% include callout.html content=callout type='warning' %}
+
 <div class="bd-example">
   <nav role="navigation" class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">Navbar</a>
