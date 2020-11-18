@@ -369,7 +369,7 @@
   height: $navbar-supra-icon-size; // Boosted mod: create a var for the toggler size
   vertical-align: middle;
   content: "";
-  background: no-repeat 50% 50% / 100% 100%;
+  background: 50% / 100% 100% no-repeat;
 
   // Boosted mod
   @include media-breakpoint-up(sm) {

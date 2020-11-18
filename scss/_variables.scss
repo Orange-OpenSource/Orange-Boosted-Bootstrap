@@ -681,11 +681,11 @@ $custom-select-disabled-bg:         $gray-300 !default;
 $custom-select-bg-size:             .875rem 1rem !default; // Boosted mod: using SVG
 // $custom-select-indicator-color:     null !default; // Boosted mod
 $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
-$custom-select-background:          escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x top add(50%, 1px) / #{$custom-select-bg-size} !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+$custom-select-background:          escape-svg($custom-select-indicator) right $custom-select-padding-x top add(50%, 1px) / #{$custom-select-bg-size} no-repeat !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
-$custom-select-feedback-icon-position:      center right map-get($spacers, 4) !default;
-$custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
+//$custom-select-feedback-icon-position:      center right map-get($spacers, 4) !default; // Boosted mod
+//$custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default; // Boosted mod
 
 $custom-select-border-width:        $input-border-width !default;
 $custom-select-border-color:        $input-border-color !default;

@@ -20,8 +20,6 @@
       @include box-shadow($input-box-shadow, $input-focus-box-shadow);
     } @else {
       // Boosted mod, remove box shadow!
-      // Avoid using mixin so we can pass custom focus shadow properly
-      // box-shadow: $input-focus-box-shadow;
     }
   }
   @include deprecate("The `form-control-focus()` mixin", "v4.4.0", "v5", $ignore-warning);
@@ -110,7 +108,7 @@
     @include form-validation-state-selector($state) {
       ~ .#{$state}-feedback,
       ~ .#{$state}-tooltip {
-        display: flex; // Boosted mod
+        display: flex;
       }
     }
 
@@ -118,17 +116,9 @@
       @include form-validation-state-selector($state) {
         border-color: $color;
 
-        // @if $enable-validation-icons {
-        //   padding-right: $input-height-inner;
-        //   background-image: escape-svg($icon);
-        //   background-repeat: no-repeat;
-        //   background-position: right $input-height-inner-quarter center;
-        //   background-size: $input-height-inner-half $input-height-inner-half;
-        // }
-
         &:focus {
           border-color: $input-focus-border-color;
-          // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
+          // Boosted mod, remove box shadow!
         }
       }
     }
@@ -155,14 +145,14 @@
 
       @if $enable-validation-icons {
         padding-right: $custom-select-feedback-icon-padding-right;
-        // background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size; // Boosted mod
+        // Boosted mod: no background
       }
 
       // Boosted mod
       @if $state != "valid" {
         &:focus {
           border-color: $input-focus-border-color;
-          // box-shadow: 0 0 0 $input-focus-width rgba($color, .25); // Boosted mod, remove box shadow!
+          // Boosted mod, remove box shadow!
         }
       }
       // end mod
@@ -172,10 +162,6 @@
   .form-check-input {
     @include form-validation-state-selector($state) {
       // Boosted mod: label color doesn't change
-      // ~ .form-check-label {
-      //  color: $color;
-      // }
-      // end mod
 
       ~ .#{$state}-feedback,
       ~ .#{$state}-tooltip {
@@ -189,7 +175,7 @@
   .custom-control-input {
     @include form-validation-state-selector($state) {
       ~ .custom-control-label {
-        // color: $color; // Boosted mod: label color doesn't change
+        // Boosted mod: label color doesn't change
 
         &::before {
           color: $color !important;
@@ -237,7 +223,7 @@
         &:focus {
           ~ .custom-file-label {
             border-color: $input-focus-border-color;
-            // box-shadow: 0 0 0 $input-focus-width rgba($color, .25);// Boosted mod, remove box shadow!
+            // Boosted mod, remove box shadow!
           }
         }
       }

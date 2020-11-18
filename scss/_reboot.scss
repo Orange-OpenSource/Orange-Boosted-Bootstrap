@@ -402,7 +402,7 @@ button {
 // Credit: https://github.com/suitcss/base/
 button:focus {
   outline: $border-width solid;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 input,

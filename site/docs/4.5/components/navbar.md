@@ -115,7 +115,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Just an image -->
 <nav role="navigation" class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50" loading="lazy">
+    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" alt="Back to homepage" title="Back to homepage" width="50" height="50">
   </a>
 </nav>
 {% endcapture %}
@@ -125,7 +125,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 <!-- Image and text -->
 <nav role="navigation" class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="#">
-    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" width="50" height="50" loading="lazy"/>
+    <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/img/orange_logo.svg" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" width="50" height="50"/>
     <span class="h1 m-0">Boosted</span>
   </a>
 </nav>
@@ -429,7 +429,7 @@ When the container is within your navbar, its horizontal padding is removed at b
 
 Use our [position utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/position/) to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow of the DOM and may require custom CSS (e.g., `padding-top` on the `<body>`) to prevent overlap with other elements.
 
-Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully supported in every browser](https://caniuse.com/#feat=css-sticky)**.
+Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully supported in every browser](https://caniuse.com/css-sticky)**.
 
 {% capture example %}
 <nav role="navigation" class="navbar navbar-dark">
