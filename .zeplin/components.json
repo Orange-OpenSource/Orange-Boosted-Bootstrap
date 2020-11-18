@@ -1,0 +1,34 @@
+{
+    "projects": [
+        "5fd323b71fd6734b218a3b81"
+    ],
+    "styleguides": [],
+    "components": [
+        {
+            "path": "stories/Alerts/alert.stories.js",
+            "zeplinNames": [
+                "Rectangle 1"
+            ],
+            "storybook": {
+              "kind": "Components/Alerts",
+              "stories": [
+                  "Alerts"
+              ]
+            }
+        }
+    ],
+    "github": {
+      "repository": "Orange-OpenSource/Orange-Boosted-Bootstrap",
+      "branch": "storybook"
+    },
+    "plugins": [
+        {
+            "name": "@zeplin/cli-connect-storybook-plugin",
+            "config": {
+              "url": "https://deploy-preview-565--boosted.netlify.app/storybook",
+              "fetchStories": false,
+              "format": "new"
+            }
+        }
+    ]
+}
