@@ -587,7 +587,7 @@ While Boosted will apply these styles in all browsers, Internet Explorer 11 and 
 
 ## Validation
 
-Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
+Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
 
 Indicate that a field is **required** by adding the class `.is-required` on the associated label, and adding a `<span class="sr-only"> (required)</span>` visually hidden text inside label itself.
 

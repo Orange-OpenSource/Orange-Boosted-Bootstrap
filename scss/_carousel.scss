@@ -155,7 +155,7 @@
   width: $spacer; // Boosted mod
   height: $carousel-control-icon-width;
   // stylelint-disable-next-line declaration-no-important
-  background: escape-svg($carousel-control-prev-icon-bg) no-repeat 50% / 100% 100% !important; // Boosted mod
+  background: escape-svg($carousel-control-prev-icon-bg) 50% / 100% 100% no-repeat !important; // Boosted mod
 }
 
 /* rtl:begin:remove */
