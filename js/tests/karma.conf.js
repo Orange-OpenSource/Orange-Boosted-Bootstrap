@@ -97,6 +97,7 @@ if (bundle) {
   plugins.push('karma-browserstack-launcher')
   conf.customLaunchers = browsers
   conf.browsers = browsersKeys
+  conf.browserNoActivityTimeout = 60000
   reporters.push('BrowserStack')
   files = files.concat([
     'node_modules/jquery/dist/jquery.slim.min.js',
