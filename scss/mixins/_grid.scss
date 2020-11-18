@@ -18,6 +18,8 @@
     #{$property}-right: #{$gutter};
     #{$property}-left: #{$gutter};
   }
+
+  @include deprecate("The `make-gutters` mixin", "v4.6.0", "v5");
 }
 // end mod
 
@@ -44,6 +46,7 @@
       max-width: #{100% - ($container-margin * 2)};
     }
   }
+  @include deprecate("The `make-container-fluid-widths` mixin", "v4.6.0", "v5");
 }
 // End mod
 
