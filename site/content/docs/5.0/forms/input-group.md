@@ -155,7 +155,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -168,7 +168,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 
 <div class="input-group mb-3">
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
   <ul class="dropdown-menu dropdown-menu-right">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -179,7 +179,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 </div>
 
 <div class="input-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action before</a></li>
     <li><a class="dropdown-item" href="#">Another action before</a></li>
@@ -188,7 +188,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
     <li><a class="dropdown-item" href="#">Separated link</a></li>
   </ul>
   <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
   <ul class="dropdown-menu dropdown-menu-right">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -204,7 +204,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {{< example >}}
 <div class="input-group mb-3">
   <button type="button" class="btn btn-secondary">Action</button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
@@ -220,7 +220,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
   <button type="button" class="btn btn-secondary">Action</button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right">

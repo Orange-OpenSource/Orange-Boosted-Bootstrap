@@ -1,16 +1,16 @@
 // Container mixins
 
 @mixin make-container($gutter: $container-padding-x) {
-  --#{$variable-prefix}padding-x: calc(#{$gutter} / 2); // stylelint-disable-line function-disallowed-list
   width: 100%;
-  padding-right: var(--#{$variable-prefix}padding-x); // Boosted mod
-  padding-left: var(--#{$variable-prefix}padding-x); // Boosted mod
+  padding-right: var(--#{$variable-prefix}gutter-x, $gutter);
+  padding-left: var(--#{$variable-prefix}gutter-x, $gutter);
   margin-right: auto;
   margin-left: auto;
 
   // Boosted mod: gutter depends on breakpoint
+  // @note Needs both interpolation and parenthesis to prevent stylelint-scss/dimension-no-non-numeric-values to fail
   @include media-breakpoint-up($grid-gutter-breakpoint) {
-    --#{$variable-prefix}padding-x: #{$gutter};
+    --#{$variable-prefix}gutter-x: #{($gutter * 2)};
   }
   // End mod
 }

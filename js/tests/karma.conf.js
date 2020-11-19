@@ -33,15 +33,15 @@ const detectBrowsers = {
       return debug ? ['Chrome'] : ['ChromeHeadless']
     }
 
-    if (availableBrowser.includes('Firefox')) {
-      return debug ? ['Firefox'] : ['FirefoxHeadless']
-    }
-
     if (availableBrowser.includes('Chromium')) {
       return debug ? ['Chromium'] : ['ChromiumHeadless']
     }
 
-    throw new Error('Please install Firefox or Chrome')
+    if (availableBrowser.includes('Firefox')) {
+      return debug ? ['Firefox'] : ['FirefoxHeadless']
+    }
+
+    throw new Error('Please install Chrome, Chromium or Firefox')
   }
 }
 

@@ -1,35 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {{ partial "header" . }}
-  </head>
-  <body>
-    {{ partial "analytics-body" . }}
-    {{ partial "skippy" . }}
-
-    {{ partial "docs-navbar" . }}
-
-    <main class="bd-content order-1 py-5" id="content">
-      <div class="mb-5 pb-5 border-bottom border-light">
-        <div class="container pt-md-1 pb-md-4">
-          <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
-          <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
-          {{ if eq .Title "Examples" }}
-          <div class="d-flex flex-column flex-sm-row">
-            <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'zip-example', 'track_cible':'hero'});">Download Examples</a>
-            <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-primary mt-3 mt-sm-0 ml-sm-3" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
-          </div>
-          {{ end }}
-          {{ partial "ads" . }}
+{{ define "main" }}
+  <main class="bd-content order-1 py-5" id="content">
+    <div class="mb-5 pb-5 border-bottom border-light">
+      <div class="container pt-md-1 pb-md-4">
+        <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
+        <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
+        {{ if eq .Title "Examples" }}
+        <div class="d-flex flex-column flex-sm-row">
+          <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'zip-example', 'track_cible':'hero'});">Download Examples</a>
+          <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-primary mt-3 mt-sm-0 ml-sm-3" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
         </div>
+        {{ end }}
+        {{ partial "ads" . }}
       </div>
+    </div>
 
-      <div class="container">
-        {{ .Content }}
-      </div>
-    </main>
-
-    {{ partial "footer" . }}
-    {{ partial "scripts" . }}
-  </body>
-</html>
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </main>
+{{ end }}

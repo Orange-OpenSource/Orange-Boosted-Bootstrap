@@ -171,7 +171,7 @@ This feature will be delivered with [#521]({{< param repo >}}/issues/521).
   <div class="col-9">
     <div class="btn-group">
       <button type="button" class="btn btn-secondary">Button</button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">
@@ -189,7 +189,7 @@ This feature will be delivered with [#521]({{< param repo >}}/issues/521).
   <div class="col-9">
     <div class="btn-group">
       <button type="button" class="btn btn-secondary active">Button</button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">
@@ -207,7 +207,7 @@ This feature will be delivered with [#521]({{< param repo >}}/issues/521).
   <div class="col-9">
     <div class="btn-group">
       <button type="button" class="btn btn-secondary" disabled>Button</button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false" disabled>
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" disabled>
         <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu">

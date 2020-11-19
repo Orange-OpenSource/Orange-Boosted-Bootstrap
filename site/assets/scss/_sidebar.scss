@@ -29,16 +29,27 @@
     }
   }
 
+  // Boosted mod
   a {
-    padding: $sidebar-link-padding; // Boosted mod
-    margin-top: .125rem;
+    padding: $sidebar-link-padding;
+    margin-top: $spacer / 10;
+    font-size: $small-font-size;
+    font-weight: 400;
     text-decoration: if($link-decoration == none, null, none);
 
-    // Boosted mod
-    // Indent if there's no submenu
-    &:only-child {
-      padding-left: $spacer;
+    &:hover,
+    &:focus {
+      color: $black;
+      background-color: $gray-400;
     }
+  }
+
+  .btn {
+    // Custom styles (as we don't have a completely neutral button style)
+    padding: $sidebar-button-padding;
+    margin-top: $spacer / 10;
+    line-height: $line-height-base;
+    border: 0;
 
     &:hover,
     &:focus {
@@ -47,33 +58,25 @@
     }
 
     // Add chevron if there's a submenu
-    &:not(:only-child) {
-      @include caret($accordion: true);
+    @include caret($accordion: true);
+
+    &::after {
+      // stylelint-disable-next-line function-disallowed-list
+      transform: scale(calc(6 / 7));
+    }
+
+    &[aria-expanded="true"] {
+      color: $accessible-orange;
+
+      &:hover,
+      &:focus {
+        color: $black;
+      }
 
       &::after {
         // stylelint-disable-next-line function-disallowed-list
-        transform: scale(calc(6 / 7));
+        transform: scale(calc(6 / 7)) rotate(180deg);
       }
-
-      &:not(.collapsed) {
-        color: $accessible-orange;
-
-        &:hover,
-        &:focus {
-          color: $black;
-        }
-
-        &::after {
-          // stylelint-disable-next-line function-disallowed-list
-          transform: scale(calc(6 / 7)) rotate(180deg);
-        }
-      }
-    }
-
-    ~ * a {
-      padding: $sidebar-base-padding / 2 $sidebar-base-padding $sidebar-base-padding / 2 $spacer * 1.5;
-      font-size: $small-font-size;
-      font-weight: 400;
     }
   }
 
