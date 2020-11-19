@@ -27,10 +27,9 @@ html {
 .container-md,
 .container-sm,
 .container-xs {
-  --bs-padding-x: calc(0.625rem / 2);
   width: 100%;
-  padding-right: var(--bs-padding-x);
-  padding-left: var(--bs-padding-x);
+  padding-right: var(--bs-gutter-x, 0.625rem);
+  padding-left: var(--bs-gutter-x, 0.625rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -43,7 +42,7 @@ html {
 .container-md,
 .container-sm,
 .container-xs {
-    --bs-padding-x: 0.625rem;
+    --bs-gutter-x: 1.25rem;
   }
 }
 

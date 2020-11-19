@@ -39,7 +39,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
         <a class="nav-link" href="#mdo">@mdo</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#one">one</a></li>
           <li><a class="dropdown-item" href="#two">two</a></li>
@@ -49,7 +49,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
       </li>
     </ul>
   </nav>
-  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example" tabindex="0">
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <h4 id="fat">@fat</h4>
     <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
     <h4 id="mdo">@mdo</h4>
@@ -78,7 +78,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
       <a class="nav-link" href="#mdo">@mdo</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
       <ul class="dropdown-menu dropdown-menu-right">
         <li><a class="dropdown-item" href="#one">one</a></li>
         <li><a class="dropdown-item" href="#two">two</a></li>
@@ -88,7 +88,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
     </li>
   </ul>
 </nav>
-<div data-spy="scroll" data-target="#navbar-example2" data-offset="0" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
   <h4 id="fat">@fat</h4>
   <p>...</p>
   <h4 id="mdo">@mdo</h4>
@@ -129,7 +129,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
       </nav>
     </div>
     <div class="col-8 col-lg-10">
-      <div data-spy="scroll" data-target="#navbar-example3" data-offset="0" class="scrollspy-example-2" tabindex="0">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
         <h4 id="item-1">Item 1</h4>
         <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
         <h5 id="item-1-1">Item 1-1</h5>
@@ -169,7 +169,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
   </nav>
 </nav>
 
-<div data-spy="scroll" data-target="#navbar-example3" data-offset="0" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
   <h4 id="item-1">Item 1</h4>
   <p>...</p>
   <h5 id="item-1-1">Item 1-1</h5>
@@ -202,7 +202,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
       </div>
     </div>
     <div class="col-8">
-      <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" tabindex="0">
+      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <h4 id="list-item-1">Item 1</h4>
         <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
         <h4 id="list-item-2">Item 2</h4>
@@ -223,7 +223,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
   <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
   <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
 </div>
-<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
   <h4 id="list-item-1">Item 1</h4>
   <p>...</p>
   <h4 id="list-item-2">Item 2</h4>
@@ -240,7 +240,7 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 ### Via data attributes
 
-To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Boosted `.nav` component.
+To easily add scrollspy behavior to your topbar navigation, add `data-bs-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-bs-target` attribute with the ID or class of the parent element of any Boosted `.nav` component.
 
 ```css
 body {
@@ -249,7 +249,7 @@ body {
 ```
 
 ```html
-<body data-spy="scroll" data-target="#navbar-example">
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
   ...
   <div id="navbar-example">
     <ul class="nav nav-tabs" role="tablist">
@@ -289,7 +289,7 @@ Target elements that are not visible will be ignored and their corresponding nav
 When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:
 
 ```js
-var dataSpyList = [].slice.call(document.querySelectorAll('[data-spy="scroll"]'))
+var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
 dataSpyList.forEach(function (dataSpyEl) {
   boosted.ScrollSpy.getInstance(dataSpyEl)
     .refresh()
@@ -311,7 +311,7 @@ var scrollSpy = boosted.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a B
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-offset=""`.
 
 <table class="table">
   <thead>
@@ -362,7 +362,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 </table>
 
 ```js
-var firstScrollSpyEl = document.querySelector('[data-spy="scroll"]')
+var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   // do something...
 })
