@@ -78,6 +78,7 @@
 
 //// Icons
 .alert-icon {
+  flex-shrink: 0;
   width: $alert-icon-size;
   margin: -#{$alert-icon-margin-y / 2} 0;
 
