@@ -13,7 +13,6 @@
 
 .carousel {
   position: relative;
-  margin-bottom: $carousel-margin-bottom; // Boosted mod
 }
 
 .carousel.pointer-event {
@@ -114,11 +113,11 @@
 }
 
 .carousel-control-prev {
-  left: $carousel-control-offset; // Boosted mod
+  left: 0;
   background-image: if($enable-gradients, linear-gradient(90deg, rgba($black, .25), rgba($black, .001)), null);
 }
 .carousel-control-next {
-  right: $carousel-control-offset; // Boosted mod
+  right: 0;
   background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
 }
 
@@ -128,7 +127,8 @@
   display: inline-block;
   width: $carousel-control-icon-width;
   height: $carousel-control-icon-width;
-  background: escape-svg($carousel-control-prev-icon-bg) no-repeat 50% / #{$carousel-control-icon-size $carousel-control-icon-size}; // Boosted mod
+  background: rgba($carousel-indicator-active-bg, .5) escape-svg($carousel-control-icon-bg) no-repeat subtract(50%, $spacer / 10) 50% / #{$carousel-control-icon-size $carousel-control-icon-size}; // Boosted mod
+  @include border-radius(50%, 50%);
 }
 
 // Boosted mod
@@ -145,6 +145,34 @@
   transform: scaleX(-1);
 }
 */
+
+@each $direction in "prev", "next" {
+  .carousel-control-#{$direction} {
+    &:hover,
+    &:focus {
+      .carousel-control-#{$direction}-icon {
+        background-color: $carousel-indicator-active-bg;
+        filter: $carousel-control-icon-filter;
+      }
+    }
+
+    &:active {
+      .carousel-control-#{$direction}-icon {
+        background-color: $carousel-control-icon-active-bg;
+        filter: none;
+      }
+    }
+
+    &:disabled,
+    &[aria-disabled] {
+      pointer-events: none;
+
+      .carousel-control-#{$direction}-icon {
+        background-image: escape-svg($carousel-control-icon-disabled-bg);
+      }
+    }
+  }
+}
 // End mod
 
 // Optional indicator pips
@@ -152,19 +180,20 @@
 // Add an ordered list with the following class and add a list item for each
 // slide your carousel holds.
 
+/* rtl:begin:ignore */
 .carousel-indicators {
   position: absolute;
-  right: 0;
-  bottom: -$carousel-margin-bottom;
-  left: 0;
+  bottom: 0;
+  left: 50%; // Boosted mod
   z-index: 2;
   display: flex;
   justify-content: center;
-  padding-left: 0; // override <ol> default
-  // Use the .carousel-control's width as margin so we don't overlay those
-  margin-right: $carousel-control-width;
-  margin-left: $carousel-control-width;
+  padding: $carousel-indicators-padding-y 0; // Boosted mod
+  // Boosted mod: no margins
   list-style: none;
+  background: rgba($carousel-indicator-active-bg, .5); // Boosted mod
+  transform: translateX(-50%); // Boosted mod
+  @include border-radius($spacer, $spacer); // Boosted mod
 
   li {
     box-sizing: content-box;
@@ -176,20 +205,95 @@
     text-indent: -999px;
     cursor: pointer;
     background-color: $carousel-control-color; // Boosted mod
-    background-clip: padding-box;
-    // Use transparent borders to increase the hit area by 10px on top and bottom.
-    border-top: $carousel-indicator-hit-area-height solid transparent;
-    border-bottom: $carousel-indicator-hit-area-height solid transparent;
+    // Boosted mod: use our own target-size() mixin instead of transparent borders
     opacity: $carousel-indicator-opacity;
     @include transition($carousel-indicator-transition);
-    @include border-radius(50%, 50%); // Boosted mod
+
+    // Boosted mod
+    @include border-radius(50%, 50%);
+    @include target-size($carousel-indicator-hit-area-height);
+
+    &:hover,
+    &:focus {
+      background-color: color-contrast($carousel-indicator-active-bg);
+      transform: scale($carousel-indicator-hover-scale);
+
+      &::before {
+        transform: translate3d(-50%, -50%, 0) scale($carousel-indicator-active-scale);
+      }
+    }
   }
 
   .active {
-    background-color: $carousel-indicator-active-bg; // Boosted mod
+    background-color: $carousel-indicator-active-bg;
+    border-color: color-contrast($carousel-indicator-active-bg);
     opacity: $carousel-indicator-active-opacity;
+
+    @if $enable-transitions {
+      // Animation based on Lea Verou's simple pie chart
+      // See https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
+      background-image: linear-gradient(to right, transparent 50%, color-contrast($carousel-indicator-active-bg) 0);
+      transform: scale($carousel-indicator-hover-scale);
+      // No need to feature test mask-*
+      // See https://caniuse.com/mdn-css_properties_mask-image
+      mask-image: radial-gradient(circle at 50%, transparent 33%, $white add(33%, 1px));
+
+      &:hover,
+      &:focus {
+        mask-image: none;
+      }
+
+      &::before {
+        transform: translate3d(-50%, -50%, 0) scale($carousel-indicator-active-scale);
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        content: "";
+        background-color: inherit;
+        transform-origin: left;
+        // stylelint-disable-next-line function-disallowed-list
+        animation: carousel-progress calc(#{$carousel-indicator-animation-interval} / 2) linear infinite, carousel-progress-half $carousel-indicator-animation-interval step-end infinite;
+        @include border-radius($carousel-indicator-active-radius, $carousel-indicator-active-radius);
+      }
+
+      @keyframes carousel-progress {
+        to { transform: rotate(.5turn); }
+      }
+
+      @keyframes carousel-progress-half {
+        50% { background: color-contrast($carousel-indicator-active-bg); }
+      }
+
+      .carousel.done &,
+      .carousel.paused &,
+      .carousel.static & {
+        background: color-contrast($carousel-indicator-active-bg);
+
+        &::after {
+          animation: none;
+        }
+      }
+
+      @if $enable-reduced-motion {
+        @media (prefers-reduced-motion: reduce) {
+          background: color-contrast($carousel-indicator-active-bg);
+
+          &::after {
+            animation: none;
+          }
+        }
+      }
+    }
   }
 }
+
+/* rtl:end:ignore */
+// End mod
 
 
 // Optional captions
@@ -198,26 +302,12 @@
 
 .carousel-caption {
   position: absolute;
+  right: (100% - $carousel-caption-width) / 2;
   bottom: $carousel-caption-spacer;
-  left: map-get($spacers, 5);
-  padding: $carousel-caption-padding-y; // Boosted mod
+  left: (100% - $carousel-caption-width) / 2;
+  padding: $carousel-caption-padding-y $carousel-caption-padding-x; // Boosted mod
   color: $carousel-caption-color;
-  background-color: color-contrast($carousel-caption-color); // Boosted mod
+  background-color: color-contrast($carousel-caption-color); // Boosted mod: ensure contrast
 }
 
-// Dark mode carousel
-
-.carousel-dark {
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: $carousel-dark-control-icon-filter;
-  }
-
-  .carousel-indicators li {
-    background-color: $carousel-dark-indicator-active-bg;
-  }
-
-  .carousel-caption {
-    color: $carousel-dark-caption-color;
-  }
-}
+// Boosted mod: no dark carousel

@@ -82,6 +82,8 @@ const CLASS_NAME_START = 'carousel-item-start'
 const CLASS_NAME_NEXT = 'carousel-item-next'
 const CLASS_NAME_PREV = 'carousel-item-prev'
 const CLASS_NAME_POINTER_EVENT = 'pointer-event'
+const CLASS_NAME_PAUSED = 'paused' // Boosted mod: used for progress indicators
+const CLASS_NAME_DONE = 'done' // Boosted mod: used for progress indicators
 
 const SELECTOR_ACTIVE = '.active'
 const SELECTOR_ACTIVE_ITEM = '.active.carousel-item'
@@ -91,6 +93,8 @@ const SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev'
 const SELECTOR_INDICATORS = '.carousel-indicators'
 const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
+const SELECTOR_CONTROL_PREV = '.carousel-control-prev' // Boosted mod
+const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // Boosted mod
 
 const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
 
@@ -158,6 +162,12 @@ class Carousel extends BaseComponent {
   }
 
   pause(event) {
+    // Boosted mod: reset the animation on progress indicator
+    if (this._indicatorsElement) {
+      this._element.classList.add(CLASS_NAME_PAUSED)
+    }
+    // End mod
+
     if (!event) {
       this._isPaused = true
     }
@@ -172,6 +182,12 @@ class Carousel extends BaseComponent {
   }
 
   cycle(event) {
+    // Boosted mod: restart the animation on progress indicator
+    if (this._indicatorsElement) {
+      this._element.classList.remove(CLASS_NAME_PAUSED)
+    }
+    // End mod
+
     if (!event) {
       this._isPaused = false
     }
@@ -194,6 +210,12 @@ class Carousel extends BaseComponent {
   to(index) {
     this._activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element)
     const activeIndex = this._getItemIndex(this._activeElement)
+
+    // Boosted mod: restart the animation on progress indicator
+    if (this._indicatorsElement) {
+      this._element.classList.remove(CLASS_NAME_DONE)
+    }
+    // End mod
 
     if (index > this._items.length - 1 || index < 0) {
       return
@@ -350,6 +372,26 @@ class Carousel extends BaseComponent {
     }
   }
 
+  // Boosted mod: handle prev/next controls states
+  _disableControl(element) {
+    if (element.nodeName === 'BUTTON') {
+      element.disabled = true
+    } else {
+      element.setAttribute('aria-disabled', true)
+      element.setAttribute('tabindex', '-1')
+    }
+  }
+
+  _enableControl(element) {
+    if (element.nodeName === 'BUTTON') {
+      element.disabled = false
+    } else {
+      element.removeAttribute('aria-disabled')
+      element.removeAttribute('tabindex')
+    }
+  }
+  // End mod
+
   _getItemIndex(element) {
     this._items = element && element.parentNode ?
       SelectorEngine.find(SELECTOR_ITEM, element.parentNode) :
@@ -366,9 +408,23 @@ class Carousel extends BaseComponent {
     const isGoingToWrap = (isPrevDirection && activeIndex === 0) ||
                             (isNextDirection && activeIndex === lastItemIndex)
 
-    if (isGoingToWrap && !this._config.wrap) {
-      return activeElement
+    // Boosted mod: progress indicators animation when wrapping is disabled
+    if (!this._config.wrap) {
+      if (isGoingToWrap) {
+        // Reset the animation on last progress indicator when last slide is active
+        if (isNextDirection && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
+          this._element.classList.add(CLASS_NAME_DONE)
+        }
+
+        return activeElement
+      }
+
+      // Restart animation otherwise
+      if (this._indicatorsElement) {
+        this._element.classList.remove(CLASS_NAME_DONE)
+      }
     }
+    // End mod
 
     const delta = direction === DIRECTION_PREV ? -1 : 1
     const itemIndex = (activeIndex + delta) % this._items.length
@@ -478,6 +534,22 @@ class Carousel extends BaseComponent {
 
     this._setActiveIndicatorElement(nextElement)
     this._activeElement = nextElement
+
+    // Boosted mod: enable/disable prev/next controls when wrap=false
+    if (!this._config.wrap) {
+      const prevControl = SelectorEngine.findOne(SELECTOR_CONTROL_PREV, this._element)
+      const nextControl = SelectorEngine.findOne(SELECTOR_CONTROL_NEXT, this._element)
+
+      this._enableControl(prevControl)
+      this._enableControl(nextControl)
+
+      if (nextElementIndex === 0) {
+        this._disableControl(prevControl)
+      } else if (nextElementIndex === (this._items.length - 1)) {
+        this._disableControl(nextControl)
+      }
+    }
+    // End mod
 
     if (this._element.classList.contains(CLASS_NAME_SLIDE)) {
       nextElement.classList.add(orderClassName)

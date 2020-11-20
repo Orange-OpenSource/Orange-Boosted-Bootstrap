@@ -237,7 +237,7 @@ $escaped-characters: (
 
 // Boosted mod
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$chevron-icon-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$light}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$gray-700}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 01-1.3 3.7L57.7 86a5.8 5.8 0 01-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 011.7-4.1l2.3-2.4a5.8 5.8 0 014.2-1.7 5.8 5.8 0 013.8 1.4L52 64.7 86.6 31a5.8 5.8 0 014-1.6z'/></svg>") !default;
@@ -1355,20 +1355,18 @@ $breadcrumb-border-radius:          null !default;
 
 // Carousel
 
-$carousel-margin-bottom:             $spacer * 3 !default; // Boosted mod
 $carousel-control-color:             $black !default;
-$carousel-control-width:             $spacer * 1.5 !default;
+$carousel-control-width:             $spacer * 3 !default;
 $carousel-control-opacity:           null !default;
 $carousel-control-hover-opacity:     null !default;
 $carousel-control-transition:        $transition-focus !default;
-$carousel-control-offset:            $spacer / 2 !default; // Boosted mod
 
-$carousel-indicator-width:           $spacer / 2 !default;
-$carousel-indicator-height:          $spacer / 2 !default;
-$carousel-indicator-hit-area-height: null !default;
-$carousel-indicator-spacer:          3px !default;
+$carousel-indicator-width:           .5rem !default;
+$carousel-indicator-height:          .5rem !default;
+$carousel-indicator-hit-area-height: $spacer * 1.5 !default;
+$carousel-indicator-spacer:          $spacer / 2 !default;
 $carousel-indicator-opacity:         null !default;
-$carousel-indicator-active-bg:       $primary !default;
+$carousel-indicator-active-bg:       $white !default;
 $carousel-indicator-active-opacity:  null !default;
 $carousel-indicator-transition:      null !default;
 // Boosted mod
@@ -1376,24 +1374,30 @@ $carousel-indicator-hover-scale:        1.5 !default;
 $carousel-indicator-active-scale:       calc(2 / 3) !default; // stylelint-disable-line function-disallowed-list
 $carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
 $carousel-indicator-animation-duration: 5000ms !default;
-$carousel-indicator-animation-interval: var(--#{$boosted-variable-prefix}carousel-interval, #{$carousel-indicator-animation-duration}) !default;
+$carousel-indicator-animation-interval: var(--carousel-interval, #{$carousel-indicator-animation-duration}) !default;
+$carousel-indicators-padding-y:         $spacer / 2 !default;
 // End mod
 
+$carousel-caption-width:             70% !default;
 $carousel-caption-color:             $black !default;
 $carousel-caption-padding-y:         $spacer !default;
-$carousel-caption-spacer:            0 !default;
+$carousel-caption-padding-x:         $spacer !default; // Boosted mod
+$carousel-caption-spacer:            $spacer * 3 !default;
 
-$carousel-control-icon-width:        2.375rem !default;
-$carousel-control-icon-size:         $spacer * 1.5 !default; // Boosted mod
-
-$carousel-control-prev-icon-bg:      $chevron-icon !default;
+$carousel-control-icon-width:        2.5rem !default;
+// Boosted mod
+$carousel-control-icon-size:         1.5rem !default;
+$carousel-control-icon-active-bg:    $component-active-bg !default;
+$carousel-control-icon-bg:           $chevron-icon !default;
+$carousel-control-icon-disabled-bg:  $chevron-icon-disabled !default;
+$carousel-control-icon-filter:       $invert-filter !default;
+// End mod
 
 $carousel-transition-duration:       .6s !default;
 $carousel-transition:                transform $carousel-transition-duration $transition-timing !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
-$carousel-dark-indicator-active-bg:  $black !default;
-$carousel-dark-caption-color:        $black !default;
-$carousel-dark-control-icon-filter:  invert(1) grayscale(100) !default;
+// Boosted mod: no dark carousel
+
 
 // Spinners
 

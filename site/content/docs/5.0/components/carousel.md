@@ -162,11 +162,18 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
 
 {{< example >}}
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <!-- Boosted mod -->
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"></li>
+  </ol>
+  <!-- End mod -->
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" data-bs-interval="10000">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#4bb4e6" text="First slide" >}}
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" data-bs-interval="2000">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#50be87" text="Second slide" >}}
     </div>
     <div class="carousel-item">
@@ -184,50 +191,81 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
 </div>
 {{< /example >}}
 
-## Dark variant
+<!-- Boosted mod: needed to check carousel indicator's progress when no cycle -->
+### Prevent cycling
 
-Add `.carousel-dark` to the `.carousel` for darker controls, indicators, and captions. Controls have been inverted from their default white fill with the `filter` CSS property. Captions and controls have additional Sass variables that customize the `color` and `background-color`.
+Use `data-bs-wrap="false"` to prevent carousel from cycling continuously.
 
 {{< example >}}
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselExampleNoWrap" class="carousel slide" data-bs-wrap="false" data-bs-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
-    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
-    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+    <li data-bs-target="#carouselExampleNoWrap" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleNoWrap" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleNoWrap" data-bs-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#aaa" background="#f5f5f5" text="First slide" >}}
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#bbb" background="#eee" text="Second slide" >}}
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#4bb4e6" text="First slide" >}}
     </div>
     <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#999" background="#e5e5e5" text="Third slide" >}}
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#50be87" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#a885d8" text="Third slide" >}}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleNoWrap" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleNoWrap" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </a>
 </div>
 {{< /example >}}
+<!-- End mod -->
+
+<!-- Boosted mod: needed to check carousel indicators without autoplay -->
+### Static carousel (no autoplay)
+
+To prevent the carousel from autoplaying, use the following attributes combo:
+1. do not use `data-bs-ride="carousel"` attribute, to prevent instant initialization,
+2. add `data-bs-slide="false"` to prevent autoplaying after the first user interaction,
+2. add `data-bs-pause="hover focus"` to prevent autoplaying when carousel contains focus,
+3. add `.static` class to your carousel, to cancel progress indicators animation.
+
+{{< example >}}
+<div id="carouselExampleNoRide" class="carousel slide static" data-bs-slide="false" data-bs-pause="hover focus">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#4bb4e6" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#50be87" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#a885d8" text="Third slide" >}}
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleNoRide" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleNoRide" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+{{< /example >}}
+<!-- End mod -->
+
+<!-- Boosted mod: no dark variant -->
 
 ## Usage
 
