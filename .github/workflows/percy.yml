@@ -52,7 +52,7 @@ jobs:
         run: npm run docs-build
 
       - name: Percy Test
-        uses: percy/snapshot-action@v0.1.0
+        uses: percy/snapshot-action@v0.1.2
         with:
           build-directory: "_gh_pages/"
           flags: "--snapshot-files ./index.html,./docs/5.0/guidelines/**/*.html"
