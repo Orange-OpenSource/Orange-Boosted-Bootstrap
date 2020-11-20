@@ -113,12 +113,6 @@
     margin-bottom: 0;
   }
 
-  // Boosted mod
-  > .carousel:last-child {
-    margin-bottom: $carousel-margin-bottom;
-  }
-  // End mod
-
   // Images
   > svg + svg,
   > img + img {
