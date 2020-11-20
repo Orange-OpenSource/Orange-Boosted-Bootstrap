@@ -26,7 +26,7 @@ Set heights using classes like `.form-control-lg`.
 <!-- Boosted mod: no .form-control-sm -->
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-<input class="form-control" type="text" placeholder="Default input" aria-label="deafult input example">
+<input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
 {{< /example >}}
 
 ## Disabled
