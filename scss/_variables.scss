@@ -1445,6 +1445,6 @@ $pre-line-height:                   1.25 !default; // Boosted mod
 // Boosted mod
 //
 
-//// Accordions
-//$accordion-spacer:            .875rem !default;
-//$accordion-spacer-sm:         $spacer / 2 !default;
+//// Minimum target size (44×44px)
+$target-size: 2.75rem !default;
+

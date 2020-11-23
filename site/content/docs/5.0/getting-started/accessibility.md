@@ -57,6 +57,13 @@ On browsers that support `prefers-reduced-motion`, and where the user has *not* 
 
 Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 
+### Minimum target size
+
+Boosted provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (eg. different width and height, using `::after` instead of `::before`, etc.).
+
+{{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
+
+
 ## Additional resources
 
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
