@@ -75,6 +75,7 @@
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
   @include transition($navbar-brand-transition); // Boosted mod
+  @include target-size($navbar-brand-logo-height); // Boosted mod
 
   &:hover,
   &:focus {
@@ -88,17 +89,6 @@
   .h1, .h2, .h3, .h4, .h5, .h6 { // stylelint-disable-line selector-list-comma-newline-after
     margin: 0 0 0 $spacer;
     line-height: inherit;
-  }
-
-  //// Increase touch target size
-  &::before {
-    position: absolute;
-    top: $navbar-brand-hit-area-offset;
-    left: $navbar-brand-hit-area-offset;
-    width: $navbar-brand-logo-height;
-    height: $navbar-brand-logo-height;
-    content: "";
-    transform: translate3d(-50%, -50%, 0);
   }
 
   //// Orange's master logo
@@ -287,12 +277,6 @@
         .navbar-brand {
           align-self: flex-end;
           margin: 0 $spacer subtract($spacer, $border-width) 0;
-
-          &::before {
-            top: 0;
-            left: 0;
-            transform: none;
-          }
 
           img {
             width: $navbar-brand-logo-height;
