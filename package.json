@@ -85,9 +85,9 @@
     "watch-css-docs": "nodemon --watch site/assets/scss/ --ext scss --exec \"npm run css-lint\"",
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js-lint js-compile\"",
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
-    "storybook": "start-storybook -p 6006 --no-dll",
-    "storybook:build": "build-storybook --no-dll",
-    "chromatic": "npx chromatic --project-token 0mxgkrqwnuck --no-dll"
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
+    "storybook:build": "build-storybook",
+    "chromatic": "npx chromatic --project-token 0mxgkrqwnuck"
   },
   "style": "dist/css/boosted.css",
   "sass": "scss/boosted.scss",
@@ -119,6 +119,7 @@
     "@storybook/addon-knobs": "^6.1.0",
     "@storybook/addon-links": "^6.1.0",
     "@storybook/html": "^6.1.0",
+    "@storybook/theming": "^6.1.9",
     "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.1",
     "bundlewatch": "^0.3.2",
