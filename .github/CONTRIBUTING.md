@@ -142,7 +142,7 @@ and/or [`/boosted/js/`](https://github.com/Orange-OpenSource/Orange-Boosted-Boot
 
 Similarly, when contributing to Boosted's documentation, you should edit the
 documentation source files in
-[the `/boosted/docs/` directory of the `v4-dev` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/docs).
+[the `/boosted/site/content/docs/` directory of the `v4-dev` branch](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev/site/content/docs).
 **Do not edit the `gh-pages` branch.** That branch is generated from the
 documentation source files and is managed separately by the Bootstrap Core Team.
 

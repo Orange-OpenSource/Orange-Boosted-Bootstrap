@@ -1,0 +1,34 @@
+{{- "<!--Tarteaucitron -->" | safeHTML }}
+<link href="/docs/{{ .Site.Params.docs_version }}/assets/css/tarteaucitronboosted.css" rel="stylesheet">
+{{- "<!-- Swiper -->" | safeHTML }}
+<link href="/docs/{{ .Site.Params.docs_version }}/assets/css/vendor/swiper.min.css" rel="stylesheet">
+
+{{- "<!-- Boosted core CSS -->" | safeHTML }}
+{{ if eq hugo.Environment "production" -}}
+<link href="/docs/{{ .Site.Params.docs_version }}/dist/css/orangeHelvetica.min.css" rel="stylesheet" {{ printf "integrity=%q" .Site.Params.cdn.helveticacss_hash | safeHTMLAttr }} crossorigin="anonymous">
+<link href="/docs/{{ .Site.Params.docs_version }}/dist/css/orangeIcons.min.css" rel="stylesheet" {{ printf "integrity=%q" .Site.Params.cdn.iconcss_hash | safeHTMLAttr }} crossorigin="anonymous">
+<link href="/docs/{{ .Site.Params.docs_version }}/dist/css/boosted.min.css" rel="stylesheet"{{ if not (or (eq .Page.Layout "examples") (eq .Page.Layout "boostwatch")) }} {{ printf "integrity=%q" .Site.Params.cdn.css_hash | safeHTMLAttr }} crossorigin="anonymous"{{ end }}>
+{{- else -}}
+<link href="/docs/{{ .Site.Params.docs_version }}/dist/css/orangeHelvetica.css" rel="stylesheet">
+<link href="/docs/{{ .Site.Params.docs_version }}/dist/css/orangeIcons.css" rel="stylesheet">
+<link href="/docs/{{ .Site.Params.docs_version }}/dist/css/boosted.css" rel="stylesheet">
+{{- end }}
+
+{{ if (or (eq .Page.Layout "docs") (eq .Page.Layout "single")) -}}
+{{- "<!-- Documentation extras -->" | safeHTML }}
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+{{- end -}}
+
+{{- if (ne .Page.Layout "examples") }}
+{{- $targetDocsCssPath := printf "/docs/%s/assets/css/docs.css" .Site.Params.docs_version -}}
+{{- $sassOptions := dict "targetPath" $targetDocsCssPath "outputStyle" "expanded" "precision" 6 -}}
+{{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
+
+{{ if eq hugo.Environment "production" -}}
+  {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
+{{- end -}}
+
+{{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
+
+<link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
+{{- end }}

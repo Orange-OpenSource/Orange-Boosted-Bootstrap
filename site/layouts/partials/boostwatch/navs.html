@@ -1,0 +1,52 @@
+<!-- Navs
+================================================== -->
+<h2 id="nav">Navs</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mt-2">
+      <h3 class="d-flex mt-5" id="bs-nav-pills">Pills<a class="doc-link d-inline-flex align-items-center ml-2" href="/docs/{{ .Site.Params.docs_version }}/components/navs/#pills" aria-label="Go to pills documentation page"></a></h3>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Profile 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+      </ul>
+      <br>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Profile 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-lg-6">
+      <h3 class="d-flex mt-5" id="bs-nav-breadcrumbs">Breadcrumbs<a class="doc-link d-inline-flex align-items-center ml-2" href="/docs/{{ .Site.Params.docs_version }}/components/breadcrumb/" aria-label="Go to breadcrumb documentation page"></a></h3>
+      <div>
+        <nav role="navigation" aria-labelledby="breadcrumb-intro-1">
+          <p class="sr-only" id="breadcrumb-intro-1">You are here:</p>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="location">Home</li>
+          </ol>
+        </nav>
+        <nav role="navigation" aria-labelledby="breadcrumb-intro-2">
+          <p class="sr-only" id="breadcrumb-intro-2">You are here:</p>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active"  aria-current="location">Library</li>
+          </ol>
+        </nav>
+
+        <nav role="navigation" aria-labelledby="breadcrumb-intro-3">
+          <p class="sr-only" id="breadcrumb-intro-3">You are here:</p>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="location">Data</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

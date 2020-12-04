@@ -14,15 +14,15 @@ layout: home
         <h1 class="mb-3 display-2 font-weight-normal">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
         <p class="h5 font-weight-normal">
           Boosted is Orange’s HTML, CSS and JS library — based on
-          <a href="https://github.com/twbs/bootstrap/tree/{{ site.bootstrap_current_version }}" target="_blank" rel="noopener">Bootstrap {{ site.current_version }}</a>,
+          <a href="https://github.com/twbs/bootstrap/tree/{{< param current_version >}}" target="_blank" rel="noopener">Bootstrap {{< param current_version >}}</a>,
           the world’s most popular front-end open source toolkit.
         </p>
         <p class="lead mb-4">
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/" class="btn btn-secondary btn-lg ml-2" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>
+          <a href="/docs/{{< param docs_version >}}/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>
+          <a href="/docs/{{< param docs_version >}}/getting-started/download/" class="btn btn-secondary btn-lg ml-2" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>
         </p>
         <p class="text-muted mb-0">
-          Currently v{{ site.current_version }}
+          Currently v{{< param current_version >}}
         </p>
       </div>
     </div>
@@ -36,11 +36,11 @@ layout: home
           <h2 class="card-title">Only in Boosted!</h2>
           <p class="card-subtitle">We have a few custom made components to suit your extra needs, discover them on the Boostwatch page!</p>
         </div>
-        <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/boosted-history/" aria-hidden="true" tabindex="-1">
-          <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/boosted-only-components.png" alt="" width="253" height="180">
+        <a class="card-body m-auto" href="/docs/{{< param docs_version >}}/about/boosted-history/" aria-hidden="true" tabindex="-1">
+          <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/boosted-only-components.png" alt="" width="253" height="180">
         </a>
         <div class="card-footer py-3 border-0">
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/boosted-history/" class="btn btn-info">
+          <a href="/docs/{{< param docs_version >}}/about/boosted-history/" class="btn btn-info">
             Discover
             <span class="sr-only"> Boosted components sample</span>
           </a>
@@ -53,11 +53,11 @@ layout: home
           <h2 class="card-title">Orange Templates</h2>
           <p class="card-subtitle">Quick start your project with one of the boosted-made Orange templates.</p>
         </div>
-        <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/" aria-hidden="true" tabindex="-1">
-          <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/templates.png" alt="" width="250" height="156">
+        <a class="card-body m-auto" href="/docs/{{< param docs_version >}}/examples/" aria-hidden="true" tabindex="-1">
+          <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/templates.png" alt="" width="250" height="156">
         </a>
         <div class="card-footer py-3 border-0">
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/" class="btn btn-info">Browse templates</a>
+          <a href="/docs/{{< param docs_version >}}/examples/" class="btn btn-info">Browse templates</a>
         </div>
       </div>
     </div>
@@ -84,12 +84,12 @@ layout: home
           <h2 class="card-title">Migrating from Boosted 3?</h2>
           <p class="card-subtitle">See migration guide for a quick overview of what are the main changes.</p>
         </div>
-        <a class="card-body m-auto" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boosted-migration/" aria-hidden="true" tabindex="-1">
-          <img class="img-fluid" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/boosted-migrate.svg" alt="" width="100" height="125">
+        <a class="card-body m-auto" href="/docs/{{< param docs_version >}}/boosted-migration/" aria-hidden="true" tabindex="-1">
+          <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/boosted-migrate.svg" alt="" width="100" height="125">
           <!-- Illustration by Pundimon / CC BY: https://thenounproject.com/pundimon/uploads/?i=1210168 -->
         </a>
         <div class="card-footer py-3 border-0">
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/boosted-migration/" class="btn btn-info">
+          <a href="/docs/{{< param docs_version >}}/boosted-migration/" class="btn btn-info">
             Migrate
             <span class="sr-only"> from version 3 to version 4</span>
           </a>

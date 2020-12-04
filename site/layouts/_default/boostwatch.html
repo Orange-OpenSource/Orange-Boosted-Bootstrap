@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    {{ partial "analytics-body" . }}
+    {{ partial "skippy" . }}
+
+    {{ partial "docs-navbar" . }}
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          {{ partial "nav-boostwatch" . }}
+        </div>
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
+          {{ .Content }}
+
+          {{ partial "boostwatch/accordion" . }}
+          {{ partial "boostwatch/alerts" . }}
+          {{ partial "boostwatch/badges" . }}
+          {{ partial "boostwatch/bulletPoint" . }}
+          {{ partial "boostwatch/buttons" . }}
+          {{ partial "boostwatch/carousel" . }}
+          {{ partial "boostwatch/containers" . }}
+          {{ partial "boostwatch/dialogs" . }}
+          {{ partial "boostwatch/ofooter" . }}
+          {{ partial "boostwatch/forms" . }}
+          {{ partial "boostwatch/links" . }}
+          {{ partial "boostwatch/navLocal" . }}
+          {{ partial "boostwatch/modal" . }}
+          {{ partial "boostwatch/navbar" . }}
+          {{ partial "boostwatch/navs" . }}
+          {{ partial "boostwatch/pagination" . }}
+          {{ partial "boostwatch/priorityNav" . }}
+          {{ partial "boostwatch/progressbar" . }}
+          {{ partial "boostwatch/stepbar" . }}
+          {{ partial "boostwatch/tables" . }}
+          {{ partial "boostwatch/navTab" . }}
+          {{ partial "boostwatch/typography" . }}
+        </main>
+      </div>
+    </div>
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>

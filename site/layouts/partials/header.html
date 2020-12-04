@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="{{ .Page.Params.description | default .Site.Params.description | markdownify }}">
+<meta name="author" content="{{ .Site.Params.authors }}">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="{{ .Site.Params.docs_version }}">
+
+<title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}{{ end }}</title>
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ with .Params.robots -}}
+<meta name="robots" content="{{ . }}">
+{{- end }}
+
+<!-- Boosted mod -->
+<link rel="preload" href="/docs/{{ .Site.Params.docs_version }}/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/{{ .Site.Params.docs_version }}/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+<!-- end mod -->
+
+{{ partial "stylesheet" . }}
+{{ partial "favicons" . }}
+{{ partial "social" . }}
+{{ partial "analytics" . }}

@@ -1,0 +1,26 @@
+<main class="bd-masthead px-2 px-md-0 py-5" id="content" role="main">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-6 order-1 order-md-0 mx-auto col-md-6 order-md-2">
+        <div id="boosted" class="d-flex align-items-end justify-content-center text-white bg-dark my-3 mx-auto mt-sm-0 mb-sm-5 ml-md-5" role="presentation">
+          <span class="d-inline-flex mb-3 display-0">B<span class="text-primary">oo</span>sted</span>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h1 class="mb-3 display-2 font-weight-normal">Orange B<span class="text-primary">oo</span>sted with Bootstrap</h1>
+        <p class="h5 font-weight-normal">
+          Boosted is Orange’s HTML, CSS and JS library — based on <a href="https://github.com/twbs/bootstrap/tree/{{ .Site.Params.docs_version }}" target="_blank" rel="noopener">Bootstrap</a>,
+          the world’s most popular front-end open source toolkit.
+        </p>
+        <div class="d-flex flex-column flex-md-row mb-4">
+          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-primary btn-lg" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'get started'});">Get started</a>
+          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-secondary btn-lg ml-2" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'jumbotron', 'track_name':'download'});">Download</a>
+        </div>
+        <p class="text-muted mb-0">
+          Currently v{{ .Site.Params.current_version }}
+        </p>
+      </div>
+    </div>
+    <!-- Boosted mod: no ads -->
+  </div>
+</main>

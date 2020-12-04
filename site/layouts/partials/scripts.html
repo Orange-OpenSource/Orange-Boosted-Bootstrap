@@ -1,0 +1,131 @@
+<!-- Boosted mod -->
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+<!-- end mod -->
+<script src="{{ .Site.Params.cdn.jquery }}" {{ printf "integrity=%q" .Site.Params.cdn.jquery_hash | safeHTMLAttr }} crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+{{ if eq hugo.Environment "production" -}}
+  <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.min.js" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }} crossorigin="anonymous"></script>
+{{ else -}}
+  <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/boosted.bundle.js"></script>
+{{- end }}
+
+{{ if eq .Page.Layout "docs" -}}
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+{{- end }}
+
+{{- $vendor := resources.Match "js/vendor/*.js" -}}
+{{- $js := resources.Match "js/*.js" -}}
+{{- $targetDocsJSPath := printf "/docs/%s/assets/js/docs.js" .Site.Params.docs_version -}}
+{{- $docsJs := append $js $vendor | resources.Concat $targetDocsJSPath -}}
+
+{{- if eq hugo.Environment "production" -}}
+  {{- $docsJs = $docsJs | resources.Minify -}}
+{{- end }}
+
+<script src="{{ $docsJs.Permalink | relURL }}"></script>
+
+<!-- Boosted mod -->
+{{ if eq .Page.Layout "docs" -}}
+  {{ if eq .Page.Title "Orange megamenu" -}}
+  <script>$('#megamenu').megamenu();</script>
+  {{- end }}
+  {{ if eq .Page.Title "Carousel" -}}
+  <script>
+  $(document).ready(function () {
+    $("#carouselPlayButton").click(function () {
+      if ($("span",this).hasClass("icon-Pause")) {
+        $('#carouselExampleControls').carousel('pause');
+        $(this).attr("aria-label", "Play Carousel");
+        $(this).attr("title", "Play Carousel");
+        $("span",this).toggleClass("icon-Pause icon-Play");
+      } else {
+        $('#carouselExampleControls').carousel('cycle');
+        $(this).attr("aria-label", "Pause Carousel");
+        $(this).attr("title", "Pause Carousel");
+        $("span",this).toggleClass("icon-Play icon-Pause");
+      }
+    });
+  });
+</script>
+  {{- end }}
+{{- end }}
+
+{{ if (or (eq .Page.Title "Boostwatch") (and (eq .Page.Layout "docs") (eq .Page.Title "Custom carousel"))) -}}
+<script src="{{ .Site.Params.cdn.js_swiper }}" integrity="{{ .Site.Params.cdn.js_swiper_hash }}" crossorigin="anonymous"></script>
+<script>window.Swiper || document.write('<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/swiper.min.js"><\/script>')</script>
+<script>
+  new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 3500,
+    },
+    a11y: true,
+    keyboard: {
+      enabled: true
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: false,
+    breakpoints: {
+      767: {
+        paginationClickable: false,
+        freeMode: true,
+        freeModeMomentumRatio: .5,
+        centeredSlides: false,
+        slideToClickedSlide: false
+      }
+    }
+  });
+
+  $(document).ready(function () {
+    $("#swiperPlayButton").click(function () {
+      var MySwiper = document.querySelector('.swiper-container').swiper;
+      if ($("span",this).hasClass("icon-Pause")) {
+        MySwiper.autoplay.stop();
+        $(this).attr("aria-label", "Play Carousel");
+        $(this).attr("title", "Play Carousel");
+        $("span",this).toggleClass("icon-Pause icon-Play");
+      } else {
+        MySwiper.autoplay.start();
+        $(this).attr("aria-label", "Pause Carousel");
+        $(this).attr("title", "Pause Carousel");
+        $("span",this).toggleClass("icon-Play icon-Pause");
+      }
+    });
+  });
+</script>
+{{- end }}
+
+{{ if (or (eq .Page.Title "Boostwatch") (and (eq .Page.Layout "docs") (eq .Page.Title "Orange priority nav"))) -}}
+<script>$('.o-nav-local').prioritynav()</script>
+{{- end }}
+
+{{ if eq .Page.Title "Boostwatch" -}}
+<script src="{{ .Site.Params.cdn.tablesorter }}" integrity="{{ .Site.Params.cdn.tablesorter_hash }}" crossorigin="anonymous"></script>
+<script>window.jQuery.tablesorter || document.write('<script src="/docs/{{ .Site.Params.docs_version }}/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
+<script>
+  $(document).ready(function () {
+    $("#myTable").tablesorter({
+      sortList: [[4, 1]],
+      onRenderTemplate : function(i, t){
+        return '<span>' + t + '</span>'
+      }
+    })
+  })
+</script>
+{{- end }}
+<!-- end mod -->
