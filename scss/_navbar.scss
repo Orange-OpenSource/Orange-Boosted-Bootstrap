@@ -495,8 +495,8 @@
         // For nesting containers, have to redeclare for alignment purposes
         %container-nesting-#{$breakpoint} {
           flex-wrap: nowrap;
-          padding-right: $grid-gutter-width / 2; // Boosted mod
-          padding-left: $grid-gutter-width / 2; // Boosted mod
+          padding-right: $grid-gutter-width; // Boosted mod
+          padding-left: $grid-gutter-width; // Boosted mod
         }
 
         > .container,
