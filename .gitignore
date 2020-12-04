@@ -1,17 +1,8 @@
 # Ignore docs files
 /_gh_pages/
-/site/.jekyll-cache
-/site/.jekyll-metadata
-site/docs/**/dist
-docs/4.0/examples/rtl-*
 
 # Hugo folders
 /resources/
-
-# Ignore ruby/bundler files
-/.bundle/
-/vendor/
-/.ruby-version
 
 # Numerous always-ignore extensions
 *.diff
@@ -56,3 +47,6 @@ Thumbs.db
 /node_modules/
 .pa11y/
 pa11y-ci-results.json
+
+# Boosted mod
+docs/4.0/examples/rtl-*

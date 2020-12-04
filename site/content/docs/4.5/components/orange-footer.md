@@ -1,0 +1,120 @@
+---
+layout: docs
+title: Orange footer
+description: Standardised Orange footer
+group: components
+toc: true
+---
+
+## Usage
+
+Footer can be divided in three parts using `.o-footer-top`, `.o-footer-body` and `.o-footer-bottom` classes.
+Each footer part must use a `.container-fluid` or `.container` depending on page layout.
+
+Use `.nav` for lists. Use `.flex-column` for column layout. Use appropriate `.col-*` classes to fit all screen resolutions.
+
+According to the brand, Orange footer has black background and white text color.
+
+{{< example >}}
+<footer class="o-footer" role="contentinfo">
+  <h2 class="sr-only">Site map & informations</h2>
+  <div class="o-footer-top">
+    <div class="container-md">
+      <ul class="nav align-items-center">
+        <li class="nav-item mb-3 mb-md-0 pl-md-0 col-12 col-md-auto">Follow us</li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-linkedin" href="#"><span class="sr-only">Linkedin</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-youtube" href="#"><span class="sr-only">YouTube</span></a></li>
+        <li class="nav-item ml-2"><a class="nav-link btn btn-inverse btn-social btn-mail" href="#"><span class="sr-only">Mail</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="o-footer-body">
+    <div class="container-md">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <h3>Discover</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>Shop</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Natus error sit</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>Services</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>Support</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Doloremque</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Unde omnis istea</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Voluptatem</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Totam rem aperiam</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="o-footer-bottom">
+    <div class="container-md">
+      <ul class="nav flex-column flex-md-row">
+        <li class="nav-item my-1 my-md-0">
+          <a class="nav-link" href="#">
+            <span aria-hidden="true" class="icon-location-pin-compass"></span>
+            Store locator
+          </a>
+        </li>
+        <li class="nav-item my-1 my-md-0">
+          <a class="nav-link" href="#">
+            <span aria-hidden="true" class="icon-mobile-network-coverage"></span>
+            Coverage checker
+          </a>
+        </li>
+        <li class="nav-item my-1 my-md-0">
+          <a class="nav-link" href="#">
+            <span aria-hidden="true" class="icon-Colour-Call"></span>
+            Contact us
+          </a>
+        </li>
+        <li class="nav-item my-1 my-md-0">
+          <a class="nav-link" href="#">
+            <span aria-hidden="true" class="icon-child-protection"></span>
+            Child protection
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="o-footer-bottom">
+    <div class="container-md">
+      <ul class="nav flex-column flex-md-row">
+        <li class="nav-item mb-2 mt-1 mr-3 my-md-0 align-self-md-center">© Orange 2020</li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Jobs</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Advertise</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Terms & Conditions</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Privacy</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Cookies</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Access for all</a></li>
+        <li class="nav-item mb-2 mt-1 my-md-0"><a class="nav-link" href="#">Safety online</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+{{< /example >}}

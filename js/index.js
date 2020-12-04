@@ -22,7 +22,7 @@ import Otab from './src/o-tab'
 import PriorityNav from './src/o-priority-nav'
 import ScrollUp from './src/o-scroll-up'
 import Util from './src/util'
-import '../node_modules/focus-visible/dist/focus-visible.js'
+import 'focus-visible'
 
 export {
   Util,
@@ -41,5 +41,5 @@ export {
   Navbar,
   Otab,
   PriorityNav,
-  ScrollUp,
+  ScrollUp
 }

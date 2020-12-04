@@ -3,7 +3,7 @@
 **/vendor/
 /_gh_pages/
 /js/coverage/
-/site/sw.js
+/site/static/sw.js
 **/docs/**/demo/*
 **/docs/**/rtl-*/**/
 **/docs/**/examples/orange-*

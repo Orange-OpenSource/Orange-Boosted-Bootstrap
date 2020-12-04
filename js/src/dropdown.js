@@ -144,14 +144,14 @@ class Dropdown {
       return
     }
 
-    // Disable totally Popper.js for Dropdown in Navbar
+    // Totally disable Popper for Dropdowns in Navbar
     if (!this._inNavbar && usePopper) {
       /**
        * Check for Popper dependency
        * Popper - https://popper.js.org
        */
       if (typeof Popper === 'undefined') {
-        throw new TypeError('Bootstrap\'s dropdowns require Popper.js (https://popper.js.org/)')
+        throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)')
       }
 
       let referenceElement = this._element
@@ -338,7 +338,7 @@ class Dropdown {
       }
     }
 
-    // Disable Popper.js if we have a static display
+    // Disable Popper if we have a static display
     if (this._config.display === 'static') {
       popperConfig.modifiers.applyStyle = {
         enabled: false

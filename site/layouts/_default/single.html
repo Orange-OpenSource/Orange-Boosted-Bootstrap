@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  <body>
+    {{ partial "analytics-body" . }}
+    {{ partial "skippy" . }}
+
+    {{ partial "docs-navbar" . }}
+
+    <header class="py-5{{ if eq .Page.Title "Essentials" }} bg-success{{ end }}{{ if eq .Page.Title "Examples" }} bg-warning-light{{ end }}">
+      <div class="container-fluid pt-md-3 pb-md-4">
+        <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
+        <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
+        {{ if eq .Title "Examples" }}
+        <div class="d-flex flex-column flex-sm-row">
+          <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'zip-example', 'track_cible':'hero'});">Download examples</a>
+          <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-secondary mt-3 mt-sm-0 ml-sm-3 ml-md-5" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
+        </div>
+        {{- end -}}
+      </div>
+      <!-- Boosted mod: remove ads -->
+    </header>
+
+    <main class="bd-content container-fluid py-5" id="content" role="main">
+      {{ .Content }}
+    </main>
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>

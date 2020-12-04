@@ -37,8 +37,6 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     // IE11 doesn't recognise <main> / give the element an implicit "main" landmark.
     // Explicit role="main" is redundant for other modern browsers, but still valid.
     'The “main” role is unnecessary for element “main”.',
-    // For some reason, the validator thinks the dashboard example is written in Danish
-    'This document appears to be written in .*',
     // Redundant ARIA landmarks role
     'The “banner” role is unnecessary for element “header”.',
     'The “contentinfo” role is unnecessary for element “footer”.',
