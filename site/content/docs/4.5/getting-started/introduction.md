@@ -195,9 +195,9 @@ Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box
 
 For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/reboot" >}}) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
-### Ressource Hints
+### Resource Hints
 
-[Ressource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
+[Resource hints](https://www.w3.org/TR/resource-hints/) are meant to optimize browser loading strategy, by either preloading assets, prefetching DNS or preconnecting to domains — but please use them carefully and **only to hint resources you'll really be using soon**.
 It should be used for critical resources only.
 
 #### `preload` fonts
