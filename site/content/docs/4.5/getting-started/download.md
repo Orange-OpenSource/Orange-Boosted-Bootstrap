@@ -60,9 +60,9 @@ If you're using our compiled JavaScript and prefer to include Popper.js separate
 ```
 
 {{< callout info >}}
-### Ressource Hints
+### Resource Hints
 
-Make sure to use [`preconnect` ressource hint](https://www.w3.org/TR/resource-hints/#preconnect) where appropriate (**only** when given URL **will** be used).
+Make sure to use [`preconnect` resource hint](https://www.w3.org/TR/resource-hints/#preconnect) where appropriate (**only** when given URL **will** be used).
 {{< /callout >}}
 
 ## Package managers
