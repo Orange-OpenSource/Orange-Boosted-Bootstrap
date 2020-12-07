@@ -253,7 +253,7 @@
           top: 3.75rem;
         }
 
-        &:not(.minimized) .nav-link {
+        &:not(.minimized) .mega-menu .nav-link {
           padding: $navbar-padding-y map-get($spacers, 2);
         }
       }

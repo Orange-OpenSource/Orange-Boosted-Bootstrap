@@ -13,7 +13,7 @@
   }
 
   .navbar-nav {
-    margin: 0 -#{$navbar-supra-padding-x};
+    margin: 0 -#{map-get($spacers, 2)};
   }
 
   .nav-link {
