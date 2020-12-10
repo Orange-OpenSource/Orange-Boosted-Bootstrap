@@ -27,23 +27,24 @@
 // @code `local("Helvetica 55 Roman"), local("HelveticaNeue"),`
 // @code `local("Helvetica 75 Bold"), local("HelveticaNeue-Bold"),`
 
+// stylelint-disable font-family-name-quotes
 @import "functions";
 @import "variables";
 
 $font-path: "../fonts/" !default;
 
 @font-face {
-  font-family: HelvNeueOrange;
+  font-family: HelvNeueOrange#{"/*rtl:insert:Arabic*/"};
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$font-path}HelvNeue55_W1G.woff2") format("woff2");
+  src: url("#{$font-path}HelvNeue55_W1G.woff2") format("woff2") #{"/*rtl:url('#{$font-path}HelveticaNeueW20-55Roman.woff2') format('woff2')*/"};
 }
 
 @font-face {
-  font-family: HelvNeueOrange;
+  font-family: HelvNeueOrange#{"/*rtl:insert:Arabic*/"};
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$font-path}HelvNeue75_W1G.woff2") format("woff2");
+  src: url("#{$font-path}HelvNeue75_W1G.woff2") format("woff2") #{"/*rtl:url('#{$font-path}HelveticaNeueW20-75Bold.woff2') format('woff2')*/"};
 }

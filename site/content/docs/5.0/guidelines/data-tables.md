@@ -256,7 +256,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-labelledby="svg1">
             <title id="svg1">Thumbnail</title>
             <rect width="100%" height="100%" fill="#ffd200"></rect>
           </svg>
@@ -276,7 +276,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg2">
             <title id="svg2">Document</title>
             <path fill-rule="evenodd" d="M18.75 2.25v4.5c0 .828.597 1.5 1.333 1.5h4.667l-6-6zm1.5 7.5c-1.657 0-3-1.343-3-3v-4.5h-12v24c0 .828.672 1.5 1.5 1.5h18v-18h-4.5zm-10.5 1.5h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm3 4.5h-3c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
           </svg>
@@ -296,7 +296,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svg3">
             <title id="svg3">Thumbnail</title>
             <rect width="100%" height="100%" fill="#4bb4e6"></rect>
           </svg>
@@ -316,7 +316,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg4">
             <title id="svg4">Document</title>
             <path fill-rule="evenodd" d="M18.75 2.25v4.5c0 .828.597 1.5 1.333 1.5h4.667l-6-6zm1.5 7.5c-1.657 0-3-1.343-3-3v-4.5h-12v24c0 .828.672 1.5 1.5 1.5h18v-18h-4.5zm-10.5 1.5h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm3 4.5h-3c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
           </svg>
@@ -336,7 +336,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg5">
             <title id="svg5">Document</title>
             <path fill-rule="evenodd" d="M18.75 2.25v4.5c0 .828.597 1.5 1.333 1.5h4.667l-6-6zm1.5 7.5c-1.657 0-3-1.343-3-3v-4.5h-12v24c0 .828.672 1.5 1.5 1.5h18v-18h-4.5zm-10.5 1.5h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm3 4.5h-3c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
           </svg>
@@ -356,7 +356,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg6">
             <title id="svg6">Document</title>
             <path fill-rule="evenodd" d="M18.75 2.25v4.5c0 .828.597 1.5 1.333 1.5h4.667l-6-6zm1.5 7.5c-1.657 0-3-1.343-3-3v-4.5h-12v24c0 .828.672 1.5 1.5 1.5h18v-18h-4.5zm-10.5 1.5h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm3 4.5h-3c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
           </svg>
@@ -376,7 +376,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg7">
             <title id="svg7">Document</title>
             <path fill-rule="evenodd" d="M18.75 2.25v4.5c0 .828.597 1.5 1.333 1.5h4.667l-6-6zm1.5 7.5c-1.657 0-3-1.343-3-3v-4.5h-12v24c0 .828.672 1.5 1.5 1.5h18v-18h-4.5zm-10.5 1.5h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm3 4.5h-3c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
           </svg>
@@ -396,7 +396,7 @@ The selection behaviour isn't implemented yet. This feature will be delivered wi
           </div>
         </td>
         <td>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="mr-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="me-1" viewBox="0 0 30 30" role="img" aria-labelledby="svg8">
             <title id="svg8">Document</title>
             <path fill-rule="evenodd" d="M18.75 2.25v4.5c0 .828.597 1.5 1.333 1.5h4.667l-6-6zm1.5 7.5c-1.657 0-3-1.343-3-3v-4.5h-12v24c0 .828.672 1.5 1.5 1.5h18v-18h-4.5zm-10.5 1.5h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm0 3h10.5c.414 0 .75.336.75.75s-.336.75-.75.75H9.75c-.414 0-.75-.336-.75-.75s.336-.75.75-.75zm3 4.5h-3c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
           </svg>

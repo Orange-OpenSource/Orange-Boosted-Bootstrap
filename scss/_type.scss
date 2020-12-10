@@ -37,6 +37,8 @@
 .display-1 {
   @include font-size($h2-font-size);
   line-height: $h2-line-height;
+
+  /* rtl:remove */
   letter-spacing: $h2-spacing;
 }
 
@@ -45,17 +47,24 @@ h1,
 .display-3 {
   @include font-size($h3-font-size);
   line-height: $h3-line-height;
+
+  /* rtl:remove */
   letter-spacing: $mid-spacing;
 }
 
+/* rtl:begin:remove */
 .display-2 {
   letter-spacing: $h3-spacing;
 }
+
+/* rtl:end:remove */
 
 h2,
 .display-4 {
   @include font-size($h5-font-size);
   line-height: $h5-line-height;
+
+  /* rtl:remove */
   letter-spacing: $h5-spacing;
 }
 
@@ -63,6 +72,8 @@ h2,
   @include font-size($h6-font-size);
   font-weight: $lead-font-weight;
   line-height: $h6-line-height;
+
+  /* rtl:remove */
   letter-spacing: $h6-spacing;
 }
 
@@ -76,17 +87,23 @@ h2,
 
   .display-1 {
     @include font-size($display2-size);
+
+    /* rtl:remove */
     letter-spacing: $display2-spacing;
   }
 
   .display-2 {
     @include font-size($display3-size);
+
+    /* rtl:remove */
     letter-spacing: $display3-spacing;
   }
 
   h1,
   .display-3 {
     @include font-size($display4-size);
+
+    /* rtl:remove */
     letter-spacing: $display4-spacing;
   }
 
@@ -94,6 +111,8 @@ h2,
   .display-4 {
     @include font-size($h3-font-size);
     line-height: $h3-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h3-spacing;
   }
 
@@ -102,6 +121,8 @@ h2,
   .lead {
     @include font-size($h5-font-size);
     line-height: $h5-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h5-spacing;
   }
 }
@@ -109,58 +130,78 @@ h2,
 @include media-breakpoint-up(lg) {
   .display-1 {
     @include font-size($display1-size);
+
+    /* rtl:remove */
     letter-spacing: $display1-spacing;
   }
 
   .display-2 {
     @include font-size($display2-size);
+
+    /* rtl:remove */
     letter-spacing: $display2-spacing;
   }
 
   .display-3 {
     @include font-size($display3-size);
+
+    /* rtl:remove */
     letter-spacing: $display3-spacing;
   }
 
   .display-4 {
     @include font-size($display4-size);
     line-height: $display-line-height;
+
+    /* rtl:remove */
     letter-spacing: $display4-spacing;
   }
 
   h2 {
     @include font-size($h2-font-size);
     line-height: $h2-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h2-spacing;
   }
 
   h3 {
     @include font-size($h3-font-size);
     line-height: $h3-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h3-spacing;
   }
 
   h4 {
     @include font-size($h4-font-size);
     line-height: $h4-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h4-spacing;
   }
 
   h5 {
     @include font-size($h5-font-size);
     line-height: $h5-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h5-spacing;
   }
 
   h6 {
     @include font-size($h6-font-size);
     line-height: $h6-line-height;
+
+    /* rtl:remove */
     letter-spacing: $h6-spacing;
   }
 
   .lead {
     @include font-size($lead-font-size);
     line-height: $lead-line-height;
+
+    /* rtl:remove */
     letter-spacing: $lead-letter-spacing;
   }
 }
@@ -214,6 +255,8 @@ h2,
   margin-bottom: $blockquote-margin-y;
   @include font-size($blockquote-font-size);
   line-height: $blockquote-line-height; // Boosted mod
+
+  /* rtl:remove */
   letter-spacing: $blockquote-letter-spacing; // Boosted mod
 
   > :last-child {
@@ -227,6 +270,8 @@ h2,
   @include font-size($blockquote-footer-font-size);
   line-height: $line-height-sm; // Boosted mod
   color: $blockquote-footer-color;
+
+  /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
 
   &::before {

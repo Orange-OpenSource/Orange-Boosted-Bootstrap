@@ -28,7 +28,7 @@ Boosted also provides Helvetica Neue fonts, **limited to Orange brand usage**: [
 
 ### JS
 
-Many of our components require the use of JavaScript to function. Specifically, they require our own JavaScript plugins and [Popper.js](https://popper.js.org/). Place **one of following `<script>`s** near the end of your pages, right before the closing `</body>` tag, to enable them.
+Many of our components require the use of JavaScript to function. Specifically, they require our own JavaScript plugins and [Popper](https://popper.js.org/). Place **one of following `<script>`s** near the end of your pages, right before the closing `</body>` tag, to enable them.
 
 #### Bundle
 
@@ -40,7 +40,7 @@ Include every Boosted JavaScript plugin and dependency with one of our two bundl
 
 #### Separate
 
-If you decide to go with the separate scripts solution, Popper.js must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
+If you decide to go with the separate scripts solution, Popper must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
 
 ```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
@@ -53,7 +53,7 @@ If you use `<script type="module">`, please refer to our [using Boosted as a mod
 
 #### Components
 
-Curious which components explicitly require our JavaScript and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -62,11 +62,11 @@ Curious which components explicitly require our JavaScript and Popper.js? Click 
 - Buttons for toggling states and checkbox/radio functionality
 - Carousel for all slide behaviors, controls, and indicators
 - Collapse for toggling visibility of content
-- Dropdowns for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
+- Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
 - Modals for displaying, positioning, and scroll behavior
 - Navbar for extending our Collapse plugin to implement responsive behavior
 - Toasts for displaying and dismissing
-- Tooltips and popovers for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
+- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
 - Scrollspy for scroll behavior and navigation updates
 {{< /markdown >}}
 </details>
@@ -119,10 +119,10 @@ Be sure to have your pages set up with the latest design and development standar
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Boosted Bundle with Popper.js -->
+    <!-- Option 1: Boosted Bundle with Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper.js and Boosted JS
+    <!-- Option 2: Separate Popper and Boosted JS
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
     -->

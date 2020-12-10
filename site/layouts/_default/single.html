@@ -7,7 +7,7 @@
         {{ if eq .Title "Examples" }}
         <div class="d-flex flex-column flex-sm-row">
           <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'zip-example', 'track_cible':'hero'});">Download Examples</a>
-          <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-primary mt-3 mt-sm-0 ml-sm-3" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
+          <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-primary mt-3 mt-sm-0 ms-sm-3" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'example', 'track_cible':'hero'});">Download source code</a>
         </div>
         {{ end }}
         {{ partial "ads" . }}

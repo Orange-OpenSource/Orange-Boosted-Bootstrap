@@ -52,18 +52,22 @@
   colors:
     - name: Green
       class: green
+      level: success
       hex: "#32c832"
       variable: $functional-green
     - name: Blue
       class: blue
+      level: info
       hex: "#527edb"
       variable: $functional-blue
     - name: Yellow
       class: yellow
+      level: warning
       hex: "#fc0"
       variable: $functional-yellow
     - name: Red
       class: red
+      level: danger
       hex: "#cd3c14"
       variable: $functional-red
 - category: Grays

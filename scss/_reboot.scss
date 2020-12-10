@@ -54,6 +54,8 @@ body {
   line-height: $line-height-base;
   color: $body-color;
   text-align: $body-text-align;
+
+  /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
   background-color: $body-bg; // 2
   -webkit-text-size-adjust: 100%; // 3
@@ -126,6 +128,8 @@ hr:not([size]) {
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
   color: $headings-color;
+
+  /* rtl:remove */
   letter-spacing: $letter-spacing-base; // Boosted mod
   -webkit-font-smoothing: antialiased;  // Boosted mod
   -moz-osx-font-smoothing: grayscale;   // Boosted mod
@@ -136,6 +140,8 @@ h1 {
   @extend %heading;
   @include font-size($h4-font-size);
   line-height: $h4-line-height;
+
+  /* rtl:remove */
   letter-spacing: $h4-spacing;
 }
 
@@ -143,6 +149,8 @@ h2 {
   @extend %heading;
   @include font-size($h5-font-size);
   line-height: $h5-line-height;
+
+  /* rtl:remove */
   letter-spacing: $h5-spacing;
 }
 
@@ -355,6 +363,8 @@ kbd,
 samp {
   font-family: $font-family-code;
   @include font-size(1em); // Correct the odd `em` font sizing in all browsers.
+  direction: ltr #{"/* rtl:ignore */"};
+  unicode-bidi: bidi-override;
 }
 
 // 1. Remove browser default top margin
@@ -446,6 +456,8 @@ caption {
   font-weight: $font-weight-bold;       // Boosted mod
   color: $table-caption-color;
   text-align: left;
+
+  /* rtl:remove */
   letter-spacing: $h1-spacing;          // Boosted mod
   -webkit-font-smoothing: antialiased;  // Boosted mod
   -moz-osx-font-smoothing: grayscale;   // Boosted mod
@@ -511,6 +523,8 @@ textarea {
   font-family: inherit;
   @include font-size(inherit);
   line-height: inherit;
+
+  /* rtl:remove */
   letter-spacing: inherit; // Boosted mod
   box-shadow: none; // Boosted mod: prevent native validation styles to apply
 }
@@ -634,6 +648,20 @@ legend {
   outline-offset: -#{$outline-offset}; // 1 // Boosted mod
   -webkit-appearance: textfield; // 2
 }
+
+// 1. A few input types should stay LTR
+// See https://rtlstyling.com/posts/rtl-styling#form-inputs
+// 2. RTL only output
+// See https://rtlcss.com/learn/usage-guide/control-directives/#raw
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
 
 // Remove the inner padding in Chrome and Safari on macOS.
 

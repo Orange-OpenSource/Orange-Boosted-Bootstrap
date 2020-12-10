@@ -207,23 +207,23 @@ However, we recommend to use `<label>`s as the `.list-group-item` for large hit 
 {{< example >}}
 <div class="list-group">
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Cras justo odio
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Dapibus ac facilisis in
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Morbi leo risus
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Porta ac consectetur ac
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Vestibulum at eros
   </label>
 </div>
@@ -317,8 +317,8 @@ var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new boosted.Tab(triggerEl)
 
-  triggerEl.addEventListener('click', function (e) {
-    e.preventDefault()
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
     tabTrigger.show()
   })
 })
@@ -440,8 +440,8 @@ If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will 
 
 ```js
 var tabEl = document.querySelector('a[data-bs-toggle="list"]')
-tabEl.addEventListener('shown.bs.tab', function (e) {
-  e.target // newly activated tab
-  e.relatedTarget // previous active tab
+tabEl.addEventListener('shown.bs.tab', function (event) {
+  event.target // newly activated tab
+  event.relatedTarget // previous active tab
 })
 ```

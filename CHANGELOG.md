@@ -1,5 +1,5 @@
-<a name="5.0.0-alpha3"></a>
-# [5.0.0-alpha3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha2...v5.0.0-alpha3) (2020-11-12)
+<a name="5.0.0-beta1"></a>
+# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha2...v5.0.0-beta1) (2020-11-12)
 
 
 ## Bug Fixes

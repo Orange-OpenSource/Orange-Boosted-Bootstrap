@@ -92,6 +92,10 @@
     height: $alert-logo-size;
     content: "";
     background-repeat: no-repeat;
+
+    /* rtl:raw:
+    background-position: top right;
+    */
     background-size: $alert-logo-size;
   }
 }

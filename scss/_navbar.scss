@@ -63,13 +63,15 @@
   // End mod
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin: map-get($spacers, 2) $navbar-brand-margin-right; // Boosted mod
+  margin: map-get($spacers, 2) $navbar-brand-margin-end; // Boosted mod
   @include font-size($navbar-brand-font-size);
   // Boosted mod
   font-weight: $font-weight-bold;
   line-height: .75;
   // End mod
   text-decoration: if($link-decoration == none, null, none);
+
+  /* rtl:remove */
   letter-spacing: inherit; // Boosted mod
   white-space: nowrap;
   @include transition($navbar-brand-transition); // Boosted mod
@@ -80,14 +82,15 @@
   }
 
   // Boosted mod
-  // Ensure headings variant align consistently
+  //// Ensure headings variant align consistently
   h1,
   [class*="display-"],
   .h1, .h2, .h3, .h4, .h5, .h6 { // stylelint-disable-line selector-list-comma-newline-after
+    margin: 0 0 0 $spacer;
     line-height: inherit;
   }
 
-  // Increase touch target size
+  //// Increase touch target size
   &::before {
     position: absolute;
     top: $navbar-brand-hit-area-offset;
@@ -98,15 +101,11 @@
     transform: translate3d(-50%, -50%, 0);
   }
 
-  // Orange's master logo
+  //// Orange's master logo
   img {
     width: $navbar-brand-logo-minimized-height;
     height: $navbar-brand-logo-minimized-height;
     @include transition($navbar-brand-logo-transition);
-
-    + * {
-      margin: $navbar-brand-name-margin;
-    }
   }
   // End mod
 }
@@ -298,10 +297,6 @@
           img {
             width: $navbar-brand-logo-height;
             height: $navbar-brand-logo-height;
-
-            + * {
-              margin-left: $navbar-padding-y;
-            }
           }
         }
         // End mod
