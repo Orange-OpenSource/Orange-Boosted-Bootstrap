@@ -13,7 +13,7 @@ Download ready-to-use compiled code for **Boosted v{{< param current_version >}}
 - Compiled and minified CSS bundles (see [CSS files comparison]({{< docsref "/getting-started/contents#css-files" >}}))
 - Compiled and minified JavaScript plugins (see [JS files comparison]({{< docsref "/getting-started/contents#js-files" >}}))
 
-This doesn't include documentation, source files, or any optional JavaScript dependencies like Popper.js.
+This doesn't include documentation, source files, or any optional JavaScript dependencies like Popper.
 
 <a href="{{< param "download.dist" >}}" class="btn btn-primary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download</a>
 
@@ -44,7 +44,7 @@ Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached v
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-If you're using our compiled JavaScript and prefer to include Popper.js separately, add Popper.js before our JS, via a CDN preferably.
+If you're using our compiled JavaScript and prefer to include Popper separately, add Popper before our JS, via a CDN preferably.
 
 ```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>

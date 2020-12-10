@@ -18,6 +18,6 @@
 
 - group: v5.x
   baseurl: "https://boosted.orange.com/docs"
-  description: "Current major release. Last update was v5.0.0-alpha3."
+  description: "Current major release. Last update was v5.0.0-beta1."
   versions:
     - v: "5.0"

@@ -17,12 +17,12 @@ toc: true
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <div class="col text-center text-md-left">
+  <div class="col text-center text-md-start">
     <div class="spinner-border text-primary" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <div class="col text-center text-md-left">
+  <div class="col text-center text-md-start">
     <div class="spinner-border spinner-border-sm text-primary" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
@@ -33,12 +33,12 @@ toc: true
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <div class="col text-center text-md-left">
+  <div class="col text-center text-md-start">
     <div class="spinner-border text-secondary" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <div class="col text-center text-md-left">
+  <div class="col text-center text-md-start">
     <div class="spinner-border spinner-border-sm text-secondary" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>

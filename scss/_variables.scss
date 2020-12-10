@@ -445,7 +445,7 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      HelvNeueOrange, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
+$font-family-sans-serif:      HelvNeueOrange#{"/*rtl:insert:Arabic*/"}, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
@@ -740,7 +740,7 @@ $input-transition:                      border-color $transition-duration $trans
 
 $form-check-input-width:                  1em !default;
 $form-check-min-height:                   $font-size-base * $input-btn-line-height !default;
-$form-check-padding-left:                 $form-check-input-width + .5em !default;
+$form-check-padding-start:                $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
@@ -774,7 +774,7 @@ $form-check-label-disabled-opacity:        null !default;
 $form-check-btn-check-disabled-opacity:    null !default;
 
 $form-switch-width:               $spacer * 3 !default;
-$form-switch-padding-left:        $form-switch-width + .5rem !default;
+$form-switch-padding-start:       $form-switch-width + .5rem !default;
 // Boosted mod
 $form-switch-bg-image:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $form-switch-bg-position:         right .5rem top 50% !default;
@@ -788,7 +788,7 @@ $form-switch-disabled-bg-image:   $form-check-input-disabled-bg-image !default; 
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default;
 $form-switch-checked-bg-position: $border-width * 3 50% !default;
 
-$form-check-inline-margin-right:        1rem !default;
+$form-check-inline-margin-end:    1rem !default;
 
 $input-group-addon-padding-y:           $input-padding-y !default;
 $input-group-addon-padding-x:           $input-padding-x !default;
@@ -934,7 +934,6 @@ $navbar-icon-size:                     $spacer * 1.5 !default;
 $navbar-brand-logo-height:             add($spacer * 1.5, $spacer) !default;
 $navbar-brand-hit-area-offset:         add($spacer / 4, $spacer / 2) !default;
 $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
-$navbar-brand-name-margin:             0 $spacer 0 add($spacer / 2, $spacer / 4) !default;
 //$navbar-supra-padding-y:               $navbar-brand-logo-height / 10 !default;
 //$navbar-supra-padding-x:               $spacer / 4 * 1.5 !default;
 $navbar-transition-duration:           $transition-duration !default;
@@ -948,7 +947,7 @@ $navbar-active-transition:             bottom $navbar-transition-duration $navba
 $navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $navbar-brand-padding-y:            null !default;
-$navbar-brand-margin-right:         $spacer / 4 !default;
+$navbar-brand-margin-end:           $spacer / 4 !default;
 
 $navbar-toggler-padding-y:          .5rem !default;
 $navbar-toggler-padding-x:          .5rem !default;
@@ -1040,7 +1039,7 @@ $pagination-bg:                     $white !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-radius:          null !default;
 $pagination-margin-y:               $spacer !default; // Boosted mod
-$pagination-margin-left:            $spacer / 2 !default;
+$pagination-margin-start:           $spacer / 2 !default;
 $pagination-border-color:           transparent !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
@@ -1120,7 +1119,7 @@ $accordion-button-active-bg:              null !default;
 $accordion-button-active-color:           $accessible-orange !default;
 
 // Boosted mod: use caret
-$accordion-icon-transform:                rotate(180deg) !default;
+$accordion-icon-transform:                scaleY(-1) !default;
 
 // Boosted mod: accordion sizes
 $accordion-button-font-size:              $h3-font-size !default;
@@ -1196,6 +1195,7 @@ $toast-border-width:                1px !default;
 $toast-border-color:                rgba(0, 0, 0, .1) !default;
 $toast-border-radius:               $border-radius !default;
 $toast-box-shadow:                  $box-shadow !default;
+$toast-spacing:                     $container-padding-x !default;
 
 $toast-header-color:                null !default;
 $toast-header-background-color:     rgba($white, .85) !default;
@@ -1350,7 +1350,8 @@ $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          null !default;
 $breadcrumb-active-color:           null !default;
 $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14' width='7' height='10'><path d='M-.4 12l2 2 7-7-7-7-2 2 5 5z'/></svg>") !default;
-$breadcrumb-border-radius:          $border-radius !default;
+$breadcrumb-divider-flipped:        $breadcrumb-divider !default;
+$breadcrumb-border-radius:          null !default;
 
 
 // Carousel

@@ -21,8 +21,8 @@ Images in Boosted are made responsive with `.img-fluid`. This applies `max-width
 Align images with the [helper float classes]({{< docsref "/utilities/float" >}}) or [text alignment classes]({{< docsref "/utilities/text#text-alignment" >}}). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="rounded float-left" >}}
-{{< placeholder width="200" height="200" class="rounded float-right" >}}
+{{< placeholder width="200" height="200" class="rounded float-start" >}}
+{{< placeholder width="200" height="200" class="rounded float-end" >}}
 {{< /example >}}
 
 

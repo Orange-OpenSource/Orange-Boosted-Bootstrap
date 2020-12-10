@@ -18,11 +18,6 @@
 </p>
 
 
-## Bootstrap 4
-
-Our default branch is for development of our upcoming Bootstrap 5 release. Head to the [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Bootstrap 4.
-
-
 ## Table of contents
 
 - [Quick start](#quick-start)
@@ -41,11 +36,11 @@ Our default branch is for development of our upcoming Bootstrap 5 release. Head 
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-alpha3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-beta1.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@next`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@next`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0-alpha3`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0-beta1`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
 Read the [Getting started page](https://v5-dev--boosted.netlify.app/docs/5.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
@@ -73,37 +68,52 @@ Within the download you'll find the following directories and files, logically g
 
 ```text
 boosted/
-└── dist/
-    ├── css/
-    │   ├── boosted-grid.css
-    │   ├── boosted-grid.css.map
-    │   ├── boosted-grid.min.css
-    │   ├── boosted-grid.min.css.map
-    │   ├── boosted-reboot.css
-    │   ├── boosted-reboot.css.map
-    │   ├── boosted-reboot.min.css
-    │   ├── boosted-reboot.min.css.map
-    │   ├── boosted-utilities.css
-    │   ├── boosted-utilities.css.map
-    │   ├── boosted-utilities.min.css
-    │   ├── boosted-utilities.min.css.map
-    │   ├── boosted.css
-    │   ├── boosted.css.map
-    │   ├── boosted.min.css
-    │   └── boosted.min.css.map
-    └── js/
-        ├── boosted.bundle.js
-        ├── boosted.bundle.js.map
-        ├── boosted.bundle.min.js
-        ├── boosted.bundle.min.js.map
-        ├── boosted.esm.js
-        ├── boosted.esm.js.map
-        ├── boosted.esm.min.js
-        ├── boosted.esm.min.js.map
-        ├── boosted.js
-        ├── boosted.js.map
-        ├── boosted.min.js
-        └── boosted.min.js.map
+├── css/
+│   ├── boosted-grid.css
+│   ├── boosted-grid.css.map
+│   ├── boosted-grid.min.css
+│   ├── boosted-grid.min.css.map
+│   ├── boosted-grid.rtl.css
+│   ├── boosted-grid.rtl.css.map
+│   ├── boosted-grid.rtl.min.css
+│   ├── boosted-grid.rtl.min.css.map
+│   ├── boosted-reboot.css
+│   ├── boosted-reboot.css.map
+│   ├── boosted-reboot.min.css
+│   ├── boosted-reboot.min.css.map
+│   ├── boosted-reboot.rtl.css
+│   ├── boosted-reboot.rtl.css.map
+│   ├── boosted-reboot.rtl.min.css
+│   ├── boosted-reboot.rtl.min.css.map
+│   ├── boosted-utilities.css
+│   ├── boosted-utilities.css.map
+│   ├── boosted-utilities.min.css
+│   ├── boosted-utilities.min.css.map
+│   ├── boosted-utilities.rtl.css
+│   ├── boosted-utilities.rtl.css.map
+│   ├── boosted-utilities.rtl.min.css
+│   ├── boosted-utilities.rtl.min.css.map
+│   ├── boosted.css
+│   ├── boosted.css.map
+│   ├── boosted.min.css
+│   ├── boosted.min.css.map
+│   ├── boosted.rtl.css
+│   ├── boosted.rtl.css.map
+│   ├── boosted.rtl.min.css
+│   └── boosted.rtl.min.css.map
+└── js/
+    ├── boosted.bundle.js
+    ├── boosted.bundle.js.map
+    ├── boosted.bundle.min.js
+    ├── boosted.bundle.min.js.map
+    ├── boosted.esm.js
+    ├── boosted.esm.js.map
+    ├── boosted.esm.min.js
+    ├── boosted.esm.min.js.map
+    ├── boosted.js
+    ├── boosted.js.map
+    ├── boosted.min.js
+    └── boosted.min.js.map
 ```
 
 We provide compiled CSS and JS (`boosted.*`), as well as compiled and minified CSS and JS (`boosted.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`boosted.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`boosted.bundle.js` and minified `boosted.bundle.min.js`) include [Popper](https://popper.js.org/).
@@ -118,7 +128,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 Boosted's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://boosted.orange.com/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/assets/js/src/search.js` file.
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/assets/js/search.js` file.
 
 ### Running documentation locally
 

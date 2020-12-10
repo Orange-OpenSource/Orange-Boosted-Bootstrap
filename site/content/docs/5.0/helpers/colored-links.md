@@ -13,7 +13,3 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 <a href="#" class="link-light">Light link</a>
 {{< /example >}}
 
-{{< callout info >}}
-Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
-{{< /callout >}}
-

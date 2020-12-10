@@ -5,12 +5,12 @@
 .form-check {
   display: block;
   min-height: $form-check-min-height;
-  padding-left: $form-check-padding-left;
+  padding-left: $form-check-padding-start;
   margin-bottom: $form-check-margin-bottom;
 
   .form-check-input {
     float: left;
-    margin-left: $form-check-padding-left * -1;
+    margin-left: $form-check-padding-start * -1;
   }
 }
 
@@ -147,12 +147,12 @@
   // Boosted mod
   --o-switch-gradient: #{linear-gradient(to right, $white $form-switch-bg-square-size, transparent)};
   min-height: $form-switch-width / 2;
-  padding-left: $form-switch-padding-left;
+  padding-left: $form-switch-padding-start;
 
   .form-check-input {
     width: $form-switch-width;
     height: $form-switch-width / 2;
-    margin-left: $form-switch-padding-left * -1;
+    margin-left: $form-switch-padding-start * -1;
     background-color: $black;
     background-image: escape-svg($form-switch-bg-image), var(--o-switch-gradient);
     background-position: $form-switch-bg-position, 0 0;
@@ -215,7 +215,7 @@
 
 .form-check-inline {
   display: inline-block;
-  margin-right: $form-check-inline-margin-right;
+  margin-right: $form-check-inline-margin-end;
 }
 
 .btn-check {

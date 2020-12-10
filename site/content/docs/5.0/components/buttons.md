@@ -89,7 +89,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Create responsive stacks of full-width, "block buttons" like those in Boosted 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -120,7 +120,7 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary mr-md-2" type="button">Button</button>
+  <button class="btn btn-primary me-md-2" type="button">Button</button>
   <button class="btn btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}

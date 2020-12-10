@@ -47,7 +47,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
       <figure class="figure d-flex bg-dark">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
-          <span class="h5 ml-2 mb-0 align-self-end">
+          <span class="h5 ms-2 mb-0 align-self-end">
             <span class="visually-hidden">Orange </span>
             Business<br>Services
           </span>
@@ -61,7 +61,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
       <figure class="figure d-flex border border-1">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
           <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="" loading="lazy">
-          <span class="h5 ml-2 mb-0 align-self-end">
+          <span class="h5 ms-2 mb-0 align-self-end">
             <span class="visually-hidden">Orange </span>
             Business<br>Services
           </span>
@@ -74,7 +74,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
     <div class="ratio ratio-16x9">
       <figure class="figure d-flex bg-dark">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
-          <span class="h5 mr-2 mb-0 align-self-end text-right">
+          <span class="h5 me-2 mb-0 align-self-end text-end">
             <span class="visually-hidden">Orange </span>
             Business<br>Services
           </span>
@@ -88,7 +88,7 @@ Boosted uses —and recommends to use— **a single SVG file for both logos**, s
     <div class="ratio ratio-16x9">
       <figure class="figure d-flex border border-1">
         <div class="figure-img m-auto d-inline-flex align-items-baseline">
-          <span class="h5 mr-2 mb-0 align-self-end text-right">
+          <span class="h5 me-2 mb-0 align-self-end text-end">
             <span class="visually-hidden">Orange </span>
             Business<br>Services
           </span>
@@ -109,7 +109,7 @@ Boosted [flex]({{< docsref "/utilities/flex" >}}) and [spacing]({{< docsref "/ut
 {{< example show_preview="false" >}}
 <div class="d-inline-flex align-items-baseline">
   <img id="obs" src="orange-logo.svg" width="50" height="50" alt="" loading="lazy">
-  <span class="h5 ml-2 mb-0 align-self-end">
+  <span class="h5 ms-2 mb-0 align-self-end">
     <span class="visually-hidden">Orange </span>
     Business<br>Services
   </span>

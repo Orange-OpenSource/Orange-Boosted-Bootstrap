@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v5.0.0-alpha3 (https://boosted.orange.com/)
+ * Boosted Grid v5.0.0-beta1 (https://boosted.orange.com/)
  * Copyright 2014-2020 The Boosted Authors
  * Copyright 2014-2020 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Grid v5.0.0-alpha3 (https://getbootstrap.com)
+ * Bootstrap Grid v5.0.0-beta1 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -56,21 +56,21 @@ $utilities: map-get-multiple(
     "margin-top",
     "margin-right",
     "margin-bottom",
-    "margin-left",
+    "margin-start",
     "negative-margin",
     "negative-margin-x",
     "negative-margin-y",
     "negative-margin-top",
-    "negative-margin-right",
+    "negative-margin-end",
     "negative-margin-bottom",
-    "negative-margin-left",
+    "negative-margin-start",
     "padding",
     "padding-x",
     "padding-y",
     "padding-top",
-    "padding-right",
+    "padding-end",
     "padding-bottom",
-    "padding-left",
+    "padding-start",
   )
 );
 

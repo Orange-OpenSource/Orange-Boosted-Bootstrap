@@ -1,6 +1,6 @@
 .pagination {
   display: flex;
-  flex-wrap: if($pagination-margin-left == (-$pagination-border-width), null, wrap); // Boosted mod
+  flex-wrap: if($pagination-margin-start == (-$pagination-border-width), null, wrap); // Boosted mod
   margin: $pagination-margin-y 0; // Boosted mod
   @include list-unstyled();
 }
@@ -54,7 +54,7 @@
 
 .page-item {
   &:not(:first-child) .page-link {
-    margin-left: $pagination-margin-left;
+    margin-left: $pagination-margin-start;
   }
 
   &.active .page-link {
@@ -121,6 +121,10 @@
   &:first-child {
     .page-link::before {
       margin-left: -$pagination-icon-margin;
+
+      /* rtl:raw:
+      transform: scaleX(-1);
+      */
     }
 
     .has-label::before {
@@ -132,7 +136,9 @@
     .page-link::before {
       order: 1;
       margin-right: -$pagination-icon-margin;
-      transform: rotate(180deg);
+
+      /* rtl:remove */
+      transform: scaleX(-1);
     }
 
     .has-label::before {

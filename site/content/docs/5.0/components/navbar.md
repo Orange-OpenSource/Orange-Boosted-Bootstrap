@@ -44,7 +44,7 @@ Here's an example of all the sub-components included in a responsive light-theme
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -67,7 +67,7 @@ Here's an example of all the sub-components included in a responsive light-theme
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
@@ -75,7 +75,7 @@ Here's an example of all the sub-components included in a responsive light-theme
 </nav>
 {{< /example >}}
 
-This example uses [color]({{< docsref "/utilities/colors" >}}) (`bg-light`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) utility classes.
+This example uses [color]({{< docsref "/utilities/colors" >}}) (`bg-light`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `me-sm-0`, `my-sm-0`) utility classes.
 
 ### Brand
 
@@ -211,7 +211,7 @@ Place various form controls and components within a navbar:
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <form class="d-flex">
-      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
@@ -227,7 +227,7 @@ Immediate child elements of `.navbar` use flex layout and will default to `justi
       <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
     </a>
     <form class="d-flex">
-      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
@@ -252,7 +252,7 @@ Various buttons are supported as part of these navbar forms, too. This is also a
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid justify-content-start">
-    <button class="btn btn-primary mr-2" type="button">Main button</button>
+    <button class="btn btn-primary me-2" type="button">Main button</button>
     <button class="btn btn-sm btn-primary" type="button">Smaller button</button>
   </form>
 </nav>
@@ -284,7 +284,7 @@ Mix and match with other components and utilities as needed.
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -317,7 +317,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-dark">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -332,7 +332,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-secondary" type="submit">Search</button>
         </form>
       </div>
@@ -348,7 +348,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-light">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -363,7 +363,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-secondary" type="submit">Search</button>
         </form>
       </div>
