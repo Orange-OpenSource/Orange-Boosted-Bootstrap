@@ -1,16 +1,16 @@
 /*!
-  * Boosted v5.0.0-alpha3 (https://boosted.orange.com/)
+  * Boosted v5.0.0-beta1 (https://boosted.orange.com/)
   * Copyright 2015-2020 The Boosted Authors
   * Copyright 2015-2020 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap tab.js v5.0.0-alpha3 (https://boosted.orange.com/)
+  * Bootstrap tab.js v5.0.0-beta1 (https://boosted.orange.com/)
   * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js')) :
-  typeof define === 'function' && define.amd ? define(['./dom/data.js', './dom/event-handler.js', './dom/selector-engine.js'], factory) :
+  typeof define === 'function' && define.amd ? define(['./dom/data', './dom/event-handler', './dom/selector-engine'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Tab = factory(global.Data, global.EventHandler, global.SelectorEngine));
 }(this, (function (Data, EventHandler, SelectorEngine) { 'use strict';
 
@@ -20,9 +20,31 @@
   var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
   var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
 
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
+  function _inheritsLoose(subClass, superClass) {
+    subClass.prototype = Object.create(superClass.prototype);
+    subClass.prototype.constructor = subClass;
+    subClass.__proto__ = superClass;
+  }
+
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-alpha3): util/index.js
+   * Bootstrap (v5.0.0-beta1): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -30,7 +52,7 @@
   var TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   var getSelector = function getSelector(element) {
-    var selector = element.getAttribute('data-target');
+    var selector = element.getAttribute('data-bs-target');
 
     if (!selector || selector === '#') {
       var hrefAttr = element.getAttribute('href');
@@ -55,8 +77,8 @@
         transitionDuration = _window$getComputedSt.transitionDuration,
         transitionDelay = _window$getComputedSt.transitionDelay;
 
-    var floatTransitionDuration = parseFloat(transitionDuration);
-    var floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
+    var floatTransitionDuration = Number.parseFloat(transitionDuration);
+    var floatTransitionDelay = Number.parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
 
     if (!floatTransitionDuration && !floatTransitionDelay) {
       return 0;
@@ -65,7 +87,7 @@
 
     transitionDuration = transitionDuration.split(',')[0];
     transitionDelay = transitionDelay.split(',')[0];
-    return (parseFloat(transitionDuration) + parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
+    return (Number.parseFloat(transitionDuration) + Number.parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
   };
 
   var triggerTransitionEnd = function triggerTransitionEnd(element) {
@@ -98,7 +120,7 @@
     var _window = window,
         jQuery = _window.jQuery;
 
-    if (jQuery && !document.body.hasAttribute('data-no-jquery')) {
+    if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
       return jQuery;
     }
 
@@ -113,9 +135,67 @@
     }
   };
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  var isRTL = document.documentElement.dir === 'rtl';
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  var defineJQueryPlugin = function defineJQueryPlugin(name, plugin) {
+    onDOMContentLoaded(function () {
+      var $ = getjQuery();
+      /* istanbul ignore if */
+
+      if ($) {
+        var JQUERY_NO_CONFLICT = $.fn[name];
+        $.fn[name] = plugin.jQueryInterface;
+        $.fn[name].Constructor = plugin;
+
+        $.fn[name].noConflict = function () {
+          $.fn[name] = JQUERY_NO_CONFLICT;
+          return plugin.jQueryInterface;
+        };
+      }
+    });
+  };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var VERSION = '5.0.0-beta1';
+
+  var BaseComponent = /*#__PURE__*/function () {
+    function BaseComponent(element) {
+      if (!element) {
+        return;
+      }
+
+      this._element = element;
+      Data__default['default'].setData(element, this.constructor.DATA_KEY, this);
+    }
+
+    var _proto = BaseComponent.prototype;
+
+    _proto.dispose = function dispose() {
+      Data__default['default'].removeData(this._element, this.constructor.DATA_KEY);
+      this._element = null;
+    }
+    /** Static */
+    ;
+
+    BaseComponent.getInstance = function getInstance(element) {
+      return Data__default['default'].getData(element, this.DATA_KEY);
+    };
+
+    _createClass(BaseComponent, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+
+    return BaseComponent;
+  }();
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -123,7 +203,6 @@
    */
 
   var NAME = 'tab';
-  var VERSION = '5.0.0-alpha3';
   var DATA_KEY = 'bs.tab';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -141,7 +220,7 @@
   var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
   var SELECTOR_ACTIVE = '.active';
   var SELECTOR_ACTIVE_UL = ':scope > li > .active';
-  var SELECTOR_DATA_TOGGLE = '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]';
+  var SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]';
   var SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
   var SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active';
   /**
@@ -150,12 +229,12 @@
    * ------------------------------------------------------------------------
    */
 
-  var Tab = /*#__PURE__*/function () {
-    function Tab(element) {
-      this._element = element;
-      Data__default['default'].setData(this._element, DATA_KEY, this);
-    } // Getters
+  var Tab = /*#__PURE__*/function (_BaseComponent) {
+    _inheritsLoose(Tab, _BaseComponent);
 
+    function Tab() {
+      return _BaseComponent.apply(this, arguments) || this;
+    }
 
     var _proto = Tab.prototype;
 
@@ -210,11 +289,6 @@
       } else {
         complete();
       }
-    };
-
-    _proto.dispose = function dispose() {
-      Data__default['default'].removeData(this._element, DATA_KEY);
-      this._element = null;
     } // Private
     ;
 
@@ -297,19 +371,16 @@
       });
     };
 
-    Tab.getInstance = function getInstance(element) {
-      return Data__default['default'].getData(element, DATA_KEY);
-    };
-
     _createClass(Tab, null, [{
-      key: "VERSION",
+      key: "DATA_KEY",
+      // Getters
       get: function get() {
-        return VERSION;
+        return DATA_KEY;
       }
     }]);
 
     return Tab;
-  }();
+  }(BaseComponent);
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation
@@ -329,21 +400,7 @@
    * add .Tab to jQuery only if jQuery is present
    */
 
-  onDOMContentLoaded(function () {
-    var $ = getjQuery();
-    /* istanbul ignore if */
-
-    if ($) {
-      var JQUERY_NO_CONFLICT = $.fn[NAME];
-      $.fn[NAME] = Tab.jQueryInterface;
-      $.fn[NAME].Constructor = Tab;
-
-      $.fn[NAME].noConflict = function () {
-        $.fn[NAME] = JQUERY_NO_CONFLICT;
-        return Tab.jQueryInterface;
-      };
-    }
-  });
+  defineJQueryPlugin(NAME, Tab);
 
   return Tab;
 

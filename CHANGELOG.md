@@ -1,16 +1,29 @@
-<a name="5.0.0-beta1"></a>
-# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha2...v5.0.0-beta1) (2020-11-12)
+# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha3...v5.0.0-beta1) (2020-12-10)
+
+### Features
+
+- **RTL**: Orange branded, using Helvetica Neue Arabic, dropping `letter-spacing` everywhere and customized arrows.
+
+### Bug Fixes
+
+* **alerts:** ensure content don't overlap icon ([2ecade3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2ecade3e43ff502547336e6266c018f72da85b68))
+
+### Core
+
+* **Percy**: upgrade snapshot action to 0.1.2
+
+
+<a name="5.0.0-alpha3"></a>
+# [5.0.0-alpha3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha2...v5.0.0-alpha3) (2020-11-12)
 
 
 ## Bug Fixes
 
 * **forms:** ensure .form-check-input is squared in Chromium-based browsers ([010c909](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/010c9097fc7026532e4086cb28738027a32954fb))
 
-
 ## Features
 
 * **accordion:** Orange branded :tada: ([69a97d9](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/69a97d9d580eb488ed4c889d2bc03e5407591bd1))
-
 
 ## Docs
 
