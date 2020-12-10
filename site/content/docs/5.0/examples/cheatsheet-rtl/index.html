@@ -19,7 +19,7 @@ direction: rtl
 </header>
 <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
   <h2 class="h6 pt-4 pb-3 mb-4 border-bottom border-light border-1">على هذه الصفحة</h2>
-  <nav class="small" id="toc">
+  <nav class="small" id="toc" aria-label="جدول المحتويات">
     <ul class="list-unstyled">
       <li class="my-2">
         <button class="btn w-100 collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">محتويات</button>
@@ -68,7 +68,7 @@ direction: rtl
     </ul>
   </nav>
 </aside>
-<div class="bd-cheatsheet container-fluid bg-white">
+<main class="bd-cheatsheet container-fluid bg-white">
   <section id="content">
     <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">محتويات</h2>
 
@@ -1081,7 +1081,7 @@ direction: rtl
 
       <div>
         {{< example show_markup="false" >}}
-        <nav class="nav">
+        <nav class="nav" aria-label="أول مثال على التنقل">
           <a class="nav-link active" aria-current="page" href="#">نشيط</a>
           <a class="nav-link" href="#">حلقة الوصل</a>
           <a class="nav-link" href="#">حلقة الوصل</a>
@@ -1090,7 +1090,7 @@ direction: rtl
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <nav>
+        <nav aria-label="مثال التنقل الثاني">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">الصفحة الرئيسية</a>
             <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">الملف الشخصي</a>
@@ -1136,7 +1136,7 @@ direction: rtl
 
       <div>
         {{< example show_markup="false" >}}
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light" aria-label="أول مثال على نافبار">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" class="d-inline-block align-top" alt="Boosted" loading="lazy">
@@ -1175,7 +1175,7 @@ direction: rtl
           </div>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5" aria-label="مثال نافبار الثاني">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" class="d-inline-block align-top" alt="Boosted" loading="lazy">
@@ -1318,7 +1318,7 @@ direction: rtl
 
       <div>
         <div class="bd-example">
-          <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3">
+          <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3" aria-label="مثال على شريط التنقل Scrollspy">
             <a class="navbar-brand" href="#">شريط التنقل</a>
             <ul class="nav nav-pills">
               <li class="nav-item">
@@ -1338,7 +1338,7 @@ direction: rtl
               </li>
             </ul>
           </nav>
-          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
             <h4 id="fat">@fat</h4>
             <p>إنطلاق العالمي ما هذه, لم فسقط عُقر الهادي جُل. بعد ٣٠ شرسة النزاع اليميني. عن بحث اتّجة الصينية, مع وأزيز الفرنسية مدن, عدد مرجع العالمية لبلجيكا، أن. طوكيو أعلنت حيث بل. الأخذ واندونيسيا، إذ ذلك, به، قد معاملة وقوعها،. ولم التي إبّان بالفشل ٣٠, جنوب مشاركة حيث أم.</p>
             <h4 id="mdo">@mdo</h4>
@@ -1410,7 +1410,7 @@ direction: rtl
       </div>
     </article>
   </section>
-</div>
+</main>
 
 <div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

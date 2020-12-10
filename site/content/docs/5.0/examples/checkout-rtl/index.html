@@ -13,7 +13,7 @@ body_class: "bg-light"
   <main>
     <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" alt="" width="50" height="50">
-      <h2>نموذج الخروج</h2>
+      <h1>نموذج الخروج</h1>
       <p class="lead">فيما يلي مثال على نموذج تم إنشاؤه بالكامل باستخدام عناصر تحكم النموذج في Bootstrap. لكل مجموعة نماذج مطلوبة حالة تحقق يمكن تشغيلها بمحاولة إرسال النموذج دون استكماله.</p>
     </div>
 
@@ -60,7 +60,8 @@ body_class: "bg-light"
 
         <form class="card p-2">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="رمز ترويجي">
+            <label for="promo-code" class="sr-only">رمز ترويجي</label>
+            <input type="text" class="form-control" id="promo-code" placeholder="رمز ترويجي">
             <button type="submit" class="btn btn-secondary">افتدى</button>
           </div>
         </form>
