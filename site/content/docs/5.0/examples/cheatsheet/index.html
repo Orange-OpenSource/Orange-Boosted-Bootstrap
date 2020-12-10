@@ -18,7 +18,7 @@ extra_js:
 </header>
 <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
   <h2 class="h6 pt-4 pb-3 mb-4 border-bottom border-light border-1">On this page</h2>
-  <nav class="small" id="toc">
+  <nav class="small" id="toc" aria-label="Table of contents">
     <ul class="list-unstyled">
       <li class="my-2">
         <button class="btn w-100 collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
@@ -67,7 +67,7 @@ extra_js:
     </ul>
   </nav>
 </aside>
-<div class="bd-cheatsheet container-fluid bg-white">
+<main class="bd-cheatsheet container-fluid bg-white">
   <section id="content">
     <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contents</h2>
 
@@ -1080,7 +1080,7 @@ extra_js:
 
       <div>
         {{< example show_markup="false" >}}
-        <nav class="nav">
+        <nav class="nav" aria-label="First navigation example">
           <a class="nav-link active" aria-current="page" href="#">Active</a>
           <a class="nav-link" href="#">Link</a>
           <a class="nav-link" href="#">Link</a>
@@ -1089,7 +1089,7 @@ extra_js:
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <nav>
+        <nav aria-label="Second navigation example">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
             <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
@@ -1135,7 +1135,7 @@ extra_js:
 
       <div>
         {{< example show_markup="false" >}}
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light" aria-label="First navbar example">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" class="d-inline-block align-top" alt="Boosted" loading="lazy">
@@ -1174,7 +1174,7 @@ extra_js:
           </div>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5" aria-label="Second navbar example">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" class="d-inline-block align-top" alt="Boosted" loading="lazy">
@@ -1317,7 +1317,7 @@ extra_js:
 
       <div>
         <div class="bd-example">
-          <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3">
+          <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3" aria-label="Scrollspy navbar example">
             <a class="navbar-brand" href="#">Navbar</a>
             <ul class="nav nav-pills">
               <li class="nav-item">
@@ -1337,7 +1337,7 @@ extra_js:
               </li>
             </ul>
           </nav>
-          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
             <h4 id="fat">@fat</h4>
             <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
             <h4 id="mdo">@mdo</h4>
@@ -1410,7 +1410,7 @@ extra_js:
       </div>
     </article>
   </section>
-</div>
+</main>
 
 <div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
