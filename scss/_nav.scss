@@ -36,10 +36,6 @@
 .nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .nav-item {
-    margin-bottom: -$nav-tabs-border-width;
-  }
-
   // Boosted mod: margins between tabs on bigger screen
   @include media-breakpoint-up(lg) {
     .nav-item + .nav-item {
@@ -50,6 +46,7 @@
 
   .nav-link {
     padding: $navbar-padding-y map-get($spacers, 4); // Boosted mod
+    margin-bottom: -$nav-tabs-border-width;
     background: none; // Boosted mod
     border: $nav-tabs-border-width solid transparent;
     border-bottom-width: 0; // Boosted mod
