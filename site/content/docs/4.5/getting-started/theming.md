@@ -307,7 +307,10 @@ All colors available in Boosted 4, are available as Sass variables and a Sass ma
   {{- range $.Site.Data.colors }}
     {{- if (and (not (eq .name "white")) (not (eq .name "gray")) (not (eq .name "gray-dark"))) }}
     <div class="col-md-4">
-      <div class="p-3 mb-3 font-weight-bold swatch-{{ .name }}">{{ .name | title }}</div>
+      <div class="p-3 mb-3 swatch-{{ .name }}">
+        <code class="font-weight-bold d-block">${{ .name | title }}</code>
+        <code>{{ .hex }}</code>
+      </div>
     </div>
     {{ end -}}
   {{ end -}}
@@ -338,7 +341,10 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< theme-colors.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
     <div class="col-md-4">
-      <div class="p-3 mb-3 font-weight-bold bg-{{ .name }}">{{ .name | title }}</div>
+      <div class="p-3 mb-3 bg-{{ .name }}">
+        <code class="font-weight-bold d-block">${{ .name | title }}</code>
+        <code>{{ .hex }}</code>
+      </div>
     </div>
   {{ end -}}
   {{< /theme-colors.inline >}}
@@ -352,7 +358,10 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
   <div class="col-md-4">
     {{< theme-colors.inline >}}
     {{- range $.Site.Data.grays }}
-      <div class="p-3 font-weight-bold swatch-{{ .name }}">{{ .name | title }}</div>
+      <div class="p-3 swatch-{{ .name }}">
+        <code class="font-weight-bold d-block">$gray-{{ .name | title }}</code>
+        <code>{{ .hex }}</code>
+      </div>
     {{ end -}}
     {{< /theme-colors.inline >}}
   </div>
