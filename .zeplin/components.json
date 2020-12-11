@@ -1,0 +1,30 @@
+{
+    "projects": [
+        "5fd323b71fd6734b218a3b81"
+    ],
+    "styleguides": [],
+    "components": [
+        {
+            "path": "stories/Alerts/alert.stories.js",
+            "zeplinNames": [
+                "Rectangle 1"
+            ],
+            "storybook": {
+              "kind": "Components/Alerts",
+              "stories": [
+                  "Alerts"
+              ]
+            }
+        }
+    ],
+    "plugins": [
+        {
+            "name": "@zeplin/cli-connect-storybook-plugin",
+            "config": {
+              "url": "https://storybook--5fc5eb7c9131880021f5e49c.chromatic.com",
+              "fetchStories": false,
+              "format": "new"
+            }
+        }
+    ]
+}

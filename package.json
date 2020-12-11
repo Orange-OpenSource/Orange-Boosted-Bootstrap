@@ -120,6 +120,8 @@
     "@storybook/addon-links": "^6.1.0",
     "@storybook/html": "^6.1.0",
     "@storybook/theming": "^6.1.9",
+    "@zeplin/cli": "^1.0.4",
+    "@zeplin/cli-connect-storybook-plugin": "^0.5.0",
     "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.1",
     "bundlewatch": "^0.3.2",
