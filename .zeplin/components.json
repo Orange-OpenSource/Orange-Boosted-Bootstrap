@@ -17,6 +17,10 @@
             }
         }
     ],
+    "github": {
+      "repository": "Orange-OpenSource/Orange-Boosted-Bootstrap",
+      "branch": "storybook"
+    },
     "plugins": [
         {
             "name": "@zeplin/cli-connect-storybook-plugin",
