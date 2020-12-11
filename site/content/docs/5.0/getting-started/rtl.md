@@ -69,7 +69,7 @@ You can see the above requirements reflected in this modified RTL starter templa
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Boosted Bundle with Popper.js -->
+    <!-- Option 1: Boosted Bundle with Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Boosted JS -->
