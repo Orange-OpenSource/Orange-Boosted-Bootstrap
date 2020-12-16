@@ -269,6 +269,7 @@ $enable-important-utilities:  true !default;
 // Prefix for :root CSS variables
 
 $variable-prefix:             bs- !default;
+$boosted-variable-prefix:     o- !default;
 
 // Gradient
 //
@@ -1371,6 +1372,13 @@ $carousel-indicator-opacity:         null !default;
 $carousel-indicator-active-bg:       $primary !default;
 $carousel-indicator-active-opacity:  null !default;
 $carousel-indicator-transition:      null !default;
+// Boosted mod
+$carousel-indicator-hover-scale:        1.5 !default;
+$carousel-indicator-active-scale:       calc(2 / 3) !default; // stylelint-disable-line function-disallowed-list
+$carousel-indicator-active-radius:      0 100% 100% 0 / 50% !default;
+$carousel-indicator-animation-duration: 5000ms !default;
+$carousel-indicator-animation-interval: var(--#{$boosted-variable-prefix}carousel-interval, #{$carousel-indicator-animation-duration}) !default;
+// End mod
 
 $carousel-caption-color:             $black !default;
 $carousel-caption-padding-y:         $spacer !default;
