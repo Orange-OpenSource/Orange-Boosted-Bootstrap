@@ -92,6 +92,8 @@ const SELECTOR_INDICATORS = '.carousel-indicators'
 const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
 
+const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
+
 const PointerType = {
   TOUCH: 'touch',
   PEN: 'pen'
@@ -421,6 +423,14 @@ class Carousel extends BaseComponent {
     } else {
       this._config.interval = this._config.defaultInterval || this._config.interval
     }
+
+    // Boosted mod: set progress indicator's interval as custom property
+    if (this._indicatorsElement && this._config.interval !== Default.interval) {
+      const currentIndex = this._getItemIndex(element)
+      const currentIndicator = SelectorEngine.findOne(`:nth-child(${currentIndex + 1})`, this._indicatorsElement)
+      currentIndicator.style.setProperty(`--${PREFIX_CUSTOM_PROPS}carousel-interval`, `${this._config.interval}ms`)
+    }
+    // End mod
   }
 
   _slide(direction, element) {
