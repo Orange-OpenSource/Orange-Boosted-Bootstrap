@@ -26,35 +26,35 @@
     },
     {
       "path": "./dist/css/boosted.css",
-      "maxSize": "23.1 kB"
+      "maxSize": "23.4 kB"
     },
     {
       "path": "./dist/css/boosted.min.css",
-      "maxSize": "21.1 kB"
+      "maxSize": "21.5 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.js",
-      "maxSize": "43.5 kB"
+      "maxSize": "44.15 kB"
     },
     {
       "path": "./dist/js/boosted.bundle.min.js",
-      "maxSize": "22.1 kB"
+      "maxSize": "22.4 kB"
     },
     {
       "path": "./dist/js/boosted.esm.js",
-      "maxSize": "26.1 kB"
+      "maxSize": "26.7 kB"
     },
     {
       "path": "./dist/js/boosted.esm.min.js",
-      "maxSize": "17.75 kB"
+      "maxSize": "18 kB"
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "27.75 kB"
+      "maxSize": "27.5 kB"
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "15.5 kB"
+      "maxSize": "15.75 kB"
     }
   ],
   "ci": {
