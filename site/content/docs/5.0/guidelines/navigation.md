@@ -82,6 +82,55 @@ toc: true
   </ul>
 </nav>
 
+## Pagination dots
+
+[Documentation]({{< docsref "/components/carousel#with-indicators" >}})&nbsp;—&nbsp;{{< anchor web-nav-pdt-001 >}}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="60" class="bd-placeholder-img-lg d-block w-100" background="#000" text=" " >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="60" class="bd-placeholder-img-lg d-block w-100" background="#eee" text=" " >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="60" class="bd-placeholder-img-lg d-block w-100" background="#666" text=" " >}}
+    </div>
+  </div>
+</div>
+
+## Carousel navigation
+
+[Documentation]({{< docsref "/components/carousel" >}})&nbsp;—&nbsp;{{< anchor web-nav-cna-001 >}}
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-wrap="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="200" class="bd-placeholder-img-lg d-block w-100" color="#fff" background="#000" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="200" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#eee" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="200" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#ccc" text="Third slide" >}}
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+
 ## Accordion
 
 [Documentation]({{< docsref "/components/accordion" >}})
@@ -89,43 +138,43 @@ toc: true
   <div class="col">
     <h3 class="h6">Small — {{< anchor web-nav-acc-001 >}}</h3>
     <div class="accordion accordion-sm" id="accordionExampleSmall">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOneSmall">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall" aria-expanded="false" aria-controls="collapseOneSmall">
-                Title
-              </button>
-            </h2>
-            <div id="collapseOneSmall" class="accordion-collapse collapse" aria-labelledby="headingOneSmall" data-bs-parent="#accordionExampleSmall">
-              <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwoSmall">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall" aria-expanded="false" aria-controls="collapseTwoSmall">
-                Title
-              </button>
-            </h2>
-            <div id="collapseTwoSmall" class="accordion-collapse collapse" aria-labelledby="headingTwoSmall" data-bs-parent="#accordionExampleSmall">
-              <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThreeSmall">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
-                Title
-              </button>
-            </h2>
-            <div id="collapseThreeSmall" class="accordion-collapse collapse show" aria-labelledby="headingThreeSmall" data-bs-parent="#accordionExampleSmall">
-              <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOneSmall">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneSmall" aria-expanded="false" aria-controls="collapseOneSmall">
+            Title
+          </button>
+        </h2>
+        <div id="collapseOneSmall" class="accordion-collapse collapse" aria-labelledby="headingOneSmall" data-bs-parent="#accordionExampleSmall">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
           </div>
         </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwoSmall">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoSmall" aria-expanded="false" aria-controls="collapseTwoSmall">
+            Title
+          </button>
+        </h2>
+        <div id="collapseTwoSmall" class="accordion-collapse collapse" aria-labelledby="headingTwoSmall" data-bs-parent="#accordionExampleSmall">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThreeSmall">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeSmall" aria-expanded="true" aria-controls="collapseThreeSmall">
+            Title
+          </button>
+        </h2>
+        <div id="collapseThreeSmall" class="accordion-collapse collapse show" aria-labelledby="headingThreeSmall" data-bs-parent="#accordionExampleSmall">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col">
     <h3 class="h6">Medium — {{< anchor web-nav-acc-002 >}}</h3>
