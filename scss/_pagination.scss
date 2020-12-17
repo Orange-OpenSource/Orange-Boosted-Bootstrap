@@ -92,24 +92,16 @@
 
     &:hover,
     &:focus {
-      color: $pagination-hover-bg;
-      background-color: $pagination-hover-color;
-      border-color: $pagination-hover-color;
-      outline-color: $pagination-hover-color; // Boosted mod
-
-      &::before {
-        background-image: escape-svg($pagination-icon-hover);
-      }
+      filter: $invert-filter;
+      border-color: $pagination-hover-bg;
+      outline-color: $pagination-hover-bg;
     }
 
     &:active {
       color: color-contrast($pagination-active-item-bg);
       background-color: $pagination-active-item-bg;
+      filter: none;
       border-color: $pagination-active-item-border;
-
-      &::before {
-        background-image: escape-svg($pagination-icon);
-      }
     }
 
     &.has-label {
