@@ -257,6 +257,177 @@ describe('Carousel', () => {
       }, 10)
     })
 
+    // Boosted mod
+    it('should stay at the end when the next method is called and wrap is false', done => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <div class="carousel-inner">',
+        '    <div id="one" class="carousel-item"></div>',
+        '    <div id="two" class="carousel-item"></div>',
+        '    <div id="three" class="carousel-item active">item 3</div>',
+        '  </div>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const lastElement = fixtureEl.querySelector('#three')
+      const carousel = new Carousel(carouselEl, { wrap: false })
+
+      carouselEl.addEventListener('slid.bs.carousel', () => {
+        throw new Error('carousel slid when it should not have slid')
+      })
+
+      carousel.next()
+
+      setTimeout(() => {
+        expect(lastElement.classList.contains('active')).toEqual(true)
+        done()
+      }, 10)
+    })
+
+    it('should disable next control when the last item becomes active and wrap is false', done => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <div class="carousel-inner">',
+        '    <div id="one" class="carousel-item"></div>',
+        '    <div id="two" class="carousel-item active"></div>',
+        '    <div id="three" class="carousel-item">item 3</div>',
+        '  </div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const prevControl = fixtureEl.querySelector('.carousel-control-prev')
+      const nextControl = fixtureEl.querySelector('.carousel-control-next')
+      const carousel = new Carousel(carouselEl, { wrap: false })
+
+      carousel.next()
+
+      setTimeout(() => {
+        expect(nextControl.disabled).toEqual(true)
+        expect(prevControl.disabled).toEqual(false)
+        done()
+      }, 10)
+    })
+
+    it('should disable prev control when the first item becomes active and wrap is false', done => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <div class="carousel-inner">',
+        '    <div id="one" class="carousel-item"></div>',
+        '    <div id="two" class="carousel-item active"></div>',
+        '    <div id="three" class="carousel-item">item 3</div>',
+        '  </div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const prevControl = fixtureEl.querySelector('.carousel-control-prev')
+      const nextControl = fixtureEl.querySelector('.carousel-control-next')
+      const carousel = new Carousel(carouselEl, { wrap: false })
+
+      carousel.prev()
+
+      setTimeout(() => {
+        expect(prevControl.disabled).toEqual(true)
+        expect(nextControl.disabled).toEqual(false)
+        done()
+      }, 10)
+    })
+
+    it('should disable prev control using aria-disabled if control is a link', done => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <div class="carousel-inner">',
+        '    <div id="one" class="carousel-item"></div>',
+        '    <div id="two" class="carousel-item active"></div>',
+        '    <div id="three" class="carousel-item">item 3</div>',
+        '  </div>',
+        '  <a href="#" class="carousel-control-prev"></a>',
+        '  <a href="#" class="carousel-control-next"></a>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const prevControl = fixtureEl.querySelector('.carousel-control-prev')
+      const carousel = new Carousel(carouselEl, { wrap: false })
+
+      carousel.prev()
+
+      setTimeout(() => {
+        expect(prevControl.getAttribute('aria-disabled')).toEqual('true')
+        expect(prevControl.getAttribute('tabindex')).toEqual('-1')
+        done()
+      }, 10)
+    })
+
+    it('should add done class when at the end, the next method is called and wrap is false', done => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2" class="active"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div id="one" class="carousel-item"></div>',
+        '    <div id="two" class="carousel-item"></div>',
+        '    <div id="three" class="carousel-item active">item 3</div>',
+        '  </div>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const carousel = new Carousel(carouselEl, { wrap: false })
+
+      carouselEl.addEventListener('slid.bs.carousel', () => {
+        throw new Error('carousel slid when it should not have slid')
+      })
+
+      carousel.next()
+
+      setTimeout(() => {
+        expect(carousel._element.classList.contains('done')).toEqual(true)
+        done()
+      }, 10)
+    })
+
+    it('should not add done class when at the start, the prev method is called and wrap is false', done => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div id="one" class="carousel-item active"></div>',
+        '    <div id="two" class="carousel-item"></div>',
+        '    <div id="three" class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const carousel = new Carousel(carouselEl, { wrap: false })
+
+      carouselEl.addEventListener('slid.bs.carousel', () => {
+        throw new Error('carousel slid when it should not have slid')
+      })
+
+      carousel.prev()
+
+      setTimeout(() => {
+        expect(carousel._element.classList.contains('done')).toEqual(false)
+        done()
+      }, 10)
+    })
+    // End mod
+
     it('should not add touch event listeners if touch = false', () => {
       fixtureEl.innerHTML = '<div></div>'
 
@@ -721,6 +892,33 @@ describe('Carousel', () => {
   })
 
   describe('pause', () => {
+    // Boosted mod
+    it('should add paused class', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const carousel = new Carousel(carouselEl)
+
+      carousel.pause()
+
+      expect(carousel._isPaused).toEqual(true)
+      expect(carousel._element.classList.contains('paused')).toEqual(true)
+    })
+    // End mod
+
     it('should call cycle if the carousel have carousel-item-next and carousel-item-prev class', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
@@ -729,8 +927,8 @@ describe('Carousel', () => {
         '    <div class="carousel-item carousel-item-next">item 2</div>',
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
-        '  <div class="carousel-control-prev"></div>',
-        '  <div class="carousel-control-next"></div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
         '</div>'
       ].join('')
 
@@ -755,8 +953,8 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 2</div>',
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
-        '  <div class="carousel-control-prev"></div>',
-        '  <div class="carousel-control-next"></div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
         '</div>'
       ].join('')
 
@@ -781,8 +979,8 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 2</div>',
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
-        '  <div class="carousel-control-prev"></div>',
-        '  <div class="carousel-control-next"></div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
         '</div>'
       ].join('')
 
@@ -800,6 +998,29 @@ describe('Carousel', () => {
   })
 
   describe('cycle', () => {
+    // Boosted mod
+    it('should remove the paused class', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const carousel = new Carousel(carouselEl)
+
+      carousel.cycle()
+
+      expect(carousel._element.classList.contains('paused')).toEqual(false)
+    })
+    // End mod
+
     it('should set an interval', () => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
@@ -808,8 +1029,8 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 2</div>',
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
-        '  <div class="carousel-control-prev"></div>',
-        '  <div class="carousel-control-next"></div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
         '</div>'
       ].join('')
 
@@ -831,8 +1052,8 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 2</div>',
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
-        '  <div class="carousel-control-prev"></div>',
-        '  <div class="carousel-control-next"></div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
         '</div>'
       ].join('')
 
@@ -855,8 +1076,8 @@ describe('Carousel', () => {
         '    <div class="carousel-item">item 2</div>',
         '    <div class="carousel-item">item 3</div>',
         '  </div>',
-        '  <div class="carousel-control-prev"></div>',
-        '  <div class="carousel-control-next"></div>',
+        '  <button class="carousel-control-prev"></button>',
+        '  <button class="carousel-control-next"></button>',
         '</div>'
       ].join('')
 
@@ -902,6 +1123,39 @@ describe('Carousel', () => {
 
       expect(carousel._config.interval).toEqual(9385)
     })
+
+    // Boosted mod
+    it('should set --o-carousel-interval custom property on indicator if data-bs-interval is provided', () => {
+      fixtureEl.innerHTML = [
+        '<div id="myCarousel" class="carousel slide">',
+        '  <ol class="carousel-indicators">',
+        '    <li id="firstIndicator" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>',
+        '    <li id="secondIndicator" data-bs-target="#myCarousel" data-bs-slide-to="1"></li>',
+        '    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>',
+        '  </ol>',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active" data-bs-interval="7">item 1</div>',
+        '    <div id="secondItem" class="carousel-item" data-bs-interval="9385">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#myCarousel')
+      const firstIndicator = fixtureEl.querySelector('#firstIndicator')
+      const secondItemEl = fixtureEl.querySelector('#secondItem')
+      const secondIndicator = fixtureEl.querySelector('#secondIndicator')
+      const carousel = new Carousel(carouselEl)
+      carousel.cycle()
+
+      expect(firstIndicator.style.getPropertyValue('--o-carousel-interval')).toEqual('7ms')
+
+      carousel._activeElement = secondItemEl
+      carousel.cycle()
+
+      expect(secondIndicator.style.getPropertyValue('--o-carousel-interval')).toEqual('9385ms')
+    })
+    // End mod
   })
 
   describe('to', () => {
