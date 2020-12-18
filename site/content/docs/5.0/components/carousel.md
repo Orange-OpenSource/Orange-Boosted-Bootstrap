@@ -52,7 +52,19 @@ Carousels don't automatically normalize slide dimensions. As such, you may need 
 
 ### With indicators
 
-You can also add the indicators to the carousel, alongside the controls, too.
+You can also add the indicators to the carousel.
+
+<!-- Boosted mod -->
+
+Indicators are animated to show the active slide progress, based on its interval. It adapts to [any interval you set](#individual-carousel-item-interval) thanks to the `--o-carousel-interval` CSS custom property.
+Carousel progress indicator is paused under multiple conditions:
+
+* when the `prefers-reduced-motion` media query equals `reduce` [to improve accessibility]({{< docsref "/getting-started/accessibility#reduced-motion" >}}).
+* when the carousel is paused—on hover by default, but can be changed using [the `data-bs-pause` attribute](#options): a `.paused` class is added to the carousel.
+* when the carousel [doesn't cycle](#prevent-cycling) and is stopped at one end: a `.done` class is added to the carousel.
+* when the carousel is [static](#static-carousel), ie. when it has `.static` class.
+
+<!-- End mod -->
 
 {{< example >}}
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -227,16 +239,15 @@ Use `data-bs-wrap="false"` to prevent carousel from cycling continuously.
 <!-- End mod -->
 
 <!-- Boosted mod: needed to check carousel indicators without autoplay -->
-### Static carousel (no autoplay)
+### Static carousel
 
 To prevent the carousel from autoplaying, use the following attributes combo:
 1. do not use `data-bs-ride="carousel"` attribute, to prevent instant initialization,
-2. add `data-bs-slide="false"` to prevent autoplaying after the first user interaction,
-2. add `data-bs-pause="hover focus"` to prevent autoplaying when carousel contains focus,
+2. add `data-bs-interval="false"` to prevent autoplaying by removing any timing related feature,
 3. add `.static` class to your carousel, to cancel progress indicators animation.
 
 {{< example >}}
-<div id="carouselExampleNoRide" class="carousel slide static" data-bs-slide="false" data-bs-pause="hover focus">
+<div id="carouselExampleNoRide" class="carousel slide static" data-bs-interval="false">
   <ol class="carousel-indicators">
     <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="0" class="active"></li>
     <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="1"></li>
