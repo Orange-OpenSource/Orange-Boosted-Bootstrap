@@ -365,6 +365,7 @@
   &:disabled {
     color: $custom-select-disabled-color;
     background-color: $custom-select-disabled-bg;
+    background-image: escape-svg($custom-select-disabled-indicator);
   }
 
   // Hides the default caret in IE11
