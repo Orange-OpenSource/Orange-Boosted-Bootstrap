@@ -627,7 +627,7 @@ $custom-control-label-color:            null !default;
 
 $custom-control-indicator-disabled-bg:          $gray-300 !default;
 $custom-control-indicator-disabled-checked-bg:  $gray-500 !default;
-$custom-control-label-disabled-color:           $text-muted !default;
+$custom-control-label-disabled-color:           $gray-500 !default;
 
 $custom-control-indicator-checked-color:        $black !default; // Boosted mod
 $custom-control-indicator-checked-bg:           theme-color("primary") !default;
@@ -675,12 +675,13 @@ $custom-select-indicator-padding:   1rem !default; // Extra padding to account f
 $custom-select-font-weight:         $input-font-weight !default;
 $custom-select-line-height:         $input-line-height !default;
 $custom-select-color:               $input-color !default;
-$custom-select-disabled-color:      $gray-500 !default;
+$custom-select-disabled-color:      $gray-700 !default;
 $custom-select-bg:                  $white !default;
 $custom-select-disabled-bg:         $gray-300 !default;
 $custom-select-bg-size:             .875rem 1rem !default; // Boosted mod: using SVG
 // $custom-select-indicator-color:     null !default; // Boosted mod
 $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
+$custom-select-disabled-indicator:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 7'><path fill='#{$gray-700}' d='M7 7L0 0h14L7 7z'/></svg>") !default; // Boosted mod
 $custom-select-background:          escape-svg($custom-select-indicator) right $custom-select-padding-x top add(50%, 1px) / #{$custom-select-bg-size} no-repeat !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
