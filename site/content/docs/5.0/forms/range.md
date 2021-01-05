@@ -26,7 +26,7 @@ Only Firefox supports “filling” their track from the left or right of the th
 Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
 
 {{< example >}}
-<label for="disabledRange" class="form-label">Disabled range</label>
+<label for="disabledRange" class="form-label is-disabled">Disabled range</label>
 <input type="range" class="form-range" id="disabledRange" disabled>
 {{< /example >}}
 

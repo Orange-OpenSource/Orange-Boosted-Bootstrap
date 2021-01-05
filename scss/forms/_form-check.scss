@@ -119,7 +119,7 @@
   &[disabled],
   &:disabled {
     ~ .form-check-label {
-      color: $input-disabled-color; // Boosted mod
+      color: $form-label-disabled-color; // Boosted mod
       opacity: $form-check-label-disabled-opacity;
     }
   }
@@ -286,13 +286,13 @@
   &[disabled],
   &:disabled {
     + .btn {
-      color: $gray-500; // Boosted mod
+      color: $form-label-disabled-color; // Boosted mod
       pointer-events: none;
       background-color: $white; // Boosted mod
       // Remove CSS gradients if they're enabled
       background-image: if($enable-gradients, none, null); // Boosted mod
       filter: none;
-      border-color: $gray-500; // Boosted mod
+      border-color: currentColor; // Boosted mod
       opacity: $form-check-btn-check-disabled-opacity;
     }
   }
