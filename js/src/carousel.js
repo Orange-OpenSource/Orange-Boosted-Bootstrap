@@ -82,8 +82,8 @@ const CLASS_NAME_START = 'carousel-item-start'
 const CLASS_NAME_NEXT = 'carousel-item-next'
 const CLASS_NAME_PREV = 'carousel-item-prev'
 const CLASS_NAME_POINTER_EVENT = 'pointer-event'
-const CLASS_NAME_PAUSED = 'paused' // Boosted mod: used for progress indicators
-const CLASS_NAME_DONE = 'done' // Boosted mod: used for progress indicators
+const CLASS_NAME_PAUSED = 'is-paused' // Boosted mod: used for progress indicators
+const CLASS_NAME_DONE = 'is-done' // Boosted mod: used for progress indicators
 
 const SELECTOR_ACTIVE = '.active'
 const SELECTOR_ACTIVE_ITEM = '.active.carousel-item'

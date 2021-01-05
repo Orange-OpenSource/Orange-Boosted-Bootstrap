@@ -391,7 +391,7 @@ describe('Carousel', () => {
       carousel.next()
 
       setTimeout(() => {
-        expect(carousel._element.classList.contains('done')).toEqual(true)
+        expect(carousel._element.classList.contains('is-done')).toEqual(true)
         done()
       }, 10)
     })
@@ -422,7 +422,7 @@ describe('Carousel', () => {
       carousel.prev()
 
       setTimeout(() => {
-        expect(carousel._element.classList.contains('done')).toEqual(false)
+        expect(carousel._element.classList.contains('is-done')).toEqual(false)
         done()
       }, 10)
     })
@@ -915,7 +915,7 @@ describe('Carousel', () => {
       carousel.pause()
 
       expect(carousel._isPaused).toEqual(true)
-      expect(carousel._element.classList.contains('paused')).toEqual(true)
+      expect(carousel._element.classList.contains('is-paused')).toEqual(true)
     })
     // End mod
 
@@ -1017,7 +1017,7 @@ describe('Carousel', () => {
 
       carousel.cycle()
 
-      expect(carousel._element.classList.contains('paused')).toEqual(false)
+      expect(carousel._element.classList.contains('is-paused')).toEqual(false)
     })
     // End mod
 

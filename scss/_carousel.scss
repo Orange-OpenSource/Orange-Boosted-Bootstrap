@@ -269,9 +269,9 @@
         50% { background: color-contrast($carousel-indicator-active-bg); }
       }
 
-      .carousel.done &,
-      .carousel.paused &,
-      .carousel.static & {
+      .carousel.is-done &,
+      .carousel.is-paused &,
+      .carousel.is-static & {
         background: color-contrast($carousel-indicator-active-bg);
 
         &::after {

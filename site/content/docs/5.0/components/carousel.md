@@ -60,9 +60,9 @@ Indicators are animated to show the active slide progress, based on its interval
 Carousel progress indicator is paused under multiple conditions:
 
 * when the `prefers-reduced-motion` media query equals `reduce` [to improve accessibility]({{< docsref "/getting-started/accessibility#reduced-motion" >}}).
-* when the carousel is paused—on hover by default, but can be changed using [the `data-bs-pause` attribute](#options): a `.paused` class is added to the carousel.
-* when the carousel [doesn't cycle](#prevent-cycling) and is stopped at one end: a `.done` class is added to the carousel.
-* when the carousel is [static](#static-carousel), ie. when it has `.static` class.
+* when the carousel is paused—on hover by default, but can be changed using [the `data-bs-pause` attribute](#options): a `.is-paused` class is added to the carousel.
+* when the carousel [doesn't cycle](#prevent-cycling) and is stopped at one end: a `.is-done` class is added to the carousel.
+* when the carousel is [static](#static-carousel), ie. when it has `.is-static` class.
 
 <!-- End mod -->
 
@@ -244,10 +244,10 @@ Use `data-bs-wrap="false"` to prevent carousel from cycling continuously.
 To prevent the carousel from autoplaying, use the following attributes combo:
 1. do not use `data-bs-ride="carousel"` attribute, to prevent instant initialization,
 2. add `data-bs-interval="false"` to prevent autoplaying by removing any timing related feature,
-3. add `.static` class to your carousel, to cancel progress indicators animation.
+3. add `.is-static` class to your carousel, to cancel progress indicators animation.
 
 {{< example >}}
-<div id="carouselExampleNoRide" class="carousel slide static" data-bs-interval="false">
+<div id="carouselExampleNoRide" class="carousel slide is-static" data-bs-interval="false">
   <ol class="carousel-indicators">
     <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="0" class="active"></li>
     <li data-bs-target="#carouselExampleNoRide" data-bs-slide-to="1"></li>
