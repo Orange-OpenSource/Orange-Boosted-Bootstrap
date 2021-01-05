@@ -11,8 +11,9 @@
 }
 
 // Boosted mod: states for labels
-.is-disabled {
-  color: $input-disabled-color;
+.is-disabled,
+[disabled] .form-label {
+  color: $form-label-disabled-color;
 }
 
 .is-required::after {
