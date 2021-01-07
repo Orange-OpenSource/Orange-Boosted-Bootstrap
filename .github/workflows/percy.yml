@@ -1,18 +1,10 @@
 name: Tests
 on:
   push:
-    paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'site/content/docs/**/guidelines'
     branches:
       - v5-dev
       - "!dependabot/**"
   pull_request:
-    paths:
-      - 'js/**'
-      - 'scss/**'
-      - 'site/content/docs/**/guidelines'
     branches:
       - v5-dev
       - "!dependabot/**"
