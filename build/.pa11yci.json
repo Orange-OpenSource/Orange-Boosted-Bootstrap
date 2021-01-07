@@ -7,7 +7,7 @@
     "runners": [
       "axe"
     ],
-    "hideElements": ".bd-search, .active, [aria-current], [disabled], [disabled] label, [disabled] + label, [readonly], .modal, #TableOfContents, .bd-example nav, .text-primary, .navbar-light .navbar-brand, .accordion-button:not(.collapsed), [id*='tarteaucitron']",
+    "hideElements": ".bd-search, [id*='tarteaucitron'], #TableOfContents, .text-primary, .navbar-light .navbar-brand, .accordion-button:not(.collapsed), .active, [aria-current], select:disabled, [disabled] label, [disabled] + label, .modal, .bd-example nav",
     "ignore": [
       "heading-order"
     ]
