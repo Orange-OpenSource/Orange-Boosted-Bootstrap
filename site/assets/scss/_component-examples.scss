@@ -278,8 +278,8 @@
 .highlight {
   padding: $spacer; // Boosted mod
   margin-bottom: $spacer; // Boosted mod
-  background-color: $white; // Boosted mod
-  border: $border-width solid $gray-300;
+  background-color: $gray-100; // Boosted mod
+  border: $border-width solid $gray-400; // Boosted mod
 
   pre {
     padding: 0;
