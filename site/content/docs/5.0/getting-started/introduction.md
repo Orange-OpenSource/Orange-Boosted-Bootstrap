@@ -55,8 +55,8 @@ If you use `<script type="module">`, please refer to our [using Boosted as a mod
 
 Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
-<details>
-<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+<details class="mb-3 border-top border-bottom border-1 border-light">
+<summary class="h3 p-2 mb-0">Show components requiring JavaScript</summary>
 {{< markdown >}}
 - Alerts for dismissing
 - Buttons for toggling states and checkbox/radio functionality
