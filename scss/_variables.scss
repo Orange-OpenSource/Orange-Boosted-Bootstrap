@@ -104,9 +104,10 @@ $supporting-colors: map-merge(
   ),
   $supporting-colors
 );
-$chevron-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$chevron-icon-hover:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$chevron-icon-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$primary}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon-hover:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$white}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon-active:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$primary}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
+$chevron-icon-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$gray-700}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 
 // end mod
 
@@ -1241,24 +1242,26 @@ $breadcrumb-divider-dark:           str-replace($chevron-icon-hover, "viewBox='0
 // Carousel
 
 $carousel-control-color:             $black !default;
-$carousel-control-width:             map-get($spacers, 4) !default; // Boosted mod
-$carousel-control-opacity:           .5 !default;
+$carousel-control-width:             map-get($spacers, 5) !default; // Boosted mod
+//$carousel-control-opacity:           .5 !default; // Boosted mod: no opacity
 $carousel-control-hover-opacity:     .9 !default;
 $carousel-control-transition:        opacity .15s ease, outline-offset .2s ease-in-out !default; // Boosted mod
 
-$carousel-indicator-width:           map-get($spacers, 2) !default; // Boosted mod
-$carousel-indicator-height:          map-get($spacers, 2) !default; // Boosted mod
+$carousel-indicator-width:           .5rem !default; // Boosted mod
+$carousel-indicator-height:          .5rem !default; // Boosted mod
 //$carousel-indicator-hit-area-height: map-get($spacers, 3) !default; // Boosted mod
-$carousel-indicator-spacer:          3px !default;
-$carousel-indicator-active-bg:       theme-color("primary") !default;
+$carousel-indicator-spacer:          subtract(map-get($spacers, 2), $border-width * 2) !default; // Boosted mod
+$carousel-indicator-active-bg:       transparent !default; // Boosted mod
 $carousel-indicator-transition:      opacity .6s ease !default;
 
 //$carousel-caption-width:             70% !default; // Boosted mod
 $carousel-caption-color:             $black !default;
 
-$carousel-control-icon-width:        2.375rem !default; // Boosted mod
+$carousel-control-icon-width:        2.5rem !default; // Boosted mod
 
-$carousel-control-prev-icon-bg:      $chevron-icon !default; // Boosted mod
+$carousel-control-prev-icon-bg:          $chevron-icon !default; // Boosted mod
+$carousel-control-prev-icon-hover-bg:    $chevron-icon-hover !default; // Boosted mod
+$carousel-control-prev-icon-disabled-bg: $chevron-icon-disabled !default; // Boosted mod
 //$carousel-control-next-icon-bg:      $chevron-icon !default; // Boosted mod
 
 $carousel-transition-duration:       .6s !default;

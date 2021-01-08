@@ -102,7 +102,7 @@
   width: $carousel-control-width;
   color: $carousel-control-color;
   text-align: center;
-  opacity: $carousel-control-opacity;
+  // Boosted mod: no opacity
   @include transition($carousel-control-transition);
 
   // Hover/focus state
@@ -126,13 +126,13 @@
   /* rtl:raw:
   right: auto;
    */
-  left: map-get($spacers, 2); // Boosted mod
+  left: 0;
   @if $enable-gradients {
     background-image: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
   }
 }
 .carousel-control-next {
-  right: map-get($spacers, 2); // Boosted mod
+  right: 0;
 
   /* rtl:raw:
   left: auto;
@@ -152,10 +152,25 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: $spacer; // Boosted mod
+  width: $carousel-control-icon-width;
   height: $carousel-control-icon-width;
-  // stylelint-disable-next-line declaration-no-important
-  background: escape-svg($carousel-control-prev-icon-bg) 50% / 100% 100% no-repeat !important; // Boosted mod
+  // Boosted mod
+  // stylelint-disable declaration-no-important
+  // stylelint-disable-next-line function-disallowed-list
+  background: rgba($white, .5) escape-svg($carousel-control-prev-icon-bg) no-repeat calc(50% - .125rem) 50% / 1.5rem 1.5rem !important;
+  @include border-radius(50%, 50%);
+
+  :hover:not(:active) > &,
+  :focus:not(:active) > & {
+    background-color: $black !important;
+    background-image: escape-svg($carousel-control-prev-icon-hover-bg) !important;
+  }
+
+  :active > & {
+    background-color: $primary !important;
+  }
+  // stylelint-enable declaration-no-important
+  // End mod
 }
 
 /* rtl:begin:remove */
@@ -172,20 +187,20 @@
 
 .carousel-indicators {
   position: absolute;
-  right: 0;
   bottom: 0;
-  left: 0;
+  left: 50%; // Boosted mod
   z-index: 15;
   display: flex;
   justify-content: center;
-  padding-left: 0; // override <ol> default
-  // Use the .carousel-control's width as margin so we don't overlay those
-  margin-right: $carousel-control-width;
-  margin-left: $carousel-control-width;
+  // Boosted mod
+  padding: $carousel-indicator-spacer 0;
   list-style: none;
+  background-color: rgba($white, .5);
+  transform: translateX(-50%);
+  @include border-radius($spacer, $spacer);
+  // End mod
 
   li {
-    position: relative; // Boosted mod
     box-sizing: content-box;
     flex: 0 1 auto;
     width: $carousel-indicator-width;
@@ -201,16 +216,28 @@
     // border-top: $carousel-indicator-hit-area-height solid transparent;
     // border-bottom: $carousel-indicator-hit-area-height solid transparent;
     // opacity: .5;
+    border: $border-width solid transparent;
     @include transition($carousel-indicator-transition);
     @include border-radius(50%, 50%);
-    // end mod
+
+    &:hover,
+    &:focus {
+      border-color: $carousel-control-color;
+    }
+    // End mod
   }
 
   .active {
     // Boosted mod
     background-color: $carousel-indicator-active-bg;
+    border-color: $carousel-control-color;
     // opacity: 1;
-    // end mod
+
+    &:hover,
+    &:focus {
+      background-color: $carousel-control-color;
+    }
+    // End mod
   }
 }
 
