@@ -9,19 +9,28 @@ toc: true
 
 ## Links
 
-<div class="row gy-3 mt-4">
-  <div class="col-2">
-    <h3 class="h6">Default</h3>
-  </div>
-  <div class="col-4">
-    <a href="#links" class="fw-bold" id="web-nav-lnk-003">Text link</a>
-  </div>
-  <div class="col-6">
-    <h4 class="h6 m-0" id="web-nav-lnk-005">With chevrons</h4>
+[Documentation]({{< docsref "/content/typography" >}}#links)
 
-  {{< callout info >}}
-  This feature will be delivered with [#520]({{< param repo >}}/issues/520).
-  {{< /callout >}}
+<div class="row row-cols-2 gy-5 pt-3 mb-5">
+  <div>
+    <h3 class="h5">Main navigation links —&nbsp;{{< anchor web-nav-lnk-001 >}}</h3>
+    <a href="#links" class="nav-link">Text link</a>
+  </div>
+  <div>
+    <h3 class="h5">Small navigation links —&nbsp;{{< anchor web-nav-lnk-002 >}}</h3>
+    <a href="#links" class="nav-link small">Text link</a>
+  </div>
+  <div>
+    <h3 class="h5">Links with underline —&nbsp;{{< anchor web-nav-lnk-003 >}}</h3>
+    <a href="#links" class="fw-bold">Text link</a>
+  </div>
+  <div>
+    <h3 class="h5">Small links width underline —&nbsp;{{< anchor web-nav-lnk-004 >}}</h3>
+    <a href="#links" class="fw-bold small">Text link</a>
+  </div>
+  <div class="col-12">
+    <h3 class="h5">With chevron —&nbsp;{{< anchor web-nav-lnk-005 >}}</h3>
+    <a href="#links" class="link-chevron">Text link</a>
   </div>
 </div>
 

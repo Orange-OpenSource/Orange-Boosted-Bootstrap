@@ -65,7 +65,8 @@ body {
 .bd-guidelines .bd-content > h2 + p,
 .bd-guidelines .bd-content > h3 + p,
 #with-labels + p,
-#with-icons + p {
+#with-icons + p,
+#links + .row h3 + p {
   display: flex;
   align-items: center;
   padding: 0 0 $spacer / 2;
