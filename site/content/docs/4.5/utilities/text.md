@@ -14,7 +14,7 @@ Easily realign text to components with text alignment classes.
 However Orange Brand — thus Boosted — does not allow justifying text.
 
 {{< example >}}
-<p class="text-right">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+<p class="text-right">Some placeholder text to demonstrate justified text alignment. Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.</p>
 {{< /example >}}
 
 For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.

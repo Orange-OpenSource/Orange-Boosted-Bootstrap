@@ -183,10 +183,8 @@ class PriorityNav {
         $(this).data(DATA_KEY, data)
       }
 
-      if (typeof config !== 'undefined' && config) {
-        if (typeof config !== 'string') {
-          throw new TypeError('Priority nav label type must be string')
-        }
+      if ((typeof config !== 'undefined' && config) && typeof config !== 'string') {
+        throw new TypeError('Priority nav label type must be string')
       }
     })
   }
