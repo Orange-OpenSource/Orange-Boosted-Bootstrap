@@ -814,7 +814,7 @@ $form-select-padding-y:             ($spacer / 2) - ($border-width / 2) !default
 $form-select-padding-x:             $input-padding-x !default;
 $form-select-font-family:           $input-font-family !default;
 $form-select-font-size:             $input-font-size !default;
-$form-select-indicator-padding:     1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$form-select-indicator-padding:     $form-select-padding-x * 3 !default; // Extra padding for background-image
 $form-select-font-weight:           $input-font-weight !default;
 $form-select-line-height:           $input-line-height !default;
 $form-select-color:                 $input-color !default;

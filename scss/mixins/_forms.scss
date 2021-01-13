@@ -13,6 +13,7 @@
   }
 }
 
+// Boosted mod: no .#{$state}-tooltip, so no need for `$tooltip-*` args
 @mixin form-validation-state($state, $color, $icon) {
   // Boosted mod: valid ≠ invalid
   @if $state == "valid" {

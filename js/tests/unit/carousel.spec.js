@@ -1159,7 +1159,7 @@ describe('Carousel', () => {
   })
 
   describe('to', () => {
-    it('should go directement to the provided index', done => {
+    it('should go directly to the provided index', done => {
       fixtureEl.innerHTML = [
         '<div id="myCarousel" class="carousel slide">',
         '  <div class="carousel-inner">',

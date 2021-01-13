@@ -111,21 +111,21 @@ Add captions to your slides easily with the `.carousel-caption` element within a
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#4bb4e6" text="First slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5 class="mb-0">First slide label</h5>
-        <p class="mb-0">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p class="mb-0">Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#50be87" text="Second slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5 class="mb-0">Second slide label</h5>
-        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="mb-0">Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#000" background="#a885d8" text="Third slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5 class="mb-0">Third slide label</h5>
-        <p class="mb-0">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <p class="mb-0">Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
@@ -134,6 +134,34 @@ Add captions to your slides easily with the `.carousel-caption` element within a
     <span class="visually-hidden">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+{{< /example >}}
+
+### Disable touch swiping
+
+Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute and has `data-bs-interval="false"` so it doesn't autoplay.
+
+{{< example >}}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </a>
@@ -313,7 +341,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>interval</code></td>
       <td>number</td>
       <td><code>5000</code></td>
-      <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+      <td>The amount of time to delay between automatically cycling an item. If <code>false</code>, carousel will not automatically cycle.</td>
     </tr>
     <tr>
       <td><code>keyboard</code></td>
@@ -324,15 +352,15 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     <tr>
       <td><code>pause</code></td>
       <td>string | boolean</td>
-      <td><code>"hover"</code></td>
-      <td><p>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
-      <p>On touch-enabled devices, when set to <code>"hover"</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
+      <td><code>'hover'</code></td>
+      <td><p>If set to <code>'hover'</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
+      <p>On touch-enabled devices, when set to <code>'hover'</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
     </tr>
     <tr>
-      <td><code>slide</code></td>
+      <td><code>ride</code></td>
       <td>string | boolean</td>
       <td><code>false</code></td>
-      <td>Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.</td>
+      <td>Autoplays the carousel after the user manually cycles the first item. If set to <code>'carousel'</code>, autoplays the carousel on load.</td>
     </tr>
     <tr>
       <td><code>wrap</code></td>
