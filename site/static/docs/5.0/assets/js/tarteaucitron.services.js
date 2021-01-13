@@ -1,4 +1,5 @@
 /* eslint no-undef: 0 */
+/* eslint unicorn/prefer-date-now: 0 */
 tarteaucitron.services.googletagmanager = {
   key: 'googletagmanager',
   type: 'api',

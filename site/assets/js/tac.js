@@ -1,7 +1,7 @@
 /* eslint no-undef: 0 */
 /* eslint no-implicit-globals: 0 */
 /* eslint camelcase: 0 */
-/* eslint unicorn/prefer-trim-start-end: 0 */
+/* eslint unicorn/prefer-string-trim-start-end: 0 */
 
 (function () {
   'use strict'

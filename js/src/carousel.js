@@ -11,6 +11,7 @@ import {
   getElementFromSelector,
   getTransitionDurationFromElement,
   isVisible,
+  isRTL,
   reflow,
   triggerTransitionEnd,
   typeCheckConfig
@@ -98,10 +99,8 @@ const SELECTOR_CONTROL_NEXT = '.carousel-control-next' // Boosted mod
 
 const PREFIX_CUSTOM_PROPS = 'o-' // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
 
-const PointerType = {
-  TOUCH: 'touch',
-  PEN: 'pen'
-}
+const POINTER_TYPE_TOUCH = 'touch'
+const POINTER_TYPE_PEN = 'pen'
 
 /**
  * ------------------------------------------------------------------------
@@ -276,12 +275,20 @@ class Carousel extends BaseComponent {
 
     // swipe left
     if (direction > 0) {
-      this.prev()
+      if (isRTL) {
+        this.next()
+      } else {
+        this.prev()
+      }
     }
 
     // swipe right
     if (direction < 0) {
-      this.next()
+      if (isRTL) {
+        this.prev()
+      } else {
+        this.next()
+      }
     }
   }
 
@@ -302,7 +309,7 @@ class Carousel extends BaseComponent {
 
   _addTouchEventListeners() {
     const start = event => {
-      if (this._pointerEvent && PointerType[event.pointerType.toUpperCase()]) {
+      if (this._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH)) {
         this.touchStartX = event.clientX
       } else if (!this._pointerEvent) {
         this.touchStartX = event.touches[0].clientX
@@ -319,7 +326,7 @@ class Carousel extends BaseComponent {
     }
 
     const end = event => {
-      if (this._pointerEvent && PointerType[event.pointerType.toUpperCase()]) {
+      if (this._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH)) {
         this.touchDeltaX = event.clientX - this.touchStartX
       }
 
@@ -365,10 +372,18 @@ class Carousel extends BaseComponent {
 
     if (event.key === ARROW_LEFT_KEY) {
       event.preventDefault()
-      this.prev()
+      if (isRTL) {
+        this.next()
+      } else {
+        this.prev()
+      }
     } else if (event.key === ARROW_RIGHT_KEY) {
       event.preventDefault()
-      this.next()
+      if (isRTL) {
+        this.prev()
+      } else {
+        this.next()
+      }
     }
   }
 
@@ -497,19 +512,9 @@ class Carousel extends BaseComponent {
     const nextElementIndex = this._getItemIndex(nextElement)
     const isCycling = Boolean(this._interval)
 
-    let directionalClassName
-    let orderClassName
-    let eventDirectionName
-
-    if (direction === DIRECTION_NEXT) {
-      directionalClassName = CLASS_NAME_START
-      orderClassName = CLASS_NAME_NEXT
-      eventDirectionName = DIRECTION_LEFT
-    } else {
-      directionalClassName = CLASS_NAME_END
-      orderClassName = CLASS_NAME_PREV
-      eventDirectionName = DIRECTION_RIGHT
-    }
+    const directionalClassName = direction === DIRECTION_NEXT ? CLASS_NAME_START : CLASS_NAME_END
+    const orderClassName = direction === DIRECTION_NEXT ? CLASS_NAME_NEXT : CLASS_NAME_PREV
+    const eventDirectionName = direction === DIRECTION_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT
 
     if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE)) {
       this._isSliding = false

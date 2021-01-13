@@ -9,7 +9,6 @@ on:
       - v5-dev
       - "!dependabot/**"
 env:
-  CI: true
   FORCE_COLOR: 2
   NODE: 14.x
 

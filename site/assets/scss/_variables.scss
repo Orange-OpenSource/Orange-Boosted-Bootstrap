@@ -9,6 +9,9 @@ $bd-warning:       $warning;
 $bd-danger:        $danger;
 $dropdown-active-icon: $form-check-input-checked-bg-image; // Boosted mod
 
+// Higher than core's $zindex-tooltip, which is 1070
+$bd-navbar-zindex: 1080;
+
 // Boosted mod
 $offset-top: add(10rem, $border-width / 2);
 $sidebar-height: subtract(100vh, add($offset-top, 2rem));

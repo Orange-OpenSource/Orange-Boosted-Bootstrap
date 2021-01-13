@@ -7,6 +7,21 @@ aliases: "/migration/"
 toc: true
 ---
 
+## v5.0.0-beta2
+
+### Sass
+
+#### Utilities
+
+- Renamed `--aspect-ratio` to `--bs-aspect-ratio` to be consistent with other custom properties.
+- Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
+- `bootstrap-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
+- Extended form validation states customization capabilities. Added three new optional parameters to the `form-validation-state` mixin: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. These parameters can be set in the `$form-validation-states` map. [See #31757](https://github.com/twbs/bootstrap/pull/31757).
+
+### JavaScript
+
+- The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+
 ## v5.0.0-beta1
 
 ### RTL
@@ -19,7 +34,7 @@ Horizontal direction sensitive variables, utilities and mixins are renamed with 
 
 ##### Components
 
-- Renamed `.dropleft` and `.dropright` to `.dropstart` and `dropend`.
+- Renamed `.dropleft` and `.dropright` to `.dropstart` and `.dropend`.
 - Renamed `.dropdown-menu-*-left` and `.dropdown-menu-*-right` to `.dropdown-menu-*-start` and `.dropdown-menu-*-end`.
 - Renamed `.bs-popover-left` and `.bs-popover-right` to `.bs-popover-start` and `.bs-popover-end`.
 - Renamed `.bs-tooltip-left` and `.bs-tooltip-right` to `.bs-tooltip-start` and `.bs-tooltip-end`.
@@ -51,7 +66,6 @@ Breakpoints specific variants are consequently renamed too (eg. `.text-md-start`
 - Renamed `$form-switch-padding-left` to `$form-switch-padding-start`.
 - Renamed `$form-check-inline-margin-right` to `$form-check-inline-margin-end`.
 - Renamed `$form-select-feedback-icon-padding-right` to `$form-select-feedback-icon-padding-end`.
-
 
 ### JavaScript
 
