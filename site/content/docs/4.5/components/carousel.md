@@ -147,7 +147,7 @@ Add a link to a slider by using `a` html tag.
        {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p>Some representative placeholder content for the first slide.</p>
         <a href="#" title="Example link #1">Example Link #1</a>
       </div>
     </div>
@@ -155,7 +155,7 @@ Add a link to a slider by using `a` html tag.
        {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Some representative placeholder content for the second slide.</p>
         <a href="#" title="Example link #2">Example Link #2</a>
       </div>
     </div>
@@ -163,7 +163,7 @@ Add a link to a slider by using `a` html tag.
        {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <p>Some representative placeholder content for the third slide.</p>
         <a href="#" title="Example link #3">Example Link #3</a>
       </div>
     </div>
@@ -235,6 +235,33 @@ Add `data-interval=""` to a `.carousel-item` to change the amount of time to del
 </div>
 {{< /example >}}
 
+### Disable touch swiping
+
+Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-touch` attribute. The example below also does not include the `data-ride` attribute and has `data-interval="false"` so it doesn't autoplay.
+
+{{< example >}}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{{< /example >}}
 
 ## Usage
 
@@ -270,7 +297,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>interval</td>
       <td>number</td>
       <td>5000</td>
-      <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+      <td>The amount of time to delay between automatically cycling an item. If <code>false</code>, carousel will not automatically cycle.</td>
     </tr>
     <tr>
       <td>keyboard</td>
@@ -281,15 +308,15 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     <tr>
       <td>pause</td>
       <td>string | boolean</td>
-      <td>"hover"</td>
-      <td><p>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
-      <p>On touch-enabled devices, when set to <code>"hover"</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
+      <td>'hover'</td>
+      <td><p>If set to <code>'hover'</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
+      <p>On touch-enabled devices, when set to <code>'hover'</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
     </tr>
     <tr>
       <td>ride</td>
       <td>string</td>
       <td>false</td>
-      <td>Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.</td>
+      <td>Autoplays the carousel after the user manually cycles the first item. If set to <code>'carousel'</code>, autoplays the carousel on load.</td>
     </tr>
     <tr>
       <td>wrap</td>

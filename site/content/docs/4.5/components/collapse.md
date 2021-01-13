@@ -22,7 +22,7 @@ Click the buttons below to show and hide another element via class changes:
 - `.collapsing` is applied during transitions
 - `.collapse.show` shows content
 
-You can use a link with the `href` attribute, or a button with the `data-target` attribute. In both cases, the `data-toggle="collapse"` is required.
+Generally, we recommend using a button with the `data-target` attribute. While not recommended from a semantic point of view, you can also use a link with the `href` attribute (and a `role="button"`). In both cases, the `data-toggle="collapse"` is required.
 
 {{< example >}}
 <p>
@@ -35,7 +35,7 @@ You can use a link with the `href` attribute, or a button with the `data-target`
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
   </div>
 </div>
 {{< /example >}}
@@ -55,14 +55,14 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
       </div>
     </div>
   </div>
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample2">
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@ Using the [card]({{< docsref "/components/card" >}}) component, you can extend t
     </div>
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@ Using the [card]({{< docsref "/components/card" >}}) component, you can extend t
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Some placeholder content for the second accordion panel. This panel is hidden by default.
       </div>
     </div>
   </div>
@@ -113,7 +113,7 @@ Using the [card]({{< docsref "/components/card" >}}) component, you can extend t
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
       </div>
     </div>
   </div>
