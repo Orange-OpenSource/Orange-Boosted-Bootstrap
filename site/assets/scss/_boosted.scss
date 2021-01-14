@@ -113,3 +113,10 @@ body {
     text-decoration: none;
   }
 }
+
+// Back to top offset
+[id="#{$back-to-top-target-id}"]:target {
+  @include media-breakpoint-up(md) {
+    scroll-margin-top: $offset-top;
+  }
+}

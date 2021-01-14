@@ -57,6 +57,7 @@
   pages:
     - title: Accordion
     - title: Alerts
+    - title: Back to top
     - title: Badge
     - title: Breadcrumb
     - title: Buttons

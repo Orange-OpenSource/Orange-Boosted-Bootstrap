@@ -7,6 +7,8 @@ extra_js:
   - src: "cheatsheet.js"
 ---
 
+<a id="top" class="position-absolute"></a><!-- Boosted mod -->
+
 <header class="bd-header navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container-fluid">
     <h1 class="navbar-brand">
@@ -44,6 +46,7 @@ extra_js:
         <ul class="list-unstyled collapse" id="components-collapse">
           <li><a class="d-flex" href="#accordion">Accordion</a></li>
           <li><a class="d-flex" href="#alerts">Alerts</a></li>
+          <li><a class="d-flex" href="#back-to-top">Back to top</a></li>
           <li><a class="d-flex" href="#badge">Badge</a></li>
           <li><a class="d-flex" href="#breadcrumb">Breadcrumb</a></li>
           <li><a class="d-flex" href="#buttons">Buttons</a></li>
@@ -660,6 +663,34 @@ extra_js:
             <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
           </div>
         </div>
+        {{< /example >}}
+      </div>
+    </article>
+    <article class="my-3" id="back-to-top">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Back to top</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/back-to-top" >}}">Documentation</a>
+      </div>
+
+      <div class="row row-cols-3">
+        {{< example show_markup="false" >}}
+        <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
+          <a href="#top" class="back-to-top-link btn btn-secondary position-relative top-0" data-o-label="Back to top">
+            <span class="visually-hidden">Back to top</span>
+          </a>
+        </nav>
+        {{< /example >}}
+        {{< example show_markup="false" class="bd-example mt-0" >}}
+        <nav aria-label="Label inside back to top example" class="back-to-top position-static">
+          <a href="#top" class="back-to-top-link position-static btn btn-secondary px-2">Back to top</a>
+        </nav>
+        {{< /example >}}
+        {{< example show_markup="false" class="bd-example mt-0" >}}
+        <nav aria-label="Icon only back to top example" class="back-to-top position-static">
+          <a href="#top" class="back-to-top-link position-static btn btn-secondary" title="Back to top">
+            <span class="visually-hidden">Back to top</span>
+          </a>
+        </nav>
         {{< /example >}}
       </div>
     </article>
@@ -1485,3 +1516,11 @@ extra_js:
     </div>
   </div>
 </div>
+
+<!-- Boosted mod -->
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-secondary" data-o-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+<!-- End mod -->

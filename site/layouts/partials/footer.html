@@ -1,4 +1,4 @@
-<footer class="bd-footer p-3 p-md-5 bg-dark">
+<footer class="bd-footer py-3 py-md-4 bg-dark">
   <div class="container">
     <p class="mb-0">This documentation is an adaptation made by Orange.</p>
     <p class="mb-0">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
@@ -7,7 +7,7 @@
       —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
       docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
     </p>
-    <ul class="bd-footer-links ps-0 mb-3">
+    <ul class="bd-footer-links ps-0 mb-0">
       <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v{{ .Site.Params.current_version }}</span></li>
       <li class="list-inline-item me-3"><a href="{{ .Site.Params.repo }}">GitHub</a></li>
       <li class="list-inline-item me-3"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Examples</a></li>
@@ -19,3 +19,10 @@
     </ul>
   </div>
 </footer>
+<!-- Boosted mod: back-to-top component -->
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-secondary" data-o-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+<!-- End mod -->

@@ -46,6 +46,7 @@
 //    See https://developer.mozilla.org/fr/docs/Web/CSS/font-synthesis
 
 body {
+  position: relative; // Boosted mod: required for back-to-top component
   margin: 0; // 1
   font-family: $font-family-base;
   font-synthesis: none; // Boosted mod // 5
