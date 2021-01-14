@@ -908,6 +908,7 @@ $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
+$zindex-back-to-top:                1080 !default; // Boosted mod
 // scss-docs-end zindex-stack
 
 // Navs
@@ -1471,3 +1472,25 @@ $pre-line-height:                   1.25 !default; // Boosted mod
 //// Minimum target size (44×44px)
 $target-size: 2.75rem !default;
 
+//// Back to top
+// scss-docs-start back-to-top
+$back-to-top-display-threshold:  100vh !default;
+$back-to-top-target-id:          "top" !default;
+$back-to-top-target-offset-top:  $spacer * 5 !default; // Matching .navbar computed height
+$back-to-top-offset:             $spacer * 1.5 !default;
+$back-to-top-offset-right:       $back-to-top-offset !default;
+$back-to-top-offset-bottom:      $back-to-top-offset !default;
+$back-to-top-link-offset-top:    subtract(100vh, $back-to-top-offset * 4) !default;
+$back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
+$back-to-top-title-offset-right: add(100%, $border-width) !default;
+$back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
+$back-to-top-title-bg-color:     $white !default;
+// scss-docs-end back-to-top
+// @TODO Could be dropped when .btn-icon come in
+$back-to-top-width:              $spacer * 2 !default;
+$back-to-top-height:             $spacer * 2 !default;
+$back-to-top-icon-width:         $pagination-icon-width !default;
+$back-to-top-icon-height:        $pagination-icon-height !default;
+$back-to-top-icon-bg:            $pagination-icon-background !default;
+$back-to-top-icon-hover-filter:  $invert-filter !default;
+// End @TODO

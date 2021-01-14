@@ -1,0 +1,73 @@
+// Boosted only
+// See https://moderncss.dev/pure-css-smooth-scroll-back-to-top/
+[id="#{$back-to-top-target-id}"]:target {
+  scroll-margin-top: $back-to-top-target-offset-top;
+}
+
+.back-to-top {
+  position: absolute;
+  top: $back-to-top-display-threshold;
+  right: $back-to-top-offset-right;
+  bottom: $back-to-top-offset-bottom;
+  z-index: $zindex-back-to-top;
+  pointer-events: none;
+
+  @include media-breakpoint-up(xl) {
+    right: $back-to-top-offset-right * 2;
+    bottom: $back-to-top-offset-bottom * 2;
+  }
+}
+
+.back-to-top-link {
+  position: sticky;
+  top: $back-to-top-link-offset-top;
+  // @TODO Could be dropped when .btn-icon come in
+  min-width: $back-to-top-width;
+  min-height: $back-to-top-height;
+  padding: 0;
+  // End @TODO
+  pointer-events: all;
+
+  @include media-breakpoint-up(xl) {
+    top: $back-to-top-link-offset-top-xl;
+
+    &[data-#{$boosted-variable-prefix}label]::before {
+      position: absolute;
+      right: $back-to-top-title-offset-right;
+      padding: $back-to-top-title-padding;
+      color: color-contrast($back-to-top-title-bg-color);
+      white-space: nowrap;
+      content: attr(data-#{$boosted-variable-prefix}label);
+      background-color: $back-to-top-title-bg-color;
+    }
+
+    &[data-#{$boosted-variable-prefix}label]:hover::before,
+    &[data-#{$boosted-variable-prefix}label]:focus::before {
+      text-decoration: $link-decoration;
+    }
+  }
+
+  /* &:not([title]) :only-child {
+    margin-right: $spacer / -2;
+  } */
+
+  // @TODO Could be dropped when .btn-icon come in
+  &::after {
+    display: inline-block;
+    width: $back-to-top-icon-width;
+    height: $back-to-top-icon-height;
+    content: "";
+    background: $back-to-top-icon-bg;
+    transform: rotate(.25turn);
+  }
+
+  &:hover:not(:active)::after,
+  &:focus:not(:active)::after {
+    filter: $back-to-top-icon-hover-filter;
+  }
+
+  &:not([title]):not([data-#{$boosted-variable-prefix}label])::after {
+    margin-left: $spacer / 2;
+  }
+  // End @TODO
+}

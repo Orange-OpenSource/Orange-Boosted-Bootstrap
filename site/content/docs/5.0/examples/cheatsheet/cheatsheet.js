@@ -36,7 +36,7 @@
   function setActiveItem() {
     var hash = window.location.hash
 
-    if (hash === '') {
+    if (hash === '' || hash === 'top') {
       return
     }
 

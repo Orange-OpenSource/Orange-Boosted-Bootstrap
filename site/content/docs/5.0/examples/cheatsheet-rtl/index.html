@@ -8,6 +8,8 @@ extra_js:
 direction: rtl
 ---
 
+<a id="top" class="position-absolute"></a><!-- Boosted mod -->
+
 <header class="bd-header navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container-fluid">
     <h1 class="navbar-brand">
@@ -45,6 +47,7 @@ direction: rtl
         <ul class="list-unstyled collapse" id="components-collapse">
           <li><a class="d-flex" href="#accordion">الأكورديون</a></li>
           <li><a class="d-flex" href="#alerts">إنذار</a></li>
+          <li><a class="d-flex" href="#back-to-top">Back to to</a></li><!-- Boosted mod -->
           <li><a class="d-flex" href="#badge">شارة</a></li>
           <li><a class="d-flex" href="#breadcrumb">مسار التنقل</a></li>
           <li><a class="d-flex" href="#buttons">أزرار</a></li>
@@ -667,6 +670,36 @@ direction: rtl
         {{< /example >}}
       </div>
     </article>
+    <!-- Boosted mod -->
+    <article class="my-3" id="back-to-top">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>عد إلى الأعلى</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/back-to-top" >}}">توثيق</a>
+      </div>
+
+      <div class="row row-cols-3">
+        {{< example show_markup="false" >}}
+        <nav aria-label="معيار العودة إلى أعلى مثال" class="back-to-top position-static ps-5 ms-5">
+          <a href="#top" class="back-to-top-link btn btn-secondary position-relative top-0" data-o-label="عد إلى الأعلى">
+            <span class="visually-hidden">عد إلى الأعلى</span>
+          </a>
+        </nav>
+        {{< /example >}}
+        {{< example show_markup="false" class="bd-example mt-0" >}}
+        <nav aria-label="تسمية من الداخل إلى أعلى مثال" class="back-to-top position-static">
+          <a href="#top" class="back-to-top-link position-static btn btn-secondary px-2">عد إلى الأعلى</a>
+        </nav>
+        {{< /example >}}
+        {{< example show_markup="false" class="bd-example mt-0" >}}
+        <nav aria-label="رمز فقط إلى أعلى مثال" class="back-to-top position-static">
+          <a href="#top" class="back-to-top-link position-static btn btn-secondary" title="عد إلى الأعلى">
+            <span class="visually-hidden">عد إلى الأعلى</span>
+          </a>
+        </nav>
+        {{< /example >}}
+      </div>
+    </article>
+    <!-- End mod -->
     <article class="my-3" id="badge">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>شارة</h3>
@@ -1501,3 +1534,11 @@ direction: rtl
     </div>
   </div>
 </div>
+
+<!-- Boosted mod -->
+<nav aria-label="عد إلى الأعلى" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-secondary" data-o-label="عد إلى الأعلى">
+    <span class="visually-hidden">عد إلى الأعلى</span>
+  </a>
+</nav>
+<!-- End mod -->

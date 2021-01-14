@@ -254,9 +254,14 @@ This feature will be delivered with [#521]({{< param repo >}}/issues/521).
 
 ## Back to top
 
-{{< callout info >}}
-This feature will be delivered with [#523]({{< param repo >}}/issues/523).
-{{< /callout >}}
+[Documentation]({{< docsref "/components/back-to-top" >}})&nbsp;—&nbsp;{{< anchor web-btn-btt-001 >}}
+
+<nav aria-label="Icon only back to top example" class="back-to-top position-static">
+  <a href="#top" class="back-to-top-link position-static btn btn-secondary" title="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+
 
 ## Social buttons
 
