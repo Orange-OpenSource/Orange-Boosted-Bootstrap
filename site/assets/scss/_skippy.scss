@@ -1,5 +1,5 @@
 .skippy {
-  background-color: $black;
+  z-index: $zindex-skippy; // Boosted mod
 
   a {
     color: $white;
