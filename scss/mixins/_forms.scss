@@ -25,7 +25,7 @@
     @if $enable-validation-icons {
       .form-control {
         @include form-validation-state-selector($state) {
-          background: escape-svg($icon) no-repeat right map-get($spacers, 2) center / $spacer;
+          background: $icon no-repeat right map-get($spacers, 2) center / $spacer;
         }
       }
     }
@@ -47,7 +47,7 @@
           height: $form-feedback-icon-size;
           margin-right: map-get($spacers, 1);
           content: "";
-          background: escape-svg($form-feedback-icon-invalid) no-repeat;
+          background: $form-feedback-icon-invalid no-repeat;
         }
       }
     }

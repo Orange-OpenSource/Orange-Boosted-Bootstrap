@@ -236,7 +236,7 @@ $escaped-characters: (
 ) !default;
 
 // Boosted mod
-// For colored filters, see https://codepen.io/sosuke/pen/Pjoqqp
+//// SVG as Data-URi
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $chevron-icon-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$gray-700}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
@@ -245,6 +245,15 @@ $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm0 14.7a11 11 0 110 22 11 11 0 010-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 100 30 15 15 0 000-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
 $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 125'><path fill='#{$danger}' d='M70.3 0c-5.8 0-10.8 3.1-13.5 7.8L2.3 101.3l-.2.2A15.6 15.6 0 0015.6 125H125a15.6 15.6 0 0013.5-23.5L83.8 7.8A15.6 15.6 0 0070.3 0zm19.2 50a6.4 6.4 0 014.4 1.9 6.4 6.4 0 010 9L79.4 75.6l15 15a6.4 6.4 0 010 9.2 6.4 6.4 0 01-4.5 1.9 6.4 6.4 0 01-4.6-2l-15-15-15 15a6.4 6.4 0 01-4.6 2 6.4 6.4 0 01-4.6-2 6.4 6.4 0 010-9l15-15L46.8 61a6.4 6.4 0 119-9.1l14.6 14.5L84.8 52a6.4 6.4 0 014.7-1.9z'/></svg>") !default;
+//// SVG used several times
+$svg-as-custom-props: (
+  "chevron": $chevron-icon,
+  "close": $cross-icon,
+  "success": $success-icon,
+  "error": $danger-icon
+) !default;
+//// Filters
+// see https://codepen.io/sosuke/pen/Pjoqqp
 $invert-filter:         invert(1) !default;
 $orange-filter:         invert(46%) sepia(60%) saturate(2878%) hue-rotate(6deg) brightness(98%) contrast(104%) !default;
 // End mod
@@ -878,8 +887,8 @@ $form-feedback-font-style:          null !default;
 $form-feedback-valid-color:         $success !default;
 $form-feedback-invalid-color:       $danger !default;
 
-$form-feedback-icon-valid:          $success-icon !default;
-$form-feedback-icon-invalid:        $danger-icon !default;
+$form-feedback-icon-valid:          var(--#{$boosted-variable-prefix}success-icon) !default;
+$form-feedback-icon-invalid:        var(--#{$boosted-variable-prefix}error-icon) !default;
 $form-feedback-icon-size:           add($spacer / 4, $spacer / 2) !default; // Boosted mod
 
 // scss-docs-start form-validation-states
@@ -983,7 +992,7 @@ $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
 $navbar-light-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-icon-close-bg: $cross-icon !default; // Boosted mod
+$navbar-light-toggler-icon-close-bg: var(--#{$boosted-variable-prefix}close-icon) !default; // Boosted mod
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1080,11 +1089,11 @@ $pagination-padding-end:            1.125rem !default;
 $pagination-item-size:              $spacer * 2 !default;
 $pagination-active-item-bg:         $primary !default;
 $pagination-active-item-border:     $pagination-active-item-bg !default;
-$pagination-icon:                   $chevron-icon !default;
+$pagination-icon:                   var(--#{$boosted-variable-prefix}chevron-icon) !default;
 $pagination-icon-margin:            .1875rem !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
-$pagination-icon-background:        escape-svg($pagination-icon) no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
+$pagination-icon-background:        $pagination-icon no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
 // End mod
 
 // Cards
@@ -1284,10 +1293,10 @@ $alert-border-width:                $border-width !default;
 $alert-padding-sm:                  $spacer / 2 !default;
 $alert-colors:                      map-remove($theme-colors, "primary", "secondary", "light", "dark") !default;
 $alert-icons: (
-  "success": escape-svg($success-icon),
+  "success": var(--#{$boosted-variable-prefix}success-icon),
   "info":    escape-svg($info-icon),
   "warning": escape-svg($warning-icon),
-  "danger":  escape-svg($danger-icon)
+  "danger":  var(--#{$boosted-variable-prefix}error-icon)
 ) !default;
 $alert-logo-size:                   add($spacer / 2, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
@@ -1402,7 +1411,7 @@ $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
 $carousel-control-icon-size:         1.5rem !default;
 $carousel-control-icon-active-bg:    $component-active-bg !default;
-$carousel-control-icon-bg:           $chevron-icon !default;
+$carousel-control-icon-bg:           var(--#{$boosted-variable-prefix}chevron-icon) !default;
 $carousel-control-icon-disabled-bg:  $chevron-icon-disabled !default;
 $carousel-control-icon-filter:       $invert-filter !default;
 // End mod
@@ -1437,7 +1446,7 @@ $btn-close-height:           $btn-close-width !default;
 $btn-close-padding-x:        map-get($spacers, 1) !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;
 $btn-close-color:            $black !default;
-$btn-close-bg:               $cross-icon !default;
+$btn-close-bg:               var(--#{$boosted-variable-prefix}close-icon) !default;
 $btn-close-bg-stroke:        $cross-icon-stroke !default;
 $btn-close-focus-shadow:     null !default;
 $btn-close-disabled-opacity: .5 !default;

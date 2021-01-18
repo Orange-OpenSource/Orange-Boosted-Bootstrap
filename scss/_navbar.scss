@@ -346,7 +346,7 @@
 
     // Boosted mod: close icon when opened
     &[aria-expanded="true"] .navbar-toggler-icon {
-      background-image: escape-svg($navbar-light-toggler-icon-close-bg);
+      background-image: $navbar-light-toggler-icon-close-bg;
     }
     // End mod
   }
