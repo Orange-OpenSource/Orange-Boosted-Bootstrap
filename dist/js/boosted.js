@@ -1,16 +1,16 @@
 /*!
-  * Boosted v4.5.3 (https://boosted.orange.com)
-  * Copyright 2014-2020 The Boosted Authors
-  * Copyright 2014-2020 Orange
+  * Boosted v4.6.0 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors
+  * Copyright 2014-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v4.5.3 (https://boosted.orange.com)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap v4.6.0 (https://boosted.orange.com)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js'), require('focus-visible')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js', 'focus-visible'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.boosted = {}, global.jQuery, global.Popper));
 }(this, (function (exports, $, Popper) { 'use strict';
 
@@ -61,7 +61,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.3): util.js
+   * Bootstrap (v4.6.0): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -240,7 +240,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.5.3';
+  var VERSION = '4.6.0';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -396,7 +396,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.5.3';
+  var VERSION$1 = '4.6.0';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -619,7 +619,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.5.3';
+  var VERSION$2 = '4.6.0';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -759,6 +759,8 @@
       }
 
       if (this._config.interval && !this._isPaused) {
+        this._updateInterval();
+
         this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
       }
     };
@@ -1000,6 +1002,23 @@
       }
     };
 
+    _proto._updateInterval = function _updateInterval() {
+      var element = this._activeElement || this._element.querySelector(SELECTOR_ACTIVE_ITEM);
+
+      if (!element) {
+        return;
+      }
+
+      var elementInterval = parseInt(element.getAttribute('data-interval'), 10);
+
+      if (elementInterval) {
+        this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
+        this._config.interval = elementInterval;
+      } else {
+        this._config.interval = this._config.defaultInterval || this._config.interval;
+      }
+    };
+
     _proto._slide = function _slide(direction, element) {
       var _this4 = this;
 
@@ -1050,6 +1069,7 @@
 
       this._setActiveIndicatorElement(nextElement);
 
+      this._activeElement = nextElement;
       var slidEvent = $__default['default'].Event(EVENT_SLID, {
         relatedTarget: nextElement,
         direction: eventDirectionName,
@@ -1062,15 +1082,6 @@
         Util.reflow(nextElement);
         $__default['default'](activeElement).addClass(directionalClassName);
         $__default['default'](nextElement).addClass(directionalClassName);
-        var nextElementInterval = parseInt(nextElement.getAttribute('data-interval'), 10);
-
-        if (nextElementInterval) {
-          this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
-          this._config.interval = nextElementInterval;
-        } else {
-          this._config.interval = this._config.defaultInterval || this._config.interval;
-        }
-
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
         $__default['default'](activeElement).one(Util.TRANSITION_END, function () {
           $__default['default'](nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
@@ -1207,7 +1218,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.5.3';
+  var VERSION$3 = '4.6.0';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -1567,7 +1578,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.5.3';
+  var VERSION$4 = '4.6.0';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -1686,7 +1697,7 @@
 
       if (showEvent.isDefaultPrevented()) {
         return;
-      } // Disable totally Popper.js for Dropdown in Navbar
+      } // Totally disable Popper for Dropdowns in Navbar
 
 
       if (!this._inNavbar && usePopper) {
@@ -1695,7 +1706,7 @@
          * Popper - https://popper.js.org
          */
         if (typeof Popper__default['default'] === 'undefined') {
-          throw new TypeError('Bootstrap\'s dropdowns require Popper.js (https://popper.js.org/)');
+          throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
         }
 
         var referenceElement = this._element;
@@ -1865,7 +1876,7 @@
             boundariesElement: this._config.boundary
           }
         }
-      }; // Disable Popper.js if we have a static display
+      }; // Disable Popper if we have a static display
 
       if (this._config.display === 'static') {
         popperConfig.modifiers.applyStyle = {
@@ -2083,500 +2094,18 @@
     return Dropdown._jQueryInterface;
   };
 
-  /* eslint no-magic-numbers: ["error", { "ignore": [-100,-1,1,2,100] }] */
-
   /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
-  var NAME$5 = 'megamenu';
-  var VERSION$5 = '4.5.3';
-  var DATA_KEY$5 = 'bs.megamenu';
-  var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
-  var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
-
-  var ARROW_RIGHT_KEYCODE$1 = 39; // KeyboardEvent.which value for right arrow key
-
-  var ARROW_UP_KEYCODE$1 = 38; // KeyboardEvent.which value for up arrow key
-
-  var ARROW_DOWN_KEYCODE$1 = 40; // KeyboardEvent.which value for down arrow key
-
-  var TIMEOUT = 1000; // Timeout before focusing first element
-
-  var SPLITLENGHT = 4;
-  var CLASSLENGTH = 'navbar-expand-'.length;
-  var BreakPoints = {
-    sm: 480,
-    md: 768,
-    lg: 1024,
-    xl: 1280,
-    xxl: 1440
-  };
-  var CLASS_NAME_TRANSITIONING = 'transitioning';
-  var CLASS_NAME_ACTIVE$2 = 'active';
-  var SELECTOR_MEGAMENU = '.mega-menu';
-  var SELECTOR_PARENT = '.navbar';
-  var SELECTOR_ROOT_NAV = '.mega-menu > .navbar-nav';
-  var SELECTOR_MEGAMENU_PANEL = '.mega-menu-panel';
-  var SELECTOR_MEGAMENU_NAV = '.nav-link + .navbar-nav';
-  var SELECTOR_NAV_MENU = '.navbar-nav';
-  var SELECTOR_NAV_ITEM = '.nav-item';
-  var SELECTOR_NAV_LINK = '.nav-link';
-  var SELECTOR_NAV_LINK_COLLAPSE = '.nav-link[data-toggle=collapse]';
-  var SELECTOR_NAV_LINK_BACK = '.nav-link.back';
-  var SELECTOR_NAV_LINK_EXPANDED = '.nav-link[aria-expanded=true]';
-  var SELECTOR_CURRENT = '.nav-link[aria-current="page"]';
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-  var MegaMenu = /*#__PURE__*/function () {
-    function MegaMenu(element, config) {
-      var _this = this;
-
-      this._element = element;
-      this._parent = $__default['default'](this._element).parents(SELECTOR_PARENT);
-      this._$parentNavbarClasses = this._parent.attr('class'); // default if no class navbar-expand-* navbar is always mobile
-
-      this._$mediaQuery = window.matchMedia('(min-width: 0px)');
-      this._$isRTL = document.dir === 'rtl' ? -1 : 1;
-
-      if (typeof this._$parentNavbarClasses !== 'undefined' && this._$parentNavbarClasses.indexOf('navbar-expand-') !== -1) {
-        if (this._parent.hasClass('navbar-expand-xxl')) {
-          this._$breakpoint = 'xxl';
-        } else {
-          this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH;
-          this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2);
-        }
-
-        this._$mediaQuery = window.matchMedia("(max-width: " + BreakPoints[this._$breakpoint] + "px)");
-      }
-
-      this._$navLinks = $__default['default'](this._element).find(SELECTOR_NAV_LINK);
-      this._$goForwardLinks = $__default['default'](this._element).find(SELECTOR_MEGAMENU_NAV).prev(SELECTOR_NAV_LINK);
-      this._$goBackLinks = $__default['default'](this._element).find(SELECTOR_NAV_LINK_BACK);
-      this._$topCollapseMenus = $__default['default'](this._element).find(SELECTOR_MEGAMENU_PANEL);
-      this._$navLinkCollapses = $__default['default'](this._element).find(SELECTOR_NAV_LINK_COLLAPSE);
-      this._config = config;
-
-      if (typeof this._config.noFocus === 'undefined') {
-        this._config.noFocus = false;
-      }
-
-      this._addEventListeners();
-
-      if (this._$mediaQuery.matches) {
-        this._addAriaAttributes(this._element);
-      }
-
-      this.goTo = this._initPosition;
-      window.addEventListener('resize', function () {
-        if (_this._$mediaQuery.matches) {
-          _this._addAriaAttributes(_this._element);
-        } else {
-          _this._removeAriaAttributes(_this._element);
-
-          $__default['default'](_this._element).find(SELECTOR_NAV_MENU).first().attr('style', null);
-          $__default['default'](_this._element).find(SELECTOR_NAV_MENU).show();
-          $__default['default'](_this._element).height('auto');
-        }
-      });
-    } // getters
-
-
-    var _proto = MegaMenu.prototype;
-
-    // public
-    // private
-    _proto._addEventListeners = function _addEventListeners() {
-      var _this2 = this;
-
-      this._$goForwardLinks.on('click', function (event) {
-        return _this2._goForward(event);
-      });
-
-      this._$goBackLinks.on('click', function (event) {
-        return _this2._goBackward(event);
-      });
-
-      this._$navLinks.on('keydown', function (event) {
-        return _this2._manageKeyDown(event);
-      });
-
-      if (!this._config.noFocus) {
-        this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
-      }
-
-      $__default['default'](this._element).on('hidden.bs.collapse', function (event) {
-        return _this2._handleCollapseToggle(event);
-      });
-
-      this._$navLinkCollapses.on('click', function (event) {
-        return _this2._handleCollapseToggle(event);
-      });
-    };
-
-    _proto._addAriaAttributes = function _addAriaAttributes(element) {
-      var $subNavs = $__default['default'](element).find(SELECTOR_MEGAMENU_NAV);
-      var $parents = $__default['default'](element).find(SELECTOR_CURRENT).parents(SELECTOR_NAV_ITEM);
-      $__default['default'](element).attr('role', 'application');
-      $__default['default'](element).find('> .navbar-nav').attr('role', 'menu');
-      $__default['default'](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', 'menu');
-      $__default['default'](element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
-      $__default['default'](element).find(SELECTOR_NAV_LINK_BACK).attr('aria-hidden', 'true');
-      $__default['default'](element).find(SELECTOR_NAV_ITEM).attr('role', 'presentation');
-      $parents.each(function () {
-        $__default['default'](this).find(SELECTOR_NAV_LINK).first().attr('aria-current', 'true');
-      });
-      $subNavs.each(function () {
-        var navId = Util.getUID(NAME$5);
-        var $thisNavToggler = $__default['default'](this).prev(SELECTOR_NAV_LINK);
-        var $thisNav = $__default['default'](this);
-        var $thisNavBackLink = $thisNav.find(SELECTOR_NAV_LINK_BACK);
-        $thisNav.attr({
-          id: navId,
-          role: 'menu'
-        });
-        $thisNavToggler.attr({
-          role: 'menuitem',
-          'aria-controls': navId,
-          'aria-expanded': false,
-          'aria-haspopup': true
-        });
-        $thisNavBackLink.attr({
-          role: 'menuitem',
-          'aria-controls': navId
-        });
-      });
-    };
-
-    _proto._removeAriaAttributes = function _removeAriaAttributes(element) {
-      var $subNavs = $__default['default'](element).find(SELECTOR_MEGAMENU_NAV);
-      $__default['default'](element).attr('role', null);
-      $__default['default'](element).find('> .navbar-nav').attr('role', null);
-      $__default['default'](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', null);
-      $__default['default'](element).find('.nav-link[data-toggle=collapse]').attr('role', null);
-      $__default['default'](element).find(SELECTOR_NAV_LINK).attr({
-        'aria-hidden': null,
-        tabindex: null
-      });
-      $__default['default'](element).find(SELECTOR_NAV_ITEM).attr('role', null);
-      $__default['default'](element).find(SELECTOR_NAV_MENU).attr('style', null);
-      $subNavs.each(function () {
-        var $thisNavToggler = $__default['default'](this).prev(SELECTOR_NAV_LINK);
-        var $thisNav = $__default['default'](this);
-        var $thisNavBackLink = $thisNav.find(SELECTOR_NAV_LINK_BACK);
-        $thisNav.attr('role', null);
-        $thisNavToggler.attr({
-          role: null,
-          'aria-controls': null,
-          'aria-expanded': null,
-          'aria-haspopup': null
-        });
-        $thisNavBackLink.attr({
-          role: null,
-          'aria-controls': null
-        });
-      });
-    };
-
-    _proto._initPosition = function _initPosition(target) {
-      var _this3 = this;
-
-      if (!$__default['default'](target).length) {
-        return;
-      }
-
-      var $target = $__default['default'](target).first();
-      var position = $target.parents().index(this._element);
-      var rootPosition = $__default['default']('.mega-menu-panel .nav-link').first().parents().index($__default['default']('.mega-menu')); // @TODO WTF RTL?
-
-      var translatePercentage = -(position - rootPosition) * 100 / 2;
-      var $thisNav = $target.closest(SELECTOR_NAV_MENU);
-      var $rootNav = $target.closest(SELECTOR_ROOT_NAV);
-      $rootNav.addClass(CLASS_NAME_TRANSITIONING);
-
-      this._$navLinkCollapses.removeClass(CLASS_NAME_ACTIVE$2); // open collapse
-
-
-      if ($target.attr('data-toggle') === 'collapse') {
-        $target.siblings(SELECTOR_MEGAMENU_PANEL).collapse('show');
-        $target.addClass(CLASS_NAME_ACTIVE$2);
-
-        this._$topCollapseMenus.not($target.siblings(SELECTOR_MEGAMENU_PANEL)).collapse('hide');
-
-        $__default['default'](this._element).height('auto');
-        $rootNav.css('transform', 'translateX(0%)');
-      } else {
-        $target.closest(SELECTOR_MEGAMENU_PANEL).collapse('show');
-        $target.closest(SELECTOR_NAV_LINK_COLLAPSE).addClass(CLASS_NAME_ACTIVE$2);
-
-        this._$topCollapseMenus.not($target.closest(SELECTOR_MEGAMENU_PANEL)).collapse('hide');
-
-        if (this._$mediaQuery.matches) {
-          // show menu and hide other
-          $target.parents(SELECTOR_NAV_MENU).show(); // set aria on parent links
-
-          $target.parents(SELECTOR_NAV_ITEM).find('> .nav-link').not($target).attr({
-            tabindex: -1,
-            'aria-hidden': true,
-            'aria-expanded': true
-          }); // translate to pos
-
-          $rootNav.css('transform', "translateX(" + translatePercentage * this._$isRTL + "%)");
-
-          if (translatePercentage) {
-            // adapt main collapse height to target height
-            $__default['default'](this._element).height($thisNav.height());
-          } else {
-            $__default['default'](this._element).height('auto');
-          }
-        }
-      } // set focus on target link
-
-
-      setTimeout(function () {
-        if (!_this3._config.noFocus) {
-          // set focus on target link
-          $target.trigger('focus');
-        }
-
-        $rootNav.removeClass(CLASS_NAME_TRANSITIONING);
-      }, TIMEOUT);
-    };
-
-    _proto._manageKeyDown = function _manageKeyDown(event) {
-      var $thisTarget = $__default['default'](event.target); // test key code
-
-      if (/input|textarea/i.test(event.target.tagName)) {
-        return;
-      } // proceed according to key code
-
-
-      switch (event.which) {
-        case ARROW_LEFT_KEYCODE$1:
-          this._goBackward(event);
-
-          break;
-
-        case ARROW_RIGHT_KEYCODE$1:
-          this._goForward(event);
-
-          break;
-
-        case ARROW_UP_KEYCODE$1:
-          // focus prev nav link
-          $thisTarget.parent().prev().find('>.nav-link').not(SELECTOR_NAV_LINK_BACK).trigger('focus');
-          break;
-
-        case ARROW_DOWN_KEYCODE$1:
-          // focus next nav link
-          $thisTarget.parent().next().find('>.nav-link').trigger('focus');
-          break;
-      }
-    };
-
-    _proto._collapseFocus = function _collapseFocus() {
-      $__default['default'](this).find(SELECTOR_NAV_LINK).not(SELECTOR_NAV_LINK_BACK).first().trigger('focus');
-    };
-
-    _proto._handleCollapseToggle = function _handleCollapseToggle(event) {
-      var $this = $__default['default'](event.target);
-      var $thisCollapse = $__default['default']($this.attr('href'));
-
-      if ($this.is($__default['default'](this._element))) {
-        $this.children(SELECTOR_NAV_MENU).css('transform', 'translateX(0%)');
-        $this.height('auto');
-        $this.find(SELECTOR_NAV_LINK_EXPANDED).attr({
-          'aria-expanded': false,
-          'aria-hidden': null,
-          tabindex: null
-        });
-        $this.find(SELECTOR_NAV_LINK_EXPANDED).next(SELECTOR_NAV_MENU).hide();
-      } else {
-        $this.toggleClass(CLASS_NAME_ACTIVE$2);
-      }
-
-      this._$navLinkCollapses.not($this).removeClass(CLASS_NAME_ACTIVE$2);
-
-      this._$topCollapseMenus.not($thisCollapse).removeClass(CLASS_NAME_ACTIVE$2).collapse('hide');
-    };
-
-    _proto._goForward = function _goForward(event) {
-      if (!this._$mediaQuery.matches) {
-        return false;
-      }
-
-      event.preventDefault();
-      var $this = $__default['default'](event.target);
-      var $thisNav = $this.closest(SELECTOR_NAV_MENU);
-      var $targetNav = $this.next(SELECTOR_NAV_MENU);
-      var $rootNav = $this.closest(SELECTOR_ROOT_NAV);
-      var $thisNavToggler = $this;
-      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
-      var navWidth = $rootNav.width(); // @TODO WTF RTL?
-
-      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
-
-      if (!$this.next(SELECTOR_NAV_MENU).length || $rootNav.hasClass(CLASS_NAME_TRANSITIONING)) {
-        return false;
-      }
-
-      $rootNav.addClass(CLASS_NAME_TRANSITIONING); // hide all nav on same level
-
-      $thisNav.find(SELECTOR_NAV_MENU).hide(); // show target navbar-nav
-
-      $targetNav.show(); // adapt main collapse height to target height
-
-      $__default['default'](SELECTOR_MEGAMENU).height($targetNav.height()); // make only visible elements focusable
-
-      if (!currentTranslatePercentage) {
-        $rootNav.find('>.nav-item .nav-link').attr({
-          tabindex: -1,
-          'aria-hidden': true
-        });
-      }
-
-      $thisNav.find(SELECTOR_NAV_LINK).attr({
-        tabindex: -1,
-        'aria-hidden': true
-      });
-      $targetNav.find(SELECTOR_NAV_LINK).attr({
-        tabindex: 0,
-        'aria-hidden': false
-      }); // translate menu
-      // @TODO WTF RTL?
-
-      $rootNav.css('transform', "translateX(" + (currentTranslatePercentage - 100 * this._$isRTL) + "%)"); // focus on target nav first item
-
-      $rootNav.one('transitionend', function () {
-        $thisNavToggler.attr('aria-expanded', true);
-        $targetNav.find(SELECTOR_NAV_LINK).not(SELECTOR_NAV_LINK_BACK).first().trigger('focus');
-        $rootNav.removeClass(CLASS_NAME_TRANSITIONING);
-      });
-      return true;
-    };
-
-    _proto._goBackward = function _goBackward(event) {
-      if (!this._$mediaQuery.matches) {
-        return false;
-      }
-
-      event.preventDefault();
-      var $this = $__default['default'](event.target);
-      var $thisNav = $this.closest(SELECTOR_NAV_MENU);
-      var $targetNav = $thisNav.parent().closest(SELECTOR_NAV_MENU);
-      var $rootNav = $this.closest(SELECTOR_ROOT_NAV);
-      var $targetNavToggler = $targetNav.find(SELECTOR_NAV_LINK_EXPANDED);
-      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
-      var navWidth = $rootNav.width(); // @TODO WTF RTL?
-
-      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
-
-      if (!currentTranslatePercentage || $rootNav.hasClass(CLASS_NAME_TRANSITIONING)) {
-        return false;
-      }
-
-      $rootNav.addClass(CLASS_NAME_TRANSITIONING); // reset main collapse height
-
-      $__default['default'](SELECTOR_MEGAMENU).height('auto'); // make only visible elements focusable
-
-      $targetNav.find(SELECTOR_NAV_LINK).attr({
-        tabindex: 0,
-        'aria-hidden': false
-      }); // @TODO WTF RTL?
-
-      if (currentTranslatePercentage === -100) {
-        $rootNav.find('>.nav-item .nav-link').attr({
-          tabindex: 0,
-          'aria-hidden': false
-        });
-      } // translate menu
-      // @TODO WTF RTL?
-
-
-      $rootNav.css('transform', "translateX(" + (currentTranslatePercentage + 100 * this._$isRTL) + "%)"); // focus on target nav first item
-
-      $rootNav.one('transitionend', function () {
-        $targetNavToggler.attr('aria-expanded', false);
-        $targetNavToggler.trigger('focus');
-        $thisNav.hide();
-        $rootNav.removeClass(CLASS_NAME_TRANSITIONING);
-      });
-      return true;
-    } // static
-    ;
-
-    MegaMenu._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        if (!$__default['default'](this).is(SELECTOR_MEGAMENU)) {
-          throw new TypeError('Element is not a mega menu');
-        }
-
-        if (!config) {
-          config = {};
-        } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
-          // param = true
-          throw new TypeError('no-focus parameter must be boolean');
-        }
-
-        var data = $__default['default'](this).data(DATA_KEY$5);
-
-        if (!data) {
-          data = new MegaMenu(this, config);
-          $__default['default'](this).data(DATA_KEY$5, data);
-        }
-
-        if (config.target) {
-          if (typeof config.target !== 'string' || !/^[#.].*/.test(config.target)) {
-            throw new TypeError("Selector \"" + config.target + "\" is not supported");
-          }
-
-          data.goTo(config.target);
-        }
-      });
-    };
-
-    _createClass(MegaMenu, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION$5;
-      }
-    }]);
-
-    return MegaMenu;
-  }();
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-
-  $__default['default'].fn[NAME$5] = MegaMenu._jQueryInterface;
-  $__default['default'].fn[NAME$5].Constructor = MegaMenu;
-
-  $__default['default'].fn[NAME$5].noConflict = function () {
-    $__default['default'].fn[NAME$5] = JQUERY_NO_CONFLICT$5;
-    return MegaMenu._jQueryInterface;
-  };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
-  var NAME$6 = 'modal';
-  var VERSION$6 = '4.5.3';
-  var DATA_KEY$6 = 'bs.modal';
-  var EVENT_KEY$5 = "." + DATA_KEY$6;
+  var NAME$5 = 'modal';
+  var VERSION$5 = '4.6.0';
+  var DATA_KEY$5 = 'bs.modal';
+  var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
-  var JQUERY_NO_CONFLICT$6 = $__default['default'].fn[NAME$6];
+  var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
   var ESCAPE_KEYCODE$1 = 27; // KeyboardEvent.which value for Escape (Esc) key
 
   var Default$3 = {
@@ -2749,7 +2278,7 @@
        */
 
       $__default['default'](document).off(EVENT_FOCUSIN);
-      $__default['default'].removeData(this._element, DATA_KEY$6);
+      $__default['default'].removeData(this._element, DATA_KEY$5);
       this._config = null;
       this._element = null;
       this._dialog = null;
@@ -2768,45 +2297,41 @@
 
     _proto._getConfig = function _getConfig(config) {
       config = _extends({}, Default$3, config);
-      Util.typeCheckConfig(NAME$6, config, DefaultType$3);
+      Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
 
     _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
       var _this3 = this;
 
-      if (this._config.backdrop === 'static') {
-        var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
-        $__default['default'](this._element).trigger(hideEventPrevented);
+      var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
+      $__default['default'](this._element).trigger(hideEventPrevented);
 
-        if (hideEventPrevented.isDefaultPrevented()) {
-          return;
-        }
+      if (hideEventPrevented.isDefaultPrevented()) {
+        return;
+      }
 
-        var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+
+      if (!isModalOverflowing) {
+        this._element.style.overflowY = 'hidden';
+      }
+
+      this._element.classList.add(CLASS_NAME_STATIC);
+
+      var modalTransitionDuration = Util.getTransitionDurationFromElement(this._dialog);
+      $__default['default'](this._element).off(Util.TRANSITION_END);
+      $__default['default'](this._element).one(Util.TRANSITION_END, function () {
+        _this3._element.classList.remove(CLASS_NAME_STATIC);
 
         if (!isModalOverflowing) {
-          this._element.style.overflowY = 'hidden';
+          $__default['default'](_this3._element).one(Util.TRANSITION_END, function () {
+            _this3._element.style.overflowY = '';
+          }).emulateTransitionEnd(_this3._element, modalTransitionDuration);
         }
+      }).emulateTransitionEnd(modalTransitionDuration);
 
-        this._element.classList.add(CLASS_NAME_STATIC);
-
-        var modalTransitionDuration = Util.getTransitionDurationFromElement(this._dialog);
-        $__default['default'](this._element).off(Util.TRANSITION_END);
-        $__default['default'](this._element).one(Util.TRANSITION_END, function () {
-          _this3._element.classList.remove(CLASS_NAME_STATIC);
-
-          if (!isModalOverflowing) {
-            $__default['default'](_this3._element).one(Util.TRANSITION_END, function () {
-              _this3._element.style.overflowY = '';
-            }).emulateTransitionEnd(_this3._element, modalTransitionDuration);
-          }
-        }).emulateTransitionEnd(modalTransitionDuration);
-
-        this._element.focus();
-      } else {
-        this.hide();
-      }
+      this._element.focus();
     };
 
     _proto._showElement = function _showElement(relatedTarget) {
@@ -2961,7 +2486,11 @@
             return;
           }
 
-          _this9._triggerBackdropTransition();
+          if (_this9._config.backdrop === 'static') {
+            _this9._triggerBackdropTransition();
+          } else {
+            _this9.hide();
+          }
         });
 
         if (animate) {
@@ -3122,13 +2651,13 @@
 
     Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$6);
+        var data = $__default['default'](this).data(DATA_KEY$5);
 
         var _config = _extends({}, Default$3, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
-          $__default['default'](this).data(DATA_KEY$6, data);
+          $__default['default'](this).data(DATA_KEY$5, data);
         }
 
         if (typeof config === 'string') {
@@ -3146,7 +2675,7 @@
     _createClass(Modal, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$6;
+        return VERSION$5;
       }
     }, {
       key: "Default",
@@ -3174,7 +2703,7 @@
       target = document.querySelector(selector);
     }
 
-    var config = $__default['default'](target).data(DATA_KEY$6) ? 'toggle' : _extends({}, $__default['default'](target).data(), $__default['default'](this).data());
+    var config = $__default['default'](target).data(DATA_KEY$5) ? 'toggle' : _extends({}, $__default['default'](target).data(), $__default['default'](this).data());
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
@@ -3201,290 +2730,17 @@
    * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$6] = Modal._jQueryInterface;
-  $__default['default'].fn[NAME$6].Constructor = Modal;
+  $__default['default'].fn[NAME$5] = Modal._jQueryInterface;
+  $__default['default'].fn[NAME$5].Constructor = Modal;
 
-  $__default['default'].fn[NAME$6].noConflict = function () {
-    $__default['default'].fn[NAME$6] = JQUERY_NO_CONFLICT$6;
+  $__default['default'].fn[NAME$5].noConflict = function () {
+    $__default['default'].fn[NAME$5] = JQUERY_NO_CONFLICT$5;
     return Modal._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
-  var NAME$7 = 'navbar';
-  var VERSION$7 = '4.5.3';
-  var DATA_KEY$7 = 'bs.navbar';
-  var JQUERY_NO_CONFLICT$7 = $__default['default'].fn[NAME$7];
-  var BREAKPOINT = 768;
-  var Default$4 = {
-    sticky: false,
-    trigger: ''
-  };
-  var DefaultType$4 = {
-    sticky: 'boolean',
-    trigger: 'string'
-  };
-  var SELECTOR_SUPRA_BAR = '.navbar.supra';
-  var SELECTOR_MEGAMENU_PANEL$1 = '.mega-menu.panel';
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-  var Navbar = /*#__PURE__*/function () {
-    function Navbar(element, config) {
-      var _this = this;
-
-      this._element = element;
-      this._supraBar = element.querySelector(SELECTOR_SUPRA_BAR);
-      this._config = this._getConfig(config);
-      this._initialHeight = $__default['default'](this._element).outerHeight();
-      this._initialSupraHeight = $__default['default'](this._supraBar).outerHeight();
-
-      this._addAria();
-
-      if (this._config.sticky) {
-        $__default['default'](this._element).addClass('fixed-top');
-        $__default['default'](SELECTOR_MEGAMENU_PANEL$1).addClass('sticky');
-        $__default['default'](document.body).css('padding-top', this._initialHeight);
-        $__default['default'](window).on('scroll', function () {
-          var Scroll = $__default['default'](window).scrollTop();
-
-          if (Scroll > 0) {
-            $__default['default'](_this._element).addClass('minimized');
-          } else {
-            $__default['default'](_this._element).removeClass('minimized');
-          }
-        });
-      }
-
-      if (this._config.hideSupra) {
-        $__default['default'](window).on('scroll', function () {
-          if ($__default['default'](window).innerWidth() < BREAKPOINT) {
-            return;
-          }
-
-          var Scroll = $__default['default'](window).scrollTop();
-
-          if (Scroll > 0) {
-            $__default['default'](SELECTOR_SUPRA_BAR).hide();
-          } else {
-            $__default['default'](SELECTOR_SUPRA_BAR).show();
-          }
-        });
-      }
-    } // getters
-
-
-    var _proto = Navbar.prototype;
-
-    // private
-    _proto._getConfig = function _getConfig(config) {
-      config = $__default['default'].extend({}, Default$4, config);
-      Util.typeCheckConfig(NAME$7, config, DefaultType$4);
-      return config;
-    };
-
-    _proto._addAria = function _addAria() {
-      $__default['default'](this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
-    } // static
-    ;
-
-    Navbar._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$7);
-
-        var _config = _extends({}, Default$4, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
-
-        if (!data) {
-          data = new Navbar(this, _config);
-          $__default['default'](this).data(DATA_KEY$7, data);
-        }
-
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError("No method named \"" + config + "\"");
-          }
-
-          data[config]();
-        }
-      });
-    };
-
-    _createClass(Navbar, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION$7;
-      }
-    }, {
-      key: "Default",
-      get: function get() {
-        return Default$4;
-      }
-    }]);
-
-    return Navbar;
-  }();
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-
-  $__default['default'].fn[NAME$7] = Navbar._jQueryInterface;
-  $__default['default'].fn[NAME$7].Constructor = Navbar;
-
-  $__default['default'].fn[NAME$7].noConflict = function () {
-    $__default['default'].fn[NAME$7] = JQUERY_NO_CONFLICT$7;
-    return Navbar._jQueryInterface;
-  };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
-  var NAME$8 = 'otab';
-  var VERSION$8 = '4.5.3';
-  var DATA_KEY$8 = 'bs.otab';
-  var EVENT_KEY$6 = "." + DATA_KEY$8;
-  var DATA_API_KEY$6 = '.data-api';
-  var JQUERY_NO_CONFLICT$8 = $__default['default'].fn[NAME$8];
-  var DEFAULT_THRESHOLD = 2;
-  var EVENT_CLICK_DATA_API$6 = "click" + EVENT_KEY$6 + DATA_API_KEY$6;
-  var CLASS_NAME_SHOW$4 = 'show';
-  var CLASS_NAME_ACCORDION_LAYOUT = 'accordion-layout';
-  var SELECTOR_OTAB_HEADING = '.o-tab-heading';
-  var SELECTOR_OTAB_CONTENT = '.o-tab-content';
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-  var Otab = /*#__PURE__*/function () {
-    function Otab(element) {
-      this._element = element;
-
-      this._addAccessibility();
-
-      if ($__default['default'](this._element).parent().find(SELECTOR_OTAB_HEADING).length > DEFAULT_THRESHOLD) {
-        $__default['default'](this._element).parent().addClass(CLASS_NAME_ACCORDION_LAYOUT);
-      }
-    } // getters
-
-
-    var _proto = Otab.prototype;
-
-    // public
-    _proto.show = function show() {
-      var $element = $__default['default'](this._element);
-
-      if ($element.next().hasClass(CLASS_NAME_SHOW$4)) {
-        return;
-      } // from parent remove all tab-content show classes
-
-
-      $element.parent().find(SELECTOR_OTAB_CONTENT).removeClass(CLASS_NAME_SHOW$4); // remove all aria-expanded=true
-
-      $element.parent().find('[aria-expanded="true"]').attr('aria-expanded', false); // add show class to next tab-content
-
-      $element.next().addClass(CLASS_NAME_SHOW$4); // add aria-expanded=true to element
-
-      $element.attr('aria-expanded', true);
-    } // private
-    ;
-
-    _proto._addAccessibility = function _addAccessibility() {
-      var $tab = $__default['default'](this._element);
-      var $tabpanel = $tab.next();
-      $tab.attr('id', Util.getUID(NAME$8));
-      $tabpanel.attr('id', Util.getUID(NAME$8));
-      $tab.attr({
-        'aria-controls': $tabpanel.attr('id'),
-        role: 'tab'
-      });
-      $tabpanel.attr({
-        'aria-labelledby': $tab.attr('id'),
-        role: 'tabpanel',
-        tabindex: 0
-      });
-
-      if ($tabpanel.hasClass(CLASS_NAME_SHOW$4)) {
-        $tab.attr('aria-expanded', true);
-      } else {
-        $tab.attr('aria-expanded', false);
-      }
-    } // static
-    ;
-
-    Otab._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var $this = $__default['default'](this);
-        var data = $this.data(DATA_KEY$8);
-
-        if (!data) {
-          data = new Otab(this);
-          $this.data(DATA_KEY$8, data);
-        }
-
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError("No method named \"" + config + "\"");
-          }
-
-          data[config]();
-        }
-      });
-    };
-
-    _createClass(Otab, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION$8;
-      }
-    }]);
-
-    return Otab;
-  }();
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
-
-
-  $__default['default'](document).on('DOMContentLoaded', function () {
-    Otab._jQueryInterface.call($__default['default'](SELECTOR_OTAB_HEADING));
-  }).on(EVENT_CLICK_DATA_API$6, SELECTOR_OTAB_HEADING, function (event) {
-    event.preventDefault();
-
-    Otab._jQueryInterface.call($__default['default'](this), CLASS_NAME_SHOW$4);
-  });
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-  $__default['default'].fn[NAME$8] = Otab._jQueryInterface;
-  $__default['default'].fn[NAME$8].Constructor = Otab;
-
-  $__default['default'].fn[NAME$8].noConflict = function () {
-    $__default['default'].fn[NAME$8] = JQUERY_NO_CONFLICT$8;
-    return Otab._jQueryInterface;
-  };
-
-  /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.3): tools/sanitizer.js
+   * Bootstrap (v4.6.0): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3609,15 +2865,15 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$9 = 'tooltip';
-  var VERSION$9 = '4.5.3';
-  var DATA_KEY$9 = 'bs.tooltip';
-  var EVENT_KEY$7 = "." + DATA_KEY$9;
-  var JQUERY_NO_CONFLICT$9 = $__default['default'].fn[NAME$9];
+  var NAME$6 = 'tooltip';
+  var VERSION$6 = '4.6.0';
+  var DATA_KEY$6 = 'bs.tooltip';
+  var EVENT_KEY$6 = "." + DATA_KEY$6;
+  var JQUERY_NO_CONFLICT$6 = $__default['default'].fn[NAME$6];
   var CLASS_PREFIX = 'bs-tooltip';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
   var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
-  var DefaultType$5 = {
+  var DefaultType$4 = {
     animation: 'boolean',
     template: 'string',
     title: '(string|element|function)',
@@ -3630,6 +2886,7 @@
     container: '(string|element|boolean)',
     fallbackPlacement: '(string|array)',
     boundary: '(string|element)',
+    customClass: '(string|function)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
     whiteList: 'object',
@@ -3642,7 +2899,7 @@
     BOTTOM: 'bottom',
     LEFT: 'left'
   };
-  var Default$5 = {
+  var Default$4 = {
     animation: true,
     template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
@@ -3655,6 +2912,7 @@
     container: false,
     fallbackPlacement: 'flip',
     boundary: 'scrollParent',
+    customClass: '',
     sanitize: true,
     sanitizeFn: null,
     whiteList: DefaultWhitelist,
@@ -3663,19 +2921,19 @@
   var HOVER_STATE_SHOW = 'show';
   var HOVER_STATE_OUT = 'out';
   var Event = {
-    HIDE: "hide" + EVENT_KEY$7,
-    HIDDEN: "hidden" + EVENT_KEY$7,
-    SHOW: "show" + EVENT_KEY$7,
-    SHOWN: "shown" + EVENT_KEY$7,
-    INSERTED: "inserted" + EVENT_KEY$7,
-    CLICK: "click" + EVENT_KEY$7,
-    FOCUSIN: "focusin" + EVENT_KEY$7,
-    FOCUSOUT: "focusout" + EVENT_KEY$7,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$7,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$7
+    HIDE: "hide" + EVENT_KEY$6,
+    HIDDEN: "hidden" + EVENT_KEY$6,
+    SHOW: "show" + EVENT_KEY$6,
+    SHOWN: "shown" + EVENT_KEY$6,
+    INSERTED: "inserted" + EVENT_KEY$6,
+    CLICK: "click" + EVENT_KEY$6,
+    FOCUSIN: "focusin" + EVENT_KEY$6,
+    FOCUSOUT: "focusout" + EVENT_KEY$6,
+    MOUSEENTER: "mouseenter" + EVENT_KEY$6,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY$6
   };
   var CLASS_NAME_FADE$2 = 'fade';
-  var CLASS_NAME_SHOW$5 = 'show';
+  var CLASS_NAME_SHOW$4 = 'show';
   var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
   var SELECTOR_ARROW = '.arrow';
   var TRIGGER_HOVER = 'hover';
@@ -3691,7 +2949,7 @@
   var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
       if (typeof Popper__default['default'] === 'undefined') {
-        throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
+        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
       } // private
 
 
@@ -3746,7 +3004,7 @@
           context._leave(null, context);
         }
       } else {
-        if ($__default['default'](this.getTipElement()).hasClass(CLASS_NAME_SHOW$5)) {
+        if ($__default['default'](this.getTipElement()).hasClass(CLASS_NAME_SHOW$4)) {
           this._leave(null, this);
 
           return;
@@ -3839,7 +3097,8 @@
 
 
         this._popper = new Popper__default['default'](this.element, tip, this._getPopperConfig(attachment));
-        $__default['default'](tip).addClass(CLASS_NAME_SHOW$5); // If this is a touch-enabled device we add extra
+        $__default['default'](tip).addClass(CLASS_NAME_SHOW$4);
+        $__default['default'](tip).addClass(this.config.customClass); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -3903,7 +3162,7 @@
         return;
       }
 
-      $__default['default'](tip).removeClass(CLASS_NAME_SHOW$5); // If this is a touch-enabled device we remove the extra
+      $__default['default'](tip).removeClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
@@ -3947,7 +3206,7 @@
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
       this.setElementContent($__default['default'](tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
-      $__default['default'](tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$5);
+      $__default['default'](tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
@@ -4108,7 +3367,7 @@
         context._activeTrigger[event.type === 'focusin' ? TRIGGER_FOCUS : TRIGGER_HOVER] = true;
       }
 
-      if ($__default['default'](context.getTipElement()).hasClass(CLASS_NAME_SHOW$5) || context._hoverState === HOVER_STATE_SHOW) {
+      if ($__default['default'](context.getTipElement()).hasClass(CLASS_NAME_SHOW$4) || context._hoverState === HOVER_STATE_SHOW) {
         context._hoverState = HOVER_STATE_SHOW;
         return;
       }
@@ -4194,7 +3453,7 @@
         config.content = config.content.toString();
       }
 
-      Util.typeCheckConfig(NAME$9, config, this.constructor.DefaultType);
+      Util.typeCheckConfig(NAME$6, config, this.constructor.DefaultType);
 
       if (config.sanitize) {
         config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
@@ -4253,7 +3512,7 @@
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY$9);
+        var data = $element.data(DATA_KEY$6);
 
         var _config = typeof config === 'object' && config;
 
@@ -4263,7 +3522,7 @@
 
         if (!data) {
           data = new Tooltip(this, _config);
-          $element.data(DATA_KEY$9, data);
+          $element.data(DATA_KEY$6, data);
         }
 
         if (typeof config === 'string') {
@@ -4279,22 +3538,22 @@
     _createClass(Tooltip, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$9;
+        return VERSION$6;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$5;
+        return Default$4;
       }
     }, {
       key: "NAME",
       get: function get() {
-        return NAME$9;
+        return NAME$6;
       }
     }, {
       key: "DATA_KEY",
       get: function get() {
-        return DATA_KEY$9;
+        return DATA_KEY$6;
       }
     }, {
       key: "Event",
@@ -4304,12 +3563,12 @@
     }, {
       key: "EVENT_KEY",
       get: function get() {
-        return EVENT_KEY$7;
+        return EVENT_KEY$6;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$5;
+        return DefaultType$4;
       }
     }]);
 
@@ -4322,11 +3581,11 @@
    */
 
 
-  $__default['default'].fn[NAME$9] = Tooltip._jQueryInterface;
-  $__default['default'].fn[NAME$9].Constructor = Tooltip;
+  $__default['default'].fn[NAME$6] = Tooltip._jQueryInterface;
+  $__default['default'].fn[NAME$6].Constructor = Tooltip;
 
-  $__default['default'].fn[NAME$9].noConflict = function () {
-    $__default['default'].fn[NAME$9] = JQUERY_NO_CONFLICT$9;
+  $__default['default'].fn[NAME$6].noConflict = function () {
+    $__default['default'].fn[NAME$6] = JQUERY_NO_CONFLICT$6;
     return Tooltip._jQueryInterface;
   };
 
@@ -4336,40 +3595,40 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$a = 'popover';
-  var VERSION$a = '4.5.3';
-  var DATA_KEY$a = 'bs.popover';
-  var EVENT_KEY$8 = "." + DATA_KEY$a;
-  var JQUERY_NO_CONFLICT$a = $__default['default'].fn[NAME$a];
+  var NAME$7 = 'popover';
+  var VERSION$7 = '4.6.0';
+  var DATA_KEY$7 = 'bs.popover';
+  var EVENT_KEY$7 = "." + DATA_KEY$7;
+  var JQUERY_NO_CONFLICT$7 = $__default['default'].fn[NAME$7];
   var CLASS_PREFIX$1 = 'bs-popover';
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
-  var Default$6 = _extends({}, Tooltip.Default, {
+  var Default$5 = _extends({}, Tooltip.Default, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-  var DefaultType$6 = _extends({}, Tooltip.DefaultType, {
+  var DefaultType$5 = _extends({}, Tooltip.DefaultType, {
     content: '(string|element|function)'
   });
 
   var CLASS_NAME_FADE$3 = 'fade';
-  var CLASS_NAME_SHOW$6 = 'show';
+  var CLASS_NAME_SHOW$5 = 'show';
   var SELECTOR_TITLE = '.popover-header';
   var SELECTOR_CONTENT = '.popover-body';
   var Event$1 = {
-    HIDE: "hide" + EVENT_KEY$8,
-    HIDDEN: "hidden" + EVENT_KEY$8,
-    SHOW: "show" + EVENT_KEY$8,
-    SHOWN: "shown" + EVENT_KEY$8,
-    INSERTED: "inserted" + EVENT_KEY$8,
-    CLICK: "click" + EVENT_KEY$8,
-    FOCUSIN: "focusin" + EVENT_KEY$8,
-    FOCUSOUT: "focusout" + EVENT_KEY$8,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$8,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$8
+    HIDE: "hide" + EVENT_KEY$7,
+    HIDDEN: "hidden" + EVENT_KEY$7,
+    SHOW: "show" + EVENT_KEY$7,
+    SHOWN: "shown" + EVENT_KEY$7,
+    INSERTED: "inserted" + EVENT_KEY$7,
+    CLICK: "click" + EVENT_KEY$7,
+    FOCUSIN: "focusin" + EVENT_KEY$7,
+    FOCUSOUT: "focusout" + EVENT_KEY$7,
+    MOUSEENTER: "mouseenter" + EVENT_KEY$7,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY$7
   };
   /**
    * ------------------------------------------------------------------------
@@ -4412,7 +3671,7 @@
       }
 
       this.setElementContent($tip.find(SELECTOR_CONTENT), content);
-      $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$6);
+      $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
     } // Private
     ;
 
@@ -4432,7 +3691,7 @@
 
     Popover._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$a);
+        var data = $__default['default'](this).data(DATA_KEY$7);
 
         var _config = typeof config === 'object' ? config : null;
 
@@ -4442,7 +3701,7 @@
 
         if (!data) {
           data = new Popover(this, _config);
-          $__default['default'](this).data(DATA_KEY$a, data);
+          $__default['default'](this).data(DATA_KEY$7, data);
         }
 
         if (typeof config === 'string') {
@@ -4459,22 +3718,22 @@
       key: "VERSION",
       // Getters
       get: function get() {
-        return VERSION$a;
+        return VERSION$7;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$6;
+        return Default$5;
       }
     }, {
       key: "NAME",
       get: function get() {
-        return NAME$a;
+        return NAME$7;
       }
     }, {
       key: "DATA_KEY",
       get: function get() {
-        return DATA_KEY$a;
+        return DATA_KEY$7;
       }
     }, {
       key: "Event",
@@ -4484,12 +3743,12 @@
     }, {
       key: "EVENT_KEY",
       get: function get() {
-        return EVENT_KEY$8;
+        return EVENT_KEY$7;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$6;
+        return DefaultType$5;
       }
     }]);
 
@@ -4502,11 +3761,11 @@
    */
 
 
-  $__default['default'].fn[NAME$a] = Popover._jQueryInterface;
-  $__default['default'].fn[NAME$a].Constructor = Popover;
+  $__default['default'].fn[NAME$7] = Popover._jQueryInterface;
+  $__default['default'].fn[NAME$7].Constructor = Popover;
 
-  $__default['default'].fn[NAME$a].noConflict = function () {
-    $__default['default'].fn[NAME$a] = JQUERY_NO_CONFLICT$a;
+  $__default['default'].fn[NAME$7].noConflict = function () {
+    $__default['default'].fn[NAME$7] = JQUERY_NO_CONFLICT$7;
     return Popover._jQueryInterface;
   };
 
@@ -4516,371 +3775,27 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$b = 'prioritynav';
-  var VERSION$b = '4.5.3';
-  var DATA_KEY$b = 'bs.prioritynav';
-  var JQUERY_NO_CONFLICT$b = $__default['default'].fn[NAME$b];
-  var RESIZE_DURATION = 500;
-  var TAB_KEYCODE$1 = 9;
-  var EVENT_RESIZE$1 = 'resize';
-  var CLASS_NAME_HIDE = 'sr-only';
-  var CLASS_NAME_RESIZING = 'resizing overflow-hidden';
-  var SELECTOR_NAV_ELEMENTS = 'li:not(\'.overflow-nav\')';
-  var SELECTOR_FIRST_ELEMENT = 'li:first';
-  var MenuLabelDefault = 'More';
-
-  function MenuTemplate(MenuLabel) {
-    return "\n  <li class=\"overflow-nav nav-item dropdown d-none\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
-  }
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-
-  var PriorityNav = /*#__PURE__*/function () {
-    function PriorityNav(element, config) {
-      this._element = element;
-      this._config = config;
-
-      if ($__default['default'](element).is('ul')) {
-        this._$menu = $__default['default'](element);
-      } else {
-        this._$menu = $__default['default'](element).find('ul').first();
-      }
-
-      this._initMenu();
-
-      this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS);
-
-      this._bindUIActions();
-
-      this._setupMenu();
-    } // getters
-
-
-    var _proto = PriorityNav.prototype;
-
-    // public
-    // private
-    _proto._initMenu = function _initMenu() {
-      var MenuLabel = this._config;
-
-      if (typeof MenuLabel === 'undefined') {
-        MenuLabel = MenuLabelDefault;
-      } // add menu template
-
-
-      this._$menu.append(MenuTemplate(MenuLabel));
-    };
-
-    _proto._setupMenu = function _setupMenu() {
-      var $allNavElements = this._$allNavElements; // Checking top position of first item (sometimes changes)
-
-      var firstPos = this._$menu.find(SELECTOR_FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
-
-
-      var $wrappedElements = $__default['default'](); // Used to snag the previous menu item in addition to ones that have wrapped
-
-      var first = true; // Loop through all the nav items...
-
-      this._$allNavElements.each(function (i) {
-        var $elm = $__default['default'](this); // ...in which to find wrapped elements
-
-        var pos = $elm.position();
-
-        if (pos.top !== firstPos.top) {
-          // If element is wrapped, add it to set
-          $wrappedElements = $wrappedElements.add($elm); // Add the previous one too, if first
-
-          if (first) {
-            $wrappedElements = $wrappedElements.add($allNavElements.eq(i - 1));
-            first = false;
-          }
-        }
-      });
-
-      if ($wrappedElements.length) {
-        // Clone set before altering
-        var newSet = $wrappedElements.clone(); // Hide ones that we're moving
-
-        $wrappedElements.addClass(CLASS_NAME_HIDE);
-        $wrappedElements.find('.nav-link').attr('tabindex', -1); // Add wrapped elements to dropdown
-
-        this._$menu.find('.overflow-nav-list').append(newSet); // Show new menu
-
-
-        this._$menu.find('.overflow-nav').removeClass('d-none').addClass('d-inline-block'); // Make overflow visible again so dropdown can be seen.
-
-
-        this._$menu.find('.o-nav-local').css('overflow', 'visible'); // Check if menu doesn't overflow after process
-
-
-        if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
-          var $item = $__default['default'](this._element).find("." + CLASS_NAME_HIDE).first().prev();
-          var $itemDuplicate = $item.clone();
-          $item.addClass(CLASS_NAME_HIDE);
-          $item.find('.nav-link').attr('tabindex', -1);
-
-          this._$menu.find('.overflow-nav-list').prepend($itemDuplicate);
-        }
-      } // hide menu from AT
-
-
-      this._$menu.find('.overflow-nav').attr('aria-hidden', true);
-    };
-
-    _proto._tearDown = function _tearDown() {
-      this._$menu.find('.overflow-nav-list').empty();
-
-      this._$menu.find('.overflow-nav').removeClass('d-inline-block').addClass('d-none');
-
-      this._$allNavElements.removeClass(CLASS_NAME_HIDE);
-
-      this._$allNavElements.find('.nav-link').attr('tabindex', 0);
-    };
-
-    _proto._bindUIActions = function _bindUIActions() {
-      var _this = this;
-
-      $__default['default'](window).on(EVENT_RESIZE$1, function () {
-        _this._$menu.addClass(CLASS_NAME_RESIZING);
-
-        setTimeout(function () {
-          _this._tearDown();
-
-          _this._setupMenu();
-
-          _this._$menu.removeClass(CLASS_NAME_RESIZING);
-        }, RESIZE_DURATION);
-      });
-
-      this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', function (e) {
-        if (e.which === TAB_KEYCODE$1) {
-          $__default['default'](e.target).dropdown('toggle');
-        }
-      });
-    } // static
-    ;
-
-    PriorityNav._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$b);
-
-        if (!data) {
-          data = new PriorityNav(this, config);
-          $__default['default'](this).data(DATA_KEY$b, data);
-        }
-
-        if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string') {
-            throw new TypeError('Priority nav label type must be string');
-          }
-        }
-      });
-    };
-
-    _createClass(PriorityNav, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION$b;
-      }
-    }]);
-
-    return PriorityNav;
-  }();
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-
-  $__default['default'].fn[NAME$b] = PriorityNav._jQueryInterface;
-  $__default['default'].fn[NAME$b].Constructor = PriorityNav;
-
-  $__default['default'].fn[NAME$b].noConflict = function () {
-    $__default['default'].fn[NAME$b] = JQUERY_NO_CONFLICT$b;
-    return PriorityNav._jQueryInterface;
-  };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
-  var NAME$c = 'scrollup';
-  var VERSION$c = '4.5.3';
-  var DATA_KEY$c = 'bs.scrollup';
-  var EVENT_KEY$9 = "." + DATA_KEY$c;
-  var DATA_API_KEY$7 = '.data-api';
-  var JQUERY_NO_CONFLICT$c = $__default['default'].fn[NAME$c];
-  var SCROLLANIMATE = 500;
-  var Default$7 = {
-    target: ''
-  };
-  var DefaultType$7 = {
-    target: '(string|element)'
-  };
-  var EVENT_SCROLL = "scroll" + EVENT_KEY$9;
-  var EVENT_CLICK_SCROLL = "click" + EVENT_KEY$9;
-  var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$9 + DATA_API_KEY$7;
-  var SELECTOR_SCROLL_TOP = '.o-scroll-up:not(.static)';
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-  var ScrollUp = /*#__PURE__*/function () {
-    function ScrollUp(element, config) {
-      this._element = element;
-      this._scrollElement = window;
-      this._config = this._getConfig(config);
-      $__default['default'](window).on(EVENT_SCROLL, $__default['default'].proxy(this._process, this));
-      $__default['default'](SELECTOR_SCROLL_TOP).on(EVENT_CLICK_SCROLL, $__default['default'].proxy(this._backToTop, this));
-      $__default['default'](this._element).addClass('is-fixed d-none');
-
-      this._process();
-    } // getters
-
-
-    var _proto = ScrollUp.prototype;
-
-    // public
-    _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$c);
-      $__default['default'](this._scrollElement).off(EVENT_KEY$9);
-      this._element = null;
-      this._scrollElement = null;
-    } // private
-    ;
-
-    _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, this.constructor.Default, $__default['default'](this._element).data(), config);
-      Util.typeCheckConfig(NAME$c, config, this.constructor.DefaultType);
-      return config;
-    };
-
-    _proto._process = function _process() {
-      $__default['default'](SELECTOR_SCROLL_TOP).toggleClass('d-none', $__default['default'](this._scrollElement).scrollTop() < Number($__default['default'](this._scrollElement).height()));
-    };
-
-    _proto._backToTop = function _backToTop() {
-      // if target is defined scrollintoview
-      if (this._config.target) {
-        document.querySelector(this._config.target).scrollIntoView({
-          behavior: 'smooth'
-        });
-      } else if (typeof $__default['default'].animate === 'function') {
-        $__default['default']('html, body').animate({
-          scrollTop: 0
-        }, SCROLLANIMATE);
-      } else {
-        $__default['default']('html, body').scrollTop(0);
-      }
-    } // static
-    ;
-
-    ScrollUp._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$c);
-
-        var _config = typeof config === 'object' ? config : null;
-
-        if (!data) {
-          data = new ScrollUp(this, _config);
-          $__default['default'](this).data(DATA_KEY$c, data);
-        }
-
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError("No method named \"" + config + "\"");
-          }
-
-          data[config]();
-        }
-      });
-    };
-
-    _createClass(ScrollUp, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION$c;
-      }
-    }, {
-      key: "Default",
-      get: function get() {
-        return Default$7;
-      }
-    }, {
-      key: "DefaultType",
-      get: function get() {
-        return DefaultType$7;
-      }
-    }]);
-
-    return ScrollUp;
-  }();
-  /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
-   */
-
-
-  $__default['default'](window).on(EVENT_LOAD_DATA_API$2, function () {
-    var scrollUps = $__default['default'].makeArray($__default['default'](SELECTOR_SCROLL_TOP));
-
-    for (var i = scrollUps.length; i--;) {
-      var $scrollup = $__default['default'](scrollUps[i]);
-
-      ScrollUp._jQueryInterface.call($scrollup, $scrollup.data());
-    }
-  });
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-  $__default['default'].fn[NAME$c] = ScrollUp._jQueryInterface;
-  $__default['default'].fn[NAME$c].Constructor = ScrollUp;
-
-  $__default['default'].fn[NAME$c].noConflict = function () {
-    $__default['default'].fn[NAME$c] = JQUERY_NO_CONFLICT$c;
-    return ScrollUp._jQueryInterface;
-  };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
-  var NAME$d = 'scrollspy';
-  var VERSION$d = '4.5.3';
-  var DATA_KEY$d = 'bs.scrollspy';
-  var EVENT_KEY$a = "." + DATA_KEY$d;
-  var DATA_API_KEY$8 = '.data-api';
-  var JQUERY_NO_CONFLICT$d = $__default['default'].fn[NAME$d];
-  var Default$8 = {
+  var NAME$8 = 'scrollspy';
+  var VERSION$8 = '4.6.0';
+  var DATA_KEY$8 = 'bs.scrollspy';
+  var EVENT_KEY$8 = "." + DATA_KEY$8;
+  var DATA_API_KEY$6 = '.data-api';
+  var JQUERY_NO_CONFLICT$8 = $__default['default'].fn[NAME$8];
+  var Default$6 = {
     offset: 10,
     method: 'auto',
     target: ''
   };
-  var DefaultType$8 = {
+  var DefaultType$6 = {
     offset: 'number',
     method: 'string',
     target: '(string|element)'
   };
-  var EVENT_ACTIVATE = "activate" + EVENT_KEY$a;
-  var EVENT_SCROLL$1 = "scroll" + EVENT_KEY$a;
-  var EVENT_LOAD_DATA_API$3 = "load" + EVENT_KEY$a + DATA_API_KEY$8;
+  var EVENT_ACTIVATE = "activate" + EVENT_KEY$8;
+  var EVENT_SCROLL = "scroll" + EVENT_KEY$8;
+  var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$8 + DATA_API_KEY$6;
   var CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
-  var CLASS_NAME_ACTIVE$3 = 'active';
+  var CLASS_NAME_ACTIVE$2 = 'active';
   var SELECTOR_DATA_SPY = '[data-spy="scroll"]';
   var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
   var SELECTOR_NAV_LINKS = '.nav-link';
@@ -4909,7 +3824,7 @@
       this._targets = [];
       this._activeTarget = null;
       this._scrollHeight = 0;
-      $__default['default'](this._scrollElement).on(EVENT_SCROLL$1, function (event) {
+      $__default['default'](this._scrollElement).on(EVENT_SCROLL, function (event) {
         return _this._process(event);
       });
       this.refresh();
@@ -4961,8 +3876,8 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$d);
-      $__default['default'](this._scrollElement).off(EVENT_KEY$a);
+      $__default['default'].removeData(this._element, DATA_KEY$8);
+      $__default['default'](this._scrollElement).off(EVENT_KEY$8);
       this._element = null;
       this._scrollElement = null;
       this._config = null;
@@ -4975,20 +3890,20 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default$8, typeof config === 'object' && config ? config : {});
+      config = _extends({}, Default$6, typeof config === 'object' && config ? config : {});
 
       if (typeof config.target !== 'string' && Util.isElement(config.target)) {
         var id = $__default['default'](config.target).attr('id');
 
         if (!id) {
-          id = Util.getUID(NAME$d);
+          id = Util.getUID(NAME$8);
           $__default['default'](config.target).attr('id', id);
         }
 
         config.target = "#" + id;
       }
 
-      Util.typeCheckConfig(NAME$d, config, DefaultType$8);
+      Util.typeCheckConfig(NAME$8, config, DefaultType$6);
       return config;
     };
 
@@ -5054,16 +3969,16 @@
       var $link = $__default['default']([].slice.call(document.querySelectorAll(queries.join(','))));
 
       if ($link.hasClass(CLASS_NAME_DROPDOWN_ITEM)) {
-        $link.closest(SELECTOR_DROPDOWN).find(SELECTOR_DROPDOWN_TOGGLE).addClass(CLASS_NAME_ACTIVE$3).attr('aria-current', 'true');
-        $link.addClass(CLASS_NAME_ACTIVE$3).attr('aria-current', 'location');
+        $link.closest(SELECTOR_DROPDOWN).find(SELECTOR_DROPDOWN_TOGGLE).addClass(CLASS_NAME_ACTIVE$2).attr('aria-current', 'true');
+        $link.addClass(CLASS_NAME_ACTIVE$2).attr('aria-current', 'location');
       } else {
         // Set triggered link as active
-        $link.addClass(CLASS_NAME_ACTIVE$3).attr('aria-current', 'location'); // Set triggered links parents as active
+        $link.addClass(CLASS_NAME_ACTIVE$2).attr('aria-current', 'location'); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_LINKS + ", " + SELECTOR_LIST_ITEMS).addClass(CLASS_NAME_ACTIVE$3).attr('aria-current', 'true'); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_LINKS + ", " + SELECTOR_LIST_ITEMS).addClass(CLASS_NAME_ACTIVE$2).attr('aria-current', 'true'); // Handle special case when .nav-link is inside .nav-item
 
-        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE$3).attr('aria-current', 'true');
+        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE$2).attr('aria-current', 'true');
       }
 
       $__default['default'](this._scrollElement).trigger(EVENT_ACTIVATE, {
@@ -5073,9 +3988,9 @@
 
     _proto._clear = function _clear() {
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
-        return node.classList.contains(CLASS_NAME_ACTIVE$3);
+        return node.classList.contains(CLASS_NAME_ACTIVE$2);
       }).forEach(function (node) {
-        node.classList.remove(CLASS_NAME_ACTIVE$3);
+        node.classList.remove(CLASS_NAME_ACTIVE$2);
         node.removeAttribute('aria-current');
       });
     } // Static
@@ -5083,13 +3998,13 @@
 
     ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$d);
+        var data = $__default['default'](this).data(DATA_KEY$8);
 
         var _config = typeof config === 'object' && config;
 
         if (!data) {
           data = new ScrollSpy(this, _config);
-          $__default['default'](this).data(DATA_KEY$d, data);
+          $__default['default'](this).data(DATA_KEY$8, data);
         }
 
         if (typeof config === 'string') {
@@ -5105,12 +4020,12 @@
     _createClass(ScrollSpy, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$d;
+        return VERSION$8;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$8;
+        return Default$6;
       }
     }]);
 
@@ -5123,7 +4038,7 @@
    */
 
 
-  $__default['default'](window).on(EVENT_LOAD_DATA_API$3, function () {
+  $__default['default'](window).on(EVENT_LOAD_DATA_API$2, function () {
     var scrollSpys = [].slice.call(document.querySelectorAll(SELECTOR_DATA_SPY));
     var scrollSpysLength = scrollSpys.length;
 
@@ -5139,11 +4054,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$d] = ScrollSpy._jQueryInterface;
-  $__default['default'].fn[NAME$d].Constructor = ScrollSpy;
+  $__default['default'].fn[NAME$8] = ScrollSpy._jQueryInterface;
+  $__default['default'].fn[NAME$8].Constructor = ScrollSpy;
 
-  $__default['default'].fn[NAME$d].noConflict = function () {
-    $__default['default'].fn[NAME$d] = JQUERY_NO_CONFLICT$d;
+  $__default['default'].fn[NAME$8].noConflict = function () {
+    $__default['default'].fn[NAME$8] = JQUERY_NO_CONFLICT$8;
     return ScrollSpy._jQueryInterface;
   };
 
@@ -5153,35 +4068,35 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$e = 'tab';
-  var VERSION$e = '4.5.3';
-  var DATA_KEY$e = 'bs.tab';
-  var EVENT_KEY$b = "." + DATA_KEY$e;
-  var DATA_API_KEY$9 = '.data-api';
-  var JQUERY_NO_CONFLICT$e = $__default['default'].fn[NAME$e]; // Boosted mod
+  var NAME$9 = 'tab';
+  var VERSION$9 = '4.6.0';
+  var DATA_KEY$9 = 'bs.tab';
+  var EVENT_KEY$9 = "." + DATA_KEY$9;
+  var DATA_API_KEY$7 = '.data-api';
+  var JQUERY_NO_CONFLICT$9 = $__default['default'].fn[NAME$9]; // Boosted mod
 
-  var ARROW_LEFT_KEYCODE$2 = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_LEFT_KEYCODE$1 = 37; // KeyboardEvent.which value for left arrow key
 
-  var ARROW_UP_KEYCODE$2 = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_UP_KEYCODE$1 = 38; // KeyboardEvent.which value for up arrow key
 
-  var ARROW_RIGHT_KEYCODE$2 = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_RIGHT_KEYCODE$1 = 39; // KeyboardEvent.which value for right arrow key
 
-  var ARROW_DOWN_KEYCODE$2 = 40; // KeyboardEvent.which value for down arrow key
+  var ARROW_DOWN_KEYCODE$1 = 40; // KeyboardEvent.which value for down arrow key
 
-  var REGEXP_KEYDOWN$1 = new RegExp(ARROW_LEFT_KEYCODE$2 + "|" + ARROW_UP_KEYCODE$2 + "|" + ARROW_RIGHT_KEYCODE$2 + "|" + ARROW_DOWN_KEYCODE$2); // end mod
+  var REGEXP_KEYDOWN$1 = new RegExp(ARROW_LEFT_KEYCODE$1 + "|" + ARROW_UP_KEYCODE$1 + "|" + ARROW_RIGHT_KEYCODE$1 + "|" + ARROW_DOWN_KEYCODE$1); // end mod
 
-  var EVENT_HIDE$3 = "hide" + EVENT_KEY$b;
-  var EVENT_HIDDEN$3 = "hidden" + EVENT_KEY$b;
-  var EVENT_SHOW$3 = "show" + EVENT_KEY$b;
-  var EVENT_SHOWN$3 = "shown" + EVENT_KEY$b;
-  var EVENT_CLICK_DATA_API$7 = "click" + EVENT_KEY$b + DATA_API_KEY$9;
-  var EVENT_KEYDOWN_DATA_API$1 = "keydown" + EVENT_KEY$b + DATA_API_KEY$9; // Boosted mod
+  var EVENT_HIDE$3 = "hide" + EVENT_KEY$9;
+  var EVENT_HIDDEN$3 = "hidden" + EVENT_KEY$9;
+  var EVENT_SHOW$3 = "show" + EVENT_KEY$9;
+  var EVENT_SHOWN$3 = "shown" + EVENT_KEY$9;
+  var EVENT_CLICK_DATA_API$6 = "click" + EVENT_KEY$9 + DATA_API_KEY$7;
+  var EVENT_KEYDOWN_DATA_API$1 = "keydown" + EVENT_KEY$9 + DATA_API_KEY$7; // Boosted mod
 
   var CLASS_NAME_DROPDOWN_MENU = 'dropdown-menu';
-  var CLASS_NAME_ACTIVE$4 = 'active';
+  var CLASS_NAME_ACTIVE$3 = 'active';
   var CLASS_NAME_DISABLED$1 = 'disabled';
   var CLASS_NAME_FADE$4 = 'fade';
-  var CLASS_NAME_SHOW$7 = 'show';
+  var CLASS_NAME_SHOW$6 = 'show';
   var SELECTOR_DROPDOWN$1 = '.dropdown';
   var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
   var SELECTOR_ACTIVE$2 = '.active';
@@ -5210,7 +4125,7 @@
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default['default'](this._element).hasClass(CLASS_NAME_ACTIVE$4) || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED$1)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default['default'](this._element).hasClass(CLASS_NAME_ACTIVE$3) || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED$1)) {
         return;
       }
 
@@ -5267,7 +4182,7 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$e);
+      $__default['default'].removeData(this._element, DATA_KEY$9);
       this._element = null;
     } // Private
     ;
@@ -5295,7 +4210,7 @@
 
       if (active && isTransitioning) {
         var transitionDuration = Util.getTransitionDurationFromElement(active);
-        $__default['default'](active).removeClass(CLASS_NAME_SHOW$7).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $__default['default'](active).removeClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -5303,11 +4218,11 @@
 
     _proto._transitionComplete = function _transitionComplete(element, active, callback) {
       if (active) {
-        $__default['default'](active).removeClass(CLASS_NAME_ACTIVE$4);
+        $__default['default'](active).removeClass(CLASS_NAME_ACTIVE$3);
         var dropdownChild = $__default['default'](active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
-          $__default['default'](dropdownChild).removeClass(CLASS_NAME_ACTIVE$4);
+          $__default['default'](dropdownChild).removeClass(CLASS_NAME_ACTIVE$3);
         }
 
         if (active.getAttribute('role') === 'tab') {
@@ -5315,7 +4230,7 @@
         }
       }
 
-      $__default['default'](element).addClass(CLASS_NAME_ACTIVE$4);
+      $__default['default'](element).addClass(CLASS_NAME_ACTIVE$3);
 
       if (element.getAttribute('role') === 'tab') {
         element.setAttribute('aria-selected', true);
@@ -5334,7 +4249,7 @@
       Util.reflow(element);
 
       if (element.classList.contains(CLASS_NAME_FADE$4)) {
-        element.classList.add(CLASS_NAME_SHOW$7);
+        element.classList.add(CLASS_NAME_SHOW$6);
       }
 
       if (element.parentNode && $__default['default'](element.parentNode).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
@@ -5342,7 +4257,7 @@
 
         if (dropdownElement) {
           var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE$1));
-          $__default['default'](dropdownToggleList).addClass(CLASS_NAME_ACTIVE$4);
+          $__default['default'](dropdownToggleList).addClass(CLASS_NAME_ACTIVE$3);
         }
 
         element.setAttribute('aria-expanded', true);
@@ -5358,7 +4273,7 @@
       var $tab = $__default['default'](this._element);
       var $tabpanel = $__default['default']($tab.attr('href'));
       var $tablist = $tab.closest(SELECTOR_NAV_LIST_GROUP$1);
-      var tabId = $tab.attr('id') || Util.getUID(NAME$e);
+      var tabId = $tab.attr('id') || Util.getUID(NAME$9);
       $tab.attr('id', tabId);
 
       if ($tabpanel) {
@@ -5366,7 +4281,7 @@
         $tablist.attr('role', 'tablist');
       }
 
-      if ($tab.hasClass(CLASS_NAME_ACTIVE$4)) {
+      if ($tab.hasClass(CLASS_NAME_ACTIVE$3)) {
         $tab.attr({
           tabIndex: '0',
           'aria-selected': 'true'
@@ -5411,11 +4326,11 @@
       var index = 0;
       index = Items.index(Items.filter(':focus'));
 
-      if (k === ARROW_UP_KEYCODE$2 || k === ARROW_LEFT_KEYCODE$2) {
+      if (k === ARROW_UP_KEYCODE$1 || k === ARROW_LEFT_KEYCODE$1) {
         index--;
       }
 
-      if (k === ARROW_RIGHT_KEYCODE$2 || k === ARROW_DOWN_KEYCODE$2) {
+      if (k === ARROW_RIGHT_KEYCODE$1 || k === ARROW_DOWN_KEYCODE$1) {
         index++;
       }
 
@@ -5441,11 +4356,11 @@
     Tab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var $this = $__default['default'](this);
-        var data = $this.data(DATA_KEY$e);
+        var data = $this.data(DATA_KEY$9);
 
         if (!data) {
           data = new Tab(this);
-          $this.data(DATA_KEY$e, data);
+          $this.data(DATA_KEY$9, data);
         }
 
         if (typeof config === 'string') {
@@ -5461,7 +4376,7 @@
     _createClass(Tab, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$e;
+        return VERSION$9;
       }
     }]);
 
@@ -5474,7 +4389,7 @@
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API$7, SELECTOR_DATA_TOGGLE$4, function (event) {
+  $__default['default'](document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$4, function (event) {
     event.preventDefault();
 
     Tab._jQueryInterface.call($__default['default'](this), 'show');
@@ -5497,11 +4412,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$e] = Tab._jQueryInterface;
-  $__default['default'].fn[NAME$e].Constructor = Tab;
+  $__default['default'].fn[NAME$9] = Tab._jQueryInterface;
+  $__default['default'].fn[NAME$9].Constructor = Tab;
 
-  $__default['default'].fn[NAME$e].noConflict = function () {
-    $__default['default'].fn[NAME$e] = JQUERY_NO_CONFLICT$e;
+  $__default['default'].fn[NAME$9].noConflict = function () {
+    $__default['default'].fn[NAME$9] = JQUERY_NO_CONFLICT$9;
     return Tab._jQueryInterface;
   };
 
@@ -5511,26 +4426,26 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$f = 'toast';
-  var VERSION$f = '4.5.3';
-  var DATA_KEY$f = 'bs.toast';
-  var EVENT_KEY$c = "." + DATA_KEY$f;
-  var JQUERY_NO_CONFLICT$f = $__default['default'].fn[NAME$f];
-  var EVENT_CLICK_DISMISS$1 = "click.dismiss" + EVENT_KEY$c;
-  var EVENT_HIDE$4 = "hide" + EVENT_KEY$c;
-  var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$c;
-  var EVENT_SHOW$4 = "show" + EVENT_KEY$c;
-  var EVENT_SHOWN$4 = "shown" + EVENT_KEY$c;
+  var NAME$a = 'toast';
+  var VERSION$a = '4.6.0';
+  var DATA_KEY$a = 'bs.toast';
+  var EVENT_KEY$a = "." + DATA_KEY$a;
+  var JQUERY_NO_CONFLICT$a = $__default['default'].fn[NAME$a];
+  var EVENT_CLICK_DISMISS$1 = "click.dismiss" + EVENT_KEY$a;
+  var EVENT_HIDE$4 = "hide" + EVENT_KEY$a;
+  var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$a;
+  var EVENT_SHOW$4 = "show" + EVENT_KEY$a;
+  var EVENT_SHOWN$4 = "shown" + EVENT_KEY$a;
   var CLASS_NAME_FADE$5 = 'fade';
-  var CLASS_NAME_HIDE$1 = 'hide';
-  var CLASS_NAME_SHOW$8 = 'show';
+  var CLASS_NAME_HIDE = 'hide';
+  var CLASS_NAME_SHOW$7 = 'show';
   var CLASS_NAME_SHOWING = 'showing';
-  var DefaultType$9 = {
+  var DefaultType$7 = {
     animation: 'boolean',
     autohide: 'boolean',
     delay: 'number'
   };
-  var Default$9 = {
+  var Default$7 = {
     animation: true,
     autohide: true,
     delay: 500
@@ -5574,7 +4489,7 @@
       var complete = function complete() {
         _this._element.classList.remove(CLASS_NAME_SHOWING);
 
-        _this._element.classList.add(CLASS_NAME_SHOW$8);
+        _this._element.classList.add(CLASS_NAME_SHOW$7);
 
         $__default['default'](_this._element).trigger(EVENT_SHOWN$4);
 
@@ -5585,7 +4500,7 @@
         }
       };
 
-      this._element.classList.remove(CLASS_NAME_HIDE$1);
+      this._element.classList.remove(CLASS_NAME_HIDE);
 
       Util.reflow(this._element);
 
@@ -5600,7 +4515,7 @@
     };
 
     _proto.hide = function hide() {
-      if (!this._element.classList.contains(CLASS_NAME_SHOW$8)) {
+      if (!this._element.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
       }
 
@@ -5617,20 +4532,20 @@
     _proto.dispose = function dispose() {
       this._clearTimeout();
 
-      if (this._element.classList.contains(CLASS_NAME_SHOW$8)) {
-        this._element.classList.remove(CLASS_NAME_SHOW$8);
+      if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+        this._element.classList.remove(CLASS_NAME_SHOW$7);
       }
 
       $__default['default'](this._element).off(EVENT_CLICK_DISMISS$1);
-      $__default['default'].removeData(this._element, DATA_KEY$f);
+      $__default['default'].removeData(this._element, DATA_KEY$a);
       this._element = null;
       this._config = null;
     } // Private
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default$9, $__default['default'](this._element).data(), typeof config === 'object' && config ? config : {});
-      Util.typeCheckConfig(NAME$f, config, this.constructor.DefaultType);
+      config = _extends({}, Default$7, $__default['default'](this._element).data(), typeof config === 'object' && config ? config : {});
+      Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
 
@@ -5646,12 +4561,12 @@
       var _this3 = this;
 
       var complete = function complete() {
-        _this3._element.classList.add(CLASS_NAME_HIDE$1);
+        _this3._element.classList.add(CLASS_NAME_HIDE);
 
         $__default['default'](_this3._element).trigger(EVENT_HIDDEN$4);
       };
 
-      this._element.classList.remove(CLASS_NAME_SHOW$8);
+      this._element.classList.remove(CLASS_NAME_SHOW$7);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -5670,13 +4585,13 @@
     Toast._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY$f);
+        var data = $element.data(DATA_KEY$a);
 
         var _config = typeof config === 'object' && config;
 
         if (!data) {
           data = new Toast(this, _config);
-          $element.data(DATA_KEY$f, data);
+          $element.data(DATA_KEY$a, data);
         }
 
         if (typeof config === 'string') {
@@ -5692,17 +4607,17 @@
     _createClass(Toast, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$f;
+        return VERSION$a;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$9;
+        return DefaultType$7;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$9;
+        return Default$7;
       }
     }]);
 
@@ -5715,325 +4630,1110 @@
    */
 
 
-  $__default['default'].fn[NAME$f] = Toast._jQueryInterface;
-  $__default['default'].fn[NAME$f].Constructor = Toast;
+  $__default['default'].fn[NAME$a] = Toast._jQueryInterface;
+  $__default['default'].fn[NAME$a].Constructor = Toast;
 
-  $__default['default'].fn[NAME$f].noConflict = function () {
-    $__default['default'].fn[NAME$f] = JQUERY_NO_CONFLICT$f;
+  $__default['default'].fn[NAME$a].noConflict = function () {
+    $__default['default'].fn[NAME$a] = JQUERY_NO_CONFLICT$a;
     return Toast._jQueryInterface;
   };
 
-  (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    (factory());
-  }(undefined, (function () {
-    /**
-     * Applies the :focus-visible polyfill at the given scope.
-     * A scope in this case is either the top-level Document or a Shadow Root.
-     *
-     * @param {(Document|ShadowRoot)} scope
-     * @see https://github.com/WICG/focus-visible
-     */
-    function applyFocusVisiblePolyfill(scope) {
-      var hadKeyboardEvent = true;
-      var hadFocusVisibleRecently = false;
-      var hadFocusVisibleRecentlyTimeout = null;
+  /* eslint no-magic-numbers: ["error", { "ignore": [-100,-1,1,2,100] }] */
 
-      var inputTypesWhitelist = {
-        text: true,
-        search: true,
-        url: true,
-        tel: true,
-        email: true,
-        password: true,
-        number: true,
-        date: true,
-        month: true,
-        week: true,
-        time: true,
-        datetime: true,
-        'datetime-local': true
-      };
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
 
-      /**
-       * Helper function for legacy browsers and iframes which sometimes focus
-       * elements like document, body, and non-interactive SVG.
-       * @param {Element} el
-       */
-      function isValidFocusTarget(el) {
-        if (
-          el &&
-          el !== document &&
-          el.nodeName !== 'HTML' &&
-          el.nodeName !== 'BODY' &&
-          'classList' in el &&
-          'contains' in el.classList
-        ) {
-          return true;
+  var NAME$b = 'megamenu';
+  var VERSION$b = '4.6.0';
+  var DATA_KEY$b = 'bs.megamenu';
+  var JQUERY_NO_CONFLICT$b = $__default['default'].fn[NAME$b];
+  var ARROW_LEFT_KEYCODE$2 = 37; // KeyboardEvent.which value for left arrow key
+
+  var ARROW_RIGHT_KEYCODE$2 = 39; // KeyboardEvent.which value for right arrow key
+
+  var ARROW_UP_KEYCODE$2 = 38; // KeyboardEvent.which value for up arrow key
+
+  var ARROW_DOWN_KEYCODE$2 = 40; // KeyboardEvent.which value for down arrow key
+
+  var TIMEOUT = 1000; // Timeout before focusing first element
+
+  var SPLITLENGHT = 4;
+  var CLASSLENGTH = 'navbar-expand-'.length;
+  var BreakPoints = {
+    sm: 480,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+    xxl: 1440
+  };
+  var CLASS_NAME_TRANSITIONING = 'transitioning';
+  var CLASS_NAME_ACTIVE$4 = 'active';
+  var SELECTOR_MEGAMENU = '.mega-menu';
+  var SELECTOR_PARENT = '.navbar';
+  var SELECTOR_ROOT_NAV = '.mega-menu > .navbar-nav';
+  var SELECTOR_MEGAMENU_PANEL = '.mega-menu-panel';
+  var SELECTOR_MEGAMENU_NAV = '.nav-link + .navbar-nav';
+  var SELECTOR_NAV_MENU = '.navbar-nav';
+  var SELECTOR_NAV_ITEM = '.nav-item';
+  var SELECTOR_NAV_LINK = '.nav-link';
+  var SELECTOR_NAV_LINK_COLLAPSE = '.nav-link[data-toggle=collapse]';
+  var SELECTOR_NAV_LINK_BACK = '.nav-link.back';
+  var SELECTOR_NAV_LINK_EXPANDED = '.nav-link[aria-expanded=true]';
+  var SELECTOR_CURRENT = '.nav-link[aria-current="page"]';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var MegaMenu = /*#__PURE__*/function () {
+    function MegaMenu(element, config) {
+      var _this = this;
+
+      this._element = element;
+      this._parent = $__default['default'](this._element).parents(SELECTOR_PARENT);
+      this._$parentNavbarClasses = this._parent.attr('class'); // default if no class navbar-expand-* navbar is always mobile
+
+      this._$mediaQuery = window.matchMedia('(min-width: 0px)');
+      this._$isRTL = document.dir === 'rtl' ? -1 : 1;
+
+      if (typeof this._$parentNavbarClasses !== 'undefined' && this._$parentNavbarClasses.indexOf('navbar-expand-') !== -1) {
+        if (this._parent.hasClass('navbar-expand-xxl')) {
+          this._$breakpoint = 'xxl';
+        } else {
+          this._$breakpointIndex = this._$parentNavbarClasses.indexOf('navbar-expand-') + CLASSLENGTH;
+          this._$breakpoint = this._$parentNavbarClasses.slice(this._$breakpointIndex, this._$breakpointIndex + 2);
         }
-        return false;
+
+        this._$mediaQuery = window.matchMedia("(max-width: " + BreakPoints[this._$breakpoint] + "px)");
       }
 
-      /**
-       * Computes whether the given element should automatically trigger the
-       * `focus-visible` class being added, i.e. whether it should always match
-       * `:focus-visible` when focused.
-       * @param {Element} el
-       * @return {boolean}
-       */
-      function focusTriggersKeyboardModality(el) {
-        var type = el.type;
-        var tagName = el.tagName;
+      this._$navLinks = $__default['default'](this._element).find(SELECTOR_NAV_LINK);
+      this._$goForwardLinks = $__default['default'](this._element).find(SELECTOR_MEGAMENU_NAV).prev(SELECTOR_NAV_LINK);
+      this._$goBackLinks = $__default['default'](this._element).find(SELECTOR_NAV_LINK_BACK);
+      this._$topCollapseMenus = $__default['default'](this._element).find(SELECTOR_MEGAMENU_PANEL);
+      this._$navLinkCollapses = $__default['default'](this._element).find(SELECTOR_NAV_LINK_COLLAPSE);
+      this._config = config;
 
-        if (tagName === 'INPUT' && inputTypesWhitelist[type] && !el.readOnly) {
-          return true;
-        }
-
-        if (tagName === 'TEXTAREA' && !el.readOnly) {
-          return true;
-        }
-
-        if (el.isContentEditable) {
-          return true;
-        }
-
-        return false;
+      if (typeof this._config.noFocus === 'undefined') {
+        this._config.noFocus = false;
       }
 
-      /**
-       * Add the `focus-visible` class to the given element if it was not added by
-       * the author.
-       * @param {Element} el
-       */
-      function addFocusVisibleClass(el) {
-        if (el.classList.contains('focus-visible')) {
-          return;
-        }
-        el.classList.add('focus-visible');
-        el.setAttribute('data-focus-visible-added', '');
+      this._addEventListeners();
+
+      if (this._$mediaQuery.matches) {
+        this._addAriaAttributes(this._element);
       }
 
-      /**
-       * Remove the `focus-visible` class from the given element if it was not
-       * originally added by the author.
-       * @param {Element} el
-       */
-      function removeFocusVisibleClass(el) {
-        if (!el.hasAttribute('data-focus-visible-added')) {
-          return;
+      this.goTo = this._initPosition;
+      window.addEventListener('resize', function () {
+        if (_this._$mediaQuery.matches) {
+          _this._addAriaAttributes(_this._element);
+        } else {
+          _this._removeAriaAttributes(_this._element);
+
+          $__default['default'](_this._element).find(SELECTOR_NAV_MENU).first().attr('style', null);
+          $__default['default'](_this._element).find(SELECTOR_NAV_MENU).show();
+          $__default['default'](_this._element).height('auto');
         }
-        el.classList.remove('focus-visible');
-        el.removeAttribute('data-focus-visible-added');
+      });
+    } // getters
+
+
+    var _proto = MegaMenu.prototype;
+
+    // public
+    // private
+    _proto._addEventListeners = function _addEventListeners() {
+      var _this2 = this;
+
+      this._$goForwardLinks.on('click', function (event) {
+        return _this2._goForward(event);
+      });
+
+      this._$goBackLinks.on('click', function (event) {
+        return _this2._goBackward(event);
+      });
+
+      this._$navLinks.on('keydown', function (event) {
+        return _this2._manageKeyDown(event);
+      });
+
+      if (!this._config.noFocus) {
+        this._$topCollapseMenus.on('shown.bs.collapse', this._collapseFocus);
       }
 
-      /**
-       * If the most recent user interaction was via the keyboard;
-       * and the key press did not include a meta, alt/option, or control key;
-       * then the modality is keyboard. Otherwise, the modality is not keyboard.
-       * Apply `focus-visible` to any current active element and keep track
-       * of our keyboard modality state with `hadKeyboardEvent`.
-       * @param {KeyboardEvent} e
-       */
-      function onKeyDown(e) {
-        if (e.metaKey || e.altKey || e.ctrlKey) {
-          return;
-        }
+      $__default['default'](this._element).on('hidden.bs.collapse', function (event) {
+        return _this2._handleCollapseToggle(event);
+      });
 
-        if (isValidFocusTarget(scope.activeElement)) {
-          addFocusVisibleClass(scope.activeElement);
-        }
+      this._$navLinkCollapses.on('click', function (event) {
+        return _this2._handleCollapseToggle(event);
+      });
+    };
 
-        hadKeyboardEvent = true;
+    _proto._addAriaAttributes = function _addAriaAttributes(element) {
+      var $subNavs = $__default['default'](element).find(SELECTOR_MEGAMENU_NAV);
+      var $parents = $__default['default'](element).find(SELECTOR_CURRENT).parents(SELECTOR_NAV_ITEM);
+      $__default['default'](element).attr('role', 'application');
+      $__default['default'](element).find('> .navbar-nav').attr('role', 'menu');
+      $__default['default'](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', 'menu');
+      $__default['default'](element).find('.nav-link[data-toggle=collapse]').attr('role', 'menuitem');
+      $__default['default'](element).find(SELECTOR_NAV_LINK_BACK).attr('aria-hidden', 'true');
+      $__default['default'](element).find(SELECTOR_NAV_ITEM).attr('role', 'presentation');
+      $parents.each(function () {
+        $__default['default'](this).find(SELECTOR_NAV_LINK).first().attr('aria-current', 'true');
+      });
+      $subNavs.each(function () {
+        var navId = Util.getUID(NAME$b);
+        var $thisNavToggler = $__default['default'](this).prev(SELECTOR_NAV_LINK);
+        var $thisNav = $__default['default'](this);
+        var $thisNavBackLink = $thisNav.find(SELECTOR_NAV_LINK_BACK);
+        $thisNav.attr({
+          id: navId,
+          role: 'menu'
+        });
+        $thisNavToggler.attr({
+          role: 'menuitem',
+          'aria-controls': navId,
+          'aria-expanded': false,
+          'aria-haspopup': true
+        });
+        $thisNavBackLink.attr({
+          role: 'menuitem',
+          'aria-controls': navId
+        });
+      });
+    };
+
+    _proto._removeAriaAttributes = function _removeAriaAttributes(element) {
+      var $subNavs = $__default['default'](element).find(SELECTOR_MEGAMENU_NAV);
+      $__default['default'](element).attr('role', null);
+      $__default['default'](element).find('> .navbar-nav').attr('role', null);
+      $__default['default'](element).find(SELECTOR_MEGAMENU_PANEL).attr('role', null);
+      $__default['default'](element).find('.nav-link[data-toggle=collapse]').attr('role', null);
+      $__default['default'](element).find(SELECTOR_NAV_LINK).attr({
+        'aria-hidden': null,
+        tabindex: null
+      });
+      $__default['default'](element).find(SELECTOR_NAV_ITEM).attr('role', null);
+      $__default['default'](element).find(SELECTOR_NAV_MENU).attr('style', null);
+      $subNavs.each(function () {
+        var $thisNavToggler = $__default['default'](this).prev(SELECTOR_NAV_LINK);
+        var $thisNav = $__default['default'](this);
+        var $thisNavBackLink = $thisNav.find(SELECTOR_NAV_LINK_BACK);
+        $thisNav.attr('role', null);
+        $thisNavToggler.attr({
+          role: null,
+          'aria-controls': null,
+          'aria-expanded': null,
+          'aria-haspopup': null
+        });
+        $thisNavBackLink.attr({
+          role: null,
+          'aria-controls': null
+        });
+      });
+    };
+
+    _proto._initPosition = function _initPosition(target) {
+      var _this3 = this;
+
+      if (!$__default['default'](target).length) {
+        return;
       }
 
-      /**
-       * If at any point a user clicks with a pointing device, ensure that we change
-       * the modality away from keyboard.
-       * This avoids the situation where a user presses a key on an already focused
-       * element, and then clicks on a different element, focusing it with a
-       * pointing device, while we still think we're in keyboard modality.
-       * @param {Event} e
-       */
-      function onPointerDown(e) {
-        hadKeyboardEvent = false;
-      }
+      var $target = $__default['default'](target).first();
+      var position = $target.parents().index(this._element);
+      var rootPosition = $__default['default']('.mega-menu-panel .nav-link').first().parents().index($__default['default']('.mega-menu')); // @TODO WTF RTL?
 
-      /**
-       * On `focus`, add the `focus-visible` class to the target if:
-       * - the target received focus as a result of keyboard navigation, or
-       * - the event target is an element that will likely require interaction
-       *   via the keyboard (e.g. a text box)
-       * @param {Event} e
-       */
-      function onFocus(e) {
-        // Prevent IE from focusing the document or HTML element.
-        if (!isValidFocusTarget(e.target)) {
-          return;
-        }
+      var translatePercentage = -(position - rootPosition) * 100 / 2;
+      var $thisNav = $target.closest(SELECTOR_NAV_MENU);
+      var $rootNav = $target.closest(SELECTOR_ROOT_NAV);
+      $rootNav.addClass(CLASS_NAME_TRANSITIONING);
 
-        if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {
-          addFocusVisibleClass(e.target);
-        }
-      }
+      this._$navLinkCollapses.removeClass(CLASS_NAME_ACTIVE$4); // open collapse
 
-      /**
-       * On `blur`, remove the `focus-visible` class from the target.
-       * @param {Event} e
-       */
-      function onBlur(e) {
-        if (!isValidFocusTarget(e.target)) {
-          return;
-        }
 
-        if (
-          e.target.classList.contains('focus-visible') ||
-          e.target.hasAttribute('data-focus-visible-added')
-        ) {
-          // To detect a tab/window switch, we look for a blur event followed
-          // rapidly by a visibility change.
-          // If we don't see a visibility change within 100ms, it's probably a
-          // regular focus change.
-          hadFocusVisibleRecently = true;
-          window.clearTimeout(hadFocusVisibleRecentlyTimeout);
-          hadFocusVisibleRecentlyTimeout = window.setTimeout(function() {
-            hadFocusVisibleRecently = false;
-          }, 100);
-          removeFocusVisibleClass(e.target);
-        }
-      }
+      if ($target.attr('data-toggle') === 'collapse') {
+        $target.siblings(SELECTOR_MEGAMENU_PANEL).collapse('show');
+        $target.addClass(CLASS_NAME_ACTIVE$4);
 
-      /**
-       * If the user changes tabs, keep track of whether or not the previously
-       * focused element had .focus-visible.
-       * @param {Event} e
-       */
-      function onVisibilityChange(e) {
-        if (document.visibilityState === 'hidden') {
-          // If the tab becomes active again, the browser will handle calling focus
-          // on the element (Safari actually calls it twice).
-          // If this tab change caused a blur on an element with focus-visible,
-          // re-apply the class when the user switches back to the tab.
-          if (hadFocusVisibleRecently) {
-            hadKeyboardEvent = true;
+        this._$topCollapseMenus.not($target.siblings(SELECTOR_MEGAMENU_PANEL)).collapse('hide');
+
+        $__default['default'](this._element).height('auto');
+        $rootNav.css('transform', 'translateX(0%)');
+      } else {
+        $target.closest(SELECTOR_MEGAMENU_PANEL).collapse('show');
+        $target.closest(SELECTOR_NAV_LINK_COLLAPSE).addClass(CLASS_NAME_ACTIVE$4);
+
+        this._$topCollapseMenus.not($target.closest(SELECTOR_MEGAMENU_PANEL)).collapse('hide');
+
+        if (this._$mediaQuery.matches) {
+          // show menu and hide other
+          $target.parents(SELECTOR_NAV_MENU).show(); // set aria on parent links
+
+          $target.parents(SELECTOR_NAV_ITEM).find('> .nav-link').not($target).attr({
+            tabindex: -1,
+            'aria-hidden': true,
+            'aria-expanded': true
+          }); // translate to pos
+
+          $rootNav.css('transform', "translateX(" + translatePercentage * this._$isRTL + "%)");
+
+          if (translatePercentage) {
+            // adapt main collapse height to target height
+            $__default['default'](this._element).height($thisNav.height());
+          } else {
+            $__default['default'](this._element).height('auto');
           }
-          addInitialPointerMoveListeners();
         }
-      }
+      } // set focus on target link
 
-      /**
-       * Add a group of listeners to detect usage of any pointing devices.
-       * These listeners will be added when the polyfill first loads, and anytime
-       * the window is blurred, so that they are active when the window regains
-       * focus.
-       */
-      function addInitialPointerMoveListeners() {
-        document.addEventListener('mousemove', onInitialPointerMove);
-        document.addEventListener('mousedown', onInitialPointerMove);
-        document.addEventListener('mouseup', onInitialPointerMove);
-        document.addEventListener('pointermove', onInitialPointerMove);
-        document.addEventListener('pointerdown', onInitialPointerMove);
-        document.addEventListener('pointerup', onInitialPointerMove);
-        document.addEventListener('touchmove', onInitialPointerMove);
-        document.addEventListener('touchstart', onInitialPointerMove);
-        document.addEventListener('touchend', onInitialPointerMove);
-      }
 
-      function removeInitialPointerMoveListeners() {
-        document.removeEventListener('mousemove', onInitialPointerMove);
-        document.removeEventListener('mousedown', onInitialPointerMove);
-        document.removeEventListener('mouseup', onInitialPointerMove);
-        document.removeEventListener('pointermove', onInitialPointerMove);
-        document.removeEventListener('pointerdown', onInitialPointerMove);
-        document.removeEventListener('pointerup', onInitialPointerMove);
-        document.removeEventListener('touchmove', onInitialPointerMove);
-        document.removeEventListener('touchstart', onInitialPointerMove);
-        document.removeEventListener('touchend', onInitialPointerMove);
-      }
-
-      /**
-       * When the polfyill first loads, assume the user is in keyboard modality.
-       * If any event is received from a pointing device (e.g. mouse, pointer,
-       * touch), turn off keyboard modality.
-       * This accounts for situations where focus enters the page from the URL bar.
-       * @param {Event} e
-       */
-      function onInitialPointerMove(e) {
-        // Work around a Safari quirk that fires a mousemove on <html> whenever the
-        // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
-        if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
-          return;
+      setTimeout(function () {
+        if (!_this3._config.noFocus) {
+          // set focus on target link
+          $target.trigger('focus');
         }
 
-        hadKeyboardEvent = false;
-        removeInitialPointerMoveListeners();
+        $rootNav.removeClass(CLASS_NAME_TRANSITIONING);
+      }, TIMEOUT);
+    };
+
+    _proto._manageKeyDown = function _manageKeyDown(event) {
+      var $thisTarget = $__default['default'](event.target); // test key code
+
+      if (/input|textarea/i.test(event.target.tagName)) {
+        return;
+      } // proceed according to key code
+
+
+      switch (event.which) {
+        case ARROW_LEFT_KEYCODE$2:
+          this._goBackward(event);
+
+          break;
+
+        case ARROW_RIGHT_KEYCODE$2:
+          this._goForward(event);
+
+          break;
+
+        case ARROW_UP_KEYCODE$2:
+          // focus prev nav link
+          $thisTarget.parent().prev().find('>.nav-link').not(SELECTOR_NAV_LINK_BACK).trigger('focus');
+          break;
+
+        case ARROW_DOWN_KEYCODE$2:
+          // focus next nav link
+          $thisTarget.parent().next().find('>.nav-link').trigger('focus');
+          break;
+      }
+    };
+
+    _proto._collapseFocus = function _collapseFocus() {
+      $__default['default'](this).find(SELECTOR_NAV_LINK).not(SELECTOR_NAV_LINK_BACK).first().trigger('focus');
+    };
+
+    _proto._handleCollapseToggle = function _handleCollapseToggle(event) {
+      var $this = $__default['default'](event.target);
+      var $thisCollapse = $__default['default']($this.attr('href'));
+
+      if ($this.is($__default['default'](this._element))) {
+        $this.children(SELECTOR_NAV_MENU).css('transform', 'translateX(0%)');
+        $this.height('auto');
+        $this.find(SELECTOR_NAV_LINK_EXPANDED).attr({
+          'aria-expanded': false,
+          'aria-hidden': null,
+          tabindex: null
+        });
+        $this.find(SELECTOR_NAV_LINK_EXPANDED).next(SELECTOR_NAV_MENU).hide();
+      } else {
+        $this.toggleClass(CLASS_NAME_ACTIVE$4);
       }
 
-      // For some kinds of state, we are interested in changes at the global scope
-      // only. For example, global pointer input, global key presses and global
-      // visibility change should affect the state at every scope:
-      document.addEventListener('keydown', onKeyDown, true);
-      document.addEventListener('mousedown', onPointerDown, true);
-      document.addEventListener('pointerdown', onPointerDown, true);
-      document.addEventListener('touchstart', onPointerDown, true);
-      document.addEventListener('visibilitychange', onVisibilityChange, true);
+      this._$navLinkCollapses.not($this).removeClass(CLASS_NAME_ACTIVE$4);
 
-      addInitialPointerMoveListeners();
+      this._$topCollapseMenus.not($thisCollapse).removeClass(CLASS_NAME_ACTIVE$4).collapse('hide');
+    };
 
-      // For focus and blur, we specifically care about state changes in the local
-      // scope. This is because focus / blur events that originate from within a
-      // shadow root are not re-dispatched from the host element if it was already
-      // the active element in its own scope:
-      scope.addEventListener('focus', onFocus, true);
-      scope.addEventListener('blur', onBlur, true);
-
-      // We detect that a node is a ShadowRoot by ensuring that it is a
-      // DocumentFragment and also has a host property. This check covers native
-      // implementation and polyfill implementation transparently. If we only cared
-      // about the native implementation, we could just check if the scope was
-      // an instance of a ShadowRoot.
-      if (scope.nodeType === Node.DOCUMENT_FRAGMENT_NODE && scope.host) {
-        // Since a ShadowRoot is a special kind of DocumentFragment, it does not
-        // have a root element to add a class to. So, we add this attribute to the
-        // host element instead:
-        scope.host.setAttribute('data-js-focus-visible', '');
-      } else if (scope.nodeType === Node.DOCUMENT_NODE) {
-        document.documentElement.classList.add('js-focus-visible');
-        document.documentElement.setAttribute('data-js-focus-visible', '');
-      }
-    }
-
-    // It is important to wrap all references to global window and document in
-    // these checks to support server-side rendering use cases
-    // @see https://github.com/WICG/focus-visible/issues/199
-    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      // Make the polyfill helper globally available. This can be used as a signal
-      // to interested libraries that wish to coordinate with the polyfill for e.g.,
-      // applying the polyfill to a shadow root:
-      window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill;
-
-      // Notify interested libraries of the polyfill's presence, in case the
-      // polyfill was loaded lazily:
-      var event;
-
-      try {
-        event = new CustomEvent('focus-visible-polyfill-ready');
-      } catch (error) {
-        // IE11 does not support using CustomEvent as a constructor directly:
-        event = document.createEvent('CustomEvent');
-        event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});
+    _proto._goForward = function _goForward(event) {
+      if (!this._$mediaQuery.matches) {
+        return false;
       }
 
-      window.dispatchEvent(event);
-    }
+      event.preventDefault();
+      var $this = $__default['default'](event.target);
+      var $thisNav = $this.closest(SELECTOR_NAV_MENU);
+      var $targetNav = $this.next(SELECTOR_NAV_MENU);
+      var $rootNav = $this.closest(SELECTOR_ROOT_NAV);
+      var $thisNavToggler = $this;
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
+      var navWidth = $rootNav.width(); // @TODO WTF RTL?
 
-    if (typeof document !== 'undefined') {
-      // Apply the polyfill to the global document, so that no JavaScript
-      // coordination is required to use the polyfill in the top-level document:
-      applyFocusVisiblePolyfill(document);
-    }
+      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
 
-  })));
+      if (!$this.next(SELECTOR_NAV_MENU).length || $rootNav.hasClass(CLASS_NAME_TRANSITIONING)) {
+        return false;
+      }
+
+      $rootNav.addClass(CLASS_NAME_TRANSITIONING); // hide all nav on same level
+
+      $thisNav.find(SELECTOR_NAV_MENU).hide(); // show target navbar-nav
+
+      $targetNav.show(); // adapt main collapse height to target height
+
+      $__default['default'](SELECTOR_MEGAMENU).height($targetNav.height()); // make only visible elements focusable
+
+      if (!currentTranslatePercentage) {
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: -1,
+          'aria-hidden': true
+        });
+      }
+
+      $thisNav.find(SELECTOR_NAV_LINK).attr({
+        tabindex: -1,
+        'aria-hidden': true
+      });
+      $targetNav.find(SELECTOR_NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      }); // translate menu
+      // @TODO WTF RTL?
+
+      $rootNav.css('transform', "translateX(" + (currentTranslatePercentage - 100 * this._$isRTL) + "%)"); // focus on target nav first item
+
+      $rootNav.one('transitionend', function () {
+        $thisNavToggler.attr('aria-expanded', true);
+        $targetNav.find(SELECTOR_NAV_LINK).not(SELECTOR_NAV_LINK_BACK).first().trigger('focus');
+        $rootNav.removeClass(CLASS_NAME_TRANSITIONING);
+      });
+      return true;
+    };
+
+    _proto._goBackward = function _goBackward(event) {
+      if (!this._$mediaQuery.matches) {
+        return false;
+      }
+
+      event.preventDefault();
+      var $this = $__default['default'](event.target);
+      var $thisNav = $this.closest(SELECTOR_NAV_MENU);
+      var $targetNav = $thisNav.parent().closest(SELECTOR_NAV_MENU);
+      var $rootNav = $this.closest(SELECTOR_ROOT_NAV);
+      var $targetNavToggler = $targetNav.find(SELECTOR_NAV_LINK_EXPANDED);
+      var currentTranslatePos = parseInt($rootNav.css('transform').split(',')[SPLITLENGHT], 10);
+      var navWidth = $rootNav.width(); // @TODO WTF RTL?
+
+      var currentTranslatePercentage = 100 * currentTranslatePos / navWidth;
+
+      if (!currentTranslatePercentage || $rootNav.hasClass(CLASS_NAME_TRANSITIONING)) {
+        return false;
+      }
+
+      $rootNav.addClass(CLASS_NAME_TRANSITIONING); // reset main collapse height
+
+      $__default['default'](SELECTOR_MEGAMENU).height('auto'); // make only visible elements focusable
+
+      $targetNav.find(SELECTOR_NAV_LINK).attr({
+        tabindex: 0,
+        'aria-hidden': false
+      }); // @TODO WTF RTL?
+
+      if (currentTranslatePercentage === -100) {
+        $rootNav.find('>.nav-item .nav-link').attr({
+          tabindex: 0,
+          'aria-hidden': false
+        });
+      } // translate menu
+      // @TODO WTF RTL?
+
+
+      $rootNav.css('transform', "translateX(" + (currentTranslatePercentage + 100 * this._$isRTL) + "%)"); // focus on target nav first item
+
+      $rootNav.one('transitionend', function () {
+        $targetNavToggler.attr('aria-expanded', false);
+        $targetNavToggler.trigger('focus');
+        $thisNav.hide();
+        $rootNav.removeClass(CLASS_NAME_TRANSITIONING);
+      });
+      return true;
+    } // static
+    ;
+
+    MegaMenu._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        if (!$__default['default'](this).is(SELECTOR_MEGAMENU)) {
+          throw new TypeError('Element is not a mega menu');
+        }
+
+        if (!config) {
+          config = {};
+        } else if (config.noFocus && typeof config.noFocus !== 'boolean') {
+          // param = true
+          throw new TypeError('no-focus parameter must be boolean');
+        }
+
+        var data = $__default['default'](this).data(DATA_KEY$b);
+
+        if (!data) {
+          data = new MegaMenu(this, config);
+          $__default['default'](this).data(DATA_KEY$b, data);
+        }
+
+        if (config.target) {
+          if (typeof config.target !== 'string' || !/^[#.].*/.test(config.target)) {
+            throw new TypeError("Selector \"" + config.target + "\" is not supported");
+          }
+
+          data.goTo(config.target);
+        }
+      });
+    };
+
+    _createClass(MegaMenu, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION$b;
+      }
+    }]);
+
+    return MegaMenu;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+
+  $__default['default'].fn[NAME$b] = MegaMenu._jQueryInterface;
+  $__default['default'].fn[NAME$b].Constructor = MegaMenu;
+
+  $__default['default'].fn[NAME$b].noConflict = function () {
+    $__default['default'].fn[NAME$b] = JQUERY_NO_CONFLICT$b;
+    return MegaMenu._jQueryInterface;
+  };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME$c = 'navbar';
+  var VERSION$c = '4.6.0';
+  var DATA_KEY$c = 'bs.navbar';
+  var JQUERY_NO_CONFLICT$c = $__default['default'].fn[NAME$c];
+  var BREAKPOINT = 768;
+  var Default$8 = {
+    sticky: false,
+    trigger: ''
+  };
+  var DefaultType$8 = {
+    sticky: 'boolean',
+    trigger: 'string'
+  };
+  var SELECTOR_SUPRA_BAR = '.navbar.supra';
+  var SELECTOR_MEGAMENU_PANEL$1 = '.mega-menu.panel';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var Navbar = /*#__PURE__*/function () {
+    function Navbar(element, config) {
+      var _this = this;
+
+      this._element = element;
+      this._supraBar = element.querySelector(SELECTOR_SUPRA_BAR);
+      this._config = this._getConfig(config);
+      this._initialHeight = $__default['default'](this._element).outerHeight();
+      this._initialSupraHeight = $__default['default'](this._supraBar).outerHeight();
+
+      this._addAria();
+
+      if (this._config.sticky) {
+        $__default['default'](this._element).addClass('fixed-top');
+        $__default['default'](SELECTOR_MEGAMENU_PANEL$1).addClass('sticky');
+        $__default['default'](document.body).css('padding-top', this._initialHeight);
+        $__default['default'](window).on('scroll', function () {
+          var Scroll = $__default['default'](window).scrollTop();
+
+          if (Scroll > 0) {
+            $__default['default'](_this._element).addClass('minimized');
+          } else {
+            $__default['default'](_this._element).removeClass('minimized');
+          }
+        });
+      }
+
+      if (this._config.hideSupra) {
+        $__default['default'](window).on('scroll', function () {
+          if ($__default['default'](window).innerWidth() < BREAKPOINT) {
+            return;
+          }
+
+          var Scroll = $__default['default'](window).scrollTop();
+
+          if (Scroll > 0) {
+            $__default['default'](SELECTOR_SUPRA_BAR).hide();
+          } else {
+            $__default['default'](SELECTOR_SUPRA_BAR).show();
+          }
+        });
+      }
+    } // getters
+
+
+    var _proto = Navbar.prototype;
+
+    // private
+    _proto._getConfig = function _getConfig(config) {
+      config = $__default['default'].extend({}, Default$8, config);
+      Util.typeCheckConfig(NAME$c, config, DefaultType$8);
+      return config;
+    };
+
+    _proto._addAria = function _addAria() {
+      $__default['default'](this._element).find('.navbar .nav-link[data-toggle]').attr('aria-haspopup', true);
+    } // static
+    ;
+
+    Navbar._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $__default['default'](this).data(DATA_KEY$c);
+
+        var _config = _extends({}, Default$8, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
+
+        if (!data) {
+          data = new Navbar(this, _config);
+          $__default['default'](this).data(DATA_KEY$c, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Navbar, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION$c;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default$8;
+      }
+    }]);
+
+    return Navbar;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+
+  $__default['default'].fn[NAME$c] = Navbar._jQueryInterface;
+  $__default['default'].fn[NAME$c].Constructor = Navbar;
+
+  $__default['default'].fn[NAME$c].noConflict = function () {
+    $__default['default'].fn[NAME$c] = JQUERY_NO_CONFLICT$c;
+    return Navbar._jQueryInterface;
+  };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME$d = 'otab';
+  var VERSION$d = '4.6.0';
+  var DATA_KEY$d = 'bs.otab';
+  var EVENT_KEY$b = "." + DATA_KEY$d;
+  var DATA_API_KEY$8 = '.data-api';
+  var JQUERY_NO_CONFLICT$d = $__default['default'].fn[NAME$d];
+  var DEFAULT_THRESHOLD = 2;
+  var EVENT_CLICK_DATA_API$7 = "click" + EVENT_KEY$b + DATA_API_KEY$8;
+  var CLASS_NAME_SHOW$8 = 'show';
+  var CLASS_NAME_ACCORDION_LAYOUT = 'accordion-layout';
+  var SELECTOR_OTAB_HEADING = '.o-tab-heading';
+  var SELECTOR_OTAB_CONTENT = '.o-tab-content';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var Otab = /*#__PURE__*/function () {
+    function Otab(element) {
+      this._element = element;
+
+      this._addAccessibility();
+
+      if ($__default['default'](this._element).parent().find(SELECTOR_OTAB_HEADING).length > DEFAULT_THRESHOLD) {
+        $__default['default'](this._element).parent().addClass(CLASS_NAME_ACCORDION_LAYOUT);
+      }
+    } // getters
+
+
+    var _proto = Otab.prototype;
+
+    // public
+    _proto.show = function show() {
+      var $element = $__default['default'](this._element);
+
+      if ($element.next().hasClass(CLASS_NAME_SHOW$8)) {
+        return;
+      } // from parent remove all tab-content show classes
+
+
+      $element.parent().find(SELECTOR_OTAB_CONTENT).removeClass(CLASS_NAME_SHOW$8); // remove all aria-expanded=true
+
+      $element.parent().find('[aria-expanded="true"]').attr('aria-expanded', false); // add show class to next tab-content
+
+      $element.next().addClass(CLASS_NAME_SHOW$8); // add aria-expanded=true to element
+
+      $element.attr('aria-expanded', true);
+    } // private
+    ;
+
+    _proto._addAccessibility = function _addAccessibility() {
+      var $tab = $__default['default'](this._element);
+      var $tabpanel = $tab.next();
+      $tab.attr('id', Util.getUID(NAME$d));
+      $tabpanel.attr('id', Util.getUID(NAME$d));
+      $tab.attr({
+        'aria-controls': $tabpanel.attr('id'),
+        role: 'tab'
+      });
+      $tabpanel.attr({
+        'aria-labelledby': $tab.attr('id'),
+        role: 'tabpanel',
+        tabindex: 0
+      });
+
+      if ($tabpanel.hasClass(CLASS_NAME_SHOW$8)) {
+        $tab.attr('aria-expanded', true);
+      } else {
+        $tab.attr('aria-expanded', false);
+      }
+    } // static
+    ;
+
+    Otab._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $this = $__default['default'](this);
+        var data = $this.data(DATA_KEY$d);
+
+        if (!data) {
+          data = new Otab(this);
+          $this.data(DATA_KEY$d, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Otab, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION$d;
+      }
+    }]);
+
+    return Otab;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $__default['default'](document).on('DOMContentLoaded', function () {
+    Otab._jQueryInterface.call($__default['default'](SELECTOR_OTAB_HEADING));
+  }).on(EVENT_CLICK_DATA_API$7, SELECTOR_OTAB_HEADING, function (event) {
+    event.preventDefault();
+
+    Otab._jQueryInterface.call($__default['default'](this), CLASS_NAME_SHOW$8);
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $__default['default'].fn[NAME$d] = Otab._jQueryInterface;
+  $__default['default'].fn[NAME$d].Constructor = Otab;
+
+  $__default['default'].fn[NAME$d].noConflict = function () {
+    $__default['default'].fn[NAME$d] = JQUERY_NO_CONFLICT$d;
+    return Otab._jQueryInterface;
+  };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME$e = 'prioritynav';
+  var VERSION$e = '4.6.0';
+  var DATA_KEY$e = 'bs.prioritynav';
+  var JQUERY_NO_CONFLICT$e = $__default['default'].fn[NAME$e];
+  var RESIZE_DURATION = 500;
+  var TAB_KEYCODE$1 = 9;
+  var EVENT_RESIZE$1 = 'resize';
+  var CLASS_NAME_HIDE$1 = 'sr-only';
+  var CLASS_NAME_RESIZING = 'resizing overflow-hidden';
+  var SELECTOR_NAV_ELEMENTS = 'li:not(\'.overflow-nav\')';
+  var SELECTOR_FIRST_ELEMENT = 'li:first';
+  var MenuLabelDefault = 'More';
+
+  function menuTemplate(MenuLabel) {
+    return "\n  <li class=\"overflow-nav nav-item dropdown d-none\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
+  }
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+
+  var PriorityNav = /*#__PURE__*/function () {
+    function PriorityNav(element, config) {
+      this._element = element;
+      this._config = config;
+
+      if ($__default['default'](element).is('ul')) {
+        this._$menu = $__default['default'](element);
+      } else {
+        this._$menu = $__default['default'](element).find('ul').first();
+      }
+
+      this._initMenu();
+
+      this._$allNavElements = this._$menu.find(SELECTOR_NAV_ELEMENTS);
+
+      this._bindUIActions();
+
+      this._setupMenu();
+    } // getters
+
+
+    var _proto = PriorityNav.prototype;
+
+    // public
+    // private
+    _proto._initMenu = function _initMenu() {
+      var MenuLabel = this._config;
+
+      if (typeof MenuLabel === 'undefined') {
+        MenuLabel = MenuLabelDefault;
+      } // add menu template
+
+
+      this._$menu.append(menuTemplate(MenuLabel));
+    };
+
+    _proto._setupMenu = function _setupMenu() {
+      var $allNavElements = this._$allNavElements; // Checking top position of first item (sometimes changes)
+
+      var firstPos = this._$menu.find(SELECTOR_FIRST_ELEMENT).position(); // Empty collection in which to put menu items to move
+
+
+      var $wrappedElements = $__default['default'](); // Used to snag the previous menu item in addition to ones that have wrapped
+
+      var first = true; // Loop through all the nav items...
+
+      this._$allNavElements.each(function (i) {
+        var $elm = $__default['default'](this); // ...in which to find wrapped elements
+
+        var pos = $elm.position();
+
+        if (pos.top !== firstPos.top) {
+          // If element is wrapped, add it to set
+          $wrappedElements = $wrappedElements.add($elm); // Add the previous one too, if first
+
+          if (first) {
+            $wrappedElements = $wrappedElements.add($allNavElements.eq(i - 1));
+            first = false;
+          }
+        }
+      });
+
+      if ($wrappedElements.length) {
+        // Clone set before altering
+        var newSet = $wrappedElements.clone(); // Hide ones that we're moving
+
+        $wrappedElements.addClass(CLASS_NAME_HIDE$1);
+        $wrappedElements.find('.nav-link').attr('tabindex', -1); // Add wrapped elements to dropdown
+
+        this._$menu.find('.overflow-nav-list').append(newSet); // Show new menu
+
+
+        this._$menu.find('.overflow-nav').removeClass('d-none').addClass('d-inline-block'); // Make overflow visible again so dropdown can be seen.
+
+
+        this._$menu.find('.o-nav-local').css('overflow', 'visible'); // Check if menu doesn't overflow after process
+
+
+        if (this._$menu.find('.overflow-nav').position().top !== firstPos.top) {
+          var $item = $__default['default'](this._element).find("." + CLASS_NAME_HIDE$1).first().prev();
+          var $itemDuplicate = $item.clone();
+          $item.addClass(CLASS_NAME_HIDE$1);
+          $item.find('.nav-link').attr('tabindex', -1);
+
+          this._$menu.find('.overflow-nav-list').prepend($itemDuplicate);
+        }
+      } // hide menu from AT
+
+
+      this._$menu.find('.overflow-nav').attr('aria-hidden', true);
+    };
+
+    _proto._tearDown = function _tearDown() {
+      this._$menu.find('.overflow-nav-list').empty();
+
+      this._$menu.find('.overflow-nav').removeClass('d-inline-block').addClass('d-none');
+
+      this._$allNavElements.removeClass(CLASS_NAME_HIDE$1);
+
+      this._$allNavElements.find('.nav-link').attr('tabindex', 0);
+    };
+
+    _proto._bindUIActions = function _bindUIActions() {
+      var _this = this;
+
+      $__default['default'](window).on(EVENT_RESIZE$1, function () {
+        _this._$menu.addClass(CLASS_NAME_RESIZING);
+
+        setTimeout(function () {
+          _this._tearDown();
+
+          _this._setupMenu();
+
+          _this._$menu.removeClass(CLASS_NAME_RESIZING);
+        }, RESIZE_DURATION);
+      });
+
+      this._$menu.find('.overflow-nav .dropdown-toggle').on('keyup', function (e) {
+        if (e.which === TAB_KEYCODE$1) {
+          $__default['default'](e.target).dropdown('toggle');
+        }
+      });
+    } // static
+    ;
+
+    PriorityNav._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $__default['default'](this).data(DATA_KEY$e);
+
+        if (!data) {
+          data = new PriorityNav(this, config);
+          $__default['default'](this).data(DATA_KEY$e, data);
+        }
+
+        if (typeof config !== 'undefined' && config && typeof config !== 'string') {
+          throw new TypeError('Priority nav label type must be string');
+        }
+      });
+    };
+
+    _createClass(PriorityNav, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION$e;
+      }
+    }]);
+
+    return PriorityNav;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+
+  $__default['default'].fn[NAME$e] = PriorityNav._jQueryInterface;
+  $__default['default'].fn[NAME$e].Constructor = PriorityNav;
+
+  $__default['default'].fn[NAME$e].noConflict = function () {
+    $__default['default'].fn[NAME$e] = JQUERY_NO_CONFLICT$e;
+    return PriorityNav._jQueryInterface;
+  };
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME$f = 'scrollup';
+  var VERSION$f = '4.6.0';
+  var DATA_KEY$f = 'bs.scrollup';
+  var EVENT_KEY$c = "." + DATA_KEY$f;
+  var DATA_API_KEY$9 = '.data-api';
+  var JQUERY_NO_CONFLICT$f = $__default['default'].fn[NAME$f];
+  var SCROLLANIMATE = 500;
+  var Default$9 = {
+    target: ''
+  };
+  var DefaultType$9 = {
+    target: '(string|element)'
+  };
+  var EVENT_SCROLL$1 = "scroll" + EVENT_KEY$c;
+  var EVENT_CLICK_SCROLL = "click" + EVENT_KEY$c;
+  var EVENT_LOAD_DATA_API$3 = "load" + EVENT_KEY$c + DATA_API_KEY$9;
+  var SELECTOR_SCROLL_TOP = '.o-scroll-up:not(.static)';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var ScrollUp = /*#__PURE__*/function () {
+    function ScrollUp(element, config) {
+      this._element = element;
+      this._scrollElement = window;
+      this._config = this._getConfig(config);
+      $__default['default'](window).on(EVENT_SCROLL$1, $__default['default'].proxy(this._process, this));
+      $__default['default'](SELECTOR_SCROLL_TOP).on(EVENT_CLICK_SCROLL, $__default['default'].proxy(this._backToTop, this));
+      $__default['default'](this._element).addClass('is-fixed d-none');
+
+      this._process();
+    } // getters
+
+
+    var _proto = ScrollUp.prototype;
+
+    // public
+    _proto.dispose = function dispose() {
+      $__default['default'].removeData(this._element, DATA_KEY$f);
+      $__default['default'](this._scrollElement).off(EVENT_KEY$c);
+      this._element = null;
+      this._scrollElement = null;
+    } // private
+    ;
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, this.constructor.Default, $__default['default'](this._element).data(), config);
+      Util.typeCheckConfig(NAME$f, config, this.constructor.DefaultType);
+      return config;
+    };
+
+    _proto._process = function _process() {
+      $__default['default'](SELECTOR_SCROLL_TOP).toggleClass('d-none', $__default['default'](this._scrollElement).scrollTop() < Number($__default['default'](this._scrollElement).height()));
+    };
+
+    _proto._backToTop = function _backToTop() {
+      // if target is defined scrollintoview
+      if (this._config.target) {
+        document.querySelector(this._config.target).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else if (typeof $__default['default'].animate === 'function') {
+        $__default['default']('html, body').animate({
+          scrollTop: 0
+        }, SCROLLANIMATE);
+      } else {
+        $__default['default']('html, body').scrollTop(0);
+      }
+    } // static
+    ;
+
+    ScrollUp._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var data = $__default['default'](this).data(DATA_KEY$f);
+
+        var _config = typeof config === 'object' ? config : null;
+
+        if (!data) {
+          data = new ScrollUp(this, _config);
+          $__default['default'](this).data(DATA_KEY$f, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(ScrollUp, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION$f;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default$9;
+      }
+    }, {
+      key: "DefaultType",
+      get: function get() {
+        return DefaultType$9;
+      }
+    }]);
+
+    return ScrollUp;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $__default['default'](window).on(EVENT_LOAD_DATA_API$3, function () {
+    var scrollUps = $__default['default'].makeArray($__default['default'](SELECTOR_SCROLL_TOP));
+
+    for (var i = scrollUps.length; i--;) {
+      var $scrollup = $__default['default'](scrollUps[i]);
+
+      ScrollUp._jQueryInterface.call($scrollup, $scrollup.data());
+    }
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $__default['default'].fn[NAME$f] = ScrollUp._jQueryInterface;
+  $__default['default'].fn[NAME$f].Constructor = ScrollUp;
+
+  $__default['default'].fn[NAME$f].noConflict = function () {
+    $__default['default'].fn[NAME$f] = JQUERY_NO_CONFLICT$f;
+    return ScrollUp._jQueryInterface;
+  };
 
   exports.Alert = Alert;
   exports.Button = Button;

@@ -5,8 +5,8 @@ description: Get started with Boosted, a Bootstrap fork — the world's most pop
 group: getting-started
 aliases:
   - "/docs/"
-  - "/docs/4.5/"
-  - "/docs/4.5/getting-started/"
+  - "/docs/4.6/"
+  - "/docs/4.6/getting-started/"
   - "/docs/getting-started/"
   - "/getting-started/"
 toc: true

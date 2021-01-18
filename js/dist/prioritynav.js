@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.5.3 (https://boosted.orange.com)
-  * Copyright 2014-2020 The Boosted Authors
-  * Copyright 2014-2020 Orange
+  * Boosted v4.6.0 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors
+  * Copyright 2014-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap prioritynav.js v4.5.3 (https://boosted.orange.com)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap prioritynav.js v4.6.0 (https://boosted.orange.com)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -18,9 +18,22 @@
 
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -28,7 +41,7 @@
    */
 
   var NAME = 'prioritynav';
-  var VERSION = '4.5.3';
+  var VERSION = '4.6.0';
   var DATA_KEY = 'bs.prioritynav';
   var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
   var RESIZE_DURATION = 500;
@@ -40,7 +53,7 @@
   var SELECTOR_FIRST_ELEMENT = 'li:first';
   var MenuLabelDefault = 'More';
 
-  function MenuTemplate(MenuLabel) {
+  function menuTemplate(MenuLabel) {
     return "\n  <li class=\"overflow-nav nav-item dropdown d-none\">\n      <a href=\"#\" class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\">" + MenuLabel + "</a>\n      <ul class=\"overflow-nav-list dropdown-menu dropdown-menu-right\"></ul>\n  </li>\n";
   }
   /**
@@ -83,7 +96,7 @@
       } // add menu template
 
 
-      this._$menu.append(MenuTemplate(MenuLabel));
+      this._$menu.append(menuTemplate(MenuLabel));
     };
 
     _proto._setupMenu = function _setupMenu() {
@@ -184,10 +197,8 @@
           $__default['default'](this).data(DATA_KEY, data);
         }
 
-        if (typeof config !== 'undefined' && config) {
-          if (typeof config !== 'string') {
-            throw new TypeError('Priority nav label type must be string');
-          }
+        if (typeof config !== 'undefined' && config && typeof config !== 'string') {
+          throw new TypeError('Priority nav label type must be string');
         }
       });
     };

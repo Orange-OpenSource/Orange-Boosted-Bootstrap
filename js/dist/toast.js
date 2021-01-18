@@ -1,16 +1,16 @@
 /*!
-  * Boosted v4.5.3 (https://boosted.orange.com)
-  * Copyright 2014-2020 The Boosted Authors
-  * Copyright 2014-2020 Orange
+  * Boosted v4.6.0 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors
+  * Copyright 2014-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap toast.js v4.5.3 (https://boosted.orange.com)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap toast.js v4.6.0 (https://boosted.orange.com)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
-  typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
+  typeof define === 'function' && define.amd ? define(['jquery', './util'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Toast = factory(global.jQuery, global.Util));
 }(this, (function ($, Util) { 'use strict';
 
@@ -19,11 +19,40 @@
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
   var Util__default = /*#__PURE__*/_interopDefaultLegacy(Util);
 
-  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _extends() {
+    _extends = Object.assign || function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+
+    return _extends.apply(this, arguments);
+  }
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -31,7 +60,7 @@
    */
 
   var NAME = 'toast';
-  var VERSION = '4.5.3';
+  var VERSION = '4.6.0';
   var DATA_KEY = 'bs.toast';
   var EVENT_KEY = "." + DATA_KEY;
   var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];

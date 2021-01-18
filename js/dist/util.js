@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.5.3 (https://boosted.orange.com)
-  * Copyright 2014-2020 The Boosted Authors
-  * Copyright 2014-2020 Orange
+  * Boosted v4.6.0 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors
+  * Copyright 2014-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap util.js v4.5.3 (https://boosted.orange.com)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap util.js v4.6.0 (https://boosted.orange.com)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -20,7 +20,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.3): util.js
+   * Bootstrap (v4.6.0): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

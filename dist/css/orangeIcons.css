@@ -3351,6 +3351,10 @@
   content: "\e636";
 }
 
+.icon-ic_Statistics::before {
+  content: "\eb82";
+}
+
 .icon-frame-connectivity::before {
   content: "\eb78";
 }

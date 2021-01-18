@@ -1,11 +1,11 @@
 /*!
-  * Boosted v4.5.3 (https://boosted.orange.com)
-  * Copyright 2014-2020 The Boosted Authors
-  * Copyright 2014-2020 Orange
+  * Boosted v4.6.0 (https://boosted.orange.com)
+  * Copyright 2014-2021 The Boosted Authors
+  * Copyright 2014-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap button.js v4.5.3 (https://boosted.orange.com)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap button.js v4.6.0 (https://boosted.orange.com)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -18,9 +18,22 @@
 
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -28,7 +41,7 @@
    */
 
   var NAME = 'button';
-  var VERSION = '4.5.3';
+  var VERSION = '4.6.0';
   var DATA_KEY = 'bs.button';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
