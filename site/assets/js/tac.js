@@ -6,12 +6,6 @@
 (function () {
   'use strict'
 
-  function dropEmoji(id) {
-    var button = document.getElementById(id)
-    var buttonText = typeof String.prototype.trimStart === 'function' ? button.textContent.trimStart() : button.textContent.trimLeft()
-    button.textContent = buttonText.slice(2)
-  }
-
   window.addEventListener('tac.root_available', function () {
     var tac = document.getElementById('tarteaucitron')
 
@@ -24,9 +18,6 @@
     })
 
     document.getElementById('tarteaucitronClosePanel').classList.add('btn-close')
-
-    dropEmoji('tarteaucitronAllAllowed')
-    dropEmoji('tarteaucitronAllDenied')
   }, { once: true })
 
   window.addEventListener('tac.open_alert', function () {
@@ -36,8 +27,6 @@
     alert.querySelector('.tarteaucitronAllow').classList.add('btn', 'btn-sm', 'btn-success', 'mx-sm-2', 'ml-lg-auto', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
     alert.querySelector('.tarteaucitronDeny').classList.add('btn', 'btn-sm', 'btn-danger', 'mx-sm-2', 'my-2', 'my-lg-0')
-    dropEmoji('tarteaucitronPersonalize2')
-    dropEmoji('tarteaucitronAllDenied2')
   }, { once: true })
 
   window.addEventListener('tac.open_panel', function () {
