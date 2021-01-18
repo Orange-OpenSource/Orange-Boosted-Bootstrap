@@ -25,7 +25,7 @@ publishDir:             "_gh_pages"
 module:
   mounts:
     - source:           dist
-      target:           static/docs/4.5/dist
+      target:           static/docs/4.6/dist
     - source:           site/assets
       target:           assets
     - source:           site/content
@@ -36,20 +36,20 @@ module:
       target:           layouts
     - source:           site/static
       target:           static
-    - source:           site/static/docs/4.5/assets/img/favicons/apple-touch-icon.png
+    - source:           site/static/docs/4.6/assets/img/favicons/apple-touch-icon.png
       target:           static/apple-touch-icon.png
-    - source:           site/static/docs/4.5/assets/img/favicons/favicon.ico
+    - source:           site/static/docs/4.6/assets/img/favicons/favicon.ico
       target:           static/favicon.ico
 
 params:
   description:          "Orange HTML, CSS and JS library — based on Bootstrap, the most popular HTML, CSS, and JS library in the world."
   authors:              "Orange and Boosted contributors"
-  social_image_path:    /docs/4.5/assets/brand/orange-social.png
-  social_logo_path:     /docs/4.5/assets/brand/orange-logo.png
+  social_image_path:    /docs/4.6/assets/brand/orange-social.png
+  social_logo_path:     /docs/4.6/assets/brand/orange-logo.png
 
-  current_version:      "4.5.3"
-  current_ruby_version: "4.5.3"
-  docs_version:         "4.5"
+  current_version:      "4.6.0"
+  current_ruby_version: "4.6.0"
+  docs_version:         "4.6"
   github_org:           "https://github.com/Orange-OpenSource"
   repo:                 "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap"
   twitter:              "orange"
@@ -58,23 +58,23 @@ params:
   blog:                 "https://blog.getbootstrap.com/"
 
   download:
-    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.5.3.zip"
-    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.5.3/boosted-4.5.3-dist.zip"
-    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.5.3/boosted-4.5.3-examples.zip"
+    source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v4.6.0.zip"
+    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.6.0/boosted-4.6.0-dist.zip"
+    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v4.6.0/boosted-4.6.0-examples.zip"
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:               "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted.min.css"
-    css_hash:          "sha384-2x94UsUfEIjfJm4eAvt3wXrWUC/pAef/uLL2Q6KkHM9bgnm7fHaLTVOfjHlijBJS"
-    rtlcss:            "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/boosted-rtl.min.css"
+    css:               "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css"
+    css_hash:          "sha384-Q/U0k4TYxq5Caf56khH/a5a1OUo/+lXZxw6tpzRONF7Di9fyidMuXWvanBvm4Ow+"
+    rtlcss:            "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted-rtl.min.css"
     rtlcss_hash:       "sha384-hJxq6SSxAKmw1m05Nn88CYZPfEVrgnLSYPW4/qrFYe5kT+Z2p/mpjaaoMUyvGXtk"
-    iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/orangeIcons.min.css"
-    iconcss_hash:      "sha384-R6GN9ea/4pryAfJqIKDPT52rqJuxaMkZndUr7tl6YQmESyczsGyDgIbpuXvebpF5"
-    helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/css/orangeHelvetica.min.css"
+    iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/orangeIcons.min.css"
+    iconcss_hash:      "sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP"
+    helveticacss:      "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/orangeHelvetica.min.css"
     helveticacss_hash: "sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK"
-    js:                "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.min.js"
-    js_hash:           "sha384-dZ5yFPu4JLOG6APRar263bUkZl+uDJl2LWBDXvSyVocYb4g2FJrT0BxpETyjdqtj"
-    js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.5.3/dist/js/boosted.bundle.min.js"
-    js_bundle_hash:    "sha384-hQFBUEXKv1tPjGNFpCctXthNheXFWEyT+cKHsR5+8VYwGoe2L0SIaDNXDpE1LlTK"
+    js:                "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js"
+    js_hash:           "sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI"
+    js_bundle:         "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.bundle.min.js"
+    js_bundle_hash:    "sha384-8GY/c7MOtsvb9OfczW1hZlZfhibvBlgxQshIoFKoTIuruwcGG4a3lGw5wdBTBocN"
     jquery:            "https://code.jquery.com/jquery-3.5.1.slim.min.js"
     jquery_hash:       "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     css_swiper:        "https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/css/swiper.min.css"

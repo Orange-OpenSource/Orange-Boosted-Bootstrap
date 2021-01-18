@@ -1,10 +1,10 @@
 /*!
- * Boosted Grid v4.5.3 (https://boosted.orange.com)
+ * Boosted Grid v4.6.0 (https://boosted.orange.com)
  * Copyright 2014-2019 The Boosted Authors
  * Copyright 2014-2019 Orange
  * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/master/LICENSE)
  * This a fork of Bootstrap : Initial license below
- * Bootstrap Grid v4.5.3 (https://getbootstrap.com)
+ * Bootstrap Grid v4.6.0 (https://getbootstrap.com)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -44,8 +44,8 @@ html {
   .container-lg,
   .container-xl,
   .container-xxl {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
   }
 }
 
@@ -162,14 +162,14 @@ html {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 0.3125rem;
-  margin-left: 0.3125rem;
+  margin-right: -0.3125rem;
+  margin-left: -0.3125rem;
 }
 
 @media (min-width: 768px) {
   .row {
-    margin-right: -1.25rem;
-    margin-left: -1.25rem;
+    margin-right: -0.625rem;
+    margin-left: -0.625rem;
   }
 }
 
@@ -205,8 +205,8 @@ html {
   .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
   .col-xl-auto, .col-xxl-1, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6, .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-10, .col-xxl-11, .col-xxl-12, .col-xxl,
   .col-xxl-auto {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
   }
 }
 
