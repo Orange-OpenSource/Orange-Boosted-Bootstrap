@@ -14,7 +14,7 @@ Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There
 
 ## Sass
 
-Utilize our source Sass files to take advantage of variables, maps, mixins, and more. In our build we've increased the Sass rounding precision to 6 (by default it's 5) to prevent issues with browser rounding.
+Utilize our source Sass files to take advantage of variables, maps, mixins, and more when [compiling Sass]({{< docsref "/getting-started/build-tools#sass" >}}) using your own asset pipeline.
 
 ### File structure
 
@@ -50,6 +50,8 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // Option A: Include all of Boosted
 
 @import "../node_modules/boosted/scss/boosted";
+
+// Add custom code after this
 ```
 
 ```scss
@@ -60,6 +62,8 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 @import "../node_modules/boosted/scss/functions";
 @import "../node_modules/boosted/scss/variables";
 @import "../node_modules/boosted/scss/mixins";
+
+// Include custom variable default overrides here
 
 // Optional
 @import "../node_modules/boosted/scss/reboot";
@@ -73,24 +77,38 @@ With that setup in place, you can begin to modify any of the Sass variables and 
 
 ### Variable defaults
 
-Every Sass variable in Boosted 4 includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Boosted's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Boosted.
+Every Sass variable in Boosted includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Boosted's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Boosted.
 
 You will find the complete list of Boosted's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
 
-Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Boosted's Sass files.
+Variable overrides must come after our functions, variables, and mixins are imported, but before the rest of the imports.
 
 Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Boosted via npm:
 
 ```scss
+// Required
+@import "../node_modules/boosted/scss/functions";
+@import "../node_modules/boosted/scss/variables";
+@import "../node_modules/boosted/scss/mixins";
+
 // Your variable overrides
 $body-bg: #000;
 $body-color: #000;
 
 // Boosted and its default variables
-@import "../node_modules/boosted/scss/boosted";
+
+// Optional
+@import "../node_modules/boosted/scss/root";
+@import "../node_modules/boosted/scss/reboot";
+@import "../node_modules/boosted/scss/type";
+// etc
 ```
 
 Repeat as necessary for any variable in Boosted, including the global options below.
+
+{{< callout info >}}
+{{< partial "callout-info-npm-starter.md" >}}
+{{< /callout >}}
 
 ### Maps and loops
 
