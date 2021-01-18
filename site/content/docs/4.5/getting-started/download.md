@@ -21,10 +21,10 @@ This doesn't include documentation, source files, or any optional JavaScript dep
 
 Compile Boosted with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
 
-- Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
+- [Sass compiler]({{< docsref "/getting-started/build-tools#sass" >}}) for compiling Sass source files into CSS files
 - [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
 
-Should you require [build tools]({{< docsref "/getting-started/build-tools#tooling-setup" >}}), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
+Should you require our full set of [build tools]({{< docsref "/getting-started/build-tools#tooling-setup" >}}), they are included for developing Boosted and its docs, but they're likely unsuitable for your own purposes.
 
 <a href="{{< param download.source >}}" class="btn btn-secondary" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'download', 'track_name':'getting started', 'track_cible':'download source'});">Download source</a>
 
@@ -67,7 +67,7 @@ Make sure to use [`preconnect` resource hint](https://www.w3.org/TR/resource-hin
 
 ## Package managers
 
-Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+Pull in Boosted's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Boosted will **require a [Sass compiler]({{< docsref "/getting-started/build-tools#sass" >}}) and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
 
 ### npm
 
@@ -83,6 +83,10 @@ Boosted's `package.json` contains some additional metadata under the following k
 
 - `sass` - path to Boosted's main [Sass](https://sass-lang.com/) source file
 - `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
+
+{{< callout info >}}
+{{< partial "callout-info-npm-starter.md" >}}
+{{< /callout >}}
 
 ### yarn
 
