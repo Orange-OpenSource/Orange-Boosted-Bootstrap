@@ -127,7 +127,7 @@
   display: inline-block;
   width: $carousel-control-icon-width;
   height: $carousel-control-icon-width;
-  background: rgba($carousel-indicator-active-bg, .5) escape-svg($carousel-control-icon-bg) no-repeat subtract(50%, $spacer / 10) 50% / #{$carousel-control-icon-size $carousel-control-icon-size}; // Boosted mod
+  background: rgba($carousel-indicator-active-bg, .5) $carousel-control-icon-bg no-repeat subtract(50%, $spacer / 10) 50% / #{$carousel-control-icon-size $carousel-control-icon-size}; // Boosted mod
   @include border-radius(50%, 50%);
 }
 
