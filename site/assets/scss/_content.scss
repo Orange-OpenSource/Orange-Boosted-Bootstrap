@@ -112,8 +112,9 @@
     margin-top: 1.5rem;
   }
 
-  > ul li,
-  > ol li {
+  // Boosted mod: skip .nav
+  > ul:not(.nav) li,
+  > ol:not(.nav) li {
     margin-bottom: .25rem;
   }
 }
