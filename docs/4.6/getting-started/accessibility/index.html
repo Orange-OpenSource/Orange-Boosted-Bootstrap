@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A brief overview of Boosted&rsquo;s features and limitations for the creation of accessible content.">
+<meta name="author" content="Orange and Boosted contributors">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.6">
+
+<title>Accessibility · Boosted v4.6</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/4.6/getting-started/accessibility/">
+
+
+
+
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+
+
+<!--Tarteaucitron -->
+<link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
+<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/docs/4.6/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Accessibility">
+<meta name="twitter:description" content="A brief overview of Boosted&rsquo;s features and limitations for the creation of accessible content.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/4.6/getting-started/accessibility/">
+<meta property="og:title" content="Accessibility">
+<meta property="og:description" content="A brief overview of Boosted&rsquo;s features and limitations for the creation of accessible content.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script src="/docs/4.6/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      hashtag: '#cookie-consent',
+      cookieName: 'cookie-consent',
+      showAlertSmall: false,
+      orientation: 'bottom',
+      cookieslist: true,
+      highPrivacy: false,
+      handleBrowserDNTRequest: true,
+      useExternalCss: true
+    })
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+    var dataLayer = [{
+      site_name: 'accessibility-boosted',
+      phase: 'prod',
+      page_type: 'doc',
+      page_title: document.title
+    }]
+  }
+</script>
+
+  </head>
+  <body>
+     
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark" id="docs-navbar">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      
+      <img src="/docs/4.6/assets/brand/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="bd-main-nav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/" aria-label="Boosted"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});" dir="ltr">B<span class="text-primary">oo</span>sted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/docs/4.6/getting-started/introduction/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/essentials/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/examples/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v4.6
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.0)</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://v5-dev--boosted.netlify.app/docs/5.0/">5.0.x</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false" width="23" height="23"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.6">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<div class="collapse d-md-block row" id="bd-docs-nav">
+  <nav class="bd-links" aria-label="Documentation navigation">
+
+      <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.6/getting-started/introduction/" aria-current="true">
+          Getting started
+        </a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.6/getting-started/introduction/">Introduction</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/download/">Download</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/contents/">Contents</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/browsers-devices/">Browsers &amp; devices</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/javascript/">JavaScript</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/theming/">Theming</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/build-tools/">Build tools</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/webpack/">Webpack</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.6/getting-started/accessibility/" aria-current="page">Accessibility</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/rtl/">RTL</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/layout/overview/">
+          Layout
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/content/reboot/">
+          Content
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/components/alerts/">
+          Components
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/utilities/borders/">
+          Utilities
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/extend/approach/">
+          Extend
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/migration/">
+          Migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/boosted-migration/">
+          Boosted migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/about/overview/">
+          About
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview-and-limitations">Overview and Limitations</a>
+      <ul>
+        <li><a href="#structural-markup">Structural markup</a></li>
+        <li><a href="#interactive-components">Interactive components</a></li>
+        <li><a href="#color-contrast">Color contrast</a>
+          <ul>
+            <li><a href="#ensuring-contrasts">Ensuring contrasts</a></li>
+          </ul>
+        </li>
+        <li><a href="#visually-hidden-content">Visually hidden content</a></li>
+        <li><a href="#reduced-motion">Reduced motion</a></li>
+        <li><a href="#focus-visibility">Focus visibility</a></li>
+      </ul>
+    </li>
+    <li><a href="#additional-resources">Additional resources</a></li>
+  </ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/content/docs/4.6/getting-started/accessibility.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Accessibility</h1>
+          </div>
+          <p class="bd-lead">A brief overview of Boosted&rsquo;s features and limitations for the creation of accessible content.</p>
+          
+          <p>Boosted provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.</p>
+<h2 id="overview-and-limitations">Overview and Limitations</h2>
+<p>The overall accessibility of any project built with Boosted depends in large part on the author&rsquo;s markup, additional styling, and scripting they&rsquo;ve included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Boosted that fulfill <a href="https://www.w3.org/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0</a> (A/AA/AAA), <a href="https://www.section508.gov/">Section 508</a> and similar accessibility standards and requirements.</p>
+<h3 id="structural-markup">Structural markup</h3>
+<p>Boosted&rsquo;s styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Boosted itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.</p>
+<h3 id="interactive-components">Interactive components</h3>
+<p>Boosted&rsquo;s interactive components—such as modal dialogs, dropdown menus and custom tooltips—are designed to work for touch, mouse and keyboard users. Through the use of relevant <a href="https://www.w3.org/WAI/standards-guidelines/aria/"><abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).</p>
+<p>Because Boosted&rsquo;s components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.</p>
+<h3 id="color-contrast">Color contrast</h3>
+<!-- Boosted mod -->
+<p>Some colors that currently make up <a href="/docs/4.6/about/brand/#color-palette">Boosted&rsquo;s default palette</a> —used throughout the framework for things such as button variations, alert variations, form validation indicators— may lead to <em>insufficient</em> color contrast.</p>
+<h4 id="ensuring-contrasts">Ensuring contrasts</h4>
+<p>Each of the text colors shown are combined with background colors from the Orange digital palette in order to meet <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 accessibility standards for color contrast</a>.
+Please note that contrasts are locked when using <a href="/docs/4.6/utilities/colors/"><code>.text-*</code> and <code>.bg-*</code> utilities</a>, to ensure sufficient contrasts.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <table class="table table-contrast">
+                <caption class="sr-only">Core colors contrasts</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Core colors</th>
+                        <th scope="col">Text color</th>
+                        <th scope="col">Pass level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-dark">
+                        <th scope="row" rowspan="3">#000</th>
+                        <td class="text-primary">#ff7900</td>
+                        <td class="text-primary">AAA</td>
+                    </tr>
+                    <tr class="table-dark">
+                        <td class="pl-0">#fff</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr class="table-dark" style="color: #999">
+                        <td class="pl-0">#999</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr class="aa-large-text">
+                        <th scope="row" rowspan="3">#fff</th>
+                        <td class="text-primary">#f16e00</td>
+                        <td class="text-primary">AA Large text</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-0">#000</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr style="color: #666">
+                        <td class="pl-0 align-top">#666</td>
+                        <td>
+                            AA<br>
+                            <span class="aa-large-text">AAA Large text</span>
+                        </td>
+                    </tr>
+                    <tr style="background-color:#ff7900">
+                        <th scope="row">#ff7900</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr class="aa-large-text" style="background-color:#f16e00;color:#fff">
+                        <th scope="row">#f16e00</th>
+                        <td>#fff</td>
+                        <td>AA Large text</td>
+                    </tr>
+                    <tr style="background-color:#595959;color: #fff">
+                        <th scope="row">#595959</th>
+                        <td>#fff</td>
+                        <td>AAA</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-contrast">
+                <caption class="sr-only">Functional greys contrasts</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Functional greys</th>
+                        <th scope="col">Text color</th>
+                        <th scope="col">Pass level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color:#333;color: #fff">
+                        <th scope="row">#333</th>
+                        <td>#fff</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr style="background-color:#666;color: #fff">
+                        <th scope="row" class="align-top">#666</th>
+                        <td class="align-top">#fff</td>
+                        <td>
+                            AA<br>
+                            <span class="aa-large-text">AAA Large text</span>
+                         </td>
+                    </tr>
+                    <tr style="background-color:#999">
+                        <th scope="row">#999</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr style="background-color:#ccc">
+                        <th scope="row">#ccc</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr style="background-color:#ddd">
+                        <th scope="row">#ddd</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                    <tr style="background-color:#eee">
+                        <th scope="row">#eee</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg">
+            <table class="table table-contrast">
+                <caption class="sr-only">Supporting colors contrasts</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Supporting colors</th>
+                        <th scope="col">Text color</th>
+                        <th scope="col">Pass level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color:#4bb4e6">
+                        <th scope="row">#4bb4e6</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                   <tr style="background-color:#50beb7">
+                       <th scope="row">#50beb7</th>
+                       <td>#000</td>
+                       <td>AAA</td>
+                   </tr>
+                   <tr style="background-color:#ffb4e6">
+                       <th scope="row">#ffb4e6</th>
+                       <td>#000</td>
+                       <td>AAA</td>
+                   </tr>
+                   <tr style="background-color:#a885d8">
+                       <th scope="row">#a885d8</th>
+                       <td>#000</td>
+                       <td>AAA</td>
+                   </tr>
+                   <tr style="background-color:#ffd200">
+                       <th scope="row">#ffd200</th>
+                       <td>#000</td>
+                       <td>AAA</td>
+                   </tr>
+                </tbody>
+            </table>
+            <table class="table table-contrast">
+                <caption class="sr-only">Functional colors contrasts</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Functional colors</th>
+                        <th scope="col">Text color</th>
+                        <th scope="col">Pass level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color:#32c832">
+                        <th scope="row">#32c832</th>
+                        <td>#000</td>
+                        <td>AAA</td>
+                    </tr>
+                   <tr style="background-color:#527edb">
+                       <th scope="row" rowspan="2">#527edb</th>
+                       <td class="align-top">#000</td>
+                       <td>
+                            AA<br>
+                            <span class="aa-large-text">AAA Large text</span>
+                        </td>
+                   </tr>
+                   <tr class="aa-large-text" style="background-color:#527edb;color:#fff">
+                       <td class="pl-0" style="color: #fff">#fff</td>
+                       <td style="color: #fff">AA Large text</td>
+                   </tr>
+                   <tr style="background-color:#fc0">
+                       <th scope="row">#fc0</th>
+                       <td>#000</td>
+                       <td>AAA</td>
+                   </tr>
+                   <tr style="background-color:#cd3c14">
+                       <th scope="row" rowspan="2">#cd3c14</th>
+                       <td class="aa-large-text text-dark">#000</td>
+                       <td class="aa-large-text text-dark">AA Large text</td>
+                   </tr>
+                   <tr style="background-color:#cd3c14;color:#fff">
+                        <td class="pl-0 align-top">#fff</td>
+                        <td>
+                            AA<br>
+                            <span class="aa-large-text">AAA Large text</span>
+                        </td>
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- End mod -->
+<h3 id="visually-hidden-content">Visually hidden content</h3>
+<p>Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the <code>.sr-only</code> class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span><span class="p">&gt;</span>Danger: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  This action is not reversible
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div><p>For visually hidden interactive controls, such as traditional &ldquo;skip&rdquo; links, <code>.sr-only</code> can be combined with the <code>.sr-only-focusable</code> class. This will ensure that the control becomes visible once focused (for sighted keyboard users).</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only sr-only-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Skip to main content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="reduced-motion">Reduced motion</h3>
+<p>Boosted includes support for the <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion"><code>prefers-reduced-motion</code> media feature</a>. In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.</p>
+<!-- Boosted mod -->
+<h3 id="focus-visibility">Focus visibility</h3>
+<p>Boosted includes a <a href="https://github.com/WICG/focus-visible">focus-visible polyfill</a> to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a></li>
+<li><a href="https://www.a11yproject.com/">The A11Y Project</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN accessibility documentation</a></li>
+<li><a href="https://tenon.io/">Tenon.io Accessibility Checker</a></li>
+<li><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser (CCA)</a></li>
+<li><a href="https://github.com/squizlabs/HTML_CodeSniffer">&ldquo;HTML Codesniffer&rdquo; bookmarklet for identifying accessibility issues</a></li>
+<li><a href="https://github.com/dequelabs/axe-core/blob/master/doc/projects.md">&ldquo;aXe core&rdquo; extension for identifying accessibility issues</a></li>
+<li><a href="http://a11y-guidelines.orange.com/home_EN/index.html">Orange accessibility guidelines</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible">MDN focus-visible documentation</a></li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-8GY/c7MOtsvb9OfczW1hZlZfhibvBlgxQshIoFKoTIuruwcGG4a3lGw5wdBTBocN" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/4.6/assets/js/docs.min.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  </body>
+</html>
