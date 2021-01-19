@@ -1,3 +1,47 @@
+<a name="4.6.0"></a>
+# [4.6.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.3...v4.6.0) (2021-01-19)
+
+### Bootstrap 4.6.0
+
+* [Bootstrap 4.6.0](https://github.com/twbs/bootstrap/releases/tag/v4.6.0)
+
+### Boosted
+
+#### Breaking changes
+
+- **Grid**: following the latest grid refactor in 4.5.3, `$grid-gutter-width` is now set to half a spacer. If you rely on this variable in your custom code, you should now multiply it by 2.
+- **Colors**: `$theme-color-interval` increased from `8%` to `10%`. If you relied on this variable or on the `theme-color-level()` mixin, please take this change into account.
+
+See below for details.
+
+
+#### Bug Fixes
+
+* **breadcrumb:** reduce the gap with Bootstrap ([11b7dbb](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/11b7dbbd0162edc2a133cddac24e04eeb4504c6d))
+* **megamenu:** ensure top position for submenus to fix [#536](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/536) ([dbcb02e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/dbcb02ec3620d3693e5abd193903015c081945e6))
+* **navbar:** use make-gutters() where appropriate after [#541](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/541) ([b588d8e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b588d8e430a76de0e5a3132ca5a707a23a79fa00))
+* **o-tabs:** ensure tabs aren't underlined ([ce3198f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ce3198fb55efeb082a938df07b96c60f565c0220))
+* **RTL:** custom carousel & breadcrumbs ([f52cd5d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/f52cd5d44bf70eabaddd2c51c05391f40c2f267a))
+* **supra nav:** spacings and alignment ([b92e24f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b92e24f357c004920eb6fd4b4f959332efc4a756))
+* **supra navbar:** wrong left alignment ([0ace4d5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0ace4d5706ee4389b14ec17d70d11290409cdba1))
+* **grid**: ensure small gutters depends on main gutters ([#541](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/541))
+- **navbar**: `$grid-gutter-width` already divided after #541 ([b588d8e43](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b588d8e430a76de0e5a3132ca5a707a23a79fa00))
+
+
+#### Features
+
+* **carousel:** Orange branded :tada: ([a328586](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a328586f34d4fce11667de7efafac2ef5dac0498))
+* **forms:** Orange branded disabled state :tada: ([268f146](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/268f1469cf78a28ae11a5f675e4f698acb0a4ddb))
+* **icons:** add statistics icon ([a3b8c9f](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/a3b8c9f7fd69a4d5a3337a7bf27f494d65ca6be1))
+* **variables:** theme-color-interval up to `10%` to ease color conversion from v5 ([47b8471](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/47b84713e6fb2e117f8e349547417753c0cc628a))
+
+
+### :Chore
+
+- **docs**: moved to Hugo ([#575](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/575))
+- **grid**: add deprecation warnings for `make-gutter()` and `make-container-fluid-widths()` since they won't land in v5 ([#562](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues/562)
+- **BrowserStack**: define `browserNoActivityTimeout` to `60000` in Karma conf
+
 <a name="4.5.3"></a>
 ## [4.5.3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v4.5.2...v4.5.3) (2020-10-14)
 
