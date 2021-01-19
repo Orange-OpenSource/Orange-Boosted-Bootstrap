@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Bring Boosted to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.">
+<meta name="author" content="Orange and Boosted contributors">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.6">
+
+<title>JavaScript · Boosted v4.6</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/4.6/getting-started/javascript/">
+
+
+
+
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+
+
+<!--Tarteaucitron -->
+<link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
+<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/docs/4.6/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="JavaScript">
+<meta name="twitter:description" content="Bring Boosted to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/4.6/getting-started/javascript/">
+<meta property="og:title" content="JavaScript">
+<meta property="og:description" content="Bring Boosted to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script src="/docs/4.6/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      hashtag: '#cookie-consent',
+      cookieName: 'cookie-consent',
+      showAlertSmall: false,
+      orientation: 'bottom',
+      cookieslist: true,
+      highPrivacy: false,
+      handleBrowserDNTRequest: true,
+      useExternalCss: true
+    })
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+    var dataLayer = [{
+      site_name: 'accessibility-boosted',
+      phase: 'prod',
+      page_type: 'doc',
+      page_title: document.title
+    }]
+  }
+</script>
+
+  </head>
+  <body>
+     
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark" id="docs-navbar">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      
+      <img src="/docs/4.6/assets/brand/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="bd-main-nav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/" aria-label="Boosted"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});" dir="ltr">B<span class="text-primary">oo</span>sted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/docs/4.6/getting-started/introduction/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/essentials/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/examples/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v4.6
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.0)</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://v5-dev--boosted.netlify.app/docs/5.0/">5.0.x</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false" width="23" height="23"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.6">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<div class="collapse d-md-block row" id="bd-docs-nav">
+  <nav class="bd-links" aria-label="Documentation navigation">
+
+      <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.6/getting-started/introduction/" aria-current="true">
+          Getting started
+        </a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.6/getting-started/introduction/">Introduction</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/download/">Download</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/contents/">Contents</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/browsers-devices/">Browsers &amp; devices</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.6/getting-started/javascript/" aria-current="page">JavaScript</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/theming/">Theming</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/build-tools/">Build tools</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/webpack/">Webpack</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/accessibility/">Accessibility</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/rtl/">RTL</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/layout/overview/">
+          Layout
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/content/reboot/">
+          Content
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/components/alerts/">
+          Components
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/utilities/borders/">
+          Utilities
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/extend/approach/">
+          Extend
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/migration/">
+          Migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/boosted-migration/">
+          Boosted migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/about/overview/">
+          About
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#individual-or-compiled">Individual or compiled</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#data-attributes">Data attributes</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#programmatic-api">Programmatic API</a>
+      <ul>
+        <li><a href="#asynchronous-functions-and-transitions">Asynchronous functions and transitions</a></li>
+        <li><a href="#default-settings">Default settings</a></li>
+      </ul>
+    </li>
+    <li><a href="#no-conflict">No conflict</a></li>
+    <li><a href="#version-numbers">Version numbers</a></li>
+    <li><a href="#no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</a></li>
+    <li><a href="#util">Util</a></li>
+    <li><a href="#sanitizer">Sanitizer</a></li>
+  </ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/content/docs/4.6/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">JavaScript</h1>
+          </div>
+          <p class="bd-lead">Bring Boosted to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.</p>
+          
+          <h2 id="individual-or-compiled">Individual or compiled</h2>
+<p>Plugins can be included individually (using Boosted&rsquo;s individual <code>js/dist/*.js</code>), or all at once using <code>boosted.js</code> or the minified <code>boosted.min.js</code> (don&rsquo;t include both).</p>
+<p>If you use a bundler (Webpack, Rollup&hellip;), you can use <code>/js/dist/*.js</code> files which are UMD ready.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that <strong>all plugins depend on jQuery</strong> (this means jQuery must be included <strong>before</strong> the plugin files). <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4.6.0/package.json">Consult our <code>package.json</code></a> to see which versions of jQuery are supported.</p>
+<p>Our dropdowns, popovers and tooltips also depend on <a href="https://popper.js.org/">Popper</a>.</p>
+<h2 id="data-attributes">Data attributes</h2>
+<p>Nearly all Boosted plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to <strong>only use one set of data attributes on a single element</strong> (e.g., you cannot trigger a tooltip and modal from the same button.)</p>
+<p>However, in some situations it may be desirable to disable this functionality. To disable the data attribute API, unbind all events on the document namespaced with <code>data-api</code> like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.data-api&#39;</span><span class="p">)</span>
+</code></pre></div><p>Alternatively, to target a specific plugin, just include the plugin&rsquo;s name as a namespace along with the data-api namespace like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.alert.data-api&#39;</span><span class="p">)</span>
+</code></pre></div><div class="bd-callout bd-callout-warning">
+<h2 id="selectors">Selectors</h2>
+<p>Currently to query DOM elements we use the native methods <code>querySelector</code> and <code>querySelectorAll</code> for performance reasons, so you have to use <a href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">valid selectors</a>.
+If you use special selectors, for example: <code>collapse:Example</code> be sure to escape them.
+</div>
+
+<h2 id="events">Events</h2>
+<p>Boosted provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
+<p>All infinitive events provide <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call <code>preventDefault()</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;show.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span>  <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><h2 id="programmatic-api">Programmatic API</h2>
+<p>We also believe you should be able to use all Boosted plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.btn.danger&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;fat&#39;</span><span class="p">)</span>
+</code></pre></div><p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span> <span class="c1">// initialized with defaults
+</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span> <span class="c1">// initialized with no keyboard
+</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span> <span class="c1">// initializes and invokes show immediately
+</span></code></pre></div><p>Each plugin also exposes its raw constructor on a <code>Constructor</code> property: <code>$.fn.popover.Constructor</code>. If you&rsquo;d like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=&quot;popover&quot;]').data('popover')</code>.</p>
+<h3 id="asynchronous-functions-and-transitions">Asynchronous functions and transitions</h3>
+<p>All programmatic API methods are <strong>asynchronous</strong> and return to the caller once the transition is started but <strong>before it ends</strong>.</p>
+<p>In order to execute an action once the transition is complete, you can listen to the corresponding event.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCollapse&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.collapse&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span>  <span class="p">{</span>
+  <span class="c1">// Action to execute once the collapsible area is expanded
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div><p>In addition a method call on a <strong>transitioning component will be ignored</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;slid.bs.carousel&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span>  <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// Will slide to the slide 2 as soon as the transition to slide 1 is finished
+</span><span class="c1"></span><span class="p">})</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1">// Will start sliding to the slide 1 and returns to the caller
+</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Will be ignored, as the transition to the slide 1 is not finished !!
+</span></code></pre></div><h3 id="default-settings">Default settings</h3>
+<p>You can change the default settings for a plugin by modifying the plugin&rsquo;s <code>Constructor.Default</code> object:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// changes default for the modal plugin&#39;s `keyboard` option to false
+</span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre></div><h2 id="no-conflict">No conflict</h2>
+<p>Sometimes it is necessary to use Boosted plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">boostedButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value
+</span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">boostedBtn</span> <span class="o">=</span> <span class="nx">boostedButton</span> <span class="c1">// give $().boostedBtn the Boosted functionality
+</span></code></pre></div><h2 id="version-numbers">Version numbers</h2>
+<p>The version of each of Boosted&rsquo;s jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin&rsquo;s constructor. For example, for the tooltip plugin:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; &#34;4.6.0&#34;
+</span></code></pre></div><h2 id="no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</h2>
+<p>Boosted&rsquo;s plugins don&rsquo;t fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
+<div class="bd-callout bd-callout-warning">
+<h5 id="third-party-libraries">Third-party libraries</h5>
+<p><strong>Boosted does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.
+</div>
+
+<h2 id="util">Util</h2>
+<p>All Boosted&rsquo;s JavaScript files depend on <code>util.js</code> and it has to be included alongside the other JavaScript files. If you&rsquo;re using the compiled (or minified) <code>boosted.js</code>, there is no need to include this—it&rsquo;s already there.</p>
+<p><code>util.js</code> includes utility functions and a basic helper for <code>transitionEnd</code> events as well as a CSS transition emulator. It&rsquo;s used by the other plugins to check for CSS transition support and to catch hanging transitions.</p>
+<h2 id="sanitizer">Sanitizer</h2>
+<p>Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.</p>
+<p>The default <code>whiteList</code> value is the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span> <span class="o">=</span> <span class="sr">/^aria-[\w-]*$/i</span>
+<span class="kd">var</span> <span class="nx">DefaultWhitelist</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// Global attributes allowed on any supplied element below.
+</span><span class="c1"></span>  <span class="s1">&#39;*&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span><span class="p">,</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span><span class="p">],</span>
+  <span class="nx">a</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;rel&#39;</span><span class="p">],</span>
+  <span class="nx">area</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">b</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">br</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">col</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">code</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">div</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">em</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">hr</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h1</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h2</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h3</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h4</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h5</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h6</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">i</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">img</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="s1">&#39;srcset&#39;</span><span class="p">,</span> <span class="s1">&#39;alt&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">],</span>
+  <span class="nx">li</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">ol</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">p</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">pre</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">s</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">small</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">span</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">sub</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">sup</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">strong</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">u</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">ul</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div><p>If you want to add new values to this default <code>whiteList</code> you can do the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myDefaultWhiteList</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">whiteList</span>
+
+<span class="c1">// To allow table elements
+</span><span class="c1"></span><span class="nx">myDefaultWhiteList</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">// To allow td elements and data-option attributes on td elements
+</span><span class="c1"></span><span class="nx">myDefaultWhiteList</span><span class="p">.</span><span class="nx">td</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data-option&#39;</span><span class="p">]</span>
+
+<span class="c1">// You can push your custom regex to validate your attributes.
+</span><span class="c1">// Be careful about your regular expressions being too lax
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">myCustomRegex</span> <span class="o">=</span> <span class="sr">/^data-my-app-[\w-]+/</span>
+<span class="nx">myDefaultWhiteList</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">myCustomRegex</span><span class="p">)</span>
+</code></pre></div><p>If you want to bypass our sanitizer because you prefer to use a dedicated library, for example <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, you should do the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#yourTooltip&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="nx">sanitizeFn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">content</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+        </main>
+      </div>
+    </div>
+
+    
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-8GY/c7MOtsvb9OfczW1hZlZfhibvBlgxQshIoFKoTIuruwcGG4a3lGw5wdBTBocN" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/4.6/assets/js/docs.min.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  </body>
+</html>

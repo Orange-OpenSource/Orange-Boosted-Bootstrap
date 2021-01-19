@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Carousel with swipe effect for mobile support">
+<meta name="author" content="Orange and Boosted contributors">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.6">
+
+<title>Custom carousel · Boosted v4.6</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/4.6/components/custom-carousel/">
+
+
+
+
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+
+
+<!--Tarteaucitron -->
+<link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
+<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/docs/4.6/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Custom carousel">
+<meta name="twitter:description" content="Carousel with swipe effect for mobile support">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/4.6/components/custom-carousel/">
+<meta property="og:title" content="Custom carousel">
+<meta property="og:description" content="Carousel with swipe effect for mobile support">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script src="/docs/4.6/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      hashtag: '#cookie-consent',
+      cookieName: 'cookie-consent',
+      showAlertSmall: false,
+      orientation: 'bottom',
+      cookieslist: true,
+      highPrivacy: false,
+      handleBrowserDNTRequest: true,
+      useExternalCss: true
+    })
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+    var dataLayer = [{
+      site_name: 'accessibility-boosted',
+      phase: 'prod',
+      page_type: 'doc',
+      page_title: document.title
+    }]
+  }
+</script>
+
+  </head>
+  <body>
+     
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark" id="docs-navbar">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      
+      <img src="/docs/4.6/assets/brand/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="bd-main-nav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/" aria-label="Boosted"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});" dir="ltr">B<span class="text-primary">oo</span>sted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/docs/4.6/getting-started/introduction/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/essentials/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/examples/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v4.6
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.0)</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://v5-dev--boosted.netlify.app/docs/5.0/">5.0.x</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false" width="23" height="23"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.6">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<div class="collapse d-md-block row" id="bd-docs-nav">
+  <nav class="bd-links" aria-label="Documentation navigation">
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/getting-started/introduction/">
+          Getting started
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/layout/overview/">
+          Layout
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/content/reboot/">
+          Content
+        </a>
+      </div>
+
+      <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.6/components/alerts/" aria-current="true">
+          Components
+        </a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.6/components/alerts/">Alerts</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/badge/">Badge</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/breadcrumb/">Breadcrumb</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/buttons/">Buttons</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/button-group/">Button group</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/card/">Card</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/carousel/">Carousel</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.6/components/custom-carousel/" aria-current="page">Custom carousel</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/collapse/">Collapse</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/dropdowns/">Dropdowns</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/forms/">Forms</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/input-group/">Input group</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/jumbotron/">Jumbotron</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/list-group/">List group</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/media-object/">Media object</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/modal/">Modal</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/navs/">Navs</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/navbar/">Navbar</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/navbar-orange/">Navbar Orange</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/orange-megamenu/">Orange megamenu</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/local-navigation/">Local navigation</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/priority-nav/">Priority Nav</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/orange-footer/">Orange footer</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/pagination/">Pagination</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/popovers/">Popovers</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/progress/">Progress</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/scrollspy/">Scrollspy</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/scroll-up/">Scroll up</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/spinners/">Spinners</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/stepbar/">Stepbar</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/toasts/">Toasts</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/tooltips/">Tooltips</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/utilities/borders/">
+          Utilities
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/extend/approach/">
+          Extend
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/migration/">
+          Migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/boosted-migration/">
+          Boosted migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/about/overview/">
+          About
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#configuration">Configuration</a></li>
+  </ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/content/docs/4.6/components/custom-carousel.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Custom carousel</h1>
+          </div>
+          <p class="bd-lead">Carousel with swipe effect for mobile support</p>
+          
+          <h2 id="how-it-works">How it works</h2>
+<p>This carousel is based on the <a href="http://idangero.us/swiper/">swiper</a> plugin. It provides touch support, extended setup and works great on mobile devices.</p>
+<h2 id="demo">Demo</h2>
+<div class="bd-example">
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" id="slide1">
+      <div class="card">
+        <div class="card-img">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+          <rect width="100%" height="100%" fill="#3ebd87"/>
+          <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle" class="font-weight-bold">First slide</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title h5">Slide 1</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide" id="slide2">
+      <div class="card">
+        <div class="card-img">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+          <rect width="100%" height="100%" fill="#4bb4e6"/>
+          <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle" class="font-weight-bold">Second slide</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title h5">Slide 2</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide" id="slide3">
+      <div class="card">
+        <div class="card-img">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1096" height="380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <rect width="100%" height="100%" fill="#ffb4e6"/>
+            <text x="50%" y="50%" fill="#0003" dy=".3em" dominant-baseline="middle" text-anchor="middle" class="font-weight-bold">Third slide</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title h5">Slide 3</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev" title="Previous"></div>
+  <div class="swiper-button-next" title="Next"></div>
+</div>
+<button id="swiperPlayButton" type="button" class="btn btn-info btn-icon btn-xs mt-0" aria-label="Pause Carousel" title="Pause Carousel">
+  <span class="icon-Pause" aria-hidden="true"></span>
+</button>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-wrapper&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-slide&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;slide1&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bd-placeholder-img bd-placeholder-img-lg d-block w-100&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1096&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;380&#34;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">preserveAspectRatio</span><span class="o">=</span><span class="s">&#34;xMidYMid slice&#34;</span> <span class="na">focusable</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;#3ebd87&#34;</span><span class="p">/&gt;</span>
+          <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">y</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;#0003&#34;</span> <span class="na">dy</span><span class="o">=</span><span class="s">&#34;.3em&#34;</span> <span class="na">dominant-baseline</span><span class="o">=</span><span class="s">&#34;middle&#34;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&#34;middle&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;font-weight-bold&#34;</span><span class="p">&gt;</span>First slide<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title h5&#34;</span><span class="p">&gt;</span>Slide 1<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-slide&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;slide2&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bd-placeholder-img bd-placeholder-img-lg d-block w-100&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1096&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;380&#34;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">preserveAspectRatio</span><span class="o">=</span><span class="s">&#34;xMidYMid slice&#34;</span> <span class="na">focusable</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;#4bb4e6&#34;</span><span class="p">/&gt;</span>
+          <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">y</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;#0003&#34;</span> <span class="na">dy</span><span class="o">=</span><span class="s">&#34;.3em&#34;</span> <span class="na">dominant-baseline</span><span class="o">=</span><span class="s">&#34;middle&#34;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&#34;middle&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;font-weight-bold&#34;</span><span class="p">&gt;</span>Second slide<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title h5&#34;</span><span class="p">&gt;</span>Slide 2<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-slide&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;slide3&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bd-placeholder-img bd-placeholder-img-lg d-block w-100&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1096&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;380&#34;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">preserveAspectRatio</span><span class="o">=</span><span class="s">&#34;xMidYMid slice&#34;</span> <span class="na">focusable</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;#ffb4e6&#34;</span><span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">y</span><span class="o">=</span><span class="s">&#34;50%&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;#0003&#34;</span> <span class="na">dy</span><span class="o">=</span><span class="s">&#34;.3em&#34;</span> <span class="na">dominant-baseline</span><span class="o">=</span><span class="s">&#34;middle&#34;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&#34;middle&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;font-weight-bold&#34;</span><span class="p">&gt;</span>Third slide<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title h5&#34;</span><span class="p">&gt;</span>Slide 3<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-pagination&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-button-prev&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Previous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;swiper-button-next&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Next&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;swiperPlayButton&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-info btn-icon btn-xs mt-0&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Pause Carousel&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Pause Carousel&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;icon-Pause&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="usage">Usage</h2>
+<p>Make sure to add the vendor <abbr title="Cascading Stylesheet">CSS</abbr> and <abbr title="Javascript">JS</abbr> files to your page to get the plugin working.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/css/swiper.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-3ycIs75n6btZktoCV/zcWo54Eq+bnjaJ9iwOISgNPQIXRSmrkf4XP1iHsWNq0jPB&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-llVNZVxgabZyf5ZeGs3m2QcNbEE0UK1PBKM6ZoJmWK5BuBpqZUXpN1nWXd0SrAC5&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="configuration">Configuration</h2>
+<p>Here is the recommended setup for an accessible carousel:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mySwiper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swiper</span><span class="p">(</span><span class="s1">&#39;.swiper-container&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">autoplay</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">delay</span><span class="o">:</span> <span class="mi">3500</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">a11y</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">keyboard</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">onlyInViewport</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nx">pagination</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;.swiper-pagination&#39;</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;bullets&#39;</span><span class="p">,</span>
+    <span class="nx">clickable</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nx">navigation</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">nextEl</span><span class="o">:</span> <span class="s1">&#39;.swiper-button-next&#39;</span><span class="p">,</span>
+    <span class="nx">prevEl</span><span class="o">:</span> <span class="s1">&#39;.swiper-button-prev&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">spaceBetween</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="nx">slidesPerView</span><span class="o">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+  <span class="nx">centeredSlides</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">freeMode</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">breakpoints</span><span class="o">:</span> <span class="p">{</span>
+    <span class="mi">767</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">pagination</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">clickable</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="nx">freeMode</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">freeModeMomentumRatio</span><span class="o">:</span> <span class="mf">.5</span><span class="p">,</span>
+      <span class="nx">centeredSlides</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">slideToClickedSlide</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><p>Be aware that having a play/pause button implies having autoplay set to true in the configuration.
+Find below an example for our custom button</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;#swiperPlayButton&#34;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">MySwiper</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.swiper-container&#39;</span><span class="p">).</span><span class="nx">swiper</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;span&#34;</span><span class="p">,</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&#34;icon-Pause&#34;</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">MySwiper</span><span class="p">.</span><span class="nx">autoplay</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&#34;aria-label&#34;</span><span class="p">,</span> <span class="s2">&#34;Play Carousel&#34;</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">,</span> <span class="s2">&#34;Play Carousel&#34;</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;span&#34;</span><span class="p">,</span><span class="k">this</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s2">&#34;icon-Pause icon-Play&#34;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">MySwiper</span><span class="p">.</span><span class="nx">autoplay</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&#34;aria-label&#34;</span><span class="p">,</span> <span class="s2">&#34;Pause Carousel&#34;</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">,</span> <span class="s2">&#34;Pause Carousel&#34;</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;span&#34;</span><span class="p">,</span><span class="k">this</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s2">&#34;icon-Play icon-Pause&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+</code></pre></div>
+        </main>
+      </div>
+    </div>
+
+    
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-8GY/c7MOtsvb9OfczW1hZlZfhibvBlgxQshIoFKoTIuruwcGG4a3lGw5wdBTBocN" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/4.6/assets/js/docs.min.js"></script>
+
+
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js" integrity="sha384-llVNZVxgabZyf5ZeGs3m2QcNbEE0UK1PBKM6ZoJmWK5BuBpqZUXpN1nWXd0SrAC5" crossorigin="anonymous"></script>
+<script>window.Swiper || document.write('<script src="/docs/4.6/assets/js/vendor/swiper.min.js"><\/script>')</script>
+<script>
+  new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 3500,
+    },
+    a11y: true,
+    keyboard: {
+      enabled: true
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    freeMode: false,
+    breakpoints: {
+      767: {
+        paginationClickable: false,
+        freeMode: true,
+        freeModeMomentumRatio: .5,
+        centeredSlides: false,
+        slideToClickedSlide: false
+      }
+    }
+  });
+
+  $(document).ready(function () {
+    $("#swiperPlayButton").click(function () {
+      var MySwiper = document.querySelector('.swiper-container').swiper;
+      if ($("span",this).hasClass("icon-Pause")) {
+        MySwiper.autoplay.stop();
+        $(this).attr("aria-label", "Play Carousel");
+        $(this).attr("title", "Play Carousel");
+        $("span",this).toggleClass("icon-Pause icon-Play");
+      } else {
+        MySwiper.autoplay.start();
+        $(this).attr("aria-label", "Pause Carousel");
+        $(this).attr("title", "Pause Carousel");
+        $("span",this).toggleClass("icon-Play icon-Pause");
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.">
+<meta name="author" content="Orange and Boosted contributors">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.6">
+
+<title>Theming Boosted · Boosted v4.6</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/4.6/getting-started/theming/">
+
+
+
+
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue55_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/4.6/dist/fonts/HelvNeue75_W1G.woff2"
+      as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+<link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+
+
+<!--Tarteaucitron -->
+<link href="/docs/4.6/assets/css/tarteaucitronboosted.css" rel="stylesheet"><!-- Swiper -->
+<link href="/docs/4.6/assets/css/vendor/swiper.min.css" rel="stylesheet"><!-- Boosted core CSS -->
+<link href="/docs/4.6/dist/css/orangeHelvetica.min.css" rel="stylesheet" integrity="sha384-ZWV5rANfkZIt/7HDFToWXT+5LfpEbtDN22vw9WhARiDc+o6zJ4qxwdTwskCbe8NK" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/orangeIcons.min.css" rel="stylesheet" integrity="sha384-7/+XhgsfiKJOYwQYLCI6P8bz89YJEKD2GLErv3KrHbxQ4wPcJ9JcqVZVKAglgBJP" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/docs/4.6/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Theming Boosted">
+<meta name="twitter:description" content="Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/4.6/getting-started/theming/">
+<meta property="og:title" content="Theming Boosted">
+<meta property="og:description" content="Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/4.6/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script src="/docs/4.6/assets/js/vendor/tarteaucitron.js"></script>
+<script>
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.init({
+      hashtag: '#cookie-consent',
+      cookieName: 'cookie-consent',
+      showAlertSmall: false,
+      orientation: 'bottom',
+      cookieslist: true,
+      highPrivacy: false,
+      handleBrowserDNTRequest: true,
+      useExternalCss: true
+    })
+    tarteaucitron.user.googletagmanagerId = 'GTM-P6H78BQ';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager')
+    var dataLayer = [{
+      site_name: 'accessibility-boosted',
+      phase: 'prod',
+      page_type: 'doc',
+      page_title: document.title
+    }]
+  }
+</script>
+
+  </head>
+  <body>
+     
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6H78BQ"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+
+    <div class="skippy fixed-top overflow-hidden pl-5 ml-3">
+  <div class="container-fluid">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+    <a class="sr-only sr-only-focusable" href="#toc">Skip to table of contents</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark" id="docs-navbar">
+  <nav role="navigation" class="container-fluid" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      
+      <img src="/docs/4.6/assets/brand/orange_logo.svg" alt="Back to homepage" title="Go to homepage" width="50" height="50"/>
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="bd-main-nav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/" aria-label="Boosted"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});" dir="ltr">B<span class="text-primary">oo</span>sted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/docs/4.6/getting-started/introduction/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/essentials/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'essentials'});">Essentials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/examples/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/docs/4.6/boostwatch/"  onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'boostwatch'});">Boostwatch</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link btn-inverse dropdown-toggle mr-md-2" type="button" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v4.6
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/docs/4.6/">Latest (4.6.0)</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.5/">4.5.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.4/">4.4.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.3/">4.3.1</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.2/">4.2.2</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.1/">4.1.3</a>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/4.0/">4.0.0</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://v5-dev--boosted.netlify.app/docs/5.0/">5.0.x</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.0</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false" width="23" height="23"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.6">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<div class="collapse d-md-block row" id="bd-docs-nav">
+  <nav class="bd-links" aria-label="Documentation navigation">
+
+      <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.6/getting-started/introduction/" aria-current="true">
+          Getting started
+        </a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.6/getting-started/introduction/">Introduction</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/download/">Download</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/contents/">Contents</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/browsers-devices/">Browsers &amp; devices</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/javascript/">JavaScript</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.6/getting-started/theming/" aria-current="page">Theming</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/build-tools/">Build tools</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/webpack/">Webpack</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/accessibility/">Accessibility</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/getting-started/rtl/">RTL</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/layout/overview/">
+          Layout
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/content/reboot/">
+          Content
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/components/alerts/">
+          Components
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/utilities/borders/">
+          Utilities
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/extend/approach/">
+          Extend
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/migration/">
+          Migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/boosted-migration/">
+          Boosted migration
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/about/overview/">
+          About
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" id="toc" aria-label="Table of contents">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#sass">Sass</a>
+      <ul>
+        <li><a href="#file-structure">File structure</a></li>
+        <li><a href="#importing">Importing</a></li>
+        <li><a href="#variable-defaults">Variable defaults</a></li>
+        <li><a href="#maps-and-loops">Maps and loops</a>
+          <ul>
+            <li><a href="#modify-map">Modify map</a></li>
+            <li><a href="#add-to-map">Add to map</a></li>
+            <li><a href="#remove-from-map">Remove from map</a></li>
+            <li><a href="#required-keys">Required keys</a></li>
+          </ul>
+        </li>
+        <li><a href="#functions">Functions</a>
+          <ul>
+            <li><a href="#color-contrast">Color contrast</a></li>
+            <li><a href="#escape-svg">Escape SVG</a></li>
+            <li><a href="#add-and-subtract-functions">Add and Subtract functions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#sass-options">Sass options</a></li>
+    <li><a href="#color">Color</a>
+      <ul>
+        <li><a href="#all-colors">All colors</a></li>
+        <li><a href="#theme-colors">Theme colors</a></li>
+        <li><a href="#grays">Grays</a></li>
+      </ul>
+    </li>
+    <li><a href="#components">Components</a>
+      <ul>
+        <li><a href="#modifiers">Modifiers</a></li>
+        <li><a href="#responsive">Responsive</a></li>
+      </ul>
+    </li>
+    <li><a href="#css-variables">CSS variables</a>
+      <ul>
+        <li><a href="#available-variables">Available variables</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#breakpoint-variables">Breakpoint variables</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v4-dev/site/content/docs/4.6/getting-started/theming.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+            <h1 class="bd-title" id="content">Theming Boosted</h1>
+          </div>
+          <p class="bd-lead">Customize Boosted 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.</p>
+          
+          <h2 id="introduction">Introduction</h2>
+<p>In Boosted 3, theming was largely driven by variable overrides in LESS, custom CSS, and a separate theme stylesheet that we included in our <code>dist</code> files. With some effort, one could completely redesign the look of Boosted 3 without touching the core files. Boosted 4 provides a familiar, but slightly different approach.</p>
+<p>Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There&rsquo;s no more dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.</p>
+<h2 id="sass">Sass</h2>
+<p>Utilize our source Sass files to take advantage of variables, maps, mixins, and more when <a href="/docs/4.6/getting-started/build-tools/#sass">compiling Sass</a> using your own asset pipeline.</p>
+<h3 id="file-structure">File structure</h3>
+<p>Whenever possible, avoid modifying Boosted&rsquo;s core files. For Sass, that means creating your own stylesheet that imports Boosted so you can modify and extend it. Assuming you&rsquo;re using a package manager like npm, you&rsquo;ll have a file structure that looks like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">your-project/
+├── scss
+│   └── custom.scss
+└── node_modules/
+    └── boosted
+        ├── js
+        └── scss
+</code></pre></div><p>If you&rsquo;ve downloaded our source files and aren&rsquo;t using a package manager, you&rsquo;ll want to manually setup something similar to that structure, keeping Boosted&rsquo;s source files separate from your own.</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">your-project/
+├── scss
+│   └── custom.scss
+└── boosted/
+    ├── js
+    └── scss
+</code></pre></div><h3 id="importing">Importing</h3>
+<p>In your <code>custom.scss</code>, you&rsquo;ll import Boosted&rsquo;s source Sass files. You have two options: include all of Boosted, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+</span><span class="c1">// Option A: Include all of Boosted
+</span><span class="c1"></span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/boosted&#34;</span><span class="p">;</span>
+
+<span class="c1">// Add custom code after this
+</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+</span><span class="c1">// Option B: Include parts of Boosted
+</span><span class="c1"></span>
+<span class="c1">// Required
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
+
+<span class="c1">// Include custom variable default overrides here
+</span><span class="c1"></span>
+<span class="c1">// Optional
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/images&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/code&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/grid&#34;</span><span class="p">;</span>
+</code></pre></div><p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code>custom.scss</code>. You can also start to add parts of Boosted under the <code>// Optional</code> section as needed. We suggest using the full import stack from our <code>boosted.scss</code> file as your starting point.</p>
+<h3 id="variable-defaults">Variable defaults</h3>
+<p>Every Sass variable in Boosted includes the <code>!default</code> flag allowing you to override the variable&rsquo;s default value in your own Sass without modifying Boosted&rsquo;s source code. Copy and paste variables as needed, modify their values, and remove the <code>!default</code> flag. If a variable has already been assigned, then it won&rsquo;t be re-assigned by the default values in Boosted.</p>
+<p>You will find the complete list of Boosted&rsquo;s variables in <code>scss/_variables.scss</code>. Some variables are set to <code>null</code>, these variables don&rsquo;t output the property unless they are overridden in your configuration.</p>
+<p>Variable overrides must come after our functions, variables, and mixins are imported, but before the rest of the imports.</p>
+<p>Here&rsquo;s an example that changes the <code>background-color</code> and <code>color</code> for the <code>&lt;body&gt;</code> when importing and compiling Boosted via npm:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Required
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
+
+<span class="c1">// Your variable overrides
+</span><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+
+<span class="c1">// Boosted and its default variables
+</span><span class="c1"></span>
+<span class="c1">// Optional
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
+<span class="c1">// etc
+</span></code></pre></div><p>Repeat as necessary for any variable in Boosted, including the global options below.</p>
+<div class="bd-callout bd-callout-info">
+<h4 id="bootstrap-starter-project">Bootstrap starter project</h4>
+<p>Head to the <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstrap-npm-starter</a> template repository to see how to build and customize Bootstrap in your own npm project. Includes Sass compiler, Autoprefixer, Stylelint, PurgeCSS, and Bootstrap Icons.
+</div>
+
+<h3 id="maps-and-loops">Maps and loops</h3>
+<p>Boosted 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the <code>!default</code> flag and can be overridden and extended.</p>
+<p>Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making <em>removing</em> items from a map slightly more difficult.</p>
+<h4 id="modify-map">Modify map</h4>
+<p>To modify an existing color in our <code>$theme-colors</code> map, add the following to your custom Sass file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;primary&#34;</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="o">,</span>
+  <span class="s2">&#34;danger&#34;</span><span class="o">:</span> <span class="mh">#ff4136</span>
+<span class="p">);</span>
+</code></pre></div><h4 id="add-to-map">Add to map</h4>
+<p>To add a new color to <code>$theme-colors</code>, add the new key and value:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#900</span>
+<span class="p">);</span>
+</code></pre></div><h4 id="remove-from-map">Remove from map</h4>
+<p>To remove colors from <code>$theme-colors</code>, or any other map, use <code>map-remove</code>. Be aware you must insert it between our requirements and options:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Required
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/mixins&#34;</span><span class="p">;</span>
+
+<span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">&#34;info&#34;</span><span class="o">,</span> <span class="s2">&#34;light&#34;</span><span class="o">,</span> <span class="s2">&#34;dark&#34;</span><span class="p">);</span>
+
+<span class="c1">// Optional
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/root&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/boosted/scss/type&#34;</span><span class="p">;</span>
+<span class="nc">...</span>
+</code></pre></div><h4 id="required-keys">Required keys</h4>
+<p>Boosted assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map&rsquo;s key is being used.</p>
+<p>For example, we use the <code>primary</code>, <code>success</code>, and <code>danger</code> keys from <code>$theme-colors</code> for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you&rsquo;ll need to modify the Sass code that makes use of those values.</p>
+<h3 id="functions">Functions</h3>
+<p>Boosted utilizes several Sass functions, but only a subset are applicable to general theming. We&rsquo;ve included three functions for getting values from the color maps:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@function</span> <span class="nt">color</span><span class="o">(</span><span class="err">$</span><span class="nt">key</span><span class="nd">:</span> <span class="s2">&#34;blue&#34;</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">colors</span><span class="o">,</span> <span class="err">$</span><span class="nt">key</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@function</span> <span class="nt">theme-color</span><span class="o">(</span><span class="err">$</span><span class="nt">key</span><span class="nd">:</span> <span class="s2">&#34;primary&#34;</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">theme-colors</span><span class="o">,</span> <span class="err">$</span><span class="nt">key</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@function</span> <span class="nt">gray</span><span class="o">(</span><span class="err">$</span><span class="nt">key</span><span class="nd">:</span> <span class="s2">&#34;100&#34;</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nt">map-get</span><span class="o">(</span><span class="err">$</span><span class="nt">grays</span><span class="o">,</span> <span class="err">$</span><span class="nt">key</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>These allow you to pick one color from a Sass map much like how you&rsquo;d use a color variable from v3.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="nt">gray</span><span class="o">(</span><span class="s2">&#34;100&#34;</span><span class="o">)</span><span class="p">;</span>
+  <span class="nt">background-color</span><span class="nd">:</span> <span class="nt">theme-color</span><span class="o">(</span><span class="s2">&#34;dark&#34;</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>We also have another function for getting a particular <em>level</em> of color from the <code>$theme-colors</code> map. Negative level values will lighten the color, while higher levels will darken.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@function</span> <span class="nt">theme-color-level</span><span class="o">(</span><span class="err">$</span><span class="nt">color-name</span><span class="nd">:</span> <span class="s2">&#34;primary&#34;</span><span class="o">,</span> <span class="err">$</span><span class="nt">level</span><span class="nd">:</span> <span class="nt">0</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nv">$color</span><span class="o">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="nv">$color-name</span><span class="p">);</span>
+  <span class="nv">$color-base</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$level</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="mh">#000</span><span class="o">,</span> <span class="mh">#fff</span><span class="p">);</span>
+  <span class="nv">$level</span><span class="o">:</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$level</span><span class="p">);</span>
+
+  <span class="k">@return</span> <span class="nt">mix</span><span class="o">(</span><span class="err">$</span><span class="nt">color-base</span><span class="o">,</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">level</span> <span class="o">*</span> <span class="err">$</span><span class="nt">theme-color-interval</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>In practice, you&rsquo;d call the function and pass in two parameters: the name of the color from <code>$theme-colors</code> (e.g., primary or danger) and a numeric level.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="nt">theme-color-level</span><span class="o">(</span><span class="nt">primary</span><span class="o">,</span> <span class="nt">-10</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.</p>
+<h4 id="color-contrast">Color contrast</h4>
+<p>An additional function we include in Boosted is the color contrast function, <code>color-yiq</code>. It utilizes the <a href="https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests">WCAG 2.0 algorithm</a> for calculating contrast thresholds based on <a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">relative luminance</a> in a <code>sRGB</code> colorspace to automatically return a light (<code>#fff</code>) or dark (<code>#000</code>) contrast color based on the specified base color. This function is especially useful for mixins or loops where you&rsquo;re generating multiple classes.</p>
+<p>For example, to generate color swatches from our <code>$theme-colors</code> map:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+    <span class="nt">color</span><span class="nd">:</span> <span class="nt">color-yiq</span><span class="o">(</span><span class="err">$</span><span class="nt">value</span><span class="o">)</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>It can also be used for one-off contrast needs:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="nt">color-yiq</span><span class="o">(</span><span class="nn">#000</span><span class="o">)</span><span class="p">;</span> <span class="c1">// returns `color: #fff`
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>You can also specify a base color with our color map functions:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="nt">color-yiq</span><span class="o">(</span><span class="nt">theme-color</span><span class="o">(</span><span class="s2">&#34;dark&#34;</span><span class="o">))</span><span class="p">;</span> <span class="c1">// returns `color: #fff`
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><div class="bd-callout bd-callout-info">
+<h5 id="accessibility">Accessibility</h5>
+<p>In order to meet <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 accessibility standards for color contrast</a>, authors <strong>must</strong> provide <a href="https://www.w3.org/WAI/WCAG20/quickref/20160105/Overview.php#visual-audio-contrast-contrast">a contrast ratio of at least 4.5:1</a>, with very few exceptions.
+</div>
+
+<h4 id="escape-svg">Escape SVG</h4>
+<p>We use the <code>escape-svg</code> function to escape the <code>&lt;</code>, <code>&gt;</code> and <code>#</code> characters for SVG background images. These characters need to be escaped to properly render the background images in IE. When using the <code>escape-svg</code> function, data URIs must be quoted.</p>
+<h4 id="add-and-subtract-functions">Add and Subtract functions</h4>
+<p>We use the <code>add</code> and <code>subtract</code> functions to wrap the CSS <code>calc</code> function. The primary purpose of these functions is to avoid errors when a &ldquo;unitless&rdquo; <code>0</code> value is passed into a <code>calc</code> expression. Expressions like <code>calc(10px - 0)</code> will return an error in all browsers, despite being mathematically correct.</p>
+<p>Example where the calc is valid:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output calc(.25rem - 1px) is valid
+</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">calc</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span> <span class="nt">-</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output the same calc(.25rem - 1px) as above
+</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">subtract</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span><span class="o">,</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>Example where the calc is invalid:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output calc(.25rem - 0) is invalid
+</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">calc</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span> <span class="nt">-</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output .25rem
+</span><span class="c1"></span>  <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">subtract</span><span class="o">(</span><span class="err">$</span><span class="nt">border-radius</span><span class="o">,</span> <span class="err">$</span><span class="nt">border-width</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="sass-options">Sass options</h2>
+<p>Customize Boosted 4 with our built-in custom variables file and easily toggle global CSS preferences with new <code>$enable-*</code> Sass variables. Override a variable&rsquo;s value and recompile with <code>npm run test</code> as needed.</p>
+<p>You can find and customize these variables for key global options in Boosted&rsquo;s <code>scss/_variables.scss</code> file.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$spacer</code></td>
+<td><code>1.25rem</code> (default), or any value &gt; 0</td>
+<td>Specifies the default spacer value to programmatically generate our <a href="/docs/4.6/utilities/spacing/">spacer utilities</a>.</td>
+</tr>
+<tr>
+<td><code>$enable-rounded</code></td>
+<td><code>true</code> or <code>false</code> (default)</td>
+<td>Enables predefined <code>border-radius</code> styles on various components.</td>
+</tr>
+<tr>
+<td><code>$enable-shadows</code></td>
+<td><code>true</code> or <code>false</code> (default)</td>
+<td>Enables predefined decorative <code>box-shadow</code> styles on various components. Does not affect <code>box-shadow</code>s used for focus states.</td>
+</tr>
+<tr>
+<td><code>$enable-gradients</code></td>
+<td><code>true</code> or <code>false</code> (default)</td>
+<td>Enables predefined gradients via <code>background-image</code> styles on various components.</td>
+</tr>
+<tr>
+<td><code>$enable-transitions</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Enables predefined <code>transition</code>s on various components.</td>
+</tr>
+<tr>
+<td><code>$enable-prefers-reduced-motion-media-query</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Enables the <a href="/docs/4.6/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users' browser/operating system preferences.</td>
+</tr>
+<tr>
+<td><code>$enable-hover-media-query</code></td>
+<td><code>true</code> or <code>false</code> (default)</td>
+<td><strong>Deprecated</strong></td>
+</tr>
+<tr>
+<td><code>$enable-grid-classes</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Enables the generation of CSS classes for the grid system (e.g., <code>.container</code>, <code>.row</code>, <code>.col-md-1</code>, etc.).</td>
+</tr>
+<tr>
+<td><code>$enable-caret</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Enables pseudo element caret on <code>.dropdown-toggle</code>.</td>
+</tr>
+<tr>
+<td><code>$enable-pointer-cursor-for-buttons</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Add &ldquo;hand&rdquo; cursor to non-disabled button elements.</td>
+</tr>
+<tr>
+<td><code>$enable-print-styles</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Enables styles for optimizing printing.</td>
+</tr>
+<tr>
+<td><code>$enable-responsive-font-sizes</code></td>
+<td><code>true</code> or <code>false</code> (default)</td>
+<td>Enables <a href="/docs/4.6/content/typography/#responsive-font-sizes">responsive font sizes</a>.</td>
+</tr>
+<tr>
+<td><code>$enable-validation-icons</code></td>
+<td><code>true</code> (default) or <code>false</code></td>
+<td>Enables <code>background-image</code> icons within textual inputs and some custom forms for validation states.</td>
+</tr>
+<tr>
+<td><code>$enable-deprecation-messages</code></td>
+<td><code>true</code> or <code>false</code> (default)</td>
+<td>Set to <code>true</code> to show warnings when using any of the deprecated mixins and functions that are planned to be removed in <code>v5</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="color">Color</h2>
+<p>Many of Boosted&rsquo;s various components and utilities are built through a series of colors defined in a Sass map. This map can be looped over in Sass to quickly generate a series of rulesets.</p>
+<h3 id="all-colors">All colors</h3>
+<p>All colors available in Boosted 4, are available as Sass variables and a Sass map in <code>scss/_variables.scss</code> file. This will be expanded upon in subsequent minor releases to add additional shades, much like the <a href="#grays">grayscale palette</a> we already include.</p>
+<div class="row">
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-blue">
+        <code class="font-weight-bold d-block">$Blue</code>
+        <code>#527edb</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-purple">
+        <code class="font-weight-bold d-block">$Purple</code>
+        <code>#882ae0</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-pink">
+        <code class="font-weight-bold d-block">$Pink</code>
+        <code>#f14095</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-red">
+        <code class="font-weight-bold d-block">$Red</code>
+        <code>#cd3c14</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-orange">
+        <code class="font-weight-bold d-block">$Orange</code>
+        <code>#ff7900</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-yellow">
+        <code class="font-weight-bold d-block">$Yellow</code>
+        <code>#ffd200</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-green">
+        <code class="font-weight-bold d-block">$Green</code>
+        <code>#32c832</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-teal">
+        <code class="font-weight-bold d-block">$Teal</code>
+        <code>#1dde8e</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-cyan">
+        <code class="font-weight-bold d-block">$Cyan</code>
+        <code>#527edb</code>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-orange-2">
+        <code class="font-weight-bold d-block">$Orange-2</code>
+        <code>#f16e00</code>
+      </div>
+    </div>
+    
+</div>
+<p>Here&rsquo;s how you can use these in your Sass:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// With variable
+</span><span class="c1"></span><span class="nc">.alpha</span> <span class="p">{</span> <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">purple</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// From the Sass map with our `color()` function
+</span><span class="c1"></span><span class="nc">.beta</span> <span class="p">{</span> <span class="nt">color</span><span class="nd">:</span> <span class="nt">color</span><span class="o">(</span><span class="s2">&#34;purple&#34;</span><span class="o">)</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div><p><a href="/docs/4.6/utilities/colors/">Color utility classes</a> are also available for setting <code>color</code> and <code>background-color</code>.</p>
+<div class="bd-callout bd-callout-info">
+In the future, we&rsquo;ll aim to provide Sass maps and variables for shades of each color as we&rsquo;ve done with the grayscale colors below.
+</div>
+
+<h3 id="theme-colors">Theme colors</h3>
+<p>We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted&rsquo;s <code>scss/_variables.scss</code> file.</p>
+<div class="row">
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-primary">
+        <code class="font-weight-bold d-block">$Primary</code>
+        <code>#f16e00</code>
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-secondary">
+        <code class="font-weight-bold d-block">$Secondary</code>
+        <code>#000</code>
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-success">
+        <code class="font-weight-bold d-block">$Success</code>
+        <code>#32c832</code>
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-danger">
+        <code class="font-weight-bold d-block">$Danger</code>
+        <code>#cd3c14</code>
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-warning">
+        <code class="font-weight-bold d-block">$Warning</code>
+        <code>#fc0</code>
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-info">
+        <code class="font-weight-bold d-block">$Info</code>
+        <code>#527edb</code>
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 bg-light">
+        <code class="font-weight-bold d-block">$Light</code>
+        <code>#ddd</code>
+      </div>
+    </div>
+  
+</div>
+<h3 id="grays">Grays</h3>
+<p>An expansive set of gray variables and a Sass map in <code>scss/_variables.scss</code> for consistent shades of gray across your project. Note that these are &ldquo;cool grays&rdquo;, which tend towards a subtle blue tone, rather than neutral grays.</p>
+<div class="row mb-3">
+  <div class="col-md-4">
+    
+      <div class="p-3 swatch-100">
+        <code class="font-weight-bold d-block">$gray-100</code>
+        <code>#fafafa</code>
+      </div>
+    
+      <div class="p-3 swatch-200">
+        <code class="font-weight-bold d-block">$gray-200</code>
+        <code>#f6f6f6</code>
+      </div>
+    
+      <div class="p-3 swatch-300">
+        <code class="font-weight-bold d-block">$gray-300</code>
+        <code>#eee</code>
+      </div>
+    
+      <div class="p-3 swatch-400">
+        <code class="font-weight-bold d-block">$gray-400</code>
+        <code>#ddd</code>
+      </div>
+    
+      <div class="p-3 swatch-500">
+        <code class="font-weight-bold d-block">$gray-500</code>
+        <code>#ccc</code>
+      </div>
+    
+      <div class="p-3 swatch-600">
+        <code class="font-weight-bold d-block">$gray-600</code>
+        <code>#999</code>
+      </div>
+    
+      <div class="p-3 swatch-700">
+        <code class="font-weight-bold d-block">$gray-700</code>
+        <code>#666</code>
+      </div>
+    
+      <div class="p-3 swatch-800">
+        <code class="font-weight-bold d-block">$gray-800</code>
+        <code>#595959</code>
+      </div>
+    
+      <div class="p-3 swatch-900">
+        <code class="font-weight-bold d-block">$gray-900</code>
+        <code>#333</code>
+      </div>
+    
+  </div>
+</div>
+<p>Within <code>scss/_variables.scss</code>, you&rsquo;ll find Boosted&rsquo;s color variables and Sass map. Here&rsquo;s an example of the <code>$colors</code> Sass map:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;blue&#34;</span><span class="o">:</span> <span class="nv">$blue</span><span class="o">,</span>
+  <span class="s2">&#34;indigo&#34;</span><span class="o">:</span> <span class="nv">$indigo</span><span class="o">,</span>
+  <span class="s2">&#34;purple&#34;</span><span class="o">:</span> <span class="nv">$purple</span><span class="o">,</span>
+  <span class="s2">&#34;pink&#34;</span><span class="o">:</span> <span class="nv">$pink</span><span class="o">,</span>
+  <span class="s2">&#34;red&#34;</span><span class="o">:</span> <span class="nv">$red</span><span class="o">,</span>
+  <span class="s2">&#34;orange&#34;</span><span class="o">:</span> <span class="nv">$orange</span><span class="o">,</span>
+  <span class="s2">&#34;yellow&#34;</span><span class="o">:</span> <span class="nv">$yellow</span><span class="o">,</span>
+  <span class="s2">&#34;green&#34;</span><span class="o">:</span> <span class="nv">$green</span><span class="o">,</span>
+  <span class="s2">&#34;teal&#34;</span><span class="o">:</span> <span class="nv">$teal</span><span class="o">,</span>
+  <span class="s2">&#34;cyan&#34;</span><span class="o">:</span> <span class="nv">$cyan</span><span class="o">,</span>
+  <span class="s2">&#34;white&#34;</span><span class="o">:</span> <span class="nv">$white</span><span class="o">,</span>
+  <span class="s2">&#34;gray&#34;</span><span class="o">:</span> <span class="nv">$gray-600</span><span class="o">,</span>
+  <span class="s2">&#34;gray-dark&#34;</span><span class="o">:</span> <span class="nv">$gray-800</span>
+<span class="p">)</span> <span class="nv">!default</span><span class="p">;</span>
+</code></pre></div><p>Add, remove, or modify values within the map to update how they&rsquo;re used in many other components. Unfortunately at this time, not <em>every</em> component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the <code>${color}</code> variables and this Sass map.</p>
+<h2 id="components">Components</h2>
+<p>Many of Boosted&rsquo;s components and utilities are built with <code>@each</code> loops that iterate over a Sass map. This is especially helpful for generating variants of a component by our <code>$theme-colors</code> and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you&rsquo;ll automatically see your changes reflected in these loops.</p>
+<h3 id="modifiers">Modifiers</h3>
+<p>Many of Boosted&rsquo;s components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., <code>.btn</code>) while style variations are confined to modifier classes (e.g., <code>.btn-danger</code>). These modifier classes are built from the <code>$theme-colors</code> map to make customizing the number and name of our modifier classes.</p>
+<p>Here are two examples of how we loop over the <code>$theme-colors</code> map to generate modifiers to the <code>.alert</code> component and all our <code>.bg-*</code> background utilities.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes
+</span><span class="c1"></span><span class="k">@each</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+  <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> alert-variant</span><span class="p">(</span><span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">-10</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">-9</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="mi">6</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Generate `.bg-*` color utilities
+</span><span class="c1"></span><span class="k">@each</span> <span class="err">$</span><span class="nt">color</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> bg-variant</span><span class="p">(</span><span class="s1">&#39;.bg-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s1">&#39;</span><span class="o">,</span> <span class="nv">$value</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="responsive">Responsive</h3>
+<p>These Sass loops aren&rsquo;t limited to color maps, either. You can also generate responsive variations of your components or utilities. Take for example our responsive text alignment utilities where we mix an <code>@each</code> loop for the <code>$grid-breakpoints</code> Sass map with a media query include.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="err">$</span><span class="nt">breakpoint</span> <span class="nt">in</span> <span class="nt">map-keys</span><span class="o">(</span><span class="err">$</span><span class="nt">grid-breakpoints</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
+
+    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-left</span>   <span class="p">{</span> <span class="nt">text-align</span><span class="nd">:</span> <span class="nt">left</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-right</span>  <span class="p">{</span> <span class="nt">text-align</span><span class="nd">:</span> <span class="nt">right</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-center</span> <span class="p">{</span> <span class="nt">text-align</span><span class="nd">:</span> <span class="nt">center</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>Should you need to modify your <code>$grid-breakpoints</code>, your changes will apply to all the loops iterating over that map.</p>
+<h2 id="css-variables">CSS variables</h2>
+<p>Boosted 4 includes around two dozen <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties (variables)</a> in its compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser&rsquo;s Inspector, a code sandbox, or general prototyping.</p>
+<h3 id="available-variables">Available variables</h3>
+<p>Here are the variables we include (note that the <code>:root</code> is required). They&rsquo;re located in our <code>_root.scss</code> file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">:root {
+  --blue: #527edb;
+  --indigo: #a885d8;
+  --purple: #a885d8;
+  --pink: #ffb4e6;
+  --red: #cd3c14;
+  --orange: #ff7900;
+  --orange-2: #f16e00;
+  --yellow: #ffd200;
+  --green: #32c832;
+  --teal: #50be87;
+  --cyan: #4bb4e6;
+  --white: #fff;
+  --gray: #999;
+  --gray-dark: #595959;
+  --primary: #ff7900;
+  --secondary: #000;
+  --success: #32c832;
+  --info: #527edb;
+  --warning: #fc0;
+  --danger: #cd3c14;
+  --light: #ccc;
+  --dark: #000;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+  --font-family-sans-serif: HelvNeueOrange/*rtl:insert:Arabic*/, Helvetica Neue, Helvetica, Arial, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}</span>
+</code></pre></div><h3 id="examples">Examples</h3>
+<p>CSS variables offer similar flexibility to Sass&rsquo;s variables, but without the need for compilation before being served to the browser. For example, here we&rsquo;re resetting our page&rsquo;s font and link styles with CSS variables.</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">font</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="o">/</span><span class="mf">1.5</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="breakpoint-variables">Breakpoint variables</h3>
+<p>While we originally included breakpoints in our CSS variables (e.g., <code>--breakpoint-md</code>), <strong>these are not supported in media queries</strong>, but they can still be used <em>within</em> rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. <a href="https://www.w3.org/TR/css-variables-1/#using-variables">Learn more in the spec</a>.</p>
+<p>Here&rsquo;s an example of <strong>what&rsquo;s not supported:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--breakpoint-sm</span><span class="o">))</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div><p>And here&rsquo;s an example of <strong>what is supported:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">custom-element</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+        </main>
+      </div>
+    </div>
+
+    
+<nav role="navigation">
+  <a href="#" class="o-scroll-up" title="Back to top">
+    <span class="d-none d-sm-inline-block">Back to top</span>
+  </a>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.6/dist/js/boosted.bundle.min.js" integrity="sha384-8GY/c7MOtsvb9OfczW1hZlZfhibvBlgxQshIoFKoTIuruwcGG4a3lGw5wdBTBocN" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/4.6/assets/js/docs.min.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  </body>
+</html>
