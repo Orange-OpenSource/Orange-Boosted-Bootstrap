@@ -24,6 +24,8 @@
 
     &::before {
       float: left; // Suppress underlining of the separator in modern browsers
+
+      /* rtl:ignore */
       padding-left: map-get($spacers, 2); // Boosted mod: RTL
       color: $breadcrumb-divider-color;
       content: escape-svg($breadcrumb-divider);
