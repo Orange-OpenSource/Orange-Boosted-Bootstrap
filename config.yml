@@ -64,7 +64,7 @@ params:
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
     css:               "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css"
-    css_hash:          "sha384-Q/U0k4TYxq5Caf56khH/a5a1OUo/+lXZxw6tpzRONF7Di9fyidMuXWvanBvm4Ow+"
+    css_hash:          "sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx"
     rtlcss:            "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted-rtl.min.css"
     rtlcss_hash:       "sha384-hJxq6SSxAKmw1m05Nn88CYZPfEVrgnLSYPW4/qrFYe5kT+Z2p/mpjaaoMUyvGXtk"
     iconcss:           "https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/orangeIcons.min.css"
