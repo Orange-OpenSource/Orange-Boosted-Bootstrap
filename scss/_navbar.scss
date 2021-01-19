@@ -379,6 +379,11 @@
   // end mod
 }
 
+.navbar-nav-scroll {
+  max-height: $navbar-nav-scroll-max-height;
+  overflow-y: auto;
+}
+
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
 .navbar-expand {
@@ -508,6 +513,10 @@
           > .container#{breakpoint-infix($size, $container-max-widths)} {
             @extend %container-nesting-#{$breakpoint};
           }
+        }
+
+        .navbar-nav-scroll {
+          overflow: visible;
         }
 
         .navbar-collapse {
