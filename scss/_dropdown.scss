@@ -26,7 +26,7 @@
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y $dropdown-padding-x;
+  padding: $dropdown-padding-y $dropdown-padding-y; // Boosted mod: no padding
   margin: $dropdown-spacer 0 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
