@@ -44,7 +44,7 @@ Boosted RTL uses the Arabic version of Helvetica Neue in lieu of the PanEuropean
     <link rel="stylesheet" href="{{< param "cdn.helveticacss" >}}" integrity="{{< param "cdn.helveticacss_hash" >}}" crossorigin="anonymous">
     <!--
       Orange Icons
-      Copyright (C) 2016 - 2019 Orange SA All rights reserved
+      Copyright (C) 2016 - 2021 Orange SA All rights reserved
       See NOTICE.txt for more information.
     -->
     <link rel="stylesheet" href="{{< param "cdn.iconcss" >}}" integrity="{{< param "cdn.iconcss_hash" >}}" crossorigin="anonymous">

@@ -6,8 +6,8 @@
 
 /*!
  * Script to convert sample to rtl.
- * Copyright 2017-2019 The Boosted Authors
- * Copyright 2017-2019 Orange
+ * Copyright 2017-2021 The Boosted Authors
+ * Copyright 2017-2021 Orange
  * Licensed under MIT
  */
 
