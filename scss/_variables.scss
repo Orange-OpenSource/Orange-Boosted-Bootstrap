@@ -1029,7 +1029,7 @@ $dropdown-link-hover-color:         $white !default;
 $dropdown-link-hover-bg:            $black !default;
 
 $dropdown-link-active-color:        $component-active-color !default;
-$dropdown-link-active-bg:           $black !default;
+$dropdown-link-active-bg:           color-contrast($dropdown-link-active-color) !default;
 
 $dropdown-link-disabled-color:      $gray-500 !default;
 
