@@ -248,7 +248,7 @@ $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron": $chevron-icon,
-  "close": $cross-icon,
+  "close": $cross-icon-stroke,
   "success": $success-icon,
   "error": $danger-icon
 ) !default;
@@ -305,6 +305,9 @@ $spacers: (
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+
+$target-size: 2.75rem !default; // Boosted mod: minimum target size (44×44px)
+
 
 // Position
 //
@@ -992,7 +995,7 @@ $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
 $navbar-light-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-icon-close-bg: var(--#{$boosted-variable-prefix}close-icon) !default; // Boosted mod
+$navbar-light-toggler-icon-close-bg: $cross-icon !default; // Boosted mod
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1237,17 +1240,19 @@ $badge-border-radius:               $border-radius !default;
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:               $spacer / 2 !default;
+$modal-inner-padding:               $spacer / 2 0 !default;
 
 // Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
-$modal-footer-margin-between:       .5rem !default;
+$modal-footer-margin-between:       $spacer / 2 !default;
 
 $modal-dialog-margin:               $spacer / 2 !default;
 $modal-dialog-margin-y-sm-up:       $spacer * 1.5 !default;
+$modal-dialog-border-color:         $gray-500 !default; // Boosted mod
+$modal-dialog-border-width:         $border-width !default; // Boosted mod
 
 $modal-title-line-height:           $line-height-base !default;
 
-$modal-content-padding:             $spacer * 1.5 !default; // Boosted mod
+$modal-content-padding:             $spacer !default; // Boosted mod
 $modal-content-color:               null !default;
 $modal-content-bg:                  $white !default;
 $modal-content-border-color:        null !default;
@@ -1263,8 +1268,8 @@ $modal-header-border-color:         null !default;
 $modal-footer-border-color:         null !default;
 $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
-$modal-header-padding-y:            $modal-inner-padding !default;
-$modal-header-padding-x:            $modal-inner-padding !default;
+$modal-header-padding-y:            null !default;
+$modal-header-padding-x:            null !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-sm:                          300px !default;
@@ -1302,6 +1307,8 @@ $alert-logo-size:                   add($spacer / 2, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;
 $alert-icon-margin-y:               $spacer / 10 !default;
+$alert-min-height:                  3.75rem - ($alert-border-width * 2) !default;
+$alert-btn-close-offset:            ($alert-min-height - $target-size) / 2 !default;
 // End mod
 
 $alert-dismissible-padding-r:       $alert-padding-y * 3 !default; // 3x covers width of x plus default padding on either side
@@ -1441,13 +1448,12 @@ $spinner-border-width-lg: $border-width * 4 !default;
 
 // Close
 
-$btn-close-width:            1em !default;
+$btn-close-width:            1rem !default;
 $btn-close-height:           $btn-close-width !default;
-$btn-close-padding-x:        map-get($spacers, 1) !default;
+$btn-close-padding-x:        ($target-size - $btn-close-width) / 2 !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;
 $btn-close-color:            $black !default;
 $btn-close-bg:               var(--#{$boosted-variable-prefix}close-icon) !default;
-$btn-close-bg-stroke:        $cross-icon-stroke !default;
 $btn-close-focus-shadow:     null !default;
 $btn-close-disabled-opacity: .5 !default;
 $btn-close-white-filter:     $invert-filter !default;
@@ -1477,9 +1483,6 @@ $pre-line-height:                   1.25 !default; // Boosted mod
 //
 // Boosted mod
 //
-
-//// Minimum target size (44×44px)
-$target-size: 2.75rem !default;
 
 //// Back to top
 // scss-docs-start back-to-top

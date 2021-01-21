@@ -39,12 +39,9 @@
   // Adjust close link position
   .btn-close {
     position: absolute;
-    top: map-get($spacers, 1); // Boosted mod
-    right: map-get($spacers, 1); // Boosted mod
+    top: $alert-btn-close-offset; // Boosted mod
+    right: $alert-btn-close-offset; // Boosted mod
     z-index: $stretched-link-z-index + 1;
-    padding: $btn-close-padding-y-sm $btn-close-padding-x-sm; // Boosted mod
-    font-size: $btn-close-size-sm; // Boosted mod
-    background-image: escape-svg($btn-close-bg-stroke); // Boosted mod
   }
 }
 
