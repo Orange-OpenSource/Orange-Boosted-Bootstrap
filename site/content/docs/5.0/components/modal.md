@@ -78,6 +78,54 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
 </div>
 ```
 
+<!-- Boosted mod -->
+#### With image
+
+Modals may start with a picture. Add `.modal-img` to your `<img>` or `<svg>` tag—being `.modal-content`'s first child— and you're done!
+
+<div class="bd-example bd-example-modal">
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        {{< placeholder width="100%" height="260" class="modal-img" text="Image cap" >}}
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <img class="modal-img" src="..." alt="...">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+<!-- End mod -->
+
 ### Live demo
 
 Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
@@ -553,22 +601,22 @@ Modals have three optional sizes, available via modifier classes to be placed on
     <tr>
       <td>Small</td>
       <td><code>.modal-sm</code></td>
-      <td><code>300px</code></td>
+      <td><code>300px</code></td><!-- Boosted mod -->
     </tr>
     <tr>
       <td>Default</td>
       <td class="text-muted">None</td>
-      <td><code>500px</code></td>
+      <td><code>460px</code></td><!-- Boosted mod -->
     </tr>
     <tr>
       <td>Large</td>
       <td><code>.modal-lg</code></td>
-      <td><code>800px</code></td>
+      <td><code>700px</code></td><!-- Boosted mod -->
     </tr>
     <tr>
       <td>Extra large</td>
       <td><code>.modal-xl</code></td>
-      <td><code>1280px</code></td>
+      <td><code>940px</code></td><!-- Boosted mod -->
     </tr>
   </tbody>
 </table>

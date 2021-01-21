@@ -194,11 +194,25 @@
 }
 
 .bd-example-modal {
-  background-color: #fafafa;
+  background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity); // Boosted mod
 
   .modal {
     position: static;
     display: block;
+
+    // Boosted mod
+    &:first-child .modal-dialog {
+      margin-top: 3.125rem;
+    }
+
+    &:last-child .modal-dialog {
+      margin-bottom: 3.125rem;
+    }
+
+    .modal-dialog-scrollable .modal-content {
+      max-height: 25rem;
+    }
+    // End mod
   }
 }
 
