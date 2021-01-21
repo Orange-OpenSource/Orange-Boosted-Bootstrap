@@ -61,7 +61,11 @@
   }
 
   .modal-body {
+    padding: $modal-scrollable-inner-padding; // Boosted mod
+    margin: $modal-scrollable-inner-margin; // Boosted mod
     overflow-y: auto;
+    border: $modal-content-border-width solid $modal-content-border-color; // Boosted mod
+    border-width: $modal-content-border-width 0; // Boosted mod
   }
 }
 
@@ -70,6 +74,12 @@
   align-items: center;
   min-height: subtract(100%, $modal-dialog-margin * 2);
 }
+
+// Boosted mod
+.modal-dialog:not(.modal-dialog-scrollable) .modal-body > :last-child {
+  margin-bottom: 0;
+}
+// End mod
 
 // Actual modal
 .modal-content {
@@ -83,7 +93,7 @@
   pointer-events: auto;
   background-color: $modal-content-bg;
   background-clip: padding-box;
-  border: if($modal-content-border-color == null, null, $modal-content-border-width solid $modal-content-border-color); // Boosted mod
+  border: $modal-content-border-width solid $modal-content-border-color;
   @include border-radius($modal-content-border-radius);
   @include box-shadow($modal-content-box-shadow-xs);
 }
@@ -102,6 +112,21 @@
   &.fade { opacity: 0; }
   &.show { opacity: $modal-backdrop-opacity; }
 }
+
+
+// Boosted mod
+//// Modal image
+.modal-img {
+  margin: $modal-img-margin;
+
+  + .modal-header .btn-close {
+    position: absolute;
+    top: $modal-img-btn-close-offset;
+    right: $modal-img-btn-close-offset;
+  }
+}
+// End mod
+
 
 // Modal header
 // Top section of the modal w/ title and dismiss
@@ -142,7 +167,7 @@
   flex-shrink: 0;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding - $modal-footer-margin-between / 2;
+  padding: $modal-footer-padding; // Boosted mod
   border-top: if($modal-footer-border-color == null, null, $modal-footer-border-width solid $modal-footer-border-color); // Boosted mod
   @include border-bottom-radius($modal-content-inner-border-radius);
 
@@ -150,7 +175,7 @@
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   > * {
-    margin: $modal-footer-margin-between / 2;
+    margin: 0 $modal-footer-margin-between / 2; // Boosted mod
   }
 }
 
