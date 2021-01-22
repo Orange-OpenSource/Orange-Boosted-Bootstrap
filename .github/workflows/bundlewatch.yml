@@ -5,6 +5,12 @@ on:
       - v5-dev
       - "!dependabot/**"
   pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - labeled
+      - unlabeled
     branches:
       - v5-dev
       - "!dependabot/**"
@@ -17,16 +23,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Bail early
+        if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap' && contains(github.event.*.labels.*.name, 'skip:ci')
+        run: exit 0
+
       - name: Clone repository
         uses: actions/checkout@v2
+        if: failure()
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
+        if: failure()
 
       - run: node --version
       - run: npm --version
+        if: failure()
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -36,15 +49,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
             ${{ runner.os }}-node-v${{ env.NODE }}-
+        if: failure()
 
       - name: Install npm dependencies
         run: npm ci
+        if: failure()
 
       - name: Run dist
         run: npm run dist
+        if: failure()
 
       - name: Run bundlewatch
         run: npm run bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: "${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}"
           CI_BRANCH_BASE: v5-dev
+        if: failure()

@@ -2,14 +2,16 @@ name: CSS (node-sass)
 
 on:
   push:
-    paths:
-      - 'scss/**'
     branches:
       - v5-dev
       - "!dependabot/**"
   pull_request:
-    paths:
-      - 'scss/**'
+    types:
+      - opened
+      - edited
+      - synchronize
+      - labeled
+      - unlabeled
     branches:
       - v5-dev
       - "!dependabot/**"
@@ -22,16 +24,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Bail early
+        if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap' && contains(github.event.*.labels.*.name, 'skip:ci')
+        run: exit 0
+
       - name: Clone repository
         uses: actions/checkout@v2
+        if: failure()
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
+        if: failure()
 
       - name: Build CSS with node-sass
         run: |
           npx --package node-sass@latest node-sass --version
           npx --package node-sass@latest node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist-sass/css/
           ls -Al dist-sass/css
+        if: failure()
