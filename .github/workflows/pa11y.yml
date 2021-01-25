@@ -1,6 +1,10 @@
 name: Tests
 on:
   push:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
     branches:
       - v5-dev
       - "!dependabot/**"
@@ -21,21 +25,22 @@ env:
 jobs:
   pa11y:
     runs-on: ubuntu-latest
+    if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap'
 
     steps:
       - name: Bail early
-        if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap' && (contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:pa11y'))
+        if: github.event_name == 'pull_request' && (contains(github.event.pull_request.labels.*.name, 'skip:ci') || contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
         run: exit 0
 
       - name: Clone repository
         uses: actions/checkout@v2
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "${{ env.NODE }}"
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -45,31 +50,31 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
             ${{ runner.OS }}-node-v${{ env.NODE }}-
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Install npm dependencies
         run: npm ci
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Compile dist
         run: npm run dist
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Test docs
         run: npm run docs-build
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Run accessibility tests
         run: npm run docs-accessibility
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Generate HTML accessibility results
         run: npm run docs-pa11y-html
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
 
       - name: Upload accessibility results
         uses: actions/upload-artifact@v2
-        if: failure()
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
         with:
           name: pa11y-ci-results
           path: .pa11y/
