@@ -226,7 +226,20 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 
 ### Radio toggle buttons
 
-{{< example >}}
+<div class="bd-example d-flex">
+  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+  <label class="btn btn-secondary me-0" for="option1">Checked</label>
+
+  <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+  <label class="btn btn-secondary mx-0" for="option2">Radio</label>
+
+  <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+  <label class="btn btn-secondary mx-0" for="option3">Disabled</label>
+
+  <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+  <label class="btn btn-secondary ms-0" for="option4">Radio</label>
+</div>
+{{< example show_preview="false" >}}
 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
 <label class="btn btn-secondary" for="option1">Checked</label>
 
