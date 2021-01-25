@@ -163,17 +163,17 @@
 
 @include tac("Allow", true) {
   padding-left: $spacer * 1.5;
-  background: $success escape-svg($form-switch-checked-bg-image) no-repeat $spacer / 2 subtract(50%, 1px) / 1em;
+  background: $success $form-switch-checked-bg-image no-repeat $spacer / 2 subtract(50%, 1px) / 1em;
 
   &:hover,
   &:focus {
-    background-image: escape-svg($form-switch-disabled-bg-image);
+    filter: $invert-filter;
   }
 }
 
 @include tac("Deny", true) {
   padding-left: $spacer * 1.5;
-  background: $danger escape-svg($form-switch-bg-image) no-repeat $spacer / 2 subtract(50%, 1px) / 1em;
+  background: $danger $form-switch-bg-image no-repeat $spacer / 2 subtract(50%, 1px) / 1em;
 }
 
 .catToggleBtn,

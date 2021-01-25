@@ -241,6 +241,8 @@ $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $chevron-icon-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$gray-700}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
+$burger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $success-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$success}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm28 29.4c3.3 0 6 2.6 6 5.9a5.9 5.9 0 01-1.3 3.7L57.7 86a5.8 5.8 0 01-9.1 0L29.8 62.5c-.8-1-1.2-2.3-1.2-3.7a5.9 5.9 0 011.7-4.1l2.3-2.4a5.8 5.8 0 014.2-1.7 5.8 5.8 0 013.8 1.4L52 64.7 86.6 31a5.8 5.8 0 014-1.6z'/></svg>") !default;
 $info-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 125 125'><path fill='#{$info}' d='M62.5 0a62.5 62.5 0 100 125 62.5 62.5 0 000-125zm0 14.7a11 11 0 110 22 11 11 0 010-22zM47.8 44.1h25.7v46.2c0 4.7 1.3 6.5 1.8 7.2.8 1 2.3 1.5 4.8 1.6h.8v3.8H47.8v-3.7h.8c2.3-.1 4-.8 5-2 .4-.4 1-2 1-7V57c0-4.8-.6-6.6-1.2-7.3-.8-1-2.4-1.5-4.9-1.6h-.7V44z'/></svg>") !default;
 $warning-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$warning}' d='M15 0a15 15 0 100 30 15 15 0 000-30zm.15 5.39h.01c1.12 0 2 .95 1.92 2.06l-.63 10.43c0 .7-.58.97-1.29.97-.72 0-1.28-.27-1.28-.97l-.63-10.46c-.06-1.09.8-2.01 1.9-2.03zm-.3 15.33c.11 0 .21 0 .31.02 2.19.35 2.19 3.5 0 3.84-2.77.44-3.1-3.86-.3-3.86z'/></svg>") !default;
@@ -249,6 +251,7 @@ $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $svg-as-custom-props: (
   "chevron": $chevron-icon,
   "close": $cross-icon-stroke,
+  "check": $check-icon,
   "success": $success-icon,
   "error": $danger-icon
 ) !default;
@@ -784,10 +787,9 @@ $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$form-check-input-checked-color}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
-$form-check-input-disabled-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{color-contrast($form-check-input-checked-color)}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default; // Boosted mod
+$form-check-input-checked-bg-image:       var(--#{$boosted-variable-prefix}check-icon) !default;
+$form-check-input-disabled-color:         $gray-900 !default; // Boosted mod
 $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
-$form-check-radio-disabled-bg-image:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{color-contrast($form-check-input-checked-color)}'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          color-contrast($component-active-color) !default;
 $form-check-input-indeterminate-bg-color:       $component-active-color !default;
@@ -801,7 +803,7 @@ $form-check-btn-check-disabled-opacity:    null !default;
 $form-switch-width:               $spacer * 3 !default;
 $form-switch-padding-start:       $form-switch-width + .5rem !default;
 // Boosted mod
-$form-switch-bg-image:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$white}' stroke='#{$white}' stroke-width='5' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
+$form-switch-bg-image:            var(--#{$boosted-variable-prefix}close-icon) !default;
 $form-switch-bg-position:         right .5rem top 50% !default;
 $form-switch-bg-size:             .75rem !default;
 $form-switch-bg-square-size:      add(1rem, $spacer / 2) !default;
@@ -809,7 +811,6 @@ $form-switch-bg-square-size:      add(1rem, $spacer / 2) !default;
 $form-switch-border-radius:       null !default;
 
 $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default;
-$form-switch-disabled-bg-image:   $form-check-input-disabled-bg-image !default; // Boosted mod
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default;
 $form-switch-checked-bg-position: $border-width * 3 50% !default;
 
@@ -986,16 +987,12 @@ $navbar-dark-color:                  $white !default;
 $navbar-dark-hover-color:            $primary !default;
 $navbar-dark-active-color:           $primary !default;
 $navbar-dark-disabled-color:         $gray-400 !default;
-$navbar-dark-toggler-icon-bg:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-dark-toggler-icon-close-bg:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$navbar-dark-color}'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
 $navbar-dark-toggler-border-color:   transparent !default;
 
 $navbar-light-color:                 $black !default;
 $navbar-light-hover-color:           $accessible-orange !default;
 $navbar-light-active-color:          $accessible-orange !default;
 $navbar-light-disabled-color:        $gray-500 !default;
-$navbar-light-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-icon-close-bg: $cross-icon !default; // Boosted mod
 $navbar-light-toggler-border-color:  null !default;
 
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1004,8 +1001,8 @@ $navbar-dark-brand-color:           inherit !default;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 // Boosted mod
-$navbar-toggler-icon-hover-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; // Boosted mod
-$navbar-toggler-icon-close-hover-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path fill='#{$primary}' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default; // Boosted mod
+$navbar-toggler-icon-bg:       $burger-icon !default;
+$navbar-toggler-icon-close-bg: $cross-icon !default;
 // End mod
 
 // Dropdowns
