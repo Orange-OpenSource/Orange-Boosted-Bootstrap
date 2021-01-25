@@ -5,7 +5,7 @@
   background-color: rgba($white, .95);
 
   [aria-current] { // Boosted mod
-    background-image: escape-svg($dropdown-active-icon);
+    background-image: $dropdown-active-icon;
     background-repeat: no-repeat;
     background-position: right $dropdown-item-padding-x center;
     background-size: .75rem .75rem;
