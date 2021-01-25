@@ -964,7 +964,7 @@ $navbar-brand-logo-minimized-height:   $spacer * 1.5 !default;
 //$navbar-supra-padding-x:               $spacer / 4 * 1.5 !default;
 $navbar-transition-duration:           $transition-duration !default;
 $navbar-transition-timing-function:    $transition-timing !default;
-$navbar-transition:                    padding $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
+$navbar-transition:                    padding-top $navbar-transition-duration $navbar-transition-timing-function, padding-bottom $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-transition:              margin $navbar-transition-duration $navbar-transition-timing-function, $transition-focus !default;
 $navbar-brand-logo-transition:         width $navbar-transition-duration $navbar-transition-timing-function, height $navbar-transition-duration $navbar-transition-timing-function !default;
 $navbar-active-transition:             bottom $navbar-transition-duration $navbar-transition-timing-function !default;
