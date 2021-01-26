@@ -2,9 +2,20 @@ name: JS Tests
 
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
+    paths:
+      - 'js/**'
+    branches:
+      - v4-dev
+      - "!dependabot/**"
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+      - unlabeled
+    branches:
+      - v4-dev
+      - "!dependabot/**"
 
 env:
   FORCE_COLOR: 2
@@ -20,13 +31,19 @@ jobs:
         node: [10, 12, 14]
 
     steps:
+      - name: Bail early
+        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
+        run: exit 0
+
       - name: Clone repository
         uses: actions/checkout@v2
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -36,15 +53,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
             ${{ runner.os }}-node-v${{ matrix.node }}-
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Install npm dependencies
         run: npm ci
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run dist
         run: npm run js
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run JS tests
         run: npm run js-test
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run Coveralls
         uses: coverallsapp/github-action@master
@@ -52,3 +73,4 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           path-to-lcov: "./js/coverage/lcov.info"
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
