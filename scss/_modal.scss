@@ -70,9 +70,19 @@
   }
 
   .modal-body {
+    padding: $modal-inner-padding-x; // Boosted mod
+    margin: $modal-inner-padding-x 0 $modal-inner-padding-y; // Boosted mod
     overflow-y: auto;
+    border: $modal-content-border-width solid $modal-content-border-color; // Boosted mod
+    border-width: $modal-content-border-width 0; // Boosted mod
   }
 }
+
+// Boosted mod
+.modal-dialog:not(.modal-dialog-scrollable) .modal-body > :last-child {
+  margin-bottom: 0;
+}
+// End mod
 
 .modal-dialog-centered {
   display: flex;
@@ -109,13 +119,13 @@
   display: flex;
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
-  padding: $modal-inner-margin; // Boosted mod
+  padding: $modal-content-padding-y 0; // Boosted mod
   // counteract the pointer-events: none; in the .modal-dialog
   color: $modal-content-color;
   pointer-events: auto;
   background-color: $modal-content-bg;
   background-clip: padding-box;
-  // Boosted mod: no border
+  border: $modal-content-border-width solid $modal-content-border-color;
   @include border-radius($modal-content-border-radius);
   @include box-shadow($modal-content-box-shadow-xs);
   // Remove focus outline from opened modal
@@ -144,13 +154,12 @@
   align-items: flex-start; // so the close btn always stays on the upper right corner
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
-  margin-bottom: $modal-inner-margin; // Boosted mod
   // Boosted mod: no border
   @include border-top-radius($modal-content-inner-border-radius);
 
   .close {
     // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-x) auto;
+    margin: (-$modal-header-padding-y) 0 (-$modal-header-padding-x) auto;
   }
 }
 
@@ -167,7 +176,7 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  // Boosted mod: no padding
+  padding: $modal-inner-padding;
 }
 
 // Footer (for actions)
@@ -176,8 +185,7 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  // Boosted mod: no padding
-  margin-top: $modal-inner-margin; // Boosted mod
+  padding: $modal-inner-padding-y  subtract($modal-inner-padding-x, $modal-footer-margin-between / 2) 0; // Boosted mod
   // Boosted mod: no border
   @include border-bottom-radius($modal-content-inner-border-radius);
 
@@ -185,13 +193,7 @@
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   > * {
-    margin: 0 $modal-footer-margin-between;
-
-    // Boosted mod
-    &:last-child {
-      margin-right: 0;
-    }
-    // End mod
+    margin: 0 $modal-footer-margin-between / 2;
   }
 }
 
@@ -236,4 +238,13 @@
   .modal-sm { max-width: $modal-sm; }
 }
 
-// Boosted mod: only one size above sm
+@include media-breakpoint-up(lg) {
+  .modal-lg,
+  .modal-xl {
+    max-width: $modal-lg;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .modal-xl { max-width: $modal-xl; }
+}

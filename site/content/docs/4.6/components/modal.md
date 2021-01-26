@@ -646,7 +646,17 @@ Modals have one optional size, available via modifier classes to be placed on a 
     <tr>
       <td>Default</td>
       <td class="text-muted">None</td>
+      <td><code>460px</code></td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><code>.modal-lg</code></td>
       <td><code>700px</code></td>
+    </tr>
+    <tr>
+      <td>Extra large</td>
+      <td><code>.modal-xl</code></td>
+      <td><code>940px</code></td>
     </tr>
   </tbody>
 </table>
