@@ -70,17 +70,27 @@ Boosted also handle color variation on hover (lighten or darken) **depending on 
 <!-- Boosted mod -->
 Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken or lighten on hover, just like the text classes.
 
+<!-- Boosted mod: inconsistent color naming -->
 {{< example >}}
-{{< colors.inline >}}
 <!-- Boosted mod: no need for .text-* utilities -->
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="p-3 mb-2 bg-{{ .name }}">.bg-{{ .name }}</div>
-{{- end -}}
-{{< /colors.inline >}}
-<div class="p-3 mb-2 bg-purple">.bg-purple</div>
+<div class="p-3 mb-2 bg-primary">.bg-primary</div>
+<div class="p-3 mb-2 bg-secondary">.bg-secondary</div>
+<div class="p-3 mb-2 bg-supporting-green">.bg-supporting-green</div>
+<div class="p-3 mb-2 bg-supporting-blue">.bg-supporting-blue</div>
+<div class="p-3 mb-2 bg-supporting-yellow">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 bg-supporting-pink">.bg-supporting-pink</div>
+<div class="p-3 mb-2 bg-supporting-purple">.bg-supporting-purple</div>
+<div class="p-3 mb-2 bg-light">.bg-light</div>
 <div class="p-3 mb-2 bg-white">.bg-white</div>
 <div class="p-3 mb-2 bg-transparent">.bg-transparent</div>
 <!-- end mod -->
 {{< /example >}}
+
+{{< callout >}}
+### Color naming
+
+Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/about/brand#color-palette" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
+Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
+{{< /callout >}}
 
 <!-- Boosted mod: no gradient -->
