@@ -39,15 +39,25 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 
 Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities **do set `color`** to ensure contrasts.
 
+<!-- Boosted mod: inconsistent background color & naming, showing only supporting color naming -->
 {{< example >}}
-{{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<div class="p-3 mb-2 fw-bold bg-{{ .name }}">.bg-{{ .name }}</div>
-{{- end -}}
-{{< /colors.inline >}}
-<div class="p-3 mb-2 fw-bold bg-pink">.bg-pink</div>
+<div class="p-3 mb-2 fw-bold bg-primary">.bg-primary</div>
+<div class="p-3 mb-2 fw-bold bg-secondary">.bg-secondary or .bg-dark</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-green">.bg-supporting-green</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-purple">.bg-supporting-purple</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-yellow">.bg-supporting-yellow</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-blue">.bg-supporting-blue</div>
+<div class="p-3 mb-2 fw-bold bg-supporting-pink">.bg-supporting-pink</div>
+<div class="p-3 mb-2 fw-bold bg-light">.bg-light</div>
 <div class="p-3 mb-2 fw-bold bg-white">.bg-white or .bg-body</div>
 <div class="p-3 mb-2 fw-bold bg-transparent">.bg-transparent</div>
 {{< /example >}}
+
+{{< callout >}}
+### Color naming
+
+Since [Orange brand distinguishes functional colors from supporting colors]({{< docsref "/guidelines/colors" >}}) and Bootstrap doesn't, naming can be somewhat inconsistent.
+Bootstrap's `background-color` utilities are supported in Boosted, but will result in our core `.bg-supporting-*` utilities—making `.bg-danger` inconsistent with `.btn-danger` color, for example.
+{{< /callout >}}
 
 <!-- Boosted mod: no background gradient -->
