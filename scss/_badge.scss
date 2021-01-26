@@ -51,16 +51,6 @@
 // Contextual variations (linked badges get darker on :hover).
 
 @each $color, $value in $theme-colors {
-  // Boosted mod: disallow functionnal colors for background
-  @if ($value != $success) and ($value != $danger) and ($value != $info) and ($value != $warning) {
-    .badge-#{$color} {
-      @include badge-variant($value);
-    }
-  }
-}
-
-// Boosted mod: supporting colour as background
-@each $color, $value in $supporting-colors {
   .badge-#{$color} {
     @include badge-variant($value);
   }
