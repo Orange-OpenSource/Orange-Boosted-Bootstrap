@@ -158,8 +158,10 @@
   @include border-top-radius($modal-content-inner-border-radius);
 
   .close {
+    position: relative; // Boosted mod
+    z-index: 2; // Boosted mod
     // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) 0 (-$modal-header-padding-x) auto;
+    margin: ($close-icon-size / -4) ($close-icon-size / -4) ($close-icon-size / -4) auto; // Boosted mod
   }
 }
 

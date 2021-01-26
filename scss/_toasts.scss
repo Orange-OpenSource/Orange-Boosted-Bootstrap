@@ -41,14 +41,9 @@
   @include border-top-radius(subtract($toast-border-radius, $toast-border-width));
 
   .close {
-    background-size: 50%;
+    width: map-get($spacers, 4);
+    height: map-get($spacers, 4);
   }
-
-  // Boosted mod
-  .bg-dark & .close {
-    background-image: escape-svg($close-icon);
-  }
-  // end mod
 }
 
 .toast-body {

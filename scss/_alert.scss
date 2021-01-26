@@ -94,23 +94,8 @@
     margin: -.5rem -.75rem -.5rem auto;
     color: inherit;
     background-size: $alert-close-icon-size;
-
-    &,
-    &:hover,
-    &:focus {
-      background-image: escape-svg($close-icon-stroke);
-    }
-
-    .bg-dark &,
-    .navbar-dark & {
-      &,
-      &:hover,
-      &:focus {
-        background-image: escape-svg($close-icon-stroke-dark);
-      }
-    }
   }
-  // end mod
+  // End mod
 }
 
 // Boosted mod: small alerts
