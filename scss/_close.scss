@@ -1,24 +1,19 @@
 .close {
   float: right;
   // Boosted mod
-  width: map-get($spacers, 4);
-  height: map-get($spacers, 4);
+  width: $close-icon-size;
+  height: $close-icon-size;
   padding: 0;
-  margin-right: map-get($spacers, 2);
-  // @include font-size($close-font-size);
-  // font-weight: $close-font-weight;
-  // line-height: 1;
-  // color: $close-color;
-  // text-shadow: $close-text-shadow;
+  margin-right: $close-icon-offset;
   @include transition($transition-focus);
-  background: escape-svg($close-icon) no-repeat 50% / #{map-get($spacers, 4)};
+  background: escape-svg($close-icon-stroke) no-repeat 50% / 1rem;
   border: 0;
-  outline-offset: map-get($spacers, 2);
+  outline-offset: $close-icon-offset;
   opacity: 1;
 
   .bg-dark &,
   .navbar-dark & {
-    background-image: escape-svg($close-icon-dark);
+    background-image: escape-svg($close-icon-stroke-dark);
 
     &:hover,
     &:focus {
@@ -39,7 +34,7 @@
   &:hover {
     @include transition(none);
   }
-  // end mod
+  // End mod
 }
 
 // Additional properties for button version
@@ -48,11 +43,6 @@
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
 // Boosted mod: included above ↑
-// button.close {
-//   padding: 0;
-//   background-color: transparent;
-//   border: 0;
-// }
 
 // Future-proof disabling of clicks on `<a>` elements
 
