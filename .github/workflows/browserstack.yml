@@ -1,6 +1,15 @@
 name: BrowserStack
 on:
   push:
+    paths:
+      - 'js/**'
+    branches:
+      - v4-dev
+      - "!dependabot/**"
+  pull_request:
+    branches:
+      - v4-dev
+      - "!dependabot/**"
 env:
   FORCE_COLOR: 2
   NODE: 14
@@ -12,13 +21,19 @@ jobs:
     timeout-minutes: 30
 
     steps:
+      - name: Bail early
+        if: github.event_name == 'pull_request' && (contains(github.event.pull_request.labels.*.name, 'skip:ci') || contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
+        run: exit 0
+
       - name: Clone repository
         uses: actions/checkout@v2
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -28,15 +43,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
             ${{ runner.os }}-node-v${{ env.NODE }}-
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Install npm dependencies
         run: npm ci
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Run dist
         run: npm run dist
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))
 
       - name: Run BrowserStack tests
         run: npm run js-test-cloud
         env:
           BROWSER_STACK_ACCESS_KEY: "${{ secrets.BROWSER_STACK_ACCESS_KEY }}"
           BROWSER_STACK_USERNAME: "${{ secrets.BROWSER_STACK_USERNAME }}"
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:browserstack'))

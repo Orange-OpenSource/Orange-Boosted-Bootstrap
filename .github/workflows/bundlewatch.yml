@@ -2,9 +2,21 @@ name: Bundlewatch
 
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
+    paths:
+      - 'js/**'
+      - 'scss/**'
+    branches:
+      - v4-dev
+      - "!dependabot/**"
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+      - unlabeled
+    branches:
+      - v4-dev
+      - "!dependabot/**"
 
 env:
   FORCE_COLOR: 2
@@ -15,13 +27,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Bail early
+        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
+        run: exit 0
+
       - name: Clone repository
         uses: actions/checkout@v2
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -31,15 +49,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
             ${{ runner.os }}-node-v${{ env.NODE }}-
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Install npm dependencies
         run: npm ci
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run dist
         run: npm run dist
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Run bundlewatch
         run: npm run bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: "${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}"
           CI_BRANCH_BASE: v4-dev
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))

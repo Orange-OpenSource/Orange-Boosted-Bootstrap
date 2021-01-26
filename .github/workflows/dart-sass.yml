@@ -2,9 +2,20 @@ name: CSS (Dart Sass)
 
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
+    paths:
+      - "scss/**"
+    branches:
+      - v4-dev
+      - "!dependabot/**"
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+      - unlabeled
+    branches:
+      - v4-dev
+      - "!dependabot/**"
 
 env:
   FORCE_COLOR: 2
@@ -15,16 +26,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Bail early
+        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'skip:ci')
+        run: exit 0
+
       - name: Clone repository
         uses: actions/checkout@v2
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
 
       - name: Build CSS with Dart Sass
         run: |
           npx --package sass@latest sass --version
           npx --package sass@latest sass --style expanded --source-map --embed-sources --no-error-css scss/:dist-sass/css/
           ls -Al dist-sass/css
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci'))
