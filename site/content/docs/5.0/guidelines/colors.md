@@ -55,29 +55,6 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 {{ end -}}
 {{< /palette.inline >}}
 
-## OBS Gray
-
-{{< palette.inline >}}
-{{- range where $.Site.Data.palette "category" "OBS Gray" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
-  {{- range $color := .colors }}
-    <figure aria-label="{{ $color.name }}">
-      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
-        <rect fill="{{ $color.hex }}" width="100" height="100"/>
-      </svg>
-      <figcaption class="py-1">
-        <strong>{{ $color.name }}</strong>
-        <br/>
-        <code>{{ $color.hex }}</code>
-        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
-        <var>{{- $color.variable -}}</var>
-      </figcaption>
-    </figure>
-  {{ end -}}
-</div>
-{{ end -}}
-{{< /palette.inline >}}
-
 ## Functional colors
 
 {{< palette.inline >}}
@@ -105,6 +82,29 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
+  {{- range $color := .colors }}
+    <figure aria-label="{{ $color.name }}">
+      <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
+        <rect fill="{{ $color.hex }}" width="100" height="100"/>
+      </svg>
+      <figcaption class="py-1">
+        <strong>{{ $color.name }}</strong>
+        <br/>
+        <code>{{ $color.hex }}</code>
+        <hr class="my-2 bg-transparent border-top" style="border-color:{{ $color.hex }} !important"/>
+        <var>{{- $color.variable -}}</var>
+      </figcaption>
+    </figure>
+  {{ end -}}
+</div>
+{{ end -}}
+{{< /palette.inline >}}
+
+## OBS Gray
+
+{{< palette.inline >}}
+{{- range where $.Site.Data.palette "category" "OBS Gray" }}
 <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
