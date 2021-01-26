@@ -470,10 +470,14 @@ $utilities: map-merge(
       values: map-merge(
         $background-colors,
         (
-          "pink": $pink,
           "body": $body-bg,
           "white": $white,
-          "transparent": transparent
+          "transparent": transparent,
+          "supporting-green": $supporting-green,
+          "supporting-blue": $supporting-blue,
+          "supporting-yellow": $supporting-yellow,
+          "supporting-pink": $supporting-pink,
+          "supporting-purple": $supporting-purple
         )
       )
     ),
