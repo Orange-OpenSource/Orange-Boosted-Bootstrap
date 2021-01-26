@@ -22,7 +22,6 @@ jobs:
   run:
     name: Node ${{ matrix.node }}
     runs-on: ubuntu-latest
-    if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap'
 
     strategy:
       fail-fast: false

@@ -23,7 +23,6 @@ env:
 jobs:
   css:
     runs-on: ubuntu-latest
-    if: github.repository == 'Orange-OpenSource/Orange-Boosted-Bootstrap'
 
     steps:
       - name: Bail early
