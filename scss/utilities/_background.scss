@@ -11,6 +11,10 @@
 @each $color, $value in $supporting-colors {
   @include bg-variant(".bg-#{$color}", $value);
 }
+
+@each $name, $value in $supporting-colors-names {
+  @include bg-variant(".bg-supporting-#{$name}", $value);
+}
 // end mod
 
 @if $enable-gradients {
