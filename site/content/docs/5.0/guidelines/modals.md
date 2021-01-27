@@ -17,7 +17,7 @@ toc: true
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
           <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore.</p>
@@ -34,7 +34,7 @@ toc: true
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
           <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore.</p>
@@ -59,7 +59,7 @@ toc: true
         {{< placeholder width="100%" height="260" class="modal-img" text="Image cap" >}}
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body">
           <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore.</p>
@@ -83,7 +83,7 @@ toc: true
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
         </div>
         <div class="modal-body" lang="zxx">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

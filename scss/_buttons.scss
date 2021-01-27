@@ -29,7 +29,7 @@
   // Boosted mod: custom styles for .btn-check
   &:focus {
     // Boosted mod
-    outline-offset: $btn-border-width;
+    outline-offset: $outline-width;
 
     &[data-focus-visible-added] {
       box-shadow: $btn-focus-box-shadow;

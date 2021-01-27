@@ -1320,8 +1320,8 @@ $alert-logo-size:                   add($spacer / 2, 1rem) !default;
 $alert-logo-size-sm:                add(1rem, 1px) !default;
 $alert-icon-size:                   3rem !default;
 $alert-icon-margin-y:               $spacer / 10 !default;
-$alert-min-height:                  3.75rem - ($alert-border-width * 2) !default;
-$alert-btn-close-offset:            ($alert-min-height - $target-size) / 2 !default;
+$alert-btn-close-offset:            .5rem !default;
+$alert-btn-close-offset-sm:         $spacer / 4 !default;
 // End mod
 
 $alert-dismissible-padding-r:       $alert-padding-y * 3 !default; // 3x covers width of x plus default padding on either side
@@ -1461,23 +1461,16 @@ $spinner-border-width-lg: $border-width * 4 !default;
 
 // Close
 
-$btn-close-width:            1rem !default;
+$btn-close-width:            $spacer !default;
 $btn-close-height:           $btn-close-width !default;
-$btn-close-padding-x:        ($target-size - $btn-close-width) / 2 !default;
-$btn-close-padding-y:        $btn-close-padding-x !default;
+$btn-close-padding:          var(--#{$boosted-variable-prefix}icon-spacing, #{$btn-icon-padding-x}) !default;
 $btn-close-color:            $black !default;
 $btn-close-bg:               var(--#{$boosted-variable-prefix}close-icon) !default;
-$btn-close-focus-shadow:     null !default;
-$btn-close-disabled-opacity: .5 !default;
-$btn-close-white-filter:     $invert-filter !default;
+$btn-close-focus-shadow:     $btn-focus-box-shadow !default;
 
 // Boosted mod
-$btn-close-size:             $h2-font-size !default;
-$btn-close-size-sm:          $small-font-size !default;
-$btn-close-padding-x-sm:     1rem !default;
-$btn-close-padding-y-sm:     $btn-close-padding-x-sm !default;
+$btn-close-padding-sm:       subtract($btn-icon-padding-x, $spacer / 4) !default;
 // End mod
-
 
 // Code
 
