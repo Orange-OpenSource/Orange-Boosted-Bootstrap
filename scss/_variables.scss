@@ -704,6 +704,10 @@ $btn-border-radius-lg:        $border-radius-lg !default;
 
 $btn-transition:              $transition-focus !default;
 
+// Boosted: icon button
+$btn-icon-padding-x:          subtract($spacer / 2, $border-width) !default;
+$btn-icon-padding-x-sm:       $spacer / 4 !default;
+$btn-icon-padding-x-lg:       add($spacer / 2, $border-width * 1.5) !default;
 
 // Forms
 
