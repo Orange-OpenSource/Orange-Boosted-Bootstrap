@@ -8,27 +8,27 @@ toc: true
 
 ## Example
 
-Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `background-image`. **Be sure to include text for screen readers**, as we've done with `aria-label`.
+Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `mask-image`. **Be sure to include text for screen readers**, as we've done with `<span class="visually-hidden">`.
 
 {{< example >}}
-<button type="button" class="btn-close" aria-label="Close"></button>
+<button type="button" class="btn-close"><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## Disabled state
 
-Disabled close buttons change their `opacity`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
+Disabled close buttons change their `color`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
 
 {{< example >}}
-<button type="button" class="btn-close" disabled aria-label="Close"></button>
+<button type="button" class="btn-close" disabled><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 ## White variant
 
-Change the default `.btn-close` to be white with the `.btn-close-white` class. This class uses the `filter` property to invert the `background-image`.
+Change the default `.btn-close` to be white with the `.btn-close-white` class.
 
 {{< example class="bg-dark" >}}
-<button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-<button type="button" class="btn-close btn-close-white" disabled aria-label="Close"></button>
+<button type="button" class="btn-close btn-close-white"><span class="visually-hidden">Close</span></button>
+<button type="button" class="btn-close btn-close-white" disabled><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
 

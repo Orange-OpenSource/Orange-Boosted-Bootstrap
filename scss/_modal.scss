@@ -140,7 +140,8 @@
   @include border-top-radius($modal-content-inner-border-radius);
 
   .btn-close {
-    margin: ($btn-close-padding-y * -1) ($btn-close-padding-x * -1) ($btn-close-padding-y * -1) auto; // Boosted mod
+    // Boosted mod: using custom properties for padding
+    margin: calc(#{$btn-close-padding-y} * -1) calc(#{$btn-close-padding-x} * -1) calc(#{$btn-close-padding-y} * -1) auto; // stylelint-disable-line function-disallowed-list
   }
 }
 

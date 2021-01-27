@@ -89,7 +89,7 @@ You can see this in action with a live demo:
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
   <p>Warning notification text goes here.</p>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
 </div>
 {{< /example >}}
 
@@ -113,7 +113,7 @@ alertList.forEach(function (alert) {
 Or with `data` attributes on a button **within the alert**, as demonstrated above:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<button type="button" class="btn-close" data-bs-dismiss="alert"><span class="visually-hidden">Close</span></button>
 ```
 
 Note that closing an alert will remove it from the DOM.

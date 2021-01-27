@@ -115,9 +115,9 @@
   }
 
   .btn-close {
-    top: $btn-close-padding-y-sm / 2;
-    right: $btn-close-padding-x-sm / 2;
-    padding: $btn-close-padding-y $btn-close-padding-x;
+    --#{$boosted-variable-prefix}icon-spacing: #{$btn-close-padding-x-sm};
+    top: $alert-btn-close-offset-sm;
+    right: -$alert-btn-close-offset-sm;
   }
 }
 // End mod

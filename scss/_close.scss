@@ -7,13 +7,23 @@
   box-sizing: content-box;
   width: $btn-close-width;
   height: $btn-close-height;
-  padding: $btn-close-padding-y $btn-close-padding-x;
-  font-size: $btn-close-size; // Boosted mod
+  padding: $btn-close-padding;
   color: $btn-close-color;
-  background: transparent $btn-close-bg center / $btn-close-width auto no-repeat; // include transparent for button elements // Boosted mod
-  border: 0; // for button elements
-  outline-offset: map-get($spacers, 2);
+  background-color: transparent; // include transparent for button elements
+  border: $btn-border-width solid transparent; // Boosted mod
+  outline-offset: map-get($spacers, 2); // Boosted mod
   @include border-radius();
+
+  // Boosted mod: using mask instead of background
+  &::before {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    content: "";
+    background-color: currentColor;
+    mask: $btn-close-bg center / 1rem auto no-repeat;
+  }
+  // End mod
 
   // Override <a>'s hover style
   &:hover {
@@ -21,27 +31,51 @@
     text-decoration: none;
   }
 
-  // Boosted mod
+  // Boosted mod: matching .btn-no-outline
   &:hover,
-  &:focus {
-    outline: $border-width solid $gray-500;
-    outline-offset: -#{$border-width};
-    box-shadow: $btn-close-focus-shadow;
+  &:focus,
+  &:active {
+    border-color: $gray-500;
   }
 
   &:focus {
-    @include transition($transition-focus); // Boosted mod
+    outline-offset: $outline-width;
+    @include transition($transition-focus);
+
+    &[data-focus-visible-added] {
+      box-shadow: $btn-close-focus-shadow;
+    }
+  }
+
+  &:active {
+    color: $primary;
   }
   // End mod
 
   &:disabled,
   &.disabled {
+    color: $gray-500; // Boosted mod
     pointer-events: none;
     user-select: none;
-    opacity: $btn-close-disabled-opacity;
   }
 }
 
+// Boosted mod: changing color instead of using filter
 .btn-close-white {
-  filter: $btn-close-white-filter;
+  &,
+  &:hover:not(:active) {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $gray-700;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $gray-700;
+  }
 }
+// End mod
