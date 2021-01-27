@@ -76,6 +76,10 @@ Boosted's `package.json` contains some additional metadata under the following k
 - `sass` - path to Boosted's main [Sass](https://sass-lang.com/) source file
 - `style` - path to Boosted's non-minified CSS that's been precompiled using the default settings (no customization)
 
+{{< callout info >}}
+{{< partial "callout-info-npm-starter.md" >}}
+{{< /callout >}}
+
 ### yarn
 
 Install Boosted in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/boosted):
