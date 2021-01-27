@@ -32,7 +32,7 @@ toc: true
 
 [Documentation]({{< docsref "/components/buttons" >}}#examples)
 
-<div class="row row-cols-3 row-cols-lg-6 gy-3 mt-4">
+<div class="row row-cols-3 row-cols-lg-6 gy-3 mt-4 mb-5">
   <div class="col-12 col-lg-2"></div>
   <div class="col">{{< anchor web-btn-sol-001 >}}</div>
   <div class="col">{{< anchor web-btn-sfl-001 >}}</div>
@@ -95,17 +95,224 @@ toc: true
   </div>
 </div>
 
-## Icon buttons
+### With icon
 
-{{< callout info >}}
-This feature will be delivered with [#521]({{< param repo >}}/issues/521).
-{{< /callout >}}
+[Documentation]({{< docsref "/components/buttons" >}}#with-icon)
+
+<div class="row row-cols-3 row-cols-lg-6 gy-3 mt-4 mb-5">
+  <div class="col-12 col-lg-2"></div>
+  <div class="col">{{< anchor web-btn-sol-002 >}}</div>
+  <div class="col">{{< anchor web-btn-sfl-002 >}}</div>
+  <div class="col">{{< anchor web-btn-imp-002 >}}</div>
+  <div class="col">{{< anchor web-btn-pos-002 >}}</div>
+  <div class="col">{{< anchor web-btn-neg-002 >}}</div>
+  <div class="col-12 col-lg-2">
+    <h3 class="h6">Default</h3>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-info">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Buy
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-success">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
+      </svg>
+      Save
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-danger">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+      </svg>
+      Delete
+    </button>
+  </div>
+  <div class="col-12 col-lg-2">
+    <h3 class="h6">Pressed</h3>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary active">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-info active">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary active">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Buy
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-success active">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
+      </svg>
+      Save
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-danger active">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+      </svg>
+      Delete
+    </button>
+  </div>
+  <div class="col-12 col-lg-2">
+    <h3 class="h6">Disabled</h3>
+  </div>
+  <div class="col">
+    <button type="button" disabled class="btn btn-secondary">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" disabled class="btn btn-info">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
+      </svg>
+      Settings
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" disabled class="btn btn-primary">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+      </svg>
+      Buy
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" disabled class="btn btn-success">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
+      </svg>
+      Save
+    </button>
+  </div>
+  <div class="col">
+    <button type="button" disabled class="btn btn-danger">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+        <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+      </svg>
+      Delete
+    </button>
+  </div>
+</div>
+
+### Icon buttons
+
+[Documentation]({{< docsref "/components/buttons" >}}#icon-only)
+
+<div class="row row-cols-2 gy-3 mt-4 mb-5">
+  <div class="col">
+    <h4 class="h5">Icon button —&nbsp;{{< anchor web-btn-ico-001 >}}</h4>
+    <div class="row row-cols-3 gy-3">
+      <div>
+        <h5 class="h6">Default</h5>
+        <button type="button" class="btn btn-icon btn-no-outline">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+          </svg>
+          <span class="visually-hidden">Secondary</span>
+        </button>
+      </div>
+      <div>
+        <h5 class="h6">Pressed</h5>
+        <button type="button" class="btn btn-icon btn-no-outline active">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+          </svg>
+          <span class="visually-hidden">Secondary</span>
+        </button>
+      </div>
+      <div>
+        <h5 class="h6">Disabled</h5>
+        <button type="button" class="btn btn-icon btn-no-outline" disabled>
+          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+          </svg>
+          <span class="visually-hidden">Secondary</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <h4 class="h5">Icon button outlined —&nbsp;{{< anchor web-btn-ico-002 >}}</h4>
+    <div class="row row-cols-3 gy-3">
+      <div>
+        <h5 class="h6">Default</h5>
+        <button type="button" class="btn btn-icon btn-secondary">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+          </svg>
+          <span class="visually-hidden">Secondary</span>
+        </button>
+      </div>
+      <div>
+        <h5 class="h6">Pressed</h5>
+        <button type="button" class="btn btn-icon btn-secondary active">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+          </svg>
+          <span class="visually-hidden">Secondary</span>
+        </button>
+      </div>
+      <div>
+        <h5 class="h6">Disabled</h5>
+        <button type="button" class="btn btn-icon btn-secondary" disabled>
+          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+            <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+          </svg>
+          <span class="visually-hidden">Secondary</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Toggle Buttons
 
 [Documentation]({{< docsref "/forms/checks-radios" >}}#radio-toggle-buttons)&nbsp;—&nbsp;{{< anchor web-btn-tog-001 >}}
 
-<div class="row gy-3 mt-4">
+<div class="row gy-3 mt-4 mb-5">
   <div class="col-12 col-lg-2">
     <h3 class="h6">Selected</h3>
   </div>
@@ -164,7 +371,7 @@ This feature will be delivered with [#521]({{< param repo >}}/issues/521).
 
 [Documentation]({{< docsref "/components/dropdowns" >}}#split-button)&nbsp;—&nbsp;{{< anchor web-btn-spt-001 >}}
 
-<div class="row gy-3 mt-4">
+<div class="row gy-3 mt-4 mb-5">
   <div class="col-3">
     <h3 class="h6">Default</h3>
   </div>
@@ -223,7 +430,7 @@ This feature will be delivered with [#521]({{< param repo >}}/issues/521).
 
 ## Pagination
 
-<div class="row row-cols-1 row-cols-lg-2">
+<div class="row row-cols-1 row-cols-lg-2 mb-5">
   <div class="col">
 
   ### With labels

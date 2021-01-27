@@ -54,6 +54,12 @@
     opacity: $btn-disabled-opacity;
     @include box-shadow(none);
   }
+
+  // Boosted mod: with icon
+  > svg {
+    transform: translateY(1px);
+  }
+  // End mod
 }
 
 
@@ -84,6 +90,8 @@
 .btn-danger {
   @include button-variant($danger, $danger);
 }
+// End mod
+
 
 // Boosted mod: no .btn-outline
 
@@ -118,12 +126,43 @@
 
 //
 // Button Sizes
-//
+// Boosted mod: 6th argument to set .btn-icon padding
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg, $btn-line-height-lg, $btn-icon-padding-x-lg);
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm, $btn-line-height-sm, $btn-icon-padding-x-sm);
+}
+
+
+//
+// Boosted mod: icon button
+//
+.btn-icon {
+  padding-right: var(--#{$boosted-variable-prefix}icon-spacing);
+  padding-left: var(--#{$boosted-variable-prefix}icon-spacing);
+}
+
+// Boosted mod: border-only on :hover, :focus and :active
+.btn-no-outline {
+  border-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    border-color: $gray-500;
+  }
+
+  &:active,
+  &.active {
+    color: $primary;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $gray-500;
+  }
 }

@@ -24,6 +24,89 @@ Boosted includes several predefined button styles, each serving its own semantic
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
+<!-- Boosted mod -->
+## With icon
+
+The recommended way of using an icon in a button is [an embedded SVG]({{< docsref "/extend/icons" >}}). You need to:
+
+- set its dimensions to `1.25rem` to  match button size—except for `.btn-sm` where you should use `1rem`,
+- apply `.me-1` on it to get consistent spacing,
+- fill it using `currentColor` to respect button color scheme,
+- finally add `.overflow-visible` utility to prevent SVG content from being cropped.
+
+{{< example >}}
+<button type="button" class="btn btn-primary btn-sm">
+  <svg width="1rem" height="1rem" fill="currentColor" class="me-1 overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  Secondary
+</button>
+<button type="button" class="btn btn-primary">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  Secondary
+</button>
+<button type="button" class="btn btn-primary btn-lg">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  Secondary
+</button>
+{{< /example >}}
+
+### Icon only
+
+Add `.btn-icon` to get a squared button, meant to only contain an icon. Make sure to provide an accessible name to your button, either using a `.visually-hidden` content or a `aria-label` attribute.
+
+{{< example >}}
+<button type="button" class="btn btn-icon btn-secondary btn-sm">
+  <svg width="1rem" height="1rem" fill="currentColor" class="overflow-visible">
+   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <span class="visually-hidden">Secondary</span>
+</button>
+<button type="button" class="btn btn-icon btn-secondary">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <span class="visually-hidden">Secondary</span>
+</button>
+<button type="button" class="btn btn-icon btn-secondary btn-lg">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <span class="visually-hidden">Secondary</span>
+</button>
+{{< /example >}}
+
+### No outline
+
+Use `.btn-no-outline` to get a borderless button as default state, and a consistent gray border for other states.
+
+{{< example >}}
+<button type="button" class="btn btn-icon btn-no-outline btn-sm">
+  <svg width="1rem" height="1rem" fill="currentColor" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <span class="visually-hidden">No outline</span>
+</button>
+<button type="button" class="btn btn-icon btn-no-outline">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <span class="visually-hidden">No outline</span>
+</button>
+<button type="button" class="btn btn-icon btn-no-outline btn-lg">
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" class="overflow-visible">
+   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
+  </svg>
+  <span class="visually-hidden">No outline</span>
+</button>
+{{< /example >}}
+
+<!-- End mod -->
+
 ## Disable text wrapping
 
 If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
