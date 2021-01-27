@@ -772,12 +772,12 @@ $form-check-padding-start:                $form-check-input-width + .5em !defaul
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
-$form-check-transition:                   background-color $transition-duration $transition-timing, background-position $transition-duration $transition-timing, border-color $transition-duration $transition-timing !default;
+$form-check-transition:                   null !default;
 
 $form-check-input-active-filter:          null !default;
 $form-check-input-active-bg-color:        $component-active-bg !default; // Boosted mod
 
-$form-check-input-bg:                     $body-bg !default;
+$form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 $border-width solid $input-border-color !default;
 $form-check-input-border-radius:          0 !default;
 $form-check-radio-border-radius:          50% !default;
@@ -809,6 +809,7 @@ $form-switch-bg-size:             .75rem !default;
 $form-switch-bg-square-size:      add(1rem, $spacer / 2) !default;
 // End mod
 $form-switch-border-radius:       null !default;
+$form-switch-transition:          background-position .15s ease-in-out, $transition-focus !default;
 
 $form-switch-checked-bg-image:    $form-check-input-checked-bg-image !default;
 $form-switch-checked-bg-size:     add(map-get($spacers, 2), map-get($spacers, 1)) !default;

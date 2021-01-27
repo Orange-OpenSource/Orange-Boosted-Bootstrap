@@ -146,7 +146,7 @@
     border-color: $white; // Boosted mod
     outline-offset: $spacer; // Boosted mod
     @include border-radius($form-switch-border-radius);
-    @include transition($transition-focus); // Boosted mod
+    @include transition($form-switch-transition);
 
     &:checked {
       background-color: $primary;

@@ -229,6 +229,11 @@
   background-size: 100%;
 }
 
+.navbar-nav-scroll {
+  max-height: var(--bs-scroll-height, 75vh);
+  overflow-y: auto;
+}
+
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
 .navbar-expand {
@@ -281,6 +286,10 @@
           }
         }
         // End mod
+
+        .navbar-nav-scroll {
+          overflow: visible;
+        }
 
         .navbar-collapse {
           display: flex !important; // stylelint-disable-line declaration-no-important
