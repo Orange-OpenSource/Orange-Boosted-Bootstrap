@@ -115,7 +115,7 @@
   }
 
   .btn-close {
-    --#{$boosted-variable-prefix}icon-spacing: #{$btn-close-padding-x-sm};
+    --#{$boosted-variable-prefix}icon-spacing: #{$btn-close-padding-sm};
     top: $alert-btn-close-offset-sm;
     right: -$alert-btn-close-offset-sm;
   }

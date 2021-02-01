@@ -29,14 +29,14 @@ Smooth scrolling does not depend on this component. It's turned on only when the
 
 <div class="bd-example">
   <nav aria-label="Standard back to top example" class="back-to-top position-static ps-5 ms-5">
-    <a href="#top" class="back-to-top-link btn btn-secondary position-relative top-0" data-o-label="Back to top">
+    <a href="#top" class="back-to-top-link btn btn-icon btn-secondary position-relative top-0" data-o-label="Back to top">
       <span class="visually-hidden">Back to top</span>
     </a>
   </nav>
 </div>
 {{< example show_preview="false" >}}
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-secondary" data-o-label="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
@@ -55,7 +55,7 @@ Add `.position-fixed` utility to your `.back-to-top-link` to make your back-to-t
 
 {{< example show_preview="false" >}}
 <nav aria-label="Fixed back to top example" class="back-to-top">
-  <a href="#top" class="back-to-top-link position-fixed btn btn-secondary" data-o-label="Back to top">
+  <a href="#top" class="back-to-top-link position-fixed btn btn-icon btn-secondary" data-o-label="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>
@@ -67,12 +67,12 @@ Drop the `data-o-label` attribute and the `<span class="visually-hidden">` and u
 
 <div class="bd-example">
   <nav aria-label="Label inside back to top example" class="back-to-top position-static">
-    <a href="#top" class="back-to-top-link position-static btn btn-secondary px-2">Back to top</a>
+    <a href="#top" class="back-to-top-link position-static btn btn-secondary px-3">Back to top</a>
   </nav>
 </div>
 {{< example show_preview="false" >}}
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-secondary px-2">Back to top</a>
+  <a href="#top" class="back-to-top-link btn btn-secondary px-3">Back to top</a>
 </nav>
 {{< /example >}}
 
@@ -82,14 +82,14 @@ Use a `title` attribute instead of `data-o-label` to ensure a visible label is s
 
 <div class="bd-example">
   <nav aria-label="Icon only back to top example" class="back-to-top position-static">
-    <a href="#top" class="back-to-top-link position-static btn btn-secondary" title="Back to top">
+    <a href="#top" class="back-to-top-link position-static btn btn-icon btn-secondary" title="Back to top">
       <span class="visually-hidden">Back to top</span>
     </a>
   </nav>
 </div>
 {{< example show_preview="false" >}}
 <nav aria-label="Back to top" class="back-to-top">
-  <a href="#top" class="back-to-top-link btn btn-secondary" title="Back to top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" title="Back to top">
     <span class="visually-hidden">Back to top</span>
   </a>
 </nav>

@@ -21,12 +21,16 @@
 .back-to-top-link {
   position: sticky;
   top: $back-to-top-link-offset-top;
-  // @TODO Could be dropped when .btn-icon come in
-  min-width: $back-to-top-width;
-  min-height: $back-to-top-height;
-  padding: 0;
-  // End @TODO
   pointer-events: all;
+  @include button-icon($back-to-top-icon, $size: $back-to-top-icon-width $back-to-top-icon-height, $pseudo: "after");
+
+  &::after {
+    transform: rotate(.25turn) #{"/* rtl:ignore */"};
+  }
+
+  &:not([title]):not([data-#{$boosted-variable-prefix}label])::after {
+    margin-left: $spacer / 2;
+  }
 
   @include media-breakpoint-up(xl) {
     top: $back-to-top-link-offset-top-xl;
@@ -34,11 +38,13 @@
     &[data-#{$boosted-variable-prefix}label]::before {
       position: absolute;
       right: $back-to-top-title-offset-right;
+      z-index: -1; // To ensure focus indicator appears above
       padding: $back-to-top-title-padding;
       color: color-contrast($back-to-top-title-bg-color);
       white-space: nowrap;
       content: attr(data-#{$boosted-variable-prefix}label);
       background-color: $back-to-top-title-bg-color;
+      transform: translateY(1px);
     }
 
     &[data-#{$boosted-variable-prefix}label]:hover::before,
@@ -47,27 +53,17 @@
     }
   }
 
-  /* &:not([title]) :only-child {
-    margin-right: $spacer / -2;
-  } */
-
-  // @TODO Could be dropped when .btn-icon come in
   &::after {
     display: inline-block;
     width: $back-to-top-icon-width;
     height: $back-to-top-icon-height;
     content: "";
-    background: $back-to-top-icon-bg;
+    background-color: currentColor;
+    mask: $back-to-top-icon-bg;
     transform: rotate(.25turn);
-  }
-
-  &:hover:not(:active)::after,
-  &:focus:not(:active)::after {
-    filter: $back-to-top-icon-hover-filter;
   }
 
   &:not([title]):not([data-#{$boosted-variable-prefix}label])::after {
     margin-left: $spacer / 2;
   }
-  // End @TODO
 }
