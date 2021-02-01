@@ -169,11 +169,25 @@
   &:focus {
     filter: $invert-filter;
   }
+
+  &::before {
+    margin-right: $spacer / 4;
+  }
 }
 
 @include tac("Deny", true) {
-  padding-left: $spacer * 1.5;
-  background: $danger $form-switch-bg-image no-repeat $spacer / 2 subtract(50%, 1px) / 1em;
+  @include button-icon($form-switch-bg-image, $btn-font-size-sm);
+
+  &:hover,
+  &:focus {
+    color: $black;
+    background-color: $white;
+    border-color: $white;
+  }
+
+  &::before {
+    margin-right: $spacer / 4;
+  }
 }
 
 .catToggleBtn,
