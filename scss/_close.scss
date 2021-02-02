@@ -4,26 +4,13 @@
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
 .btn-close {
-  box-sizing: content-box;
-  width: $btn-close-width;
-  height: $btn-close-height;
   padding: $btn-close-padding;
   color: $btn-close-color;
   background-color: transparent; // include transparent for button elements
   border: $btn-border-width solid transparent; // Boosted mod
   outline-offset: map-get($spacers, 2); // Boosted mod
   @include border-radius();
-
-  // Boosted mod: using mask instead of background
-  &::before {
-    display: inline-block;
-    width: inherit;
-    height: inherit;
-    content: "";
-    background-color: currentColor;
-    mask: $btn-close-bg center / 1rem auto no-repeat;
-  }
-  // End mod
+  @include button-icon($btn-close-bg, $btn-close-width, $btn-close-height, $btn-close-icon-size); // Boosted mod: using mask instead of background
 
   // Override <a>'s hover style
   &:hover {

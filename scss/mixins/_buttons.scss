@@ -72,3 +72,29 @@
   // Manually declare to provide an override to the browser default
   @include border-radius($border-radius, 0);
 }
+
+// Boosted mod: embed an icon as mask-image in a button
+@mixin button-icon(
+  $icon,
+  $width: $spacer,
+  $height: $width,
+  $size: $width $height,
+  $pseudo: "before",
+  $selector: &,
+  $position: 50%
+) {
+  min-width: $width;
+  min-height: $height;
+
+  @at-root #{$selector} {
+    &::#{$pseudo} {
+      display: block;
+      min-width: inherit;
+      min-height: inherit;
+      content: "";
+      background-color: currentColor;
+      -webkit-mask: #{$icon} no-repeat #{$position} / #{$size}; // stylelint-disable-line property-no-vendor-prefix
+      mask: #{$icon} no-repeat #{$position} / #{$size};
+    }
+  }
+}
