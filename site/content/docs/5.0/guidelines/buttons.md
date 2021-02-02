@@ -472,6 +472,35 @@ toc: true
 
 ## Social buttons
 
-{{< callout info >}}
-This feature will be delivered with [#521]({{< param repo >}}/issues/521).
-{{< /callout >}}
+[Documentation]({{< docsref "/components/buttons" >}}#social-buttons)&nbsp;—&nbsp;{{< anchor web-btn-soc-001 >}}
+
+<div class="row gy-3 mb-5">
+  <div class="col-2">
+    <h3 class="h6">Default</h3>
+  </div>
+  <div class="col-10">
+    <a href="/" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-linkedin"><span class="visually-hidden">LinkedIn</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-youtube"><span class="visually-hidden">YouTube</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-snapchat"><span class="visually-hidden">Snapchat</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-pinterest"><span class="visually-hidden">Pinterest</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-mail"><span class="visually-hidden">Mail</span></a>
+  </div>
+  <div class="col-2">
+    <h3 class="h6">Pressed</h3>
+  </div>
+  <div class="col-10">
+    <a href="/" class="btn btn-icon btn-social btn-twitter active"><span class="visually-hidden">Twitter</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-facebook active"><span class="visually-hidden">Facebook</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-instagram active"><span class="visually-hidden">Instagram</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-whatsapp active"><span class="visually-hidden">Whatsapp</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-linkedin active"><span class="visually-hidden">LinkedIn</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-youtube active"><span class="visually-hidden">YouTube</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-snapchat active"><span class="visually-hidden">Snapchat</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-pinterest active"><span class="visually-hidden">Pinterest</span></a>
+    <a href="/" class="btn btn-icon btn-social btn-mail active"><span class="visually-hidden">Mail</span></a>
+  </div>
+</div>

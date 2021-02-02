@@ -92,8 +92,29 @@
 }
 // End mod
 
-
 // Boosted mod: no .btn-outline
+
+// Boosted mod: border-only on :hover, :focus and :active
+.btn-no-outline {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    border-color: $gray-500;
+  }
+
+  &:active,
+  &.active {
+    color: $primary;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $gray-500;
+  }
+}
+// End mod
+
 
 //
 // Link buttons
@@ -145,25 +166,44 @@
   padding-left: var(--#{$boosted-variable-prefix}icon-spacing);
 }
 
-// Boosted mod: border-only on :hover, :focus and :active
-.btn-no-outline {
-  background-color: transparent;
-  border-color: transparent;
+.btn-social {
+  border-color: currentColor;
+  @include border-radius(50%, 50%);
+  @include button-icon(var(--#{$boosted-variable-prefix}network-logo));
 
   &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    border-color: $gray-500;
+  &:focus {
+    color: $white;
+    background-color: var(--#{$boosted-variable-prefix}network-color, $black);
+    border-color: var(--#{$boosted-variable-prefix}network-color, $black);
+    outline-color: var(--#{$boosted-variable-prefix}network-color, $black);
   }
 
   &:active,
   &.active {
-    color: $primary;
+    color: $white;
+    background-color: $black;
+    border-color: $black;
   }
 
-  &:disabled,
-  &.disabled {
-    color: $gray-500;
+  &::before {
+    transform: translateY(1px);
+  }
+}
+
+@each $name in map-keys($btn-social-networks) {
+  $network: map-get($btn-social-networks, $name);
+
+  .btn-#{$name} {
+    --#{$boosted-variable-prefix}network-color: #{map-get($network, "color")};
+    --#{$boosted-variable-prefix}network-logo: #{escape-svg(url("data:image/svg+xml,#{map-get($network, "icon")}"))};
+
+    &::before {
+      mask-size: if(map-has-key($network, "size"), map-get($network, "size"), null);
+
+      @if "linkedin" == $name {
+        transform: none;
+      }
+    }
   }
 }
