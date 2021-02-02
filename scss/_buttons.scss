@@ -147,6 +147,7 @@
 
 // Boosted mod: border-only on :hover, :focus and :active
 .btn-no-outline {
+  background-color: transparent;
   border-color: transparent;
 
   &:hover,

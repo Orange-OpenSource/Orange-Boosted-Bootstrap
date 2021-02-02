@@ -52,18 +52,4 @@
       text-decoration: $link-decoration;
     }
   }
-
-  &::after {
-    display: inline-block;
-    width: $back-to-top-icon-width;
-    height: $back-to-top-icon-height;
-    content: "";
-    background-color: currentColor;
-    mask: $back-to-top-icon-bg;
-    transform: rotate(.25turn);
-  }
-
-  &:not([title]):not([data-#{$boosted-variable-prefix}label])::after {
-    margin-left: $spacer / 2;
-  }
 }

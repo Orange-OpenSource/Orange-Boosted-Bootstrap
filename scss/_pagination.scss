@@ -8,11 +8,10 @@
 .page-link {
   position: relative;
   // Boosted mod
+  box-sizing: content-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: $pagination-item-size;
-  height: $pagination-item-size;
   font-weight: $font-weight-bold;
   // End mod
   color: $pagination-color;
@@ -20,6 +19,14 @@
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
   @include transition($pagination-transition);
+  // Boosted mod: embed icon as mask-image
+  @include button-icon(
+    $pagination-icon,
+    $pagination-icon-size,
+    $size: $pagination-icon-width $pagination-icon-height,
+    $selector: ".page-item:first-child .page-link, .page-item:last-child .page-link"
+  );
+  // End mod
 
   &:hover {
     z-index: 2;
@@ -33,21 +40,16 @@
     z-index: 3;
     color: $pagination-focus-color;
     background-color: $pagination-focus-bg;
+    border-color: $pagination-hover-border-color; // Boosted mod
     outline: $pagination-focus-outline;
     box-shadow: $pagination-focus-box-shadow;
   }
 
-  &:active {
-    color: color-contrast($pagination-active-item-bg);
-    background-color: $pagination-active-item-bg;
-    border-color: $pagination-active-item-border;
-    outline-color: $pagination-active-item-border; // Boosted mod
-  }
-
   // Boosted mod
-  &.has-label {
-    padding-top: subtract($pagination-padding-y, 1px);
-    padding-bottom: add($pagination-padding-y, 1px);
+  &:active {
+    color: $link-hover-color;
+    border-color: $pagination-hover-border-color;
+    outline-color: $pagination-hover-border-color;
   }
   // End mod
 }
@@ -70,10 +72,6 @@
     pointer-events: none;
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
-
-    &::before {
-      opacity: .2; // Boosted mod
-    }
   }
 
   // Boosted mod
@@ -81,60 +79,42 @@
   &:last-child .page-link {
     border-color: currentColor;
 
-    &::before {
-      display: inline-block;
-      width: $pagination-icon-width;
-      height: $pagination-icon-height;
-      margin-top: $pagination-border-width / 2;
-      content: "";
-      background: $pagination-icon-background;
-    }
-
     &:hover,
     &:focus {
-      filter: $invert-filter;
-      border-color: $pagination-hover-bg;
-      outline-color: $pagination-hover-bg;
+      color: $pagination-active-color;
+      background-color: $pagination-active-bg;
+      border-color: $pagination-active-border-color;
     }
 
     &:active {
-      color: color-contrast($pagination-active-item-bg);
-      background-color: $pagination-active-item-bg;
-      filter: none;
-      border-color: $pagination-active-item-border;
-    }
-
-    &.has-label {
-      padding-right: $pagination-padding-end;
-      padding-left: $pagination-padding-end;
+      color: $black;
+      background-color: $primary;
+      border-color: $primary;
     }
   }
 
-  &:first-child {
-    .page-link::before {
-      margin-left: -$pagination-icon-margin;
+  &:first-child .page-link {
+    &:not(:empty) {
+      padding-right: $pagination-padding-end;
+    }
 
+    &::before {
       /* rtl:raw:
       transform: scaleX(-1);
       */
     }
-
-    .has-label::before {
-      margin: $pagination-border-width / 2 $pagination-icon-margin * 2 0 $pagination-icon-margin * -2;
-    }
   }
 
-  &:last-child {
-    .page-link::before {
+  &:last-child .page-link {
+    &:not(:empty) {
+      padding-left: $pagination-padding-end;
+    }
+
+    &::before {
       order: 1;
-      margin-right: -$pagination-icon-margin;
 
       /* rtl:remove */
       transform: scaleX(-1);
-    }
-
-    .has-label::before {
-      margin: $pagination-border-width / 2 $pagination-icon-margin * -2 0 $pagination-icon-margin * 2;
     }
   }
 

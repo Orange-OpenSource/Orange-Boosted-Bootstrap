@@ -238,7 +238,6 @@ $escaped-characters: (
 // Boosted mod
 //// SVG as Data-URi
 $chevron-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
-$chevron-icon-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 14'><path fill='#{$gray-700}' d='M9 2L7 0 0 7l7 7 2-2-5-5 5-5z'/></svg>") !default;
 $cross-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $cross-icon-stroke:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$black}'><path stroke='#{$black}' stroke-width='5' stroke-linecap='round' d='M15 17.121l-8.132 8.132-2.121-2.12L12.879 15 4.747 6.868l2.12-2.121L15 12.879l8.132-8.132 2.12 2.121L17.122 15l8.132 8.132-2.121 2.12L15 17.123z'/></svg>") !default;
 $check-icon:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 12'><path fill='#{$black}' d='M13 0L5 8 2 5 0 7l5 5L15 2z'/></svg>") !default;
@@ -250,10 +249,10 @@ $danger-icon:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 //// SVG used several times
 $svg-as-custom-props: (
   "chevron": $chevron-icon,
-  "close": $cross-icon-stroke,
-  "check": $check-icon,
+  "close":   $cross-icon-stroke,
+  "check":   $check-icon,
   "success": $success-icon,
-  "error": $danger-icon
+  "error":   $danger-icon
 ) !default;
 //// Filters
 // see https://codepen.io/sosuke/pen/Pjoqqp
@@ -1059,10 +1058,10 @@ $dropdown-dark-header-color:        $gray-500 !default;
 
 // Pagination
 
-$pagination-padding-y:              $spacer / 2 !default;
-$pagination-padding-x:              0 !default;
+$pagination-padding-y:              null !default;
+$pagination-padding-x:              null !default;
 
-$pagination-color:                  $link-color !default;
+$pagination-color:                  null !default;
 $pagination-bg:                     $white !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-radius:          null !default;
@@ -1075,8 +1074,8 @@ $pagination-focus-color:            $link-color !default;
 $pagination-focus-bg:               null !default;
 $pagination-focus-outline:          $pagination-border-width solid $pagination-focus-color !default;
 
-$pagination-hover-color:            $black !default;
-$pagination-hover-bg:               $white !default;
+$pagination-hover-color:            $link-color !default;
+$pagination-hover-bg:               null !default;
 $pagination-hover-border-color:     $gray-500 !default;
 
 $pagination-active-color:           $white !default;
@@ -1087,18 +1086,16 @@ $pagination-disabled-color:         $gray-500 !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $pagination-disabled-color !default;
 
-$pagination-transition:             color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, filter .15s ease-in-out !default;
+$pagination-transition:             $transition-focus !default;
 
 // Boosted mod
 $pagination-padding-end:            1.125rem !default;
-$pagination-item-size:              $spacer * 2 !default;
-$pagination-active-item-bg:         $primary !default;
-$pagination-active-item-border:     $pagination-active-item-bg !default;
 $pagination-icon:                   var(--#{$boosted-variable-prefix}chevron-icon) !default;
-$pagination-icon-margin:            .1875rem !default;
+$pagination-icon-size:              subtract($spacer * 2, $border-width * 2) !default;
 $pagination-icon-width:             add(.5rem, 1px) !default;
 $pagination-icon-height:            subtract(1rem, 1px) !default;
-$pagination-icon-background:        $pagination-icon no-repeat 50% / #{$pagination-icon-width} $pagination-icon-height !default;
+$pagination-active-item-bg:         $primary !default;
+$pagination-active-item-border:     $pagination-active-item-bg !default;
 // End mod
 
 // Cards
@@ -1429,11 +1426,9 @@ $carousel-caption-spacer:            $spacer * 3 !default;
 
 $carousel-control-icon-width:        2.5rem !default;
 // Boosted mod
-$carousel-control-icon-size:         1.5rem !default;
-$carousel-control-icon-active-bg:    $component-active-bg !default;
+$carousel-control-icon-size:         1rem 1.5rem !default;
 $carousel-control-icon-bg:           var(--#{$boosted-variable-prefix}chevron-icon) !default;
-$carousel-control-icon-disabled-bg:  $chevron-icon-disabled !default;
-$carousel-control-icon-filter:       $invert-filter !default;
+$carousel-control-icon-active-bg:    $component-active-bg !default;
 // End mod
 
 $carousel-transition-duration:       .6s !default;
@@ -1469,6 +1464,7 @@ $btn-close-bg:               var(--#{$boosted-variable-prefix}close-icon) !defau
 $btn-close-focus-shadow:     $btn-focus-box-shadow !default;
 
 // Boosted mod
+$btn-close-icon-size:        1rem auto !default;
 $btn-close-padding-sm:       subtract($btn-icon-padding-x, $spacer / 4) !default;
 // End mod
 
@@ -1495,7 +1491,6 @@ $pre-line-height:                   1.25 !default; // Boosted mod
 $back-to-top-display-threshold:  100vh !default;
 $back-to-top-target-id:          "top" !default;
 $back-to-top-target-offset-top:  $spacer * 5 !default; // Matching .navbar computed height
-$back-to-top-size:               $spacer !default;
 $back-to-top-offset:             $spacer * 1.5 !default;
 $back-to-top-offset-right:       $back-to-top-offset !default;
 $back-to-top-offset-bottom:      $back-to-top-offset !default;
@@ -1504,7 +1499,8 @@ $back-to-top-link-offset-top-xl: subtract(100vh, $spacer * 5) !default;
 $back-to-top-title-offset-right: add(100%, $border-width) !default;
 $back-to-top-title-padding:      subtract($btn-padding-y, 1px) $btn-padding-x add($btn-padding-y, 1px) !default;
 $back-to-top-title-bg-color:     $white !default;
+$back-to-top-icon:               var(--#{$boosted-variable-prefix}chevron-icon) !default;
+$back-to-top-icon-width:         add(.5rem, 1px) !default;
+$back-to-top-icon-height:        subtract(1rem, 1px) !default;
 // scss-docs-end back-to-top
-$back-to-top-icon-width:         $pagination-icon-width !default;
-$back-to-top-icon-height:        $pagination-icon-height !default;
-$back-to-top-icon-bg:            $pagination-icon-background !default;
+// End mod
