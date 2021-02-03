@@ -214,10 +214,19 @@
   // @note almost the same structure than the button-variant() mixin
   // @note meant to override whatever .btn-* variant is used
   + .btn {
+    margin-left: 0 !important; // stylelint-disable-line declaration-no-important
     color: $black;
     @include gradient-bg($white);
     border-color: $gray-500;
     @include box-shadow($btn-box-shadow);
+
+    &.btn-icon:not(.btn-no-outline)::before,
+    &.btn-icon:not(.btn-no-outline)::after {
+      display: inline-block;
+      width: $border-width;
+      height: 100%;
+      content: "";
+    }
 
     &:not(:first-of-type) {
       border-left: 0;
@@ -245,6 +254,11 @@
       outline-offset: $outline-width;
       box-shadow: $btn-focus-box-shadow;
     }
+
+    &:checked + .btn-no-outline {
+      border-color: $gray-500;
+      outline-color: currentColor;
+    }
   }
 
   &:checked {
@@ -255,6 +269,15 @@
       background-image: if($enable-gradients, none, null);
       border-color: $black;
       outline-color: $black;
+    }
+
+    + .btn-no-outline {
+      &,
+      &:hover,
+      &:focus {
+        color: $accessible-orange;
+        background-color: transparent;
+      }
     }
   }
 
@@ -282,5 +305,41 @@
       border-color: currentColor; // Boosted mod
       opacity: $form-check-btn-check-disabled-opacity;
     }
+
+    // Boosted mod
+    &:checked + .btn {
+      color: $white;
+      background-color: $form-label-disabled-color;
+      border-color: $form-label-disabled-color;
+    }
+
+    &:checked + .btn-no-outline {
+      color: $gray-500;
+      background-color: transparent;
+      border-color: currentColor;
+    }
+    // End mod
   }
+
+  // Boosted mod: handle no-outline case
+  + .btn-no-outline {
+    // Absurd selector to hack on specifity
+    &:not(:only-of-type) {
+      border: $border-width solid transparent;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $black;
+      border-color: $gray-500;
+    }
+
+    &:active {
+      color: $accessible-orange;
+      background-color: transparent;
+    }
+  }
+  // End mod
 }
