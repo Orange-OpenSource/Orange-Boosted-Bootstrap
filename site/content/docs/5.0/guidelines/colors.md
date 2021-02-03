@@ -13,7 +13,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Core colors" }}
-<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 align-items-center my-3">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-3">
   {{- range $color := .colors }}
     <figure class="col" aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
@@ -36,7 +36,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Supporting colors" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
@@ -59,7 +59,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Functional colors" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
@@ -82,7 +82,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "Grays" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
@@ -105,7 +105,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
 
 {{< palette.inline >}}
 {{- range where $.Site.Data.palette "category" "OBS Gray" }}
-<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center my-3">
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 my-3">
   {{- range $color := .colors }}
     <figure aria-label="{{ $color.name }}">
       <svg viewBox="0 0 100 100" role="img" aria-label="{{ $color.name }}" preserveAspectRatio="xMidYMid meet">
