@@ -326,61 +326,147 @@ toc: true
 
 ## Toggle Buttons
 
-[Documentation]({{< docsref "/forms/checks-radios" >}}#radio-toggle-buttons)&nbsp;—&nbsp;{{< anchor web-btn-tog-001 >}}
+[Documentation]({{< docsref "/forms/checks-radios" >}}#radio-toggle-buttons)
 
-<div class="row gy-3 mt-4 mb-5">
-  <div class="col-12 col-lg-2">
-    <h3 class="h6">Selected</h3>
-  </div>
-  <div class="col-12 col-lg-4">
-    <div class="btn-group">
-      <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-      <label class="btn" for="option1">Day</label>
-      <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-      <label class="btn" for="option2">Week</label>
-      <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-      <label class="btn" for="option3">Month</label>
-    </div>
-  </div>
-  <div class="col-12 col-lg-3">
-    <h4 class="h6 m-0">With icons</h4>
-  </div>
-  <div class="col-12 col-lg-3">
-    <h4 class="h6 m-0">With icons, borderless</h4>
-  </div>
-  <div class="col-12 col-lg-6 offset-lg-6 my-0">
-    <div class="bd-callout bd-callout-info my-0">
-
-  This feature will be delivered with [#182]({{< param repo >}}/issues/182).
-
-  </div>
-  </div>
-  <div class="col-12 col-lg-2">
-    <h3 class="h6">Disabled</h3>
-  </div>
-  <div class="col-12 col-lg-4">
-    <div class="btn-group">
-      <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" disabled>
-      <label class="btn" for="option4">Day</label>
-      <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" disabled>
-      <label class="btn" for="option5">Week</label>
-      <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off" disabled>
-      <label class="btn" for="option6">Month</label>
-    </div>
-  </div>
-  <div class="col-12 col-lg-3">
-    <h4 class="h6 m-0">With icons</h4>
-  </div>
-  <div class="col-12 col-lg-3">
-    <h4 class="h6 m-0">With icons, borderless</h4>
-  </div>
-  <div class="col-12 col-lg-6 offset-lg-6 my-0">
-    <div class="bd-callout bd-callout-info my-0">
-
-  This feature will be delivered with [#182]({{< param repo >}}/issues/182).
-
-  </div>
-  </div>
+<div class="table-responsive mt-4 mb-5" tabindex="0">
+  <table class="table table-guidelines">
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col">With labels<br/>{{< anchor web-btn-tog-001 >}}</th>
+        <th scope="col">With icons<br/>{{< anchor web-btn-tog-002 >}}</th>
+        <th scope="col">With icons, no outline<br/>{{< anchor web-btn-tog-003 >}}</th>
+      </tr>
+    </thead>
+      <tr>
+        <th scope="row">Selected</th>
+        <td>
+          <div class="btn-group">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+            <label class="btn" for="option1">Day</label>
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+            <label class="btn" for="option2">Week</label>
+            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+            <label class="btn" for="option3">Month</label>
+          </div>
+        </td>
+        <td>
+          <div class="btn-group">
+            <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off" checked>
+            <label class="btn btn-icon" for="option7">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+              </svg>
+              <span class="visually-hidden">Day</span>
+            </label>
+            <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off">
+            <label class="btn btn-icon" for="option8">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+              </svg>
+              <span class="visually-hidden">Week</span>
+            </label>
+            <input type="radio" class="btn-check" name="icons" id="option9" autocomplete="off">
+            <label class="btn btn-icon" for="option9">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+              </svg>
+              <span class="visually-hidden">Month</span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="btn-group">
+            <input type="radio" class="btn-check" name="borderless" id="option13" autocomplete="off" checked>
+            <label class="btn btn-icon btn-no-outline" for="option13">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+              </svg>
+              <span class="visually-hidden">Day</span>
+            </label>
+            <input type="radio" class="btn-check btn-check-no-outline" name="borderless" id="option14" autocomplete="off">
+            <label class="btn btn-icon btn-no-outline" for="option14">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+              </svg>
+              <span class="visually-hidden">Week</span>
+            </label>
+            <input type="radio" class="btn-check btn-check-no-outline" name="borderless" id="option15" autocomplete="off">
+            <label class="btn btn-icon btn-no-outline" for="option15">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+              </svg>
+              <span class="visually-hidden">Month</span>
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Disabled</th>
+        <td>
+          <div class="btn-group">
+            <input type="radio" class="btn-check" name="disabled-options" id="option4" autocomplete="off" disabled checked>
+            <label class="btn" for="option4">Day</label>
+            <input type="radio" class="btn-check" name="disabled-options" id="option5" autocomplete="off" disabled>
+            <label class="btn" for="option5">Week</label>
+            <input type="radio" class="btn-check" name="disabled-options" id="option6" autocomplete="off" disabled>
+            <label class="btn" for="option6">Month</label>
+          </div>
+        </td>
+        <td>
+          <div class="btn-group">
+            <input type="radio" class="btn-check" name="disabled-icons" id="option10" autocomplete="off" disabled checked>
+            <label class="btn btn-icon" for="option10">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+              </svg>
+              <span class="visually-hidden">Day</span>
+            </label>
+            <input type="radio" class="btn-check" name="disabled-icons" id="option11" autocomplete="off" disabled>
+            <label class="btn btn-icon" for="option11">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+              </svg>
+              <span class="visually-hidden">Week</span>
+            </label>
+            <input type="radio" class="btn-check" name="disabled-icons" id="option12" autocomplete="off" disabled>
+            <label class="btn btn-icon" for="option12">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+              </svg>
+              <span class="visually-hidden">Month</span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="btn-group">
+            <input type="radio" class="btn-check" name="disabled-borderless" id="option16" autocomplete="off" disabled checked>
+            <label class="btn btn-icon btn-no-outline" for="option16">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+              </svg>
+              <span class="visually-hidden">Day</span>
+            </label>
+            <input type="radio" class="btn-check btn-check-no-outline" name="disabled-borderless" id="option17" autocomplete="off" disabled>
+            <label class="btn btn-icon btn-no-outline" for="option17">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+              </svg>
+              <span class="visually-hidden">Week</span>
+            </label>
+            <input type="radio" class="btn-check btn-check-no-outline" name="disabled-borderless" id="option18" autocomplete="off" disabled>
+            <label class="btn btn-icon btn-no-outline" for="option18">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+                <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+              </svg>
+              <span class="visually-hidden">Month</span>
+            </label>
+          </div>
+        </td>
+      </tr>
+    <tbody>
+    </tbody>
+  </table>
 </div>
 
 ## Split buttons

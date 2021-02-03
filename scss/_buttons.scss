@@ -105,7 +105,8 @@
 
   &:active,
   &.active {
-    color: $primary;
+    color: $accessible-orange;
+    background-color: transparent;
   }
 
   &:disabled,

@@ -103,6 +103,10 @@
   .btn:active + &,
   .btn.active + & {
     border-color: $primary;
+
+    &:focus {
+      border-color: $black;
+    }
   }
 
   .btn:disabled + &,

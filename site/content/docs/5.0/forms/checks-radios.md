@@ -226,31 +226,85 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 
 ### Radio toggle buttons
 
-<div class="bd-example d-flex">
+<!-- Boosted mod: our radio toggle buttons need a `.btn-group` wrapper. -->
+
+Boosted requires to group its radio toggle buttons in a [button group]({{< docsref "/components/button-group" >}}) to display properly.
+
+{{< example >}}
+<div class="btn-group">
   <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-  <label class="btn btn-secondary me-0" for="option1">Checked</label>
+  <label class="btn btn-secondary" for="option1">Checked</label>
 
   <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-  <label class="btn btn-secondary mx-0" for="option2">Radio</label>
+  <label class="btn btn-secondary" for="option2">Radio</label>
 
   <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-  <label class="btn btn-secondary mx-0" for="option3">Disabled</label>
+  <label class="btn btn-secondary" for="option3">Disabled</label>
 
   <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-  <label class="btn btn-secondary ms-0" for="option4">Radio</label>
+  <label class="btn btn-secondary" for="option4">Radio</label>
 </div>
-{{< example show_preview="false" >}}
-<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-<label class="btn btn-secondary" for="option1">Checked</label>
-
-<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-<label class="btn btn-secondary" for="option2">Radio</label>
-
-<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-<label class="btn btn-secondary" for="option3">Disabled</label>
-
-<input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-<label class="btn btn-secondary" for="option4">Radio</label>
 {{< /example >}}
 
 <!-- Boosted mod: no .btn-outline-* -->
+
+<!-- Boosted mod: toggle buttons with icon, no-outline -->
+#### With icon
+
+Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embedded icon]({{< docsref "/extend/icons" >}}) to get consistent squared icon buttons working as toggle.
+
+{{< example >}}
+<div class="btn-group">
+  <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
+  <label class="btn btn-icon" for="option5">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+    </svg>
+    <span class="visually-hidden">Day</span>
+  </label>
+  <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
+  <label class="btn btn-icon" for="option6">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+    </svg>
+    <span class="visually-hidden">Week</span>
+  </label>
+  <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
+  <label class="btn btn-icon" for="option7">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+    </svg>
+    <span class="visually-hidden">Month</span>
+  </label>
+</div>
+{{< /example >}}
+
+Drop borders using `.btn-no-outline`, too.
+
+{{< example >}}
+<div class="btn-group">
+  <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off" checked>
+  <label class="btn btn-icon btn-no-outline" for="option8">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+    </svg>
+    <span class="visually-hidden">Day</span>
+  </label>
+  <input type="radio" class="btn-check" name="icons" id="option9" autocomplete="off">
+  <label class="btn btn-icon btn-no-outline" for="option9">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+    </svg>
+    <span class="visually-hidden">Week</span>
+  </label>
+  <input type="radio" class="btn-check" name="icons" id="option10" autocomplete="off">
+  <label class="btn btn-icon btn-no-outline" for="option10">
+    <svg width="1.25rem" height="1.25rem" fill="currentColor">
+      <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+    </svg>
+    <span class="visually-hidden">Month</span>
+  </label>
+</div>
+{{< /example >}}
+
+<!-- End mod -->

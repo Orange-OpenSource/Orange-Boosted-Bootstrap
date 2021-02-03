@@ -39,6 +39,7 @@ direction: rtl
           <li><a class="d-flex" href="#disabled-forms">أشكال المعطلين</a></li>
           <li><a class="d-flex" href="#sizing">تحجيم</a></li>
           <li><a class="d-flex" href="#input-group">مجموعة الإدخال</a></li>
+          <li><a class="d-flex" href="#toggle">أزرار تبديل الراديو</a></li>
           <li><a class="d-flex" href="#validation">التحقق</a></li>
         </ul>
       </li>
@@ -499,6 +500,80 @@ direction: rtl
         <div class="input-group">
           <span class="input-group-text">مع textarea</span>
           <textarea class="form-control" aria-label="مع textarea"></textarea>
+        </div>
+        {{< /example >}}
+      </div>
+    </article>
+    <article class="my-3" id="toggle">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>أزرار تبديل الراديو</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/checks-radios" >}}#radio-toggle-buttons">توثيق</a>
+      </div>
+
+      <div>
+        {{< example show_markup="false" class="mt-0" >}}
+        <div class="btn-group">
+          <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+          <label class="btn btn-secondary" for="option1">التحقق</label>
+
+          <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+          <label class="btn btn-secondary" for="option2">مذياع</label>
+
+          <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+          <label class="btn btn-secondary" for="option3">معاق</label>
+
+          <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+          <label class="btn btn-secondary" for="option4">مذياع</label>
+        </div>
+        {{< /example >}}
+        {{< example show_markup="false" >}}
+        <div class="btn-group">
+          <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
+          <label class="btn btn-icon" for="option5">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+            </svg>
+            <span class="visually-hidden">يوم</span>
+          </label>
+          <input type="radio" class="btn-check" name="icons" id="option6" autocomplete="off">
+          <label class="btn btn-icon" for="option6">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+            </svg>
+            <span class="visually-hidden">أسبوع</span>
+          </label>
+          <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off">
+          <label class="btn btn-icon" for="option7">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+            </svg>
+            <span class="visually-hidden">شهر</span>
+          </label>
+        </div>
+        {{< /example >}}
+        {{< example show_markup="false" >}}
+        <div class="btn-group">
+          <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off" checked>
+          <label class="btn btn-icon btn-no-outline" for="option8">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
+            </svg>
+            <span class="visually-hidden">يوم</span>
+          </label>
+          <input type="radio" class="btn-check" name="icons" id="option9" autocomplete="off">
+          <label class="btn btn-icon btn-no-outline" for="option9">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
+            </svg>
+            <span class="visually-hidden">أسبوع</span>
+          </label>
+          <input type="radio" class="btn-check" name="icons" id="option10" autocomplete="off">
+          <label class="btn btn-icon btn-no-outline" for="option10">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
+            </svg>
+            <span class="visually-hidden">شهر</span>
+          </label>
         </div>
         {{< /example >}}
       </div>
