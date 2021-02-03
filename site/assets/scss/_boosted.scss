@@ -120,3 +120,14 @@ body {
     scroll-margin-top: $offset-top;
   }
 }
+
+// Docs table
+.table-guidelines {
+  tr {
+    border: 0;
+  }
+
+  th {
+    vertical-align: middle;
+  }
+}
