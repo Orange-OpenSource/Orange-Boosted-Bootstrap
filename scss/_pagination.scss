@@ -47,9 +47,10 @@
 
   // Boosted mod
   &:active {
-    color: $link-hover-color;
-    border-color: $pagination-hover-border-color;
-    outline-color: $pagination-hover-border-color;
+    color: color-contrast($pagination-active-item-bg);
+    background-color: $pagination-active-item-bg;
+    border-color: $pagination-active-item-border;
+    outline-color: $pagination-active-item-border;
   }
   // End mod
 }
