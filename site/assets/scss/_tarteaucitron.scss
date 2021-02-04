@@ -162,12 +162,13 @@
 }
 
 @include tac("Allow", true) {
-  padding-left: $spacer * 1.5;
-  background: $success $form-switch-checked-bg-image no-repeat $spacer / 2 subtract(50%, 1px) / 1em;
+  @include button-icon($form-switch-checked-bg-image, $btn-font-size-sm);
 
   &:hover,
   &:focus {
-    filter: $invert-filter;
+    color: $black;
+    background-color: $white;
+    border-color: $white;
   }
 
   &::before {
