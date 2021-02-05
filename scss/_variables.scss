@@ -278,6 +278,7 @@ $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: false !default;
 $enable-important-utilities:  true !default;
+$enable-fixed-header:         true !default; // Boosted mod: used to apply scroll-padding-top
 
 // Prefix for :root CSS variables
 
@@ -1530,11 +1531,14 @@ $pre-line-height:                   1.25 !default; // Boosted mod
 // Boosted mod
 //
 
+//// Scroll margin
+$scroll-offset-top:              $spacer * 6 !default; // Matching .navbar computed height
+
 //// Back to top
 // scss-docs-start back-to-top
 $back-to-top-display-threshold:  100vh !default;
 $back-to-top-target-id:          "top" !default;
-$back-to-top-target-offset-top:  $spacer * 5 !default; // Matching .navbar computed height
+$back-to-top-target-offset-top:  $scroll-offset-top !default;
 $back-to-top-offset:             $spacer * 1.5 !default;
 $back-to-top-offset-right:       $back-to-top-offset !default;
 $back-to-top-offset-bottom:      $back-to-top-offset !default;

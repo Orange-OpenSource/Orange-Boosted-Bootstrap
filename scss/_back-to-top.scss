@@ -1,7 +1,9 @@
 // Boosted only
 // See https://moderncss.dev/pure-css-smooth-scroll-back-to-top/
-[id="#{$back-to-top-target-id}"]:target {
-  scroll-margin-top: $back-to-top-target-offset-top;
+@if $enable-fixed-header {
+  [id="#{$back-to-top-target-id}"]:target {
+    scroll-margin-top: $back-to-top-target-offset-top;
+  }
 }
 
 .back-to-top {
