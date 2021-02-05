@@ -32,7 +32,7 @@ Embed your icons within the HTML of your page (as opposed to an external image f
   <div class="col-md-8">
 
 {{< example class="mt-0" >}}
-<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 9 14"><path d="M9 2L7 0 0 7l7 7 2-2-5-5 5-5z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 9 14" role="img" aria-label="Left arrow"><path d="M9 2L7 0 0 7l7 7 2-2-5-5 5-5z"/></svg>
 {{< /example >}}
   </div>
 </div>
@@ -50,16 +50,16 @@ SVG sprites allow you to reference an external file similar to an `<img>` elemen
   <div class="col-md-8">
 
 {{< example class="mt-0 text-primary" >}}
-<svg width="2em" height="2em" fill="currentColor">
+<svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#success"/>
 </svg>
-<svg width="2em" height="2em" class="text-muted">
+<svg width="2em" height="2em" class="text-muted" aria-hidden="true">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#info"/>
 </svg>
-<svg width="2em" height="2em" fill="currentColor">
+<svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#warning"/>
 </svg>
-<svg width="2em" height="2em" fill="currentColor">
+<svg width="2em" height="2em" fill="currentColor" aria-hidden="true" focusable="false">
   <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#danger"/>
 </svg>
 {{< /example >}}
@@ -77,7 +77,7 @@ Copy the Solaris icons SVGs to your directory of choice and reference them like 
   <div class="col-md-8">
 
 {{< example class="mt-0" >}}
-<img src="/docs/{{< param docs_version >}}/assets/img/boosted-cross.svg" alt="" width="32" height="32">
+<img src="/docs/{{< param docs_version >}}/assets/img/boosted-cross.svg" alt="" aria-hidden="true" width="32" height="32">
 {{< /example >}}
   </div>
 </div>
@@ -119,3 +119,6 @@ Known issues include:
 * **Browsers inconsistently announce SVGs as `<img>` tags with voice assistance.** Include `role="img"` when possible to avoid any issues. [See this article for details](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-2).
 * **Safari skips `aria-label` when used non-focusable SVGs.** As such, use `aria-hidden="true"` when embedding the `<svg>` file and use CSS to visually hide an equivalent label. [More details here](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-6).
 * **External SVG sprites may not function correctly in Internet Explorer.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
+
+<!-- Boosted mod: link to Orange Accessibility Guidelines -->
+**Orange Accessibility Guidelines** provides [a deep-dive article regarding SVG accessibility](https://a11y-guidelines.orange.com/en/articles/accessible-svg/).

@@ -124,7 +124,7 @@ toc: true
         <th scope="row">Default</th>
         <td>
     <button type="button" class="btn btn-secondary">
-      <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+      <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
         <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
       </svg>
       Settings
@@ -132,7 +132,7 @@ toc: true
   </td>
         <td>
           <button type="button" class="btn btn-info">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
             </svg>
             Settings
@@ -140,7 +140,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-primary">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             Buy
@@ -148,7 +148,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-success">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
             </svg>
             Save
@@ -156,7 +156,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-danger">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
             </svg>
             Delete
@@ -167,7 +167,7 @@ toc: true
         <th scope="row">Pressed</th>
         <td>
           <button type="button" class="btn btn-secondary active">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
             </svg>
             Settings
@@ -175,7 +175,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-info active">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
             </svg>
             Settings
@@ -183,7 +183,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-primary active">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             Buy
@@ -191,7 +191,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-success active">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
             </svg>
             Save
@@ -199,7 +199,7 @@ toc: true
         </td>
         <td>
           <button type="button" class="btn btn-danger active">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
             </svg>
             Delete
@@ -210,7 +210,7 @@ toc: true
         <th scope="row">Disabled</th>
         <td>
           <button type="button" disabled class="btn btn-secondary">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
             </svg>
             Settings
@@ -218,7 +218,7 @@ toc: true
         </td>
         <td>
           <button type="button" disabled class="btn btn-info">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#settings"/>
             </svg>
             Settings
@@ -226,7 +226,7 @@ toc: true
         </td>
         <td>
           <button type="button" disabled class="btn btn-primary">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
             </svg>
             Buy
@@ -234,7 +234,7 @@ toc: true
         </td>
         <td>
           <button type="button" disabled class="btn btn-success">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#tick"/>
             </svg>
             Save
@@ -242,7 +242,7 @@ toc: true
         </td>
         <td>
           <button type="button" disabled class="btn btn-danger">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" class="me-1 overflow-visible">
+            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1 overflow-visible">
               <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
             </svg>
             Delete
@@ -264,7 +264,7 @@ toc: true
       <div>
         <h5 class="h6">Default</h5>
         <button type="button" class="btn btn-icon btn-no-outline">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
           </svg>
           <span class="visually-hidden">Secondary</span>
@@ -273,7 +273,7 @@ toc: true
       <div>
         <h5 class="h6">Pressed</h5>
         <button type="button" class="btn btn-icon btn-no-outline active">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
           </svg>
           <span class="visually-hidden">Secondary</span>
@@ -282,7 +282,7 @@ toc: true
       <div>
         <h5 class="h6">Disabled</h5>
         <button type="button" class="btn btn-icon btn-no-outline" disabled>
-          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
           </svg>
           <span class="visually-hidden">Secondary</span>
@@ -296,7 +296,7 @@ toc: true
       <div>
         <h5 class="h6">Default</h5>
         <button type="button" class="btn btn-icon btn-secondary">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
           </svg>
           <span class="visually-hidden">Secondary</span>
@@ -305,7 +305,7 @@ toc: true
       <div>
         <h5 class="h6">Pressed</h5>
         <button type="button" class="btn btn-icon btn-secondary active">
-          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
           </svg>
           <span class="visually-hidden">Secondary</span>
@@ -314,7 +314,7 @@ toc: true
       <div>
         <h5 class="h6">Disabled</h5>
         <button type="button" class="btn btn-icon btn-secondary" disabled>
-          <svg width="1.25rem" height="1.25rem" fill="currentColor">
+          <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
             <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
           </svg>
           <span class="visually-hidden">Secondary</span>
@@ -354,21 +354,21 @@ toc: true
           <div class="btn-group">
             <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off" checked>
             <label class="btn btn-icon" for="option7">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
               </svg>
               <span class="visually-hidden">Day</span>
             </label>
             <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off">
             <label class="btn btn-icon" for="option8">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
               </svg>
               <span class="visually-hidden">Week</span>
             </label>
             <input type="radio" class="btn-check" name="icons" id="option9" autocomplete="off">
             <label class="btn btn-icon" for="option9">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
               </svg>
               <span class="visually-hidden">Month</span>
@@ -379,21 +379,21 @@ toc: true
           <div class="btn-group">
             <input type="radio" class="btn-check" name="borderless" id="option13" autocomplete="off" checked>
             <label class="btn btn-icon btn-no-outline" for="option13">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
               </svg>
               <span class="visually-hidden">Day</span>
             </label>
             <input type="radio" class="btn-check btn-check-no-outline" name="borderless" id="option14" autocomplete="off">
             <label class="btn btn-icon btn-no-outline" for="option14">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
               </svg>
               <span class="visually-hidden">Week</span>
             </label>
             <input type="radio" class="btn-check btn-check-no-outline" name="borderless" id="option15" autocomplete="off">
             <label class="btn btn-icon btn-no-outline" for="option15">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
               </svg>
               <span class="visually-hidden">Month</span>
@@ -417,21 +417,21 @@ toc: true
           <div class="btn-group">
             <input type="radio" class="btn-check" name="disabled-icons" id="option10" autocomplete="off" disabled checked>
             <label class="btn btn-icon" for="option10">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
               </svg>
               <span class="visually-hidden">Day</span>
             </label>
             <input type="radio" class="btn-check" name="disabled-icons" id="option11" autocomplete="off" disabled>
             <label class="btn btn-icon" for="option11">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
               </svg>
               <span class="visually-hidden">Week</span>
             </label>
             <input type="radio" class="btn-check" name="disabled-icons" id="option12" autocomplete="off" disabled>
             <label class="btn btn-icon" for="option12">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
               </svg>
               <span class="visually-hidden">Month</span>
@@ -442,21 +442,21 @@ toc: true
           <div class="btn-group">
             <input type="radio" class="btn-check" name="disabled-borderless" id="option16" autocomplete="off" disabled checked>
             <label class="btn btn-icon btn-no-outline" for="option16">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#day"/>
               </svg>
               <span class="visually-hidden">Day</span>
             </label>
             <input type="radio" class="btn-check btn-check-no-outline" name="disabled-borderless" id="option17" autocomplete="off" disabled>
             <label class="btn btn-icon btn-no-outline" for="option17">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#week"/>
               </svg>
               <span class="visually-hidden">Week</span>
             </label>
             <input type="radio" class="btn-check btn-check-no-outline" name="disabled-borderless" id="option18" autocomplete="off" disabled>
             <label class="btn btn-icon btn-no-outline" for="option18">
-              <svg width="1.25rem" height="1.25rem" fill="currentColor">
+              <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#month"/>
               </svg>
               <span class="visually-hidden">Month</span>

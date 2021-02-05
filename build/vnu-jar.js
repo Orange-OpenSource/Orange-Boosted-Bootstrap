@@ -37,7 +37,9 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     'The “month” input type is not supported in all browsers.*',
     'The “color” input type is not supported in all browsers.*',
     'The “datetime-local” input type is not supported in all browsers.*',
-    'The “time” input type is not supported in all browsers.*'
+    'The “time” input type is not supported in all browsers.*',
+    // Boosted mod: `role="img"` is needed for `<img "src=.svg" alt="">`
+    'The “img” role is unnecessary for element “img”.'
   ].join('|')
 
   const args = [
