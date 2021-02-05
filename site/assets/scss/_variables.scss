@@ -13,7 +13,7 @@ $dropdown-active-icon: $form-check-input-checked-bg-image;
 
 $zindex-skippy: 1080;
 
-$offset-top: add(10rem, $border-width / 2);
+$offset-top: 12rem;
 
 $sidebar-height:         subtract(100vh, add($offset-top, 2rem));
 $sidebar-base-padding:   $spacer / 2;

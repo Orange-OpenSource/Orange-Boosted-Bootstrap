@@ -53,16 +53,24 @@ Boosted includes support for the [`prefers-reduced-motion` media feature](https:
 
 On browsers that support `prefers-reduced-motion`, and where the user has *not* explicitly signaled that they'd prefer reduced motion (i.e. where `prefers-reduced-motion: no-preference`), Boosted enables smooth scrolling using the `scroll-behavior` property.
 
+<!-- Boosted mod -->
 ### Focus visibility
 
 Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
+
+#### Under a fixed header
+
+When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
+
+1. `$scroll-offset-top` variable defines the offset,
+2. and [`$enable-fixed-header` allows to drop this rule]({{< docsref "/customize/options" >}}) if you don't use a fixed header.
 
 ### Minimum target size
 
 Boosted provides `target-size()` mixin to ensure a minimum target size, adding a centered pseudo-element with a minimum size —defaulting to `44px` to pass [WCAG 2.1 "Target Size" Success Criterion (2.5.5)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)— alongside a few arguments to fit specific needs (eg. different width and height, using `::after` instead of `::before`, etc.).
 
 {{< scss-docs name="target-size" file="scss/mixins/_target-size.scss" >}}
-
+<!-- End mod -->
 
 ## Additional resources
 
