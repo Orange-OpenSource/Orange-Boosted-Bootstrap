@@ -29,7 +29,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar px-3">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
     </a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -67,7 +67,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 ```html
 <nav id="navbar-example2" class="navbar px-3">
   <a class="navbar-brand" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
   </a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -110,7 +110,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
     <div class="col-4 col-lg-2">
       <nav id="navbar-example3" class="navbar flex-column">
         <a class="navbar-brand align-self-start" href="#">
-          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+          <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
         </a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#item-1">Item 1</a>
@@ -151,7 +151,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 ```html
 <nav id="navbar-example3" class="navbar">
   <a class="navbar-brand align-self-start" href="#">
-    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" alt="Boosted" loading="lazy">
+    <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
   </a>
   <nav class="nav nav-pills flex-column">
     <a class="nav-link" href="#item-1">Item 1</a>
