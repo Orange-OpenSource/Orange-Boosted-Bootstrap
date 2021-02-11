@@ -5,6 +5,7 @@
 
 // Color system
 
+// scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #fafafa !default;
 $gray-200: #f6f6f6 !default;
@@ -16,8 +17,10 @@ $gray-700: #666 !default;
 $gray-800: #595959 !default;
 $gray-900: #333 !default;
 $black:    #000 !default;
+// scss-docs-end gray-color-variables
 
 // fusv-disable
+// scss-docs-start gray-colors-map
 $grays: (
   "100": $gray-100,
   "200": $gray-200,
@@ -29,6 +32,7 @@ $grays: (
   "800": $gray-800,
   "900": $gray-900
 ) !default;
+// scss-docs-end gray-colors-map
 // fusv-enable
 
 // scss-docs-start brand-colors
@@ -51,7 +55,7 @@ $supporting-pink:   #ffb4e6 !default;
 // End mod
 
 
-// scss-docs-start bootstrap-colors
+// scss-docs-start color-variables
 $blue:    $functional-blue !default;
 $indigo:  $supporting-purple !default;
 $purple:  $supporting-purple !default;
@@ -62,7 +66,7 @@ $yellow:  $functional-yellow !default;
 $green:   $functional-green !default;
 $teal:    $supporting-green !default;
 $cyan:    $supporting-blue !default;
-// scss-docs-end bootstrap-colors
+// scss-docs-end color-variables
 
 // scss-docs-start colors-map
 $colors: (
@@ -82,6 +86,7 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
+// scss-docs-start theme-color-variables
 $primary:       $orange !default;
 $secondary:     $black !default;
 $success:       $green !default;
@@ -90,6 +95,7 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-500 !default;
 $dark:          $black !default;
+// scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -289,7 +295,9 @@ $boosted-variable-prefix:     o- !default;
 //
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
+// scss-docs-start variable-gradient
 $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
+// scss-docs-end variable-gradient
 
 // Spacing
 //

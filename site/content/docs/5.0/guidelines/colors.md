@@ -7,7 +7,7 @@ subgroup: Core elements
 toc: true
 ---
 
-Color palette is used throughout Boosted in multiple ways, either in components or as [utilities for both `background-color` and `color`]({{< docsref "/utilities/colors" >}}).
+Color palette is used throughout Boosted in multiple ways, either in components or as utilities for both [`background-color`]({{< docsref "/utilities/background" >}}) and [`color`]({{< docsref "/utilities/colors" >}}).
 
 ## Core colors
 
@@ -137,7 +137,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
     </div>
     <div class="col">
         <h4>Bootstrap core variables</h4>
-        {{< scss-docs name="bootstrap-colors" file="scss/_variables.scss" >}}
+        {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
     </div>
 </div>
 

@@ -36,9 +36,6 @@
 }
 
 .bs-popover-top {
-  // Overrule margin set by popper.js
-  margin-bottom: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
-
   > .popover-arrow {
     bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
@@ -57,9 +54,6 @@
 }
 
 .bs-popover-end {
-  // Overrule margin set by popper.js
-  margin-left: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
-
   > .popover-arrow {
     left: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
@@ -80,9 +74,6 @@
 }
 
 .bs-popover-bottom {
-  // Overrule margin set by popper.js
-  margin-top: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
-
   > .popover-arrow {
     top: subtract(-$popover-arrow-height, $popover-border-width);
 
@@ -113,9 +104,6 @@
 }
 
 .bs-popover-start {
-  // Overrule margin set by popper.js
-  margin-right: $popover-arrow-height !important; // stylelint-disable-line declaration-no-important
-
   > .popover-arrow {
     right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;

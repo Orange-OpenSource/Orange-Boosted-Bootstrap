@@ -120,6 +120,7 @@
 
   var Default = _extends({}, Tooltip__default['default'].Default, {
     placement: 'right',
+    offset: [0, 8],
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
@@ -230,8 +231,8 @@
 
     _createClass(Popover, null, [{
       key: "Default",
-      // Getters
-      get: function get() {
+      get: // Getters
+      function get() {
         return Default;
       }
     }, {
