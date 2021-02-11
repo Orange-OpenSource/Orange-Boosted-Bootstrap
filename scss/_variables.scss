@@ -880,7 +880,7 @@ $input-group-addon-color:               null !default;
 $input-group-addon-bg:                  null !default;
 $input-group-addon-border-color:        null !default;
 
-$form-select-padding-y:             ($spacer / 2) - ($border-width / 2) !default;
+$form-select-padding-y:             $input-padding-y !default;
 $form-select-padding-x:             $input-padding-x !default;
 $form-select-font-family:           $input-font-family !default;
 $form-select-font-size:             $input-font-size !default;
@@ -909,7 +909,7 @@ $form-select-focus-box-shadow:    null !default;
 
 // Boosted mod: no .form-select-sm
 
-$form-select-padding-y-lg:        $input-padding-y-lg !default;
+$form-select-padding-y-lg:        $spacer / 2 !default;
 $form-select-padding-x-lg:        $input-padding-x-lg !default;
 $form-select-font-size-lg:        $input-font-size-lg !default;
 

@@ -55,8 +55,9 @@
 // Boosted mod: no .form-select-sm
 
 .form-select-lg {
-  padding-top: $form-select-padding-y-lg;
+  padding-top: subtract($form-select-padding-y-lg, 1px); // Boosted mod
   padding-bottom: $form-select-padding-y-lg;
   padding-left: $form-select-padding-x-lg;
   @include font-size($form-select-font-size-lg);
+  line-height: 1.5; // Boosted mod
 }
