@@ -99,8 +99,11 @@
   align-items: center; // 2. vertically center contents
   justify-content: center; // 3. horizontally center contents
   width: $carousel-control-width;
+  padding: 0;
   color: $carousel-control-color;
   text-align: center;
+  background: none;
+  border: 0;
   opacity: $carousel-control-opacity;
   @include transition($carousel-control-transition);
 
@@ -162,10 +165,10 @@
 
 // End mod
 
-// Optional indicator pips
+// Optional indicator pips/controls
 //
-// Add an ordered list with the following class and add a list item for each
-// slide your carousel holds.
+// Add a container (such as a list) with the following class and add an item (ideally a focusable control,
+// like a button) with data-bs-target for each slide your carousel holds.
 
 /* rtl:begin:ignore */
 .carousel-indicators {
@@ -176,22 +179,24 @@
   display: flex;
   justify-content: center;
   padding: $carousel-indicators-padding-y 0; // Boosted mod
-  // Boosted mod: no margins
+  margin-bottom: $spacer; // Boosted mod
   list-style: none;
   background: rgba($carousel-indicator-active-bg, .5); // Boosted mod
   transform: translateX(-50%); // Boosted mod
   @include border-radius($spacer, $spacer); // Boosted mod
 
-  li {
+  [data-bs-target] {
     box-sizing: content-box;
     flex: 0 1 auto;
     width: $carousel-indicator-width;
     height: $carousel-indicator-height;
+    padding: 0;
     margin-right: $carousel-indicator-spacer;
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
     background-color: $carousel-control-color; // Boosted mod
+    border: 0;
     // Boosted mod: use our own target-size() mixin instead of transparent borders
     opacity: $carousel-indicator-opacity;
     @include transition($carousel-indicator-transition);
