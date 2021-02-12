@@ -64,8 +64,8 @@ params:
 
   download:
     source:             "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-beta2.zip"
-    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-beta2/boosted-5.0.0-beta1-dist.zip"
-    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-beta2/boosted-5.0.0-beta1-examples.zip"
+    dist:               "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-beta2/boosted-5.0.0-beta2-dist.zip"
+    dist_examples:      "https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/releases/download/v5.0.0-beta2/boosted-5.0.0-beta2-examples.zip"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
