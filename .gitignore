@@ -47,3 +47,6 @@ Thumbs.db
 
 # npm credentials
 .npmrc
+
+# Pa11y
+pa11y-ci-results.json
