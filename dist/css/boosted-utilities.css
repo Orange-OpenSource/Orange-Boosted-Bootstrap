@@ -1,12 +1,12 @@
 /*!
- * Boosted Utilities v5.0.0-beta1 (https://boosted.orange.com/)
- * Copyright 2014-2020 The Boosted Authors
- * Copyright 2014-2020 Orange SA
+ * Boosted Utilities v5.0.0-beta2 (https://boosted.orange.com/)
+ * Copyright 2014-2021 The Boosted Authors
+ * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Utilities v5.0.0-beta1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
+ * Bootstrap Utilities v5.0.0-beta2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 .align-baseline {
@@ -1060,11 +1060,6 @@
   color: #fff;
 }
 
-.bg-pink {
-  background-color: #ffb4e6 !important;
-  color: #000;
-}
-
 .bg-body {
   background-color: #fff !important;
   color: #000;
@@ -1077,6 +1072,31 @@
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.bg-supporting-green {
+  background-color: #50be87 !important;
+  color: #000;
+}
+
+.bg-supporting-blue {
+  background-color: #4bb4e6 !important;
+  color: #000;
+}
+
+.bg-supporting-yellow {
+  background-color: #ffd200 !important;
+  color: #000;
+}
+
+.bg-supporting-pink {
+  background-color: #ffb4e6 !important;
+  color: #000;
+}
+
+.bg-supporting-purple {
+  background-color: #a885d8 !important;
+  color: #000;
 }
 
 .bg-gradient {

@@ -99,7 +99,7 @@ Breakpoints specific variants are consequently renamed too (e.g. `.text-md-start
 
 - Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
 
-## v5.0.0-beta1
+## v5.0.0-beta2
 
 ### Browser support
 
@@ -135,7 +135,7 @@ Breakpoints specific variants are consequently renamed too (e.g. `.text-md-start
 - Added new `gap` utilities (`.gap`) for CSS Grid layouts
 - Removed `.rounded-sm` and `rounded-lg`, and introduced `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
 
-## v5.0.0-beta1
+## v5.0.0-beta2
 
 ### Sass
 
