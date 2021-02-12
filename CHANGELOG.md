@@ -1,4 +1,50 @@
-# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha3...v5.0.0-beta1) (2020-12-10)
+<a name="5.0.0-beta2"></a>
+# [5.0.0-beta2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta1...v5.0.0-beta2) (2021-02-12)
+
+
+## Bug Fixes
+
+* **badges:** use functional colors as backgrounds ([8c4d0e7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/8c4d0e790d98da757a4c2da11b1fcd6a679652ce))
+* **dropdowns:** spacing, active state color ([70fc9ce](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/70fc9ce8a0602764a666a97f6a14ef12bc0cc672))
+* **focus:** guaranteed focus visibility when fixed header overlaps ([65ac357](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/65ac357ea18abcf7c67b8982b9cb1e0d7e682a73))
+* **forms:** `.form-select` sizes were wrong ([afd0b39](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/afd0b39baa5ac452a2feb2038cd1280570ec959d))
+* **navbar:** only Y-padding are transitioned ([be1f8de](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/be1f8dea48d2a13cba63616bdc7118c101e4e4d1))
+* **pagination:** get active state back to matching UI Kit ([d11441c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d11441ceffccdf3b14cdb1ca9bbd0d40487e0109))
+
+
+## Features
+
+* **back to top:** brand new component :tada: ([893944d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/893944d3aaa250b41f6cecf7f36fe2ed8c44d936))
+* **back-to-top:** use .btn-icon, match .btn-close pattern & fix icon in RTL ([6cd7c9e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/6cd7c9e6422c0f710f924e86178e8dd386831e47))
+* **buttons:** buttons with icon, branded :tada: ([d399331](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d399331db6f8093ba7b190f4a75a054879449983))
+* **carousel:** Orange branded :tada: ([7f320f6](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/7f320f69539ef1f2424e50d8eda41ffcd447bf38))
+* **close:** better branding and consistency with new buttons ([3708778](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3708778f18c85b5239682949a3ed95c55012a34d))
+* **close button:** use stroke icon a basis ([318d89d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/318d89d79fc440e5a2d39793d96df2d97b831865))
+* **forms:** Orange branded disabled state :tada: ([b02466d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b02466d6f557cc3d83a9183112ff0686c58be344))
+* **icons:** new `button-icon()` mixin ([e2726bc](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e2726bc8fd4aec37be41cd48c5b0e9f04fab396b))
+* **links:** with chevron :tada: ([27286ba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/27286baf8e1bb86f0891337b76c8336d32254a0e))
+* **mixin:** new `target-size() `mixin to ensure sufficient hit area (44×44px) ([d0a1c2c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/d0a1c2c7d1e3f4b98be1b350821c83f2379a6193))
+* **modals:** Orange branded :tada: ([bfd285c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/bfd285ce0039e688759b9f273138fdd1ab26a977))
+* **pagination:** use `filter` instead of another inlined SVG ([3911d64](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/3911d64f8cb2de5c2937666bce636bb2b57bef62))
+* **social buttons:** Orange branded :tada: ([db222da](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/db222da0f9d47d4ae456a5f718738215577ba9bf))
+* **toggle buttons:** Orange branded :tada: — both with icons and no outline ([2cd8ffe](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2cd8ffe100f3afa4487f57f69442cac99acc8c69))
+* **utilities:** add `.bg-supporting-*` utilities ([0fd37a0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0fd37a0769a5f93d82f86cd73d99a5df3fe25874))
+
+## Docs
+
+* **Syntax highlighting** now provides sufficient contrasts ([2a82eab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/589/commits/2a82eabc16b9be11e0e63e7b14722d324c98c94b))
+* **Accordions:** `details` and `summary` in docs now look like accordions ([e1f379ef](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/589/commits/e1f379efdc59971df0fde67ec3b27784ecb93991))
+* **SVG:** Accessible markup for decorative SVGs ([0a2f616c5](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/621/commits/0a2f616c5c3b9ff23ce595665111dd4b166180b6))
+
+## Chore
+
+* **Percy**: add Cheatsheets to snapshots ([b343fe2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/573/commits/b343fe244da8913b79b0bcf4d89f89ffea74257b))
+* **Pa11y**: update exclusion list by removing `.chroma`, `[disabled]` and `[readonly]` selectors ([2a82eab](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/589/commits/2a82eabc16b9be11e0e63e7b14722d324c98c94b) and [97d3b3c](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/pull/589/commits/97d3b3c85283027600e3553b9df9028334f63914))
+* **CI**: allow to skip CIs, depending on `paths` for push event or on labels for pull requests. [Have a look at the wiki](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/wiki/GitHub-Actions)
+
+
+<a name="5.0.0-beta1"></a>
+# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha3...v5.0.0-beta2) (2020-12-10)
 
 ### Features
 

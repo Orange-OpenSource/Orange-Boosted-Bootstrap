@@ -1,11 +1,11 @@
 /*!
-  * Boosted v5.0.0-beta1 (https://boosted.orange.com/)
-  * Copyright 2015-2020 The Boosted Authors
-  * Copyright 2015-2020 Orange
+  * Boosted v5.0.0-beta2 (https://boosted.orange.com/)
+  * Copyright 2015-2021 The Boosted Authors
+  * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.0.0-beta1 (https://boosted.orange.com/)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap v5.0.0-beta2 (https://boosted.orange.com/)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -51,12 +51,22 @@
   function _inheritsLoose(subClass, superClass) {
     subClass.prototype = Object.create(superClass.prototype);
     subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
+
+    _setPrototypeOf(subClass, superClass);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+
+    return _setPrototypeOf(o, p);
   }
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): util/index.js
+   * Bootstrap (v5.0.0-beta2): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -90,7 +100,20 @@
     var selector = element.getAttribute('data-bs-target');
 
     if (!selector || selector === '#') {
-      var hrefAttr = element.getAttribute('href');
+      var hrefAttr = element.getAttribute('href'); // The only valid content that could double as a selector are IDs or classes,
+      // so everything starting with `#` or `.`. If a "real" URL is used as the selector,
+      // `document.querySelector` will rightfully complain it is invalid.
+      // See https://github.com/twbs/bootstrap/issues/32273
+
+      if (!hrefAttr || !hrefAttr.includes('#') && !hrefAttr.startsWith('.')) {
+        return null;
+      } // Just in case some CMS puts out a full URL with the anchor appended
+
+
+      if (hrefAttr.includes('#') && !hrefAttr.startsWith('#')) {
+        hrefAttr = '#' + hrefAttr.split('#')[1];
+      }
+
       selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
     }
 
@@ -168,7 +191,7 @@
       var valueType = value && isElement(value) ? 'element' : toType(value);
 
       if (!new RegExp(expectedTypes).test(valueType)) {
-        throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
+        throw new TypeError(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
       }
     });
   };
@@ -259,7 +282,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): dom/data.js
+   * Bootstrap (v5.0.0-beta2): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -326,7 +349,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): dom/event-handler.js
+   * Bootstrap (v5.0.0-beta2): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -386,6 +409,7 @@
             event.delegateTarget = target;
 
             if (handler.oneOff) {
+              // eslint-disable-next-line unicorn/consistent-destructuring
               EventHandler.off(element, event.type, fn);
             }
 
@@ -605,7 +629,7 @@
    * ------------------------------------------------------------------------
    */
 
-  var VERSION = '5.0.0-beta1';
+  var VERSION = '5.0.0-beta2';
 
   var BaseComponent = /*#__PURE__*/function () {
     function BaseComponent(element) {
@@ -654,9 +678,9 @@
   var EVENT_CLOSE = "close" + EVENT_KEY;
   var EVENT_CLOSED = "closed" + EVENT_KEY;
   var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
-  var CLASSNAME_ALERT = 'alert';
-  var CLASSNAME_FADE = 'fade';
-  var CLASSNAME_SHOW = 'show';
+  var CLASS_NAME_ALERT = 'alert';
+  var CLASS_NAME_FADE = 'fade';
+  var CLASS_NAME_SHOW = 'show';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -687,7 +711,7 @@
     ;
 
     _proto._getRootElement = function _getRootElement(element) {
-      return getElementFromSelector(element) || element.closest("." + CLASSNAME_ALERT);
+      return getElementFromSelector(element) || element.closest("." + CLASS_NAME_ALERT);
     };
 
     _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
@@ -697,16 +721,16 @@
     _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-      element.classList.remove(CLASSNAME_SHOW);
+      element.classList.remove(CLASS_NAME_SHOW);
 
-      if (!element.classList.contains(CLASSNAME_FADE)) {
+      if (!element.classList.contains(CLASS_NAME_FADE)) {
         this._destroyElement(element);
 
         return;
       }
 
       var transitionDuration = getTransitionDurationFromElement(element);
-      EventHandler.one(element, TRANSITION_END, function () {
+      EventHandler.one(element, 'transitionend', function () {
         return _this._destroyElement(element);
       });
       emulateTransitionEnd(element, transitionDuration);
@@ -747,8 +771,8 @@
 
     _createClass(Alert, null, [{
       key: "DATA_KEY",
-      // Getters
-      get: function get() {
+      get: // Getters
+      function get() {
         return DATA_KEY;
       }
     }]);
@@ -823,8 +847,8 @@
 
     _createClass(Button, null, [{
       key: "DATA_KEY",
-      // Getters
-      get: function get() {
+      get: // Getters
+      function get() {
         return DATA_KEY$1;
       }
     }]);
@@ -860,7 +884,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): dom/manipulator.js
+   * Bootstrap (v5.0.0-beta2): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -932,7 +956,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): dom/selector-engine.js
+   * Bootstrap (v5.0.0-beta2): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -963,9 +987,7 @@
     children: function children(element, selector) {
       var _ref2;
 
-      var children = (_ref2 = []).concat.apply(_ref2, element.children);
-
-      return children.filter(function (child) {
+      return (_ref2 = []).concat.apply(_ref2, element.children).filter(function (child) {
         return child.matches(selector);
       });
     },
@@ -1067,18 +1089,27 @@
   var CLASS_NAME_NEXT = 'carousel-item-next';
   var CLASS_NAME_PREV = 'carousel-item-prev';
   var CLASS_NAME_POINTER_EVENT = 'pointer-event';
+  var CLASS_NAME_PAUSED = 'is-paused'; // Boosted mod: used for progress indicators
+
+  var CLASS_NAME_DONE = 'is-done'; // Boosted mod: used for progress indicators
+
   var SELECTOR_ACTIVE = '.active';
   var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
   var SELECTOR_ITEM = '.carousel-item';
   var SELECTOR_ITEM_IMG = '.carousel-item img';
   var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
   var SELECTOR_INDICATORS = '.carousel-indicators';
+  var SELECTOR_INDICATOR = '[data-bs-target]';
   var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
   var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
-  var PointerType = {
-    TOUCH: 'touch',
-    PEN: 'pen'
-  };
+  var SELECTOR_CONTROL_PREV = '.carousel-control-prev'; // Boosted mod
+
+  var SELECTOR_CONTROL_NEXT = '.carousel-control-next'; // Boosted mod
+
+  var PREFIX_CUSTOM_PROPS = 'o-'; // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
+
+  var POINTER_TYPE_TOUCH = 'touch';
+  var POINTER_TYPE_PEN = 'pen';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -1135,6 +1166,12 @@
     };
 
     _proto.pause = function pause(event) {
+      // Boosted mod: reset the animation on progress indicator
+      if (this._indicatorsElement) {
+        this._element.classList.add(CLASS_NAME_PAUSED);
+      } // End mod
+
+
       if (!event) {
         this._isPaused = true;
       }
@@ -1149,6 +1186,12 @@
     };
 
     _proto.cycle = function cycle(event) {
+      // Boosted mod: restart the animation on progress indicator
+      if (this._indicatorsElement) {
+        this._element.classList.remove(CLASS_NAME_PAUSED);
+      } // End mod
+
+
       if (!event) {
         this._isPaused = false;
       }
@@ -1170,7 +1213,13 @@
 
       this._activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
-      var activeIndex = this._getItemIndex(this._activeElement);
+      var activeIndex = this._getItemIndex(this._activeElement); // Boosted mod: restart the animation on progress indicator
+
+
+      if (this._indicatorsElement) {
+        this._element.classList.remove(CLASS_NAME_DONE);
+      } // End mod
+
 
       if (index > this._items.length - 1 || index < 0) {
         return;
@@ -1225,12 +1274,20 @@
       this.touchDeltaX = 0; // swipe left
 
       if (direction > 0) {
-        this.prev();
+        if (isRTL) {
+          this.next();
+        } else {
+          this.prev();
+        }
       } // swipe right
 
 
       if (direction < 0) {
-        this.next();
+        if (isRTL) {
+          this.prev();
+        } else {
+          this.next();
+        }
       }
     };
 
@@ -1261,7 +1318,7 @@
       var _this4 = this;
 
       var start = function start(event) {
-        if (_this4._pointerEvent && PointerType[event.pointerType.toUpperCase()]) {
+        if (_this4._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH)) {
           _this4.touchStartX = event.clientX;
         } else if (!_this4._pointerEvent) {
           _this4.touchStartX = event.touches[0].clientX;
@@ -1278,7 +1335,7 @@
       };
 
       var end = function end(event) {
-        if (_this4._pointerEvent && PointerType[event.pointerType.toUpperCase()]) {
+        if (_this4._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH)) {
           _this4.touchDeltaX = event.clientX - _this4.touchStartX;
         }
 
@@ -1337,18 +1394,44 @@
         return;
       }
 
-      switch (event.key) {
-        case ARROW_LEFT_KEY:
-          event.preventDefault();
-          this.prev();
-          break;
+      if (event.key === ARROW_LEFT_KEY) {
+        event.preventDefault();
 
-        case ARROW_RIGHT_KEY:
-          event.preventDefault();
+        if (isRTL) {
           this.next();
-          break;
+        } else {
+          this.prev();
+        }
+      } else if (event.key === ARROW_RIGHT_KEY) {
+        event.preventDefault();
+
+        if (isRTL) {
+          this.prev();
+        } else {
+          this.next();
+        }
+      }
+    } // Boosted mod: handle prev/next controls states
+    ;
+
+    _proto._disableControl = function _disableControl(element) {
+      if (element.nodeName === 'BUTTON') {
+        element.disabled = true;
+      } else {
+        element.setAttribute('aria-disabled', true);
+        element.setAttribute('tabindex', '-1');
       }
     };
+
+    _proto._enableControl = function _enableControl(element) {
+      if (element.nodeName === 'BUTTON') {
+        element.disabled = false;
+      } else {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('tabindex');
+      }
+    } // End mod
+    ;
 
     _proto._getItemIndex = function _getItemIndex(element) {
       this._items = element && element.parentNode ? SelectorEngine.find(SELECTOR_ITEM, element.parentNode) : [];
@@ -1362,11 +1445,24 @@
       var activeIndex = this._getItemIndex(activeElement);
 
       var lastItemIndex = this._items.length - 1;
-      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
+      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex; // Boosted mod: progress indicators animation when wrapping is disabled
 
-      if (isGoingToWrap && !this._config.wrap) {
-        return activeElement;
-      }
+      if (!this._config.wrap) {
+        if (isGoingToWrap) {
+          // Reset the animation on last progress indicator when last slide is active
+          if (isNextDirection && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
+            this._element.classList.add(CLASS_NAME_DONE);
+          }
+
+          return activeElement;
+        } // Restart animation otherwise
+
+
+        if (this._indicatorsElement) {
+          this._element.classList.remove(CLASS_NAME_DONE);
+        }
+      } // End mod
+
 
       var delta = direction === DIRECTION_PREV ? -1 : 1;
       var itemIndex = (activeIndex + delta) % this._items.length;
@@ -1388,16 +1484,17 @@
 
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        var indicators = SelectorEngine.find(SELECTOR_ACTIVE, this._indicatorsElement);
+        var activeIndicator = SelectorEngine.findOne(SELECTOR_ACTIVE, this._indicatorsElement);
+        activeIndicator.classList.remove(CLASS_NAME_ACTIVE$1);
+        activeIndicator.removeAttribute('aria-current');
+        var indicators = SelectorEngine.find(SELECTOR_INDICATOR, this._indicatorsElement);
 
         for (var i = 0; i < indicators.length; i++) {
-          indicators[i].classList.remove(CLASS_NAME_ACTIVE$1);
-        }
-
-        var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
-
-        if (nextIndicator) {
-          nextIndicator.classList.add(CLASS_NAME_ACTIVE$1);
+          if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getItemIndex(element)) {
+            indicators[i].classList.add(CLASS_NAME_ACTIVE$1);
+            indicators[i].setAttribute('aria-current', 'true');
+            break;
+          }
         }
       }
     };
@@ -1416,7 +1513,16 @@
         this._config.interval = elementInterval;
       } else {
         this._config.interval = this._config.defaultInterval || this._config.interval;
-      }
+      } // Boosted mod: set progress indicator's interval as custom property
+
+
+      if (this._indicatorsElement && this._config.interval !== Default.interval) {
+        var currentIndex = this._getItemIndex(element);
+
+        var currentIndicator = SelectorEngine.findOne(":nth-child(" + (currentIndex + 1) + ")", this._indicatorsElement);
+        currentIndicator.style.setProperty("--" + PREFIX_CUSTOM_PROPS + "carousel-interval", this._config.interval + "ms");
+      } // End mod
+
     };
 
     _proto._slide = function _slide(direction, element) {
@@ -1431,19 +1537,9 @@
       var nextElementIndex = this._getItemIndex(nextElement);
 
       var isCycling = Boolean(this._interval);
-      var directionalClassName;
-      var orderClassName;
-      var eventDirectionName;
-
-      if (direction === DIRECTION_NEXT) {
-        directionalClassName = CLASS_NAME_START;
-        orderClassName = CLASS_NAME_NEXT;
-        eventDirectionName = DIRECTION_LEFT;
-      } else {
-        directionalClassName = CLASS_NAME_END;
-        orderClassName = CLASS_NAME_PREV;
-        eventDirectionName = DIRECTION_RIGHT;
-      }
+      var directionalClassName = direction === DIRECTION_NEXT ? CLASS_NAME_START : CLASS_NAME_END;
+      var orderClassName = direction === DIRECTION_NEXT ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
+      var eventDirectionName = direction === DIRECTION_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT;
 
       if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE$1)) {
         this._isSliding = false;
@@ -1469,7 +1565,23 @@
 
       this._setActiveIndicatorElement(nextElement);
 
-      this._activeElement = nextElement;
+      this._activeElement = nextElement; // Boosted mod: enable/disable prev/next controls when wrap=false
+
+      if (!this._config.wrap) {
+        var prevControl = SelectorEngine.findOne(SELECTOR_CONTROL_PREV, this._element);
+        var nextControl = SelectorEngine.findOne(SELECTOR_CONTROL_NEXT, this._element);
+
+        this._enableControl(prevControl);
+
+        this._enableControl(nextControl);
+
+        if (nextElementIndex === 0) {
+          this._disableControl(prevControl);
+        } else if (nextElementIndex === this._items.length - 1) {
+          this._disableControl(nextControl);
+        }
+      } // End mod
+
 
       if (this._element.classList.contains(CLASS_NAME_SLIDE)) {
         nextElement.classList.add(orderClassName);
@@ -1477,7 +1589,7 @@
         activeElement.classList.add(directionalClassName);
         nextElement.classList.add(directionalClassName);
         var transitionDuration = getTransitionDurationFromElement(activeElement);
-        EventHandler.one(activeElement, TRANSITION_END, function () {
+        EventHandler.one(activeElement, 'transitionend', function () {
           nextElement.classList.remove(directionalClassName, orderClassName);
           nextElement.classList.add(CLASS_NAME_ACTIVE$1);
           activeElement.classList.remove(CLASS_NAME_ACTIVE$1, orderClassName, directionalClassName);
@@ -1630,7 +1742,7 @@
   var EVENT_HIDE = "hide" + EVENT_KEY$3;
   var EVENT_HIDDEN = "hidden" + EVENT_KEY$3;
   var EVENT_CLICK_DATA_API$3 = "click" + EVENT_KEY$3 + DATA_API_KEY$3;
-  var CLASS_NAME_SHOW = 'show';
+  var CLASS_NAME_SHOW$1 = 'show';
   var CLASS_NAME_COLLAPSE = 'collapse';
   var CLASS_NAME_COLLAPSING = 'collapsing';
   var CLASS_NAME_COLLAPSED = 'collapsed';
@@ -1688,7 +1800,7 @@
 
     // Public
     _proto.toggle = function toggle() {
-      if (this._element.classList.contains(CLASS_NAME_SHOW)) {
+      if (this._element.classList.contains(CLASS_NAME_SHOW$1)) {
         this.hide();
       } else {
         this.show();
@@ -1698,7 +1810,7 @@
     _proto.show = function show() {
       var _this2 = this;
 
-      if (this._isTransitioning || this._element.classList.contains(CLASS_NAME_SHOW)) {
+      if (this._isTransitioning || this._element.classList.contains(CLASS_NAME_SHOW$1)) {
         return;
       }
 
@@ -1770,7 +1882,7 @@
       var complete = function complete() {
         _this2._element.classList.remove(CLASS_NAME_COLLAPSING);
 
-        _this2._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
+        _this2._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$1);
 
         _this2._element.style[dimension] = '';
 
@@ -1782,7 +1894,7 @@
       var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
       var scrollSize = "scroll" + capitalizedDimension;
       var transitionDuration = getTransitionDurationFromElement(this._element);
-      EventHandler.one(this._element, TRANSITION_END, complete);
+      EventHandler.one(this._element, 'transitionend', complete);
       emulateTransitionEnd(this._element, transitionDuration);
       this._element.style[dimension] = this._element[scrollSize] + "px";
     };
@@ -1790,7 +1902,7 @@
     _proto.hide = function hide() {
       var _this3 = this;
 
-      if (this._isTransitioning || !this._element.classList.contains(CLASS_NAME_SHOW)) {
+      if (this._isTransitioning || !this._element.classList.contains(CLASS_NAME_SHOW$1)) {
         return;
       }
 
@@ -1807,7 +1919,7 @@
 
       this._element.classList.add(CLASS_NAME_COLLAPSING);
 
-      this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
+      this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$1);
 
       var triggerArrayLength = this._triggerArray.length;
 
@@ -1816,7 +1928,7 @@
           var trigger = this._triggerArray[i];
           var elem = getElementFromSelector(trigger);
 
-          if (elem && !elem.classList.contains(CLASS_NAME_SHOW)) {
+          if (elem && !elem.classList.contains(CLASS_NAME_SHOW$1)) {
             trigger.classList.add(CLASS_NAME_COLLAPSED);
             trigger.setAttribute('aria-expanded', false);
           }
@@ -1837,7 +1949,7 @@
 
       this._element.style[dimension] = '';
       var transitionDuration = getTransitionDurationFromElement(this._element);
-      EventHandler.one(this._element, TRANSITION_END, complete);
+      EventHandler.one(this._element, 'transitionend', complete);
       emulateTransitionEnd(this._element, transitionDuration);
     };
 
@@ -1895,7 +2007,7 @@
         return;
       }
 
-      var isOpen = element.classList.contains(CLASS_NAME_SHOW);
+      var isOpen = element.classList.contains(CLASS_NAME_SHOW$1);
       triggerArray.forEach(function (elem) {
         if (isOpen) {
           elem.classList.remove(CLASS_NAME_COLLAPSED);
@@ -1959,7 +2071,7 @@
 
   EventHandler.on(document, EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$1, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
-    if (event.target.tagName === 'A') {
+    if (event.target.tagName === 'A' || event.delegateTarget && event.delegateTarget.tagName === 'A') {
       event.preventDefault();
     }
 
@@ -2079,7 +2191,7 @@
         return;
       } // Flow doesn't support to extend this property, but it's the most
       // effective way to apply styles to an HTMLElement
-      // $FlowFixMe
+      // $FlowFixMe[cannot-write]
 
 
       Object.assign(element.style, style);
@@ -2128,10 +2240,7 @@
 
         if (!isHTMLElement(element) || !getNodeName(element)) {
           return;
-        } // Flow doesn't support to extend this property, but it's the most
-        // effective way to apply styles to an HTMLElement
-        // $FlowFixMe
-
+        }
 
         Object.assign(element.style, style);
         Object.keys(attributes).forEach(function (attribute) {
@@ -2178,7 +2287,7 @@
         do {
           if (next && parent.isSameNode(next)) {
             return true;
-          } // $FlowFixMe: need a better way to handle this...
+          } // $FlowFixMe[prop-missing]: need a better way to handle this...
 
 
           next = next.parentNode || next.host;
@@ -2198,8 +2307,9 @@
   }
 
   function getDocumentElement(element) {
-    // $FlowFixMe: assume body is always available
-    return ((isElement$1(element) ? element.ownerDocument : element.document) || window.document).documentElement;
+    // $FlowFixMe[incompatible-return]: assume body is always available
+    return ((isElement$1(element) ? element.ownerDocument : // $FlowFixMe[prop-missing]
+    element.document) || window.document).documentElement;
   }
 
   function getParentNode(element) {
@@ -2207,12 +2317,14 @@
       return element;
     }
 
-    return (// $FlowFixMe: this is a quicker (but less type safe) way to save quite some bytes from the bundle
+    return (// this is a quicker (but less type safe) way to save quite some bytes from the bundle
+      // $FlowFixMe[incompatible-return]
+      // $FlowFixMe[prop-missing]
       element.assignedSlot || // step into the shadow DOM of the parent of a slotted node
       element.parentNode || // DOM Element detected
-      // $FlowFixMe: need a better way to handle this...
+      // $FlowFixMe[incompatible-return]: need a better way to handle this...
       element.host || // ShadowRoot detected
-      // $FlowFixMe: HTMLElement is a Node
+      // $FlowFixMe[incompatible-call]: HTMLElement is a Node
       getDocumentElement(element) // fallback
 
     );
@@ -2390,7 +2502,7 @@
   // Zooming can change the DPR, but it seems to report a value that will
   // cleanly divide the values into the appropriate subpixels.
 
-  function roundOffsets(_ref) {
+  function roundOffsetsByDPR(_ref) {
     var x = _ref.x,
         y = _ref.y;
     var win = window;
@@ -2410,11 +2522,14 @@
         offsets = _ref2.offsets,
         position = _ref2.position,
         gpuAcceleration = _ref2.gpuAcceleration,
-        adaptive = _ref2.adaptive;
+        adaptive = _ref2.adaptive,
+        roundOffsets = _ref2.roundOffsets;
 
-    var _roundOffsets = roundOffsets(offsets),
-        x = _roundOffsets.x,
-        y = _roundOffsets.y;
+    var _ref3 = roundOffsets ? roundOffsetsByDPR(offsets) : offsets,
+        _ref3$x = _ref3.x,
+        x = _ref3$x === void 0 ? 0 : _ref3$x,
+        _ref3$y = _ref3.y,
+        y = _ref3$y === void 0 ? 0 : _ref3$y;
 
     var hasX = offsets.hasOwnProperty('x');
     var hasY = offsets.hasOwnProperty('y');
@@ -2427,7 +2542,7 @@
 
       if (offsetParent === getWindow(popper)) {
         offsetParent = getDocumentElement(popper);
-      } // $FlowFixMe: force type refinement, we compare offsetParent with window above, but Flow doesn't detect it
+      } // $FlowFixMe[incompatible-cast]: force type refinement, we compare offsetParent with window above, but Flow doesn't detect it
 
       /*:: offsetParent = (offsetParent: Element); */
 
@@ -2458,13 +2573,15 @@
     return Object.assign(Object.assign({}, commonStyles), {}, (_Object$assign2 = {}, _Object$assign2[sideY] = hasY ? y + "px" : '', _Object$assign2[sideX] = hasX ? x + "px" : '', _Object$assign2.transform = '', _Object$assign2));
   }
 
-  function computeStyles(_ref3) {
-    var state = _ref3.state,
-        options = _ref3.options;
+  function computeStyles(_ref4) {
+    var state = _ref4.state,
+        options = _ref4.options;
     var _options$gpuAccelerat = options.gpuAcceleration,
         gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat,
         _options$adaptive = options.adaptive,
-        adaptive = _options$adaptive === void 0 ? true : _options$adaptive;
+        adaptive = _options$adaptive === void 0 ? true : _options$adaptive,
+        _options$roundOffsets = options.roundOffsets,
+        roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
 
     var commonStyles = {
       placement: getBasePlacement(state.placement),
@@ -2477,7 +2594,8 @@
       state.styles.popper = Object.assign(Object.assign({}, state.styles.popper), mapToStyles(Object.assign(Object.assign({}, commonStyles), {}, {
         offsets: state.modifiersData.popperOffsets,
         position: state.options.strategy,
-        adaptive: adaptive
+        adaptive: adaptive,
+        roundOffsets: roundOffsets
       })));
     }
 
@@ -2485,7 +2603,8 @@
       state.styles.arrow = Object.assign(Object.assign({}, state.styles.arrow), mapToStyles(Object.assign(Object.assign({}, commonStyles), {}, {
         offsets: state.modifiersData.arrow,
         position: 'absolute',
-        adaptive: false
+        adaptive: false,
+        roundOffsets: roundOffsets
       })));
     }
 
@@ -2681,7 +2800,7 @@
 
   function getScrollParent(node) {
     if (['html', 'body', '#document'].indexOf(getNodeName(node)) >= 0) {
-      // $FlowFixMe: assume body is always available
+      // $FlowFixMe[incompatible-return]: assume body is always available
       return node.ownerDocument.body;
     }
 
@@ -2695,7 +2814,7 @@
   /*
   given a DOM element, return the list of all scroll parents, up the list of ancesors
   until we get to the top window object. This list is what we attach scroll listeners
-  to, because if any of these parent elements scroll, we'll need to re-calculate the 
+  to, because if any of these parent elements scroll, we'll need to re-calculate the
   reference element's position.
   */
 
@@ -2709,7 +2828,7 @@
     var win = getWindow(scrollParent);
     var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
     var updatedList = list.concat(target);
-    return isBody ? updatedList : // $FlowFixMe: isBody tells us target will be an HTMLElement here
+    return isBody ? updatedList : // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
     updatedList.concat(listScrollParents(getParentNode(target)));
   }
 
@@ -2749,7 +2868,7 @@
 
     if (!isElement$1(clipperElement)) {
       return [];
-    } // $FlowFixMe: https://github.com/facebook/flow/issues/1414
+    } // $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414
 
 
     return clippingParents.filter(function (clippingParent) {
@@ -2835,11 +2954,11 @@
 
       switch (variation) {
         case start:
-          offsets[mainAxis] = Math.floor(offsets[mainAxis]) - Math.floor(reference[len] / 2 - element[len] / 2);
+          offsets[mainAxis] = offsets[mainAxis] - (reference[len] / 2 - element[len] / 2);
           break;
 
         case end:
-          offsets[mainAxis] = Math.floor(offsets[mainAxis]) + Math.ceil(reference[len] / 2 - element[len] / 2);
+          offsets[mainAxis] = offsets[mainAxis] + (reference[len] / 2 - element[len] / 2);
           break;
       }
     }
@@ -2921,15 +3040,14 @@
     var variation = getVariation(placement);
     var placements$1 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function (placement) {
       return getVariation(placement) === variation;
-    }) : basePlacements; // $FlowFixMe
-
+    }) : basePlacements;
     var allowedPlacements = placements$1.filter(function (placement) {
       return allowedAutoPlacements.indexOf(placement) >= 0;
     });
 
     if (allowedPlacements.length === 0) {
       allowedPlacements = placements$1;
-    } // $FlowFixMe: Flow seems to have problems with two array unions...
+    } // $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
 
 
     var overflows = allowedPlacements.reduce(function (acc, placement) {
@@ -3736,7 +3854,7 @@
   var EVENT_KEYDOWN_DATA_API = "keydown" + EVENT_KEY$4 + DATA_API_KEY$4;
   var EVENT_KEYUP_DATA_API = "keyup" + EVENT_KEY$4 + DATA_API_KEY$4;
   var CLASS_NAME_DISABLED = 'disabled';
-  var CLASS_NAME_SHOW$1 = 'show';
+  var CLASS_NAME_SHOW$2 = 'show';
   var CLASS_NAME_DROPUP = 'dropup';
   var CLASS_NAME_DROPEND = 'dropend';
   var CLASS_NAME_DROPSTART = 'dropstart';
@@ -3753,7 +3871,7 @@
   var PLACEMENT_RIGHT = isRTL ? 'left-start' : 'right-start';
   var PLACEMENT_LEFT = isRTL ? 'right-start' : 'left-start';
   var Default$2 = {
-    offset: 0,
+    offset: [0, 2],
     flip: true,
     boundary: 'clippingParents',
     reference: 'toggle',
@@ -3761,12 +3879,12 @@
     popperConfig: null
   };
   var DefaultType$2 = {
-    offset: '(number|string|function)',
+    offset: '(array|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
-    reference: '(string|element)',
+    reference: '(string|element|object)',
     display: 'string',
-    popperConfig: '(null|object)'
+    popperConfig: '(null|object|function)'
   };
   /**
    * ------------------------------------------------------------------------
@@ -3800,7 +3918,7 @@
         return;
       }
 
-      var isActive = this._element.classList.contains(CLASS_NAME_SHOW$1);
+      var isActive = this._element.classList.contains(CLASS_NAME_SHOW$2);
 
       Dropdown.clearMenus();
 
@@ -3812,7 +3930,7 @@
     };
 
     _proto.show = function show() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || this._menu.classList.contains(CLASS_NAME_SHOW$1)) {
+      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || this._menu.classList.contains(CLASS_NAME_SHOW$2)) {
         return;
       }
 
@@ -3827,7 +3945,9 @@
       } // Totally disable Popper for Dropdowns in Navbar
 
 
-      if (!this._inNavbar) {
+      if (this._inNavbar) {
+        Manipulator.setDataAttribute(this._menu, 'popper', 'none');
+      } else {
         if (typeof Popper === 'undefined') {
           throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
         }
@@ -3842,9 +3962,20 @@
           if (typeof this._config.reference.jquery !== 'undefined') {
             referenceElement = this._config.reference[0];
           }
+        } else if (typeof this._config.reference === 'object') {
+          referenceElement = this._config.reference;
         }
 
-        this._popper = createPopper$2(referenceElement, this._menu, this._getPopperConfig());
+        var popperConfig = this._getPopperConfig();
+
+        var isDisplayStatic = popperConfig.modifiers.find(function (modifier) {
+          return modifier.name === 'applyStyles' && modifier.enabled === false;
+        });
+        this._popper = createPopper$2(referenceElement, this._menu, popperConfig);
+
+        if (isDisplayStatic) {
+          Manipulator.setDataAttribute(this._menu, 'popper', 'static');
+        }
       } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
@@ -3863,23 +3994,22 @@
 
       this._element.setAttribute('aria-expanded', true);
 
-      this._menu.classList.toggle(CLASS_NAME_SHOW$1);
+      this._menu.classList.toggle(CLASS_NAME_SHOW$2);
 
-      this._element.classList.toggle(CLASS_NAME_SHOW$1);
+      this._element.classList.toggle(CLASS_NAME_SHOW$2);
 
-      EventHandler.trigger(parent, EVENT_SHOWN$1, relatedTarget);
+      EventHandler.trigger(this._element, EVENT_SHOWN$1, relatedTarget);
     };
 
     _proto.hide = function hide() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || !this._menu.classList.contains(CLASS_NAME_SHOW$1)) {
+      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || !this._menu.classList.contains(CLASS_NAME_SHOW$2)) {
         return;
       }
 
-      var parent = Dropdown.getParentFromElement(this._element);
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var hideEvent = EventHandler.trigger(parent, EVENT_HIDE$1, relatedTarget);
+      var hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$1, relatedTarget);
 
       if (hideEvent.defaultPrevented) {
         return;
@@ -3889,11 +4019,12 @@
         this._popper.destroy();
       }
 
-      this._menu.classList.toggle(CLASS_NAME_SHOW$1);
+      this._menu.classList.toggle(CLASS_NAME_SHOW$2);
 
-      this._element.classList.toggle(CLASS_NAME_SHOW$1);
+      this._element.classList.toggle(CLASS_NAME_SHOW$2);
 
-      EventHandler.trigger(parent, EVENT_HIDDEN$1, relatedTarget);
+      Manipulator.removeDataAttribute(this._menu, 'popper');
+      EventHandler.trigger(this._element, EVENT_HIDDEN$1, relatedTarget);
     };
 
     _proto.dispose = function dispose() {
@@ -3932,6 +4063,12 @@
     _proto._getConfig = function _getConfig(config) {
       config = _extends({}, this.constructor.Default, Manipulator.getDataAttributes(this._element), config);
       typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
+
+      if (typeof config.reference === 'object' && !isElement(config.reference) && typeof config.reference.getBoundingClientRect !== 'function') {
+        // Popper virtual elements require a getBoundingClientRect method
+        throw new TypeError(NAME$4.toUpperCase() + ": Option \"reference\" provided type \"object\" without a required \"getBoundingClientRect\" method.");
+      }
+
       return config;
     };
 
@@ -3964,26 +4101,51 @@
       return this._element.closest("." + CLASS_NAME_NAVBAR) !== null;
     };
 
+    _proto._getOffset = function _getOffset() {
+      var _this3 = this;
+
+      var offset = this._config.offset;
+
+      if (typeof offset === 'string') {
+        return offset.split(',').map(function (val) {
+          return Number.parseInt(val, 10);
+        });
+      }
+
+      if (typeof offset === 'function') {
+        return function (popperData) {
+          return offset(popperData, _this3._element);
+        };
+      }
+
+      return offset;
+    };
+
     _proto._getPopperConfig = function _getPopperConfig() {
-      var popperConfig = {
+      var defaultBsPopperConfig = {
         placement: this._getPlacement(),
         modifiers: [{
           name: 'preventOverflow',
           options: {
             altBoundary: this._config.flip,
-            rootBoundary: this._config.boundary
+            boundary: this._config.boundary
+          }
+        }, {
+          name: 'offset',
+          options: {
+            offset: this._getOffset()
           }
         }]
       }; // Disable Popper if we have a static display
 
       if (this._config.display === 'static') {
-        popperConfig.modifiers = [{
+        defaultBsPopperConfig.modifiers = [{
           name: 'applyStyles',
           enabled: false
         }];
       }
 
-      return _extends({}, popperConfig, this._config.popperConfig);
+      return _extends({}, defaultBsPopperConfig, typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig);
     } // Static
     ;
 
@@ -4019,7 +4181,6 @@
       var toggles = SelectorEngine.find(SELECTOR_DATA_TOGGLE$2);
 
       for (var i = 0, len = toggles.length; i < len; i++) {
-        var parent = Dropdown.getParentFromElement(toggles[i]);
         var context = Data.getData(toggles[i], DATA_KEY$4);
         var relatedTarget = {
           relatedTarget: toggles[i]
@@ -4035,7 +4196,7 @@
 
         var dropdownMenu = context._menu;
 
-        if (!toggles[i].classList.contains(CLASS_NAME_SHOW$1)) {
+        if (!toggles[i].classList.contains(CLASS_NAME_SHOW$2)) {
           continue;
         }
 
@@ -4043,7 +4204,7 @@
           continue;
         }
 
-        var hideEvent = EventHandler.trigger(parent, EVENT_HIDE$1, relatedTarget);
+        var hideEvent = EventHandler.trigger(toggles[i], EVENT_HIDE$1, relatedTarget);
 
         if (hideEvent.defaultPrevented) {
           continue;
@@ -4065,9 +4226,10 @@
           context._popper.destroy();
         }
 
-        dropdownMenu.classList.remove(CLASS_NAME_SHOW$1);
-        toggles[i].classList.remove(CLASS_NAME_SHOW$1);
-        EventHandler.trigger(parent, EVENT_HIDDEN$1, relatedTarget);
+        dropdownMenu.classList.remove(CLASS_NAME_SHOW$2);
+        toggles[i].classList.remove(CLASS_NAME_SHOW$2);
+        Manipulator.removeDataAttribute(dropdownMenu, 'popper');
+        EventHandler.trigger(toggles[i], EVENT_HIDDEN$1, relatedTarget);
       }
     };
 
@@ -4095,12 +4257,20 @@
       }
 
       var parent = Dropdown.getParentFromElement(this);
-      var isActive = this.classList.contains(CLASS_NAME_SHOW$1);
+      var isActive = this.classList.contains(CLASS_NAME_SHOW$2);
 
       if (event.key === ESCAPE_KEY) {
         var button = this.matches(SELECTOR_DATA_TOGGLE$2) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$2)[0];
         button.focus();
         Dropdown.clearMenus();
+        return;
+      }
+
+      if (!isActive && (event.key === ARROW_UP_KEY || event.key === ARROW_DOWN_KEY)) {
+        var _button = this.matches(SELECTOR_DATA_TOGGLE$2) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$2)[0];
+
+        _button.click();
+
         return;
       }
 
@@ -4214,8 +4384,8 @@
   var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
   var CLASS_NAME_BACKDROP = 'modal-backdrop';
   var CLASS_NAME_OPEN = 'modal-open';
-  var CLASS_NAME_FADE = 'fade';
-  var CLASS_NAME_SHOW$2 = 'show';
+  var CLASS_NAME_FADE$1 = 'fade';
+  var CLASS_NAME_SHOW$3 = 'show';
   var CLASS_NAME_STATIC = 'modal-static';
   var SELECTOR_DIALOG = '.modal-dialog';
   var SELECTOR_MODAL_BODY = '.modal-body';
@@ -4262,7 +4432,7 @@
         return;
       }
 
-      if (this._element.classList.contains(CLASS_NAME_FADE)) {
+      if (this._element.classList.contains(CLASS_NAME_FADE$1)) {
         this._isTransitioning = true;
       }
 
@@ -4321,7 +4491,7 @@
 
       this._isShown = false;
 
-      var transition = this._element.classList.contains(CLASS_NAME_FADE);
+      var transition = this._element.classList.contains(CLASS_NAME_FADE$1);
 
       if (transition) {
         this._isTransitioning = true;
@@ -4333,14 +4503,14 @@
 
       EventHandler.off(document, EVENT_FOCUSIN);
 
-      this._element.classList.remove(CLASS_NAME_SHOW$2);
+      this._element.classList.remove(CLASS_NAME_SHOW$3);
 
       EventHandler.off(this._element, EVENT_CLICK_DISMISS);
       EventHandler.off(this._dialog, EVENT_MOUSEDOWN_DISMISS);
 
       if (transition) {
         var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler.one(this._element, TRANSITION_END, function (event) {
+        EventHandler.one(this._element, 'transitionend', function (event) {
           return _this3._hideModal(event);
         });
         emulateTransitionEnd(this._element, transitionDuration);
@@ -4387,7 +4557,7 @@
     _proto._showElement = function _showElement(relatedTarget) {
       var _this4 = this;
 
-      var transition = this._element.classList.contains(CLASS_NAME_FADE);
+      var transition = this._element.classList.contains(CLASS_NAME_FADE$1);
 
       var modalBody = SelectorEngine.findOne(SELECTOR_MODAL_BODY, this._dialog);
 
@@ -4414,7 +4584,7 @@
         reflow(this._element);
       }
 
-      this._element.classList.add(CLASS_NAME_SHOW$2);
+      this._element.classList.add(CLASS_NAME_SHOW$3);
 
       if (this._config.focus) {
         this._enforceFocus();
@@ -4433,7 +4603,7 @@
 
       if (transition) {
         var transitionDuration = getTransitionDurationFromElement(this._dialog);
-        EventHandler.one(this._dialog, TRANSITION_END, transitionComplete);
+        EventHandler.one(this._dialog, 'transitionend', transitionComplete);
         emulateTransitionEnd(this._dialog, transitionDuration);
       } else {
         transitionComplete();
@@ -4515,7 +4685,7 @@
     _proto._showBackdrop = function _showBackdrop(callback) {
       var _this9 = this;
 
-      var animate = this._element.classList.contains(CLASS_NAME_FADE) ? CLASS_NAME_FADE : '';
+      var animate = this._element.classList.contains(CLASS_NAME_FADE$1) ? CLASS_NAME_FADE$1 : '';
 
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
@@ -4547,7 +4717,7 @@
           reflow(this._backdrop);
         }
 
-        this._backdrop.classList.add(CLASS_NAME_SHOW$2);
+        this._backdrop.classList.add(CLASS_NAME_SHOW$3);
 
         if (!animate) {
           callback();
@@ -4555,10 +4725,10 @@
         }
 
         var backdropTransitionDuration = getTransitionDurationFromElement(this._backdrop);
-        EventHandler.one(this._backdrop, TRANSITION_END, callback);
+        EventHandler.one(this._backdrop, 'transitionend', callback);
         emulateTransitionEnd(this._backdrop, backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
-        this._backdrop.classList.remove(CLASS_NAME_SHOW$2);
+        this._backdrop.classList.remove(CLASS_NAME_SHOW$3);
 
         var callbackRemove = function callbackRemove() {
           _this9._removeBackdrop();
@@ -4566,10 +4736,10 @@
           callback();
         };
 
-        if (this._element.classList.contains(CLASS_NAME_FADE)) {
+        if (this._element.classList.contains(CLASS_NAME_FADE$1)) {
           var _backdropTransitionDuration = getTransitionDurationFromElement(this._backdrop);
 
-          EventHandler.one(this._backdrop, TRANSITION_END, callbackRemove);
+          EventHandler.one(this._backdrop, 'transitionend', callbackRemove);
           emulateTransitionEnd(this._backdrop, _backdropTransitionDuration);
         } else {
           callbackRemove();
@@ -4597,12 +4767,12 @@
       this._element.classList.add(CLASS_NAME_STATIC);
 
       var modalTransitionDuration = getTransitionDurationFromElement(this._dialog);
-      EventHandler.off(this._element, TRANSITION_END);
-      EventHandler.one(this._element, TRANSITION_END, function () {
+      EventHandler.off(this._element, 'transitionend');
+      EventHandler.one(this._element, 'transitionend', function () {
         _this10._element.classList.remove(CLASS_NAME_STATIC);
 
         if (!isModalOverflowing) {
-          EventHandler.one(_this10._element, TRANSITION_END, function () {
+          EventHandler.one(_this10._element, 'transitionend', function () {
             _this10._element.style.overflowY = '';
           });
           emulateTransitionEnd(_this10._element, modalTransitionDuration);
@@ -4643,60 +4813,50 @@
       var _this11 = this;
 
       if (this._isBodyOverflowing) {
-        // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
-        //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-        // Adjust fixed content padding
-        SelectorEngine.find(SELECTOR_FIXED_CONTENT).forEach(function (element) {
-          var actualPadding = element.style.paddingRight;
-          var calculatedPadding = window.getComputedStyle(element)['padding-right'];
-          Manipulator.setDataAttribute(element, 'padding-right', actualPadding);
-          element.style.paddingRight = Number.parseFloat(calculatedPadding) + _this11._scrollbarWidth + "px";
-        }); // Adjust sticky content margin
+        this._setElementAttributes(SELECTOR_FIXED_CONTENT, 'paddingRight', function (calculatedValue) {
+          return calculatedValue + _this11._scrollbarWidth;
+        });
 
-        SelectorEngine.find(SELECTOR_STICKY_CONTENT).forEach(function (element) {
-          var actualMargin = element.style.marginRight;
-          var calculatedMargin = window.getComputedStyle(element)['margin-right'];
-          Manipulator.setDataAttribute(element, 'margin-right', actualMargin);
-          element.style.marginRight = Number.parseFloat(calculatedMargin) - _this11._scrollbarWidth + "px";
-        }); // Adjust body padding
+        this._setElementAttributes(SELECTOR_STICKY_CONTENT, 'marginRight', function (calculatedValue) {
+          return calculatedValue - _this11._scrollbarWidth;
+        });
 
-        var actualPadding = document.body.style.paddingRight;
-        var calculatedPadding = window.getComputedStyle(document.body)['padding-right'];
-        Manipulator.setDataAttribute(document.body, 'padding-right', actualPadding);
-        document.body.style.paddingRight = Number.parseFloat(calculatedPadding) + this._scrollbarWidth + "px";
+        this._setElementAttributes('body', 'paddingRight', function (calculatedValue) {
+          return calculatedValue + _this11._scrollbarWidth;
+        });
       }
 
       document.body.classList.add(CLASS_NAME_OPEN);
     };
 
+    _proto._setElementAttributes = function _setElementAttributes(selector, styleProp, callback) {
+      SelectorEngine.find(selector).forEach(function (element) {
+        var actualValue = element.style[styleProp];
+        var calculatedValue = window.getComputedStyle(element)[styleProp];
+        Manipulator.setDataAttribute(element, styleProp, actualValue);
+        element.style[styleProp] = callback(Number.parseFloat(calculatedValue)) + 'px';
+      });
+    };
+
     _proto._resetScrollbar = function _resetScrollbar() {
-      // Restore fixed content padding
-      SelectorEngine.find(SELECTOR_FIXED_CONTENT).forEach(function (element) {
-        var padding = Manipulator.getDataAttribute(element, 'padding-right');
+      this._resetElementAttributes(SELECTOR_FIXED_CONTENT, 'paddingRight');
 
-        if (typeof padding !== 'undefined') {
-          Manipulator.removeDataAttribute(element, 'padding-right');
-          element.style.paddingRight = padding;
+      this._resetElementAttributes(SELECTOR_STICKY_CONTENT, 'marginRight');
+
+      this._resetElementAttributes('body', 'paddingRight');
+    };
+
+    _proto._resetElementAttributes = function _resetElementAttributes(selector, styleProp) {
+      SelectorEngine.find(selector).forEach(function (element) {
+        var value = Manipulator.getDataAttribute(element, styleProp);
+
+        if (typeof value === 'undefined' && element === document.body) {
+          element.style[styleProp] = '';
+        } else {
+          Manipulator.removeDataAttribute(element, styleProp);
+          element.style[styleProp] = value;
         }
-      }); // Restore sticky content and navbar-toggler margin
-
-      SelectorEngine.find("" + SELECTOR_STICKY_CONTENT).forEach(function (element) {
-        var margin = Manipulator.getDataAttribute(element, 'margin-right');
-
-        if (typeof margin !== 'undefined') {
-          Manipulator.removeDataAttribute(element, 'margin-right');
-          element.style.marginRight = margin;
-        }
-      }); // Restore body padding
-
-      var padding = Manipulator.getDataAttribute(document.body, 'padding-right');
-
-      if (typeof padding === 'undefined') {
-        document.body.style.paddingRight = '';
-      } else {
-        Manipulator.removeDataAttribute(document.body, 'padding-right');
-        document.body.style.paddingRight = padding;
-      }
+      });
     };
 
     _proto._getScrollbarWidth = function _getScrollbarWidth() {
@@ -4780,7 +4940,7 @@
       data = new Modal(target, config);
     }
 
-    data.show(this);
+    data.toggle(this);
   });
   /**
    * ------------------------------------------------------------------------
@@ -4793,7 +4953,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): util/sanitizer.js
+   * Bootstrap (v5.0.0-beta2): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4819,7 +4979,7 @@
 
     if (allowedAttributeList.includes(attrName)) {
       if (uriAttrs.has(attrName)) {
-        return Boolean(attr.nodeValue.match(SAFE_URL_PATTERN) || attr.nodeValue.match(DATA_URL_PATTERN));
+        return Boolean(SAFE_URL_PATTERN.test(attr.nodeValue) || DATA_URL_PATTERN.test(attr.nodeValue));
       }
 
       return true;
@@ -4830,7 +4990,7 @@
     }); // Check if a regular expression validates the attribute.
 
     for (var i = 0, len = regExp.length; i < len; i++) {
-      if (attrName.match(regExp[i])) {
+      if (regExp[i].test(attrName)) {
         return true;
       }
     }
@@ -4939,14 +5099,15 @@
     html: 'boolean',
     selector: '(string|boolean)',
     placement: '(string|function)',
+    offset: '(array|string|function)',
     container: '(string|element|boolean)',
-    fallbackPlacements: '(null|array)',
+    fallbackPlacements: 'array',
     boundary: '(string|element)',
     customClass: '(string|function)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
     allowList: 'object',
-    popperConfig: '(null|object)'
+    popperConfig: '(null|object|function)'
   };
   var AttachmentMap = {
     AUTO: 'auto',
@@ -4964,8 +5125,9 @@
     html: false,
     selector: false,
     placement: 'top',
+    offset: [0, 0],
     container: false,
-    fallbackPlacements: null,
+    fallbackPlacements: ['top', 'right', 'bottom', 'left'],
     boundary: 'clippingParents',
     customClass: '',
     sanitize: true,
@@ -4985,9 +5147,9 @@
     MOUSEENTER: "mouseenter" + EVENT_KEY$6,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$6
   };
-  var CLASS_NAME_FADE$1 = 'fade';
+  var CLASS_NAME_FADE$2 = 'fade';
   var CLASS_NAME_MODAL = 'modal';
-  var CLASS_NAME_SHOW$3 = 'show';
+  var CLASS_NAME_SHOW$4 = 'show';
   var HOVER_STATE_SHOW = 'show';
   var HOVER_STATE_OUT = 'out';
   var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
@@ -5049,13 +5211,7 @@
       }
 
       if (event) {
-        var dataKey = this.constructor.DATA_KEY;
-        var context = Data.getData(event.delegateTarget, dataKey);
-
-        if (!context) {
-          context = new this.constructor(event.delegateTarget, this._getDelegateConfig());
-          Data.setData(event.delegateTarget, dataKey, context);
-        }
+        var context = this._initializeOnDelegatedTarget(event);
 
         context._activeTrigger.click = !context._activeTrigger.click;
 
@@ -5065,7 +5221,7 @@
           context._leave(null, context);
         }
       } else {
-        if (this.getTipElement().classList.contains(CLASS_NAME_SHOW$3)) {
+        if (this.getTipElement().classList.contains(CLASS_NAME_SHOW$4)) {
           this._leave(null, this);
 
           return;
@@ -5080,7 +5236,7 @@
       EventHandler.off(this._element, this.constructor.EVENT_KEY);
       EventHandler.off(this._element.closest("." + CLASS_NAME_MODAL), 'hide.bs.modal', this._hideModalHandler);
 
-      if (this.tip) {
+      if (this.tip && this.tip.parentNode) {
         this.tip.parentNode.removeChild(this.tip);
       }
 
@@ -5107,81 +5263,83 @@
         throw new Error('Please use show on visible elements');
       }
 
-      if (this.isWithContent() && this._isEnabled) {
-        var showEvent = EventHandler.trigger(this._element, this.constructor.Event.SHOW);
-        var shadowRoot = findShadowRoot(this._element);
-        var isInTheDom = shadowRoot === null ? this._element.ownerDocument.documentElement.contains(this._element) : shadowRoot.contains(this._element);
+      if (!(this.isWithContent() && this._isEnabled)) {
+        return;
+      }
 
-        if (showEvent.defaultPrevented || !isInTheDom) {
-          return;
+      var showEvent = EventHandler.trigger(this._element, this.constructor.Event.SHOW);
+      var shadowRoot = findShadowRoot(this._element);
+      var isInTheDom = shadowRoot === null ? this._element.ownerDocument.documentElement.contains(this._element) : shadowRoot.contains(this._element);
+
+      if (showEvent.defaultPrevented || !isInTheDom) {
+        return;
+      }
+
+      var tip = this.getTipElement();
+      var tipId = getUID(this.constructor.NAME);
+      tip.setAttribute('id', tipId);
+
+      this._element.setAttribute('aria-describedby', tipId);
+
+      this.setContent();
+
+      if (this.config.animation) {
+        tip.classList.add(CLASS_NAME_FADE$2);
+      }
+
+      var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this._element) : this.config.placement;
+
+      var attachment = this._getAttachment(placement);
+
+      this._addAttachmentClass(attachment);
+
+      var container = this._getContainer();
+
+      Data.setData(tip, this.constructor.DATA_KEY, this);
+
+      if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
+        container.appendChild(tip);
+      }
+
+      EventHandler.trigger(this._element, this.constructor.Event.INSERTED);
+      this._popper = createPopper$2(this._element, tip, this._getPopperConfig(attachment));
+      tip.classList.add(CLASS_NAME_SHOW$4);
+      var customClass = typeof this.config.customClass === 'function' ? this.config.customClass() : this.config.customClass;
+
+      if (customClass) {
+        var _tip$classList;
+
+        (_tip$classList = tip.classList).add.apply(_tip$classList, customClass.split(' '));
+      } // If this is a touch-enabled device we add extra
+      // empty mouseover listeners to the body's immediate children;
+      // only needed because of broken event delegation on iOS
+      // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+
+
+      if ('ontouchstart' in document.documentElement) {
+        var _ref;
+
+        (_ref = []).concat.apply(_ref, document.body.children).forEach(function (element) {
+          EventHandler.on(element, 'mouseover', noop());
+        });
+      }
+
+      var complete = function complete() {
+        var prevHoverState = _this2._hoverState;
+        _this2._hoverState = null;
+        EventHandler.trigger(_this2._element, _this2.constructor.Event.SHOWN);
+
+        if (prevHoverState === HOVER_STATE_OUT) {
+          _this2._leave(null, _this2);
         }
+      };
 
-        var tip = this.getTipElement();
-        var tipId = getUID(this.constructor.NAME);
-        tip.setAttribute('id', tipId);
-
-        this._element.setAttribute('aria-describedby', tipId);
-
-        this.setContent();
-
-        if (this.config.animation) {
-          tip.classList.add(CLASS_NAME_FADE$1);
-        }
-
-        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this._element) : this.config.placement;
-
-        var attachment = this._getAttachment(placement);
-
-        this._addAttachmentClass(attachment);
-
-        var container = this._getContainer();
-
-        Data.setData(tip, this.constructor.DATA_KEY, this);
-
-        if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
-          container.appendChild(tip);
-        }
-
-        EventHandler.trigger(this._element, this.constructor.Event.INSERTED);
-        this._popper = createPopper$2(this._element, tip, this._getPopperConfig(attachment));
-        tip.classList.add(CLASS_NAME_SHOW$3);
-        var customClass = typeof this.config.customClass === 'function' ? this.config.customClass() : this.config.customClass;
-
-        if (customClass) {
-          var _tip$classList;
-
-          (_tip$classList = tip.classList).add.apply(_tip$classList, customClass.split(' '));
-        } // If this is a touch-enabled device we add extra
-        // empty mouseover listeners to the body's immediate children;
-        // only needed because of broken event delegation on iOS
-        // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
-
-
-        if ('ontouchstart' in document.documentElement) {
-          var _ref;
-
-          (_ref = []).concat.apply(_ref, document.body.children).forEach(function (element) {
-            EventHandler.on(element, 'mouseover', noop());
-          });
-        }
-
-        var complete = function complete() {
-          var prevHoverState = _this2._hoverState;
-          _this2._hoverState = null;
-          EventHandler.trigger(_this2._element, _this2.constructor.Event.SHOWN);
-
-          if (prevHoverState === HOVER_STATE_OUT) {
-            _this2._leave(null, _this2);
-          }
-        };
-
-        if (this.tip.classList.contains(CLASS_NAME_FADE$1)) {
-          var transitionDuration = getTransitionDurationFromElement(this.tip);
-          EventHandler.one(this.tip, TRANSITION_END, complete);
-          emulateTransitionEnd(this.tip, transitionDuration);
-        } else {
-          complete();
-        }
+      if (this.tip.classList.contains(CLASS_NAME_FADE$2)) {
+        var transitionDuration = getTransitionDurationFromElement(this.tip);
+        EventHandler.one(this.tip, 'transitionend', complete);
+        emulateTransitionEnd(this.tip, transitionDuration);
+      } else {
+        complete();
       }
     };
 
@@ -5218,7 +5376,7 @@
         return;
       }
 
-      tip.classList.remove(CLASS_NAME_SHOW$3); // If this is a touch-enabled device we remove the extra
+      tip.classList.remove(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
@@ -5233,9 +5391,9 @@
       this._activeTrigger[TRIGGER_FOCUS] = false;
       this._activeTrigger[TRIGGER_HOVER] = false;
 
-      if (this.tip.classList.contains(CLASS_NAME_FADE$1)) {
+      if (this.tip.classList.contains(CLASS_NAME_FADE$2)) {
         var transitionDuration = getTransitionDurationFromElement(tip);
-        EventHandler.one(tip, TRANSITION_END, complete);
+        EventHandler.one(tip, 'transitionend', complete);
         emulateTransitionEnd(tip, transitionDuration);
       } else {
         complete();
@@ -5269,7 +5427,7 @@
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
       this.setElementContent(SelectorEngine.findOne(SELECTOR_TOOLTIP_INNER, tip), this.getTitle());
-      tip.classList.remove(CLASS_NAME_FADE$1, CLASS_NAME_SHOW$3);
+      tip.classList.remove(CLASS_NAME_FADE$2, CLASS_NAME_SHOW$4);
     };
 
     _proto.setElementContent = function setElementContent(element, content) {
@@ -5329,26 +5487,58 @@
     } // Private
     ;
 
-    _proto._getPopperConfig = function _getPopperConfig(attachment) {
-      var _this4 = this;
+    _proto._initializeOnDelegatedTarget = function _initializeOnDelegatedTarget(event, context) {
+      var dataKey = this.constructor.DATA_KEY;
+      context = context || Data.getData(event.delegateTarget, dataKey);
 
-      var flipModifier = {
-        name: 'flip',
-        options: {
-          altBoundary: true
-        }
-      };
-
-      if (this.config.fallbackPlacements) {
-        flipModifier.options.fallbackPlacements = this.config.fallbackPlacements;
+      if (!context) {
+        context = new this.constructor(event.delegateTarget, this._getDelegateConfig());
+        Data.setData(event.delegateTarget, dataKey, context);
       }
 
-      var defaultBsConfig = {
+      return context;
+    };
+
+    _proto._getOffset = function _getOffset() {
+      var _this4 = this;
+
+      var offset = this.config.offset;
+
+      if (typeof offset === 'string') {
+        return offset.split(',').map(function (val) {
+          return Number.parseInt(val, 10);
+        });
+      }
+
+      if (typeof offset === 'function') {
+        return function (popperData) {
+          return offset(popperData, _this4._element);
+        };
+      }
+
+      return offset;
+    };
+
+    _proto._getPopperConfig = function _getPopperConfig(attachment) {
+      var _this5 = this;
+
+      var defaultBsPopperConfig = {
         placement: attachment,
-        modifiers: [flipModifier, {
+        modifiers: [{
+          name: 'flip',
+          options: {
+            altBoundary: true,
+            fallbackPlacements: this.config.fallbackPlacements
+          }
+        }, {
+          name: 'offset',
+          options: {
+            offset: this._getOffset()
+          }
+        }, {
           name: 'preventOverflow',
           options: {
-            rootBoundary: this.config.boundary
+            boundary: this.config.boundary
           }
         }, {
           name: 'arrow',
@@ -5360,16 +5550,16 @@
           enabled: true,
           phase: 'afterWrite',
           fn: function fn(data) {
-            return _this4._handlePopperPlacementChange(data);
+            return _this5._handlePopperPlacementChange(data);
           }
         }],
         onFirstUpdate: function onFirstUpdate(data) {
           if (data.options.placement !== data.placement) {
-            _this4._handlePopperPlacementChange(data);
+            _this5._handlePopperPlacementChange(data);
           }
         }
       };
-      return _extends({}, defaultBsConfig, this.config.popperConfig);
+      return _extends({}, defaultBsPopperConfig, typeof this.config.popperConfig === 'function' ? this.config.popperConfig(defaultBsPopperConfig) : this.config.popperConfig);
     };
 
     _proto._addAttachmentClass = function _addAttachmentClass(attachment) {
@@ -5393,29 +5583,29 @@
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this5 = this;
+      var _this6 = this;
 
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          EventHandler.on(_this5._element, _this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
-            return _this5.toggle(event);
+          EventHandler.on(_this6._element, _this6.constructor.Event.CLICK, _this6.config.selector, function (event) {
+            return _this6.toggle(event);
           });
         } else if (trigger !== TRIGGER_MANUAL) {
-          var eventIn = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
-          var eventOut = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
-          EventHandler.on(_this5._element, eventIn, _this5.config.selector, function (event) {
-            return _this5._enter(event);
+          var eventIn = trigger === TRIGGER_HOVER ? _this6.constructor.Event.MOUSEENTER : _this6.constructor.Event.FOCUSIN;
+          var eventOut = trigger === TRIGGER_HOVER ? _this6.constructor.Event.MOUSELEAVE : _this6.constructor.Event.FOCUSOUT;
+          EventHandler.on(_this6._element, eventIn, _this6.config.selector, function (event) {
+            return _this6._enter(event);
           });
-          EventHandler.on(_this5._element, eventOut, _this5.config.selector, function (event) {
-            return _this5._leave(event);
+          EventHandler.on(_this6._element, eventOut, _this6.config.selector, function (event) {
+            return _this6._leave(event);
           });
         }
       });
 
       this._hideModalHandler = function () {
-        if (_this5._element) {
-          _this5.hide();
+        if (_this6._element) {
+          _this6.hide();
         }
       };
 
@@ -5448,19 +5638,13 @@
     };
 
     _proto._enter = function _enter(event, context) {
-      var dataKey = this.constructor.DATA_KEY;
-      context = context || Data.getData(event.delegateTarget, dataKey);
-
-      if (!context) {
-        context = new this.constructor(event.delegateTarget, this._getDelegateConfig());
-        Data.setData(event.delegateTarget, dataKey, context);
-      }
+      context = this._initializeOnDelegatedTarget(event, context);
 
       if (event) {
         context._activeTrigger[event.type === 'focusin' ? TRIGGER_FOCUS : TRIGGER_HOVER] = true;
       }
 
-      if (context.getTipElement().classList.contains(CLASS_NAME_SHOW$3) || context._hoverState === HOVER_STATE_SHOW) {
+      if (context.getTipElement().classList.contains(CLASS_NAME_SHOW$4) || context._hoverState === HOVER_STATE_SHOW) {
         context._hoverState = HOVER_STATE_SHOW;
         return;
       }
@@ -5481,13 +5665,7 @@
     };
 
     _proto._leave = function _leave(event, context) {
-      var dataKey = this.constructor.DATA_KEY;
-      context = context || Data.getData(event.delegateTarget, dataKey);
-
-      if (!context) {
-        context = new this.constructor(event.delegateTarget, this._getDelegateConfig());
-        Data.setData(event.delegateTarget, dataKey, context);
-      }
+      context = this._initializeOnDelegatedTarget(event, context);
 
       if (event) {
         context._activeTrigger[event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER] = false;
@@ -5684,6 +5862,7 @@
 
   var Default$5 = _extends({}, Tooltip.Default, {
     placement: 'right',
+    offset: [0, 8],
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
@@ -5705,8 +5884,8 @@
     MOUSEENTER: "mouseenter" + EVENT_KEY$7,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$7
   };
-  var CLASS_NAME_FADE$2 = 'fade';
-  var CLASS_NAME_SHOW$4 = 'show';
+  var CLASS_NAME_FADE$3 = 'fade';
+  var CLASS_NAME_SHOW$5 = 'show';
   var SELECTOR_TITLE = '.popover-header';
   var SELECTOR_CONTENT = '.popover-body';
   /**
@@ -5741,7 +5920,7 @@
       }
 
       this.setElementContent(SelectorEngine.findOne(SELECTOR_CONTENT, tip), content);
-      tip.classList.remove(CLASS_NAME_FADE$2, CLASS_NAME_SHOW$4);
+      tip.classList.remove(CLASS_NAME_FADE$3, CLASS_NAME_SHOW$5);
     } // Private
     ;
 
@@ -5794,8 +5973,8 @@
 
     _createClass(Popover, null, [{
       key: "Default",
-      // Getters
-      get: function get() {
+      get: // Getters
+      function get() {
         return Default$5;
       }
     }, {
@@ -5891,8 +6070,8 @@
       _this._targets = [];
       _this._activeTarget = null;
       _this._scrollHeight = 0;
-      EventHandler.on(_this._scrollElement, EVENT_SCROLL, function (event) {
-        return _this._process(event);
+      EventHandler.on(_this._scrollElement, EVENT_SCROLL, function () {
+        return _this._process();
       });
 
       _this.refresh();
@@ -6141,8 +6320,8 @@
   var CLASS_NAME_DROPDOWN_MENU = 'dropdown-menu';
   var CLASS_NAME_ACTIVE$3 = 'active';
   var CLASS_NAME_DISABLED$1 = 'disabled';
-  var CLASS_NAME_FADE$3 = 'fade';
-  var CLASS_NAME_SHOW$5 = 'show';
+  var CLASS_NAME_FADE$4 = 'fade';
+  var CLASS_NAME_SHOW$6 = 'show';
   var SELECTOR_DROPDOWN$1 = '.dropdown';
   var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
   var SELECTOR_ACTIVE$1 = '.active';
@@ -6184,14 +6363,9 @@
         previous = previous[previous.length - 1];
       }
 
-      var hideEvent = null;
-
-      if (previous) {
-        hideEvent = EventHandler.trigger(previous, EVENT_HIDE$3, {
-          relatedTarget: this._element
-        });
-      }
-
+      var hideEvent = previous ? EventHandler.trigger(previous, EVENT_HIDE$3, {
+        relatedTarget: this._element
+      }) : null;
       var showEvent = EventHandler.trigger(this._element, EVENT_SHOW$3, {
         relatedTarget: previous
       });
@@ -6224,7 +6398,7 @@
 
       var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? SelectorEngine.find(SELECTOR_ACTIVE_UL, container) : SelectorEngine.children(container, SELECTOR_ACTIVE$1);
       var active = activeElements[0];
-      var isTransitioning = callback && active && active.classList.contains(CLASS_NAME_FADE$3);
+      var isTransitioning = callback && active && active.classList.contains(CLASS_NAME_FADE$4);
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, callback);
@@ -6232,8 +6406,8 @@
 
       if (active && isTransitioning) {
         var transitionDuration = getTransitionDurationFromElement(active);
-        active.classList.remove(CLASS_NAME_SHOW$5);
-        EventHandler.one(active, TRANSITION_END, complete);
+        active.classList.remove(CLASS_NAME_SHOW$6);
+        EventHandler.one(active, 'transitionend', complete);
         emulateTransitionEnd(active, transitionDuration);
       } else {
         complete();
@@ -6262,8 +6436,8 @@
 
       reflow(element);
 
-      if (element.classList.contains(CLASS_NAME_FADE$3)) {
-        element.classList.add(CLASS_NAME_SHOW$5);
+      if (element.classList.contains(CLASS_NAME_FADE$4)) {
+        element.classList.add(CLASS_NAME_SHOW$6);
       }
 
       if (element.parentNode && element.parentNode.classList.contains(CLASS_NAME_DROPDOWN_MENU)) {
@@ -6300,8 +6474,8 @@
 
     _createClass(Tab, null, [{
       key: "DATA_KEY",
-      // Getters
-      get: function get() {
+      get: // Getters
+      function get() {
         return DATA_KEY$9;
       }
     }]);
@@ -6343,9 +6517,9 @@
   var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$a;
   var EVENT_SHOW$4 = "show" + EVENT_KEY$a;
   var EVENT_SHOWN$4 = "shown" + EVENT_KEY$a;
-  var CLASS_NAME_FADE$4 = 'fade';
+  var CLASS_NAME_FADE$5 = 'fade';
   var CLASS_NAME_HIDE = 'hide';
-  var CLASS_NAME_SHOW$6 = 'show';
+  var CLASS_NAME_SHOW$7 = 'show';
   var CLASS_NAME_SHOWING = 'showing';
   var DefaultType$7 = {
     animation: 'boolean',
@@ -6395,13 +6569,13 @@
       this._clearTimeout();
 
       if (this._config.animation) {
-        this._element.classList.add(CLASS_NAME_FADE$4);
+        this._element.classList.add(CLASS_NAME_FADE$5);
       }
 
       var complete = function complete() {
         _this2._element.classList.remove(CLASS_NAME_SHOWING);
 
-        _this2._element.classList.add(CLASS_NAME_SHOW$6);
+        _this2._element.classList.add(CLASS_NAME_SHOW$7);
 
         EventHandler.trigger(_this2._element, EVENT_SHOWN$4);
 
@@ -6420,7 +6594,7 @@
 
       if (this._config.animation) {
         var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler.one(this._element, TRANSITION_END, complete);
+        EventHandler.one(this._element, 'transitionend', complete);
         emulateTransitionEnd(this._element, transitionDuration);
       } else {
         complete();
@@ -6430,7 +6604,7 @@
     _proto.hide = function hide() {
       var _this3 = this;
 
-      if (!this._element.classList.contains(CLASS_NAME_SHOW$6)) {
+      if (!this._element.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
       }
 
@@ -6446,11 +6620,11 @@
         EventHandler.trigger(_this3._element, EVENT_HIDDEN$4);
       };
 
-      this._element.classList.remove(CLASS_NAME_SHOW$6);
+      this._element.classList.remove(CLASS_NAME_SHOW$7);
 
       if (this._config.animation) {
         var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler.one(this._element, TRANSITION_END, complete);
+        EventHandler.one(this._element, 'transitionend', complete);
         emulateTransitionEnd(this._element, transitionDuration);
       } else {
         complete();
@@ -6460,8 +6634,8 @@
     _proto.dispose = function dispose() {
       this._clearTimeout();
 
-      if (this._element.classList.contains(CLASS_NAME_SHOW$6)) {
-        this._element.classList.remove(CLASS_NAME_SHOW$6);
+      if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+        this._element.classList.remove(CLASS_NAME_SHOW$7);
       }
 
       EventHandler.off(this._element, EVENT_CLICK_DISMISS$1);
@@ -6855,7 +7029,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): index.umd.js
+   * Bootstrap (v5.0.0-beta2): index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

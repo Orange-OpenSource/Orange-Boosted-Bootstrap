@@ -1,18 +1,18 @@
 /*!
-  * Boosted v5.0.0-beta1 (https://boosted.orange.com/)
-  * Copyright 2015-2020 The Boosted Authors
-  * Copyright 2015-2020 Orange
+  * Boosted v5.0.0-beta2 (https://boosted.orange.com/)
+  * Copyright 2015-2021 The Boosted Authors
+  * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v5.0.0-beta1 (https://boosted.orange.com/)
-  * Copyright 2011-2020 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
+  * Bootstrap carousel.js v5.0.0-beta2 (https://boosted.orange.com/)
+  * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./dom/selector-engine.js')) :
-  typeof define === 'function' && define.amd ? define(['./dom/data', './dom/event-handler', './dom/manipulator', './dom/selector-engine'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Carousel = factory(global.Data, global.EventHandler, global.Manipulator, global.SelectorEngine));
-}(this, (function (Data, EventHandler, Manipulator, SelectorEngine) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/manipulator.js'), require('./dom/selector-engine.js'), require('./base-component.js')) :
+  typeof define === 'function' && define.amd ? define(['./dom/data', './dom/event-handler', './dom/manipulator', './dom/selector-engine', './base-component'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Carousel = factory(global.Data, global.EventHandler, global.Manipulator, global.SelectorEngine, global.Base));
+}(this, (function (Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -20,6 +20,7 @@
   var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
   var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
   var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -58,12 +59,22 @@
   function _inheritsLoose(subClass, superClass) {
     subClass.prototype = Object.create(superClass.prototype);
     subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
+
+    _setPrototypeOf(subClass, superClass);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+
+    return _setPrototypeOf(o, p);
   }
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): util/index.js
+   * Bootstrap (v5.0.0-beta2): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -231,47 +242,6 @@
    * ------------------------------------------------------------------------
    */
 
-  var VERSION = '5.0.0-beta1';
-
-  var BaseComponent = /*#__PURE__*/function () {
-    function BaseComponent(element) {
-      if (!element) {
-        return;
-      }
-
-      this._element = element;
-      Data__default['default'].setData(element, this.constructor.DATA_KEY, this);
-    }
-
-    var _proto = BaseComponent.prototype;
-
-    _proto.dispose = function dispose() {
-      Data__default['default'].removeData(this._element, this.constructor.DATA_KEY);
-      this._element = null;
-    }
-    /** Static */
-    ;
-
-    BaseComponent.getInstance = function getInstance(element) {
-      return Data__default['default'].getData(element, this.DATA_KEY);
-    };
-
-    _createClass(BaseComponent, null, [{
-      key: "VERSION",
-      get: function get() {
-        return VERSION;
-      }
-    }]);
-
-    return BaseComponent;
-  }();
-
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
   var NAME = 'carousel';
   var DATA_KEY = 'bs.carousel';
   var EVENT_KEY = "." + DATA_KEY;
@@ -322,6 +292,10 @@
   var CLASS_NAME_NEXT = 'carousel-item-next';
   var CLASS_NAME_PREV = 'carousel-item-prev';
   var CLASS_NAME_POINTER_EVENT = 'pointer-event';
+  var CLASS_NAME_PAUSED = 'is-paused'; // Boosted mod: used for progress indicators
+
+  var CLASS_NAME_DONE = 'is-done'; // Boosted mod: used for progress indicators
+
   var SELECTOR_ACTIVE = '.active';
   var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
   var SELECTOR_ITEM = '.carousel-item';
@@ -331,6 +305,12 @@
   var SELECTOR_INDICATOR = '[data-bs-target]';
   var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
   var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+  var SELECTOR_CONTROL_PREV = '.carousel-control-prev'; // Boosted mod
+
+  var SELECTOR_CONTROL_NEXT = '.carousel-control-next'; // Boosted mod
+
+  var PREFIX_CUSTOM_PROPS = 'o-'; // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
+
   var POINTER_TYPE_TOUCH = 'touch';
   var POINTER_TYPE_PEN = 'pen';
   /**
@@ -389,6 +369,12 @@
     };
 
     _proto.pause = function pause(event) {
+      // Boosted mod: reset the animation on progress indicator
+      if (this._indicatorsElement) {
+        this._element.classList.add(CLASS_NAME_PAUSED);
+      } // End mod
+
+
       if (!event) {
         this._isPaused = true;
       }
@@ -403,6 +389,12 @@
     };
 
     _proto.cycle = function cycle(event) {
+      // Boosted mod: restart the animation on progress indicator
+      if (this._indicatorsElement) {
+        this._element.classList.remove(CLASS_NAME_PAUSED);
+      } // End mod
+
+
       if (!event) {
         this._isPaused = false;
       }
@@ -424,7 +416,13 @@
 
       this._activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
-      var activeIndex = this._getItemIndex(this._activeElement);
+      var activeIndex = this._getItemIndex(this._activeElement); // Boosted mod: restart the animation on progress indicator
+
+
+      if (this._indicatorsElement) {
+        this._element.classList.remove(CLASS_NAME_DONE);
+      } // End mod
+
 
       if (index > this._items.length - 1 || index < 0) {
         return;
@@ -616,7 +614,27 @@
           this.next();
         }
       }
+    } // Boosted mod: handle prev/next controls states
+    ;
+
+    _proto._disableControl = function _disableControl(element) {
+      if (element.nodeName === 'BUTTON') {
+        element.disabled = true;
+      } else {
+        element.setAttribute('aria-disabled', true);
+        element.setAttribute('tabindex', '-1');
+      }
     };
+
+    _proto._enableControl = function _enableControl(element) {
+      if (element.nodeName === 'BUTTON') {
+        element.disabled = false;
+      } else {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('tabindex');
+      }
+    } // End mod
+    ;
 
     _proto._getItemIndex = function _getItemIndex(element) {
       this._items = element && element.parentNode ? SelectorEngine__default['default'].find(SELECTOR_ITEM, element.parentNode) : [];
@@ -630,11 +648,24 @@
       var activeIndex = this._getItemIndex(activeElement);
 
       var lastItemIndex = this._items.length - 1;
-      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
+      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex; // Boosted mod: progress indicators animation when wrapping is disabled
 
-      if (isGoingToWrap && !this._config.wrap) {
-        return activeElement;
-      }
+      if (!this._config.wrap) {
+        if (isGoingToWrap) {
+          // Reset the animation on last progress indicator when last slide is active
+          if (isNextDirection && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
+            this._element.classList.add(CLASS_NAME_DONE);
+          }
+
+          return activeElement;
+        } // Restart animation otherwise
+
+
+        if (this._indicatorsElement) {
+          this._element.classList.remove(CLASS_NAME_DONE);
+        }
+      } // End mod
+
 
       var delta = direction === DIRECTION_PREV ? -1 : 1;
       var itemIndex = (activeIndex + delta) % this._items.length;
@@ -685,7 +716,16 @@
         this._config.interval = elementInterval;
       } else {
         this._config.interval = this._config.defaultInterval || this._config.interval;
-      }
+      } // Boosted mod: set progress indicator's interval as custom property
+
+
+      if (this._indicatorsElement && this._config.interval !== Default.interval) {
+        var currentIndex = this._getItemIndex(element);
+
+        var currentIndicator = SelectorEngine__default['default'].findOne(":nth-child(" + (currentIndex + 1) + ")", this._indicatorsElement);
+        currentIndicator.style.setProperty("--" + PREFIX_CUSTOM_PROPS + "carousel-interval", this._config.interval + "ms");
+      } // End mod
+
     };
 
     _proto._slide = function _slide(direction, element) {
@@ -728,7 +768,23 @@
 
       this._setActiveIndicatorElement(nextElement);
 
-      this._activeElement = nextElement;
+      this._activeElement = nextElement; // Boosted mod: enable/disable prev/next controls when wrap=false
+
+      if (!this._config.wrap) {
+        var prevControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_PREV, this._element);
+        var nextControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_NEXT, this._element);
+
+        this._enableControl(prevControl);
+
+        this._enableControl(nextControl);
+
+        if (nextElementIndex === 0) {
+          this._disableControl(prevControl);
+        } else if (nextElementIndex === this._items.length - 1) {
+          this._disableControl(nextControl);
+        }
+      } // End mod
+
 
       if (this._element.classList.contains(CLASS_NAME_SLIDE)) {
         nextElement.classList.add(orderClassName);
