@@ -87,7 +87,7 @@
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "storybook:build": "build-storybook",
-    "chromatic": "npx chromatic --project-token 0mxgkrqwnuck"
+    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN"
   },
   "style": "dist/css/boosted.css",
   "sass": "scss/boosted.scss",
