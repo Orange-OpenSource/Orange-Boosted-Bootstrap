@@ -67,11 +67,11 @@ jobs:
 
       - name: Generate HTML accessibility results
         run: npm run docs-pa11y-html
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
+        if: failure() && (github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y')))
 
       - name: Upload accessibility results
         uses: actions/upload-artifact@v2
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
+        if: failure() && (github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y')))
         with:
           name: pa11y-ci-results
           path: .pa11y/
