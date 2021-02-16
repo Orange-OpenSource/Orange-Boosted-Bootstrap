@@ -32,6 +32,7 @@
 .icon-1013-Reseau,
 .icon-about-event,
 .icon-Accessability,
+.icon-accessibility,
 .icon-accessibility-cognition,
 .icon-accessibility-dexterity,
 .icon-accessibility-hearing,
@@ -768,7 +769,8 @@
 .icon-about-event::before {
   content: "\e90c";
 }
-.icon-Accessability::before {
+.icon-Accessability::before,
+.icon-accessibility::before {
   content: "\e90d";
 }
 .icon-accessibility-cognition::before {
