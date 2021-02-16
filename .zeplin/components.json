@@ -25,7 +25,7 @@
         {
             "name": "@zeplin/cli-connect-storybook-plugin",
             "config": {
-              "url": "https://storybook--5fc5eb7c9131880021f5e49c.chromatic.com",
+              "url": "https://deploy-preview-565--boosted.netlify.app/storybook",
               "fetchStories": false,
               "format": "new"
             }

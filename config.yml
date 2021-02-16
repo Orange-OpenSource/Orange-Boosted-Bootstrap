@@ -46,6 +46,8 @@ module:
       target:           assets/js/vendor/tarteaucitron.js
     - source:           node_modules/tarteaucitronjs/lang
       target:           static/docs/5.0/assets/js/lang
+    - source:           site/storybook
+      target:           static/storybook
 
 params:
   description:          "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.."

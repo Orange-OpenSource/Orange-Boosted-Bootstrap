@@ -78,7 +78,7 @@
     "release-zip-examples": "node build/zip-examples.js",
     "dist": "npm-run-all --parallel css js img fonts",
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
-    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri docs-build",
+    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri storybook-build docs-build",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
     "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\"",
@@ -86,8 +86,7 @@
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js-lint js-compile\"",
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "storybook:build": "build-storybook",
-    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN"
+    "storybook-build": "build-storybook -o ./site/storybook"
   },
   "style": "dist/css/boosted.css",
   "sass": "scss/boosted.scss",
@@ -125,7 +124,6 @@
     "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.1",
     "bundlewatch": "^0.3.2",
-    "chromatic": "^5.4.0",
     "clean-css-cli": "^4.3.0",
     "core-js": "^3.7.0",
     "cross-env": "^7.0.3",
