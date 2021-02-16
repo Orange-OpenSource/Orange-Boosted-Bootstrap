@@ -137,7 +137,7 @@ Color palette is used throughout Boosted in multiple ways, either in components 
     </div>
     <div class="col">
         <h4>Bootstrap core variables</h4>
-        {{< scss-docs name="bootstrap-colors" file="scss/_variables.scss" >}}
+        {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
     </div>
 </div>
 

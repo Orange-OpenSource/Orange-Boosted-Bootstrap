@@ -133,7 +133,7 @@
       var valueType = value && isElement(value) ? 'element' : toType(value);
 
       if (!new RegExp(expectedTypes).test(valueType)) {
-        throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
+        throw new TypeError(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
       }
     });
   };
@@ -313,7 +313,7 @@
 
       if (this._config.animation) {
         var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler__default['default'].one(this._element, TRANSITION_END, complete);
+        EventHandler__default['default'].one(this._element, 'transitionend', complete);
         emulateTransitionEnd(this._element, transitionDuration);
       } else {
         complete();
@@ -343,7 +343,7 @@
 
       if (this._config.animation) {
         var transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler__default['default'].one(this._element, TRANSITION_END, complete);
+        EventHandler__default['default'].one(this._element, 'transitionend', complete);
         emulateTransitionEnd(this._element, transitionDuration);
       } else {
         complete();
@@ -423,7 +423,7 @@
     }]);
 
     return Toast;
-  }(BaseComponent);
+  }(BaseComponent__default['default']);
   /**
    * ------------------------------------------------------------------------
    * jQuery

@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta1): dom/selector-engine.js
+   * Bootstrap (v5.0.0-beta2): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -47,9 +47,7 @@
     children: function children(element, selector) {
       var _ref2;
 
-      var children = (_ref2 = []).concat.apply(_ref2, element.children);
-
-      return children.filter(function (child) {
+      return (_ref2 = []).concat.apply(_ref2, element.children).filter(function (child) {
         return child.matches(selector);
       });
     },

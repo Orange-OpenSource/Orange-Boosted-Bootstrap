@@ -82,7 +82,20 @@
     var selector = element.getAttribute('data-bs-target');
 
     if (!selector || selector === '#') {
-      var hrefAttr = element.getAttribute('href');
+      var hrefAttr = element.getAttribute('href'); // The only valid content that could double as a selector are IDs or classes,
+      // so everything starting with `#` or `.`. If a "real" URL is used as the selector,
+      // `document.querySelector` will rightfully complain it is invalid.
+      // See https://github.com/twbs/bootstrap/issues/32273
+
+      if (!hrefAttr || !hrefAttr.includes('#') && !hrefAttr.startsWith('.')) {
+        return null;
+      } // Just in case some CMS puts out a full URL with the anchor appended
+
+
+      if (hrefAttr.includes('#') && !hrefAttr.startsWith('#')) {
+        hrefAttr = '#' + hrefAttr.split('#')[1];
+      }
+
       selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
     }
 
@@ -150,7 +163,7 @@
       var valueType = value && isElement(value) ? 'element' : toType(value);
 
       if (!new RegExp(expectedTypes).test(valueType)) {
-        throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
+        throw new TypeError(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
       }
     });
   };
@@ -315,12 +328,11 @@
   var SELECTOR_ITEM_IMG = '.carousel-item img';
   var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
   var SELECTOR_INDICATORS = '.carousel-indicators';
+  var SELECTOR_INDICATOR = '[data-bs-target]';
   var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
   var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
-  var PointerType = {
-    TOUCH: 'touch',
-    PEN: 'pen'
-  };
+  var POINTER_TYPE_TOUCH = 'touch';
+  var POINTER_TYPE_PEN = 'pen';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -467,12 +479,20 @@
       this.touchDeltaX = 0; // swipe left
 
       if (direction > 0) {
-        this.prev();
+        if (isRTL) {
+          this.next();
+        } else {
+          this.prev();
+        }
       } // swipe right
 
 
       if (direction < 0) {
-        this.next();
+        if (isRTL) {
+          this.prev();
+        } else {
+          this.next();
+        }
       }
     };
 
@@ -503,7 +523,7 @@
       var _this4 = this;
 
       var start = function start(event) {
-        if (_this4._pointerEvent && PointerType[event.pointerType.toUpperCase()]) {
+        if (_this4._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH)) {
           _this4.touchStartX = event.clientX;
         } else if (!_this4._pointerEvent) {
           _this4.touchStartX = event.touches[0].clientX;
@@ -520,7 +540,7 @@
       };
 
       var end = function end(event) {
-        if (_this4._pointerEvent && PointerType[event.pointerType.toUpperCase()]) {
+        if (_this4._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH)) {
           _this4.touchDeltaX = event.clientX - _this4.touchStartX;
         }
 
@@ -579,16 +599,22 @@
         return;
       }
 
-      switch (event.key) {
-        case ARROW_LEFT_KEY:
-          event.preventDefault();
-          this.prev();
-          break;
+      if (event.key === ARROW_LEFT_KEY) {
+        event.preventDefault();
 
-        case ARROW_RIGHT_KEY:
-          event.preventDefault();
+        if (isRTL) {
           this.next();
-          break;
+        } else {
+          this.prev();
+        }
+      } else if (event.key === ARROW_RIGHT_KEY) {
+        event.preventDefault();
+
+        if (isRTL) {
+          this.prev();
+        } else {
+          this.next();
+        }
       }
     };
 
@@ -630,16 +656,17 @@
 
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        var indicators = SelectorEngine__default['default'].find(SELECTOR_ACTIVE, this._indicatorsElement);
+        var activeIndicator = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE, this._indicatorsElement);
+        activeIndicator.classList.remove(CLASS_NAME_ACTIVE);
+        activeIndicator.removeAttribute('aria-current');
+        var indicators = SelectorEngine__default['default'].find(SELECTOR_INDICATOR, this._indicatorsElement);
 
         for (var i = 0; i < indicators.length; i++) {
-          indicators[i].classList.remove(CLASS_NAME_ACTIVE);
-        }
-
-        var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
-
-        if (nextIndicator) {
-          nextIndicator.classList.add(CLASS_NAME_ACTIVE);
+          if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getItemIndex(element)) {
+            indicators[i].classList.add(CLASS_NAME_ACTIVE);
+            indicators[i].setAttribute('aria-current', 'true');
+            break;
+          }
         }
       }
     };
@@ -673,19 +700,9 @@
       var nextElementIndex = this._getItemIndex(nextElement);
 
       var isCycling = Boolean(this._interval);
-      var directionalClassName;
-      var orderClassName;
-      var eventDirectionName;
-
-      if (direction === DIRECTION_NEXT) {
-        directionalClassName = CLASS_NAME_START;
-        orderClassName = CLASS_NAME_NEXT;
-        eventDirectionName = DIRECTION_LEFT;
-      } else {
-        directionalClassName = CLASS_NAME_END;
-        orderClassName = CLASS_NAME_PREV;
-        eventDirectionName = DIRECTION_RIGHT;
-      }
+      var directionalClassName = direction === DIRECTION_NEXT ? CLASS_NAME_START : CLASS_NAME_END;
+      var orderClassName = direction === DIRECTION_NEXT ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
+      var eventDirectionName = direction === DIRECTION_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT;
 
       if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE)) {
         this._isSliding = false;
@@ -719,7 +736,7 @@
         activeElement.classList.add(directionalClassName);
         nextElement.classList.add(directionalClassName);
         var transitionDuration = getTransitionDurationFromElement(activeElement);
-        EventHandler__default['default'].one(activeElement, TRANSITION_END, function () {
+        EventHandler__default['default'].one(activeElement, 'transitionend', function () {
           nextElement.classList.remove(directionalClassName, orderClassName);
           nextElement.classList.add(CLASS_NAME_ACTIVE);
           activeElement.classList.remove(CLASS_NAME_ACTIVE, orderClassName, directionalClassName);
@@ -824,7 +841,7 @@
     }]);
 
     return Carousel;
-  }(BaseComponent);
+  }(BaseComponent__default['default']);
   /**
    * ------------------------------------------------------------------------
    * Data Api implementation

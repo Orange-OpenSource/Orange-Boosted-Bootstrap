@@ -13,6 +13,7 @@
   font-weight: $accordion-button-font-weight; // Boosted mod
   line-height: $accordion-button-line-height; // Boosted mod
   color: $accordion-button-color;
+  text-align: left; // Reset button style
   text-decoration: if($link-decoration == none, null, none); // Boosted mod
 
   /* rtl:remove */
