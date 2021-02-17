@@ -46,12 +46,6 @@ label {
     border: 0;
   }
 
-  // Remove select outline from select box in FF
-  &:-moz-focusring {
-    color: transparent;
-    // text-shadow: 0 0 0 $input-color; // Boosted mod: no text-shadow!
-  }
-
   // Customize the `:focus` state to imitate native WebKit styles.
   @include form-control-focus($ignore-warning: true);
 
@@ -86,6 +80,12 @@ input[type="month"] {
 }
 
 select.form-control {
+  // Remove select outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    //text-shadow: 0 0 0 $input-color; // Boosted mod: no text-shadow
+  }
+
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
     // the selected option text when the (still closed) <select> receives focus
