@@ -863,7 +863,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 #### Using function with `popperConfig`
 
 ```js
-var dropdown = new bootstrap.Dropdown(element, {
+var dropdown = new boosted.Dropdown(element, {
   popperConfig: function (defaultBsPopperConfig) {
     // var newPopperConfig = {...}
     // use defaultBsPopperConfig if needed...
