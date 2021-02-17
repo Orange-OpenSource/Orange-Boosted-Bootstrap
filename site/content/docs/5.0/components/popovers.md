@@ -286,7 +286,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td><code>null</code></td>
       <td>
         <p>To change Boosted's default Popper config, see <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a></p>
-        <p>When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</p>
+        <p>When a function is used to create the Popper configuration, it's called with an object that contains the Boosted's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</p>
       </td>
     </tr>
   </tbody>
