@@ -144,7 +144,7 @@
       // end mod
 
       @if $enable-validation-icons {
-        padding-right: $custom-select-feedback-icon-padding-right;
+        padding-right: $custom-select-feedback-icon-padding-right !important; // stylelint-disable-line declaration-no-important
         // Boosted mod: no background
       }
 

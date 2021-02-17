@@ -1,4 +1,9 @@
 /*!
+ * Boosted Docs (https://boosted.orange.com/)
+ * Copyright 2014-2021 The Boosted Authors
+ * Copyright 2014-2021 Orange SA
+ **
+ * This a fork of Bootstrap docs:
  * Bootstrap Docs (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
@@ -46,16 +51,6 @@
 @import "syntax";
 @import "anchor";
 @import "algolia";
-
-// Boosted mod: PR in BS v5  → https://github.com/twbs/bootstrap/pull/29870
-@if $enable-prefers-reduced-motion-media-query {
-  @media (prefers-reduced-motion: reduce) {
-    %no-transition {
-      // stylelint-disable-next-line property-blacklist, declaration-no-important
-      transition-duration: .01ms !important;
-    }
-  }
-}
 
 // Boosted mod
 @import "boosted-docs";
