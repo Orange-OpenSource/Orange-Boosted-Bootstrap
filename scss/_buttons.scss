@@ -68,6 +68,7 @@
 //
 
 // Boosted mod: inconsistent theming ¯\_(ツ)_/¯
+// scss-docs-start btn-variant-loops
 .btn-primary,
 .btn-warning {
   @include button-variant($primary, $primary, $active-background: $white, $active-border: $black);
@@ -90,6 +91,7 @@
 .btn-danger {
   @include button-variant($danger, $danger);
 }
+// scss-docs-end btn-variant-loops
 // End mod
 
 // Boosted mod: no .btn-outline

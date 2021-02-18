@@ -81,8 +81,6 @@ Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`â€
 
 Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
 
-{{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
-
 ## Font weight
 
 Quickly change the `font-weight`  of text with these utilities. `font-weight` utilities are abbreviated as `.fw-*`.
@@ -130,3 +128,21 @@ Decorate text in components with text decoration classes.
 <p class="text-decoration-line-through">This text has a line going through it.</p>
 <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
+
+### Maps
+
+Font-size utilities are generated from this map, in combination with our utilities API.
+
+{{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}

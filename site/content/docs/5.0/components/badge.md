@@ -63,3 +63,9 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 <span class="badge rounded-pill bg-{{ .name }}">{{ .name | title }}</span>{{- end -}}
 {{< /badge.inline >}}
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="badge-variables" file="scss/_variables.scss" >}}
