@@ -1644,3 +1644,9 @@ $back-to-top-icon-width:         add(.5rem, 1px) !default;
 $back-to-top-icon-height:        subtract(1rem, 1px) !default;
 // scss-docs-end back-to-top
 // End mod
+
+// Stepped process
+
+$stepped-process-bar-height:  $spacer * 2 !default;
+$stepped-process-arrow-width: 1.0625rem !default;
+$stepped-process-margin-r:    $border-width !default;

@@ -1,0 +1,139 @@
+//
+// Orange stepped process
+//
+.stepped-process {
+  ol {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    counter-reset: step;
+  }
+}
+
+.stepped-process-item {
+  display: flex;
+  flex: 1;
+  padding: map-get($spacers, 2);
+  margin-right: $stepped-process-margin-r;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  list-style: none;
+  counter-increment: step;
+  background-color: $black;
+}
+
+.current {
+  background-color: $primary;
+
+  .stepped-process-link {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+    }
+  }
+
+  ~ .stepped-process-item {
+    background-color: $gray-400;
+
+    .stepped-process-link {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $black;
+      }
+    }
+  }
+}
+
+.stepped-process-link {
+  flex: 1 0 1.25ch;
+  max-width: 1.25ch;
+  margin: auto;
+  overflow: hidden;
+  color: $white;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap;
+  outline-offset: map-get($spacers, 3);
+
+  &::before {
+    content: counter(step) "\A0";
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
+
+  &:hover {
+    text-decoration: if($link-hover-decoration == underline, null, underline);
+  }
+
+  &:focus {
+    text-decoration: $link-decoration;
+    outline-offset: map-get($spacers, 1);
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .stepped-process-item {
+    max-width: 3.75rem;
+    padding: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
+    margin: 0;
+
+    &::after {
+      display: inline-block;
+      width: $stepped-process-arrow-width;
+      height: $stepped-process-bar-height;
+      margin: -#{map-get($spacers, 2)} 0 -#{map-get($spacers, 2)} auto;
+      content: "";
+      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$black}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
+      background-size: $stepped-process-arrow-width $stepped-process-bar-height;
+      transform: translateX(#{"/*rtl:insert:-*/"}$stepped-process-arrow-width) #{"/*rtl:insert:rotate(180deg)*/"};
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &:last-child .stepped-process-link {
+      margin-right: $spacer;
+    }
+  }
+
+  .current,
+  .current .stepped-process-link {
+    max-width: none;
+  }
+
+  .current::after {
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$primary}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
+  }
+
+  .current ~ .stepped-process-item {
+    padding-left: 2rem;
+
+    &::after {
+      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$gray-400}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
+    }
+  }
+
+  .current .stepped-process-link::before {
+    content: counter(step) ".\A0";
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .stepped-process-item,
+  .stepped-process-link {
+    max-width: none;
+  }
+
+  .stepped-process-link::before {
+    content: counter(step) ".\A0";
+  }
+}
