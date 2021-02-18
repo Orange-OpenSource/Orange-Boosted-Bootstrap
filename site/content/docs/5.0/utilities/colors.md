@@ -10,16 +10,6 @@ toc: true
 
 When using `.text-*` and `.bg-*` utilities, **contrasts are locked to ensure they meet [WCAG 2.0 accessibility standards for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)**, by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
 
-<!-- {{< callout info >}}
-### Dealing with specificity
-
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
-{{< /callout >}}
-
-{{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{< /callout >}} -->
-
 ## Colors
 
 Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
@@ -35,12 +25,6 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 {{< /example >}}
 <!-- End mod -->
 
-<!-- ## Background color -->
-{{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{< /callout >}}
-
-<!-- Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities **do set `color`** to ensure contrasts. -->
 ## Specificity
 
 Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` or more semantic element with the desired class.
