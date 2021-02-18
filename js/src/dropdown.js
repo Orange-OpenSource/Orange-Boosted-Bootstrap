@@ -64,12 +64,12 @@ const SELECTOR_MENU = '.dropdown-menu'
 const SELECTOR_NAVBAR_NAV = '.navbar-nav'
 const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
 
-const PLACEMENT_TOP = isRTL ? 'top-end' : 'top-start'
-const PLACEMENT_TOPEND = isRTL ? 'top-start' : 'top-end'
-const PLACEMENT_BOTTOM = isRTL ? 'bottom-end' : 'bottom-start'
-const PLACEMENT_BOTTOMEND = isRTL ? 'bottom-start' : 'bottom-end'
-const PLACEMENT_RIGHT = isRTL ? 'left-start' : 'right-start'
-const PLACEMENT_LEFT = isRTL ? 'right-start' : 'left-start'
+const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-start'
+const PLACEMENT_TOPEND = isRTL() ? 'top-start' : 'top-end'
+const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-start'
+const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-start' : 'bottom-end'
+const PLACEMENT_RIGHT = isRTL() ? 'left-start' : 'right-start'
+const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start'
 
 const Default = {
   offset: [0, 2],
@@ -232,7 +232,6 @@ class Dropdown extends BaseComponent {
   }
 
   dispose() {
-    super.dispose()
     EventHandler.off(this._element, EVENT_KEY)
     this._menu = null
 
@@ -240,6 +239,8 @@ class Dropdown extends BaseComponent {
       this._popper.destroy()
       this._popper = null
     }
+
+    super.dispose()
   }
 
   update() {

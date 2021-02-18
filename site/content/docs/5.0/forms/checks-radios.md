@@ -308,3 +308,9 @@ Drop borders using `.btn-no-outline`, too.
 {{< /example >}}
 
 <!-- End mod -->
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}

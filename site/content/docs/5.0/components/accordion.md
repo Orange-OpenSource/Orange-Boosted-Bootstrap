@@ -156,3 +156,9 @@ Add `.accordion-lg` or `.accordion-sm` for additional sizes.
 ## Accessibility
 
 Please read the [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}}) for more information.
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}

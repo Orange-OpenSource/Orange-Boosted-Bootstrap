@@ -140,3 +140,16 @@ To avoid pagination wrapping or overflowing, we limit the number or pagination i
 </nav>
 {{< /example >}}
 <!-- End mod -->
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
+
+### Mixins
+
+{{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}
+
+<!-- Boosted mod: responsive behaviour -->
+{{< scss-docs name="pagination-max-items-mixin" file="scss/mixins/_pagination.scss" >}}

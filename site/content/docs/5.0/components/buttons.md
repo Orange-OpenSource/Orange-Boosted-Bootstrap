@@ -297,3 +297,28 @@ buttons.forEach(function (button) {
   button.toggle()
 })
 ```
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
+
+### Mixins
+
+There are three mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin.
+
+{{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
+
+<!-- Boosted mod: no .btn-ouline -->
+
+{{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
+
+<!-- Boosted mod: .btn-icon -->
+{{< scss-docs name="btn-icon" file="scss/mixins/_buttons.scss" >}}
+
+### Loops
+
+Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
+
+{{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}

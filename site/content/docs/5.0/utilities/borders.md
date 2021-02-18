@@ -59,3 +59,23 @@ Add classes to an element to easily round its corners.
 {{< placeholder width="75" height="75" class="rounded-circle" title="Example rounded image" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="border-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
+
+### Mixins
+
+{{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
+
+### Utilities
+
+Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-borders" file="scss/_utilities.scss" >}}
+
+{{< scss-docs name="utils-border-radius" file="scss/_utilities.scss" >}}

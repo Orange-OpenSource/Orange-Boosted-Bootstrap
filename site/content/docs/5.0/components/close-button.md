@@ -31,4 +31,8 @@ Change the default `.btn-close` to be white with the `.btn-close-white` class.
 <button type="button" class="btn-close btn-close-white" disabled><span class="visually-hidden">Close</span></button>
 {{< /example >}}
 
+## Sass
 
+### Variables
+
+{{< scss-docs name="close-variables" file="scss/_variables.scss" >}}
