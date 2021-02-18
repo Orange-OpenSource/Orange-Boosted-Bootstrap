@@ -1,0 +1,124 @@
+//
+// Orange stepped process
+//
+.stepped-process {
+  ol {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    list-style: none;
+    counter-reset: $stepped-process-counter;
+  }
+}
+
+.stepped-process-item {
+  display: flex;
+  flex: 1;
+  padding: $step-item-padding;
+  margin-right: $step-item-margin-end;
+  counter-increment: $stepped-process-counter;
+  background-color: $step-item-bg;
+
+  &.active {
+    background-color: $step-item-active-bg;
+  }
+
+  .active ~ & {
+    background-color: $step-item-next-bg;
+  }
+}
+
+.stepped-process-link {
+  flex: 1 0 $step-link-width;
+  max-width: $step-link-width;
+  margin: auto;
+  overflow: hidden;
+  line-height: 1;
+  color: $step-link-color;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap;
+  outline-offset: $spacer;
+
+  &::before {
+    content: $step-link-marker;
+  }
+
+  &:hover,
+  &:focus {
+    color: $step-link-color;
+  }
+
+  &:hover {
+    text-decoration: if($link-hover-decoration == underline, null, underline);
+  }
+
+  &:focus {
+    text-decoration: $link-decoration;
+    outline-offset: $spacer / 4;
+  }
+
+  .active &,
+  .active ~ .stepped-process-item & {
+    color: $step-link-active-color;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .stepped-process-item {
+    position: relative;
+    padding: $step-item-padding 0;
+    margin: 0;
+    filter: $step-item-drop-shadow;
+
+    & + & {
+      padding-left: $step-item-padding-end;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: subtract(100%, 1px);
+      z-index: -1;
+      width: $step-item-arrow-width;
+      content: "";
+      background-color: inherit;
+      clip-path: $step-item-arrow-shape;
+    }
+  }
+
+  @for $i from 1 through $stepped-process-max-items {
+    .stepped-process-item:nth-child(#{$i}) {
+      $index: subtract($stepped-process-max-items, $i);
+      z-index: if($index == 0, null, $index);
+    }
+  }
+
+  .active .stepped-process-link {
+    max-width: none;
+
+    &::before {
+      content: $step-link-marker-lg;
+    }
+  }
+}
+
+@include media-breakpoint-between(sm, xl) {
+  .stepped-process-item.active {
+    flex: $stepped-process-max-items - 1;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .stepped-process-link {
+    max-width: none;
+  }
+
+  .stepped-process-link::before {
+    content: $step-link-marker-lg;
+  }
+}

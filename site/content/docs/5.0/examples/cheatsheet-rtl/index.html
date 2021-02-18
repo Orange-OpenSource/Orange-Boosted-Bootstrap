@@ -65,6 +65,7 @@ direction: rtl
           <li><a class="d-flex" href="#progress">شريط التقدم</a></li>
           <li><a class="d-flex" href="#scrollspy">مخطوطة</a></li>
           <li><a class="d-flex" href="#spinners">المغازل</a></li>
+          <li><a class="d-flex" href="#stepped-process">عملية متدرجة</a></li>
           <li><a class="d-flex" href="#toasts">نخب</a></li>
           <li><a class="d-flex" href="#tooltips">تلميحات الأدوات</a></li>
         </ul>
@@ -1418,6 +1419,36 @@ direction: rtl
         {{< /example >}}
       </div>
     </article>
+    <article class="my-3" id="stepped-process">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>عملية متدرجة</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/stepped-process" >}}">Documentation</a>
+      </div>
+      <div>
+        {{< example show_markup="false" >}}
+        <nav class="stepped-process" aria-label="مثال على الخطوات">
+          <p class="float-start mt-2 me-2 fw-bold d-sm-none">خطوة</p>
+          <ol>
+            <li class="stepped-process-item">
+              <a class="stepped-process-link" href="#" title="1. الخطوةالاولى">الخطوةالاولى</a>
+            </li>
+            <li class="stepped-process-item active">
+              <a class="stepped-process-link" href="#" title="2. الخطوة الثانية" aria-current="step">الخطوة الثانية</a>
+            </li>
+            <li class="stepped-process-item">
+              <a class="stepped-process-link" href="#" title="3. الخطوة الثالثة">الخطوة الثالثة</a>
+            </li>
+            <li class="stepped-process-item">
+              <a class="stepped-process-link" href="#" title="4. الخطوة الرابعة">الخطوة الرابعة</a>
+            </li>
+            <li class="stepped-process-item">
+              <a class="stepped-process-link" href="#" title="5. الخطوة الخامسة">الخطوة الخامسة</a>
+            </li>
+          </ol>
+        </nav>
+        {{< /example >}}
+      </div>
+    </article>
     <article class="my-3" id="popovers">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>بوبوفيرس</h3>
@@ -1425,6 +1456,7 @@ direction: rtl
       </div>
 
       <div>
+      
         {{< example show_markup="false" >}}
         <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="عنوان Popover" data-bs-content="وإليك بعض المحتويات الرائعة. إنه ممتع للغاية. حق؟">انقر لتبديل المنبثقة</button>
         {{< /example >}}
