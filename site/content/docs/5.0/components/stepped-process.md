@@ -18,7 +18,7 @@ Use `.current` class to define current step, alongwith with `aria-current="step"
 
 {{< example >}}
 <nav class="stepped-process" aria-label="Checkout process">
-  <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
+  <p class="float-start mt-2 me-2 fw-bold d-sm-none">Step</p>
   <ol>
     <li class="stepped-process-item">
       <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
