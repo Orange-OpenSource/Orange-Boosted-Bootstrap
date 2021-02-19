@@ -8,7 +8,7 @@ toc: true
 
 ## How to use
 
-Use a `nav` element with `.stepped-process` class, containing an ordered list `<ol>`  with `.stepped-process-item` class on list items.
+Use a `nav` element with `.stepped-process` class, containing an ordered list `<ol>` with `.stepped-process-item` class on list items.
 
 Be careful to choose short labels when using multiple steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title` attribute of the `.stepped-process-link`.
 
