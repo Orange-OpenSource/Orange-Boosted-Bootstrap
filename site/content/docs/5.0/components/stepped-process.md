@@ -12,7 +12,7 @@ Use a `nav` element with `.stepped-process` class, containing an ordered list `<
 
 Be careful to choose short labels when using multiple steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title` attribute of the `.stepped-process-link`.
 
-Use `.current` class to define current step, alongwith with `aria-current="step"`.
+Add `.active` to a `.stepped-process-item` to indicate the current step, alongside `aria-current="step"` to convey the active state to assistive technologies.
 
 ## Example
 
@@ -23,7 +23,7 @@ Use `.current` class to define current step, alongwith with `aria-current="step"
     <li class="stepped-process-item">
       <a class="stepped-process-link" href="#" title="1. Sign in">Sign in</a>
     </li>
-    <li class="stepped-process-item current">
+    <li class="stepped-process-item active">
       <a class="stepped-process-link" href="#" title="2. Review" aria-current="step">Review</a>
     </li>
     <li class="stepped-process-item">

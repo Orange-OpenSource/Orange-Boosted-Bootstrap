@@ -7,6 +7,9 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    list-style: none;
     counter-reset: step;
   }
 }
@@ -16,14 +19,11 @@
   flex: 1;
   padding: map-get($spacers, 2);
   margin-right: $stepped-process-margin-r;
-  font-weight: $font-weight-bold;
-  text-align: center;
-  list-style: none;
   counter-increment: step;
   background-color: $black;
 }
 
-.current {
+.active {
   background-color: $primary;
 
   .stepped-process-link {
@@ -105,16 +105,16 @@
     }
   }
 
-  .current,
-  .current .stepped-process-link {
+  .active,
+  .active .stepped-process-link {
     max-width: none;
   }
 
-  .current::after {
+  .active::after {
     background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$primary}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
   }
 
-  .current ~ .stepped-process-item {
+  .active ~ .stepped-process-item {
     padding-left: 2rem;
 
     &::after {
@@ -122,7 +122,7 @@
     }
   }
 
-  .current .stepped-process-link::before {
+  .active .stepped-process-link::before {
     content: counter(step) ".\A0";
   }
 }
