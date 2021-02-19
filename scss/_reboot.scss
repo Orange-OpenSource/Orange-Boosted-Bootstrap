@@ -36,6 +36,7 @@
 
   // Boosted mod: Improve focus visibility when fixed/sticky header is used
   // See https://caniuse.com/?search=scroll-padding
+  // scss-docs-start scroll-offset
   @if $enable-fixed-header {
     scroll-padding-top: $scroll-offset-top / 2;
 
@@ -43,6 +44,7 @@
       scroll-padding-top: $scroll-offset-top;
     }
   }
+  // scss-docs-end scroll-offset
   // End mod
 }
 
@@ -82,7 +84,7 @@ body {
 // 1. Default focus state
 // 2. Using the :focus-visible polyfill to hide outline defensively
 // See https://github.com/WICG/focus-visible
-
+// scss-docs-start focus-visibility
 :focus {
   outline: $outline-width solid; // 1
 }
@@ -91,6 +93,7 @@ body {
 .js-focus-visible .focus:not([data-focus-visible-added]) { // 2
   outline: 0 !important;
 }
+// scss-docs-end focus-visibility
 // End mod
 
 

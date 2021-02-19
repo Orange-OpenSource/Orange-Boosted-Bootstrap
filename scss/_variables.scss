@@ -474,7 +474,9 @@ $transition-fade:     opacity $transition-timing linear !default;
 // scss-docs-start collapse-transition
 $transition-collapse: height .35s ease !default;
 // scss-docs-end collapse-transition
+// scss-docs-start focus-transition
 $transition-focus:    outline-offset $transition-duration $transition-timing !default; // Boosted mod
+// scss-docs-end focus-transition
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
@@ -545,6 +547,7 @@ $font-sizes: (
 ) !default;
 // scss-docs-end font-sizes
 
+// scss-docs-start letter-spacing
 $h1-spacing:                  $letter-spacing-base * 10 !default; // -1px
 $h2-spacing:                  $letter-spacing-base * 8 !default;  // -0.8px
 $mid-spacing:                 $letter-spacing-base * 6 !default;  // -0.6px
@@ -552,14 +555,17 @@ $h3-spacing:                  $letter-spacing-base * 5 !default;  // -0.5px
 $h4-spacing:                  $letter-spacing-base * 4 !default;  // -0.4px
 $h5-spacing:                  $letter-spacing-base * 2 !default;  // -0.2px
 $h6-spacing:                  $letter-spacing-base !default;
+// scss-docs-end letter-spacing
 
 // stylelint-disable function-disallowed-list
+// scss-docs-start line-height
 $h1-line-height:              1 !default;
 $h2-line-height:              calc(32 / 30) !default;
 $h3-line-height:              calc(26 / 24) !default;
 $h4-line-height:              calc(22 / 20) !default;
 $h5-line-height:              calc(20 / 18) !default;
 $h6-line-height:              $line-height-base !default;
+// scss-docs-end line-height
 // stylelint-enable function-disallowed-list
 
 // scss-docs-start headings-variables

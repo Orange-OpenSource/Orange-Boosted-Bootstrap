@@ -450,9 +450,23 @@ In Bootstrap 5, they enabled responsive font sizes by default, allowing text to 
 
 ### Variables
 
+<!-- Boosted mod: finer typography management -->
+#### Headings
+
 Headings have some dedicated variables for sizing and spacing.
 
 {{< scss-docs name="headings-variables" file="scss/_variables.scss" >}}
+
+#### Letter spacing
+
+{{< scss-docs name="letter-spacing" file="scss/_variables.scss" >}}
+
+#### Line height
+
+{{< scss-docs name="line-height" file="scss/_variables.scss" >}}
+
+#### Miscellaneous
+<!-- End mod -->
 
 Miscellaneous typography elements covered here and in [Reboot]({{< docsref "/content/reboot" >}}) also have dedicated variables.
 

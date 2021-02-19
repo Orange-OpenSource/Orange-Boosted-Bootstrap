@@ -95,7 +95,9 @@ Use a `title` attribute instead of `data-o-label` to ensure a visible label is s
 </nav>
 {{< /example >}}
 
-## Sass options
+## Sass
+
+### Options
 
 Back to top link can be customized in a few ways: either making it appear after more or less vertical scrolling, modify its offset from the bottom right corner, etc.
 
