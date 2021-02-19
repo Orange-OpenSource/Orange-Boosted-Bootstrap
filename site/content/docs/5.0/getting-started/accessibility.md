@@ -58,12 +58,20 @@ On browsers that support `prefers-reduced-motion`, and where the user has *not* 
 
 Boosted includes [WICG's `:focus-visible` polyfill](https://github.com/WICG/focus-visible) to ensure an enhanced focus visibility for keyboard users while shutting down focus styles on active state.
 
+{{< scss-docs name="focus-visibility" file="scss/_reboot.scss" >}}
+
+Each component then specifies its own focus style, usually a solid `2px` outline with an `outline-offset` transition.
+
+{{< scss-docs name="focus-transition" file="scss/_variables.scss" >}}
+
 #### Under a fixed header
 
 When using a fixed (or sticky) header, tabbing backward often hides focused element under the header. Boosted sets `scroll-padding-top` property for such case. This feature is configurable in two ways:
 
 1. `$scroll-offset-top` variable defines the offset,
 2. and [`$enable-fixed-header` allows to drop this rule]({{< docsref "/customize/options" >}}) if you don't use a fixed header.
+
+{{< scss-docs name="scroll-offset" file="scss/_reboot.scss" >}}
 
 ### Minimum target size
 
