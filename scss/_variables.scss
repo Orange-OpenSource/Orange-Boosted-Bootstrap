@@ -1646,8 +1646,7 @@ $back-to-top-icon-height:        subtract(1rem, 1px) !default;
 
 // Stepped process
 
-$stepped-process-bar-height:     $spacer * 2 !default;
-$stepped-process-arrow-width:    1.0625rem !default;
+$stepped-process-max-items:      5 !default;
 $stepped-process-margin-r:       $border-width !default;
 $stepped-process-item-max-width: 3.75rem !default;
 

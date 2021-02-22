@@ -8,6 +8,7 @@
     margin: 0;
     overflow: hidden;
     font-weight: $font-weight-bold;
+    line-height: 1.25;
     text-align: center;
     list-style: none;
     counter-reset: step;
@@ -17,7 +18,7 @@
 .stepped-process-item {
   display: flex;
   flex: 1;
-  padding: map-get($spacers, 2);
+  padding: $spacer / 2;
   margin-right: $stepped-process-margin-r;
   counter-increment: step;
   background-color: $black;
@@ -26,7 +27,8 @@
 .active {
   background-color: $primary;
 
-  .stepped-process-link {
+  .stepped-process-link,
+  ~ .stepped-process-item .stepped-process-link {
     &,
     &:hover,
     &:focus,
@@ -37,15 +39,6 @@
 
   ~ .stepped-process-item {
     background-color: $gray-400;
-
-    .stepped-process-link {
-      &,
-      &:hover,
-      &:focus,
-      &:active {
-        color: $black;
-      }
-    }
   }
 }
 
@@ -81,45 +74,42 @@
 
 @include media-breakpoint-up(sm) {
   .stepped-process-item {
+    position: relative;
     max-width: $stepped-process-item-max-width;
-    padding: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
+    padding: $spacer / 2 0 $spacer / 2 $spacer;
     margin: 0;
+    filter: drop-shadow($border-width * 1.5 0 0 $white);
 
-    &::after {
-      display: inline-block;
-      width: $stepped-process-arrow-width;
-      height: $stepped-process-bar-height;
-      margin: -#{map-get($spacers, 2)} 0 -#{map-get($spacers, 2)} auto;
+    &:not(:last-child)::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 1rem;
       content: "";
-      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$black}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
-      background-size: $stepped-process-arrow-width $stepped-process-bar-height;
-      transform: translateX(#{"/*rtl:insert:-*/"}$stepped-process-arrow-width) #{"/*rtl:insert:rotate(180deg)*/"};
+      background-color: inherit;
+      clip-path: polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%);
     }
 
-    &:last-child::after {
-      display: none;
+    &:first-child {
+      padding-left: 0;
     }
 
-    &:last-child .stepped-process-link {
-      margin-right: $spacer;
+    &:last-child {
+      padding-right: $spacer / 2;
+    }
+  }
+
+  @for $i from 1 through $stepped-process-max-items {
+    .stepped-process-item:nth-child(#{$i}) {
+      $index: subtract($stepped-process-max-items, $i);
+      z-index: if($index == 0, null, $index);
     }
   }
 
   .active,
   .active .stepped-process-link {
     max-width: none;
-  }
-
-  .active::after {
-    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$primary}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
-  }
-
-  .active ~ .stepped-process-item {
-    padding-left: 2rem;
-
-    &::after {
-      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 40'><path fill='#{$gray-400}' d='M0 0l14 20L0 40z'/><path fill='#{$white}' d='M3 0H0l14 20L0 40h3l14-20z'/></svg>"));
-    }
   }
 
   .active .stepped-process-link::before {
