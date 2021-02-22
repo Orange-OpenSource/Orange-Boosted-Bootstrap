@@ -10,7 +10,7 @@ toc: true
 
 Use a `nav` element with `.stepped-process` class, containing an ordered list `<ol>` with `.stepped-process-item` class on list items.
 
-Be careful to choose short labels when using multiple steps process, otherwise label will be cut to preserve inline layout. More information can be carried on the `title` attribute of the `.stepped-process-link`.
+Use short labels for each step, otherwise they will be cut off to preserve inline layout. More information can be carried on the `title` attribute of the `.stepped-process-link`.
 
 Add `.active` to a `.stepped-process-item` to indicate the current step, alongside `aria-current="step"` to convey the active state to assistive technologies.
 
