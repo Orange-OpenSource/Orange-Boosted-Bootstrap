@@ -7,7 +7,23 @@ aliases: "/migration/"
 toc: true
 ---
 
+{{< callout >}}
+**This document is [Bootstrap's migration guide]({{< param bootstrap >}}/docs/{{< param docs_version >}}/migration/).**
+
+We only replaced `Bootstrap` with `Boosted`—especially in code examples and file names. Some changes mentioned here might not concern Boosted itself.
+{{< /callout >}}
+
+
 ## v5.0.0-beta3
+
+### JavaScript
+
+- All plugins can now accept a CSS selector as the first argument. You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:
+
+  ```js
+  var modal = new boosted.Modal('#myModal')
+  var dropdown = new boosted.Dropdown('[data-bs-toggle="dropdown"]')
+  ```
 
 ### Utilities
 
@@ -19,7 +35,7 @@ toc: true
 
 - Renamed `--aspect-ratio` to `--bs-aspect-ratio` to be consistent with other custom properties.
 - Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
-- `bootstrap-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
+- `boosted-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
 - Extended form validation states customization capabilities. Added three new optional parameters to the `form-validation-state` mixin: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. These parameters can be set in the `$form-validation-states` map. [See #31757](https://github.com/twbs/bootstrap/pull/31757).
 
 ### JavaScript
@@ -28,7 +44,7 @@ toc: true
 - The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
 - All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
 - Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static and `data-bs-popper="none"` when dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
-- `popperConfig` can be passed as a function that accepts the Bootstrap's default Popper config as an argument, so that you can merge this default configuration in your way.
+- `popperConfig` can be passed as a function that accepts the Boosted's default Popper config as an argument, so that you can merge this default configuration in your way.
 
 ## v5.0.0-beta1
 
@@ -79,7 +95,7 @@ Breakpoints specific variants are consequently renamed too (e.g. `.text-md-start
 
 ### JavaScript
 
-- Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+- Data attributes for all JavaScript plugins are now namespaced to help distinguish Boosted functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
 - Updated Popper to v2.x:
   - Removed `offset` option from our Tooltip/Popover and Dropdown plugins; this can still be achieved using the `popperConfig` parameter.
   - The `fallbackPlacement` option has become `fallbackPlacements`.
@@ -190,7 +206,7 @@ Breakpoints specific variants are consequently renamed too (e.g. `.text-md-start
 
 #### Carousel
 
-- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]({{< param "icons" >}}).
+- Replaced chevron icons for carousel controls with new SVGs from [Boosted Icons]({{< param "icons" >}}).
 - Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
 
 #### Close button
@@ -275,7 +291,7 @@ See the browser and devices page for details on what is currently supported in B
 
 Changes to our source Sass files and compiled CSS.
 
-- Removed `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active` mixins. Use regular CSS syntax for these moving forward. [See #28267](https://github.com/twbs/boosted/pull/28267).
+- Removed `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active` mixins. Use regular CSS syntax for these moving forward. [See #28267](https://github.com/twbs/bootstrap/pull/28267).
 - Remove previously deprecated mixins
   - `float()`
   - `form-control-mixin()`
@@ -313,7 +329,7 @@ Changes to our source and compiled JavaScript files.
 
 ### Color system
 
-We've updated the color system that powers Bootstrap to improve color contrast and provide a much more extensive set of colors.
+We've updated the color system that powers Boosted to improve color contrast and provide a much more extensive set of colors.
 
 - Updated blue and pink base colors (`-500`) to ensure WCAG 2.1 AA contrast.
 - Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.
@@ -330,7 +346,7 @@ Changes to any layout tools and our grid system.
   - The column classes can now be used stand-alone. Whenever they are used outside a `.row`, horizontal padding won't be added.
 - The responsive gutter classes can be used to control the gutter width in horizontal, vertical or both directions.
 - The gutter width is now set in `rem` and decreased from `30px` to `1.5rem` (24px).
-- `bootstrap-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way the grid system can be used, even if `box-sizing: border-box` is not applied to each element.
+- `boosted-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way the grid system can be used, even if `box-sizing: border-box` is not applied to each element.
 
 ### Content, Reboot, etc
 

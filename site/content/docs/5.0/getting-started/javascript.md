@@ -93,6 +93,15 @@ var modal = new boosted.Modal(myModalEl, { keyboard: false }) // initialized wit
 
 If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. In order to retrieve it directly from an element, do this: `boosted.Popover.getInstance(myPopoverEl)`.
 
+### CSS selectors in constructors
+
+You can also use a CSS selector as the first argument instead of a DOM element to initialize the plugin. Currently the element for the plugin is found by the `querySelector` method since our plugins support a single element only.
+
+```js
+var modal = new boosted.Modal('#myModal')
+var dropdown = new boosted.Dropdown('[data-bs-toggle="dropdown"]')
+```
+
 ### Asynchronous functions and transitions
 
 All programmatic API methods are **asynchronous** and return to the caller once the transition is started but **before it ends**.
