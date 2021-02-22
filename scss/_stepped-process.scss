@@ -81,7 +81,7 @@
 
 @include media-breakpoint-up(sm) {
   .stepped-process-item {
-    max-width: 3.75rem;
+    max-width: $stepped-process-item-max-width;
     padding: map-get($spacers, 2) 0 map-get($spacers, 2) $spacer;
     margin: 0;
 
