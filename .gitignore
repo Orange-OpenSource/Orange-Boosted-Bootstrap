@@ -46,3 +46,4 @@ Thumbs.db
 /node_modules/
 /.pa11y/
 /pa11y-ci-results.json
+.github/release-drafter.yml
