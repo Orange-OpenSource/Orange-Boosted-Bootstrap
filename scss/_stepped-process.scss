@@ -10,44 +10,44 @@
     font-weight: $font-weight-bold;
     text-align: center;
     list-style: none;
-    counter-reset: step;
+    counter-reset: $stepped-process-counter;
   }
 }
 
 .stepped-process-item {
   display: flex;
   flex: 1;
-  padding: $spacer / 2;
-  margin-right: $stepped-process-margin-r;
-  counter-increment: step;
-  background-color: $black;
+  padding: $step-item-padding;
+  margin-right: $step-item-margin-end;
+  counter-increment: $stepped-process-counter;
+  background-color: $step-item-bg;
 
   &.active {
-    background-color: $primary;
+    background-color: $step-item-active-bg;
   }
 
   .active ~ & {
-    background-color: $gray-400;
+    background-color: $step-item-next-bg;
   }
 }
 
 .stepped-process-link {
-  flex: 1 0 1.25ch;
-  max-width: 1.25ch;
+  flex: 1 0 $step-link-width;
+  max-width: $step-link-width;
   margin: auto;
   overflow: hidden;
-  color: $white;
+  color: $step-link-color;
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
-  outline-offset: map-get($spacers, 3);
+  outline-offset: $spacer;
 
   &::before {
-    content: counter(step) "\A0";
+    content: $step-link-marker;
   }
 
   &:hover,
   &:focus {
-    color: $white;
+    color: $step-link-color;
   }
 
   &:hover {
@@ -56,40 +56,41 @@
 
   &:focus {
     text-decoration: $link-decoration;
-    outline-offset: map-get($spacers, 1);
+    outline-offset: $spacer / 4;
   }
 
   .active &,
   .active ~ .stepped-process-item & {
-    color: $black;
+    color: $step-link-active-color;
   }
 }
 
 @include media-breakpoint-up(sm) {
   .stepped-process-item {
     position: relative;
-    max-width: $stepped-process-item-max-width;
-    padding: $spacer / 2 0;
+    max-width: $step-item-max-width;
+    padding: $step-item-padding 0;
     margin: 0;
-    filter: drop-shadow($border-width * 1.5 0 0 $white);
+    filter: $step-item-drop-shadow;
 
     & + & {
-      padding-left: $spacer;
+      padding-left: $step-item-padding-end;
     }
 
     &:last-child {
-      padding-right: $spacer;
+      padding-right: $step-item-padding-end;
     }
 
     &:not(:last-child)::after {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 100%;
-      width: 1rem;
+      left: subtract(100%, 1px);
+      z-index: -1;
+      width: $step-item-arrow-width;
       content: "";
       background-color: inherit;
-      clip-path: polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%);
+      clip-path: $step-item-arrow-shape;
     }
 
     &.active {
@@ -108,7 +109,7 @@
     max-width: none;
 
     &::before {
-      content: counter(step) ".\A0";
+      content: $step-link-marker-lg;
     }
   }
 }
@@ -120,6 +121,6 @@
   }
 
   .stepped-process-link::before {
-    content: counter(step) ".\A0";
+    content: $step-link-marker-lg;
   }
 }
