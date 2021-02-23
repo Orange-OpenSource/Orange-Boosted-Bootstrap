@@ -8,7 +8,6 @@
     margin: 0;
     overflow: hidden;
     font-weight: $font-weight-bold;
-    line-height: 1.25;
     text-align: center;
     list-style: none;
     counter-reset: step;
@@ -22,22 +21,12 @@
   margin-right: $stepped-process-margin-r;
   counter-increment: step;
   background-color: $black;
-}
 
-.active {
-  background-color: $primary;
-
-  .stepped-process-link,
-  ~ .stepped-process-item .stepped-process-link {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      color: $black;
-    }
+  &.active {
+    background-color: $primary;
   }
 
-  ~ .stepped-process-item {
+  .active ~ & {
     background-color: $gray-400;
   }
 }
@@ -57,8 +46,7 @@
   }
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: $white;
   }
 
@@ -70,15 +58,28 @@
     text-decoration: $link-decoration;
     outline-offset: map-get($spacers, 1);
   }
+
+  .active &,
+  .active ~ .stepped-process-item & {
+    color: $black;
+  }
 }
 
 @include media-breakpoint-up(sm) {
   .stepped-process-item {
     position: relative;
     max-width: $stepped-process-item-max-width;
-    padding: $spacer / 2 0 $spacer / 2 $spacer;
+    padding: $spacer / 2 0;
     margin: 0;
     filter: drop-shadow($border-width * 1.5 0 0 $white);
+
+    & + & {
+      padding-left: $spacer;
+    }
+
+    &:last-child {
+      padding-right: $spacer;
+    }
 
     &:not(:last-child)::after {
       position: absolute;
@@ -91,12 +92,8 @@
       clip-path: polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 100%);
     }
 
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: $spacer / 2;
+    &.active {
+      max-width: none;
     }
   }
 
@@ -107,13 +104,12 @@
     }
   }
 
-  .active,
   .active .stepped-process-link {
     max-width: none;
-  }
 
-  .active .stepped-process-link::before {
-    content: counter(step) ".\A0";
+    &::before {
+      content: counter(step) ".\A0";
+    }
   }
 }
 
