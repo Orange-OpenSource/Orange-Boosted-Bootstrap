@@ -1,3 +1,9 @@
+- category: Boosted examples
+  description: "Custom examples to help Orange projects quickly get started with Boosted and demonstrate best practices and how-tos."
+  examples:
+    - name: Standard font
+      description: "Blog post example using Helvetica Neue."
+
 - category: Custom Components
   description: "Brand new components and templates to help folks quickly get started with Boosted and demonstrate best practices for adding onto the framework."
   examples:

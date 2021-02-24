@@ -1,0 +1,54 @@
+main > * {
+  max-width: 48.75rem;
+}
+
+p + p {
+  margin-top: 1.875rem;
+}
+
+@media (min-width: 1024px) {
+  .lead > :first-child {
+    border-top-style: solid;
+  }
+
+  footer {
+    /**
+     * Let's explain this one, maybe :)
+     *
+     * First align with content by getting its `margin-left: auto` value
+     ** var(--o-container-width) is `.container` width (see below ↓)
+     ** 48.75rem is the content width (see above ↑)
+     ** divided by 2 to get the left margin only
+     * Then move back left:
+     ** 3.75rem is the spacing needed between content and aside (= 60px)
+     ** 2.75rem is aside's width
+     * That's it. An easy one, isn't it?
+     */
+    position: absolute;
+    left: calc(((var(--o-container-width) - 48.75rem) / 2) - (3.75rem + 2.75rem));
+  }
+
+  footer > * {
+    top: 12.5rem;
+  }
+}
+
+/**
+ * Set `.container`s width as custom property
+ * Useful to position `aside` ↑
+ */
+@media (min-width: 1024px) {
+  .container {
+    --o-container-width: 960px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    --o-container-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    --o-container-width: 1320px;
+  }
+}
