@@ -226,12 +226,12 @@ Visually, these checkbox toggle buttons are identical to the [button plugin togg
 
 ### Radio toggle buttons
 
-<!-- Boosted mod: our radio toggle buttons need a `.btn-group` wrapper. -->
+<!-- Boosted mod: our radio toggle buttons need a `.btn-group[role="group"]` wrapper. -->
 
 Boosted requires to group its radio toggle buttons in a [button group]({{< docsref "/components/button-group" >}}) to display properly.
 
 {{< example >}}
-<div class="btn-group">
+<div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
   <label class="btn btn-secondary" for="option1">Checked</label>
 
@@ -254,7 +254,7 @@ Boosted requires to group its radio toggle buttons in a [button group]({{< docsr
 Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embedded icon]({{< docsref "/extend/icons" >}}) to get consistent squared icon buttons working as toggle.
 
 {{< example >}}
-<div class="btn-group">
+<div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="icons" id="option5" autocomplete="off" checked>
   <label class="btn btn-icon" for="option5">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">
@@ -282,7 +282,7 @@ Add [`.btn-icon`]({{< docsref "/components/buttons" >}}#icon-only) with an [embe
 Drop borders using `.btn-no-outline`, too.
 
 {{< example >}}
-<div class="btn-group">
+<div class="btn-group" role="group">
   <input type="radio" class="btn-check" name="icons" id="option8" autocomplete="off" checked>
   <label class="btn btn-icon btn-no-outline" for="option8">
     <svg width="1.25rem" height="1.25rem" fill="currentColor">

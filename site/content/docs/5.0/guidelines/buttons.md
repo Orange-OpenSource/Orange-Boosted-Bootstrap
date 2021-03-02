@@ -341,7 +341,7 @@ toc: true
       <tr>
         <th scope="row">Selected</th>
         <td>
-          <div class="btn-group">
+          <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
             <label class="btn" for="option1">Day</label>
             <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
@@ -351,7 +351,7 @@ toc: true
           </div>
         </td>
         <td>
-          <div class="btn-group">
+          <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="icons" id="option7" autocomplete="off" checked>
             <label class="btn btn-icon" for="option7">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
@@ -376,7 +376,7 @@ toc: true
           </div>
         </td>
         <td>
-          <div class="btn-group">
+          <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="borderless" id="option13" autocomplete="off" checked>
             <label class="btn btn-icon btn-no-outline" for="option13">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
@@ -404,7 +404,7 @@ toc: true
       <tr>
         <th scope="row">Disabled</th>
         <td>
-          <div class="btn-group">
+          <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="disabled-options" id="option4" autocomplete="off" disabled checked>
             <label class="btn" for="option4">Day</label>
             <input type="radio" class="btn-check" name="disabled-options" id="option5" autocomplete="off" disabled>
@@ -414,7 +414,7 @@ toc: true
           </div>
         </td>
         <td>
-          <div class="btn-group">
+          <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="disabled-icons" id="option10" autocomplete="off" disabled checked>
             <label class="btn btn-icon" for="option10">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
@@ -439,7 +439,7 @@ toc: true
           </div>
         </td>
         <td>
-          <div class="btn-group">
+          <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="disabled-borderless" id="option16" autocomplete="off" disabled checked>
             <label class="btn btn-icon btn-no-outline" for="option16">
               <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false">
@@ -478,7 +478,7 @@ toc: true
     <h3 class="h6">Default</h3>
   </div>
   <div class="col-9">
-    <div class="btn-group">
+    <div class="btn-group" role="group">
       <button type="button" class="btn btn-secondary">Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="visually-hidden">Toggle Dropdown</span>
@@ -496,7 +496,7 @@ toc: true
     <h3 class="h6">Active</h3>
   </div>
   <div class="col-9">
-    <div class="btn-group">
+    <div class="btn-group" role="group">
       <button type="button" class="btn btn-secondary active">Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="visually-hidden">Toggle Dropdown</span>
@@ -514,7 +514,7 @@ toc: true
     <h3 class="h6">Disabled</h3>
   </div>
   <div class="col-9">
-    <div class="btn-group">
+    <div class="btn-group" role="group">
       <button type="button" class="btn btn-secondary" disabled>Button</button>
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" disabled>
         <span class="visually-hidden">Toggle Dropdown</span>
