@@ -50,7 +50,6 @@ const SELECTOR_DATA_TOGGLE = '[data-toggle="dropdown"]'
 const SELECTOR_FORM_CHILD = '.dropdown form'
 const SELECTOR_MENU = '.dropdown-menu'
 const SELECTOR_NAVBAR_NAV = '.navbar-nav'
-const SELECTOR_FIRST_ITEM_IN_MENU = '.dropdown-menu .dropdown-item:not(.disabled), .dropdown-menu .nav-link:not(.disabled)' // Boosted mod
 const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
 
 const PLACEMENT_TOP = 'top-start'
@@ -193,9 +192,6 @@ class Dropdown {
     $(parent)
       .toggleClass(CLASS_NAME_SHOW)
       .trigger($.Event(EVENT_SHOWN, relatedTarget))
-    // Boosted mod
-    $(parent).find(SELECTOR_FIRST_ITEM_IN_MENU).first().trigger('focus')
-    // end mod
   }
 
   hide() {
