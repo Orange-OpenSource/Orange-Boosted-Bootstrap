@@ -12,9 +12,9 @@ Wrap a series of buttons with `.btn` in `.btn-group`.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
 </div>
 {{< /example >}}
 
@@ -29,10 +29,10 @@ In addition, groups and toolbars should be given an explicit label, as most assi
 These classes can also be added to groups of links, as an alternative to the [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}).
 
 {{< example >}}
-<div class="btn-group">
-  <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
-  <a href="#" class="btn btn-primary">Link</a>
-  <a href="#" class="btn btn-primary">Link</a>
+<div class="btn-group" role="group">
+  <a href="#" class="btn btn-secondary active" aria-current="page">Active link</a>
+  <a href="#" class="btn btn-secondary">Link</a>
+  <a href="#" class="btn btn-secondary">Link</a>
 </div>
 {{< /example >}}
 
@@ -106,10 +106,10 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 {{< example >}}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group me-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-outline-secondary">1</button>
-    <button type="button" class="btn btn-outline-secondary">2</button>
-    <button type="button" class="btn btn-outline-secondary">3</button>
-    <button type="button" class="btn btn-outline-secondary">4</button>
+    <button type="button" class="btn btn-secondary">1</button>
+    <button type="button" class="btn btn-secondary">2</button>
+    <button type="button" class="btn btn-secondary">3</button>
+    <button type="button" class="btn btn-secondary">4</button>
   </div>
   <div class="input-group">
     <div class="input-group-text" id="btnGroupAddon">@</div>
@@ -119,10 +119,10 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group" role="group" aria-label="First group">
-    <button type="button" class="btn btn-outline-secondary">1</button>
-    <button type="button" class="btn btn-outline-secondary">2</button>
-    <button type="button" class="btn btn-outline-secondary">3</button>
-    <button type="button" class="btn btn-outline-secondary">4</button>
+    <button type="button" class="btn btn-secondary">1</button>
+    <button type="button" class="btn btn-secondary">2</button>
+    <button type="button" class="btn btn-secondary">3</button>
+    <button type="button" class="btn btn-secondary">4</button>
   </div>
   <div class="input-group">
     <div class="input-group-text" id="btnGroupAddon2">@</div>
@@ -137,21 +137,21 @@ Instead of applying button sizing classes to every button in a group, just add `
 
 <div class="bd-example">
   <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-    <button type="button" class="btn btn-outline-dark">Left</button>
-    <button type="button" class="btn btn-outline-dark">Middle</button>
-    <button type="button" class="btn btn-outline-dark">Right</button>
+    <button type="button" class="btn btn-secondary">Left</button>
+    <button type="button" class="btn btn-secondary">Middle</button>
+    <button type="button" class="btn btn-secondary">Right</button>
   </div>
   <br>
   <div class="btn-group" role="group" aria-label="Default button group">
-    <button type="button" class="btn btn-outline-dark">Left</button>
-    <button type="button" class="btn btn-outline-dark">Middle</button>
-    <button type="button" class="btn btn-outline-dark">Right</button>
+    <button type="button" class="btn btn-secondary">Left</button>
+    <button type="button" class="btn btn-secondary">Middle</button>
+    <button type="button" class="btn btn-secondary">Right</button>
   </div>
   <br>
   <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-    <button type="button" class="btn btn-outline-dark">Left</button>
-    <button type="button" class="btn btn-outline-dark">Middle</button>
-    <button type="button" class="btn btn-outline-dark">Right</button>
+    <button type="button" class="btn btn-secondary">Left</button>
+    <button type="button" class="btn btn-secondary">Middle</button>
+    <button type="button" class="btn btn-secondary">Right</button>
   </div>
 </div>
 
@@ -167,12 +167,13 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-  <button type="button" class="btn btn-primary">1</button>
-  <button type="button" class="btn btn-primary">2</button>
+  <button type="button" class="btn btn-secondary">1</button>
+  <button type="button" class="btn btn-secondary">2</button>
 
   <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown
+    <button type="button" class="btn btn-secondary">Split button</button>
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
       <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -184,7 +185,7 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 
 ## Vertical variation
 
-Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.**
+Make a set of buttons appear vertically stacked rather than horizontally.
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -199,22 +200,24 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-    <button type="button" class="btn btn-primary">Button</button>
-    <button type="button" class="btn btn-primary">Button</button>
+    <button type="button" class="btn btn-secondary">Button</button>
+    <button type="button" class="btn btn-secondary">Button</button>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
+      <button type="button" class="btn btn-secondary">Split button</button>
+      <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
         <li><a class="dropdown-item" href="#">Dropdown link</a></li>
         <li><a class="dropdown-item" href="#">Dropdown link</a></li>
       </ul>
     </div>
-    <button type="button" class="btn btn-primary">Button</button>
-    <button type="button" class="btn btn-primary">Button</button>
+    <button type="button" class="btn btn-secondary">Button</button>
+    <button type="button" class="btn btn-secondary">Button</button>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop2" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
+      <button type="button" class="btn btn-secondary">Split button</button>
+      <button id="btnGroupVerticalDrop2" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
         <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -222,8 +225,9 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
       </ul>
     </div>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop3" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
+      <button type="button" class="btn btn-secondary">Split button</button>
+      <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
         <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -231,8 +235,9 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
       </ul>
     </div>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop4" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
+      <button type="button" class="btn btn-secondary">Split button</button>
+      <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
         <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -242,16 +247,7 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
   </div>
 </div>
 
-<div class="bd-example">
-  <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
-    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-    <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
-    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-    <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
-    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-    <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
-  </div>
-</div>
+<!-- Boosted mod: toggle buttons group don't support vertical variation -->
 
 ```html
 <div class="btn-group-vertical">
