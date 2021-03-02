@@ -329,7 +329,7 @@ Options for individual tooltips can alternatively be specified through the use o
 #### Using function with `popperConfig`
 
 ```js
-var tooltip = new bootstrap.Tooltip(element, {
+var tooltip = new boosted.Tooltip(element, {
   popperConfig: function (defaultBsPopperConfig) {
     // var newPopperConfig = {...}
     // use defaultBsPopperConfig if needed...

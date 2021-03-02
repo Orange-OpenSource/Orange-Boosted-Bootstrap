@@ -307,7 +307,7 @@ Options for individual popovers can alternatively be specified through the use o
 #### Using function with `popperConfig`
 
 ```js
-var popover = new bootstrap.Popover(element, {
+var popover = new boosted.Popover(element, {
   popperConfig: function (defaultBsPopperConfig) {
     // var newPopperConfig = {...}
     // use defaultBsPopperConfig if needed...
