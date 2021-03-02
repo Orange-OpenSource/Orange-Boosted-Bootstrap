@@ -1,0 +1,81 @@
+---
+layout: examples
+title: Leaflet example
+extra_css:
+  - "https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"
+  - "leaflet.css"
+extra_js:
+  - src: "https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet-src.min.js"
+    integrity: "sha384-Ozw1UodX5qtjpTA1yLoGz0jW69awt5rGfU87OIxh7l5BLcgqt9rAylprwTx+C2jF"
+  - src: "leaflet.js"
+    async: true
+---
+
+<header class="navbar navbar-dark navbar-expand-lg bg-dark">
+  <nav class="container-xxl">
+    <h1 class="navbar-brand">
+      <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted">
+      <span class="h1">Boosted and Leaflet</span>
+    </h1>
+  </nav>
+</header>
+
+<main class="container py-5">
+  <h2>Usage</h2>
+  <p class="lead">Integrate <a href="https://leafletjs.com/">Leaflet</a> with the Boosted helpers and utilities.</p>
+
+  <p>Leaflet is not included in Boosted. Add it by including the CSS and JavaScript plugin manually, or using a CDN like so:</p>
+
+  <pre tabindex="0"><code>
+&lt;link href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" integrity="sha256-BPfK9M5v34c2XP6p0cxVz1mUQLst0gTLk0mlc7kuodA=" crossorigin="anonymous" rel="stylesheet"/>
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet-src.min.js&quot; integrity=&quot;sha384-Ozw1UodX5qtjpTA1yLoGz0jW69awt5rGfU87OIxh7l5BLcgqt9rAylprwTx+C2jF&quot; crossorigin=&quot;anonymous&quot; async&gt;&lt;/script&gt;
+  </code></pre>
+
+  <h2 class="mt-5">Example</h2>
+
+  <h3>Startups</h3>
+
+  {{< map.inline >}}
+  {{ $length := len $.Site.Data.startups }}
+  {{ $counter := 0 }}
+
+  {{- range $.Site.Data.startups -}}
+    {{- $counter = add $counter 1 -}}
+    {{- $marker := . | jsonify -}}
+    {{- $.Scratch.Add "markers" (slice $marker) -}}
+  {{- end -}}
+
+  {{ $markers := delimit ($.Scratch.Get "markers") "," }}
+
+  <div id="map"
+       data-markers='[{{ htmlEscape $markers }}]'
+       data-lat="48.858884469956905"
+       data-lng="2.346941100000031"
+       data-zoom="3.5"
+       data-name="5d52c7401a5d2"
+       data-height="34.375"
+  ></div>
+  {{< /map.inline >}}
+
+  <h4 class="mt-5">Accessibility</h4>
+
+  <p>To ensure accessibility, the simplest way is to display an HTML list of markers alongside your map.</p>
+  <p>In last resort —and only if such a list should not be visually displayed— you may use <code>.visually-hidden</code> helper.</p>
+
+  <ul class="row g-3 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 list-unstyled">
+    {{< list.inline >}}
+    {{- range $.Site.Data.startups }}
+      <li class="col d-flex"{{ if .lang }} lang="{{ .lang | safeHTMLAttr }}"{{ end }}>
+        <div class="card flex-grow-1">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{{ .url | safeURL }}" class="stretched-link"{{ if .lang }} hreflang="{{ .lang | safeHTMLAttr }}"{{ end }}>{{ .title | safeHTML }}</a>
+            </h5>
+            {{ if .content }}<p class="card-text">{{ .content | safeHTML }}</p>{{ end }}
+          </div>
+        </div>
+      </li>
+    {{- end -}}
+    {{< /list.inline >}}
+  </ul>
+</main>

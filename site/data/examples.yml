@@ -81,3 +81,5 @@
   examples:
     - name: "Masonry"
       description: "Combine the powers of the Boosted grid and the Masonry layout."
+    - name: "Leaflet"
+      description: "Create ORange branded interactive maps thanks to Leaflet."
