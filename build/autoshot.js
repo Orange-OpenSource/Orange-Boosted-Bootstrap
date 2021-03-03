@@ -6,7 +6,7 @@ const http = require('http')
 const finalhandler = require('finalhandler')
 const serveStatic = require('serve-static')
 
-const serve = serveStatic('./_gh_pages')
+const serve = serveStatic('./_site')
 const host = 'localhost'
 const port = 9001
 const screenshotsBase = './docs/4.6/examples/screenshots/'
