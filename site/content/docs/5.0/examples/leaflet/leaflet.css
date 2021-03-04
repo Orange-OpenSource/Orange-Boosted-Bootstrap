@@ -1,3 +1,34 @@
 .o-map {
   contain: content;
+  font: inherit;
 }
+
+.o-marker::after {
+  display: block;
+  width: 100%;
+  height: .5rem;
+  content: "";
+  background-image: radial-gradient(ellipse at 50%, rgba(0, 0, 0, .25), transparent 75%);
+}
+
+/**
+ * Leaflet overrides
+ *
+ * @note Maybe drop this entirely, and instead add a class on active marker to set the `z-index`
+ * @note Goal is to display active marker above opened popup
+ */
+.leaflet-marker-pane {
+  z-index: 701;
+}
+
+.leaflet-popup {
+  margin-bottom: .625rem;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+/*
+ * @todo Close button should match Boosted one
+ */

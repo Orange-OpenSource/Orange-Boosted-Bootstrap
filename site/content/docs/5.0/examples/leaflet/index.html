@@ -47,11 +47,11 @@ extra_js:
 
   {{ $markers := delimit ($.Scratch.Get "markers") "," }}
 
-  <div id="map"
+  <div id="map" class="o-map"
        data-markers='[{{ htmlEscape $markers }}]'
        data-lat="48.858884469956905"
        data-lng="2.346941100000031"
-       data-zoom="3.5"
+       data-zoom="5"
        data-name="5d52c7401a5d2"
        data-height="34.375"
   ></div>
