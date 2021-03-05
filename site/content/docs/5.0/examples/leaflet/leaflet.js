@@ -58,7 +58,12 @@
   }
 
   function setContent(pin) {
-    return '<h3>' + pin.title + '</h3><p>' + pin.content + '<p>'
+    var content = '<h3>' + pin.title + '</h3>';
+    if (pin.content) {
+       var content = content + '<p>' + pin.content + '<p>'
+    }
+
+    return content
   }
 
   function initOpenStreetMap(el) {
