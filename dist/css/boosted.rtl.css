@@ -2229,10 +2229,6 @@ h4,
 .form-control::-webkit-date-and-time-value {
   height: 1.25em;
 }
-.form-control::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1;
-}
 .form-control::-moz-placeholder {
   color: #666;
   opacity: 1;

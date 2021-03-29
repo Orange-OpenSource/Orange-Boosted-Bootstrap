@@ -41,29 +41,35 @@ In your `custom.scss`, you'll import Boosted's source Sass files. You have two o
 // Custom.scss
 // Option A: Include all of Boosted
 
+// Include any default variable overrides here (though functions won't be available)
+
 @import "../node_modules/boosted/scss/boosted";
 
-// Add custom code after this
+// Then add additional custom code here
 ```
 
 ```scss
 // Custom.scss
 // Option B: Include parts of Boosted
 
-// Required
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/boosted/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Boosted stylesheets
 @import "../node_modules/boosted/scss/variables";
 @import "../node_modules/boosted/scss/mixins";
 
-// Include custom variable default overrides here
-
-// Optional
+// 4. Include any optional Boosted components as you like
 @import "../node_modules/boosted/scss/root";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";
 @import "../node_modules/boosted/scss/images";
 @import "../node_modules/boosted/scss/containers";
 @import "../node_modules/boosted/scss/grid";
+
+// 5. Add additional custom code here
 ```
 
 With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Boosted under the `// Optional` section as needed. We suggest using the full import stack from our `boosted.scss` file as your starting point.
@@ -81,14 +87,16 @@ Here's an example that changes the `background-color` and `color` for the `<body
 ```scss
 // Required
 @import "../node_modules/boosted/scss/functions";
-@import "../node_modules/boosted/scss/variables";
-@import "../node_modules/boosted/scss/mixins";
 
 // Your variable overrides
 $body-bg: #000;
 $body-color: #111;
 
-// Optional
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Optional Boosted components here
 @import "../node_modules/boosted/scss/root";
 @import "../node_modules/boosted/scss/reboot";
 @import "../node_modules/boosted/scss/type";

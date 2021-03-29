@@ -1240,10 +1240,11 @@ $card-footer-color:                 $gray-700 !default; // Boosted mod
 $accordion-padding-y:                     $spacer / 2 !default;
 $accordion-padding-x:                     $spacer / 2 !default;
 $accordion-color:                         $body-color !default;
-$accordion-bg:                            transparent !default;
+$accordion-bg:                            $body-bg !default;
 $accordion-border-width:                  $border-width / 2 !default;
 $accordion-border-color:                  $gray-500 !default;
 $accordion-border-radius:                 $border-radius !default;
+$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
 
 $accordion-body-padding-y:                $spacer !default;
 $accordion-body-padding-x:                $spacer !default;

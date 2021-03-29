@@ -72,7 +72,7 @@ Add classes to an element to easily round its corners.
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 
-### Utilities
+### Utilities API
 
 Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
