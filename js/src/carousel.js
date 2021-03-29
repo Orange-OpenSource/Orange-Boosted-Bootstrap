@@ -406,7 +406,7 @@ class Carousel extends BaseComponent {
     if (!this._config.wrap) {
       if (isGoingToWrap) {
         // Reset the animation on last progress indicator when last slide is active
-        if (isNextDirection && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
+        if (isNext && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
           this._element.classList.add(CLASS_NAME_DONE)
         }
 

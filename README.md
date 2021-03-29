@@ -36,11 +36,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-beta2.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-beta3.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted@next`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted@next`
-- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0-beta2`
+- Install with [Composer](https://getcomposer.org/): `composer require Orange-OpenSource/Orange-Boosted-Bootstrap:5.0.0-beta3`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package boosted` Sass: `Install-Package boosted.sass`
 
 Read the [Getting started page](https://v5-dev--boosted.netlify.app/docs/5.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
@@ -48,7 +48,7 @@ Read the [Getting started page](https://v5-dev--boosted.netlify.app/docs/5.0/get
 
 ## Status
 
-[![Build Status](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/workflows/JS%20Tests/badge.svg?branch=v5-dev)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av5-dev)
+[![Build Status](https://img.shields.io/github/workflow/status/Orange-OpenSource/Orange-Boosted-Bootstrap/JS%20Tests/v5-dev?label=JS%20Tests&logo=github)](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av5-dev)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Boosted/Boosted)
 [![npm version](https://img.shields.io/npm/v/boosted)](https://www.npmjs.com/package/boosted)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/Orange-OpenSource/Orange-Boosted-Bootstrap.svg)](https://packagist.org/packages/Orange-OpenSource/Orange-Boosted-Bootstrap)

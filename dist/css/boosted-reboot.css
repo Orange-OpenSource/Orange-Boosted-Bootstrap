@@ -1,10 +1,10 @@
 /*!
- * Boosted Reboot v5.0.0-beta2 (https://boosted.orange.com/)
+ * Boosted Reboot v5.0.0-beta3 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Reboot v5.0.0-beta2 (https://getbootstrap.com/)
+ * Bootstrap Reboot v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -46,10 +46,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeSpeed;
-}
-
-[tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
 }
 
 :focus {
@@ -109,7 +105,6 @@ p {
 
 abbr[title],
 abbr[data-bs-original-title] {
-  text-decoration: underline;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
@@ -376,6 +371,9 @@ select {
 
 select {
   word-wrap: normal;
+}
+select:disabled {
+  opacity: 1;
 }
 
 [list]::-webkit-calendar-picker-indicator {

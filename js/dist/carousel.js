@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.0.0-beta2 (https://boosted.orange.com/)
+  * Boosted v5.0.0-beta3 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap carousel.js v5.0.0-beta2 (https://boosted.orange.com/)
+  * Bootstrap carousel.js v5.0.0-beta3 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -220,108 +220,108 @@
     wrap: 'boolean',
     touch: 'boolean'
   };
-  var DIRECTION_NEXT = 'next';
-  var DIRECTION_PREV = 'prev';
-  var DIRECTION_LEFT = 'left';
-  var DIRECTION_RIGHT = 'right';
-  var EVENT_SLIDE = "slide" + EVENT_KEY;
-  var EVENT_SLID = "slid" + EVENT_KEY;
-  var EVENT_KEYDOWN = "keydown" + EVENT_KEY;
-  var EVENT_MOUSEENTER = "mouseenter" + EVENT_KEY;
-  var EVENT_MOUSELEAVE = "mouseleave" + EVENT_KEY;
-  var EVENT_TOUCHSTART = "touchstart" + EVENT_KEY;
-  var EVENT_TOUCHMOVE = "touchmove" + EVENT_KEY;
-  var EVENT_TOUCHEND = "touchend" + EVENT_KEY;
-  var EVENT_POINTERDOWN = "pointerdown" + EVENT_KEY;
-  var EVENT_POINTERUP = "pointerup" + EVENT_KEY;
-  var EVENT_DRAG_START = "dragstart" + EVENT_KEY;
-  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY + DATA_API_KEY;
-  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
-  var CLASS_NAME_CAROUSEL = 'carousel';
-  var CLASS_NAME_ACTIVE = 'active';
-  var CLASS_NAME_SLIDE = 'slide';
-  var CLASS_NAME_END = 'carousel-item-end';
-  var CLASS_NAME_START = 'carousel-item-start';
-  var CLASS_NAME_NEXT = 'carousel-item-next';
-  var CLASS_NAME_PREV = 'carousel-item-prev';
-  var CLASS_NAME_POINTER_EVENT = 'pointer-event';
-  var CLASS_NAME_PAUSED = 'is-paused'; // Boosted mod: used for progress indicators
+  const ORDER_NEXT = 'next';
+  const ORDER_PREV = 'prev';
+  const DIRECTION_LEFT = 'left';
+  const DIRECTION_RIGHT = 'right';
+  const EVENT_SLIDE = `slide${EVENT_KEY}`;
+  const EVENT_SLID = `slid${EVENT_KEY}`;
+  const EVENT_KEYDOWN = `keydown${EVENT_KEY}`;
+  const EVENT_MOUSEENTER = `mouseenter${EVENT_KEY}`;
+  const EVENT_MOUSELEAVE = `mouseleave${EVENT_KEY}`;
+  const EVENT_TOUCHSTART = `touchstart${EVENT_KEY}`;
+  const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY}`;
+  const EVENT_TOUCHEND = `touchend${EVENT_KEY}`;
+  const EVENT_POINTERDOWN = `pointerdown${EVENT_KEY}`;
+  const EVENT_POINTERUP = `pointerup${EVENT_KEY}`;
+  const EVENT_DRAG_START = `dragstart${EVENT_KEY}`;
+  const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`;
+  const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+  const CLASS_NAME_CAROUSEL = 'carousel';
+  const CLASS_NAME_ACTIVE = 'active';
+  const CLASS_NAME_SLIDE = 'slide';
+  const CLASS_NAME_END = 'carousel-item-end';
+  const CLASS_NAME_START = 'carousel-item-start';
+  const CLASS_NAME_NEXT = 'carousel-item-next';
+  const CLASS_NAME_PREV = 'carousel-item-prev';
+  const CLASS_NAME_POINTER_EVENT = 'pointer-event';
+  const CLASS_NAME_PAUSED = 'is-paused'; // Boosted mod: used for progress indicators
 
-  var CLASS_NAME_DONE = 'is-done'; // Boosted mod: used for progress indicators
+  const CLASS_NAME_DONE = 'is-done'; // Boosted mod: used for progress indicators
 
-  var SELECTOR_ACTIVE = '.active';
-  var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
-  var SELECTOR_ITEM = '.carousel-item';
-  var SELECTOR_ITEM_IMG = '.carousel-item img';
-  var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
-  var SELECTOR_INDICATORS = '.carousel-indicators';
-  var SELECTOR_INDICATOR = '[data-bs-target]';
-  var SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
-  var SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
-  var SELECTOR_CONTROL_PREV = '.carousel-control-prev'; // Boosted mod
+  const SELECTOR_ACTIVE = '.active';
+  const SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
+  const SELECTOR_ITEM = '.carousel-item';
+  const SELECTOR_ITEM_IMG = '.carousel-item img';
+  const SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
+  const SELECTOR_INDICATORS = '.carousel-indicators';
+  const SELECTOR_INDICATOR = '[data-bs-target]';
+  const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
+  const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+  const SELECTOR_CONTROL_PREV = '.carousel-control-prev'; // Boosted mod
 
-  var SELECTOR_CONTROL_NEXT = '.carousel-control-next'; // Boosted mod
+  const SELECTOR_CONTROL_NEXT = '.carousel-control-next'; // Boosted mod
 
-  var PREFIX_CUSTOM_PROPS = 'o-'; // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
+  const PREFIX_CUSTOM_PROPS = 'o-'; // Boosted mod: should match `$boosted-variable-prefix` in scss/_variables.scss
 
-  var POINTER_TYPE_TOUCH = 'touch';
-  var POINTER_TYPE_PEN = 'pen';
+  const POINTER_TYPE_TOUCH = 'touch';
+  const POINTER_TYPE_PEN = 'pen';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Carousel = /*#__PURE__*/function (_BaseComponent) {
-    _inheritsLoose(Carousel, _BaseComponent);
+  class Carousel extends BaseComponent__default['default'] {
+    constructor(element, config) {
+      super(element);
+      this._items = null;
+      this._interval = null;
+      this._activeElement = null;
+      this._isPaused = false;
+      this._isSliding = false;
+      this.touchTimeout = null;
+      this.touchStartX = 0;
+      this.touchDeltaX = 0;
+      this._config = this._getConfig(config);
+      this._indicatorsElement = SelectorEngine__default['default'].findOne(SELECTOR_INDICATORS, this._element);
+      this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
+      this._pointerEvent = Boolean(window.PointerEvent);
 
-    function Carousel(element, config) {
-      var _this;
-
-      _this = _BaseComponent.call(this, element) || this;
-      _this._items = null;
-      _this._interval = null;
-      _this._activeElement = null;
-      _this._isPaused = false;
-      _this._isSliding = false;
-      _this.touchTimeout = null;
-      _this.touchStartX = 0;
-      _this.touchDeltaX = 0;
-      _this._config = _this._getConfig(config);
-      _this._indicatorsElement = SelectorEngine__default['default'].findOne(SELECTOR_INDICATORS, _this._element);
-      _this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
-      _this._pointerEvent = Boolean(window.PointerEvent);
-
-      _this._addEventListeners();
-
-      return _this;
+      this._addEventListeners();
     } // Getters
 
 
-    var _proto = Carousel.prototype;
+    static get Default() {
+      return Default;
+    }
 
-    // Public
-    _proto.next = function next() {
+    static get DATA_KEY() {
+      return DATA_KEY;
+    } // Public
+
+
+    next() {
       if (!this._isSliding) {
-        this._slide(DIRECTION_NEXT);
+        this._slide(ORDER_NEXT);
       }
-    };
+    }
 
-    _proto.nextWhenVisible = function nextWhenVisible() {
+    nextWhenVisible() {
       // Don't call next when the page isn't visible
       // or the carousel or its parent isn't visible
       if (!document.hidden && isVisible(this._element)) {
         this.next();
       }
-    };
+    }
 
-    _proto.prev = function prev() {
+    prev() {
       if (!this._isSliding) {
-        this._slide(DIRECTION_PREV);
+        this._slide(ORDER_PREV);
       }
-    };
+    }
 
-    _proto.pause = function pause(event) {
+    pause(event) {
       // Boosted mod: reset the animation on progress indicator
       if (this._indicatorsElement) {
         this._element.classList.add(CLASS_NAME_PAUSED);
@@ -339,9 +339,9 @@
 
       clearInterval(this._interval);
       this._interval = null;
-    };
+    }
 
-    _proto.cycle = function cycle(event) {
+    cycle(event) {
       // Boosted mod: restart the animation on progress indicator
       if (this._indicatorsElement) {
         this._element.classList.remove(CLASS_NAME_PAUSED);
@@ -362,14 +362,12 @@
 
         this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
       }
-    };
+    }
 
-    _proto.to = function to(index) {
-      var _this2 = this;
-
+    to(index) {
       this._activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
-      var activeIndex = this._getItemIndex(this._activeElement); // Boosted mod: restart the animation on progress indicator
+      const activeIndex = this._getItemIndex(this._activeElement); // Boosted mod: restart the animation on progress indicator
 
 
       if (this._indicatorsElement) {
@@ -382,9 +380,7 @@
       }
 
       if (this._isSliding) {
-        EventHandler__default['default'].one(this._element, EVENT_SLID, function () {
-          return _this2.to(index);
-        });
+        EventHandler__default['default'].one(this._element, EVENT_SLID, () => this.to(index));
         return;
       }
 
@@ -515,33 +511,25 @@
       if (event.key === ARROW_LEFT_KEY) {
         event.preventDefault();
 
-        if (isRTL) {
-          this.next();
-        } else {
-          this.prev();
-        }
+        this._slide(DIRECTION_LEFT);
       } else if (event.key === ARROW_RIGHT_KEY) {
         event.preventDefault();
 
-        if (isRTL) {
-          this.prev();
-        } else {
-          this.next();
-        }
+        this._slide(DIRECTION_RIGHT);
       }
     } // Boosted mod: handle prev/next controls states
-    ;
 
-    _proto._disableControl = function _disableControl(element) {
+
+    _disableControl(element) {
       if (element.nodeName === 'BUTTON') {
         element.disabled = true;
       } else {
         element.setAttribute('aria-disabled', true);
         element.setAttribute('tabindex', '-1');
       }
-    };
+    }
 
-    _proto._enableControl = function _enableControl(element) {
+    _enableControl(element) {
       if (element.nodeName === 'BUTTON') {
         element.disabled = false;
       } else {
@@ -549,26 +537,26 @@
         element.removeAttribute('tabindex');
       }
     } // End mod
-    ;
 
-    _proto._getItemIndex = function _getItemIndex(element) {
+
+    _getItemIndex(element) {
       this._items = element && element.parentNode ? SelectorEngine__default['default'].find(SELECTOR_ITEM, element.parentNode) : [];
       return this._items.indexOf(element);
-    };
+    }
 
-    _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
-      var isNextDirection = direction === DIRECTION_NEXT;
-      var isPrevDirection = direction === DIRECTION_PREV;
+    _getItemByOrder(order, activeElement) {
+      const isNext = order === ORDER_NEXT;
+      const isPrev = order === ORDER_PREV;
 
-      var activeIndex = this._getItemIndex(activeElement);
+      const activeIndex = this._getItemIndex(activeElement);
 
-      var lastItemIndex = this._items.length - 1;
-      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex; // Boosted mod: progress indicators animation when wrapping is disabled
+      const lastItemIndex = this._items.length - 1;
+      const isGoingToWrap = isPrev && activeIndex === 0 || isNext && activeIndex === lastItemIndex; // Boosted mod: progress indicators animation when wrapping is disabled
 
       if (!this._config.wrap) {
         if (isGoingToWrap) {
           // Reset the animation on last progress indicator when last slide is active
-          if (isNextDirection && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
+          if (isNext && this._indicatorsElement && !this._element.hasAttribute('data-bs-slide')) {
             this._element.classList.add(CLASS_NAME_DONE);
           }
 
@@ -582,32 +570,32 @@
       } // End mod
 
 
-      var delta = direction === DIRECTION_PREV ? -1 : 1;
-      var itemIndex = (activeIndex + delta) % this._items.length;
+      const delta = isPrev ? -1 : 1;
+      const itemIndex = (activeIndex + delta) % this._items.length;
       return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
-    };
+    }
 
-    _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
-      var targetIndex = this._getItemIndex(relatedTarget);
+    _triggerSlideEvent(relatedTarget, eventDirectionName) {
+      const targetIndex = this._getItemIndex(relatedTarget);
 
-      var fromIndex = this._getItemIndex(SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element));
+      const fromIndex = this._getItemIndex(SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element));
 
       return EventHandler__default['default'].trigger(this._element, EVENT_SLIDE, {
-        relatedTarget: relatedTarget,
+        relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
         to: targetIndex
       });
-    };
+    }
 
-    _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
+    _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        var activeIndicator = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE, this._indicatorsElement);
+        const activeIndicator = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE, this._indicatorsElement);
         activeIndicator.classList.remove(CLASS_NAME_ACTIVE);
         activeIndicator.removeAttribute('aria-current');
-        var indicators = SelectorEngine__default['default'].find(SELECTOR_INDICATOR, this._indicatorsElement);
+        const indicators = SelectorEngine__default['default'].find(SELECTOR_INDICATOR, this._indicatorsElement);
 
-        for (var i = 0; i < indicators.length; i++) {
+        for (let i = 0; i < indicators.length; i++) {
           if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getItemIndex(element)) {
             indicators[i].classList.add(CLASS_NAME_ACTIVE);
             indicators[i].setAttribute('aria-current', 'true');
@@ -635,36 +623,38 @@
 
 
       if (this._indicatorsElement && this._config.interval !== Default.interval) {
-        var currentIndex = this._getItemIndex(element);
+        const currentIndex = this._getItemIndex(element);
 
-        var currentIndicator = SelectorEngine__default['default'].findOne(":nth-child(" + (currentIndex + 1) + ")", this._indicatorsElement);
-        currentIndicator.style.setProperty("--" + PREFIX_CUSTOM_PROPS + "carousel-interval", this._config.interval + "ms");
+        const currentIndicator = SelectorEngine__default['default'].findOne(`:nth-child(${currentIndex + 1})`, this._indicatorsElement);
+        currentIndicator.style.setProperty(`--${PREFIX_CUSTOM_PROPS}carousel-interval`, `${this._config.interval}ms`);
       } // End mod
 
-    };
+    }
 
-    _proto._slide = function _slide(direction, element) {
-      var _this5 = this;
+    _slide(directionOrOrder, element) {
+      const order = this._directionToOrder(directionOrOrder);
 
-      var activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      const activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
-      var activeElementIndex = this._getItemIndex(activeElement);
+      const activeElementIndex = this._getItemIndex(activeElement);
 
-      var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
+      const nextElement = element || this._getItemByOrder(order, activeElement);
 
-      var nextElementIndex = this._getItemIndex(nextElement);
+      const nextElementIndex = this._getItemIndex(nextElement);
 
-      var isCycling = Boolean(this._interval);
-      var directionalClassName = direction === DIRECTION_NEXT ? CLASS_NAME_START : CLASS_NAME_END;
-      var orderClassName = direction === DIRECTION_NEXT ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
-      var eventDirectionName = direction === DIRECTION_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT;
+      const isCycling = Boolean(this._interval);
+      const isNext = order === ORDER_NEXT;
+      const directionalClassName = isNext ? CLASS_NAME_START : CLASS_NAME_END;
+      const orderClassName = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
+
+      const eventDirectionName = this._orderToDirection(order);
 
       if (nextElement && nextElement.classList.contains(CLASS_NAME_ACTIVE)) {
         this._isSliding = false;
         return;
       }
 
-      var slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName);
+      const slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName);
 
       if (slideEvent.defaultPrevented) {
         return;
@@ -686,8 +676,8 @@
       this._activeElement = nextElement; // Boosted mod: enable/disable prev/next controls when wrap=false
 
       if (!this._config.wrap) {
-        var prevControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_PREV, this._element);
-        var nextControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_NEXT, this._element);
+        const prevControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_PREV, this._element);
+        const nextControl = SelectorEngine__default['default'].findOne(SELECTOR_CONTROL_NEXT, this._element);
 
         this._enableControl(prevControl);
 

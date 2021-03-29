@@ -1,7 +1,7 @@
 {
   "name": "boosted",
   "description": "Orange Boosted with Bootstrap is a Bootstrap based, Orange branded accessible and ergonomic components library.",
-  "version": "5.0.0-beta2",
+  "version": "5.0.0-beta3",
   "config": {
     "version_short": "5.0"
   },

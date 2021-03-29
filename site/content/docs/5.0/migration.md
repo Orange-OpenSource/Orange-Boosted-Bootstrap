@@ -35,7 +35,7 @@ We only replaced `Bootstrap` with `Boosted`—especially in code examples and fi
 
 - Dropped the `0` entry in `$border-widths` map to remove the duplicated `.border-0` class.
 
-## v5.0.0-beta2
+## v5.0.0-beta3
 
 ### Utilities
 

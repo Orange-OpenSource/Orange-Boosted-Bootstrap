@@ -74,7 +74,6 @@
   }
 
   // File input buttons theming
-  // stylelint-disable-next-line selector-pseudo-element-no-unknown
   &::file-selector-button {
     padding: subtract($input-padding-y, 1px) $input-padding-x add($input-padding-y, 1px); // Boosted mod
     margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list
@@ -91,7 +90,6 @@
   }
 
   // Boosted mod
-  // stylelint-disable-next-line selector-pseudo-element-no-unknown
   &:disabled::file-selector-button {
     color: $input-disabled-color;
     background-color: $input-disabled-bg;
@@ -99,7 +97,6 @@
   }
   // End mod
 
-  // stylelint-disable-next-line selector-pseudo-element-no-unknown
   &:hover:not(:disabled):not([readonly])::file-selector-button {
     background-color: $form-file-button-hover-bg;
   }
@@ -169,7 +166,6 @@
   @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 
-  // stylelint-disable-next-line selector-pseudo-element-no-unknown
   &::file-selector-button {
     padding: subtract($input-padding-y-lg, 1px) $input-padding-x-lg add($input-padding-y-lg, 1px); // Boosted mod
     margin: calc((#{$input-padding-y} - 1px) * -1) (-$input-padding-x) calc((#{$input-padding-y} + 1px) * -1); // stylelint-disable-line function-disallowed-list

@@ -1,3 +1,27 @@
+# [5.0.0-beta3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta2...v5.0.0-beta3) (2021-04-28)
+
+
+### Bug Fixes
+
+* **accordion:** apply changes requested on MR ([ee89ce2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/ee89ce2dcc814574680fc559c58277d16e671a39))
+* **accordion:** Repare visual regressions ([b547626](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/b54762642cdc4a8a5aca7438906a4b6e6b766e20))
+* **build:** delete useless build.sh file ([2d051ba](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2d051ba453f60de793b11b379ea48d44b54f4f3b))
+* **changelog:** correct version numbers following version bump (via npm command) ([698f647](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/698f6478e39ae3397aaf7cce3645167db9830861))
+* **config:** correct ruby version ([e64e101](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e64e101fc2617d9192540697c01796b242779ff4))
+* **docs:** Use shield.io badge in the readme ([c34b3d7](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c34b3d793bf321aea3ee1c2707e7e55914a49a55))
+* **examples:** Correct the bootstrap logo into orange logo ([94e27fa](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/94e27faab389fdbd28459cb228e990968b099569))
+* **lint:** repare lint execution ([54055d4](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/54055d437bc3230001a5637b08c2674537d95670))
+* **list-group:** Hide the link of the doc for the component (for now) ([48ccdff](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/48ccdffa484c31b2b29c51f11a3631dc3001510a))
+* **list-group:** revert the link in the menu ([e10518b](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/e10518b1ff7aa8b1cb38070811e34bfc34c3828b))
+* **popper:** manually change popper version ([1d87421](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/1d87421b711f4bddbeb5e39aaec5a42b328ca6ad))
+
+
+### Features
+
+* **stepped process:** add the component from v4 ([2f353e3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/2f353e3ac9905b9834798062fa20f9a6c273ea44))
+
+
+
 <a name="5.0.0-beta2"></a>
 # [5.0.0-beta2](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta1...v5.0.0-beta2) (2021-02-12)
 
@@ -44,7 +68,7 @@
 
 
 <a name="5.0.0-beta1"></a>
-# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha3...v5.0.0-beta2) (2020-12-10)
+# [5.0.0-beta1](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-alpha3...v5.0.0-beta1) (2020-12-10)
 
 ### Features
 
