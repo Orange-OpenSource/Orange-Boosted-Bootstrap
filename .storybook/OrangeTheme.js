@@ -5,9 +5,7 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
 
-  //colorPrimary: 'hotpink',
   colorPrimary: '#ff7900',
-  //colorSecondary: 'deepskyblue',
   colorSecondary: '#000',
 
   // UI
@@ -35,8 +33,8 @@ export default create({
   inputTextColor: 'black',
   inputBorderRadius: 4,
 
-  brandTitle: 'Orange Storybook',
-  brandUrl: 'https://www.orange.com',
-  // TODO: change this URL
-  brandImage: 'https://www.orange.com/themes/theme_boosted/Master_Logo_RGB.png',
+  // Brand
+  brandTitle: 'Orange Design',
+  brandUrl: 'https://design.orange.com/',
+  brandImage: 'https://design.orange.com/wp-content/themes/orangexdlab/assets/images/orange_logo.svg',
 });
