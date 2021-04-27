@@ -64,6 +64,12 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
+  // Boosted mod
+  .bg-dark & {
+    color: $dropdown-bg;
+    background-color: $dropdown-color;
+  }
+  // End mod
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -177,6 +183,12 @@
     color: $dropdown-link-hover-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-hover-bg);
+    // Boosted mod
+    .bg-dark & {
+      color: $dropdown-link-hover-bg;
+      @include gradient-bg($dropdown-link-hover-color);
+    }
+    // End mod
   }
 
   &.active,
@@ -184,6 +196,12 @@
     color: $dropdown-link-active-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-active-bg);
+    // Boosted mod
+    .bg-dark & {
+      color: $dropdown-link-active-bg;
+      @include gradient-bg($dropdown-link-active-color);
+    }
+    // End mod
   }
 
   &.disabled,
