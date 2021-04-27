@@ -53,9 +53,8 @@ See how aspects of the Boosted grid system work across multiple devices with a h
 
 We include a security margin for container fluid. The goal is to fit exactly the desired content width at the targetted resolution.
  
-<!-- Boosted mod -->
+<!-- Boosted mod: Orange grid custom BP values -->
 
-[comment]: # Orange grid custom BP values
 <table class="table table-bordered table-striped">
   <thead>
     <tr>

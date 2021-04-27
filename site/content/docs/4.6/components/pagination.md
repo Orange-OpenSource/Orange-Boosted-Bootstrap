@@ -12,7 +12,8 @@ We use a large block of connected links for our pagination, making links hard to
 
 In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`.
 
-[comment]: boosted mod
+<!-- Boosted mod -->
+
 Make sure to use class `.has-label` on previous and next links as shown in the example below to use chevron + label layout.
 
 {{< example >}}
@@ -28,7 +29,8 @@ Make sure to use class `.has-label` on previous and next links as shown in the e
 
 ## Working with icons
 
-[comment]: boosted mod
+<!-- Boosted mod -->
+
 Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with **visually hidden text** and a `title` attribute.
 
 {{< example >}}
