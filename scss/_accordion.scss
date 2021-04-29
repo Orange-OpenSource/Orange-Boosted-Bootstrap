@@ -19,12 +19,10 @@
   /* rtl:remove */
   letter-spacing: $accordion-button-letter-spacing; // Boosted mod
   background-color: $accordion-button-bg;
-  border: 0; // Boosted mod: borders are set on .accordion-header
+  border: 0;
   @include border-radius(0);
   overflow-anchor: none;
   @include transition($accordion-transition);
-
-  // Boosted mod: borders are set on .accordion-header
 
   &:not(.collapsed) {
     color: $accordion-button-active-color;
@@ -58,38 +56,40 @@
 }
 
 .accordion-item {
+
+  // Boosted mod : no margin-bottom nor border (instead of margin-bottom: -$accordion-border-width & border: $accordion-border-width solid $accordion-border-color)
+  background-color: $accordion-bg;
+
   &:first-of-type {
+    @include border-top-radius($accordion-border-radius);
+
     .accordion-button {
-      @include border-top-radius($accordion-border-radius);
+      @include border-top-radius($accordion-inner-border-radius);
     }
   }
 
+  // Only set a border-radius on the last item if the accordion is collapsed
   &:last-of-type {
+    margin-bottom: 0;
+    @include border-bottom-radius($accordion-border-radius);
     border-bottom: $accordion-border-width solid $accordion-border-color; // Boosted mod: borders are set on .accordion-header
 
     .accordion-button {
       // Only set a border-radius on the last item if the accordion is collapsed
       &.collapsed {
-        // Boosted mod: borders are set on .accordion-header
-        @include border-bottom-radius($accordion-border-radius);
+        @include border-bottom-radius($accordion-inner-border-radius);
       }
     }
 
     .accordion-collapse {
-      // Boosted mod: borders are set on .accordion-header
       @include border-bottom-radius($accordion-border-radius);
     }
   }
 }
 
-// Boosted mod: no borders for .accordion-collapse
-
 .accordion-body {
   padding: 0 $accordion-body-padding-x $accordion-body-padding-y 0; // Boosted mod
 }
-
-
-// Boosted mod: no .accordion-flush
 
 //
 // Boosted mod: accordion sizes

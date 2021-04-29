@@ -1,10 +1,10 @@
 /*!
- * Boosted Utilities v5.0.0-beta2 (https://boosted.orange.com/)
+ * Boosted Utilities v5.0.0-beta3 (https://boosted.orange.com/)
  * Copyright 2014-2021 The Boosted Authors
  * Copyright 2014-2021 Orange SA
  * Licensed under MIT (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/v5-dev/LICENSE)
  * This a fork of Bootstrap: Initial license below
- * Bootstrap Utilities v5.0.0-beta2 (https://getbootstrap.com/)
+ * Bootstrap Utilities v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -260,10 +260,6 @@
 
 .border-white {
   border-color: #fff !important;
-}
-
-.border-0 {
-  border-width: 0 !important;
 }
 
 .border-1 {
@@ -924,6 +920,10 @@
   padding-left: 3.75rem !important;
 }
 
+.font-monospace {
+  font-family: var(--bs-font-monospace) !important;
+}
+
 .fs-1 {
   font-size: 2.125rem !important;
 }
@@ -956,12 +956,20 @@
   font-weight: 700 !important;
 }
 
-.text-lowercase {
-  text-transform: lowercase !important;
+.lh-1 {
+  line-height: 1 !important;
 }
 
-.text-capitalize {
-  text-transform: capitalize !important;
+.lh-sm {
+  line-height: calc(16 / 14) !important;
+}
+
+.lh-base {
+  line-height: calc(18 / 16) !important;
+}
+
+.lh-lg {
+  line-height: calc(30 / 16) !important;
 }
 
 .text-start {
@@ -976,6 +984,41 @@
   text-align: center !important;
 }
 
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+/* rtl:begin:remove */
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* rtl:end:remove */
 .text-primary {
   color: #f16e00 !important;
 }
@@ -1002,22 +1045,6 @@
 
 .text-reset {
   color: inherit !important;
-}
-
-.lh-1 {
-  line-height: 1 !important;
-}
-
-.lh-sm {
-  line-height: calc(16 / 14) !important;
-}
-
-.lh-base {
-  line-height: calc(18 / 16) !important;
-}
-
-.lh-lg {
-  line-height: calc(30 / 16) !important;
 }
 
 .bg-primary {
@@ -1101,37 +1128,6 @@
 
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
-}
-
-.text-wrap {
-  white-space: normal !important;
-}
-
-.text-nowrap {
-  white-space: nowrap !important;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
-.text-decoration-underline {
-  text-decoration: underline !important;
-}
-
-.text-decoration-line-through {
-  text-decoration: line-through !important;
-}
-
-/* rtl:begin:remove */
-.text-break {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-}
-
-/* rtl:end:remove */
-.font-monospace {
-  font-family: var(--bs-font-monospace) !important;
 }
 
 .user-select-all {
