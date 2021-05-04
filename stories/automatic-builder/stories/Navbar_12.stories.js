@@ -3,12 +3,15 @@ export default {
   }
   
   export const Navbar_12 = () => {
-    return `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-md">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-    </a>
-  </div>
-</nav>
+    return `
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+      </a>
+    </div>
+  </nav>
+</div>
 `
   }

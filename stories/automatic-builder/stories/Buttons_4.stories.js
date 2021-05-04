@@ -3,7 +3,8 @@ export default {
   }
   
   export const Buttons_4 = () => {
-    return `<a href="/" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
+    return `
+<a href="/" class="btn btn-icon btn-social btn-twitter"><span class="visually-hidden">Twitter</span></a>
 <a href="/" class="btn btn-icon btn-social btn-facebook"><span class="visually-hidden">Facebook</span></a>
 <a href="/" class="btn btn-icon btn-social btn-instagram"><span class="visually-hidden">Instagram</span></a>
 <a href="/" class="btn btn-icon btn-social btn-whatsapp"><span class="visually-hidden">Whatsapp</span></a>

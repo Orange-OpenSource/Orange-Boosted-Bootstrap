@@ -3,7 +3,8 @@ export default {
   }
   
   export const Progress_5 = () => {
-    return `<div class="progress">
+    return `
+<div class="progress">
   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">

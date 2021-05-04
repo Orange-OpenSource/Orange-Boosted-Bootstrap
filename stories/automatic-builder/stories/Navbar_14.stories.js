@@ -3,11 +3,12 @@ export default {
   }
   
   export const Navbar_14 = () => {
-    return `<nav class="navbar fixed-top navbar-dark bg-dark">
+    return `
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
-      <span>Fixed top</span>
+      <img src="/docs/5.0/assets/brand/orange-logo.svg" width="50" height="50" role="img" alt="Boosted" loading="lazy">
+      <span>Default</span>
     </a>
   </div>
 </nav>

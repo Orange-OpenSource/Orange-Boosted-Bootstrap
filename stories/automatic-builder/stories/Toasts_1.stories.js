@@ -3,5 +3,7 @@ export default {
   }
   
   export const Toasts_1 = () => {
-    return ``
+    return `
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+`
   }

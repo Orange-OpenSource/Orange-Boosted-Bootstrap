@@ -3,9 +3,15 @@ export default {
   }
   
   export const Badge_3 = () => {
-    return `{{< badge.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
-<span class="badge bg-{{ .name }}">{{ .name | title }}</span>{{- end -}}
-{{< /badge.inline >}}
+    return `
+
+<span class="badge bg-primary">Primary</span>
+<span class="badge bg-secondary">Secondary</span>
+<span class="badge bg-success">Success</span>
+<span class="badge bg-danger">Danger</span>
+<span class="badge bg-warning">Warning</span>
+<span class="badge bg-info">Info</span>
+<span class="badge bg-light">Light</span>
+<span class="badge bg-dark">Dark</span>
 `
   }

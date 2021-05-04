@@ -3,7 +3,8 @@ export default {
   }
   
   export const Navbar_7 = () => {
-    return `<nav class="navbar navbar-dark bg-dark">
+    return `
+<nav class="navbar navbar-dark bg-dark">
   <form class="container-fluid">
     <div class="input-group">
       <span class="input-group-text" id="basic-addon1">@</span>

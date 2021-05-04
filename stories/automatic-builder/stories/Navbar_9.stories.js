@@ -3,7 +3,8 @@ export default {
   }
   
   export const Navbar_9 = () => {
-    return `<nav class="navbar navbar-dark bg-dark">
+    return `
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <span class="navbar-text">
       Navbar text with an inline element

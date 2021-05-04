@@ -3,7 +3,8 @@ export default {
   }
   
   export const Navbar_5 = () => {
-    return `<nav class="navbar navbar-dark bg-dark">
+    return `
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

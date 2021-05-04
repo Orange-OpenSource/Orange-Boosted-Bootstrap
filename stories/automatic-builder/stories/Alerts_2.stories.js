@@ -3,7 +3,8 @@ export default {
   }
   
   export const Alerts_2 = () => {
-    return `<div class="alert alert-success" role="alert">
+    return `
+<div class="alert alert-success" role="alert">
   <span class="alert-icon"><span class="visually-hidden">Success</span></span>
   <div>
     <h4 class="alert-heading">Success notification text goes here.</h4>

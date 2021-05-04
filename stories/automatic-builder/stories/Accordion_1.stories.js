@@ -3,7 +3,8 @@ export default {
   }
   
   export const Accordion_1 = () => {
-    return `<div class="row">
+    return `
+<div class="row">
   <div class="col-md-6 col-lg-5">
     <div class="accordion accordion-sm" id="accordionExampleSmall">
       <div class="accordion-item">

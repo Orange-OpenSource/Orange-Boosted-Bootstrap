@@ -3,7 +3,8 @@ export default {
   }
   
   export const Badge_0 = () => {
-    return `<h1>Example heading <span class="badge bg-secondary">New</span></h1>
+    return `
+<h1>Example heading <span class="badge bg-secondary">New</span></h1>
 <h2>Example heading <span class="badge bg-secondary">New</span></h2>
 <h3>Example heading <span class="badge bg-secondary">New</span></h3>
 <h4>Example heading <span class="badge bg-secondary">New</span></h4>
