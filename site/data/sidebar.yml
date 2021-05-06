@@ -52,11 +52,11 @@
     - title: Navs
     - title: Navbar
     # Boosted mod
-    - title: Navbar Orange
+    - title: Orange navbar
     - title: Orange megamenu
+    - title: Orange footer
     - title: Local navigation
     - title: Priority Nav
-    - title: Orange footer
     # end mod
     - title: Pagination
     - title: Popovers

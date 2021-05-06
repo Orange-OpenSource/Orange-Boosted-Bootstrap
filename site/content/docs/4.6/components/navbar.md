@@ -41,7 +41,7 @@ Here's an example of all the sub-components included in a responsive light-theme
 
 #### Multiple navigations
 
-The nav component should either have an `aria-label` or `aria-labelledy` attribute when there is more than one `nav` in the page. [Full Orange's navbar is a good example]({{< docsref "/components/navbar-orange#full-example" >}}), adding the [Supra bar]({{< docsref "/components/navbar-orange#supra-bar" >}}) above the main navigation. 
+The nav component should either have an `aria-label` or `aria-labelledy` attribute when there is more than one `nav` in the page. [Full Orange's navbar is a good example]({{< docsref "/components/orange-navbar#full-example" >}}), adding the [Supra bar]({{< docsref "/components/orange-navbar#supra-bar" >}}) above the main navigation. 
 If there's only one, you can leave as-is.
 
 #### Current page
