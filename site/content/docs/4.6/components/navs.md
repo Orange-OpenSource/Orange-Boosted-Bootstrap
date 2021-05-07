@@ -3,6 +3,7 @@ layout: docs
 title: Navs
 description: Documentation and examples for how to use Boosted's included navigation components.
 group: components
+aliases: "/docs/4.6/components/navbar-orange/"
 toc: true
 ---
 
