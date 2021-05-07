@@ -1356,6 +1356,17 @@ $badge-padding-x:                   .65em !default;
 $badge-border-radius:               $border-radius !default;
 // scss-docs-end badge-variables
 
+// Tags
+
+// scss-docs-start tag-variables
+$tag-font-size:                   .75em !default;
+$tag-font-weight:                 $font-weight-bold !default;
+$tag-color:                       $white !default;
+$tag-padding-y:                   .35em !default;
+$tag-padding-x:                   .65em !default;
+$tag-border-radius:               $border-radius !default;
+// scss-docs-end tag-variables
+
 // Modals
 
 // scss-docs-start modal-variables
