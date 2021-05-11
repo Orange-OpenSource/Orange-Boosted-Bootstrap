@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tags
-description: Documentation and examples for tags component.
+description: Documentation and examples for tag component.
 group: components
 toc: true
 ---
@@ -14,19 +14,48 @@ toc: true
 
 ## With icon
 
-TODO
+{{< example >}}
+<span class="tag">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+  </svg>
+  Label
+</span>
+{{< /example >}}
 
 ## With remove icon
 
-TODO
+{{< example >}}
+<span class="tag tag-remove">
+  Label
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+  </svg>
+</span>
+{{< /example >}}
 
 ## With icon and remove icon
 
-TODO
+{{< example >}}
+<span class="tag tag-remove">
+  <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#buy"/>
+  </svg>
+  Label
+  <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="overflow-visible remove">
+    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#delete"/>
+  </svg>
+</span>
+{{< /example >}}
 
 ## Sizes
 
-TODO
+Fancy larger buttons? Add .tag-lg for additional size.
+
+{{< example >}}
+<span class="tag">Label</span>
+<span class="tag tag-lg">Label</span>
+{{< /example >}}
 
 ## Sass
 

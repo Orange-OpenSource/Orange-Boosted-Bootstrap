@@ -1,35 +1,61 @@
 // Base class
-//
-// Requires one of the contextual, color modifier classes for `color` and
-// `background-color`.
 
 .tag {
   display: inline-block;
-  padding: subtract($badge-padding-y, 1px) $badge-padding-x
-    add($badge-padding-y, 1px); // Boosted mod
-  @include font-size($badge-font-size);
-  font-weight: $badge-font-weight;
+  padding: $tag-padding-y $tag-padding-x add($tag-padding-y, 1px); // Boosted mod
+  @include font-size($tag-font-size);
+  font-weight: $tag-font-weight;
   line-height: 1;
-  color: $badge-color;
+  color: $tag-color;
   text-align: center;
 
-  /* rtl:remove */
   letter-spacing: initial; // Boosted mod
   white-space: nowrap;
   vertical-align: baseline;
-  @include border-radius($badge-border-radius);
-  @include gradient-bg();
 
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
+  cursor: if($enable-button-pointers, pointer, null);
+
+  background-color: transparent;
+  border: $tag-border-width solid $tag-border-color;
+  border-radius: $tag-border-radius;
+
+  &:hover {
+    border: $tag-border-width solid $tag-border-color-hover;
+  }
+
+  &:active,
+  &.active {
+    color: $tag-active-color;
+    background-color: $tag-active-background-color;
+    border: $tag-border-width solid $tag-border-color-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $tag-disabled-color;
+  }
+
+  // Boosted mod: with icon
+  > svg {
+    transform: translateY(-2px);
+  }
+  // End mod
+}
+
+.tag-remove {
+  padding-right: 5px;
+  padding-bottom: 2px;
+  .remove {
+    &:hover {
+      padding: 2px;
+      color: $tag-active-color;
+      background: $tag-active-background-color;
+      border-radius: 10px;
+    }
   }
 }
 
-// Boosted mod: inconsistent background color & naming
-@each $color, $value in $theme-colors {
-  .badge.bg-#{$color} {
-    color: color-contrast($value);
-    background-color: $value !important; // stylelint-disable-line declaration-no-important
-  }
+.tag-lg {
+  @include button-size($tag-padding-y-lg, $tag-padding-x-lg, $tag-font-size-lg, $tag-border-radius-lg, $tag-line-height-lg);
+  border-radius: $tag-border-radius-lg;
 }
