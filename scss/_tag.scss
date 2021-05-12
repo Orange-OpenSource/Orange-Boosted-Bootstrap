@@ -2,14 +2,14 @@
 
 .tag {
   display: inline-block;
-  padding: $tag-padding-y $tag-padding-x add($tag-padding-y, 1px); // Boosted mod
+  padding: $tag-padding-y $tag-padding-x add($tag-padding-y, 1px);
   @include font-size($tag-font-size);
   font-weight: $tag-font-weight;
   line-height: 1;
   color: $tag-color;
   text-align: center;
 
-  letter-spacing: initial; // Boosted mod
+  letter-spacing: initial;
   white-space: nowrap;
   vertical-align: baseline;
 
@@ -17,6 +17,7 @@
 
   background-color: transparent;
   border: $tag-border-width solid $tag-border-color;
+  // stylelint-disable-next-line property-disallowed-list
   border-radius: $tag-border-radius;
 
   &:hover {
@@ -35,11 +36,9 @@
     color: $tag-disabled-color;
   }
 
-  // Boosted mod: with icon
   > svg {
     transform: translateY(-2px);
   }
-  // End mod
 }
 
 .tag-remove {
@@ -50,12 +49,20 @@
       padding: 2px;
       color: $tag-active-color;
       background: $tag-active-background-color;
+      // stylelint-disable-next-line property-disallowed-list
       border-radius: 10px;
     }
   }
 }
 
 .tag-lg {
-  @include button-size($tag-padding-y-lg, $tag-padding-x-lg, $tag-font-size-lg, $tag-border-radius-lg, $tag-line-height-lg);
+  @include button-size(
+    $tag-padding-y-lg,
+    $tag-padding-x-lg,
+    $tag-font-size-lg,
+    $tag-border-radius-lg,
+    $tag-line-height-lg
+  );
+  // stylelint-disable-next-line property-disallowed-list
   border-radius: $tag-border-radius-lg;
 }
