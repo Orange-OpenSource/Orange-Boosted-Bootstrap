@@ -10,7 +10,7 @@ Boosted provides an easy-to-use framework of ready-made styles, layout tools, an
 
 ## Overview and limitations
 
-The overall accessibility of any project built with Boosted depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Boosted that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG21/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
+The overall accessibility of any project built with Boosted depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Boosted that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
 
 ### Structural markup
 
@@ -25,7 +25,7 @@ Because Boosted's components are purposely designed to be fairly generic, author
 ### Color contrast
 
 <!-- Boosted mod -->
-Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
+Some combinations of colors that currently make up Boosted's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background.
 
 Unlike Bootstrap, in Boosted **contrasts are locked to ensure they meet [WCAG 2.1 accessibility standards for color contrast](https://www.w3.org/TR/WCAG21/#contrast-minimum)** when using [`.text-*`]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}), by defining `color` and `background-color` altogether. Please refer to [our theme colors]({{< docsref "/customize/color" >}}#all-colors) to have a full preview of Boosted color palette’s reached WCAG level.
 <!-- end mod -->
@@ -49,7 +49,7 @@ For visually hidden interactive controls, such as traditional "skip" links, use 
 
 ### Reduced motion
 
-Boosted includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
+Boosted includes support for the [`prefers-reduced-motion` media feature](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Boosted (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
 
 On browsers that support `prefers-reduced-motion`, and where the user has *not* explicitly signaled that they'd prefer reduced motion (i.e. where `prefers-reduced-motion: no-preference`), Boosted enables smooth scrolling using the `scroll-behavior` property.
 
@@ -82,13 +82,14 @@ Boosted provides `target-size()` mixin to ensure a minimum target size, adding a
 
 ## Additional resources
 
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/)
 - [The A11Y Project](https://www.a11yproject.com/)
 - [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)
-- [Color Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
+- [Color Contrast Analyser (CCA)](https://www.tpgi.com/color-contrast-checker/)
 - ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
 - [Deque Axe testing tools](https://www.deque.com/axe/)
 - [Orange accessibility guidelines](http://a11y-guidelines.orange.com/)
+- [Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
 - [`:focus-visible` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
