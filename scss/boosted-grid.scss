@@ -9,17 +9,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 @import "functions";
 @import "variables";
 
@@ -34,6 +23,18 @@ html {
 @import "grid";
 
 @import "utilities";
+@import "utilities/api";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 // Only use the utilities we need
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-get-multiple(
@@ -73,5 +74,3 @@ $utilities: map-get-multiple(
     "padding-start",
   )
 );
-
-@import "utilities/api";
