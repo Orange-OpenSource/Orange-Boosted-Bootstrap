@@ -36,7 +36,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0-beta3.zip)
+- [Download the latest release](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/archive/v5.0.0.zip)
 - Clone the repo: `git clone https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap.git`
 - Install with [npm](https://www.npmjs.com/): `npm install boosted`
 - Install with [yarn](https://yarnpkg.com/): `yarn add boosted`
