@@ -34,11 +34,11 @@
     },
     {
       "path": "./dist/js/boosted.js",
-      "maxSize": "32.7 kB"
+      "maxSize": "35.7 kB"
     },
     {
       "path": "./dist/js/boosted.min.js",
-      "maxSize": "18.7 kB"
+      "maxSize": "19.4 kB"
     }
   ],
   "ci": {
