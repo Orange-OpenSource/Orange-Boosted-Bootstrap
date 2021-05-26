@@ -1,4 +1,4 @@
-# [5.0.0-beta3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta2...v5.0.0) (2021-04-28)
+# [5.0.0-beta3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta2...v5.0.0-beta3) (2021-04-28)
 
 
 ### Bug Fixes
