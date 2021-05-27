@@ -83,5 +83,5 @@ params:
     js_bundle_hash:     "sha384-3pZoGeuGuppkOcTDkPFSq3eCeByOZjj3CQ2PRI7hTL8gCUSPno1ZKZo2yeta2U1D"
     popper:             "https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
     popper_hash:        "sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-    focus_visible:      "https://cdn.jsdelivr.net/npm/focus-visible@5.1.0/dist/focus-visible.min.js"
+    focus_visible:      "https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"
     focus_visible_hash: "sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
