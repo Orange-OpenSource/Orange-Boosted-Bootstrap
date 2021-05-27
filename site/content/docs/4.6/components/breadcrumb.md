@@ -51,7 +51,8 @@ The separator can be removed by setting `$breadcrumb-divider` to `none`:
 $breadcrumb-divider: none;
 ```
 
-[comment]: #Boosted mod
+<!-- Boosted mod -->
+
 ## Backgrounds
 
 To customize breadcrumb, simply use our [background utilities]({{< docsref "/utilities/colors#background-color" >}}).
