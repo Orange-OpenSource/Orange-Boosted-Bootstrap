@@ -1,3 +1,20 @@
+# [5.0.0](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta3...v5.0.0) (2021-05-27)
+
+
+### Bug Fixes
+
+* **a11y:** Add title to dropdown menu ([c1c8851](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/c1c8851242b42ded1d8a0486bd17904b340648c2))
+* **a11y:** Improve a11y for dropdown example in header ([64f6e98](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/64f6e98b26471eee603b3b4cd9c483af51da04fc))
+* **linter:** Reorganize imports for linter to pass ([0b06d5e](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/0b06d5e1eba044e7e5d1f62a20d85ade266d79a4))
+* **misc:** Apply reviews ([5be515d](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/5be515dd0dc70aea15cdd1271c8b2c34c8896802))
+
+
+### Reverts
+
+* Revert "remove useless content from features page" ([eb5cfe8](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/commit/eb5cfe890917d55c02ad3ab5af7a35b8ca12f201))
+
+
+
 # [5.0.0-beta3](https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/compare/v5.0.0-beta2...v5.0.0-beta3) (2021-04-28)
 
 
