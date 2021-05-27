@@ -1,10 +1,10 @@
 /*!
-  * Boosted v5.0.0-beta3 (https://boosted.orange.com/)
+  * Boosted v5.0.0 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap popover.js v5.0.0-beta3 (https://boosted.orange.com/)
+  * Bootstrap popover.js v5.0.0 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -22,7 +22,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): util/index.js
+   * Bootstrap (v5.0.0): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -67,7 +67,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): popover.js
+   * Bootstrap (v5.0.0): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

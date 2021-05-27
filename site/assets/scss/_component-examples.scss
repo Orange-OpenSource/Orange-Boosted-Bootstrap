@@ -221,7 +221,10 @@
 
   .offcanvas {
     position: static;
+    display: block;
     height: 200px;
+    visibility: visible;
+    transform: translate(0);
   }
 }
 

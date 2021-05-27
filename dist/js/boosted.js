@@ -1,16 +1,16 @@
 /*!
-  * Boosted v5.0.0-beta3 (https://boosted.orange.com/)
+  * Boosted v5.0.0 (https://boosted.orange.com/)
   * Copyright 2015-2021 The Boosted Authors
   * Copyright 2015-2021 Orange
   * Licensed under MIT (https://github.com/orange-opensource/orange-boosted-bootstrap/blob/v5-dev/LICENSE)
   * This a fork of Bootstrap : Initial license below
-  * Bootstrap v5.0.0-beta3 (https://boosted.orange.com/)
+  * Bootstrap v5.0.0 (https://boosted.orange.com/)
   * Copyright 2011-2021 The Boosted Authors (https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core'), require('focus-visible')) :
-  typeof define === 'function' && define.amd ? define(['@popperjs/core', 'focus-visible'], factory) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core')) :
+  typeof define === 'function' && define.amd ? define(['@popperjs/core'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.boosted = factory(global.Popper));
 }(this, (function (Popper) { 'use strict';
 
@@ -38,7 +38,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): util/index.js
+   * Bootstrap (v5.0.0): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -83,7 +83,7 @@
 
 
       if (hrefAttr.includes('#') && !hrefAttr.startsWith('#')) {
-        hrefAttr = '#' + hrefAttr.split('#')[1];
+        hrefAttr = `#${hrefAttr.split('#')[1]}`;
       }
 
       selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
@@ -161,7 +161,7 @@
       const valueType = value && isElement(value) ? 'element' : toType(value);
 
       if (!new RegExp(expectedTypes).test(valueType)) {
-        throw new TypeError(`${componentName.toUpperCase()}: ` + `Option "${property}" provided type "${valueType}" ` + `but expected type "${expectedTypes}".`);
+        throw new TypeError(`${componentName.toUpperCase()}: Option "${property}" provided type "${valueType}" but expected type "${expectedTypes}".`);
       }
     });
   };
@@ -219,7 +219,7 @@
     return findShadowRoot(element.parentNode);
   };
 
-  const noop = () => function () {};
+  const noop = () => {};
 
   const reflow = element => element.offsetHeight;
 
@@ -263,9 +263,15 @@
     });
   };
 
+  const execute = callback => {
+    if (typeof callback === 'function') {
+      callback();
+    }
+  };
+
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dom/data.js
+   * Bootstrap (v5.0.0): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -319,7 +325,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dom/event-handler.js
+   * Bootstrap (v5.0.0): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -339,6 +345,7 @@
     mouseenter: 'mouseover',
     mouseleave: 'mouseout'
   };
+  const customEventsRegex = /^(mouseenter|mouseleave)/i;
   const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectstart', 'selectend', 'keydown', 'keypress', 'keyup', 'orientationchange', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gesturestart', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll']);
   /**
    * ------------------------------------------------------------------------
@@ -382,7 +389,7 @@
 
             if (handler.oneOff) {
               // eslint-disable-next-line unicorn/consistent-destructuring
-              EventHandler.off(element, event.type, fn);
+              EventHandler.off(element, event.type, selector, fn);
             }
 
             return fn.apply(target, [event]);
@@ -411,15 +418,8 @@
 
   function normalizeParams(originalTypeEvent, handler, delegationFn) {
     const delegation = typeof handler === 'string';
-    const originalHandler = delegation ? delegationFn : handler; // allow to get the native events from namespaced events ('click.bs.button' --> 'click')
-
-    let typeEvent = originalTypeEvent.replace(stripNameRegex, '');
-    const custom = customEvents[typeEvent];
-
-    if (custom) {
-      typeEvent = custom;
-    }
-
+    const originalHandler = delegation ? delegationFn : handler;
+    let typeEvent = getTypeEvent(originalTypeEvent);
     const isNative = nativeEvents.has(typeEvent);
 
     if (!isNative) {
@@ -437,6 +437,24 @@
     if (!handler) {
       handler = delegationFn;
       delegationFn = null;
+    } // in case of mouseenter or mouseleave wrap the handler within a function that checks for its DOM position
+    // this prevents the handler from being dispatched the same way as mouseover or mouseout does
+
+
+    if (customEventsRegex.test(originalTypeEvent)) {
+      const wrapFn = fn => {
+        return function (event) {
+          if (!event.relatedTarget || event.relatedTarget !== event.delegateTarget && !event.delegateTarget.contains(event.relatedTarget)) {
+            return fn.call(this, event);
+          }
+        };
+      };
+
+      if (delegationFn) {
+        delegationFn = wrapFn(delegationFn);
+      } else {
+        handler = wrapFn(handler);
+      }
     }
 
     const [delegation, originalHandler, typeEvent] = normalizeParams(originalTypeEvent, handler, delegationFn);
@@ -478,6 +496,12 @@
         removeHandler(element, events, typeEvent, event.originalHandler, event.delegationSelector);
       }
     });
+  }
+
+  function getTypeEvent(event) {
+    // allow to get the native events from namespaced events ('click.bs.button' --> 'click')
+    event = event.replace(stripNameRegex, '');
+    return customEvents[event] || event;
   }
 
   const EventHandler = {
@@ -532,7 +556,7 @@
       }
 
       const $ = getjQuery();
-      const typeEvent = event.replace(stripNameRegex, '');
+      const typeEvent = getTypeEvent(event);
       const inNamespace = event !== typeEvent;
       const isNative = nativeEvents.has(typeEvent);
       let jQueryEvent;
@@ -590,7 +614,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): base-component.js
+   * Bootstrap (v5.0.0): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -600,7 +624,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const VERSION = '5.0.0-beta3';
+  const VERSION = '5.0.0';
 
   class BaseComponent {
     constructor(element) {
@@ -616,6 +640,7 @@
 
     dispose() {
       Data.remove(this._element, this.constructor.DATA_KEY);
+      EventHandler.off(this._element, `.${this.constructor.DATA_KEY}`);
       this._element = null;
     }
     /** Static */
@@ -633,7 +658,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): alert.js
+   * Bootstrap (v5.0.0): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -643,7 +668,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$b = 'alert';
+  const NAME$c = 'alert';
   const DATA_KEY$b = 'bs.alert';
   const EVENT_KEY$b = `.${DATA_KEY$b}`;
   const DATA_API_KEY$8 = '.data-api';
@@ -652,8 +677,8 @@
   const EVENT_CLOSED = `closed${EVENT_KEY$b}`;
   const EVENT_CLICK_DATA_API$7 = `click${EVENT_KEY$b}${DATA_API_KEY$8}`;
   const CLASS_NAME_ALERT = 'alert';
-  const CLASS_NAME_FADE$5 = 'fade';
-  const CLASS_NAME_SHOW$8 = 'show';
+  const CLASS_NAME_FADE$6 = 'fade';
+  const CLASS_NAME_SHOW$9 = 'show';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -689,9 +714,9 @@
     }
 
     _removeElement(element) {
-      element.classList.remove(CLASS_NAME_SHOW$8);
+      element.classList.remove(CLASS_NAME_SHOW$9);
 
-      if (!element.classList.contains(CLASS_NAME_FADE$5)) {
+      if (!element.classList.contains(CLASS_NAME_FADE$6)) {
         this._destroyElement(element);
 
         return;
@@ -751,11 +776,11 @@
    * add .Alert to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME$b, Alert);
+  defineJQueryPlugin(NAME$c, Alert);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): button.js
+   * Bootstrap (v5.0.0): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -765,7 +790,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$a = 'button';
+  const NAME$b = 'button';
   const DATA_KEY$a = 'bs.button';
   const EVENT_KEY$a = `.${DATA_KEY$a}`;
   const DATA_API_KEY$7 = '.data-api';
@@ -831,11 +856,11 @@
    * add .Button to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME$a, Button);
+  defineJQueryPlugin(NAME$b, Button);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dom/manipulator.js
+   * Bootstrap (v5.0.0): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -909,7 +934,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dom/selector-engine.js
+   * Bootstrap (v5.0.0): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -980,7 +1005,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): carousel.js
+   * Bootstrap (v5.0.0): carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -990,7 +1015,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$9 = 'carousel';
+  const NAME$a = 'carousel';
   const DATA_KEY$9 = 'bs.carousel';
   const EVENT_KEY$9 = `.${DATA_KEY$9}`;
   const DATA_API_KEY$6 = '.data-api';
@@ -999,7 +1024,7 @@
   const TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
 
   const SWIPE_THRESHOLD = 40;
-  const Default$8 = {
+  const Default$9 = {
     interval: 5000,
     keyboard: true,
     slide: false,
@@ -1007,7 +1032,7 @@
     wrap: true,
     touch: true
   };
-  const DefaultType$8 = {
+  const DefaultType$9 = {
     interval: '(number|boolean)',
     keyboard: 'boolean',
     slide: '(boolean|string)',
@@ -1088,7 +1113,7 @@
 
 
     static get Default() {
-      return Default$8;
+      return Default$9;
     }
 
     static get DATA_KEY() {
@@ -1191,7 +1216,6 @@
     }
 
     dispose() {
-      EventHandler.off(this._element, EVENT_KEY$9);
       this._items = null;
       this._config = null;
       this._interval = null;
@@ -1204,10 +1228,10 @@
 
 
     _getConfig(config) {
-      config = { ...Default$8,
+      config = { ...Default$9,
         ...config
       };
-      typeCheckConfig(NAME$9, config, DefaultType$8);
+      typeCheckConfig(NAME$a, config, DefaultType$9);
       return config;
     }
 
@@ -1306,11 +1330,11 @@
       if (event.key === ARROW_LEFT_KEY) {
         event.preventDefault();
 
-        this._slide(DIRECTION_LEFT);
+        this._slide(DIRECTION_RIGHT);
       } else if (event.key === ARROW_RIGHT_KEY) {
         event.preventDefault();
 
-        this._slide(DIRECTION_RIGHT);
+        this._slide(DIRECTION_LEFT);
       }
     } // Boosted mod: handle prev/next controls states
 
@@ -1417,7 +1441,7 @@
       } // Boosted mod: set progress indicator's interval as custom property
 
 
-      if (this._indicatorsElement && this._config.interval !== Default$8.interval) {
+      if (this._indicatorsElement && this._config.interval !== Default$9.interval) {
         const currentIndex = this._getItemIndex(element);
 
         const currentIndicator = SelectorEngine.findOne(`:nth-child(${currentIndex + 1})`, this._indicatorsElement);
@@ -1530,10 +1554,10 @@
       }
 
       if (isRTL()) {
-        return direction === DIRECTION_RIGHT ? ORDER_PREV : ORDER_NEXT;
+        return direction === DIRECTION_LEFT ? ORDER_PREV : ORDER_NEXT;
       }
 
-      return direction === DIRECTION_RIGHT ? ORDER_NEXT : ORDER_PREV;
+      return direction === DIRECTION_LEFT ? ORDER_NEXT : ORDER_PREV;
     }
 
     _orderToDirection(order) {
@@ -1542,16 +1566,16 @@
       }
 
       if (isRTL()) {
-        return order === ORDER_NEXT ? DIRECTION_LEFT : DIRECTION_RIGHT;
+        return order === ORDER_PREV ? DIRECTION_LEFT : DIRECTION_RIGHT;
       }
 
-      return order === ORDER_NEXT ? DIRECTION_RIGHT : DIRECTION_LEFT;
+      return order === ORDER_PREV ? DIRECTION_RIGHT : DIRECTION_LEFT;
     } // Static
 
 
     static carouselInterface(element, config) {
       let data = Data.get(element, DATA_KEY$9);
-      let _config = { ...Default$8,
+      let _config = { ...Default$9,
         ...Manipulator.getDataAttributes(element)
       };
 
@@ -1635,11 +1659,11 @@
    * add .Carousel to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME$9, Carousel);
+  defineJQueryPlugin(NAME$a, Carousel);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): collapse.js
+   * Bootstrap (v5.0.0): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1649,15 +1673,15 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$8 = 'collapse';
+  const NAME$9 = 'collapse';
   const DATA_KEY$8 = 'bs.collapse';
   const EVENT_KEY$8 = `.${DATA_KEY$8}`;
   const DATA_API_KEY$5 = '.data-api';
-  const Default$7 = {
+  const Default$8 = {
     toggle: true,
     parent: ''
   };
-  const DefaultType$7 = {
+  const DefaultType$8 = {
     toggle: 'boolean',
     parent: '(string|element)'
   };
@@ -1666,7 +1690,7 @@
   const EVENT_HIDE$5 = `hide${EVENT_KEY$8}`;
   const EVENT_HIDDEN$5 = `hidden${EVENT_KEY$8}`;
   const EVENT_CLICK_DATA_API$4 = `click${EVENT_KEY$8}${DATA_API_KEY$5}`;
-  const CLASS_NAME_SHOW$7 = 'show';
+  const CLASS_NAME_SHOW$8 = 'show';
   const CLASS_NAME_COLLAPSE = 'collapse';
   const CLASS_NAME_COLLAPSING = 'collapsing';
   const CLASS_NAME_COLLAPSED = 'collapsed';
@@ -1713,7 +1737,7 @@
 
 
     static get Default() {
-      return Default$7;
+      return Default$8;
     }
 
     static get DATA_KEY() {
@@ -1722,7 +1746,7 @@
 
 
     toggle() {
-      if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+      if (this._element.classList.contains(CLASS_NAME_SHOW$8)) {
         this.hide();
       } else {
         this.show();
@@ -1730,7 +1754,7 @@
     }
 
     show() {
-      if (this._isTransitioning || this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+      if (this._isTransitioning || this._element.classList.contains(CLASS_NAME_SHOW$8)) {
         return;
       }
 
@@ -1800,7 +1824,7 @@
       const complete = () => {
         this._element.classList.remove(CLASS_NAME_COLLAPSING);
 
-        this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$7);
+        this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$8);
 
         this._element.style[dimension] = '';
         this.setTransitioning(false);
@@ -1816,7 +1840,7 @@
     }
 
     hide() {
-      if (this._isTransitioning || !this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+      if (this._isTransitioning || !this._element.classList.contains(CLASS_NAME_SHOW$8)) {
         return;
       }
 
@@ -1833,7 +1857,7 @@
 
       this._element.classList.add(CLASS_NAME_COLLAPSING);
 
-      this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$7);
+      this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$8);
 
       const triggerArrayLength = this._triggerArray.length;
 
@@ -1842,7 +1866,7 @@
           const trigger = this._triggerArray[i];
           const elem = getElementFromSelector(trigger);
 
-          if (elem && !elem.classList.contains(CLASS_NAME_SHOW$7)) {
+          if (elem && !elem.classList.contains(CLASS_NAME_SHOW$8)) {
             trigger.classList.add(CLASS_NAME_COLLAPSED);
             trigger.setAttribute('aria-expanded', false);
           }
@@ -1881,12 +1905,12 @@
 
 
     _getConfig(config) {
-      config = { ...Default$7,
+      config = { ...Default$8,
         ...config
       };
       config.toggle = Boolean(config.toggle); // Coerce string values
 
-      typeCheckConfig(NAME$8, config, DefaultType$7);
+      typeCheckConfig(NAME$9, config, DefaultType$8);
       return config;
     }
 
@@ -1922,7 +1946,7 @@
         return;
       }
 
-      const isOpen = element.classList.contains(CLASS_NAME_SHOW$7);
+      const isOpen = element.classList.contains(CLASS_NAME_SHOW$8);
       triggerArray.forEach(elem => {
         if (isOpen) {
           elem.classList.remove(CLASS_NAME_COLLAPSED);
@@ -1937,7 +1961,7 @@
 
     static collapseInterface(element, config) {
       let data = Data.get(element, DATA_KEY$8);
-      const _config = { ...Default$7,
+      const _config = { ...Default$8,
         ...Manipulator.getDataAttributes(element),
         ...(typeof config === 'object' && config ? config : {})
       };
@@ -2008,11 +2032,11 @@
    * add .Collapse to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME$8, Collapse);
+  defineJQueryPlugin(NAME$9, Collapse);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): dropdown.js
+   * Bootstrap (v5.0.0): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2022,7 +2046,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$7 = 'dropdown';
+  const NAME$8 = 'dropdown';
   const DATA_KEY$7 = 'bs.dropdown';
   const EVENT_KEY$7 = `.${DATA_KEY$7}`;
   const DATA_API_KEY$4 = '.data-api';
@@ -2042,8 +2066,7 @@
   const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$7}${DATA_API_KEY$4}`;
   const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$7}${DATA_API_KEY$4}`;
   const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$7}${DATA_API_KEY$4}`;
-  const CLASS_NAME_DISABLED = 'disabled';
-  const CLASS_NAME_SHOW$6 = 'show';
+  const CLASS_NAME_SHOW$7 = 'show';
   const CLASS_NAME_DROPUP = 'dropup';
   const CLASS_NAME_DROPEND = 'dropend';
   const CLASS_NAME_DROPSTART = 'dropstart';
@@ -2058,19 +2081,21 @@
   const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-start' : 'bottom-end';
   const PLACEMENT_RIGHT = isRTL() ? 'left-start' : 'right-start';
   const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start';
-  const Default$6 = {
+  const Default$7 = {
     offset: [0, 2],
     boundary: 'clippingParents',
     reference: 'toggle',
     display: 'dynamic',
-    popperConfig: null
+    popperConfig: null,
+    autoClose: true
   };
-  const DefaultType$6 = {
+  const DefaultType$7 = {
     offset: '(array|string|function)',
     boundary: '(string|element)',
     reference: '(string|element|object)',
     display: 'string',
-    popperConfig: '(null|object|function)'
+    popperConfig: '(null|object|function)',
+    autoClose: '(boolean|string)'
   };
   /**
    * ------------------------------------------------------------------------
@@ -2091,11 +2116,11 @@
 
 
     static get Default() {
-      return Default$6;
+      return Default$7;
     }
 
     static get DefaultType() {
-      return DefaultType$6;
+      return DefaultType$7;
     }
 
     static get DATA_KEY() {
@@ -2104,15 +2129,14 @@
 
 
     toggle() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED)) {
+      if (isDisabled(this._element)) {
         return;
       }
 
-      const isActive = this._element.classList.contains(CLASS_NAME_SHOW$6);
-
-      Dropdown.clearMenus();
+      const isActive = this._element.classList.contains(CLASS_NAME_SHOW$7);
 
       if (isActive) {
+        this.hide();
         return;
       }
 
@@ -2120,7 +2144,7 @@
     }
 
     show() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || this._menu.classList.contains(CLASS_NAME_SHOW$6)) {
+      if (isDisabled(this._element) || this._menu.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
       }
 
@@ -2171,48 +2195,33 @@
 
 
       if ('ontouchstart' in document.documentElement && !parent.closest(SELECTOR_NAVBAR_NAV)) {
-        [].concat(...document.body.children).forEach(elem => EventHandler.on(elem, 'mouseover', null, noop()));
+        [].concat(...document.body.children).forEach(elem => EventHandler.on(elem, 'mouseover', noop));
       }
 
       this._element.focus();
 
       this._element.setAttribute('aria-expanded', true);
 
-      this._menu.classList.toggle(CLASS_NAME_SHOW$6);
+      this._menu.classList.toggle(CLASS_NAME_SHOW$7);
 
-      this._element.classList.toggle(CLASS_NAME_SHOW$6);
+      this._element.classList.toggle(CLASS_NAME_SHOW$7);
 
       EventHandler.trigger(this._element, EVENT_SHOWN$4, relatedTarget);
     }
 
     hide() {
-      if (this._element.disabled || this._element.classList.contains(CLASS_NAME_DISABLED) || !this._menu.classList.contains(CLASS_NAME_SHOW$6)) {
+      if (isDisabled(this._element) || !this._menu.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
       }
 
       const relatedTarget = {
         relatedTarget: this._element
       };
-      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$4, relatedTarget);
 
-      if (hideEvent.defaultPrevented) {
-        return;
-      }
-
-      if (this._popper) {
-        this._popper.destroy();
-      }
-
-      this._menu.classList.toggle(CLASS_NAME_SHOW$6);
-
-      this._element.classList.toggle(CLASS_NAME_SHOW$6);
-
-      Manipulator.removeDataAttribute(this._menu, 'popper');
-      EventHandler.trigger(this._element, EVENT_HIDDEN$4, relatedTarget);
+      this._completeHide(relatedTarget);
     }
 
     dispose() {
-      EventHandler.off(this._element, EVENT_KEY$7);
       this._menu = null;
 
       if (this._popper) {
@@ -2240,16 +2249,43 @@
       });
     }
 
+    _completeHide(relatedTarget) {
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$4, relatedTarget);
+
+      if (hideEvent.defaultPrevented) {
+        return;
+      } // If this is a touch-enabled device we remove the extra
+      // empty mouseover listeners we added for iOS support
+
+
+      if ('ontouchstart' in document.documentElement) {
+        [].concat(...document.body.children).forEach(elem => EventHandler.off(elem, 'mouseover', noop));
+      }
+
+      if (this._popper) {
+        this._popper.destroy();
+      }
+
+      this._menu.classList.remove(CLASS_NAME_SHOW$7);
+
+      this._element.classList.remove(CLASS_NAME_SHOW$7);
+
+      this._element.setAttribute('aria-expanded', 'false');
+
+      Manipulator.removeDataAttribute(this._menu, 'popper');
+      EventHandler.trigger(this._element, EVENT_HIDDEN$4, relatedTarget);
+    }
+
     _getConfig(config) {
       config = { ...this.constructor.Default,
         ...Manipulator.getDataAttributes(this._element),
         ...config
       };
-      typeCheckConfig(NAME$7, config, this.constructor.DefaultType);
+      typeCheckConfig(NAME$8, config, this.constructor.DefaultType);
 
       if (typeof config.reference === 'object' && !isElement(config.reference) && typeof config.reference.getBoundingClientRect !== 'function') {
         // Popper virtual elements require a getBoundingClientRect method
-        throw new TypeError(`${NAME$7.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
+        throw new TypeError(`${NAME$8.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
       }
 
       return config;
@@ -2326,6 +2362,29 @@
       return { ...defaultBsPopperConfig,
         ...(typeof this._config.popperConfig === 'function' ? this._config.popperConfig(defaultBsPopperConfig) : this._config.popperConfig)
       };
+    }
+
+    _selectMenuItem(event) {
+      const items = SelectorEngine.find(SELECTOR_VISIBLE_ITEMS, this._menu).filter(isVisible);
+
+      if (!items.length) {
+        return;
+      }
+
+      let index = items.indexOf(event.target); // Up
+
+      if (event.key === ARROW_UP_KEY && index > 0) {
+        index--;
+      } // Down
+
+
+      if (event.key === ARROW_DOWN_KEY && index < items.length - 1) {
+        index++;
+      } // index is -1 if the first keydown is an ArrowUp
+
+
+      index = index === -1 ? 0 : index;
+      items[index].focus();
     } // Static
 
 
@@ -2359,7 +2418,7 @@
           return;
         }
 
-        if (/input|select|textarea|form/i.test(event.target.tagName)) {
+        if (/input|select|option|textarea|form/i.test(event.target.tagName)) {
           return;
         }
       }
@@ -2368,58 +2427,38 @@
 
       for (let i = 0, len = toggles.length; i < len; i++) {
         const context = Data.get(toggles[i], DATA_KEY$7);
+
+        if (!context || context._config.autoClose === false) {
+          continue;
+        }
+
+        if (!context._element.classList.contains(CLASS_NAME_SHOW$7)) {
+          continue;
+        }
+
         const relatedTarget = {
-          relatedTarget: toggles[i]
+          relatedTarget: context._element
         };
 
-        if (event && event.type === 'click') {
-          relatedTarget.clickEvent = event;
-        }
-
-        if (!context) {
-          continue;
-        }
-
-        const dropdownMenu = context._menu;
-
-        if (!toggles[i].classList.contains(CLASS_NAME_SHOW$6)) {
-          continue;
-        }
-
         if (event) {
-          // Don't close the menu if the clicked element or one of its parents is the dropdown button
-          if ([context._element].some(element => event.composedPath().includes(element))) {
+          const composedPath = event.composedPath();
+          const isMenuTarget = composedPath.includes(context._menu);
+
+          if (composedPath.includes(context._element) || context._config.autoClose === 'inside' && !isMenuTarget || context._config.autoClose === 'outside' && isMenuTarget) {
             continue;
           } // Tab navigation through the dropdown menu shouldn't close the menu
 
 
-          if (event.type === 'keyup' && event.key === TAB_KEY && dropdownMenu.contains(event.target)) {
+          if (event.type === 'keyup' && event.key === TAB_KEY && context._menu.contains(event.target)) {
             continue;
+          }
+
+          if (event.type === 'click') {
+            relatedTarget.clickEvent = event;
           }
         }
 
-        const hideEvent = EventHandler.trigger(toggles[i], EVENT_HIDE$4, relatedTarget);
-
-        if (hideEvent.defaultPrevented) {
-          continue;
-        } // If this is a touch-enabled device we remove the extra
-        // empty mouseover listeners we added for iOS support
-
-
-        if ('ontouchstart' in document.documentElement) {
-          [].concat(...document.body.children).forEach(elem => EventHandler.off(elem, 'mouseover', null, noop()));
-        }
-
-        toggles[i].setAttribute('aria-expanded', 'false');
-
-        if (context._popper) {
-          context._popper.destroy();
-        }
-
-        dropdownMenu.classList.remove(CLASS_NAME_SHOW$6);
-        toggles[i].classList.remove(CLASS_NAME_SHOW$6);
-        Manipulator.removeDataAttribute(dropdownMenu, 'popper');
-        EventHandler.trigger(toggles[i], EVENT_HIDDEN$4, relatedTarget);
+        context._completeHide(relatedTarget);
       }
     }
 
@@ -2439,26 +2478,29 @@
         return;
       }
 
-      event.preventDefault();
-      event.stopPropagation();
+      const isActive = this.classList.contains(CLASS_NAME_SHOW$7);
 
-      if (this.disabled || this.classList.contains(CLASS_NAME_DISABLED)) {
+      if (!isActive && event.key === ESCAPE_KEY$2) {
         return;
       }
 
-      const parent = Dropdown.getParentFromElement(this);
-      const isActive = this.classList.contains(CLASS_NAME_SHOW$6);
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (isDisabled(this)) {
+        return;
+      }
+
+      const getToggleButton = () => this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0];
 
       if (event.key === ESCAPE_KEY$2) {
-        const button = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0];
-        button.focus();
+        getToggleButton().focus();
         Dropdown.clearMenus();
         return;
       }
 
       if (!isActive && (event.key === ARROW_UP_KEY || event.key === ARROW_DOWN_KEY)) {
-        const button = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0];
-        button.click();
+        getToggleButton().click();
         return;
       }
 
@@ -2467,26 +2509,7 @@
         return;
       }
 
-      const items = SelectorEngine.find(SELECTOR_VISIBLE_ITEMS, parent).filter(isVisible);
-
-      if (!items.length) {
-        return;
-      }
-
-      let index = items.indexOf(event.target); // Up
-
-      if (event.key === ARROW_UP_KEY && index > 0) {
-        index--;
-      } // Down
-
-
-      if (event.key === ARROW_DOWN_KEY && index < items.length - 1) {
-        index++;
-      } // index is -1 if the first keydown is an ArrowUp
-
-
-      index = index === -1 ? 0 : index;
-      items[index].focus();
+      Dropdown.getInstance(getToggleButton())._selectMenuItem(event);
     }
 
   }
@@ -2512,11 +2535,213 @@
    * add .Dropdown to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME$7, Dropdown);
+  defineJQueryPlugin(NAME$8, Dropdown);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): modal.js
+   * Bootstrap (v5.0.0): util/scrollBar.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
+  const SELECTOR_STICKY_CONTENT = '.sticky-top';
+
+  const getWidth = () => {
+    // https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth#usage_notes
+    const documentWidth = document.documentElement.clientWidth;
+    return Math.abs(window.innerWidth - documentWidth);
+  };
+
+  const hide = (width = getWidth()) => {
+    _disableOverFlow(); // give padding to element to balances the hidden scrollbar width
+
+
+    _setElementAttributes('body', 'paddingRight', calculatedValue => calculatedValue + width); // trick: We adjust positive paddingRight and negative marginRight to sticky-top elements, to keep shown fullwidth
+
+
+    _setElementAttributes(SELECTOR_FIXED_CONTENT, 'paddingRight', calculatedValue => calculatedValue + width);
+
+    _setElementAttributes(SELECTOR_STICKY_CONTENT, 'marginRight', calculatedValue => calculatedValue - width);
+  };
+
+  const _disableOverFlow = () => {
+    const actualValue = document.body.style.overflow;
+
+    if (actualValue) {
+      Manipulator.setDataAttribute(document.body, 'overflow', actualValue);
+    }
+
+    document.body.style.overflow = 'hidden';
+  };
+
+  const _setElementAttributes = (selector, styleProp, callback) => {
+    const scrollbarWidth = getWidth();
+    SelectorEngine.find(selector).forEach(element => {
+      if (element !== document.body && window.innerWidth > element.clientWidth + scrollbarWidth) {
+        return;
+      }
+
+      const actualValue = element.style[styleProp];
+      const calculatedValue = window.getComputedStyle(element)[styleProp];
+      Manipulator.setDataAttribute(element, styleProp, actualValue);
+      element.style[styleProp] = `${callback(Number.parseFloat(calculatedValue))}px`;
+    });
+  };
+
+  const reset = () => {
+    _resetElementAttributes('body', 'overflow');
+
+    _resetElementAttributes('body', 'paddingRight');
+
+    _resetElementAttributes(SELECTOR_FIXED_CONTENT, 'paddingRight');
+
+    _resetElementAttributes(SELECTOR_STICKY_CONTENT, 'marginRight');
+  };
+
+  const _resetElementAttributes = (selector, styleProp) => {
+    SelectorEngine.find(selector).forEach(element => {
+      const value = Manipulator.getDataAttribute(element, styleProp);
+
+      if (typeof value === 'undefined') {
+        element.style.removeProperty(styleProp);
+      } else {
+        Manipulator.removeDataAttribute(element, styleProp);
+        element.style[styleProp] = value;
+      }
+    });
+  };
+
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.0.0): util/backdrop.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  const Default$6 = {
+    isVisible: true,
+    // if false, we use the backdrop helper without adding any element to the dom
+    isAnimated: false,
+    rootElement: document.body,
+    // give the choice to place backdrop under different elements
+    clickCallback: null
+  };
+  const DefaultType$6 = {
+    isVisible: 'boolean',
+    isAnimated: 'boolean',
+    rootElement: 'element',
+    clickCallback: '(function|null)'
+  };
+  const NAME$7 = 'backdrop';
+  const CLASS_NAME_BACKDROP = 'modal-backdrop';
+  const CLASS_NAME_FADE$5 = 'fade';
+  const CLASS_NAME_SHOW$6 = 'show';
+  const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$7}`;
+
+  class Backdrop {
+    constructor(config) {
+      this._config = this._getConfig(config);
+      this._isAppended = false;
+      this._element = null;
+    }
+
+    show(callback) {
+      if (!this._config.isVisible) {
+        execute(callback);
+        return;
+      }
+
+      this._append();
+
+      if (this._config.isAnimated) {
+        reflow(this._getElement());
+      }
+
+      this._getElement().classList.add(CLASS_NAME_SHOW$6);
+
+      this._emulateAnimation(() => {
+        execute(callback);
+      });
+    }
+
+    hide(callback) {
+      if (!this._config.isVisible) {
+        execute(callback);
+        return;
+      }
+
+      this._getElement().classList.remove(CLASS_NAME_SHOW$6);
+
+      this._emulateAnimation(() => {
+        this.dispose();
+        execute(callback);
+      });
+    } // Private
+
+
+    _getElement() {
+      if (!this._element) {
+        const backdrop = document.createElement('div');
+        backdrop.className = CLASS_NAME_BACKDROP;
+
+        if (this._config.isAnimated) {
+          backdrop.classList.add(CLASS_NAME_FADE$5);
+        }
+
+        this._element = backdrop;
+      }
+
+      return this._element;
+    }
+
+    _getConfig(config) {
+      config = { ...Default$6,
+        ...(typeof config === 'object' ? config : {})
+      };
+      typeCheckConfig(NAME$7, config, DefaultType$6);
+      return config;
+    }
+
+    _append() {
+      if (this._isAppended) {
+        return;
+      }
+
+      this._config.rootElement.appendChild(this._getElement());
+
+      EventHandler.on(this._getElement(), EVENT_MOUSEDOWN, () => {
+        execute(this._config.clickCallback);
+      });
+      this._isAppended = true;
+    }
+
+    dispose() {
+      if (!this._isAppended) {
+        return;
+      }
+
+      EventHandler.off(this._element, EVENT_MOUSEDOWN);
+
+      this._getElement().parentNode.removeChild(this._element);
+
+      this._isAppended = false;
+    }
+
+    _emulateAnimation(callback) {
+      if (!this._config.isAnimated) {
+        execute(callback);
+        return;
+      }
+
+      const backdropTransitionDuration = getTransitionDurationFromElement(this._getElement());
+      EventHandler.one(this._getElement(), 'transitionend', () => execute(callback));
+      emulateTransitionEnd(this._getElement(), backdropTransitionDuration);
+    }
+
+  }
+
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.0.0): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2549,12 +2774,10 @@
   const EVENT_FOCUSIN$1 = `focusin${EVENT_KEY$6}`;
   const EVENT_RESIZE = `resize${EVENT_KEY$6}`;
   const EVENT_CLICK_DISMISS$2 = `click.dismiss${EVENT_KEY$6}`;
-  const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$6}`;
+  const EVENT_KEYDOWN_DISMISS$1 = `keydown.dismiss${EVENT_KEY$6}`;
   const EVENT_MOUSEUP_DISMISS = `mouseup.dismiss${EVENT_KEY$6}`;
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$6}`;
   const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$6}${DATA_API_KEY$3}`;
-  const CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
-  const CLASS_NAME_BACKDROP = 'modal-backdrop';
   const CLASS_NAME_OPEN = 'modal-open';
   const CLASS_NAME_FADE$4 = 'fade';
   const CLASS_NAME_SHOW$5 = 'show';
@@ -2563,8 +2786,6 @@
   const SELECTOR_MODAL_BODY = '.modal-body';
   const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
   const SELECTOR_DATA_DISMISS$2 = '[data-bs-dismiss="modal"]';
-  const SELECTOR_FIXED_CONTENT$1 = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
-  const SELECTOR_STICKY_CONTENT$1 = '.sticky-top';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -2576,12 +2797,10 @@
       super(element);
       this._config = this._getConfig(config);
       this._dialog = SelectorEngine.findOne(SELECTOR_DIALOG, this._element);
-      this._backdrop = null;
+      this._backdrop = this._initializeBackDrop();
       this._isShown = false;
-      this._isBodyOverflowing = false;
       this._ignoreBackdropClick = false;
       this._isTransitioning = false;
-      this._scrollbarWidth = 0;
     } // Getters
 
 
@@ -2616,10 +2835,8 @@
       }
 
       this._isShown = true;
-
-      this._checkScrollbar();
-
-      this._setScrollbar();
+      hide();
+      document.body.classList.add(CLASS_NAME_OPEN);
 
       this._adjustDialog();
 
@@ -2683,7 +2900,7 @@
     }
 
     dispose() {
-      [window, this._element, this._dialog].forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY$6));
+      [window, this._dialog].forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY$6));
       super.dispose();
       /**
        * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
@@ -2694,12 +2911,13 @@
       EventHandler.off(document, EVENT_FOCUSIN$1);
       this._config = null;
       this._dialog = null;
+
+      this._backdrop.dispose();
+
       this._backdrop = null;
       this._isShown = null;
-      this._isBodyOverflowing = null;
       this._ignoreBackdropClick = null;
       this._isTransitioning = null;
-      this._scrollbarWidth = null;
     }
 
     handleUpdate() {
@@ -2707,8 +2925,17 @@
     } // Private
 
 
+    _initializeBackDrop() {
+      return new Backdrop({
+        isVisible: Boolean(this._config.backdrop),
+        // 'static' option will be translated to true, and booleans will keep their value
+        isAnimated: this._isAnimated()
+      });
+    }
+
     _getConfig(config) {
       config = { ...Default$5,
+        ...Manipulator.getDataAttributes(this._element),
         ...config
       };
       typeCheckConfig(NAME$6, config, DefaultType$5);
@@ -2781,7 +3008,7 @@
 
     _setEscapeEvent() {
       if (this._isShown) {
-        EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
+        EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS$1, event => {
           if (this._config.keyboard && event.key === ESCAPE_KEY$1) {
             event.preventDefault();
             this.hide();
@@ -2790,7 +3017,7 @@
           }
         });
       } else {
-        EventHandler.off(this._element, EVENT_KEYDOWN_DISMISS);
+        EventHandler.off(this._element, EVENT_KEYDOWN_DISMISS$1);
       }
     }
 
@@ -2813,85 +3040,35 @@
 
       this._isTransitioning = false;
 
-      this._showBackdrop(() => {
+      this._backdrop.hide(() => {
         document.body.classList.remove(CLASS_NAME_OPEN);
 
         this._resetAdjustments();
 
-        this._resetScrollbar();
-
+        reset();
         EventHandler.trigger(this._element, EVENT_HIDDEN$3);
       });
     }
 
-    _removeBackdrop() {
-      this._backdrop.parentNode.removeChild(this._backdrop);
-
-      this._backdrop = null;
-    }
-
     _showBackdrop(callback) {
-      const isAnimated = this._isAnimated();
-
-      if (this._isShown && this._config.backdrop) {
-        this._backdrop = document.createElement('div');
-        this._backdrop.className = CLASS_NAME_BACKDROP;
-
-        if (isAnimated) {
-          this._backdrop.classList.add(CLASS_NAME_FADE$4);
-        }
-
-        document.body.appendChild(this._backdrop);
-        EventHandler.on(this._element, EVENT_CLICK_DISMISS$2, event => {
-          if (this._ignoreBackdropClick) {
-            this._ignoreBackdropClick = false;
-            return;
-          }
-
-          if (event.target !== event.currentTarget) {
-            return;
-          }
-
-          if (this._config.backdrop === 'static') {
-            this._triggerBackdropTransition();
-          } else {
-            this.hide();
-          }
-        });
-
-        if (isAnimated) {
-          reflow(this._backdrop);
-        }
-
-        this._backdrop.classList.add(CLASS_NAME_SHOW$5);
-
-        if (!isAnimated) {
-          callback();
+      EventHandler.on(this._element, EVENT_CLICK_DISMISS$2, event => {
+        if (this._ignoreBackdropClick) {
+          this._ignoreBackdropClick = false;
           return;
         }
 
-        const backdropTransitionDuration = getTransitionDurationFromElement(this._backdrop);
-        EventHandler.one(this._backdrop, 'transitionend', callback);
-        emulateTransitionEnd(this._backdrop, backdropTransitionDuration);
-      } else if (!this._isShown && this._backdrop) {
-        this._backdrop.classList.remove(CLASS_NAME_SHOW$5);
-
-        const callbackRemove = () => {
-          this._removeBackdrop();
-
-          callback();
-        };
-
-        if (isAnimated) {
-          const backdropTransitionDuration = getTransitionDurationFromElement(this._backdrop);
-          EventHandler.one(this._backdrop, 'transitionend', callbackRemove);
-          emulateTransitionEnd(this._backdrop, backdropTransitionDuration);
-        } else {
-          callbackRemove();
+        if (event.target !== event.currentTarget) {
+          return;
         }
-      } else {
-        callback();
-      }
+
+        if (this._config.backdrop === true) {
+          this.hide();
+        } else if (this._config.backdrop === 'static') {
+          this._triggerBackdropTransition();
+        }
+      });
+
+      this._backdrop.show(callback);
     }
 
     _isAnimated() {
@@ -2935,103 +3112,37 @@
 
     _adjustDialog() {
       const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+      const scrollbarWidth = getWidth();
+      const isBodyOverflowing = scrollbarWidth > 0;
 
-      if (!this._isBodyOverflowing && isModalOverflowing && !isRTL() || this._isBodyOverflowing && !isModalOverflowing && isRTL()) {
-        this._element.style.paddingLeft = `${this._scrollbarWidth}px`;
+      if (!isBodyOverflowing && isModalOverflowing && !isRTL() || isBodyOverflowing && !isModalOverflowing && isRTL()) {
+        this._element.style.paddingLeft = `${scrollbarWidth}px`;
       }
 
-      if (this._isBodyOverflowing && !isModalOverflowing && !isRTL() || !this._isBodyOverflowing && isModalOverflowing && isRTL()) {
-        this._element.style.paddingRight = `${this._scrollbarWidth}px`;
+      if (isBodyOverflowing && !isModalOverflowing && !isRTL() || !isBodyOverflowing && isModalOverflowing && isRTL()) {
+        this._element.style.paddingRight = `${scrollbarWidth}px`;
       }
     }
 
     _resetAdjustments() {
       this._element.style.paddingLeft = '';
       this._element.style.paddingRight = '';
-    }
-
-    _checkScrollbar() {
-      const rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth;
-      this._scrollbarWidth = this._getScrollbarWidth();
-    }
-
-    _setScrollbar() {
-      if (this._isBodyOverflowing) {
-        this._setElementAttributes(SELECTOR_FIXED_CONTENT$1, 'paddingRight', calculatedValue => calculatedValue + this._scrollbarWidth);
-
-        this._setElementAttributes(SELECTOR_STICKY_CONTENT$1, 'marginRight', calculatedValue => calculatedValue - this._scrollbarWidth);
-
-        this._setElementAttributes('body', 'paddingRight', calculatedValue => calculatedValue + this._scrollbarWidth);
-      }
-
-      document.body.classList.add(CLASS_NAME_OPEN);
-    }
-
-    _setElementAttributes(selector, styleProp, callback) {
-      SelectorEngine.find(selector).forEach(element => {
-        if (element !== document.body && window.innerWidth > element.clientWidth + this._scrollbarWidth) {
-          return;
-        }
-
-        const actualValue = element.style[styleProp];
-        const calculatedValue = window.getComputedStyle(element)[styleProp];
-        Manipulator.setDataAttribute(element, styleProp, actualValue);
-        element.style[styleProp] = callback(Number.parseFloat(calculatedValue)) + 'px';
-      });
-    }
-
-    _resetScrollbar() {
-      this._resetElementAttributes(SELECTOR_FIXED_CONTENT$1, 'paddingRight');
-
-      this._resetElementAttributes(SELECTOR_STICKY_CONTENT$1, 'marginRight');
-
-      this._resetElementAttributes('body', 'paddingRight');
-    }
-
-    _resetElementAttributes(selector, styleProp) {
-      SelectorEngine.find(selector).forEach(element => {
-        const value = Manipulator.getDataAttribute(element, styleProp);
-
-        if (typeof value === 'undefined' && element === document.body) {
-          element.style[styleProp] = '';
-        } else {
-          Manipulator.removeDataAttribute(element, styleProp);
-          element.style[styleProp] = value;
-        }
-      });
-    }
-
-    _getScrollbarWidth() {
-      // thx d.walsh
-      const scrollDiv = document.createElement('div');
-      scrollDiv.className = CLASS_NAME_SCROLLBAR_MEASURER;
-      document.body.appendChild(scrollDiv);
-      const scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
-      document.body.removeChild(scrollDiv);
-      return scrollbarWidth;
     } // Static
 
 
     static jQueryInterface(config, relatedTarget) {
       return this.each(function () {
-        let data = Data.get(this, DATA_KEY$6);
-        const _config = { ...Default$5,
-          ...Manipulator.getDataAttributes(this),
-          ...(typeof config === 'object' && config ? config : {})
-        };
+        const data = Modal.getInstance(this) || new Modal(this, typeof config === 'object' ? config : {});
 
-        if (!data) {
-          data = new Modal(this, _config);
+        if (typeof config !== 'string') {
+          return;
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-
-          data[config](relatedTarget);
+        if (typeof data[config] === 'undefined') {
+          throw new TypeError(`No method named "${config}"`);
         }
+
+        data[config](relatedTarget);
       });
     }
 
@@ -3046,7 +3157,7 @@
   EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$2, function (event) {
     const target = getElementFromSelector(this);
 
-    if (this.tagName === 'A' || this.tagName === 'AREA') {
+    if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
 
@@ -3062,15 +3173,7 @@
         }
       });
     });
-    let data = Data.get(target, DATA_KEY$6);
-
-    if (!data) {
-      const config = { ...Manipulator.getDataAttributes(target),
-        ...Manipulator.getDataAttributes(this)
-      };
-      data = new Modal(target, config);
-    }
-
+    const data = Modal.getInstance(target) || new Modal(target);
     data.toggle(this);
   });
   /**
@@ -3084,69 +3187,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): util/scrollBar.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-  const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed';
-  const SELECTOR_STICKY_CONTENT = '.sticky-top';
-
-  const getWidth = () => {
-    // https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth#usage_notes
-    const documentWidth = document.documentElement.clientWidth;
-    return Math.abs(window.innerWidth - documentWidth);
-  };
-
-  const hide = (width = getWidth()) => {
-    document.body.style.overflow = 'hidden';
-
-    _setElementAttributes(SELECTOR_FIXED_CONTENT, 'paddingRight', calculatedValue => calculatedValue + width);
-
-    _setElementAttributes(SELECTOR_STICKY_CONTENT, 'marginRight', calculatedValue => calculatedValue - width);
-
-    _setElementAttributes('body', 'paddingRight', calculatedValue => calculatedValue + width);
-  };
-
-  const _setElementAttributes = (selector, styleProp, callback) => {
-    const scrollbarWidth = getWidth();
-    SelectorEngine.find(selector).forEach(element => {
-      if (element !== document.body && window.innerWidth > element.clientWidth + scrollbarWidth) {
-        return;
-      }
-
-      const actualValue = element.style[styleProp];
-      const calculatedValue = window.getComputedStyle(element)[styleProp];
-      Manipulator.setDataAttribute(element, styleProp, actualValue);
-      element.style[styleProp] = callback(Number.parseFloat(calculatedValue)) + 'px';
-    });
-  };
-
-  const reset = () => {
-    document.body.style.overflow = 'auto';
-
-    _resetElementAttributes(SELECTOR_FIXED_CONTENT, 'paddingRight');
-
-    _resetElementAttributes(SELECTOR_STICKY_CONTENT, 'marginRight');
-
-    _resetElementAttributes('body', 'paddingRight');
-  };
-
-  const _resetElementAttributes = (selector, styleProp) => {
-    SelectorEngine.find(selector).forEach(element => {
-      const value = Manipulator.getDataAttribute(element, styleProp);
-
-      if (typeof value === 'undefined' && element === document.body) {
-        element.style.removeProperty(styleProp);
-      } else {
-        Manipulator.removeDataAttribute(element, styleProp);
-        element.style[styleProp] = value;
-      }
-    });
-  };
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): offcanvas.js
+   * Bootstrap (v5.0.0): offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3172,11 +3213,8 @@
     keyboard: 'boolean',
     scroll: 'boolean'
   };
-  const CLASS_NAME_BACKDROP_BODY = 'offcanvas-backdrop';
   const CLASS_NAME_SHOW$4 = 'show';
-  const CLASS_NAME_TOGGLING = 'offcanvas-toggling';
   const OPEN_SELECTOR = '.offcanvas.show';
-  const ACTIVE_SELECTOR = `${OPEN_SELECTOR}, .${CLASS_NAME_TOGGLING}`;
   const EVENT_SHOW$2 = `show${EVENT_KEY$5}`;
   const EVENT_SHOWN$2 = `shown${EVENT_KEY$5}`;
   const EVENT_HIDE$2 = `hide${EVENT_KEY$5}`;
@@ -3184,6 +3222,7 @@
   const EVENT_FOCUSIN = `focusin${EVENT_KEY$5}`;
   const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$5}${DATA_API_KEY$2}`;
   const EVENT_CLICK_DISMISS$1 = `click.dismiss${EVENT_KEY$5}`;
+  const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$5}`;
   const SELECTOR_DATA_DISMISS$1 = '[data-bs-dismiss="offcanvas"]';
   const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
   /**
@@ -3197,6 +3236,7 @@
       super(element);
       this._config = this._getConfig(config);
       this._isShown = false;
+      this._backdrop = this._initializeBackDrop();
 
       this._addEventListeners();
     } // Getters
@@ -3231,15 +3271,13 @@
       this._isShown = true;
       this._element.style.visibility = 'visible';
 
-      if (this._config.backdrop) {
-        document.body.classList.add(CLASS_NAME_BACKDROP_BODY);
-      }
+      this._backdrop.show();
 
       if (!this._config.scroll) {
         hide();
-      }
 
-      this._element.classList.add(CLASS_NAME_TOGGLING);
+        this._enforceFocusOnElement(this._element);
+      }
 
       this._element.removeAttribute('aria-hidden');
 
@@ -3250,16 +3288,14 @@
       this._element.classList.add(CLASS_NAME_SHOW$4);
 
       const completeCallBack = () => {
-        this._element.classList.remove(CLASS_NAME_TOGGLING);
-
         EventHandler.trigger(this._element, EVENT_SHOWN$2, {
           relatedTarget
         });
-
-        this._enforceFocusOnElement(this._element);
       };
 
-      setTimeout(completeCallBack, getTransitionDurationFromElement(this._element));
+      const transitionDuration = getTransitionDurationFromElement(this._element);
+      EventHandler.one(this._element, 'transitionend', completeCallBack);
+      emulateTransitionEnd(this._element, transitionDuration);
     }
 
     hide() {
@@ -3273,8 +3309,6 @@
         return;
       }
 
-      this._element.classList.add(CLASS_NAME_TOGGLING);
-
       EventHandler.off(document, EVENT_FOCUSIN);
 
       this._element.blur();
@@ -3282,6 +3316,8 @@
       this._isShown = false;
 
       this._element.classList.remove(CLASS_NAME_SHOW$4);
+
+      this._backdrop.hide();
 
       const completeCallback = () => {
         this._element.setAttribute('aria-hidden', true);
@@ -3292,20 +3328,25 @@
 
         this._element.style.visibility = 'hidden';
 
-        if (this._config.backdrop) {
-          document.body.classList.remove(CLASS_NAME_BACKDROP_BODY);
-        }
-
         if (!this._config.scroll) {
           reset();
         }
 
         EventHandler.trigger(this._element, EVENT_HIDDEN$2);
-
-        this._element.classList.remove(CLASS_NAME_TOGGLING);
       };
 
-      setTimeout(completeCallback, getTransitionDurationFromElement(this._element));
+      const transitionDuration = getTransitionDurationFromElement(this._element);
+      EventHandler.one(this._element, 'transitionend', completeCallback);
+      emulateTransitionEnd(this._element, transitionDuration);
+    }
+
+    dispose() {
+      this._backdrop.dispose();
+
+      super.dispose();
+      EventHandler.off(document, EVENT_FOCUSIN);
+      this._config = null;
+      this._backdrop = null;
     } // Private
 
 
@@ -3316,6 +3357,15 @@
       };
       typeCheckConfig(NAME$5, config, DefaultType$4);
       return config;
+    }
+
+    _initializeBackDrop() {
+      return new Backdrop({
+        isVisible: this._config.backdrop,
+        isAnimated: true,
+        rootElement: this._element.parentNode,
+        clickCallback: () => this.hide()
+      });
     }
 
     _enforceFocusOnElement(element) {
@@ -3331,15 +3381,8 @@
 
     _addEventListeners() {
       EventHandler.on(this._element, EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, () => this.hide());
-      EventHandler.on(document, 'keydown', event => {
+      EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
         if (this._config.keyboard && event.key === ESCAPE_KEY) {
-          this.hide();
-        }
-      });
-      EventHandler.on(document, EVENT_CLICK_DATA_API$1, event => {
-        const target = SelectorEngine.findOne(getSelectorFromElement(event.target));
-
-        if (!this._element.contains(event.target) && target !== this._element) {
           this.hide();
         }
       });
@@ -3388,10 +3431,10 @@
       }
     }); // avoid conflict when clicking a toggler of an offcanvas, while another is open
 
-    const allReadyOpen = SelectorEngine.findOne(ACTIVE_SELECTOR);
+    const allReadyOpen = SelectorEngine.findOne(OPEN_SELECTOR);
 
     if (allReadyOpen && allReadyOpen !== target) {
-      return;
+      Offcanvas.getInstance(allReadyOpen).hide();
     }
 
     const data = Data.get(target, DATA_KEY$5) || new Offcanvas(target);
@@ -3410,7 +3453,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): util/sanitizer.js
+   * Bootstrap (v5.0.0): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3523,7 +3566,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): tooltip.js
+   * Bootstrap (v5.0.0): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3698,7 +3741,6 @@
 
     dispose() {
       clearTimeout(this._timeout);
-      EventHandler.off(this._element, this.constructor.EVENT_KEY);
       EventHandler.off(this._element.closest(`.${CLASS_NAME_MODAL}`), 'hide.bs.modal', this._hideModalHandler);
 
       if (this.tip && this.tip.parentNode) {
@@ -3783,7 +3825,7 @@
 
       if ('ontouchstart' in document.documentElement) {
         [].concat(...document.body.children).forEach(element => {
-          EventHandler.on(element, 'mouseover', noop());
+          EventHandler.on(element, 'mouseover', noop);
         });
       }
 
@@ -3982,7 +4024,6 @@
         modifiers: [{
           name: 'flip',
           options: {
-            altBoundary: true,
             fallbackPlacements: this.config.fallbackPlacements
           }
         }, {
@@ -4265,7 +4306,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): popover.js
+   * Bootstrap (v5.0.0): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4415,7 +4456,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): scrollspy.js
+   * Bootstrap (v5.0.0): scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4528,6 +4569,7 @@
 
     _getConfig(config) {
       config = { ...Default$1,
+        ...Manipulator.getDataAttributes(this._element),
         ...(typeof config === 'object' && config ? config : {})
       };
 
@@ -4636,21 +4678,17 @@
 
     static jQueryInterface(config) {
       return this.each(function () {
-        let data = Data.get(this, DATA_KEY$2);
+        const data = ScrollSpy.getInstance(this) || new ScrollSpy(this, typeof config === 'object' ? config : {});
 
-        const _config = typeof config === 'object' && config;
-
-        if (!data) {
-          data = new ScrollSpy(this, _config);
+        if (typeof config !== 'string') {
+          return;
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
-            throw new TypeError(`No method named "${config}"`);
-          }
-
-          data[config]();
+        if (typeof data[config] === 'undefined') {
+          throw new TypeError(`No method named "${config}"`);
         }
+
+        data[config]();
       });
     }
 
@@ -4663,7 +4701,7 @@
 
 
   EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-    SelectorEngine.find(SELECTOR_DATA_SPY).forEach(spy => new ScrollSpy(spy, Manipulator.getDataAttributes(spy)));
+    SelectorEngine.find(SELECTOR_DATA_SPY).forEach(spy => new ScrollSpy(spy));
   });
   /**
    * ------------------------------------------------------------------------
@@ -4676,7 +4714,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): tab.js
+   * Bootstrap (v5.0.0): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4720,7 +4758,7 @@
 
 
     show() {
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && this._element.classList.contains(CLASS_NAME_ACTIVE) || isDisabled(this._element)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
         return;
       }
 
@@ -4808,11 +4846,17 @@
         element.classList.add(CLASS_NAME_SHOW$1);
       }
 
-      if (element.parentNode && element.parentNode.classList.contains(CLASS_NAME_DROPDOWN_MENU)) {
+      let parent = element.parentNode;
+
+      if (parent && parent.nodeName === 'LI') {
+        parent = parent.parentNode;
+      }
+
+      if (parent && parent.classList.contains(CLASS_NAME_DROPDOWN_MENU)) {
         const dropdownElement = element.closest(SELECTOR_DROPDOWN);
 
         if (dropdownElement) {
-          SelectorEngine.find(SELECTOR_DROPDOWN_TOGGLE).forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE));
+          SelectorEngine.find(SELECTOR_DROPDOWN_TOGGLE, dropdownElement).forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE));
         }
 
         element.setAttribute('aria-expanded', true);
@@ -4847,7 +4891,14 @@
 
 
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-    event.preventDefault();
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault();
+    }
+
+    if (isDisabled(this)) {
+      return;
+    }
+
     const data = Data.get(this, DATA_KEY$1) || new Tab(this);
     data.show();
   });
@@ -4862,7 +4913,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): toast.js
+   * Bootstrap (v5.0.0): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5001,7 +5052,6 @@
         this._element.classList.remove(CLASS_NAME_SHOW);
       }
 
-      EventHandler.off(this._element, EVENT_CLICK_DISMISS);
       super.dispose();
       this._config = null;
     } // Private
@@ -5057,9 +5107,321 @@
 
   defineJQueryPlugin(NAME, Toast);
 
+  (function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (factory());
+  }(undefined, (function () {
+    /**
+     * Applies the :focus-visible polyfill at the given scope.
+     * A scope in this case is either the top-level Document or a Shadow Root.
+     *
+     * @param {(Document|ShadowRoot)} scope
+     * @see https://github.com/WICG/focus-visible
+     */
+    function applyFocusVisiblePolyfill(scope) {
+      var hadKeyboardEvent = true;
+      var hadFocusVisibleRecently = false;
+      var hadFocusVisibleRecentlyTimeout = null;
+
+      var inputTypesAllowlist = {
+        text: true,
+        search: true,
+        url: true,
+        tel: true,
+        email: true,
+        password: true,
+        number: true,
+        date: true,
+        month: true,
+        week: true,
+        time: true,
+        datetime: true,
+        'datetime-local': true
+      };
+
+      /**
+       * Helper function for legacy browsers and iframes which sometimes focus
+       * elements like document, body, and non-interactive SVG.
+       * @param {Element} el
+       */
+      function isValidFocusTarget(el) {
+        if (
+          el &&
+          el !== document &&
+          el.nodeName !== 'HTML' &&
+          el.nodeName !== 'BODY' &&
+          'classList' in el &&
+          'contains' in el.classList
+        ) {
+          return true;
+        }
+        return false;
+      }
+
+      /**
+       * Computes whether the given element should automatically trigger the
+       * `focus-visible` class being added, i.e. whether it should always match
+       * `:focus-visible` when focused.
+       * @param {Element} el
+       * @return {boolean}
+       */
+      function focusTriggersKeyboardModality(el) {
+        var type = el.type;
+        var tagName = el.tagName;
+
+        if (tagName === 'INPUT' && inputTypesAllowlist[type] && !el.readOnly) {
+          return true;
+        }
+
+        if (tagName === 'TEXTAREA' && !el.readOnly) {
+          return true;
+        }
+
+        if (el.isContentEditable) {
+          return true;
+        }
+
+        return false;
+      }
+
+      /**
+       * Add the `focus-visible` class to the given element if it was not added by
+       * the author.
+       * @param {Element} el
+       */
+      function addFocusVisibleClass(el) {
+        if (el.classList.contains('focus-visible')) {
+          return;
+        }
+        el.classList.add('focus-visible');
+        el.setAttribute('data-focus-visible-added', '');
+      }
+
+      /**
+       * Remove the `focus-visible` class from the given element if it was not
+       * originally added by the author.
+       * @param {Element} el
+       */
+      function removeFocusVisibleClass(el) {
+        if (!el.hasAttribute('data-focus-visible-added')) {
+          return;
+        }
+        el.classList.remove('focus-visible');
+        el.removeAttribute('data-focus-visible-added');
+      }
+
+      /**
+       * If the most recent user interaction was via the keyboard;
+       * and the key press did not include a meta, alt/option, or control key;
+       * then the modality is keyboard. Otherwise, the modality is not keyboard.
+       * Apply `focus-visible` to any current active element and keep track
+       * of our keyboard modality state with `hadKeyboardEvent`.
+       * @param {KeyboardEvent} e
+       */
+      function onKeyDown(e) {
+        if (e.metaKey || e.altKey || e.ctrlKey) {
+          return;
+        }
+
+        if (isValidFocusTarget(scope.activeElement)) {
+          addFocusVisibleClass(scope.activeElement);
+        }
+
+        hadKeyboardEvent = true;
+      }
+
+      /**
+       * If at any point a user clicks with a pointing device, ensure that we change
+       * the modality away from keyboard.
+       * This avoids the situation where a user presses a key on an already focused
+       * element, and then clicks on a different element, focusing it with a
+       * pointing device, while we still think we're in keyboard modality.
+       * @param {Event} e
+       */
+      function onPointerDown(e) {
+        hadKeyboardEvent = false;
+      }
+
+      /**
+       * On `focus`, add the `focus-visible` class to the target if:
+       * - the target received focus as a result of keyboard navigation, or
+       * - the event target is an element that will likely require interaction
+       *   via the keyboard (e.g. a text box)
+       * @param {Event} e
+       */
+      function onFocus(e) {
+        // Prevent IE from focusing the document or HTML element.
+        if (!isValidFocusTarget(e.target)) {
+          return;
+        }
+
+        if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {
+          addFocusVisibleClass(e.target);
+        }
+      }
+
+      /**
+       * On `blur`, remove the `focus-visible` class from the target.
+       * @param {Event} e
+       */
+      function onBlur(e) {
+        if (!isValidFocusTarget(e.target)) {
+          return;
+        }
+
+        if (
+          e.target.classList.contains('focus-visible') ||
+          e.target.hasAttribute('data-focus-visible-added')
+        ) {
+          // To detect a tab/window switch, we look for a blur event followed
+          // rapidly by a visibility change.
+          // If we don't see a visibility change within 100ms, it's probably a
+          // regular focus change.
+          hadFocusVisibleRecently = true;
+          window.clearTimeout(hadFocusVisibleRecentlyTimeout);
+          hadFocusVisibleRecentlyTimeout = window.setTimeout(function() {
+            hadFocusVisibleRecently = false;
+          }, 100);
+          removeFocusVisibleClass(e.target);
+        }
+      }
+
+      /**
+       * If the user changes tabs, keep track of whether or not the previously
+       * focused element had .focus-visible.
+       * @param {Event} e
+       */
+      function onVisibilityChange(e) {
+        if (document.visibilityState === 'hidden') {
+          // If the tab becomes active again, the browser will handle calling focus
+          // on the element (Safari actually calls it twice).
+          // If this tab change caused a blur on an element with focus-visible,
+          // re-apply the class when the user switches back to the tab.
+          if (hadFocusVisibleRecently) {
+            hadKeyboardEvent = true;
+          }
+          addInitialPointerMoveListeners();
+        }
+      }
+
+      /**
+       * Add a group of listeners to detect usage of any pointing devices.
+       * These listeners will be added when the polyfill first loads, and anytime
+       * the window is blurred, so that they are active when the window regains
+       * focus.
+       */
+      function addInitialPointerMoveListeners() {
+        document.addEventListener('mousemove', onInitialPointerMove);
+        document.addEventListener('mousedown', onInitialPointerMove);
+        document.addEventListener('mouseup', onInitialPointerMove);
+        document.addEventListener('pointermove', onInitialPointerMove);
+        document.addEventListener('pointerdown', onInitialPointerMove);
+        document.addEventListener('pointerup', onInitialPointerMove);
+        document.addEventListener('touchmove', onInitialPointerMove);
+        document.addEventListener('touchstart', onInitialPointerMove);
+        document.addEventListener('touchend', onInitialPointerMove);
+      }
+
+      function removeInitialPointerMoveListeners() {
+        document.removeEventListener('mousemove', onInitialPointerMove);
+        document.removeEventListener('mousedown', onInitialPointerMove);
+        document.removeEventListener('mouseup', onInitialPointerMove);
+        document.removeEventListener('pointermove', onInitialPointerMove);
+        document.removeEventListener('pointerdown', onInitialPointerMove);
+        document.removeEventListener('pointerup', onInitialPointerMove);
+        document.removeEventListener('touchmove', onInitialPointerMove);
+        document.removeEventListener('touchstart', onInitialPointerMove);
+        document.removeEventListener('touchend', onInitialPointerMove);
+      }
+
+      /**
+       * When the polfyill first loads, assume the user is in keyboard modality.
+       * If any event is received from a pointing device (e.g. mouse, pointer,
+       * touch), turn off keyboard modality.
+       * This accounts for situations where focus enters the page from the URL bar.
+       * @param {Event} e
+       */
+      function onInitialPointerMove(e) {
+        // Work around a Safari quirk that fires a mousemove on <html> whenever the
+        // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
+        if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
+          return;
+        }
+
+        hadKeyboardEvent = false;
+        removeInitialPointerMoveListeners();
+      }
+
+      // For some kinds of state, we are interested in changes at the global scope
+      // only. For example, global pointer input, global key presses and global
+      // visibility change should affect the state at every scope:
+      document.addEventListener('keydown', onKeyDown, true);
+      document.addEventListener('mousedown', onPointerDown, true);
+      document.addEventListener('pointerdown', onPointerDown, true);
+      document.addEventListener('touchstart', onPointerDown, true);
+      document.addEventListener('visibilitychange', onVisibilityChange, true);
+
+      addInitialPointerMoveListeners();
+
+      // For focus and blur, we specifically care about state changes in the local
+      // scope. This is because focus / blur events that originate from within a
+      // shadow root are not re-dispatched from the host element if it was already
+      // the active element in its own scope:
+      scope.addEventListener('focus', onFocus, true);
+      scope.addEventListener('blur', onBlur, true);
+
+      // We detect that a node is a ShadowRoot by ensuring that it is a
+      // DocumentFragment and also has a host property. This check covers native
+      // implementation and polyfill implementation transparently. If we only cared
+      // about the native implementation, we could just check if the scope was
+      // an instance of a ShadowRoot.
+      if (scope.nodeType === Node.DOCUMENT_FRAGMENT_NODE && scope.host) {
+        // Since a ShadowRoot is a special kind of DocumentFragment, it does not
+        // have a root element to add a class to. So, we add this attribute to the
+        // host element instead:
+        scope.host.setAttribute('data-js-focus-visible', '');
+      } else if (scope.nodeType === Node.DOCUMENT_NODE) {
+        document.documentElement.classList.add('js-focus-visible');
+        document.documentElement.setAttribute('data-js-focus-visible', '');
+      }
+    }
+
+    // It is important to wrap all references to global window and document in
+    // these checks to support server-side rendering use cases
+    // @see https://github.com/WICG/focus-visible/issues/199
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      // Make the polyfill helper globally available. This can be used as a signal
+      // to interested libraries that wish to coordinate with the polyfill for e.g.,
+      // applying the polyfill to a shadow root:
+      window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill;
+
+      // Notify interested libraries of the polyfill's presence, in case the
+      // polyfill was loaded lazily:
+      var event;
+
+      try {
+        event = new CustomEvent('focus-visible-polyfill-ready');
+      } catch (error) {
+        // IE11 does not support using CustomEvent as a constructor directly:
+        event = document.createEvent('CustomEvent');
+        event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});
+      }
+
+      window.dispatchEvent(event);
+    }
+
+    if (typeof document !== 'undefined') {
+      // Apply the polyfill to the global document, so that no JavaScript
+      // coordination is required to use the polyfill in the top-level document:
+      applyFocusVisiblePolyfill(document);
+    }
+
+  })));
+
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): index.umd.js
+   * Bootstrap (v5.0.0): index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

@@ -488,7 +488,7 @@ describe('Carousel', () => {
       expect(carousel._addTouchEventListeners).toHaveBeenCalled()
     })
 
-    it('should allow swiperight and call _slide with pointer events', done => {
+    it('should allow swiperight and call _slide (prev) with pointer events', done => {
       if (!supportPointerEvent) {
         expect().nothing()
         done()
@@ -533,7 +533,7 @@ describe('Carousel', () => {
       })
     })
 
-    it('should allow swipeleft and call previous with pointer events', done => {
+    it('should allow swipeleft and call next with pointer events', done => {
       if (!supportPointerEvent) {
         expect().nothing()
         done()
@@ -579,7 +579,7 @@ describe('Carousel', () => {
       })
     })
 
-    it('should allow swiperight and call _slide with touch events', done => {
+    it('should allow swiperight and call _slide (prev) with touch events', done => {
       Simulator.setType('touch')
       clearPointerEvents()
       document.documentElement.ontouchstart = () => {}
@@ -618,7 +618,7 @@ describe('Carousel', () => {
       })
     })
 
-    it('should allow swipeleft and call _slide with touch events', done => {
+    it('should allow swipeleft and call _slide (next) with touch events', done => {
       Simulator.setType('touch')
       clearPointerEvents()
       document.documentElement.ontouchstart = () => {}
@@ -772,7 +772,7 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl, {})
 
       const onSlide = e => {
-        expect(e.direction).toEqual('right')
+        expect(e.direction).toEqual('left')
         expect(e.relatedTarget.classList.contains('carousel-item')).toEqual(true)
         expect(e.from).toEqual(0)
         expect(e.to).toEqual(1)
@@ -784,7 +784,7 @@ describe('Carousel', () => {
       }
 
       const onSlide2 = e => {
-        expect(e.direction).toEqual('left')
+        expect(e.direction).toEqual('right')
         done()
       }
 
@@ -807,7 +807,7 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl, {})
 
       const onSlid = e => {
-        expect(e.direction).toEqual('right')
+        expect(e.direction).toEqual('left')
         expect(e.relatedTarget.classList.contains('carousel-item')).toEqual(true)
         expect(e.from).toEqual(0)
         expect(e.to).toEqual(1)
@@ -819,7 +819,7 @@ describe('Carousel', () => {
       }
 
       const onSlid2 = e => {
-        expect(e.direction).toEqual('left')
+        expect(e.direction).toEqual('right')
         done()
       }
 
@@ -1323,13 +1323,13 @@ describe('Carousel', () => {
       const carouselEl = fixtureEl.querySelector('div')
       const carousel = new Carousel(carouselEl, {})
 
-      expect(carousel._directionToOrder('left')).toEqual('prev')
+      expect(carousel._directionToOrder('left')).toEqual('next')
       expect(carousel._directionToOrder('prev')).toEqual('prev')
-      expect(carousel._directionToOrder('right')).toEqual('next')
+      expect(carousel._directionToOrder('right')).toEqual('prev')
       expect(carousel._directionToOrder('next')).toEqual('next')
 
-      expect(carousel._orderToDirection('next')).toEqual('right')
-      expect(carousel._orderToDirection('prev')).toEqual('left')
+      expect(carousel._orderToDirection('next')).toEqual('left')
+      expect(carousel._orderToDirection('prev')).toEqual('right')
     })
 
     it('"_directionToOrder" and "_orderToDirection" must return the right results when rtl=true', () => {
@@ -1340,13 +1340,13 @@ describe('Carousel', () => {
       const carousel = new Carousel(carouselEl, {})
       expect(util.isRTL()).toEqual(true, 'rtl has to be true')
 
-      expect(carousel._directionToOrder('left')).toEqual('next')
+      expect(carousel._directionToOrder('left')).toEqual('prev')
       expect(carousel._directionToOrder('prev')).toEqual('prev')
-      expect(carousel._directionToOrder('right')).toEqual('prev')
+      expect(carousel._directionToOrder('right')).toEqual('next')
       expect(carousel._directionToOrder('next')).toEqual('next')
 
-      expect(carousel._orderToDirection('next')).toEqual('left')
-      expect(carousel._orderToDirection('prev')).toEqual('right')
+      expect(carousel._orderToDirection('next')).toEqual('right')
+      expect(carousel._orderToDirection('prev')).toEqual('left')
       document.documentElement.dir = 'ltl'
     })
 
@@ -1360,11 +1360,11 @@ describe('Carousel', () => {
 
       carousel._slide('left')
       expect(spy).toHaveBeenCalledWith('left')
-      expect(spy2).toHaveBeenCalledWith('prev')
+      expect(spy2).toHaveBeenCalledWith('next')
 
       carousel._slide('right')
       expect(spy).toHaveBeenCalledWith('right')
-      expect(spy2).toHaveBeenCalledWith('next')
+      expect(spy2).toHaveBeenCalledWith('prev')
     })
 
     it('"_slide" has to call "_directionToOrder" and "_orderToDirection" when rtl=true', () => {
@@ -1378,11 +1378,11 @@ describe('Carousel', () => {
 
       carousel._slide('left')
       expect(spy).toHaveBeenCalledWith('left')
-      expect(spy2).toHaveBeenCalledWith('next')
+      expect(spy2).toHaveBeenCalledWith('prev')
 
       carousel._slide('right')
       expect(spy).toHaveBeenCalledWith('right')
-      expect(spy2).toHaveBeenCalledWith('prev')
+      expect(spy2).toHaveBeenCalledWith('next')
 
       document.documentElement.dir = 'ltl'
     })
