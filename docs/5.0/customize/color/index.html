@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.">
+<meta name="author" content="Orange and Boosted contributors">
+<meta name="generator" content="Hugo 0.83.1">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<title>Color · Boosted v5.0</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/5.0/customize/color/">
+
+
+
+
+<link rel="preload" href="/docs/5.0/dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/5.0/dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+
+
+<!-- Boosted core CSS -->
+<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-tSxM4wLu3j8sRc/UX0jo54uHzJ0J5bceaL/CwiWufYMj25GlX7VxwGD9HdwpLfGw" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fHoVtQDm7C96iGh8AvQ0kcIHOBd3+CFTxurFdh4FFRjw8N+T0f1skZnEkeAjjo4k" crossorigin="anonymous">
+
+<link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.0/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Color">
+<meta name="twitter:description" content="Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/5.0/assets/brand/orange-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/5.0/customize/color/">
+<meta property="og:title" content="Color">
+<meta property="og:description" content="Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/5.0/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <a id="top"></a>
+<div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
+  <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
+    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+  </nav>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="container-xxl" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      <img src="/docs/5.0/assets/img/orange-logo.svg" width="50" height="50" alt="Back to homepage" title="Go to homepage" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.0/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.0/guidelines/logos/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+          </a>
+        </li>
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0 align-self-center">
+          <a class="btn btn-primary my-2 ms-2 my-md-0 ms-md-3" href="/docs/5.0/getting-started/download/">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    
+  <nav class="bd-subnavbar py-2 border-bottom border-light border-1" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-3" role="search">
+      <input type="search" class="form-control" id="search-input" placeholder="Search docs…" aria-label="Search docs for…" autocomplete="off" data-bd-docs-version="5.0">
+    </form>
+
+    <div class="dropdown ms-auto">
+  <button class="btn btn-primary dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Boosted&nbsp;</span> v5.0
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item active" aria-current="true" href="/docs/5.0/">Latest (5.0.x)</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-2 ms-2 ms-md-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+</svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
+</svg>
+
+   </button>
+  </div>
+</nav>
+
+
+  <div class="container-xxl bd-layout">
+    <aside class="bd-sidebar border-end border-light border-1">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-4">
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" type="button" aria-expanded="false">
+         Getting started
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/getting-started/introduction/" class="d-flex align-items-center">Introduction</a></li>
+              <li><a href="/docs/5.0/getting-started/download/" class="d-flex align-items-center">Download</a></li>
+              <li><a href="/docs/5.0/getting-started/contents/" class="d-flex align-items-center">Contents</a></li>
+              <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-flex align-items-center">Browsers &amp; devices</a></li>
+              <li><a href="/docs/5.0/getting-started/javascript/" class="d-flex align-items-center">JavaScript</a></li>
+              <li><a href="/docs/5.0/getting-started/build-tools/" class="d-flex align-items-center">Build tools</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-flex align-items-center">Webpack</a></li>
+              <li><a href="/docs/5.0/getting-started/parcel/" class="d-flex align-items-center">Parcel</a></li>
+              <li><a href="/docs/5.0/getting-started/accessibility/" class="d-flex align-items-center">Accessibility</a></li>
+              <li><a href="/docs/5.0/getting-started/rfs/" class="d-flex align-items-center">RFS</a></li>
+              <li><a href="/docs/5.0/getting-started/rtl/" class="d-flex align-items-center">RTL</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#customize-collapse" type="button" aria-expanded="true" aria-current="true">
+         Customize
+        </button>
+
+        <div class="collapse show" id="customize-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/customize/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.0/customize/sass/" class="d-flex align-items-center">Sass</a></li>
+              <li><a href="/docs/5.0/customize/options/" class="d-flex align-items-center">Options</a></li>
+              <li><a href="/docs/5.0/customize/color/" class="d-flex align-items-center active" aria-current="page">Color</a></li>
+              <li><a href="/docs/5.0/customize/components/" class="d-flex align-items-center">Components</a></li>
+              <li><a href="/docs/5.0/customize/css-variables/" class="d-flex align-items-center">CSS variables</a></li>
+              <li><a href="/docs/5.0/customize/optimize/" class="d-flex align-items-center">Optimize</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" type="button" aria-expanded="false">
+         Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/layout/breakpoints/" class="d-flex align-items-center">Breakpoints</a></li>
+              <li><a href="/docs/5.0/layout/containers/" class="d-flex align-items-center">Containers</a></li>
+              <li><a href="/docs/5.0/layout/grid/" class="d-flex align-items-center">Grid</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-flex align-items-center">Columns</a></li>
+              <li><a href="/docs/5.0/layout/gutters/" class="d-flex align-items-center">Gutters</a></li>
+              <li><a href="/docs/5.0/layout/utilities/" class="d-flex align-items-center">Utilities</a></li>
+              <li><a href="/docs/5.0/layout/z-index/" class="d-flex align-items-center">Z-index</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" type="button" aria-expanded="false">
+         Content
+        </button>
+
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/content/reboot/" class="d-flex align-items-center">Reboot</a></li>
+              <li><a href="/docs/5.0/content/typography/" class="d-flex align-items-center">Typography</a></li>
+              <li><a href="/docs/5.0/content/images/" class="d-flex align-items-center">Images</a></li>
+              <li><a href="/docs/5.0/content/tables/" class="d-flex align-items-center">Tables</a></li>
+              <li><a href="/docs/5.0/content/figures/" class="d-flex align-items-center">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" type="button" aria-expanded="false">
+         Forms
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/forms/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.0/forms/form-control/" class="d-flex align-items-center">Form control</a></li>
+              <li><a href="/docs/5.0/forms/select/" class="d-flex align-items-center">Select</a></li>
+              <li><a href="/docs/5.0/forms/checks-radios/" class="d-flex align-items-center">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.0/forms/range/" class="d-flex align-items-center">Range</a></li>
+              <li><a href="/docs/5.0/forms/input-group/" class="d-flex align-items-center">Input group</a></li>
+              <li><a href="/docs/5.0/forms/layout/" class="d-flex align-items-center">Layout</a></li>
+              <li><a href="/docs/5.0/forms/validation/" class="d-flex align-items-center">Validation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" type="button" aria-expanded="false">
+         Components
+        </button>
+
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/components/accordion/" class="d-flex align-items-center">Accordion</a></li>
+              <li><a href="/docs/5.0/components/alerts/" class="d-flex align-items-center">Alerts</a></li>
+              <li><a href="/docs/5.0/components/back-to-top/" class="d-flex align-items-center">Back to top</a></li>
+              <li><a href="/docs/5.0/components/badge/" class="d-flex align-items-center">Badge</a></li>
+              <li><a href="/docs/5.0/components/breadcrumb/" class="d-flex align-items-center">Breadcrumb</a></li>
+              <li><a href="/docs/5.0/components/buttons/" class="d-flex align-items-center">Buttons</a></li>
+              <li><a href="/docs/5.0/components/button-group/" class="d-flex align-items-center">Button group</a></li>
+              <li><a href="/docs/5.0/components/card/" class="d-flex align-items-center">Card</a></li>
+              <li><a href="/docs/5.0/components/carousel/" class="d-flex align-items-center">Carousel</a></li>
+              <li><a href="/docs/5.0/components/close-button/" class="d-flex align-items-center">Close button</a></li>
+              <li><a href="/docs/5.0/components/collapse/" class="d-flex align-items-center">Collapse</a></li>
+              <li><a href="/docs/5.0/components/dropdowns/" class="d-flex align-items-center">Dropdowns</a></li>
+              <li><a href="/docs/5.0/components/list-group/" class="d-flex align-items-center">List group</a></li>
+              <li><a href="/docs/5.0/components/modal/" class="d-flex align-items-center">Modal</a></li>
+              <li><a href="/docs/5.0/components/navs-tabs/" class="d-flex align-items-center">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.0/components/navbar/" class="d-flex align-items-center">Navbar</a></li>
+              <li><a href="/docs/5.0/components/pagination/" class="d-flex align-items-center">Pagination</a></li>
+              <li><a href="/docs/5.0/components/popovers/" class="d-flex align-items-center">Popovers</a></li>
+              <li><a href="/docs/5.0/components/progress/" class="d-flex align-items-center">Progress</a></li>
+              <li><a href="/docs/5.0/components/scrollspy/" class="d-flex align-items-center">Scrollspy</a></li>
+              <li><a href="/docs/5.0/components/spinners/" class="d-flex align-items-center">Spinners</a></li>
+              <li><a href="/docs/5.0/components/stepped-process/" class="d-flex align-items-center">Stepped process</a></li>
+              <li><a href="/docs/5.0/components/toasts/" class="d-flex align-items-center">Toasts</a></li>
+              <li><a href="/docs/5.0/components/tooltips/" class="d-flex align-items-center">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" type="button" aria-expanded="false">
+         Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/helpers/clearfix/" class="d-flex align-items-center">Clearfix</a></li>
+              <li><a href="/docs/5.0/helpers/colored-links/" class="d-flex align-items-center">Colored links</a></li>
+              <li><a href="/docs/5.0/helpers/ratio/" class="d-flex align-items-center">Ratio</a></li>
+              <li><a href="/docs/5.0/helpers/position/" class="d-flex align-items-center">Position</a></li>
+              <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-flex align-items-center">Visually hidden</a></li>
+              <li><a href="/docs/5.0/helpers/stretched-link/" class="d-flex align-items-center">Stretched link</a></li>
+              <li><a href="/docs/5.0/helpers/text-truncation/" class="d-flex align-items-center">Text truncation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" type="button" aria-expanded="false">
+         Utilities
+        </button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/utilities/api/" class="d-flex align-items-center">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-flex align-items-center">Background</a></li>
+              <li><a href="/docs/5.0/utilities/borders/" class="d-flex align-items-center">Borders</a></li>
+              <li><a href="/docs/5.0/utilities/colors/" class="d-flex align-items-center">Colors</a></li>
+              <li><a href="/docs/5.0/utilities/display/" class="d-flex align-items-center">Display</a></li>
+              <li><a href="/docs/5.0/utilities/flex/" class="d-flex align-items-center">Flex</a></li>
+              <li><a href="/docs/5.0/utilities/float/" class="d-flex align-items-center">Float</a></li>
+              <li><a href="/docs/5.0/utilities/interactions/" class="d-flex align-items-center">Interactions</a></li>
+              <li><a href="/docs/5.0/utilities/overflow/" class="d-flex align-items-center">Overflow</a></li>
+              <li><a href="/docs/5.0/utilities/position/" class="d-flex align-items-center">Position</a></li>
+              <li><a href="/docs/5.0/utilities/sizing/" class="d-flex align-items-center">Sizing</a></li>
+              <li><a href="/docs/5.0/utilities/spacing/" class="d-flex align-items-center">Spacing</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-flex align-items-center">Text</a></li>
+              <li><a href="/docs/5.0/utilities/vertical-align/" class="d-flex align-items-center">Vertical align</a></li>
+              <li><a href="/docs/5.0/utilities/visibility/" class="d-flex align-items-center">Visibility</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" type="button" aria-expanded="false">
+         Extend
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/extend/approach/" class="d-flex align-items-center">Approach</a></li>
+              <li><a href="/docs/5.0/extend/icons/" class="d-flex align-items-center">Icons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" type="button" aria-expanded="false">
+         About
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/about/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.0/about/team/" class="d-flex align-items-center">Team</a></li>
+              <li><a href="/docs/5.0/about/brand/" class="d-flex align-items-center">Brand</a></li>
+              <li><a href="/docs/5.0/about/license/" class="d-flex align-items-center">License</a></li>
+              <li><a href="/docs/5.0/about/translations/" class="d-flex align-items-center">Translations</a></li>
+              <li><a href="/docs/5.0/about/cookies/" class="d-flex align-items-center">Cookies</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-light border-top border-1 my-3">
+        <a href="/docs/5.0/migration/" class="d-flex align-items-center p-2 fw-bold fs-6">
+          Migration
+        </a>
+      </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro pt-md-4 ps-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/site/content/docs/5.0/customize/color.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">Color</h1>
+        </div>
+        <p class="bd-lead">Boosted is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.</p>
+        
+
+      </div>
+
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 border-start border-light border-1">
+          <strong class="d-block h6 my-2 ps-xl-3 pb-2 border-bottom border-light border-1">On this page</strong>
+          <div class="ps-lg-3"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#theme-colors">Theme colors</a></li>
+    <li><a href="#all-colors">All colors</a>
+      <ul>
+        <li><a href="#oranges-colors">Orange&rsquo;s colors</a></li>
+        <li><a href="#notes-on-sass">Notes on Sass</a></li>
+      </ul>
+    </li>
+    <li><a href="#color-sass-maps">Color Sass maps</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+        </div>
+      
+
+      <div class="bd-content ps-lg-4 mb-3">
+        
+
+        <h2 id="theme-colors">Theme colors</h2>
+<p>We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Boosted&rsquo;s <code>scss/_variables.scss</code> file.</p>
+<div class="row">
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-primary">Primary</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-secondary">Secondary</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-success">Success</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-danger">Danger</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-warning">Warning</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-info">Info</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-light">Light</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 fw-bold bg-dark">Dark</div>
+    </div>
+  
+</div>
+<p>All these colors are available as a Sass map, <code>$theme-colors</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;primary&#34;</span><span class="o">:</span>    <span class="nv">$primary</span><span class="o">,</span>
+  <span class="s2">&#34;secondary&#34;</span><span class="o">:</span>  <span class="nv">$secondary</span><span class="o">,</span>
+  <span class="s2">&#34;success&#34;</span><span class="o">:</span>    <span class="nv">$success</span><span class="o">,</span>
+  <span class="s2">&#34;info&#34;</span><span class="o">:</span>       <span class="nv">$info</span><span class="o">,</span>
+  <span class="s2">&#34;warning&#34;</span><span class="o">:</span>    <span class="nv">$warning</span><span class="o">,</span>
+  <span class="s2">&#34;danger&#34;</span><span class="o">:</span>     <span class="nv">$danger</span><span class="o">,</span>
+  <span class="s2">&#34;light&#34;</span><span class="o">:</span>      <span class="nv">$light</span><span class="o">,</span>
+  <span class="s2">&#34;dark&#34;</span><span class="o">:</span>       <span class="nv">$dark</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Check out <a href="/docs/5.0/customize/sass/#maps-and-loops">our Sass maps and loops docs</a> for how to modify these colors.</p>
+<h2 id="all-colors">All colors</h2>
+<p>All Boosted colors are available as Sass variables and a Sass map in <code>scss/_variables.scss</code> file. To avoid increased file sizes, we don&rsquo;t create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a <a href="#theme-colors">theme palette</a>.</p>
+<p>Be sure to monitor contrast ratios as you customize colors. As shown below, we&rsquo;ve added three contrast ratios to each of the main colors—one for the swatch&rsquo;s current colors, one for against white, and one for against black.</p>
+<div class="row font-monospace">
+  
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-blue">
+        <strong class="d-block">$blue</strong>
+        #527edb
+      </div>
+      
+      <div class="p-3 bd-blue-100">$blue-100</div>
+      
+      <div class="p-3 bd-blue-200">$blue-200</div>
+      
+      <div class="p-3 bd-blue-300">$blue-300</div>
+      
+      <div class="p-3 bd-blue-400">$blue-400</div>
+      
+      <div class="p-3 bd-blue-500">$blue-500</div>
+      
+      <div class="p-3 bd-blue-600">$blue-600</div>
+      
+      <div class="p-3 bd-blue-700">$blue-700</div>
+      
+      <div class="p-3 bd-blue-800">$blue-800</div>
+      
+      <div class="p-3 bd-blue-900">$blue-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-purple">
+        <strong class="d-block">$purple</strong>
+        #a885d8
+      </div>
+      
+      <div class="p-3 bd-purple-100">$purple-100</div>
+      
+      <div class="p-3 bd-purple-200">$purple-200</div>
+      
+      <div class="p-3 bd-purple-300">$purple-300</div>
+      
+      <div class="p-3 bd-purple-400">$purple-400</div>
+      
+      <div class="p-3 bd-purple-500">$purple-500</div>
+      
+      <div class="p-3 bd-purple-600">$purple-600</div>
+      
+      <div class="p-3 bd-purple-700">$purple-700</div>
+      
+      <div class="p-3 bd-purple-800">$purple-800</div>
+      
+      <div class="p-3 bd-purple-900">$purple-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-pink">
+        <strong class="d-block">$pink</strong>
+        #ffb4e6
+      </div>
+      
+      <div class="p-3 bd-pink-100">$pink-100</div>
+      
+      <div class="p-3 bd-pink-200">$pink-200</div>
+      
+      <div class="p-3 bd-pink-300">$pink-300</div>
+      
+      <div class="p-3 bd-pink-400">$pink-400</div>
+      
+      <div class="p-3 bd-pink-500">$pink-500</div>
+      
+      <div class="p-3 bd-pink-600">$pink-600</div>
+      
+      <div class="p-3 bd-pink-700">$pink-700</div>
+      
+      <div class="p-3 bd-pink-800">$pink-800</div>
+      
+      <div class="p-3 bd-pink-900">$pink-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-red">
+        <strong class="d-block">$red</strong>
+        #cd3c14
+      </div>
+      
+      <div class="p-3 bd-red-100">$red-100</div>
+      
+      <div class="p-3 bd-red-200">$red-200</div>
+      
+      <div class="p-3 bd-red-300">$red-300</div>
+      
+      <div class="p-3 bd-red-400">$red-400</div>
+      
+      <div class="p-3 bd-red-500">$red-500</div>
+      
+      <div class="p-3 bd-red-600">$red-600</div>
+      
+      <div class="p-3 bd-red-700">$red-700</div>
+      
+      <div class="p-3 bd-red-800">$red-800</div>
+      
+      <div class="p-3 bd-red-900">$red-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-orange">
+        <strong class="d-block">$orange</strong>
+        #ff7900
+      </div>
+      
+      <div class="p-3 bd-orange-100">$orange-100</div>
+      
+      <div class="p-3 bd-orange-200">$orange-200</div>
+      
+      <div class="p-3 bd-orange-300">$orange-300</div>
+      
+      <div class="p-3 bd-orange-400">$orange-400</div>
+      
+      <div class="p-3 bd-orange-500">$orange-500</div>
+      
+      <div class="p-3 bd-orange-600">$orange-600</div>
+      
+      <div class="p-3 bd-orange-700">$orange-700</div>
+      
+      <div class="p-3 bd-orange-800">$orange-800</div>
+      
+      <div class="p-3 bd-orange-900">$orange-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-yellow">
+        <strong class="d-block">$yellow</strong>
+        #fc0
+      </div>
+      
+      <div class="p-3 bd-yellow-100">$yellow-100</div>
+      
+      <div class="p-3 bd-yellow-200">$yellow-200</div>
+      
+      <div class="p-3 bd-yellow-300">$yellow-300</div>
+      
+      <div class="p-3 bd-yellow-400">$yellow-400</div>
+      
+      <div class="p-3 bd-yellow-500">$yellow-500</div>
+      
+      <div class="p-3 bd-yellow-600">$yellow-600</div>
+      
+      <div class="p-3 bd-yellow-700">$yellow-700</div>
+      
+      <div class="p-3 bd-yellow-800">$yellow-800</div>
+      
+      <div class="p-3 bd-yellow-900">$yellow-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-green">
+        <strong class="d-block">$green</strong>
+        #32c832
+      </div>
+      
+      <div class="p-3 bd-green-100">$green-100</div>
+      
+      <div class="p-3 bd-green-200">$green-200</div>
+      
+      <div class="p-3 bd-green-300">$green-300</div>
+      
+      <div class="p-3 bd-green-400">$green-400</div>
+      
+      <div class="p-3 bd-green-500">$green-500</div>
+      
+      <div class="p-3 bd-green-600">$green-600</div>
+      
+      <div class="p-3 bd-green-700">$green-700</div>
+      
+      <div class="p-3 bd-green-800">$green-800</div>
+      
+      <div class="p-3 bd-green-900">$green-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-teal">
+        <strong class="d-block">$teal</strong>
+        #50be87
+      </div>
+      
+      <div class="p-3 bd-teal-100">$teal-100</div>
+      
+      <div class="p-3 bd-teal-200">$teal-200</div>
+      
+      <div class="p-3 bd-teal-300">$teal-300</div>
+      
+      <div class="p-3 bd-teal-400">$teal-400</div>
+      
+      <div class="p-3 bd-teal-500">$teal-500</div>
+      
+      <div class="p-3 bd-teal-600">$teal-600</div>
+      
+      <div class="p-3 bd-teal-700">$teal-700</div>
+      
+      <div class="p-3 bd-teal-800">$teal-800</div>
+      
+      <div class="p-3 bd-teal-900">$teal-900</div>
+      
+    </div>
+    
+    <div class="col-md-4 mb-3">
+      <div class="p-3 mb-2 position-relative swatch-cyan">
+        <strong class="d-block">$cyan</strong>
+        #4bb4e6
+      </div>
+      
+      <div class="p-3 bd-cyan-100">$cyan-100</div>
+      
+      <div class="p-3 bd-cyan-200">$cyan-200</div>
+      
+      <div class="p-3 bd-cyan-300">$cyan-300</div>
+      
+      <div class="p-3 bd-cyan-400">$cyan-400</div>
+      
+      <div class="p-3 bd-cyan-500">$cyan-500</div>
+      
+      <div class="p-3 bd-cyan-600">$cyan-600</div>
+      
+      <div class="p-3 bd-cyan-700">$cyan-700</div>
+      
+      <div class="p-3 bd-cyan-800">$cyan-800</div>
+      
+      <div class="p-3 bd-cyan-900">$cyan-900</div>
+      
+    </div>
+    <div class="col-md-4 mb-3">
+    <div class="p-3 mb-2 position-relative swatch-gray-500">
+      <strong class="d-block">$gray-500</strong>
+      #adb5bd
+    </div>
+    <div class="p-3 bd-gray-100">$gray-100</div>
+  
+    <div class="p-3 bd-gray-200">$gray-200</div>
+  
+    <div class="p-3 bd-gray-300">$gray-300</div>
+  
+    <div class="p-3 bd-gray-400">$gray-400</div>
+  
+    <div class="p-3 bd-gray-500">$gray-500</div>
+  
+    <div class="p-3 bd-gray-600">$gray-600</div>
+  
+    <div class="p-3 bd-gray-700">$gray-700</div>
+  
+    <div class="p-3 bd-gray-800">$gray-800</div>
+  
+    <div class="p-3 bd-gray-900">$gray-900</div>
+  </div>
+  
+  <div class="col-md-4 mb-3">
+    <div class="p-3 mb-2 bd-accessible-orange">
+      <strong class="d-block">$accessible-orange</strong>
+      #f16e00
+    </div>
+    <div class="p-3 mb-2 bd-supporting-yellow">
+      <strong class="d-block">$supporting-yellow</strong>
+      #fc0
+    </div>
+    <div class="p-3 mb-2 bd-black text-white">
+      <strong class="d-block">$black</strong>
+      #000
+    </div>
+    <div class="p-3 mb-2 bd-white border">
+      <strong class="d-block">$white</strong>
+      #fff
+    </div>
+  </div>
+</div>
+<!-- Boosted mod -->
+<h3 id="oranges-colors">Orange&rsquo;s colors</h3>
+<p>Boosted sets an additional layer to use Orange Brand&rsquo;s color tokens names—defined first and mapped to Bootstrap core variables.
+Boosted core uses Bootstrap&rsquo;s naming for maintenance ease, but <strong>you&rsquo;re encouraged to use Orange color tokens when it comes to custom code</strong>.</p>
+<div class="row row-cols-1 row-cols-lg-2 mt-3">
+    <div class="col">
+        <h4>Orange color tokens</h4>
+        <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Boosted mod
+</span><span class="c1">//// Core colors
+</span><span class="c1"></span><span class="nv">$accessible-orange</span><span class="o">:</span> <span class="mh">#f16e00</span><span class="p">;</span>
+<span class="nv">$brand-orange</span><span class="o">:</span>      <span class="mh">#ff7900</span><span class="p">;</span>
+<span class="c1">//// Functional colors
+</span><span class="c1"></span><span class="nv">$functional-green</span><span class="o">:</span>  <span class="mh">#32c832</span><span class="p">;</span>
+<span class="nv">$functional-blue</span><span class="o">:</span>   <span class="mh">#527edb</span><span class="p">;</span>
+<span class="nv">$functional-yellow</span><span class="o">:</span> <span class="mh">#fc0</span><span class="p">;</span>
+<span class="nv">$functional-red</span><span class="o">:</span>    <span class="mh">#cd3c14</span><span class="p">;</span>
+<span class="c1">//// Supporting colors
+</span><span class="c1"></span><span class="nv">$supporting-blue</span><span class="o">:</span>   <span class="mh">#4bb4e6</span><span class="p">;</span>
+<span class="nv">$supporting-yellow</span><span class="o">:</span> <span class="mh">#ffd200</span><span class="p">;</span>
+<span class="nv">$supporting-green</span><span class="o">:</span>  <span class="mh">#50be87</span><span class="p">;</span>
+<span class="nv">$supporting-purple</span><span class="o">:</span> <span class="mh">#a885d8</span><span class="p">;</span>
+<span class="nv">$supporting-pink</span><span class="o">:</span>   <span class="mh">#ffb4e6</span><span class="p">;</span>
+</code></pre></div>
+    </div>
+    <div class="col">
+        <h4>Bootstrap core variables</h4>
+        <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$blue</span><span class="o">:</span>    <span class="nv">$functional-blue</span><span class="p">;</span>
+<span class="nv">$indigo</span><span class="o">:</span>  <span class="nv">$supporting-purple</span><span class="p">;</span>
+<span class="nv">$purple</span><span class="o">:</span>  <span class="nv">$supporting-purple</span><span class="p">;</span>
+<span class="nv">$pink</span><span class="o">:</span>    <span class="nv">$supporting-pink</span><span class="p">;</span>
+<span class="nv">$red</span><span class="o">:</span>     <span class="nv">$functional-red</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="o">:</span>  <span class="nv">$brand-orange</span><span class="p">;</span>
+<span class="nv">$yellow</span><span class="o">:</span>  <span class="nv">$functional-yellow</span><span class="p">;</span>
+<span class="nv">$green</span><span class="o">:</span>   <span class="nv">$functional-green</span><span class="p">;</span>
+<span class="nv">$teal</span><span class="o">:</span>    <span class="nv">$supporting-green</span><span class="p">;</span>
+<span class="nv">$cyan</span><span class="o">:</span>    <span class="nv">$supporting-blue</span><span class="p">;</span>
+</code></pre></div>
+    </div>
+</div>
+<!-- End mod -->
+<h3 id="notes-on-sass">Notes on Sass</h3>
+<p>Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., <code>$blue-500</code>) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass&rsquo;s <code>mix()</code> color function.</p>
+<p>Using <code>mix()</code> is not the same as <code>lighten()</code> and <code>darken()</code>—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as <a href="https://codepen.io/emdeoh/pen/zYOQOPB">shown in this CodePen demo</a>.</p>
+<p>Our <code>tint-color()</code> and <code>shade-color()</code> functions use <code>mix()</code> alongside our <code>$theme-color-interval</code> variable, which specifies a stepped percentage value for each mixed color we produce. See the <code>scss/_functions.scss</code> and <code>scss/_variables.scss</code> files for the full source code.</p>
+<h2 id="color-sass-maps">Color Sass maps</h2>
+<p>Boosted&rsquo;s source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.</p>
+<ul>
+<li><code>$colors</code> lists all our available base (<code>500</code>) colors</li>
+<li><code>$theme-colors</code> lists all semantically named theme colors (shown below)</li>
+<li><code>$background-colors</code> overrides <code>$theme-colors</code> specifically for usage in <code>.bg-*</code> utilities</li>
+<li><code>$grays</code> lists all tints and shades of gray</li>
+</ul>
+<p>Within <code>scss/_variables.scss</code>, you&rsquo;ll find Boosted&rsquo;s color variables and Sass map. Here&rsquo;s an example of the <code>$colors</code> Sass map:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;blue&#34;</span><span class="o">:</span>       <span class="nv">$blue</span><span class="o">,</span>
+  <span class="s2">&#34;indigo&#34;</span><span class="o">:</span>     <span class="nv">$indigo</span><span class="o">,</span>
+  <span class="s2">&#34;purple&#34;</span><span class="o">:</span>     <span class="nv">$purple</span><span class="o">,</span>
+  <span class="s2">&#34;pink&#34;</span><span class="o">:</span>       <span class="nv">$pink</span><span class="o">,</span>
+  <span class="s2">&#34;red&#34;</span><span class="o">:</span>        <span class="nv">$red</span><span class="o">,</span>
+  <span class="s2">&#34;orange&#34;</span><span class="o">:</span>     <span class="nv">$orange</span><span class="o">,</span>
+  <span class="s2">&#34;yellow&#34;</span><span class="o">:</span>     <span class="nv">$yellow</span><span class="o">,</span>
+  <span class="s2">&#34;green&#34;</span><span class="o">:</span>      <span class="nv">$green</span><span class="o">,</span>
+  <span class="s2">&#34;teal&#34;</span><span class="o">:</span>       <span class="nv">$teal</span><span class="o">,</span>
+  <span class="s2">&#34;cyan&#34;</span><span class="o">:</span>       <span class="nv">$cyan</span><span class="o">,</span>
+  <span class="s2">&#34;white&#34;</span><span class="o">:</span>      <span class="nv">$white</span><span class="o">,</span>
+  <span class="s2">&#34;gray&#34;</span><span class="o">:</span>       <span class="nv">$gray-600</span><span class="o">,</span>
+  <span class="s2">&#34;gray-dark&#34;</span><span class="o">:</span>  <span class="nv">$gray-800</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Add, remove, or modify values within the map to update how they&rsquo;re used in many other components. Unfortunately at this time, not <em>every</em> component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the <code>${color}</code> variables and this Sass map.</p>
+<h3 id="example">Example</h3>
+<p>Here&rsquo;s how you can use these in your Sass:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.alpha</span> <span class="p">{</span> <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">purple</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.beta</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">yellow-300</span><span class="p">;</span>
+  <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">indigo-900</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p><a href="/docs/5.0/utilities/colors/">Color</a> and <a href="/docs/5.0/utilities/background/">background</a> utility classes are also available for setting <code>color</code> and <code>background-color</code> using the <code>500</code> color values.</p>
+
+      </div>
+    </main>
+  </div>
+
+
+    <footer class="bd-footer py-3 py-md-4 bg-dark">
+  <div class="container py-1">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <p class="mb-1">This documentation is an adaptation made by Orange.</p>
+        <p class="mb-1">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
+        <p class="mb-md-1">
+          Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>
+          —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
+          docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+        </p>
+        <ul class="bd-footer-links ps-0 mb-0">
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.0</span></li>
+          <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
+            <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
+          </a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-1">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs/5.0/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">Examples</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.0/getting-started/">Getting started</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/starter-template/">Starter template</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted 5</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev">Boosted 4</a></li>
+          <li class="mb-2"><a href="https://getbootstrap.com">Bootstrap</a></li>
+          <li class=""><a href="https://boosted.netlify.app">Pre-release on Netlify</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions">Discussions</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+
+
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-Yo6W1ayfGzk2xqeyH8cImy78qbMxbhDSLiM/0m+8GLq/OGFSFDxzBAKTfUsjBL+8" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/5.0/assets/js/docs.min.js"></script>
+
+
+    
+  
+  </body>
+</html>

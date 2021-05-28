@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.">
+<meta name="author" content="Orange and Boosted contributors">
+<meta name="generator" content="Hugo 0.83.1">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<title>Optimize · Boosted v5.0</title>
+
+<link rel="canonical" href="https://boosted.orange.com/docs/5.0/customize/optimize/">
+
+
+
+
+<link rel="preload" href="/docs/5.0/dist/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/docs/5.0/dist/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+
+
+<!-- Boosted core CSS -->
+<link href="/docs/5.0/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-tSxM4wLu3j8sRc/UX0jo54uHzJ0J5bceaL/CwiWufYMj25GlX7VxwGD9HdwpLfGw" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-fHoVtQDm7C96iGh8AvQ0kcIHOBd3+CFTxurFdh4FFRjw8N+T0f1skZnEkeAjjo4k" crossorigin="anonymous">
+
+<link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#000">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/5.0/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@orange">
+<meta name="twitter:creator" content="@orange">
+<meta name="twitter:title" content="Optimize">
+<meta name="twitter:description" content="Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.">
+<meta name="twitter:image" content="https://boosted.orange.com/docs/5.0/assets/brand/orange-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://boosted.orange.com/docs/5.0/customize/optimize/">
+<meta property="og:title" content="Optimize">
+<meta property="og:description" content="Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://boosted.orange.com/docs/5.0/assets/brand/orange-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+
+<script src="https://boosted.orange.com/js/vendor/tarteaucitron.min.js" integrity="sha384-xWAHbnS5tvMFH254O838x8FKkHIuyOtWRAoHdsx29oTOrivUToL/gT0ThlHoG1vc" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <a id="top"></a>
+<div class="skippy visually-hidden-focusable overflow-hidden position-fixed top-0 end-0 start-0">
+  <nav aria-label="Skip links" class="container-xxl py-1 ps-5">
+    <a class="d-inline-flex p-2 ms-3" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2" href="#bd-docs-nav">Skip to docs navigation</a>
+  </nav>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="container-xxl" aria-label="Main navigation">
+    <a class="navbar-brand" href="/" aria-label="Boosted">
+      <img src="/docs/5.0/assets/img/orange-logo.svg" width="50" height="50" alt="Back to homepage" title="Go to homepage" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'home'});">Home</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'docs'});">Docs</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.0/examples/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'examples'});">Examples</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link" href="/docs/5.0/guidelines/logos/" onclick="dataLayer.push({'event': 'clic', 'site_name':'accessibility-boosted', 'phase':'prod', 'track_category':'navbar', 'track_name':'guidelines'});">Design guidelines</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0">
+          <a class="nav-link" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+          </a>
+        </li>
+        <li class="nav-item col-6 col-md-auto py-3 py-md-0 align-self-center">
+          <a class="btn btn-primary my-2 ms-2 my-md-0 ms-md-3" href="/docs/5.0/getting-started/download/">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    
+  <nav class="bd-subnavbar py-2 border-bottom border-light border-1" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-3" role="search">
+      <input type="search" class="form-control" id="search-input" placeholder="Search docs…" aria-label="Search docs for…" autocomplete="off" data-bd-docs-version="5.0">
+    </form>
+
+    <div class="dropdown ms-auto">
+  <button class="btn btn-primary dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Boosted&nbsp;</span> v5.0
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item active" aria-current="true" href="/docs/5.0/">Latest (5.0.x)</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="https://boosted.orange.com/docs/4.6/">v4.6.x</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="https://boosted.orange.com/docs/3.4/">v3.4.1</a></li>
+    <li><hr class="dropdown-divider m-0"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-2 ms-2 ms-md-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+</svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
+</svg>
+
+   </button>
+  </div>
+</nav>
+
+
+  <div class="container-xxl bd-layout">
+    <aside class="bd-sidebar border-end border-light border-1">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-4">
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" type="button" aria-expanded="false">
+         Getting started
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/getting-started/introduction/" class="d-flex align-items-center">Introduction</a></li>
+              <li><a href="/docs/5.0/getting-started/download/" class="d-flex align-items-center">Download</a></li>
+              <li><a href="/docs/5.0/getting-started/contents/" class="d-flex align-items-center">Contents</a></li>
+              <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-flex align-items-center">Browsers &amp; devices</a></li>
+              <li><a href="/docs/5.0/getting-started/javascript/" class="d-flex align-items-center">JavaScript</a></li>
+              <li><a href="/docs/5.0/getting-started/build-tools/" class="d-flex align-items-center">Build tools</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-flex align-items-center">Webpack</a></li>
+              <li><a href="/docs/5.0/getting-started/parcel/" class="d-flex align-items-center">Parcel</a></li>
+              <li><a href="/docs/5.0/getting-started/accessibility/" class="d-flex align-items-center">Accessibility</a></li>
+              <li><a href="/docs/5.0/getting-started/rfs/" class="d-flex align-items-center">RFS</a></li>
+              <li><a href="/docs/5.0/getting-started/rtl/" class="d-flex align-items-center">RTL</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#customize-collapse" type="button" aria-expanded="true" aria-current="true">
+         Customize
+        </button>
+
+        <div class="collapse show" id="customize-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/customize/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.0/customize/sass/" class="d-flex align-items-center">Sass</a></li>
+              <li><a href="/docs/5.0/customize/options/" class="d-flex align-items-center">Options</a></li>
+              <li><a href="/docs/5.0/customize/color/" class="d-flex align-items-center">Color</a></li>
+              <li><a href="/docs/5.0/customize/components/" class="d-flex align-items-center">Components</a></li>
+              <li><a href="/docs/5.0/customize/css-variables/" class="d-flex align-items-center">CSS variables</a></li>
+              <li><a href="/docs/5.0/customize/optimize/" class="d-flex align-items-center active" aria-current="page">Optimize</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" type="button" aria-expanded="false">
+         Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/layout/breakpoints/" class="d-flex align-items-center">Breakpoints</a></li>
+              <li><a href="/docs/5.0/layout/containers/" class="d-flex align-items-center">Containers</a></li>
+              <li><a href="/docs/5.0/layout/grid/" class="d-flex align-items-center">Grid</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-flex align-items-center">Columns</a></li>
+              <li><a href="/docs/5.0/layout/gutters/" class="d-flex align-items-center">Gutters</a></li>
+              <li><a href="/docs/5.0/layout/utilities/" class="d-flex align-items-center">Utilities</a></li>
+              <li><a href="/docs/5.0/layout/z-index/" class="d-flex align-items-center">Z-index</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" type="button" aria-expanded="false">
+         Content
+        </button>
+
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/content/reboot/" class="d-flex align-items-center">Reboot</a></li>
+              <li><a href="/docs/5.0/content/typography/" class="d-flex align-items-center">Typography</a></li>
+              <li><a href="/docs/5.0/content/images/" class="d-flex align-items-center">Images</a></li>
+              <li><a href="/docs/5.0/content/tables/" class="d-flex align-items-center">Tables</a></li>
+              <li><a href="/docs/5.0/content/figures/" class="d-flex align-items-center">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" type="button" aria-expanded="false">
+         Forms
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/forms/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.0/forms/form-control/" class="d-flex align-items-center">Form control</a></li>
+              <li><a href="/docs/5.0/forms/select/" class="d-flex align-items-center">Select</a></li>
+              <li><a href="/docs/5.0/forms/checks-radios/" class="d-flex align-items-center">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.0/forms/range/" class="d-flex align-items-center">Range</a></li>
+              <li><a href="/docs/5.0/forms/input-group/" class="d-flex align-items-center">Input group</a></li>
+              <li><a href="/docs/5.0/forms/layout/" class="d-flex align-items-center">Layout</a></li>
+              <li><a href="/docs/5.0/forms/validation/" class="d-flex align-items-center">Validation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" type="button" aria-expanded="false">
+         Components
+        </button>
+
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/components/accordion/" class="d-flex align-items-center">Accordion</a></li>
+              <li><a href="/docs/5.0/components/alerts/" class="d-flex align-items-center">Alerts</a></li>
+              <li><a href="/docs/5.0/components/back-to-top/" class="d-flex align-items-center">Back to top</a></li>
+              <li><a href="/docs/5.0/components/badge/" class="d-flex align-items-center">Badge</a></li>
+              <li><a href="/docs/5.0/components/breadcrumb/" class="d-flex align-items-center">Breadcrumb</a></li>
+              <li><a href="/docs/5.0/components/buttons/" class="d-flex align-items-center">Buttons</a></li>
+              <li><a href="/docs/5.0/components/button-group/" class="d-flex align-items-center">Button group</a></li>
+              <li><a href="/docs/5.0/components/card/" class="d-flex align-items-center">Card</a></li>
+              <li><a href="/docs/5.0/components/carousel/" class="d-flex align-items-center">Carousel</a></li>
+              <li><a href="/docs/5.0/components/close-button/" class="d-flex align-items-center">Close button</a></li>
+              <li><a href="/docs/5.0/components/collapse/" class="d-flex align-items-center">Collapse</a></li>
+              <li><a href="/docs/5.0/components/dropdowns/" class="d-flex align-items-center">Dropdowns</a></li>
+              <li><a href="/docs/5.0/components/list-group/" class="d-flex align-items-center">List group</a></li>
+              <li><a href="/docs/5.0/components/modal/" class="d-flex align-items-center">Modal</a></li>
+              <li><a href="/docs/5.0/components/navs-tabs/" class="d-flex align-items-center">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.0/components/navbar/" class="d-flex align-items-center">Navbar</a></li>
+              <li><a href="/docs/5.0/components/pagination/" class="d-flex align-items-center">Pagination</a></li>
+              <li><a href="/docs/5.0/components/popovers/" class="d-flex align-items-center">Popovers</a></li>
+              <li><a href="/docs/5.0/components/progress/" class="d-flex align-items-center">Progress</a></li>
+              <li><a href="/docs/5.0/components/scrollspy/" class="d-flex align-items-center">Scrollspy</a></li>
+              <li><a href="/docs/5.0/components/spinners/" class="d-flex align-items-center">Spinners</a></li>
+              <li><a href="/docs/5.0/components/stepped-process/" class="d-flex align-items-center">Stepped process</a></li>
+              <li><a href="/docs/5.0/components/toasts/" class="d-flex align-items-center">Toasts</a></li>
+              <li><a href="/docs/5.0/components/tooltips/" class="d-flex align-items-center">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" type="button" aria-expanded="false">
+         Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/helpers/clearfix/" class="d-flex align-items-center">Clearfix</a></li>
+              <li><a href="/docs/5.0/helpers/colored-links/" class="d-flex align-items-center">Colored links</a></li>
+              <li><a href="/docs/5.0/helpers/ratio/" class="d-flex align-items-center">Ratio</a></li>
+              <li><a href="/docs/5.0/helpers/position/" class="d-flex align-items-center">Position</a></li>
+              <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-flex align-items-center">Visually hidden</a></li>
+              <li><a href="/docs/5.0/helpers/stretched-link/" class="d-flex align-items-center">Stretched link</a></li>
+              <li><a href="/docs/5.0/helpers/text-truncation/" class="d-flex align-items-center">Text truncation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" type="button" aria-expanded="false">
+         Utilities
+        </button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/utilities/api/" class="d-flex align-items-center">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-flex align-items-center">Background</a></li>
+              <li><a href="/docs/5.0/utilities/borders/" class="d-flex align-items-center">Borders</a></li>
+              <li><a href="/docs/5.0/utilities/colors/" class="d-flex align-items-center">Colors</a></li>
+              <li><a href="/docs/5.0/utilities/display/" class="d-flex align-items-center">Display</a></li>
+              <li><a href="/docs/5.0/utilities/flex/" class="d-flex align-items-center">Flex</a></li>
+              <li><a href="/docs/5.0/utilities/float/" class="d-flex align-items-center">Float</a></li>
+              <li><a href="/docs/5.0/utilities/interactions/" class="d-flex align-items-center">Interactions</a></li>
+              <li><a href="/docs/5.0/utilities/overflow/" class="d-flex align-items-center">Overflow</a></li>
+              <li><a href="/docs/5.0/utilities/position/" class="d-flex align-items-center">Position</a></li>
+              <li><a href="/docs/5.0/utilities/sizing/" class="d-flex align-items-center">Sizing</a></li>
+              <li><a href="/docs/5.0/utilities/spacing/" class="d-flex align-items-center">Spacing</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-flex align-items-center">Text</a></li>
+              <li><a href="/docs/5.0/utilities/vertical-align/" class="d-flex align-items-center">Vertical align</a></li>
+              <li><a href="/docs/5.0/utilities/visibility/" class="d-flex align-items-center">Visibility</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" type="button" aria-expanded="false">
+         Extend
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/extend/approach/" class="d-flex align-items-center">Approach</a></li>
+              <li><a href="/docs/5.0/extend/icons/" class="d-flex align-items-center">Icons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn w-100 d-flex align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" type="button" aria-expanded="false">
+         About
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled pb-1">
+              <li><a href="/docs/5.0/about/overview/" class="d-flex align-items-center">Overview</a></li>
+              <li><a href="/docs/5.0/about/team/" class="d-flex align-items-center">Team</a></li>
+              <li><a href="/docs/5.0/about/brand/" class="d-flex align-items-center">Brand</a></li>
+              <li><a href="/docs/5.0/about/license/" class="d-flex align-items-center">License</a></li>
+              <li><a href="/docs/5.0/about/translations/" class="d-flex align-items-center">Translations</a></li>
+              <li><a href="/docs/5.0/about/cookies/" class="d-flex align-items-center">Cookies</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-light border-top border-1 my-3">
+        <a href="/docs/5.0/migration/" class="d-flex align-items-center p-2 fw-bold fs-6">
+          Migration
+        </a>
+      </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro pt-md-4 ps-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="d-inline-block mb-2 mb-md-0 fw-bold" href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/main/site/content/docs/5.0/customize/optimize.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">Optimize</h1>
+        </div>
+        <p class="bd-lead">Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.</p>
+        
+
+      </div>
+
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 py-md-4 border-start border-light border-1">
+          <strong class="d-block h6 my-2 ps-xl-3 pb-2 border-bottom border-light border-1">On this page</strong>
+          <div class="ps-lg-3"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#lean-sass-imports">Lean Sass imports</a></li>
+    <li><a href="#lean-javascript">Lean JavaScript</a></li>
+    <li><a href="#autoprefixer-browserslistrc">Autoprefixer .browserslistrc</a></li>
+    <li><a href="#unused-css">Unused CSS</a></li>
+    <li><a href="#minify-and-gzip">Minify and gzip</a></li>
+    <li><a href="#nonblocking-files">Nonblocking files</a></li>
+    <li><a href="#always-use-https">Always use HTTPS</a></li>
+  </ul>
+</nav></div>
+        </div>
+      
+
+      <div class="bd-content ps-lg-4 mb-3">
+        
+
+        <h2 id="lean-sass-imports">Lean Sass imports</h2>
+<p>When using Sass in your asset pipeline, make sure you optimize Boosted by only <code>@import</code>ing the components you need. Your largest optimizations will likely come from the <code>Layout &amp; Components</code> section of our <code>boosted.scss</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Configuration
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;mixins&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;utilities&#34;</span><span class="p">;</span>
+
+
+<span class="c1">// Layout &amp; components
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;root&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;type&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;images&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;containers&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;grid&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;tables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;forms&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;buttons&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;transitions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;dropdown&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;button-group&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;nav&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;navbar&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;card&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;accordion&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;breadcrumb&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;pagination&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;badge&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;alert&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;progress&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;list-group&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;close&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;toasts&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;modal&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;tooltip&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;popover&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;carousel&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;spinners&#34;</span><span class="p">;</span>
+
+<span class="c1">// Boosted
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;back-to-top&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;stepped-process&#34;</span><span class="p">;</span>
+
+<span class="c1">// Helpers
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;helpers&#34;</span><span class="p">;</span>
+
+
+<span class="c1">// Utilities
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;utilities/api&#34;</span><span class="p">;</span>
+</code></pre></div>
+<p>If you&rsquo;re not using a component, comment it out or delete it entirely. For example, if you&rsquo;re not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.</p>
+<h2 id="lean-javascript">Lean JavaScript</h2>
+<p>Boosted&rsquo;s JavaScript includes every component in our primary dist files (<code>boosted.js</code> and <code>boosted.min.js</code>), and even our primary dependency (Popper) with our bundle files (<code>boosted.bundle.js</code> and <code>boosted.bundle.min.js</code>). While you&rsquo;re customizing via Sass, be sure to remove related JavaScript.</p>
+<p>For instance, assuming you&rsquo;re using your own JavaScript bundler like Webpack or Rollup, you&rsquo;d only import the JavaScript you plan on using. In the example below, we show how to just include our modal JavaScript:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Import just what we need
+</span><span class="c1"></span>
+<span class="c1">// import &#39;boosted/js/dist/alert&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/button&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/carousel&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/collapse&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/dropdown&#39;;
+</span><span class="c1"></span><span class="kr">import</span> <span class="s1">&#39;boosted/js/dist/modal&#39;</span><span class="p">;</span>
+<span class="c1">// import &#39;boosted/js/dist/popover&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/scrollspy&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/tab&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/toast&#39;;
+</span><span class="c1">// import &#39;boosted/js/dist/tooltip&#39;;
+</span></code></pre></div><p>This way, you&rsquo;re not including any JavaScript you don&rsquo;t intend to use for components like buttons, carousels, and tooltips. If you&rsquo;re importing dropdowns, tooltips or popovers, be sure to list the Popper dependency in your <code>package.json</code> file.</p>
+<div class="bd-callout bd-callout-info">
+<h3 id="default-exports">Default Exports</h3>
+<p>Files in <code>boosted/js/dist</code> use the <strong>default export</strong>, so if you want to use one of them you have to do the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">Modal</span> <span class="nx">from</span> <span class="s1">&#39;boosted/js/dist/modal&#39;</span>
+
+<span class="kr">const</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">))</span>
+</code></pre></div>
+</div>
+
+<h2 id="autoprefixer-browserslistrc">Autoprefixer .browserslistrc</h2>
+<p>Boosted depends on Autoprefixer to automatically add browser prefixes to certain CSS properties. Prefixes are dictated by our <code>.browserslistrc</code> file, found in the root of the Boosted repo. Customizing this list of browsers and recompiling the Sass will automatically remove some CSS from your compiled CSS, if there are vendor prefixes unique to that browser or version.</p>
+<h2 id="unused-css">Unused CSS</h2>
+<p><em>Help wanted with this section, please consider opening a PR. Thanks!</em></p>
+<p>While we don&rsquo;t have a prebuilt example for using <a href="https://github.com/FullHuman/purgecss">PurgeCSS</a> with Boosted, there are some helpful articles and walkthroughs that the community has written. Here are some options:</p>
+<ul>
+<li><a href="https://medium.com/dwarves-foundation/remove-unused-css-styles-from-boosted-using-purgecss-88395a2c5772">https://medium.com/dwarves-foundation/remove-unused-css-styles-from-boosted-using-purgecss-88395a2c5772</a></li>
+<li><a href="https://lukelowrey.com/automatically-removeunused-css-from-boosted-or-other-frameworks/">https://lukelowrey.com/automatically-removeunused-css-from-boosted-or-other-frameworks/</a></li>
+</ul>
+<p>Lastly, this <a href="https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/">CSS Tricks article on unused CSS</a> shows how to use PurgeCSS and other similar tools.</p>
+<h2 id="minify-and-gzip">Minify and gzip</h2>
+<p>Whenever possible, be sure to compress all the code you serve to your visitors. If you&rsquo;re using Boosted dist files, try to stick to the minified versions (indicated by the <code>.min.css</code> and <code>.min.js</code> extensions). If you&rsquo;re building Boosted from the source with your own build system, be sure to implement your own minifiers for HTML, CSS, and JS.</p>
+<h2 id="nonblocking-files">Nonblocking files</h2>
+<p>While minifying and using compression might seem like enough, making your files nonblocking ones is also a big step in making your site well-optimized and fast enough.</p>
+<p>If you are using a <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> plugin in Google Chrome, you may have stumbled over FCP. <a href="https://web.dev/fcp/">The First Contentful Paint</a> metric measures the time from when the page starts loading to when any part of the page&rsquo;s content is rendered on the screen.</p>
+<p>You can improve FCP by deferring non-critical JavaScript or CSS. What does that mean? Simply, JavaScript or stylesheets that don&rsquo;t need to be present on the first paint of your page should be marked with <code>async</code> or <code>defer</code> attributes.</p>
+<p>This ensures that the less important resources are loaded later and not blocking the first paint. On the other hand, critical resources can be included as inline scripts or styles.</p>
+<p>If you want to learn more about this, there are already a lot of great articles about it:</p>
+<ul>
+<li><a href="https://web.dev/render-blocking-resources/">https://web.dev/render-blocking-resources/</a></li>
+<li><a href="https://web.dev/defer-non-critical-css/">https://web.dev/defer-non-critical-css/</a></li>
+</ul>
+<h2 id="always-use-https">Always use HTTPS</h2>
+<p>Your website should only be available over HTTPS connections in production. HTTPS improves the security, privacy, and availability of all sites, and <a href="https://https.cio.gov/everything/">there is no such thing as non-sensitive web traffic</a>. The steps to configure your website to be served exclusively over HTTPS vary widely depending on your architecture and web hosting provider, and thus are beyond the scope of these docs.</p>
+<p>Sites served over HTTPS should also access all stylesheets, scripts, and other assets over HTTPS connections. Otherwise, you&rsquo;ll be sending users <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">mixed active content</a>, leading to potential vulnerabilities where a site can be compromised by altering a dependency. This can lead to security issues and in-browser warnings displayed to users. Whether you&rsquo;re getting Bootstrap from a CDN or serving it yourself, ensure that you only access it over HTTPS connections.</p>
+
+      </div>
+    </main>
+  </div>
+
+
+    <footer class="bd-footer py-3 py-md-4 bg-dark">
+  <div class="container py-1">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <p class="mb-1">This documentation is an adaptation made by Orange.</p>
+        <p class="mb-1">Original version designed and built with all the love in the world by the <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">their contributors</a>.</p>
+        <p class="mb-md-1">
+          Orange modified code licensed <a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>
+          —&nbsp;just like <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">Bootstrap</a>,
+          docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+        </p>
+        <ul class="bd-footer-links ps-0 mb-0">
+          <li class="list-inline-item me-3 mb-3 mb-md-0 d-block d-md-inline-block"><span>Currently v5.0.0</span></li>
+          <li class="list-inline-item mt-3 mt-md-0"><a href="https://www.netlify.com">
+            <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="89" height="40"/>
+          </a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-1">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs/5.0/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">Examples</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.0/getting-started/">Getting started</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/starter-template/">Starter template</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap">Boosted 5</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/tree/v4-dev">Boosted 4</a></li>
+          <li class="mb-2"><a href="https://getbootstrap.com">Bootstrap</a></li>
+          <li class=""><a href="https://boosted.netlify.app">Pre-release on Netlify</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-1">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/Orange-OpenSource/Orange-Boosted-Bootstrap/discussions">Discussions</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav aria-label="Back to top" class="back-to-top">
+  <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+    <span class="visually-hidden">Back to top</span>
+  </a>
+</nav>
+
+
+    <script src="/docs/5.0/dist/js/boosted.bundle.min.js" integrity="sha384-Yo6W1ayfGzk2xqeyH8cImy78qbMxbhDSLiM/0m+8GLq/OGFSFDxzBAKTfUsjBL+8" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/5.0/assets/js/docs.min.js"></script>
+
+
+    
+  
+  </body>
+</html>
